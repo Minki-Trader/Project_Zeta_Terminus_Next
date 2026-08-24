@@ -5,7 +5,7 @@
 - Repository: `https://github.com/Minki-Trader/Project_Zeta_Terminus.git`
 - Initial migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Anchor date: 2026-08-24 KST
-- Role: complete historical evidence and current B70 V6R6 Live-Dev operator until verified V7 handoff
+- Role: complete historical evidence and stopped former B70 V6R6 Live-Dev operator pending final archival after verified V7 handoff
 
 The legacy repository is read-only to Next except for the explicit anchored paths in the machine lineage indexes. No adjacent local project may be used as a source.
 
@@ -36,10 +36,10 @@ This successor is frozen under `live-dev/package/active/` but is not a real-acco
 
 ## Authority boundary
 
-- Legacy B70 V6R6 Live-Dev: authorized only in the old Terminus project under its exact committed identity.
-- Next V7 Live-Dev: `DISABLED`.
+- Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
+- Next V7 Live-Dev: `ENABLED` after connected entries-disabled save/restart evidence and the user's explicit complete V7 replacement-through-Live instruction.
 - V7 may not import or adopt B70 positions or state.
-- V7 Live requires completed evidence, a verified flat handoff, and a separate explicit user authorization recorded in Next `CURRENT_STATE.md`.
+- The sole remaining activation path is the committed Master's mandatory final `0/0` preflight followed by exact `1/1` V7 handshake. Before that path starts, the existing real-account owner remains none.
 
 ## Paused and resumed work
 

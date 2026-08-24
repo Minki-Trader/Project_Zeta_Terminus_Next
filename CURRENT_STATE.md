@@ -5,23 +5,23 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0007`
+- Latest state ID: `STATE-0008`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
 
 - Development: `ENABLED`, one serial stream only
-- Next Live-Dev authorization: `DISABLED`
-- Next V7 entries-disabled preflight: `ENABLED`
-- Next V7 new-entry authorization: `DISABLED`
+- Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-24 instruction to replace the legacy runtime completely with V7 and proceed through V7 Live after the required `0/0` evidence.
+- Next V7 entries-disabled preflight: `PASSED`
+- Next V7 new-entry authorization: `ENABLED` by the same explicit V7 replacement and Live instruction, effective only through the committed Master launcher's mandatory final `0/0` preflight followed by exact `1/1` handshake.
 - Existing real-account owner: none
-- User V7 Live direction: `RECEIVED_PENDING_ENTRIES_DISABLED_EVIDENCE`; the user's explicit 2026-08-24 instruction authorizes complete V7 replacement through Live, but effective `1/1` authority remains withheld until the required connected `0/0` save/restart evidence passes and is committed.
+- User V7 Live direction: `EFFECTIVE_AFTER_ENTRIES_DISABLED_PASS`
 
-Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy authority is disabled. No Next Live terminal, account cache, runtime state, position, order, or deal exists yet. The V7 identity and frozen package remain non-authorizing artifacts until the handoff import and entries-disabled evidence complete.
+Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy authority is disabled. The stopped account/broker cache and `$4.33` prior-project realized net receipt are present only in the Git-ignored Next Live Portable. Connected V7 state now exists after the passed entries-disabled restart, while Next position, pending order, margin and planned risk remain zero. No terminal is running immediately before the final Master handoff.
 
 ## Active work
 
-- Active engineering boundary: import the stopped legacy account/broker cache, then complete connected entries-disabled save/restart evidence
+- Active engineering boundary: execute the committed Master launcher's one-time final `0/0` preflight and exact `1/1` V7 Live handshake
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
@@ -50,6 +50,10 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Frozen Live package: `live-dev/package/active/`, one-way hash-equal copy; not Live-authorized
 - Next status reader, Korean 5-second dashboard, entries-disabled starter, 0/0-to-1/1 Live starter, Master launcher, flat stop and local cache-handoff tools are implemented
 - Offline operator check correctly refused readiness while legacy PID `24324` remained active; that legacy runtime has now stopped without a Next process starting
+- Local handoff receipt pins legacy final commit `4d04a00`, final state/event hashes, the sole cached account and prior project realized net `$4.33`; it copies no V6 state or position
+- Connected entries-disabled run 1: exact V7 identity, Magic and account; entries/positions/orders `0/0/0/0`; margin/risk `$0/$0`; balance/equity `$104.98/$104.98`; sequence `2`; Korean dashboard window and local five-second view verified
+- Connected entries-disabled restart: normal `STOP`, then `RESUME entries-disabled`; state sequence advanced through `4`; the same exact flat, ownership, receipt and zero-fault state remained
+- Corrected the operator's single-account array handling before any Next terminal started; committed operator HEAD `1888432` passed both connected entries-disabled runs
 
 ## Required completion evidence
 
@@ -57,9 +61,9 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 2. independent Live-Dev and Lab runtime/package structure
 3. modular V7 compile with zero errors and warnings
 4. ~~exact fixed latest and binding real-tick behavior after identity normalization~~
-5. bounded connected entries-disabled restart, ownership, reconciliation, and dashboard evidence after legacy flat stop
-6. separate user authorization, then 0/0 preflight and 1/1 handshake before any V7 real order
+5. ~~bounded connected entries-disabled restart, ownership, reconciliation, and dashboard evidence after legacy flat stop~~
+6. ~~separate user authorization~~, then final 0/0 preflight and 1/1 handshake before any V7 real order
 
 ## Current verdict
 
-`FLAT_HANDOFF_VERIFIED; ENTRIES_DISABLED_PREFLIGHT_ENABLED; NEXT_LIVE_PENDING; LEGACY_B70_STOPPED`
+`ENTRIES_DISABLED_RESTART_PASSED; V7_LIVE_AUTHORIZED; FINAL_0_0_TO_1_1_HANDSHAKE_PENDING; LEGACY_B70_STOPPED`

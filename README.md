@@ -2,7 +2,7 @@
 
 Project Zeta Terminus Next is the continuity successor to Project Zeta Terminus. It does not restart the research program: it inherits the frozen economic contracts, evidence boundaries, and executable lineage from legacy commit `4c0899255c701e2c6b53e7f44457c431aef2ad76` while replacing the oversized working surface with a concise lineage index and physically isolated Live-Dev and Lab lanes.
 
-`NEXT-E01/V7` is now compiled and fixed-window real-tick equivalent to frozen B70 V6R6. The old Terminus repository remains the sole B70 Live-Dev operator until connected entries-disabled restart evidence, a natural flat handoff boundary, and separate explicit user authorization are complete.
+`NEXT-E01/V7` is compiled, fixed-window real-tick equivalent to frozen B70 V6R6, and has passed connected entries-disabled save/restart evidence after the verified flat legacy stop. The user has explicitly authorized complete V7 replacement through Live; the final committed Master `0/0` preflight and exact `1/1` handshake remain the only transition step.
 
 ## Start here
 
@@ -24,4 +24,4 @@ The exact filesystem and Portable-terminal boundary is documented in [`docs/RUNT
 
 The equivalence verdict is in [`docs/V7_EQUIVALENCE.md`](docs/V7_EQUIVALENCE.md). The only permitted Live transition sequence is in [`docs/LIVE_HANDOFF_RUNBOOK.md`](docs/LIVE_HANDOFF_RUNBOOK.md).
 
-Live-Dev in this repository is currently `DISABLED`. Running or compiling Lab material does not authorize a real order.
+Live-Dev and V7 new entries are explicitly authorized in `CURRENT_STATE.md`, but no owner exists until the Master completes its final `0/0` preflight and exact `1/1` handshake. Running or compiling Lab material never changes that boundary.

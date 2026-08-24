@@ -14,4 +14,4 @@ Lab 변경은 Live 패키지에 자동 반영되지 않는다. 패키지 교체�
 
 ## 현재 상태
 
-Lab Tester Portable은 MT5 build 6140 실행 파일과 US100·US30·US500 실틱 캐시를 로컬 복제해 구성한다. Live Portable에는 같은 build와 동결 V7 패키지가 있지만 계정·브로커 캐시와 V7 상태는 없다. Legacy Live 터미널이 자연 flat에서 정상 정지한 뒤에만 그 캐시를 로컬 이식할 수 있다. 현재 Next Live 권한은 계속 `DISABLED`다.
+Lab Tester Portable은 MT5 build 6140 실행 파일과 US100·US30·US500 실틱 캐시를 로컬 복제해 구성한다. Live Portable에는 같은 build, 동결 V7 패키지, flat에서 정지된 legacy의 계정·브로커 캐시와 별도 V7 상태가 있다. V6 상태나 포지션은 복사하지 않았다. 연결된 entries-disabled 저장·재시작 증거가 통과했고 사용자가 V7 Live를 명시적으로 승인했으므로, 남은 단계는 Master의 최종 `0/0` preflight와 정확한 `1/1` handshake뿐이다.
