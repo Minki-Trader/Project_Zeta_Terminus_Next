@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0014`
+- Latest state ID: `STATE-0015`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -73,6 +73,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Frozen observation design: six tester-only single-strategy `$100` EAs plus one six-strategy shared `$100` first-come control, all with separate research identity and full opportunity/event logging
 - Compile receipt: all seven Lab EAs MetaEditor build 6140 `0 errors / 0 warnings`, `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_COMPILE_RECEIPT_V1.json`
 - Fit boundary: 790 standalone lifecycles through 2023 only; constants and source-log hashes frozen in `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_FIT_V1.json` before consuming any 2024 policy outcome
+- Selection candidates: three separately identified one-slot reservation EAs compiled `0/0`; 2024 control, standalone and policy runs are all fixed to a fresh `$100` start
 - Fit: 2022-08-01 through 2023-12-31; selection: 2024 H1/H2; fixed forward: 2025; 2026 remains unopened until the 2025 gate passes
 - Predeclared causal variants: stored win-probability, conservative stressed-R and overlap-aware one-slot reservation; future oracle is diagnostic only; no preemption or exit change
 - Live V7 terminal PID `10112` and dashboard PID `24936` remain outside the Lab research boundary and unchanged

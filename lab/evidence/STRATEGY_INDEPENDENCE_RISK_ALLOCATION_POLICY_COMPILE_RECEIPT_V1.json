@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "record_type": "policy_compile_receipt",
+  "family_id": "strategy-independence-risk-allocation",
+  "compiled_on": "2026-08-24",
+  "lane": "lab_only",
+  "metaeditor_build": 6140,
+  "result": "ALL_3_ZERO_ERRORS_ZERO_WARNINGS",
+  "fit_evidence_sha256": "82fbd9de57ffa5d6acf5e2873b26c7f043ccf9e946f4bf681030ca4f9135dd7b",
+  "amended_declaration_sha256": "45d0eb3b1adace1a9665966f500602faeac9fc32864f7752365a2093761abeb7",
+  "selection_account_initialization": "fresh_100_usd_on_2024-01-01",
+  "policies": [
+    {
+      "id": "WIN_PROB_RESERVE_ONE",
+      "file": "ZetaSiraPolicyWinProbabilityV1.ex5",
+      "sha256": "9fe8cee61be0030e7a3b02855bb1bcba4e5906c978154ea699b0d5661e9535fb",
+      "magic_range": "260824871..260824876"
+    },
+    {
+      "id": "CONSERVATIVE_R_RESERVE_ONE",
+      "file": "ZetaSiraPolicyConservativeRV1.ex5",
+      "sha256": "3140d79969cf4de19d37a53fb1f540dd34707b935b79b0a65f1a5b1b717ee98d",
+      "magic_range": "260824881..260824886"
+    },
+    {
+      "id": "OVERLAP_AWARE_RESERVE_ONE",
+      "file": "ZetaSiraPolicyOverlapAwareV1.ex5",
+      "sha256": "f9a79b34ce0727eb309c2308634ea4910a13c66ff23a99de8f920d71eb25f72b",
+      "magic_range": "260824891..260824896"
+    }
+  ],
+  "compile_log_sha256": {
+    "WIN_PROB_RESERVE_ONE": "a130b026406876d6211e08199f9df8c4a0f68cc0ff46052fb6f77e2ee10b5e17",
+    "CONSERVATIVE_R_RESERVE_ONE": "a442477e8adc04c3fcd9f492640d9df10ea59cd5a9139a8940032afd4bac1cc7",
+    "OVERLAP_AWARE_RESERVE_ONE": "52929919474f8357f37a9ecc8e6115fc636d05a85f2e8a292379c5af4c5f8c5e"
+  },
+  "contract": {
+    "stored_fit_scores_only": true,
+    "one_reserved_4_percent_slot": true,
+    "preemption": false,
+    "exit_change": false,
+    "tester_only_hard_fail_outside_mql_tester": true,
+    "live_change": false
+  }
+}

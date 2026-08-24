@@ -103,3 +103,10 @@
 - Before reading any 2024 policy outcome, parsed only standalone lifecycles with decision bar before 2024-01-01: RC16 `77`, RC4 `53`, Cross `306`, Pressure `35`, Return `106`, Passive `213`, total `790`. The maximum included decision bar is `2023-12-29 14:45:00`.
 - Frozen Beta(1,1) predicted win probability, conservative clamped stressed-R score and 20-pseudo-observation overlap adjustments in `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_FIT_V1.json`, SHA-256 `82FBD9DE57FFA5D6ACF5E2873B26C7F043CCF9E946F4BF681030CA4F9135DD7B`. The record explicitly states `selection_rows_consumed=false` and pins all six source-log hashes plus the analysis source hash.
 - No 2024 policy candidate, 2025 forward, 2026 confirmation, Live source or Live process changed at this fit boundary.
+
+## STATE-0015 - 2026-08-24
+
+- Before opening 2024 selection outcomes, fixed equal period initialization: every 2024 standalone, first-come control and policy run starts fresh at `$100` on 2024-01-01; every eventual 2025 comparison will likewise start fresh at `$100` on 2025-01-01. No fit-period state or profit carries into either period.
+- Embedded only the frozen pre-2024 Beta win probabilities, conservative clamped stressed-R scores and overlap adjustments into three separately identified Lab policy EAs. Each can reserve at most one 4% slot when admitting the current candidate would consume the third slot and a higher-scored fixed evaluation window remains later that server day.
+- The policies never evict an incumbent, change a signal, stop, hold or exit, and release unused capacity after the last relevant window. They use Magic `260824871..876`, `260824881..886` and `260824891..896` and hard-fail outside MQL Tester.
+- All three compiled with MetaEditor build 6140 at `0 errors / 0 warnings`; `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_POLICY_COMPILE_RECEIPT_V1.json` pins their EX5, compile logs, fit evidence and amended declaration. No selection run or 2025/2026 data was opened at this boundary.
