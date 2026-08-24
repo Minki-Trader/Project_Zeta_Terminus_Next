@@ -37,9 +37,9 @@ This successor is frozen under `live-dev/package/active/` but is not a real-acco
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev: `ENABLED` after connected entries-disabled save/restart evidence and the user's explicit complete V7 replacement-through-Live instruction.
+- Next V7 Live-Dev: `ENABLED` and active as the sole owner after connected entries-disabled save/restart evidence, the user's explicit complete V7 replacement-through-Live instruction, and the final Master `0/0 → 1/1` handshake.
 - V7 may not import or adopt B70 positions or state.
-- The sole remaining activation path is the committed Master's mandatory final `0/0` preflight followed by exact `1/1` V7 handshake. Before that path starts, the existing real-account owner remains none.
+- The handoff completed at V7 terminal PID `10112` with Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c` and Magic `260824701..260824706`. Legacy must not restart; any future cold start remains a controlled Next-only ownership transition.
 
 ## Paused and resumed work
 
