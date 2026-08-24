@@ -1,0 +1,58 @@
+#ifndef ZETA_DCRC_DOMAIN_MQH
+#define ZETA_DCRC_DOMAIN_MQH
+
+// Reuse the frozen SIRA observation state shape while replacing every
+// research identity and the economic/execution fingerprints.
+#define SIRA_SELECTED_COMPONENT_VALUE -1
+#define SIRA_EXECUTION_VERSION DCRC_EXECUTION_VERSION
+#define SIRA_RELEASE_ID DCRC_RELEASE_ID
+#define SIRA_PORTFOLIO_ID DCRC_PORTFOLIO_ID
+#define SIRA_STATE_MARKER DCRC_STATE_MARKER
+#define SIRA_STATE_PATH_A DCRC_STATE_PATH_A
+#define SIRA_STATE_PATH_B DCRC_STATE_PATH_B
+#define SIRA_EVENT_PATH_A DCRC_EVENT_PATH_A
+#define SIRA_EVENT_PATH_B DCRC_EVENT_PATH_B
+#define SIRA_CURRENT_SNAPSHOT_PATH_A DCRC_CURRENT_SNAPSHOT_PATH_A
+#define SIRA_CURRENT_SNAPSHOT_PATH_B DCRC_CURRENT_SNAPSHOT_PATH_B
+#define SIRA_OWNERSHIP_PATH DCRC_OWNERSHIP_PATH
+#define SIRA_MAGIC_BASE DCRC_MAGIC_BASE
+#define ECONOMIC_FINGERPRINT DCRC_PARENT_ECONOMIC_FINGERPRINT
+#define EXECUTION_FINGERPRINT DCRC_PARENT_EXECUTION_FINGERPRINT
+#include <ZetaSira\Domain\ZetaSiraDomain.mqh>
+#undef EXECUTION_FINGERPRINT
+#undef ECONOMIC_FINGERPRINT
+#undef SIRA_MAGIC_BASE
+#undef SIRA_OWNERSHIP_PATH
+#undef SIRA_CURRENT_SNAPSHOT_PATH_B
+#undef SIRA_CURRENT_SNAPSHOT_PATH_A
+#undef SIRA_EVENT_PATH_B
+#undef SIRA_EVENT_PATH_A
+#undef SIRA_STATE_PATH_B
+#undef SIRA_STATE_PATH_A
+#undef SIRA_STATE_MARKER
+#undef SIRA_PORTFOLIO_ID
+#undef SIRA_RELEASE_ID
+#undef SIRA_EXECUTION_VERSION
+#undef SIRA_SELECTED_COMPONENT_VALUE
+
+input double InpResearchDepositUSD = 100.0;
+
+const string ECONOMIC_FINGERPRINT = DCRC_ECONOMIC_FINGERPRINT;
+const string EXECUTION_FINGERPRINT = DCRC_EXECUTION_FINGERPRINT;
+
+const int DCRC_POLICY_LINEAR_CAPITAL = 1;
+const int DCRC_POLICY_BREADTH_DOLLAR_SLOTS = 2;
+const int DCRC_POLICY_FIXED_LOT_LADDER = 3;
+const int DCRC_POLICY = DCRC_POLICY_KIND;
+const string DCRC_POLICY_NAME = DCRC_POLICY_LABEL;
+
+long dcrc_sizing_interventions = 0;
+long dcrc_market_margin_or_calc_blocks = 0;
+double dcrc_maximum_margin_usd = 0.0;
+double dcrc_maximum_margin_to_equity_fraction = 0.0;
+double dcrc_maximum_entry_volume = 0.0;
+
+double DcrcEntryVolume(const string symbol);
+double DcrcPassiveExpectedVolume();
+
+#endif

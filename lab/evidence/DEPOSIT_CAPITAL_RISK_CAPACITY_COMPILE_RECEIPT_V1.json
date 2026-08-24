@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "record_type": "compile_and_preselection_freeze_receipt",
+  "research_family": "deposit-capital-risk-capacity",
+  "version": "V1",
+  "compiled_on_kst": "2026-08-24",
+  "repository_head_before_implementation": "8ee43f4ab30a29b9c3bc88a4e04291e2cf482a2f",
+  "selection_outcomes_consumed": false,
+  "compiler": {
+    "mt5_version": "5.0.0.6140",
+    "metaeditor_sha256": "05718f3fa55f3f59fd2f024d8c433b457fbd58fcf39e947a16ccdada00a614ec7",
+    "all_results": "0 errors, 0 warnings"
+  },
+  "frozen_shortlist": [
+    {"policy": "LINEAR_CAPITAL", "status": "MANDATORY_STRUCTURAL_ANCHOR"},
+    {"policy": "BREADTH_DOLLAR_SLOTS", "status": "PROXY_ELIGIBLE"},
+    {"policy": "FIXED_LOT_LADDER", "status": "DIAGNOSTIC_ONLY"}
+  ],
+  "declaration_sha256": "c2423fa45c7d53b1b9838891897bd9c064a8343d8331c07b2a7766181556422d",
+  "proxy_sha256": "c75a51f2b1ad12b092108595b9baa8435ab4fff444aefda8e189a9fc400a894",
+  "sources": {
+    "lab/research/deposit-capital-risk-capacity/mt5/src/Include/ZetaDcrc/Domain/ZetaDcrcDomain.mqh": "985e4d235a1972d907970f19dd9076daa7d3c047afd8cbe34f0bc466e95b77b7",
+    "lab/research/deposit-capital-risk-capacity/mt5/src/Include/ZetaDcrc/Portfolio/ZetaDcrcPortfolioRisk.mqh": "8ee6824a917471ebaace921987895e5e9191b44ef951cb12a268b806789512a6",
+    "lab/research/deposit-capital-risk-capacity/mt5/src/Include/ZetaDcrc/ZetaDcrcAssembly.mqh": "dd808eeb25e5d3a5a2fe24af3009d4f15cdd318ad27eeb34258d6635d01ed7e5",
+    "lab/research/deposit-capital-risk-capacity/mt5/src/Experts/ZetaDcrcLinearCapitalV1.mq5": "26421e6b52468d67921749cd6d2c3fb486ae5b16a91e15b13a5ed32de41143e5",
+    "lab/research/deposit-capital-risk-capacity/mt5/src/Experts/ZetaDcrcBreadthDollarSlotsV1.mq5": "213c6e2c5f8668c0993277fec08ea2bcbc69a4e8bcc09715d9442a3cafe4b8cc",
+    "lab/research/deposit-capital-risk-capacity/mt5/src/Experts/ZetaDcrcFixedLotLadderV1.mq5": "8bda0ff3eaed2c68b7020f60982c16ef34aaa0124c49be94a6fa421078812c1a"
+  },
+  "compiled_binaries": {
+    "ZetaDcrcLinearCapitalV1.ex5": {"bytes": 196844, "sha256": "5fb498a5bc0344f9ea270dd9850bee73db6dc25a3b7b4b170945cb8a1d4f1376"},
+    "ZetaDcrcBreadthDollarSlotsV1.ex5": {"bytes": 197552, "sha256": "31a98366177062d74b409bb81b7dafb9bf526c6f3b5be415d60404ee0a1fa14b"},
+    "ZetaDcrcFixedLotLadderV1.ex5": {"bytes": 198496, "sha256": "f3496145e31779b67b04fed3223359ee0612f3f2a0bf10a0b64a4e8c6495c6c5"}
+  },
+  "compile_logs": {
+    "lab/artifacts/logs/dcrc-linear-compile.log": "82ea446ae1d84ac2999260be33e0e578c99172e9d23a700d54ab49ce595995c2",
+    "lab/artifacts/logs/dcrc-breadth-compile.log": "b3f872090260c73afce2128653e30260f936eabc48aa91d195c01fff6351ccc3",
+    "lab/artifacts/logs/dcrc-ladder-compile.log": "33dba984b178b01a168136fadaff262226d00acaea95f54aaf15817729d3a736"
+  },
+  "frozen_dependencies": {
+    "lab/mt5/NEXT_E01_V7_MANIFEST.json": "742c599ef4ebad5c4b79770fb7a3f2d433cb1f8f4edff9118d3274f87834ffb9",
+    "lab/research/strategy-independence-risk-allocation/mt5/src/Include/ZetaSira/Domain/ZetaSiraDomain.mqh": "8ab9e76bfd808e96d116e5e67db4e6237dd5165bcfaef7d4c1a5410ae8cfeaef",
+    "lab/research/strategy-independence-risk-allocation/mt5/src/Include/ZetaSira/Persistence/ZetaSiraStateAndEvents.mqh": "f52eb85289ec9b6ddb05075b84a374fac8651473cc263c980619b237d606d486",
+    "lab/research/strategy-independence-risk-allocation/mt5/src/Include/ZetaSira/ZetaSiraAssembly.mqh": "a9732ad5e72e1a95e65d0eb7f56ca27f333a3f0e200f164e00445c8f6e02f5e6"
+  },
+  "sets": {
+    "dcrc-linear-100.set": "6a6da52d1656b1b863a5de4723da292194637534f6722999a5a1db2ea64a5fdf",
+    "dcrc-linear-200.set": "0463912c90e3947091808b788de0c903d2b46425975597ea360e29f35e18ba98",
+    "dcrc-linear-300.set": "8fd30a75607d0407012add0319ebdfb39e2b9b9e66d9b3e3f058d230a815f8d5",
+    "dcrc-breadth-200.set": "28e3732507878fe475ff47df607b20d213ed05d51fbcfe7bb5b66fe18f9b1935",
+    "dcrc-breadth-300.set": "c074093bae2b9cb5847ea9f6ae303bf5f3c4ac6ff825fe81b5e1854097c461e8",
+    "dcrc-ladder-200.set": "be804b2225c94a2778a3b3ef972a38ad4ffd1a6b2c93212c036de22d685ceae5",
+    "dcrc-ladder-300.set": "04d0e74df5f8621608a59e767811117bf1bae9e7cc91cdf74148d02e770b5e1c"
+  },
+  "selection_configs": {
+    "selection-2025-control-100.ini": "db579adf0d4d4942c12ffe5eff4114f1fdcfbb48928529dc4f91b1750f1fc0ad",
+    "selection-2025-control-200.ini": "eb0153eecd028ebc8bc029b3a4bbba9e400a50489e3c823b6c99f5906940d92c",
+    "selection-2025-control-300.ini": "bc59adedde170d6560640237c95c8a9de521aeaf04dfa64d3e59f1ad34160606",
+    "selection-2025-linear-100.ini": "4d67742144e610b234fb4672eceb4442d2a809ee138cad21cac7fcb84df51b60",
+    "selection-2025-linear-200.ini": "6a88f92bc827dd02113ab3bc4edf7b9aa84c26bd327054594f5947d7d091738d",
+    "selection-2025-linear-300.ini": "5afe0999f62ee58a53bb1772e69e7fe936fedd6086651f1c1755ffd689b05223",
+    "selection-2025-breadth-200.ini": "347370d5673cccc4955f3b6a7bd3c7975cf0a597d039926ec58bde487df8d44d",
+    "selection-2025-breadth-300.ini": "a4088e7ded5afecc1163f6f832e3fac0bd80714d4d078c9e7cb3cb534a1017ec",
+    "selection-2025-ladder-200.ini": "6a616604d24220937ac2d01b25509fbb7a320d56a52930f8ae08a9404f79c316",
+    "selection-2025-ladder-300.ini": "d969a428c9e8df9b3e9a459658b06a0df60584561d76d1c17798abf031fde310"
+  },
+  "run_contract": {
+    "model": "Every tick based on real ticks",
+    "leverage": "1:100",
+    "currency": "USD",
+    "period": "2025-01-01/2026-01-01",
+    "fresh_account_each_run": true,
+    "serial_runs_only": true,
+    "run_count": 10,
+    "latest_2026_months_opened": false
+  }
+}

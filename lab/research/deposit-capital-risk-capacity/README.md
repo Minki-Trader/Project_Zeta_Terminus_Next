@@ -28,3 +28,11 @@
 - 3% 4슬롯, 2% 6슬롯, symbol bucket과 6% drawdown brake는 EA로 가지 않는다.
 
 프록시 원본은 [`lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_PROXY_V1.json`](../../evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_PROXY_V1.json)이다.
+
+## 동결 EA 경로
+
+- `ZetaDcrcLinearCapitalV1`: `$100/$200/$300 → 0.01/0.02/0.03`, 4%/12%, 다음 lot 단계는 시작자본의 150% 이익마다 같은 배율로 증가.
+- `ZetaDcrcBreadthDollarSlotsV1`: `$200/$300`에서도 `0.01`, 포지션 약 `$4`, 합산한도는 시작자본의 12%라 최대 여섯 전략이 함께 존재할 수 있음.
+- `ZetaDcrcFixedLotLadderV1`: `$200/$300 → 0.02/0.03`, 이후 누적 스트레스 이익 `+$150`마다 정확히 `+0.01`.
+
+세 EA는 build 6140 `0 errors / 0 warnings`이고 Tester 밖에서 초기화에 실패한다. 2025 결과를 열기 전 동결한 컴파일·설정 영수증은 [`lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_COMPILE_RECEIPT_V1.json`](../../evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_COMPILE_RECEIPT_V1.json)이다.

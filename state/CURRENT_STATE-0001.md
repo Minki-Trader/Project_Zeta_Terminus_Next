@@ -136,3 +136,12 @@
 - Four-slot 3% and six-slot 2% linear-stop hypotheses failed both halves and full-year conservative envelopes; symbol-bucket concentration also worsened efficiency and DD. Neither is eligible for an EA in V1.
 - Neither sizing-governor passed. Per the predeclared diagnostic fallback, `FIXED_LOT_LADDER` outranked the 6% drawdown tranche brake and is frozen as the third EA path. At `$300`, its proxy changed 36 entries and returned `48.1792%` with `17.7896%` DD versus linear `54.6630%` / `17.7790%`.
 - Frozen EA shortlist is exactly `LINEAR_CAPITAL`, `BREADTH_DOLLAR_SLOTS`, and diagnostic-only `FIXED_LOT_LADDER`. Proxy evidence SHA-256 is `C75A51F2B1AD12B092108595B9BAA8435AB4FFF444AEAFDA8E189A9FC400A894`; no post-result threshold, fourth EA or nearby rescue may be added.
+
+## STATE-0019 - 2026-08-24
+
+- Implemented exactly the frozen three Lab policy paths with separate Release, Portfolio, Magic `260824911..916`, `260824921..926`, `260824931..936`, state, event and lock paths. Every wrapper hard-fails outside MQL Tester.
+- `LINEAR_CAPITAL` matches initial deposit/reference/base lot as `$100/0.01`, `$200/0.02`, `$300/0.03`, preserves 4%/12%, and scales the next volume step to 150% of starting deposit. `BREADTH_DOLLAR_SLOTS` retains `0.01` and `$4` position risk while 12% of `$200/$300` funds more concurrent risk capacity. `FIXED_LOT_LADDER` starts `0.02/0.03` and adds exactly `0.01` per additional `$150` stressed profit.
+- Reused the frozen V7 signal, evaluation time, direction, order, protection search, cost, hold/exit, RC4 and SIRA observation lifecycle. The only changed seams are declared capital/volume/risk sizing and bounded research margin/sizing telemetry.
+- All three EAs compiled with Lab MetaEditor build 6140 at `0 errors / 0 warnings`. EX5 SHA-256 values are linear `5FB498A5BC0344F9EA270DD9850BEE73DB6DC25A3B7B4B170945CB8A1D4F1376`, breadth `31A98366177062D74B409BB81B7DAFB9BF526C6F3B5BE415D60404EE0A1FA14B`, ladder `F3496145E31779B67B04FED3223359EE0612F3F2A0BF10A0B64A4E8C6495C6C5`.
+- Froze ten 2025 real-tick configurations before opening selection: deposit-only control at `$100/$200/$300`, linear at `$100/$200/$300`, breadth at `$200/$300`, and ladder at `$200/$300`. Compile/preselection receipt SHA-256 is `2CED8C9FFB0DBB6BD1CDB3F97E1BD43591736FAD7D5DF1E70DE2694DCE8221C9`.
+- No 2025 candidate result or 2026 data was consumed at this boundary. Exact Live V7 PID `10112`, dashboard PID `24936`, Live source, Include, EX5, SET, state and order behavior remain unchanged.
