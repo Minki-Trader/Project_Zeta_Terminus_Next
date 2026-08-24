@@ -39,6 +39,33 @@ R_CLAMP_LOWER = -3.0
 R_CLAMP_UPPER = 3.0
 CONSERVATIVE_Z = 1.28155
 OVERLAP_PSEUDO_OBSERVATIONS = 20
+SELECTION_START = int(datetime(2024, 1, 1, tzinfo=timezone.utc).timestamp())
+SELECTION_MID = int(datetime(2024, 7, 1, tzinfo=timezone.utc).timestamp())
+SELECTION_END = int(datetime(2025, 1, 1, tzinfo=timezone.utc).timestamp())
+
+SELECTION_PERIODS = {
+    "2024_H1": (SELECTION_START, SELECTION_MID),
+    "2024_H2": (SELECTION_MID, SELECTION_END),
+    "2024_FULL": (SELECTION_START, SELECTION_END),
+}
+
+PORTFOLIO_RUNS = {
+    "FIRST_COME": "control",
+    "WIN_PROB_RESERVE_ONE": "policy-win",
+    "CONSERVATIVE_R_RESERVE_ONE": "policy-r",
+    "OVERLAP_AWARE_RESERVE_ONE": "policy-overlap",
+}
+
+COMPONENT_IDS = {
+    0: "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    1: "ZT-M30-US30-RANGE-COMP-64efb16616",
+    2: "ZT-H1-US100-CROSS-IN-14b72317b7",
+    3: "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    4: "ZT-H1-US30-RETURN-I-c870a788ec",
+    5: "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+}
+
+COMPONENT_BY_ID = {value: key for key, value in COMPONENT_IDS.items()}
 
 
 @dataclass(frozen=True)
@@ -104,6 +131,15 @@ class Trade:
         return min(R_CLAMP_UPPER, max(R_CLAMP_LOWER, self.stressed_r))
 
 
+@dataclass
+class FlowEdge:
+    to_node: int
+    reverse_index: int
+    capacity: int
+    cost: float
+    trade_index: int | None
+
+
 def parse_args() -> argparse.Namespace:
     script_path = Path(__file__).resolve()
     repository_root = script_path.parents[3]
@@ -114,16 +150,11 @@ def parse_args() -> argparse.Namespace:
         / "backtests"
         / "strategy-independence-risk-allocation"
     )
-    default_output = (
-        repository_root
-        / "lab"
-        / "evidence"
-        / "STRATEGY_INDEPENDENCE_RISK_ALLOCATION_FIT_V1.json"
-    )
     parser = argparse.ArgumentParser()
-    parser.add_argument("mode", choices=("fit",))
+    parser.add_argument("mode", choices=("fit", "selection"))
     parser.add_argument("--logs-root", type=Path, default=default_logs)
-    parser.add_argument("--output", type=Path, default=default_output)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--ledger-output", type=Path)
     return parser.parse_args()
 
 
@@ -366,6 +397,542 @@ def overlap_adjustments(trades_by_component: dict[int, list[Trade]]) -> dict[str
     return output
 
 
+def period_trade_summary(trades: list[Trade], start: int, end: int) -> dict[str, float | int]:
+    selected = [trade for trade in trades if start <= trade.decision_bar < end]
+    planned_risk = sum(trade.planned_risk for trade in selected)
+    stressed_net = sum(trade.stressed_net for trade in selected)
+    return {
+        "trade_count": len(selected),
+        "win_count": sum(trade.stressed_net > 0.0 for trade in selected),
+        "actual_net_usd": sum(trade.actual_net for trade in selected),
+        "stressed_net_usd": stressed_net,
+        "stressed_max_closed_drawdown_usd": closed_drawdown(selected, "stressed_net"),
+        "planned_risk_usd": planned_risk,
+        "stressed_net_per_planned_risk": (
+            stressed_net / planned_risk if planned_risk > 0.0 else 0.0
+        ),
+    }
+
+
+def summaries_by_period(trades: list[Trade]) -> dict[str, dict[str, float | int]]:
+    return {
+        period: period_trade_summary(trades, start, end)
+        for period, (start, end) in SELECTION_PERIODS.items()
+    }
+
+
+def component_summaries(trades: list[Trade]) -> dict[str, dict[str, float | int]]:
+    return {
+        COMPONENTS[component]: period_trade_summary(
+            [trade for trade in trades if trade.component == component],
+            SELECTION_START,
+            SELECTION_END,
+        )
+        for component in COMPONENTS
+    }
+
+
+def event_counts(events: list[Event]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for event in events:
+        counts[event.name] = counts.get(event.name, 0) + 1
+    return counts
+
+
+def policy_intervention_summary(
+    opportunities: list[Opportunity], events: list[Event]
+) -> dict[str, object]:
+    opportunity_by_id = {row.opportunity_id: row for row in opportunities}
+    interventions = [
+        event for event in events if event.name == "SIRA_POLICY_RESERVE_SKIP"
+    ]
+    current_components: set[int] = set()
+    later_components: set[int] = set()
+    incumbent_candidate_pairs: set[str] = set()
+    active_masks: dict[str, int] = {}
+    rows: list[dict[str, object]] = []
+    for event in interventions:
+        opportunity = opportunity_by_id[event.opportunity_id]
+        current_components.add(event.component)
+        active_names = [
+            COMPONENTS[component]
+            for component in COMPONENTS
+            if opportunity.active_mask & (1 << component)
+        ]
+        for incumbent in active_names:
+            incumbent_candidate_pairs.add(
+                f"{incumbent}->{COMPONENTS[event.component]}"
+            )
+        mask_key = "+".join(active_names) if active_names else "NONE"
+        active_masks[mask_key] = active_masks.get(mask_key, 0) + 1
+        later_match = re.search(r"(?:^|\s)later_component=([^\s]+)", event.detail)
+        later_component = (
+            COMPONENT_BY_ID.get(later_match.group(1)) if later_match else None
+        )
+        if later_component is not None:
+            later_components.add(later_component)
+        rows.append(
+            {
+                "server": event.server,
+                "server_time": format_server_time(event.server),
+                "opportunity_id": event.opportunity_id,
+                "current_component": COMPONENTS[event.component],
+                "active_mask": opportunity.active_mask,
+                "active_components": active_names,
+                "later_component": (
+                    COMPONENTS[later_component]
+                    if later_component is not None
+                    else None
+                ),
+                "detail": event.detail,
+            }
+        )
+    return {
+        "reservation_count": len(interventions),
+        "current_component_count": len(current_components),
+        "current_components": [COMPONENTS[value] for value in sorted(current_components)],
+        "later_components": [COMPONENTS[value] for value in sorted(later_components)],
+        "distinct_incumbent_candidate_pair_count": len(incumbent_candidate_pairs),
+        "incumbent_candidate_pairs": sorted(incumbent_candidate_pairs),
+        "active_mask_counts": active_masks,
+        "rows": rows,
+    }
+
+
+def maximum_concurrent_positions(trades: list[Trade]) -> int:
+    points: list[tuple[int, int]] = []
+    for trade in trades:
+        points.append((trade.entry_server, 1))
+        points.append((trade.exit_server, -1))
+    active = 0
+    maximum = 0
+    for _, delta in sorted(points, key=lambda row: (row[0], row[1])):
+        active += delta
+        maximum = max(maximum, active)
+    return maximum
+
+
+def overlap_pair_summary(trades: list[Trade]) -> dict[str, object]:
+    pair_counts: dict[str, int] = {}
+    overlap_pairs = 0
+    for index, left in enumerate(trades):
+        for right in trades[index + 1 :]:
+            if left.component == right.component:
+                continue
+            overlap_seconds = min(left.exit_server, right.exit_server) - max(
+                left.entry_server, right.entry_server
+            )
+            if overlap_seconds <= 0:
+                continue
+            overlap_pairs += 1
+            names = sorted((COMPONENTS[left.component], COMPONENTS[right.component]))
+            key = f"{names[0]}+{names[1]}"
+            pair_counts[key] = pair_counts.get(key, 0) + 1
+    entries_with_incumbent = sum(
+        any(
+            other.component != trade.component
+            and other.entry_server < trade.entry_server < other.exit_server
+            for other in trades
+        )
+        for trade in trades
+    )
+    return {
+        "position_overlap_pair_count": overlap_pairs,
+        "pair_counts": dict(sorted(pair_counts.items())),
+        "entries_with_earlier_incumbent_count": entries_with_incumbent,
+        "maximum_concurrent_positions": maximum_concurrent_positions(trades),
+    }
+
+
+def pending_passive_at(
+    opportunities: list[Opportunity], trades_by_opportunity: dict[int, Trade], server: int
+) -> tuple[Opportunity | None, Trade | None]:
+    candidates = [
+        row
+        for row in opportunities
+        if row.component == 5
+        and row.outcome == "PENDING_ORDER"
+        and row.server <= server <= row.deadline
+    ]
+    if not candidates:
+        return None, None
+    opportunity = max(candidates, key=lambda row: row.server)
+    trade = trades_by_opportunity.get(opportunity.opportunity_id)
+    if trade is not None and trade.entry_server <= server:
+        return None, None
+    return opportunity, trade
+
+
+def build_control_conflict_ledger(
+    control_opportunities: list[Opportunity],
+    control_events: list[Event],
+    control_trades: list[Trade],
+    standalone_opportunities: dict[int, list[Opportunity]],
+    standalone_trades: dict[int, list[Trade]],
+) -> tuple[list[dict[str, object]], dict[str, object]]:
+    control_opportunity_by_id = {
+        row.opportunity_id: row for row in control_opportunities
+    }
+    control_trade_by_opportunity = {
+        row.opportunity_id: row for row in control_trades
+    }
+    standalone_opportunity_by_key: dict[tuple[int, int, int], Opportunity] = {}
+    standalone_trade_by_opportunity: dict[int, dict[int, Trade]] = {}
+    for component, opportunities in standalone_opportunities.items():
+        for opportunity in opportunities:
+            standalone_opportunity_by_key[
+                (component, opportunity.bar, opportunity.direction)
+            ] = opportunity
+        standalone_trade_by_opportunity[component] = {
+            trade.opportunity_id: trade for trade in standalone_trades[component]
+        }
+
+    hard_skips = [
+        event for event in control_events if event.name == "RISK_ADMISSION_SKIP"
+    ]
+    ledger: list[dict[str, object]] = []
+    matched = 0
+    matched_filled = 0
+    matched_winners = 0
+    winner_with_nonpositive_incumbent = 0
+    winner_with_negative_incumbent_sum = 0
+    candidate_counts: dict[str, int] = {}
+    mask_counts: dict[str, int] = {}
+
+    for event in hard_skips:
+        opportunity = control_opportunity_by_id[event.opportunity_id]
+        candidate_name = COMPONENTS[event.component]
+        candidate_counts[candidate_name] = candidate_counts.get(candidate_name, 0) + 1
+        active_components = [
+            component
+            for component in COMPONENTS
+            if opportunity.active_mask & (1 << component)
+        ]
+        mask_name = "+".join(COMPONENTS[value] for value in active_components)
+        mask_counts[mask_name] = mask_counts.get(mask_name, 0) + 1
+
+        standalone_opportunity = standalone_opportunity_by_key.get(
+            (event.component, opportunity.bar, opportunity.direction)
+        )
+        candidate_trade: Trade | None = None
+        if standalone_opportunity is not None:
+            matched += 1
+            candidate_trade = standalone_trade_by_opportunity[event.component].get(
+                standalone_opportunity.opportunity_id
+            )
+            if candidate_trade is not None:
+                matched_filled += 1
+                if candidate_trade.stressed_net > 0.0:
+                    matched_winners += 1
+
+        incumbents: list[dict[str, object]] = []
+        known_incumbent_outcomes: list[float] = []
+        for component in active_components:
+            active_trade = next(
+                (
+                    trade
+                    for trade in control_trades
+                    if trade.component == component
+                    and trade.entry_server <= event.server < trade.exit_server
+                ),
+                None,
+            )
+            if active_trade is not None:
+                known_incumbent_outcomes.append(active_trade.stressed_net)
+                incumbents.append(
+                    {
+                        "component": COMPONENTS[component],
+                        "state": "POSITION",
+                        "entry_server": active_trade.entry_server,
+                        "exit_server": active_trade.exit_server,
+                        "stressed_net_usd": active_trade.stressed_net,
+                        "actual_net_usd": active_trade.actual_net,
+                    }
+                )
+                continue
+            if component == 5:
+                pending_opportunity, pending_trade = pending_passive_at(
+                    control_opportunities,
+                    control_trade_by_opportunity,
+                    event.server,
+                )
+                if pending_opportunity is not None:
+                    pending_outcome = (
+                        pending_trade.stressed_net if pending_trade is not None else 0.0
+                    )
+                    known_incumbent_outcomes.append(pending_outcome)
+                    incumbents.append(
+                        {
+                            "component": "PASSIVE",
+                            "state": "PENDING_ORDER",
+                            "entry_server": (
+                                pending_trade.entry_server
+                                if pending_trade is not None
+                                else None
+                            ),
+                            "exit_server": (
+                                pending_trade.exit_server
+                                if pending_trade is not None
+                                else pending_opportunity.deadline
+                            ),
+                            "stressed_net_usd": pending_outcome,
+                            "actual_net_usd": (
+                                pending_trade.actual_net
+                                if pending_trade is not None
+                                else 0.0
+                            ),
+                        }
+                    )
+                    continue
+            incumbents.append(
+                {
+                    "component": COMPONENTS[component],
+                    "state": "UNRESOLVED_MASK_STATE",
+                    "entry_server": None,
+                    "exit_server": None,
+                    "stressed_net_usd": None,
+                    "actual_net_usd": None,
+                }
+            )
+
+        candidate_stressed = (
+            candidate_trade.stressed_net if candidate_trade is not None else None
+        )
+        any_nonpositive_incumbent = any(
+            value <= 0.0 for value in known_incumbent_outcomes
+        )
+        incumbent_sum = sum(known_incumbent_outcomes)
+        if candidate_stressed is not None and candidate_stressed > 0.0:
+            if any_nonpositive_incumbent:
+                winner_with_nonpositive_incumbent += 1
+            if incumbent_sum < 0.0:
+                winner_with_negative_incumbent_sum += 1
+
+        ledger.append(
+            {
+                "server": event.server,
+                "server_time": format_server_time(event.server),
+                "control_opportunity_id": event.opportunity_id,
+                "candidate_component": candidate_name,
+                "candidate_bar": opportunity.bar,
+                "candidate_direction": opportunity.direction,
+                "candidate_signal": opportunity.signal,
+                "active_mask": opportunity.active_mask,
+                "active_components": [COMPONENTS[value] for value in active_components],
+                "candidate_planned_risk_usd": event.value_a,
+                "aggregate_after_usd": event.value_b,
+                "standalone_opportunity_matched": standalone_opportunity is not None,
+                "standalone_filled": candidate_trade is not None,
+                "standalone_stressed_net_usd": candidate_stressed,
+                "standalone_actual_net_usd": (
+                    candidate_trade.actual_net if candidate_trade is not None else None
+                ),
+                "incumbents": incumbents,
+                "known_incumbent_stressed_net_sum_usd": incumbent_sum,
+                "blocked_winner_with_nonpositive_incumbent": (
+                    candidate_stressed is not None
+                    and candidate_stressed > 0.0
+                    and any_nonpositive_incumbent
+                ),
+                "blocked_winner_with_negative_incumbent_sum": (
+                    candidate_stressed is not None
+                    and candidate_stressed > 0.0
+                    and incumbent_sum < 0.0
+                ),
+            }
+        )
+
+    summary = {
+        "hard_risk_skip_count": len(hard_skips),
+        "standalone_opportunity_match_count": matched,
+        "standalone_filled_match_count": matched_filled,
+        "standalone_winner_count": matched_winners,
+        "blocked_winner_with_nonpositive_incumbent_count": winner_with_nonpositive_incumbent,
+        "blocked_winner_with_negative_incumbent_sum_count": winner_with_negative_incumbent_sum,
+        "candidate_component_counts": dict(sorted(candidate_counts.items())),
+        "active_mask_counts": dict(sorted(mask_counts.items())),
+    }
+    return ledger, summary
+
+
+def add_flow_edge(
+    graph: list[list[FlowEdge]],
+    source: int,
+    target: int,
+    capacity: int,
+    cost: float,
+    trade_index: int | None = None,
+) -> FlowEdge:
+    forward = FlowEdge(target, len(graph[target]), capacity, cost, trade_index)
+    reverse = FlowEdge(source, len(graph[source]), 0, -cost, None)
+    graph[source].append(forward)
+    graph[target].append(reverse)
+    return forward
+
+
+def oracle_capacity_three(staged_trades: list[Trade]) -> dict[str, object]:
+    trades = [
+        trade
+        for trade in staged_trades
+        if SELECTION_START <= trade.decision_bar < SELECTION_END
+        and trade.volume > 0.0
+    ]
+    normalized_values = [
+        trade.stressed_net * (0.01 / trade.volume) for trade in trades
+    ]
+    times = sorted(
+        {value for trade in trades for value in (trade.entry_server, trade.exit_server)}
+    )
+    time_index = {value: index for index, value in enumerate(times)}
+    graph: list[list[FlowEdge]] = [[] for _ in times]
+    for index in range(len(times) - 1):
+        add_flow_edge(graph, index, index + 1, 3, 0.0)
+    trade_edges: list[FlowEdge | None] = [None] * len(trades)
+    for index, (trade, value) in enumerate(zip(trades, normalized_values)):
+        if value <= 0.0:
+            continue
+        trade_edges[index] = add_flow_edge(
+            graph,
+            time_index[trade.entry_server],
+            time_index[trade.exit_server],
+            1,
+            -value,
+            index,
+        )
+
+    source = 0
+    sink = len(times) - 1
+    for _ in range(3):
+        distance = [math.inf] * len(times)
+        predecessor: list[tuple[int, int] | None] = [None] * len(times)
+        distance[source] = 0.0
+        for _iteration in range(len(times) - 1):
+            changed = False
+            for node, edges in enumerate(graph):
+                if not math.isfinite(distance[node]):
+                    continue
+                for edge_index, edge in enumerate(edges):
+                    if edge.capacity <= 0:
+                        continue
+                    candidate = distance[node] + edge.cost
+                    if candidate < distance[edge.to_node] - 1.0e-12:
+                        distance[edge.to_node] = candidate
+                        predecessor[edge.to_node] = (node, edge_index)
+                        changed = True
+            if not changed:
+                break
+        if predecessor[sink] is None:
+            raise ValueError("oracle flow could not reach sink")
+        node = sink
+        while node != source:
+            prior_node, edge_index = predecessor[node]
+            edge = graph[prior_node][edge_index]
+            edge.capacity -= 1
+            graph[node][edge.reverse_index].capacity += 1
+            node = prior_node
+
+    selected_indices = [
+        index
+        for index, edge in enumerate(trade_edges)
+        if edge is not None and edge.capacity == 0
+    ]
+    selected_trades = [trades[index] for index in selected_indices]
+    selected_net = sum(normalized_values[index] for index in selected_indices)
+    return {
+        "diagnostic_only": True,
+        "causal": False,
+        "input_trade_count": len(trades),
+        "selected_trade_count": len(selected_trades),
+        "normalized_0_01_stressed_net_usd": selected_net,
+        "maximum_concurrent_positions": maximum_concurrent_positions(selected_trades),
+        "limitations": [
+            "uses realized future standalone lifecycle outcomes",
+            "uses only opportunities observed under each always-accept standalone path",
+            "normalizes each lifecycle to 0.01 volume",
+            "does not reproduce shared-account equity, margin, pending-order or path feedback",
+        ],
+    }
+
+
+def selection_pass_result(
+    portfolio_metrics: dict[str, dict[str, dict[str, float | int]]],
+    interventions: dict[str, dict[str, object]],
+) -> dict[str, object]:
+    control = portfolio_metrics["FIRST_COME"]
+    candidates: dict[str, dict[str, object]] = {}
+    passing: list[str] = []
+    for policy in (
+        "WIN_PROB_RESERVE_ONE",
+        "CONSERVATIVE_R_RESERVE_ONE",
+        "OVERLAP_AWARE_RESERVE_ONE",
+    ):
+        metrics = portfolio_metrics[policy]
+        net_pass = all(
+            float(metrics[period]["stressed_net_usd"])
+            > float(control[period]["stressed_net_usd"]) + 1.0e-9
+            for period in SELECTION_PERIODS
+        )
+        drawdown_pass = all(
+            float(metrics[period]["stressed_max_closed_drawdown_usd"])
+            <= float(control[period]["stressed_max_closed_drawdown_usd"]) + 0.01
+            for period in SELECTION_PERIODS
+        )
+        breadth_pass = (
+            int(interventions[policy]["current_component_count"]) >= 2
+            and int(
+                interventions[policy]["distinct_incumbent_candidate_pair_count"]
+            )
+            >= 2
+        )
+        passed = net_pass and drawdown_pass and breadth_pass
+        if passed:
+            passing.append(policy)
+        candidates[policy] = {
+            "stressed_net_pass_all_three_periods": net_pass,
+            "drawdown_pass_all_three_periods": drawdown_pass,
+            "breadth_pass": breadth_pass,
+            "passed": passed,
+            "stressed_net_delta_usd": {
+                period: float(metrics[period]["stressed_net_usd"])
+                - float(control[period]["stressed_net_usd"])
+                for period in SELECTION_PERIODS
+            },
+            "drawdown_delta_usd": {
+                period: float(
+                    metrics[period]["stressed_max_closed_drawdown_usd"]
+                )
+                - float(
+                    control[period]["stressed_max_closed_drawdown_usd"]
+                )
+                for period in SELECTION_PERIODS
+            },
+        }
+    selected_policy = None
+    if passing:
+        selected_policy = sorted(
+            passing,
+            key=lambda policy: (
+                -float(portfolio_metrics[policy]["2024_FULL"]["stressed_net_usd"]),
+                float(
+                    portfolio_metrics[policy]["2024_FULL"][
+                        "stressed_max_closed_drawdown_usd"
+                    ]
+                ),
+                int(interventions[policy]["reservation_count"]),
+            ),
+        )[0]
+    return {
+        "candidates": candidates,
+        "passing_policies": passing,
+        "selected_policy": selected_policy,
+        "verdict": (
+            "SELECTION_POLICY_FIXED_FOR_2025_FORWARD"
+            if selected_policy is not None
+            else "NO_POLICY_PASSED_RETAIN_FIRST_COME"
+        ),
+    }
+
+
 def run_fit(logs_root: Path, output: Path) -> None:
     analysis_path = Path(__file__).resolve()
     repository_root = analysis_path.parents[3]
@@ -462,10 +1029,191 @@ def run_fit(logs_root: Path, output: Path) -> None:
     )
 
 
+def run_selection(logs_root: Path, output: Path, ledger_output: Path) -> None:
+    analysis_path = Path(__file__).resolve()
+    repository_root = analysis_path.parents[3]
+    source_logs: dict[str, dict[str, str | int]] = {}
+    standalone_opportunities: dict[int, list[Opportunity]] = {}
+    standalone_events: dict[int, list[Event]] = {}
+    standalone_trades: dict[int, list[Trade]] = {}
+    standalone_performance: dict[str, dict[str, dict[str, float | int]]] = {}
+
+    for component, run_name in STANDALONE_RUNS.items():
+        path = logs_root / f"selection-2024-{run_name}-agent.log"
+        opportunities, events, trades = build_trades(
+            path, expected_component=component
+        )
+        if any(
+            not (SELECTION_START <= trade.decision_bar < SELECTION_END)
+            for trade in trades
+        ):
+            raise ValueError(f"out-of-selection trade in {path}")
+        standalone_opportunities[component] = opportunities
+        standalone_events[component] = events
+        standalone_trades[component] = trades
+        standalone_performance[COMPONENTS[component]] = summaries_by_period(trades)
+        source_logs[f"standalone_{run_name}"] = {
+            "path": path.resolve().relative_to(repository_root).as_posix(),
+            "bytes": path.stat().st_size,
+            "sha256": sha256(path),
+        }
+
+    portfolio_opportunities: dict[str, list[Opportunity]] = {}
+    portfolio_events: dict[str, list[Event]] = {}
+    portfolio_trades: dict[str, list[Trade]] = {}
+    portfolio_performance: dict[str, dict[str, dict[str, float | int]]] = {}
+    portfolio_component_performance: dict[
+        str, dict[str, dict[str, float | int]]
+    ] = {}
+    interventions: dict[str, dict[str, object]] = {}
+
+    for policy, run_name in PORTFOLIO_RUNS.items():
+        path = logs_root / f"selection-2024-{run_name}-agent.log"
+        opportunities, events, trades = build_trades(path)
+        if any(
+            not (SELECTION_START <= trade.decision_bar < SELECTION_END)
+            for trade in trades
+        ):
+            raise ValueError(f"out-of-selection trade in {path}")
+        portfolio_opportunities[policy] = opportunities
+        portfolio_events[policy] = events
+        portfolio_trades[policy] = trades
+        portfolio_performance[policy] = summaries_by_period(trades)
+        portfolio_component_performance[policy] = component_summaries(trades)
+        interventions[policy] = policy_intervention_summary(opportunities, events)
+        source_logs[f"portfolio_{run_name}"] = {
+            "path": path.resolve().relative_to(repository_root).as_posix(),
+            "bytes": path.stat().st_size,
+            "sha256": sha256(path),
+        }
+
+    control_opportunities = portfolio_opportunities["FIRST_COME"]
+    control_events = portfolio_events["FIRST_COME"]
+    control_trades = portfolio_trades["FIRST_COME"]
+    conflict_ledger, conflict_summary = build_control_conflict_ledger(
+        control_opportunities,
+        control_events,
+        control_trades,
+        standalone_opportunities,
+        standalone_trades,
+    )
+    ledger_output.parent.mkdir(parents=True, exist_ok=True)
+    with ledger_output.open("w", encoding="utf-8", newline="\n") as handle:
+        for row in conflict_ledger:
+            handle.write(json.dumps(row, ensure_ascii=False, sort_keys=False))
+            handle.write("\n")
+
+    all_standalone_trades = [
+        trade
+        for component in COMPONENTS
+        for trade in standalone_trades[component]
+    ]
+    selection_result = selection_pass_result(
+        portfolio_performance, interventions
+    )
+    control_counts = event_counts(control_events)
+    standalone_vs_control = {
+        COMPONENTS[component]: {
+            "standalone_trade_count": len(standalone_trades[component]),
+            "control_trade_count": sum(
+                trade.component == component for trade in control_trades
+            ),
+            "trade_count_delta_control_minus_standalone": sum(
+                trade.component == component for trade in control_trades
+            )
+            - len(standalone_trades[component]),
+        }
+        for component in COMPONENTS
+    }
+
+    payload = {
+        "schema_version": 1,
+        "record_type": "selection_result",
+        "family_id": "strategy-independence-risk-allocation",
+        "source_commit_required": "9af70bf27b119a1aa9e28232a5890631cf806846",
+        "selection_rows_consumed": True,
+        "forward_2025_consumed": False,
+        "selection_period": ["2024-01-01", "2025-01-01"],
+        "account_initialization": "every run fresh 100 USD on 2024-01-01",
+        "analysis_source": {
+            "path": analysis_path.relative_to(repository_root).as_posix(),
+            "sha256": sha256(analysis_path),
+        },
+        "source_logs": source_logs,
+        "standalone_performance": standalone_performance,
+        "portfolio_performance": portfolio_performance,
+        "portfolio_component_performance_2024_full": portfolio_component_performance,
+        "policy_interventions": interventions,
+        "first_come_overlap": overlap_pair_summary(control_trades),
+        "standalone_vs_first_come_trade_counts": standalone_vs_control,
+        "first_come_risk_events": {
+            "hard_aggregate_risk_skips": control_counts.get(
+                "RISK_ADMISSION_SKIP", 0
+            ),
+            "minimum_lot_risk_skips": control_counts.get("RISK_MIN_LOT_SKIP", 0),
+        },
+        "risk_conflict_summary": conflict_summary,
+        "risk_conflict_ledger": {
+            "path": ledger_output.resolve().relative_to(repository_root).as_posix(),
+            "records": len(conflict_ledger),
+            "bytes": ledger_output.stat().st_size,
+            "sha256": sha256(ledger_output),
+        },
+        "future_oracle_capacity_three": oracle_capacity_three(
+            all_standalone_trades
+        ),
+        "selection_gate": selection_result,
+    }
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", encoding="utf-8", newline="\n") as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2, sort_keys=False)
+        handle.write("\n")
+    print(
+        json.dumps(
+            {
+                "output": str(output),
+                "bytes": output.stat().st_size,
+                "sha256": sha256(output),
+                "ledger": str(ledger_output),
+                "ledger_sha256": sha256(ledger_output),
+                "verdict": selection_result["verdict"],
+                "selected_policy": selection_result["selected_policy"],
+                "forward_2025_consumed": False,
+            },
+            ensure_ascii=False,
+        )
+    )
+
+
 def main() -> None:
     arguments = parse_args()
+    repository_root = Path(__file__).resolve().parents[3]
     if arguments.mode == "fit":
-        run_fit(arguments.logs_root.resolve(), arguments.output.resolve())
+        output = arguments.output or (
+            repository_root
+            / "lab"
+            / "evidence"
+            / "STRATEGY_INDEPENDENCE_RISK_ALLOCATION_FIT_V1.json"
+        )
+        run_fit(arguments.logs_root.resolve(), output.resolve())
+    elif arguments.mode == "selection":
+        output = arguments.output or (
+            repository_root
+            / "lab"
+            / "evidence"
+            / "STRATEGY_INDEPENDENCE_RISK_ALLOCATION_SELECTION_V1.json"
+        )
+        ledger_output = arguments.ledger_output or (
+            repository_root
+            / "lab"
+            / "evidence"
+            / "STRATEGY_INDEPENDENCE_RISK_ALLOCATION_CONFLICTS_2024_V1.jsonl"
+        )
+        run_selection(
+            arguments.logs_root.resolve(),
+            output.resolve(),
+            ledger_output.resolve(),
+        )
 
 
 if __name__ == "__main__":

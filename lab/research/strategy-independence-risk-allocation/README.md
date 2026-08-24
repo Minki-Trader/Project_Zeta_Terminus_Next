@@ -53,3 +53,7 @@
 - 2025를 통과해야만 별도 2026 확인과 최근 2개월을 열 수 있다. 그 전에는 Live 변경이나 승격 후보가 없다.
 
 기계 판정의 원본 선언은 [`lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_DECLARATION_V1.json`](../../evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_DECLARATION_V1.json)에 있다.
+
+## 종료 결과
+
+2024에서 세 정책 모두 고정 선택 기준을 통과하지 못해 연구를 `NO_POLICY_PASSED_RETAIN_FIRST_COME`으로 닫았다. 2025·2026은 열지 않았고 Live 변경은 없다. 사람용 결론은 [`docs/lineage/STRATEGY_INDEPENDENCE_AND_RISK_ALLOCATION.md`](../../../docs/lineage/STRATEGY_INDEPENDENCE_AND_RISK_ALLOCATION.md), 기계 폐쇄는 [`lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_CLOSURE_V1.json`](../../evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_CLOSURE_V1.json)에 있다.

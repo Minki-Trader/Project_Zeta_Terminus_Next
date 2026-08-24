@@ -1,0 +1,1603 @@
+{
+  "schema_version": 1,
+  "record_type": "selection_result",
+  "family_id": "strategy-independence-risk-allocation",
+  "source_commit_required": "9af70bf27b119a1aa9e28232a5890631cf806846",
+  "selection_rows_consumed": true,
+  "forward_2025_consumed": false,
+  "selection_period": [
+    "2024-01-01",
+    "2025-01-01"
+  ],
+  "account_initialization": "every run fresh 100 USD on 2024-01-01",
+  "analysis_source": {
+    "path": "lab/research/strategy-independence-risk-allocation/analyze_strategy_independence_risk_allocation_v1.py",
+    "sha256": "574842976fcd715b929e8727a212d5970e8a36bb447fba792fe56cb4cadc4a4f"
+  },
+  "source_logs": {
+    "standalone_rc16": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-rc16-agent.log",
+      "bytes": 799444,
+      "sha256": "48272c85ea729ffb3907c22d1234cf5c9557eb722608a778f19de6c4fc293fad"
+    },
+    "standalone_rc4": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-rc4-agent.log",
+      "bytes": 741966,
+      "sha256": "160a3894b84d5b8274d347ad00e4f6a3edb82682d46f28a11350f5fbc3948535"
+    },
+    "standalone_cross": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-cross-agent.log",
+      "bytes": 2006344,
+      "sha256": "c3cbf7a9c5742298f060b891dc0181650f1ed9becb281a855af34b9f38554145"
+    },
+    "standalone_pressure": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-pressure-agent.log",
+      "bytes": 383730,
+      "sha256": "206ab8f61b3c25286bd9baadf4e946d7c669e9d9668f160054cd58448fa19dbe"
+    },
+    "standalone_return": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-return-agent.log",
+      "bytes": 657862,
+      "sha256": "3afb59c20908399cbe25a4993aad4654ff1f9d5c7c21279bffafaefcf85fb799"
+    },
+    "standalone_passive": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-passive-agent.log",
+      "bytes": 1825024,
+      "sha256": "86d1fa0ed252d9ac288dcb21b93a217efff4aec08063b324fe246ef8c6233436"
+    },
+    "portfolio_control": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-control-agent.log",
+      "bytes": 5392772,
+      "sha256": "6f42055cacbfb93072c13ddb379de74bb4606bd802eb4d2655cad288ff056c85"
+    },
+    "portfolio_policy-win": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-policy-win-agent.log",
+      "bytes": 5458334,
+      "sha256": "bb31394503a7b287f29193d2fe4366119d4d6af232edd86a2e2a3e7136f9efd1"
+    },
+    "portfolio_policy-r": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-policy-r-agent.log",
+      "bytes": 5436098,
+      "sha256": "3409abda83b79c3dd0eccb4acf0304abcb3e9b279b8cbb9899d8ca6d35025219"
+    },
+    "portfolio_policy-overlap": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-policy-overlap-agent.log",
+      "bytes": 5426918,
+      "sha256": "206c739e9fc390ba8707ecab4c885203e6c87cecb809602697bb0f5c37b48d5e"
+    }
+  },
+  "standalone_performance": {
+    "RC16": {
+      "2024_H1": {
+        "trade_count": 34,
+        "win_count": 19,
+        "actual_net_usd": -1.3899999999999992,
+        "stressed_net_usd": -1.9260000000000002,
+        "stressed_max_closed_drawdown_usd": 8.623,
+        "planned_risk_usd": 133.4462,
+        "stressed_net_per_planned_risk": -0.01443278264948721
+      },
+      "2024_H2": {
+        "trade_count": 38,
+        "win_count": 21,
+        "actual_net_usd": 11.41,
+        "stressed_net_usd": 10.925999999999998,
+        "stressed_max_closed_drawdown_usd": 6.3740000000000006,
+        "planned_risk_usd": 158.2103,
+        "stressed_net_per_planned_risk": 0.06905997902791411
+      },
+      "2024_FULL": {
+        "trade_count": 72,
+        "win_count": 40,
+        "actual_net_usd": 10.020000000000001,
+        "stressed_net_usd": 8.999999999999998,
+        "stressed_max_closed_drawdown_usd": 8.623,
+        "planned_risk_usd": 291.6565,
+        "stressed_net_per_planned_risk": 0.030858218486472952
+      }
+    },
+    "RC4": {
+      "2024_H1": {
+        "trade_count": 28,
+        "win_count": 18,
+        "actual_net_usd": 9.200000000000001,
+        "stressed_net_usd": 8.838,
+        "stressed_max_closed_drawdown_usd": 3.176,
+        "planned_risk_usd": 116.3151,
+        "stressed_net_per_planned_risk": 0.07598325582834901
+      },
+      "2024_H2": {
+        "trade_count": 25,
+        "win_count": 11,
+        "actual_net_usd": 5.6499999999999995,
+        "stressed_net_usd": 5.336,
+        "stressed_max_closed_drawdown_usd": 5.808000000000002,
+        "planned_risk_usd": 112.6446,
+        "stressed_net_per_planned_risk": 0.04737022458244781
+      },
+      "2024_FULL": {
+        "trade_count": 53,
+        "win_count": 29,
+        "actual_net_usd": 14.85,
+        "stressed_net_usd": 14.174,
+        "stressed_max_closed_drawdown_usd": 5.808000000000002,
+        "planned_risk_usd": 228.9597,
+        "stressed_net_per_planned_risk": 0.061906090897219025
+      }
+    },
+    "CROSS": {
+      "2024_H1": {
+        "trade_count": 109,
+        "win_count": 55,
+        "actual_net_usd": 17.3,
+        "stressed_net_usd": 15.462,
+        "stressed_max_closed_drawdown_usd": 7.403,
+        "planned_risk_usd": 464.3547,
+        "stressed_net_per_planned_risk": 0.03329782168674076
+      },
+      "2024_H2": {
+        "trade_count": 99,
+        "win_count": 49,
+        "actual_net_usd": 20.94,
+        "stressed_net_usd": 19.6625,
+        "stressed_max_closed_drawdown_usd": 8.991999999999999,
+        "planned_risk_usd": 509.8555,
+        "stressed_net_per_planned_risk": 0.038564848275638886
+      },
+      "2024_FULL": {
+        "trade_count": 208,
+        "win_count": 104,
+        "actual_net_usd": 38.24,
+        "stressed_net_usd": 35.1245,
+        "stressed_max_closed_drawdown_usd": 8.992,
+        "planned_risk_usd": 974.2102,
+        "stressed_net_per_planned_risk": 0.036054334064660784
+      }
+    },
+    "PRESSURE": {
+      "2024_H1": {
+        "trade_count": 9,
+        "win_count": 3,
+        "actual_net_usd": -5.8,
+        "stressed_net_usd": -5.984,
+        "stressed_max_closed_drawdown_usd": 7.398999999999999,
+        "planned_risk_usd": 34.4411,
+        "stressed_net_per_planned_risk": -0.17374590242471932
+      },
+      "2024_H2": {
+        "trade_count": 14,
+        "win_count": 7,
+        "actual_net_usd": 0.30000000000000016,
+        "stressed_net_usd": 0.12199999999999946,
+        "stressed_max_closed_drawdown_usd": 5.59,
+        "planned_risk_usd": 53.7203,
+        "stressed_net_per_planned_risk": 0.002271022313724969
+      },
+      "2024_FULL": {
+        "trade_count": 23,
+        "win_count": 10,
+        "actual_net_usd": -5.5,
+        "stressed_net_usd": -5.862,
+        "stressed_max_closed_drawdown_usd": 7.398999999999999,
+        "planned_risk_usd": 88.1614,
+        "stressed_net_per_planned_risk": -0.06649168456943742
+      }
+    },
+    "RETURN": {
+      "2024_H1": {
+        "trade_count": 28,
+        "win_count": 12,
+        "actual_net_usd": -5.28,
+        "stressed_net_usd": -5.784,
+        "stressed_max_closed_drawdown_usd": 19.321,
+        "planned_risk_usd": 109.2747,
+        "stressed_net_per_planned_risk": -0.05293082479293011
+      },
+      "2024_H2": {
+        "trade_count": 27,
+        "win_count": 15,
+        "actual_net_usd": 4.500000000000002,
+        "stressed_net_usd": 4.158,
+        "stressed_max_closed_drawdown_usd": 9.051,
+        "planned_risk_usd": 106.7118,
+        "stressed_net_per_planned_risk": 0.03896476303464097
+      },
+      "2024_FULL": {
+        "trade_count": 55,
+        "win_count": 27,
+        "actual_net_usd": -0.7799999999999987,
+        "stressed_net_usd": -1.626,
+        "stressed_max_closed_drawdown_usd": 19.321,
+        "planned_risk_usd": 215.9865,
+        "stressed_net_per_planned_risk": -0.007528248293296108
+      }
+    },
+    "PASSIVE": {
+      "2024_H1": {
+        "trade_count": 89,
+        "win_count": 64,
+        "actual_net_usd": 8.75,
+        "stressed_net_usd": 7.359500000000001,
+        "stressed_max_closed_drawdown_usd": 6.310999999999999,
+        "planned_risk_usd": 354.4707,
+        "stressed_net_per_planned_risk": 0.02076194167811331
+      },
+      "2024_H2": {
+        "trade_count": 71,
+        "win_count": 48,
+        "actual_net_usd": 5.46,
+        "stressed_net_usd": 4.52,
+        "stressed_max_closed_drawdown_usd": 4.7475000000000005,
+        "planned_risk_usd": 312.98358,
+        "stressed_net_per_planned_risk": 0.014441652178686176
+      },
+      "2024_FULL": {
+        "trade_count": 160,
+        "win_count": 112,
+        "actual_net_usd": 14.21,
+        "stressed_net_usd": 11.8795,
+        "stressed_max_closed_drawdown_usd": 6.310999999999999,
+        "planned_risk_usd": 667.45428,
+        "stressed_net_per_planned_risk": 0.017798222823591753
+      }
+    }
+  },
+  "portfolio_performance": {
+    "FIRST_COME": {
+      "2024_H1": {
+        "trade_count": 288,
+        "win_count": 162,
+        "actual_net_usd": 11.63,
+        "stressed_net_usd": 6.979500000000001,
+        "stressed_max_closed_drawdown_usd": 17.779,
+        "planned_risk_usd": 1089.92496,
+        "stressed_net_per_planned_risk": 0.0064036518624181245
+      },
+      "2024_H2": {
+        "trade_count": 266,
+        "win_count": 148,
+        "actual_net_usd": 51.12,
+        "stressed_net_usd": 47.6835,
+        "stressed_max_closed_drawdown_usd": 15.546000000000003,
+        "planned_risk_usd": 1445.47298,
+        "stressed_net_per_planned_risk": 0.032988164192456926
+      },
+      "2024_FULL": {
+        "trade_count": 554,
+        "win_count": 310,
+        "actual_net_usd": 62.75,
+        "stressed_net_usd": 54.663000000000004,
+        "stressed_max_closed_drawdown_usd": 17.779,
+        "planned_risk_usd": 2535.39794,
+        "stressed_net_per_planned_risk": 0.021559929168357694
+      }
+    },
+    "WIN_PROB_RESERVE_ONE": {
+      "2024_H1": {
+        "trade_count": 288,
+        "win_count": 163,
+        "actual_net_usd": 13.460000000000003,
+        "stressed_net_usd": 8.854000000000001,
+        "stressed_max_closed_drawdown_usd": 18.3855,
+        "planned_risk_usd": 1116.26178,
+        "stressed_net_per_planned_risk": 0.007931831187483638
+      },
+      "2024_H2": {
+        "trade_count": 264,
+        "win_count": 146,
+        "actual_net_usd": 44.36,
+        "stressed_net_usd": 40.946999999999996,
+        "stressed_max_closed_drawdown_usd": 15.245999999999999,
+        "planned_risk_usd": 1406.3891,
+        "stressed_net_per_planned_risk": 0.029114986741578124
+      },
+      "2024_FULL": {
+        "trade_count": 552,
+        "win_count": 309,
+        "actual_net_usd": 57.82,
+        "stressed_net_usd": 49.801,
+        "stressed_max_closed_drawdown_usd": 18.3855,
+        "planned_risk_usd": 2522.65088,
+        "stressed_net_per_planned_risk": 0.019741534746179384
+      }
+    },
+    "CONSERVATIVE_R_RESERVE_ONE": {
+      "2024_H1": {
+        "trade_count": 283,
+        "win_count": 159,
+        "actual_net_usd": 14.090000000000002,
+        "stressed_net_usd": 9.573500000000001,
+        "stressed_max_closed_drawdown_usd": 16.362,
+        "planned_risk_usd": 1107.4551,
+        "stressed_net_per_planned_risk": 0.008644594259397065
+      },
+      "2024_H2": {
+        "trade_count": 260,
+        "win_count": 143,
+        "actual_net_usd": 44.39,
+        "stressed_net_usd": 41.0315,
+        "stressed_max_closed_drawdown_usd": 15.681999999999995,
+        "planned_risk_usd": 1393.12868,
+        "stressed_net_per_planned_risk": 0.029452771010356343
+      },
+      "2024_FULL": {
+        "trade_count": 543,
+        "win_count": 302,
+        "actual_net_usd": 58.480000000000004,
+        "stressed_net_usd": 50.605,
+        "stressed_max_closed_drawdown_usd": 16.362,
+        "planned_risk_usd": 2500.58378,
+        "stressed_net_per_planned_risk": 0.020237274353591142
+      }
+    },
+    "OVERLAP_AWARE_RESERVE_ONE": {
+      "2024_H1": {
+        "trade_count": 281,
+        "win_count": 160,
+        "actual_net_usd": 19.67,
+        "stressed_net_usd": 15.248000000000001,
+        "stressed_max_closed_drawdown_usd": 16.362,
+        "planned_risk_usd": 1122.19244,
+        "stressed_net_per_planned_risk": 0.013587687331060616
+      },
+      "2024_H2": {
+        "trade_count": 261,
+        "win_count": 145,
+        "actual_net_usd": 51.75,
+        "stressed_net_usd": 48.381,
+        "stressed_max_closed_drawdown_usd": 18.400000000000016,
+        "planned_risk_usd": 1520.43052,
+        "stressed_net_per_planned_risk": 0.03182059249902455
+      },
+      "2024_FULL": {
+        "trade_count": 542,
+        "win_count": 305,
+        "actual_net_usd": 71.42,
+        "stressed_net_usd": 63.629,
+        "stressed_max_closed_drawdown_usd": 18.400000000000013,
+        "planned_risk_usd": 2642.62296,
+        "stressed_net_per_planned_risk": 0.02407797138037429
+      }
+    }
+  },
+  "portfolio_component_performance_2024_full": {
+    "FIRST_COME": {
+      "RC16": {
+        "trade_count": 72,
+        "win_count": 40,
+        "actual_net_usd": 11.360000000000001,
+        "stressed_net_usd": 10.328,
+        "stressed_max_closed_drawdown_usd": 8.575,
+        "planned_risk_usd": 334.3945,
+        "stressed_net_per_planned_risk": 0.030885675452197926
+      },
+      "RC4": {
+        "trade_count": 53,
+        "win_count": 27,
+        "actual_net_usd": 12.11,
+        "stressed_net_usd": 11.434,
+        "stressed_max_closed_drawdown_usd": 5.277,
+        "planned_risk_usd": 237.4307,
+        "stressed_net_per_planned_risk": 0.048157209661598095
+      },
+      "CROSS": {
+        "trade_count": 197,
+        "win_count": 97,
+        "actual_net_usd": 35.08,
+        "stressed_net_usd": 32.1225,
+        "stressed_max_closed_drawdown_usd": 9.034000000000002,
+        "planned_risk_usd": 901.2791,
+        "stressed_net_per_planned_risk": 0.03564101286715736
+      },
+      "PRESSURE": {
+        "trade_count": 23,
+        "win_count": 12,
+        "actual_net_usd": 1.49,
+        "stressed_net_usd": 1.1359999999999992,
+        "stressed_max_closed_drawdown_usd": 7.141,
+        "planned_risk_usd": 113.6835,
+        "stressed_net_per_planned_risk": 0.009992655046686628
+      },
+      "RETURN": {
+        "trade_count": 50,
+        "win_count": 23,
+        "actual_net_usd": -9.89,
+        "stressed_net_usd": -10.661,
+        "stressed_max_closed_drawdown_usd": 19.500999999999998,
+        "planned_risk_usd": 230.4588,
+        "stressed_net_per_planned_risk": -0.04625989547806376
+      },
+      "PASSIVE": {
+        "trade_count": 159,
+        "win_count": 111,
+        "actual_net_usd": 12.6,
+        "stressed_net_usd": 10.303500000000001,
+        "stressed_max_closed_drawdown_usd": 6.310999999999999,
+        "planned_risk_usd": 718.15134,
+        "stressed_net_per_planned_risk": 0.014347254438040875
+      }
+    },
+    "WIN_PROB_RESERVE_ONE": {
+      "RC16": {
+        "trade_count": 72,
+        "win_count": 40,
+        "actual_net_usd": 10.93,
+        "stressed_net_usd": 9.841,
+        "stressed_max_closed_drawdown_usd": 8.522,
+        "planned_risk_usd": 333.4598,
+        "stressed_net_per_planned_risk": 0.02951180322185763
+      },
+      "RC4": {
+        "trade_count": 53,
+        "win_count": 27,
+        "actual_net_usd": 10.16,
+        "stressed_net_usd": 9.484,
+        "stressed_max_closed_drawdown_usd": 5.938000000000002,
+        "planned_risk_usd": 237.9555,
+        "stressed_net_per_planned_risk": 0.039856191598849365
+      },
+      "CROSS": {
+        "trade_count": 198,
+        "win_count": 97,
+        "actual_net_usd": 34.51,
+        "stressed_net_usd": 31.537,
+        "stressed_max_closed_drawdown_usd": 8.984000000000002,
+        "planned_risk_usd": 905.7736,
+        "stressed_net_per_planned_risk": 0.03481775136744988
+      },
+      "PRESSURE": {
+        "trade_count": 18,
+        "win_count": 9,
+        "actual_net_usd": -3.2399999999999998,
+        "stressed_net_usd": -3.5030000000000006,
+        "stressed_max_closed_drawdown_usd": 7.397,
+        "planned_risk_usd": 86.3635,
+        "stressed_net_per_planned_risk": -0.04056111667544739
+      },
+      "RETURN": {
+        "trade_count": 52,
+        "win_count": 25,
+        "actual_net_usd": -7.179999999999999,
+        "stressed_net_usd": -7.8950000000000005,
+        "stressed_max_closed_drawdown_usd": 19.937999999999995,
+        "planned_risk_usd": 239.8568,
+        "stressed_net_per_planned_risk": -0.03291547289882964
+      },
+      "PASSIVE": {
+        "trade_count": 159,
+        "win_count": 111,
+        "actual_net_usd": 12.64,
+        "stressed_net_usd": 10.337000000000002,
+        "stressed_max_closed_drawdown_usd": 6.310999999999999,
+        "planned_risk_usd": 719.24168,
+        "stressed_net_per_planned_risk": 0.01437208143999664
+      }
+    },
+    "CONSERVATIVE_R_RESERVE_ONE": {
+      "RC16": {
+        "trade_count": 72,
+        "win_count": 40,
+        "actual_net_usd": 11.66,
+        "stressed_net_usd": 10.673,
+        "stressed_max_closed_drawdown_usd": 8.57,
+        "planned_risk_usd": 335.8186,
+        "stressed_net_per_planned_risk": 0.03178203947011869
+      },
+      "RC4": {
+        "trade_count": 53,
+        "win_count": 27,
+        "actual_net_usd": 10.040000000000001,
+        "stressed_net_usd": 9.352,
+        "stressed_max_closed_drawdown_usd": 5.998000000000003,
+        "planned_risk_usd": 239.3663,
+        "stressed_net_per_planned_risk": 0.039069827289806465
+      },
+      "CROSS": {
+        "trade_count": 201,
+        "win_count": 99,
+        "actual_net_usd": 34.21,
+        "stressed_net_usd": 31.183,
+        "stressed_max_closed_drawdown_usd": 9.004000000000001,
+        "planned_risk_usd": 925.1736,
+        "stressed_net_per_planned_risk": 0.03370502573787233
+      },
+      "PRESSURE": {
+        "trade_count": 18,
+        "win_count": 9,
+        "actual_net_usd": -3.2500000000000004,
+        "stressed_net_usd": -3.5140000000000002,
+        "stressed_max_closed_drawdown_usd": 7.4079999999999995,
+        "planned_risk_usd": 87.0202,
+        "stressed_net_per_planned_risk": -0.0403814286797778
+      },
+      "RETURN": {
+        "trade_count": 53,
+        "win_count": 26,
+        "actual_net_usd": -5.97,
+        "stressed_net_usd": -6.768,
+        "stressed_max_closed_drawdown_usd": 20.269999999999996,
+        "planned_risk_usd": 246.5351,
+        "stressed_net_per_planned_risk": -0.02745248039731462
+      },
+      "PASSIVE": {
+        "trade_count": 146,
+        "win_count": 101,
+        "actual_net_usd": 11.790000000000001,
+        "stressed_net_usd": 9.679000000000002,
+        "stressed_max_closed_drawdown_usd": 6.3565,
+        "planned_risk_usd": 666.66998,
+        "stressed_net_per_planned_risk": 0.01451842784341362
+      }
+    },
+    "OVERLAP_AWARE_RESERVE_ONE": {
+      "RC16": {
+        "trade_count": 72,
+        "win_count": 40,
+        "actual_net_usd": 10.600000000000001,
+        "stressed_net_usd": 9.628,
+        "stressed_max_closed_drawdown_usd": 8.715,
+        "planned_risk_usd": 356.3429,
+        "stressed_net_per_planned_risk": 0.027018919136595678
+      },
+      "RC4": {
+        "trade_count": 53,
+        "win_count": 28,
+        "actual_net_usd": 13.219999999999999,
+        "stressed_net_usd": 12.532,
+        "stressed_max_closed_drawdown_usd": 5.477,
+        "planned_risk_usd": 252.5648,
+        "stressed_net_per_planned_risk": 0.04961894927559185
+      },
+      "CROSS": {
+        "trade_count": 202,
+        "win_count": 101,
+        "actual_net_usd": 35.69,
+        "stressed_net_usd": 32.6565,
+        "stressed_max_closed_drawdown_usd": 9.242,
+        "planned_risk_usd": 984.7537,
+        "stressed_net_per_planned_risk": 0.03316209931478298
+      },
+      "PRESSURE": {
+        "trade_count": 20,
+        "win_count": 11,
+        "actual_net_usd": 4.159999999999999,
+        "stressed_net_usd": 3.873999999999999,
+        "stressed_max_closed_drawdown_usd": 5.311,
+        "planned_risk_usd": 103.6808,
+        "stressed_net_per_planned_risk": 0.03736468082808002
+      },
+      "RETURN": {
+        "trade_count": 48,
+        "win_count": 23,
+        "actual_net_usd": -7.4799999999999995,
+        "stressed_net_usd": -8.168,
+        "stressed_max_closed_drawdown_usd": 18.169,
+        "planned_risk_usd": 236.4546,
+        "stressed_net_per_planned_risk": -0.03454362909412631
+      },
+      "PASSIVE": {
+        "trade_count": 147,
+        "win_count": 102,
+        "actual_net_usd": 15.23,
+        "stressed_net_usd": 13.1065,
+        "stressed_max_closed_drawdown_usd": 6.3565,
+        "planned_risk_usd": 708.82616,
+        "stressed_net_per_planned_risk": 0.018490429303568593
+      }
+    }
+  },
+  "policy_interventions": {
+    "FIRST_COME": {
+      "reservation_count": 0,
+      "current_component_count": 0,
+      "current_components": [],
+      "later_components": [],
+      "distinct_incumbent_candidate_pair_count": 0,
+      "incumbent_candidate_pairs": [],
+      "active_mask_counts": {},
+      "rows": []
+    },
+    "WIN_PROB_RESERVE_ONE": {
+      "reservation_count": 5,
+      "current_component_count": 1,
+      "current_components": [
+        "PRESSURE"
+      ],
+      "later_components": [
+        "RETURN"
+      ],
+      "distinct_incumbent_candidate_pair_count": 3,
+      "incumbent_candidate_pairs": [
+        "PASSIVE->PRESSURE",
+        "RC16->PRESSURE",
+        "RC4->PRESSURE"
+      ],
+      "active_mask_counts": {
+        "PASSIVE": 2,
+        "RC16+RC4": 2,
+        "RC16+PASSIVE": 1
+      },
+      "rows": [
+        {
+          "server": 1704207600,
+          "server_time": "2024-01-02 15:00:00",
+          "opportunity_id": 2,
+          "current_component": "PRESSURE",
+          "active_mask": 32,
+          "active_components": [
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=WIN_PROB_RESERVE_ONE current_score=0.4594594595 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.5555555556 active_mask=32 hard_cap=11.8260"
+        },
+        {
+          "server": 1722006000,
+          "server_time": "2024-07-26 15:00:00",
+          "opportunity_id": 349,
+          "current_component": "PRESSURE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=WIN_PROB_RESERVE_ONE current_score=0.4594594595 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.5555555556 active_mask=3 hard_cap=15.0640"
+        },
+        {
+          "server": 1723042800,
+          "server_time": "2024-08-07 15:00:00",
+          "opportunity_id": 372,
+          "current_component": "PRESSURE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=WIN_PROB_RESERVE_ONE current_score=0.4594594595 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.5555555556 active_mask=3 hard_cap=15.5355"
+        },
+        {
+          "server": 1732201200,
+          "server_time": "2024-11-21 15:00:00",
+          "opportunity_id": 532,
+          "current_component": "PRESSURE",
+          "active_mask": 33,
+          "active_components": [
+            "RC16",
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=WIN_PROB_RESERVE_ONE current_score=0.4594594595 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.5555555556 active_mask=33 hard_cap=18.1220"
+        },
+        {
+          "server": 1735570800,
+          "server_time": "2024-12-30 15:00:00",
+          "opportunity_id": 588,
+          "current_component": "PRESSURE",
+          "active_mask": 32,
+          "active_components": [
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=WIN_PROB_RESERVE_ONE current_score=0.4594594595 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.5555555556 active_mask=32 hard_cap=17.5614"
+        }
+      ]
+    },
+    "CONSERVATIVE_R_RESERVE_ONE": {
+      "reservation_count": 27,
+      "current_component_count": 2,
+      "current_components": [
+        "PRESSURE",
+        "PASSIVE"
+      ],
+      "later_components": [
+        "CROSS",
+        "RETURN"
+      ],
+      "distinct_incumbent_candidate_pair_count": 6,
+      "incumbent_candidate_pairs": [
+        "PASSIVE->PRESSURE",
+        "PRESSURE->PASSIVE",
+        "RC16->PASSIVE",
+        "RC16->PRESSURE",
+        "RC4->PASSIVE",
+        "RC4->PRESSURE"
+      ],
+      "active_mask_counts": {
+        "PASSIVE": 2,
+        "RC16+RC4": 21,
+        "PRESSURE": 2,
+        "RC16+PASSIVE": 1,
+        "RC16+PRESSURE": 1
+      },
+      "rows": [
+        {
+          "server": 1704207600,
+          "server_time": "2024-01-02 15:00:00",
+          "opportunity_id": 2,
+          "current_component": "PRESSURE",
+          "active_mask": 32,
+          "active_components": [
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0536575556 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=32 hard_cap=11.8260"
+        },
+        {
+          "server": 1704380400,
+          "server_time": "2024-01-04 15:00:00",
+          "opportunity_id": 10,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1704381300,
+          "server_time": "2024-01-04 15:15:00",
+          "opportunity_id": 11,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1704383100,
+          "server_time": "2024-01-04 15:45:00",
+          "opportunity_id": 13,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1704384000,
+          "server_time": "2024-01-04 16:00:00",
+          "opportunity_id": 14,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1706627710,
+          "server_time": "2024-01-30 15:15:10",
+          "opportunity_id": 62,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=11.2646"
+        },
+        {
+          "server": 1706628600,
+          "server_time": "2024-01-30 15:30:00",
+          "opportunity_id": 63,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=11.2646"
+        },
+        {
+          "server": 1706629501,
+          "server_time": "2024-01-30 15:45:01",
+          "opportunity_id": 64,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=11.2646"
+        },
+        {
+          "server": 1707488102,
+          "server_time": "2024-02-09 14:15:02",
+          "opportunity_id": 87,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=11.2313"
+        },
+        {
+          "server": 1708099201,
+          "server_time": "2024-02-16 16:00:01",
+          "opportunity_id": 101,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=3 hard_cap=10.4676"
+        },
+        {
+          "server": 1708702200,
+          "server_time": "2024-02-23 15:30:00",
+          "opportunity_id": 112,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=10.5962"
+        },
+        {
+          "server": 1708703100,
+          "server_time": "2024-02-23 15:45:00",
+          "opportunity_id": 113,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=10.5962"
+        },
+        {
+          "server": 1708704000,
+          "server_time": "2024-02-23 16:00:00",
+          "opportunity_id": 114,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=3 hard_cap=10.5962"
+        },
+        {
+          "server": 1712246400,
+          "server_time": "2024-04-04 16:00:00",
+          "opportunity_id": 181,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=3 hard_cap=11.3150"
+        },
+        {
+          "server": 1715702400,
+          "server_time": "2024-05-14 16:00:00",
+          "opportunity_id": 248,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=3 hard_cap=12.1354"
+        },
+        {
+          "server": 1721662200,
+          "server_time": "2024-07-22 15:30:00",
+          "opportunity_id": 346,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=15.2044"
+        },
+        {
+          "server": 1722006000,
+          "server_time": "2024-07-26 15:00:00",
+          "opportunity_id": 357,
+          "current_component": "PRESSURE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0536575556 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=15.1719"
+        },
+        {
+          "server": 1722871800,
+          "server_time": "2024-08-05 15:30:00",
+          "opportunity_id": 373,
+          "current_component": "PASSIVE",
+          "active_mask": 8,
+          "active_components": [
+            "PRESSURE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=8 hard_cap=14.9668"
+        },
+        {
+          "server": 1722873600,
+          "server_time": "2024-08-05 16:00:00",
+          "opportunity_id": 374,
+          "current_component": "PASSIVE",
+          "active_mask": 8,
+          "active_components": [
+            "PRESSURE"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=8 hard_cap=14.9668"
+        },
+        {
+          "server": 1723042800,
+          "server_time": "2024-08-07 15:00:00",
+          "opportunity_id": 381,
+          "current_component": "PRESSURE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0536575556 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=15.2359"
+        },
+        {
+          "server": 1723730400,
+          "server_time": "2024-08-15 14:00:00",
+          "opportunity_id": 394,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=14.2374"
+        },
+        {
+          "server": 1723736700,
+          "server_time": "2024-08-15 15:45:00",
+          "opportunity_id": 395,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=14.2374"
+        },
+        {
+          "server": 1723737600,
+          "server_time": "2024-08-15 16:00:00",
+          "opportunity_id": 396,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=3 hard_cap=14.2374"
+        },
+        {
+          "server": 1726840800,
+          "server_time": "2024-09-20 14:00:00",
+          "opportunity_id": 447,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=3 hard_cap=16.4504"
+        },
+        {
+          "server": 1732201200,
+          "server_time": "2024-11-21 15:00:00",
+          "opportunity_id": 542,
+          "current_component": "PRESSURE",
+          "active_mask": 33,
+          "active_components": [
+            "RC16",
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0536575556 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=33 hard_cap=18.2504"
+        },
+        {
+          "server": 1734537600,
+          "server_time": "2024-12-18 16:00:00",
+          "opportunity_id": 584,
+          "current_component": "PASSIVE",
+          "active_mask": 9,
+          "active_components": [
+            "RC16",
+            "PRESSURE"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0067552423 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0009294727 active_mask=9 hard_cap=17.7894"
+        },
+        {
+          "server": 1735570800,
+          "server_time": "2024-12-30 15:00:00",
+          "opportunity_id": 598,
+          "current_component": "PRESSURE",
+          "active_mask": 32,
+          "active_components": [
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=CONSERVATIVE_R_RESERVE_ONE current_score=-0.0536575556 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0171713398 active_mask=32 hard_cap=17.6579"
+        }
+      ]
+    },
+    "OVERLAP_AWARE_RESERVE_ONE": {
+      "reservation_count": 27,
+      "current_component_count": 3,
+      "current_components": [
+        "PRESSURE",
+        "RETURN",
+        "PASSIVE"
+      ],
+      "later_components": [
+        "CROSS",
+        "PRESSURE",
+        "RETURN"
+      ],
+      "distinct_incumbent_candidate_pair_count": 8,
+      "incumbent_candidate_pairs": [
+        "PASSIVE->PRESSURE",
+        "PASSIVE->RETURN",
+        "PRESSURE->PASSIVE",
+        "RC16->PASSIVE",
+        "RC16->PRESSURE",
+        "RC16->RETURN",
+        "RC4->PASSIVE",
+        "RC4->RETURN"
+      ],
+      "active_mask_counts": {
+        "PASSIVE": 2,
+        "RC16+RC4": 20,
+        "RC16+PASSIVE": 4,
+        "RC16+PRESSURE": 1
+      },
+      "rows": [
+        {
+          "server": 1704207600,
+          "server_time": "2024-01-02 15:00:00",
+          "opportunity_id": 2,
+          "current_component": "PRESSURE",
+          "active_mask": 32,
+          "active_components": [
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0452061377 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0195730303 active_mask=32 hard_cap=11.8260"
+        },
+        {
+          "server": 1704380400,
+          "server_time": "2024-01-04 15:00:00",
+          "opportunity_id": 10,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1704381300,
+          "server_time": "2024-01-04 15:15:00",
+          "opportunity_id": 11,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1704383100,
+          "server_time": "2024-01-04 15:45:00",
+          "opportunity_id": 13,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1704384000,
+          "server_time": "2024-01-04 16:00:00",
+          "opportunity_id": 14,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.8532"
+        },
+        {
+          "server": 1706627710,
+          "server_time": "2024-01-30 15:15:10",
+          "opportunity_id": 62,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.2646"
+        },
+        {
+          "server": 1706628600,
+          "server_time": "2024-01-30 15:30:00",
+          "opportunity_id": 63,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.2646"
+        },
+        {
+          "server": 1706629501,
+          "server_time": "2024-01-30 15:45:01",
+          "opportunity_id": 64,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.2646"
+        },
+        {
+          "server": 1707488102,
+          "server_time": "2024-02-09 14:15:02",
+          "opportunity_id": 87,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "PRESSURE",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-M30-US30-INTRADAY-R-2eb111fc46 later_score=-0.0145431717 active_mask=3 hard_cap=11.2313"
+        },
+        {
+          "server": 1708099201,
+          "server_time": "2024-02-16 16:00:01",
+          "opportunity_id": 101,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=10.4676"
+        },
+        {
+          "server": 1708702200,
+          "server_time": "2024-02-23 15:30:00",
+          "opportunity_id": 112,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=10.5962"
+        },
+        {
+          "server": 1708703100,
+          "server_time": "2024-02-23 15:45:00",
+          "opportunity_id": 113,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=10.5962"
+        },
+        {
+          "server": 1708704000,
+          "server_time": "2024-02-23 16:00:00",
+          "opportunity_id": 114,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=10.5962"
+        },
+        {
+          "server": 1709654400,
+          "server_time": "2024-03-05 16:00:00",
+          "opportunity_id": 132,
+          "current_component": "RETURN",
+          "active_mask": 33,
+          "active_components": [
+            "RC16",
+            "PASSIVE"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0225288291 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0062283991 active_mask=33 hard_cap=11.5283"
+        },
+        {
+          "server": 1712246400,
+          "server_time": "2024-04-04 16:00:00",
+          "opportunity_id": 181,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=11.5643"
+        },
+        {
+          "server": 1714492800,
+          "server_time": "2024-04-30 16:00:00",
+          "opportunity_id": 226,
+          "current_component": "RETURN",
+          "active_mask": 33,
+          "active_components": [
+            "RC16",
+            "PASSIVE"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0225288291 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0062283991 active_mask=33 hard_cap=13.0234"
+        },
+        {
+          "server": 1715702400,
+          "server_time": "2024-05-14 16:00:00",
+          "opportunity_id": 248,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=12.6183"
+        },
+        {
+          "server": 1721662200,
+          "server_time": "2024-07-22 15:30:00",
+          "opportunity_id": 346,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=15.8721"
+        },
+        {
+          "server": 1723219200,
+          "server_time": "2024-08-09 16:00:00",
+          "opportunity_id": 385,
+          "current_component": "RETURN",
+          "active_mask": 33,
+          "active_components": [
+            "RC16",
+            "PASSIVE"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0225288291 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0062283991 active_mask=33 hard_cap=15.9192"
+        },
+        {
+          "server": 1723730400,
+          "server_time": "2024-08-15 14:00:00",
+          "opportunity_id": 393,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "PRESSURE",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-M30-US30-INTRADAY-R-2eb111fc46 later_score=-0.0145431717 active_mask=3 hard_cap=15.4760"
+        },
+        {
+          "server": 1723736700,
+          "server_time": "2024-08-15 15:45:00",
+          "opportunity_id": 394,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=15.4760"
+        },
+        {
+          "server": 1723737600,
+          "server_time": "2024-08-15 16:00:00",
+          "opportunity_id": 395,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=15.4760"
+        },
+        {
+          "server": 1726840800,
+          "server_time": "2024-09-20 14:00:00",
+          "opportunity_id": 446,
+          "current_component": "PASSIVE",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "PRESSURE",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-M30-US30-INTRADAY-R-2eb111fc46 later_score=-0.0145431717 active_mask=3 hard_cap=18.2063"
+        },
+        {
+          "server": 1729267200,
+          "server_time": "2024-10-18 16:00:00",
+          "opportunity_id": 487,
+          "current_component": "RETURN",
+          "active_mask": 3,
+          "active_components": [
+            "RC16",
+            "RC4"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0225288291 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0212695851 active_mask=3 hard_cap=16.9295"
+        },
+        {
+          "server": 1732201200,
+          "server_time": "2024-11-21 15:00:00",
+          "opportunity_id": 541,
+          "current_component": "PRESSURE",
+          "active_mask": 33,
+          "active_components": [
+            "RC16",
+            "PASSIVE"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0452061377 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0062283991 active_mask=33 hard_cap=19.6729"
+        },
+        {
+          "server": 1734537600,
+          "server_time": "2024-12-18 16:00:00",
+          "opportunity_id": 583,
+          "current_component": "PASSIVE",
+          "active_mask": 9,
+          "active_components": [
+            "RC16",
+            "PRESSURE"
+          ],
+          "later_component": "CROSS",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0389540042 later_component=ZT-H1-US100-CROSS-IN-14b72317b7 later_score=-0.0255107309 active_mask=9 hard_cap=19.4267"
+        },
+        {
+          "server": 1735570800,
+          "server_time": "2024-12-30 15:00:00",
+          "opportunity_id": 597,
+          "current_component": "PRESSURE",
+          "active_mask": 32,
+          "active_components": [
+            "PASSIVE"
+          ],
+          "later_component": "RETURN",
+          "detail": "policy=OVERLAP_AWARE_RESERVE_ONE current_score=-0.0452061377 later_component=ZT-H1-US30-RETURN-I-c870a788ec later_score=0.0195730303 active_mask=32 hard_cap=19.2208"
+        }
+      ]
+    }
+  },
+  "first_come_overlap": {
+    "position_overlap_pair_count": 306,
+    "pair_counts": {
+      "CROSS+PASSIVE": 34,
+      "CROSS+PRESSURE": 11,
+      "CROSS+RC16": 44,
+      "CROSS+RC4": 32,
+      "CROSS+RETURN": 33,
+      "PASSIVE+PRESSURE": 13,
+      "PASSIVE+RC16": 36,
+      "PASSIVE+RC4": 26,
+      "PASSIVE+RETURN": 24,
+      "PRESSURE+RC16": 5,
+      "PRESSURE+RC4": 2,
+      "PRESSURE+RETURN": 5,
+      "RC16+RC4": 24,
+      "RC16+RETURN": 6,
+      "RC4+RETURN": 11
+    },
+    "entries_with_earlier_incumbent_count": 240,
+    "maximum_concurrent_positions": 3
+  },
+  "standalone_vs_first_come_trade_counts": {
+    "RC16": {
+      "standalone_trade_count": 72,
+      "control_trade_count": 72,
+      "trade_count_delta_control_minus_standalone": 0
+    },
+    "RC4": {
+      "standalone_trade_count": 53,
+      "control_trade_count": 53,
+      "trade_count_delta_control_minus_standalone": 0
+    },
+    "CROSS": {
+      "standalone_trade_count": 208,
+      "control_trade_count": 197,
+      "trade_count_delta_control_minus_standalone": -11
+    },
+    "PRESSURE": {
+      "standalone_trade_count": 23,
+      "control_trade_count": 23,
+      "trade_count_delta_control_minus_standalone": 0
+    },
+    "RETURN": {
+      "standalone_trade_count": 55,
+      "control_trade_count": 50,
+      "trade_count_delta_control_minus_standalone": -5
+    },
+    "PASSIVE": {
+      "standalone_trade_count": 160,
+      "control_trade_count": 159,
+      "trade_count_delta_control_minus_standalone": -1
+    }
+  },
+  "first_come_risk_events": {
+    "hard_aggregate_risk_skips": 18,
+    "minimum_lot_risk_skips": 0
+  },
+  "risk_conflict_summary": {
+    "hard_risk_skip_count": 18,
+    "standalone_opportunity_match_count": 18,
+    "standalone_filled_match_count": 18,
+    "standalone_winner_count": 12,
+    "blocked_winner_with_nonpositive_incumbent_count": 9,
+    "blocked_winner_with_negative_incumbent_sum_count": 6,
+    "candidate_component_counts": {
+      "CROSS": 11,
+      "PASSIVE": 2,
+      "RETURN": 5
+    },
+    "active_mask_counts": {
+      "PRESSURE+PASSIVE": 3,
+      "PRESSURE+RETURN": 1,
+      "PRESSURE+RETURN+PASSIVE": 1,
+      "RC16+PASSIVE": 1,
+      "RC16+PRESSURE": 1,
+      "RC16+RC4": 4,
+      "RC16+RC4+PASSIVE": 5,
+      "RC16+RC4+RETURN": 1,
+      "RC4+RETURN": 1
+    }
+  },
+  "risk_conflict_ledger": {
+    "path": "lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_CONFLICTS_2024_V1.jsonl",
+    "records": 18,
+    "bytes": 18501,
+    "sha256": "360ed806a1d1fa85c87232c123d876957f3e15017a4c79e7120346e31f555358"
+  },
+  "future_oracle_capacity_three": {
+    "diagnostic_only": true,
+    "causal": false,
+    "input_trade_count": 571,
+    "selected_trade_count": 319,
+    "normalized_0_01_stressed_net_usd": 320.494,
+    "maximum_concurrent_positions": 3,
+    "limitations": [
+      "uses realized future standalone lifecycle outcomes",
+      "uses only opportunities observed under each always-accept standalone path",
+      "normalizes each lifecycle to 0.01 volume",
+      "does not reproduce shared-account equity, margin, pending-order or path feedback"
+    ]
+  },
+  "selection_gate": {
+    "candidates": {
+      "WIN_PROB_RESERVE_ONE": {
+        "stressed_net_pass_all_three_periods": false,
+        "drawdown_pass_all_three_periods": false,
+        "breadth_pass": false,
+        "passed": false,
+        "stressed_net_delta_usd": {
+          "2024_H1": 1.8745000000000003,
+          "2024_H2": -6.736500000000007,
+          "2024_FULL": -4.862000000000002
+        },
+        "drawdown_delta_usd": {
+          "2024_H1": 0.6065000000000005,
+          "2024_H2": -0.30000000000000426,
+          "2024_FULL": 0.6065000000000005
+        }
+      },
+      "CONSERVATIVE_R_RESERVE_ONE": {
+        "stressed_net_pass_all_three_periods": false,
+        "drawdown_pass_all_three_periods": false,
+        "breadth_pass": true,
+        "passed": false,
+        "stressed_net_delta_usd": {
+          "2024_H1": 2.5940000000000003,
+          "2024_H2": -6.652000000000001,
+          "2024_FULL": -4.058000000000007
+        },
+        "drawdown_delta_usd": {
+          "2024_H1": -1.4170000000000016,
+          "2024_H2": 0.13599999999999213,
+          "2024_FULL": -1.4170000000000016
+        }
+      },
+      "OVERLAP_AWARE_RESERVE_ONE": {
+        "stressed_net_pass_all_three_periods": true,
+        "drawdown_pass_all_three_periods": false,
+        "breadth_pass": true,
+        "passed": false,
+        "stressed_net_delta_usd": {
+          "2024_H1": 8.2685,
+          "2024_H2": 0.697499999999998,
+          "2024_FULL": 8.965999999999994
+        },
+        "drawdown_delta_usd": {
+          "2024_H1": -1.4170000000000016,
+          "2024_H2": 2.8540000000000134,
+          "2024_FULL": 0.6210000000000129
+        }
+      }
+    },
+    "passing_policies": [],
+    "selected_policy": null,
+    "verdict": "NO_POLICY_PASSED_RETAIN_FIRST_COME"
+  }
+}

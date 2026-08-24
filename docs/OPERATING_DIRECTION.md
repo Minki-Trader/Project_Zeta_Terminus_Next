@@ -23,6 +23,8 @@ The inherited B75 task is complete in Next as `RC16 Explicit Frozen-Life HOLD Co
 
 The user subsequently authorized one new serial Lab family on 2026-08-24: `전략 독립성·위험배분 연구` (`strategy-independence-risk-allocation`). It compares six separate `$100` single-strategy EAs with the frozen six-strategy shared `$100` first-come control, attributes overlap and risk-admission misses, and evaluates causal one-slot reservation using stored fit-period scores. Its declaration, selection isolation, variants and stop rules are authoritative at `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_DECLARATION_V1.json`. It grants no Live change or promotion authority.
 
+V1 of that family is closed as `NO_POLICY_PASSED_RETAIN_FIRST_COME`. The 2024 control contained real blocked-winner headroom, but none of the three predeclared causal reservation policies passed both half-year stressed-net and drawdown gates. Per the fixed stop rule, 2025 and 2026 were not opened, no nearby rescue was attempted, and frozen V7 first-come aggregate-risk admission remains authoritative.
+
 ## Live and Lab isolation
 
 - `lab/` owns evolving source, frozen controls, tester configuration, research, and DEV evidence.

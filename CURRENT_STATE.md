@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0015`
+- Latest state ID: `STATE-0016`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 ## Active work
 
 - Active engineering boundary: V7 handoff complete; dashboard-only entry-evaluation visibility improvement complete with EA, chart and frozen release unchanged
-- Active research boundary: `전략 독립성·위험배분 연구` V1 open in Lab; six standalone `$100` strategies versus the frozen shared `$100` first-come control, with fit/selection/forward isolation
+- Active research boundary: `전략 독립성·위험배분 연구` V1 closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`; no successor experiment is open
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
@@ -67,15 +67,17 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Machine-readable record: `lab/evidence/RC16_FROZEN_LIFE_HOLD_CONFIRMATION_B75.json`, SHA-256 `C4FFF105C9918E3F81BD8936E09053034DC65338994EC1970484FD7541BBCAFC`
 - The later explicit user direction opens only the separate Lab `전략 독립성·위험배분 연구`; it does not reopen B75
 
-## Active strategy independence and risk allocation research
+## Completed strategy independence and risk allocation research
 
 - Declaration: `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_DECLARATION_V1.json`
 - Frozen observation design: six tester-only single-strategy `$100` EAs plus one six-strategy shared `$100` first-come control, all with separate research identity and full opportunity/event logging
 - Compile receipt: all seven Lab EAs MetaEditor build 6140 `0 errors / 0 warnings`, `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_COMPILE_RECEIPT_V1.json`
 - Fit boundary: 790 standalone lifecycles through 2023 only; constants and source-log hashes frozen in `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_FIT_V1.json` before consuming any 2024 policy outcome
-- Selection candidates: three separately identified one-slot reservation EAs compiled `0/0`; 2024 control, standalone and policy runs are all fixed to a fresh `$100` start
-- Fit: 2022-08-01 through 2023-12-31; selection: 2024 H1/H2; fixed forward: 2025; 2026 remains unopened until the 2025 gate passes
-- Predeclared causal variants: stored win-probability, conservative stressed-R and overlap-aware one-slot reservation; future oracle is diagnostic only; no preemption or exit change
+- 2024 result: first-come stress `+$54.6630`, DD `$17.7790`; all three reservation policies failed the fixed half-year/net/DD/breadth gate, so no policy was selected
+- Fit: 2022-08-01 through 2023-12-31; selection: 2024 H1/H2; the predeclared 2025 forward and 2026 confirmation were not opened because no selection policy passed
+- Conflict finding: 18 hard risk skips, 12 matched standalone winners, 9 winners with at least one nonpositive incumbent; descriptive headroom exists but was not causally predictable within the fixed variants
+- 2025 and 2026 remain unconsumed because no policy passed 2024; future oracle is diagnostic only; no preemption, nearby rescue or Live change
+- Closure: `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_CLOSURE_V1.json`, SHA-256 `637DEF903CB17F3D698E882E16A39F0820C8F0BC879AD821B1B0CC24AB758EDA`
 - Live V7 terminal PID `10112` and dashboard PID `24936` remain outside the Lab research boundary and unchanged
 
 ## Completed operator improvement
@@ -96,4 +98,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_RESEARCH_OPEN_LAB_ONLY`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME`
