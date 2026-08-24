@@ -1,0 +1,26 @@
+# Project-local MetaTrader 5 installations and mutable platform state.
+/live-dev/runtime/portable/
+/lab/runtime/tester-portable/
+
+# Mutable Live state, generated configuration, logs, and reports.
+/live-dev/runtime/generated/
+/live-dev/logs/
+/live-dev/state/
+/lab/artifacts/backtests/*
+!/lab/artifacts/backtests/.gitkeep
+/lab/artifacts/logs/*
+!/lab/artifacts/logs/.gitkeep
+/lab/artifacts/temp/
+
+# General build products are ignored; frozen control and release binaries are retained.
+*.ex5
+*.ex4
+*.log
+!live-dev/package/**/*.ex5
+!lab/control-v6r6/**/*.ex5
+
+# Replaceable local analysis output.
+__pycache__/
+*.pyc
+/tmp/
+
