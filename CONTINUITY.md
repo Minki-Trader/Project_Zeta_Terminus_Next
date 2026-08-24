@@ -41,6 +41,6 @@ This successor is frozen under `live-dev/package/active/` but is not a real-acco
 - V7 may not import or adopt B70 positions or state.
 - The handoff completed at V7 terminal PID `10112` with Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c` and Magic `260824701..260824706`. Legacy must not restart; any future cold start remains a controlled Next-only ownership transition.
 
-## Paused and resumed work
+## Completed legacy closure
 
-B75 `RC16 Explicit Frozen-Life HOLD Confirmation` was not opened. It is paused during migration and resumes as the next ordinary single-stream research task after the migration boundary.
+B75 `RC16 Explicit Frozen-Life HOLD Confirmation` resumed after migration and is complete as an evidence-only Next closure. The exact frozen B45/B55/B60/B65/B68/B74 records support keeping the full accepted RC16 volume to its original catastrophic stop or fixed eight-M30 exit. No new data, outcome, executable, identity, deployment, Live change, or successor research stream opened.

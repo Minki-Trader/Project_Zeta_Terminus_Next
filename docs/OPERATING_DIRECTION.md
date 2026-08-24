@@ -19,7 +19,9 @@ The active migration is not a new research search. `NEXT-E01/V7` is a behavior-p
 
 Maintain one attributable development stream to its next durable economic or engineering boundary, freeze source and evidence, then switch. No parallel or delegated candidate streams are allowed. Axis A, Axis B, Axis C, V5, every V6 version, and V7 keep separate source, binary, settings, Portfolio ID, Magic, state paths, evidence, and verdicts. Combination requires a separate user decision and fresh shared-account evidence.
 
-B75 `RC16 Explicit Frozen-Life HOLD Confirmation` is paused without an opened outcome until the continuity migration reaches its durable boundary. It resumes in Next afterward unless the user directs otherwise.
+The inherited B75 task is complete in Next as `RC16 Explicit Frozen-Life HOLD Confirmation`. It audited only the frozen B45/B55/B60/B65/B68/B74 decision records and confirmed full-volume HOLD to the original catastrophic stop or fixed eight-M30 exit. It opened no new data, outcome, latest period, model, executable, identity, deployment, or Live change.
+
+Per the user's direction, B75 is the sole post-migration research closure. No successor research family, axis, candidate, or experiment is open; further research requires a new explicit user direction.
 
 ## Live and Lab isolation
 
@@ -40,4 +42,3 @@ On duplicate-runtime risk, unknown ownership, corrupt state, broker/local mismat
 Use the lightest normal implementation that preserves causal ordering, broker costs, rounding, minimum volume, shared-account risk, restart recovery, and bounded logging. Do not create CI, unit/integration/regression tests, separate validators, parity checkers, promotion checkers, test-only infrastructure, or a project-specific Skill. Verify V7 with MetaEditor compilation, normal fixed-window MT5 real-tick executions, post-result ledger comparison, and bounded entries-disabled operating observation.
 
 Keep `CURRENT_STATE.md` concise and current. Store historical transitions in numbered state chunks, human research summaries under `docs/lineage/`, and complete immutable references under `lineage/`.
-

@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0010`
+- Latest state ID: `STATE-0011`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -21,13 +21,14 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Active work
 
-- Active engineering boundary: V7 handoff complete; resume B75 `RC16 Explicit Frozen-Life HOLD Confirmation` as the next single research task without changing the frozen Live release
+- Active engineering boundary: V7 handoff complete and unchanged
+- Active research boundary: B75 `RC16 Explicit Frozen-Life HOLD Confirmation` complete; no successor research family, axis, candidate, or experiment is open
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
 - V7 Magic: `260824701..260824706`
 - Required isolation: Live-Dev and Lab share no source Include tree, EX5, settings, Portable runtime, state, or logs
-- B75: restored as the next single research task, still unopened and unchanged at handoff completion
+- B75: closed in Next solely as the inherited RC16 frozen-life HOLD confirmation; no new data, outcome, tester run, executable, identity, deployment, or Live change
 
 ## Completed migration evidence
 
@@ -58,6 +59,13 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Bounded stabilization advanced state sequence `7 → 8` through server `2026.08.24 09:42:15` with entries `1/1`, positions/order/margin/risk `0/0/$0/$0`, balance/equity `$104.98/$104.98`, zero ownership/safety/persistence/broker/foreign fault, and no alert or warning
 - Final repository closeout: Next tag `next-live-v7-handoff-v1` points to completed handoff commit `405aef6`; legacy final commit/tag is `3bba815` / `terminus-final-handoff-v1`; private GitHub legacy repository is archived read-only while the private Next repository remains active
 
+## Completed legacy closure
+
+- Audited the exact B45/B55/B60/B65/B68/B74 human decision records at legacy anchor `4c0899255c701e2c6b53e7f44457c431aef2ad76`; all six Git blobs match `lineage/research-lineage.jsonl`
+- Confirmed B75 `RC16 Explicit Frozen-Life HOLD Confirmation`: keep the full accepted RC16 volume to the original catastrophic stop or fixed eight-M30 exit
+- Machine-readable record: `lab/evidence/RC16_FROZEN_LIFE_HOLD_CONFIRMATION_B75.json`, SHA-256 `C4FFF105C9918E3F81BD8936E09053034DC65338994EC1970484FD7541BBCAFC`
+- Per the user's direction, this closes only the inherited legacy task; no new research stream is open
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -69,4 +77,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RESUMED_AS_NEXT_TASK`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; NO_SUCCESSOR_RESEARCH_STREAM_OPEN`

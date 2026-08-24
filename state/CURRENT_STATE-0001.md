@@ -73,3 +73,11 @@
 - Pushed Next final handoff commit `405aef63c7d46c16fb5c0157a91bf296094a9267` and annotated tag `next-live-v7-handoff-v1`. A repeated Master invocation recognized existing exact V7 PID `10112` and the sole dashboard, restored both windows and created no duplicate.
 - Pushed legacy final handoff commit `3bba815d9e67e45a87a032cf3da425c92242e150` and annotated tag `terminus-final-handoff-v1`, then archived the private GitHub repository `Minki-Trader/Project_Zeta_Terminus` read-only. The private Next repository remains active and unarchived; local legacy history and runtime evidence were not deleted.
 - Repository closeout changed no V7 source, EX5, SET, state, entry, management, ownership or risk behavior. Exact V7 remains the sole authorized Live owner and B75 remains the next unopened serial task.
+
+## STATE-0011 - 2026-08-24
+
+- The user fixed the post-migration scope to closing only the inherited B75 record and explicitly declined opening a new research axis. No successor research family, candidate or experiment is active.
+- Audited the complete B45/B55/B60/B65/B68/B74 human decision records at legacy anchor `4c0899255c701e2c6b53e7f44457c431aef2ad76`. Their six Git blobs match the exact SHA-256-linked records in `lineage/research-lineage.jsonl`, and none adopted an RC16 management alternative or left a nearby rescue open.
+- Closed B75 as `RC16_EXPLICIT_FROZEN_LIFE_HOLD_CONFIRMED`: after accepted fill and original catastrophic-stop ownership confirmation, retain the full accepted RC16 volume to the original catastrophic stop or fixed eight-M30 exit. This is a legacy evidence conclusion, not a new management right.
+- Recorded the machine-readable closure in `lab/evidence/RC16_FROZEN_LIFE_HOLD_CONFIRMATION_B75.json`, SHA-256 `C4FFF105C9918E3F81BD8936E09053034DC65338994EC1970484FD7541BBCAFC`. No new data, outcome calculation, latest period, tester or terminal run, source, EX5, SET, identity, Magic, state, deployment or Live change opened.
+- Exact V7 `NEXT-E01-V7-2db5ef5ead1c` remains the frozen sole Live owner. B75 is complete and no further Lab research is authorized without a new explicit user direction.
