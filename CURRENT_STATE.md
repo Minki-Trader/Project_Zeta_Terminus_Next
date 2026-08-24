@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0016`
+- Latest state ID: `STATE-0017`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 ## Active work
 
 - Active engineering boundary: V7 handoff complete; dashboard-only entry-evaluation visibility improvement complete with EA, chart and frozen release unchanged
-- Active research boundary: `전략 독립성·위험배분 연구` V1 closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`; no successor experiment is open
+- Active research boundary: `예치자본·위험용량 연구` V1 open at `OPEN_PROXY_PREDECLARED`; the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
@@ -87,6 +87,15 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Dashboard SHA-256: `5A3FB8D552511B8D16663F1E74973E57D856AD85AC28A453C7C1795A7A4BF9D6`
 - Only the dashboard process restarted from PID `26868` to PID `24936`; exact V7 terminal PID `10112`, its start time, chart attachment, EA, EX5, SET and runtime state remained unchanged
 
+## Open deposit capital and risk capacity research
+
+- User-authorized descriptive family: `예치자본·위험용량 연구` (`deposit-capital-risk-capacity`)
+- Predeclared declaration: `lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json`
+- Proxy uses only the already-consumed fresh-`$100` 2024 combined and six standalone Lab ledgers and compares economic hypotheses rather than a parameter grid
+- Exactly three Lab EA paths are allowed by the frozen shortlist rule: mandatory deposit-proportional `LINEAR_CAPITAL`, one capacity hypothesis and one sizing-governor hypothesis
+- Candidate-specific selection is fresh 2025 `$100/$200/$300`; 2026 January-May is conditional on a 2025 pass; 2026 June-July and partial August remain excluded
+- No Live source, package, SET, state, process, order behavior or promotion authority changed
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -98,4 +107,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_OPEN_PROXY_PREDECLARED`

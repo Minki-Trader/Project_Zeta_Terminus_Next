@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "record_type": "research_declaration",
+  "research_family_ko": "예치자본·위험용량 연구",
+  "research_family_slug": "deposit-capital-risk-capacity",
+  "version": "V1",
+  "declared_on_kst": "2026-08-24",
+  "status": "OPEN_PROXY_PREDECLARED",
+  "repository_head_before_open": "1fb6c1814f01f600c0ac9db63b86abeaeb3ccf8f",
+  "objective": "Test whether deposit-matched fixed lot tranches and economically distinct uses of the frozen 12% aggregate-risk envelope improve stressed return, drawdown, admission breadth, and margin use relative to depositing more cash behind unchanged V7 economics.",
+  "authority_and_isolation": {
+    "lab_only": true,
+    "live_source_change_authorized": false,
+    "live_binary_or_set_change_authorized": false,
+    "live_state_or_process_change_authorized": false,
+    "promotion_authorized": false,
+    "tester_only_eas_must_fail_initialization_outside_mql_tester": true,
+    "one_serial_tester_stream": true,
+    "frozen_live_release": "NEXT-E01-V7-2db5ef5ead1c",
+    "frozen_live_portfolio": "ZT-PORT-NEXT-V7-2db5ef5ead1c"
+  },
+  "known_before_open": {
+    "current_reference_capital_usd": 100.0,
+    "current_base_volume": 0.01,
+    "current_addition_step_usd": 150.0,
+    "current_position_risk_fraction": 0.04,
+    "current_aggregate_risk_fraction": 0.12,
+    "current_2024_first_come_stressed_net_usd": 54.663,
+    "current_2024_first_come_stressed_max_closed_drawdown_usd": 17.779,
+    "current_2024_hard_aggregate_risk_skips": 18,
+    "prior_strategy_priority_research_verdict": "NO_POLICY_PASSED_RETAIN_FIRST_COME",
+    "prior_binding_control_aggregate_through_2026_08_20_exists": true,
+    "candidate_specific_2025_or_2026_outcomes_known": false
+  },
+  "periods": {
+    "proxy_development": {
+      "from_inclusive": "2024-01-01",
+      "to_exclusive": "2025-01-01",
+      "source": "already-consumed fresh-100 SIRA combined and six standalone real-tick ledgers",
+      "role": "exploratory hypothesis screening only"
+    },
+    "ea_selection": {
+      "from_inclusive": "2025-01-01",
+      "to_exclusive": "2026-01-01",
+      "fresh_deposits_usd": [100, 200, 300],
+      "halves": ["2025_H1", "2025_H2"],
+      "role": "first candidate-specific economic selection"
+    },
+    "conditional_confirmation": {
+      "from_inclusive": "2026-01-01",
+      "to_exclusive": "2026-06-01",
+      "opened_only_if_selection_passes": true
+    },
+    "held_out_latest_completed_months": {
+      "from_inclusive": "2026-06-01",
+      "to_exclusive": "2026-08-01",
+      "must_not_be_opened_in_v1": true
+    },
+    "partial_august_2026": "excluded"
+  },
+  "proxy_contract": {
+    "not_a_parameter_grid": true,
+    "single_predeclared_threshold_per_hypothesis": true,
+    "causal_inputs_only_except_explicit_path_envelopes": true,
+    "shared_path_limitations": [
+      "standalone lifecycle merging omits replacement signals that would exist after a rejected lifecycle",
+      "changed protective-stop geometry cannot be reconstructed from lifecycle endpoints",
+      "margin, passive pending-order, shared equity, and RC4 path feedback require MT5 confirmation"
+    ],
+    "changed_stop_geometry_envelopes": {
+      "fixed_path_notional": "hold the observed price path and multiply endpoint P/L by volume",
+      "risk_r_invariant": "hold observed stressed R and multiply by the proposed planned-risk dollars",
+      "conservative_trade_value": "minimum of fixed-path-notional and risk-R-invariant stressed P/L trade by trade",
+      "screening_uses": "conservative_trade_value"
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "DEPOSIT_ONLY_RESERVE",
+      "premise": "Extra cash is only a margin and drawdown reserve while V7 keeps reference 100, base 0.01, position risk 4 dollars, and aggregate risk 12 dollars.",
+      "proxy": "Use the fresh-100 combined lifecycle path unchanged and divide the same dollar outcomes by the larger deposit.",
+      "ea_role": "matching-deposit control"
+    },
+    {
+      "id": "LINEAR_CAPITAL",
+      "premise": "Each 100-dollar deposit tranche starts one 0.01 lot risk unit; capital, volume, 4% position risk, 12% aggregate risk, and the 150%-of-start compounding step scale together.",
+      "deposit_contracts": {
+        "100": {"base_volume": 0.01, "addition_step_usd": 150.0},
+        "200": {"base_volume": 0.02, "addition_step_usd": 300.0},
+        "300": {"base_volume": 0.03, "addition_step_usd": 450.0}
+      },
+      "proxy": "Scale the accepted combined path by deposit/100; geometry and percentage outcomes should be invariant before broker nonlinearities.",
+      "ea_role": "mandatory structural anchor regardless of proxy rank"
+    },
+    {
+      "id": "FIXED_LOT_LADDER",
+      "premise": "Initial lots equal deposit tranches, then every additional 150 stressed dollars adds exactly 0.01 lot rather than multiplying the whole initial base lot.",
+      "proxy": "Replay combined lifecycle endpoints causally with day-frozen lot units and closed stressed P/L.",
+      "group": "sizing_governor"
+    },
+    {
+      "id": "FOUR_SLOT_LINEAR",
+      "premise": "Use deposit-proportional lots but split the 12% envelope into four 3% positions to trade some breadth for tighter individual stops.",
+      "maximum_risk_slots": 4,
+      "position_risk_fraction": 0.03,
+      "aggregate_risk_fraction": 0.12,
+      "group": "capacity"
+    },
+    {
+      "id": "SIX_SLOT_LINEAR",
+      "premise": "Use deposit-proportional lots but split the 12% envelope into six 2% positions so every strategy can coexist, accepting materially tighter individual stops.",
+      "maximum_risk_slots": 6,
+      "position_risk_fraction": 0.02,
+      "aggregate_risk_fraction": 0.12,
+      "group": "capacity"
+    },
+    {
+      "id": "BREADTH_DOLLAR_SLOTS",
+      "premise": "Treat each added 100-dollar deposit tranche as three additional frozen 4-dollar risk slots while retaining 0.01 lot and the original stop geometry per trade.",
+      "maximum_risk_slots": {"100": 3, "200": 6, "300": 6},
+      "position_risk_usd": 4.0,
+      "group": "capacity"
+    },
+    {
+      "id": "SYMBOL_BUCKET_CAP",
+      "premise": "Keep three proportional 4% slots but prevent all three from concentrating in one index by capping each symbol bucket at two slots.",
+      "maximum_total_slots": 3,
+      "maximum_slots_per_symbol": 2,
+      "group": "capacity"
+    },
+    {
+      "id": "DRAWDOWN_TRANCHE_BRAKE",
+      "premise": "Start with deposit-proportional lot units, remove one 0.01 risk unit for new entries after closed stressed drawdown reaches 6% of starting deposit, and restore it only at a new stressed high-water mark.",
+      "drawdown_trigger_fraction": 0.06,
+      "minimum_lot_units": 1,
+      "group": "sizing_governor"
+    }
+  ],
+  "proxy_to_ea_rule": {
+    "ea_count": 3,
+    "mandatory": "LINEAR_CAPITAL",
+    "additional": [
+      "highest-ranked capacity-group hypothesis",
+      "highest-ranked sizing-governor-group hypothesis"
+    ],
+    "economic_eligibility_at_both_200_and_300": [
+      "conservative stressed net is positive in H1, H2, and full 2024",
+      "full conservative stressed maximum closed drawdown percent is no worse than LINEAR_CAPITAL",
+      "full conservative stressed-net-to-drawdown ratio exceeds LINEAR_CAPITAL",
+      "at least 12 admissions differ for a capacity policy or at least 20 entries change size for a sizing governor"
+    ],
+    "diagnostic_fallback": "If a group has no eligible hypothesis, still implement its highest-ranked hypothesis as DIAGNOSTIC_ONLY so the user-requested distinct EA paths receive causal MT5 evidence.",
+    "rank": "maximize the minimum full-year conservative stressed-net-to-drawdown improvement over LINEAR_CAPITAL across deposits 200 and 300; tie by lower worst drawdown percent, then fewer interventions"
+  },
+  "ea_selection_metrics": [
+    "actual and 2x-cost-stressed net USD and return percent",
+    "actual and stressed maximum closed drawdown USD and percent",
+    "trade and component counts",
+    "maximum concurrent positions and overlap pairs",
+    "hard aggregate-risk, minimum-lot-risk, and margin skips",
+    "maximum margin dollars and percent of equity",
+    "lot-unit changes and policy interventions",
+    "MT5 report, order, deal, and logged lifecycle integrity"
+  ],
+  "ea_selection_gate": {
+    "implementation": "MetaEditor build 6140 with 0 errors and 0 warnings; normal serial FPMarkets every-tick-real-tick runs; no safety, persistence, broker-identity, or foreign-exposure faults",
+    "linear_100_anchor": "LINEAR_CAPITAL at 100 must match DEPOSIT_ONLY_RESERVE at 100 after research identity normalization",
+    "linear_scale_consistency": "LINEAR_CAPITAL at 200 and 300 must keep full stressed return percent and stressed drawdown percent within 0.50 percentage point of LINEAR_CAPITAL at 100",
+    "candidate_periods": "positive stressed net in 2025 H1, H2, and full year at both 200 and 300",
+    "candidate_risk": "full stressed drawdown percent no worse than LINEAR_CAPITAL by more than 0.10 percentage point at either deposit",
+    "candidate_efficiency": "full stressed-net-to-drawdown ratio strictly exceeds LINEAR_CAPITAL at both deposits",
+    "candidate_return_floor": "full stressed return percent is at least 90% of LINEAR_CAPITAL at both deposits",
+    "selection": "At most one passing non-control policy, ranked by the smaller efficiency improvement across 200 and 300; tie by lower worst drawdown percent and then fewer interventions"
+  },
+  "stop_rules": [
+    "No threshold, slot count, formula mixture, component weight, or nearby policy rescue after reading 2025.",
+    "If no non-control policy passes 2025, do not open 2026 confirmation and close with frozen V7 retained.",
+    "If a policy passes 2025, freeze it before 2026 confirmation and require the same direction of return and drawdown evidence at both deposits.",
+    "No result grants Live change or promotion authority."
+  ]
+}
