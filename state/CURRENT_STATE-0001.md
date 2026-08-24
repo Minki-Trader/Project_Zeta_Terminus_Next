@@ -88,3 +88,11 @@
 - The dashboard continues to read only the existing local V7 snapshot. Static criterion descriptions mirror the exact frozen V7 source for display only and are not consumed by the EA or any order path. PowerShell parsing completed with zero errors and the local `-Once` renderer showed all six strategy sections.
 - Restarted only the dashboard from PID `26868` to PID `24936` so the new view became active. V7 terminal PID `10112` and its start time remained unchanged; the EA stayed attached to the chart and no source, EX5, SET, state, order behavior or broker query changed.
 - Dashboard SHA-256 is `5A3FB8D552511B8D16663F1E74973E57D856AD85AC28A453C7C1795A7A4BF9D6`. B75 remains closed and no research stream opened.
+
+## STATE-0013 - 2026-08-24
+
+- By explicit user direction, opened one new serial Lab family named `전략 독립성·위험배분 연구`; new Next research no longer uses Axis-style names, while legacy Axis labels remain provenance only.
+- Fixed the design before economic execution: six tester-only `$100` single-strategy EAs, one frozen-order six-strategy shared `$100` control, full signal-passed opportunity and lifecycle event logging, fit through 2023, separate 2024 H1/H2 selection, fixed 2025 forward, and unopened 2026 until the forward gate passes.
+- Predeclared first-come, stored win-probability, conservative stressed-R and overlap-aware one-slot reservation comparisons. The future-aware oracle is diagnostic only; initial scope excludes preemption, exit changes and nearby threshold rescue.
+- All research identity, Magic, source, settings, state, events, reports and Portable paths remain under Lab. Exact Live V7 PID `10112`, dashboard PID `24936`, Live EA, Include, EX5, SET and state are unchanged and receive no promotion authority from this opening.
+- Compiled the combined control and all six standalone wrappers with MetaEditor build 6140 at `0 errors / 0 warnings`; the hash-pinned receipt is `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_COMPILE_RECEIPT_V1.json`. Economic runs have not yet begun at this state boundary.

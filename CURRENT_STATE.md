@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0012`
+- Latest state ID: `STATE-0013`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,13 +22,14 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 ## Active work
 
 - Active engineering boundary: V7 handoff complete; dashboard-only entry-evaluation visibility improvement complete with EA, chart and frozen release unchanged
-- Active research boundary: B75 `RC16 Explicit Frozen-Life HOLD Confirmation` complete; no successor research family, axis, candidate, or experiment is open
+- Active research boundary: `전략 독립성·위험배분 연구` V1 open in Lab; six standalone `$100` strategies versus the frozen shared `$100` first-come control, with fit/selection/forward isolation
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
 - V7 Magic: `260824701..260824706`
 - Required isolation: Live-Dev and Lab share no source Include tree, EX5, settings, Portable runtime, state, or logs
-- B75: closed in Next solely as the inherited RC16 frozen-life HOLD confirmation; no new data, outcome, tester run, executable, identity, deployment, or Live change
+- B75: closed in Next solely as the inherited RC16 frozen-life HOLD confirmation
+- New family grants no Live source, package, settings, state, process, order or deployment change
 
 ## Completed migration evidence
 
@@ -64,7 +65,16 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Audited the exact B45/B55/B60/B65/B68/B74 human decision records at legacy anchor `4c0899255c701e2c6b53e7f44457c431aef2ad76`; all six Git blobs match `lineage/research-lineage.jsonl`
 - Confirmed B75 `RC16 Explicit Frozen-Life HOLD Confirmation`: keep the full accepted RC16 volume to the original catastrophic stop or fixed eight-M30 exit
 - Machine-readable record: `lab/evidence/RC16_FROZEN_LIFE_HOLD_CONFIRMATION_B75.json`, SHA-256 `C4FFF105C9918E3F81BD8936E09053034DC65338994EC1970484FD7541BBCAFC`
-- Per the user's direction, this closes only the inherited legacy task; no new research stream is open
+- The later explicit user direction opens only the separate Lab `전략 독립성·위험배분 연구`; it does not reopen B75
+
+## Active strategy independence and risk allocation research
+
+- Declaration: `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_DECLARATION_V1.json`
+- Frozen observation design: six tester-only single-strategy `$100` EAs plus one six-strategy shared `$100` first-come control, all with separate research identity and full opportunity/event logging
+- Compile receipt: all seven Lab EAs MetaEditor build 6140 `0 errors / 0 warnings`, `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_COMPILE_RECEIPT_V1.json`
+- Fit: 2022-08-01 through 2023-12-31; selection: 2024 H1/H2; fixed forward: 2025; 2026 remains unopened until the 2025 gate passes
+- Predeclared causal variants: stored win-probability, conservative stressed-R and overlap-aware one-slot reservation; future oracle is diagnostic only; no preemption or exit change
+- Live V7 terminal PID `10112` and dashboard PID `24936` remain outside the Lab research boundary and unchanged
 
 ## Completed operator improvement
 
@@ -84,4 +94,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; NO_SUCCESSOR_RESEARCH_STREAM_OPEN`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_RESEARCH_OPEN_LAB_ONLY`

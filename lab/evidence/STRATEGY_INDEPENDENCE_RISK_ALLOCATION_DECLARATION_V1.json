@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "record_type": "research_declaration",
+  "family_id": "strategy-independence-risk-allocation",
+  "family_name_ko": "전략 독립성·위험배분 연구",
+  "authorized_by_user_on": "2026-08-24",
+  "status": "open",
+  "lane": "lab_only",
+  "live_change_authorized": false,
+  "parent_release": "NEXT-E01-V7-2db5ef5ead1c",
+  "frozen_economics": [
+    "signals",
+    "evaluation_times",
+    "directions",
+    "order_types",
+    "costs",
+    "protection",
+    "holding_and_exit_rules",
+    "rc4_adverse_risk_compression",
+    "base_position_and_aggregate_risk_inputs"
+  ],
+  "accounts": {
+    "standalone_count": 6,
+    "standalone_reference_capital_usd_each": 100.0,
+    "combined_control_reference_capital_usd": 100.0,
+    "direct_sum_comparison_allowed": false
+  },
+  "periods": {
+    "fit": ["2022-08-01", "2024-01-01"],
+    "selection": ["2024-01-01", "2025-01-01"],
+    "selection_subperiods": [
+      ["2024-01-01", "2024-07-01"],
+      ["2024-07-01", "2025-01-01"]
+    ],
+    "fixed_forward": ["2025-01-01", "2026-01-01"],
+    "post_forward_confirmation": ["2026-01-01", "2026-06-01"],
+    "isolated_latest_two_completed_months": ["2026-06-01", "2026-08-01"]
+  },
+  "selection_isolation": {
+    "fit_constants_must_be_frozen_before_reading_2024_policy_outcomes": true,
+    "selected_policy_must_be_frozen_before_running_or_reading_2025": true,
+    "do_not_open_2026_before_2025_pass": true
+  },
+  "observation_fields": [
+    "component",
+    "decision_bar",
+    "server_time",
+    "direction",
+    "signal_value",
+    "order_price",
+    "volume",
+    "stop_loss",
+    "planned_risk_usd",
+    "decision_outcome",
+    "pre_admission_active_mask",
+    "pre_admission_aggregate_planned_risk_usd",
+    "pre_admission_equity_usd",
+    "pre_admission_margin_usd",
+    "pre_admission_conservative_risk_capital_usd",
+    "rc4_shadow_occupied",
+    "actual_net_usd",
+    "stressed_2x_cost_net_usd"
+  ],
+  "policies": [
+    {
+      "id": "FIRST_COME",
+      "causal": true,
+      "description": "Frozen V7 call order and aggregate-risk admission."
+    },
+    {
+      "id": "WIN_PROB_RESERVE_ONE",
+      "causal": true,
+      "score": "Beta(1,1) posterior mean win probability from fit trades",
+      "reservation_slots": 1
+    },
+    {
+      "id": "CONSERVATIVE_R_RESERVE_ONE",
+      "causal": true,
+      "score": "mean(clamp(stressed_net/planned_risk,-3,3))-1.28155*standard_error",
+      "reservation_slots": 1
+    },
+    {
+      "id": "OVERLAP_AWARE_RESERVE_ONE",
+      "causal": true,
+      "score": "conservative_R plus active-component conditional adjustment shrunk with 20 pseudo-observations",
+      "reservation_slots": 1
+    },
+    {
+      "id": "FUTURE_ORACLE",
+      "causal": false,
+      "diagnostic_only": true,
+      "eligible_for_ea_or_release": false
+    }
+  ],
+  "reservation_contract": {
+    "trigger": "candidate would consume the third 4% risk slot while a higher-scored fixed-window strategy remains later that server day",
+    "maximum_reserved_slots": 1,
+    "preemption": false,
+    "exit_change": false,
+    "unused_reservation_released_after_last_relevant_window": true
+  },
+  "selection_pass": {
+    "must_improve_stressed_net_vs_first_come_in": ["2024_H1", "2024_H2", "2024_full"],
+    "maximum_closed_drawdown_worsening_tolerance_usd": 0.01,
+    "minimum_affected_components": 2,
+    "minimum_distinct_incumbent_candidate_pairs": 2,
+    "tie_break_order": ["higher_2024_stressed_net", "lower_2024_max_closed_drawdown", "fewer_interventions"]
+  },
+  "forward_pass": {
+    "must_improve_2025_stressed_net_vs_first_come": true,
+    "maximum_closed_drawdown_must_not_worsen": true,
+    "failure_action": "close_research_and_retain_first_come"
+  },
+  "prohibited_initial_variations": [
+    "preemption",
+    "early_exit_changes",
+    "entry_signal_changes",
+    "multiple_nearby_threshold_rescues",
+    "oracle_deployment"
+  ]
+}

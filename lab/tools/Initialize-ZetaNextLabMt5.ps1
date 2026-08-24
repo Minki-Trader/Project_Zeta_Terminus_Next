@@ -131,6 +131,10 @@ $junctions = @(
     @{ Link = 'MQL5\Include\ZetaTerminusNext'; Target = 'mt5\src\Include\ZetaTerminusNext' },
     @{ Link = 'MQL5\Profiles\Tester\ZetaTerminusNext'; Target = 'mt5\config\tester' },
     @{ Link = 'MQL5\Files\ZetaTerminusNext'; Target = 'artifacts\ea-files\v7' },
+    @{ Link = 'MQL5\Experts\ZetaSira'; Target = 'research\strategy-independence-risk-allocation\mt5\src\Experts' },
+    @{ Link = 'MQL5\Include\ZetaSira'; Target = 'research\strategy-independence-risk-allocation\mt5\src\Include\ZetaSira' },
+    @{ Link = 'MQL5\Profiles\Tester\ZetaSira'; Target = 'research\strategy-independence-risk-allocation\mt5\config\tester' },
+    @{ Link = 'MQL5\Files\ZetaSira'; Target = 'artifacts\ea-files\strategy-independence-risk-allocation' },
     @{ Link = 'reports'; Target = 'artifacts\backtests' }
 )
 foreach ($junction in $junctions) {

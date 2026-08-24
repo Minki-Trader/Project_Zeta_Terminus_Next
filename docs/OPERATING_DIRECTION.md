@@ -2,7 +2,7 @@
 
 ## Objective and continuity
 
-Develop two fully independent deliverables for FPMarkets `US100`, `US30`, and `US500`, leverage `1:100`, and reference capital `$100`: Axis A is a genuinely high-turnover entry executable or shared-account portfolio; Axis B is dynamic management over frozen verified entries. Overall completion still requires both. Next inherits this objective and all economic evidence boundaries from Project Zeta Terminus; document volume and experiment count are not performance.
+Develop separately attributable economic capabilities for FPMarkets `US100`, `US30`, and `US500`, leverage `1:100`, and reference capital `$100`, including a genuinely high-turnover entry executable or shared-account portfolio and dynamic management over frozen verified entries. Next inherits the economic evidence boundaries from Project Zeta Terminus; document volume and experiment count are not performance. Legacy `Axis A/B/C` labels are provenance tags only. New Next work uses descriptive economic-family names.
 
 The active migration is not a new research search. `NEXT-E01/V7` is a behavior-preserving engineering successor to B70 V6R6. Its parent entry opportunities, first-fill timing and direction, orders, sizing, costs, protection, RC4 management, and portfolio risk are frozen.
 
@@ -10,18 +10,18 @@ The active migration is not a new research search. `NEXT-E01/V7` is a behavior-p
 
 - Hold out the latest two completed months from proxy selection by default. If they influence selection or tuning, they are current broker/cost/execution evidence only.
 - Binding evidence is continuous all-required-symbol FPMarkets `Every tick based on real ticks`, `100% real ticks`. Lower-quality or discontinuous history cannot pass or rescue a candidate.
-- Axis A must average at least three actual lifecycle-starting first fills per normal FPMarkets trading day in both binding-long and the isolated latest period. Zero-signal days remain in the denominator.
-- Axis B preserves verified signal generation, opportunity timestamps, and directions. It may change only causal sizing, hold, protection, breakeven, trailing, legal partial close, full close, or no action, subject to the safety layer.
+- A high-turnover entry executable must average at least three actual lifecycle-starting first fills per normal FPMarkets trading day in both binding-long and the isolated latest period. Zero-signal days remain in the denominator.
+- A frozen-entry management family preserves verified signal generation, opportunity timestamps, and directions. It may change only causal sizing, hold, protection, breakeven, trailing, legal partial close, full close, or no action, subject to the safety layer.
 - Proxy best-of-many output is selection, not profit proof. Prefer broad profitable plateaus and terminate cost-negative core assumptions without nearby threshold, feature, label, model, or exit-number rescue.
 - Implementation defects are corrected and rerun; they are not economic failures.
 
 ## One stream and identity separation
 
-Maintain one attributable development stream to its next durable economic or engineering boundary, freeze source and evidence, then switch. No parallel or delegated candidate streams are allowed. Axis A, Axis B, Axis C, V5, every V6 version, and V7 keep separate source, binary, settings, Portfolio ID, Magic, state paths, evidence, and verdicts. Combination requires a separate user decision and fresh shared-account evidence.
+Maintain one attributable development stream to its next durable economic or engineering boundary, freeze source and evidence, then switch. No parallel or delegated candidate streams are allowed. Every legacy provenance family, Next descriptive research family, V5, every V6 version, and V7 keep separate source, binary, settings, Portfolio ID, Magic, state paths, evidence, and verdicts. Combination requires a separate user decision and fresh shared-account evidence.
 
 The inherited B75 task is complete in Next as `RC16 Explicit Frozen-Life HOLD Confirmation`. It audited only the frozen B45/B55/B60/B65/B68/B74 decision records and confirmed full-volume HOLD to the original catastrophic stop or fixed eight-M30 exit. It opened no new data, outcome, latest period, model, executable, identity, deployment, or Live change.
 
-Per the user's direction, B75 is the sole post-migration research closure. No successor research family, axis, candidate, or experiment is open; further research requires a new explicit user direction.
+The user subsequently authorized one new serial Lab family on 2026-08-24: `전략 독립성·위험배분 연구` (`strategy-independence-risk-allocation`). It compares six separate `$100` single-strategy EAs with the frozen six-strategy shared `$100` first-come control, attributes overlap and risk-admission misses, and evaluates causal one-slot reservation using stored fit-period scores. Its declaration, selection isolation, variants and stop rules are authoritative at `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_DECLARATION_V1.json`. It grants no Live change or promotion authority.
 
 ## Live and Lab isolation
 
