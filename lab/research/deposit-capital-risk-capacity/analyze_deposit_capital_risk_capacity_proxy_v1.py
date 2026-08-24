@@ -567,9 +567,9 @@ def main() -> None:
         "integrity": {
             "control_lifecycles": len(control_trades),
             "standalone_lifecycles": len(standalone),
-            "all_source_volumes_0_01": true,
+            "all_source_volumes_0_01": True,
             "proxy_period": "2024-01-01/2025-01-01",
-            "selection_or_later_candidate_outcomes_consumed": false,
+            "selection_or_later_candidate_outcomes_consumed": False,
         },
         "results": results,
         "candidate_evaluations": evaluations,

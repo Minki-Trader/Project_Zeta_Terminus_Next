@@ -127,3 +127,12 @@
 - Fixed the EA rule before proxy outcomes: implement mandatory `LINEAR_CAPITAL`, the highest-ranked capacity hypothesis and the highest-ranked sizing-governor hypothesis; use a diagnostic fallback if a group has no proxy-eligible member. Candidate-specific selection starts fresh in 2025 at declared `$100/$200/$300` deposits.
 - Conditional confirmation is only 2026-01-01 through 2026-06-01 after a 2025 pass. The latest completed 2026 June-July months and partial August are excluded from V1, and no post-outcome threshold or nearby policy rescue is allowed.
 - Exact Live V7 PID `10112`, dashboard PID `24936`, Live source, Include, EX5, SET, state and order behavior remain unchanged. The new family is tester-only and grants no Live change or promotion authority.
+
+## STATE-0018 - 2026-08-24
+
+- Completed the predeclared 2024 proxy from 554 fresh shared-control lifecycles and 571 fresh standalone lifecycles, all at `0.01` volume. No 2025 or 2026 candidate outcome was consumed.
+- Deposit-only reserve retained `+$54.6630` stressed dollars, diluting return to `27.3315%` at `$200` and `18.2210%` at `$300`. `LINEAR_CAPITAL` scaled the path to `+$109.3260` and `+$163.9890` while retaining `54.6630%` return and `17.7790%` closed DD.
+- `BREADTH_DOLLAR_SLOTS` was the only capacity hypothesis to pass the proxy rule: it retained fixed `0.01`/about-`$4` trade risk, admitted all 571 standalone-observed lifecycles, produced conservative `+$62.6900`, and reduced `$200` DD to `7.5890%`, raising stressed net/DD from `3.0746` to `4.1303`.
+- Four-slot 3% and six-slot 2% linear-stop hypotheses failed both halves and full-year conservative envelopes; symbol-bucket concentration also worsened efficiency and DD. Neither is eligible for an EA in V1.
+- Neither sizing-governor passed. Per the predeclared diagnostic fallback, `FIXED_LOT_LADDER` outranked the 6% drawdown tranche brake and is frozen as the third EA path. At `$300`, its proxy changed 36 entries and returned `48.1792%` with `17.7896%` DD versus linear `54.6630%` / `17.7790%`.
+- Frozen EA shortlist is exactly `LINEAR_CAPITAL`, `BREADTH_DOLLAR_SLOTS`, and diagnostic-only `FIXED_LOT_LADDER`. Proxy evidence SHA-256 is `C75A51F2B1AD12B092108595B9BAA8435AB4FFF444AEAFDA8E189A9FC400A894`; no post-result threshold, fourth EA or nearby rescue may be added.

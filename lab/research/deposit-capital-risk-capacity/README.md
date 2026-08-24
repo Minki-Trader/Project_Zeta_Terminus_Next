@@ -19,3 +19,12 @@
 - 결과는 Live 승격이나 설정 변경 권한이 아니다.
 
 기계 사전선언은 [`lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json`](../../evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json)에 있다.
+
+## 동결 프록시 결과
+
+- `LINEAR_CAPITAL`: 직접 질문이라 사전 고정된 필수 구조 앵커. 2024 경로를 `$200/$300`에 선형 확대하면 스트레스 수익률 `54.663%`, 폐쇄 DD `17.779%`가 유지됐다.
+- `BREADTH_DOLLAR_SLOTS`: capacity 계열 유일 적격. `0.01` lot과 약 `$4` 위험을 유지하고 여섯 슬롯까지 허용한 독립경로 프록시는 571건, `+$62.6900`, `$200` 기준 수익률 `31.345%`, DD `7.589%`, net/DD `4.1303`이었다.
+- `FIXED_LOT_LADDER`: sizing-governor 계열은 모두 부적격이었고, 사전선언의 진단 fallback으로 선택됐다. `$300`에서 36개 진입 크기가 달라졌으나 수익률 `48.1792%`, DD `17.7896%`로 선형 확대보다 약했다.
+- 3% 4슬롯, 2% 6슬롯, symbol bucket과 6% drawdown brake는 EA로 가지 않는다.
+
+프록시 원본은 [`lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_PROXY_V1.json`](../../evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_PROXY_V1.json)이다.

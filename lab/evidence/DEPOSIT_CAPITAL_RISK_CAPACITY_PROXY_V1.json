@@ -1,0 +1,1264 @@
+{
+  "schema_version": 1,
+  "record_type": "proxy_result",
+  "research_family": "deposit-capital-risk-capacity",
+  "version": "V1",
+  "generated_on_kst": "2026-08-24",
+  "declaration": {
+    "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json",
+    "sha256": "c2423fa45c7d53b1b9838891897bd9c064a8343d8331c07b2a7766181556422d"
+  },
+  "analysis_source": {
+    "path": "lab/research/deposit-capital-risk-capacity/analyze_deposit_capital_risk_capacity_proxy_v1.py",
+    "sha256": "79b353093594c584b8c6107dcf670affddf80d89b249e560ed6e22f2b1f71405",
+    "sira_parser_path": "lab/research/strategy-independence-risk-allocation/analyze_strategy_independence_risk_allocation_v1.py",
+    "sira_parser_sha256": "574842976fcd715b929e8727a212d5970e8a36bb447fba792fe56cb4cadc4a4f"
+  },
+  "source_logs": {
+    "control": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-control-agent.log",
+      "sha256": "6f42055cacbfb93072c13ddb379de74bb4606bd802eb4d2655cad288ff056c85"
+    },
+    "rc16": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-rc16-agent.log",
+      "sha256": "48272c85ea729ffb3907c22d1234cf5c9557eb722608a778f19de6c4fc293fad"
+    },
+    "rc4": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-rc4-agent.log",
+      "sha256": "160a3894b84d5b8274d347ad00e4f6a3edb82682d46f28a11350f5fbc3948535"
+    },
+    "cross": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-cross-agent.log",
+      "sha256": "c3cbf7a9c5742298f060b891dc0181650f1ed9becb281a855af34b9f38554145"
+    },
+    "pressure": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-pressure-agent.log",
+      "sha256": "206ab8f61b3c25286bd9baadf4e946d7c669e9d9668f160054cd58448fa19dbe"
+    },
+    "return": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-return-agent.log",
+      "sha256": "3afb59c20908399cbe25a4993aad4654ff1f9d5c7c21279bffafaefcf85fb799"
+    },
+    "passive": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2024-passive-agent.log",
+      "sha256": "86d1fa0ed252d9ac288dcb21b93a217efff4aec08063b324fe246ef8c6233436"
+    }
+  },
+  "integrity": {
+    "control_lifecycles": 554,
+    "standalone_lifecycles": 571,
+    "all_source_volumes_0_01": true,
+    "proxy_period": "2024-01-01/2025-01-01",
+    "selection_or_later_candidate_outcomes_consumed": false
+  },
+  "results": {
+    "BREADTH_DOLLAR_SLOTS": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 571,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 297,
+            "win_count_conservative": 171,
+            "actual_net_usd_fixed_path": 22.78,
+            "stressed_net_usd_fixed_path": 17.9655,
+            "stressed_net_usd_r_invariant": 17.9655,
+            "stressed_net_usd_conservative": 17.9655,
+            "stressed_return_pct_conservative": 8.98275,
+            "stressed_max_closed_drawdown_usd_fixed_path": 13.2685,
+            "stressed_max_closed_drawdown_usd_r_invariant": 13.2685,
+            "stressed_max_closed_drawdown_usd_conservative": 13.2685,
+            "stressed_max_closed_drawdown_pct_conservative": 6.63425,
+            "stressed_net_to_drawdown_conservative": 1.3539963070429966,
+            "planned_risk_usd": 1212.3025,
+            "average_volume_units": 1.0
+          },
+          "2024_H2": {
+            "trade_count": 274,
+            "win_count_conservative": 151,
+            "actual_net_usd_fixed_path": 48.260000000000005,
+            "stressed_net_usd_fixed_path": 44.7245,
+            "stressed_net_usd_r_invariant": 44.7245,
+            "stressed_net_usd_conservative": 44.7245,
+            "stressed_return_pct_conservative": 22.36225,
+            "stressed_max_closed_drawdown_usd_fixed_path": 15.178000000000022,
+            "stressed_max_closed_drawdown_usd_r_invariant": 15.178000000000022,
+            "stressed_max_closed_drawdown_usd_conservative": 15.178000000000022,
+            "stressed_max_closed_drawdown_pct_conservative": 7.589000000000011,
+            "stressed_net_to_drawdown_conservative": 2.94666622743444,
+            "planned_risk_usd": 1254.12608,
+            "average_volume_units": 1.0
+          },
+          "2024_FULL": {
+            "trade_count": 571,
+            "win_count_conservative": 322,
+            "actual_net_usd_fixed_path": 71.04,
+            "stressed_net_usd_fixed_path": 62.69,
+            "stressed_net_usd_r_invariant": 62.69,
+            "stressed_net_usd_conservative": 62.69,
+            "stressed_return_pct_conservative": 31.345,
+            "stressed_max_closed_drawdown_usd_fixed_path": 15.178000000000019,
+            "stressed_max_closed_drawdown_usd_r_invariant": 15.178000000000019,
+            "stressed_max_closed_drawdown_usd_conservative": 15.178000000000019,
+            "stressed_max_closed_drawdown_pct_conservative": 7.589000000000009,
+            "stressed_net_to_drawdown_conservative": 4.130320200289888,
+            "planned_risk_usd": 2466.42858,
+            "average_volume_units": 1.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 208,
+          "PRESSURE": 23,
+          "RETURN": 55,
+          "PASSIVE": 160
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 571,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 297,
+            "win_count_conservative": 171,
+            "actual_net_usd_fixed_path": 22.78,
+            "stressed_net_usd_fixed_path": 17.9655,
+            "stressed_net_usd_r_invariant": 17.9655,
+            "stressed_net_usd_conservative": 17.9655,
+            "stressed_return_pct_conservative": 5.9885,
+            "stressed_max_closed_drawdown_usd_fixed_path": 13.2685,
+            "stressed_max_closed_drawdown_usd_r_invariant": 13.2685,
+            "stressed_max_closed_drawdown_usd_conservative": 13.2685,
+            "stressed_max_closed_drawdown_pct_conservative": 4.422833333333333,
+            "stressed_net_to_drawdown_conservative": 1.3539963070429966,
+            "planned_risk_usd": 1212.3025,
+            "average_volume_units": 1.0
+          },
+          "2024_H2": {
+            "trade_count": 274,
+            "win_count_conservative": 151,
+            "actual_net_usd_fixed_path": 48.260000000000005,
+            "stressed_net_usd_fixed_path": 44.7245,
+            "stressed_net_usd_r_invariant": 44.7245,
+            "stressed_net_usd_conservative": 44.7245,
+            "stressed_return_pct_conservative": 14.908166666666666,
+            "stressed_max_closed_drawdown_usd_fixed_path": 15.178000000000022,
+            "stressed_max_closed_drawdown_usd_r_invariant": 15.178000000000022,
+            "stressed_max_closed_drawdown_usd_conservative": 15.178000000000022,
+            "stressed_max_closed_drawdown_pct_conservative": 5.059333333333341,
+            "stressed_net_to_drawdown_conservative": 2.94666622743444,
+            "planned_risk_usd": 1254.12608,
+            "average_volume_units": 1.0
+          },
+          "2024_FULL": {
+            "trade_count": 571,
+            "win_count_conservative": 322,
+            "actual_net_usd_fixed_path": 71.04,
+            "stressed_net_usd_fixed_path": 62.69,
+            "stressed_net_usd_r_invariant": 62.69,
+            "stressed_net_usd_conservative": 62.69,
+            "stressed_return_pct_conservative": 20.89666666666667,
+            "stressed_max_closed_drawdown_usd_fixed_path": 15.178000000000019,
+            "stressed_max_closed_drawdown_usd_r_invariant": 15.178000000000019,
+            "stressed_max_closed_drawdown_usd_conservative": 15.178000000000019,
+            "stressed_max_closed_drawdown_pct_conservative": 5.059333333333339,
+            "stressed_net_to_drawdown_conservative": 4.130320200289888,
+            "planned_risk_usd": 2466.42858,
+            "average_volume_units": 1.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 208,
+          "PRESSURE": 23,
+          "RETURN": 55,
+          "PASSIVE": 160
+        }
+      }
+    },
+    "DEPOSIT_ONLY_RESERVE": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 11.63,
+            "stressed_net_usd_fixed_path": 6.979500000000001,
+            "stressed_net_usd_r_invariant": 6.979500000000001,
+            "stressed_net_usd_conservative": 6.979500000000001,
+            "stressed_return_pct_conservative": 3.4897500000000004,
+            "stressed_max_closed_drawdown_usd_fixed_path": 17.779,
+            "stressed_max_closed_drawdown_usd_r_invariant": 17.779,
+            "stressed_max_closed_drawdown_usd_conservative": 17.779,
+            "stressed_max_closed_drawdown_pct_conservative": 8.8895,
+            "stressed_net_to_drawdown_conservative": 0.3925698858203499,
+            "planned_risk_usd": 1089.92496,
+            "average_volume_units": 1.0
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 51.12,
+            "stressed_net_usd_fixed_path": 47.6835,
+            "stressed_net_usd_r_invariant": 47.6835,
+            "stressed_net_usd_conservative": 47.6835,
+            "stressed_return_pct_conservative": 23.84175,
+            "stressed_max_closed_drawdown_usd_fixed_path": 15.546,
+            "stressed_max_closed_drawdown_usd_r_invariant": 15.546,
+            "stressed_max_closed_drawdown_usd_conservative": 15.546,
+            "stressed_max_closed_drawdown_pct_conservative": 7.773,
+            "stressed_net_to_drawdown_conservative": 3.0672520262446934,
+            "planned_risk_usd": 1445.47298,
+            "average_volume_units": 1.0
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 62.75,
+            "stressed_net_usd_fixed_path": 54.663000000000004,
+            "stressed_net_usd_r_invariant": 54.663000000000004,
+            "stressed_net_usd_conservative": 54.663000000000004,
+            "stressed_return_pct_conservative": 27.331500000000002,
+            "stressed_max_closed_drawdown_usd_fixed_path": 17.779,
+            "stressed_max_closed_drawdown_usd_r_invariant": 17.779,
+            "stressed_max_closed_drawdown_usd_conservative": 17.779,
+            "stressed_max_closed_drawdown_pct_conservative": 8.8895,
+            "stressed_net_to_drawdown_conservative": 3.0745823724618933,
+            "planned_risk_usd": 2535.39794,
+            "average_volume_units": 1.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 11.63,
+            "stressed_net_usd_fixed_path": 6.979500000000001,
+            "stressed_net_usd_r_invariant": 6.979500000000001,
+            "stressed_net_usd_conservative": 6.979500000000001,
+            "stressed_return_pct_conservative": 2.3265000000000002,
+            "stressed_max_closed_drawdown_usd_fixed_path": 17.779,
+            "stressed_max_closed_drawdown_usd_r_invariant": 17.779,
+            "stressed_max_closed_drawdown_usd_conservative": 17.779,
+            "stressed_max_closed_drawdown_pct_conservative": 5.926333333333334,
+            "stressed_net_to_drawdown_conservative": 0.3925698858203499,
+            "planned_risk_usd": 1089.92496,
+            "average_volume_units": 1.0
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 51.12,
+            "stressed_net_usd_fixed_path": 47.6835,
+            "stressed_net_usd_r_invariant": 47.6835,
+            "stressed_net_usd_conservative": 47.6835,
+            "stressed_return_pct_conservative": 15.8945,
+            "stressed_max_closed_drawdown_usd_fixed_path": 15.546,
+            "stressed_max_closed_drawdown_usd_r_invariant": 15.546,
+            "stressed_max_closed_drawdown_usd_conservative": 15.546,
+            "stressed_max_closed_drawdown_pct_conservative": 5.1819999999999995,
+            "stressed_net_to_drawdown_conservative": 3.0672520262446934,
+            "planned_risk_usd": 1445.47298,
+            "average_volume_units": 1.0
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 62.75,
+            "stressed_net_usd_fixed_path": 54.663000000000004,
+            "stressed_net_usd_r_invariant": 54.663000000000004,
+            "stressed_net_usd_conservative": 54.663000000000004,
+            "stressed_return_pct_conservative": 18.221,
+            "stressed_max_closed_drawdown_usd_fixed_path": 17.779,
+            "stressed_max_closed_drawdown_usd_r_invariant": 17.779,
+            "stressed_max_closed_drawdown_usd_conservative": 17.779,
+            "stressed_max_closed_drawdown_pct_conservative": 5.926333333333334,
+            "stressed_net_to_drawdown_conservative": 3.0745823724618933,
+            "planned_risk_usd": 2535.39794,
+            "average_volume_units": 1.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      }
+    },
+    "DRAWDOWN_TRANCHE_BRAKE": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 490,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 6.590000000000001,
+            "stressed_net_usd_fixed_path": 1.5885000000000011,
+            "stressed_net_usd_r_invariant": 3.7963506763755386,
+            "stressed_net_usd_conservative": -5.3870960842314926,
+            "stressed_return_pct_conservative": -2.6935480421157463,
+            "stressed_max_closed_drawdown_usd_fixed_path": 23.804000000000006,
+            "stressed_max_closed_drawdown_usd_r_invariant": 24.95396952427922,
+            "stressed_max_closed_drawdown_usd_conservative": 27.054111793455345,
+            "stressed_max_closed_drawdown_pct_conservative": 13.527055896727672,
+            "stressed_net_to_drawdown_conservative": -0.19912300671185532,
+            "planned_risk_usd": 1244.0,
+            "average_volume_units": 1.0798611111111112
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 67.08,
+            "stressed_net_usd_fixed_path": 63.155,
+            "stressed_net_usd_r_invariant": 51.63487338016602,
+            "stressed_net_usd_conservative": 12.86570827118641,
+            "stressed_return_pct_conservative": 6.432854135593206,
+            "stressed_max_closed_drawdown_usd_fixed_path": 15.54600000000002,
+            "stressed_max_closed_drawdown_usd_r_invariant": 11.401790262687701,
+            "stressed_max_closed_drawdown_usd_conservative": 27.63881440279336,
+            "stressed_max_closed_drawdown_pct_conservative": 13.819407201396679,
+            "stressed_net_to_drawdown_conservative": 0.4654942170705454,
+            "planned_risk_usd": 1228.0,
+            "average_volume_units": 1.1541353383458646
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 73.67,
+            "stressed_net_usd_fixed_path": 64.7435,
+            "stressed_net_usd_r_invariant": 55.43122405654156,
+            "stressed_net_usd_conservative": 7.478612186954917,
+            "stressed_return_pct_conservative": 3.7393060934774587,
+            "stressed_max_closed_drawdown_usd_fixed_path": 23.804000000000006,
+            "stressed_max_closed_drawdown_usd_r_invariant": 24.95396952427922,
+            "stressed_max_closed_drawdown_usd_conservative": 27.638814402793354,
+            "stressed_max_closed_drawdown_pct_conservative": 13.819407201396677,
+            "stressed_net_to_drawdown_conservative": 0.2705836827139402,
+            "planned_risk_usd": 2472.0,
+            "average_volume_units": 1.1155234657039712
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 488,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 18.22,
+            "stressed_net_usd_fixed_path": 8.568000000000001,
+            "stressed_net_usd_r_invariant": 12.878217778115737,
+            "stressed_net_usd_conservative": -5.279126209936521,
+            "stressed_return_pct_conservative": -1.759708736645507,
+            "stressed_max_closed_drawdown_usd_fixed_path": 41.58300000000002,
+            "stressed_max_closed_drawdown_usd_r_invariant": 43.86727914540411,
+            "stressed_max_closed_drawdown_usd_conservative": 48.06756368375638,
+            "stressed_max_closed_drawdown_pct_conservative": 16.022521227918794,
+            "stressed_net_to_drawdown_conservative": -0.10982720581947265,
+            "planned_risk_usd": 2396.0,
+            "average_volume_units": 2.079861111111111
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 120.98,
+            "stressed_net_usd_fixed_path": 113.595,
+            "stressed_net_usd_r_invariant": 92.68804629411638,
+            "stressed_net_usd_conservative": 20.401177839581724,
+            "stressed_return_pct_conservative": 6.800392613193908,
+            "stressed_max_closed_drawdown_usd_fixed_path": 31.09200000000004,
+            "stressed_max_closed_drawdown_usd_r_invariant": 22.80358052537538,
+            "stressed_max_closed_drawdown_usd_conservative": 51.615615500055,
+            "stressed_max_closed_drawdown_pct_conservative": 17.205205166685,
+            "stressed_net_to_drawdown_conservative": 0.39525205002272973,
+            "planned_risk_usd": 2300.0,
+            "average_volume_units": 2.161654135338346
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 139.2,
+            "stressed_net_usd_fixed_path": 122.163,
+            "stressed_net_usd_r_invariant": 105.56626407223212,
+            "stressed_net_usd_conservative": 15.122051629645203,
+            "stressed_return_pct_conservative": 5.0406838765484006,
+            "stressed_max_closed_drawdown_usd_fixed_path": 41.58300000000002,
+            "stressed_max_closed_drawdown_usd_r_invariant": 43.86727914540411,
+            "stressed_max_closed_drawdown_usd_conservative": 51.61561550005499,
+            "stressed_max_closed_drawdown_pct_conservative": 17.205205166684998,
+            "stressed_net_to_drawdown_conservative": 0.2929743544301838,
+            "planned_risk_usd": 4696.0,
+            "average_volume_units": 2.11913357400722
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      }
+    },
+    "FIXED_LOT_LADDER": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 23.26,
+            "stressed_net_usd_fixed_path": 13.959000000000001,
+            "stressed_net_usd_r_invariant": 13.91670804071483,
+            "stressed_net_usd_conservative": 13.699259427307856,
+            "stressed_return_pct_conservative": 6.849629713653928,
+            "stressed_max_closed_drawdown_usd_fixed_path": 35.558,
+            "stressed_max_closed_drawdown_usd_r_invariant": 35.54921166723568,
+            "stressed_max_closed_drawdown_usd_conservative": 35.57923471867552,
+            "stressed_max_closed_drawdown_pct_conservative": 17.78961735933776,
+            "stressed_net_to_drawdown_conservative": 0.3850352469812152,
+            "planned_risk_usd": 2178.7952105084105,
+            "average_volume_units": 2.0
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 102.24,
+            "stressed_net_usd_fixed_path": 95.367,
+            "stressed_net_usd_r_invariant": 95.17551225465895,
+            "stressed_net_usd_conservative": 94.63166356549596,
+            "stressed_return_pct_conservative": 47.31583178274797,
+            "stressed_max_closed_drawdown_usd_fixed_path": 31.092,
+            "stressed_max_closed_drawdown_usd_r_invariant": 31.02223799609613,
+            "stressed_max_closed_drawdown_usd_conservative": 31.17867622391732,
+            "stressed_max_closed_drawdown_pct_conservative": 15.58933811195866,
+            "stressed_net_to_drawdown_conservative": 3.0351405199462422,
+            "planned_risk_usd": 2884.5283090701737,
+            "average_volume_units": 2.0
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 125.5,
+            "stressed_net_usd_fixed_path": 109.32600000000001,
+            "stressed_net_usd_r_invariant": 109.09222029537378,
+            "stressed_net_usd_conservative": 108.3309229928038,
+            "stressed_return_pct_conservative": 54.1654614964019,
+            "stressed_max_closed_drawdown_usd_fixed_path": 35.558,
+            "stressed_max_closed_drawdown_usd_r_invariant": 35.54921166723568,
+            "stressed_max_closed_drawdown_usd_conservative": 35.57923471867552,
+            "stressed_max_closed_drawdown_pct_conservative": 17.78961735933776,
+            "stressed_net_to_drawdown_conservative": 3.044779457719504,
+            "planned_risk_usd": 5063.323519578584,
+            "average_volume_units": 2.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 36,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 34.88999999999999,
+            "stressed_net_usd_fixed_path": 20.938500000000005,
+            "stressed_net_usd_r_invariant": 20.875062061072242,
+            "stressed_net_usd_conservative": 20.548889140961755,
+            "stressed_return_pct_conservative": 6.849629713653918,
+            "stressed_max_closed_drawdown_usd_fixed_path": 53.337,
+            "stressed_max_closed_drawdown_usd_r_invariant": 53.3238175008535,
+            "stressed_max_closed_drawdown_usd_conservative": 53.36885207801329,
+            "stressed_max_closed_drawdown_pct_conservative": 17.78961735933776,
+            "stressed_net_to_drawdown_conservative": 0.3850352469812146,
+            "planned_risk_usd": 3268.1928157626153,
+            "average_volume_units": 3.0
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 151.25,
+            "stressed_net_usd_fixed_path": 140.4665,
+            "stressed_net_usd_r_invariant": 142.78514055209817,
+            "stressed_net_usd_conservative": 123.98871024772492,
+            "stressed_return_pct_conservative": 41.329570082574975,
+            "stressed_max_closed_drawdown_usd_fixed_path": 46.63799999999999,
+            "stressed_max_closed_drawdown_usd_r_invariant": 46.53335699414422,
+            "stressed_max_closed_drawdown_usd_conservative": 46.76801433587596,
+            "stressed_max_closed_drawdown_pct_conservative": 15.589338111958654,
+            "stressed_net_to_drawdown_conservative": 2.651143351036236,
+            "planned_risk_usd": 4305.941733254651,
+            "average_volume_units": 3.1353383458646618
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 186.14,
+            "stressed_net_usd_fixed_path": 161.405,
+            "stressed_net_usd_r_invariant": 163.6602026131704,
+            "stressed_net_usd_conservative": 144.5375993886867,
+            "stressed_return_pct_conservative": 48.17919979622889,
+            "stressed_max_closed_drawdown_usd_fixed_path": 53.337,
+            "stressed_max_closed_drawdown_usd_r_invariant": 53.3238175008535,
+            "stressed_max_closed_drawdown_usd_conservative": 53.36885207801329,
+            "stressed_max_closed_drawdown_pct_conservative": 17.78961735933776,
+            "stressed_net_to_drawdown_conservative": 2.7082763402406544,
+            "planned_risk_usd": 7574.134549017266,
+            "average_volume_units": 3.064981949458484
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      }
+    },
+    "FOUR_SLOT_LINEAR": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 571,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 297,
+            "win_count_conservative": 171,
+            "actual_net_usd_fixed_path": 45.56,
+            "stressed_net_usd_fixed_path": 35.931,
+            "stressed_net_usd_r_invariant": 26.909618790735436,
+            "stressed_net_usd_conservative": -36.59043560486131,
+            "stressed_return_pct_conservative": -18.295217802430656,
+            "stressed_max_closed_drawdown_usd_fixed_path": 26.537,
+            "stressed_max_closed_drawdown_usd_r_invariant": 19.995874029152393,
+            "stressed_max_closed_drawdown_usd_conservative": 53.777067621176556,
+            "stressed_max_closed_drawdown_pct_conservative": 26.888533810588278,
+            "stressed_net_to_drawdown_conservative": -0.6804096471495329,
+            "planned_risk_usd": 1782.0,
+            "average_volume_units": 2.0
+          },
+          "2024_H2": {
+            "trade_count": 274,
+            "win_count_conservative": 151,
+            "actual_net_usd_fixed_path": 96.52000000000001,
+            "stressed_net_usd_fixed_path": 89.449,
+            "stressed_net_usd_r_invariant": 63.41707731135225,
+            "stressed_net_usd_conservative": -26.41450411742515,
+            "stressed_return_pct_conservative": -13.207252058712575,
+            "stressed_max_closed_drawdown_usd_fixed_path": 30.356000000000044,
+            "stressed_max_closed_drawdown_usd_r_invariant": 19.80487263847356,
+            "stressed_max_closed_drawdown_usd_conservative": 56.19765941824858,
+            "stressed_max_closed_drawdown_pct_conservative": 28.09882970912429,
+            "stressed_net_to_drawdown_conservative": -0.4700285455099896,
+            "planned_risk_usd": 1644.0,
+            "average_volume_units": 2.0
+          },
+          "2024_FULL": {
+            "trade_count": 571,
+            "win_count_conservative": 322,
+            "actual_net_usd_fixed_path": 142.08,
+            "stressed_net_usd_fixed_path": 125.38,
+            "stressed_net_usd_r_invariant": 90.32669610208768,
+            "stressed_net_usd_conservative": -63.004939722286466,
+            "stressed_return_pct_conservative": -31.502469861143233,
+            "stressed_max_closed_drawdown_usd_fixed_path": 30.356000000000037,
+            "stressed_max_closed_drawdown_usd_r_invariant": 19.995874029152393,
+            "stressed_max_closed_drawdown_usd_conservative": 65.95399931522991,
+            "stressed_max_closed_drawdown_pct_conservative": 32.976999657614954,
+            "stressed_net_to_drawdown_conservative": -0.955286114207445,
+            "planned_risk_usd": 3426.0,
+            "average_volume_units": 2.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 208,
+          "PRESSURE": 23,
+          "RETURN": 55,
+          "PASSIVE": 160
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 571,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 297,
+            "win_count_conservative": 171,
+            "actual_net_usd_fixed_path": 68.34,
+            "stressed_net_usd_fixed_path": 53.8965,
+            "stressed_net_usd_r_invariant": 40.36442818610315,
+            "stressed_net_usd_conservative": -54.885653407291976,
+            "stressed_return_pct_conservative": -18.29521780243066,
+            "stressed_max_closed_drawdown_usd_fixed_path": 39.80550000000001,
+            "stressed_max_closed_drawdown_usd_r_invariant": 29.993811043728595,
+            "stressed_max_closed_drawdown_usd_conservative": 80.66560143176486,
+            "stressed_max_closed_drawdown_pct_conservative": 26.888533810588285,
+            "stressed_net_to_drawdown_conservative": -0.6804096471495328,
+            "planned_risk_usd": 2673.0,
+            "average_volume_units": 3.0
+          },
+          "2024_H2": {
+            "trade_count": 274,
+            "win_count_conservative": 151,
+            "actual_net_usd_fixed_path": 144.78,
+            "stressed_net_usd_fixed_path": 134.1735,
+            "stressed_net_usd_r_invariant": 95.12561596702838,
+            "stressed_net_usd_conservative": -39.62175617613772,
+            "stressed_return_pct_conservative": -13.207252058712575,
+            "stressed_max_closed_drawdown_usd_fixed_path": 45.53399999999996,
+            "stressed_max_closed_drawdown_usd_r_invariant": 29.707308957710282,
+            "stressed_max_closed_drawdown_usd_conservative": 84.29648912737288,
+            "stressed_max_closed_drawdown_pct_conservative": 28.098829709124292,
+            "stressed_net_to_drawdown_conservative": -0.47002854550998957,
+            "planned_risk_usd": 2466.0,
+            "average_volume_units": 3.0
+          },
+          "2024_FULL": {
+            "trade_count": 571,
+            "win_count_conservative": 322,
+            "actual_net_usd_fixed_path": 213.12,
+            "stressed_net_usd_fixed_path": 188.07,
+            "stressed_net_usd_r_invariant": 135.49004415313152,
+            "stressed_net_usd_conservative": -94.5074095834297,
+            "stressed_return_pct_conservative": -31.502469861143236,
+            "stressed_max_closed_drawdown_usd_fixed_path": 45.533999999999935,
+            "stressed_max_closed_drawdown_usd_r_invariant": 29.993811043728595,
+            "stressed_max_closed_drawdown_usd_conservative": 98.93099897284485,
+            "stressed_max_closed_drawdown_pct_conservative": 32.97699965761495,
+            "stressed_net_to_drawdown_conservative": -0.9552861142074451,
+            "planned_risk_usd": 5139.0,
+            "average_volume_units": 3.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 208,
+          "PRESSURE": 23,
+          "RETURN": 55,
+          "PASSIVE": 160
+        }
+      }
+    },
+    "LINEAR_CAPITAL": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 23.26,
+            "stressed_net_usd_fixed_path": 13.959000000000001,
+            "stressed_net_usd_r_invariant": 13.959000000000001,
+            "stressed_net_usd_conservative": 13.959000000000001,
+            "stressed_return_pct_conservative": 6.979500000000001,
+            "stressed_max_closed_drawdown_usd_fixed_path": 35.558,
+            "stressed_max_closed_drawdown_usd_r_invariant": 35.558,
+            "stressed_max_closed_drawdown_usd_conservative": 35.558,
+            "stressed_max_closed_drawdown_pct_conservative": 17.779,
+            "stressed_net_to_drawdown_conservative": 0.3925698858203499,
+            "planned_risk_usd": 2179.84992,
+            "average_volume_units": 2.0
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 102.24,
+            "stressed_net_usd_fixed_path": 95.367,
+            "stressed_net_usd_r_invariant": 95.367,
+            "stressed_net_usd_conservative": 95.367,
+            "stressed_return_pct_conservative": 47.6835,
+            "stressed_max_closed_drawdown_usd_fixed_path": 31.092,
+            "stressed_max_closed_drawdown_usd_r_invariant": 31.092,
+            "stressed_max_closed_drawdown_usd_conservative": 31.092,
+            "stressed_max_closed_drawdown_pct_conservative": 15.546,
+            "stressed_net_to_drawdown_conservative": 3.0672520262446934,
+            "planned_risk_usd": 2890.94596,
+            "average_volume_units": 2.0
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 125.5,
+            "stressed_net_usd_fixed_path": 109.32600000000001,
+            "stressed_net_usd_r_invariant": 109.32600000000001,
+            "stressed_net_usd_conservative": 109.32600000000001,
+            "stressed_return_pct_conservative": 54.663000000000004,
+            "stressed_max_closed_drawdown_usd_fixed_path": 35.558,
+            "stressed_max_closed_drawdown_usd_r_invariant": 35.558,
+            "stressed_max_closed_drawdown_usd_conservative": 35.558,
+            "stressed_max_closed_drawdown_pct_conservative": 17.779,
+            "stressed_net_to_drawdown_conservative": 3.0745823724618933,
+            "planned_risk_usd": 5070.79588,
+            "average_volume_units": 2.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 554,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 288,
+            "win_count_conservative": 162,
+            "actual_net_usd_fixed_path": 34.88999999999999,
+            "stressed_net_usd_fixed_path": 20.938500000000005,
+            "stressed_net_usd_r_invariant": 20.938500000000012,
+            "stressed_net_usd_conservative": 20.938499999999994,
+            "stressed_return_pct_conservative": 6.979499999999998,
+            "stressed_max_closed_drawdown_usd_fixed_path": 53.337,
+            "stressed_max_closed_drawdown_usd_r_invariant": 53.33699999999999,
+            "stressed_max_closed_drawdown_usd_conservative": 53.337,
+            "stressed_max_closed_drawdown_pct_conservative": 17.779000000000003,
+            "stressed_net_to_drawdown_conservative": 0.39256988582034974,
+            "planned_risk_usd": 3269.77488,
+            "average_volume_units": 3.0
+          },
+          "2024_H2": {
+            "trade_count": 266,
+            "win_count_conservative": 148,
+            "actual_net_usd_fixed_path": 153.36,
+            "stressed_net_usd_fixed_path": 143.0505,
+            "stressed_net_usd_r_invariant": 143.0505,
+            "stressed_net_usd_conservative": 143.0505,
+            "stressed_return_pct_conservative": 47.683499999999995,
+            "stressed_max_closed_drawdown_usd_fixed_path": 46.63799999999999,
+            "stressed_max_closed_drawdown_usd_r_invariant": 46.63799999999998,
+            "stressed_max_closed_drawdown_usd_conservative": 46.63799999999999,
+            "stressed_max_closed_drawdown_pct_conservative": 15.545999999999998,
+            "stressed_net_to_drawdown_conservative": 3.067252026244694,
+            "planned_risk_usd": 4336.41894,
+            "average_volume_units": 3.0
+          },
+          "2024_FULL": {
+            "trade_count": 554,
+            "win_count_conservative": 310,
+            "actual_net_usd_fixed_path": 188.25,
+            "stressed_net_usd_fixed_path": 163.989,
+            "stressed_net_usd_r_invariant": 163.989,
+            "stressed_net_usd_conservative": 163.98899999999998,
+            "stressed_return_pct_conservative": 54.66299999999999,
+            "stressed_max_closed_drawdown_usd_fixed_path": 53.337,
+            "stressed_max_closed_drawdown_usd_r_invariant": 53.33699999999999,
+            "stressed_max_closed_drawdown_usd_conservative": 53.337,
+            "stressed_max_closed_drawdown_pct_conservative": 17.779000000000003,
+            "stressed_net_to_drawdown_conservative": 3.074582372461893,
+            "planned_risk_usd": 7606.19382,
+            "average_volume_units": 3.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 197,
+          "PRESSURE": 23,
+          "RETURN": 50,
+          "PASSIVE": 159
+        }
+      }
+    },
+    "SIX_SLOT_LINEAR": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 571,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 297,
+            "win_count_conservative": 171,
+            "actual_net_usd_fixed_path": 45.56,
+            "stressed_net_usd_fixed_path": 35.931,
+            "stressed_net_usd_r_invariant": 17.93974586049029,
+            "stressed_net_usd_conservative": -105.72529040324088,
+            "stressed_return_pct_conservative": -52.86264520162044,
+            "stressed_max_closed_drawdown_usd_fixed_path": 26.537,
+            "stressed_max_closed_drawdown_usd_r_invariant": 13.3305826861016,
+            "stressed_max_closed_drawdown_usd_conservative": 115.6490450807843,
+            "stressed_max_closed_drawdown_pct_conservative": 57.82452254039215,
+            "stressed_net_to_drawdown_conservative": -0.9141907771861723,
+            "planned_risk_usd": 1188.0,
+            "average_volume_units": 2.0
+          },
+          "2024_H2": {
+            "trade_count": 274,
+            "win_count_conservative": 151,
+            "actual_net_usd_fixed_path": 96.52000000000001,
+            "stressed_net_usd_fixed_path": 89.449,
+            "stressed_net_usd_r_invariant": 42.2780515409015,
+            "stressed_net_usd_conservative": -108.46966941161676,
+            "stressed_return_pct_conservative": -54.23483470580838,
+            "stressed_max_closed_drawdown_usd_fixed_path": 30.356000000000044,
+            "stressed_max_closed_drawdown_usd_r_invariant": 13.20324842564903,
+            "stressed_max_closed_drawdown_usd_conservative": 120.48074196868623,
+            "stressed_max_closed_drawdown_pct_conservative": 60.240370984343116,
+            "stressed_net_to_drawdown_conservative": -0.9003071166328704,
+            "planned_risk_usd": 1096.0,
+            "average_volume_units": 2.0
+          },
+          "2024_FULL": {
+            "trade_count": 571,
+            "win_count_conservative": 322,
+            "actual_net_usd_fixed_path": 142.08,
+            "stressed_net_usd_fixed_path": 125.38,
+            "stressed_net_usd_r_invariant": 60.21779740139179,
+            "stressed_net_usd_conservative": -214.19495981485764,
+            "stressed_return_pct_conservative": -107.09747990742882,
+            "stressed_max_closed_drawdown_usd_fixed_path": 30.356000000000037,
+            "stressed_max_closed_drawdown_usd_r_invariant": 13.3305826861016,
+            "stressed_max_closed_drawdown_usd_conservative": 216.07833287682004,
+            "stressed_max_closed_drawdown_pct_conservative": 108.03916643841004,
+            "stressed_net_to_drawdown_conservative": -0.9912838412029212,
+            "planned_risk_usd": 2284.0,
+            "average_volume_units": 2.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 208,
+          "PRESSURE": 23,
+          "RETURN": 55,
+          "PASSIVE": 160
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 571,
+        "rejected_trade_count": 0,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 297,
+            "win_count_conservative": 171,
+            "actual_net_usd_fixed_path": 68.34,
+            "stressed_net_usd_fixed_path": 53.8965,
+            "stressed_net_usd_r_invariant": 26.909618790735436,
+            "stressed_net_usd_conservative": -158.58793560486131,
+            "stressed_return_pct_conservative": -52.86264520162044,
+            "stressed_max_closed_drawdown_usd_fixed_path": 39.80550000000001,
+            "stressed_max_closed_drawdown_usd_r_invariant": 19.995874029152393,
+            "stressed_max_closed_drawdown_usd_conservative": 173.47356762117656,
+            "stressed_max_closed_drawdown_pct_conservative": 57.82452254039219,
+            "stressed_net_to_drawdown_conservative": -0.9141907771861717,
+            "planned_risk_usd": 1782.0,
+            "average_volume_units": 3.0
+          },
+          "2024_H2": {
+            "trade_count": 274,
+            "win_count_conservative": 151,
+            "actual_net_usd_fixed_path": 144.78,
+            "stressed_net_usd_fixed_path": 134.1735,
+            "stressed_net_usd_r_invariant": 63.41707731135225,
+            "stressed_net_usd_conservative": -162.70450411742516,
+            "stressed_return_pct_conservative": -54.23483470580839,
+            "stressed_max_closed_drawdown_usd_fixed_path": 45.53399999999996,
+            "stressed_max_closed_drawdown_usd_r_invariant": 19.80487263847356,
+            "stressed_max_closed_drawdown_usd_conservative": 180.72111295302938,
+            "stressed_max_closed_drawdown_pct_conservative": 60.24037098434312,
+            "stressed_net_to_drawdown_conservative": -0.9003071166328703,
+            "planned_risk_usd": 1644.0,
+            "average_volume_units": 3.0
+          },
+          "2024_FULL": {
+            "trade_count": 571,
+            "win_count_conservative": 322,
+            "actual_net_usd_fixed_path": 213.12,
+            "stressed_net_usd_fixed_path": 188.07,
+            "stressed_net_usd_r_invariant": 90.32669610208768,
+            "stressed_net_usd_conservative": -321.2924397222865,
+            "stressed_return_pct_conservative": -107.09747990742882,
+            "stressed_max_closed_drawdown_usd_fixed_path": 45.533999999999935,
+            "stressed_max_closed_drawdown_usd_r_invariant": 19.995874029152393,
+            "stressed_max_closed_drawdown_usd_conservative": 324.1174993152301,
+            "stressed_max_closed_drawdown_pct_conservative": 108.03916643841004,
+            "stressed_net_to_drawdown_conservative": -0.9912838412029212,
+            "planned_risk_usd": 3426.0,
+            "average_volume_units": 3.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 208,
+          "PRESSURE": 23,
+          "RETURN": 55,
+          "PASSIVE": 160
+        }
+      }
+    },
+    "SYMBOL_BUCKET_CAP": {
+      "200": {
+        "deposit_usd": 200,
+        "accepted_trade_count": 560,
+        "rejected_trade_count": 11,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 292,
+            "win_count_conservative": 168,
+            "actual_net_usd_fixed_path": 37.88,
+            "stressed_net_usd_fixed_path": 28.476,
+            "stressed_net_usd_r_invariant": 28.434010030448057,
+            "stressed_net_usd_conservative": 16.541313434739685,
+            "stressed_return_pct_conservative": 8.270656717369842,
+            "stressed_max_closed_drawdown_usd_fixed_path": 26.537,
+            "stressed_max_closed_drawdown_usd_r_invariant": 26.6611653722032,
+            "stressed_max_closed_drawdown_usd_conservative": 27.376902870919036,
+            "stressed_max_closed_drawdown_pct_conservative": 13.688451435459518,
+            "stressed_net_to_drawdown_conservative": 0.6042068934068727,
+            "planned_risk_usd": 2336.0,
+            "average_volume_units": 2.0
+          },
+          "2024_H2": {
+            "trade_count": 268,
+            "win_count_conservative": 147,
+            "actual_net_usd_fixed_path": 84.02000000000001,
+            "stressed_net_usd_fixed_path": 77.095,
+            "stressed_net_usd_r_invariant": 72.23102731452228,
+            "stressed_net_usd_conservative": 39.591357750277986,
+            "stressed_return_pct_conservative": 19.795678875138993,
+            "stressed_max_closed_drawdown_usd_fixed_path": 32.548000000000016,
+            "stressed_max_closed_drawdown_usd_r_invariant": 28.640382201616546,
+            "stressed_max_closed_drawdown_usd_conservative": 36.26255706454378,
+            "stressed_max_closed_drawdown_pct_conservative": 18.13127853227189,
+            "stressed_net_to_drawdown_conservative": 1.0917971857254654,
+            "planned_risk_usd": 2144.0,
+            "average_volume_units": 2.0
+          },
+          "2024_FULL": {
+            "trade_count": 560,
+            "win_count_conservative": 315,
+            "actual_net_usd_fixed_path": 121.9,
+            "stressed_net_usd_fixed_path": 105.571,
+            "stressed_net_usd_r_invariant": 100.66503734497034,
+            "stressed_net_usd_conservative": 56.13267118501767,
+            "stressed_return_pct_conservative": 28.066335592508835,
+            "stressed_max_closed_drawdown_usd_fixed_path": 32.548000000000044,
+            "stressed_max_closed_drawdown_usd_r_invariant": 28.640382201616518,
+            "stressed_max_closed_drawdown_usd_conservative": 36.262557064543785,
+            "stressed_max_closed_drawdown_pct_conservative": 18.131278532271892,
+            "stressed_net_to_drawdown_conservative": 1.547951267890652,
+            "planned_risk_usd": 4480.0,
+            "average_volume_units": 2.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 201,
+          "PRESSURE": 21,
+          "RETURN": 53,
+          "PASSIVE": 160
+        }
+      },
+      "300": {
+        "deposit_usd": 300,
+        "accepted_trade_count": 560,
+        "rejected_trade_count": 11,
+        "policy_intervention_count": 0,
+        "periods": {
+          "2024_H1": {
+            "trade_count": 292,
+            "win_count_conservative": 168,
+            "actual_net_usd_fixed_path": 56.82,
+            "stressed_net_usd_fixed_path": 42.714000000000006,
+            "stressed_net_usd_r_invariant": 42.65101504567209,
+            "stressed_net_usd_conservative": 24.811970152109527,
+            "stressed_return_pct_conservative": 8.270656717369842,
+            "stressed_max_closed_drawdown_usd_fixed_path": 39.80550000000001,
+            "stressed_max_closed_drawdown_usd_r_invariant": 39.991748058304786,
+            "stressed_max_closed_drawdown_usd_conservative": 41.06535430637855,
+            "stressed_max_closed_drawdown_pct_conservative": 13.688451435459516,
+            "stressed_net_to_drawdown_conservative": 0.6042068934068727,
+            "planned_risk_usd": 3504.0,
+            "average_volume_units": 3.0
+          },
+          "2024_H2": {
+            "trade_count": 268,
+            "win_count_conservative": 147,
+            "actual_net_usd_fixed_path": 126.03000000000002,
+            "stressed_net_usd_fixed_path": 115.6425,
+            "stressed_net_usd_r_invariant": 108.34654097178343,
+            "stressed_net_usd_conservative": 59.387036625416975,
+            "stressed_return_pct_conservative": 19.795678875138993,
+            "stressed_max_closed_drawdown_usd_fixed_path": 48.82199999999996,
+            "stressed_max_closed_drawdown_usd_r_invariant": 42.96057330242482,
+            "stressed_max_closed_drawdown_usd_conservative": 54.39383559681565,
+            "stressed_max_closed_drawdown_pct_conservative": 18.131278532271885,
+            "stressed_net_to_drawdown_conservative": 1.0917971857254656,
+            "planned_risk_usd": 3216.0,
+            "average_volume_units": 3.0
+          },
+          "2024_FULL": {
+            "trade_count": 560,
+            "win_count_conservative": 315,
+            "actual_net_usd_fixed_path": 182.85,
+            "stressed_net_usd_fixed_path": 158.3565,
+            "stressed_net_usd_r_invariant": 150.9975560174555,
+            "stressed_net_usd_conservative": 84.1990067775265,
+            "stressed_return_pct_conservative": 28.066335592508835,
+            "stressed_max_closed_drawdown_usd_fixed_path": 48.822000000000045,
+            "stressed_max_closed_drawdown_usd_r_invariant": 42.960573302424805,
+            "stressed_max_closed_drawdown_usd_conservative": 54.393835596815634,
+            "stressed_max_closed_drawdown_pct_conservative": 18.131278532271878,
+            "stressed_net_to_drawdown_conservative": 1.5479512678906533,
+            "planned_risk_usd": 6720.0,
+            "average_volume_units": 3.0
+          }
+        },
+        "component_trade_counts": {
+          "RC16": 72,
+          "RC4": 53,
+          "CROSS": 201,
+          "PRESSURE": 21,
+          "RETURN": 53,
+          "PASSIVE": 160
+        }
+      }
+    }
+  },
+  "candidate_evaluations": {
+    "FOUR_SLOT_LINEAR": {
+      "group": "capacity",
+      "economically_eligible": false,
+      "failure_reasons": [
+        "200:2024_H1:nonpositive_net",
+        "200:2024_H2:nonpositive_net",
+        "200:2024_FULL:nonpositive_net",
+        "200:full_drawdown_worse",
+        "200:efficiency_not_better",
+        "300:2024_H1:nonpositive_net",
+        "300:2024_H2:nonpositive_net",
+        "300:2024_FULL:nonpositive_net",
+        "300:full_drawdown_worse",
+        "300:efficiency_not_better"
+      ],
+      "minimum_efficiency_improvement": -4.029868486669338,
+      "worst_full_drawdown_pct": 32.976999657614954,
+      "intervention_counts_by_deposit": {
+        "200": 19,
+        "300": 19
+      },
+      "ranking_tuple": [
+        -4.029868486669338,
+        -32.976999657614954,
+        -38
+      ]
+    },
+    "SIX_SLOT_LINEAR": {
+      "group": "capacity",
+      "economically_eligible": false,
+      "failure_reasons": [
+        "200:2024_H1:nonpositive_net",
+        "200:2024_H2:nonpositive_net",
+        "200:2024_FULL:nonpositive_net",
+        "200:full_drawdown_worse",
+        "200:efficiency_not_better",
+        "300:2024_H1:nonpositive_net",
+        "300:2024_H2:nonpositive_net",
+        "300:2024_FULL:nonpositive_net",
+        "300:full_drawdown_worse",
+        "300:efficiency_not_better"
+      ],
+      "minimum_efficiency_improvement": -4.0658662136648145,
+      "worst_full_drawdown_pct": 108.03916643841004,
+      "intervention_counts_by_deposit": {
+        "200": 19,
+        "300": 19
+      },
+      "ranking_tuple": [
+        -4.0658662136648145,
+        -108.03916643841004,
+        -38
+      ]
+    },
+    "BREADTH_DOLLAR_SLOTS": {
+      "group": "capacity",
+      "economically_eligible": true,
+      "failure_reasons": [],
+      "minimum_efficiency_improvement": 1.0557378278279947,
+      "worst_full_drawdown_pct": 7.589000000000009,
+      "intervention_counts_by_deposit": {
+        "200": 19,
+        "300": 19
+      },
+      "ranking_tuple": [
+        1.0557378278279947,
+        -7.589000000000009,
+        -38
+      ]
+    },
+    "SYMBOL_BUCKET_CAP": {
+      "group": "capacity",
+      "economically_eligible": false,
+      "failure_reasons": [
+        "200:full_drawdown_worse",
+        "200:efficiency_not_better",
+        "300:full_drawdown_worse",
+        "300:efficiency_not_better"
+      ],
+      "minimum_efficiency_improvement": -1.5266311045712413,
+      "worst_full_drawdown_pct": 18.131278532271892,
+      "intervention_counts_by_deposit": {
+        "200": 14,
+        "300": 14
+      },
+      "ranking_tuple": [
+        -1.5266311045712413,
+        -18.131278532271892,
+        -28
+      ]
+    },
+    "FIXED_LOT_LADDER": {
+      "group": "sizing_governor",
+      "economically_eligible": false,
+      "failure_reasons": [
+        "200:full_drawdown_worse",
+        "200:efficiency_not_better",
+        "300:full_drawdown_worse",
+        "300:efficiency_not_better"
+      ],
+      "minimum_efficiency_improvement": -0.36630603222123836,
+      "worst_full_drawdown_pct": 17.78961735933776,
+      "intervention_counts_by_deposit": {
+        "200": 0,
+        "300": 36
+      },
+      "ranking_tuple": [
+        -0.36630603222123836,
+        -17.78961735933776,
+        -36
+      ]
+    },
+    "DRAWDOWN_TRANCHE_BRAKE": {
+      "group": "sizing_governor",
+      "economically_eligible": false,
+      "failure_reasons": [
+        "200:2024_H1:nonpositive_net",
+        "200:efficiency_not_better",
+        "300:2024_H1:nonpositive_net",
+        "300:efficiency_not_better"
+      ],
+      "minimum_efficiency_improvement": -2.803998689747953,
+      "worst_full_drawdown_pct": 17.205205166684998,
+      "intervention_counts_by_deposit": {
+        "200": 490,
+        "300": 488
+      },
+      "ranking_tuple": [
+        -2.803998689747953,
+        -17.205205166684998,
+        -978
+      ]
+    }
+  },
+  "ea_shortlist": [
+    {
+      "hypothesis": "LINEAR_CAPITAL",
+      "proxy_status": "MANDATORY_STRUCTURAL_ANCHOR",
+      "selection_basis": "predeclared"
+    },
+    {
+      "hypothesis": "BREADTH_DOLLAR_SLOTS",
+      "proxy_status": "ELIGIBLE",
+      "selection_basis": "eligible_pool",
+      "ranking_tuple": [
+        1.0557378278279947,
+        -7.589000000000009,
+        -38
+      ]
+    },
+    {
+      "hypothesis": "FIXED_LOT_LADDER",
+      "proxy_status": "DIAGNOSTIC_ONLY",
+      "selection_basis": "diagnostic_fallback",
+      "ranking_tuple": [
+        -0.36630603222123836,
+        -17.78961735933776,
+        -36
+      ]
+    }
+  ],
+  "limitations": [
+    "standalone merging omits replacement signals after a rejected lifecycle",
+    "changed-stop variants use the predeclared fixed-path and R-invariant endpoint envelopes",
+    "shared equity, margin, passive pending orders, RC4 feedback, rounding, and execution require MT5",
+    "proxy is hypothesis screening rather than profit proof"
+  ]
+}
