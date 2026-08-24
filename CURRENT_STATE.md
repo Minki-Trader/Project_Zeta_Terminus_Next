@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0001`
+- Latest state ID: `STATE-0002`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,6 +26,16 @@ No Next EA, Portable Live runtime, Portfolio ID, state namespace, position, orde
 - Required isolation: Live-Dev and Lab share no source Include tree, EX5, settings, Portable runtime, state, or logs
 - B75: paused, unopened, and unchanged until migration completion
 
+## Completed migration evidence
+
+- Complete tracked-file manifest: `lineage/legacy-files.jsonl`, 1,475 records
+- Complete scoped research index: `lineage/research-lineage.jsonl`, 1,011 records
+  - research source: 359
+  - human research document: 56
+  - summary JSON: 596
+- Human economic-family summaries: `docs/lineage/`
+- Executable ancestry: `lineage/executable-lineage.json`
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -38,4 +48,3 @@ No Next EA, Portable Live runtime, Portfolio ID, state namespace, position, orde
 ## Current verdict
 
 `MIGRATION_IN_PROGRESS; NEXT_LIVE_DISABLED; LEGACY_B70_UNCHANGED`
-

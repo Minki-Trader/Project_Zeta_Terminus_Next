@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "legacy_repository": "https://github.com/Minki-Trader/Project_Zeta_Terminus.git",
+  "legacy_commit": "4c0899255c701e2c6b53e7f44457c431aef2ad76",
+  "core_line": [
+    "PRE500-FR1",
+    "PRE500-FR2",
+    "PRE500-FR3",
+    "PRE500-FR4",
+    "PRE500-FR5",
+    "B48/V6",
+    "B49/V6R2",
+    "B52/V6R3",
+    "B66/V6R4",
+    "B67/V6R5",
+    "B70/V6R6",
+    "NEXT-E01/V7"
+  ],
+  "nodes": [
+    {
+      "id": "PRE-V1-ACCOUNT-V3",
+      "execution_version": "zt-account-portfolio-v3",
+      "portfolio_id": "ZT-PORT-e9f19867658e",
+      "parent_ids": [],
+      "origin_tags": ["pre_v1", "economic"],
+      "status": "historical_economic_evidence"
+    },
+    {
+      "id": "PRE-V1-HIGH-TURNOVER-V1",
+      "execution_version": "zt-high-turnover-portfolio-v1",
+      "portfolio_id": "ZT-PORT-HT-24df3dbb7b48",
+      "parent_ids": [],
+      "origin_tags": ["pre_v1", "economic"],
+      "status": "historical"
+    },
+    {
+      "id": "PRE-V1-STAGED-V1",
+      "execution_version": "zt-staged-portfolio-v1",
+      "portfolio_id": "ZT-PORT-STG-2c9b4cce1649",
+      "parent_ids": ["PRE-V1-HIGH-TURNOVER-V1"],
+      "origin_tags": ["pre_v1", "economic"],
+      "status": "historical"
+    },
+    {
+      "id": "PRE500-PASSIVE-V1",
+      "execution_version": "zt-pre500-passive-portfolio-v1",
+      "portfolio_id": "ZT-PORT-PRE500-3b96c355ae03",
+      "parent_ids": ["PRE-V1-HIGH-TURNOVER-V1"],
+      "origin_tags": ["economic"],
+      "status": "historical_economic_parent"
+    },
+    {
+      "id": "PRE500-FR1",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v1",
+      "portfolio_id": "ZT-PORT-PRE500-FR1-7c1b39a4f2d6",
+      "magic_numbers": [260817101, 260817102, 260817103, 260817104, 260817105, 260817106],
+      "parent_ids": ["PRE500-PASSIVE-V1"],
+      "status": "historical_live_incident_evidence"
+    },
+    {
+      "id": "PRE500-FR2",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v2",
+      "portfolio_id": "ZT-PORT-PRE500-FR2-8b47c1d92ea5",
+      "magic_numbers": [260817201, 260817202, 260817203, 260817204, 260817205, 260817206],
+      "parent_ids": ["PRE500-FR1"],
+      "status": "historical_execution_correction"
+    },
+    {
+      "id": "PRE500-FR3",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v3",
+      "portfolio_id": "ZT-PORT-PRE500-FR3-c3caafb7bbcd",
+      "magic_numbers": [260818201, 260818202, 260818203, 260818204, 260818205, 260818206],
+      "parent_ids": ["PRE500-FR2"],
+      "status": "historical_execution_control"
+    },
+    {
+      "id": "PRE500-FR4",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v4",
+      "portfolio_id": "ZT-PORT-PRE500-FR4-418df3f119ac",
+      "magic_numbers": [260818601, 260818602, 260818603, 260818604, 260818605, 260818606],
+      "parent_ids": ["PRE500-FR3"],
+      "source_sha256": "8D98637B10E9E152D0A88E94BA4A260B91F7E7D98B0BFD462243265A1F698A47",
+      "binary_sha256": "487386BCE0F0A2738185528E8C27CB20AF5BC3F0B5F699A10B59F712A3486079",
+      "status": "frozen_integrated_engineering_parent"
+    },
+    {
+      "id": "PRE500-FR5",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v5",
+      "portfolio_id": "ZT-PORT-PRE500-FR5-b931727a95dc",
+      "magic_numbers": [260819501, 260819502, 260819503, 260819504, 260819505, 260819506],
+      "parent_ids": ["PRE500-FR4"],
+      "source_sha256": "9E3E5B5FC0DB3757597DCBED9127E49474E3D081488D1BB84316B9CAC17B2613",
+      "binary_sha256": "383EE297FA42DCE3922CFECE5F3936A0A780E03328DC2000F1A9E6E337860754",
+      "status": "accepted_frozen_stopped"
+    },
+    {
+      "id": "B48/V6",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v6-rc4-firm-compression",
+      "portfolio_id": "ZT-PORT-PRE500-FR6-RC4FC-9d7b5a8f31c2",
+      "magic_numbers": [260822101, 260822102, 260822103, 260822104, 260822105, 260822106],
+      "parent_ids": ["PRE500-FR5"],
+      "status": "frozen_accepted_economic_parent"
+    },
+    {
+      "id": "B49/V6R2",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v6r2-rc4-shadow-catchup",
+      "portfolio_id": "ZT-PORT-PRE500-FR6R2-RC4SC-f41b786f18fe",
+      "magic_numbers": [260822201, 260822202, 260822203, 260822204, 260822205, 260822206],
+      "parent_ids": ["B48/V6"],
+      "status": "frozen_operational_predecessor"
+    },
+    {
+      "id": "B52/V6R3",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v6r3-rc4-shadow-gap-complete",
+      "portfolio_id": "ZT-PORT-PRE500-FR6R3-RC4GC-428a4080b59f",
+      "magic_numbers": [260822301, 260822302, 260822303, 260822304, 260822305, 260822306],
+      "parent_ids": ["B49/V6R2"],
+      "status": "frozen_operational_predecessor"
+    },
+    {
+      "id": "B66/V6R4",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v6r4-rc4-shadow-cursor-periodic-checkpoint",
+      "portfolio_id": "ZT-PORT-PRE500-FR6R4-RC4CP-9e4f62a3d817",
+      "magic_numbers": [260823101, 260823102, 260823103, 260823104, 260823105, 260823106],
+      "parent_ids": ["B52/V6R3"],
+      "status": "frozen_operational_predecessor"
+    },
+    {
+      "id": "B67/V6R5",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v6r5-rc4-shadow-activation-boundary-seal",
+      "portfolio_id": "ZT-PORT-PRE500-FR6R5-RC4AS-b75a58ecab17",
+      "magic_numbers": [260823201, 260823202, 260823203, 260823204, 260823205, 260823206],
+      "parent_ids": ["B66/V6R4"],
+      "source_sha256": "5C80FBC1BF6BB9B6647D372EBD2EC6C2713FF21E34CE1293E9DC7838ADF9D355",
+      "binary_sha256": "146E8BF856AD54496674E67C0ABF1A188A7AAF90855F231080BBF11E7781F1C9",
+      "status": "frozen_causal_predecessor"
+    },
+    {
+      "id": "B70/V6R6",
+      "execution_version": "zt-pre500-finite-risk-portfolio-v6r6-rc4-transient-protection-modify-retry",
+      "portfolio_id": "ZT-PORT-PRE500-FR6R6-RC4MR-cda6e28b13f4",
+      "magic_numbers": [260823301, 260823302, 260823303, 260823304, 260823305, 260823306],
+      "parent_ids": ["B67/V6R5", "B48/V6"],
+      "source_sha256": "7B98E33E093502DD1E582FA53260E06AD6BEA5820C74CDEEC691239F701446AA",
+      "binary_sha256": "C5E569092B492F350A0B47DBF060A82293A302002F73A842FA52465BE2716E92",
+      "status": "legacy_live_authorized_frozen_v7_parent"
+    },
+    {
+      "id": "NEXT-E01/V7",
+      "execution_version": "zt-next-pre500-finite-risk-portfolio-v7-modular",
+      "portfolio_id": "pending_deterministic_release_hash",
+      "magic_numbers": [260824701, 260824702, 260824703, 260824704, 260824705, 260824706],
+      "parent_ids": ["B70/V6R6"],
+      "state_adoption": false,
+      "position_adoption": false,
+      "status": "engineering_in_progress_live_disabled"
+    }
+  ]
+}
+
