@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "project_id": "project-zeta-terminus-next",
+  "release_id": "NEXT-E01-V7-2db5ef5ead1c",
+  "portfolio_id": "ZT-PORT-NEXT-V7-2db5ef5ead1c",
+  "execution_version": "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c",
+  "parent_execution": "B70/V6R6",
+  "tested_at": "2026-08-24",
+  "environment": {
+    "broker": "FPMarketsSC-Live",
+    "terminal_build": 6140,
+    "model": "Every tick based on real ticks",
+    "required_symbols": ["US100", "US30", "US500"],
+    "history_quality": "100% real ticks",
+    "deposit_usd": 100.0,
+    "leverage": "1:100",
+    "execution_mode": 0
+  },
+  "verdict": "ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED",
+  "identity_normalization": {
+    "fields": ["expert_name", "execution_version", "release_id", "project_id", "portfolio_id", "magic", "entry_comment"],
+    "entry_comment_mapping": ["ZT <component> P5FR5", "ZN <component> V7"]
+  },
+  "diagnostic_normalization": {
+    "field": "deal_wait_ms",
+    "reason": "GetTickCount64 wall-clock telemetry; not read by signal, order, protection, sizing, risk, persistence, or reconciliation decisions",
+    "raw_differences": 1,
+    "detail": "One binding OPEN event recorded 15 ms in V6R6 and 0 ms in V7; every other field in that row and all report order/deal rows matched."
+  },
+  "windows": {
+    "latest": {
+      "from": "2026-06-01",
+      "through_completed": "2026-07-31",
+      "total_all_symbol_ticks": 137630654,
+      "first_fills": 84,
+      "actual_net_usd": -1.11,
+      "final_balance_usd": 98.89,
+      "balance_max_drawdown_usd": 15.25,
+      "equity_max_drawdown_usd": 20.01,
+      "stressed_2x_net_usd": -2.819,
+      "stressed_2x_final_balance_usd": 97.181,
+      "stressed_2x_max_closed_drawdown_usd": 16.67,
+      "report_summary_rows": 53,
+      "order_rows": 178,
+      "deal_rows": 169,
+      "stored_event_rows": 652,
+      "normalized_summary_differences": 0,
+      "normalized_order_differences": 0,
+      "normalized_deal_differences": 0,
+      "normalized_event_differences": 0,
+      "components": [
+        {"component_id":"ZT-M30-US30-RANGE-COMP-61f61deaba","name":"RC16","closed":9,"stressed_2x_net_usd":6.192},
+        {"component_id":"ZT-M30-US30-RANGE-COMP-64efb16616","name":"RC4","closed":7,"stressed_2x_net_usd":-2.608},
+        {"component_id":"ZT-H1-US100-CROSS-IN-14b72317b7","name":"Cross","closed":32,"stressed_2x_net_usd":-9.098},
+        {"component_id":"ZT-M30-US30-INTRADAY-R-2eb111fc46","name":"Pressure","closed":8,"stressed_2x_net_usd":5.626},
+        {"component_id":"ZT-H1-US30-RETURN-I-c870a788ec","name":"Return","closed":7,"stressed_2x_net_usd":0.988},
+        {"component_id":"ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8","name":"Passive","closed":21,"stressed_2x_net_usd":-3.919}
+      ],
+      "evidence_sha256": {
+        "v6r6_report": "B2C8D3599569AECC1E853AF04D9FC1B2AFF534F222C972A275913F3DE414E6D5",
+        "v7_report": "0525F34D7E7B79D43984C310F910D2EB7F6220262521E40677F90182BF227A01",
+        "v6r6_events": "15742A1F28C4A7010EA59BB17A72AE2B4B429A0F3FA5B0EE6FC565C52F7D73FA",
+        "v7_events": "026E261B71972AAF049B14586CCE061F936F77AA945985A9548458AF4E6D11B6"
+      }
+    },
+    "binding": {
+      "from": "2022-08-01",
+      "through_completed": "2026-08-20",
+      "total_all_symbol_ticks": 678568654,
+      "first_fills": 2235,
+      "actual_net_usd": 1019.04,
+      "final_balance_usd": 1119.04,
+      "balance_max_drawdown_usd": 146.04,
+      "equity_max_drawdown_usd": 153.59,
+      "stressed_2x_net_usd": 940.6585,
+      "stressed_2x_final_balance_usd": 1040.6585,
+      "stressed_2x_max_closed_drawdown_usd": 149.1695,
+      "report_summary_rows": 53,
+      "order_rows": 4583,
+      "deal_rows": 4471,
+      "stored_event_rows": 4165,
+      "normalized_summary_differences": 0,
+      "normalized_order_differences": 0,
+      "normalized_deal_differences": 0,
+      "normalized_decision_event_differences": 0,
+      "raw_event_rows_with_only_diagnostic_timing_difference": 1,
+      "components": [
+        {"component_id":"ZT-M30-US30-RANGE-COMP-61f61deaba","name":"RC16","closed":272,"stressed_2x_net_usd":362.468},
+        {"component_id":"ZT-M30-US30-RANGE-COMP-64efb16616","name":"RC4","closed":206,"stressed_2x_net_usd":184.354},
+        {"component_id":"ZT-H1-US100-CROSS-IN-14b72317b7","name":"Cross","closed":805,"stressed_2x_net_usd":130.5975},
+        {"component_id":"ZT-M30-US30-INTRADAY-R-2eb111fc46","name":"Pressure","closed":118,"stressed_2x_net_usd":188.978},
+        {"component_id":"ZT-H1-US30-RETURN-I-c870a788ec","name":"Return","closed":244,"stressed_2x_net_usd":42.506},
+        {"component_id":"ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8","name":"Passive","closed":590,"stressed_2x_net_usd":31.755}
+      ],
+      "safety_counters": {
+        "protection_calculation_failures": 0,
+        "risk_admission_skips": 65,
+        "protection_mismatches": 0,
+        "stop_loss_exits": 156
+      },
+      "evidence_sha256": {
+        "v6r6_report": "DFD8291D756002812E3375C2A96DF0C2FCDDE88C23E646B57E2418045986EBE1",
+        "v7_report": "81852F9A254E66317842CD0386570D5A971078E00A9193DE738C1082F14E33E4",
+        "v6r6_events_a": "B069B6A266690FAB21109A39FA81FCA30B723333DF3DCACD71D924DB544D3982",
+        "v6r6_events_b": "23415374A9CFDF6ADC8185647881B78EB35F764FF34848552222243D46599EE2",
+        "v7_events_a": "B5EA826C347B0CCF7A4890C1737EE164332927C9874FF11EF48305B82823C20B",
+        "v7_events_b": "E000D56AEA0654AD1FF034ACD89F3085EC7508524A41D2152DB63AA241C23AAD"
+      }
+    }
+  },
+  "remaining_gates": [
+    "normal connected entries-disabled save/restart and reconciliation evidence",
+    "legacy flat and outside every entry window",
+    "separate explicit user authorization for Next V7 Live",
+    "0/0 flat preflight followed by 1/1 Live handshake"
+  ]
+}

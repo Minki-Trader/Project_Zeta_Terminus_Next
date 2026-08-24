@@ -30,3 +30,19 @@
 - Preserved the B70 SET byte-for-byte and changed only Expert, preset and report identities in the two tester INIs. Their non-identity settings match B70 exactly for binding `2022-08-01` through completed `2026-08-20` and latest `2026-06-01` through `2026-07-31`.
 - MetaEditor build `5.0.0.6140` compiled the 14-module source tree with `0 errors / 0 warnings`. Candidate EX5 SHA-256 is `0A722406921F76259E4828D87915C2BA6F2F345A4059CC310EEC4BC446011B53`.
 - Compilation is engineering evidence only. Fixed-window V6R6/V7 real-tick equality is still pending, so this candidate is not promoted and Next Live remains `DISABLED`.
+
+## STATE-0005 - 2026-08-24
+
+- Re-ran frozen B70 V6R6 and modular NEXT-E01/V7 independently in the Lab Tester Portable on FPMarkets build 6140 with `Every tick based on real ticks`, fixed `$100`, `1:100`, identical cost/execution settings and all required symbols.
+- Latest `2026-06-01` through completed `2026-07-31` matched at 84 first fills, actual net `-$1.11`, stressed 2x net `-$2.819`, 53 report summary rows, 178 order rows, 169 deal rows and 652 stored event rows after identity normalization.
+- Binding `2022-08-01` through completed `2026-08-20` matched at 2,235 first fills, actual net `+$1,019.04`, stressed 2x net `+$940.6585`, 53 report summary rows, 4,583 order rows and 4,471 deal rows after identity normalization. All six strategy counts and stressed nets matched.
+- One of 4,165 bounded binding event rows differed only in `deal_wait_ms` (`15` versus `0`), a `GetTickCount64` diagnostic not consumed by any decision. Its price, volume, stop, planned risk, order and deal fields matched, and every report order/deal row matched. The exception is explicit in `lab/evidence/NEXT_E01_V7_EQUIVALENCE.json`.
+- Verdict: `ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED`. This verdict is not Live authority.
+
+## STATE-0006 - 2026-08-24
+
+- Copied the verified source tree, EX5 and base SET once from Lab into `live-dev/package/active/`. MQ5, EX5, SET and all 14 include hashes match the candidate manifest; no automatic Lab-to-Live link exists.
+- Implemented the Next-only PowerShell/WinForms operator surface: exact local snapshot status, Korean 5-second dashboard, account-cache handoff import, entries-disabled start, verified-flat stop, 0/0-to-1/1 Live start and Master terminal/dashboard launcher.
+- The tools verify the frozen hashes, Git `HEAD == origin/main`, release/Portfolio/Magic/state identity, local handoff receipt, one cached account and exclusive terminal ownership. They fail closed if legacy Terminus or another Next terminal/tester is running.
+- Performed only an offline read-only check. It recognized the frozen EX5 and correctly reported not ready because legacy PID `24324` remained active, runtime settings/snapshot did not exist and Live authorization was disabled. No Next terminal was started and no broker state was queried.
+- Connected entries-disabled save/restart, broker reconciliation and dashboard evidence remain blocked until the natural legacy flat handoff boundary permits the stopped account cache to be imported. Next Live remains `DISABLED`; legacy B70 V6R6 is unchanged.

@@ -21,6 +21,19 @@ The legacy repository is read-only to Next except for the explicit anchored path
 
 Core operational lineage: `B48 → B49/V6R2 → B52/V6R3 → B66/V6R4 → B67/V6R5 → B70/V6R6 → NEXT-E01/V7`.
 
+## Verified structural successor
+
+- Release: `NEXT-E01-V7-2db5ef5ead1c`
+- Execution: `zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c`
+- Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
+- Magic: `260824701..260824706`
+- Canonical source/settings SHA-256: `2db5ef5ead1c68e6f596f78726adcc9d622ec4f58868451aec11a68a5748578e`
+- MQ5 SHA-256: `D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1`
+- EX5 SHA-256: `0A722406921F76259E4828D87915C2BA6F2F345A4059CC310EEC4BC446011B53`
+- Fixed Latest/Binding verdict: `ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED`
+
+This successor is frozen under `live-dev/package/active/` but is not a real-account owner and has no Live authority.
+
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: authorized only in the old Terminus project under its exact committed identity.
@@ -31,4 +44,3 @@ Core operational lineage: `B48 → B49/V6R2 → B52/V6R3 → B66/V6R4 → B67/V6
 ## Paused and resumed work
 
 B75 `RC16 Explicit Frozen-Life HOLD Confirmation` was not opened. It is paused during migration and resumes as the next ordinary single-stream research task after the migration boundary.
-

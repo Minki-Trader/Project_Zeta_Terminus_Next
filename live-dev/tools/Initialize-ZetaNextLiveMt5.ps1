@@ -85,8 +85,10 @@ foreach ($junction in $junctions) {
     Ensure-PackageJunction -Link (Join-Path $runtimeRoot $junction.Link) -Target (Join-Path $packageRoot $junction.Target)
 }
 Ensure-Directory -Path (Join-Path $runtimeRoot 'MQL5\Files\ZetaTerminusNext')
+Ensure-Directory -Path (Join-Path $runtimeRoot 'MQL5\Presets\ZetaTerminusNextRuntime')
 Ensure-Directory -Path (Join-Path $runtimeRoot 'Config')
 Ensure-Directory -Path (Join-Path $runtimeRoot 'logs')
+Ensure-Directory -Path (Join-Path $liveRoot 'runtime\handoff')
 
 $terminal = Get-Item -LiteralPath (Join-Path $runtimeRoot 'terminal64.exe')
 $marker = [ordered]@{
