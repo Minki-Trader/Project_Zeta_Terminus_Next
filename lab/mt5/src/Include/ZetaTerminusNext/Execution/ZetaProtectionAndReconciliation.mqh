@@ -132,6 +132,9 @@ bool HandleMissingPassivePendingOrder()
    if(state == ORDER_STATE_EXPIRED)
      {
       const datetime expiration = passive_pending_expiration;
+#ifdef ZETA_FRONTIER_PASSIVE_EXPIRED
+      ZETA_FRONTIER_PASSIVE_EXPIRED(passive_pending_direction, expiration);
+#endif
       ++passive_pending_expirations;
       passive_next_entry_current_bar =
          expiration + PASSIVE_BAR_SECONDS;
@@ -750,7 +753,16 @@ void ProcessClosures()
                    component_definitions[component].timeframe,
                    opened_at,
                    false);
-      if(held_bars >= component_definitions[component].hold_bars)
+      bool frontier_close = false;
+#ifdef ZETA_FRONTIER_SHOULD_CLOSE
+      frontier_close =
+         ZETA_FRONTIER_SHOULD_CLOSE(component,
+                                    ticket,
+                                    opened_at,
+                                    held_bars);
+#endif
+      if(frontier_close ||
+         held_bars >= component_definitions[component].hold_bars)
          CloseComponent(component, ticket);
      }
   }

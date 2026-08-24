@@ -1,0 +1,210 @@
+{
+  "unit": "opportunity-afterimage-002",
+  "architecture": "tester_only_adapter_plus_six_strategy_ea",
+  "period": "2025-01-01/2025-12-31",
+  "capital_usd": 100,
+  "proxy": {
+    "hypotheses": 602,
+    "receiver_lenses_per_hypothesis": 7,
+    "evaluations_per_capital": 4214,
+    "capital_levels": 3,
+    "emitters": {
+      "capital_100": {
+        "risk_blocked": 25,
+        "expired_unfilled": 29
+      },
+      "capital_200": {
+        "risk_blocked": 16,
+        "expired_unfilled": 29
+      },
+      "capital_300": {
+        "risk_blocked": 16,
+        "expired_unfilled": 29
+      }
+    },
+    "retained_adverse_receiver_state": {
+      "name": "expired_unfilled_same_h2880_e0.25",
+      "receiver": "return",
+      "definition": "Expired Passive afterimages use a 2880-minute half-life; total energy is at least 0.25 and same-direction dominance is at least 0.25.",
+      "capital_100": {
+        "trades": 12,
+        "stressed_net": -11.02,
+        "early_stressed_net": -7.60,
+        "late_stressed_net": -3.41,
+        "stop_loss_rate": 0.50,
+        "mean_duration_minutes": 275.0
+      },
+      "capital_200": {
+        "trades": 12,
+        "stressed_net": -11.08
+      },
+      "capital_300": {
+        "trades": 12,
+        "stressed_net": -11.08
+      }
+    },
+    "opposite_receiver_observation": {
+      "name": "expired_unfilled_same_2880m_n1",
+      "receiver": "cross_market",
+      "interpretation": "The same emitter polarity was favorable for Cross rather than universally adverse.",
+      "capital_100": {
+        "trades": 19,
+        "stressed_net": 21.91,
+        "early_stressed_net": 11.20,
+        "late_stressed_net": 10.71
+      },
+      "capital_200": {
+        "trades": 20,
+        "stressed_net": 20.75
+      },
+      "capital_300": {
+        "trades": 20,
+        "stressed_net": 20.75
+      }
+    }
+  },
+  "runtime_expression": {
+    "entries": "unchanged",
+    "volume": "unchanged",
+    "initial_protection": "unchanged",
+    "receiver": "return",
+    "qualification": "expired Passive same-direction decayed energy",
+    "candidate_geometries": [
+      "fixed release after 2 H1 bars",
+      "fixed release after 3 H1 bars",
+      "release after 3 H1 bars only while floating net is non-positive"
+    ]
+  },
+  "runs": {
+    "parent": {
+      "stressed_net": 112.574,
+      "stressed_closed_drawdown": 28.3905,
+      "stressed_net_to_drawdown": 3.9652,
+      "actual_net": 120.87,
+      "actual_closed_drawdown": 27.19,
+      "actual_early_net": 57.04,
+      "actual_late_net": 63.83,
+      "entries": 551,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 72,
+      "component_stressed_net": {
+        "compression_16": 19.556,
+        "compression_4": 29.012,
+        "cross_market": 30.357,
+        "pressure": 0.035,
+        "return": 31.241,
+        "passive": 2.373
+      }
+    },
+    "return_release_2": {
+      "stressed_net": 116.654,
+      "stressed_closed_drawdown": 27.6105,
+      "stressed_net_to_drawdown": 4.224987,
+      "actual_net": 124.95,
+      "actual_closed_drawdown": 26.41,
+      "actual_early_net": 57.84,
+      "actual_late_net": 67.11,
+      "entries": 551,
+      "qualified_return_signals": 13,
+      "release_attempts": 10,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 68,
+      "delta_from_parent": {
+        "stressed_net": 4.08,
+        "stressed_closed_drawdown": -0.78,
+        "entries": 0,
+        "actual_early_net": 0.80,
+        "actual_late_net": 3.28
+      },
+      "component_stressed_net": {
+        "compression_16": 19.496,
+        "compression_4": 28.802,
+        "cross_market": 30.037,
+        "pressure": -0.405,
+        "return": 36.471,
+        "passive": 2.253
+      }
+    },
+    "return_release_3": {
+      "stressed_net": 119.398,
+      "stressed_closed_drawdown": 26.6805,
+      "stressed_net_to_drawdown": 4.475104,
+      "actual_net": 127.69,
+      "actual_closed_drawdown": 25.48,
+      "actual_early_net": 59.62,
+      "actual_late_net": 68.07,
+      "entries": 551,
+      "qualified_return_signals": 13,
+      "release_attempts": 9,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 69,
+      "delta_from_parent": {
+        "stressed_net": 6.824,
+        "stressed_closed_drawdown": -1.71,
+        "entries": 0,
+        "actual_early_net": 2.58,
+        "actual_late_net": 4.24
+      },
+      "component_stressed_net": {
+        "compression_16": 19.421,
+        "compression_4": 28.642,
+        "cross_market": 29.907,
+        "pressure": -0.465,
+        "return": 39.730,
+        "passive": 2.163
+      }
+    },
+    "return_loss_only_release_3": {
+      "stressed_net": 118.203,
+      "stressed_closed_drawdown": 26.5705,
+      "stressed_net_to_drawdown": 4.448655,
+      "actual_net": 126.48,
+      "actual_closed_drawdown": 25.37,
+      "actual_early_net": 59.05,
+      "actual_late_net": 67.43,
+      "entries": 551,
+      "qualified_return_signals": 13,
+      "release_attempts": 6,
+      "positive_hold_observations": 63,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 69,
+      "delta_from_parent": {
+        "stressed_net": 5.629,
+        "stressed_closed_drawdown": -1.82,
+        "entries": 0,
+        "actual_early_net": 2.01,
+        "actual_late_net": 3.60
+      },
+      "component_stressed_net": {
+        "compression_16": 19.446,
+        "compression_4": 28.752,
+        "cross_market": 29.957,
+        "pressure": -0.355,
+        "return": 38.200,
+        "passive": 2.203
+      }
+    }
+  },
+  "observation": {
+    "primary_runtime_shape": "return_release_3",
+    "why": "It preserved every parent entry, improved both calendar halves, produced the highest stressed and actual net, and materially reduced closed drawdown.",
+    "loss_only_tradeoff": "Conditioning release on non-positive floating net reduced drawdown by another 0.11 dollars but surrendered 1.195 stressed dollars versus fixed three-hour release.",
+    "economic_discovery": "An unfilled opportunity can remain economically relevant after it disappears, but the memory is translated by the receiver: Cross harvested the same polarity that made Return's native six-hour hold harmful.",
+    "promotion": "none"
+  },
+  "next_seed": "Treat afterimage polarity as a paired receiver time field: contract adverse Return occupancy while exploring whether favorable Cross occupancy should be extended, without increasing entry risk or reducing portfolio entry count.",
+  "artifacts": {
+    "ea_sha256": "966DA703F02184264EECAFF634369C823DD44C67B812F8743D2A82ED45CF59D3",
+    "parent_report_sha256": "64AB162671B54CFDA6AF8B1CBB3562C37BDBC30BD465844BAB7A13BDC90434FC",
+    "release_2_report_sha256": "1EF4444178AA441F012546CD004518E346B565F12FF177FB236E79AC15107F71",
+    "release_3_report_sha256": "F790B039C7CDB82E90459E80BFBE67CA31B30E0F7C199BD19CD9D463B4A6C968",
+    "loss_only_3_report_sha256": "9A9C25458B4E080A3EF9D260FA3493A137918BE1D9D99298123A243947CD2C69"
+  },
+  "runtime_faults": {
+    "completed_runs": 3,
+    "safety_stops": 0,
+    "persistence_failures": 0,
+    "broker_mismatches": 0,
+    "protection_mismatches": 0
+  }
+}
