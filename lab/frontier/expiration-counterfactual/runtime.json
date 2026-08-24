@@ -1,0 +1,239 @@
+{
+  "unit": "expiration-counterfactual-005",
+  "question": "After a Passive limit expires unfilled, does its post-expiration shadow path reveal orders that were merely early rather than economically wrong?",
+  "architecture": {
+    "measurement": "tester_only_deferred_tick_label_adapter_plus_six_strategy_ea",
+    "proxy": "offline_counterfactual_action_selector",
+    "runtime": "tester_only_phase_transition_adapter_plus_six_strategy_ea",
+    "composition": "receiver_time_field_plus_expiration_phase_transition"
+  },
+  "period": "2025-01-01/2025-12-31",
+  "capital_usd": 100,
+  "history_quality": "100% real ticks",
+  "measurement": {
+    "exact_parent": {
+      "actual_net": 120.87,
+      "actual_closed_drawdown": 27.19,
+      "stressed_net_2x": 112.574,
+      "stressed_closed_drawdown": 28.3905,
+      "entries": 551
+    },
+    "expired_passive_orders": 29,
+    "counterfactual_labels": 29,
+    "pre_expiration_ticks": 396763,
+    "post_expiration_ticks": 6292669,
+    "pre_copy_failures": 0,
+    "post_copy_failures": 0,
+    "invalid_geometry": 0,
+    "pending_hours": 4,
+    "shadow_hold_hours": 4,
+    "counterfactual_actions": [
+      "extend_original_limit",
+      "reprice_50_percent_toward_expiration",
+      "reprice_75_percent_toward_expiration",
+      "convert_to_market_at_expiration"
+    ]
+  },
+  "proxy": {
+    "actions": 12,
+    "selectors": 45,
+    "evaluations": 540,
+    "stable_value_cells": 55,
+    "stable_die_cells": 215,
+    "unconditional_result": "All unconditional post-expiration actions were negative.",
+    "causal_discovery": "High pre-expiration path efficiency and persistent escape separated a small subset whose expired mean-reversion order behaved like a momentum opportunity after expiration.",
+    "leaders": {
+      "reprice_75_for_60m_under_efficiency_q75": {
+        "eligible": 8,
+        "total_net_ratio": 3.013725,
+        "early_net_ratio": 1.522401,
+        "late_net_ratio": 1.491324,
+        "positive": 4,
+        "stopped": 0,
+        "status": "mechanically_distinct_retrace_seed_not_runtime_expressed_in_this_unit"
+      },
+      "market_at_expiration_under_efficiency_q75": {
+        "eligible": 8,
+        "total_net_ratio": 4.207556,
+        "early_net_ratio": 2.992972,
+        "late_net_ratio": 1.214584,
+        "positive": 7,
+        "stopped": 0
+      },
+      "market_at_expiration_under_efficiency_q50": {
+        "eligible": 15,
+        "total_net_ratio": 3.510767,
+        "early_net_ratio": 1.405712,
+        "late_net_ratio": 2.105056,
+        "positive": 11,
+        "stopped": 1
+      },
+      "market_at_expiration_under_persistent_escape": {
+        "eligible": 6,
+        "total_net_ratio": 2.003738,
+        "early_net_ratio": 1.049373,
+        "late_net_ratio": 0.954365,
+        "positive": 4,
+        "stopped": 1
+      }
+    }
+  },
+  "runtime_runs": {
+    "exact_parent": {
+      "actual_net": 120.87,
+      "actual_closed_drawdown": 27.19,
+      "stressed_net_2x": 112.574,
+      "stressed_closed_drawdown": 28.3905,
+      "stressed_net_to_drawdown": 3.9652,
+      "entries": 551,
+      "risk_admission_skips": 25
+    },
+    "market_efficiency_q75": {
+      "expirations": 29,
+      "qualified": 7,
+      "attempts": 7,
+      "opened": 7,
+      "actual_net": 121.63,
+      "actual_closed_drawdown": 27.12,
+      "stressed_net_2x": 113.1445,
+      "stressed_closed_drawdown": 28.454,
+      "stressed_net_to_drawdown": 3.976401,
+      "entries": 557,
+      "risk_admission_skips": 26,
+      "delta_from_parent": {
+        "actual_net": 0.76,
+        "stressed_net_2x": 0.5705,
+        "stressed_closed_drawdown": 0.0635,
+        "entries": 6
+      }
+    },
+    "market_efficiency_q50": {
+      "expirations": 28,
+      "qualified": 15,
+      "attempts": 15,
+      "opened": 15,
+      "actual_net": 121.77,
+      "actual_closed_drawdown": 27.19,
+      "stressed_net_2x": 113.2025,
+      "stressed_closed_drawdown": 28.524,
+      "stressed_net_to_drawdown": 3.968676,
+      "entries": 563,
+      "risk_admission_skips": 26,
+      "delta_from_parent": {
+        "actual_net": 0.90,
+        "stressed_net_2x": 0.6285,
+        "stressed_closed_drawdown": 0.1335,
+        "entries": 12
+      }
+    },
+    "market_persistent_escape": {
+      "expirations": 29,
+      "qualified": 6,
+      "attempts": 6,
+      "opened": 6,
+      "actual_net": 121.43,
+      "actual_closed_drawdown": 27.24,
+      "stressed_net_2x": 113.066,
+      "stressed_closed_drawdown": 28.4545,
+      "stressed_net_to_drawdown": 3.973572,
+      "entries": 556,
+      "risk_admission_skips": 25,
+      "delta_from_parent": {
+        "actual_net": 0.56,
+        "stressed_net_2x": 0.492,
+        "stressed_closed_drawdown": 0.064,
+        "entries": 5
+      }
+    },
+    "receiver_time_field_reference": {
+      "actual_net": 130.67,
+      "actual_closed_drawdown": 26.04,
+      "actual_early_net": 62.20,
+      "actual_late_net": 68.47,
+      "stressed_net_2x": 122.2995,
+      "stressed_closed_drawdown": 27.326,
+      "stressed_net_to_drawdown": 4.475573,
+      "entries": 551,
+      "risk_admission_skips": 25
+    },
+    "receiver_time_field_plus_persistent_escape": {
+      "actual_net": 131.29,
+      "actual_closed_drawdown": 26.06,
+      "actual_early_net": 62.84,
+      "actual_late_net": 68.45,
+      "stressed_net_2x": 122.935,
+      "stressed_closed_drawdown": 27.2765,
+      "stressed_net_to_drawdown": 4.506993,
+      "entries": 556,
+      "risk_admission_skips": 25,
+      "phase_expirations": 29,
+      "phase_qualified": 6,
+      "phase_opened": 6,
+      "receiver_return_releases": 9,
+      "receiver_cross_extended": 15,
+      "receiver_cross_native": 4,
+      "component_stressed_net_2x": {
+        "compression_16": 19.226,
+        "compression_4": 28.072,
+        "cross_market": 34.757,
+        "pressure": -0.855,
+        "return": 39.170,
+        "passive": 2.565
+      },
+      "delta_from_receiver_time_field": {
+        "actual_net": 0.62,
+        "actual_closed_drawdown": 0.02,
+        "actual_early_net": 0.64,
+        "actual_late_net": -0.02,
+        "stressed_net_2x": 0.6355,
+        "stressed_closed_drawdown": -0.0495,
+        "stressed_net_to_drawdown": 0.031420,
+        "entries": 5,
+        "passive_stressed_net_2x": 0.7955,
+        "other_components_stressed_net_2x": -0.1600
+      }
+    }
+  },
+  "observation": {
+    "economic_discovery": "Expiration is not a single rejection state. A smooth persistent escape from the resting price can mark a phase transition from mean reversion to momentum, but its isolated counterfactual value is mostly consumed by real portfolio occupancy and sequencing.",
+    "composition_result": "The persistent-escape conversion added five realized lifecycles and modestly improved annual actual and stressed net when composed with the receiver time field. The actual late-half result was effectively flat and actual drawdown was 0.02 dollars higher, so it is a frontier seed rather than a promotion candidate.",
+    "accounting_note": "MT5 report actual metrics and the EA final stressed ledger are recorded separately. CLOSE and EXTERNAL_CLOSE together account for all 556 combined lifecycles and exactly reconcile to both final totals.",
+    "retained_primary": "receiver_time_field_cross_profit_gate_6",
+    "retained_seed": "persistent_escape_phase_transition_as_slot_aware_candidate",
+    "promotion": "none"
+  },
+  "next_seed": "Assign a causal shadow price to occupied risk slots and ask whether the phase-transition opportunity is additive only when its expected receiver value exceeds the opportunity cost of current incumbents, without reducing total portfolio entries.",
+  "deferred_seed": "Express the proxy-leading 75-percent repriced one-hour retrace as its own virtual-order execution architecture rather than conflating it with immediate market conversion.",
+  "compile": {
+    "metaeditor_build": 6140,
+    "measurement": "0 errors, 0 warnings",
+    "phase_transition": "0 errors, 0 warnings",
+    "composition": "0 errors, 0 warnings",
+    "lab_parent_after_behavior_neutral_hook": "0 errors, 0 warnings"
+  },
+  "runtime_faults": {
+    "completed_runs": 5,
+    "safety_stops": 0,
+    "persistence_failures": 0,
+    "broker_mismatches": 0,
+    "protection_mismatches": 0,
+    "copy_failures": 0,
+    "invalid_geometry": 0
+  },
+  "artifacts": {
+    "adapter_sha256": "3B23B000EE08F364382B00693FCF53251C7337D30742A3AFE82D8E489B211206",
+    "proxy_sha256": "5CB551526E613C5C5589384CDA5A45C0897C6577DF13A697E9558E87E710CAC7",
+    "measurement_ea_sha256": "DD86CB0A87C75483D19FD1EBD8613347229751CBFD4F402612D715E512521183",
+    "measurement_ex5_sha256": "98C39F72BC8409013F2690058B095F91DCD9D987FD6FB802126F71E7B3634A44",
+    "phase_transition_ea_sha256": "AB8D243E762F2C0A295850BDEAF6D29B7AD16AAC54CAE1D078476F5D44162D0A",
+    "phase_transition_ex5_sha256": "C09EA097F7FEB32BE6DBDF1FFF65F9D19ED7E387C5AF6E67901089A73F4207D2",
+    "composition_ea_sha256": "FD6F77D9F5220ED4D572D94FD75FDAE9DFBFB9A721E45DF062EB36E72AC93CD2",
+    "composition_ex5_sha256": "937E1025A244AF30FE6419CEAF611027E6D3DA3B054A83A2F542D8AC68430C8B",
+    "measurement_report_sha256": "39187D72376D653F8AB9A85293C7EF4C070143A94BAF88BBA39E3DDE104D0001",
+    "efficiency_q75_report_sha256": "E7860E2FEAD7F946213B7A61E238CAD51DBCDD159DD391232665F48679F1331A",
+    "efficiency_q50_report_sha256": "99917BB3AD4C30B22330F89D54C83B204546240DA39201D1C2D720D89FC2DA2B",
+    "persistent_escape_report_sha256": "948EE8685DE5551913A1F62495B221D8B3AE296D0175FB8D88CDA5BD99D6E9B6",
+    "composition_report_sha256": "5935E4296F2E3304BCCE988253E02390161838EBB4A0BC50A70B3D0DC6EF0BC7"
+  },
+  "live_surface": "untouched"
+}

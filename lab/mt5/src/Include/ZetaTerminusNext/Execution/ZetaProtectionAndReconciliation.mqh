@@ -132,8 +132,13 @@ bool HandleMissingPassivePendingOrder()
    if(state == ORDER_STATE_EXPIRED)
      {
       const datetime expiration = passive_pending_expiration;
+      const int expired_direction = passive_pending_direction;
+      const double expired_feature = passive_pending_feature;
+      const double expired_limit_price = passive_pending_limit_price;
+      const double expired_stop_loss = passive_pending_stop_loss;
+      const double expired_planned_risk = passive_pending_planned_risk_usd;
 #ifdef ZETA_FRONTIER_PASSIVE_EXPIRED
-      ZETA_FRONTIER_PASSIVE_EXPIRED(passive_pending_direction, expiration);
+      ZETA_FRONTIER_PASSIVE_EXPIRED(expired_direction, expiration);
 #endif
       ++passive_pending_expirations;
       passive_next_entry_current_bar =
@@ -144,6 +149,14 @@ bool HandleMissingPassivePendingOrder()
                   (double)order_ticket,
                   (double)passive_next_entry_current_bar,
                   TimeToString(expiration, TIME_DATE | TIME_MINUTES));
+#ifdef ZETA_FRONTIER_PASSIVE_AFTER_EXPIRATION
+      ZETA_FRONTIER_PASSIVE_AFTER_EXPIRATION(expired_direction,
+                                             expiration,
+                                             expired_feature,
+                                             expired_limit_price,
+                                             expired_stop_loss,
+                                             expired_planned_risk);
+#endif
       return(SaveState());
      }
    if(state == ORDER_STATE_FILLED || state == ORDER_STATE_PARTIAL)
