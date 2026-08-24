@@ -753,6 +753,17 @@ void ProcessClosures()
                    component_definitions[component].timeframe,
                    opened_at,
                    false);
+      int required_hold_bars = component_definitions[component].hold_bars;
+#ifdef ZETA_FRONTIER_HOLD_BARS
+      required_hold_bars =
+         ZETA_FRONTIER_HOLD_BARS(component,
+                                 ticket,
+                                 opened_at,
+                                 held_bars,
+                                 required_hold_bars);
+      if(required_hold_bars < 0)
+         required_hold_bars = component_definitions[component].hold_bars;
+#endif
       bool frontier_close = false;
 #ifdef ZETA_FRONTIER_SHOULD_CLOSE
       frontier_close =
@@ -762,9 +773,9 @@ void ProcessClosures()
                                     held_bars);
 #endif
       if(frontier_close ||
-         held_bars >= component_definitions[component].hold_bars)
+         held_bars >= required_hold_bars)
          CloseComponent(component, ticket);
-     }
+      }
   }
 
 

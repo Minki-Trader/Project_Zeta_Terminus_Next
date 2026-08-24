@@ -1,0 +1,191 @@
+{
+  "unit": "receiver-time-field-003",
+  "architecture": "tester_only_adapter_plus_six_strategy_ea",
+  "period": "2025-01-01/2025-12-31",
+  "capital_usd": 100,
+  "source_receiver_map": {
+    "return": {
+      "state": "expired Passive decayed same-direction energy",
+      "retained_geometry": "release after 3 H1 bars"
+    },
+    "cross_market": {
+      "state": "at least one same-direction expired Passive opportunity in the prior 2880 minutes",
+      "proxy_trades": 19,
+      "proxy_stressed_net": 21.911,
+      "proxy_early_stressed_net": 11.197,
+      "proxy_late_stressed_net": 10.714,
+      "proxy_stop_loss_rate": 0.0,
+      "native_hold_bars": 4
+    }
+  },
+  "runtime_expression": {
+    "entries": "unchanged",
+    "volume": "unchanged",
+    "initial_protection": "unchanged",
+    "return": "qualified lifecycle releases after 3 H1 bars",
+    "cross_candidates": [
+      "qualified lifecycle holds for 6 H1 bars",
+      "qualified lifecycle holds for 8 H1 bars",
+      "qualified lifecycle is extended from 4 to 6 H1 bars only when floating net is positive at the native maturity boundary"
+    ]
+  },
+  "runs": {
+    "exact_parent": {
+      "stressed_net": 112.574,
+      "stressed_closed_drawdown": 28.3905,
+      "stressed_net_to_drawdown": 3.9652,
+      "actual_net": 120.87,
+      "actual_closed_drawdown": 27.19,
+      "actual_early_net": 57.04,
+      "actual_late_net": 63.83,
+      "entries": 551
+    },
+    "return_release_3_reference": {
+      "stressed_net": 119.398,
+      "stressed_closed_drawdown": 26.6805,
+      "stressed_net_to_drawdown": 4.475104,
+      "actual_net": 127.69,
+      "actual_closed_drawdown": 25.48,
+      "actual_early_net": 59.62,
+      "actual_late_net": 68.07,
+      "entries": 551,
+      "component_stressed_net": {
+        "compression_16": 19.421,
+        "compression_4": 28.642,
+        "cross_market": 29.907,
+        "pressure": -0.465,
+        "return": 39.730,
+        "passive": 2.163
+      }
+    },
+    "cross_fixed_6": {
+      "stressed_net": 121.9975,
+      "stressed_closed_drawdown": 27.468,
+      "stressed_net_to_drawdown": 4.441441,
+      "actual_net": 130.37,
+      "actual_closed_drawdown": 26.18,
+      "actual_early_net": 62.06,
+      "actual_late_net": 68.31,
+      "entries": 551,
+      "return_qualified_signals": 13,
+      "return_releases": 9,
+      "cross_qualified_signals": 21,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 69,
+      "delta_from_parent": {
+        "stressed_net": 9.4235,
+        "stressed_closed_drawdown": -0.9225,
+        "entries": 0
+      },
+      "delta_from_return_release_3": {
+        "stressed_net": 2.5995,
+        "stressed_closed_drawdown": 0.7875,
+        "actual_early_net": 2.44,
+        "actual_late_net": 0.24
+      },
+      "component_stressed_net": {
+        "compression_16": 19.276,
+        "compression_4": 28.192,
+        "cross_market": 34.325,
+        "pressure": -0.805,
+        "return": 39.210,
+        "passive": 1.7995
+      }
+    },
+    "cross_fixed_8": {
+      "stressed_net": 121.271,
+      "stressed_closed_drawdown": 28.2805,
+      "stressed_net_to_drawdown": 4.288149,
+      "actual_net": 129.98,
+      "actual_closed_drawdown": 27.00,
+      "actual_early_net": 62.66,
+      "actual_late_net": 67.32,
+      "entries": 551,
+      "return_qualified_signals": 13,
+      "return_releases": 9,
+      "cross_qualified_signals": 21,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 68,
+      "delta_from_parent": {
+        "stressed_net": 8.697,
+        "stressed_closed_drawdown": -0.11,
+        "entries": 0
+      },
+      "delta_from_return_release_3": {
+        "stressed_net": 1.873,
+        "stressed_closed_drawdown": 1.60,
+        "actual_early_net": 3.04,
+        "actual_late_net": -0.75
+      },
+      "component_stressed_net": {
+        "compression_16": 19.296,
+        "compression_4": 28.072,
+        "cross_market": 33.595,
+        "pressure": -0.835,
+        "return": 39.250,
+        "passive": 1.893
+      }
+    },
+    "cross_profit_gate_6": {
+      "stressed_net": 122.2995,
+      "stressed_closed_drawdown": 27.326,
+      "stressed_net_to_drawdown": 4.475573,
+      "actual_net": 130.67,
+      "actual_closed_drawdown": 26.04,
+      "actual_early_net": 62.20,
+      "actual_late_net": 68.47,
+      "entries": 551,
+      "return_qualified_signals": 13,
+      "return_releases": 9,
+      "cross_qualified_signals": 21,
+      "cross_accepted_lifecycles": 19,
+      "cross_extended_lifecycles": 15,
+      "cross_native_lifecycles": 4,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 69,
+      "delta_from_parent": {
+        "stressed_net": 9.7255,
+        "stressed_closed_drawdown": -1.0645,
+        "entries": 0,
+        "actual_early_net": 5.16,
+        "actual_late_net": 4.64
+      },
+      "delta_from_return_release_3": {
+        "stressed_net": 2.9015,
+        "stressed_closed_drawdown": 0.6455,
+        "actual_early_net": 2.58,
+        "actual_late_net": 0.40
+      },
+      "component_stressed_net": {
+        "compression_16": 19.226,
+        "compression_4": 28.152,
+        "cross_market": 34.857,
+        "pressure": -0.875,
+        "return": 39.170,
+        "passive": 1.7695
+      }
+    }
+  },
+  "observation": {
+    "primary_runtime_shape": "cross_profit_gate_6",
+    "why": "It preserved all parent entries, produced the highest stressed and actual net, improved both calendar halves, and dominated fixed six-hour extension on both net and drawdown.",
+    "maturity_boundary": "Eight-hour extension passed the useful maturity region: it earned less than six-hour extension, increased drawdown, and weakened the late calendar half versus Return contraction alone.",
+    "economic_discovery": "Opportunity memory behaves like a receiver-specific maturity field. Its useful expression was neither universal scaling nor universal holding time: adverse Return matured early, while only Cross winners deserved an extra two hours.",
+    "promotion": "none"
+  },
+  "next_seed": "Treat an expired limit as a censored price-path measurement. Capture how far and how quickly price refused the resting Passive limit, then test whether non-fill depth explains receiver polarity and maturity better than direction alone.",
+  "artifacts": {
+    "ea_sha256": "9F601536516BEAA15C9B4E59D53463A467CA44E86AFCEFC8771F1D72BFE41BEC",
+    "return_release_3_report_sha256": "F790B039C7CDB82E90459E80BFBE67CA31B30E0F7C199BD19CD9D463B4A6C968",
+    "cross_fixed_6_report_sha256": "020D664BDE34426660305206BB2A7E14796526CF1EEE6E1BBC31117A8F235D1E",
+    "cross_fixed_8_report_sha256": "483680A9A8DA1297980B4A2CDF923702CB880DB1B18047D963931C06C01FF15D",
+    "cross_profit_gate_6_report_sha256": "00BAB13A015FF0F3E6480357008E5A1B5927849D46FF1F8B3C3E0C874433F65D"
+  },
+  "runtime_faults": {
+    "completed_runs": 3,
+    "safety_stops": 0,
+    "persistence_failures": 0,
+    "broker_mismatches": 0,
+    "protection_mismatches": 0
+  }
+}
