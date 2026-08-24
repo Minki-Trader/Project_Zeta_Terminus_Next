@@ -142,9 +142,20 @@ bool PlacePassiveLimit(const int direction,
       component_states[US100_PASSIVE_LIMIT].entry_check_result = "TRADE_SESSION_BLOCKED";
       return(false);
      }
+#ifdef ZETA_FRONTIER_ENTRY_VOLUME
+   const double volume =
+      ZETA_FRONTIER_ENTRY_VOLUME(US100_PASSIVE_LIMIT, "US100");
+#else
+   const double volume = InpBaseVolume;
+#endif
+   if(volume <= 0.0)
+     {
+      component_states[US100_PASSIVE_LIMIT].entry_check_result = "VOLUME_INVALID";
+      return(false);
+     }
    component_states[US100_PASSIVE_LIMIT].entry_check_order_price = limit_price;
-   component_states[US100_PASSIVE_LIMIT].entry_check_volume = InpBaseVolume;
-   if(!PassiveMarginAllows(direction, limit_price))
+   component_states[US100_PASSIVE_LIMIT].entry_check_volume = volume;
+   if(!PassiveMarginAllows(direction, limit_price, volume))
      {
       component_states[US100_PASSIVE_LIMIT].entry_check_result = "MARGIN_BLOCKED";
       SaveState();
@@ -178,7 +189,7 @@ bool PlacePassiveLimit(const int direction,
    if(!CalculateProtectiveStop(US100_PASSIVE_LIMIT,
                                "US100",
                                direction,
-                               InpBaseVolume,
+                               volume,
                                limit_price,
                                MathMax(required_distance,
                                        MinimumProtectionDistance("US100")),
@@ -205,7 +216,7 @@ bool PlacePassiveLimit(const int direction,
    decision_intent.order_type_known = true;
    decision_intent.intended_price = limit_price;
    decision_intent.expiration = expiration;
-   decision_intent.volume = InpBaseVolume;
+   decision_intent.volume = volume;
    decision_intent.stop_loss = stop_loss;
    decision_intent.planned_risk_usd = admitted_planned_risk;
    if(!MarkDecisionOrderAttempted(US100_PASSIVE_LIMIT,
@@ -221,7 +232,7 @@ bool PlacePassiveLimit(const int direction,
    execution_state.trade_operation_active = true;
    const bool requested =
       (direction > 0
-       ? trade.BuyLimit(InpBaseVolume,
+       ? trade.BuyLimit(volume,
                         limit_price,
                         "US100",
                         stop_loss,
@@ -229,7 +240,7 @@ bool PlacePassiveLimit(const int direction,
                         ORDER_TIME_SPECIFIED,
                         expiration,
                         "ZN 6 V7")
-       : trade.SellLimit(InpBaseVolume,
+       : trade.SellLimit(volume,
                          limit_price,
                          "US100",
                          stop_loss,
@@ -509,7 +520,12 @@ void ProcessPassiveLimit()
       return;
      }
    component_states[US100_PASSIVE_LIMIT].entry_check_order_price = limit_price;
+#ifdef ZETA_FRONTIER_ENTRY_VOLUME
+   component_states[US100_PASSIVE_LIMIT].entry_check_volume =
+      ZETA_FRONTIER_ENTRY_VOLUME(US100_PASSIVE_LIMIT, "US100");
+#else
    component_states[US100_PASSIVE_LIMIT].entry_check_volume = InpBaseVolume;
+#endif
    const datetime expiration =
       current_bar + PASSIVE_ACTIVATION_BARS * PASSIVE_BAR_SECONDS;
    if(!PersistDecisionUntil(US100_PASSIVE_LIMIT,

@@ -541,14 +541,16 @@ bool MarginAllows(const string symbol,
   }
 
 
-bool PassiveMarginAllows(const int direction, const double limit_price)
+bool PassiveMarginAllows(const int direction,
+                         const double limit_price,
+                         const double volume)
   {
    const ENUM_ORDER_TYPE order_type =
       (direction > 0 ? ORDER_TYPE_BUY : ORDER_TYPE_SELL);
    double required_margin = 0.0;
    if(!OrderCalcMargin(order_type,
                        "US100",
-                       InpBaseVolume,
+                       volume,
                        limit_price,
                        required_margin) || required_margin <= 0.0)
      {

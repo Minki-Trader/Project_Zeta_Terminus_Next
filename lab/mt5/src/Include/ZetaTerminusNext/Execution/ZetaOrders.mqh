@@ -699,7 +699,11 @@ bool OpenComponent(const int component,
       return(false);
      }
    const string symbol = component_definitions[component].symbol;
+#ifdef ZETA_FRONTIER_ENTRY_VOLUME
+   const double volume = ZETA_FRONTIER_ENTRY_VOLUME(component, symbol);
+#else
    const double volume = NormalizedVolume(symbol);
+#endif
    if(volume <= 0.0)
      {
       component_states[component].entry_check_result = "VOLUME_INVALID";

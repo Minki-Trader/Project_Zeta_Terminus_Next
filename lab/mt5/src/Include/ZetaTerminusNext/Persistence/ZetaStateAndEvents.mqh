@@ -81,6 +81,9 @@ void SetEntrySignalCheck(const int component,
    component_states[component].entry_check_signal_value = value;
    component_states[component].entry_check_direction = direction;
    component_states[component].entry_check_result = result;
+#ifdef ZETA_FRONTIER_OBSERVE_SIGNAL
+   ZETA_FRONTIER_OBSERVE_SIGNAL(component, value, passed, direction);
+#endif
   }
 
 

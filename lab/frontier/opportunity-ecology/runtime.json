@@ -1,0 +1,143 @@
+{
+  "unit": "opportunity-ecology-001",
+  "architecture": "tester_only_adapter_plus_six_strategy_ea",
+  "period": "2025-01-01/2025-12-31",
+  "capital_usd": 100,
+  "risk_expression": {
+    "qualified_market_volume_multiplier": 2.0,
+    "position_risk_fraction_unchanged": 0.04,
+    "effect": "narrower protective distance at the same position risk budget",
+    "passive_limit_strategy": "observed_in_ecology_but_not_resized_due_to_fixed_volume_pending_recovery_contract"
+  },
+  "runs": {
+    "parent": {
+      "stressed_net": 112.574,
+      "stressed_closed_drawdown": 28.3905,
+      "stressed_net_to_drawdown": 3.9652,
+      "actual_net": 120.87,
+      "actual_closed_drawdown": 27.19,
+      "actual_early_net": 57.04,
+      "actual_late_net": 63.83,
+      "entries": 551,
+      "scaled_entries": 0,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 72,
+      "component_stressed_net": {
+        "compression_16": 19.556,
+        "compression_4": 29.012,
+        "cross_market": 30.357,
+        "pressure": 0.035,
+        "return": 31.241,
+        "passive": 2.373
+      }
+    },
+    "cross_symbol_relay_120": {
+      "stressed_net": 124.825,
+      "stressed_closed_drawdown": 28.0205,
+      "stressed_net_to_drawdown": 4.454774,
+      "actual_net": 133.96,
+      "actual_closed_drawdown": 26.74,
+      "actual_early_net": 70.45,
+      "actual_late_net": 63.51,
+      "entries": 552,
+      "scaled_entries": 51,
+      "risk_admission_skips": 23,
+      "stop_loss_exits": 91,
+      "delta_from_parent": {
+        "stressed_net": 12.251,
+        "stressed_closed_drawdown": -0.37,
+        "entries": 1,
+        "actual_early_net": 13.41,
+        "actual_late_net": -0.32
+      },
+      "component_stressed_net": {
+        "compression_16": 15.026,
+        "compression_4": 33.222,
+        "cross_market": 21.146,
+        "pressure": 1.005,
+        "return": 51.793,
+        "passive": 2.633
+      }
+    },
+    "single_active_position": {
+      "stressed_net": 125.6875,
+      "stressed_closed_drawdown": 33.679,
+      "stressed_net_to_drawdown": 3.731925,
+      "actual_net": 137.2,
+      "actual_closed_drawdown": 32.78,
+      "actual_early_net": 77.86,
+      "actual_late_net": 59.34,
+      "entries": 562,
+      "scaled_entries": 182,
+      "risk_admission_skips": 12,
+      "stop_loss_exits": 123,
+      "delta_from_parent": {
+        "stressed_net": 13.1135,
+        "stressed_closed_drawdown": 5.2885,
+        "entries": 11,
+        "actual_early_net": 20.82,
+        "actual_late_net": -4.49
+      },
+      "component_stressed_net": {
+        "compression_16": 17.57,
+        "compression_4": 26.706,
+        "cross_market": 32.105,
+        "pressure": 11.147,
+        "return": 35.204,
+        "passive": 2.9555
+      }
+    },
+    "return_receiver_relay_120": {
+      "stressed_net": 125.576,
+      "stressed_closed_drawdown": 29.5345,
+      "stressed_net_to_drawdown": 4.251841,
+      "actual_net": 134.3,
+      "actual_closed_drawdown": 28.29,
+      "actual_early_net": 75.5,
+      "actual_late_net": 58.8,
+      "entries": 551,
+      "scaled_entries": 18,
+      "risk_admission_skips": 24,
+      "stop_loss_exits": 77,
+      "delta_from_parent": {
+        "stressed_net": 13.002,
+        "stressed_closed_drawdown": 1.144,
+        "entries": 0,
+        "actual_early_net": 18.46,
+        "actual_late_net": -5.03
+      },
+      "component_stressed_net": {
+        "compression_16": 16.506,
+        "compression_4": 26.792,
+        "cross_market": 27.077,
+        "pressure": 0.495,
+        "return": 52.613,
+        "passive": 2.093
+      }
+    }
+  },
+  "observation": {
+    "primary_runtime_shape": "cross_symbol_relay_120",
+    "why": "It increased stressed net and entry count while reducing closed drawdown; its late-half actual net was nearly unchanged from the parent.",
+    "receiver_asymmetry": "The same relay expression strongly helped Return and hurt Cross, so portfolio ecology is a receiver-specific state rather than a universal sizing switch.",
+    "single_occupancy_tradeoff": "It increased dollar profit and entry breadth but paid with higher drawdown and weaker late-half net.",
+    "promotion": "none"
+  },
+  "next_seed": "Model blocked and unfilled opportunities as decaying portfolio afterimages, then seek receiver-specific entry-preserving exit or protection geometry instead of another hard volume switch.",
+  "artifacts": {
+    "ea_sha256": "F154AF9FD1DB0C38B2B5C2D603483595097620D217195E24AA024A9AF876077D",
+    "parent_report_sha256": "64AB162671B54CFDA6AF8B1CBB3562C37BDBC30BD465844BAB7A13BDC90434FC",
+    "cross_report_sha256": "2FC6C6498CDE9F54E933633F9C8C8380C2A6FB3ACB3724EA782F8A20308A4DD4",
+    "single_active_report_sha256": "AA75D3C5859F8993AF2D8D71F92D8E2D3DFA4D912DBAA5B4EBF7A5E61E53AD9E",
+    "return_receiver_report_sha256": "5047C2AED3008C3D093287CE293D14C00F6E436707A2E973B12DFD30C7AB9BEF"
+  },
+  "runtime_faults": {
+    "completed_runs": 4,
+    "safety_stops": 0,
+    "persistence_failures": 0,
+    "broker_mismatches": 0,
+    "protection_mismatches": 0,
+    "discarded_scaffold_attempts": 1,
+    "discarded_scaffold_reason": "Passive pending recovery correctly rejected resized volume; the adapter then kept Passive as an ecology observer with its fixed-volume contract intact."
+  }
+}

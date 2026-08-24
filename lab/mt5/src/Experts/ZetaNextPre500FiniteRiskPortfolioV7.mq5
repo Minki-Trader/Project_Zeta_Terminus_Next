@@ -101,6 +101,13 @@ int OnInit()
   {
    InitializeComponentDefinitions();
    tester_mode = (bool)MQLInfoInteger(MQL_TESTER);
+#ifdef ZETA_FRONTIER_TESTER_ONLY
+   if(!tester_mode)
+     {
+      PrintFormat("%s is restricted to the strategy tester", EXECUTION_VERSION);
+      return(INIT_FAILED);
+     }
+#endif
    if(_Symbol != "US30" || _Period != PERIOD_M30 ||
        MathAbs(InpReferenceCapitalUSD - 100.0) > 1.0e-9 ||
        !MathIsValidNumber(InpPriorProjectRealizedNetUSD) ||
@@ -122,11 +129,18 @@ int OnInit()
       return(INIT_PARAMETERS_INCORRECT);
    FolderCreate("ZetaTerminusNext");
    FolderCreate("ZetaTerminusNext\\live");
+#ifdef ZETA_FRONTIER_INITIALIZE
+   if(!ZETA_FRONTIER_INITIALIZE())
+      return(INIT_FAILED);
+#endif
    if(tester_mode)
       ResetTesterArtifacts();
    if(!AcquireRuntimeOwnership())
       return(INIT_FAILED);
    ResetRuntimeState();
+#ifdef ZETA_FRONTIER_RESET
+   ZETA_FRONTIER_RESET();
+#endif
    if(!tester_mode && !EventSetTimer(2))
      {
       PrintFormat("%s timer initialization failed error=%d",
@@ -454,5 +468,8 @@ void OnDeinit(const int reason)
                (execution_state.rc4_shadow_activation_seal_pending ? "true" : "false"),
                rc4_shadow_activation_boundary_msc,
                rc4_shadow_activation_boundary_ordinal);
+#ifdef ZETA_FRONTIER_REPORT
+   ZETA_FRONTIER_REPORT();
+#endif
    ReleaseRuntimeOwnership();
   }

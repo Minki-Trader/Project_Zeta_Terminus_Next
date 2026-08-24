@@ -19,34 +19,71 @@ input long   InpExpectedLiveAccountLogin = 0;
 input int    InpEventCapacity         = 4096;
 input int    InpSnapshotSeconds       = 60;
 
-const string EXECUTION_VERSION =
-   "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c";
-const string ECONOMIC_VERSION =
-   "zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6";
-const string PROJECT_ID = "project-zeta-terminus-next";
-const string SCHEMA_VERSION = "7";
-const string RELEASE_ID = "NEXT-E01-V7-2db5ef5ead1c";
-const string PORTFOLIO_ID = "ZT-PORT-NEXT-V7-2db5ef5ead1c";
-const string ECONOMIC_FINGERPRINT =
-   "ref100-base0.01-step150-margin0.45-delay2-deviation100-inert-market-execution-quote-age3s-pre500-components6-passive-fixed0.01-always-m15-lb12-en1-ex0.25-offset0.25-activation4-hold16-posrisk0.04-aggrisk0.12-reserve0.25-headroom0.25-admission-reserved-broker-sl-session-clock-eet-v1-calendar2022-2028-rc4-check8-three-frozen-ordinal-heads-votesum-le-minus2-retain-original-loss0.25-one-shot-shadow-accepted-occupancy";
-const string EXECUTION_FINGERPRINT =
-   "next-v7-modular-parent-b70-v6r6-account-bound-runtime-fresh3s-market-protection-recovery-multideal-lifecycle-at-most-once-decision-journal-required-market-execution-session-clock-contract-global-foreign-exposure-block-common-cross-terminal-lock-authoritative-position-reconciliation5000ms-operational-entry-gate-connection-deferred-passive-cancel-recovery-shadow-accepted-rc4-occupancy-prejournalled-stop-modify-recovery-persisted-shadow-millisecond-ordinal-cursor-complete-causal-copyticksrange-fail-closed-native-m30-boundary-synchronous-state-readback-every-notification-exact-deal-ms-activation-seal-same-ms-tail-outcome-excluded-single-transient-modify-retry-first-strictly-later-fresh-tick";
-const string STATE_MARKER =
-   "ZT_NEXT_PRE500_FINITE_RISK_PORTFOLIO_STATE_V7_MODULAR_2DB5EF5EAD1C";
-const string STATE_PATH_A =
-   "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-state-a.csv";
-const string STATE_PATH_B =
-   "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-state-b.csv";
-const string EVENT_PATH_A =
-   "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-events-a.csv";
-const string EVENT_PATH_B =
-   "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-events-b.csv";
-const string CURRENT_SNAPSHOT_PATH_A =
-   "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-current-a.csv";
-const string CURRENT_SNAPSHOT_PATH_B =
-   "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-current-b.csv";
-const string OWNERSHIP_PATH =
-   "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c.lock";
+#ifndef ZETA_EXECUTION_VERSION
+   #define ZETA_EXECUTION_VERSION "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c"
+#endif
+#ifndef ZETA_ECONOMIC_VERSION
+   #define ZETA_ECONOMIC_VERSION "zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6"
+#endif
+#ifndef ZETA_PROJECT_ID
+   #define ZETA_PROJECT_ID "project-zeta-terminus-next"
+#endif
+#ifndef ZETA_SCHEMA_VERSION
+   #define ZETA_SCHEMA_VERSION "7"
+#endif
+#ifndef ZETA_RELEASE_ID
+   #define ZETA_RELEASE_ID "NEXT-E01-V7-2db5ef5ead1c"
+#endif
+#ifndef ZETA_PORTFOLIO_ID
+   #define ZETA_PORTFOLIO_ID "ZT-PORT-NEXT-V7-2db5ef5ead1c"
+#endif
+#ifndef ZETA_ECONOMIC_FINGERPRINT
+   #define ZETA_ECONOMIC_FINGERPRINT "ref100-base0.01-step150-margin0.45-delay2-deviation100-inert-market-execution-quote-age3s-pre500-components6-passive-fixed0.01-always-m15-lb12-en1-ex0.25-offset0.25-activation4-hold16-posrisk0.04-aggrisk0.12-reserve0.25-headroom0.25-admission-reserved-broker-sl-session-clock-eet-v1-calendar2022-2028-rc4-check8-three-frozen-ordinal-heads-votesum-le-minus2-retain-original-loss0.25-one-shot-shadow-accepted-occupancy"
+#endif
+#ifndef ZETA_EXECUTION_FINGERPRINT
+   #define ZETA_EXECUTION_FINGERPRINT "next-v7-modular-parent-b70-v6r6-account-bound-runtime-fresh3s-market-protection-recovery-multideal-lifecycle-at-most-once-decision-journal-required-market-execution-session-clock-contract-global-foreign-exposure-block-common-cross-terminal-lock-authoritative-position-reconciliation5000ms-operational-entry-gate-connection-deferred-passive-cancel-recovery-shadow-accepted-rc4-occupancy-prejournalled-stop-modify-recovery-persisted-shadow-millisecond-ordinal-cursor-complete-causal-copyticksrange-fail-closed-native-m30-boundary-synchronous-state-readback-every-notification-exact-deal-ms-activation-seal-same-ms-tail-outcome-excluded-single-transient-modify-retry-first-strictly-later-fresh-tick"
+#endif
+#ifndef ZETA_STATE_MARKER
+   #define ZETA_STATE_MARKER "ZT_NEXT_PRE500_FINITE_RISK_PORTFOLIO_STATE_V7_MODULAR_2DB5EF5EAD1C"
+#endif
+#ifndef ZETA_STATE_PATH_A
+   #define ZETA_STATE_PATH_A "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-state-a.csv"
+#endif
+#ifndef ZETA_STATE_PATH_B
+   #define ZETA_STATE_PATH_B "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-state-b.csv"
+#endif
+#ifndef ZETA_EVENT_PATH_A
+   #define ZETA_EVENT_PATH_A "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-events-a.csv"
+#endif
+#ifndef ZETA_EVENT_PATH_B
+   #define ZETA_EVENT_PATH_B "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-events-b.csv"
+#endif
+#ifndef ZETA_CURRENT_SNAPSHOT_PATH_A
+   #define ZETA_CURRENT_SNAPSHOT_PATH_A "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-current-a.csv"
+#endif
+#ifndef ZETA_CURRENT_SNAPSHOT_PATH_B
+   #define ZETA_CURRENT_SNAPSHOT_PATH_B "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-current-b.csv"
+#endif
+#ifndef ZETA_OWNERSHIP_PATH
+   #define ZETA_OWNERSHIP_PATH "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c.lock"
+#endif
+
+const string EXECUTION_VERSION = ZETA_EXECUTION_VERSION;
+const string ECONOMIC_VERSION = ZETA_ECONOMIC_VERSION;
+const string PROJECT_ID = ZETA_PROJECT_ID;
+const string SCHEMA_VERSION = ZETA_SCHEMA_VERSION;
+const string RELEASE_ID = ZETA_RELEASE_ID;
+const string PORTFOLIO_ID = ZETA_PORTFOLIO_ID;
+const string ECONOMIC_FINGERPRINT = ZETA_ECONOMIC_FINGERPRINT;
+const string EXECUTION_FINGERPRINT = ZETA_EXECUTION_FINGERPRINT;
+const string STATE_MARKER = ZETA_STATE_MARKER;
+const string STATE_PATH_A = ZETA_STATE_PATH_A;
+const string STATE_PATH_B = ZETA_STATE_PATH_B;
+const string EVENT_PATH_A = ZETA_EVENT_PATH_A;
+const string EVENT_PATH_B = ZETA_EVENT_PATH_B;
+const string CURRENT_SNAPSHOT_PATH_A = ZETA_CURRENT_SNAPSHOT_PATH_A;
+const string CURRENT_SNAPSHOT_PATH_B = ZETA_CURRENT_SNAPSHOT_PATH_B;
+const string OWNERSHIP_PATH = ZETA_OWNERSHIP_PATH;
 const int FILE_OPEN_ATTEMPTS = 5;
 const int FILE_RETRY_DELAY_MS = 100;
 const ulong COMPLETED_DEAL_RECONCILIATION_TIMEOUT_MS = 5000;
@@ -77,12 +114,30 @@ const int JOURNAL_NONE = 0;
 const int JOURNAL_SIGNAL_DECIDED = 1;
 const int JOURNAL_ORDER_ATTEMPTED = 2;
 const int JOURNAL_BROKER_STATE_ADOPTED = 3;
-const ulong MAGIC_RC16_LONG = 260824701;
-const ulong MAGIC_RC4_BOTH = 260824702;
-const ulong MAGIC_US100_CROSS = 260824703;
-const ulong MAGIC_US30_PRESSURE = 260824704;
-const ulong MAGIC_US30_RETURN = 260824705;
-const ulong MAGIC_US100_PASSIVE_LIMIT = 260824706;
+#ifndef ZETA_MAGIC_RC16_LONG
+   #define ZETA_MAGIC_RC16_LONG 260824701
+#endif
+#ifndef ZETA_MAGIC_RC4_BOTH
+   #define ZETA_MAGIC_RC4_BOTH 260824702
+#endif
+#ifndef ZETA_MAGIC_US100_CROSS
+   #define ZETA_MAGIC_US100_CROSS 260824703
+#endif
+#ifndef ZETA_MAGIC_US30_PRESSURE
+   #define ZETA_MAGIC_US30_PRESSURE 260824704
+#endif
+#ifndef ZETA_MAGIC_US30_RETURN
+   #define ZETA_MAGIC_US30_RETURN 260824705
+#endif
+#ifndef ZETA_MAGIC_US100_PASSIVE_LIMIT
+   #define ZETA_MAGIC_US100_PASSIVE_LIMIT 260824706
+#endif
+const ulong MAGIC_RC16_LONG = ZETA_MAGIC_RC16_LONG;
+const ulong MAGIC_RC4_BOTH = ZETA_MAGIC_RC4_BOTH;
+const ulong MAGIC_US100_CROSS = ZETA_MAGIC_US100_CROSS;
+const ulong MAGIC_US30_PRESSURE = ZETA_MAGIC_US30_PRESSURE;
+const ulong MAGIC_US30_RETURN = ZETA_MAGIC_US30_RETURN;
+const ulong MAGIC_US100_PASSIVE_LIMIT = ZETA_MAGIC_US100_PASSIVE_LIMIT;
 
 struct ComponentDefinition
   {
