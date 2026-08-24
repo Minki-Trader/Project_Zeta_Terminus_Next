@@ -96,3 +96,10 @@
 - Predeclared first-come, stored win-probability, conservative stressed-R and overlap-aware one-slot reservation comparisons. The future-aware oracle is diagnostic only; initial scope excludes preemption, exit changes and nearby threshold rescue.
 - All research identity, Magic, source, settings, state, events, reports and Portable paths remain under Lab. Exact Live V7 PID `10112`, dashboard PID `24936`, Live EA, Include, EX5, SET and state are unchanged and receive no promotion authority from this opening.
 - Compiled the combined control and all six standalone wrappers with MetaEditor build 6140 at `0 errors / 0 warnings`; the hash-pinned receipt is `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_COMPILE_RECEIPT_V1.json`. Economic runs have not yet begun at this state boundary.
+
+## STATE-0014 - 2026-08-24
+
+- Completed the seven serial 2022-08-01 through 2024-12-31 observation runs in the Lab Portable. Every run had continuous opportunity IDs, exactly the intended selected component(s), one normal STOP, a complete report and zero safety, persistence, broker-identity or foreign-exposure fault lines. The shared control recorded 37 aggregate-risk admission skips.
+- Before reading any 2024 policy outcome, parsed only standalone lifecycles with decision bar before 2024-01-01: RC16 `77`, RC4 `53`, Cross `306`, Pressure `35`, Return `106`, Passive `213`, total `790`. The maximum included decision bar is `2023-12-29 14:45:00`.
+- Frozen Beta(1,1) predicted win probability, conservative clamped stressed-R score and 20-pseudo-observation overlap adjustments in `lab/evidence/STRATEGY_INDEPENDENCE_RISK_ALLOCATION_FIT_V1.json`, SHA-256 `82FBD9DE57FFA5D6ACF5E2873B26C7F043CCF9E946F4BF681030CA4F9135DD7B`. The record explicitly states `selection_rows_consumed=false` and pins all six source-log hashes plus the analysis source hash.
+- No 2024 policy candidate, 2025 forward, 2026 confirmation, Live source or Live process changed at this fit boundary.

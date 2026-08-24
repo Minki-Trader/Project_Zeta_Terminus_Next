@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "record_type": "fit_scores",
+  "family_id": "strategy-independence-risk-allocation",
+  "source_commit_required": "a5a3e01b05bcc7a890a4404a128142db1c3d3aae",
+  "analysis_source": {
+    "path": "lab/research/strategy-independence-risk-allocation/analyze_strategy_independence_risk_allocation_v1.py",
+    "sha256": "4b0875107fa12e1be7eab8aaa1cb5fe6513c3bf8d257bd38dabd69b2a0845e88"
+  },
+  "selection_rows_consumed": false,
+  "fit_period": [
+    "2022-08-01",
+    "2024-01-01"
+  ],
+  "score_contract": {
+    "win_probability": "(wins+1)/(trades+2)",
+    "stressed_r": "stressed_2x_cost_net/planned_risk",
+    "stressed_r_clamp": [
+      -3.0,
+      3.0
+    ],
+    "conservative_z": 1.28155,
+    "overlap_pseudo_observations": 20,
+    "overlap_runtime_combination": "base conservative score plus the minimum active-incumbent adjustment; no active incumbent means zero adjustment"
+  },
+  "source_logs": {
+    "RC16": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2022-2024-rc16-agent.log",
+      "bytes": 1727100,
+      "sha256": "fe012c6b38b75bb7e8411504dae663e624d97413b5ea3e80b39b522a7eef9d7b"
+    },
+    "RC4": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2022-2024-rc4-agent.log",
+      "bytes": 1520162,
+      "sha256": "da2a1cd14cdbdcd83ecbbc639a46cb36f28795e7365c59bb94ff7e74ffe455fb"
+    },
+    "CROSS": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2022-2024-cross-agent.log",
+      "bytes": 4939468,
+      "sha256": "9405e067f72d75fa26fe7c48dfb48cc9b3982e573302c868e4c4981c52b13c05"
+    },
+    "PRESSURE": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2022-2024-pressure-agent.log",
+      "bytes": 947220,
+      "sha256": "ed23fed8e5b575e2ad26ee57f7b05abfae5024fad97a93349460aa9ceb8dadff"
+    },
+    "RETURN": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2022-2024-return-agent.log",
+      "bytes": 1837934,
+      "sha256": "ce4fa438e826c7474eae5c0bbf8f8f63306bc6d595b776d0cfbb0b0dbd10eea7"
+    },
+    "PASSIVE": {
+      "path": "lab/artifacts/backtests/strategy-independence-risk-allocation/selection-2022-2024-passive-agent.log",
+      "bytes": 4367540,
+      "sha256": "d458e7fdd99c48328a1bc39471116eb9ea4924c23e044365ca3235283daad10e"
+    }
+  },
+  "component_scores": {
+    "RC16": {
+      "component": 0,
+      "fit_trade_count": 77,
+      "fit_win_count": 47,
+      "fit_loss_or_flat_count": 30,
+      "predicted_win_probability_beta_1_1": 0.6075949367088608,
+      "mean_clamped_stressed_r": 0.10649557789164621,
+      "sample_sd_clamped_stressed_r": 0.40606256994786655,
+      "standard_error_clamped_stressed_r": 0.04627512454994093,
+      "conservative_stressed_r_score": 0.04719169202466941,
+      "actual_net_usd": 39.07,
+      "stressed_net_usd": 37.3645,
+      "stressed_max_closed_drawdown_usd": 10.607499999999998,
+      "first_decision_bar": "2022-08-03 13:30:00",
+      "last_decision_bar": "2023-12-22 13:30:00"
+    },
+    "RC4": {
+      "component": 1,
+      "fit_trade_count": 53,
+      "fit_win_count": 29,
+      "fit_loss_or_flat_count": 24,
+      "predicted_win_probability_beta_1_1": 0.5454545454545454,
+      "mean_clamped_stressed_r": 0.11409994813486864,
+      "sample_sd_clamped_stressed_r": 0.5645743816694864,
+      "standard_error_clamped_stressed_r": 0.07755025545710305,
+      "conservative_stressed_r_score": 0.014715418253818224,
+      "actual_net_usd": 26.92,
+      "stressed_net_usd": 25.6775,
+      "stressed_max_closed_drawdown_usd": 9.599500000000003,
+      "first_decision_bar": "2022-08-12 13:00:00",
+      "last_decision_bar": "2023-12-27 13:00:00"
+    },
+    "CROSS": {
+      "component": 2,
+      "fit_trade_count": 306,
+      "fit_win_count": 165,
+      "fit_loss_or_flat_count": 141,
+      "predicted_win_probability_beta_1_1": 0.538961038961039,
+      "mean_clamped_stressed_r": 0.016267951262112515,
+      "sample_sd_clamped_stressed_r": 0.23474078644248447,
+      "standard_error_clamped_stressed_r": 0.013419237583375303,
+      "conservative_stressed_r_score": -0.0009294726628621061,
+      "actual_net_usd": 26.54,
+      "stressed_net_usd": 20.4005,
+      "stressed_max_closed_drawdown_usd": 12.425999999999991,
+      "first_decision_bar": "2022-08-01 17:00:00",
+      "last_decision_bar": "2023-12-28 17:00:00"
+    },
+    "PRESSURE": {
+      "component": 3,
+      "fit_trade_count": 35,
+      "fit_win_count": 16,
+      "fit_loss_or_flat_count": 19,
+      "predicted_win_probability_beta_1_1": 0.4594594594594595,
+      "mean_clamped_stressed_r": 0.05549801355644836,
+      "sample_sd_clamped_stressed_r": 0.503900008375294,
+      "standard_error_clamped_stressed_r": 0.08517464720722298,
+      "conservative_stressed_r_score": -0.053657555571968246,
+      "actual_net_usd": 8.1,
+      "stressed_net_usd": 7.337,
+      "stressed_max_closed_drawdown_usd": 8.777,
+      "first_decision_bar": "2022-08-17 15:00:00",
+      "last_decision_bar": "2023-11-30 15:00:00"
+    },
+    "RETURN": {
+      "component": 4,
+      "fit_trade_count": 106,
+      "fit_win_count": 59,
+      "fit_loss_or_flat_count": 47,
+      "predicted_win_probability_beta_1_1": 0.5555555555555556,
+      "mean_clamped_stressed_r": 0.08096840330329756,
+      "sample_sd_clamped_stressed_r": 0.5125285552165952,
+      "standard_error_clamped_stressed_r": 0.049781173973627336,
+      "conservative_stressed_r_score": 0.01717133979739545,
+      "actual_net_usd": 41.6,
+      "stressed_net_usd": 39.506,
+      "stressed_max_closed_drawdown_usd": 17.49799999999999,
+      "first_decision_bar": "2022-08-01 16:00:00",
+      "last_decision_bar": "2023-12-15 16:00:00"
+    },
+    "PASSIVE": {
+      "component": 5,
+      "fit_trade_count": 213,
+      "fit_win_count": 135,
+      "fit_loss_or_flat_count": 78,
+      "predicted_win_probability_beta_1_1": 0.6325581395348837,
+      "mean_clamped_stressed_r": 0.010066890533094416,
+      "sample_sd_clamped_stressed_r": 0.19157344292750325,
+      "standard_error_clamped_stressed_r": 0.013126396019671423,
+      "conservative_stressed_r_score": -0.006755242285915496,
+      "actual_net_usd": 12.27,
+      "stressed_net_usd": 8.279,
+      "stressed_max_closed_drawdown_usd": 9.918999999999997,
+      "first_decision_bar": "2022-08-03 13:15:00",
+      "last_decision_bar": "2023-12-29 14:45:00"
+    }
+  },
+  "overlap_adjustments": {
+    "RC16": {
+      "RC4": {
+        "overlap_trade_count": 19,
+        "conditional_mean_clamped_stressed_r": 0.1013213026495766,
+        "shrunk_mean_clamped_stressed_r": 0.10397477713268923,
+        "adjustment_vs_component_mean": -0.002520800758956984
+      },
+      "CROSS": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.10649557789164621,
+        "shrunk_mean_clamped_stressed_r": 0.10649557789164621,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "PRESSURE": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.10649557789164621,
+        "shrunk_mean_clamped_stressed_r": 0.10649557789164621,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "RETURN": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.10649557789164621,
+        "shrunk_mean_clamped_stressed_r": 0.10649557789164621,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "PASSIVE": {
+        "overlap_trade_count": 7,
+        "conditional_mean_clamped_stressed_r": 0.013531913708971447,
+        "shrunk_mean_clamped_stressed_r": 0.08239388717761942,
+        "adjustment_vs_component_mean": -0.02410169071402679
+      }
+    },
+    "RC4": {
+      "RC16": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.11409994813486864,
+        "shrunk_mean_clamped_stressed_r": 0.11409994813486864,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "CROSS": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.11409994813486864,
+        "shrunk_mean_clamped_stressed_r": 0.11409994813486864,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "PRESSURE": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.11409994813486864,
+        "shrunk_mean_clamped_stressed_r": 0.11409994813486864,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "RETURN": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.11409994813486864,
+        "shrunk_mean_clamped_stressed_r": 0.11409994813486864,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "PASSIVE": {
+        "overlap_trade_count": 6,
+        "conditional_mean_clamped_stressed_r": 0.32365386407292457,
+        "shrunk_mean_clamped_stressed_r": 0.16245854412057387,
+        "adjustment_vs_component_mean": 0.04835859598570523
+      }
+    },
+    "CROSS": {
+      "RC16": {
+        "overlap_trade_count": 59,
+        "conditional_mean_clamped_stressed_r": 0.009172778603879949,
+        "shrunk_mean_clamped_stressed_r": 0.010969024846470471,
+        "adjustment_vs_component_mean": -0.005298926415642044
+      },
+      "RC4": {
+        "overlap_trade_count": 38,
+        "conditional_mean_clamped_stressed_r": -0.014777483482810374,
+        "shrunk_mean_clamped_stressed_r": -0.004072161156974895,
+        "adjustment_vs_component_mean": -0.02034011241908741
+      },
+      "PRESSURE": {
+        "overlap_trade_count": 28,
+        "conditional_mean_clamped_stressed_r": -0.02587134865425255,
+        "shrunk_mean_clamped_stressed_r": -0.008313307022433773,
+        "adjustment_vs_component_mean": -0.024581258284546288
+      },
+      "RETURN": {
+        "overlap_trade_count": 90,
+        "conditional_mean_clamped_stressed_r": 0.046581359570515526,
+        "shrunk_mean_clamped_stressed_r": 0.041069830787169526,
+        "adjustment_vs_component_mean": 0.02480187952505701
+      },
+      "PASSIVE": {
+        "overlap_trade_count": 59,
+        "conditional_mean_clamped_stressed_r": 0.029268074676805318,
+        "shrunk_mean_clamped_stressed_r": 0.025976904192072967,
+        "adjustment_vs_component_mean": 0.009708952929960452
+      }
+    },
+    "PRESSURE": {
+      "RC16": {
+        "overlap_trade_count": 3,
+        "conditional_mean_clamped_stressed_r": 0.42343206433304753,
+        "shrunk_mean_clamped_stressed_r": 0.10348941148383084,
+        "adjustment_vs_component_mean": 0.04799139792738248
+      },
+      "RC4": {
+        "overlap_trade_count": 1,
+        "conditional_mean_clamped_stressed_r": 0.8769000747570397,
+        "shrunk_mean_clamped_stressed_r": 0.09461239742314317,
+        "adjustment_vs_component_mean": 0.039114383866694816
+      },
+      "CROSS": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.05549801355644836,
+        "shrunk_mean_clamped_stressed_r": 0.05549801355644836,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "RETURN": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.05549801355644836,
+        "shrunk_mean_clamped_stressed_r": 0.05549801355644836,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "PASSIVE": {
+        "overlap_trade_count": 17,
+        "conditional_mean_clamped_stressed_r": 0.07389227593535116,
+        "shrunk_mean_clamped_stressed_r": 0.06394943140621451,
+        "adjustment_vs_component_mean": 0.008451417849766149
+      }
+    },
+    "RETURN": {
+      "RC16": {
+        "overlap_trade_count": 12,
+        "conditional_mean_clamped_stressed_r": -0.024898713730966627,
+        "shrunk_mean_clamped_stressed_r": 0.041268234415448496,
+        "adjustment_vs_component_mean": -0.039700168887849066
+      },
+      "RC4": {
+        "overlap_trade_count": 8,
+        "conditional_mean_clamped_stressed_r": 0.04812828816233731,
+        "shrunk_mean_clamped_stressed_r": 0.0715855132630232,
+        "adjustment_vs_component_mean": -0.009382890040274358
+      },
+      "CROSS": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.08096840330329756,
+        "shrunk_mean_clamped_stressed_r": 0.08096840330329756,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "PRESSURE": {
+        "overlap_trade_count": 20,
+        "conditional_mean_clamped_stressed_r": 0.04317745025089058,
+        "shrunk_mean_clamped_stressed_r": 0.06207292677709407,
+        "adjustment_vs_component_mean": -0.018895476526203492
+      },
+      "PASSIVE": {
+        "overlap_trade_count": 37,
+        "conditional_mean_clamped_stressed_r": 0.0846683049151137,
+        "shrunk_mean_clamped_stressed_r": 0.08337009382324839,
+        "adjustment_vs_component_mean": 0.0024016905199508304
+      }
+    },
+    "PASSIVE": {
+      "RC16": {
+        "overlap_trade_count": 29,
+        "conditional_mean_clamped_stressed_r": -0.04433791414429767,
+        "shrunk_mean_clamped_stressed_r": -0.022131871418831512,
+        "adjustment_vs_component_mean": -0.032198761951925926
+      },
+      "RC4": {
+        "overlap_trade_count": 16,
+        "conditional_mean_clamped_stressed_r": 0.028724537619017436,
+        "shrunk_mean_clamped_stressed_r": 0.018359178126837978,
+        "adjustment_vs_component_mean": 0.008292287593743562
+      },
+      "CROSS": {
+        "overlap_trade_count": 0,
+        "conditional_mean_clamped_stressed_r": 0.010066890533094416,
+        "shrunk_mean_clamped_stressed_r": 0.010066890533094416,
+        "adjustment_vs_component_mean": 0.0
+      },
+      "PRESSURE": {
+        "overlap_trade_count": 8,
+        "conditional_mean_clamped_stressed_r": 0.09194758245700646,
+        "shrunk_mean_clamped_stressed_r": 0.03346137393992643,
+        "adjustment_vs_component_mean": 0.023394483406832013
+      },
+      "RETURN": {
+        "overlap_trade_count": 7,
+        "conditional_mean_clamped_stressed_r": -0.032775407722027215,
+        "shrunk_mean_clamped_stressed_r": -0.001040371977492673,
+        "adjustment_vs_component_mean": -0.01110726251058709
+      }
+    }
+  }
+}
