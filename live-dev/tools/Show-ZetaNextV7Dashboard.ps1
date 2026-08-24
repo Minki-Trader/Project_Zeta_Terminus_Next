@@ -62,6 +62,92 @@ function Format-Price {
     return ('{0:0.00###}' -f [double]$Value)
 }
 
+function Format-Volume {
+    param($Value)
+    if ($null -eq $Value -or [double]$Value -le 0) { return '—' }
+    return ('{0:0.00###}' -f [double]$Value)
+}
+
+function Format-PositiveMoney {
+    param($Value)
+    if ($null -eq $Value -or [double]$Value -le 0) { return '—' }
+    return (Format-Money -Value $Value)
+}
+
+function Format-ServerEpochTime {
+    param($Value)
+
+    if ($null -eq $Value -or [long]$Value -le 0) { return '—' }
+    try {
+        $epochWallClock = [datetime]::SpecifyKind(
+            [datetime]'1970-01-01 00:00:00',
+            [DateTimeKind]::Unspecified
+        )
+        return $epochWallClock.AddSeconds([long]$Value).ToString('yyyy-MM-dd HH:mm')
+    } catch {
+        return '—'
+    }
+}
+
+function Format-SignalValue {
+    param($Known, $Value)
+    if ($null -eq $Known -or [int]$Known -ne 1 -or $null -eq $Value) { return '—' }
+    return ('{0:0.0000}' -f [double]$Value)
+}
+
+function Get-KoreanDirection {
+    param($Direction)
+    if ($null -eq $Direction) { return '—' }
+    switch ([int]$Direction) {
+        1 { '매수' }
+        -1 { '매도' }
+        default { '—' }
+    }
+}
+
+function Get-KoreanSignalDecision {
+    param($Known, $Passed)
+    if ($null -eq $Known -or [int]$Known -ne 1) { return '미산출' }
+    if ([int]$Passed -eq 1) { return '통과' }
+    if ([int]$Passed -eq 0) { return '미충족' }
+    return '판정 전'
+}
+
+function Get-KoreanEntryResult {
+    param([string]$Result)
+    switch ($Result) {
+        'NOT_EVALUATED_SINCE_START' { '시작 후 평가 전' }
+        'CHECKING_SIGNAL' { '신호 계산 중' }
+        'SIGNAL_NOT_MET' { '진입 기준 미충족' }
+        'SIGNAL_MET_ORDER_CHECK' { '신호 통과 · 주문 점검' }
+        'SESSION_EXCLUDED' { '휴장일 제외' }
+        'OUTSIDE_DECISION_SESSION' { '평가 세션 밖' }
+        'DATA_UNAVAILABLE' { '평가 데이터 대기' }
+        'ENTRY_DELAY_EXCEEDED' { '평가 허용 지연 초과' }
+        'COOLDOWN' { '재진입 대기' }
+        'ENTRY_BLOCKED' { '신규 진입 차단' }
+        'OWNERSHIP_BLOCKED' { '소유권 점검 차단' }
+        'EXISTING_EXPOSURE' { '기존 포지션 보유 중' }
+        'DUPLICATE_EXPOSURE' { '중복 포지션 감지' }
+        'SHADOW_ACCEPTED_OCCUPANCY' { 'RC4 그림자 포지션 점유' }
+        'QUOTE_UNAVAILABLE' { '실행 호가 대기' }
+        'VOLUME_INVALID' { '주문 수량 부적합' }
+        'LIMIT_PRICE_INVALID' { '지정가 계산 실패' }
+        'PRICE_DISTANCE_BLOCKED' { '지정가 거리 조건 차단' }
+        'PROTECTION_OR_RISK_BLOCKED' { '보호선·위험 심사 차단' }
+        'TRADE_SESSION_BLOCKED' { '거래 세션 차단' }
+        'MARGIN_BLOCKED' { '증거금 심사 차단' }
+        'PERSISTENCE_FAILED' { '상태 저장 실패' }
+        'BROKER_REJECTED' { '브로커 주문 거절' }
+        'PENDING_ORDER' { '지정가 주문 대기 중' }
+        'POSITION_OPEN' { '포지션 진입 완료' }
+        'SAFETY_STOP' { '안전 정지' }
+        default {
+            if ([string]::IsNullOrWhiteSpace($Result)) { '—' } else { $Result }
+        }
+    }
+}
+
 function Get-EstimatedServerEpoch {
     param([Parameter(Mandatory)]$Status)
 
@@ -101,27 +187,29 @@ function Format-RemainingHold {
 
 function Get-ComponentView {
     param([string]$ComponentId)
+    # Display-only descriptions mirror the frozen NEXT-E01 V7 source. They are
+    # never consumed by the EA and cannot alter an entry decision.
     switch ($ComponentId) {
         'ZT-M30-US30-RANGE-COMP-61f61deaba' {
-            return [pscustomobject]@{ Short = 'RC16'; Name = 'US30 M30 16봉 범위압축'; HoldMinutes = 240; TimeframeSeconds = 1800; HoldBars = 8; EarlyExit = $false }
+            return [pscustomobject]@{ Short = 'RC16'; Name = 'US30 M30 16봉 범위압축'; HoldMinutes = 240; TimeframeSeconds = 1800; HoldBars = 8; EarlyExit = $false; SignalLabel = '압축값'; EntryRule = '16봉 압축값 ≥ +1.5 · 매수'; EvaluationWindow = '서버 13:30~13:32' }
         }
         'ZT-M30-US30-RANGE-COMP-64efb16616' {
-            return [pscustomobject]@{ Short = 'RC4'; Name = 'US30 M30 4봉 범위압축'; HoldMinutes = 360; TimeframeSeconds = 1800; HoldBars = 12; EarlyExit = $false }
+            return [pscustomobject]@{ Short = 'RC4'; Name = 'US30 M30 4봉 범위압축'; HoldMinutes = 360; TimeframeSeconds = 1800; HoldBars = 12; EarlyExit = $false; SignalLabel = '압축값'; EntryRule = '4봉 압축 절대값 ≥ 1.5 · 부호 방향'; EvaluationWindow = '서버 13:00~13:02' }
         }
         'ZT-H1-US100-CROSS-IN-14b72317b7' {
-            return [pscustomobject]@{ Short = 'Cross'; Name = 'US100 H1 상대모멘텀'; HoldMinutes = 240; TimeframeSeconds = 3600; HoldBars = 4; EarlyExit = $false }
+            return [pscustomobject]@{ Short = 'Cross'; Name = 'US100 H1 상대모멘텀'; HoldMinutes = 240; TimeframeSeconds = 3600; HoldBars = 4; EarlyExit = $false; SignalLabel = '상대 z'; EntryRule = 'US100 상대모멘텀 |z| ≥ 0.5 · 부호 방향'; EvaluationWindow = '서버 17:00~17:02' }
         }
         'ZT-M30-US30-INTRADAY-R-2eb111fc46' {
-            return [pscustomobject]@{ Short = 'Pressure'; Name = 'US30 M30 장중 압력'; HoldMinutes = 240; TimeframeSeconds = 1800; HoldBars = 8; EarlyExit = $false }
+            return [pscustomobject]@{ Short = 'Pressure'; Name = 'US30 M30 장중 압력'; HoldMinutes = 240; TimeframeSeconds = 1800; HoldBars = 8; EarlyExit = $false; SignalLabel = '압력값'; EntryRule = '장중 압력 절대값 ≥ 0.5 · 부호 방향'; EvaluationWindow = '서버 15:00~15:02' }
         }
         'ZT-H1-US30-RETURN-I-c870a788ec' {
-            return [pscustomobject]@{ Short = 'Return'; Name = 'US30 H1 충격 반전'; HoldMinutes = 360; TimeframeSeconds = 3600; HoldBars = 6; EarlyExit = $false }
+            return [pscustomobject]@{ Short = 'Return'; Name = 'US30 H1 충격 반전'; HoldMinutes = 360; TimeframeSeconds = 3600; HoldBars = 6; EarlyExit = $false; SignalLabel = '4H 충격'; EntryRule = '4H 정규화 수익충격 ≤ -0.5 · 매수'; EvaluationWindow = '서버 16:00~16:02' }
         }
         'ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8' {
-            return [pscustomobject]@{ Short = 'Passive'; Name = 'US100 M15 충격 확장 지정가'; HoldMinutes = 240; TimeframeSeconds = 900; HoldBars = 16; EarlyExit = $true }
+            return [pscustomobject]@{ Short = 'Passive'; Name = 'US100 M15 충격 확장 지정가'; HoldMinutes = 240; TimeframeSeconds = 900; HoldBars = 16; EarlyExit = $true; SignalLabel = '충격상태'; EntryRule = '12봉 충격상태 |값| ≥ 1.0 · 역방향 지정가'; EvaluationWindow = '완료봉 서버 12:00~15:45 · 다음 M15 시작 후 2분' }
         }
         default {
-            return [pscustomobject]@{ Short = 'Unknown'; Name = $ComponentId; HoldMinutes = 0; TimeframeSeconds = 0; HoldBars = 0; EarlyExit = $false }
+            return [pscustomobject]@{ Short = 'Unknown'; Name = $ComponentId; HoldMinutes = 0; TimeframeSeconds = 0; HoldBars = 0; EarlyExit = $false; SignalLabel = '신호값'; EntryRule = '기준 확인 불가'; EvaluationWindow = '평가 시각 확인 불가' }
         }
     }
 }
@@ -227,7 +315,7 @@ function Render-Dashboard {
     Write-UiLine -Text ("프로젝트 실현손익 {0}  |  단계잔고 {1}  |  2x비용 스트레스잔고 {2}" -f (Format-Money $Status.project_realized_net), (Format-Money $Status.project_stage_balance), (Format-Money $Status.stressed_balance)) -Color Gray
     Write-UiLine -Text ("현재 계획위험 {0}  |  관측 최대 계획위험 {1}" -f (Format-Money $Status.aggregate_planned_risk), (Format-Money $Status.maximum_aggregate_planned_risk)) -Color Gray
 
-    Write-Rule -Title '6개 전략 관리표'
+    Write-Rule -Title '6개 전략 · 보유 및 진입평가'
     $estimatedServerEpoch = Get-EstimatedServerEpoch -Status $Status
     foreach ($component in @($Status.components)) {
         $view = Get-ComponentView -ComponentId ([string]$component.component_id)
@@ -236,7 +324,8 @@ function Render-Dashboard {
         } else {
             "보유 $($view.HoldMinutes)분"
         }
-        $positionState = if ([long]$component.position_identifier -gt 0) {
+        $hasPosition = ([long]$component.position_identifier -gt 0)
+        $positionState = if ($hasPosition) {
             $remainingSeconds = $null
             if ([long]$component.entry_time -gt 0 -and
                 [long]$view.TimeframeSeconds -gt 0 -and
@@ -246,13 +335,25 @@ function Render-Dashboard {
                 $scheduledCloseTime = $entryBarTime + ([long]$view.HoldBars * [long]$view.TimeframeSeconds)
                 $remainingSeconds = [math]::Max(0L, $scheduledCloseTime - [long]$estimatedServerEpoch)
             }
-            "$holdLabel · 남은 $(Format-RemainingHold -Seconds $remainingSeconds) · SL $(Format-Price $component.entry_stop_loss)"
+            "$(Get-KoreanDirection $component.entry_direction) $(Format-Volume $component.entry_volume) · 진입 서버 $(Format-ServerEpochTime $component.entry_time) · SL $(Format-Price $component.entry_stop_loss) · 위험 $(Format-PositiveMoney $component.entry_planned_risk)"
         } else {
-            "$holdLabel · 현재 보유 없음"
+            '현재 보유 없음'
         }
-        $color = if ([long]$component.position_identifier -gt 0) { [ConsoleColor]::Yellow } else { [ConsoleColor]::Gray }
+        $managementState = if ($hasPosition) {
+            "$holdLabel · 남은 $(Format-RemainingHold -Seconds $remainingSeconds)"
+        } else {
+            $holdLabel
+        }
+        $evaluationTime = Format-ServerEpochTime $component.entry_check_bar
+        $signalValue = Format-SignalValue $component.entry_check_signal_known $component.entry_check_signal_value
+        $signalDecision = Get-KoreanSignalDecision $component.entry_check_signal_known $component.entry_check_signal_passed
+        $entryResult = Get-KoreanEntryResult ([string]$component.entry_check_result)
+        $color = if ($hasPosition) { [ConsoleColor]::Yellow } else { [ConsoleColor]::Gray }
         Write-UiLine -Text ("[{0}] {1}  ·  Magic {2}" -f $view.Short, $view.Name, $component.magic) -Color White
-        Write-UiLine -Text ("     {0}" -f $positionState) -Color $color
+        Write-UiLine -Text ("     보유: {0}  ·  관리: {1}" -f $positionState, $managementState) -Color $color
+        Write-UiLine -Text ("     기준: {0}  ·  평가창: {1}" -f $view.EntryRule, $view.EvaluationWindow) -Color DarkCyan
+        Write-UiLine -Text ("     최근평가: 서버 {0}  ·  {1} {2}  ·  신호 {3}  ·  {4}" -f $evaluationTime, $view.SignalLabel, $signalValue, $signalDecision, $entryResult) -Color Gray
+        Write-UiLine -Text ("     주문후보: {0}  ·  가격 {1}  ·  수량 {2}  ·  SL {3}  ·  위험 {4}" -f (Get-KoreanDirection $component.entry_check_direction), (Format-Price $component.entry_check_order_price), (Format-Volume $component.entry_check_volume), (Format-Price $component.entry_check_stop_loss), (Format-PositiveMoney $component.entry_check_planned_risk)) -Color Gray
     }
 
     Write-Rule -Title '최근 V7 이벤트'
@@ -326,8 +427,8 @@ function Show-GraphicalDashboard {
     $form = [System.Windows.Forms.Form]::new()
     $form.Text = $windowTitle
     $form.StartPosition = [System.Windows.Forms.FormStartPosition]::CenterScreen
-    $form.Size = [System.Drawing.Size]::new(1120, 860)
-    $form.MinimumSize = [System.Drawing.Size]::new(900, 680)
+    $form.Size = [System.Drawing.Size]::new(1280, 940)
+    $form.MinimumSize = [System.Drawing.Size]::new(1000, 720)
     $form.BackColor = [System.Drawing.Color]::FromArgb(18, 22, 30)
     $form.ForeColor = [System.Drawing.Color]::WhiteSmoke
 
@@ -363,27 +464,27 @@ function Show-GraphicalDashboard {
         [System.Windows.Forms.AnchorStyles]::Bottom -bor
         [System.Windows.Forms.AnchorStyles]::Left -bor
         [System.Windows.Forms.AnchorStyles]::Right
-    $body.Size = [System.Drawing.Size]::new(1052, 650)
+    $body.Size = [System.Drawing.Size]::new(1212, 730)
 
     $refreshButton = [System.Windows.Forms.Button]::new()
     $refreshButton.Text = '지금 새로고침'
     $refreshButton.Font = [System.Drawing.Font]::new('Malgun Gothic', 9, [System.Drawing.FontStyle]::Bold)
     $refreshButton.Size = [System.Drawing.Size]::new(130, 34)
-    $refreshButton.Location = [System.Drawing.Point]::new(25, 780)
+    $refreshButton.Location = [System.Drawing.Point]::new(25, 860)
     $refreshButton.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
 
     $closeButton = [System.Windows.Forms.Button]::new()
     $closeButton.Text = '대시보드 닫기'
     $closeButton.Font = [System.Drawing.Font]::new('Malgun Gothic', 9, [System.Drawing.FontStyle]::Bold)
     $closeButton.Size = [System.Drawing.Size]::new(130, 34)
-    $closeButton.Location = [System.Drawing.Point]::new(947, 780)
+    $closeButton.Location = [System.Drawing.Point]::new(1107, 860)
     $closeButton.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Right
 
     $updatedLabel = [System.Windows.Forms.Label]::new()
     $updatedLabel.Font = [System.Drawing.Font]::new('Malgun Gothic', 9)
     $updatedLabel.ForeColor = [System.Drawing.Color]::Silver
     $updatedLabel.AutoSize = $true
-    $updatedLabel.Location = [System.Drawing.Point]::new(175, 788)
+    $updatedLabel.Location = [System.Drawing.Point]::new(175, 868)
     $updatedLabel.Anchor = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Left
 
     $form.Controls.AddRange(@($titleLabel, $modeLabel, $healthLabel, $body, $refreshButton, $closeButton, $updatedLabel))
@@ -391,8 +492,16 @@ function Show-GraphicalDashboard {
     $updateAction = {
         try {
             $status = ((& $statusScript -AsJson -ExpectedMode $ExpectedMode | Out-String) | ConvertFrom-Json)
+            $firstVisibleLine = 0
+            if ($body.TextLength -gt 0) {
+                $firstVisibleCharacter = $body.GetCharIndexFromPosition([System.Drawing.Point]::new(1, 1))
+                $firstVisibleLine = [math]::Max(0, $body.GetLineFromCharIndex($firstVisibleCharacter))
+            }
             $body.Text = Get-DashboardText -Status $status
-            $body.SelectionStart = 0
+            $maximumLine = [math]::Max(0, $body.Lines.Count - 1)
+            $targetLine = [math]::Min($firstVisibleLine, $maximumLine)
+            $targetCharacter = $body.GetFirstCharIndexFromLine($targetLine)
+            $body.SelectionStart = [math]::Max(0, $targetCharacter)
             $body.ScrollToCaret()
             if ([bool]$status.healthy) {
                 $healthLabel.Text = "● 정상 작동  ·  PID $($status.project_terminal_pid)  ·  신규진입 $($status.new_entries_input)/$($status.new_entries_effective)"

@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0011`
+- Latest state ID: `STATE-0012`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -21,7 +21,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Active work
 
-- Active engineering boundary: V7 handoff complete and unchanged
+- Active engineering boundary: V7 handoff complete; dashboard-only entry-evaluation visibility improvement complete with EA, chart and frozen release unchanged
 - Active research boundary: B75 `RC16 Explicit Frozen-Life HOLD Confirmation` complete; no successor research family, axis, candidate, or experiment is open
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -66,6 +66,13 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Machine-readable record: `lab/evidence/RC16_FROZEN_LIFE_HOLD_CONFIRMATION_B75.json`, SHA-256 `C4FFF105C9918E3F81BD8936E09053034DC65338994EC1970484FD7541BBCAFC`
 - Per the user's direction, this closes only the inherited legacy task; no new research stream is open
 
+## Completed operator improvement
+
+- The Korean dashboard now shows each strategy's frozen entry criterion and server evaluation window, latest evaluation slot, signal value and verdict, candidate direction/price/volume/SL/planned risk, and current-position entry details
+- The display uses only fields already present in the EA local snapshot plus display-only descriptions copied from the frozen V7 source; it sends no order and performs no broker history query
+- Dashboard SHA-256: `5A3FB8D552511B8D16663F1E74973E57D856AD85AC28A453C7C1795A7A4BF9D6`
+- Only the dashboard process restarted from PID `26868` to PID `24936`; exact V7 terminal PID `10112`, its start time, chart attachment, EA, EX5, SET and runtime state remained unchanged
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -77,4 +84,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; NO_SUCCESSOR_RESEARCH_STREAM_OPEN`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; NO_SUCCESSOR_RESEARCH_STREAM_OPEN`

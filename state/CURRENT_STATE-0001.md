@@ -81,3 +81,10 @@
 - Closed B75 as `RC16_EXPLICIT_FROZEN_LIFE_HOLD_CONFIRMED`: after accepted fill and original catastrophic-stop ownership confirmation, retain the full accepted RC16 volume to the original catastrophic stop or fixed eight-M30 exit. This is a legacy evidence conclusion, not a new management right.
 - Recorded the machine-readable closure in `lab/evidence/RC16_FROZEN_LIFE_HOLD_CONFIRMATION_B75.json`, SHA-256 `C4FFF105C9918E3F81BD8936E09053034DC65338994EC1970484FD7541BBCAFC`. No new data, outcome calculation, latest period, tester or terminal run, source, EX5, SET, identity, Magic, state, deployment or Live change opened.
 - Exact V7 `NEXT-E01-V7-2db5ef5ead1c` remains the frozen sole Live owner. B75 is complete and no further Lab research is authorized without a new explicit user direction.
+
+## STATE-0012 - 2026-08-24
+
+- Added dashboard-only visibility for every strategy's frozen entry criterion and server evaluation window, latest evaluation slot, signal value and pass/fail state, candidate direction/price/volume/SL/planned risk, and current-position entry time/direction/volume/SL/risk.
+- The dashboard continues to read only the existing local V7 snapshot. Static criterion descriptions mirror the exact frozen V7 source for display only and are not consumed by the EA or any order path. PowerShell parsing completed with zero errors and the local `-Once` renderer showed all six strategy sections.
+- Restarted only the dashboard from PID `26868` to PID `24936` so the new view became active. V7 terminal PID `10112` and its start time remained unchanged; the EA stayed attached to the chart and no source, EX5, SET, state, order behavior or broker query changed.
+- Dashboard SHA-256 is `5A3FB8D552511B8D16663F1E74973E57D856AD85AC28A453C7C1795A7A4BF9D6`. B75 remains closed and no research stream opened.
