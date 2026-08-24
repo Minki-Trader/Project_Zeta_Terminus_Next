@@ -46,3 +46,9 @@
 - The tools verify the frozen hashes, Git `HEAD == origin/main`, release/Portfolio/Magic/state identity, local handoff receipt, one cached account and exclusive terminal ownership. They fail closed if legacy Terminus or another Next terminal/tester is running.
 - Performed only an offline read-only check. It recognized the frozen EX5 and correctly reported not ready because legacy PID `24324` remained active, runtime settings/snapshot did not exist and Live authorization was disabled. No Next terminal was started and no broker state was queried.
 - Connected entries-disabled save/restart, broker reconciliation and dashboard evidence remain blocked until the natural legacy flat handoff boundary permits the stopped account cache to be imported. Next Live remains `DISABLED`; legacy B70 V6R6 is unchanged.
+
+## STATE-0007 - 2026-08-24
+
+- The legacy project committed and pushed its natural flat verification at `964f710`, then stopped exact B70 V6R6 normally and committed the stopped-owner boundary at `4d04a00`. The final legacy event was `STOP normal` at server `2026.08.24 09:32:58`; persisted state sequence reached `846`. Positions, pending order, margin, planned risk, RC4 lifecycle/retry/shadow and decision journal were all zero at handoff. The final project-attributable realized net is `$4.33`.
+- Legacy Live authority is disabled and relevant legacy/Next terminal, tester and dashboard process count is zero. Next now records `Existing real-account owner: none` and enables only the connected V7 entries-disabled handoff preflight. V7 new entries and effective Next Live authority remain disabled.
+- The user explicitly instructed complete replacement by V7 through Live. Recorded that direction as received but pending the already-required entries-disabled save/restart evidence; it does not bypass the `0/0` boundary or authorize an order before that evidence passes and the effective authorization state is committed.
