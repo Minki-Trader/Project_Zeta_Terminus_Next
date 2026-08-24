@@ -2,7 +2,7 @@
 
 Project Zeta Terminus Next is the continuity successor to Project Zeta Terminus. It does not restart the research program: it inherits the frozen economic contracts, evidence boundaries, and executable lineage from legacy commit `4c0899255c701e2c6b53e7f44457c431aef2ad76` while replacing the oversized working surface with a concise lineage index and physically isolated Live-Dev and Lab lanes.
 
-`NEXT-E01/V7` is compiled, fixed-window real-tick equivalent to frozen B70 V6R6, and has passed connected entries-disabled save/restart evidence plus the final Master `0/0 → 1/1` handoff. Exact V7 is now the sole Live-Dev owner; the legacy runtime is stopped and disabled.
+`NEXT-E01/V7` is compiled, fixed-window real-tick equivalent to frozen B70 V6R6, and has passed connected entries-disabled save/restart evidence plus the final Master `0/0 → 1/1` handoff. Exact V7 is now the sole Live-Dev owner; the legacy runtime is stopped and its private GitHub repository is archived read-only.
 
 ## Start here
 

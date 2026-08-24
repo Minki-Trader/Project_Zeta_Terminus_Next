@@ -5,7 +5,7 @@
 - Repository: `https://github.com/Minki-Trader/Project_Zeta_Terminus.git`
 - Initial migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Anchor date: 2026-08-24 KST
-- Role: complete historical evidence and stopped former B70 V6R6 Live-Dev operator pending final archival after verified V7 handoff
+- Role: complete historical evidence and archived read-only former B70 V6R6 Live-Dev repository after verified V7 handoff
 
 The legacy repository is read-only to Next except for the explicit anchored paths in the machine lineage indexes. No adjacent local project may be used as a source.
 

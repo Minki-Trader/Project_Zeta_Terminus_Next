@@ -67,3 +67,9 @@
 - The Master then started exact V7 `1/1` Live PID `10112`. Handshake proved release `NEXT-E01-V7-2db5ef5ead1c`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`, terminal trading and entries `1/1`, connection/binding/identity `1/1/1`, balance/equity `$104.98/$104.98`, project realized net `$4.33`, stage balance `$104.33`, and positions/order/margin/planned risk `0/0/$0/$0`. Legacy exact terminal count was zero and Next exact terminal count was one.
 - The Korean five-second dashboard opened as sole PID `26868`. A subsequent bounded stabilization snapshot advanced state sequence `7 → 8` through server `2026.08.24 09:42:15` while retaining `1/1`, flat zero-risk state, all four ownership/safety fault flags zero and no alert or warning.
 - Classified `V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY`. The verified frozen V7 release is now the sole real-account owner; legacy must not restart. B75 `RC16 Explicit Frozen-Life HOLD Confirmation` returns as the next single research task but remains unopened at this handoff boundary.
+
+## STATE-0010 - 2026-08-24
+
+- Pushed Next final handoff commit `405aef63c7d46c16fb5c0157a91bf296094a9267` and annotated tag `next-live-v7-handoff-v1`. A repeated Master invocation recognized existing exact V7 PID `10112` and the sole dashboard, restored both windows and created no duplicate.
+- Pushed legacy final handoff commit `3bba815d9e67e45a87a032cf3da425c92242e150` and annotated tag `terminus-final-handoff-v1`, then archived the private GitHub repository `Minki-Trader/Project_Zeta_Terminus` read-only. The private Next repository remains active and unarchived; local legacy history and runtime evidence were not deleted.
+- Repository closeout changed no V7 source, EX5, SET, state, entry, management, ownership or risk behavior. Exact V7 remains the sole authorized Live owner and B75 remains the next unopened serial task.

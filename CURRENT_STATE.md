@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0009`
+- Latest state ID: `STATE-0010`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -56,6 +56,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Corrected the operator's single-account array handling before any Next terminal started; committed operator HEAD `1888432` passed both connected entries-disabled runs
 - Final Master handoff at Git `9ed684a`: exact `0/0` preflight PID `24488` passed and stopped, then exact V7 `1/1` PID `10112` passed release/Portfolio/Magic/account handshake; sole Korean dashboard PID `26868` opened
 - Bounded stabilization advanced state sequence `7 → 8` through server `2026.08.24 09:42:15` with entries `1/1`, positions/order/margin/risk `0/0/$0/$0`, balance/equity `$104.98/$104.98`, zero ownership/safety/persistence/broker/foreign fault, and no alert or warning
+- Final repository closeout: Next tag `next-live-v7-handoff-v1` points to completed handoff commit `405aef6`; legacy final commit/tag is `3bba815` / `terminus-final-handoff-v1`; private GitHub legacy repository is archived read-only while the private Next repository remains active
 
 ## Required completion evidence
 
@@ -68,4 +69,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_B70_STOPPED; B75_RESUMED_AS_NEXT_TASK`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RESUMED_AS_NEXT_TASK`
