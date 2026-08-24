@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "project_id": "project-zeta-terminus-next",
+  "release_id": "NEXT-E01-V7-2db5ef5ead1c",
+  "portfolio_id": "ZT-PORT-NEXT-V7-2db5ef5ead1c",
+  "execution_version": "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c",
+  "status": "lab_candidate_not_live_authorized",
+  "parent": {
+    "record_id": "B70/V6R6",
+    "legacy_commit": "4c0899255c701e2c6b53e7f44457c431aef2ad76",
+    "source_sha256": "7B98E33E093502DD1E582FA53260E06AD6BEA5820C74CDEEC691239F701446AA",
+    "ex5_sha256": "C5E569092B492F350A0B47DBF060A82293A302002F73A842FA52465BE2716E92"
+  },
+  "magic_numbers": [260824701, 260824702, 260824703, 260824704, 260824705, 260824706],
+  "canonical_identity": {
+    "file_count": 18,
+    "sha256": "2db5ef5ead1c68e6f596f78726adcc9d622ec4f58868451aec11a68a5748578e",
+    "suffix": "2db5ef5ead1c",
+    "method": "Sort every .mq5/.mqh under src plus the V7 SET and two tester INIs by lab/mt5-relative slash path; normalize line endings to LF; replace the property execution description and the values of EXECUTION_VERSION, RELEASE_ID, PORTFOLIO_ID, STATE_MARKER, state/event/snapshot paths and OWNERSHIP_PATH with named placeholders; concatenate FILE:<path>, normalized content and END_FILE records as UTF-8; SHA-256 the result."
+  },
+  "compiler": {
+    "mt5_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "result": "0 errors, 0 warnings"
+  },
+  "compiled_binary": {
+    "path": "src/Experts/ZetaNextPre500FiniteRiskPortfolioV7.ex5",
+    "sha256": "0A722406921F76259E4828D87915C2BA6F2F345A4059CC310EEC4BC446011B53"
+  },
+  "economic_settings": {
+    "set_byte_equal_to_b70": true,
+    "set_sha256": "BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8",
+    "binding_non_identity_ini_equal_to_b70": true,
+    "latest_non_identity_ini_equal_to_b70": true
+  },
+  "files": [
+    {"path":"config/tester/next-v7-modular.set","bytes":925,"sha256":"BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8"},
+    {"path":"config/tester/tester-next-v7-modular-binding.ini","bytes":537,"sha256":"ECA911335970C80D9A2A39DF1205D52C8FA49D6BB96A4CEC532B4E86A96C3F52"},
+    {"path":"config/tester/tester-next-v7-modular-latest.ini","bytes":539,"sha256":"5022069B098C61043FE36CE3CFEDEEF743656898E7C4CF76EB5EA01028A79024"},
+    {"path":"src/Experts/ZetaNextPre500FiniteRiskPortfolioV7.mq5","bytes":20125,"sha256":"D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1"},
+    {"path":"src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh","bytes":17983,"sha256":"CCFEF8A6F4059DA087D967105E6C59CEADF8ED93BF1E849A29DA11E33D2C5070"},
+    {"path":"src/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh","bytes":46577,"sha256":"D4BEECB0EBFE708665F9AF5A38B02984B20A78D24AF1AC35368A6F64F06E3457"},
+    {"path":"src/Include/ZetaTerminusNext/Execution/ZetaOwnership.mqh","bytes":10582,"sha256":"4805A5321BABA6BF806956DC293DCD2DB27C5C82A4C9C9EFD69680B697707A1C"},
+    {"path":"src/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh","bytes":31275,"sha256":"AF3BA67FF4EB15AE8F4B4C9C27203F81DE0A5886F83E6C920E26589EF1708EDF"},
+    {"path":"src/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh","bytes":73991,"sha256":"D2CDE70C414F788882ED16E37D9D363EA8E3DB51E52EFB22E49E7180A4E09BE4"},
+    {"path":"src/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh","bytes":20510,"sha256":"6AADF2FE0FAEAE0A4AA09E5482E0782B9C17DD377F9FBDE74729B27A6DF7FA1D"},
+    {"path":"src/Include/ZetaTerminusNext/Strategies/ZetaCross.mqh","bytes":3371,"sha256":"A39059CAC9BBD4C509349706713A16653F5CA7B0332D8AFFB41EFEB9A8A17F87"},
+    {"path":"src/Include/ZetaTerminusNext/Strategies/ZetaPassive.mqh","bytes":20682,"sha256":"E15F2CE699EC1615AB2F5DA170EEDB75D71E3AB4C4FC4BF655996AB382632B6C"},
+    {"path":"src/Include/ZetaTerminusNext/Strategies/ZetaPressure.mqh","bytes":3694,"sha256":"62A0AB60DD5D9D18085F704E005C3C3A8F8F889EA13AB02050EB42D690867240"},
+    {"path":"src/Include/ZetaTerminusNext/Strategies/ZetaRC16.mqh","bytes":1223,"sha256":"FBB9F23614B11D3F2520B52DBFD132A43CBB05EB6D554D826462DD23DD066569"},
+    {"path":"src/Include/ZetaTerminusNext/Strategies/ZetaRC4.mqh","bytes":70889,"sha256":"911EE54F890122E4F039B0528E31ACB01AC1B7448EDEC43AEEDA5F7E41E9EAF6"},
+    {"path":"src/Include/ZetaTerminusNext/Strategies/ZetaReturn.mqh","bytes":3059,"sha256":"EEC0D3E872B99A6B839870DA7448361CFDC061EB91DD802F442829603A3D3040"},
+    {"path":"src/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh","bytes":5221,"sha256":"2067AFE397A18473ED01D95C51ED30A13A2B44EA9AD2D2BC4F27974CE370A363"},
+    {"path":"src/Include/ZetaTerminusNext/Time/ZetaSessionClock.mqh","bytes":9451,"sha256":"7D7267CDE4399F875C9AB43F2D2865AF220A561C16F6BEB8422C295537FDC763"}
+  ]
+}
