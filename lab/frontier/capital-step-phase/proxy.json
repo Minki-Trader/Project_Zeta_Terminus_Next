@@ -1,0 +1,3062 @@
+{
+  "architecture": {
+    "measurement": "reuse_current_next_lab_real_tick_event_paths",
+    "proxy": "daily_phase_reconstruction_plus_hypothesis_family_policy_probe",
+    "runtime": "deferred_until_a_small_rule_survives_temporal_slices"
+  },
+  "asynchronous_2x_windows": {
+    "market_only_loser_residual": {
+      "balance_delta_at_start": 6.931,
+      "balance_delta_before_baseline_step": 11.7795,
+      "baseline": {
+        "actual_net": 16.85,
+        "by_component": {
+          "CROSS": {
+            "entries": 6,
+            "stressed_net": 3.4285
+          },
+          "PASSIVE": {
+            "entries": 4,
+            "stressed_net": 0.966
+          },
+          "PRESSURE": {
+            "entries": 2,
+            "stressed_net": 6.232
+          },
+          "RC16": {
+            "entries": 2,
+            "stressed_net": 1.482
+          },
+          "RC4": {
+            "entries": 1,
+            "stressed_net": 5.846
+          },
+          "RETURN": {
+            "entries": 2,
+            "stressed_net": -1.308
+          }
+        },
+        "entries": 17,
+        "market_entries": 13,
+        "passive_entries": 4,
+        "stressed_drawdown": 1.338,
+        "stressed_net": 16.6465
+      },
+      "calendar_days": 11,
+      "candidate": {
+        "actual_net": 32.69,
+        "by_component": {
+          "CROSS": {
+            "entries": 6,
+            "stressed_net": 6.857
+          },
+          "PASSIVE": {
+            "entries": 4,
+            "stressed_net": 0.966
+          },
+          "PRESSURE": {
+            "entries": 2,
+            "stressed_net": 12.464
+          },
+          "RC16": {
+            "entries": 2,
+            "stressed_net": 2.964
+          },
+          "RC4": {
+            "entries": 1,
+            "stressed_net": 11.692
+          },
+          "RETURN": {
+            "entries": 2,
+            "stressed_net": -2.636
+          }
+        },
+        "entries": 17,
+        "market_entries": 13,
+        "passive_entries": 4,
+        "stressed_drawdown": 2.686,
+        "stressed_net": 32.307
+      },
+      "candidate_sizing_days_at_2x_while_baseline_1x": 7,
+      "end_exclusive": "2026.02.03 01:01:02",
+      "limit": "The paths already carry different prior balances and stops; this window is descriptive, not a paired counterfactual.",
+      "start": "2026.01.23 01:01:00"
+    },
+    "market_only_receiver_wounded": {
+      "balance_delta_at_start": 3.6145,
+      "balance_delta_before_baseline_step": 4.467,
+      "baseline": {
+        "actual_net": 12.76,
+        "by_component": {
+          "CROSS": {
+            "entries": 4,
+            "stressed_net": 2.1905
+          },
+          "PASSIVE": {
+            "entries": 4,
+            "stressed_net": 0.966
+          },
+          "PRESSURE": {
+            "entries": 1,
+            "stressed_net": 4.966
+          },
+          "RC16": {
+            "entries": 1,
+            "stressed_net": -0.344
+          },
+          "RC4": {
+            "entries": 1,
+            "stressed_net": 5.846
+          },
+          "RETURN": {
+            "entries": 1,
+            "stressed_net": -0.994
+          }
+        },
+        "entries": 12,
+        "market_entries": 8,
+        "passive_entries": 4,
+        "stressed_drawdown": 1.338,
+        "stressed_net": 12.6305
+      },
+      "calendar_days": 7,
+      "candidate": {
+        "actual_net": 24.53,
+        "by_component": {
+          "CROSS": {
+            "entries": 4,
+            "stressed_net": 4.391
+          },
+          "PASSIVE": {
+            "entries": 4,
+            "stressed_net": 0.966
+          },
+          "PRESSURE": {
+            "entries": 1,
+            "stressed_net": 9.932
+          },
+          "RC16": {
+            "entries": 1,
+            "stressed_net": -0.688
+          },
+          "RC4": {
+            "entries": 1,
+            "stressed_net": 11.692
+          },
+          "RETURN": {
+            "entries": 1,
+            "stressed_net": -1.998
+          }
+        },
+        "entries": 12,
+        "market_entries": 8,
+        "passive_entries": 4,
+        "stressed_drawdown": 2.686,
+        "stressed_net": 24.295
+      },
+      "candidate_sizing_days_at_2x_while_baseline_1x": 5,
+      "end_exclusive": "2026.02.03 01:01:02",
+      "limit": "The paths already carry different prior balances and stops; this window is descriptive, not a paired counterfactual.",
+      "start": "2026.01.27 01:01:00"
+    }
+  },
+  "constants": {
+    "addition_step_usd": 150.0,
+    "base_market_volume": 0.01,
+    "reference_capital_usd": 100.0
+  },
+  "exchange_phase_gates": [
+    {
+      "admitted": 15,
+      "admitted_bounded_delta": 10.714,
+      "blocked": 0,
+      "blocked_bounded_delta": 0,
+      "gate": "all_matched",
+      "matched_observations": 15
+    },
+    {
+      "admitted": 15,
+      "admitted_bounded_delta": 10.714,
+      "blocked": 0,
+      "blocked_bounded_delta": 0,
+      "gate": "quarantine_first_5_step_days",
+      "matched_observations": 15
+    },
+    {
+      "admitted": 14,
+      "admitted_bounded_delta": 12.266,
+      "blocked": 1,
+      "blocked_bounded_delta": -1.552,
+      "gate": "quarantine_first_10_step_days",
+      "matched_observations": 15
+    },
+    {
+      "admitted": 15,
+      "admitted_bounded_delta": 10.714,
+      "blocked": 0,
+      "blocked_bounded_delta": 0,
+      "gate": "upper_step_requires_10_buffer",
+      "matched_observations": 15
+    },
+    {
+      "admitted": 15,
+      "admitted_bounded_delta": 10.714,
+      "blocked": 0,
+      "blocked_bounded_delta": 0,
+      "gate": "upper_step_requires_recent_drawdown_cover",
+      "matched_observations": 15
+    }
+  ],
+  "exchange_phase_references": [
+    {
+      "baseline_keep_stressed": -1.924,
+      "bounded_exchange_delta": 0.118,
+      "candidate": "CROSS",
+      "candidate_stressed": -1.162,
+      "days_since_upstep": null,
+      "distance_to_next": 152.928,
+      "floor_buffer": -2.928,
+      "forced_incumbent_stressed": -0.644,
+      "incumbent": "PASSIVE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "below_active_floor",
+      "recent_20_close_drawdown": 5.382,
+      "run": "market_only_receiver_wounded",
+      "server_time": "2025.01.10 17:00:00",
+      "velocity_5": 2.454
+    },
+    {
+      "baseline_keep_stressed": -1.104,
+      "bounded_exchange_delta": -1.632,
+      "candidate": "CROSS",
+      "candidate_stressed": -1.182,
+      "days_since_upstep": null,
+      "distance_to_next": 151.534,
+      "floor_buffer": -1.534,
+      "forced_incumbent_stressed": -1.554,
+      "incumbent": "RC16",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "below_active_floor",
+      "recent_20_close_drawdown": 9.636,
+      "run": "market_only_receiver_wounded",
+      "server_time": "2025.01.31 17:00:00",
+      "velocity_5": -4.524
+    },
+    {
+      "baseline_keep_stressed": -2.514,
+      "bounded_exchange_delta": 2.006,
+      "candidate": "CROSS",
+      "candidate_stressed": 1.266,
+      "days_since_upstep": null,
+      "distance_to_next": 130.766,
+      "floor_buffer": 19.234,
+      "forced_incumbent_stressed": -1.774,
+      "incumbent": "RC4",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 8.674,
+      "run": "market_only_receiver_wounded",
+      "server_time": "2025.03.11 17:00:00",
+      "velocity_5": 3.424
+    },
+    {
+      "baseline_keep_stressed": -3.244,
+      "bounded_exchange_delta": 5.086,
+      "candidate": "RETURN",
+      "candidate_stressed": 2.036,
+      "days_since_upstep": null,
+      "distance_to_next": 91.669,
+      "floor_buffer": 58.331,
+      "forced_incumbent_stressed": -0.194,
+      "incumbent": "PRESSURE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 7.922,
+      "run": "market_only_receiver_wounded",
+      "server_time": "2025.05.23 16:00:00",
+      "velocity_5": -0.302
+    },
+    {
+      "baseline_keep_stressed": -3.655,
+      "bounded_exchange_delta": 0.865,
+      "candidate": "CROSS",
+      "candidate_stressed": -0.102,
+      "days_since_upstep": null,
+      "distance_to_next": 65.58,
+      "floor_buffer": 84.42,
+      "forced_incumbent_stressed": -2.688,
+      "incumbent": "RC16",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 4.168,
+      "run": "market_only_receiver_wounded",
+      "server_time": "2025.11.03 17:00:00",
+      "velocity_5": 5.26
+    },
+    {
+      "baseline_keep_stressed": -1.254,
+      "bounded_exchange_delta": -2.054,
+      "candidate": "RETURN",
+      "candidate_stressed": -1.944,
+      "days_since_upstep": null,
+      "distance_to_next": 149.974,
+      "floor_buffer": 0.026,
+      "forced_incumbent_stressed": -1.364,
+      "incumbent": "PRESSURE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 5.382,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.01.08 16:00:00",
+      "velocity_5": 0.026
+    },
+    {
+      "baseline_keep_stressed": -1.924,
+      "bounded_exchange_delta": 0.118,
+      "candidate": "CROSS",
+      "candidate_stressed": -1.162,
+      "days_since_upstep": null,
+      "distance_to_next": 154.982,
+      "floor_buffer": -4.982,
+      "forced_incumbent_stressed": -0.644,
+      "incumbent": "PASSIVE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "below_active_floor",
+      "recent_20_close_drawdown": 5.382,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.01.10 17:00:00",
+      "velocity_5": 0.4
+    },
+    {
+      "baseline_keep_stressed": -1.824,
+      "bounded_exchange_delta": 0.758,
+      "candidate": "CROSS",
+      "candidate_stressed": -0.192,
+      "days_since_upstep": null,
+      "distance_to_next": 161.404,
+      "floor_buffer": -11.404,
+      "forced_incumbent_stressed": -0.874,
+      "incumbent": "RC4",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "below_active_floor",
+      "recent_20_close_drawdown": 11.43,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.01.14 17:00:00",
+      "velocity_5": -8.666
+    },
+    {
+      "baseline_keep_stressed": -1.984,
+      "bounded_exchange_delta": -0.612,
+      "candidate": "CROSS",
+      "candidate_stressed": -1.182,
+      "days_since_upstep": null,
+      "distance_to_next": 152.72,
+      "floor_buffer": -2.72,
+      "forced_incumbent_stressed": -1.414,
+      "incumbent": "RC4",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "below_active_floor",
+      "recent_20_close_drawdown": 9.566,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.01.31 17:00:00",
+      "velocity_5": -4.454
+    },
+    {
+      "baseline_keep_stressed": -2.104,
+      "bounded_exchange_delta": 1.978,
+      "candidate": "CROSS",
+      "candidate_stressed": 0.838,
+      "days_since_upstep": null,
+      "distance_to_next": 147.498,
+      "floor_buffer": 2.502,
+      "forced_incumbent_stressed": -0.964,
+      "incumbent": "PRESSURE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 4.044,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.02.10 17:00:00",
+      "velocity_5": 8.922
+    },
+    {
+      "baseline_keep_stressed": -0.044,
+      "bounded_exchange_delta": -2.712,
+      "candidate": "CROSS",
+      "candidate_stressed": -2.412,
+      "days_since_upstep": null,
+      "distance_to_next": 127.568,
+      "floor_buffer": 22.432,
+      "forced_incumbent_stressed": -0.344,
+      "incumbent": "PRESSURE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 3.194,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.03.05 17:00:00",
+      "velocity_5": 6.628
+    },
+    {
+      "baseline_keep_stressed": -2.514,
+      "bounded_exchange_delta": 2.396,
+      "candidate": "CROSS",
+      "candidate_stressed": 1.266,
+      "days_since_upstep": null,
+      "distance_to_next": 127.536,
+      "floor_buffer": 22.464,
+      "forced_incumbent_stressed": -1.384,
+      "incumbent": "PRESSURE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 8.904,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.03.11 17:00:00",
+      "velocity_5": 0.232
+    },
+    {
+      "baseline_keep_stressed": -3.244,
+      "bounded_exchange_delta": 5.086,
+      "candidate": "RETURN",
+      "candidate_stressed": 2.036,
+      "days_since_upstep": null,
+      "distance_to_next": 89.4125,
+      "floor_buffer": 60.5875,
+      "forced_incumbent_stressed": -0.194,
+      "incumbent": "PRESSURE",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 8.0555,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.05.23 16:00:00",
+      "velocity_5": -0.342
+    },
+    {
+      "baseline_keep_stressed": -3.655,
+      "bounded_exchange_delta": 0.865,
+      "candidate": "CROSS",
+      "candidate_stressed": -0.102,
+      "days_since_upstep": null,
+      "distance_to_next": 63.8935,
+      "floor_buffer": 86.1065,
+      "forced_incumbent_stressed": -2.688,
+      "incumbent": "RC16",
+      "matched_incumbent_identity": true,
+      "multiplier": 1,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 4.218,
+      "run": "market_only_loser_residual",
+      "server_time": "2025.11.03 17:00:00",
+      "velocity_5": 5.26
+    },
+    {
+      "baseline_keep_stressed": -1.086,
+      "bounded_exchange_delta": -1.552,
+      "candidate": "CROSS",
+      "candidate_stressed": -1.412,
+      "days_since_upstep": 9,
+      "distance_to_next": 101.6275,
+      "floor_buffer": 48.3725,
+      "forced_incumbent_stressed": -1.226,
+      "incumbent": "PASSIVE",
+      "matched_incumbent_identity": true,
+      "multiplier": 2,
+      "phase": "step_interior",
+      "recent_20_close_drawdown": 2.686,
+      "run": "market_only_loser_residual",
+      "server_time": "2026.02.05 17:00:00",
+      "velocity_5": 40.076
+    }
+  ],
+  "observations": {
+    "causal_state": "At each sizing day, floor buffer, next-step distance, trailing balance velocity, and recent closed-trade drawdown are all knowable before new entries.",
+    "discontinuity": "The lot rule is a state transition, not a smooth scale: volume changes alter stop distance and can alter exit identity, so the proxy deliberately does not claim counterfactual parity.",
+    "entry_constraint": "Every policy probe changes only the proposed daily market-volume multiplier; the observed opportunity count is held constant in the proxy."
+  },
+  "paths": {
+    "baseline_receiver_time_field": {
+      "downsteps": 0,
+      "entries": 913,
+      "multiplier_days": {
+        "1": 281,
+        "2": 144
+      },
+      "observed_stressed_drawdown": 50.732,
+      "observed_stressed_net": 249.112,
+      "phase_days": {
+        "below_active_floor": 15,
+        "fresh_step_shallow": 8,
+        "next_step_approach": 3,
+        "next_step_edge": 5,
+        "next_step_near": 22,
+        "step_interior": 372
+      },
+      "sizing_days": 425,
+      "transitions": [
+        {
+          "balance": 260.117,
+          "direction": "up",
+          "floor_buffer": 10.117,
+          "from_multiplier": 1,
+          "next_five_sizing_days": {
+            "actual_net": 13.58,
+            "by_component": {
+              "CROSS": {
+                "entries": 4,
+                "stressed_net": 11.721
+              },
+              "PASSIVE": {
+                "entries": 2,
+                "stressed_net": -1.532
+              },
+              "PRESSURE": {
+                "entries": 1,
+                "stressed_net": 14.826
+              },
+              "RC16": {
+                "entries": 2,
+                "stressed_net": -1.156
+              },
+              "RC4": {
+                "entries": 1,
+                "stressed_net": -5.248
+              },
+              "RETURN": {
+                "entries": 1,
+                "stressed_net": -5.478
+              }
+            },
+            "entries": 11,
+            "market_entries": 9,
+            "passive_entries": 2,
+            "stressed_drawdown": 12.648,
+            "stressed_net": 13.133
+          },
+          "recent_20_close_drawdown": 1.338,
+          "server_time": "2026.02.03 01:01:02",
+          "to_multiplier": 2,
+          "velocity_5": 12.6305
+        }
+      ],
+      "upsteps": 1
+    },
+    "market_only_loser_residual": {
+      "downsteps": 2,
+      "entries": 923,
+      "multiplier_days": {
+        "1": 274,
+        "2": 149,
+        "3": 2
+      },
+      "observed_stressed_drawdown": 55.58,
+      "observed_stressed_net": 269.5945,
+      "phase_days": {
+        "below_active_floor": 18,
+        "fresh_step_shallow": 9,
+        "next_step_approach": 21,
+        "next_step_edge": 6,
+        "next_step_near": 33,
+        "step_interior": 338
+      },
+      "sizing_days": 425,
+      "transitions": [
+        {
+          "balance": 250.4015,
+          "direction": "up",
+          "floor_buffer": 0.4015,
+          "from_multiplier": 1,
+          "next_five_sizing_days": {
+            "actual_net": 9.09,
+            "by_component": {
+              "CROSS": {
+                "entries": 5,
+                "stressed_net": 5.169
+              },
+              "PASSIVE": {
+                "entries": 2,
+                "stressed_net": 0.758
+              },
+              "PRESSURE": {
+                "entries": 1,
+                "stressed_net": 2.532
+              },
+              "RC16": {
+                "entries": 2,
+                "stressed_net": 2.964
+              },
+              "RC4": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RETURN": {
+                "entries": 2,
+                "stressed_net": -2.636
+              }
+            },
+            "entries": 12,
+            "market_entries": 10,
+            "passive_entries": 2,
+            "stressed_drawdown": 2.686,
+            "stressed_net": 8.787
+          },
+          "recent_20_close_drawdown": 2.091,
+          "server_time": "2026.01.23 01:01:00",
+          "to_multiplier": 2,
+          "velocity_5": 9.917
+        },
+        {
+          "balance": 400.9475,
+          "direction": "up",
+          "floor_buffer": 0.9475,
+          "from_multiplier": 2,
+          "next_five_sizing_days": {
+            "actual_net": -1.82,
+            "by_component": {
+              "CROSS": {
+                "entries": 5,
+                "stressed_net": -2.237
+              },
+              "PASSIVE": {
+                "entries": 1,
+                "stressed_net": -0.001
+              },
+              "PRESSURE": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RC16": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RC4": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RETURN": {
+                "entries": 0,
+                "stressed_net": 0
+              }
+            },
+            "entries": 6,
+            "market_entries": 5,
+            "passive_entries": 1,
+            "stressed_drawdown": 8.511,
+            "stressed_net": -2.238
+          },
+          "recent_20_close_drawdown": 9.97,
+          "server_time": "2026.07.09 01:00:00",
+          "to_multiplier": 3,
+          "velocity_5": 11.055
+        },
+        {
+          "balance": 392.4365,
+          "direction": "down",
+          "floor_buffer": 142.4365,
+          "from_multiplier": 3,
+          "next_five_sizing_days": {
+            "actual_net": 8.74,
+            "by_component": {
+              "CROSS": {
+                "entries": 5,
+                "stressed_net": 8.192
+              },
+              "PASSIVE": {
+                "entries": 3,
+                "stressed_net": 0.44
+              },
+              "PRESSURE": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RC16": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RC4": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RETURN": {
+                "entries": 0,
+                "stressed_net": 0
+              }
+            },
+            "entries": 8,
+            "market_entries": 5,
+            "passive_entries": 3,
+            "stressed_drawdown": 1.677,
+            "stressed_net": 8.632
+          },
+          "recent_20_close_drawdown": 9.97,
+          "server_time": "2026.07.10 01:00:00",
+          "to_multiplier": 2,
+          "velocity_5": 0.178
+        },
+        {
+          "balance": 401.0685,
+          "direction": "up",
+          "floor_buffer": 1.0685,
+          "from_multiplier": 2,
+          "next_five_sizing_days": {
+            "actual_net": -21.85,
+            "by_component": {
+              "CROSS": {
+                "entries": 2,
+                "stressed_net": -8.705
+              },
+              "PASSIVE": {
+                "entries": 2,
+                "stressed_net": -2.049
+              },
+              "PRESSURE": {
+                "entries": 2,
+                "stressed_net": -2.802
+              },
+              "RC16": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RC4": {
+                "entries": 2,
+                "stressed_net": -7.712
+              },
+              "RETURN": {
+                "entries": 1,
+                "stressed_net": -0.834
+              }
+            },
+            "entries": 9,
+            "market_entries": 7,
+            "passive_entries": 2,
+            "stressed_drawdown": 23.689,
+            "stressed_net": -22.102
+          },
+          "recent_20_close_drawdown": 8.853,
+          "server_time": "2026.07.17 01:00:00",
+          "to_multiplier": 3,
+          "velocity_5": 8.632
+        },
+        {
+          "balance": 393.0055,
+          "direction": "down",
+          "floor_buffer": 143.0055,
+          "from_multiplier": 3,
+          "next_five_sizing_days": {
+            "actual_net": -15.6,
+            "by_component": {
+              "CROSS": {
+                "entries": 2,
+                "stressed_net": -3.584
+              },
+              "PASSIVE": {
+                "entries": 2,
+                "stressed_net": -2.049
+              },
+              "PRESSURE": {
+                "entries": 2,
+                "stressed_net": -2.802
+              },
+              "RC16": {
+                "entries": 0,
+                "stressed_net": 0
+              },
+              "RC4": {
+                "entries": 2,
+                "stressed_net": -7.712
+              },
+              "RETURN": {
+                "entries": 2,
+                "stressed_net": 0.252
+              }
+            },
+            "entries": 10,
+            "market_entries": 8,
+            "passive_entries": 2,
+            "stressed_drawdown": 16.981,
+            "stressed_net": -15.895
+          },
+          "recent_20_close_drawdown": 8.853,
+          "server_time": "2026.07.20 01:00:01",
+          "to_multiplier": 2,
+          "velocity_5": -1.729
+        }
+      ],
+      "upsteps": 3
+    },
+    "market_only_receiver_wounded": {
+      "downsteps": 0,
+      "entries": 919,
+      "multiplier_days": {
+        "1": 276,
+        "2": 149
+      },
+      "observed_stressed_drawdown": 51.682,
+      "observed_stressed_net": 263.862,
+      "phase_days": {
+        "below_active_floor": 15,
+        "fresh_step_shallow": 8,
+        "next_step_approach": 11,
+        "next_step_edge": 2,
+        "next_step_near": 36,
+        "step_interior": 353
+      },
+      "sizing_days": 425,
+      "transitions": [
+        {
+          "balance": 251.101,
+          "direction": "up",
+          "floor_buffer": 1.101,
+          "from_multiplier": 1,
+          "next_five_sizing_days": {
+            "actual_net": 24.53,
+            "by_component": {
+              "CROSS": {
+                "entries": 4,
+                "stressed_net": 4.391
+              },
+              "PASSIVE": {
+                "entries": 4,
+                "stressed_net": 0.966
+              },
+              "PRESSURE": {
+                "entries": 1,
+                "stressed_net": 9.932
+              },
+              "RC16": {
+                "entries": 1,
+                "stressed_net": -0.688
+              },
+              "RC4": {
+                "entries": 1,
+                "stressed_net": 11.692
+              },
+              "RETURN": {
+                "entries": 1,
+                "stressed_net": -1.998
+              }
+            },
+            "entries": 12,
+            "market_entries": 8,
+            "passive_entries": 4,
+            "stressed_drawdown": 2.686,
+            "stressed_net": 24.295
+          },
+          "recent_20_close_drawdown": 2.091,
+          "server_time": "2026.01.27 01:01:00",
+          "to_multiplier": 2,
+          "velocity_5": 14.803
+        }
+      ],
+      "upsteps": 1
+    }
+  },
+  "policy_search": {
+    "anchor": {
+      "aggregate": {
+        "drawdown_reduction": 0.0,
+        "first_order_net_delta": 0.0,
+        "score": 0.0,
+        "transition_reduction": 0,
+        "worst_path_drawdown_increase": 0.0,
+        "worst_temporal_slice_delta": 0.0
+      },
+      "paths": {
+        "baseline_receiver_time_field": {
+          "entries": 913,
+          "first_order_adjusted_drawdown": 50.732,
+          "first_order_adjusted_stressed_net": 249.112,
+          "first_order_drawdown_delta": 0.0,
+          "first_order_net_delta": 0.0,
+          "first_proposed_2x": "2026.02.03 01:01:02",
+          "first_proposed_3x": null,
+          "observed_stressed_drawdown": 50.732,
+          "observed_stressed_net": 249.112,
+          "proposed_2x_days": 144,
+          "proposed_3x_days": 0,
+          "proposed_transition_count": 1,
+          "suppressed_market_entries": 0,
+          "temporal_slices": {
+            "2025": {
+              "entries": 554,
+              "first_order_adjusted_stressed_net": 122.7435,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": 122.7435
+            },
+            "2026_h1": {
+              "entries": 283,
+              "first_order_adjusted_stressed_net": 132.8305,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": 132.8305
+            },
+            "2026_h2": {
+              "entries": 76,
+              "first_order_adjusted_stressed_net": -6.462,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": -6.462
+            }
+          }
+        },
+        "market_only_loser_residual": {
+          "entries": 923,
+          "first_order_adjusted_drawdown": 55.58,
+          "first_order_adjusted_stressed_net": 269.5945,
+          "first_order_drawdown_delta": 0.0,
+          "first_order_net_delta": 0.0,
+          "first_proposed_2x": "2026.01.23 01:01:00",
+          "first_proposed_3x": "2026.07.09 01:00:00",
+          "observed_stressed_drawdown": 55.58,
+          "observed_stressed_net": 269.5945,
+          "proposed_2x_days": 151,
+          "proposed_3x_days": 2,
+          "proposed_transition_count": 5,
+          "suppressed_market_entries": 0,
+          "temporal_slices": {
+            "2025": {
+              "entries": 564,
+              "first_order_adjusted_stressed_net": 129.8245,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": 129.8245
+            },
+            "2026_h1": {
+              "entries": 283,
+              "first_order_adjusted_stressed_net": 160.068,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": 160.068
+            },
+            "2026_h2": {
+              "entries": 76,
+              "first_order_adjusted_stressed_net": -20.298,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": -20.298
+            }
+          }
+        },
+        "market_only_receiver_wounded": {
+          "entries": 919,
+          "first_order_adjusted_drawdown": 51.682,
+          "first_order_adjusted_stressed_net": 263.862,
+          "first_order_drawdown_delta": 0.0,
+          "first_order_net_delta": 0.0,
+          "first_proposed_2x": "2026.01.27 01:01:00",
+          "first_proposed_3x": null,
+          "observed_stressed_drawdown": 51.682,
+          "observed_stressed_net": 263.862,
+          "proposed_2x_days": 149,
+          "proposed_3x_days": 0,
+          "proposed_transition_count": 1,
+          "suppressed_market_entries": 0,
+          "temporal_slices": {
+            "2025": {
+              "entries": 560,
+              "first_order_adjusted_stressed_net": 126.428,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": 126.428
+            },
+            "2026_h1": {
+              "entries": 283,
+              "first_order_adjusted_stressed_net": 144.846,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": 144.846
+            },
+            "2026_h2": {
+              "entries": 76,
+              "first_order_adjusted_stressed_net": -7.412,
+              "first_order_delta": 0.0,
+              "observed_stressed_net": -7.412
+            }
+          }
+        }
+      },
+      "policy": {
+        "base_buffer": 0.0,
+        "confirm_days": 1,
+        "downside_multiple": 0.0,
+        "family": "observed_anchor",
+        "minimum_velocity": 0.0,
+        "policy_id": "phase-000",
+        "velocity_lookback": 0
+      }
+    },
+    "hypotheses": 63,
+    "proxy_limit": "Adjusted PnL scales observed stressed outcomes by the proposed market-volume ratio. Real stops, admissions, and exits mutate with sizing, so only a real-tick EA run can judge a candidate.",
+    "survivors": 8,
+    "top_survivors": [
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 5.204667,
+          "score": 8.2227,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -0.32
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 249.112,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.0,
+            "first_proposed_2x": "2026.02.03 01:01:02",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 144,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 0,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 132.8305,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 263.862,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.0,
+            "first_proposed_2x": "2026.01.27 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 149,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 0,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 144.846,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 1,
+          "downside_multiple": 0.25,
+          "family": "recent_downside_escrow",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-039",
+          "velocity_lookback": 0
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "persistence_confirmation",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-001",
+          "velocity_lookback": 0
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-027",
+          "velocity_lookback": 3
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 2.5,
+          "policy_id": "phase-028",
+          "velocity_lookback": 3
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-029",
+          "velocity_lookback": 5
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 2.5,
+          "policy_id": "phase-030",
+          "velocity_lookback": 5
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-031",
+          "velocity_lookback": 10
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 2.5,
+          "policy_id": "phase-032",
+          "velocity_lookback": 10
+        }
+      }
+    ],
+    "top_unconstrained": [
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 5.204667,
+          "score": 8.2227,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -0.32
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 249.112,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.0,
+            "first_proposed_2x": "2026.02.03 01:01:02",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 144,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 0,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 132.8305,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 263.862,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.0,
+            "first_proposed_2x": "2026.01.27 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 149,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 0,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 144.846,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 1,
+          "downside_multiple": 0.25,
+          "family": "recent_downside_escrow",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-039",
+          "velocity_lookback": 0
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "persistence_confirmation",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-001",
+          "velocity_lookback": 0
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-027",
+          "velocity_lookback": 3
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 2.5,
+          "policy_id": "phase-028",
+          "velocity_lookback": 3
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-029",
+          "velocity_lookback": 5
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 2.5,
+          "policy_id": "phase-030",
+          "velocity_lookback": 5
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 0.0,
+          "policy_id": "phase-031",
+          "velocity_lookback": 10
+        }
+      },
+      {
+        "aggregate": {
+          "drawdown_reduction": 2.908667,
+          "first_order_net_delta": 4.719667,
+          "score": 7.7377,
+          "transition_reduction": 4,
+          "worst_path_drawdown_increase": 0.0,
+          "worst_temporal_slice_delta": -1.145
+        },
+        "paths": {
+          "baseline_receiver_time_field": {
+            "entries": 913,
+            "first_order_adjusted_drawdown": 50.732,
+            "first_order_adjusted_stressed_net": 247.967,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": -1.145,
+            "first_proposed_2x": "2026.02.04 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 50.732,
+            "observed_stressed_net": 249.112,
+            "proposed_2x_days": 143,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 554,
+                "first_order_adjusted_stressed_net": 122.7435,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 122.7435
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 131.6855,
+                "first_order_delta": -1.145,
+                "observed_stressed_net": 132.8305
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -6.462,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -6.462
+              }
+            }
+          },
+          "market_only_loser_residual": {
+            "entries": 923,
+            "first_order_adjusted_drawdown": 52.671333,
+            "first_order_adjusted_stressed_net": 274.799167,
+            "first_order_drawdown_delta": -2.908667,
+            "first_order_net_delta": 5.204667,
+            "first_proposed_2x": "2026.01.26 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 55.58,
+            "observed_stressed_net": 269.5945,
+            "proposed_2x_days": 150,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 4,
+            "temporal_slices": {
+              "2025": {
+                "entries": 564,
+                "first_order_adjusted_stressed_net": 129.8245,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 129.8245
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 159.748,
+                "first_order_delta": -0.32,
+                "observed_stressed_net": 160.068
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -14.773333,
+                "first_order_delta": 5.524667,
+                "observed_stressed_net": -20.298
+              }
+            }
+          },
+          "market_only_receiver_wounded": {
+            "entries": 919,
+            "first_order_adjusted_drawdown": 51.682,
+            "first_order_adjusted_stressed_net": 264.522,
+            "first_order_drawdown_delta": 0.0,
+            "first_order_net_delta": 0.66,
+            "first_proposed_2x": "2026.01.28 01:01:00",
+            "first_proposed_3x": null,
+            "observed_stressed_drawdown": 51.682,
+            "observed_stressed_net": 263.862,
+            "proposed_2x_days": 148,
+            "proposed_3x_days": 0,
+            "proposed_transition_count": 1,
+            "suppressed_market_entries": 2,
+            "temporal_slices": {
+              "2025": {
+                "entries": 560,
+                "first_order_adjusted_stressed_net": 126.428,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": 126.428
+              },
+              "2026_h1": {
+                "entries": 283,
+                "first_order_adjusted_stressed_net": 145.506,
+                "first_order_delta": 0.66,
+                "observed_stressed_net": 144.846
+              },
+              "2026_h2": {
+                "entries": 76,
+                "first_order_adjusted_stressed_net": -7.412,
+                "first_order_delta": 0.0,
+                "observed_stressed_net": -7.412
+              }
+            }
+          }
+        },
+        "policy": {
+          "base_buffer": 0.0,
+          "confirm_days": 2,
+          "downside_multiple": 0.0,
+          "family": "positive_approach_velocity",
+          "minimum_velocity": 2.5,
+          "policy_id": "phase-032",
+          "velocity_lookback": 10
+        }
+      }
+    ]
+  },
+  "question": "Can distance to a discrete lot step become a causal portfolio phase state without reducing entry count?",
+  "sources": {
+    "event_paths": {
+      "baseline_receiver_time_field": [
+        {
+          "bytes": 1575480,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-baseline-receiver-time-field-v1-events-a.csv",
+          "sha256": "7350ba22a778e42d5792c6a6a4207d69a4097796c6c9f8f31674100af80c0800"
+        },
+        {
+          "bytes": 1051749,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-baseline-receiver-time-field-v1-events-b.csv",
+          "sha256": "c6aa4fcc0a1a685b8f74216cda2fc2c4d70e3f2df96f32385f53bb09404a5ca7"
+        }
+      ],
+      "market_only_loser_residual": [
+        {
+          "bytes": 1643229,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-loser-residual-slot-shadow-exchange-v1-events-a.csv",
+          "sha256": "e1253293327569cf9f3ac293763b5e1f4ce259e1d6eaea99265ac2f51c36a0f5"
+        },
+        {
+          "bytes": 1108148,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-loser-residual-slot-shadow-exchange-v1-events-b.csv",
+          "sha256": "8f164fd5ed79f23e39824f9da06e25ba7f34860617b9b14bac5250d5e3531e5a"
+        }
+      ],
+      "market_only_receiver_wounded": [
+        {
+          "bytes": 1621398,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-receiver-wounded-slot-shadow-exchange-v1-events-a.csv",
+          "sha256": "f37e878448c44cddfd9da6325fca8bf3fbe4f7ff2233c69e2dec81f18713d933"
+        },
+        {
+          "bytes": 1090972,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-receiver-wounded-slot-shadow-exchange-v1-events-b.csv",
+          "sha256": "040bbbd6491a68682ff83ef17260a1ef5bc0c0b758b894ae47f40f9b83dcd518"
+        }
+      ]
+    },
+    "prior_runtime": {
+      "bytes": 132623,
+      "path": "lab/frontier/slot-shadow-price/runtime.json",
+      "sha256": "a83e0416cac80b9d4460044bb9b817886d2080cf1fad0bc506c36c43e67615e2"
+    }
+  },
+  "unit": "capital-step-phase-007"
+}

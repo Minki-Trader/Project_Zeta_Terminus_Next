@@ -44,9 +44,16 @@ void UpdateSizingDay()
    const double growth = MathMax(0.0,
                                  portfolio_state.stressed_balance -
                                  InpReferenceCapitalUSD);
-   portfolio_state.day_volume_multiplier =
+   int next_multiplier =
       1 + (int)MathFloor(growth / InpAdditionStepUSD + 1.0e-9);
-   portfolio_state.day_volume_multiplier = MathMax(1, portfolio_state.day_volume_multiplier);
+#ifdef ZETA_FRONTIER_VOLUME_MULTIPLIER
+   next_multiplier =
+      ZETA_FRONTIER_VOLUME_MULTIPLIER(current_day,
+                                      portfolio_state.stressed_balance,
+                                      next_multiplier,
+                                      portfolio_state.day_volume_multiplier);
+#endif
+   portfolio_state.day_volume_multiplier = MathMax(1, next_multiplier);
    if(execution_state.runtime_ready)
      {
       RecordEvent(-1,
