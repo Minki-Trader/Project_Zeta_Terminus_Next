@@ -217,9 +217,9 @@ function Get-ZetaNextHandoffReceipt {
     }
 
     $tradesRoot = Join-Path $Contract.RuntimeRoot 'Bases\FPMarketsSC-Live\trades'
-    $accounts = if (Test-Path -LiteralPath $tradesRoot -PathType Container) {
-        @(Get-ChildItem -LiteralPath $tradesRoot -Directory | Where-Object Name -match '^\d+$')
-    } else { @() }
+    $accounts = @(if (Test-Path -LiteralPath $tradesRoot -PathType Container) {
+        Get-ChildItem -LiteralPath $tradesRoot -Directory | Where-Object Name -match '^\d+$'
+    })
     if ($accounts.Count -ne 1 -or [long]$accounts[0].Name -ne [long]$receipt.account_login) {
         throw 'Next Live Portable must contain exactly the account named by the flat-handoff receipt.'
     }
