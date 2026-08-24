@@ -1,0 +1,213 @@
+{
+  "unit": "unfilled-distance-field-004",
+  "architecture": {
+    "measurement": "tester_only_tick_path_adapter_plus_six_strategy_ea",
+    "proxy": "offline_causal_receiver_lenses",
+    "runtime": "tester_only_censored_path_adapter_plus_six_strategy_ea"
+  },
+  "period": "2025-01-01/2025-12-31",
+  "capital_usd": 100,
+  "causal_measurement": {
+    "event": "Passive limit expired unfilled",
+    "normalization": "limit-to-stop protection span",
+    "path": "all US100 ticks from placement through observed expiration",
+    "emitters": 29,
+    "ticks_observed": 396763,
+    "copy_failures": 0,
+    "invalid_geometry": 0,
+    "parent_entries": 551,
+    "parent_economics_preserved": true
+  },
+  "proxy": {
+    "opportunities": 609,
+    "events": 4115,
+    "completed_trade_lifecycles": 554,
+    "emitter_hypotheses": 51,
+    "receiver_evaluations": 2800,
+    "direction_only_reference": {
+      "cross_same_2880_minutes": {
+        "count": 19,
+        "stressed_net": 21.911,
+        "early_stressed_net": 11.197,
+        "late_stressed_net": 10.714,
+        "stop_loss_rate": 0.0
+      },
+      "return_same_2880_minutes": {
+        "count": 11,
+        "stressed_net": -5.564,
+        "early_stressed_net": -6.298,
+        "late_stressed_net": 0.734
+      }
+    },
+    "geometry_lenses": {
+      "return_same_low_path_efficiency_2880_minutes": {
+        "threshold_maximum": 0.0125708051,
+        "count": 6,
+        "stressed_net": -10.326,
+        "early_mean_stressed": -2.704,
+        "late_mean_stressed": -0.736
+      },
+      "cross_opposite_non_approach_4320_minutes": {
+        "closest_ratio_minimum": 0.0097265612,
+        "count": 9,
+        "stressed_net": 17.16,
+        "early_stressed_net": 13.236,
+        "late_stressed_net": 3.924,
+        "win_rate": 1.0
+      }
+    },
+    "interpretation": "Expiration geometry added receiver selectivity beyond direction, but the cells were descriptive seeds from only 29 expirations."
+  },
+  "runtime_expression": {
+    "entries": "unchanged",
+    "volume": "unchanged",
+    "initial_protection": "unchanged",
+    "return_candidates": [
+      "same-direction expiration within 2880 minutes and path efficiency at or below the measured median; release after 3 H1 bars",
+      "same-direction expiration within 2880 minutes and path efficiency at or below measured q75; release after 3 H1 bars"
+    ],
+    "paired_cross_candidate": "opposite-direction expiration within 4320 minutes whose closest normalized gap stayed above the measured median; extend a profitable Cross lifecycle from 4 to 6 H1 bars"
+  },
+  "runs": {
+    "exact_parent": {
+      "stressed_net": 112.574,
+      "stressed_closed_drawdown": 28.3905,
+      "stressed_net_to_drawdown": 3.9652,
+      "actual_net": 120.87,
+      "actual_closed_drawdown": 27.19,
+      "actual_early_net": 57.04,
+      "actual_late_net": 63.83,
+      "entries": 551
+    },
+    "return_low_efficiency": {
+      "stressed_net": 114.083,
+      "stressed_closed_drawdown": 28.7905,
+      "stressed_net_to_drawdown": 3.962522,
+      "actual_net": 122.36,
+      "actual_closed_drawdown": 27.59,
+      "actual_early_net": 58.65,
+      "actual_late_net": 63.71,
+      "entries": 551,
+      "return_qualified_signals": 6,
+      "return_releases": 3,
+      "risk_admission_skips": 25,
+      "delta_from_parent": {
+        "stressed_net": 1.509,
+        "stressed_closed_drawdown": 0.4,
+        "actual_early_net": 1.61,
+        "actual_late_net": -0.12,
+        "entries": 0
+      },
+      "component_stressed_net": {
+        "compression_16": 19.5,
+        "compression_4": 28.67,
+        "cross_market": 30.08,
+        "pressure": -0.4,
+        "return": 34.11,
+        "passive": 2.12
+      }
+    },
+    "return_wide_low_efficiency": {
+      "stressed_net": 113.134,
+      "stressed_closed_drawdown": 28.4705,
+      "stressed_net_to_drawdown": 3.973727,
+      "actual_net": 121.43,
+      "actual_closed_drawdown": 27.27,
+      "actual_early_net": 57.49,
+      "actual_late_net": 63.94,
+      "entries": 551,
+      "return_qualified_signals": 7,
+      "return_releases": 4,
+      "risk_admission_skips": 25,
+      "delta_from_parent": {
+        "stressed_net": 0.56,
+        "stressed_closed_drawdown": 0.08,
+        "actual_early_net": 0.45,
+        "actual_late_net": 0.11,
+        "entries": 0
+      },
+      "component_stressed_net": {
+        "compression_16": 19.52,
+        "compression_4": 28.83,
+        "cross_market": 30.18,
+        "pressure": -0.33,
+        "return": 32.72,
+        "passive": 2.21
+      }
+    },
+    "paired_non_approach_gate": {
+      "stressed_net": 114.5615,
+      "stressed_closed_drawdown": 29.454,
+      "stressed_net_to_drawdown": 3.889506,
+      "actual_net": 122.93,
+      "actual_closed_drawdown": 28.17,
+      "actual_early_net": 61.09,
+      "actual_late_net": 61.84,
+      "entries": 551,
+      "return_qualified_signals": 6,
+      "return_releases": 3,
+      "cross_qualified_signals": 11,
+      "cross_accepted_lifecycles": 9,
+      "cross_extended_lifecycles": 9,
+      "cross_native_lifecycles": 0,
+      "risk_admission_skips": 25,
+      "delta_from_parent": {
+        "stressed_net": 1.9875,
+        "stressed_closed_drawdown": 1.0635,
+        "actual_early_net": 4.05,
+        "actual_late_net": -1.99,
+        "entries": 0
+      },
+      "delta_from_return_low_efficiency": {
+        "stressed_net": 0.4785,
+        "stressed_closed_drawdown": 0.6635,
+        "actual_early_net": 2.44,
+        "actual_late_net": -1.87
+      },
+      "component_stressed_net": {
+        "compression_16": 19.47,
+        "compression_4": 28.34,
+        "cross_market": 31.65,
+        "pressure": -0.58,
+        "return": 33.83,
+        "passive": 1.86
+      }
+    },
+    "prior_direction_time_field_primary": {
+      "stressed_net": 122.2995,
+      "stressed_closed_drawdown": 27.326,
+      "stressed_net_to_drawdown": 4.475573,
+      "actual_net": 130.67,
+      "actual_closed_drawdown": 26.04,
+      "actual_early_net": 62.2,
+      "actual_late_net": 68.47,
+      "entries": 551
+    }
+  },
+  "observation": {
+    "runtime_judgment": "No geometry-threshold candidate displaced the direction-only receiver time field. The narrow Return lens added some net but not drawdown quality; widening diluted it; the paired Cross rule moved gains from the late half into the early half and increased drawdown.",
+    "economic_discovery": "An unfilled limit is a useful censored path observation, but geometric extremity described receiver outcomes better than it controlled maturity. Direction retained the stronger compact control state.",
+    "retained_use": "Keep expiration geometry as context for future counterfactual and order-lifecycle hypotheses, not as a direct portfolio controller.",
+    "promotion": "none"
+  },
+  "next_seed": "Treat expiration as a decision boundary rather than the end of the observation. Measure the post-expiration shadow path of each cancelled Passive order and ask whether continuation, fade, or delayed touch supports extend, reprice, or die decisions without suppressing base portfolio entries.",
+  "artifacts": {
+    "measurement_ea_sha256": "D6685DC50B2035FEF316C8CC684D97A94E614C54464A8A7C400C7EF9E35FC8F5",
+    "runtime_ea_sha256": "7260C41BD284F55E53C4AEB11578CDD7786EF7129FB92AC8852ACA3B14EB5EA1",
+    "proxy_sha256": "73E5650C15F9C517DABE78049137C392C5823D2C3821935189316BA4D67EE155",
+    "measurement_report_sha256": "88E4A3EFCEE62399954994F9A1EC8C03F9A20F1037626C44E16BBDB7B2406404",
+    "return_low_efficiency_report_sha256": "8D38CB9ADD24754074F8466935D14FE96166740265CED88F00193701B11565DE",
+    "return_wide_low_efficiency_report_sha256": "3FCBFAEA0402121C4BC2B17234525D22D6D862964D82BC83F681C849F876AF33",
+    "paired_non_approach_gate_report_sha256": "FABFB32647DED53C49DC2A485A92B3CB98914D8A23C5D5F130E1F9EFA420EA51"
+  },
+  "runtime_faults": {
+    "completed_measurement_runs": 1,
+    "completed_candidate_runs": 3,
+    "copy_failures": 0,
+    "invalid_geometry": 0,
+    "safety_stops": 0,
+    "persistence_failures": 0,
+    "broker_mismatches": 0,
+    "protection_mismatches": 0
+  }
+}
