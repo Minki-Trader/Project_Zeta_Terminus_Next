@@ -1,0 +1,3823 @@
+{
+  "architecture": {
+    "measurement": "receiver_time_field_plus_observation_only_candidate_and_incumbent_tape",
+    "proxy": "34560 causal candidate-value and incumbent-shadow-price policies",
+    "quality_state": "rolling_32_stressed_r_seeded_only_from_prior_2024_next_lab_lifecycles",
+    "runtime": "tester_only_six_strategy_ea_with_transaction_buffered_one_slot_exchange"
+  },
+  "compile": {
+    "receiver_reference_after_neutral_parent_hooks": "MetaEditor build 6140: 0 errors, 0 warnings",
+    "slot_exchange": "MetaEditor build 6140: 0 errors, 0 warnings",
+    "sources": [
+      {
+        "bytes": 4846,
+        "path": "lab/mt5/src/Experts/ZetaNextSlotShadowExchangeV1.mq5",
+        "sha256": "d86b202b72091c22947df431c23bb1bdf875ddd9fc55742d76d48e25d42c841c"
+      },
+      {
+        "bytes": 17765,
+        "path": "lab/mt5/src/Include/ZetaTerminusNext/Frontier/SlotShadowExchangeAdapter.mqh",
+        "sha256": "bd7faa2eb63ee87a37c866c6273e88abcef1ca3f96448180d97c2c868e911700"
+      }
+    ]
+  },
+  "extended_2025_to_2026_08_21": {
+    "baseline_receiver_time_field": {
+      "events": {
+        "2025": {
+          "actual_closed_drawdown": 26.04,
+          "actual_net": 131.14,
+          "closed_lifecycles": 554,
+          "components": {
+            "CROSS": {
+              "actual_net": 37.56,
+              "closed_lifecycles": 193,
+              "entries": 193,
+              "stressed_net_2x": 34.751
+            },
+            "PASSIVE": {
+              "actual_net": 3.94,
+              "closed_lifecycles": 130,
+              "entries": 130,
+              "stressed_net_2x": 1.8635
+            },
+            "PRESSURE": {
+              "actual_net": -0.38,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": -0.835
+            },
+            "RC16": {
+              "actual_net": 20.32,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 19.226
+            },
+            "RC4": {
+              "actual_net": 29.59,
+              "closed_lifecycles": 68,
+              "entries": 68,
+              "stressed_net_2x": 28.558
+            },
+            "RETURN": {
+              "actual_net": 40.11,
+              "closed_lifecycles": 52,
+              "entries": 52,
+              "stressed_net_2x": 39.18
+            }
+          },
+          "entries": 554,
+          "risk_admission_skips": 25,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 27.326,
+          "stressed_net_2x": 122.7435
+        },
+        "2025_h1": {
+          "actual_closed_drawdown": 26.04,
+          "actual_net": 62.15,
+          "closed_lifecycles": 287,
+          "components": {
+            "CROSS": {
+              "actual_net": 36.06,
+              "closed_lifecycles": 86,
+              "entries": 86,
+              "stressed_net_2x": 34.653
+            },
+            "PASSIVE": {
+              "actual_net": -6.24,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": -7.291
+            },
+            "PRESSURE": {
+              "actual_net": -3.77,
+              "closed_lifecycles": 23,
+              "entries": 23,
+              "stressed_net_2x": -4.097
+            },
+            "RC16": {
+              "actual_net": 21.57,
+              "closed_lifecycles": 48,
+              "entries": 48,
+              "stressed_net_2x": 20.891
+            },
+            "RC4": {
+              "actual_net": -6.94,
+              "closed_lifecycles": 41,
+              "entries": 41,
+              "stressed_net_2x": -7.518
+            },
+            "RETURN": {
+              "actual_net": 21.47,
+              "closed_lifecycles": 28,
+              "entries": 28,
+              "stressed_net_2x": 20.888
+            }
+          },
+          "entries": 287,
+          "risk_admission_skips": 21,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 27.326,
+          "stressed_net_2x": 57.526
+        },
+        "2025_h2": {
+          "actual_closed_drawdown": 14.35,
+          "actual_net": 68.99,
+          "closed_lifecycles": 267,
+          "components": {
+            "CROSS": {
+              "actual_net": 1.5,
+              "closed_lifecycles": 107,
+              "entries": 107,
+              "stressed_net_2x": 0.098
+            },
+            "PASSIVE": {
+              "actual_net": 10.18,
+              "closed_lifecycles": 69,
+              "entries": 69,
+              "stressed_net_2x": 9.1545
+            },
+            "PRESSURE": {
+              "actual_net": 3.39,
+              "closed_lifecycles": 9,
+              "entries": 9,
+              "stressed_net_2x": 3.262
+            },
+            "RC16": {
+              "actual_net": -1.25,
+              "closed_lifecycles": 31,
+              "entries": 31,
+              "stressed_net_2x": -1.665
+            },
+            "RC4": {
+              "actual_net": 36.53,
+              "closed_lifecycles": 27,
+              "entries": 27,
+              "stressed_net_2x": 36.076
+            },
+            "RETURN": {
+              "actual_net": 18.64,
+              "closed_lifecycles": 24,
+              "entries": 24,
+              "stressed_net_2x": 18.292
+            }
+          },
+          "entries": 267,
+          "risk_admission_skips": 4,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 14.788,
+          "stressed_net_2x": 65.2175
+        },
+        "2026_ytd": {
+          "actual_closed_drawdown": 49.32,
+          "actual_net": 136.61,
+          "closed_lifecycles": 359,
+          "components": {
+            "CROSS": {
+              "actual_net": 17.25,
+              "closed_lifecycles": 130,
+              "entries": 130,
+              "stressed_net_2x": 13.3
+            },
+            "PASSIVE": {
+              "actual_net": 2.31,
+              "closed_lifecycles": 91,
+              "entries": 91,
+              "stressed_net_2x": 1.4005
+            },
+            "PRESSURE": {
+              "actual_net": 51.27,
+              "closed_lifecycles": 29,
+              "entries": 29,
+              "stressed_net_2x": 50.002
+            },
+            "RC16": {
+              "actual_net": 71.05,
+              "closed_lifecycles": 44,
+              "entries": 44,
+              "stressed_net_2x": 69.312
+            },
+            "RC4": {
+              "actual_net": -2.95,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": -4.17
+            },
+            "RETURN": {
+              "actual_net": -2.32,
+              "closed_lifecycles": 33,
+              "entries": 33,
+              "stressed_net_2x": -3.476
+            }
+          },
+          "entries": 359,
+          "risk_admission_skips": 11,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 50.732,
+          "stressed_net_2x": 126.3685
+        },
+        "exchange_rows": [],
+        "first_fixed_lot_step_2x": {
+          "multiplier": 2,
+          "server_time": "2026.02.03 01:01:02",
+          "stressed_balance": 260.117
+        },
+        "orphan_release_count": 0,
+        "retry_skip_after_release_count": 0,
+        "total": {
+          "actual_closed_drawdown": 49.32,
+          "actual_net": 267.75,
+          "closed_lifecycles": 913,
+          "components": {
+            "CROSS": {
+              "actual_net": 54.81,
+              "closed_lifecycles": 323,
+              "entries": 323,
+              "stressed_net_2x": 48.051
+            },
+            "PASSIVE": {
+              "actual_net": 6.25,
+              "closed_lifecycles": 221,
+              "entries": 221,
+              "stressed_net_2x": 3.264
+            },
+            "PRESSURE": {
+              "actual_net": 50.89,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": 49.167
+            },
+            "RC16": {
+              "actual_net": 91.37,
+              "closed_lifecycles": 123,
+              "entries": 123,
+              "stressed_net_2x": 88.538
+            },
+            "RC4": {
+              "actual_net": 26.64,
+              "closed_lifecycles": 100,
+              "entries": 100,
+              "stressed_net_2x": 24.388
+            },
+            "RETURN": {
+              "actual_net": 37.79,
+              "closed_lifecycles": 85,
+              "entries": 85,
+              "stressed_net_2x": 35.704
+            }
+          },
+          "entries": 913,
+          "risk_admission_skips": 36,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 50.732,
+          "stressed_net_2x": 249.112
+        }
+      },
+      "final": {
+        "actual_net": 267.75,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 36,
+        "safety_stopped": false,
+        "stressed_closed_drawdown": 50.732,
+        "stressed_net_2x": 249.112
+      },
+      "report": {
+        "actual_balance_drawdown": 49.32,
+        "actual_equity_drawdown": 52.2,
+        "actual_net": 267.75,
+        "entries": 913,
+        "history_quality": "100% \uc2e4\uc81c \ud2f1",
+        "profit_factor": 1.35,
+        "recovery_factor": 5.13,
+        "sharpe_ratio": 5.0
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 35231618,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-baseline-agent.log",
+          "sha256": "17d7c2ebac32ce7e3a79e0ff9391c062300ebdc155a6a1cb6cc451b6150ece18"
+        },
+        "events": [
+          {
+            "bytes": 1575480,
+            "path": "lab/artifacts/backtests/slot-shadow-price/extended-baseline-receiver-time-field-v1-events-a.csv",
+            "sha256": "7350ba22a778e42d5792c6a6a4207d69a4097796c6c9f8f31674100af80c0800"
+          },
+          {
+            "bytes": 1051749,
+            "path": "lab/artifacts/backtests/slot-shadow-price/extended-baseline-receiver-time-field-v1-events-b.csv",
+            "sha256": "c6aa4fcc0a1a685b8f74216cda2fc2c4d70e3f2df96f32385f53bb09404a5ca7"
+          }
+        ],
+        "report": {
+          "bytes": 1807010,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-baseline-2025-2026q3.htm",
+          "sha256": "9b7d23af442e8b20e02a3eb05736e0e0598ff422323029e448aca5344c3acd96"
+        }
+      }
+    },
+    "deltas_vs_baseline": {
+      "market_only_loser_residual": {
+        "actual_net": 21.23,
+        "entries": 10,
+        "risk_admission_skips": -10,
+        "stressed_closed_drawdown": 4.848,
+        "stressed_net_2x": 20.4825
+      },
+      "market_only_receiver_wounded": {
+        "actual_net": 15.32,
+        "entries": 6,
+        "risk_admission_skips": -6,
+        "stressed_closed_drawdown": 0.95,
+        "stressed_net_2x": 14.75
+      }
+    },
+    "fixed_lot_step_observation": {
+      "baseline_first_2x": {
+        "multiplier": 2,
+        "server_time": "2026.02.03 01:01:02",
+        "stressed_balance": 260.117
+      },
+      "interpretation": "The 2025 exchange gains moved the stressed balance through the next fixed lot step 7 days earlier for receiver-wounded and 11 days earlier for loser-residual. All three paths then took the same 359 entries in 2026, but earlier 2x sizing amplified both later profit and drawdown.",
+      "loser_first_2x": {
+        "multiplier": 2,
+        "server_time": "2026.01.23 01:01:00",
+        "stressed_balance": 250.4015
+      },
+      "receiver_first_2x": {
+        "multiplier": 2,
+        "server_time": "2026.01.27 01:01:00",
+        "stressed_balance": 251.101
+      }
+    },
+    "forward_exchange_reference": {
+      "caveat": "The same-date baseline carried a different prior balance path, so this is a bounded reference rather than an exact paired counterfactual.",
+      "exchange_pair": {
+        "candidate": "CROSS",
+        "candidate_admission": "market_open",
+        "candidate_close_actual": -1.38,
+        "candidate_close_stressed": -1.412,
+        "candidate_score": 0.043741,
+        "incumbent": "PASSIVE",
+        "incumbent_close_actual": -1.21,
+        "incumbent_close_stressed": -1.226,
+        "retry_risk_skip": false,
+        "server_time": "2026.02.05 17:00:00",
+        "slot_price": 0.015021,
+        "year": "2026"
+      },
+      "exchange_pair_delta_vs_same_date_baseline_keep_actual": -1.52,
+      "exchange_pair_delta_vs_same_date_baseline_keep_stressed": -1.552,
+      "same_date_baseline_incumbent_later_close_actual": -1.07,
+      "same_date_baseline_incumbent_later_close_stressed": -1.086,
+      "server_time": "2026.02.05 17:00:00"
+    },
+    "market_only_loser_residual": {
+      "events": {
+        "2025": {
+          "actual_closed_drawdown": 20.65,
+          "actual_net": 138.6,
+          "closed_lifecycles": 564,
+          "components": {
+            "CROSS": {
+              "actual_net": 36.91,
+              "closed_lifecycles": 201,
+              "entries": 201,
+              "stressed_net_2x": 34.003
+            },
+            "PASSIVE": {
+              "actual_net": 5.17,
+              "closed_lifecycles": 130,
+              "entries": 130,
+              "stressed_net_2x": 3.0935
+            },
+            "PRESSURE": {
+              "actual_net": 4.33,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 3.875
+            },
+            "RC16": {
+              "actual_net": 21.49,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 20.143
+            },
+            "RC4": {
+              "actual_net": 30.7,
+              "closed_lifecycles": 68,
+              "entries": 68,
+              "stressed_net_2x": 29.668
+            },
+            "RETURN": {
+              "actual_net": 40.0,
+              "closed_lifecycles": 54,
+              "entries": 54,
+              "stressed_net_2x": 39.042
+            }
+          },
+          "entries": 564,
+          "risk_admission_skips": 15,
+          "slot_exchanges": 9,
+          "stressed_closed_drawdown": 21.962,
+          "stressed_net_2x": 129.8245
+        },
+        "2025_h1": {
+          "actual_closed_drawdown": 20.65,
+          "actual_net": 67.68,
+          "closed_lifecycles": 296,
+          "components": {
+            "CROSS": {
+              "actual_net": 34.2,
+              "closed_lifecycles": 93,
+              "entries": 93,
+              "stressed_net_2x": 32.707
+            },
+            "PASSIVE": {
+              "actual_net": -5.01,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": -6.061
+            },
+            "PRESSURE": {
+              "actual_net": 1.03,
+              "closed_lifecycles": 23,
+              "entries": 23,
+              "stressed_net_2x": 0.703
+            },
+            "RC16": {
+              "actual_net": 21.62,
+              "closed_lifecycles": 48,
+              "entries": 48,
+              "stressed_net_2x": 20.941
+            },
+            "RC4": {
+              "actual_net": -5.68,
+              "closed_lifecycles": 41,
+              "entries": 41,
+              "stressed_net_2x": -6.258
+            },
+            "RETURN": {
+              "actual_net": 21.52,
+              "closed_lifecycles": 30,
+              "entries": 30,
+              "stressed_net_2x": 20.91
+            }
+          },
+          "entries": 296,
+          "risk_admission_skips": 12,
+          "slot_exchanges": 8,
+          "stressed_closed_drawdown": 21.962,
+          "stressed_net_2x": 62.942
+        },
+        "2025_h2": {
+          "actual_closed_drawdown": 14.57,
+          "actual_net": 70.92,
+          "closed_lifecycles": 268,
+          "components": {
+            "CROSS": {
+              "actual_net": 2.71,
+              "closed_lifecycles": 108,
+              "entries": 108,
+              "stressed_net_2x": 1.296
+            },
+            "PASSIVE": {
+              "actual_net": 10.18,
+              "closed_lifecycles": 69,
+              "entries": 69,
+              "stressed_net_2x": 9.1545
+            },
+            "PRESSURE": {
+              "actual_net": 3.3,
+              "closed_lifecycles": 9,
+              "entries": 9,
+              "stressed_net_2x": 3.172
+            },
+            "RC16": {
+              "actual_net": -0.13,
+              "closed_lifecycles": 31,
+              "entries": 31,
+              "stressed_net_2x": -0.798
+            },
+            "RC4": {
+              "actual_net": 36.38,
+              "closed_lifecycles": 27,
+              "entries": 27,
+              "stressed_net_2x": 35.926
+            },
+            "RETURN": {
+              "actual_net": 18.48,
+              "closed_lifecycles": 24,
+              "entries": 24,
+              "stressed_net_2x": 18.132
+            }
+          },
+          "entries": 268,
+          "risk_admission_skips": 3,
+          "slot_exchanges": 1,
+          "stressed_closed_drawdown": 15.008,
+          "stressed_net_2x": 66.8825
+        },
+        "2026_ytd": {
+          "actual_closed_drawdown": 54.36,
+          "actual_net": 150.38,
+          "closed_lifecycles": 359,
+          "components": {
+            "CROSS": {
+              "actual_net": 3.55,
+              "closed_lifecycles": 130,
+              "entries": 130,
+              "stressed_net_2x": -1.0805
+            },
+            "PASSIVE": {
+              "actual_net": 3.17,
+              "closed_lifecycles": 91,
+              "entries": 91,
+              "stressed_net_2x": 2.2625
+            },
+            "PRESSURE": {
+              "actual_net": 60.87,
+              "closed_lifecycles": 29,
+              "entries": 29,
+              "stressed_net_2x": 59.694
+            },
+            "RC16": {
+              "actual_net": 77.28,
+              "closed_lifecycles": 44,
+              "entries": 44,
+              "stressed_net_2x": 75.778
+            },
+            "RC4": {
+              "actual_net": 3.81,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 2.6
+            },
+            "RETURN": {
+              "actual_net": 1.7,
+              "closed_lifecycles": 33,
+              "entries": 33,
+              "stressed_net_2x": 0.516
+            }
+          },
+          "entries": 359,
+          "risk_admission_skips": 11,
+          "slot_exchanges": 1,
+          "stressed_closed_drawdown": 55.58,
+          "stressed_net_2x": 139.77
+        },
+        "exchange_rows": [
+          {
+            "candidate": "RETURN",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.93,
+            "candidate_close_stressed": -1.944,
+            "candidate_score": 0.038414,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -1.35,
+            "incumbent_close_stressed": -1.364,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.08 16:00:00",
+            "slot_price": -0.005033,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.15,
+            "candidate_close_stressed": -1.162,
+            "candidate_score": 0.035795,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -0.63,
+            "incumbent_close_stressed": -0.644,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.10 17:00:00",
+            "slot_price": 0.012479,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -0.18,
+            "candidate_close_stressed": -0.192,
+            "candidate_score": 0.015096,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -0.86,
+            "incumbent_close_stressed": -0.874,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.14 17:00:00",
+            "slot_price": -0.001739,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.17,
+            "candidate_close_stressed": -1.182,
+            "candidate_score": -0.037737,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -1.4,
+            "incumbent_close_stressed": -1.414,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.31 17:00:00",
+            "slot_price": -0.001066,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 0.85,
+            "candidate_close_stressed": 0.838,
+            "candidate_score": -0.012551,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.95,
+            "incumbent_close_stressed": -0.964,
+            "retry_risk_skip": false,
+            "server_time": "2025.02.10 17:00:00",
+            "slot_price": 0.001575,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -2.4,
+            "candidate_close_stressed": -2.412,
+            "candidate_score": 0.069195,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.33,
+            "incumbent_close_stressed": -0.344,
+            "retry_risk_skip": false,
+            "server_time": "2025.03.05 17:00:00",
+            "slot_price": 0.006242,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 1.28,
+            "candidate_close_stressed": 1.266,
+            "candidate_score": 0.058321,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -1.37,
+            "incumbent_close_stressed": -1.384,
+            "retry_risk_skip": false,
+            "server_time": "2025.03.11 17:00:00",
+            "slot_price": -0.00313,
+            "year": "2025"
+          },
+          {
+            "candidate": "RETURN",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 2.05,
+            "candidate_close_stressed": 2.036,
+            "candidate_score": 0.062163,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.18,
+            "incumbent_close_stressed": -0.194,
+            "retry_risk_skip": false,
+            "server_time": "2025.05.23 16:00:00",
+            "slot_price": 0.018341,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -0.09,
+            "candidate_close_stressed": -0.102,
+            "candidate_score": -0.023881,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -2.42,
+            "incumbent_close_stressed": -2.688,
+            "retry_risk_skip": false,
+            "server_time": "2025.11.03 17:00:00",
+            "slot_price": 0.005128,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.38,
+            "candidate_close_stressed": -1.412,
+            "candidate_score": 0.043741,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -1.21,
+            "incumbent_close_stressed": -1.226,
+            "retry_risk_skip": false,
+            "server_time": "2026.02.05 17:00:00",
+            "slot_price": 0.015021,
+            "year": "2026"
+          }
+        ],
+        "first_fixed_lot_step_2x": {
+          "multiplier": 2,
+          "server_time": "2026.01.23 01:01:00",
+          "stressed_balance": 250.4015
+        },
+        "orphan_release_count": 0,
+        "retry_skip_after_release_count": 0,
+        "total": {
+          "actual_closed_drawdown": 54.36,
+          "actual_net": 288.98,
+          "closed_lifecycles": 923,
+          "components": {
+            "CROSS": {
+              "actual_net": 40.46,
+              "closed_lifecycles": 331,
+              "entries": 331,
+              "stressed_net_2x": 32.9225
+            },
+            "PASSIVE": {
+              "actual_net": 8.34,
+              "closed_lifecycles": 221,
+              "entries": 221,
+              "stressed_net_2x": 5.356
+            },
+            "PRESSURE": {
+              "actual_net": 65.2,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": 63.569
+            },
+            "RC16": {
+              "actual_net": 98.77,
+              "closed_lifecycles": 123,
+              "entries": 123,
+              "stressed_net_2x": 95.921
+            },
+            "RC4": {
+              "actual_net": 34.51,
+              "closed_lifecycles": 100,
+              "entries": 100,
+              "stressed_net_2x": 32.268
+            },
+            "RETURN": {
+              "actual_net": 41.7,
+              "closed_lifecycles": 87,
+              "entries": 87,
+              "stressed_net_2x": 39.558
+            }
+          },
+          "entries": 923,
+          "risk_admission_skips": 26,
+          "slot_exchanges": 10,
+          "stressed_closed_drawdown": 55.58,
+          "stressed_net_2x": 269.5945
+        }
+      },
+      "exchange_summary": {
+        "completed_lifecycles": 923,
+        "headroom_blocks": 42,
+        "mode": "loser-residual",
+        "pending_candidate_blocks": 4,
+        "qualified_exchanges": 10,
+        "release_failures": 0,
+        "release_successes": 10,
+        "retry_blocks": 0,
+        "risk_blocks_observed": 36,
+        "signals": 1007
+      },
+      "final": {
+        "actual_net": 288.98,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 26,
+        "safety_stopped": false,
+        "stressed_closed_drawdown": 55.58,
+        "stressed_net_2x": 269.5945
+      },
+      "report": {
+        "actual_balance_drawdown": 54.36,
+        "actual_equity_drawdown": 57.24,
+        "actual_net": 288.98,
+        "entries": 923,
+        "history_quality": "100% \uc2e4\uc81c \ud2f1",
+        "profit_factor": 1.37,
+        "recovery_factor": 5.05,
+        "sharpe_ratio": 5.25
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 52769962,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-loser-residual-agent.log",
+          "sha256": "1e6abda5ff23865ff0d8e47fcf52951b1e4a7294c44a780a5648713b372350b9"
+        },
+        "events": [
+          {
+            "bytes": 1643229,
+            "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-loser-residual-slot-shadow-exchange-v1-events-a.csv",
+            "sha256": "e1253293327569cf9f3ac293763b5e1f4ce259e1d6eaea99265ac2f51c36a0f5"
+          },
+          {
+            "bytes": 1108148,
+            "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-loser-residual-slot-shadow-exchange-v1-events-b.csv",
+            "sha256": "8f164fd5ed79f23e39824f9da06e25ba7f34860617b9b14bac5250d5e3531e5a"
+          }
+        ],
+        "report": {
+          "bytes": 1825852,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-loser-residual-2025-2026q3.htm",
+          "sha256": "4e47d3607ac4a61a8efe2df5548faef3fe78cac4556733f015b562d52fe94a74"
+        }
+      }
+    },
+    "market_only_receiver_wounded": {
+      "events": {
+        "2025": {
+          "actual_closed_drawdown": 20.4,
+          "actual_net": 135.07,
+          "closed_lifecycles": 560,
+          "components": {
+            "CROSS": {
+              "actual_net": 37.17,
+              "closed_lifecycles": 198,
+              "entries": 198,
+              "stressed_net_2x": 34.299
+            },
+            "PASSIVE": {
+              "actual_net": 5.4,
+              "closed_lifecycles": 130,
+              "entries": 130,
+              "stressed_net_2x": 3.407
+            },
+            "PRESSURE": {
+              "actual_net": 2.95,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 2.495
+            },
+            "RC16": {
+              "actual_net": 16.55,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 15.203
+            },
+            "RC4": {
+              "actual_net": 30.34,
+              "closed_lifecycles": 68,
+              "entries": 68,
+              "stressed_net_2x": 29.308
+            },
+            "RETURN": {
+              "actual_net": 42.66,
+              "closed_lifecycles": 53,
+              "entries": 53,
+              "stressed_net_2x": 41.716
+            }
+          },
+          "entries": 560,
+          "risk_admission_skips": 19,
+          "slot_exchanges": 5,
+          "stressed_closed_drawdown": 21.3985,
+          "stressed_net_2x": 126.428
+        },
+        "2025_h1": {
+          "actual_closed_drawdown": 20.4,
+          "actual_net": 65.57,
+          "closed_lifecycles": 292,
+          "components": {
+            "CROSS": {
+              "actual_net": 36.07,
+              "closed_lifecycles": 90,
+              "entries": 90,
+              "stressed_net_2x": 34.613
+            },
+            "PASSIVE": {
+              "actual_net": -4.78,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": -5.7475
+            },
+            "PRESSURE": {
+              "actual_net": -0.39,
+              "closed_lifecycles": 23,
+              "entries": 23,
+              "stressed_net_2x": -0.717
+            },
+            "RC16": {
+              "actual_net": 16.64,
+              "closed_lifecycles": 48,
+              "entries": 48,
+              "stressed_net_2x": 15.961
+            },
+            "RC4": {
+              "actual_net": -6.1,
+              "closed_lifecycles": 41,
+              "entries": 41,
+              "stressed_net_2x": -6.678
+            },
+            "RETURN": {
+              "actual_net": 24.13,
+              "closed_lifecycles": 29,
+              "entries": 29,
+              "stressed_net_2x": 23.534
+            }
+          },
+          "entries": 292,
+          "risk_admission_skips": 16,
+          "slot_exchanges": 4,
+          "stressed_closed_drawdown": 21.3985,
+          "stressed_net_2x": 60.9655
+        },
+        "2025_h2": {
+          "actual_closed_drawdown": 14.49,
+          "actual_net": 69.5,
+          "closed_lifecycles": 268,
+          "components": {
+            "CROSS": {
+              "actual_net": 1.1,
+              "closed_lifecycles": 108,
+              "entries": 108,
+              "stressed_net_2x": -0.314
+            },
+            "PASSIVE": {
+              "actual_net": 10.18,
+              "closed_lifecycles": 69,
+              "entries": 69,
+              "stressed_net_2x": 9.1545
+            },
+            "PRESSURE": {
+              "actual_net": 3.34,
+              "closed_lifecycles": 9,
+              "entries": 9,
+              "stressed_net_2x": 3.212
+            },
+            "RC16": {
+              "actual_net": -0.09,
+              "closed_lifecycles": 31,
+              "entries": 31,
+              "stressed_net_2x": -0.758
+            },
+            "RC4": {
+              "actual_net": 36.44,
+              "closed_lifecycles": 27,
+              "entries": 27,
+              "stressed_net_2x": 35.986
+            },
+            "RETURN": {
+              "actual_net": 18.53,
+              "closed_lifecycles": 24,
+              "entries": 24,
+              "stressed_net_2x": 18.182
+            }
+          },
+          "entries": 268,
+          "risk_admission_skips": 3,
+          "slot_exchanges": 1,
+          "stressed_closed_drawdown": 14.928,
+          "stressed_net_2x": 65.4625
+        },
+        "2026_ytd": {
+          "actual_closed_drawdown": 50.09,
+          "actual_net": 148.0,
+          "closed_lifecycles": 359,
+          "components": {
+            "CROSS": {
+              "actual_net": 17.79,
+              "closed_lifecycles": 130,
+              "entries": 130,
+              "stressed_net_2x": 13.7175
+            },
+            "PASSIVE": {
+              "actual_net": 3.31,
+              "closed_lifecycles": 91,
+              "entries": 91,
+              "stressed_net_2x": 2.4025
+            },
+            "PRESSURE": {
+              "actual_net": 55.17,
+              "closed_lifecycles": 29,
+              "entries": 29,
+              "stressed_net_2x": 54.008
+            },
+            "RC16": {
+              "actual_net": 76.01,
+              "closed_lifecycles": 44,
+              "entries": 44,
+              "stressed_net_2x": 73.934
+            },
+            "RC4": {
+              "actual_net": 1.89,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 0.712
+            },
+            "RETURN": {
+              "actual_net": -6.17,
+              "closed_lifecycles": 33,
+              "entries": 33,
+              "stressed_net_2x": -7.34
+            }
+          },
+          "entries": 359,
+          "risk_admission_skips": 11,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 51.682,
+          "stressed_net_2x": 137.434
+        },
+        "exchange_rows": [
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.15,
+            "candidate_close_stressed": -1.162,
+            "candidate_score": 0.535853,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -0.63,
+            "incumbent_close_stressed": -0.644,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.10 17:00:00",
+            "slot_price": -0.20458,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.17,
+            "candidate_close_stressed": -1.182,
+            "candidate_score": -0.032788,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -1.54,
+            "incumbent_close_stressed": -1.554,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.31 17:00:00",
+            "slot_price": -0.722046,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 1.28,
+            "candidate_close_stressed": 1.266,
+            "candidate_score": 0.08253,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -1.76,
+            "incumbent_close_stressed": -1.774,
+            "retry_risk_skip": false,
+            "server_time": "2025.03.11 17:00:00",
+            "slot_price": -0.591429,
+            "year": "2025"
+          },
+          {
+            "candidate": "RETURN",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 2.05,
+            "candidate_close_stressed": 2.036,
+            "candidate_score": 0.574575,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.18,
+            "incumbent_close_stressed": -0.194,
+            "retry_risk_skip": false,
+            "server_time": "2025.05.23 16:00:00",
+            "slot_price": -0.02588,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -0.09,
+            "candidate_close_stressed": -0.102,
+            "candidate_score": -0.023599,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -2.42,
+            "incumbent_close_stressed": -2.688,
+            "retry_risk_skip": false,
+            "server_time": "2025.11.03 17:00:00",
+            "slot_price": -0.609919,
+            "year": "2025"
+          }
+        ],
+        "first_fixed_lot_step_2x": {
+          "multiplier": 2,
+          "server_time": "2026.01.27 01:01:00",
+          "stressed_balance": 251.101
+        },
+        "orphan_release_count": 0,
+        "retry_skip_after_release_count": 0,
+        "total": {
+          "actual_closed_drawdown": 50.09,
+          "actual_net": 283.07,
+          "closed_lifecycles": 919,
+          "components": {
+            "CROSS": {
+              "actual_net": 54.96,
+              "closed_lifecycles": 328,
+              "entries": 328,
+              "stressed_net_2x": 48.0165
+            },
+            "PASSIVE": {
+              "actual_net": 8.71,
+              "closed_lifecycles": 221,
+              "entries": 221,
+              "stressed_net_2x": 5.8095
+            },
+            "PRESSURE": {
+              "actual_net": 58.12,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": 56.503
+            },
+            "RC16": {
+              "actual_net": 92.56,
+              "closed_lifecycles": 123,
+              "entries": 123,
+              "stressed_net_2x": 89.137
+            },
+            "RC4": {
+              "actual_net": 32.23,
+              "closed_lifecycles": 100,
+              "entries": 100,
+              "stressed_net_2x": 30.02
+            },
+            "RETURN": {
+              "actual_net": 36.49,
+              "closed_lifecycles": 86,
+              "entries": 86,
+              "stressed_net_2x": 34.376
+            }
+          },
+          "entries": 919,
+          "risk_admission_skips": 30,
+          "slot_exchanges": 5,
+          "stressed_closed_drawdown": 51.682,
+          "stressed_net_2x": 263.862
+        }
+      },
+      "exchange_summary": {
+        "completed_lifecycles": 919,
+        "headroom_blocks": 42,
+        "mode": "receiver-wounded",
+        "pending_candidate_blocks": 4,
+        "qualified_exchanges": 5,
+        "release_failures": 0,
+        "release_successes": 5,
+        "retry_blocks": 0,
+        "risk_blocks_observed": 35,
+        "signals": 1007
+      },
+      "final": {
+        "actual_net": 283.07,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 30,
+        "safety_stopped": false,
+        "stressed_closed_drawdown": 51.682,
+        "stressed_net_2x": 263.862
+      },
+      "report": {
+        "actual_balance_drawdown": 50.09,
+        "actual_equity_drawdown": 52.97,
+        "actual_net": 283.07,
+        "entries": 919,
+        "history_quality": "100% \uc2e4\uc81c \ud2f1",
+        "profit_factor": 1.37,
+        "recovery_factor": 5.34,
+        "sharpe_ratio": 5.1
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 49397156,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-receiver-wounded-agent.log",
+          "sha256": "bc341960a7f900b845190fdb8a87b7be04647d690abf838772f29b3a539fd61d"
+        },
+        "events": [
+          {
+            "bytes": 1621398,
+            "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-receiver-wounded-slot-shadow-exchange-v1-events-a.csv",
+            "sha256": "f37e878448c44cddfd9da6325fca8bf3fbe4f7ff2233c69e2dec81f18713d933"
+          },
+          {
+            "bytes": 1090972,
+            "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-receiver-wounded-slot-shadow-exchange-v1-events-b.csv",
+            "sha256": "040bbbd6491a68682ff83ef17260a1ef5bc0c0b758b894ae47f40f9b83dcd518"
+          }
+        ],
+        "report": {
+          "bytes": 1818418,
+          "path": "lab/artifacts/backtests/slot-shadow-price/extended-market-only-receiver-wounded-2025-2026q3.htm",
+          "sha256": "4e60eca00ef017b5b51a6d7d27b23e545516689ec6fe9b5b279b1474e7e2645b"
+        }
+      }
+    }
+  },
+  "judgment": {
+    "economic_discovery": "A risk slot has a causal shadow price, but fixed lot-step proximity is a second state variable: a small early exchange advantage can move the entire later portfolio into higher sizing sooner.",
+    "forward_limit": "The broad final rule made only one new 2026 exchange and its bounded same-date stressed reference was -1.552 USD; the selective final rule made no new 2026 exchanges.",
+    "next": "capital_step_phase_coupling",
+    "portfolio_entry_constraint": "passed; final market-only 2025 entries were 557 and 561 versus 551, and extended entries were 919 and 923 versus 913",
+    "promotion": "none",
+    "retained_primary": "receiver_time_field_cross_profit_gate_6",
+    "retained_research_seed": "transaction_buffered_slot_shadow_exchange_with_capital_step_context",
+    "transaction_completeness": "passed after both repairs; every final release opened its market candidate with zero retry skips and no pending-order dependence"
+  },
+  "live_surface": "untouched",
+  "measurement": {
+    "best_incumbent_exchange_positive": 17,
+    "candidates": 606,
+    "counterfactual_candidate_positive": 12,
+    "counterfactual_matched": 23,
+    "incumbent_snapshots": 378,
+    "measurement_path_neutrality": "The tape and same-session receiver-time-field control were identical: actual 130.62, stressed 122.2495, stressed drawdown 27.326, 551 entries.",
+    "risk_blocked": 25
+  },
+  "proxy": {
+    "evaluations": 34560,
+    "leader": "receiver_priority_vs_wounded_age",
+    "leader_actions": 8,
+    "leader_first_order_exchange_delta": 15.571,
+    "limit": "First-order exchange labels did not include later portfolio path mutation.",
+    "source": {
+      "bytes": 169449,
+      "path": "lab/frontier/slot-shadow-price/proxy.json",
+      "sha256": "2cd4c4df2ef6f782d4ae78b9ca40c0bbbf6c530c0592d90350be352ff937ffdd"
+    },
+    "stable_cells": 1052
+  },
+  "question": "Can occupied risk slots be priced causally so later opportunities replace weak incumbents without reducing entry count?",
+  "runtime_2025": {
+    "baseline_receiver_time_field": {
+      "final": {
+        "actual_net": 130.62,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 25,
+        "safety_stopped": false,
+        "stressed_closed_drawdown": 27.326,
+        "stressed_net_2x": 122.2495
+      },
+      "report": {
+        "actual_balance_drawdown": 26.04,
+        "actual_equity_drawdown": 25.09,
+        "actual_net": 130.62,
+        "entries": 551,
+        "history_quality": "100% \uc2e4\uc81c \ud2f1",
+        "profit_factor": 1.41,
+        "recovery_factor": 5.21,
+        "sharpe_ratio": 5.19
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 28209832,
+          "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-headroom-agent.log",
+          "sha256": "d39d23719aa4cee0ea0526f26db86867bd72784f867c6713608e544cf504e122"
+        },
+        "events": [],
+        "report": {
+          "bytes": 1095804,
+          "path": "lab/artifacts/backtests/slot-shadow-price/baseline-2025.htm",
+          "sha256": "8b44e9b9042ef26f21bcfee7700829cdd03f08fe35e754f11389418912601835"
+        }
+      }
+    },
+    "deltas_vs_baseline": {
+      "market_only_loser_residual": {
+        "actual_net": 7.46,
+        "entries": 10,
+        "risk_admission_skips": -10,
+        "stressed_closed_drawdown": -5.364,
+        "stressed_net_2x": 7.081
+      },
+      "market_only_receiver_wounded": {
+        "actual_net": 3.93,
+        "entries": 6,
+        "risk_admission_skips": -6,
+        "stressed_closed_drawdown": -5.9275,
+        "stressed_net_2x": 3.6845
+      }
+    },
+    "market_only_loser_residual": {
+      "events": {
+        "2025": {
+          "actual_closed_drawdown": 20.65,
+          "actual_net": 138.08,
+          "closed_lifecycles": 561,
+          "components": {
+            "CROSS": {
+              "actual_net": 37.01,
+              "closed_lifecycles": 200,
+              "entries": 200,
+              "stressed_net_2x": 34.109
+            },
+            "PASSIVE": {
+              "actual_net": 5.09,
+              "closed_lifecycles": 129,
+              "entries": 129,
+              "stressed_net_2x": 3.0195
+            },
+            "PRESSURE": {
+              "actual_net": 4.33,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 3.875
+            },
+            "RC16": {
+              "actual_net": 21.49,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 20.143
+            },
+            "RC4": {
+              "actual_net": 30.16,
+              "closed_lifecycles": 67,
+              "entries": 67,
+              "stressed_net_2x": 29.142
+            },
+            "RETURN": {
+              "actual_net": 40.0,
+              "closed_lifecycles": 54,
+              "entries": 54,
+              "stressed_net_2x": 39.042
+            }
+          },
+          "entries": 561,
+          "risk_admission_skips": 15,
+          "slot_exchanges": 9,
+          "stressed_closed_drawdown": 21.962,
+          "stressed_net_2x": 129.3305
+        },
+        "2025_h1": {
+          "actual_closed_drawdown": 20.65,
+          "actual_net": 67.68,
+          "closed_lifecycles": 296,
+          "components": {
+            "CROSS": {
+              "actual_net": 34.2,
+              "closed_lifecycles": 93,
+              "entries": 93,
+              "stressed_net_2x": 32.707
+            },
+            "PASSIVE": {
+              "actual_net": -5.01,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": -6.061
+            },
+            "PRESSURE": {
+              "actual_net": 1.03,
+              "closed_lifecycles": 23,
+              "entries": 23,
+              "stressed_net_2x": 0.703
+            },
+            "RC16": {
+              "actual_net": 21.62,
+              "closed_lifecycles": 48,
+              "entries": 48,
+              "stressed_net_2x": 20.941
+            },
+            "RC4": {
+              "actual_net": -5.68,
+              "closed_lifecycles": 41,
+              "entries": 41,
+              "stressed_net_2x": -6.258
+            },
+            "RETURN": {
+              "actual_net": 21.52,
+              "closed_lifecycles": 30,
+              "entries": 30,
+              "stressed_net_2x": 20.91
+            }
+          },
+          "entries": 296,
+          "risk_admission_skips": 12,
+          "slot_exchanges": 8,
+          "stressed_closed_drawdown": 21.962,
+          "stressed_net_2x": 62.942
+        },
+        "2025_h2": {
+          "actual_closed_drawdown": 14.57,
+          "actual_net": 70.4,
+          "closed_lifecycles": 265,
+          "components": {
+            "CROSS": {
+              "actual_net": 2.81,
+              "closed_lifecycles": 107,
+              "entries": 107,
+              "stressed_net_2x": 1.402
+            },
+            "PASSIVE": {
+              "actual_net": 10.1,
+              "closed_lifecycles": 68,
+              "entries": 68,
+              "stressed_net_2x": 9.0805
+            },
+            "PRESSURE": {
+              "actual_net": 3.3,
+              "closed_lifecycles": 9,
+              "entries": 9,
+              "stressed_net_2x": 3.172
+            },
+            "RC16": {
+              "actual_net": -0.13,
+              "closed_lifecycles": 31,
+              "entries": 31,
+              "stressed_net_2x": -0.798
+            },
+            "RC4": {
+              "actual_net": 35.84,
+              "closed_lifecycles": 26,
+              "entries": 26,
+              "stressed_net_2x": 35.4
+            },
+            "RETURN": {
+              "actual_net": 18.48,
+              "closed_lifecycles": 24,
+              "entries": 24,
+              "stressed_net_2x": 18.132
+            }
+          },
+          "entries": 265,
+          "risk_admission_skips": 3,
+          "slot_exchanges": 1,
+          "stressed_closed_drawdown": 15.008,
+          "stressed_net_2x": 66.3885
+        },
+        "2026_ytd": {
+          "actual_closed_drawdown": 0.0,
+          "actual_net": 0,
+          "closed_lifecycles": 0,
+          "components": {
+            "CROSS": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "PASSIVE": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "PRESSURE": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RC16": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RC4": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RETURN": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            }
+          },
+          "entries": 0,
+          "risk_admission_skips": 0,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 0.0,
+          "stressed_net_2x": 0
+        },
+        "exchange_rows": [
+          {
+            "candidate": "RETURN",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.93,
+            "candidate_close_stressed": -1.944,
+            "candidate_score": 0.038414,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -1.35,
+            "incumbent_close_stressed": -1.364,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.08 16:00:00",
+            "slot_price": -0.005033,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.15,
+            "candidate_close_stressed": -1.162,
+            "candidate_score": 0.035795,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -0.63,
+            "incumbent_close_stressed": -0.644,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.10 17:00:00",
+            "slot_price": 0.012479,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -0.18,
+            "candidate_close_stressed": -0.192,
+            "candidate_score": 0.015096,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -0.86,
+            "incumbent_close_stressed": -0.874,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.14 17:00:00",
+            "slot_price": -0.001739,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.17,
+            "candidate_close_stressed": -1.182,
+            "candidate_score": -0.037737,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -1.4,
+            "incumbent_close_stressed": -1.414,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.31 17:00:00",
+            "slot_price": -0.001066,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 0.85,
+            "candidate_close_stressed": 0.838,
+            "candidate_score": -0.012551,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.95,
+            "incumbent_close_stressed": -0.964,
+            "retry_risk_skip": false,
+            "server_time": "2025.02.10 17:00:00",
+            "slot_price": 0.001575,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -2.4,
+            "candidate_close_stressed": -2.412,
+            "candidate_score": 0.069195,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.33,
+            "incumbent_close_stressed": -0.344,
+            "retry_risk_skip": false,
+            "server_time": "2025.03.05 17:00:00",
+            "slot_price": 0.006242,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 1.28,
+            "candidate_close_stressed": 1.266,
+            "candidate_score": 0.058321,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -1.37,
+            "incumbent_close_stressed": -1.384,
+            "retry_risk_skip": false,
+            "server_time": "2025.03.11 17:00:00",
+            "slot_price": -0.00313,
+            "year": "2025"
+          },
+          {
+            "candidate": "RETURN",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 2.05,
+            "candidate_close_stressed": 2.036,
+            "candidate_score": 0.062163,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.18,
+            "incumbent_close_stressed": -0.194,
+            "retry_risk_skip": false,
+            "server_time": "2025.05.23 16:00:00",
+            "slot_price": 0.018341,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -0.09,
+            "candidate_close_stressed": -0.102,
+            "candidate_score": -0.023881,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -2.42,
+            "incumbent_close_stressed": -2.688,
+            "retry_risk_skip": false,
+            "server_time": "2025.11.03 17:00:00",
+            "slot_price": 0.005128,
+            "year": "2025"
+          }
+        ],
+        "first_fixed_lot_step_2x": null,
+        "orphan_release_count": 0,
+        "retry_skip_after_release_count": 0,
+        "total": {
+          "actual_closed_drawdown": 20.65,
+          "actual_net": 138.08,
+          "closed_lifecycles": 561,
+          "components": {
+            "CROSS": {
+              "actual_net": 37.01,
+              "closed_lifecycles": 200,
+              "entries": 200,
+              "stressed_net_2x": 34.109
+            },
+            "PASSIVE": {
+              "actual_net": 5.09,
+              "closed_lifecycles": 129,
+              "entries": 129,
+              "stressed_net_2x": 3.0195
+            },
+            "PRESSURE": {
+              "actual_net": 4.33,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 3.875
+            },
+            "RC16": {
+              "actual_net": 21.49,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 20.143
+            },
+            "RC4": {
+              "actual_net": 30.16,
+              "closed_lifecycles": 67,
+              "entries": 67,
+              "stressed_net_2x": 29.142
+            },
+            "RETURN": {
+              "actual_net": 40.0,
+              "closed_lifecycles": 54,
+              "entries": 54,
+              "stressed_net_2x": 39.042
+            }
+          },
+          "entries": 561,
+          "risk_admission_skips": 15,
+          "slot_exchanges": 9,
+          "stressed_closed_drawdown": 21.962,
+          "stressed_net_2x": 129.3305
+        }
+      },
+      "exchange_summary": {
+        "completed_lifecycles": 561,
+        "headroom_blocks": 21,
+        "mode": "loser-residual",
+        "pending_candidate_blocks": 4,
+        "qualified_exchanges": 9,
+        "release_failures": 0,
+        "release_successes": 9,
+        "retry_blocks": 0,
+        "risk_blocks_observed": 24,
+        "signals": 606
+      },
+      "final": {
+        "actual_net": 138.08,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 15,
+        "safety_stopped": false,
+        "stressed_closed_drawdown": 21.962,
+        "stressed_net_2x": 129.3305
+      },
+      "report": {
+        "actual_balance_drawdown": 20.65,
+        "actual_equity_drawdown": 21.65,
+        "actual_net": 138.08,
+        "entries": 561,
+        "history_quality": "100% \uc2e4\uc81c \ud2f1",
+        "profit_factor": 1.43,
+        "recovery_factor": 6.38,
+        "sharpe_ratio": 5.35
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 46045472,
+          "path": "lab/artifacts/backtests/slot-shadow-price/market-only-loser-residual-agent.log",
+          "sha256": "6a73d6d5151456c6334ba434a695ff8c17632e8935e8becb8bf4c3980b90590d"
+        },
+        "events": [
+          {
+            "bytes": 1643229,
+            "path": "lab/artifacts/backtests/slot-shadow-price/market-only-loser-residual-slot-shadow-exchange-v1-events-a.csv",
+            "sha256": "e1253293327569cf9f3ac293763b5e1f4ce259e1d6eaea99265ac2f51c36a0f5"
+          },
+          {
+            "bytes": 18118,
+            "path": "lab/artifacts/backtests/slot-shadow-price/market-only-loser-residual-slot-shadow-exchange-v1-events-b.csv",
+            "sha256": "fc04a8dbf4d759cc578bbb989848151db27ff43b709ac1fefb1f717830acd7c8"
+          }
+        ],
+        "report": {
+          "bytes": 1114950,
+          "path": "lab/artifacts/backtests/slot-shadow-price/market-only-loser-residual-2025.htm",
+          "sha256": "ba79deecdfaf11d2097636cf38a4abd52463bce037939783f4033f66540f22bb"
+        }
+      }
+    },
+    "market_only_receiver_wounded": {
+      "events": {
+        "2025": {
+          "actual_closed_drawdown": 20.4,
+          "actual_net": 134.55,
+          "closed_lifecycles": 557,
+          "components": {
+            "CROSS": {
+              "actual_net": 37.27,
+              "closed_lifecycles": 197,
+              "entries": 197,
+              "stressed_net_2x": 34.405
+            },
+            "PASSIVE": {
+              "actual_net": 5.32,
+              "closed_lifecycles": 129,
+              "entries": 129,
+              "stressed_net_2x": 3.333
+            },
+            "PRESSURE": {
+              "actual_net": 2.95,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 2.495
+            },
+            "RC16": {
+              "actual_net": 16.55,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 15.203
+            },
+            "RC4": {
+              "actual_net": 29.8,
+              "closed_lifecycles": 67,
+              "entries": 67,
+              "stressed_net_2x": 28.782
+            },
+            "RETURN": {
+              "actual_net": 42.66,
+              "closed_lifecycles": 53,
+              "entries": 53,
+              "stressed_net_2x": 41.716
+            }
+          },
+          "entries": 557,
+          "risk_admission_skips": 19,
+          "slot_exchanges": 5,
+          "stressed_closed_drawdown": 21.3985,
+          "stressed_net_2x": 125.934
+        },
+        "2025_h1": {
+          "actual_closed_drawdown": 20.4,
+          "actual_net": 65.57,
+          "closed_lifecycles": 292,
+          "components": {
+            "CROSS": {
+              "actual_net": 36.07,
+              "closed_lifecycles": 90,
+              "entries": 90,
+              "stressed_net_2x": 34.613
+            },
+            "PASSIVE": {
+              "actual_net": -4.78,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": -5.7475
+            },
+            "PRESSURE": {
+              "actual_net": -0.39,
+              "closed_lifecycles": 23,
+              "entries": 23,
+              "stressed_net_2x": -0.717
+            },
+            "RC16": {
+              "actual_net": 16.64,
+              "closed_lifecycles": 48,
+              "entries": 48,
+              "stressed_net_2x": 15.961
+            },
+            "RC4": {
+              "actual_net": -6.1,
+              "closed_lifecycles": 41,
+              "entries": 41,
+              "stressed_net_2x": -6.678
+            },
+            "RETURN": {
+              "actual_net": 24.13,
+              "closed_lifecycles": 29,
+              "entries": 29,
+              "stressed_net_2x": 23.534
+            }
+          },
+          "entries": 292,
+          "risk_admission_skips": 16,
+          "slot_exchanges": 4,
+          "stressed_closed_drawdown": 21.3985,
+          "stressed_net_2x": 60.9655
+        },
+        "2025_h2": {
+          "actual_closed_drawdown": 14.49,
+          "actual_net": 68.98,
+          "closed_lifecycles": 265,
+          "components": {
+            "CROSS": {
+              "actual_net": 1.2,
+              "closed_lifecycles": 107,
+              "entries": 107,
+              "stressed_net_2x": -0.208
+            },
+            "PASSIVE": {
+              "actual_net": 10.1,
+              "closed_lifecycles": 68,
+              "entries": 68,
+              "stressed_net_2x": 9.0805
+            },
+            "PRESSURE": {
+              "actual_net": 3.34,
+              "closed_lifecycles": 9,
+              "entries": 9,
+              "stressed_net_2x": 3.212
+            },
+            "RC16": {
+              "actual_net": -0.09,
+              "closed_lifecycles": 31,
+              "entries": 31,
+              "stressed_net_2x": -0.758
+            },
+            "RC4": {
+              "actual_net": 35.9,
+              "closed_lifecycles": 26,
+              "entries": 26,
+              "stressed_net_2x": 35.46
+            },
+            "RETURN": {
+              "actual_net": 18.53,
+              "closed_lifecycles": 24,
+              "entries": 24,
+              "stressed_net_2x": 18.182
+            }
+          },
+          "entries": 265,
+          "risk_admission_skips": 3,
+          "slot_exchanges": 1,
+          "stressed_closed_drawdown": 14.928,
+          "stressed_net_2x": 64.9685
+        },
+        "2026_ytd": {
+          "actual_closed_drawdown": 0.0,
+          "actual_net": 0,
+          "closed_lifecycles": 0,
+          "components": {
+            "CROSS": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "PASSIVE": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "PRESSURE": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RC16": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RC4": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RETURN": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            }
+          },
+          "entries": 0,
+          "risk_admission_skips": 0,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 0.0,
+          "stressed_net_2x": 0
+        },
+        "exchange_rows": [
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.15,
+            "candidate_close_stressed": -1.162,
+            "candidate_score": 0.535853,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -0.63,
+            "incumbent_close_stressed": -0.644,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.10 17:00:00",
+            "slot_price": -0.20458,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.17,
+            "candidate_close_stressed": -1.182,
+            "candidate_score": -0.032788,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -1.54,
+            "incumbent_close_stressed": -1.554,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.31 17:00:00",
+            "slot_price": -0.722046,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 1.28,
+            "candidate_close_stressed": 1.266,
+            "candidate_score": 0.08253,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -1.76,
+            "incumbent_close_stressed": -1.774,
+            "retry_risk_skip": false,
+            "server_time": "2025.03.11 17:00:00",
+            "slot_price": -0.591429,
+            "year": "2025"
+          },
+          {
+            "candidate": "RETURN",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 2.05,
+            "candidate_close_stressed": 2.036,
+            "candidate_score": 0.574575,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.18,
+            "incumbent_close_stressed": -0.194,
+            "retry_risk_skip": false,
+            "server_time": "2025.05.23 16:00:00",
+            "slot_price": -0.02588,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -0.09,
+            "candidate_close_stressed": -0.102,
+            "candidate_score": -0.023599,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -2.42,
+            "incumbent_close_stressed": -2.688,
+            "retry_risk_skip": false,
+            "server_time": "2025.11.03 17:00:00",
+            "slot_price": -0.609919,
+            "year": "2025"
+          }
+        ],
+        "first_fixed_lot_step_2x": null,
+        "orphan_release_count": 0,
+        "retry_skip_after_release_count": 0,
+        "total": {
+          "actual_closed_drawdown": 20.4,
+          "actual_net": 134.55,
+          "closed_lifecycles": 557,
+          "components": {
+            "CROSS": {
+              "actual_net": 37.27,
+              "closed_lifecycles": 197,
+              "entries": 197,
+              "stressed_net_2x": 34.405
+            },
+            "PASSIVE": {
+              "actual_net": 5.32,
+              "closed_lifecycles": 129,
+              "entries": 129,
+              "stressed_net_2x": 3.333
+            },
+            "PRESSURE": {
+              "actual_net": 2.95,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 2.495
+            },
+            "RC16": {
+              "actual_net": 16.55,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 15.203
+            },
+            "RC4": {
+              "actual_net": 29.8,
+              "closed_lifecycles": 67,
+              "entries": 67,
+              "stressed_net_2x": 28.782
+            },
+            "RETURN": {
+              "actual_net": 42.66,
+              "closed_lifecycles": 53,
+              "entries": 53,
+              "stressed_net_2x": 41.716
+            }
+          },
+          "entries": 557,
+          "risk_admission_skips": 19,
+          "slot_exchanges": 5,
+          "stressed_closed_drawdown": 21.3985,
+          "stressed_net_2x": 125.934
+        }
+      },
+      "exchange_summary": {
+        "completed_lifecycles": 557,
+        "headroom_blocks": 21,
+        "mode": "receiver-wounded",
+        "pending_candidate_blocks": 4,
+        "qualified_exchanges": 5,
+        "release_failures": 0,
+        "release_successes": 5,
+        "retry_blocks": 0,
+        "risk_blocks_observed": 24,
+        "signals": 606
+      },
+      "final": {
+        "actual_net": 134.55,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 19,
+        "safety_stopped": false,
+        "stressed_closed_drawdown": 21.3985,
+        "stressed_net_2x": 125.934
+      },
+      "report": {
+        "actual_balance_drawdown": 20.4,
+        "actual_equity_drawdown": 21.41,
+        "actual_net": 134.55,
+        "entries": 557,
+        "history_quality": "100% \uc2e4\uc81c \ud2f1",
+        "profit_factor": 1.42,
+        "recovery_factor": 6.28,
+        "sharpe_ratio": 5.19
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 43999258,
+          "path": "lab/artifacts/backtests/slot-shadow-price/market-only-receiver-wounded-agent.log",
+          "sha256": "da6be0b96d7fda7ac0ba7547ddd032e1b181d467164a142852f38119f5209e23"
+        },
+        "events": [
+          {
+            "bytes": 1621398,
+            "path": "lab/artifacts/backtests/slot-shadow-price/market-only-receiver-wounded-slot-shadow-exchange-v1-events-a.csv",
+            "sha256": "f37e878448c44cddfd9da6325fca8bf3fbe4f7ff2233c69e2dec81f18713d933"
+          },
+          {
+            "bytes": 11171,
+            "path": "lab/artifacts/backtests/slot-shadow-price/market-only-receiver-wounded-slot-shadow-exchange-v1-events-b.csv",
+            "sha256": "b9da7171da408a9de99b3b759378a55ceab189a25581b604e1622f3b0bfee52a"
+          }
+        ],
+        "report": {
+          "bytes": 1107430,
+          "path": "lab/artifacts/backtests/slot-shadow-price/market-only-receiver-wounded-2025.htm",
+          "sha256": "88f8e0ff6b5730c3e23a348fdae0fbcf20bc0ea802fc96faea3aecf860aa6d79"
+        }
+      }
+    }
+  },
+  "runtime_faults": {
+    "broker_mismatch": 0,
+    "foreign_exposure": 0,
+    "persistence_failed": 0,
+    "protection_calculation_failures": 0,
+    "protection_mismatches": 0,
+    "release_failures": 0,
+    "safety_stopped": 0
+  },
+  "transaction_boundary_discovery": {
+    "headroom_only_nonatomic_runs": {
+      "loser_residual": {
+        "events": {
+          "2025": {
+            "actual_closed_drawdown": 18.49,
+            "actual_net": 142.0,
+            "closed_lifecycles": 563,
+            "components": {
+              "CROSS": {
+                "actual_net": 38.42,
+                "closed_lifecycles": 201,
+                "entries": 201,
+                "stressed_net_2x": 35.507
+              },
+              "PASSIVE": {
+                "actual_net": 7.4,
+                "closed_lifecycles": 130,
+                "entries": 130,
+                "stressed_net_2x": 5.399
+              },
+              "PRESSURE": {
+                "actual_net": 4.22,
+                "closed_lifecycles": 32,
+                "entries": 32,
+                "stressed_net_2x": 3.765
+              },
+              "RC16": {
+                "actual_net": 23.1,
+                "closed_lifecycles": 79,
+                "entries": 79,
+                "stressed_net_2x": 21.753
+              },
+              "RC4": {
+                "actual_net": 29.2,
+                "closed_lifecycles": 67,
+                "entries": 67,
+                "stressed_net_2x": 28.182
+              },
+              "RETURN": {
+                "actual_net": 39.66,
+                "closed_lifecycles": 54,
+                "entries": 54,
+                "stressed_net_2x": 38.702
+              }
+            },
+            "entries": 563,
+            "risk_admission_skips": 11,
+            "slot_exchanges": 11,
+            "stressed_closed_drawdown": 19.7305,
+            "stressed_net_2x": 133.308
+          },
+          "2025_h1": {
+            "actual_closed_drawdown": 18.49,
+            "actual_net": 70.41,
+            "closed_lifecycles": 298,
+            "components": {
+              "CROSS": {
+                "actual_net": 35.85,
+                "closed_lifecycles": 94,
+                "entries": 94,
+                "stressed_net_2x": 34.345
+              },
+              "PASSIVE": {
+                "actual_net": -2.7,
+                "closed_lifecycles": 62,
+                "entries": 62,
+                "stressed_net_2x": -3.6815
+              },
+              "PRESSURE": {
+                "actual_net": 0.97,
+                "closed_lifecycles": 23,
+                "entries": 23,
+                "stressed_net_2x": 0.643
+              },
+              "RC16": {
+                "actual_net": 21.52,
+                "closed_lifecycles": 48,
+                "entries": 48,
+                "stressed_net_2x": 20.841
+              },
+              "RC4": {
+                "actual_net": -6.56,
+                "closed_lifecycles": 41,
+                "entries": 41,
+                "stressed_net_2x": -7.138
+              },
+              "RETURN": {
+                "actual_net": 21.33,
+                "closed_lifecycles": 30,
+                "entries": 30,
+                "stressed_net_2x": 20.72
+              }
+            },
+            "entries": 298,
+            "risk_admission_skips": 8,
+            "slot_exchanges": 10,
+            "stressed_closed_drawdown": 19.7305,
+            "stressed_net_2x": 65.7295
+          },
+          "2025_h2": {
+            "actual_closed_drawdown": 14.7,
+            "actual_net": 71.59,
+            "closed_lifecycles": 265,
+            "components": {
+              "CROSS": {
+                "actual_net": 2.57,
+                "closed_lifecycles": 107,
+                "entries": 107,
+                "stressed_net_2x": 1.162
+              },
+              "PASSIVE": {
+                "actual_net": 10.1,
+                "closed_lifecycles": 68,
+                "entries": 68,
+                "stressed_net_2x": 9.0805
+              },
+              "PRESSURE": {
+                "actual_net": 3.25,
+                "closed_lifecycles": 9,
+                "entries": 9,
+                "stressed_net_2x": 3.122
+              },
+              "RC16": {
+                "actual_net": 1.58,
+                "closed_lifecycles": 31,
+                "entries": 31,
+                "stressed_net_2x": 0.912
+              },
+              "RC4": {
+                "actual_net": 35.76,
+                "closed_lifecycles": 26,
+                "entries": 26,
+                "stressed_net_2x": 35.32
+              },
+              "RETURN": {
+                "actual_net": 18.33,
+                "closed_lifecycles": 24,
+                "entries": 24,
+                "stressed_net_2x": 17.982
+              }
+            },
+            "entries": 265,
+            "risk_admission_skips": 3,
+            "slot_exchanges": 1,
+            "stressed_closed_drawdown": 15.138,
+            "stressed_net_2x": 67.5785
+          },
+          "2026_ytd": {
+            "actual_closed_drawdown": 0.0,
+            "actual_net": 0,
+            "closed_lifecycles": 0,
+            "components": {
+              "CROSS": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "PASSIVE": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "PRESSURE": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RC16": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RC4": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RETURN": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              }
+            },
+            "entries": 0,
+            "risk_admission_skips": 0,
+            "slot_exchanges": 0,
+            "stressed_closed_drawdown": 0.0,
+            "stressed_net_2x": 0
+          },
+          "exchange_rows": [
+            {
+              "candidate": "RETURN",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -1.93,
+              "candidate_close_stressed": -1.944,
+              "candidate_score": 0.038414,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -1.35,
+              "incumbent_close_stressed": -1.364,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.08 16:00:00",
+              "slot_price": -0.005033,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -1.15,
+              "candidate_close_stressed": -1.162,
+              "candidate_score": 0.035795,
+              "incumbent": "PASSIVE",
+              "incumbent_close_actual": -0.63,
+              "incumbent_close_stressed": -0.644,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.10 17:00:00",
+              "slot_price": 0.012479,
+              "year": "2025"
+            },
+            {
+              "candidate": "PASSIVE",
+              "candidate_admission": "pending_fill",
+              "candidate_close_actual": 1.01,
+              "candidate_close_stressed": 0.996,
+              "candidate_score": 0.014362,
+              "incumbent": "RC4",
+              "incumbent_close_actual": -0.87,
+              "incumbent_close_stressed": -0.884,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.14 15:15:00",
+              "slot_price": -0.003477,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -1.17,
+              "candidate_close_stressed": -1.182,
+              "candidate_score": -0.037371,
+              "incumbent": "RC4",
+              "incumbent_close_actual": -1.4,
+              "incumbent_close_stressed": -1.414,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.31 17:00:00",
+              "slot_price": -0.001219,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 0.85,
+              "candidate_close_stressed": 0.838,
+              "candidate_score": -0.012459,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -0.95,
+              "incumbent_close_stressed": -0.964,
+              "retry_risk_skip": false,
+              "server_time": "2025.02.10 17:00:00",
+              "slot_price": 0.001468,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -2.41,
+              "candidate_close_stressed": -2.422,
+              "candidate_score": 0.068693,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -0.33,
+              "incumbent_close_stressed": -0.344,
+              "retry_risk_skip": false,
+              "server_time": "2025.03.05 17:00:00",
+              "slot_price": 0.006113,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 1.28,
+              "candidate_close_stressed": 1.266,
+              "candidate_score": 0.057771,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -1.37,
+              "incumbent_close_stressed": -1.384,
+              "retry_risk_skip": false,
+              "server_time": "2025.03.11 17:00:00",
+              "slot_price": -0.003225,
+              "year": "2025"
+            },
+            {
+              "candidate": "PASSIVE",
+              "candidate_admission": "pending_fill",
+              "candidate_close_actual": -1.79,
+              "candidate_close_stressed": -1.804,
+              "candidate_score": 0.013803,
+              "incumbent": "RC4",
+              "incumbent_close_actual": -1.95,
+              "incumbent_close_stressed": -1.964,
+              "retry_risk_skip": false,
+              "server_time": "2025.05.13 15:00:00",
+              "slot_price": 0.032947,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 1.7,
+              "candidate_close_stressed": 1.688,
+              "candidate_score": 0.083654,
+              "incumbent": "PASSIVE",
+              "incumbent_close_actual": -1.79,
+              "incumbent_close_stressed": -1.804,
+              "retry_risk_skip": false,
+              "server_time": "2025.05.13 17:00:00",
+              "slot_price": 0.006902,
+              "year": "2025"
+            },
+            {
+              "candidate": "RETURN",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 2.05,
+              "candidate_close_stressed": 2.036,
+              "candidate_score": 0.06094,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -0.18,
+              "incumbent_close_stressed": -0.194,
+              "retry_risk_skip": false,
+              "server_time": "2025.05.23 16:00:00",
+              "slot_price": 0.018304,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -0.09,
+              "candidate_close_stressed": -0.102,
+              "candidate_score": -0.024241,
+              "incumbent": "RC16",
+              "incumbent_close_actual": -2.42,
+              "incumbent_close_stressed": -2.688,
+              "retry_risk_skip": false,
+              "server_time": "2025.11.03 17:00:00",
+              "slot_price": 0.005016,
+              "year": "2025"
+            }
+          ],
+          "first_fixed_lot_step_2x": null,
+          "orphan_release_count": 0,
+          "retry_skip_after_release_count": 0,
+          "total": {
+            "actual_closed_drawdown": 18.49,
+            "actual_net": 142.0,
+            "closed_lifecycles": 563,
+            "components": {
+              "CROSS": {
+                "actual_net": 38.42,
+                "closed_lifecycles": 201,
+                "entries": 201,
+                "stressed_net_2x": 35.507
+              },
+              "PASSIVE": {
+                "actual_net": 7.4,
+                "closed_lifecycles": 130,
+                "entries": 130,
+                "stressed_net_2x": 5.399
+              },
+              "PRESSURE": {
+                "actual_net": 4.22,
+                "closed_lifecycles": 32,
+                "entries": 32,
+                "stressed_net_2x": 3.765
+              },
+              "RC16": {
+                "actual_net": 23.1,
+                "closed_lifecycles": 79,
+                "entries": 79,
+                "stressed_net_2x": 21.753
+              },
+              "RC4": {
+                "actual_net": 29.2,
+                "closed_lifecycles": 67,
+                "entries": 67,
+                "stressed_net_2x": 28.182
+              },
+              "RETURN": {
+                "actual_net": 39.66,
+                "closed_lifecycles": 54,
+                "entries": 54,
+                "stressed_net_2x": 38.702
+              }
+            },
+            "entries": 563,
+            "risk_admission_skips": 11,
+            "slot_exchanges": 11,
+            "stressed_closed_drawdown": 19.7305,
+            "stressed_net_2x": 133.308
+          }
+        },
+        "exchange_summary": {
+          "completed_lifecycles": 563,
+          "headroom_blocks": 21,
+          "mode": "loser-residual",
+          "pending_candidate_blocks": 0,
+          "qualified_exchanges": 11,
+          "release_failures": 0,
+          "release_successes": 11,
+          "retry_blocks": 0,
+          "risk_blocks_observed": 22,
+          "signals": 604
+        },
+        "final": {
+          "actual_net": 142.0,
+          "broker_mismatch": false,
+          "foreign_exposure": false,
+          "persistence_failed": false,
+          "protection_calculation_failures": 0,
+          "protection_mismatches": 0,
+          "risk_admission_skips": 11,
+          "safety_stopped": false,
+          "stressed_closed_drawdown": 19.7305,
+          "stressed_net_2x": 133.308
+        },
+        "report": {
+          "actual_balance_drawdown": 18.49,
+          "actual_equity_drawdown": 21.57,
+          "actual_net": 142.0,
+          "entries": 563,
+          "history_quality": "100% \uc2e4\uc81c \ud2f1",
+          "profit_factor": 1.45,
+          "recovery_factor": 6.58,
+          "sharpe_ratio": 5.52
+        },
+        "sources": {
+          "agent_log": {
+            "bytes": 32294652,
+            "path": "lab/artifacts/backtests/slot-shadow-price/loser-residual-agent.log",
+            "sha256": "f2fc9d6def33cb9e325a1480fd6b3b2e942f4c24134d27aa7ad246d67ec61c07"
+          },
+          "events": [
+            {
+              "bytes": 1639737,
+              "path": "lab/artifacts/backtests/slot-shadow-price/loser-residual-events-a.csv",
+              "sha256": "b08953438fc28bb921fd5544e6d1689ec1c1be010bfe7f608fb54b02b5a74bed"
+            },
+            {
+              "bytes": 19090,
+              "path": "lab/artifacts/backtests/slot-shadow-price/loser-residual-events-b.csv",
+              "sha256": "3f92af9fb5de625e1ecac62a9fb11b7454661b13965aa91a7ebdacceab57a2a5"
+            }
+          ],
+          "report": {
+            "bytes": 1118722,
+            "path": "lab/artifacts/backtests/slot-shadow-price/loser-residual-2025.htm",
+            "sha256": "7189391bd053ae5071732521e567fbbe19dd8a40c4beadb178f4726160f1428d"
+          }
+        }
+      },
+      "mature_wounded": {
+        "events": {
+          "2025": {
+            "actual_closed_drawdown": 24.09,
+            "actual_net": 134.42,
+            "closed_lifecycles": 557,
+            "components": {
+              "CROSS": {
+                "actual_net": 38.88,
+                "closed_lifecycles": 198,
+                "entries": 198,
+                "stressed_net_2x": 36.003
+              },
+              "PASSIVE": {
+                "actual_net": 3.69,
+                "closed_lifecycles": 129,
+                "entries": 129,
+                "stressed_net_2x": 1.703
+              },
+              "PRESSURE": {
+                "actual_net": 2.09,
+                "closed_lifecycles": 32,
+                "entries": 32,
+                "stressed_net_2x": 1.635
+              },
+              "RC16": {
+                "actual_net": 19.72,
+                "closed_lifecycles": 79,
+                "entries": 79,
+                "stressed_net_2x": 18.373
+              },
+              "RC4": {
+                "actual_net": 29.51,
+                "closed_lifecycles": 67,
+                "entries": 67,
+                "stressed_net_2x": 28.492
+              },
+              "RETURN": {
+                "actual_net": 40.53,
+                "closed_lifecycles": 52,
+                "entries": 52,
+                "stressed_net_2x": 39.6
+              }
+            },
+            "entries": 557,
+            "risk_admission_skips": 18,
+            "slot_exchanges": 6,
+            "stressed_closed_drawdown": 25.3045,
+            "stressed_net_2x": 125.806
+          },
+          "2025_h1": {
+            "actual_closed_drawdown": 24.09,
+            "actual_net": 65.41,
+            "closed_lifecycles": 292,
+            "components": {
+              "CROSS": {
+                "actual_net": 37.67,
+                "closed_lifecycles": 91,
+                "entries": 91,
+                "stressed_net_2x": 36.201
+              },
+              "PASSIVE": {
+                "actual_net": -6.41,
+                "closed_lifecycles": 61,
+                "entries": 61,
+                "stressed_net_2x": -7.3775
+              },
+              "PRESSURE": {
+                "actual_net": -1.25,
+                "closed_lifecycles": 23,
+                "entries": 23,
+                "stressed_net_2x": -1.577
+              },
+              "RC16": {
+                "actual_net": 19.8,
+                "closed_lifecycles": 48,
+                "entries": 48,
+                "stressed_net_2x": 19.121
+              },
+              "RC4": {
+                "actual_net": -6.39,
+                "closed_lifecycles": 41,
+                "entries": 41,
+                "stressed_net_2x": -6.968
+              },
+              "RETURN": {
+                "actual_net": 21.99,
+                "closed_lifecycles": 28,
+                "entries": 28,
+                "stressed_net_2x": 21.408
+              }
+            },
+            "entries": 292,
+            "risk_admission_skips": 15,
+            "slot_exchanges": 5,
+            "stressed_closed_drawdown": 25.3045,
+            "stressed_net_2x": 60.8075
+          },
+          "2025_h2": {
+            "actual_closed_drawdown": 14.48,
+            "actual_net": 69.01,
+            "closed_lifecycles": 265,
+            "components": {
+              "CROSS": {
+                "actual_net": 1.21,
+                "closed_lifecycles": 107,
+                "entries": 107,
+                "stressed_net_2x": -0.198
+              },
+              "PASSIVE": {
+                "actual_net": 10.1,
+                "closed_lifecycles": 68,
+                "entries": 68,
+                "stressed_net_2x": 9.0805
+              },
+              "PRESSURE": {
+                "actual_net": 3.34,
+                "closed_lifecycles": 9,
+                "entries": 9,
+                "stressed_net_2x": 3.212
+              },
+              "RC16": {
+                "actual_net": -0.08,
+                "closed_lifecycles": 31,
+                "entries": 31,
+                "stressed_net_2x": -0.748
+              },
+              "RC4": {
+                "actual_net": 35.9,
+                "closed_lifecycles": 26,
+                "entries": 26,
+                "stressed_net_2x": 35.46
+              },
+              "RETURN": {
+                "actual_net": 18.54,
+                "closed_lifecycles": 24,
+                "entries": 24,
+                "stressed_net_2x": 18.192
+              }
+            },
+            "entries": 265,
+            "risk_admission_skips": 3,
+            "slot_exchanges": 1,
+            "stressed_closed_drawdown": 14.918,
+            "stressed_net_2x": 64.9985
+          },
+          "2026_ytd": {
+            "actual_closed_drawdown": 0.0,
+            "actual_net": 0,
+            "closed_lifecycles": 0,
+            "components": {
+              "CROSS": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "PASSIVE": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "PRESSURE": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RC16": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RC4": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RETURN": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              }
+            },
+            "entries": 0,
+            "risk_admission_skips": 0,
+            "slot_exchanges": 0,
+            "stressed_closed_drawdown": 0.0,
+            "stressed_net_2x": 0
+          },
+          "exchange_rows": [
+            {
+              "candidate": "PASSIVE",
+              "candidate_admission": "pending_not_filled",
+              "candidate_close_actual": null,
+              "candidate_close_stressed": null,
+              "candidate_score": 0.003959,
+              "incumbent": "RC16",
+              "incumbent_close_actual": -1.11,
+              "incumbent_close_stressed": -1.124,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.14 15:30:00",
+              "slot_price": -0.434752,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -1.17,
+              "candidate_close_stressed": -1.182,
+              "candidate_score": -0.025096,
+              "incumbent": "RC16",
+              "incumbent_close_actual": -1.54,
+              "incumbent_close_stressed": -1.554,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.31 17:00:00",
+              "slot_price": -0.729583,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 0.85,
+              "candidate_close_stressed": 0.838,
+              "candidate_score": 0.000445,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -0.95,
+              "incumbent_close_stressed": -0.964,
+              "retry_risk_skip": false,
+              "server_time": "2025.02.10 17:00:00",
+              "slot_price": -0.347733,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 1.28,
+              "candidate_close_stressed": 1.266,
+              "candidate_score": 0.073286,
+              "incumbent": "RC4",
+              "incumbent_close_actual": -1.76,
+              "incumbent_close_stressed": -1.774,
+              "retry_risk_skip": false,
+              "server_time": "2025.03.11 17:00:00",
+              "slot_price": -0.565695,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 0.91,
+              "candidate_close_stressed": 0.898,
+              "candidate_score": 0.093105,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -1.7,
+              "incumbent_close_stressed": -1.714,
+              "retry_risk_skip": false,
+              "server_time": "2025.05.23 17:00:00",
+              "slot_price": -0.383847,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -0.09,
+              "candidate_close_stressed": -0.102,
+              "candidate_score": -0.023617,
+              "incumbent": "RC16",
+              "incumbent_close_actual": -2.42,
+              "incumbent_close_stressed": -2.688,
+              "retry_risk_skip": false,
+              "server_time": "2025.11.03 17:00:00",
+              "slot_price": -0.610317,
+              "year": "2025"
+            }
+          ],
+          "first_fixed_lot_step_2x": null,
+          "orphan_release_count": 1,
+          "retry_skip_after_release_count": 0,
+          "total": {
+            "actual_closed_drawdown": 24.09,
+            "actual_net": 134.42,
+            "closed_lifecycles": 557,
+            "components": {
+              "CROSS": {
+                "actual_net": 38.88,
+                "closed_lifecycles": 198,
+                "entries": 198,
+                "stressed_net_2x": 36.003
+              },
+              "PASSIVE": {
+                "actual_net": 3.69,
+                "closed_lifecycles": 129,
+                "entries": 129,
+                "stressed_net_2x": 1.703
+              },
+              "PRESSURE": {
+                "actual_net": 2.09,
+                "closed_lifecycles": 32,
+                "entries": 32,
+                "stressed_net_2x": 1.635
+              },
+              "RC16": {
+                "actual_net": 19.72,
+                "closed_lifecycles": 79,
+                "entries": 79,
+                "stressed_net_2x": 18.373
+              },
+              "RC4": {
+                "actual_net": 29.51,
+                "closed_lifecycles": 67,
+                "entries": 67,
+                "stressed_net_2x": 28.492
+              },
+              "RETURN": {
+                "actual_net": 40.53,
+                "closed_lifecycles": 52,
+                "entries": 52,
+                "stressed_net_2x": 39.6
+              }
+            },
+            "entries": 557,
+            "risk_admission_skips": 18,
+            "slot_exchanges": 6,
+            "stressed_closed_drawdown": 25.3045,
+            "stressed_net_2x": 125.806
+          }
+        },
+        "exchange_summary": {
+          "completed_lifecycles": 557,
+          "headroom_blocks": 21,
+          "mode": "mature-wounded",
+          "pending_candidate_blocks": 0,
+          "qualified_exchanges": 6,
+          "release_failures": 0,
+          "release_successes": 6,
+          "retry_blocks": 0,
+          "risk_blocks_observed": 24,
+          "signals": 606
+        },
+        "final": {
+          "actual_net": 134.42,
+          "broker_mismatch": false,
+          "foreign_exposure": false,
+          "persistence_failed": false,
+          "protection_calculation_failures": 0,
+          "protection_mismatches": 0,
+          "risk_admission_skips": 18,
+          "safety_stopped": false,
+          "stressed_closed_drawdown": 25.3045,
+          "stressed_net_2x": 125.806
+        },
+        "report": {
+          "actual_balance_drawdown": 24.09,
+          "actual_equity_drawdown": 23.07,
+          "actual_net": 134.42,
+          "entries": 557,
+          "history_quality": "100% \uc2e4\uc81c \ud2f1",
+          "profit_factor": 1.42,
+          "recovery_factor": 5.83,
+          "sharpe_ratio": 5.35
+        },
+        "sources": {
+          "agent_log": {
+            "bytes": 30239884,
+            "path": "lab/artifacts/backtests/slot-shadow-price/mature-wounded-agent.log",
+            "sha256": "9121d9cb0259dc4f8c82521f022a445fe98eb5d96d6f55fb58c45ce2905df88c"
+          },
+          "events": [
+            {
+              "bytes": 1624953,
+              "path": "lab/artifacts/backtests/slot-shadow-price/mature-wounded-events-a.csv",
+              "sha256": "6abe4f484a044e95118c190c284e9c2ecd2bc80c4a1b84afd280b8ae35448ac4"
+            },
+            {
+              "bytes": 13533,
+              "path": "lab/artifacts/backtests/slot-shadow-price/mature-wounded-events-b.csv",
+              "sha256": "a0add18704acbb08d03c3c57f3ebb82831f61c54b80b22b41ae477c5b50912ed"
+            }
+          ],
+          "report": {
+            "bytes": 1107926,
+            "path": "lab/artifacts/backtests/slot-shadow-price/mature-wounded-2025.htm",
+            "sha256": "0579e599b700634597d0cc782974de5e5bc40ec6cb4c5e257fc5caf7d7090ad4"
+          }
+        }
+      },
+      "receiver_wounded": {
+        "events": {
+          "2025": {
+            "actual_closed_drawdown": 20.91,
+            "actual_net": 138.87,
+            "closed_lifecycles": 558,
+            "components": {
+              "CROSS": {
+                "actual_net": 38.4,
+                "closed_lifecycles": 198,
+                "entries": 198,
+                "stressed_net_2x": 35.523
+              },
+              "PASSIVE": {
+                "actual_net": 4.75,
+                "closed_lifecycles": 129,
+                "entries": 129,
+                "stressed_net_2x": 2.7617
+              },
+              "PRESSURE": {
+                "actual_net": 2.35,
+                "closed_lifecycles": 32,
+                "entries": 32,
+                "stressed_net_2x": 1.895
+              },
+              "RC16": {
+                "actual_net": 20.97,
+                "closed_lifecycles": 79,
+                "entries": 79,
+                "stressed_net_2x": 19.623
+              },
+              "RC4": {
+                "actual_net": 30.06,
+                "closed_lifecycles": 67,
+                "entries": 67,
+                "stressed_net_2x": 29.042
+              },
+              "RETURN": {
+                "actual_net": 42.34,
+                "closed_lifecycles": 53,
+                "entries": 53,
+                "stressed_net_2x": 41.396
+              }
+            },
+            "entries": 558,
+            "risk_admission_skips": 17,
+            "slot_exchanges": 6,
+            "stressed_closed_drawdown": 22.1385,
+            "stressed_net_2x": 130.2407
+          },
+          "2025_h1": {
+            "actual_closed_drawdown": 20.91,
+            "actual_net": 68.66,
+            "closed_lifecycles": 293,
+            "components": {
+              "CROSS": {
+                "actual_net": 35.67,
+                "closed_lifecycles": 91,
+                "entries": 91,
+                "stressed_net_2x": 34.201
+              },
+              "PASSIVE": {
+                "actual_net": -5.35,
+                "closed_lifecycles": 61,
+                "entries": 61,
+                "stressed_net_2x": -6.3188
+              },
+              "PRESSURE": {
+                "actual_net": -0.93,
+                "closed_lifecycles": 23,
+                "entries": 23,
+                "stressed_net_2x": -1.257
+              },
+              "RC16": {
+                "actual_net": 21.11,
+                "closed_lifecycles": 48,
+                "entries": 48,
+                "stressed_net_2x": 20.431
+              },
+              "RC4": {
+                "actual_net": -5.75,
+                "closed_lifecycles": 41,
+                "entries": 41,
+                "stressed_net_2x": -6.328
+              },
+              "RETURN": {
+                "actual_net": 23.91,
+                "closed_lifecycles": 29,
+                "entries": 29,
+                "stressed_net_2x": 23.314
+              }
+            },
+            "entries": 293,
+            "risk_admission_skips": 14,
+            "slot_exchanges": 5,
+            "stressed_closed_drawdown": 22.1385,
+            "stressed_net_2x": 64.0422
+          },
+          "2025_h2": {
+            "actual_closed_drawdown": 14.62,
+            "actual_net": 70.21,
+            "closed_lifecycles": 265,
+            "components": {
+              "CROSS": {
+                "actual_net": 2.73,
+                "closed_lifecycles": 107,
+                "entries": 107,
+                "stressed_net_2x": 1.322
+              },
+              "PASSIVE": {
+                "actual_net": 10.1,
+                "closed_lifecycles": 68,
+                "entries": 68,
+                "stressed_net_2x": 9.0805
+              },
+              "PRESSURE": {
+                "actual_net": 3.28,
+                "closed_lifecycles": 9,
+                "entries": 9,
+                "stressed_net_2x": 3.152
+              },
+              "RC16": {
+                "actual_net": -0.14,
+                "closed_lifecycles": 31,
+                "entries": 31,
+                "stressed_net_2x": -0.808
+              },
+              "RC4": {
+                "actual_net": 35.81,
+                "closed_lifecycles": 26,
+                "entries": 26,
+                "stressed_net_2x": 35.37
+              },
+              "RETURN": {
+                "actual_net": 18.43,
+                "closed_lifecycles": 24,
+                "entries": 24,
+                "stressed_net_2x": 18.082
+              }
+            },
+            "entries": 265,
+            "risk_admission_skips": 3,
+            "slot_exchanges": 1,
+            "stressed_closed_drawdown": 15.058,
+            "stressed_net_2x": 66.1985
+          },
+          "2026_ytd": {
+            "actual_closed_drawdown": 0.0,
+            "actual_net": 0,
+            "closed_lifecycles": 0,
+            "components": {
+              "CROSS": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "PASSIVE": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "PRESSURE": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RC16": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RC4": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              },
+              "RETURN": {
+                "actual_net": 0,
+                "closed_lifecycles": 0,
+                "entries": 0,
+                "stressed_net_2x": 0
+              }
+            },
+            "entries": 0,
+            "risk_admission_skips": 0,
+            "slot_exchanges": 0,
+            "stressed_closed_drawdown": 0.0,
+            "stressed_net_2x": 0
+          },
+          "exchange_rows": [
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -1.15,
+              "candidate_close_stressed": -1.162,
+              "candidate_score": 0.535853,
+              "incumbent": "PASSIVE",
+              "incumbent_close_actual": -0.63,
+              "incumbent_close_stressed": -0.644,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.10 17:00:00",
+              "slot_price": -0.20458,
+              "year": "2025"
+            },
+            {
+              "candidate": "PASSIVE",
+              "candidate_admission": "pending_not_filled",
+              "candidate_close_actual": null,
+              "candidate_close_stressed": null,
+              "candidate_score": 0.014458,
+              "incumbent": "RC4",
+              "incumbent_close_actual": -1.26,
+              "incumbent_close_stressed": -1.274,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.14 15:30:00",
+              "slot_price": -0.492115,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -1.17,
+              "candidate_close_stressed": -1.182,
+              "candidate_score": -0.036365,
+              "incumbent": "RC16",
+              "incumbent_close_actual": -1.54,
+              "incumbent_close_stressed": -1.554,
+              "retry_risk_skip": false,
+              "server_time": "2025.01.31 17:00:00",
+              "slot_price": -0.714985,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 1.28,
+              "candidate_close_stressed": 1.266,
+              "candidate_score": 0.057071,
+              "incumbent": "RC4",
+              "incumbent_close_actual": -1.76,
+              "incumbent_close_stressed": -1.774,
+              "retry_risk_skip": false,
+              "server_time": "2025.03.11 17:00:00",
+              "slot_price": -0.563288,
+              "year": "2025"
+            },
+            {
+              "candidate": "RETURN",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": 2.05,
+              "candidate_close_stressed": 2.036,
+              "candidate_score": 0.575603,
+              "incumbent": "PRESSURE",
+              "incumbent_close_actual": -0.18,
+              "incumbent_close_stressed": -0.194,
+              "retry_risk_skip": false,
+              "server_time": "2025.05.23 16:00:00",
+              "slot_price": -0.026137,
+              "year": "2025"
+            },
+            {
+              "candidate": "CROSS",
+              "candidate_admission": "market_open",
+              "candidate_close_actual": -0.09,
+              "candidate_close_stressed": -0.102,
+              "candidate_score": -0.023968,
+              "incumbent": "RC16",
+              "incumbent_close_actual": -2.42,
+              "incumbent_close_stressed": -2.688,
+              "retry_risk_skip": false,
+              "server_time": "2025.11.03 17:00:00",
+              "slot_price": -0.601371,
+              "year": "2025"
+            }
+          ],
+          "first_fixed_lot_step_2x": null,
+          "orphan_release_count": 1,
+          "retry_skip_after_release_count": 0,
+          "total": {
+            "actual_closed_drawdown": 20.91,
+            "actual_net": 138.87,
+            "closed_lifecycles": 558,
+            "components": {
+              "CROSS": {
+                "actual_net": 38.4,
+                "closed_lifecycles": 198,
+                "entries": 198,
+                "stressed_net_2x": 35.523
+              },
+              "PASSIVE": {
+                "actual_net": 4.75,
+                "closed_lifecycles": 129,
+                "entries": 129,
+                "stressed_net_2x": 2.7617
+              },
+              "PRESSURE": {
+                "actual_net": 2.35,
+                "closed_lifecycles": 32,
+                "entries": 32,
+                "stressed_net_2x": 1.895
+              },
+              "RC16": {
+                "actual_net": 20.97,
+                "closed_lifecycles": 79,
+                "entries": 79,
+                "stressed_net_2x": 19.623
+              },
+              "RC4": {
+                "actual_net": 30.06,
+                "closed_lifecycles": 67,
+                "entries": 67,
+                "stressed_net_2x": 29.042
+              },
+              "RETURN": {
+                "actual_net": 42.34,
+                "closed_lifecycles": 53,
+                "entries": 53,
+                "stressed_net_2x": 41.396
+              }
+            },
+            "entries": 558,
+            "risk_admission_skips": 17,
+            "slot_exchanges": 6,
+            "stressed_closed_drawdown": 22.1385,
+            "stressed_net_2x": 130.2407
+          }
+        },
+        "exchange_summary": {
+          "completed_lifecycles": 558,
+          "headroom_blocks": 21,
+          "mode": "receiver-wounded",
+          "pending_candidate_blocks": 0,
+          "qualified_exchanges": 6,
+          "release_failures": 0,
+          "release_successes": 6,
+          "retry_blocks": 0,
+          "risk_blocks_observed": 23,
+          "signals": 606
+        },
+        "final": {
+          "actual_net": 138.87,
+          "broker_mismatch": false,
+          "foreign_exposure": false,
+          "persistence_failed": false,
+          "protection_calculation_failures": 0,
+          "protection_mismatches": 0,
+          "risk_admission_skips": 17,
+          "safety_stopped": false,
+          "stressed_closed_drawdown": 22.1385,
+          "stressed_net_2x": 130.2407
+        },
+        "report": {
+          "actual_balance_drawdown": 20.91,
+          "actual_equity_drawdown": 21.77,
+          "actual_net": 138.87,
+          "entries": 558,
+          "history_quality": "100% \uc2e4\uc81c \ud2f1",
+          "profit_factor": 1.44,
+          "recovery_factor": 6.38,
+          "sharpe_ratio": 5.48
+        },
+        "sources": {
+          "agent_log": {
+            "bytes": 28209832,
+            "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-headroom-agent.log",
+            "sha256": "d39d23719aa4cee0ea0526f26db86867bd72784f867c6713608e544cf504e122"
+          },
+          "events": [
+            {
+              "bytes": 1629245,
+              "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-headroom-events-a.csv",
+              "sha256": "5dfde70b986bb186576ed9e4031d09f04982ee5966705eea8b215c99b336109b"
+            },
+            {
+              "bytes": 13292,
+              "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-headroom-events-b.csv",
+              "sha256": "3a86cde07f535fc5b87d59dc113257d835bd3aec378d2c26d2d99319c1fabd8f"
+            }
+          ],
+          "report": {
+            "bytes": 1109760,
+            "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-headroom-2025.htm",
+            "sha256": "2598fcfecd88efd522f52431456c9c3a6cfcfd2f66f654dd9d68c5fad94c5ead"
+          }
+        }
+      }
+    },
+    "observations": [
+      "Without release headroom, 4 of 10 closes lowered risk capital enough that the candidate failed the recalculated admission. The profitable result mixed genuine exchanges with unilateral loss cutting.",
+      "After headroom repair, receiver-wounded and mature-wounded each still sacrificed one incumbent for a Passive limit that never filled. A pending order is not an atomic replacement."
+    ],
+    "repairs": [
+      "Require the released slot to cover the raw deficit plus max(0.05 USD, 5% of the candidate position budget), then recompute protection and risk from the new capital state.",
+      "Do not release an occupied market slot for a Passive pending-order candidate; final runtime branches exchange only into immediate market candidates."
+    ],
+    "zero_headroom_diagnostic": {
+      "events": {
+        "2025": {
+          "actual_closed_drawdown": 20.73,
+          "actual_net": 142.15,
+          "closed_lifecycles": 558,
+          "components": {
+            "CROSS": {
+              "actual_net": 38.23,
+              "closed_lifecycles": 198,
+              "entries": 198,
+              "stressed_net_2x": 35.353
+            },
+            "PASSIVE": {
+              "actual_net": 5.49,
+              "closed_lifecycles": 129,
+              "entries": 129,
+              "stressed_net_2x": 3.503
+            },
+            "PRESSURE": {
+              "actual_net": 2.32,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 1.865
+            },
+            "RC16": {
+              "actual_net": 22.72,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 21.373
+            },
+            "RC4": {
+              "actual_net": 31.03,
+              "closed_lifecycles": 67,
+              "entries": 67,
+              "stressed_net_2x": 30.012
+            },
+            "RETURN": {
+              "actual_net": 42.36,
+              "closed_lifecycles": 53,
+              "entries": 53,
+              "stressed_net_2x": 41.416
+            }
+          },
+          "entries": 558,
+          "risk_admission_skips": 17,
+          "slot_exchanges": 10,
+          "stressed_closed_drawdown": 21.3915,
+          "stressed_net_2x": 133.522
+        },
+        "2025_h1": {
+          "actual_closed_drawdown": 20.73,
+          "actual_net": 70.58,
+          "closed_lifecycles": 293,
+          "components": {
+            "CROSS": {
+              "actual_net": 35.67,
+              "closed_lifecycles": 91,
+              "entries": 91,
+              "stressed_net_2x": 34.201
+            },
+            "PASSIVE": {
+              "actual_net": -4.61,
+              "closed_lifecycles": 61,
+              "entries": 61,
+              "stressed_net_2x": -5.5775
+            },
+            "PRESSURE": {
+              "actual_net": -0.93,
+              "closed_lifecycles": 23,
+              "entries": 23,
+              "stressed_net_2x": -1.257
+            },
+            "RC16": {
+              "actual_net": 21.14,
+              "closed_lifecycles": 48,
+              "entries": 48,
+              "stressed_net_2x": 20.461
+            },
+            "RC4": {
+              "actual_net": -4.72,
+              "closed_lifecycles": 41,
+              "entries": 41,
+              "stressed_net_2x": -5.298
+            },
+            "RETURN": {
+              "actual_net": 24.03,
+              "closed_lifecycles": 29,
+              "entries": 29,
+              "stressed_net_2x": 23.434
+            }
+          },
+          "entries": 293,
+          "risk_admission_skips": 14,
+          "slot_exchanges": 9,
+          "stressed_closed_drawdown": 21.3915,
+          "stressed_net_2x": 65.9635
+        },
+        "2025_h2": {
+          "actual_closed_drawdown": 14.71,
+          "actual_net": 71.57,
+          "closed_lifecycles": 265,
+          "components": {
+            "CROSS": {
+              "actual_net": 2.56,
+              "closed_lifecycles": 107,
+              "entries": 107,
+              "stressed_net_2x": 1.152
+            },
+            "PASSIVE": {
+              "actual_net": 10.1,
+              "closed_lifecycles": 68,
+              "entries": 68,
+              "stressed_net_2x": 9.0805
+            },
+            "PRESSURE": {
+              "actual_net": 3.25,
+              "closed_lifecycles": 9,
+              "entries": 9,
+              "stressed_net_2x": 3.122
+            },
+            "RC16": {
+              "actual_net": 1.58,
+              "closed_lifecycles": 31,
+              "entries": 31,
+              "stressed_net_2x": 0.912
+            },
+            "RC4": {
+              "actual_net": 35.75,
+              "closed_lifecycles": 26,
+              "entries": 26,
+              "stressed_net_2x": 35.31
+            },
+            "RETURN": {
+              "actual_net": 18.33,
+              "closed_lifecycles": 24,
+              "entries": 24,
+              "stressed_net_2x": 17.982
+            }
+          },
+          "entries": 265,
+          "risk_admission_skips": 3,
+          "slot_exchanges": 1,
+          "stressed_closed_drawdown": 15.148,
+          "stressed_net_2x": 67.5585
+        },
+        "2026_ytd": {
+          "actual_closed_drawdown": 0.0,
+          "actual_net": 0,
+          "closed_lifecycles": 0,
+          "components": {
+            "CROSS": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "PASSIVE": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "PRESSURE": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RC16": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RC4": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            },
+            "RETURN": {
+              "actual_net": 0,
+              "closed_lifecycles": 0,
+              "entries": 0,
+              "stressed_net_2x": 0
+            }
+          },
+          "entries": 0,
+          "risk_admission_skips": 0,
+          "slot_exchanges": 0,
+          "stressed_closed_drawdown": 0.0,
+          "stressed_net_2x": 0
+        },
+        "exchange_rows": [
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.15,
+            "candidate_close_stressed": -1.162,
+            "candidate_score": 0.535853,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -0.63,
+            "incumbent_close_stressed": -0.644,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.10 17:00:00",
+            "slot_price": -0.20458,
+            "year": "2025"
+          },
+          {
+            "candidate": "PASSIVE",
+            "candidate_admission": "pending_not_filled",
+            "candidate_close_actual": null,
+            "candidate_close_stressed": null,
+            "candidate_score": 0.014458,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -1.26,
+            "incumbent_close_stressed": -1.274,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.14 15:30:00",
+            "slot_price": -0.492115,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "not_admitted",
+            "candidate_close_actual": null,
+            "candidate_close_stressed": null,
+            "candidate_score": 0.51693,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -0.33,
+            "incumbent_close_stressed": -0.344,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.15 17:00:00",
+            "slot_price": -0.11114,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -1.17,
+            "candidate_close_stressed": -1.182,
+            "candidate_score": -0.036561,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -1.54,
+            "incumbent_close_stressed": -1.554,
+            "retry_risk_skip": false,
+            "server_time": "2025.01.31 17:00:00",
+            "slot_price": -0.718625,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 1.28,
+            "candidate_close_stressed": 1.266,
+            "candidate_score": 0.057371,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -1.76,
+            "incumbent_close_stressed": -1.774,
+            "retry_risk_skip": false,
+            "server_time": "2025.03.11 17:00:00",
+            "slot_price": -0.565187,
+            "year": "2025"
+          },
+          {
+            "candidate": "RETURN",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": 2.05,
+            "candidate_close_stressed": 2.036,
+            "candidate_score": 0.576515,
+            "incumbent": "PRESSURE",
+            "incumbent_close_actual": -0.18,
+            "incumbent_close_stressed": -0.194,
+            "retry_risk_skip": false,
+            "server_time": "2025.05.23 16:00:00",
+            "slot_price": -0.026088,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "not_admitted",
+            "candidate_close_actual": null,
+            "candidate_close_stressed": null,
+            "candidate_score": 0.088876,
+            "incumbent": "PASSIVE",
+            "incumbent_close_actual": -2.12,
+            "incumbent_close_stressed": -2.134,
+            "retry_risk_skip": false,
+            "server_time": "2025.05.29 17:00:00",
+            "slot_price": -0.559943,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "not_admitted",
+            "candidate_close_actual": null,
+            "candidate_close_stressed": null,
+            "candidate_score": 0.127709,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -1.52,
+            "incumbent_close_stressed": -1.534,
+            "retry_risk_skip": false,
+            "server_time": "2025.06.11 17:00:00",
+            "slot_price": -0.386931,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "not_admitted",
+            "candidate_close_actual": null,
+            "candidate_close_stressed": null,
+            "candidate_score": 0.083623,
+            "incumbent": "RC4",
+            "incumbent_close_actual": -2.91,
+            "incumbent_close_stressed": -2.925,
+            "retry_risk_skip": false,
+            "server_time": "2025.06.16 17:00:00",
+            "slot_price": -0.745975,
+            "year": "2025"
+          },
+          {
+            "candidate": "CROSS",
+            "candidate_admission": "market_open",
+            "candidate_close_actual": -0.09,
+            "candidate_close_stressed": -0.102,
+            "candidate_score": -0.024256,
+            "incumbent": "RC16",
+            "incumbent_close_actual": -2.42,
+            "incumbent_close_stressed": -2.688,
+            "retry_risk_skip": false,
+            "server_time": "2025.11.03 17:00:00",
+            "slot_price": -0.596206,
+            "year": "2025"
+          }
+        ],
+        "first_fixed_lot_step_2x": null,
+        "orphan_release_count": 5,
+        "retry_skip_after_release_count": 0,
+        "total": {
+          "actual_closed_drawdown": 20.73,
+          "actual_net": 142.15,
+          "closed_lifecycles": 558,
+          "components": {
+            "CROSS": {
+              "actual_net": 38.23,
+              "closed_lifecycles": 198,
+              "entries": 198,
+              "stressed_net_2x": 35.353
+            },
+            "PASSIVE": {
+              "actual_net": 5.49,
+              "closed_lifecycles": 129,
+              "entries": 129,
+              "stressed_net_2x": 3.503
+            },
+            "PRESSURE": {
+              "actual_net": 2.32,
+              "closed_lifecycles": 32,
+              "entries": 32,
+              "stressed_net_2x": 1.865
+            },
+            "RC16": {
+              "actual_net": 22.72,
+              "closed_lifecycles": 79,
+              "entries": 79,
+              "stressed_net_2x": 21.373
+            },
+            "RC4": {
+              "actual_net": 31.03,
+              "closed_lifecycles": 67,
+              "entries": 67,
+              "stressed_net_2x": 30.012
+            },
+            "RETURN": {
+              "actual_net": 42.36,
+              "closed_lifecycles": 53,
+              "entries": 53,
+              "stressed_net_2x": 41.416
+            }
+          },
+          "entries": 558,
+          "risk_admission_skips": 17,
+          "slot_exchanges": 10,
+          "stressed_closed_drawdown": 21.3915,
+          "stressed_net_2x": 133.522
+        }
+      },
+      "exchange_summary": {
+        "completed_lifecycles": 558,
+        "headroom_blocks": 0,
+        "mode": "receiver-wounded",
+        "pending_candidate_blocks": 0,
+        "qualified_exchanges": 10,
+        "release_failures": 0,
+        "release_successes": 10,
+        "retry_blocks": 4,
+        "risk_blocks_observed": 27,
+        "signals": 606
+      },
+      "final": {
+        "actual_net": 142.15,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 17,
+        "safety_stopped": false,
+        "stressed_closed_drawdown": 21.3915,
+        "stressed_net_2x": 133.522
+      },
+      "report": {
+        "actual_balance_drawdown": 20.73,
+        "actual_equity_drawdown": 21.74,
+        "actual_net": 142.15,
+        "entries": 558,
+        "history_quality": "100% \uc2e4\uc81c \ud2f1",
+        "profit_factor": 1.45,
+        "recovery_factor": 6.54,
+        "sharpe_ratio": 5.56
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 26172540,
+          "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-agent.log",
+          "sha256": "96cd5765f7ad0b72efe4809259843a69146bc4bc2f9e6413113b52f6619b0bf7"
+        },
+        "events": [
+          {
+            "bytes": 1628197,
+            "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-events-a.csv",
+            "sha256": "7a6edf34ab76e4bf15b8cc9b5dd9d6ad4ab29e8cacee3505fee5426b1ec123b9"
+          },
+          {
+            "bytes": 14438,
+            "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-events-b.csv",
+            "sha256": "d3a51f4e81e91fd10cb24c2b7742cb92c3598b681fce1c6b07cc01605c9817e4"
+          }
+        ],
+        "report": {
+          "bytes": 1109612,
+          "path": "lab/artifacts/backtests/slot-shadow-price/receiver-wounded-2025.htm",
+          "sha256": "213b241b78e15317fc3865787cd574e6df7782537dfe30d7cc2c53013c2c8297"
+        }
+      }
+    }
+  },
+  "unit": "slot-shadow-price-006"
+}

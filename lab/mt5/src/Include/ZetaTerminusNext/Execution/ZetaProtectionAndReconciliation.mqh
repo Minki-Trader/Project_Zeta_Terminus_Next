@@ -443,6 +443,13 @@ bool ApplyExitDeal(const int component,
    portfolio_state.project_realized_net += deal_net;
    portfolio_state.stressed_balance += stressed_net;
    component_states[component].stressed_net += stressed_net;
+#ifdef ZETA_FRONTIER_OBSERVE_EXIT
+   ZETA_FRONTIER_OBSERVE_EXIT(component,
+                              completed_identifier,
+                              stressed_net,
+                              admitted_planned_risk,
+                              remaining_after_steps == 0);
+#endif
    if(portfolio_state.stressed_balance > portfolio_state.stressed_peak)
       portfolio_state.stressed_peak = portfolio_state.stressed_balance;
    const double stressed_drawdown = portfolio_state.stressed_peak - portfolio_state.stressed_balance;

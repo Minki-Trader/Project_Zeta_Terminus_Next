@@ -400,11 +400,35 @@ bool CalculateProtectiveStop(const int component,
       return(false);
      }
 
-   const double aggregate_after =
+   double aggregate_after =
       TrackedAggregatePlannedRisk() + position_budget;
    const double aggregate_budget =
       capital * InpMaximumAggregateRiskFraction;
    const double tolerance = 0.01;
+#ifdef ZETA_FRONTIER_RISK_ADMISSION_EXCHANGE
+   if(planned_risk <= position_budget + tolerance &&
+      aggregate_after > aggregate_budget + tolerance &&
+      ZETA_FRONTIER_RISK_ADMISSION_EXCHANGE(component,
+                                            symbol,
+                                            direction,
+                                            volume,
+                                            entry_price,
+                                            position_budget,
+                                            aggregate_after,
+                                            aggregate_budget))
+     {
+      stop_loss = 0.0;
+      planned_risk = 0.0;
+      return(CalculateProtectiveStop(component,
+                                     symbol,
+                                     direction,
+                                     volume,
+                                     entry_price,
+                                     minimum_distance,
+                                     stop_loss,
+                                     planned_risk));
+     }
+#endif
    if(planned_risk > position_budget + tolerance ||
       aggregate_after > aggregate_budget + tolerance)
      {
