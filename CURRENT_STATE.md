@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0002`
+- Latest state ID: `STATE-0003`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -20,7 +20,7 @@ No Next EA, Portable Live runtime, Portfolio ID, state namespace, position, orde
 
 ## Active work
 
-- Active engineering boundary: `NEXT-E01` continuity migration and behavior-preserving modular V7
+- Active engineering boundary: `NEXT-E01` behavior-preserving modular V7 extraction
 - Frozen parent: B70 V6R6
 - Required new Magic: `260824701..260824706`
 - Required isolation: Live-Dev and Lab share no source Include tree, EX5, settings, Portable runtime, state, or logs
@@ -35,6 +35,9 @@ No Next EA, Portable Live runtime, Portfolio ID, state namespace, position, orde
   - summary JSON: 596
 - Human economic-family summaries: `docs/lineage/`
 - Executable ancestry: `lineage/executable-lineage.json`
+- Frozen B70 control: `lab/control-v6r6/`, eight files verified against its manifest
+- Lab Portable: local MT5 build 6140 with copied US100/US30/US500 real-tick data
+- Live Portable shell: local MT5 build 6140, no account/broker cache and no executable V7 release
 
 ## Required completion evidence
 

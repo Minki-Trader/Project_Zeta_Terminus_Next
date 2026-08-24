@@ -20,5 +20,6 @@ Read, in order:
 - `lineage/`: complete machine-readable legacy and executable indexes.
 - `docs/lineage/`: short human summaries organized by economic research family rather than internal Axis names.
 
-Live-Dev in this repository is currently `DISABLED`. Running or compiling Lab material does not authorize a real order.
+The exact filesystem and Portable-terminal boundary is documented in [`docs/RUNTIME_ISOLATION.md`](docs/RUNTIME_ISOLATION.md).
 
+Live-Dev in this repository is currently `DISABLED`. Running or compiling Lab material does not authorize a real order.

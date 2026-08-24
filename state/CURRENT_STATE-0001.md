@@ -13,3 +13,11 @@
 - Reorganized the human-facing record into seven economic families under `docs/lineage/`. `Pre-V1`, `Economic`, `Axis A`, `Axis B` and `Axis C` remain provenance tags rather than the table of contents.
 - Fixed the executable core line in `lineage/executable-lineage.json`: `B48 -> B49/V6R2 -> B52/V6R3 -> B66/V6R4 -> B67/V6R5 -> B70/V6R6 -> NEXT-E01/V7`, with the earlier finite-risk ancestry preserved ahead of B48.
 - This inventory is descriptive continuity evidence, not new profit evidence and not a promotion result. The one-time extraction code was not retained as a project CLI, validator or test harness.
+
+## STATE-0003 - 2026-08-24
+
+- Created physically separate `lab/` and `live-dev/` lanes. Lab junctions resolve only under `lab/`; Live static junctions resolve only under `live-dev/package/active/`. Neither lane points into the other or into legacy source.
+- Froze the eight-file B70 V6R6 control under `lab/control-v6r6/`: source, EX5, SET, binding/latest INI, B70 human record, declaration JSON and validation JSON. Every SHA-256 and byte size matches the legacy anchor manifest. Bulk backtest logs and reports remain referenced rather than copied.
+- Initialized the Git-ignored Lab Tester Portable with MT5 build `5.0.0.6140` and local copies of US100, US30 and US500 required history/tick caches. Source and destination counts and byte totals match for all 12 terminal/tester history and tick directories.
+- Initialized only a staged Live Portable shell at build `5.0.0.6140`. It has no `Bases`, no account or broker configuration, no EA state and no runnable V7 release. No Next terminal was started.
+- Gracefully stopped the legacy Lab/Tester terminal before copying its cache. The legacy B70 V6R6 Live terminal remained running and unchanged throughout.

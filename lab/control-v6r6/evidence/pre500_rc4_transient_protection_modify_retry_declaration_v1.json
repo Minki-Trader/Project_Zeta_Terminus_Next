@@ -1,0 +1,119 @@
+{
+  "axis": "B",
+  "candidate_id": "B70",
+  "created_kst": "2026-08-23",
+  "decision_type": "isolated_rc4_transient_protection_modify_retry_engineering_successor",
+  "strategy": "RC4",
+  "purpose": "Give the already accepted B48 one-shot RC4 protection compression exactly one durable retry only when its first synchronous PositionModify result is explicitly transient or outcome-ambiguous and broker reconciliation proves the same owned position still retains the unchanged original stop.",
+  "frozen_parent": {
+    "candidate_id": "B67",
+    "execution_version": "zt-pre500-finite-risk-portfolio-v6r5-rc4-shadow-activation-boundary-seal",
+    "portfolio_id": "ZT-PORT-PRE500-FR6R5-RC4AS-b75a58ecab17",
+    "source": "mt5/src/Experts/ZetaPre500FiniteRiskPortfolioV6R5RC4ShadowActivationBoundarySeal.mq5",
+    "source_sha256": "5C80FBC1BF6BB9B6647D372EBD2EC6C2713FF21E34CE1293E9DC7838ADF9D355",
+    "binary_sha256": "146E8BF856AD54496674E67C0ABF1A188A7AAF90855F231080BBF11E7781F1C9",
+    "economic_and_causal_behavior_frozen": true
+  },
+  "independent_revision_identity": {
+    "execution_version": "zt-pre500-finite-risk-portfolio-v6r6-rc4-transient-protection-modify-retry",
+    "portfolio_id": "ZT-PORT-PRE500-FR6R6-RC4MR-cda6e28b13f4",
+    "magic_numbers": [
+      260823301,
+      260823302,
+      260823303,
+      260823304,
+      260823305,
+      260823306
+    ],
+    "state_namespace": "ZetaTerminus/live/zt-pre500-finite-risk-portfolio-v6r6-rc4-transient-protection-modify-retry",
+    "source": {
+      "path": "mt5/src/Experts/ZetaPre500FiniteRiskPortfolioV6R6RC4TransientProtectionModifyRetry.mq5",
+      "sha256": "7B98E33E093502DD1E582FA53260E06AD6BEA5820C74CDEEC691239F701446AA"
+    },
+    "binary": {
+      "path": "mt5/src/Experts/ZetaPre500FiniteRiskPortfolioV6R6RC4TransientProtectionModifyRetry.ex5",
+      "sha256": "C5E569092B492F350A0B47DBF060A82293A302002F73A842FA52465BE2716E92"
+    },
+    "tester_set": {
+      "path": "mt5/config/tester/pre500-finite-risk-portfolio-v6r6-rc4-transient-protection-modify-retry.set",
+      "sha256": "BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8"
+    },
+    "latest_config": {
+      "path": "mt5/config/tester-pre500-v6r6-rc4-transient-protection-modify-retry-v1-latest-2m.ini",
+      "sha256": "0D941C08E240FCBE4546E0378D7DC42A54957487AC5578438C4A3F2734A0942D"
+    },
+    "binding_config": {
+      "path": "mt5/config/tester-pre500-v6r6-rc4-transient-protection-modify-retry-v1-2022-2026.ini",
+      "sha256": "6782F85ED9A0E3934FFF4891860669AEFC0C6CF74DC89E6FB4F953E7576F757F"
+    },
+    "automatic_parent_state_import": false,
+    "automatic_v5_or_prior_v6_position_adoption": false,
+    "live_deployment_authorized": false
+  },
+  "single_checkpoint": {
+    "name": "first_non_successful_synchronous_PositionModify_result_after_durable_B48_compression_journal",
+    "retryable_retcode_closed_set": [
+      "TRADE_RETCODE_REQUOTE",
+      "TRADE_RETCODE_TIMEOUT",
+      "TRADE_RETCODE_PRICE_CHANGED",
+      "TRADE_RETCODE_PRICE_OFF",
+      "TRADE_RETCODE_TOO_MANY_REQUESTS",
+      "TRADE_RETCODE_LOCKED",
+      "TRADE_RETCODE_CONNECTION"
+    ],
+    "excluded_retcode_classes": "MARKET_CLOSED, FROZEN, generic ERROR, INVALID_*, NO_CHANGES when the target is not already applied, trading-disabled/account/order-state and every retcode outside the closed retryable set",
+    "mandatory_first_reconciliation": "Before deciding whether to retry, select exactly one V6R6-owned RC4 position with the same lifecycle identifier and classify its broker stop as the exact target, the unchanged original stop, or an inconsistency.",
+    "no_future_information": true,
+    "no_current_quote_contamination": "The initial eligibility decision uses only the synchronous result and immediately reconciled owned broker position; a quote is consulted only at the later retry checkpoint."
+  },
+  "single_action": {
+    "name": "one_identical_target_retry_on_first_strictly_later_fresh_causal_US30_tick",
+    "durability": "The eligible retry intent, initial retcode, strict-after millisecond and unconsumed budget are persisted. Immediately before the only retry submission, the budget is marked consumed and persisted, so restart cannot create a second submission.",
+    "ownership_and_legality": "At the first strictly later tick, reselect the same owned position, require the unchanged original stop, a fresh executable quote, an open trading session and the original retained-loss/tightening/minimum-distance legality checks.",
+    "target": "The exact journaled B48 target is reused without recalculation, widening or replacement.",
+    "maximum_resubmissions": 1,
+    "repeat_after_retry": false
+  },
+  "outcome_rules": {
+    "target_already_applied": "Adopt the broker target, mark the lifecycle compressed and persist; submit nothing further.",
+    "eligible_original_stop": "Persist one retry intent, then consume it before the one later submission.",
+    "nonretryable_original_stop": "Clear the request journal, retain the original broker protection and record explicit HOLD.",
+    "retry_non_success_original_stop": "Retain the original broker protection and record explicit HOLD; never submit again.",
+    "illegal_first_later_tick": "Retain the original broker protection and record explicit HOLD; do not wait for another quote.",
+    "ownership_loss_or_stop_mismatch": "Fail closed with broker mismatch and safety stop.",
+    "restart_with_unresolved_submitted_request": "Reconcile only. Adopt the exact target if applied; otherwise retain original protection as HOLD without creating a new retry right.",
+    "position_closed_while_request_or_retry_is_unresolved": "Reconcile the completed owned deal sequence. A target-stop exit follows the existing RC4 shadow path; an original-stop or other normal exit closes the lifecycle without resurrecting the retry."
+  },
+  "frozen_economic_contract": {
+    "signals_opportunities_entries_timestamps_directions_volumes": "exact B67/B48",
+    "votes_and_eight_M30_checkpoint": "exact B67/B48",
+    "compression_target": "exact B48 one-shot 25 percent remaining-loss stop",
+    "original_stop_deadline_orders_and_costs": "exact B67/B48",
+    "shadow_activation_boundary_and_occupancy": "exact B67",
+    "management_economic_change": false
+  },
+  "one_time_pre_execution_check": {
+    "completed": true,
+    "future_leakage": "zero: the eligibility branch uses only the returned retcode and immediately reconciled owned stop; retry occurs only on a strictly later observed tick",
+    "current_quote_mixing": "zero in eligibility; the later causal tick is the declared retry checkpoint and only quote input",
+    "entry_change": "zero by source and configuration inspection",
+    "cost_error": "zero: the revision changes no fill, close, accounting, commission, fee, spread, slippage or stress rule",
+    "ownership_conflict": "zero: fresh source, binary, Portfolio ID, Magic range, settings, report names and state/event/current/lock namespace",
+    "fatal_pre_execution_defect": false
+  },
+  "compile": {
+    "metaeditor_build": 6090,
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 1976,
+    "log": "mt5/runtime/logs/metaeditor-v6r6-rc4-transient-protection-modify-retry-build6090-final3.log",
+    "log_sha256": "8A758F9B2BF1853AC9B615E0FC87ECBEB7AB93BE553BC366B44652DE5208B938"
+  },
+  "execution_scope": {
+    "latest_real_tick_run": false,
+    "binding_real_tick_run": false,
+    "live_account_query": false,
+    "live_deployment": false,
+    "synthetic_modify_failure": false,
+    "state_document_update": false
+  }
+}
