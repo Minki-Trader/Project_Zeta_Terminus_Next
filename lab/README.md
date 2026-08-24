@@ -5,7 +5,7 @@
 - `control-v6r6/`: legacy anchor의 작은 동결 대조군
 - `mt5/`: V7 소스와 설정
 - `research/strategy-independence-risk-allocation/`: Lab 전용 `전략 독립성·위험배분 연구`; 여섯 단독 `$100` EA와 결합 대조군, 사전 선언 및 분석
-- `research/deposit-capital-risk-capacity/`: Lab 전용 `예치자본·위험용량 연구`; 예치금별 lot tranche와 12% 위험용량 가설 프록시 및 소수 EA
+- `research/deposit-capital-risk-capacity/`: 폐쇄된 Lab 전용 `예치자본·위험용량 연구`; 예치금별 lot tranche와 12% 위험용량 프록시·EA, 최종 `RETAIN_FROZEN_V7`
 - `runtime/tester-portable/`: Git 제외, Lab 전용 MT5 Portable
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: Lab Portable 초기화·컴파일·정상 백테스트 실행기

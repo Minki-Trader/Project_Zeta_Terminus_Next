@@ -27,6 +27,8 @@ V1 of that family is closed as `NO_POLICY_PASSED_RETAIN_FIRST_COME`. The 2024 co
 
 The user subsequently authorized one new serial Lab family on 2026-08-24: `예치자본·위험용량 연구` (`deposit-capital-risk-capacity`). It first screens economically distinct deposit use, lot-tranche, slot-breadth, concentration and drawdown-governor hypotheses on already-consumed 2024 Lab ledgers, then permits exactly three tester-only EA paths under the predeclared shortlist rule. Candidate-specific selection begins fresh in 2025; 2026 January-May may open only after a 2025 pass, while June-July and partial August remain excluded. Its authoritative boundary and stop rules are `lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json`. It grants no Live change or promotion authority.
 
+V1 of that family is closed as `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`. Deposit-matched linear lot/risk sizing passed its structural scale-consistency anchor but did not improve percentage return, drawdown or efficiency. The breadth candidate and diagnostic fixed-lot ladder failed the fixed two-deposit efficiency, return-floor or drawdown gates. Per the stop rule, no 2026 confirmation or nearby rescue opened and frozen V7 sizing and first-come 12% admission remain authoritative.
+
 ## Live and Lab isolation
 
 - `lab/` owns evolving source, frozen controls, tester configuration, research, and DEV evidence.

@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "record_type": "research_closure",
+  "research_family_ko": "예치자본·위험용량 연구",
+  "research_family_slug": "deposit-capital-risk-capacity",
+  "version": "V1",
+  "closed_on_kst": "2026-08-24",
+  "status": "CLOSED",
+  "verdict": "NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7",
+  "frozen_selection_source_commit": "09e32e15923d0a3037c03d6151a3637c5f0007f1",
+  "evidence": {
+    "declaration": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json",
+      "sha256": "C2423FA45C7D53B1B9838891897BD9C064A8343D8331C07B2A7766181556422D"
+    },
+    "proxy": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_PROXY_V1.json",
+      "sha256": "C75A51F2B1AD12B092108595B9BAA8435AB4FFF444AEAFDA8E189A9FC400A894"
+    },
+    "compile_receipt": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_COMPILE_RECEIPT_V1.json",
+      "sha256": "2CED8C9FFB0DBB6BD1CDB3F97E1BD43591736FAD7D5DF1E70DE2694DCE8221C9"
+    },
+    "selection": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_SELECTION_V1.json",
+      "sha256": "39ADE4BB8EDC1264F313BEACDE88BA3202678263FB4606C057AA0A83CA54C1B4"
+    },
+    "selection_analysis": {
+      "path": "lab/research/deposit-capital-risk-capacity/analyze_deposit_capital_risk_capacity_selection_v1.py",
+      "sha256": "8048E4E6C175E508A0B3A2FD898712367A7FA097DECAF0A4E49CB3C0F22139B4"
+    }
+  },
+  "execution_integrity": {
+    "serial_fresh_2025_real_tick_runs": 10,
+    "metaeditor_build": 6140,
+    "history_quality": "100% real ticks",
+    "all_normal_stop": true,
+    "all_report_trade_deal_and_lifecycle_totals_match": true,
+    "all_safety_persistence_broker_foreign_protection_faults_zero": true,
+    "all_margin_and_calculation_blocks_zero": true
+  },
+  "deposit_only_reserve": {
+    "stressed_net_usd": {
+      "100": 113.068,
+      "200": 113.252,
+      "300": 113.252
+    },
+    "stressed_return_percent": {
+      "100": 113.068,
+      "200": 56.626,
+      "300": 37.75066666666667
+    },
+    "stressed_drawdown_percent": {
+      "100": 28.3905,
+      "200": 14.23525,
+      "300": 9.490166666666667
+    },
+    "risk_admission_skips": {
+      "100": 25,
+      "200": 16,
+      "300": 16
+    },
+    "conclusion": "Extra cash behind unchanged 0.01 economics mostly diluted return and drawdown percentages. It reduced account-margin pressure enough to change a few path admissions, but added only 0.184 stressed dollars versus the 100-dollar control."
+  },
+  "linear_capital_anchor": {
+    "identity_at_100_exact_after_sizing_event_normalization": true,
+    "stressed_net_usd": {
+      "100": 113.068,
+      "200": 226.106,
+      "300": 338.984
+    },
+    "stressed_return_percent": {
+      "100": 113.068,
+      "200": 113.053,
+      "300": 112.99466666666669
+    },
+    "stressed_drawdown_percent": {
+      "100": 28.3905,
+      "200": 28.355500000000006,
+      "300": 28.360499999999995
+    },
+    "scale_gate_passed": true,
+    "conclusion": "Deposit-matched 0.01/0.02/0.03 lot sizing scaled stressed dollars almost exactly one/two/three times while preserving percentage return and percentage drawdown. It is a structurally valid scale anchor, not an improvement in edge or risk-adjusted return and not a selected 12-percent allocation policy."
+  },
+  "candidate_results": {
+    "BREADTH_DOLLAR_SLOTS": {
+      "selectable": true,
+      "passed": false,
+      "risk_admission_skips": {
+        "200": 0,
+        "300": 0
+      },
+      "maximum_concurrent_positions": {
+        "200": 4,
+        "300": 4
+      },
+      "stressed_return_percent": {
+        "200": 43.163,
+        "300": 23.337999999999997
+      },
+      "stressed_drawdown_percent": {
+        "200": 13.770749999999996,
+        "300": 8.979666666666668
+      },
+      "stressed_net_to_drawdown": {
+        "200": 3.1343971824337826,
+        "300": 2.598982887263818
+      },
+      "same_lot_path_decomposition": {
+        "200": {
+          "added_lifecycles": 18,
+          "added_stressed_net_usd": 8.816,
+          "shared_lifecycle_stressed_net_delta_usd": -34.28,
+          "total_delta_usd": -26.926
+        },
+        "300": {
+          "added_lifecycles": 19,
+          "added_stressed_net_usd": 10.882,
+          "shared_lifecycle_stressed_net_delta_usd": -52.658,
+          "total_delta_usd": -43.238
+        }
+      },
+      "failed_gates": [
+        "efficiency at both deposits",
+        "90 percent linear-return floor at both deposits"
+      ],
+      "conclusion": "The wider envelope removed every hard risk skip and admitted profitable extra lifecycles, but shared lifecycle path deterioration more than consumed those gains. More slots were not a portfolio improvement."
+    },
+    "FIXED_LOT_LADDER": {
+      "selectable": false,
+      "diagnostic_only": true,
+      "passed": false,
+      "stressed_return_percent": {
+        "200": 114.995,
+        "300": 83.25750000000001
+      },
+      "stressed_drawdown_percent": {
+        "200": 28.355500000000006,
+        "300": 35.61033333333332
+      },
+      "higher_lot_trade_count": {
+        "200_at_0_03": 73,
+        "300_at_0_04": 140
+      },
+      "failed_gates": [
+        "300-dollar drawdown",
+        "efficiency at both deposits",
+        "90 percent linear-return floor at 300 dollars"
+      ],
+      "conclusion": "The 200-dollar path gained only 3.884 stressed dollars with unchanged drawdown, while the 300-dollar path lost 89.2115 stressed dollars versus linear and increased drawdown by 7.2498 percentage points. The threshold path was not monotonic or robust across deposits."
+    }
+  },
+  "stop_rule_application": {
+    "passing_non_control_policy": null,
+    "2026_january_through_may_confirmation_opened": false,
+    "2026_june_july_opened": false,
+    "partial_august_2026_opened": false,
+    "nearby_threshold_or_policy_rescue_attempted": false,
+    "fourth_ea_created": false
+  },
+  "authority": {
+    "frozen_live_release_retained": "NEXT-E01-V7-2db5ef5ead1c",
+    "frozen_live_portfolio_retained": "ZT-PORT-NEXT-V7-2db5ef5ead1c",
+    "live_source_change_authorized": false,
+    "live_binary_or_set_change_authorized": false,
+    "live_state_or_process_change_authorized": false,
+    "promotion_authorized": false
+  }
+}

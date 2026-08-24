@@ -5,7 +5,7 @@ Last updated: 2026-08-24
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0019`
+- Latest state ID: `STATE-0020`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 ## Active work
 
 - Active engineering boundary: V7 handoff complete; dashboard-only entry-evaluation visibility improvement complete with EA, chart and frozen release unchanged
-- Active research boundary: `예치자본·위험용량 연구` V1 open at `EA_CANDIDATES_COMPILED_SELECTION_UNOPENED`; the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
+- Active research boundary: none; `예치자본·위험용량 연구` V1 is closed `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`, and the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
@@ -87,7 +87,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Dashboard SHA-256: `5A3FB8D552511B8D16663F1E74973E57D856AD85AC28A453C7C1795A7A4BF9D6`
 - Only the dashboard process restarted from PID `26868` to PID `24936`; exact V7 terminal PID `10112`, its start time, chart attachment, EA, EX5, SET and runtime state remained unchanged
 
-## Open deposit capital and risk capacity research
+## Completed deposit capital and risk capacity research
 
 - User-authorized descriptive family: `예치자본·위험용량 연구` (`deposit-capital-risk-capacity`)
 - Predeclared declaration: `lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json`
@@ -100,8 +100,14 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Three separately identified tester-only EA paths compiled on build 6140 at `0 errors / 0 warnings`; the frozen SIRA combined EA remains the deposit-only control
 - Ten fresh 2025 serial configurations are frozen before outcome consumption: control `$100/$200/$300`, linear `$100/$200/$300`, breadth `$200/$300`, and ladder `$200/$300`
 - Compile/preselection receipt: `lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_COMPILE_RECEIPT_V1.json`, SHA-256 `2CED8C9FFB0DBB6BD1CDB3F97E1BD43591736FAD7D5DF1E70DE2694DCE8221C9`
-- Candidate-specific selection is fresh 2025 `$100/$200/$300`; 2026 January-May is conditional on a 2025 pass; 2026 June-July and partial August remain excluded
-- No Live source, package, SET, state, process, order behavior or promotion authority changed
+- Completed all ten serial fresh-account 2025 real-tick runs. Every MT5 report net/DD/trade/deal total matched the lifecycle ledger; all runs stopped normally with zero safety, persistence, broker, foreign, protection or margin/calculation fault
+- Deposit-only `.01` produced stressed `+$113.068/+113.252/+113.252` at `$100/$200/$300`: extra cash mostly lowered DD% and diluted return rather than increasing dollar growth
+- `LINEAR_CAPITAL` passed its structural anchor: stressed `+$113.068/+226.106/+338.984`, return `113.068/113.053/112.9947%`, DD `28.3905/28.3555/28.3605%`. It scaled dollar P/L and dollar DD, not edge or risk-adjusted performance
+- `BREADTH_DOLLAR_SLOTS` removed every hard risk skip and reached four concurrent positions, but failed efficiency and the 90% return floor at both deposits; `FIXED_LOT_LADDER` was mildly positive versus linear at `$200` but failed return, efficiency and DD at `$300`
+- No non-control policy passed. Per the fixed stop rule, 2026 January-May, June-July and partial August remained unopened; no nearby threshold rescue or fourth EA was attempted
+- Selection: `lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_SELECTION_V1.json`, SHA-256 `39ADE4BB8EDC1264F313BEACDE88BA3202678263FB4606C057AA0A83CA54C1B4`
+- Closure: `lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_CLOSURE_V1.json`, SHA-256 `56B64F0592AA152C88A2038C58E679F70345205EB3A4682E8BED8435F54E7452`
+- Human conclusion: `docs/lineage/DEPOSIT_CAPITAL_AND_RISK_CAPACITY.md`; exact Live V7 PID `10112`, dashboard PID `24936`, source, package, SET, state and order behavior remained unchanged
 
 ## Required completion evidence
 
@@ -114,4 +120,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_EA_CANDIDATES_COMPILED_SELECTION_UNOPENED`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7`

@@ -1,0 +1,4049 @@
+{
+  "schema_version": 1,
+  "record_type": "ea_selection_result",
+  "research_family_ko": "예치자본·위험용량 연구",
+  "research_family_slug": "deposit-capital-risk-capacity",
+  "version": "V1",
+  "source_commit_required": "09e32e15923d0a3037c03d6151a3637c5f0007f1",
+  "selection_period": [
+    "2025-01-01",
+    "2026-01-01"
+  ],
+  "selection_rows_consumed": true,
+  "conditional_2026_confirmation_consumed": false,
+  "held_out_2026_june_through_partial_august_consumed": false,
+  "execution": {
+    "platform": "MetaTrader 5 strategy tester build 6140",
+    "broker_report": "FPMarketsSC-Live",
+    "model": "100% real ticks",
+    "serial_runs": true,
+    "fresh_account_each_run": true,
+    "run_count": 10,
+    "all_integrity_checks_passed": true
+  },
+  "analysis_source": {
+    "path": "lab/research/deposit-capital-risk-capacity/analyze_deposit_capital_risk_capacity_selection_v1.py",
+    "bytes": 38481,
+    "sha256": "8048e4e6c175e508a0b3a2fd898712367a7fa097decaf0a4e49cb3c0f22139b4"
+  },
+  "frozen_inputs": {
+    "declaration": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_DECLARATION_V1.json",
+      "bytes": 9899,
+      "sha256": "c2423fa45c7d53b1b9838891897bd9c064a8343d8331c07b2a7766181556422d"
+    },
+    "proxy": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_PROXY_V1.json",
+      "bytes": 56955,
+      "sha256": "c75a51f2b1ad12b092108595b9baa8435ab4fff444aeafda8e189a9fc400a894"
+    },
+    "compile_receipt": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_COMPILE_RECEIPT_V1.json",
+      "bytes": 5488,
+      "sha256": "2ced8c9ffb0dbb6bd1cdb3f97e1bd43591736fad7d5df1e70de2694dce8221c9"
+    }
+  },
+  "runs": {
+    "control-100": {
+      "policy": "DEPOSIT_ONLY_RESERVE",
+      "deposit_usd": 100.0,
+      "reference_capital_usd": 100.0,
+      "role": "identity_control",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true
+        }
+      },
+      "report": {
+        "expert": "ZetaSiraCombinedControlV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 100.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 121.39,
+        "actual_ending_balance_usd": 221.39,
+        "actual_balance_max_drawdown_usd": 27.19,
+        "profit_factor": 1.37,
+        "recovery_factor": 4.59,
+        "sharpe_ratio": 4.85,
+        "total_trades": 554,
+        "total_deals": 1108
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 287,
+          "win_count_actual": 155,
+          "win_count_stressed": 153,
+          "actual_net_usd": 57.04,
+          "actual_return_percent": 57.04,
+          "actual_max_closed_drawdown_usd": 27.18999999999999,
+          "actual_max_closed_drawdown_percent": 27.18999999999999,
+          "actual_net_to_drawdown": 2.0978300845899236,
+          "stressed_net_usd": 52.5055,
+          "stressed_return_percent": 52.50549999999999,
+          "stressed_max_closed_drawdown_usd": 28.390500000000017,
+          "stressed_max_closed_drawdown_percent": 28.390500000000017,
+          "stressed_net_to_drawdown": 1.84940384987936,
+          "planned_risk_usd": 1481.33598,
+          "stressed_net_per_planned_risk": 0.03544469364741954
+        },
+        "2025_H2": {
+          "trade_count": 267,
+          "win_count_actual": 155,
+          "win_count_stressed": 154,
+          "actual_net_usd": 64.35,
+          "actual_return_percent": 64.35,
+          "actual_max_closed_drawdown_usd": 14.51,
+          "actual_max_closed_drawdown_percent": 14.510000000000002,
+          "actual_net_to_drawdown": 4.43487250172295,
+          "stressed_net_usd": 60.5625,
+          "stressed_return_percent": 60.5625,
+          "stressed_max_closed_drawdown_usd": 14.948,
+          "stressed_max_closed_drawdown_percent": 14.948,
+          "stressed_net_to_drawdown": 4.051545357238426,
+          "planned_risk_usd": 1836.9731,
+          "stressed_net_per_planned_risk": 0.03296863737416732
+        },
+        "2025_FULL": {
+          "trade_count": 554,
+          "win_count_actual": 310,
+          "win_count_stressed": 307,
+          "actual_net_usd": 121.39,
+          "actual_return_percent": 121.39,
+          "actual_max_closed_drawdown_usd": 27.18999999999999,
+          "actual_max_closed_drawdown_percent": 27.18999999999999,
+          "actual_net_to_drawdown": 4.4645090106656875,
+          "stressed_net_usd": 113.068,
+          "stressed_return_percent": 113.06799999999998,
+          "stressed_max_closed_drawdown_usd": 28.390500000000017,
+          "stressed_max_closed_drawdown_percent": 28.390500000000017,
+          "stressed_net_to_drawdown": 3.9825998133178326,
+          "planned_risk_usd": 3318.30908,
+          "stressed_net_per_planned_risk": 0.03407398083604677
+        }
+      },
+      "actual_ending_balance_usd": 221.39,
+      "stressed_ending_balance_equivalent_usd": 213.06799999999998,
+      "internal_final_summary": {
+        "portfolio": "ZT-SIRA-V1-CONTROL",
+        "reason": "1",
+        "stressed_balance_2x": "213.0680",
+        "stressed_net_2x": "113.0680",
+        "stressed_max_closed_dd": "28.3905",
+        "project_realized_net": "121.3900",
+        "project_stage_balance": "221.3900",
+        "max_aggregate_planned_risk": "25.5058"
+      },
+      "opportunity_count": 609,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 159,
+        "POSITION_OPEN": 424,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 25
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 25,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 19,
+        "PASSIVE": 4,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.01": 554
+      },
+      "sizing": {
+        "sizing_day_count": 0,
+        "daily_volume_counts": {},
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 307,
+        "pair_counts": {
+          "CROSS+PASSIVE": 23,
+          "CROSS+PRESSURE": 14,
+          "CROSS+RC16": 50,
+          "CROSS+RC4": 35,
+          "CROSS+RETURN": 41,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 17,
+          "PASSIVE+RC4": 20,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 249,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "maximum of persisted log observations; control has no DCRC exact tracker",
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.06286779129070225,
+          "maximum_margin_equity_percent": 6.286779129070225
+        },
+        "logged": {
+          "observation_count": 4724,
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.06286779129070225,
+          "maximum_margin_equity_percent": 6.286779129070225
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 43,
+          "actual_net_usd": 20.65,
+          "actual_return_percent": 20.65,
+          "actual_max_closed_drawdown_usd": 10.660000000000007,
+          "actual_max_closed_drawdown_percent": 10.660000000000007,
+          "actual_net_to_drawdown": 1.937148217636021,
+          "stressed_net_usd": 19.556,
+          "stressed_return_percent": 19.556,
+          "stressed_max_closed_drawdown_usd": 10.967000000000002,
+          "stressed_max_closed_drawdown_percent": 10.967000000000002,
+          "stressed_net_to_drawdown": 1.7831676848728,
+          "planned_risk_usd": 457.0297,
+          "stressed_net_per_planned_risk": 0.04278934169923749,
+          "volume_distribution": {
+            "0.01": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 36,
+          "win_count_stressed": 36,
+          "actual_net_usd": 30.57,
+          "actual_return_percent": 30.570000000000004,
+          "actual_max_closed_drawdown_usd": 16.39,
+          "actual_max_closed_drawdown_percent": 16.39,
+          "actual_net_to_drawdown": 1.8651616839536302,
+          "stressed_net_usd": 29.538,
+          "stressed_return_percent": 29.537999999999997,
+          "stressed_max_closed_drawdown_usd": 16.602,
+          "stressed_max_closed_drawdown_percent": 16.602,
+          "stressed_net_to_drawdown": 1.7791832309360318,
+          "planned_risk_usd": 403.6542,
+          "stressed_net_per_planned_risk": 0.0731764961196985,
+          "volume_distribution": {
+            "0.01": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 193,
+          "win_count_actual": 105,
+          "win_count_stressed": 103,
+          "actual_net_usd": 33.05,
+          "actual_return_percent": 33.05,
+          "actual_max_closed_drawdown_usd": 17.230000000000004,
+          "actual_max_closed_drawdown_percent": 17.230000000000004,
+          "actual_net_to_drawdown": 1.9181659895531045,
+          "stressed_net_usd": 30.250999999999998,
+          "stressed_return_percent": 30.251,
+          "stressed_max_closed_drawdown_usd": 18.330500000000008,
+          "stressed_max_closed_drawdown_percent": 18.330500000000008,
+          "stressed_net_to_drawdown": 1.650309593300782,
+          "planned_risk_usd": 1187.7115,
+          "stressed_net_per_planned_risk": 0.025469989976522077,
+          "volume_distribution": {
+            "0.01": 193
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 14,
+          "win_count_stressed": 14,
+          "actual_net_usd": 0.49000000000000066,
+          "actual_return_percent": 0.49000000000000066,
+          "actual_max_closed_drawdown_usd": 12.61,
+          "actual_max_closed_drawdown_percent": 12.61,
+          "actual_net_to_drawdown": 0.038858049167327574,
+          "stressed_net_usd": 0.03499999999999984,
+          "stressed_return_percent": 0.03499999999999984,
+          "stressed_max_closed_drawdown_usd": 12.722,
+          "stressed_max_closed_drawdown_percent": 12.722,
+          "stressed_net_to_drawdown": 0.0027511397578996884,
+          "planned_risk_usd": 175.5943,
+          "stressed_net_per_planned_risk": 0.0001993230987566216,
+          "volume_distribution": {
+            "0.01": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 28,
+          "win_count_stressed": 28,
+          "actual_net_usd": 32.19,
+          "actual_return_percent": 32.19,
+          "actual_max_closed_drawdown_usd": 12.18,
+          "actual_max_closed_drawdown_percent": 12.18,
+          "actual_net_to_drawdown": 2.642857142857143,
+          "stressed_net_usd": 31.241,
+          "stressed_return_percent": 31.241000000000003,
+          "stressed_max_closed_drawdown_usd": 12.39,
+          "stressed_max_closed_drawdown_percent": 12.39,
+          "stressed_net_to_drawdown": 2.521468926553672,
+          "planned_risk_usd": 301.5116,
+          "stressed_net_per_planned_risk": 0.10361458729946045,
+          "volume_distribution": {
+            "0.01": 52
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 130,
+          "win_count_actual": 84,
+          "win_count_stressed": 83,
+          "actual_net_usd": 4.44,
+          "actual_return_percent": 4.44,
+          "actual_max_closed_drawdown_usd": 12.05,
+          "actual_max_closed_drawdown_percent": 12.05,
+          "actual_net_to_drawdown": 0.36846473029045645,
+          "stressed_net_usd": 2.4470000000000005,
+          "stressed_return_percent": 2.4470000000000005,
+          "stressed_max_closed_drawdown_usd": 12.610999999999999,
+          "stressed_max_closed_drawdown_percent": 12.611,
+          "stressed_net_to_drawdown": 0.1940369518674174,
+          "planned_risk_usd": 792.80778,
+          "stressed_net_per_planned_risk": 0.003086498470032674,
+          "volume_distribution": {
+            "0.01": 130
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-control-100.ini",
+          "bytes": 523,
+          "sha256": "db579adf0d4d4942c12ffe5eff4114f1fdcfbb48928529dc4f91b1750f1fc0ad"
+        },
+        "artifacts": {
+          "selection-2025-control-100-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-100-agent.log",
+            "bytes": 5460028,
+            "sha256": "fe41de30d874013d7006265a5e86b4dff3fa966b3afdd5347e6c091b84459244"
+          },
+          "selection-2025-control-100.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-100.htm",
+            "bytes": 1101174,
+            "sha256": "cfe383fde5bd5be927c8efe82ec6d96816066bdc0067f4f2486b5cbd41df814c"
+          },
+          "selection-2025-control-100.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-100.png",
+            "bytes": 15186,
+            "sha256": "d741e162daef999f1d48c2de9d29c8b993aecb9b653eeb93b03ad34a18538c46"
+          },
+          "selection-2025-control-100-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-100-holding.png",
+            "bytes": 21019,
+            "sha256": "96ba20732e126b5d3d7562f7aacb587b2a8e1dcce848f9dade17326fffb61551"
+          },
+          "selection-2025-control-100-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-100-hst.png",
+            "bytes": 51044,
+            "sha256": "d6525383366928625b48bbd5d4af20e5a1e97084cbd3133b1c9f9549bb5c1318"
+          },
+          "selection-2025-control-100-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-100-mfemae.png",
+            "bytes": 43229,
+            "sha256": "b82f8600af43d339a535bba0bd85a08ce7801269b704ee97c3f264e1e3b4d528"
+          }
+        }
+      }
+    },
+    "control-200": {
+      "policy": "DEPOSIT_ONLY_RESERVE",
+      "deposit_usd": 200.0,
+      "reference_capital_usd": 100.0,
+      "role": "matching_deposit_control",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true
+        }
+      },
+      "report": {
+        "expert": "ZetaSiraCombinedControlV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 200.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 121.65,
+        "actual_ending_balance_usd": 321.65,
+        "actual_balance_max_drawdown_usd": 27.27,
+        "profit_factor": 1.37,
+        "recovery_factor": 4.59,
+        "sharpe_ratio": 5.07,
+        "total_trades": 560,
+        "total_deals": 1120
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 293,
+          "win_count_actual": 158,
+          "win_count_stressed": 156,
+          "actual_net_usd": 57.41,
+          "actual_return_percent": 28.705,
+          "actual_max_closed_drawdown_usd": 27.26999999999999,
+          "actual_max_closed_drawdown_percent": 13.634999999999994,
+          "actual_net_to_drawdown": 2.105243857719106,
+          "stressed_net_usd": 52.7995,
+          "stressed_return_percent": 26.39975,
+          "stressed_max_closed_drawdown_usd": 28.470500000000023,
+          "stressed_max_closed_drawdown_percent": 14.235250000000011,
+          "stressed_net_to_drawdown": 1.854533640083594,
+          "planned_risk_usd": 1504.48124,
+          "stressed_net_per_planned_risk": 0.03509482112252859
+        },
+        "2025_H2": {
+          "trade_count": 267,
+          "win_count_actual": 155,
+          "win_count_stressed": 154,
+          "actual_net_usd": 64.24,
+          "actual_return_percent": 32.12,
+          "actual_max_closed_drawdown_usd": 14.52,
+          "actual_max_closed_drawdown_percent": 7.26,
+          "actual_net_to_drawdown": 4.424242424242424,
+          "stressed_net_usd": 60.4525,
+          "stressed_return_percent": 30.22625,
+          "stressed_max_closed_drawdown_usd": 14.958,
+          "stressed_max_closed_drawdown_percent": 7.478999999999999,
+          "stressed_net_to_drawdown": 4.041482818558631,
+          "planned_risk_usd": 1839.62734,
+          "stressed_net_per_planned_risk": 0.032861275044977316
+        },
+        "2025_FULL": {
+          "trade_count": 560,
+          "win_count_actual": 313,
+          "win_count_stressed": 310,
+          "actual_net_usd": 121.65,
+          "actual_return_percent": 60.82500000000001,
+          "actual_max_closed_drawdown_usd": 27.26999999999999,
+          "actual_max_closed_drawdown_percent": 13.634999999999994,
+          "actual_net_to_drawdown": 4.460946094609463,
+          "stressed_net_usd": 113.252,
+          "stressed_return_percent": 56.626,
+          "stressed_max_closed_drawdown_usd": 28.470500000000023,
+          "stressed_max_closed_drawdown_percent": 14.235250000000011,
+          "stressed_net_to_drawdown": 3.9778718322474105,
+          "planned_risk_usd": 3344.10858,
+          "stressed_net_per_planned_risk": 0.03386612524405532
+        }
+      },
+      "actual_ending_balance_usd": 321.65,
+      "stressed_ending_balance_equivalent_usd": 313.252,
+      "internal_final_summary": {
+        "portfolio": "ZT-SIRA-V1-CONTROL",
+        "reason": "1",
+        "stressed_balance_2x": "213.2520",
+        "stressed_net_2x": "113.2520",
+        "stressed_max_closed_dd": "28.4705",
+        "project_realized_net": "121.6500",
+        "project_stage_balance": "221.6500",
+        "max_aggregate_planned_risk": "25.5278"
+      },
+      "opportunity_count": 606,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 160,
+        "POSITION_OPEN": 429,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 16
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 16,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 14,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.01": 560
+      },
+      "sizing": {
+        "sizing_day_count": 0,
+        "daily_volume_counts": {},
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 319,
+        "pair_counts": {
+          "CROSS+PASSIVE": 24,
+          "CROSS+PRESSURE": 16,
+          "CROSS+RC16": 53,
+          "CROSS+RC4": 38,
+          "CROSS+RETURN": 42,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 18,
+          "PASSIVE+RC4": 21,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 255,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "maximum of persisted log observations; control has no DCRC exact tracker",
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.03173895820954645,
+          "maximum_margin_equity_percent": 3.1738958209546446
+        },
+        "logged": {
+          "observation_count": 4731,
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.03173895820954645,
+          "maximum_margin_equity_percent": 3.1738958209546446
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 43,
+          "actual_net_usd": 20.639999999999997,
+          "actual_return_percent": 10.319999999999999,
+          "actual_max_closed_drawdown_usd": 10.700000000000006,
+          "actual_max_closed_drawdown_percent": 5.350000000000003,
+          "actual_net_to_drawdown": 1.928971962616821,
+          "stressed_net_usd": 19.546,
+          "stressed_return_percent": 9.773,
+          "stressed_max_closed_drawdown_usd": 11.007000000000005,
+          "stressed_max_closed_drawdown_percent": 5.5035000000000025,
+          "stressed_net_to_drawdown": 1.7757790496956474,
+          "planned_risk_usd": 457.0436,
+          "stressed_net_per_planned_risk": 0.04276616060262084,
+          "volume_distribution": {
+            "0.01": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 36,
+          "win_count_stressed": 36,
+          "actual_net_usd": 30.6,
+          "actual_return_percent": 15.299999999999999,
+          "actual_max_closed_drawdown_usd": 16.41,
+          "actual_max_closed_drawdown_percent": 8.205,
+          "actual_net_to_drawdown": 1.8647166361974405,
+          "stressed_net_usd": 29.568,
+          "stressed_return_percent": 14.784,
+          "stressed_max_closed_drawdown_usd": 16.622,
+          "stressed_max_closed_drawdown_percent": 8.311,
+          "stressed_net_to_drawdown": 1.7788473107929252,
+          "planned_risk_usd": 403.6857,
+          "stressed_net_per_planned_risk": 0.07324510132511507,
+          "volume_distribution": {
+            "0.01": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 198,
+          "win_count_actual": 107,
+          "win_count_stressed": 105,
+          "actual_net_usd": 32.6,
+          "actual_return_percent": 16.3,
+          "actual_max_closed_drawdown_usd": 17.300000000000008,
+          "actual_max_closed_drawdown_percent": 8.650000000000004,
+          "actual_net_to_drawdown": 1.8843930635838142,
+          "stressed_net_usd": 29.739,
+          "stressed_return_percent": 14.869499999999999,
+          "stressed_max_closed_drawdown_usd": 18.4005,
+          "stressed_max_closed_drawdown_percent": 9.20025,
+          "stressed_net_to_drawdown": 1.616206081356485,
+          "planned_risk_usd": 1208.8244,
+          "stressed_net_per_planned_risk": 0.024601588121483983,
+          "volume_distribution": {
+            "0.01": 198
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 14,
+          "win_count_stressed": 14,
+          "actual_net_usd": 0.47000000000000064,
+          "actual_return_percent": 0.23500000000000032,
+          "actual_max_closed_drawdown_usd": 12.66,
+          "actual_max_closed_drawdown_percent": 6.329999999999999,
+          "actual_net_to_drawdown": 0.03712480252764618,
+          "stressed_net_usd": 0.014999999999999819,
+          "stressed_return_percent": 0.0074999999999999095,
+          "stressed_max_closed_drawdown_usd": 12.771999999999998,
+          "stressed_max_closed_drawdown_percent": 6.385999999999998,
+          "stressed_net_to_drawdown": 0.0011744440964609943,
+          "planned_risk_usd": 175.667,
+          "stressed_net_per_planned_risk": 8.53888322792546e-05,
+          "volume_distribution": {
+            "0.01": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 28,
+          "win_count_stressed": 28,
+          "actual_net_usd": 32.19,
+          "actual_return_percent": 16.095,
+          "actual_max_closed_drawdown_usd": 12.149999999999999,
+          "actual_max_closed_drawdown_percent": 6.074999999999999,
+          "actual_net_to_drawdown": 2.649382716049383,
+          "stressed_net_usd": 31.241,
+          "stressed_return_percent": 15.620500000000002,
+          "stressed_max_closed_drawdown_usd": 12.36,
+          "stressed_max_closed_drawdown_percent": 6.18,
+          "stressed_net_to_drawdown": 2.527588996763754,
+          "planned_risk_usd": 301.6625,
+          "stressed_net_per_planned_risk": 0.10356275639166286,
+          "volume_distribution": {
+            "0.01": 52
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 131,
+          "win_count_actual": 85,
+          "win_count_stressed": 84,
+          "actual_net_usd": 5.150000000000001,
+          "actual_return_percent": 2.5750000000000006,
+          "actual_max_closed_drawdown_usd": 12.09,
+          "actual_max_closed_drawdown_percent": 6.045,
+          "actual_net_to_drawdown": 0.42597187758478094,
+          "stressed_net_usd": 3.143,
+          "stressed_return_percent": 1.5715,
+          "stressed_max_closed_drawdown_usd": 12.650999999999998,
+          "stressed_max_closed_drawdown_percent": 6.325499999999999,
+          "stressed_net_to_drawdown": 0.2484388585882539,
+          "planned_risk_usd": 797.22538,
+          "stressed_net_per_planned_risk": 0.003942423408547279,
+          "volume_distribution": {
+            "0.01": 131
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-control-200.ini",
+          "bytes": 523,
+          "sha256": "eb0153eecd028ebc8bc029b3a4bbba9e400a50489e3c823b6c99f5906940d92c"
+        },
+        "artifacts": {
+          "selection-2025-control-200-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-200-agent.log",
+            "bytes": 5484782,
+            "sha256": "0471c11e7a0c2b7b1d895434d950530d9d1653fafdfe99261c4a0b2ce6a72fd5"
+          },
+          "selection-2025-control-200.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-200.htm",
+            "bytes": 1112812,
+            "sha256": "ec959e023a119ea5ebd567d718c1dd32735b3930cc51031089dbf681b82c84d6"
+          },
+          "selection-2025-control-200.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-200.png",
+            "bytes": 15400,
+            "sha256": "fe219a4139775b243ba7a0dec5f7b0f1d339d0621bd88c77a521ace2d616a7f4"
+          },
+          "selection-2025-control-200-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-200-holding.png",
+            "bytes": 21032,
+            "sha256": "dba4839974f5d36f4d8ac8e8560001c277a57947fb5feae33f7a7cfff80589f1"
+          },
+          "selection-2025-control-200-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-200-hst.png",
+            "bytes": 50683,
+            "sha256": "89dacd932a2b1999a60ee95002a001b4f5b19ee57a53daeafe92cb37ecadbef3"
+          },
+          "selection-2025-control-200-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-200-mfemae.png",
+            "bytes": 43255,
+            "sha256": "df88045544b41b1aafb3299bcd7a1a9d068963b16e54761ae062db57d78d37fa"
+          }
+        }
+      }
+    },
+    "control-300": {
+      "policy": "DEPOSIT_ONLY_RESERVE",
+      "deposit_usd": 300.0,
+      "reference_capital_usd": 100.0,
+      "role": "matching_deposit_control",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true
+        }
+      },
+      "report": {
+        "expert": "ZetaSiraCombinedControlV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 300.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 121.65,
+        "actual_ending_balance_usd": 421.65,
+        "actual_balance_max_drawdown_usd": 27.27,
+        "profit_factor": 1.37,
+        "recovery_factor": 4.59,
+        "sharpe_ratio": 5.18,
+        "total_trades": 560,
+        "total_deals": 1120
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 293,
+          "win_count_actual": 158,
+          "win_count_stressed": 156,
+          "actual_net_usd": 57.41,
+          "actual_return_percent": 19.136666666666667,
+          "actual_max_closed_drawdown_usd": 27.26999999999999,
+          "actual_max_closed_drawdown_percent": 9.089999999999996,
+          "actual_net_to_drawdown": 2.105243857719106,
+          "stressed_net_usd": 52.7995,
+          "stressed_return_percent": 17.599833333333333,
+          "stressed_max_closed_drawdown_usd": 28.470500000000023,
+          "stressed_max_closed_drawdown_percent": 9.490166666666674,
+          "stressed_net_to_drawdown": 1.854533640083594,
+          "planned_risk_usd": 1504.48124,
+          "stressed_net_per_planned_risk": 0.03509482112252859
+        },
+        "2025_H2": {
+          "trade_count": 267,
+          "win_count_actual": 155,
+          "win_count_stressed": 154,
+          "actual_net_usd": 64.24,
+          "actual_return_percent": 21.41333333333333,
+          "actual_max_closed_drawdown_usd": 14.52,
+          "actual_max_closed_drawdown_percent": 4.84,
+          "actual_net_to_drawdown": 4.424242424242424,
+          "stressed_net_usd": 60.4525,
+          "stressed_return_percent": 20.150833333333335,
+          "stressed_max_closed_drawdown_usd": 14.958,
+          "stressed_max_closed_drawdown_percent": 4.986,
+          "stressed_net_to_drawdown": 4.041482818558631,
+          "planned_risk_usd": 1839.62734,
+          "stressed_net_per_planned_risk": 0.032861275044977316
+        },
+        "2025_FULL": {
+          "trade_count": 560,
+          "win_count_actual": 313,
+          "win_count_stressed": 310,
+          "actual_net_usd": 121.65,
+          "actual_return_percent": 40.550000000000004,
+          "actual_max_closed_drawdown_usd": 27.26999999999999,
+          "actual_max_closed_drawdown_percent": 9.089999999999996,
+          "actual_net_to_drawdown": 4.460946094609463,
+          "stressed_net_usd": 113.252,
+          "stressed_return_percent": 37.75066666666667,
+          "stressed_max_closed_drawdown_usd": 28.470500000000023,
+          "stressed_max_closed_drawdown_percent": 9.490166666666674,
+          "stressed_net_to_drawdown": 3.9778718322474105,
+          "planned_risk_usd": 3344.10858,
+          "stressed_net_per_planned_risk": 0.03386612524405532
+        }
+      },
+      "actual_ending_balance_usd": 421.65,
+      "stressed_ending_balance_equivalent_usd": 413.252,
+      "internal_final_summary": {
+        "portfolio": "ZT-SIRA-V1-CONTROL",
+        "reason": "1",
+        "stressed_balance_2x": "213.2520",
+        "stressed_net_2x": "113.2520",
+        "stressed_max_closed_dd": "28.4705",
+        "project_realized_net": "121.6500",
+        "project_stage_balance": "221.6500",
+        "max_aggregate_planned_risk": "25.5278"
+      },
+      "opportunity_count": 606,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 160,
+        "POSITION_OPEN": 429,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 16
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 16,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 14,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.01": 560
+      },
+      "sizing": {
+        "sizing_day_count": 0,
+        "daily_volume_counts": {},
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 319,
+        "pair_counts": {
+          "CROSS+PASSIVE": 24,
+          "CROSS+PRESSURE": 16,
+          "CROSS+RC16": 53,
+          "CROSS+RC4": 38,
+          "CROSS+RETURN": 42,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 18,
+          "PASSIVE+RC4": 21,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 255,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "maximum of persisted log observations; control has no DCRC exact tracker",
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.02122797721552524,
+          "maximum_margin_equity_percent": 2.1227977215525238
+        },
+        "logged": {
+          "observation_count": 4731,
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.02122797721552524,
+          "maximum_margin_equity_percent": 2.1227977215525238
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 43,
+          "actual_net_usd": 20.639999999999997,
+          "actual_return_percent": 6.879999999999999,
+          "actual_max_closed_drawdown_usd": 10.700000000000006,
+          "actual_max_closed_drawdown_percent": 3.5666666666666687,
+          "actual_net_to_drawdown": 1.928971962616821,
+          "stressed_net_usd": 19.546,
+          "stressed_return_percent": 6.5153333333333325,
+          "stressed_max_closed_drawdown_usd": 11.007000000000005,
+          "stressed_max_closed_drawdown_percent": 3.6690000000000014,
+          "stressed_net_to_drawdown": 1.7757790496956474,
+          "planned_risk_usd": 457.0436,
+          "stressed_net_per_planned_risk": 0.04276616060262084,
+          "volume_distribution": {
+            "0.01": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 36,
+          "win_count_stressed": 36,
+          "actual_net_usd": 30.6,
+          "actual_return_percent": 10.200000000000001,
+          "actual_max_closed_drawdown_usd": 16.41,
+          "actual_max_closed_drawdown_percent": 5.47,
+          "actual_net_to_drawdown": 1.8647166361974405,
+          "stressed_net_usd": 29.568,
+          "stressed_return_percent": 9.856000000000002,
+          "stressed_max_closed_drawdown_usd": 16.622,
+          "stressed_max_closed_drawdown_percent": 5.540666666666667,
+          "stressed_net_to_drawdown": 1.7788473107929252,
+          "planned_risk_usd": 403.6857,
+          "stressed_net_per_planned_risk": 0.07324510132511507,
+          "volume_distribution": {
+            "0.01": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 198,
+          "win_count_actual": 107,
+          "win_count_stressed": 105,
+          "actual_net_usd": 32.6,
+          "actual_return_percent": 10.866666666666667,
+          "actual_max_closed_drawdown_usd": 17.300000000000008,
+          "actual_max_closed_drawdown_percent": 5.766666666666669,
+          "actual_net_to_drawdown": 1.8843930635838142,
+          "stressed_net_usd": 29.739,
+          "stressed_return_percent": 9.913,
+          "stressed_max_closed_drawdown_usd": 18.4005,
+          "stressed_max_closed_drawdown_percent": 6.1335,
+          "stressed_net_to_drawdown": 1.616206081356485,
+          "planned_risk_usd": 1208.8244,
+          "stressed_net_per_planned_risk": 0.024601588121483983,
+          "volume_distribution": {
+            "0.01": 198
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 14,
+          "win_count_stressed": 14,
+          "actual_net_usd": 0.47000000000000064,
+          "actual_return_percent": 0.1566666666666669,
+          "actual_max_closed_drawdown_usd": 12.66,
+          "actual_max_closed_drawdown_percent": 4.22,
+          "actual_net_to_drawdown": 0.03712480252764618,
+          "stressed_net_usd": 0.014999999999999819,
+          "stressed_return_percent": 0.00499999999999994,
+          "stressed_max_closed_drawdown_usd": 12.771999999999998,
+          "stressed_max_closed_drawdown_percent": 4.257333333333333,
+          "stressed_net_to_drawdown": 0.0011744440964609943,
+          "planned_risk_usd": 175.667,
+          "stressed_net_per_planned_risk": 8.53888322792546e-05,
+          "volume_distribution": {
+            "0.01": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 28,
+          "win_count_stressed": 28,
+          "actual_net_usd": 32.19,
+          "actual_return_percent": 10.729999999999999,
+          "actual_max_closed_drawdown_usd": 12.149999999999999,
+          "actual_max_closed_drawdown_percent": 4.05,
+          "actual_net_to_drawdown": 2.649382716049383,
+          "stressed_net_usd": 31.241,
+          "stressed_return_percent": 10.413666666666668,
+          "stressed_max_closed_drawdown_usd": 12.36,
+          "stressed_max_closed_drawdown_percent": 4.12,
+          "stressed_net_to_drawdown": 2.527588996763754,
+          "planned_risk_usd": 301.6625,
+          "stressed_net_per_planned_risk": 0.10356275639166286,
+          "volume_distribution": {
+            "0.01": 52
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 131,
+          "win_count_actual": 85,
+          "win_count_stressed": 84,
+          "actual_net_usd": 5.150000000000001,
+          "actual_return_percent": 1.716666666666667,
+          "actual_max_closed_drawdown_usd": 12.09,
+          "actual_max_closed_drawdown_percent": 4.03,
+          "actual_net_to_drawdown": 0.42597187758478094,
+          "stressed_net_usd": 3.143,
+          "stressed_return_percent": 1.0476666666666665,
+          "stressed_max_closed_drawdown_usd": 12.650999999999998,
+          "stressed_max_closed_drawdown_percent": 4.217,
+          "stressed_net_to_drawdown": 0.2484388585882539,
+          "planned_risk_usd": 797.22538,
+          "stressed_net_per_planned_risk": 0.003942423408547279,
+          "volume_distribution": {
+            "0.01": 131
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-control-300.ini",
+          "bytes": 523,
+          "sha256": "bc59adedde170d6560640237c95c8a9de521aeaf04dfa64d3e59f1ad34160606"
+        },
+        "artifacts": {
+          "selection-2025-control-300-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-300-agent.log",
+            "bytes": 5484778,
+            "sha256": "ad304456b00066629ffc16c816bb6da602bd5cd7d5060cd1b09b3e24f0cff033"
+          },
+          "selection-2025-control-300.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-300.htm",
+            "bytes": 1112812,
+            "sha256": "1421485581d59f6fc3c96a153bf4da009993765e27b7cb6170a423cdb4df9dbd"
+          },
+          "selection-2025-control-300.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-300.png",
+            "bytes": 15385,
+            "sha256": "216060a597ddc4aa3f114f50dc7fb9ef0a7ca39969026ee6a00a75db47c7060c"
+          },
+          "selection-2025-control-300-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-300-holding.png",
+            "bytes": 21032,
+            "sha256": "dba4839974f5d36f4d8ac8e8560001c277a57947fb5feae33f7a7cfff80589f1"
+          },
+          "selection-2025-control-300-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-300-hst.png",
+            "bytes": 50683,
+            "sha256": "89dacd932a2b1999a60ee95002a001b4f5b19ee57a53daeafe92cb37ecadbef3"
+          },
+          "selection-2025-control-300-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-control-300-mfemae.png",
+            "bytes": 43255,
+            "sha256": "df88045544b41b1aafb3299bcd7a1a9d068963b16e54761ae062db57d78d37fa"
+          }
+        }
+      }
+    },
+    "linear-100": {
+      "policy": "LINEAR_CAPITAL",
+      "deposit_usd": 100.0,
+      "reference_capital_usd": 100.0,
+      "role": "structural_anchor",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true,
+          "dcrc_policy_matches": true,
+          "dcrc_deposit_matches": true,
+          "dcrc_margin_block_count_matches": true,
+          "dcrc_passive_margin_skip_count_matches": true
+        }
+      },
+      "report": {
+        "expert": "ZetaDcrcLinearCapitalV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 100.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 121.39,
+        "actual_ending_balance_usd": 221.39,
+        "actual_balance_max_drawdown_usd": 27.19,
+        "profit_factor": 1.37,
+        "recovery_factor": 4.59,
+        "sharpe_ratio": 4.85,
+        "total_trades": 554,
+        "total_deals": 1108
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 287,
+          "win_count_actual": 155,
+          "win_count_stressed": 153,
+          "actual_net_usd": 57.04,
+          "actual_return_percent": 57.04,
+          "actual_max_closed_drawdown_usd": 27.18999999999999,
+          "actual_max_closed_drawdown_percent": 27.18999999999999,
+          "actual_net_to_drawdown": 2.0978300845899236,
+          "stressed_net_usd": 52.5055,
+          "stressed_return_percent": 52.50549999999999,
+          "stressed_max_closed_drawdown_usd": 28.390500000000017,
+          "stressed_max_closed_drawdown_percent": 28.390500000000017,
+          "stressed_net_to_drawdown": 1.84940384987936,
+          "planned_risk_usd": 1481.33598,
+          "stressed_net_per_planned_risk": 0.03544469364741954
+        },
+        "2025_H2": {
+          "trade_count": 267,
+          "win_count_actual": 155,
+          "win_count_stressed": 154,
+          "actual_net_usd": 64.35,
+          "actual_return_percent": 64.35,
+          "actual_max_closed_drawdown_usd": 14.51,
+          "actual_max_closed_drawdown_percent": 14.510000000000002,
+          "actual_net_to_drawdown": 4.43487250172295,
+          "stressed_net_usd": 60.5625,
+          "stressed_return_percent": 60.5625,
+          "stressed_max_closed_drawdown_usd": 14.948,
+          "stressed_max_closed_drawdown_percent": 14.948,
+          "stressed_net_to_drawdown": 4.051545357238426,
+          "planned_risk_usd": 1836.9731,
+          "stressed_net_per_planned_risk": 0.03296863737416732
+        },
+        "2025_FULL": {
+          "trade_count": 554,
+          "win_count_actual": 310,
+          "win_count_stressed": 307,
+          "actual_net_usd": 121.39,
+          "actual_return_percent": 121.39,
+          "actual_max_closed_drawdown_usd": 27.18999999999999,
+          "actual_max_closed_drawdown_percent": 27.18999999999999,
+          "actual_net_to_drawdown": 4.4645090106656875,
+          "stressed_net_usd": 113.068,
+          "stressed_return_percent": 113.06799999999998,
+          "stressed_max_closed_drawdown_usd": 28.390500000000017,
+          "stressed_max_closed_drawdown_percent": 28.390500000000017,
+          "stressed_net_to_drawdown": 3.9825998133178326,
+          "planned_risk_usd": 3318.30908,
+          "stressed_net_per_planned_risk": 0.03407398083604677
+        }
+      },
+      "actual_ending_balance_usd": 221.39,
+      "stressed_ending_balance_equivalent_usd": 213.06799999999998,
+      "internal_final_summary": {
+        "portfolio": "ZT-LAB-DCRC-V1-LINEAR-CAPITAL",
+        "reason": "1",
+        "stressed_balance_2x": "213.0680",
+        "stressed_net_2x": "113.0680",
+        "stressed_max_closed_dd": "28.3905",
+        "project_realized_net": "121.3900",
+        "project_stage_balance": "221.3900",
+        "max_aggregate_planned_risk": "25.5058"
+      },
+      "opportunity_count": 609,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 159,
+        "POSITION_OPEN": 424,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 25
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 25,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 19,
+        "PASSIVE": 4,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.01": 554
+      },
+      "sizing": {
+        "sizing_day_count": 259,
+        "daily_volume_counts": {
+          "0.01": 259
+        },
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 307,
+        "pair_counts": {
+          "CROSS+PASSIVE": 23,
+          "CROSS+PRESSURE": 14,
+          "CROSS+RC16": 50,
+          "CROSS+RC4": 35,
+          "CROSS+RETURN": 41,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 17,
+          "PASSIVE+RC4": 20,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 249,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "DCRC_FINAL",
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.06359758,
+          "maximum_margin_equity_percent": 6.359758
+        },
+        "logged": {
+          "observation_count": 4724,
+          "maximum_margin_usd": 6.98,
+          "maximum_margin_equity_fraction": 0.06286779129070225,
+          "maximum_margin_equity_percent": 6.286779129070225
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 43,
+          "actual_net_usd": 20.65,
+          "actual_return_percent": 20.65,
+          "actual_max_closed_drawdown_usd": 10.660000000000007,
+          "actual_max_closed_drawdown_percent": 10.660000000000007,
+          "actual_net_to_drawdown": 1.937148217636021,
+          "stressed_net_usd": 19.556,
+          "stressed_return_percent": 19.556,
+          "stressed_max_closed_drawdown_usd": 10.967000000000002,
+          "stressed_max_closed_drawdown_percent": 10.967000000000002,
+          "stressed_net_to_drawdown": 1.7831676848728,
+          "planned_risk_usd": 457.0297,
+          "stressed_net_per_planned_risk": 0.04278934169923749,
+          "volume_distribution": {
+            "0.01": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 36,
+          "win_count_stressed": 36,
+          "actual_net_usd": 30.57,
+          "actual_return_percent": 30.570000000000004,
+          "actual_max_closed_drawdown_usd": 16.39,
+          "actual_max_closed_drawdown_percent": 16.39,
+          "actual_net_to_drawdown": 1.8651616839536302,
+          "stressed_net_usd": 29.538,
+          "stressed_return_percent": 29.537999999999997,
+          "stressed_max_closed_drawdown_usd": 16.602,
+          "stressed_max_closed_drawdown_percent": 16.602,
+          "stressed_net_to_drawdown": 1.7791832309360318,
+          "planned_risk_usd": 403.6542,
+          "stressed_net_per_planned_risk": 0.0731764961196985,
+          "volume_distribution": {
+            "0.01": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 193,
+          "win_count_actual": 105,
+          "win_count_stressed": 103,
+          "actual_net_usd": 33.05,
+          "actual_return_percent": 33.05,
+          "actual_max_closed_drawdown_usd": 17.230000000000004,
+          "actual_max_closed_drawdown_percent": 17.230000000000004,
+          "actual_net_to_drawdown": 1.9181659895531045,
+          "stressed_net_usd": 30.250999999999998,
+          "stressed_return_percent": 30.251,
+          "stressed_max_closed_drawdown_usd": 18.330500000000008,
+          "stressed_max_closed_drawdown_percent": 18.330500000000008,
+          "stressed_net_to_drawdown": 1.650309593300782,
+          "planned_risk_usd": 1187.7115,
+          "stressed_net_per_planned_risk": 0.025469989976522077,
+          "volume_distribution": {
+            "0.01": 193
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 14,
+          "win_count_stressed": 14,
+          "actual_net_usd": 0.49000000000000066,
+          "actual_return_percent": 0.49000000000000066,
+          "actual_max_closed_drawdown_usd": 12.61,
+          "actual_max_closed_drawdown_percent": 12.61,
+          "actual_net_to_drawdown": 0.038858049167327574,
+          "stressed_net_usd": 0.03499999999999984,
+          "stressed_return_percent": 0.03499999999999984,
+          "stressed_max_closed_drawdown_usd": 12.722,
+          "stressed_max_closed_drawdown_percent": 12.722,
+          "stressed_net_to_drawdown": 0.0027511397578996884,
+          "planned_risk_usd": 175.5943,
+          "stressed_net_per_planned_risk": 0.0001993230987566216,
+          "volume_distribution": {
+            "0.01": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 28,
+          "win_count_stressed": 28,
+          "actual_net_usd": 32.19,
+          "actual_return_percent": 32.19,
+          "actual_max_closed_drawdown_usd": 12.18,
+          "actual_max_closed_drawdown_percent": 12.18,
+          "actual_net_to_drawdown": 2.642857142857143,
+          "stressed_net_usd": 31.241,
+          "stressed_return_percent": 31.241000000000003,
+          "stressed_max_closed_drawdown_usd": 12.39,
+          "stressed_max_closed_drawdown_percent": 12.39,
+          "stressed_net_to_drawdown": 2.521468926553672,
+          "planned_risk_usd": 301.5116,
+          "stressed_net_per_planned_risk": 0.10361458729946045,
+          "volume_distribution": {
+            "0.01": 52
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 130,
+          "win_count_actual": 84,
+          "win_count_stressed": 83,
+          "actual_net_usd": 4.44,
+          "actual_return_percent": 4.44,
+          "actual_max_closed_drawdown_usd": 12.05,
+          "actual_max_closed_drawdown_percent": 12.05,
+          "actual_net_to_drawdown": 0.36846473029045645,
+          "stressed_net_usd": 2.4470000000000005,
+          "stressed_return_percent": 2.4470000000000005,
+          "stressed_max_closed_drawdown_usd": 12.610999999999999,
+          "stressed_max_closed_drawdown_percent": 12.611,
+          "stressed_net_to_drawdown": 0.1940369518674174,
+          "planned_risk_usd": 792.80778,
+          "stressed_net_per_planned_risk": 0.003086498470032674,
+          "volume_distribution": {
+            "0.01": 130
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-linear-100.ini",
+          "bytes": 528,
+          "sha256": "4d67742144e610b234fb4672eceb4442d2a809ee138cad21cac7fcb84df51b60"
+        },
+        "artifacts": {
+          "selection-2025-linear-100-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-100-agent.log",
+            "bytes": 5456974,
+            "sha256": "6447099e1d74f3fa60a5fd509a1862141d7d53af8d94c3dd8007f17244112410"
+          },
+          "selection-2025-linear-100.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-100.htm",
+            "bytes": 1101468,
+            "sha256": "6295255d1ab0ee3bdba8ca4245c02de1e873cae54aadd5e28f7c01100c760447"
+          },
+          "selection-2025-linear-100.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-100.png",
+            "bytes": 15186,
+            "sha256": "d741e162daef999f1d48c2de9d29c8b993aecb9b653eeb93b03ad34a18538c46"
+          },
+          "selection-2025-linear-100-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-100-holding.png",
+            "bytes": 21019,
+            "sha256": "96ba20732e126b5d3d7562f7aacb587b2a8e1dcce848f9dade17326fffb61551"
+          },
+          "selection-2025-linear-100-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-100-hst.png",
+            "bytes": 51044,
+            "sha256": "d6525383366928625b48bbd5d4af20e5a1e97084cbd3133b1c9f9549bb5c1318"
+          },
+          "selection-2025-linear-100-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-100-mfemae.png",
+            "bytes": 43229,
+            "sha256": "b82f8600af43d339a535bba0bd85a08ce7801269b704ee97c3f264e1e3b4d528"
+          }
+        }
+      },
+      "dcrc_final": {
+        "policy": "LINEAR_CAPITAL",
+        "deposit_usd": 100.0,
+        "sizing_day_transitions": 0,
+        "market_margin_or_calculation_blocks": 0,
+        "passive_margin_skips": 0,
+        "maximum_margin_usd": 6.98,
+        "maximum_margin_equity_fraction": 0.06359758,
+        "maximum_entry_volume": 0.01
+      }
+    },
+    "linear-200": {
+      "policy": "LINEAR_CAPITAL",
+      "deposit_usd": 200.0,
+      "reference_capital_usd": 200.0,
+      "role": "structural_anchor",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true,
+          "dcrc_policy_matches": true,
+          "dcrc_deposit_matches": true,
+          "dcrc_margin_block_count_matches": true,
+          "dcrc_passive_margin_skip_count_matches": true
+        }
+      },
+      "report": {
+        "expert": "ZetaDcrcLinearCapitalV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 200.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 242.75,
+        "actual_ending_balance_usd": 442.75,
+        "actual_balance_max_drawdown_usd": 54.31,
+        "profit_factor": 1.37,
+        "recovery_factor": 4.6,
+        "sharpe_ratio": 4.79,
+        "total_trades": 554,
+        "total_deals": 1108
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 287,
+          "win_count_actual": 155,
+          "win_count_stressed": 152,
+          "actual_net_usd": 114.17,
+          "actual_return_percent": 57.084999999999994,
+          "actual_max_closed_drawdown_usd": 54.309999999999945,
+          "actual_max_closed_drawdown_percent": 27.154999999999973,
+          "actual_net_to_drawdown": 2.102191125023018,
+          "stressed_net_usd": 105.101,
+          "stressed_return_percent": 52.5505,
+          "stressed_max_closed_drawdown_usd": 56.71100000000001,
+          "stressed_max_closed_drawdown_percent": 28.355500000000006,
+          "stressed_net_to_drawdown": 1.853273615347992,
+          "planned_risk_usd": 2962.53956,
+          "stressed_net_per_planned_risk": 0.03547665706107904
+        },
+        "2025_H2": {
+          "trade_count": 267,
+          "win_count_actual": 155,
+          "win_count_stressed": 154,
+          "actual_net_usd": 128.58,
+          "actual_return_percent": 64.29,
+          "actual_max_closed_drawdown_usd": 29.010000000000005,
+          "actual_max_closed_drawdown_percent": 14.505,
+          "actual_net_to_drawdown": 4.432264736297828,
+          "stressed_net_usd": 121.00500000000001,
+          "stressed_return_percent": 60.502500000000005,
+          "stressed_max_closed_drawdown_usd": 29.885999999999996,
+          "stressed_max_closed_drawdown_percent": 14.942999999999998,
+          "stressed_net_to_drawdown": 4.048885765910461,
+          "planned_risk_usd": 3674.6881,
+          "stressed_net_per_planned_risk": 0.03292932534872824
+        },
+        "2025_FULL": {
+          "trade_count": 554,
+          "win_count_actual": 310,
+          "win_count_stressed": 306,
+          "actual_net_usd": 242.75,
+          "actual_return_percent": 121.37500000000001,
+          "actual_max_closed_drawdown_usd": 54.309999999999945,
+          "actual_max_closed_drawdown_percent": 27.154999999999973,
+          "actual_net_to_drawdown": 4.469710918799489,
+          "stressed_net_usd": 226.106,
+          "stressed_return_percent": 113.053,
+          "stressed_max_closed_drawdown_usd": 56.71100000000001,
+          "stressed_max_closed_drawdown_percent": 28.355500000000006,
+          "stressed_net_to_drawdown": 3.986986651619614,
+          "planned_risk_usd": 6637.22766,
+          "stressed_net_per_planned_risk": 0.03406633184554649
+        }
+      },
+      "actual_ending_balance_usd": 442.75,
+      "stressed_ending_balance_equivalent_usd": 426.106,
+      "internal_final_summary": {
+        "portfolio": "ZT-LAB-DCRC-V1-LINEAR-CAPITAL",
+        "reason": "1",
+        "stressed_balance_2x": "426.1060",
+        "stressed_net_2x": "226.1060",
+        "stressed_max_closed_dd": "56.7110",
+        "project_realized_net": "242.7500",
+        "project_stage_balance": "442.7500",
+        "max_aggregate_planned_risk": "51.0103"
+      },
+      "opportunity_count": 609,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 159,
+        "POSITION_OPEN": 424,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 25
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 25,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 19,
+        "PASSIVE": 4,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.02": 554
+      },
+      "sizing": {
+        "sizing_day_count": 259,
+        "daily_volume_counts": {
+          "0.02": 259
+        },
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 307,
+        "pair_counts": {
+          "CROSS+PASSIVE": 23,
+          "CROSS+PRESSURE": 14,
+          "CROSS+RC16": 50,
+          "CROSS+RC4": 35,
+          "CROSS+RETURN": 41,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 17,
+          "PASSIVE+RC4": 20,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 249,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "DCRC_FINAL",
+          "maximum_margin_usd": 13.96,
+          "maximum_margin_equity_fraction": 0.06360073,
+          "maximum_margin_equity_percent": 6.360073
+        },
+        "logged": {
+          "observation_count": 4724,
+          "maximum_margin_usd": 13.96,
+          "maximum_margin_equity_fraction": 0.06287087440537492,
+          "maximum_margin_equity_percent": 6.287087440537492
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 42,
+          "actual_net_usd": 41.21,
+          "actual_return_percent": 20.605,
+          "actual_max_closed_drawdown_usd": 21.35,
+          "actual_max_closed_drawdown_percent": 10.675,
+          "actual_net_to_drawdown": 1.9302107728337237,
+          "stressed_net_usd": 39.022,
+          "stressed_return_percent": 19.511,
+          "stressed_max_closed_drawdown_usd": 21.964,
+          "stressed_max_closed_drawdown_percent": 10.982,
+          "stressed_net_to_drawdown": 1.7766344928064106,
+          "planned_risk_usd": 914.1168,
+          "stressed_net_per_planned_risk": 0.042688199144792,
+          "volume_distribution": {
+            "0.02": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 36,
+          "win_count_stressed": 36,
+          "actual_net_usd": 61.17,
+          "actual_return_percent": 30.585,
+          "actual_max_closed_drawdown_usd": 32.76,
+          "actual_max_closed_drawdown_percent": 16.38,
+          "actual_net_to_drawdown": 1.8672161172161175,
+          "stressed_net_usd": 59.106,
+          "stressed_return_percent": 29.553,
+          "stressed_max_closed_drawdown_usd": 33.184,
+          "stressed_max_closed_drawdown_percent": 16.592,
+          "stressed_net_to_drawdown": 1.7811595949855354,
+          "planned_risk_usd": 807.3569,
+          "stressed_net_per_planned_risk": 0.07320925850760673,
+          "volume_distribution": {
+            "0.02": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 193,
+          "win_count_actual": 105,
+          "win_count_stressed": 103,
+          "actual_net_usd": 66.17,
+          "actual_return_percent": 33.085,
+          "actual_max_closed_drawdown_usd": 34.42000000000001,
+          "actual_max_closed_drawdown_percent": 17.210000000000004,
+          "actual_net_to_drawdown": 1.9224288204532245,
+          "stressed_net_usd": 60.572,
+          "stressed_return_percent": 30.286,
+          "stressed_max_closed_drawdown_usd": 36.620999999999974,
+          "stressed_max_closed_drawdown_percent": 18.310499999999987,
+          "stressed_net_to_drawdown": 1.6540236476338726,
+          "planned_risk_usd": 2375.6941,
+          "stressed_net_per_planned_risk": 0.025496548566585234,
+          "volume_distribution": {
+            "0.02": 193
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 14,
+          "win_count_stressed": 14,
+          "actual_net_usd": 1.0000000000000004,
+          "actual_return_percent": 0.5000000000000002,
+          "actual_max_closed_drawdown_usd": 25.200000000000003,
+          "actual_max_closed_drawdown_percent": 12.6,
+          "actual_net_to_drawdown": 0.039682539682539694,
+          "stressed_net_usd": 0.08999999999999879,
+          "stressed_return_percent": 0.044999999999999395,
+          "stressed_max_closed_drawdown_usd": 25.424,
+          "stressed_max_closed_drawdown_percent": 12.712000000000002,
+          "stressed_net_to_drawdown": 0.0035399622404027214,
+          "planned_risk_usd": 351.207,
+          "stressed_net_per_planned_risk": 0.0002562591292314754,
+          "volume_distribution": {
+            "0.02": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 28,
+          "win_count_stressed": 28,
+          "actual_net_usd": 64.41,
+          "actual_return_percent": 32.205,
+          "actual_max_closed_drawdown_usd": 24.36,
+          "actual_max_closed_drawdown_percent": 12.18,
+          "actual_net_to_drawdown": 2.644088669950739,
+          "stressed_net_usd": 62.512,
+          "stressed_return_percent": 31.256,
+          "stressed_max_closed_drawdown_usd": 24.78,
+          "stressed_max_closed_drawdown_percent": 12.39,
+          "stressed_net_to_drawdown": 2.522679580306699,
+          "planned_risk_usd": 603.0553,
+          "stressed_net_per_planned_risk": 0.10365881868545057,
+          "volume_distribution": {
+            "0.02": 52
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 130,
+          "win_count_actual": 84,
+          "win_count_stressed": 83,
+          "actual_net_usd": 8.790000000000001,
+          "actual_return_percent": 4.3950000000000005,
+          "actual_max_closed_drawdown_usd": 24.130000000000003,
+          "actual_max_closed_drawdown_percent": 12.065000000000001,
+          "actual_net_to_drawdown": 0.3642768338168255,
+          "stressed_net_usd": 4.804,
+          "stressed_return_percent": 2.402,
+          "stressed_max_closed_drawdown_usd": 25.271999999999995,
+          "stressed_max_closed_drawdown_percent": 12.635999999999997,
+          "stressed_net_to_drawdown": 0.19009180120291236,
+          "planned_risk_usd": 1585.79756,
+          "stressed_net_per_planned_risk": 0.0030293904601543216,
+          "volume_distribution": {
+            "0.02": 130
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-linear-200.ini",
+          "bytes": 528,
+          "sha256": "6a88f92bc827dd02113ab3bc4edf7b9aa84c26bd327054594f5947d7d091738d"
+        },
+        "artifacts": {
+          "selection-2025-linear-200-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-200-agent.log",
+            "bytes": 5461118,
+            "sha256": "87de12a55f1caef41bccfe2791a1dae2b92b2dd2c5f33d32fb30b5350a4e020d"
+          },
+          "selection-2025-linear-200.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-200.htm",
+            "bytes": 1101622,
+            "sha256": "ff75a79945ca770fc368065497b24961889297eff03d48915a540f066a8bd6e7"
+          },
+          "selection-2025-linear-200.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-200.png",
+            "bytes": 15339,
+            "sha256": "f107c0b7b4c3eba40cdce9dbbd3a7175479990d1fb3622ac76aa38863290b317"
+          },
+          "selection-2025-linear-200-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-200-holding.png",
+            "bytes": 21215,
+            "sha256": "40c2971bf6929e49a47b38fb49b8af07b86e6e01ec83d46891805773f53aabcf"
+          },
+          "selection-2025-linear-200-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-200-hst.png",
+            "bytes": 50463,
+            "sha256": "2c84d5dee7f6f3db1bef794ae3b992bd39f6909ae831f6f764c15147bdc410f3"
+          },
+          "selection-2025-linear-200-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-200-mfemae.png",
+            "bytes": 47847,
+            "sha256": "b998ddfdfdc96d8bd55705bd0ddc08538888192725f30d59d29761db2b5f5fa2"
+          }
+        }
+      },
+      "dcrc_final": {
+        "policy": "LINEAR_CAPITAL",
+        "deposit_usd": 200.0,
+        "sizing_day_transitions": 0,
+        "market_margin_or_calculation_blocks": 0,
+        "passive_margin_skips": 0,
+        "maximum_margin_usd": 13.96,
+        "maximum_margin_equity_fraction": 0.06360073,
+        "maximum_entry_volume": 0.02
+      }
+    },
+    "linear-300": {
+      "policy": "LINEAR_CAPITAL",
+      "deposit_usd": 300.0,
+      "reference_capital_usd": 300.0,
+      "role": "structural_anchor",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true,
+          "dcrc_policy_matches": true,
+          "dcrc_deposit_matches": true,
+          "dcrc_margin_block_count_matches": true,
+          "dcrc_passive_margin_skip_count_matches": true
+        }
+      },
+      "report": {
+        "expert": "ZetaDcrcLinearCapitalV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 300.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 363.95,
+        "actual_ending_balance_usd": 663.95,
+        "actual_balance_max_drawdown_usd": 81.48,
+        "profit_factor": 1.37,
+        "recovery_factor": 4.59,
+        "sharpe_ratio": 4.77,
+        "total_trades": 554,
+        "total_deals": 1108
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 287,
+          "win_count_actual": 155,
+          "win_count_stressed": 153,
+          "actual_net_usd": 171.26,
+          "actual_return_percent": 57.086666666666666,
+          "actual_max_closed_drawdown_usd": 81.48000000000008,
+          "actual_max_closed_drawdown_percent": 27.16000000000002,
+          "actual_net_to_drawdown": 2.1018654884634245,
+          "stressed_net_usd": 157.65650000000002,
+          "stressed_return_percent": 52.55216666666668,
+          "stressed_max_closed_drawdown_usd": 85.08149999999998,
+          "stressed_max_closed_drawdown_percent": 28.360499999999995,
+          "stressed_net_to_drawdown": 1.8530056475261962,
+          "planned_risk_usd": 4444.16204,
+          "stressed_net_per_planned_risk": 0.03547496661485368
+        },
+        "2025_H2": {
+          "trade_count": 267,
+          "win_count_actual": 155,
+          "win_count_stressed": 154,
+          "actual_net_usd": 192.69,
+          "actual_return_percent": 64.23,
+          "actual_max_closed_drawdown_usd": 43.51000000000001,
+          "actual_max_closed_drawdown_percent": 14.503333333333337,
+          "actual_net_to_drawdown": 4.428637094920707,
+          "stressed_net_usd": 181.3275,
+          "stressed_return_percent": 60.442499999999995,
+          "stressed_max_closed_drawdown_usd": 44.824000000000005,
+          "stressed_max_closed_drawdown_percent": 14.941333333333334,
+          "stressed_net_to_drawdown": 4.0453217026592885,
+          "planned_risk_usd": 5511.643,
+          "stressed_net_per_planned_risk": 0.03289899218799185
+        },
+        "2025_FULL": {
+          "trade_count": 554,
+          "win_count_actual": 310,
+          "win_count_stressed": 307,
+          "actual_net_usd": 363.95,
+          "actual_return_percent": 121.31666666666668,
+          "actual_max_closed_drawdown_usd": 81.48000000000008,
+          "actual_max_closed_drawdown_percent": 27.16000000000002,
+          "actual_net_to_drawdown": 4.466740304369166,
+          "stressed_net_usd": 338.98400000000004,
+          "stressed_return_percent": 112.99466666666669,
+          "stressed_max_closed_drawdown_usd": 85.08149999999998,
+          "stressed_max_closed_drawdown_percent": 28.360499999999995,
+          "stressed_net_to_drawdown": 3.984226888336479,
+          "planned_risk_usd": 9955.80504,
+          "stressed_net_per_planned_risk": 0.03404887888403247
+        }
+      },
+      "actual_ending_balance_usd": 663.95,
+      "stressed_ending_balance_equivalent_usd": 638.984,
+      "internal_final_summary": {
+        "portfolio": "ZT-LAB-DCRC-V1-LINEAR-CAPITAL",
+        "reason": "1",
+        "stressed_balance_2x": "638.9840",
+        "stressed_net_2x": "338.9840",
+        "stressed_max_closed_dd": "85.0815",
+        "project_realized_net": "363.9500",
+        "project_stage_balance": "663.9500",
+        "max_aggregate_planned_risk": "76.4945"
+      },
+      "opportunity_count": 609,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 159,
+        "POSITION_OPEN": 424,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 25
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 25,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 19,
+        "PASSIVE": 4,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.03": 554
+      },
+      "sizing": {
+        "sizing_day_count": 259,
+        "daily_volume_counts": {
+          "0.03": 259
+        },
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 307,
+        "pair_counts": {
+          "CROSS+PASSIVE": 23,
+          "CROSS+PRESSURE": 14,
+          "CROSS+RC16": 50,
+          "CROSS+RC4": 35,
+          "CROSS+RETURN": 41,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 17,
+          "PASSIVE+RC4": 20,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 249,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "DCRC_FINAL",
+          "maximum_margin_usd": 20.94,
+          "maximum_margin_equity_fraction": 0.06356661,
+          "maximum_margin_equity_percent": 6.356661
+        },
+        "logged": {
+          "observation_count": 4724,
+          "maximum_margin_usd": 20.94,
+          "maximum_margin_equity_fraction": 0.06283715303887272,
+          "maximum_margin_equity_percent": 6.283715303887272
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 43,
+          "actual_net_usd": 61.76,
+          "actual_return_percent": 20.586666666666666,
+          "actual_max_closed_drawdown_usd": 32.10999999999996,
+          "actual_max_closed_drawdown_percent": 10.703333333333319,
+          "actual_net_to_drawdown": 1.9233883525381525,
+          "stressed_net_usd": 58.478,
+          "stressed_return_percent": 19.492666666666665,
+          "stressed_max_closed_drawdown_usd": 33.03099999999998,
+          "stressed_max_closed_drawdown_percent": 11.010333333333326,
+          "stressed_net_to_drawdown": 1.770397505373741,
+          "planned_risk_usd": 1371.1738,
+          "stressed_net_per_planned_risk": 0.04264813111219015,
+          "volume_distribution": {
+            "0.03": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 36,
+          "win_count_stressed": 36,
+          "actual_net_usd": 91.64999999999999,
+          "actual_return_percent": 30.55,
+          "actual_max_closed_drawdown_usd": 49.169999999999995,
+          "actual_max_closed_drawdown_percent": 16.39,
+          "actual_net_to_drawdown": 1.863941427699817,
+          "stressed_net_usd": 88.554,
+          "stressed_return_percent": 29.518,
+          "stressed_max_closed_drawdown_usd": 49.806,
+          "stressed_max_closed_drawdown_percent": 16.602,
+          "stressed_net_to_drawdown": 1.7779785568003856,
+          "planned_risk_usd": 1211.0276000000001,
+          "stressed_net_per_planned_risk": 0.07312302378575021,
+          "volume_distribution": {
+            "0.03": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 193,
+          "win_count_actual": 105,
+          "win_count_stressed": 103,
+          "actual_net_usd": 99.08,
+          "actual_return_percent": 33.026666666666664,
+          "actual_max_closed_drawdown_usd": 51.73999999999998,
+          "actual_max_closed_drawdown_percent": 17.24666666666666,
+          "actual_net_to_drawdown": 1.9149594124468503,
+          "stressed_net_usd": 90.68299999999999,
+          "stressed_return_percent": 30.227666666666664,
+          "stressed_max_closed_drawdown_usd": 55.04149999999997,
+          "stressed_max_closed_drawdown_percent": 18.347166666666656,
+          "stressed_net_to_drawdown": 1.6475386753631358,
+          "planned_risk_usd": 3563.5001,
+          "stressed_net_per_planned_risk": 0.02544773325529021,
+          "volume_distribution": {
+            "0.03": 193
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 14,
+          "win_count_stressed": 14,
+          "actual_net_usd": 1.4699999999999969,
+          "actual_return_percent": 0.48999999999999894,
+          "actual_max_closed_drawdown_usd": 37.83,
+          "actual_max_closed_drawdown_percent": 12.61,
+          "actual_net_to_drawdown": 0.038858049167327435,
+          "stressed_net_usd": 0.10500000000000012,
+          "stressed_return_percent": 0.035000000000000045,
+          "stressed_max_closed_drawdown_usd": 38.166000000000004,
+          "stressed_max_closed_drawdown_percent": 12.722,
+          "stressed_net_to_drawdown": 0.002751139757899704,
+          "planned_risk_usd": 526.8226,
+          "stressed_net_per_planned_risk": 0.00019930807827910218,
+          "volume_distribution": {
+            "0.03": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 28,
+          "win_count_stressed": 28,
+          "actual_net_usd": 96.61,
+          "actual_return_percent": 32.20333333333333,
+          "actual_max_closed_drawdown_usd": 36.55,
+          "actual_max_closed_drawdown_percent": 12.183333333333332,
+          "actual_net_to_drawdown": 2.643228454172367,
+          "stressed_net_usd": 93.763,
+          "stressed_return_percent": 31.254333333333335,
+          "stressed_max_closed_drawdown_usd": 37.18000000000001,
+          "stressed_max_closed_drawdown_percent": 12.393333333333336,
+          "stressed_net_to_drawdown": 2.5218665949435177,
+          "planned_risk_usd": 904.586,
+          "stressed_net_per_planned_risk": 0.10365294178773495,
+          "volume_distribution": {
+            "0.03": 52
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 130,
+          "win_count_actual": 84,
+          "win_count_stressed": 83,
+          "actual_net_usd": 13.379999999999995,
+          "actual_return_percent": 4.459999999999999,
+          "actual_max_closed_drawdown_usd": 36.150000000000006,
+          "actual_max_closed_drawdown_percent": 12.050000000000002,
+          "actual_net_to_drawdown": 0.3701244813278006,
+          "stressed_net_usd": 7.401000000000001,
+          "stressed_return_percent": 2.467,
+          "stressed_max_closed_drawdown_usd": 37.783,
+          "stressed_max_closed_drawdown_percent": 12.594333333333333,
+          "stressed_net_to_drawdown": 0.19588174575867454,
+          "planned_risk_usd": 2378.69494,
+          "stressed_net_per_planned_risk": 0.0031113699682734437,
+          "volume_distribution": {
+            "0.03": 130
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-linear-300.ini",
+          "bytes": 528,
+          "sha256": "5afe0999f62ee58a53bb1772e69e7fe936fedd6086651f1c1755ffd689b05223"
+        },
+        "artifacts": {
+          "selection-2025-linear-300-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-300-agent.log",
+            "bytes": 5465700,
+            "sha256": "96f07f5d9a0da9342fa61112c6617034e6982f8949ce2d17f78fee35a0a33bc3"
+          },
+          "selection-2025-linear-300.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-300.htm",
+            "bytes": 1101676,
+            "sha256": "10cb633ffc20bafaf22fd4a754d272ae2da83aee589c9bdd7bd06c34cd9c41c6"
+          },
+          "selection-2025-linear-300.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-300.png",
+            "bytes": 15289,
+            "sha256": "433e1272f095363be8786a456585ac3c2b8d116f4f6c88192c0d1f52c38a3b45"
+          },
+          "selection-2025-linear-300-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-300-holding.png",
+            "bytes": 21197,
+            "sha256": "5d5cec51928cc6cb1e045f6fb232b3afc3b1382294bde13f1c2d7fef23cc5c29"
+          },
+          "selection-2025-linear-300-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-300-hst.png",
+            "bytes": 50253,
+            "sha256": "fca494b467abc09a0d1ed3e6dfe7566773cecd0278bddf167495bf2c334820e0"
+          },
+          "selection-2025-linear-300-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-linear-300-mfemae.png",
+            "bytes": 46653,
+            "sha256": "64956b0e0b874d084b541cf7afaec0f3e0f5848f819a4cc540e6398c31d5285e"
+          }
+        }
+      },
+      "dcrc_final": {
+        "policy": "LINEAR_CAPITAL",
+        "deposit_usd": 300.0,
+        "sizing_day_transitions": 0,
+        "market_margin_or_calculation_blocks": 0,
+        "passive_margin_skips": 0,
+        "maximum_margin_usd": 20.94,
+        "maximum_margin_equity_fraction": 0.06356661,
+        "maximum_entry_volume": 0.03
+      }
+    },
+    "breadth-200": {
+      "policy": "BREADTH_DOLLAR_SLOTS",
+      "deposit_usd": 200.0,
+      "reference_capital_usd": 200.0,
+      "role": "capacity_candidate",
+      "selectable": true,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true,
+          "dcrc_policy_matches": true,
+          "dcrc_deposit_matches": true,
+          "dcrc_margin_block_count_matches": true,
+          "dcrc_passive_margin_skip_count_matches": true
+        }
+      },
+      "report": {
+        "expert": "ZetaDcrcBreadthDollarSlotsV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 200.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 95.02,
+        "actual_ending_balance_usd": 295.02,
+        "actual_balance_max_drawdown_usd": 26.87,
+        "profit_factor": 1.27,
+        "recovery_factor": 3.52,
+        "sharpe_ratio": 4.01,
+        "total_trades": 576,
+        "total_deals": 1152
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 305,
+          "win_count_actual": 162,
+          "win_count_stressed": 160,
+          "actual_net_usd": 44.76,
+          "actual_return_percent": 22.38,
+          "actual_max_closed_drawdown_usd": 26.869999999999997,
+          "actual_max_closed_drawdown_percent": 13.435,
+          "actual_net_to_drawdown": 1.6657982880535915,
+          "stressed_net_usd": 39.9965,
+          "stressed_return_percent": 19.99825,
+          "stressed_max_closed_drawdown_usd": 27.541499999999992,
+          "stressed_max_closed_drawdown_percent": 13.770749999999996,
+          "stressed_net_to_drawdown": 1.4522266397981232,
+          "planned_risk_usd": 1341.6903,
+          "stressed_net_per_planned_risk": 0.029810530790898612
+        },
+        "2025_H2": {
+          "trade_count": 271,
+          "win_count_actual": 152,
+          "win_count_stressed": 151,
+          "actual_net_usd": 50.26,
+          "actual_return_percent": 25.129999999999995,
+          "actual_max_closed_drawdown_usd": 15.0,
+          "actual_max_closed_drawdown_percent": 7.5,
+          "actual_net_to_drawdown": 3.3506666666666667,
+          "stressed_net_usd": 46.3295,
+          "stressed_return_percent": 23.16475,
+          "stressed_max_closed_drawdown_usd": 15.370000000000001,
+          "stressed_max_closed_drawdown_percent": 7.6850000000000005,
+          "stressed_net_to_drawdown": 3.014281067013663,
+          "planned_risk_usd": 1390.69325,
+          "stressed_net_per_planned_risk": 0.033313960501354274
+        },
+        "2025_FULL": {
+          "trade_count": 576,
+          "win_count_actual": 314,
+          "win_count_stressed": 311,
+          "actual_net_usd": 95.02,
+          "actual_return_percent": 47.51,
+          "actual_max_closed_drawdown_usd": 26.869999999999997,
+          "actual_max_closed_drawdown_percent": 13.435,
+          "actual_net_to_drawdown": 3.5362858206177896,
+          "stressed_net_usd": 86.326,
+          "stressed_return_percent": 43.163,
+          "stressed_max_closed_drawdown_usd": 27.541499999999992,
+          "stressed_max_closed_drawdown_percent": 13.770749999999996,
+          "stressed_net_to_drawdown": 3.1343971824337826,
+          "planned_risk_usd": 2732.38355,
+          "stressed_net_per_planned_risk": 0.03159366114614472
+        }
+      },
+      "actual_ending_balance_usd": 295.02,
+      "stressed_ending_balance_equivalent_usd": 286.326,
+      "internal_final_summary": {
+        "portfolio": "ZT-LAB-DCRC-V1-BREADTH-DOLLAR-SLOTS",
+        "reason": "1",
+        "stressed_balance_2x": "286.3260",
+        "stressed_net_2x": "86.3260",
+        "stressed_max_closed_dd": "27.5415",
+        "project_realized_net": "95.0200",
+        "project_stage_balance": "295.0200",
+        "max_aggregate_planned_risk": "20.7719"
+      },
+      "opportunity_count": 605,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 159,
+        "POSITION_OPEN": 445,
+        "PRICE_DISTANCE_BLOCKED": 1
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 0,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {},
+      "volume_distribution": {
+        "0.01": 576
+      },
+      "sizing": {
+        "sizing_day_count": 259,
+        "daily_volume_counts": {
+          "0.01": 259
+        },
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 345,
+        "pair_counts": {
+          "CROSS+PASSIVE": 28,
+          "CROSS+PRESSURE": 24,
+          "CROSS+RC16": 58,
+          "CROSS+RC4": 42,
+          "CROSS+RETURN": 46,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 18,
+          "PASSIVE+RC4": 18,
+          "PASSIVE+RETURN": 24,
+          "PRESSURE+RC16": 9,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 12,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 4,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 265,
+        "maximum_concurrent_positions": 4
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "DCRC_FINAL",
+          "maximum_margin_usd": 8.22,
+          "maximum_margin_equity_fraction": 0.0319239,
+          "maximum_margin_equity_percent": 3.1923899999999996
+        },
+        "logged": {
+          "observation_count": 4753,
+          "maximum_margin_usd": 8.22,
+          "maximum_margin_equity_fraction": 0.03173895820954645,
+          "maximum_margin_equity_percent": 3.1738958209546446
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 41,
+          "win_count_stressed": 41,
+          "actual_net_usd": 11.919999999999998,
+          "actual_return_percent": 5.959999999999999,
+          "actual_max_closed_drawdown_usd": 12.719999999999999,
+          "actual_max_closed_drawdown_percent": 6.359999999999999,
+          "actual_net_to_drawdown": 0.9371069182389936,
+          "stressed_net_usd": 10.825,
+          "stressed_return_percent": 5.4125,
+          "stressed_max_closed_drawdown_usd": 12.915999999999999,
+          "stressed_max_closed_drawdown_percent": 6.458,
+          "stressed_net_to_drawdown": 0.8381077733044286,
+          "planned_risk_usd": 369.5377,
+          "stressed_net_per_planned_risk": 0.029293357619533812,
+          "volume_distribution": {
+            "0.01": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 35,
+          "win_count_stressed": 35,
+          "actual_net_usd": 27.77,
+          "actual_return_percent": 13.885,
+          "actual_max_closed_drawdown_usd": 18.56,
+          "actual_max_closed_drawdown_percent": 9.28,
+          "actual_net_to_drawdown": 1.496228448275862,
+          "stressed_net_usd": 26.802,
+          "stressed_return_percent": 13.401,
+          "stressed_max_closed_drawdown_usd": 18.887999999999998,
+          "stressed_max_closed_drawdown_percent": 9.443999999999999,
+          "stressed_net_to_drawdown": 1.4189961880559085,
+          "planned_risk_usd": 321.8291,
+          "stressed_net_per_planned_risk": 0.08328022543641952,
+          "volume_distribution": {
+            "0.01": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 212,
+          "win_count_actual": 115,
+          "win_count_stressed": 112,
+          "actual_net_usd": 26.34,
+          "actual_return_percent": 13.170000000000002,
+          "actual_max_closed_drawdown_usd": 15.76,
+          "actual_max_closed_drawdown_percent": 7.88,
+          "actual_net_to_drawdown": 1.6713197969543148,
+          "stressed_net_usd": 23.311,
+          "stressed_return_percent": 11.6555,
+          "stressed_max_closed_drawdown_usd": 16.884499999999992,
+          "stressed_max_closed_drawdown_percent": 8.442249999999996,
+          "stressed_net_to_drawdown": 1.3806153572803466,
+          "planned_risk_usd": 1015.334,
+          "stressed_net_per_planned_risk": 0.022958947499049576,
+          "volume_distribution": {
+            "0.01": 212
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 13,
+          "win_count_stressed": 13,
+          "actual_net_usd": -2.179999999999999,
+          "actual_return_percent": -1.0899999999999994,
+          "actual_max_closed_drawdown_usd": 11.379999999999999,
+          "actual_max_closed_drawdown_percent": 5.6899999999999995,
+          "actual_net_to_drawdown": -0.19156414762741644,
+          "stressed_net_usd": -2.8170000000000006,
+          "stressed_return_percent": -1.4085000000000003,
+          "stressed_max_closed_drawdown_usd": 11.491999999999999,
+          "stressed_max_closed_drawdown_percent": 5.7459999999999996,
+          "stressed_net_to_drawdown": -0.24512704490080062,
+          "planned_risk_usd": 145.8864,
+          "stressed_net_per_planned_risk": -0.019309544961010762,
+          "volume_distribution": {
+            "0.01": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 54,
+          "win_count_actual": 25,
+          "win_count_stressed": 25,
+          "actual_net_usd": 25.009999999999998,
+          "actual_return_percent": 12.504999999999999,
+          "actual_max_closed_drawdown_usd": 14.43,
+          "actual_max_closed_drawdown_percent": 7.214999999999999,
+          "actual_net_to_drawdown": 1.733194733194733,
+          "stressed_net_usd": 24.052,
+          "stressed_return_percent": 12.026,
+          "stressed_max_closed_drawdown_usd": 14.64,
+          "stressed_max_closed_drawdown_percent": 7.32,
+          "stressed_net_to_drawdown": 1.642896174863388,
+          "planned_risk_usd": 252.3106,
+          "stressed_net_per_planned_risk": 0.09532695019551299,
+          "volume_distribution": {
+            "0.01": 54
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 131,
+          "win_count_actual": 85,
+          "win_count_stressed": 85,
+          "actual_net_usd": 6.160000000000001,
+          "actual_return_percent": 3.0800000000000005,
+          "actual_max_closed_drawdown_usd": 10.260000000000002,
+          "actual_max_closed_drawdown_percent": 5.130000000000001,
+          "actual_net_to_drawdown": 0.6003898635477583,
+          "stressed_net_usd": 4.1530000000000005,
+          "stressed_return_percent": 2.0765000000000002,
+          "stressed_max_closed_drawdown_usd": 11.387000000000002,
+          "stressed_max_closed_drawdown_percent": 5.693500000000001,
+          "stressed_net_to_drawdown": 0.3647141477123035,
+          "planned_risk_usd": 627.48575,
+          "stressed_net_per_planned_risk": 0.006618476993302239,
+          "volume_distribution": {
+            "0.01": 131
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-breadth-200.ini",
+          "bytes": 535,
+          "sha256": "347370d5673cccc4955f3b6a7bd3c7975cf0a597d039926ec58bde487df8d44d"
+        },
+        "artifacts": {
+          "selection-2025-breadth-200-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-200-agent.log",
+            "bytes": 5593864,
+            "sha256": "471ae7be24bad9882a26e2b5879d34d9416d33066da8ed5a877b501c39593677"
+          },
+          "selection-2025-breadth-200.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-200.htm",
+            "bytes": 1144868,
+            "sha256": "0c400aa11ad3a49be2fa79cbd0ce41f592b6ba62494684c6a0601aec1dd0396b"
+          },
+          "selection-2025-breadth-200.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-200.png",
+            "bytes": 16051,
+            "sha256": "fa739c74078947cf6d26a439af8b23e97cd4380ab09986b051ebef568df161d5"
+          },
+          "selection-2025-breadth-200-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-200-holding.png",
+            "bytes": 20939,
+            "sha256": "39dd05d84978bd8042a240a9acba5367bf1b1604e21961442f06ff78444d6d59"
+          },
+          "selection-2025-breadth-200-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-200-hst.png",
+            "bytes": 49505,
+            "sha256": "7e8d7668371d8b12e5194f5ea5acd1fed15f3c8ab773deb956e67da7578e15a3"
+          },
+          "selection-2025-breadth-200-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-200-mfemae.png",
+            "bytes": 40515,
+            "sha256": "c549528f2342b17f4a7d1a0be713b6336caa16a1c6ecb07325972410f8deb1f4"
+          }
+        }
+      },
+      "dcrc_final": {
+        "policy": "BREADTH_DOLLAR_SLOTS",
+        "deposit_usd": 200.0,
+        "sizing_day_transitions": 0,
+        "market_margin_or_calculation_blocks": 0,
+        "passive_margin_skips": 0,
+        "maximum_margin_usd": 8.22,
+        "maximum_margin_equity_fraction": 0.0319239,
+        "maximum_entry_volume": 0.01
+      }
+    },
+    "breadth-300": {
+      "policy": "BREADTH_DOLLAR_SLOTS",
+      "deposit_usd": 300.0,
+      "reference_capital_usd": 300.0,
+      "role": "capacity_candidate",
+      "selectable": true,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true,
+          "dcrc_policy_matches": true,
+          "dcrc_deposit_matches": true,
+          "dcrc_margin_block_count_matches": true,
+          "dcrc_passive_margin_skip_count_matches": true
+        }
+      },
+      "report": {
+        "expert": "ZetaDcrcBreadthDollarSlotsV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 300.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 78.54,
+        "actual_ending_balance_usd": 378.54,
+        "actual_balance_max_drawdown_usd": 26.14,
+        "profit_factor": 1.22,
+        "recovery_factor": 2.9,
+        "sharpe_ratio": 3.46,
+        "total_trades": 577,
+        "total_deals": 1154
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 305,
+          "win_count_actual": 159,
+          "win_count_stressed": 157,
+          "actual_net_usd": 39.05,
+          "actual_return_percent": 13.016666666666666,
+          "actual_max_closed_drawdown_usd": 26.14000000000001,
+          "actual_max_closed_drawdown_percent": 8.713333333333336,
+          "actual_net_to_drawdown": 1.4938791124713076,
+          "stressed_net_usd": 34.286500000000004,
+          "stressed_return_percent": 11.428833333333333,
+          "stressed_max_closed_drawdown_usd": 26.939000000000004,
+          "stressed_max_closed_drawdown_percent": 8.979666666666668,
+          "stressed_net_to_drawdown": 1.272745833178663,
+          "planned_risk_usd": 1294.7436466669,
+          "stressed_net_per_planned_risk": 0.02648130391546221
+        },
+        "2025_H2": {
+          "trade_count": 272,
+          "win_count_actual": 150,
+          "win_count_stressed": 149,
+          "actual_net_usd": 39.49,
+          "actual_return_percent": 13.163333333333336,
+          "actual_max_closed_drawdown_usd": 20.300000000000004,
+          "actual_max_closed_drawdown_percent": 6.766666666666668,
+          "actual_net_to_drawdown": 1.9453201970443346,
+          "stressed_net_usd": 35.7275,
+          "stressed_return_percent": 11.909166666666666,
+          "stressed_max_closed_drawdown_usd": 20.883499999999998,
+          "stressed_max_closed_drawdown_percent": 6.961166666666665,
+          "stressed_net_to_drawdown": 1.7108003926544881,
+          "planned_risk_usd": 1256.3255066664,
+          "stressed_net_per_planned_risk": 0.028438091728951058
+        },
+        "2025_FULL": {
+          "trade_count": 577,
+          "win_count_actual": 309,
+          "win_count_stressed": 306,
+          "actual_net_usd": 78.54,
+          "actual_return_percent": 26.180000000000003,
+          "actual_max_closed_drawdown_usd": 26.14000000000001,
+          "actual_max_closed_drawdown_percent": 8.713333333333336,
+          "actual_net_to_drawdown": 3.0045906656465178,
+          "stressed_net_usd": 70.014,
+          "stressed_return_percent": 23.337999999999997,
+          "stressed_max_closed_drawdown_usd": 26.939000000000004,
+          "stressed_max_closed_drawdown_percent": 8.979666666666668,
+          "stressed_net_to_drawdown": 2.598982887263818,
+          "planned_risk_usd": 2551.0691533333,
+          "stressed_net_per_planned_risk": 0.02744496357870883
+        }
+      },
+      "actual_ending_balance_usd": 378.54,
+      "stressed_ending_balance_equivalent_usd": 370.014,
+      "internal_final_summary": {
+        "portfolio": "ZT-LAB-DCRC-V1-BREADTH-DOLLAR-SLOTS",
+        "reason": "1",
+        "stressed_balance_2x": "370.0140",
+        "stressed_net_2x": "70.0140",
+        "stressed_max_closed_dd": "26.9390",
+        "project_realized_net": "78.5400",
+        "project_stage_balance": "378.5400",
+        "max_aggregate_planned_risk": "18.2500"
+      },
+      "opportunity_count": 606,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 160,
+        "POSITION_OPEN": 445,
+        "PRICE_DISTANCE_BLOCKED": 1
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 0,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {},
+      "volume_distribution": {
+        "0.01": 577
+      },
+      "sizing": {
+        "sizing_day_count": 259,
+        "daily_volume_counts": {
+          "0.01": 259
+        },
+        "transition_count": 0,
+        "transitions": []
+      },
+      "overlap": {
+        "position_overlap_pair_count": 334,
+        "pair_counts": {
+          "CROSS+PASSIVE": 27,
+          "CROSS+PRESSURE": 23,
+          "CROSS+RC16": 54,
+          "CROSS+RC4": 40,
+          "CROSS+RETURN": 45,
+          "PASSIVE+PRESSURE": 14,
+          "PASSIVE+RC16": 17,
+          "PASSIVE+RC4": 18,
+          "PASSIVE+RETURN": 24,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 12,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 3,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 262,
+        "maximum_concurrent_positions": 4
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "DCRC_FINAL",
+          "maximum_margin_usd": 8.22,
+          "maximum_margin_equity_fraction": 0.02348437,
+          "maximum_margin_equity_percent": 2.348437
+        },
+        "logged": {
+          "observation_count": 4768,
+          "maximum_margin_usd": 8.22,
+          "maximum_margin_equity_fraction": 0.023464931061060207,
+          "maximum_margin_equity_percent": 2.3464931061060206
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 40,
+          "win_count_stressed": 40,
+          "actual_net_usd": 8.04,
+          "actual_return_percent": 2.6799999999999997,
+          "actual_max_closed_drawdown_usd": 13.73,
+          "actual_max_closed_drawdown_percent": 4.576666666666667,
+          "actual_net_to_drawdown": 0.5855790240349599,
+          "stressed_net_usd": 6.945,
+          "stressed_return_percent": 2.315,
+          "stressed_max_closed_drawdown_usd": 13.860999999999999,
+          "stressed_max_closed_drawdown_percent": 4.620333333333333,
+          "stressed_net_to_drawdown": 0.5010461005699445,
+          "planned_risk_usd": 346.4158,
+          "stressed_net_per_planned_risk": 0.020048161775531027,
+          "volume_distribution": {
+            "0.01": 79
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 34,
+          "win_count_stressed": 34,
+          "actual_net_usd": 28.53,
+          "actual_return_percent": 9.51,
+          "actual_max_closed_drawdown_usd": 17.310000000000002,
+          "actual_max_closed_drawdown_percent": 5.7700000000000005,
+          "actual_net_to_drawdown": 1.6481802426343153,
+          "stressed_net_usd": 27.562,
+          "stressed_return_percent": 9.187333333333333,
+          "stressed_max_closed_drawdown_usd": 17.637999999999998,
+          "stressed_max_closed_drawdown_percent": 5.879333333333333,
+          "stressed_net_to_drawdown": 1.5626488263975509,
+          "planned_risk_usd": 300.2127,
+          "stressed_net_per_planned_risk": 0.09180824129025855,
+          "volume_distribution": {
+            "0.01": 68
+          }
+        },
+        "CROSS": {
+          "trade_count": 212,
+          "win_count_actual": 115,
+          "win_count_stressed": 112,
+          "actual_net_usd": 29.220000000000002,
+          "actual_return_percent": 9.740000000000002,
+          "actual_max_closed_drawdown_usd": 15.280000000000005,
+          "actual_max_closed_drawdown_percent": 5.0933333333333355,
+          "actual_net_to_drawdown": 1.9123036649214655,
+          "stressed_net_usd": 26.191,
+          "stressed_return_percent": 8.730333333333332,
+          "stressed_max_closed_drawdown_usd": 16.404499999999988,
+          "stressed_max_closed_drawdown_percent": 5.468166666666663,
+          "stressed_net_to_drawdown": 1.596574110762292,
+          "planned_risk_usd": 942.229,
+          "stressed_net_per_planned_risk": 0.02779685193302265,
+          "volume_distribution": {
+            "0.01": 212
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 13,
+          "win_count_stressed": 13,
+          "actual_net_usd": -1.009999999999999,
+          "actual_return_percent": -0.33666666666666634,
+          "actual_max_closed_drawdown_usd": 11.11,
+          "actual_max_closed_drawdown_percent": 3.7033333333333336,
+          "actual_net_to_drawdown": -0.09090909090909081,
+          "stressed_net_usd": -1.4650000000000005,
+          "stressed_return_percent": -0.4883333333333335,
+          "stressed_max_closed_drawdown_usd": 11.222000000000001,
+          "stressed_max_closed_drawdown_percent": 3.7406666666666673,
+          "stressed_net_to_drawdown": -0.1305471395473178,
+          "planned_risk_usd": 138.2581,
+          "stressed_net_per_planned_risk": -0.010596124205381098,
+          "volume_distribution": {
+            "0.01": 32
+          }
+        },
+        "RETURN": {
+          "trade_count": 54,
+          "win_count_actual": 22,
+          "win_count_stressed": 22,
+          "actual_net_usd": 10.769999999999998,
+          "actual_return_percent": 3.5899999999999994,
+          "actual_max_closed_drawdown_usd": 14.089999999999998,
+          "actual_max_closed_drawdown_percent": 4.696666666666666,
+          "actual_net_to_drawdown": 0.7643718949609651,
+          "stressed_net_usd": 9.812000000000001,
+          "stressed_return_percent": 3.270666666666667,
+          "stressed_max_closed_drawdown_usd": 14.299999999999999,
+          "stressed_max_closed_drawdown_percent": 4.766666666666667,
+          "stressed_net_to_drawdown": 0.6861538461538463,
+          "planned_risk_usd": 236.8853,
+          "stressed_net_per_planned_risk": 0.041420890194537194,
+          "volume_distribution": {
+            "0.01": 54
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 132,
+          "win_count_actual": 85,
+          "win_count_stressed": 85,
+          "actual_net_usd": 2.9900000000000007,
+          "actual_return_percent": 0.9966666666666669,
+          "actual_max_closed_drawdown_usd": 10.059999999999999,
+          "actual_max_closed_drawdown_percent": 3.353333333333333,
+          "actual_net_to_drawdown": 0.2972166998011929,
+          "stressed_net_usd": 0.969,
+          "stressed_return_percent": 0.32299999999999995,
+          "stressed_max_closed_drawdown_usd": 11.449000000000002,
+          "stressed_max_closed_drawdown_percent": 3.816333333333334,
+          "stressed_net_to_drawdown": 0.08463621276967419,
+          "planned_risk_usd": 587.0682533333,
+          "stressed_net_per_planned_risk": 0.0016505746895665696,
+          "volume_distribution": {
+            "0.01": 132
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-breadth-300.ini",
+          "bytes": 535,
+          "sha256": "a4088e7ded5afecc1163f6f832e3fac0bd80714d4d078c9e7cb3cb534a1017ec"
+        },
+        "artifacts": {
+          "selection-2025-breadth-300-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-300-agent.log",
+            "bytes": 5600034,
+            "sha256": "68a8679aecbc2e3ca4c18879affe1de88f54e8058c39fb038f9ec1fac343e8d2"
+          },
+          "selection-2025-breadth-300.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-300.htm",
+            "bytes": 1147536,
+            "sha256": "c73a9e04557f9f4263aa32b5e8eba028a53299a4fc4b02e8073bc0ec08f91b25"
+          },
+          "selection-2025-breadth-300.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-300.png",
+            "bytes": 16787,
+            "sha256": "e1f4ca7201d95db2a96f238b6e130a65b42cfb6f1684bf4cf5685402ef73999e"
+          },
+          "selection-2025-breadth-300-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-300-holding.png",
+            "bytes": 20867,
+            "sha256": "14a63c73a85f5882a0fbc67659803e51de73efe650665070ee083161b25fb99e"
+          },
+          "selection-2025-breadth-300-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-300-hst.png",
+            "bytes": 49320,
+            "sha256": "789b274b68087f01c3a9d8d29a4af8838a1add70d4d35e02d4126f880f1cc352"
+          },
+          "selection-2025-breadth-300-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-breadth-300-mfemae.png",
+            "bytes": 39024,
+            "sha256": "11d47363943974653fa1076d1b9aa98f34e57a9e1e8e95071bfc095c91490a2f"
+          }
+        }
+      },
+      "dcrc_final": {
+        "policy": "BREADTH_DOLLAR_SLOTS",
+        "deposit_usd": 300.0,
+        "sizing_day_transitions": 0,
+        "market_margin_or_calculation_blocks": 0,
+        "passive_margin_skips": 0,
+        "maximum_margin_usd": 8.22,
+        "maximum_margin_equity_fraction": 0.02348437,
+        "maximum_entry_volume": 0.01
+      }
+    },
+    "ladder-200": {
+      "policy": "FIXED_LOT_LADDER",
+      "deposit_usd": 200.0,
+      "reference_capital_usd": 200.0,
+      "role": "sizing_diagnostic_only",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true,
+          "dcrc_policy_matches": true,
+          "dcrc_deposit_matches": true,
+          "dcrc_margin_block_count_matches": true,
+          "dcrc_passive_margin_skip_count_matches": true
+        }
+      },
+      "report": {
+        "expert": "ZetaDcrcFixedLotLadderV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 200.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 247.63,
+        "actual_ending_balance_usd": 447.63,
+        "actual_balance_max_drawdown_usd": 54.31,
+        "profit_factor": 1.36,
+        "recovery_factor": 4.69,
+        "sharpe_ratio": 4.75,
+        "total_trades": 555,
+        "total_deals": 1110
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 287,
+          "win_count_actual": 155,
+          "win_count_stressed": 152,
+          "actual_net_usd": 114.17,
+          "actual_return_percent": 57.084999999999994,
+          "actual_max_closed_drawdown_usd": 54.309999999999945,
+          "actual_max_closed_drawdown_percent": 27.154999999999973,
+          "actual_net_to_drawdown": 2.102191125023018,
+          "stressed_net_usd": 105.101,
+          "stressed_return_percent": 52.5505,
+          "stressed_max_closed_drawdown_usd": 56.71100000000001,
+          "stressed_max_closed_drawdown_percent": 28.355500000000006,
+          "stressed_net_to_drawdown": 1.853273615347992,
+          "planned_risk_usd": 2962.53956,
+          "stressed_net_per_planned_risk": 0.03547665706107904
+        },
+        "2025_H2": {
+          "trade_count": 268,
+          "win_count_actual": 153,
+          "win_count_stressed": 152,
+          "actual_net_usd": 133.46,
+          "actual_return_percent": 66.73,
+          "actual_max_closed_drawdown_usd": 29.010000000000005,
+          "actual_max_closed_drawdown_percent": 14.505,
+          "actual_net_to_drawdown": 4.600482592209582,
+          "stressed_net_usd": 124.889,
+          "stressed_return_percent": 62.444500000000005,
+          "stressed_max_closed_drawdown_usd": 29.885999999999996,
+          "stressed_max_closed_drawdown_percent": 14.942999999999998,
+          "stressed_net_to_drawdown": 4.17884628254032,
+          "planned_risk_usd": 3673.76818,
+          "stressed_net_per_planned_risk": 0.03399479604616751
+        },
+        "2025_FULL": {
+          "trade_count": 555,
+          "win_count_actual": 308,
+          "win_count_stressed": 304,
+          "actual_net_usd": 247.63,
+          "actual_return_percent": 123.81500000000001,
+          "actual_max_closed_drawdown_usd": 54.309999999999945,
+          "actual_max_closed_drawdown_percent": 27.154999999999973,
+          "actual_net_to_drawdown": 4.559565457558465,
+          "stressed_net_usd": 229.99,
+          "stressed_return_percent": 114.995,
+          "stressed_max_closed_drawdown_usd": 56.71100000000001,
+          "stressed_max_closed_drawdown_percent": 28.355500000000006,
+          "stressed_net_to_drawdown": 4.055474246618821,
+          "planned_risk_usd": 6636.30774,
+          "stressed_net_per_planned_risk": 0.03465631929841759
+        }
+      },
+      "actual_ending_balance_usd": 447.63,
+      "stressed_ending_balance_equivalent_usd": 429.99,
+      "internal_final_summary": {
+        "portfolio": "ZT-LAB-DCRC-V1-FIXED-LOT-LADDER",
+        "reason": "1",
+        "stressed_balance_2x": "429.9900",
+        "stressed_net_2x": "229.9900",
+        "stressed_max_closed_dd": "56.7110",
+        "project_realized_net": "247.6300",
+        "project_stage_balance": "447.6300",
+        "max_aggregate_planned_risk": "51.4152"
+      },
+      "opportunity_count": 609,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 159,
+        "POSITION_OPEN": 425,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 24
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 24,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 18,
+        "PASSIVE": 4,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.02": 482,
+        "0.03": 73
+      },
+      "sizing": {
+        "sizing_day_count": 259,
+        "daily_volume_counts": {
+          "0.02": 223,
+          "0.03": 36
+        },
+        "transition_count": 7,
+        "transitions": [
+          {
+            "server": 1762131615,
+            "server_time": "2025-11-03 01:00:15",
+            "from_multiplier": 2,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=200.00 growth=152.9200"
+          },
+          {
+            "server": 1762304415,
+            "server_time": "2025-11-05 01:00:15",
+            "from_multiplier": 3,
+            "to_multiplier": 2,
+            "volume": 0.02,
+            "detail": "policy=FIXED_LOT_LADDER deposit=200.00 growth=144.2960"
+          },
+          {
+            "server": 1762822816,
+            "server_time": "2025-11-11 01:00:16",
+            "from_multiplier": 2,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=200.00 growth=151.4640"
+          },
+          {
+            "server": 1763427615,
+            "server_time": "2025-11-18 01:00:15",
+            "from_multiplier": 3,
+            "to_multiplier": 2,
+            "volume": 0.02,
+            "detail": "policy=FIXED_LOT_LADDER deposit=200.00 growth=143.6010"
+          },
+          {
+            "server": 1763514015,
+            "server_time": "2025-11-19 01:00:15",
+            "from_multiplier": 2,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=200.00 growth=152.6630"
+          },
+          {
+            "server": 1763600416,
+            "server_time": "2025-11-20 01:00:16",
+            "from_multiplier": 3,
+            "to_multiplier": 2,
+            "volume": 0.02,
+            "detail": "policy=FIXED_LOT_LADDER deposit=200.00 growth=145.0620"
+          },
+          {
+            "server": 1763686816,
+            "server_time": "2025-11-21 01:00:16",
+            "from_multiplier": 2,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=200.00 growth=164.9780"
+          }
+        ]
+      },
+      "overlap": {
+        "position_overlap_pair_count": 307,
+        "pair_counts": {
+          "CROSS+PASSIVE": 23,
+          "CROSS+PRESSURE": 14,
+          "CROSS+RC16": 50,
+          "CROSS+RC4": 36,
+          "CROSS+RETURN": 40,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 17,
+          "PASSIVE+RC4": 20,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 250,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "DCRC_FINAL",
+          "maximum_margin_usd": 18.33,
+          "maximum_margin_equity_fraction": 0.06360073,
+          "maximum_margin_equity_percent": 6.360073
+        },
+        "logged": {
+          "observation_count": 4727,
+          "maximum_margin_usd": 18.33,
+          "maximum_margin_equity_fraction": 0.06287087440537492,
+          "maximum_margin_equity_percent": 6.287087440537492
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 42,
+          "actual_net_usd": 40.519999999999996,
+          "actual_return_percent": 20.259999999999998,
+          "actual_max_closed_drawdown_usd": 23.299999999999997,
+          "actual_max_closed_drawdown_percent": 11.649999999999999,
+          "actual_net_to_drawdown": 1.7390557939914164,
+          "stressed_net_usd": 38.189,
+          "stressed_return_percent": 19.0945,
+          "stressed_max_closed_drawdown_usd": 24.015,
+          "stressed_max_closed_drawdown_percent": 12.0075,
+          "stressed_net_to_drawdown": 1.5902144493025192,
+          "planned_risk_usd": 911.9775,
+          "stressed_net_per_planned_risk": 0.04187493660753692,
+          "volume_distribution": {
+            "0.02": 69,
+            "0.03": 10
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 36,
+          "win_count_stressed": 36,
+          "actual_net_usd": 79.96,
+          "actual_return_percent": 39.98,
+          "actual_max_closed_drawdown_usd": 32.76,
+          "actual_max_closed_drawdown_percent": 16.38,
+          "actual_net_to_drawdown": 2.4407814407814405,
+          "stressed_net_usd": 77.757,
+          "stressed_return_percent": 38.8785,
+          "stressed_max_closed_drawdown_usd": 33.184,
+          "stressed_max_closed_drawdown_percent": 16.592,
+          "stressed_net_to_drawdown": 2.3432075699132113,
+          "planned_risk_usd": 805.9105,
+          "stressed_net_per_planned_risk": 0.09648341844410764,
+          "volume_distribution": {
+            "0.02": 59,
+            "0.03": 9
+          }
+        },
+        "CROSS": {
+          "trade_count": 194,
+          "win_count_actual": 105,
+          "win_count_stressed": 103,
+          "actual_net_usd": 67.75000000000001,
+          "actual_return_percent": 33.87500000000001,
+          "actual_max_closed_drawdown_usd": 34.42000000000001,
+          "actual_max_closed_drawdown_percent": 17.210000000000004,
+          "actual_net_to_drawdown": 1.9683323649041253,
+          "stressed_net_usd": 61.769,
+          "stressed_return_percent": 30.8845,
+          "stressed_max_closed_drawdown_usd": 36.620999999999974,
+          "stressed_max_closed_drawdown_percent": 18.310499999999987,
+          "stressed_net_to_drawdown": 1.6867098113104515,
+          "planned_risk_usd": 2382.4283,
+          "stressed_net_per_planned_risk": 0.025926908272538567,
+          "volume_distribution": {
+            "0.02": 165,
+            "0.03": 29
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 13,
+          "win_count_stressed": 13,
+          "actual_net_usd": -14.51,
+          "actual_return_percent": -7.255000000000001,
+          "actual_max_closed_drawdown_usd": 25.200000000000003,
+          "actual_max_closed_drawdown_percent": 12.6,
+          "actual_net_to_drawdown": -0.5757936507936507,
+          "stressed_net_usd": -15.450000000000001,
+          "stressed_return_percent": -7.725,
+          "stressed_max_closed_drawdown_usd": 25.424,
+          "stressed_max_closed_drawdown_percent": 12.712000000000002,
+          "stressed_net_to_drawdown": -0.6076935179358087,
+          "planned_risk_usd": 351.0077,
+          "stressed_net_per_planned_risk": -0.04401612842111441,
+          "volume_distribution": {
+            "0.02": 30,
+            "0.03": 2
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 27,
+          "win_count_stressed": 27,
+          "actual_net_usd": 56.519999999999996,
+          "actual_return_percent": 28.259999999999998,
+          "actual_max_closed_drawdown_usd": 24.36,
+          "actual_max_closed_drawdown_percent": 12.18,
+          "actual_net_to_drawdown": 2.320197044334975,
+          "stressed_net_usd": 54.505,
+          "stressed_return_percent": 27.2525,
+          "stressed_max_closed_drawdown_usd": 24.78,
+          "stressed_max_closed_drawdown_percent": 12.39,
+          "stressed_net_to_drawdown": 2.1995560936238903,
+          "planned_risk_usd": 602.1189,
+          "stressed_net_per_planned_risk": 0.09052198826510843,
+          "volume_distribution": {
+            "0.02": 45,
+            "0.03": 7
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 130,
+          "win_count_actual": 84,
+          "win_count_stressed": 83,
+          "actual_net_usd": 17.39,
+          "actual_return_percent": 8.695,
+          "actual_max_closed_drawdown_usd": 24.130000000000003,
+          "actual_max_closed_drawdown_percent": 12.065000000000001,
+          "actual_net_to_drawdown": 0.7206796518856196,
+          "stressed_net_usd": 13.22,
+          "stressed_return_percent": 6.61,
+          "stressed_max_closed_drawdown_usd": 25.271999999999995,
+          "stressed_max_closed_drawdown_percent": 12.635999999999997,
+          "stressed_net_to_drawdown": 0.5231085786641344,
+          "planned_risk_usd": 1582.86484,
+          "stressed_net_per_planned_risk": 0.00835194494559624,
+          "volume_distribution": {
+            "0.02": 114,
+            "0.03": 16
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-ladder-200.ini",
+          "bytes": 529,
+          "sha256": "6a616604d24220937ac2d01b25509fbb7a320d56a52930f8ae08a9404f79c316"
+        },
+        "artifacts": {
+          "selection-2025-ladder-200-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-200-agent.log",
+            "bytes": 5478642,
+            "sha256": "28963d10687e20f4fbfce6d09e1619d9339fae6fa9634b40daf7a48e7e58f2d6"
+          },
+          "selection-2025-ladder-200.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-200.htm",
+            "bytes": 1103858,
+            "sha256": "b98085f8abbe2d8faee5e1defdf7a7f24f94c77d7c528455b5ee9a12bc2fe223"
+          },
+          "selection-2025-ladder-200.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-200.png",
+            "bytes": 15165,
+            "sha256": "765c39b98a86aa1a8eea4ff0095e47442cca3d21185da237dbe80ae3d13221a7"
+          },
+          "selection-2025-ladder-200-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-200-holding.png",
+            "bytes": 21457,
+            "sha256": "4a225557647a0c31d784bf14f631d58f73bf845ee1880f4a5daf33d821023db4"
+          },
+          "selection-2025-ladder-200-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-200-hst.png",
+            "bytes": 51893,
+            "sha256": "c577c3442eb8b229adb8005b35257e0b9b6226d25479f7305cc7e52fac880819"
+          },
+          "selection-2025-ladder-200-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-200-mfemae.png",
+            "bytes": 48835,
+            "sha256": "a477c5971f9ab7fe024c25d8c4c198730be60da158079e91e40149964cc75b7f"
+          }
+        }
+      },
+      "dcrc_final": {
+        "policy": "FIXED_LOT_LADDER",
+        "deposit_usd": 200.0,
+        "sizing_day_transitions": 7,
+        "market_margin_or_calculation_blocks": 0,
+        "passive_margin_skips": 0,
+        "maximum_margin_usd": 18.33,
+        "maximum_margin_equity_fraction": 0.06360073,
+        "maximum_entry_volume": 0.03
+      }
+    },
+    "ladder-300": {
+      "policy": "FIXED_LOT_LADDER",
+      "deposit_usd": 300.0,
+      "reference_capital_usd": 300.0,
+      "role": "sizing_diagnostic_only",
+      "selectable": false,
+      "integrity": {
+        "passed": true,
+        "checks": {
+          "report_expert_matches": true,
+          "report_deposit_matches": true,
+          "report_period_matches": true,
+          "report_real_ticks": true,
+          "report_trade_count_matches": true,
+          "report_deal_count_matches": true,
+          "report_actual_net_matches_log": true,
+          "report_actual_drawdown_matches_log": true,
+          "normal_stop_once": true,
+          "normal_deinit_reason": true,
+          "no_safety_fault": true,
+          "no_persistence_fault": true,
+          "no_broker_identity_fault": true,
+          "no_foreign_exposure_fault": true,
+          "no_protection_calculation_fault": true,
+          "no_protection_mismatch": true,
+          "final_actual_net_matches_lifecycles": true,
+          "final_stressed_net_matches_lifecycles": true,
+          "final_stressed_drawdown_matches_lifecycles": true,
+          "final_risk_skip_count_matches_events": true,
+          "dcrc_telemetry_presence_matches_role": true,
+          "dcrc_policy_matches": true,
+          "dcrc_deposit_matches": true,
+          "dcrc_margin_block_count_matches": true,
+          "dcrc_passive_margin_skip_count_matches": true
+        }
+      },
+      "report": {
+        "expert": "ZetaDcrcFixedLotLadderV1",
+        "symbol": "US30",
+        "period": "M30 (2025.01.01 - 2026.01.01)",
+        "deposit_usd": 300.0,
+        "history_quality": "100% 실제 틱",
+        "bars": 11754,
+        "ticks": 43845913,
+        "actual_net_usd": 277.37,
+        "actual_ending_balance_usd": 577.37,
+        "actual_balance_max_drawdown_usd": 104.07,
+        "profit_factor": 1.25,
+        "recovery_factor": 2.64,
+        "sharpe_ratio": 3.73,
+        "total_trades": 555,
+        "total_deals": 1110
+      },
+      "periods": {
+        "2025_H1": {
+          "trade_count": 287,
+          "win_count_actual": 154,
+          "win_count_stressed": 152,
+          "actual_net_usd": 134.48999999999998,
+          "actual_return_percent": 44.82999999999999,
+          "actual_max_closed_drawdown_usd": 104.06999999999998,
+          "actual_max_closed_drawdown_percent": 34.68999999999999,
+          "actual_net_to_drawdown": 1.2923032574228885,
+          "stressed_net_usd": 120.147,
+          "stressed_return_percent": 40.049,
+          "stressed_max_closed_drawdown_usd": 106.83099999999996,
+          "stressed_max_closed_drawdown_percent": 35.61033333333332,
+          "stressed_net_to_drawdown": 1.1246454680757463,
+          "planned_risk_usd": 4272.4293,
+          "stressed_net_per_planned_risk": 0.02812147178187361
+        },
+        "2025_H2": {
+          "trade_count": 268,
+          "win_count_actual": 149,
+          "win_count_stressed": 148,
+          "actual_net_usd": 142.88,
+          "actual_return_percent": 47.626666666666665,
+          "actual_max_closed_drawdown_usd": 51.56,
+          "actual_max_closed_drawdown_percent": 17.186666666666667,
+          "actual_net_to_drawdown": 2.771140418929402,
+          "stressed_net_usd": 129.6255,
+          "stressed_return_percent": 43.208499999999994,
+          "stressed_max_closed_drawdown_usd": 52.694,
+          "stressed_max_closed_drawdown_percent": 17.564666666666668,
+          "stressed_net_to_drawdown": 2.459966979162713,
+          "planned_risk_usd": 4889.34888,
+          "stressed_net_per_planned_risk": 0.026511812345859843
+        },
+        "2025_FULL": {
+          "trade_count": 555,
+          "win_count_actual": 303,
+          "win_count_stressed": 300,
+          "actual_net_usd": 277.37,
+          "actual_return_percent": 92.45666666666666,
+          "actual_max_closed_drawdown_usd": 104.06999999999998,
+          "actual_max_closed_drawdown_percent": 34.68999999999999,
+          "actual_net_to_drawdown": 2.6652253291054104,
+          "stressed_net_usd": 249.7725,
+          "stressed_return_percent": 83.25750000000001,
+          "stressed_max_closed_drawdown_usd": 106.83099999999996,
+          "stressed_max_closed_drawdown_percent": 35.61033333333332,
+          "stressed_net_to_drawdown": 2.338015182858909,
+          "planned_risk_usd": 9161.77818,
+          "stressed_net_per_planned_risk": 0.027262447866861585
+        }
+      },
+      "actual_ending_balance_usd": 577.37,
+      "stressed_ending_balance_equivalent_usd": 549.7725,
+      "internal_final_summary": {
+        "portfolio": "ZT-LAB-DCRC-V1-FIXED-LOT-LADDER",
+        "reason": "1",
+        "stressed_balance_2x": "549.7725",
+        "stressed_net_2x": "249.7725",
+        "stressed_max_closed_dd": "106.8310",
+        "project_realized_net": "277.3700",
+        "project_stage_balance": "577.3700",
+        "max_aggregate_planned_risk": "65.7267"
+      },
+      "opportunity_count": 608,
+      "opportunity_outcome_counts": {
+        "PENDING_ORDER": 159,
+        "POSITION_OPEN": 425,
+        "PRICE_DISTANCE_BLOCKED": 1,
+        "PROTECTION_OR_RISK_BLOCKED": 23
+      },
+      "event_counts": {
+        "RISK_ADMISSION_SKIP": 23,
+        "RISK_MIN_LOT_SKIP": 0,
+        "PASSIVE_MARGIN_SKIP": 0,
+        "PASSIVE_MARGIN_CALC_FAIL": 0,
+        "DCRC_MARKET_MARGIN_OR_CALC_BLOCK": 0,
+        "PROTECTION_CALC_FAIL": 0,
+        "PROTECTION_MISMATCH": 0,
+        "STOP": 1
+      },
+      "risk_admission_skip_component_counts": {
+        "CROSS": 18,
+        "PASSIVE": 3,
+        "RETURN": 2
+      },
+      "volume_distribution": {
+        "0.03": 415,
+        "0.04": 140
+      },
+      "sizing": {
+        "sizing_day_count": 259,
+        "daily_volume_counts": {
+          "0.03": 191,
+          "0.04": 68
+        },
+        "transition_count": 19,
+        "transitions": [
+          {
+            "server": 1744333209,
+            "server_time": "2025-04-11 01:00:09",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=156.7795"
+          },
+          {
+            "server": 1744592410,
+            "server_time": "2025-04-14 01:00:10",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=147.5915"
+          },
+          {
+            "server": 1744678809,
+            "server_time": "2025-04-15 01:00:09",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=158.5535"
+          },
+          {
+            "server": 1744765210,
+            "server_time": "2025-04-16 01:00:10",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=140.0615"
+          },
+          {
+            "server": 1745283609,
+            "server_time": "2025-04-22 01:00:09",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=164.0475"
+          },
+          {
+            "server": 1746752409,
+            "server_time": "2025-05-09 01:00:09",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=149.8695"
+          },
+          {
+            "server": 1754355600,
+            "server_time": "2025-08-05 01:00:00",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=158.8400"
+          },
+          {
+            "server": 1754442001,
+            "server_time": "2025-08-06 01:00:01",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=141.4280"
+          },
+          {
+            "server": 1758589200,
+            "server_time": "2025-09-23 01:00:00",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=153.8590"
+          },
+          {
+            "server": 1758848401,
+            "server_time": "2025-09-26 01:00:01",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=148.2570"
+          },
+          {
+            "server": 1759712401,
+            "server_time": "2025-10-06 01:00:01",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=150.6185"
+          },
+          {
+            "server": 1759885201,
+            "server_time": "2025-10-08 01:00:01",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=147.2305"
+          },
+          {
+            "server": 1759971601,
+            "server_time": "2025-10-09 01:00:01",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=151.2665"
+          },
+          {
+            "server": 1760058000,
+            "server_time": "2025-10-10 01:00:00",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=140.8005"
+          },
+          {
+            "server": 1761094801,
+            "server_time": "2025-10-22 01:00:01",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=156.7585"
+          },
+          {
+            "server": 1761181203,
+            "server_time": "2025-10-23 01:00:03",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=148.6345"
+          },
+          {
+            "server": 1761267602,
+            "server_time": "2025-10-24 01:00:02",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=155.4365"
+          },
+          {
+            "server": 1763427615,
+            "server_time": "2025-11-18 01:00:15",
+            "from_multiplier": 4,
+            "to_multiplier": 3,
+            "volume": 0.03,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=144.9525"
+          },
+          {
+            "server": 1763686816,
+            "server_time": "2025-11-21 01:00:16",
+            "from_multiplier": 3,
+            "to_multiplier": 4,
+            "volume": 0.04,
+            "detail": "policy=FIXED_LOT_LADDER deposit=300.00 growth=167.4585"
+          }
+        ]
+      },
+      "overlap": {
+        "position_overlap_pair_count": 302,
+        "pair_counts": {
+          "CROSS+PASSIVE": 20,
+          "CROSS+PRESSURE": 14,
+          "CROSS+RC16": 48,
+          "CROSS+RC4": 36,
+          "CROSS+RETURN": 40,
+          "PASSIVE+PRESSURE": 13,
+          "PASSIVE+RC16": 17,
+          "PASSIVE+RC4": 20,
+          "PASSIVE+RETURN": 22,
+          "PRESSURE+RC16": 8,
+          "PRESSURE+RC4": 8,
+          "PRESSURE+RETURN": 10,
+          "RC16+RC4": 32,
+          "RC16+RETURN": 5,
+          "RC4+RETURN": 9
+        },
+        "entries_with_earlier_incumbent_count": 246,
+        "maximum_concurrent_positions": 3
+      },
+      "margin": {
+        "selection_metric": {
+          "source": "DCRC_FINAL",
+          "maximum_margin_usd": 24.45,
+          "maximum_margin_equity_fraction": 0.06356661,
+          "maximum_margin_equity_percent": 6.356661
+        },
+        "logged": {
+          "observation_count": 4713,
+          "maximum_margin_usd": 24.45,
+          "maximum_margin_equity_fraction": 0.06283715303887272,
+          "maximum_margin_equity_percent": 6.283715303887272
+        }
+      },
+      "component_performance_2025_full": {
+        "RC16": {
+          "trade_count": 79,
+          "win_count_actual": 43,
+          "win_count_stressed": 43,
+          "actual_net_usd": 53.739999999999995,
+          "actual_return_percent": 17.91333333333333,
+          "actual_max_closed_drawdown_usd": 31.899999999999977,
+          "actual_max_closed_drawdown_percent": 10.633333333333326,
+          "actual_net_to_drawdown": 1.684639498432603,
+          "stressed_net_usd": 50.192,
+          "stressed_return_percent": 16.730666666666664,
+          "stressed_max_closed_drawdown_usd": 32.961000000000006,
+          "stressed_max_closed_drawdown_percent": 10.987000000000002,
+          "stressed_net_to_drawdown": 1.5227693334546886,
+          "planned_risk_usd": 1267.8374,
+          "stressed_net_per_planned_risk": 0.03958867280615007,
+          "volume_distribution": {
+            "0.03": 60,
+            "0.04": 19
+          }
+        },
+        "RC4": {
+          "trade_count": 68,
+          "win_count_actual": 35,
+          "win_count_stressed": 35,
+          "actual_net_usd": 103.38,
+          "actual_return_percent": 34.459999999999994,
+          "actual_max_closed_drawdown_usd": 47.84,
+          "actual_max_closed_drawdown_percent": 15.946666666666667,
+          "actual_net_to_drawdown": 2.160953177257525,
+          "stressed_net_usd": 100.23700000000001,
+          "stressed_return_percent": 33.412333333333336,
+          "stressed_max_closed_drawdown_usd": 48.88199999999999,
+          "stressed_max_closed_drawdown_percent": 16.293999999999997,
+          "stressed_net_to_drawdown": 2.0505912196718636,
+          "planned_risk_usd": 1115.8083,
+          "stressed_net_per_planned_risk": 0.0898335314408398,
+          "volume_distribution": {
+            "0.03": 51,
+            "0.04": 17
+          }
+        },
+        "CROSS": {
+          "trade_count": 194,
+          "win_count_actual": 104,
+          "win_count_stressed": 102,
+          "actual_net_usd": 74.49,
+          "actual_return_percent": 24.83,
+          "actual_max_closed_drawdown_usd": 62.93999999999999,
+          "actual_max_closed_drawdown_percent": 20.979999999999997,
+          "actual_net_to_drawdown": 1.1835081029551955,
+          "stressed_net_usd": 65.158,
+          "stressed_return_percent": 21.719333333333335,
+          "stressed_max_closed_drawdown_usd": 66.33750000000003,
+          "stressed_max_closed_drawdown_percent": 22.11250000000001,
+          "stressed_net_to_drawdown": 0.9822197098172221,
+          "planned_risk_usd": 3266.8741,
+          "stressed_net_per_planned_risk": 0.01994506001930102,
+          "volume_distribution": {
+            "0.03": 137,
+            "0.04": 57
+          }
+        },
+        "PRESSURE": {
+          "trade_count": 32,
+          "win_count_actual": 13,
+          "win_count_stressed": 13,
+          "actual_net_usd": -17.000000000000004,
+          "actual_return_percent": -5.666666666666668,
+          "actual_max_closed_drawdown_usd": 37.83,
+          "actual_max_closed_drawdown_percent": 12.61,
+          "actual_net_to_drawdown": -0.44937879989426394,
+          "stressed_net_usd": -19.087,
+          "stressed_return_percent": -6.362333333333334,
+          "stressed_max_closed_drawdown_usd": 38.166000000000004,
+          "stressed_max_closed_drawdown_percent": 12.722,
+          "stressed_net_to_drawdown": -0.5001048053241104,
+          "planned_risk_usd": 494.2506,
+          "stressed_net_per_planned_risk": -0.0386180613640125,
+          "volume_distribution": {
+            "0.03": 30,
+            "0.04": 2
+          }
+        },
+        "RETURN": {
+          "trade_count": 52,
+          "win_count_actual": 25,
+          "win_count_stressed": 25,
+          "actual_net_usd": 67.97,
+          "actual_return_percent": 22.656666666666666,
+          "actual_max_closed_drawdown_usd": 50.45,
+          "actual_max_closed_drawdown_percent": 16.81666666666667,
+          "actual_net_to_drawdown": 1.3472745292368682,
+          "stressed_net_usd": 64.99300000000001,
+          "stressed_return_percent": 21.664333333333335,
+          "stressed_max_closed_drawdown_usd": 50.82299999999999,
+          "stressed_max_closed_drawdown_percent": 16.941,
+          "stressed_net_to_drawdown": 1.2788107746492734,
+          "planned_risk_usd": 841.3003,
+          "stressed_net_per_planned_risk": 0.0772530331915964,
+          "volume_distribution": {
+            "0.03": 40,
+            "0.04": 12
+          }
+        },
+        "PASSIVE": {
+          "trade_count": 130,
+          "win_count_actual": 83,
+          "win_count_stressed": 82,
+          "actual_net_usd": -5.2100000000000035,
+          "actual_return_percent": -1.736666666666668,
+          "actual_max_closed_drawdown_usd": 51.95,
+          "actual_max_closed_drawdown_percent": 17.316666666666666,
+          "actual_net_to_drawdown": -0.10028873917228111,
+          "stressed_net_usd": -11.720500000000001,
+          "stressed_return_percent": -3.9068333333333336,
+          "stressed_max_closed_drawdown_usd": 55.8225,
+          "stressed_max_closed_drawdown_percent": 18.607499999999998,
+          "stressed_net_to_drawdown": -0.20996014151999645,
+          "planned_risk_usd": 2175.70748,
+          "stressed_net_per_planned_risk": -0.005386983364142316,
+          "volume_distribution": {
+            "0.03": 97,
+            "0.04": 33
+          }
+        }
+      },
+      "sources": {
+        "configuration": {
+          "path": "lab/research/deposit-capital-risk-capacity/mt5/config/tester/selection-2025-ladder-300.ini",
+          "bytes": 529,
+          "sha256": "d969a428c9e8df9b3e9a459658b06a0df60584561d76d1c17798abf031fde310"
+        },
+        "artifacts": {
+          "selection-2025-ladder-300-agent.log": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-300-agent.log",
+            "bytes": 5456830,
+            "sha256": "76416cb3e29f7fd6f87475771643d5b5996c95b09e7871698064fc3b6cca8c33"
+          },
+          "selection-2025-ladder-300.htm": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-300.htm",
+            "bytes": 1104804,
+            "sha256": "c29ec0545a6e7760a4a90e66c5ba233728dae358d8fb60743b644978170dd875"
+          },
+          "selection-2025-ladder-300.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-300.png",
+            "bytes": 16426,
+            "sha256": "a1dca468de33ece86b403a9da13131f9d06d327b95c02f6b7376de8995550562"
+          },
+          "selection-2025-ladder-300-holding.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-300-holding.png",
+            "bytes": 21384,
+            "sha256": "bbf069fe80be939c3c2a15e38c548865abbe5f5e4ab8fd698f006d17024c675c"
+          },
+          "selection-2025-ladder-300-hst.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-300-hst.png",
+            "bytes": 50381,
+            "sha256": "a23b78c914ed016a952e1016b225e9beb86f285bea3b84c6044a7fe2ed6a8b1a"
+          },
+          "selection-2025-ladder-300-mfemae.png": {
+            "path": "lab/artifacts/backtests/deposit-capital-risk-capacity/selection-2025-ladder-300-mfemae.png",
+            "bytes": 47856,
+            "sha256": "0ab8ed1908348cde0fa6409d46ce57f1f8a210405b03835e71c23472072c6b73"
+          }
+        }
+      },
+      "dcrc_final": {
+        "policy": "FIXED_LOT_LADDER",
+        "deposit_usd": 300.0,
+        "sizing_day_transitions": 19,
+        "market_margin_or_calculation_blocks": 0,
+        "passive_margin_skips": 0,
+        "maximum_margin_usd": 24.45,
+        "maximum_margin_equity_fraction": 0.06356661,
+        "maximum_entry_volume": 0.04
+      }
+    }
+  },
+  "linear_anchor_gate": {
+    "linear_100_identity": {
+      "opportunities_exact": true,
+      "economic_events_exact": true,
+      "completed_lifecycles_exact": true,
+      "ignored_identity_only_events": [
+        "DCRC_SIZE_DAY",
+        "SIZE_DAY"
+      ],
+      "passed": true
+    },
+    "scale_consistency_by_deposit": {
+      "200": {
+        "stressed_return_percent": 113.053,
+        "return_delta_vs_linear_100_percentage_points": -0.014999999999986358,
+        "stressed_drawdown_percent": 28.355500000000006,
+        "drawdown_delta_vs_linear_100_percentage_points": -0.0350000000000108,
+        "within_0_50_percentage_point_tolerance": true
+      },
+      "300": {
+        "stressed_return_percent": 112.99466666666669,
+        "return_delta_vs_linear_100_percentage_points": -0.07333333333329506,
+        "stressed_drawdown_percent": 28.360499999999995,
+        "drawdown_delta_vs_linear_100_percentage_points": -0.030000000000022453,
+        "within_0_50_percentage_point_tolerance": true
+      }
+    },
+    "linear_100_identity_passed": true,
+    "linear_scale_consistency_passed": true,
+    "passed": true
+  },
+  "candidate_gates": {
+    "BREADTH_DOLLAR_SLOTS": {
+      "selectable_under_proxy_freeze": true,
+      "diagnostic_only": false,
+      "by_deposit": {
+        "200": {
+          "positive_stressed_net_h1_h2_full": true,
+          "candidate_stressed_return_percent": 43.163,
+          "linear_stressed_return_percent": 113.053,
+          "required_return_floor_percent": 101.7477,
+          "return_floor_pass": false,
+          "candidate_stressed_drawdown_percent": 13.770749999999996,
+          "linear_stressed_drawdown_percent": 28.355500000000006,
+          "drawdown_delta_percentage_points": -14.58475000000001,
+          "risk_pass": true,
+          "candidate_stressed_net_to_drawdown": 3.1343971824337826,
+          "linear_stressed_net_to_drawdown": 3.986986651619614,
+          "efficiency_delta": -0.8525894691858316,
+          "efficiency_pass": false,
+          "integrity_pass": true
+        },
+        "300": {
+          "positive_stressed_net_h1_h2_full": true,
+          "candidate_stressed_return_percent": 23.337999999999997,
+          "linear_stressed_return_percent": 112.99466666666669,
+          "required_return_floor_percent": 101.69520000000003,
+          "return_floor_pass": false,
+          "candidate_stressed_drawdown_percent": 8.979666666666668,
+          "linear_stressed_drawdown_percent": 28.360499999999995,
+          "drawdown_delta_percentage_points": -19.380833333333328,
+          "risk_pass": true,
+          "candidate_stressed_net_to_drawdown": 2.598982887263818,
+          "linear_stressed_net_to_drawdown": 3.984226888336479,
+          "efficiency_delta": -1.3852440010726612,
+          "efficiency_pass": false,
+          "integrity_pass": true
+        }
+      },
+      "positive_periods_both_deposits": true,
+      "risk_pass_both_deposits": true,
+      "efficiency_pass_both_deposits": false,
+      "return_floor_pass_both_deposits": false,
+      "integrity_pass_both_deposits": true,
+      "economic_gate_passed": false,
+      "passed": false
+    },
+    "FIXED_LOT_LADDER": {
+      "selectable_under_proxy_freeze": false,
+      "diagnostic_only": true,
+      "by_deposit": {
+        "200": {
+          "positive_stressed_net_h1_h2_full": true,
+          "candidate_stressed_return_percent": 114.995,
+          "linear_stressed_return_percent": 113.053,
+          "required_return_floor_percent": 101.7477,
+          "return_floor_pass": true,
+          "candidate_stressed_drawdown_percent": 28.355500000000006,
+          "linear_stressed_drawdown_percent": 28.355500000000006,
+          "drawdown_delta_percentage_points": 0.0,
+          "risk_pass": true,
+          "candidate_stressed_net_to_drawdown": 4.055474246618821,
+          "linear_stressed_net_to_drawdown": 3.986986651619614,
+          "efficiency_delta": 0.06848759499920654,
+          "efficiency_pass": true,
+          "integrity_pass": true
+        },
+        "300": {
+          "positive_stressed_net_h1_h2_full": true,
+          "candidate_stressed_return_percent": 83.25750000000001,
+          "linear_stressed_return_percent": 112.99466666666669,
+          "required_return_floor_percent": 101.69520000000003,
+          "return_floor_pass": false,
+          "candidate_stressed_drawdown_percent": 35.61033333333332,
+          "linear_stressed_drawdown_percent": 28.360499999999995,
+          "drawdown_delta_percentage_points": 7.249833333333328,
+          "risk_pass": false,
+          "candidate_stressed_net_to_drawdown": 2.338015182858909,
+          "linear_stressed_net_to_drawdown": 3.984226888336479,
+          "efficiency_delta": -1.6462117054775702,
+          "efficiency_pass": false,
+          "integrity_pass": true
+        }
+      },
+      "positive_periods_both_deposits": true,
+      "risk_pass_both_deposits": false,
+      "efficiency_pass_both_deposits": false,
+      "return_floor_pass_both_deposits": false,
+      "integrity_pass_both_deposits": true,
+      "economic_gate_passed": false,
+      "passed": false
+    }
+  },
+  "lifecycle_path_comparisons": {
+    "deposit_only_200_vs_100": {
+      "matching_key": "component + decision_bar + direction",
+      "shared_lifecycle_count": 553,
+      "added_lifecycle_count": 7,
+      "added_component_counts": {
+        "CROSS": 5,
+        "PASSIVE": 2
+      },
+      "added_stressed_net_usd": -2.98,
+      "removed_lifecycle_count": 1,
+      "removed_component_counts": {
+        "PASSIVE": 1
+      },
+      "removed_baseline_stressed_net_usd": -3.214,
+      "shared_lifecycle_stressed_net_delta_usd": -0.0500000000000016,
+      "total_stressed_net_delta_usd": 0.1839999999999975,
+      "decomposition_identity": "added - removed_baseline + shared_delta"
+    },
+    "deposit_only_300_vs_100": {
+      "matching_key": "component + decision_bar + direction",
+      "shared_lifecycle_count": 553,
+      "added_lifecycle_count": 7,
+      "added_component_counts": {
+        "CROSS": 5,
+        "PASSIVE": 2
+      },
+      "added_stressed_net_usd": -2.98,
+      "removed_lifecycle_count": 1,
+      "removed_component_counts": {
+        "PASSIVE": 1
+      },
+      "removed_baseline_stressed_net_usd": -3.214,
+      "shared_lifecycle_stressed_net_delta_usd": -0.0500000000000016,
+      "total_stressed_net_delta_usd": 0.1839999999999975,
+      "decomposition_identity": "added - removed_baseline + shared_delta"
+    },
+    "breadth_200_vs_same_lot_deposit_control_200": {
+      "matching_key": "component + decision_bar + direction",
+      "shared_lifecycle_count": 558,
+      "added_lifecycle_count": 18,
+      "added_component_counts": {
+        "CROSS": 14,
+        "PASSIVE": 2,
+        "RETURN": 2
+      },
+      "added_stressed_net_usd": 8.815999999999999,
+      "removed_lifecycle_count": 2,
+      "removed_component_counts": {
+        "PASSIVE": 2
+      },
+      "removed_baseline_stressed_net_usd": 1.462,
+      "shared_lifecycle_stressed_net_delta_usd": -34.28,
+      "total_stressed_net_delta_usd": -26.926000000000002,
+      "decomposition_identity": "added - removed_baseline + shared_delta"
+    },
+    "breadth_300_vs_same_lot_deposit_control_300": {
+      "matching_key": "component + decision_bar + direction",
+      "shared_lifecycle_count": 558,
+      "added_lifecycle_count": 19,
+      "added_component_counts": {
+        "CROSS": 14,
+        "PASSIVE": 3,
+        "RETURN": 2
+      },
+      "added_stressed_net_usd": 10.882,
+      "removed_lifecycle_count": 2,
+      "removed_component_counts": {
+        "PASSIVE": 2
+      },
+      "removed_baseline_stressed_net_usd": 1.462,
+      "shared_lifecycle_stressed_net_delta_usd": -52.657999999999994,
+      "total_stressed_net_delta_usd": -43.238,
+      "decomposition_identity": "added - removed_baseline + shared_delta"
+    },
+    "ladder_200_vs_linear_200": {
+      "matching_key": "component + decision_bar + direction",
+      "shared_lifecycle_count": 554,
+      "added_lifecycle_count": 1,
+      "added_component_counts": {
+        "CROSS": 1
+      },
+      "added_stressed_net_usd": -0.296,
+      "removed_lifecycle_count": 0,
+      "removed_component_counts": {},
+      "removed_baseline_stressed_net_usd": 0,
+      "shared_lifecycle_stressed_net_delta_usd": 4.179999999999998,
+      "total_stressed_net_delta_usd": 3.8840000000000146,
+      "decomposition_identity": "added - removed_baseline + shared_delta"
+    },
+    "ladder_300_vs_linear_300": {
+      "matching_key": "component + decision_bar + direction",
+      "shared_lifecycle_count": 553,
+      "added_lifecycle_count": 2,
+      "added_component_counts": {
+        "CROSS": 1,
+        "PASSIVE": 1
+      },
+      "added_stressed_net_usd": -9.15,
+      "removed_lifecycle_count": 1,
+      "removed_component_counts": {
+        "PASSIVE": 1
+      },
+      "removed_baseline_stressed_net_usd": -9.652,
+      "shared_lifecycle_stressed_net_delta_usd": -89.71350000000001,
+      "total_stressed_net_delta_usd": -89.21150000000003,
+      "decomposition_identity": "added - removed_baseline + shared_delta"
+    }
+  },
+  "selection_gate": {
+    "passing_non_control_policies": [],
+    "selected_policy": null,
+    "verdict": "NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7",
+    "conditional_2026_confirmation_opened": false,
+    "live_change_or_promotion_authorized": false
+  },
+  "interpretation_limits": [
+    "LINEAR_CAPITAL is the mandatory scaling anchor, not a competing allocation policy.",
+    "The breadth EA fixes 0.01 volume and approximately 4 starting risk dollars, but its percentage risk fraction acts on changing conservative capital; shared stop geometry can therefore diverge by deposit and path.",
+    "Lifecycle matching by component, decision bar, and direction is a path decomposition, not an oracle counterfactual after rejected signals.",
+    "No result grants Live-dev source, settings, process, or promotion authority."
+  ]
+}

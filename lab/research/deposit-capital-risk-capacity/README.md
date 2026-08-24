@@ -36,3 +36,14 @@
 - `ZetaDcrcFixedLotLadderV1`: `$200/$300 → 0.02/0.03`, 이후 누적 스트레스 이익 `+$150`마다 정확히 `+0.01`.
 
 세 EA는 build 6140 `0 errors / 0 warnings`이고 Tester 밖에서 초기화에 실패한다. 2025 결과를 열기 전 동결한 컴파일·설정 영수증은 [`lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_COMPILE_RECEIPT_V1.json`](../../evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_COMPILE_RECEIPT_V1.json)이다.
+
+## 2025 선택과 폐쇄
+
+10개 fresh-account 2025 `100% 실제 틱` 실행은 모두 정상 STOP, 리포트/원장 일치, 안전·영속성·브로커·외부노출·보호·마진 오류 0이었다.
+
+- 예치만 추가: `.01`을 유지한 스트레스 순익은 `$100 +113.068`, `$200/$300 +113.252`로 거의 같았다. DD율은 `28.3905% → 14.2353% → 9.4902%`로 낮아졌지만 수익률도 `113.068% → 56.626% → 37.7507%`로 희석됐다.
+- `LINEAR_CAPITAL`: `$100/$200/$300` 스트레스 순익 `+113.068/+226.106/+338.984`, 수익률 `113.068/113.053/112.9947%`, DD율 `28.3905/28.3555/28.3605%`. 구조 앵커는 통과했지만 같은 위험률의 달러 확대이지 엣지 개선은 아니다.
+- `BREADTH_DOLLAR_SLOTS`: 위험 차단 `0`, 최대 동시포지션 `4`, 거래 `576/577`로 폭은 늘었지만 수익률 `43.163/23.338%`, net/DD `3.1344/2.5990`으로 선형 대비 효율·수익률 바닥을 실패했다.
+- `FIXED_LOT_LADDER`: `$200`은 선형보다 `+$3.884` 좋아졌지만, `$300`은 `-$89.2115` 나빠지고 DD율이 `+7.2498%p` 악화됐다. 양쪽 예치금 일관성 게이트를 실패했다.
+
+통과한 비통제 정책이 없어 2026 확인 구간은 열지 않았다. 최종 판정은 `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`이다. 기계 결과는 [`DEPOSIT_CAPITAL_RISK_CAPACITY_SELECTION_V1.json`](../../evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_SELECTION_V1.json), 폐쇄는 [`DEPOSIT_CAPITAL_RISK_CAPACITY_CLOSURE_V1.json`](../../evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_CLOSURE_V1.json), 사람이 읽는 상세 결론은 [`docs/lineage/DEPOSIT_CAPITAL_AND_RISK_CAPACITY.md`](../../../docs/lineage/DEPOSIT_CAPITAL_AND_RISK_CAPACITY.md)에 있다.
