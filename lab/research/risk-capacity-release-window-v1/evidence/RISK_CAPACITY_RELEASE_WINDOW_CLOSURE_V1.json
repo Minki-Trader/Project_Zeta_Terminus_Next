@@ -1,0 +1,34 @@
+{
+  "schema": "zeta-next-risk-capacity-release-window-closure-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "risk-capacity-release-window-015",
+  "family": "risk-capacity-release-window-v1",
+  "evidence": {
+    "declaration_sha256": "3D633073C863F1FB88930642A3FAE721C611DE4239B7D595524AC53094FD47DA",
+    "result_sha256": "3AF7E7577F3321790663ADCC92840907BEAA09D0D613A1F7FDBEF64E0BB29986",
+    "input_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312"
+  },
+  "closure": {
+    "verdict": "INVALID_EVENT_KEY_CONTRACT_NO_DEFERRED_ADMISSION_CANDIDATE",
+    "integrity_gate_passed": false,
+    "formal_selection_gate_reached": false,
+    "selected_receiver": null,
+    "later_retry_experiment": false
+  },
+  "reason": "The frozen contract treated state_sequence as an event primary key, but 76 groups contained distinct valid events under the same persisted-state version. The defect was discovered only after release-latency outcomes opened, so the contract was not amended. The non-authoritative exact-deadline sensitivity also found only 3 recoverable proxies among 78 skips, below the frozen minimum 8.",
+  "forbidden_rescues": {
+    "corrected_event_key_in_this_branch": false,
+    "longer_retry_window": false,
+    "alternate_overflow_definition": false,
+    "mql_or_tester_path": false
+  },
+  "surfaces": {
+    "frozen_cp2_baseline_unchanged": true,
+    "parent_observation_family_unchanged": true,
+    "live_untouched": true,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_next_only_economic_question"
+}

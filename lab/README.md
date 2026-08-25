@@ -25,6 +25,7 @@
 - `research/us30-context-rotation-v1/`: 닫힌 RC4→Pressure 인과 맥락 Proxy family; 118건 중 맥락 17건으로 고정 표본 게이트 미달, 소스·추가 실행 없음
 - `research/receiver-time-field-generalization-v1/`: 닫힌 Passive 만료→Return/Cross 수신시간장 일반화 family; 12개 실틱 경로에서 2025 재현은 성공했으나 전체 개선·DD·진입수 게이트 미달, CP2 유지
 - `research/passive-refusal-depth-observation-v1/`: 닫힌 Passive 미체결 접근깊이 관찰 family; 4개 실틱 경로에서 Return은 다중 게이트 미달, Cross는 pooled 신호가 있었으나 기간별 tail 방향 2/4로 폭넓음 게이트 미달, selector 없이 CP2 유지
+- `research/risk-capacity-release-window-v1/`: 닫힌 위험용량 해제창 진단 family; event-key 계약 결함으로 정식 판정 무효, 비권위 민감도도 exact deadline 해제 3/78로 기준 미달, retry 후보 없음
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구

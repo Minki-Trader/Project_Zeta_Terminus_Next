@@ -1,0 +1,123 @@
+{
+  "schema": "zeta-next-risk-capacity-release-window-result-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_INVALID_RECONSTRUCTION_CONTRACT",
+  "unit": "risk-capacity-release-window-015",
+  "family": "risk-capacity-release-window-v1",
+  "declaration": {
+    "path": "lab/research/risk-capacity-release-window-v1/evidence/RISK_CAPACITY_RELEASE_WINDOW_DECLARATION_V1.json",
+    "sha256": "3D633073C863F1FB88930642A3FAE721C611DE4239B7D595524AC53094FD47DA"
+  },
+  "immutable_inputs_unchanged": true,
+  "execution": {
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "new_market_outcomes": 0,
+    "aggregation_attempts": 1,
+    "alternate_key_or_window_rescues": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "fixed_integrity_gate": {
+    "passed": false,
+    "failed_requirement": "The declaration required every numeric state_sequence to be unique after combining each period's event files.",
+    "observed_multi_event_sequence_groups": 76,
+    "period_counts": {
+      "P1_2022H2_2023": 15,
+      "P2_2024": 25,
+      "P3_2025": 23,
+      "P4_2026_YTD": 13
+    },
+    "exact_duplicate_row_groups": 0,
+    "distinct_event_groups": 76,
+    "cause": "state_sequence is a persisted-state version, not an event-journal primary key. Multiple distinct events can validly share one state sequence and server second, including ARC_SHADOW_ACTIVATION_SEALED plus EXTERNAL_CLOSE, ARC_CHECKPOINT plus ARC_REFUSED, and ARC_SHADOW_CURSOR_CHECKPOINT plus CLOSE.",
+    "data_corruption_supported": false,
+    "contract_defect": "The unit froze an invalid uniqueness assumption. Because release-latency outcomes had already been opened when this was discovered, the declaration was not amended or reinterpreted."
+  },
+  "formal_selection_gate": {
+    "reached": false,
+    "selected_receiver": null,
+    "later_deferred_admission_experiment": false
+  },
+  "non_authoritative_sensitivity": {
+    "purpose": "Record scale only; it cannot rescue or replace the failed frozen integrity contract.",
+    "method": "Preserve all distinct same-sequence events, sort by numeric state sequence with their observed file order, and apply the otherwise frozen exact-deadline release proxy.",
+    "risk_admission_skips": 78,
+    "period_skip_counts": "21/18/25/14",
+    "active_owner_count_distribution": {
+      "two": 41,
+      "three": 37
+    },
+    "recoverable_proxy_count": 3,
+    "recoverable_period_counts": {
+      "P1_2022H2_2023": 0,
+      "P2_2024": 1,
+      "P3_2025": 1,
+      "P4_2026_YTD": 1
+    },
+    "recoverable_receiver_counts": {
+      "Passive": 2,
+      "Cross": 1,
+      "Return": 0,
+      "Pressure": 0
+    },
+    "single_release_recoverable": 3,
+    "latency_seconds_min_median_mean_max": "17/248/514.666667/1279",
+    "events": [
+      {
+        "period": "P2_2024",
+        "skip_server": "2024-02-02 16:00:00",
+        "candidate": "Passive",
+        "deadline_server": "2024-02-02 17:00:00",
+        "overflow_usd": 0.172520,
+        "cover_server": "2024-02-02 16:04:08",
+        "latency_seconds": 248,
+        "release_owner": "RC16",
+        "released_birth_planned_risk_usd": 3.6723
+      },
+      {
+        "period": "P3_2025",
+        "skip_server": "2025-01-10 17:00:00",
+        "candidate": "Cross",
+        "deadline_server": "2025-01-10 17:02:00",
+        "overflow_usd": 0.095680,
+        "cover_server": "2025-01-10 17:00:17",
+        "latency_seconds": 17,
+        "release_owner": "Return",
+        "released_birth_planned_risk_usd": 3.8094
+      },
+      {
+        "period": "P4_2026_YTD",
+        "skip_server": "2026-03-10 14:45:00",
+        "candidate": "Passive",
+        "deadline_server": "2026-03-10 15:45:00",
+        "overflow_usd": 0.189840,
+        "cover_server": "2026-03-10 15:06:19",
+        "latency_seconds": 1279,
+        "release_owner": "RC4",
+        "released_birth_planned_risk_usd": 6.4117
+      }
+    ],
+    "fixed_threshold_comparison_only": {
+      "portfolio_recoverable_required": 8,
+      "portfolio_recoverable_observed": 3,
+      "period_breadth_required": "at least two in each of at least three periods",
+      "period_breadth_observed": "one in each of three periods",
+      "receiver_recoverable_required": 6,
+      "largest_receiver_observed": 2,
+      "would_pass_if_integrity_were_repaired": false
+    }
+  },
+  "interpretation": {
+    "formal": "The frozen reconstruction contract is invalid, so this unit makes no release-window mechanism judgment and selects no receiver.",
+    "bounded_observation": "Even the disclosed non-authoritative sensitivity found only three exact-deadline capacity releases among 78 skips, well below every frozen density requirement. There is no economic reason to rescue this unit with a corrected key or longer window.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "verdict": "INVALID_EVENT_KEY_CONTRACT_NO_DEFERRED_ADMISSION_CANDIDATE",
+    "selected_receiver": null,
+    "retry_mechanism_authorized": false,
+    "longer_window_or_key_repair_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_without_key_repair_or_longer_window_then_select_a_non_nearby_question_after_durable_commit"
+}

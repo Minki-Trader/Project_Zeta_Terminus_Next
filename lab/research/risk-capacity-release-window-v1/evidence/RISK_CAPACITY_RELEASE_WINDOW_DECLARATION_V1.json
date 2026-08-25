@@ -1,0 +1,142 @@
+{
+  "schema": "zeta-next-risk-capacity-release-window-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_RELEASE_LATENCY_AGGREGATION",
+  "unit": "risk-capacity-release-window-015",
+  "family": "risk-capacity-release-window-v1",
+  "question": "After a native candidate is rejected by the frozen 12% aggregate-risk gate, does enough incumbent risk naturally release before that candidate's already-recorded decision deadline, broadly and often enough to justify one later exact-gate deferred-admission experiment?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "feasibility_inspection_disclosure": {
+    "inspected_before_declaration": [
+      "The six event files parse and contain the already-known 78 risk-admission skips.",
+      "The candidate identities and active blocker sets can be reconstructed without transition anomalies.",
+      "Cross is the already-known dominant rejected receiver at 59 of 78 skips."
+    ],
+    "not_inspected_before_declaration": [
+      "time from each skip to an incumbent release",
+      "whether a release occurs before the exact recorded decision deadline",
+      "whether released initial planned risk covers the recorded overflow",
+      "receiver-level recoverable counts or period breadth"
+    ],
+    "classification": "EXPLORATORY_PROXY_WITH_DISCLOSED_FEASIBILITY_INSPECTION"
+  },
+  "immutable_parent": {
+    "family": "passive-refusal-depth-observation-v1",
+    "commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "selection_sha256": "503FA898AC50E40F08359D595801D670BFF266B849CD64C18C736A67010B66FE",
+    "closure_sha256": "D716138FCBFE362105AFE125F25CF466F76ECF9317C90EF4EBF6D369E40EB50B",
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "reopen_parent_source": false
+  },
+  "event_files": {
+    "manifest_algorithm": "Sort parent-relative forward-slash paths, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "files": 6,
+    "bytes": 5692770,
+    "sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "items": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "rows_including_header": 4097,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "rows_including_header": 1530,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "rows_including_header": 4062,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "rows_including_header": 4097,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "rows_including_header": 20,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "rows_including_header": 2677,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ]
+  },
+  "fixed_reconstruction": {
+    "ordering": "Combine each period's event files, require unique numeric state_sequence, then sort ascending.",
+    "candidate_link": "Each RISK_ADMISSION_SKIP must link to the latest earlier same-component SIGNAL_DECIDED in the same decision journal and use its explicit detail deadline.",
+    "active_owner_births": [
+      "OPEN",
+      "PASSIVE_PLACE"
+    ],
+    "active_owner_transition": "PASSIVE_FILL changes the Passive owner from pending to position without changing its birth planned risk.",
+    "active_owner_releases": [
+      "CLOSE",
+      "EXTERNAL_CLOSE",
+      "PASSIVE_EXPIRE"
+    ],
+    "candidate_overflow_usd": "max(RISK_ADMISSION_SKIP.value_b - detail.aggregate_cap, 0)",
+    "release_risk_proxy_usd": "The planned_risk frozen at each active owner's OPEN or PASSIVE_PLACE birth.",
+    "recoverable_proxy": "Starting strictly after the skip and ending at the exact recorded deadline inclusive, cumulatively released active-owner birth planned risk reaches or exceeds candidate_overflow_usd.",
+    "first_cover_time": "The earliest release timestamp at which cumulative released proxy risk covers the overflow.",
+    "single_release_recoverable": "The first qualifying release alone covers the overflow.",
+    "causal_limit": "This is only a release-window feasibility proxy. A later EA, if selected, must rerun the exact live risk calculation at retry time and may admit only when the unchanged 12% gate actually passes."
+  },
+  "fixed_integrity_gate": [
+    "All six file hashes and row counts match this declaration.",
+    "There are exactly 78 RISK_ADMISSION_SKIP rows with period counts 21, 18, 25 and 14.",
+    "Every skip has exactly one linked signal deadline, a positive overflow and two or three reconstructed active owners.",
+    "Every active owner birth, fill and release transition is balanced; no duplicate state sequence or negative latency is allowed.",
+    "No event after the exact decision deadline contributes to recoverability."
+  ],
+  "fixed_selection_gate": {
+    "portfolio_recoverable_minimum": 8,
+    "portfolio_period_breadth": "At least two recoverable skips in each of at least three periods.",
+    "receiver_recoverable_minimum": 6,
+    "receiver_period_breadth": "At least one recoverable skip in each of at least three periods.",
+    "simple_mechanism_floor": "At least 50% of the selected receiver's recoverable skips must be single-release recoverable.",
+    "selection": "Choose at most one receiver: highest recoverable count, then more represented periods, then lower median first-cover latency, then lexicographic strategy name.",
+    "passing_action": "Retain one later exact-gate deferred-admission Lab experiment that retries only the frozen candidate and only through its original deadline. It cannot relax risk, close or resize an incumbent, extend freshness, reduce any existing base entry, or authorize Live.",
+    "failure_action": "Close with no deferred-admission candidate and do not rescue with a longer retry window."
+  },
+  "descriptive_only": [
+    "all later release latencies after the deadline",
+    "five-minute, fifteen-minute, bar-close or arbitrary alternative windows",
+    "blocker strategy identity and later blocker P/L",
+    "counterfactual skipped-candidate P/L",
+    "aggregate-cap relaxation or incumbent replacement"
+  ],
+  "stop_rules": [
+    "Do not run MT5 or modify MQL in this unit.",
+    "Do not search alternate deadlines, latency thresholds or overflow definitions.",
+    "Do not infer that a recoverable proxy would actually fill or profit.",
+    "Do not reopen passive-refusal-depth-observation-v1 or any depth field.",
+    "Do not alter, query or restart Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "aggregate_the_frozen_release_window_once_then_apply_the_fixed_gate"
+}
