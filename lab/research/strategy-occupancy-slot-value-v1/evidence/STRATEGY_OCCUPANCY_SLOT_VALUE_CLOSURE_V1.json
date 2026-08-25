@@ -1,0 +1,57 @@
+{
+  "schema": "zeta-next-strategy-occupancy-slot-value-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FREE",
+  "unit": "strategy-occupancy-slot-value-037",
+  "family": "strategy-occupancy-slot-value-v1",
+  "evidence": {
+    "declaration_sha256": "6591A277F11FC509BFB09AF21EF3BE1D7955FC6A44EFF8C81ED366AA6A9810AC",
+    "result_sha256": "339B0078693C92928DC9B354B15E5FF45BCEF62D73071DB6108D26A67B685076"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "post_declaration_failed_invocations": 0,
+    "alternate_metrics_or_rescues": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "orders": 0,
+    "positions": 0
+  },
+  "integrity_boundary": {
+    "input_files": 6,
+    "data_rows": 16477,
+    "lifecycles": 2233,
+    "pooled_stressed_net_usd": 407.0477,
+    "input_duplicate_lifecycle_risk_duration_close_or_pending_faults": 0,
+    "every_strategy_period_has_at_least_20_lifecycles": true
+  },
+  "information_boundary": {
+    "slot_value_spearman_by_transition": [-0.257142857143, -0.257142857143, 0.142857142857],
+    "slot_rho_at_least_0_60_transitions": 0,
+    "all_slot_rho_positive": false,
+    "top_two_capture": "4_OF_6_PASSED",
+    "predicted_top_two_positive_current": "6_OF_6_PASSED",
+    "incremental_delta_vs_mean_r": [-0.114285714286, -0.228571428571, 0.228571428571],
+    "incremental_delta_at_least_0_10_transitions": 1,
+    "median_incremental_delta": -0.114285714286,
+    "rank_stability_passed": false,
+    "incremental_occupancy_information_passed": false
+  },
+  "verdict": "NO_STRATEGY_OCCUPANCY_SLOT_VALUE_INFORMATION_PASSED",
+  "economic_interpretation": "The top-two descriptive hit rate was not enough: prior-period R per occupied hour reversed the full six-strategy order in the first two transitions and added less information than prior mean R at the median.",
+  "closed_rescues": [
+    "using top-two positivity or four-of-six top-three capture to override the failed rank gates",
+    "median or per-lifecycle R per hour",
+    "clipping, trimming or outlier removal",
+    "market-open hours or fixed maximum hold instead of occupied wall-clock hours",
+    "cumulative, rolling or exponentially decayed history",
+    "blending slot value with mean R, win rate or another score",
+    "strategy subset, period omission or alternate rank threshold",
+    "slot-value reservation, conflict priority, EA or Live candidate"
+  ],
+  "retained_priority_proxy_question": null,
+  "forward_baseline_changed": false,
+  "broker_or_account_query": false,
+  "live_surface": "UNTOUCHED",
+  "next": "after_commit_and_push_choose_one_fresh_non_nearby_serial_frontier_question"
+}

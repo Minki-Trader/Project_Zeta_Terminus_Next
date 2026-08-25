@@ -737,3 +737,11 @@
 - Froze occupied time as admitted-birth-to-close server wall-clock hours and strategy-period slot value as aggregate raw stressed R divided by aggregate occupied hours. P1 predicts P2, P2 predicts P3 and P3 predicts P4; current/future periods, cumulative history, clipping, market-hours transforms and alternate durations are excluded.
 - A later whole-portfolio priority Proxy survives only if slot-value ranks are positive in all transitions, at least two Spearman correlations reach `0.60`, top-value capture passes and slot value adds at least `0.10` rank information over prior mean R in two transitions and at the median.
 - Declaration SHA-256 is `6591A277F11FC509BFB09AF21EF3BE1D7955FC6A44EFF8C81ED366AA6A9810AC`. The sole economic aggregation remains unopened; no MQL, Tester or Live surface was opened.
+
+## STATE-0092 - 2026-08-26
+
+- Ran exactly the one frozen Unit 037 aggregation. All six file hashes remained exact; 16,477 data rows, 2,233 lifecycles, `$407.0477` stressed net and every strategy-period density reconstructed with zero duplicate, overlap, planned-risk, duration, close or Passive-pending fault.
+- Prior-period-to-current-period slot-value Spearman correlations were `-0.257142857`, `-0.257142857` and `+0.142857143`. None reached the fixed `0.60` minimum and the first two reversed sign, so full-rank stability failed directly.
+- Slot value minus the prior mean-R comparator correlations were `-0.114285714`, `-0.228571429` and `+0.228571429`. Only the latest transition reached `+0.10`; the median was `-0.114285714`, so occupied time added no broad incremental ranking information.
+- The prior top two were positive in all six next-period cases and four landed in the next top three, but those descriptive gates cannot override failed rank stability and incremental information. No top-two-only, duration transform, blended score, period exception or threshold rescue opened.
+- Closed `NO_STRATEGY_OCCUPANCY_SLOT_VALUE_INFORMATION_PASSED`; no priority Proxy, EA or Live candidate survives. Result/closure SHA-256 values are `339B0078693C92928DC9B354B15E5FF45BCEF62D73071DB6108D26A67B685076` / `A6AB0C71AB774FC22EEB667ABBA17A73B80C2F2D2E4AACAA6485BC0DC42ECAD7`. No MQL, Tester or Live surface was opened.
