@@ -7,4 +7,4 @@ Unit `020` is a bounded Lab audit of every completed actual Live economic positi
 - It may retain at most one adjacent historical observation question; it cannot select a management rule or authorize Live.
 - The only new runtime path allowed in this unit is one trade-free isolated Tester replay used to recover the final Pressure position's tick-path MFE/MAE.
 
-Status: `OPEN_DECLARATION_FROZEN_OUTCOMES_UNOPENED`.
+Status: `OPEN_MEASUREMENT_SOURCE_FROZEN_OUTCOMES_UNOPENED`.

@@ -1,0 +1,66 @@
+{
+  "schema": "zeta-next-actual-live-position-economics-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "MEASUREMENT_SOURCE_FROZEN_BEFORE_T15_OUTCOME",
+  "unit": "actual-live-position-economics-020",
+  "declaration": {
+    "path": "lab/research/actual-live-position-economics-v1/evidence/ACTUAL_LIVE_POSITION_ECONOMICS_DECLARATION_V1.json",
+    "outcomes_consumed_at_declaration": false,
+    "commit": "1ff024e"
+  },
+  "source": {
+    "path": "lab/research/actual-live-position-economics-v1/mt5/src/Experts/ZetaActualLiveT15PathProbeV1.mq5",
+    "bytes": 7132,
+    "sha256": "E88473F852C37C6874ED428E1B13553684E514E20E797F3E70EB3CF031EE69DC",
+    "tester_only": true,
+    "trade_free": true,
+    "purpose": "Copy the exact US30 ticks for T15 and calculate executable-side MFE, MAE, crossing times and symbol-contract fields."
+  },
+  "binary": {
+    "path": "lab/research/actual-live-position-economics-v1/mt5/src/Experts/ZetaActualLiveT15PathProbeV1.ex5",
+    "bytes": 13382,
+    "sha256": "55F5F9DA25F716B8EBC06704E8E0B25BC10DE298304D4875785C3781CAD3D2F3",
+    "runtime_copy_equal": true
+  },
+  "configuration": {
+    "path": "lab/research/actual-live-position-economics-v1/mt5/config/tester/tester-actual-live-t15-path-v1.ini",
+    "bytes": 486,
+    "sha256": "A15EE76149458CFB3ECF943DC3DEBBC905BA71A5B9355C3513F622C2E929B5ED",
+    "window": "2026-08-25 through 2026-08-26",
+    "symbol_period": "US30 M1",
+    "model": "Every tick based on real ticks",
+    "live_trading": false,
+    "shutdown_terminal": true
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "errors": 0,
+    "warnings": 0,
+    "log_path": "lab/artifacts/logs/actual-live-position-economics-v1-t15-compile.log",
+    "log_bytes": 3380,
+    "log_sha256": "E7C72B73C1CDA6273A9D423CEACF7A31CBA34360DB197D87DD21A6202BB2825D"
+  },
+  "isolated_runtime": {
+    "path": "lab/runtime/actual-live-position-economics-v1-portable/",
+    "git_ignored": true,
+    "copied_from": "lab/runtime/protective-exit-order-reconciliation-v1-portable/",
+    "copied_scope": "terminal binaries, configuration, FPMarkets symbol database, US30 live history/ticks and US30 Tester history/ticks only",
+    "cross_family_source_dependency": false,
+    "live_runtime_dependency": false
+  },
+  "symbol_database_before_run": {
+    "selected_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+      "bytes": 18210,
+      "sha256": "34AC175155A5D285AA612D831A422755B31C6F048DF01CF4EEE17DE7CF21F6A0"
+    },
+    "symbols_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "bytes": 413696,
+      "sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE"
+    }
+  },
+  "allowed_next_action": "Run the one frozen T15 path exactly once, verify unchanged symbol fingerprints and the declaration integrity gate, then aggregate T03-T15 once.",
+  "outcomes_consumed": false,
+  "live_surface": "UNTOUCHED"
+}

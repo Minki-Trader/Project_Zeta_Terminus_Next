@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0045`
+- Latest state ID: `STATE-0046`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -246,6 +246,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 - Fixed comparison: individual profit memory, cohort peak memory and same-symbol directional unlock, with a separate late-maturity-winner preservation guard. Unit 020 cannot select a management rule or threshold.
 - Exactly one isolated trade-free Tester replay may recover T15 MFE/MAE; at most one adjacent broad historical observation question may survive the fixed gate.
 - Declaration: `lab/research/actual-live-position-economics-v1/evidence/ACTUAL_LIVE_POSITION_ECONOMICS_DECLARATION_V1.json`; outcomes remain unopened and Live remains untouched.
+- The T15-only measurement EA is source-frozen and compiled on build 6140 at `0 errors / 0 warnings`; its dedicated Git-ignored Portable contains only independent Lab binaries/configuration plus copied US30 history/ticks. The one permitted path has not run.
 
 ## Required completion evidence
 

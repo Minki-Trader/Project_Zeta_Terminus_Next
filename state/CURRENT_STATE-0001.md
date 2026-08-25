@@ -368,3 +368,10 @@
 - Before outcome aggregation, froze three path burdens: individual profit memory, cohort peak memory and same-symbol directional unlock. A separate late-maturity-winner guard prevents an adjacent question from assuming that early profit should simply be closed.
 - Unit 020 may run exactly one isolated trade-free real-tick replay to recover T15 MFE/MAE, and may retain at most one broad historical observation question. It cannot select a management threshold, EA behavior or Live change. The actual-position bundle ends naturally before Unit 030 if no adjacent value remains, then the ordinary Frontier transition resumes.
 - The forward-baseline sentence in `docs/OPERATING_DIRECTION.md` was aligned with the already-authorized and already-recorded CXR2 successor; no source, package, setting, runtime or Live process changed.
+
+## STATE-0046 - 2026-08-26
+
+- Implemented only the predeclared T15 measurement surface inside `lab/research/actual-live-position-economics-v1/`. The single EA hard-fails outside Tester, contains no order, position or trade-operation call, and only uses `CopyTicksRange` plus `OrderCalcProfit` to write one T15 path row.
+- MetaEditor build 6140 compiled at `0 errors / 0 warnings`. Source SHA-256 is `E88473F852C37C6874ED428E1B13553684E514E20E797F3E70EB3CF031EE69DC`; EX5 SHA-256 is `55F5F9DA25F716B8EBC06704E8E0B25BC10DE298304D4875785C3781CAD3D2F3`.
+- Created the dedicated Git-ignored `lab/runtime/actual-live-position-economics-v1-portable/` with independent terminal/configuration and copied US30 market/Tester cache only. It contains no Live path or cross-family source/include link.
+- The pre-run symbols database hashes are frozen in `ACTUAL_LIVE_POSITION_ECONOMICS_COMPILE_RECEIPT_V1.json`. No T15 replay or economic aggregation has run, and exact Live CXR2 PID `13328` and dashboard PID `4284` remain untouched.
