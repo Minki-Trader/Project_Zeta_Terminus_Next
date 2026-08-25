@@ -1,0 +1,179 @@
+{
+  "schema_version": "UCR1",
+  "unit": "us30-context-rotation-012",
+  "family": "us30-context-rotation-v1",
+  "status": "CLOSED",
+  "verdict": "INSUFFICIENT_CONTEXT_DENSITY",
+  "declaration": {
+    "path": "lab/research/us30-context-rotation-v1/evidence/US30_CONTEXT_ROTATION_DECLARATION_V1.json",
+    "sha256": "A3E25181D3898C840D9282D6AF8AB5EB1B664AC001388A5155B7084974E0591E"
+  },
+  "source_event_manifest": {
+    "path": "lab/research/strategy-frontier-coverage-v1/evidence/STRATEGY_FRONTIER_COVERAGE_RESULT_V1.json",
+    "sha256": "2D84A35247B51C5B9329D4DA4BBE19EBB40772D1C715E0AAAE9BFFE4B169E8C2"
+  },
+  "evidence_classification": "ALREADY_CONSUMED_EXPLORATORY_NEXT_EVIDENCE_ONLY_NOT_CONFIRMATION_OR_PROMOTION_EVIDENCE",
+  "integrity": {
+    "duplicate_rows_removed": 0,
+    "unmatched_pressure_closes": 0,
+    "unmatched_pressure_starts": 0,
+    "missing_pressure_signal_at_open": 0,
+    "missing_or_nonpositive_planned_risk": 0,
+    "negative_pressure_durations": 0,
+    "rc4_close_without_active": 0,
+    "rc4_active_direction_ambiguity": 0,
+    "direction_context_conflicts": 0
+  },
+  "pressure_samples": 118,
+  "state_summaries": [
+    {
+      "slice": "DISCOVERY_P1_P2",
+      "state": "NONE",
+      "samples": 55,
+      "mean_stressed_R": -0.012474837,
+      "stressed_net": -1.066,
+      "occupied_hours": 205.391667,
+      "active_context_samples": 0,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "DISCOVERY_P1_P2",
+      "state": "ALIGNED",
+      "samples": 2,
+      "mean_stressed_R": 0.312631981,
+      "stressed_net": 2.988,
+      "occupied_hours": 8.0,
+      "active_context_samples": 2,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "DISCOVERY_P1_P2",
+      "state": "OPPOSED",
+      "samples": 1,
+      "mean_stressed_R": 0.840286898,
+      "stressed_net": 4.159,
+      "occupied_hours": 4.0,
+      "active_context_samples": 1,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "P3_2025",
+      "state": "NONE",
+      "samples": 23,
+      "mean_stressed_R": -0.04876587,
+      "stressed_net": -5.459,
+      "occupied_hours": 78.171111,
+      "active_context_samples": 0,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "P3_2025",
+      "state": "ALIGNED",
+      "samples": 6,
+      "mean_stressed_R": -0.169796389,
+      "stressed_net": -4.633,
+      "occupied_hours": 20.165278,
+      "active_context_samples": 6,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "P3_2025",
+      "state": "OPPOSED",
+      "samples": 3,
+      "mean_stressed_R": 0.544024075,
+      "stressed_net": 10.137,
+      "occupied_hours": 11.141667,
+      "active_context_samples": 2,
+      "signal_only_context_samples": 1
+    },
+    {
+      "slice": "P4_2026_YTD_THROUGH_2026_08_21",
+      "state": "NONE",
+      "samples": 23,
+      "mean_stressed_R": 0.178173609,
+      "stressed_net": 27.107,
+      "occupied_hours": 88.431667,
+      "active_context_samples": 0,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "P4_2026_YTD_THROUGH_2026_08_21",
+      "state": "ALIGNED",
+      "samples": 3,
+      "mean_stressed_R": 0.110135403,
+      "stressed_net": -0.208,
+      "occupied_hours": 10.988333,
+      "active_context_samples": 3,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "P4_2026_YTD_THROUGH_2026_08_21",
+      "state": "OPPOSED",
+      "samples": 2,
+      "mean_stressed_R": 0.096215213,
+      "stressed_net": 1.145,
+      "occupied_hours": 8.0,
+      "active_context_samples": 1,
+      "signal_only_context_samples": 1
+    },
+    {
+      "slice": "POOLED",
+      "state": "NONE",
+      "samples": 101,
+      "mean_stressed_R": 0.022675861,
+      "stressed_net": 20.582,
+      "occupied_hours": 371.994444,
+      "active_context_samples": 0,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "POOLED",
+      "state": "ALIGNED",
+      "samples": 11,
+      "mean_stressed_R": -0.005737106,
+      "stressed_net": -1.853,
+      "occupied_hours": 39.153611,
+      "active_context_samples": 11,
+      "signal_only_context_samples": 0
+    },
+    {
+      "slice": "POOLED",
+      "state": "OPPOSED",
+      "samples": 6,
+      "mean_stressed_R": 0.444131591,
+      "stressed_net": 15.441,
+      "occupied_hours": 23.141667,
+      "active_context_samples": 4,
+      "signal_only_context_samples": 2
+    }
+  ],
+  "effects": {
+    "discovery_aligned_minus_opposed_mean_stressed_R": -0.527654917,
+    "p3_aligned_minus_opposed_mean_stressed_R": -0.713820464,
+    "p4_aligned_minus_opposed_mean_stressed_R": 0.01392019,
+    "pooled_aligned_minus_opposed_mean_stressed_R": -0.449868697,
+    "discovery_better_state": "OPPOSED"
+  },
+  "gates": {
+    "sample_gate": false,
+    "effect_gate": true,
+    "polarity_gate": false,
+    "selected_state_positive_later_slices": true
+  },
+  "judgment": [
+    "Only 17 of 118 admitted Pressure lifecycles had any causally available RC4 context.",
+    "Discovery contained only two aligned and one opposed sample, far below the frozen ten-per-state minimum.",
+    "P4 contained three aligned and two opposed samples, so it also missed the fixed three-per-state minimum.",
+    "The opposed state appeared stronger in discovery, P3, and pooled results, but P4 reversed the effect by 0.01392019R and the sparse cells cannot support a mechanism.",
+    "The apparent effect is retained only as a descriptive rare-coincidence observation; it does not justify MQL measurement, maturity variants, candidate selection, or Live work."
+  ],
+  "next_seed": {
+    "name": "clean_frontier_mechanism_consolidation",
+    "question": "Can the already retained Next receiver-time-field primary and transition-reserve candidate be independently reconstructed on the clean CP2 forward baseline and tested for broad temporal value without importing historical mixed-workspace source?",
+    "status": "NOT_OPENED_BY_THIS_UNIT"
+  },
+  "live_surface": "UNTOUCHED",
+  "mql_change": false,
+  "tester_run": false,
+  "promotion": "NONE"
+}

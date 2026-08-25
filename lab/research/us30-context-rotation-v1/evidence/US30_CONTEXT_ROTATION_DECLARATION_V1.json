@@ -1,0 +1,74 @@
+{
+  "schema_version": "UCR1",
+  "unit": "us30-context-rotation-012",
+  "family": "us30-context-rotation-v1",
+  "status": "OPENED_BEFORE_CONTEXT_OUTCOME_AGGREGATION",
+  "question": "Does causally available RC4 context at the 15:00 Pressure decision explain a stable aligned-versus-opposed Pressure outcome rotation strongly enough to justify a later heterogeneous, entry-preserving Pressure maturity experiment?",
+  "hypothesis": "The direction of an active RC4 lifecycle, or otherwise the latest same-server-day RC4 signal already known before 15:00, separates Pressure stressed-R outcomes into aligned and opposed states with the same polarity in discovery and both later temporal slices.",
+  "causal_boundary": {
+    "rc4_decision_window": "13:00 server time",
+    "pressure_decision_window": "15:00 server time",
+    "future_information": "PROHIBITED",
+    "context_priority": [
+      "active RC4 lifecycle at the Pressure SIGNAL_DECIDED timestamp",
+      "latest earlier same-server-day RC4 SIGNAL_DECIDED row",
+      "NO_RC4_CONTEXT"
+    ],
+    "state": "ALIGNED when RC4 and Pressure directions are equal, OPPOSED when signs differ, otherwise NONE",
+    "active_vs_signal_only": "descriptive secondary split only; it cannot select a hypothesis in V1"
+  },
+  "data": {
+    "classification": "ALREADY_CONSUMED_EXPLORATORY_NEXT_EVIDENCE_ONLY",
+    "control_event_roots": [
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p1-2022h2-2023-control/",
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p2-2024-control/",
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p3-2025-control/",
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p4-2026-ytd-control/"
+    ],
+    "roles": {
+      "discovery": [
+        "P1_2022H2_2023",
+        "P2_2024"
+      ],
+      "later_slice_1": "P3_2025",
+      "later_slice_2": "P4_2026_YTD_THROUGH_2026_08_21"
+    },
+    "holdout": false,
+    "promotion_evidence": false
+  },
+  "reconstruction_contract": {
+    "rows": "exact-row-deduplicated events-*.csv ordered by server_time then state_sequence",
+    "rc4_signal": "RC4 SIGNAL_DECIDED value_b direction at or before the Pressure decision",
+    "rc4_active_interval": "RC4 OPEN through paired CLOSE or EXTERNAL_CLOSE, end-exclusive at the same timestamp",
+    "pressure_sample": "Pressure SIGNAL_DECIDED followed by an admitted Pressure OPEN at the same timestamp",
+    "pressure_outcome": "paired Pressure CLOSE or EXTERNAL_CLOSE value_b divided by planned_risk parsed from the admitted OPEN detail",
+    "pairing": "FIFO within component_id",
+    "integrity_gate": "no unmatched Pressure lifecycle, no missing or nonpositive planned_risk, no negative occupied duration, and no ambiguous active RC4 direction"
+  },
+  "metrics": [
+    "Pressure sample count by NONE, ALIGNED and OPPOSED",
+    "mean and total stressed_R by state and temporal role",
+    "stressed dollars and occupied hours by state",
+    "active versus signal-only context count",
+    "direction-context conflicts"
+  ],
+  "fixed_gate": {
+    "discovery_minimum_samples_each_of_aligned_and_opposed": 10,
+    "later_slice_minimum_samples_each_of_aligned_and_opposed": 3,
+    "discovery_absolute_mean_stressed_R_difference": 0.25,
+    "pooled_absolute_mean_stressed_R_difference": 0.15,
+    "polarity_rule": "The better discovery state must retain a nonnegative mean stressed_R advantage in P3 and P4 separately.",
+    "selected_state_rule": "The discovery-better state must have positive mean stressed_R in P3 and P4 separately.",
+    "no_threshold_grid": true
+  },
+  "verdicts": {
+    "stable_context_rotation": "Every sample, effect-size, polarity and selected-state gate passes.",
+    "insufficient_context_density": "Any fixed minimum sample gate fails.",
+    "context_rotation_rejected": "Samples are sufficient but any effect-size, polarity or selected-state gate fails.",
+    "invalid": "The reconstruction integrity gate fails."
+  },
+  "next_boundary": "Close this source-free Proxy with one machine result. Only STABLE_CONTEXT_ROTATION may seed a later sibling family that measures a few entry-preserving Pressure maturity mechanisms in isolated Lab MQL and real ticks.",
+  "live_surface": "UNTOUCHED",
+  "mql_change": false,
+  "tester_run": false
+}

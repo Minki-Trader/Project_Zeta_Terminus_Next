@@ -264,3 +264,11 @@
 - RC16 pooled 272 lifecycles, `+$114.438` stressed net and `+$0.102661142` per occupied hour; RC4 pooled 206, `+$79.068` and `+$0.066366053`; Pressure pooled 118, `+$34.170` and `+$0.078680195`. Each was positive in all four periods.
 - Closed `NO_UNDEREXAMINED_STRUCTURAL_SLOT_VALUE_TARGET`: none met the frozen two-negative-period plus nonpositive-pooled gate. RC4's 2026 YTD compression and Pressure's contemporaneous expansion remain only a pairwise US30 regime-rotation seed, not a single-strategy failure, mechanism, candidate or promotion verdict.
 - Declaration and result SHA-256 values are `C97B6E6BB6634914034AEAC7D1FCF385B3AEA2848F6466406BED05466A7AEF56` and `2D84A35247B51C5B9329D4DA4BBE19EBB40772D1C715E0AAAE9BFFE4B169E8C2`. Exact CXR1 Live PID `21548`, source, package, SET, state and order behavior remained untouched; no successor is open at this durable boundary.
+
+## STATE-0033 - 2026-08-25
+
+- Opened and closed the source-free `us30-context-rotation-v1` Proxy around the only retained pairwise seed from STATE-0032. It used the same already-consumed immutable Next control events, no future information, no MQL, no Tester run and no Live surface.
+- At each admitted 15:00 Pressure decision, context priority was an active RC4 lifecycle, otherwise an earlier same-server-day 13:00 RC4 signal, otherwise none. All 118 Pressure lifecycles reconstructed with zero unmatched lifecycle, planned-risk, duration, RC4-direction or context-conflict fault.
+- Only 17 Pressure lifecycles had RC4 context. Discovery P1+P2 had aligned/opposed counts `2/1`; P3 had `6/3`; P4 had `3/2`. The fixed density gate required discovery `10/10` and each later slice `3/3`, so it failed before mechanism selection.
+- Opposed context had the larger discovery, P3 and pooled mean stressed-R, but P4's aligned-minus-opposed effect reversed slightly to `+0.01392019R`. Closed `INSUFFICIENT_CONTEXT_DENSITY`; no Pressure maturity measurement, EA, threshold rescue, candidate or promotion path opened.
+- Declaration and result SHA-256 values are `A3E25181D3898C840D9282D6AF8AB5EB1B664AC001388A5155B7084974E0591E` and `7E16BE35B0C8E989353D3AC9627729E2DB84AC56F9C76CD416C4EBAE0DBE6609`. Exact CXR1 Live PID `21548`, source, package, SET, state and order behavior remained untouched; no successor is open at this durable boundary.

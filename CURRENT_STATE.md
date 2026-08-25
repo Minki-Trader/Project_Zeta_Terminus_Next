@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0032`
+- Latest state ID: `STATE-0033`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: none; `strategy-frontier-coverage-v1` is closed as `NO_UNDEREXAMINED_STRUCTURAL_SLOT_VALUE_TARGET`, its pairwise US30 rotation question is only a retained seed, and no successor is open at this durable boundary
+- Active research boundary: none; `us30-context-rotation-v1` is closed as `INSUFFICIENT_CONTEXT_DENSITY`, its sparse opposed-RC4 observation opens no Pressure mechanism, and no successor is open at this durable boundary
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -173,6 +173,14 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 - RC4 compressed to `+$0.007771557` per occupied hour in 2026 YTD while Pressure expanded to `+$0.261068702`; this remains only a pairwise US30 regime-rotation seed and is not a weakness, candidate or promotion verdict
 - Declaration SHA-256 is `C97B6E6BB6634914034AEAC7D1FCF385B3AEA2848F6466406BED05466A7AEF56`; result SHA-256 is `2D84A35247B51C5B9329D4DA4BBE19EBB40772D1C715E0AAAE9BFFE4B169E8C2`; exact Live CXR1 source, package, settings, state and process remained untouched
 
+## Completed US30 context-rotation Proxy
+
+- Closed one source-free causal-context Proxy at `lab/research/us30-context-rotation-v1/` using the same immutable four control event paths; it made no MQL change and ran no Tester path
+- Reconstructed all 118 admitted Pressure lifecycles with zero lifecycle, planned-risk, duration or RC4-direction integrity fault. Only 17 had an active or earlier same-day RC4 context: 11 aligned and 6 opposed
+- Discovery P1+P2 contained only aligned/opposed `2/1` samples and P4 contained `3/2`, below the frozen `10/10` and `3/3` minima. The sample gate failed before any mechanism could be selected
+- Opposed context showed higher mean stressed-R in discovery, P3 and pooled data, but P4 reversed the aligned-minus-opposed effect to `+0.01392019R`; the sparse observation is descriptive only and opens no Pressure maturity candidate
+- Declaration SHA-256 is `A3E25181D3898C840D9282D6AF8AB5EB1B664AC001388A5155B7084974E0591E`; result SHA-256 is `7E16BE35B0C8E989353D3AC9627729E2DB84AC56F9C76CD416C4EBAE0DBE6609`; Live remained untouched
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -184,4 +192,4 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY`
