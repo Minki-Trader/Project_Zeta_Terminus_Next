@@ -633,3 +633,11 @@
 - Created the Git-ignored minimal `lab/runtime/us100-realized-variance-asymmetry-response-v1-portable/`. It owns one family EX5 and four SET files, no other-family EX5 or Zeta Include, and physically copied only the 31 in-scope monthly tick files per cache while excluding invalid 2022-2023.
 - Both 31-file 2024-01 through 2026-07 `Bases` and `Tester/bases` manifests match their physical-copy origin at `67A2A715...` / `57A97308...`. Compile receipt SHA-256 is `5F84825EBF7F4BFEFA4307F17F7BAF8B4FCB593E9ED6E85F7B51DCB87E82599E`.
 - Exactly four serial P1-P4 trade-free paths may now run under the stricter detailed-log gate. No outcome has been read, and no Live process, broker state or Live surface was queried or changed.
+
+## STATE-0079 - 2026-08-26
+
+- The first Unit 032 P1 launch exited before observer initialization. Terminal and agent logs show EX5 program-read/open error `[3]`; no `OnInit`, summary, opportunity file or economic report was created, so no outcome opened.
+- Root cause was the Windows Tester-agent effective path: the frozen EX5 path was 234 characters at terminal level and 262 after the agent prefix. Source, configuration, binary and market data all retained their frozen hashes.
+- Preserved the failed terminal/tester/agent logs and non-economic HTML shell under `lab/artifacts/backtests/us100-realized-variance-asymmetry-response-v1/p1-runtime-load-failed/`.
+- Physically moved the same dedicated directory, without link or copy, to `lab/runtime/rva32-portable/`; terminal/agent EX5 paths are now 194/222 characters. In-scope 31-file raw-tick manifests remain exact and the market-data rebuild allowance is unused.
+- Runtime-correction receipt SHA-256 is `967240AE839A2DACB670BEEF7A4C78FC158A80B490270177B132C1CE6668158A`. After this durable boundary, only one identical frozen P1 retry is allowed before the original four-path sequence continues. No Live surface was changed.

@@ -1,0 +1,65 @@
+{
+  "schema": "zeta-next-us100-realized-variance-asymmetry-response-runtime-correction-v1",
+  "created_at_local": "2026-08-26",
+  "status": "RUNTIME_PATH_CORRECTED_BEFORE_OUTCOME",
+  "unit": "us100-realized-variance-asymmetry-response-032",
+  "family": "us100-realized-variance-asymmetry-response-v1",
+  "frozen_parent": {
+    "declaration_sha256": "B83BBF7CA1D0663670841FC4D322C000F46B38D503CA7AFA6F48D272E9F20066",
+    "compile_receipt_sha256": "5F84825EBF7F4BFEFA4307F17F7BAF8B4FCB593E9ED6E85F7B51DCB87E82599E",
+    "source_commit": "4d2496d",
+    "source_manifest_sha256": "22AA8E33DA1FACC909571B0AAC3FE73AB83C036B69A64EA37FCA5C14D9697F41",
+    "configuration_manifest_sha256": "EB57E7C0CAD2BA031800E35A6F8796AF5A064B1DBE7413035CA3F7E0D37C6062",
+    "binary_sha256": "07D4A7D4E2564AD0C3351E8741AFC398F84BFFCB230CA93DF65F2A2E30667D09"
+  },
+  "failed_pre_outcome_attempt": {
+    "requested_path": "P1_2024_H1",
+    "original_runtime_root": "lab/runtime/us100-realized-variance-asymmetry-response-v1-portable/",
+    "terminal_exit_code": 0,
+    "tester_error": "program file read error; cannot load expert",
+    "terminal_error": "expert directory open error [3]",
+    "observer_initialized": false,
+    "summary_created": false,
+    "opportunities_created": false,
+    "economic_report_created": false,
+    "economic_rows_read": 0,
+    "outcome_opened": false,
+    "artifact_root": "lab/artifacts/backtests/us100-realized-variance-asymmetry-response-v1/p1-runtime-load-failed/",
+    "agent_log_sha256": "9D896EDDBD9B4C7E62D868DC400EDCFD3EF8645E41A1F4356152EA82CB74B9B8",
+    "tester_log_sha256": "4187318971BF1B362601AAB6DEBF362E891BED8D37B70A1689AA91297145B55F",
+    "terminal_log_sha256": "7A648446994D8F1A903186E05A8C59DD1E1977A1BEAE7051BCC04200B8F575AE",
+    "non_economic_html_shell_sha256": "947C1DFA1F07B9B7474597792A8B9A142E77F0E0CA1C97427E574F19F12BB137"
+  },
+  "diagnosis": {
+    "cause": "WINDOWS_TESTER_AGENT_EFFECTIVE_PATH_EXCEEDED_LEGACY_PATH_LIMIT",
+    "terminal_ex5_path_characters": 234,
+    "agent_ex5_path_characters": 262,
+    "source_error": false,
+    "configuration_semantic_error": false,
+    "binary_hash_error": false,
+    "market_data_error": false
+  },
+  "correction": {
+    "new_runtime_root": "lab/runtime/rva32-portable/",
+    "physical_same_volume_directory_move": true,
+    "terminal_ex5_path_characters": 194,
+    "agent_ex5_path_characters": 222,
+    "symbolic_or_junction_link": false,
+    "source_change": false,
+    "configuration_change": false,
+    "binary_change": false,
+    "observer_contract_change": false,
+    "path_matrix_change": false,
+    "market_data_rebuild_allowance_used": false
+  },
+  "post_correction_invariants": {
+    "source_manifest_sha256": "22AA8E33DA1FACC909571B0AAC3FE73AB83C036B69A64EA37FCA5C14D9697F41",
+    "configuration_manifest_sha256": "EB57E7C0CAD2BA031800E35A6F8796AF5A064B1DBE7413035CA3F7E0D37C6062",
+    "runtime_binary_sha256": "07D4A7D4E2564AD0C3351E8741AFC398F84BFFCB230CA93DF65F2A2E30667D09",
+    "bases_202401_202607_sha256": "67A2A7156980C6C4F58A473205453BDD541166A593828D6E4C262590CA1BEB0B",
+    "tester_bases_202401_202607_sha256": "57A97308F3D8F77B771F71260C90E67E8929CB7A90AC3382BAE50A39D9BB0E71",
+    "filesystem_symbolic_or_junction_links": 0
+  },
+  "authorized_next": "After this correction is committed and pushed, rerun the identical frozen P1 once from lab/runtime/rva32-portable and apply the original integrity gate before reading any economics.",
+  "live_surface": "UNTOUCHED"
+}
