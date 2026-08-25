@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0031`
+- Latest state ID: `STATE-0032`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: none; `tester-replay-financing-drift-v1` is closed as `CLOSE_CAUSE_BOUNDED_TO_TESTER_FINANCING_SPEC_DRIFT`, `portfolio-exit-coordination-v1` remains closed with no mechanism, and no successor or rescue path is open
+- Active research boundary: none; `strategy-frontier-coverage-v1` is closed as `NO_UNDEREXAMINED_STRUCTURAL_SLOT_VALUE_TARGET`, its pairwise US30 rotation question is only a retained seed, and no successor is open at this durable boundary
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -165,6 +165,14 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 - Root cause is bounded with high confidence to Tester symbol-specification financing drift. Exact old rate fields cannot be recovered, so absolute historical profit is point-in-time contract evidence; same-fingerprint adjacent control/candidate judgments remain valid
 - Future Tester matrices must pin before/after symbol database and required-symbol contract/swap fingerprints and rerun the whole matrix on any mismatch. Evidence: `lab/research/tester-replay-financing-drift-v1/evidence/TESTER_REPLAY_FINANCING_DRIFT_V1.json`, SHA-256 `DDD639FB41C8F21EE95051B83089D74C6B01FB8DDA1F5563EC33A66F80481555`
 
+## Completed strategy frontier coverage diagnostic
+
+- Closed one source-free Lab family at `lab/research/strategy-frontier-coverage-v1/` using only the four already-consumed immutable `portfolio-exit-coordination-v1` control event paths; it created no MQL, EA, Adapter, Tester run, new outcome data or Live authority
+- Reconstructed all six strategies with zero duplicate rows, unmatched starts/closes or negative durations. RC16 produced 272 lifecycles, `+$114.438` stressed net and `+$0.102661142` per occupied hour; RC4 produced 206, `+$79.068` and `+$0.066366053`; Pressure produced 118, `+$34.170` and `+$0.078680195`
+- RC16, RC4 and Pressure were each positive by stressed net per occupied hour in all four periods, so none passed the frozen two-negative-period plus nonpositive-pooled selection gate. No underexamined single-strategy restructuring target was selected
+- RC4 compressed to `+$0.007771557` per occupied hour in 2026 YTD while Pressure expanded to `+$0.261068702`; this remains only a pairwise US30 regime-rotation seed and is not a weakness, candidate or promotion verdict
+- Declaration SHA-256 is `C97B6E6BB6634914034AEAC7D1FCF385B3AEA2848F6466406BED05466A7AEF56`; result SHA-256 is `2D84A35247B51C5B9329D4DA4BBE19EBB40772D1C715E0AAAE9BFFE4B169E8C2`; exact Live CXR1 source, package, settings, state and process remained untouched
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -176,4 +184,4 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET`

@@ -21,6 +21,7 @@
 - `research/live-dev-performance-forensics/`: 닫힌 V1-V7 실운영 성과·동시보유·중단 포렌식 family; 소스 없음
 - `research/portfolio-exit-coordination-v1/`: 닫힌 동시수익 보존·청산조정 family; 16개 실틱 경로에서 후보 없음, 동결 V7 청산 유지
 - `research/tester-replay-financing-drift-v1/`: 닫힌 테스터 재생·금융비용 포렌식 family; 스왑 심볼명세 드리프트를 원인 경계로 확정, 소스·추가 실행 없음
+- `research/strategy-frontier-coverage-v1/`: 닫힌 전략 프론티어 커버리지 진단 family; RC16·RC4·Pressure 모두 네 기간 양의 점유시간당 stressed 손익으로 단일 약체 대상 없음, 소스·추가 실행 없음
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구

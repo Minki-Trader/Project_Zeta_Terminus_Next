@@ -1,0 +1,87 @@
+{
+  "schema_version": "SFC1",
+  "unit": "strategy-frontier-coverage-011",
+  "family": "strategy-frontier-coverage-v1",
+  "status": "OPENED_BEFORE_AGGREGATION",
+  "question": "Which underexamined Next strategy has the weakest causal stressed return per occupied hour across the four existing portfolio control periods, with enough breadth and sample to justify the next strategy-specific development unit without reducing any base entry?",
+  "hypothesis": "At least one of RC16, RC4, or Pressure has nonpositive slot value in multiple periods and a sufficiently large completed sample to be a higher-information next target than another Cross, Return, Passive, or shared-capital mechanism.",
+  "scope": {
+    "portfolio_context": [
+      "RC16",
+      "RC4",
+      "Cross",
+      "Pressure",
+      "Return",
+      "Passive"
+    ],
+    "selection_universe": [
+      "RC16",
+      "RC4",
+      "Pressure"
+    ],
+    "selection_universe_reason": "The existing Next Frontier ledger already retains direct Cross, Return, Passive, slot-price, and capital-transition mechanisms; RC16, RC4, and Pressure have no retained direct strategy-specific mechanism.",
+    "live_surface": "UNTOUCHED",
+    "mql_change": false,
+    "tester_run": false,
+    "new_outcome_data": false
+  },
+  "data": {
+    "classification": "ALREADY_CONSUMED_EXPLORATORY_NEXT_EVIDENCE_ONLY",
+    "family": "lab/research/portfolio-exit-coordination-v1/",
+    "control_event_roots": [
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p1-2022h2-2023-control/",
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p2-2024-control/",
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p3-2025-control/",
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/p4-2026-ytd-control/"
+    ],
+    "periods": [
+      "P1_2022H2_2023",
+      "P2_2024",
+      "P3_2025",
+      "P4_2026_YTD_THROUGH_2026_08_21"
+    ],
+    "holdout": false,
+    "promotion_evidence": false
+  },
+  "reconstruction_contract": {
+    "source_rows": "all events-*.csv files under each fixed control root, ordered by server_time then state_sequence",
+    "market_lifecycle_start": "OPEN",
+    "passive_lifecycle_start": "PASSIVE_FILL",
+    "lifecycle_end": [
+      "CLOSE",
+      "EXTERNAL_CLOSE"
+    ],
+    "pairing": "FIFO within component_id",
+    "stressed_net": "numeric value_b on the lifecycle-end row",
+    "occupied_hours": "server_time difference from paired lifecycle start to end",
+    "integrity_gate": "no duplicate event rows after exact-row deduplication, no negative duration, and no unmatched completed close; any violation makes the unit INVALID"
+  },
+  "metrics": [
+    "completed_lifecycles",
+    "stressed_net",
+    "positive_and_negative_lifecycles",
+    "occupied_hours",
+    "stressed_net_per_occupied_hour",
+    "positive_period_breadth",
+    "negative_period_breadth",
+    "risk_admission_skips_received"
+  ],
+  "eligibility": {
+    "minimum_completed_lifecycles_pooled": 20,
+    "minimum_periods_with_at_least_five_lifecycles": 3,
+    "minimum_negative_periods_by_stressed_net_per_hour": 2,
+    "pooled_stressed_net_per_hour_must_be_nonpositive": true
+  },
+  "selection_order": [
+    "largest negative-period breadth",
+    "lowest pooled stressed net per occupied hour",
+    "lowest pooled stressed net",
+    "largest occupied hours"
+  ],
+  "verdicts": {
+    "target_identified": "Exactly one eligible RC16, RC4, or Pressure strategy is selected by the frozen order.",
+    "no_target": "No underexamined strategy meets every eligibility gate.",
+    "invalid": "The reconstruction integrity gate fails."
+  },
+  "next_boundary": "Close this source-free diagnostic with one machine result. A selected strategy opens only a later sibling family for causal economic decomposition; this unit creates no mechanism and cannot claim Live suitability."
+}
