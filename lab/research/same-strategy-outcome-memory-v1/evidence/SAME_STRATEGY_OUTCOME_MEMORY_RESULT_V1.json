@@ -1,0 +1,206 @@
+{
+  "schema": "zeta-next-same-strategy-outcome-memory-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "same-strategy-outcome-memory-023",
+  "family": "same-strategy-outcome-memory-v1",
+  "declaration": {
+    "path": "lab/research/same-strategy-outcome-memory-v1/evidence/SAME_STRATEGY_OUTCOME_MEMORY_DECLARATION_V1.json",
+    "commit": "c79f8d7",
+    "sha256": "2349A370E99BC770D305726594C8F91CDED10EA5D2D0160C99BADA14CCC8F1BA"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_invocations": 0,
+    "alternate_state_threshold_transform_or_rescue": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "new_market_outcomes": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest_sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42",
+    "exact_duplicate_full_rows": 0,
+    "overlapping_same_strategy_lifecycles": 0,
+    "missing_or_nonpositive_planned_risk": 0,
+    "unmatched_closes": 0,
+    "unmatched_passive_fills": 0,
+    "unmatched_passive_expirations": 0,
+    "active_lifecycles_at_period_end": 0,
+    "pending_passive_orders_at_period_end": 0,
+    "causal_order_faults": 0,
+    "lifecycles": 2233,
+    "excluded_first_strategy_period_lifecycles": 24,
+    "causal_pairs": 2209,
+    "stressed_net_usd": 407.0477,
+    "stop_loss_exits": 206,
+    "strategy_lifecycles": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    }
+  },
+  "strategy_results": [
+    {
+      "strategy": "RC16",
+      "pairs": 268,
+      "prev_positive_n": 160,
+      "prev_nonpositive_n": 108,
+      "prev_positive_mean_current_r": 0.086613225,
+      "prev_nonpositive_mean_current_r": 0.042701911,
+      "nonpositive_minus_positive_r": -0.043911315,
+      "prev_positive_stop_rate": 0.093750000,
+      "prev_nonpositive_stop_rate": 0.074074074,
+      "nonpositive_minus_positive_stop_rate": -0.019675926,
+      "dense_periods": 4,
+      "r_same_sign_periods": 3,
+      "stop_same_sign_periods": 2,
+      "periods": [
+        {"period":"P1_2022H2_2023","positive_nonpositive_n":"47/29","r_effect":-0.102129951,"stop_effect":0.013206163},
+        {"period":"P2_2024","positive_nonpositive_n":"40/31","r_effect":0.085162348,"stop_effect":-0.103225806},
+        {"period":"P3_2025","positive_nonpositive_n":"43/35","r_effect":-0.088882698,"stop_effect":-0.007308970},
+        {"period":"P4_2026_YTD","positive_nonpositive_n":"30/13","r_effect":-0.035766170,"stop_effect":0.010256410}
+      ],
+      "gate": {"density":true,"r_magnitude":false,"r_breadth":true,"stop_magnitude":false,"stop_breadth":false,"coherence":false,"passed":false}
+    },
+    {
+      "strategy": "RC4",
+      "pairs": 202,
+      "prev_positive_n": 106,
+      "prev_nonpositive_n": 96,
+      "prev_positive_mean_current_r": 0.023749667,
+      "prev_nonpositive_mean_current_r": 0.108176707,
+      "nonpositive_minus_positive_r": 0.084427040,
+      "prev_positive_stop_rate": 0.264150943,
+      "prev_nonpositive_stop_rate": 0.250000000,
+      "nonpositive_minus_positive_stop_rate": -0.014150943,
+      "dense_periods": 4,
+      "r_same_sign_periods": 3,
+      "stop_same_sign_periods": 3,
+      "periods": [
+        {"period":"P1_2022H2_2023","positive_nonpositive_n":"31/21","r_effect":0.117172281,"stop_effect":-0.018433180},
+        {"period":"P2_2024","positive_nonpositive_n":"26/26","r_effect":0.140103615,"stop_effect":-0.076923077},
+        {"period":"P3_2025","positive_nonpositive_n":"35/32","r_effect":-0.087116295,"stop_effect":0.055357143},
+        {"period":"P4_2026_YTD","positive_nonpositive_n":"14/17","r_effect":0.352852271,"stop_effect":-0.134453782}
+      ],
+      "gate": {"density":true,"r_magnitude":false,"r_breadth":true,"stop_magnitude":false,"stop_breadth":true,"coherence":true,"passed":false}
+    },
+    {
+      "strategy": "Cross",
+      "pairs": 801,
+      "prev_positive_n": 423,
+      "prev_nonpositive_n": 378,
+      "prev_positive_mean_current_r": 0.017751852,
+      "prev_nonpositive_mean_current_r": 0.025001286,
+      "nonpositive_minus_positive_r": 0.007249435,
+      "prev_positive_stop_rate": 0.035460993,
+      "prev_nonpositive_stop_rate": 0.034391534,
+      "nonpositive_minus_positive_stop_rate": -0.001069459,
+      "dense_periods": 4,
+      "r_same_sign_periods": 3,
+      "stop_same_sign_periods": 2,
+      "periods": [
+        {"period":"P1_2022H2_2023","positive_nonpositive_n":"152/133","r_effect":-0.007106335,"stop_effect":0.015037594},
+        {"period":"P2_2024","positive_nonpositive_n":"96/100","r_effect":0.009521664,"stop_effect":-0.032500000},
+        {"period":"P3_2025","positive_nonpositive_n":"103/89","r_effect":0.020644768,"stop_effect":0.036762300},
+        {"period":"P4_2026_YTD","positive_nonpositive_n":"72/56","r_effect":0.010201374,"stop_effect":-0.043650794}
+      ],
+      "gate": {"density":true,"r_magnitude":false,"r_breadth":true,"stop_magnitude":false,"stop_breadth":false,"coherence":true,"passed":false}
+    },
+    {
+      "strategy": "Pressure",
+      "pairs": 114,
+      "prev_positive_n": 58,
+      "prev_nonpositive_n": 56,
+      "prev_positive_mean_current_r": 0.008166021,
+      "prev_nonpositive_mean_current_r": 0.089047451,
+      "nonpositive_minus_positive_r": 0.080881429,
+      "prev_positive_stop_rate": 0.137931034,
+      "prev_nonpositive_stop_rate": 0.196428571,
+      "nonpositive_minus_positive_stop_rate": 0.058497537,
+      "dense_periods": 4,
+      "r_same_sign_periods": 4,
+      "stop_same_sign_periods": 2,
+      "periods": [
+        {"period":"P1_2022H2_2023","positive_nonpositive_n":"15/19","r_effect":0.068057940,"stop_effect":-0.014035088},
+        {"period":"P2_2024","positive_nonpositive_n":"11/11","r_effect":0.067682250,"stop_effect":0.363636364},
+        {"period":"P3_2025","positive_nonpositive_n":"13/18","r_effect":0.187719753,"stop_effect":0.025641026},
+        {"period":"P4_2026_YTD","positive_nonpositive_n":"19/8","r_effect":0.130962545,"stop_effect":-0.157894737}
+      ],
+      "gate": {"density":true,"r_magnitude":false,"r_breadth":true,"stop_magnitude":true,"stop_breadth":false,"coherence":false,"passed":false}
+    },
+    {
+      "strategy": "Return",
+      "pairs": 234,
+      "prev_positive_n": 123,
+      "prev_nonpositive_n": 111,
+      "prev_positive_mean_current_r": 0.030415031,
+      "prev_nonpositive_mean_current_r": 0.089246887,
+      "nonpositive_minus_positive_r": 0.058831856,
+      "prev_positive_stop_rate": 0.227642276,
+      "prev_nonpositive_stop_rate": 0.225225225,
+      "nonpositive_minus_positive_stop_rate": -0.002417051,
+      "dense_periods": 4,
+      "r_same_sign_periods": 2,
+      "stop_same_sign_periods": 3,
+      "periods": [
+        {"period":"P1_2022H2_2023","positive_nonpositive_n":"59/45","r_effect":-0.020276915,"stop_effect":0.026365348},
+        {"period":"P2_2024","positive_nonpositive_n":"22/27","r_effect":-0.060984322,"stop_effect":-0.038720539},
+        {"period":"P3_2025","positive_nonpositive_n":"28/23","r_effect":0.351788714,"stop_effect":-0.017080745},
+        {"period":"P4_2026_YTD","positive_nonpositive_n":"14/16","r_effect":0.107521207,"stop_effect":-0.169642857}
+      ],
+      "gate": {"density":true,"r_magnitude":false,"r_breadth":false,"stop_magnitude":false,"stop_breadth":true,"coherence":true,"passed":false}
+    },
+    {
+      "strategy": "Passive",
+      "pairs": 590,
+      "prev_positive_n": 388,
+      "prev_nonpositive_n": 202,
+      "prev_positive_mean_current_r": 0.009073581,
+      "prev_nonpositive_mean_current_r": 0.010287549,
+      "nonpositive_minus_positive_r": 0.001213968,
+      "prev_positive_stop_rate": 0.048969072,
+      "prev_nonpositive_stop_rate": 0.029702970,
+      "nonpositive_minus_positive_stop_rate": -0.019266102,
+      "dense_periods": 4,
+      "r_same_sign_periods": 1,
+      "stop_same_sign_periods": 2,
+      "periods": [
+        {"period":"P1_2022H2_2023","positive_nonpositive_n":"134/78","r_effect":-0.014850481,"stop_effect":0.005357826},
+        {"period":"P2_2024","positive_nonpositive_n":"111/47","r_effect":0.051081017,"stop_effect":-0.063063063},
+        {"period":"P3_2025","positive_nonpositive_n":"82/47","r_effect":-0.018973357,"stop_effect":-0.021536066},
+        {"period":"P4_2026_YTD","positive_nonpositive_n":"61/30","r_effect":-0.006394890,"stop_effect":0.001092896}
+      ],
+      "gate": {"density":true,"r_magnitude":false,"r_breadth":false,"stop_magnitude":false,"stop_breadth":false,"coherence":true,"passed":false}
+    }
+  ],
+  "fixed_gate_application": {
+    "passing_strategies": [],
+    "common_failure": "Every strategy failed the absolute pooled current stressed-r separation minimum of 0.10R.",
+    "closest_r_effects": [
+      {"strategy":"RC4","effect_r":0.084427040,"additional_failure":"Pooled stop-rate separation was only -0.014150943 versus the required absolute 0.05."},
+      {"strategy":"Pressure","effect_r":0.080881429,"additional_failure":"Stop effects shared sign in only two periods and were incoherent with the positive R effect pooled."}
+    ]
+  },
+  "interpretation": {
+    "portfolio": "The immediately previous same-strategy outcome sign is dense but not a material broad state for the next lifecycle under the frozen joint R-and-stop contract.",
+    "rc4": "After-nonpositive current R was higher in P1, P2 and P4 but reversed in P3; pooled magnitude and stop separation stayed below their gates.",
+    "pressure": "Current R was higher after a nonpositive prior in all four periods, but the pooled magnitude remained below 0.10R and the stop effect was unstable and economically incoherent.",
+    "return": "Large positive P3/P4 differences were contradicted by negative P1/P2 differences, leaving a smaller pooled effect.",
+    "consequence": "Do not open an outcome-memory sizing, hold, protection, priority or entry experiment from this binary state.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "verdict": "NO_SAME_STRATEGY_OUTCOME_MEMORY_FIELD_PASSED",
+    "selected_strategy": null,
+    "later_entry_preserving_proxy_question": false,
+    "magnitude_streak_decay_cross_strategy_or_subgroup_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_without_memory_transform_rescue_then_select_one_non_nearby_serial_frontier_question_after_durable_commit"
+}

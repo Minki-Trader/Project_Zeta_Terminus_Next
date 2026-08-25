@@ -1,0 +1,45 @@
+{
+  "schema": "zeta-next-same-strategy-outcome-memory-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "same-strategy-outcome-memory-023",
+  "family": "same-strategy-outcome-memory-v1",
+  "evidence": {
+    "declaration_sha256": "2349A370E99BC770D305726594C8F91CDED10EA5D2D0160C99BADA14CCC8F1BA",
+    "result_sha256": "3676AD613A1990361DE2361FAB7A5CBF6BB93751CE1AD75E068182C2102EA32D"
+  },
+  "closure": {
+    "verdict": "NO_SAME_STRATEGY_OUTCOME_MEMORY_FIELD_PASSED",
+    "integrity_gate_passed": true,
+    "successful_fixed_aggregations": 1,
+    "lifecycles": 2233,
+    "excluded_first_strategy_period_lifecycles": 24,
+    "causal_pairs": 2209,
+    "stressed_net_usd": 407.0477,
+    "stop_loss_exits": 206,
+    "passing_strategies": [],
+    "retained_response_question": null,
+    "retained_candidate": null
+  },
+  "reason": "All six strategy streams met the reconstruction contract, but every strategy failed the frozen absolute pooled current stressed-R separation minimum of 0.10R. RC4 was closest at +0.084427040R and also missed the 0.05 stop-rate separation gate. Pressure reached +0.080881429R and a pooled +0.058497537 stop-rate difference, but failed both the R magnitude gate and the stop-breadth/coherence contract. No strategy passed the complete joint information gate.",
+  "frozen_stop_rules": {
+    "alternate_previous_state_or_threshold": false,
+    "magnitude_streak_decay_or_cross_strategy_rescue": false,
+    "direction_symbol_weekday_period_or_subgroup_rescue": false,
+    "response_type_size_hold_or_protection_selected": false,
+    "mql_or_tester_path_opened": false
+  },
+  "surfaces": {
+    "family_closed_and_source_free": true,
+    "forward_cxr2_baseline_unchanged": true,
+    "unit_022_not_used_reopened_or_repaired": true,
+    "actual_position_bundle_020_021_unchanged": true,
+    "live_source_package_settings_state_logs_untouched": true,
+    "live_release": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+    "live_terminal_pid": 13328,
+    "dashboard_pid": 4284,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_serial_frontier_question_without_reopening_or_transforming_unit_023"
+}
