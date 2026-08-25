@@ -412,9 +412,27 @@ bool CalculateProtectiveStop(const int component,
    const double aggregate_budget =
       capital * InpMaximumAggregateRiskFraction;
    const double tolerance = 0.01;
+#ifdef ZETA_FRONTIER_RISK_ADMISSION_OVERRIDE
+   const bool frontier_admission_override =
+      (planned_risk <= position_budget + tolerance &&
+       aggregate_after > aggregate_budget + tolerance &&
+       ZETA_FRONTIER_RISK_ADMISSION_OVERRIDE(component,
+                                             symbol,
+                                             direction,
+                                             volume,
+                                             entry_price,
+                                             stop_loss,
+                                             planned_risk,
+                                             position_budget,
+                                             aggregate_after,
+                                             aggregate_budget));
+#else
+   const bool frontier_admission_override = false;
+#endif
 #ifdef ZETA_FRONTIER_RISK_ADMISSION_EXCHANGE
    if(planned_risk <= position_budget + tolerance &&
       aggregate_after > aggregate_budget + tolerance &&
+      !frontier_admission_override &&
       ZETA_FRONTIER_RISK_ADMISSION_EXCHANGE(component,
                                             symbol,
                                             direction,
@@ -437,7 +455,8 @@ bool CalculateProtectiveStop(const int component,
      }
 #endif
    if(planned_risk > position_budget + tolerance ||
-      aggregate_after > aggregate_budget + tolerance)
+      (aggregate_after > aggregate_budget + tolerance &&
+       !frontier_admission_override))
      {
       ++risk_admission_skips;
       RecordEvent(component,

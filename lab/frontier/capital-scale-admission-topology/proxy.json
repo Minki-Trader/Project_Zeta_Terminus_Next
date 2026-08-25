@@ -1,0 +1,4766 @@
+{
+  "boundary": {
+    "entry_priority": "unchanged first-come physical order",
+    "live_surface": "untouched",
+    "new_hypothesis_opened": false,
+    "opened_scope": "decompose the one scale-induced missing lifecycle and compare only fixed current-dollar, residual-risk, risk-unit, same-time handling and lot-demotion representations already named by the open unit",
+    "transition_reserve": "prospective_position_budget_1_25 retained unchanged"
+  },
+  "entry_set_comparison": {
+    "extra_300_vs_200": [],
+    "missing_300_vs_200": [
+      "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+    ]
+  },
+  "incident": {
+    "candidate": {
+      "actual_stop_headroom": 36.597733,
+      "actual_stop_risk_after": 74.404267,
+      "actual_stop_risk_before": 49.7376,
+      "aggregate_cap": 111.002,
+      "candidate": "CROSS",
+      "candidate_actual_stop_risk": 24.666667,
+      "candidate_position_budget": 37.0007,
+      "current_dollar_aggregate_after": 111.60822,
+      "current_dollar_excess": 0.60622,
+      "incumbents": [
+        {
+          "actual_stop_risk": 24.8688,
+          "component": "PRESSURE",
+          "entry": 47648.8,
+          "opened": "2026.03.06 15:00:00",
+          "reserved_budget": 37.3038,
+          "state": "POSITION",
+          "stop": 47959.66,
+          "volume": 0.06
+        },
+        {
+          "actual_stop_risk": 24.8688,
+          "component": "RETURN",
+          "entry": 47323.1,
+          "opened": "2026.03.06 16:00:00",
+          "reserved_budget": 37.3038,
+          "state": "POSITION",
+          "stop": 47012.24,
+          "volume": 0.06
+        }
+      ],
+      "key": "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+      "mechanisms": {
+        "actual_stop_residual_only": true,
+        "current_cap_three_units_with_actual_stop_backstop": true,
+        "current_entry_budget_dollars": false,
+        "lot_demotion_under_same_stop_budget": false,
+        "three_units_without_stop_backstop": true
+      },
+      "occupied_units": 2,
+      "reserved_before": 74.6076,
+      "same_timestamp_signals": [
+        "CROSS"
+      ],
+      "server_time": "2026.03.06 17:00:00",
+      "units_after": 3
+    },
+    "cause_decomposition": {
+      "aggregate_12_percent": "immediate_block; two 37.3038 entry budgets plus the current 37.0007 unit produced 111.6082 against 111.0020",
+      "incumbent_occupancy": "causal; PRESSURE and RETURN were both open at the 300 USD CROSS decision",
+      "lot_rounding": "not_direct; 0.04 at 200 and 0.06 at 300 are exactly deposit-proportional. Earlier path P/L changed conservative capital and widened the 300 USD Return stop, which changed occupancy.",
+      "lower_lot_demotion": "not_independent; the frozen stop search expands distance to spend the same position budget and admission then books a full 4 percent unit, so volume reduction alone does not create aggregate capacity",
+      "physical_evaluation_order": "not_direct; the three relevant decisions occurred at distinct 15:00, 16:00 and 17:00 times"
+    },
+    "matched_200_cross_outcome_diagnostic_only": {
+      "actual_net": 4.43,
+      "close_time": "2026.03.06 21:00:00",
+      "open_time": "2026.03.06 17:00:00",
+      "selection_use": false,
+      "stop": 24383.83,
+      "stressed_net": 4.406,
+      "volume": 0.04
+    },
+    "missing_key": "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+    "physical_sequence": [
+      "PRESSURE entered at 15:00",
+      "RETURN entered at 16:00",
+      "CROSS was evaluated at 17:00"
+    ],
+    "return_incumbent": {
+      "geometry_200": {
+        "actual_net": -12.27,
+        "close_event": "EXTERNAL_CLOSE",
+        "close_time": "2026.03.06 16:59:11",
+        "entry_time": "2026.03.06 16:00:00",
+        "stop": 47016.98,
+        "stressed_net": -12.358,
+        "volume": 0.04
+      },
+      "geometry_300": {
+        "actual_net": 12.38,
+        "close_event": "CLOSE",
+        "close_time": "2026.03.06 22:00:00",
+        "entry_time": "2026.03.06 16:00:00",
+        "stop": 47012.24,
+        "stressed_net": 12.248,
+        "volume": 0.06
+      },
+      "interpretation": "The 300 USD Return stop was 4.74 index points farther away. It survived the 16:59:11 tick that stopped the 200 USD path and remained an occupied risk unit when CROSS arrived."
+    },
+    "same_timestamp_competition": false
+  },
+  "limits": [
+    "Fixed-path eligibility does not include endogenous P/L, stop, hold, exchange or later admission mutation; real-tick runtime is decisive.",
+    "The matched 200 USD winner is descriptive only and did not select the mechanism.",
+    "No strategy priority, preemption, threshold rescue, latest-period extension or independent-account study is opened here."
+  ],
+  "mechanism_judgement": {
+    "actual_stop_residual_only": "rejected before runtime because it can admit a fourth concurrent exposure even when actual stop risk remains below 12 percent",
+    "current_cap_three_units_with_actual_stop_backstop": {
+      "actual_stop_risk_within_12_percent": true,
+      "contract": "Each live position or pending Passive order occupies one current 4 percent risk unit; no more than three units may exist, and exact initial catastrophic-stop risk including the candidate must also remain within current 12 percent capacity.",
+      "existing_entries_suppressed": 0,
+      "fixed_path_entry_projection": {
+        "geometry_100": 933,
+        "geometry_200": 934,
+        "geometry_300": 933
+      },
+      "fixed_path_projection_equal": false,
+      "maximum_three_units": true,
+      "recovers_missing_300_lifecycle": true,
+      "scale_consistent_contract": true,
+      "selected_for_runtime": true
+    },
+    "current_entry_budget_dollars": "retains the scale-induced missing lifecycle because old 4 percent dollar reservations do not contract with current conservative capital",
+    "lot_demotion_under_same_stop_budget": "rejected before runtime because unchanged stop-budget search and full-unit booking consume the same admission capacity at a lower volume",
+    "same_timestamp_batching": "not applicable to the missing event because the incumbent and candidate decisions are one hour apart",
+    "three_units_without_stop_backstop": "rejected before runtime because unit count alone has no catastrophic-stop dollar backstop after a deep capital contraction"
+  },
+  "mechanisms": {
+    "actual_stop_residual_only": {
+      "geometry_100": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.03.25 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.05.13 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.29 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.06.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.10.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.11.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.02 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+          "2026.04.02 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.06.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.07.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.20 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 949,
+        "fixed_path_newly_eligible": 26,
+        "maximum_actual_stop_risk_percent": 10.670554,
+        "maximum_units_after_newly_eligible": 4
+      },
+      "geometry_200": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.03.25 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.05.13 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.29 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.06.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.10.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.11.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.02 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+          "2026.04.02 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.06.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.07.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.20 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 949,
+        "fixed_path_newly_eligible": 26,
+        "maximum_actual_stop_risk_percent": 10.670634,
+        "maximum_units_after_newly_eligible": 4
+      },
+      "geometry_300": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.03.25 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.05.13 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.29 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.06.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.10.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.11.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.02 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+          "2026.04.02 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.06.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.07.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.20 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 922,
+        "fixed_path_entry_projection": 949,
+        "fixed_path_newly_eligible": 27,
+        "maximum_actual_stop_risk_percent": 10.668259,
+        "maximum_units_after_newly_eligible": 4
+      }
+    },
+    "current_cap_three_units_with_actual_stop_backstop": {
+      "geometry_100": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 933,
+        "fixed_path_newly_eligible": 10,
+        "maximum_actual_stop_risk_percent": 8.12854,
+        "maximum_units_after_newly_eligible": 3
+      },
+      "geometry_200": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 934,
+        "fixed_path_newly_eligible": 11,
+        "maximum_actual_stop_risk_percent": 8.12854,
+        "maximum_units_after_newly_eligible": 3
+      },
+      "geometry_300": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 922,
+        "fixed_path_entry_projection": 933,
+        "fixed_path_newly_eligible": 11,
+        "maximum_actual_stop_risk_percent": 8.127302,
+        "maximum_units_after_newly_eligible": 3
+      }
+    },
+    "current_entry_budget_dollars": {
+      "geometry_100": {
+        "eligible_keys": [],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 923,
+        "fixed_path_newly_eligible": 0,
+        "maximum_actual_stop_risk_percent": 0.0,
+        "maximum_units_after_newly_eligible": 0
+      },
+      "geometry_200": {
+        "eligible_keys": [],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 923,
+        "fixed_path_newly_eligible": 0,
+        "maximum_actual_stop_risk_percent": 0.0,
+        "maximum_units_after_newly_eligible": 0
+      },
+      "geometry_300": {
+        "eligible_keys": [],
+        "existing_entries": 922,
+        "fixed_path_entry_projection": 922,
+        "fixed_path_newly_eligible": 0,
+        "maximum_actual_stop_risk_percent": 0.0,
+        "maximum_units_after_newly_eligible": 0
+      }
+    },
+    "lot_demotion_under_same_stop_budget": {
+      "geometry_100": {
+        "eligible_keys": [],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 923,
+        "fixed_path_newly_eligible": 0,
+        "maximum_actual_stop_risk_percent": 0.0,
+        "maximum_units_after_newly_eligible": 0
+      },
+      "geometry_200": {
+        "eligible_keys": [],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 923,
+        "fixed_path_newly_eligible": 0,
+        "maximum_actual_stop_risk_percent": 0.0,
+        "maximum_units_after_newly_eligible": 0
+      },
+      "geometry_300": {
+        "eligible_keys": [],
+        "existing_entries": 922,
+        "fixed_path_entry_projection": 922,
+        "fixed_path_newly_eligible": 0,
+        "maximum_actual_stop_risk_percent": 0.0,
+        "maximum_units_after_newly_eligible": 0
+      }
+    },
+    "three_units_without_stop_backstop": {
+      "geometry_100": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 933,
+        "fixed_path_newly_eligible": 10,
+        "maximum_actual_stop_risk_percent": 8.12854,
+        "maximum_units_after_newly_eligible": 3
+      },
+      "geometry_200": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 923,
+        "fixed_path_entry_projection": 934,
+        "fixed_path_newly_eligible": 11,
+        "maximum_actual_stop_risk_percent": 8.12854,
+        "maximum_units_after_newly_eligible": 3
+      },
+      "geometry_300": {
+        "eligible_keys": [
+          "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+          "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+          "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+        ],
+        "existing_entries": 922,
+        "fixed_path_entry_projection": 933,
+        "fixed_path_newly_eligible": 11,
+        "maximum_actual_stop_risk_percent": 8.127302,
+        "maximum_units_after_newly_eligible": 3
+      }
+    }
+  },
+  "path_topology": {
+    "geometry_100": {
+      "deposit": 100.0,
+      "entries": 923,
+      "maximum_occupied_units": 3,
+      "risk_admission_skips": 26
+    },
+    "geometry_200": {
+      "deposit": 200.0,
+      "entries": 923,
+      "maximum_occupied_units": 3,
+      "risk_admission_skips": 26
+    },
+    "geometry_300": {
+      "deposit": 300.0,
+      "entries": 922,
+      "maximum_occupied_units": 3,
+      "risk_admission_skips": 27
+    }
+  },
+  "question": "Can shared 12 percent admission use scale-consistent risk units so the 300 USD path recovers its single missing opportunity without increasing maximum exposure or weakening transition reserve?",
+  "runtime_plan": {
+    "paths": [
+      "current-cap-three-units-stop-backstop at 100 USD",
+      "current-cap-three-units-stop-backstop at 200 USD",
+      "current-cap-three-units-stop-backstop at 300 USD"
+    ],
+    "reason": "The same relax-only rule applies at all deposits, preserves every existing entry, first-come order and transition reserve, recovers the named 300 USD miss, and allows neither a fourth unit nor an exact-stop-risk breach. Fixed-path projections are 933/934/933, so endogenous real-tick mutation rather than projection equality is decisive.",
+    "required": true
+  },
+  "skip_diagnostics": {
+    "geometry_100": [
+      {
+        "actual_stop_headroom": 3.816033,
+        "actual_stop_risk_after": 7.939867,
+        "actual_stop_risk_before": 5.333333,
+        "aggregate_cap": 11.7559,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 2.606533,
+        "candidate_position_budget": 3.9186,
+        "current_dollar_aggregate_after": 11.91864,
+        "current_dollar_excess": 0.16274,
+        "incumbents": [
+          {
+            "actual_stop_risk": 2.666667,
+            "component": "RC4",
+            "entry": 42687.22,
+            "opened": "2025.01.02 13:00:00",
+            "reserved_budget": 4.0,
+            "state": "POSITION",
+            "stop": 42487.22,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 2.666667,
+            "component": "RC16",
+            "entry": 42688.97,
+            "opened": "2025.01.02 13:30:00",
+            "reserved_budget": 4.0,
+            "state": "POSITION",
+            "stop": 42488.97,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 8.0,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.01.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 3.446267,
+        "actual_stop_risk_after": 7.059733,
+        "actual_stop_risk_before": 4.725067,
+        "aggregate_cap": 10.506,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 2.334667,
+        "candidate_position_budget": 3.502,
+        "current_dollar_aggregate_after": 10.58968,
+        "current_dollar_excess": 0.08368,
+        "incumbents": [
+          {
+            "actual_stop_risk": 2.362533,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 3.5438,
+            "state": "POSITION",
+            "stop": 42180.37,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 2.362533,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 3.5438,
+            "state": "POSITION",
+            "stop": 42165.37,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 7.0876,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 14:15:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 3.4232,
+        "actual_stop_risk_after": 7.0516,
+        "actual_stop_risk_before": 4.725067,
+        "aggregate_cap": 10.4748,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 2.326533,
+        "candidate_position_budget": 3.4916,
+        "current_dollar_aggregate_after": 10.57928,
+        "current_dollar_excess": 0.10448,
+        "incumbents": [
+          {
+            "actual_stop_risk": 2.362533,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 3.5438,
+            "state": "POSITION",
+            "stop": 42180.37,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 2.362533,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 3.5438,
+            "state": "POSITION",
+            "stop": 42165.37,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 7.0876,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 15:15:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 3.3492,
+        "actual_stop_risk_after": 7.032,
+        "actual_stop_risk_before": 4.725067,
+        "aggregate_cap": 10.3812,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 2.306933,
+        "candidate_position_budget": 3.4604,
+        "current_dollar_aggregate_after": 10.54808,
+        "current_dollar_excess": 0.16688,
+        "incumbents": [
+          {
+            "actual_stop_risk": 2.362533,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 3.5438,
+            "state": "POSITION",
+            "stop": 42180.37,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 2.362533,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 3.5438,
+            "state": "POSITION",
+            "stop": 42165.37,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 7.0876,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 15:30:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 1.1731,
+        "actual_stop_risk_after": 9.3564,
+        "actual_stop_risk_before": 7.016533,
+        "aggregate_cap": 10.5295,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 2.339867,
+        "candidate_position_budget": 3.5098,
+        "current_dollar_aggregate_after": 14.03936,
+        "current_dollar_excess": 3.50986,
+        "incumbents": [
+          {
+            "actual_stop_risk": 2.339867,
+            "component": "RC4",
+            "entry": 42534.41,
+            "opened": "2025.01.15 13:00:00",
+            "reserved_budget": 3.5098,
+            "state": "POSITION",
+            "stop": 42358.92,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 2.339867,
+            "component": "RC16",
+            "entry": 42535.16,
+            "opened": "2025.01.15 13:30:00",
+            "reserved_budget": 3.5098,
+            "state": "POSITION",
+            "stop": 42359.67,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 2.3368,
+            "component": "PASSIVE",
+            "entry": 21085.25,
+            "opened": "2025.01.15 15:45:00",
+            "reserved_budget": 3.5098,
+            "state": "POSITION",
+            "stop": 21260.51,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.01.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 10.5294,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.01.15 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 1.6777,
+        "actual_stop_risk_after": 13.4068,
+        "actual_stop_risk_before": 10.0548,
+        "aggregate_cap": 15.0845,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 3.352,
+        "candidate_position_budget": 5.0282,
+        "current_dollar_aggregate_after": 20.11272,
+        "current_dollar_excess": 5.02822,
+        "incumbents": [
+          {
+            "actual_stop_risk": 3.352,
+            "component": "RC4",
+            "entry": 42548.46,
+            "opened": "2025.03.25 13:00:00",
+            "reserved_budget": 5.0282,
+            "state": "POSITION",
+            "stop": 42297.06,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 3.352,
+            "component": "RC16",
+            "entry": 42579.46,
+            "opened": "2025.03.25 13:30:00",
+            "reserved_budget": 5.0282,
+            "state": "POSITION",
+            "stop": 42328.06,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 3.3508,
+            "component": "PASSIVE",
+            "entry": 20179.71,
+            "opened": "2025.03.25 14:17:00",
+            "reserved_budget": 5.0282,
+            "state": "POSITION",
+            "stop": 20431.02,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.03.25 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 15.0846,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.03.25 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 4.545833,
+        "actual_stop_risk_after": 9.246267,
+        "actual_stop_risk_before": 6.1864,
+        "aggregate_cap": 13.7921,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 3.059867,
+        "candidate_position_budget": 4.5974,
+        "current_dollar_aggregate_after": 13.8867,
+        "current_dollar_excess": 0.0946,
+        "incumbents": [
+          {
+            "actual_stop_risk": 3.126533,
+            "component": "RC16",
+            "entry": 38605.78,
+            "opened": "2025.04.08 13:30:00",
+            "reserved_budget": 4.6919,
+            "state": "POSITION",
+            "stop": 38371.29,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 3.059867,
+            "component": "PRESSURE",
+            "entry": 39052.53,
+            "opened": "2025.04.08 15:00:00",
+            "reserved_budget": 4.5974,
+            "state": "POSITION",
+            "stop": 38823.04,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 9.2893,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.04.08 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 6.575333,
+        "actual_stop_risk_after": 13.175467,
+        "actual_stop_risk_before": 8.7864,
+        "aggregate_cap": 19.7508,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 4.389067,
+        "candidate_position_budget": 6.5836,
+        "current_dollar_aggregate_after": 19.76528,
+        "current_dollar_excess": 0.01448,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.3932,
+            "component": "RC4",
+            "entry": 42378.53,
+            "opened": "2025.05.13 13:00:00",
+            "reserved_budget": 6.5908,
+            "state": "POSITION",
+            "stop": 42049.04,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.3932,
+            "component": "RC16",
+            "entry": 42361.53,
+            "opened": "2025.05.13 13:30:00",
+            "reserved_budget": 6.5908,
+            "state": "POSITION",
+            "stop": 42032.04,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 13.1816,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.05.13 15:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 2.1888,
+        "actual_stop_risk_after": 17.568,
+        "actual_stop_risk_before": 13.1776,
+        "aggregate_cap": 19.7568,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 4.3904,
+        "candidate_position_budget": 6.5856,
+        "current_dollar_aggregate_after": 26.35812,
+        "current_dollar_excess": 6.60132,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.3932,
+            "component": "RC4",
+            "entry": 42378.53,
+            "opened": "2025.05.13 13:00:00",
+            "reserved_budget": 6.5908,
+            "state": "POSITION",
+            "stop": 42049.04,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.3932,
+            "component": "RC16",
+            "entry": 42361.53,
+            "opened": "2025.05.13 13:30:00",
+            "reserved_budget": 6.5908,
+            "state": "POSITION",
+            "stop": 42032.04,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.3912,
+            "component": "PASSIVE",
+            "entry": 20889.83,
+            "opened": "2025.05.13 15:18:49",
+            "reserved_budget": 6.5908,
+            "state": "POSITION",
+            "stop": 21219.17,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.05.13 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 19.7724,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.13 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 2.196233,
+        "actual_stop_risk_after": 17.564267,
+        "actual_stop_risk_before": 13.173067,
+        "aggregate_cap": 19.7605,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 4.3912,
+        "candidate_position_budget": 6.5868,
+        "current_dollar_aggregate_after": 26.34728,
+        "current_dollar_excess": 6.58678,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.390667,
+            "component": "PASSIVE",
+            "entry": 21681.55,
+            "opened": "2025.05.29 14:01:12",
+            "reserved_budget": 6.5868,
+            "state": "POSITION",
+            "stop": 21352.25,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.3912,
+            "component": "PRESSURE",
+            "entry": 42249.85,
+            "opened": "2025.05.29 15:00:00",
+            "reserved_budget": 6.5868,
+            "state": "POSITION",
+            "stop": 42579.19,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.3912,
+            "component": "RETURN",
+            "entry": 42199.45,
+            "opened": "2025.05.29 16:00:00",
+            "reserved_budget": 6.5868,
+            "state": "POSITION",
+            "stop": 41870.11,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.05.29 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 19.7604,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.29 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 2.156433,
+        "actual_stop_risk_after": 17.240267,
+        "actual_stop_risk_before": 12.93,
+        "aggregate_cap": 19.3967,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 4.310267,
+        "candidate_position_budget": 6.4656,
+        "current_dollar_aggregate_after": 25.86232,
+        "current_dollar_excess": 6.46562,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.310267,
+            "component": "RC4",
+            "entry": 42784.35,
+            "opened": "2025.06.11 13:00:01",
+            "reserved_budget": 6.4656,
+            "state": "POSITION",
+            "stop": 43107.62,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.310267,
+            "component": "RC16",
+            "entry": 42793.75,
+            "opened": "2025.06.11 13:30:00",
+            "reserved_budget": 6.4656,
+            "state": "POSITION",
+            "stop": 42470.48,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.309467,
+            "component": "PASSIVE",
+            "entry": 22034.09,
+            "opened": "2025.06.11 15:45:32",
+            "reserved_budget": 6.4656,
+            "state": "POSITION",
+            "stop": 22357.3,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.06.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 19.3968,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.06.11 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 2.138633,
+        "actual_stop_risk_after": 17.039467,
+        "actual_stop_risk_before": 12.7796,
+        "aggregate_cap": 19.1781,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 4.259867,
+        "candidate_position_budget": 6.3927,
+        "current_dollar_aggregate_after": 25.5708,
+        "current_dollar_excess": 6.3927,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.259867,
+            "component": "RC4",
+            "entry": 42320.95,
+            "opened": "2025.06.16 13:00:00",
+            "reserved_budget": 6.3927,
+            "state": "POSITION",
+            "stop": 42640.44,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.259867,
+            "component": "RC16",
+            "entry": 42345.35,
+            "opened": "2025.06.16 13:30:01",
+            "reserved_budget": 6.3927,
+            "state": "POSITION",
+            "stop": 42025.86,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.259867,
+            "component": "PRESSURE",
+            "entry": 42416.95,
+            "opened": "2025.06.16 15:00:00",
+            "reserved_budget": 6.3927,
+            "state": "POSITION",
+            "stop": 42097.46,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 19.1781,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.06.16 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 6.4768,
+        "actual_stop_risk_after": 13.1796,
+        "actual_stop_risk_before": 8.813067,
+        "aggregate_cap": 19.6564,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 4.366533,
+        "candidate_position_budget": 6.5521,
+        "current_dollar_aggregate_after": 19.78228,
+        "current_dollar_excess": 0.12588,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.406533,
+            "component": "PRESSURE",
+            "entry": 45309.4,
+            "opened": "2025.09.02 15:00:00",
+            "reserved_budget": 6.6151,
+            "state": "POSITION",
+            "stop": 45639.89,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.406533,
+            "component": "RETURN",
+            "entry": 45133.6,
+            "opened": "2025.09.02 16:00:00",
+            "reserved_budget": 6.6151,
+            "state": "POSITION",
+            "stop": 44803.11,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 13.2302,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.09.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 2.3676,
+        "actual_stop_risk_after": 18.8528,
+        "actual_stop_risk_before": 14.1396,
+        "aggregate_cap": 21.2204,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 4.7132,
+        "candidate_position_budget": 7.0735,
+        "current_dollar_aggregate_after": 28.29384,
+        "current_dollar_excess": 7.07344,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.7132,
+            "component": "RC4",
+            "entry": 46527.6,
+            "opened": "2025.10.15 13:00:01",
+            "reserved_budget": 7.0735,
+            "state": "POSITION",
+            "stop": 46174.11,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.7132,
+            "component": "RC16",
+            "entry": 46524.6,
+            "opened": "2025.10.15 13:30:00",
+            "reserved_budget": 7.0735,
+            "state": "POSITION",
+            "stop": 46171.11,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 4.7132,
+            "component": "PRESSURE",
+            "entry": 46561.6,
+            "opened": "2025.10.15 15:00:00",
+            "reserved_budget": 7.0735,
+            "state": "POSITION",
+            "stop": 46208.11,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.10.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 21.2205,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.10.15 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 2.526233,
+        "actual_stop_risk_after": 20.178267,
+        "actual_stop_risk_before": 15.132933,
+        "aggregate_cap": 22.7045,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 5.045333,
+        "candidate_position_budget": 7.5682,
+        "current_dollar_aggregate_after": 30.26808,
+        "current_dollar_excess": 7.56358,
+        "incumbents": [
+          {
+            "actual_stop_risk": 5.042267,
+            "component": "RC4",
+            "entry": 46426.14,
+            "opened": "2025.11.18 13:00:00",
+            "reserved_budget": 7.5635,
+            "state": "POSITION",
+            "stop": 46804.31,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 5.045333,
+            "component": "PRESSURE",
+            "entry": 46218.39,
+            "opened": "2025.11.18 15:00:00",
+            "reserved_budget": 7.5682,
+            "state": "POSITION",
+            "stop": 46596.79,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 5.045333,
+            "component": "RETURN",
+            "entry": 46259.64,
+            "opened": "2025.11.18 16:00:00",
+            "reserved_budget": 7.5682,
+            "state": "POSITION",
+            "stop": 45881.24,
+            "volume": 0.01
+          }
+        ],
+        "key": "2025.11.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 22.6999,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.11.18 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 10.439433,
+        "actual_stop_risk_after": 20.890667,
+        "actual_stop_risk_before": 13.928533,
+        "aggregate_cap": 31.3301,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 6.962133,
+        "candidate_position_budget": 10.4434,
+        "current_dollar_aggregate_after": 31.34118,
+        "current_dollar_excess": 0.01108,
+        "incumbents": [
+          {
+            "actual_stop_risk": 6.9664,
+            "component": "RC4",
+            "entry": 48788.7,
+            "opened": "2026.02.02 13:00:00",
+            "reserved_budget": 10.4544,
+            "state": "POSITION",
+            "stop": 48527.46,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 6.962133,
+            "component": "PRESSURE",
+            "entry": 48876.7,
+            "opened": "2026.02.02 15:00:00",
+            "reserved_budget": 10.4434,
+            "state": "POSITION",
+            "stop": 48615.62,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 20.8978,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.02.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 12.239067,
+        "actual_stop_risk_after": 24.872533,
+        "actual_stop_risk_before": 16.626133,
+        "aggregate_cap": 37.1116,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.2464,
+        "candidate_position_budget": 12.3705,
+        "current_dollar_aggregate_after": 37.3137,
+        "current_dollar_excess": 0.2021,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.313067,
+            "component": "PRESSURE",
+            "entry": 47648.8,
+            "opened": "2026.03.06 15:00:00",
+            "reserved_budget": 12.4716,
+            "state": "POSITION",
+            "stop": 47960.54,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.313067,
+            "component": "RETURN",
+            "entry": 47323.1,
+            "opened": "2026.03.06 16:00:00",
+            "reserved_budget": 12.4716,
+            "state": "POSITION",
+            "stop": 47011.36,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 24.9432,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.03.06 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 4.124333,
+        "actual_stop_risk_after": 32.975067,
+        "actual_stop_risk_before": 24.7308,
+        "aggregate_cap": 37.0994,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.244267,
+        "candidate_position_budget": 12.3665,
+        "current_dollar_aggregate_after": 49.46584,
+        "current_dollar_excess": 12.36644,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.244267,
+            "component": "RC4",
+            "entry": 47270.5,
+            "opened": "2026.03.18 13:00:00",
+            "reserved_budget": 12.3665,
+            "state": "POSITION",
+            "stop": 47579.66,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.242267,
+            "component": "PASSIVE",
+            "entry": 24842.5,
+            "opened": "2026.03.18 15:15:24",
+            "reserved_budget": 12.3665,
+            "state": "POSITION",
+            "stop": 24224.33,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 8.244267,
+            "component": "RETURN",
+            "entry": 46771.1,
+            "opened": "2026.03.18 16:00:00",
+            "reserved_budget": 12.3665,
+            "state": "POSITION",
+            "stop": 46461.94,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.03.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 37.0995,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.03.18 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 4.207467,
+        "actual_stop_risk_after": 33.571733,
+        "actual_stop_risk_before": 25.178667,
+        "aggregate_cap": 37.7792,
+        "candidate": "PRESSURE",
+        "candidate_actual_stop_risk": 8.393067,
+        "candidate_position_budget": 12.5931,
+        "current_dollar_aggregate_after": 50.37224,
+        "current_dollar_excess": 12.59304,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.393067,
+            "component": "RC4",
+            "entry": 46113.77,
+            "opened": "2026.04.02 13:00:00",
+            "reserved_budget": 12.5931,
+            "state": "POSITION",
+            "stop": 46428.51,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.393067,
+            "component": "RC16",
+            "entry": 46032.87,
+            "opened": "2026.04.02 13:30:00",
+            "reserved_budget": 12.5931,
+            "state": "POSITION",
+            "stop": 45718.13,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.392533,
+            "component": "PASSIVE",
+            "entry": 23540.55,
+            "opened": "2026.04.02 14:58:46",
+            "reserved_budget": 12.5931,
+            "state": "POSITION",
+            "stop": 22911.11,
+            "volume": 0.01
+          }
+        ],
+        "key": "2026.04.02 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 37.7793,
+        "same_timestamp_signals": [
+          "PRESSURE"
+        ],
+        "server_time": "2026.04.02 15:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 4.207467,
+        "actual_stop_risk_after": 33.571733,
+        "actual_stop_risk_before": 25.178667,
+        "aggregate_cap": 37.7792,
+        "candidate": "RETURN",
+        "candidate_actual_stop_risk": 8.393067,
+        "candidate_position_budget": 12.5931,
+        "current_dollar_aggregate_after": 50.37224,
+        "current_dollar_excess": 12.59304,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.393067,
+            "component": "RC4",
+            "entry": 46113.77,
+            "opened": "2026.04.02 13:00:00",
+            "reserved_budget": 12.5931,
+            "state": "POSITION",
+            "stop": 46428.51,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.393067,
+            "component": "RC16",
+            "entry": 46032.87,
+            "opened": "2026.04.02 13:30:00",
+            "reserved_budget": 12.5931,
+            "state": "POSITION",
+            "stop": 45718.13,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.392533,
+            "component": "PASSIVE",
+            "entry": 23540.55,
+            "opened": "2026.04.02 14:58:46",
+            "reserved_budget": 12.5931,
+            "state": "POSITION",
+            "stop": 22911.11,
+            "volume": 0.01
+          }
+        ],
+        "key": "2026.04.02 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 37.7793,
+        "same_timestamp_signals": [
+          "RETURN"
+        ],
+        "server_time": "2026.04.02 16:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 12.5533,
+        "actual_stop_risk_after": 25.4032,
+        "actual_stop_risk_before": 16.970133,
+        "aggregate_cap": 37.9565,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.433067,
+        "candidate_position_budget": 12.6522,
+        "current_dollar_aggregate_after": 38.10742,
+        "current_dollar_excess": 0.15092,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.485067,
+            "component": "RC4",
+            "entry": 48771.35,
+            "opened": "2026.04.17 13:00:00",
+            "reserved_budget": 12.7276,
+            "state": "POSITION",
+            "stop": 48453.16,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.485067,
+            "component": "RC16",
+            "entry": 48757.85,
+            "opened": "2026.04.17 13:30:00",
+            "reserved_budget": 12.7276,
+            "state": "POSITION",
+            "stop": 48439.66,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 25.4552,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.04.17 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 4.835567,
+        "actual_stop_risk_after": 38.666933,
+        "actual_stop_risk_before": 28.999733,
+        "aggregate_cap": 43.5025,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 9.6672,
+        "candidate_position_budget": 14.5008,
+        "current_dollar_aggregate_after": 58.00328,
+        "current_dollar_excess": 14.50078,
+        "incumbents": [
+          {
+            "actual_stop_risk": 9.6672,
+            "component": "RC16",
+            "entry": 50877.1,
+            "opened": "2026.06.08 13:30:00",
+            "reserved_budget": 14.5008,
+            "state": "POSITION",
+            "stop": 50514.58,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 9.6672,
+            "component": "PRESSURE",
+            "entry": 51071.7,
+            "opened": "2026.06.08 15:00:00",
+            "reserved_budget": 14.5008,
+            "state": "POSITION",
+            "stop": 50709.18,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 9.665333,
+            "component": "PASSIVE",
+            "entry": 29432.95,
+            "opened": "2026.06.08 15:21:01",
+            "reserved_budget": 14.5008,
+            "state": "POSITION",
+            "stop": 30157.85,
+            "volume": 0.01
+          }
+        ],
+        "key": "2026.06.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 43.5024,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.06.08 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 5.2375,
+        "actual_stop_risk_after": 41.6764,
+        "actual_stop_risk_before": 31.256667,
+        "aggregate_cap": 46.9139,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 10.419733,
+        "candidate_position_budget": 15.638,
+        "current_dollar_aggregate_after": 62.55192,
+        "current_dollar_excess": 15.63802,
+        "incumbents": [
+          {
+            "actual_stop_risk": 10.419733,
+            "component": "PRESSURE",
+            "entry": 51993.3,
+            "opened": "2026.07.23 15:00:00",
+            "reserved_budget": 15.638,
+            "state": "POSITION",
+            "stop": 52384.04,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 10.4172,
+            "component": "PASSIVE",
+            "entry": 28814.75,
+            "opened": "2026.07.23 15:00:34",
+            "reserved_budget": 15.638,
+            "state": "POSITION",
+            "stop": 28033.46,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 10.419733,
+            "component": "RETURN",
+            "entry": 51740.1,
+            "opened": "2026.07.23 16:00:00",
+            "reserved_budget": 15.638,
+            "state": "POSITION",
+            "stop": 51349.36,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.07.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 46.914,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.07.23 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 4.885033,
+        "actual_stop_risk_after": 38.852267,
+        "actual_stop_risk_before": 29.1392,
+        "aggregate_cap": 43.7373,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 9.713067,
+        "candidate_position_budget": 14.5791,
+        "current_dollar_aggregate_after": 58.3164,
+        "current_dollar_excess": 14.5791,
+        "incumbents": [
+          {
+            "actual_stop_risk": 9.713067,
+            "component": "RC4",
+            "entry": 52875.9,
+            "opened": "2026.08.03 13:00:00",
+            "reserved_budget": 14.5791,
+            "state": "POSITION",
+            "stop": 53240.14,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 9.713067,
+            "component": "RC16",
+            "entry": 52948.7,
+            "opened": "2026.08.03 13:30:00",
+            "reserved_budget": 14.5791,
+            "state": "POSITION",
+            "stop": 52584.46,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 9.713067,
+            "component": "PRESSURE",
+            "entry": 53073.7,
+            "opened": "2026.08.03 15:00:00",
+            "reserved_budget": 14.5791,
+            "state": "POSITION",
+            "stop": 52709.46,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 43.7373,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.03 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 5.104067,
+        "actual_stop_risk_after": 40.759733,
+        "actual_stop_risk_before": 30.568,
+        "aggregate_cap": 45.8638,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 10.191733,
+        "candidate_position_budget": 15.2879,
+        "current_dollar_aggregate_after": 61.15176,
+        "current_dollar_excess": 15.28796,
+        "incumbents": [
+          {
+            "actual_stop_risk": 10.191733,
+            "component": "RC16",
+            "entry": 53762.6,
+            "opened": "2026.08.17 13:30:00",
+            "reserved_budget": 15.2879,
+            "state": "POSITION",
+            "stop": 53380.41,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 10.184533,
+            "component": "PASSIVE",
+            "entry": 30111.2,
+            "opened": "2026.08.17 15:49:11",
+            "reserved_budget": 15.2879,
+            "state": "POSITION",
+            "stop": 29347.36,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 10.191733,
+            "component": "RETURN",
+            "entry": 53582.7,
+            "opened": "2026.08.17 16:00:00",
+            "reserved_budget": 15.2879,
+            "state": "POSITION",
+            "stop": 53200.51,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.08.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 45.8637,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.17 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 5.0673,
+        "actual_stop_risk_after": 40.4384,
+        "actual_stop_risk_before": 30.326133,
+        "aggregate_cap": 45.5057,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 10.112267,
+        "candidate_position_budget": 15.1686,
+        "current_dollar_aggregate_after": 60.67432,
+        "current_dollar_excess": 15.16862,
+        "incumbents": [
+          {
+            "actual_stop_risk": 10.112267,
+            "component": "PRESSURE",
+            "entry": 53197.9,
+            "opened": "2026.08.20 15:00:00",
+            "reserved_budget": 15.1686,
+            "state": "POSITION",
+            "stop": 53577.11,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 10.1016,
+            "component": "PASSIVE",
+            "entry": 29196.55,
+            "opened": "2026.08.20 15:30:29",
+            "reserved_budget": 15.1686,
+            "state": "POSITION",
+            "stop": 28438.93,
+            "volume": 0.01
+          },
+          {
+            "actual_stop_risk": 10.112267,
+            "component": "RETURN",
+            "entry": 53067.1,
+            "opened": "2026.08.20 16:00:00",
+            "reserved_budget": 15.1686,
+            "state": "POSITION",
+            "stop": 52687.89,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.08.20 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 45.5058,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.20 17:00:00",
+        "units_after": 4
+      }
+    ],
+    "geometry_200": [
+      {
+        "actual_stop_headroom": 7.6266,
+        "actual_stop_risk_after": 15.8864,
+        "actual_stop_risk_before": 10.666667,
+        "aggregate_cap": 23.513,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 5.219733,
+        "candidate_position_budget": 7.8377,
+        "current_dollar_aggregate_after": 23.83768,
+        "current_dollar_excess": 0.32468,
+        "incumbents": [
+          {
+            "actual_stop_risk": 5.333333,
+            "component": "RC4",
+            "entry": 42687.22,
+            "opened": "2025.01.02 13:00:00",
+            "reserved_budget": 8.0,
+            "state": "POSITION",
+            "stop": 42487.22,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 5.333333,
+            "component": "RC16",
+            "entry": 42688.97,
+            "opened": "2025.01.02 13:30:00",
+            "reserved_budget": 8.0,
+            "state": "POSITION",
+            "stop": 42488.97,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 16.0,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.01.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 6.890667,
+        "actual_stop_risk_after": 14.118933,
+        "actual_stop_risk_before": 9.450133,
+        "aggregate_cap": 21.0096,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 4.6688,
+        "candidate_position_budget": 7.0032,
+        "current_dollar_aggregate_after": 21.17856,
+        "current_dollar_excess": 0.16896,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.725067,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 7.0877,
+            "state": "POSITION",
+            "stop": 42180.37,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 4.725067,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 7.0877,
+            "state": "POSITION",
+            "stop": 42165.37,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 14.1754,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 14:15:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 6.842133,
+        "actual_stop_risk_after": 14.105067,
+        "actual_stop_risk_before": 9.450133,
+        "aggregate_cap": 20.9472,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 4.654933,
+        "candidate_position_budget": 6.9824,
+        "current_dollar_aggregate_after": 21.15776,
+        "current_dollar_excess": 0.21056,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.725067,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 7.0877,
+            "state": "POSITION",
+            "stop": 42180.37,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 4.725067,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 7.0877,
+            "state": "POSITION",
+            "stop": 42165.37,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 14.1754,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 15:15:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 6.6984,
+        "actual_stop_risk_after": 14.064,
+        "actual_stop_risk_before": 9.450133,
+        "aggregate_cap": 20.7624,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 4.613867,
+        "candidate_position_budget": 6.9208,
+        "current_dollar_aggregate_after": 21.09616,
+        "current_dollar_excess": 0.33376,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.725067,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 7.0877,
+            "state": "POSITION",
+            "stop": 42180.37,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 4.725067,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 7.0877,
+            "state": "POSITION",
+            "stop": 42165.37,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 14.1754,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 15:30:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 2.346333,
+        "actual_stop_risk_after": 18.713867,
+        "actual_stop_risk_before": 14.033867,
+        "aggregate_cap": 21.0602,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 4.68,
+        "candidate_position_budget": 7.0201,
+        "current_dollar_aggregate_after": 28.08032,
+        "current_dollar_excess": 7.02012,
+        "incumbents": [
+          {
+            "actual_stop_risk": 4.68,
+            "component": "RC4",
+            "entry": 42534.41,
+            "opened": "2025.01.15 13:00:00",
+            "reserved_budget": 7.0201,
+            "state": "POSITION",
+            "stop": 42358.91,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 4.68,
+            "component": "RC16",
+            "entry": 42535.16,
+            "opened": "2025.01.15 13:30:00",
+            "reserved_budget": 7.0201,
+            "state": "POSITION",
+            "stop": 42359.66,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 4.673867,
+            "component": "PASSIVE",
+            "entry": 21085.25,
+            "opened": "2025.01.15 15:45:00",
+            "reserved_budget": 7.0201,
+            "state": "POSITION",
+            "stop": 21260.52,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.01.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 21.0603,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.01.15 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 3.374967,
+        "actual_stop_risk_after": 26.796533,
+        "actual_stop_risk_before": 20.0968,
+        "aggregate_cap": 30.1715,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 6.699733,
+        "candidate_position_budget": 10.0572,
+        "current_dollar_aggregate_after": 40.22864,
+        "current_dollar_excess": 10.05714,
+        "incumbents": [
+          {
+            "actual_stop_risk": 6.699733,
+            "component": "RC4",
+            "entry": 42548.46,
+            "opened": "2025.03.25 13:00:00",
+            "reserved_budget": 10.0572,
+            "state": "POSITION",
+            "stop": 42297.22,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 6.699733,
+            "component": "RC16",
+            "entry": 42579.46,
+            "opened": "2025.03.25 13:30:00",
+            "reserved_budget": 10.0572,
+            "state": "POSITION",
+            "stop": 42328.22,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 6.697333,
+            "component": "PASSIVE",
+            "entry": 20179.71,
+            "opened": "2025.03.25 14:17:00",
+            "reserved_budget": 10.0572,
+            "state": "POSITION",
+            "stop": 20430.86,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.03.25 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 30.1716,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.03.25 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 9.078167,
+        "actual_stop_risk_after": 18.510933,
+        "actual_stop_risk_before": 12.384533,
+        "aggregate_cap": 27.5891,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 6.1264,
+        "candidate_position_budget": 9.1964,
+        "current_dollar_aggregate_after": 27.7802,
+        "current_dollar_excess": 0.1911,
+        "incumbents": [
+          {
+            "actual_stop_risk": 6.258133,
+            "component": "RC16",
+            "entry": 38605.78,
+            "opened": "2025.04.08 13:30:00",
+            "reserved_budget": 9.3875,
+            "state": "POSITION",
+            "stop": 38371.1,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 6.1264,
+            "component": "PRESSURE",
+            "entry": 39052.53,
+            "opened": "2025.04.08 15:00:00",
+            "reserved_budget": 9.1964,
+            "state": "POSITION",
+            "stop": 38822.79,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 18.5839,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.04.08 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 13.1528,
+        "actual_stop_risk_after": 26.3584,
+        "actual_stop_risk_before": 17.578667,
+        "aggregate_cap": 39.5112,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 8.779733,
+        "candidate_position_budget": 13.1704,
+        "current_dollar_aggregate_after": 39.53856,
+        "current_dollar_excess": 0.02736,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.789333,
+            "component": "RC4",
+            "entry": 42378.53,
+            "opened": "2025.05.13 13:00:00",
+            "reserved_budget": 13.1841,
+            "state": "POSITION",
+            "stop": 42048.93,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.789333,
+            "component": "RC16",
+            "entry": 42361.53,
+            "opened": "2025.05.13 13:30:00",
+            "reserved_budget": 13.1841,
+            "state": "POSITION",
+            "stop": 42031.93,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 26.3682,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.05.13 15:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 4.378267,
+        "actual_stop_risk_after": 35.143733,
+        "actual_stop_risk_before": 26.364,
+        "aggregate_cap": 39.522,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.779733,
+        "candidate_position_budget": 13.174,
+        "current_dollar_aggregate_after": 52.72624,
+        "current_dollar_excess": 13.20424,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.789333,
+            "component": "RC4",
+            "entry": 42378.53,
+            "opened": "2025.05.13 13:00:00",
+            "reserved_budget": 13.1841,
+            "state": "POSITION",
+            "stop": 42048.93,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.789333,
+            "component": "RC16",
+            "entry": 42361.53,
+            "opened": "2025.05.13 13:30:00",
+            "reserved_budget": 13.1841,
+            "state": "POSITION",
+            "stop": 42031.93,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.785333,
+            "component": "PASSIVE",
+            "entry": 20889.83,
+            "opened": "2025.05.13 15:18:49",
+            "reserved_budget": 13.1841,
+            "state": "POSITION",
+            "stop": 21219.28,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.05.13 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 39.5523,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.13 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 12.5967,
+        "actual_stop_risk_after": 25.136,
+        "actual_stop_risk_before": 16.756267,
+        "aggregate_cap": 37.7327,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.379733,
+        "candidate_position_budget": 12.5776,
+        "current_dollar_aggregate_after": 37.7478,
+        "current_dollar_excess": 0.0151,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.376533,
+            "component": "PASSIVE",
+            "entry": 20711.15,
+            "opened": "2025.05.23 15:20:08",
+            "reserved_budget": 12.5927,
+            "state": "POSITION",
+            "stop": 20397.03,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.379733,
+            "component": "RETURN",
+            "entry": 41322.63,
+            "opened": "2025.05.23 16:00:00",
+            "reserved_budget": 12.5776,
+            "state": "POSITION",
+            "stop": 41008.39,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 25.1703,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.23 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 4.370333,
+        "actual_stop_risk_after": 34.948267,
+        "actual_stop_risk_before": 26.210933,
+        "aggregate_cap": 39.3186,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.737333,
+        "candidate_position_budget": 13.1062,
+        "current_dollar_aggregate_after": 52.4248,
+        "current_dollar_excess": 13.1062,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.736267,
+            "component": "PASSIVE",
+            "entry": 21681.55,
+            "opened": "2025.05.29 14:01:12",
+            "reserved_budget": 13.1062,
+            "state": "POSITION",
+            "stop": 21353.94,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.737333,
+            "component": "PRESSURE",
+            "entry": 42249.85,
+            "opened": "2025.05.29 15:00:00",
+            "reserved_budget": 13.1062,
+            "state": "POSITION",
+            "stop": 42577.5,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.737333,
+            "component": "RETURN",
+            "entry": 42199.45,
+            "opened": "2025.05.29 16:00:00",
+            "reserved_budget": 13.1062,
+            "state": "POSITION",
+            "stop": 41871.8,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.05.29 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 39.3186,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.29 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 4.290933,
+        "actual_stop_risk_after": 34.309867,
+        "actual_stop_risk_before": 25.732,
+        "aggregate_cap": 38.6008,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.577867,
+        "candidate_position_budget": 12.8669,
+        "current_dollar_aggregate_after": 51.46768,
+        "current_dollar_excess": 12.86688,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.577867,
+            "component": "RC4",
+            "entry": 42784.35,
+            "opened": "2025.06.11 13:00:01",
+            "reserved_budget": 12.8669,
+            "state": "POSITION",
+            "stop": 43106.02,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.577867,
+            "component": "RC16",
+            "entry": 42793.75,
+            "opened": "2025.06.11 13:30:00",
+            "reserved_budget": 12.8669,
+            "state": "POSITION",
+            "stop": 42472.08,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.576267,
+            "component": "PASSIVE",
+            "entry": 22034.09,
+            "opened": "2025.06.11 15:45:32",
+            "reserved_budget": 12.8669,
+            "state": "POSITION",
+            "stop": 22355.7,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.06.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 38.6007,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.06.11 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 4.242033,
+        "actual_stop_risk_after": 33.927467,
+        "actual_stop_risk_before": 25.4456,
+        "aggregate_cap": 38.1695,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.481867,
+        "candidate_position_budget": 12.7232,
+        "current_dollar_aggregate_after": 50.89264,
+        "current_dollar_excess": 12.72314,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.481867,
+            "component": "RC4",
+            "entry": 42320.95,
+            "opened": "2025.06.16 13:00:00",
+            "reserved_budget": 12.7232,
+            "state": "POSITION",
+            "stop": 42639.02,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.481867,
+            "component": "RC16",
+            "entry": 42345.35,
+            "opened": "2025.06.16 13:30:01",
+            "reserved_budget": 12.7232,
+            "state": "POSITION",
+            "stop": 42027.28,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.481867,
+            "component": "PRESSURE",
+            "entry": 42416.95,
+            "opened": "2025.06.16 15:00:00",
+            "reserved_budget": 12.7232,
+            "state": "POSITION",
+            "stop": 42098.88,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 38.1696,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.06.16 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 12.8896,
+        "actual_stop_risk_after": 26.2592,
+        "actual_stop_risk_before": 17.559467,
+        "aggregate_cap": 39.1488,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 8.699733,
+        "candidate_position_budget": 13.0496,
+        "current_dollar_aggregate_after": 39.40064,
+        "current_dollar_excess": 0.25184,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.779733,
+            "component": "PRESSURE",
+            "entry": 45309.4,
+            "opened": "2025.09.02 15:00:00",
+            "reserved_budget": 13.1755,
+            "state": "POSITION",
+            "stop": 45638.64,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 8.779733,
+            "component": "RETURN",
+            "entry": 45133.6,
+            "opened": "2025.09.02 16:00:00",
+            "reserved_budget": 13.1755,
+            "state": "POSITION",
+            "stop": 44804.36,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 26.351,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.09.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 4.698533,
+        "actual_stop_risk_after": 37.572267,
+        "actual_stop_risk_before": 28.1792,
+        "aggregate_cap": 42.2708,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 9.393067,
+        "candidate_position_budget": 14.0903,
+        "current_dollar_aggregate_after": 56.36112,
+        "current_dollar_excess": 14.09032,
+        "incumbents": [
+          {
+            "actual_stop_risk": 9.393067,
+            "component": "RC4",
+            "entry": 46527.6,
+            "opened": "2025.10.15 13:00:01",
+            "reserved_budget": 14.0903,
+            "state": "POSITION",
+            "stop": 46175.36,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 9.393067,
+            "component": "RC16",
+            "entry": 46524.6,
+            "opened": "2025.10.15 13:30:00",
+            "reserved_budget": 14.0903,
+            "state": "POSITION",
+            "stop": 46172.36,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 9.393067,
+            "component": "PRESSURE",
+            "entry": 46561.6,
+            "opened": "2025.10.15 15:00:00",
+            "reserved_budget": 14.0903,
+            "state": "POSITION",
+            "stop": 46209.36,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.10.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 42.2709,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.10.15 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 5.0372,
+        "actual_stop_risk_after": 40.2128,
+        "actual_stop_risk_before": 30.157333,
+        "aggregate_cap": 45.25,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 10.055467,
+        "candidate_position_budget": 15.0833,
+        "current_dollar_aggregate_after": 60.3236,
+        "current_dollar_excess": 15.0736,
+        "incumbents": [
+          {
+            "actual_stop_risk": 10.0464,
+            "component": "RC4",
+            "entry": 46426.14,
+            "opened": "2025.11.18 13:00:00",
+            "reserved_budget": 15.0736,
+            "state": "POSITION",
+            "stop": 46802.88,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 10.055467,
+            "component": "PRESSURE",
+            "entry": 46218.39,
+            "opened": "2025.11.18 15:00:00",
+            "reserved_budget": 15.0833,
+            "state": "POSITION",
+            "stop": 46595.47,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 10.055467,
+            "component": "RETURN",
+            "entry": 46259.64,
+            "opened": "2025.11.18 16:00:00",
+            "reserved_budget": 15.0833,
+            "state": "POSITION",
+            "stop": 45882.56,
+            "volume": 0.02
+          }
+        ],
+        "key": "2025.11.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 45.2402,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.11.18 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 20.373167,
+        "actual_stop_risk_after": 40.752533,
+        "actual_stop_risk_before": 27.1728,
+        "aggregate_cap": 61.1257,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 13.579733,
+        "candidate_position_budget": 20.3752,
+        "current_dollar_aggregate_after": 61.1474,
+        "current_dollar_excess": 0.0217,
+        "incumbents": [
+          {
+            "actual_stop_risk": 13.593067,
+            "component": "RC4",
+            "entry": 48788.7,
+            "opened": "2026.02.02 13:00:00",
+            "reserved_budget": 20.3969,
+            "state": "POSITION",
+            "stop": 48533.83,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 13.579733,
+            "component": "PRESSURE",
+            "entry": 48876.7,
+            "opened": "2026.02.02 15:00:00",
+            "reserved_budget": 20.3752,
+            "state": "POSITION",
+            "stop": 48622.08,
+            "volume": 0.04
+          }
+        ],
+        "key": "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 40.7721,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.02.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 7.930633,
+        "actual_stop_risk_after": 63.168267,
+        "actual_stop_risk_before": 47.3752,
+        "aggregate_cap": 71.0989,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 15.793067,
+        "candidate_position_budget": 23.6996,
+        "current_dollar_aggregate_after": 94.79856,
+        "current_dollar_excess": 23.69966,
+        "incumbents": [
+          {
+            "actual_stop_risk": 15.793067,
+            "component": "RC4",
+            "entry": 47270.5,
+            "opened": "2026.03.18 13:00:00",
+            "reserved_budget": 23.6996,
+            "state": "POSITION",
+            "stop": 47566.62,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 15.789067,
+            "component": "PASSIVE",
+            "entry": 24842.5,
+            "opened": "2026.03.18 15:15:24",
+            "reserved_budget": 23.6996,
+            "state": "POSITION",
+            "stop": 24250.41,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 15.793067,
+            "component": "RETURN",
+            "entry": 46771.1,
+            "opened": "2026.03.18 16:00:00",
+            "reserved_budget": 23.6996,
+            "state": "POSITION",
+            "stop": 46474.98,
+            "volume": 0.04
+          }
+        ],
+        "key": "2026.03.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 71.0988,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.03.18 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 8.091833,
+        "actual_stop_risk_after": 64.664267,
+        "actual_stop_risk_before": 48.497867,
+        "aggregate_cap": 72.7561,
+        "candidate": "PRESSURE",
+        "candidate_actual_stop_risk": 16.1664,
+        "candidate_position_budget": 24.252,
+        "current_dollar_aggregate_after": 97.00816,
+        "current_dollar_excess": 24.25206,
+        "incumbents": [
+          {
+            "actual_stop_risk": 16.1664,
+            "component": "RC4",
+            "entry": 46113.77,
+            "opened": "2026.04.02 13:00:00",
+            "reserved_budget": 24.252,
+            "state": "POSITION",
+            "stop": 46416.89,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 16.1664,
+            "component": "RC16",
+            "entry": 46032.87,
+            "opened": "2026.04.02 13:30:00",
+            "reserved_budget": 24.252,
+            "state": "POSITION",
+            "stop": 45729.75,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 16.165067,
+            "component": "PASSIVE",
+            "entry": 23540.55,
+            "opened": "2026.04.02 14:58:46",
+            "reserved_budget": 24.252,
+            "state": "POSITION",
+            "stop": 22934.36,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.04.02 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 72.756,
+        "same_timestamp_signals": [
+          "PRESSURE"
+        ],
+        "server_time": "2026.04.02 15:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 8.091833,
+        "actual_stop_risk_after": 64.664267,
+        "actual_stop_risk_before": 48.497867,
+        "aggregate_cap": 72.7561,
+        "candidate": "RETURN",
+        "candidate_actual_stop_risk": 16.1664,
+        "candidate_position_budget": 24.252,
+        "current_dollar_aggregate_after": 97.00816,
+        "current_dollar_excess": 24.25206,
+        "incumbents": [
+          {
+            "actual_stop_risk": 16.1664,
+            "component": "RC4",
+            "entry": 46113.77,
+            "opened": "2026.04.02 13:00:00",
+            "reserved_budget": 24.252,
+            "state": "POSITION",
+            "stop": 46416.89,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 16.1664,
+            "component": "RC16",
+            "entry": 46032.87,
+            "opened": "2026.04.02 13:30:00",
+            "reserved_budget": 24.252,
+            "state": "POSITION",
+            "stop": 45729.75,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 16.165067,
+            "component": "PASSIVE",
+            "entry": 23540.55,
+            "opened": "2026.04.02 14:58:46",
+            "reserved_budget": 24.252,
+            "state": "POSITION",
+            "stop": 22934.36,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.04.02 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 72.756,
+        "same_timestamp_signals": [
+          "RETURN"
+        ],
+        "server_time": "2026.04.02 16:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 24.192533,
+        "actual_stop_risk_after": 48.981867,
+        "actual_stop_risk_before": 32.722133,
+        "aggregate_cap": 73.1744,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 16.259733,
+        "candidate_position_budget": 24.3915,
+        "current_dollar_aggregate_after": 73.4754,
+        "current_dollar_excess": 0.301,
+        "incumbents": [
+          {
+            "actual_stop_risk": 16.361067,
+            "component": "RC4",
+            "entry": 48771.35,
+            "opened": "2026.04.17 13:00:00",
+            "reserved_budget": 24.542,
+            "state": "POSITION",
+            "stop": 48464.58,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 16.361067,
+            "component": "RC16",
+            "entry": 48757.85,
+            "opened": "2026.04.17 13:30:00",
+            "reserved_budget": 24.542,
+            "state": "POSITION",
+            "stop": 48451.08,
+            "volume": 0.04
+          }
+        ],
+        "key": "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 49.084,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.04.17 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 9.381233,
+        "actual_stop_risk_after": 75.000267,
+        "actual_stop_risk_before": 56.249333,
+        "aggregate_cap": 84.3815,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 18.750933,
+        "candidate_position_budget": 28.1272,
+        "current_dollar_aggregate_after": 112.50864,
+        "current_dollar_excess": 28.12714,
+        "incumbents": [
+          {
+            "actual_stop_risk": 18.750933,
+            "component": "RC16",
+            "entry": 50877.1,
+            "opened": "2026.06.08 13:30:00",
+            "reserved_budget": 28.1272,
+            "state": "POSITION",
+            "stop": 50525.52,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 18.750933,
+            "component": "PRESSURE",
+            "entry": 51071.7,
+            "opened": "2026.06.08 15:00:00",
+            "reserved_budget": 28.1272,
+            "state": "POSITION",
+            "stop": 50720.12,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 18.747467,
+            "component": "PASSIVE",
+            "entry": 29432.95,
+            "opened": "2026.06.08 15:21:01",
+            "reserved_budget": 28.1272,
+            "state": "POSITION",
+            "stop": 30135.98,
+            "volume": 0.02
+          }
+        ],
+        "key": "2026.06.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 84.3816,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.06.08 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 10.166933,
+        "actual_stop_risk_after": 81.281067,
+        "actual_stop_risk_before": 60.959467,
+        "aggregate_cap": 91.448,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 20.3216,
+        "candidate_position_budget": 30.4827,
+        "current_dollar_aggregate_after": 121.93072,
+        "current_dollar_excess": 30.48272,
+        "incumbents": [
+          {
+            "actual_stop_risk": 20.3216,
+            "component": "PRESSURE",
+            "entry": 51993.3,
+            "opened": "2026.07.23 15:00:00",
+            "reserved_budget": 30.4827,
+            "state": "POSITION",
+            "stop": 52374.33,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 20.316267,
+            "component": "PASSIVE",
+            "entry": 28814.75,
+            "opened": "2026.07.23 15:00:34",
+            "reserved_budget": 30.4827,
+            "state": "POSITION",
+            "stop": 28052.89,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 20.3216,
+            "component": "RETURN",
+            "entry": 51740.1,
+            "opened": "2026.07.23 16:00:00",
+            "reserved_budget": 30.4827,
+            "state": "POSITION",
+            "stop": 51359.07,
+            "volume": 0.04
+          }
+        ],
+        "key": "2026.07.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 91.4481,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.07.23 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 27.1154,
+        "actual_stop_risk_after": 56.4832,
+        "actual_stop_risk_before": 37.906133,
+        "aggregate_cap": 83.5986,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 18.577067,
+        "candidate_position_budget": 27.8662,
+        "current_dollar_aggregate_after": 84.74404,
+        "current_dollar_excess": 1.14544,
+        "incumbents": [
+          {
+            "actual_stop_risk": 18.953067,
+            "component": "RC16",
+            "entry": 52948.7,
+            "opened": "2026.08.03 13:30:00",
+            "reserved_budget": 28.4389,
+            "state": "POSITION",
+            "stop": 52593.33,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 18.953067,
+            "component": "PRESSURE",
+            "entry": 53073.7,
+            "opened": "2026.08.03 15:00:00",
+            "reserved_budget": 28.4389,
+            "state": "POSITION",
+            "stop": 52718.33,
+            "volume": 0.04
+          }
+        ],
+        "key": "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 56.8778,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.03 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 9.9742,
+        "actual_stop_risk_after": 79.6376,
+        "actual_stop_risk_before": 59.724533,
+        "aggregate_cap": 89.6118,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 19.913067,
+        "candidate_position_budget": 29.8706,
+        "current_dollar_aggregate_after": 119.4824,
+        "current_dollar_excess": 29.8706,
+        "incumbents": [
+          {
+            "actual_stop_risk": 19.913067,
+            "component": "RC16",
+            "entry": 53762.6,
+            "opened": "2026.08.17 13:30:00",
+            "reserved_budget": 29.8706,
+            "state": "POSITION",
+            "stop": 53389.23,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 19.8984,
+            "component": "PASSIVE",
+            "entry": 30111.2,
+            "opened": "2026.08.17 15:49:11",
+            "reserved_budget": 29.8706,
+            "state": "POSITION",
+            "stop": 29365.01,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 19.913067,
+            "component": "RETURN",
+            "entry": 53582.7,
+            "opened": "2026.08.17 16:00:00",
+            "reserved_budget": 29.8706,
+            "state": "POSITION",
+            "stop": 53209.33,
+            "volume": 0.04
+          }
+        ],
+        "key": "2026.08.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 89.6118,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.17 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 9.908267,
+        "actual_stop_risk_after": 78.990933,
+        "actual_stop_risk_before": 59.237867,
+        "aggregate_cap": 88.8992,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 19.753067,
+        "candidate_position_budget": 29.6331,
+        "current_dollar_aggregate_after": 118.53232,
+        "current_dollar_excess": 29.63312,
+        "incumbents": [
+          {
+            "actual_stop_risk": 19.753067,
+            "component": "PRESSURE",
+            "entry": 53197.9,
+            "opened": "2026.08.20 15:00:00",
+            "reserved_budget": 29.6331,
+            "state": "POSITION",
+            "stop": 53568.27,
+            "volume": 0.04
+          },
+          {
+            "actual_stop_risk": 19.731733,
+            "component": "PASSIVE",
+            "entry": 29196.55,
+            "opened": "2026.08.20 15:30:29",
+            "reserved_budget": 29.6331,
+            "state": "POSITION",
+            "stop": 28456.61,
+            "volume": 0.02
+          },
+          {
+            "actual_stop_risk": 19.753067,
+            "component": "RETURN",
+            "entry": 53067.1,
+            "opened": "2026.08.20 16:00:00",
+            "reserved_budget": 29.6331,
+            "state": "POSITION",
+            "stop": 52696.73,
+            "volume": 0.04
+          }
+        ],
+        "key": "2026.08.20 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 88.8993,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.20 17:00:00",
+        "units_after": 4
+      }
+    ],
+    "geometry_300": [
+      {
+        "actual_stop_headroom": 11.4358,
+        "actual_stop_risk_after": 23.8332,
+        "actual_stop_risk_before": 16.0,
+        "aggregate_cap": 35.269,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 7.8332,
+        "candidate_position_budget": 11.7563,
+        "current_dollar_aggregate_after": 35.75632,
+        "current_dollar_excess": 0.48732,
+        "incumbents": [
+          {
+            "actual_stop_risk": 8.0,
+            "component": "RC4",
+            "entry": 42687.22,
+            "opened": "2025.01.02 13:00:00",
+            "reserved_budget": 12.0,
+            "state": "POSITION",
+            "stop": 42487.22,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 8.0,
+            "component": "RC16",
+            "entry": 42688.97,
+            "opened": "2025.01.02 13:30:00",
+            "reserved_budget": 12.0,
+            "state": "POSITION",
+            "stop": 42488.97,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 24.0,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.01.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 10.3404,
+        "actual_stop_risk_after": 21.1764,
+        "actual_stop_risk_before": 14.1728,
+        "aggregate_cap": 31.5168,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 7.0036,
+        "candidate_position_budget": 10.5056,
+        "current_dollar_aggregate_after": 31.76944,
+        "current_dollar_excess": 0.25264,
+        "incumbents": [
+          {
+            "actual_stop_risk": 7.0864,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 10.6319,
+            "state": "POSITION",
+            "stop": 42180.4,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 7.0864,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 10.6319,
+            "state": "POSITION",
+            "stop": 42165.4,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 21.2638,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 14:15:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 10.2708,
+        "actual_stop_risk_after": 21.1524,
+        "actual_stop_risk_before": 14.1728,
+        "aggregate_cap": 31.4232,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 6.9796,
+        "candidate_position_budget": 10.4744,
+        "current_dollar_aggregate_after": 31.73824,
+        "current_dollar_excess": 0.31504,
+        "incumbents": [
+          {
+            "actual_stop_risk": 7.0864,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 10.6319,
+            "state": "POSITION",
+            "stop": 42180.4,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 7.0864,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 10.6319,
+            "state": "POSITION",
+            "stop": 42165.4,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.01.14 15:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 21.2638,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 15:15:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 10.0512,
+        "actual_stop_risk_after": 21.0936,
+        "actual_stop_risk_before": 14.1728,
+        "aggregate_cap": 31.1448,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 6.9208,
+        "candidate_position_budget": 10.3816,
+        "current_dollar_aggregate_after": 31.64544,
+        "current_dollar_excess": 0.50064,
+        "incumbents": [
+          {
+            "actual_stop_risk": 7.0864,
+            "component": "RC4",
+            "entry": 42357.56,
+            "opened": "2025.01.14 13:00:00",
+            "reserved_budget": 10.6319,
+            "state": "POSITION",
+            "stop": 42180.4,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 7.0864,
+            "component": "RC16",
+            "entry": 42342.56,
+            "opened": "2025.01.14 13:30:00",
+            "reserved_budget": 10.6319,
+            "state": "POSITION",
+            "stop": 42165.4,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.01.14 15:30:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 21.2638,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.01.14 15:30:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 3.5218,
+        "actual_stop_risk_after": 28.0692,
+        "actual_stop_risk_before": 21.0496,
+        "aggregate_cap": 31.591,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 7.0196,
+        "candidate_position_budget": 10.5303,
+        "current_dollar_aggregate_after": 42.12128,
+        "current_dollar_excess": 10.53028,
+        "incumbents": [
+          {
+            "actual_stop_risk": 7.0196,
+            "component": "RC4",
+            "entry": 42534.41,
+            "opened": "2025.01.15 13:00:00",
+            "reserved_budget": 10.5303,
+            "state": "POSITION",
+            "stop": 42358.92,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 7.0196,
+            "component": "RC16",
+            "entry": 42535.16,
+            "opened": "2025.01.15 13:30:00",
+            "reserved_budget": 10.5303,
+            "state": "POSITION",
+            "stop": 42359.67,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 7.0104,
+            "component": "PASSIVE",
+            "entry": 21085.25,
+            "opened": "2025.01.15 15:45:00",
+            "reserved_budget": 10.5303,
+            "state": "POSITION",
+            "stop": 21260.51,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.01.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 31.5909,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.01.15 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 5.0336,
+        "actual_stop_risk_after": 40.2284,
+        "actual_stop_risk_before": 30.1704,
+        "aggregate_cap": 45.262,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 10.058,
+        "candidate_position_budget": 15.0873,
+        "current_dollar_aggregate_after": 60.34936,
+        "current_dollar_excess": 15.08736,
+        "incumbents": [
+          {
+            "actual_stop_risk": 10.058,
+            "component": "RC4",
+            "entry": 42548.46,
+            "opened": "2025.03.25 13:00:00",
+            "reserved_budget": 15.0873,
+            "state": "POSITION",
+            "stop": 42297.01,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 10.058,
+            "component": "RC16",
+            "entry": 42579.46,
+            "opened": "2025.03.25 13:30:00",
+            "reserved_budget": 15.0873,
+            "state": "POSITION",
+            "stop": 42328.01,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 10.0544,
+            "component": "PASSIVE",
+            "entry": 20179.71,
+            "opened": "2025.03.25 14:17:00",
+            "reserved_budget": 15.0873,
+            "state": "POSITION",
+            "stop": 20431.07,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.03.25 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 45.2619,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.03.25 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 13.612,
+        "actual_stop_risk_after": 27.774,
+        "actual_stop_risk_before": 18.5808,
+        "aggregate_cap": 41.386,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 9.1932,
+        "candidate_position_budget": 13.7953,
+        "current_dollar_aggregate_after": 41.6725,
+        "current_dollar_excess": 0.2865,
+        "incumbents": [
+          {
+            "actual_stop_risk": 9.3876,
+            "component": "RC16",
+            "entry": 38605.78,
+            "opened": "2025.04.08 13:30:00",
+            "reserved_budget": 14.0818,
+            "state": "POSITION",
+            "stop": 38371.09,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 9.1932,
+            "component": "PRESSURE",
+            "entry": 39052.53,
+            "opened": "2025.04.08 15:00:00",
+            "reserved_budget": 13.7953,
+            "state": "POSITION",
+            "stop": 38822.7,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 27.8771,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.04.08 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 19.7448,
+        "actual_stop_risk_after": 39.5256,
+        "actual_stop_risk_before": 26.3592,
+        "aggregate_cap": 59.2704,
+        "candidate": "PASSIVE",
+        "candidate_actual_stop_risk": 13.1664,
+        "candidate_position_budget": 19.7568,
+        "current_dollar_aggregate_after": 59.31224,
+        "current_dollar_excess": 0.04184,
+        "incumbents": [
+          {
+            "actual_stop_risk": 13.1796,
+            "component": "RC4",
+            "entry": 42378.53,
+            "opened": "2025.05.13 13:00:00",
+            "reserved_budget": 19.7777,
+            "state": "POSITION",
+            "stop": 42049.04,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 13.1796,
+            "component": "RC16",
+            "entry": 42361.53,
+            "opened": "2025.05.13 13:30:00",
+            "reserved_budget": 19.7777,
+            "state": "POSITION",
+            "stop": 42032.04,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 39.5554,
+        "same_timestamp_signals": [
+          "PASSIVE"
+        ],
+        "server_time": "2025.05.13 15:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 6.5796,
+        "actual_stop_risk_after": 52.7076,
+        "actual_stop_risk_before": 39.5328,
+        "aggregate_cap": 59.2872,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 13.1748,
+        "candidate_position_budget": 19.7624,
+        "current_dollar_aggregate_after": 79.09556,
+        "current_dollar_excess": 19.80836,
+        "incumbents": [
+          {
+            "actual_stop_risk": 13.1796,
+            "component": "RC4",
+            "entry": 42378.53,
+            "opened": "2025.05.13 13:00:00",
+            "reserved_budget": 19.7777,
+            "state": "POSITION",
+            "stop": 42049.04,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 13.1796,
+            "component": "RC16",
+            "entry": 42361.53,
+            "opened": "2025.05.13 13:30:00",
+            "reserved_budget": 19.7777,
+            "state": "POSITION",
+            "stop": 42032.04,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 13.1736,
+            "component": "PASSIVE",
+            "entry": 20889.83,
+            "opened": "2025.05.13 15:18:49",
+            "reserved_budget": 19.7777,
+            "state": "POSITION",
+            "stop": 21219.17,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.05.13 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 59.3331,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.13 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 18.8802,
+        "actual_stop_risk_after": 37.726,
+        "actual_stop_risk_before": 25.1472,
+        "aggregate_cap": 56.6062,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 12.5788,
+        "candidate_position_budget": 18.8687,
+        "current_dollar_aggregate_after": 56.6291,
+        "current_dollar_excess": 0.0229,
+        "incumbents": [
+          {
+            "actual_stop_risk": 12.5684,
+            "component": "PASSIVE",
+            "entry": 20711.15,
+            "opened": "2025.05.23 15:20:08",
+            "reserved_budget": 18.8916,
+            "state": "POSITION",
+            "stop": 20396.94,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 12.5788,
+            "component": "RETURN",
+            "entry": 41322.63,
+            "opened": "2025.05.23 16:00:00",
+            "reserved_budget": 18.8687,
+            "state": "POSITION",
+            "stop": 41008.16,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 37.7603,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.23 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 6.5557,
+        "actual_stop_risk_after": 52.4288,
+        "actual_stop_risk_before": 39.3212,
+        "aggregate_cap": 58.9845,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 13.1076,
+        "candidate_position_budget": 19.6615,
+        "current_dollar_aggregate_after": 78.646,
+        "current_dollar_excess": 19.6615,
+        "incumbents": [
+          {
+            "actual_stop_risk": 13.106,
+            "component": "PASSIVE",
+            "entry": 21681.55,
+            "opened": "2025.05.29 14:01:12",
+            "reserved_budget": 19.6615,
+            "state": "POSITION",
+            "stop": 21353.9,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 13.1076,
+            "component": "PRESSURE",
+            "entry": 42249.85,
+            "opened": "2025.05.29 15:00:00",
+            "reserved_budget": 19.6615,
+            "state": "POSITION",
+            "stop": 42577.54,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 13.1076,
+            "component": "RETURN",
+            "entry": 42199.45,
+            "opened": "2025.05.29 16:00:00",
+            "reserved_budget": 19.6615,
+            "state": "POSITION",
+            "stop": 41871.76,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.05.29 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 58.9845,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.05.29 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 6.4373,
+        "actual_stop_risk_after": 51.468,
+        "actual_stop_risk_before": 38.6004,
+        "aggregate_cap": 57.9053,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 12.8676,
+        "candidate_position_budget": 19.3018,
+        "current_dollar_aggregate_after": 77.20712,
+        "current_dollar_excess": 19.30182,
+        "incumbents": [
+          {
+            "actual_stop_risk": 12.8676,
+            "component": "RC4",
+            "entry": 42784.35,
+            "opened": "2025.06.11 13:00:01",
+            "reserved_budget": 19.3018,
+            "state": "POSITION",
+            "stop": 43106.04,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 12.8676,
+            "component": "RC16",
+            "entry": 42793.75,
+            "opened": "2025.06.11 13:30:00",
+            "reserved_budget": 19.3018,
+            "state": "POSITION",
+            "stop": 42472.06,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 12.8652,
+            "component": "PASSIVE",
+            "entry": 22034.09,
+            "opened": "2025.06.11 15:45:32",
+            "reserved_budget": 19.3018,
+            "state": "POSITION",
+            "stop": 22355.72,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.06.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 57.9054,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.06.11 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 6.3634,
+        "actual_stop_risk_after": 50.8944,
+        "actual_stop_risk_before": 38.1708,
+        "aggregate_cap": 57.2578,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 12.7236,
+        "candidate_position_budget": 19.0859,
+        "current_dollar_aggregate_after": 76.34376,
+        "current_dollar_excess": 19.08596,
+        "incumbents": [
+          {
+            "actual_stop_risk": 12.7236,
+            "component": "RC4",
+            "entry": 42320.95,
+            "opened": "2025.06.16 13:00:00",
+            "reserved_budget": 19.0859,
+            "state": "POSITION",
+            "stop": 42639.04,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 12.7236,
+            "component": "RC16",
+            "entry": 42345.35,
+            "opened": "2025.06.16 13:30:01",
+            "reserved_budget": 19.0859,
+            "state": "POSITION",
+            "stop": 42027.26,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 12.7236,
+            "component": "PRESSURE",
+            "entry": 42416.95,
+            "opened": "2025.06.16 15:00:00",
+            "reserved_budget": 19.0859,
+            "state": "POSITION",
+            "stop": 42098.86,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 57.2577,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.06.16 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 19.3302,
+        "actual_stop_risk_after": 39.4008,
+        "actual_stop_risk_before": 26.3544,
+        "aggregate_cap": 58.731,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 13.0464,
+        "candidate_position_budget": 19.577,
+        "current_dollar_aggregate_after": 59.10956,
+        "current_dollar_excess": 0.37856,
+        "incumbents": [
+          {
+            "actual_stop_risk": 13.1772,
+            "component": "PRESSURE",
+            "entry": 45309.4,
+            "opened": "2025.09.02 15:00:00",
+            "reserved_budget": 19.7663,
+            "state": "POSITION",
+            "stop": 45638.83,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 13.1772,
+            "component": "RETURN",
+            "entry": 45133.6,
+            "opened": "2025.09.02 16:00:00",
+            "reserved_budget": 19.7663,
+            "state": "POSITION",
+            "stop": 44804.17,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 39.5326,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.09.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 7.0715,
+        "actual_stop_risk_after": 56.3456,
+        "actual_stop_risk_before": 42.2592,
+        "aggregate_cap": 63.4171,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 14.0864,
+        "candidate_position_budget": 21.139,
+        "current_dollar_aggregate_after": 84.55608,
+        "current_dollar_excess": 21.13898,
+        "incumbents": [
+          {
+            "actual_stop_risk": 14.0864,
+            "component": "RC4",
+            "entry": 46527.6,
+            "opened": "2025.10.15 13:00:01",
+            "reserved_budget": 21.139,
+            "state": "POSITION",
+            "stop": 46175.44,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 14.0864,
+            "component": "RC16",
+            "entry": 46524.6,
+            "opened": "2025.10.15 13:30:00",
+            "reserved_budget": 21.139,
+            "state": "POSITION",
+            "stop": 46172.44,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 14.0864,
+            "component": "PRESSURE",
+            "entry": 46561.6,
+            "opened": "2025.10.15 15:00:00",
+            "reserved_budget": 21.139,
+            "state": "POSITION",
+            "stop": 46209.44,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.10.15 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 63.417,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.10.15 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 7.5527,
+        "actual_stop_risk_after": 60.3216,
+        "actual_stop_risk_before": 45.2388,
+        "aggregate_cap": 67.8743,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 15.0828,
+        "candidate_position_budget": 22.6248,
+        "current_dollar_aggregate_after": 90.4848,
+        "current_dollar_excess": 22.6105,
+        "incumbents": [
+          {
+            "actual_stop_risk": 15.0732,
+            "component": "RC4",
+            "entry": 46426.14,
+            "opened": "2025.11.18 13:00:00",
+            "reserved_budget": 22.6105,
+            "state": "POSITION",
+            "stop": 46802.97,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 15.0828,
+            "component": "PRESSURE",
+            "entry": 46218.39,
+            "opened": "2025.11.18 15:00:00",
+            "reserved_budget": 22.6248,
+            "state": "POSITION",
+            "stop": 46595.46,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 15.0828,
+            "component": "RETURN",
+            "entry": 46259.64,
+            "opened": "2025.11.18 16:00:00",
+            "reserved_budget": 22.6248,
+            "state": "POSITION",
+            "stop": 45882.57,
+            "volume": 0.03
+          }
+        ],
+        "key": "2025.11.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 67.8601,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2025.11.18 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 31.1891,
+        "actual_stop_risk_after": 62.4408,
+        "actual_stop_risk_before": 41.6344,
+        "aggregate_cap": 93.6299,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 20.8064,
+        "candidate_position_budget": 31.21,
+        "current_dollar_aggregate_after": 93.66266,
+        "current_dollar_excess": 0.03276,
+        "incumbents": [
+          {
+            "actual_stop_risk": 20.828,
+            "component": "RC4",
+            "entry": 48788.7,
+            "opened": "2026.02.02 13:00:00",
+            "reserved_budget": 31.2427,
+            "state": "POSITION",
+            "stop": 48528.35,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 20.8064,
+            "component": "PRESSURE",
+            "entry": 48876.7,
+            "opened": "2026.02.02 15:00:00",
+            "reserved_budget": 31.21,
+            "state": "POSITION",
+            "stop": 48616.62,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 62.4527,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.02.02 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 36.597733,
+        "actual_stop_risk_after": 74.404267,
+        "actual_stop_risk_before": 49.7376,
+        "aggregate_cap": 111.002,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 24.666667,
+        "candidate_position_budget": 37.0007,
+        "current_dollar_aggregate_after": 111.60822,
+        "current_dollar_excess": 0.60622,
+        "incumbents": [
+          {
+            "actual_stop_risk": 24.8688,
+            "component": "PRESSURE",
+            "entry": 47648.8,
+            "opened": "2026.03.06 15:00:00",
+            "reserved_budget": 37.3038,
+            "state": "POSITION",
+            "stop": 47959.66,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 24.8688,
+            "component": "RETURN",
+            "entry": 47323.1,
+            "opened": "2026.03.06 16:00:00",
+            "reserved_budget": 37.3038,
+            "state": "POSITION",
+            "stop": 47012.24,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 74.6076,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.03.06 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 12.3518,
+        "actual_stop_risk_after": 98.6312,
+        "actual_stop_risk_before": 73.972,
+        "aggregate_cap": 110.983,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 24.6592,
+        "candidate_position_budget": 36.9943,
+        "current_dollar_aggregate_after": 147.97736,
+        "current_dollar_excess": 36.99436,
+        "incumbents": [
+          {
+            "actual_stop_risk": 24.6592,
+            "component": "RC4",
+            "entry": 47270.5,
+            "opened": "2026.03.18 13:00:00",
+            "reserved_budget": 36.9943,
+            "state": "POSITION",
+            "stop": 47578.74,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 24.6536,
+            "component": "PASSIVE",
+            "entry": 24842.5,
+            "opened": "2026.03.18 15:15:24",
+            "reserved_budget": 36.9943,
+            "state": "POSITION",
+            "stop": 24226.16,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 24.6592,
+            "component": "RETURN",
+            "entry": 46771.1,
+            "opened": "2026.03.18 16:00:00",
+            "reserved_budget": 36.9943,
+            "state": "POSITION",
+            "stop": 46462.86,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.03.18 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 110.9829,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.03.18 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 12.568,
+        "actual_stop_risk_after": 100.5036,
+        "actual_stop_risk_before": 75.3772,
+        "aggregate_cap": 113.0716,
+        "candidate": "PRESSURE",
+        "candidate_actual_stop_risk": 25.1264,
+        "candidate_position_budget": 37.6905,
+        "current_dollar_aggregate_after": 150.76216,
+        "current_dollar_excess": 37.69056,
+        "incumbents": [
+          {
+            "actual_stop_risk": 25.1264,
+            "component": "RC4",
+            "entry": 46113.77,
+            "opened": "2026.04.02 13:00:00",
+            "reserved_budget": 37.6905,
+            "state": "POSITION",
+            "stop": 46427.85,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 25.1264,
+            "component": "RC16",
+            "entry": 46032.87,
+            "opened": "2026.04.02 13:30:00",
+            "reserved_budget": 37.6905,
+            "state": "POSITION",
+            "stop": 45718.79,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 25.1244,
+            "component": "PASSIVE",
+            "entry": 23540.55,
+            "opened": "2026.04.02 14:58:46",
+            "reserved_budget": 37.6905,
+            "state": "POSITION",
+            "stop": 22912.44,
+            "volume": 0.03
+          }
+        ],
+        "key": "2026.04.02 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 113.0715,
+        "same_timestamp_signals": [
+          "PRESSURE"
+        ],
+        "server_time": "2026.04.02 15:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 12.568,
+        "actual_stop_risk_after": 100.5036,
+        "actual_stop_risk_before": 75.3772,
+        "aggregate_cap": 113.0716,
+        "candidate": "RETURN",
+        "candidate_actual_stop_risk": 25.1264,
+        "candidate_position_budget": 37.6905,
+        "current_dollar_aggregate_after": 150.76216,
+        "current_dollar_excess": 37.69056,
+        "incumbents": [
+          {
+            "actual_stop_risk": 25.1264,
+            "component": "RC4",
+            "entry": 46113.77,
+            "opened": "2026.04.02 13:00:00",
+            "reserved_budget": 37.6905,
+            "state": "POSITION",
+            "stop": 46427.85,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 25.1264,
+            "component": "RC16",
+            "entry": 46032.87,
+            "opened": "2026.04.02 13:30:00",
+            "reserved_budget": 37.6905,
+            "state": "POSITION",
+            "stop": 45718.79,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 25.1244,
+            "component": "PASSIVE",
+            "entry": 23540.55,
+            "opened": "2026.04.02 14:58:46",
+            "reserved_budget": 37.6905,
+            "state": "POSITION",
+            "stop": 22912.44,
+            "volume": 0.03
+          }
+        ],
+        "key": "2026.04.02 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 113.0715,
+        "same_timestamp_signals": [
+          "RETURN"
+        ],
+        "server_time": "2026.04.02 16:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 37.5777,
+        "actual_stop_risk_after": 76.032,
+        "actual_stop_risk_before": 50.7856,
+        "aggregate_cap": 113.6097,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 25.2464,
+        "candidate_position_budget": 37.8699,
+        "current_dollar_aggregate_after": 114.06154,
+        "current_dollar_excess": 0.45184,
+        "incumbents": [
+          {
+            "actual_stop_risk": 25.3928,
+            "component": "RC4",
+            "entry": 48771.35,
+            "opened": "2026.04.17 13:00:00",
+            "reserved_budget": 38.0958,
+            "state": "POSITION",
+            "stop": 48453.94,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 25.3928,
+            "component": "RC16",
+            "entry": 48757.85,
+            "opened": "2026.04.17 13:30:00",
+            "reserved_budget": 38.0958,
+            "state": "POSITION",
+            "stop": 48440.44,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": true,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": true
+        },
+        "occupied_units": 2,
+        "reserved_before": 76.1916,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.04.17 17:00:00",
+        "units_after": 3
+      },
+      {
+        "actual_stop_headroom": 14.4887,
+        "actual_stop_risk_after": 115.7,
+        "actual_stop_risk_before": 86.7736,
+        "aggregate_cap": 130.1887,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 28.9264,
+        "candidate_position_budget": 43.3962,
+        "current_dollar_aggregate_after": 173.58488,
+        "current_dollar_excess": 43.39618,
+        "incumbents": [
+          {
+            "actual_stop_risk": 28.9264,
+            "component": "RC16",
+            "entry": 50877.1,
+            "opened": "2026.06.08 13:30:00",
+            "reserved_budget": 43.3962,
+            "state": "POSITION",
+            "stop": 50515.52,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 28.9264,
+            "component": "PRESSURE",
+            "entry": 51071.7,
+            "opened": "2026.06.08 15:00:00",
+            "reserved_budget": 43.3962,
+            "state": "POSITION",
+            "stop": 50710.12,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 28.9208,
+            "component": "PASSIVE",
+            "entry": 29432.95,
+            "opened": "2026.06.08 15:21:01",
+            "reserved_budget": 43.3962,
+            "state": "POSITION",
+            "stop": 30155.97,
+            "volume": 0.03
+          }
+        ],
+        "key": "2026.06.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 130.1886,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.06.08 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 15.6119,
+        "actual_stop_risk_after": 124.8112,
+        "actual_stop_risk_before": 93.6064,
+        "aggregate_cap": 140.4231,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 31.2048,
+        "candidate_position_budget": 46.8077,
+        "current_dollar_aggregate_after": 187.2308,
+        "current_dollar_excess": 46.8077,
+        "incumbents": [
+          {
+            "actual_stop_risk": 31.2048,
+            "component": "PRESSURE",
+            "entry": 51993.3,
+            "opened": "2026.07.23 15:00:00",
+            "reserved_budget": 46.8077,
+            "state": "POSITION",
+            "stop": 52383.36,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 31.1968,
+            "component": "PASSIVE",
+            "entry": 28814.75,
+            "opened": "2026.07.23 15:00:34",
+            "reserved_budget": 46.8077,
+            "state": "POSITION",
+            "stop": 28034.83,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 31.2048,
+            "component": "RETURN",
+            "entry": 51740.1,
+            "opened": "2026.07.23 16:00:00",
+            "reserved_budget": 46.8077,
+            "state": "POSITION",
+            "stop": 51350.04,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.07.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 140.4231,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.07.23 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 14.5656,
+        "actual_stop_risk_after": 116.3456,
+        "actual_stop_risk_before": 87.2592,
+        "aggregate_cap": 130.9112,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 29.0864,
+        "candidate_position_budget": 43.6371,
+        "current_dollar_aggregate_after": 174.54824,
+        "current_dollar_excess": 43.63704,
+        "incumbents": [
+          {
+            "actual_stop_risk": 29.0864,
+            "component": "RC4",
+            "entry": 52875.9,
+            "opened": "2026.08.03 13:00:00",
+            "reserved_budget": 43.6371,
+            "state": "POSITION",
+            "stop": 53239.48,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 29.0864,
+            "component": "RC16",
+            "entry": 52948.7,
+            "opened": "2026.08.03 13:30:00",
+            "reserved_budget": 43.6371,
+            "state": "POSITION",
+            "stop": 52585.12,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 29.0864,
+            "component": "PRESSURE",
+            "entry": 53073.7,
+            "opened": "2026.08.03 15:00:00",
+            "reserved_budget": 43.6371,
+            "state": "POSITION",
+            "stop": 52710.12,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 130.9113,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.03 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 15.2783,
+        "actual_stop_risk_after": 122.0136,
+        "actual_stop_risk_before": 91.5048,
+        "aggregate_cap": 137.2919,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 30.5088,
+        "candidate_position_budget": 45.764,
+        "current_dollar_aggregate_after": 183.05592,
+        "current_dollar_excess": 45.76402,
+        "incumbents": [
+          {
+            "actual_stop_risk": 30.5088,
+            "component": "RC16",
+            "entry": 53762.6,
+            "opened": "2026.08.17 13:30:00",
+            "reserved_budget": 45.764,
+            "state": "POSITION",
+            "stop": 53381.24,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 30.4872,
+            "component": "PASSIVE",
+            "entry": 30111.2,
+            "opened": "2026.08.17 15:49:11",
+            "reserved_budget": 45.764,
+            "state": "POSITION",
+            "stop": 29349.02,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 30.5088,
+            "component": "RETURN",
+            "entry": 53582.7,
+            "opened": "2026.08.17 16:00:00",
+            "reserved_budget": 45.764,
+            "state": "POSITION",
+            "stop": 53201.34,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.08.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 137.292,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.17 17:00:00",
+        "units_after": 4
+      },
+      {
+        "actual_stop_headroom": 15.1701,
+        "actual_stop_risk_after": 121.05,
+        "actual_stop_risk_before": 90.7796,
+        "aggregate_cap": 136.2201,
+        "candidate": "CROSS",
+        "candidate_actual_stop_risk": 30.2704,
+        "candidate_position_budget": 45.4067,
+        "current_dollar_aggregate_after": 181.6268,
+        "current_dollar_excess": 45.4067,
+        "incumbents": [
+          {
+            "actual_stop_risk": 30.2704,
+            "component": "PRESSURE",
+            "entry": 53197.9,
+            "opened": "2026.08.20 15:00:00",
+            "reserved_budget": 45.4067,
+            "state": "POSITION",
+            "stop": 53576.28,
+            "volume": 0.06
+          },
+          {
+            "actual_stop_risk": 30.2388,
+            "component": "PASSIVE",
+            "entry": 29196.55,
+            "opened": "2026.08.20 15:30:29",
+            "reserved_budget": 45.4067,
+            "state": "POSITION",
+            "stop": 28440.58,
+            "volume": 0.03
+          },
+          {
+            "actual_stop_risk": 30.2704,
+            "component": "RETURN",
+            "entry": 53067.1,
+            "opened": "2026.08.20 16:00:00",
+            "reserved_budget": 45.4067,
+            "state": "POSITION",
+            "stop": 52688.72,
+            "volume": 0.06
+          }
+        ],
+        "key": "2026.08.20 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "mechanisms": {
+          "actual_stop_residual_only": true,
+          "current_cap_three_units_with_actual_stop_backstop": false,
+          "current_entry_budget_dollars": false,
+          "lot_demotion_under_same_stop_budget": false,
+          "three_units_without_stop_backstop": false
+        },
+        "occupied_units": 3,
+        "reserved_before": 136.2201,
+        "same_timestamp_signals": [
+          "CROSS"
+        ],
+        "server_time": "2026.08.20 17:00:00",
+        "units_after": 4
+      }
+    ]
+  },
+  "sources": {
+    "runs": {
+      "geometry_100": [
+        {
+          "bytes": 1618653,
+          "path": "lab/artifacts/backtests/capital-step-elasticity/hard20-loser-events-a.csv",
+          "sha256": "5cdaf5813884be9e438e74d27cd172f8b6181a8a3c0bec481c224ddca653dc89"
+        },
+        {
+          "bytes": 1100034,
+          "path": "lab/artifacts/backtests/capital-step-elasticity/hard20-loser-events-b.csv",
+          "sha256": "a1032287a338e955046735ccd7b1ff92bed994fa428513ce268fd78df8e76914"
+        }
+      ],
+      "geometry_200": [
+        {
+          "bytes": 1729678,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-200-events-a.csv",
+          "sha256": "84ccd491759bdcecc47c9ec636342659a9bd73360a71290ec5eb2abaa6c9311e"
+        },
+        {
+          "bytes": 1167169,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-200-events-b.csv",
+          "sha256": "98a2f2b7cbcfbd956876d0f665c6d7b10141625e73ce63f0cd151df53468f21b"
+        }
+      ],
+      "geometry_300": [
+        {
+          "bytes": 1718160,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-300-events-a.csv",
+          "sha256": "298d687df650d86c072076126783bc56a2e0bea7cb59108183170ff35b9f12c7"
+        },
+        {
+          "bytes": 1175790,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-300-events-b.csv",
+          "sha256": "c41c841264208999d92f6e681e75b5a8d964bda55b7e6d9ab556257d5bfe7b57"
+        }
+      ]
+    },
+    "transition_runtime": {
+      "bytes": 228924,
+      "path": "lab/frontier/transition-reserve-geometry/runtime.json",
+      "sha256": "331b672e764f5088c523b40ff7fcdee0203a24ffb66155a0324ab2a00bdc20f2"
+    }
+  },
+  "unit": "capital-scale-admission-topology-010"
+}

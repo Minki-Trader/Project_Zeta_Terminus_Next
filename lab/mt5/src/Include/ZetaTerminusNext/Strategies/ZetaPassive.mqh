@@ -314,11 +314,22 @@ bool PlacePassiveLimit(const int direction,
    if(orders == 1)
      {
       string protection_detail = "";
-      if(!OrderSelect(order_ticket) ||
-         !SelectedPassiveOrderProtectionMatches(protection_detail) ||
-         aggregate_before + passive_pending_planned_risk_usd >
-         admitted_capital * InpMaximumAggregateRiskFraction +
-         MathMax(0.01, passive_pending_planned_risk_usd * 0.01))
+      const bool passive_protection_confirmed =
+         (OrderSelect(order_ticket) &&
+          SelectedPassiveOrderProtectionMatches(protection_detail));
+      bool passive_aggregate_confirmed =
+         (aggregate_before + passive_pending_planned_risk_usd <=
+          admitted_capital * InpMaximumAggregateRiskFraction +
+          MathMax(0.01, passive_pending_planned_risk_usd * 0.01));
+#ifdef ZETA_FRONTIER_POST_PLACEMENT_RISK_CONFIRMED
+      if(passive_protection_confirmed && !passive_aggregate_confirmed)
+         passive_aggregate_confirmed =
+            ZETA_FRONTIER_POST_PLACEMENT_RISK_CONFIRMED(
+               aggregate_before,
+               passive_pending_planned_risk_usd,
+               admitted_capital);
+#endif
+      if(!passive_protection_confirmed || !passive_aggregate_confirmed)
         {
          component_states[US100_PASSIVE_LIMIT].entry_check_result = "SAFETY_STOP";
          ++protection_mismatches;

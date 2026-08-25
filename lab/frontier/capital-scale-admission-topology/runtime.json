@@ -1,0 +1,1385 @@
+{
+  "adjacent_path_substitutions": {
+    "first_added_lifecycle": {
+      "close": {
+        "actual_net": 10.25,
+        "event": "CLOSE",
+        "server_time": "2025.01.02 21:00:00",
+        "stressed_net": 10.214
+      },
+      "effect": "This formerly blocked Cross added 10.214 stressed dollars before the first common lost lifecycle.",
+      "open": {
+        "component": "CROSS",
+        "entry": 21137.82,
+        "planned_risk": 11.7563,
+        "server_time": "2025.01.02 17:00:00",
+        "stop": 21333.65,
+        "volume": 0.03
+      }
+    },
+    "first_common_lost_lifecycle": {
+      "interpretation": "The January 2 gain increased January 8 risk capital and widened RC16's stop from 42310.48 to 42303.71. RC16 therefore survived from 14:31:43 to 16:43:37. Return arrived as the fourth occupied unit and was blocked instead of receiving the old Pressure slot exchange.",
+      "key": "2025.01.08 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+      "new_rc16": {
+        "close": {
+          "actual_net": -6.21,
+          "event": "EXTERNAL_CLOSE",
+          "server_time": "2025.01.08 16:43:37",
+          "stressed_net": -6.252
+        },
+        "open": {
+          "component": "RC16",
+          "entry": 42510.54,
+          "planned_risk": 12.4125,
+          "server_time": "2025.01.08 13:30:00",
+          "stop": 42303.71,
+          "volume": 0.03
+        }
+      },
+      "new_return_skip": {
+        "candidate_actual_stop_risk": 8.2064,
+        "detail": "position_cap=12.3116 aggregate_cap=36.9348",
+        "nominal_aggregate_after": 49.17728
+      },
+      "old_exchange": {
+        "actual_net_at_release": 0.038414,
+        "detail": "mode=loser-residual incumbent=3 required=0.1836 released=11.7260 position_budget=11.7080",
+        "stressed_r_at_release": -0.005008
+      },
+      "old_rc16": {
+        "close": {
+          "actual_net": -6.01,
+          "event": "EXTERNAL_CLOSE",
+          "server_time": "2025.01.08 14:31:43",
+          "stressed_net": -6.052
+        },
+        "open": {
+          "component": "RC16",
+          "entry": 42510.54,
+          "planned_risk": 12.0039,
+          "server_time": "2025.01.08 13:30:00",
+          "stop": 42310.48,
+          "volume": 0.03
+        }
+      },
+      "old_return_open": {
+        "component": "RETURN",
+        "entry": 42472.79,
+        "planned_risk": 11.5986,
+        "server_time": "2025.01.08 16:00:00",
+        "stop": 42279.63,
+        "volume": 0.03
+      }
+    },
+    "passive_timing_substitution": {
+      "interpretation": "An earlier 15:00 Passive opportunity replaced the retained 15:15 opportunity, so higher total entries still do not imply strict opportunity preservation.",
+      "new_fill": {
+        "entry": 20868.71,
+        "server_time": "2025.05.13 15:00:29"
+      },
+      "old_fill": {
+        "entry": 20889.83,
+        "server_time": "2025.05.13 15:18:49"
+      }
+    }
+  },
+  "boundary": {
+    "entry_priority": "unchanged first-come physical order",
+    "independent_account_and_priority_experiments": "not opened",
+    "live_surface": "untouched",
+    "mechanism_run": "current_cap_three_units_with_actual_stop_backstop",
+    "new_hypothesis_opened": false,
+    "transition_reserve": "prospective_position_budget_1_25 retained unchanged"
+  },
+  "compile": {
+    "neutral_parent": {
+      "errors": 0,
+      "passed": true,
+      "source": {
+        "bytes": 15020,
+        "path": "lab/artifacts/logs/ZetaNextPre500FiniteRiskPortfolioV7-post-placement-neutral.log",
+        "sha256": "a7e1f452ba5c510b4852b68b1165235e2c06dcd013362e904885c300c4702472"
+      },
+      "warnings": 0
+    },
+    "neutral_transition_reserve": {
+      "errors": 0,
+      "passed": true,
+      "source": {
+        "bytes": 17976,
+        "path": "lab/artifacts/logs/ZetaNextTransitionReserveGeometryV1-post-placement-neutral.log",
+        "sha256": "03ae50b2d34b011c9b94c9f93440824f70ff777137ab8c8ee938dff496f43ac2"
+      },
+      "warnings": 0
+    },
+    "topology_ea": {
+      "errors": 0,
+      "passed": true,
+      "source": {
+        "bytes": 19306,
+        "path": "lab/artifacts/logs/ZetaNextCapitalScaleAdmissionTopologyV1-post-placement.log",
+        "sha256": "15bd9eb42cb7e3684e29402d2c359ea4a3860c428263f4dbba8208a61d24fcde"
+      },
+      "warnings": 0
+    }
+  },
+  "economic_comparison": {
+    "100": {
+      "retained_geometry": {
+        "actual_net": 299.77,
+        "entries": 923,
+        "risk_admission_skips": 26,
+        "stressed_closed_drawdown": 53.438,
+        "stressed_net": 280.7245
+      },
+      "topology": {
+        "actual_net": 273.07,
+        "entries": 930,
+        "risk_admission_skips": 16,
+        "stressed_closed_drawdown": 50.208,
+        "stressed_net": 254.234
+      },
+      "topology_minus_retained": {
+        "actual_net": -26.7,
+        "entries": 7,
+        "risk_admission_skips": -10,
+        "stressed_closed_drawdown": -3.23,
+        "stressed_net": -26.4905
+      }
+    },
+    "200": {
+      "retained_geometry": {
+        "actual_net": 582.54,
+        "entries": 923,
+        "risk_admission_skips": 26,
+        "stressed_closed_drawdown": 104.216,
+        "stressed_net": 543.817
+      },
+      "topology": {
+        "actual_net": 546.21,
+        "entries": 930,
+        "risk_admission_skips": 16,
+        "stressed_closed_drawdown": 100.456,
+        "stressed_net": 508.504
+      },
+      "topology_minus_retained": {
+        "actual_net": -36.33,
+        "entries": 7,
+        "risk_admission_skips": -10,
+        "stressed_closed_drawdown": -3.76,
+        "stressed_net": -35.313
+      }
+    },
+    "300": {
+      "retained_geometry": {
+        "actual_net": 897.32,
+        "entries": 922,
+        "risk_admission_skips": 27,
+        "stressed_closed_drawdown": 160.104,
+        "stressed_net": 839.6675
+      },
+      "topology": {
+        "actual_net": 818.81,
+        "entries": 930,
+        "risk_admission_skips": 16,
+        "stressed_closed_drawdown": 150.684,
+        "stressed_net": 762.326
+      },
+      "topology_minus_retained": {
+        "actual_net": -78.51,
+        "entries": 8,
+        "risk_admission_skips": -11,
+        "stressed_closed_drawdown": -9.42,
+        "stressed_net": -77.3415
+      }
+    }
+  },
+  "entry_preservation": {
+    "100": {
+      "added_new_entries": [
+        "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.01.14 14:20:53|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.05.13 15:00:29|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+      ],
+      "exact_old_entry_superset": false,
+      "missing_old_entries": [
+        "2025.01.08 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+        "2025.05.13 15:18:49|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "2025.05.23 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+      ],
+      "new_entries": 930,
+      "old_entries": 923,
+      "preserved_entries": 920
+    },
+    "200": {
+      "added_new_entries": [
+        "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.01.14 14:20:53|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.05.13 15:00:29|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+      ],
+      "exact_old_entry_superset": false,
+      "missing_old_entries": [
+        "2025.01.08 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+        "2025.05.13 15:18:49|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+      ],
+      "new_entries": 930,
+      "old_entries": 923,
+      "preserved_entries": 921
+    },
+    "300": {
+      "added_new_entries": [
+        "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.01.14 14:20:53|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.05.13 15:00:29|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+        "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7"
+      ],
+      "exact_old_entry_superset": false,
+      "missing_old_entries": [
+        "2025.01.08 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+        "2025.05.13 15:18:49|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+      ],
+      "new_entries": 930,
+      "old_entries": 922,
+      "preserved_entries": 920
+    }
+  },
+  "gate": {
+    "all_override_events_within_three_units_and_stop_backstop": true,
+    "all_post_placement_confirmations_within_contract": true,
+    "all_three_paths_fault_free": true,
+    "decision": "reject_runtime_transform",
+    "every_old_entry_preserved": false,
+    "maximum_occupied_units_no_more_than_three": true,
+    "reason": "The transform made the three capital paths numerically scale-consistent and recovered the named 300 USD entry, but it failed the predeclared exact-entry-preservation gate and recovered the target only through endogenous earlier path mutation rather than a same-decision admission correction.",
+    "scale_entry_sets_equal": true,
+    "selected_for_retention": false,
+    "target_300_entry_recovered": true,
+    "target_recovered_by_same_decision_override": false
+  },
+  "implementation_correction": {
+    "cause": "The selected admission contract allowed a third Passive risk unit, but the legacy post-placement confirmation reapplied the old nominal dollar aggregate and engaged a safety stop.",
+    "correction": "A frontier-only post-placement hook now confirms the same three-unit plus actual-stop backstop contract. Neutral parent and retained transition-reserve binaries compile without the hook.",
+    "economic_evidence_use": false,
+    "excluded_first_attempt": {
+      "actual_net": -8.71,
+      "broker_mismatch": true,
+      "protection_mismatches": 1,
+      "safety_stopped": true
+    }
+  },
+  "judgement": {
+    "closed_observation": "Current-cap three-unit admission is a coherent safety representation but not a behavior-preserving repair. It aligned the paths at 930 entries each and bounded occupied exposure at three units, yet replaced existing opportunities and reduced stressed net at every capital scale. The original 300 USD miss remains explained by incumbent survival plus nominal budget occupancy, while no tested non-oracle admission transform satisfied the preservation gate.",
+    "next_research_opened": false,
+    "promotion": "none",
+    "retained_primary": "prospective_position_budget_1_25_transition_reserve_with_existing_nominal_12_percent_admission"
+  },
+  "limits": [
+    "Only the mechanism selected by the already-open proxy was run; no new admission, priority, independent-account or portfolio-ranking hypothesis was introduced.",
+    "Outcome differences are diagnostic. Rejection is controlled first by exact entry preservation and direct causal recovery, not hindsight profitability.",
+    "The maximum_evaluated_units_after summary includes blocked fourth candidates; reconstructed actually occupied exposure never exceeded three units."
+  ],
+  "original_missing_incident": {
+    "candidate": {
+      "actual_stop_headroom": 36.597733,
+      "actual_stop_risk_after": 74.404267,
+      "actual_stop_risk_before": 49.7376,
+      "aggregate_cap": 111.002,
+      "candidate": "CROSS",
+      "candidate_actual_stop_risk": 24.666667,
+      "candidate_position_budget": 37.0007,
+      "current_dollar_aggregate_after": 111.60822,
+      "current_dollar_excess": 0.60622,
+      "incumbents": [
+        {
+          "actual_stop_risk": 24.8688,
+          "component": "PRESSURE",
+          "entry": 47648.8,
+          "opened": "2026.03.06 15:00:00",
+          "reserved_budget": 37.3038,
+          "state": "POSITION",
+          "stop": 47959.66,
+          "volume": 0.06
+        },
+        {
+          "actual_stop_risk": 24.8688,
+          "component": "RETURN",
+          "entry": 47323.1,
+          "opened": "2026.03.06 16:00:00",
+          "reserved_budget": 37.3038,
+          "state": "POSITION",
+          "stop": 47012.24,
+          "volume": 0.06
+        }
+      ],
+      "key": "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+      "mechanisms": {
+        "actual_stop_residual_only": true,
+        "current_cap_three_units_with_actual_stop_backstop": true,
+        "current_entry_budget_dollars": false,
+        "lot_demotion_under_same_stop_budget": false,
+        "three_units_without_stop_backstop": true
+      },
+      "occupied_units": 2,
+      "reserved_before": 74.6076,
+      "same_timestamp_signals": [
+        "CROSS"
+      ],
+      "server_time": "2026.03.06 17:00:00",
+      "units_after": 3
+    },
+    "cause_decomposition": {
+      "aggregate_12_percent": "immediate_block; two 37.3038 entry budgets plus the current 37.0007 unit produced 111.6082 against 111.0020",
+      "incumbent_occupancy": "causal; PRESSURE and RETURN were both open at the 300 USD CROSS decision",
+      "lot_rounding": "not_direct; 0.04 at 200 and 0.06 at 300 are exactly deposit-proportional. Earlier path P/L changed conservative capital and widened the 300 USD Return stop, which changed occupancy.",
+      "lower_lot_demotion": "not_independent; the frozen stop search expands distance to spend the same position budget and admission then books a full 4 percent unit, so volume reduction alone does not create aggregate capacity",
+      "physical_evaluation_order": "not_direct; the three relevant decisions occurred at distinct 15:00, 16:00 and 17:00 times"
+    },
+    "matched_200_cross_outcome_diagnostic_only": {
+      "actual_net": 4.43,
+      "close_time": "2026.03.06 21:00:00",
+      "open_time": "2026.03.06 17:00:00",
+      "selection_use": false,
+      "stop": 24383.83,
+      "stressed_net": 4.406,
+      "volume": 0.04
+    },
+    "missing_key": "2026.03.06 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+    "physical_sequence": [
+      "PRESSURE entered at 15:00",
+      "RETURN entered at 16:00",
+      "CROSS was evaluated at 17:00"
+    ],
+    "return_incumbent": {
+      "geometry_200": {
+        "actual_net": -12.27,
+        "close_event": "EXTERNAL_CLOSE",
+        "close_time": "2026.03.06 16:59:11",
+        "entry_time": "2026.03.06 16:00:00",
+        "stop": 47016.98,
+        "stressed_net": -12.358,
+        "volume": 0.04
+      },
+      "geometry_300": {
+        "actual_net": 12.38,
+        "close_event": "CLOSE",
+        "close_time": "2026.03.06 22:00:00",
+        "entry_time": "2026.03.06 16:00:00",
+        "stop": 47012.24,
+        "stressed_net": 12.248,
+        "volume": 0.06
+      },
+      "interpretation": "The 300 USD Return stop was 4.74 index points farther away. It survived the 16:59:11 tick that stopped the 200 USD path and remained an occupied risk unit when CROSS arrived."
+    },
+    "same_timestamp_competition": false
+  },
+  "question": "Can shared 12 percent admission use scale-consistent risk units so the 300 USD path recovers its single missing opportunity without increasing maximum exposure or weakening transition reserve?",
+  "runtime_runs": {
+    "100": {
+      "deposit": 100.0,
+      "events": {
+        "actual_closed_drawdown": 48.9,
+        "actual_net": 273.07,
+        "all_override_events_within_contract": true,
+        "all_post_placement_events_within_contract": true,
+        "closed_lifecycles": 930,
+        "components": {
+          "CROSS": {
+            "actual_net": 57.65,
+            "closed_lifecycles": 338,
+            "stressed_net": 50.6295
+          },
+          "PASSIVE": {
+            "actual_net": 6.87,
+            "closed_lifecycles": 222,
+            "stressed_net": 3.9535
+          },
+          "PRESSURE": {
+            "actual_net": 50.91,
+            "closed_lifecycles": 61,
+            "stressed_net": 49.187
+          },
+          "RC16": {
+            "actual_net": 90.97,
+            "closed_lifecycles": 123,
+            "stressed_net": 88.13
+          },
+          "RC4": {
+            "actual_net": 27.02,
+            "closed_lifecycles": 100,
+            "stressed_net": 24.784
+          },
+          "RETURN": {
+            "actual_net": 39.65,
+            "closed_lifecycles": 86,
+            "stressed_net": 37.55
+          }
+        },
+        "entries": 930,
+        "maximum_occupied_units": 3,
+        "maximum_reconstructed_initial_stop_risk": 29.64,
+        "normal_stops": 1,
+        "override_contract": [
+          {
+            "actual_stop_risk_after": 7.939867,
+            "actual_stop_risk_cap": 11.7559,
+            "key": "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 8.163733,
+            "actual_stop_risk_cap": 12.1692,
+            "key": "2025.01.08 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 7.835067,
+            "actual_stop_risk_cap": 11.6868,
+            "key": "2025.01.10 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 7.382933,
+            "actual_stop_risk_cap": 10.9908,
+            "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 7.395467,
+            "actual_stop_risk_cap": 11.0472,
+            "key": "2025.01.14 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 7.965867,
+            "actual_stop_risk_cap": 11.7876,
+            "key": "2025.01.31 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 8.406267,
+            "actual_stop_risk_cap": 12.5856,
+            "key": "2025.02.10 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 9.7632,
+            "actual_stop_risk_cap": 14.5771,
+            "key": "2025.03.05 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 9.890667,
+            "actual_stop_risk_cap": 14.7144,
+            "key": "2025.03.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 9.286,
+            "actual_stop_risk_cap": 13.8423,
+            "key": "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 13.036667,
+            "actual_stop_risk_cap": 19.5492,
+            "key": "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 12.541067,
+            "actual_stop_risk_cap": 18.7012,
+            "key": "2025.05.23 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 12.2992,
+            "actual_stop_risk_cap": 18.2081,
+            "key": "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 12.8196,
+            "actual_stop_risk_cap": 19.1163,
+            "key": "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 14.4996,
+            "actual_stop_risk_cap": 21.7524,
+            "key": "2025.11.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 19.947467,
+            "actual_stop_risk_cap": 29.912,
+            "key": "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 21.737067,
+            "actual_stop_risk_cap": 32.1611,
+            "key": "2026.02.05 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 22.325867,
+            "actual_stop_risk_cap": 33.3599,
+            "key": "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 26.323733,
+            "actual_stop_risk_cap": 38.9598,
+            "key": "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          }
+        ],
+        "post_placement_contract": [
+          {
+            "actual_stop_risk": 7.382933,
+            "actual_stop_risk_cap": 10.9908,
+            "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "occupied_units": 3,
+            "within_contract": true
+          }
+        ],
+        "risk_admission_skips": 16,
+        "stressed_closed_drawdown": 50.208,
+        "stressed_net": 254.234
+      },
+      "final": {
+        "actual_net": 273.07,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 16,
+        "safety_stopped": false,
+        "stage_balance": 373.07,
+        "stressed_closed_drawdown": 50.208,
+        "stressed_net": 254.234
+      },
+      "no_faults": true,
+      "normalized": {
+        "actual_return_percent": 273.07,
+        "stressed_closed_drawdown_percent": 50.208,
+        "stressed_return_percent": 254.234
+      },
+      "parity": {
+        "entries_equal_closes": true,
+        "events_equal_final_actual_net": true,
+        "events_equal_final_stressed_drawdown": true,
+        "events_equal_final_stressed_net": true,
+        "one_normal_stop": true,
+        "report_equals_event_entries": true,
+        "report_equals_final_actual_net": true,
+        "summary_equals_event_overrides": true,
+        "summary_equals_event_skips": true
+      },
+      "report": {
+        "actual_balance_drawdown": 48.9,
+        "actual_equity_drawdown": 50.13,
+        "actual_net": 273.07,
+        "entries": 930,
+        "history_quality": "100% 실제 틱",
+        "profit_factor": 1.35,
+        "recovery_factor": 5.45,
+        "sharpe_ratio": 4.95
+      },
+      "reserve_summary": {
+        "addition_step": 150.0,
+        "base_volume": 0.01,
+        "deposit": 100.0,
+        "maximum_raw_tier": 2,
+        "mode": "prospective-position-budget-1.25"
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 96632092,
+          "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-100-agent.log",
+          "sha256": "850fbb3199496a0cb0452dee5e17ef3f083fd2b0c964de6d7c131d37c26d859f"
+        },
+        "events": [
+          {
+            "bytes": 1787760,
+            "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-100-events-a.csv",
+            "sha256": "f1e9f74f2133231d24b764b1611a234ff36d99f3e9e913a1012add51632302ee"
+          },
+          {
+            "bytes": 1211544,
+            "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-100-events-b.csv",
+            "sha256": "af30751da100cff23894f36d70fb3321dd919f48ba348c6cf5f7634b87752205"
+          }
+        ],
+        "report": {
+          "bytes": 1840166,
+          "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-100-2025-2026q3.htm",
+          "sha256": "ebf9633f56151c4f69ed72c63b0cb023dd721124f477c9c2cd95923db07eee70"
+        }
+      },
+      "topology_summary": {
+        "checks": 35,
+        "maximum_evaluated_actual_stop_risk": 37.936,
+        "maximum_evaluated_units_after": 4,
+        "overrides": 19,
+        "post_placement_blocks": 0,
+        "post_placement_checks": 1,
+        "post_placement_confirmations": 1,
+        "read_failures": 0,
+        "stop_risk_blocks": 0,
+        "unit_blocks": 16
+      }
+    },
+    "200": {
+      "deposit": 200.0,
+      "events": {
+        "actual_closed_drawdown": 97.84,
+        "actual_net": 546.21,
+        "all_override_events_within_contract": true,
+        "all_post_placement_events_within_contract": true,
+        "closed_lifecycles": 930,
+        "components": {
+          "CROSS": {
+            "actual_net": 115.62,
+            "closed_lifecycles": 338,
+            "stressed_net": 101.529
+          },
+          "PASSIVE": {
+            "actual_net": 13.8,
+            "closed_lifecycles": 222,
+            "stressed_net": 7.967
+          },
+          "PRESSURE": {
+            "actual_net": 101.74,
+            "closed_lifecycles": 61,
+            "stressed_net": 98.294
+          },
+          "RC16": {
+            "actual_net": 181.79,
+            "closed_lifecycles": 123,
+            "stressed_net": 176.126
+          },
+          "RC4": {
+            "actual_net": 54.01,
+            "closed_lifecycles": 100,
+            "stressed_net": 49.538
+          },
+          "RETURN": {
+            "actual_net": 79.25,
+            "closed_lifecycles": 86,
+            "stressed_net": 75.05
+          }
+        },
+        "entries": 930,
+        "maximum_occupied_units": 3,
+        "maximum_reconstructed_initial_stop_risk": 59.2864,
+        "normal_stops": 1,
+        "override_contract": [
+          {
+            "actual_stop_risk_after": 15.8864,
+            "actual_stop_risk_cap": 23.513,
+            "key": "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 16.346933,
+            "actual_stop_risk_cap": 24.3372,
+            "key": "2025.01.08 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 15.666667,
+            "actual_stop_risk_cap": 23.3736,
+            "key": "2025.01.10 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 14.763467,
+            "actual_stop_risk_cap": 21.978,
+            "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 14.789067,
+            "actual_stop_risk_cap": 22.0932,
+            "key": "2025.01.14 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 15.9392,
+            "actual_stop_risk_cap": 23.568,
+            "key": "2025.01.31 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 16.832267,
+            "actual_stop_risk_cap": 25.1676,
+            "key": "2025.02.10 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 19.5368,
+            "actual_stop_risk_cap": 29.1422,
+            "key": "2025.03.05 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 19.7792,
+            "actual_stop_risk_cap": 29.4288,
+            "key": "2025.03.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 18.585867,
+            "actual_stop_risk_cap": 27.6882,
+            "key": "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 26.082667,
+            "actual_stop_risk_cap": 39.1068,
+            "key": "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 25.094133,
+            "actual_stop_risk_cap": 37.4107,
+            "key": "2025.05.23 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 24.6136,
+            "actual_stop_risk_cap": 36.4246,
+            "key": "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 25.6592,
+            "actual_stop_risk_cap": 38.2518,
+            "key": "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 29.016267,
+            "actual_stop_risk_cap": 43.5156,
+            "key": "2025.11.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 39.8976,
+            "actual_stop_risk_cap": 59.8252,
+            "key": "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 43.4736,
+            "actual_stop_risk_cap": 64.3246,
+            "key": "2026.02.05 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 44.699733,
+            "actual_stop_risk_cap": 66.7505,
+            "key": "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 52.6592,
+            "actual_stop_risk_cap": 77.9239,
+            "key": "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          }
+        ],
+        "post_placement_contract": [
+          {
+            "actual_stop_risk": 14.763467,
+            "actual_stop_risk_cap": 21.978,
+            "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "occupied_units": 3,
+            "within_contract": true
+          }
+        ],
+        "risk_admission_skips": 16,
+        "stressed_closed_drawdown": 100.456,
+        "stressed_net": 508.504
+      },
+      "final": {
+        "actual_net": 546.21,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 16,
+        "safety_stopped": false,
+        "stage_balance": 746.21,
+        "stressed_closed_drawdown": 100.456,
+        "stressed_net": 508.504
+      },
+      "no_faults": true,
+      "normalized": {
+        "actual_return_percent": 273.105,
+        "stressed_closed_drawdown_percent": 50.228,
+        "stressed_return_percent": 254.252
+      },
+      "parity": {
+        "entries_equal_closes": true,
+        "events_equal_final_actual_net": true,
+        "events_equal_final_stressed_drawdown": true,
+        "events_equal_final_stressed_net": true,
+        "one_normal_stop": true,
+        "report_equals_event_entries": true,
+        "report_equals_final_actual_net": true,
+        "summary_equals_event_overrides": true,
+        "summary_equals_event_skips": true
+      },
+      "report": {
+        "actual_balance_drawdown": 97.84,
+        "actual_equity_drawdown": 100.27,
+        "actual_net": 546.21,
+        "entries": 930,
+        "history_quality": "100% 실제 틱",
+        "profit_factor": 1.35,
+        "recovery_factor": 5.45,
+        "sharpe_ratio": 4.9
+      },
+      "reserve_summary": {
+        "addition_step": 300.0,
+        "base_volume": 0.02,
+        "deposit": 200.0,
+        "maximum_raw_tier": 2,
+        "mode": "prospective-position-budget-1.25"
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 100125026,
+          "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-200-agent.log",
+          "sha256": "fac4bd8d874928fe18718b11df9bdb4d4a52c9d4226cae0ce152d2485101f4d4"
+        },
+        "events": [
+          {
+            "bytes": 1787211,
+            "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-200-events-a.csv",
+            "sha256": "84f81d950e6d1b14b5b1b200491253afc725b9ce66e44da3be0b0c90ce43d0fd"
+          },
+          {
+            "bytes": 1205374,
+            "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-200-events-b.csv",
+            "sha256": "8dc6a1fdd3b15b510f3b67c3f5c18f61460aee9f4688d25c521721d5d9e6eacc"
+          }
+        ],
+        "report": {
+          "bytes": 1840440,
+          "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-200-2025-2026q3.htm",
+          "sha256": "86cac2eea4f9020d6810ea9ba7fde4e81eefb4fc74eb9ab23a280b6612d8a7ca"
+        }
+      },
+      "topology_summary": {
+        "checks": 35,
+        "maximum_evaluated_actual_stop_risk": 75.8509333333,
+        "maximum_evaluated_units_after": 4,
+        "overrides": 19,
+        "post_placement_blocks": 0,
+        "post_placement_checks": 1,
+        "post_placement_confirmations": 1,
+        "read_failures": 0,
+        "stop_risk_blocks": 0,
+        "unit_blocks": 16
+      }
+    },
+    "300": {
+      "deposit": 300.0,
+      "events": {
+        "actual_closed_drawdown": 146.76,
+        "actual_net": 818.81,
+        "all_override_events_within_contract": true,
+        "all_post_placement_events_within_contract": true,
+        "closed_lifecycles": 930,
+        "components": {
+          "CROSS": {
+            "actual_net": 172.95,
+            "closed_lifecycles": 338,
+            "stressed_net": 151.8885
+          },
+          "PASSIVE": {
+            "actual_net": 20.76,
+            "closed_lifecycles": 222,
+            "stressed_net": 12.0105
+          },
+          "PRESSURE": {
+            "actual_net": 152.59,
+            "closed_lifecycles": 61,
+            "stressed_net": 147.421
+          },
+          "RC16": {
+            "actual_net": 272.72,
+            "closed_lifecycles": 123,
+            "stressed_net": 264.224
+          },
+          "RC4": {
+            "actual_net": 80.92,
+            "closed_lifecycles": 100,
+            "stressed_net": 74.212
+          },
+          "RETURN": {
+            "actual_net": 118.87,
+            "closed_lifecycles": 86,
+            "stressed_net": 112.57
+          }
+        },
+        "entries": 930,
+        "maximum_occupied_units": 3,
+        "maximum_reconstructed_initial_stop_risk": 88.8988,
+        "normal_stops": 1,
+        "override_contract": [
+          {
+            "actual_stop_risk_after": 23.8332,
+            "actual_stop_risk_cap": 35.269,
+            "key": "2025.01.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 24.532667,
+            "actual_stop_risk_cap": 36.5088,
+            "key": "2025.01.08 15:00:00|ZT-M30-US30-INTRADAY-R-2eb111fc46",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 23.503467,
+            "actual_stop_risk_cap": 35.0616,
+            "key": "2025.01.10 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 22.1392,
+            "actual_stop_risk_cap": 32.9688,
+            "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 22.1772,
+            "actual_stop_risk_cap": 33.1404,
+            "key": "2025.01.14 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 23.9184,
+            "actual_stop_risk_cap": 35.3532,
+            "key": "2025.01.31 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 25.2496,
+            "actual_stop_risk_cap": 37.7496,
+            "key": "2025.02.10 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 29.3128,
+            "actual_stop_risk_cap": 43.717,
+            "key": "2025.03.05 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 29.6592,
+            "actual_stop_risk_cap": 44.1396,
+            "key": "2025.03.11 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 27.8748,
+            "actual_stop_risk_cap": 41.5269,
+            "key": "2025.04.08 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 39.126,
+            "actual_stop_risk_cap": 58.6548,
+            "key": "2025.05.13 15:00:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 37.6416,
+            "actual_stop_risk_cap": 56.1155,
+            "key": "2025.05.23 16:00:00|ZT-H1-US30-RETURN-I-c870a788ec",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 36.9196,
+            "actual_stop_risk_cap": 54.635,
+            "key": "2025.06.16 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 38.4972,
+            "actual_stop_risk_cap": 57.3801,
+            "key": "2025.09.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 43.526,
+            "actual_stop_risk_cap": 65.2704,
+            "key": "2025.11.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 59.8396,
+            "actual_stop_risk_cap": 89.7275,
+            "key": "2026.02.02 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 65.1896,
+            "actual_stop_risk_cap": 96.4724,
+            "key": "2026.02.05 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 67.0088,
+            "actual_stop_risk_cap": 100.0717,
+            "key": "2026.04.17 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          },
+          {
+            "actual_stop_risk_after": 78.9624,
+            "actual_stop_risk_cap": 116.8415,
+            "key": "2026.08.03 17:00:00|ZT-H1-US100-CROSS-IN-14b72317b7",
+            "units_after": 3,
+            "within_contract": true
+          }
+        ],
+        "post_placement_contract": [
+          {
+            "actual_stop_risk": 22.1392,
+            "actual_stop_risk_cap": 32.9688,
+            "key": "2025.01.14 14:15:00|ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+            "occupied_units": 3,
+            "within_contract": true
+          }
+        ],
+        "risk_admission_skips": 16,
+        "stressed_closed_drawdown": 150.684,
+        "stressed_net": 762.326
+      },
+      "final": {
+        "actual_net": 818.81,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "persistence_failed": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "risk_admission_skips": 16,
+        "safety_stopped": false,
+        "stage_balance": 1118.81,
+        "stressed_closed_drawdown": 150.684,
+        "stressed_net": 762.326
+      },
+      "no_faults": true,
+      "normalized": {
+        "actual_return_percent": 272.936667,
+        "stressed_closed_drawdown_percent": 50.228,
+        "stressed_return_percent": 254.108667
+      },
+      "parity": {
+        "entries_equal_closes": true,
+        "events_equal_final_actual_net": true,
+        "events_equal_final_stressed_drawdown": true,
+        "events_equal_final_stressed_net": true,
+        "one_normal_stop": true,
+        "report_equals_event_entries": true,
+        "report_equals_final_actual_net": true,
+        "summary_equals_event_overrides": true,
+        "summary_equals_event_skips": true
+      },
+      "report": {
+        "actual_balance_drawdown": 146.76,
+        "actual_equity_drawdown": 150.44,
+        "actual_net": 818.81,
+        "entries": 930,
+        "history_quality": "100% 실제 틱",
+        "profit_factor": 1.35,
+        "recovery_factor": 5.44,
+        "sharpe_ratio": 4.88
+      },
+      "reserve_summary": {
+        "addition_step": 450.0,
+        "base_volume": 0.03,
+        "deposit": 300.0,
+        "maximum_raw_tier": 2,
+        "mode": "prospective-position-budget-1.25"
+      },
+      "sources": {
+        "agent_log": {
+          "bytes": 103617976,
+          "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-300-agent.log",
+          "sha256": "54d137283eb05f07b13137be36fa16d7770d004bbc8e68cca638adbced319332"
+        },
+        "events": [
+          {
+            "bytes": 1782669,
+            "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-300-events-a.csv",
+            "sha256": "de9d25515f37d8a330a7806960fca41486e7ffb19ce7583e7ed74c78ec6d426d"
+          },
+          {
+            "bytes": 1210296,
+            "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-300-events-b.csv",
+            "sha256": "81344b656da8c3d3e2581f5b92d3f0b8cf82cb7198ef2b3843759f91df77a22b"
+          }
+        ],
+        "report": {
+          "bytes": 1841740,
+          "path": "lab/artifacts/backtests/capital-scale-admission-topology/topology-300-2025-2026q3.htm",
+          "sha256": "43552b3c4f72e80a38bca35525a5fd7f32b04e99e380d1a9c03dab3119424bce"
+        }
+      },
+      "topology_summary": {
+        "checks": 35,
+        "maximum_evaluated_actual_stop_risk": 113.7658666667,
+        "maximum_evaluated_units_after": 4,
+        "overrides": 19,
+        "post_placement_blocks": 0,
+        "post_placement_checks": 1,
+        "post_placement_confirmations": 1,
+        "read_failures": 0,
+        "stop_risk_blocks": 0,
+        "unit_blocks": 16
+      }
+    }
+  },
+  "runtime_target_incident": {
+    "actual_stop_headroom": 55.5987,
+    "actual_stop_risk_after": 45.6864,
+    "candidate_actual_stop_risk": 22.5072,
+    "candidate_current_aggregate_cap": 101.2851,
+    "candidate_position_budget": 33.7617,
+    "causal_interpretation": "The target was recovered indirectly. Earlier topology admissions changed cumulative P/L and current capital, moving the 300 USD Return stop from 47012.24 to 47033.36. Return then stopped at 16:46:41, so Cross arrived with one incumbent unit fewer and passed the ordinary nominal admission path; no topology override fired at 17:00.",
+    "incumbent_at_decision": {
+      "actual_stop_risk": 23.1792,
+      "open": {
+        "component": "PRESSURE",
+        "entry": 47648.8,
+        "planned_risk": 34.7701,
+        "server_time": "2026.03.06 15:00:00",
+        "stop": 47938.54,
+        "volume": 0.06
+      }
+    },
+    "new_return": {
+      "close": {
+        "actual_net": -17.5,
+        "event": "EXTERNAL_CLOSE",
+        "server_time": "2026.03.06 16:46:41",
+        "stressed_net": -17.632
+      },
+      "open": {
+        "component": "RETURN",
+        "entry": 47323.1,
+        "planned_risk": 34.7701,
+        "server_time": "2026.03.06 16:00:00",
+        "stop": 47033.36,
+        "volume": 0.06
+      }
+    },
+    "nominal_aggregate_after": 68.5318,
+    "occupied_units_after": 2,
+    "old_return": {
+      "close": {
+        "actual_net": 12.38,
+        "event": "CLOSE",
+        "server_time": "2026.03.06 22:00:00",
+        "stressed_net": 12.248
+      },
+      "open": {
+        "component": "RETURN",
+        "entry": 47323.1,
+        "planned_risk": 37.3038,
+        "server_time": "2026.03.06 16:00:00",
+        "stop": 47012.24,
+        "volume": 0.06
+      }
+    },
+    "original_skip": {
+      "detail": "position_cap=37.0007 aggregate_cap=111.0020",
+      "nominal_aggregate_after": 111.60822,
+      "planned_candidate_risk": 24.666667
+    },
+    "recovered_close": {
+      "actual_net": 6.65,
+      "event": "CLOSE",
+      "server_time": "2026.03.06 21:00:00",
+      "stressed_net": 6.614
+    },
+    "recovered_open": {
+      "component": "CROSS",
+      "entry": 24681.2,
+      "planned_risk": 33.7617,
+      "server_time": "2026.03.06 17:00:00",
+      "stop": 24399.86,
+      "volume": 0.06
+    },
+    "same_decision_override_count": 0
+  },
+  "scale_consistency": {
+    "actual_return_percent_range": 0.168333,
+    "entries": {
+      "100": 930,
+      "200": 930,
+      "300": 930
+    },
+    "entry_sets_equal": true,
+    "stressed_drawdown_percent_range": 0.02,
+    "stressed_return_percent_range": 0.143333
+  },
+  "sources": {
+    "admission_adapter": {
+      "bytes": 9170,
+      "path": "lab/mt5/src/Include/ZetaTerminusNext/Frontier/CapitalScaleAdmissionTopologyAdapter.mqh",
+      "sha256": "f7b833126cad07f552a54f176e9f96db14eb5460b94acc9f45b0c4fe2ff03a99"
+    },
+    "binary": {
+      "bytes": 213068,
+      "path": "lab/mt5/src/Experts/ZetaNextCapitalScaleAdmissionTopologyV1.ex5",
+      "sha256": "883f548f5beb1e9d7783fc0afd852ee63ad2ba68309727990b58a56a3c8f9548"
+    },
+    "ea": {
+      "bytes": 7135,
+      "path": "lab/mt5/src/Experts/ZetaNextCapitalScaleAdmissionTopologyV1.mq5",
+      "sha256": "f052b7cc59e7b6f64a0ef4b41832542512994e85a6582b283216434dbe967a15"
+    },
+    "field_adapter": {
+      "bytes": 5775,
+      "path": "lab/mt5/src/Include/ZetaTerminusNext/Frontier/CapitalScaleAdmissionTopologyFieldAdapter.mqh",
+      "sha256": "821707413c683e7897e5c1e4c5a46b815e68983b8f032e2bf139e6173b6ec0c2"
+    },
+    "old_entry_events": {
+      "100": [
+        {
+          "bytes": 1618653,
+          "path": "lab/artifacts/backtests/capital-step-elasticity/hard20-loser-events-a.csv",
+          "sha256": "5cdaf5813884be9e438e74d27cd172f8b6181a8a3c0bec481c224ddca653dc89"
+        },
+        {
+          "bytes": 1100034,
+          "path": "lab/artifacts/backtests/capital-step-elasticity/hard20-loser-events-b.csv",
+          "sha256": "a1032287a338e955046735ccd7b1ff92bed994fa428513ce268fd78df8e76914"
+        }
+      ],
+      "200": [
+        {
+          "bytes": 1729678,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-200-events-a.csv",
+          "sha256": "84ccd491759bdcecc47c9ec636342659a9bd73360a71290ec5eb2abaa6c9311e"
+        },
+        {
+          "bytes": 1167169,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-200-events-b.csv",
+          "sha256": "98a2f2b7cbcfbd956876d0f665c6d7b10141625e73ce63f0cd151df53468f21b"
+        }
+      ],
+      "300": [
+        {
+          "bytes": 1718160,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-300-events-a.csv",
+          "sha256": "298d687df650d86c072076126783bc56a2e0bea7cb59108183170ff35b9f12c7"
+        },
+        {
+          "bytes": 1175790,
+          "path": "lab/artifacts/backtests/transition-reserve-geometry/geometry-300-events-b.csv",
+          "sha256": "c41c841264208999d92f6e681e75b5a8d964bda55b7e6d9ab556257d5bfe7b57"
+        }
+      ]
+    },
+    "prior_transition_runtime": {
+      "bytes": 228924,
+      "path": "lab/frontier/transition-reserve-geometry/runtime.json",
+      "sha256": "331b672e764f5088c523b40ff7fcdee0203a24ffb66155a0324ab2a00bdc20f2"
+    },
+    "proxy": {
+      "bytes": 171149,
+      "path": "lab/frontier/capital-scale-admission-topology/proxy.json",
+      "sha256": "572620eee1af3827d7e94272ad5fc9ec69d1f08bebb2be666c4dae0c107db66a"
+    },
+    "runtime_adapter": {
+      "bytes": 40961,
+      "path": "lab/frontier/capital-scale-admission-topology/runtime_adapter.py",
+      "sha256": "84b49f8a91846806aa817b618e9228eba265cfd25ed59dfe72db0680c2098ff5"
+    }
+  },
+  "unit": "capital-scale-admission-topology-010"
+}
