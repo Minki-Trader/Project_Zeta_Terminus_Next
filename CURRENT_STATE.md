@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0060`
+- Latest state ID: `STATE-0061`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: `closed-drawdown-state-value-026`; source-free all-strategy causal closed-drawdown declaration frozen before outcome aggregation
+- Active research boundary: none; `closed-drawdown-state-value-026` is closed and frozen with no retained response question
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -294,13 +294,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 - RC4 and Return also paired lower WIDE return with fewer stops and failed continuous/period breadth, so the near-threshold values are not coherent loss-risk states. Closed `NO_INITIAL_STOP_GEOMETRY_FIELD_PASSED` with no alternate normalization, response, stop/size/hold rule, EA or Live candidate.
 - Declaration/result/closure SHA-256 values are `417E04F77CC512892B72FBB13774FFAB327388B2F1ED65BF7D2D0C2680188AB8` / `C9E25471EB14CAF20EAC6C4B7F78D5C4C560A5D39A284A262ECA20A3F3733C82` / `4C44BCB5630B2BE6AA57387C867DF61563A215D99794F41F8E955D64BFD6BEF7`. Live remains untouched.
 
-## Open closed drawdown state value Unit 026
+## Closed closed drawdown state value Unit 026
 
 - Source-free question over the six immutable, already-consumed CXR2-equivalent event files: whether the portfolio's causal closed-stressed drawdown fraction immediately before an admitted birth materially separates that lifecycle's stressed R and stop-loss incidence.
 - Each fresh period starts at `$100`; only prior CLOSE/EXTERNAL_CLOSE stressed net updates closed balance and running peak. Open equity, margin and the current lifecycle's outcome are excluded. The state is `(running peak - closed balance) / running peak` immediately before birth.
-- All `2,233` births have a finite state with broad within-period dispersion. All six strategies are judged separately through pooled/period Spearman and fixed LOW_DD/HIGH_DD thirds; no dollar depth, duration, streak, previous outcome, open equity or strategy-local peak is allowed.
-- A passing field needs pooled `|rho| >= 0.20`, absolute HIGH_DD-minus-LOW_DD separation of at least `0.10R` and `0.05` stop rate, three-period breadth and coherent R/stop direction. At most one later entry-preserving strategy-specific Proxy question may survive while retaining the six-strategy portfolio and 4%/12% gates.
-- Declaration SHA-256 is `377CBB787BEEE5AA9F6EB763EC5187AA11FE98CFB6503B376D7179445D03BC54`; outcomes, MQL, Tester and Live remain unopened.
+- The sole aggregation reconstructed all `2,233` lifecycles, `$407.0477` stressed net, `206` stops and the exact four period max closed drawdowns `$18.7790/$17.7790/$28.3905/$31.1908` with zero fault.
+- Every strategy failed pooled `|rho| >= 0.20`. RC16 alone reached tail return `+0.100272239R` and stop difference `-0.056179775`, but pooled rho was only `+0.061272452`; Spearman and stop signs were broad in only two periods.
+- RC16's apparent tail value was concentrated in P3 `+0.310605556R`, while P1/P2 were near zero and P4 reversed. Closed `NO_CLOSED_DRAWDOWN_STATE_FIELD_PASSED` without dollar depth, duration, streak, previous-outcome, open-equity, threshold or subgroup rescue.
+- No response, size, hold, protection, priority, EA or Live candidate opened. Declaration/result/closure SHA-256 values are `377CBB787BEEE5AA9F6EB763EC5187AA11FE98CFB6503B376D7179445D03BC54` / `4A200D02211AD6E21DD91844A8BCC877C69BAB788439795623CC68458F4F2B8B` / `4EA90A2F96B4085E1FC3C408E999C7DB35F9A8E1E972FFD1C95D769A5EC988B0`. Live remains untouched.
 
 ## Required completion evidence
 
@@ -313,4 +314,4 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_OPEN_DECLARATION_FROZEN`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD`

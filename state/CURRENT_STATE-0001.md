@@ -487,3 +487,11 @@
 - Pre-outcome feasibility assigned a finite state to all `2,233` births. Each strategy-period contains `23..286` lifecycles and fixed within-period LOW_DD/HIGH_DD third tails contain at least seven observations; both peak and drawdown states are naturally represented without a threshold.
 - Every strategy is judged separately under pooled/period Spearman, tail return, stop-rate, three-period breadth and economic-coherence gates. At most one later entry-preserving strategy-specific Proxy question may survive; Unit 026 selects no response, threshold, size, hold, protection, EA or Live candidate.
 - Declaration SHA-256 is `377CBB787BEEE5AA9F6EB763EC5187AA11FE98CFB6503B376D7179445D03BC54`. Outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
+
+## STATE-0061 - 2026-08-26
+
+- Ran exactly the one frozen Unit 026 aggregation. All six files retained their hashes; `2,233` lifecycles, `$407.0477` stressed net, `206` stops and period max closed drawdowns `$18.7790/$17.7790/$28.3905/$31.1908` reconstructed with zero duplicate, pending, fill, overlap, risk, drawdown or close fault.
+- Every strategy failed the pooled absolute Spearman `0.20` gate. RC16 alone reached both tail magnitude gates: HIGH_DD-minus-LOW_DD `+0.100272239R` and stop rate `-0.056179775`.
+- RC16 nevertheless failed as a state: pooled rho was only `+0.061272452`, Spearman and stop signs were broad in only two periods, and the tail effect was concentrated in P3 `+0.310605556R` while P1/P2 were small and P4 reversed.
+- Applied the failure action without dollar depth, duration, streak, previous outcome, strategy-local peak, open equity, incumbent, nonlinear, threshold, quantile, time or period rescue. Closed Unit 026 `NO_CLOSED_DRAWDOWN_STATE_FIELD_PASSED`; no response question, candidate, seed or promotion survives.
+- Result/closure SHA-256 values are `4A200D02211AD6E21DD91844A8BCC877C69BAB788439795623CC68458F4F2B8B` / `4EA90A2F96B4085E1FC3C408E999C7DB35F9A8E1E972FFD1C95D769A5EC988B0`. Exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.

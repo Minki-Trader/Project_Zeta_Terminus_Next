@@ -1,0 +1,44 @@
+{
+  "schema": "zeta-next-closed-drawdown-state-value-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "closed-drawdown-state-value-026",
+  "family": "closed-drawdown-state-value-v1",
+  "evidence": {
+    "declaration_sha256": "377CBB787BEEE5AA9F6EB763EC5187AA11FE98CFB6503B376D7179445D03BC54",
+    "result_sha256": "4A200D02211AD6E21DD91844A8BCC877C69BAB788439795623CC68458F4F2B8B"
+  },
+  "closure": {
+    "verdict": "NO_CLOSED_DRAWDOWN_STATE_FIELD_PASSED",
+    "integrity_gate_passed": true,
+    "successful_fixed_aggregations": 1,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.0477,
+    "stop_loss_exits": 206,
+    "passing_strategies": [],
+    "retained_response_question": null,
+    "retained_candidate": null
+  },
+  "reason": "Every strategy failed the pooled absolute Spearman minimum of 0.20. RC16 alone reached both tail magnitude gates at +0.100272239R and -0.056179775 stop rate, but pooled Spearman was only +0.061272452 with sign breadth in two periods, stop breadth was also two periods, and the tail effect was concentrated in P3 while P1/P2 were small and P4 reversed.",
+  "frozen_stop_rules": {
+    "dollar_depth_duration_streak_or_previous_outcome": false,
+    "strategy_local_peak_open_equity_or_incumbent_state": false,
+    "nonlinear_memory_threshold_or_alternate_quantile": false,
+    "direction_time_or_period_rescue": false,
+    "response_size_hold_protection_or_priority_selected": false,
+    "mql_or_tester_path_opened": false
+  },
+  "surfaces": {
+    "family_closed_and_source_free": true,
+    "forward_cxr2_baseline_unchanged": true,
+    "unit_025_not_used_reopened_or_transformed": true,
+    "unit_023_previous_outcome_not_reopened": true,
+    "live_source_package_settings_state_logs_untouched": true,
+    "live_release": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+    "live_terminal_pid": 13328,
+    "dashboard_pid": 4284,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_serial_frontier_question_without_reopening_or_transforming_unit_026"
+}

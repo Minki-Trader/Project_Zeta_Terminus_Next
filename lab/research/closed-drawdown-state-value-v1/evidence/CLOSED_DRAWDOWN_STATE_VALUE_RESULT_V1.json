@@ -1,0 +1,126 @@
+{
+  "schema": "zeta-next-closed-drawdown-state-value-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "closed-drawdown-state-value-026",
+  "family": "closed-drawdown-state-value-v1",
+  "declaration": {
+    "path": "lab/research/closed-drawdown-state-value-v1/evidence/CLOSED_DRAWDOWN_STATE_VALUE_DECLARATION_V1.json",
+    "commit": "be8d5af",
+    "sha256": "377CBB787BEEE5AA9F6EB763EC5187AA11FE98CFB6503B376D7179445D03BC54"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_outcome_aggregations": 0,
+    "alternate_memory_threshold_duration_streak_or_rescue": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "new_market_outcomes": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest_sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42",
+    "exact_duplicate_full_rows": 0,
+    "pending_fill_overlap_risk_drawdown_or_close_faults": 0,
+    "lifecycles": 2233,
+    "strategy_lifecycles": {"RC16":272,"RC4":206,"Cross":805,"Pressure":118,"Return":238,"Passive":594},
+    "stressed_net_usd": 407.0477,
+    "stop_loss_exits": 206,
+    "periods": [
+      {"period":"P1_2022H2_2023","stressed_net":148.8735,"ending_balance":248.8735,"max_closed_drawdown":18.7790},
+      {"period":"P2_2024","stressed_net":54.6630,"ending_balance":154.6630,"max_closed_drawdown":17.7790},
+      {"period":"P3_2025","stressed_net":113.0380,"ending_balance":213.0380,"max_closed_drawdown":28.3905},
+      {"period":"P4_2026_YTD","stressed_net":90.4732,"ending_balance":190.4732,"max_closed_drawdown":31.1908}
+    ]
+  },
+  "strategy_results": [
+    {
+      "strategy":"RC16","lifecycles":272,"mean_stressed_r":0.074591015,"pooled_spearman":0.061272452,"low_high_tail_n":"89/89","low_mean_r":0.020050242,"high_mean_r":0.120322481,"high_minus_low_r":0.100272239,"low_stop_rate":0.112359551,"high_stop_rate":0.056179775,"high_minus_low_stop":-0.056179775,"same_sign_periods":{"spearman":2,"r":3,"stop":2},
+      "periods":[
+        {"period":"P1_2022H2_2023","n":77,"tail_each":25,"at_peak":15,"drawdown_min_mean_max":"0/0.022974539/0.128399530","spearman":-0.026597891,"r_effect":0.001838486,"stop_effect":0.000000000},
+        {"period":"P2_2024","n":72,"tail_each":24,"at_peak":7,"drawdown_min_mean_max":"0/0.051975757/0.173659002","spearman":0.045650500,"r_effect":0.036302669,"stop_effect":0.041666667},
+        {"period":"P3_2025","n":79,"tail_each":26,"at_peak":12,"drawdown_min_mean_max":"0/0.049632449/0.145421255","spearman":0.289598938,"r_effect":0.310605556,"stop_effect":-0.192307692},
+        {"period":"P4_2026_YTD","n":44,"tail_each":14,"at_peak":8,"drawdown_min_mean_max":"0/0.030906140/0.126430411","spearman":-0.120936354,"r_effect":-0.004910098,"stop_effect":-0.071428571}
+      ],
+      "gate":{"density":true,"spearman_magnitude":false,"spearman_breadth":false,"tail_r_magnitude":true,"tail_r_breadth":true,"tail_stop_magnitude":true,"tail_stop_breadth":false,"coherence":true,"passed":false}
+    },
+    {
+      "strategy":"RC4","lifecycles":206,"mean_stressed_r":0.065152228,"pooled_spearman":-0.008684239,"low_high_tail_n":"66/66","low_mean_r":0.088583141,"high_mean_r":0.056132357,"high_minus_low_r":-0.032450784,"low_stop_rate":0.196969697,"high_stop_rate":0.333333333,"high_minus_low_stop":0.136363636,"same_sign_periods":{"spearman":1,"r":1,"stop":4},
+      "periods":[
+        {"period":"P1_2022H2_2023","n":53,"tail_each":17,"at_peak":14,"drawdown_min_mean_max":"0/0.020332106/0.086891181","spearman":0.206140706,"r_effect":0.022149680,"stop_effect":0.058823529},
+        {"period":"P2_2024","n":53,"tail_each":17,"at_peak":4,"drawdown_min_mean_max":"0/0.059642182/0.160517320","spearman":0.128513249,"r_effect":0.088222953,"stop_effect":0.117647059},
+        {"period":"P3_2025","n":68,"tail_each":22,"at_peak":14,"drawdown_min_mean_max":"0/0.050400841/0.145421255","spearman":-0.158858248,"r_effect":-0.193907063,"stop_effect":0.227272727},
+        {"period":"P4_2026_YTD","n":32,"tail_each":10,"at_peak":8,"drawdown_min_mean_max":"0/0.029369276/0.126430411","spearman":0.005726068,"r_effect":0.024786892,"stop_effect":0.100000000}
+      ],
+      "gate":{"density":true,"spearman_magnitude":false,"spearman_breadth":false,"tail_r_magnitude":false,"tail_r_breadth":false,"tail_stop_magnitude":true,"tail_stop_breadth":true,"coherence":true,"passed":false}
+    },
+    {
+      "strategy":"Cross","lifecycles":805,"mean_stressed_r":0.020870260,"pooled_spearman":0.006129394,"low_high_tail_n":"267/267","low_mean_r":0.012843225,"high_mean_r":0.028399379,"high_minus_low_r":0.015556154,"low_stop_rate":0.048689139,"high_stop_rate":0.022471910,"high_minus_low_stop":-0.026217228,"same_sign_periods":{"spearman":3,"r":3,"stop":3},
+      "periods":[
+        {"period":"P1_2022H2_2023","n":286,"tail_each":95,"at_peak":50,"drawdown_min_mean_max":"0/0.022316171/0.123253470","spearman":-0.059008835,"r_effect":-0.011002119,"stop_effect":0.000000000},
+        {"period":"P2_2024","n":197,"tail_each":65,"at_peak":25,"drawdown_min_mean_max":"0/0.048933895/0.161953217","spearman":0.016368981,"r_effect":0.014845840,"stop_effect":-0.046153846},
+        {"period":"P3_2025","n":193,"tail_each":64,"at_peak":20,"drawdown_min_mean_max":"0/0.053646866/0.147129026","spearman":0.030003036,"r_effect":0.034069402,"stop_effect":-0.031250000},
+        {"period":"P4_2026_YTD","n":129,"tail_each":43,"at_peak":28,"drawdown_min_mean_max":"0/0.024386587/0.133594567","spearman":0.079055245,"r_effect":0.047750535,"stop_effect":-0.046511628}
+      ],
+      "gate":{"density":true,"spearman_magnitude":false,"spearman_breadth":true,"tail_r_magnitude":false,"tail_r_breadth":true,"tail_stop_magnitude":false,"tail_stop_breadth":true,"coherence":true,"passed":false}
+    },
+    {
+      "strategy":"Pressure","lifecycles":118,"mean_stressed_r":0.041457147,"pooled_spearman":0.009899979,"low_high_tail_n":"37/37","low_mean_r":0.044367742,"high_mean_r":0.061314932,"high_minus_low_r":0.016947190,"low_stop_rate":0.189189189,"high_stop_rate":0.216216216,"high_minus_low_stop":0.027027027,"same_sign_periods":{"spearman":2,"r":2,"stop":2},
+      "periods":[
+        {"period":"P1_2022H2_2023","n":35,"tail_each":11,"at_peak":4,"drawdown_min_mean_max":"0/0.034617301/0.128399530","spearman":0.208269147,"r_effect":0.226056989,"stop_effect":0.090909091},
+        {"period":"P2_2024","n":23,"tail_each":7,"at_peak":4,"drawdown_min_mean_max":"0/0.039145229/0.127953773","spearman":-0.148093570,"r_effect":-0.223110152,"stop_effect":0.000000000},
+        {"period":"P3_2025","n":32,"tail_each":10,"at_peak":5,"drawdown_min_mean_max":"0/0.055276176/0.145421255","spearman":-0.084465805,"r_effect":-0.155710574,"stop_effect":0.100000000},
+        {"period":"P4_2026_YTD","n":28,"tail_each":9,"at_peak":0,"drawdown_min_mean_max":"0.000942056/0.041893144/0.133594567","spearman":0.001642036,"r_effect":0.139921772,"stop_effect":-0.111111111}
+      ],
+      "gate":{"density":true,"spearman_magnitude":false,"spearman_breadth":false,"tail_r_magnitude":false,"tail_r_breadth":false,"tail_stop_magnitude":false,"tail_stop_breadth":false,"coherence":false,"passed":false}
+    },
+    {
+      "strategy":"Return","lifecycles":238,"mean_stressed_r":0.056083439,"pooled_spearman":-0.061602036,"low_high_tail_n":"78/78","low_mean_r":0.045667785,"high_mean_r":0.103088179,"high_minus_low_r":0.057420394,"low_stop_rate":0.192307692,"high_stop_rate":0.217948718,"high_minus_low_stop":0.025641026,"same_sign_periods":{"spearman":3,"r":2,"stop":2},
+      "periods":[
+        {"period":"P1_2022H2_2023","n":105,"tail_each":35,"at_peak":15,"drawdown_min_mean_max":"0/0.021931479/0.110373051","spearman":-0.054547400,"r_effect":-0.055378929,"stop_effect":0.028571429},
+        {"period":"P2_2024","n":50,"tail_each":16,"at_peak":6,"drawdown_min_mean_max":"0/0.046952050/0.172044240","spearman":-0.086555359,"r_effect":0.036448098,"stop_effect":0.000000000},
+        {"period":"P3_2025","n":52,"tail_each":17,"at_peak":6,"drawdown_min_mean_max":"0/0.047686910/0.124939469","spearman":0.090479979,"r_effect":0.424912317,"stop_effect":-0.058823529},
+        {"period":"P4_2026_YTD","n":31,"tail_each":10,"at_peak":4,"drawdown_min_mean_max":"0/0.030760381/0.094830674","spearman":-0.143895129,"r_effect":-0.138962569,"stop_effect":0.200000000}
+      ],
+      "gate":{"density":true,"spearman_magnitude":false,"spearman_breadth":true,"tail_r_magnitude":false,"tail_r_breadth":false,"tail_stop_magnitude":false,"tail_stop_breadth":false,"coherence":false,"passed":false}
+    },
+    {
+      "strategy":"Passive","lifecycles":594,"mean_stressed_r":0.008378568,"pooled_spearman":0.048252775,"low_high_tail_n":"197/197","low_mean_r":0.009024568,"high_mean_r":0.014025249,"high_minus_low_r":0.005000681,"low_stop_rate":0.040609137,"high_stop_rate":0.040609137,"high_minus_low_stop":0.000000000,"same_sign_periods":{"spearman":3,"r":2,"stop":0},
+      "periods":[
+        {"period":"P1_2022H2_2023","n":213,"tail_each":71,"at_peak":37,"drawdown_min_mean_max":"0/0.025078045/0.128399530","spearman":0.096460248,"r_effect":0.012731095,"stop_effect":-0.014084507},
+        {"period":"P2_2024","n":159,"tail_each":53,"at_peak":18,"drawdown_min_mean_max":"0/0.049660650/0.176669913","spearman":0.060695931,"r_effect":0.038116843,"stop_effect":-0.037735849},
+        {"period":"P3_2025","n":130,"tail_each":43,"at_peak":16,"drawdown_min_mean_max":"0/0.059788237/0.137919672","spearman":-0.071642026,"r_effect":-0.038736204,"stop_effect":0.000000000},
+        {"period":"P4_2026_YTD","n":92,"tail_each":30,"at_peak":20,"drawdown_min_mean_max":"0/0.028158334/0.133594567","spearman":0.113517280,"r_effect":-0.009110317,"stop_effect":0.100000000}
+      ],
+      "gate":{"density":true,"spearman_magnitude":false,"spearman_breadth":true,"tail_r_magnitude":false,"tail_r_breadth":false,"tail_stop_magnitude":false,"tail_stop_breadth":false,"coherence":false,"passed":false}
+    }
+  ],
+  "fixed_gate_application": {
+    "passing_strategies": [],
+    "common_failure": "Every strategy failed the absolute pooled Spearman minimum of 0.20; five also failed the absolute pooled HIGH_DD-minus-LOW_DD stressed-r minimum of 0.10R.",
+    "closest_field": {
+      "strategy": "RC16",
+      "pooled_spearman": 0.061272452,
+      "high_minus_low_r": 0.100272239,
+      "high_minus_low_stop": -0.056179775,
+      "why_failed": "Spearman magnitude and breadth failed, stop breadth was only two periods, and the pooled effect was concentrated in P3 while P1/P2 were small and P4 reversed."
+    }
+  },
+  "interpretation": {
+    "portfolio": "Causal closed-drawdown depth is broadly populated but is not a stable material state for next-lifecycle economics under the frozen joint contract.",
+    "rc16": "RC16 tail magnitudes were nominally sufficient, but the relationship was non-monotonic, temporally concentrated and not broad in stop incidence.",
+    "consequence": "Do not open a drawdown-conditioned size, hold, protection, priority or other response experiment from this field.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "verdict": "NO_CLOSED_DRAWDOWN_STATE_FIELD_PASSED",
+    "selected_strategy": null,
+    "later_entry_preserving_proxy_question": false,
+    "retained_candidate": null,
+    "alternate_memory_or_subgroup_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_without_closed_drawdown_transform_or_rescue_then_select_one_non_nearby_serial_frontier_question_after_durable_commit"
+}
