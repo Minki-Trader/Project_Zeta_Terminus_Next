@@ -609,3 +609,11 @@
 - Created the Git-ignored dedicated `lab/runtime/us100-failed-extreme-auction-response-v1-portable/` as a minimal physical copy. It owns exactly one family EX5 and four SET files, no other-family EX5 or Zeta Include, no symbolic link or junction, and sampled origin/copy file IDs differ with one hardlink path each.
 - Froze both required 48-file US100 2022-08 through 2026-07 completed-month raw-tick manifests, selected/full symbol-database telemetry and visible US100 contract values. Compile receipt SHA-256 is `00D987C7DD90AD80AD1C4B59C91F120A2D4DAE9D9B679AF2AF323A0C4D1E67DA`.
 - Exactly four serial P1-P4 trade-free paths may now run. No outcome has been read, and no Live process, broker state or Live surface was queried or changed.
+
+## STATE-0076 - 2026-08-26
+
+- Opened only frozen Unit 031 P1. Observer and Tester stopped normally; 366 eligible days, 70,448 eligible evaluations and all 4,129 triggers resolved with zero unresolved, rate, tick or profit-calculation fault. Contract values and both completed-month raw-tick manifests stayed exact.
+- Before any opportunity row was read, detailed Tester history telemetry contradicted the HTML `100% 실제 틱` label: 1,920 absent and 484 discarded real-tick minutes, 232 volume-mismatch minute bars, 205,311 mismatched tick prices and explicit `every tick generation used`.
+- The failure is not a completed-month hash or visible-spec change, so the rebuild allowance does not apply. P2-P4 and the 4,129 economic rows remain unopened. Closed Unit 031 `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE` without rescue.
+- The same telemetry and HTML contradiction was then found in already-preserved Unit 028 and Unit 030 P1 logs. Their signed evidence remains untouched, but their prior all-path real-tick claims and economic verdict authority are corrected to the same invalid status; prior economics are descriptive only and neither unit gains a prototype.
+- Unit 031 result/closure SHA-256 values are `2C7D198FAF0989FE28F52DBE45F7405F8F459545A0CB14F3395569FE7C7F0342` / `36C3011CC21300A4A20C5329A4D9A47EDC7C025EBFCB832A7B8E156CC43502C3`. No additional Tester path, economic row, source, broker state or Live surface was opened or changed.

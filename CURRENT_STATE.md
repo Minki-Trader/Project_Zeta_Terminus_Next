@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0075`
+- Latest state ID: `STATE-0076`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: `us100-failed-extreme-auction-response-031`; fresh trade-free observer, four configurations and minimal dedicated Portable frozen before outcome
+- Active research boundary: none; Unit 031 is closed invalid and the related Unit 028/030 US100 history-quality claims are corrected
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -310,13 +310,11 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 - Applied the frozen second-change rule before aggregation: P2-P4 and every economic direction, threshold or prototype judgment remained unopened. This is an environment invalidation, not evidence for or against continuation or reversion.
 - Closed `INVALID_SECOND_REQUIRED_TICK_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Result/closure SHA-256 values are `09B85F76E8AA1049328D52C756CDF45B4BF2EDF3A5131ADC431B2EA5744C378C` / `3B5FF3A883D2A386FACE8EEF02BF24BFD93AE550604EA7117FD2F86ACFE08A07`.
 
-## Closed US100 session-reopen discontinuity Unit 028
+## Closed US100 session-reopen discontinuity Unit 028 — integrity corrected
 
-- The fresh trade-free observer completed exactly four serial build-6140 paths at 100% real ticks. All 92 triggers resolved after four market bars with zero rate, tick, overlap or profit-calculation fault; source, configuration, binary, completed-month raw ticks and visible contract fields stayed frozen.
-- Only 92 opportunities appeared across 793 eligible reopen days, or `0.116015132` per day. P1-P4 rates were `0.067375887/0.126903553/0.121827411/0.205128205`; only one path reached `0.20`, and the pooled count stayed below `150`.
-- Continuation was `+$2.22` at observed costs but `-$1.26`, PF `0.924187726` at double spread. Its sole positive stressed path was P4 `+$5.26`; P1-P3 were negative and positive-path contribution was 100% concentrated. Reversion was `-$9.03`, PF `0.561224490` at double spread.
-- Closed `NO_SESSION_REOPEN_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED`. No threshold, duration, baseline, horizon, weekday, direction, spread or period rescue and no entry prototype opened.
-- Declaration/result/closure SHA-256 values are `44960447FEE5ACE9000AB13FF116C52E287E0240985A59525922EF91633B2C5E` / `A6F6CB7BD9DBDDCA0B3F488D38A665A3C75B678A4C61DEB7543C6184DC65FF37` / `59D962B43ED27AEAEF915B38993CD3090EC8A22B0181EF1446D1C6369EAEC93F`. No Live surface was queried or changed.
+- Unit 031's related integrity check found that preserved P1 agent log `5806628A...` explicitly recorded 1,920 real-tick-absent minutes, 484 discarded minutes, 232 volume-mismatch minute bars, 205,311 mismatched tick prices and `every tick generation used`, despite HTML report `EBA80CAD...` displaying 100% real ticks.
+- The original signed result/closure remain immutable at `A6F6CB7...` / `59D962B4...`, but their all-path real-tick integrity claim and economic verdict are superseded as `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. The previously aggregated 92-row economics are descriptive and non-authoritative.
+- Prototype consequence is unchanged: none. No rerun, source change, row reread or Live action was opened; the correction is anchored in Unit 031 result `2C7D198F...`.
 
 ## Closed US30 compression-break response Unit 029
 
@@ -326,23 +324,18 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 - This failure is not a completed-month hash or visible-spec change, so the sole rebuild allowance does not apply. P2-P4, the 291 opportunity economics, both direction books and every selection gate remained unopened.
 - Closed `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`; neither continuation nor reversion was economically accepted or rejected. Declaration/result/closure SHA-256 values are `6DF5C9B2C37215AB1C5D59817E16576A3B7BD09DF39461B8858343C91D57625B` / `87411AB47075A28657D676F0143BB271F69AE16B552B4E084B4C34B4D8B5E720` / `A474035DCA5582D69104F899090088FCC73A336F3B1EA9646862E90B7B8CF05C`. Live remains untouched.
 
-## Closed US100 tick-flow imbalance response Unit 030
+## Closed US100 tick-flow imbalance response Unit 030 — integrity corrected
 
-- The frozen first-pass observer completed all four serial paths at 100% real ticks. Source, configuration, binary, completed-month raw ticks and visible US100 contract fields stayed exact; all 12 triggers resolved with zero tick, calculation, row-count or direction fault.
-- Only 12 opportunities appeared across 1,034 eligible tick-flow days: pooled `0.011605416` per day versus `0.40`, path rates `0.013661202/0.027027027/0/0` versus the three-of-four `0.25` rule, and 12 versus the required 300 pooled count.
-- Continuation was `-$0.50` observed and `-$0.84`, PF `0.333333333` at double spread with zero positive path. Reversion was `+$0.15` observed but `-$0.19`, PF `0.756410256` at double spread; P1's sole positive `+$0.23` represented 100% positive-path concentration.
-- Closed `NO_TICK_FLOW_IMBALANCE_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED`. No threshold, minimum-tick, bar, price-basis, continuity, cooldown, horizon, direction, spread, period or extra-run rescue and no entry prototype opened.
-- Declaration/result/closure SHA-256 values are `98172EE896F223CB98A3B82114EE5ADF31ABA044AFB0D1604E2825AE4E066392` / `2E8F71379EC4C7565A3A1D05A9E3FBCD8F7F1EF90AB537E775D233425936CA6F` / `5FD14C817D057798A7B6DFAFF2EB5853A0A4366119C11C579648F04C3BF42941`. No Live process, broker state or Live surface was queried or changed.
+- Preserved P1 agent log `6A20A87E...` contains the same detailed generation telemetry as Unit 031, while HTML report `87E2206E...` displays 100% real ticks. Therefore the original all-path history-quality claim cannot stand under the already-applied Unit 029 rule.
+- The original signed result/closure remain immutable at `2E8F7137...` / `5FD14C81...`, but the economic verdict is superseded as `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`; its 12-row aggregation is descriptive and non-authoritative.
+- Prototype consequence remains none. No rerun, source change, row reread or Live action was opened; the correction is anchored in Unit 031 result `2C7D198F...`.
 
-## Open US100 failed-extreme auction response Unit 031
+## Closed US100 failed-extreme auction response Unit 031
 
-- Fresh Next-only price-path question: whether a completed US100 M5 bar that materially auctions outside the preceding continuous 24-bar extreme and closes materially back inside supports a frequent cost-positive thirty-market-minute rejection or breakout response.
-- Both penetration and recovery must be at least `0.10` of the preceding 24-bar mean range; dual-sided signal bars are excluded. One trade-free observation at a time resolves after six M5 market-bar advances and prices both direction books at `0.01` using observed bid/ask plus one additional entry and exit spread.
-- Exactly four serial real-tick paths through completed month 2026-07 are permitted. A direction must pass zero-fault integrity, pooled/path frequency, double-spread net/PF/net-to-DD, three-positive-path and contribution-concentration gates.
-- Unit 031 does not reuse Unit 030 tick flow or any earlier frontier state, places no order and selects no stop, size, hold, priority or Live candidate. At most one later standalone additive question may survive and must subsequently face all six strategies without reducing their opportunity count.
-- The fresh single-source observer compiled on its first build-6140 attempt at `0 errors / 0 warnings`; source/config/binary hashes are `AC0DBFAAD5727D97176FEAAEF0EEE3D931FCEE3BE328D62884C73021B4774008` / `0B37AC99172DA3471405B01CA0A4F56108FD55AFC00D4EBEA42F9BE2C7EDD39A` / `106EC6D95EE9E1AA1831A9C75644C78D0FAE9A71E6B74B6C2738C9832801A15B`.
-- Its minimal Git-ignored Portable owns only this family EX5 and SET files plus physically copied build executables and US100 data; it has no other-family EX5, Zeta Include tree, hardlink, symbolic link, junction or Live dependency. Both 48-file completed-month raw-tick manifests are frozen.
-- Declaration/compile-receipt SHA-256 values are `095BCA1851BA69E7198D644EA3B19FBEFD12472AD7BC1F060F41EBF7EF5F1D31` / `00D987C7DD90AD80AD1C4B59C91F120A2D4DAE9D9B679AF2AF323A0C4D1E67DA`. Four outcomes remain unopened; no Live process, broker state or Live surface was queried or changed.
+- The first-pass build and minimal dedicated Portable remained exact. P1 stopped normally with 366 eligible days, 70,448 eligible evaluations and 4,129 resolved triggers; observer rate, tick and profit-calculation faults were zero and both completed-month raw-tick manifests and visible specifications stayed frozen.
+- The HTML report displayed 100% real ticks, but the detailed Tester log proved 1,920 absent and 484 discarded real-tick minutes, 232 volume-mismatch minute bars, 205,311 mismatched tick prices and explicit `every tick generation used`. Detailed history quality therefore failed before any of the 4,129 economic rows was read.
+- This was not a completed-month hash or visible-spec change, so the single rebuild allowance did not apply. P2-P4 and both direction books remained unopened. Closed `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE` with no threshold, structure or prototype rescue.
+- Unit 031 also records the directly related Unit 028/030 integrity correction above without rewriting their signed files. Declaration/result/closure SHA-256 values are `095BCA1851BA69E7198D644EA3B19FBEFD12472AD7BC1F060F41EBF7EF5F1D31` / `2C7D198FAF0989FE28F52DBE45F7405F8F459545A0CB14F3395569FE7C7F0342` / `36C3011CC21300A4A20C5329A4D9A47EDC7C025EBFCB832A7B8E156CC43502C3`. No Live surface was queried or changed.
 
 ## Required completion evidence
 
@@ -355,4 +348,4 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_OPEN_SOURCE_RUNTIME_FROZEN`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE`

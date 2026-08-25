@@ -1,0 +1,122 @@
+{
+  "schema": "zeta-next-us100-failed-extreme-auction-response-result-v1",
+  "created_at_local": "2026-08-26",
+  "unit": "us100-failed-extreme-auction-response-031",
+  "family": "us100-failed-extreme-auction-response-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "095BCA1851BA69E7198D644EA3B19FBEFD12472AD7BC1F060F41EBF7EF5F1D31",
+    "compile_receipt_sha256": "00D987C7DD90AD80AD1C4B59C91F120A2D4DAE9D9B679AF2AF323A0C4D1E67DA",
+    "source_commit": "a891b8e",
+    "source_manifest_sha256": "AC0DBFAAD5727D97176FEAAEF0EEE3D931FCEE3BE328D62884C73021B4774008",
+    "configuration_manifest_sha256": "0B37AC99172DA3471405B01CA0A4F56108FD55AFC00D4EBEA42F9BE2C7EDD39A",
+    "binary_sha256": "106EC6D95EE9E1AA1831A9C75644C78D0FAE9A71E6B74B6C2738C9832801A15B",
+    "pre_outcome_bases_completed_months_sha256": "1FEA3D1769FAC19EB0417BC4256B93DF9E1213295E865B3F9686BA3F53566FCF",
+    "pre_outcome_tester_bases_completed_months_sha256": "3DAA47B409A82666E1EA4F69C49664BE16D7561DEA0D71928276E47C0E693EF4"
+  },
+  "p1_integrity_path": {
+    "period": "P1_2022H2_2023",
+    "terminal_normal_stop": true,
+    "tester_normal_stop": true,
+    "html_report_created": true,
+    "html_model_label": "100_PERCENT_REAL_TICKS",
+    "detailed_tester_history_quality": "EVERY_TICK_GENERATION_USED_DESPITE_HTML_100_PERCENT_LABEL",
+    "history_quality_contract_passed": false,
+    "raw_tick_quality_telemetry": {
+      "period_minute_bars": 501264,
+      "real_ticks_absent_minutes": 1920,
+      "real_ticks_discarded_minutes": 484,
+      "tick_volume_mismatch_minute_bars": 232,
+      "mismatched_tick_prices": 205311,
+      "mismatched_tick_price_minute_bars": 484
+    },
+    "observer": {
+      "eligible_failed_extreme_days": 366,
+      "eligible_failed_extreme_evaluations": 70448,
+      "finalized_bars": 100265,
+      "valid_ticks": 65325884,
+      "triggers": 4129,
+      "resolved": 4129,
+      "unresolved": 0,
+      "rate_faults": 0,
+      "tick_faults": 0,
+      "profit_calc_faults": 0,
+      "visible_spec_start_end_equal_and_frozen": true
+    },
+    "required_bases_manifest_after": "1FEA3D1769FAC19EB0417BC4256B93DF9E1213295E865B3F9686BA3F53566FCF",
+    "required_tester_bases_manifest_after": "3DAA47B409A82666E1EA4F69C49664BE16D7561DEA0D71928276E47C0E693EF4",
+    "required_completed_month_manifests_unchanged": true,
+    "source_binary_and_configuration_unchanged": true,
+    "post_run_database_telemetry": {
+      "selected_sha256": "086EDD14628DC7E5A2F70E5895FD1607B83149342694A79C7AD5B4E2F5E6744E",
+      "symbols_sha256": "61B0AB64983ADC0D969F9B7BAFF9690BB45BAFF563CEEC2C180318A433593320",
+      "invalidation_cause": false
+    },
+    "semantic_opportunity_rows_read": false,
+    "opportunity_rows_unread": 4129,
+    "artifact_root": "lab/artifacts/backtests/us100-failed-extreme-auction-response-v1/p1-integrity-invalid/",
+    "report_sha256": "F086544213C9607821841DFE4E4973B6FA6D7F47C3D6E3899EB763E83CA934C1",
+    "summary_sha256": "F59BB3E1393076D7BD555EB6845BEE334A46835498BA7FCDEB84F4525C12F909",
+    "opportunities_sha256_unread": "A472D249100AB5F4FF4CBA62A26B3161F8530EAF7135F305A1F09606791F1D5F",
+    "agent_log_sha256": "4926B704EFCA76CDE7C0A9D35DECD3AE1D1573B3D60B3218289FA191E0A3FDC1",
+    "terminal_log_sha256": "1CCF1C83649A9312B852572E3F6E0233665CB03C0188EB78793E17C3E183A338",
+    "action": "CLOSE_INVALID_WITHOUT_ECONOMIC_JUDGMENT"
+  },
+  "rebuild_allowance": {
+    "used": false,
+    "permitted_for_this_failure": false,
+    "reason": "The sole rebuild allowance applies only to a required completed-month tick hash or visible-specification change before semantic reading. Both invariants remained exact; the detailed Tester record instead proved generated replacement ticks inside the frozen source interval."
+  },
+  "unopened_paths": [
+    "P2_2024",
+    "P3_2025",
+    "P4_2026_COMPLETE_MONTHS"
+  ],
+  "aggregation": {
+    "opportunity_economics_read": false,
+    "rejection_metrics_calculated": false,
+    "breakout_metrics_calculated": false,
+    "frequency_gate_calculated": false,
+    "selection_gate_reached": false
+  },
+  "related_integrity_correction": {
+    "reason": "The same detailed P1 generation telemetry was found in already-preserved US100 Unit 028 and Unit 030 agent logs whose HTML reports also displayed 100 percent real ticks. Applying the Unit 029 and Unit 031 history-quality boundary consistently withdraws those two earlier economic verdicts as authoritative evidence.",
+    "inspection_scope": "Previously preserved P1 agent logs and HTML labels only; no additional opportunity row, Tester path, source or Live surface was opened.",
+    "shared_p1_telemetry": {
+      "period_minute_bars": 501264,
+      "real_ticks_absent_minutes": 1920,
+      "real_ticks_discarded_minutes": 484,
+      "tick_volume_mismatch_minute_bars": 232,
+      "mismatched_tick_prices": 205311,
+      "mismatched_tick_price_minute_bars": 484,
+      "tester_phrase": "every tick generation used"
+    },
+    "unit_028": {
+      "family": "us100-session-reopen-discontinuity-v1",
+      "p1_agent_log_sha256": "5806628A63B88A0E33794AA79483ABE42F3142549D3B7581DB107A106747E594",
+      "p1_html_report_sha256": "EBA80CAD3006D4F1252F0627E1B2A83DF6954E26E6544778C2B9C74C4C605661",
+      "original_result_sha256": "A6F6CB7BD9DBDDCA0B3F488D38A665A3C75B678A4C61DEB7543C6184DC65FF37",
+      "original_closure_sha256": "59D962B43ED27AEAEF915B38993CD3090EC8A22B0181EF1446D1C6369EAEC93F",
+      "corrected_authoritative_status": "INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+      "previously_aggregated_economics": "DESCRIPTIVE_NON_AUTHORITATIVE",
+      "prototype_consequence_changed": false
+    },
+    "unit_030": {
+      "family": "us100-tick-flow-imbalance-response-v1",
+      "p1_agent_log_sha256": "6A20A87E16EBA1A4A9CB93AD31CDE181FF4DA38C181C3E600C8C76DD29686844",
+      "p1_html_report_sha256": "87E2206E43C41B0C27E5F3179FF9A0F7319893A55342033FF91DE2DDED9B7B71",
+      "original_result_sha256": "2E8F71379EC4C7565A3A1D05A9E3FBCD8F7F1EF90AB537E775D233425936CA6F",
+      "original_closure_sha256": "5FD14C817D057798A7B6DFAFF2EB5853A0A4366119C11C579648F04C3BF42941",
+      "corrected_authoritative_status": "INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+      "previously_aggregated_economics": "DESCRIPTIVE_NON_AUTHORITATIVE",
+      "prototype_consequence_changed": false
+    },
+    "immutable_files_rewritten": false,
+    "rerun_or_reopen": false
+  },
+  "result": "INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "economic_interpretation": "NONE. Rejection and breakout were neither accepted nor rejected because the first fixed path failed the detailed real-tick quality contract before aggregation.",
+  "retained_question": null,
+  "source_or_contract_repair": false,
+  "extra_path": false,
+  "live_surface": "UNTOUCHED"
+}
