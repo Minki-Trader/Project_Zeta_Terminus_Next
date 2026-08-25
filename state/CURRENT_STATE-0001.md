@@ -681,3 +681,11 @@
 - RC16 and Return are structural BUY-only strategies and are excluded rather than imputed. The four bidirectional strategies are each judged under fixed pooled/period density, absolute `0.10R` stressed-return, absolute `0.05` stop-rate, three-period sign-breadth and economic-coherence gates.
 - At most one later direction-treatment question can survive, without selecting suppression, action, size, management, EA or Live behavior; any later unit must keep all base opportunities eligible and preserve the complete six-strategy portfolio count.
 - Declaration SHA-256 is `00C343C5899AFA9A49BC71B24C61EFDA825D5DCD32DCE59F9C96F11523BC993A`. The single direction-conditioned outcome pass remains unopened and Live remains untouched.
+
+## STATE-0085 - 2026-08-26
+
+- Ran exactly the one frozen Unit 034 aggregation with no failed invocation. All six files retained their hashes; 2,233 lifecycles, `$407.0477` stressed net, 206 stops and every frozen strategy/direction count reconstructed with zero duplicate, overlap, birth, close, risk, direction, pending or parse fault.
+- Cross SELL-minus-BUY return/stop effects were `-0.004871864R/-0.008080546`; Passive `-0.015973839R/-0.027231090`; Pressure `-0.070236839R/-0.004889272`. Each failed the fixed return and stop magnitudes, with additional breadth or coherence failures.
+- RC4 SELL had lower pooled return by `-0.037959044R` and a coherent higher stop rate by `+0.151549509`. The stop burden shared sign in all four periods, but return magnitude remained below `0.10R` and P2 reversed, so the joint gate failed.
+- Closed `NO_NATIVE_DIRECTION_FIELD_PASSED` without direction magnitude, geometry, signal, weekday/time, context, period, pooled-strategy or structurally missing-side rescue. No direction suppression, treatment, replacement, management, size, EA or Live candidate survives.
+- Result/closure SHA-256 values are `2AC9B50535F83AFB2D7ED809F2B87396D95998C70917AF310B7E5EF2E2BA12A4` / `8FFE4AC344697C1C8B83778BB98051D48BC43A35A3F814351C648FDEA6FA5C3C`. No Tester, broker/account or Live surface was queried or changed.

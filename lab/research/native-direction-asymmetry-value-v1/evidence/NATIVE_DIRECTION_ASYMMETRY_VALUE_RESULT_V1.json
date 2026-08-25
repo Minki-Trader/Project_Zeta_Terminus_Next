@@ -1,0 +1,153 @@
+{
+  "schema": "zeta-next-native-direction-asymmetry-value-result-v1",
+  "created_at_local": "2026-08-26",
+  "unit": "native-direction-asymmetry-value-034",
+  "family": "native-direction-asymmetry-value-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "00C343C5899AFA9A49BC71B24C61EFDA825D5DCD32DCE59F9C96F11523BC993A",
+    "declaration_commit": "c45de99",
+    "event_manifest_sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42",
+    "files": 6,
+    "bytes": 5692770,
+    "all_file_hashes_exact": true
+  },
+  "execution": {
+    "aggregations": 1,
+    "failed_invocations": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false
+  },
+  "integrity": {
+    "exact_duplicate_full_rows": 0,
+    "faults": {
+      "overlap": 0,
+      "missing_birth": 0,
+      "missing_close": 0,
+      "risk": 0,
+      "direction": 0,
+      "passive_pending": 0,
+      "parse": 0
+    },
+    "lifecycles": 2233,
+    "strategy_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd": 407.0477,
+    "stop_exits": 206,
+    "direction_counts": {
+      "Cross": {"BUY": 399, "SELL": 406},
+      "Passive": {"BUY": 296, "SELL": 298},
+      "Pressure": {"BUY": 61, "SELL": 57},
+      "RC4": {"BUY": 108, "SELL": 98},
+      "RC16": {"BUY": 272, "SELL": 0},
+      "Return": {"BUY": 238, "SELL": 0}
+    },
+    "integrity_gate_passed": true
+  },
+  "structural_one_direction_exclusions": {
+    "RC16": "BUY_ONLY",
+    "Return": "BUY_ONLY",
+    "imputed_or_failed": false
+  },
+  "strategy_metrics": [
+    {
+      "strategy": "Cross",
+      "BUY": {"n": 399, "mean_stressed_r": 0.023327374, "stop_rate": 0.040100251},
+      "SELL": {"n": 406, "mean_stressed_r": 0.018455510, "stop_rate": 0.032019704},
+      "sell_minus_buy_mean_stressed_r": -0.004871864,
+      "sell_minus_buy_stop_rate": -0.008080546,
+      "eligible_periods": 4,
+      "return_same_sign_periods": 3,
+      "stop_same_sign_periods": 2,
+      "periods": [
+        {"period": "P1_2022H2_2023", "BUY_n": 148, "SELL_n": 138, "sell_minus_buy_mean_stressed_r": 0.009954451, "sell_minus_buy_stop_rate": -0.013513514},
+        {"period": "P2_2024", "BUY_n": 95, "SELL_n": 102, "sell_minus_buy_mean_stressed_r": -0.002522412, "sell_minus_buy_stop_rate": 0.006914345},
+        {"period": "P3_2025", "BUY_n": 94, "SELL_n": 99, "sell_minus_buy_mean_stressed_r": -0.006306574, "sell_minus_buy_stop_rate": -0.032989469},
+        {"period": "P4_2026_YTD", "BUY_n": 62, "SELL_n": 67, "sell_minus_buy_mean_stressed_r": -0.042683285, "sell_minus_buy_stop_rate": 0.008907078}
+      ],
+      "density_pass": true,
+      "economic_magnitude_and_breadth_pass": false,
+      "stop_magnitude_and_breadth_pass": false,
+      "economic_coherence_pass": false,
+      "passed": false
+    },
+    {
+      "strategy": "Passive",
+      "BUY": {"n": 296, "mean_stressed_r": 0.016392379, "stop_rate": 0.057432432},
+      "SELL": {"n": 298, "mean_stressed_r": 0.000418540, "stop_rate": 0.030201342},
+      "sell_minus_buy_mean_stressed_r": -0.015973839,
+      "sell_minus_buy_stop_rate": -0.027231090,
+      "eligible_periods": 4,
+      "return_same_sign_periods": 3,
+      "stop_same_sign_periods": 4,
+      "periods": [
+        {"period": "P1_2022H2_2023", "BUY_n": 106, "SELL_n": 107, "sell_minus_buy_mean_stressed_r": 0.008043453, "sell_minus_buy_stop_rate": -0.000088168},
+        {"period": "P2_2024", "BUY_n": 77, "SELL_n": 82, "sell_minus_buy_mean_stressed_r": -0.016610689, "sell_minus_buy_stop_rate": -0.053531834},
+        {"period": "P3_2025", "BUY_n": 67, "SELL_n": 63, "sell_minus_buy_mean_stressed_r": -0.048832930, "sell_minus_buy_stop_rate": -0.026060175},
+        {"period": "P4_2026_YTD", "BUY_n": 46, "SELL_n": 46, "sell_minus_buy_mean_stressed_r": -0.025459839, "sell_minus_buy_stop_rate": -0.043478261}
+      ],
+      "density_pass": true,
+      "economic_magnitude_and_breadth_pass": false,
+      "stop_magnitude_and_breadth_pass": false,
+      "economic_coherence_pass": false,
+      "passed": false
+    },
+    {
+      "strategy": "Pressure",
+      "BUY": {"n": 61, "mean_stressed_r": 0.075385112, "stop_rate": 0.180327869},
+      "SELL": {"n": 57, "mean_stressed_r": 0.005148273, "stop_rate": 0.175438596},
+      "sell_minus_buy_mean_stressed_r": -0.070236839,
+      "sell_minus_buy_stop_rate": -0.004889272,
+      "eligible_periods": 3,
+      "return_same_sign_periods": 2,
+      "stop_same_sign_periods": 1,
+      "periods": [
+        {"period": "P1_2022H2_2023", "BUY_n": 10, "SELL_n": 25, "sell_minus_buy_mean_stressed_r": -0.077763495, "sell_minus_buy_stop_rate": -0.060000000, "density_eligible": true},
+        {"period": "P2_2024", "BUY_n": 15, "SELL_n": 8, "sell_minus_buy_mean_stressed_r": -0.205808978, "sell_minus_buy_stop_rate": 0.050000000, "density_eligible": true},
+        {"period": "P3_2025", "BUY_n": 15, "SELL_n": 17, "sell_minus_buy_mean_stressed_r": 0.072507658, "sell_minus_buy_stop_rate": 0.019607843, "density_eligible": true},
+        {"period": "P4_2026_YTD", "BUY_n": 21, "SELL_n": 7, "sell_minus_buy_mean_stressed_r": -0.033722432, "sell_minus_buy_stop_rate": 0.047619048, "density_eligible": false}
+      ],
+      "density_pass": true,
+      "economic_magnitude_and_breadth_pass": false,
+      "stop_magnitude_and_breadth_pass": false,
+      "economic_coherence_pass": false,
+      "passed": false
+    },
+    {
+      "strategy": "RC4",
+      "BUY": {"n": 108, "mean_stressed_r": 0.083210414, "stop_rate": 0.185185185},
+      "SELL": {"n": 98, "mean_stressed_r": 0.045251370, "stop_rate": 0.336734694},
+      "sell_minus_buy_mean_stressed_r": -0.037959044,
+      "sell_minus_buy_stop_rate": 0.151549509,
+      "eligible_periods": 4,
+      "return_same_sign_periods": 3,
+      "stop_same_sign_periods": 4,
+      "periods": [
+        {"period": "P1_2022H2_2023", "BUY_n": 31, "SELL_n": 22, "sell_minus_buy_mean_stressed_r": -0.049747463, "sell_minus_buy_stop_rate": 0.052785924},
+        {"period": "P2_2024", "BUY_n": 30, "SELL_n": 23, "sell_minus_buy_mean_stressed_r": 0.068947872, "sell_minus_buy_stop_rate": 0.224637681},
+        {"period": "P3_2025", "BUY_n": 31, "SELL_n": 37, "sell_minus_buy_mean_stressed_r": -0.026629787, "sell_minus_buy_stop_rate": 0.066259808},
+        {"period": "P4_2026_YTD", "BUY_n": 16, "SELL_n": 16, "sell_minus_buy_mean_stressed_r": -0.202395134, "sell_minus_buy_stop_rate": 0.312500000}
+      ],
+      "density_pass": true,
+      "economic_magnitude_and_breadth_pass": false,
+      "stop_magnitude_and_breadth_pass": true,
+      "economic_coherence_pass": true,
+      "passed": false
+    }
+  ],
+  "selection": {
+    "passing_strategies": [],
+    "selected_strategy": null,
+    "closest_nonpassing_observation": "RC4 SELL had a broad +0.151549509 stop-rate burden and lower pooled return, but its return separation was only -0.037959044R versus the fixed 0.10R minimum and P2 reversed the return sign.",
+    "result": "NO_NATIVE_DIRECTION_FIELD_PASSED"
+  },
+  "retained_direction_treatment_question": null,
+  "economic_interpretation": "Native direction alone does not meet the joint return, stop, breadth and coherence contract for any bidirectional strategy. RC4's SELL stop burden is descriptive but insufficient to open treatment without the required return magnitude.",
+  "live_surface": "UNTOUCHED"
+}
