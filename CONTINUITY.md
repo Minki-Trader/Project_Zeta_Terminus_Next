@@ -50,9 +50,9 @@ The patch changes only the verified CP1 Entry Gate and CP2 market-entry transact
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev: the parent owner stopped normally at a verified flat pre-window boundary on 2026-08-25; the CP1+CP2 patch release is explicitly authorized and frozen, with entries-disabled state recovery pending.
+- Next V7 Live-Dev: the parent owner stopped normally at a verified flat pre-window boundary on 2026-08-25; the CP1+CP2 patch release is explicitly authorized, frozen and has passed connected entries-disabled recovery plus restart. Its final `0/0 → 1/1` handshake is the only pending transition.
 - V7 may not import or adopt B70 positions or state.
-- The original handoff ran at V7 terminal PID `10112`; that PID is now stopped. Legacy must not restart, and the only permitted next owner is the exact CP1+CP2 release after its committed entries-disabled recovery boundary.
+- The original handoff ran at V7 terminal PID `10112`; that PID is now stopped. Target entries-disabled PIDs `28168` and `17656` also stopped normally after passing recovery. Legacy must not restart, and the only permitted next owner is the exact CP1+CP2 release through the final committed handshake.
 
 ## Completed legacy closure
 

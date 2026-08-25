@@ -5,23 +5,23 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0023`
+- Latest state ID: `STATE-0024`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
 
 - Development: `ENABLED`, one serial stream only
 - Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-25 instruction to apply verified CP1 and CP2 to Live-Dev, subject to the same stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
-- Next V7 entries-disabled preflight: `ENABLED`
-- Next V7 new-entry authorization: `DISABLED` until the CP1+CP2 release recovers the exact parent state in entries-disabled mode and that evidence is committed.
+- Next V7 entries-disabled preflight: `PASSED`
+- Next V7 new-entry authorization: `ENABLED` by the user's explicit CP1+CP2 Live-Dev instruction, effective only through the committed final `0/0` preflight followed by exact `1/1` handshake.
 - Existing real-account owner: none; parent V7 PID `10112` stopped normally at flat server `2026.08.25 09:15:07`
-- User V7 Live direction: `CP1_CP2_RELEASE_AUTHORIZED_PENDING_ENTRIES_DISABLED_PASS`
+- User V7 Live direction: `CP1_CP2_RELEASE_EFFECTIVE_AFTER_ENTRIES_DISABLED_PASS`
 
-Legacy B70 V6R6 remains disabled. Parent V7 stopped normally after a fresh local snapshot proved positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$106.52/$106.52`, project realized net `$5.87`, no pending RC4/Passive ownership and zero faults. The Git-ignored release-transition receipt pins that state; no terminal currently owns the account while the CP1+CP2 entries-disabled preflight is pending.
+Legacy B70 V6R6 remains disabled. The CP1+CP2 release recovered and restarted the exact parent state twice in connected entries-disabled mode, retained positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$106.52/$106.52`, project realized net `$5.87`, and zero faults. Both runs stopped normally; no terminal currently owns the account. The next sole action is the committed final `0/0 → 1/1` Live handshake.
 
 ## Active work
 
-- Active engineering boundary: promote the verified CP1+CP2 implementation to frozen Live release `NEXT-E01-V7-CXR1-c0ad2f30d293`; package compile passed and the next sole action is entries-disabled state recovery
+- Active engineering boundary: frozen CP1+CP2 release passed connected entries-disabled state recovery and restart; the next sole action is its final `0/0 → 1/1` Live handshake
 - Active research boundary: none; the later Frontier ledger is closed at `capital-scale-admission-topology-010` with `none_opened_waiting_for_user`, `예치자본·위험용량 연구` V1 is closed `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`, and the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -131,7 +131,7 @@ Legacy B70 V6R6 remains disabled. Parent V7 stopped normally after a fresh local
 - Frozen target release: `NEXT-E01-V7-CXR1-c0ad2f30d293`; canonical source/settings SHA-256 `C0AD2F30D293AD538A91DE74A6D0A14A560FA19222F1DB043E1C533C103A7DD7`
 - Exact seven promoted implementation files are byte-equal to the CP2 candidate; Live main assembly, economic SET, execution version, Portfolio, Magic, state marker/schema/paths and all non-CP implementation files remain unchanged
 - MetaEditor build 6140 compiled the isolated exact promotion source at `0 errors / 0 warnings`; target EX5 SHA-256 is `F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F`
-- Parent PID `10112` and dashboard PID `24936` stopped at the fresh pre-window flat boundary. The target package is frozen and no terminal is running; entries-disabled state recovery is the next and only open action
+- Parent PID `10112` and dashboard PID `24936` stopped at the fresh pre-window flat boundary. Target entries-disabled PIDs `28168` and `17656` both recovered the exact parent state, passed `0/0` and stopped normally; no terminal is running
 - Source topology is now mandatory in `docs/OPERATING_DIRECTION.md` and `AGENTS.md`: `lab/mt5` is frozen historical material, the CP2 root is the sole forward baseline, and every future family must own an isolated root
 
 ## Required completion evidence
@@ -145,4 +145,4 @@ Legacy B70 V6R6 remains disabled. Parent V7 stopped normally after a fresh local
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PACKAGE_FROZEN_COMPILE_PASSED; CXR1_ENTRIES_DISABLED_PREFLIGHT_PENDING`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PACKAGE_FROZEN_COMPILE_PASSED; CXR1_ENTRIES_DISABLED_RECOVERY_AND_RESTART_PASSED; CXR1_FINAL_LIVE_HANDSHAKE_AUTHORIZED`

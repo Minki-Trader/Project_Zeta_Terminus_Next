@@ -187,3 +187,11 @@
 - Promoted exactly seven implementation files byte-equal to the CP2 candidate into a new frozen package release `NEXT-E01-V7-CXR1-c0ad2f30d293`. Parent execution version, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`, state marker/schema/paths, economic SET and all non-CP implementation files remain unchanged.
 - Canonical source/settings SHA-256 is `C0AD2F30D293AD538A91DE74A6D0A14A560FA19222F1DB043E1C533C103A7DD7`. Isolated MetaEditor build 6140 compiled at `0 errors / 0 warnings`; EX5 SHA-256 is `F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F`.
 - Replaced the misleading copied `LAB_CANDIDATE_MANIFEST.json` in the Live package with exact `SOURCE_MANIFEST.json`, retained one `RELEASE_MANIFEST.json`, and pinned the stopped-flat parent continuity in a Git-ignored release-transition receipt. No terminal currently owns the account; target entries remain disabled until committed entries-disabled recovery passes.
+
+## STATE-0024 - 2026-08-25
+
+- At committed and pushed Git `9f30ce783f8d42411597ca2946e50a1c223f4b72`, exact CP1+CP2 release `NEXT-E01-V7-CXR1-c0ad2f30d293` passed connected entries-disabled state recovery twice with no Lab link and new entries blocked by both input and terminal mode.
+- Run 1 PID `28168` recovered parent state at sequence `1463`; release, execution, Portfolio, Magic, account, source/EX5/SET manifests, flat exposure and `$5.87/$105.87/$101.49` realized/stage/stressed continuity all matched. It stopped normally.
+- Run 2 PID `17656` resumed the saved target state and advanced through sequence `1465`. It retained entries `0/0`, positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$106.52/$106.52`, zero safety/persistence/broker/foreign faults and no warning or alert, then stopped normally.
+- Target-release events contain exact `RESUME entries-disabled → STOP normal → RESUME entries-disabled` continuity. The same execution/Portfolio/Magic/state namespace was continued deliberately; no position, broker history, state schema or economic input was converted.
+- Entries-disabled recovery and restart are `PASSED`. The user's explicit CP1+CP2 Live direction is now effective, but the only permitted next action is the committed operator's final exact `0/0` preflight followed by `1/1` handshake. No terminal currently owns the account.
