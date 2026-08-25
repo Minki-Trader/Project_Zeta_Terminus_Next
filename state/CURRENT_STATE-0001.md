@@ -204,3 +204,9 @@
 - Exact target `1/1` Live PID `21548` passed the committed handshake. The Master recognized that sole terminal without duplication, restored its MT5 window and opened the sole Korean dashboard PID `4712`.
 - Bounded stabilization advanced to sequence `1470` at server `2026.08.25 09:35:11`. Entries remained `1/1`; positions/order/margin/planned risk were `0/0/$0/$0`; balance/equity were `$106.52/$106.52`; project realized/stage/stressed values remained `$5.87/$105.87/$101.49`; all ownership, safety, persistence, broker and foreign-exposure faults were zero with no alert or warning.
 - Classified `CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE`. Parent V7 and legacy must not restart. The CP2 Lab root and active Live package are frozen, and no new engineering or research family is open.
+
+## STATE-0026 - 2026-08-25
+
+- Corrected only operational and machine metadata; no MQL, EX5, SET, package, runtime, state payload, process, order or Live authority changed.
+- Appended a closure clarification to `lab/frontier/ledger.jsonl`: the configured 2025-01-01 through 2026-08-24 Frontier path, including completed 2026 June-July and partial August through the last observed 2026-08-21 trading date, is consumed exploratory evidence and is not a clean holdout, confirmation or promotion basis. The Frontier remains closed with `promotion=none` and `none_opened_waiting_for_user`.
+- Extended machine executable `core_line` through the already-existing active `NEXT-E01/V7-CXR1` node and removed the stale no-Live-change family sentence from current active work. Exact CXR1 remains the unchanged sole healthy Live owner.
