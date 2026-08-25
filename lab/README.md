@@ -43,6 +43,7 @@
 - `research/us100-failed-extreme-auction-response-v1/`: 닫힌 Unit 031 family; P1 HTML 100% 표기와 달리 상세 로그가 1,920분 부재·484분 폐기 및 생성 대체를 증명해 4,129 경제행 미열람, prototype 없음
 - `research/us100-realized-variance-asymmetry-response-v1/`: 닫힌 Unit 032 fresh observer family; 경로길이 교정 뒤 P1은 정상 종료·상세 경고 0이었으나 HTML이 `99% 실제 틱`으로 고정 100% 관문 실패, 1,529 경제행 미열람·P2-P4·prototype 없음
 - `research/us100-directional-path-efficiency-response-v1/`: 닫힌 Unit 033 fresh observer family; P1은 1,127건 정상 해결·상세 경고 0이었으나 HTML `99% 실제 틱`으로 고정 100% 관문 실패, 경제행 미열람·P2-P3·prototype 없음
+- `research/native-direction-asymmetry-value-v1/`: 활성 Unit 034 source-free family; Cross·Passive·Pressure·RC4의 BUY/SELL stressed-R·stop 정보가치 단일 집계가 결과 전 동결됨
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

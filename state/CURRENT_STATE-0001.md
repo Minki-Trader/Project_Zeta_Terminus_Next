@@ -673,3 +673,11 @@
 - The HTML report nevertheless records `99% 실제 틱`, not the frozen 100% requirement. This independently fails P1 integrity and cannot be overridden by the clean detailed log or repaired with the market-data rebuild allowance because no required tick hash or visible specification changed.
 - Preserved and hash-pinned the report, summary, logs and all 1,127 opportunity rows without semantically reading those rows. P2-P3, direction/frequency/economic aggregation, rerun, threshold or structure rescue and every prototype remained unopened.
 - Closed `INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Result/closure SHA-256 values are `151644CF4831FEB1F93C9B090FD020F2D33ADEC9FC4D07989360FF66BC02B4E0` / `4355DC032C2C16F9626C9474038FECC9CEE7C486E3B06D8298FBE8DCDFE07E79`. No broker/account state or Live surface was queried or changed.
+
+## STATE-0084 - 2026-08-26
+
+- After Unit 033's durable invalid close and push, opened only the unrelated source-free Unit 034 `native-direction-asymmetry-value-v1`. It uses the six immutable, already-consumed CXR2-equivalent event files and no Unit 032/033 source or unread economics.
+- Before any close outcome was read, birth-only feasibility reconstructed all 2,233 directions with zero fault: Cross BUY/SELL `399/406`, Passive `296/298`, Pressure `61/57`, RC4 `108/98`, RC16 `272/0` and Return `238/0`.
+- RC16 and Return are structural BUY-only strategies and are excluded rather than imputed. The four bidirectional strategies are each judged under fixed pooled/period density, absolute `0.10R` stressed-return, absolute `0.05` stop-rate, three-period sign-breadth and economic-coherence gates.
+- At most one later direction-treatment question can survive, without selecting suppression, action, size, management, EA or Live behavior; any later unit must keep all base opportunities eligible and preserve the complete six-strategy portfolio count.
+- Declaration SHA-256 is `00C343C5899AFA9A49BC71B24C61EFDA825D5DCD32DCE59F9C96F11523BC993A`. The single direction-conditioned outcome pass remains unopened and Live remains untouched.
