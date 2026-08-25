@@ -1,0 +1,113 @@
+{
+  "schema": "zeta-next-us500-shock-response-result-v1",
+  "created_at_local": "2026-08-26",
+  "unit": "us500-shock-response-027",
+  "family": "us500-shock-response-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "2CB75E9810EA6ED3D84DF45E8C6921DD860D2D6380D9FE5CF281720D0165E6E4",
+    "compile_receipt_sha256": "C9F733AD58D4C758D7C9DB66A883E3985C5D70CC0F2A0541C739F14B42100739",
+    "source_commit": "188070b",
+    "source_manifest_sha256": "4E807AAEC0A5B7B72D64243864970490AB15E0DE688CCB50C501724B9989EF8A",
+    "configuration_manifest_sha256": "04C4C6F1FBAC2D09A37D8891C62AA38EB161910C6DCF5FD72502111C8BBAAA33",
+    "binary_sha256": "D66E2234C8F8C6CD077B1C8C96D396AB3C3E14B581171AB722E5BE71788742E7",
+    "pre_outcome_bases_us500_monthly_sha256": "5A0E1E7ECE7EC20AFBDC2757D8C5998E04CDE7220163D6D7E95A148E13F68440",
+    "pre_outcome_tester_bases_us500_monthly_sha256": "2489E49F44C531E4B3E24F0F00C88EC2C5C02A0681FC03BE5A7ACE6848CDAA34"
+  },
+  "environment_preflight_p1": {
+    "period": "P1_2022H2_2023",
+    "tester_normal_stop": true,
+    "history_quality": "every_tick_generation_used",
+    "normal_days": 366,
+    "evaluations": 33453,
+    "triggers": 1264,
+    "resolved": 1264,
+    "unresolved": 0,
+    "rate_faults": 0,
+    "tick_faults": 0,
+    "profit_calc_faults": 0,
+    "visible_spec_start_end_equal_and_frozen": true,
+    "tester_bases_manifest_unchanged": true,
+    "bases_manifest_before": "5A0E1E7ECE7EC20AFBDC2757D8C5998E04CDE7220163D6D7E95A148E13F68440",
+    "bases_manifest_after": "DA13C728403C9D3E1A20B1487B9A25698CFB7EA7B890EA21058A208BF9A4EC96",
+    "changed_required_file": {
+      "path": "Bases/FPMarketsSC-Live/ticks/US500/202608.tkc",
+      "before_bytes": 8745742,
+      "after_bytes": 9236656,
+      "before_sha256": "D134AE0753CFAF786A3D06CD12F82797E076FCB4E1C9F48779D72A6FFD31E8A8",
+      "after_sha256": "777815F26B3197AA0DD930381F92B829348036F9071463B7A8CA4A88EFEEC981"
+    },
+    "semantic_opportunity_rows_read": false,
+    "artifact_root": "lab/artifacts/backtests/us500-shock-response-v1/environment-preflight-p1-invalid/",
+    "summary_sha256": "910CC259DBB3FFB79B0640D4E1EDF5F956D99BB4799C4C3295257D59633B75F0",
+    "opportunities_sha256_unread": "F6733875F2EA39EF52154084750C9461C79B4D87411B0270FED0E99C51B1B06E",
+    "action": "DISCARD_UNREAD_AND_USE_SOLE_IDENTICAL_REBUILD_ALLOWANCE"
+  },
+  "sole_clean_rebuild": {
+    "old_generated_runtime_sent_to_recycle_bin": true,
+    "old_runtime_recoverable": true,
+    "source_and_configuration_changed": false,
+    "rebuilt_from_same_frozen_cache": true,
+    "physical_copy_matches_frozen_bases_manifest": true,
+    "physical_copy_matches_frozen_tester_bases_manifest": true,
+    "reparse_points": 0,
+    "runtime_binary_matches_frozen_binary": true
+  },
+  "clean_p1_rerun": {
+    "period": "P1_2022H2_2023",
+    "tester_normal_stop": true,
+    "history_quality": "100_PERCENT_REAL_TICKS",
+    "report_sha256": "73D54B7A8E6890C67BD681089210D45A3E70EF99348B1E65CCE62BEFCA36B89F",
+    "normal_days": 366,
+    "evaluations": 33453,
+    "triggers": 1264,
+    "resolved": 1264,
+    "unresolved": 0,
+    "rate_faults": 0,
+    "tick_faults": 0,
+    "profit_calc_faults": 0,
+    "visible_spec": {
+      "start_end_equal_and_frozen": true,
+      "digits": 2,
+      "point": 0.01,
+      "tick_size": 0.01,
+      "tick_value": 0.01,
+      "contract_size": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "stops_level": 0,
+      "freeze_level": 0
+    },
+    "tester_bases_manifest_unchanged": true,
+    "bases_manifest_before": "5A0E1E7ECE7EC20AFBDC2757D8C5998E04CDE7220163D6D7E95A148E13F68440",
+    "bases_manifest_after": "876D44BFC24A4034C6C47F5EF9DAB10A1E23C14C78E137BED9829C7E49CCD224",
+    "changed_required_file": {
+      "path": "Bases/FPMarketsSC-Live/ticks/US500/202608.tkc",
+      "before_bytes": 8745742,
+      "after_bytes": 9236960,
+      "before_sha256": "D134AE0753CFAF786A3D06CD12F82797E076FCB4E1C9F48779D72A6FFD31E8A8",
+      "after_sha256": "FA62C8BAA596E7AE71064070621ABD8E052ACBD98D6DC429F2E53E66A361D7EB"
+    },
+    "second_required_tick_fingerprint_change": true,
+    "semantic_opportunity_rows_read": false,
+    "artifact_root": "lab/artifacts/backtests/us500-shock-response-v1/clean-p1-invalid/",
+    "summary_sha256": "910CC259DBB3FFB79B0640D4E1EDF5F956D99BB4799C4C3295257D59633B75F0",
+    "opportunities_sha256_unread": "F6733875F2EA39EF52154084750C9461C79B4D87411B0270FED0E99C51B1B06E",
+    "action": "CLOSE_INVALID_WITHOUT_ECONOMIC_JUDGMENT"
+  },
+  "unopened_paths": [
+    "P2_2024",
+    "P3_2025",
+    "P4_2026_YTD"
+  ],
+  "aggregation": {
+    "opportunity_economics_read": false,
+    "continuation_metrics_calculated": false,
+    "reversion_metrics_calculated": false,
+    "selection_gate_reached": false
+  },
+  "result": "INVALID_SECOND_REQUIRED_TICK_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "retained_question": null,
+  "source_or_contract_repair": false,
+  "extra_path": false,
+  "live_surface": "UNTOUCHED"
+}

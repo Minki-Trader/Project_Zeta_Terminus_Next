@@ -1,0 +1,46 @@
+{
+  "schema": "zeta-next-us500-shock-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "us500-shock-response-027",
+  "family": "us500-shock-response-v1",
+  "evidence": {
+    "declaration_sha256": "2CB75E9810EA6ED3D84DF45E8C6921DD860D2D6380D9FE5CF281720D0165E6E4",
+    "compile_receipt_sha256": "C9F733AD58D4C758D7C9DB66A883E3985C5D70CC0F2A0541C739F14B42100739",
+    "result_sha256": "09B85F76E8AA1049328D52C756CDF45B4BF2EDF3A5131ADC431B2EA5744C378C"
+  },
+  "execution": {
+    "environment_preflight_p1": 1,
+    "identical_clean_p1_rerun": 1,
+    "valid_fixed_paths": 0,
+    "unopened_fixed_paths": 3,
+    "extra_paths": 0,
+    "economic_rows_read": 0,
+    "orders": 0,
+    "positions": 0
+  },
+  "integrity_boundary": {
+    "observer_normal_stop": true,
+    "observer_rate_tick_profit_faults": 0,
+    "resolved_rows_on_each_invalid_p1": 1264,
+    "visible_contract_spec_equal": true,
+    "tester_bases_monthly_manifest_equal": true,
+    "required_bases_monthly_manifest_changed_on_both_invocations": true,
+    "second_change_after_sole_rebuild_allowance": true
+  },
+  "verdict": "INVALID_SECOND_REQUIRED_TICK_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "economic_interpretation": "NONE. Continuation and reversion were neither accepted nor rejected because the frozen environment gate failed before aggregation.",
+  "closed_rescues": [
+    "another runtime rebuild",
+    "another P1 run",
+    "P2 through P4",
+    "removing current-month ticks from the frozen manifest",
+    "changing the database housekeeping rule",
+    "source or contract repair",
+    "threshold, rearm, impulse, volatility, horizon, session, direction or spread variant"
+  ],
+  "retained_prototype_question": null,
+  "forward_baseline_changed": false,
+  "live_surface": "UNTOUCHED",
+  "next": "after_commit_and_push_return_to_one_unrelated_fresh_frontier_question_without_using_unit_027_as_economic_evidence"
+}

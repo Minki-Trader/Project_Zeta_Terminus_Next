@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0063`
+- Latest state ID: `STATE-0064`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -13,16 +13,16 @@ Last updated: 2026-08-26
 - Development: `ENABLED`, one serial stream only
 - Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-26 instruction to repair the three Live warnings and restore future entry readiness, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
 - Next V7 entries-disabled preflight: `PASSED`; CXR2 PID `21944` proved exact connected `0/0`, flat continuity and zero fault, then final preflight PID `24820` repeated exact `0/0` and stopped normally.
-- Next V7 new-entry authorization: `ENABLED`; CXR2 Live PID `13328` passed the committed exact `1/1` handshake under the user's explicit repair-and-entry-readiness instruction.
-- Existing real-account owner: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`, terminal PID `13328`
+- Next V7 new-entry authorization: `ENABLED`; CXR2 Live PID `13328` previously passed the committed exact `1/1` handshake under the user's explicit repair-and-entry-readiness instruction, but that PID is no longer locally active at the latest process-only check.
+- Last verified real-account owner configuration: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; no local `terminal64.exe` is currently active and current broker/account state was deliberately not polled
 - User V7 Live direction: `EFFECTIVE`
 
-Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the sole account owner at entries `1/1`. Persistent sequences `2008 → 2009 → 2010` stayed healthy through server `2026.08.25 18:29:24`: positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$104.48/$104.48`, safety/persistence/broker/foreign `0/0/0/0`, and no warning or alert. Dashboard PID `4284` is the sole local viewer.
+Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was last verified as the sole account owner at entries `1/1`. Persistent sequences `2008 → 2009 → 2010` stayed healthy through server `2026.08.25 18:29:24`: positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$104.48/$104.48`, safety/persistence/broker/foreign `0/0/0/0`, and no warning or alert. The latest process-only check found prior Live PID `13328` absent and no replacement `terminal64.exe`; dashboard PID `4284` remains. No broker query, restart or Live mutation followed.
 
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: `us500-shock-response-027`; fresh trade-free observer declaration frozen before implementation and outcome
+- Active research boundary: none; `us500-shock-response-027` is closed invalid before economic aggregation
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
