@@ -383,3 +383,11 @@
 - Across T03-T15, the economic sample is 13 positions, 9 wins / 4 losses, `+$3.91`. T09/T11/T14 reached at least `+$0.50` before loss, span Return and Cross across three dates, represent 75% of losses and gave back `$8.139`; individual profit memory passed.
 - Five of nine winners reached MFE in the final quarter of native life, so the late-maturity preservation guard also passed. Independent maximal cohorts passed descriptively but are not reselected after the closed portfolio-coordination matrix; the single same-symbol unlock failed density.
 - Closed Unit 020 source-frozen with exactly one retained unopened Unit 021 question: observe causal profit-state memory broadly on frozen historical control paths while explicitly measuring late-development opportunity. No management action, threshold, candidate EA, operating hypothesis or Live authority opened.
+
+## STATE-0048 - 2026-08-26
+
+- Opened only the retained Unit 021 `profit-memory-state-observation-v1` after the durable Unit 020 close. Before source derivation or outcome, fixed `0.125R` as the sole selection state translated from the actual `+$0.50` on approximately `$4` planned risk; it cannot be optimized or rescued.
+- Predeclared exactly eight serial fresh-`$100` real-tick paths: identity-separated CXR2 control and economically inert observer across P1 2022H2-2023, P2 2024, P3 2025 and P4 2026 YTD through August 20. All periods are consumed exploratory evidence and cannot promote.
+- The observer may only keep transient per-position MFE/MAE, threshold-crossing and peak-time state, then record the unchanged native stressed result after native close. Signals, entry count, admission, size, protection, exits, RC4, Passive, persistence and session clock remain frozen.
+- All six strategies receive separate density/economic gates; at most one can retain a later management-Proxy question. A portfolio-wide late-maturity guard forbids interpreting `0.125R` as an immediate close or unconditional breakeven rule.
+- Implementation, binary, configurations and outcomes remain unopened. Exact Live CXR2 PID `13328`, dashboard PID `4284`, source, package, settings, state and order behavior remain untouched.

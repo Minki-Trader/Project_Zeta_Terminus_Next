@@ -1,0 +1,115 @@
+{
+  "schema": "zeta-next-profit-memory-state-observation-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_021_IMPLEMENTATION_OR_OUTCOME",
+  "unit": "actual-live-profit-memory-observation-021",
+  "family": "profit-memory-state-observation-v1",
+  "question": "When the actual-Live +0.50 USD loss-reversal state is expressed causally as 0.125 of birth planned risk, does any one strategy show a broad, repeated native loss burden across frozen CXR2 history while the portfolio still contains material late-maturing winners?",
+  "parent": {
+    "root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "git_tree": "605fcec39cd1ba5479c156f71935299ea3c1288b",
+    "tracked_files": 17,
+    "copy_rule": "one-time copy into this family; no include, link or execution dependency on the parent after derivation"
+  },
+  "retained_from_unit_020": {
+    "result_sha256": "294003EE9BFFDD434A033D481B484B19528D7184E97D2565DC210FA6370A5562",
+    "closure_sha256": "9C962ACAB4399B27C37EB35A802BE4CFD1B53AFEEA9BC59DDEEE66C08FF1F217",
+    "actual_state": "T09, T11 and T14 each reached at least +0.50 USD before finishing nonpositive; five of nine actual winners peaked in the final quarter of native life",
+    "translation": "+0.50 USD divided by the approximately 4 USD birth planned risk is fixed at 0.125R",
+    "threshold_optimization": false
+  },
+  "boundary": {
+    "lab_only": true,
+    "already_consumed_exploratory_periods": true,
+    "clean_holdout": false,
+    "confirmation_or_promotion_evidence": false,
+    "entry_behavior_frozen": true,
+    "sizing_and_risk_frozen": true,
+    "protection_and_exit_behavior_frozen": true,
+    "operating_incidents_or_availability": "excluded_from_the_question",
+    "live_surface": "UNTOUCHED"
+  },
+  "fixed_variants": {
+    "CONTROL": "Identity-separated exact CXR2 economic control with no observer calls.",
+    "PROFIT_MEMORY_OBSERVER": "The same source and economics plus read-only per-tick floating-profit memory and one post-native-close observation row. The observer cannot call a trade function or alter component, portfolio, execution, decision, risk or persistence state."
+  },
+  "fixed_periods": [
+    {"id":"P1","from":"2022-08-01","to":"2024-01-01","label":"2022H2_2023"},
+    {"id":"P2","from":"2024-01-01","to":"2025-01-01","label":"2024"},
+    {"id":"P3","from":"2025-01-01","to":"2026-01-01","label":"2025"},
+    {"id":"P4","from":"2026-01-01","to":"2026-08-21","label":"2026_YTD_through_2026_08_20"}
+  ],
+  "run_matrix": {
+    "paths": 8,
+    "order": [
+      "P1_CONTROL", "P1_PROFIT_MEMORY_OBSERVER",
+      "P2_CONTROL", "P2_PROFIT_MEMORY_OBSERVER",
+      "P3_CONTROL", "P3_PROFIT_MEMORY_OBSERVER",
+      "P4_CONTROL", "P4_PROFIT_MEMORY_OBSERVER"
+    ],
+    "account": "fresh 100 USD, USD, leverage 1:100",
+    "model": "FPMarkets Every tick based on real ticks, 100% real ticks",
+    "runtime": "one dedicated Git-ignored family Portable",
+    "additional_paths": 0
+  },
+  "fixed_observation": {
+    "birth": "A component position_identifier becoming nonzero after native admission and fill.",
+    "mark": "Current selected position floating profit on every dispatched US30 real tick, with the latest causal US100 quote for US100 positions.",
+    "birth_planned_risk": "The unchanged component entry_planned_risk_usd captured at birth.",
+    "mfe_r": "Maximum observed floating profit divided by birth planned risk.",
+    "mae_r": "Minimum observed floating profit divided by birth planned risk.",
+    "native_stressed_r": "The unchanged component stressed-net increment at native close divided by birth planned risk.",
+    "peak_fraction": "Elapsed seconds from birth to MFE divided by elapsed seconds from birth to native close.",
+    "profit_memory_reversal": "mfe_r is at least 0.125 and native_stressed_r is nonpositive.",
+    "late_maturity_winner": "native_stressed_r is positive, mfe_r is at least 0.125 and peak_fraction is at least 0.75.",
+    "giveback_r": "mfe_r minus native_stressed_r.",
+    "fixed_descriptive_crossings_r": [0.0, 0.125, 0.25, 0.5, 1.0],
+    "selection_threshold_r": 0.125
+  },
+  "implementation_contract": {
+    "identity": "CONTROL and OBSERVER use separate release, Portfolio, Magic, state, event, snapshot, lock and observation paths.",
+    "observer_state": "Private transient measurement state only; it is never serialized into the economic state files.",
+    "observer_calls": "One pre-dispatch mark/sync call before the Tester scheduler early return and one post-dispatch sync call after native processing.",
+    "close_result": "Computed only from the component stressed-net increment after native close; the observer never initiates a close.",
+    "allowed_source_differences": "Family identity/path declarations, thin variant entrypoints, one conditional assembly include/call seam and the observer module.",
+    "forbidden": "Any signal, admission, size, stop, protection, close, timeout, RC4, Passive, order, persistence-schema or session-clock change."
+  },
+  "fixed_integrity_gate": [
+    "Both variants compile on build 6140 at 0 errors and 0 warnings before any run.",
+    "For every adjacent period pair, all normalized report summary, order and deal rows are equal and final lifecycle/stressed-net totals match exactly.",
+    "State A/B, current A/B and lock evidence are equal after identity normalization; event economic rows are equal after excluding observer-only rows and the existing deal_wait_ms wall-clock field.",
+    "Observer rows equal the observer variant's completed native lifecycle count with no duplicate position_identifier, unmatched birth/close, nonpositive planned risk, missing sample, MFE below MAE, crossing-order or time-order fault.",
+    "Required US30, US100 and US500 symbols database plus contract/swap fingerprints are unchanged before and after every adjacent pair. Any change invalidates the full matrix and no economic verdict is made.",
+    "All runs stop normally with zero safety, persistence, broker, foreign, protection, ownership or observer fault."
+  ],
+  "fixed_information_gate": {
+    "apply_separately_to": ["RC16", "RC4", "Cross", "Pressure", "Return", "Passive"],
+    "requirements": [
+      "At least 20 pooled profit_memory_reversal lifecycles.",
+      "At least five profit_memory_reversal lifecycles in at least three periods.",
+      "Profit-memory reversals are at least 20% of all native nonpositive lifecycles for the strategy.",
+      "Their pooled mean native_stressed_r is at most -0.20R.",
+      "Their summed giveback_r is at least 12R.",
+      "Their mean native_stressed_r is negative in at least three periods with at least five reversals."
+    ],
+    "selection": "Select at most one passing strategy by larger summed giveback_r, then more reversal lifecycles, then more passing periods, then lexicographic strategy name.",
+    "passing_action": "Retain one later entry-preserving, strategy-specific profit-memory management Proxy question. No action type or threshold is selected in Unit 021.",
+    "failure_action": "Close the actual-position bundle naturally. Do not rescue with another threshold, direction, symbol, weekday, period, MFE bin or pooled all-strategy rule."
+  },
+  "late_maturity_guard": {
+    "portfolio_pass": "At least 40 pooled late_maturity_winner lifecycles and at least eight in three periods across the whole portfolio.",
+    "strategy_reporting": "For every strategy, report late-maturity count, period breadth, share of positive lifecycles and summed post-75%-life MFE opportunity; it cannot rescue a failed burden gate.",
+    "effect": "Any retained management Proxy must keep the native position open at the first 0.125R crossing and compare a reversible memory response rather than assume immediate close or unconditional breakeven."
+  },
+  "stop_rules": [
+    "Freeze source, binary, eight configurations and symbol fingerprints before opening the first path.",
+    "Run exactly the eight serial paths and no optimization.",
+    "If environment fingerprint changes, invalidate and close without a clean rerun inside Unit 021.",
+    "Do not use T15 replay repair, operating events, manual-close timing or Live logs as outcome data.",
+    "Do not select an action, stop offset, trail, floor, hold change, strategy exception or Live candidate from the observation.",
+    "Do not reopen generic cohort coordination or same-symbol directional unlock."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_derive_the_two_identity_separated_variants_once_from_the_frozen_cxr2_root"
+}
