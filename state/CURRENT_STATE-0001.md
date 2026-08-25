@@ -584,3 +584,12 @@
 - Created the Git-ignored dedicated `lab/runtime/us100-tick-flow-imbalance-response-v1-portable/` from the generic Lab cache. Origin and copy file IDs differ, sample hardlink lists contain one path, filesystem link objects are zero and the fixed report directory exists before execution.
 - Froze both required 48-file US100 2022-08 through 2026-07 completed-month manifests, selected/full symbol-database telemetry and visible US100 contract values. Compile receipt SHA-256 is `3EDB11700D890BD00858179B88A106138E2994DEDD67DD1C2983552154EE3839`.
 - Exactly four serial P1-P4 trade-free paths may now run. No outcome has been read, and no Live process, broker state or Live surface was queried or changed.
+
+## STATE-0073 - 2026-08-26
+
+- Completed exactly four serial Unit 030 paths at 100% real ticks with the frozen source, configuration, binary and dedicated Portable. Both required 48-file completed-month raw-tick manifests stayed exact; visible US100 specifications matched at every start/end boundary.
+- Across 1,034 eligible tick-flow days, 92,282 eligible evaluations and 414,311,431 valid ticks, only 12 triggers appeared and all resolved after four market bars. Unresolved, tick, calculation, row-count, count-threshold and direction faults were zero.
+- Frequency failed every fixed gate by a wide margin: pooled density was `12/1,034 = 0.011605416` versus `0.40`, no path reached `0.25`, and 12 pooled opportunities were below 300. P3 and P4 produced no trigger at all.
+- Continuation produced observed `-$0.50` and double-spread `-$0.84`, PF `0.333333333`, with zero positive path. Reversion produced observed `+$0.15` but double-spread `-$0.19`, PF `0.756410256`; its only positive path was P1 `+$0.23` with 100% positive-path concentration.
+- Applied the frozen failure action without threshold, minimum-tick, bar, price-basis, continuity, cooldown, horizon, direction, spread, period or extra-run rescue. Closed Unit 030 `NO_TICK_FLOW_IMBALANCE_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED`; no prototype, candidate, seed or Live promotion survives.
+- Result/closure SHA-256 values are `2E8F71379EC4C7565A3A1D05A9E3FBCD8F7F1EF90AB537E775D233425936CA6F` / `5FD14C817D057798A7B6DFAFF2EB5853A0A4366119C11C579648F04C3BF42941`. No Live process, broker state or Live surface was queried or changed.

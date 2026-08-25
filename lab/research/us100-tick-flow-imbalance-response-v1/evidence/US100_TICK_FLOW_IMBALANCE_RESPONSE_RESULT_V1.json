@@ -1,0 +1,219 @@
+{
+  "schema": "zeta-next-us100-tick-flow-imbalance-response-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "us100-tick-flow-imbalance-response-030",
+  "family": "us100-tick-flow-imbalance-response-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "98172EE896F223CB98A3B82114EE5ADF31ABA044AFB0D1604E2825AE4E066392",
+    "compile_receipt_sha256": "3EDB11700D890BD00858179B88A106138E2994DEDD67DD1C2983552154EE3839",
+    "source_commit": "30ff4d4",
+    "source_manifest_sha256": "D9482E8C8AE9C4ABC5181A947C0F315ACB3DDA39031C20B1136BA62C8FFB9DA5",
+    "configuration_manifest_sha256": "E6B7256BC0B36DA46AB564A2C04E48A0A18D69AF8E3F3A9655D14C08A5998C68",
+    "binary_sha256": "11D0549A5F54F1EE7472432B1383F128BF812C2A8C2C8BC69F793A6BBED4BA0D",
+    "bases_completed_months_sha256": "1FEA3D1769FAC19EB0417BC4256B93DF9E1213295E865B3F9686BA3F53566FCF",
+    "tester_bases_completed_months_sha256": "3DAA47B409A82666E1EA4F69C49664BE16D7561DEA0D71928276E47C0E693EF4"
+  },
+  "execution": {
+    "fixed_paths_run": 4,
+    "valid_paths": 4,
+    "invalid_or_rebuilt_paths": 0,
+    "extra_paths": 0,
+    "source_or_configuration_changes_after_freeze": 0,
+    "orders": 0,
+    "positions": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "history_quality": "100_PERCENT_REAL_TICKS_ON_ALL_FOUR_PATHS",
+    "normal_stops": 4,
+    "eligible_tick_flow_days": 1034,
+    "eligible_tick_flow_evaluations": 92282,
+    "finalized_bars": 94394,
+    "valid_ticks": 414311431,
+    "triggers": 12,
+    "resolved": 12,
+    "unresolved": 0,
+    "tick_and_profit_calculation_faults": 0,
+    "opportunity_rows": 12,
+    "unique_run_opportunity_keys": 12,
+    "non_four_market_bar_rows": 0,
+    "count_threshold_direction_or_calculation_faults": 0,
+    "row_summary_mismatches": 0,
+    "visible_contract_spec_start_end_equal_and_frozen": true,
+    "required_bases_manifest_unchanged_on_every_path": true,
+    "required_tester_bases_manifest_unchanged_on_every_path": true,
+    "source_manifest_unchanged": true,
+    "configuration_manifest_unchanged": true,
+    "binary_unchanged": true,
+    "post_run_database_telemetry": {
+      "selected_sha256": "7B835285F21B2E645F1D386EF96603F669C85B5F1EC88592A76B6A0E077E3147",
+      "symbols_sha256": "0717CCA1F7233873754E05FF1C3F8C04125F38F018B5610547E1943C751D039D",
+      "economic_invariant": false
+    }
+  },
+  "paths": [
+    {
+      "run_code": 1,
+      "period": "P1_2022H2_2023",
+      "eligible_tick_flow_days": 366,
+      "eligible_tick_flow_evaluations": 32335,
+      "finalized_bars": 33449,
+      "valid_ticks": 65325884,
+      "resolved": 5,
+      "opportunities_per_eligible_tick_flow_day": 0.013661202186,
+      "continuation": {
+        "observed": {"net_usd": -0.51, "wins": 2, "losses": 3, "zeros": 0, "profit_factor": 0.120689655172, "max_closed_drawdown_usd": 0.51},
+        "double_spread": {"net_usd": -0.65, "wins": 1, "losses": 4, "zeros": 0, "profit_factor": 0.057971014493, "max_closed_drawdown_usd": 0.65}
+      },
+      "reversion": {
+        "observed": {"net_usd": 0.37, "wins": 3, "losses": 2, "zeros": 0, "profit_factor": 3.846153846154, "max_closed_drawdown_usd": 0.13},
+        "double_spread": {"net_usd": 0.23, "wins": 3, "losses": 2, "zeros": 0, "profit_factor": 2.277777777778, "max_closed_drawdown_usd": 0.18}
+      },
+      "artifacts": {
+        "report_sha256": "87E2206E43C41B0C27E5F3179FF9A0F7319893A55342033FF91DE2DDED9B7B71",
+        "summary_sha256": "8FF5DE6DEE683873B44309B0BD00A6929A2D6A945E00AC3BD9C19EC9F609EEB2",
+        "opportunities_sha256": "22F9A7308C6DDC952FB5AF10EDD8555A444A66A6F615502A6B55797341E8E9F0"
+      }
+    },
+    {
+      "run_code": 2,
+      "period": "P2_2024",
+      "eligible_tick_flow_days": 259,
+      "eligible_tick_flow_evaluations": 23087,
+      "finalized_bars": 23668,
+      "valid_ticks": 65421654,
+      "resolved": 7,
+      "opportunities_per_eligible_tick_flow_day": 0.027027027027,
+      "continuation": {
+        "observed": {"net_usd": 0.01, "wins": 2, "losses": 5, "zeros": 0, "profit_factor": 1.023255813953, "max_closed_drawdown_usd": 0.36},
+        "double_spread": {"net_usd": -0.19, "wins": 2, "losses": 5, "zeros": 0, "profit_factor": 0.666666666667, "max_closed_drawdown_usd": 0.44}
+      },
+      "reversion": {
+        "observed": {"net_usd": -0.22, "wins": 4, "losses": 3, "zeros": 0, "profit_factor": 0.568627450980, "max_closed_drawdown_usd": 0.50},
+        "double_spread": {"net_usd": -0.42, "wins": 3, "losses": 4, "zeros": 0, "profit_factor": 0.300000000000, "max_closed_drawdown_usd": 0.60}
+      },
+      "artifacts": {
+        "report_sha256": "0CD426C4964791D1C2A970054927C3514F2C7B29E04CC87A2D28295248E8F5FB",
+        "summary_sha256": "A271A022ED5B56DC4A17EF7A69DC98C44A13DBA6412AADF8B92AD4FAA13E77F6",
+        "opportunities_sha256": "50B0E2E9513A511A14871FABBEB74A86616D498E1C60362C2D3A4C20D8B6C97A"
+      }
+    },
+    {
+      "run_code": 3,
+      "period": "P3_2025",
+      "eligible_tick_flow_days": 258,
+      "eligible_tick_flow_evaluations": 23229,
+      "finalized_bars": 23496,
+      "valid_ticks": 85515819,
+      "resolved": 0,
+      "opportunities_per_eligible_tick_flow_day": 0.0,
+      "continuation": {
+        "observed": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0},
+        "double_spread": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0}
+      },
+      "reversion": {
+        "observed": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0},
+        "double_spread": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0}
+      },
+      "artifacts": {
+        "report_sha256": "59BFDC3C1A3C1A5A312C1FCF3C7892B4AA8D712571C2173EBFC9B3BCBA5E9899",
+        "summary_sha256": "0B6DE9E2BD129CCD8E00A243FE88A6E71AA13C0F6F35870E499D9E948636C38E",
+        "opportunities_sha256": "814CD08BB0DDE5EC233AD1A04AA63ADD59149350FC95CE6016CDC40B12FCB807"
+      }
+    },
+    {
+      "run_code": 4,
+      "period": "P4_2026_COMPLETE_MONTHS",
+      "eligible_tick_flow_days": 151,
+      "eligible_tick_flow_evaluations": 13631,
+      "finalized_bars": 13781,
+      "valid_ticks": 198048074,
+      "resolved": 0,
+      "opportunities_per_eligible_tick_flow_day": 0.0,
+      "continuation": {
+        "observed": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0},
+        "double_spread": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0}
+      },
+      "reversion": {
+        "observed": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0},
+        "double_spread": {"net_usd": 0.0, "wins": 0, "losses": 0, "zeros": 0, "profit_factor": null, "max_closed_drawdown_usd": 0.0}
+      },
+      "artifacts": {
+        "report_sha256": "E1E2BFCA49BF8F4FF678DF7D0237DCD881F644B10415903E879A444BCB035132",
+        "summary_sha256": "988CB336F17980D1212A69FDD306AC5DA5CBDF30363097ED981B6D83FF05F082",
+        "opportunities_sha256": "814CD08BB0DDE5EC233AD1A04AA63ADD59149350FC95CE6016CDC40B12FCB807"
+      }
+    }
+  ],
+  "pooled": {
+    "eligible_tick_flow_days": 1034,
+    "eligible_tick_flow_evaluations": 92282,
+    "resolved": 12,
+    "opportunities_per_eligible_tick_flow_day": 0.011605415861,
+    "continuation": {
+      "observed": {"net_usd": -0.50, "wins": 4, "losses": 8, "zeros": 0, "gross_profit_usd": 0.51, "gross_loss_usd": 1.01, "profit_factor": 0.504950495050, "max_closed_drawdown_usd": 0.58},
+      "double_spread": {"net_usd": -0.84, "wins": 3, "losses": 9, "zeros": 0, "gross_profit_usd": 0.42, "gross_loss_usd": 1.26, "profit_factor": 0.333333333333, "max_closed_drawdown_usd": 0.84, "net_to_max_closed_drawdown": -1.0},
+      "positive_double_spread_paths": 0,
+      "positive_path_contribution_shares": {"P1_2022H2_2023": 0.0, "P2_2024": 0.0, "P3_2025": 0.0, "P4_2026_COMPLETE_MONTHS": 0.0},
+      "maximum_positive_path_contribution_share": null
+    },
+    "reversion": {
+      "observed": {"net_usd": 0.15, "wins": 7, "losses": 5, "zeros": 0, "gross_profit_usd": 0.79, "gross_loss_usd": 0.64, "profit_factor": 1.234375000000, "max_closed_drawdown_usd": 0.50},
+      "double_spread": {"net_usd": -0.19, "wins": 6, "losses": 6, "zeros": 0, "gross_profit_usd": 0.59, "gross_loss_usd": 0.78, "profit_factor": 0.756410256410, "max_closed_drawdown_usd": 0.60, "net_to_max_closed_drawdown": -0.316666666667},
+      "positive_double_spread_paths": 1,
+      "positive_path_contribution_shares": {"P1_2022H2_2023": 1.0, "P2_2024": 0.0, "P3_2025": 0.0, "P4_2026_COMPLETE_MONTHS": 0.0},
+      "maximum_positive_path_contribution_share": 1.0
+    }
+  },
+  "fixed_gate_application": {
+    "integrity_passed": true,
+    "frequency": {
+      "pooled_rate_minimum": 0.40,
+      "pooled_rate_observed": 0.011605415861,
+      "pooled_rate_passed": false,
+      "paths_at_or_above_0_25_required": 3,
+      "paths_at_or_above_0_25_observed": 0,
+      "path_breadth_passed": false,
+      "pooled_resolved_minimum": 300,
+      "pooled_resolved_observed": 12,
+      "pooled_resolved_passed": false,
+      "passed": false
+    },
+    "continuation_economic": {
+      "positive_pooled_double_spread_net": false,
+      "profit_factor_at_least_1_10": false,
+      "positive_paths_at_least_three": false,
+      "net_to_drawdown_at_least_1_50": false,
+      "contribution_limit_evaluable": false,
+      "maximum_positive_path_share_at_most_0_70": false,
+      "passed": false
+    },
+    "reversion_economic": {
+      "positive_pooled_double_spread_net": false,
+      "profit_factor_at_least_1_10": false,
+      "positive_paths_at_least_three": false,
+      "net_to_drawdown_at_least_1_50": false,
+      "contribution_limit_evaluable": true,
+      "maximum_positive_path_share_at_most_0_70": false,
+      "passed": false
+    },
+    "passing_directions": []
+  },
+  "interpretation": {
+    "frequency": "The fixed completed-M15 imbalance state produced only 12 resolved opportunities across 1,034 eligible tick-flow days. P1 and P2 rates were 0.013661202186 and 0.027027027027, while P3 and P4 produced none; every frozen frequency condition failed by a wide margin.",
+    "continuation": "Continuation was negative both at observed costs and under the declared double-spread stress: -$0.50 observed and -$0.84 stressed, with stressed PF 0.333333333333 and no positive path.",
+    "reversion": "Reversion was +$0.15 with observed costs but fell to -$0.19 and PF 0.756410256410 under double spread. Its sole positive stressed path was P1 at +$0.23, giving 100 percent positive-path concentration before P2 reversed it and P3-P4 produced no opportunities.",
+    "consequence": "The frozen extreme tick-flow state is too rare and neither direction remains cost-positive, broad or efficient enough to retain a standalone additive prototype question."
+  },
+  "selection": {
+    "verdict": "NO_TICK_FLOW_IMBALANCE_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED",
+    "selected_direction": null,
+    "retained_prototype_question": null,
+    "threshold_minimum_tick_bar_basis_continuity_cooldown_horizon_direction_spread_or_period_rescue": false,
+    "new_hypothesis_opened_inside_unit": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_and_freeze_unit_030_then_after_durable_commit_return_to_one_fresh_unrelated_serial_frontier_question"
+}

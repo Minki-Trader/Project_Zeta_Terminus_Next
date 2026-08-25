@@ -1,0 +1,50 @@
+{
+  "schema": "zeta-next-us100-tick-flow-imbalance-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "us100-tick-flow-imbalance-response-030",
+  "family": "us100-tick-flow-imbalance-response-v1",
+  "evidence": {
+    "declaration_sha256": "98172EE896F223CB98A3B82114EE5ADF31ABA044AFB0D1604E2825AE4E066392",
+    "compile_receipt_sha256": "3EDB11700D890BD00858179B88A106138E2994DEDD67DD1C2983552154EE3839",
+    "result_sha256": "2E8F71379EC4C7565A3A1D05A9E3FBCD8F7F1EF90AB537E775D233425936CA6F"
+  },
+  "execution": {
+    "valid_fixed_paths": 4,
+    "invalid_or_rebuilt_paths": 0,
+    "extra_paths": 0,
+    "resolved_opportunities": 12,
+    "orders": 0,
+    "positions": 0
+  },
+  "gate_summary": {
+    "integrity_passed": true,
+    "pooled_opportunities_per_eligible_tick_flow_day": 0.011605415861,
+    "paths_at_or_above_0_25": 0,
+    "pooled_resolved": 12,
+    "continuation_double_spread_net_usd": -0.84,
+    "continuation_double_spread_profit_factor": 0.333333333333,
+    "continuation_positive_paths": 0,
+    "reversion_double_spread_net_usd": -0.19,
+    "reversion_double_spread_profit_factor": 0.756410256410,
+    "reversion_positive_paths": 1,
+    "passing_directions": []
+  },
+  "verdict": "NO_TICK_FLOW_IMBALANCE_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED",
+  "reason": "All three frequency requirements failed: 12 opportunities across 1,034 eligible tick-flow days is 0.011605415861 per day, no path reached 0.25 per day, and the required pooled count was 300. Neither direction was positive under double spread; continuation was -$0.84 with PF 0.333333333333 and reversion was -$0.19 with PF 0.756410256410.",
+  "closed_rescues": [
+    "another imbalance threshold",
+    "another minimum directional-tick count",
+    "another bar period or price basis",
+    "another continuity rule or cooldown",
+    "another holding horizon",
+    "direction or period subgroup",
+    "another spread stress",
+    "another path or clean rerun",
+    "tick-flow-imbalance entry prototype"
+  ],
+  "retained_prototype_question": null,
+  "forward_baseline_changed": false,
+  "live_surface": "UNTOUCHED",
+  "next": "after_commit_and_push_return_to_one_fresh_unrelated_serial_frontier_question"
+}
