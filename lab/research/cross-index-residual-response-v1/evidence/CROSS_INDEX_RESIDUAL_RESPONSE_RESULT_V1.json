@@ -1,0 +1,116 @@
+{
+  "schema": "zeta-next-cross-index-residual-response-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "INVALID_INTEGRITY_BEFORE_ECONOMIC_GATE",
+  "unit": "cross-index-residual-response-022",
+  "family": "cross-index-residual-response-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "231F7150A19F1F6725C273A6D35136CADFE168850767116F64AC866D2BF645D8",
+    "compile_receipt_sha256": "E80BA5234A85AA0A32C7EFE5534C1BCD03F5CE699EAB75E83FCEB6B82606A7AF",
+    "source_commit": "2f3c2be",
+    "source_manifest_sha256": "836281D05D23B83F183136CF2E18186C9792B23B7B182A96F2FF3543357FC6F0",
+    "configuration_manifest_sha256": "DC1DEBF474E3B6B904C2D2A21365B0CE7BCB93500013C8FA065DDC69B1F33A7F",
+    "observer_ex5_sha256": "6D9A0D2B1837276CACCCBFFCAFEC0528C4F9AFD9D0193DCDB6B0E09471AFCD14"
+  },
+  "execution": {
+    "planned_paths": ["LONG_OBSERVATION", "ISOLATED_LATEST_OBSERVATION"],
+    "environment_sync_pass": {
+      "path": "LONG_OBSERVATION",
+      "pid": 27856,
+      "started_local": "2026-08-26T02:07:02.4938555+09:00",
+      "ended_local": "2026-08-26T02:08:38.9266881+09:00",
+      "seconds": 96.4328326,
+      "tester_exit_code": 0,
+      "economic_output_disposition": "DISCARDED_UNREAD"
+    },
+    "only_clean_rerun": {
+      "path": "LONG_OBSERVATION",
+      "pid": 3532,
+      "started_local": "2026-08-26T02:19:49.6268773+09:00",
+      "ended_local": "2026-08-26T02:23:53.7622780+09:00",
+      "seconds": 244.1354007,
+      "tester_exit_code": 0,
+      "source_binary_configuration_identical": true
+    },
+    "isolated_latest_opened": false,
+    "additional_rerun": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "environment_fingerprint": {
+    "initial_before_sync": {
+      "selected_sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F",
+      "symbols_sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+    },
+    "after_sync_pass": {
+      "selected_sha256": "B8C42B60F27CFFC17894D889B6D5887DA360236FE58E572F241A49B1DA91FD78",
+      "symbols_sha256": "A5DF859E4061704F46BCB06164B46AE28C4F4B96C8766034EE7102EC7EFB8838",
+      "first_change_triggered_clean_rerun": true
+    },
+    "after_only_clean_rerun": {
+      "selected_before_sha256": "B8C42B60F27CFFC17894D889B6D5887DA360236FE58E572F241A49B1DA91FD78",
+      "selected_after_sha256": "A2A5AD61A4241802729FF48F135FF8065F23DCDEA46F9D6865212AE0084AB05E",
+      "selected_unchanged": false,
+      "symbols_before_sha256": "A5DF859E4061704F46BCB06164B46AE28C4F4B96C8766034EE7102EC7EFB8838",
+      "symbols_after_sha256": "A5DF859E4061704F46BCB06164B46AE28C4F4B96C8766034EE7102EC7EFB8838",
+      "symbols_unchanged": true,
+      "second_change_invalidated_unit": true
+    },
+    "visible_contract_swap_rows": {
+      "symbols": ["US30", "US100", "US500"],
+      "clean_start_end_equal": true,
+      "interpretation": "Visible rows stayed equal, but the declaration independently required the selected-symbol database to remain unchanged."
+    },
+    "integrity_gate_passed": false
+  },
+  "observer_integrity": {
+    "clean_long_normal_tester_finish": true,
+    "eligible_evaluations_logged": 124425,
+    "triggers_logged": 2055,
+    "resolved_logged": 2055,
+    "faults": 146275,
+    "rate_faults": 146275,
+    "scale_faults": 0,
+    "entry_quote_faults": 0,
+    "outcome_quote_faults": 0,
+    "profit_conversion_faults": 0,
+    "nonfinite_faults": 0,
+    "unresolved": 0,
+    "zero_fault_gate_passed": false,
+    "interpretation": "Under the frozen output contract, missing or misaligned CopyRates observations are faults. The identical clean rerun reproduced the nonzero fault count, so it cannot be reclassified or repaired inside this closed unit."
+  },
+  "artifact_receipts": {
+    "sync_agent_log_sha256": "D77FF2B221FCF6E9922250C7BABF9CFEB6BBD768A970CD8F2E5CE0EEC91B5351",
+    "sync_tester_log_sha256": "B85F338663127A67CB0EF429732786AE3094C54BF5B214433E35DFC2A5F007CE",
+    "clean_cumulative_agent_log_sha256": "D6964DF3AAAE88F8144D0AE7F6BF022D161F6933B501F89AF2089F7A33AF8879",
+    "clean_cumulative_tester_log_sha256": "0F8782C9B7B45A0220A193F68674BFE358FD32C6EBFFFE4AD3D720F5C8DB24E0",
+    "invalid_long_opportunity_file": {
+      "bytes": 692053,
+      "sha256": "B5DB7F8895C1C42E0A9A2E3BDA78C435500A39B52CF2F28D91769B1D9CCF2E2E",
+      "semantic_content_consumed": false
+    },
+    "invalid_long_day_file": {
+      "bytes": 22455,
+      "sha256": "71373B04EE74A8DA1ECE00B6F777CAAC394F86B93A1A8FE9D90897BD11A4832D",
+      "semantic_content_consumed": false
+    }
+  },
+  "economic_judgment": {
+    "opportunity_or_day_rows_aggregated": false,
+    "frequency_gate_reached": false,
+    "reversion_gate_reached": false,
+    "continuation_gate_reached": false,
+    "latest_frequency_or_cost_used": false,
+    "selected_direction": null,
+    "prototype_question_retained": false,
+    "economic_verdict": null,
+    "interpretation": "The invalid run counts are integrity telemetry only and are not evidence for or against the cross-index residual hypothesis."
+  },
+  "selection": {
+    "verdict": "INVALID_SECOND_FINGERPRINT_AND_RATE_INTEGRITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+    "candidate": null,
+    "unit_023_authorized": false,
+    "threshold_horizon_session_symbol_or_estimator_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_unit_022_without_an_observer_repair_branch_then_select_one_non_nearby_serial_frontier_question_after_durable_commit"
+}

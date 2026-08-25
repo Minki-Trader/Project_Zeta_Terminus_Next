@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0052`
+- Latest state ID: `STATE-0053`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: `cross-index-residual-response-022`; declaration plus fresh trade-free observer source/binary/config/runtime frozen before outcome
+- Active research boundary: none; Unit 022 closed invalid before economic judgment and no observer-repair or high-turnover prototype branch remains open
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -258,16 +258,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 - Closed `INVALID_SYMBOL_SPEC_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_CANDIDATE`; this is not evidence for or against profit-memory economics. Units 020-021 form a naturally closed actual-position bundle, with no forced extension toward Unit 030 and no operating hypothesis.
 - Result/closure SHA-256: `BE556346EBC7E41E09E42BC95199FABB115398A40DD70450D3C771DFB0E99458` / `B93A7EF0FB71D589B4163B59A7E14B130F771A96D7B9B1163B15DB7A5E8BA777`. Live CXR2 PID `13328` and dashboard PID `4284` remain untouched.
 
-## Open cross-index residual response Unit 022
+## Closed cross-index residual response Unit 022
 
 - Fresh Next-only question: whether a causal volatility-normalized 15-minute relative displacement among US30, US100 and US500 supports one frequent, double-spread-positive 30-minute reversion or continuation entry state.
 - The fixed observer evaluates synchronized completed M5 bars, uses a pre-impulse 48-bar volatility scale, triggers the greatest absolute cross-sectional residual at `1.5`, rearms only below `0.75`, and permits one unresolved observation at a time. There is no parameter or horizon grid.
-- Exactly two trade-free paths are planned: 2022-08-01 through 2026-05-31 for four-subperiod economic selection, and 2026-06-01 through 2026-08-20 for isolated-latest frequency/cost evidence only. A fingerprint-changing first pass may be discarded for one identical clean rerun; a second change invalidates the unit.
-- A direction must average at least `3.0` opportunities per normal day in both paths, pass pooled and three-of-four double-spread economics including P4, and remain positive with sufficient density on every symbol. At most one later standalone trading-prototype question may survive; no order is allowed in Unit 022.
-- Any later prototype must be followed by a separate all-six-strategy portfolio-combination comparison before it can become a portfolio candidate. Units 020-021 and Live remain outside this family.
+- The initial LONG path changed both selected/full database hashes and was discarded without reading its economic rows. The only identical clean LONG rerun kept full `symbols-*.dat` at `A5DF859E4061704F46BCB06164B46AE28C4F4B96C8766034EE7102EC7EFB8838` but changed selected-symbol DB `B8C42B60F27CFFC17894D889B6D5887DA360236FE58E572F241A49B1DA91FD78 → A2A5AD61A4241802729FF48F135FF8065F23DCDEA46F9D6865212AE0084AB05E`.
+- The clean observer also reproduced `146,275` frozen missing/misaligned-rate faults while resolving every `2,055` trigger. Those counts are integrity telemetry only; no frequency, reversion, continuation, cost or symbol economics were aggregated.
+- Per the second-change and zero-fault stop rules, the isolated-latest path, economic gates, direction selection and Unit 023 prototype stayed unopened. This is not an economic rejection of either direction.
 - The self-contained observer has zero order-submission surfaces and only uses `OrderCalcProfit` for two directional counterfactuals. It compiled on build 6140 at `0 errors / 0 warnings`; source/config/binary hashes are `836281D05D23B83F183136CF2E18186C9792B23B7B182A96F2FF3543357FC6F0` / `DC1DEBF474E3B6B904C2D2A21365B0CE7BCB93500013C8FA065DDC69B1F33A7F` / `6D9A0D2B1837276CACCCBFFCAFEC0528C4F9AFD9D0193DCDB6B0E09471AFCD14`.
-- Its dedicated Git-ignored Portable owns copied build-6140 executables and required-symbol data. Pre-outcome Bases/Tester-bases manifests and selected/full symbol DB fingerprints are frozen in the compile receipt; no cross-family source, runtime, state or Live dependency exists.
-- Declaration/compile receipt SHA-256: `231F7150A19F1F6725C273A6D35136CADFE168850767116F64AC866D2BF645D8` / `E80BA5234A85AA0A32C7EFE5534C1BCD03F5CE699EAB75E83FCEB6B82606A7AF`. Outcomes remain unopened.
+- Closed `INVALID_SECOND_FINGERPRINT_AND_RATE_INTEGRITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Declaration/compile/result/closure SHA-256 values are `231F7150A19F1F6725C273A6D35136CADFE168850767116F64AC866D2BF645D8` / `E80BA5234A85AA0A32C7EFE5534C1BCD03F5CE699EAB75E83FCEB6B82606A7AF` / `C8D3CCE86CC68CC04CF2A42AEAC1EF48294C58E51E61B8F7EC94E023ABDEA3E4` / `F0968E64209F3B2A006A33F76AA33ED0EE158F783176F86EC41A922131921F7E`. Live remains untouched.
 
 ## Required completion evidence
 
@@ -280,4 +279,4 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_SOURCE_FROZEN_OUTCOMES_UNOPENED`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE`

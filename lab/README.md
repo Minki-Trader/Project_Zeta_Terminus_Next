@@ -31,7 +31,7 @@
 - `research/server-day-carry-burden-v1/`: 닫힌 서버 날짜 이월부담 진단 family; 2,233건 중 이월은 RC16 1건·RC4 2건뿐이고 나머지는 0건으로 밀도 미달, 날짜경계 관리 후보 없음
 - `research/actual-live-position-economics-v1/`: 닫힌 Unit 020 실포지션 경제경로 family; T03-T15에서 개별 수익기억 부담과 늦은 성숙 승자 제약이 함께 통과해 넓은 역사 관찰 Unit 021 하나만 유지, 관리 규칙·임계값·Live 후보 없음
 - `research/profit-memory-state-observation-v1/`: 닫힌 Unit 021 family; P1 대조군·관찰자 뒤 심볼 DB 지문 변경으로 전체 행렬이 경제 판정 전 무효, 남은 6경로·clean rerun·관리 후보 없음
-- `research/cross-index-residual-response-v1/`: 활성 Unit 022 family; 독립 trade-free 관찰기·2경로 설정·전용 Portable 동결 및 build 6140 무오류 컴파일 완료, 결과 아직 없음
+- `research/cross-index-residual-response-v1/`: 닫힌 Unit 022 family; 두 번째 selected-symbol 지문 변경과 반복 rate 무결성 fault로 경제 판정 전 무효, latest·후속 prototype 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

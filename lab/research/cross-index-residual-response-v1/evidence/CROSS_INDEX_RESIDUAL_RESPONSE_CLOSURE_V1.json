@@ -1,0 +1,51 @@
+{
+  "schema": "zeta-next-cross-index-residual-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "cross-index-residual-response-022",
+  "family": "cross-index-residual-response-v1",
+  "evidence": {
+    "declaration_sha256": "231F7150A19F1F6725C273A6D35136CADFE168850767116F64AC866D2BF645D8",
+    "compile_receipt_sha256": "E80BA5234A85AA0A32C7EFE5534C1BCD03F5CE699EAB75E83FCEB6B82606A7AF",
+    "result_sha256": "C8D3CCE86CC68CC04CF2A42AEAC1EF48294C58E51E61B8F7EC94E023ABDEA3E4"
+  },
+  "closure": {
+    "verdict": "INVALID_SECOND_FINGERPRINT_AND_RATE_INTEGRITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+    "environment_integrity_gate_passed": false,
+    "observer_zero_fault_gate_passed": false,
+    "economic_gate_reached": false,
+    "sync_paths": 1,
+    "clean_paths": 1,
+    "unopened_latest_paths": 1,
+    "additional_rerun": false,
+    "selected_direction": null,
+    "retained_prototype": null
+  },
+  "reason": "The initial LONG path changed both frozen database fingerprints and was discarded unread. The only identical clean LONG rerun kept the full symbols database fixed but changed the separately frozen selected-symbol database again, satisfying the declaration's second-change invalidation rule. It also reproduced 146,275 missing-or-misaligned-rate faults against a zero-fault contract. The isolated latest path and every economic aggregation therefore remained unopened.",
+  "frozen_stop_rules": {
+    "economic_csv_read_or_aggregation": false,
+    "isolated_latest_run": false,
+    "second_clean_rerun": false,
+    "source_or_contract_reinterpretation": false,
+    "threshold_or_horizon_rescue": false,
+    "observer_repair_successor": false
+  },
+  "economic_scope": {
+    "cross_index_reversion_rejected": false,
+    "cross_index_continuation_rejected": false,
+    "high_turnover_frequency_judged": false,
+    "why": "No economic selection gate was reached; the unit is invalid rather than economically negative."
+  },
+  "surfaces": {
+    "family_source_configuration_frozen": true,
+    "forward_cxr2_baseline_unchanged": true,
+    "actual_position_bundle_020_021_unchanged": true,
+    "live_source_package_settings_state_logs_untouched": true,
+    "live_release": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+    "live_terminal_pid": 13328,
+    "dashboard_pid": 4284,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_serial_frontier_question_without_reopening_or_repairing_unit_022"
+}

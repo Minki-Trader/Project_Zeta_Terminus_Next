@@ -423,3 +423,11 @@
 - Created the dedicated Git-ignored `lab/runtime/cross-index-residual-response-v1-portable/` by physical one-time copy of build-6140 executables and US30/US100/US500 market data. It shares no compiled code, settings, files, logs or mutable state with Live or another family.
 - Froze pre-outcome Bases and Tester-bases manifests plus selected/full symbol database snapshots. Compile receipt SHA-256 is `E80BA5234A85AA0A32C7EFE5534C1BCD03F5CE699EAB75E83FCEB6B82606A7AF`.
 - Exactly the long and isolated-latest trade-free paths may now open, subject to per-path environment fingerprints and the one identical clean-rerun allowance. No outcome has opened; Live remains untouched.
+
+## STATE-0053 - 2026-08-26
+
+- Ran the frozen LONG observation once. Both selected/full database fingerprints changed, so the complete output was discarded without semantic reading and the sole identical clean-rerun allowance opened.
+- The identical clean LONG rerun completed normally. Full `symbols-*.dat` stayed fixed, but the separately frozen selected-symbol database changed a second time. The observer also reproduced `146,275` missing/misaligned-rate faults under the frozen zero-fault output contract while its `2,055` triggers all resolved.
+- Applied both stop rules without reinterpretation: no second clean rerun, source/contract repair, isolated-latest path, output aggregation, threshold/horizon/session/symbol rescue or economic direction judgment opened.
+- Closed Unit 022 `INVALID_SECOND_FINGERPRINT_AND_RATE_INTEGRITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Neither reversion nor continuation was economically rejected; no Unit 023 prototype or retained seed exists.
+- Result/closure SHA-256 values are `C8D3CCE86CC68CC04CF2A42AEAC1EF48294C58E51E61B8F7EC94E023ABDEA3E4` / `F0968E64209F3B2A006A33F76AA33ED0EE158F783176F86EC41A922131921F7E`. Exact CXR2 Live PID `13328`, dashboard PID `4284`, baseline and actual-position bundle remain untouched.
