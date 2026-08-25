@@ -1,0 +1,106 @@
+{
+  "schema": "zeta-next-protective-exit-order-reconciliation-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CANDIDATE_VERIFIED_AND_FROZEN_FOR_PROMOTION",
+  "unit": "protective-exit-order-reconciliation-019",
+  "family": "protective-exit-order-reconciliation-v1",
+  "evidence": {
+    "declaration_sha256": "16A5428E6E587716E2DF3D512C0D0CFCCD38B5AF672DB1492CA33ECA3EB18B10",
+    "compile_receipt_sha256": "0C520F6AC64015885AED55BABFA669F5C277C971D7DF2FB896D125C9C267BA01",
+    "source_manifest_sha256": "BE4EB8B8BBA04ED20D735FB26F21C8C5F6E094C8D07C59880F201BCB953F937F",
+    "config_manifest_sha256": "4585BE88CCDD1C93FE8E5C10FA9BB399BC4D5BA6B0B73687816752DC8B55E022",
+    "binary_sha256": "D540B1658937EAC5CA683CD35CFF3DD22A48B5EEFC191FC74F8D57CEF6309C0E",
+    "run_artifact_manifest": {
+      "root": "lab/artifacts/backtests/protective-exit-order-reconciliation-v1/p4-2026-ytd/",
+      "files": 11,
+      "bytes": 3943578,
+      "sha256": "F66AD22B7F567D3B2F242E2062D8661475B3A92B086D3BDC2D72BDD845A79A3D"
+    }
+  },
+  "execution": {
+    "successful_candidate_real_tick_paths": 1,
+    "additional_or_rescue_paths": 0,
+    "runtime_setup_non_outcome_incidents": [
+      "An initial combined copy-and-clean command was blocked before execution by local destructive-command policy.",
+      "A later directory setup invocation used an unsupported New-Item parameter and copied one Terminal.ico as a wrongly named file. The exact file was verified and moved aside before the dedicated runtime directory was created; no frozen source, configuration, binary or outcome was involved."
+    ],
+    "post_outcome_diagnostic_correction": "One read-only ConvertFrom-Csv call selected a later auxiliary table in the multi-section current snapshot. No run or metric changed; the primary first data row, event matrix and final agent line were then read directly.",
+    "html_report_generated": false,
+    "html_report_disposition": "The nested report directory was not precreated. The frozen gate did not require an HTML artifact; exact actual net, lifecycle/deal counts, stressed net and all fault counters were reconciled from the EA event matrix, final snapshot and normal Tester logs without rerun.",
+    "live_surface_during_validation": "UNCHANGED; PID 21548 remained the sole safety-stopped flat Live owner."
+  },
+  "fixed_path": {
+    "period": "P4_2026_YTD",
+    "from": "2026-01-01",
+    "to": "2026-08-21",
+    "initial_deposit_usd": 100.0,
+    "model": "100_PERCENT_REAL_TICKS",
+    "terminal_exit_code": 0,
+    "normal_ea_stop_reason": 1,
+    "generated_primary_symbol_ticks": 37456365,
+    "generated_all_symbol_ticks": 297647274,
+    "test_elapsed": "00:03:22.889",
+    "symbols_before_sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE",
+    "symbols_after_sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE"
+  },
+  "equivalence": {
+    "passed": true,
+    "control": {
+      "actual_net_usd": 96.30,
+      "stressed_net_usd": 90.4732,
+      "stressed_max_closed_drawdown_usd": 31.1908,
+      "trades": 356,
+      "deals": 712,
+      "risk_admission_skips": 14,
+      "stop_loss_exits": 42
+    },
+    "candidate": {
+      "actual_net_usd": 96.30,
+      "stressed_net_usd": 90.4732,
+      "stressed_max_closed_drawdown_usd": 31.1908,
+      "trades": 356,
+      "deals": 712,
+      "risk_admission_skips": 14,
+      "stop_loss_exits": 42
+    },
+    "differences": {
+      "actual_net_usd": 0.0,
+      "stressed_net_usd": 0.0,
+      "stressed_max_closed_drawdown_usd": 0.0,
+      "trades": 0,
+      "deals": 0,
+      "risk_admission_skips": 0,
+      "stop_loss_exits": 0
+    }
+  },
+  "integrity": {
+    "event_rows": 2676,
+    "births": 356,
+    "closes": 356,
+    "exact_trade_deal_structure": true,
+    "safety_stops": 0,
+    "persistence_failed": 0,
+    "broker_mismatch": 0,
+    "foreign_exposure": 0,
+    "protection_calculation_failures": 0,
+    "protection_mismatches": 0,
+    "aggregate_planned_risk_at_end_usd": 0.0,
+    "source_manifest_unchanged_after_run": true,
+    "config_manifest_unchanged_after_run": true,
+    "symbol_database_unchanged_after_run": true
+  },
+  "causal_scope": {
+    "incident_branch_directly_reproduced_in_tester": false,
+    "reason": "The Tester completes stop-order activation and deal publication without exposing the several-millisecond live current-order interval.",
+    "bounded_support": "The Live event/terminal sequence identifies the transient protective close order, official MQL5 semantics establish that OrdersTotal may include an unexecuted market order, compilation proves the predicate implementation, and the 42-stop real-tick path proves no economic or lifecycle regression.",
+    "residual_risk": "A future Live stop execution remains the direct runtime proof of the repaired branch; all unmatched shapes remain fail-closed."
+  },
+  "selection": {
+    "verdict": "PASS_EXACT_EQUIVALENCE_APPROVE_CONTROLLED_LIVE_PROMOTION",
+    "candidate_selected": true,
+    "economic_change": false,
+    "live_promotion_authorized_by_user": true,
+    "late_replacement_for_missed_cross": false
+  },
+  "next": "commit_and_push_the_frozen_candidate_then_execute_flat_controlled_live_release_recovery"
+}

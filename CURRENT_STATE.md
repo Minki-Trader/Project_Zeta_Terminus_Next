@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0040`
+- Latest state ID: `STATE-0041`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -21,7 +21,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 
 ## Active work
 
-- Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
+- Active engineering boundary: `protective-exit-order-reconciliation-v1`; the narrow candidate passed exact P4 economic equivalence and is source-frozen pending the user-authorized flat controlled Live promotion
 - Active research boundary: none; `server-day-carry-burden-v1` is closed and frozen with no retained candidate
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`

@@ -1,0 +1,118 @@
+{
+  "schema": "zeta-next-protective-exit-order-reconciliation-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_OUTCOME",
+  "unit": "protective-exit-order-reconciliation-019",
+  "family": "protective-exit-order-reconciliation-v1",
+  "user_authority": "Patch the three Live warnings and restore future entry readiness without causing missed entries.",
+  "incident": {
+    "live_release": "NEXT-E01-V7-CXR1-c0ad2f30d293",
+    "terminal_pid": 21548,
+    "event_server_time": "2026.08.25 16:32:01",
+    "event": "SAFETY_STOP",
+    "detail": "owned pending order on mismatched component",
+    "event_file_sha256_at_diagnosis": "41D319F032164C49341A8773C87619DBDD606A0891099E6DF2F09977980F213C",
+    "broker_terminal_trace": {
+      "opening_order": 246884779,
+      "position_component": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "position_magic": 260824704,
+      "protective_close_order": 246921084,
+      "closing_deal": 231614197,
+      "closing_reason": "DEAL_REASON_SL",
+      "timing": "Safety stop was logged immediately before the stop-loss deal completed."
+    },
+    "post_close_local_snapshot": {
+      "positions": 0,
+      "pending_orders": 0,
+      "account_margin_usd": 0.0,
+      "aggregate_planned_risk_usd": 0.0,
+      "new_entries_input_effective": "1/0",
+      "safety_stopped": 1,
+      "broker_mismatch": 1
+    },
+    "missed_window_boundary": "The later server-17:00 Cross component remained NOT_EVALUATED_SINCE_START. No late or hindsight order may be created after its two-minute deadline."
+  },
+  "root_cause": {
+    "code_path": "ZetaOwnership.mqh AuditPositionOwnership current-order loop",
+    "cause": "OrdersTotal includes active market orders that have not yet completed. The audit recognized only the Passive BUY_LIMIT/SELL_LIMIT shape and classified every other owned Magic as an impossible pending order, including the broker-generated market order executing a saved position stop loss.",
+    "official_references": [
+      "https://www.mql5.com/en/book/automation/experts/experts_order_list",
+      "https://www.mql5.com/en/docs/constants/tradingconstants/orderproperties",
+      "https://www.mql5.com/en/docs/trading/ordergetinteger"
+    ]
+  },
+  "topology": {
+    "source_root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "one_time_parent": "lab/engineering/complexity-refactor-v1/mt5/",
+    "parent_commit": "9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5",
+    "parent_source_manifest": {
+      "files": 16,
+      "bytes": 546072,
+      "sha256": "070698AAAB80F194DD87EB9069F3A3CE3DA1859FC790885669B78CE921E08D17"
+    },
+    "dedicated_runtime": "lab/runtime/protective-exit-order-reconciliation-v1-portable/",
+    "cross_family_include_or_runtime_link": false,
+    "live_source_dependency": false
+  },
+  "fixed_change": {
+    "only_behavioral_file": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Execution/ZetaOwnership.mqh",
+    "classification": "Allow one currently selected order to bypass the impossible-owned-order stop only when every stop-loss-transit predicate passes.",
+    "required_predicates": [
+      "Magic and symbol map exactly to one portfolio component.",
+      "Order type is ORDER_TYPE_BUY or ORDER_TYPE_SELL.",
+      "Order reason is exactly ORDER_REASON_SL.",
+      "The mapped local component has a nonzero active position_identifier, direction and volume.",
+      "The market order direction is opposite the saved position direction.",
+      "ORDER_VOLUME_INITIAL equals the saved position volume within half a symbol volume step.",
+      "ORDER_POSITION_ID may be zero before execution; if nonzero it must equal the saved position identifier."
+    ],
+    "unchanged_fail_closed_cases": [
+      "wrong Magic or symbol",
+      "client, mobile, web, expert or take-profit reason",
+      "limit, stop, stop-limit or close-by type",
+      "missing local active lifecycle",
+      "same-side direction",
+      "wrong volume",
+      "nonzero mismatched position identifier",
+      "duplicate positions or Passive orders",
+      "protection mismatch or foreign exposure"
+    ],
+    "economic_or_entry_change": false,
+    "new_parameter_or_state_field": false
+  },
+  "fixed_validation": {
+    "compile": "MetaEditor build 6140 must report 0 errors and 0 warnings.",
+    "runtime_path": "One serial fresh-100-USD 100-percent-real-tick path from 2026-01-01 through 2026-08-21.",
+    "frozen_control": {
+      "actual_net_usd": 96.30,
+      "stressed_net_usd": 90.4732,
+      "trades": 356,
+      "deals": 712,
+      "risk_admission_skips": 14,
+      "stop_loss_exits": 42
+    },
+    "requirements": [
+      "Candidate exactly matches all frozen control economic and count fields.",
+      "Candidate stops normally at 100 percent real ticks.",
+      "Safety, persistence, broker, foreign, protection and ownership faults are zero.",
+      "Source, configuration, binary and required-symbol contract fingerprints remain fixed across the path."
+    ],
+    "test_limit": "Exactly one successful candidate economic path; implementation-only failures before outcome may be corrected and disclosed."
+  },
+  "promotion_and_recovery_gate": {
+    "candidate_must_pass": true,
+    "live_package": "Promote only the exact changed ownership module plus a new release identity into one frozen active package; keep execution/economic identity, Portfolio, Magic, settings and state schema/path unchanged.",
+    "flat_boundary": "Before package replacement, the current Live owner must show zero local positions, Passive order, margin, planned risk, retry, shadow and ARC ownership, then stop normally.",
+    "latched_fault_recovery": "Back up both stopped state snapshots. Clear only the persisted safety_stopped field in both otherwise byte-preserved flat snapshots; broker_mismatch is runtime-only and resets before exact broker reconciliation. Preserve all balances, counters, decisions, events and component state.",
+    "restart": "Use the committed operator for exact entries-disabled 0/0 recovery and then exact Live 1/1 handshake. If either fails, remain stopped or entries-disabled according to the existing fail-closed contract.",
+    "missed_entry_policy": "Do not place a late replacement for the already-expired Cross window. Future windows resume only after the 1/1 handshake."
+  },
+  "live_boundary": {
+    "current_live_remains_running_but_safety_stopped_during_lab_work": true,
+    "no_broker_history_query": true,
+    "no_order_before_verified_promotion": true,
+    "no_live_economic_change": true
+  },
+  "outcomes_consumed": false,
+  "next": "derive_once_patch_compile_then_run_the_single_fixed_real_tick_regression"
+}
