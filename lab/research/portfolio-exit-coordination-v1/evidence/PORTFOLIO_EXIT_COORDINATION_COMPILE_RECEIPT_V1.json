@@ -1,0 +1,103 @@
+{
+  "schema": "zeta-next-portfolio-exit-coordination-compile-receipt-v1",
+  "created_at_local": "2026-08-25",
+  "status": "COMPILED_AND_FROZEN_BEFORE_OUTCOME",
+  "declaration": {
+    "path": "lab/research/portfolio-exit-coordination-v1/evidence/PORTFOLIO_EXIT_COORDINATION_DECLARATION_V1.json",
+    "sha256": "94906550F35998C0A9D59021404E6B671A4B7F46A6CC8B42979DDB6801B089C2"
+  },
+  "parent": {
+    "root": "lab/engineering/complexity-refactor-v1/mt5/",
+    "commit": "9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5",
+    "git_tree": "7dbd1e0999a3921ab0f2601ff90ebe12f0f2c4ff"
+  },
+  "owned_topology": {
+    "source_root": "lab/research/portfolio-exit-coordination-v1/mt5/src/",
+    "config_root": "lab/research/portfolio-exit-coordination-v1/mt5/config/tester/",
+    "runtime_root": "lab/runtime/portfolio-exit-coordination-v1-portable/",
+    "cross_family_includes": 0,
+    "live_includes_or_links": 0,
+    "source_files": 20,
+    "config_files": 17,
+    "source_manifest_algorithm": "Sort root-relative mq5/mqh paths ordinally, uppercase SHA-256 each file, join path|hash with LF, then SHA-256 UTF-8.",
+    "source_manifest_sha256": "3F5DABD3EF52D9F35BE3178FFD13DCC19D87B9502957A8EEFDDD8C87C9380000",
+    "config_manifest_algorithm": "Sort root-relative ini/set paths ordinally, uppercase SHA-256 each file, join path|hash with LF, then SHA-256 UTF-8.",
+    "config_manifest_sha256": "9DCDA371538636C3BE7620CAD7DAB8FA7CD931652A9297506E3F3C357755CD75"
+  },
+  "parent_module_comparison": {
+    "unchanged_include_modules": 11,
+    "changed_include_modules": [
+      "lab/research/portfolio-exit-coordination-v1/mt5/src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "lab/research/portfolio-exit-coordination-v1/mt5/src/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh",
+      "lab/research/portfolio-exit-coordination-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaPassive.mqh"
+    ],
+    "new_shared_modules": [
+      "lab/research/portfolio-exit-coordination-v1/mt5/src/Include/ZetaPec/ZetaPecAssembly.mqh",
+      "lab/research/portfolio-exit-coordination-v1/mt5/src/Include/ZetaPec/Portfolio/ZetaPecExitCoordination.mqh"
+    ],
+    "change_boundary": "Identity/path isolation, one natural-close hook, continuous group-exit dispatch for policies 2/3, and declared coordination telemetry only."
+  },
+  "runtime": {
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "market_data": ["US30", "US100", "US500"],
+    "dedicated_portable": true,
+    "live_runtime_shared": false,
+    "other_lab_family_source_shared": false
+  },
+  "entrypoints": [
+    {
+      "policy": "CONTROL",
+      "source": "lab/research/portfolio-exit-coordination-v1/mt5/src/Experts/ZetaPecControlV1.mq5",
+      "release": "NEXT-LAB-PEC-V1-CONTROL",
+      "portfolio": "ZT-LAB-PEC-V1-CONTROL",
+      "magic": "260825300..260825305",
+      "ex5_sha256": "B9F255A0356E8BC8183E451879EC0291FB217A800DF1F116F20DFBBC365F3C1E",
+      "ex5_bytes": 198150,
+      "compile_log_sha256": "1369A4C13C2EDA8BF0B9FAC0BCE8FB1243B6F614894184CCFBA249A7AEEE1433",
+      "compile_result": "0 errors, 0 warnings"
+    },
+    {
+      "policy": "FIRST_NATURAL_EXIT_POSITIVE_COHORT",
+      "source": "lab/research/portfolio-exit-coordination-v1/mt5/src/Experts/ZetaPecFirstNaturalExitV1.mq5",
+      "release": "NEXT-LAB-PEC-V1-FIRST-NATURAL-EXIT",
+      "portfolio": "ZT-LAB-PEC-V1-FIRST-NATURAL-EXIT",
+      "magic": "260825310..260825315",
+      "ex5_sha256": "0967B54BE8F8333B9033CE6E06DF233CAD67FA4895A3DEE8A3DC007E7B019954",
+      "ex5_bytes": 197026,
+      "compile_log_sha256": "0C1377F55867C6751E8637A104B1352F715152DF14BF2074E8AFF3A7D8B73CFA",
+      "compile_result": "0 errors, 0 warnings"
+    },
+    {
+      "policy": "ALL_GREEN_ZERO_FLOOR",
+      "source": "lab/research/portfolio-exit-coordination-v1/mt5/src/Experts/ZetaPecAllGreenZeroFloorV1.mq5",
+      "release": "NEXT-LAB-PEC-V1-ALL-GREEN-ZERO-FLOOR",
+      "portfolio": "ZT-LAB-PEC-V1-ALL-GREEN-ZERO-FLOOR",
+      "magic": "260825320..260825325",
+      "ex5_sha256": "78F7CDF2F797BE0947599C41B0EFA4A559FF23D5A55A6E4F6A46549E521362C5",
+      "ex5_bytes": 197856,
+      "compile_log_sha256": "C855A89D26E7DF0861B7A40D86CA89220FFE4079B5839894E8415797AB269B09",
+      "compile_result": "0 errors, 0 warnings"
+    },
+    {
+      "policy": "ALL_GREEN_QUARTER_R_HALF_PEAK",
+      "source": "lab/research/portfolio-exit-coordination-v1/mt5/src/Experts/ZetaPecAllGreenQuarterRHalfPeakV1.mq5",
+      "release": "NEXT-LAB-PEC-V1-ALL-GREEN-QUARTER-R-HALF-PEAK",
+      "portfolio": "ZT-LAB-PEC-V1-ALL-GREEN-QUARTER-R-HALF-PEAK",
+      "magic": "260825330..260825335",
+      "ex5_sha256": "8A7B49005C74E0F7830FA198A53F5556349B6E8FF278AE24154A99E8ACE017E3",
+      "ex5_bytes": 198196,
+      "compile_log_sha256": "1C30033E62B056D941D5326BF40123638FA512C36B06745BD83173FF82057AEC",
+      "compile_result": "0 errors, 0 warnings"
+    }
+  ],
+  "frozen_run_matrix": {
+    "ini_files": 16,
+    "shared_set": "lab/research/portfolio-exit-coordination-v1/mt5/config/tester/pec-v1.set",
+    "serial_only": true,
+    "real_tick_model": 4,
+    "outcomes_consumed": false
+  },
+  "compile_verdict": "PASSED",
+  "next": "run_exactly_the_16_frozen_serial_real_tick_configurations"
+}

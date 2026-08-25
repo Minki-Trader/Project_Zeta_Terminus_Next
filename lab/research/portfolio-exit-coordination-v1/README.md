@@ -8,4 +8,6 @@ Active serial Lab research family for causal coordination of overlapping V7 posi
 - Runtime: Git-ignored `lab/runtime/portfolio-exit-coordination-v1-portable/`
 - Boundary: Tester-only; no Live source, package, settings, state, process or promotion authority.
 
-Status: `ACTIVE_PREDECLARED_NO_OUTCOME_CONSUMED`.
+Compile receipt: `evidence/PORTFOLIO_EXIT_COORDINATION_COMPILE_RECEIPT_V1.json`, SHA-256 `E96917319AAECD005422161E86F4221CD7007F37F5CDF0D647A45A485B3173F3`.
+
+Status: `ACTIVE_COMPILED_NO_OUTCOME_CONSUMED`.
