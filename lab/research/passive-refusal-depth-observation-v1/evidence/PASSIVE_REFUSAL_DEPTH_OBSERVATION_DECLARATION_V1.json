@@ -1,0 +1,214 @@
+{
+  "schema": "zeta-next-passive-refusal-depth-observation-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_COMPILE_AND_OUTCOME",
+  "unit": "passive-refusal-depth-observation-014",
+  "research_family": {
+    "id": "passive-refusal-depth-observation-v1",
+    "owner_root": "lab/research/passive-refusal-depth-observation-v1/",
+    "runtime_root": "lab/runtime/passive-refusal-depth-observation-v1-portable/",
+    "artifact_roots": [
+      "lab/artifacts/backtests/passive-refusal-depth-observation-v1/",
+      "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/",
+      "lab/artifacts/logs/passive-refusal-depth-observation-v1/"
+    ],
+    "tester_only": true,
+    "serial_stream_only": true
+  },
+  "question": "Does causally observed approach depth of an expired unfilled Passive limit separate the native stressed outcomes of later same-direction Return or Cross lifecycles broadly and strongly enough to justify one later entry-preserving selector experiment?",
+  "adjacent_seed": "censored_passive_refusal_depth",
+  "frozen_parent": {
+    "root": "lab/engineering/complexity-refactor-v1/mt5/",
+    "commit": "9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5",
+    "git_tree": "7dbd1e0999a3921ab0f2601ff90ebe12f0f2c4ff",
+    "copy_rule": "One-time self-contained copy into this family; no cross-family Include, link or execution dependency."
+  },
+  "excluded_sources": [
+    "Pre-Next repositories, names, experiments and conclusions",
+    "current Live-Dev source, state, logs, terminal and broker state",
+    "historical mixed lab/mt5 MQL source",
+    "closed receiver-time-field source as an implementation dependency"
+  ],
+  "frozen_source_and_config": {
+    "manifest_algorithm": "Sort source-root-relative forward-slash paths, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "source": {
+      "root": "lab/research/passive-refusal-depth-observation-v1/mt5/src/",
+      "files": 16,
+      "bytes": 372046,
+      "sha256": "0742692EF02E8494023EBCCE4FEF97D3E0C37A5EEB2C9510CFD8AADD61D49C8E"
+    },
+    "config": {
+      "root": "lab/research/passive-refusal-depth-observation-v1/mt5/config/",
+      "files": 5,
+      "bytes": 2973,
+      "sha256": "EE799B865127F6ED0C36C674BB77417FF5FC0EE176117DC05A7662DB12023A8E"
+    },
+    "compile_defect_rule": "A compile-only correction is allowed before any market outcome is opened, must be documented, and requires new frozen manifests. No source or config change is allowed after the first real-tick outcome is opened.",
+    "pre_outcome_refreeze": {
+      "reason": "The authoritative Tester evidence contract requires start/end US30, US100 and US500 contract and swap fields in addition to symbols-*.dat hashes.",
+      "old_source_sha256": "2CF89DEF579F5EB8CDF78E23B0E0BBC78F83C8E259CC767D287D2D535EE8FA8E",
+      "new_source_sha256": "0742692EF02E8494023EBCCE4FEF97D3E0C37A5EEB2C9510CFD8AADD61D49C8E",
+      "economic_behavior_changed": false,
+      "market_outcomes_opened_before_refreeze": 0
+    }
+  },
+  "identity": {
+    "release": "NEXT-LAB-RFD-V1-OBSERVATION",
+    "portfolio": "ZT-LAB-RFD-V1-OBSERVATION",
+    "magic": "260825500..260825505",
+    "state_event_snapshot_lock_root": "ZetaRfd/observation",
+    "live_authority": "none"
+  },
+  "economic_invariance_contract": {
+    "path_count": 1,
+    "path": "OBSERVATION_ONLY",
+    "unchanged": [
+      "all six signal formulas, decision times and opportunity consumption",
+      "all order types, entry prices, volumes and expiry times",
+      "all initial stop construction, RC4 compression and native exits",
+      "4% position and 12% aggregate risk admission",
+      "margin, sizing, session clock, calendar and transaction ordering",
+      "every Return and Cross entry and native hold"
+    ],
+    "observer_side_effects": "In-memory measurement and PrintFormat telemetry only. Measurement failure never blocks, closes, places, modifies or cancels an order and never changes persisted economic state."
+  },
+  "causal_observation": {
+    "pending_birth": "Begin only after one owned Passive pending order has been authoritatively adopted, using its direction, limit, feature, placement server time and scheduled expiration.",
+    "sampling_clock": "On every US30 chart real tick, read the latest causally available US100 SymbolInfoTick and accept it only when its time_msc is strictly newer than the prior accepted US100 quote.",
+    "sampling_limit": "This is the deployable portfolio observation stream, not a claim to exhaust every independent US100 tick between US30 chart ticks.",
+    "executable_gap": {
+      "buy_limit": "US100 ask minus limit price",
+      "sell_limit": "limit price minus US100 bid"
+    },
+    "expired_emitter_birth": "Create an emitter only when the disappeared owned order is found in history with ORDER_STATE_EXPIRED. Filled, partial, canceled or anomalous outcomes never emit.",
+    "approach_fraction": "clamp(1 - minimum executable gap / initial executable gap, 0, 1)",
+    "rebound_fraction": "max((final executable gap - minimum executable gap) / initial executable gap, 0)",
+    "nearest_time_fraction": "clamp((nearest quote time - placement server time) / (scheduled expiration - placement server time), 0, 1)",
+    "receiver_match": "For each admitted native Return or Cross lifecycle, select only the most recent same-direction emitter whose actual observation server second is strictly earlier than entry and no more than 2880 minutes old.",
+    "receiver_outcome": "Use the lifecycle actual and stressed net already produced by frozen CP2 exit reconciliation; no future value is available at entry.",
+    "capacity": 64
+  },
+  "fixed_depth_bins": {
+    "SHALLOW": "approach_fraction < 1/3",
+    "MIDDLE": "1/3 <= approach_fraction < 2/3",
+    "DEEP": "approach_fraction >= 2/3",
+    "use": "Only SHALLOW and DEEP are primary economic tails. MIDDLE, rebound and nearest-time are descriptive and cannot rescue a failed depth gate."
+  },
+  "fresh_real_tick_periods": [
+    {
+      "id": "P1_2022H2_2023",
+      "from": "2022-08-01",
+      "to_exclusive": "2024-01-01"
+    },
+    {
+      "id": "P2_2024",
+      "from": "2024-01-01",
+      "to_exclusive": "2025-01-01"
+    },
+    {
+      "id": "P3_2025",
+      "from": "2025-01-01",
+      "to_exclusive": "2026-01-01"
+    },
+    {
+      "id": "P4_2026_YTD",
+      "from": "2026-01-01",
+      "to_exclusive": "2026-08-21"
+    }
+  ],
+  "run_matrix": {
+    "serial_real_tick_runs": 4,
+    "model": "MT5 Model=4 / 100% real ticks",
+    "fresh_deposit_usd": 100.0,
+    "prior_project_realized_net_usd": 0.0,
+    "base_volume": 0.01,
+    "leverage": "1:100",
+    "execution_mode": 0,
+    "optimization": false,
+    "additional_or_rescue_runs": 0
+  },
+  "frozen_cp2_equivalence_targets": [
+    {
+      "period": "P1_2022H2_2023",
+      "actual_net_usd": 163.78,
+      "stressed_net_usd": 148.8735,
+      "stressed_max_closed_drawdown_usd": 18.779,
+      "trades": 769,
+      "deals": 1538,
+      "risk_admission_skips": 21,
+      "stop_loss_exits": 26,
+      "passive_expirations": 38
+    },
+    {
+      "period": "P2_2024",
+      "actual_net_usd": 62.75,
+      "stressed_net_usd": 54.663,
+      "stressed_max_closed_drawdown_usd": 17.779,
+      "trades": 554,
+      "deals": 1108,
+      "risk_admission_skips": 18,
+      "stop_loss_exits": 66,
+      "passive_expirations": 19
+    },
+    {
+      "period": "P3_2025",
+      "actual_net_usd": 121.36,
+      "stressed_net_usd": 113.038,
+      "stressed_max_closed_drawdown_usd": 28.3905,
+      "trades": 554,
+      "deals": 1108,
+      "risk_admission_skips": 25,
+      "stop_loss_exits": 72,
+      "passive_expirations": 29
+    },
+    {
+      "period": "P4_2026_YTD",
+      "actual_net_usd": 96.30,
+      "stressed_net_usd": 90.4732,
+      "stressed_max_closed_drawdown_usd": 31.1908,
+      "trades": 356,
+      "deals": 712,
+      "risk_admission_skips": 14,
+      "stop_loss_exits": 42,
+      "passive_expirations": 27
+    }
+  ],
+  "fixed_operational_gate": [
+    "All four runs exit normally with one STOP and zero safety, persistence, broker, foreign, protection, ownership or measurement fault.",
+    "Every report exactly matches its frozen CP2 target for actual net, stressed net, stressed maximum closed drawdown, trades, deals, risk admission skips and stop-loss exits.",
+    "Every expected Passive expiration has exactly one valid RFD_EXPIRE row and no non-expired pending outcome emits.",
+    "Every admitted Return or Cross lifecycle adopted by the observer has exactly one reconciled RFD_RECEIVER close row, except a position still legitimately open at the test end, which invalidates that row but not portfolio equivalence."
+  ],
+  "fixed_information_value_gate": {
+    "apply_separately_to": [
+      "RETURN",
+      "CROSS"
+    ],
+    "requirements": [
+      "At least 20 matched closed lifecycles pooled.",
+      "At least 8 SHALLOW and 8 DEEP matched closed lifecycles pooled, with each tail represented in at least three periods.",
+      "Absolute pooled Spearman correlation between approach_fraction and native stressed_net is at least 0.20.",
+      "Among periods with at least five matched lifecycles and nonconstant depth, at least three period correlations share the pooled sign.",
+      "Absolute pooled DEEP minus SHALLOW mean native stressed_net is at least USD 0.25 per lifecycle.",
+      "Among periods containing both tails, at least three period DEEP-minus-SHALLOW mean differences share the pooled sign."
+    ],
+    "selection": "If exactly one receiver passes, retain that receiver for one later entry-preserving selector experiment. If both pass, retain only the receiver with larger absolute pooled Spearman correlation; ties choose larger absolute tail mean difference. Otherwise retain frozen CP2 with no selector candidate.",
+    "maximum_later_candidate": 1
+  },
+  "evidence_limit": {
+    "market_paths_consumed_exploratory": true,
+    "clean_holdout_claim": false,
+    "confirmation_claim": false,
+    "economic_mechanism_in_this_unit": false,
+    "live_promotion_possible": false
+  },
+  "stop_rules": [
+    "Do not add a fifth run, another period, another matching horizon or another depth threshold.",
+    "Do not let rebound, nearest-time, MIDDLE-bin behavior or an unmatched comparison rescue a failed primary depth gate.",
+    "Do not change any portfolio behavior or reopen receiver-time-field-generalization-v1.",
+    "Do not implement the later selector inside this unit even if the information gate passes.",
+    "Do not alter, query or restart Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "compile_the_frozen_observer_then_run_exactly_four_serial_real_tick_paths"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "zeta-next-passive-refusal-depth-observation-closure-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "passive-refusal-depth-observation-014",
+  "family": "passive-refusal-depth-observation-v1",
+  "frozen_evidence": {
+    "declaration_sha256": "CC15AE0F20F6E895341287905586C63A32104AA2A7A001F050E99D2BA7372212",
+    "compile_receipt_sha256": "4614C369AAD419A3DB8B0369451E195046C25E05A58902FC390CC92E9BEB20F5",
+    "environment_preflight_sha256": "0B49FD53C6DB5487A12F391F256360DD496921E564A85B5B7D7160794B44DB82",
+    "selection_sha256": "503FA898AC50E40F08359D595801D670BFF266B849CD64C18C736A67010B66FE",
+    "source_manifest_sha256": "0742692EF02E8494023EBCCE4FEF97D3E0C37A5EEB2C9510CFD8AADD61D49C8E",
+    "config_manifest_sha256": "EE799B865127F6ED0C36C674BB77417FF5FC0EE176117DC05A7662DB12023A8E"
+  },
+  "execution_summary": {
+    "valid_serial_real_tick_runs": 4,
+    "normal_valid_runs": 4,
+    "excluded_environment_sync_preflights": 1,
+    "economic_or_rescue_runs_beyond_declaration": 0,
+    "runtime_faults": 0,
+    "pooled_actual_net_usd": 444.19,
+    "pooled_stressed_net_usd": 407.0477,
+    "pooled_trades": 2233,
+    "pooled_deals": 4466,
+    "passive_expirations": 113,
+    "matched_return_lifecycles": 29,
+    "matched_cross_lifecycles": 84,
+    "frozen_cp2_equivalence": true
+  },
+  "closed_findings": [
+    "The inert observer causally measured all 113 actual Passive expirations and reconciled every one of the 1,043 adopted Return and Cross lifecycles without changing any frozen CP2 economic total.",
+    "Return failed the DEEP-tail sample floor, pooled correlation, correlation-sign breadth, pooled tail magnitude and tail-sign breadth requirements.",
+    "Cross passed the sample floors, pooled Spearman magnitude at 0.217986452, three-period correlation-sign breadth and pooled DEEP-minus-SHALLOW mean difference at 0.507015610 dollars.",
+    "Cross nevertheless failed the mandatory tail-sign breadth: P2 and P3 were positive while P1 and P4 were negative, giving two same-sign periods instead of three.",
+    "Rebound, nearest-time and MIDDLE-bin observations were not searched or used to rescue the failed primary depth gate."
+  ],
+  "selection": {
+    "selected_receiver": null,
+    "verdict": "NO_DEPTH_SELECTOR_VALUE_RETAIN_FROZEN_CP2",
+    "later_selector_experiment": false,
+    "live_change_or_promotion": false
+  },
+  "frozen_surfaces": {
+    "forward_baseline_unchanged": true,
+    "live_source_package_set_state_logs_and_process_untouched": true,
+    "family_source_reopen_allowed": false,
+    "nearby_depth_rebound_nearest_or_threshold_rescue_allowed": false
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_next_only_economic_question_without_reopening_or_rescuing_depth"
+}

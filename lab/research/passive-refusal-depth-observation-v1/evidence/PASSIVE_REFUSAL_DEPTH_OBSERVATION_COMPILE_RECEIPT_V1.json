@@ -1,0 +1,85 @@
+{
+  "schema": "zeta-next-passive-refusal-depth-observation-compile-receipt-v1",
+  "created_at_local": "2026-08-25",
+  "status": "COMPILED_AND_FROZEN_BEFORE_OUTCOME",
+  "unit": "passive-refusal-depth-observation-014",
+  "declaration": {
+    "path": "lab/research/passive-refusal-depth-observation-v1/evidence/PASSIVE_REFUSAL_DEPTH_OBSERVATION_DECLARATION_V1.json",
+    "sha256": "CC15AE0F20F6E895341287905586C63A32104AA2A7A001F050E99D2BA7372212"
+  },
+  "source_manifest": {
+    "files": 16,
+    "bytes": 372046,
+    "sha256": "0742692EF02E8494023EBCCE4FEF97D3E0C37A5EEB2C9510CFD8AADD61D49C8E"
+  },
+  "config_manifest": {
+    "files": 5,
+    "bytes": 2973,
+    "sha256": "EE799B865127F6ED0C36C674BB77417FF5FC0EE176117DC05A7662DB12023A8E"
+  },
+  "pre_outcome_compile_sequence": [
+    {
+      "stage": 1,
+      "result": "0 errors, 0 warnings",
+      "market_outcomes_opened": 0,
+      "disposition": "Superseded before execution because mandatory start/end contract-and-swap telemetry was not yet present."
+    },
+    {
+      "stage": 2,
+      "result": "0 errors, 0 warnings",
+      "elapsed_ms": 2196,
+      "cpu": "X64 Regular",
+      "market_outcomes_opened": 0,
+      "disposition": "FINAL_FROZEN_BINARY"
+    }
+  ],
+  "compiler_runtime": {
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "dedicated_runtime": "lab/runtime/passive-refusal-depth-observation-v1-portable/",
+    "active_include_roots": [
+      "MQL5/Include/ZetaRfd/",
+      "MQL5/Include/ZetaTerminusNext/"
+    ],
+    "cross_family_include_or_link": false,
+    "tracked_source_equals_runtime_source": true
+  },
+  "binary": {
+    "path": "MQL5/Experts/ZetaRfd/ZetaPassiveRefusalDepthObservationV1.ex5",
+    "bytes": 205248,
+    "sha256": "9F2C5B5BD04FBA288324B4245B915B79AED3C7868F9CE8A9D62275005762E6E1"
+  },
+  "compile_log": {
+    "artifact_path": "lab/artifacts/logs/passive-refusal-depth-observation-v1/rfd-v1.compile.log",
+    "bytes": 19444,
+    "sha256": "E60C07C0C1AEF987C7B8F12E351E41091A343105C5A7607F5936FF84A9DE8B49",
+    "errors": 0,
+    "warnings": 0
+  },
+  "pre_matrix_market_data": {
+    "manifest_algorithm": "Sort root-relative paths, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 229,
+      "bytes": 3203843899,
+      "sha256": "D14D86FC4DF4CD15C57D5A8C4D6E08884EBBAEA7BB56E102C78649ED73FE2C77"
+    },
+    "tester_bases": {
+      "files": 165,
+      "bytes": 2478439859,
+      "sha256": "89680E048B3BDA481AF71EE623EAB0DF452660F7A5FB754F2E72F731131B52A9"
+    }
+  },
+  "pre_matrix_symbol_database": {
+    "runtime_path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+    "preserved_artifact": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/symbols-before.dat",
+    "bytes": 413696,
+    "sha256": "83BD46E2F2FFBF30ACA57694E88996B5E5B383DDB5DCB9590C98846454EE9F5A",
+    "written_kst": "2026-08-25T20:53:03.6872364+09:00",
+    "required_runtime_contract_rows": "Each run must print START and END rows for US30, US100 and US500."
+  },
+  "outcomes_consumed": false,
+  "source_or_config_change_allowed_after_first_run": false,
+  "next": "execute_exactly_four_frozen_serial_real_tick_paths"
+}

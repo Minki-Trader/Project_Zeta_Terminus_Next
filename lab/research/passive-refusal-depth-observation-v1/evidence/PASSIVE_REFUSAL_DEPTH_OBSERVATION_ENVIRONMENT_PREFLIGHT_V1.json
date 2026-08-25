@@ -1,0 +1,60 @@
+{
+  "schema": "zeta-next-passive-refusal-depth-observation-environment-preflight-v1",
+  "created_at_local": "2026-08-25",
+  "status": "INVALIDATED_BEFORE_VALID_MATRIX",
+  "unit": "passive-refusal-depth-observation-014",
+  "reason": "The dedicated terminal synchronized a new symbols database immediately before its first Tester invocation. Authoritative policy requires the valid matrix to begin only after the synchronized fingerprint is frozen.",
+  "invocation": {
+    "configuration": "P1_2022H2_2023",
+    "process_exit_code": 0,
+    "normal_stop_reason": 1,
+    "wall_time": "00:05:24.054",
+    "economic_outcome_usable_for_selection": false,
+    "counts_as_one_of_the_four_declared_matrix_runs": false,
+    "classification": "ENVIRONMENT_SYNCHRONIZATION_PREFLIGHT_NOT_ECONOMIC_RESCUE"
+  },
+  "symbol_database": {
+    "before_terminal_start_sha256": "83BD46E2F2FFBF30ACA57694E88996B5E5B383DDB5DCB9590C98846454EE9F5A",
+    "after_synchronization_sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE",
+    "bytes_before_and_after": 413696,
+    "synchronized_at_kst": "2026-08-25T22:20:15.4305522+09:00",
+    "terminal_log_observation": "The broker authorization and symbol synchronization completed before Tester automatic testing and before the EA START contract rows."
+  },
+  "contract_rows": {
+    "required_start_rows": 3,
+    "required_end_rows": 3,
+    "normalized_start_end_equal": true,
+    "normalized_sha256": "F85C06CBCBBEC3C4C388D18D9BE6B72DBFBA14D9673383134258D6951D29F387",
+    "us30_swap_long_short": "0.15/-4.65",
+    "us100_swap_long_short": "-4.31/1.81",
+    "us500_swap_long_short": "-0.69/0.03",
+    "all_three_contract_tick_value": "1.0 / 0.01"
+  },
+  "diagnostic_outcome": {
+    "actual_net_usd": 163.78,
+    "stressed_net_usd": 148.8735,
+    "stressed_max_closed_drawdown_usd": 18.779,
+    "trades": 769,
+    "deals": 1538,
+    "risk_admission_skips": 21,
+    "stop_loss_exits": 26,
+    "expired_emitters": 38,
+    "measurement_faults": 0,
+    "note": "The path matched the frozen CP2 target but remains excluded solely because its pre-start symbols file was refreshed."
+  },
+  "preserved_artifacts": {
+    "root": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/preflight-spec-sync-p1-invalid/",
+    "files": 10,
+    "bytes": 7171511,
+    "sha256": "71131996C8B4C08BAE2A294BE19F2141182606C412A7316BB17178B4A36BDF2D"
+  },
+  "valid_matrix_precondition": {
+    "preserved_symbols_path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/symbols-valid-matrix-before.dat",
+    "symbols_sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE",
+    "source_sha256": "0742692EF02E8494023EBCCE4FEF97D3E0C37A5EEB2C9510CFD8AADD61D49C8E",
+    "config_sha256": "EE799B865127F6ED0C36C674BB77417FF5FC0EE176117DC05A7662DB12023A8E",
+    "binary_sha256": "9F2C5B5BD04FBA288324B4245B915B79AED3C7868F9CE8A9D62275005762E6E1",
+    "source_config_or_binary_changed_after_preflight": false,
+    "next": "restart_the_declared_four_run_matrix_from_P1"
+  }
+}

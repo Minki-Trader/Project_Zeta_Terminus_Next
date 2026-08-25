@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0034`
+- Latest state ID: `STATE-0036`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: none; `receiver-time-field-generalization-v1` is closed as `NO_MECHANISM_PASSED_RETAIN_FROZEN_CP2`, transition-reserve consolidation is rejected, and only the un-opened `censored_passive_refusal_depth` seed remains at this durable boundary
+- Active research boundary: none; `passive-refusal-depth-observation-v1` is closed as `NO_DEPTH_SELECTOR_VALUE_RETAIN_FROZEN_CP2`, and no nearby depth, rebound, timing or threshold rescue is open at this durable boundary
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -190,6 +190,15 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 - Failure was not sparse: 40 admitted qualified Return and 84 admitted qualified Cross lifecycles were measured. Closed `NO_MECHANISM_PASSED_RETAIN_FROZEN_CP2`; transition reserve was not combined and no Live authority opened
 - Selection SHA-256 is `BC215AEAC86C53797E9D0E1C4E00637D06E86CA077F0171867526E7CCD32E3CC`; closure SHA-256 is `A2843AB82E0626E14DBB9B6B63115A8FDEFAA7C71F689A516A92AECC641BC32A`
 
+## Completed passive refusal depth observation
+
+- Closed the self-contained, economically inert `lab/research/passive-refusal-depth-observation-v1/` family after exactly four valid serial fresh-`$100` 100%-real-tick paths; it changed no CP2 entry, risk, sizing, protection or exit behavior and opened no Live authority
+- The dedicated terminal refreshed its symbol database on the initial P1 invocation, so that path was preserved only as an invalid environment-sync preflight. The declared four-run matrix restarted at P1 with an unchanged `1C7165...` symbols fingerprint and equal US30/US100/US500 start/end contract rows throughout
+- The valid matrix reproduced frozen CP2 exactly at pooled actual/stressed net `$444.19/$407.0477`, 2,233 trades, 4,466 deals, 78 risk skips, 206 stop exits and 113 actual Passive expirations, with zero safety, persistence, broker, foreign, protection, ownership or measurement fault
+- Return matched 29 lifecycles but had only 7 DEEP observations, pooled Spearman `-0.076136509` and DEEP-minus-SHALLOW stressed mean `-$0.103339286`; it failed multiple fixed information gates
+- Cross matched 84 lifecycles and passed pooled Spearman `+0.217986452`, three-period correlation-sign breadth and pooled DEEP-minus-SHALLOW stressed mean `+$0.507015610`, but the tail difference was positive only in P2/P3 and negative in P1/P4. Two same-sign periods failed the mandatory three-period breadth gate
+- Closed `NO_DEPTH_SELECTOR_VALUE_RETAIN_FROZEN_CP2`. Rebound, nearest-time, MIDDLE, alternate thresholds and extra runs did not rescue the result. Selection/closure SHA-256 values are `503FA898AC50E40F08359D595801D670BFF266B849CD64C18C736A67010B66FE` / `D716138FCBFE362105AFE125F25CF466F76ECF9317C90EF4EBF6D369E40EB50B`
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -201,4 +210,4 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE`
