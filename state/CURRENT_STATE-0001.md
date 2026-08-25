@@ -503,3 +503,11 @@
 - The trade-free observer will counterfactually price continuation and reversion at `0.01` using actual trigger/resolution bid/ask and one additional spread at each side. Exactly four serial build-6140 real-tick paths across P1-P4 are allowed.
 - A later prototype question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive periods, net-to-DD `>=1.50` and concentration limits. Unit 027 itself places no order and selects no stop, size, priority or Live candidate.
 - Declaration SHA-256 is `2CB75E9810EA6ED3D84DF45E8C6921DD860D2D6380D9FE5CF281720D0165E6E4`. Source, configuration, binary, runtime and outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
+
+## STATE-0063 - 2026-08-26
+
+- Implemented Unit 027 as one fresh self-contained MQL observer with no parent source copy, Include tree, order submission, position, economic persistence or Live dependency. It uses completed US500 M15 rates and `OrderCalcProfit` only for the frozen continuation/reversion counterfactuals.
+- MetaEditor build 6140 compiled the first implementation at `0 errors / 0 warnings`. Source/config manifest hashes are `4E807AAEC0A5B7B72D64243864970490AB15E0DE688CCB50C501724B9989EF8A` / `04C4C6F1FBAC2D09A37D8891C62AA38EB161910C6DCF5FD72502111C8BBAAA33`; binary SHA-256 is `D66E2234C8F8C6CD077B1C8C96D396AB3C3E14B581171AB722E5BE71788742E7`.
+- Created the dedicated Git-ignored `lab/runtime/us500-shock-response-v1-portable/` by physical copy of build-6140 executables and cached US500 data. It shares no code, setting, log, mutable state or runtime link with Live or another family.
+- Froze both required 49-file US500 2022-08 through 2026-08 raw-tick manifests, current symbol-database telemetry and the visible consumed US500 specification. Compile receipt SHA-256 is `C9F733AD58D4C758D7C9DB66A883E3985C5D70CC0F2A0541C739F14B42100739`; no Tester path or economic outcome has opened.
+- Exactly four serial trade-free P1-P4 paths may now run under the frozen integrity contract and single environment-rebuild allowance. Exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
