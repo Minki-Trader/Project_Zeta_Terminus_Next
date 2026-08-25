@@ -1,0 +1,93 @@
+{
+  "schema": "zeta-next-entry-time-crowding-value-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_CROWDING_OUTCOME_AGGREGATION",
+  "unit": "entry-time-crowding-value-017",
+  "family": "entry-time-crowding-value-v1",
+  "question": "Does entering while at least one other portfolio position is already active change any strategy's native stressed return per planned-risk dollar and stop-loss incidence with enough temporal breadth and magnitude to justify one later entry-preserving crowding-conditioned management experiment?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_parent": {
+    "event_source_family": "passive-refusal-depth-observation-v1",
+    "event_source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "event_manifest": {
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312"
+    },
+    "reopen_parent_source": false
+  },
+  "fixed_reconstruction": {
+    "row_handling": "Preserve every distinct full CSV row. Order within each period by parsed server_time, numeric state_sequence, fixed event precedence, source path and source line; state_sequence may repeat and is not a row key.",
+    "market_birth": "OPEN begins an RC16, RC4, Cross, Pressure or Return lifecycle and supplies birth planned_risk.",
+    "passive_birth": "PASSIVE_FILL begins an admitted Passive lifecycle using planned_risk from its paired PASSIVE_PLACE.",
+    "release": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle; close value_b is native stressed net USD.",
+    "entry_time_incumbents": "Immediately before the new lifecycle birth event, count all other admitted active position lifecycles. Pending Passive orders are not positions and are excluded.",
+    "SOLO": "entry_time_incumbents equals 0",
+    "CROWDED": "entry_time_incumbents is at least 1",
+    "stressed_r": "native stressed net USD divided by birth planned_risk",
+    "stop_loss": "The lifecycle ends with EXTERNAL_CLOSE whose detail reason is DEAL_REASON_SL.",
+    "pooled_effect": "CROWDED mean stressed_r minus SOLO mean stressed_r for one strategy.",
+    "period_effect": "The same mean difference separately in each period.",
+    "pooled_stop_effect": "CROWDED stop-loss rate minus SOLO stop-loss rate for one strategy.",
+    "period_stop_effect": "The same stop-rate difference separately in each period."
+  },
+  "fixed_integrity_gate": [
+    "All input hashes remain frozen and exact duplicate full rows equal zero.",
+    "All 2,233 lifecycles and 407.0477 USD stressed net reconstruct exactly with no signal, planned-risk, fill, expiration, overlap or close fault.",
+    "Every birth observes only positions active before its ordered birth event; the new position never counts itself.",
+    "Every lifecycle has exactly one nonnegative incumbent count and one stop-loss classification."
+  ],
+  "fixed_information_gate": {
+    "apply_separately_to": [
+      "RC16",
+      "RC4",
+      "Cross",
+      "Pressure",
+      "Return",
+      "Passive"
+    ],
+    "requirements": [
+      "SOLO and CROWDED each contain at least 20 pooled lifecycles.",
+      "Each group contains at least five lifecycles in at least three periods.",
+      "Absolute pooled CROWDED-minus-SOLO mean stressed_r is at least 0.10R per lifecycle.",
+      "Among periods with at least five observations in both groups, at least three period stressed-R effects share the pooled sign.",
+      "Absolute pooled CROWDED-minus-SOLO stop-loss-rate difference is at least 0.10.",
+      "The pooled stop effect is economically concordant: a negative stressed-R effect requires a positive stop effect, and a positive stressed-R effect requires a negative stop effect.",
+      "Among periods with at least five observations in both groups, at least three period stop effects share the pooled stop sign."
+    ],
+    "selection": "Select at most one passing strategy by larger absolute pooled stressed-R effect, then larger absolute pooled stop effect, then more stressed-R sign-breadth periods, then lexicographic name.",
+    "passing_action": "Retain one later Lab management experiment for the selected strategy using entry-time crowding only. It must preserve every frozen base entry, retain unchanged 4%/12% admission, and may not authorize Live.",
+    "failure_action": "Close with no crowding-conditioned candidate. Do not rescue with incumbent direction, identity, symbol, pending-order count, two-plus threshold, exact cohort shape, time slice or period exception."
+  },
+  "descriptive_only": [
+    "incumbent count above one",
+    "incumbent strategy identities",
+    "aligned or opposed direction",
+    "same-symbol versus cross-symbol occupancy",
+    "pending Passive ownership",
+    "later incumbent or candidate P/L attribution"
+  ],
+  "evidence_limit": {
+    "entry_time_crowding_is_causally_observable": true,
+    "association_not_mechanism": true,
+    "all_periods_consumed_exploratory": true,
+    "clean_holdout": false
+  },
+  "stop_rules": [
+    "Run exactly one successful fixed aggregation; implementation-only failures before judgment may be corrected and disclosed.",
+    "Do not run MT5 or modify MQL in this unit.",
+    "Do not suppress an entry or claim a management mechanism from association alone.",
+    "Do not alter, query or restart Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "reconstruct_entry_time_active_position_counts_once_then_apply_the_fixed_gate"
+}

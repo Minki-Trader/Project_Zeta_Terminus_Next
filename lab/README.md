@@ -27,6 +27,7 @@
 - `research/passive-refusal-depth-observation-v1/`: 닫힌 Passive 미체결 접근깊이 관찰 family; 4개 실틱 경로에서 Return은 다중 게이트 미달, Cross는 pooled 신호가 있었으나 기간별 tail 방향 2/4로 폭넓음 게이트 미달, selector 없이 CP2 유지
 - `research/risk-capacity-release-window-v1/`: 닫힌 위험용량 해제창 진단 family; event-key 계약 결함으로 정식 판정 무효, 비권위 민감도도 exact deadline 해제 3/78로 기준 미달, retry 후보 없음
 - `research/native-signal-strength-value-v1/`: 닫힌 6전략 native feature 정보가치 진단 family; 2,233 lifecycle 정확 복원, 모든 전략 pooled Spearman `|rho|<0.20`으로 strength allocation 후보 없음
+- `research/entry-time-crowding-value-v1/`: 닫힌 진입시점 포트폴리오 crowding 진단 family; 5개 dense 전략 효과 미미, RC4 관찰은 crowded 15건·폭 1기간으로 밀도 미달, 관리 후보 없음
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구

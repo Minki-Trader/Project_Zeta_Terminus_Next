@@ -1,0 +1,183 @@
+{
+  "schema": "zeta-next-entry-time-crowding-value-result-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED",
+  "unit": "entry-time-crowding-value-017",
+  "family": "entry-time-crowding-value-v1",
+  "declaration": {
+    "path": "lab/research/entry-time-crowding-value-v1/evidence/ENTRY_TIME_CROWDING_VALUE_DECLARATION_V1.json",
+    "sha256": "5983F8925F7DB4FEC4AB70E41DACDABD04A3AF447C739C1E202D1B1C69038C97"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_failed_invocations": 1,
+    "implementation_correction": "The first read-only invocation used invalid shorthand syntax in an exact-duplicate filter and stopped before producing any crowding metric or judgment. Only that syntax was corrected; data, reconstruction and frozen gates were unchanged.",
+    "alternate_crowding_thresholds_or_rescues": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "new_market_outcomes": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "exact_duplicate_full_rows": 0,
+    "signal_fill_expiration_overlap_planned_risk_or_close_faults": 0,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.0477,
+    "stop_loss_exits": 206,
+    "negative_incumbent_counts": 0,
+    "exact_frozen_component_equivalence": true
+  },
+  "strategy_results": [
+    {
+      "strategy": "RC16",
+      "lifecycles": 272,
+      "incumbent_count_distribution": "0:169,1:96,2:7",
+      "solo_n": 169,
+      "crowded_n": 103,
+      "solo_mean_r": 0.058690648,
+      "crowded_mean_r": 0.100679968,
+      "crowded_minus_solo_r": 0.041989320,
+      "solo_stop_rate": 0.094674556,
+      "crowded_stop_rate": 0.067961165,
+      "crowded_minus_solo_stop": -0.026713391,
+      "period_effects": [
+        {"period": "P1_2022H2_2023", "solo_crowded_n": "52/25", "r_effect": -0.028524300, "stop_effect": -0.038461538},
+        {"period": "P2_2024", "solo_crowded_n": "44/28", "r_effect": 0.140572245, "stop_effect": -0.191558442},
+        {"period": "P3_2025", "solo_crowded_n": "45/34", "r_effect": 0.003892526, "stop_effect": 0.050980392},
+        {"period": "P4_2026_YTD", "solo_crowded_n": "28/16", "r_effect": 0.085143729, "stop_effect": 0.089285714}
+      ],
+      "gate": {"sample": true, "r_magnitude": false, "r_breadth": true, "stop_magnitude": false, "concordance": true, "stop_breadth": false, "passed": false}
+    },
+    {
+      "strategy": "RC4",
+      "lifecycles": 206,
+      "incumbent_count_distribution": "0:191,1:15",
+      "solo_n": 191,
+      "crowded_n": 15,
+      "solo_mean_r": 0.048602579,
+      "crowded_mean_r": 0.275884429,
+      "crowded_minus_solo_r": 0.227281851,
+      "solo_stop_rate": 0.267015707,
+      "crowded_stop_rate": 0.133333333,
+      "crowded_minus_solo_stop": -0.133682373,
+      "period_effects": [
+        {"period": "P1_2022H2_2023", "solo_crowded_n": "47/6", "r_effect": 0.160937871, "stop_effect": 0.017730496, "breadth_eligible": true},
+        {"period": "P2_2024", "solo_crowded_n": "49/4", "r_effect": -0.034998985, "stop_effect": -0.015306122, "breadth_eligible": false},
+        {"period": "P3_2025", "solo_crowded_n": "66/2", "r_effect": 0.299176807, "stop_effect": -0.303030303, "breadth_eligible": false},
+        {"period": "P4_2026_YTD", "solo_crowded_n": "29/3", "r_effect": 0.657540275, "stop_effect": -0.379310345, "breadth_eligible": false}
+      ],
+      "gate": {"sample": false, "r_magnitude": true, "r_breadth": false, "stop_magnitude": true, "concordance": true, "stop_breadth": false, "passed": false}
+    },
+    {
+      "strategy": "Cross",
+      "lifecycles": 805,
+      "incumbent_count_distribution": "0:300,1:359,2:146",
+      "solo_n": 300,
+      "crowded_n": 505,
+      "solo_mean_r": 0.011227832,
+      "crowded_mean_r": 0.026598436,
+      "crowded_minus_solo_r": 0.015370604,
+      "solo_stop_rate": 0.040000000,
+      "crowded_stop_rate": 0.033663366,
+      "crowded_minus_solo_stop": -0.006336634,
+      "period_effects": [
+        {"period": "P1_2022H2_2023", "solo_crowded_n": "104/182", "r_effect": 0.019042573, "stop_effect": -0.004120879},
+        {"period": "P2_2024", "solo_crowded_n": "83/114", "r_effect": 0.035505263, "stop_effect": -0.004333122},
+        {"period": "P3_2025", "solo_crowded_n": "67/126", "r_effect": -0.009160406, "stop_effect": -0.013030088},
+        {"period": "P4_2026_YTD", "solo_crowded_n": "46/83", "r_effect": 0.017392434, "stop_effect": -0.002619172}
+      ],
+      "gate": {"sample": true, "r_magnitude": false, "r_breadth": true, "stop_magnitude": false, "concordance": true, "stop_breadth": true, "passed": false}
+    },
+    {
+      "strategy": "Pressure",
+      "lifecycles": 118,
+      "incumbent_count_distribution": "0:50,1:57,2:11",
+      "solo_n": 50,
+      "crowded_n": 68,
+      "solo_mean_r": 0.033911977,
+      "crowded_mean_r": 0.047005066,
+      "crowded_minus_solo_r": 0.013093089,
+      "solo_stop_rate": 0.180000000,
+      "crowded_stop_rate": 0.176470588,
+      "crowded_minus_solo_stop": -0.003529412,
+      "period_effects": [
+        {"period": "P1_2022H2_2023", "solo_crowded_n": "17/18", "r_effect": 0.143187598, "stop_effect": -0.117647059},
+        {"period": "P2_2024", "solo_crowded_n": "11/12", "r_effect": 0.050866511, "stop_effect": -0.106060606},
+        {"period": "P3_2025", "solo_crowded_n": "10/22", "r_effect": 0.058696414, "stop_effect": 0.063636364},
+        {"period": "P4_2026_YTD", "solo_crowded_n": "12/16", "r_effect": -0.210177806, "stop_effect": 0.041666667}
+      ],
+      "gate": {"sample": true, "r_magnitude": false, "r_breadth": true, "stop_magnitude": false, "concordance": true, "stop_breadth": false, "passed": false}
+    },
+    {
+      "strategy": "Return",
+      "lifecycles": 238,
+      "incumbent_count_distribution": "0:101,1:94,2:43",
+      "solo_n": 101,
+      "crowded_n": 137,
+      "solo_mean_r": 0.029142740,
+      "crowded_mean_r": 0.075944830,
+      "crowded_minus_solo_r": 0.046802089,
+      "solo_stop_rate": 0.188118812,
+      "crowded_stop_rate": 0.255474453,
+      "crowded_minus_solo_stop": 0.067355641,
+      "period_effects": [
+        {"period": "P1_2022H2_2023", "solo_crowded_n": "51/54", "r_effect": -0.088625660, "stop_effect": 0.070806100},
+        {"period": "P2_2024", "solo_crowded_n": "17/33", "r_effect": 0.002535178, "stop_effect": 0.040998217},
+        {"period": "P3_2025", "solo_crowded_n": "19/33", "r_effect": 0.340373392, "stop_effect": -0.065390750},
+        {"period": "P4_2026_YTD", "solo_crowded_n": "14/17", "r_effect": 0.165972071, "stop_effect": 0.079831933}
+      ],
+      "gate": {"sample": true, "r_magnitude": false, "r_breadth": true, "stop_magnitude": false, "concordance": false, "stop_breadth": true, "passed": false}
+    },
+    {
+      "strategy": "Passive",
+      "lifecycles": 594,
+      "incumbent_count_distribution": "0:433,1:131,2:30",
+      "solo_n": 433,
+      "crowded_n": 161,
+      "solo_mean_r": 0.007431240,
+      "crowded_mean_r": 0.010926350,
+      "crowded_minus_solo_r": 0.003495110,
+      "solo_stop_rate": 0.039260970,
+      "crowded_stop_rate": 0.055900621,
+      "crowded_minus_solo_stop": 0.016639651,
+      "period_effects": [
+        {"period": "P1_2022H2_2023", "solo_crowded_n": "158/55", "r_effect": 0.010299237, "stop_effect": 0.011852704},
+        {"period": "P2_2024", "solo_crowded_n": "110/49", "r_effect": 0.027713156, "stop_effect": 0.015769944},
+        {"period": "P3_2025", "solo_crowded_n": "97/33", "r_effect": -0.000507058, "stop_effect": -0.021868166},
+        {"period": "P4_2026_YTD", "solo_crowded_n": "68/24", "r_effect": -0.056279699, "stop_effect": 0.080882353}
+      ],
+      "gate": {"sample": true, "r_magnitude": false, "r_breadth": false, "stop_magnitude": false, "concordance": false, "stop_breadth": true, "passed": false}
+    }
+  ],
+  "fixed_gate_application": {
+    "passing_strategies": [],
+    "dense_strategies": ["RC16", "Cross", "Pressure", "Return", "Passive"],
+    "dense_strategy_max_absolute_r_effect": 0.046802089,
+    "dense_strategy_max_absolute_stop_effect": 0.067355641,
+    "sparse_outlier": {
+      "strategy": "RC4",
+      "crowded_n": 15,
+      "crowded_periods_with_at_least_five": 1,
+      "r_effect": 0.227281851,
+      "stop_effect": -0.133682373,
+      "disposition": "Fails pooled and temporal density before economic selection."
+    }
+  },
+  "interpretation": {
+    "finding": "Simple entry-time SOLO versus at-least-one-position CROWDED state is not a broad material management field for any strategy.",
+    "rc4": "The positive crowded RC4 observation is too sparse and uneven to open a mechanism.",
+    "pressure": "Crowding looked favorable in P1-P3 but reversed sharply in P4, leaving a negligible pooled effect.",
+    "return": "Crowding had a small positive pooled stressed-R effect but a higher stop rate, so the economic channels were discordant.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "verdict": "NO_ENTRY_TIME_CROWDING_FIELD_PASSED",
+    "selected_strategy": null,
+    "later_crowding_management_experiment": false,
+    "identity_direction_two_plus_symbol_pending_or_period_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_without_crowding_subgroup_rescue_then_select_one_non_nearby_question_after_durable_commit"
+}

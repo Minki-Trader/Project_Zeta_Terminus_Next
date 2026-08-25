@@ -1,0 +1,37 @@
+{
+  "schema": "zeta-next-entry-time-crowding-value-closure-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "entry-time-crowding-value-017",
+  "family": "entry-time-crowding-value-v1",
+  "evidence": {
+    "declaration_sha256": "5983F8925F7DB4FEC4AB70E41DACDABD04A3AF447C739C1E202D1B1C69038C97",
+    "result_sha256": "E27397FBD0D40BCA98D117394FE395E63AFABC3EAC24934B0166ADA3C6EE0E54",
+    "event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312"
+  },
+  "closure": {
+    "verdict": "NO_ENTRY_TIME_CROWDING_FIELD_PASSED",
+    "integrity_passed": true,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.0477,
+    "passing_strategies": [],
+    "selected_strategy": null,
+    "later_management_experiment": false
+  },
+  "reason": "All five strategies with dense SOLO/CROWDED samples had pooled stressed-R effects no larger than 0.046802089R in absolute value and stop-rate effects no larger than 0.067355641. RC4's larger +0.227281851R observation had only 15 crowded lifecycles and one period with at least five, failing density before selection.",
+  "forbidden_rescues": {
+    "incumbent_identity_or_direction": false,
+    "two_plus_or_exact_cohort_threshold": false,
+    "symbol_or_pending_order_context": false,
+    "time_or_period_exception": false,
+    "mql_or_tester_path": false
+  },
+  "surfaces": {
+    "frozen_cp2_baseline_unchanged": true,
+    "input_event_files_unchanged": true,
+    "live_untouched": true,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_next_only_economic_question"
+}
