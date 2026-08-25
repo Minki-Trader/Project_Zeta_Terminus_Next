@@ -1,0 +1,518 @@
+{
+  "schema": "zeta-next-live-dev-performance-forensics-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_DESCRIPTIVE_ONLY",
+  "scope": {
+    "live_versions": [
+      "V1",
+      "V2",
+      "V3",
+      "V5",
+      "V6",
+      "V6R2",
+      "V6R6",
+      "V7"
+    ],
+    "economic_observation_end_server": "2026-08-24 21:59:59",
+    "notes": [
+      "V4 did not enter Live-Dev.",
+      "V6, V6R2 and V6R6 were engineering, weekend or preflight states and produced no completed real-account lifecycle in this interval.",
+      "V1 and V2 each contain one execution-control incident and are separated from the V3/V5/V7 economic behavior.",
+      "No broker positions, orders, deals or account endpoint was queried for this analysis."
+    ]
+  },
+  "method": {
+    "actual_outcomes": "Reconstructed from preserved Live event evidence and locally preserved deal/lifecycle evidence.",
+    "tick_paths": "Read-only US30 and US100 tick history was copied from the isolated Lab MT5 Portable. Event server-clock timestamps were queried on the copied history axis with the validated +03:00 clock translation.",
+    "mark_convention": "Long positions use executable bid and short positions use executable ask at the actual entry price and volume. MFE and MAE are tick-path floating mark estimates; actual_net_usd is the preserved realized outcome.",
+    "counterfactual_rule": "Recorded event-time equity is treated as causally observable. Per-position or combined tick maxima are labeled hindsight ceilings and are never treated as a selectable strategy.",
+    "new_hypotheses_opened": false,
+    "live_change_authorized": false
+  },
+  "source_evidence": [
+    {
+      "repository": "legacy",
+      "path": "mt5/artifacts/ea-files/live/zt-pre500-finite-risk-portfolio-v1-events-a.csv",
+      "sha256": "140E5C6D36018659DC3CB19330D1EF55E8C4E7A196480BA49169974DA5785AFA",
+      "bytes": 2444
+    },
+    {
+      "repository": "legacy",
+      "path": "mt5/artifacts/ea-files/live/zt-pre500-finite-risk-portfolio-v2-events-a.csv",
+      "sha256": "7B26CC9E2ECF4E1B9898E7A1E01EBCF9F20799EE9CA9AD5E0308C5EBADB63D84",
+      "bytes": 3296
+    },
+    {
+      "repository": "legacy",
+      "path": "mt5/artifacts/ea-files/live/zt-pre500-finite-risk-portfolio-v3-events-a.csv",
+      "sha256": "A93D1A522D54D68721219E1A1724EECC20A23CBC6C5466AB5B1936AFA12FCF23",
+      "bytes": 5920
+    },
+    {
+      "repository": "legacy",
+      "path": "mt5/artifacts/ea-files/live/zt-pre500-finite-risk-portfolio-v5-events-a.csv",
+      "sha256": "AB449C0973B84E9D84F823AC81E2658975949C7A142CB77DB02003C67A893172",
+      "bytes": 15271
+    },
+    {
+      "repository": "legacy",
+      "path": "mt5/artifacts/ea-files/handoff-v7-20260824/legacy-v6r6-final-events.csv",
+      "sha256": "9C65055590FDD3DB9CF93252978D89D500D3D4CEAA2B1EB22EC56F0094CADA36",
+      "bytes": 839
+    },
+    {
+      "repository": "legacy",
+      "path": "mt5/artifacts/casebooks/pre500_v5_individual_position_overlap_casebook_v1/positions.jsonl",
+      "sha256": "1F5FE8B16DB1C46B054889D9E962562989AAF5169D196C306BED43803192F976",
+      "bytes": 28086601
+    },
+    {
+      "repository": "next",
+      "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-events-a.csv",
+      "sha256_at_observation_boundary": "6FA869E28F13EC4293962F0814DD98A5328802C43519557139AE16976977C9F0",
+      "bytes_at_observation_boundary": 10978,
+      "mutable_runtime_file": true,
+      "used_economic_rows_through_server": "2026-08-24 21:59:59"
+    }
+  ],
+  "terminal_log_hashes": {
+    "repository": "legacy",
+    "path_pattern": "mt5/runtime/logs/YYYYMMDD.log",
+    "2026-08-17": "8EC749D91B60E2478C1DC42B197D2BD5729607FE958D5BD06BFBB76C46E249F4",
+    "2026-08-18": "0C4C0C506240741A349965CF4C25970231DAD1E6BB7C3884FC97DB739C670266",
+    "2026-08-19": "C714C4B2CF3C42E2C308AE226ABF8225EEDC74A23A0375DA89748DFE9802350F",
+    "2026-08-20": "30D91D770582E5ED58DC77D90A1B7825BB4C820010603FEA1CB17A6898B97722",
+    "2026-08-21": "017681EB8CE1A2DA9694084898F28D89833BF1823B086095C256748020E13E8D",
+    "2026-08-22": "D7901D18793FDC2C81A948B5CDB5F9B9532E3959532F73F567599938C6D11B37",
+    "2026-08-23": "C2E65981468E8091FFB08B3A499CC4377C9FAD8EF15A935F606468CED22891D4",
+    "2026-08-24": "F7553F0189BD549FD3C8089F96CB13BF42FB8ADDA454859C2682E8B03912C77D"
+  },
+  "actual_account_summary": {
+    "project_stage_start_usd": 100.0,
+    "project_stage_end_usd": 105.87,
+    "project_realized_net_usd": 5.87,
+    "broker_account_start_including_prior_adjustment_usd": 100.65,
+    "broker_account_end_usd": 106.52,
+    "completed_lifecycles": 14,
+    "wins": 9,
+    "losses": 5,
+    "gross_wins_usd": 10.78,
+    "gross_losses_usd": -4.91,
+    "profit_factor": 2.195519,
+    "execution_incidents": {
+      "count": 2,
+      "net_usd": -0.08
+    },
+    "economic_lifecycles_excluding_execution_incidents": {
+      "count": 12,
+      "wins": 9,
+      "losses": 3,
+      "net_usd": 5.95,
+      "profit_factor": 2.231884
+    }
+  },
+  "version_summary": [
+    {"version": "V1", "trades": 1, "wins": 0, "losses": 1, "net_usd": -0.03, "classification": "execution_incident"},
+    {"version": "V2", "trades": 2, "wins": 1, "losses": 1, "net_usd": 0.81, "classification": "one_execution_incident_plus_one_economic_trade"},
+    {"version": "V3", "trades": 2, "wins": 2, "losses": 0, "net_usd": 1.19, "classification": "economic"},
+    {"version": "V5", "trades": 6, "wins": 4, "losses": 2, "net_usd": 2.36, "classification": "economic"},
+    {"version": "V6_V6R2_V6R6", "trades": 0, "wins": 0, "losses": 0, "net_usd": 0.0, "classification": "engineering_preflight_no_real_lifecycle"},
+    {"version": "V7", "trades": 3, "wins": 2, "losses": 1, "net_usd": 1.54, "classification": "economic"}
+  ],
+  "strategy_summary": [
+    {"strategy": "RC16", "trades": 2, "net_usd": 1.55},
+    {"strategy": "RC4", "trades": 0, "net_usd": 0.0},
+    {"strategy": "Cross", "trades": 3, "net_usd": -1.97},
+    {"strategy": "Pressure", "trades": 2, "net_usd": 3.09},
+    {"strategy": "Return", "trades": 3, "net_usd": -0.18},
+    {"strategy": "Passive", "trades": 4, "net_usd": 3.38}
+  ],
+  "lifecycle_ledger": [
+    {
+      "id": "T01",
+      "version": "V1",
+      "strategy": "RC16",
+      "symbol": "US30",
+      "side": "BUY",
+      "entry_server": "2026-08-17 13:30",
+      "exit_server": "immediate",
+      "actual_net_usd": -0.03,
+      "classification": "entry_deal_publication_race_safety_close",
+      "tick_path_applicable": false
+    },
+    {
+      "id": "T02",
+      "version": "V2",
+      "strategy": "Return",
+      "symbol": "US30",
+      "side": "BUY",
+      "entry_server": "2026-08-17 16:00",
+      "exit_server": "immediate",
+      "actual_net_usd": -0.05,
+      "classification": "false_open_protection_mismatch_from_stale_or_zero_result_price",
+      "tick_path_applicable": false
+    },
+    {
+      "id": "T03",
+      "version": "V2",
+      "strategy": "Passive",
+      "symbol": "US100",
+      "side": "BUY",
+      "entry_server": "2026-08-17 15:49",
+      "exit_server": "2026-08-17 18:30",
+      "actual_net_usd": 0.86,
+      "mfe_mark_usd": 1.034,
+      "mfe_server": "2026-08-17 18:07:15",
+      "mae_mark_usd": -0.2455,
+      "mfe_to_final_giveback_usd": 0.174
+    },
+    {
+      "id": "T04",
+      "version": "V3",
+      "strategy": "Passive",
+      "symbol": "US100",
+      "side": "BUY",
+      "entry_server": "2026-08-18 12:31",
+      "exit_server": "2026-08-18 14:15",
+      "actual_net_usd": 0.39,
+      "mfe_mark_usd": 0.449,
+      "mfe_server": "2026-08-18 14:10:39",
+      "mae_mark_usd": -0.4035,
+      "mfe_to_final_giveback_usd": 0.059
+    },
+    {
+      "id": "T05",
+      "version": "V3",
+      "strategy": "Cross",
+      "symbol": "US100",
+      "side": "SELL",
+      "entry_server": "2026-08-18 17:00",
+      "exit_server": "2026-08-18 21:00",
+      "actual_net_usd": 0.8,
+      "mfe_mark_usd": 1.314,
+      "mfe_server": "2026-08-18 18:10:39",
+      "mae_mark_usd": -0.591,
+      "mfe_to_final_giveback_usd": 0.514
+    },
+    {
+      "id": "T06",
+      "version": "V5",
+      "strategy": "Passive",
+      "symbol": "US100",
+      "side": "BUY",
+      "entry_server": "2026-08-20 12:35",
+      "exit_server": "2026-08-20 13:59",
+      "actual_net_usd": 0.53,
+      "mfe_mark_usd": 0.5305,
+      "mfe_server": "2026-08-20 13:59:56",
+      "mae_mark_usd": -0.051,
+      "mfe_to_final_giveback_usd": 0.0005
+    },
+    {
+      "id": "T07",
+      "version": "V5",
+      "strategy": "Pressure",
+      "symbol": "US30",
+      "side": "SELL",
+      "entry_server": "2026-08-20 14:59",
+      "exit_server": "2026-08-20 18:59",
+      "actual_net_usd": 1.52,
+      "mfe_mark_usd": 1.898,
+      "mfe_server": "2026-08-20 16:20:29",
+      "mae_mark_usd": -0.5065,
+      "mfe_to_final_giveback_usd": 0.378
+    },
+    {
+      "id": "T08",
+      "version": "V5",
+      "strategy": "Passive",
+      "symbol": "US100",
+      "side": "BUY",
+      "entry_server": "2026-08-20 15:30",
+      "exit_server": "2026-08-20 17:44",
+      "actual_net_usd": 1.6,
+      "mfe_mark_usd": 2.0815,
+      "mfe_server": "2026-08-20 16:37:31",
+      "mae_mark_usd": -0.196,
+      "mfe_to_final_giveback_usd": 0.4815
+    },
+    {
+      "id": "T09",
+      "version": "V5",
+      "strategy": "Return",
+      "symbol": "US30",
+      "side": "BUY",
+      "entry_server": "2026-08-20 15:59",
+      "exit_server": "2026-08-20 21:16",
+      "exit_reason": "stop_loss",
+      "actual_net_usd": -2.06,
+      "mfe_mark_usd": 1.7835,
+      "mfe_server": "2026-08-20 18:03:59",
+      "mae_mark_usd": -2.06,
+      "mfe_to_final_giveback_usd": 3.8435
+    },
+    {
+      "id": "T10",
+      "version": "V5",
+      "strategy": "Pressure",
+      "symbol": "US30",
+      "side": "BUY",
+      "entry_server": "2026-08-21 15:00",
+      "exit_server": "2026-08-21 19:00",
+      "actual_net_usd": 1.57,
+      "mfe_mark_usd": 2.0435,
+      "mfe_server": "2026-08-21 18:54:10",
+      "mae_mark_usd": -0.4465,
+      "mfe_to_final_giveback_usd": 0.4735
+    },
+    {
+      "id": "T11",
+      "version": "V5",
+      "strategy": "Cross",
+      "symbol": "US100",
+      "side": "SELL",
+      "entry_server": "2026-08-21 17:00",
+      "exit_server": "2026-08-21 21:00",
+      "actual_net_usd": -0.8,
+      "mfe_mark_usd": 0.834,
+      "mfe_server": "2026-08-21 17:21:09",
+      "mae_mark_usd": -1.8447,
+      "mfe_to_final_giveback_usd": 1.634
+    },
+    {
+      "id": "T12",
+      "version": "V7",
+      "strategy": "RC16",
+      "symbol": "US30",
+      "side": "BUY",
+      "entry_server": "2026-08-24 13:29",
+      "exit_server": "2026-08-24 17:29",
+      "actual_net_usd": 1.58,
+      "mfe_mark_usd": 2.2175,
+      "mfe_server": "2026-08-24 17:01:34",
+      "mae_mark_usd": -1.138,
+      "mfe_to_final_giveback_usd": 0.6375
+    },
+    {
+      "id": "T13",
+      "version": "V7",
+      "strategy": "Return",
+      "symbol": "US30",
+      "side": "BUY",
+      "entry_server": "2026-08-24 15:59",
+      "exit_server": "2026-08-24 21:59",
+      "actual_net_usd": 1.93,
+      "mfe_mark_usd": 2.7335,
+      "mfe_server": "2026-08-24 19:04:10",
+      "mae_mark_usd": -0.392,
+      "mfe_to_final_giveback_usd": 0.8035
+    },
+    {
+      "id": "T14",
+      "version": "V7",
+      "strategy": "Cross",
+      "symbol": "US100",
+      "side": "SELL",
+      "entry_server": "2026-08-24 17:00",
+      "exit_server": "2026-08-24 19:22",
+      "exit_reason": "stop_loss",
+      "actual_net_usd": -1.97,
+      "mfe_mark_usd": 0.6915,
+      "mfe_server": "2026-08-24 17:13:02",
+      "mae_mark_usd": -1.9735,
+      "mfe_to_final_giveback_usd": 2.6615
+    }
+  ],
+  "tick_path_summary": {
+    "economic_lifecycles_measured": 12,
+    "sum_individual_mfe_mark_usd_hindsight_ceiling": 17.6105,
+    "actual_net_usd": 5.95,
+    "sum_mfe_to_final_giveback_usd": 11.6605,
+    "economic_losers_that_were_positive_before_final_loss": 3,
+    "economic_losers": 3,
+    "losing_trade_giveback_usd": {
+      "T09": 3.8435,
+      "T11": 1.634,
+      "T14": 2.6615,
+      "total": 8.139,
+      "share_of_all_measured_giveback_pct": 69.7998
+    },
+    "interpretation": "The user's observed profit-to-loss reversals are fully present in the record. The dominant descriptive loss mechanism is peak giveback under independent fixed-life exits, not an established failure of entry edge."
+  },
+  "concurrent_position_episodes": [
+    {
+      "id": "C01",
+      "server_interval": "2026-08-20 15:59:59 to 17:44:59",
+      "legs": [
+        "T07 Pressure US30 SELL",
+        "T08 Passive US100 BUY",
+        "T09 Return US30 BUY"
+      ],
+      "direction_pattern": "SELL_BUY_BUY",
+      "all_legs_positive_seconds": 4496.226,
+      "all_legs_positive_share_pct": 71.3687,
+      "max_combined_mark_usd": 3.3585,
+      "max_combined_server": "2026-08-20 16:37:31",
+      "marks_at_max_usd": [0.6835, 2.0815, 0.5935],
+      "base_balance_usd": 103.15,
+      "max_equity_proxy_usd": 106.5085,
+      "eventual_combined_realized_usd": 1.06
+    },
+    {
+      "id": "C02",
+      "server_interval": "2026-08-20 17:44:59 to 18:59:59",
+      "legs": [
+        "T07 Pressure US30 SELL",
+        "T09 Return US30 BUY"
+      ],
+      "direction_pattern": "SAME_SYMBOL_EQUAL_VOLUME_OPPOSITION",
+      "all_legs_positive_seconds": 2843.082,
+      "all_legs_positive_share_pct": 63.1796,
+      "combined_mark_range_usd": [1.214, 1.277],
+      "max_combined_mark_usd": 1.277,
+      "max_combined_server": "2026-08-20 17:46:22",
+      "marks_at_max_usd": [0.467, 0.81],
+      "post_first_exit_observation": "When Pressure timed out at 19:00, Return became an unhedged long. Its remaining-life MFE was only +0.4335 before the eventual -2.06 stop."
+    },
+    {
+      "id": "C03",
+      "server_interval": "2026-08-21 17:00:00 to 19:00:00",
+      "legs": [
+        "T10 Pressure US30 BUY",
+        "T11 Cross US100 SELL"
+      ],
+      "direction_pattern": "BUY_SELL",
+      "all_legs_positive_seconds": 2329.165,
+      "all_legs_positive_share_pct": 32.3495,
+      "max_combined_mark_usd": 1.93,
+      "max_combined_server": "2026-08-21 17:19:14",
+      "marks_at_max_usd": [1.2035, 0.7265],
+      "base_balance_usd": 104.21,
+      "max_equity_proxy_usd": 106.14,
+      "eventual_combined_realized_usd": 0.77,
+      "post_first_exit_observation": "After Pressure closed, Cross never returned to positive and timed out at -0.80."
+    },
+    {
+      "id": "C04",
+      "server_interval": "2026-08-24 17:00:00 to 17:29:59",
+      "legs": [
+        "T12 RC16 US30 BUY",
+        "T13 Return US30 BUY",
+        "T14 Cross US100 SELL"
+      ],
+      "direction_pattern": "BUY_BUY_SELL",
+      "all_legs_positive_seconds": 1703.232,
+      "all_legs_positive_share_pct": 94.6766,
+      "max_combined_mark_usd": 4.7925,
+      "max_combined_server": "2026-08-24 17:02:31",
+      "marks_at_max_usd": [2.1575, 2.4435, 0.1915],
+      "base_balance_usd": 104.98,
+      "max_equity_proxy_usd_hindsight": 109.7725,
+      "recorded_equity_at_third_entry_usd": 108.69,
+      "eventual_combined_realized_usd": 1.54
+    },
+    {
+      "id": "C05",
+      "server_interval": "2026-08-24 17:29:59 to 19:22:08",
+      "legs": [
+        "T13 Return US30 BUY",
+        "T14 Cross US100 SELL"
+      ],
+      "direction_pattern": "BUY_SELL",
+      "all_legs_positive_seconds": 28.46,
+      "all_legs_positive_share_pct": 0.42,
+      "max_combined_mark_usd": 2.06,
+      "post_first_exit_observation": "Cross later hit its stop; Return remained positive after that stop and realized +1.93 at its fixed exit."
+    }
+  ],
+  "availability_forensics": [
+    {
+      "date": "2026-08-19",
+      "local_interruption": "15:15:38 shutdown to 16:03:37 restart, followed by a later process transition and a V3 cancellation/connectivity failure before V5 activation",
+      "economic_effect": "One 17:00 Cross short decision was missed while V5 was not active.",
+      "continuous_path_estimate": {
+        "strategy": "Cross",
+        "symbol": "US100",
+        "side": "SELL",
+        "entry_server": "2026-08-19 17:00",
+        "entry_price": 29427.95,
+        "fixed_exit_server": "2026-08-19 21:00",
+        "exit_price": 29480.8,
+        "estimated_net_usd": -0.53,
+        "mfe_mark_usd": 1.176,
+        "mae_mark_usd": -1.706,
+        "stop_would_have_triggered": false
+      },
+      "classification": "real_availability_gap_that_probably_improved_realized_balance_by_about_0.53_while_missing_interim_profit"
+    },
+    {
+      "date": "2026-08-21",
+      "local_interruption": "12:00:42 shutdown to 13:00:51 restart; EA removed 14:11:45 and restored 19:33:44 local",
+      "missed_decision_checks": {
+        "RC4_signal": -0.8499617,
+        "RC4_abs_threshold": 1.5,
+        "RC16_signal": 1.2562959,
+        "RC16_abs_threshold": 1.5,
+        "Passive_states": [0.574637, 0.530089, 0.922991, 0.885817, 0.512109, 0.57614],
+        "Passive_abs_threshold": 1.0
+      },
+      "qualified_entries_missed": 0,
+      "estimated_realized_effect_usd": 0.0,
+      "classification": "operational_gap_without_economic_miss"
+    },
+    {
+      "date": "2026-08-23_to_2026-08-24",
+      "local_interruption": "18:09 local shutdown through 01:01 local restart",
+      "qualified_entries_missed": 0,
+      "estimated_realized_effect_usd": 0.0,
+      "classification": "weekend_market_closed"
+    }
+  ],
+  "manual_close_counterfactual": {
+    "directly_recorded_or_tick_supported": [
+      {
+        "episode": "2026-08-20 three-leg event-time snapshot",
+        "recorded_equity_usd": 105.35,
+        "corresponding_actual_day_end_usd": 104.21,
+        "difference_usd": 1.14,
+        "classification": "event_observable"
+      },
+      {
+        "episode": "2026-08-24 V7 third-entry snapshot",
+        "recorded_equity_usd": 108.69,
+        "actual_final_balance_usd": 106.52,
+        "difference_usd": 2.17,
+        "classification": "event_observable"
+      },
+      {
+        "episode": "2026-08-24 V7 combined tick maximum",
+        "equity_proxy_usd": 109.7725,
+        "classification": "hindsight_tick_ceiling_not_a_decision_rule"
+      }
+    ],
+    "bounded_path_dependent_projection": {
+      "description": "If both event-observable close-all snapshots had been taken and every later signal and size had otherwise remained unchanged, the final balance proxy is 106.52 + 1.14 + 2.17.",
+      "final_balance_proxy_usd": 109.83,
+      "exact_guarantee": false,
+      "path_dependency": "Earlier realized equity can slightly alter later stop distances, risk admission and sizing."
+    },
+    "verdict_on_user_estimate_108_to_111": "The lower and middle of the range are directly supported: 108.69 was recorded and 109.77 is the exact tick-path hindsight peak for V7. Approximately 109.83 is a bounded two-episode projection. The 111 upper edge is plausible only with additional favorable timing and is not directly established by the preserved causal record."
+  },
+  "closed_findings": [
+    "Actual Live-Dev performance through 2026-08-24 was positive but based on only 14 completed lifecycles: +5.87 project net and 2.195519 profit factor.",
+    "The user's simultaneous-profit memory is correct. The major three-leg episodes spent 71.37% and 94.68% of their overlap with every leg individually positive.",
+    "All three economic losing trades were profitable earlier. They account for 8.139 of the 11.6605 measured MFE-to-final giveback.",
+    "Equal-volume opposing US30 positions temporarily locked a gain on 2026-08-20. Independent fixed exit clocks later removed one leg and re-exposed the survivor to directional loss.",
+    "The locally evidenced shutdown and chart-attachment gaps did not reduce realized performance over the reconstructed interval: one probably avoided about a 0.53 loss, one missed no qualified signal, and one occurred during the weekend.",
+    "V1 and V2 operational incidents cost 0.08 and should not be interpreted as economic entry or exit evidence.",
+    "The record is sufficient to describe exit coordination and giveback as the adjacent unresolved subject, but the sample is too small to select or open a new exit mechanism."
+  ],
+  "closure": {
+    "decision": "CLOSE_WITHOUT_NEW_HYPOTHESIS",
+    "live_source_changed": false,
+    "lab_mql_changed": false,
+    "ea_or_adapter_created": false,
+    "broker_state_queried": false,
+    "next": "none_opened_waiting_for_user"
+  }
+}

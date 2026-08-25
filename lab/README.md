@@ -18,6 +18,7 @@
 - `engineering/complexity-refactor-v1/`: 현재 forward baseline을 소유하는 닫힌 공학 family
 - `research/strategy-independence-risk-allocation/`: 닫힌 전략 독립성·위험배분 family
 - `research/deposit-capital-risk-capacity/`: 닫힌 예치자본·위험용량 family
+- `research/live-dev-performance-forensics/`: 닫힌 V1-V7 실운영 성과·동시보유·중단 포렌식 family; 소스 없음
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구

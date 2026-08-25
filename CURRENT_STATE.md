@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0026`
+- Latest state ID: `STATE-0027`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: none; the later Frontier ledger is closed at `capital-scale-admission-topology-010` with `none_opened_waiting_for_user`; its configured 2025-01-01 through 2026-08-24 path is consumed exploratory evidence, not a clean holdout, confirmation or promotion basis; `예치자본·위험용량 연구` V1 is closed `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`, and the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
+- Active research boundary: none; `live-dev-performance-forensics` is closed descriptive-only with no exit hypothesis opened; the later Frontier ledger is closed at `capital-scale-admission-topology-010` with `none_opened_waiting_for_user`; its configured 2025-01-01 through 2026-08-24 path is consumed exploratory evidence, not a clean holdout, confirmation or promotion basis; `예치자본·위험용량 연구` V1 is closed `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`, and the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -135,6 +135,17 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 - Bounded stabilization advanced to sequence `1470` at server `2026.08.25 09:35:11` with entries `1/1`, flat zero-risk state, balance/equity `$106.52/$106.52`, zero faults and no warning or alert
 - Source topology is now mandatory in `docs/OPERATING_DIRECTION.md` and `AGENTS.md`: `lab/mt5` is frozen historical material, the CP2 root is the sole forward baseline, and every future family must own an isolated root
 
+## Completed Live-Dev performance forensics
+
+- Closed one read-only Lab family at `lab/research/live-dev-performance-forensics/`; it added no MQL, EA, Adapter, settings, runtime dependency, broker query, exit candidate or Live authority
+- Reconstructed 14 completed V1/V2/V3/V5/V7 real-account lifecycles through server `2026-08-24 21:59:59`: project net `+$5.87`, 9 wins / 5 losses, gross `+$10.78/-$4.91`, profit factor `2.195519`; V6/V6R2/V6R6 produced no completed real lifecycle
+- Separated two V1/V2 execution-control incidents totaling `-$0.08`; the remaining 12 economic lifecycles produced `+$5.95` with 9 wins / 3 losses
+- All three economic losers had first been profitable. Their MFE-to-final giveback was `$8.1390`, 69.7998% of the `$11.6605` total measured giveback across the 12 tick paths
+- On 2026-08-20 the `SELL/BUY/BUY` triple had all three legs positive for 71.3687% of overlap and peaked at `+$3.3585`; on 2026-08-24 the `BUY/BUY/SELL` V7 triple had all three positive for 94.6766%, recorded account equity `$108.69` at third entry and reached a hindsight tick-equity proxy of `$109.7725`
+- The user's `$108-$111` manual-close estimate is directionally supported but bounded: `$108.69` is directly recorded, `$109.77` is a hindsight V7 peak, and applying two event-observable snapshots while holding later paths unchanged gives a non-guaranteed `$109.83` proxy; `$111` is not directly established
+- The preserved availability gaps did not lower realized performance in the reconstructed interval: the 2026-08-19 gap probably avoided an approximately `-$0.53` Cross time-exit, the 2026-08-21 gap missed zero threshold-qualified RC4/RC16/Passive entries, and the later gap was during the weekend
+- Evidence: `lab/research/live-dev-performance-forensics/evidence/LIVE_DEV_PERFORMANCE_FORENSICS_V1.json`, SHA-256 `26E059C33F952E4FB2921101B9295921021828C13282E8C876B54DE36054B52F`; closure is `CLOSE_WITHOUT_NEW_HYPOTHESIS`
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -146,4 +157,4 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS`
