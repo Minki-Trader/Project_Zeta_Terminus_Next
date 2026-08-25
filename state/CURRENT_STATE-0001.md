@@ -479,3 +479,11 @@
 - RC4 and Return were closest on tail return at `-0.096091992R` and `-0.093893368R`, but their pooled Spearman signs had only one matching period. Both paired lower WIDE return with much lower stop incidence, violating the frozen economic-coherence contract.
 - Applied the failure action without raw-point, risk-utilization, signal, direction, nonlinear, threshold, quantile, time or period rescue. Closed Unit 025 `NO_INITIAL_STOP_GEOMETRY_FIELD_PASSED`; no response question, candidate, seed or promotion survives.
 - Result/closure SHA-256 values are `C9E25471EB14CAF20EAC6C4B7F78D5C4C560A5D39A284A262ECA20A3F3733C82` / `4C44BCB5630B2BE6AA57387C867DF61563A215D99794F41F8E955D64BFD6BEF7`. Exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
+
+## STATE-0060 - 2026-08-26
+
+- After Unit 025 was durably committed and pushed, opened only the non-nearby source-free Unit 026 `closed-drawdown-state-value-v1`. It does not use initial stop geometry or the binary previous-outcome memory from Unit 023.
+- Froze the sole causal state as portfolio closed-stressed drawdown fraction immediately before admitted birth. Each fresh period starts at `$100`; only already ordered CLOSE/EXTERNAL_CLOSE stressed net updates closed balance and running peak. Open equity, margin, active P/L and the current outcome are excluded.
+- Pre-outcome feasibility assigned a finite state to all `2,233` births. Each strategy-period contains `23..286` lifecycles and fixed within-period LOW_DD/HIGH_DD third tails contain at least seven observations; both peak and drawdown states are naturally represented without a threshold.
+- Every strategy is judged separately under pooled/period Spearman, tail return, stop-rate, three-period breadth and economic-coherence gates. At most one later entry-preserving strategy-specific Proxy question may survive; Unit 026 selects no response, threshold, size, hold, protection, EA or Live candidate.
+- Declaration SHA-256 is `377CBB787BEEE5AA9F6EB763EC5187AA11FE98CFB6503B376D7179445D03BC54`. Outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
