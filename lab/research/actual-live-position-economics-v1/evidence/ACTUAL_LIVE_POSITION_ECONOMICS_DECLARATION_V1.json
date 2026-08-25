@@ -1,0 +1,138 @@
+{
+  "schema": "zeta-next-actual-live-position-economics-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_020_PATH_AGGREGATION",
+  "unit": "actual-live-position-economics-020",
+  "family": "actual-live-position-economics-v1",
+  "question": "Across every completed actual Live economic position through 2026-08-25, does one predeclared causal path burden repeat broadly enough to justify exactly one adjacent historical observation unit without selecting a management rule from the small Live sample?",
+  "bundle_boundary": {
+    "first_unit": 20,
+    "latest_allowed_unit": 30,
+    "natural_close_required": true,
+    "do_not_stretch_to_unit_30": true,
+    "after_close": "return_to_the_ordinary_serial_frontier_transition",
+    "development_inside_bundle": "allowed_only_if_justified_by_the_serial_actual_position_evidence"
+  },
+  "immutable_evidence": {
+    "prior_actual_live_forensics": {
+      "path": "lab/research/live-dev-performance-forensics/evidence/LIVE_DEV_PERFORMANCE_FORENSICS_V1.json",
+      "sha256": "26E059C33F952E4FB2921101B9295921021828C13282E8C876B54DE36054B52F",
+      "economic_positions": "T03 through T14",
+      "observation_end_server": "2026-08-24 21:59:59"
+    },
+    "current_live_event_boundary": {
+      "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-events-a.csv",
+      "sha256_at_declaration": "FA3A8C229B0D4C7DDD6C0C504542F8B7240AA5358F833CAAA1530AA907AB8D0E",
+      "bytes_at_declaration": 16948,
+      "mutable_runtime_file": true,
+      "used_rows_through_server": "2026-08-25 16:32:02"
+    },
+    "new_completed_position": {
+      "id": "T15",
+      "strategy": "Pressure",
+      "symbol": "US30",
+      "side": "BUY",
+      "entry_server": "2026-08-25 15:00:00",
+      "entry_price": 53739.1,
+      "volume": 0.01,
+      "planned_risk_usd": 4.0596,
+      "exit_server": "2026-08-25 16:32:02",
+      "exit_reason": "stop_loss",
+      "actual_net_usd": -2.04
+    }
+  },
+  "economic_population": {
+    "included": "T03 through T15, exactly 13 completed economic positions",
+    "wins": 9,
+    "losses": 4,
+    "exclude": [
+      "T01 V1 entry-deal publication-race safety close",
+      "T02 V2 stale-or-zero result-price protection close",
+      "the 2026-08-25 Passive order that expired unfilled",
+      "the CXR1 protective-order false safety stop as an event or cause",
+      "the later Cross window that was not evaluated while entries were stopped",
+      "terminal or chart availability gaps",
+      "manual-close hypotheticals and hindsight-only trade selection"
+    ],
+    "operating_incident_policy": "Use exclusions only to keep the economic sample uncontaminated. Do not diagnose, compare, explain or derive any operating hypothesis in unit 020."
+  },
+  "fixed_measurement": {
+    "mark": "Executable-side floating mark before costs: bid for BUY and ask for SELL, at actual entry price and volume, matching the closed forensics convention.",
+    "mfe_to_final_giveback_usd": "maximum executable mark minus actual realized net",
+    "peak_fraction": "elapsed seconds from entry to MFE divided by total lifecycle seconds",
+    "prior_profit": "MFE mark strictly above zero",
+    "qualified_profit_memory": "final actual net is nonpositive and MFE is at least +0.50 USD",
+    "late_maturity_winner": "final actual net is positive and MFE peak_fraction is at least 0.75",
+    "cohort_peak_giveback": "all active cohort legs were simultaneously positive and the combined executable peak exceeded eventual combined realized net by at least 1.00 USD",
+    "directional_unlock": "an equal-volume same-symbol opposite-direction pair was jointly positive, one leg ended natively, and the surviving leg later finished negative"
+  },
+  "t15_replay": {
+    "purpose": "Recover only T15 tick-path MFE, MAE, MFE time and first +0.50 USD crossing that are absent from the immutable event ledger.",
+    "runtime": "one isolated Lab Portable 2026-08-25 through 2026-08-26 100%-real-tick path",
+    "source": "one self-contained Tester-only measurement EA with no trade object, order function, position function or Live dependency",
+    "allowed_runs": 1,
+    "integrity": [
+      "MetaEditor build 6140 reports 0 errors and 0 warnings.",
+      "CopyTicksRange returns at least one US30 tick inside the exact actual lifecycle.",
+      "The reconstructed adverse mark reaches the recorded stop outcome within 0.05 USD before costs.",
+      "The output contains exactly one T15 row and no order or deal is generated."
+    ],
+    "failure_action": "Close T15 path fields as unavailable; do not add a second replay or use an approximate bar rescue. The T03-T14 fixed aggregation may still be judged."
+  },
+  "predeclared_burdens": {
+    "INDIVIDUAL_PROFIT_MEMORY": {
+      "requirements": [
+        "At least three qualified_profit_memory losses.",
+        "Qualified losses span at least two strategies and three server dates.",
+        "Qualified losses are at least 75% of all included economic losses.",
+        "Their summed MFE-to-final giveback is at least 8.00 USD."
+      ],
+      "passing_action": "Retain exactly one next unit that observes profit-state memory on broad frozen-control history before any management action or threshold can be selected."
+    },
+    "COHORT_PEAK_MEMORY": {
+      "requirements": [
+        "At least two qualifying cohorts on at least two server dates.",
+        "At least two distinct strategy compositions.",
+        "Summed cohort peak-to-eventual giveback is at least 3.00 USD."
+      ],
+      "passing_action": "Descriptive only because portfolio-exit-coordination-v1 already tested and rejected generic cohort-close and cohort-floor mechanisms across 16 real-tick paths; it cannot be selected again in this bundle."
+    },
+    "DIRECTIONAL_UNLOCK": {
+      "requirements": [
+        "At least two qualifying unlock episodes on different server dates.",
+        "At least two distinct surviving strategies.",
+        "The surviving legs lose at least 1.00 USD in aggregate after unlock."
+      ],
+      "passing_action": "Retain exactly one next broad historical observation of opposite-leg release; no close or hedge rule is selected in unit 020."
+    }
+  },
+  "late_maturity_guard": {
+    "requirements": [
+      "At least three late_maturity_winners.",
+      "They span at least two strategies and three server dates.",
+      "They are at least one third of all actual economic winners."
+    ],
+    "effect": "If the guard passes, any retained next observation must explicitly measure late-development opportunity. A first-profit close, immediate breakeven assumption or hindsight peak exit is forbidden."
+  },
+  "selection": {
+    "maximum_retained_next_questions": 1,
+    "priority": [
+      "INDIVIDUAL_PROFIT_MEMORY",
+      "DIRECTIONAL_UNLOCK"
+    ],
+    "cohort_reselection_forbidden": true,
+    "no_rule_or_threshold_selection": true,
+    "failure_action": "Close the actual-position bundle immediately if neither selectable burden passes; do not invent another phenotype from the same 13 positions."
+  },
+  "stop_rules": [
+    "Use only the fixed T03-T15 population and the one permitted T15 replay.",
+    "Do not treat the safety stop, missed Cross, shutdowns, chart gaps or manual action as research subjects.",
+    "Do not inspect broker positions, orders, deals or account history.",
+    "Do not change or restart the active Live terminal, dashboard, package, settings, state or log files.",
+    "Do not select an exit, stop, trail, threshold, strategy exception or Live candidate in unit 020.",
+    "Descriptive fields outside the three frozen burdens cannot rescue a failed burden."
+  ],
+  "outcomes_consumed": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_the_frozen_declaration_then_build_and_run_only_the_t15_trade_free_measurement"
+}
