@@ -1,0 +1,41 @@
+{
+  "schema": "zeta-next-server-day-carry-burden-closure-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "server-day-carry-burden-018",
+  "family": "server-day-carry-burden-v1",
+  "evidence": {
+    "declaration_sha256": "D5AEEA8A48B4F62A6418B8BF87C58312C898E1F2E1A308CCF80C8FB9B794747E",
+    "result_sha256": "1C80CEFCAB293B61AED77CEFE415AE4A34826E22032B1E91F264849A210B1EE5",
+    "event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312"
+  },
+  "closure": {
+    "verdict": "NO_SERVER_DAY_CARRY_BURDEN_FIELD_PASSED",
+    "integrity_passed": true,
+    "lifecycles": 2233,
+    "same_day_lifecycles": 2230,
+    "carry_lifecycles": 3,
+    "passing_strategies": [],
+    "selected_strategy": null,
+    "later_management_experiment": false
+  },
+  "reason": "Four strategies had no carried lifecycle, RC16 had one and RC4 had two. Every strategy failed the frozen pooled and temporal density gates. RC4's two negative carried outcomes were both expert exits rather than stop losses, opposing the required higher-stop burden and remaining far too sparse for selection.",
+  "interpretive_boundary": "Server-date crossing does not represent the observed overnight-like Live-Dev giveback concern in this matrix. No alternate local-day, rollover or intraday clock is opened by this closure.",
+  "forbidden_rescues": {
+    "local_day_boundary": false,
+    "broker_rollover_minute": false,
+    "weekday_or_multiday_threshold": false,
+    "swap_sign": false,
+    "direction_or_symbol": false,
+    "strategy_specific_time_exception": false,
+    "mql_or_tester_path": false
+  },
+  "surfaces": {
+    "frozen_cp2_baseline_unchanged": true,
+    "input_event_files_unchanged": true,
+    "live_untouched": true,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_next_only_economic_question"
+}

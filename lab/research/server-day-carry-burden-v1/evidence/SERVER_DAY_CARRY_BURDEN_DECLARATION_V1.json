@@ -1,0 +1,84 @@
+{
+  "schema": "zeta-next-server-day-carry-burden-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_CARRY_OUTCOME_AGGREGATION",
+  "unit": "server-day-carry-burden-018",
+  "family": "server-day-carry-burden-v1",
+  "question": "For any strategy, do lifecycles that remain open beyond their entry server date have broadly nonpositive stressed-R, materially worse outcomes and higher stop-loss incidence than same-server-day lifecycles, enough to justify one later entry-preserving server-day-boundary management experiment?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_parent": {
+    "event_source_family": "passive-refusal-depth-observation-v1",
+    "event_source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "event_manifest": {
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312"
+    },
+    "reopen_parent_source": false
+  },
+  "fixed_reconstruction": {
+    "row_and_order_contract": "Preserve each distinct CSV row and use the same verified server_time, state_sequence, event-precedence, source-path and source-line ordering as the closed 016 and 017 diagnostics.",
+    "lifecycle_birth": "OPEN begins RC16, RC4, Cross, Pressure and Return; PASSIVE_FILL begins Passive using its paired placement planned_risk.",
+    "lifecycle_release": "CLOSE or EXTERNAL_CLOSE supplies close server time, native stressed net and stop-loss reason.",
+    "SAME_DAY": "close server calendar date equals entry server calendar date",
+    "CARRY": "close server calendar date is strictly later than entry server calendar date",
+    "carry_days": "integer difference between close and entry server calendar dates; descriptive above one day",
+    "stressed_r": "native stressed net USD divided by birth planned_risk",
+    "stop_loss": "EXTERNAL_CLOSE with reason DEAL_REASON_SL",
+    "pooled_r_effect": "CARRY mean stressed_r minus SAME_DAY mean stressed_r",
+    "period_r_effect": "The same difference within each period",
+    "pooled_stop_effect": "CARRY stop-loss rate minus SAME_DAY stop-loss rate",
+    "period_stop_effect": "The same stop-rate difference within each period"
+  },
+  "causal_limit": {
+    "observable_time": "CARRY status becomes causally knowable only when the entry server date boundary is crossed while the position remains open.",
+    "not_claimed": "This diagnostic does not know the mark or executable close result at that boundary and therefore cannot itself establish that closing there improves P/L.",
+    "later_test_if_selected": "A later real-tick EA must compare native continuation with an exact server-day-boundary action and retain the unchanged entry path."
+  },
+  "fixed_integrity_gate": [
+    "All 2,233 lifecycles, 407.0477 USD stressed net and 206 stop exits reconstruct exactly with no duplicate, pairing, overlap, risk or time fault.",
+    "Every close time is at or after entry time and every carry_days value is nonnegative.",
+    "Every lifecycle belongs to exactly one SAME_DAY or CARRY group."
+  ],
+  "fixed_information_gate": {
+    "apply_separately_to": ["RC16", "RC4", "Cross", "Pressure", "Return", "Passive"],
+    "requirements": [
+      "SAME_DAY and CARRY each contain at least 20 pooled lifecycles.",
+      "Each group contains at least five lifecycles in at least three periods.",
+      "Pooled CARRY mean stressed_r is nonpositive.",
+      "Pooled CARRY-minus-SAME_DAY mean stressed_r is at most -0.10R per lifecycle.",
+      "Among periods with at least five observations in both groups, at least three period stressed-R effects are negative.",
+      "CARRY mean stressed_r is nonpositive in at least three periods.",
+      "Pooled CARRY-minus-SAME_DAY stop-loss-rate difference is at least +0.10.",
+      "Among periods with at least five observations in both groups, at least three period stop-rate effects are positive."
+    ],
+    "selection": "Select at most one passing strategy by more negative pooled stressed-R effect, then larger positive stop effect, then more negative-effect periods, then lexicographic name.",
+    "passing_action": "Retain one later real-tick server-day-boundary management experiment for the selected strategy. It must preserve all base entries, retain unchanged 4%/12% admission and remain Lab-only.",
+    "failure_action": "Close with no carry-management candidate. Do not rescue with local-day boundary, broker rollover minute, weekday, multi-day threshold, swap sign, direction, symbol or strategy-specific time exception."
+  },
+  "descriptive_only": [
+    "carry_days above one",
+    "actual-minus-stressed cost gap",
+    "weekday and weekend crossing",
+    "direction and symbol",
+    "entry-time portfolio crowding",
+    "swap fields from the MT5 report"
+  ],
+  "stop_rules": [
+    "Run exactly one successful fixed aggregation; disclose implementation-only failures before judgment.",
+    "Do not run MT5 or modify MQL in this unit.",
+    "Do not infer boundary-close profitability from native final outcomes alone.",
+    "Do not alter, query or restart Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "classify_all_lifecycles_by_entry_server_date_crossing_once_then_apply_the_fixed_gate"
+}

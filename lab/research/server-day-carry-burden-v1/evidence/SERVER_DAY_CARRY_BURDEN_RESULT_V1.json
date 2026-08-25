@@ -1,0 +1,188 @@
+{
+  "schema": "zeta-next-server-day-carry-burden-result-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED",
+  "unit": "server-day-carry-burden-018",
+  "family": "server-day-carry-burden-v1",
+  "declaration": {
+    "path": "lab/research/server-day-carry-burden-v1/evidence/SERVER_DAY_CARRY_BURDEN_DECLARATION_V1.json",
+    "sha256": "D5AEEA8A48B4F62A6418B8BF87C58312C898E1F2E1A308CCF80C8FB9B794747E"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "fixed_aggregation_implementation_only_failed_invocations": 0,
+    "alternate_clock_threshold_or_subgroup_rescues": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "new_market_outcomes": 0,
+    "live_surface": "UNTOUCHED",
+    "post_aggregation_spot_check": {
+      "failed_invocations": 1,
+      "failure": "A packaging-time all-strategy row spot check expected planned_risk directly on PASSIVE_FILL and stopped before producing a metric; the frozen contract correctly obtains Passive risk from its paired placement.",
+      "disposition": "No second fixed aggregation was run. One targeted RC16/RC4 row check confirmed only the three already-identified carried lifecycles and their native close reasons."
+    }
+  },
+  "integrity": {
+    "passed": true,
+    "event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "exact_duplicate_full_rows": 0,
+    "signal_fill_expiration_overlap_planned_risk_or_close_faults": 0,
+    "lifecycles": 2233,
+    "classified_lifecycles": 2233,
+    "same_day_lifecycles": 2230,
+    "carry_lifecycles": 3,
+    "same_day_fraction": 0.998656516,
+    "carry_fraction": 0.001343484,
+    "stressed_net_usd": 407.0477,
+    "stop_loss_exits": 206,
+    "negative_carry_days": 0,
+    "exact_frozen_component_equivalence": true
+  },
+  "strategy_results": [
+    {
+      "strategy": "RC16",
+      "lifecycles": 272,
+      "same_day_n": 271,
+      "carry_n": 1,
+      "carry_days_distribution": {"3": 1},
+      "same_day_mean_r": 0.074441070,
+      "carry_mean_r": 0.115226243,
+      "carry_minus_same_day_r": 0.040785173,
+      "same_day_stop_rate": 0.084870849,
+      "carry_stop_rate": 0.000000000,
+      "carry_minus_same_day_stop": -0.084870849,
+      "period_carry_n": {"P1_2022H2_2023": 1, "P2_2024": 0, "P3_2025": 0, "P4_2026_YTD": 0},
+      "gate": {"pooled_group_density": false, "temporal_group_density": false, "passed": false}
+    },
+    {
+      "strategy": "RC4",
+      "lifecycles": 206,
+      "same_day_n": 204,
+      "carry_n": 2,
+      "carry_days_distribution": {"1": 1, "3": 1},
+      "same_day_mean_r": 0.068855545,
+      "carry_mean_r": -0.312586177,
+      "carry_minus_same_day_r": -0.381441722,
+      "same_day_stop_rate": 0.259803922,
+      "carry_stop_rate": 0.000000000,
+      "carry_minus_same_day_stop": -0.259803922,
+      "period_carry_n": {"P1_2022H2_2023": 0, "P2_2024": 0, "P3_2025": 1, "P4_2026_YTD": 1},
+      "gate": {"pooled_group_density": false, "temporal_group_density": false, "stop_burden_direction": false, "passed": false}
+    },
+    {
+      "strategy": "Cross",
+      "lifecycles": 805,
+      "same_day_n": 805,
+      "carry_n": 0,
+      "carry_days_distribution": {},
+      "same_day_mean_r": 0.020870261,
+      "carry_mean_r": null,
+      "carry_minus_same_day_r": null,
+      "same_day_stop_rate": 0.036024845,
+      "carry_stop_rate": null,
+      "carry_minus_same_day_stop": null,
+      "period_carry_n": {"P1_2022H2_2023": 0, "P2_2024": 0, "P3_2025": 0, "P4_2026_YTD": 0},
+      "gate": {"pooled_group_density": false, "temporal_group_density": false, "passed": false}
+    },
+    {
+      "strategy": "Pressure",
+      "lifecycles": 118,
+      "same_day_n": 118,
+      "carry_n": 0,
+      "carry_days_distribution": {},
+      "same_day_mean_r": 0.041457147,
+      "carry_mean_r": null,
+      "carry_minus_same_day_r": null,
+      "same_day_stop_rate": 0.177966102,
+      "carry_stop_rate": null,
+      "carry_minus_same_day_stop": null,
+      "period_carry_n": {"P1_2022H2_2023": 0, "P2_2024": 0, "P3_2025": 0, "P4_2026_YTD": 0},
+      "gate": {"pooled_group_density": false, "temporal_group_density": false, "passed": false}
+    },
+    {
+      "strategy": "Return",
+      "lifecycles": 238,
+      "same_day_n": 238,
+      "carry_n": 0,
+      "carry_days_distribution": {},
+      "same_day_mean_r": 0.056083439,
+      "carry_mean_r": null,
+      "carry_minus_same_day_r": null,
+      "same_day_stop_rate": 0.226890756,
+      "carry_stop_rate": null,
+      "carry_minus_same_day_stop": null,
+      "period_carry_n": {"P1_2022H2_2023": 0, "P2_2024": 0, "P3_2025": 0, "P4_2026_YTD": 0},
+      "gate": {"pooled_group_density": false, "temporal_group_density": false, "passed": false}
+    },
+    {
+      "strategy": "Passive",
+      "lifecycles": 594,
+      "same_day_n": 594,
+      "carry_n": 0,
+      "carry_days_distribution": {},
+      "same_day_mean_r": 0.008378568,
+      "carry_mean_r": null,
+      "carry_minus_same_day_r": null,
+      "same_day_stop_rate": 0.043771044,
+      "carry_stop_rate": null,
+      "carry_minus_same_day_stop": null,
+      "period_carry_n": {"P1_2022H2_2023": 0, "P2_2024": 0, "P3_2025": 0, "P4_2026_YTD": 0},
+      "gate": {"pooled_group_density": false, "temporal_group_density": false, "passed": false}
+    }
+  ],
+  "carried_lifecycle_spot_check": [
+    {
+      "period": "P1_2022H2_2023",
+      "strategy": "RC16",
+      "entry_server_time": "2023.04.07 13:30:11",
+      "close_server_time": "2023.04.10 02:00:00",
+      "carry_days": 3,
+      "planned_risk_usd": 8.6699,
+      "stressed_net_usd": 0.9990,
+      "stressed_r": 0.115226243,
+      "native_close_reason": "DEAL_REASON_EXPERT"
+    },
+    {
+      "period": "P3_2025",
+      "strategy": "RC4",
+      "entry_server_time": "2025.01.09 13:00:00",
+      "close_server_time": "2025.01.10 03:00:00",
+      "carry_days": 1,
+      "planned_risk_usd": 3.8829,
+      "stressed_net_usd": -1.8360,
+      "stressed_r": -0.472842463,
+      "native_close_reason": "DEAL_REASON_EXPERT"
+    },
+    {
+      "period": "P4_2026_YTD",
+      "strategy": "RC4",
+      "entry_server_time": "2026.04.03 13:00:00",
+      "close_server_time": "2026.04.06 03:30:00",
+      "carry_days": 3,
+      "planned_risk_usd": 6.3415,
+      "stressed_net_usd": -0.9660,
+      "stressed_r": -0.152329890,
+      "native_close_reason": "DEAL_REASON_EXPERT"
+    }
+  ],
+  "fixed_gate_application": {
+    "passing_strategies": [],
+    "selected_strategy": null,
+    "reason": "No strategy had even 20 carried lifecycles or five carried lifecycles in three periods. Four strategies had zero carry, RC16 had one and RC4 had two. RC4's sparse negative carry return also had zero stop exits and therefore opposed the required higher-stop burden.",
+    "later_server_day_boundary_management_experiment": false
+  },
+  "interpretation": {
+    "finding": "Native portfolio lifecycles are almost entirely closed within their entry server date, so server-date carry is not a broad economic burden field.",
+    "live_dev_concern_boundary": "The user's observed overnight-like giveback cannot be represented by server-date crossing in this matrix; this result does not open or test an alternate local clock or intraday boundary.",
+    "causal_claim": "No boundary-close profitability claim is made because no mark or executable counterfactual at the server-date boundary was observed.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "verdict": "NO_SERVER_DAY_CARRY_BURDEN_FIELD_PASSED",
+    "selected_strategy": null,
+    "later_management_experiment": false,
+    "local_day_rollover_weekday_multiday_swap_direction_or_symbol_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_without_alternate_clock_rescue_then_select_one_non_nearby_question_after_durable_commit"
+}
