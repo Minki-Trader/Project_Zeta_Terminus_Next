@@ -1,0 +1,126 @@
+{
+  "schema": "zeta-next-cross-index-residual-response-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_022_IMPLEMENTATION_OR_OUTCOME",
+  "unit": "cross-index-residual-response-022",
+  "family": "cross-index-residual-response-v1",
+  "question": "Does a causal volatility-normalized 15-minute relative displacement among US30, US100 and US500 produce a sufficiently frequent and double-spread-positive 30-minute reversion or continuation state to justify exactly one later additive high-turnover entry prototype?",
+  "novelty_boundary": {
+    "actual_position_bundle_020_021": "closed_and_not_reopened",
+    "profit_memory_or_exit_management": false,
+    "symbol_database_drift_as_hypothesis": false,
+    "operating_incidents_or_availability": "excluded_not_studied",
+    "legacy_research_used": false
+  },
+  "architecture": {
+    "source": "fresh_self_contained_trade_free_observer",
+    "parent_source_copy": null,
+    "cross_family_include_or_link": false,
+    "runtime": "one_dedicated_git_ignored_family_portable",
+    "economic_variants": 0,
+    "tester_paths": ["LONG_OBSERVATION", "ISOLATED_LATEST_OBSERVATION"],
+    "orders_or_positions": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "fixed_market_state": {
+    "evaluation_clock": "first US30 real tick of each new M5 bar",
+    "required_symbols": ["US30", "US100", "US500"],
+    "synchronization": "use only completed M5 bars whose close times align across all three symbols",
+    "impulse": "For each symbol, log close[1] divided by close[4], representing the latest completed 15 minutes.",
+    "causal_scale": "Sample standard deviation of 48 completed one-bar M5 log returns ending before the 15-minute impulse begins.",
+    "normalized_impulse": "15-minute log return divided by causal scale times sqrt(3).",
+    "cross_sectional_center": "median normalized impulse of the three symbols",
+    "residual": "symbol normalized impulse minus the cross-sectional median",
+    "selected_symbol": "the symbol with greatest absolute residual; ties resolve US30, then US100, then US500",
+    "trigger": "absolute selected residual is at least 1.5",
+    "rearm": "after a completed observation, absolute maximum residual must return to at most 0.75 before another trigger",
+    "concurrency": "at most one unresolved observation across the three symbols",
+    "outcome_horizon": "first synchronized usable quote at or after 30 minutes",
+    "direction_hypotheses": {
+      "REVERSION": "opposite the selected residual sign",
+      "CONTINUATION": "same as the selected residual sign"
+    },
+    "parameter_or_horizon_grid": false
+  },
+  "fixed_cost_proxy": {
+    "volume": 0.01,
+    "gross": "entry-midpoint to outcome-midpoint direction result",
+    "observed_cost": "entry at contemporaneous ask and exit at contemporaneous bid for BUY, reversed for SELL",
+    "double_spread_stress": "gross midpoint result minus twice the entry-plus-exit half-spread burden",
+    "conversion": "OrderCalcProfit under the synchronized symbol contract",
+    "commission_or_swap": "zero for this 30-minute trade-free proxy; a later trading EA must use actual Tester deals and costs"
+  },
+  "fixed_periods": {
+    "LONG_OBSERVATION": {
+      "from": "2022-08-01",
+      "to": "2026-06-01",
+      "selection_subperiods": [
+        {"id":"P1","from":"2022-08-01","to":"2024-01-01"},
+        {"id":"P2","from":"2024-01-01","to":"2025-01-01"},
+        {"id":"P3","from":"2025-01-01","to":"2026-01-01"},
+        {"id":"P4","from":"2026-01-01","to":"2026-06-01"}
+      ]
+    },
+    "ISOLATED_LATEST_OBSERVATION": {
+      "from": "2026-06-01",
+      "to": "2026-08-21",
+      "role": "frequency_contract_and_cost_environment_only_not_direction_or_threshold_selection"
+    },
+    "evidence_class": "exploratory_only_no_clean_confirmation_or_promotion"
+  },
+  "fixed_output_contract": {
+    "opportunity_row": "one resolved row containing decision time, symbol, residual state, synchronized quotes, observed-spread and double-spread outcomes for both directions",
+    "day_row": "one row per server date containing synchronized eligible M5 evaluations and resolved opportunity count",
+    "faults": [
+      "missing_or_misaligned_rates",
+      "nonpositive_scale",
+      "missing_entry_or_outcome_quote",
+      "nonfinite_value",
+      "duplicate_event_id",
+      "unresolved_observation",
+      "profit_conversion_failure"
+    ]
+  },
+  "fixed_integrity_gate": [
+    "The final source compiles on MetaEditor build 6140 at 0 errors and 0 warnings before outcome.",
+    "Every path uses FPMarkets Every tick based on real ticks with all three required symbols synchronized.",
+    "Source, configuration, exercised history, selected-symbol database, full symbols database and required-symbol contract/swap fingerprints are recorded before outcome.",
+    "Selected-symbol and full symbols-database hashes plus logged contract/swap fields remain unchanged before and after each accepted path.",
+    "Every triggered observation resolves once, event identifiers are unique, and the observer reports zero listed fault.",
+    "No order, deal, position, CXR2 state or Live dependency exists."
+  ],
+  "environment_recovery_rule": {
+    "first_fingerprint_change": "discard the entire two-path output without economic judgment, freeze the synchronized fingerprint, and permit exactly one identical clean two-path rerun",
+    "second_fingerprint_change": "invalidate and close Unit 022 without another rerun",
+    "economic_rescue": false
+  },
+  "fixed_selection_gate": {
+    "apply_separately_to": ["REVERSION", "CONTINUATION"],
+    "normal_day": "a server date with at least 120 synchronized eligible M5 evaluations",
+    "frequency": [
+      "At least 3.0 resolved opportunities per normal day in LONG_OBSERVATION.",
+      "At least 3.0 resolved opportunities per normal day in ISOLATED_LATEST_OBSERVATION.",
+      "At least 250 resolved LONG observations and at least 30 isolated-latest observations."
+    ],
+    "economics": [
+      "Positive pooled double-spread net USD and double-spread profit factor at least 1.10 over LONG_OBSERVATION.",
+      "Positive double-spread net USD in at least three of four selection subperiods including P4.",
+      "Positive pooled double-spread net USD for each of US30, US100 and US500, with at least 40 observations per symbol.",
+      "Observed-spread net USD must also be positive in every selection subperiod."
+    ],
+    "selection": "Select at most one passing direction by greater pooled double-spread net USD, then greater minimum subperiod double-spread net USD, then REVERSION before CONTINUATION.",
+    "latest_use": "Latest economics cannot select or rescue a direction; only frequency and observed spread scale are binding there.",
+    "passing_action": "Retain exactly one Unit 023 standalone high-turnover trading-prototype question with this unchanged signal, direction and 30-minute horizon. A later portfolio-combination unit must compare against and retain all six CXR2 strategies rather than treating the new strategy as the whole project.",
+    "failure_action": "Close with no threshold, reset, horizon, session, weekday, symbol, direction-subgroup or volatility-estimator rescue."
+  },
+  "stop_rules": [
+    "Commit and push this declaration before creating MQL source or opening any outcome.",
+    "Run only the fixed trade-free observer and the two fixed paths, except for the one environment clean-rerun allowance.",
+    "Do not place a Lab or Live order in Unit 022.",
+    "Do not read or modify current Live EA, Include, EX5, SET, state, log, dashboard or runtime.",
+    "Do not reopen Units 020-021 or use their invalid Unit 021 output.",
+    "Do not promote from exploratory evidence."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_implement_one_self_contained_trade_free_observer"
+}

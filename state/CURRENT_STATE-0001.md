@@ -407,3 +407,11 @@
 - Applied the predeclared environment stop rule without reinterpretation: the full matrix is invalid before economic aggregation, P2-P4's six paths remain unopened, and there is no same-unit clean rerun, threshold/subgroup rescue or economic verdict.
 - Closed Unit 021 as `INVALID_SYMBOL_SPEC_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_CANDIDATE`. No strategy, management Proxy, action, threshold, EA candidate, operating hypothesis or Live change survived.
 - Units 020-021 now close the actual-position economic bundle naturally rather than stretching toward Unit 030. Exact CXR2 Live PID `13328`, dashboard PID `4284`, source, package, settings, state, logs and order behavior remained untouched; the ordinary one-stream Frontier transition resumes only after this durable boundary.
+
+## STATE-0051 - 2026-08-26
+
+- Returned to the ordinary serial Frontier only after the durable Unit 021 close. Opened the non-adjacent Unit 022 `cross-index-residual-response-v1`; Units 020-021, profit-memory management, symbol-database drift and operating incidents are explicitly outside its question.
+- Before MQL or outcome, fixed one trade-free causal state: synchronized US30/US100/US500 completed M5 bars, 15-minute log impulse, a preceding 48-bar volatility scale, cross-sectional median residual, `1.5` trigger, `0.75` rearm and one 30-minute unresolved observation at a time.
+- Fixed exactly two observation periods, reversion versus continuation direction hypotheses, observed-spread and double-spread counterfactuals, at least `3.0` opportunities per normal day on long and isolated-latest paths, temporal/all-symbol economic breadth and no threshold/horizon/session/symbol rescue.
+- Unit 022 can retain at most one later standalone high-turnover trading-prototype question and places no order. Any passing prototype must later face a separate portfolio-combination unit that retains and evaluates all six CXR2 strategies.
+- Declaration SHA-256 is `231F7150A19F1F6725C273A6D35136CADFE168850767116F64AC866D2BF645D8`. Implementation, configuration, binary, runtime and outcomes remain unopened; Live remains untouched.
