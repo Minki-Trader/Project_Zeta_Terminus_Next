@@ -753,3 +753,12 @@
 - One unresolved trade-free observation resolves after four later M15 market-bar advances and prices continuation/reversion at `0.01` under actual and one-additional-entry/exit-spread costs. P1 selects at most one direction, P2 confirms only it and P3 can only veto it.
 - The annual paths begin on the first full post-New-Year Monday to exclude a known empty holiday prefix, not to select economic outcomes. Every path still requires exact HTML 100%, zero detailed generation warning, unchanged 19-file raw-tick manifests and visible specification before semantic row reading.
 - Declaration SHA-256 is `2DD721FFF30769AE006F79B3ED12A82C42D8D4E58A979BF0D157590A2822DA94`. Source, configuration, binary, runtime and outcomes remain unopened; no Live surface was queried or changed.
+
+## STATE-0094 - 2026-08-26
+
+- Implemented Unit 038 as one fresh self-contained MQL observer with no parent source copy, Include tree, trade submission, position, persistent economic state or Live dependency. It reads only the four continuous completed US500 M15 bars and uses one `OrderCalcProfit` source surface for the fixed books.
+- A wrapper containing an exact old-log removal and `Start-Process` was policy-rejected before MetaEditor or any compiler process began. The unchanged source's first actual direct MetaEditor build-6140 compile then passed at `0 errors / 0 warnings` in 445 ms with no correction.
+- Source/config manifest hashes are `A47BBF922F233671733903FFC899A1C47D8D199D2787BCBE32C3DCBBC5CEA885` / `01781BF1A650CDD54186FC6623EEF1AC87FBFA42DF6033DD1605462650A21EFD`; binary SHA-256 is `2E7AC7A7DA216C07779937C777DEEBFE0F5A6FAC4ADE673816EBEC31544B2218`.
+- Created the Git-ignored `lab/runtime/oa38-portable/` as a physical generic-Lab copy. The copy completed before one family EX5 and three SETs were added; zero actual symbolic/junction/hardlink object, Include or other-family EX5 exists, and terminal/agent EX5 paths are 173/201 characters.
+- Both 19-file 2025-01 through 2026-07 `Bases` and `Tester/bases` US500 manifests physically match origin at `D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916` / `AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB`. Compile receipt SHA-256 is `308836DFD5BE9DF3DD774039D54A3DC93C53B439557765821C728EFF08D339FD`.
+- Source, configuration, binary and runtime are immutable. Only P1 may now open under the full integrity gate; no Live surface was queried or changed.

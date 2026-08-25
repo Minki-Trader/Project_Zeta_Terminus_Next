@@ -47,7 +47,7 @@
 - `research/same-strategy-interbirth-gap-value-v1/`: 닫힌 Unit 035 source-free family; 전 전략 밀도는 통과했으나 pooled `|rho|<0.20`이고 RC16 근접 tail도 `0.08111R/-0.03409`로 수익·stop 크기 미달, cadence 처리 후보 없음
 - `research/us500-close-location-pressure-response-v1/`: 닫힌 Unit 036 fresh observer family; P1은 3,088건 정상 해결·상세 경고 0이었으나 HTML `99% 실제 틱`으로 고정 100% 관문 실패, 경제행 미열람·P2-P3·prototype 없음
 - `research/strategy-occupancy-slot-value-v1/`: 닫힌 Unit 037 source-free family; 선행 슬롯가치 순위 상관 `-0.257/-0.257/+0.143`, 단순 R 대비 증분 중앙값 `-0.114`로 우선순위 Proxy 없음
-- `research/us500-ordinal-acceleration-response-v1/`: 열린 Unit 038 fresh observer family; 같은 방향 3개 M15 수익폭의 엄격한 순서형 가속 뒤 1시간 continuation/reversion, source 전 선언 동결
+- `research/us500-ordinal-acceleration-response-v1/`: 열린 Unit 038 fresh observer family; 단일 관찰자 첫 실제 컴파일 `0/0`, 독립 `oa38` runtime·19개월 US500 지문 동결, P1만 다음 개봉 가능
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
