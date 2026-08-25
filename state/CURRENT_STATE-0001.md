@@ -195,3 +195,12 @@
 - Run 2 PID `17656` resumed the saved target state and advanced through sequence `1465`. It retained entries `0/0`, positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$106.52/$106.52`, zero safety/persistence/broker/foreign faults and no warning or alert, then stopped normally.
 - Target-release events contain exact `RESUME entries-disabled → STOP normal → RESUME entries-disabled` continuity. The same execution/Portfolio/Magic/state namespace was continued deliberately; no position, broker history, state schema or economic input was converted.
 - Entries-disabled recovery and restart are `PASSED`. The user's explicit CP1+CP2 Live direction is now effective, but the only permitted next action is the committed operator's final exact `0/0` preflight followed by `1/1` handshake. No terminal currently owns the account.
+
+## STATE-0025 - 2026-08-25
+
+- The first final invocation passed exact target `0/0` preflight at PID `4132` but stopped before any `1/1` start when Windows briefly reported the just-closed preflight PID as still present. The operator failed closed; subsequent process and local snapshot inspection proved terminal count zero, entries `0/0`, flat exposure and state sequence `1466`.
+- Added only a bounded five-second post-preflight process-exit wait to `Start-ZetaNextV7Live.ps1`, committed and pushed as `51078aeb7656107b9c3147bc2163810a842fadea`. No EA, source package, SET economics, state or authorization changed.
+- The repeated exact `0/0` preflight PID `26112` passed release `NEXT-E01-V7-CXR1-c0ad2f30d293`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic, account, flat exposure, zero margin/risk and continuity, then stopped normally.
+- Exact target `1/1` Live PID `21548` passed the committed handshake. The Master recognized that sole terminal without duplication, restored its MT5 window and opened the sole Korean dashboard PID `4712`.
+- Bounded stabilization advanced to sequence `1470` at server `2026.08.25 09:35:11`. Entries remained `1/1`; positions/order/margin/planned risk were `0/0/$0/$0`; balance/equity were `$106.52/$106.52`; project realized/stage/stressed values remained `$5.87/$105.87/$101.49`; all ownership, safety, persistence, broker and foreign-exposure faults were zero with no alert or warning.
+- Classified `CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE`. Parent V7 and legacy must not restart. The CP2 Lab root and active Live package are frozen, and no new engineering or research family is open.

@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0024`
+- Latest state ID: `STATE-0025`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -13,15 +13,15 @@ Last updated: 2026-08-25
 - Development: `ENABLED`, one serial stream only
 - Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-25 instruction to apply verified CP1 and CP2 to Live-Dev, subject to the same stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
 - Next V7 entries-disabled preflight: `PASSED`
-- Next V7 new-entry authorization: `ENABLED` by the user's explicit CP1+CP2 Live-Dev instruction, effective only through the committed final `0/0` preflight followed by exact `1/1` handshake.
-- Existing real-account owner: none; parent V7 PID `10112` stopped normally at flat server `2026.08.25 09:15:07`
-- User V7 Live direction: `CP1_CP2_RELEASE_EFFECTIVE_AFTER_ENTRIES_DISABLED_PASS`
+- Next V7 new-entry authorization: `ENABLED` by the user's explicit CP1+CP2 Live-Dev instruction; the committed final `0/0` preflight and exact `1/1` handshake passed.
+- Existing real-account owner: CP1+CP2 V7 release `NEXT-E01-V7-CXR1-c0ad2f30d293`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`, terminal PID `21548`
+- User V7 Live direction: `EFFECTIVE`
 
-Legacy B70 V6R6 remains disabled. The CP1+CP2 release recovered and restarted the exact parent state twice in connected entries-disabled mode, retained positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$106.52/$106.52`, project realized net `$5.87`, and zero faults. Both runs stopped normally; no terminal currently owns the account. The next sole action is the committed final `0/0 → 1/1` Live handshake.
+Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is now the sole account owner at entries `1/1`. Its bounded stabilization snapshot at sequence `1470` has positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$106.52/$106.52`, project realized net `$5.87`, zero faults, and no alert or warning.
 
 ## Active work
 
-- Active engineering boundary: frozen CP1+CP2 release passed connected entries-disabled state recovery and restart; the next sole action is its final `0/0 → 1/1` Live handshake
+- Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
 - Active research boundary: none; the later Frontier ledger is closed at `capital-scale-admission-topology-010` with `none_opened_waiting_for_user`, `예치자본·위험용량 연구` V1 is closed `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`, and the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -44,14 +44,14 @@ Legacy B70 V6R6 remains disabled. The CP1+CP2 release recovered and restarted th
 - Executable ancestry: `lineage/executable-lineage.json`
 - Frozen B70 control: `lab/control-v6r6/`, eight files verified against its manifest
 - Lab Portable: local MT5 build 6140 with copied US100/US30/US500 real-tick data
-- Live Portable shell: local MT5 build 6140, no account/broker cache and no executable V7 release
+- Initial Live Portable shell: local MT5 build 6140, created without account/broker cache or executable V7 release
 - Modular V7: 14 include modules plus assembly EA, MetaEditor build 6140 `0 errors / 0 warnings`
-- V7 EX5 SHA-256: `0A722406921F76259E4828D87915C2BA6F2F345A4059CC310EEC4BC446011B53`
+- Original modular V7 EX5 SHA-256: `0A722406921F76259E4828D87915C2BA6F2F345A4059CC310EEC4BC446011B53`
 - V7 fixed-window evidence: `ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED`
   - Latest: 84 first fills, actual `-$1.11`, stressed 2x `-$2.819`
   - Binding: 2,235 first fills, actual `+$1,019.04`, stressed 2x `+$940.6585`
   - After identity normalization, report summaries, all order rows and all deal rows have zero differences in both windows
-- Frozen Live package: `live-dev/package/active/`, one-way hash-equal copy; not Live-authorized
+- Original modular V7 package completed the one-way Lab-to-Live copy and remains frozen in Git history; `live-dev/package/active/` now holds the separately manifested CP1+CP2 successor
 - Next status reader, Korean 5-second dashboard, entries-disabled starter, 0/0-to-1/1 Live starter, Master launcher, flat stop and local cache-handoff tools are implemented
 - Offline operator check correctly refused readiness while legacy PID `24324` remained active; that legacy runtime has now stopped without a Next process starting
 - Local handoff receipt pins legacy final commit `4d04a00`, final state/event hashes, the sole cached account and prior project realized net `$4.33`; it copies no V6 state or position
@@ -125,13 +125,15 @@ Legacy B70 V6R6 remains disabled. The CP1+CP2 release recovered and restarted th
 - CP3 was evaluated and held with no source change: every permitted writer is already uniquely owned after CP1+CP2, while a broker file would add an include/file without reducing writers and could cross the durable-intent order
 - Evidence: `lab/evidence/COMPLEXITY_REFACTOR_ENTRY_GATE_CP1_V1.json` and `lab/evidence/COMPLEXITY_REFACTOR_MARKET_ENTRY_CP2_V1.json`; no Live source, package, SET, state, terminal or dashboard changed
 
-## Active CP1 and CP2 Live promotion
+## Completed CP1 and CP2 Live promotion
 
 - Explicit user authorization received on 2026-08-25 to apply the already-verified CP1 and CP2 implementation to Live-Dev
 - Frozen target release: `NEXT-E01-V7-CXR1-c0ad2f30d293`; canonical source/settings SHA-256 `C0AD2F30D293AD538A91DE74A6D0A14A560FA19222F1DB043E1C533C103A7DD7`
 - Exact seven promoted implementation files are byte-equal to the CP2 candidate; Live main assembly, economic SET, execution version, Portfolio, Magic, state marker/schema/paths and all non-CP implementation files remain unchanged
 - MetaEditor build 6140 compiled the isolated exact promotion source at `0 errors / 0 warnings`; target EX5 SHA-256 is `F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F`
-- Parent PID `10112` and dashboard PID `24936` stopped at the fresh pre-window flat boundary. Target entries-disabled PIDs `28168` and `17656` both recovered the exact parent state, passed `0/0` and stopped normally; no terminal is running
+- Parent PID `10112` and dashboard PID `24936` stopped at the fresh pre-window flat boundary. Target entries-disabled PIDs `28168` and `17656` both recovered the exact parent state, passed `0/0` and stopped normally
+- Final preflight PID `26112` passed exact `0/0` and stopped; exact target Live PID `21548` passed release/Portfolio/Magic/account `1/1` handshake. Sole Korean dashboard PID `4712` is active
+- Bounded stabilization advanced to sequence `1470` at server `2026.08.25 09:35:11` with entries `1/1`, flat zero-risk state, balance/equity `$106.52/$106.52`, zero faults and no warning or alert
 - Source topology is now mandatory in `docs/OPERATING_DIRECTION.md` and `AGENTS.md`: `lab/mt5` is frozen historical material, the CP2 root is the sole forward baseline, and every future family must own an isolated root
 
 ## Required completion evidence
@@ -145,4 +147,4 @@ Legacy B70 V6R6 remains disabled. The CP1+CP2 release recovered and restarted th
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PACKAGE_FROZEN_COMPILE_PASSED; CXR1_ENTRIES_DISABLED_RECOVERY_AND_RESTART_PASSED; CXR1_FINAL_LIVE_HANDSHAKE_AUTHORIZED`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE`

@@ -47,7 +47,7 @@ The filesystem must make the current baseline, an active experiment and closed e
 - `lab/` owns evolving source, frozen controls, tester configuration, research, and DEV evidence.
 - `live-dev/` owns only a frozen release snapshot, Next-specific settings, operator tools, state, logs, and its own Portable terminal.
 - Live never includes or executes a Lab path. Lab never writes Live state. Promotion is a deliberate one-way frozen copy with new release identity and hashes.
-- The old Terminus B70 V6R6 remains the sole Live-authorized executable until V7 completes exact fixed-window real-tick evidence, entries-disabled operating evidence, a flat handoff, and a new explicit user authorization.
+- Legacy B70 V6R6 and superseded V7 releases remain stopped. Only the exact release named as owner in `CURRENT_STATE.md` has Live authority. A later engineering patch requires verified Lab evidence, a new frozen release manifest, explicit user authorization, a stopped-flat boundary, entries-disabled recovery and an exact final handshake before it may replace that owner.
 - V7 uses Magic `260824701..260824706`, a new Portfolio ID and state namespace, and never adopts V6R6 state or positions. Only final project-attributable realized P/L may be carried into its prior-realized input at handoff.
 
 ## Safety and authorization

@@ -45,14 +45,14 @@ This successor completed the original Live handoff and is now the frozen parent 
 - EX5 SHA-256: `F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F`
 - Engineering verdicts: `ENTRY_GATE_EQUIVALENCE_PASSED; MARKET_ENTRY_TRANSACTION_EQUIVALENCE_PASSED; CP3_HOLD`
 
-The patch changes only the verified CP1 Entry Gate and CP2 market-entry transaction ownership boundaries plus the release ID. Economic settings, execution/state identity, persistence schema and state paths remain the parent V7 contract, allowing exact durable-state continuation after a stopped-flat entries-disabled recovery.
+The patch changes only the verified CP1 Entry Gate and CP2 market-entry transaction ownership boundaries plus the release ID. Economic settings, execution/state identity, persistence schema and state paths remain the parent V7 contract. Exact durable-state continuation passed stopped-flat entries-disabled recovery, restart and final `0/0 → 1/1` handoff.
 
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev: the parent owner stopped normally at a verified flat pre-window boundary on 2026-08-25; the CP1+CP2 patch release is explicitly authorized, frozen and has passed connected entries-disabled recovery plus restart. Its final `0/0 → 1/1` handshake is the only pending transition.
+- Next V7 Live-Dev: `ENABLED`; exact CP1+CP2 patch release is the sole owner at terminal PID `21548` after connected entries-disabled recovery, restart and final `0/0 → 1/1` handshake.
 - V7 may not import or adopt B70 positions or state.
-- The original handoff ran at V7 terminal PID `10112`; that PID is now stopped. Target entries-disabled PIDs `28168` and `17656` also stopped normally after passing recovery. Legacy must not restart, and the only permitted next owner is the exact CP1+CP2 release through the final committed handshake.
+- The original V7 PID `10112`, target entries-disabled PIDs `28168` and `17656`, and final preflight PID `26112` are stopped. Exact patch PID `21548` and dashboard PID `4712` are active. Legacy and parent V7 must not restart.
 
 ## Completed legacy closure
 

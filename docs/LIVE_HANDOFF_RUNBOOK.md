@@ -66,3 +66,12 @@ Legacy와 모든 Next 터미널/테스터가 정지한 상태에서만 `Import-Z
 ## 7. 안정화 뒤 마감
 
 안정적인 V7 인계 후 Legacy에 최종 handoff 기록과 `terminus-final-handoff-v1` 태그를 푸시하고 GitHub 저장소를 archive한다. Next에는 `next-live-v7-handoff-v1` 태그를 남긴다. 그때 B75를 다음 단일 연구 작업으로 복원한다.
+
+## 8. 2026-08-25 CP1+CP2 patch 전환 완료
+
+- Parent release `NEXT-E01-V7-2db5ef5ead1c`를 첫 진입 구간 전 flat에서 정상 정지했다.
+- Target release `NEXT-E01-V7-CXR1-c0ad2f30d293`, EX5 SHA-256 `F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F`는 검증된 CP1·CP2 구현 파일만 승격했다.
+- Release ID만 새로 부여했고 execution version, Portfolio, Magic, state marker/schema/path, base SET과 경제 계약은 부모와 같게 유지했다.
+- 두 차례 entries-disabled recovery/restart와 최종 preflight PID `26112`의 `0/0`가 통과한 뒤 Live PID `21548`이 exact `1/1` handshake를 통과했다.
+- 첫 final invocation은 preflight PID 종료 직후의 짧은 process visibility race에서 fail-closed로 멈췄다. 최대 5초의 bounded process-exit wait만 운영기에 추가한 뒤 재실행했으며, 그 사이 신규 주문이나 소유 exposure는 없었다.
+- Dashboard PID `4712`가 exact Live local snapshot만 표시한다. Parent V7과 legacy는 재시작하지 않는다.
