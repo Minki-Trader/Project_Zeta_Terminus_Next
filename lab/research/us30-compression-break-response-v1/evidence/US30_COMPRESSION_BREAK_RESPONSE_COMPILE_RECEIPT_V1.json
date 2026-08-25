@@ -1,0 +1,138 @@
+{
+  "schema": "zeta-next-us30-compression-break-response-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "SOURCE_BINARY_CONFIG_RUNTIME_FROZEN_BEFORE_OUTCOME",
+  "unit": "us30-compression-break-response-029",
+  "family": "us30-compression-break-response-v1",
+  "declaration": {
+    "path": "lab/research/us30-compression-break-response-v1/evidence/US30_COMPRESSION_BREAK_RESPONSE_DECLARATION_V1.json",
+    "commit": "e566bd3",
+    "sha256": "6DF5C9B2C37215AB1C5D59817E16576A3B7BD09DF39461B8858343C91D57625B",
+    "outcomes_consumed": false
+  },
+  "implementation": {
+    "root": "lab/research/us30-compression-break-response-v1/mt5/",
+    "parent_source_copy": null,
+    "cross_family_include_or_link": false,
+    "source_files": 1,
+    "source_bytes": 19734,
+    "source_manifest_algorithm": "Sort src-root-relative mq5/mqh paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "source_manifest_sha256": "C36FBC74172F484CD73510E0EC947C2EF8BD5A32B4687CEE255DCAD98DFF27BA",
+    "mq5_sha256": "010B7990DA1C907A83E1B4919518660161C920DF584205AB3BF0E30DCCA06F11",
+    "configuration_files": 8,
+    "configuration_bytes": 2376,
+    "configuration_manifest_algorithm": "Sort tester-root-relative INI/SET filenames ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "configuration_manifest_sha256": "BB9FDA49DF7C00445928565F2397EA63DDCCE735F8C57EC4985E7D60785E97D9",
+    "entrypoint": "lab/research/us30-compression-break-response-v1/mt5/src/Experts/ZetaUS30CompressionBreakResponseObserverV1.mq5",
+    "trade_submission_calls": 0,
+    "position_open_calls": 0,
+    "ctrade_objects": 0,
+    "order_calc_profit_source_occurrences": 1,
+    "persistent_economic_state_fields": 0,
+    "outputs": ["opportunities.csv", "summary.csv"]
+  },
+  "fixed_observer_contract": {
+    "symbol": "US30",
+    "chart": "US30 M5",
+    "continuous_completed_bars": 49,
+    "current_to_previous_bar_delta_seconds": 300,
+    "completed_history_adjacent_delta_seconds": 300,
+    "current_boundary_note": "The current-to-previous exact-five-minute check implements the declaration's exclusion of session-reopen and other discontinuity states; a gap boundary is not a compression-break candidate.",
+    "recent_returns": 12,
+    "reference_returns": 36,
+    "compression_threshold": 0.65,
+    "range_bars": 12,
+    "horizon_market_bars": 12,
+    "maximum_concurrent_observations": 1,
+    "volume_for_profit_conversion": 0.01,
+    "cost_books": ["observed_bid_ask", "one_additional_entry_and_exit_spread"],
+    "orders_or_positions": 0
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_ms": 498,
+    "cpu": "X64 Regular",
+    "first_compile_passed": true,
+    "compile_corrections": 0,
+    "binary_path": "lab/research/us30-compression-break-response-v1/mt5/src/Experts/ZetaUS30CompressionBreakResponseObserverV1.ex5",
+    "binary_bytes": 20908,
+    "binary_sha256": "1C8884D230284731C7389B0D4B2202777C0D7ACCD09D3060980BBD975D49D3CF",
+    "compile_log_path": "lab/artifacts/logs/us30-compression-break-response-v1-metaeditor.log",
+    "compile_log_bytes": 3440,
+    "compile_log_sha256": "5BD7D891769B9FE02747E55EBC286C41F73C24EBD76895502DD53EC26376CBDF"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/us30-compression-break-response-v1-portable/",
+    "git_ignored": true,
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "physical_copy_only": true,
+    "filesystem_link_objects": 0,
+    "sample_hardlink_path_counts": 1,
+    "sample_origin_and_copy_file_ids_differ": true,
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "runtime_binary_sha256": "1C8884D230284731C7389B0D4B2202777C0D7ACCD09D3060980BBD975D49D3CF",
+    "source_runtime_dependency": false,
+    "live_dependency": false
+  },
+  "pre_outcome_market_data": {
+    "scope": "US30 monthly real ticks 202208 through 202607 inclusive; 202608 excluded",
+    "manifest_algorithm": "Sort tick-root-relative filenames, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 48,
+      "bytes": 558767758,
+      "sha256": "7CFDE993BB70AD1A32361F390F953DD6A624731E1B6429BA1B231CB5977A76F2",
+      "physical_copy_matches_origin": true
+    },
+    "tester_bases": {
+      "files": 48,
+      "bytes": 557994958,
+      "sha256": "B119CFA0B8236187AF4CC1F398F1E2282E5CC93ED8276C98A30B3D245E854C2D",
+      "physical_copy_matches_origin": true
+    },
+    "current_incomplete_month_in_invariant": false
+  },
+  "pre_outcome_symbol_database": {
+    "selected_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+      "bytes": 18210,
+      "sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F"
+    },
+    "symbols_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "bytes": 413696,
+      "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+    },
+    "housekeeping_rule": "Generic database and incomplete-current-month changes are telemetry only; fixed completed-month raw tick hashes and visible consumed specifications govern validity."
+  },
+  "pre_outcome_visible_us30_spec": {
+    "fingerprint_anchor": "Current Next Lab isolated US30 real-tick observer evidence visibly consumed the same FPMarkets symbol contract at start and end across P1-P4; no economic field from that family is used here.",
+    "digits": 2,
+    "point": 0.01,
+    "tick_size": 0.01,
+    "tick_value": 0.01,
+    "contract_size": 1.0,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "stops_level": 0,
+    "freeze_level": 0,
+    "path_rule": "Every Unit 029 summary start and end field must equal these frozen values."
+  },
+  "matrix": {
+    "paths": [
+      "tester-us30-cbr-v1-p1.ini",
+      "tester-us30-cbr-v1-p2.ini",
+      "tester-us30-cbr-v1-p3.ini",
+      "tester-us30-cbr-v1-p4.ini"
+    ],
+    "environment_rebuild_allowance": 1,
+    "outcomes_consumed": false
+  },
+  "source_or_config_change_allowed_after_first_path": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_the_frozen_source_then_run_the_four_trade_free_paths_serially_without_partial_economic_reading"
+}

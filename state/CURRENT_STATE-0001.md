@@ -552,3 +552,11 @@
 - One trade-free observation at a time resolves after twelve subsequent market bars. Continuation and reversion are counterfactually priced at `0.01` with actual bid/ask and exactly one additional entry and exit spread; four serial real-tick paths end at the last complete month, 2026-07.
 - A later standalone question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive paths, net-to-DD `>=1.50` and contribution limits. Unit 029 selects no stop, size, hold, priority, EA or Live candidate.
 - Declaration SHA-256 is `6DF5C9B2C37215AB1C5D59817E16576A3B7BD09DF39461B8858343C91D57625B`. Implementation and outcomes remain unopened; no Live process, broker state or Live surface was queried or changed.
+
+## STATE-0069 - 2026-08-26
+
+- Implemented Unit 029 as one fresh self-contained MQL observer with no parent source copy, Include tree, trade submission, position, economic persistence or Live dependency. The current-to-previous and all 48 completed-history M5 deltas must be exactly five minutes, so session-reopen discontinuities cannot enter this question.
+- The first MetaEditor build-6140 compile passed at `0 errors / 0 warnings`. Source/config manifest hashes are `C36FBC74172F484CD73510E0EC947C2EF8BD5A32B4687CEE255DCAD98DFF27BA` / `BB9FDA49DF7C00445928565F2397EA63DDCCE735F8C57EC4985E7D60785E97D9`; binary SHA-256 is `1C8884D230284731C7389B0D4B2202777C0D7ACCD09D3060980BBD975D49D3CF`.
+- Created the Git-ignored dedicated `lab/runtime/us30-compression-break-response-v1-portable/` from the generic Lab cache. Origin and copy file IDs differ, sample hardlink lists contain one path, and filesystem link objects are zero; it has no Live or other-family runtime dependency.
+- Froze both required 48-file US30 2022-08 through 2026-07 completed-month manifests, selected/full symbol-database telemetry and visible US30 contract values. Compile receipt SHA-256 is `0D297E686635D8E70B90E33AFA0E0A4A3DD0E8063E6513DAE159386597C45B85`.
+- Exactly four serial P1-P4 trade-free paths may now run. No outcome has been read, and no Live process, broker state or Live surface was queried or changed.
