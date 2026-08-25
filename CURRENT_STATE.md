@@ -5,23 +5,23 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0042`
+- Latest state ID: `STATE-0043`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
 
 - Development: `ENABLED`, one serial stream only
 - Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-26 instruction to repair the three Live warnings and restore future entry readiness, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
-- Next V7 entries-disabled preflight: `ENABLED`
-- Next V7 new-entry authorization: `DISABLED` until the committed CXR2 package proves exact connected `0/0` recovery.
+- Next V7 entries-disabled preflight: `PASSED`; CXR2 PID `21944` proved exact connected `0/0`, flat continuity and zero fault, then stopped normally.
+- Next V7 new-entry authorization: `ENABLED` by the user's explicit repair-and-entry-readiness instruction after the committed CXR2 `0/0` recovery passed; final `0/0 → 1/1` handshake remains pending.
 - Existing real-account owner: none
-- User V7 Live direction: `PENDING_CXR2_RECOVERY`
+- User V7 Live direction: `PENDING_FINAL_HANDSHAKE`
 
-Legacy B70 V6R6 and parent V7 are stopped and disabled. CXR1 PID `21548` stopped normally at server `2026.08.25 18:12:03` after proving entries `1/0`, positions/order/margin/planned risk `0/0/$0/$0` and no retry, shadow or ARC ownership. CXR2 is compiled and frozen, but no terminal owns the account until its connected entries-disabled recovery passes.
+Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. CXR2 entries-disabled PID `21944` recovered release/Portfolio/Magic/account and exact balance/state continuity at sequence `2006`, with safety/persistence/broker/foreign faults `0/0/0/0`, no warning or alert, then stopped normally. No terminal owns the account before the final handshake.
 
 ## Active work
 
-- Active engineering boundary: `protective-exit-order-reconciliation-v1`; CXR2 is package-frozen after the exact stopped-flat transition and awaits connected entries-disabled recovery
+- Active engineering boundary: `protective-exit-order-reconciliation-v1`; CXR2 passed connected entries-disabled recovery and awaits the committed final `0/0 → 1/1` handshake
 - Active research boundary: none; `server-day-carry-burden-v1` is closed and frozen with no retained candidate
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`

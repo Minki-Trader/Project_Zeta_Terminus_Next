@@ -346,3 +346,10 @@
 - Promoted only candidate `ZetaOwnership.mqh`, byte-equal at `0D4C619B3251F9E99113883108BF3E15A5C2E50B2EA436A9BB2BE8EA6919049A`, plus release identity into `NEXT-E01-V7-CXR2-14d84b9e4bb3`. Execution, economic version, Portfolio, Magic, state marker/schema/path, main MQ5 and base SET are unchanged. Canonical source/settings SHA-256 is `14D84B9E4BB30A4CBCCE51B4841859912FEE9BDC1E7FCFFEFEE228C55823C072`.
 - The first Live compile setup lacked MetaQuotes standard `Trade.mqh` and failed before code generation; restored the CXR1 EX5 backup, copied only the vendor Include library into the independent Live Portable, and compiled again using exclusively the Live package Zeta tree. The successful build-6140 log is `0 errors / 0 warnings`; CXR2 EX5 is `620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6`, and source manifest is `DD2F9693015034E442B26D3B1831BB59A0C8BB83C5F06CA7BF51648235186980`.
 - Local transition receipt SHA-256 is `FB8FBB5C491B8170FA1449F2BDC19B90EB0B023F1695A54A77A9DAD5EB4AB954`. No terminal or dashboard now owns the account. New entries remain disabled until the committed CXR2 package passes the connected `0/0` recovery.
+
+## STATE-0043 - 2026-08-26
+
+- At committed and pushed Git `3fc500f06e7a0a711cb2f2ddb34eff60fcc58536`, the operator revalidated the CXR2 source manifest, EX5, SET, Git boundary and local transition receipt before starting any terminal.
+- Entries-disabled PID `21944` recovered exact release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio, Magic and account at sequence `2006`. It proved entries/positions/orders `0/0/0/0`, margin/risk `$0/$0`, balance/equity `$104.48/$104.48`, project realized `$3.83` and stressed balance `$99.418`.
+- Safety, persistence, broker and foreign flags were `0/0/0/0`; warnings and alerts were zero. The preserved status SHA-256 is `6D76996A175B5DDDC48C0311620394E45C711930395A15DF9C9B7FEDA4489822`.
+- The committed flat-stop operator then stopped PID `21944` normally. No terminal now owns the account; the user-authorized final `0/0 → 1/1` handshake is the only remaining promotion action.
