@@ -617,3 +617,11 @@
 - The failure is not a completed-month hash or visible-spec change, so the rebuild allowance does not apply. P2-P4 and the 4,129 economic rows remain unopened. Closed Unit 031 `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE` without rescue.
 - The same telemetry and HTML contradiction was then found in already-preserved Unit 028 and Unit 030 P1 logs. Their signed evidence remains untouched, but their prior all-path real-tick claims and economic verdict authority are corrected to the same invalid status; prior economics are descriptive only and neither unit gains a prototype.
 - Unit 031 result/closure SHA-256 values are `2C7D198FAF0989FE28F52DBE45F7405F8F459545A0CB14F3395569FE7C7F0342` / `36C3011CC21300A4A20C5329A4D9A47EDC7C025EBFCB832A7B8E156CC43502C3`. No additional Tester path, economic row, source, broker state or Live surface was opened or changed.
+
+## STATE-0077 - 2026-08-26
+
+- Byte-prefix comparison of preserved cumulative Unit 030 agent logs isolated the later path segments. The 2024, 2025 and 2026-through-July suffixes are 8,078/8,078/8,082 bytes with zero absent/discarded tick, volume/price mismatch or generation-fallback line; their HTML reports also show 100% real ticks.
+- Opened only the unrelated Unit 032 `us100-realized-variance-asymmetry-response-v1`. The corrected 2022-2023 interval is structurally excluded; the new frozen matrix is 2024 H1, 2024 H2, 2025 and 2026 through the last complete month, with each split path required to pass the detailed log gate independently.
+- Before source or outcome, froze a sixteen-return continuous M15 state: at least four positive and four negative returns, squared-return energy by sign and absolute normalized energy imbalance `0.35`. Dominant-energy and counter-energy directions resolve after four market bars.
+- A later standalone question survives only if one book passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive paths, net-to-DD `>=1.50` and contribution limits. Unit 032 selects no stop, size, hold, priority, EA or Live candidate.
+- Declaration SHA-256 is `B83BBF7CA1D0663670841FC4D322C000F46B38D503CA7AFA6F48D272E9F20066`. Implementation and outcomes remain unopened; no Live process, broker state or Live surface was queried or changed.
