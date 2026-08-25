@@ -1,0 +1,116 @@
+{
+  "schema": "zeta-next-initial-stop-geometry-value-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_025_OUTCOME_AGGREGATION",
+  "unit": "initial-stop-geometry-value-025",
+  "family": "initial-stop-geometry-value-v1",
+  "question": "Does any strategy's causal initial absolute stop distance divided by entry price separate its stressed return and stop-loss incidence broadly and materially enough to justify one later strategy-specific, entry-preserving stop-geometry response Proxy question inside the whole six-strategy portfolio?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "unit_024_fill_age_used": false,
+    "native_signal_strength_combination": false,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "periods": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"],
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a state version, not an event primary key.",
+    "ordering": "Within each period order by parsed server_time, numeric state_sequence, fixed event precedence and source path plus source line. Close precedes a later birth at equal time; PASSIVE_PLACE precedes PASSIVE_FILL.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return lifecycle. Entry price is OPEN.value_a, initial stop is detail stop and planned risk is detail planned_risk.",
+    "passive_birth": "PASSIVE_PLACE stores initial stop and planned risk; only PASSIVE_FILL begins an admitted Passive lifecycle and PASSIVE_FILL.value_a is its entry price.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle; value_b is native stressed net USD and detail reason=DEAL_REASON_SL marks a stop exit.",
+    "stressed_r": "close value_b divided by positive birth planned_risk.",
+    "stop_geometry": "absolute(entry_price minus initial_stop) divided by positive entry_price, known no later than admitted birth.",
+    "tail_construction": "Separately inside every strategy-period sort lifecycles by stop_geometry ascending, then birth server time, birth state_sequence, source path and source line. NARROW is the first floor(n/3), WIDE is the last floor(n/3), and the middle is excluded from tail effects.",
+    "period_tail_each": {
+      "RC16": [25,24,26,14],
+      "RC4": [17,17,22,10],
+      "Cross": [95,65,64,43],
+      "Pressure": [11,7,10,9],
+      "Return": [35,16,17,10],
+      "Passive": [71,53,43,30]
+    },
+    "pooled_spearman": "Average-rank Spearman correlation between stop_geometry and stressed_r over every lifecycle of one strategy across all periods.",
+    "period_spearman": "The same correlation separately in every period.",
+    "pooled_tail_r_effect": "Mean stressed_r across all within-period WIDE tails minus all NARROW tails for one strategy.",
+    "period_tail_r_effect": "The same WIDE-minus-NARROW difference separately in each period.",
+    "pooled_tail_stop_effect": "Stop-loss rate across all WIDE tails minus all NARROW tails for one strategy.",
+    "period_tail_stop_effect": "The same WIDE-minus-NARROW stop-rate difference separately in each period."
+  },
+  "fixed_integrity_gate": [
+    "All six files retain the listed byte lengths and hashes and contain zero exact duplicate full rows.",
+    "Every admitted lifecycle has a positive entry price, positive initial stop distance, positive planned risk and exactly one CLOSE or EXTERNAL_CLOSE; no strategy overlaps itself.",
+    "Reconstruct exactly 2,233 lifecycles: RC16 272, RC4 206, Cross 805, Pressure 118, Return 238 and Passive 594.",
+    "Stressed net sums exactly to 407.0477 USD and stop exits exactly to 206.",
+    "Every one of 2,233 stop_geometry values is finite, positive and uniquely linked to one admitted birth."
+  ],
+  "fixed_information_gate": {
+    "apply_separately_to": ["RC16", "RC4", "Cross", "Pressure", "Return", "Passive"],
+    "density": [
+      "At least 100 lifecycles pooled and at least 20 in every period.",
+      "Every period has at least seven observations in both NARROW and WIDE tails."
+    ],
+    "economic_effect": [
+      "Absolute pooled Spearman correlation between stop_geometry and stressed_r is at least 0.20.",
+      "At least three of four period Spearman correlations share the pooled sign.",
+      "Absolute pooled WIDE-minus-NARROW mean stressed-r difference is at least 0.10R.",
+      "At least three of four period tail stressed-r differences share the pooled tail sign."
+    ],
+    "stop_coherence": [
+      "Absolute pooled WIDE-minus-NARROW stop-rate difference is at least 0.05.",
+      "At least three of four period stop-rate differences share the pooled stop sign.",
+      "The pooled stressed-r and stop-rate effects are economically coherent: lower WIDE stressed_r requires higher WIDE stop incidence, or higher WIDE stressed_r requires lower WIDE stop incidence."
+    ],
+    "selection": "Select at most one passing strategy by larger absolute pooled Spearman, then larger absolute stressed-r tail difference, then larger absolute stop-rate difference, then more same-sign economic periods, then lexicographic strategy name.",
+    "passing_action": "Retain exactly one later strategy-specific, entry-preserving stop-geometry response Proxy question. Unit 025 selects no response type, size ratio, hold change, stop change, threshold, EA or Live candidate. Any later Proxy must keep every base opportunity eligible at no less than base minimum lot, preserve native initial stop and the unchanged 4%/12% risk gates, and compare the whole six-strategy portfolio.",
+    "failure_action": "Close with no stop-geometry response question. Do not rescue with raw point distance, planned-risk utilization, signal strength, direction, symbol pooling, nonlinear transform, alternate quantile, session, weekday, month or period exception."
+  },
+  "evidence_limit": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "stop_geometry_available_at_birth": true,
+    "association_not_mechanism": true,
+    "promotion_evidence": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before reading any stop-geometry-to-outcome result.",
+    "Run exactly one aggregation over the six frozen files.",
+    "Do not inspect another stop normalization, risk-utilization transform, threshold or subgroup inside Unit 025.",
+    "Do not run MT5, add MQL, create a reusable analysis CLI or touch Live.",
+    "Do not reopen or transform Unit 024."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_the_single_fixed_2233_stop_geometry_aggregation"
+}

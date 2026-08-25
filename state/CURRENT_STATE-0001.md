@@ -463,3 +463,11 @@
 - Pooled LATE-minus-EARLY stop-rate difference was only `-0.015228426` versus `0.05`. It was also economically incoherent with the lower late-fill return because late fills stopped less often rather than more often.
 - Applied the frozen failure action without minute-threshold, quantile, nonlinear-age, fill-displacement, direction, time, incumbent or subgroup rescue. Closed Unit 024 `NO_PASSIVE_FILL_AGE_FIELD_PASSED`; no response question, candidate, seed or promotion survives.
 - Result/closure SHA-256 values are `E64F2D0C55FCB10DCFD5D6DB3FADACB2174A7685B457378B1560175962D7A256` / `1D24BF799AD05CFE3B59DADB56819A350AF78227CE79E67A4930DAF92943ED0D`. Exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
+
+## STATE-0058 - 2026-08-26
+
+- After Unit 024 was durably committed and pushed, opened only the non-nearby source-free Unit 025 `initial-stop-geometry-value-v1`. It does not use or transform fill age and does not combine the previously closed native signal-strength field.
+- Pre-outcome feasibility found a positive initial stop distance for every one of `2,233` admitted lifecycles. Each strategy-period has `23..286` lifecycles, every value is distinct inside its stream, and fixed within-period third tails contain at least seven observations.
+- Froze the sole causal field as `abs(entry price - initial stop) / entry price`. Market entries use OPEN price/stop; Passive uses its matched placement stop and actual fill price. Raw points, planned-risk utilization, signal strength, direction, symbol pooling and nonlinear transforms remain closed.
+- Every strategy is judged separately under pooled/period Spearman, fixed NARROW/WIDE tail return, stop-rate, three-period breadth and economic-coherence gates. At most one later entry-preserving strategy-specific Proxy question may survive; Unit 025 selects no response, stop change, size, hold, EA or Live candidate.
+- Declaration SHA-256 is `417E04F77CC512892B72FBB13774FFAB327388B2F1ED65BF7D2D0C2680188AB8`. Outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
