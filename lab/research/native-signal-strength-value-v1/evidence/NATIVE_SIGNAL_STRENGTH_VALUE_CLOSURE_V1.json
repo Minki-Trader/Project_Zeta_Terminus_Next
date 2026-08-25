@@ -1,0 +1,37 @@
+{
+  "schema": "zeta-next-native-signal-strength-value-closure-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "native-signal-strength-value-016",
+  "family": "native-signal-strength-value-v1",
+  "evidence": {
+    "declaration_sha256": "59E9DD06450DDE32FDAC7C2DA0A13D064908F00782C8F94111DB81D66E74E4AC",
+    "result_sha256": "E87F0CF00A4673FFEC6D6F783F118D8A0974BA111C86B62EEE413C92B6009E27",
+    "event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312"
+  },
+  "closure": {
+    "verdict": "NO_NATIVE_STRENGTH_FIELD_PASSED",
+    "integrity_passed": true,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.0477,
+    "passing_strategies": [],
+    "selected_strategy": null,
+    "later_strength_allocation_experiment": false
+  },
+  "reason": "Every strategy failed the fixed absolute pooled Spearman minimum 0.20. Pressure was closest at -0.156252853 but reversed in P4; RC16's pooled HIGH-minus-LOW difference was 0.098904551R, below 0.10R, and its Spearman was only 0.087373013.",
+  "forbidden_rescues": {
+    "signed_or_margin_feature": false,
+    "nonlinear_or_ml_transform": false,
+    "alternate_quantiles": false,
+    "direction_or_period_split": false,
+    "mql_or_tester_path": false
+  },
+  "surfaces": {
+    "frozen_cp2_baseline_unchanged": true,
+    "input_event_files_unchanged": true,
+    "live_untouched": true,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_next_only_economic_question"
+}

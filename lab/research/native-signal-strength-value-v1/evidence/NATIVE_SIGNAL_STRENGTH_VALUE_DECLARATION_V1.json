@@ -1,0 +1,103 @@
+{
+  "schema": "zeta-next-native-signal-strength-value-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_STRENGTH_OUTCOME_AGGREGATION",
+  "unit": "native-signal-strength-value-016",
+  "family": "native-signal-strength-value-v1",
+  "question": "Does the absolute magnitude of any strategy's native causal decision feature separate its stressed return per planned-risk dollar with enough temporal breadth and economic magnitude to justify one later strategy-specific, entry-preserving strength-allocation experiment?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_parent": {
+    "event_source_family": "passive-refusal-depth-observation-v1",
+    "event_source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "event_source_selection_sha256": "503FA898AC50E40F08359D595801D670BFF266B849CD64C18C736A67010B66FE",
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "event_manifest": {
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312"
+    },
+    "reopen_parent_source": false
+  },
+  "periods": [
+    "P1_2022H2_2023",
+    "P2_2024",
+    "P3_2025",
+    "P4_2026_YTD"
+  ],
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a state version and may repeat; it is not used as a uniqueness key.",
+    "ordering": "Within each period order by parsed server_time, numeric state_sequence, fixed event precedence and then source path plus source line. SIGNAL_DECIDED precedes OPEN or PASSIVE_PLACE; PASSIVE_FILL precedes lifecycle release at an equal timestamp.",
+    "market_lifecycle_birth": "For RC16, RC4, Cross, Pressure and Return, OPEN begins a lifecycle and supplies birth planned_risk.",
+    "passive_lifecycle_birth": "PASSIVE_PLACE stores signal and planned_risk; only a later PASSIVE_FILL begins an admitted Passive lifecycle. PASSIVE_EXPIRE creates no lifecycle.",
+    "lifecycle_release": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle and value_b is native stressed net USD.",
+    "signal_link": "Consume the latest earlier same-component SIGNAL_DECIDED for the corresponding OPEN or PASSIVE_PLACE. No later or reused signal is permitted.",
+    "native_strength": "abs(SIGNAL_DECIDED.value_a)",
+    "stressed_r": "lifecycle close value_b divided by birth planned_risk",
+    "direction": "SIGNAL_DECIDED.value_b is retained descriptively but does not define another feature transform.",
+    "tail_construction": "Separately inside every strategy-period, sort by native_strength ascending, then entry server time and birth sequence. LOW is the first floor(n/3), HIGH is the last floor(n/3), and the middle is excluded from the tail difference.",
+    "pooled_spearman": "Average-rank Spearman correlation between native_strength and stressed_r over every lifecycle of one strategy across all four periods.",
+    "period_spearman": "The same Spearman correlation separately in each period.",
+    "pooled_tail_difference": "Mean stressed_r across all HIGH observations minus mean stressed_r across all LOW observations for one strategy.",
+    "period_tail_difference": "HIGH mean stressed_r minus LOW mean stressed_r in each strategy-period."
+  },
+  "fixed_integrity_gate": [
+    "All six event files retain their declared hashes and contain zero exact duplicate full rows.",
+    "Every signal is consumed at most once by a market OPEN or Passive placement opportunity.",
+    "Every admitted lifecycle has one positive planned_risk and exactly one CLOSE or EXTERNAL_CLOSE; no strategy overlaps itself.",
+    "Reconstructed totals are exactly 2,233 lifecycles: RC16 272, RC4 206, Cross 805, Pressure 118, Return 238 and Passive 594.",
+    "Per-period strategy lifecycle counts match the frozen final component evidence and stressed nets sum to 407.0477 USD."
+  ],
+  "fixed_information_gate": {
+    "apply_separately_to": [
+      "RC16",
+      "RC4",
+      "Cross",
+      "Pressure",
+      "Return",
+      "Passive"
+    ],
+    "requirements": [
+      "At least 50 lifecycles pooled and at least 10 in every period.",
+      "Absolute pooled Spearman correlation between native_strength and stressed_r is at least 0.20.",
+      "At least three of four period Spearman correlations share the pooled sign.",
+      "Absolute pooled HIGH-minus-LOW mean stressed_r is at least 0.10R per lifecycle.",
+      "At least three of four period tail differences share the pooled tail sign.",
+      "The pooled Spearman sign and pooled tail-difference sign agree."
+    ],
+    "selection": "Select at most one passing strategy by larger absolute pooled Spearman, then larger absolute pooled tail difference, then more same-sign period correlations, then lexicographic strategy name.",
+    "passing_action": "Retain one later Lab strength-allocation experiment for only the selected strategy. Every frozen base entry must remain eligible at no less than its base minimum lot; the whole portfolio may not lose entry count, risk remains under the unchanged 4%/12% gates, and Live remains unauthorized.",
+    "failure_action": "Close with no strength-allocation candidate. Do not rescue with signed feature, margin-to-threshold, nonlinear transform, ML, alternate quantiles, per-direction split or period-specific exception."
+  },
+  "evidence_limit": {
+    "all_paths_consumed_exploratory": true,
+    "clean_holdout": false,
+    "causal_feature_available_at_decision": true,
+    "association_not_mechanism": true,
+    "skipped_candidates_excluded": true
+  },
+  "stop_rules": [
+    "Run exactly one aggregation over the six frozen files.",
+    "Do not inspect or transform any other signal field.",
+    "Do not run MT5 or modify MQL in this unit.",
+    "Do not infer that stronger signals should automatically receive more risk.",
+    "Do not alter, query or restart Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "reconstruct_all_six_native_strength_fields_once_then_apply_the_fixed_gate"
+}

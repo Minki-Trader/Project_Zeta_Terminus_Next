@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0037`
+- Latest state ID: `STATE-0038`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: none; `risk-capacity-release-window-v1` is closed without a retry candidate after its frozen event-key integrity assumption failed, and no corrected-key or longer-window rescue is open at this durable boundary
+- Active research boundary: none; `native-signal-strength-value-v1` is closed with no passing strategy and no signed, nonlinear, direction or period rescue open at this durable boundary
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -207,6 +207,14 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 - A non-authoritative scale sensitivity preserving all distinct rows found only 3 exact-deadline capacity-release proxies among 78 risk skips: two Passive and one Cross, one each in P2/P3/P4. This remained below the frozen pooled minimum 8, period minimum 2 and receiver minimum 6
 - Closed `INVALID_EVENT_KEY_CONTRACT_NO_DEFERRED_ADMISSION_CANDIDATE`; no corrected-key rerun, longer deadline, alternate overflow definition, retry EA or Live change opened. Result/closure SHA-256 values are `3AF7E7577F3321790663ADCC92840907BEAA09D0D613A1F7FDBEF64E0BB29986` / `3A10EFE6E7ED2FD34DF2B71E0FD2EDA4672D0D5FA0A33E4E1E32462B07C1EB3E`
 
+## Completed native signal strength value diagnostic
+
+- Closed one source-free six-strategy aggregation over the immutable CP2 event matrix; it added no MQL, Tester path, new market outcome or Live authority
+- Reconstructed exactly 2,233 lifecycles and `$407.0477` stressed net with zero duplicate-row, signal-link, overlap, planned-risk, fill, expiration or close fault
+- All six passed density, but none reached the fixed absolute pooled Spearman minimum `0.20`: RC16 `+0.087373013`, RC4 `-0.080628854`, Cross `+0.051826376`, Pressure `-0.156252853`, Return `-0.012432132`, Passive `+0.042462032`
+- Pressure was closest but reversed from negative association/tail effects in P1-P3 to positive in P4. RC16's pooled HIGH-minus-LOW difference was `+0.098904551R`, just below `0.10R`, while its correlation was only `+0.087373013`
+- Closed `NO_NATIVE_STRENGTH_FIELD_PASSED`; no signed feature, threshold margin, nonlinear/ML transform, alternate quantile, direction/period exception or allocation experiment opened. Result/closure SHA-256 values are `E87F0CF00A4673FFEC6D6F783F118D8A0974BA111C86B62EEE413C92B6009E27` / `4E8B28B29F78FDE0C8ED6B0E32B575B35F1C73F4CAD4D64A2D32E0685B1FE62A`
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -218,4 +226,4 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD`

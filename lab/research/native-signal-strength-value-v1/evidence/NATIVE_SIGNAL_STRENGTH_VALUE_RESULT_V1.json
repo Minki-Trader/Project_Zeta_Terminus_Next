@@ -1,0 +1,388 @@
+{
+  "schema": "zeta-next-native-signal-strength-value-result-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED",
+  "unit": "native-signal-strength-value-016",
+  "family": "native-signal-strength-value-v1",
+  "declaration": {
+    "path": "lab/research/native-signal-strength-value-v1/evidence/NATIVE_SIGNAL_STRENGTH_VALUE_DECLARATION_V1.json",
+    "sha256": "59E9DD06450DDE32FDAC7C2DA0A13D064908F00782C8F94111DB81D66E74E4AC"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_failed_invocations": 1,
+    "implementation_correction": "The first read-only PowerShell invocation used invalid shorthand syntax for one Where-Object sample-floor expression and stopped before producing a strategy result or judgment. The expression was corrected without changing data, reconstruction, metric or gate, then the one successful aggregation was judged.",
+    "alternate_data_features_transforms_thresholds_or_rescues": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "new_market_outcomes": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "exact_duplicate_full_rows": 0,
+    "signal_reuse_faults": 0,
+    "missing_or_stale_signal_links": 0,
+    "overlapping_same_strategy_lifecycles": 0,
+    "missing_or_nonpositive_planned_risk": 0,
+    "unmatched_fills_expirations_or_closes": 0,
+    "open_lifecycles_at_period_end": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd": 407.0477,
+    "strategy_stressed_net_usd": {
+      "RC16": 114.438,
+      "RC4": 79.068,
+      "Cross": 81.2585,
+      "Pressure": 34.170,
+      "Return": 74.351,
+      "Passive": 23.7622
+    },
+    "exact_frozen_component_equivalence": true
+  },
+  "strategy_results": [
+    {
+      "strategy": "RC16",
+      "lifecycles": 272,
+      "mean_stressed_r": 0.074591015,
+      "pooled_spearman": 0.087373013,
+      "pooled_tail_each": 89,
+      "pooled_low_mean_r": 0.021872663,
+      "pooled_high_mean_r": 0.120777214,
+      "pooled_high_minus_low_r": 0.098904551,
+      "period_correlation_same_sign": 4,
+      "period_tail_same_sign": 3,
+      "periods": [
+        {
+          "period": "P1_2022H2_2023",
+          "n": 77,
+          "spearman": 0.074635890,
+          "tail_each": 25,
+          "high_minus_low_r": 0.155821001
+        },
+        {
+          "period": "P2_2024",
+          "n": 72,
+          "spearman": 0.153514695,
+          "tail_each": 24,
+          "high_minus_low_r": 0.086949223
+        },
+        {
+          "period": "P3_2025",
+          "n": 79,
+          "spearman": 0.043816943,
+          "tail_each": 26,
+          "high_minus_low_r": 0.119451417
+        },
+        {
+          "period": "P4_2026_YTD",
+          "n": 44,
+          "spearman": 0.087103594,
+          "tail_each": 14,
+          "high_minus_low_r": -0.020395584
+        }
+      ],
+      "gate": {
+        "sample": true,
+        "pooled_spearman_magnitude": false,
+        "correlation_sign_breadth": true,
+        "tail_magnitude": false,
+        "tail_sign_breadth": true,
+        "pooled_sign_agreement": true,
+        "passed": false
+      }
+    },
+    {
+      "strategy": "RC4",
+      "lifecycles": 206,
+      "mean_stressed_r": 0.065152228,
+      "pooled_spearman": -0.080628854,
+      "pooled_tail_each": 66,
+      "pooled_low_mean_r": 0.133436271,
+      "pooled_high_mean_r": 0.054539743,
+      "pooled_high_minus_low_r": -0.078896528,
+      "period_correlation_same_sign": 2,
+      "period_tail_same_sign": 3,
+      "periods": [
+        {
+          "period": "P1_2022H2_2023",
+          "n": 53,
+          "spearman": -0.082164167,
+          "tail_each": 17,
+          "high_minus_low_r": -0.028559806
+        },
+        {
+          "period": "P2_2024",
+          "n": 53,
+          "spearman": -0.258909853,
+          "tail_each": 17,
+          "high_minus_low_r": -0.253706723
+        },
+        {
+          "period": "P3_2025",
+          "n": 68,
+          "spearman": 0.006145742,
+          "tail_each": 22,
+          "high_minus_low_r": -0.035902077
+        },
+        {
+          "period": "P4_2026_YTD",
+          "n": 32,
+          "spearman": 0.078812317,
+          "tail_each": 10,
+          "high_minus_low_r": 0.038120586
+        }
+      ],
+      "gate": {
+        "sample": true,
+        "pooled_spearman_magnitude": false,
+        "correlation_sign_breadth": false,
+        "tail_magnitude": false,
+        "tail_sign_breadth": true,
+        "pooled_sign_agreement": true,
+        "passed": false
+      }
+    },
+    {
+      "strategy": "Cross",
+      "lifecycles": 805,
+      "mean_stressed_r": 0.020870260,
+      "pooled_spearman": 0.051826376,
+      "pooled_tail_each": 267,
+      "pooled_low_mean_r": -0.005583671,
+      "pooled_high_mean_r": 0.034558096,
+      "pooled_high_minus_low_r": 0.040141766,
+      "period_correlation_same_sign": 3,
+      "period_tail_same_sign": 3,
+      "periods": [
+        {
+          "period": "P1_2022H2_2023",
+          "n": 286,
+          "spearman": -0.062309706,
+          "tail_each": 95,
+          "high_minus_low_r": -0.017817249
+        },
+        {
+          "period": "P2_2024",
+          "n": 197,
+          "spearman": 0.170835570,
+          "tail_each": 65,
+          "high_minus_low_r": 0.105120982
+        },
+        {
+          "period": "P3_2025",
+          "n": 193,
+          "spearman": 0.013539274,
+          "tail_each": 64,
+          "high_minus_low_r": 0.021527934
+        },
+        {
+          "period": "P4_2026_YTD",
+          "n": 129,
+          "spearman": 0.125000000,
+          "tail_each": 43,
+          "high_minus_low_r": 0.097670668
+        }
+      ],
+      "gate": {
+        "sample": true,
+        "pooled_spearman_magnitude": false,
+        "correlation_sign_breadth": true,
+        "tail_magnitude": false,
+        "tail_sign_breadth": true,
+        "pooled_sign_agreement": true,
+        "passed": false
+      }
+    },
+    {
+      "strategy": "Pressure",
+      "lifecycles": 118,
+      "mean_stressed_r": 0.041457147,
+      "pooled_spearman": -0.156252853,
+      "pooled_tail_each": 37,
+      "pooled_low_mean_r": 0.081578824,
+      "pooled_high_mean_r": 0.008917323,
+      "pooled_high_minus_low_r": -0.072661501,
+      "period_correlation_same_sign": 3,
+      "period_tail_same_sign": 3,
+      "periods": [
+        {
+          "period": "P1_2022H2_2023",
+          "n": 35,
+          "spearman": -0.104201681,
+          "tail_each": 11,
+          "high_minus_low_r": -0.082827361
+        },
+        {
+          "period": "P2_2024",
+          "n": 23,
+          "spearman": -0.196640316,
+          "tail_each": 7,
+          "high_minus_low_r": -0.255366145
+        },
+        {
+          "period": "P3_2025",
+          "n": 32,
+          "spearman": -0.418988270,
+          "tail_each": 10,
+          "high_minus_low_r": -0.320568280
+        },
+        {
+          "period": "P4_2026_YTD",
+          "n": 28,
+          "spearman": 0.195402299,
+          "tail_each": 9,
+          "high_minus_low_r": 0.357319028
+        }
+      ],
+      "gate": {
+        "sample": true,
+        "pooled_spearman_magnitude": false,
+        "correlation_sign_breadth": true,
+        "tail_magnitude": false,
+        "tail_sign_breadth": true,
+        "pooled_sign_agreement": true,
+        "passed": false
+      }
+    },
+    {
+      "strategy": "Return",
+      "lifecycles": 238,
+      "mean_stressed_r": 0.056083439,
+      "pooled_spearman": -0.012432132,
+      "pooled_tail_each": 78,
+      "pooled_low_mean_r": 0.058627459,
+      "pooled_high_mean_r": 0.013116766,
+      "pooled_high_minus_low_r": -0.045510693,
+      "period_correlation_same_sign": 2,
+      "period_tail_same_sign": 3,
+      "periods": [
+        {
+          "period": "P1_2022H2_2023",
+          "n": 105,
+          "spearman": 0.141177690,
+          "tail_each": 35,
+          "high_minus_low_r": 0.100807519
+        },
+        {
+          "period": "P2_2024",
+          "n": 50,
+          "spearman": -0.113949580,
+          "tail_each": 16,
+          "high_minus_low_r": -0.180853824
+        },
+        {
+          "period": "P3_2025",
+          "n": 52,
+          "spearman": 0.004268761,
+          "tail_each": 17,
+          "high_minus_low_r": -0.060271081
+        },
+        {
+          "period": "P4_2026_YTD",
+          "n": 31,
+          "spearman": -0.228225806,
+          "tail_each": 10,
+          "high_minus_low_r": -0.315982764
+        }
+      ],
+      "gate": {
+        "sample": true,
+        "pooled_spearman_magnitude": false,
+        "correlation_sign_breadth": false,
+        "tail_magnitude": false,
+        "tail_sign_breadth": true,
+        "pooled_sign_agreement": true,
+        "passed": false
+      }
+    },
+    {
+      "strategy": "Passive",
+      "lifecycles": 594,
+      "mean_stressed_r": 0.008378568,
+      "pooled_spearman": 0.042462032,
+      "pooled_tail_each": 197,
+      "pooled_low_mean_r": 0.004932462,
+      "pooled_high_mean_r": 0.007529140,
+      "pooled_high_minus_low_r": 0.002596678,
+      "period_correlation_same_sign": 1,
+      "period_tail_same_sign": 1,
+      "periods": [
+        {
+          "period": "P1_2022H2_2023",
+          "n": 213,
+          "spearman": -0.009872318,
+          "tail_each": 71,
+          "high_minus_low_r": -0.000145514
+        },
+        {
+          "period": "P2_2024",
+          "n": 159,
+          "spearman": -0.013933007,
+          "tail_each": 53,
+          "high_minus_low_r": -0.028234059
+        },
+        {
+          "period": "P3_2025",
+          "n": 130,
+          "spearman": -0.031913586,
+          "tail_each": 43,
+          "high_minus_low_r": -0.046957400
+        },
+        {
+          "period": "P4_2026_YTD",
+          "n": 92,
+          "spearman": 0.366166793,
+          "tail_each": 30,
+          "high_minus_low_r": 0.134581679
+        }
+      ],
+      "gate": {
+        "sample": true,
+        "pooled_spearman_magnitude": false,
+        "correlation_sign_breadth": false,
+        "tail_magnitude": false,
+        "tail_sign_breadth": false,
+        "pooled_sign_agreement": true,
+        "passed": false
+      }
+    }
+  ],
+  "fixed_gate_application": {
+    "passing_strategies": [],
+    "common_failure": "All six strategies failed the absolute pooled Spearman minimum 0.20.",
+    "closest_pooled_correlation": {
+      "strategy": "Pressure",
+      "spearman": -0.156252853,
+      "failure": "Below 0.20 and reversed to positive correlation and tail effect in P4."
+    },
+    "closest_tail_magnitude": {
+      "strategy": "RC16",
+      "high_minus_low_r": 0.098904551,
+      "failure": "Below 0.10R; pooled Spearman is only 0.087373013 and P4 tail direction reverses."
+    }
+  },
+  "interpretation": {
+    "portfolio": "Native absolute feature magnitude is not a broad, material economic confidence field for any of the six strategies under the frozen metric.",
+    "pressure": "The largest pooled association is still sub-threshold and is regime-unstable: negative through P1-P3 but positive in P4.",
+    "passive": "The strong P4-only positive association is contradicted by P1-P3 and nearly disappears pooled.",
+    "allocation_consequence": "Do not open a strength-based sizing, risk or priority experiment from this field.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "verdict": "NO_NATIVE_STRENGTH_FIELD_PASSED",
+    "selected_strategy": null,
+    "later_strength_allocation_experiment": false,
+    "signed_margin_nonlinear_direction_or_period_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_without_feature_transform_rescue_then_select_one_non_nearby_question_after_durable_commit"
+}
