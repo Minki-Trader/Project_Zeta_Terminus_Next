@@ -471,3 +471,11 @@
 - Froze the sole causal field as `abs(entry price - initial stop) / entry price`. Market entries use OPEN price/stop; Passive uses its matched placement stop and actual fill price. Raw points, planned-risk utilization, signal strength, direction, symbol pooling and nonlinear transforms remain closed.
 - Every strategy is judged separately under pooled/period Spearman, fixed NARROW/WIDE tail return, stop-rate, three-period breadth and economic-coherence gates. At most one later entry-preserving strategy-specific Proxy question may survive; Unit 025 selects no response, stop change, size, hold, EA or Live candidate.
 - Declaration SHA-256 is `417E04F77CC512892B72FBB13774FFAB327388B2F1ED65BF7D2D0C2680188AB8`. Outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
+
+## STATE-0059 - 2026-08-26
+
+- Ran exactly the one frozen Unit 025 outcome aggregation. All six files retained their hashes and reconstruction passed at `2,233` lifecycles, `$407.0477` stressed net and `206` stops with zero duplicate, pending, fill, overlap, risk, geometry or close fault.
+- Every strategy failed the pooled absolute Spearman `0.20` gate; the largest was Passive at `-0.151351055`. Every strategy also failed the absolute pooled WIDE-minus-NARROW `0.10R` gate.
+- RC4 and Return were closest on tail return at `-0.096091992R` and `-0.093893368R`, but their pooled Spearman signs had only one matching period. Both paired lower WIDE return with much lower stop incidence, violating the frozen economic-coherence contract.
+- Applied the failure action without raw-point, risk-utilization, signal, direction, nonlinear, threshold, quantile, time or period rescue. Closed Unit 025 `NO_INITIAL_STOP_GEOMETRY_FIELD_PASSED`; no response question, candidate, seed or promotion survives.
+- Result/closure SHA-256 values are `C9E25471EB14CAF20EAC6C4B7F78D5C4C560A5D39A284A262ECA20A3F3733C82` / `4C44BCB5630B2BE6AA57387C867DF61563A215D99794F41F8E955D64BFD6BEF7`. Exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.

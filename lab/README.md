@@ -34,7 +34,7 @@
 - `research/cross-index-residual-response-v1/`: 닫힌 Unit 022 family; 두 번째 selected-symbol 지문 변경과 반복 rate 무결성 fault로 경제 판정 전 무효, latest·후속 prototype 없음
 - `research/same-strategy-outcome-memory-v1/`: 닫힌 Unit 023 source-free family; 2,233 lifecycle·2,209 인과쌍 무결성 통과 뒤 전 전략이 pooled `0.10R` 효과 게이트 미달, 반응 후보·변형 구제 없음
 - `research/passive-fill-age-value-v1/`: 닫힌 Unit 024 source-free family; 594 fill 무결성 통과 뒤 pooled `rho=-0.10138`, tail `-0.02895R`, stop 효과·일관성 미달로 반응 후보 없음
-- `research/initial-stop-geometry-value-v1/`: 활성 Unit 025 source-free family; 전 전략 초기 절대 stop폭/진입가가 stressed R·stop 부담을 가르는지 2,233건 단일 고정 집계, 결과 아직 없음
+- `research/initial-stop-geometry-value-v1/`: 닫힌 Unit 025 source-free family; 전 전략 pooled `|rho|<0.20`, tail `|효과|<0.10R`, RC4·Return 근접값도 기간·stop 일관성 미달로 후보 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

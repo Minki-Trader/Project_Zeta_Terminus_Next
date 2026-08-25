@@ -1,0 +1,44 @@
+{
+  "schema": "zeta-next-initial-stop-geometry-value-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "initial-stop-geometry-value-025",
+  "family": "initial-stop-geometry-value-v1",
+  "evidence": {
+    "declaration_sha256": "417E04F77CC512892B72FBB13774FFAB327388B2F1ED65BF7D2D0C2680188AB8",
+    "result_sha256": "C9E25471EB14CAF20EAC6C4B7F78D5C4C560A5D39A284A262ECA20A3F3733C82"
+  },
+  "closure": {
+    "verdict": "NO_INITIAL_STOP_GEOMETRY_FIELD_PASSED",
+    "integrity_gate_passed": true,
+    "successful_fixed_aggregations": 1,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.0477,
+    "stop_loss_exits": 206,
+    "passing_strategies": [],
+    "retained_response_question": null,
+    "retained_candidate": null
+  },
+  "reason": "Every strategy failed both the absolute pooled Spearman minimum of 0.20 and the absolute pooled WIDE-minus-NARROW stressed-R minimum of 0.10R. Passive had the largest absolute pooled Spearman at -0.151351055. RC4 and Return were closest on tail return at -0.096091992R and -0.093893368R, but their pooled Spearman signs and breadth failed and lower WIDE return accompanied fewer stops, violating economic coherence.",
+  "frozen_stop_rules": {
+    "raw_point_or_alternate_price_normalization": false,
+    "planned_risk_utilization_or_signal_combination": false,
+    "nonlinear_geometry_threshold_or_alternate_quantile": false,
+    "direction_symbol_pooling_time_or_period_rescue": false,
+    "response_stop_size_hold_protection_or_priority_selected": false,
+    "mql_or_tester_path_opened": false
+  },
+  "surfaces": {
+    "family_closed_and_source_free": true,
+    "forward_cxr2_baseline_unchanged": true,
+    "unit_024_not_used_reopened_or_transformed": true,
+    "native_signal_strength_family_not_reopened": true,
+    "live_source_package_settings_state_logs_untouched": true,
+    "live_release": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+    "live_terminal_pid": 13328,
+    "dashboard_pid": 4284,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_serial_frontier_question_without_reopening_or_transforming_unit_025"
+}
