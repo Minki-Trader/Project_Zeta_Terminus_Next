@@ -1,0 +1,53 @@
+{
+  "schema": "zeta-next-us100-directional-path-efficiency-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "us100-directional-path-efficiency-response-033",
+  "family": "us100-directional-path-efficiency-response-v1",
+  "evidence": {
+    "declaration_sha256": "4F342C63040C4A75DE9837B1359C30F877DA23F2D0EA7CA9B8B3482761A604BD",
+    "compile_receipt_sha256": "BBF367829D635585D6EB5AA9E8E178B1C25A676B83FA57A198E4DBAC10AC3A1B",
+    "result_sha256": "151644CF4831FEB1F93C9B090FD020F2D33ADEC9FC4D07989360FF66BC02B4E0"
+  },
+  "execution": {
+    "fixed_paths_opened": 1,
+    "valid_fixed_paths": 0,
+    "unopened_fixed_paths": 2,
+    "extra_paths": 0,
+    "economic_rows_read": 0,
+    "orders": 0,
+    "positions": 0
+  },
+  "integrity_boundary": {
+    "observer_normal_stop": true,
+    "observer_rate_tick_profit_faults": 0,
+    "resolved_rows_on_invalid_p1": 1127,
+    "visible_contract_spec_equal": true,
+    "in_scope_raw_tick_manifests_equal": true,
+    "detailed_agent_history_warning_lines": 0,
+    "html_report_labelled_100_percent_real_ticks": false,
+    "html_report_label": "99_PERCENT_REAL_TICKS",
+    "history_quality_contract_passed": false,
+    "rebuild_condition_present": false
+  },
+  "verdict": "INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "economic_interpretation": "NONE. The frozen 2024 path reached a clean observer stop but its Tester HTML reported only 99 percent real ticks, so neither direction reached frequency or economic aggregation.",
+  "closed_rescues": [
+    "accepting 99 percent as equivalent to the predeclared 100-percent HTML gate",
+    "using the clean detailed-log record to override the failed HTML gate",
+    "using the market-data rebuild allowance without an in-scope tick hash or visible-specification change",
+    "rerunning P1 after the integrity result",
+    "P2 and P3",
+    "reading the 1,127 preserved opportunity rows",
+    "changing the return segment count, nonzero-return minimum or efficiency threshold",
+    "changing the displacement or travel transform, price basis or bar period",
+    "changing continuity, overlap or horizon",
+    "direction, spread or period variants",
+    "directional-path-efficiency entry prototype"
+  ],
+  "retained_prototype_question": null,
+  "forward_baseline_changed": false,
+  "broker_or_account_query": false,
+  "live_surface": "UNTOUCHED",
+  "next": "after_commit_and_push_choose_one_fresh_serial_frontier_question_without_reusing_the_unread_unit_033_economics"
+}
