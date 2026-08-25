@@ -1,0 +1,132 @@
+{
+  "schema": "zeta-next-actual-live-position-economics-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FIXED_UNIT_020_AGGREGATION_COMPLETE",
+  "unit": "actual-live-position-economics-020",
+  "declaration_commit": "1ff024e",
+  "measurement_commit": "e1d14d8",
+  "population": {
+    "completed_economic_positions": 13,
+    "ids": "T03-T15",
+    "wins": 9,
+    "losses": 4,
+    "gross_wins_usd": 10.78,
+    "gross_losses_usd": -6.87,
+    "net_usd": 3.91,
+    "profit_factor": 1.569141194,
+    "project_net_including_the_two_excluded_operating_incidents_usd": 3.83,
+    "exclusions_applied_without_operating_analysis": true
+  },
+  "t15_measurement": {
+    "status": "PATH_FIELDS_UNAVAILABLE_PER_FROZEN_FAILURE_ACTION",
+    "tester_pid": 28068,
+    "configured_runs": 1,
+    "executed_runs": 1,
+    "additional_runs": 0,
+    "model_log": "generating based on real ticks",
+    "ticks_generated": 0,
+    "bars_generated": 0,
+    "probe_message": "T15_PATH_COPY_FAILED copied=0 error=0",
+    "output_row_count": 0,
+    "report_created": false,
+    "economic_outcome_created": false,
+    "orders_or_deals_created": 0,
+    "tester_log": {
+      "path": "lab/runtime/actual-live-position-economics-v1-portable/Tester/logs/20260826.log",
+      "bytes": 7700,
+      "sha256": "CEC075460284991512F0545799D8AAC2E35BB1B906BB96DB9E89D51ED5A5A09E"
+    },
+    "agent_log": {
+      "path": "lab/runtime/actual-live-position-economics-v1-portable/Tester/Agent-127.0.0.1-3000/logs/20260826.log",
+      "bytes": 6560,
+      "sha256": "26C56E98A114A15BC6BC8033EC36DD051AAD9B5C33D04B02D08B8B79B11124C1"
+    },
+    "terminal_log": {
+      "path": "lab/runtime/actual-live-position-economics-v1-portable/logs/20260826.log",
+      "bytes": 3392,
+      "sha256": "7DCBB22DB8862EFF0A789A4FC8F3CB3A218A4235DDBBDFA57069DAE9700B77AA"
+    },
+    "symbol_database_after_run": {
+      "selected_sha256": "4D007930BECECD361DD6B7F49995B49152CFB3CE57362C2213663E4DCA15AB69",
+      "selected_changed_from_pre_run": true,
+      "symbols_sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE",
+      "symbols_changed_from_pre_run": false
+    },
+    "judgment": "The only permitted path failed before producing ticks and also changed the terminal selection file. The declaration forbids a second replay or bar approximation, so T15 contributes its immutable realized loss but no MFE, MAE, peak-time or crossing field."
+  },
+  "position_path_metrics": [
+    {"id":"T03","strategy":"Passive","server_date":"2026-08-17","actual_net_usd":0.86,"mfe_usd":1.034,"giveback_usd":0.174,"peak_fraction":0.858695652,"qualified_profit_memory":false,"late_maturity_winner":true},
+    {"id":"T04","strategy":"Passive","server_date":"2026-08-18","actual_net_usd":0.39,"mfe_usd":0.449,"giveback_usd":0.059,"peak_fraction":0.958173077,"qualified_profit_memory":false,"late_maturity_winner":true},
+    {"id":"T05","strategy":"Cross","server_date":"2026-08-18","actual_net_usd":0.8,"mfe_usd":1.314,"giveback_usd":0.514,"peak_fraction":0.294375,"qualified_profit_memory":false,"late_maturity_winner":false},
+    {"id":"T06","strategy":"Passive","server_date":"2026-08-20","actual_net_usd":0.53,"mfe_usd":0.5305,"giveback_usd":0.0005,"peak_fraction":1.011111111,"qualified_profit_memory":false,"late_maturity_winner":true,"precision_note":"entry and exit were preserved to the minute while MFE retained seconds; the raw fraction is slightly above one and is unambiguously late-maturity"},
+    {"id":"T07","strategy":"Pressure","server_date":"2026-08-20","actual_net_usd":1.52,"mfe_usd":1.898,"giveback_usd":0.378,"peak_fraction":0.339513889,"qualified_profit_memory":false,"late_maturity_winner":false},
+    {"id":"T08","strategy":"Passive","server_date":"2026-08-20","actual_net_usd":1.6,"mfe_usd":2.0815,"giveback_usd":0.4815,"peak_fraction":0.503855721,"qualified_profit_memory":false,"late_maturity_winner":false},
+    {"id":"T09","strategy":"Return","server_date":"2026-08-20","actual_net_usd":-2.06,"mfe_usd":1.7835,"giveback_usd":3.8435,"peak_fraction":0.39426919,"qualified_profit_memory":true,"late_maturity_winner":false},
+    {"id":"T10","strategy":"Pressure","server_date":"2026-08-21","actual_net_usd":1.57,"mfe_usd":2.0435,"giveback_usd":0.4735,"peak_fraction":0.975694444,"qualified_profit_memory":false,"late_maturity_winner":true},
+    {"id":"T11","strategy":"Cross","server_date":"2026-08-21","actual_net_usd":-0.8,"mfe_usd":0.834,"giveback_usd":1.634,"peak_fraction":0.088125,"qualified_profit_memory":true,"late_maturity_winner":false},
+    {"id":"T12","strategy":"RC16","server_date":"2026-08-24","actual_net_usd":1.58,"mfe_usd":2.2175,"giveback_usd":0.6375,"peak_fraction":0.885694444,"qualified_profit_memory":false,"late_maturity_winner":true},
+    {"id":"T13","strategy":"Return","server_date":"2026-08-24","actual_net_usd":1.93,"mfe_usd":2.7335,"giveback_usd":0.8035,"peak_fraction":0.514351852,"qualified_profit_memory":false,"late_maturity_winner":false},
+    {"id":"T14","strategy":"Cross","server_date":"2026-08-24","actual_net_usd":-1.97,"mfe_usd":0.6915,"giveback_usd":2.6615,"peak_fraction":0.091784038,"qualified_profit_memory":true,"late_maturity_winner":false},
+    {"id":"T15","strategy":"Pressure","server_date":"2026-08-25","actual_net_usd":-2.04,"mfe_usd":null,"giveback_usd":null,"peak_fraction":null,"qualified_profit_memory":false,"late_maturity_winner":false,"path_status":"unavailable_without_rescue"}
+  ],
+  "burden_results": {
+    "INDIVIDUAL_PROFIT_MEMORY": {
+      "status": "PASSED",
+      "qualified_positions": ["T09", "T11", "T14"],
+      "count": 3,
+      "strategies": ["Return", "Cross"],
+      "server_dates": ["2026-08-20", "2026-08-21", "2026-08-24"],
+      "share_of_all_economic_losses_pct": 75.0,
+      "summed_mfe_to_final_giveback_usd": 8.139,
+      "requirements": {
+        "count_at_least_3": true,
+        "at_least_2_strategies": true,
+        "at_least_3_dates": true,
+        "at_least_75_pct_of_losses": true,
+        "giveback_at_least_8_usd": true
+      },
+      "interpretation": "A causally observable prior-profit state repeated across Return and Cross on three days and accounts for a minimum 8.139 USD of giveback. This selects only a broad historical observation of profit-state memory, not a close, breakeven, trail or threshold."
+    },
+    "COHORT_PEAK_MEMORY": {
+      "status": "PASSED_DESCRIPTIVE_RESELECTION_FORBIDDEN",
+      "conservative_independent_maximal_cohorts": ["C01", "C03", "C04"],
+      "server_dates": ["2026-08-20", "2026-08-21", "2026-08-24"],
+      "distinct_compositions": 3,
+      "peak_to_eventual_giveback_usd": {
+        "C01": 2.2985,
+        "C03": 1.16,
+        "C04": 3.2525,
+        "sum": 6.711
+      },
+      "interpretation": "The cohort burden is real, but the closed portfolio-exit-coordination-v1 matrix already rejected generic cohort-close and cohort-floor mechanisms. Unit 020 cannot select it again."
+    },
+    "DIRECTIONAL_UNLOCK": {
+      "status": "FAILED_DENSITY",
+      "qualifying_episode": "C02 on 2026-08-20",
+      "episode_count": 1,
+      "required_episode_count": 2,
+      "distinct_surviving_strategies": 1,
+      "required_distinct_surviving_strategies": 2,
+      "interpretation": "The one US30 opposite-leg unlock is economically legible but not repeated. No opposite-leg release observation or rule is retained."
+    }
+  },
+  "late_maturity_guard": {
+    "status": "PASSED",
+    "positions": ["T03", "T04", "T06", "T10", "T12"],
+    "count": 5,
+    "strategies": ["Passive", "Pressure", "RC16"],
+    "server_dates": ["2026-08-17", "2026-08-18", "2026-08-20", "2026-08-21", "2026-08-24"],
+    "share_of_economic_winners_pct": 55.5556,
+    "interpretation": "More than half of actual winners reached MFE only in the final quarter of native life. Any adjacent profit-memory observation must quantify late-development opportunity and cannot assume first-profit or immediate breakeven exit."
+  },
+  "selection": {
+    "retained_next_question": "actual-live-profit-memory-observation-021",
+    "retained_seed": "individual_profit_state_memory_under_late_maturity_guard",
+    "maximum_next_questions_respected": true,
+    "management_rule_selected": false,
+    "threshold_selected": false,
+    "cohort_mechanism_reopened": false,
+    "directional_unlock_retained": false,
+    "live_change_authorized": false
+  }
+}

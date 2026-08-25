@@ -1,0 +1,34 @@
+{
+  "schema": "zeta-next-actual-live-position-economics-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "actual-live-position-economics-020",
+  "verdict": "INDIVIDUAL_PROFIT_MEMORY_PASSED_RETAIN_ONE_BROAD_OBSERVATION_WITH_LATE_MATURITY_GUARD",
+  "evidence": {
+    "declaration_sha256": "6E83E55213EF6D21C20D3A3B76CDEAEAFA1A90114C9F595CA145C077CDC47D07",
+    "compile_receipt_sha256": "5635E0327B948526058E0FDE74883495C051DEE0E62836577A8168D9733FB3CC",
+    "result_sha256": "294003EE9BFFDD434A033D481B484B19528D7184E97D2565DC210FA6370A5562"
+  },
+  "closed_findings": [
+    "The 13 actual economic positions T03-T15 produced +3.91 USD with 9 wins and 4 losses after excluding two operating incidents.",
+    "T09, T11 and T14 each lost after reaching at least +0.50 USD. They span Return and Cross on three dates, are 75% of all economic losses and gave back 8.139 USD from MFE to final.",
+    "Five of nine actual winners reached MFE only in the final quarter of native life, so a profit-memory question must preserve late development rather than assume immediate profit closure.",
+    "Independent maximal all-positive cohorts also passed descriptively, but generic cohort rules remain closed by portfolio-exit-coordination-v1 and were not reselected.",
+    "Same-symbol opposite-leg unlock occurred only once and failed density.",
+    "The sole permitted T15 measurement produced zero ticks. Per the frozen failure action it was not rerun or approximated; T15 remained in realized loss counts with path fields unavailable."
+  ],
+  "retained": {
+    "next_unit": "actual-live-profit-memory-observation-021",
+    "question_class": "broad historical observation of causal profit-state memory under an explicit late-maturity opportunity guard",
+    "maximum": 1,
+    "management_rule": null,
+    "threshold": null,
+    "ea_candidate": null
+  },
+  "operating_hypothesis_opened": false,
+  "live_source_changed": false,
+  "live_runtime_changed": false,
+  "broker_state_queried": false,
+  "promotion": "none",
+  "next": "commit_and_push_unit_020_then_open_only_the_retained_unit_021_observation"
+}

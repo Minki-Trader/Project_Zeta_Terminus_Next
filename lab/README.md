@@ -29,7 +29,7 @@
 - `research/native-signal-strength-value-v1/`: 닫힌 6전략 native feature 정보가치 진단 family; 2,233 lifecycle 정확 복원, 모든 전략 pooled Spearman `|rho|<0.20`으로 strength allocation 후보 없음
 - `research/entry-time-crowding-value-v1/`: 닫힌 진입시점 포트폴리오 crowding 진단 family; 5개 dense 전략 효과 미미, RC4 관찰은 crowded 15건·폭 1기간으로 밀도 미달, 관리 후보 없음
 - `research/server-day-carry-burden-v1/`: 닫힌 서버 날짜 이월부담 진단 family; 2,233건 중 이월은 RC16 1건·RC4 2건뿐이고 나머지는 0건으로 밀도 미달, 날짜경계 관리 후보 없음
-- `research/actual-live-position-economics-v1/`: 활성 Unit 020 실포지션 경제경로 family; 운영 사건을 제외한 T03-T15만으로 세 사전고정 경로부담과 늦은 성숙 승자 제약을 판정하며 아직 결과·관리 후보 없음
+- `research/actual-live-position-economics-v1/`: 닫힌 Unit 020 실포지션 경제경로 family; T03-T15에서 개별 수익기억 부담과 늦은 성숙 승자 제약이 함께 통과해 넓은 역사 관찰 Unit 021 하나만 유지, 관리 규칙·임계값·Live 후보 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

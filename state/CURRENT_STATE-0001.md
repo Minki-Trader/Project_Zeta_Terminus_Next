@@ -375,3 +375,11 @@
 - MetaEditor build 6140 compiled at `0 errors / 0 warnings`. Source SHA-256 is `E88473F852C37C6874ED428E1B13553684E514E20E797F3E70EB3CF031EE69DC`; EX5 SHA-256 is `55F5F9DA25F716B8EBC06704E8E0B25BC10DE298304D4875785C3781CAD3D2F3`.
 - Created the dedicated Git-ignored `lab/runtime/actual-live-position-economics-v1-portable/` with independent terminal/configuration and copied US30 market/Tester cache only. It contains no Live path or cross-family source/include link.
 - The pre-run symbols database hashes are frozen in `ACTUAL_LIVE_POSITION_ECONOMICS_COMPILE_RECEIPT_V1.json`. No T15 replay or economic aggregation has run, and exact Live CXR2 PID `13328` and dashboard PID `4284` remain untouched.
+
+## STATE-0047 - 2026-08-26
+
+- Executed the only permitted T15 measurement path once. The Tester selected real-tick generation but produced `0 ticks / 0 bars`; the probe logged `CopyTicksRange copied=0`, wrote no row, generated no order/deal or economic result, and changed only the terminal's selected-symbol file while the full symbols database hash stayed fixed.
+- Applied the predeclared failure action: no second replay, cache repair or bar approximation. T15 remains the fourth economic loss at `-$2.04`, but its MFE, MAE and crossing fields are unavailable. The fixed T03-T14 paths were sufficient for the frozen gates.
+- Across T03-T15, the economic sample is 13 positions, 9 wins / 4 losses, `+$3.91`. T09/T11/T14 reached at least `+$0.50` before loss, span Return and Cross across three dates, represent 75% of losses and gave back `$8.139`; individual profit memory passed.
+- Five of nine winners reached MFE in the final quarter of native life, so the late-maturity preservation guard also passed. Independent maximal cohorts passed descriptively but are not reselected after the closed portfolio-coordination matrix; the single same-symbol unlock failed density.
+- Closed Unit 020 source-frozen with exactly one retained unopened Unit 021 question: observe causal profit-state memory broadly on frozen historical control paths while explicitly measuring late-development opportunity. No management action, threshold, candidate EA, operating hypothesis or Live authority opened.
