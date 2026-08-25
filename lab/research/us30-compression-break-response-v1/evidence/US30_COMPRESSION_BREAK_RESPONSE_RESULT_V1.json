@@ -1,0 +1,86 @@
+{
+  "schema": "zeta-next-us30-compression-break-response-result-v1",
+  "created_at_local": "2026-08-26",
+  "unit": "us30-compression-break-response-029",
+  "family": "us30-compression-break-response-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "6DF5C9B2C37215AB1C5D59817E16576A3B7BD09DF39461B8858343C91D57625B",
+    "compile_receipt_sha256": "0D297E686635D8E70B90E33AFA0E0A4A3DD0E8063E6513DAE159386597C45B85",
+    "source_commit": "7db1f7c",
+    "source_manifest_sha256": "C36FBC74172F484CD73510E0EC947C2EF8BD5A32B4687CEE255DCAD98DFF27BA",
+    "configuration_manifest_sha256": "BB9FDA49DF7C00445928565F2397EA63DDCCE735F8C57EC4985E7D60785E97D9",
+    "binary_sha256": "1C8884D230284731C7389B0D4B2202777C0D7ACCD09D3060980BBD975D49D3CF",
+    "pre_outcome_bases_us30_completed_months_sha256": "7CFDE993BB70AD1A32361F390F953DD6A624731E1B6429BA1B231CB5977A76F2",
+    "pre_outcome_tester_bases_us30_completed_months_sha256": "B119CFA0B8236187AF4CC1F398F1E2282E5CC93ED8276C98A30B3D245E854C2D"
+  },
+  "p1_integrity_path": {
+    "period": "P1_2022H2_2023",
+    "terminal_normal_stop": true,
+    "tester_normal_stop": true,
+    "tester_history_quality": "EVERY_TICK_GENERATION_USED_NOT_100_PERCENT_REAL_TICKS",
+    "history_quality_contract_passed": false,
+    "raw_tick_quality_telemetry": {
+      "period_minute_bars": 501132,
+      "real_ticks_absent_minutes": 878,
+      "real_ticks_discarded_minutes": 462,
+      "tick_volume_mismatch_minute_bars": 84,
+      "mismatched_tick_prices": 83648,
+      "mismatched_tick_price_minute_bars": 462
+    },
+    "html_report_created": false,
+    "html_report_contract_passed": false,
+    "observer": {
+      "eligible_continuous_days": 366,
+      "eligible_compression_evaluations": 12444,
+      "evaluations": 100263,
+      "triggers": 291,
+      "resolved": 291,
+      "unresolved": 0,
+      "rate_faults": 0,
+      "tick_faults": 0,
+      "profit_calc_faults": 0,
+      "visible_spec_start_end_equal_and_frozen": true
+    },
+    "required_bases_manifest_after": "7CFDE993BB70AD1A32361F390F953DD6A624731E1B6429BA1B231CB5977A76F2",
+    "required_tester_bases_manifest_after": "B119CFA0B8236187AF4CC1F398F1E2282E5CC93ED8276C98A30B3D245E854C2D",
+    "required_completed_month_manifests_unchanged": true,
+    "source_binary_and_configuration_unchanged": true,
+    "post_run_database_telemetry": {
+      "selected_sha256": "FA0197230BC53533806F43D3BC0F9B5F002AB7BFD6AD8E8E1A523E1C10B34313",
+      "symbols_sha256": "FCEFDE1D3B604A13196A9481E247CF9D80B0C4CBC7F27B58E3C574E31669AF18",
+      "invalidation_cause": false
+    },
+    "semantic_opportunity_rows_read": false,
+    "opportunity_rows_unread": 291,
+    "artifact_root": "lab/artifacts/backtests/us30-compression-break-response-v1/p1-integrity-invalid/",
+    "summary_sha256": "9702F3841C10768DD4B489FECBB103DA9345B5E4D651184DCE963DE119155602",
+    "opportunities_sha256_unread": "B9709DEFA2E8CC56015036DA06AB8EE7FEB38EAFD0858D3A93C997A5775BC68E",
+    "agent_log_sha256": "941843390FA132660255780E38CC30056CED9DD9131C36C7AA30047A5D9D5A44",
+    "terminal_log_sha256": "0EEDF21D999EF4E0893141BA9156DF27B83CF41DA978FF65FEE1A7E2639BAF78",
+    "action": "CLOSE_INVALID_WITHOUT_ECONOMIC_JUDGMENT"
+  },
+  "rebuild_allowance": {
+    "used": false,
+    "permitted_for_this_failure": false,
+    "reason": "The sole rebuild allowance applies only to a required completed-month tick hash or visible-specification change before semantic reading. Both invariants remained exact; the fixed source data instead failed the declared 100-percent-real-tick quality gate."
+  },
+  "unopened_paths": [
+    "P2_2024",
+    "P3_2025",
+    "P4_2026_COMPLETE_MONTHS"
+  ],
+  "aggregation": {
+    "opportunity_economics_read": false,
+    "continuation_metrics_calculated": false,
+    "reversion_metrics_calculated": false,
+    "frequency_gate_calculated": false,
+    "selection_gate_reached": false
+  },
+  "result": "INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "economic_interpretation": "NONE. Continuation and reversion were neither accepted nor rejected because the first fixed path failed the frozen market-data quality contract before aggregation.",
+  "retained_question": null,
+  "source_or_contract_repair": false,
+  "report_directory_retry": false,
+  "extra_path": false,
+  "live_surface": "UNTOUCHED"
+}

@@ -560,3 +560,11 @@
 - Created the Git-ignored dedicated `lab/runtime/us30-compression-break-response-v1-portable/` from the generic Lab cache. Origin and copy file IDs differ, sample hardlink lists contain one path, and filesystem link objects are zero; it has no Live or other-family runtime dependency.
 - Froze both required 48-file US30 2022-08 through 2026-07 completed-month manifests, selected/full symbol-database telemetry and visible US30 contract values. Compile receipt SHA-256 is `0D297E686635D8E70B90E33AFA0E0A4A3DD0E8063E6513DAE159386597C45B85`.
 - Exactly four serial P1-P4 trade-free paths may now run. No outcome has been read, and no Live process, broker state or Live surface was queried or changed.
+
+## STATE-0070 - 2026-08-26
+
+- Opened only frozen Unit 029 P1. Terminal and observer stopped normally; 100,263 bars were evaluated, 12,444 compression evaluations occurred and all 291 triggers resolved with zero unresolved, rate, tick or profit-calculation fault. Visible contract values and both completed-month tick manifests stayed exact.
+- The Tester data-quality boundary failed before any opportunity row was read. Across 501,132 minute bars it recorded 878 real-tick-absent minutes, 462 discarded-real-tick minutes, 84 volume-mismatch minute bars and 83,648 mismatched tick prices, then explicitly reported `every tick generation used` rather than 100% real ticks.
+- The configured nested HTML report directory was also absent and no report was created, but no retry was opened because the generated-tick telemetry already independently failed the frozen quality gate.
+- The sole rebuild allowance applies only to a required completed-month hash or visible-specification change; neither occurred. P2-P4, economic aggregation, direction selection, source/contract repair and every compression threshold/window/range/horizon variant remained unopened.
+- Closed Unit 029 `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`; continuation and reversion were neither accepted nor rejected. Result/closure SHA-256 values are `87411AB47075A28657D676F0143BB271F69AE16B552B4E084B4C34B4D8B5E720` / `A474035DCA5582D69104F899090088FCC73A336F3B1EA9646862E90B7B8CF05C`. No Live surface was changed.

@@ -1,0 +1,48 @@
+{
+  "schema": "zeta-next-us30-compression-break-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "us30-compression-break-response-029",
+  "family": "us30-compression-break-response-v1",
+  "evidence": {
+    "declaration_sha256": "6DF5C9B2C37215AB1C5D59817E16576A3B7BD09DF39461B8858343C91D57625B",
+    "compile_receipt_sha256": "0D297E686635D8E70B90E33AFA0E0A4A3DD0E8063E6513DAE159386597C45B85",
+    "result_sha256": "87411AB47075A28657D676F0143BB271F69AE16B552B4E084B4C34B4D8B5E720"
+  },
+  "execution": {
+    "integrity_paths_opened": 1,
+    "valid_fixed_paths": 0,
+    "unopened_fixed_paths": 3,
+    "extra_paths": 0,
+    "economic_rows_read": 0,
+    "orders": 0,
+    "positions": 0
+  },
+  "integrity_boundary": {
+    "observer_normal_stop": true,
+    "observer_rate_tick_profit_faults": 0,
+    "resolved_rows_on_invalid_p1": 291,
+    "visible_contract_spec_equal": true,
+    "completed_month_tick_manifests_equal": true,
+    "tester_used_every_tick_generation": true,
+    "tester_proved_100_percent_real_ticks": false,
+    "html_report_created": false,
+    "rebuild_condition_present": false
+  },
+  "verdict": "INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "economic_interpretation": "NONE. The fixed US30 source interval required generated ticks for absent and discarded real-tick minutes, so neither continuation nor reversion reached economic aggregation.",
+  "closed_rescues": [
+    "creating the report directory and rerunning P1",
+    "using the sole runtime rebuild allowance without a hash or specification change",
+    "accepting every-tick generation as 100-percent real ticks",
+    "P2 through P4",
+    "reading the 291 preserved opportunity rows",
+    "changing the compression threshold, windows, range, breakout, cooldown or horizon",
+    "direction, spread or period variants",
+    "compression-break entry prototype"
+  ],
+  "retained_prototype_question": null,
+  "forward_baseline_changed": false,
+  "live_surface": "UNTOUCHED",
+  "next": "after_commit_and_push_return_to_one_fresh_unrelated_serial_frontier_question_without_using_unit_029_as_economic_evidence"
+}
