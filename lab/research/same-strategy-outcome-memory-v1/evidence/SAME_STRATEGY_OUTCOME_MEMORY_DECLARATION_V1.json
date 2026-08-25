@@ -1,0 +1,108 @@
+{
+  "schema": "zeta-next-same-strategy-outcome-memory-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_023_OUTCOME_AGGREGATION",
+  "unit": "same-strategy-outcome-memory-023",
+  "family": "same-strategy-outcome-memory-v1",
+  "question": "Does the immediately previous closed lifecycle of any one strategy create a causal positive-versus-nonpositive outcome-memory state that changes the next lifecycle's stressed return and stop-loss incidence broadly and materially enough to justify one later strategy-specific, entry-preserving response question?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "unit_022_observer_or_output_used": false,
+    "units_020_021_reopened": false,
+    "operating_incidents_or_availability": "excluded_not_studied",
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "periods": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"],
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a state version, not an event primary key.",
+    "ordering": "Within each period order by parsed server_time, numeric state_sequence, fixed event precedence and source path plus source line.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return lifecycle and supplies planned_risk from detail.",
+    "passive_birth": "PASSIVE_PLACE stores planned risk; only PASSIVE_FILL begins an admitted Passive lifecycle.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends one active lifecycle; value_b is native stressed net USD and detail reason=DEAL_REASON_SL marks a stop exit.",
+    "stressed_r": "close value_b divided by positive birth planned_risk.",
+    "memory_scope": "Within each strategy and period only. The first lifecycle of every strategy-period is excluded because fresh Tester periods share no causal prior state.",
+    "previous_state": {
+      "PREV_POSITIVE": "immediately previous same-strategy lifecycle stressed_r is greater than zero",
+      "PREV_NONPOSITIVE": "immediately previous same-strategy lifecycle stressed_r is at most zero"
+    },
+    "current_outcomes": ["mean stressed_r", "stop_loss incidence"],
+    "expected_pairs": 2209
+  },
+  "fixed_integrity_gate": [
+    "All six files retain the listed byte lengths and hashes and contain zero exact duplicate full rows.",
+    "Every admitted lifecycle has one positive planned risk and exactly one CLOSE or EXTERNAL_CLOSE; no strategy overlaps itself.",
+    "Reconstruct exactly 2,233 lifecycles: RC16 272, RC4 206, Cross 805, Pressure 118, Return 238 and Passive 594.",
+    "Stressed net sums exactly to 407.0477 USD and stop exits exactly to 206.",
+    "Exclude exactly 24 first strategy-period lifecycles and form exactly 2,209 causal previous-to-current pairs.",
+    "Every pair's previous close server time is strictly earlier than or equal to the current birth time, with fixed equal-time close-before-birth precedence."
+  ],
+  "fixed_information_gate": {
+    "apply_separately_to": ["RC16", "RC4", "Cross", "Pressure", "Return", "Passive"],
+    "density": [
+      "At least 40 PREV_POSITIVE and 40 PREV_NONPOSITIVE pairs pooled.",
+      "Both states have at least eight pairs in at least three periods.",
+      "Both states are each at least 15 percent of the strategy's pooled pairs."
+    ],
+    "economic_effect": [
+      "Absolute pooled PREV_NONPOSITIVE-minus-PREV_POSITIVE mean current stressed_r is at least 0.10R.",
+      "At least three of four period mean differences share the pooled sign, considering only periods with at least eight pairs in both states."
+    ],
+    "stop_coherence": [
+      "Absolute pooled PREV_NONPOSITIVE-minus-PREV_POSITIVE stop-rate difference is at least 0.05.",
+      "At least three eligible periods share the pooled stop-rate sign.",
+      "The stressed-r and stop-rate effects are economically coherent: lower after-nonpositive stressed_r requires higher stop incidence, or higher stressed_r requires lower stop incidence."
+    ],
+    "selection": "Select at most one passing strategy by larger absolute pooled stressed-r difference, then larger absolute stop-rate difference, then more same-sign economic periods, then more pooled pairs, then lexicographic strategy name.",
+    "passing_action": "Retain one later strategy-specific, entry-preserving outcome-memory response Proxy question. Unit 023 selects no response type, size ratio, hold change, threshold, EA or Live candidate; any later Proxy must keep every base opportunity eligible at no less than base minimum lot and compare the whole six-strategy portfolio.",
+    "failure_action": "Close with no outcome-memory response question. Do not rescue with previous-R magnitude, streak length, time decay, cross-strategy memory, pooled strategy rule, direction, symbol, weekday or period exception."
+  },
+  "evidence_limit": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "previous_state_available_at_current_birth": true,
+    "association_not_mechanism": true,
+    "promotion_evidence": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before reading pair outcomes.",
+    "Run exactly one aggregation over the six frozen files.",
+    "Do not inspect a second previous state, alternate sign threshold or subgroup inside Unit 023.",
+    "Do not run MT5, add MQL, create a reusable analysis CLI or touch Live.",
+    "Do not reopen or repair Unit 022."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_reconstruct_the_single_fixed_previous_outcome_pass"
+}

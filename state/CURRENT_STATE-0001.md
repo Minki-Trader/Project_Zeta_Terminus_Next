@@ -431,3 +431,11 @@
 - Applied both stop rules without reinterpretation: no second clean rerun, source/contract repair, isolated-latest path, output aggregation, threshold/horizon/session/symbol rescue or economic direction judgment opened.
 - Closed Unit 022 `INVALID_SECOND_FINGERPRINT_AND_RATE_INTEGRITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Neither reversion nor continuation was economically rejected; no Unit 023 prototype or retained seed exists.
 - Result/closure SHA-256 values are `C8D3CCE86CC68CC04CF2A42AEAC1EF48294C58E51E61B8F7EC94E023ABDEA3E4` / `F0968E64209F3B2A006A33F76AA33ED0EE158F783176F86EC41A922131921F7E`. Exact CXR2 Live PID `13328`, dashboard PID `4284`, baseline and actual-position bundle remain untouched.
+
+## STATE-0054 - 2026-08-26
+
+- After Unit 022's durable invalid close, opened only the non-nearby source-free Unit 023 `same-strategy-outcome-memory-v1`. It does not use or repair Unit 022 and does not reopen the actual-position bundle.
+- Before pair outcomes, froze the six existing CXR2-equivalent event files at six exact hashes and `5,692,770` bytes. The pass must reconstruct `2,233` lifecycles, `$407.0477` stressed net and `206` stop exits, exclude the first lifecycle in each of 24 strategy-period streams and form exactly `2,209` causal pairs.
+- The only state is whether the immediately previous same-strategy lifecycle closed at positive or nonpositive stressed R. The only current outcomes are mean stressed R and stop-loss incidence; every strategy is judged separately under fixed density, magnitude, temporal-breadth and economic-coherence gates.
+- At most one later strategy-specific entry-preserving Proxy question may survive, without selecting an action, size ratio, hold change, threshold or EA. No magnitude/streak/decay/cross-strategy/subgroup rescue, MQL, Tester or Live action is allowed.
+- Declaration SHA-256 is `2349A370E99BC770D305726594C8F91CDED10EA5D2D0160C99BADA14CCC8F1BA`; outcomes remain unopened and Live remains untouched.
