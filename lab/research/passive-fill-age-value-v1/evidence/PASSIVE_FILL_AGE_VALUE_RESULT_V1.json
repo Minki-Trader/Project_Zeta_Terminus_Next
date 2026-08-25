@@ -1,0 +1,143 @@
+{
+  "schema": "zeta-next-passive-fill-age-value-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "passive-fill-age-value-024",
+  "family": "passive-fill-age-value-v1",
+  "declaration": {
+    "path": "lab/research/passive-fill-age-value-v1/evidence/PASSIVE_FILL_AGE_VALUE_DECLARATION_V1.json",
+    "commit": "74235f0",
+    "sha256": "C4707320692E9DDE261B294E3778D6953277B70AFC2403B453F7030365D8AF0F"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_invocations": 0,
+    "alternate_age_definition_threshold_quantile_or_rescue": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "new_market_outcomes": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest_sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42",
+    "exact_duplicate_full_rows": 0,
+    "pending_overlap": 0,
+    "fill_without_pending": 0,
+    "expiration_without_pending": 0,
+    "position_overlap": 0,
+    "close_without_active": 0,
+    "bad_expiration_risk_or_age": 0,
+    "pending_or_active_at_period_end": 0,
+    "placements": 707,
+    "fills": 594,
+    "expirations": 113,
+    "closed_lifecycles": 594,
+    "stressed_net_usd": 23.7622,
+    "stop_loss_exits": 26,
+    "periods": [
+      {"period":"P1_2022H2_2023","placements":251,"fills":213,"expirations":38,"closed":213,"pending_life_seconds_min_max":"3596/3600"},
+      {"period":"P2_2024","placements":178,"fills":159,"expirations":19,"closed":159,"pending_life_seconds_min_max":"3587/3600"},
+      {"period":"P3_2025","placements":159,"fills":130,"expirations":29,"closed":130,"pending_life_seconds_min_max":"3589/3600"},
+      {"period":"P4_2026_YTD","placements":119,"fills":92,"expirations":27,"closed":92,"pending_life_seconds_min_max":"3597/3600"}
+    ]
+  },
+  "pooled": {
+    "fills": 594,
+    "mean_stressed_r": 0.008378568,
+    "spearman_fill_age_fraction_to_stressed_r": -0.101379276,
+    "early_tail_n": 197,
+    "late_tail_n": 197,
+    "early_mean_stressed_r": 0.033563312,
+    "late_mean_stressed_r": 0.004618239,
+    "late_minus_early_stressed_r": -0.028945073,
+    "early_stop_rate": 0.040609137,
+    "late_stop_rate": 0.025380711,
+    "late_minus_early_stop_rate": -0.015228426
+  },
+  "period_results": [
+    {
+      "period": "P1_2022H2_2023",
+      "fills": 213,
+      "tail_each": 71,
+      "fill_age_fraction_min_median_max": "0/0.054444444/0.934722222",
+      "spearman": 0.030564771,
+      "early_mean_r": 0.017376181,
+      "late_mean_r": 0.025860260,
+      "late_minus_early_r": 0.008484078,
+      "early_stop_rate": 0.014084507,
+      "late_stop_rate": 0.000000000,
+      "late_minus_early_stop_rate": -0.014084507
+    },
+    {
+      "period": "P2_2024",
+      "fills": 159,
+      "tail_each": 53,
+      "fill_age_fraction_min_median_max": "0/0.033333333/0.985",
+      "spearman": -0.126895817,
+      "early_mean_r": 0.031998287,
+      "late_mean_r": 0.002339441,
+      "late_minus_early_r": -0.029658846,
+      "early_stop_rate": 0.037735849,
+      "late_stop_rate": 0.037735849,
+      "late_minus_early_stop_rate": 0.000000000
+    },
+    {
+      "period": "P3_2025",
+      "fills": 130,
+      "tail_each": 43,
+      "fill_age_fraction_min_median_max": "0/0.038055556/0.938611111",
+      "spearman": -0.108413563,
+      "early_mean_r": 0.048091366,
+      "late_mean_r": -0.010392392,
+      "late_minus_early_r": -0.058483758,
+      "early_stop_rate": 0.069767442,
+      "late_stop_rate": 0.046511628,
+      "late_minus_early_stop_rate": -0.023255814
+    },
+    {
+      "period": "P4_2026_YTD",
+      "fills": 92,
+      "tail_each": 30,
+      "fill_age_fraction_min_median_max": "0.000833333/0.071805556/0.831111111",
+      "spearman": -0.204441156,
+      "early_mean_r": 0.053814186,
+      "late_mean_r": -0.020113432,
+      "late_minus_early_r": -0.073927618,
+      "early_stop_rate": 0.066666667,
+      "late_stop_rate": 0.033333333,
+      "late_minus_early_stop_rate": -0.033333333
+    }
+  ],
+  "breadth": {
+    "spearman_same_sign_periods": 3,
+    "tail_r_same_sign_periods": 3,
+    "tail_stop_same_sign_periods": 3
+  },
+  "fixed_gate_application": {
+    "density": true,
+    "spearman_magnitude": false,
+    "spearman_breadth": true,
+    "tail_r_magnitude": false,
+    "tail_r_breadth": true,
+    "tail_stop_magnitude": false,
+    "tail_stop_breadth": true,
+    "economic_coherence": false,
+    "passed": false
+  },
+  "interpretation": {
+    "observation": "Longer fill age had a negative stressed-R direction in P2, P3 and P4, but the pooled monotonic and tail magnitudes were far below their frozen gates.",
+    "stop_relation": "The late tail also had fewer stop exits pooled. Lower stressed R together with lower stop incidence is not the required coherent loss-risk state.",
+    "consequence": "Do not open a Passive fill-age-conditioned protection, hold, size, cancellation or post-fill response experiment from this field.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "verdict": "NO_PASSIVE_FILL_AGE_FIELD_PASSED",
+    "later_entry_preserving_post_fill_proxy_question": false,
+    "retained_candidate": null,
+    "alternate_age_or_subgroup_rescue": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_without_fill_age_transform_or_rescue_then_select_one_non_nearby_serial_frontier_question_after_durable_commit"
+}

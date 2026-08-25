@@ -455,3 +455,11 @@
 - Froze the sole causal state as the fraction of declared pending life consumed at fill. There is no optimized minute threshold: fixed within-period EARLY/LATE thirds and continuous Spearman effects are the only views, with tail counts `71/53/43/30` per group.
 - A later question survives only if fill age reaches pooled `|rho| >= 0.20`, at least `0.10R` tail separation, at least `0.05` stop-rate separation, three-period breadth and coherent economics. Unit 024 itself selects no response, management, protection, hold, size, EA or Live candidate; a later Proxy must preserve every base fill and compare the whole six-strategy portfolio.
 - Declaration SHA-256 is `C4707320692E9DDE261B294E3778D6953277B70AFC2403B453F7030365D8AF0F`. Outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
+
+## STATE-0057 - 2026-08-26
+
+- Ran exactly the one frozen Unit 024 aggregation with no failed invocation or alternate age view. Input hashes stayed exact and reconstruction passed at `707` placements, `594` fills, `113` expirations, `594` closes, `$23.7622` stressed net and `26` stops with zero duplicate, pending, overlap, risk, age or close fault.
+- Fill age had a negative stressed-R direction in P2, P3 and P4, but pooled Spearman was only `-0.101379276` versus the required `0.20`; pooled LATE-minus-EARLY return was only `-0.028945073R` versus `0.10R`.
+- Pooled LATE-minus-EARLY stop-rate difference was only `-0.015228426` versus `0.05`. It was also economically incoherent with the lower late-fill return because late fills stopped less often rather than more often.
+- Applied the frozen failure action without minute-threshold, quantile, nonlinear-age, fill-displacement, direction, time, incumbent or subgroup rescue. Closed Unit 024 `NO_PASSIVE_FILL_AGE_FIELD_PASSED`; no response question, candidate, seed or promotion survives.
+- Result/closure SHA-256 values are `E64F2D0C55FCB10DCFD5D6DB3FADACB2174A7685B457378B1560175962D7A256` / `1D24BF799AD05CFE3B59DADB56819A350AF78227CE79E67A4930DAF92943ED0D`. Exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.

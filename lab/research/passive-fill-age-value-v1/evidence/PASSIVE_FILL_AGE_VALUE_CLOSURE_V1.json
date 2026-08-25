@@ -1,0 +1,45 @@
+{
+  "schema": "zeta-next-passive-fill-age-value-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "passive-fill-age-value-024",
+  "family": "passive-fill-age-value-v1",
+  "evidence": {
+    "declaration_sha256": "C4707320692E9DDE261B294E3778D6953277B70AFC2403B453F7030365D8AF0F",
+    "result_sha256": "E64F2D0C55FCB10DCFD5D6DB3FADACB2174A7685B457378B1560175962D7A256"
+  },
+  "closure": {
+    "verdict": "NO_PASSIVE_FILL_AGE_FIELD_PASSED",
+    "integrity_gate_passed": true,
+    "successful_fixed_aggregations": 1,
+    "placements": 707,
+    "fills": 594,
+    "expirations": 113,
+    "stressed_net_usd": 23.7622,
+    "stop_loss_exits": 26,
+    "retained_response_question": null,
+    "retained_candidate": null
+  },
+  "reason": "Fill-age direction was negative in three periods, but pooled Spearman was only -0.101379276 against 0.20 and pooled LATE-minus-EARLY stressed R was only -0.028945073R against 0.10R. The pooled stop-rate effect was -0.015228426 against 0.05 and was economically incoherent with the lower late-fill return because late fills stopped less often, not more often.",
+  "frozen_stop_rules": {
+    "fixed_minute_threshold_or_alternate_quantile": false,
+    "nonlinear_age_or_fill_displacement": false,
+    "direction_session_weekday_month_or_period_rescue": false,
+    "incumbent_or_subgroup_rescue": false,
+    "post_fill_response_management_protection_or_size_selected": false,
+    "mql_or_tester_path_opened": false
+  },
+  "surfaces": {
+    "family_closed_and_source_free": true,
+    "forward_cxr2_baseline_unchanged": true,
+    "unit_023_not_used_reopened_or_transformed": true,
+    "unit_014_expiration_depth_not_reopened": true,
+    "live_source_package_settings_state_logs_untouched": true,
+    "live_release": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+    "live_terminal_pid": 13328,
+    "dashboard_pid": 4284,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_select_one_non_nearby_serial_frontier_question_without_reopening_or_transforming_unit_024"
+}
