@@ -649,3 +649,11 @@
 - The HTML report nevertheless records `99% 실제 틱`, not the frozen per-path requirement of 100%. This independently fails P1 integrity and cannot be overridden by the clean detailed suffix or repaired with the market-data rebuild allowance because no required tick hash or visible specification changed.
 - Preserved and hash-pinned the report, summary, cumulative logs and all 1,529 opportunity rows without semantically reading those rows. P2-P4, direction/frequency/economic aggregation, rerun, threshold or structure rescue and every prototype remained unopened.
 - Closed `INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Result/closure SHA-256 values are `5BECB064D04602E0306291B097F3AF838478EA3699D42C85DDE6AD49DC53E483` / `865E4CB379075EC0C47E164E5E4FF35A5395D56DFD9976CDE2A8E0E4FA995C9E`. No broker/account state or Live surface was queried or changed.
+
+## STATE-0081 - 2026-08-26
+
+- After Unit 032's durable invalid close and push, opened only the unrelated Unit 033 `us100-directional-path-efficiency-response-v1`. It does not use or repair Unit 032 source, sign-energy state, 1,529 unread rows or economics.
+- Before source or outcome, froze one completed-US100-M15 path-geometry state: eight exactly continuous log-return segments, at least six nonzero returns, signed displacement divided by total absolute return travel and an absolute efficiency trigger of `0.70`.
+- One trade-free observation at a time resolves after four subsequent market-bar advances. Continuation and reversion are counterfactually priced at `0.01` with actual bid/ask and exactly one additional entry and exit spread.
+- Exactly three fresh build-6140 paths are allowed: full 2024, full 2025 and 2026 through July. Each must independently pass HTML 100% and zero detailed generation-warning gates; the prior full-period evidence is feasibility only and cannot establish a new path's validity.
+- A later standalone question survives only if one direction passes fixed integrity, frequency, double-spread net, PF, positive-path, net/DD and concentration gates. Declaration SHA-256 is `4F342C63040C4A75DE9837B1359C30F877DA23F2D0EA7CA9B8B3482761A604BD`; implementation and outcomes remain unopened and Live remains untouched.
