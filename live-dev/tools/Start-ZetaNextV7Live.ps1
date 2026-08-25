@@ -57,6 +57,13 @@ try {
     throw
 }
 
+$postStopDeadline = (Get-Date).AddSeconds(5)
+do {
+    $postStopInventory = Get-ZetaNextTerminalInventory -Contract $contract
+    if (@($postStopInventory.ExactLive).Count -eq 0) { break }
+    Start-Sleep -Milliseconds 100
+} while ((Get-Date) -lt $postStopDeadline)
+
 $null = Assert-ZetaNextExclusiveTerminalBoundary -Contract $contract
 $liveMode = Write-ZetaNextRuntimeMode -Contract $contract -Receipt $receipt -Mode Live
 $liveProcess = Start-ZetaNextRuntime -Contract $contract -RuntimeMode $liveMode
