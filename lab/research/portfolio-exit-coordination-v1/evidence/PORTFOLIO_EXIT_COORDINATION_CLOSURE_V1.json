@@ -1,0 +1,94 @@
+{
+  "schema": "zeta-next-portfolio-exit-coordination-closure-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED",
+  "research_family": {
+    "id": "portfolio-exit-coordination-v1",
+    "korean_title": "동시수익 보존·청산조정 연구",
+    "owner_root": "lab/research/portfolio-exit-coordination-v1/"
+  },
+  "verdict": "NO_MECHANISM_PASSED_RETAIN_FROZEN_V7",
+  "evidence": {
+    "declaration": {
+      "path": "lab/research/portfolio-exit-coordination-v1/evidence/PORTFOLIO_EXIT_COORDINATION_DECLARATION_V1.json",
+      "sha256": "94906550F35998C0A9D59021404E6B671A4B7F46A6CC8B42979DDB6801B089C2"
+    },
+    "compile_receipt": {
+      "path": "lab/research/portfolio-exit-coordination-v1/evidence/PORTFOLIO_EXIT_COORDINATION_COMPILE_RECEIPT_V1.json",
+      "sha256": "E96917319AAECD005422161E86F4221CD7007F37F5CDF0D647A45A485B3173F3"
+    },
+    "selection": {
+      "path": "lab/research/portfolio-exit-coordination-v1/evidence/PORTFOLIO_EXIT_COORDINATION_SELECTION_V1.json",
+      "sha256": "991FBCB8CE3B81EA14C0FC04EDF5B75B4E9BE5E7523835B8D4EE3938A7A3F88A"
+    }
+  },
+  "execution_integrity": {
+    "serial_real_tick_configurations": 16,
+    "fresh_deposit_usd_per_run": 100.0,
+    "metaeditor_build": 6140,
+    "history_quality": "100% real ticks",
+    "all_normal_stop": true,
+    "all_report_snapshot_and_component_totals_reconciled": true,
+    "all_safety_persistence_broker_foreign_protection_and_coordination_close_faults_zero": true
+  },
+  "pooled_result": {
+    "CONTROL": {
+      "actual_net_usd": 444.19,
+      "stressed_net_usd": 407.0477,
+      "stressed_max_closed_drawdown_sum_usd": 96.1393,
+      "stressed_net_per_drawdown_sum": 4.23393659
+    },
+    "FIRST_NATURAL_EXIT_POSITIVE_COHORT": {
+      "actual_net_usd": 343.93,
+      "stressed_net_usd": 306.8285,
+      "stressed_delta_vs_control_usd": -100.2192,
+      "stressed_max_closed_drawdown_sum_usd": 88.3285,
+      "trigger_count": 394,
+      "period_wins_or_ties": 0,
+      "passed": false
+    },
+    "ALL_GREEN_ZERO_FLOOR": {
+      "actual_net_usd": 319.62,
+      "stressed_net_usd": 280.671,
+      "stressed_delta_vs_control_usd": -126.3767,
+      "stressed_max_closed_drawdown_sum_usd": 80.847,
+      "trigger_count": 281,
+      "period_wins_or_ties": 0,
+      "p1_drawdown_over_115_percent_control": true,
+      "passed": false
+    },
+    "ALL_GREEN_QUARTER_R_HALF_PEAK": {
+      "actual_net_usd": 424.74,
+      "stressed_net_usd": 387.2135,
+      "stressed_delta_vs_control_usd": -19.8342,
+      "stressed_max_closed_drawdown_sum_usd": 93.694,
+      "trigger_count": 66,
+      "period_wins_or_ties": 1,
+      "passed": false
+    }
+  },
+  "conclusion": {
+    "motivation_confirmed": "The observed simultaneous-profit giveback is real. On the 2026-08-20 replay, closing the positive three-position cohort at the first natural exit preserved 2.89 gross dollars versus the control cohort's eventual 0.84 gross dollars.",
+    "generalization_rejected": "The same first-exit rule triggered 394 times and lost 100.2192 stressed dollars versus control. The two all-green rules also reduced pooled stressed net and risk efficiency; no candidate met breadth or pooled-net gates.",
+    "retained_economics": "Frozen CP2 V7 independent exits remain unchanged.",
+    "new_hypothesis_opened": false
+  },
+  "stop_rule_application": {
+    "selected_candidate": null,
+    "seventeenth_rescue_path_opened": false,
+    "hybrid_created": false,
+    "threshold_adjusted_after_outcome": false,
+    "strategy_symbol_hour_or_date_exception_created": false,
+    "successor_family_opened": false
+  },
+  "authority": {
+    "lab_family_frozen": true,
+    "live_source_or_include_changed": false,
+    "live_binary_or_set_changed": false,
+    "live_state_or_process_changed": false,
+    "live_promotion_authorized": false,
+    "locally_observed_live_terminal_pid": 21548,
+    "lab_terminal_remaining_after_runs": false
+  },
+  "next": "none_opened_waiting_for_user"
+}

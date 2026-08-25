@@ -1,0 +1,477 @@
+{
+  "schema": "zeta-next-portfolio-exit-coordination-selection-v1",
+  "created_at_local": "2026-08-25",
+  "status": "SELECTION_COMPLETE",
+  "research_family": {
+    "id": "portfolio-exit-coordination-v1",
+    "korean_title": "동시수익 보존·청산조정 연구",
+    "tester_only": true,
+    "outcomes_consumed": true
+  },
+  "frozen_inputs": {
+    "declaration": {
+      "path": "lab/research/portfolio-exit-coordination-v1/evidence/PORTFOLIO_EXIT_COORDINATION_DECLARATION_V1.json",
+      "sha256": "94906550F35998C0A9D59021404E6B671A4B7F46A6CC8B42979DDB6801B089C2"
+    },
+    "compile_receipt": {
+      "path": "lab/research/portfolio-exit-coordination-v1/evidence/PORTFOLIO_EXIT_COORDINATION_COMPILE_RECEIPT_V1.json",
+      "sha256": "E96917319AAECD005422161E86F4221CD7007F37F5CDF0D647A45A485B3173F3"
+    },
+    "source_manifest_sha256": "3F5DABD3EF52D9F35BE3178FFD13DCC19D87B9502957A8EEFDDD8C87C9380000",
+    "config_manifest_sha256": "9DCDA371538636C3BE7620CAD7DAB8FA7CD931652A9297506E3F3C357755CD75"
+  },
+  "execution": {
+    "platform": "MetaTrader 5 strategy tester build 6140",
+    "model": "100% real ticks",
+    "fresh_deposit_usd_per_run": 100.0,
+    "serial_only": true,
+    "declared_run_count": 16,
+    "completed_run_count": 16,
+    "all_normal_stop": true,
+    "all_report_net_trade_deal_totals_reconciled": true,
+    "all_snapshot_component_stressed_totals_reconciled": true,
+    "all_safety_persistence_broker_foreign_protection_faults_zero": true,
+    "all_coordination_close_failures_zero": true,
+    "long_event_ring_note": "The fixed 4096-row event ring wrapped in some long P1 runs. Complete MT5 reports, final current/component snapshots and UTF-16 agent logs were retained and reconciled; no gate depends on a truncated event-ring count.",
+    "operational_report_capture_note": "P4 CONTROL first completed normally before the nested report output directory existed. The identical frozen INI was rerun once solely to preserve its MT5 report after creating that directory; this was not a seventeenth economic configuration, parameter change or rescue path."
+  },
+  "artifact_manifests": {
+    "algorithm": "Sort root-relative paths ordinally, uppercase SHA-256 each file, join path|hash with LF, then SHA-256 UTF-8.",
+    "mt5_html_reports": {
+      "root": "lab/artifacts/backtests/portfolio-exit-coordination-v1/portfolio-exit-coordination-v1/",
+      "file_count": 16,
+      "sha256": "76B090089A57CD03B07D391BDAC81DE39176023A995CE4BF84E0C091D27E6842"
+    },
+    "all_mt5_report_files": {
+      "root": "lab/artifacts/backtests/portfolio-exit-coordination-v1/portfolio-exit-coordination-v1/",
+      "file_count": 80,
+      "sha256": "2CFDEC657FDA7B621D321EC85C060F92914D9A667CEAE281AD83620997D8C8DC"
+    },
+    "preserved_ea_files": {
+      "root": "lab/artifacts/ea-files/portfolio-exit-coordination-v1/",
+      "file_count": 123,
+      "sha256": "C34E632D500D278A5CBAE12EE9DBBD6B2DD35B016ED641580D3071DA0A7A2052"
+    }
+  },
+  "period_results": [
+    {
+      "period": "P1_2022H2_2023",
+      "from": "2022-08-01",
+      "to_exclusive": "2024-01-01",
+      "results": [
+        {
+          "policy": "CONTROL",
+          "actual_net_usd": 163.78,
+          "stressed_net_usd": 148.8735,
+          "stressed_max_closed_drawdown_usd": 18.779,
+          "profit_factor": 1.51,
+          "trades": 769,
+          "deals": 1538,
+          "triggers": 0,
+          "requested_closes": 0,
+          "successful_closes": 0,
+          "arms": 0,
+          "report_sha256": "57F4DF34F66D3F492A3BE3EE6F92534A57F31435EC64565E6EE2D44446192E5C",
+          "raw_manifest_sha256": "F6C80FC053D22447BA0A4112144E3DC50254DE78DC654FE72DC6C76D55B1655C"
+        },
+        {
+          "policy": "FIRST_NATURAL_EXIT_POSITIVE_COHORT",
+          "actual_net_usd": 130.18,
+          "stressed_net_usd": 115.186,
+          "stressed_max_closed_drawdown_usd": 19.172,
+          "profit_factor": 1.43,
+          "trades": 772,
+          "deals": 1544,
+          "triggers": 140,
+          "requested_closes": 320,
+          "successful_closes": 320,
+          "arms": 0,
+          "report_sha256": "5CF411110B126B9519E19BA21B29D88917AC74F1ECB76A397E5CA0B59AB0E913",
+          "raw_manifest_sha256": "2C72ACF55D3075027F0D337F34ACCBB48AAEF11084F20AC2FCFF6EF21302AF27"
+        },
+        {
+          "policy": "ALL_GREEN_ZERO_FLOOR",
+          "actual_net_usd": 96.49,
+          "stressed_net_usd": 80.453,
+          "stressed_max_closed_drawdown_usd": 26.3225,
+          "profit_factor": 1.34,
+          "trades": 779,
+          "deals": 1558,
+          "triggers": 92,
+          "requested_closes": 192,
+          "successful_closes": 192,
+          "arms": 193,
+          "report_sha256": "C2FEE3E2FA05A60602E5B7DCC6DB90075B80565480CC9731B2B706006CAB218C",
+          "raw_manifest_sha256": "9F98C4970C974A9E845E63E933F9450AE7B55003D87EB0D49932A609EFA69D3F"
+        },
+        {
+          "policy": "ALL_GREEN_QUARTER_R_HALF_PEAK",
+          "actual_net_usd": 144.57,
+          "stressed_net_usd": 129.736,
+          "stressed_max_closed_drawdown_usd": 19.897,
+          "profit_factor": 1.46,
+          "trades": 769,
+          "deals": 1538,
+          "triggers": 12,
+          "requested_closes": 25,
+          "successful_closes": 25,
+          "arms": 29,
+          "report_sha256": "7DA8A223CA4DCA3EE6E11FBAAEF336B1CEB9B81582F27E018BE64A3B0EAA43E0",
+          "raw_manifest_sha256": "F9E29FC74F66A0B5BB93185626958D71C34C2F352978AAA771F2C102F226BF1E"
+        }
+      ]
+    },
+    {
+      "period": "P2_2024",
+      "from": "2024-01-01",
+      "to_exclusive": "2025-01-01",
+      "results": [
+        {
+          "policy": "CONTROL",
+          "actual_net_usd": 62.75,
+          "stressed_net_usd": 54.663,
+          "stressed_max_closed_drawdown_usd": 17.779,
+          "profit_factor": 1.25,
+          "trades": 554,
+          "deals": 1108,
+          "triggers": 0,
+          "requested_closes": 0,
+          "successful_closes": 0,
+          "arms": 0,
+          "report_sha256": "55D8C10D46507A51A3BE0B1FCF50C0505315677BA17886F33D0D116A362DE296",
+          "raw_manifest_sha256": "CD32F69B2CEB4F96C074A2BEC359F0CB621FF4C0C9877A71ECCDCB335184E140"
+        },
+        {
+          "policy": "FIRST_NATURAL_EXIT_POSITIVE_COHORT",
+          "actual_net_usd": 56.38,
+          "stressed_net_usd": 48.298,
+          "stressed_max_closed_drawdown_usd": 15.5745,
+          "profit_factor": 1.25,
+          "trades": 556,
+          "deals": 1112,
+          "triggers": 87,
+          "requested_closes": 208,
+          "successful_closes": 208,
+          "arms": 0,
+          "report_sha256": "7324F9A9E732DBE26617C19860F729ABCC70B5230C1DBE5884E11D579D0A8FE9",
+          "raw_manifest_sha256": "580E79AC53580A2DBF1DC19A96729E1CEE5DFEAFB23CFD6FF9CF0E8CB19054DB"
+        },
+        {
+          "policy": "ALL_GREEN_ZERO_FLOOR",
+          "actual_net_usd": 43.13,
+          "stressed_net_usd": 34.524,
+          "stressed_max_closed_drawdown_usd": 15.41,
+          "profit_factor": 1.21,
+          "trades": 565,
+          "deals": 1130,
+          "triggers": 69,
+          "requested_closes": 141,
+          "successful_closes": 141,
+          "arms": 156,
+          "report_sha256": "8D0B2E832F82B7C6D225ADE42D956C8520906ADE699931B5F7F9B065CACA3AB9",
+          "raw_manifest_sha256": "108F1B04E06C3405F44617E5A65C0C54AF9666334F3CB281C69BEF97237998E7"
+        },
+        {
+          "policy": "ALL_GREEN_QUARTER_R_HALF_PEAK",
+          "actual_net_usd": 71.43,
+          "stressed_net_usd": 63.3375,
+          "stressed_max_closed_drawdown_usd": 17.036,
+          "profit_factor": 1.30,
+          "trades": 554,
+          "deals": 1108,
+          "triggers": 17,
+          "requested_closes": 37,
+          "successful_closes": 37,
+          "arms": 41,
+          "report_sha256": "9B8EB30F8DD6475754F3A0BF59351FA382201D7FFF076AE71954AAA35BB29EC5",
+          "raw_manifest_sha256": "F15425500AFCFFE591E681409CFC2216EE00BE077F1CE4C5AE3FDCFE372080B0"
+        }
+      ]
+    },
+    {
+      "period": "P3_2025",
+      "from": "2025-01-01",
+      "to_exclusive": "2026-01-01",
+      "results": [
+        {
+          "policy": "CONTROL",
+          "actual_net_usd": 121.36,
+          "stressed_net_usd": 113.038,
+          "stressed_max_closed_drawdown_usd": 28.3905,
+          "profit_factor": 1.37,
+          "trades": 554,
+          "deals": 1108,
+          "triggers": 0,
+          "requested_closes": 0,
+          "successful_closes": 0,
+          "arms": 0,
+          "report_sha256": "2CF834879717FCF447E826E3FA15F2322EF117796B0F867B5AD248567E0DDA1B",
+          "raw_manifest_sha256": "C26DEEFC025CA6AF1FB8B4255441607D4C50F19DDA00393B51B9E465BEC884FA"
+        },
+        {
+          "policy": "FIRST_NATURAL_EXIT_POSITIVE_COHORT",
+          "actual_net_usd": 82.64,
+          "stressed_net_usd": 74.667,
+          "stressed_max_closed_drawdown_usd": 26.7,
+          "profit_factor": 1.27,
+          "trades": 556,
+          "deals": 1112,
+          "triggers": 103,
+          "requested_closes": 228,
+          "successful_closes": 228,
+          "arms": 0,
+          "report_sha256": "3C5070605083894C934D589A0B930A797B5846EFC2CEA53F6C152C808A4A148F",
+          "raw_manifest_sha256": "A00A48891B453B25367E92DCCBB726D27A2FDE8BF1CBBEE60D07AE90E834D85A"
+        },
+        {
+          "policy": "ALL_GREEN_ZERO_FLOOR",
+          "actual_net_usd": 118.53,
+          "stressed_net_usd": 110.1695,
+          "stressed_max_closed_drawdown_usd": 18.796,
+          "profit_factor": 1.46,
+          "trades": 567,
+          "deals": 1134,
+          "triggers": 72,
+          "requested_closes": 146,
+          "successful_closes": 146,
+          "arms": 164,
+          "report_sha256": "373963A3F1FD20EF2E6886AC246A90B902B1CFA02FF943E01E029D5230D474B8",
+          "raw_manifest_sha256": "073B11BE3FB684049D6AAE57BDB40A33503EB70CBDDCC5D799770ACCD9FBD7C1"
+        },
+        {
+          "policy": "ALL_GREEN_QUARTER_R_HALF_PEAK",
+          "actual_net_usd": 120.93,
+          "stressed_net_usd": 112.567,
+          "stressed_max_closed_drawdown_usd": 28.1505,
+          "profit_factor": 1.39,
+          "trades": 559,
+          "deals": 1118,
+          "triggers": 19,
+          "requested_closes": 39,
+          "successful_closes": 39,
+          "arms": 40,
+          "report_sha256": "4679BCA35C9E4558B8548C25CDA1492E3B18578069C92E178E63CC86F2871381",
+          "raw_manifest_sha256": "F73B907705CBC2EF42882CB00349F0B79129EF4CF3EC33084B83B56EC1AD6D9C"
+        }
+      ]
+    },
+    {
+      "period": "P4_2026_YTD",
+      "from": "2026-01-01",
+      "to_exclusive": "2026-08-21",
+      "results": [
+        {
+          "policy": "CONTROL",
+          "actual_net_usd": 96.30,
+          "stressed_net_usd": 90.4732,
+          "stressed_max_closed_drawdown_usd": 31.1908,
+          "profit_factor": 1.40,
+          "trades": 356,
+          "deals": 712,
+          "triggers": 0,
+          "requested_closes": 0,
+          "successful_closes": 0,
+          "arms": 0,
+          "report_sha256": "7B8083DB8ED4FF659BDA0C99BA5B3EAADFF9FD3B809BCA01CEE2F377A0B61718",
+          "raw_manifest_sha256": "6B19306CAFF16D5B104DE3788E9D994CFAF4CC4DAF3A20465221A02FEAC5234F"
+        },
+        {
+          "policy": "FIRST_NATURAL_EXIT_POSITIVE_COHORT",
+          "actual_net_usd": 74.73,
+          "stressed_net_usd": 68.6775,
+          "stressed_max_closed_drawdown_usd": 26.882,
+          "profit_factor": 1.34,
+          "trades": 358,
+          "deals": 716,
+          "triggers": 64,
+          "requested_closes": 143,
+          "successful_closes": 143,
+          "arms": 0,
+          "report_sha256": "E3071ABCB5E63008F87ED5C5CC44EEFF3ED2B03DA8F680323B62182FED2CB23F",
+          "raw_manifest_sha256": "7B68437253F880B329D711E52CC1C1CC1368D6F74A4C3B62A180923AF3429599"
+        },
+        {
+          "policy": "ALL_GREEN_ZERO_FLOOR",
+          "actual_net_usd": 61.47,
+          "stressed_net_usd": 55.5245,
+          "stressed_max_closed_drawdown_usd": 20.3185,
+          "profit_factor": 1.30,
+          "trades": 361,
+          "deals": 722,
+          "triggers": 48,
+          "requested_closes": 98,
+          "successful_closes": 98,
+          "arms": 99,
+          "report_sha256": "CA9DDE49FF83880DF95DD2C29331E207EB523AD8D0CF4273D021CD148A83D00F",
+          "raw_manifest_sha256": "010782CA5BFE2939B3A274470A5651D146D2E5E720F85502E3173C70B61C9C17"
+        },
+        {
+          "policy": "ALL_GREEN_QUARTER_R_HALF_PEAK",
+          "actual_net_usd": 87.81,
+          "stressed_net_usd": 81.573,
+          "stressed_max_closed_drawdown_usd": 28.6105,
+          "profit_factor": 1.38,
+          "trades": 358,
+          "deals": 716,
+          "triggers": 18,
+          "requested_closes": 36,
+          "successful_closes": 36,
+          "arms": 36,
+          "report_sha256": "E541BDFCB8D588CE23718A6763B3953598E91ECB251C6579B2A6C96D40F991FD",
+          "raw_manifest_sha256": "DFE33BE27F4F05DBA09DFD19DA7737D5B556BBB9042A955342E7A755FF99891C"
+        }
+      ]
+    }
+  ],
+  "pooled_results": {
+    "CONTROL": {
+      "actual_net_usd": 444.19,
+      "stressed_net_usd": 407.0477,
+      "stressed_max_closed_drawdown_sum_usd": 96.1393,
+      "stressed_net_per_drawdown_sum": 4.23393659,
+      "trades": 2233,
+      "deals": 4466,
+      "triggers": 0,
+      "requested_closes": 0,
+      "successful_closes": 0
+    },
+    "FIRST_NATURAL_EXIT_POSITIVE_COHORT": {
+      "actual_net_usd": 343.93,
+      "actual_delta_vs_control_usd": -100.26,
+      "stressed_net_usd": 306.8285,
+      "stressed_delta_vs_control_usd": -100.2192,
+      "stressed_max_closed_drawdown_sum_usd": 88.3285,
+      "drawdown_delta_vs_control_usd": -7.8108,
+      "stressed_net_per_drawdown_sum": 3.47372026,
+      "actual_period_wins_or_ties": 0,
+      "stressed_period_wins_or_ties": 0,
+      "trades": 2242,
+      "deals": 4484,
+      "triggers": 394,
+      "requested_closes": 899,
+      "successful_closes": 899
+    },
+    "ALL_GREEN_ZERO_FLOOR": {
+      "actual_net_usd": 319.62,
+      "actual_delta_vs_control_usd": -124.57,
+      "stressed_net_usd": 280.671,
+      "stressed_delta_vs_control_usd": -126.3767,
+      "stressed_max_closed_drawdown_sum_usd": 80.847,
+      "drawdown_delta_vs_control_usd": -15.2923,
+      "stressed_net_per_drawdown_sum": 3.4716316,
+      "actual_period_wins_or_ties": 0,
+      "stressed_period_wins_or_ties": 0,
+      "trades": 2272,
+      "deals": 4544,
+      "triggers": 281,
+      "arms": 612,
+      "requested_closes": 577,
+      "successful_closes": 577
+    },
+    "ALL_GREEN_QUARTER_R_HALF_PEAK": {
+      "actual_net_usd": 424.74,
+      "actual_delta_vs_control_usd": -19.45,
+      "stressed_net_usd": 387.2135,
+      "stressed_delta_vs_control_usd": -19.8342,
+      "stressed_max_closed_drawdown_sum_usd": 93.694,
+      "drawdown_delta_vs_control_usd": -2.4453,
+      "stressed_net_per_drawdown_sum": 4.13274596,
+      "actual_period_wins_or_ties": 1,
+      "stressed_period_wins_or_ties": 1,
+      "trades": 2240,
+      "deals": 4480,
+      "triggers": 66,
+      "arms": 146,
+      "requested_closes": 137,
+      "successful_closes": 137
+    }
+  },
+  "fixed_gate_application": {
+    "control_stressed_net_usd": 407.0477,
+    "required_improvement_usd": 20.352385,
+    "required_candidate_stressed_net_usd": 427.400085,
+    "candidates": {
+      "FIRST_NATURAL_EXIT_POSITIVE_COHORT": {
+        "operational_integrity": true,
+        "trigger_floor_20": true,
+        "pooled_stressed_net_improvement": false,
+        "stressed_breadth_3_of_4": false,
+        "actual_breadth_3_of_4": false,
+        "pooled_drawdown_not_worse": true,
+        "every_period_drawdown_within_115_percent": true,
+        "passed": false
+      },
+      "ALL_GREEN_ZERO_FLOOR": {
+        "operational_integrity": true,
+        "trigger_floor_20": true,
+        "pooled_stressed_net_improvement": false,
+        "stressed_breadth_3_of_4": false,
+        "actual_breadth_3_of_4": false,
+        "pooled_drawdown_not_worse": true,
+        "every_period_drawdown_within_115_percent": false,
+        "failed_period_drawdown": "P1 26.3225 versus control 18.779, ratio 1.40170",
+        "passed": false
+      },
+      "ALL_GREEN_QUARTER_R_HALF_PEAK": {
+        "operational_integrity": true,
+        "trigger_floor_20": true,
+        "pooled_stressed_net_improvement": false,
+        "stressed_breadth_3_of_4": false,
+        "actual_breadth_3_of_4": false,
+        "pooled_drawdown_not_worse": true,
+        "every_period_drawdown_within_115_percent": true,
+        "passed": false
+      }
+    },
+    "passing_candidates": []
+  },
+  "motivating_episode_replay": {
+    "date": "2026-08-20",
+    "shape": "SELL/BUY/BUY overlap matching the previously closed Live-performance forensic motivation",
+    "control": {
+      "natural_closes": [
+        "17:45 +1.60 gross / +1.594 cost-known",
+        "19:00 +1.52 gross / +1.498 cost-known",
+        "22:00 -2.28 gross / -2.302 cost-known"
+      ],
+      "cohort_total_gross_usd": 0.84,
+      "cohort_total_cost_known_usd": 0.79
+    },
+    "first_natural_exit_positive_cohort": {
+      "trigger_time": "2026-08-20 17:45:00",
+      "open_position_count": 3,
+      "aggregate_gross_profit_at_trigger_usd": 2.89,
+      "aggregate_cost_known_close_total_usd": 2.84,
+      "gross_delta_vs_control_cohort_usd": 2.05,
+      "interpretation": "The user's observed giveback episode is real and this rule improves that single replayed cohort, but its 394 broad triggers lose 100.2192 stressed dollars across the frozen matrix."
+    },
+    "all_green_zero_floor": {
+      "armed_times": [
+        "15:30:32 with two positions and +1.16 aggregate",
+        "16:00:03 after the third entry with three positions and +2.16 aggregate",
+        "17:45:00 after the first natural exit with two positions and +1.29 aggregate"
+      ],
+      "triggered": false,
+      "reason": "The declared unchanged-mask cohort reset after each natural exit; the eventual losing position became negative only after fewer than two positions remained."
+    },
+    "all_green_quarter_r_half_peak": {
+      "armed": false,
+      "triggered": false,
+      "reason": "The group did not reach the frozen 0.25 summed-risk activation threshold on this replay."
+    }
+  },
+  "economic_interpretation": {
+    "finding": "Fixed portfolio-level profit locks reduce some closed drawdown but cut more expectancy than they preserve. Every candidate has lower stressed net-to-drawdown efficiency than control.",
+    "least_bad_candidate": "ALL_GREEN_QUARTER_R_HALF_PEAK",
+    "least_bad_detail": "It wins only P2 2024, is near-neutral in P3 2025, and loses P1 and P4; pooled stressed net remains 19.8342 dollars below control.",
+    "causal_boundary": "The painful simultaneous-profit giveback is established, but none of the three predeclared current-information mechanisms generalizes economically across the consumed historical paths.",
+    "new_hypothesis_opened": false
+  },
+  "selection": {
+    "selected_policy": null,
+    "verdict": "NO_MECHANISM_PASSED_RETAIN_FROZEN_V7",
+    "seventeenth_rescue_path_opened": false,
+    "hybrid_or_threshold_adjustment_opened": false,
+    "live_change_or_promotion_authorized": false
+  }
+}

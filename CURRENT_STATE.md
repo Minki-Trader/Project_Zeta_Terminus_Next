@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0029`
+- Latest state ID: `STATE-0030`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: one serial Tester-only family `portfolio-exit-coordination-v1`, predeclared and compiled at four paths before outcome consumption; exactly 16 frozen serial real-tick runs are next and no Live authority exists. `live-dev-performance-forensics` remains closed descriptive-only; all historical market paths are already consumed exploratory evidence, so this family cannot claim a clean holdout, confirmation or Live promotion
+- Active research boundary: none; `portfolio-exit-coordination-v1` is closed as `NO_MECHANISM_PASSED_RETAIN_FROZEN_V7`, no successor or rescue path is open, and all historical market paths remain consumed exploratory evidence
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -145,6 +145,16 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 - The user's `$108-$111` manual-close estimate is directionally supported but bounded: `$108.69` is directly recorded, `$109.77` is a hindsight V7 peak, and applying two event-observable snapshots while holding later paths unchanged gives a non-guaranteed `$109.83` proxy; `$111` is not directly established
 - The preserved availability gaps did not lower realized performance in the reconstructed interval: the 2026-08-19 gap probably avoided an approximately `-$0.53` Cross time-exit, the 2026-08-21 gap missed zero threshold-qualified RC4/RC16/Passive entries, and the later gap was during the weekend
 - Evidence: `lab/research/live-dev-performance-forensics/evidence/LIVE_DEV_PERFORMANCE_FORENSICS_V1.json`, SHA-256 `26E059C33F952E4FB2921101B9295921021828C13282E8C876B54DE36054B52F`; closure is `CLOSE_WITHOUT_NEW_HYPOTHESIS`
+
+## Completed portfolio exit coordination research
+
+- Predeclared and completed exactly 16 serial fresh-`$100` build-6140 real-tick paths: frozen CP2 V7 control plus first-natural-exit positive-cohort close, all-green zero floor and all-green 0.25R/50%-peak trail across P1 2022H2-2023, 2024, 2025 and 2026 YTD through August 20
+- All runs stopped normally at 100% real ticks; report net/trade/deal totals reconciled to final snapshot/component evidence, all coordination close requests succeeded, and safety, persistence, broker, foreign, protection and coordination-close faults were zero
+- Control pooled actual/stressed net and summed stressed closed DD were `$444.19/$407.0477/$96.1393`. First-exit was `$343.93/$306.8285/$88.3285`, zero-floor `$319.62/$280.6710/$80.8470`, and quarter-R/half-peak `$424.74/$387.2135/$93.6940`
+- The 2026-08-20 motivating cohort is real: first-exit preserved `+$2.89` gross at 17:45 versus the control cohort's eventual `+$0.84`. But the rule triggered 394 times and lost `$100.2192` stressed net across the fixed matrix, so that single useful intervention did not generalize
+- No candidate reached the required pooled stressed-net improvement or three-of-four actual/stressed breadth; all had lower stressed-net/DD efficiency than control. Zero-floor also exceeded 115% of control DD in P1. The least-bad quarter-R/half-peak path won only 2024 and remained `$19.8342` stressed net below control overall
+- Selection is `lab/research/portfolio-exit-coordination-v1/evidence/PORTFOLIO_EXIT_COORDINATION_SELECTION_V1.json`, SHA-256 `991FBCB8CE3B81EA14C0FC04EDF5B75B4E9BE5E7523835B8D4EE3938A7A3F88A`; closure is `PORTFOLIO_EXIT_COORDINATION_CLOSURE_V1.json`, SHA-256 `C6BA432F8CFC8E5A55E470843A63FA6675C20F6F4AA6B260004A8E2FBBB1B3EE`
+- Closed `NO_MECHANISM_PASSED_RETAIN_FROZEN_V7`. No seventeenth run, hybrid, adjusted threshold, date/strategy exception, successor family, Live source/package/settings/state/process change or promotion authority opened; exact Live PID `21548` remained separate and locally active
 
 ## Required completion evidence
 

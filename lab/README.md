@@ -19,7 +19,7 @@
 - `research/strategy-independence-risk-allocation/`: 닫힌 전략 독립성·위험배분 family
 - `research/deposit-capital-risk-capacity/`: 닫힌 예치자본·위험용량 family
 - `research/live-dev-performance-forensics/`: 닫힌 V1-V7 실운영 성과·동시보유·중단 포렌식 family; 소스 없음
-- `research/portfolio-exit-coordination-v1/`: 활성 동시수익 보존·청산조정 family; Tester-only, 결과 미소비 사전선언 상태
+- `research/portfolio-exit-coordination-v1/`: 닫힌 동시수익 보존·청산조정 family; 16개 실틱 경로에서 후보 없음, 동결 V7 청산 유지
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구
