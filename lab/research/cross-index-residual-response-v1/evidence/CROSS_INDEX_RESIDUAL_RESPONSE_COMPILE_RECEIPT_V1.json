@@ -1,0 +1,104 @@
+{
+  "schema": "zeta-next-cross-index-residual-response-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "SOURCE_BINARY_CONFIG_RUNTIME_FROZEN_BEFORE_OUTCOME",
+  "unit": "cross-index-residual-response-022",
+  "family": "cross-index-residual-response-v1",
+  "declaration": {
+    "path": "lab/research/cross-index-residual-response-v1/evidence/CROSS_INDEX_RESIDUAL_RESPONSE_DECLARATION_V1.json",
+    "commit": "e84a1e0",
+    "sha256": "231F7150A19F1F6725C273A6D35136CADFE168850767116F64AC866D2BF645D8",
+    "outcomes_consumed": false
+  },
+  "implementation": {
+    "root": "lab/research/cross-index-residual-response-v1/mt5/",
+    "parent_source_copy": null,
+    "cross_family_include_or_link": false,
+    "source_files": 1,
+    "source_bytes": 19017,
+    "source_manifest_sha256": "836281D05D23B83F183136CF2E18186C9792B23B7B182A96F2FF3543357FC6F0",
+    "mq5_sha256": "FFEFB5C9114FF556B135648F1421D7877C567569218A394AFA983060D7CE3222",
+    "configuration_files": 4,
+    "configuration_bytes": 1128,
+    "configuration_manifest_sha256": "DC1DEBF474E3B6B904C2D2A21365B0CE7BCB93500013C8FA065DDC69B1F33A7F",
+    "entrypoint": "lab/research/cross-index-residual-response-v1/mt5/src/Experts/ZetaCrossIndexResidualObserverV1.mq5",
+    "trade_submission_calls": 0,
+    "position_open_calls": 0,
+    "ctrade_objects": 0,
+    "order_calc_profit_source_occurrences": 2,
+    "persistent_economic_state_fields": 0,
+    "outputs": ["run-opportunities.csv", "run-days.csv"]
+  },
+  "fixed_observer_contract": {
+    "symbols": ["US30", "US100", "US500"],
+    "chart": "US30 M5",
+    "trigger_residual": 1.5,
+    "rearm_residual": 0.75,
+    "outcome_seconds": 1800,
+    "maximum_concurrent_observations": 1,
+    "volume_for_profit_conversion": 0.01,
+    "orders_or_positions": 0
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_ms": 569,
+    "cpu": "X64 Regular",
+    "binary_path": "lab/research/cross-index-residual-response-v1/mt5/src/Experts/ZetaCrossIndexResidualObserverV1.ex5",
+    "binary_bytes": 24282,
+    "binary_sha256": "6D9A0D2B1837276CACCCBFFCAFEC0528C4F9AFD9D0193DCDB6B0E09471AFCD14",
+    "compile_log_path": "lab/artifacts/logs/cross-index-residual-response-v1-observer-compile.log",
+    "compile_log_bytes": 3392,
+    "compile_log_sha256": "B2FBCBA6BFA20B94682C8CF6B80A27B559E86F9FC0C6E4EDF61896B4E87D906E"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/cross-index-residual-response-v1-portable/",
+    "git_ignored": true,
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "runtime_binary_sha256": "6D9A0D2B1837276CACCCBFFCAFEC0528C4F9AFD9D0193DCDB6B0E09471AFCD14",
+    "source_runtime_dependency": false,
+    "live_dependency": false
+  },
+  "pre_outcome_market_data": {
+    "manifest_algorithm": "Sort root-relative paths, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 198,
+      "bytes": 3197327572,
+      "sha256": "7155D68551A7A05DBE9C5236F5D30CC01601DE6FACCE0FC663AD39BF90CA8A8F"
+    },
+    "tester_bases": {
+      "files": 165,
+      "bytes": 2478439859,
+      "sha256": "D6ADB9024F579CA9C3C192C34DEBB9AF0D019623008A907EEFE37787359632E0"
+    }
+  },
+  "pre_outcome_symbol_database": {
+    "selected_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+      "preserved_artifact": "lab/artifacts/ea-files/cross-index-residual-response-v1/selected-before.dat",
+      "bytes": 18210,
+      "sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F"
+    },
+    "symbols_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "preserved_artifact": "lab/artifacts/ea-files/cross-index-residual-response-v1/symbols-before.dat",
+      "bytes": 413696,
+      "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+    },
+    "contract_swap_logging": "The observer prints exact US30, US100 and US500 contract/swap rows at start and end of each path."
+  },
+  "matrix": {
+    "paths": [
+      "tester-cirr-v1-long.ini",
+      "tester-cirr-v1-latest.ini"
+    ],
+    "environment_clean_rerun_allowance": 1,
+    "outcomes_consumed": false
+  },
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_the_frozen_source_then_run_the_two_trade_free_paths_with_per_path_environment_fingerprints"
+}

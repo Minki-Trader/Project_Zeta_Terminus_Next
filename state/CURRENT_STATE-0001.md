@@ -415,3 +415,11 @@
 - Fixed exactly two observation periods, reversion versus continuation direction hypotheses, observed-spread and double-spread counterfactuals, at least `3.0` opportunities per normal day on long and isolated-latest paths, temporal/all-symbol economic breadth and no threshold/horizon/session/symbol rescue.
 - Unit 022 can retain at most one later standalone high-turnover trading-prototype question and places no order. Any passing prototype must later face a separate portfolio-combination unit that retains and evaluates all six CXR2 strategies.
 - Declaration SHA-256 is `231F7150A19F1F6725C273A6D35136CADFE168850767116F64AC866D2BF645D8`. Implementation, configuration, binary, runtime and outcomes remain unopened; Live remains untouched.
+
+## STATE-0052 - 2026-08-26
+
+- Implemented Unit 022 as one fresh self-contained MQL observer with no parent source copy, Include link, order submission, position, economic persistence or Live dependency. It records synchronized opportunity/day rows and uses `OrderCalcProfit` only for the fixed reversion/continuation cost counterfactuals.
+- MetaEditor build 6140 compiled the first implementation at `0 errors / 0 warnings`. The source/config manifest hashes are `836281D05D23B83F183136CF2E18186C9792B23B7B182A96F2FF3543357FC6F0` / `DC1DEBF474E3B6B904C2D2A21365B0CE7BCB93500013C8FA065DDC69B1F33A7F`; binary SHA-256 is `6D9A0D2B1837276CACCCBFFCAFEC0528C4F9AFD9D0193DCDB6B0E09471AFCD14`.
+- Created the dedicated Git-ignored `lab/runtime/cross-index-residual-response-v1-portable/` by physical one-time copy of build-6140 executables and US30/US100/US500 market data. It shares no compiled code, settings, files, logs or mutable state with Live or another family.
+- Froze pre-outcome Bases and Tester-bases manifests plus selected/full symbol database snapshots. Compile receipt SHA-256 is `E80BA5234A85AA0A32C7EFE5534C1BCD03F5CE699EAB75E83FCEB6B82606A7AF`.
+- Exactly the long and isolated-latest trade-free paths may now open, subject to per-path environment fingerprints and the one identical clean-rerun allowance. No outcome has opened; Live remains untouched.
