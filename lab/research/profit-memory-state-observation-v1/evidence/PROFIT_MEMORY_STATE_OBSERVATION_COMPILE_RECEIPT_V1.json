@@ -1,0 +1,102 @@
+{
+  "schema": "zeta-next-profit-memory-state-observation-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "SOURCE_BINARY_CONFIG_FROZEN_BEFORE_OUTCOME",
+  "unit": "actual-live-profit-memory-observation-021",
+  "declaration": {
+    "path": "lab/research/profit-memory-state-observation-v1/evidence/PROFIT_MEMORY_STATE_OBSERVATION_DECLARATION_V1.json",
+    "commit": "733fb3a",
+    "outcomes_consumed": false
+  },
+  "derivation": {
+    "parent_root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "parent_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "parent_tree": "605fcec39cd1ba5479c156f71935299ea3c1288b",
+    "one_time_copy": true,
+    "cross_family_include_or_link": false,
+    "unchanged_parent_include_modules": 13,
+    "changed_parent_include_modules": ["Domain/ZetaDomain.mqh"]
+  },
+  "implementation": {
+    "tracked_source_files": 18,
+    "tracked_source_bytes": 369276,
+    "source_manifest_sha256": "F2F8A5551A8105A0DDE7D8978E514EE33BECE7C1960F9AE56BCDAD2B4DBB0232",
+    "configuration_files": 9,
+    "configuration_bytes": 5089,
+    "configuration_manifest_sha256": "58286073BDDAC9F98F1903FCABA5D26C7CF980063A05FDF16CB841B56C25DFA2",
+    "entrypoints": [
+      "lab/research/profit-memory-state-observation-v1/mt5/src/Experts/ZetaProfitMemoryControlV1.mq5",
+      "lab/research/profit-memory-state-observation-v1/mt5/src/Experts/ZetaProfitMemoryObserverV1.mq5"
+    ],
+    "common_assembly": "lab/research/profit-memory-state-observation-v1/mt5/src/Include/ZetaProfitMemory/ZetaProfitMemoryAssembly.mqh",
+    "observer_module": "lab/research/profit-memory-state-observation-v1/mt5/src/Include/ZetaProfitMemory/ZetaProfitMemoryObserver.mqh",
+    "observer_trade_calls": 0,
+    "observer_persistent_economic_state_fields": 0,
+    "observer_output": "one independent CSV row after each unchanged native close"
+  },
+  "identities": {
+    "control": {
+      "release": "NEXT-LAB-PMO1-CONTROL",
+      "portfolio": "ZT-PORT-NEXT-LAB-PMO1-CONTROL",
+      "magic": "260826100..260826105"
+    },
+    "observer": {
+      "release": "NEXT-LAB-PMO1-PROFIT-MEMORY-OBSERVER",
+      "portfolio": "ZT-PORT-NEXT-LAB-PMO1-OBSERVER",
+      "magic": "260826110..260826115"
+    }
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "final_control": {
+      "errors": 0,
+      "warnings": 0,
+      "ex5_bytes": 197226,
+      "ex5_sha256": "2B62FF5C0C5038AF4CBDC974DDC62E2D5F9FCA21BEE2E3E24A7E1714566442D0",
+      "log_path": "lab/artifacts/logs/profit-memory-state-observation-v1-control-compile.log",
+      "log_bytes": 19156,
+      "log_sha256": "31F65300F3D0E7B04F7FCA8A954134903E3343977CCFB2E703750D1AB5708FDD"
+    },
+    "final_observer": {
+      "errors": 0,
+      "warnings": 0,
+      "ex5_bytes": 205390,
+      "ex5_sha256": "6BF20EEF4CB435414EDA07729F84044A33E3CDCFAAC7752387A7BB6AF826D3EC",
+      "log_path": "lab/artifacts/logs/profit-memory-state-observation-v1-observer-compile.log",
+      "log_bytes": 19910,
+      "log_sha256": "EBCB6DBD35E637D6FBF7C6327D4AED48E19E5EDE95DB553CEEBD8EF2039539E8"
+    },
+    "implementation_only_correction": "The first observer compile exposed an MQL compile-time array-dimension rule and unsupported local struct reference aliases. Both were corrected before any Tester path or economic outcome; the frozen final build is 0 errors / 0 warnings."
+  },
+  "runtime": {
+    "path": "lab/runtime/profit-memory-state-observation-v1-portable/",
+    "git_ignored": true,
+    "dedicated": true,
+    "copied_market_data": ["US30", "US100", "US500"],
+    "family_source_copied_byte_equal": true,
+    "live_dependency": false
+  },
+  "symbol_database_before_matrix": {
+    "selected_file": {
+      "bytes": 18210,
+      "sha256": "34AC175155A5D285AA612D831A422755B31C6F048DF01CF4EEE17DE7CF21F6A0"
+    },
+    "symbols_file": {
+      "bytes": 413696,
+      "sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE"
+    },
+    "contract_swap_logging": "Each variant prints exact US30, US100 and US500 contract/swap fields at start and end of every path."
+  },
+  "matrix": {
+    "paths": 8,
+    "configurations": [
+      "tester-pmo-v1-control-p1.ini", "tester-pmo-v1-observer-p1.ini",
+      "tester-pmo-v1-control-p2.ini", "tester-pmo-v1-observer-p2.ini",
+      "tester-pmo-v1-control-p3.ini", "tester-pmo-v1-observer-p3.ini",
+      "tester-pmo-v1-control-p4.ini", "tester-pmo-v1-observer-p4.ini"
+    ],
+    "outcomes_consumed": false
+  },
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_the_frozen_source_then_run_exactly_the_eight_serial_paths"
+}

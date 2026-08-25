@@ -391,3 +391,11 @@
 - The observer may only keep transient per-position MFE/MAE, threshold-crossing and peak-time state, then record the unchanged native stressed result after native close. Signals, entry count, admission, size, protection, exits, RC4, Passive, persistence and session clock remain frozen.
 - All six strategies receive separate density/economic gates; at most one can retain a later management-Proxy question. A portfolio-wide late-maturity guard forbids interpreting `0.125R` as an immediate close or unconditional breakeven rule.
 - Implementation, binary, configurations and outcomes remain unopened. Exact Live CXR2 PID `13328`, dashboard PID `4284`, source, package, settings, state and order behavior remain untouched.
+
+## STATE-0049 - 2026-08-26
+
+- Derived Unit 021 once into its self-contained family root from the frozen CXR2 tree. Thirteen parent Include modules remain byte-equal; Domain changes only variant identity/path/Magic, and a common assembly owns the two thin CONTROL/OBSERVER entrypoints.
+- The observer has no trade call and no economic or persisted-state write. It samples current position floating profit before the Tester scheduler early return, synchronizes again after unchanged native processing, and writes one private row only after native close using the component's unchanged stressed-net increment.
+- CONTROL/OBSERVER compiled on MetaEditor build 6140 at `0 errors / 0 warnings`. EX5 SHA-256 values are `2B62FF5C0C5038AF4CBDC974DDC62E2D5F9FCA21BEE2E3E24A7E1714566442D0` and `6BF20EEF4CB435414EDA07729F84044A33E3CDCFAAC7752387A7BB6AF826D3EC`.
+- One initial observer compile failed only on MQL constant-array and local-reference syntax; it was corrected before any Tester path or outcome and is not an economic result. The final source/config manifests and pre-run symbols database are frozen in `PROFIT_MEMORY_STATE_OBSERVATION_COMPILE_RECEIPT_V1.json`.
+- The dedicated Git-ignored Portable contains copied required-symbol data and byte-equal family source/binaries. Exactly eight serial paths are now allowed; no outcome has opened and Live remains untouched.

@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0048`
+- Latest state ID: `STATE-0049`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -255,6 +255,8 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 - Fixed matrix: identity-separated CONTROL and economically inert observer over P1 2022H2-2023, P2 2024, P3 2025 and P4 2026 YTD, exactly eight fresh-`$100` real-tick paths.
 - Fixed state: prior floating profit reaches `0.125R`; all six strategies are judged separately. At most one strategy may retain a later management-Proxy question, while portfolio and strategy late-maturity opportunity remain mandatory guards.
 - Declaration: `lab/research/profit-memory-state-observation-v1/evidence/PROFIT_MEMORY_STATE_OBSERVATION_DECLARATION_V1.json`; implementation and outcomes remain unopened and Live remains untouched.
+- CONTROL/OBSERVER share one common economic assembly and keep separate identity/state/output paths. Thirteen parent Include modules remain byte-equal; only family identity, conditional observer calls and the trade-free observer module differ.
+- Both variants compiled on build 6140 at `0 errors / 0 warnings`; source/config manifests are `F2F8A5551A8105A0DDE7D8978E514EE33BECE7C1960F9AE56BCDAD2B4DBB0232` / `58286073BDDAC9F98F1903FCABA5D26C7CF980063A05FDF16CB841B56C25DFA2`. No matrix outcome is open.
 
 ## Required completion evidence
 
