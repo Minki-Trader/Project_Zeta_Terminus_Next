@@ -108,13 +108,20 @@ int OnInit()
       return(INIT_FAILED);
      }
 #endif
+   bool capital_inputs_valid = false;
+#ifdef ZETA_FRONTIER_CAPITAL_INPUTS_VALID
+   capital_inputs_valid = ZETA_FRONTIER_CAPITAL_INPUTS_VALID();
+#else
+   capital_inputs_valid =
+      (MathAbs(InpReferenceCapitalUSD - 100.0) <= 1.0e-9 &&
+       MathAbs(InpBaseVolume - 0.01) <= 1.0e-9 &&
+       MathAbs(InpAdditionStepUSD - 150.0) <= 1.0e-9);
+#endif
    if(_Symbol != "US30" || _Period != PERIOD_M30 ||
-       MathAbs(InpReferenceCapitalUSD - 100.0) > 1.0e-9 ||
+       !capital_inputs_valid ||
        !MathIsValidNumber(InpPriorProjectRealizedNetUSD) ||
        MathAbs(InpPriorProjectRealizedNetUSD) > 1.0e9 ||
        InpReferenceCapitalUSD + InpPriorProjectRealizedNetUSD <= 0.0 ||
-       MathAbs(InpBaseVolume - 0.01) > 1.0e-9 ||
-       MathAbs(InpAdditionStepUSD - 150.0) > 1.0e-9 ||
        MathAbs(InpMaximumMarginFraction - 0.45) > 1.0e-9 ||
        MathAbs(InpMaximumPositionRiskFraction - 0.04) > 1.0e-9 ||
        MathAbs(InpMaximumAggregateRiskFraction - 0.12) > 1.0e-9 ||
