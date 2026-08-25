@@ -625,3 +625,11 @@
 - Before source or outcome, froze a sixteen-return continuous M15 state: at least four positive and four negative returns, squared-return energy by sign and absolute normalized energy imbalance `0.35`. Dominant-energy and counter-energy directions resolve after four market bars.
 - A later standalone question survives only if one book passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive paths, net-to-DD `>=1.50` and contribution limits. Unit 032 selects no stop, size, hold, priority, EA or Live candidate.
 - Declaration SHA-256 is `B83BBF7CA1D0663670841FC4D322C000F46B38D503CA7AFA6F48D272E9F20066`. Implementation and outcomes remain unopened; no Live process, broker state or Live surface was queried or changed.
+
+## STATE-0078 - 2026-08-26
+
+- Implemented Unit 032 as one fresh self-contained MQL observer with no parent source copy, Include tree, trade submission, position, economic persistence or Live dependency. It reads only continuous completed US100 M15 rates and calls `OrderCalcProfit` for the two frozen counterfactual books.
+- The first MetaEditor build-6140 compile passed at `0 errors / 0 warnings`. Source/config manifest hashes are `22AA8E33DA1FACC909571B0AAC3FE73AB83C036B69A64EA37FCA5C14D9697F41` / `EB57E7C0CAD2BA031800E35A6F8796AF5A064B1DBE7413035CA3F7E0D37C6062`; binary SHA-256 is `07D4A7D4E2564AD0C3351E8741AFC398F84BFFCB230CA93DF65F2A2E30667D09`.
+- Created the Git-ignored minimal `lab/runtime/us100-realized-variance-asymmetry-response-v1-portable/`. It owns one family EX5 and four SET files, no other-family EX5 or Zeta Include, and physically copied only the 31 in-scope monthly tick files per cache while excluding invalid 2022-2023.
+- Both 31-file 2024-01 through 2026-07 `Bases` and `Tester/bases` manifests match their physical-copy origin at `67A2A715...` / `57A97308...`. Compile receipt SHA-256 is `5F84825EBF7F4BFEFA4307F17F7BAF8B4FCB593E9ED6E85F7B51DCB87E82599E`.
+- Exactly four serial P1-P4 trade-free paths may now run under the stricter detailed-log gate. No outcome has been read, and no Live process, broker state or Live surface was queried or changed.
