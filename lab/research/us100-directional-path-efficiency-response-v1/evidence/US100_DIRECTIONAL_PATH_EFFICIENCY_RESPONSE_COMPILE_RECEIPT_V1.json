@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-us100-directional-path-efficiency-response-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "SOURCE_BINARY_CONFIG_RUNTIME_FROZEN_BEFORE_OUTCOME",
+  "unit": "us100-directional-path-efficiency-response-033",
+  "family": "us100-directional-path-efficiency-response-v1",
+  "declaration": {
+    "path": "lab/research/us100-directional-path-efficiency-response-v1/evidence/US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_DECLARATION_V1.json",
+    "commit": "716124c",
+    "sha256": "4F342C63040C4A75DE9837B1359C30F877DA23F2D0EA7CA9B8B3482761A604BD",
+    "outcomes_consumed": false
+  },
+  "implementation": {
+    "root": "lab/research/us100-directional-path-efficiency-response-v1/mt5/",
+    "parent_source_copy": null,
+    "cross_family_include_or_link": false,
+    "source_files": 1,
+    "source_bytes": 17307,
+    "source_manifest_algorithm": "Sort src-root-relative mq5/mqh paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "source_manifest_sha256": "612AF17CB99DC5DDD509D6F99D711F94C90D7DA5A0B91F8870469D01A1C692EE",
+    "mq5_sha256": "372E1530195FD50F4DCD7077F9A23CD5C25B314E7FD05B8C4C5DEE29F4D216E0",
+    "configuration_files": 6,
+    "configuration_bytes": 1866,
+    "configuration_manifest_algorithm": "Sort tester-root-relative INI/SET filenames ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "configuration_manifest_sha256": "BFA54BC033BAB79E9254F296BC368A148A0B19F4F52628C0CA47B5669CFD3682",
+    "entrypoint": "lab/research/us100-directional-path-efficiency-response-v1/mt5/src/Experts/ZetaUS100DirectionalPathEfficiencyResponseObserverV1.mq5",
+    "trade_submission_calls": 0,
+    "position_open_calls": 0,
+    "ctrade_objects": 0,
+    "order_calc_profit_source_occurrences": 1,
+    "persistent_economic_state_fields": 0,
+    "outputs": ["opportunities.csv", "summary.csv"]
+  },
+  "fixed_observer_contract": {
+    "symbol": "US100",
+    "chart": "US100 M15",
+    "return_segments": 8,
+    "required_completed_closes": 9,
+    "continuous_boundary_seconds": 900,
+    "minimum_nonzero_returns": 6,
+    "path_efficiency_threshold": 0.70,
+    "horizon_market_bars": 4,
+    "maximum_concurrent_observations": 1,
+    "volume_for_profit_conversion": 0.01,
+    "cost_books": ["observed_bid_ask", "one_additional_entry_and_exit_spread"],
+    "orders_or_positions": 0
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_ms": 685,
+    "cpu": "X64 Regular",
+    "first_compile_passed": true,
+    "compile_corrections": 0,
+    "binary_path": "lab/research/us100-directional-path-efficiency-response-v1/mt5/src/Experts/ZetaUS100DirectionalPathEfficiencyResponseObserverV1.ex5",
+    "binary_bytes": 22252,
+    "binary_sha256": "D59CF9A10DD8D44262111C04636A42214CF889FDCC1221343A776D8F1A8B896E",
+    "compile_log_path": "lab/artifacts/logs/us100-directional-path-efficiency-response-v1-metaeditor.log",
+    "compile_log_bytes": 3504,
+    "compile_log_sha256": "33035CE9D6130D679E822B477C8E8A9AEB2079A2A0E3707C88B97AFFFF72E9F8"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/pe33-portable/",
+    "git_ignored": true,
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "physical_copy_only": true,
+    "filesystem_symbolic_junction_or_hardlink_objects": 0,
+    "sample_origin_and_copy_file_ids_differ": true,
+    "report_directory_precreated": true,
+    "runtime_ex5_files": 1,
+    "runtime_other_family_ex5_files": 0,
+    "runtime_zeta_include_files": 0,
+    "terminal_ex5_path_characters": 185,
+    "agent_ex5_path_characters": 213,
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "runtime_binary_sha256": "D59CF9A10DD8D44262111C04636A42214CF889FDCC1221343A776D8F1A8B896E",
+    "source_runtime_dependency": false,
+    "live_dependency": false
+  },
+  "pre_outcome_market_data": {
+    "scope": "US100 monthly real ticks 202401 through 202607 inclusive; invalid 2022-2023 and incomplete 202608 excluded",
+    "manifest_algorithm": "Sort tick-root-relative filenames, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 31,
+      "bytes": 1188992284,
+      "sha256": "67A2A7156980C6C4F58A473205453BDD541166A593828D6E4C262590CA1BEB0B",
+      "physical_copy_matches_origin": true
+    },
+    "tester_bases": {
+      "files": 31,
+      "bytes": 1188493184,
+      "sha256": "57A97308F3D8F77B771F71260C90E67E8929CB7A90AC3382BAE50A39D9BB0E71",
+      "physical_copy_matches_origin": true
+    },
+    "excluded_invalid_raw_tick_history_present_in_runtime": false,
+    "current_incomplete_month_in_invariant": false
+  },
+  "pre_outcome_symbol_database": {
+    "selected_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+      "bytes": 18210,
+      "sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F"
+    },
+    "symbols_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "bytes": 413696,
+      "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+    },
+    "housekeeping_rule": "Generic database and incomplete-current-month changes are telemetry only; fixed in-scope raw tick hashes, detailed path history logs and visible consumed specifications govern validity."
+  },
+  "pre_outcome_visible_us100_spec": {
+    "fingerprint_anchor": "The byte-identical 7B187924... symbol database was already visibly consumed by an isolated current-Next US100 observer. This is environment integrity only and contributes no prior economic state or outcome.",
+    "digits": 2,
+    "point": 0.01,
+    "tick_size": 0.01,
+    "tick_value": 0.01,
+    "contract_size": 1.0,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "stops_level": 0,
+    "freeze_level": 0,
+    "path_rule": "Every Unit 033 summary start and end field must equal these frozen values."
+  },
+  "matrix": {
+    "paths": [
+      "tester-us100-dpe-v1-p1.ini",
+      "tester-us100-dpe-v1-p2.ini",
+      "tester-us100-dpe-v1-p3.ini"
+    ],
+    "environment_rebuild_allowance": 1,
+    "outcomes_consumed": false
+  },
+  "source_or_config_change_allowed_after_first_path": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_the_frozen_source_then_run_the_three_trade_free_paths_serially_without_partial_economic_reading"
+}

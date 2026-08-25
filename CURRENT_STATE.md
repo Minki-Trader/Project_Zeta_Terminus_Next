@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0081`
+- Latest state ID: `STATE-0082`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: `us100-directional-path-efficiency-response-033`; fresh trade-free declaration frozen before implementation or outcome
+- Active research boundary: `us100-directional-path-efficiency-response-033`; fresh trade-free observer, three configurations and short independent Portable frozen before outcome
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -356,7 +356,9 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 - The fixed trigger requires at least six nonzero returns and path efficiency `>=0.70`. One trade-free observation at a time resolves after four M15 market-bar advances and prices both books at `0.01` under observed and one-additional-entry/exit-spread costs.
 - Unit 032 source, state, unread opportunity rows and economics are excluded; its split-path invalidity is not repaired or retried. The fresh paths are full 2024, full 2025 and 2026 through July, each independently requiring HTML 100% plus zero detailed generation-quality warning.
 - A later standalone question survives only if one direction passes all three integrity paths, pooled/path frequency, positive double-spread net, PF `>=1.10`, two positive paths, net-to-DD `>=1.50` and contribution limits. Unit 033 selects no stop, size, hold, priority, EA or Live candidate.
-- Declaration SHA-256 is `4F342C63040C4A75DE9837B1359C30F877DA23F2D0EA7CA9B8B3482761A604BD`. Implementation, configuration, binary, runtime and outcomes remain unopened; no Live surface was queried or changed.
+- The fresh single-source observer compiled on its first build-6140 attempt at `0 errors / 0 warnings`; source/config/binary hashes are `612AF17CB99DC5DDD509D6F99D711F94C90D7DA5A0B91F8870469D01A1C692EE` / `BFA54BC033BAB79E9254F296BC368A148A0B19F4F52628C0CA47B5669CFD3682` / `D59CF9A10DD8D44262111C04636A42214CF889FDCC1221343A776D8F1A8B896E`.
+- The Git-ignored `lab/runtime/pe33-portable/` is a physical generic-Lab copy with one family EX5, zero Include/other-family EX5/link objects, 185/213-character terminal/agent EX5 paths and exact 31-file in-scope `Bases`/`Tester-bases` manifests.
+- Declaration/compile-receipt SHA-256 values are `4F342C63040C4A75DE9837B1359C30F877DA23F2D0EA7CA9B8B3482761A604BD` / `BBF367829D635585D6EB5AA9E8E178B1C25A676B83FA57A198E4DBAC10AC3A1B`. Three outcomes remain unopened; no Live surface was queried or changed.
 
 ## Required completion evidence
 

@@ -657,3 +657,11 @@
 - One trade-free observation at a time resolves after four subsequent market-bar advances. Continuation and reversion are counterfactually priced at `0.01` with actual bid/ask and exactly one additional entry and exit spread.
 - Exactly three fresh build-6140 paths are allowed: full 2024, full 2025 and 2026 through July. Each must independently pass HTML 100% and zero detailed generation-warning gates; the prior full-period evidence is feasibility only and cannot establish a new path's validity.
 - A later standalone question survives only if one direction passes fixed integrity, frequency, double-spread net, PF, positive-path, net/DD and concentration gates. Declaration SHA-256 is `4F342C63040C4A75DE9837B1359C30F877DA23F2D0EA7CA9B8B3482761A604BD`; implementation and outcomes remain unopened and Live remains untouched.
+
+## STATE-0082 - 2026-08-26
+
+- Implemented Unit 033 as one fresh self-contained MQL observer with no parent source copy, Include tree, trade submission, position, economic persistence or Live dependency. It reads only eight continuous completed US100 M15 log-return segments and calls `OrderCalcProfit` through one source surface for the two frozen counterfactual books.
+- The first MetaEditor build-6140 compile passed at `0 errors / 0 warnings` with no correction. Source/config manifest hashes are `612AF17CB99DC5DDD509D6F99D711F94C90D7DA5A0B91F8870469D01A1C692EE` / `BFA54BC033BAB79E9254F296BC368A148A0B19F4F52628C0CA47B5669CFD3682`; binary SHA-256 is `D59CF9A10DD8D44262111C04636A42214CF889FDCC1221343A776D8F1A8B896E`.
+- Created the Git-ignored short `lab/runtime/pe33-portable/` directly from the generic Lab cache. It owns one family EX5, zero Zeta Include, other-family EX5 or filesystem link objects, and its terminal/agent EX5 paths are 185/213 characters.
+- Both 31-file 2024-01 through 2026-07 `Bases` and `Tester/bases` manifests physically match origin at `67A2A715...` / `57A97308...`; sampled terminal and tick file IDs differ from origin. Compile receipt SHA-256 is `BBF367829D635585D6EB5AA9E8E178B1C25A676B83FA57A198E4DBAC10AC3A1B`.
+- Exactly three serial P1-P3 trade-free paths may now run under the dual HTML-plus-detailed-log gate. No outcome has been read and no Live surface was queried or changed.
