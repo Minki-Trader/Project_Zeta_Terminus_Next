@@ -519,3 +519,11 @@
 - The identical clean P1 rerun reproduced the same observer counts and 100%-real-tick report, but the required manifest changed a second time to `876D44BF...`, again solely through `202608.tkc`. The separate Tester-bases manifest remained exact throughout.
 - Applied the frozen second-change stop rule: P2-P4, opportunity aggregation, continuation/reversion judgment, source/contract repair and all rescue variants remain unopened. Closed `INVALID_SECOND_REQUIRED_TICK_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`; neither direction was economically accepted or rejected.
 - Result/closure SHA-256 values are `09B85F76E8AA1049328D52C756CDF45B4BF2EDF3A5131ADC431B2EA5744C378C` / `3B5FF3A883D2A386FACE8EEF02BF24BFD93AE550604EA7117FD2F86ACFE08A07`. No Live surface was touched. At the final process-only check, prior CXR2 PID `13328` was absent with no replacement `terminal64.exe`, while dashboard PID `4284` remained; no broker query, restart or operational investigation followed.
+
+## STATE-0065 - 2026-08-26
+
+- After Unit 027 was durably closed and pushed, opened only the unrelated Unit 028 `us100-session-reopen-discontinuity-v1`. It uses no Unit 027 state, opportunity row or economic result and does not repair that observer or contract.
+- Before source or outcome, froze a timezone-free US100 M15 state: a current-to-previous bar-open delta of 60 through 180 minutes, the first executable mid quote versus the prior completed close, a preceding 32-return volatility scale and fixed `0.75` gap-score trigger.
+- The trade-free observer will price one-hour continuation and reversion at `0.01` using actual bid/ask plus one additional entry and exit spread. Exactly four serial build-6140 real-tick paths through the last complete month, 2026-07, are allowed.
+- A later prototype question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive periods, net-to-DD `>=1.50` and concentration limits. Unit 028 places no order and selects no stop, size, priority or Live candidate.
+- Declaration SHA-256 is `44960447FEE5ACE9000AB13FF116C52E287E0240985A59525922EF91633B2C5E`. Implementation, configuration, binary, runtime and outcomes remain unopened. No Live process, broker state or Live surface was queried or changed.
