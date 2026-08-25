@@ -447,3 +447,11 @@
 - Applied the frozen failure action without rescue: no alternate threshold, previous-R magnitude, streak, decay, cross-strategy state, subgroup, response type, size, hold, protection, MQL or Tester path opened.
 - Closed Unit 023 `NO_SAME_STRATEGY_OUTCOME_MEMORY_FIELD_PASSED`; there is no retained response question, candidate, seed or promotion. Result/closure SHA-256 values are `3676AD613A1990361DE2361FAB7A5CBF6BB93751CE1AD75E068182C2102EA32D` / `B3713760FAF0FC58675FA3F4E650247C25445188F77E9836AE458175B77EC464`.
 - Exact CXR2 Live PID `13328`, dashboard PID `4284`, source, package, settings, state, logs and order behavior remain untouched. The next unrelated Frontier question may open only after this durable close is committed and pushed.
+
+## STATE-0056 - 2026-08-26
+
+- After Unit 023 was durably committed and pushed, opened only the non-nearby source-free Unit 024 `passive-fill-age-value-v1`. It does not use Unit 023's outcome state and does not reopen Unit 014's expired-order depth question.
+- Pre-outcome feasibility over the six immutable CXR2-equivalent event files reconstructed exactly `707` Passive placements, `594` fills and `113` expirations with zero pending-state fault. P1/P2/P3/P4 fill counts are `213/159/130/92`; pending lives are `3,587..3,600` seconds.
+- Froze the sole causal state as the fraction of declared pending life consumed at fill. There is no optimized minute threshold: fixed within-period EARLY/LATE thirds and continuous Spearman effects are the only views, with tail counts `71/53/43/30` per group.
+- A later question survives only if fill age reaches pooled `|rho| >= 0.20`, at least `0.10R` tail separation, at least `0.05` stop-rate separation, three-period breadth and coherent economics. Unit 024 itself selects no response, management, protection, hold, size, EA or Live candidate; a later Proxy must preserve every base fill and compare the whole six-strategy portfolio.
+- Declaration SHA-256 is `C4707320692E9DDE261B294E3778D6953277B70AFC2403B453F7030365D8AF0F`. Outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.

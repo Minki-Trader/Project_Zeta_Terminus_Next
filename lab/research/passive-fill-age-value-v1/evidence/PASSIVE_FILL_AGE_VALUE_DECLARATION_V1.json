@@ -1,0 +1,100 @@
+{
+  "schema": "zeta-next-passive-fill-age-value-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_024_OUTCOME_AGGREGATION",
+  "unit": "passive-fill-age-value-024",
+  "family": "passive-fill-age-value-v1",
+  "question": "Does the causal fraction of a Passive limit order's pending lifetime consumed before fill separate the filled lifecycle's stressed return and stop-loss incidence broadly and materially enough to justify one later entry-preserving Passive post-fill response Proxy question inside the whole six-strategy portfolio?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "unit_023_state_or_result_used": false,
+    "unit_014_expiration_depth_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "periods": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"],
+  "passive_component_id": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a state version, not an event primary key.",
+    "ordering": "Within each period order by parsed server_time, numeric state_sequence, fixed event precedence and source path plus source line. PASSIVE_PLACE precedes PASSIVE_FILL at equal time, and close precedes any later birth at equal time.",
+    "pending_identity": "PASSIVE_PLACE opens the sole Passive pending lifecycle and supplies placement time, declared expiration and planned risk. The next PASSIVE_FILL admits it or PASSIVE_EXPIRE rejects it; overlapping or unmatched pending state is an integrity fault.",
+    "market_birth": "PASSIVE_FILL begins the admitted position lifecycle. Its fill server time is the causal observation time for fill age.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the admitted lifecycle; value_b is native stressed net USD and detail reason=DEAL_REASON_SL marks a stop exit.",
+    "stressed_r": "close value_b divided by positive placement planned_risk.",
+    "fill_age_fraction": "Seconds from PASSIVE_PLACE server_time to PASSIVE_FILL server_time divided by seconds from PASSIVE_PLACE server_time to its declared expiration. It is known at fill and must be in [0,1).",
+    "tail_construction": "Separately inside every period sort admitted fills by fill_age_fraction ascending, then fill server time, fill state_sequence, source path and source line. EARLY is the first floor(n/3), LATE is the last floor(n/3), and the middle is excluded from tail effects.",
+    "period_tail_each": {"P1_2022H2_2023":71,"P2_2024":53,"P3_2025":43,"P4_2026_YTD":30},
+    "pooled_spearman": "Average-rank Spearman correlation between fill_age_fraction and stressed_r over all 594 fills.",
+    "period_spearman": "The same correlation separately in every period.",
+    "pooled_tail_r_effect": "Mean stressed_r for all LATE tail fills minus all EARLY tail fills.",
+    "period_tail_r_effect": "The same LATE-minus-EARLY mean stressed-r difference separately in each period.",
+    "pooled_tail_stop_effect": "Stop-loss rate for all LATE tail fills minus all EARLY tail fills.",
+    "period_tail_stop_effect": "The same LATE-minus-EARLY stop-rate difference separately in each period."
+  },
+  "fixed_integrity_gate": [
+    "All six files retain the listed byte lengths and hashes and contain zero exact duplicate full rows.",
+    "Reconstruct exactly 707 Passive placements, 594 fills and 113 expirations: fills P1/P2/P3/P4 equal 213/159/130/92 and expirations equal 38/19/29/27.",
+    "There is no overlapping, unmatched or period-end pending Passive order; every fill is strictly before its declared expiration and every pending lifetime is 3,587 through 3,600 seconds.",
+    "Every admitted fill has one positive planned risk and exactly one CLOSE or EXTERNAL_CLOSE, with no overlapping admitted Passive position.",
+    "Reconstruct exactly 594 admitted Passive lifecycles, 23.7622 USD stressed net and 26 stop-loss exits."
+  ],
+  "fixed_information_gate": {
+    "density": [
+      "Every period contains at least 90 admitted fills and at least 30 observations in each EARLY and LATE tail.",
+      "All 594 fills have a valid causal fill_age_fraction and stressed_r."
+    ],
+    "economic_effect": [
+      "Absolute pooled Spearman correlation between fill_age_fraction and stressed_r is at least 0.20.",
+      "At least three of four period Spearman correlations share the pooled sign.",
+      "Absolute pooled LATE-minus-EARLY mean stressed-r difference is at least 0.10R.",
+      "At least three of four period tail stressed-r differences share the pooled tail sign."
+    ],
+    "stop_coherence": [
+      "Absolute pooled LATE-minus-EARLY stop-rate difference is at least 0.05.",
+      "At least three of four period stop-rate differences share the pooled stop sign.",
+      "The pooled stressed-r and stop-rate effects are economically coherent: lower LATE stressed_r requires higher LATE stop incidence, or higher LATE stressed_r requires lower LATE stop incidence."
+    ],
+    "passing_action": "Retain exactly one later Passive post-fill response Proxy question. Unit 024 selects no management type, threshold, protection, hold duration, size, EA or Live candidate. Any later Proxy may not cancel, reject or reduce a base Passive fill, must retain the unchanged six-strategy entry opportunity set and must compare whole-portfolio net, drawdown, entry count and risk.",
+    "failure_action": "Close with no fill-age response question. Do not rescue with fixed-minute thresholds, alternate quantiles, nonlinear transforms, fill-price displacement, direction, session, weekday, month, incumbent state or period exception."
+  },
+  "evidence_limit": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "fill_age_available_only_at_fill": true,
+    "association_not_mechanism": true,
+    "promotion_evidence": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before reading any fill-age-to-outcome result.",
+    "Run exactly one aggregation over the six frozen files.",
+    "Do not inspect another pending-age definition, threshold, fill displacement or subgroup inside Unit 024.",
+    "Do not run MT5, add MQL, create a reusable analysis CLI or touch Live.",
+    "Do not reopen or transform Unit 023."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_the_single_fixed_594_fill_age_aggregation"
+}
