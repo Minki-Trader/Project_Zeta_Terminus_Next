@@ -641,3 +641,11 @@
 - Preserved the failed terminal/tester/agent logs and non-economic HTML shell under `lab/artifacts/backtests/us100-realized-variance-asymmetry-response-v1/p1-runtime-load-failed/`.
 - Physically moved the same dedicated directory, without link or copy, to `lab/runtime/rva32-portable/`; terminal/agent EX5 paths are now 194/222 characters. In-scope 31-file raw-tick manifests remain exact and the market-data rebuild allowance is unused.
 - Runtime-correction receipt SHA-256 is `967240AE839A2DACB670BEEF7A4C78FC158A80B490270177B132C1CE6668158A`. After this durable boundary, only one identical frozen P1 retry is allowed before the original four-path sequence continues. No Live surface was changed.
+
+## STATE-0080 - 2026-08-26
+
+- Reran only the identical frozen Unit 032 P1 from the committed short runtime. The observer loaded and stopped normally with 128 eligible days, 4,916 evaluations, 1,530 triggers, 1,529 resolved rows, one unresolved observation and zero rate, tick or profit-calculation fault; source, configuration, EX5, both 31-file in-scope raw-tick manifests and visible start/end specifications remained exact.
+- The failed-attempt agent log is an exact 3,828-byte prefix of the cumulative log. Its 7,860-byte successful suffix contains zero absent/discarded real-tick, volume/price mismatch, generation-fallback or load-error line and records a passed 24,099,625-tick execution.
+- The HTML report nevertheless records `99% 실제 틱`, not the frozen per-path requirement of 100%. This independently fails P1 integrity and cannot be overridden by the clean detailed suffix or repaired with the market-data rebuild allowance because no required tick hash or visible specification changed.
+- Preserved and hash-pinned the report, summary, cumulative logs and all 1,529 opportunity rows without semantically reading those rows. P2-P4, direction/frequency/economic aggregation, rerun, threshold or structure rescue and every prototype remained unopened.
+- Closed `INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Result/closure SHA-256 values are `5BECB064D04602E0306291B097F3AF838478EA3699D42C85DDE6AD49DC53E483` / `865E4CB379075EC0C47E164E5E4FF35A5395D56DFD9976CDE2A8E0E4FA995C9E`. No broker/account state or Live surface was queried or changed.

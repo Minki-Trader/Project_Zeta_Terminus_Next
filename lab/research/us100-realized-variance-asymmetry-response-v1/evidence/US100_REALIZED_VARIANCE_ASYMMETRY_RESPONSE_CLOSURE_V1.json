@@ -1,0 +1,55 @@
+{
+  "schema": "zeta-next-us100-realized-variance-asymmetry-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "us100-realized-variance-asymmetry-response-032",
+  "family": "us100-realized-variance-asymmetry-response-v1",
+  "evidence": {
+    "declaration_sha256": "B83BBF7CA1D0663670841FC4D322C000F46B38D503CA7AFA6F48D272E9F20066",
+    "compile_receipt_sha256": "5F84825EBF7F4BFEFA4307F17F7BAF8B4FCB593E9ED6E85F7B51DCB87E82599E",
+    "runtime_correction_sha256": "967240AE839A2DACB670BEEF7A4C78FC158A80B490270177B132C1CE6668158A",
+    "result_sha256": "5BECB064D04602E0306291B097F3AF838478EA3699D42C85DDE6AD49DC53E483"
+  },
+  "execution": {
+    "pre_outcome_runtime_load_failures": 1,
+    "fixed_paths_opened": 1,
+    "valid_fixed_paths": 0,
+    "unopened_fixed_paths": 3,
+    "extra_paths": 0,
+    "economic_rows_read": 0,
+    "orders": 0,
+    "positions": 0
+  },
+  "integrity_boundary": {
+    "runtime_path_correction_committed_before_retry": true,
+    "observer_normal_stop": true,
+    "observer_rate_tick_profit_faults": 0,
+    "resolved_rows_on_invalid_p1": 1529,
+    "visible_contract_spec_equal": true,
+    "in_scope_raw_tick_manifests_equal": true,
+    "detailed_agent_history_warning_lines": 0,
+    "html_report_labelled_100_percent_real_ticks": false,
+    "html_report_label": "99_PERCENT_REAL_TICKS",
+    "history_quality_contract_passed": false,
+    "rebuild_condition_present": false
+  },
+  "verdict": "INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "economic_interpretation": "NONE. The frozen P1 path reached a clean observer stop but its Tester HTML reported only 99 percent real ticks, so neither direction reached frequency or economic aggregation.",
+  "closed_rescues": [
+    "accepting 99 percent as equivalent to the predeclared 100-percent HTML gate",
+    "using the clean detailed-log suffix to override the failed HTML gate",
+    "using the market-data rebuild allowance without an in-scope tick hash or visible-specification change",
+    "rerunning P1 after the integrity result",
+    "P2 through P4",
+    "reading the 1,529 preserved opportunity rows",
+    "changing the return window, sign-count minimum, energy transform or imbalance threshold",
+    "changing the bar period, continuity, overlap or horizon",
+    "direction, spread or period variants",
+    "realized-variance-asymmetry entry prototype"
+  ],
+  "retained_prototype_question": null,
+  "forward_baseline_changed": false,
+  "broker_or_account_query": false,
+  "live_surface": "UNTOUCHED",
+  "next": "after_commit_and_push_choose_one_fresh_serial_frontier_question_without_reusing_the_unread_unit_032_economics"
+}
