@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "record_type": "tester_replay_financing_drift_closure",
+  "project_id": "PROJECT_ZETA_TERMINUS_NEXT",
+  "family_id": "tester-replay-financing-drift-v1",
+  "title_ko": "테스터 재생·금융비용 드리프트 포렌식",
+  "completed_at_kst": "2026-08-25T19:27:54+09:00",
+  "repository_head_at_investigation_start": "e271cbb99663d713e2f7663839c78b9ad8732c68",
+  "trigger": {
+    "observed_during": "complexity-refactor-v1 CP1 adjacent-control replay",
+    "frozen_binding_report": {
+      "first_fills": 2235,
+      "actual_net_usd": 1019.04,
+      "final_balance_usd": 1119.04
+    },
+    "fresh_binding_control": {
+      "first_fills": 2234,
+      "actual_net_usd": 1142.0,
+      "final_balance_usd": 1242.0
+    },
+    "previous_surface_description": "The CP1 record named 2023-04-10 protective-stop prices as the first report difference but deliberately did not open an environment investigation."
+  },
+  "scope": {
+    "type": "retrospective_read_only_forensics",
+    "new_mql_source": false,
+    "new_ea_or_adapter": false,
+    "new_tester_run": false,
+    "new_economic_mechanism": false,
+    "live_source_or_runtime_changed": false,
+    "broker_positions_orders_or_deals_queried": false,
+    "why_no_new_run": "The pre-refresh symbol-specification blob was not preserved. A rerun now would only reuse the current specification and cannot recreate the 2026-08-24 financing environment. The two immutable reports, their result caches, same-runtime CP1/CP2 equality, latest-window reproduction and preserved synchronization logs are sufficient to bound the cause."
+  },
+  "primary_artifacts": {
+    "old_binding_report": {
+      "path": "lab/artifacts/backtests/equivalence/binding/next-v7/next-v7-modular-real-ticks-binding.htm",
+      "sha256": "81852F9A254E66317842CD0386570D5A971078E00A9193DE738C1082F14E33E4",
+      "bytes": 4377082,
+      "written_kst": "2026-08-24T14:50:04.350+09:00"
+    },
+    "fresh_binding_report": {
+      "path": "lab/runtime/complexity-refactor-v1-portable/evidence-local/baseline-binding/report/cxr1-baseline-real-ticks-binding.htm",
+      "sha256": "D29BC4381B399F74402BCD10EE593414B653450920774C2C6A542A6C35CFDD7A",
+      "bytes": 4375930,
+      "written_kst": "2026-08-25T13:11:24.095+09:00"
+    },
+    "old_latest_report": {
+      "path": "lab/artifacts/backtests/equivalence/latest/next-v7/next-v7-modular-real-ticks-latest-2m.htm",
+      "sha256": "0525F34D7E7B79D43984C310F910D2EB7F6220262521E40677F90182BF227A01",
+      "bytes": 192568,
+      "written_kst": "2026-08-24T14:06:00.103+09:00"
+    },
+    "fresh_latest_report": {
+      "path": "lab/runtime/complexity-refactor-v1-portable/evidence-local/baseline-latest/report/cxr1-baseline-real-ticks-latest.htm",
+      "sha256": "34D0EA101D05CD891A98F1341B28E188321748544745D3D7BEA331AB04563BAC",
+      "bytes": 192528,
+      "written_kst": "2026-08-25T12:46:45.950+09:00"
+    },
+    "old_binding_result_cache": {
+      "path": "lab/runtime/tester-portable/Tester/cache/ZetaNextPre500FiniteRiskPortfolioV7.US30.M30.20220801_20260821.4.C77739B7B344927DAACBC41C3BBB94F5.tst",
+      "sha256": "3FFC84C61D03AF4B76EE15FA16A15FFFF608E589A177B02FA4558740663CD071",
+      "bytes": 2515754,
+      "written_kst": "2026-08-24T14:50:02.831+09:00"
+    },
+    "fresh_binding_result_cache": {
+      "path": "lab/runtime/complexity-refactor-v1-portable/evidence-local/baseline-binding/cache/ZetaNextPre500FiniteRiskPortfolioV7.US30.M30.20220801_20260821.4.C77739B7B344927DAACBC41C3BBB94F5.tst",
+      "sha256": "2C7A9CDA47C7C9B04A8B11FB716FF0963E583817C22FB24CEB240AADD2D8E8D5",
+      "bytes": 2514794,
+      "written_kst": "2026-08-25T13:11:21.921+09:00"
+    },
+    "prior_equivalence_evidence": "lab/evidence/NEXT_E01_V7_EQUIVALENCE.json",
+    "adjacent_cp1_evidence": "lab/evidence/COMPLEXITY_REFACTOR_ENTRY_GATE_CP1_V1.json",
+    "adjacent_cp2_evidence": "lab/evidence/COMPLEXITY_REFACTOR_MARKET_ENTRY_CP2_V1.json"
+  },
+  "logic_and_configuration_control": {
+    "base_set_sha256": "F834382A86CFA60A74DA44E99E84039185A1FF993FFEA7CDD2A2A967F12B870F",
+    "set_parameter_lines_equal_to_frozen_v7": true,
+    "source_check_from_cp1": "All 13 non-main/domain frozen files were text-equal after line-ending normalization; main/domain differences were declared tester isolation only.",
+    "entry_signals_sizing_risk_protection_and_exit_economics_changed": false,
+    "terminal_build": 6140,
+    "model": "Every tick based on real ticks",
+    "history_quality": "100% real ticks",
+    "deposit_usd": 100.0,
+    "leverage": "1:100",
+    "binding_total_all_symbol_ticks_both_runs": 678568654
+  },
+  "first_divergence_market_data_control": {
+    "interpretation": "The first external difference occurs in April 2023. The exact April tick files and 2023 bar-history files below have timestamps before both reports and are byte-identical in tester-portable, complexity-refactor-v1-portable and portfolio-exit-coordination-v1-portable.",
+    "runtime_roots_checked": [
+      "lab/runtime/tester-portable/Bases/FPMarketsSC-Live",
+      "lab/runtime/complexity-refactor-v1-portable/Bases/FPMarketsSC-Live",
+      "lab/runtime/portfolio-exit-coordination-v1-portable/Bases/FPMarketsSC-Live"
+    ],
+    "files": [
+      {
+        "relative_path": "history/US30/2023.hcc",
+        "sha256": "F656F724BC67B5EAF62D42D001FE1BAD13BDF86A37195E639FE6A36F5D1294FD",
+        "bytes": 21156417,
+        "written_kst": "2026-08-19T22:08:06.296+09:00"
+      },
+      {
+        "relative_path": "history/US100/2023.hcc",
+        "sha256": "0881A4CB12E90E10F9537A7FF2548EC24D3C3028B66DE7129CE1A96E4C91FEBB",
+        "bytes": 21164337,
+        "written_kst": "2026-08-19T22:08:12.293+09:00"
+      },
+      {
+        "relative_path": "ticks/US30/202304.tkc",
+        "sha256": "26C9379CAC4280C1BA658CF7CF046615AAB732CF79394136FF0E76699CD81198",
+        "bytes": 4490149,
+        "written_kst": "2026-08-19T16:18:09.498+09:00"
+      },
+      {
+        "relative_path": "ticks/US100/202304.tkc",
+        "sha256": "F90BD04A8C025A02855077C6804CAC64C319950412142B4EEDE1B80AC88C9412",
+        "bytes": 12010364,
+        "written_kst": "2026-08-19T16:20:45.011+09:00"
+      }
+    ]
+  },
+  "symbol_specification_boundary": {
+    "current_symbol_database": {
+      "relative_path_in_each_runtime": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71",
+      "bytes": 413696,
+      "written_kst": "2026-08-25T11:19:08.614+09:00",
+      "identical_in_three_checked_runtimes": true
+    },
+    "refresh_event": {
+      "path": "lab/runtime/tester-portable/logs/20260825.log",
+      "sha256_at_investigation": "DC7799DAE70E11CFF7FB6CA0561F772DDFE1BC4664F13E694602C3C352EF7BE9",
+      "bytes_at_investigation": 150502,
+      "authorized_kst": "2026-08-25T11:19:08.078+09:00",
+      "terminal_synchronized_kst": "2026-08-25T11:19:08.629+09:00",
+      "symbols_synchronized": 827
+    },
+    "tester_agent_observation": "Both old and fresh agent logs explicitly synchronize 3720 bytes of symbol information for US30, US100 and US500 separately from bar and tick history.",
+    "old_pre_refresh_symbol_database_preserved": false,
+    "limitation": "The exact old swap mode/rates and the precise broker-side revision cannot be reconstructed because the 2026-08-24 symbol-specification blob was overwritten by the 2026-08-25 broker synchronization."
+  },
+  "report_forensics": {
+    "balance_before_first_difference_usd": 224.69,
+    "first_external_difference": {
+      "time": "2023-04-10 02:00:00",
+      "matched_deal": "US30 sell out 0.01 at 33578.90",
+      "profit_both_usd": 1.02,
+      "old_swap_usd": 0.4,
+      "fresh_swap_usd": 0.0,
+      "old_balance_after_usd": 226.11,
+      "fresh_balance_after_usd": 225.71
+    },
+    "matched_financing_deals": [
+      {
+        "time": "2023-04-10 02:00:00",
+        "symbol": "US30",
+        "side": "sell",
+        "direction": "out",
+        "volume": 0.01,
+        "price": 33578.9,
+        "profit_both_usd": 1.02,
+        "old_swap_usd": 0.4,
+        "fresh_swap_usd": 0.0
+      },
+      {
+        "time": "2025-01-10 03:00:00",
+        "symbol": "US30",
+        "side": "sell",
+        "direction": "out",
+        "volume": 0.02,
+        "price": 42339.52,
+        "profit_both_usd": -3.65,
+        "old_swap_usd": 0.27,
+        "fresh_swap_usd": 0.0
+      },
+      {
+        "time": "2026-04-06 03:30:00",
+        "symbol": "US30",
+        "side": "sell",
+        "direction": "out",
+        "volume": 0.06,
+        "price": 46301.46,
+        "profit_both_usd": -5.66,
+        "old_swap_usd": 2.41,
+        "fresh_swap_usd": 0.03
+      }
+    ],
+    "financing_totals": {
+      "old_report_swap_usd": 3.08,
+      "fresh_report_swap_usd": 0.03,
+      "difference_usd": 3.05
+    },
+    "causal_amplification_chain": [
+      {
+        "stage": 1,
+        "time": "2023-04-10 02:00:00",
+        "effect": "The first matched close receives 0.40 less swap in the fresh replay; all preceding deal economics and balance are equal."
+      },
+      {
+        "stage": 2,
+        "time": "2023-04-10 12:30:00",
+        "effect": "The next matched US100 sell-limit order keeps entry 13052.70 but protection changes from 13488.99 to 13488.19. The 0.80-point change is arithmetically consistent with a 0.016-dollar smaller 4% risk budget from the 0.40-dollar balance difference."
+      },
+      {
+        "stage": 3,
+        "time": "2024-01-30 18:30:01",
+        "effect": "The first actual execution-price difference appears on a matched US30 buy stop exit: 38344.00 old versus 38343.90 fresh."
+      },
+      {
+        "stage": 4,
+        "time": "2024-02-13 20:42",
+        "effect": "The first realized profit difference beyond swap appears on the aligned US30 sell stop exit: -5.08 old versus -5.07 fresh, with different trigger time and price."
+      },
+      {
+        "stage": 5,
+        "time": "2025-02-21 13:30:00",
+        "effect": "The first aligned lot difference appears: US30 buy 0.03 old versus 0.02 fresh."
+      }
+    ],
+    "end_effect": {
+      "old_actual_net_usd": 1019.04,
+      "fresh_actual_net_usd": 1142.0,
+      "actual_net_difference_usd": 122.96,
+      "old_first_fills": 2235,
+      "fresh_first_fills": 2234,
+      "interpretation": "A small external financing delta entered a balance-scaled 4% position-risk and 12% aggregate-risk system, then altered protection, stop timing, lot thresholds and admission path. The 122.96-dollar gap is a nonlinear path result, not 122.96 dollars of swap."
+    },
+    "latest_window_negative_control": {
+      "period": "2026-06-01 through completed 2026-07-31",
+      "old_and_fresh_first_fills": 84,
+      "old_and_fresh_actual_net_usd": -1.11,
+      "old_and_fresh_swap_usd": 0.0,
+      "economics_reproduced": true,
+      "interpretation": "The window contains no swap-bearing deal, so it does not exercise the identified financing boundary and cannot disprove the binding-window diagnosis."
+    }
+  },
+  "hypothesis_adjudication": [
+    {
+      "hypothesis": "economic_source_or_set_changed",
+      "verdict": "REJECTED_AS_FIRST_CAUSE",
+      "basis": "Frozen economic source was normalized-equal except declared tester identity/isolation, the SET parameter lines were equal, and the first mismatch is an external swap line on an otherwise identical deal."
+    },
+    {
+      "hypothesis": "april_2023_tick_or_bar_history_changed",
+      "verdict": "REJECTED_AS_FIRST_CAUSE",
+      "basis": "The exact US30/US100 April tick and 2023 bar files are byte-identical with pre-run timestamps, total binding tick count is equal, and the matched close price/profit is identical."
+    },
+    {
+      "hypothesis": "unbounded_tester_nondeterminism",
+      "verdict": "NOT_SUPPORTED",
+      "basis": "The latest control reproduces, and fresh baseline, CP1 and CP2 match all structured report economics in the same synchronized environment."
+    },
+    {
+      "hypothesis": "symbol_specification_financing_drift",
+      "verdict": "SUPPORTED_HIGH_CONFIDENCE",
+      "basis": "Three same-time, same-symbol, same-side, same-volume, same-price and same-profit closes carry different swap, symbol information is synchronized independently from history, and the broker symbol database was refreshed between the two reports."
+    }
+  ],
+  "root_cause": {
+    "decision": "TESTER_SYMBOL_SPECIFICATION_FINANCING_DRIFT",
+    "confidence": "HIGH",
+    "bounded_statement": "The replay changed at the financing/swap contract boundary applied by the Strategy Tester. Protective-stop differences were the first downstream capital-scaled symptom, not the initiating cause.",
+    "exact_old_rate_revision_recoverable": false,
+    "broker_or_platform_defect_claimed": false
+  },
+  "existing_evidence_validity": {
+    "original_v6r6_to_v7_equivalence": "VALID_AS_SAME_ENVIRONMENT_EQUIVALENCE; its +1019.04 absolute binding result is a 2026-08-24 point-in-time environment snapshot, not an environment-independent replay anchor.",
+    "complexity_refactor_cp1_cp2_equivalence": "VALID_AS_IMMEDIATELY_ADJACENT_SAME_RUNTIME_CONTROL_COMPARISON; the +1142.00 control is the 2026-08-25 environment snapshot.",
+    "strategy_independence_deposit_capacity_and_portfolio_exit_families": "RETAIN THEIR WITHIN-FAMILY CONTROL-versus-candidate decisions because each fixed serial matrix used its own shared environment. Do not use small absolute cross-family net differences as exact parity evidence without a matching symbol-specification fingerprint.",
+    "cross_day_or_cross_family_absolute_replay": "NOT_VALID_FOR_EXACT_ECONOMIC_PARITY when the symbol-specification fingerprint differs or was not preserved.",
+    "live_evidence": "UNCHANGED; this finding concerns historical Tester replay and grants no inference about unqueried current broker account state."
+  },
+  "mandatory_future_tester_evidence_contract": {
+    "comparison_rule": "Judge every candidate against an immediately adjacent frozen control in the same isolated runtime and synchronized symbol-specification fingerprint.",
+    "record_before_and_after_each_serial_matrix": [
+      "terminal build",
+      "source and SET hashes",
+      "test period, model, deposit and leverage",
+      "required tick/bar file manifest hashes for the exercised period",
+      "symbols-*.dat hash, byte length and timestamp",
+      "US30, US100 and US500 contract size, tick size, tick value, volume minimum/step, stops/freeze levels",
+      "US30, US100 and US500 swap mode, long/short values, rollover triple day and seven daily swap multipliers"
+    ],
+    "mismatch_rule": "If the symbol-specification fingerprint changes inside a matrix, invalidate and rerun the entire control/candidate matrix under one fingerprint. Never splice old control and new candidate reports.",
+    "interpretation_rule": "Label absolute historical Tester profit as point-in-time broker-contract evidence unless a complete symbol specification is frozen."
+  },
+  "official_platform_basis": [
+    {
+      "url": "https://www.mql5.com/en/docs/runtime/testing",
+      "fact": "The client terminal sends the testing agent a separate testing-symbol specification and separately synchronizes history and ticks."
+    },
+    {
+      "url": "https://www.metatrader5.com/en/terminal/help/algotrading/testing",
+      "fact": "Strategy Tester symbol settings can overwrite specification parameters, demonstrating that the contract specification is an economic test input distinct from price history."
+    }
+  ],
+  "inference_disclosure": "The platform documents establish that symbol specification and price history are distinct test inputs. The conclusion that the intervening broker synchronization changed the applied financing terms is an inference from that platform behavior plus the preserved local reports, logs and hashes; the overwritten old specification prevents a field-by-field before/after diff.",
+  "closure": {
+    "decision": "CLOSE_CAUSE_BOUNDED_TO_TESTER_FINANCING_SPEC_DRIFT",
+    "new_hypothesis_opened": false,
+    "successor_family_opened": false,
+    "live_change_authorized": false,
+    "next": "none_opened_waiting_for_user"
+  }
+}
