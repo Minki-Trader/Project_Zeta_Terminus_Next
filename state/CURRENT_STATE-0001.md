@@ -721,3 +721,11 @@
 - Created the Git-ignored short `lab/runtime/clp36-portable/` directly from the generic Lab cache. It contains one family EX5, zero other-family EX5, Zeta Include or filesystem link object; sampled executable/tick file IDs differ from origin and terminal/agent EX5 paths are 178/206 characters.
 - Both 19-file 2025-01 through 2026-07 `Bases` and `Tester/bases` US500 manifests physically match origin at `D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916` / `AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB`; current 2026-08 is excluded.
 - Compile receipt SHA-256 is `97FADA5DD638F55654F32A27777C5C757E0116487D0A6E558A6342DABFFE0FED`. Source/config/binary/runtime are now immutable; only P1 2025 may open under the full integrity gate. No outcome, broker/account or Live surface was queried or changed.
+
+## STATE-0090 - 2026-08-26
+
+- Opened only frozen Unit 036 P1 2025. Terminal, Tester and observer stopped normally with 257 eligible path days, 13,755 eligible evaluations, 3,088 triggers/resolutions, zero unresolved and zero rate, tick, profit-calculation or row fault.
+- The detailed agent log records 21,096,613 real ticks, a passed test and zero absent/discarded, volume/price mismatch, generation-fallback or load-error line. Both 19-file in-scope raw-tick manifests, source, configuration, EX5 and all start/end visible contract values remained exact.
+- The P1 HTML nevertheless records `99% 실제 틱`, not the frozen `100%` requirement. This independently fails P1 integrity and cannot be overridden by the clean detailed log or repaired with the market-data rebuild allowance because no required tick hash or visible specification changed.
+- Preserved and hash-pinned the report, summary, logs and all 3,088 opportunity rows without semantically reading those rows. P2-P3, direction/frequency/economic aggregation, rerun, threshold or structure rescue and every prototype remained unopened.
+- Closed `INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Result/closure SHA-256 values are `EE763844AFA9F75A731EB3E51FB48AB016087266D9259C6F65D83DE417549057` / `684DBE0F84DF9CD2829FFC997F1F11166A3AE40F58028482C3C0812643A571AF`. No Live surface was changed.

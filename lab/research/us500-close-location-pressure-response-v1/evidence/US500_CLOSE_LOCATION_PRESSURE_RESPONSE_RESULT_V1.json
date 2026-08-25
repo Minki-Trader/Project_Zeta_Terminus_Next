@@ -1,0 +1,100 @@
+{
+  "schema": "zeta-next-us500-close-location-pressure-response-result-v1",
+  "created_at_local": "2026-08-26",
+  "unit": "us500-close-location-pressure-response-036",
+  "family": "us500-close-location-pressure-response-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "A36C48F6F9ECA9E7600C661AD9DE9A1A319046419FDD4E999865F18ECD1107C8",
+    "compile_receipt_sha256": "97FADA5DD638F55654F32A27777C5C757E0116487D0A6E558A6342DABFFE0FED",
+    "source_commit": "14b6179721d7debdccec4ef4ed9492c758885213",
+    "source_manifest_sha256": "44D6153FF6CB580FBC8D1DA2142697222F342B406DD825CC6E1C1C3FCF048E7B",
+    "configuration_manifest_sha256": "F560C9F076034D91D90F809D2AB08A897EBD5C043EC8209EE6D7F1FF0E7439E5",
+    "binary_sha256": "04FEE2A9F74381D920ED89E612CE9C474453FB582D663ECF13BF529E5DCDABEC",
+    "pre_outcome_bases_202501_202607_sha256": "D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916",
+    "pre_outcome_tester_bases_202501_202607_sha256": "AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB"
+  },
+  "p1_integrity_path": {
+    "period": "P1_DISCOVERY_2025",
+    "terminal_exit_code": 0,
+    "terminal_normal_stop": true,
+    "tester_normal_stop": true,
+    "observer_loaded_and_initialized": true,
+    "html_report_created": true,
+    "html_history_quality_label": "99_PERCENT_REAL_TICKS",
+    "html_exact_fragment": "99% 실제 틱",
+    "html_required_100_percent_label_present": false,
+    "detailed_agent_log": {
+      "bytes": 8332,
+      "sha256": "A8F2BDFEBB3558606655EFB738925B95E06A9415A209D3EF69B7961774095279",
+      "absent_discarded_mismatch_generation_or_load_error_lines": 0,
+      "generating_based_on_real_ticks_line_present": true,
+      "test_passed_line_present": true
+    },
+    "tester_log": {
+      "bytes": 9658,
+      "sha256": "7F23246BBA8553090E29BDB0EB3697843658ED9C4A77BC56D14993EA7C21B700"
+    },
+    "terminal_log": {
+      "bytes": 3492,
+      "sha256": "1997A3CEC613DC62545007A68ADEF8DA44B1D42FDAD87027C8C66236D766EBC9"
+    },
+    "observer": {
+      "eligible_path_days": 257,
+      "eligible_path_evaluations": 13755,
+      "finalized_bars": 23501,
+      "valid_ticks": 21096613,
+      "triggers": 3088,
+      "resolved": 3088,
+      "unresolved": 0,
+      "rate_faults": 0,
+      "tick_faults": 0,
+      "profit_calc_faults": 0,
+      "row_faults": 0,
+      "resolved_output_rows": 3088,
+      "resolved_output_rows_equal_summary": true,
+      "visible_spec_start_end_equal_and_frozen": true
+    },
+    "required_bases_manifest_after": "D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916",
+    "required_tester_bases_manifest_after": "AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB",
+    "required_in_scope_raw_tick_manifests_unchanged": true,
+    "source_binary_and_configuration_unchanged": true,
+    "post_run_database_telemetry": {
+      "selected_sha256": "EEDAD938CCAF4CC6EC35118129CED63AFBBD135EB09A45B528000A8A53094BA3",
+      "symbols_sha256": "35F1C4EE3D5B31062CB283ABCFC2322D635019661E62C1852DDB3603D8AA7CE0",
+      "invalidation_cause": false,
+      "rule": "Generic selected/full symbol-database synchronization is telemetry only; the visible specification and fixed raw-tick manifests govern this contract."
+    },
+    "history_quality_contract_passed": false,
+    "failure": "HTML_REPORT_DID_NOT_LABEL_PATH_100_PERCENT_REAL_TICKS",
+    "semantic_opportunity_rows_read": false,
+    "opportunity_rows_unread": 3088,
+    "artifact_root": "lab/artifacts/backtests/us500-close-location-pressure-response-v1/p1-html-quality-invalid/",
+    "report_sha256": "FEB6A2EFDD418723BDD971325BD95319F24F42C0D81BBF7DBF3450B6431BCDF3",
+    "summary_sha256": "544881E3945D9701DBFE8196C002159FED20A2AB1E7CC28032B66FAF17C1C4C1",
+    "opportunities_sha256_unread": "0224131DF33A2B549E5DB9E91C4DE378F4BB1458E82BB046ED711D6A178AB238",
+    "action": "CLOSE_INVALID_WITHOUT_ECONOMIC_JUDGMENT"
+  },
+  "rebuild_allowance": {
+    "used": false,
+    "permitted_for_this_failure": false,
+    "reason": "The sole rebuild allowance applies only to a required in-scope monthly tick hash or visible-specification change before semantic reading. Both remained exact. The declaration makes an HTML label below 100 percent an immediate invalid close rather than a rebuild condition."
+  },
+  "unopened_paths": [
+    "P2_CONFIRM_2026_JAN_MAY",
+    "P3_LATEST_2026_JUN_JUL"
+  ],
+  "aggregation": {
+    "opportunity_economics_read": false,
+    "continuation_metrics_calculated": false,
+    "reversion_metrics_calculated": false,
+    "frequency_gate_calculated": false,
+    "selection_gate_reached": false
+  },
+  "result": "INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE",
+  "economic_interpretation": "NONE. Continuation and reversion were neither accepted nor rejected because the first fixed path failed the predeclared HTML 100-percent-real-tick gate before economic aggregation.",
+  "retained_question": null,
+  "source_or_contract_repair": false,
+  "extra_path": false,
+  "broker_or_account_query": false,
+  "live_surface": "UNTOUCHED"
+}
