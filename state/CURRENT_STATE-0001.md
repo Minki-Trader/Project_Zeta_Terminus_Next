@@ -745,3 +745,11 @@
 - Slot value minus the prior mean-R comparator correlations were `-0.114285714`, `-0.228571429` and `+0.228571429`. Only the latest transition reached `+0.10`; the median was `-0.114285714`, so occupied time added no broad incremental ranking information.
 - The prior top two were positive in all six next-period cases and four landed in the next top three, but those descriptive gates cannot override failed rank stability and incremental information. No top-two-only, duration transform, blended score, period exception or threshold rescue opened.
 - Closed `NO_STRATEGY_OCCUPANCY_SLOT_VALUE_INFORMATION_PASSED`; no priority Proxy, EA or Live candidate survives. Result/closure SHA-256 values are `339B0078693C92928DC9B354B15E5FF45BCEF62D73071DB6108D26A67B685076` / `A6AB0C71AB774FC22EEB667ABBA17A73B80C2F2D2E4AACAA6485BC0DC42ECAD7`. No MQL, Tester or Live surface was opened.
+
+## STATE-0093 - 2026-08-26
+
+- After Unit 037 was durably closed and pushed, opened only the unrelated fresh Unit 038 `us500-ordinal-acceleration-response-v1`. It uses no Unit 036 close-location/body source or 3,088 unread rows and no Unit 037 slot-value field.
+- Before source or outcome, froze four continuous completed US500 M15 bars into three close-to-close log returns. All three must be finite, nonzero and same-sign while absolute magnitude strictly increases from oldest to latest; no magnitude floor or acceleration ratio exists.
+- One unresolved trade-free observation resolves after four later M15 market-bar advances and prices continuation/reversion at `0.01` under actual and one-additional-entry/exit-spread costs. P1 selects at most one direction, P2 confirms only it and P3 can only veto it.
+- The annual paths begin on the first full post-New-Year Monday to exclude a known empty holiday prefix, not to select economic outcomes. Every path still requires exact HTML 100%, zero detailed generation warning, unchanged 19-file raw-tick manifests and visible specification before semantic row reading.
+- Declaration SHA-256 is `2DD721FFF30769AE006F79B3ED12A82C42D8D4E58A979BF0D157590A2822DA94`. Source, configuration, binary, runtime and outcomes remain unopened; no Live surface was queried or changed.

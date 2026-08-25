@@ -1,0 +1,150 @@
+{
+  "schema": "zeta-next-us500-ordinal-acceleration-response-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_038_SOURCE_OR_OUTCOME",
+  "unit": "us500-ordinal-acceleration-response-038",
+  "family": "us500-ordinal-acceleration-response-v1",
+  "question": "Do three consecutive same-direction US500 M15 close-to-close returns whose absolute magnitudes strictly accelerate support a frequent, double-spread-positive one-hour continuation or reversion response?",
+  "novelty_boundary": {
+    "fresh_next_hypothesis": true,
+    "symbol": "US500",
+    "unit_036_close_location_body_source_or_unread_economics_used": false,
+    "unit_037_occupancy_slot_value_used": false,
+    "units_027_035_state_source_or_unread_economics_used": false,
+    "legacy_or_adjacent_repository_used": false,
+    "live_source_state_log_process_or_broker_state_used": false,
+    "operating_incidents_or_availability_used": false,
+    "confirmation_or_promotion_evidence": false
+  },
+  "implementation_boundary": {
+    "owning_root": "lab/research/us500-ordinal-acceleration-response-v1/",
+    "source_root": "lab/research/us500-ordinal-acceleration-response-v1/mt5/",
+    "runtime_root": "lab/runtime/oa38-portable/",
+    "fresh_single_source_observer": true,
+    "parent_source_copy": false,
+    "cross_family_include_or_runtime_link": false,
+    "order_submission_position_or_trade_operation": false,
+    "allowed_profit_surface": "OrderCalcProfit for the two fixed counterfactual books only",
+    "volume": 0.01,
+    "tester_only": true,
+    "live_surface": "UNTOUCHED"
+  },
+  "fixed_state": {
+    "timeframe": "M15",
+    "evaluation": "On the first valid executable US500 tick after a new M15 bar opens, inspect only the four just-completed bars.",
+    "continuity": "Current bar open and all four completed-bar opens form five timestamps separated by exactly 900 seconds each.",
+    "returns": {
+      "r1_oldest": "log(close_of_third_most_recent_completed_bar / close_of_oldest_completed_bar)",
+      "r2_middle": "log(close_of_second_most_recent_completed_bar / close_of_third_most_recent_completed_bar)",
+      "r3_latest": "log(close_of_most_recent_completed_bar / close_of_second_most_recent_completed_bar)"
+    },
+    "trigger": "r1, r2 and r3 are finite and nonzero, all have the same sign, and abs(r1) is strictly less than abs(r2), which is strictly less than abs(r3). No magnitude threshold is applied.",
+    "native_direction": "the shared return sign",
+    "rearm": "No parameterized rearm. A new trigger is eligible only when no prior observation is unresolved.",
+    "horizon": "Resolve on the first executable tick after four subsequent M15 market-bar advances.",
+    "books": {
+      "CONTINUATION": "trade in native_direction",
+      "REVERSION": "trade opposite native_direction"
+    },
+    "pricing": "Use actual trigger and resolution bid/ask for 0.01. Observed net embeds those two spreads; double-spread net subtracts one additional trigger spread and one additional resolution spread valued by OrderCalcProfit.",
+    "no_position_overlap": "one trade-free unresolved observation at a time"
+  },
+  "periods": [
+    {
+      "id": "P1_DISCOVERY_2025_ALIGNED",
+      "from": "2025-01-06",
+      "to_exclusive": "2026-01-01",
+      "last_trigger_cutoff": "2025-12-30 16:00:00",
+      "role": "Select at most one fixed direction only after integrity and discovery gates pass."
+    },
+    {
+      "id": "P2_CONFIRM_2026_JAN_MAY_ALIGNED",
+      "from": "2026-01-05",
+      "to_exclusive": "2026-06-01",
+      "last_trigger_cutoff": "2026-05-28 16:00:00",
+      "role": "Confirm only the P1-selected direction; it cannot switch or retune direction."
+    },
+    {
+      "id": "P3_LATEST_2026_JUN_JUL",
+      "from": "2026-06-01",
+      "to_exclusive": "2026-08-01",
+      "last_trigger_cutoff": "2026-07-30 16:00:00",
+      "role": "Latest-two-completed-month current broker/cost/execution evidence only; it may veto but cannot select, switch or tune direction."
+    }
+  ],
+  "calendar_alignment": {
+    "rule": "Annual paths begin on the first Monday after the New Year boundary rather than on a known nontrading holiday. P3 begins at its exact completed-month boundary.",
+    "purpose": "Avoid grading a full economic path on an intentionally empty holiday prefix. This changes no bar state, threshold, direction, outcome, cost or in-scope monthly tick file.",
+    "selected_from_economic_outcome": false,
+    "unit_036_unread_rows_or_metrics_used": false,
+    "nearby_unit_036_rerun_or_repair": false
+  },
+  "history_boundary": {
+    "required_completed_months": "US500 2025-01 through 2026-07 only",
+    "current_2026_08_tick_file_excluded": true,
+    "pre_run": [
+      "Freeze source, configuration and EX5 hashes.",
+      "Freeze exact 19-file Bases/US500 and Tester/bases/US500 raw-tick manifests.",
+      "Freeze selected/full symbol-database telemetry and visible US500 contract fields."
+    ],
+    "per_path_integrity": [
+      "Terminal, Tester and observer stop normally with one complete summary and zero observer rate, tick, pricing, row or unresolved fault.",
+      "HTML report displays exactly 100% real ticks.",
+      "The detailed agent-log segment contains zero absent/discarded real-tick, volume mismatch, price mismatch, generation-fallback or program-load warning.",
+      "Both 19-file completed-month raw-tick manifests and visible US500 specification remain exact before and after the path."
+    ],
+    "environment_change_rule": "If and only if a required completed-month tick hash or visible specification changes before economic rows are read, preserve and discard that path, physically rebuild the identical dedicated runtime once and rerun the same path. A second change closes the unit invalid. HTML or detailed generation-quality failure receives no rebuild.",
+    "economic_read_rule": "Do not semantically read opportunity rows for a path until every integrity item for that path passes."
+  },
+  "fixed_frequency_gate": {
+    "normal_observer_day": "A server date with at least one continuity-qualified completed-bar evaluation; zero-trigger normal days remain in the denominator.",
+    "P1": ["at least 2.0 resolved triggers per normal observer day", "at least 400 resolved triggers"],
+    "P2": ["at least 2.0 resolved triggers per normal observer day", "at least 150 resolved triggers"],
+    "P3": ["at least 2.0 resolved triggers per normal observer day", "at least 60 resolved triggers"]
+  },
+  "fixed_economic_gate": {
+    "path_metrics": ["double-spread net USD", "double-spread profit factor", "maximum closed double-spread drawdown USD", "double-spread net divided by drawdown"],
+    "P1_direction_selection": [
+      "direction double-spread net is positive",
+      "profit factor is at least 1.10",
+      "net-to-drawdown is at least 1.50"
+    ],
+    "P1_tie_break": "If both books pass, select larger double-spread net, then profit factor, then net-to-drawdown, then CONTINUATION before REVERSION.",
+    "P2_confirmation": [
+      "only the P1-selected direction is authoritative",
+      "double-spread net is positive",
+      "profit factor is at least 1.10",
+      "net-to-drawdown is at least 1.50"
+    ],
+    "P3_latest_check": [
+      "only the already-selected direction is authoritative",
+      "double-spread net is positive",
+      "profit factor is at least 1.05",
+      "net-to-drawdown is at least 1.00"
+    ],
+    "pooled_selected_direction": [
+      "double-spread net is positive",
+      "profit factor is at least 1.10",
+      "summed path net divided by summed path maximum closed drawdown is at least 1.50",
+      "no one path supplies more than 70% of total positive double-spread net"
+    ]
+  },
+  "sequential_opening_rule": [
+    "Commit and push this declaration before source implementation or outcome.",
+    "Freeze source, configurations, binary, runtime and history fingerprints before P1.",
+    "Run P1 only. If integrity, frequency or both direction-selection gates fail, close without opening P2 or P3.",
+    "Run P2 only for confirmation of the frozen P1 direction. If it fails, close without opening P3.",
+    "Run P3 only as the fixed latest evidence for the already-selected and confirmed direction."
+  ],
+  "passing_action": "Retain exactly one later standalone trading-prototype question for the selected direction. Unit 038 itself selects no entry implementation, stop, size, protection, hold, priority, portfolio admission, EA candidate or Live behavior. Any later prototype must remain independently identified and later face a complete six-strategy shared-portfolio combination unit.",
+  "failure_action": "Close without return-magnitude floor, acceleration ratio, equality tolerance, return count, bar period, continuity, session, weekday, horizon, spread, direction, period, symbol or subgroup rescue. Do not reuse failed rows to open a nearby acceleration variant.",
+  "evidence_limit": {
+    "all_periods_already_consumed_exploratory": true,
+    "latest_two_months_excluded_from_selection_and_tuning": true,
+    "clean_holdout": false,
+    "economic_pass_name": "EXPLORATORY_PROTOTYPE_QUESTION_ONLY",
+    "promotion_evidence": false
+  },
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_implement_and_freeze_the_single_source_observer"
+}
