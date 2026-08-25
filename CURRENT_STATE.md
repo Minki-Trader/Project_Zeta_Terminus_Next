@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0066`
+- Latest state ID: `STATE-0067`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: `us100-session-reopen-discontinuity-028`; fresh trade-free observer declaration frozen before implementation and outcome
+- Active research boundary: none; Unit 028 is closed and frozen with no retained prototype
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -303,13 +303,20 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 - RC16's apparent tail value was concentrated in P3 `+0.310605556R`, while P1/P2 were near zero and P4 reversed. Closed `NO_CLOSED_DRAWDOWN_STATE_FIELD_PASSED` without dollar depth, duration, streak, previous-outcome, open-equity, threshold or subgroup rescue.
 - No response, size, hold, protection, priority, EA or Live candidate opened. Declaration/result/closure SHA-256 values are `377CBB787BEEE5AA9F6EB763EC5187AA11FE98CFB6503B376D7179445D03BC54` / `4A200D02211AD6E21DD91844A8BCC877C69BAB788439795623CC68458F4F2B8B` / `4EA90A2F96B4085E1FC3C408E999C7DB35F9A8E1E972FFD1C95D769A5EC988B0`. Live remains untouched.
 
-## Open US500 shock response Unit 027
+## Closed US500 shock response Unit 027
 
-- Fresh Next-only market question: whether a completed-M15 US500 60-minute impulse, normalized by the immediately preceding 32 M15 returns, supports one frequent, double-spread-positive four-market-bar continuation or reversion response.
-- The fixed trade-free observer triggers only at `|z| >= 2.0`, rearms at `|z| <= 1.0`, permits one unresolved observation and resolves after four subsequent market bars. It counterfactually prices continuation and reversion at `0.01` using actual bid/ask plus exactly one additional entry and exit spread.
-- Exactly four serial real-tick paths are allowed across P1 2022H2-2023, P2 2024, P3 2025 and P4 2026 YTD. A direction must pass frequency, pooled double-spread net/PF/net-to-DD, three-period positivity and contribution-concentration gates.
-- Unit 027 places no order and selects no stop, size, priority or Live candidate. At most one later standalone additive entry-prototype question may survive; any later combination must preserve and evaluate all six existing strategies.
-- Declaration SHA-256 is `2CB75E9810EA6ED3D84DF45E8C6921DD860D2D6380D9FE5CF281720D0165E6E4`; source, configuration, binary, runtime and outcomes remain unopened. Live remains untouched.
+- The fresh self-contained US500 observer compiled at `0 errors / 0 warnings` and twice stopped normally with 1,264 resolved observations and zero observer fault on the fixed P1 path.
+- Before economic rows were read, the required current-month `Bases/US500/202608.tkc` fingerprint changed on the first run and again after the sole identical runtime rebuild. Tester-bases and visible contract fields stayed exact.
+- Applied the frozen second-change rule before aggregation: P2-P4 and every economic direction, threshold or prototype judgment remained unopened. This is an environment invalidation, not evidence for or against continuation or reversion.
+- Closed `INVALID_SECOND_REQUIRED_TICK_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Result/closure SHA-256 values are `09B85F76E8AA1049328D52C756CDF45B4BF2EDF3A5131ADC431B2EA5744C378C` / `3B5FF3A883D2A386FACE8EEF02BF24BFD93AE550604EA7117FD2F86ACFE08A07`.
+
+## Closed US100 session-reopen discontinuity Unit 028
+
+- The fresh trade-free observer completed exactly four serial build-6140 paths at 100% real ticks. All 92 triggers resolved after four market bars with zero rate, tick, overlap or profit-calculation fault; source, configuration, binary, completed-month raw ticks and visible contract fields stayed frozen.
+- Only 92 opportunities appeared across 793 eligible reopen days, or `0.116015132` per day. P1-P4 rates were `0.067375887/0.126903553/0.121827411/0.205128205`; only one path reached `0.20`, and the pooled count stayed below `150`.
+- Continuation was `+$2.22` at observed costs but `-$1.26`, PF `0.924187726` at double spread. Its sole positive stressed path was P4 `+$5.26`; P1-P3 were negative and positive-path contribution was 100% concentrated. Reversion was `-$9.03`, PF `0.561224490` at double spread.
+- Closed `NO_SESSION_REOPEN_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED`. No threshold, duration, baseline, horizon, weekday, direction, spread or period rescue and no entry prototype opened.
+- Declaration/result/closure SHA-256 values are `44960447FEE5ACE9000AB13FF116C52E287E0240985A59525922EF91633B2C5E` / `A6F6CB7BD9DBDDCA0B3F488D38A665A3C75B678A4C61DEB7543C6184DC65FF37` / `59D962B43ED27AEAEF915B38993CD3090EC8A22B0181EF1446D1C6369EAEC93F`. No Live surface was queried or changed.
 
 ## Required completion evidence
 
@@ -322,4 +329,4 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was las
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_OPEN_DECLARATION_FROZEN`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_NO_PROTOTYPE`

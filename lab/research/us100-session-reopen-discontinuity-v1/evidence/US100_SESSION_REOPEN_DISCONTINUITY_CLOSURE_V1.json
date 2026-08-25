@@ -1,0 +1,50 @@
+{
+  "schema": "zeta-next-us100-session-reopen-discontinuity-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "us100-session-reopen-discontinuity-028",
+  "family": "us100-session-reopen-discontinuity-v1",
+  "evidence": {
+    "declaration_sha256": "44960447FEE5ACE9000AB13FF116C52E287E0240985A59525922EF91633B2C5E",
+    "compile_receipt_sha256": "1E1D8A45E3CDEA917799F4EB4BADA66742F732399698407A945D368EFB99469E",
+    "result_sha256": "A6F6CB7BD9DBDDCA0B3F488D38A665A3C75B678A4C61DEB7543C6184DC65FF37"
+  },
+  "execution": {
+    "valid_fixed_paths": 4,
+    "invalid_or_rebuilt_paths": 0,
+    "extra_paths": 0,
+    "resolved_opportunities": 92,
+    "orders": 0,
+    "positions": 0
+  },
+  "gate_summary": {
+    "integrity_passed": true,
+    "pooled_opportunities_per_eligible_reopen_day": 0.116015132,
+    "paths_at_or_above_0_20": 1,
+    "pooled_resolved": 92,
+    "continuation_double_spread_net_usd": -1.26,
+    "continuation_double_spread_profit_factor": 0.924187726,
+    "continuation_positive_paths": 1,
+    "reversion_double_spread_net_usd": -9.03,
+    "reversion_double_spread_profit_factor": 0.561224490,
+    "reversion_positive_paths": 0,
+    "passing_directions": []
+  },
+  "verdict": "NO_SESSION_REOPEN_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED",
+  "reason": "All three frequency requirements failed: 92 opportunities across 793 eligible reopen days is 0.116015132 per day, only P4 reached 0.20, and the required pooled count was 150. Neither direction was double-spread positive. P4 continuation's isolated +$5.26 was offset by three negative earlier paths and represented 100 percent of positive-path contribution.",
+  "closed_rescues": [
+    "another gap-score threshold",
+    "another reopen-duration band",
+    "another volatility baseline length",
+    "another holding horizon",
+    "weekday, direction or period subgroup",
+    "another spread stress",
+    "another path or clean rerun",
+    "session-reopen entry prototype"
+  ],
+  "retained_prototype_question": null,
+  "forward_baseline_changed": false,
+  "live_surface": "UNTOUCHED",
+  "local_process_only_observation": "The formerly verified Live terminal PID 13328 remains absent with no replacement terminal64.exe; dashboard PID 4284 remains. No broker state was queried and no Live process was restarted or changed.",
+  "next": "after_commit_and_push_return_to_one_fresh_unrelated_serial_frontier_question"
+}

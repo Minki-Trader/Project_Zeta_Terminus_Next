@@ -37,7 +37,7 @@
 - `research/initial-stop-geometry-value-v1/`: 닫힌 Unit 025 source-free family; 전 전략 pooled `|rho|<0.20`, tail `|효과|<0.10R`, RC4·Return 근접값도 기간·stop 일관성 미달로 후보 없음
 - `research/closed-drawdown-state-value-v1/`: 닫힌 Unit 026 source-free family; 전 전략 pooled `|rho|<0.20`, RC16 tail 크기는 통과했으나 P3 집중·기간/stop 폭 미달로 반응 후보 없음
 - `research/us500-shock-response-v1/`: 닫힌 Unit 027 fresh observer family; P1과 허용된 clean 재실행 모두 현재월 필수 US500 `Bases` 틱 지문이 바뀌어 경제 집계 전 무효, P2-P4·prototype 없음
-- `research/us100-session-reopen-discontinuity-v1/`: 활성 Unit 028 fresh observer family; 주문 없는 US100 세션 재개 관측기와 4개 실틱 경로가 소스·설정·바이너리·전용 Portable까지 결과 전 동결됨
+- `research/us100-session-reopen-discontinuity-v1/`: 닫힌 Unit 028 fresh observer family; 4개 무결 실틱 경로의 92건이 빈도 전 관문과 양 방향 double-spread 경제 관문을 모두 통과하지 못해 prototype 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

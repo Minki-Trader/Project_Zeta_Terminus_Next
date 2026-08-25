@@ -535,3 +535,12 @@
 - Created the dedicated Git-ignored `lab/runtime/us100-session-reopen-discontinuity-v1-portable/` by physical copy of build-6140 executables and US100 data only. It contains zero filesystem link and shares no code, setting, log, state or runtime dependency with Live or another family.
 - Froze both required 48-file US100 2022-08 through 2026-07 completed-month raw-tick manifests, current symbol-database telemetry and visible consumed US100 specification. Compile receipt SHA-256 is `1E1D8A45E3CDEA917799F4EB4BADA66742F732399698407A945D368EFB99469E`; no Tester path or economic outcome has opened.
 - Exactly four serial trade-free P1-P4 paths may now run under the frozen integrity contract and single environment-rebuild allowance. No Live process, broker state or Live surface was queried or changed.
+
+## STATE-0067 - 2026-08-26
+
+- Completed exactly four serial Unit 028 paths at 100% real ticks with the frozen source, configuration, binary and dedicated Portable. All required 48-file completed-month `Bases` and `Tester/bases` manifests stayed exact; visible US100 specifications matched at every start/end boundary.
+- The observer recorded `94,398` evaluations, 793 eligible reopen days, 794 eligible events and 92 triggers. Every trigger resolved after exactly four market bars; unresolved, rate, tick, overlap, direction, row-count and profit-calculation faults were zero.
+- Frequency failed all fixed gates: pooled density was `92/793 = 0.116015132` versus `0.30`, only P4 reached the required path density `0.20`, and 92 pooled opportunities were below 150.
+- Continuation produced observed `+$2.22` but double-spread `-$1.26`, PF `0.924187726`, with only P4 positive at `+$5.26` and 100% positive-path concentration. Reversion produced observed `-$5.67` and double-spread `-$9.03`, PF `0.561224490`, with zero positive path.
+- Applied the frozen failure action without threshold, duration, baseline, horizon, weekday, direction, spread, period or extra-run rescue. Closed Unit 028 `NO_SESSION_REOPEN_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED`; no prototype, candidate, seed or Live promotion survives.
+- Result/closure SHA-256 values are `A6F6CB7BD9DBDDCA0B3F488D38A665A3C75B678A4C61DEB7543C6184DC65FF37` / `59D962B43ED27AEAEF915B38993CD3090EC8A22B0181EF1446D1C6369EAEC93F`. Process-only observation still finds no replacement `terminal64.exe` for former PID `13328`; dashboard PID `4284` remains. No broker state or Live surface was queried or changed.
