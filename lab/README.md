@@ -45,6 +45,7 @@
 - `research/us100-directional-path-efficiency-response-v1/`: 닫힌 Unit 033 fresh observer family; P1은 1,127건 정상 해결·상세 경고 0이었으나 HTML `99% 실제 틱`으로 고정 100% 관문 실패, 경제행 미열람·P2-P3·prototype 없음
 - `research/native-direction-asymmetry-value-v1/`: 닫힌 Unit 034 source-free family; 전 전략 return `|SELL-BUY|<0.10R`, RC4 stop 부담은 컸으나 수익효과 미달로 방향 처리 후보 없음
 - `research/same-strategy-interbirth-gap-value-v1/`: 닫힌 Unit 035 source-free family; 전 전략 밀도는 통과했으나 pooled `|rho|<0.20`이고 RC16 근접 tail도 `0.08111R/-0.03409`로 수익·stop 크기 미달, cadence 처리 후보 없음
+- `research/us500-close-location-pressure-response-v1/`: 열린 Unit 036 fresh observer family; 연속 M15 극단 종가·동행 body 뒤 1시간 지속/반전을 2025→2026 Jan-May→최신 Jun-Jul 순서로 판정, 소스·결과 미개봉
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
