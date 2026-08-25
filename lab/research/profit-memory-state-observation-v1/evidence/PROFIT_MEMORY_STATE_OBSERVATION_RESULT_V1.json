@@ -1,0 +1,130 @@
+{
+  "schema": "zeta-next-profit-memory-state-observation-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "INVALID_ENVIRONMENT_FINGERPRINT_BEFORE_ECONOMIC_GATE",
+  "unit": "actual-live-profit-memory-observation-021",
+  "family": "profit-memory-state-observation-v1",
+  "frozen_inputs": {
+    "declaration_path": "lab/research/profit-memory-state-observation-v1/evidence/PROFIT_MEMORY_STATE_OBSERVATION_DECLARATION_V1.json",
+    "declaration_sha256": "DD50F51C62C4B76E6FC5BC4FBE03AFB34C17AB5FFB7596175F94F3D461C54E6D",
+    "compile_receipt_path": "lab/research/profit-memory-state-observation-v1/evidence/PROFIT_MEMORY_STATE_OBSERVATION_COMPILE_RECEIPT_V1.json",
+    "compile_receipt_sha256": "32A419A3A3B6129D75393D4C30F3367788F470573CC38219E1D63B62E6E031BA",
+    "source_commit": "a2281ca",
+    "planned_serial_paths": 8
+  },
+  "execution": {
+    "opened_paths": [
+      "P1_CONTROL",
+      "P1_PROFIT_MEMORY_OBSERVER"
+    ],
+    "completed_paths": 2,
+    "unopened_paths": [
+      "P2_CONTROL",
+      "P2_PROFIT_MEMORY_OBSERVER",
+      "P3_CONTROL",
+      "P3_PROFIT_MEMORY_OBSERVER",
+      "P4_CONTROL",
+      "P4_PROFIT_MEMORY_OBSERVER"
+    ],
+    "additional_paths": 0,
+    "clean_rerun": false,
+    "stop_rule_applied": "If environment fingerprint changes, invalidate and close without a clean rerun inside Unit 021.",
+    "live_surface": "UNTOUCHED"
+  },
+  "environment_fingerprint": {
+    "selected_symbol_database": {
+      "before_matrix": {
+        "bytes": 18210,
+        "sha256": "34AC175155A5D285AA612D831A422755B31C6F048DF01CF4EEE17DE7CF21F6A0"
+      },
+      "after_p1_control": {
+        "sha256": "34AC175155A5D285AA612D831A422755B31C6F048DF01CF4EEE17DE7CF21F6A0"
+      },
+      "after_p1_observer": {
+        "bytes": 18210,
+        "sha256": "0A418E1D416143D92DA9C1EB40364873F8E0096D393FB103F3CD084DC232417E",
+        "last_write_local": "2026-08-26T01:42:14.0126984+09:00"
+      },
+      "unchanged": false
+    },
+    "full_symbol_database": {
+      "before_matrix": {
+        "bytes": 413696,
+        "sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE"
+      },
+      "after_p1_control": {
+        "sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE"
+      },
+      "after_p1_observer": {
+        "bytes": 413696,
+        "sha256": "E3DED48199A3E2C6EB199B0FCC84CB2CF4763AB72559164043F60B8F4BB33AB1",
+        "last_write_local": "2026-08-26T01:42:14.0157115+09:00"
+      },
+      "unchanged": false
+    },
+    "localization": "Both frozen database hashes remained unchanged after P1_CONTROL and changed at the P1_OBSERVER terminal-shutdown timestamp.",
+    "contract_swap_log_rows": {
+      "symbols": ["US30", "US100", "US500"],
+      "control_rows": 6,
+      "observer_rows": 6,
+      "control_start_end_equal": true,
+      "observer_start_end_equal": true,
+      "control_observer_visible_fields_equal": true,
+      "interpretation": "Visible contract and swap fields remained equal, but they cannot override the frozen binary database fingerprint requirement."
+    },
+    "integrity_gate_passed": false,
+    "failed_requirement": "Required selected-symbol and full symbols databases must remain unchanged before and after every adjacent pair. Any change invalidates the full matrix."
+  },
+  "bounded_run_integrity": {
+    "p1_control_normal_tester_finish": true,
+    "p1_observer_normal_tester_finish": true,
+    "observer_summary": {
+      "rows_written": 769,
+      "faults": 0,
+      "unresolved": 0
+    },
+    "observer_row_to_lifecycle_equality_gate_reached": false,
+    "normalized_control_observer_economic_parity_gate_reached": false,
+    "reason": "The environment fingerprint gate failed first; later integrity and economic comparisons are not used to rescue or reinterpret the matrix."
+  },
+  "artifact_receipts": [
+    {
+      "path": "lab/artifacts/backtests/profit-memory-state-observation-v1/p1-control/agent-logs/20260826.log",
+      "bytes": 3359622,
+      "sha256": "6E1BB30695D71D7CC19D7BD2C4684A75E99D0F8A1A825B868D83DD55BF72509C"
+    },
+    {
+      "path": "lab/artifacts/backtests/profit-memory-state-observation-v1/p1-control/tester-logs/20260826.log",
+      "bytes": 3179510,
+      "sha256": "44E22B4CE7E677BC6B215C630FC7930241F6F9ED29BF07B735CE5E2E9BBE083D"
+    },
+    {
+      "path": "lab/artifacts/backtests/profit-memory-state-observation-v1/p1-observer/agent-logs/20260826.log",
+      "bytes": 5657378,
+      "sha256": "1071D1C9CA05DF8D37CCB9714A99E65602449F9356053F2D24E6A85DB25DF07B"
+    },
+    {
+      "path": "lab/artifacts/backtests/profit-memory-state-observation-v1/p1-observer/tester-logs/20260826.log",
+      "bytes": 5361434,
+      "sha256": "C0EBE5D2BC7355647CD4E376A5166EDF50E28E5AE7DA851EC5117A6EDB47FCD6"
+    }
+  ],
+  "economic_judgment": {
+    "unit_021_outputs_entered_into_aggregation": false,
+    "fixed_information_gate_reached": false,
+    "late_maturity_gate_reached": false,
+    "strategy_selected": null,
+    "management_proxy_question_retained": false,
+    "action_or_threshold_selected": false,
+    "economic_verdict": null,
+    "interpretation": "This is an environment invalidation, not evidence for or against profit-memory economics."
+  },
+  "selection": {
+    "verdict": "INVALID_SYMBOL_SPEC_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_CANDIDATE",
+    "candidate": null,
+    "retry_inside_unit_021": false,
+    "operating_hypothesis_opened": false,
+    "live_change_or_promotion": false
+  },
+  "next": "close_unit_021_and_the_actual_position_bundle_naturally_without_a_clean_rerun_then_return_to_the_ordinary_serial_frontier_transition"
+}

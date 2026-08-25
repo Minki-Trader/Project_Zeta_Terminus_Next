@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0049`
+- Latest state ID: `STATE-0050`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: `actual-live-profit-memory-observation-021`; declaration frozen before implementation/outcome, eight control/observer real-tick paths allowed, no management action or threshold selectable
+- Active research boundary: none; Units 020-021 actual-position bundle closed naturally after Unit 021's frozen environment fingerprint invalidated the matrix before economic judgment
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -249,14 +249,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 - Closed with exactly one retained next question: broad historical profit-state-memory observation under the late-maturity guard. No close, breakeven, trail, threshold, EA candidate or Live authority was selected.
 - Result/closure SHA-256: `294003EE9BFFDD434A033D481B484B19528D7184E97D2565DC210FA6370A5562` / `9C962ACAB4399B27C37EB35A802BE4CFD1B53AFEEA9BC59DDEEE66C08FF1F217`.
 
-## Open profit-memory state observation Unit 021
+## Closed profit-memory state observation Unit 021
 
-- One-time parent: frozen CXR2 Lab baseline tree `605fcec39cd1ba5479c156f71935299ea3c1288b` at commit `0d4032786cecb7d7e8a4c3074609db5b105fa107`.
-- Fixed matrix: identity-separated CONTROL and economically inert observer over P1 2022H2-2023, P2 2024, P3 2025 and P4 2026 YTD, exactly eight fresh-`$100` real-tick paths.
-- Fixed state: prior floating profit reaches `0.125R`; all six strategies are judged separately. At most one strategy may retain a later management-Proxy question, while portfolio and strategy late-maturity opportunity remain mandatory guards.
-- Declaration: `lab/research/profit-memory-state-observation-v1/evidence/PROFIT_MEMORY_STATE_OBSERVATION_DECLARATION_V1.json`; implementation and outcomes remain unopened and Live remains untouched.
-- CONTROL/OBSERVER share one common economic assembly and keep separate identity/state/output paths. Thirteen parent Include modules remain byte-equal; only family identity, conditional observer calls and the trade-free observer module differ.
-- Both variants compiled on build 6140 at `0 errors / 0 warnings`; source/config manifests are `F2F8A5551A8105A0DDE7D8978E514EE33BECE7C1960F9AE56BCDAD2B4DBB0232` / `58286073BDDAC9F98F1903FCABA5D26C7CF980063A05FDF16CB841B56C25DFA2`. No matrix outcome is open.
+- One-time CXR2 CONTROL/OBSERVER derivation remains source-frozen; both variants compiled on build 6140 at `0 errors / 0 warnings`, and only the first adjacent P1 pair opened.
+- P1 CONTROL and OBSERVER stopped normally. The observer wrote `769` rows with `0` faults and `0` unresolved positions; visible US30/US100/US500 contract and swap fields were equal at each path's start and end.
+- The selected-symbol database changed from `34AC175155A5D285AA612D831A422755B31C6F048DF01CF4EEE17DE7CF21F6A0` to `0A418E1D416143D92DA9C1EB40364873F8E0096D393FB103F3CD084DC232417E`, and the full symbols database changed from `1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE` to `E3DED48199A3E2C6EB199B0FCC84CB2CF4763AB72559164043F60B8F4BB33AB1` during the observer path.
+- The frozen stop rule therefore invalidated the whole matrix before economic aggregation. P2-P4's six paths, a clean rerun, information/late-maturity gates and every strategy/action/threshold judgment stayed unopened.
+- Closed `INVALID_SYMBOL_SPEC_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_CANDIDATE`; this is not evidence for or against profit-memory economics. Units 020-021 form a naturally closed actual-position bundle, with no forced extension toward Unit 030 and no operating hypothesis.
+- Result/closure SHA-256: `BE556346EBC7E41E09E42BC95199FABB115398A40DD70450D3C771DFB0E99458` / `B93A7EF0FB71D589B4163B59A7E14B130F771A96D7B9B1163B15DB7A5E8BA777`. Live CXR2 PID `13328` and dashboard PID `4284` remain untouched.
 
 ## Required completion evidence
 
@@ -269,4 +269,4 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the 
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_OPEN_DECLARATION_FROZEN`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY`

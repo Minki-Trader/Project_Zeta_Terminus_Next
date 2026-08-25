@@ -1,0 +1,50 @@
+{
+  "schema": "zeta-next-profit-memory-state-observation-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "actual-live-profit-memory-observation-021",
+  "family": "profit-memory-state-observation-v1",
+  "evidence": {
+    "declaration_sha256": "DD50F51C62C4B76E6FC5BC4FBE03AFB34C17AB5FFB7596175F94F3D461C54E6D",
+    "compile_receipt_sha256": "32A419A3A3B6129D75393D4C30F3367788F470573CC38219E1D63B62E6E031BA",
+    "result_sha256": "BE556346EBC7E41E09E42BC95199FABB115398A40DD70450D3C771DFB0E99458"
+  },
+  "closure": {
+    "verdict": "INVALID_SYMBOL_SPEC_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_CANDIDATE",
+    "environment_integrity_gate_passed": false,
+    "economic_gate_reached": false,
+    "completed_paths": 2,
+    "unopened_paths": 6,
+    "clean_rerun": false,
+    "selected_strategy": null,
+    "retained_management_proxy": null,
+    "candidate": null
+  },
+  "reason": "The frozen selected-symbol and full symbols database hashes remained stable after P1_CONTROL but changed during P1_PROFIT_MEMORY_OBSERVER. The visible US30, US100 and US500 contract/swap rows stayed equal and the observer reported 769 rows with zero fault, but neither fact can override the declaration's binary environment-fingerprint requirement. The whole matrix therefore became invalid before economic aggregation.",
+  "frozen_stop_rule": {
+    "remaining_matrix_opened": false,
+    "same_unit_clean_rerun": false,
+    "alternate_environment_fingerprint": false,
+    "threshold_or_subgroup_rescue": false,
+    "economic_outputs_used_for_judgment": false
+  },
+  "actual_position_bundle": {
+    "units": [20, 21],
+    "status": "NATURALLY_CLOSED_AT_UNIT_021",
+    "why": "Unit 020 retained only this broad profit-memory observation. Unit 021 produced no valid evidence capable of retaining an adjacent strategy-specific management question, so no related economic development remains justified.",
+    "forced_extension_to_unit_030": false,
+    "unrelated_research_opened_in_parallel": false,
+    "operating_incidents_studied": false
+  },
+  "surfaces": {
+    "family_source_frozen": true,
+    "forward_cxr2_baseline_unchanged": true,
+    "live_source_package_settings_state_logs_untouched": true,
+    "live_release": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+    "live_terminal_pid": 13328,
+    "dashboard_pid": 4284,
+    "promotion": "NONE"
+  },
+  "retained_seed": null,
+  "next": "after_durable_commit_return_to_the_ordinary_serial_frontier_and_select_one_new_economic_question_without_reopening_this_bundle"
+}

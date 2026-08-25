@@ -399,3 +399,11 @@
 - CONTROL/OBSERVER compiled on MetaEditor build 6140 at `0 errors / 0 warnings`. EX5 SHA-256 values are `2B62FF5C0C5038AF4CBDC974DDC62E2D5F9FCA21BEE2E3E24A7E1714566442D0` and `6BF20EEF4CB435414EDA07729F84044A33E3CDCFAAC7752387A7BB6AF826D3EC`.
 - One initial observer compile failed only on MQL constant-array and local-reference syntax; it was corrected before any Tester path or outcome and is not an economic result. The final source/config manifests and pre-run symbols database are frozen in `PROFIT_MEMORY_STATE_OBSERVATION_COMPILE_RECEIPT_V1.json`.
 - The dedicated Git-ignored Portable contains copied required-symbol data and byte-equal family source/binaries. Exactly eight serial paths are now allowed; no outcome has opened and Live remains untouched.
+
+## STATE-0050 - 2026-08-26
+
+- Opened the frozen Unit 021 matrix serially and completed only `P1_CONTROL` followed by `P1_PROFIT_MEMORY_OBSERVER`. Both Tester paths stopped normally; the observer reported `769` rows, `0` faults and `0` unresolved positions, and all logged US30/US100/US500 contract/swap fields matched between each path's start and end.
+- The selected-symbol database remained at its frozen SHA-256 after CONTROL but changed from `34AC175155A5D285AA612D831A422755B31C6F048DF01CF4EEE17DE7CF21F6A0` to `0A418E1D416143D92DA9C1EB40364873F8E0096D393FB103F3CD084DC232417E` at OBSERVER shutdown. The full symbols database likewise changed from `1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE` to `E3DED48199A3E2C6EB199B0FCC84CB2CF4763AB72559164043F60B8F4BB33AB1`.
+- Applied the predeclared environment stop rule without reinterpretation: the full matrix is invalid before economic aggregation, P2-P4's six paths remain unopened, and there is no same-unit clean rerun, threshold/subgroup rescue or economic verdict.
+- Closed Unit 021 as `INVALID_SYMBOL_SPEC_FINGERPRINT_NO_ECONOMIC_VERDICT_NO_CANDIDATE`. No strategy, management Proxy, action, threshold, EA candidate, operating hypothesis or Live change survived.
+- Units 020-021 now close the actual-position economic bundle naturally rather than stretching toward Unit 030. Exact CXR2 Live PID `13328`, dashboard PID `4284`, source, package, settings, state, logs and order behavior remained untouched; the ordinary one-stream Frontier transition resumes only after this durable boundary.
