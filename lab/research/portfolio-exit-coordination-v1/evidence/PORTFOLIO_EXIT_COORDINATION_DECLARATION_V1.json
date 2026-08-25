@@ -1,0 +1,176 @@
+{
+  "schema": "zeta-next-portfolio-exit-coordination-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_OUTCOME",
+  "research_family": {
+    "id": "portfolio-exit-coordination-v1",
+    "korean_title": "동시수익 보존·청산조정 연구",
+    "owner_root": "lab/research/portfolio-exit-coordination-v1/",
+    "runtime_root": "lab/runtime/portfolio-exit-coordination-v1-portable/",
+    "artifact_roots": [
+      "lab/artifacts/backtests/portfolio-exit-coordination-v1/",
+      "lab/artifacts/ea-files/portfolio-exit-coordination-v1/",
+      "lab/artifacts/logs/portfolio-exit-coordination-v1/"
+    ],
+    "serial_stream_only": true
+  },
+  "motivation": {
+    "source": "lab/research/live-dev-performance-forensics/evidence/LIVE_DEV_PERFORMANCE_FORENSICS_V1.json",
+    "source_sha256": "26E059C33F952E4FB2921101B9295921021828C13282E8C876B54DE36054B52F",
+    "closed_observations": [
+      "All three economic Live-Dev losers had previously crossed positive.",
+      "The 2026-08-20 SELL/BUY/BUY episode had every leg positive for 71.3687% of overlap.",
+      "The 2026-08-24 BUY/BUY/SELL episode had every leg positive for 94.6766% of overlap.",
+      "Independent natural exit clocks can remove one leg and re-expose the survivor to directional risk."
+    ],
+    "scored_as_evaluation_data": false
+  },
+  "frozen_parent": {
+    "root": "lab/engineering/complexity-refactor-v1/mt5/",
+    "commit": "9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5",
+    "git_tree": "7dbd1e0999a3921ab0f2601ff90ebe12f0f2c4ff",
+    "source_file_count": 15,
+    "copy_rule": "One-time self-contained copy into this family; no cross-family Include, link or execution dependency."
+  },
+  "causal_information_boundary": {
+    "allowed": [
+      "current owned component mask and position tickets",
+      "current executable-side floating POSITION_PROFIT in account currency",
+      "frozen entry planned risk stored for each currently open component",
+      "the current component's already-frozen natural exit event",
+      "portfolio group state accumulated only from earlier processed real ticks"
+    ],
+    "forbidden": [
+      "future prices or future exit outcome",
+      "per-trade MFE known only after the fact",
+      "the three motivating Live dates as special cases",
+      "strategy-specific thresholds",
+      "post-outcome threshold adjustment",
+      "broker history or Live account state"
+    ]
+  },
+  "fixed_paths": [
+    {
+      "id": "CONTROL",
+      "kind": 0,
+      "definition": "Frozen CP2 V7 economics and independent component exits; coordination telemetry is inert."
+    },
+    {
+      "id": "FIRST_NATURAL_EXIT_POSITIVE_COHORT",
+      "kind": 1,
+      "definition": "When any component reaches its frozen natural exit, if at least two owned positions are open and their current aggregate executable floating profit is strictly positive, close every currently open owned position. Otherwise perform only the original component close.",
+      "natural_exit_scope": "Fixed-hold closes plus Passive's frozen signal or maximum-hold close. Stops, safety closes, entry-validation closes and reconciliation closes are excluded."
+    },
+    {
+      "id": "ALL_GREEN_ZERO_FLOOR",
+      "kind": 2,
+      "definition": "For a current component-mask group containing at least two positions, arm after every member is simultaneously strictly profitable on a processed real tick. If that unchanged group later reaches aggregate executable floating profit less than or equal to zero, close the entire group.",
+      "reset": "Reset when the component mask changes or fewer than two positions remain."
+    },
+    {
+      "id": "ALL_GREEN_QUARTER_R_HALF_PEAK",
+      "kind": 3,
+      "definition": "For a current component-mask group containing at least two positions, arm only when every member is strictly profitable and aggregate executable floating profit is at least 0.25 times the group's summed frozen entry planned risk. Track only later aggregate peaks for that unchanged group and close the group when current aggregate profit is less than or equal to 50% of its peak.",
+      "activation_r_multiple": 0.25,
+      "retained_peak_fraction": 0.5,
+      "reset": "Reset when the component mask changes or fewer than two positions remain."
+    }
+  ],
+  "implementation_contract": {
+    "entrypoints": 4,
+    "shared_self_contained_include_tree": true,
+    "tester_only_hard_fail_outside_tester": true,
+    "separate_release_portfolio_magic_state_event_snapshot_and_lock_identity_per_path": true,
+    "unchanged": [
+      "all six entry signals and evaluation times",
+      "order type, price and volume",
+      "initial stop construction and RC4 compression",
+      "4% position and 12% aggregate admission",
+      "margin and sizing rules",
+      "session clock and calendar",
+      "entry transaction and reconciliation ordering",
+      "all original solo-position exits"
+    ],
+    "required_telemetry": [
+      "group mask and count",
+      "trigger time and trigger type",
+      "aggregate floating profit",
+      "summed planned risk",
+      "armed peak",
+      "tickets requested and successfully closed",
+      "trigger count and close failure count"
+    ]
+  },
+  "fresh_real_tick_periods": [
+    {
+      "id": "P1_2022H2_2023",
+      "from": "2022-08-01",
+      "to": "2024-01-01"
+    },
+    {
+      "id": "P2_2024",
+      "from": "2024-01-01",
+      "to": "2025-01-01"
+    },
+    {
+      "id": "P3_2025",
+      "from": "2025-01-01",
+      "to": "2026-01-01"
+    },
+    {
+      "id": "P4_2026_YTD",
+      "from": "2026-01-01",
+      "to": "2026-08-21"
+    }
+  ],
+  "run_matrix": {
+    "paths": 4,
+    "periods": 4,
+    "serial_real_tick_runs": 16,
+    "model": "MT5 Model=4 / real ticks",
+    "fresh_deposit_usd": 100.0,
+    "prior_project_realized_net_usd": 0.0,
+    "base_volume": 0.01,
+    "leverage": "1:100",
+    "execution_mode": 0,
+    "parameter_optimization": false
+  },
+  "fixed_selection_gate": {
+    "per_path_operational_requirements": [
+      "All four runs end with one normal STOP.",
+      "Zero safety, persistence, broker-identity, foreign-exposure, protection, coordination-close or ownership fault.",
+      "MT5 report net, trade and deal totals reconcile to preserved lifecycle/event evidence.",
+      "At least 20 coordination trigger episodes across the four periods."
+    ],
+    "economic_requirements": [
+      "Candidate summed stressed net across the four fresh periods must exceed control by at least max(USD 5, 5% of absolute control summed stressed net).",
+      "Candidate stressed net must be at least control in at least three of four periods.",
+      "Candidate actual net must be at least control in at least three of four periods.",
+      "Candidate summed stressed maximum closed drawdown must not exceed control summed drawdown.",
+      "No single period's stressed maximum closed drawdown may exceed control by more than 15%."
+    ],
+    "ranking_if_multiple_pass": [
+      "highest summed stressed net divided by summed stressed maximum closed drawdown",
+      "then highest summed stressed net",
+      "then fewer coordination triggers"
+    ],
+    "if_none_pass": "Close NO_MECHANISM_PASSED and retain frozen V7 exits.",
+    "if_one_or_more_pass": "Name at most one EXPLORATORY_CANDIDATE_ONLY; do not promote or change Live."
+  },
+  "evidence_limit": {
+    "all_historical_market_paths_already_consumed": true,
+    "clean_holdout_claim": false,
+    "confirmation_claim": false,
+    "live_promotion_possible_in_v1": false,
+    "required_future_step_if_candidate_passes": "A separately authorized successor must use genuinely fresh future operating evidence or another prospectively frozen boundary."
+  },
+  "stop_rules": [
+    "Do not add a hybrid path in V1.",
+    "Do not adjust 0.25R, 50%, zero floor, periods or pass thresholds after outcomes are read.",
+    "Do not add strategy-specific, symbol-specific, hour-specific or motivating-date-specific exceptions.",
+    "Do not run a 17th rescue path.",
+    "Do not alter or restart Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "implement_exactly_the_declared_four_paths_then_run_16_serial_real_tick_paths"
+}

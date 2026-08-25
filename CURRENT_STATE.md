@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0027`
+- Latest state ID: `STATE-0028`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: none; `live-dev-performance-forensics` is closed descriptive-only with no exit hypothesis opened; the later Frontier ledger is closed at `capital-scale-admission-topology-010` with `none_opened_waiting_for_user`; its configured 2025-01-01 through 2026-08-24 path is consumed exploratory evidence, not a clean holdout, confirmation or promotion basis; `예치자본·위험용량 연구` V1 is closed `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`, and the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
+- Active research boundary: one serial Tester-only family `portfolio-exit-coordination-v1`, predeclared before implementation or outcome consumption; no Live authority. `live-dev-performance-forensics` remains closed descriptive-only; the later Frontier ledger and all historical market paths are already consumed exploratory evidence, so this family cannot claim a clean holdout, confirmation or Live promotion
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
