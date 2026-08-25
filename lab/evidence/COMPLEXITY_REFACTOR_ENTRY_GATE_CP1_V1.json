@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "record_type": "engineering_checkpoint_equivalence_receipt",
+  "project_id": "project-zeta-terminus-next",
+  "candidate_family": "complexity-refactor-v1",
+  "checkpoint": "CP1_ENTRY_GATE_SPLIT",
+  "completed_on_kst": "2026-08-25",
+  "repository_head_before_implementation": "7edbd151ca56085d6d10f3a409cd43b43ba9107c",
+  "frozen_source_provenance_commit": "75bd9c9",
+  "verdict": "ENTRY_GATE_EQUIVALENCE_PASSED_STOP_BEFORE_CP2",
+  "isolation": {
+    "release_id": "NEXT-LAB-CXR1-ENTRY-GATE",
+    "portfolio_id": "ZT-PORT-NEXT-LAB-CXR1-ENTRY-GATE",
+    "execution_version": "zt-next-lab-cxr1-entry-gate",
+    "magic_numbers": [260825100, 260825101, 260825102, 260825103, 260825104, 260825105],
+    "source_root": "lab/engineering/complexity-refactor-v1/mt5",
+    "runtime_root": "lab/runtime/complexity-refactor-v1-portable",
+    "tester_only_hard_fail": true,
+    "independent_state_event_snapshot_lock_paths": true,
+    "live_source_package_runtime_state_process_changed": false,
+    "moving_lab_mt5_changed": false
+  },
+  "compiler": {
+    "mt5_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "baseline_result": "0 errors, 0 warnings",
+    "cp1_result": "0 errors, 0 warnings",
+    "baseline_ex5_sha256": "7689706F22930B1054F5D6D07FA317B1E7C419F211E90E9096048FE5881096A7",
+    "cp1_ex5_sha256": "7CDB41D96A88F9C46F951CFF979250B3283CF2507D087B9AF94AACC75429CEF8",
+    "baseline_compile_log_sha256": "274D16E811463E9AF41AE9F8755D4FE4D1CCA7026F7C13E40E8EECFC3CED7A50",
+    "cp1_compile_log_sha256": "8B7C5CF257A51344CA6B371F44B99E6F0A6AB0EA4B26313EC213DE1A68606A77"
+  },
+  "configuration": {
+    "set_sha256": "F834382A86CFA60A74DA44E99E84039185A1FF993FFEA7CDD2A2A967F12B870F",
+    "set_parameter_lines_equal_to_frozen_v7": true,
+    "baseline_latest_ini_sha256": "D8AA33C2312CBD773CEFCF2F4E5E4D968B7B8C76EBFCEF7F17B4BDEA2B18B80C",
+    "baseline_binding_ini_sha256": "AE133C7108AE05A98A1624DF28F0901A8293C79E432D09B90F9DC316B3A3C76F",
+    "cp1_latest_ini_sha256": "663E429901BD94A26804A413726392A5E8F8EA1FE485BC85DFE6F9CFA01DE31B",
+    "cp1_binding_ini_sha256": "CC8839B38BFAD2005EA12ABDB22560047EE6046542FA1F52C3F2FDE932400204"
+  },
+  "cp1_source_hashes": {
+    "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh": "54981FB43CAB8FA3F7A9D97B8EA8D666319712BDBFDD5147DDEF36261B1BA64C",
+    "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaRC16.mqh": "AC058C9820693C9349A08C2B14AABABC6AAF47A63178A2DA988F0FF922F4F003",
+    "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaRC4.mqh": "1B9E1909C1D68FE8D54E24A1CA3F081EBB50BDBB399ABB930534F82EF32D7C49",
+    "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaPressure.mqh": "091FD76C30A6CC402A009059AB7FB3CFB4C097E7016B10C64C09F200611B7A71",
+    "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaReturn.mqh": "46FF51B8C95262E856EBB0D3D7B59DFFA35CE2C11BB30E5AF4AE22F91EE1DE9D",
+    "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaCross.mqh": "5B4AF23309DBAA28F6DA84F21A26343D0BE370923135D5952131D182A4FFF888"
+  },
+  "isolation_source_hashes": {
+    "lab/engineering/complexity-refactor-v1/mt5/src/Experts/ZetaNextPre500FiniteRiskPortfolioV7.mq5": "3716E1B703BE0A3532A795CCD32419722E2854D293C7A476D154D4E7384CD380",
+    "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh": "D2DD1A067B040C56341E1CF1F9F6E24963752094AE5A3DF59BD8F018405975D2"
+  },
+  "unchanged_source_contract": {
+    "normalized_text_equal_to_frozen_active_package_file_count": 7,
+    "files": [
+      "Execution/ZetaOrders.mqh",
+      "Execution/ZetaOwnership.mqh",
+      "Execution/ZetaProtectionAndReconciliation.mqh",
+      "Persistence/ZetaStateAndEvents.mqh",
+      "Portfolio/ZetaPortfolioRisk.mqh",
+      "Strategies/ZetaPassive.mqh",
+      "Time/ZetaSessionClock.mqh"
+    ],
+    "open_component_changed": false,
+    "risk_or_margin_changed": false,
+    "persistence_schema_changed": false,
+    "passive_changed": false,
+    "rc4_management_changed": false
+  },
+  "gate_contract": {
+    "evaluation_order": [
+      "iTime",
+      "same_bar_short_circuit",
+      "CountOwnedPositions",
+      "RC4_shadow_read",
+      "TimeCurrent_via_IsEntryWindow",
+      "delay_decision"
+    ],
+    "evaluate_mutates_global_state": false,
+    "evaluate_writes_files_or_events": false,
+    "evaluate_changes_broker_state": false,
+    "commit_uses_existing_persist_decision": true,
+    "paths": [
+      {"code":"ENTRY_GATE_BAR_UNAVAILABLE","consume":false},
+      {"code":"ENTRY_GATE_ALREADY_CONSUMED","consume":false},
+      {"code":"ENTRY_GATE_DUPLICATE_EXPOSURE","consume":true},
+      {"code":"ENTRY_GATE_EXISTING_EXPOSURE","consume":true},
+      {"code":"ENTRY_GATE_RC4_SHADOW_OCCUPIED","consume":true},
+      {"code":"ENTRY_GATE_NOT_IN_WINDOW","consume":false},
+      {"code":"ENTRY_GATE_DELAY_EXCEEDED","consume":true},
+      {"code":"ENTRY_GATE_READY","consume":false}
+    ],
+    "binding_delay_path_observed": {
+      "component": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "server_time": "2025.11.24 15:03:59",
+      "elapsed_minutes": 3,
+      "baseline_and_cp1_equal": true
+    },
+    "rc4_shadow_entry_blocks": {"latest":2,"binding":63,"baseline_and_cp1_equal":true}
+  },
+  "real_tick_environment": {
+    "broker_cache": "FPMarketsSC-Live",
+    "model": "Every tick based on real ticks",
+    "history_quality": "100% real ticks",
+    "required_symbols": ["US100", "US30", "US500"],
+    "deposit_usd": 100.0,
+    "leverage": "1:100",
+    "serial_runs_only": true,
+    "fresh_result_cache_each_candidate_run": true
+  },
+  "windows": {
+    "latest": {
+      "period": "2026-06-01/2026-08-01",
+      "total_all_symbol_ticks": 137630654,
+      "baseline_first_fills": 84,
+      "cp1_first_fills": 84,
+      "component_counts": {"RC16":9,"RC4":7,"Cross":32,"Pressure":8,"Return":7,"Passive":21},
+      "baseline_actual_net_usd": -1.11,
+      "cp1_actual_net_usd": -1.11,
+      "baseline_stressed_2x_net_usd": -2.819,
+      "cp1_stressed_2x_net_usd": -2.819,
+      "final_balance_usd": 98.89,
+      "final_order_id": 178,
+      "final_deal_id": 169,
+      "structured_report_rows": 411,
+      "structured_report_differences": 0,
+      "stored_event_rows": 652,
+      "raw_event_differences": 1,
+      "normalized_event_differences": 0,
+      "baseline_report_sha256": "34D0EA101D05CD891A98F1341B28E188321748544745D3D7BEA331AB04563BAC",
+      "cp1_report_sha256": "B03867D0DBDB4AAB70DEDE2140D821CA6252599F7A1C43FD8E6A1AA890F270B6",
+      "baseline_events_a_sha256": "967D07E658B811854B7573C24A8E8FAC94DAAA987CE191B41E9C74E3AAEE2E30",
+      "cp1_events_a_sha256": "B09A8089B81AD1D7BEACE1FE8A92FB12CFCF7854BDA33DE79423F8B8638E052F",
+      "state_snapshot_lock_hashes_equal": true
+    },
+    "binding": {
+      "period": "2022-08-01/2026-08-21",
+      "total_all_symbol_ticks": 678568654,
+      "baseline_first_fills": 2234,
+      "cp1_first_fills": 2234,
+      "component_counts": {"RC16":272,"RC4":206,"Cross":804,"Pressure":118,"Return":244,"Passive":590},
+      "baseline_actual_net_usd": 1142.00,
+      "cp1_actual_net_usd": 1142.00,
+      "baseline_stressed_2x_net_usd": 1058.630,
+      "cp1_stressed_2x_net_usd": 1058.630,
+      "final_balance_usd": 1242.00,
+      "final_order_id": 4581,
+      "final_deal_id": 4469,
+      "structured_report_rows": 9114,
+      "structured_report_differences": 0,
+      "stored_event_rows": 4149,
+      "raw_event_differences": 1,
+      "normalized_event_differences": 0,
+      "baseline_report_sha256": "D29BC4381B399F74402BCD10EE593414B653450920774C2C6A542A6C35CFDD7A",
+      "cp1_report_sha256": "BEA2AA3A0F852976C0488EB087346105B69E4A046BCAAB318D06E3030A247F04",
+      "baseline_events_a_sha256": "849200EEFBC9B7FEAAC87517D8D814C45E6B1B3D1F5CD5F0CBD7E3D0B62A1CEB",
+      "baseline_events_b_sha256": "5EBA18395ECBFE63B166A1952130F0639CE6C2DD05F5D5C5AA22F56FF7530835",
+      "cp1_events_a_sha256": "849200EEFBC9B7FEAAC87517D8D814C45E6B1B3D1F5CD5F0CBD7E3D0B62A1CEB",
+      "cp1_events_b_sha256": "ADA21BF5AC9B912B6B9EF85D114803E926C389AE79D3CA321ED1268281EEB634",
+      "state_snapshot_lock_hashes_equal": true
+    }
+  },
+  "diagnostic_normalization": {
+    "field": "deal_wait_ms",
+    "reason": "GetTickCount64 wall-clock telemetry not consumed by signal, order, protection, sizing, risk, persistence, or reconciliation decisions",
+    "latest_raw_difference": "OPEN 2026-07-09 17:00:00 Cross 0 vs 15 ms",
+    "binding_raw_difference": "OPEN 2025-12-19 17:00:00 Cross 0 vs 15 ms"
+  },
+  "frozen_reference_replay_note": {
+    "frozen_latest_report_sha256": "0525F34D7E7B79D43984C310F910D2EB7F6220262521E40677F90182BF227A01",
+    "fresh_latest_control_reproduced_frozen_economics": true,
+    "frozen_binding_report_sha256": "81852F9A254E66317842CD0386570D5A971078E00A9193DE738C1082F14E33E4",
+    "fresh_binding_control_reproduced_frozen_economics": false,
+    "frozen_binding_first_fills_and_actual_net_usd": [2235, 1019.04],
+    "fresh_binding_first_fills_and_actual_net_usd": [2234, 1142.00],
+    "first_report_difference": "2023-04-10 protective-stop prices",
+    "source_check": "all 13 non-main/domain frozen files text-equal after line-ending normalization; main/domain differ only by declared tester isolation",
+    "scope_decision": "retain frozen report as immutable prior evidence; judge CP1 only against immediately adjacent same-runtime control; do not open broader environment or economic investigation"
+  },
+  "next": "none_opened_waiting_for_user"
+}
