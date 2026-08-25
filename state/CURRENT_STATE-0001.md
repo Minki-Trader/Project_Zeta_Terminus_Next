@@ -568,3 +568,11 @@
 - The configured nested HTML report directory was also absent and no report was created, but no retry was opened because the generated-tick telemetry already independently failed the frozen quality gate.
 - The sole rebuild allowance applies only to a required completed-month hash or visible-specification change; neither occurred. P2-P4, economic aggregation, direction selection, source/contract repair and every compression threshold/window/range/horizon variant remained unopened.
 - Closed Unit 029 `INVALID_P1_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`; continuation and reversion were neither accepted nor rejected. Result/closure SHA-256 values are `87411AB47075A28657D676F0143BB271F69AE16B552B4E084B4C34B4D8B5E720` / `A474035DCA5582D69104F899090088FCC73A336F3B1EA9646862E90B7B8CF05C`. No Live surface was changed.
+
+## STATE-0071 - 2026-08-26
+
+- After Unit 029's durable invalid close, opened only the unrelated Unit 030 `us100-tick-flow-imbalance-response-v1`. It does not use Unit 029's compression state or unread economic rows and does not transform reopen, shock, event-field or actual-position evidence.
+- Before source or outcome, froze one completed-US100-M15 microstructure state: strict executable-mid upticks and downticks, at least 200 directional ticks, signed imbalance `(up-down)/(up+down)` and absolute trigger threshold `0.25` across an exact 900-second bar boundary.
+- One trade-free observation at a time resolves after four subsequent market bars. Continuation and reversion are counterfactually priced at `0.01` with actual bid/ask and exactly one additional entry and exit spread; four serial real-tick paths end at the last complete month, 2026-07.
+- A later standalone question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive paths, net-to-DD `>=1.50` and contribution limits. Unit 030 selects no stop, size, hold, priority, EA or Live candidate.
+- Declaration SHA-256 is `98172EE896F223CB98A3B82114EE5ADF31ABA044AFB0D1604E2825AE4E066392`. Implementation and outcomes remain unopened; no Live process, broker state or Live surface was queried or changed.
