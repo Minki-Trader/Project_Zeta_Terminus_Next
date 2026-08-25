@@ -729,3 +729,11 @@
 - The P1 HTML nevertheless records `99% 실제 틱`, not the frozen `100%` requirement. This independently fails P1 integrity and cannot be overridden by the clean detailed log or repaired with the market-data rebuild allowance because no required tick hash or visible specification changed.
 - Preserved and hash-pinned the report, summary, logs and all 3,088 opportunity rows without semantically reading those rows. P2-P3, direction/frequency/economic aggregation, rerun, threshold or structure rescue and every prototype remained unopened.
 - Closed `INVALID_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_PROTOTYPE`. Result/closure SHA-256 values are `EE763844AFA9F75A731EB3E51FB48AB016087266D9259C6F65D83DE417549057` / `684DBE0F84DF9CD2829FFC997F1F11166A3AE40F58028482C3C0812643A571AF`. No Live surface was changed.
+
+## STATE-0091 - 2026-08-26
+
+- After Unit 036 was durably closed and pushed, opened only the unrelated source-free Unit 037 `strategy-occupancy-slot-value-v1`. It uses no Unit 036 source or 3,088 unread rows and does not transform Unit 035 interbirth gap.
+- Duration-only pre-declaration feasibility over the six immutable CXR2-equivalent event files reconstructed all 2,233 lifecycles with zero birth overlap, unmatched close, period-end activity or nonpositive duration. Each strategy has at least 20 lifecycles in every period; no P/L, stressed R, slot value or ranking was calculated.
+- Froze occupied time as admitted-birth-to-close server wall-clock hours and strategy-period slot value as aggregate raw stressed R divided by aggregate occupied hours. P1 predicts P2, P2 predicts P3 and P3 predicts P4; current/future periods, cumulative history, clipping, market-hours transforms and alternate durations are excluded.
+- A later whole-portfolio priority Proxy survives only if slot-value ranks are positive in all transitions, at least two Spearman correlations reach `0.60`, top-value capture passes and slot value adds at least `0.10` rank information over prior mean R in two transitions and at the median.
+- Declaration SHA-256 is `6591A277F11FC509BFB09AF21EF3BE1D7955FC6A44EFF8C81ED366AA6A9810AC`. The sole economic aggregation remains unopened; no MQL, Tester or Live surface was opened.

@@ -1,0 +1,130 @@
+{
+  "schema": "zeta-next-strategy-occupancy-slot-value-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_037_ECONOMIC_AGGREGATION",
+  "unit": "strategy-occupancy-slot-value-037",
+  "family": "strategy-occupancy-slot-value-v1",
+  "question": "Is each strategy's immediately prior-period stressed return per occupied risk-slot hour stable and incrementally more informative than return per lifecycle, strongly enough to justify one later whole-portfolio slot-value priority Proxy?",
+  "boundary": {
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "unit_036_source_or_unread_rows_used": false,
+    "unit_035_interbirth_gap_or_outcomes_used": false,
+    "operating_incidents_or_availability_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "periods": [
+    "P1_2022H2_2023",
+    "P2_2024",
+    "P3_2025",
+    "P4_2026_YTD"
+  ],
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "pre_declaration_feasibility": {
+    "inspection_scope": "Birth and close event type, strategy identity and server timestamps only; close P/L, stressed R, slot value, rankings and information gates were not calculated.",
+    "schema_name_failed_invocations": 1,
+    "failed_invocation_disclosure": "The first event-type count used a nonexistent event_type column and emitted no duration or economic metric. The existing event header names the field event; only that column reference was corrected for feasibility.",
+    "duration_only_reconstruction": {
+      "lifecycles": 2233,
+      "birth_overlap_faults": 0,
+      "close_or_period_end_faults": 0,
+      "nonpositive_duration_faults": 0,
+      "minimum_observed_hours": 0.040833,
+      "maximum_observed_hours": 62.5,
+      "period_strategy_counts": {
+        "P1_2022H2_2023": {"RC16":77,"RC4":53,"Cross":286,"Pressure":35,"Return":105,"Passive":213},
+        "P2_2024": {"RC16":72,"RC4":53,"Cross":197,"Pressure":23,"Return":50,"Passive":159},
+        "P3_2025": {"RC16":79,"RC4":68,"Cross":193,"Pressure":32,"Return":52,"Passive":130},
+        "P4_2026_YTD": {"RC16":44,"RC4":32,"Cross":129,"Pressure":28,"Return":31,"Passive":92}
+      }
+    },
+    "economic_outcomes_consumed_for_unit_037": false
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a state version, not an event primary key.",
+    "ordering": "Within each fresh period order by parsed server_time, numeric state_sequence, fixed event precedence and source path plus source line. CLOSE and EXTERNAL_CLOSE precede a birth at equal time.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned risk from detail.",
+    "passive_birth": "PASSIVE_PLACE stores positive planned risk; only its matched PASSIVE_FILL begins Passive occupancy.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle and value_b is native stressed net USD.",
+    "occupied_hours": "Exact elapsed server wall-clock seconds from admitted birth to close divided by 3600. Weekend and closed-market elapsed time remains included because the risk slot stayed occupied.",
+    "stressed_r": "native stressed net USD divided by positive birth planned risk",
+    "period_slot_value": "For one strategy-period, sum raw stressed_r across its lifecycles divided by sum occupied_hours. No per-lifecycle division, clamp, trim or transform is used.",
+    "period_mean_r": "Arithmetic mean raw stressed_r for the same strategy-period; this is the fixed comparator that omits occupancy time.",
+    "causal_transition": "P1 scores predict P2, P2 scores predict P3 and P3 scores predict P4. A period never predicts itself, cumulative and future periods are excluded, and fresh-period Tester resets remain separate.",
+    "ranking": "Rank six strategies descending by the prior period metric with average ranks for exact ties and lexicographic strategy name only for deterministic top-list display.",
+    "rank_metric": "Average-rank Spearman correlation across all six strategies between the prior-period predictor ranking and current-period realized slot-value ranking.",
+    "top_two_capture": "For each transition, take the two highest prior-period slot-value strategies and test whether each lands in the current period's top three slot values and whether its current slot value is positive."
+  },
+  "fixed_integrity_gate": [
+    "All six files retain the listed bytes and SHA-256 values and contain zero exact duplicate full rows.",
+    "Reconstruct exactly 2,233 closed lifecycles with strategy totals RC16 272, RC4 206, Cross 805, Pressure 118, Return 238 and Passive 594.",
+    "Reconstruct exact period stressed nets 148.8735, 54.6630, 113.0380 and 90.4732 USD and pooled 407.0477 USD.",
+    "Every lifecycle has one positive planned risk, one finite strictly positive occupied_hours value and exactly one close; no same-strategy overlap or Passive pending fault is allowed.",
+    "Every strategy has at least 20 lifecycles in every period before any ranking gate is evaluated."
+  ],
+  "fixed_information_gate": {
+    "slot_value_rank_stability": [
+      "At least two of the three prior-to-current slot-value Spearman correlations are at least 0.60.",
+      "All three slot-value Spearman correlations are strictly positive."
+    ],
+    "top_value_capture": [
+      "At least four of the six prior-period top-two selections land in the next period's actual top three slot values.",
+      "At least four of those six selections have positive next-period realized slot value."
+    ],
+    "incremental_occupancy_information": [
+      "For each transition compare slot-value Spearman with the Spearman from prior-period mean_r to current-period slot value.",
+      "Slot value exceeds the mean-r comparator by at least 0.10 in at least two of three transitions.",
+      "The median of the three slot-minus-mean-r Spearman differences is at least 0.10."
+    ],
+    "passing_action": "Retain exactly one later independently identified whole-six-strategy shared-portfolio priority Proxy using only the immediately prior completed period's strategy slot value. It may alter only capacity assignment among genuine conflicts, must retain the unchanged 4%/12% risk gates, cannot preempt an incumbent or suppress an unopposed eligible entry, must admit at least as many total entries as frozen first-come, and cannot authorize Live.",
+    "failure_action": "Close with no slot-value priority question. Do not rescue with median or per-lifecycle R/hour, clipping, trimming, market-open hours, fixed maximum hold, cumulative history, exponential decay, strategy subset, period omission, alternate rank threshold or blend with another score."
+  },
+  "evidence_limit": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "prior_period_score_available_causally": true,
+    "association_and_rank_stability_not_policy_proof": true,
+    "economic_pass_name": "EXPLORATORY_PRIORITY_PROXY_QUESTION_ONLY",
+    "promotion_evidence": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before calculating any stressed R, period slot value, ranking or information gate.",
+    "Run exactly one successful fixed in-memory aggregation; an implementation-only failure before any metric or verdict may be corrected once and disclosed.",
+    "Do not retain a reusable analysis CLI, run MT5, add MQL, or modify any source family.",
+    "Do not use Unit 036 unread rows or reopen Unit 035, the old reservation policies or their failed gates.",
+    "Do not query, restart or alter Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_the_single_fixed_strategy_occupancy_slot_value_aggregation"
+}
