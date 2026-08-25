@@ -5,27 +5,27 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0041`
+- Latest state ID: `STATE-0042`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
 
 - Development: `ENABLED`, one serial stream only
-- Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-25 instruction to apply verified CP1 and CP2 to Live-Dev, subject to the same stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
-- Next V7 entries-disabled preflight: `PASSED`
-- Next V7 new-entry authorization: `ENABLED` by the user's explicit CP1+CP2 Live-Dev instruction; the committed final `0/0` preflight and exact `1/1` handshake passed.
-- Existing real-account owner: CP1+CP2 V7 release `NEXT-E01-V7-CXR1-c0ad2f30d293`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`, terminal PID `21548`
-- User V7 Live direction: `EFFECTIVE`
+- Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-26 instruction to repair the three Live warnings and restore future entry readiness, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
+- Next V7 entries-disabled preflight: `ENABLED`
+- Next V7 new-entry authorization: `DISABLED` until the committed CXR2 package proves exact connected `0/0` recovery.
+- Existing real-account owner: none
+- User V7 Live direction: `PENDING_CXR2_RECOVERY`
 
-Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is now the sole account owner at entries `1/1`. Its bounded stabilization snapshot at sequence `1470` has positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$106.52/$106.52`, project realized net `$5.87`, zero faults, and no alert or warning.
+Legacy B70 V6R6 and parent V7 are stopped and disabled. CXR1 PID `21548` stopped normally at server `2026.08.25 18:12:03` after proving entries `1/0`, positions/order/margin/planned risk `0/0/$0/$0` and no retry, shadow or ARC ownership. CXR2 is compiled and frozen, but no terminal owns the account until its connected entries-disabled recovery passes.
 
 ## Active work
 
-- Active engineering boundary: `protective-exit-order-reconciliation-v1`; the narrow candidate passed exact P4 economic equivalence and is source-frozen pending the user-authorized flat controlled Live promotion
+- Active engineering boundary: `protective-exit-order-reconciliation-v1`; CXR2 is package-frozen after the exact stopped-flat transition and awaits connected entries-disabled recovery
 - Active research boundary: none; `server-day-carry-burden-v1` is closed and frozen with no retained candidate
 - Frozen parent: B70 V6R6
-- V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
-- V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
+- V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
+- V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
 - V7 Magic: `260824701..260824706`
 - Forward Lab baseline: frozen `lab/engineering/complexity-refactor-v1/mt5/` at `9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5`; `lab/mt5/` is historical and receives no new MQL source

@@ -16,19 +16,20 @@ function Get-ZetaNextOperatorContract {
         StatePath = Join-Path $projectRoot 'CURRENT_STATE.md'
         StatusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV7Status.ps1'
         HandoffReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\legacy-final-handoff.json'
-        ReleaseTransitionReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\live-release-transition-cxr1.json'
+        ReleaseTransitionReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\live-release-transition-cxr2.json'
         LegacyRoot = 'C:\Users\awdse\OneDrive\Desktop\Project_Zeta_Terminus'
         ProjectId = 'project-zeta-terminus-next'
-        ReleaseId = 'NEXT-E01-V7-CXR1-c0ad2f30d293'
+        ReleaseId = 'NEXT-E01-V7-CXR2-14d84b9e4bb3'
         RootHandoffReleaseId = 'NEXT-E01-V7-2db5ef5ead1c'
+        TransitionParentReleaseId = 'NEXT-E01-V7-CXR1-c0ad2f30d293'
         PortfolioId = 'ZT-PORT-NEXT-V7-2db5ef5ead1c'
         ExecutionVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c'
         EconomicVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6'
         FilePrefix = 'zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c'
         SourceHash = 'D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1'
-        ExpertHash = 'F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F'
+        ExpertHash = '620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6'
         SetHash = 'BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8'
-        SourceManifestHash = '80126951E12544E2B3B3F858A4AB450DE413095768675AD4B0ECD79A993096BB'
+        SourceManifestHash = 'DD2F9693015034E442B26D3B1831BB59A0C8BB83C5F06CA7BF51648235186980'
         MagicNumbers = @(260824701L, 260824702L, 260824703L, 260824704L, 260824705L, 260824706L)
         ComponentIds = @(
             'ZT-M30-US30-RANGE-COMP-61f61deaba',
@@ -140,6 +141,7 @@ function Assert-ZetaNextReleaseIntegrity {
     $releaseManifest = Get-Content -LiteralPath $releaseManifestPath -Raw | ConvertFrom-Json
     if ([string]$releaseManifest.project_id -ne $Contract.ProjectId -or
         [string]$releaseManifest.release_id -ne $Contract.ReleaseId -or
+        [string]$releaseManifest.parent_release_id -ne $Contract.TransitionParentReleaseId -or
         [string]$releaseManifest.portfolio_id -ne $Contract.PortfolioId -or
         [string]$releaseManifest.execution_version -ne $Contract.ExecutionVersion -or
         [string]$releaseManifest.real_tick_equivalence -ne 'passed' -or
@@ -223,7 +225,7 @@ function Get-ZetaNextHandoffReceipt {
     }
     $transition = Get-Content -LiteralPath $Contract.ReleaseTransitionReceiptPath -Raw | ConvertFrom-Json
     if ([string]$transition.project_id -ne $Contract.ProjectId -or
-        [string]$transition.parent_release_id -ne $Contract.RootHandoffReleaseId -or
+        [string]$transition.parent_release_id -ne $Contract.TransitionParentReleaseId -or
         [string]$transition.target_release_id -ne $Contract.ReleaseId -or
         [string]$transition.execution_version -ne $Contract.ExecutionVersion -or
         [string]$transition.portfolio_id -ne $Contract.PortfolioId -or

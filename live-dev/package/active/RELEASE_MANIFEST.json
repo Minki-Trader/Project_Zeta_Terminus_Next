@@ -1,25 +1,26 @@
 {
   "schema_version": 2,
   "project_id": "project-zeta-terminus-next",
-  "release_id": "NEXT-E01-V7-CXR1-c0ad2f30d293",
-  "parent_release_id": "NEXT-E01-V7-2db5ef5ead1c",
+  "release_id": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+  "parent_release_id": "NEXT-E01-V7-CXR1-c0ad2f30d293",
   "portfolio_id": "ZT-PORT-NEXT-V7-2db5ef5ead1c",
   "execution_version": "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c",
   "status": "verified_frozen_live_authorized",
-  "source_lane": "lab/engineering/complexity-refactor-v1/mt5",
-  "copy_direction": "verified_lab_cp2_to_live_dev_once",
-  "canonical_source_settings_sha256": "C0AD2F30D293AD538A91DE74A6D0A14A560FA19222F1DB043E1C533C103A7DD7",
+  "source_lane": "lab/engineering/protective-exit-order-reconciliation-v1/mt5",
+  "copy_direction": "verified_lab_candidate_to_live_dev_once",
+  "canonical_source_settings_sha256": "14D84B9E4BB30A4CBCCE51B4841859912FEE9BDC1E7FCFFEFEE228C55823C072",
   "main_source_sha256": "D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1",
-  "compiled_ex5_sha256": "F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F",
+  "compiled_ex5_sha256": "620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6",
   "economic_set_sha256": "BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8",
-  "source_manifest_sha256": "80126951E12544E2B3B3F858A4AB450DE413095768675AD4B0ECD79A993096BB",
+  "source_manifest_sha256": "DD2F9693015034E442B26D3B1831BB59A0C8BB83C5F06CA7BF51648235186980",
   "compiler_result": "0 errors, 0 warnings",
   "real_tick_equivalence": "passed",
   "equivalence_records": [
-    "lab/evidence/COMPLEXITY_REFACTOR_ENTRY_GATE_CP1_V1.json",
-    "lab/evidence/COMPLEXITY_REFACTOR_MARKET_ENTRY_CP2_V1.json"
+    "lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_DECLARATION_V1.json",
+    "lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_COMPILE_RECEIPT_V1.json",
+    "lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_RESULT_V1.json"
   ],
-  "cp3_verdict": "CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE",
+  "engineering_verdict": "PASS_EXACT_EQUIVALENCE_APPROVE_CONTROLLED_LIVE_PROMOTION",
   "identity_continuity": {
     "execution_version": "unchanged",
     "portfolio_id": "unchanged",
@@ -30,7 +31,7 @@
   },
   "magic_numbers": [260824701, 260824702, 260824703, 260824704, 260824705, 260824706],
   "live_authorized": true,
-  "authorization_basis": "explicit user instruction on 2026-08-25 to apply verified CP1 and CP2 to Live-Dev",
+  "authorization_basis": "explicit user instruction on 2026-08-26 to repair the three Live warnings and prevent future missed entry windows",
   "account_cache_in_git": false,
   "runtime_state_in_git": false
 }

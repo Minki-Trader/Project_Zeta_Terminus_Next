@@ -25,7 +25,7 @@ const string ECONOMIC_VERSION =
    "zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6";
 const string PROJECT_ID = "project-zeta-terminus-next";
 const string SCHEMA_VERSION = "7";
-const string RELEASE_ID = "NEXT-E01-V7-CXR1-c0ad2f30d293";
+const string RELEASE_ID = "NEXT-E01-V7-CXR2-14d84b9e4bb3";
 const string PORTFOLIO_ID = "ZT-PORT-NEXT-V7-2db5ef5ead1c";
 const string ECONOMIC_FINGERPRINT =
    "ref100-base0.01-step150-margin0.45-delay2-deviation100-inert-market-execution-quote-age3s-pre500-components6-passive-fixed0.01-always-m15-lb12-en1-ex0.25-offset0.25-activation4-hold16-posrisk0.04-aggrisk0.12-reserve0.25-headroom0.25-admission-reserved-broker-sl-session-clock-eet-v1-calendar2022-2028-rc4-check8-three-frozen-ordinal-heads-votesum-le-minus2-retain-original-loss0.25-one-shot-shadow-accepted-occupancy";

@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "project_id": "project-zeta-terminus-next",
-  "release_id": "NEXT-E01-V7-CXR1-c0ad2f30d293",
-  "parent_release_id": "NEXT-E01-V7-2db5ef5ead1c",
+  "release_id": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+  "parent_release_id": "NEXT-E01-V7-CXR1-c0ad2f30d293",
   "portfolio_id": "ZT-PORT-NEXT-V7-2db5ef5ead1c",
   "execution_version": "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c",
-  "status": "verified_cp1_cp2_live_promotion",
-  "source_lane": "lab/engineering/complexity-refactor-v1/mt5",
+  "status": "verified_protective_exit_order_reconciliation_live_promotion",
+  "source_lane": "lab/engineering/protective-exit-order-reconciliation-v1/mt5",
   "promotion_basis": {
-    "cp1_commit": "5393fed733835a3d50e285c1e9fadfcbf621d149",
-    "cp2_commit": "9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5",
-    "cp1_evidence": "lab/evidence/COMPLEXITY_REFACTOR_ENTRY_GATE_CP1_V1.json",
-    "cp2_evidence": "lab/evidence/COMPLEXITY_REFACTOR_MARKET_ENTRY_CP2_V1.json",
-    "promoted_implementation_files": 7,
-    "promoted_files_byte_equal_to_cp2": true
+    "candidate_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "declaration": "lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_DECLARATION_V1.json",
+    "compile_receipt": "lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_COMPILE_RECEIPT_V1.json",
+    "result": "lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_RESULT_V1.json",
+    "promoted_implementation_files": 1,
+    "promoted_ownership_byte_equal_to_candidate": true
   },
   "identity_continuity": {
     "new_release_id": true,
@@ -26,25 +26,25 @@
   "magic_numbers": [260824701, 260824702, 260824703, 260824704, 260824705, 260824706],
   "canonical_identity": {
     "file_count": 16,
-    "sha256": "C0AD2F30D293AD538A91DE74A6D0A14A560FA19222F1DB043E1C533C103A7DD7",
-    "suffix": "c0ad2f30d293",
+    "sha256": "14D84B9E4BB30A4CBCCE51B4841859912FEE9BDC1E7FCFFEFEE228C55823C072",
+    "suffix": "14d84b9e4bb3",
     "method": "Sort every package .mq5/.mqh plus the base SET by package-relative slash path; normalize line endings to LF; replace RELEASE_ID with <RELEASE_ID>; concatenate FILE:<path>, content and END_FILE records as UTF-8; SHA-256 the result."
   },
   "compiler": {
     "mt5_version": "5.0.0.6140",
     "result": "0 errors, 0 warnings",
-    "compile_log_sha256": "F761765CB4EB436E090351592CA32F4D418BD5E1598A518225A5B0AC68820245"
+    "compile_log_sha256": "8B6D923DA70FD36B0B864AAFDD4F293D881CB3780227D034623F13AA6EA70050"
   },
   "compiled_binary": {
     "path": "MQL5/Experts/ZetaTerminusNext/ZetaNextPre500FiniteRiskPortfolioV7.ex5",
-    "bytes": 194986,
-    "sha256": "F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F"
+    "bytes": 196352,
+    "sha256": "620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6"
   },
   "files": [
     {"path":"MQL5/Experts/ZetaTerminusNext/ZetaNextPre500FiniteRiskPortfolioV7.mq5","bytes":20125,"sha256":"D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1"},
-    {"path":"MQL5/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh","bytes":17988,"sha256":"B53E0410585625BB2A2EACA6F30C40C2133D8793E479D3C76825FE6CADF3622A"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh","bytes":17988,"sha256":"1E526FA85E9C083B095D5D710B53F3803587708B4BE8E6745BDAF0D3F8B3FA9D"},
     {"path":"MQL5/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh","bytes":54956,"sha256":"9E5972A824FBCE6E677B7B4C8E0D153D684EBC75019D5BD0B57282088DF8EC22"},
-    {"path":"MQL5/Include/ZetaTerminusNext/Execution/ZetaOwnership.mqh","bytes":10582,"sha256":"4805A5321BABA6BF806956DC293DCD2DB27C5C82A4C9C9EFD69680B697707A1C"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Execution/ZetaOwnership.mqh","bytes":12473,"sha256":"0D4C619B3251F9E99113883108BF3E15A5C2E50B2EA436A9BB2BE8EA6919049A"},
     {"path":"MQL5/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh","bytes":31275,"sha256":"AF3BA67FF4EB15AE8F4B4C9C27203F81DE0A5886F83E6C920E26589EF1708EDF"},
     {"path":"MQL5/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh","bytes":73991,"sha256":"D2CDE70C414F788882ED16E37D9D363EA8E3DB51E52EFB22E49E7180A4E09BE4"},
     {"path":"MQL5/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh","bytes":20510,"sha256":"6AADF2FE0FAEAE0A4AA09E5482E0782B9C17DD377F9FBDE74729B27A6DF7FA1D"},

@@ -47,12 +47,24 @@ This successor completed the original Live handoff and is now the frozen parent 
 
 The patch changes only the verified CP1 Entry Gate and CP2 market-entry transaction ownership boundaries plus the release ID. Economic settings, execution/state identity, persistence schema and state paths remain the parent V7 contract. Exact durable-state continuation passed stopped-flat entries-disabled recovery, restart and final `0/0 → 1/1` handoff.
 
+## Verified protective-exit patch successor
+
+- Release: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
+- Parent release: `NEXT-E01-V7-CXR1-c0ad2f30d293`
+- Execution, Portfolio and Magic: unchanged from CXR1
+- Canonical source/settings SHA-256: `14D84B9E4BB30A4CBCCE51B4841859912FEE9BDC1E7FCFFEFEE228C55823C072`
+- MQ5 SHA-256: `D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1`
+- EX5 SHA-256: `620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6`
+- Engineering verdict: `PROTECTIVE_EXIT_ORDER_RECONCILIATION_EXACT_EQUIVALENCE_PASSED`
+
+This successor changes only current-order ownership classification for an exact broker-generated SL market order in transit plus the release ID. CXR1 stopped at a verified flat boundary, and both redundant state files had only the persisted false-positive safety latch cleared. The package is frozen and awaits connected entries-disabled recovery; it owns no account process yet.
+
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev: `ENABLED`; exact CP1+CP2 patch release is the sole owner at terminal PID `21548` after connected entries-disabled recovery, restart and final `0/0 → 1/1` handshake.
+- Next V7 Live-Dev: `ENABLED`; CXR2 is the selected frozen package, but new entries are `DISABLED` and no terminal owns the account until connected entries-disabled recovery passes.
 - V7 may not import or adopt B70 positions or state.
-- The original V7 PID `10112`, target entries-disabled PIDs `28168` and `17656`, and final preflight PID `26112` are stopped. Exact patch PID `21548` and dashboard PID `4712` are active. Legacy and parent V7 must not restart.
+- The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs and dashboard PID `4712` are stopped. Legacy, parent V7 and CXR1 must not restart.
 
 ## Completed legacy closure
 

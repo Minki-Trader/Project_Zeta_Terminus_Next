@@ -12,6 +12,55 @@ bool IsOwnedMagic(const ulong magic)
   }
 
 
+bool SelectedOrderIsOwnedStopLossTransit(int &component)
+  {
+   component = -1;
+   const string symbol = OrderGetString(ORDER_SYMBOL);
+   const ulong magic = (ulong)OrderGetInteger(ORDER_MAGIC);
+   for(int candidate = 0; candidate < COMPONENT_COUNT; ++candidate)
+     {
+      if(component_definitions[candidate].magic == magic &&
+         component_definitions[candidate].symbol == symbol)
+        {
+         component = candidate;
+         break;
+        }
+     }
+   if(component < 0)
+      return(false);
+
+   const ENUM_ORDER_TYPE type =
+      (ENUM_ORDER_TYPE)OrderGetInteger(ORDER_TYPE);
+   const ENUM_ORDER_REASON reason =
+      (ENUM_ORDER_REASON)OrderGetInteger(ORDER_REASON);
+   if((type != ORDER_TYPE_BUY && type != ORDER_TYPE_SELL) ||
+      reason != ORDER_REASON_SL)
+      return(false);
+
+   const ulong saved_identifier =
+      component_states[component].position_identifier;
+   const int saved_direction = component_states[component].entry_direction;
+   const double saved_volume = component_states[component].entry_volume;
+   if(saved_identifier == 0 || MathAbs(saved_direction) != 1 ||
+      saved_volume <= 0.0 ||
+      (saved_direction > 0 && type != ORDER_TYPE_SELL) ||
+      (saved_direction < 0 && type != ORDER_TYPE_BUY))
+      return(false);
+
+   const double volume_step =
+      SymbolInfoDouble(symbol, SYMBOL_VOLUME_STEP);
+   const double order_volume = OrderGetDouble(ORDER_VOLUME_INITIAL);
+   if(volume_step <= 0.0 || order_volume <= 0.0 ||
+      MathAbs(order_volume - saved_volume) >
+      0.5 * volume_step + 1.0e-9)
+      return(false);
+
+   const ulong linked_identifier =
+      (ulong)OrderGetInteger(ORDER_POSITION_ID);
+   return(linked_identifier == 0 || linked_identifier == saved_identifier);
+  }
+
+
 void EngageSafetyStop(const string reason)
   {
    if(portfolio_state.safety_stopped)
@@ -108,6 +157,10 @@ bool AuditPositionOwnership()
          continue;
       const string symbol = OrderGetString(ORDER_SYMBOL);
       const ulong magic = (ulong)OrderGetInteger(ORDER_MAGIC);
+      int stop_loss_component = -1;
+      if(SelectedOrderIsOwnedStopLossTransit(stop_loss_component) &&
+         owned_counts[stop_loss_component] == 1)
+         continue;
       if(magic == MAGIC_US100_PASSIVE_LIMIT && symbol == "US100")
         {
          const ENUM_ORDER_TYPE type =
