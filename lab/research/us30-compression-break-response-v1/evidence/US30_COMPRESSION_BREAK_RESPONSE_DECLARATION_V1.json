@@ -1,0 +1,143 @@
+{
+  "schema": "zeta-next-us30-compression-break-response-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_029_IMPLEMENTATION_AND_OUTCOME",
+  "unit": "us30-compression-break-response-029",
+  "family": "us30-compression-break-response-v1",
+  "question": "Does a causal low-volatility US30 M5 compression followed by a first-quote break of its completed range produce a sufficiently frequent and double-spread-positive one-market-hour continuation or reversion response to justify exactly one later standalone additive entry-prototype question that must subsequently face the whole six-strategy portfolio?",
+  "boundary": {
+    "fresh_market_question": true,
+    "fresh_self_contained_mql_observer": true,
+    "parent_source_copy": false,
+    "cross_family_include_or_runtime_link": false,
+    "order_or_position_surface": false,
+    "new_market_outcomes": true,
+    "unit_028_state_output_or_economic_result_used": false,
+    "earlier_event_field_or_actual_position_bundle_used_or_transformed": false,
+    "previous_frontier_bundle_rescue": false,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "ownership": {
+    "root": "lab/research/us30-compression-break-response-v1/",
+    "source_root": "lab/research/us30-compression-break-response-v1/mt5/src/",
+    "configuration_root": "lab/research/us30-compression-break-response-v1/mt5/config/tester/",
+    "evidence_root": "lab/research/us30-compression-break-response-v1/evidence/",
+    "runtime_root": "lab/runtime/us30-compression-break-response-v1-portable/",
+    "artifact_root": "lab/artifacts/backtests/us30-compression-break-response-v1/",
+    "forward_baseline_unchanged": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/ at 0d4032786cecb7d7e8a4c3074609db5b105fa107"
+  },
+  "fixed_observer": {
+    "symbol": "US30",
+    "chart_period": "M5",
+    "evaluation_clock": "At the first executable tick of each new US30 M5 bar.",
+    "completed_history": "Use the 49 immediately previous completed M5 bars. Every adjacent bar-open delta in this history must be exactly five minutes, excluding session reopen and other discontinuity states.",
+    "recent_compression_returns": "Twelve one-bar completed-close log returns ending at the immediately previous bar.",
+    "reference_returns": "The 36 one-bar completed-close log returns immediately preceding the recent twelve returns.",
+    "volatility": "Compute separate sample standard deviations for the recent twelve and preceding 36 returns; both must be finite and the reference deviation positive.",
+    "compression_ratio": "recent twelve-return sample standard deviation divided by preceding 36-return sample standard deviation.",
+    "compression_threshold": 0.65,
+    "completed_range": "Highest high and lowest low of the immediately previous twelve completed M5 bars.",
+    "trigger": "While no observation is unresolved, trigger continuation direction BUY when current executable mid is strictly above the completed range high or SELL when strictly below the completed range low, only when compression_ratio is at most 0.65.",
+    "horizon": "Resolve at the first executable tick of the twelfth subsequent US30 M5 market bar. Closed-market time is not counted as a bar.",
+    "overlap": "At most one unresolved observation. The fixed one-market-hour observation itself is the cooldown; no candidate is evaluated while it is unresolved.",
+    "volume": 0.01,
+    "entry_prices": "At trigger use current ask for BUY and current bid for SELL.",
+    "exit_prices": "At resolution use current bid for BUY and current ask for SELL.",
+    "continuation_direction": "The completed-range breakout direction.",
+    "reversion_direction": "The direction opposite the completed-range breakout.",
+    "observed_cost_profit": "Use OrderCalcProfit at 0.01 volume with actual trigger and resolution bid/ask prices.",
+    "double_spread_profit": "Apply one additional trigger spread and one additional resolution spread against each direction, then call OrderCalcProfit. This is the only cost stress.",
+    "eligible_continuous_day": "A distinct server date containing at least one idle new-bar evaluation with the exact 49-bar continuous-history and positive-volatility contract.",
+    "outputs": [
+      "one row per resolved trigger with times, compression ratio, range, break direction, entry/exit bid/ask, spreads, market bars held and observed/double-spread continuation/reversion USD",
+      "one summary row with eligible continuous days, eligible compression evaluations, evaluations, triggers, resolved, unresolved, rate, tick and profit-calculation faults",
+      "start and end US30 visible contract-spec snapshots"
+    ]
+  },
+  "fixed_paths": [
+    {"run_code": 1, "period": "P1_2022H2_2023", "from": "2022.08.01", "to": "2024.01.01"},
+    {"run_code": 2, "period": "P2_2024", "from": "2024.01.01", "to": "2025.01.01"},
+    {"run_code": 3, "period": "P3_2025", "from": "2025.01.01", "to": "2026.01.01"},
+    {"run_code": 4, "period": "P4_2026_COMPLETE_MONTHS", "from": "2026.01.01", "to": "2026.08.01"}
+  ],
+  "tester_contract": {
+    "build": "5.0.0.6140",
+    "model": "Every tick based on real ticks",
+    "symbol": "US30",
+    "period": "M5",
+    "deposit": "100 USD",
+    "leverage": "1:100",
+    "optimization": false,
+    "visual": false,
+    "serial_order": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_COMPLETE_MONTHS"],
+    "paths_allowed": 4,
+    "path_rescue_or_extra_period": false
+  },
+  "environment_contract": {
+    "dedicated_portable": true,
+    "origin": "One physical pre-run copy of build-6140 Lab executables and cached US30 history/ticks into the family runtime; no Live or other-family runtime link.",
+    "required_raw_tick_scope": "US30 monthly real-tick files 2022-08 through 2026-07 inclusive. The incomplete 2026-08 month is outside every fixed path and outside the invariant.",
+    "pre_outcome_freeze": [
+      "source, SET, INI and EX5 manifests",
+      "required copied US30 monthly real-tick file manifests for 2022-08 through 2026-07",
+      "visible US30 digits, point, tick size/value, contract size, volume minimum/step and stops/freeze levels",
+      "terminal and MetaEditor build"
+    ],
+    "per_path_gate": [
+      "Tester reports 100 percent real ticks and stops normally.",
+      "Required completed-month US30 real-tick file hashes remain unchanged.",
+      "Observer start/end visible contract specifications are equal to the frozen values.",
+      "rate, tick and OrderCalcProfit faults are zero.",
+      "resolved output rows equal the summary resolved count and unresolved is at most one."
+    ],
+    "database_housekeeping": "Generic selected-symbol, symbols database, current incomplete-month tick or derived history-cache changes alone are telemetry, not invalidation, because none is an economically consumed fixed-path raw-tick invariant.",
+    "single_rebuild_allowance": "If a required completed-month tick hash or visible specification changes before any semantic output is read, discard the path unread, rebuild the dedicated runtime once from the frozen source cache and rerun the identical path. A second change closes the unit invalid without economic judgment."
+  },
+  "fixed_aggregation": {
+    "direction_books": ["CONTINUATION", "REVERSION"],
+    "path_metrics": [
+      "eligible continuous days, eligible compression evaluations, resolved opportunities and opportunities per eligible continuous day",
+      "observed-cost net, wins, losses, profit factor and maximum closed drawdown",
+      "double-spread net, wins, losses, profit factor and maximum closed drawdown"
+    ],
+    "pooled_metrics": "Concatenate the four ordered path books without compounding volume and calculate the same metrics plus path contribution shares.",
+    "zero_profit": "Neither win nor loss and excluded from profit-factor numerator and denominator while retained in opportunity count."
+  },
+  "fixed_selection_gate": {
+    "integrity": "All four paths pass the environment and observer contracts.",
+    "frequency": [
+      "At least 0.25 resolved opportunities per eligible continuous day pooled.",
+      "At least 0.15 resolved opportunities per eligible continuous day in at least three of four paths.",
+      "At least 200 resolved opportunities pooled."
+    ],
+    "economic": [
+      "One direction book has positive pooled double-spread net USD.",
+      "Its pooled double-spread profit factor is at least 1.10.",
+      "Its double-spread net is positive in at least three of four paths.",
+      "Its pooled double-spread net divided by pooled maximum closed drawdown is at least 1.50.",
+      "No one path contributes more than 70 percent of the direction's total positive-path double-spread profit."
+    ],
+    "selection": "Select at most one passing direction by higher pooled double-spread net, then higher profit factor, then more positive paths, then lexicographic direction name.",
+    "passing_action": "Retain exactly one later standalone additive US30 entry-prototype question for the selected direction. Unit 029 places no trade and selects no stop, hold extension, size above 0.01, portfolio priority or Live candidate. A later prototype must be identity-separated and a subsequent combination unit must retain and evaluate all six existing strategies with their opportunity count unchanged.",
+    "failure_action": "Close with no compression-break prototype question. Do not rescue with another compression threshold, recent/reference window, range window, breakout buffer, cooldown, horizon, direction subgroup, spread stress or period exception."
+  },
+  "evidence_limit": {
+    "all_periods_exploratory": true,
+    "clean_holdout": false,
+    "trade_free_counterfactual": true,
+    "promotion_evidence": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before adding source, configuration or reading any outcome.",
+    "Before any MQL change, reread the authoritative source-topology discipline and current Lab baseline declaration.",
+    "Compile corrections are allowed before any Tester path; freeze the first 0-error, 0-warning source and do not tune from compilation telemetry.",
+    "Commit and push source, configuration and compile receipt before the first path.",
+    "Run exactly four serial paths, subject only to the one environment rebuild allowance.",
+    "Do not inspect partial economic output between paths except integrity and normal-stop telemetry required to decide whether the next frozen path may run.",
+    "Do not query, alter, stop or restart Live."
+  ],
+  "implementation_opened": false,
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_implement_compile_and_freeze_one_trade_free_observer_and_four_configs"
+}

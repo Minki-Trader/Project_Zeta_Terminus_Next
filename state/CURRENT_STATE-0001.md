@@ -544,3 +544,11 @@
 - Continuation produced observed `+$2.22` but double-spread `-$1.26`, PF `0.924187726`, with only P4 positive at `+$5.26` and 100% positive-path concentration. Reversion produced observed `-$5.67` and double-spread `-$9.03`, PF `0.561224490`, with zero positive path.
 - Applied the frozen failure action without threshold, duration, baseline, horizon, weekday, direction, spread, period or extra-run rescue. Closed Unit 028 `NO_SESSION_REOPEN_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED`; no prototype, candidate, seed or Live promotion survives.
 - Result/closure SHA-256 values are `A6F6CB7BD9DBDDCA0B3F488D38A665A3C75B678A4C61DEB7543C6184DC65FF37` / `59D962B43ED27AEAEF915B38993CD3090EC8A22B0181EF1446D1C6369EAEC93F`. Process-only observation still finds no replacement `terminal64.exe` for former PID `13328`; dashboard PID `4284` remains. No broker state or Live surface was queried or changed.
+
+## STATE-0068 - 2026-08-26
+
+- After Unit 028's durable close, ended its adjacent branch and opened only the unrelated Unit 029 `us30-compression-break-response-v1`. It does not change or rescue Unit 028 and does not use earlier actual-position, event-field or frontier economic outcomes.
+- Before source or outcome, froze one causal US30 M5 state: 49 exactly continuous completed bars, the sample-volatility ratio of the latest 12 returns to the preceding 36 at most `0.65`, and the current first executable mid strictly beyond the latest completed twelve-bar high/low.
+- One trade-free observation at a time resolves after twelve subsequent market bars. Continuation and reversion are counterfactually priced at `0.01` with actual bid/ask and exactly one additional entry and exit spread; four serial real-tick paths end at the last complete month, 2026-07.
+- A later standalone question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive paths, net-to-DD `>=1.50` and contribution limits. Unit 029 selects no stop, size, hold, priority, EA or Live candidate.
+- Declaration SHA-256 is `6DF5C9B2C37215AB1C5D59817E16576A3B7BD09DF39461B8858343C91D57625B`. Implementation and outcomes remain unopened; no Live process, broker state or Live surface was queried or changed.
