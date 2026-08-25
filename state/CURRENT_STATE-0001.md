@@ -527,3 +527,11 @@
 - The trade-free observer will price one-hour continuation and reversion at `0.01` using actual bid/ask plus one additional entry and exit spread. Exactly four serial build-6140 real-tick paths through the last complete month, 2026-07, are allowed.
 - A later prototype question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive periods, net-to-DD `>=1.50` and concentration limits. Unit 028 places no order and selects no stop, size, priority or Live candidate.
 - Declaration SHA-256 is `44960447FEE5ACE9000AB13FF116C52E287E0240985A59525922EF91633B2C5E`. Implementation, configuration, binary, runtime and outcomes remain unopened. No Live process, broker state or Live surface was queried or changed.
+
+## STATE-0066 - 2026-08-26
+
+- Implemented Unit 028 as one fresh self-contained MQL observer with no parent source copy, Include tree, order submission, position, economic persistence or Live dependency. It observes only bounded US100 M15 reopen discontinuities and uses `OrderCalcProfit` for the two fixed counterfactual books.
+- The first MetaEditor build-6140 compile passed at `0 errors / 0 warnings`. Source/config manifest hashes are `46878394019AD616C2588F84051230818CFE7BCE6A791E22324AECF63BE522B5` / `F85BC591164619E9DF2E17C3DE1917F17261FE0FFFDF7470199B8812C3B05407`; binary SHA-256 is `263003EFF68F3D01DE3357F727262BCA817BD0EEEF1D4B9930AE704B0E7FE529`.
+- Created the dedicated Git-ignored `lab/runtime/us100-session-reopen-discontinuity-v1-portable/` by physical copy of build-6140 executables and US100 data only. It contains zero filesystem link and shares no code, setting, log, state or runtime dependency with Live or another family.
+- Froze both required 48-file US100 2022-08 through 2026-07 completed-month raw-tick manifests, current symbol-database telemetry and visible consumed US100 specification. Compile receipt SHA-256 is `1E1D8A45E3CDEA917799F4EB4BADA66742F732399698407A945D368EFB99469E`; no Tester path or economic outcome has opened.
+- Exactly four serial trade-free P1-P4 paths may now run under the frozen integrity contract and single environment-rebuild allowance. No Live process, broker state or Live surface was queried or changed.
