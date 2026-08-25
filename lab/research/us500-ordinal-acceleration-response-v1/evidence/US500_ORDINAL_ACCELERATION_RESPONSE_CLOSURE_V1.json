@@ -1,0 +1,63 @@
+{
+  "schema": "zeta-next-us500-ordinal-acceleration-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FROZEN",
+  "unit": "us500-ordinal-acceleration-response-038",
+  "family": "us500-ordinal-acceleration-response-v1",
+  "evidence": {
+    "declaration_sha256": "2DD721FFF30769AE006F79B3ED12A82C42D8D4E58A979BF0D157590A2822DA94",
+    "compile_receipt_sha256": "308836DFD5BE9DF3DD774039D54A3DC93C53B439557765821C728EFF08D339FD",
+    "result_sha256": "6C9A10DA1006B11DFBF195DCFC1FD91C68BC36B5B080CF1D202A83B29A8D48DE"
+  },
+  "execution": {
+    "fixed_paths_opened": 1,
+    "valid_fixed_paths": 1,
+    "unopened_fixed_paths": 2,
+    "extra_paths": 0,
+    "economic_rows_read": 739,
+    "orders": 0,
+    "positions": 0
+  },
+  "integrity_boundary": {
+    "observer_normal_stop": true,
+    "observer_rate_tick_profit_row_faults": 0,
+    "resolved_rows": 739,
+    "unresolved_rows": 0,
+    "visible_contract_spec_equal": true,
+    "in_scope_raw_tick_manifests_equal": true,
+    "detailed_agent_history_warning_lines": 0,
+    "html_report_labelled_100_percent_real_ticks": true,
+    "history_quality_contract_passed": true,
+    "calendar_alignment_succeeded": true,
+    "rebuild_condition_present": false
+  },
+  "economic_boundary": {
+    "resolved_per_eligible_day": 2.898039215686,
+    "frequency_gate_passed": true,
+    "continuation_double_spread_net_usd": -12.81,
+    "continuation_double_spread_profit_factor": 0.683859822310,
+    "continuation_double_spread_max_closed_drawdown_usd": 14.01,
+    "continuation_passed": false,
+    "reversion_double_spread_net_usd": -7.86,
+    "reversion_double_spread_profit_factor": 0.793321062319,
+    "reversion_double_spread_max_closed_drawdown_usd": 8.89,
+    "reversion_passed": false,
+    "selected_direction": null
+  },
+  "verdict": "NO_US500_ORDINAL_ACCELERATION_DIRECTION_PASSED",
+  "economic_interpretation": "Calendar-aligned P1 produced a valid frequent real-tick sample, but both continuation and reversion had negative observed and double-spread net. The state supplies no prototype direction.",
+  "closed_rescues": [
+    "P2 and P3 after neither P1 direction passed",
+    "using the successful calendar alignment as economic evidence",
+    "return-magnitude floor or acceleration ratio",
+    "equality tolerance or alternate return count",
+    "bar period, continuity, session, weekday or horizon variant",
+    "spread, direction, period, symbol or subgroup variant",
+    "ordinal-acceleration entry prototype"
+  ],
+  "retained_prototype_question": null,
+  "forward_baseline_changed": false,
+  "broker_or_account_query": false,
+  "live_surface": "UNTOUCHED",
+  "next": "after_commit_and_push_choose_one_fresh_non_nearby_serial_frontier_question"
+}

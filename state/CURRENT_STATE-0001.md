@@ -762,3 +762,11 @@
 - Created the Git-ignored `lab/runtime/oa38-portable/` as a physical generic-Lab copy. The copy completed before one family EX5 and three SETs were added; zero actual symbolic/junction/hardlink object, Include or other-family EX5 exists, and terminal/agent EX5 paths are 173/201 characters.
 - Both 19-file 2025-01 through 2026-07 `Bases` and `Tester/bases` US500 manifests physically match origin at `D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916` / `AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB`. Compile receipt SHA-256 is `308836DFD5BE9DF3DD774039D54A3DC93C53B439557765821C728EFF08D339FD`.
 - Source, configuration, binary and runtime are immutable. Only P1 may now open under the full integrity gate; no Live surface was queried or changed.
+
+## STATE-0095 - 2026-08-26
+
+- Opened only frozen Unit 038 P1 from `2025-01-06`. The first-full-trading-week alignment produced HTML `100% 실제 틱`; the detailed agent log had zero absent/discarded, mismatch, generation-fallback or load-error line, and both 19-file raw-tick manifests plus visible specifications remained exact.
+- Terminal, Tester and observer stopped normally with 255 eligible days, 22,171 evaluations, 739 triggers/resolutions, zero unresolved and zero rate, tick, profit-calculation or row fault. The 739 output rows matched summary and were read only after the complete integrity contract passed.
+- Frequency passed at `2.898039` resolved observations per eligible day. Continuation observed/double-spread net were `-$5.99/-$12.81`; double-spread PF/DD/net-to-DD were `0.683860/$14.01/-0.914347`.
+- Reversion observed/double-spread net were `-$1.05/-$7.86`; double-spread PF/DD/net-to-DD were `0.793321/$8.89/-0.884139`. Both directions failed positive net before the PF and net/DD gates.
+- P2-P3 and every magnitude, acceleration ratio, equality, return-count, bar, session, horizon, spread, symbol or subgroup rescue remained unopened. Closed `NO_US500_ORDINAL_ACCELERATION_DIRECTION_PASSED`; result/closure SHA-256 values are `6C9A10DA1006B11DFBF195DCFC1FD91C68BC36B5B080CF1D202A83B29A8D48DE` / `FED55B3CB1965B220874067DE994E5A2E073C44A481E4FF971297344A618D02F`. No Live surface was queried or changed.
