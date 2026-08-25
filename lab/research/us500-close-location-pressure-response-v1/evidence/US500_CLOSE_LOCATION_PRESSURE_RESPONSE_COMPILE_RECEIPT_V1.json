@@ -1,0 +1,145 @@
+{
+  "schema": "zeta-next-us500-close-location-pressure-response-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "SOURCE_BINARY_CONFIG_RUNTIME_FROZEN_BEFORE_OUTCOME",
+  "unit": "us500-close-location-pressure-response-036",
+  "family": "us500-close-location-pressure-response-v1",
+  "declaration": {
+    "path": "lab/research/us500-close-location-pressure-response-v1/evidence/US500_CLOSE_LOCATION_PRESSURE_RESPONSE_DECLARATION_V1.json",
+    "commit": "7f50d14",
+    "sha256": "A36C48F6F9ECA9E7600C661AD9DE9A1A319046419FDD4E999865F18ECD1107C8",
+    "outcomes_consumed": false
+  },
+  "implementation": {
+    "root": "lab/research/us500-close-location-pressure-response-v1/mt5/",
+    "parent_source_copy": null,
+    "cross_family_include_or_link": false,
+    "source_files": 1,
+    "source_bytes": 18512,
+    "source_manifest_algorithm": "Sort src-root-relative mq5/mqh paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "source_manifest_sha256": "44D6153FF6CB580FBC8D1DA2142697222F342B406DD825CC6E1C1C3FCF048E7B",
+    "mq5_sha256": "B00387F7810F404607B4BAB6B42F87E1E7BABCC0EB99A65FD59414181582653E",
+    "configuration_files": 6,
+    "configuration_bytes": 2007,
+    "configuration_manifest_algorithm": "Sort tester-root-relative INI/SET filenames ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "configuration_manifest_sha256": "F560C9F076034D91D90F809D2AB08A897EBD5C043EC8209EE6D7F1FF0E7439E5",
+    "entrypoint": "lab/research/us500-close-location-pressure-response-v1/mt5/src/Experts/ZetaUS500CloseLocationPressureResponseObserverV1.mq5",
+    "trade_submission_calls": 0,
+    "position_or_order_enumeration_calls": 0,
+    "ctrade_objects": 0,
+    "order_calc_profit_source_occurrences": 1,
+    "persistent_economic_state_fields": 0,
+    "outputs": ["opportunities.csv", "summary.csv"]
+  },
+  "fixed_observer_contract": {
+    "symbol": "US500",
+    "chart": "US500 M15",
+    "continuous_boundary_seconds": 900,
+    "close_location_threshold": 0.75,
+    "body_fraction_threshold": 0.50,
+    "same_nonzero_sign_required": true,
+    "horizon_market_bars": 4,
+    "maximum_concurrent_observations": 1,
+    "volume_for_profit_conversion": 0.01,
+    "cost_books": ["observed_bid_ask", "one_additional_entry_and_exit_spread"],
+    "orders_or_positions": 0,
+    "last_trigger_cutoffs": {
+      "P1_DISCOVERY_2025": "2025-12-30 16:00:00",
+      "P2_CONFIRM_2026_JAN_MAY": "2026-05-28 16:00:00",
+      "P3_LATEST_2026_JUN_JUL": "2026-07-30 16:00:00"
+    },
+    "cutoff_purpose": "Pre-outcome fixed intake cutoff leaves more than the four-bar horizon before each period's final expected trading boundary so a last trigger cannot be silently discarded. It is not a signal, threshold or selected session and removes the same terminal tail function from all three paths."
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_ms": 427,
+    "cpu": "X64 Regular",
+    "first_compile_passed": true,
+    "compile_corrections": 0,
+    "binary_path": "lab/research/us500-close-location-pressure-response-v1/mt5/src/Experts/ZetaUS500CloseLocationPressureResponseObserverV1.ex5",
+    "binary_bytes": 22132,
+    "binary_sha256": "04FEE2A9F74381D920ED89E612CE9C474453FB582D663ECF13BF529E5DCDABEC",
+    "compile_log_path": "lab/artifacts/logs/us500-close-location-pressure-response-v1-metaeditor.log",
+    "compile_log_bytes": 3492,
+    "compile_log_sha256": "B71C9737A20984944BF3C91DE3FDEC6691E8014747F9A85233D1FA4F3E6514F5"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/clp36-portable/",
+    "git_ignored": true,
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "physical_copy_only": true,
+    "filesystem_symbolic_junction_or_hardlink_objects": 0,
+    "sample_origin_and_copy_file_ids_differ": true,
+    "sample_hardlink_lists_contain_one_path": true,
+    "report_directory_precreated": true,
+    "runtime_ex5_files": 1,
+    "runtime_other_family_ex5_files": 0,
+    "runtime_zeta_include_files": 0,
+    "terminal_ex5_path_characters": 178,
+    "agent_ex5_path_characters": 206,
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "runtime_binary_sha256": "04FEE2A9F74381D920ED89E612CE9C474453FB582D663ECF13BF529E5DCDABEC",
+    "source_runtime_dependency": false,
+    "live_dependency": false
+  },
+  "pre_outcome_market_data": {
+    "scope": "US500 monthly real ticks 2025-01 through 2026-07 inclusive; incomplete/current 2026-08 excluded from the invariant",
+    "manifest_algorithm": "Sort tick-root-relative filenames, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 19,
+      "bytes": 200912747,
+      "sha256": "D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916",
+      "physical_copy_matches_origin": true
+    },
+    "tester_bases": {
+      "files": 19,
+      "bytes": 200606847,
+      "sha256": "AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB",
+      "physical_copy_matches_origin": true
+    },
+    "current_incomplete_month_in_invariant": false
+  },
+  "pre_outcome_symbol_database": {
+    "selected_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+      "bytes": 18210,
+      "sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F"
+    },
+    "symbols_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "bytes": 413696,
+      "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+    },
+    "housekeeping_rule": "Generic selected-symbol or symbols database byte changes are telemetry only; the fixed completed-month tick hashes, detailed path history logs and visible consumed specification govern validity."
+  },
+  "pre_outcome_visible_us500_spec": {
+    "digits": 2,
+    "point": 0.01,
+    "tick_size": 0.01,
+    "tick_value": 0.01,
+    "contract_size": 1.0,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "stops_level": 0,
+    "freeze_level": 0,
+    "path_rule": "Every Unit 036 summary start and end field must equal these frozen values."
+  },
+  "matrix": {
+    "paths": [
+      "tester-us500-clp36-v1-p1.ini",
+      "tester-us500-clp36-v1-p2.ini",
+      "tester-us500-clp36-v1-p3.ini"
+    ],
+    "sequential_opening": "P1 only, then conditional P2, then conditional P3",
+    "environment_rebuild_allowance": 1,
+    "outcomes_consumed": false
+  },
+  "source_or_config_change_allowed_after_first_path": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_the_frozen_source_then_run_only_P1_under_the_full_integrity_gate"
+}

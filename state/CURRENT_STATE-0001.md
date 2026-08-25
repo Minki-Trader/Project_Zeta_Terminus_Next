@@ -713,3 +713,11 @@
 - The serial paths are P1 calendar 2025 discovery, conditional P2 2026 January-May confirmation and conditional P3 2026 June-July latest evidence. P3 is excluded from direction selection/tuning and can only veto the already-selected and confirmed direction.
 - Each path must independently prove HTML `100%` real ticks, zero detailed generation warning, exact 19 completed-month US500 raw-tick files in both caches, unchanged visible specification and zero observer fault before its economic rows are read. No threshold, body, bar, continuity, session, weekday, horizon, spread, direction, period or subgroup rescue is allowed.
 - Declaration SHA-256 is `A36C48F6F9ECA9E7600C661AD9DE9A1A319046419FDD4E999865F18ECD1107C8`. Source, configuration, binary, runtime and outcomes remain unopened; no Live surface was queried or changed.
+
+## STATE-0089 - 2026-08-26
+
+- Implemented Unit 036 as one fresh self-contained MQL observer with no parent source copy, Include tree, trade submission, position, persistent economic state or Live dependency. It uses one `OrderCalcProfit` source surface for observed and double-spread continuation/reversion books.
+- The first MetaEditor build-6140 compile passed at `0 errors / 0 warnings` with no correction. Source/config manifest hashes are `44D6153FF6CB580FBC8D1DA2142697222F342B406DD825CC6E1C1C3FCF048E7B` / `F560C9F076034D91D90F809D2AB08A897EBD5C043EC8209EE6D7F1FF0E7439E5`; binary SHA-256 is `04FEE2A9F74381D920ED89E612CE9C474453FB582D663ECF13BF529E5DCDABEC`.
+- Created the Git-ignored short `lab/runtime/clp36-portable/` directly from the generic Lab cache. It contains one family EX5, zero other-family EX5, Zeta Include or filesystem link object; sampled executable/tick file IDs differ from origin and terminal/agent EX5 paths are 178/206 characters.
+- Both 19-file 2025-01 through 2026-07 `Bases` and `Tester/bases` US500 manifests physically match origin at `D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916` / `AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB`; current 2026-08 is excluded.
+- Compile receipt SHA-256 is `97FADA5DD638F55654F32A27777C5C757E0116487D0A6E558A6342DABFFE0FED`. Source/config/binary/runtime are now immutable; only P1 2025 may open under the full integrity gate. No outcome, broker/account or Live surface was queried or changed.
