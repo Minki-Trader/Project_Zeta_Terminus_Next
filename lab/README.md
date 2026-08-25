@@ -40,6 +40,7 @@
 - `research/us100-session-reopen-discontinuity-v1/`: 닫힌 Unit 028 fresh observer family; 4개 무결 실틱 경로의 92건이 빈도 전 관문과 양 방향 double-spread 경제 관문을 모두 통과하지 못해 prototype 없음
 - `research/us30-compression-break-response-v1/`: 닫힌 Unit 029 fresh observer family; P1 원자료가 `every tick generation used`로 100% 실제 틱 관문을 실패해 경제행 미열람, P2-P4·prototype 없음
 - `research/us100-tick-flow-imbalance-response-v1/`: 닫힌 Unit 030 fresh observer family; 4개 무결 실틱 경로에서 1,034일 중 신호 12건으로 빈도 관문을 크게 미달했고 지속·반전 모두 double-spread 음수라 prototype 없음
+- `research/us100-failed-extreme-auction-response-v1/`: 활성 Unit 031 fresh observer family; 연속 24개 US100 M5 범위 밖을 찌른 뒤 같은 봉에서 안으로 복귀한 실패 경매의 30분 rejection/breakout 질문이 구현·결과 전 동결됨
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

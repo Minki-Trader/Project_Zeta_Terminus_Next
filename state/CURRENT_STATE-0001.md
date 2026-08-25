@@ -593,3 +593,11 @@
 - Continuation produced observed `-$0.50` and double-spread `-$0.84`, PF `0.333333333`, with zero positive path. Reversion produced observed `+$0.15` but double-spread `-$0.19`, PF `0.756410256`; its only positive path was P1 `+$0.23` with 100% positive-path concentration.
 - Applied the frozen failure action without threshold, minimum-tick, bar, price-basis, continuity, cooldown, horizon, direction, spread, period or extra-run rescue. Closed Unit 030 `NO_TICK_FLOW_IMBALANCE_PROTOTYPE_FREQUENCY_AND_ECONOMIC_GATES_FAILED`; no prototype, candidate, seed or Live promotion survives.
 - Result/closure SHA-256 values are `2E8F71379EC4C7565A3A1D05A9E3FBCD8F7F1EF90AB537E775D233425936CA6F` / `5FD14C817D057798A7B6DFAFF2EB5853A0A4366119C11C579648F04C3BF42941`. No Live process, broker state or Live surface was queried or changed.
+
+## STATE-0074 - 2026-08-26
+
+- After Unit 030's durable close, ended its tick-flow branch and opened only the unrelated Unit 031 `us100-failed-extreme-auction-response-v1`. It uses completed M5 OHLC only and does not transform Unit 030 or any earlier frontier state or outcome.
+- Before source or outcome, froze one causal failed-auction state: a continuous 24-bar reference high/low and mean range, followed by one completed bar whose penetration beyond one extreme and recovery back inside are each at least `0.10` reference mean range. Bars failing both sides are excluded.
+- One trade-free observation at a time resolves after six subsequent M5 market-bar advances. Rejection and breakout books are counterfactually priced at `0.01` with actual bid/ask and exactly one additional entry and exit spread; four serial real-tick paths end at the last complete month, 2026-07.
+- A later standalone question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive paths, net-to-DD `>=1.50` and contribution limits. Unit 031 selects no stop, size, hold, priority, EA or Live candidate.
+- Declaration SHA-256 is `095BCA1851BA69E7198D644EA3B19FBEFD12472AD7BC1F060F41EBF7EF5F1D31`. Implementation, configuration, binary, runtime and outcomes remain unopened; no Live process, broker state or Live surface was queried or changed.
