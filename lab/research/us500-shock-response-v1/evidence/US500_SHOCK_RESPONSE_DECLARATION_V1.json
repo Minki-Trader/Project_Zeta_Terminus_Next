@@ -1,0 +1,137 @@
+{
+  "schema": "zeta-next-us500-shock-response-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_027_IMPLEMENTATION_AND_OUTCOME",
+  "unit": "us500-shock-response-027",
+  "family": "us500-shock-response-v1",
+  "question": "Does a causal completed-M15 volatility-normalized 60-minute US500 shock produce a sufficiently frequent and double-spread-positive four-market-bar continuation or reversion response to justify exactly one later standalone additive entry-prototype question that must subsequently face the whole six-strategy portfolio?",
+  "boundary": {
+    "fresh_market_question": true,
+    "fresh_self_contained_mql_observer": true,
+    "parent_source_copy": false,
+    "cross_family_include_or_runtime_link": false,
+    "order_or_position_surface": false,
+    "new_market_outcomes": true,
+    "unit_022_cross_index_state_used_or_repaired": false,
+    "units_023_026_fields_used_or_transformed": false,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "ownership": {
+    "root": "lab/research/us500-shock-response-v1/",
+    "source_root": "lab/research/us500-shock-response-v1/mt5/src/",
+    "configuration_root": "lab/research/us500-shock-response-v1/mt5/config/tester/",
+    "evidence_root": "lab/research/us500-shock-response-v1/evidence/",
+    "runtime_root": "lab/runtime/us500-shock-response-v1-portable/",
+    "artifact_root": "lab/artifacts/us500-shock-response-v1/",
+    "forward_baseline_unchanged": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/ at 0d4032786cecb7d7e8a4c3074609db5b105fa107"
+  },
+  "fixed_observer": {
+    "symbol": "US500",
+    "chart_period": "M15",
+    "evaluation_clock": "At the first tick of every new US500 M15 bar, using completed bars only.",
+    "impulse": "log(Close[1] / Close[5]), spanning the four immediately completed M15 bars.",
+    "baseline": "Thirty-two one-bar log returns ending immediately before the impulse window; compute their sample standard deviation and multiply by sqrt(4).",
+    "shock_score": "absolute impulse divided by the positive four-bar baseline volatility.",
+    "trigger": "shock_score at least 2.0 while armed and no observation is unresolved.",
+    "rearm": "After a trigger, rearm only after a later completed-bar evaluation has shock_score at most 1.0.",
+    "horizon": "Resolve at the first tick of the fourth subsequent US500 M15 market bar. Market-closed gaps do not create synthetic clock bars.",
+    "overlap": "At most one unresolved observation. A resolving bar may update rearm state but cannot reuse the resolved impulse.",
+    "volume": 0.01,
+    "entry_prices": "At trigger use current ask for BUY and current bid for SELL.",
+    "exit_prices": "At resolution use current bid for BUY and current ask for SELL.",
+    "continuation_direction": "BUY after positive impulse and SELL after negative impulse.",
+    "reversion_direction": "SELL after positive impulse and BUY after negative impulse.",
+    "observed_cost_profit": "Use OrderCalcProfit at 0.01 volume with actual trigger and resolution bid/ask prices.",
+    "double_spread_profit": "Apply one additional trigger spread and one additional resolution spread against each direction, then call OrderCalcProfit. This is the only cost stress.",
+    "normal_day": "A distinct server date with at least one completed M15 evaluation after warmup.",
+    "outputs": [
+      "one opportunity row per resolved trigger with times, score, signed impulse, entry/exit bid/ask, spreads, market bars held and observed/double-spread continuation/reversion USD",
+      "one summary row with days, evaluations, triggers, resolved, unresolved, rate faults, tick faults and profit-calculation faults",
+      "start and end US500 visible contract-spec snapshots"
+    ]
+  },
+  "fixed_paths": [
+    {"run_code":1,"period":"P1_2022H2_2023","from":"2022.08.01","to":"2024.01.01"},
+    {"run_code":2,"period":"P2_2024","from":"2024.01.01","to":"2025.01.01"},
+    {"run_code":3,"period":"P3_2025","from":"2025.01.01","to":"2026.01.01"},
+    {"run_code":4,"period":"P4_2026_YTD","from":"2026.01.01","to":"2026.08.21"}
+  ],
+  "tester_contract": {
+    "build": "5.0.0.6140",
+    "model": "Every tick based on real ticks",
+    "symbol": "US500",
+    "period": "M15",
+    "deposit": "100 USD",
+    "leverage": "1:100",
+    "optimization": false,
+    "visual": false,
+    "serial_order": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"],
+    "paths_allowed": 4,
+    "path_rescue_or_extra_period": false
+  },
+  "environment_contract": {
+    "dedicated_portable": true,
+    "origin": "One physical pre-run copy of build-6140 Lab executables and cached US500 history/ticks into the family runtime; no Live or other-family runtime link.",
+    "pre_outcome_freeze": [
+      "source, SET, INI and EX5 manifests",
+      "required copied US500 monthly real-tick file manifest for 2022-08 through 2026-08",
+      "visible US500 digits, point, tick size/value, contract size, volume minimum/step and stops/freeze levels",
+      "terminal and MetaEditor build"
+    ],
+    "per_path_gate": [
+      "Tester reports 100 percent real ticks and stops normally.",
+      "Required copied monthly US500 real-tick file hashes remain unchanged.",
+      "Observer start/end visible contract specifications are equal.",
+      "rate, tick and OrderCalcProfit faults are zero.",
+      "resolved output rows equal the summary resolved count and unresolved is at most one."
+    ],
+    "database_housekeeping": "Generic selected-symbol or symbols database byte changes alone are telemetry, not invalidation, because required raw US500 tick hashes and economically consumed visible specifications are separately frozen.",
+    "single_rebuild_allowance": "If a required tick hash or visible specification changes before any semantic output is read, discard the path unread, rebuild the dedicated runtime once from the frozen source cache and rerun the identical path. A second change closes the unit invalid without economic judgment."
+  },
+  "fixed_aggregation": {
+    "direction_books": ["CONTINUATION", "REVERSION"],
+    "path_metrics": [
+      "normal days, resolved opportunities and opportunities per normal day",
+      "observed-cost net, wins, losses, profit factor and maximum closed drawdown",
+      "double-spread net, wins, losses, profit factor and maximum closed drawdown"
+    ],
+    "pooled_metrics": "Concatenate the four ordered path books without compounding volume and calculate the same metrics plus path contribution shares.",
+    "zero_profit": "Neither win nor loss and excluded from profit-factor numerator and denominator while retained in opportunity count."
+  },
+  "fixed_selection_gate": {
+    "integrity": "All four paths pass the environment and observer contracts.",
+    "frequency": [
+      "At least 0.50 resolved opportunities per normal day pooled.",
+      "At least 0.25 resolved opportunities per normal day in at least three of four paths.",
+      "At least 100 resolved opportunities pooled."
+    ],
+    "economic": [
+      "One direction book has positive pooled double-spread net USD.",
+      "Its pooled double-spread profit factor is at least 1.10.",
+      "Its double-spread net is positive in at least three of four paths.",
+      "Its pooled double-spread net divided by pooled maximum closed drawdown is at least 1.50.",
+      "No one path contributes more than 70 percent of the direction's total positive-path double-spread profit."
+    ],
+    "selection": "Select at most one passing direction by higher pooled double-spread net, then higher profit factor, then more positive paths, then lexicographic direction name.",
+    "passing_action": "Retain exactly one later standalone additive US500 entry-prototype question for the selected direction. Unit 027 places no trade and selects no stop, hold extension, size above 0.01, portfolio priority or Live candidate. A later prototype must be identity-separated and a subsequent combination unit must retain and evaluate all six existing strategies with their opportunity count unchanged.",
+    "failure_action": "Close with no US500 shock-response prototype question. Do not rescue with another score threshold, rearm level, impulse window, baseline length, horizon, session, direction subgroup, spread stress or period exception."
+  },
+  "evidence_limit": {
+    "all_periods_exploratory": true,
+    "clean_holdout": false,
+    "trade_free_counterfactual": true,
+    "promotion_evidence": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before adding source, configuration or reading any outcome.",
+    "Compile corrections are allowed before any Tester path; freeze the first 0-error, 0-warning source and do not tune from compilation telemetry.",
+    "Commit and push source/configuration/compile receipt before the first path.",
+    "Run exactly four serial paths, subject only to the one environment rebuild allowance.",
+    "Do not inspect partial economic output between paths except integrity and normal-stop telemetry required to decide whether the next frozen path may run.",
+    "Do not query, alter, stop or restart Live."
+  ],
+  "implementation_opened": false,
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_implement_compile_and_freeze_one_trade_free_observer_and_four_configs"
+}

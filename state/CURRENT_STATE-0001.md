@@ -495,3 +495,11 @@
 - RC16 nevertheless failed as a state: pooled rho was only `+0.061272452`, Spearman and stop signs were broad in only two periods, and the tail effect was concentrated in P3 `+0.310605556R` while P1/P2 were small and P4 reversed.
 - Applied the failure action without dollar depth, duration, streak, previous outcome, strategy-local peak, open equity, incumbent, nonlinear, threshold, quantile, time or period rescue. Closed Unit 026 `NO_CLOSED_DRAWDOWN_STATE_FIELD_PASSED`; no response question, candidate, seed or promotion survives.
 - Result/closure SHA-256 values are `4A200D02211AD6E21DD91844A8BCC877C69BAB788439795623CC68458F4F2B8B` / `4EA90A2F96B4085E1FC3C408E999C7DB35F9A8E1E972FFD1C95D769A5EC988B0`. Exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
+
+## STATE-0062 - 2026-08-26
+
+- After Unit 026 was durably closed, returned from consumed event-field diagnostics to one fresh market question: Unit 027 `us500-shock-response-v1`. It does not use or repair Unit 022's cross-index observer and does not transform Units 023-026.
+- Before source or outcome, froze a completed-M15 US500 state: four-bar log impulse divided by the preceding 32 one-bar return sample volatility scaled by `sqrt(4)`, trigger `2.0`, rearm `1.0`, one unresolved observation and four subsequent market-bar horizon.
+- The trade-free observer will counterfactually price continuation and reversion at `0.01` using actual trigger/resolution bid/ask and one additional spread at each side. Exactly four serial build-6140 real-tick paths across P1-P4 are allowed.
+- A later prototype question survives only if one direction passes zero-fault integrity, pooled/path frequency, positive pooled double-spread net, PF `>=1.10`, three positive periods, net-to-DD `>=1.50` and concentration limits. Unit 027 itself places no order and selects no stop, size, priority or Live candidate.
+- Declaration SHA-256 is `2CB75E9810EA6ED3D84DF45E8C6921DD860D2D6380D9FE5CF281720D0165E6E4`. Source, configuration, binary, runtime and outcomes remain unopened; exact CXR2 Live PID `13328`, dashboard PID `4284` and all Live surfaces remain untouched.
