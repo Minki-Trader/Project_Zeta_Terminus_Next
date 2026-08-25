@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0021`
+- Latest state ID: `STATE-0022`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -21,7 +21,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Active work
 
-- Active engineering boundary: tester-only Complexity Refactor V1 Checkpoint 1 Entry Gate separation passed direct same-runtime real-tick equivalence; Checkpoint 2 is not open
+- Active engineering boundary: tester-only Complexity Refactor V1 Checkpoints 1 and 2 passed direct same-runtime real-tick equivalence; Checkpoint 3 is held because CP1+CP2 already satisfy its permitted ownership goals and an extra broker file would add complexity
 - Active research boundary: none; the later Frontier ledger is closed at `capital-scale-admission-topology-010` with `none_opened_waiting_for_user`, `예치자본·위험용량 연구` V1 is closed `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`, and the prior `전략 독립성·위험배분 연구` remains closed `NO_POLICY_PASSED_RETAIN_FIRST_COME`
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -109,7 +109,7 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - Closure: `lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_CLOSURE_V1.json`, SHA-256 `56B64F0592AA152C88A2038C58E679F70345205EB3A4682E8BED8435F54E7452`
 - Human conclusion: `docs/lineage/DEPOSIT_CAPITAL_AND_RISK_CAPACITY.md`; exact Live V7 PID `10112`, dashboard PID `24936`, source, package, SET, state and order behavior remained unchanged
 
-## Completed complexity refactor Checkpoint 1
+## Completed complexity refactor Checkpoints 1 and 2
 
 - Derived a fully independent tester-only engineering candidate from frozen source commit `75bd9c9`, not from moving `lab/mt5` and not as a Live dependency
 - Candidate identity is release `NEXT-LAB-CXR1-ENTRY-GATE`, portfolio `ZT-PORT-NEXT-LAB-CXR1-ENTRY-GATE`, Magic `260825100..260825105`, with independent source, EX5, SET, state/event/snapshot/lock paths and Portable runtime
@@ -117,7 +117,11 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 - MetaEditor build 6140 compiled the isolated frozen control and CP1 at `0 errors / 0 warnings`; CP1 EX5 SHA-256 is `7CDB41D96A88F9C46F951CFF979250B3283CF2507D087B9AF94AACC75429CEF8`
 - Same-runtime Latest and Binding real-tick reports matched at all `411` and `9,114` structured rows respectively; state/current/lock hashes were equal and event differences normalized to zero after excluding one `deal_wait_ms` wall-clock diagnostic in each window
 - The fresh Latest control reproduced frozen V7. The fresh Binding control differed from the immutable 2026-08-24 report beginning with 2023-04-10 protection prices despite source equality, so CP1 was judged only against its immediately adjacent same-runtime control and no broader environment/economic hypothesis was opened
-- Evidence: `lab/evidence/COMPLEXITY_REFACTOR_ENTRY_GATE_CP1_V1.json`; Checkpoint 2 remains unopened and no Live source, package, SET, state, terminal or dashboard changed
+- CP2 split `OpenComponent()` into explicit Plan, Durable Intent, Submit, Observe, Provisional Seed, Validate, Adopt and Finalize stages inside `ZetaOrders.mqh`; the public signature and all five strategy call sites stayed unchanged
+- The direct `OpenComponent()` surface fell from `348 → 38` lines, `18 → 6` branches, `13 → 0` direct `trade.*` calls, and zero direct save, event, decision-intent, journal-writer or trade-operation writes
+- CP2 compiled at `0 errors / 0 warnings`; same-runtime Latest and Binding again matched all `411` and `9,114` report rows, all five state/current/lock hashes and all four graphs, with only the same non-decision `deal_wait_ms` row in each window
+- CP3 was evaluated and held with no source change: every permitted writer is already uniquely owned after CP1+CP2, while a broker file would add an include/file without reducing writers and could cross the durable-intent order
+- Evidence: `lab/evidence/COMPLEXITY_REFACTOR_ENTRY_GATE_CP1_V1.json` and `lab/evidence/COMPLEXITY_REFACTOR_MARKET_ENTRY_CP2_V1.json`; no Live source, package, SET, state, terminal or dashboard changed
 
 ## Required completion evidence
 
@@ -130,4 +134,4 @@ Legacy B70 V6R6 stopped normally at the verified flat boundary and its legacy au
 
 ## Current verdict
 
-`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; CP2_NOT_OPENED`
+`V7_LIVE_HANDOFF_COMPLETE; NEXT_V7_SOLE_OWNER_HEALTHY; LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; DASHBOARD_ENTRY_EVALUATION_VIEW_ACTIVE; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE`

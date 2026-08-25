@@ -18,4 +18,13 @@ Evidence:
 - `CHECKPOINT_1.md`
 - `lab/evidence/COMPLEXITY_REFACTOR_ENTRY_GATE_CP1_V1.json`
 
-Checkpoint 2 is not open.
+Checkpoint 2 separates the market-open transaction inside `ZetaOrders.mqh` into explicit Plan, Durable Intent, Submit, Observe, Provisional Seed, Validate, Adopt, and Finalize stages without changing strategy call sites, persistence schema, broker calls, or economic behavior.
+
+Checkpoint 2 verdict: `MARKET_ENTRY_TRANSACTION_EQUIVALENCE_PASSED`.
+
+Evidence:
+
+- `CHECKPOINT_2.md`
+- `lab/evidence/COMPLEXITY_REFACTOR_MARKET_ENTRY_CP2_V1.json`
+
+The Checkpoint 3 value gate is `CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE`. CP1+CP2 already provide every permitted direct-writer boundary; no CP3 source change, architecture file, Passive change, or RC4 change was opened.

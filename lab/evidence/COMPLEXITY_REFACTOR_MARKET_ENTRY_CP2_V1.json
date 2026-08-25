@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "record_type": "engineering_checkpoint_equivalence_receipt",
+  "project_id": "project-zeta-terminus-next",
+  "candidate_family": "complexity-refactor-v1",
+  "checkpoint": "CP2_MARKET_ENTRY_TRANSACTION_SPLIT",
+  "completed_on_kst": "2026-08-25",
+  "parent_checkpoint_commit": "5393fed733835a3d50e285c1e9fadfcbf621d149",
+  "parent_checkpoint_evidence_sha256": "3EB37524CFE7967F6548B68EE0E66991877FDA6FE8C8A0A13F278B3812E3F04B",
+  "verdict": "MARKET_ENTRY_TRANSACTION_EQUIVALENCE_PASSED",
+  "next": "CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE",
+  "isolation": {
+    "release_id": "NEXT-LAB-CXR1-ENTRY-GATE",
+    "portfolio_id": "ZT-PORT-NEXT-LAB-CXR1-ENTRY-GATE",
+    "execution_version": "zt-next-lab-cxr1-entry-gate",
+    "magic_numbers": [
+      260825100,
+      260825101,
+      260825102,
+      260825103,
+      260825104,
+      260825105
+    ],
+    "source_root": "lab/engineering/complexity-refactor-v1/mt5",
+    "runtime_root": "lab/runtime/complexity-refactor-v1-portable",
+    "tester_only_hard_fail": true,
+    "live_source_package_runtime_state_process_changed": false,
+    "moving_lab_mt5_changed": false
+  },
+  "implementation": {
+    "changed_source_files": [
+      "lab/engineering/complexity-refactor-v1/mt5/src/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh"
+    ],
+    "source_sha256": "9E5972A824FBCE6E677B7B4C8E0D153D684EBC75019D5BD0B57282088DF8EC22",
+    "stages": [
+      "BuildMarketEntryPlan",
+      "PersistMarketEntryIntent",
+      "SubmitMarketEntry",
+      "ObserveMarketEntry",
+      "SeedProvisionalMarketLifecycle",
+      "ValidateMarketEntry",
+      "AdoptMarketEntry",
+      "FinalizeMarketEntry"
+    ],
+    "public_open_component_signature_changed": false,
+    "strategy_call_sites_changed": false,
+    "persisted_fields_changed": 0,
+    "broker_call_count_changed": 0,
+    "state_write_count_or_order_changed": false,
+    "journal_schema_or_stage_changed": false,
+    "risk_or_margin_math_changed": false,
+    "passive_close_cancel_or_rc4_changed": false
+  },
+  "complexity": {
+    "open_component_lines_before": 348,
+    "open_component_lines_after": 38,
+    "direct_if_branches_before": 18,
+    "direct_if_branches_after": 6,
+    "direct_trade_api_before": 13,
+    "direct_trade_api_after": 0,
+    "direct_save_state_before": 3,
+    "direct_save_state_after": 0,
+    "direct_record_event_before": 4,
+    "direct_record_event_after": 0,
+    "direct_decision_intent_accesses_before": 7,
+    "direct_decision_intent_accesses_after": 0,
+    "direct_journal_writer_calls_before": 2,
+    "direct_journal_writer_calls_after": 0,
+    "direct_trade_operation_writes_before": 2,
+    "direct_trade_operation_writes_after": 0
+  },
+  "compiler": {
+    "mt5_build": 6140,
+    "result": "0 errors, 0 warnings",
+    "cp1_ex5_sha256": "7CDB41D96A88F9C46F951CFF979250B3283CF2507D087B9AF94AACC75429CEF8",
+    "cp2_ex5_sha256": "B0627195DC38F07B65B6E84699DF10E0D2A83A3EE82991FEAA289608404E5BA3",
+    "cp2_compile_log_sha256": "5B73CC1854D1FC5E523BAC3CFEC5FBDD9E04B9A09160CD6A9D7D228B5258F4D1"
+  },
+  "configuration": {
+    "latest_ini_sha256": "687066E0864E498D0622F5506FFF914A89AE660D88A9884B4FD60638327BF290",
+    "binding_ini_sha256": "0F74621BDDF116A3349DE1ADB71A1BC28D1E151EA91FFAEFF99BD3309F7DADB9",
+    "set_unchanged_from_cp1": true
+  },
+  "windows": {
+    "latest": {
+      "period": "2026-06-01/2026-08-01",
+      "total_all_symbol_ticks": 137630654,
+      "cp1_first_fills": 84,
+      "cp2_first_fills": 84,
+      "actual_net_usd": -1.11,
+      "stressed_2x_net_usd": -2.819,
+      "final_balance_usd": 98.89,
+      "final_order_id": 178,
+      "final_deal_id": 169,
+      "report_rows": 411,
+      "report_differences_after_report_id_normalization": 0,
+      "stored_event_rows": 652,
+      "raw_differing_event_rows": 1,
+      "normalized_event_differences": 0,
+      "cp1_report_sha256": "B03867D0DBDB4AAB70DEDE2140D821CA6252599F7A1C43FD8E6A1AA890F270B6",
+      "cp2_report_sha256": "EF280202BEC056CD25312D4E873D68D9D2983264DF4AF70F2D547D531B100070",
+      "cp2_events_a_sha256": "967D07E658B811854B7573C24A8E8FAC94DAAA987CE191B41E9C74E3AAEE2E30",
+      "state_current_lock_hashes_equal": true,
+      "report_graph_hashes_equal": true
+    },
+    "binding": {
+      "period": "2022-08-01/2026-08-21",
+      "total_all_symbol_ticks": 678568654,
+      "cp1_first_fills": 2234,
+      "cp2_first_fills": 2234,
+      "actual_net_usd": 1142.0,
+      "stressed_2x_net_usd": 1058.63,
+      "final_balance_usd": 1242.0,
+      "final_order_id": 4581,
+      "final_deal_id": 4469,
+      "report_rows": 9114,
+      "report_differences_after_report_id_normalization": 0,
+      "stored_event_rows": 4149,
+      "raw_differing_event_rows": 1,
+      "normalized_event_differences": 0,
+      "cp1_report_sha256": "BEA2AA3A0F852976C0488EB087346105B69E4A046BCAAB318D06E3030A247F04",
+      "cp2_report_sha256": "5480FE48FB183E2F1665E272946193159A8797F896CFD358E6F592F051F2577A",
+      "cp2_events_a_sha256": "849200EEFBC9B7FEAAC87517D8D814C45E6B1B3D1F5CD5F0CBD7E3D0B62A1CEB",
+      "cp2_events_b_sha256": "5EBA18395ECBFE63B166A1952130F0639CE6C2DD05F5D5C5AA22F56FF7530835",
+      "state_current_lock_hashes_equal": true,
+      "report_graph_hashes_equal": true,
+      "market_open_rows": 417,
+      "exact_journal_sequence_mismatches": 0
+    }
+  },
+  "diagnostic_normalization": {
+    "field": "deal_wait_ms",
+    "reason": "GetTickCount64 wall-clock telemetry is not consumed by signal, order, protection, sizing, risk, persistence, or reconciliation decisions",
+    "latest_raw_difference": "OPEN 2026-07-09 17:00:00 Cross 15 vs 0 ms",
+    "binding_raw_difference": "OPEN 2025-12-19 17:00:00 Cross 15 vs 0 ms"
+  },
+  "rare_path_evidence": {
+    "open_fail_observed": 0,
+    "execution_mismatch_observed": 0,
+    "protection_mismatch_observed": 0,
+    "persistence_failure_or_process_termination_injected": false,
+    "source_reviewed_restart_windows": 6,
+    "claim": "normal-path real-tick equivalence plus source-reviewed preservation; no claim of exercised rare failure paths"
+  },
+  "cp2_gate": {
+    "simultaneous_reasoning_surface_reduced": true,
+    "failure_stage_distinguishable_by_result_code": true,
+    "state_write_and_broker_call_ownership_visible_by_function_name": true,
+    "transient_types_are_not_domain_god_object": true,
+    "all_questions_pass": true
+  },
+  "cp3_value_gate": {
+    "entry_gate_writer_already_unique": true,
+    "candidate_observation_writer_already_unique": true,
+    "trade_operation_writer_already_unique": true,
+    "provisional_lifecycle_writer_already_unique": true,
+    "validated_adoption_writer_already_unique": true,
+    "final_open_state_writer_already_unique": true,
+    "new_broker_file_would_reduce_reading_set": false,
+    "cp3_source_changes": 0,
+    "verdict": "CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE"
+  },
+  "frozen_reference_replay_note": "CP2 is compared only with immediately adjacent CP1 artifacts from the same isolated runtime; the immutable 2026-08-24 Binding report remains prior evidence and no broader environment or economic hypothesis was opened"
+}
