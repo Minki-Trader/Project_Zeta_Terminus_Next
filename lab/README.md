@@ -1,13 +1,25 @@
 # Lab
 
-이 디렉터리는 변경 가능한 V7 소스, 동결 V6R6 대조군, Tester 설정과 DEV 산출물만 소유한다. 어떤 파일도 `live-dev/`를 include하거나 Live 상태·로그를 읽어서는 안 된다.
+이 디렉터리는 Live와 분리된 연구·공학 작업만 소유한다. 어떤 파일도 `live-dev/`를 include하거나 Live 상태·로그를 읽어서는 안 된다.
 
-- `control-v6r6/`: legacy anchor의 작은 동결 대조군
-- `mt5/`: V7 소스와 설정
-- `research/strategy-independence-risk-allocation/`: Lab 전용 `전략 독립성·위험배분 연구`; 여섯 단독 `$100` EA와 결합 대조군, 사전 선언 및 분석
-- `research/deposit-capital-risk-capacity/`: 폐쇄된 Lab 전용 `예치자본·위험용량 연구`; 예치금별 lot tranche와 12% 위험용량 프록시·EA, 최종 `RETAIN_FROZEN_V7`
-- `engineering/complexity-refactor-v1/`: 동결 V7에서 분기한 tester-only 공학 후보; CP1 Entry Gate와 CP2 Market Entry Transaction 분리 동등성 통과, CP3는 추가 가치 없음으로 보류
-- `runtime/tester-portable/`: Git 제외, Lab 전용 MT5 Portable
-- `runtime/complexity-refactor-v1-portable/`: Git 제외, complexity-refactor 후보 전용 MT5 Portable
+## 앞으로의 단 하나의 기준
+
+- 기준 root: `engineering/complexity-refactor-v1/mt5/`
+- 기준 commit: `9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5`
+- 상태: CP1·CP2 동등성 통과 후 동결; CP3 소스 변경 없음
+- 사용법: 새 작업은 이 root를 수정하지 않고 자기 family root로 한 번 복사해 시작한다.
+
+`mt5/`는 과거 기준 V7과 종료된 Frontier EA·Adapter가 섞여 있는 역사적 workspace다. 증거 참조를 보존하기 위해 현재 위치에서 동결하며, 앞으로 `.mq5`, `.mqh`, EA 또는 Adapter를 추가하거나 수정하지 않는다.
+
+## Root 역할
+
+- `control-v6r6/`: legacy anchor의 동결 대조군
+- `mt5/`: 동결된 역사적 V7/Frontier workspace; 신규 작업 금지
+- `engineering/complexity-refactor-v1/`: 현재 forward baseline을 소유하는 닫힌 공학 family
+- `research/strategy-independence-risk-allocation/`: 닫힌 전략 독립성·위험배분 family
+- `research/deposit-capital-risk-capacity/`: 닫힌 예치자본·위험용량 family
+- `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
-- `tools/`: Lab Portable 초기화·컴파일·정상 백테스트 실행기
+- `tools/`: 정상 Lab compile·MT5 실행 도구
+
+새 family는 `research/<family>/` 또는 `engineering/<family>/` 하나에 source·config·evidence를 함께 둔다. 다른 family root를 include하거나 닫힌 root를 다시 열지 않는다. 상세 강제 규칙은 `docs/OPERATING_DIRECTION.md`의 `Source topology discipline`이 권위다.

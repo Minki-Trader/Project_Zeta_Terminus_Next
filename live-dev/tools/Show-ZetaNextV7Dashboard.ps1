@@ -187,7 +187,7 @@ function Format-RemainingHold {
 
 function Get-ComponentView {
     param([string]$ComponentId)
-    # Display-only descriptions mirror the frozen NEXT-E01 V7 source. They are
+    # Display-only descriptions mirror the frozen active V7 source. They are
     # never consumed by the EA and cannot alter an entry decision.
     switch ($ComponentId) {
         'ZT-M30-US30-RANGE-COMP-61f61deaba' {

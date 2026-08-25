@@ -32,14 +32,27 @@ Core operational lineage: `B48 → B49/V6R2 → B52/V6R3 → B66/V6R4 → B67/V6
 - EX5 SHA-256: `0A722406921F76259E4828D87915C2BA6F2F345A4059CC310EEC4BC446011B53`
 - Fixed Latest/Binding verdict: `ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED`
 
-This successor is frozen under `live-dev/package/active/` but is not a real-account owner and has no Live authority.
+This successor completed the original Live handoff and is now the frozen parent of the CP1+CP2 patch release.
+
+## Verified structural patch successor
+
+- Release: `NEXT-E01-V7-CXR1-c0ad2f30d293`
+- Parent release: `NEXT-E01-V7-2db5ef5ead1c`
+- Execution and Portfolio: unchanged from the parent V7
+- Magic: unchanged `260824701..260824706`
+- Canonical source/settings SHA-256: `C0AD2F30D293AD538A91DE74A6D0A14A560FA19222F1DB043E1C533C103A7DD7`
+- MQ5 SHA-256: `D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1`
+- EX5 SHA-256: `F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F`
+- Engineering verdicts: `ENTRY_GATE_EQUIVALENCE_PASSED; MARKET_ENTRY_TRANSACTION_EQUIVALENCE_PASSED; CP3_HOLD`
+
+The patch changes only the verified CP1 Entry Gate and CP2 market-entry transaction ownership boundaries plus the release ID. Economic settings, execution/state identity, persistence schema and state paths remain the parent V7 contract, allowing exact durable-state continuation after a stopped-flat entries-disabled recovery.
 
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev: `ENABLED` and active as the sole owner after connected entries-disabled save/restart evidence, the user's explicit complete V7 replacement-through-Live instruction, and the final Master `0/0 → 1/1` handshake.
+- Next V7 Live-Dev: the parent owner stopped normally at a verified flat pre-window boundary on 2026-08-25; the CP1+CP2 patch release is explicitly authorized and frozen, with entries-disabled state recovery pending.
 - V7 may not import or adopt B70 positions or state.
-- The handoff completed at V7 terminal PID `10112` with Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c` and Magic `260824701..260824706`. Legacy must not restart; any future cold start remains a controlled Next-only ownership transition.
+- The original handoff ran at V7 terminal PID `10112`; that PID is now stopped. Legacy must not restart, and the only permitted next owner is the exact CP1+CP2 release after its committed entries-disabled recovery boundary.
 
 ## Completed legacy closure
 

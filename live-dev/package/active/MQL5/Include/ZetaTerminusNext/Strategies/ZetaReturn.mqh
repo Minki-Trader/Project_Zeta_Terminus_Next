@@ -45,9 +45,13 @@ bool CalculateUS30ReturnImpulse(double &feature)
 
 void ProcessUS30ReturnReversalLong()
   {
-   datetime bar = 0;
-   if(!PrepareEntry(US30_RETURN_REV_LONG, 16, 0, bar))
+   EntryGateResult gate = {};
+   EvaluateEntryGate(US30_RETURN_REV_LONG, 16, 0, gate);
+   ApplyEntryGateResult(US30_RETURN_REV_LONG, gate);
+   CommitOpportunityConsumption(US30_RETURN_REV_LONG, gate);
+   if(!gate.enter_signal_path)
       return;
+   const datetime bar = gate.current_bar;
    if(IsUSEquityClosureDate())
      {
       component_states[US30_RETURN_REV_LONG].entry_check_result = "SESSION_EXCLUDED";

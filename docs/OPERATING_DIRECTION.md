@@ -29,6 +29,19 @@ The user subsequently authorized one new serial Lab family on 2026-08-24: `예�
 
 V1 of that family is closed as `NO_NON_CONTROL_POLICY_PASSED_CLOSE_RETAIN_FROZEN_V7`. Deposit-matched linear lot/risk sizing passed its structural scale-consistency anchor but did not improve percentage return, drawdown or efficiency. The breadth candidate and diagnostic fixed-lot ladder failed the fixed two-deposit efficiency, return-floor or drawdown gates. Per the stop rule, no 2026 confirmation or nearby rescue opened and frozen V7 sizing and first-come 12% admission remain authoritative.
 
+## Source topology discipline
+
+The filesystem must make the current baseline, an active experiment and closed evidence distinguishable without reading source code. These rules are mandatory for every future engineering or research task:
+
+- The sole forward Lab baseline is the exact root named in `CURRENT_STATE.md` and `lab/README.md`. As of 2026-08-25 it is the frozen CP2 root `lab/engineering/complexity-refactor-v1/mt5/` at commit `9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5`. A successor baseline requires an explicit user decision and a durable state update.
+- `lab/mt5/` is a frozen historical mixed V7/Frontier workspace. No new or modified `.mq5`, `.mqh`, EA wrapper or Adapter may be placed there. It is not a forward baseline.
+- Every new family owns one self-contained root under `lab/research/<family>/` or `lab/engineering/<family>/`, including its source, configuration, evidence references and Git-ignored runtime path. It may copy from the frozen baseline once, but it may not include, link or execute source from another Lab family, `lab/mt5/` or `live-dev/`.
+- A baseline contains one assembly EA and only the modules needed by that EA. Experimental wrappers and adapters stay inside their family root. A predeclared multi-EA comparison may contain multiple entrypoints only inside that comparison root.
+- A family root has only two mutable states: the one currently active serial stream, or none. Once a verdict closes or promotes the family, its tracked source and configuration are immutable. A follow-up creates a newly named/versioned sibling root instead of reopening or extending the closed root.
+- Evidence and documentation must use full root-anchored paths. A basename alone never identifies a source file. Frozen evidence trees are not physically reorganized merely for appearance; any later archival move requires a complete reference audit and a separate user-authorized boundary.
+- Live promotion copies only the exact verified files from one closed Lab candidate into `live-dev/package/active/`, assigns a new release ID and hashes, records the source manifest and evidence, and leaves no Lab link. The active Live package contains one EA, its required Include tree, one base SET and release/source manifests—never experimental wrappers or adapters.
+- At every durable boundary, `CURRENT_STATE.md` and `lab/README.md` must still name the same sole forward baseline. If a proposed change cannot state its owning root and lifecycle before code is added, implementation does not begin.
+
 ## Live and Lab isolation
 
 - `lab/` owns evolving source, frozen controls, tester configuration, research, and DEV evidence.

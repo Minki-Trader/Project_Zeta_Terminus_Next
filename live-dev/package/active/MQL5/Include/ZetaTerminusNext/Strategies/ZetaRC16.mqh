@@ -5,9 +5,13 @@
 
 void ProcessRC16Long()
   {
-   datetime bar = 0;
-   if(!PrepareEntry(RC16_LONG, 13, 30, bar))
+   EntryGateResult gate = {};
+   EvaluateEntryGate(RC16_LONG, 13, 30, gate);
+   ApplyEntryGateResult(RC16_LONG, gate);
+   CommitOpportunityConsumption(RC16_LONG, gate);
+   if(!gate.enter_signal_path)
       return;
+   const datetime bar = gate.current_bar;
    double feature = 0.0;
    if(!CalculateRangeCompression("US30", 16, feature))
      {

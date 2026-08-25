@@ -24,3 +24,9 @@ Then compare Git state and the relevant Next files and local processes. Do not q
 - Do not create test-only CLIs, CI, unit/integration/regression tests, validators, parity checkers, promotion checkers, test-only infrastructure, or a project-specific Skill. Use correct compilation, normal MT5 real-tick economic runs, and bounded operating evidence.
 - At durable boundaries, commit only the current repository's changes to `main` and push `origin/main`.
 
+## Source topology guard
+
+- Before adding or changing any Lab `.mq5` or `.mqh`, read the `Source topology discipline` section of `docs/OPERATING_DIRECTION.md` and the current baseline declaration in `lab/README.md`.
+- Never add or modify MQL source under `lab/mt5/`; it is frozen historical material, not the forward baseline.
+- Derive a new experiment by a one-time copy into its own `lab/research/<family>/` or `lab/engineering/<family>/` root. Do not include or link source across Lab family roots.
+- Do not add experimental EA wrappers or adapters to the baseline. Close and freeze the active family before naming a successor baseline or opening another family.

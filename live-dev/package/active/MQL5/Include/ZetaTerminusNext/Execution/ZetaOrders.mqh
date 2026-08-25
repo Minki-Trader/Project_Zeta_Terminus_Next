@@ -23,6 +23,88 @@ bool IsPendingPlacementRetcode(const uint retcode)
   }
 
 
+enum EMarketEntryResultCode
+  {
+   MARKET_ENTRY_NOT_STARTED = 0,
+   MARKET_ENTRY_ENTRY_BLOCKED,
+   MARKET_ENTRY_OWNERSHIP_BLOCKED,
+   MARKET_ENTRY_EXISTING_EXPOSURE,
+   MARKET_ENTRY_VOLUME_INVALID,
+   MARKET_ENTRY_QUOTE_UNAVAILABLE,
+   MARKET_ENTRY_PROTECTION_OR_RISK_BLOCKED,
+   MARKET_ENTRY_SESSION_BLOCKED,
+   MARKET_ENTRY_MARGIN_BLOCKED,
+   MARKET_ENTRY_DURABLE_INTENT_FAILED,
+   MARKET_ENTRY_SUBMIT_REJECTED,
+   MARKET_ENTRY_OBSERVATION_FAILED,
+   MARKET_ENTRY_IDENTITY_MISMATCH,
+   MARKET_ENTRY_PROTECTION_MISMATCH,
+   MARKET_ENTRY_ADOPTION_PERSIST_FAILED,
+   MARKET_ENTRY_FINAL_PERSIST_FAILED,
+   MARKET_ENTRY_POSITION_OPEN
+  };
+
+
+struct MarketEntryPlan
+  {
+   int component;
+   string symbol;
+   ulong magic;
+   int direction;
+   double feature;
+   double volume;
+   MqlTick sampled_tick;
+   double expected_entry_price;
+   double requested_stop_loss;
+   double admitted_planned_risk;
+   double admitted_capital;
+   double aggregate_before;
+   datetime decision_bar;
+   datetime deadline;
+   string comment;
+  };
+
+
+struct MarketSubmitReceipt
+  {
+   bool requested;
+   uint retcode;
+   string retcode_description;
+   double result_volume;
+   double result_price;
+   ulong result_order;
+   ulong result_deal;
+  };
+
+
+struct MarketEntryObservation
+  {
+   ulong position_ticket;
+   ulong expected_position_identifier;
+   ulong position_identifier;
+   datetime opened_at;
+   EntryDealAggregate aggregate;
+   ulong deal_wait_ms;
+   long requested_steps;
+   double position_volume;
+   double position_open_price;
+   double broker_stop_loss;
+   ulong position_magic;
+   string position_symbol;
+   ENUM_POSITION_TYPE position_type;
+  };
+
+
+struct MarketEntryOutcome
+  {
+   EMarketEntryResultCode code;
+   bool broker_call_made;
+   bool protective_close_requested;
+   bool safety_stop_engaged;
+   string entry_check_result;
+  };
+
+
 bool WaitForSingleOwnedPosition(const int component,
                                 ulong &ticket,
                                 datetime &opened_at)
@@ -675,18 +757,24 @@ bool ReconstructClosedPassiveEntry(const ulong order_ticket)
   }
 
 
-bool OpenComponent(const int component,
-                   const int direction,
-                   const double feature)
+bool BuildMarketEntryPlan(const int component,
+                          const int direction,
+                          const double feature,
+                          MarketEntryPlan &plan,
+                          MarketEntryOutcome &outcome)
   {
    if(direction == 0 || !NewEntriesOperationallyAllowed())
      {
       component_states[component].entry_check_result = "ENTRY_BLOCKED";
+      outcome.code = MARKET_ENTRY_ENTRY_BLOCKED;
+      outcome.entry_check_result = "ENTRY_BLOCKED";
       return(false);
      }
    if(!AuditPositionOwnership() || execution_state.foreign_exposure)
      {
       component_states[component].entry_check_result = "OWNERSHIP_BLOCKED";
+      outcome.code = MARKET_ENTRY_OWNERSHIP_BLOCKED;
+      outcome.entry_check_result = "OWNERSHIP_BLOCKED";
       return(false);
      }
    ulong existing_ticket = 0;
@@ -696,6 +784,8 @@ bool OpenComponent(const int component,
                           existing_opened_at) != 0)
      {
       component_states[component].entry_check_result = "EXISTING_EXPOSURE";
+      outcome.code = MARKET_ENTRY_EXISTING_EXPOSURE;
+      outcome.entry_check_result = "EXISTING_EXPOSURE";
       return(false);
      }
    const string symbol = component_definitions[component].symbol;
@@ -703,6 +793,8 @@ bool OpenComponent(const int component,
    if(volume <= 0.0)
      {
       component_states[component].entry_check_result = "VOLUME_INVALID";
+      outcome.code = MARKET_ENTRY_VOLUME_INVALID;
+      outcome.entry_check_result = "VOLUME_INVALID";
       return(false);
      }
    component_states[component].entry_check_volume = volume;
@@ -710,6 +802,8 @@ bool OpenComponent(const int component,
    if(!ExecutableTick(symbol, tick))
      {
       component_states[component].entry_check_result = "QUOTE_UNAVAILABLE";
+      outcome.code = MARKET_ENTRY_QUOTE_UNAVAILABLE;
+      outcome.entry_check_result = "QUOTE_UNAVAILABLE";
       return(false);
      }
    const double entry_price = (direction > 0 ? tick.ask : tick.bid);
@@ -732,6 +826,8 @@ bool OpenComponent(const int component,
      {
       component_states[component].entry_check_result = "PROTECTION_OR_RISK_BLOCKED";
       SaveState();
+      outcome.code = MARKET_ENTRY_PROTECTION_OR_RISK_BLOCKED;
+      outcome.entry_check_result = "PROTECTION_OR_RISK_BLOCKED";
       return(false);
      }
    component_states[component].entry_check_stop_loss = stop_loss;
@@ -741,245 +837,336 @@ bool OpenComponent(const int component,
    if(!TradeSessionAllows(symbol, TimeCurrent(), true))
      {
       component_states[component].entry_check_result = "TRADE_SESSION_BLOCKED";
+      outcome.code = MARKET_ENTRY_SESSION_BLOCKED;
+      outcome.entry_check_result = "TRADE_SESSION_BLOCKED";
       return(false);
      }
    if(!MarginAllows(symbol, direction, volume))
      {
       component_states[component].entry_check_result = "MARGIN_BLOCKED";
+      outcome.code = MARKET_ENTRY_MARGIN_BLOCKED;
+      outcome.entry_check_result = "MARGIN_BLOCKED";
       return(false);
      }
-   trade.SetExpertMagicNumber(component_definitions[component].magic);
+   plan.component = component;
+   plan.symbol = symbol;
+   plan.magic = component_definitions[component].magic;
+   plan.direction = direction;
+   plan.feature = feature;
+   plan.volume = volume;
+   plan.sampled_tick = tick;
+   plan.expected_entry_price = entry_price;
+   plan.requested_stop_loss = stop_loss;
+   plan.admitted_planned_risk = admitted_planned_risk;
+   plan.admitted_capital = admitted_capital;
+   plan.aggregate_before = aggregate_before;
+   plan.decision_bar = decision_intent.decision_bar;
+   plan.deadline = decision_intent.deadline;
+   plan.comment = "ZN " + IntegerToString(component + 1) + " V7";
+   return(true);
+  }
+
+
+bool PersistMarketEntryIntent(const MarketEntryPlan &plan,
+                              MarketEntryOutcome &outcome)
+  {
+   trade.SetExpertMagicNumber(plan.magic);
    trade.SetDeviationInPoints(InpDeviationPoints);
-   trade.SetTypeFillingBySymbol(symbol);
+   trade.SetTypeFillingBySymbol(plan.symbol);
    trade.SetMarginMode();
    trade.SetAsyncMode(false);
-   const string comment = "ZN " + IntegerToString(component + 1) + " V7";
    decision_intent.order_type =
-      (direction > 0 ? ORDER_TYPE_BUY : ORDER_TYPE_SELL);
+      (plan.direction > 0 ? ORDER_TYPE_BUY : ORDER_TYPE_SELL);
    decision_intent.order_type_known = true;
-   decision_intent.intended_price = entry_price;
+   decision_intent.intended_price = plan.expected_entry_price;
    decision_intent.expiration = decision_intent.deadline;
-   decision_intent.volume = volume;
-   decision_intent.stop_loss = stop_loss;
-   decision_intent.planned_risk_usd = admitted_planned_risk;
-   if(!MarkDecisionOrderAttempted(component,
-                                  direction,
-                                  feature,
+   decision_intent.volume = plan.volume;
+   decision_intent.stop_loss = plan.requested_stop_loss;
+   decision_intent.planned_risk_usd = plan.admitted_planned_risk;
+   if(!MarkDecisionOrderAttempted(plan.component,
+                                  plan.direction,
+                                  plan.feature,
                                   "MARKET_OPEN"))
      {
-      component_states[component].entry_check_result = "PERSISTENCE_FAILED";
+      component_states[plan.component].entry_check_result = "PERSISTENCE_FAILED";
+      outcome.code = MARKET_ENTRY_DURABLE_INTENT_FAILED;
+      outcome.entry_check_result = "PERSISTENCE_FAILED";
       return(false);
      }
+   return(true);
+  }
+
+
+void SubmitMarketEntry(const MarketEntryPlan &plan,
+                       MarketSubmitReceipt &receipt)
+  {
    execution_state.trade_operation_active = true;
-   const bool requested =
-      (direction > 0
-       ? trade.Buy(volume, symbol, 0.0, stop_loss, 0.0, comment)
-       : trade.Sell(volume, symbol, 0.0, stop_loss, 0.0, comment));
-   const uint retcode = trade.ResultRetcode();
-   const string retcode_description = trade.ResultRetcodeDescription();
-   const double returned_entry_volume = trade.ResultVolume();
-   const double returned_entry_price = trade.ResultPrice();
-   const ulong entry_order = trade.ResultOrder();
-   const ulong returned_entry_deal = trade.ResultDeal();
+   receipt.requested =
+      (plan.direction > 0
+       ? trade.Buy(plan.volume,
+                   plan.symbol,
+                   0.0,
+                   plan.requested_stop_loss,
+                   0.0,
+                   plan.comment)
+       : trade.Sell(plan.volume,
+                    plan.symbol,
+                    0.0,
+                    plan.requested_stop_loss,
+                    0.0,
+                    plan.comment));
+   receipt.retcode = trade.ResultRetcode();
+   receipt.retcode_description = trade.ResultRetcodeDescription();
+   receipt.result_volume = trade.ResultVolume();
+   receipt.result_price = trade.ResultPrice();
+   receipt.result_order = trade.ResultOrder();
+   receipt.result_deal = trade.ResultDeal();
    execution_state.trade_operation_active = false;
-   if(!requested || !IsCompletedMarketTradeRetcode(retcode))
+   if(!receipt.requested ||
+      !IsCompletedMarketTradeRetcode(receipt.retcode))
      {
-      component_states[component].entry_check_result = "BROKER_REJECTED";
-      RecordEvent(component,
+      component_states[plan.component].entry_check_result = "BROKER_REJECTED";
+      RecordEvent(plan.component,
                   "OPEN_FAIL",
-                  (double)retcode,
-                  feature,
-                  retcode_description);
+                  (double)receipt.retcode,
+                  plan.feature,
+                  receipt.retcode_description);
       SaveState();
-      return(false);
      }
-   ulong position_ticket = 0;
-   datetime opened_at = 0;
-   if(!WaitForSingleOwnedPosition(component, position_ticket, opened_at))
+  }
+
+
+bool ObserveMarketEntry(const MarketEntryPlan &plan,
+                        const MarketSubmitReceipt &receipt,
+                        MarketEntryObservation &observation,
+                        MarketEntryOutcome &outcome)
+  {
+   if(!WaitForSingleOwnedPosition(plan.component,
+                                  observation.position_ticket,
+                                  observation.opened_at))
      {
-      component_states[component].entry_check_result = "SAFETY_STOP";
+      component_states[plan.component].entry_check_result = "SAFETY_STOP";
       execution_state.broker_mismatch = true;
       EngageSafetyStop("entry position unavailable after bounded reconciliation");
       execution_state.pending_reconcile = true;
       MakeExistingRiskSafe("entry broker state mismatch");
-      return(true);
+      outcome.code = MARKET_ENTRY_OBSERVATION_FAILED;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "SAFETY_STOP";
+      return(false);
      }
-   if(!PositionSelectByTicket(position_ticket))
+   if(!PositionSelectByTicket(observation.position_ticket))
      {
-      component_states[component].entry_check_result = "SAFETY_STOP";
+      component_states[plan.component].entry_check_result = "SAFETY_STOP";
       execution_state.broker_mismatch = true;
       EngageSafetyStop("entry position identity unavailable after bounded reconciliation");
       execution_state.pending_reconcile = true;
       MakeExistingRiskSafe("entry position identity unavailable");
-      return(true);
+      outcome.code = MARKET_ENTRY_OBSERVATION_FAILED;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "SAFETY_STOP";
+      return(false);
      }
-   const ulong expected_position_identifier =
+   observation.expected_position_identifier =
       (ulong)PositionGetInteger(POSITION_IDENTIFIER);
-   EntryDealAggregate entry_aggregate = {};
-   ulong entry_deal_wait_ms = 0;
-   long requested_steps = 0;
-   if(expected_position_identifier == 0 ||
-      !VolumeToSteps(symbol, volume, requested_steps) ||
-      !WaitForEntryDealAggregation(component,
-                                   expected_position_identifier,
-                                   tick,
-                                   requested_steps,
-                                   retcode == TRADE_RETCODE_DONE_PARTIAL,
-                                   entry_aggregate,
-                                   entry_deal_wait_ms))
+   if(observation.expected_position_identifier == 0 ||
+      !VolumeToSteps(plan.symbol,
+                     plan.volume,
+                     observation.requested_steps) ||
+      !WaitForEntryDealAggregation(
+         plan.component,
+         observation.expected_position_identifier,
+         plan.sampled_tick,
+         observation.requested_steps,
+         receipt.retcode == TRADE_RETCODE_DONE_PARTIAL,
+         observation.aggregate,
+         observation.deal_wait_ms))
      {
-      component_states[component].entry_check_result = "SAFETY_STOP";
+      component_states[plan.component].entry_check_result = "SAFETY_STOP";
       execution_state.broker_mismatch = true;
       EngageSafetyStop("entry deal sequence unavailable after bounded reconciliation");
       execution_state.pending_reconcile = true;
       MakeExistingRiskSafe("entry deal sequence unavailable");
-      return(true);
+      outcome.code = MARKET_ENTRY_OBSERVATION_FAILED;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "SAFETY_STOP";
+      return(false);
      }
-   if(!PositionSelectByTicket(position_ticket))
+   if(!PositionSelectByTicket(observation.position_ticket))
      {
-      component_states[component].entry_check_result = "SAFETY_STOP";
+      component_states[plan.component].entry_check_result = "SAFETY_STOP";
       execution_state.broker_mismatch = true;
       EngageSafetyStop("authoritative entry state became unavailable");
       execution_state.pending_reconcile = true;
       MakeExistingRiskSafe("authoritative entry state unavailable");
-      return(true);
+      outcome.code = MARKET_ENTRY_OBSERVATION_FAILED;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "SAFETY_STOP";
+      return(false);
      }
-
-   const ulong published_entry_order = entry_aggregate.order_ticket;
-   const ulong entry_deal = entry_aggregate.first_deal;
-   const double deal_volume = entry_aggregate.volume;
-   const double deal_price = entry_aggregate.price;
-   const ulong position_identifier =
+   observation.position_identifier =
       (ulong)PositionGetInteger(POSITION_IDENTIFIER);
-   const ulong position_magic =
+   observation.position_magic =
       (ulong)PositionGetInteger(POSITION_MAGIC);
-   const string position_symbol = PositionGetString(POSITION_SYMBOL);
-   const ENUM_POSITION_TYPE position_type =
+   observation.position_symbol = PositionGetString(POSITION_SYMBOL);
+   observation.position_type =
       (ENUM_POSITION_TYPE)PositionGetInteger(POSITION_TYPE);
-   const double position_volume = PositionGetDouble(POSITION_VOLUME);
-   const double position_open_price =
+   observation.position_volume = PositionGetDouble(POSITION_VOLUME);
+   observation.position_open_price =
       PositionGetDouble(POSITION_PRICE_OPEN);
-   const double broker_stop_loss = PositionGetDouble(POSITION_SL);
-   const double volume_step = SymbolInfoDouble(symbol, SYMBOL_VOLUME_STEP);
+   observation.broker_stop_loss = PositionGetDouble(POSITION_SL);
+   return(true);
+  }
+
+
+void SeedProvisionalMarketLifecycle(
+   const MarketEntryPlan &plan,
+   const MarketEntryObservation &observation)
+  {
+   component_states[plan.component].position_identifier =
+      observation.position_identifier;
+   component_states[plan.component].entry_time_server =
+      observation.aggregate.first_time_server;
+   component_states[plan.component].entry_direction = plan.direction;
+   component_states[plan.component].entry_volume = observation.position_volume;
+   component_states[plan.component].entry_feature = plan.feature;
+   component_states[plan.component].entry_stop_loss =
+      observation.broker_stop_loss;
+   component_states[plan.component].entry_planned_risk_usd =
+      plan.admitted_planned_risk;
+   component_states[plan.component].entry_spread_price =
+      observation.aggregate.spread_price;
+   component_states[plan.component].entry_transaction_cost =
+      observation.aggregate.transaction_cost;
+   component_states[plan.component].entry_adverse_slippage =
+      observation.aggregate.adverse_slippage;
+   component_states[plan.component].entry_cost_known =
+      observation.aggregate.cost_known;
+  }
+
+
+bool ValidateMarketEntry(const MarketEntryPlan &plan,
+                         const MarketSubmitReceipt &receipt,
+                         const MarketEntryObservation &observation,
+                         MarketEntryOutcome &outcome)
+  {
+   const ulong published_entry_order = observation.aggregate.order_ticket;
+   const ulong entry_deal = observation.aggregate.first_deal;
+   const double deal_volume = observation.aggregate.volume;
+   const double deal_price = observation.aggregate.price;
+   const double volume_step =
+      SymbolInfoDouble(plan.symbol, SYMBOL_VOLUME_STEP);
    long position_steps = 0;
    const bool deal_direction_matches =
-      (entry_aggregate.direction == direction);
+      (observation.aggregate.direction == plan.direction);
    const bool position_direction_matches =
-      (direction > 0 ? position_type == POSITION_TYPE_BUY :
-                       position_type == POSITION_TYPE_SELL);
+      (plan.direction > 0
+       ? observation.position_type == POSITION_TYPE_BUY
+       : observation.position_type == POSITION_TYPE_SELL);
    const bool execution_identity_valid =
       published_entry_order > 0 &&
-      position_identifier > 0 &&
-      position_identifier == expected_position_identifier &&
-      position_magic == component_definitions[component].magic &&
-      position_symbol == symbol &&
+      observation.position_identifier > 0 &&
+      observation.position_identifier ==
+      observation.expected_position_identifier &&
+      observation.position_magic == plan.magic &&
+      observation.position_symbol == plan.symbol &&
       deal_direction_matches &&
       position_direction_matches &&
       volume_step > 0.0 && deal_volume > 0.0 &&
-      position_volume > 0.0 && deal_price > 0.0 &&
-      position_open_price > 0.0 &&
-      entry_aggregate.cost_known &&
-      VolumeToSteps(symbol, position_volume, position_steps) &&
-      entry_aggregate.volume_steps == position_steps &&
-      position_steps <= requested_steps;
-
-   // Seed the lifecycle from broker-owned position/deal state before any
-   // fail-closed action so a protective close can still be reconciled.
-   component_states[component].position_identifier = position_identifier;
-   component_states[component].entry_time_server = entry_aggregate.first_time_server;
-   component_states[component].entry_direction = direction;
-   component_states[component].entry_volume = position_volume;
-   component_states[component].entry_feature = feature;
-   component_states[component].entry_stop_loss = broker_stop_loss;
-   component_states[component].entry_planned_risk_usd = admitted_planned_risk;
-   component_states[component].entry_spread_price = entry_aggregate.spread_price;
-   component_states[component].entry_transaction_cost =
-      entry_aggregate.transaction_cost;
-   component_states[component].entry_adverse_slippage =
-      entry_aggregate.adverse_slippage;
-   component_states[component].entry_cost_known = entry_aggregate.cost_known;
-
+      observation.position_volume > 0.0 && deal_price > 0.0 &&
+      observation.position_open_price > 0.0 &&
+      observation.aggregate.cost_known &&
+      VolumeToSteps(plan.symbol,
+                    observation.position_volume,
+                    position_steps) &&
+      observation.aggregate.volume_steps == position_steps &&
+      position_steps <= observation.requested_steps;
    if(!execution_identity_valid)
      {
-      component_states[component].entry_check_result = "SAFETY_STOP";
+      component_states[plan.component].entry_check_result = "SAFETY_STOP";
       execution_state.broker_mismatch = true;
-      RecordEvent(component,
+      RecordEvent(plan.component,
                   "OPEN_EXECUTION_MISMATCH",
                   deal_price,
-                  position_volume,
+                  observation.position_volume,
                   StringFormat("result_order=%I64u published_order=%I64u result_deal=%I64u first_deal=%I64u last_deal=%I64u entry_deals=%d result_price=%.5f result_volume=%.2f requested_steps=%I64d position_steps=%I64d broker_position=%I64u magic=%I64u symbol=%s aggregate_direction=%d position_type=%d",
-                               entry_order,
+                               receipt.result_order,
                                published_entry_order,
-                               returned_entry_deal,
+                               receipt.result_deal,
                                entry_deal,
-                               entry_aggregate.last_deal,
-                               entry_aggregate.deal_count,
-                               returned_entry_price,
-                               returned_entry_volume,
-                               requested_steps,
+                               observation.aggregate.last_deal,
+                               observation.aggregate.deal_count,
+                               receipt.result_price,
+                               receipt.result_volume,
+                               observation.requested_steps,
                                position_steps,
-                               position_identifier,
-                               position_magic,
-                               position_symbol,
-                               entry_aggregate.direction,
-                               (int)position_type));
+                               observation.position_identifier,
+                               observation.position_magic,
+                               observation.position_symbol,
+                               observation.aggregate.direction,
+                               (int)observation.position_type));
       EngageSafetyStop("authoritative entry execution identity mismatch");
       execution_state.pending_reconcile = true;
-      CloseComponent(component, position_ticket);
-      return(true);
+      outcome.code = MARKET_ENTRY_IDENTITY_MISMATCH;
+      outcome.protective_close_requested = true;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "SAFETY_STOP";
+      CloseComponent(plan.component, observation.position_ticket);
+      return(false);
      }
 
    double actual_planned_risk = 0.0;
    const double protection_tolerance =
-      MathMax(0.01, admitted_planned_risk * 0.01);
+      MathMax(0.01, plan.admitted_planned_risk * 0.01);
    const double tick_size =
-      SymbolInfoDouble(symbol, SYMBOL_TRADE_TICK_SIZE);
-   const bool stop_present = broker_stop_loss > 0.0;
+      SymbolInfoDouble(plan.symbol, SYMBOL_TRADE_TICK_SIZE);
+   const bool stop_present = observation.broker_stop_loss > 0.0;
    const bool stop_direction_valid =
-      (direction > 0 ? broker_stop_loss < position_open_price :
-                       broker_stop_loss > position_open_price);
+      (plan.direction > 0
+       ? observation.broker_stop_loss < observation.position_open_price
+       : observation.broker_stop_loss > observation.position_open_price);
    const bool stop_matches_request =
       tick_size > 0.0 &&
-      MathAbs(broker_stop_loss - stop_loss) <=
+      MathAbs(observation.broker_stop_loss - plan.requested_stop_loss) <=
       0.5 * tick_size + 1.0e-9;
    const bool risk_known =
-      BufferedPlannedRisk(symbol,
-                          direction,
-                          position_volume,
-                          position_open_price,
-                          broker_stop_loss,
+      BufferedPlannedRisk(plan.symbol,
+                          plan.direction,
+                          observation.position_volume,
+                          observation.position_open_price,
+                          observation.broker_stop_loss,
                           actual_planned_risk);
    const bool position_risk_within_cap =
       risk_known &&
       actual_planned_risk <=
-      admitted_capital * InpMaximumPositionRiskFraction +
+      plan.admitted_capital * InpMaximumPositionRiskFraction +
       protection_tolerance;
    const bool aggregate_risk_within_cap =
       risk_known &&
-      aggregate_before + actual_planned_risk <=
-      admitted_capital * InpMaximumAggregateRiskFraction +
+      plan.aggregate_before + actual_planned_risk <=
+      plan.admitted_capital * InpMaximumAggregateRiskFraction +
       protection_tolerance;
    const bool protection_valid =
       stop_present && stop_direction_valid && stop_matches_request &&
       position_risk_within_cap && aggregate_risk_within_cap;
    if(!protection_valid)
      {
-      component_states[component].entry_check_result = "SAFETY_STOP";
+      component_states[plan.component].entry_check_result = "SAFETY_STOP";
       ++protection_mismatches;
       execution_state.broker_mismatch = true;
-      RecordEvent(component,
+      RecordEvent(plan.component,
                   "OPEN_PROTECTION_MISMATCH",
-                  component_states[component].entry_stop_loss,
-                  component_states[component].entry_planned_risk_usd,
+                  component_states[plan.component].entry_stop_loss,
+                  component_states[plan.component].entry_planned_risk_usd,
                   StringFormat("deal_price=%.5f position_open=%.5f result_price=%.5f broker_stop=%.5f requested_stop=%.5f actual_risk=%.4f admitted_risk=%.4f aggregate_before=%.4f stop_present=%d stop_direction=%d stop_exact=%d risk_known=%d position_cap=%d aggregate_cap=%d",
                                deal_price,
-                               position_open_price,
-                               returned_entry_price,
-                               broker_stop_loss,
-                               stop_loss,
+                               observation.position_open_price,
+                               receipt.result_price,
+                               observation.broker_stop_loss,
+                               plan.requested_stop_loss,
                                actual_planned_risk,
-                               admitted_planned_risk,
-                               aggregate_before,
+                               plan.admitted_planned_risk,
+                               plan.aggregate_before,
                                (int)stop_present,
                                (int)stop_direction_valid,
                                (int)stop_matches_request,
@@ -987,38 +1174,112 @@ bool OpenComponent(const int component,
                                (int)position_risk_within_cap,
                                (int)aggregate_risk_within_cap));
       EngageSafetyStop("market entry protection not confirmed");
-      CloseComponent(component, position_ticket);
-      return(true);
+      outcome.code = MARKET_ENTRY_PROTECTION_MISMATCH;
+      outcome.protective_close_requested = true;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "SAFETY_STOP";
+      CloseComponent(plan.component, observation.position_ticket);
+      return(false);
      }
-   if(!MarkDecisionBrokerStateAdopted(component,
-                                      position_identifier,
+   return(true);
+  }
+
+
+bool AdoptMarketEntry(const MarketEntryPlan &plan,
+                      const MarketEntryObservation &observation,
+                      MarketEntryOutcome &outcome)
+  {
+   if(!MarkDecisionBrokerStateAdopted(plan.component,
+                                      observation.position_identifier,
                                       "POSITION_ADOPTED"))
      {
-      component_states[component].entry_check_result = "SAFETY_STOP";
+      component_states[plan.component].entry_check_result = "SAFETY_STOP";
       EngageSafetyStop("adopted position journal could not be persisted");
-      CloseComponent(component, position_ticket);
-      return(true);
+      outcome.code = MARKET_ENTRY_ADOPTION_PERSIST_FAILED;
+      outcome.protective_close_requested = true;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "SAFETY_STOP";
+      CloseComponent(plan.component, observation.position_ticket);
+      return(false);
      }
-   component_states[component].entry_check_result = "POSITION_OPEN";
-   RecordEvent(component,
+   return(true);
+  }
+
+
+bool FinalizeMarketEntry(const MarketEntryPlan &plan,
+                         const MarketSubmitReceipt &receipt,
+                         const MarketEntryObservation &observation,
+                         MarketEntryOutcome &outcome)
+  {
+   const ulong published_entry_order = observation.aggregate.order_ticket;
+   const ulong entry_deal = observation.aggregate.first_deal;
+   const double deal_price = observation.aggregate.price;
+   component_states[plan.component].entry_check_result = "POSITION_OPEN";
+   RecordEvent(plan.component,
                "OPEN",
                deal_price,
-               position_volume,
+               observation.position_volume,
                StringFormat("feature=%.8f position_open=%.5f result_price=%.5f result_volume=%.2f filled_volume=%.2f entry_deals=%d stop=%.5f planned_risk=%.4f deal_wait_ms=%I64u order=%I64u first_deal=%I64u last_deal=%I64u",
-                            feature,
-                            position_open_price,
-                            returned_entry_price,
-                            returned_entry_volume,
-                            position_volume,
-                            entry_aggregate.deal_count,
-                            component_states[component].entry_stop_loss,
-                            component_states[component].entry_planned_risk_usd,
-                            entry_deal_wait_ms,
+                            plan.feature,
+                            observation.position_open_price,
+                            receipt.result_price,
+                            receipt.result_volume,
+                            observation.position_volume,
+                            observation.aggregate.deal_count,
+                            component_states[plan.component].entry_stop_loss,
+                            component_states[plan.component].entry_planned_risk_usd,
+                            observation.deal_wait_ms,
                             published_entry_order,
                             entry_deal,
-                            entry_aggregate.last_deal));
+                            observation.aggregate.last_deal));
    if(!SaveState())
+     {
       EngageSafetyStop("entry state could not be persisted");
+      outcome.code = MARKET_ENTRY_FINAL_PERSIST_FAILED;
+      outcome.safety_stop_engaged = true;
+      outcome.entry_check_result = "POSITION_OPEN";
+      return(false);
+     }
+   outcome.code = MARKET_ENTRY_POSITION_OPEN;
+   outcome.entry_check_result = "POSITION_OPEN";
+   return(true);
+  }
+
+
+bool OpenComponent(const int component,
+                   const int direction,
+                   const double feature)
+  {
+   MarketEntryPlan plan = {};
+   MarketSubmitReceipt receipt = {};
+   MarketEntryObservation observation = {};
+   MarketEntryOutcome outcome = {};
+   outcome.code = MARKET_ENTRY_NOT_STARTED;
+   if(!BuildMarketEntryPlan(component,
+                            direction,
+                            feature,
+                            plan,
+                            outcome))
+      return(false);
+   if(!PersistMarketEntryIntent(plan, outcome))
+      return(false);
+   SubmitMarketEntry(plan, receipt);
+   outcome.broker_call_made = true;
+   if(!receipt.requested ||
+      !IsCompletedMarketTradeRetcode(receipt.retcode))
+     {
+      outcome.code = MARKET_ENTRY_SUBMIT_REJECTED;
+      outcome.entry_check_result = "BROKER_REJECTED";
+      return(false);
+     }
+   if(!ObserveMarketEntry(plan, receipt, observation, outcome))
+      return(true);
+   SeedProvisionalMarketLifecycle(plan, observation);
+   if(!ValidateMarketEntry(plan, receipt, observation, outcome))
+      return(true);
+   if(!AdoptMarketEntry(plan, observation, outcome))
+      return(true);
+   FinalizeMarketEntry(plan, receipt, observation, outcome);
    return(true);
   }
 

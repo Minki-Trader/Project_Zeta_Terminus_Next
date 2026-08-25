@@ -51,9 +51,13 @@ bool CalculateUS100RelativeMomentum(double &zscore)
 
 void ProcessUS100Cross()
   {
-   datetime bar = 0;
-   if(!PrepareEntry(US100_CROSS, 17, 0, bar))
+   EntryGateResult gate = {};
+   EvaluateEntryGate(US100_CROSS, 17, 0, gate);
+   ApplyEntryGateResult(US100_CROSS, gate);
+   CommitOpportunityConsumption(US100_CROSS, gate);
+   if(!gate.enter_signal_path)
       return;
+   const datetime bar = gate.current_bar;
    if(IsUSEquityClosureDate())
      {
       component_states[US100_CROSS].entry_check_result = "SESSION_EXCLUDED";

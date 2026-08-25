@@ -1776,9 +1776,13 @@ void ProcessRC4AdverseRiskCompression()
 
 void ProcessRC4Both()
   {
-   datetime bar = 0;
-   if(!PrepareEntry(RC4_BOTH, 13, 0, bar))
+   EntryGateResult gate = {};
+   EvaluateEntryGate(RC4_BOTH, 13, 0, gate);
+   ApplyEntryGateResult(RC4_BOTH, gate);
+   CommitOpportunityConsumption(RC4_BOTH, gate);
+   if(!gate.enter_signal_path)
       return;
+   const datetime bar = gate.current_bar;
    double feature = 0.0;
    if(!CalculateRangeCompression("US30", 4, feature))
      {

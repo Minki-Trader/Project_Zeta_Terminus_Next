@@ -16,17 +16,19 @@ function Get-ZetaNextOperatorContract {
         StatePath = Join-Path $projectRoot 'CURRENT_STATE.md'
         StatusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV7Status.ps1'
         HandoffReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\legacy-final-handoff.json'
+        ReleaseTransitionReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\live-release-transition-cxr1.json'
         LegacyRoot = 'C:\Users\awdse\OneDrive\Desktop\Project_Zeta_Terminus'
         ProjectId = 'project-zeta-terminus-next'
-        ReleaseId = 'NEXT-E01-V7-2db5ef5ead1c'
+        ReleaseId = 'NEXT-E01-V7-CXR1-c0ad2f30d293'
+        RootHandoffReleaseId = 'NEXT-E01-V7-2db5ef5ead1c'
         PortfolioId = 'ZT-PORT-NEXT-V7-2db5ef5ead1c'
         ExecutionVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c'
         EconomicVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6'
         FilePrefix = 'zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c'
         SourceHash = 'D210A662A51FE5691CBC9A3FC4DD376A2826D848DC904FBD578F7B9C9911FDB1'
-        ExpertHash = '0A722406921F76259E4828D87915C2BA6F2F345A4059CC310EEC4BC446011B53'
+        ExpertHash = 'F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F'
         SetHash = 'BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8'
-        LabManifestHash = '742C599EF4EBAD5C4B79770FB7A3F2D433CB1F8F4EDFF9118D3274F87834FFB9'
+        SourceManifestHash = '80126951E12544E2B3B3F858A4AB450DE413095768675AD4B0ECD79A993096BB'
         MagicNumbers = @(260824701L, 260824702L, 260824703L, 260824704L, 260824705L, 260824706L)
         ComponentIds = @(
             'ZT-M30-US30-RANGE-COMP-61f61deaba',
@@ -120,9 +122,9 @@ function Assert-ZetaNextReleaseIntegrity {
     $sourcePath = Join-Path $Contract.PackageRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextPre500FiniteRiskPortfolioV7.mq5'
     $expertPath = Join-Path $Contract.PackageRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextPre500FiniteRiskPortfolioV7.ex5'
     $setPath = Join-Path $Contract.PackageRoot 'MQL5\Presets\ZetaTerminusNext\next-v7-modular.set'
-    $candidateManifestPath = Join-Path $Contract.PackageRoot 'LAB_CANDIDATE_MANIFEST.json'
+    $sourceManifestPath = Join-Path $Contract.PackageRoot 'SOURCE_MANIFEST.json'
     $releaseManifestPath = Join-Path $Contract.PackageRoot 'RELEASE_MANIFEST.json'
-    foreach ($path in @($sourcePath, $expertPath, $setPath, $candidateManifestPath, $releaseManifestPath, $Contract.TerminalPath, $Contract.StatusScript, $Contract.StatePath)) {
+    foreach ($path in @($sourcePath, $expertPath, $setPath, $sourceManifestPath, $releaseManifestPath, $Contract.TerminalPath, $Contract.StatusScript, $Contract.StatePath)) {
         if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
             throw "Required Next V7 operator file is missing: $path"
         }
@@ -131,8 +133,8 @@ function Assert-ZetaNextReleaseIntegrity {
     if ((Get-FileHash -Algorithm SHA256 -LiteralPath $sourcePath).Hash -ne $Contract.SourceHash -or
         (Get-FileHash -Algorithm SHA256 -LiteralPath $expertPath).Hash -ne $Contract.ExpertHash -or
         (Get-NormalizedTextSha256 -Path $setPath) -ne $Contract.SetHash -or
-        (Get-FileHash -Algorithm SHA256 -LiteralPath $candidateManifestPath).Hash -ne $Contract.LabManifestHash) {
-        throw 'The frozen V7 source, EX5, SET, or Lab manifest hash does not match NEXT-E01.'
+        (Get-FileHash -Algorithm SHA256 -LiteralPath $sourceManifestPath).Hash -ne $Contract.SourceManifestHash) {
+        throw 'The frozen active V7 source, EX5, SET, or source manifest hash does not match the operator contract.'
     }
 
     $releaseManifest = Get-Content -LiteralPath $releaseManifestPath -Raw | ConvertFrom-Json
@@ -141,27 +143,29 @@ function Assert-ZetaNextReleaseIntegrity {
         [string]$releaseManifest.portfolio_id -ne $Contract.PortfolioId -or
         [string]$releaseManifest.execution_version -ne $Contract.ExecutionVersion -or
         [string]$releaseManifest.real_tick_equivalence -ne 'passed' -or
-        [string]$releaseManifest.compiled_ex5_sha256 -ne $Contract.ExpertHash) {
-        throw 'The active release manifest does not identify the verified NEXT-E01/V7 package.'
+        [string]$releaseManifest.compiled_ex5_sha256 -ne $Contract.ExpertHash -or
+        [string]$releaseManifest.source_manifest_sha256 -ne $Contract.SourceManifestHash) {
+        throw 'The active release manifest does not identify the verified V7 package.'
     }
 
-    $candidateManifest = Get-Content -LiteralPath $candidateManifestPath -Raw | ConvertFrom-Json
-    foreach ($file in @($candidateManifest.files)) {
+    $sourceManifest = Get-Content -LiteralPath $sourceManifestPath -Raw | ConvertFrom-Json
+    if ([string]$sourceManifest.release_id -ne $Contract.ReleaseId -or
+        [string]$sourceManifest.execution_version -ne $Contract.ExecutionVersion -or
+        [string]$sourceManifest.portfolio_id -ne $Contract.PortfolioId) {
+        throw 'The source manifest identity does not match the operator contract.'
+    }
+    foreach ($file in @($sourceManifest.files)) {
         $relative = [string]$file.path
-        if ($relative -like 'config/tester/tester-*.ini') { continue }
-        if ($relative -eq 'config/tester/next-v7-modular.set') {
-            $packagePath = $setPath
-        } elseif ($relative.StartsWith('src/Experts/', [System.StringComparison]::Ordinal)) {
-            $packagePath = Join-Path (Join-Path $Contract.PackageRoot 'MQL5\Experts\ZetaTerminusNext') ([System.IO.Path]::GetFileName($relative))
-        } elseif ($relative.StartsWith('src/Include/ZetaTerminusNext/', [System.StringComparison]::Ordinal)) {
-            $tail = $relative.Substring('src/Include/ZetaTerminusNext/'.Length).Replace('/', '\')
-            $packagePath = Join-Path (Join-Path $Contract.PackageRoot 'MQL5\Include\ZetaTerminusNext') $tail
-        } else {
-            throw "Unexpected candidate manifest path: $relative"
+        if (-not $relative.StartsWith('MQL5/', [System.StringComparison]::Ordinal)) {
+            throw "Unexpected source manifest path: $relative"
+        }
+        $packagePath = Join-Path $Contract.PackageRoot $relative.Replace('/', '\')
+        if (-not (Test-PathInside -Path $packagePath -Root $Contract.PackageRoot)) {
+            throw "Source manifest path escaped the active package: $relative"
         }
         if (-not (Test-Path -LiteralPath $packagePath -PathType Leaf) -or
             (Get-FileHash -Algorithm SHA256 -LiteralPath $packagePath).Hash -ne [string]$file.sha256) {
-            throw "Frozen package file differs from the Lab candidate manifest: $relative"
+            throw "Frozen package file differs from the source manifest: $relative"
         }
     }
 
@@ -199,31 +203,58 @@ function Assert-ZetaNextReleaseIntegrity {
 function Get-ZetaNextHandoffReceipt {
     param([Parameter(Mandatory)]$Contract)
 
-    if (-not (Test-Path -LiteralPath $Contract.HandoffReceiptPath -PathType Leaf)) {
-        throw "Local flat-handoff receipt is missing: $($Contract.HandoffReceiptPath)"
+    foreach ($receiptPath in @($Contract.HandoffReceiptPath, $Contract.ReleaseTransitionReceiptPath)) {
+        if (-not (Test-Path -LiteralPath $receiptPath -PathType Leaf)) {
+            throw "Required local handoff receipt is missing: $receiptPath"
+        }
     }
-    $receipt = Get-Content -LiteralPath $Contract.HandoffReceiptPath -Raw | ConvertFrom-Json
-    if ([string]$receipt.project_id -ne $Contract.ProjectId -or
-        [string]$receipt.target_release_id -ne $Contract.ReleaseId -or
-        -not [bool]$receipt.legacy_flat_verified -or
-        -not [bool]$receipt.outside_all_entry_windows -or
-        -not [bool]$receipt.no_incomplete_decision -or
-        [long]$receipt.account_login -le 0 -or
-        -not ([string]$receipt.legacy_final_state_sha256 -match '^[0-9A-Fa-f]{64}$') -or
-        -not ([string]$receipt.legacy_final_log_sha256 -match '^[0-9A-Fa-f]{64}$') -or
-        -not [double]::IsFinite([double]$receipt.prior_project_realized_net_usd) -or
-        100.0 + [double]$receipt.prior_project_realized_net_usd -le 0.0) {
-        throw 'The local flat-handoff receipt is incomplete or does not target this V7 release.'
+    $rootReceipt = Get-Content -LiteralPath $Contract.HandoffReceiptPath -Raw | ConvertFrom-Json
+    if ([string]$rootReceipt.project_id -ne $Contract.ProjectId -or
+        [string]$rootReceipt.target_release_id -ne $Contract.RootHandoffReleaseId -or
+        -not [bool]$rootReceipt.legacy_flat_verified -or
+        -not [bool]$rootReceipt.outside_all_entry_windows -or
+        -not [bool]$rootReceipt.no_incomplete_decision -or
+        [long]$rootReceipt.account_login -le 0 -or
+        -not ([string]$rootReceipt.legacy_final_state_sha256 -match '^[0-9A-Fa-f]{64}$') -or
+        -not ([string]$rootReceipt.legacy_final_log_sha256 -match '^[0-9A-Fa-f]{64}$') -or
+        -not [double]::IsFinite([double]$rootReceipt.prior_project_realized_net_usd) -or
+        100.0 + [double]$rootReceipt.prior_project_realized_net_usd -le 0.0) {
+        throw 'The local root handoff receipt is incomplete or does not identify the original V7 account handoff.'
+    }
+    $transition = Get-Content -LiteralPath $Contract.ReleaseTransitionReceiptPath -Raw | ConvertFrom-Json
+    if ([string]$transition.project_id -ne $Contract.ProjectId -or
+        [string]$transition.parent_release_id -ne $Contract.RootHandoffReleaseId -or
+        [string]$transition.target_release_id -ne $Contract.ReleaseId -or
+        [string]$transition.execution_version -ne $Contract.ExecutionVersion -or
+        [string]$transition.portfolio_id -ne $Contract.PortfolioId -or
+        [long]$transition.account_login -ne [long]$rootReceipt.account_login -or
+        -not [bool]$transition.parent_runtime_stopped_normally -or
+        -not [bool]$transition.outside_all_entry_windows -or
+        -not [bool]$transition.no_incomplete_decision -or
+        [long]$transition.captured_state_sequence -le 0 -or
+        -not [double]::IsFinite([double]$transition.continuity.expected_project_realized_net_usd) -or
+        -not [double]::IsFinite([double]$transition.continuity.expected_project_stage_balance_usd)) {
+        throw 'The local release-transition receipt is incomplete or does not target the active V7 package.'
     }
 
     $tradesRoot = Join-Path $Contract.RuntimeRoot 'Bases\FPMarketsSC-Live\trades'
     $accounts = @(if (Test-Path -LiteralPath $tradesRoot -PathType Container) {
         Get-ChildItem -LiteralPath $tradesRoot -Directory | Where-Object Name -match '^\d+$'
     })
-    if ($accounts.Count -ne 1 -or [long]$accounts[0].Name -ne [long]$receipt.account_login) {
+    if ($accounts.Count -ne 1 -or [long]$accounts[0].Name -ne [long]$rootReceipt.account_login) {
         throw 'Next Live Portable must contain exactly the account named by the flat-handoff receipt.'
     }
-    $receipt
+    [pscustomobject]@{
+        account_login = [long]$rootReceipt.account_login
+        prior_project_realized_net_usd = [double]$rootReceipt.prior_project_realized_net_usd
+        expected_account_balance_usd = [double]$transition.continuity.expected_account_balance_usd
+        expected_account_equity_usd = [double]$transition.continuity.expected_account_equity_usd
+        expected_project_realized_net_usd = [double]$transition.continuity.expected_project_realized_net_usd
+        expected_project_stage_balance_usd = [double]$transition.continuity.expected_project_stage_balance_usd
+        expected_stressed_balance_usd = [double]$transition.continuity.expected_stressed_balance_usd
+        root_handoff = $rootReceipt
+        release_transition = $transition
+    }
 }
 
 function Write-ZetaNextRuntimeMode {
@@ -392,8 +423,11 @@ function Test-ZetaNextFlatStatus {
         [long]$Status.arc.lifecycle_identifier -ne 0 -or
         [int]$Status.retry.pending -ne 0 -or [int]$Status.shadow.occupied -ne 0 -or
         @($Status.components | Where-Object { [long]$_.position_identifier -ne 0 }).Count -ne 0 -or
-        [math]::Abs([double]$Status.project_realized_net - [double]$Receipt.prior_project_realized_net_usd) -gt 0.005 -or
-        [math]::Abs([double]$Status.project_stage_balance - (100.0 + [double]$Receipt.prior_project_realized_net_usd)) -gt 0.005) {
+        [math]::Abs([double]$Status.account_balance - [double]$Receipt.expected_account_balance_usd) -gt 0.005 -or
+        [math]::Abs([double]$Status.account_equity - [double]$Receipt.expected_account_equity_usd) -gt 0.005 -or
+        [math]::Abs([double]$Status.project_realized_net - [double]$Receipt.expected_project_realized_net_usd) -gt 0.005 -or
+        [math]::Abs([double]$Status.project_stage_balance - [double]$Receipt.expected_project_stage_balance_usd) -gt 0.005 -or
+        [math]::Abs([double]$Status.stressed_balance - [double]$Receipt.expected_stressed_balance_usd) -gt 0.005) {
         return $false
     }
     $true

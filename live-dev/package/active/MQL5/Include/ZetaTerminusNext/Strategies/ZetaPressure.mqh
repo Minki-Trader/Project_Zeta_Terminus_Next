@@ -68,9 +68,13 @@ bool CalculateIntradayRangePressure(const string symbol, double &pressure)
 
 void ProcessUS30Pressure()
   {
-   datetime bar = 0;
-   if(!PrepareEntry(US30_PRESSURE, 15, 0, bar))
+   EntryGateResult gate = {};
+   EvaluateEntryGate(US30_PRESSURE, 15, 0, gate);
+   ApplyEntryGateResult(US30_PRESSURE, gate);
+   CommitOpportunityConsumption(US30_PRESSURE, gate);
+   if(!gate.enter_signal_path)
       return;
+   const datetime bar = gate.current_bar;
    double feature = 0.0;
    if(!CalculateIntradayRangePressure("US30", feature))
      {

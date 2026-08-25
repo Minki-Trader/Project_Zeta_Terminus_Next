@@ -102,56 +102,178 @@ bool IsEntryWindow(const int hour,
   }
 
 
-bool PrepareEntry(const int component,
-                  const int hour,
-                  const int minute,
-                  datetime &current_bar)
+enum EEntryGateCode
   {
-   current_bar = iTime(component_definitions[component].symbol,
-                       component_definitions[component].timeframe,
-                       0);
-   if(current_bar == 0 || component_states[component].last_decision_bar == current_bar)
-      return(false);
+   ENTRY_GATE_BAR_UNAVAILABLE = 0,
+   ENTRY_GATE_ALREADY_CONSUMED,
+   ENTRY_GATE_DUPLICATE_EXPOSURE,
+   ENTRY_GATE_EXISTING_EXPOSURE,
+   ENTRY_GATE_RC4_SHADOW_OCCUPIED,
+   ENTRY_GATE_NOT_IN_WINDOW,
+   ENTRY_GATE_DELAY_EXCEEDED,
+   ENTRY_GATE_READY
+  };
+
+
+struct EntryGateResult
+  {
+   EEntryGateCode code;
+   datetime current_bar;
+   int owned_position_count;
+   int elapsed_minutes;
+   bool consume_opportunity;
+   bool begin_observation;
+   bool set_broker_mismatch;
+   bool engage_safety_stop;
+   bool increment_rc4_shadow_block;
+   bool write_skip_delay_event;
+   bool enter_signal_path;
+  };
+
+
+void EvaluateEntryGate(const int component,
+                       const int hour,
+                       const int minute,
+                       EntryGateResult &result)
+  {
+   result.code = ENTRY_GATE_BAR_UNAVAILABLE;
+   result.current_bar = 0;
+   result.owned_position_count = 0;
+   result.elapsed_minutes = 0;
+   result.consume_opportunity = false;
+   result.begin_observation = false;
+   result.set_broker_mismatch = false;
+   result.engage_safety_stop = false;
+   result.increment_rc4_shadow_block = false;
+   result.write_skip_delay_event = false;
+   result.enter_signal_path = false;
+
+   // Path 1: the current component bar is unavailable.
+   result.current_bar =
+      iTime(component_definitions[component].symbol,
+            component_definitions[component].timeframe,
+            0);
+   if(result.current_bar == 0)
+      return;
+
+   // Path 2: this durable opportunity was already consumed.
+   if(component_states[component].last_decision_bar == result.current_bar)
+     {
+      result.code = ENTRY_GATE_ALREADY_CONSUMED;
+      return;
+     }
+
    ulong ticket = 0;
    datetime opened_at = 0;
    const int owned = CountOwnedPositions(component, ticket, opened_at);
+   result.owned_position_count = owned;
+
+   // Path 3: duplicate owned exposure is a safety fault and is consumed.
    if(owned > 1)
      {
-      BeginEntryCheck(component, current_bar, "DUPLICATE_EXPOSURE");
-      execution_state.broker_mismatch = true;
-      EngageSafetyStop("duplicate component position before entry");
-      PersistDecision(component, current_bar);
-      return(false);
+      result.code = ENTRY_GATE_DUPLICATE_EXPOSURE;
+      result.consume_opportunity = true;
+      result.begin_observation = true;
+      result.set_broker_mismatch = true;
+      result.engage_safety_stop = true;
+      return;
      }
+
+   // Path 4: an existing owned position consumes this opportunity.
    if(owned == 1)
      {
-      BeginEntryCheck(component, current_bar, "EXISTING_EXPOSURE");
-      PersistDecision(component, current_bar);
-      return(false);
+      result.code = ENTRY_GATE_EXISTING_EXPOSURE;
+      result.consume_opportunity = true;
+      result.begin_observation = true;
+      return;
      }
+
+   // Path 5: accepted RC4 shadow occupancy consumes this opportunity.
    if(component == RC4_BOTH && execution_state.rc4_shadow_occupied)
      {
-      BeginEntryCheck(component, current_bar, "SHADOW_ACCEPTED_OCCUPANCY");
-      ++rc4_shadow_entry_blocks;
-      PersistDecision(component, current_bar);
-      return(false);
+      result.code = ENTRY_GATE_RC4_SHADOW_OCCUPIED;
+      result.consume_opportunity = true;
+      result.begin_observation = true;
+      result.increment_rc4_shadow_block = true;
+      return;
      }
+
    int elapsed = 0;
    if(!IsEntryWindow(hour, minute, elapsed))
-      return(false);
+     {
+      // Path 6: position and shadow observations precede the time window.
+      result.code = ENTRY_GATE_NOT_IN_WINDOW;
+      result.elapsed_minutes = elapsed;
+      return;
+     }
+   result.elapsed_minutes = elapsed;
+
+   // Path 7: a late opportunity is observed, logged, and consumed.
    if(elapsed > InpMaxEntryDelayMinutes)
      {
-      BeginEntryCheck(component, current_bar, "ENTRY_DELAY_EXCEEDED");
+      result.code = ENTRY_GATE_DELAY_EXCEEDED;
+      result.consume_opportunity = true;
+      result.begin_observation = true;
+      result.write_skip_delay_event = true;
+      return;
+     }
+
+   // Path 8: signal evaluation may proceed without consuming the bar yet.
+   result.code = ENTRY_GATE_READY;
+   result.begin_observation = true;
+   result.enter_signal_path = true;
+  }
+
+
+void ApplyEntryGateResult(const int component,
+                          const EntryGateResult &result)
+  {
+   if(result.begin_observation)
+     {
+      string observation_result = "";
+      switch(result.code)
+        {
+         case ENTRY_GATE_DUPLICATE_EXPOSURE:
+            observation_result = "DUPLICATE_EXPOSURE";
+            break;
+         case ENTRY_GATE_EXISTING_EXPOSURE:
+            observation_result = "EXISTING_EXPOSURE";
+            break;
+         case ENTRY_GATE_RC4_SHADOW_OCCUPIED:
+            observation_result = "SHADOW_ACCEPTED_OCCUPANCY";
+            break;
+         case ENTRY_GATE_DELAY_EXCEEDED:
+            observation_result = "ENTRY_DELAY_EXCEEDED";
+            break;
+         case ENTRY_GATE_READY:
+            observation_result = "CHECKING_SIGNAL";
+            break;
+         default:
+            break;
+        }
+      BeginEntryCheck(component, result.current_bar, observation_result);
+     }
+   if(result.set_broker_mismatch)
+      execution_state.broker_mismatch = true;
+   if(result.engage_safety_stop)
+      EngageSafetyStop("duplicate component position before entry");
+   if(result.increment_rc4_shadow_block)
+      ++rc4_shadow_entry_blocks;
+   if(result.write_skip_delay_event)
       RecordEvent(component,
                   "SKIP_DELAY",
-                  (double)elapsed,
+                  (double)result.elapsed_minutes,
                   0.0,
-                  TimeToString(current_bar));
-      PersistDecision(component, current_bar);
-      return(false);
-     }
-   BeginEntryCheck(component, current_bar, "CHECKING_SIGNAL");
-   return(true);
+                  TimeToString(result.current_bar));
+  }
+
+
+bool CommitOpportunityConsumption(const int component,
+                                  const EntryGateResult &result)
+  {
+   if(!result.consume_opportunity)
+      return(true);
+   return(PersistDecision(component, result.current_bar));
   }
 
 
