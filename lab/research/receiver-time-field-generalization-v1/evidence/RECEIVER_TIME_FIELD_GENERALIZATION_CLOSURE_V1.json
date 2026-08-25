@@ -1,0 +1,47 @@
+{
+  "schema": "zeta-next-receiver-time-field-generalization-closure-v1",
+  "created_at_local": "2026-08-25",
+  "status": "CLOSED_AND_FROZEN",
+  "unit": "receiver-time-field-generalization-013",
+  "family": "receiver-time-field-generalization-v1",
+  "frozen_evidence": {
+    "declaration_sha256": "49C8D648B2761167FD3B20686D7532B4F6EEA2692E77575FB5F334BDC3DF9074",
+    "compile_receipt_sha256": "AE3749F36D17663EE192D374B7B1BF722F5345855F02EA198B880675FBBFEEE8",
+    "selection_sha256": "BC215AEAC86C53797E9D0E1C4E00637D06E86CA077F0171867526E7CCD32E3CC",
+    "source_manifest_sha256": "40C8E920A643E268088470E9C84C826FF35FF15CB0852C111B9EDF583D317785",
+    "config_manifest_sha256": "286683DA6CBC0E4910F0DA11799E706B7FDFF9A4F996606DADE13107BAC52129"
+  },
+  "execution_summary": {
+    "serial_real_tick_runs": 12,
+    "normal_runs": 12,
+    "rescue_runs": 0,
+    "runtime_faults": 0,
+    "control_stressed_net_usd": 407.0477,
+    "return_contraction_stressed_net_usd": 412.686,
+    "receiver_time_field_stressed_net_usd": 416.8158,
+    "required_candidate_stressed_net_usd": 427.400085,
+    "control_trades": 2233,
+    "return_contraction_trades": 2232,
+    "receiver_time_field_trades": 2232
+  },
+  "closed_findings": [
+    "The independent CP2 reconstruction reproduced the retained 2025 Return and combined stressed deltas within 0.03 and 0.02 dollars respectively.",
+    "The effect did not generalize materially: RETURN_CONTRACTION improved pooled stressed net by 5.6383 dollars and RECEIVER_TIME_FIELD by 9.7681 dollars, both below the frozen 20.352385-dollar requirement.",
+    "RECEIVER_TIME_FIELD also worsened summed stressed closed drawdown by 0.1007 dollars.",
+    "Both candidates lost the same 2022-10-07 17:00 US100 Cross entry after candidate path economics kept Return risk occupied until 17:01:24; this produced one additional risk-admission skip.",
+    "Qualification density was sufficient. The failure is temporal concentration and portfolio path interaction, not sparse samples or reconstruction error."
+  ],
+  "selection": {
+    "selected_path": null,
+    "verdict": "NO_MECHANISM_PASSED_RETAIN_FROZEN_CP2",
+    "transition_reserve_combination_rejected": true,
+    "live_change_or_promotion": false
+  },
+  "frozen_surfaces": {
+    "forward_baseline_unchanged": true,
+    "live_source_package_set_state_logs_and_process_untouched": true,
+    "family_source_reopen_allowed": false
+  },
+  "retained_seed": "censored_passive_refusal_depth",
+  "next": "after_durable_commit_evaluate_whether_causal_non_fill_depth_has_more_temporal_breadth_than_direction_only_afterimage_without_reopening_this_family"
+}

@@ -5,7 +5,7 @@ Last updated: 2026-08-25
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0033`
+- Latest state ID: `STATE-0034`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 ## Active work
 
 - Active engineering boundary: none; CP1+CP2 Live promotion is complete and the release is frozen
-- Active research boundary: none; `us30-context-rotation-v1` is closed as `INSUFFICIENT_CONTEXT_DENSITY`, its sparse opposed-RC4 observation opens no Pressure mechanism, and no successor is open at this durable boundary
+- Active research boundary: none; `receiver-time-field-generalization-v1` is closed as `NO_MECHANISM_PASSED_RETAIN_FROZEN_CP2`, transition-reserve consolidation is rejected, and only the un-opened `censored_passive_refusal_depth` seed remains at this durable boundary
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 parent release ID: `NEXT-E01-V7-2db5ef5ead1c`
@@ -181,6 +181,15 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 - Opposed context showed higher mean stressed-R in discovery, P3 and pooled data, but P4 reversed the aligned-minus-opposed effect to `+0.01392019R`; the sparse observation is descriptive only and opens no Pressure maturity candidate
 - Declaration SHA-256 is `A3E25181D3898C840D9282D6AF8AB5EB1B664AC001388A5155B7084974E0591E`; result SHA-256 is `7E16BE35B0C8E989353D3AC9627729E2DB84AC56F9C76CD416C4EBAE0DBE6609`; Live remained untouched
 
+## Completed receiver-time-field generalization
+
+- Independently reconstructed the retained Passive-expiration receiver field from the frozen CP2 baseline in the self-contained Tester-only `lab/research/receiver-time-field-generalization-v1/` family; it has separate source, identity, settings, state and dedicated Portable and no Live or cross-family dependency
+- Compiled CONTROL, RETURN_CONTRACTION and RECEIVER_TIME_FIELD at `0 errors / 0 warnings`, then completed exactly 12 serial fresh-`$100` 100%-real-tick runs across P1 2022H2-2023, 2024, 2025 and 2026 YTD with no rescue path or runtime fault
+- The clean 2025 reconstruction reproduced the retained Return and combined stressed deltas within `$0.03/$0.02`, confirming semantic reconstruction. Across all periods, however, Return improved pooled stressed net by only `$5.6383` and the combined field by `$9.7681`, below the frozen `$20.352385` requirement
+- Combined DD worsened by `$0.1007`. Both candidates also lost the same 2022-10-07 17:00 Cross SELL because path-dependent Return stop geometry kept Return+Passive risk occupied until 17:01:24, producing one additional risk-admission skip and `2,232` versus control `2,233` trades
+- Failure was not sparse: 40 admitted qualified Return and 84 admitted qualified Cross lifecycles were measured. Closed `NO_MECHANISM_PASSED_RETAIN_FROZEN_CP2`; transition reserve was not combined and no Live authority opened
+- Selection SHA-256 is `BC215AEAC86C53797E9D0E1C4E00637D06E86CA077F0171867526E7CCD32E3CC`; closure SHA-256 is `A2843AB82E0626E14DBB9B6B63115A8FDEFAA7C71F689A516A92AECC641BC32A`
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -192,4 +201,4 @@ Legacy B70 V6R6 and parent V7 are stopped and disabled. Exact CP1+CP2 release is
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM`

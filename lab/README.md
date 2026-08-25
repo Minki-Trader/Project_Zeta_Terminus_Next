@@ -23,6 +23,7 @@
 - `research/tester-replay-financing-drift-v1/`: 닫힌 테스터 재생·금융비용 포렌식 family; 스왑 심볼명세 드리프트를 원인 경계로 확정, 소스·추가 실행 없음
 - `research/strategy-frontier-coverage-v1/`: 닫힌 전략 프론티어 커버리지 진단 family; RC16·RC4·Pressure 모두 네 기간 양의 점유시간당 stressed 손익으로 단일 약체 대상 없음, 소스·추가 실행 없음
 - `research/us30-context-rotation-v1/`: 닫힌 RC4→Pressure 인과 맥락 Proxy family; 118건 중 맥락 17건으로 고정 표본 게이트 미달, 소스·추가 실행 없음
+- `research/receiver-time-field-generalization-v1/`: 닫힌 Passive 만료→Return/Cross 수신시간장 일반화 family; 12개 실틱 경로에서 2025 재현은 성공했으나 전체 개선·DD·진입수 게이트 미달, CP2 유지
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구

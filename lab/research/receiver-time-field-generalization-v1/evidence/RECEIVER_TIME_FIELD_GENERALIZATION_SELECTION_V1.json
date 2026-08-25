@@ -1,0 +1,465 @@
+{
+  "schema": "zeta-next-receiver-time-field-generalization-selection-v1",
+  "created_at_local": "2026-08-25",
+  "status": "SELECTION_COMPLETE",
+  "unit": "receiver-time-field-generalization-013",
+  "research_family": {
+    "id": "receiver-time-field-generalization-v1",
+    "tester_only": true,
+    "outcomes_consumed": true
+  },
+  "frozen_inputs": {
+    "declaration": {
+      "path": "lab/research/receiver-time-field-generalization-v1/evidence/RECEIVER_TIME_FIELD_GENERALIZATION_DECLARATION_V1.json",
+      "sha256": "49C8D648B2761167FD3B20686D7532B4F6EEA2692E77575FB5F334BDC3DF9074"
+    },
+    "compile_receipt": {
+      "path": "lab/research/receiver-time-field-generalization-v1/evidence/RECEIVER_TIME_FIELD_GENERALIZATION_COMPILE_RECEIPT_V1.json",
+      "sha256": "AE3749F36D17663EE192D374B7B1BF722F5345855F02EA198B880675FBBFEEE8"
+    },
+    "source_manifest_sha256": "40C8E920A643E268088470E9C84C826FF35FF15CB0852C111B9EDF583D317785",
+    "config_manifest_sha256": "286683DA6CBC0E4910F0DA11799E706B7FDFF9A4F996606DADE13107BAC52129",
+    "source_and_config_unchanged_after_compile": true
+  },
+  "execution": {
+    "platform": "MetaTrader 5 strategy tester build 6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "model": "100% real ticks",
+    "fresh_deposit_usd_per_run": 100.0,
+    "serial_only": true,
+    "declared_run_count": 12,
+    "completed_run_count": 12,
+    "additional_or_rescue_runs": 0,
+    "all_process_exit_codes_zero": true,
+    "all_normal_stop_reason_1": true,
+    "all_report_net_trade_deal_totals_reconciled": true,
+    "all_component_final_lines_sum_to_portfolio_stressed_net": true,
+    "all_safety_persistence_broker_foreign_protection_capacity_and_close_faults_zero": true,
+    "agent_log_note": "The single dedicated-agent log preserves the final portfolio, six component final lines and receiver telemetry for every serial run. The reusable agent sandbox retained file snapshots only for the final P4 combined run; no gate depends on an overwritten event-ring file."
+  },
+  "runtime_market_data_manifests": {
+    "algorithm": "Sort root-relative paths, uppercase SHA-256 each file, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 229,
+      "bytes": 3203843899,
+      "sha256": "009EAAC674FE25EBFD46FCF18B6AB1A1D34A46AD1FCD5CBEBCB93867924DF092"
+    },
+    "tester_bases": {
+      "files": 165,
+      "bytes": 2478439859,
+      "sha256": "89680E048B3BDA481AF71EE623EAB0DF452660F7A5FB754F2E72F731131B52A9"
+    }
+  },
+  "artifact_manifests": {
+    "algorithm": "Sort root-relative paths, uppercase SHA-256 each file, join path|hash with LF, then SHA-256 UTF-8.",
+    "mt5_html_reports": {
+      "root": "lab/artifacts/backtests/receiver-time-field-generalization-v1/",
+      "file_count": 12,
+      "bytes": 13301590,
+      "sha256": "D8042A7EC7D7C9CE559CD4DB43E9FBDFCC9C646E1766D16A38CD44E39D27D49A"
+    },
+    "all_mt5_report_files": {
+      "root": "lab/artifacts/backtests/receiver-time-field-generalization-v1/",
+      "file_count": 60,
+      "bytes": 14926772,
+      "sha256": "A9DE0413B38034E7E071190D7D02FE9C5C1713971564604892FABDA007AF8F5B"
+    },
+    "ea_and_final_run_files": {
+      "root": "lab/artifacts/ea-files/receiver-time-field-generalization-v1/",
+      "file_count": 9,
+      "bytes": 1645730,
+      "sha256": "602AA09E5C555CA90646FBF4829DA3CA0F005EF35D6A9E99B899D50997C2FE9F"
+    },
+    "compile_and_runtime_logs": {
+      "root": "lab/artifacts/logs/receiver-time-field-generalization-v1/",
+      "file_count": 6,
+      "bytes": 37857480,
+      "sha256": "99E71EE67213F1E4DC3E4DC305FED7A314EED800F53C7EFC7A75086241B7812C",
+      "agent_log_sha256": "201C0BC274227444EE9FECCB260A46A0B57CF7136327422B49F76B93545B1686"
+    }
+  },
+  "period_results": [
+    {
+      "period": "P1_2022H2_2023",
+      "from": "2022-08-01",
+      "to_exclusive": "2024-01-01",
+      "results": [
+        {
+          "path": "CONTROL",
+          "actual_net_usd": 163.78,
+          "stressed_net_usd": 148.8735,
+          "stressed_max_closed_drawdown_usd": 18.779,
+          "actual_balance_max_drawdown_usd": 18.16,
+          "profit_factor": 1.51,
+          "trades": 769,
+          "deals": 1538,
+          "risk_admission_skips": 21,
+          "stop_loss_exits": 26,
+          "report_sha256": "59F335EA03A62B942C79DFEDD47CC077DA9476C607748D97001420408D833238"
+        },
+        {
+          "path": "RETURN_CONTRACTION",
+          "actual_net_usd": 162.12,
+          "stressed_net_usd": 147.2355,
+          "stressed_max_closed_drawdown_usd": 19.4305,
+          "actual_balance_max_drawdown_usd": 18.14,
+          "profit_factor": 1.51,
+          "trades": 768,
+          "deals": 1536,
+          "risk_admission_skips": 22,
+          "stop_loss_exits": 26,
+          "observed_passive_expirations": 38,
+          "return_qualified_signals": 17,
+          "return_qualified_lifecycles": 17,
+          "return_three_bar_releases": 16,
+          "report_sha256": "EC04F29AC9DC13A4FFE1BC6F4B9B108818926F1532135CA0ACABC78C7EAF5D1F"
+        },
+        {
+          "path": "RECEIVER_TIME_FIELD",
+          "actual_net_usd": 163.78,
+          "stressed_net_usd": 148.9583,
+          "stressed_max_closed_drawdown_usd": 19.7905,
+          "actual_balance_max_drawdown_usd": 18.50,
+          "profit_factor": 1.51,
+          "trades": 768,
+          "deals": 1536,
+          "risk_admission_skips": 22,
+          "stop_loss_exits": 26,
+          "observed_passive_expirations": 38,
+          "return_qualified_signals": 17,
+          "return_qualified_lifecycles": 17,
+          "return_three_bar_releases": 16,
+          "cross_qualified_signals": 29,
+          "cross_qualified_lifecycles": 29,
+          "cross_maturity_decisions": 29,
+          "cross_extensions": 15,
+          "cross_native_maturities": 14,
+          "report_sha256": "DE3519444BD149B6856B24F46D67CB28132652872EC7CFA8547B851EF850361B"
+        }
+      ]
+    },
+    {
+      "period": "P2_2024",
+      "from": "2024-01-01",
+      "to_exclusive": "2025-01-01",
+      "results": [
+        {
+          "path": "CONTROL",
+          "actual_net_usd": 62.75,
+          "stressed_net_usd": 54.663,
+          "stressed_max_closed_drawdown_usd": 17.779,
+          "actual_balance_max_drawdown_usd": 16.69,
+          "profit_factor": 1.25,
+          "trades": 554,
+          "deals": 1108,
+          "risk_admission_skips": 18,
+          "stop_loss_exits": 66,
+          "report_sha256": "6810BFEB6C553E88E7BDD330D9F86CAFF4977C5639358DB23C13667F658DC9B1"
+        },
+        {
+          "path": "RETURN_CONTRACTION",
+          "actual_net_usd": 63.05,
+          "stressed_net_usd": 55.004,
+          "stressed_max_closed_drawdown_usd": 17.779,
+          "actual_balance_max_drawdown_usd": 16.69,
+          "profit_factor": 1.25,
+          "trades": 554,
+          "deals": 1108,
+          "risk_admission_skips": 18,
+          "stop_loss_exits": 66,
+          "observed_passive_expirations": 19,
+          "return_qualified_signals": 4,
+          "return_qualified_lifecycles": 4,
+          "return_three_bar_releases": 3,
+          "report_sha256": "D53BB5A7002CA1DFD3080D8C8897AC398156AA389109CFDF4941D8ED919B52EA"
+        },
+        {
+          "path": "RECEIVER_TIME_FIELD",
+          "actual_net_usd": 62.89,
+          "stressed_net_usd": 54.8715,
+          "stressed_max_closed_drawdown_usd": 17.779,
+          "actual_balance_max_drawdown_usd": 16.69,
+          "profit_factor": 1.25,
+          "trades": 554,
+          "deals": 1108,
+          "risk_admission_skips": 18,
+          "stop_loss_exits": 67,
+          "observed_passive_expirations": 19,
+          "return_qualified_signals": 4,
+          "return_qualified_lifecycles": 4,
+          "return_three_bar_releases": 3,
+          "cross_qualified_signals": 18,
+          "cross_qualified_lifecycles": 18,
+          "cross_maturity_decisions": 18,
+          "cross_extensions": 11,
+          "cross_native_maturities": 7,
+          "report_sha256": "6CF4ADB67BA8CAFE5451B36C7E1D588F1F24B2BD995D6D604BC75889834C4675"
+        }
+      ]
+    },
+    {
+      "period": "P3_2025",
+      "from": "2025-01-01",
+      "to_exclusive": "2026-01-01",
+      "results": [
+        {
+          "path": "CONTROL",
+          "actual_net_usd": 121.36,
+          "stressed_net_usd": 113.038,
+          "stressed_max_closed_drawdown_usd": 28.3905,
+          "actual_balance_max_drawdown_usd": 27.19,
+          "profit_factor": 1.37,
+          "trades": 554,
+          "deals": 1108,
+          "risk_admission_skips": 25,
+          "stop_loss_exits": 72,
+          "report_sha256": "A6365220B3FB67113129F4ADB78A664AEF3EE15C2004E5182BBED9FD8E98A0D1"
+        },
+        {
+          "path": "RETURN_CONTRACTION",
+          "actual_net_usd": 128.15,
+          "stressed_net_usd": 119.832,
+          "stressed_max_closed_drawdown_usd": 26.6805,
+          "actual_balance_max_drawdown_usd": 25.48,
+          "profit_factor": 1.40,
+          "trades": 554,
+          "deals": 1108,
+          "risk_admission_skips": 25,
+          "stop_loss_exits": 69,
+          "observed_passive_expirations": 29,
+          "return_qualified_signals": 13,
+          "return_qualified_lifecycles": 12,
+          "return_three_bar_releases": 9,
+          "report_sha256": "90F63DA44F7675B658956720196149251FC47E83309E3E922249480E6220BF5B"
+        },
+        {
+          "path": "RECEIVER_TIME_FIELD",
+          "actual_net_usd": 131.14,
+          "stressed_net_usd": 122.7435,
+          "stressed_max_closed_drawdown_usd": 27.326,
+          "actual_balance_max_drawdown_usd": 26.04,
+          "profit_factor": 1.41,
+          "trades": 554,
+          "deals": 1108,
+          "risk_admission_skips": 25,
+          "stop_loss_exits": 69,
+          "observed_passive_expirations": 29,
+          "return_qualified_signals": 13,
+          "return_qualified_lifecycles": 12,
+          "return_three_bar_releases": 9,
+          "cross_qualified_signals": 21,
+          "cross_qualified_lifecycles": 19,
+          "cross_maturity_decisions": 19,
+          "cross_extensions": 15,
+          "cross_native_maturities": 4,
+          "report_sha256": "BC63E1482803F5AA98AE7627530F3E2A5730678D68C31C5C896762877557F6C4"
+        }
+      ]
+    },
+    {
+      "period": "P4_2026_YTD",
+      "from": "2026-01-01",
+      "to_exclusive": "2026-08-21",
+      "results": [
+        {
+          "path": "CONTROL",
+          "actual_net_usd": 96.30,
+          "stressed_net_usd": 90.4732,
+          "stressed_max_closed_drawdown_usd": 31.1908,
+          "actual_balance_max_drawdown_usd": 30.66,
+          "profit_factor": 1.40,
+          "trades": 356,
+          "deals": 712,
+          "risk_admission_skips": 14,
+          "stop_loss_exits": 42,
+          "report_sha256": "5DB0F810AFDABCDB717AD839258EDB4FAAA87FE6CCB43FD09AC7ECEB9E05CA61"
+        },
+        {
+          "path": "RETURN_CONTRACTION",
+          "actual_net_usd": 96.44,
+          "stressed_net_usd": 90.6145,
+          "stressed_max_closed_drawdown_usd": 31.2945,
+          "actual_balance_max_drawdown_usd": 30.76,
+          "profit_factor": 1.39,
+          "trades": 356,
+          "deals": 712,
+          "risk_admission_skips": 14,
+          "stop_loss_exits": 42,
+          "observed_passive_expirations": 27,
+          "return_qualified_signals": 7,
+          "return_qualified_lifecycles": 7,
+          "return_three_bar_releases": 6,
+          "report_sha256": "7E972AAF626FE89040AD6B97B7FDD5BF0FE8C0BD97DC5E03D147A4C46E9FF880"
+        },
+        {
+          "path": "RECEIVER_TIME_FIELD",
+          "actual_net_usd": 96.05,
+          "stressed_net_usd": 90.2425,
+          "stressed_max_closed_drawdown_usd": 31.3445,
+          "actual_balance_max_drawdown_usd": 30.81,
+          "profit_factor": 1.39,
+          "trades": 356,
+          "deals": 712,
+          "risk_admission_skips": 14,
+          "stop_loss_exits": 42,
+          "observed_passive_expirations": 27,
+          "return_qualified_signals": 7,
+          "return_qualified_lifecycles": 7,
+          "return_three_bar_releases": 6,
+          "cross_qualified_signals": 20,
+          "cross_qualified_lifecycles": 18,
+          "cross_maturity_decisions": 18,
+          "cross_extensions": 11,
+          "cross_native_maturities": 7,
+          "report_sha256": "C12318E32608B00632E75D03B5333CF262B117D1054F084280A6120A4FD1B15A"
+        }
+      ]
+    }
+  ],
+  "pooled_results": {
+    "CONTROL": {
+      "actual_net_usd": 444.19,
+      "stressed_net_usd": 407.0477,
+      "stressed_max_closed_drawdown_sum_usd": 96.1393,
+      "actual_balance_max_drawdown_sum_usd": 92.70,
+      "trades": 2233,
+      "deals": 4466,
+      "risk_admission_skips": 78,
+      "stop_loss_exits": 206
+    },
+    "RETURN_CONTRACTION": {
+      "actual_net_usd": 449.76,
+      "actual_delta_vs_control_usd": 5.57,
+      "stressed_net_usd": 412.686,
+      "stressed_delta_vs_control_usd": 5.6383,
+      "stressed_max_closed_drawdown_sum_usd": 95.1845,
+      "drawdown_delta_vs_control_usd": -0.9548,
+      "actual_balance_max_drawdown_sum_usd": 91.07,
+      "trades": 2232,
+      "deals": 4464,
+      "risk_admission_skips": 79,
+      "stop_loss_exits": 203,
+      "observed_passive_expirations": 113,
+      "return_qualified_signals": 41,
+      "return_qualified_lifecycles": 40,
+      "return_three_bar_releases": 34
+    },
+    "RECEIVER_TIME_FIELD": {
+      "actual_net_usd": 453.86,
+      "actual_delta_vs_control_usd": 9.67,
+      "stressed_net_usd": 416.8158,
+      "stressed_delta_vs_control_usd": 9.7681,
+      "stressed_max_closed_drawdown_sum_usd": 96.24,
+      "drawdown_delta_vs_control_usd": 0.1007,
+      "actual_balance_max_drawdown_sum_usd": 92.04,
+      "trades": 2232,
+      "deals": 4464,
+      "risk_admission_skips": 79,
+      "stop_loss_exits": 204,
+      "observed_passive_expirations": 113,
+      "return_qualified_signals": 41,
+      "return_qualified_lifecycles": 40,
+      "return_three_bar_releases": 34,
+      "cross_qualified_signals": 88,
+      "cross_qualified_lifecycles": 84,
+      "cross_maturity_decisions": 84,
+      "cross_extensions": 52,
+      "cross_native_maturities": 32,
+      "incremental_actual_vs_return_contraction_usd": 4.10,
+      "incremental_stressed_vs_return_contraction_usd": 4.1298
+    }
+  },
+  "clean_reconstruction_check": {
+    "next_internal_2025_reference": {
+      "control_to_return_stressed_delta_usd": 6.824,
+      "control_to_combined_stressed_delta_usd": 9.7255
+    },
+    "clean_cp2_2025": {
+      "control_to_return_stressed_delta_usd": 6.794,
+      "control_to_combined_stressed_delta_usd": 9.7055
+    },
+    "delta_difference_usd": {
+      "return": -0.03,
+      "combined": -0.02
+    },
+    "interpretation": "The clean implementation reproduced the retained 2025 economic shape closely; failure below is generalization and path economics, not a semantic reconstruction failure."
+  },
+  "fixed_gate_application": {
+    "control_stressed_net_usd": 407.0477,
+    "required_improvement_usd": 20.352385,
+    "required_candidate_stressed_net_usd": 427.400085,
+    "candidates": {
+      "RETURN_CONTRACTION": {
+        "normal_completion_and_zero_faults": true,
+        "qualified_lifecycle_floor_20": true,
+        "no_trade_count_decrease": false,
+        "trade_failure": "P1 and pooled each have one fewer trade than CONTROL.",
+        "pooled_stressed_net_improvement": false,
+        "observed_improvement_usd": 5.6383,
+        "required_improvement_usd": 20.352385,
+        "stressed_breadth_3_of_4": true,
+        "actual_breadth_3_of_4": true,
+        "pooled_drawdown_not_worse": true,
+        "every_period_drawdown_within_115_percent": true,
+        "passed": false
+      },
+      "RECEIVER_TIME_FIELD": {
+        "normal_completion_and_zero_faults": true,
+        "qualified_lifecycle_floor_20": true,
+        "no_trade_count_decrease": false,
+        "trade_failure": "P1 and pooled each have one fewer trade than CONTROL.",
+        "pooled_stressed_net_improvement": false,
+        "observed_improvement_usd": 9.7681,
+        "required_improvement_usd": 20.352385,
+        "stressed_breadth_3_of_4": true,
+        "actual_breadth_3_of_4": true,
+        "pooled_drawdown_not_worse": false,
+        "pooled_drawdown_delta_usd": 0.1007,
+        "every_period_drawdown_within_115_percent": true,
+        "combined_attribution_pooled_stressed_positive": true,
+        "combined_attribution_stressed_breadth_2_of_4": true,
+        "combined_attribution_actual_breadth_2_of_4": true,
+        "passed": false
+      }
+    },
+    "passing_candidates": []
+  },
+  "missing_entry_attribution": {
+    "component": "US100_CROSS",
+    "decision_server": "2022-10-07 17:00:00",
+    "direction": -1,
+    "control": {
+      "return_entry_server": "2022-10-07 16:00:00",
+      "return_stop_loss": 29435.87,
+      "return_stop_exit_server": "2022-10-07 16:59:07",
+      "cross_admitted": true
+    },
+    "return_contraction": {
+      "return_stop_loss": 29433.85,
+      "return_stop_exit_server": "2022-10-07 17:01:24",
+      "cross_admitted": false
+    },
+    "receiver_time_field": {
+      "return_stop_loss": 29431.69,
+      "return_stop_exit_server": "2022-10-07 17:01:24",
+      "cross_admitted": false
+    },
+    "cause": "Earlier candidate path economics changed the risk-budget-derived Return stop distance. CONTROL released Return risk 53 seconds before the Cross decision; both candidates still held Return plus Passive at the decision and recorded one additional aggregate-risk admission skip. The path difference is causal economic behavior, not an implementation fault."
+  },
+  "economic_interpretation": {
+    "finding": "The retained receiver field is real on the original 2025 regime but does not generalize strongly enough across fresh temporal slices.",
+    "return_shape": "RETURN_CONTRACTION wins P2, P3 and P4 but loses P1; its pooled stressed gain is only 1.385% of CONTROL and below the frozen 5% requirement.",
+    "combined_shape": "RECEIVER_TIME_FIELD wins or ties actual and stressed net in three periods, but nearly all material gain is P3 2025. Its pooled stressed gain is 2.400%, drawdown is 0.1007 dollars worse and one Cross entry is lost.",
+    "sample_density": "Failure is not caused by sparse qualification: 40 Return and 84 Cross admitted qualified lifecycles were observed.",
+    "transition_reserve_consequence": "Do not combine transition reserve with this receiver field. The clean base mechanism did not earn consolidation status, while transition-reserve evidence remains entangled with a different historical path.",
+    "new_hypothesis_opened_inside_unit": false
+  },
+  "selection": {
+    "selected_path": null,
+    "verdict": "NO_MECHANISM_PASSED_RETAIN_FROZEN_CP2",
+    "exploratory_candidate_named": false,
+    "transition_reserve_opened": false,
+    "thirteenth_or_rescue_path_opened": false,
+    "live_change_or_promotion_authorized": false
+  }
+}

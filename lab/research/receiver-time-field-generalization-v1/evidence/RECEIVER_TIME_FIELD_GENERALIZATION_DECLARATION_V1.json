@@ -1,0 +1,206 @@
+{
+  "schema": "zeta-next-receiver-time-field-generalization-declaration-v1",
+  "created_at_local": "2026-08-25",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION_AND_OUTCOME",
+  "unit": "receiver-time-field-generalization-013",
+  "research_family": {
+    "id": "receiver-time-field-generalization-v1",
+    "korean_title": "수신전략별 기회기억 만기 일반화 연구",
+    "owner_root": "lab/research/receiver-time-field-generalization-v1/",
+    "runtime_root": "lab/runtime/receiver-time-field-generalization-v1-portable/",
+    "artifact_roots": [
+      "lab/artifacts/backtests/receiver-time-field-generalization-v1/",
+      "lab/artifacts/ea-files/receiver-time-field-generalization-v1/",
+      "lab/artifacts/logs/receiver-time-field-generalization-v1/"
+    ],
+    "serial_stream_only": true
+  },
+  "question": "Does the retained Passive-expiration receiver-time field preserve or improve whole-portfolio economics outside its original 2025 path when independently reconstructed on the frozen CP2 baseline?",
+  "next_internal_sources_only": [
+    {
+      "path": "lab/frontier/opportunity-afterimage/adapter.py",
+      "sha256": "0C5BBFAF89E8EB5031789222096B62DC697E716EE98E30F04219D3A934BACD5B"
+    },
+    {
+      "path": "lab/frontier/opportunity-afterimage/runtime.json",
+      "sha256": "8903BD8C3D4CA38F7AFFCBFF39FC7617E31DB2BB0223B1823E0EB09C2A184667"
+    },
+    {
+      "path": "lab/frontier/receiver-time-field/runtime.json",
+      "sha256": "8FEEA9C9FF7A922C104F6C72574033AF738AA7AE63CB48E786DC89DF1DF99BA0"
+    }
+  ],
+  "excluded_sources": [
+    "Pre-Next repositories and experiments",
+    "historical mixed-workspace MQL source",
+    "current Live-Dev source, state, logs, terminal and broker state",
+    "transition-reserve source or outcomes as an implementation dependency"
+  ],
+  "frozen_parent": {
+    "root": "lab/engineering/complexity-refactor-v1/mt5/",
+    "commit": "9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5",
+    "git_tree": "7dbd1e0999a3921ab0f2601ff90ebe12f0f2c4ff",
+    "source_file_count": 15,
+    "copy_rule": "One-time self-contained copy into this family; no cross-family Include, link or execution dependency."
+  },
+  "causal_information_boundary": {
+    "emitter_birth": "A Passive opportunity becomes an expired-unfilled emitter only when ORDER_STATE_EXPIRED is actually observed by the EA. The stored emitter server time is that observation time, not its scheduled expiration.",
+    "receiver_cutoff": "A receiver may use only emitters whose observed server second is strictly earlier than the receiver decision second.",
+    "allowed": [
+      "observed expired-unfilled Passive direction and observation server time",
+      "current Return or Cross signal direction at its frozen decision second",
+      "current Cross POSITION_PROFIT at the first processed native four-H1-bar maturity boundary",
+      "all frozen CP2 position identity, entry risk, session and reconciliation state"
+    ],
+    "forbidden": [
+      "future prices, future exit outcomes or post-trade MFE",
+      "an expiration not yet observed",
+      "same-server-second emitter use",
+      "special dates, post-outcome thresholds or strategy exceptions beyond the two declared receivers",
+      "broker history or Live account state"
+    ]
+  },
+  "fixed_paths": [
+    {
+      "id": "CONTROL",
+      "kind": 0,
+      "definition": "Frozen CP2 V7 economics. Afterimage telemetry is inert and every natural hold remains unchanged."
+    },
+    {
+      "id": "RETURN_CONTRACTION",
+      "kind": 1,
+      "definition": "CONTROL plus the declared Return qualification. A qualified admitted Return lifecycle closes after three H1 bars instead of its native six H1 bars. Cross remains native."
+    },
+    {
+      "id": "RECEIVER_TIME_FIELD",
+      "kind": 2,
+      "definition": "RETURN_CONTRACTION plus the declared Cross qualification. At the first processed native four-H1-bar maturity boundary, a qualified Cross lifecycle extends to six H1 bars only when POSITION_PROFIT is strictly positive; otherwise it remains due for native close. The maturity choice is frozen on first observation."
+    }
+  ],
+  "fixed_qualification": {
+    "return": {
+      "receiver_direction": 1,
+      "emitter_type": "expired_unfilled_passive_only",
+      "half_life_minutes": 2880,
+      "maximum_age_half_lives": 8,
+      "weight": "0.5 ^ (age_minutes / 2880)",
+      "energy": "sum of every eligible emitter weight",
+      "signed_energy": "sum of weight multiplied by +1 for same direction and -1 for opposite direction",
+      "minimum_energy": 0.25,
+      "minimum_same_direction_dominance": 0.25,
+      "dominance": "signed_energy / energy",
+      "qualification": "energy >= 0.25 and dominance >= 0.25",
+      "native_hold_h1_bars": 6,
+      "candidate_hold_h1_bars": 3
+    },
+    "cross": {
+      "emitter_type": "expired_unfilled_passive_only",
+      "lookback_minutes": 2880,
+      "minimum_same_direction_emitters": 1,
+      "qualification": "At least one strictly earlier eligible emitter has the same direction as the current Cross signal and age <= 2880 minutes.",
+      "native_hold_h1_bars": 4,
+      "extended_hold_h1_bars": 6,
+      "extension_gate": "POSITION_PROFIT > 0 at the first processed native maturity boundary"
+    }
+  },
+  "implementation_contract": {
+    "entrypoints": 3,
+    "tester_only_hard_fail_outside_tester": true,
+    "separate_release_portfolio_magic_state_event_snapshot_and_lock_identity_per_path": true,
+    "afterimage_capacity": 64,
+    "capacity_rule": "Prune emitters older than eight Return half-lives before insertion; fail closed with a safety stop if 64 still-live emitters would be exceeded.",
+    "unchanged": [
+      "all six signal formulas and decision times",
+      "all order types, entry prices and volumes",
+      "initial stop construction and RC4 compression",
+      "4% position and 12% aggregate admission",
+      "margin, sizing, session clock and calendar",
+      "entry transaction and reconciliation ordering",
+      "RC16, RC4, Pressure and Passive exits"
+    ],
+    "required_telemetry": [
+      "observed expired emitter count and capacity faults",
+      "Return qualification count, admitted qualified lifecycles and three-bar releases",
+      "Cross qualification count, admitted qualified lifecycles, native maturity decisions, extensions and native closes",
+      "qualification energy and dominance or matching-emitter count"
+    ]
+  },
+  "fresh_real_tick_periods": [
+    {
+      "id": "P1_2022H2_2023",
+      "from": "2022-08-01",
+      "to_exclusive": "2024-01-01"
+    },
+    {
+      "id": "P2_2024",
+      "from": "2024-01-01",
+      "to_exclusive": "2025-01-01"
+    },
+    {
+      "id": "P3_2025",
+      "from": "2025-01-01",
+      "to_exclusive": "2026-01-01"
+    },
+    {
+      "id": "P4_2026_YTD",
+      "from": "2026-01-01",
+      "to_exclusive": "2026-08-21"
+    }
+  ],
+  "run_matrix": {
+    "paths": 3,
+    "periods": 4,
+    "serial_real_tick_runs": 12,
+    "model": "MT5 Model=4 / real ticks",
+    "fresh_deposit_usd": 100.0,
+    "prior_project_realized_net_usd": 0.0,
+    "base_volume": 0.01,
+    "leverage": "1:100",
+    "execution_mode": 0,
+    "parameter_optimization": false
+  },
+  "fixed_selection_gate": {
+    "per_path_operational_requirements": [
+      "All four runs end with one normal STOP.",
+      "Zero safety, persistence, broker-identity, foreign-exposure, protection, ownership or afterimage-capacity fault.",
+      "MT5 report net, trade and deal totals reconcile to final component snapshots and preserved evidence.",
+      "Each candidate has at least 20 admitted qualified receiver lifecycles pooled across four periods.",
+      "No candidate has fewer completed portfolio trades than CONTROL in any period or pooled."
+    ],
+    "full_candidate_requirements_vs_control": [
+      "Summed stressed net must exceed CONTROL by at least max(USD 5, 5% of absolute CONTROL summed stressed net).",
+      "Stressed net must be at least CONTROL in at least three of four periods.",
+      "Actual net must be at least CONTROL in at least three of four periods.",
+      "Summed stressed maximum closed drawdown must not exceed CONTROL.",
+      "No period stressed maximum closed drawdown may exceed CONTROL by more than 15%."
+    ],
+    "combined_attribution_requirements": [
+      "RECEIVER_TIME_FIELD summed stressed net must exceed RETURN_CONTRACTION summed stressed net.",
+      "RECEIVER_TIME_FIELD stressed net must be at least RETURN_CONTRACTION in at least two periods.",
+      "RECEIVER_TIME_FIELD actual net must be at least RETURN_CONTRACTION in at least two periods."
+    ],
+    "selection_order": [
+      "Select RECEIVER_TIME_FIELD only if all operational, full-candidate and combined-attribution requirements pass.",
+      "Otherwise select RETURN_CONTRACTION only if all operational and full-candidate requirements pass.",
+      "Otherwise close NO_MECHANISM_PASSED and retain frozen CP2 economics."
+    ],
+    "maximum_selected": 1,
+    "selection_label": "EXPLORATORY_CLEAN_CANDIDATE_ONLY"
+  },
+  "evidence_limit": {
+    "all_market_paths_consumed_exploratory": true,
+    "clean_holdout_claim": false,
+    "confirmation_claim": false,
+    "live_promotion_possible_in_v1": false,
+    "transition_reserve_opened": false
+  },
+  "stop_rules": [
+    "Do not add another receiver, threshold, holding geometry, capital level or temporal period in V1.",
+    "Do not combine transition reserve or slot exchange in V1.",
+    "Do not adjust the frozen energy, dominance, lookback, hold or pass thresholds after outcomes are read.",
+    "Do not run a thirteenth rescue path.",
+    "Do not alter, query or restart Live."
+  ],
+  "outcomes_consumed": false,
+  "next": "implement_exactly_the_three_paths_then_compile_and_run_12_serial_real_tick_paths"
+}
