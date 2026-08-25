@@ -353,3 +353,10 @@
 - Entries-disabled PID `21944` recovered exact release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio, Magic and account at sequence `2006`. It proved entries/positions/orders `0/0/0/0`, margin/risk `$0/$0`, balance/equity `$104.48/$104.48`, project realized `$3.83` and stressed balance `$99.418`.
 - Safety, persistence, broker and foreign flags were `0/0/0/0`; warnings and alerts were zero. The preserved status SHA-256 is `6D76996A175B5DDDC48C0311620394E45C711930395A15DF9C9B7FEDA4489822`.
 - The committed flat-stop operator then stopped PID `21944` normally. No terminal now owns the account; the user-authorized final `0/0 → 1/1` handshake is the only remaining promotion action.
+
+## STATE-0044 - 2026-08-26
+
+- At committed and pushed Git `f224a48101bd7508567dc7024467b1f51090dca4`, final CXR2 preflight PID `24820` repeated exact `0/0`, flat release/Portfolio/Magic/account and balance continuity, then stopped normally before any entry-enabled process started.
+- Exact CXR2 Live PID `13328` then passed the operator's `1/1` handshake. Persistent snapshots advanced `2008 → 2009 → 2010` through server `2026.08.25 18:29:24` with positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$104.48/$104.48`, project realized `$3.83`, stressed balance `$99.418`, and safety/persistence/broker/foreign `0/0/0/0`.
+- Warnings and alerts remained zero. Preserved first/second/final status SHA-256 values are `9BBBA55CEEC47392A40975CF93B9E82A90D21D7867B55AB06AC5B4C59A816A64` / `351A1C577D2E3FF297F877FB0AA1635F684DDD176973E57E8840189A4A4DDD1A` / `5FCE9BB77F0BBFE2CE291F7D9AE4E1D6FE90B459382413CB022CD10C4338C8FE`. Terminal PID `13328` and dashboard PID `4284` are each sole.
+- Closed `protective-exit-order-reconciliation-019` as `PROMOTION_COMPLETE_HEALTHY_FUTURE_ENTRY_READINESS_RESTORED`. Live promotion evidence SHA-256 is `C43426647091BED461E976CFBD74F24814F8327D9A905E48E5B31EE7E8C0E7BB`; the source-frozen family is now the one forward Lab baseline. A future natural SL is bounded operating confirmation of the repaired transient branch, not an open research hypothesis.

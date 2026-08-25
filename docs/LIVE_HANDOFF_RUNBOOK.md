@@ -75,3 +75,11 @@ Legacy와 모든 Next 터미널/테스터가 정지한 상태에서만 `Import-Z
 - 두 차례 entries-disabled recovery/restart와 최종 preflight PID `26112`의 `0/0`가 통과한 뒤 Live PID `21548`이 exact `1/1` handshake를 통과했다.
 - 첫 final invocation은 preflight PID 종료 직후의 짧은 process visibility race에서 fail-closed로 멈췄다. 최대 5초의 bounded process-exit wait만 운영기에 추가한 뒤 재실행했으며, 그 사이 신규 주문이나 소유 exposure는 없었다.
 - Dashboard PID `4712`가 exact Live local snapshot만 표시한다. Parent V7과 legacy는 재시작하지 않는다.
+
+## 9. 2026-08-26 CXR2 protective-exit 전환 완료
+
+- CXR1 PID `21548`은 safety-stopped `1/0`이면서 positions/order/margin/risk와 retry/shadow/ARC가 모두 0인 서버 `18:12:03` 경계에서 정상 정지했다. 만료된 Cross 진입을 사후 재생하지 않았다.
+- Target `NEXT-E01-V7-CXR2-14d84b9e4bb3`, EX5 SHA-256 `620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6`는 검증된 `ZetaOwnership.mqh` 하나와 release ID만 승격했다. Execution, Portfolio, Magic, state schema/path와 SET은 CXR1과 같다.
+- 정지된 state A/B는 원본을 백업한 뒤 `safety_stopped` 한 바이트씩만 `1 → 0`으로 바꿨다. 다른 모든 바이트와 current/event 파일은 보존됐고 `broker_mismatch`는 런타임 재대조에서 0으로 복구됐다.
+- Committed entries-disabled PID `21944`와 final preflight PID `24820`이 각각 exact `0/0`을 통과하고 정상 정지한 뒤 Live PID `13328`이 exact `1/1`을 통과했다. Persistent sequence `2008 → 2009 → 2010`에서 fault/warning/alert가 모두 0이다.
+- Dashboard PID `4284`가 새 CXR2 로컬 스냅숏을 표시한다. CXR1과 이전 runtime은 재시작하지 않는다.

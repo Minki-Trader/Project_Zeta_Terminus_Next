@@ -1,34 +1,34 @@
 # Project Zeta Terminus Next Current State
 
-Last updated: 2026-08-25
+Last updated: 2026-08-26
 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0043`
+- Latest state ID: `STATE-0044`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
 
 - Development: `ENABLED`, one serial stream only
 - Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-26 instruction to repair the three Live warnings and restore future entry readiness, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
-- Next V7 entries-disabled preflight: `PASSED`; CXR2 PID `21944` proved exact connected `0/0`, flat continuity and zero fault, then stopped normally.
-- Next V7 new-entry authorization: `ENABLED` by the user's explicit repair-and-entry-readiness instruction after the committed CXR2 `0/0` recovery passed; final `0/0 → 1/1` handshake remains pending.
-- Existing real-account owner: none
-- User V7 Live direction: `PENDING_FINAL_HANDSHAKE`
+- Next V7 entries-disabled preflight: `PASSED`; CXR2 PID `21944` proved exact connected `0/0`, flat continuity and zero fault, then final preflight PID `24820` repeated exact `0/0` and stopped normally.
+- Next V7 new-entry authorization: `ENABLED`; CXR2 Live PID `13328` passed the committed exact `1/1` handshake under the user's explicit repair-and-entry-readiness instruction.
+- Existing real-account owner: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`, terminal PID `13328`
+- User V7 Live direction: `EFFECTIVE`
 
-Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. CXR2 entries-disabled PID `21944` recovered release/Portfolio/Magic/account and exact balance/state continuity at sequence `2006`, with safety/persistence/broker/foreign faults `0/0/0/0`, no warning or alert, then stopped normally. No terminal owns the account before the final handshake.
+Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 is the sole account owner at entries `1/1`. Persistent sequences `2008 → 2009 → 2010` stayed healthy through server `2026.08.25 18:29:24`: positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$104.48/$104.48`, safety/persistence/broker/foreign `0/0/0/0`, and no warning or alert. Dashboard PID `4284` is the sole local viewer.
 
 ## Active work
 
-- Active engineering boundary: `protective-exit-order-reconciliation-v1`; CXR2 passed connected entries-disabled recovery and awaits the committed final `0/0 → 1/1` handshake
+- Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
 - Active research boundary: none; `server-day-carry-burden-v1` is closed and frozen with no retained candidate
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
 - V7 Magic: `260824701..260824706`
-- Forward Lab baseline: frozen `lab/engineering/complexity-refactor-v1/mt5/` at `9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5`; `lab/mt5/` is historical and receives no new MQL source
+- Forward Lab baseline: frozen `lab/engineering/protective-exit-order-reconciliation-v1/mt5/` at `0d4032786cecb7d7e8a4c3074609db5b105fa107`; `lab/mt5/` and the predecessor CP2 root are historical frozen sources for future derivation only through this successor
 - Required isolation: Live-Dev and Lab share no source Include tree, EX5, settings, Portable runtime, state, or logs
 - B75: closed in Next solely as the inherited RC16 frozen-life HOLD confirmation
 
@@ -50,7 +50,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. CXR2 entries-disab
   - Latest: 84 first fills, actual `-$1.11`, stressed 2x `-$2.819`
   - Binding: 2,235 first fills, actual `+$1,019.04`, stressed 2x `+$940.6585`
   - After identity normalization, report summaries, all order rows and all deal rows have zero differences in both windows
-- Original modular V7 package completed the one-way Lab-to-Live copy and remains frozen in Git history; `live-dev/package/active/` now holds the separately manifested CP1+CP2 successor
+- Original modular V7 and CXR1 packages remain frozen in Git history; `live-dev/package/active/` now holds the separately manifested CXR2 successor
 - Next status reader, Korean 5-second dashboard, entries-disabled starter, 0/0-to-1/1 Live starter, Master launcher, flat stop and local cache-handoff tools are implemented
 - Offline operator check correctly refused readiness while legacy PID `24324` remained active; that legacy runtime has now stopped without a Next process starting
 - Local handoff receipt pins legacy final commit `4d04a00`, final state/event hashes, the sole cached account and prior project realized net `$4.33`; it copies no V6 state or position
@@ -131,9 +131,9 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. CXR2 entries-disab
 - Exact seven promoted implementation files are byte-equal to the CP2 candidate; Live main assembly, economic SET, execution version, Portfolio, Magic, state marker/schema/paths and all non-CP implementation files remain unchanged
 - MetaEditor build 6140 compiled the isolated exact promotion source at `0 errors / 0 warnings`; target EX5 SHA-256 is `F0B7D64BE36F81304C8764A89DFFA2499CD5F4ACED73A7A1837F950EFECC919F`
 - Parent PID `10112` and dashboard PID `24936` stopped at the fresh pre-window flat boundary. Target entries-disabled PIDs `28168` and `17656` both recovered the exact parent state, passed `0/0` and stopped normally
-- Final preflight PID `26112` passed exact `0/0` and stopped; exact target Live PID `21548` passed release/Portfolio/Magic/account `1/1` handshake. Sole Korean dashboard PID `4712` is active
+- Final preflight PID `26112` passed exact `0/0` and stopped; exact target Live PID `21548` passed release/Portfolio/Magic/account `1/1` handshake. That CXR1 runtime later stopped normally at the separately recorded protective-exit false-positive repair boundary; dashboard PID `4712` is also stopped.
 - Bounded stabilization advanced to sequence `1470` at server `2026.08.25 09:35:11` with entries `1/1`, flat zero-risk state, balance/equity `$106.52/$106.52`, zero faults and no warning or alert
-- Source topology is now mandatory in `docs/OPERATING_DIRECTION.md` and `AGENTS.md`: `lab/mt5` is frozen historical material, the CP2 root is the sole forward baseline, and every future family must own an isolated root
+- Source topology is mandatory in `docs/OPERATING_DIRECTION.md` and `AGENTS.md`: `lab/mt5` and the CP2 root are frozen historical material, the promoted protective-exit family is the sole forward baseline, and every future family must own an isolated root
 
 ## Completed Live-Dev performance forensics
 
@@ -231,6 +231,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. CXR2 entries-disab
 - RC4's two carried outcomes averaged `-0.312586177R` versus `+0.068855545R` same-day, but both were native expert exits rather than stop losses. With only two observations across two periods it failed density and the required higher-stop direction
 - Closed `NO_SERVER_DAY_CARRY_BURDEN_FIELD_PASSED`; no server-day management candidate, alternate local/rollover clock, weekday, multi-day, swap, direction or symbol rescue opened. Result/closure SHA-256 values are `1C80CEFCAB293B61AED77CEFE415AE4A34826E22032B1E91F264849A210B1EE5` / `A0FFB92619E7AF4F40E1E8E7EE5F5F750080BED76FAC44CB45088FEFCB7CBF2F`
 
+## Completed protective exit order reconciliation
+
+- CXR1 falsely safety-stopped when Pressure's broker-generated SL market close order briefly appeared in `OrdersTotal()` before its stop-loss deal. The frozen audit recognized only Passive pending orders and treated the valid protective transit as an impossible owned order.
+- The independent candidate admits only exact Magic/symbol, market BUY/SELL, `ORDER_REASON_SL`, opposite direction, exact volume, active local lifecycle and zero-or-matching position identifier; every other mismatch remains fail-closed.
+- Build 6140 compiled at `0 errors / 0 warnings`; the sole frozen P4 2026 YTD real-tick path matched CP2 exactly at actual/stressed `+$96.30/+$90.4732`, 356 trades, 712 deals, 14 risk skips and 42 stop exits with zero fault.
+- CXR1 stopped normally at exact flat `1/0`. Each redundant state snapshot changed only `safety_stopped` byte `1 → 0`; all other bytes and runtime files were preserved. No expired Cross replacement was created.
+- CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, EX5 `620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6`, passed committed entries-disabled recovery PID `21944`, final preflight PID `24820`, exact Live `1/1` PID `13328` and sequences `2008 → 2009 → 2010` with zero warning or alert. Dashboard PID `4284` is active.
+- Live promotion evidence is `lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_LIVE_PROMOTION_V1.json`, SHA-256 `C43426647091BED461E976CFBD74F24814F8327D9A905E48E5B31EE7E8C0E7BB`. A future natural Live SL is the first direct post-promotion observation of the repaired millisecond transit, not a new experiment or open hypothesis.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -242,4 +251,4 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. CXR2 entries-disab
 
 ## Current verdict
 
-`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE; CXR1_SOLE_OWNER_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD`
+`LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED`

@@ -4,9 +4,9 @@
 
 ## 앞으로의 단 하나의 기준
 
-- 기준 root: `engineering/complexity-refactor-v1/mt5/`
-- 기준 commit: `9d1cbeeea232eec1e574dc7e4e3b0e65adf412b5`
-- 상태: CP1·CP2 동등성 통과 후 동결; CP3 소스 변경 없음
+- 기준 root: `engineering/protective-exit-order-reconciliation-v1/mt5/`
+- 기준 commit: `0d4032786cecb7d7e8a4c3074609db5b105fa107`
+- 상태: CP1·CP2 위에서 보호성 SL 과도주문 대조 수리와 정확 경제 동등성 통과 후 동결; CXR2 Live 승격 완료
 - 사용법: 새 작업은 이 root를 수정하지 않고 자기 family root로 한 번 복사해 시작한다.
 
 `mt5/`는 과거 기준 V7과 종료된 Frontier EA·Adapter가 섞여 있는 역사적 workspace다. 증거 참조를 보존하기 위해 현재 위치에서 동결하며, 앞으로 `.mq5`, `.mqh`, EA 또는 Adapter를 추가하거나 수정하지 않는다.
@@ -15,7 +15,7 @@
 
 - `control-v6r6/`: legacy anchor의 동결 대조군
 - `mt5/`: 동결된 역사적 V7/Frontier workspace; 신규 작업 금지
-- `engineering/complexity-refactor-v1/`: 현재 forward baseline을 소유하는 닫힌 공학 family
+- `engineering/complexity-refactor-v1/`: 동결된 CP1·CP2 predecessor 공학 family
 - `research/strategy-independence-risk-allocation/`: 닫힌 전략 독립성·위험배분 family
 - `research/deposit-capital-risk-capacity/`: 닫힌 예치자본·위험용량 family
 - `research/live-dev-performance-forensics/`: 닫힌 V1-V7 실운영 성과·동시보유·중단 포렌식 family; 소스 없음
@@ -29,7 +29,7 @@
 - `research/native-signal-strength-value-v1/`: 닫힌 6전략 native feature 정보가치 진단 family; 2,233 lifecycle 정확 복원, 모든 전략 pooled Spearman `|rho|<0.20`으로 strength allocation 후보 없음
 - `research/entry-time-crowding-value-v1/`: 닫힌 진입시점 포트폴리오 crowding 진단 family; 5개 dense 전략 효과 미미, RC4 관찰은 crowded 15건·폭 1기간으로 밀도 미달, 관리 후보 없음
 - `research/server-day-carry-burden-v1/`: 닫힌 서버 날짜 이월부담 진단 family; 2,233건 중 이월은 RC16 1건·RC4 2건뿐이고 나머지는 0건으로 밀도 미달, 날짜경계 관리 후보 없음
-- `engineering/protective-exit-order-reconciliation-v1/`: 검증·소스동결된 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성과 CXR2 entries-disabled 복구 통과, 최종 1/1 handshake 대기
+- `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구

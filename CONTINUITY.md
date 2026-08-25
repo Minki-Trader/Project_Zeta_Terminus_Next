@@ -57,14 +57,14 @@ The patch changes only the verified CP1 Entry Gate and CP2 market-entry transact
 - EX5 SHA-256: `620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6`
 - Engineering verdict: `PROTECTIVE_EXIT_ORDER_RECONCILIATION_EXACT_EQUIVALENCE_PASSED`
 
-This successor changes only current-order ownership classification for an exact broker-generated SL market order in transit plus the release ID. CXR1 stopped at a verified flat boundary, and both redundant state files had only the persisted false-positive safety latch cleared. The package passed exact connected entries-disabled recovery and stopped normally; it owns no account process before the final handshake.
+This successor changes only current-order ownership classification for an exact broker-generated SL market order in transit plus the release ID. CXR1 stopped at a verified flat boundary, and both redundant state files had only the persisted false-positive safety latch cleared. CXR2 passed exact connected entries-disabled recovery, final `0/0 → 1/1` handoff and three persistent healthy snapshots.
 
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev: `ENABLED`; CXR2 connected entries-disabled recovery passed, new entries are authorized for the committed final handshake, and no terminal currently owns the account.
+- Next V7 Live-Dev: `ENABLED`; exact CXR2 is the sole owner at terminal PID `13328`, entries `1/1`, after committed connected recovery and final handshake.
 - V7 may not import or adopt B70 positions or state.
-- The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs and dashboard PID `4712` are stopped. Legacy, parent V7 and CXR1 must not restart.
+- The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs including CXR2 `21944/24820`, and dashboard PID `4712` are stopped. Exact CXR2 PID `13328` and dashboard PID `4284` are active; Legacy, parent V7 and CXR1 must not restart.
 
 ## Completed legacy closure
 
