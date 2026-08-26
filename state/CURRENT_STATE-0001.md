@@ -1589,3 +1589,13 @@
 - Cross HIGH-minus-LOW was `+$0.15683` and US100 was `+$0.07720`, but Cross also peaked in MID and repeated positive direction in only `2/4` periods. Book-relative direction reached `3/4`; Passive's pooled HIGH-minus-LOW was `-$0.02941`.
 - Both complete gates failed and the strong falsifier did not trigger. Closed `AMBIGUOUS_THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_NO_CANDIDATE`: preserve both books and unconditional allocation; no MID, Cross, lookback, regime or allocation successor.
 - Result/closure SHA-256 values are `8C915844EAFE07CDEFAFD8772302295836F00C28D43730A9F59E511D647958C3` / `B307DEC9F0C707CF46F7063AE21F73A8A12318A95C1F5AA05968AE4907B72A61`. One aggregation, zero correction and zero rerun; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0193 - 2026-08-27
+
+- Unit 076 closure commit `eae44bdf0e6894588ef40dc24f9219d4b32d0f5d` reached origin before Programs 1-5 and 7 plus micro/meso/macro heights were recomputed. No adjacent dispersion or allocation rescue opened.
+- Card 09 remained closed under Unit 065's explicit notional-reweighting prohibition. Opened only Program 3 / meso→macro Unit 077 `pending-reservation-risk-tax-v1` from external card 19.
+- The bridge is Unit 061's 119 Passive pending paths, 27 expiries and 14 aggregate-risk blocks plus Unit 073's nondiscriminating direct entry-cost recorder. The distance is Program 2 prior-market-state outcomes to Program 3 unfilled order-resource occupancy and admission-cap arithmetic.
+- Froze strict PLACE-to-FILL/EXPIRE event intervals, planned-risk-hours, Passive bit 32 pending-only mask semantics and non-Passive passed-signal block-rate denominators. Unit 061's invalid slot sum is not repaired or used.
+- A joined cap block is direct only when subtracting the interval's recorded pending risk restores cap compliance. No blocked-candidate return, fill, slippage or later outcome is imputed.
+- Complete passage requires material expired risk-hours, at least `+5pp` and `2x` expired-state block-rate lift, and two direct expired blocks spanning two components/dates. No direct expired block plus no rate lift is the strong falsifier.
+- Declaration SHA-256 is `F2F0F2384E10E19B37BCED877481A1CD7187334D891BB24F0AF1666078CA4C9D`. No interval aggregate, risk-hour, block-rate, direct-cause or verdict metric has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.

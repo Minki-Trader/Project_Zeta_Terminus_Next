@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0192`
+- Latest state ID: `STATE-0193`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: none; Unit 076 is frozen closed and the whole map must be recomputed after its closure reaches origin before Unit 077 opens
+- Active research boundary: Unit 077 `lab/research/pending-reservation-risk-tax-v1/`; declaration frozen before any pending risk-hour, admission-rate or direct-cap-relief metric
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -1095,6 +1095,16 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Closed `AMBIGUOUS_THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_NO_CANDIDATE`. Preserve both books and unconditional allocation; retain no MID-only, Cross-only, lookback, regime or conditional-allocation seed.
 - Result/closure SHA-256 values are `8C915844EAFE07CDEFAFD8772302295836F00C28D43730A9F59E511D647958C3` / `B307DEC9F0C707CF46F7063AE21F73A8A12318A95C1F5AA05968AE4907B72A61`. One aggregation, zero correction and zero rerun; Program 6, broker/account state and Live remained untouched.
 
+## Whole-map recomparison and open pending reservation risk tax Unit 077
+
+- Unit 076 closure commit `eae44bd` reached origin before Programs 1-5 and 7 plus all heights were recomputed. No MID, Cross, lookback, dispersion-regime or conditional-allocation rescue opened.
+- Claude card 09 was not opened because Unit 065 already calculated time-weighted entry notional and symbol weighting and explicitly closed notional reweighting successors. Selected card 19 as Program 3 / meso→macro Unit 077.
+- The bridge is Unit 061's structurally reproduced 119 Passive pending paths, 27 expiries and 14 aggregate-risk blocks plus Unit 073's nondiscriminating recorded fill cost. The distance is Program 2 market-state outcomes to Program 3 pre-fill order-resource occupancy and contemporaneous admission accounting.
+- Froze strict `PASSIVE_PLACE → PASSIVE_FILL/PASSIVE_EXPIRE` intervals, exact recorded planned-risk-hours and the Passive pending-only mask `(reserved & 32) != 0 && (active & 32) == 0`. Unit 061's invalid `active_slots + reserved_slots` formula is neither used nor repaired.
+- The opportunity population is non-Passive `signal_known=1 && signal_passed=1`. A risk block is reservation-caused only when subtracting the joined interval's recorded pending risk brings attempted aggregate risk within the recorded cap; no blocked return or hypothetical fill is imputed.
+- Complete passage requires expired intervals to supply at least `20%` of pending risk-hours, expired-state block rate to exceed no-pending by at least `5pp` and `2x`, plus at least two direct expired-state blocks across two components and dates. Zero direct expired block plus no excess rate is the strong falsifier.
+- Declaration SHA-256 is `F2F0F2384E10E19B37BCED877481A1CD7187334D891BB24F0AF1666078CA4C9D`. No pending interval aggregate, risk-hour, joined row, block rate, direct-cause count or verdict has opened. One aggregation, one premetric correction and zero reruns are budgeted; no data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -1108,7 +1118,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 Latest closed research verdict: `AMBIGUOUS_THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_NO_CANDIDATE`
 
-Active research unit: none; Unit 076 frozen closed pending immediate whole-map recomparison
+Active research unit: Unit 077 `pending-reservation-risk-tax-v1`; declaration frozen, outcomes unopened
 
 Latest Frontier marker: `THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_076_CLOSED_AMBIGUOUS_NO_CANDIDATE`
 

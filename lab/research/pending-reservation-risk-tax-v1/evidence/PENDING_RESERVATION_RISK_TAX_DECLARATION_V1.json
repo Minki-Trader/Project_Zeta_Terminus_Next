@@ -1,0 +1,194 @@
+{
+  "schema": "zeta-next-pending-reservation-risk-tax-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_077_DECLARATION_FROZEN_BEFORE_PENDING_INTERVAL_OR_BLOCK_RATE_AGGREGATION",
+  "unit": "pending-reservation-risk-tax-077",
+  "family": "pending-reservation-risk-tax-v1",
+  "title": "Unfilled Passive Reservation Risk as an Admission Tax",
+  "macro_program": {
+    "id": 3,
+    "name": "order_time_session",
+    "korean_name": "주문·시각·세션"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"],
+    "transfer_path": "A Passive pending order reserves aggregate planned-risk capacity during its unfilled lifetime; that resource occupancy can block another component and thereby reach portfolio opportunity capacity."
+  },
+  "central_question": "Do eventually expired Passive pending orders consume material planned-risk-hours and directly cause a repeatable excess of non-Passive aggregate-risk admission blocks?",
+  "research_bundle": {
+    "name": "pending_risk_hours_block_rate_and_direct_cap_relief",
+    "single_center_question": true,
+    "lenses": [
+      "resource quantity: recorded pending planned risk multiplied by exact PLACE-to-FILL-or-EXPIRE server-time duration",
+      "opportunity transfer: non-Passive passed-signal aggregate-risk block rates during expired-pending, filled-pending and no-pending states",
+      "causal accounting and falsification: a blocked row counts as reservation-caused only when removing the contemporaneous pending planned risk restores recorded aggregate-cap compliance"
+    ]
+  },
+  "idea_provenance": {
+    "source": "user-supplied Claude 30-card memo",
+    "memo_sha256": "032D8DD706D4D8C43E4EBFF391895E3C485DCB2F0531BE4C39DC2C699DE4A0BB",
+    "card": 19,
+    "authority_note": "The memo supplies the question only. Project Zeta Terminus Next is sole authority. This unit does not repair or reuse Unit 061's invalid active_slots plus reserved_slots formula."
+  },
+  "why_now": {
+    "current_bottleneck": "Unit 061 reproduced 119 Passive pending paths, 27 expiries and 14 aggregate-risk blocks but invalidated its turnover verdict by double-counting union masks. The economic cost of a genuine pending-only risk reservation remains undecided.",
+    "connection_bridge": "Unit 073 confirmed the exact 119 placed, 92 filled and 27 expired Passive topology while finding no recorded direct entry-cost separation. The remaining concrete order-level cost channel is capacity reserved before a fill.",
+    "perspective_distance": "Unit 076 was Program 2 pre-decision external-market state at meso-to-macro height. Unit 077 moves to Program 3 order-state resource occupancy and uses event intervals plus contemporaneous admission snapshots rather than market bars and realized returns.",
+    "decision_if_true": "Preserve the current contract in this unit but retain one non-automatic future Lab candidate comparing native full reservation with a causally specified pending-risk discount or shorter lifetime across the whole portfolio.",
+    "decision_if_false": "Preserve full pending-risk reservation and discard the reservation-tax mechanism.",
+    "decision_if_ambiguous_or_invalid": "Make no accounting, lifetime, risk-cap, priority or order change; record the bounded observation or data gap and rotate away."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Unit 070 remains ambiguous and no direction or period rescue opens.",
+    "program_2": "Unit 076 closed without a stable dispersion allocation field; no MID, Cross or regime continuation opens.",
+    "program_3": "Selected because Unit 073 removed recorded fill cost as a discriminating channel while Unit 061 left pre-fill capacity occupancy structurally visible but economically unpriced.",
+    "program_4": "Profit-memory, first-peer and partial-close variants remain closed or unidentifiable and are not reopened.",
+    "program_5": "Unit 074 remains ambiguous on turnover value and Unit 072 preserves both books; this unit asks about the concrete admission-capacity path rather than another pooled rank.",
+    "program_7": "Unit 075's incomplete binding lifecycle distribution remains an observation gap; no selector or CP2-only rescue opens.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare Programs 1-5 and 7 plus all heights, then continue serially to a connected, distant Claude hypothesis. Do not automatically open a pending lifetime, discount, threshold, component or cap variant."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "all current-spec P4 PASSIVE_PLACE intervals paired to their next PASSIVE_FILL or PASSIVE_EXPIRE event",
+      "the planned_risk value recorded in each PASSIVE_PLACE detail and exact server-time duration to its terminal pending event",
+      "all non-Passive candidate rows with signal_known=1 and signal_passed=1, classified by contemporaneous Passive pending-only mask state",
+      "aggregate-risk blocked rows whose attempted aggregate risk and recorded cap can support exact removal accounting"
+    ],
+    "excluded": [
+      "Unit 061 active_slots plus reserved_slots, repaired slot totals, turnover gap or quarantined provisional verdict",
+      "Passive's own placement attempt, existing-exposure rows, unknown signals, distance blocks and non-risk blockers",
+      "blocked-candidate future return, hypothetical fill, execution cost, spread capture, slippage or order priority",
+      "alternative pending lifetime, fractional reservation, cap, slot, lot, selector, direction, month or clock rule",
+      "new data, runtime, MQL, compile, Tester, broker/account query or Live action"
+    ],
+    "automatic_followups_forbidden": [
+      "30-minute, 45-minute, component-specific or time-of-day pending lifetime",
+      "25%, 50%, 75% or volatility-scaled pending-risk discounts",
+      "risk-cap, slot, priority, order-type, Passive selector, EA or Live change",
+      "same-family mask, timestamp, interval-endpoint or denominator rescue"
+    ]
+  },
+  "immutable_inputs": {
+    "candidate_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-candidates.csv",
+      "bytes": 2724613,
+      "sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+      "expected_rows": 4043,
+      "role": "Contemporaneous signal, mask and aggregate-risk admission snapshots."
+    },
+    "event_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/rlo1-events-a.csv",
+      "bytes": 1007752,
+      "sha256": "FC7AA95867B3CB55E2DAB60B4C49F6CF3EFBD4EEE9A0E2BC384524B8E58EA94A",
+      "role": "Authoritative PASSIVE_PLACE, PASSIVE_FILL and PASSIVE_EXPIRE interval endpoints."
+    },
+    "unit_061_result": {
+      "path": "lab/research/candidate-funnel-turnover-risk-contract-v1/evidence/CANDIDATE_FUNNEL_TURNOVER_RISK_CONTRACT_RESULT_V1.json",
+      "bytes": 7174,
+      "sha256": "FEDA857C1E5AD5BE21E77C19886254B22EF10416FC6AC01C8D9EAAFBB0CB9B7A",
+      "role": "Structural funnel anchors and authority that slot-sum economic output is quarantined."
+    },
+    "unit_073_result": {
+      "path": "lab/research/order-type-realized-entry-cost-v1/evidence/ORDER_TYPE_REALIZED_ENTRY_COST_RESULT_V1.json",
+      "bytes": 3653,
+      "sha256": "1AA0AA9D3D205DA7A3A91576E2F102BB80109435A74C2ED41A583785D41DB0C3",
+      "role": "Independent 119 placed, 92 filled, 27 expired topology and closed recorded-cost interpretation."
+    },
+    "observation_source": {
+      "path": "lab/engineering/live-research-observation-ledger-v1/mt5/src/Include/ZetaTerminusNext/Observation/ZetaResearchObservation.mqh",
+      "bytes": 50530,
+      "sha256": "8F4021B3C1C1E288FF443714B766B4D85608F45D9FE2EDFFBEC0750465450FE5",
+      "role": "Authority that reserved_mask is the active-position union with the Passive pending bit."
+    },
+    "domain_source": {
+      "path": "lab/engineering/live-research-observation-ledger-v1/mt5/src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "bytes": 20479,
+      "sha256": "58F2009EAF53420F9F82166A9D41C7DB3750C9587A3BB5310BB154C354DFB6B7",
+      "role": "Authority that US100_PASSIVE_LIMIT is component index 5 and therefore mask bit 32."
+    },
+    "unit_076_closure": {
+      "path": "lab/research/three-index-dispersion-book-relative-value-v1/evidence/THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_CLOSURE_V1.json",
+      "bytes": 4021,
+      "sha256": "B307DEC9F0C707CF46F7063AE21F73A8A12318A95C1F5AA05968AE4907B72A61",
+      "role": "Immediate prior closure and whole-map rotation boundary."
+    }
+  },
+  "frozen_interval_reconstruction": {
+    "ordering": "Sort PASSIVE_PLACE, PASSIVE_FILL and PASSIVE_EXPIRE rows by parsed server_time and numeric state_sequence. Starting flat, require strict PLACE then exactly one next FILL or EXPIRE before another PLACE.",
+    "planned_risk": "Parse the sole planned_risk decimal from PASSIVE_PLACE.detail; require finite positive value.",
+    "duration": "Terminal server_time minus PLACE server_time in hours; require strictly positive and no more than 1.05 hours.",
+    "risk_hours": "planned_risk_usd multiplied by duration_hours, reported separately for filled and expired intervals and as expired share of total.",
+    "endpoint_label": "The next event labels an interval FILLED or EXPIRED. This future label is used only for completed-resource and natural-contrast aggregation, never as a live selector."
+  },
+  "frozen_candidate_classification": {
+    "population": "Candidate rows where component_id is not Passive, signal_known=1 and signal_passed=1.",
+    "pending_only_mask": "(reserved_mask bitwise-and 32) is nonzero and (active_mask bitwise-and 32) equals zero.",
+    "interval_join": "A pending-only candidate must fall at or after exactly one PLACE server_time and strictly before its paired terminal server_time. Same-second rows without the pending-only mask remain non-pending because their ordering relative to placement is not identified.",
+    "groups": "EXPIRED_PENDING, FILLED_PENDING and NO_PENDING. A row with a pending-only mask but no unique interval invalidates the unit.",
+    "risk_block": "result=PROTECTION_OR_RISK_BLOCKED and admission_reason=AGGREGATE_RISK_CAP.",
+    "block_rate": "risk_block rows divided by all population rows in the same group.",
+    "risk_ratio": "EXPIRED_PENDING block rate divided by NO_PENDING block rate. If the control rate is zero, report the ratio as null and the complete gate fails.",
+    "direct_reservation_cause": "For a risk_block row in a pending group, attempted_aggregate_after_usd is greater than aggregate_cap_usd plus 1e-9 and attempted_aggregate_after_usd minus that interval's planned_risk_usd is at most aggregate_cap_usd plus 1e-9.",
+    "non_claim": "Direct cause identifies cap arithmetic only. It does not identify whether the blocked signal would fill or make money."
+  },
+  "fixed_integrity_density_gate": {
+    "requirements": [
+      "All seven byte/hash pins and source/result authority anchors pass.",
+      "Candidate ledger has exactly 4,043 unique rows, 398 signal-passed rows and 14 aggregate-risk blocks matching Unit 061.",
+      "Event topology has exactly 119 strict positive-duration intervals: 92 FILLED and 27 EXPIRED, with no overlap or orphan.",
+      "Every non-Passive pending-only candidate maps to exactly one reconstructed interval and every joined row has reserved bit 32 set and active bit 32 clear.",
+      "EXPIRED_PENDING contains at least 10 non-Passive passed-signal rows, FILLED_PENDING at least 20, NO_PENDING at least 200, and all pending groups combined contain at least two aggregate-risk blocks."
+    ],
+    "all_required": true
+  },
+  "fixed_complete_tax_gate": {
+    "requirements": [
+      "Expired intervals contribute at least 20% of total pending planned-risk-hours.",
+      "EXPIRED_PENDING block rate exceeds NO_PENDING by at least 0.05 absolute and its finite risk ratio is at least 2.0.",
+      "At least two EXPIRED_PENDING aggregate-risk blocks are direct_reservation_cause, spanning at least two distinct non-Passive components and at least two server dates."
+    ],
+    "all_required": true
+  },
+  "fixed_strong_falsifier": {
+    "requirements": [
+      "No EXPIRED_PENDING risk block is direct_reservation_cause.",
+      "EXPIRED_PENDING block rate is less than or equal to NO_PENDING block rate."
+    ],
+    "all_required": true
+  },
+  "fixed_verdict_rules": {
+    "complete": "PASS_PENDING_RESERVATION_RISK_TAX when integrity/density and every complete-tax requirement pass.",
+    "falsified": "NO_PENDING_RESERVATION_RISK_TAX_FIELD when integrity/density passes and every strong-falsifier requirement passes.",
+    "ambiguous": "AMBIGUOUS_PENDING_RESERVATION_RISK_TAX_NO_CANDIDATE when integrity/density passes and neither preceding rule applies.",
+    "invalid": "INVALID_PENDING_RESERVATION_RISK_TAX_NO_VERDICT when any immutable, topology, join or density requirement fails."
+  },
+  "decision_translation": {
+    "complete": "Preserve current behavior now; retain one non-automatic future full-portfolio Lab candidate for a causally specified pending reservation discount or lifetime treatment.",
+    "falsified": "Preserve full pending planned-risk reservation and discard this mechanism.",
+    "ambiguous_or_invalid": "Make no pending, risk, cap, slot, order or priority change and rotate away."
+  },
+  "execution_budget": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before calculating any pending risk-hour, joined block rate, risk ratio or direct-cause count.",
+    "One implementation-only correction is allowed only before any new resource or opportunity metric is emitted. After any new metric, make no correction or rerun.",
+    "Do not change interval endpoints, bit semantics, denominator, thresholds, density, causal arithmetic, verdicts or decisions after outcomes.",
+    "Do not repair Unit 061, impute blocked outcomes, acquire data, modify MQL, compile, run Tester, query broker/account state or touch Live."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_declaration_sha_update_single_frontier_memory_commit_push_then_run_exactly_one_fixed_pending_reservation_aggregation"
+}
