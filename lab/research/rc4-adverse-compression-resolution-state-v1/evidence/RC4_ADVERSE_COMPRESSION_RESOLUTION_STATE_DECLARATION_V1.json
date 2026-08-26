@@ -1,0 +1,237 @@
+{
+  "schema": "zeta-next-rc4-adverse-compression-resolution-state-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_046_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "rc4-adverse-compression-resolution-state-046",
+  "family": "rc4-adverse-compression-resolution-state-v1",
+  "title": "RC4 Adverse Compression Resolution-State Audit",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit",
+    "korean_name": "포지션 관리·청산",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    }
+  },
+  "question": "At the existing fixed eight-M30-bar RC4 management checkpoint, does the adverse vote state identify materially worse subsequent economics, and within adverse triggers is ordinary broker-applied 25%-retained-loss compression associated with materially better final 2x-cost stressed R and stop incidence than price-geometry refusal?",
+  "hypothesis": "If the existing RC4 management state has economic information, adverse checkpoints should finish with lower stressed R and more stops than nonadverse checkpoints after direction-period adjustment. If successful compression has a realized containment signature, compressed adverse lifecycles should finish better and stop less often than refused adverse lifecycles, while compressed stop-outs remain materially inside the original planned-risk budget.",
+  "why_now": "Unit 045 closed Program 2 invalid without a VIX-context verdict or seed. A fresh whole-map comparison selects Program 4 because its prior Unit 040 received no economic answer, while the current frozen baseline already emits a dense, causally ordered and outcome-free natural resolution state across every period. This is not a continuation of the rejected held-position later-signal proposal and creates no new exit threshold.",
+  "macro_rotation": {
+    "recent_sequence": [4, 2, 3, 7, 5, 2],
+    "intervening_unit_since_program_4": 45,
+    "program_1": "The recent broad prior-signal proposal was rejected and is not replaced by another signal context.",
+    "program_2": "Unit 045 just closed invalid and cannot be repaired or replaced with adjacent external-market work.",
+    "program_3": "Unit 042 recently closed and no distinct higher-value timing contract is ready.",
+    "program_4": "Selected for one audit of an existing baseline management state with 186 checkpoints and no new threshold, mark, hold age or source behavior.",
+    "program_5": "Unit 044 just closed and nearby lot, risk and slot work remains closed.",
+    "program_7": "Unit 043 recently closed; another meta audit is lower-value than an actual management-state answer.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not open another RC4 vote, checkpoint, compression fraction, refusal geometry, stop or management successor automatically."
+  },
+  "research_bundle": {
+    "name": "existing_rc4_checkpoint_and_adverse_resolution_states",
+    "variants": [
+      {
+        "id": "ADVERSE_VOTE_STATE",
+        "treatment": "ADVERSE_COMPRESSED plus ADVERSE_REFUSED, fixed vote sum <= -2",
+        "comparator": "NONADVERSE_NO_COMPRESSION, fixed vote sum > -2",
+        "expected_effect": "treatment-minus-comparator stressed R negative and stop rate positive"
+      },
+      {
+        "id": "COMPRESSION_APPLIED_STATE",
+        "treatment": "ADVERSE_COMPRESSED, ordinary broker-applied stop modification",
+        "comparator": "ADVERSE_REFUSED, price-geometry refusal after the same adverse vote gate",
+        "expected_effect": "treatment-minus-comparator stressed R positive and stop rate negative"
+      }
+    ],
+    "context_only": "NO_CHECKPOINT lifecycles that close before a valid eight-bar checkpoint are reported but cannot pass or rescue either variant.",
+    "single_bundle": true,
+    "parameter_grid": false,
+    "new_management_rule": false
+  },
+  "distinction_from_closed_work": {
+    "unit_040": "Unit 040 added hypothetical post-one-hour adverse-mark closes at three thresholds and failed environment integrity. Unit 046 adds no close, mark or age rule and reads only the existing baseline checkpoint states.",
+    "portfolio_exit_coordination_v1": "No cohort, simultaneous-profit state, group close, floor or trail is used.",
+    "unit_034": "Native BUY/SELL was already insufficient as a treatment field. Unit 046 controls every outcome by the complete RC4 direction-period cell and cannot reopen direction itself.",
+    "program_6": "ARC_REFUSED here means the ordinary frozen retained-loss/tightening/quote-clearance geometry branch. Modify failures, recovery, broker safety and execution repair are outside the unit."
+  },
+  "boundary": {
+    "family_root": "lab/research/rc4-adverse-compression-resolution-state-v1/",
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "frozen_mechanism_semantics": {
+    "forward_baseline_root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "forward_baseline_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "rc4_source": {
+      "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaRC4.mqh",
+      "bytes": 71057,
+      "sha256": "1B9E1909C1D68FE8D54E24A1CA3F081EBB50BDBB399ABB930534F82EF32D7C49"
+    },
+    "domain_source": {
+      "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "bytes": 17776,
+      "sha256": "27F72E7AA9188E31A834D890A5C2155E8B9721E2FBC17E3F7F8E1D5221DB0932"
+    },
+    "checkpoint": "Evaluate once after at least eight held US30 M30 bars.",
+    "vote": "Three ordinal heads in {-1,0,+1}; adverse trigger when vote sum <= -2.",
+    "compression": "Move the original stop to retain 25% of original loss-side distance when retained loss, tightening and quote clearance are each valid.",
+    "compressed_event": "ARC_COMPRESSED with broker_applied=1 and recovery=0 in the frozen evidence.",
+    "refused_event": "ARC_REFUSED when the ordinary retained-loss, tightening or quote-clearance geometry check fails.",
+    "source_role": "Read only to freeze meaning. No baseline or family source is copied, included, linked, changed or executed."
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only RC4 OPEN direction, event ordering, ARC_CHECKPOINT vote, ARC_COMPRESSED/ARC_REFUSED resolution identity, close boundary and period were accessed. No close value, stressed R, stop association, role-conditioned economics or Unit 046 verdict was accessed.",
+    "rc4_lifecycles": 206,
+    "faults": 0,
+    "roles": {
+      "NO_CHECKPOINT": 20,
+      "NONADVERSE_NO_COMPRESSION": 117,
+      "ADVERSE_COMPRESSED": 42,
+      "ADVERSE_REFUSED": 27,
+      "ADVERSE_UNRESOLVED": 0
+    },
+    "period_roles": {
+      "P1_2022H2_2023": {"NO_CHECKPOINT":2,"NONADVERSE_NO_COMPRESSION":37,"ADVERSE_COMPRESSED":11,"ADVERSE_REFUSED":3},
+      "P2_2024": {"NO_CHECKPOINT":5,"NONADVERSE_NO_COMPRESSION":26,"ADVERSE_COMPRESSED":13,"ADVERSE_REFUSED":9},
+      "P3_2025": {"NO_CHECKPOINT":9,"NONADVERSE_NO_COMPRESSION":39,"ADVERSE_COMPRESSED":11,"ADVERSE_REFUSED":9},
+      "P4_2026_YTD": {"NO_CHECKPOINT":4,"NONADVERSE_NO_COMPRESSION":15,"ADVERSE_COMPRESSED":7,"ADVERSE_REFUSED":6}
+    },
+    "direction_roles": {
+      "BUY": {"NO_CHECKPOINT":7,"NONADVERSE_NO_COMPRESSION":71,"ADVERSE_COMPRESSED":16,"ADVERSE_REFUSED":14},
+      "SELL": {"NO_CHECKPOINT":13,"NONADVERSE_NO_COMPRESSION":46,"ADVERSE_COMPRESSED":26,"ADVERSE_REFUSED":13}
+    },
+    "checkpoint_votes": {"-3":51,"-2":18,"-1":12,"0":13,"1":24,"2":39,"3":29},
+    "eligible": true,
+    "execution_disclosure": {
+      "discarded_filter_display_invocations": 1,
+      "discarded_display": "A shorthand Where-Object tokenization error displayed zero checkpoints while the raw compressed/refused counts were 42/27. No economic field was accessed; all zero checkpoint derivatives were discarded.",
+      "successful_structural_role_reconstructions": 1,
+      "successful_direction_role_reconstructions": 1,
+      "economic_outcomes_accessed": false
+    }
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row; state_sequence is not a primary event key.",
+    "ordering": "Within each period order by parsed server_time, numeric state_sequence, close-before-birth precedence, then source path and line.",
+    "birth": "RC4 OPEN begins one lifecycle, supplies entry price, original stop and positive planned risk, and defines BUY when entry > stop otherwise SELL.",
+    "checkpoint": "Attach the single ARC_CHECKPOINT vote while the lifecycle is active.",
+    "resolution": "An adverse lifecycle must attach exactly one ARC_COMPRESSED or ARC_REFUSED event; nonadverse and no-checkpoint lifecycles attach neither.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the lifecycle. value_b is frozen 2x-cost stressed net USD; EXTERNAL_CLOSE is a stop-loss exit.",
+    "stressed_r": "value_b divided by positive birth planned risk.",
+    "direction_period_centering": "For each of eight BUY/SELL x P1-P4 cells, subtract the full-cell mean stressed R and stop rate from every lifecycle before variant aggregation."
+  },
+  "fixed_metrics": {
+    "group_report": "For every natural role report n, 2x stressed net, mean stressed R, stop rate, positive-rate and four period plus two direction centered summaries.",
+    "ADVERSE_VOTE_STATE": "Mean centered stressed R and stop of all 69 adverse roles minus the corresponding means of 117 nonadverse checkpoint roles.",
+    "COMPRESSION_APPLIED_STATE": "Mean centered stressed R and stop of 42 compressed roles minus the corresponding means of 27 refused roles.",
+    "compressed_stop_containment": "Among compressed EXTERNAL_CLOSE lifecycles, report n, mean stressed R and share with stressed R >= -0.50R.",
+    "contribution_share": "Absolute period effect numerator divided by the sum of absolute four-period effect numerators."
+  },
+  "fixed_integrity_gate": [
+    "Both pinned baseline source files and all six event files retain their exact byte lengths and hashes.",
+    "Retain 16,477 data rows with zero exact duplicate full rows.",
+    "Reconstruct exactly 206 RC4 lifecycles, BUY/SELL 108/98, 79.0680 USD 2x stressed net and 53 stop exits with zero overlap, risk, checkpoint, resolution or close fault.",
+    "Reconstruct exact natural roles 20/117/42/27/0 and their frozen period and direction counts.",
+    "Reconstruct exactly eight nonempty direction-period centering cells."
+  ],
+  "fixed_variant_gates": {
+    "ADVERSE_VOTE_STATE": {
+      "density": [
+        "Adverse n is exactly 69 and nonadverse n exactly 117.",
+        "Adverse has at least 13 and nonadverse at least 15 lifecycles in every period.",
+        "Both roles contain at least 25 BUY and 25 SELL lifecycles."
+      ],
+      "information": [
+        "Adverse-minus-nonadverse centered stressed R is at most -0.10R.",
+        "Adverse-minus-nonadverse centered stop rate is at least +0.10.",
+        "Return and stop effects have the expected signs in at least three of four periods.",
+        "Return and stop effects have the expected signs in both BUY and SELL.",
+        "No one period contributes more than 60% of the absolute centered-R effect numerator."
+      ]
+    },
+    "COMPRESSION_APPLIED_STATE": {
+      "density": [
+        "Compressed n is exactly 42 and refused n exactly 27.",
+        "Compressed has at least seven lifecycles in every period; refused has at least three in every period and at least five in three periods.",
+        "Both roles contain at least 13 BUY and 13 SELL lifecycles."
+      ],
+      "information": [
+        "Compressed-minus-refused centered stressed R is at least +0.10R.",
+        "Compressed-minus-refused centered stop rate is at most -0.10.",
+        "Return and stop effects have the expected signs in at least three of four periods.",
+        "Return and stop effects have the expected signs in both BUY and SELL.",
+        "No one period contributes more than 60% of the absolute centered-R effect numerator.",
+        "At least five compressed lifecycles stop out, their mean stressed R is at least -0.40R, and at least 75% finish no worse than -0.50R."
+      ]
+    },
+    "pass_rule": "A variant passes only if every listed density and information requirement passes."
+  },
+  "fixed_bundle_gate": {
+    "success": "Both variants pass every gate, establishing an existing-state risk-containment signature only.",
+    "partial": "Exactly one variant passes; record which state is informative but retain no successor.",
+    "failure": "Neither variant passes; retain no successor.",
+    "authority_limit": "No outcome can prove causal benefit because compression versus refusal is not randomized and no uncompressed counterfactual exists.",
+    "passing_action": "Close as a bounded diagnosis. Do not change or remove RC4 management, propagate it to another strategy, tune its checkpoint/vote/fraction/geometry, create an EA candidate or open a successor automatically."
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "verdict_rules": {
+    "success": "PASS_EXISTING_RC4_COMPRESSION_RESOLUTION_SIGNATURE_DIAGNOSIS when integrity and both variants pass.",
+    "partial": "PARTIAL_RC4_MANAGEMENT_STATE_DIAGNOSIS_NO_SUCCESSOR when integrity passes and exactly one variant passes.",
+    "failure": "NO_RC4_COMPRESSION_RESOLUTION_STATE_PASSED when integrity passes and neither variant passes.",
+    "invalid": "INVALID_RC4_STATE_OR_LIFECYCLE_RECONSTRUCTION_NO_MANAGEMENT_VERDICT when any source, input, lifecycle, role or anchor integrity check fails.",
+    "ambiguous": "AMBIGUOUS_RC4_STATE_DIAGNOSIS_NO_SUCCESSOR only if integrity passes but an unforeseen semantic condition prevents exact application without changing the contract."
+  },
+  "stop_rules": [
+    "Commit and push this declaration before reading any role-conditioned close value, stressed R, stop association, metric, gate or verdict.",
+    "Run exactly one fixed in-memory aggregation over the six immutable event files.",
+    "Do not alter checkpoint bars, vote thresholds, retained-loss fraction, role definitions, centering, metrics or gates.",
+    "Do not inspect modify failures, recovery or broker safety, modify MQL, compile, run MetaTrader, retain a CLI, query broker/account state or touch Live.",
+    "Close after one result and return to whole-map comparison without adjacent RC4 or Program 4 work."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_rc4_resolution_state_aggregation"
+}
