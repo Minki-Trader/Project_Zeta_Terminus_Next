@@ -1,0 +1,241 @@
+{
+  "schema": "zeta-next-loss-channel-risk-contract-attribution-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_066_DECLARATION_FROZEN_BEFORE_LOSS_MASS_UTILIZATION_OR_CONCENTRATION_OUTCOME",
+  "unit": "loss-channel-risk-contract-attribution-066",
+  "family": "loss-channel-risk-contract-attribution-v1",
+  "title": "Stop versus Native-Exit Loss Mass and Risk-Contract Attribution",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_liquidation",
+    "korean_name": "포지션 관리·청산"
+  },
+  "research_height": {
+    "primary": "micro",
+    "supporting": [
+      "macro"
+    ],
+    "transfer_path": "Each lifecycle's exit reason and realized loss are compared with its frozen planned risk, then aggregated across components, periods and the continuously compounded binding portfolio to determine what kind of loss actually consumes shared capital."
+  },
+  "central_question": "Does the stop-defined 4% position-risk contract describe the portfolio's realized loss distribution, or is a broad, non-concentrated majority of actual and stressed loss mass realized through native non-stop exits at a materially different fraction of planned risk?",
+  "research_bundle": {
+    "name": "cp2_loss_channel_binding_confirmation_and_risk_utilization",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: CP2 actual and stressed negative-loss mass split between DEAL_REASON_SL and native DEAL_REASON_EXPERT exits, with planned-risk utilization",
+      "portfolio transmission: the complete continuously compounded binding Tester deal table independently confirms actual stop versus non-stop loss mass",
+      "falsification: period/component breadth and top-loss concentration distinguish a structural channel from a few episodes"
+    ]
+  },
+  "why_now": {
+    "current_bottleneck": "Unit 065 showed that neither favorable index drift nor a drawdown-matched passive alternative displaces the six-strategy portfolio. The next unresolved capital question is therefore internal: whether the risk amount used for admission and stops is also the channel through which realized losses consume capital.",
+    "connection_bridge": "The frozen 4% position and 12% aggregate budgets are expressed as stop loss, while only 206 of 2,233 CP2 lifecycles and 156 of 2,235 binding lifecycles stopped. If non-stop exits carry most loss mass broadly, future portfolio risk evidence must distinguish tail capacity from realized loss flow.",
+    "perspective_distance": "Unit 065 was Program 5 macro market-benchmark attribution over exposure paths. Unit 066 moves to Program 4 micro lifecycle liquidation causes and transmits them upward to shared-capital interpretation, using exit reason and planned-risk utilization rather than market returns or drawdown matching.",
+    "decision_if_true": "Preserve stops as tail bounds but require future portfolio risk claims to report realized loss mass by stop versus native-exit channel and planned-risk utilization. Retain at most one later separately declared realized-loss-risk observation/contract question; make no immediate exit or cap change.",
+    "decision_if_false": "Record that the stop channel remains economically representative of realized loss mass and preserve the current risk-evidence interpretation without a successor.",
+    "decision_if_partial": "Record the pooled observation but change no rule if it lacks period/component breadth or is driven by a few losses. Rotate away without threshold, component or exit-class rescue."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Recent Unit 064 already resolved Cross common beta; RC16/RC4 duplication and long-only signal baselines are currently more adjacent and narrower than the loss-contract question.",
+    "program_2": "The proposed internal index-dispersion regime has only four period observations and no stronger current decision bridge.",
+    "program_3": "Overnight-drift decomposition is adjacent to Unit 065's benchmark result; timing/admission candidates remain thin or conditional on higher turnover. The sizing-clock ratchet remains a later connected candidate, not an automatic successor.",
+    "program_4": "Selected because exit reason is complete in CP2 and stop identity is independently available over the full binding report; the answer changes how the shared risk contract is interpreted without changing exits.",
+    "program_5": "Unit 065 just closed. Compounding-ladder attribution is high value, but the preserved binding event journal contains only 564 of 2,235 closes, so it cannot yet isolate full-path lifecycle and stop-feedback effects without unsupported reconstruction.",
+    "program_7": "Evidence-base divergence is retained as an observation gap rather than forced into a summary-only causal verdict.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare every program and height. Do not automatically open a hold-length, stop-width, Passive subtype, loss-threshold, component, compounding or risk-cap follow-up."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "all 2,233 authoritative CP2-equivalent lifecycles across four fresh-100-dollar periods",
+      "actual and two-times-cost stressed close P/L, close reason and close-time planned risk",
+      "all six components and both traded symbols",
+      "all 2,235 completed binding-run lifecycles represented by the immutable V7 Tester deal table",
+      "negative loss mass, loser counts, planned-risk utilization and fixed top-k concentration"
+    ],
+    "excluded": [
+      "positive P/L as a rescue metric except immutable net-integrity anchors",
+      "Passive native-exit subtype inference because the authoritative CP2 close detail does not preserve it",
+      "claim that a non-stop loss is unbounded; the stop remains its causal tail limit",
+      "hold, stop, breakeven, trailing, partial close, full close, risk cap, lot, slot, admission or component changes",
+      "binding component attribution from incomplete retained event files",
+      "MQL source, MetaEditor, Strategy Tester, acquisition, account, position, order or deal API query, Live action"
+    ],
+    "automatic_followups_forbidden": [
+      "individual native-exit reason or Passive-mode subdivision",
+      "alternate 50/55/60-percent dominance threshold",
+      "top-5, top-20 or percentile concentration rescue beyond the frozen views",
+      "component, symbol, direction, period or winner-conditioned selector",
+      "immediate realized-loss budget, exit management or stop redesign"
+    ]
+  },
+  "immutable_cp2_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ],
+    "premetric_anchors": {
+      "lifecycles": 2233,
+      "period_counts": [
+        769,
+        554,
+        554,
+        356
+      ],
+      "component_counts": {
+        "RC16": 272,
+        "RC4": 206,
+        "Cross": 805,
+        "Pressure": 118,
+        "Return": 238,
+        "Passive": 594
+      },
+      "actual_net_usd": 444.19,
+      "stressed_net_usd": 407.0477,
+      "stop_exits": 206,
+      "native_exits": 2027
+    }
+  },
+  "immutable_binding_inputs": {
+    "equivalence_summary": {
+      "path": "lab/evidence/NEXT_E01_V7_EQUIVALENCE.json",
+      "bytes": 5780,
+      "sha256": "515A275454F3614D7E7A00664133914C51B72EB91ACF83D81309A810D88C3611"
+    },
+    "tester_report": {
+      "path": "lab/artifacts/backtests/equivalence/binding/next-v7/next-v7-modular-real-ticks-binding.htm",
+      "bytes": 4377082,
+      "sha256": "81852F9A254E66317842CD0386570D5A971078E00A9193DE738C1082F14E33E4",
+      "encoding": "utf-16"
+    },
+    "premetric_anchors": {
+      "first_fills": 2235,
+      "actual_net_usd": 1019.04,
+      "deal_rows_including_initial_balance": 4471,
+      "stop_exits": 156,
+      "nonstop_exits": 2079,
+      "history_quality": "100% real ticks"
+    },
+    "retained_event_journal_limit": "The two binding V7 event files retain only 564 closes and are excluded from full-path component or planned-risk inference."
+  },
+  "frozen_cp2_reconstruction": {
+    "ordering": "Merge same-period files by server timestamp and stable source-file/source-row order. state_sequence is not an event key.",
+    "lifecycle": "Use every CLOSE or EXTERNAL_CLOSE row as one completed lifecycle. Actual P/L is value_a, stressed P/L is value_b, planned_risk and reason are parsed from detail.",
+    "channels": {
+      "STOP": "reason equals DEAL_REASON_SL",
+      "NONSTOP": "reason equals DEAL_REASON_EXPERT"
+    },
+    "loss_mass": "For each P/L role, max(0, -P/L). Positive and zero outcomes contribute zero loss mass.",
+    "loss_utilization": "For losing lifecycles only, loss_mass divided by positive close-time planned_risk. Compute actual and stressed roles separately.",
+    "concentration": "Within each fixed population/channel, sort loss mass descending. Report top-10 share pooled, top-3 share per period, and the largest single-loss share; do not select k after results."
+  },
+  "frozen_binding_reconstruction": {
+    "table": "Parse the single Tester deal table headed by the 13 columns time, deal, symbol, type, direction, volume, price, order, commission, swap, profit, balance and comment.",
+    "eligibility": "Require one initial balance row, exactly 2,235 in deals and 2,235 out deals. All in-deal commission, swap and profit must be zero because the report does not expose a position identifier for assigning entry costs to an exit channel; otherwise invalidate.",
+    "actual_close_pnl": "For each out deal, commission plus swap plus profit.",
+    "channels": {
+      "STOP": "out-deal comment begins with lowercase or uppercase 'sl ' after trimming",
+      "NONSTOP": "every other out deal"
+    },
+    "integrity": "Out-deal P/L must sum to exact report/equivalence actual net within 0.01 USD; stop count must equal 156 and all remaining 2,079 exits are NONSTOP.",
+    "concentration": "Report pooled channel top-10 and largest-single-loss shares from actual negative out-deal P/L. No component attribution is attempted."
+  },
+  "fixed_primary_channel_gate": {
+    "requirements": [
+      "CP2 pooled NONSTOP share of actual negative loss mass is at least 0.60.",
+      "CP2 pooled NONSTOP share of stressed negative loss mass is at least 0.60.",
+      "Binding pooled NONSTOP share of actual negative loss mass is at least 0.60.",
+      "At least three of four CP2 periods have stressed NONSTOP loss-mass share at least 0.55.",
+      "At least four of six CP2 components have stressed NONSTOP loss-mass share at least 0.50."
+    ],
+    "all_required": true
+  },
+  "fixed_breadth_and_concentration_gate": {
+    "requirements": [
+      "CP2 pooled NONSTOP top-10 losses contribute no more than 0.35 of NONSTOP stressed loss mass.",
+      "Binding pooled NONSTOP top-10 losses contribute no more than 0.40 of NONSTOP actual loss mass.",
+      "No one CP2 period contributes more than 0.60 of pooled NONSTOP stressed loss mass.",
+      "The largest single NONSTOP loss contributes no more than 0.10 of its pooled channel in both CP2 stressed and binding actual views."
+    ],
+    "all_required": true
+  },
+  "fixed_risk_geometry_diagnostic": {
+    "metrics": [
+      "pooled and period median and 90th-percentile stressed loss/planned-risk for STOP and NONSTOP losers",
+      "difference between pooled STOP and NONSTOP median utilization",
+      "loss mass per 100 lifecycles for each channel",
+      "loser count share versus loss-mass share"
+    ],
+    "material_separation": "Absolute pooled median utilization difference is at least 0.25 planned-risk units and has the same STOP-versus-NONSTOP ordering in at least three periods.",
+    "role": "Diagnostic only. It explains geometry but cannot rescue failed loss-mass breadth or confirmation gates."
+  },
+  "fixed_verdict_rules": {
+    "broad_nonstop": "PASS_BROAD_NONSTOP_REALIZED_LOSS_CHANNEL when integrity, the complete primary channel gate and the complete breadth/concentration gate pass.",
+    "pooled_only": "PARTIAL_NONSTOP_LOSS_MASS_WITHOUT_BREADTH_NO_CONTRACT_CHANGE when all three pooled 0.60 conditions pass but period/component breadth or concentration fails.",
+    "stop_representative": "NO_BROAD_NONSTOP_LOSS_DOMINANCE_PRESERVE_STOP_RISK_INTERPRETATION when any pooled 0.60 condition fails and integrity passes.",
+    "invalid": "INVALID_LOSS_CHANNEL_OR_BINDING_REPORT_RECONSTRUCTION_NO_VERDICT when any immutable input, lifecycle, reason, planned-risk, report-table, count, sum or numerical integrity condition fails."
+  },
+  "decision_translation": {
+    "broad_nonstop": "Preserve the current stop and caps as tail bounds, but record that future portfolio-risk evidence must show both stop-tail capacity and realized loss flow by exit channel. Retain at most one later separately declared observation/contract question; no automatic implementation.",
+    "pooled_only": "Record a descriptive pooled observation only; change no research rule and retain no seed.",
+    "stop_representative": "Preserve the current stop-risk interpretation and close without exit, cap or reporting successor.",
+    "invalid": "Preserve the observation gap and rotate away without parser repair after budget exhaustion."
+  },
+  "execution_budget": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before calculating any loss-mass share, utilization, concentration or verdict.",
+    "One implementation-only correction is allowed only if aggregation stops before emitting any loss-mass, utilization or concentration metric. After any metric is emitted, make no correction or rerun.",
+    "Do not subdivide native exits, tune a dominance/concentration threshold, inspect a favorable component or period, or use positive-return rankings to rescue a result.",
+    "Do not create MQL, run Tester, acquire data, query broker/account state, touch Live, or change any stop, exit, risk, lot, slot, admission or component behavior."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_declaration_then_run_exactly_one_fixed_source_free_loss_channel_aggregation"
+}
