@@ -1,0 +1,194 @@
+{
+  "schema": "zeta-next-live-research-observation-ledger-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CANDIDATE_VERIFIED_AND_FROZEN_PENDING_NO_SKIP_LIVE_BOUNDARY",
+  "family": "live-research-observation-ledger-v1",
+  "implementation_commit": "082efb4c0857f76e8947d51ff07a25ab595b55fb",
+  "evidence": {
+    "declaration_sha256": "BFDA269CB8CC6316C5C0BE4CEE9097B9D6EB0B7DFE44BB564627BA3429D4F313",
+    "compile_receipt_sha256": "41D66F94CF775D3182AA189E1F20C2FE4A5E0A81AFE25DF4EAE5C0A6AD8E07BD",
+    "source_manifest_sha256": "B71A741C357A589F6FA6A368FF24FD9652CBF68C415DCC48CAAB6914AFD853D8",
+    "config_manifest_sha256": "59A404314C7FD6ED032664EBC06BA975F13146384A18F5A5A5758F0F9384051B",
+    "candidate_binary_sha256": "FF4ECC78D304B2DFBC9A67DE07BEA9ED7462B44E94A5738BAE0FC7E5A95AE4B4",
+    "candidate_run_artifact_manifest": {
+      "root": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/",
+      "files": 16,
+      "bytes": 8724941,
+      "sha256": "ADEBDD9BB4C21454B492CC680711F167030199DC6B83CC1897698B4DABEBE917"
+    },
+    "same_spec_parent_control_artifact_manifest": {
+      "root": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd-current-spec-control/",
+      "files": 12,
+      "bytes": 7804201,
+      "sha256": "38B2E90C4F52500DF2E89FB5F8CEDA9A0B7B7E74C478CC56BE3AE554991329E3"
+    },
+    "candidate_html_report_sha256": "8D4F996827C0B98113846A9640607C3506A6AA48990136CD9FAB558497367FC4",
+    "same_spec_parent_html_report_sha256": "8D4F996827C0B98113846A9640607C3506A6AA48990136CD9FAB558497367FC4",
+    "candidate_ledger_sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+    "lifecycle_ledger_sha256": "01EA88857947DF0C71557257179775A7D99F14C33CD262036EFEF6A24D755CEC"
+  },
+  "execution": {
+    "successful_candidate_real_tick_paths": 1,
+    "candidate_reruns": 0,
+    "post_candidate_frozen_parent_same_spec_calibrations": 1,
+    "calibration_reason": "The broker symbol specification blob changed after the immutable parent evidence and before this candidate run. One adjacent run of the already frozen parent binary under the candidate's unchanged current specification was required to separate environment drift from observer behavior; it was not a candidate rerun, source change, validator, test harness or parameter rescue.",
+    "terminal_exit_code": 0,
+    "normal_ea_stop_reason": 1,
+    "html_quality": "100% real ticks",
+    "primary_symbol_ticks": 37456365,
+    "all_symbol_ticks": 297647274,
+    "candidate_elapsed": "00:03:58.240",
+    "same_spec_parent_elapsed": "00:03:26.462",
+    "tester_only_elapsed_delta_seconds": 31.778,
+    "live_latency_inference": "None. The elapsed delta is a compressed 297.6-million-tick Tester observation and is not a Live latency measurement. Passed-signal research disk I/O remains after the completed order/admission path."
+  },
+  "environment_drift_boundary": {
+    "immutable_parent_symbol_spec_sha256": "1C7165D6BD59F0A7A22BC009DFC822614E8B5CA220930036A0B33C785B2000CE",
+    "current_candidate_and_parent_symbol_spec_sha256": "91E543AC2867EB864252967D9668EFCAC86F919B0DC6208647556183011CBA34",
+    "current_spec_before_equals_after": true,
+    "historical_absolute_control": {
+      "actual_net_usd": 96.30,
+      "stressed_net_usd": 90.4732,
+      "stressed_max_closed_drawdown_usd": 31.1908
+    },
+    "current_spec_candidate": {
+      "actual_net_usd": 96.24,
+      "stressed_net_usd": 90.2337,
+      "stressed_max_closed_drawdown_usd": 31.1638
+    },
+    "first_difference": "The 2026-04-03 13:00 US30 position opened at 46395.80 and closed at the same 46301.46 price in both paths. The current report applied -0.24 USD swap at the 2026-04-06 close where the immutable old-spec control had none; later stop geometry changed only through the resulting balance path.",
+    "interpretation": "The immutable absolute figures are not a same-environment equivalence gate after the external symbol-specification change."
+  },
+  "same_spec_non_interference": {
+    "passed": true,
+    "candidate_core_event_rows": 2676,
+    "parent_core_event_rows": 2676,
+    "compared_payload_fields": [
+      "utc",
+      "server_time",
+      "event",
+      "component_id",
+      "value_a",
+      "value_b",
+      "detail",
+      "stressed_balance",
+      "project_stage_balance",
+      "account_equity",
+      "account_margin",
+      "state_sequence"
+    ],
+    "aligned_payload_row_differences": 0,
+    "html_reports_byte_equal": true,
+    "trades": 356,
+    "deals": 712,
+    "signal_decisions": 398,
+    "order_attempts": 383,
+    "broker_adoptions": 383,
+    "risk_admission_skips": 14,
+    "stop_loss_exits": 42,
+    "faults": {
+      "safety_stops": 0,
+      "persistence_failed": 0,
+      "broker_mismatch": 0,
+      "foreign_exposure": 0,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0
+    },
+    "source_manifest_unchanged_after_runs": true,
+    "config_manifest_unchanged_after_runs": true
+  },
+  "research_observation": {
+    "candidate_schema_columns": 48,
+    "candidate_rows": 4043,
+    "candidate_stage_counts": {
+      "SIGNAL": 2336,
+      "GATE": 1309,
+      "OUTCOME": 398
+    },
+    "candidate_result_counts": {
+      "SIGNAL_NOT_MET": 2336,
+      "EXISTING_EXPOSURE": 1302,
+      "POSITION_OPEN": 264,
+      "PENDING_ORDER": 119,
+      "PROTECTION_OR_RISK_BLOCKED": 14,
+      "SHADOW_ACCEPTED_OCCUPANCY": 7,
+      "PRICE_DISTANCE_BLOCKED": 1
+    },
+    "signal_relation_counts": {
+      "FIRST": 2,
+      "PERSIST": 224,
+      "REVERSE": 172,
+      "NO_SIGNAL": 2336,
+      "NOT_EVALUATED": 1309
+    },
+    "passed_signals": 398,
+    "passed_but_not_position_or_pending": 15,
+    "rc4_sell_warning_rows": 16,
+    "candidate_macro_join_key_blanks": 0,
+    "candidate_portfolio_context_blanks": 0,
+    "lifecycle_schema_columns": 60,
+    "lifecycle_rows": 841,
+    "unique_positions": 356,
+    "birth_rows": 356,
+    "close_rows": 356,
+    "first_peer_natural_exit_rows": 129,
+    "first_peer_targets": {
+      "US30": 65,
+      "US100": 64
+    },
+    "partial_restart_observations": 0,
+    "minimum_close_mark_samples": 1211,
+    "maximum_close_mark_samples": 304994,
+    "maximum_observed_profit_peak_usd": 14.41,
+    "maximum_observed_giveback_usd": 7.31,
+    "lifecycle_actual_net_sum_usd": 96.24,
+    "lifecycle_stressed_net_sum_usd": 90.2337,
+    "lifecycle_stressed_max_closed_drawdown_usd": 31.1638,
+    "lifecycle_macro_join_key_blanks": 0,
+    "research_dropped_records": 0,
+    "research_write_degradation_warnings": 0,
+    "observer_state": {
+      "alternating_files": 2,
+      "latest_sequence": 4756,
+      "previous_sequence": 4755,
+      "final_open_lifecycles": 0
+    }
+  },
+  "storage": {
+    "canonical_files": [
+      "research-candidates.csv",
+      "research-lifecycles.csv",
+      "research-state-a.csv",
+      "research-state-b.csv"
+    ],
+    "observed_bytes": 3410466,
+    "observation_span_calendar_days": 232,
+    "observed_average_bytes_per_calendar_day": 14700.2845,
+    "linearized_bytes_per_365_days": 5365603.84,
+    "linearized_mib_per_365_days": 5.1170,
+    "interpretation": "At this portfolio's observed activity, the durable research namespace is approximately 15 KB per calendar day or 5.1 MiB per year. The alternating observer state remains fixed at 2,388 bytes in this path.",
+    "retention_rule": "The canonical candidate/lifecycle ledgers are valuable research evidence and excluded from cleanup. Only the exact Git-ignored unreferenced runtime/cache/report/log/staging classes named in docs/OPERATING_DIRECTION.md are eligible at the monthly or below-30-GiB trigger."
+  },
+  "scope_integrity": {
+    "dashboard_source_changed": false,
+    "dashboard_process_restarted": false,
+    "core_event_ring_changed": false,
+    "core_state_schema_or_path_changed": false,
+    "economic_or_order_behavior_changed": false,
+    "new_validator_or_test_added": false,
+    "automatic_cleanup_worker_added": false,
+    "live_terminal_restarted_or_reattached": false,
+    "live_package_or_runtime_changed": false
+  },
+  "selection": {
+    "verdict": "PASS_SAME_SPEC_EXACT_NON_INTERFERENCE_APPROVE_LATER_CONTROLLED_LIVE_PROMOTION",
+    "candidate_selected": true,
+    "live_promotion_status": "DEFERRED_BY_CURRENT_DAY_NO_SKIP_GATE",
+    "current_owner": "NEXT-E01-V7-CXR2-14d84b9e4bb3 PID 15080",
+    "dashboard": "PID 28508 unchanged",
+    "required_live_identity_translation": "Preserve the exact CXR2 execution version, economic version, Portfolio, Magic, settings and core state marker/schema/paths. Change only release identity and add a separate optional Live research namespace.",
+    "handoff_gate": "Do not copy into live-dev/package/active, stop, reattach or restart today until every scheduled 2026-08-26 entry window has expired and a local stopped-flat boundary proves positions, pending orders, margin, planned risk, retry, shadow and ARC state zero. Then use entries-disabled recovery followed by the existing exact 0/0 to 1/1 handoff.",
+    "late_replacement": false
+  },
+  "next": "Commit and push this frozen candidate result. Keep the current Live owner and dashboard untouched until the no-skip stopped-flat promotion boundary exists."
+}

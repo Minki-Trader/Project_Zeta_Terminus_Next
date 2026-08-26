@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0137`
+- Latest state ID: `STATE-0138`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -14,6 +14,7 @@ Last updated: 2026-08-26
 - Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-26 instruction to repair the three Live warnings and restore future entry readiness, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
 - Next V7 entries-disabled preflight: `PASSED`; CXR2 PID `21944` proved exact connected `0/0`, flat continuity and zero fault, then final preflight PID `24820` repeated exact `0/0` and stopped normally.
 - Next V7 new-entry authorization: `ENABLED`; exact CXR2 Live PID `15080` passed the fresh committed `0/0 → 1/1` handoff at Git `dfda2cc83a7c024033a7cf21de4b5f5c9ade7d01` under the user's explicit 2026-08-26 start instruction
+- Research-observation Live change: `AUTHORIZED_IN_PRINCIPLE` by the user's explicit 2026-08-26 logging patch instruction, but activation is deferred until all current-day windows expire and a stopped-flat, entries-disabled recovery and exact `0/0 → 1/1` handoff can occur without skipping or manufacturing an opportunity
 - Last verified real-account owner configuration: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; terminal PID `15080` is the active exact Live owner
 - Existing real-account owner: exact CXR2 Live PID `15080` only; preflight PID `28148` stopped before the Live start and no second `terminal64.exe` was observed
 - User V7 Live direction: `EFFECTIVE`
@@ -22,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Active work
 
-- Active engineering boundary: `lab/engineering/live-research-observation-ledger-v1/`; source/configuration/EX5 compile boundary frozen and awaiting its single normal P4 real-tick observation, with the running CXR2 terminal and dashboard unchanged
+- Active engineering boundary: verified and frozen `lab/engineering/live-research-observation-ledger-v1/` candidate; its one P4 candidate path and one same-spec frozen-parent calibration proved exact non-interference, while Live activation is intentionally deferred by the current-day no-skip gate and the running CXR2 terminal/dashboard remain unchanged
 - Active research boundary: none; Program 7 Unit 055 `macro-context-composition-confounding-v1` is durably closed with no retained estimator, weighting, scheduler or adjacent meta successor
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6

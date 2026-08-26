@@ -70,7 +70,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/portfolio-loss-cooccurrence-topology-v1/`: 닫힌 Program 5 / Unit 054 source-free family; 다전략 손실일 `1.0226x`, 양 자연책 손실일 `1.0554x` 독립기대 발생으로 둘 다 `1.25x` 관문 미달, 공통손실 대응·배분·lot·slot 후속 없음
 - `research/macro-context-composition-confounding-v1/`: 닫힌 Program 7 / Unit 055 source-free family; 12개 맥락 대비의 R 보정은 전부 `0.05R` 미만, stop 민감 4건도 Units 041/052·Programs 2/4에 집중되어 광범위 구성혼재 진단 실패, 인접 estimator·weighting·meta 후속 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
-- `engineering/live-research-observation-ledger-v1/`: 활성 단일 공학 family; dashboard·경제·주문·상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`로 동결됐고 단 한 번의 P4 정상 실틱 관찰 전 상태
+- `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구
