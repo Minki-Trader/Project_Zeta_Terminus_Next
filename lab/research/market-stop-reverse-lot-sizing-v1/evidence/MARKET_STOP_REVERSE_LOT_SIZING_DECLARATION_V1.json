@@ -1,0 +1,207 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_062_DECLARATION_FROZEN_SOURCE_UNOPENED",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "family": "market-stop-reverse-lot-sizing-v1",
+  "title": "Market-Defined ATR Stop and Reverse-Solved Lot",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "research_height": {
+    "primary": "micro",
+    "supporting": ["macro"],
+    "transfer_path": "A causal completed-bar ATR sets each treated entry's stop distance, the unchanged gross-risk budget solves lot downward, and the resulting minimum-lot feasibility, fills, risk, component economics and portfolio drawdown determine whether the micro geometry survives at portfolio height."
+  },
+  "central_question": "For the five market-entry components, does replacing account-budget-solved stop distance with a component-local completed-bar ATR stop and reverse-solving lot remove material stop-regime drift while preserving feasibility and improving later P4 portfolio efficiency versus the native contract?",
+  "research_bundle": {
+    "name": "fit_native_atr_geometry_then_compare_native_vs_atr_reverse_lot",
+    "roles": [
+      "FIT_NATIVE_GEOMETRY: derive one outcome-free median native-stop/ATR14 multiplier per treated component from 2026-01-02 through 2026-03-31",
+      "NATIVE_SELECTION: continuous native control through 2026-05-31, judging only 2026-04-01 through 2026-05-31",
+      "ATR_REVERSE_LOT_SELECTION: identical native prefix through 2026-03-31, then the frozen ATR stop and reverse-lot intervention through 2026-05-31"
+    ],
+    "conditional_latest_roles": [
+      "NATIVE_LATEST: continuous native control through 2026-08-20, judging only 2026-06-01 through 2026-08-20",
+      "ATR_REVERSE_LOT_LATEST: identical native prefix through 2026-03-31, then the frozen intervention through 2026-08-20"
+    ],
+    "single_bundle": true,
+    "parameter_grid": false,
+    "alternate_atr_period_or_multiplier": false
+  },
+  "why_now": {
+    "current_bottleneck": "The source contract fixes lot by a $150 balance staircase, computes a 2-percent gross stop budget, then searches for the farthest stop that consumes it while recording 4 percent planned risk. That makes initial stop geometry partly an account path rather than a market state.",
+    "connection_bridge": "The intervention directly changes the project's stop, lot, minimum-lot feasibility and capital scaling while leaving signals, hold, risk fractions, admission accounting and Passive unchanged.",
+    "perspective_distance": "Unit 061 was a macro source-free admission-funnel reconstruction and closed invalid. Unit 062 stays in Program 5 only because it changes data role, height and causal stage: a direct micro stop/lot intervention with later portfolio transmission.",
+    "difference_from_unit_025": "Unit 025 asked whether native account-generated stop width predicted outcomes and selected no conditional response. Unit 062 does not condition on native width; it replaces the generating direction of the contract and tests the resulting portfolio causally.",
+    "difference_from_deposit_capital_v1": "Deposit-capital V1 compared starting deposits and deposit-matched scale. Unit 062 keeps reference capital at $100 and asks whether stop geometry drifts inside one continuous balance path because lot is stair-stepped while risk capital is proportional.",
+    "passive_exclusion": "Passive remains exactly native because changing its pending-order volume would also change durable pending-order recovery and historical reconstruction semantics. It is an untreated portfolio control, not a rescued sixth sizing variant."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Cross beta decomposition is connected and remains unopened, but it is a component attribution question with a known current-capital implementation constraint.",
+    "program_2": "No new causal external source is ready after invalid Unit 058.",
+    "program_3": "The all-slot clock proposal remains connected but first needs a bounded causal definition that does not become a time-window search.",
+    "program_4": "Unit 060 just closed invalid and no hold/environment repair is allowed.",
+    "program_5": "Selected despite the immediately prior invalid Program 5 unit because market stop-to-lot uses independent source and direct-intervention evidence, begins at micro height and changes an actual capital/lot decision.",
+    "program_7": "No new meta question would change an implementation decision before the remaining concrete memo proposals are assessed.",
+    "after_close": "Recompare all programs and heights; do not open an adjacent ATR period, multiplier, MAE stop, Passive sizing or risk-accounting rescue."
+  },
+  "decision_translation": {
+    "if_selection_and_latest_pass": "Retain exactly one later independently declared binding-long plus isolated-latest confirmation question for the five-component market-stop/reverse-lot profile. No implementation or Live promotion occurs in Unit 062.",
+    "if_selection_fails": "Do not open latest paths; preserve native stop/lot and close the axis.",
+    "if_selection_passes_latest_fails": "Reject the candidate and preserve native stop/lot.",
+    "if_minimum_lot_fails": "Record that the market-defined stop cannot maintain the frozen gross-risk contract at $100 and do not widen the stop or exceed risk to rescue it."
+  },
+  "boundary": {
+    "family_root": "lab/research/market-stop-reverse-lot-sizing-v1/",
+    "parent_root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "parent_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "one_time_physical_source_copy": true,
+    "one_dedicated_physical_portable": true,
+    "cross_family_include_or_link": false,
+    "historical_lab_mt5_change": false,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "frozen_intervention": {
+    "treated_components": ["RC16", "RC4", "Cross", "Pressure", "Return"],
+    "untreated_component": "Passive",
+    "atr_period": 14,
+    "atr_timeframe": "each component's frozen native timeframe",
+    "atr_information_set": "fourteen completed bars strictly before the decision; true range uses the preceding completed close and therefore requires fifteen completed bars",
+    "fit_multiplier": "For each treated component, the exact median across every valid native market-entry plan in FIT_NATIVE_GEOMETRY of absolute(native entry minus native initial stop) divided by ATR14. No outcome, close, direction subgroup or trimming enters the fit.",
+    "activation": "Candidate paths run native through 2026-03-31 and activate the frozen profile at server 2026-04-01 00:00:00.",
+    "candidate_stop": "entry price minus direction times fitted component multiplier times ATR14, snapped outward to the symbol tick grid and rejected if it violates the frozen executable-side minimum protection distance.",
+    "target_gross_risk": "ConservativeRiskCapital times 0.04 times (1 minus 0.25 unmodelled reserve minus 0.25 placement headroom), identical to native.",
+    "reverse_lot": "Choose the greatest valid broker volume step whose GrossStopRisk at the frozen candidate stop does not exceed target gross risk. Search only the finite broker min-to-max volume grid; do not round up.",
+    "minimum_lot_rule": "If broker minimum volume exceeds target gross risk at the market stop, block the entry and log MARKET_STOP_MIN_LOT_BLOCK. Do not tighten/widen the stop, exceed target risk or borrow risk.",
+    "planned_risk_accounting": "After a feasible stop and lot, preserve the native BufferedPlannedRisk check and record the unchanged 4-percent position budget for the 12-percent aggregate admission ledger. Unit 061 risk-accounting semantics are not repaired or changed.",
+    "frozen_other_behavior": "All signals, evaluation times, directions, holds, Passive pending logic, RC4 ARC logic, costs, slippage stress, session/calendar, margin, position/aggregate fractions, ownership, protection reconciliation and order semantics remain inherited."
+  },
+  "immutable_pre_outcome_inputs": {
+    "p4_native_event_ledger": {
+      "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+      "bytes": 923617,
+      "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+    },
+    "p4_candidate_day_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-candidates.csv",
+      "bytes": 2724613,
+      "sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F"
+    },
+    "unit_025_result": {
+      "path": "lab/research/initial-stop-geometry-value-v1/evidence/INITIAL_STOP_GEOMETRY_VALUE_RESULT_V1.json",
+      "bytes": 11894,
+      "sha256": "C9E25471EB14CAF20EAC6C4B7F78D5C4C560A5D39A284A262ECA20A3F3733C82"
+    },
+    "unit_025_closure": {
+      "path": "lab/research/initial-stop-geometry-value-v1/evidence/INITIAL_STOP_GEOMETRY_VALUE_CLOSURE_V1.json",
+      "bytes": 2150,
+      "sha256": "4C44BCB5630B2BE6AA57387C867DF61563A215D99794F41F8E955D64BFD6BEF7"
+    },
+    "deposit_capital_closure": {
+      "path": "lab/evidence/DEPOSIT_CAPITAL_RISK_CAPACITY_CLOSURE_V1.json",
+      "bytes": 6208,
+      "sha256": "56B64F0592AA152C88A2038C58E679F70345205EB3A4682E8BED8435F54E7452"
+    }
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only file identity, lifecycle-start event type, component and server date were read. ATR, native stop/ATR ratios, balance-path drift, candidate lot/stop, min-lot blocks, close outcomes, portfolio metrics and candidate gates remain unopened.",
+    "native_p4_births": 356,
+    "fit_2026_01_02_to_03_31": {
+      "normal_candidate_dates": 63,
+      "births": 148,
+      "components": {"RC16": 16, "RC4": 11, "Cross": 53, "Pressure": 12, "Return": 16, "Passive": 40},
+      "treated_births": 108
+    },
+    "selection_2026_04_01_to_05_31": {
+      "normal_candidate_dates": 43,
+      "births": 92,
+      "components": {"RC16": 14, "RC4": 11, "Cross": 35, "Pressure": 5, "Return": 6, "Passive": 21},
+      "treated_births": 71
+    },
+    "conditional_latest_2026_06_01_to_08_20": {
+      "normal_candidate_dates": 59,
+      "births": 116,
+      "components": {"RC16": 14, "RC4": 10, "Cross": 41, "Pressure": 11, "Return": 9, "Passive": 31},
+      "treated_births": 85
+    },
+    "latest_two_completed_months_excluded_from_selection": ["2026-06", "2026-07"],
+    "partial_august_excluded_from_selection": true,
+    "eligible": true
+  },
+  "fixed_fit_gate": [
+    "FIT_NATIVE_GEOMETRY is the first Tester path and must pass the complete real-tick and environment integrity gate before any multiplier is read.",
+    "Every treated component has at least ten finite positive native-stop/ATR14 observations and zero ATR-unavailable row among otherwise valid native entry plans.",
+    "Each fitted median is finite, positive and frozen once in a fit receipt and candidate SET before selection control or candidate runs.",
+    "No outcome, close, P/L, stop incidence or selection metric may influence a multiplier."
+  ],
+  "fixed_real_tick_and_environment_gate": [
+    "Every executed path uses Model=4 Every tick based on real ticks, terminates normally and reports 100% real ticks.",
+    "The detailed agent log contains zero absent real-tick minute, discarded real-tick minute, every-tick generation substitution, tick mismatch, load fault or synchronization fault for US30, US100 and US500 over the consumed path.",
+    "Source, SET, EX5, complete consumed raw-tick manifest and required symbol contract/swap fingerprints retain their frozen identities.",
+    "Each control/candidate pair is adjacent and has identical before/after required-symbol fingerprints; any mid-pair drift invalidates the complete pair.",
+    "The candidate and its adjacent control have exact common-prefix core event payload through 2026-03-31, excluding the explicitly added stop/lot observation events."
+  ],
+  "fixed_mechanism_gate": [
+    "In NATIVE_SELECTION, at least three of five treated components have an absolute selection-median divided by fit-median stop/ATR shift of at least 0.15, and the median absolute component shift is at least 0.15.",
+    "Every accepted candidate treated entry has a stop/ATR ratio equal to its frozen multiplier within one symbol tick divided by ATR plus 1e-9.",
+    "Candidate ATR-unavailable rate is zero and MARKET_STOP_MIN_LOT_BLOCK is no more than 0.10 of otherwise valid candidate sizing attempts.",
+    "At least 0.20 of accepted candidate treated entries use a volume different from the native daily-ladder volume that would apply at the same stressed balance."
+  ],
+  "fixed_selection_gate": {
+    "density": "Both paths cover all 43 frozen normal dates, have at least 60 total first fills, both natural books and all six components, with at least five treated-component first fills each.",
+    "portfolio_value": "Candidate segment stressed net is positive and exceeds control by at least max(2 USD, 0.10 times absolute control stressed net).",
+    "drawdown": "Candidate segment maximum closed drawdown is no more than 1.10 times control.",
+    "efficiency": "Candidate stressed net divided by maximum closed drawdown is at least 1.10 times control; zero drawdown cannot create an infinite rescue.",
+    "turnover": "Candidate first fills are at least 0.95 of control and candidate average first fills per frozen normal date is reported with zero-fill dates retained.",
+    "treated_breadth": "At least three of five treated components improve stressed net, neither natural book is worse by more than 1 USD, and no component contributes more than 0.60 of positive portfolio improvement.",
+    "risk_and_stops": "Candidate stressed stop-loss dollars do not exceed control, stop-loss count is no more than 1.50 times control and the complete mechanism gate passes.",
+    "all_required": true
+  },
+  "fixed_latest_confirmation_gate": {
+    "opening_condition": "Open only when the complete selection gate passes.",
+    "density": "Both paths cover all 59 frozen normal dates, have at least 80 total first fills, both books and all six components, with at least eight treated-component first fills each.",
+    "portfolio_value": "Candidate latest stressed net is positive and no lower than control.",
+    "drawdown_and_efficiency": "Candidate maximum closed drawdown is no greater than control and net-to-drawdown is no lower than control.",
+    "turnover": "Candidate first fills are at least 0.95 of control with zero-fill dates retained.",
+    "breadth": "At least three of five treated components and both natural books have nonnegative candidate-minus-control stressed net.",
+    "feasibility": "ATR unavailable remains zero and min-lot block rate remains no more than 0.10.",
+    "all_required": true
+  },
+  "fixed_verdict_rules": {
+    "success": "PASS_MARKET_STOP_REVERSE_LOT_RETAIN_BINDING_CONFIRMATION when fit, integrity, mechanism, selection and conditional latest confirmation all pass.",
+    "selection_failure": "NO_MARKET_STOP_REVERSE_LOT_SELECTION_CANDIDATE when fit and integrity pass but mechanism or selection fails; latest paths remain unopened.",
+    "latest_failure": "MARKET_STOP_REVERSE_LOT_LATEST_VETO_NO_CANDIDATE when selection passes but latest confirmation fails.",
+    "minimum_lot_failure": "MARKET_STOP_REVERSE_LOT_INFEASIBLE_AT_REFERENCE_CAPITAL when the min-lot rate alone exceeds 0.10 under otherwise valid fit/integrity.",
+    "invalid": "INVALID_MARKET_STOP_REVERSE_LOT_EXECUTION_OR_RECONSTRUCTION_NO_VERDICT when any source/config/binary/tick/environment/prefix/fit identity or reconstruction gate fails.",
+    "ambiguous": "AMBIGUOUS_MARKET_STOP_REVERSE_LOT_NO_CANDIDATE only when all integrity conditions pass but an unforeseen semantic condition blocks the frozen comparison."
+  },
+  "execution_budget": {
+    "source_copies": 1,
+    "runtime_copies": 1,
+    "successful_compiles": 1,
+    "implementation_only_compile_corrections_before_tester": 2,
+    "fit_tester_paths": 1,
+    "selection_tester_paths": 2,
+    "conditional_latest_tester_paths": 2,
+    "maximum_tester_paths": 5,
+    "post_metric_reruns": 0,
+    "retained_validator_or_cli": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before the one-time source copy, source change, compile, runtime copy, ATR observation or Tester outcome.",
+    "Read the source-topology discipline and lab forward-baseline declaration before changing MQL, then copy the sole baseline exactly once into this family.",
+    "Compile once successfully after at most two implementation-only corrections, freeze source/binary/runtime, then run FIT_NATIVE_GEOMETRY first.",
+    "If fit integrity or density fails, close immediately without multipliers, selection paths, alternate date, ATR period, price normalization or MAE rescue.",
+    "After a valid fit, create exactly one fit receipt and one candidate SET containing the five medians, commit and push them before NATIVE_SELECTION and ATR_REVERSE_LOT_SELECTION.",
+    "If selection fails any required gate, do not run latest. If selection passes, run exactly the two latest paths and close under their fixed veto gate.",
+    "Do not add another ATR period, multiplier, mean/quantile, volatility estimator, stop floor, component exception, Passive intervention, risk-accounting change or subgroup rescue.",
+    "Do not inspect Program 6, query broker/account state, touch Live, promote a candidate or reopen Unit 025, deposit-capital V1 or Unit 061."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_make_one_physical_baseline_copy_implement_compile_and_freeze_before_fit"
+}

@@ -1241,3 +1241,11 @@
 - Frozen logger source proves `ResearchReservedMask()` begins with `ResearchPositionMask()` and optionally ORs the Passive pending bit. Thus `reserved_slots` already contains active positions; adding `active_slots` double-counted them and invalidated the predeclared sub-three mechanism gate.
 - No post-metric formula correction or rerun was permitted. Closed `INVALID_CANDIDATE_FUNNEL_OR_RISK_CONTRACT_RECONSTRUCTION_NO_VERDICT`; result/closure SHA-256 values are `FEDA857C1E5AD5BE21E77C19886254B22EF10416FC6AC01C8D9EAAFBB0CB9B7A` / `53F0A9AF479555878DCA2DBFDC70B382817E021B029D7340AED0C9BCE5CADEC2`.
 - No risk-accounting counterfactual, cap/lot/slot/admission change, same-family repair or Live action survives. Active research returns to none until a fresh whole-map comparison; the remaining external-memo proposals are still unopened.
+
+## STATE-0152 - 2026-08-26
+
+- Recompared Programs 1-5 and 7 after Unit 061. Opened only Program 5 / micro→macro Unit 062 `market-stop-reverse-lot-sizing-v1`: a direct stop/lot intervention distinct from the prior invalid macro admission reconstruction and from Unit 025's native-geometry association test.
+- Treated components are RC16, RC4, Cross, Pressure and Return; Passive remains native to avoid confounding stop/lot with pending-order recovery. ATR14 uses only completed native-timeframe bars. The fit median of native stop distance divided by ATR sets one multiplier per treated component without outcomes.
+- Candidate paths run the exact native prefix through 2026-03-31, then market ATR stop plus greatest admissible broker-step lot under the unchanged 2% gross target and 4%/12% planned-risk ledger. Minimum `0.01` lot excess blocks rather than moving the stop or risk.
+- Selection is April-May only; June, July and partial August are held out and may open as a two-path latest veto only after full selection pass. Premetric native births are fit/selection/latest `148/92/116`, treated `108/71/85`, across `63/43/59` normal dates.
+- Declaration SHA-256 is `B998176FFDC68C5CB8D6ED3F762811E18224D054AC168D8DB87A408204892D85`. Source, compile, runtime, ATR and outcomes remain unopened; Program 6, broker/account state and Live remain untouched.
