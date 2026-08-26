@@ -1,0 +1,206 @@
+{
+  "schema": "zeta-next-candidate-funnel-turnover-risk-contract-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_061_DECLARATION_FROZEN_METRICS_UNOPENED",
+  "unit": "candidate-funnel-turnover-risk-contract-061",
+  "family": "candidate-funnel-turnover-risk-contract-v1",
+  "title": "P4 Candidate Funnel and Turnover-Risk Contract Diagnostic",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "research_height": {
+    "primary": "macro",
+    "supporting": ["meso"],
+    "transfer_path": "The component-level passed-candidate and admission reasons are traced through durable first fills into the portfolio-level three-fills-per-normal-day obligation. No blocked candidate is assigned a counterfactual close outcome."
+  },
+  "central_question": "Does the actual P4 causal candidate funnel show that the current planned-risk aggregate-cap contract is a material bottleneck to the official three-lifecycle-starting-first-fills-per-normal-day obligation, or is most attrition upstream and the observed risk block too sparse or concentrated to justify a risk-accounting counterfactual?",
+  "research_bundle": {
+    "name": "candidate_funnel_and_turnover_risk_contract",
+    "lenses": [
+      "exact signal-to-admission-to-durable-birth funnel topology",
+      "aggregate-risk blocker mechanism and occupied-slot shape",
+      "favorable direct-release upper bound against the daily turnover obligation"
+    ],
+    "single_bundle": true,
+    "parameter_grid": false,
+    "blocked_outcome_imputation": false
+  },
+  "why_now": {
+    "current_bottleneck": "The frozen non-interfering P4 candidate ledger is the first authoritative Next artifact that records passed-but-blocked admission reasons together with pre-decision aggregate risk, headroom, slots, symbol book and component identity.",
+    "connection_bridge": "The proposal connects explicit missed admissions to the existing portfolio turnover obligation and to actual lot, slot and aggregate-risk implementation decisions.",
+    "perspective_distance": "Unit 060 was a Program 4 meso post-entry hold intervention. Unit 061 moves to Program 5 macro pre-entry portfolio admission and uses an already-consumed causal ledger rather than fresh Tester intervention.",
+    "difference_from_prior_units": "Unit 054 tested loss co-occurrence, Unit 037 tested ex-post occupancy value, Unit 056 tested entry handoff state and Unit 059 tested signal-state value. None reconstructed the full candidate funnel or measured whether aggregate-risk blocks can materially bridge the fixed daily first-fill obligation.",
+    "external_memo_scope": "This unit combines only the structurally inseparable blocked-opportunity funnel and turnover-risk-contract proposals. Market-defined stop-to-lot sizing, all-slot evaluation clocks and Cross beta decomposition remain unopened and require separate whole-map comparisons."
+  },
+  "decision_translation": {
+    "if_true": "Retain exactly one later, separately declared planned-versus-actual open-risk accounting counterfactual after a whole-map comparison. Unit 061 itself changes no risk cap, lot, slot, priority, admission or Live behavior.",
+    "if_false": "Close the full-funnel and turnover-risk-contract expansion, preserve the current planned-risk admission contract and do not implement or simulate a risk-accounting relaxation from these P4 blockers.",
+    "if_ambiguous": "Record the observation gap without selecting a policy or automatically expanding the logger."
+  },
+  "boundary": {
+    "family_root": "lab/research/candidate-funnel-turnover-risk-contract-v1/",
+    "source_free_mql": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "uses_only_frozen_p4_observation_ledgers": true,
+    "lifecycle_close_economics_used": false,
+    "blocked_candidate_future_outcomes_used": false,
+    "counterfactual_trade_or_dollar_claim": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "broker_or_account_state_used": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "candidate_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-candidates.csv",
+      "bytes": 2724613,
+      "sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+      "rows": 4043,
+      "schema_columns": 48,
+      "unique_record_ids": 4043
+    },
+    "lifecycle_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-lifecycles.csv",
+      "bytes": 683465,
+      "sha256": "01EA88857947DF0C71557257179775A7D99F14C33CD262036EFEF6A24D755CEC",
+      "rows": 841,
+      "schema_columns": 60,
+      "unique_record_ids": 841,
+      "event_counts": {"BIRTH": 356, "CLOSE": 356, "FIRST_PEER_NATURAL_EXIT": 129},
+      "allowed_role": "BIRTH rows only; CLOSE and FIRST_PEER_NATURAL_EXIT economics are excluded"
+    },
+    "logger_non_interference_result": {
+      "path": "lab/engineering/live-research-observation-ledger-v1/evidence/LIVE_RESEARCH_OBSERVATION_LEDGER_RESULT_V1.json",
+      "bytes": 9181,
+      "sha256": "CFEE02835808D717344D2082E7B77B8FFB76B2C6CE1C54C4F43B95F340E55C0B",
+      "required_verdict": "PASS_SAME_SPEC_EXACT_NON_INTERFERENCE_APPROVE_LATER_CONTROLLED_LIVE_PROMOTION"
+    }
+  },
+  "data_role": {
+    "period": "P4_2026_YTD_THROUGH_2026_08_20",
+    "role": "consumed exploratory mechanism, funnel and turnover-bound evidence",
+    "clean_holdout": false,
+    "multi_period_breadth": false,
+    "promotion_or_live_claim": false,
+    "authority_limit": "Even a pass retains only one later counterfactual question; P4 alone cannot select a risk, lot or slot policy."
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "pre_metric_feasibility": {
+    "scope": "Only immutable identities, headers, terminal candidate stage/result, signal-known/pass flags, admission reason, component, symbol, server date and BIRTH structural identity were inspected. No blocker slot distribution, risk excess, headroom aggregate, daily birth-compliance metric, materiality gate, CLOSE economic field or verdict was calculated.",
+    "terminal_candidate_rows": 4043,
+    "terminal_stage_result_counts": {
+      "SIGNAL_SIGNAL_NOT_MET": 2336,
+      "GATE_EXISTING_EXPOSURE": 1302,
+      "GATE_SHADOW_ACCEPTED_OCCUPANCY": 7,
+      "OUTCOME_POSITION_OPEN": 264,
+      "OUTCOME_PENDING_ORDER": 119,
+      "OUTCOME_PROTECTION_OR_RISK_BLOCKED": 14,
+      "OUTCOME_PRICE_DISTANCE_BLOCKED": 1
+    },
+    "signal_evaluated": 2734,
+    "signal_passed": 398,
+    "admitted_order_paths": 383,
+    "durable_births": 356,
+    "unmatched_expired_passive_pending_orders": 27,
+    "distinct_candidate_server_dates": 165,
+    "first_candidate_server_date": "2026.01.02",
+    "last_candidate_server_date": "2026.08.20",
+    "aggregate_risk_blockers": 14,
+    "aggregate_risk_blocker_components": {"Cross": 9, "Return": 3, "Passive": 1, "Pressure": 1, "RC16": 0, "RC4": 0},
+    "aggregate_risk_blocker_symbols": {"US100": 10, "US30": 4},
+    "aggregate_risk_blocker_months": ["2026.02", "2026.03", "2026.04", "2026.06", "2026.07", "2026.08"],
+    "all_risk_block_admission_reasons": "AGGREGATE_RISK_CAP",
+    "existing_exposure_rows_signal_known_zero": 1302,
+    "eligible": true
+  },
+  "fixed_reconstruction": {
+    "terminal_row_contract": "Each of the 4,043 candidate rows is one terminal result for a scheduled strategy evaluation. Count each row once and do not infer an unlogged signal behind signal_known=0 occupancy short circuits.",
+    "funnel": {
+      "terminal_evaluations": "all candidate rows",
+      "evaluated_signals": "signal_known exactly 1",
+      "passed_signals": "signal_passed exactly 1",
+      "admitted_order_paths": "OUTCOME POSITION_OPEN or PENDING_ORDER",
+      "durable_births": "lifecycle event BIRTH",
+      "passed_blockers": "OUTCOME PROTECTION_OR_RISK_BLOCKED or PRICE_DISTANCE_BLOCKED"
+    },
+    "candidate_to_birth_key": "Exact CSV strings component_id + volume + stop_loss + planned_risk_usd + signal_relation, identical to the already-authoritative Unit 059 reconstruction. Every BIRTH must match one admitted candidate, with 27 unmatched Passive pending orders, zero unmatched BIRTH and zero ambiguity.",
+    "normal_day_denominator": "The exact 165 distinct server calendar dates present in the terminal candidate ledger. Every date remains in the denominator, including dates with zero passed signal or zero BIRTH; no date outside this frozen P4 logger set is inferred.",
+    "turnover_obligation": "Three lifecycle-starting first fills on every frozen normal candidate date. Aggregate required births are 3 times 165, but aggregate count alone cannot pass the per-day obligation.",
+    "baseline_daily_births": "Count BIRTH rows by actual entry_time_server date over the complete 165-date denominator, inserting zero for dates without a BIRTH.",
+    "favorable_direct_risk_release": "Add one hypothetical same-date first fill for each of the 14 aggregate-risk-blocked candidate rows, without assigning future P/L and without modeling downstream displacement. This is an intentionally favorable gross direct-release upper bound, not a realizable simulation.",
+    "favorable_all_post_pass_release": "As context only, also add all 15 post-pass blockers. It cannot enter or rescue the material risk-contract gate.",
+    "occupied_slots_before": "Parse active_slots and reserved_slots as nonnegative integers and report both. Combined occupied slots equal active_slots plus reserved_slots.",
+    "risk_excess_usd": "attempted_aggregate_after_usd minus aggregate_cap_usd for each aggregate-risk blocker.",
+    "risk_excess_cap_fraction": "risk_excess_usd divided by positive aggregate_cap_usd.",
+    "zero_headroom": "aggregate_headroom_usd parsed as decimal equals exactly zero.",
+    "no_counterfactual_economics": "Do not access CLOSE actual_net_usd, stressed_net_usd, exit class, mark path or any blocked-candidate future value."
+  },
+  "fixed_reports": {
+    "funnel": "Report exact count and conditional conversion rate at every frozen funnel step plus all terminal reasons.",
+    "blocker_topology": "Report the 14 aggregate-risk blockers and one distance blocker as shares of passed signals and durable births, by component, symbol and month.",
+    "contract_shape": "For the 14 risk blockers report active, reserved and combined occupied-slot distributions; aggregate risk before, cap and headroom; attempted planned risk; attempted aggregate after; risk excess; median and maximum excess fraction; zero-headroom count; and the share blocked below three combined occupied slots.",
+    "turnover_bound": "Report baseline average births per frozen day, aggregate gap to 495, days meeting at least three births, favorable direct-risk-release births/gap coverage/compliant-day change, and the all-15 context bound.",
+    "causal_limit": "State explicitly that existing-exposure rows are not known lost signals and blocked candidates have no outcome dollars."
+  },
+  "fixed_integrity_gate": [
+    "All three immutable inputs retain their exact byte lengths and SHA-256 hashes and the logger result retains the required non-interference verdict.",
+    "The candidate ledger reproduces 48 columns, 4,043 rows, 4,043 unique record_id values and zero nonzero research_dropped_records.",
+    "The lifecycle ledger reproduces 60 columns, 841 rows, 841 unique record_id values, events 356 BIRTH / 356 CLOSE / 129 FIRST_PEER_NATURAL_EXIT and zero nonzero research_dropped_records; only BIRTH rows are selected for Unit 061 metrics.",
+    "Reproduce every declared stage/result, signal, admission, birth, pending-expiration, date, blocker component, symbol and month count.",
+    "The exact candidate-to-birth key yields 356 unique matches, 27 unmatched expired Passive pending orders, zero unmatched BIRTH and zero ambiguity.",
+    "All 14 aggregate-risk blockers have finite attempted_planned_risk_usd, attempted_aggregate_after_usd, aggregate_risk_before_usd, aggregate_cap_usd, aggregate_headroom_usd, active_slots and reserved_slots; aggregate_cap_usd is positive.",
+    "No CLOSE economic field is selected, cast, aggregated or emitted."
+  ],
+  "fixed_density_gate": [
+    "There are at least ten aggregate-risk blockers.",
+    "Aggregate-risk blockers span at least four of six components, both natural symbol books and at least four server months."
+  ],
+  "fixed_mechanism_gate": {
+    "cap_binding": "All 14 PROTECTION_OR_RISK_BLOCKED rows have admission_reason exactly AGGREGATE_RISK_CAP and attempted_aggregate_after_usd strictly greater than aggregate_cap_usd.",
+    "subthree_accounting_shape": "At least 25 percent of the 14 risk blockers occur with active_slots plus reserved_slots below three.",
+    "interpretation": "The sub-three condition distinguishes a planned-risk/minimum-lot or headroom arithmetic shape from risk blocking that occurs only after all three portfolio slots are already occupied."
+  },
+  "fixed_material_turnover_risk_gate": {
+    "all_required": true,
+    "risk_block_share_of_passed_signals": "at least 0.10",
+    "favorable_direct_birth_gain_over_current_births": "at least 0.10",
+    "favorable_direct_birth_gain_share_of_aggregate_gap_to_495": "at least 0.25",
+    "favorable_direct_compliant_day_rate_gain": "at least 0.10 of the 165-day denominator",
+    "breadth": "at least four of six components, both natural books and at least four months",
+    "concentration": "no component contributes more than 0.50 of the 14 risk blockers"
+  },
+  "fixed_verdict_rules": {
+    "success": "PASS_MATERIAL_TURNOVER_RISK_CONTRACT_BOTTLENECK_RETAIN_LATER_COUNTERFACTUAL when integrity, density, both mechanism conditions and every material turnover-risk condition pass.",
+    "binding_but_not_material": "CAP_BINDING_PRESENT_BUT_NO_MATERIAL_TURNOVER_BRIDGE when integrity and density pass, cap binding is reproduced, but the sub-three accounting shape or any material turnover-risk condition fails.",
+    "no_mechanism": "NO_TURNOVER_RISK_CONTRACT_BOTTLENECK when integrity and density pass but aggregate-cap binding is not reproduced.",
+    "invalid": "INVALID_CANDIDATE_FUNNEL_OR_RISK_CONTRACT_RECONSTRUCTION_NO_VERDICT when any immutable pin, schema, row identity, declared topology, join, finite-field or no-CLOSE-access condition fails.",
+    "ambiguous": "AMBIGUOUS_CANDIDATE_FUNNEL_TURNOVER_RISK_CONTRACT_NO_SEED only when integrity passes but an unforeseen semantic condition blocks the frozen interpretation without changing it."
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before calculating blocker slot distributions, risk excess/headroom aggregates, daily birth compliance, favorable-release bounds, gate values or the Unit 061 verdict.",
+    "Run exactly one fixed in-memory aggregation over the two pinned ledgers and use only lifecycle BIRTH rows.",
+    "Do not reinterpret existing-exposure short circuits as signals, impute any blocked-candidate outcome, access CLOSE economics, introduce a threshold/window/subgroup rescue or add an alternate risk-cap scenario.",
+    "Do not implement actual-risk accounting, change the 12-percent aggregate cap, lot, slot, priority, admission, stop, entry or exit behavior in this unit.",
+    "Do not modify MQL, compile, run MetaTrader, retain a CLI, inspect Program 6, query broker/account state or touch Live.",
+    "Close after one result and recompare the complete Program 1-5 and 7 map before opening any remaining external-memo proposal."
+  ],
+  "metrics_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_candidate_funnel_turnover_risk_contract_aggregation"
+}
