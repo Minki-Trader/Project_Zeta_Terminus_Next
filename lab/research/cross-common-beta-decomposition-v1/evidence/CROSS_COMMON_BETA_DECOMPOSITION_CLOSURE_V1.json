@@ -1,0 +1,166 @@
+{
+  "schema": "zeta-next-cross-common-beta-decomposition-closure-v1",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_FAILURE_NO_CANDIDATE",
+  "unit": "cross-common-beta-decomposition-064",
+  "family": "cross-common-beta-decomposition-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "micro",
+      "macro"
+    ]
+  },
+  "central_question": "Across the exact scheduled four-hour Cross lifecycles, does the unhedged common US30/US500 component contribute large, near-zero-mean variance that materially dilutes the signed relative component, and if so at what frozen lot-staircase capital can a three-leg 0.5/0.5 notional hedge first be represented within ten-percent weight tolerance?",
+  "verdict": "NO_MATERIAL_CROSS_COMMON_BETA_DILUTION",
+  "classification": "failure",
+  "gate_summary": {
+    "integrity_and_density": {
+      "passed": true,
+      "scheduled_lifecycles": 756,
+      "period_counts": [
+        276,
+        183,
+        179,
+        118
+      ],
+      "direction_counts": {
+        "BUY": 373,
+        "SELL": 383
+      },
+      "maximum_identity_error": 6.776263578034403e-21
+    },
+    "market_to_lifecycle_mapping": {
+      "passed": true,
+      "pooled_pearson": 0.9216798756159867,
+      "pooled_sign_concordance": 0.993368700265252,
+      "period_pearson": [
+        0.9730329224026799,
+        0.9899781566133247,
+        0.9849045198972328,
+        0.9963508304858929
+      ],
+      "period_sign_concordance": [
+        0.9963768115942029,
+        0.9835164835164835,
+        0.9943820224719101,
+        1.0
+      ]
+    },
+    "common_beta": {
+      "passed": false,
+      "pooled": {
+        "common_standalone_variance_ratio": 0.5074996872783821,
+        "removable_variance_fraction": 0.7426644248520842,
+        "common_mean": 0.0009355019610294256,
+        "near_zero_limit": 0.0007119814494902256,
+        "relative_mean": 0.000319041288225879,
+        "total_quality": 0.1762044854052799,
+        "relative_quality": 0.08833408145298305,
+        "required_relative_quality": 0.2114453824863359
+      },
+      "pooled_conditions_passed": {
+        "common_variance_ratio": true,
+        "removable_variance": true,
+        "common_mean_near_zero": false,
+        "relative_mean_positive": true,
+        "relative_quality_positive_and_improved": false
+      },
+      "period_pass_counts_out_of_four": {
+        "common_variance_ratio": 2,
+        "removable_variance": 4,
+        "common_mean_near_zero": 1,
+        "relative_mean_positive": 4,
+        "relative_quality_positive_and_improved": 0
+      },
+      "buy_direction_breadth": false,
+      "sell_direction_breadth": false,
+      "direction_failure": "Both directions passed common variance, removable variance and positive relative mean, but relative quality was lower than total quality in each direction."
+    },
+    "capital_granularity": {
+      "passed": true,
+      "all_756_feasible_by_us100_lot": 0.09,
+      "median_minimum_capital_usd": 550,
+      "p90_minimum_capital_usd": 1000,
+      "minimum_step_distribution": {
+        "0.04": 431,
+        "0.05": 194,
+        "0.06": 55,
+        "0.07": 39,
+        "0.09": 37
+      },
+      "reference_100_usd": "At 0.01 US100 lot, US30 is forced to 0.01 and realizes 1.67 to 3.08 of US100 notional instead of 0.5; zero of 756 states satisfy the US30 weight tolerance. US500 uses 0.01 or 0.02 and satisfies its tolerance in 26.59 percent of states.",
+      "portfolio_boundary": "A three-leg expression reserves 12 percent planned risk and all three slots, leaving zero capacity for the other five components."
+    }
+  },
+  "reason": "The common path is quantitatively large, but it is not a near-zero-mean nuisance component whose removal improves Cross quality. Its pooled signed mean exceeds the frozen near-zero bound, only one of four periods passes that bound, and relative-only quality is about half of total quality. All four periods and both directions fail the required quality improvement. The common component therefore carries part of the favorable signed return as well as variance; hedging it away is not supported by this bundle.",
+  "economic_translation": {
+    "preserve": [
+      "the existing directional single-leg US100 Cross construction",
+      "the descriptive lot-granularity observation that a 0.5/0.5 peer hedge becomes representable at median 550 USD and p90 1000 USD under current min/step sizes"
+    ],
+    "discard": [
+      "the claim that near-zero-mean common beta materially dilutes Cross",
+      "a capital-scaled three-leg Cross Lab candidate from Unit 064",
+      "any current portfolio insertion that would consume 12 percent risk and all three slots"
+    ],
+    "additional_observation_required": null,
+    "retained_seed": null,
+    "future_lab_candidate": null
+  },
+  "no_rescue": [
+    "alternate peer weights, OLS or rolling beta, PCA or volatility scaling",
+    "one-peer hedge, direction, period, volatility, feature-strength or outcome subgroup",
+    "stop-path tick reconstruction, cost rescue, tolerance relaxation or lot-search extension",
+    "immediate hedge EA, portfolio insertion, promotion or Live action"
+  ],
+  "whole_map_recomparison": {
+    "program_1": "Unit 064 closes the remaining external-memo market-structure proposal; Unit 059 and prior signal-state work provide no new decision-changing input for an adjacent beta or signal rescue.",
+    "program_2": "Unit 058 remains invalid and no new official event source or causal structure is ready.",
+    "program_3": "Unit 063 closed insufficient density; no favorable slot, time, session or clock subset may be selected.",
+    "program_4": "Unit 060 remains invalid without same-family execution repair, and the beta result does not create an exit-management bridge.",
+    "program_5": "Units 061 and 062 remain invalid; Unit 064 capital feasibility is descriptive only because the economic beta gate failed and a three-leg expression exhausts the book.",
+    "program_7": "No new cross-unit contradiction or decision bottleneck justifies another meta unit.",
+    "selected_successor": null,
+    "reason_no_successor": "All remaining external-memo proposals have now been finitely opened and closed. No currently ready question combines both a concrete unresolved portfolio bridge and material perspective distance, so forcing another unit would violate the connected-jump rule.",
+    "goal_status": "active_not_complete"
+  },
+  "evidence": {
+    "declaration": {
+      "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_COMMON_BETA_DECOMPOSITION_DECLARATION_V1.json",
+      "sha256": "EFB97E2F2CA1EC7B9BCA878D8801AE7FCBB15AD4A92A81E8EA0DC743A1240DD1"
+    },
+    "acquisition_receipt": {
+      "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_COMMON_BETA_DECOMPOSITION_ACQUISITION_RECEIPT_V1.json",
+      "sha256": "B255F9C248C7A61999D99DD03ED4F7B486B11E8CE0D8AAB095EE7F5E0679886E"
+    },
+    "lifecycle_metrics": {
+      "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_COMMON_BETA_DECOMPOSITION_LIFECYCLE_METRICS_V1.csv",
+      "bytes": 437504,
+      "rows": 756,
+      "sha256": "31B1E8C6D68399C00D0AFC584079FA41369597D75C33C56FFB4A6F536887C64F"
+    },
+    "result": {
+      "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_COMMON_BETA_DECOMPOSITION_RESULT_V1.json",
+      "bytes": 19315,
+      "sha256": "FFADCBAE68CE89DBA9EC1921C5BE06628313367073ACEF425414CA37F9801F92"
+    }
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "metric_reruns": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "broker_account_or_trade_queries": 0,
+    "program_6_opened": false,
+    "live_surface": "untouched"
+  },
+  "family_frozen": true,
+  "promotion": "none",
+  "next": "No successor is open. Keep the Frontier Goal active and wait for a future connected, perspective-distant question or explicit user direction."
+}

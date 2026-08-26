@@ -1,0 +1,528 @@
+{
+  "schema": "zeta-next-cross-common-beta-decomposition-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_FIXED_AGGREGATION",
+  "unit": "cross-common-beta-decomposition-064",
+  "declaration_sha256": "EFB97E2F2CA1EC7B9BCA878D8801AE7FCBB15AD4A92A81E8EA0DC743A1240DD1",
+  "acquisition_receipt_sha256": "B255F9C248C7A61999D99DD03ED4F7B486B11E8CE0D8AAB095EE7F5E0679886E",
+  "data_boundary_commit": "66dbb6247dca7f6d2ae9955039852563adf86910",
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "premetric_parser_corrections": 1,
+    "metric_reruns": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "account_or_trade_queries": 0,
+    "live_surface": "untouched"
+  },
+  "integrity": {
+    "checks": {
+      "immutable_inputs_exact": true,
+      "bar_rows_24417": true,
+      "bar_epochs_unique_strict": true,
+      "parser_has_zero_errors": true,
+      "all_lifecycles_exact_805": true,
+      "all_period_counts_exact": true,
+      "all_direction_counts_exact": true,
+      "all_volume_exact_0_01": true,
+      "stop_paths_exact_29": true,
+      "scheduled_exact_756": true,
+      "scheduled_period_counts_exact": true,
+      "coverage_at_least_0_90_each_period": true,
+      "all_synchronized_marks_present": true,
+      "feature_direction_nonzero": true,
+      "planned_risk_positive_finite": true,
+      "stressed_r_finite": true,
+      "decomposition_finite": true,
+      "identity_within_1e_15": true,
+      "each_period_at_least_100": true,
+      "each_direction_at_least_300": true,
+      "positive_contract_min_step": true
+    },
+    "all_pass": true,
+    "immutable_failures": [],
+    "parser_errors": [],
+    "row_errors": [],
+    "all_lifecycles": 805,
+    "period_counts": {
+      "P1_2022H2_2023": 286,
+      "P2_2024": 197,
+      "P3_2025": 193,
+      "P4_2026_YTD": 129
+    },
+    "direction_counts": {
+      "BUY": 399,
+      "SELL": 406
+    },
+    "stop_paths": 29,
+    "scheduled_lifecycles": 756,
+    "scheduled_period_counts": {
+      "P1_2022H2_2023": 276,
+      "P2_2024": 183,
+      "P3_2025": 179,
+      "P4_2026_YTD": 118
+    },
+    "scheduled_direction_counts": {
+      "BUY": 373,
+      "SELL": 383
+    },
+    "scheduled_coverage": {
+      "P1_2022H2_2023": 0.965034965034965,
+      "P2_2024": 0.9289340101522843,
+      "P3_2025": 0.927461139896373,
+      "P4_2026_YTD": 0.9147286821705426
+    },
+    "maximum_identity_error": 1.734723475976807e-18
+  },
+  "group_metrics": {
+    "pooled": {
+      "n": 756,
+      "mean": {
+        "signed_us100_total": 0.0012545432492553047,
+        "signed_peer_common": 0.0009355019610294256,
+        "signed_relative": 0.000319041288225879,
+        "stressed_r": 0.03973656170277009
+      },
+      "sample_variance": {
+        "signed_us100_total": 5.069175844182026e-05,
+        "signed_peer_common": 2.572605155681507e-05,
+        "signed_relative": 1.304479281388503e-05,
+        "stressed_r": 0.052031544085876326
+      },
+      "sample_standard_deviation": {
+        "signed_us100_total": 0.007119814494902256,
+        "signed_peer_common": 0.005072085523412935,
+        "signed_relative": 0.0036117575796120413,
+        "stressed_r": 0.22810423951754236
+      },
+      "sample_covariance_relative_common": 5.96045703556008e-06,
+      "variance_identity_error": 0.0,
+      "common_standalone_variance_ratio": 0.5074996872783821,
+      "removable_variance_fraction": 0.7426644248520842,
+      "covariance_allocated_common_share": 0.6250820560652331,
+      "quality_ratio": {
+        "signed_us100_total": 0.1762044854052799,
+        "signed_relative": 0.08833408145298305
+      },
+      "mapping": {
+        "pearson_total_to_stressed_r": 0.9216798756159867,
+        "sign_concordance": 0.993368700265252,
+        "nonzero_pairs": 754,
+        "excluded_zero_value_pairs": 2
+      }
+    },
+    "period": {
+      "P1_2022H2_2023": {
+        "n": 276,
+        "mean": {
+          "signed_us100_total": 0.0008070773999245219,
+          "signed_peer_common": 0.000559438044849584,
+          "signed_relative": 0.00024763935507493795,
+          "stressed_r": 0.010678385047320672
+        },
+        "sample_variance": {
+          "signed_us100_total": 6.760329701266958e-05,
+          "signed_peer_common": 3.527192175061489e-05,
+          "signed_relative": 1.4241292814685908e-05,
+          "stressed_r": 0.02328816211923886
+        },
+        "sample_standard_deviation": {
+          "signed_us100_total": 0.00822212241532985,
+          "signed_peer_common": 0.005939016901021152,
+          "signed_relative": 0.0037737637465381836,
+          "stressed_r": 0.15260459403058238
+        },
+        "sample_covariance_relative_common": 9.045041223684392e-06,
+        "variance_identity_error": 0.0,
+        "common_standalone_variance_ratio": 0.5217485434771703,
+        "removable_variance_fraction": 0.7893402623245293,
+        "covariance_allocated_common_share": 0.6555444029008497,
+        "quality_ratio": {
+          "signed_us100_total": 0.09815925367636892,
+          "signed_relative": 0.06562131911466554
+        },
+        "mapping": {
+          "pearson_total_to_stressed_r": 0.9730329224026799,
+          "sign_concordance": 0.9963768115942029,
+          "nonzero_pairs": 276,
+          "excluded_zero_value_pairs": 0
+        }
+      },
+      "P2_2024": {
+        "n": 183,
+        "mean": {
+          "signed_us100_total": 0.0016583628743556656,
+          "signed_peer_common": 0.001116194733743438,
+          "signed_relative": 0.0005421681406122275,
+          "stressed_r": 0.06544277453280783
+        },
+        "sample_variance": {
+          "signed_us100_total": 3.605845394832994e-05,
+          "signed_peer_common": 1.520749033287606e-05,
+          "signed_relative": 1.3750062066978192e-05,
+          "stressed_r": 0.06748568452981675
+        },
+        "sample_standard_deviation": {
+          "signed_us100_total": 0.00600486918661264,
+          "signed_peer_common": 0.0038996782345311594,
+          "signed_relative": 0.003708107612648019,
+          "stressed_r": 0.2597800695392484
+        },
+        "sample_covariance_relative_common": 3.5504507742378427e-06,
+        "variance_identity_error": 0.0,
+        "common_standalone_variance_ratio": 0.4217454901052517,
+        "removable_variance_fraction": 0.6186730000492706,
+        "covariance_allocated_common_share": 0.5202092450772611,
+        "quality_ratio": {
+          "signed_us100_total": 0.2761696920980142,
+          "signed_relative": 0.14621154433677735
+        },
+        "mapping": {
+          "pearson_total_to_stressed_r": 0.9899781566133247,
+          "sign_concordance": 0.9835164835164835,
+          "nonzero_pairs": 182,
+          "excluded_zero_value_pairs": 1
+        }
+      },
+      "P3_2025": {
+        "n": 179,
+        "mean": {
+          "signed_us100_total": 0.0013917780703937563,
+          "signed_peer_common": 0.001230054986054238,
+          "signed_relative": 0.00016172308433951824,
+          "stressed_r": 0.04831402180887652
+        },
+        "sample_variance": {
+          "signed_us100_total": 4.6240084038723244e-05,
+          "signed_peer_common": 2.5648966484072724e-05,
+          "signed_relative": 9.538523492406598e-06,
+          "stressed_r": 0.06834791320021423
+        },
+        "sample_standard_deviation": {
+          "signed_us100_total": 0.006800006179315078,
+          "signed_peer_common": 0.005064480870145796,
+          "signed_relative": 0.0030884500145552944,
+          "stressed_r": 0.2614343382193973
+        },
+        "sample_covariance_relative_common": 5.52629703112196e-06,
+        "variance_identity_error": 0.0,
+        "common_standalone_variance_ratio": 0.5546911736274804,
+        "removable_variance_fraction": 0.7937174274073838,
+        "covariance_allocated_common_share": 0.6742043005174322,
+        "quality_ratio": {
+          "signed_us100_total": 0.20467305965506363,
+          "signed_relative": 0.05236383414895731
+        },
+        "mapping": {
+          "pearson_total_to_stressed_r": 0.9849045198972328,
+          "sign_concordance": 0.9943820224719101,
+          "nonzero_pairs": 178,
+          "excluded_zero_value_pairs": 1
+        }
+      },
+      "P4_2026_YTD": {
+        "n": 118,
+        "mean": {
+          "signed_us100_total": 0.0014667174021209576,
+          "signed_peer_common": 0.0010880601981440915,
+          "signed_relative": 0.00037865720397686634,
+          "stressed_r": 0.0548251587367877
+        },
+        "sample_variance": {
+          "signed_us100_total": 4.0976153234830913e-05,
+          "signed_peer_common": 1.9887406486208826e-05,
+          "signed_relative": 1.4672882420554668e-05,
+          "stressed_r": 0.06869433872579483
+        },
+        "sample_standard_deviation": {
+          "signed_us100_total": 0.006401261847076006,
+          "signed_peer_common": 0.004459529850355172,
+          "signed_relative": 0.0038305198629630765,
+          "stressed_r": 0.2620960486649786
+        },
+        "sample_covariance_relative_common": 3.207932164033711e-06,
+        "variance_identity_error": 6.776263578034403e-21,
+        "common_standalone_variance_ratio": 0.48534098289402033,
+        "removable_variance_fraction": 0.6419165474985999,
+        "covariance_allocated_common_share": 0.5636287651963101,
+        "quality_ratio": {
+          "signed_us100_total": 0.22912941809917223,
+          "signed_relative": 0.09885269298250245
+        },
+        "mapping": {
+          "pearson_total_to_stressed_r": 0.9963508304858929,
+          "sign_concordance": 1.0,
+          "nonzero_pairs": 118,
+          "excluded_zero_value_pairs": 0
+        }
+      }
+    },
+    "direction": {
+      "BUY": {
+        "n": 373,
+        "mean": {
+          "signed_us100_total": 0.0013566105340329037,
+          "signed_peer_common": 0.0010321087618085038,
+          "signed_relative": 0.0003245017722244,
+          "stressed_r": 0.042614475276060014
+        },
+        "sample_variance": {
+          "signed_us100_total": 4.695743770164925e-05,
+          "signed_peer_common": 2.6616354201710372e-05,
+          "signed_relative": 1.0664813463537768e-05,
+          "stressed_r": 0.04225469578900212
+        },
+        "sample_standard_deviation": {
+          "signed_us100_total": 0.006852549722668873,
+          "signed_peer_common": 0.0051591040115227735,
+          "signed_relative": 0.0032657025987584613,
+          "stressed_r": 0.205559470200237
+        },
+        "sample_covariance_relative_common": 4.838135018200554e-06,
+        "variance_identity_error": 0.0,
+        "common_standalone_variance_ratio": 0.5668187086957589,
+        "removable_variance_fraction": 0.7728834028104733,
+        "covariance_allocated_common_share": 0.6698510557531161,
+        "quality_ratio": {
+          "signed_us100_total": 0.19797164397729353,
+          "signed_relative": 0.09936660256441215
+        },
+        "mapping": {
+          "pearson_total_to_stressed_r": 0.9119228834581832,
+          "sign_concordance": 0.9946380697050938,
+          "nonzero_pairs": 373,
+          "excluded_zero_value_pairs": 0
+        }
+      },
+      "SELL": {
+        "n": 383,
+        "mean": {
+          "signed_us100_total": 0.0011551409066390007,
+          "signed_peer_common": 0.0008414175310278691,
+          "signed_relative": 0.0003137233756111314,
+          "stressed_r": 0.03693378947604126
+        },
+        "sample_variance": {
+          "signed_us100_total": 5.444094405442139e-05,
+          "signed_peer_common": 2.4908412906662887e-05,
+          "signed_relative": 1.5396560243545376e-05,
+          "stressed_r": 0.06167269882810163
+        },
+        "sample_standard_deviation": {
+          "signed_us100_total": 0.0073784106726598915,
+          "signed_peer_common": 0.004990832887070342,
+          "signed_relative": 0.0039238450840400636,
+          "stressed_r": 0.24833988569720658
+        },
+        "sample_covariance_relative_common": 7.067985452106564e-06,
+        "variance_identity_error": 0.0,
+        "common_standalone_variance_ratio": 0.45753087752782945,
+        "removable_variance_fraction": 0.7171878535362218,
+        "covariance_allocated_common_share": 0.5873593655320257,
+        "quality_ratio": {
+          "signed_us100_total": 0.15655687354449957,
+          "signed_relative": 0.07995304832170286
+        },
+        "mapping": {
+          "pearson_total_to_stressed_r": 0.9315779433953406,
+          "sign_concordance": 0.9921259842519685,
+          "nonzero_pairs": 381,
+          "excluded_zero_value_pairs": 2
+        }
+      }
+    }
+  },
+  "market_to_lifecycle_mapping_gate": {
+    "pooled": {
+      "pearson": 0.9216798756159867,
+      "pearson_threshold": 0.8,
+      "pearson_pass": true,
+      "sign_concordance": 0.993368700265252,
+      "sign_concordance_threshold": 0.8,
+      "sign_concordance_pass": true,
+      "nonzero_pairs": 754
+    },
+    "period": {
+      "P1_2022H2_2023": {
+        "pearson": 0.9730329224026799,
+        "pearson_threshold": 0.65,
+        "pearson_pass": true,
+        "sign_concordance": 0.9963768115942029,
+        "sign_concordance_threshold": 0.7,
+        "sign_concordance_pass": true,
+        "nonzero_pairs": 276
+      },
+      "P2_2024": {
+        "pearson": 0.9899781566133247,
+        "pearson_threshold": 0.65,
+        "pearson_pass": true,
+        "sign_concordance": 0.9835164835164835,
+        "sign_concordance_threshold": 0.7,
+        "sign_concordance_pass": true,
+        "nonzero_pairs": 182
+      },
+      "P3_2025": {
+        "pearson": 0.9849045198972328,
+        "pearson_threshold": 0.65,
+        "pearson_pass": true,
+        "sign_concordance": 0.9943820224719101,
+        "sign_concordance_threshold": 0.7,
+        "sign_concordance_pass": true,
+        "nonzero_pairs": 178
+      },
+      "P4_2026_YTD": {
+        "pearson": 0.9963508304858929,
+        "pearson_threshold": 0.65,
+        "pearson_pass": true,
+        "sign_concordance": 1.0,
+        "sign_concordance_threshold": 0.7,
+        "sign_concordance_pass": true,
+        "nonzero_pairs": 118
+      }
+    },
+    "all_pass": true,
+    "zero_rule": "Rows with either exact-zero signed total or exact-zero stressed-R are excluded from sign concordance only."
+  },
+  "common_beta_gate": {
+    "pooled_conditions": {
+      "common_variance_ratio_at_least_0_50": true,
+      "removable_variance_at_least_0_25": true,
+      "common_mean_near_zero": false,
+      "relative_mean_positive": true,
+      "relative_quality_positive_and_improved": false
+    },
+    "period_conditions": {
+      "P1_2022H2_2023": {
+        "common_variance_ratio_at_least_0_50": true,
+        "removable_variance_at_least_0_25": true,
+        "common_mean_near_zero": true,
+        "relative_mean_positive": true,
+        "relative_quality_positive_and_improved": false
+      },
+      "P2_2024": {
+        "common_variance_ratio_at_least_0_50": false,
+        "removable_variance_at_least_0_25": true,
+        "common_mean_near_zero": false,
+        "relative_mean_positive": true,
+        "relative_quality_positive_and_improved": false
+      },
+      "P3_2025": {
+        "common_variance_ratio_at_least_0_50": true,
+        "removable_variance_at_least_0_25": true,
+        "common_mean_near_zero": false,
+        "relative_mean_positive": true,
+        "relative_quality_positive_and_improved": false
+      },
+      "P4_2026_YTD": {
+        "common_variance_ratio_at_least_0_50": false,
+        "removable_variance_at_least_0_25": true,
+        "common_mean_near_zero": false,
+        "relative_mean_positive": true,
+        "relative_quality_positive_and_improved": false
+      }
+    },
+    "period_condition_pass_counts": {
+      "common_variance_ratio_at_least_0_50": 2,
+      "removable_variance_at_least_0_25": 4,
+      "common_mean_near_zero": 1,
+      "relative_mean_positive": 4,
+      "relative_quality_positive_and_improved": 0
+    },
+    "period_breadth_pass": {
+      "common_variance_ratio_at_least_0_50": false,
+      "removable_variance_at_least_0_25": true,
+      "common_mean_near_zero": false,
+      "relative_mean_positive": true,
+      "relative_quality_positive_and_improved": false
+    },
+    "direction_conditions": {
+      "BUY": {
+        "common_variance_ratio_at_least_0_40": true,
+        "removable_variance_at_least_0_15": true,
+        "relative_mean_positive": true,
+        "relative_quality_above_total": false
+      },
+      "SELL": {
+        "common_variance_ratio_at_least_0_40": true,
+        "removable_variance_at_least_0_15": true,
+        "relative_mean_positive": true,
+        "relative_quality_above_total": false
+      }
+    },
+    "direction_breadth_pass": {
+      "BUY": false,
+      "SELL": false
+    },
+    "all_pass": false
+  },
+  "capital_granularity": {
+    "rounding": "Nearest valid min-plus-step peer lot by absolute notional-weight error from 0.5; exact error ties choose smaller lot.",
+    "percentile_method": "Median is the ordinary midpoint median; p90 is nearest rank ceil(0.90*n). Unsolved states make both overall capital gates fail.",
+    "reference_100_usd_us100_lot": 0.01,
+    "reference_summary": {
+      "US30": {
+        "selected_lot_counts": {
+          "0.01": 756
+        },
+        "realized_weight_min": 1.6665353384589479,
+        "realized_weight_median": 2.126771296770551,
+        "realized_weight_max": 3.082756213348227,
+        "absolute_error_median": 1.6267712967705512,
+        "absolute_error_p90_nearest_rank": 2.192604845500294,
+        "within_tolerance_share": 0.0
+      },
+      "US500": {
+        "selected_lot_counts": {
+          "0.01": 56,
+          "0.02": 700
+        },
+        "realized_weight_min": 0.33405907149041264,
+        "realized_weight_median": 0.5655016269237492,
+        "realized_weight_max": 0.6659496985832324,
+        "absolute_error_median": 0.0706217020421604,
+        "absolute_error_p90_nearest_rank": 0.15182815170918484,
+        "within_tolerance_share": 0.26587301587301587
+      }
+    },
+    "minimum_step_counts": {
+      "4": 431,
+      "5": 194,
+      "6": 55,
+      "7": 39,
+      "9": 37
+    },
+    "solved_within_0_01_to_0_20": 756,
+    "unsolved_within_0_01_to_0_20": 0,
+    "solved_by_us100_0_10": 756,
+    "solved_by_us100_0_10_share": 1.0,
+    "median_minimum_staircase_capital": 550.0,
+    "p90_minimum_staircase_capital_nearest_rank": 1000.0,
+    "current_three_leg_contract": {
+      "planned_risk_percent": 12,
+      "slots_consumed": 3,
+      "slots_available": 3,
+      "other_component_capacity": 0
+    },
+    "gate_checks": {
+      "at_least_90_percent_feasible_by_0_10": true,
+      "median_capital_no_more_than_850": true,
+      "p90_capital_no_more_than_1450": true,
+      "all_volume_min_and_step_positive_no_more_than_0_01": true
+    },
+    "all_pass": true
+  },
+  "lifecycle_metrics": {
+    "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_COMMON_BETA_DECOMPOSITION_LIFECYCLE_METRICS_V1.csv",
+    "rows": 756,
+    "bytes": 437504,
+    "sha256": "31B1E8C6D68399C00D0AFC584079FA41369597D75C33C56FFB4A6F536887C64F"
+  },
+  "verdict": "NO_MATERIAL_CROSS_COMMON_BETA_DILUTION",
+  "selected_peer_weights": null,
+  "selected_candidate": null,
+  "promotion": "none",
+  "outcomes_consumed": true,
+  "program_6_opened": false,
+  "next": "Freeze this family and recompare the whole Program 1-5 and 7 plus height map; do not automatically open hedge implementation, alternate weights, cost, subgroup, horizon or portfolio insertion."
+}
