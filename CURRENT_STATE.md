@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0155`
+- Latest state ID: `STATE-0156`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: Program 3 / meso Unit 063 `all-slot-evaluation-clock-shape-v1` declaration is frozen and awaits one dedicated market-data Portable, one US30 M30 bar acquisition and one fixed aggregation
+- Active research boundary: Program 3 / meso Unit 063 `all-slot-evaluation-clock-shape-v1` declaration and 19,604-row bar/parity evidence are frozen; exactly one fixed forward aggregation remains
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -782,6 +782,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - The valid pass requires both periods to meet density, positive pooled and typical-slot nonnative response, 60% positive supported-slot breadth, three-of-four positive clock quadrants, native-not-unique value, temporal/MAE/concentration limits, at least `1.00` non-overlap start/day and at least `0.86` incremental start/day. Every required gate must pass; no favorable time subset can rescue a failure.
 - A below-30-GiB retention sweep permanently removed only 2,642 files / 14,416,810,257 bytes of exact Git-ignored duplicate runtimes from closed invalid Units 060/062, preserving all tracked/evidence/canonical/Live material. Receipt SHA-256 is `FBFCAE83F7D67911AC7FDBECE367F7DA1B02020A83EF42047C19214158C669EE`.
 - Declaration SHA-256 is `787372343BF323E4B226722F2000729F19CD4584E9ABAAF11D5595B28178D8AF`. No dedicated runtime copy, MT5 initialization, bar export, forward return, MQL, compile, Tester, broker/account query or Live action has occurred. Commit and push this boundary before acquisition.
+
+## Frozen data boundary for RC16 all-slot evaluation clock shape Unit 063
+
+- Declaration commit `cd52ce5c594bf7b446c8ebc6d3e8b662b9afac41` reached local, origin and remote main before acquisition. Made exactly one 326,399,634-byte minimal physical copy into `lab/runtime/asec63-portable/`, with no link/junction, MQL binary, setting or cross-family runtime dependency.
+- Called only `initialize`, `symbol_select`, one `copy_rates_range` and `shutdown` through MetaTrader5 Python `5.0.5640`. No account, position, order, deal, history or trade API was called; no MQL compile or Tester path ran. The dedicated terminal PID `11608` was stopped by exact executable path after acquisition, leaving only pre-existing Live PID `15080`, untouched.
+- Froze `19,604` unique, strictly increasing US30 M30 bars from `2024-12-02 01:00` through `2026-07-31 23:30` in a 1,492,941-byte CSV at SHA-256 `1AAE390A264F6C7296A3689082ABD0CB9A3AE6B420754664EF16CFBED640EEF0`. OHLC and nonnegative volume/spread integrity passed; no row reaches the exclusive August boundary.
+- Canonical 2024/2025/2026 HCC hashes remained exact. The dedicated 2026 copy synchronized privately and changed to `BB0405ED...`; this is permitted only in that ignored copy and contributes no authority beyond the frozen CSV and parity gate.
+- Before any ATR, forward return or slot metric, all 151 known EA RC16 13:30 rows joined exactly, all 39/112 pass/miss flags matched and maximum feature difference was `0`. Acquisition/parity receipt SHA-256 is `46BB0A35937C73A0EB5861B6FE33E20E8355535A29AE1DF3F79158087B9EEC39`.
+- No outcome or candidate gate is open. Commit and push this bar-data boundary, then run the one permitted fixed aggregation with zero post-metric rerun.
 
 ## Required completion evidence
 

@@ -76,7 +76,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/native-hold-schedule-curve-v1/`: 닫힌 무효 Program 4 / meso Unit 060 family; 독립 source/config/EX5/runtime과 3개 보유시간 벡터는 정상 동결됐지만 첫 P1 NATIVE 상세 로그에서 US30·US100·US500 모두 생성 tick 대체가 확인되어 경제판정 전 중단, 나머지 11경로·후보·인접 환경구제 없음
 - `research/candidate-funnel-turnover-risk-contract-v1/`: 닫힌 무효 Program 5 / macro Unit 061 source-free family; `reserved_slots`가 active mask를 포함하는 union인데 선언이 active와 합산해 3-slot 체계에서 4·6을 만든 의미 오류로 risk-contract 판정 무효, 공식·정책 후보·같은-family 수리 없음
 - `research/market-stop-reverse-lot-sizing-v1/`: 닫힌 무효 Program 5 / micro→macro Unit 062 family; fit 상세 real-tick 로그는 깨끗했지만 필수 HTML이 생성되지 않았고 사전 전체 환경 manifest도 동기화 중 변해 중앙값·후보 SET·selection/latest를 열지 않음. native stop/lot 보존, 같은-family 실행 수리 없음
-- `research/all-slot-evaluation-clock-shape-v1/`: 활성 Program 3 / meso Unit 063 source-free family; 변경 없는 RC16 신호를 모든 실제 US30 M30 시각에 관찰해 2025 선택·2026 완료월 확인의 전체 시계 형태와 컴포넌트 로컬 회전율 전달을 판정하며 특정 시각 선택·거래·포트폴리오 추론은 금지
+- `research/all-slot-evaluation-clock-shape-v1/`: 활성 Program 3 / meso Unit 063 source-free family; 19,604개 US30 M30 바와 151개 네이티브 판단 완전 parity를 동결했고, 변경 없는 RC16 신호의 2025 선택·2026 완료월 전체 시계 형태와 컴포넌트 로컬 회전율 전달을 한 번 집계하며 특정 시각 선택·거래·포트폴리오 추론은 금지
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

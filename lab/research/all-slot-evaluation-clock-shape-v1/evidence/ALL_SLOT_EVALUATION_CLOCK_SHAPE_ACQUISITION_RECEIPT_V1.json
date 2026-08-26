@@ -1,0 +1,105 @@
+{
+  "schema": "zeta-next-all-slot-evaluation-clock-shape-acquisition-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_063_DATA_AND_PREMETRIC_PARITY_FROZEN_FORWARD_OUTCOMES_UNOPENED",
+  "unit": "all-slot-evaluation-clock-shape-063",
+  "declaration": {
+    "path": "lab/research/all-slot-evaluation-clock-shape-v1/evidence/ALL_SLOT_EVALUATION_CLOCK_SHAPE_DECLARATION_V1.json",
+    "sha256": "787372343BF323E4B226722F2000729F19CD4584E9ABAAF11D5595B28178D8AF",
+    "commit_pushed_before_acquisition": "cd52ce5c594bf7b446c8ebc6d3e8b662b9afac41"
+  },
+  "runtime_copy": {
+    "origin": "lab/runtime/tester-portable/",
+    "target": "lab/runtime/asec63-portable/",
+    "copies_used": 1,
+    "copy_scope": "terminal64.exe, Terminal.ico, complete Config, FPMarketsSC-Live US30 history, symbol database and tickers.dat; empty MQL5 and logs roots",
+    "files_immediately_after_copy": 29,
+    "bytes_immediately_after_copy": 326399634,
+    "links_or_junctions_immediately_after_copy": 0,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "files_after_terminal_acquisition": 44,
+    "bytes_after_terminal_acquisition": 332636426,
+    "links_or_junctions_after_terminal_acquisition": 0,
+    "ex5_or_ex4_files": 0,
+    "set_files": 0,
+    "tester_runs": 0,
+    "note": "Terminal startup created its own private logs, account/trade cache and empty Tester/logs directory. No generated cache content was inspected or used as evidence."
+  },
+  "market_data_acquisition": {
+    "python": "C:/Users/awdse/AppData/Local/Programs/Python/Python313/python.exe",
+    "metatrader5_module_version": "5.0.5640",
+    "terminal": "lab/runtime/asec63-portable/terminal64.exe",
+    "symbol": "US30",
+    "timeframe": "TIMEFRAME_M30",
+    "requested_from_utc_inclusive": "2024-12-01 00:00:00",
+    "requested_to_utc_exclusive": "2026-08-01 00:00:00",
+    "successful_acquisitions": 1,
+    "acquisition_corrections": 0,
+    "api_calls_executed": ["initialize", "symbol_select", "copy_rates_range", "shutdown"],
+    "account_position_order_deal_or_trade_api_calls": 0,
+    "orders": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "dedicated_terminal_pid": 11608,
+    "dedicated_terminal_stopped_after_shutdown": true,
+    "remaining_terminal_process": {
+      "pid": 15080,
+      "path": "live-dev/runtime/portable/terminal64.exe",
+      "classification": "pre-existing exact Live owner, observed only to exclude it from the stop target, untouched"
+    }
+  },
+  "canonical_history_after_acquisition": [
+    {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US30/2024.hcc", "bytes": 21317595, "sha256": "0F951D20E738BDABE4F8058A5F1546B1A3D928EB2684BDA535574856D6463940", "matches_declaration": true},
+    {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US30/2025.hcc", "bytes": 21195126, "sha256": "5D67AEE850AF1E0CD2521ECCF8872DE71080973C4838585FFEFEC34AF88E4C58", "matches_declaration": true},
+    {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US30/2026.hcc", "bytes": 14217381, "sha256": "E9778DE6189BF9C0860BB9C67F1AA40EFC47494A8C8A85033708DC2F0D71729B", "matches_declaration": true}
+  ],
+  "dedicated_history_after_acquisition": {
+    "2024_matches_canonical": true,
+    "2025_matches_canonical": true,
+    "2026_bytes": 14364879,
+    "2026_sha256": "BB0405ED88CFE09155C6D70CE7F3AC85F088847A67A60840B28C52AC934619F5",
+    "2026_changed_by_private_terminal_synchronization": true,
+    "interpretation": "The declaration permits synchronization only in the dedicated copy. The canonical inputs remained exact, the export is separately frozen, and exact EA-ledger parity governs the consumed 2026 interval."
+  },
+  "bar_export": {
+    "path": "lab/research/all-slot-evaluation-clock-shape-v1/evidence/US30_M30_BARS_20241201_20260801.csv",
+    "bytes": 1492941,
+    "sha256": "1AAE390A264F6C7296A3689082ABD0CB9A3AE6B420754664EF16CFBED640EEF0",
+    "rows_excluding_header": 19604,
+    "first_time_epoch": 1733101200,
+    "first_time_utc": "2024-12-02 01:00:00",
+    "last_time_epoch": 1785540600,
+    "last_time_utc": "2026-07-31 23:30:00",
+    "columns": ["time_epoch", "time_utc", "open", "high", "low", "close", "tick_volume", "spread", "real_volume"],
+    "unique_strictly_increasing_time": true,
+    "finite_positive_ohlc": true,
+    "ohlc_order_valid": true,
+    "nonnegative_volume_and_spread": true,
+    "rows_at_or_after_exclusive_boundary": 0
+  },
+  "premetric_rc16_parity": {
+    "candidate_ledger_sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+    "component_id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "known_rows_through_july": 151,
+    "passed": 39,
+    "not_met": 112,
+    "unique_decision_bars": 151,
+    "missing_bar_joins": 0,
+    "extra_bar_joins": 0,
+    "signal_flag_mismatches": 0,
+    "maximum_feature_absolute_difference": 0.0,
+    "declared_tolerance": 1e-10,
+    "result": "PASS"
+  },
+  "forward_outcome_state": {
+    "atr_values_emitted": 0,
+    "forward_returns_emitted": 0,
+    "mae_values_emitted": 0,
+    "slot_means_emitted": 0,
+    "daily_rates_emitted": 0,
+    "candidate_gates_cast": 0,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "result": "ACQUISITION_AND_PREMETRIC_PARITY_PASS_READY_FOR_ONE_FIXED_AGGREGATION"
+}
