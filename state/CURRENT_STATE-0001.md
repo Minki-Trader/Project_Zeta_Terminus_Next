@@ -1415,3 +1415,10 @@
 - Initial stop percent is normalized only by prior-24 completed H1 open-to-open RMS volatility from the pinned 8,139-row synchronized export. ATR, tick MAE, current incomplete bars, binding summary contrasts and counterfactual stop hits are excluded.
 - Complete passage requires broad global and local normalized-stop widening, local cost/R dilution, local high-capital stop rate at least two points lower with `3/4` period and `4/6` component breadth, and nonworse stressed R. Algebraic scale drift without broad hazard transmission retains no candidate.
 - Declaration SHA-256 is `B6DE50236DDD5F414189BC050559A868C7DD2EA6D602E1493929F436CD26739F`. No capital-tail, normalized-stop, cost or outcome metric has opened; one fixed aggregation, one premetric correction and zero reruns are budgeted. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0172 - 2026-08-27
+
+- The first Unit 069 invocation stopped at the immutable H1 physical-row assertion before emitting any capital quantile, geometry, cost or outcome metric. The implementation incorrectly divided the export's 24,417 synchronized timestamp rows by three and expected 8,139 physical rows.
+- Exact premetric inspection established 24,417 strictly increasing unique epoch/UTC timestamps, no blank US30/US100/US500 value, and 73,251 total symbol-price cells. Each physical row is one synchronized timestamp carrying all three index opens.
+- Used the one permitted premetric correction only to replace the physical-row assertion with 24,417. The input hash and bytes, time range, selected columns, all 2,233 lifecycles, prior-24 completed H1 formula, global/local contrasts, gates, verdict rules and exclusions are unchanged.
+- Correction receipt SHA-256 is `31A5B7A4490A38FBF62197DB47393B684FA4B9A1DFBF77FC38504ADB86FBDE63`. One successful fixed aggregation remains; no further correction or rerun is available. Program 6, broker/account state and Live remain untouched.

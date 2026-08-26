@@ -1,0 +1,55 @@
+{
+  "schema": "zeta-next-performance-endogenous-risk-geometry-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "PREMETRIC_H1_TOPOLOGY_CORRECTION_FROZEN",
+  "unit": "performance-endogenous-risk-geometry-069",
+  "declaration": {
+    "path": "lab/research/performance-endogenous-risk-geometry-v1/evidence/PERFORMANCE_ENDOGENOUS_RISK_GEOMETRY_DECLARATION_V1.json",
+    "sha256": "B6DE50236DDD5F414189BC050559A868C7DD2EA6D602E1493929F436CD26739F",
+    "unchanged": true
+  },
+  "failed_invocation": {
+    "stage": "immutable H1 physical-row topology assertion immediately after hash and byte verification",
+    "exception": "The implementation incorrectly divided the declared 24,417 synchronized time rows by three and expected 8,139 physical rows.",
+    "economic_metrics_emitted": 0,
+    "capital_quantiles_emitted": 0,
+    "geometry_metrics_emitted": 0,
+    "cost_metrics_emitted": 0,
+    "outcome_metrics_emitted": 0,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "corrected_topology": {
+    "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_THREE_INDEX_H1_BARS_20220701_20260821.csv",
+    "bytes": 1364263,
+    "sha256": "E1889F50F6238753408703C87959AFE27ED1DD69CEAD03679CA2618C1A2AC244",
+    "physical_time_rows": 24417,
+    "unique_time_epoch": 24417,
+    "unique_time_utc": 24417,
+    "nonblank_values_per_symbol": 24417,
+    "total_three_symbol_price_cells": 73251,
+    "first": "2022-07-01 01:00:00",
+    "last": "2026-08-20 23:00:00",
+    "ordering": "strictly increasing and unique",
+    "interpretation": "Each physical row is one synchronized timestamp carrying all three index opens. The declaration's input hash, byte size, time range, allowed US30/US100 columns and prior-24 formula remain unchanged."
+  },
+  "unchanged_contract": [
+    "all source, event and H1 hash/byte pins",
+    "all 2,233 lifecycle populations and Passive reconstruction semantics",
+    "prior-24 completed H1 open-to-open RMS formula and strict pre-entry cutoff",
+    "global quartiles, four local time blocks, geometry/cost/hazard gates and verdict rules",
+    "all exclusions and decision translations"
+  ],
+  "budget_after_freeze": {
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "successful_fixed_aggregations_used": 0,
+    "successful_fixed_aggregations_remaining": 1,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_h1_topology_correction_then_run_the_single_remaining_fixed_aggregation"
+}
