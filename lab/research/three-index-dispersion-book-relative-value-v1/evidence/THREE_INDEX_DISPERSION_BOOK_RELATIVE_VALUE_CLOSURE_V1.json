@@ -1,0 +1,97 @@
+{
+  "schema": "zeta-next-three-index-dispersion-book-relative-value-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "three-index-dispersion-book-relative-value-076",
+  "family": "three-index-dispersion-book-relative-value-v1",
+  "verdict": "AMBIGUOUS_THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "41CB3464FB696C5815B694F73BFB624F11ECD494ACA017C0320F9AF8D5C675DB",
+    "result_sha256": "8C915844EAFE07CDEFAFD8772302295836F00C28D43730A9F59E511D647958C3",
+    "result_bytes": 10547
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 0,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "h1_rows": 24417,
+    "eligible_daily_scores": 1067,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2233,
+    "excluded_lifecycles": 0,
+    "coverage_passed": true,
+    "density_passed": true,
+    "all_source_identities_passed": true
+  },
+  "market_state": {
+    "q1": 0.0005388211803165969,
+    "q2": 0.0007391484692651408,
+    "regime_date_counts": {"LOW":356,"MID":356,"HIGH":355}
+  },
+  "findings": {
+    "pooled_book_relative_value": {
+      "LOW": -0.44400612947659174,
+      "MID": -0.006790242209198327,
+      "HIGH": -0.4060557736703613,
+      "high_minus_low": 0.03795035580623046,
+      "interpretation": "The relationship is hump-shaped rather than monotonically increasing, and the HIGH-minus-LOW transfer misses the frozen +0.10 USD materiality threshold."
+    },
+    "cross_mechanism": {
+      "LOW_mean_usd": -0.04873431734317541,
+      "MID_mean_usd": 0.2457097378277147,
+      "HIGH_mean_usd": 0.10809363295880006,
+      "high_minus_low": 0.15682795030197547,
+      "positive_periods": 2,
+      "interpretation": "Cross passes pooled magnitude but peaks in MID and repeats positive HIGH-minus-LOW direction in only P3 and P4."
+    },
+    "natural_contrast": {
+      "passive_high_minus_low": -0.02941373937317815,
+      "relative_positive_periods": 3,
+      "cross_positive_periods": 2,
+      "interpretation": "Passive moves opposite Cross in pooled data and the two required period-breadth directions do not jointly pass."
+    }
+  },
+  "gates": {
+    "pooled_dispersion_passed": false,
+    "period_breadth_passed": false,
+    "strong_falsifier_triggered": false,
+    "complete_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "both current books, all six components and unconditional first-come allocation",
+      "the descriptive fact that Cross value is weakest in LOW and strongest in MID in the pooled CP2 population"
+    ],
+    "discard": [
+      "a stable monotone three-index-dispersion book-allocation field",
+      "the non-automatic conditional-allocation seed",
+      "any lookback, threshold, regime, period, component, allocation, lot, risk, slot, EA or Live candidate"
+    ],
+    "observation": "Internal dispersion contains some Cross association but not the stable book-level transmission required for an implementation decision.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "MID-only, Cross-only, P3/P4-only or LOW-versus-not-LOW rescue",
+    "12, 48, 72 or 120-H1 lookback and quartile/quintile regimes",
+    "correlation, beta, covariance, external-volatility or direction subgroup",
+    "book allocation, reservation, priority, removal, lot, risk, slot, EA or Live change"
+  ],
+  "same_family_successor": false,
+  "whole_map_recomparison_required_after_push": true,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_claude_hypothesis"
+}

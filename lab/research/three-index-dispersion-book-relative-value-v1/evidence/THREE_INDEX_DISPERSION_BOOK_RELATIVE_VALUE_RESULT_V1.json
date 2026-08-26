@@ -1,0 +1,145 @@
+{
+  "schema": "zeta-next-three-index-dispersion-book-relative-value-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_076_FIXED_AGGREGATION_COMPLETE",
+  "unit": "three-index-dispersion-book-relative-value-076",
+  "family": "three-index-dispersion-book-relative-value-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "declaration": {
+    "sha256": "41CB3464FB696C5815B694F73BFB624F11ECD494ACA017C0320F9AF8D5C675DB",
+    "commit": "d86de038b757a51f0765ba96714d05285046e660"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 0,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pins": 10,
+    "h1_rows": 24417,
+    "eligible_daily_scores": 1067,
+    "lifecycles": 2233,
+    "close_finals": 2027,
+    "external_close_finals": 206,
+    "mapped_lifecycles": 2233,
+    "excluded_lifecycles": 0,
+    "coverage": {
+      "P1_2022H2_2023": {"US30_BOOK":{"total":270,"mapped":270,"fraction":1.0},"US100_BOOK":{"total":499,"mapped":499,"fraction":1.0}},
+      "P2_2024": {"US30_BOOK":{"total":198,"mapped":198,"fraction":1.0},"US100_BOOK":{"total":356,"mapped":356,"fraction":1.0}},
+      "P3_2025": {"US30_BOOK":{"total":231,"mapped":231,"fraction":1.0},"US100_BOOK":{"total":323,"mapped":323,"fraction":1.0}},
+      "P4_2026_YTD": {"US30_BOOK":{"total":135,"mapped":135,"fraction":1.0},"US100_BOOK":{"total":221,"mapped":221,"fraction":1.0}}
+    },
+    "coverage_passed": true,
+    "density_passed": true,
+    "all_unit_050_count_and_net_identities_passed": true
+  },
+  "market_state": {
+    "lookback_intervals": 24,
+    "decision_time": "12:00",
+    "q1": 0.0005388211803165969,
+    "q2": 0.0007391484692651408,
+    "regime_date_counts": {"LOW":356,"MID":356,"HIGH":355}
+  },
+  "pooled": {
+    "books": {
+      "US30_BOOK": {
+        "LOW": {"n":255,"net_usd":113.18600000000181,"mean_net_usd":0.4438666666666738},
+        "MID": {"n":280,"net_usd":44.389000000000735,"mean_net_usd":0.15853214285714548},
+        "HIGH": {"n":299,"net_usd":144.452000000004,"mean_net_usd":0.4831170568562007}
+      },
+      "US100_BOOK": {
+        "LOW": {"n":484,"net_usd":-0.06750000000029821,"mean_net_usd":-0.0001394628099179715},
+        "MID": {"n":463,"net_usd":70.25649999999953,"mean_net_usd":0.15174190064794715},
+        "HIGH": {"n":452,"net_usd":34.83169999999943,"mean_net_usd":0.07706128318583945}
+      }
+    },
+    "components": {
+      "Cross": {
+        "LOW": {"n":271,"net_usd":-13.207000000000537,"mean_net_usd":-0.04873431734317541},
+        "MID": {"n":267,"net_usd":65.60449999999983,"mean_net_usd":0.2457097378277147},
+        "HIGH": {"n":267,"net_usd":28.860999999999617,"mean_net_usd":0.10809363295880006}
+      },
+      "Passive": {
+        "LOW": {"n":213,"net_usd":13.139500000000227,"mean_net_usd":0.061687793427231116},
+        "MID": {"n":196,"net_usd":4.651999999999684,"mean_net_usd":0.02373469387754941},
+        "HIGH": {"n":185,"net_usd":5.970699999999798,"mean_net_usd":0.03227405405405297}
+      }
+    },
+    "us100_relative_to_us30_mean_usd": {
+      "LOW": -0.44400612947659174,
+      "MID": -0.006790242209198327,
+      "HIGH": -0.4060557736703613
+    },
+    "high_minus_low": {
+      "relative_mean_usd": 0.03795035580623046,
+      "cross_mean_usd": 0.15682795030197547,
+      "passive_mean_usd": -0.02941373937317815,
+      "us100_mean_usd": 0.07720074599575742,
+      "us30_mean_usd": 0.03925039018952692
+    }
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "regimes": {
+        "LOW": {"US30_BOOK":{"n":75,"net_usd":48.512000000000015,"mean_net_usd":0.6468266666666669},"US100_BOOK":{"n":156,"net_usd":4.4140000000000175,"mean_net_usd":0.028294871794871907},"Cross":{"n":84,"net_usd":2.903499999999966,"mean_net_usd":0.034565476190475786},"Passive":{"n":72,"net_usd":1.5105000000000457,"mean_net_usd":0.0209791666666673},"relative_mean_usd":-0.618531794871795},
+        "MID": {"US30_BOOK":{"n":103,"net_usd":39.237000000000315,"mean_net_usd":0.38094174757281857},"US100_BOOK":{"n":198,"net_usd":15.267499999999966,"mean_net_usd":0.07710858585858568},"Cross":{"n":111,"net_usd":13.316999999999975,"mean_net_usd":0.11997297297297276},"Passive":{"n":87,"net_usd":1.9504999999999955,"mean_net_usd":0.022419540229885005},"relative_mean_usd":-0.3038331617142329},
+        "HIGH": {"US30_BOOK":{"n":92,"net_usd":41.24100000000064,"mean_net_usd":0.4482717391304417},"US100_BOOK":{"n":145,"net_usd":0.2019999999999874,"mean_net_usd":0.0013931034482757754},"Cross":{"n":91,"net_usd":-2.788500000000022,"mean_net_usd":-0.030642857142857388},"Passive":{"n":54,"net_usd":2.990500000000011,"mean_net_usd":0.055379629629629834},"relative_mean_usd":-0.44687863568216596}
+      },
+      "high_minus_low": {"relative_mean_usd":0.17165315918962903,"cross_mean_usd":-0.06520833333333317,"passive_mean_usd":0.034400462962962536,"us100_mean_usd":-0.026901768346596133,"us30_mean_usd":-0.19855492753622517}
+    },
+    "P2_2024": {
+      "regimes": {
+        "LOW": {"US30_BOOK":{"n":66,"net_usd":-4.959000000000524,"mean_net_usd":-0.07513636363637156},"US100_BOOK":{"n":128,"net_usd":15.391499999999724,"mean_net_usd":0.12024609374999784},"Cross":{"n":72,"net_usd":14.520499999999867,"mean_net_usd":0.20167361111110926},"Passive":{"n":56,"net_usd":0.8709999999998571,"mean_net_usd":0.015553571428568877},"relative_mean_usd":0.1953824573863694},
+        "MID": {"US30_BOOK":{"n":62,"net_usd":4.495999999998966,"mean_net_usd":0.07251612903224139},"US100_BOOK":{"n":112,"net_usd":11.870499999999769,"mean_net_usd":0.10598660714285509},"Cross":{"n":63,"net_usd":9.85749999999989,"mean_net_usd":0.15646825396825223},"Passive":{"n":49,"net_usd":2.0129999999998835,"mean_net_usd":0.04108163265305885},"relative_mean_usd":0.0334704781106137},
+        "HIGH": {"US30_BOOK":{"n":70,"net_usd":12.700000000000145,"mean_net_usd":0.1814285714285735},"US100_BOOK":{"n":116,"net_usd":15.16399999999972,"mean_net_usd":0.13072413793103208},"Cross":{"n":62,"net_usd":7.744499999999825,"mean_net_usd":0.12491129032257783},"Passive":{"n":54,"net_usd":7.419499999999898,"mean_net_usd":0.13739814814814627},"relative_mean_usd":-0.05070443349754142}
+      },
+      "high_minus_low": {"relative_mean_usd":-0.2460868908839108,"cross_mean_usd":-0.07676232078853143,"passive_mean_usd":0.1218445767195774,"us100_mean_usd":0.010478044181034235,"us30_mean_usd":0.25656493506494504}
+    },
+    "P3_2025": {
+      "regimes": {
+        "LOW": {"US30_BOOK":{"n":82,"net_usd":37.88100000000153,"mean_net_usd":0.46196341463416496},"US100_BOOK":{"n":143,"net_usd":-19.197500000000332,"mean_net_usd":-0.13424825174825408},"Cross":{"n":84,"net_usd":-23.561500000000528,"mean_net_usd":-0.2804940476190539},"Passive":{"n":59,"net_usd":4.364000000000198,"mean_net_usd":0.07396610169491862},"relative_mean_usd":-0.5962116663824191},
+        "MID": {"US30_BOOK":{"n":81,"net_usd":5.501000000000496,"mean_net_usd":0.06791358024691971},"US100_BOOK":{"n":102,"net_usd":27.686999999999465,"mean_net_usd":0.27144117647058297},"Cross":{"n":62,"net_usd":27.637999999999664,"mean_net_usd":0.44577419354838166},"Passive":{"n":40,"net_usd":0.04899999999979743,"mean_net_usd":0.0012249999999949357},"relative_mean_usd":0.20352759622366326},
+        "HIGH": {"US30_BOOK":{"n":68,"net_usd":36.92800000000011,"mean_net_usd":0.5430588235294134},"US100_BOOK":{"n":78,"net_usd":24.23849999999984,"mean_net_usd":0.3107499999999979},"Cross":{"n":47,"net_usd":26.17449999999982,"mean_net_usd":0.5569042553191451},"Passive":{"n":31,"net_usd":-1.9359999999999844,"mean_net_usd":-0.062451612903225304},"relative_mean_usd":-0.23230882352941545}
+      },
+      "high_minus_low": {"relative_mean_usd":0.3639028428530036,"cross_mean_usd":0.8373983029381991,"passive_mean_usd":-0.13641771459814392,"us100_mean_usd":0.444998251748252,"us30_mean_usd":0.08109540889524841}
+    },
+    "P4_2026_YTD": {
+      "regimes": {
+        "LOW": {"US30_BOOK":{"n":32,"net_usd":31.75200000000086,"mean_net_usd":0.9922500000000268},"US100_BOOK":{"n":57,"net_usd":-0.6754999999997373,"mean_net_usd":-0.011850877192977848},"Cross":{"n":31,"net_usd":-7.069499999999862,"mean_net_usd":-0.22804838709676975},"Passive":{"n":26,"net_usd":6.3940000000001245,"mean_net_usd":0.2459230769230817},"relative_mean_usd":-1.0041008771930047},
+        "MID": {"US30_BOOK":{"n":34,"net_usd":-4.844999999999052,"mean_net_usd":-0.14249999999997212},"US100_BOOK":{"n":51,"net_usd":15.431500000000304,"mean_net_usd":0.30257843137255497},"Cross":{"n":31,"net_usd":14.792000000000298,"mean_net_usd":0.47716129032259025},"Passive":{"n":20,"net_usd":0.6395000000000071,"mean_net_usd":0.03197500000000035},"relative_mean_usd":0.4450784313725271},
+        "HIGH": {"US30_BOOK":{"n":69,"net_usd":53.58300000000301,"mean_net_usd":0.776565217391348},"US100_BOOK":{"n":113,"net_usd":-4.772800000000133,"mean_net_usd":-0.0422371681415941},"Cross":{"n":67,"net_usd":-2.2695000000000105,"mean_net_usd":-0.03387313432835837},"Passive":{"n":46,"net_usd":-2.5033000000001273,"mean_net_usd":-0.05441956521739407},"relative_mean_usd":-0.818802385532942}
+      },
+      "high_minus_low": {"relative_mean_usd":0.18529849166006263,"cross_mean_usd":0.19417525276841138,"passive_mean_usd":-0.3003426421404758,"us100_mean_usd":-0.030386290948616255,"us30_mean_usd":-0.21568478260867885}
+    }
+  },
+  "gates": {
+    "pooled_checks": {
+      "relative_low_less_than_mid_less_than_high": false,
+      "relative_high_minus_low_at_least_0_10": false,
+      "cross_high_minus_low_at_least_0_10": true,
+      "us100_high_mean_above_low": true
+    },
+    "pooled_dispersion_passed": false,
+    "relative_positive_periods": 3,
+    "cross_positive_periods": 2,
+    "period_breadth_passed": false,
+    "strong_falsifier_triggered": false,
+    "complete_passed": false
+  },
+  "verdict": "AMBIGUOUS_THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_NO_CANDIDATE",
+  "interpretation": "Cross improves from LOW to HIGH in pooled data, but the book-relative relationship is hump-shaped with MID best, the pooled relative change is only +0.03795 USD per lifecycle, and Cross direction repeats in only two periods. Dispersion therefore does not supply a stable book-allocation field.",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_ambiguous_closure_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_claude_hypothesis"
+}

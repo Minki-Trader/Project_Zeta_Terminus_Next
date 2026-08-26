@@ -1580,3 +1580,12 @@
 - Lifecycle reconstruction uses OPEN/PASSIVE_FILL births and CLOSE/EXTERNAL_CLOSE finals, requires strict per-component alternation, exact 2,233 pairs, Unit 050 period/book net identities, at least 95% coverage and fixed cell density.
 - Cross is the mechanism lens; US100 mean minus US30 mean per lifecycle is the portfolio lens. Complete passage requires LOW < MID < HIGH relative value, at least `+$0.10` pooled HIGH-minus-LOW in relative value and Cross, and positive direction in at least `3/4` periods for both.
 - Declaration SHA-256 is `41CB3464FB696C5815B694F73BFB624F11ECD494ACA017C0320F9AF8D5C675DB`. No dispersion, regime, conditional book/component metric or verdict has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0192 - 2026-08-27
+
+- Declaration commit `d86de038b757a51f0765ba96714d05285046e660` reached origin before the one successful Unit 076 aggregation. All ten pins, 24,417 H1 rows, 1,067 eligible exact-12:00 dates, 2,233 strict lifecycle pairs, Unit 050 identities, full regime coverage and density gates passed.
+- Frozen dispersion q1/q2 values were `0.0005388212/0.0007391485`, defining `356/356/355` LOW/MID/HIGH dates. Every CP2 lifecycle mapped by its birth server date; no row was excluded.
+- Pooled US100-minus-US30 mean value was LOW/MID/HIGH `-$0.44401/-$0.00679/-$0.40606` per lifecycle. The shape is hump-like rather than monotone, and HIGH-minus-LOW `+$0.03795` missed the fixed `+$0.10` materiality gate.
+- Cross HIGH-minus-LOW was `+$0.15683` and US100 was `+$0.07720`, but Cross also peaked in MID and repeated positive direction in only `2/4` periods. Book-relative direction reached `3/4`; Passive's pooled HIGH-minus-LOW was `-$0.02941`.
+- Both complete gates failed and the strong falsifier did not trigger. Closed `AMBIGUOUS_THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_NO_CANDIDATE`: preserve both books and unconditional allocation; no MID, Cross, lookback, regime or allocation successor.
+- Result/closure SHA-256 values are `8C915844EAFE07CDEFAFD8772302295836F00C28D43730A9F59E511D647958C3` / `B307DEC9F0C707CF46F7063AE21F73A8A12318A95C1F5AA05968AE4907B72A61`. One aggregation, zero correction and zero rerun; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
