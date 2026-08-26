@@ -1,0 +1,354 @@
+{
+  "schema": "zeta-next-portfolio-drift-benchmark-attribution-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_065_DECLARATION_FROZEN_BEFORE_EXPOSURE_BETA_DRAWDOWN_OR_BENCHMARK_OUTCOME",
+  "unit": "portfolio-drift-benchmark-attribution-065",
+  "family": "portfolio-drift-benchmark-attribution-v1",
+  "title": "Portfolio Exposure, Drift Attribution and Drawdown-Matched Passive Hurdle",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "research_height": {
+    "primary": "macro",
+    "supporting": [
+      "meso"
+    ],
+    "transfer_path": "Exact lifecycle direction, symbol, entry notional and occupied time form the meso exposure path. That path fixes two portfolio-level market benchmarks, whose return is scaled to the exact Tester equity drawdown before comparison with the complete six-strategy book."
+  },
+  "central_question": "After reconstructing the frozen six-strategy portfolio's exact time-weighted US30/US100 exposure, does its actual and stressed economic path retain material value over a causal passive index benchmark matched to the portfolio's actual equity drawdown, or is a material share of the apparent return attributable to favorable index drift?",
+  "research_bundle": {
+    "name": "exposure_path_daily_beta_and_drawdown_matched_passive_hurdle",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: exact lifecycle-interval integration of signed and gross entry notional, occupied positions and symbol shares",
+      "transmission: daily stressed portfolio close P/L versus the signed exposure-weighted US30/US100 market return",
+      "portfolio falsification: signed-exposure and gross-long passive paths scaled to exact Tester equity drawdown, with equity-versus-balance drawdown reported separately"
+    ]
+  },
+  "why_now": {
+    "current_bottleneck": "The repository has extensive absolute-return, cost, slot and closed-drawdown evidence but no market benchmark. The complete evidence window is a strong index advance, two strategies are structurally long-only, and Unit 064 showed that Cross's common market path carries favorable signed mean rather than zero-mean noise.",
+    "connection_bridge": "A benchmark finding changes whether portfolio capital is paying for active economic value or for a costly, intermittent form of index exposure. It directly changes future capital, component-retention and risk-efficiency judgments without touching current Live behavior.",
+    "perspective_distance": "Unit 064 was Program 1 meso decomposition of one Cross lifecycle into relative and common paths. Unit 065 moves to Program 5 macro, the complete six-strategy book, continuous lifecycle exposure, daily portfolio attribution and an external passive decision hurdle.",
+    "decision_if_true": "Require future portfolio-level Lab claims about return, drawdown, lot, slot, allocation or component retention to report an equity-drawdown-matched passive hurdle alongside absolute economics. Preserve all prior unit files and verdicts as scoped raw evidence; open no passive Live sleeve or trading candidate.",
+    "decision_if_false": "Record that the complete strategy book retains material excess over both frozen passive hurdles and close the benchmark gap without changing current research gates or opening a nearby benchmark variant.",
+    "decision_if_ambiguous": "Preserve current interpretation, record the unresolved benchmark boundary and move away after closure. Do not change weights, sampling frequency, market proxy or risk-match definition."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Unit 064 just closed; no Cross hedge, beta weight or signal subgroup rescue is allowed.",
+    "program_2": "No new external event state has a cleaner portfolio decision bridge than the absent market benchmark.",
+    "program_3": "Clock and session work is recent and the new question does not select a time.",
+    "program_4": "No position-management action is selected; equity drawdown is only the risk denominator.",
+    "program_5": "Selected because the missing benchmark can reverse capital, risk-efficiency and component-retention conclusions across the whole shared book.",
+    "program_7": "The unit is economic attribution rather than a research-process audit.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare all programs and heights. Do not automatically open long-only sleeve, overnight drift, component removal, notional reweighting, alternate benchmark or sizing follow-up."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "all 2,233 frozen CXR2-equivalent lifecycles across the four fresh-100-dollar periods",
+      "all six components and both executed symbols US30 and US100",
+      "exact OPEN-to-CLOSE server-time intervals, OPEN price, volume, stop-implied direction and planned risk",
+      "actual and two-times-cost stressed CLOSE P/L",
+      "the four exact Tester reports for actual net, maximum balance drawdown and maximum equity drawdown",
+      "the immutable synchronized H1 US30/US100 opens already acquired by Unit 064"
+    ],
+    "excluded": [
+      "US500 as a traded benchmark leg because no portfolio lifecycle executes US500",
+      "entry-signal, component, direction, period or outcome subgroup selection",
+      "intrabar/tick equity reconstruction, spread, swap, financing, margin or broker-execution attribution",
+      "alternative benchmark weights, rolling beta, PCA, volatility timing, overnight-only or intraday-only decomposition",
+      "component removal, passive sleeve implementation, lot, slot, priority, admission, exit or Live change",
+      "MQL source, MetaEditor, Strategy Tester, new market acquisition, account, position, order or deal query"
+    ],
+    "automatic_followups_forbidden": [
+      "RC16-only or Return-only beta rescue",
+      "US30-only, US100-only, equal-weight or three-index benchmark substitution",
+      "alternate daily boundary, bar timeframe, drawdown definition, leverage cap or threshold",
+      "immediate component deletion, passive allocation, hedge, EA or Live action"
+    ]
+  },
+  "immutable_lifecycle_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_six_file_manifest_sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42",
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ],
+    "premetric_topology": {
+      "lifecycles": 2233,
+      "period_counts": {
+        "P1_2022H2_2023": 769,
+        "P2_2024": 554,
+        "P3_2025": 554,
+        "P4_2026_YTD": 356
+      },
+      "component_counts": {
+        "RC16": 272,
+        "RC4": 206,
+        "Cross": 805,
+        "Pressure": 118,
+        "Return": 238,
+        "Passive": 594
+      },
+      "symbol_counts": {
+        "US30": 834,
+        "US100": 1399
+      },
+      "actual_net_usd": 444.19,
+      "stressed_net_usd": 407.0477,
+      "stop_exits": 206,
+      "period_end_active": 0
+    }
+  },
+  "immutable_report_inputs": {
+    "economic_identity": "same passive-refusal-depth-observation-v1 paths as the lifecycle files",
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/backtests/passive-refusal-depth-observation-v1/p1-2022h2-2023.htm",
+        "bytes": 1517314,
+        "sha256": "9926AE2DB1D9E5CC30656B64EA0B57B9A58B9B3C8B59CC5729802B5A6DF55AD6"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/backtests/passive-refusal-depth-observation-v1/p2-2024.htm",
+        "bytes": 1095310,
+        "sha256": "9C19C8FCA2F8B63CEC9718880F71B179E9A78CA91ACCE161C1BF824C6AF30A9A"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/backtests/passive-refusal-depth-observation-v1/p3-2025.htm",
+        "bytes": 1101042,
+        "sha256": "544C75EA2A171C63DE636B150F76520FA34DA814D38C6C5DC53A52B0006FF3F0"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/backtests/passive-refusal-depth-observation-v1/p4-2026-ytd.htm",
+        "bytes": 721176,
+        "sha256": "C67A8058B4C0B2BB7E6D254A75E2A6A7D0EBF4031130C6007B3332163F8FD267"
+      }
+    ],
+    "required_fields": [
+      "total net profit",
+      "balance drawdown maximal amount",
+      "equity drawdown maximal amount",
+      "trades",
+      "deals"
+    ],
+    "report_net_must_match_event_actual_net": true
+  },
+  "immutable_market_input": {
+    "source_family": "cross-common-beta-decomposition-v1",
+    "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_THREE_INDEX_H1_BARS_20220701_20260821.csv",
+    "rows": 24417,
+    "bytes": 1364263,
+    "sha256": "E1889F50F6238753408703C87959AFE27ED1DD69CEAD03679CA2618C1A2AC244",
+    "first": "2022-07-01 01:00:00",
+    "last": "2026-08-20 23:00:00",
+    "used_columns": [
+      "time_utc",
+      "us30_open",
+      "us100_open"
+    ],
+    "unused_columns": [
+      "us500_open"
+    ],
+    "contract_size": {
+      "US30": 1.0,
+      "US100": 1.0
+    },
+    "new_acquisition": false
+  },
+  "periods": [
+    {
+      "id": "P1_2022H2_2023",
+      "from_inclusive": "2022-08-01 00:00:00",
+      "to_exclusive": "2024-01-01 00:00:00"
+    },
+    {
+      "id": "P2_2024",
+      "from_inclusive": "2024-01-01 00:00:00",
+      "to_exclusive": "2025-01-01 00:00:00"
+    },
+    {
+      "id": "P3_2025",
+      "from_inclusive": "2025-01-01 00:00:00",
+      "to_exclusive": "2026-01-01 00:00:00"
+    },
+    {
+      "id": "P4_2026_YTD",
+      "from_inclusive": "2026-01-01 00:00:00",
+      "to_exclusive": "2026-08-21 00:00:00"
+    }
+  ],
+  "predeclaration_outcome_exposure": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "known_prior_aggregates": "The repository already records 2,233 lifecycles, actual 444.19 USD, stressed 407.0477 USD, 206 stops, summed stressed closed drawdown 96.1393 USD and strong full-window index appreciation. These known aggregates did not set the new benchmark gates.",
+    "unopened_before_declaration": [
+      "signed/gross exposure integrals and weights",
+      "daily portfolio/market correlation or explained variance",
+      "period report equity drawdown values and equity/balance ratios",
+      "passive benchmark drawdown, risk-match scale, net, advantage or period breadth",
+      "any Unit 065 verdict"
+    ],
+    "consequence": "Unit 065 is exploratory economic attribution and may change future evidence requirements only. It cannot confirm, promote, delete or resize a strategy."
+  },
+  "frozen_lifecycle_reconstruction": {
+    "ordering": "Parse all rows in file order, merge the two P1 and two P3 files by server timestamp then stable source-file/source-row order, and preserve every distinct row. state_sequence is not an event key.",
+    "birth": "OPEN only. entry price is OPEN value_a, volume is OPEN value_b, planned risk and stop are parsed from detail.",
+    "close": "CLOSE or EXTERNAL_CLOSE. Actual lifecycle P/L is close value_a and stressed lifecycle P/L is close value_b.",
+    "pairing": "Each component has at most one active lifecycle. Pair each close to that component's single active OPEN; partial closes are forbidden by the frozen evidence and any partial event invalidates the unit.",
+    "symbol": "US30 or US100 is parsed from the exact component_id token.",
+    "direction": "BUY when positive entry price exceeds positive stop, SELL when positive stop exceeds entry price; equality or missing fields invalidates.",
+    "entry_notional": "absolute entry_price times volume times exact contract_size 1.",
+    "duration": "close server timestamp minus open server timestamp in exact seconds. Nonpositive duration invalidates.",
+    "no_outcome_imputation": true
+  },
+  "frozen_exposure_path": {
+    "interval_state": "At each exact OPEN or CLOSE boundary, integrate the active set until the next boundary. Each lifecycle carries constant entry notional and signed entry notional throughout its native life; market-level notional drift is intentionally excluded.",
+    "gross_notional_seconds": "sum over lifecycles of entry_notional times duration_seconds.",
+    "signed_notional_seconds": "sum over lifecycles of direction times entry_notional times duration_seconds.",
+    "net_long_ratio": "pooled signed_notional_seconds divided by pooled gross_notional_seconds.",
+    "signed_weights": "For each period and symbol, signed_notional_seconds divided by the sum of the absolute US30 and US100 signed_notional_seconds. Absolute weights sum to one and may contain one negative leg.",
+    "gross_long_weights": "For each period and symbol, gross_notional_seconds divided by total US30 plus US100 gross_notional_seconds. Both weights are nonnegative and sum to one.",
+    "descriptive_only": [
+      "time-weighted zero/one/two/three-position occupancy",
+      "symbol gross exposure shares",
+      "pooled and period signed weights"
+    ]
+  },
+  "frozen_daily_beta_attribution": {
+    "strategy_daily_return": "For each server date, sum all lifecycle close stressed P/L on that date and divide by the fresh 100 USD reference capital. Dates with no close receive zero.",
+    "market_daily_return": "For each symbol and server date after the first available date in a period, log of that date's last H1 open divided by the prior available date's last H1 open.",
+    "signed_composite": "period signed US30 weight times US30 daily return plus period signed US100 weight times US100 daily return.",
+    "mapping": "Pearson correlation and its square between strategy daily return and signed-composite daily return, pooled by concatenating the four period-local series and separately per period.",
+    "no_lag_or_window_search": true
+  },
+  "frozen_passive_benchmarks": {
+    "price_path": "Within each exact period, normalize each symbol's synchronized H1 open to one at the first available row. Signed benchmark return path is the frozen signed-weight combination; gross-long benchmark return path is the frozen gross-long-weight combination.",
+    "maximum_drawdown": "Maximum prior peak minus current value of each combined normalized return path, with starting value zero.",
+    "ending_return": "Last combined normalized return path value.",
+    "risk_match": "For each benchmark and period, scale USD notional by exact Tester maximum equity drawdown USD divided by benchmark raw maximum drawdown. The scaled benchmark therefore has the same H1-open maximum drawdown amount as the strategy report's actual equity path.",
+    "scaled_net_usd": "risk_match_notional_usd times benchmark ending_return.",
+    "strategy_actual_efficiency": "event actual net USD divided by report maximum equity drawdown USD.",
+    "strategy_stressed_optimistic_efficiency": "event stressed net USD divided by the same actual maximum equity drawdown USD; this is optimistic because stressed intralifecycle equity DD is unavailable.",
+    "benchmark_efficiency": "ending_return divided by raw maximum drawdown, algebraically equal to scaled_net_usd divided by matched equity drawdown USD.",
+    "no_leverage_cap_or_cost_adjustment": "The benchmark is a decision hurdle, not an executable candidate. Do not add trading cost, margin, leverage limit, rebalance or financing assumptions after seeing results."
+  },
+  "fixed_integrity_gate": [
+    "Declaration commit reaches origin before any exposure weight, daily correlation, report drawdown, benchmark return or verdict is calculated.",
+    "All six event files, four HTML reports and the H1 CSV retain exact bytes and hashes.",
+    "Reconstruct exactly 2,233 lifecycles with period counts 769/554/554/356, component counts 272/206/805/118/238/594, symbol counts 834/1,399, zero duplicate full rows, zero unmatched birth/close, zero same-component overlap and zero period-end active lifecycle.",
+    "Every lifecycle has finite positive price, stop, volume, planned risk, notional and duration plus one valid direction and one finite actual/stressed close value.",
+    "Actual and stressed sums equal 444.19 and 407.0477 USD within 0.0001; stop exits equal 206.",
+    "Each report retains its exact hash, reports the expected trade/deal count, and report net matches event actual net within 0.01 USD.",
+    "H1 epochs are unique and strictly increasing, both used prices are finite positive, every period has at least 100 synchronized daily market observations, and both benchmark raw drawdowns are positive finite in every period."
+  ],
+  "fixed_mechanism_gate": {
+    "net_long": "Pooled net_long_ratio is at least 0.20, at least three periods are at least 0.10, and no period is negative.",
+    "daily_mapping": "Pooled signed-composite explained variance is at least 0.20 and at least three periods are at least 0.10.",
+    "all_required": true
+  },
+  "fixed_benchmark_gate": {
+    "signed_primary": [
+      "Signed benchmark scaled net exceeds strategy actual net in at least three of four periods.",
+      "Signed benchmark scaled net exceeds the optimistic stressed-net comparison in at least three of four periods.",
+      "Pooled signed benchmark advantage over actual strategy net is at least max(20 USD, 20 percent of absolute pooled actual strategy net).",
+      "No one period contributes more than 60 percent of positive signed benchmark advantage."
+    ],
+    "gross_long_falsifier": [
+      "Gross-long benchmark scaled net exceeds strategy actual net in at least three of four periods.",
+      "Pooled gross-long benchmark advantage over actual strategy net is positive."
+    ],
+    "all_required_for_dominance": true
+  },
+  "fixed_strategy_excess_gate": {
+    "requirements": [
+      "Strategy actual net-to-equity-drawdown is at least 1.10 times both benchmark efficiencies in at least three periods.",
+      "Pooled strategy actual efficiency is at least 1.10 times both pooled benchmark efficiencies.",
+      "Strategy actual and stressed net are positive in all four periods."
+    ],
+    "all_required": true
+  },
+  "fixed_drawdown_basis_diagnostic": {
+    "metric": "report maximum equity drawdown amount divided by report maximum balance drawdown amount",
+    "material": "ratio at least 1.15 in at least three periods and sum(equity drawdown)/sum(balance drawdown) at least 1.15",
+    "role": "Reported independently. It cannot rescue a failed benchmark or mechanism gate, but a material result changes the required risk denominator for future portfolio-level Lab claims when the main drift or passive-hurdle verdict passes."
+  },
+  "fixed_verdict_rules": {
+    "drift_dominance": "PASS_MATERIAL_PORTFOLIO_DRIFT_ATTRIBUTION_AND_PASSIVE_HURDLE when integrity, complete mechanism and complete benchmark gates pass.",
+    "passive_hurdle_without_attribution": "PASS_DRAWDOWN_MATCHED_PASSIVE_HURDLE_WITHOUT_DRIFT_ATTRIBUTION when integrity and the complete benchmark gate pass but either mechanism condition fails.",
+    "strategy_excess": "NO_MATERIAL_PASSIVE_BENCHMARK_GAP_PRESERVE_ABSOLUTE_ECONOMICS when integrity and the complete strategy-excess gate pass while the benchmark gate fails.",
+    "ambiguous": "AMBIGUOUS_PORTFOLIO_BENCHMARK_NO_DECISION when integrity passes but none of the three prior verdict contracts is complete.",
+    "invalid": "INVALID_PORTFOLIO_EXPOSURE_REPORT_OR_BENCHMARK_RECONSTRUCTION_NO_VERDICT when any immutable input, lifecycle, report, market or numerical integrity condition fails."
+  },
+  "decision_translation": {
+    "drift_dominance": "Add a concise future portfolio-level benchmark/equity-DD evidence requirement to the authoritative operating direction. Do not invalidate prior scoped findings or open a trading candidate.",
+    "passive_hurdle_without_attribution": "Add the same passive-hurdle requirement but explicitly state that beta attribution was not established; the finding is opportunity-cost, not mechanism proof.",
+    "strategy_excess": "Keep current absolute economic gates and record that this fixed benchmark did not displace the strategy.",
+    "ambiguous_or_invalid": "Change no operating rule. Preserve the observation gap or reconstruction defect and rotate away."
+  },
+  "execution_budget": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before reading report drawdown values or calculating any exposure, beta or benchmark metric.",
+    "One implementation-only correction is allowed only if the fixed aggregation stops before emitting any exposure weight, correlation, drawdown or benchmark metric. After any such metric is emitted, make no correction or rerun.",
+    "Do not change benchmark weights, period edges, daily boundary, risk denominator, advantage threshold, concentration cap or attribution threshold.",
+    "Do not acquire lower-timeframe bars, impute intrabar equity, add costs/leverage/margin, select a symbol/component/direction/period subset or repair another unit.",
+    "Do not create MQL, run Tester, query broker/account state, touch Live, implement passive exposure or promote from this exploratory unit."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_declaration_then_run_exactly_one_fixed_source_free_exposure_beta_drawdown_benchmark_aggregation"
+}
