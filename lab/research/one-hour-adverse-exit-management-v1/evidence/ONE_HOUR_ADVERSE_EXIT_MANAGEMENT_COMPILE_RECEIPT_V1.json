@@ -1,0 +1,174 @@
+{
+  "schema": "zeta-next-one-hour-adverse-exit-management-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "COMPILED_RUNTIME_AND_MATRIX_FROZEN_BEFORE_OUTCOME",
+  "unit": "one-hour-adverse-exit-management-040",
+  "declaration": {
+    "path": "lab/research/one-hour-adverse-exit-management-v1/evidence/ONE_HOUR_ADVERSE_EXIT_MANAGEMENT_DECLARATION_V1.json",
+    "sha256": "0FD749028D0D0B22D51C1B85D1B22262F6EE194D3CB60A7E0961C0BAABE11D7B",
+    "boundary_commit": "1d6ad040742d47dd12fc879e27569454e6d7cbff"
+  },
+  "parent": {
+    "root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "git_tree": "605fcec39cd1ba5479c156f71935299ea3c1288b",
+    "source_manifest_sha256": "CFA02DAFCDA3028EA685EBE7DBA272A01C0BE7E1DF5B3B7C83E10BA2DB8D9954"
+  },
+  "owned_topology": {
+    "source_root": "lab/research/one-hour-adverse-exit-management-v1/mt5/src/",
+    "config_root": "lab/research/one-hour-adverse-exit-management-v1/mt5/config/tester/",
+    "runtime_root": "lab/runtime/oaem40-portable/",
+    "source_files": 16,
+    "source_bytes": 361178,
+    "source_manifest_algorithm": "Sort root-relative mq5/mqh paths ordinally, uppercase SHA-256 each file, join path|hash with LF, then SHA-256 UTF-8.",
+    "source_manifest_sha256": "D1B77BE1505FF3AE4A2B6038DF504FB9CF227ECBDE86118312CBA01F702E4919",
+    "config_files": 20,
+    "config_bytes": 12212,
+    "config_manifest_algorithm": "Sort root-relative ini/set paths ordinally, uppercase SHA-256 each file, join path|hash with LF, then SHA-256 UTF-8.",
+    "config_manifest_sha256": "72299FF2DF1305A566E17C210757D13038C5F51B250DF29E9129B6E6717690D8",
+    "ini_files": 16,
+    "set_files": 4,
+    "cross_family_source_includes": 0,
+    "live_includes_or_links": 0,
+    "runtime_symbolic_links_or_junctions": 0,
+    "runtime_other_family_ex5": 0,
+    "runtime_zeta_include_files": 15,
+    "tracked_source_equals_runtime_source": true,
+    "tracked_sets_equal_runtime_sets": true,
+    "one_drive_note": "Tracked OneDrive files may carry a cloud reparse attribute with empty LinkType and Target. Actual SymbolicLink/Junction objects are zero; those placeholder attributes are not source or runtime dependencies."
+  },
+  "parent_module_comparison": {
+    "unchanged_parent_include_modules": 12,
+    "changed_files": [
+      "src/Experts/ZetaOneHourAdverseExitManagementV1.mq5",
+      "src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "src/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh"
+    ],
+    "new_files": [
+      "src/Include/ZetaOaem/Position/ZetaOneHourAdverseExit.mqh"
+    ],
+    "change_boundary": "Independent Tester identity/state/Magic, one fixed enum input, experimental counters/reset, native-exit-then-overlay dispatch, Passive native reentry seal, and start/end contract telemetry only.",
+    "unchanged_economics": "Entry signals, signal times, order types/prices, base lot, protection, risk admission, native exits, RC4 compression, cost accounting and scheduler remain inherited."
+  },
+  "fixed_path_mapping": [
+    {"id":"CONTROL","kind":0,"set":"oaem40-control.set","threshold_r":null},
+    {"id":"EXIT_AT_OR_BELOW_0R","kind":1,"set":"oaem40-zero.set","threshold_r":0.0},
+    {"id":"EXIT_AT_OR_BELOW_NEG_025R","kind":2,"set":"oaem40-neg025.set","threshold_r":-0.25},
+    {"id":"EXIT_AT_OR_BELOW_NEG_050R","kind":3,"set":"oaem40-neg050.set","threshold_r":-0.5}
+  ],
+  "compile_sequence": [
+    {
+      "stage": 1,
+      "source_state": "Exact declared economic implementation before explicit START/END contract telemetry.",
+      "result": "0 errors, 0 warnings",
+      "elapsed_ms_reported": 2330,
+      "compile_log_sha256": "2D89F6597631441B10AE554847F79BBC1E839553EEB6C0D9B7AC29A5B049AC9E",
+      "disposition": "Superseded before any Tester invocation because the declaration's visible contract/swap integrity gate required explicit START and END rows."
+    },
+    {
+      "stage": 2,
+      "source_state": "Final source after adding only start/end US30 and US100 contract/swap telemetry.",
+      "result": "0 errors, 0 warnings",
+      "elapsed_ms_reported": 2079,
+      "compile_log_sha256": "B9F8FAEFF55192B96FFE9326EB249025DA6DBB537B18FF912728B0D63CFE09B0",
+      "disposition": "FINAL_FROZEN_BINARY"
+    }
+  ],
+  "pre_outcome_corrections": {
+    "source_corrections_used": 1,
+    "source_correction_scope": "Evidence-only contract telemetry; path kind, age, thresholds, ordering, action, periods and gates were unchanged.",
+    "runtime_copy_invocation": "The first physical-copy invocation stopped before market-data copying because the generic origin had no Sounds directory. The same partially created dedicated root was continued with a source-exists guard; it was not deleted, replaced or linked.",
+    "manifest_invocation": "The first pre-matrix manifest invocation stopped after the Bases manifest because Tester/bases has no symbols directory. A source-exists guard was added and the same immutable files were hashed successfully.",
+    "tester_invocations": 0,
+    "market_outcomes_opened": 0
+  },
+  "binary": {
+    "runtime_path": "lab/runtime/oaem40-portable/MQL5/Experts/ZetaOaem40/ZetaOneHourAdverseExitManagementV1.ex5",
+    "bytes": 201008,
+    "sha256": "C0AAA5739E8B180EA9E03A580CDA16C80996AE9BDA4C2E343ABF344AF971B8C9",
+    "terminal_path_characters": 149,
+    "agent_path_characters": 177
+  },
+  "compiler_runtime": {
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "sample_independence": [
+      {
+        "path": "terminal64.exe",
+        "origin_file_id": "0x0000000000000000008200000001b3e3",
+        "copy_file_id": "0x0000000000000000003d00000006f612",
+        "origin_hardlink_paths": 1,
+        "copy_hardlink_paths": 1
+      },
+      {
+        "path": "Bases/FPMarketsSC-Live/ticks/US30/202208.tkc",
+        "origin_file_id": "0x000000000000000000df00000002144c",
+        "copy_file_id": "0x0000000000000000000900000008a2b3",
+        "origin_hardlink_paths": 1,
+        "copy_hardlink_paths": 1
+      },
+      {
+        "path": "Tester/bases/FPMarketsSC-Live/ticks/US100/202208.tkc",
+        "origin_file_id": "0x000000000000000000d60000000416eb",
+        "copy_file_id": "0x0000000000000000000900000008a372",
+        "origin_hardlink_paths": 1,
+        "copy_hardlink_paths": 1
+      }
+    ],
+    "live_runtime_shared": false,
+    "other_family_runtime_shared": false
+  },
+  "pre_matrix_market_data": {
+    "scope": "tickers.dat when present, Bases symbols files when present, and all copied US30/US100 history and tick files. US500 and current Live runtime data are excluded.",
+    "manifest_algorithm": "Sort server-root-relative path|uppercase SHA-256, join with LF, SHA-256 UTF-8.",
+    "bases": {
+      "files": 131,
+      "bytes": 2515996622,
+      "sha256": "B35D945018EB97CA4CBA03FCBCF95CE3C6B6CE8E4674D60C1CFA16A7809497DB"
+    },
+    "tester_bases": {
+      "files": 110,
+      "bytes": 2116195329,
+      "sha256": "B0C5439E628C20C250BB1D884843E19DAA410608500F1A31BF440E2C47D25C2F"
+    }
+  },
+  "pre_matrix_symbol_database": {
+    "selected": {
+      "runtime_path": "Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+      "preserved_artifact": "lab/artifacts/ea-files/one-hour-adverse-exit-management-v1/pre-matrix/before-selected-81957644.dat",
+      "bytes": 18210,
+      "sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F"
+    },
+    "symbols": {
+      "runtime_path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "preserved_artifact": "lab/artifacts/ea-files/one-hour-adverse-exit-management-v1/pre-matrix/before-symbols-81957644.dat",
+      "bytes": 413696,
+      "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+    },
+    "mutation_rule": "Any change before or during the matrix invalidates the unread remainder; no environment-sync preflight or rebuild is authorized in Unit 040."
+  },
+  "visible_contract_anchor": {
+    "source": "Already-consumed valid passive-refusal-depth-observation-v1 START/END contract rows.",
+    "source_preflight_sha256": "0B49FD53C6DB5487A12F391F256360DD496921E564A85B5B7D7160794B44DB82",
+    "required_common": "contract_size=1.0, tick_size=0.01, volume_min=0.01, volume_step=0.01, stops_level=0, freeze_level=0, swap_mode=2, rollover3=5",
+    "required_us30_swap_long_short": "0.15/-4.65",
+    "required_us100_swap_long_short": "-4.31/1.81",
+    "run_rule": "Every run must print exactly one START and END row for US30 and US100. Common anchor fields must match, every START must equal its END, and all 16 normalized pairs must be identical before economics are accepted."
+  },
+  "frozen_run_matrix": {
+    "periods": 4,
+    "paths": 4,
+    "serial_runs": 16,
+    "model": 4,
+    "optimization": false,
+    "report_directory_precreated": "lab/runtime/oaem40-portable/reports/one-hour-adverse-exit-management-v1/",
+    "run_order": "P1 control/zero/neg025/neg050, then P2, P3 and P4 in the same path order.",
+    "source_config_binary_change_allowed_after_first_run": false
+  },
+  "compile_verdict": "PASSED",
+  "outcomes_consumed": false,
+  "next": "commit_and_push_this_frozen_source_config_compile_runtime_boundary_then_execute_the_16_declared_serial_paths_with_integrity_checks_before_economic_reading"
+}
