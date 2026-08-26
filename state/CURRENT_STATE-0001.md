@@ -1546,3 +1546,12 @@
 - Period rhos were `-0.60000/+0.54286/-0.08571/-0.65714`. Three periods had negative rho, lower high-frequency mean and positive low-frequency transfer, but median rho was `-0.34286` rather than at most `-0.40`; P2 was a strong reversal.
 - Both complete gates failed and the strong falsifier did not trigger. Closed `AMBIGUOUS_TURNOVER_VALUE_FRONTIER_NO_POLICY_CHANGE`: preserve all six components and the authoritative fill requirement; no new mandatory value hurdle or portfolio candidate.
 - Result/closure SHA-256 values are `F215613D488276F80D1456A73054F9E2C8A40CA1981A760E030791276F01D784` / `2846AD13EA978415F31B692466BFD6B4D7AAFAB24CA579C1B6966DE443E12676`. One synthesis, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0188 - 2026-08-27
+
+- Unit 074 closure commit `cbb53d901b9d89f888adc2299c043ed224bbfccc` reached origin before Programs 1-5 and 7 plus micro/meso/macro heights were recomputed. No adjacent turnover, threshold, component or allocation continuation opened.
+- Claude card 20 was not opened because Unit 057 explicitly closed the same first-peer profit-memory partial-close response and the current ledger cannot identify a causal partial-close fill price plus incremental execution cost. That remains an observation gap rather than a reopened mechanism.
+- Opened only Program 7 / meso→macro Unit 075 `component-outcome-concentration-robustness-v1` from external card 25. Units 072/074 provide the economic-role and rank bridge; individual lifecycle contribution distributions provide a new data role and height.
+- Pinned six CP2 and two binding event files plus Units 039/072/074 and equivalence authority. The fixed population is all `2,233` CP2 and `2,235` binding mapped final `CLOSE.value_b` rows, with exact source count/net reconciliation required.
+- Froze component-level top-5/top-10 gross-positive share, leave-top-10 sign, 15-pair rank reversals, Kendall tau-a, cross-basis rank contrast and residual US30/US100 book signs. Complete passage requires broad concentration, at least three sign losses, and at least three rank reversals with tau at most `0.60` in each basis.
+- Declaration SHA-256 is `C7B60D9DEBA467A029940A7C662EC9C8F35C14C2F398516D5132295EB8B9BC67`. No concentration, residual, rank or book result has opened. One fixed reconstruction, one premetric correction and zero reruns are budgeted. Program 6, broker/account state and Live remain untouched.
