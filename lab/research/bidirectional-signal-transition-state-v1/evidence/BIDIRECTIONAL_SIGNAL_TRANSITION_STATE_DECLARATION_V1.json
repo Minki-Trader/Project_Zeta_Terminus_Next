@@ -1,0 +1,192 @@
+{
+  "schema": "zeta-next-bidirectional-signal-transition-state-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_048_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "bidirectional-signal-transition-state-048",
+  "family": "bidirectional-signal-transition-state-v1",
+  "title": "Bidirectional Native-Signal Transition-State Audit",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure",
+    "korean_name": "진입 신호·시장 구조",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {"id":6,"name":"execution_recovery_broker_safety","korean_name":"실행·복구·브로커 안전"}
+  },
+  "question": "Within the bidirectional US30 and US100 strategy books, does an admitted birth whose native direction persists from the immediately prior same-component signal have materially different 2x-cost stressed R and stop incidence from a birth whose native direction reverses?",
+  "hypothesis": "Immediate same-component direction persistence and reversal are natural causal market-structure states. If one state represents a stable continuation or a productive regime turn, persistence-minus-reversal should show a material return/stop separation with coherent signs across periods and both component strategies inside the corresponding symbol book.",
+  "why_now": "After Program 3 Unit 047 closed, the recent durable sequence is Programs 7, 5, 2, 4 and 3. Program 1 is the only active macro program absent from that sequence. Outcome-free reconstruction identifies a dense sequential direction state across both bidirectional symbol books without relaxing the rejected cross-strategy same-day signal proposal or reopening absolute signal strength.",
+  "macro_rotation": {
+    "recent_durable_sequence": [7,5,2,4,3],
+    "program_1": "Selected for one broad two-symbol-book transition bundle after an independent density check.",
+    "program_2": "Unit 045 is closed invalid with no VIX repair or adjacent external context.",
+    "program_3": "Unit 047 just closed and no weekday, calendar or session successor may open.",
+    "program_4": "Unit 046 is closed invalid and no RC4 management repair or successor may open.",
+    "program_5": "Unit 044 is closed invalid and no nearby lot or risk-envelope work may open.",
+    "program_7": "Unit 043 recently supplied the evidence-readiness audit; another meta unit is not preferred over the underrepresented economic program.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not open another signal-history length, streak, time-decay, magnitude, direction subgroup, symbol subgroup or Program 1 successor automatically."
+  },
+  "research_bundle": {
+    "name": "same_component_direction_persistence_vs_reversal_by_bidirectional_symbol_book",
+    "variants": [
+      {"id":"US30_BIDIRECTIONAL_BOOK","strategies":["RC4","Pressure"],"treatment":"SAME_DIRECTION_PERSISTENCE","comparator":"OPPOSITE_DIRECTION_REVERSAL"},
+      {"id":"US100_BIDIRECTIONAL_BOOK","strategies":["Cross","Passive"],"treatment":"SAME_DIRECTION_PERSISTENCE","comparator":"OPPOSITE_DIRECTION_REVERSAL"}
+    ],
+    "context_only": ["FIRST_OBSERVED_SIGNAL","RC16","Return"],
+    "single_bundle": true,
+    "parameter_grid": false,
+    "history_length": 1,
+    "time_window": null
+  },
+  "distinction_from_closed_work": {
+    "native_signal_strength_016": "Unit 016 used absolute current SIGNAL_DECIDED.value_a magnitude. Unit 048 does not read or transform value_a and uses only the relation between two consecutive native direction values.",
+    "native_direction_asymmetry_034": "Unit 034 compared current BUY versus SELL. Unit 048 centers inside strategy-period cells and compares persistence versus reversal, so neither current direction can pass or fail by itself.",
+    "same_strategy_interbirth_gap_035": "Unit 035 measured elapsed time between admitted births. Unit 048 uses no elapsed threshold and lets skipped or expired signal opportunities update the immediately prior native direction state.",
+    "rejected_same_day_prior_signal_breadth": "The rejected proposal required two distinct earlier other-strategy signals on the same day and concentrated in Cross. Unit 048 uses exactly one prior signal from the same component, no day window and dense bidirectional symbol books.",
+    "one_direction_exclusion": "RC16 and Return emit only +1 native directions in this evidence, so their reversal state is structurally absent. They are reported as context and cannot pass, fail or rescue either bidirectional-book variant."
+  },
+  "boundary": {
+    "family_root": "lab/research/bidirectional-signal-transition-state-v1/",
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "current_path_hash_manifest": {"algorithm":"Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.","files":6,"bytes":5692770,"sha256":"B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"},
+    "files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only exact component identity, event ordering, SIGNAL_DECIDED.value_b direction, signal-to-birth linkage, fresh period and admitted birth identity were used. No close value, stressed R, stop association, transition-conditioned economics, gate or verdict was accessed.",
+    "signal_events": 2429,
+    "births": 2233,
+    "relations": {"FIRST_OBSERVED_SIGNAL":21,"SAME_DIRECTION_PERSISTENCE":1334,"OPPOSITE_DIRECTION_REVERSAL":878},
+    "period_relation_counts": {
+      "P1_2022H2_2023": {"FIRST_OBSERVED_SIGNAL":6,"SAME_DIRECTION_PERSISTENCE":464,"OPPOSITE_DIRECTION_REVERSAL":299},
+      "P2_2024": {"FIRST_OBSERVED_SIGNAL":5,"SAME_DIRECTION_PERSISTENCE":328,"OPPOSITE_DIRECTION_REVERSAL":221},
+      "P3_2025": {"FIRST_OBSERVED_SIGNAL":4,"SAME_DIRECTION_PERSISTENCE":333,"OPPOSITE_DIRECTION_REVERSAL":217},
+      "P4_2026_YTD": {"FIRST_OBSERVED_SIGNAL":6,"SAME_DIRECTION_PERSISTENCE":209,"OPPOSITE_DIRECTION_REVERSAL":141}
+    },
+    "strategy_relation_counts": {
+      "RC16": {"FIRST_OBSERVED_SIGNAL":4,"SAME_DIRECTION_PERSISTENCE":268,"OPPOSITE_DIRECTION_REVERSAL":0},
+      "RC4": {"FIRST_OBSERVED_SIGNAL":4,"SAME_DIRECTION_PERSISTENCE":93,"OPPOSITE_DIRECTION_REVERSAL":109},
+      "Cross": {"FIRST_OBSERVED_SIGNAL":3,"SAME_DIRECTION_PERSISTENCE":409,"OPPOSITE_DIRECTION_REVERSAL":393},
+      "Pressure": {"FIRST_OBSERVED_SIGNAL":4,"SAME_DIRECTION_PERSISTENCE":63,"OPPOSITE_DIRECTION_REVERSAL":51},
+      "Return": {"FIRST_OBSERVED_SIGNAL":2,"SAME_DIRECTION_PERSISTENCE":236,"OPPOSITE_DIRECTION_REVERSAL":0},
+      "Passive": {"FIRST_OBSERVED_SIGNAL":4,"SAME_DIRECTION_PERSISTENCE":265,"OPPOSITE_DIRECTION_REVERSAL":325}
+    },
+    "book_relation_counts": {
+      "US30_BIDIRECTIONAL_BOOK": {"FIRST_OBSERVED_SIGNAL":8,"SAME_DIRECTION_PERSISTENCE":156,"OPPOSITE_DIRECTION_REVERSAL":160},
+      "US100_BIDIRECTIONAL_BOOK": {"FIRST_OBSERVED_SIGNAL":7,"SAME_DIRECTION_PERSISTENCE":674,"OPPOSITE_DIRECTION_REVERSAL":718}
+    },
+    "book_period_persistence_reversal": {
+      "US30_BIDIRECTIONAL_BOOK": [[41,45],[35,39],[49,49],[31,27]],
+      "US100_BIDIRECTIONAL_BOOK": [[243,254],[172,182],[154,168],[105,114]],
+      "period_order": ["P1_2022H2_2023","P2_2024","P3_2025","P4_2026_YTD"]
+    },
+    "minimum_bidirectional_strategy_period_persistence": 11,
+    "minimum_bidirectional_strategy_period_reversal": 8,
+    "unconsumed_signal_overwrites": 81,
+    "unconsumed_latest_signals_at_end": 2,
+    "pending_passive_at_end": 0,
+    "link_faults": 0,
+    "eligible": true
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row; state_sequence is not a primary event key.",
+    "ordering": "Within each fresh period order by parsed server_time, numeric state_sequence, SIGNAL_DECIDED-before-birth and close-before-birth precedence, then source path and line.",
+    "exact_component_selection": "Use only the six complete component_id keys in strategy_identity. Prefix, suffix, substring, wildcard and inferred-family selectors are prohibited.",
+    "direction_state": "SIGNAL_DECIDED.value_b must be exactly -1 or +1. Reset prior direction at each fresh-period boundary; every signal event, including a later skipped or expired opportunity, updates the component's immediately prior direction.",
+    "market_signal_link": "Consume the latest same-component SIGNAL_DECIDED at the corresponding RC16, RC4, Cross, Pressure or Return OPEN; it must precede OPEN by no more than 2.1 minutes.",
+    "passive_signal_link": "Consume the same-time latest Passive SIGNAL_DECIDED at PASSIVE_PLACE; PASSIVE_FILL begins the lifecycle with that placement's transition state and PASSIVE_EXPIRE creates no lifecycle.",
+    "transition_roles": {
+      "FIRST_OBSERVED_SIGNAL": "No earlier same-component signal exists inside the fresh period.",
+      "SAME_DIRECTION_PERSISTENCE": "Current direction equals the immediately prior same-component signal direction.",
+      "OPPOSITE_DIRECTION_REVERSAL": "Current direction is the opposite of the immediately prior same-component signal direction."
+    },
+    "lifecycle": "OPEN or admitted PASSIVE_FILL begins one lifecycle with positive planned risk; CLOSE or EXTERNAL_CLOSE ends it, value_b is 2x-cost stressed net USD and EXTERNAL_CLOSE is a stop-loss exit.",
+    "stressed_r": "Close value_b divided by positive birth planned risk.",
+    "strategy_period_centering": "Within each of the 16 bidirectional strategy x P1-P4 cells, subtract the full-cell mean stressed R and stop rate from every persistence or reversal lifecycle before book aggregation. FIRST_OBSERVED_SIGNAL is included in the full-cell mean but excluded from the contrast."
+  },
+  "fixed_metrics": {
+    "context_report": "Report all six strategy relation counts and raw economics, including structurally one-direction RC16/Return and FIRST_OBSERVED_SIGNAL, without allowing them to pass or rescue.",
+    "variant_contrast": "For each symbol book report persistence-minus-reversal mean centered stressed R and centered stop, four period effects and two component-strategy effects.",
+    "period_contribution_share": "Absolute period contrast numerator divided by the sum of absolute four-period contrast numerators.",
+    "strategy_contribution_share": "Absolute component-strategy contrast numerator divided by the sum of absolute two-strategy contrast numerators."
+  },
+  "fixed_integrity_gate": [
+    "All six event files retain their exact byte lengths and hashes, contain 16,477 rows and zero exact duplicate full rows.",
+    "Reconstruct exactly 2,429 SIGNAL_DECIDED events, 81 overwritten unconsumed latest signals, two unconsumed latest signals at period ends and zero signal-direction or birth-link fault.",
+    "Reconstruct exactly 2,233 lifecycles with strategy totals 272/206/805/118/238/594, 407.0477 USD 2x stressed net and 206 stop exits with zero overlap, pending, risk or close fault.",
+    "Reproduce every frozen relation, period, strategy, book and book-period density, including exact zero reversal for RC16 and Return.",
+    "Reconstruct exactly 16 finite bidirectional strategy-period centering cells."
+  ],
+  "fixed_variant_gates": {
+    "apply_separately_to": ["US30_BIDIRECTIONAL_BOOK","US100_BIDIRECTIONAL_BOOK"],
+    "density": [
+      "Reproduce exact frozen book and book-period persistence/reversal counts.",
+      "Persistence and reversal each contain at least 150 pooled lifecycles and at least 27 in every period.",
+      "Each component strategy has at least 50 persistence and 50 reversal lifecycles pooled.",
+      "Every component strategy-period cell has at least eight persistence and eight reversal lifecycles."
+    ],
+    "information": [
+      "Absolute persistence-minus-reversal centered stressed-R difference is at least 0.10R.",
+      "Absolute persistence-minus-reversal centered stop difference is at least 0.05.",
+      "The pooled channels are economically concordant: positive R requires negative stop difference, while negative R requires positive stop difference.",
+      "Return and stop differences each share their pooled sign in at least three of four periods.",
+      "Return and stop differences each share their pooled sign in both component strategies.",
+      "No one period contributes more than 60% and no one component strategy more than 65% of the absolute centered-R contrast numerator."
+    ],
+    "pass_rule": "A variant passes only if every density and information requirement passes. Zero is never counted as a sign."
+  },
+  "fixed_bundle_gate": {
+    "both_same_direction": "PASS_COMMON_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_DIAGNOSIS",
+    "both_opposite_directions": "PASS_DIVERGENT_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_DIAGNOSIS",
+    "exactly_one": "PARTIAL_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_DIAGNOSIS_NO_SUCCESSOR",
+    "neither": "NO_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_PASSED",
+    "invalid": "INVALID_SIGNAL_TRANSITION_OR_LIFECYCLE_RECONSTRUCTION_NO_MARKET_STRUCTURE_VERDICT",
+    "ambiguous": "AMBIGUOUS_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_NO_SUCCESSOR",
+    "authority_limit": "Consumed-data association only. A pass selects no entry filter, signal change, direction rule, size, priority, EA or Live action and cannot open an adjacent successor automatically."
+  },
+  "execution_budget": {"successful_fixed_in_memory_aggregations":1,"implementation_only_pre_metric_correction_allowance":1,"tester_paths":0,"compile_paths":0,"orders":0,"retained_analysis_cli":false},
+  "stop_rules": [
+    "Commit and push this declaration before reading transition-conditioned close value, stressed R, stop association, centered effect, gate or verdict.",
+    "Run exactly one fixed in-memory aggregation over the six immutable files using complete component identities.",
+    "Do not alter history length, reset rule, transition roles, books, centering, metrics, density or information gates.",
+    "Do not add streak length, time decay, same-day window, signal magnitude, signed-current-direction subgroup, strategy-only subset, RC16/Return reinterpretation or alternate symbol book.",
+    "Do not modify MQL, compile, run MetaTrader, inspect Program 6, retain a CLI, query broker/account state or touch Live.",
+    "Close after one result and return to whole-map comparison without adjacent Program 1 signal work."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_bidirectional_signal_transition_aggregation"
+}

@@ -963,3 +963,11 @@
 - Monday residual R/stop were `-0.005443397944R/-0.008941840274`; the `0.10R/0.05` minima failed, channels were not economically concordant and return sign held in only two periods.
 - Friday residual R/stop were `+0.003147841176R/+0.016974001313`; both minima failed, channels were not concordant and return sign held in only two periods and three strategies.
 - Closed `NO_NEW_YORK_WEEK_EDGE_ENTRY_STATE_PASSED` with no retained context, filter, order, session, EA or Live action. Declaration/result/closure SHA-256 values are `EB97CC2DA453DC53B5B2286FD8F7CA26CB096AE2481F3427340214BECD7D3258` / `182E592E7A15842C7B638FB5FD962A0346A2A1E57AC5F624EB5A5EDC4A009AAB` / `596CBBBADE3B21E52B77F8F915567802B8D6E9F3F6A3BDC08C98B7DDECBC4A3B`. Next is a fresh whole-map comparison, not another weekday/calendar/session question. Program 6, MQL, Tester, broker state and Live remained untouched.
+
+## STATE-0119 - 2026-08-26
+
+- Recompared all macro programs after Unit 047. Recent durable allocation is `7 → 5 → 2 → 4 → 3`, so opened only Program 1 Unit 048 `bidirectional-signal-transition-state-v1` after a distinct outcome-free density check.
+- Froze one two-book bundle: immediate same-component direction persistence versus reversal in US30 bidirectional RC4+Pressure and US100 bidirectional Cross+Passive. It has history length one and no time window, streak, magnitude or direction subgroup.
+- Exact signal-to-birth reconstruction linked 2,429 native signals to all 2,233 births with zero fault. US30 persistence/reversal are `156/160`; US100 are `674/718`; every book-period has at least `27/27` and every bidirectional strategy-period cell at least `11/8`.
+- RC16 and Return are structurally +1-only with zero reversal and remain context only. This does not reopen Unit 016 strength, Unit 034 current direction, Unit 035 cadence or the rejected cross-strategy same-day signal proposal.
+- Each book independently requires material centered R and stop differences, economic concordance, three-of-four period and both-component breadth plus contribution caps. Declaration SHA-256 is `A3C2FDCF0114F50CC79D66252EF8CC4ACE924B48C91BD72E2BCF85A85330BD97`; conditioned outcomes remain unopened. One aggregation remains, then the whole map is compared again without adjacent Program 1 signal work. Program 6, MQL, Tester, broker state and Live remain untouched.
