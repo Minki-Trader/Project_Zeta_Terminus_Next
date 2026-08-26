@@ -1,0 +1,173 @@
+{
+  "schema": "zeta-next-server-calendar-drift-segmentation-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_071_DECLARATION_FROZEN_BEFORE_GAP_INTRADAY_OR_ACTIVE_WINDOW_RETURN",
+  "unit": "server-calendar-drift-segmentation-071",
+  "family": "server-calendar-drift-segmentation-v1",
+  "title": "Server-Calendar Gap, Intraday and Portfolio-Window Drift Attribution",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "macro"
+    ],
+    "transfer_path": "Server-calendar market return segments define the drift opportunity outside the portfolio's same-day lifecycle envelope; only broad, short-gap-supported omission can translate into a future macro sleeve question."
+  },
+  "central_question": "Across the three tracked indices and four frozen periods, does the server-calendar gap carry most positive index drift outside the current same-day portfolio window, and is that result broad and concentrated in ordinary short gaps rather than weekend or holiday jumps?",
+  "research_bundle": {
+    "name": "gap_intraday_active_window_and_long_gap_falsification",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: exact all-day log-return identity split into prior last-to-current first gap and current first-to-last intraday components",
+      "portfolio transfer: split intraday at exact 13:00 into pre-decision and 13:00-to-last active-envelope components",
+      "falsification: distinguish ordinary gaps no longer than six elapsed hours from weekend or holiday long gaps and require period/symbol breadth"
+    ]
+  },
+  "why_now": {
+    "current_bottleneck": "Unit 070 found that RC16 is neither pure pooled beta nor stable compression alpha. The next connected question is where the market drift that could confound or cap same-day components actually occurs.",
+    "connection_bridge": "Unit 018 proved 2,230 of 2,233 lifecycles close on their entry server date, Unit 064 found favorable signed common return, and Unit 065 rejected a simple continuous benchmark mapping. The immutable H1 path can now attribute the omitted session segments directly.",
+    "perspective_distance": "Unit 070 was Program 1 native signal specificity at one decision clock. Unit 071 moves to Program 2 meso external market-path segmentation and macro opportunity limits across all three indices, without conditioning on a strategy signal.",
+    "decision_if_complete": "Retain exactly one later, separately declared overnight-sleeve feasibility question; do not implement exposure, sizing or Live behavior here.",
+    "decision_if_long_gap_only": "Record that omitted drift exists but is dominated by weekend/holiday gaps, and retain no ordinary-night sleeve candidate.",
+    "decision_if_intraday": "Preserve the current same-day orientation as aligned with the main positive drift segment and close the overnight thesis.",
+    "decision_if_ambiguous_or_invalid": "Record the bounded observation gap and rotate away."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Unit 070 just closed ambiguous; no 2026-only, threshold or direction rescue opens.",
+    "program_2": "Selected because card 10 has a direct same-day-portfolio bridge, complete existing three-index data and a distinct external-market return-role decomposition.",
+    "program_3": "Order priority, blocked opportunity and cost-shape cards remain connected but do not explain the market return segments available to any order policy.",
+    "program_4": "MAE-clock and ARC-scale ideas remain unopened; Unit 069 variants stay forbidden.",
+    "program_5": "Book role and component removal depend on whether omitted drift is real but require later portfolio counterfactuals.",
+    "program_7": "Compounding attribution remains blocked by incomplete binding event paths.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare all programs and heights and continue with one distant connected unit. Do not automatically change the day boundary, first/last bar, 13:00 split, gap threshold, symbol or period."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "every server-calendar date after the first export date with positive finite opens for US30, US100 and US500",
+      "four frozen periods P1 2022-07-01 through 2023-12-31, P2 2024, P3 2025 and P4 2026 through 2026-08-20",
+      "previous observed date's last H1 open, current date's first and last H1 opens, and exact current-date 13:00 H1 open when present"
+    ],
+    "excluded": [
+      "exchange-local, New York, UTC-remapped or daylight-saving boundary alternatives",
+      "bar closes, ticks, spreads, financing, dividends, futures fair value or cash-index official sessions",
+      "directional strategy outcomes, signal conditioning, actual overnight execution, stops, fills, costs, sizing, allocation or portfolio simulation",
+      "new market data, runtime, MQL, Tester, broker/account query or Live action"
+    ],
+    "automatic_followups_forbidden": [
+      "alternate 00:00, 01:00, 13:30, 16:00 or New York session boundary",
+      "weekday, month, best index, year or positive-return subgroup rescue",
+      "weekend-only or ordinary-night-only trading implementation",
+      "overnight sleeve, hedge, lot, risk, slot, component, EA or Live change"
+    ]
+  },
+  "immutable_inputs": {
+    "h1_export": {
+      "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_THREE_INDEX_H1_BARS_20220701_20260821.csv",
+      "bytes": 1364263,
+      "sha256": "E1889F50F6238753408703C87959AFE27ED1DD69CEAD03679CA2618C1A2AC244",
+      "physical_rows": 24417,
+      "first": "2022-07-01 01:00:00",
+      "last": "2026-08-20 23:00:00",
+      "columns": [
+        "time_epoch",
+        "time_utc",
+        "us100_open",
+        "us30_open",
+        "us500_open"
+      ],
+      "time_semantics": "Terminal bar epoch formatted without timezone remap; its calendar date is the sole boundary authority for this unit."
+    },
+    "unit_018_result": {
+      "path": "lab/research/server-day-carry-burden-v1/evidence/SERVER_DAY_CARRY_BURDEN_RESULT_V1.json",
+      "bytes": 7744,
+      "sha256": "1C80CEFCAB293B61AED77CEFE415AE4A34826E22032B1E91F264849A210B1EE5",
+      "lifecycles": 2233,
+      "same_server_day": 2230,
+      "same_day_fraction": 0.998656516,
+      "role": "Frozen portfolio-boundary fact only; it supplies no market-return outcome."
+    }
+  },
+  "frozen_reconstruction": {
+    "period_assignment": "Assign each transition to the period containing the current server-calendar date. The first export date has no prior-date gap and is excluded from every component so identities share one population.",
+    "daily_points": "For each calendar date use the first and last physical H1 opens. Use the exact 13:00 row for the active-envelope split; do not synthesize it when absent.",
+    "gap_log_return": "log(current first open / previous observed date last open).",
+    "intraday_log_return": "log(current last open / current first open).",
+    "total_log_return": "log(current last open / previous observed date last open), required to equal gap plus intraday within 1e-12.",
+    "predecision_log_return": "log(current 13:00 open / current first open).",
+    "active_envelope_log_return": "log(current last open / current 13:00 open), required with predecision to equal intraday within 1e-12.",
+    "gap_duration": "Elapsed epoch hours from previous date's last row to current date's first row. SHORT_GAP is at most six hours; LONG_GAP is greater than six hours.",
+    "aggregation": "Sum log returns. Pooled values are equal-weight sums over all symbol-date observations; period values pool all three symbols, and symbol values pool all periods.",
+    "shares": "When aggregate total log return is positive, component share equals component log-return sum divided by total. When aggregate gap is positive, short-gap share equals short-gap log-return sum divided by total gap. Ratios may lie outside zero to one because other components can be negative and are not clipped."
+  },
+  "fixed_integrity_density_gate": {
+    "requirements": [
+      "All input byte/hash, schema, row, unique-time, ordering and positive-finite price pins pass.",
+      "Every included symbol-date passes the exact total equals gap plus intraday identity within 1e-12.",
+      "At least 95% of included dates in each period have an exact 13:00 row and pass intraday equals predecision plus active-envelope within 1e-12.",
+      "Each period has at least 140 included date transitions and each symbol has the same transition topology."
+    ],
+    "all_required": true
+  },
+  "fixed_overnight_dominance_gate": {
+    "requirements": [
+      "Pooled equal-weight total and gap log returns are positive and pooled gap share of total is at least 0.60.",
+      "Gap share is at least 0.50 in at least three of four pooled periods with positive total return.",
+      "Gap share is at least 0.50 in at least two of three symbols with positive total return.",
+      "Pooled active-envelope share of total is at most 0.40, and active-envelope share is at most 0.50 in at least three periods and two symbols with positive total return."
+    ],
+    "all_required": true
+  },
+  "fixed_short_gap_implementability_gate": {
+    "requirements": [
+      "Pooled short-gap log return is positive and carries at least 0.50 of the positive pooled gap sum.",
+      "Short-gap log return is positive in at least three of four periods and two of three symbols.",
+      "No single period contributes more than 0.60 of the pooled positive gap log-return sum."
+    ],
+    "all_required": true
+  },
+  "fixed_intraday_falsifier": {
+    "requirements": [
+      "The overnight thesis is strongly falsified when pooled total is positive, pooled intraday share is at least 0.60, and intraday share is at least 0.50 in at least three periods and two symbols with positive total return."
+    ]
+  },
+  "fixed_verdict_rules": {
+    "complete": "PASS_MATERIAL_ORDINARY_OVERNIGHT_DRIFT_OMISSION_RETAIN_ONE_FUTURE_SLEEVE_QUESTION when integrity/density, overnight dominance and short-gap implementability all pass.",
+    "long_gap_partial": "PARTIAL_OVERNIGHT_DRIFT_DOMINATED_BY_LONG_GAPS_NO_CANDIDATE when integrity/density and overnight dominance pass but short-gap implementability fails.",
+    "intraday": "NO_MATERIAL_OVERNIGHT_DRIFT_OMISSION_INTRADAY_DOMINATES when integrity/density and the intraday falsifier pass.",
+    "ambiguous": "AMBIGUOUS_SERVER_CALENDAR_DRIFT_SEGMENTATION_NO_CANDIDATE when integrity/density pass and none of the preceding rules applies.",
+    "invalid": "INVALID_SERVER_CALENDAR_DRIFT_SEGMENTATION_NO_VERDICT when any immutable, identity or density condition fails."
+  },
+  "decision_translation": {
+    "complete": "Retain one separately declared future source-free or isolated Lab overnight-sleeve feasibility question; do not implement automatically.",
+    "long_gap_partial": "Preserve the omitted-drift observation but retain no ordinary-night candidate because weekend/holiday gaps dominate.",
+    "intraday": "Preserve current same-day orientation and discard the overnight-drift thesis.",
+    "ambiguous_or_invalid": "Preserve only the bounded decomposition and rotate away."
+  },
+  "execution_budget": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before calculating any gap, intraday, predecision, active-envelope or component share.",
+    "One implementation-only correction is allowed only before any return component is emitted. After any new return metric, make no correction or rerun.",
+    "Do not change the server-calendar boundary, first/last row, exact 13:00 split, six-hour gap threshold, periods, symbols, breadth, concentration or verdict gates after outcomes.",
+    "Do not acquire data, create a runtime, modify MQL, compile, run Tester, query broker/account state or touch Live."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_declaration_then_run_exactly_one_fixed_server_calendar_drift_aggregation"
+}
