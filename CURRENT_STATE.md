@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0115`
+- Latest state ID: `STATE-0116`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: Program 4 Unit 046 `rc4-adverse-compression-resolution-state-v1`; declaration frozen and committed before any role-conditioned close economics, one fixed source-free aggregation remains
+- Active research boundary: none; Program 4 Unit 046 `rc4-adverse-compression-resolution-state-v1` is closed invalid with no management-state verdict, retained question or candidate
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -522,15 +522,17 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - The one correction allowance was exhausted, so no syntax repair or same-unit rerun is permitted. Closed `INVALID_VIX_SOURCE_OR_LIFECYCLE_RECONSTRUCTION_NO_CONTEXT_VERDICT`; this is no evidence for or against LOW/HIGH VIX economics and retains no question or candidate.
 - Declaration/result/closure SHA-256 values are `DFE6F868CBDD759E3FE24F30EF9F9A6BC2905822F0D616E832905F225DC38850` / `328833A0B46C1A017BD969660C9374D10FAB5B0898C37473A6DBEE10EBDFC8E5` / `087BD9AF56F3F1F4EE9BC64CDE9641C5045AEE02A9920235A38177BB9E9DD6A6`. No alternate VIX level/window/series, subset, MQL, Tester, Program 6 or Live surface opens; next is whole-map comparison.
 
-## Open RC4 adverse compression resolution-state Unit 046
+## Closed invalid RC4 adverse compression resolution-state Unit 046
 
 - Recompared the six active macro programs after Unit 045 and opened only Program 4 `포지션 관리·청산`. This is not a rescue of the rejected later-native-signal proposal: it audits an already emitted baseline management state and adds no mark, holding age, exit, threshold or source behavior.
 - The frozen RC4 mechanism evaluates once after eight held M30 bars, calls vote sum `<= -2` adverse and, when ordinary geometry permits, tightens the original stop to retain 25% of the original loss-side distance. Program 6 modify failure, recovery and broker-safety behavior is excluded.
 - One natural bundle contains exactly two variants: adverse vote state versus nonadverse checkpoint, and broker-applied compression versus ordinary price-geometry refusal inside adverse triggers. All outcomes are centered in the complete eight BUY/SELL x P1-P4 cells so the closed native-direction finding is not reopened.
 - Outcome-free reconstruction found 206 RC4 lifecycles with zero fault: no-checkpoint/nonadverse/compressed/refused/unresolved `20/117/42/27/0`, BUY/SELL `108/98`, and checkpoint votes `-3/-2/-1/0/+1/+2/+3 = 51/18/12/13/24/39/29`. Every judged role has the predeclared period and direction density.
-- The one fixed aggregation must reproduce six input hashes, 16,477 rows, 206 RC4 lifecycles, `+$79.0680` 2x stressed net, 53 stops, the exact role topology and eight nonempty centering cells before either variant can be judged.
-- A pass is diagnosis only: no RC4 change, removal, propagation, checkpoint/vote/fraction tuning, EA candidate or successor opens automatically. After closure Programs 1-5 and 7 are compared again; no adjacent RC4 or Program 4 unit may follow directly.
-- Declaration SHA-256 is `4A6B232832A5F8409555ECC5BF226BCD9692924041C63004EF270678D1089203`. Role-conditioned close values, stressed R, stop associations, gates and verdict remain unopened; MQL, Tester, Program 6, broker state and Live remain untouched.
+- The one fixed aggregation verified both baseline source pins, all six event hashes, 16,477 rows, zero exact duplicates and zero event-order/field-parse fault, but its component-prefix selector was not RC4-exclusive. It reconstructed 478 rather than 206 lifecycles, BUY/SELL `380/98` rather than `108/98`, and no-checkpoint `292` rather than `20`.
+- The exact surplus was 272 BUY/no-checkpoint lifecycles, matching the frozen RC16 population. Observed 2x stressed net/stops were `$193.5060/76` instead of the required `$79.0680/53`, so every BUY direction-period centering cell and both variant calculations were contaminated.
+- The invocation calculated downstream metrics before applying the failed integrity anchor. Therefore the declaration's implementation-only pre-metric correction allowance cannot authorize a selector repair or rerun; all apparent adverse/compression effects are retained only as non-authoritative disclosure.
+- Closed `INVALID_RC4_STATE_OR_LIFECYCLE_RECONSTRUCTION_NO_MANAGEMENT_VERDICT` with no RC4 change, removal, propagation, tuning, EA candidate, retained question or successor. Declaration/result/closure SHA-256 values are `4A6B232832A5F8409555ECC5BF226BCD9692924041C63004EF270678D1089203` / `99EBBE00CAF61BCE80811F7EA7372034AD5244251A40E348E41AF0B4E5226779` / `542B70F96F3F38C48833C2BA861E9D4ED51FE25E37AA73C5C5A7BA9ABB2A6381`.
+- Programs 1-5 and 7 must now be compared as a whole; Unit 046 is not repaired or replaced and no adjacent RC4/Program 4 work opens. MQL, Tester, Program 6, broker state and Live remained untouched.
 
 ## Required completion evidence
 
@@ -543,6 +545,6 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Current verdict
 
-Latest research verdict: `UNIT_046_DECLARATION_FROZEN_OUTCOMES_UNOPENED`
+Latest research verdict: `INVALID_RC4_STATE_OR_LIFECYCLE_RECONSTRUCTION_NO_MANAGEMENT_VERDICT`
 
 `LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_REALIZED_VARIANCE_ASYMMETRY_RESPONSE_032_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_033_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; NATIVE_DIRECTION_ASYMMETRY_VALUE_034_CLOSED_NO_FIELD; SAME_STRATEGY_INTERBIRTH_GAP_VALUE_035_CLOSED_NO_FIELD; US500_CLOSE_LOCATION_PRESSURE_RESPONSE_036_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; STRATEGY_OCCUPANCY_SLOT_VALUE_037_CLOSED_NO_INFORMATION_NO_PRIORITY_PROXY; US500_ORDINAL_ACCELERATION_RESPONSE_038_CLOSED_NO_DIRECTION_NO_PROTOTYPE`

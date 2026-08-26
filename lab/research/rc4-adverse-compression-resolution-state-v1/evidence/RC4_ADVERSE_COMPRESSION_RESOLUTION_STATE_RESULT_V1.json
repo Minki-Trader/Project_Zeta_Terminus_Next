@@ -1,0 +1,248 @@
+{
+  "schema": "zeta-next-rc4-adverse-compression-resolution-state-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_046_INVALID_INTEGRITY_NO_MANAGEMENT_VERDICT",
+  "unit": "rc4-adverse-compression-resolution-state-046",
+  "family": "rc4-adverse-compression-resolution-state-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "4A6B232832A5F8409555ECC5BF226BCD9692924041C63004EF270678D1089203",
+    "declaration_commit": "c992ef1",
+    "baseline_source_pins_exact": true,
+    "event_file_pins_exact": true,
+    "files": 6,
+    "bytes": 5692770
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_shell_or_aggregation_invocations": 0,
+    "pre_shell_tool_input_parse_failures": 1,
+    "pre_shell_tool_input_parse_failure_scope": "The first orchestration request contained a JavaScript template-literal parse error and never called PowerShell, opened an input or consumed the aggregation budget.",
+    "implementation_only_pre_metric_corrections": 0,
+    "same_unit_reruns": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false
+  },
+  "integrity": {
+    "total_data_rows": 16477,
+    "expected_total_data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "event_order_or_parse_faults": 0,
+    "reconstructed": {
+      "rc4_lifecycles": 478,
+      "direction_counts": {"BUY": 380, "SELL": 98},
+      "stressed_net_usd_2x": 193.50600000000338,
+      "stop_exits": 76,
+      "role_counts": {
+        "NO_CHECKPOINT": 292,
+        "NONADVERSE_NO_COMPRESSION": 117,
+        "ADVERSE_COMPRESSED": 42,
+        "ADVERSE_REFUSED": 27,
+        "ADVERSE_UNRESOLVED": 0
+      }
+    },
+    "required": {
+      "rc4_lifecycles": 206,
+      "direction_counts": {"BUY": 108, "SELL": 98},
+      "stressed_net_usd_2x": 79.068,
+      "stop_exits": 53,
+      "role_counts": {
+        "NO_CHECKPOINT": 20,
+        "NONADVERSE_NO_COMPRESSION": 117,
+        "ADVERSE_COMPRESSED": 42,
+        "ADVERSE_REFUSED": 27,
+        "ADVERSE_UNRESOLVED": 0
+      }
+    },
+    "surplus": {
+      "lifecycles": 272,
+      "BUY": 272,
+      "SELL": 0,
+      "NO_CHECKPOINT": 272,
+      "stressed_net_usd_2x": 114.43800000000338,
+      "stop_exits": 23
+    },
+    "role_period_counts_observed": {
+      "NO_CHECKPOINT": {"P1_2022H2_2023":79,"P2_2024":77,"P3_2025":88,"P4_2026_YTD":48},
+      "NONADVERSE_NO_COMPRESSION": {"P1_2022H2_2023":37,"P2_2024":26,"P3_2025":39,"P4_2026_YTD":15},
+      "ADVERSE_COMPRESSED": {"P1_2022H2_2023":11,"P2_2024":13,"P3_2025":11,"P4_2026_YTD":7},
+      "ADVERSE_REFUSED": {"P1_2022H2_2023":3,"P2_2024":9,"P3_2025":9,"P4_2026_YTD":6},
+      "ADVERSE_UNRESOLVED": {"P1_2022H2_2023":0,"P2_2024":0,"P3_2025":0,"P4_2026_YTD":0}
+    },
+    "role_direction_counts_observed": {
+      "NO_CHECKPOINT": {"BUY":279,"SELL":13},
+      "NONADVERSE_NO_COMPRESSION": {"BUY":71,"SELL":46},
+      "ADVERSE_COMPRESSED": {"BUY":16,"SELL":26},
+      "ADVERSE_REFUSED": {"BUY":14,"SELL":13},
+      "ADVERSE_UNRESOLVED": {"BUY":0,"SELL":0}
+    },
+    "direction_period_cells_observed": {
+      "P1_2022H2_2023_BUY": {"n":108,"mean_stressed_r":0.09060419713891779,"stop_rate":0.05555555555555555},
+      "P1_2022H2_2023_SELL": {"n":22,"mean_stressed_r":0.07436882266053851,"stop_rate":0.18181818181818182},
+      "P2_2024_BUY": {"n":102,"mean_stressed_r":0.026117799426913824,"stop_rate":0.1568627450980392},
+      "P2_2024_SELL": {"n":23,"mean_stressed_r":0.09195007039045998,"stop_rate":0.391304347826087},
+      "P3_2025_BUY": {"n":110,"mean_stressed_r":0.06343744900264024,"stop_rate":0.13636363636363635},
+      "P3_2025_SELL": {"n":37,"mean_stressed_r":0.049743351849418825,"stop_rate":0.32432432432432434},
+      "P4_2026_YTD_BUY": {"n":60,"mean_stressed_r":0.16413487609827052,"stop_rate":0.1},
+      "P4_2026_YTD_SELL": {"n":16,"mean_stressed_r":-0.07230221918189825,"stop_rate":0.5}
+    },
+    "exact_period_role_topology": false,
+    "exact_direction_role_topology": false,
+    "gate_passed": false,
+    "invalidating_condition": "The component prefix selector was not RC4-exclusive and admitted 272 additional BUY/no-checkpoint lifecycles. The exact surplus matches the frozen RC16 lifecycle and direction count, so the eight direction-period centering cells and every downstream metric are contaminated.",
+    "correction_authority": "NONE_AFTER_METRICS_CALCULATED"
+  },
+  "non_authoritative_natural_role_metrics": {
+    "warning": "Reported only as a complete disclosure of what the sole aggregation calculated. These values have no Program 4 evidentiary authority because integrity failed before the variant gates.",
+    "NO_CHECKPOINT": {
+      "n": 292,
+      "stressed_net_usd_2x": 69.28100000000197,
+      "mean_stressed_r": 0.03936140997400285,
+      "mean_centered_stressed_r": -0.036320383288207365,
+      "stop_rate": 0.136986301369863,
+      "mean_centered_stop": 0.012085093361588488,
+      "positive_rate": 0.5547945205479452,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [-0.02807246216983872,-0.006520905255082455],
+        "P2_2024": [-0.024955974716666662,0.025763665149854408],
+        "P3_2025": [-0.05724911676146387,0.012047688184051901],
+        "P4_2026_YTD": [-0.02975614751139873,0.020833333333333294]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [-0.01738527992857655,-0.009327941016745557],
+        "SELL": [-0.4426968323141303,0.47164175425044985]
+      }
+    },
+    "NONADVERSE_NO_COMPRESSION": {
+      "n": 117,
+      "stressed_net_usd_2x": 152.08100000000098,
+      "mean_stressed_r": 0.22663396188416485,
+      "mean_centered_stressed_r": 0.16025888814679173,
+      "stop_rate": 0.02564102564102564,
+      "mean_centered_stop": -0.16747887753855384,
+      "positive_rate": 0.7264957264957265,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [0.10268512553958468,-0.06947856947856948],
+        "P2_2024": [0.16329216219877585,-0.24703259230113456],
+        "P3_2025": [0.20802677453374058,-0.1718326718326719],
+        "P4_2026_YTD": [0.17281998961506342,-0.26000000000000006]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [0.14547100365032598,-0.09383562217033632],
+        "SELL": [0.18308366639133683,-0.2811456412590629]
+      }
+    },
+    "ADVERSE_COMPRESSED": {
+      "n": 42,
+      "stressed_net_usd_2x": 15.038000000000174,
+      "mean_stressed_r": 0.06853220488320705,
+      "mean_centered_stressed_r": 0.014851037525044117,
+      "stop_rate": 0.5238095238095238,
+      "mean_centered_stop": 0.26779335052992337,
+      "positive_rate": 0.4523809523809524,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [-0.07476834114680499,0.33011937557392107],
+        "P2_2024": [-0.0069372857710095276,0.33228408420224287],
+        "P3_2025": [-0.03021474757539028,0.27239222693768145],
+        "P4_2026_YTD": [0.26696318100273203,0.042857142857142864]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [0.023108059307531924,0.3232471776589424],
+        "SELL": [0.009769793351205465,0.2336679184505271]
+      }
+    },
+    "ADVERSE_REFUSED": {
+      "n": 27,
+      "stressed_net_usd_2x": -42.893999999999714,
+      "mean_stressed_r": -0.26584973482167734,
+      "mean_centered_stressed_r": -0.32475857663222,
+      "stop_rate": 0.4074074074074074,
+      "mean_centered_stop": 0.17847632178407966,
+      "positive_rate": 0.18518518518518517,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [-0.2530577936441721,-0.1818181818181818],
+        "P2_2024": [-0.2482001609957464,0.01326134318461684],
+        "P3_2025": [-0.30475107871975227,0.2938847938847938],
+        "P4_2026_YTD": [-0.5054578384496562,0.43333333333333335]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [-0.4176912220014857,0.2923478482302012],
+        "SELL": [-0.22467726623454928,0.055845447149794974]
+      }
+    },
+    "ADVERSE_UNRESOLVED": {
+      "n": 0,
+      "stressed_net_usd_2x": 0.0,
+      "mean_stressed_r": null,
+      "mean_centered_stressed_r": null,
+      "stop_rate": null,
+      "mean_centered_stop": null,
+      "positive_rate": null
+    }
+  },
+  "non_authoritative_variant_calculations": [
+    {
+      "id": "ADVERSE_VOTE_STATE",
+      "treatment_n": 69,
+      "comparator_n": 117,
+      "centered_stressed_r_difference": -0.2782985692050249,
+      "centered_stop_difference": 0.4003220863853209,
+      "period_effects_r_stop": {
+        "P1_2022H2_2023": [-0.21565834936439693,0.28989703989703985],
+        "P2_2024": [-0.26892789692535957,0.44880737335980314],
+        "P3_2025": [-0.36178287112409374,0.4538965538965538],
+        "P4_2026_YTD": [-0.2623588175903567,0.4830769230769231]
+      },
+      "direction_effects_r_stop": {
+        "BUY": [-0.3280692756203356,0.40266311276253275],
+        "SELL": [-0.25146289290204965,0.4555394026093459]
+      },
+      "expected_sign_periods_return_stop": [4,4],
+      "expected_sign_directions_return_stop": [2,2],
+      "maximum_period_centered_r_contribution_share": 0.40930588691937736,
+      "apparent_complete_gate_pass": true,
+      "authoritative_pass": false
+    },
+    {
+      "id": "COMPRESSION_APPLIED_STATE",
+      "treatment_n": 42,
+      "comparator_n": 27,
+      "centered_stressed_r_difference": 0.33960961415726415,
+      "centered_stop_difference": 0.08931702874584371,
+      "period_effects_r_stop": {
+        "P1_2022H2_2023": [0.1782894524973671,0.5119375573921029],
+        "P2_2024": [0.24126287522473688,0.319022741017626],
+        "P3_2025": [0.274536331144362,-0.02149256694711238],
+        "P4_2026_YTD": [0.7724210194523882,-0.3904761904761905]
+      },
+      "direction_effects_r_stop": {
+        "BUY": [0.4407992813090176,0.030899329428741185],
+        "SELL": [0.23444705958575474,0.17782247130073212]
+      },
+      "expected_sign_periods_return_stop": [4,2],
+      "expected_sign_directions_return_stop": [2,0],
+      "maximum_period_centered_r_contribution_share": 0.4617590935684194,
+      "compressed_stop_containment": {
+        "stopouts": 22,
+        "mean_stressed_r": -0.13522765361185932,
+        "share_no_worse_than_negative_0_50r": 1.0
+      },
+      "apparent_complete_gate_pass": false,
+      "authoritative_pass": false
+    }
+  ],
+  "bundle": {
+    "authoritative_passing_variants": [],
+    "authoritative_passing_count": 0,
+    "verdict": "INVALID_RC4_STATE_OR_LIFECYCLE_RECONSTRUCTION_NO_MANAGEMENT_VERDICT",
+    "authority_limit": "No Program 4 economic inference is permitted. The selector failure contaminated the full-cell means used by both variants, and metrics were already calculated before the failed anchor was applied, so the declaration's pre-metric correction allowance cannot authorize a repair or rerun."
+  },
+  "retained_question": null,
+  "selected_candidate": null,
+  "same_unit_repair_or_rerun": false,
+  "nearby_rescue": false,
+  "adjacent_rc4_or_program_4_successor": false,
+  "next": "close_unit_then_recompare_programs_1_to_5_and_7_without_adjacent_rc4_or_program_4_followup",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED"
+}
