@@ -1,0 +1,57 @@
+{
+  "schema": "zeta-next-us100-book-economic-role-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "PREMETRIC_IMPLEMENTATION_CORRECTION_FROZEN",
+  "unit": "us100-book-economic-role-072",
+  "family": "us100-book-economic-role-v1",
+  "failed_invocation": {
+    "stage": "equivalence top-level schema assertion after byte/hash load and before any book aggregation or economic metric output",
+    "exit_code": 1,
+    "exception": "KeyError: schema",
+    "economic_metrics_emitted": 0,
+    "synthesis_verdict_emitted": false,
+    "successful_fixed_syntheses_used": 0,
+    "metric_reruns_used": 0
+  },
+  "cause": "The immutable equivalence document uses schema_version rather than a schema string. The declaration pinned the correct file bytes/hash but the transient extractor asserted a nonexistent top-level key.",
+  "correction": {
+    "remove": "equivalence['schema'] == 'zeta-next-v7-equivalence-v1'",
+    "replace_with": [
+      "equivalence['schema_version'] == 1",
+      "equivalence['project_id'] == 'project-zeta-terminus-next'",
+      "equivalence['verdict'] == 'ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED'",
+      "the exact observed top-level key set"
+    ],
+    "observed_top_level_keys": [
+      "schema_version",
+      "project_id",
+      "release_id",
+      "portfolio_id",
+      "execution_version",
+      "parent_execution",
+      "tested_at",
+      "environment",
+      "verdict",
+      "identity_normalization",
+      "diagnostic_normalization",
+      "windows",
+      "remaining_gates"
+    ]
+  },
+  "unchanged": [
+    "all three immutable file byte/hash pins",
+    "US30 and US100 book membership",
+    "latest and binding component aggregation",
+    "Unit 050 four-period book economics",
+    "directional stress-variant semantics",
+    "profit, insurance, reverse-direction and latest-window gates",
+    "verdict rules, exclusions and stop conditions"
+  ],
+  "implementation_only_pre_metric_corrections_used": 1,
+  "successful_fixed_syntheses_remaining": 1,
+  "metric_reruns_used": 0,
+  "new_outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_correction_then_run_the_single_remaining_fixed_role_synthesis"
+}

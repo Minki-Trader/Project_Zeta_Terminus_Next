@@ -1488,3 +1488,10 @@
 - Froze four-period CP2 book net, independent binding/latest component blocks and both original Unit 050 directional stress variants as separate evidence roles. Samples are not pooled and no lifecycle is reconstructed.
 - US100-insures-US30 means exactly the `US30_STRESS_US100_COUNTERBOOK` variant. The reverse label means US30 insures US100. Insurance-only requires broad profit service to be absent and the former directional gate to pass; a negative latest window cannot override positive `3/4` period plus binding evidence.
 - Declaration SHA-256 is `B80628EC159985A47EDC8E176AEDF8DBC7252EB100AA7428D8A4E7B002856C22`. The source outcomes are prior evidence, while all new cross-evidence role metrics and verdict remain unopened. One deterministic synthesis, one premetric correction and zero reruns are budgeted. No data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0181 - 2026-08-27
+
+- Declaration commit `215c34bdc1e424582b9a85ca059c0e81dd7e4c25` reached origin before the first Unit 072 invocation. All three immutable byte/hash pins passed, then execution stopped at the equivalence top-level schema assertion before any book aggregation or new economic metric.
+- The pinned equivalence file has no `schema` string; it uses `schema_version: 1` with project ID `project-zeta-terminus-next` and verdict `ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED`. Used the one permitted premetric implementation correction to freeze those values and the exact observed top-level key set.
+- Correction receipt SHA-256 is `45FC19C03F93C279EBA4ECF222D9AA6A245DCE8F0405F5D95EF44A4F3D5E6FAF`. Every file pin, book mapping, latest/binding aggregation, Unit 050 period and directional semantics, gate, verdict, exclusion and stop condition is unchanged.
+- No fill/net share, book per-lifecycle value, profit-service gate, insurance-direction gate or verdict was emitted. One successful synthesis remains, one premetric correction is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remained untouched.

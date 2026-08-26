@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0180`
+- Latest state ID: `STATE-0181`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -993,6 +993,12 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Direction semantics are immutable: `US30_STRESS_US100_COUNTERBOOK` asks whether US100 protects US30; `US100_STRESS_US30_COUNTERBOOK` asks whether US30 protects US100. An insurance-only classification requires absent broad profit service and a passed US100→US30 protection gate.
 - The negative latest window is only a falsifier lens: if US100 is positive in at least `3/4` CP2 periods and binding is positive, it cannot alone reclassify the book. No component removal, allocation, reservation, priority, lot, risk, slot, EA or Live action follows automatically.
 - Declaration SHA-256 is `B80628EC159985A47EDC8E176AEDF8DBC7252EB100AA7428D8A4E7B002856C22`. All source outcomes pre-exist, but no new cross-evidence book metric or role verdict has opened. One synthesis, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.
+
+## Frozen premetric equivalence schema correction Unit 072
+
+- The first invocation verified all immutable bytes and hashes, then stopped at a nonexistent equivalence `schema` key before any book aggregation, fill/net share, profit/insurance gate or verdict was emitted.
+- The authoritative file uses `schema_version: 1`. Froze its exact top-level key set plus project ID and equivalence verdict in place of the incorrect string-schema assertion.
+- Correction receipt SHA-256 is `45FC19C03F93C279EBA4ECF222D9AA6A245DCE8F0405F5D95EF44A4F3D5E6FAF`. All input pins, book membership, period/directional semantics, formulas, gates, verdicts and exclusions are unchanged. One fixed synthesis and zero metric reruns remain; Program 6, broker/account state and Live remain untouched.
 
 ## Required completion evidence
 
