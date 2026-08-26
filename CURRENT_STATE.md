@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0138`
+- Latest state ID: `STATE-0139`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,9 +23,9 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Active work
 
-- Active engineering boundary: verified and frozen `lab/engineering/live-research-observation-ledger-v1/` candidate; its one P4 candidate path and one same-spec frozen-parent calibration proved exact non-interference, while Live activation is intentionally deferred by the current-day no-skip gate and the running CXR2 terminal/dashboard remain unchanged
-- Active research boundary: none; Program 7 Unit 055 `macro-context-composition-confounding-v1` is durably closed with no retained estimator, weighting, scheduler or adjacent meta successor
-- Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
+- Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
+- Active research boundary: Program 3 / meso Unit 056 `intraday-portfolio-entry-handoff-v1` is declaration-frozen with outcomes unopened; it compares day-first flat entries, incumbent entries and post-native-flat reentries as one bounded handoff bundle
+- Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -652,6 +652,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Four stop contrasts reached `0.025`, with median absolute adjustment `0.013422075485` and maximum `0.047512018458`, but all four belonged only to event-exposure Unit 041 and peer-exit Unit 052, spanning only Programs 2 and 4. Count, median and concentration passed while the required three-unit and three-program breadth gates failed.
 - Closed `NO_BROAD_MATERIAL_MACRO_CONTEXT_COMPOSITION_SHIFT_IN_CENSUS`. This does not make raw pooling authoritative, declare centering unnecessary or revise any source verdict. No alternate centering, weighting, matching, regression, estimator, scheduler, default lane or adjacent Program 7 census survives.
 - Census/declaration/result/closure SHA-256 values are `7349B341DC2EB9C540DAB04687F3274E69ADC7D4D1CF7369B40E5794F6250F31` / `8D579C5601E027D9271D4C584CE52DB060B54A6DED3DA2BBA47F55A36AD1AC5D` / `091048B204229C4CB08004481A2513746EE851F79A9F1B9E298BCBD8B748641D` / `96DA0F09CCBD93874D939346387021D899D0880878B732363DCCDE53BFFB629D`. Programs 1-5 and 7 must be compared again without adjacent meta work; MQL, Tester, Program 6, broker state and Live remained untouched.
+
+## Open intraday portfolio entry-handoff Unit 056
+
+- Recompleted the active Goal startup boundary, confirmed clean `main == origin/main == fa6f0f93abab6161a530876f0202aeab418d1063`, frozen forward baseline `0d4032786cecb7d7e8a4c3074609db5b105fa107`, exact local CXR2 PID `15080` and dashboard PID `28508`, and no Lab Tester or MetaEditor process without querying broker positions, orders, deals or account state.
+- Confirmed `live-research-observation-ledger-v1` is a verified and frozen engineering candidate rather than an open judgment stream. Its deferred Live promotion is separate and did not force the next research topic.
+- Recompared Programs 1-5 and 7 plus micro/meso/macro heights after the recent `4 → 1 → 5 → 7` sequence. Selected only Program 3 / meso Unit 056 `intraday-portfolio-entry-handoff-v1`, because the four-period event order supports a broad occupancy-and-release handoff while prior exact-time and order-funnel Program 3 proposals were sparse or structurally confounded.
+- Outcome-free topology over the six immutable control event files classified all `2,233` births with zero active-state fault as day-first-from-flat `1,000`, entry-with-incumbent `975`, post-native-flat reentry `214`, post-stop-flat reentry `19` and same-time close/birth `25`. The last two are context-only because stop-flat lacks P1 breadth and second-resolution same-time ordering is not strict.
+- The single bundle judges eligible incumbent entries and post-native-flat reentries separately against exact same-strategy-period day-first benchmarks. It uses no incumbent identity/count/direction, time-since-flat window, stop-flat rescue, strategy subgroup, threshold grid, MQL, Tester, Program 6 or Live surface.
+- Declaration SHA-256 is `76965C3276C9B54CCEA92AE08E7CC829954A27D912DEEAA08DB79CAC4B2B1ECF`. Role-conditioned stressed R, stop effects, residuals and verdict remain unopened until this declaration boundary is committed and pushed.
 
 ## Required completion evidence
 
