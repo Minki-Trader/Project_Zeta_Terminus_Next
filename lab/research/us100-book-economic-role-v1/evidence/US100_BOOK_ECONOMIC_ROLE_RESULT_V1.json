@@ -1,0 +1,151 @@
+{
+  "gates": {
+    "integrity": {
+      "all_arithmetic_identities_passed": true,
+      "all_pins_passed": true,
+      "passed": true
+    },
+    "latest_only_falsifier": {
+      "checks": {
+        "independent_binding_us100_positive": true,
+        "latest_us100_negative": true,
+        "profit_service_established": true
+      },
+      "passed": true
+    },
+    "profit_service": {
+      "checks": {
+        "independent_binding_us100_positive": true,
+        "unit_050_us100_pooled_positive": true,
+        "unit_050_us100_positive_periods_at_least_3": true
+      },
+      "passed": true
+    },
+    "reverse_direction_us30_insures_us100": {
+      "passed": true
+    },
+    "us100_insures_us30": {
+      "checks": {
+        "offset_ratio_at_least_0_20_periods_at_least_3": false,
+        "original_variant_passed": false,
+        "positive_offset_contribution_at_most_0_60": false,
+        "positive_offset_periods_at_least_3": true
+      },
+      "passed": false
+    }
+  },
+  "independent_equivalence": {
+    "binding": {
+      "books": {
+        "US100_BOOK": {
+          "closed": 1395,
+          "fill_share": 0.6241610738255033,
+          "net_per_close_usd": 0.11638172043010753,
+          "signed_net_share": 0.1725945175640256,
+          "stressed_2x_net_usd": 162.3525
+        },
+        "US30_BOOK": {
+          "closed": 840,
+          "fill_share": 0.37583892617449666,
+          "net_per_close_usd": 0.9265547619047619,
+          "signed_net_share": 0.8274054824359744,
+          "stressed_2x_net_usd": 778.306
+        }
+      },
+      "first_fills": 2235,
+      "stressed_2x_net_usd": 940.6585
+    },
+    "latest": {
+      "books": {
+        "US100_BOOK": {
+          "closed": 53,
+          "fill_share": 0.6309523809523809,
+          "net_per_close_usd": -0.24560377358490568,
+          "signed_net_share": 4.617594891805606,
+          "stressed_2x_net_usd": -13.017000000000001
+        },
+        "US30_BOOK": {
+          "closed": 31,
+          "fill_share": 0.36904761904761907,
+          "net_per_close_usd": 0.3289677419354839,
+          "signed_net_share": -3.617594891805605,
+          "stressed_2x_net_usd": 10.198
+        }
+      },
+      "first_fills": 84,
+      "stressed_2x_net_usd": -2.819
+    }
+  },
+  "integrity": {
+    "all_pins_passed": true,
+    "equivalence_component_identities_passed": true,
+    "passed": true,
+    "unit_050_book_counts": {
+      "US100_BOOK": 1399,
+      "US30_BOOK": 834
+    },
+    "unit_050_lifecycles": 2233,
+    "unit_050_periods": 4
+  },
+  "role_classification": {
+    "insurance_only": false,
+    "primary_evidence": "The US100 book is positive across all four CP2 periods and independently positive in binding, while it fails to protect US30 under Unit 050 and instead receives broad protection from US30.",
+    "recent_window": "Latest US100 stressed net is negative, but the frozen latest-only falsifier passes; one narrow window cannot reverse the broad positive-return classification."
+  },
+  "schema": "zeta-next-us100-book-economic-role-result-v1",
+  "unit_050_book_economics": {
+    "period_stressed_net_usd": {
+      "P1_2022H2_2023": {
+        "US100_BOOK": 19.8835,
+        "US30_BOOK": 128.99
+      },
+      "P2_2024": {
+        "US100_BOOK": 42.426,
+        "US30_BOOK": 12.237
+      },
+      "P3_2025": {
+        "US100_BOOK": 32.728,
+        "US30_BOOK": 80.31
+      },
+      "P4_2026_YTD": {
+        "US100_BOOK": 9.9832,
+        "US30_BOOK": 80.49
+      }
+    },
+    "pooled": {
+      "US100_BOOK": {
+        "count": 1399,
+        "net_per_lifecycle_usd": 0.07506840600428878,
+        "positive_periods": 4,
+        "stressed_net_usd": 105.0207
+      },
+      "US30_BOOK": {
+        "count": 834,
+        "net_per_lifecycle_usd": 0.3621426858513189,
+        "positive_periods": 4,
+        "stressed_net_usd": 302.027
+      }
+    }
+  },
+  "unit_050_directional_support": {
+    "US100_PROTECTS_US30": {
+      "largest_positive_offset_period_contribution": 0.670770381984,
+      "offset_ratio_at_least_0_20_periods": 2,
+      "p4_offset_ratio": -0.320754213783,
+      "passed": false,
+      "positive_offset_periods": 3,
+      "source_variant": "US30_STRESS_US100_COUNTERBOOK",
+      "weighted_offset_ratio": 0.246203747125
+    },
+    "US30_PROTECTS_US100": {
+      "largest_positive_offset_period_contribution": 0.45000287836,
+      "offset_ratio_at_least_0_20_periods": 4,
+      "p4_offset_ratio": 1.828894521349,
+      "passed": true,
+      "positive_offset_periods": 4,
+      "source_variant": "US100_STRESS_US30_COUNTERBOOK",
+      "weighted_offset_ratio": 1.572712251873
+    }
+  },
+  "verdict": "NO_US100_INSURANCE_ONLY_ROLE_POSITIVE_RETURN_AND_WRONG_PROTECTION_DIRECTION"
+}

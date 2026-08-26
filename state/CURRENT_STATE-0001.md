@@ -1495,3 +1495,12 @@
 - The pinned equivalence file has no `schema` string; it uses `schema_version: 1` with project ID `project-zeta-terminus-next` and verdict `ECONOMIC_AND_ORDER_EQUIVALENCE_PASSED`. Used the one permitted premetric implementation correction to freeze those values and the exact observed top-level key set.
 - Correction receipt SHA-256 is `45FC19C03F93C279EBA4ECF222D9AA6A245DCE8F0405F5D95EF44A4F3D5E6FAF`. Every file pin, book mapping, latest/binding aggregation, Unit 050 period and directional semantics, gate, verdict, exclusion and stop condition is unchanged.
 - No fill/net share, book per-lifecycle value, profit-service gate, insurance-direction gate or verdict was emitted. One successful synthesis remains, one premetric correction is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remained untouched.
+
+## STATE-0182 - 2026-08-27
+
+- Correction-state commit `c77ecb4120c1e5464e0a8b6f1d8bc03f9133d59a` was on origin before the one successful Unit 072 synthesis. All pins, equivalence component identities, 2,233 CP2 lifecycles, four periods, 2,235 binding fills and 84 latest fills passed.
+- US100 book profit service passed: Unit 050 CP2 was `+$105.0207` across 1,399 lifecycles and positive in `4/4` periods; independent binding was `+$162.3525` across 1,395 fills. It used `62.42%` of binding fills and supplied `17.26%` of binding stressed net.
+- Latest US100 was `-$13.0170` across 53 fills, but the frozen latest-only falsifier passed because both broad evidence roles were positive. No recent-window-only reclassification is allowed.
+- US100 did not broadly insure US30: the source-`US30_STRESS_US100_COUNTERBOOK` gate failed at `2/4` material periods, weighted offset `0.24620`, concentration `0.67077` and P4 offset `-0.32075`. The reverse US30-insures-US100 direction passed `4/4` with weighted `1.57271`.
+- Closed `NO_US100_INSURANCE_ONLY_ROLE_POSITIVE_RETURN_AND_WRONG_PROTECTION_DIRECTION`. Preserve US100 as a lower-yield positive-return sleeve that receives US30 protection; retain no cost-of-cover, shrink, allocation, slot, component, EA or Live candidate.
+- Result/closure SHA-256 values are `010200107F0C6935304C14406B1445BED15FC4DA892EF1FDA029F616120B6138` / `73618817E74660255EAF8A2A737A1738ADF3567AC2ABB1506293B8FDF3D2970F`. One successful synthesis, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.

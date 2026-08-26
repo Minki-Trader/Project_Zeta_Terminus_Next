@@ -1,0 +1,114 @@
+{
+  "schema": "zeta-next-us100-book-economic-role-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_FALSIFIED_INSURANCE_ONLY_NO_CANDIDATE",
+  "unit": "us100-book-economic-role-072",
+  "family": "us100-book-economic-role-v1",
+  "verdict": "NO_US100_INSURANCE_ONLY_ROLE_POSITIVE_RETURN_AND_WRONG_PROTECTION_DIRECTION",
+  "evidence": {
+    "declaration_sha256": "B80628EC159985A47EDC8E176AEDF8DBC7252EB100AA7428D8A4E7B002856C22",
+    "premetric_correction_sha256": "45FC19C03F93C279EBA4ECF222D9AA6A245DCE8F0405F5D95EF44A4F3D5E6FAF",
+    "result_sha256": "010200107F0C6935304C14406B1445BED15FC4DA892EF1FDA029F616120B6138",
+    "result_bytes": 4661
+  },
+  "execution_accounting": {
+    "successful_fixed_syntheses": 1,
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_input_pins_passed": true,
+    "all_component_and_book_arithmetic_identities_passed": true,
+    "unit_050_lifecycles": 2233,
+    "unit_050_book_counts": {
+      "US30_BOOK": 834,
+      "US100_BOOK": 1399
+    },
+    "independent_binding_fills": 2235,
+    "independent_latest_fills": 84
+  },
+  "findings": {
+    "broad_profit_service": {
+      "unit_050_us100_stressed_net_usd": 105.0207,
+      "unit_050_us100_lifecycles": 1399,
+      "unit_050_us100_net_per_lifecycle_usd": 0.07506840600428878,
+      "unit_050_positive_periods": 4,
+      "binding_us100_stressed_net_usd": 162.3525,
+      "binding_us100_fills": 1395,
+      "binding_us100_net_per_fill_usd": 0.11638172043010753,
+      "binding_us100_fill_share": 0.6241610738255033,
+      "binding_us100_signed_net_share": 0.1725945175640256,
+      "interpretation": "US100 is lower-yield than US30 but supplies positive stressed net in every CP2 period and independently in binding, so its return service is not absent."
+    },
+    "latest_window": {
+      "us100_stressed_net_usd": -13.017000000000001,
+      "us100_fills": 53,
+      "us100_fill_share": 0.6309523809523809,
+      "us100_net_per_fill_usd": -0.24560377358490568,
+      "falsifier_passed": true,
+      "interpretation": "The latest window is materially negative for US100, but it is the sole negative narrow window and cannot overturn the four-period plus binding classification."
+    },
+    "directional_protection": {
+      "US100_PROTECTS_US30": {
+        "passed": false,
+        "positive_offset_periods": 3,
+        "offset_ratio_at_least_0_20_periods": 2,
+        "weighted_offset_ratio": 0.246203747125,
+        "largest_positive_offset_period_contribution": 0.670770381984,
+        "p4_offset_ratio": -0.320754213783
+      },
+      "US30_PROTECTS_US100": {
+        "passed": true,
+        "positive_offset_periods": 4,
+        "offset_ratio_at_least_0_20_periods": 4,
+        "weighted_offset_ratio": 1.572712251873,
+        "largest_positive_offset_period_contribution": 0.45000287836,
+        "p4_offset_ratio": 1.828894521349
+      },
+      "interpretation": "The Claude framing had the protection direction reversed: US100 did not broadly insure US30; US30 broadly insured US100."
+    }
+  },
+  "gates": {
+    "profit_service_established": true,
+    "us100_insures_us30_established": false,
+    "reverse_direction_us30_insures_us100_established": true,
+    "latest_only_falsifier_passed": true,
+    "insurance_only_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "the existing Cross-plus-Passive US100 book and current first-come portfolio construction",
+      "US100's classification as a lower-yield but broadly positive return sleeve",
+      "the negative latest window as bounded recent weakness",
+      "the asymmetric fact that US30, not US100, supplies broad drawdown protection"
+    ],
+    "discard": [
+      "the claim that US100 is economically justified primarily as insurance for US30",
+      "a cost-of-cover, book shrink, deletion, reservation, priority, lot, risk, slot, component, EA or Live candidate from this bundle"
+    ],
+    "observation": "US100 uses about 62.4% of binding fills for about 17.3% of binding stressed net, but positive net across all four CP2 periods prevents an insurance-only reclassification; the actual broad protection runs from US30 to US100.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "latest-only shrink or removal",
+    "Cross-only, Passive-only or one-period rescue",
+    "alternate stress episode, offset threshold, rolling window or drawdown definition",
+    "book allocation, reservation, priority, lot, risk, slot, component, EA or Live change"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_unit"
+}
