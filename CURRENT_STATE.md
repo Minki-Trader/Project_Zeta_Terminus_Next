@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0140`
+- Latest state ID: `STATE-0141`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: none; Program 3 / meso Unit 056 `intraday-portfolio-entry-handoff-v1` is durably closed with no retained handoff state, treatment or adjacent timing successor
+- Active research boundary: Program 4 / micro Unit 057 `first-peer-profit-memory-checkpoint-v1` is declaration-frozen with linked close outcomes unopened; it compares profit still held versus prior profit fully given back at a strict first-peer natural-exit checkpoint
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -665,6 +665,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Eligible incumbent entries were `960` versus `809` same-strategy-period day-first comparators. Their residual was only `+0.023313R / +0.011792 stop`; both magnitudes, economic concordance and stop strategy breadth failed.
 - Eligible post-native-flat reentries were `213` versus `643` comparators. Their residual was `-0.002205R / +0.042278 stop`; both magnitudes and return strategy breadth failed despite concordant signs.
 - Closed `NO_INTRADAY_PORTFOLIO_ENTRY_HANDOFF_STATE_PASSED`. Result/closure SHA-256 values are `E827674741791E0D19D801DE2E5CD8806E773BFD91E7333C899DE3A5FF49AB47` / `C1B14B5BD0A24EB231CA76841FB4A3D9431A1036ED1B174CF03E7824E756F843`. No retained question, candidate, timing rescue, MQL, Tester, Program 6, broker query or Live action survives; the next choice must return to the whole map.
+
+## Open first-peer profit-memory checkpoint Unit 057
+
+- Recompared Programs 1-5 and 7 plus all three heights after the `4 → 1 → 5 → 7 → 3` sequence. Program 2 remains underrepresented but has no ready new causal source or structure; it was not forced to complete a round. Selected Program 4 at micro height because the frozen research lifecycle ledger creates a strict causal checkpoint that prior profit-memory and peer-exit evidence could not observe.
+- The immutable P4 Lab ledger is `683,465` bytes with SHA-256 `01EA88857947DF0C71557257179775A7D99F14C33CD262036EFEF6A24D755CEC`; it belongs to the same-spec non-interfering logger candidate, not current Live. Its `841` rows contain `356` births, `356` closes and `129` first-peer natural-exit rows.
+- Outcome-free strict ordering excludes three same-second target closes and leaves `126` checkpoints: profit still held `61`, prior positive mark fully given back `64`, never positive `1`. Passive and never-positive are context-only. The five eligible strategies retain exact `60/61` treatment/comparator targets, minimum strategy-role cell `3`, and minimum symbol-role cell `27` across US30 and US100.
+- The one bundle asks for both final stressed-R/stop separation and a post-checkpoint remaining-R/new-high path. It cannot select a management action from P4-only exploratory evidence; even a full pass can retain only one later multi-period observation question after another whole-map comparison.
+- Declaration SHA-256 is `817DEFD86B37949C1101932970219174ADF0A2688243010B59954F68F5981678`. Linked CLOSE economics and every Unit 057 residual, gate and verdict remain unopened until this declaration boundary is committed and pushed.
 
 ## Required completion evidence
 
