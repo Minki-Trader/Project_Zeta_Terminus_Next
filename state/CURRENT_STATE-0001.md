@@ -1354,3 +1354,12 @@
 - Froze one bundle over all 2,233 CP2 closes and all 2,235 binding Tester out deals: actual/stressed STOP versus NONSTOP negative-loss mass, full binding actual confirmation, planned-risk utilization, period/component breadth and fixed top-loss concentration.
 - A broad NONSTOP verdict requires pooled CP2 actual/stressed and binding actual shares all at least 60%, stressed CP2 breadth in at least three periods and four components, and four concentration limits. Utilization separation is diagnostic; a non-stop close is never treated as unbounded because the native stop remains its tail bound.
 - Declaration SHA-256 is `96ABA748AF89F876B033EC750CB0BA1FAF4FA05080F626C21827705683C05520`. Outcomes remain unopened; one fixed aggregation, one premetric-only correction and zero metric reruns are budgeted. No acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action has occurred.
+
+## STATE-0165 - 2026-08-27
+
+- Declaration commit `90f4187` reached origin before the one successful Unit 066 aggregation. Every CP2/report/equivalence pin and all count/net anchors passed, including 2,233 CP2 lifecycles and the binding report's exact 2,235 in/out deals.
+- NONSTOP accounted for `78.13%/78.54%` of CP2 actual/stressed losing observations but only `55.23%/55.52%` of loss mass, below the 60% gate. Binding actual NONSTOP was `83.33%` of losers yet only `49.43%` of loss mass (`$1,459.46` versus STOP `$1,493.28`).
+- Breadth failed at only `1/4` stressed periods and `3/6` components. Every concentration falsifier passed; the result is not an artifact of a few NONSTOP losses.
+- STOP stressed median planned-risk utilization was `0.50373`, NONSTOP `0.10325`; difference `0.40049` with STOP higher in all four periods. Low-frequency stops therefore remain the larger typical tail event and economically representative of stop-defined capital capacity.
+- Closed `NO_BROAD_NONSTOP_LOSS_DOMINANCE_PRESERVE_STOP_RISK_INTERPRETATION`. Preserve 4%/12% stop-tail interpretation, native exits and all components; no subtype/threshold/exit/stop/risk-cap/lot/slot/admission candidate or seed survives.
+- Result/closure SHA-256 values are `3443E947A8A288B94666CE19CA7CC55A89A7F41AB96F3835A927F1E6C317D75C` / `2CC9372C8D9CD43440BD31BD9904DD0310E573A90EB7601E4FAD06785142E6D5`. One successful aggregation, zero correction/rerun; Program 6, broker/account state and Live remained untouched. Push before whole-map successor comparison.
