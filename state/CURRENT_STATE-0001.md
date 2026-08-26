@@ -1513,3 +1513,12 @@
 - Froze direct recorded cost per planned R, fill-time spread bps and lifecycle/attempted-order stressed value. Expiries receive zero realized net only in the attempt denominator and no imputed price, cost or counterfactual return.
 - The ledger cannot identify literal spread capture or adverse selection because placement-time executable quotes and expired-order returns are absent. It can distinguish a recorded direct-cost advantage, disadvantage or nondiscriminating recorder only.
 - Declaration SHA-256 is `56A22ADFFBA84DD53DB7010C445FA01EB3CADCAD1833C6329DA11D993ADE9708`. No order-type aggregate or verdict has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted; no data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0184 - 2026-08-27
+
+- Declaration commit `3a1db44f5d938374f3282bc49a2906c7a7ae3d09` was on origin before the one successful Unit 073 aggregation. All four pins, exact row/schema identities, 356 complete positions, target pairings, 129 Cross fills, 92 Passive fills, 119 Passive attempts and 27 expiries passed.
+- Both target components had `100%` cost-known births, but recorded entry burden was identically zero at mean, median, p90 and positive share. The informativeness, Passive advantage and Passive disadvantage gates all failed.
+- Passive fill-time quoted spread was descriptively narrower at mean `0.28254 bps` versus Cross `0.58038 bps`, but the ledger lacks placement-time executable quotes and expired-order returns, so neither spread capture nor adverse selection is identified.
+- Passive filled mean stressed R was `+0.00919R` versus Cross `+0.00716R`. Passive net per placed order fell to `$0.03821` after expiries versus Cross `$0.04369`, but the fixed lower-value gate failed because Cross did not exceed Passive by `0.03R`.
+- Closed `NO_RECORDED_ORDER_TYPE_COST_SEPARATION_NO_ADVERSE_SELECTION_IDENTIFICATION`. Preserve Passive limit and Cross market execution; no signal, selector, order-type, removal, adapter, EA or Live candidate.
+- Result/closure SHA-256 values are `1AA0AA9D3D205DA7A3A91576E2F102BB80109435A74C2ED41A583785D41DB0C3` / `857D4D5CAA256F0C7B8096173B3C97AF74B0661CE4531A0D2E7EE4B41DC15BC1`. One aggregation, zero correction and zero rerun; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.

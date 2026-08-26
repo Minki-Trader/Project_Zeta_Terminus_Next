@@ -86,7 +86,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/rc16-long-drift-signal-specificity-v1/`: 닫힌 애매함 Program 1 / meso Unit 070 source-free family; pooled 신호초과 `+1.330 ATR`는 passive beta 단정을 막지만 2025 방향대조 초과 `+0.069 ATR`·MAE `+0.392 ATR` 대 2026 `+2.892/-0.668 ATR`로 압축 고유가치가 기간 불안정, 후보 없음
 - `research/server-calendar-drift-segmentation-v1/`: 닫힌 Program 2 / meso→macro Unit 071 source-free family; pooled gap은 양의 calendar drift의 `16.96%`, intraday는 `83.04%`이고 `4/4` 기간·`3/3` 심볼에서 intraday 우세, short gap은 작은 gap 채널의 `94.92%`지만 overnight 후보 없음
 - `research/us100-book-economic-role-v1/`: 닫힌 Program 5 / macro Unit 072 source-free family; US100은 CP2 `4/4`·binding `+$162.3525`로 양수이고 US30 보호 gate는 실패, 오히려 US30→US100 상쇄 `1.57271`가 통과해 보험전용 재분류·후보 없음
-- `research/order-type-realized-entry-cost-v1/`: 활성 Program 3 / micro→meso Unit 073 source-free family; P4 current-spec Passive limit 92 fills/119 placements와 Cross market 129 fills의 기록된 진입비용·spread 문맥·stressed R을 한 번 대조
+- `research/order-type-realized-entry-cost-v1/`: 닫힌 Program 3 / micro→meso Unit 073 source-free family; Cross 129·Passive 92 cost-known fills 모두 기록 burden `0R`, Passive 체결 spread는 좁지만 배치 quote·미체결 반사실 부재로 비용우위·역선택·후보 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

@@ -1,0 +1,131 @@
+{
+  "attempt_value": {
+    "Cross": {
+      "attempts": 129,
+      "expiries": 0,
+      "fill_rate": 1,
+      "fills": 129,
+      "stressed_net_per_attempt_usd": 0.04369379844961589
+    },
+    "Passive": {
+      "attempts": 119,
+      "expiries": 27,
+      "fill_rate": 0.773109243697479,
+      "fills": 92,
+      "stressed_net_per_attempt_usd": 0.03821176470588278
+    }
+  },
+  "components": {
+    "Cross": {
+      "births": 129,
+      "cost_known": 129,
+      "cost_known_share": 1,
+      "quoted_spread_bps": {
+        "count": 129,
+        "mean": 0.5803788183703802,
+        "median": 0.25275609458071757,
+        "p90": 1.042623701582945,
+        "positive_share": 1
+      },
+      "recorded_entry_burden_r": {
+        "count": 129,
+        "mean": 0,
+        "median": 0,
+        "p90": 0,
+        "positive_share": 0
+      },
+      "stressed_net_usd": 5.63650000000045,
+      "stressed_r": {
+        "count": 129,
+        "mean": 0.007155782876102954,
+        "median": 0.028352234823217023,
+        "p90": 0.3836794750987886,
+        "positive_share": 0.5581395348837209
+      }
+    },
+    "Passive": {
+      "births": 92,
+      "cost_known": 92,
+      "cost_known_share": 1,
+      "quoted_spread_bps": {
+        "count": 92,
+        "mean": 0.28254028839667356,
+        "median": 0.24083014427353025,
+        "p90": 0.37474242563122256,
+        "positive_share": 1
+      },
+      "recorded_entry_burden_r": {
+        "count": 92,
+        "mean": 0,
+        "median": 0,
+        "p90": 0,
+        "positive_share": 0
+      },
+      "stressed_net_usd": 4.547200000000051,
+      "stressed_r": {
+        "count": 92,
+        "mean": 0.00918951091974254,
+        "median": 0.04989517830231785,
+        "p90": 0.20776049885684594,
+        "positive_share": 0.6739130434782609
+      }
+    }
+  },
+  "gates": {
+    "integrity_density": {
+      "cross_fills": 129,
+      "passed": true,
+      "passive_attempts": 119,
+      "passive_expiries": 27,
+      "passive_fills": 92
+    },
+    "lower_value": {
+      "checks": {
+        "cross_minus_passive_mean_stressed_r_at_least_0_03": false,
+        "passive_net_per_attempt_lower_than_cross": true
+      },
+      "passed": false
+    },
+    "passive_cost_advantage": {
+      "checks": {
+        "cross_minus_passive_mean_at_least_0_001r": false,
+        "passive_mean_at_most_0_75_cross": true,
+        "passive_p90_no_greater_than_cross": true,
+        "recorder_informative": false
+      },
+      "passed": false
+    },
+    "passive_cost_disadvantage": {
+      "checks": {
+        "passive_mean_at_least_1_25_cross": true,
+        "passive_minus_cross_mean_at_least_0_001r": false,
+        "passive_p90_no_lower_than_cross": true,
+        "recorder_informative": false
+      },
+      "passed": false
+    },
+    "recorded_cost_informativeness": {
+      "checks": {
+        "at_least_one_mean_cost_r_at_least_0_0001": false,
+        "at_least_one_positive_cost_share_at_least_0_05": false
+      },
+      "passed": false
+    }
+  },
+  "identifiability": {
+    "adverse_selection_identified": false,
+    "literal_spread_capture_identified": false,
+    "reason": "Fill-time spread is not placement-time spread capture; placement executable quote and expired-order counterfactual return are absent."
+  },
+  "integrity": {
+    "all_pins_passed": true,
+    "all_target_pairs_complete": true,
+    "candidate_rows": 4043,
+    "lifecycle_rows": 841,
+    "lifecycle_stressed_net_anchor_passed": true,
+    "passed": true,
+    "research_dropped_records": 0
+  },
+  "schema": "zeta-next-order-type-realized-entry-cost-result-v1",
+  "verdict": "NO_RECORDED_ORDER_TYPE_COST_SEPARATION_NO_ADVERSE_SELECTION_IDENTIFICATION"
+}

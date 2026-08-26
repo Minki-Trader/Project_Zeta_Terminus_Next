@@ -1,0 +1,121 @@
+{
+  "schema": "zeta-next-order-type-realized-entry-cost-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_NONDISCRIMINATING_RECORDER_NO_CANDIDATE",
+  "unit": "order-type-realized-entry-cost-073",
+  "family": "order-type-realized-entry-cost-v1",
+  "verdict": "NO_RECORDED_ORDER_TYPE_COST_SEPARATION_NO_ADVERSE_SELECTION_IDENTIFICATION",
+  "evidence": {
+    "declaration_sha256": "56A22ADFFBA84DD53DB7010C445FA01EB3CADCAD1833C6329DA11D993ADE9708",
+    "result_sha256": "1AA0AA9D3D205DA7A3A91576E2F102BB80109435A74C2ED41A583785D41DB0C3",
+    "result_bytes": 3653
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 0,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_input_pins_passed": true,
+    "lifecycle_rows": 841,
+    "candidate_rows": 4043,
+    "cross_fills": 129,
+    "passive_fills": 92,
+    "passive_attempts": 119,
+    "passive_expiries": 27,
+    "cost_known_share": {
+      "Cross": 1,
+      "Passive": 1
+    },
+    "research_dropped_records": 0
+  },
+  "findings": {
+    "recorded_entry_burden": {
+      "Cross": {
+        "mean_r": 0,
+        "median_r": 0,
+        "p90_r": 0,
+        "positive_share": 0
+      },
+      "Passive": {
+        "mean_r": 0,
+        "median_r": 0,
+        "p90_r": 0,
+        "positive_share": 0
+      },
+      "interpretation": "Every target fill was marked cost-known, yet entry commission/fee plus adverse-slippage burden was exactly zero for both order types. The recorder is complete but economically nondiscriminating on this Tester path."
+    },
+    "quoted_spread_context": {
+      "Cross": {
+        "mean_bps": 0.5803788183703802,
+        "median_bps": 0.25275609458071757,
+        "p90_bps": 1.042623701582945
+      },
+      "Passive": {
+        "mean_bps": 0.28254028839667356,
+        "median_bps": 0.24083014427353025,
+        "p90_bps": 0.37474242563122256
+      },
+      "interpretation": "Passive filled in narrower quoted-spread context, but fill-time spread does not establish spread earned because placement-time executable quotes are absent."
+    },
+    "lifecycle_and_attempt_value": {
+      "Cross": {
+        "mean_stressed_r": 0.007155782876102954,
+        "positive_share": 0.5581395348837209,
+        "stressed_net_usd": 5.63650000000045,
+        "net_per_attempt_usd": 0.04369379844961589
+      },
+      "Passive": {
+        "mean_stressed_r": 0.00918951091974254,
+        "positive_share": 0.6739130434782609,
+        "stressed_net_usd": 4.547200000000051,
+        "net_per_attempt_usd": 0.03821176470588278,
+        "fill_rate": 0.773109243697479
+      },
+      "interpretation": "Passive had slightly higher filled-lifecycle mean stressed R, but lower net per placed order after 27 expiries. The frozen lower-value gate failed because Cross did not exceed Passive mean R by 0.03R."
+    }
+  },
+  "gates": {
+    "integrity_density_passed": true,
+    "recorded_cost_informativeness_passed": false,
+    "passive_cost_advantage_passed": false,
+    "passive_cost_disadvantage_passed": false,
+    "lower_value_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "the existing Passive limit and Cross market order constructions",
+      "the 27 Passive expiries as part of order-attempt economics",
+      "the observation that current recorded direct entry-cost fields are nondiscriminating on the P4 Tester path"
+    ],
+    "discard": [
+      "a claim that Passive earns the spread from fill-time spread alone",
+      "a claim that Passive suffers adverse selection from these fields",
+      "a signal-weakness attribution, controlled order-type successor, Passive removal, market conversion, order adapter, EA or Live candidate"
+    ],
+    "additional_observation_required": "A causal order-type comparison would require identical signals assigned to market versus limit plus placement-time executable quotes and retained outcomes for nonfills. This is an observation gap, not an automatically retained seed.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "alternate cost threshold, positive-share cutoff or percentile",
+    "fill-time spread as a proxy for spread captured",
+    "order age, depth, distance, session or fill selector",
+    "Passive removal, market conversion, same-family logger change, EA or Live action"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_unit"
+}
