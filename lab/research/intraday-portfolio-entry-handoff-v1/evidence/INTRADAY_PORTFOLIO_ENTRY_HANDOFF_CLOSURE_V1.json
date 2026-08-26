@@ -1,0 +1,134 @@
+{
+  "schema": "zeta-next-intraday-portfolio-entry-handoff-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "intraday-portfolio-entry-handoff-056",
+  "family": "intraday-portfolio-entry-handoff-v1",
+  "macro_program": {
+    "id": 3,
+    "name": "order_time_session",
+    "korean_name": "주문·시각·세션"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": "micro"
+  },
+  "hashes": {
+    "declaration_sha256": "76965C3276C9B54CCEA92AE08E7CC829954A27D912DEEAA08DB79CAC4B2B1ECF",
+    "result_sha256": "E827674741791E0D19D801DE2E5CD8806E773BFD91E7333C899DE3A5FF49AB47"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_post_declaration_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "same_unit_metric_reruns": 0,
+    "post_metric_density_helper_defects_discovered": 1,
+    "post_metric_corrections": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "portfolio_files_verified": 6,
+    "rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "roles": {
+      "DAY_FIRST_FROM_FLAT": 1000,
+      "ENTRY_WITH_INCUMBENT": 975,
+      "POST_NATIVE_FLAT_REENTRY": 214,
+      "POST_STOP_FLAT_REENTRY": 19,
+      "SAME_TIME_CLOSE_BIRTH": 25
+    },
+    "pooled_stressed_net": 407.0477,
+    "stop_exits": 206,
+    "benchmark_cells": 24,
+    "faults": 0
+  },
+  "density_disclosure": {
+    "raw_helper_flags": "INVALID_FALSE_FOR_BOTH_VARIANTS",
+    "cause": "A nested PowerShell pipeline reused $_ in the period-count predicate and therefore evaluated treatment-period counts as zero.",
+    "correction_policy": "No aggregation or economic metric was rerun because the defect was found after metrics. The declaration's deterministic density inequalities were applied to the exact counts already emitted by that one aggregation.",
+    "ENTRY_WITH_INCUMBENT": {
+      "minimum_period_treatment_n": 154,
+      "minimum_eligible_strategy_treatment_n": 66,
+      "minimum_treatment_cell": 11,
+      "minimum_comparator_cell": 4,
+      "density_passed": true
+    },
+    "POST_NATIVE_FLAT_REENTRY": {
+      "minimum_period_treatment_n": 34,
+      "minimum_eligible_strategy_treatment_n": 18,
+      "minimum_treatment_cell": 3,
+      "minimum_comparator_cell": 4,
+      "density_passed": true
+    },
+    "economic_metrics_affected": false,
+    "verdict_affected": false
+  },
+  "finding": {
+    "ENTRY_WITH_INCUMBENT": {
+      "eligible_treatment_n": 960,
+      "eligible_comparator_n": 809,
+      "mean_stressed_r_residual": 0.023313203952,
+      "mean_stop_residual": 0.011792494620,
+      "r_period_sign_breadth": 3,
+      "stop_period_sign_breadth": 3,
+      "r_strategy_sign_breadth": 5,
+      "stop_strategy_sign_breadth": 2,
+      "largest_period_r_contribution_share": 0.544409079436,
+      "largest_strategy_r_contribution_share": 0.400349964769,
+      "density_passed": true,
+      "failed_information_requirements": [
+        "return_magnitude",
+        "stop_magnitude",
+        "economic_concordance",
+        "stop_strategy_breadth"
+      ],
+      "passed": false
+    },
+    "POST_NATIVE_FLAT_REENTRY": {
+      "eligible_treatment_n": 213,
+      "eligible_comparator_n": 643,
+      "mean_stressed_r_residual": -0.002205459214,
+      "mean_stop_residual": 0.042277740249,
+      "r_period_sign_breadth": 3,
+      "stop_period_sign_breadth": 4,
+      "r_strategy_sign_breadth": 2,
+      "stop_strategy_sign_breadth": 3,
+      "largest_period_r_contribution_share": 0.460766881789,
+      "largest_strategy_r_contribution_share": 0.456451829449,
+      "density_passed": true,
+      "failed_information_requirements": [
+        "return_magnitude",
+        "stop_magnitude",
+        "return_strategy_breadth"
+      ],
+      "passed": false
+    },
+    "economic_interpretation": "Incumbent entry had only a small non-concordant positive return and stop residual. Post-native-flat reentry had essentially zero return residual and a sub-threshold stop increase with narrow return breadth. Neither role is a material, broad handoff state.",
+    "context_only_interpretation": "Post-stop-flat reentry remains too sparse and same-time close/birth remains non-strict in second-resolution ordering; neither selects any action."
+  },
+  "verdict": "NO_INTRADAY_PORTFOLIO_ENTRY_HANDOFF_STATE_PASSED",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "closed_scope": [
+    "No incumbent-entry, post-native-flat, stop-flat or same-time handoff treatment.",
+    "No incumbent identity, count, direction or symbol split; no time-since-flat, weekday, session, strategy or period rescue.",
+    "No blocked-candidate reconstruction, threshold grid, delay, suppression, lot, slot, priority, exit or portfolio rule.",
+    "No MQL, compile, Tester, Program 6, broker query, Live change or adjacent Program 3 successor."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 and micro, meso and macro heights after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "adjacent_handoff_or_timing_successor": "FORBIDDEN",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}

@@ -1,0 +1,740 @@
+{
+  "schema": "zeta-next-intraday-portfolio-entry-handoff-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_056_FIXED_AGGREGATION_COMPLETE_DENSITY_HELPER_DISCLOSED",
+  "unit": "intraday-portfolio-entry-handoff-056",
+  "family": "intraday-portfolio-entry-handoff-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "76965C3276C9B54CCEA92AE08E7CC829954A27D912DEEAA08DB79CAC4B2B1ECF",
+    "declaration_commit": "69eb216",
+    "six_event_file_pins_exact": true,
+    "files": 6,
+    "bytes": 5692770
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_post_declaration_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "same_unit_metric_reruns": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false,
+    "post_metric_density_helper_defects_discovered": 1,
+    "post_metric_corrections": 0,
+    "no_rerun_reason": "The declaration permits only a pre-metric implementation correction. The helper defect was discovered after economic metrics and the bundle verdict had been emitted, so no aggregation, metric or verdict was rerun."
+  },
+  "integrity": {
+    "data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd_2x": 407.04770000000565,
+    "stop_exits": 206,
+    "role_counts": {
+      "DAY_FIRST_FROM_FLAT": 1000,
+      "ENTRY_WITH_INCUMBENT": 975,
+      "POST_NATIVE_FLAT_REENTRY": 214,
+      "POST_STOP_FLAT_REENTRY": 19,
+      "SAME_TIME_CLOSE_BIRTH": 25
+    },
+    "benchmark_cells": 24,
+    "final_active": {
+      "P1_2022H2_2023": 0,
+      "P2_2024": 0,
+      "P3_2025": 0,
+      "P4_2026_YTD": 0
+    },
+    "final_pending": {
+      "P1_2022H2_2023": 0,
+      "P2_2024": 0,
+      "P3_2025": 0,
+      "P4_2026_YTD": 0
+    },
+    "faults": {
+      "passive_pending_overlap": 0,
+      "passive_fill_without_place": 0,
+      "passive_expire_without_place": 0,
+      "passive_pending_at_end": 0,
+      "active_overlap": 0,
+      "orphan_close": 0,
+      "missing_close": 0,
+      "risk": 0,
+      "unknown_component": 0,
+      "unclassified_role": 0
+    },
+    "fault_total": 0,
+    "passed": true
+  },
+  "role_metrics": {
+    "DAY_FIRST_FROM_FLAT": {
+      "pooled": {
+        "n": 1000,
+        "stressed_net_usd_2x": 149.17720000000295,
+        "mean_stressed_r": 0.025456019516819077,
+        "stop_rate": 0.099,
+        "positive_rate": 0.582
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 345,
+          "stressed_net_usd_2x": 67.23550000000023,
+          "mean_stressed_r": 0.03181958176405316,
+          "stop_rate": 0.03768115942028986,
+          "positive_rate": 0.5942028985507246
+        },
+        "P2_2024": {
+          "n": 248,
+          "stressed_net_usd_2x": 7.38949999999916,
+          "mean_stressed_r": 0.007745754440288009,
+          "stop_rate": 0.12903225806451613,
+          "positive_rate": 0.5645161290322581
+        },
+        "P3_2025": {
+          "n": 247,
+          "stressed_net_usd_2x": 36.119000000001186,
+          "mean_stressed_r": 0.02309769625465256,
+          "stop_rate": 0.14979757085020243,
+          "positive_rate": 0.5587044534412956
+        },
+        "P4_2026_YTD": {
+          "n": 160,
+          "stressed_net_usd_2x": 38.43320000000259,
+          "mean_stressed_r": 0.04282616082581332,
+          "stop_rate": 0.10625,
+          "positive_rate": 0.61875
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 166,
+          "stressed_net_usd_2x": 58.27500000000111,
+          "mean_stressed_r": 0.06057393546676841,
+          "stop_rate": 0.0963855421686747,
+          "positive_rate": 0.5963855421686747
+        },
+        "RC4": {
+          "n": 191,
+          "stressed_net_usd_2x": 53.40300000000133,
+          "mean_stressed_r": 0.04860257852937766,
+          "stop_rate": 0.2670157068062827,
+          "positive_rate": 0.5130890052356021
+        },
+        "Cross": {
+          "n": 164,
+          "stressed_net_usd_2x": 10.872999999999866,
+          "mean_stressed_r": 0.0050629255463060545,
+          "stop_rate": 0.036585365853658534,
+          "positive_rate": 0.524390243902439
+        },
+        "Pressure": {
+          "n": 28,
+          "stressed_net_usd_2x": -2.4399999999999293,
+          "mean_stressed_r": -0.03554473200366511,
+          "stop_rate": 0.21428571428571427,
+          "positive_rate": 0.5
+        },
+        "Return": {
+          "n": 60,
+          "stressed_net_usd_2x": 10.323000000001041,
+          "mean_stressed_r": 0.04009780519588227,
+          "stop_rate": 0.11666666666666667,
+          "positive_rate": 0.5
+        },
+        "Passive": {
+          "n": 391,
+          "stressed_net_usd_2x": 18.743199999999657,
+          "mean_stressed_r": 0.009914880115038091,
+          "stop_rate": 0.03324808184143223,
+          "positive_rate": 0.6521739130434783
+        }
+      }
+    },
+    "ENTRY_WITH_INCUMBENT": {
+      "pooled": {
+        "n": 975,
+        "stressed_net_usd_2x": 225.69200000000157,
+        "mean_stressed_r": 0.04292108966805323,
+        "stop_rate": 0.0841025641025641,
+        "positive_rate": 0.5651282051282052
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 335,
+          "stressed_net_usd_2x": 62.78550000000061,
+          "mean_stressed_r": 0.030266308725726658,
+          "stop_rate": 0.029850746268656716,
+          "positive_rate": 0.5701492537313433
+        },
+        "P2_2024": {
+          "n": 236,
+          "stressed_net_usd_2x": 40.76549999999911,
+          "mean_stressed_r": 0.03558440924756913,
+          "stop_rate": 0.1059322033898305,
+          "positive_rate": 0.5635593220338984
+        },
+        "P3_2025": {
+          "n": 247,
+          "stressed_net_usd_2x": 80.21,
+          "mean_stressed_r": 0.06137796165938794,
+          "stop_rate": 0.11336032388663968,
+          "positive_rate": 0.5546558704453441
+        },
+        "P4_2026_YTD": {
+          "n": 157,
+          "stressed_net_usd_2x": 41.93100000000214,
+          "mean_stressed_r": 0.05191447064291912,
+          "stop_rate": 0.12101910828025478,
+          "positive_rate": 0.5732484076433121
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 102,
+          "stressed_net_usd_2x": 55.42500000000072,
+          "mean_stressed_r": 0.09864059270186772,
+          "stop_rate": 0.06862745098039216,
+          "positive_rate": 0.5784313725490197
+        },
+        "RC4": {
+          "n": 15,
+          "stressed_net_usd_2x": 25.66500000000007,
+          "mean_stressed_r": 0.2758844290801649,
+          "stop_rate": 0.13333333333333333,
+          "positive_rate": 0.8
+        },
+        "Cross": {
+          "n": 494,
+          "stressed_net_usd_2x": 66.61099999999938,
+          "mean_stressed_r": 0.026645009871983243,
+          "stop_rate": 0.03441295546558704,
+          "positive_rate": 0.5344129554655871
+        },
+        "Pressure": {
+          "n": 66,
+          "stressed_net_usd_2x": 13.13300000000051,
+          "mean_stressed_r": 0.035185404757872324,
+          "stop_rate": 0.18181818181818182,
+          "positive_rate": 0.5151515151515151
+        },
+        "Return": {
+          "n": 137,
+          "stressed_net_usd_2x": 56.90000000000093,
+          "mean_stressed_r": 0.07594482955558786,
+          "stop_rate": 0.25547445255474455,
+          "positive_rate": 0.5401459854014599
+        },
+        "Passive": {
+          "n": 161,
+          "stressed_net_usd_2x": 7.958000000000135,
+          "mean_stressed_r": 0.010926349656298483,
+          "stop_rate": 0.055900621118012424,
+          "positive_rate": 0.6708074534161491
+        }
+      }
+    },
+    "POST_NATIVE_FLAT_REENTRY": {
+      "pooled": {
+        "n": 214,
+        "stressed_net_usd_2x": 19.812000000000317,
+        "mean_stressed_r": 0.01411406069884983,
+        "stop_rate": 0.102803738317757,
+        "positive_rate": 0.5420560747663551
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 80,
+          "stressed_net_usd_2x": 24.485500000000147,
+          "mean_stressed_r": 0.04522773420155267,
+          "stop_rate": 0.0375,
+          "positive_rate": 0.55
+        },
+        "P2_2024": {
+          "n": 52,
+          "stressed_net_usd_2x": 1.1994999999996625,
+          "mean_stressed_r": 0.003251670929082825,
+          "stop_rate": 0.15384615384615385,
+          "positive_rate": 0.5192307692307693
+        },
+        "P3_2025": {
+          "n": 48,
+          "stressed_net_usd_2x": -3.7829999999999546,
+          "mean_stressed_r": -0.011706875667955632,
+          "stop_rate": 0.10416666666666667,
+          "positive_rate": 0.5416666666666666
+        },
+        "P4_2026_YTD": {
+          "n": 34,
+          "stressed_net_usd_2x": -2.089999999999563,
+          "mean_stressed_r": -0.006028429494729009,
+          "stop_rate": 0.17647058823529413,
+          "positive_rate": 0.5588235294117647
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 1,
+          "stressed_net_usd_2x": -1.0840000000000145,
+          "mean_stressed_r": -0.1885840538612784,
+          "stop_rate": 0,
+          "positive_rate": 0
+        },
+        "RC4": {
+          "n": 0,
+          "stressed_net_usd_2x": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "positive_rate": null
+        },
+        "Cross": {
+          "n": 120,
+          "stressed_net_usd_2x": -0.815500000000225,
+          "mean_stressed_r": 0.009113890558750493,
+          "stop_rate": 0.041666666666666664,
+          "positive_rate": 0.5166666666666667
+        },
+        "Pressure": {
+          "n": 18,
+          "stressed_net_usd_2x": 21.272000000000265,
+          "mean_stressed_r": 0.16259310168835897,
+          "stop_rate": 0.1111111111111111,
+          "positive_rate": 0.6111111111111112
+        },
+        "Return": {
+          "n": 37,
+          "stressed_net_usd_2x": 3.672000000000343,
+          "mean_stressed_r": -0.0023311440449865833,
+          "stop_rate": 0.32432432432432434,
+          "positive_rate": 0.4594594594594595
+        },
+        "Passive": {
+          "n": 38,
+          "stressed_net_usd_2x": -3.232500000000074,
+          "mean_stressed_r": -0.019081508535812485,
+          "stop_rate": 0.07894736842105263,
+          "positive_rate": 0.6842105263157895
+        }
+      }
+    },
+    "POST_STOP_FLAT_REENTRY": {
+      "pooled": {
+        "n": 19,
+        "stressed_net_usd_2x": 6.128999999999871,
+        "mean_stressed_r": 0.0784042390491551,
+        "stop_rate": 0.15789473684210525,
+        "positive_rate": 0.5263157894736842
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 0,
+          "stressed_net_usd_2x": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "positive_rate": null
+        },
+        "P2_2024": {
+          "n": 11,
+          "stressed_net_usd_2x": -2.588000000000065,
+          "mean_stressed_r": -0.0320340889869466,
+          "stop_rate": 0.09090909090909091,
+          "positive_rate": 0.36363636363636365
+        },
+        "P3_2025": {
+          "n": 5,
+          "stressed_net_usd_2x": 2.959999999999928,
+          "mean_stressed_r": 0.18005470615918057,
+          "stop_rate": 0.4,
+          "positive_rate": 0.6
+        },
+        "P4_2026_YTD": {
+          "n": 3,
+          "stressed_net_usd_2x": 5.757000000000008,
+          "mean_stressed_r": 0.31392732999815215,
+          "stop_rate": 0,
+          "positive_rate": 1
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 0,
+          "stressed_net_usd_2x": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "positive_rate": null
+        },
+        "RC4": {
+          "n": 0,
+          "stressed_net_usd_2x": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "positive_rate": null
+        },
+        "Cross": {
+          "n": 10,
+          "stressed_net_usd_2x": 3.7014999999999425,
+          "mean_stressed_r": 0.09419236227544035,
+          "stop_rate": 0.1,
+          "positive_rate": 0.5
+        },
+        "Pressure": {
+          "n": 3,
+          "stressed_net_usd_2x": 0.7709999999999857,
+          "mean_stressed_r": 0.04214963080680693,
+          "stop_rate": 0.3333333333333333,
+          "positive_rate": 0.6666666666666666
+        },
+        "Return": {
+          "n": 2,
+          "stressed_net_usd_2x": 1.362999999999956,
+          "mean_stressed_r": 0.17760094426172374,
+          "stop_rate": 0,
+          "positive_rate": 0.5
+        },
+        "Passive": {
+          "n": 4,
+          "stressed_net_usd_2x": 0.2934999999999861,
+          "mean_stressed_r": 0.016526534558918747,
+          "stop_rate": 0.25,
+          "positive_rate": 0.5
+        }
+      }
+    },
+    "SAME_TIME_CLOSE_BIRTH": {
+      "pooled": {
+        "n": 25,
+        "stressed_net_usd_2x": 6.23750000000009,
+        "mean_stressed_r": 0.0765269649009489,
+        "stop_rate": 0,
+        "positive_rate": 0.56
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 9,
+          "stressed_net_usd_2x": -5.633000000000011,
+          "mean_stressed_r": -0.09464975959838087,
+          "stop_rate": 0,
+          "positive_rate": 0.3333333333333333
+        },
+        "P2_2024": {
+          "n": 7,
+          "stressed_net_usd_2x": 7.896499999999977,
+          "mean_stressed_r": 0.25506517935542156,
+          "stop_rate": 0,
+          "positive_rate": 0.8571428571428571
+        },
+        "P3_2025": {
+          "n": 7,
+          "stressed_net_usd_2x": -2.467999999999993,
+          "mean_stressed_r": -0.04337159542822421,
+          "stop_rate": 0,
+          "positive_rate": 0.42857142857142855
+        },
+        "P4_2026_YTD": {
+          "n": 2,
+          "stressed_net_usd_2x": 6.442000000000117,
+          "mean_stressed_r": 0.6415834357093846,
+          "stop_rate": 0,
+          "positive_rate": 1
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 3,
+          "stressed_net_usd_2x": 1.8220000000001164,
+          "mean_stressed_r": 0.12024213107971478,
+          "stop_rate": 0,
+          "positive_rate": 1
+        },
+        "RC4": {
+          "n": 0,
+          "stressed_net_usd_2x": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "positive_rate": null
+        },
+        "Cross": {
+          "n": 17,
+          "stressed_net_usd_2x": 0.8884999999999297,
+          "mean_stressed_r": 0.04541261212724089,
+          "stop_rate": 0,
+          "positive_rate": 0.47058823529411764
+        },
+        "Pressure": {
+          "n": 3,
+          "stressed_net_usd_2x": 1.434000000000088,
+          "mean_stressed_r": 0.17061147558767645,
+          "stop_rate": 0,
+          "positive_rate": 0.3333333333333333
+        },
+        "Return": {
+          "n": 2,
+          "stressed_net_usd_2x": 2.092999999999956,
+          "mean_stressed_r": 0.13429944817922676,
+          "stop_rate": 0,
+          "positive_rate": 1
+        },
+        "Passive": {
+          "n": 0,
+          "stressed_net_usd_2x": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "positive_rate": null
+        }
+      }
+    }
+  },
+  "variants": [
+    {
+      "id": "ENTRY_WITH_INCUMBENT",
+      "eligible_strategies": [
+        "RC16",
+        "Cross",
+        "Pressure",
+        "Return",
+        "Passive"
+      ],
+      "treatment_n": 960,
+      "comparator_n": 809,
+      "mean_stressed_r_residual": 0.023313203952116186,
+      "mean_stop_residual": 0.011792494620366486,
+      "period_residuals": {
+        "P1_2022H2_2023": {
+          "n": 329,
+          "mean_r": 0.009131508904240956,
+          "mean_stop": 0.0034855661769405927,
+          "residual_sum_r": 3.004266429495275
+        },
+        "P2_2024": {
+          "n": 232,
+          "mean_r": 0.030443055056551427,
+          "mean_stop": 0.008589042272883514,
+          "residual_sum_r": 7.062788773119931
+        },
+        "P3_2025": {
+          "n": 245,
+          "mean_r": 0.0562052097134434,
+          "mean_stop": -0.00440871420937868,
+          "residual_sum_r": 13.770276379793634
+        },
+        "P4_2026_YTD": {
+          "n": 154,
+          "mean_r": -0.009458803820631889,
+          "mean_stop": 0.06013974504757917,
+          "residual_sum_r": -1.4566557883773108
+        }
+      },
+      "strategy_residuals": {
+        "RC16": {
+          "n": 102,
+          "mean_r": 0.04314568595647981,
+          "mean_stop": -0.033146800759659915,
+          "residual_sum_r": 4.40085996756094
+        },
+        "Cross": {
+          "n": 494,
+          "mean_r": 0.01813785984946609,
+          "mean_stop": -0.0017068781089488656,
+          "residual_sum_r": 8.960102765636249
+        },
+        "Pressure": {
+          "n": 66,
+          "mean_r": 0.07521039566879814,
+          "mean_stop": -0.03560606060606059,
+          "residual_sum_r": 4.963886114140677
+        },
+        "Return": {
+          "n": 137,
+          "mean_r": 0.028357678148191453,
+          "mean_stop": 0.10415496911847283,
+          "residual_sum_r": 3.885001906302229
+        },
+        "Passive": {
+          "n": 161,
+          "mean_r": 0.0010610250955990156,
+          "mean_stop": 0.022520096457311088,
+          "residual_sum_r": 0.17082504039144153
+        }
+      },
+      "sign_breadth": {
+        "stressed_r_periods": 3,
+        "stop_periods": 3,
+        "stressed_r_strategies": 5,
+        "stop_strategies": 2
+      },
+      "maximum_period_stressed_r_contribution_share": 0.5444090794359263,
+      "maximum_strategy_stressed_r_contribution_share": 0.40034996476852247,
+      "minimum_treatment_strategy_period_cell": 11,
+      "minimum_comparator_strategy_period_cell": 4,
+      "density_passed": true,
+      "failed_information_gates": [
+        "absolute_stressed_r_at_least_0_10",
+        "absolute_stop_at_least_0_05",
+        "economic_concordance",
+        "stop_strategy_breadth"
+      ],
+      "passed": false,
+      "raw_helper_density_flag": false
+    },
+    {
+      "id": "POST_NATIVE_FLAT_REENTRY",
+      "eligible_strategies": [
+        "Cross",
+        "Pressure",
+        "Return",
+        "Passive"
+      ],
+      "treatment_n": 213,
+      "comparator_n": 643,
+      "mean_stressed_r_residual": -0.002205459214169946,
+      "mean_stop_residual": 0.04227774024948063,
+      "period_residuals": {
+        "P1_2022H2_2023": {
+          "n": 80,
+          "mean_r": 0.03448157389423666,
+          "mean_stop": 0.012591268457156196,
+          "residual_sum_r": 2.758525911538933
+        },
+        "P2_2024": {
+          "n": 51,
+          "mean_r": -0.0026201094487148945,
+          "mean_stop": 0.07767507002801124,
+          "residual_sum_r": -0.1336255818844596
+        },
+        "P3_2025": {
+          "n": 48,
+          "mean_r": -0.02075813226036318,
+          "mean_stop": 0.005111208236208256,
+          "residual_sum_r": -0.9963903484974327
+        },
+        "P4_2026_YTD": {
+          "n": 34,
+          "mean_r": -0.06171390569927177,
+          "mean_stop": 0.11150266558236199,
+          "residual_sum_r": -2.0982727937752403
+        }
+      },
+      "strategy_residuals": {
+        "Cross": {
+          "n": 120,
+          "mean_r": 0.0007399147123620961,
+          "mean_stop": 0.005960956165874196,
+          "residual_sum_r": 0.08878976548345154
+        },
+        "Pressure": {
+          "n": 18,
+          "mean_r": 0.18847621513058857,
+          "mean_stop": -0.09907407407407409,
+          "residual_sum_r": 3.392571872350594
+        },
+        "Return": {
+          "n": 37,
+          "mean_r": -0.07781609601549114,
+          "mean_stop": 0.22141372141372134,
+          "residual_sum_r": -2.8791955525731723
+        },
+        "Passive": {
+          "n": 38,
+          "mean_r": -0.028208655207343964,
+          "mean_stop": 0.04949656774368692,
+          "residual_sum_r": -1.0719288978790706
+        }
+      },
+      "sign_breadth": {
+        "stressed_r_periods": 3,
+        "stop_periods": 4,
+        "stressed_r_strategies": 2,
+        "stop_strategies": 3
+      },
+      "maximum_period_stressed_r_contribution_share": 0.460766881789085,
+      "maximum_strategy_stressed_r_contribution_share": 0.45645182944874113,
+      "minimum_treatment_strategy_period_cell": 3,
+      "minimum_comparator_strategy_period_cell": 4,
+      "density_passed": true,
+      "failed_information_gates": [
+        "absolute_stressed_r_at_least_0_10",
+        "absolute_stop_at_least_0_05",
+        "stressed_r_strategy_breadth"
+      ],
+      "passed": false,
+      "raw_helper_density_flag": false
+    }
+  ],
+  "bundle": {
+    "passing_variants": [],
+    "passing_count": 0,
+    "verdict": "NO_INTRADAY_PORTFOLIO_ENTRY_HANDOFF_STATE_PASSED",
+    "verdict_independent_of_density_helper_defect": true,
+    "reason": "Each variant independently fails frozen information gates even after density is reconciled as passed.",
+    "automatic_successor": false
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "declaration": {
+    "path": "lab/research/intraday-portfolio-entry-handoff-v1/evidence/INTRADAY_PORTFOLIO_ENTRY_HANDOFF_DECLARATION_V1.json",
+    "sha256": "76965C3276C9B54CCEA92AE08E7CC829954A27D912DEEAA08DB79CAC4B2B1ECF",
+    "declaration_commit": "69eb216"
+  },
+  "density_reconciliation": {
+    "status": "AUTHORITATIVE_FROM_ALREADY_EMITTED_EXACT_COUNTS",
+    "raw_helper_flags_authoritative": false,
+    "defect": "The raw PowerShell density helper reused the pipeline variable $_ inside a nested Where-Object period predicate, so the period treatment counts evaluated as zero and emitted false for both density flags.",
+    "method": "Apply the declaration's deterministic density inequalities directly to the exact treatment, comparator, period, strategy and minimum strategy-period counts already emitted by the single fixed aggregation. No economic field, residual, sign, contribution or verdict was recalculated.",
+    "variants": {
+      "ENTRY_WITH_INCUMBENT": {
+        "exact_frozen_counts_reproduced": true,
+        "treatment_n": 960,
+        "comparator_n": 809,
+        "minimum_period_treatment_n": 154,
+        "minimum_eligible_strategy_treatment_n": 66,
+        "minimum_treatment_strategy_period_cell": 11,
+        "minimum_comparator_strategy_period_cell": 4,
+        "thresholds": {
+          "every_period_treatment_at_least": 30,
+          "every_eligible_strategy_treatment_at_least": 15,
+          "treatment_strategy_period_cell_at_least": 3,
+          "comparator_strategy_period_cell_at_least": 4
+        },
+        "passed": true
+      },
+      "POST_NATIVE_FLAT_REENTRY": {
+        "exact_frozen_counts_reproduced": true,
+        "treatment_n": 213,
+        "comparator_n": 643,
+        "minimum_period_treatment_n": 34,
+        "minimum_eligible_strategy_treatment_n": 18,
+        "minimum_treatment_strategy_period_cell": 3,
+        "minimum_comparator_strategy_period_cell": 4,
+        "thresholds": {
+          "every_period_treatment_at_least": 30,
+          "every_eligible_strategy_treatment_at_least": 15,
+          "treatment_strategy_period_cell_at_least": 3,
+          "comparator_strategy_period_cell_at_least": 4
+        },
+        "passed": true
+      }
+    }
+  },
+  "interpretation": {
+    "ENTRY_WITH_INCUMBENT": "The residual was only +0.023313R with +0.011792 stop incidence. Both magnitudes failed, the signs were economically non-concordant, and the stop sign reached only two of five eligible strategies.",
+    "POST_NATIVE_FLAT_REENTRY": "The residual was effectively flat at -0.002205R with +0.042278 stop incidence. Return and stop magnitudes failed, and the return sign reached only two of four eligible strategies.",
+    "context_only_roles": "Post-stop-flat reentry (19) and same-time close/birth (25) remain descriptive only; their sparse or non-strict event order cannot select a treatment.",
+    "retained_later_question": null,
+    "selected_candidate": null
+  },
+  "authority": {
+    "economic_metrics": "AUTHORITATIVE_SINGLE_FIXED_AGGREGATION",
+    "raw_density_helper_flags": "INVALID_DISCLOSED_NON_ECONOMIC_HELPER_OUTPUT",
+    "reconciled_density_gates": "AUTHORITATIVE_FROM_EMITTED_EXACT_COUNTS",
+    "verdict": "AUTHORITATIVE_UNCHANGED",
+    "outcomes_consumed": true,
+    "nearby_rescue": false,
+    "same_unit_rerun": false,
+    "live_action": "NONE"
+  }
+}
