@@ -1,0 +1,71 @@
+{
+  "schema": "zeta-next-held-position-first-peer-exit-state-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "held-position-first-peer-exit-state-052",
+  "family": "held-position-first-peer-exit-state-v1",
+  "macro_program": {"id": 4, "name": "position_management_exit", "korean_name": "포지션 관리·청산"},
+  "hashes": {
+    "declaration_sha256": "68421B30C3F4099DD59E84021B2AF0825E0E906A87CCAD5DADA797D0B8170F95",
+    "result_sha256": "217ADD9403852442B416DAD4FAD9E6AFA9382AED29901E8B66565A9E250E2EFF"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_aggregation_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "portfolio_files_verified": 6,
+    "rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "roles": {"PEER_STOP_FIRST": 142, "PEER_NATIVE_CLOSE_FIRST": 803, "NO_PEER_EXIT_WHILE_HELD": 1288, "MIXED_SAME_TIME_FIRST_PEER_EXIT": 0},
+    "pooled_stressed_net": 407.0477,
+    "target_stop_exits": 206,
+    "centering_cells": 24,
+    "faults": 0
+  },
+  "finding": {
+    "PEER_STOP_FIRST": {
+      "centered_stressed_r": 0.055455162610,
+      "centered_stop": 0.007358624921,
+      "largest_period_contribution_share": 0.516893835914,
+      "largest_strategy_contribution_share": 0.244337804814,
+      "failed_requirements": ["return_magnitude", "stop_magnitude", "economic_concordance", "stop_period_breadth", "stop_strategy_breadth"],
+      "passed": false
+    },
+    "PEER_NATIVE_CLOSE_FIRST": {
+      "centered_stressed_r": 0.036555762079,
+      "centered_stop": -0.082233090846,
+      "largest_period_contribution_share": 0.367239711797,
+      "largest_strategy_contribution_share": 0.478186431372,
+      "failed_requirements": ["return_magnitude", "strategy_contribution_cap"],
+      "passed": false
+    },
+    "economic_interpretation": "Peer native close was associated with lower eventual stop incidence, but neither peer-exit type produced the required broad material return-and-stop field. The first peer exit is not sufficient evidence for a held-position management response."
+  },
+  "verdict": "NO_FIRST_PEER_EXIT_HELD_POSITION_STATE_PASSED",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "closed_scope": [
+    "No peer-stop or peer-native-close response, close, hold, stop, trail or coordination rule.",
+    "No second or later peer exit, elapsed window, peer identity or count, same/cross book, direction, duration adjustment, strategy, symbol or period rescue.",
+    "No repair or rerun of Units 040 or 046 and no adjacent Program 4 successor.",
+    "No lot, slot, priority, EA, MQL, Tester, Program 6 or Live action."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}

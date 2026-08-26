@@ -1040,3 +1040,12 @@
 - Each variant compares separately with no-peer after 24 strategy-period centering cells and requires `0.10R/0.05 stop`, economic concordance, three-of-four period and four-of-six strategy breadth, plus contribution caps. No second peer exit, time window, book, peer identity/count, duration match or subgroup exists.
 - A pass remains an association diagnosis and may retain at most one later observer question only after whole-map comparison; it cannot select an exit or other action.
 - Declaration SHA-256 is `68421B30C3F4099DD59E84021B2AF0825E0E906A87CCAD5DADA797D0B8170F95`; target outcomes remain unopened until commit/push. Program 6, MQL, Tester, broker state and Live remain untouched.
+
+## STATE-0128 - 2026-08-26
+
+- The sole Unit 052 aggregation passed all six portfolio pins, 16,477 rows, zero duplicates/faults, 2,233 lifecycles, exact stop/native/no-peer roles `142/803/1,288`, `$407.0477` stressed net, 206 target stops and 24 finite centering cells with no failed invocation or correction.
+- Peer-stop-first versus no-peer was `+0.055455162610R/+0.007358624921 stop`. Both magnitude minima and concordance failed; stop signs lacked period and strategy breadth.
+- Peer-native-close-first versus no-peer was `+0.036555762079R/-0.082233090846 stop`. Stop magnitude, concordance and breadth passed, but return magnitude failed and Return supplied `47.82%`, above the fixed `45%` strategy cap.
+- Closed `NO_FIRST_PEER_EXIT_HELD_POSITION_STATE_PASSED`; the observed lower stop association does not retain a response or observer question and is not rescued by duration matching, second/later peer exits, peer identity/count, book, strategy, symbol, direction or timing.
+- Declaration/result/closure SHA-256 values are `68421B30C3F4099DD59E84021B2AF0825E0E906A87CCAD5DADA797D0B8170F95` / `217ADD9403852442B416DAD4FAD9E6AFA9382AED29901E8B66565A9E250E2EFF` / `F32E5DC35B5063E6C14BF786C19878937923299393C7E8A0B2F8732A94BC8364`.
+- No close, hold, stop, trail, coordination, lot, slot, priority, EA or Live question survives. Next is a whole-map comparison of Programs 1-5 and 7 without adjacent Program 4 peer-exit work; Program 6, MQL, Tester, broker state and Live remained untouched.

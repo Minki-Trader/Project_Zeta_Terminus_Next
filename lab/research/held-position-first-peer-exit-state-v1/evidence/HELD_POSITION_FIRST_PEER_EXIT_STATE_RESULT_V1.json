@@ -1,0 +1,136 @@
+{
+  "schema": "zeta-next-held-position-first-peer-exit-state-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_052_FIXED_AGGREGATION_COMPLETE",
+  "unit": "held-position-first-peer-exit-state-052",
+  "family": "held-position-first-peer-exit-state-v1",
+  "macro_program": {"id": 4, "name": "position_management_exit", "korean_name": "포지션 관리·청산"},
+  "declaration": {
+    "path": "lab/research/held-position-first-peer-exit-state-v1/evidence/HELD_POSITION_FIRST_PEER_EXIT_STATE_DECLARATION_V1.json",
+    "sha256": "68421B30C3F4099DD59E84021B2AF0825E0E906A87CCAD5DADA797D0B8170F95"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_aggregation_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "portfolio_files_verified": 6,
+    "file_hash_or_byte_mismatches": 0,
+    "rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {"RC16": 272, "RC4": 206, "Cross": 805, "Pressure": 118, "Return": 238, "Passive": 594},
+    "role_counts": {"PEER_STOP_FIRST": 142, "PEER_NATIVE_CLOSE_FIRST": 803, "NO_PEER_EXIT_WHILE_HELD": 1288, "MIXED_SAME_TIME_FIRST_PEER_EXIT": 0},
+    "period_role_counts": {
+      "P1_2022H2_2023": [21, 305, 443],
+      "P2_2024": [39, 191, 324],
+      "P3_2025": [52, 187, 315],
+      "P4_2026_YTD": [30, 120, 206],
+      "array_order": ["PEER_STOP_FIRST", "PEER_NATIVE_CLOSE_FIRST", "NO_PEER_EXIT_WHILE_HELD"]
+    },
+    "strategy_role_counts": {
+      "RC16": [14, 55, 203],
+      "RC4": [10, 107, 89],
+      "Cross": [61, 353, 391],
+      "Pressure": [16, 60, 42],
+      "Return": [17, 188, 33],
+      "Passive": [24, 40, 530],
+      "array_order": ["PEER_STOP_FIRST", "PEER_NATIVE_CLOSE_FIRST", "NO_PEER_EXIT_WHILE_HELD"]
+    },
+    "pooled_stressed_net": 407.0477,
+    "target_stop_exits": 206,
+    "centering_cells": 24,
+    "event_order_overlap_pending_risk_close_or_role_faults": 0
+  },
+  "role_context": {
+    "PEER_STOP_FIRST": {"n": 142, "raw_mean_stressed_r": 0.075793372009, "raw_stop_rate": 0.154929577465, "median_birth_to_close_hours": 4.0, "median_birth_to_first_peer_exit_hours": 1.094722222222},
+    "PEER_NATIVE_CLOSE_FIRST": {"n": 803, "raw_mean_stressed_r": 0.059988584497, "raw_stop_rate": 0.066002490660, "median_birth_to_close_hours": 4.0, "median_birth_to_first_peer_exit_hours": 1.75},
+    "NO_PEER_EXIT_WHILE_HELD": {"n": 1288, "raw_mean_stressed_r": 0.011485911041, "raw_stop_rate": 0.101708074534, "median_birth_to_close_hours": 4.0}
+  },
+  "variants": {
+    "PEER_STOP_FIRST": {
+      "pooled_effect": {"centered_stressed_r": 0.055455162610, "centered_stop": 0.007358624921},
+      "period_effects": {
+        "P1_2022H2_2023": {"r": -0.060327963353, "stop": 0.063106526224},
+        "P2_2024": {"r": 0.062293431164, "stop": -0.004663719708},
+        "P3_2025": {"r": 0.115260527611, "stop": 0.005582716233},
+        "P4_2026_YTD": {"r": 0.053500954017, "stop": -0.035887876897}
+      },
+      "strategy_effects": {
+        "RC16": {"r": 0.209798673599, "stop": -0.013817186465},
+        "RC4": {"r": 0.159131120624, "stop": -0.143244436581},
+        "Cross": {"r": 0.030463616198, "stop": 0.050837832497},
+        "Pressure": {"r": 0.243365000824, "stop": -0.163136484213},
+        "Return": {"r": 0.388188800795, "stop": -0.524347842754},
+        "Passive": {"r": -0.078812728752, "stop": 0.074309186572}
+      },
+      "largest_period_contribution_share": 0.516893835914,
+      "largest_strategy_contribution_share": 0.244337804814,
+      "density_checks_passed": true,
+      "information_checks": {
+        "abs_r_at_least_0_10": false,
+        "abs_stop_at_least_0_05": false,
+        "economic_concordance": false,
+        "r_period_breadth_3_of_4": true,
+        "stop_period_breadth_3_of_4": false,
+        "r_strategy_breadth_4_of_6": true,
+        "stop_strategy_breadth_4_of_6": false,
+        "period_contribution_at_most_0_60": true,
+        "strategy_contribution_at_most_0_45": true
+      },
+      "passed": false
+    },
+    "PEER_NATIVE_CLOSE_FIRST": {
+      "pooled_effect": {"centered_stressed_r": 0.036555762079, "centered_stop": -0.082233090846},
+      "period_effects": {
+        "P1_2022H2_2023": {"r": -0.004468464295, "stop": -0.034807414344},
+        "P2_2024": {"r": 0.059861336441, "stop": -0.112489257621},
+        "P3_2025": {"r": 0.056299605933, "stop": -0.101857394170},
+        "P4_2026_YTD": {"r": 0.065645419968, "stop": -0.117703376128}
+      },
+      "strategy_effects": {
+        "RC16": {"r": -0.028375453389, "stop": -0.014848174583},
+        "RC4": {"r": 0.140574804556, "stop": -0.256589000513},
+        "Cross": {"r": 0.009274258267, "stop": -0.022574424599},
+        "Pressure": {"r": 0.079917950025, "stop": -0.197278726708},
+        "Return": {"r": 0.510960245039, "stop": -0.679452315777},
+        "Passive": {"r": -0.136498233367, "stop": 0.017134223286}
+      },
+      "largest_period_contribution_share": 0.367239711797,
+      "largest_strategy_contribution_share": 0.478186431372,
+      "density_checks_passed": true,
+      "information_checks": {
+        "abs_r_at_least_0_10": false,
+        "abs_stop_at_least_0_05": true,
+        "economic_concordance": true,
+        "r_period_breadth_3_of_4": true,
+        "stop_period_breadth_3_of_4": true,
+        "r_strategy_breadth_4_of_6": true,
+        "stop_strategy_breadth_4_of_6": true,
+        "period_contribution_at_most_0_60": true,
+        "strategy_contribution_at_most_0_45": false
+      },
+      "passed": false
+    }
+  },
+  "passed_variants": [],
+  "selected_retained_question_variant": null,
+  "verdict": "NO_FIRST_PEER_EXIT_HELD_POSITION_STATE_PASSED",
+  "interpretation": {
+    "peer_stop": "The centered return and stop effects were small and non-concordant, and stop signs lacked period and strategy breadth.",
+    "peer_native_close": "The lower stop incidence was broad, but the centered return difference was only 0.0366R and Return supplied 47.82% of the return contrast, above the fixed cap.",
+    "causal_limit": "First peer-exit roles remain duration-exposure associations and do not justify a close, hold or peer-response rule.",
+    "retained_later_question": null,
+    "selected_candidate": null
+  }
+}

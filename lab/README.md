@@ -65,7 +65,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/prior-treasury-curve-move-context-v1/`: 닫힌 Program 2 / Unit 049 source-free family; 공식 미 재무부 2Y·10Y 동반상승 `-0.01578R/+0.00529 stop`, 동반하락 `+0.01560R/-0.00898 stop`으로 둘 다 크기·폭 관문 실패, 인접 금리 후속 없음
 - `research/natural-book-drawdown-complementarity-v1/`: 닫힌 Program 5 / Unit 050 source-free family; US30은 US100 최대 DD를 4/4 기간 광범위하게 상쇄했지만 역방향은 20% 기준 2/4와 P4 손실증폭으로 실패, 일방향 진단만 유지하고 배분·lot·slot 후속 없음
 - `research/macro-frontier-attrition-topology-v1/`: 닫힌 Program 7 / Unit 051 source-free family; Unit 039-050 funnel `12→8→3→0`, 권위 `4/12`·구분력 `5/8`·후보번역 `3/3` 모두 실질 attrition으로 단일 병목 없음, 후속 감사·기본 lane·프로그램 억제 없음
-- `research/held-position-first-peer-exit-state-v1/`: 열린 Program 4 / Unit 052 source-free family; 보유 중 첫 타 component 청산이 stop/native인지와 peer 청산 없는 대조군을 전체 6전략·4기간 한 묶음으로 사전 고정, target close economics 미열람
+- `research/held-position-first-peer-exit-state-v1/`: 닫힌 Program 4 / Unit 052 source-free family; peer stop `+0.05546R/+0.00736 stop`, peer native `+0.03656R/-0.08223 stop`이나 전자는 크기·일관성, 후자는 R크기·Return 집중 실패, 관리 후속 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
