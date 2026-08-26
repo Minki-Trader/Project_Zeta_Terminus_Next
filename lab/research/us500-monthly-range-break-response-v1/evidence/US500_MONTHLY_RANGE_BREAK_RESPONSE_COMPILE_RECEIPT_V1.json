@@ -1,0 +1,149 @@
+{
+  "schema": "zeta-next-us500-monthly-range-break-response-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "SOURCE_BINARY_CONFIG_RUNTIME_FROZEN_BEFORE_OUTCOME",
+  "unit": "us500-monthly-range-break-response-053",
+  "family": "us500-monthly-range-break-response-v1",
+  "declaration": {
+    "path": "lab/research/us500-monthly-range-break-response-v1/evidence/US500_MONTHLY_RANGE_BREAK_RESPONSE_DECLARATION_V1.json",
+    "commit": "751b61671071dd960c9ac306abbc4879e0a47f96",
+    "sha256": "F4F88550DA1EC4F57C0D644BC44B4640D614C20CD40378D440F4AA6BF00B9688",
+    "outcomes_consumed": false
+  },
+  "implementation": {
+    "root": "lab/research/us500-monthly-range-break-response-v1/mt5/",
+    "parent_source_copy": null,
+    "fresh_trade_free_observer": true,
+    "cross_family_include_or_link": false,
+    "source_files": 1,
+    "source_bytes": 20324,
+    "source_manifest_algorithm": "Sort src-root-relative mq5/mqh paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "source_manifest_sha256": "07E96A37BDAE1FA9F81EE3EE1B944ED599C77945D1F0A34CDF8FFA793261D1E7",
+    "mq5_sha256": "799FDC88E43F065A759DA5CC7DC27DCE696B97E8E86865F36FF026EFEA072624",
+    "configuration_files": 4,
+    "configuration_bytes": 1304,
+    "configuration_manifest_algorithm": "Sort tester-root-relative INI/SET filenames ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "configuration_manifest_sha256": "F1466D9474DF8DC7118FD747AC49C2F7CBFD0A9D657EEBC0BCDB03DD94C288EB",
+    "entrypoint": "lab/research/us500-monthly-range-break-response-v1/mt5/src/Experts/ZetaUS500MonthlyRangeBreakResponseObserverV1.mq5",
+    "include_directives": 0,
+    "trade_submission_calls": 0,
+    "position_or_order_enumeration_calls": 0,
+    "ctrade_objects": 0,
+    "order_calc_profit_source_occurrences": 1,
+    "persistent_economic_state_fields": 0,
+    "outputs": ["opportunities.csv", "summary.csv"]
+  },
+  "fixed_observer_contract": {
+    "symbol": "US500",
+    "chart": "US500 D1",
+    "lookback_market_bars": 20,
+    "range_state": "latest completed D1 close strictly outside all highs or lows of the preceding twenty completed D1 market bars",
+    "horizon_market_bars": 5,
+    "maximum_concurrent_observations": 1,
+    "volume_for_profit_conversion": 0.01,
+    "cost_books": ["observed_bid_ask", "one_additional_entry_and_exit_spread"],
+    "direction_books": ["CONTINUATION", "REVERSION"],
+    "orders_or_positions": 0,
+    "last_trigger_cutoffs": {
+      "P1_2025": "2025-12-19 23:59:59",
+      "P2_2026_JAN_JUL": "2026-07-24 23:59:59"
+    }
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_ms": 526,
+    "cpu": "X64 Regular",
+    "first_actual_metaeditor_compile_passed": true,
+    "source_corrections": 0,
+    "binary_path": "lab/research/us500-monthly-range-break-response-v1/mt5/src/Experts/ZetaUS500MonthlyRangeBreakResponseObserverV1.ex5",
+    "binary_bytes": 22720,
+    "binary_sha256": "4D0F26D728B31502F816A2EE8544C943BA5EEAB97734EF30DDCBD8BD391A4678",
+    "compile_log_path_local_ignored": "lab/research/us500-monthly-range-break-response-v1/evidence/metaeditor-build.log",
+    "compile_log_bytes": 3460,
+    "compile_log_sha256": "1C8F7259FCBAB1DF044BCD1B143106CC3FED7FA96C9D32E670A37C2240B0C068"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/mrb53-portable/",
+    "git_ignored": true,
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "physical_copy_only": true,
+    "copy_scope": "build executables and Config plus US500 symbol database, history and exactly 2025-01 through 2026-07 monthly ticks in Bases and Tester-bases",
+    "copy_correction": "The first no-outcome copy invocation used wildcard text with LiteralPath for symbols, history and SET files; those nonterminating misses were completed in the same partial target by enumerating the exact source children. No terminal or Tester process had started and no source, configuration or market file changed.",
+    "filesystem_symbolic_or_junction_links": 0,
+    "sample_origin_and_copy_file_ids_differ": true,
+    "sample_hardlink_lists_contain_one_path": true,
+    "report_directory_precreated": true,
+    "runtime_files_pre_outcome": 86,
+    "runtime_ex5_files": 1,
+    "runtime_other_family_ex5_files": 0,
+    "runtime_zeta_include_files": 0,
+    "runtime_set_files": 2,
+    "terminal_ex5_path_characters": 170,
+    "agent_ex5_path_characters": 198,
+    "terminal_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "runtime_binary_sha256": "4D0F26D728B31502F816A2EE8544C943BA5EEAB97734EF30DDCBD8BD391A4678",
+    "source_runtime_dependency": false,
+    "live_dependency": false
+  },
+  "pre_outcome_market_data": {
+    "scope": "US500 monthly real ticks 2025-01 through 2026-07 inclusive; incomplete/current 2026-08 excluded",
+    "manifest_algorithm": "Sort tick-root-relative filenames, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 19,
+      "bytes": 200912747,
+      "sha256": "D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916",
+      "physical_copy_matches_origin": true
+    },
+    "tester_bases": {
+      "files": 19,
+      "bytes": 200606847,
+      "sha256": "AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB",
+      "physical_copy_matches_origin": true
+    },
+    "current_incomplete_month_in_invariant": false
+  },
+  "pre_outcome_symbol_database": {
+    "selected_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+      "bytes": 18210,
+      "sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F"
+    },
+    "symbols_file": {
+      "path": "Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "bytes": 413696,
+      "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+    },
+    "housekeeping_rule": "Generic selected-symbol or symbols database byte changes are telemetry. Required completed-month tick hashes, detailed path history logs and the observer's start/end consumed specification govern validity."
+  },
+  "pre_outcome_visible_us500_spec": {
+    "binding_source": "The selected/full symbol database hashes exactly match the already-visible isolated US500 snapshot used by the valid Unit 038 path; Unit 053 must independently repeat and preserve all start/end values before its rows are read.",
+    "digits": 2,
+    "point": 0.01,
+    "tick_size": 0.01,
+    "tick_value": 0.01,
+    "contract_size": 1.0,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "stops_level": 0,
+    "freeze_level": 0,
+    "swap_fields": "The observer additionally records swap mode, long, short and three-day rollover at both boundaries. They must be finite and start/end exact before opportunity reading; no older-family economic outcome is consumed."
+  },
+  "matrix": {
+    "paths": [
+      "tester-us500-mrb53-v1-p1.ini",
+      "tester-us500-mrb53-v1-p2.ini"
+    ],
+    "sequential_opening": "P1 only; P2 opens only after a P1-selected direction passes every frozen discovery gate",
+    "environment_rebuild_allowance": 0,
+    "outcomes_consumed": false
+  },
+  "source_or_config_change_allowed_after_first_path": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_the_frozen_source_then_run_only_P1_under_the_full_integrity_gate"
+}

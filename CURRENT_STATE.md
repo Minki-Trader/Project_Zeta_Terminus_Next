@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0129`
+- Latest state ID: `STATE-0130`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: Program 1 Unit 053 `us500-monthly-range-break-response-v1`; declaration is frozen and pushed-boundary preparation is active, while MQL, configuration, runtime, compile and outcomes remain unopened
+- Active research boundary: Program 1 Unit 053 `us500-monthly-range-break-response-v1`; declaration, one-source observer, two configurations, binary and dedicated runtime are frozen, while P1 and every economic outcome remain unopened
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -611,6 +611,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - The sole state is a completed US500 D1 close strictly outside the full high/low of the preceding 20 completed D1 market bars. One natural bundle prices five-D1-bar continuation and reversion at `0.01` under observed and one-additional-entry/exit-spread costs; there is no parameter, range, buffer, horizon, session or symbol grid.
 - Frozen serial roles are P1 calendar 2025 discovery/direction selection and conditional P2 2026 January-July confirmation/latest veto for the P1-selected direction only. A full pass may retain one later standalone prototype question but selects no stop, lot, slot, admission, EA or Live behavior.
 - Declaration SHA-256 is `F4F88550DA1EC4F57C0D644BC44B4640D614C20CD40378D440F4AA6BF00B9688`. Source, configuration, runtime, compile and outcomes remain unopened until this declaration boundary is committed and pushed. Program 6 and Live remain untouched.
+
+## Frozen US500 monthly-range break response Unit 053 implementation
+
+- Implemented one fresh trade-free US500 D1 observer with zero Include, order, position or trade-operation surface and one `OrderCalcProfit` source occurrence. It evaluates only the frozen 20-D1 range break and five-D1 continuation/reversion response.
+- The first actual MetaEditor build-6140 compile passed at `0 errors / 0 warnings` in 526 ms with no source correction. Source/config manifests are `07E96A37BDAE1FA9F81EE3EE1B944ED599C77945D1F0A34CDF8FFA793261D1E7` / `F1466D9474DF8DC7118FD747AC49C2F7CBFD0A9D657EEBC0BCDB03DD94C288EB`; EX5 SHA-256 is `4D0F26D728B31502F816A2EE8544C943BA5EEAB97734EF30DDCBD8BD391A4678`.
+- Git-ignored `lab/runtime/mrb53-portable/` is a physical Lab-only copy with one family EX5, two SETs, zero Include/other-family EX5 or symbolic/junction link, distinct sampled file IDs and one-path hardlink lists. Terminal/agent EX5 paths are 170/198 characters.
+- The 19-file 2025-01 through 2026-07 US500 Bases/Tester-bases manifests are exact at `D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916` / `AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB`; selected/full symbol hashes also match the frozen visible US500 snapshot.
+- Compile/runtime receipt SHA-256 is `662C1416226EEBA4469B2851EFBBECB86FBE4AA6CA34DCD0573E3914AD82A215`. No Tester path or outcome has opened; only P1 2025 may run after this boundary is committed and pushed. Program 6 and Live remain untouched.
 
 ## Required completion evidence
 
