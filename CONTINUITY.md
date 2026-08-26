@@ -62,9 +62,9 @@ This successor changes only current-order ownership classification for an exact 
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev authorization: `ENABLED`; exact CXR2 PID `13328` was the last verified sole owner at entries `1/1` after committed connected recovery and final handshake, but no local `terminal64.exe` is currently active. Broker/account state was not polled after that process disappeared.
+- Next V7 Live-Dev authorization: `ENABLED`; exact CXR2 PID `15080` is the verified sole owner at entries `1/1` after the fresh committed preflight PID `28148` proved `0/0`, flat exposure and zero risk and stopped.
 - V7 may not import or adopt B70 positions or state.
-- The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs including CXR2 `21944/24820`, dashboard PID `4712`, and last verified CXR2 PID `13328` are no longer active. Dashboard PID `4284` remains active; no replacement Live terminal was observed, and Legacy, parent V7 and CXR1 must not restart.
+- The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs including CXR2 `21944/24820/28148`, dashboard PIDs `4712/4284`, and prior CXR2 PID `13328` are no longer active. Exact CXR2 PID `15080` and Korean dashboard PID `28508` are active; Legacy, parent V7 and CXR1 must not restart.
 
 ## Completed legacy closure
 
