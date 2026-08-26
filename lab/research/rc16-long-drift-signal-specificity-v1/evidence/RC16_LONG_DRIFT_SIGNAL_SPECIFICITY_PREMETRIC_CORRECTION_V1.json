@@ -1,0 +1,53 @@
+{
+  "schema": "zeta-next-rc16-long-drift-signal-specificity-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "PREMETRIC_NATIVE_CLOCK_TOPOLOGY_CORRECTION_FROZEN",
+  "unit": "rc16-long-drift-signal-specificity-070",
+  "declaration": {
+    "path": "lab/research/rc16-long-drift-signal-specificity-v1/evidence/RC16_LONG_DRIFT_SIGNAL_SPECIFICITY_DECLARATION_V1.json",
+    "sha256": "F38C32FB882CDAF0048CA8B12FA14FCBFAC8EF2D884ADC1BF497FA3510201446",
+    "unchanged": true
+  },
+  "failed_invocation": {
+    "stage": "native 13:30 physical-row topology assertion immediately after all immutable pins and bar validation",
+    "exception": "The implementation treated Unit 063's 258 all-slot eligible-day denominator as the number of physical 13:30 observations in 2025.",
+    "new_control_metrics_emitted": 0,
+    "excess_intervals_emitted": 0,
+    "monthly_contrasts_emitted": 0,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "corrected_topology": {
+    "SELECTION_2025": {
+      "unit_063_all_slot_eligible_days": 258,
+      "physical_native_13_30_rows": 257,
+      "native_signal_rows": 79,
+      "interpretation": "One all-slot eligible day has no physical 13:30 bar. The target remains every actually available native-clock observation; no missing row is synthesized."
+    },
+    "CONFIRM_2026_COMPLETE_MONTHS": {
+      "unit_063_all_slot_eligible_days": 151,
+      "physical_native_13_30_rows": 151,
+      "native_signal_rows": 39
+    }
+  },
+  "unchanged_contract": [
+    "all input byte and hash pins",
+    "all date boundaries and the physical-row-only clock rule",
+    "the exact RC16 feature, threshold, ATR and eight-bar response",
+    "both unconditional and positive-direction controls",
+    "all density, excess, interval, monthly breadth, MAE and verdict gates",
+    "all exclusions and decision translations"
+  ],
+  "budget_after_freeze": {
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "successful_fixed_aggregations_used": 0,
+    "successful_fixed_aggregations_remaining": 1,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "new_outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_native_clock_topology_correction_then_run_the_single_remaining_fixed_aggregation"
+}

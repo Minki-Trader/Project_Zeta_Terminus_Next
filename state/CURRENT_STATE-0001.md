@@ -1448,3 +1448,10 @@
 - Froze three roles: signal versus every same-clock no-signal day; signal versus positive-recent-direction but subthreshold-compression days; and fixed calendar-month breadth plus MAE falsification. This separates passive long drift, direction filtering and compression specificity.
 - Complete passage requires both-period material excess and positive-rate improvement against both controls, positive pooled intervals, at least 60% positive valid months and nonworse MAE. Direction-only value is partial; failed passive-long excess records beta dependence; neither opens implementation automatically.
 - Return is excluded because its close-based H1 reversal cannot be reconstructed from retained open-only H1 data. Declaration SHA-256 is `F38C32FB882CDAF0048CA8B12FA14FCBFAC8EF2D884ADC1BF497FA3510201446`; no control or contrast outcome has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0176 - 2026-08-27
+
+- The first Unit 070 invocation passed every immutable pin and bar check, then stopped at the native 13:30 physical-row assertion before emitting any new control, excess, interval, positive-rate or monthly metric.
+- Unit 063's 258 value is the number of days with at least one eligible all-slot evaluation. Exact physical-clock inspection found 257 actual 13:30 observations in 2025 and 151 in completed-month 2026; one otherwise eligible 2025 day has no native bar and is not synthesized.
+- Used the one permitted premetric correction only to replace the 2025 physical native-row assertion with 257. Signal rows remain 79/39; all input pins, periods, feature/ATR/response formulas, controls, thresholds, breadth, MAE, verdicts and exclusions are unchanged.
+- Correction receipt SHA-256 is `C94F596A31CBEDCB85A83275098E3CFAA4C9812AE8FF9CCD137DF1798A335E63`. One successful fixed aggregation remains; no further correction or rerun is available. Program 6, broker/account state and Live remain untouched.
