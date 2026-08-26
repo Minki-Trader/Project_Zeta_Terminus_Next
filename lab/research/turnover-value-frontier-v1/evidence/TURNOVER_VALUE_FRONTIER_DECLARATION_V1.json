@@ -1,0 +1,175 @@
+{
+  "schema": "zeta-next-turnover-value-frontier-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_074_DECLARATION_FROZEN_BEFORE_FREQUENCY_VALUE_AGGREGATION",
+  "unit": "turnover-value-frontier-074",
+  "family": "turnover-value-frontier-v1",
+  "title": "Component Frequency Versus Per-Fill Economic Value Frontier",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "research_height": {
+    "primary": "macro",
+    "supporting": [
+      "meso"
+    ],
+    "transfer_path": "Component lifecycle frequency and per-fill stressed value define whether additional turnover is economically complementary or buys lower-value activity, then constrain future portfolio expansion without changing the authoritative fill requirement."
+  },
+  "central_question": "Across the six frozen components, two pooled evidence bases and four CP2 periods, is higher lifecycle frequency stably associated with lower stressed value per fill strongly enough that future turnover expansion must preserve an explicit value hurdle?",
+  "research_bundle": {
+    "name": "two_basis_pooled_rank_period_breadth_and_frequency_half_transfer",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: component fill count versus stressed net per fill in fixed-0.01 CP2 and compounding binding evidence",
+      "breadth: repeat the rank relation across all four frozen CP2 periods",
+      "portfolio transfer: compare the three highest-frequency components with the three lowest-frequency components on average per-fill value and net-share minus fill-share"
+    ]
+  },
+  "idea_provenance": {
+    "source": "user-supplied Claude 30-card memo",
+    "memo_sha256": "032D8DD706D4D8C43E4EBFF391895E3C485DCB2F0531BE4C39DC2C699DE4A0BB",
+    "card": 16,
+    "authority_note": "The memo supplies the question and strong falsifier only. Project Zeta Terminus Next remains the sole economic authority."
+  },
+  "why_now": {
+    "current_bottleneck": "Units 072-073 found that the US100 book and Passive consume many fills for comparatively little net while recorded entry costs do not explain the pattern. The unresolved macro question is whether this is a stable portfolio-wide frequency/value structure rather than one component anecdote.",
+    "connection_bridge": "Unit 072 quantified 62.42% of binding fills for 17.26% of binding net in US100, and Unit 073 retained 27 Passive expiries in per-attempt economics. Unit 039 already supplies all six component counts and stressed nets across four periods.",
+    "perspective_distance": "Unit 073 was Program 3 micro order-cost identifiability on one P4 symbol book. Unit 074 moves to Program 5 macro whole-portfolio turnover economics across two pooled bases and four periods.",
+    "decision_if_true": "Keep the authoritative three-fill requirement unchanged, but require future turnover candidates to demonstrate value-preserving incremental fills rather than using raw count as sufficient economic evidence.",
+    "decision_if_false": "Treat low-value high-frequency examples as component-specific and preserve the existing fill objective without a new portfolio-wide value-frontier constraint.",
+    "decision_if_ambiguous_or_invalid": "Record the six-component identification limit and rotate away."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Unit 070 remains ambiguous; no signal-threshold or 2026-only rescue opens.",
+    "program_2": "Unit 071 closed intraday-dominant; no session-boundary rescue opens.",
+    "program_3": "Unit 073 just closed with nondiscriminating recorded costs; no spread, order-type or logger follow-up opens.",
+    "program_4": "Management and partial-close cards lack a clean full-period causal path at this boundary.",
+    "program_5": "Selected because current evidence exposes a direct frequency/value capital-allocation tension across the entire six-component portfolio.",
+    "program_7": "The question changes a portfolio decision rule directly and does not require another meta audit.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare all programs and heights. Do not automatically open a component removal, reservation, priority, size or fill-threshold successor."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "six exact components RC16, RC4, Cross, Pressure, Return and Passive",
+      "Unit 039 fixed-0.01 CP2 2x stressed counts/net pooled and in P1-P4",
+      "independent equivalence binding compounding 2x stressed component block"
+    ],
+    "excluded": [
+      "latest 84-fill window as a third pooled base",
+      "daily, monthly, symbol, direction, winner/loser, top-k contribution or signal subgroup",
+      "causal claim that frequency itself lowers value",
+      "new data, raw lifecycle reconstruction, runtime, MQL, compile, Tester, broker/account query or Live action"
+    ],
+    "automatic_followups_forbidden": [
+      "alternate rank threshold or high/low group size",
+      "removing Passive, Return or any component",
+      "reservation, admission priority, clock densification, lot, risk, slot, EA or Live change",
+      "editing the authoritative three-fill requirement from this descriptive unit"
+    ]
+  },
+  "immutable_inputs": {
+    "unit_039_result": {
+      "path": "lab/research/portfolio-cost-resilience-envelope-v1/evidence/PORTFOLIO_COST_RESILIENCE_ENVELOPE_RESULT_V1.json",
+      "bytes": 10354,
+      "sha256": "C026E483AE6605AE0EEC8031883E1D4B01AF9D70B5EE7627084074E1106E4A1C",
+      "role": "Fixed-0.01 CP2 six-component pooled and four-period count/net basis."
+    },
+    "unit_039_closure": {
+      "path": "lab/research/portfolio-cost-resilience-envelope-v1/evidence/PORTFOLIO_COST_RESILIENCE_ENVELOPE_CLOSURE_V1.json",
+      "bytes": 2931,
+      "sha256": "75ACA51F94CFB41CA6AD80B27A6E03F2ED319CAE691BD13724196646DABEC1AC",
+      "role": "Semantic authority that cost-fragile components cannot be suppressed and the 039 question is closed."
+    },
+    "equivalence": {
+      "path": "lab/evidence/NEXT_E01_V7_EQUIVALENCE.json",
+      "bytes": 5780,
+      "sha256": "515A275454F3614D7E7A00664133914C51B72EB91ACF83D81309A810D88C3611",
+      "role": "Independent binding compounding component count and 2x stressed net basis."
+    }
+  },
+  "frozen_reconstruction": {
+    "component_order": [
+      "RC16",
+      "RC4",
+      "Cross",
+      "Pressure",
+      "Return",
+      "Passive"
+    ],
+    "per_fill_value": "stressed_2x_net_usd divided by positive component fill/lifecycle count within the same basis or period.",
+    "rank_statistic": "Spearman correlation between component count and per-fill value using average ranks for ties. More-negative values indicate higher frequency paired with lower value.",
+    "frequency_halves": "Within each basis or period sort by ascending (count, component_order index). LOW_FREQUENCY is first three; HIGH_FREQUENCY is last three.",
+    "half_mean_value": "Unweighted mean of the three component per-fill values in the half, preserving component rather than trade weighting.",
+    "half_transfer": "For each half, sum component fills and net. Net share uses signed half net divided by positive full net; fill share is half fills divided by full fills. Report LOW_FREQUENCY net_share minus fill_share.",
+    "no_cross_basis_pooling": "Do not add, average or rescale CP2 and binding dollars. Apply metrics separately and compare only signs/gates.",
+    "relationship_not_causality": "Component identity, signal mechanism and clock are confounded with frequency. A pass is a portfolio design constraint, not proof that increasing frequency mechanically destroys value."
+  },
+  "fixed_integrity_density_gate": {
+    "requirements": [
+      "All three byte/hash pins and source verdict/schema anchors pass.",
+      "Both pooled bases contain exactly the six named components with positive counts and finite stressed nets.",
+      "Unit 039 has exactly four periods per component, pooled counts equal period counts and pooled 2x net equals period net within 1e-9.",
+      "Unit 039 pooled counts total 2,233 and net 407.0477; binding counts total 2,235 and net 940.6585.",
+      "Each period has all six components, positive full net and at least 20 fills per component."
+    ],
+    "all_required": true
+  },
+  "fixed_pooled_frontier_gate": {
+    "requirements": [
+      "Count-versus-per-fill Spearman is at most -0.60 in both CP2 pooled and binding pooled bases.",
+      "HIGH_FREQUENCY half mean per-fill value is strictly below LOW_FREQUENCY half mean in both pooled bases.",
+      "LOW_FREQUENCY net-share minus fill-share is at least +0.20 in both pooled bases."
+    ],
+    "all_required": true
+  },
+  "fixed_period_breadth_gate": {
+    "requirements": [
+      "Count-versus-per-fill Spearman is negative in at least three of four periods.",
+      "The median of the four period Spearman values is at most -0.40.",
+      "HIGH_FREQUENCY half mean per-fill value is below LOW_FREQUENCY half mean in at least three periods.",
+      "LOW_FREQUENCY net-share minus fill-share is positive in at least three periods."
+    ],
+    "all_required": true
+  },
+  "fixed_strong_falsifier": {
+    "requirements": [
+      "The frontier is rejected when either pooled Spearman is nonnegative, or when at most two periods have negative Spearman, or when at most two periods show lower HIGH_FREQUENCY mean value."
+    ]
+  },
+  "fixed_verdict_rules": {
+    "complete": "PASS_STABLE_INVERSE_TURNOVER_VALUE_FRONTIER_REQUIRE_VALUE_PRESERVING_EXPANSION when integrity, pooled frontier and period breadth all pass.",
+    "falsified": "NO_STABLE_TURNOVER_VALUE_FRONTIER_PRESERVE_FILL_OBJECTIVE when integrity passes and the strong falsifier triggers.",
+    "ambiguous": "AMBIGUOUS_TURNOVER_VALUE_FRONTIER_NO_POLICY_CHANGE when integrity passes and neither preceding rule applies.",
+    "invalid": "INVALID_TURNOVER_VALUE_FRONTIER_NO_VERDICT when any pin, component, arithmetic or density condition fails."
+  },
+  "decision_translation": {
+    "complete": "Preserve all components and the authoritative three-fill requirement, but require later turnover candidates to report incremental stressed net per new fill and whole-portfolio net/DD before count can be favorable evidence.",
+    "falsified": "Preserve current fill objective without a portfolio-wide inverse-frontier constraint; treat component examples locally.",
+    "ambiguous_or_invalid": "Make no policy or component change and rotate away."
+  },
+  "execution_budget": {
+    "successful_fixed_syntheses": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before calculating any rank, group, share or verdict.",
+    "One implementation-only correction is allowed only before any new frontier metric is emitted. After any metric, make no correction or rerun.",
+    "Do not change component order, bases, period count, high/low split, thresholds, gates, verdicts or authoritative fill requirement.",
+    "Do not reconstruct raw lifecycles, acquire data, create runtime, modify MQL, compile, run Tester, query broker/account state or touch Live."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "create_family_memory_compute_declaration_sha_commit_push_then_run_exactly_one_fixed_turnover_value_synthesis"
+}

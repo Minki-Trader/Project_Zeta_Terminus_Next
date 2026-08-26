@@ -1522,3 +1522,12 @@
 - Passive filled mean stressed R was `+0.00919R` versus Cross `+0.00716R`. Passive net per placed order fell to `$0.03821` after expiries versus Cross `$0.04369`, but the fixed lower-value gate failed because Cross did not exceed Passive by `0.03R`.
 - Closed `NO_RECORDED_ORDER_TYPE_COST_SEPARATION_NO_ADVERSE_SELECTION_IDENTIFICATION`. Preserve Passive limit and Cross market execution; no signal, selector, order-type, removal, adapter, EA or Live candidate.
 - Result/closure SHA-256 values are `1AA0AA9D3D205DA7A3A91576E2F102BB80109435A74C2ED41A583785D41DB0C3` / `857D4D5CAA256F0C7B8096173B3C97AF74B0661CE4531A0D2E7EE4B41DC15BC1`. One aggregation, zero correction and zero rerun; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0185 - 2026-08-27
+
+- Unit 073 closure commit `0ef69a6298d454b8d14fc29031aa04bc216324bb` reached origin before Programs 1-5 and 7 plus micro/meso/macro heights were recomputed. No adjacent order-cost or spread follow-up opened.
+- Opened only Program 5 / macro Unit 074 `turnover-value-frontier-v1` from external card 16. The bridge is Units 072-073's high-frequency/low-net and Passive attempt evidence; the distance is Program 3 P4 entry mechanics to whole-portfolio cross-period turnover economics.
+- Pinned Unit 039's fixed-0.01 CP2 six-component pooled/P1-P4 count and 2x net, plus independent equivalence binding compounding counts/net. The two bases remain separate.
+- Froze average-rank Spearman, fixed three-low/three-high frequency halves, unweighted half mean per-fill value and low-frequency net-share minus fill-share. Stable passage requires both pooled bases and at least three-period breadth.
+- A pass is descriptive because component identity, signal and clock confound frequency. It cannot alter the authoritative three-fill requirement, remove a component or authorize priority/lot/slot changes; it only constrains future turnover evidence to preserve incremental value.
+- Declaration SHA-256 is `2E9D3BBA212C714458CB5781FB22BCC2E3EDF6BBB24FB38B91E55DDD7DC413FE`. No rank or half metric has opened. One synthesis, one premetric correction and zero reruns are budgeted; no raw reconstruction, data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
