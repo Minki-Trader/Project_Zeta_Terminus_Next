@@ -1,0 +1,475 @@
+{
+  "gates": {
+    "integrity_density": {
+      "binding_fills": 2235,
+      "components_per_basis": 6,
+      "cp2_fills": 2233,
+      "passed": true,
+      "periods": 4
+    },
+    "period_breadth": {
+      "checks": {
+        "high_mean_below_low_mean_periods_at_least_3": true,
+        "low_net_share_minus_fill_share_positive_periods_at_least_3": true,
+        "median_period_spearman_at_most_minus_0_40": false,
+        "negative_spearman_periods_at_least_3": true
+      },
+      "high_mean_below_low_mean_periods": 3,
+      "low_transfer_positive_periods": 3,
+      "median_period_spearman": -0.34285714285714286,
+      "negative_spearman_periods": 3,
+      "passed": false
+    },
+    "pooled_frontier": {
+      "checks": {
+        "binding_high_mean_below_low_mean": true,
+        "binding_low_net_share_minus_fill_share_at_least_0_20": false,
+        "binding_spearman_at_most_minus_0_60": true,
+        "cp2_high_mean_below_low_mean": true,
+        "cp2_low_net_share_minus_fill_share_at_least_0_20": true,
+        "cp2_spearman_at_most_minus_0_60": false
+      },
+      "passed": false
+    },
+    "strong_falsifier": {
+      "checks": {
+        "either_pooled_spearman_nonnegative": false,
+        "high_mean_below_low_mean_periods_at_most_2": false,
+        "negative_spearman_periods_at_most_2": false
+      },
+      "triggered": false
+    }
+  },
+  "integrity": {
+    "all_component_and_period_identities_passed": true,
+    "all_pins_passed": true,
+    "passed": true
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "HIGH_FREQUENCY": {
+        "components": [
+          "Return",
+          "Passive",
+          "Cross"
+        ],
+        "fill_share": 0.7854356306892067,
+        "fills": 604,
+        "mean_component_net_per_fill_usd": 0.17533855737376863,
+        "net_usd": 67.0035,
+        "signed_net_share": 0.45007002589446743
+      },
+      "LOW_FREQUENCY": {
+        "components": [
+          "Pressure",
+          "RC4",
+          "RC16"
+        ],
+        "fill_share": 0.21456436931079323,
+        "fills": 165,
+        "mean_component_net_per_fill_usd": 0.45160009801519235,
+        "net_share_minus_fill_share": 0.3353656047947393,
+        "net_usd": 81.87,
+        "signed_net_share": 0.5499299741055326
+      },
+      "components": [
+        {
+          "n": 77,
+          "net_per_fill_usd": 0.5253636363636364,
+          "net_usd": 40.453,
+          "strategy": "RC16"
+        },
+        {
+          "n": 53,
+          "net_per_fill_usd": 0.6881509433962264,
+          "net_usd": 36.472,
+          "strategy": "RC4"
+        },
+        {
+          "n": 286,
+          "net_per_fill_usd": 0.046965034965034964,
+          "net_usd": 13.432,
+          "strategy": "Cross"
+        },
+        {
+          "n": 35,
+          "net_per_fill_usd": 0.1412857142857143,
+          "net_usd": 4.945,
+          "strategy": "Pressure"
+        },
+        {
+          "n": 105,
+          "net_per_fill_usd": 0.44876190476190475,
+          "net_usd": 47.12,
+          "strategy": "Return"
+        },
+        {
+          "n": 213,
+          "net_per_fill_usd": 0.030288732394366198,
+          "net_usd": 6.4515,
+          "strategy": "Passive"
+        }
+      ],
+      "count_value_spearman": -0.6,
+      "full": {
+        "fills": 769,
+        "net_usd": 148.8735
+      }
+    },
+    "P2_2024": {
+      "HIGH_FREQUENCY": {
+        "components": [
+          "RC16",
+          "Passive",
+          "Cross"
+        ],
+        "fill_share": 0.7725631768953068,
+        "fills": 428,
+        "mean_component_net_per_fill_usd": 0.12376823562380501,
+        "net_usd": 52.754000000000005,
+        "signed_net_share": 0.9650769258913707
+      },
+      "LOW_FREQUENCY": {
+        "components": [
+          "Pressure",
+          "Return",
+          "RC4"
+        ],
+        "fill_share": 0.22743682310469315,
+        "fills": 126,
+        "mean_component_net_per_fill_usd": 0.01730238446814328,
+        "net_share_minus_fill_share": -0.19251374899606394,
+        "net_usd": 1.9089999999999996,
+        "signed_net_share": 0.03492307410862923
+      },
+      "components": [
+        {
+          "n": 72,
+          "net_per_fill_usd": 0.14344444444444443,
+          "net_usd": 10.328,
+          "strategy": "RC16"
+        },
+        {
+          "n": 53,
+          "net_per_fill_usd": 0.21573584905660376,
+          "net_usd": 11.434,
+          "strategy": "RC4"
+        },
+        {
+          "n": 197,
+          "net_per_fill_usd": 0.16305837563451778,
+          "net_usd": 32.1225,
+          "strategy": "Cross"
+        },
+        {
+          "n": 23,
+          "net_per_fill_usd": 0.049391304347826084,
+          "net_usd": 1.136,
+          "strategy": "Pressure"
+        },
+        {
+          "n": 50,
+          "net_per_fill_usd": -0.21322,
+          "net_usd": -10.661,
+          "strategy": "Return"
+        },
+        {
+          "n": 159,
+          "net_per_fill_usd": 0.06480188679245283,
+          "net_usd": 10.3035,
+          "strategy": "Passive"
+        }
+      ],
+      "count_value_spearman": 0.5428571428571428,
+      "full": {
+        "fills": 554,
+        "net_usd": 54.663000000000004
+      }
+    },
+    "P3_2025": {
+      "HIGH_FREQUENCY": {
+        "components": [
+          "RC16",
+          "Passive",
+          "Cross"
+        ],
+        "fill_share": 0.7256317689530686,
+        "fills": 402,
+        "mean_component_net_per_fill_usd": 0.1411552216240942,
+        "net_usd": 52.294,
+        "signed_net_share": 0.4626231886622198
+      },
+      "LOW_FREQUENCY": {
+        "components": [
+          "Pressure",
+          "Return",
+          "RC4"
+        ],
+        "fill_share": 0.2743682310469314,
+        "fills": 152,
+        "mean_component_net_per_fill_usd": 0.34519386312217193,
+        "net_share_minus_fill_share": 0.26300858029084884,
+        "net_usd": 60.744,
+        "signed_net_share": 0.5373768113377803
+      },
+      "components": [
+        {
+          "n": 79,
+          "net_per_fill_usd": 0.24767088607594936,
+          "net_usd": 19.566,
+          "strategy": "RC16"
+        },
+        {
+          "n": 68,
+          "net_per_fill_usd": 0.4326176470588235,
+          "net_usd": 29.418,
+          "strategy": "RC4"
+        },
+        {
+          "n": 193,
+          "net_per_fill_usd": 0.15674093264248706,
+          "net_usd": 30.251,
+          "strategy": "Cross"
+        },
+        {
+          "n": 32,
+          "net_per_fill_usd": 0.00140625,
+          "net_usd": 0.045,
+          "strategy": "Pressure"
+        },
+        {
+          "n": 52,
+          "net_per_fill_usd": 0.6015576923076923,
+          "net_usd": 31.281,
+          "strategy": "Return"
+        },
+        {
+          "n": 130,
+          "net_per_fill_usd": 0.019053846153846154,
+          "net_usd": 2.477,
+          "strategy": "Passive"
+        }
+      ],
+      "count_value_spearman": -0.08571428571428572,
+      "full": {
+        "fills": 554,
+        "net_usd": 113.038
+      }
+    },
+    "P4_2026_YTD": {
+      "HIGH_FREQUENCY": {
+        "components": [
+          "RC16",
+          "Passive",
+          "Cross"
+        ],
+        "fill_share": 0.7443820224719101,
+        "fills": 265,
+        "mean_component_net_per_fill_usd": 0.36452693466515507,
+        "net_usd": 54.074200000000005,
+        "signed_net_share": 0.5976819654881225
+      },
+      "LOW_FREQUENCY": {
+        "components": [
+          "Pressure",
+          "Return",
+          "RC4"
+        ],
+        "fill_share": 0.2556179775280899,
+        "fills": 91,
+        "mean_component_net_per_fill_usd": 0.42310983102918587,
+        "net_share_minus_fill_share": 0.14670005698378763,
+        "net_usd": 36.399,
+        "signed_net_share": 0.40231803451187753
+      },
+      "components": [
+        {
+          "n": 44,
+          "net_per_fill_usd": 1.0020681818181818,
+          "net_usd": 44.091,
+          "strategy": "RC16"
+        },
+        {
+          "n": 32,
+          "net_per_fill_usd": 0.0545,
+          "net_usd": 1.744,
+          "strategy": "RC4"
+        },
+        {
+          "n": 129,
+          "net_per_fill_usd": 0.04227131782945737,
+          "net_usd": 5.453,
+          "strategy": "Cross"
+        },
+        {
+          "n": 28,
+          "net_per_fill_usd": 1.0015714285714286,
+          "net_usd": 28.044,
+          "strategy": "Pressure"
+        },
+        {
+          "n": 31,
+          "net_per_fill_usd": 0.21325806451612903,
+          "net_usd": 6.611,
+          "strategy": "Return"
+        },
+        {
+          "n": 92,
+          "net_per_fill_usd": 0.04924130434782609,
+          "net_usd": 4.5302,
+          "strategy": "Passive"
+        }
+      ],
+      "count_value_spearman": -0.6571428571428571,
+      "full": {
+        "fills": 356,
+        "net_usd": 90.4732
+      }
+    }
+  },
+  "pooled": {
+    "BINDING_COMPOUNDING": {
+      "HIGH_FREQUENCY": {
+        "components": [
+          "RC16",
+          "Passive",
+          "Cross"
+        ],
+        "fill_share": 0.7458612975391499,
+        "fills": 1667,
+        "mean_component_net_per_fill_usd": 0.5162192981098114,
+        "net_usd": 524.8205,
+        "signed_net_share": 0.5579288338966799
+      },
+      "LOW_FREQUENCY": {
+        "components": [
+          "Pressure",
+          "RC4",
+          "Return"
+        ],
+        "fill_share": 0.25413870246085013,
+        "fills": 568,
+        "mean_component_net_per_fill_usd": 0.8902119075687153,
+        "net_share_minus_fill_share": 0.18793246364247007,
+        "net_usd": 415.838,
+        "signed_net_share": 0.4420711661033202
+      },
+      "components": [
+        {
+          "n": 272,
+          "net_per_fill_usd": 1.3326029411764706,
+          "net_usd": 362.468,
+          "strategy": "RC16"
+        },
+        {
+          "n": 206,
+          "net_per_fill_usd": 0.8949223300970874,
+          "net_usd": 184.354,
+          "strategy": "RC4"
+        },
+        {
+          "n": 805,
+          "net_per_fill_usd": 0.16223291925465838,
+          "net_usd": 130.5975,
+          "strategy": "Cross"
+        },
+        {
+          "n": 118,
+          "net_per_fill_usd": 1.6015084745762713,
+          "net_usd": 188.978,
+          "strategy": "Pressure"
+        },
+        {
+          "n": 244,
+          "net_per_fill_usd": 0.1742049180327869,
+          "net_usd": 42.506,
+          "strategy": "Return"
+        },
+        {
+          "n": 590,
+          "net_per_fill_usd": 0.05382203389830508,
+          "net_usd": 31.755,
+          "strategy": "Passive"
+        }
+      ],
+      "count_value_spearman": -0.7714285714285715,
+      "full": {
+        "fills": 2235,
+        "net_usd": 940.6585
+      }
+    },
+    "CP2_FIXED_001": {
+      "HIGH_FREQUENCY": {
+        "components": [
+          "RC16",
+          "Passive",
+          "Cross"
+        ],
+        "fill_share": 0.748320644872369,
+        "fills": 1671,
+        "mean_component_net_per_fill_usd": 0.18722462696833966,
+        "net_usd": 219.4587,
+        "signed_net_share": 0.5391473775677887
+      },
+      "LOW_FREQUENCY": {
+        "components": [
+          "Pressure",
+          "RC4",
+          "Return"
+        ],
+        "fill_share": 0.251679355127631,
+        "fills": 562,
+        "mean_component_net_per_fill_usd": 0.3286002245229176,
+        "net_share_minus_fill_share": 0.20917326730458025,
+        "net_usd": 187.589,
+        "signed_net_share": 0.46085262243221126
+      },
+      "components": [
+        {
+          "n": 272,
+          "net_per_fill_usd": 0.4207279411764706,
+          "net_usd": 114.438,
+          "strategy": "RC16"
+        },
+        {
+          "n": 206,
+          "net_per_fill_usd": 0.3838252427184466,
+          "net_usd": 79.068,
+          "strategy": "RC4"
+        },
+        {
+          "n": 805,
+          "net_per_fill_usd": 0.10094223602484471,
+          "net_usd": 81.2585,
+          "strategy": "Cross"
+        },
+        {
+          "n": 118,
+          "net_per_fill_usd": 0.2895762711864407,
+          "net_usd": 34.17,
+          "strategy": "Pressure"
+        },
+        {
+          "n": 238,
+          "net_per_fill_usd": 0.31239915966386556,
+          "net_usd": 74.351,
+          "strategy": "Return"
+        },
+        {
+          "n": 594,
+          "net_per_fill_usd": 0.0400037037037037,
+          "net_usd": 23.7622,
+          "strategy": "Passive"
+        }
+      ],
+      "count_value_spearman": -0.42857142857142855,
+      "full": {
+        "fills": 2233,
+        "net_usd": 407.0477
+      }
+    }
+  },
+  "schema": "zeta-next-turnover-value-frontier-result-v1",
+  "scope_limit": "Descriptive six-component relationship only; component identity, signal and clock confound frequency, and the authoritative three-fill requirement is unchanged.",
+  "verdict": "AMBIGUOUS_TURNOVER_VALUE_FRONTIER_NO_POLICY_CHANGE"
+}

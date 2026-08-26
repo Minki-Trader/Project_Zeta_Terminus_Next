@@ -1,0 +1,103 @@
+{
+  "schema": "zeta-next-turnover-value-frontier-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS_NO_POLICY_CHANGE",
+  "unit": "turnover-value-frontier-074",
+  "family": "turnover-value-frontier-v1",
+  "verdict": "AMBIGUOUS_TURNOVER_VALUE_FRONTIER_NO_POLICY_CHANGE",
+  "evidence": {
+    "declaration_sha256": "2E9D3BBA212C714458CB5781FB22BCC2E3EDF6BBB24FB38B91E55DDD7DC413FE",
+    "premetric_correction_sha256": "6C1B82849C4260178977EE3D57D0286522AA02096E5874C52415A61F87FEDED5",
+    "result_sha256": "F215613D488276F80D1456A73054F9E2C8A40CA1981A760E030791276F01D784",
+    "result_bytes": 12670
+  },
+  "execution_accounting": {
+    "successful_fixed_syntheses": 1,
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "raw_lifecycle_reconstructions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_input_pins_passed": true,
+    "all_component_and_period_identities_passed": true,
+    "cp2_fills": 2233,
+    "binding_fills": 2235,
+    "components_per_basis": 6,
+    "periods": 4
+  },
+  "findings": {
+    "pooled": {
+      "CP2_FIXED_001": {
+        "count_value_spearman": -0.42857142857142855,
+        "low_frequency_fill_share": 0.251679355127631,
+        "low_frequency_signed_net_share": 0.46085262243221126,
+        "low_net_share_minus_fill_share": 0.20917326730458025,
+        "high_mean_per_fill_usd": 0.18722462696833966,
+        "low_mean_per_fill_usd": 0.3286002245229176
+      },
+      "BINDING_COMPOUNDING": {
+        "count_value_spearman": -0.7714285714285715,
+        "low_frequency_fill_share": 0.25413870246085013,
+        "low_frequency_signed_net_share": 0.4420711661033202,
+        "low_net_share_minus_fill_share": 0.18793246364247007,
+        "high_mean_per_fill_usd": 0.5162192981098114,
+        "low_mean_per_fill_usd": 0.8902119075687153
+      },
+      "interpretation": "Both pooled bases point inversely and both high-frequency halves have lower mean value, but CP2 rank strength missed -0.60 while binding transfer missed +0.20, so the fixed pooled gate did not pass."
+    },
+    "period_breadth": {
+      "spearman_by_period": {
+        "P1_2022H2_2023": -0.6,
+        "P2_2024": 0.5428571428571428,
+        "P3_2025": -0.08571428571428572,
+        "P4_2026_YTD": -0.6571428571428571
+      },
+      "negative_periods": 3,
+      "median_spearman": -0.34285714285714286,
+      "high_mean_below_low_mean_periods": 3,
+      "low_transfer_positive_periods": 3,
+      "interpretation": "Three periods point inversely, but P2 reverses strongly and the median misses the frozen -0.40 breadth threshold."
+    }
+  },
+  "gates": {
+    "pooled_frontier_passed": false,
+    "period_breadth_passed": false,
+    "strong_falsifier_triggered": false,
+    "complete_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "all six frozen components and current first-come construction",
+      "the authoritative at-least-three-fills requirement unchanged",
+      "the descriptive observation that lower-frequency components carry disproportionate value in most, but not all, views"
+    ],
+    "discard": [
+      "a stable causal claim that greater frequency lowers per-fill value",
+      "a new mandatory value-frontier policy, component removal, reservation, priority, clock, lot, risk, slot, EA or Live candidate"
+    ],
+    "observation": "The inverse pattern is suggestive but not stable enough across fixed-0.01, compounding and P2 to change policy. Future turnover work may still report per-fill value voluntarily, but Unit 074 creates no new requirement.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "dropping P2 or changing the -0.60/-0.40/+0.20 thresholds",
+    "four-versus-two or two-versus-four frequency groups",
+    "component removal, top-k concentration, reservation or priority",
+    "clock densification, lot, risk, slot, EA or Live change"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_unit"
+}

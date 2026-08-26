@@ -1538,3 +1538,11 @@
 - The pinned Unit 039 result stores its verdict at `selection.verdict`, not at top level. Used the one permitted premetric implementation correction to freeze that exact nested path and the observed top-level key set.
 - Correction receipt SHA-256 is `6C1B82849C4260178977EE3D57D0286522AA02096E5874C52415A61F87FEDED5`. Every component, base, period, per-fill, Spearman, half-transfer, gate, verdict, decision and exclusion remains unchanged.
 - No component per-fill value, rank, frequency-half mean, share delta, breadth or verdict was emitted. One successful synthesis remains, one premetric correction is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remained untouched.
+
+## STATE-0187 - 2026-08-27
+
+- Correction-state commit `970728084c7231c4195128917f9bc214e0594268` was on origin before the one successful Unit 074 synthesis. All three pins, six-component identities, period-to-pooled sums and CP2/binding total count/net anchors passed.
+- Binding pooled count/value Spearman was `-0.77143`, while fixed-0.01 CP2 was only `-0.42857` and failed the frozen `-0.60` threshold. High-frequency mean value was lower in both, but binding low-frequency net-share minus fill-share was `+0.18793` versus the required `+0.20`.
+- Period rhos were `-0.60000/+0.54286/-0.08571/-0.65714`. Three periods had negative rho, lower high-frequency mean and positive low-frequency transfer, but median rho was `-0.34286` rather than at most `-0.40`; P2 was a strong reversal.
+- Both complete gates failed and the strong falsifier did not trigger. Closed `AMBIGUOUS_TURNOVER_VALUE_FRONTIER_NO_POLICY_CHANGE`: preserve all six components and the authoritative fill requirement; no new mandatory value hurdle or portfolio candidate.
+- Result/closure SHA-256 values are `F215613D488276F80D1456A73054F9E2C8A40CA1981A760E030791276F01D784` / `2846AD13EA978415F31B692466BFD6B4D7AAFAB24CA579C1B6966DE443E12676`. One synthesis, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.

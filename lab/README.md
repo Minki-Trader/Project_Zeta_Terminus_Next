@@ -87,7 +87,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/server-calendar-drift-segmentation-v1/`: 닫힌 Program 2 / meso→macro Unit 071 source-free family; pooled gap은 양의 calendar drift의 `16.96%`, intraday는 `83.04%`이고 `4/4` 기간·`3/3` 심볼에서 intraday 우세, short gap은 작은 gap 채널의 `94.92%`지만 overnight 후보 없음
 - `research/us100-book-economic-role-v1/`: 닫힌 Program 5 / macro Unit 072 source-free family; US100은 CP2 `4/4`·binding `+$162.3525`로 양수이고 US30 보호 gate는 실패, 오히려 US30→US100 상쇄 `1.57271`가 통과해 보험전용 재분류·후보 없음
 - `research/order-type-realized-entry-cost-v1/`: 닫힌 Program 3 / micro→meso Unit 073 source-free family; Cross 129·Passive 92 cost-known fills 모두 기록 burden `0R`, Passive 체결 spread는 좁지만 배치 quote·미체결 반사실 부재로 비용우위·역선택·후보 없음
-- `research/turnover-value-frontier-v1/`: 활성 Program 5 / macro Unit 074 source-free family; 6개 컴포넌트의 빈도와 fill당 2x stressed net 관계를 CP2·binding pooled 및 CP2 4기간에서 한 번 판정
+- `research/turnover-value-frontier-v1/`: 닫힌 애매함 Program 5 / macro Unit 074 source-free family; binding rho `-0.771` 대 CP2 `-0.429`, 3/4 기간 음수지만 P2 `+0.543` 역전·median `-0.343`로 안정 frontier 실패, fill 목표·후보 변경 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
