@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0188`
+- Latest state ID: `STATE-0189`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -1060,6 +1060,12 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Complete passage requires broad top-10 concentration plus at least three sign flips and at least three rank-pair reversals with tau at most `0.60` in each basis. The strong falsifier requires all six positive signs and the exact 15-pair rank order to survive in both bases.
 - A pass cannot delete a realized winner or alter a component/book. It only downgrades pooled ranks as standalone future capital-allocation evidence. No alternate k, winsorization, resampling, subgroup or allocation successor may open automatically.
 - Declaration SHA-256 is `C7B60D9DEBA467A029940A7C662EC9C8F35C14C2F398516D5132295EB8B9BC67`. No top-k, residual, rank or book metric has opened. One reconstruction, one premetric correction and zero reruns are budgeted; no new data, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## Frozen premetric string-interpolation correction Unit 075
+
+- Declaration commit `f915d64` reached origin before the first invocation. PowerShell parsing stopped at a diagnostic exception string because a colon immediately followed `$basis`; no declaration assertion, input row, concentration metric, residual, rank or verdict executed.
+- Used the sole premetric implementation correction to delimit the diagnostic variable as `${basis}`. This changes exception-message syntax only; all inputs, row selection, mapping, top-k ordering, formulas, gates, thresholds, verdicts and decisions remain frozen.
+- Correction receipt SHA-256 is `2FC1A05E86949AF7663F127AEA56B920772E04C54ECB5114157727EEF41461BB`. One successful reconstruction remains, the correction allowance is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remain untouched.
 
 ## Required completion evidence
 

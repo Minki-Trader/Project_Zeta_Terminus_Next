@@ -1555,3 +1555,10 @@
 - Pinned six CP2 and two binding event files plus Units 039/072/074 and equivalence authority. The fixed population is all `2,233` CP2 and `2,235` binding mapped final `CLOSE.value_b` rows, with exact source count/net reconciliation required.
 - Froze component-level top-5/top-10 gross-positive share, leave-top-10 sign, 15-pair rank reversals, Kendall tau-a, cross-basis rank contrast and residual US30/US100 book signs. Complete passage requires broad concentration, at least three sign losses, and at least three rank reversals with tau at most `0.60` in each basis.
 - Declaration SHA-256 is `C7B60D9DEBA467A029940A7C662EC9C8F35C14C2F398516D5132295EB8B9BC67`. No concentration, residual, rank or book result has opened. One fixed reconstruction, one premetric correction and zero reruns are budgeted. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0189 - 2026-08-27
+
+- Unit 075 declaration commit `f915d648bffda565d2e35dc7543a1e41abc217e8` reached origin before the first invocation. The shell parser stopped before execution because a colon immediately after `$basis` formed an invalid PowerShell variable reference.
+- No declaration/hash assertion, CSV import, economic row, top-k share, residual sign, rank comparison, book aggregate or verdict executed or was emitted.
+- Used the sole permitted premetric implementation correction to change only diagnostic interpolation from `$basis:` to `${basis}:`. Row selection, component mapping, order, k, formulas, thresholds, gates, verdicts, exclusions and decisions are unchanged.
+- Correction receipt SHA-256 is `2FC1A05E86949AF7663F127AEA56B920772E04C54ECB5114157727EEF41461BB`. One successful reconstruction remains; premetric correction allowance is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remain untouched.

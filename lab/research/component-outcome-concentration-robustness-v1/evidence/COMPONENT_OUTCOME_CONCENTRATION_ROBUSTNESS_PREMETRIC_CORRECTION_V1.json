@@ -1,0 +1,39 @@
+{
+  "schema": "zeta-next-component-outcome-concentration-robustness-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FROZEN_BEFORE_ANY_CONCENTRATION_OR_RESIDUAL_METRIC",
+  "unit": "component-outcome-concentration-robustness-075",
+  "family": "component-outcome-concentration-robustness-v1",
+  "declaration_sha256": "C7B60D9DEBA467A029940A7C662EC9C8F35C14C2F398516D5132295EB8B9BC67",
+  "failed_invocation": {
+    "stage": "PowerShell parse before declaration, pin, CSV or metric execution",
+    "exception": "ParserError: a colon immediately following $basis was parsed as part of an invalid variable reference",
+    "economic_rows_read": 0,
+    "economic_metrics_emitted": 0,
+    "successful_fixed_reconstructions_used": 0,
+    "metric_reruns_used": 0
+  },
+  "implementation_only_correction": {
+    "old_form": "interpolated diagnostic strings using $basis:$key and $basis:$name",
+    "new_form": "interpolated diagnostic strings use ${basis}:$key and ${basis}:$name",
+    "scope": "exception-message string syntax only",
+    "economic_row_selection_changed": false,
+    "component_mapping_changed": false,
+    "ordering_or_top_k_changed": false,
+    "formula_changed": false,
+    "gate_or_threshold_changed": false,
+    "verdict_or_decision_changed": false
+  },
+  "execution_accounting_after_correction": {
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "successful_fixed_reconstructions_used": 0,
+    "successful_fixed_reconstructions_remaining": 1,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_correction_sha_update_single_frontier_memory_commit_push_then_run_the_one_remaining_fixed_reconstruction"
+}
