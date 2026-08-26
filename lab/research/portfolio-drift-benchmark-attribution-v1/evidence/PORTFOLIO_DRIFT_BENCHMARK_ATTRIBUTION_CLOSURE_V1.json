@@ -1,0 +1,134 @@
+{
+  "schema": "zeta-next-portfolio-drift-benchmark-attribution-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_STRATEGY_EXCESS",
+  "unit": "portfolio-drift-benchmark-attribution-065",
+  "verdict": "NO_MATERIAL_PASSIVE_BENCHMARK_GAP_PRESERVE_ABSOLUTE_ECONOMICS",
+  "evidence": {
+    "declaration_sha256": "318E3F03649BD39DAA10381FDDFEB82060AA8814C9C0287D98EBE2F44A2E7AEC",
+    "premetric_correction_sha256": "38781CFDF6FE14DF66BDAF458055D19A3B3C88EFFB8B99C6171863D1C5AA5C7E",
+    "result_sha256": "50870A54DE3B63DD0EA65BF65927F559B736D9FE7F6F09A8CE9AE15975610933",
+    "result_bytes": 12098
+  },
+  "execution_accounting": {
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "successful_fixed_aggregations": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "event_rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "period_counts": [
+      769,
+      554,
+      554,
+      356
+    ],
+    "passive_topology": {
+      "place": 707,
+      "fill": 594,
+      "expire": 113
+    },
+    "actual_net_usd": 444.19,
+    "stressed_net_usd": 407.0477000000051,
+    "stop_exits": 206,
+    "h1_rows": 24417,
+    "all_input_pins_passed": true
+  },
+  "lens_findings": {
+    "exposure_geometry": {
+      "pooled_net_long_ratio": 0.4032153263451906,
+      "period_net_long_ratios": [
+        0.47112915190130017,
+        0.4028507878637455,
+        0.3218144170216319,
+        0.4217590650991509
+      ],
+      "pooled_signed_weights": {
+        "US30": 0.9767309294190725,
+        "US100": -0.023269070580927503
+      },
+      "pooled_gross_long_weights": {
+        "US30": 0.654607919783168,
+        "US100": 0.34539208021683193
+      },
+      "interpretation": "The complete book is materially net long in every period and its signed time-weighted exposure is almost entirely long US30, despite meaningful gross US100 occupancy. This satisfies the exposure half of the mechanism but does not establish return attribution."
+    },
+    "daily_market_attribution": {
+      "pooled_pearson": 0.31644372383652314,
+      "pooled_explained_variance": 0.10013663035552572,
+      "period_explained_variance": [
+        0.07690248700870143,
+        0.027328279109743583,
+        0.1588692455516525,
+        0.15528433733551006
+      ],
+      "periods_at_least_0_10": 2,
+      "mechanism_gate_passed": false,
+      "interpretation": "Only about ten percent of pooled daily stressed-return variance is explained by the frozen signed market composite, below the twenty-percent pooled gate and with only two qualifying periods. Favorable index drift is therefore not a sufficient daily mechanism account of portfolio results."
+    },
+    "drawdown_matched_passive_hurdles": {
+      "signed_actual_win_periods": 0,
+      "signed_stressed_win_periods": 0,
+      "signed_pooled_scaled_net_usd": 91.6742209468695,
+      "signed_pooled_advantage_over_actual_usd": -352.5157790531305,
+      "gross_long_actual_win_periods": 0,
+      "gross_long_pooled_scaled_net_usd": 106.8462491392174,
+      "gross_long_pooled_advantage_over_actual_usd": -337.3437508607826,
+      "benchmark_gate_passed": false,
+      "interpretation": "Neither risk-matched passive benchmark beat actual strategy net in any period. The signed benchmark also failed to beat even the optimistic stressed comparison in every period."
+    },
+    "strategy_excess": {
+      "periods_beating_both_benchmarks_by_ten_percent": 4,
+      "pooled_actual_efficiency": 4.449464088951217,
+      "pooled_signed_benchmark_efficiency": 0.9183033251214018,
+      "pooled_gross_long_benchmark_efficiency": 1.070281970742436,
+      "all_period_actual_and_stressed_positive": true,
+      "gate_passed": true,
+      "interpretation": "Actual strategy net per unit of Tester equity drawdown exceeded both passive efficiencies by the required margin in every period and pooled."
+    },
+    "drawdown_basis": {
+      "periods_equity_to_balance_at_least_1_15": 1,
+      "sum_equity_to_sum_balance_ratio": 1.0769147788565263,
+      "material": false,
+      "interpretation": "The equity-versus-balance drawdown gap is not broad or large enough to change the repository's portfolio risk-basis requirements."
+    }
+  },
+  "serialization_note": "The one successful Python aggregation printed Infinity for positive-advantage concentration because there was no positive signed advantage. The frozen result represents this undefined value as JSON null without recomputing any economic value; the benchmark gate already fails its zero wins and negative pooled advantage conditions.",
+  "decision_translation": {
+    "preserve": [
+      "the current absolute portfolio economics and existing scoped unit verdicts",
+      "the present research gates without a mandatory passive-hurdle or equity-DD rule change",
+      "all six components and current construction as research evidence"
+    ],
+    "discard": [
+      "the claim that favorable US30/US100 drift materially explains the complete portfolio's daily return path",
+      "the claim that either frozen drawdown-matched passive benchmark displaces the portfolio",
+      "a broad equity-versus-balance drawdown-basis change from this evidence"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "alternate index weights or US30-only rescue",
+    "rolling beta, PCA, lag, timeframe or daily-boundary search",
+    "component deletion or passive sleeve",
+    "leverage, cost, financing, lot, slot or allocation variant",
+    "intrabar equity reconstruction"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_all_programs_and_heights_before_any_successor"
+}

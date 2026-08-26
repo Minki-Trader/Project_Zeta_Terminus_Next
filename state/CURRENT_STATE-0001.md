@@ -1337,3 +1337,12 @@
 - Froze the one permitted premetric implementation correction: market components remain `OPEN`-born; Passive pending state begins at `PASSIVE_PLACE`, creates exposure only at matched `PASSIVE_FILL`, and clears without exposure at `PASSIVE_EXPIRE`. Direction inferred from fill versus stop must match the placement direction, with zero period-end pending state.
 - Correction receipt SHA-256 is `38781CFDF6FE14DF66BDAF458055D19A3B3C88EFFB8B99C6171863D1C5AA5C7E`. The declaration, input pins, 2,233-lifecycle target, formulas, gates, verdicts and exclusions are unchanged. One fixed aggregation remains; no further correction or metric rerun is available.
 - No exposure, correlation, report-DD, benchmark or verdict outcome has opened. Program 6, broker/account state and Live remain untouched; push this correction boundary before aggregation.
+
+## STATE-0163 - 2026-08-27
+
+- Correction-state commit `93f4618` was on origin before the one successful Unit 065 aggregation. Rechecked every input pin and reconstructed 16,477 unique event rows, 2,233 lifecycles, exact period/component/symbol counts, Passive `707/594/113`, actual/stressed `$444.19/$407.0477`, 206 stops and 24,417 H1 rows.
+- Pooled net-long exposure was `0.40322`, with all periods positive and at least `0.32181`; signed weights were `+0.97673 US30 -0.02327 US100`. Daily signed-index Pearson/R² was only `0.31644/0.10014`; pooled R² failed `0.20` and period R² passed `2/4`, so the market-drift mechanism did not pass.
+- Equity-DD-matched signed/gross passive paths beat actual in `0/4` periods and had pooled nets `$91.67/$106.85`, advantages `-$352.52/-$337.34` versus actual `$444.19`. Signed also beat optimistic stressed net in `0/4`.
+- Strategy excess passed `4/4` and pooled: actual efficiency `4.44946` versus signed/gross `0.91830/1.07028`, with actual and stressed net positive in every period. Equity/balance DD was nonmaterial at one qualifying period and pooled `1.07691`.
+- Closed `NO_MATERIAL_PASSIVE_BENCHMARK_GAP_PRESERVE_ABSOLUTE_ECONOMICS`. No mandatory benchmark/DD rule, component removal, passive sleeve, alternate-weight/lag/timeframe rescue, allocation, lot, slot, EA or Live candidate survives.
+- Result/closure SHA-256 values are `50870A54DE3B63DD0EA65BF65927F559B736D9FE7F6F09A8CE9AE15975610933` / `C559FFD50D656B0A062A823F6FB6D12C0EE3A5945F31F30D7E7FCF2A27228DC0`. One successful aggregation, one premetric correction, zero metric reruns; Program 6, broker/account state and Live remained untouched. Freeze and push before whole-map successor comparison.
