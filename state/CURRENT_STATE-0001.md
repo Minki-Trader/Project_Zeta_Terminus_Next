@@ -1455,3 +1455,11 @@
 - Unit 063's 258 value is the number of days with at least one eligible all-slot evaluation. Exact physical-clock inspection found 257 actual 13:30 observations in 2025 and 151 in completed-month 2026; one otherwise eligible 2025 day has no native bar and is not synthesized.
 - Used the one permitted premetric correction only to replace the 2025 physical native-row assertion with 257. Signal rows remain 79/39; all input pins, periods, feature/ATR/response formulas, controls, thresholds, breadth, MAE, verdicts and exclusions are unchanged.
 - Correction receipt SHA-256 is `C94F596A31CBEDCB85A83275098E3CFAA4C9812AE8FF9CCD137DF1798A335E63`. One successful fixed aggregation remains; no further correction or rerun is available. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0177 - 2026-08-27
+
+- Correction-state commit `967da80a099d4900c3cc75bd8c607de81d0d3822` was on origin before the one successful Unit 070 aggregation. All input pins, 19,604-bar integrity, 257/151 native rows, 79/39 signal counts and prior signal outcome parity passed; both-period density passed.
+- Pooled RC16 signal days beat unconditional same-clock long drift by `+1.33015 ATR`, with normal 95% interval `[+0.08840,+2.57191]`. Pooled evidence therefore does not support calling RC16 merely passive beta.
+- The compression-specific effect was sharply unstable. In 2025 signal excess versus unconditional/direction-matched controls was `+0.33724/+0.06854 ATR`, direction-matched positive-rate difference `-0.00287`, MAE `+0.39205 ATR` worse and positive month breadth `4/7`. In completed-month 2026 the same values were `+3.21064/+2.89193 ATR`, `+0.23339`, `-0.66754 ATR` and `5/6`.
+- Both complete gates failed despite the favorable pooled and 2026 results. Closed `AMBIGUOUS_RC16_SIGNAL_VERSUS_LONG_DRIFT_NO_CANDIDATE`: preserve RC16 and the pooled non-beta observation, but retain no stable compression-alpha classification, threshold, clock, regime, allocation, component, EA or Live candidate.
+- Result/closure SHA-256 values are `A414216B4249E3B78A2F930451BEF23F8050566A11C1F01023000043698FE2C3` / `07FB756E73E969C8BDC8F10489A096493DB13D6B80D3AD9D9CBC902D41DC2AC7`. One successful aggregation, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched. Recompare the whole map and continue serially.

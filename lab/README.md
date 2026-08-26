@@ -83,7 +83,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/intraday-sizing-risk-clock-ratchet-v1/`: 닫힌 Program 3 / meso Unit 067 source-free family; 일중 위험자본 비율 중앙값은 CP2·binding 모두 `1.0`, 시장 lot 불일치는 `0/1,102`·`4/294`, 음성 부동손익의 불리한 결과 전달은 `0/4` 기간이라 daily sizing과 admission별 conservative risk 보존, 후보 없음
 - `research/rc-compression-horizon-slot-independence-v1/`: 닫힌 Program 5 / meso→macro Unit 068 source-free family; RC 신호연관 `phi 0.224`·90일 전부 동시점유는 확인했지만 방향일치 `53.33%`, 공동손실 `1.169x`가 대조쌍 중앙 `1.506x`보다 낮고 RC 손실질량 `14.27%`라 RC16·RC4 별도 slot 보존, 후보 없음
 - `research/performance-endogenous-risk-geometry-v1/`: 닫힌 부분통과 Program 4 / micro→macro Unit 069 source-free family; 전역/시간통제 자본-스톱-비용 scale은 통과했지만 국소 stop률 차이 `-0.00092`, 폭 `2/4·2/6`, stressed R `-0.05646`로 유리한 hazard 전달이 실패해 현 4%/12% 계약·gate 보존, 후보 없음
-- `research/rc16-long-drift-signal-specificity-v1/`: 활성 Program 1 / meso Unit 070 source-free family; 결과 전 Unit 063의 258 all-slot eligible days와 실제 257개 2025 native 13:30 행을 구분·동결했고, RC16 신호일을 무조건 롱 및 양의 최근방향·압축미달 대조군과 남은 한 번으로 비교
+- `research/rc16-long-drift-signal-specificity-v1/`: 닫힌 애매함 Program 1 / meso Unit 070 source-free family; pooled 신호초과 `+1.330 ATR`는 passive beta 단정을 막지만 2025 방향대조 초과 `+0.069 ATR`·MAE `+0.392 ATR` 대 2026 `+2.892/-0.668 ATR`로 압축 고유가치가 기간 불안정, 후보 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

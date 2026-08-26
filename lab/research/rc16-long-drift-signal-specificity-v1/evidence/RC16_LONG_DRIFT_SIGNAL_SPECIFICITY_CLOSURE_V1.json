@@ -1,0 +1,132 @@
+{
+  "schema": "zeta-next-rc16-long-drift-signal-specificity-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS_TEMPORAL_INSTABILITY_NO_CANDIDATE",
+  "unit": "rc16-long-drift-signal-specificity-070",
+  "verdict": "AMBIGUOUS_RC16_SIGNAL_VERSUS_LONG_DRIFT_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "F38C32FB882CDAF0048CA8B12FA14FCBFAC8EF2D884ADC1BF497FA3510201446",
+    "premetric_correction_sha256": "C94F596A31CBEDCB85A83275098E3CFAA4C9812AE8FF9CCD137DF1798A335E63",
+    "result_sha256": "A414216B4249E3B78A2F930451BEF23F8050566A11C1F01023000043698FE2C3",
+    "result_bytes": 15341
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_input_pins_passed": true,
+    "bar_rows": 19604,
+    "native_feature_and_outcome_parity_passed": true,
+    "native_rows": {
+      "SELECTION_2025": 257,
+      "CONFIRM_2026_COMPLETE_MONTHS": 151
+    },
+    "signal_rows": {
+      "SELECTION_2025": 79,
+      "CONFIRM_2026_COMPLETE_MONTHS": 39
+    },
+    "density_passed": true
+  },
+  "findings": {
+    "pooled_unconditional_long_contrast": {
+      "signal_mean_forward_atr": 1.3619966682288103,
+      "control_mean_forward_atr": 0.031842177725180436,
+      "mean_excess_atr": 1.3301544905036298,
+      "normal_95_interval": [
+        0.08840369418464711,
+        2.5719052868226124
+      ],
+      "positive_rate_difference": 0.07913500876680313,
+      "median_mae_difference": 0.033124033907002914,
+      "interpretation": "Pooled RC16 signal days beat passive same-clock long drift, so the component cannot be dismissed as pure unconditional beta from the pooled sample."
+    },
+    "selection_2025": {
+      "signal_vs_unconditional_excess_atr": 0.3372448393350619,
+      "signal_vs_unconditional_interval": [
+        -1.1822755833959535,
+        1.856765262066077
+      ],
+      "signal_vs_unconditional_positive_rate_difference": 0.01621390982790505,
+      "signal_vs_unconditional_mae_difference": 0.41240477715186374,
+      "signal_vs_positive_direction_excess_atr": 0.06854266506530449,
+      "signal_vs_positive_direction_interval": [
+        -1.8469573375095996,
+        1.9840426676402085
+      ],
+      "signal_vs_positive_direction_positive_rate_difference": -0.002866013852400262,
+      "signal_vs_positive_direction_mae_difference": 0.3920518811975837,
+      "positive_direction_month_fraction": 0.5714285714285714,
+      "interpretation": "The selection period provides no material compression-specific separation: excess is near zero versus the direction-matched control, intervals include zero, win rate is slightly worse and MAE is 0.392 ATR worse."
+    },
+    "confirmation_2026_complete_months": {
+      "signal_vs_unconditional_excess_atr": 3.210642685253474,
+      "signal_vs_unconditional_interval": [
+        1.1042908680386838,
+        5.316994502468264
+      ],
+      "signal_vs_positive_direction_excess_atr": 2.8919260118402415,
+      "signal_vs_positive_direction_interval": [
+        0.5926185392860459,
+        5.191233484394437
+      ],
+      "signal_vs_positive_direction_positive_rate_difference": 0.23338566195709054,
+      "signal_vs_positive_direction_mae_difference": -0.6675354350561866,
+      "positive_direction_month_fraction": 0.8333333333333334,
+      "interpretation": "The confirmation period shows large, broad and lower-MAE compression-specific value, directly opposite the weak 2025 mechanism."
+    }
+  },
+  "gates": {
+    "density_passed": true,
+    "unconditional_long_excess_passed": false,
+    "compression_specificity_passed": false,
+    "failed_unconditional_conditions": [
+      "2025 positive-rate improvement",
+      "2025 MAE nonworsening"
+    ],
+    "failed_compression_conditions": [
+      "pooled direction-matched interval lower bound",
+      "2025 material mean excess",
+      "2025 positive-rate improvement",
+      "2025 month breadth",
+      "2025 MAE nonworsening"
+    ]
+  },
+  "decision_translation": {
+    "preserve": [
+      "the existing RC16 component and frozen 13:30 signal contract",
+      "the observation that pooled signal days outperform unconditional same-clock long drift",
+      "the observation that compression specificity is strong only in completed-month 2026 and not temporally established"
+    ],
+    "discard": [
+      "a pure passive-beta classification for RC16 from pooled evidence",
+      "a confirmed compression-specific alpha classification across both periods",
+      "any threshold, clock, regime, allocation, lot, risk, component, EA or Live change from this bundle"
+    ],
+    "observation": "RC16 is neither established as mere beta nor as stable compression alpha. Its apparent specificity is sharply period-dependent.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "2026-only or 2025-excluding rescue",
+    "best month or feature-strength subgroup",
+    "alternate compression threshold, window, direction, hold or clock",
+    "Return approximation, regime selector, allocation, component, EA or Live change"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_unit"
+}
