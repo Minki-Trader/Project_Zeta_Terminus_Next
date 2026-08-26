@@ -868,3 +868,12 @@
 - The two seasons had opposite pooled R and stop signs and neither variant passed its complete gate. Closed `NO_SERVER_NEW_YORK_DST_MISMATCH_SESSION_FIELD_PASSED` without transition-day, weekday, holiday, entry-hour, one-season, subgroup or alternate-DST rescue.
 - No clock-remap seed, time shift, signal, order, lot, exit, EA or Live candidate survives. Declaration/result/closure SHA-256 values are `C82C942790E232273C8AE198CC9793D9F32EBF9AE352A8F2D723E7D702D9CA65` / `7BCBA94D18ACFF352435C5010A78AC67C25CA9581D5545D1A999D8E7FA16CE17` / `B4D4CBA924F40D92DF8E97F2F18940617499A8657C224E49EBE8AE731FC5FD15`.
 - The next action is a fresh whole-map comparison of Programs 1-5 and 7, not an adjacent Program 3 session question. Program 6 and Live remained untouched.
+
+## STATE-0108 - 2026-08-26
+
+- Recompared all eligible macro programs after Unit 042. Recent durable allocation was Programs `5 → 4 → 2 → 3`, and Program 1 dominated the immediately preceding fresh-observer stretch, so opened only Program 7 Unit 043 `frontier-evidence-path-yield-audit-v1`.
+- Froze the complete verdict-independent Unit 023-042 census of the two repeatable evidence-acquisition lanes: tracked-evidence aggregation Units `023/024/025/026/034/035/037/039/041/042` and fresh trade-free market-observer Units `027/028/029/030/031/032/033/036/038`.
+- Excluded singleton candidate-EA replay Unit 040 because it is a non-comparable third modality, not because of its verdict. Earlier Units 020-022 belong to the pre-census actual-position bundle and transition observer.
+- The 19-row census verifies and pins all 57 declaration/result/closure artifacts. Units 028 and 030 retain immutable signed files but use the explicit STATE-0076 integrity correction as final authority. Census SHA-256 is `F435D497B1F719521F361D8B9F6A56C7A3CF0837F9DC1FD396D34BABAC8BA999`.
+- The fixed comparison requires all artifacts traceable, both lane sizes at least eight, absolute authoritative-economic-verdict rate gaps at least `0.40` overall and in both frozen chronology halves, and the same higher-yield lane in both halves. Retained seeds and selected trading candidates are reported separately and cannot mask integrity attrition.
+- A pass is meta diagnosis only: it cannot prefer a macro topic, suppress a program, open Program 6 repair, select a trading behavior or automatically create a successor. Declaration SHA-256 is `F0687399C104F21105D566BBD4C82547C751185248FECECEA7404E7408BD99C2`; classification and rates remain unopened until this boundary is committed and pushed. Live remained untouched.
