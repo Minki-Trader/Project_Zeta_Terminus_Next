@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0095`
+- Latest state ID: `STATE-0096`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -15,9 +15,10 @@ Last updated: 2026-08-26
 - Next V7 entries-disabled preflight: `PASSED`; CXR2 PID `21944` proved exact connected `0/0`, flat continuity and zero fault, then final preflight PID `24820` repeated exact `0/0` and stopped normally.
 - Next V7 new-entry authorization: `ENABLED`; CXR2 Live PID `13328` previously passed the committed exact `1/1` handshake under the user's explicit repair-and-entry-readiness instruction, but that PID is no longer locally active at the latest process-only check.
 - Last verified real-account owner configuration: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; no local `terminal64.exe` is currently active and current broker/account state was deliberately not polled
+- Existing real-account owner: none; the pre-start process-only inventory found no `terminal64.exe`, and the official fresh `0/0` preflight must prove current broker/account flatness before `1/1` Live may start
 - User V7 Live direction: `EFFECTIVE`
 
-Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was last verified as the sole account owner at entries `1/1`. Persistent sequences `2008 → 2009 → 2010` stayed healthy through server `2026.08.25 18:29:24`: positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$104.48/$104.48`, safety/persistence/broker/foreign `0/0/0/0`, and no warning or alert. The latest process-only check found prior Live PID `13328` absent and no replacement `terminal64.exe`; dashboard PID `4284` remains. No broker query, restart or Live mutation followed.
+Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. Exact CXR2 was last verified as the sole account owner at entries `1/1`. Persistent sequences `2008 → 2009 → 2010` stayed healthy through server `2026.08.25 18:29:24`: positions/order/margin/planned risk `0/0/$0/$0`, balance/equity `$104.48/$104.48`, safety/persistence/broker/foreign `0/0/0/0`, and no warning or alert. The fresh process-only check found prior Live PID `13328`, every replacement `terminal64.exe` and prior dashboard PID `4284` absent. No broker query preceded the user's explicit instruction to run the official fresh `0/0 → 1/1` handoff and open MT5 plus the dashboard.
 
 ## Active work
 

@@ -770,3 +770,9 @@
 - Frequency passed at `2.898039` resolved observations per eligible day. Continuation observed/double-spread net were `-$5.99/-$12.81`; double-spread PF/DD/net-to-DD were `0.683860/$14.01/-0.914347`.
 - Reversion observed/double-spread net were `-$1.05/-$7.86`; double-spread PF/DD/net-to-DD were `0.793321/$8.89/-0.884139`. Both directions failed positive net before the PF and net/DD gates.
 - P2-P3 and every magnitude, acceleration ratio, equality, return-count, bar, session, horizon, spread, symbol or subgroup rescue remained unopened. Closed `NO_US500_ORDINAL_ACCELERATION_DIRECTION_PASSED`; result/closure SHA-256 values are `6C9A10DA1006B11DFBF195DCFC1FD91C68BC36B5B080CF1D202A83B29A8D48DE` / `FED55B3CB1965B220874067DE994E5A2E073C44A481E4FF971297344A618D02F`. No Live surface was queried or changed.
+
+## STATE-0096 - 2026-08-26
+
+- After Unit 038 was durably closed, the root launcher correctly refused to begin because `CURRENT_STATE.md` lacked its exact pre-start declaration even though the document already described the prior owner as absent.
+- A fresh process-only inventory found zero `terminal64.exe`; prior CXR2 PID `13328` and prior dashboard PID `4284` were absent. Current broker/account state was not polled at this documentation boundary.
+- The user explicitly directed Codex to complete the official fresh `0/0` preflight, start exact CXR2 at `1/1` Live only after that pass, and verify visible MT5 plus dashboard windows. `Existing real-account owner: none` is now stated explicitly for that fail-closed handoff; no safety gate is waived.
