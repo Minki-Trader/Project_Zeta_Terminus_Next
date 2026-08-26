@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0126`
+- Latest state ID: `STATE-0127`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: none; Program 7 Unit 051 `macro-frontier-attrition-topology-v1` is closed with a multi-stage authority/materiality/translation attrition diagnosis and no retained question or candidate
+- Active research boundary: Program 4 Unit 052 `held-position-first-peer-exit-state-v1` is declaration-frozen with target close economics unopened; one fixed source-free aggregation remains
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`

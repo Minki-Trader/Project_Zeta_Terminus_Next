@@ -1,0 +1,188 @@
+{
+  "schema": "zeta-next-held-position-first-peer-exit-state-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_052_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "held-position-first-peer-exit-state-052",
+  "family": "held-position-first-peer-exit-state-v1",
+  "title": "Held-Position First Peer-Exit State Audit",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit",
+    "korean_name": "포지션 관리·청산",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {"id": 6, "name": "execution_recovery_broker_safety", "korean_name": "실행·복구·브로커 안전"}
+  },
+  "question": "For a position that remains open, does the first other-component exit being a stop or an ordinary native close define a broad held-position state that materially separates its eventual 2x-cost stressed R and stop incidence from positions that experience no peer exit before their own close?",
+  "hypothesis": "A peer stop may reveal a shared adverse state while a peer native close may release a different portfolio phase. Either event is management-relevant only if the already-held position's eventual economics separate materially and broadly from otherwise same-strategy, same-period lifecycles that see no peer exit while held.",
+  "why_now": "Unit 051 found material attrition at evidence, economic and translation layers and closed without prescribing one lane. After five intervening units since the last Program 4 allocation, the whole-map comparison now favors a clean tracked held-position observable that requires no RC4 repair, mark observer, holding threshold, book allocation or execution work.",
+  "macro_recomparison": {
+    "program_1": "Unit 048 is recent and no adjacent signal state may open.",
+    "program_2": "Unit 049 is recent and no adjacent rates or external context may open.",
+    "program_3": "Unit 047 closed validly and no nearby weekday, clock or session state may open.",
+    "program_4": "Selected for a new portfolio peer-exit event observed after birth while the target remains held. It is not an age threshold, RC4 state, profit-memory mark or new exit rule.",
+    "program_5": "Unit 050 just closed with one-way book complementarity and no allocation successor; Unit 052 does not use book drawdown, lot, slot or priority.",
+    "program_7": "Unit 051 just closed and no adjacent meta audit may open.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not continue automatically into second or later peer exits, peer identity, timing, book, strategy or exit-rule variants."
+  },
+  "research_bundle": {
+    "name": "first_peer_exit_type_while_target_remains_held",
+    "variants": [
+      {"id": "PEER_STOP_FIRST", "definition": "The first exact-time batch containing another active component's exit while the target remains open contains only EXTERNAL_CLOSE stop exits.", "comparator": "NO_PEER_EXIT_WHILE_HELD"},
+      {"id": "PEER_NATIVE_CLOSE_FIRST", "definition": "The first exact-time batch containing another active component's exit while the target remains open contains only ordinary CLOSE exits.", "comparator": "NO_PEER_EXIT_WHILE_HELD"}
+    ],
+    "context_roles": ["NO_PEER_EXIT_WHILE_HELD", "MIXED_SAME_TIME_FIRST_PEER_EXIT"],
+    "single_bundle": true,
+    "parameter_grid": false,
+    "time_window": false,
+    "peer_identity_or_book_partition": false,
+    "management_action_inside_unit": false
+  },
+  "distinction_from_closed_work": {
+    "entry_time_crowding_017": "Unit 017 observed incumbents at a new birth and judged that new lifecycle. Unit 052 begins after the target birth and observes the first peer exit while that target remains held.",
+    "same_strategy_outcome_memory_023": "Unit 023 used the preceding completed outcome of the same strategy before a later birth. Unit 052 uses a contemporaneous other-component exit during the target's active life.",
+    "portfolio_exit_coordination": "That family changed all-green cohort exits. Unit 052 changes no close and requires no floating-profit mark, peak, trail or cohort action.",
+    "one_hour_adverse_exit_040": "Unit 040 tested fixed age-plus-mark exit thresholds and closed invalid. Unit 052 uses no elapsed threshold or mark and does not repair or rerun that family.",
+    "rc4_resolution_046": "Unit 046 audited an RC4-specific checkpoint and closed invalid. Unit 052 uses exact full component identities across all six strategies and no RC4 telemetry.",
+    "natural_book_complementarity_050": "Unit 050 studied aggregate US30/US100 maximum drawdown intervals. Unit 052 uses no natural-book partition or drawdown episode; its state is the first causal peer exit while one position remains open."
+  },
+  "causal_limit": "Longer-held positions have more opportunity to observe a peer exit. Unit 052 asks whether the event-defined state carries information, not whether peer exit type causes the final outcome. No age matching, duration residualization or threshold rescue is permitted.",
+  "boundary": {
+    "family_root": "lab/research/held-position-first-peer-exit-state-v1/",
+    "source_free_mql": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_portfolio_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "current_path_hash_manifest": {"algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.", "files": 6, "bytes": 5692770, "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"},
+    "files": [
+      {"period": "P1_2022H2_2023", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv", "bytes": 1411355, "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period": "P1_2022H2_2023", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv", "bytes": 536770, "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period": "P2_2024", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv", "bytes": 1395691, "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period": "P3_2025", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv", "bytes": 1418401, "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period": "P3_2025", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv", "bytes": 6936, "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period": "P4_2026_YTD", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv", "bytes": 923617, "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only exact component identity, OPEN/PASSIVE_PLACE/PASSIVE_FILL/PASSIVE_EXPIRE/CLOSE/EXTERNAL_CLOSE event type, server_time, sequence and fresh period were used. No close value, planned risk, target final stop association, stressed R, centered effect, gate or verdict was accessed.",
+    "lifecycles": 2233,
+    "roles": {"PEER_STOP_FIRST": 142, "PEER_NATIVE_CLOSE_FIRST": 803, "NO_PEER_EXIT_WHILE_HELD": 1288, "MIXED_SAME_TIME_FIRST_PEER_EXIT": 0},
+    "period_role_counts": {
+      "P1_2022H2_2023": [21, 305, 443],
+      "P2_2024": [39, 191, 324],
+      "P3_2025": [52, 187, 315],
+      "P4_2026_YTD": [30, 120, 206],
+      "array_order": ["PEER_STOP_FIRST", "PEER_NATIVE_CLOSE_FIRST", "NO_PEER_EXIT_WHILE_HELD"]
+    },
+    "strategy_role_counts": {
+      "RC16": [14, 55, 203],
+      "RC4": [10, 107, 89],
+      "Cross": [61, 353, 391],
+      "Pressure": [16, 60, 42],
+      "Return": [17, 188, 33],
+      "Passive": [24, 40, 530],
+      "array_order": ["PEER_STOP_FIRST", "PEER_NATIVE_CLOSE_FIRST", "NO_PEER_EXIT_WHILE_HELD"]
+    },
+    "peer_stop_strategy_period_cells_present": 23,
+    "peer_native_and_comparator_strategy_period_cells_present": 24,
+    "event_order_overlap_pending_or_close_faults": 0,
+    "eligible": true
+  },
+  "fixed_role_assignment": {
+    "event_order": "Within each fresh period group rows by exact parsed server_time. For lifecycle integrity, use numeric state_sequence, close-before-birth precedence, source path and source line. Peer-exit role assignment treats all valid exits at one exact server_time as one simultaneous batch.",
+    "target_must_remain_held": "A target closing in the same exact-time batch is not assigned a peer-exit role from that batch. Only targets active before and remaining active after the batch are eligible.",
+    "new_birth_exclusion": "OPEN and PASSIVE_FILL at the same exact server_time occur after the peer-exit batch for role assignment and are not exposed to that batch.",
+    "first_batch_only": "The first eligible peer-exit batch permanently assigns the target role; every later peer exit is ignored.",
+    "PEER_STOP_FIRST": "Every peer exit in the first eligible batch is EXTERNAL_CLOSE.",
+    "PEER_NATIVE_CLOSE_FIRST": "Every peer exit in the first eligible batch is ordinary CLOSE.",
+    "MIXED_SAME_TIME_FIRST_PEER_EXIT": "The first eligible batch contains both CLOSE and EXTERNAL_CLOSE. Context only and cannot pass or rescue a variant.",
+    "NO_PEER_EXIT_WHILE_HELD": "The target reaches its own close without an earlier eligible peer-exit batch."
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row; state_sequence is not an event primary key.",
+    "exact_component_selection": "Use only the six complete component_id keys in strategy_identity. Prefix, suffix, substring, wildcard and inferred-family selectors are prohibited.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned risk from detail.",
+    "passive_pending": "PASSIVE_PLACE stores positive planned risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL begins Passive with the active risk.",
+    "target_close": "CLOSE or EXTERNAL_CLOSE ends the target lifecycle; value_b is 2x-cost stressed net USD and target EXTERNAL_CLOSE is its stop outcome.",
+    "stressed_r": "Target close value_b divided by positive birth planned risk.",
+    "strategy_period_centering": "Within each of the 24 complete strategy x fresh-period cells, subtract the full-cell mean stressed R and full-cell stop rate from each lifecycle before role aggregation.",
+    "variant_effect": "Variant mean centered metric minus NO_PEER_EXIT_WHILE_HELD mean centered metric."
+  },
+  "fixed_metrics": {
+    "role_context": "Report raw count, stressed R, stop incidence, birth-to-close duration and birth-to-first-peer-exit duration for context without duration adjustment.",
+    "variant_contrast": "For each variant report pooled centered R and stop differences, four period effects and six strategy effects.",
+    "period_contribution_share": "Absolute period contribution to pooled centered-R contrast divided by summed absolute contributions across four periods.",
+    "strategy_contribution_share": "Absolute strategy contribution to pooled centered-R contrast divided by summed absolute contributions across six strategies."
+  },
+  "fixed_integrity_gate": [
+    "All six files retain their listed bytes and hashes and contain 16,477 rows with zero exact duplicate full rows.",
+    "Reconstruct exactly 2,233 lifecycles with strategy totals 272/206/805/118/238/594, 407.0477 USD stressed net and 206 target stop exits with zero overlap, pending, risk or close fault.",
+    "Reproduce exact pooled, period and strategy role counts and zero mixed same-time role.",
+    "Every lifecycle receives exactly one role and one finite target outcome; no target is exposed to a peer batch at its own close time or before its birth.",
+    "Reconstruct exactly 24 finite strategy-period centering cells."
+  ],
+  "fixed_variant_gates": {
+    "apply_separately_to": ["PEER_STOP_FIRST", "PEER_NATIVE_CLOSE_FIRST"],
+    "comparator": "NO_PEER_EXIT_WHILE_HELD",
+    "density": [
+      "Variant and comparator each contain at least 100 pooled lifecycles.",
+      "Variant contains at least 20 and comparator at least 100 lifecycles in every period.",
+      "Variant contains at least 10 and comparator at least 25 lifecycles in every strategy.",
+      "Variant is present in at least 20 of 24 strategy-period cells and comparator in all 24."
+    ],
+    "information": [
+      "Absolute variant-minus-comparator centered stressed-R difference is at least 0.10R.",
+      "Absolute variant-minus-comparator centered stop difference is at least 0.05.",
+      "Pooled channels are economically concordant: positive R requires negative stop difference and negative R requires positive stop difference.",
+      "Return and stop differences each share their pooled sign in at least three of four periods.",
+      "Return and stop differences each share their pooled sign in at least four of six strategies.",
+      "No one period contributes more than 60% and no one strategy more than 45% of the absolute centered-R contrast."
+    ],
+    "pass_rule": "A variant passes only if every density and information requirement passes. Zero is never counted as a sign."
+  },
+  "fixed_bundle_gate": {
+    "both_same_direction": "PASS_COMMON_FIRST_PEER_EXIT_HELD_POSITION_STATE_DIAGNOSIS",
+    "both_opposite_directions": "PASS_DIVERGENT_FIRST_PEER_EXIT_HELD_POSITION_STATE_DIAGNOSIS",
+    "exactly_one": "PARTIAL_FIRST_PEER_EXIT_HELD_POSITION_STATE_DIAGNOSIS_NO_AUTOMATIC_SUCCESSOR",
+    "neither": "NO_FIRST_PEER_EXIT_HELD_POSITION_STATE_PASSED",
+    "invalid": "INVALID_PEER_EXIT_OR_LIFECYCLE_RECONSTRUCTION_NO_MANAGEMENT_VERDICT",
+    "ambiguous": "AMBIGUOUS_FIRST_PEER_EXIT_HELD_POSITION_STATE_NO_SUCCESSOR",
+    "authority_limit": "Consumed-data association only. A pass selects no close, hold, stop, trail, peer action, lot, slot, priority, EA or Live rule.",
+    "retained_question_rule": "At most one passing variant may retain one later independently declared all-six-strategy management-observer question, selected by larger absolute centered R then stop effect. It cannot open automatically."
+  },
+  "execution_budget": {"successful_fixed_in_memory_aggregations": 1, "implementation_only_pre_metric_correction_allowance": 1, "tester_paths": 0, "compile_paths": 0, "orders": 0, "retained_analysis_cli": false},
+  "stop_rules": [
+    "Commit and push this declaration before reading target close values or calculating stressed R, target stop association, durations, centered effects, gates or verdict.",
+    "Run exactly one fixed in-memory aggregation over the six frozen files with exact-time peer-exit batches and complete component identities.",
+    "Do not add second/last peer exits, elapsed windows, same/cross book, peer identity, peer count, direction, strategy or symbol subgroup, duration matching, mark state or entry crowding.",
+    "Do not repair Units 040 or 046, change an entry or exit, modify MQL, compile, run MetaTrader, inspect Program 6, retain a CLI, query broker/account state or touch Live.",
+    "Close after one result and return to whole-map comparison without adjacent Program 4 peer-exit work."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_held_position_first_peer_exit_state_aggregation"
+}

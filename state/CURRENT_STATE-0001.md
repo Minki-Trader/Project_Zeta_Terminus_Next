@@ -1031,3 +1031,12 @@
 - Stage shares are `33.33%/41.67%/25.00%`, so none exceeded the 60% single-dominance threshold. Closed `PASS_MULTI_STAGE_MACRO_FRONTIER_ATTRITION_DIAGNOSIS`: there is no evidence for collapsing the Frontier into one acquisition lane, hypothesis type or translation tactic.
 - Census/declaration/result/closure SHA-256 values are `F0D0D56EB22BB8E135A31262301C9878476806571E3775B94457C97693F2DA0D` / `9341B436F16ECD85CC670657ED756B53787BFD85850BDAE04456D9368A80D794` / `BA7BAA76A146488CF1F8CF514655774054A29329C4F40E73406CFF0DAC7D3D9C` / `E4521F351F637EFCDDA4FC9A6A61527A3DE7A22C6992DB6AD89F9DB00077CBE9`.
 - No alternate epoch, underlying-unit repair, default lane, scheduler, program suppression, retained question or candidate survives. Next is a whole-map comparison of Programs 1-5 and 7 without adjacent Program 7 work; Program 6, MQL, Tester, broker state and Live remained untouched.
+
+## STATE-0127 - 2026-08-26
+
+- Recompared Programs 1-5 and 7 after Unit 051 and opened only Program 4 Unit 052 `held-position-first-peer-exit-state-v1`, five units after the prior Program 4 allocation. It is a new tracked held-position event, not an age/mark threshold, RC4 repair, book allocation or meta continuation.
+- The first exact-time peer-exit batch assigns one permanent role only while the target remains open: peer stop first, peer native close first, or no peer exit before target close. A target closing in the same batch and a new same-time birth are not exposed.
+- Outcome-free topology reconstructed all 2,233 lifecycles with zero event-order/overlap/pending/close fault: peer stop/native/no-peer `142/803/1,288`, period counts `21/305/443`, `39/191/324`, `52/187/315`, `30/120/206`, and all six strategies represented.
+- Each variant compares separately with no-peer after 24 strategy-period centering cells and requires `0.10R/0.05 stop`, economic concordance, three-of-four period and four-of-six strategy breadth, plus contribution caps. No second peer exit, time window, book, peer identity/count, duration match or subgroup exists.
+- A pass remains an association diagnosis and may retain at most one later observer question only after whole-map comparison; it cannot select an exit or other action.
+- Declaration SHA-256 is `68421B30C3F4099DD59E84021B2AF0825E0E906A87CCAD5DADA797D0B8170F95`; target outcomes remain unopened until commit/push. Program 6, MQL, Tester, broker state and Live remain untouched.
