@@ -1,0 +1,884 @@
+{
+  "schema": "zeta-next-scheduled-us-macro-event-exposure-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_041_FIXED_AGGREGATION_COMPLETE",
+  "unit": "scheduled-us-macro-event-exposure-041",
+  "family": "scheduled-us-macro-event-exposure-v1",
+  "declaration_sha256": "8FABD941A14660C8CC5A580B0E98B9053D127EDB993E9B77E9C28F2D2DB60584",
+  "calendar_sha256": "B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE",
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 0,
+    "serialization_only_post_metric_corrections": 1,
+    "serialization_correction": "The empty passing-role collection serialized as [null]. It was changed directly to [] without rerunning, recalculating or changing any metric, gate or verdict.",
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "orders": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "calendar_rows": 128,
+    "calendar_class_counts": {
+      "FOMC": 32,
+      "CPI": 48,
+      "EMPLOYMENT": 48
+    },
+    "event_server_offset_counts": {
+      "UTC+2": 55,
+      "UTC+3": 73
+    },
+    "economic_files": 6,
+    "data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "lifecycles": 2233,
+    "strategy_totals": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd": 407.047700000006,
+    "stop_exits": 206,
+    "candidate_exposure_records": 219,
+    "selected_unique_exposures": 219,
+    "multiply_matched_lifecycles": 0,
+    "unexposed_lifecycles": 2014,
+    "minimum_unexposed_strategy_period_cell": 22
+  },
+  "comparator": "Globally unexposed same-strategy same-fresh-period lifecycle mean stressed R and stop rate.",
+  "unexposed_benchmarks": {
+    "P1_2022H2_2023": {
+      "RC16": {
+        "n": 66,
+        "mean_stressed_r": 0.038634453753,
+        "stop_rate": 0.030303030303
+      },
+      "RC4": {
+        "n": 44,
+        "mean_stressed_r": 0.046905261817,
+        "stop_rate": 0.181818181818
+      },
+      "Cross": {
+        "n": 258,
+        "mean_stressed_r": 0.00681451645,
+        "stop_rate": 0.007751937984
+      },
+      "Pressure": {
+        "n": 34,
+        "mean_stressed_r": 0.033871324401,
+        "stop_rate": 0.058823529412
+      },
+      "Return": {
+        "n": 94,
+        "mean_stressed_r": 0.044967539492,
+        "stop_rate": 0.085106382979
+      },
+      "Passive": {
+        "n": 189,
+        "mean_stressed_r": -0.001840378315,
+        "stop_rate": 0.005291005291
+      }
+    },
+    "P2_2024": {
+      "RC16": {
+        "n": 65,
+        "mean_stressed_r": 0.026415604252,
+        "stop_rate": 0.138461538462
+      },
+      "RC4": {
+        "n": 48,
+        "mean_stressed_r": 0.06648292078,
+        "stop_rate": 0.229166666667
+      },
+      "Cross": {
+        "n": 176,
+        "mean_stressed_r": 0.028521777936,
+        "stop_rate": 0.039772727273
+      },
+      "Pressure": {
+        "n": 22,
+        "mean_stressed_r": -0.029874127168,
+        "stop_rate": 0.227272727273
+      },
+      "Return": {
+        "n": 43,
+        "mean_stressed_r": -0.068229317564,
+        "stop_rate": 0.372093023256
+      },
+      "Passive": {
+        "n": 142,
+        "mean_stressed_r": 0.012164613777,
+        "stop_rate": 0.056338028169
+      }
+    },
+    "P3_2025": {
+      "RC16": {
+        "n": 72,
+        "mean_stressed_r": 0.052558645068,
+        "stop_rate": 0.083333333333
+      },
+      "RC4": {
+        "n": 58,
+        "mean_stressed_r": 0.035288706162,
+        "stop_rate": 0.293103448276
+      },
+      "Cross": {
+        "n": 181,
+        "mean_stressed_r": 0.022563201697,
+        "stop_rate": 0.038674033149
+      },
+      "Pressure": {
+        "n": 29,
+        "mean_stressed_r": -0.072979731537,
+        "stop_rate": 0.344827586207
+      },
+      "Return": {
+        "n": 48,
+        "mean_stressed_r": 0.159318545815,
+        "stop_rate": 0.291666666667
+      },
+      "Passive": {
+        "n": 118,
+        "mean_stressed_r": 0.009198720023,
+        "stop_rate": 0.067796610169
+      }
+    },
+    "P4_2026_YTD": {
+      "RC16": {
+        "n": 41,
+        "mean_stressed_r": 0.182610149205,
+        "stop_rate": 0.073170731707
+      },
+      "RC4": {
+        "n": 30,
+        "mean_stressed_r": 0.017227415697,
+        "stop_rate": 0.366666666667
+      },
+      "Cross": {
+        "n": 118,
+        "mean_stressed_r": 0.019480749605,
+        "stop_rate": 0.067796610169
+      },
+      "Pressure": {
+        "n": 27,
+        "mean_stressed_r": 0.157929085284,
+        "stop_rate": 0.111111111111
+      },
+      "Return": {
+        "n": 30,
+        "mean_stressed_r": 0.082351581461,
+        "stop_rate": 0.233333333333
+      },
+      "Passive": {
+        "n": 81,
+        "mean_stressed_r": 0.014770831846,
+        "stop_rate": 0.049382716049
+      }
+    }
+  },
+  "fixed_books": {
+    "HELD_AT_RELEASE/FOMC": {
+      "role": "HELD_AT_RELEASE",
+      "event_class": "FOMC",
+      "pooled": {
+        "n": 13,
+        "mean_stressed_r": 0.076250772597,
+        "stop_rate": 0.076923076923,
+        "mean_stressed_r_residual": 0.063538768721,
+        "mean_stop_residual": -0.025817955276
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 6,
+          "mean_stressed_r": -0.038306606907,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": -0.057838797705,
+          "mean_stop_residual": -0.033536752983
+        },
+        "P2_2024": {
+          "n": 4,
+          "mean_stressed_r": 0.436175126557,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.456028896371,
+          "mean_stop_residual": -0.205932875264
+        },
+        "P3_2025": {
+          "n": 2,
+          "mean_stressed_r": -0.00786904863,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": -0.030432250327,
+          "mean_stop_residual": -0.038674033149
+        },
+        "P4_2026_YTD": {
+          "n": 1,
+          "mean_stressed_r": -0.507862723766,
+          "stop_rate": 1,
+          "mean_stressed_r_residual": -0.590214305227,
+          "mean_stop_residual": 0.766666666667
+        }
+      },
+      "strategies": {
+        "Cross": {
+          "n": 8,
+          "mean_stressed_r": 0.023535163305,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.007356660171,
+          "mean_stop_residual": -0.023487659098
+        },
+        "Return": {
+          "n": 5,
+          "mean_stressed_r": 0.160595747464,
+          "stop_rate": 0.2,
+          "mean_stressed_r_residual": 0.153430142401,
+          "mean_stop_residual": -0.02954642916
+        }
+      },
+      "density": {
+        "positive_periods": 4,
+        "periods_n_ge_2": 3,
+        "represented_strategies": 2,
+        "max_strategy_share": 0.615384615385,
+        "checks": {
+          "pooled_n_ge_10": true,
+          "all_four_periods": true,
+          "at_least_two_periods_n_ge_2": true,
+          "represented_strategies_ge_2": true,
+          "max_strategy_share_le_0_75": true
+        },
+        "eligible": true
+      },
+      "adverse_gate": {
+        "negative_r_periods": 3,
+        "nonnegative_stop_periods": 1,
+        "nonpositive_r_strategies": 0,
+        "checks": {
+          "pooled_mean_r_residual_le_neg_0_10": false,
+          "negative_r_periods_ge_3": true,
+          "pooled_mean_stop_residual_ge_0_05": false,
+          "nonnegative_stop_periods_ge_3": false,
+          "nonpositive_r_strategies_ge_2": false
+        },
+        "passed": false
+      }
+    },
+    "HELD_AT_RELEASE/CPI": {
+      "role": "HELD_AT_RELEASE",
+      "event_class": "CPI",
+      "pooled": {
+        "n": 39,
+        "mean_stressed_r": 0.206877772906,
+        "stop_rate": 0.179487179487,
+        "mean_stressed_r_residual": 0.171470575538,
+        "mean_stop_residual": 0.044305201568
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 17,
+          "mean_stressed_r": 0.271917487744,
+          "stop_rate": 0.058823529412,
+          "mean_stressed_r_residual": 0.240654117362,
+          "mean_stop_residual": -0.011835274811
+        },
+        "P2_2024": {
+          "n": 7,
+          "mean_stressed_r": -0.104940443542,
+          "stop_rate": 0.428571428571,
+          "mean_stressed_r_residual": -0.144456043313,
+          "mean_stop_residual": 0.27470012382
+        },
+        "P3_2025": {
+          "n": 12,
+          "mean_stressed_r": 0.32318138257,
+          "stop_rate": 0.25,
+          "mean_stressed_r_residual": 0.293332565426,
+          "mean_stop_residual": 0.041285148386
+        },
+        "P4_2026_YTD": {
+          "n": 3,
+          "mean_stressed_r": 0.100680788548,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.029144656299,
+          "mean_stop_residual": -0.163073371474
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 14,
+          "mean_stressed_r": 0.288700855376,
+          "stop_rate": 0.071428571429,
+          "mean_stressed_r_residual": 0.23754963293,
+          "mean_stop_residual": 0.007460831851
+        },
+        "RC4": {
+          "n": 15,
+          "mean_stressed_r": 0.168695770563,
+          "stop_rate": 0.266666666667,
+          "mean_stressed_r_residual": 0.12450012229,
+          "mean_stop_residual": 0.018541448972
+        },
+        "Pressure": {
+          "n": 2,
+          "mean_stressed_r": 0.873730930087,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.893285133655,
+          "mean_stop_residual": -0.201825557809
+        },
+        "Passive": {
+          "n": 8,
+          "mean_stressed_r": -0.031434656318,
+          "stop_rate": 0.25,
+          "mean_stressed_r_residual": -0.036551814588,
+          "mean_stop_residual": 0.218622574535
+        }
+      },
+      "density": {
+        "positive_periods": 4,
+        "periods_n_ge_2": 4,
+        "represented_strategies": 4,
+        "max_strategy_share": 0.384615384615,
+        "checks": {
+          "pooled_n_ge_10": true,
+          "all_four_periods": true,
+          "at_least_two_periods_n_ge_2": true,
+          "represented_strategies_ge_2": true,
+          "max_strategy_share_le_0_75": true
+        },
+        "eligible": true
+      },
+      "adverse_gate": {
+        "negative_r_periods": 1,
+        "nonnegative_stop_periods": 2,
+        "nonpositive_r_strategies": 1,
+        "checks": {
+          "pooled_mean_r_residual_le_neg_0_10": false,
+          "negative_r_periods_ge_3": false,
+          "pooled_mean_stop_residual_ge_0_05": false,
+          "nonnegative_stop_periods_ge_3": false,
+          "nonpositive_r_strategies_ge_2": false
+        },
+        "passed": false
+      }
+    },
+    "HELD_AT_RELEASE/EMPLOYMENT": {
+      "role": "HELD_AT_RELEASE",
+      "event_class": "EMPLOYMENT",
+      "pooled": {
+        "n": 33,
+        "mean_stressed_r": 0.113875341803,
+        "stop_rate": 0.181818181818,
+        "mean_stressed_r_residual": 0.073315452648,
+        "mean_stop_residual": 0.033303043888
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 10,
+          "mean_stressed_r": 0.234104518283,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.200256707718,
+          "mean_stop_residual": -0.085906685907
+        },
+        "P2_2024": {
+          "n": 8,
+          "mean_stressed_r": 0.125955010391,
+          "stop_rate": 0.25,
+          "mean_stressed_r_residual": 0.091303950816,
+          "mean_stop_residual": 0.099127618274
+        },
+        "P3_2025": {
+          "n": 9,
+          "mean_stressed_r": 0.02394277688,
+          "stop_rate": 0.333333333333,
+          "mean_stressed_r_residual": 0.006957077238,
+          "mean_stop_residual": 0.098659003831
+        },
+        "P4_2026_YTD": {
+          "n": 6,
+          "mean_stressed_r": 0.032286003604,
+          "stop_rate": 0.166666666667,
+          "mean_stressed_r_residual": -0.06270040691,
+          "mean_stop_residual": 0.046185887785
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 14,
+          "mean_stressed_r": 0.050629808631,
+          "stop_rate": 0.142857142857,
+          "mean_stressed_r_residual": -0.007192482075,
+          "mean_stop_residual": 0.056438480219
+        },
+        "RC4": {
+          "n": 11,
+          "mean_stressed_r": 0.27930393011,
+          "stop_rate": 0.181818181818,
+          "mean_stressed_r_residual": 0.235761282003,
+          "mean_stop_residual": -0.065880592761
+        },
+        "Pressure": {
+          "n": 3,
+          "mean_stressed_r": 0.021196864047,
+          "stop_rate": 0.333333333333,
+          "mean_stressed_r_residual": 0.017206989977,
+          "mean_stop_residual": 0.066411238825
+        },
+        "Passive": {
+          "n": 5,
+          "mean_stressed_r": -0.017372972938,
+          "stop_rate": 0.2,
+          "mean_stressed_r_residual": -0.024978077106,
+          "mean_stop_residual": 0.16686290583
+        }
+      },
+      "density": {
+        "positive_periods": 4,
+        "periods_n_ge_2": 4,
+        "represented_strategies": 4,
+        "max_strategy_share": 0.424242424242,
+        "checks": {
+          "pooled_n_ge_10": true,
+          "all_four_periods": true,
+          "at_least_two_periods_n_ge_2": true,
+          "represented_strategies_ge_2": true,
+          "max_strategy_share_le_0_75": true
+        },
+        "eligible": true
+      },
+      "adverse_gate": {
+        "negative_r_periods": 1,
+        "nonnegative_stop_periods": 3,
+        "nonpositive_r_strategies": 2,
+        "checks": {
+          "pooled_mean_r_residual_le_neg_0_10": false,
+          "negative_r_periods_ge_3": false,
+          "pooled_mean_stop_residual_ge_0_05": false,
+          "nonnegative_stop_periods_ge_3": true,
+          "nonpositive_r_strategies_ge_2": true
+        },
+        "passed": false
+      }
+    },
+    "POST_ENTRY_120M/FOMC": {
+      "role": "POST_ENTRY_120M",
+      "event_class": "FOMC",
+      "pooled": {
+        "n": 0,
+        "mean_stressed_r": null,
+        "stop_rate": null,
+        "mean_stressed_r_residual": null,
+        "mean_stop_residual": null
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "mean_stressed_r_residual": null,
+          "mean_stop_residual": null
+        },
+        "P2_2024": {
+          "n": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "mean_stressed_r_residual": null,
+          "mean_stop_residual": null
+        },
+        "P3_2025": {
+          "n": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "mean_stressed_r_residual": null,
+          "mean_stop_residual": null
+        },
+        "P4_2026_YTD": {
+          "n": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "mean_stressed_r_residual": null,
+          "mean_stop_residual": null
+        }
+      },
+      "strategies": {},
+      "density": {
+        "positive_periods": 0,
+        "periods_n_ge_2": 0,
+        "represented_strategies": 0,
+        "max_strategy_share": null,
+        "checks": {
+          "pooled_n_ge_10": false,
+          "all_four_periods": false,
+          "at_least_two_periods_n_ge_2": false,
+          "represented_strategies_ge_2": false,
+          "max_strategy_share_le_0_75": false
+        },
+        "eligible": false
+      },
+      "adverse_gate": {
+        "negative_r_periods": 0,
+        "nonnegative_stop_periods": 0,
+        "nonpositive_r_strategies": 0,
+        "checks": {
+          "pooled_mean_r_residual_le_neg_0_10": false,
+          "negative_r_periods_ge_3": false,
+          "pooled_mean_stop_residual_ge_0_05": false,
+          "nonnegative_stop_periods_ge_3": false,
+          "nonpositive_r_strategies_ge_2": false
+        },
+        "passed": false
+      }
+    },
+    "POST_ENTRY_120M/CPI": {
+      "role": "POST_ENTRY_120M",
+      "event_class": "CPI",
+      "pooled": {
+        "n": 69,
+        "mean_stressed_r": 0.024314454968,
+        "stop_rate": 0.101449275362,
+        "mean_stressed_r_residual": 0.011862002976,
+        "mean_stop_residual": 0.045747619328
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 27,
+          "mean_stressed_r": 0.140511152084,
+          "stop_rate": 0.037037037037,
+          "mean_stressed_r_residual": 0.132983479089,
+          "mean_stop_residual": 0.021692762928
+        },
+        "P2_2024": {
+          "n": 22,
+          "mean_stressed_r": -0.067917027864,
+          "stop_rate": 0.181818181818,
+          "mean_stressed_r_residual": -0.076553907439,
+          "mean_stop_residual": 0.089952336545
+        },
+        "P3_2025": {
+          "n": 11,
+          "mean_stressed_r": 0.053413450979,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.025707662548,
+          "mean_stop_residual": -0.07755840548
+        },
+        "P4_2026_YTD": {
+          "n": 9,
+          "mean_stressed_r": -0.13438634014,
+          "stop_rate": 0.222222222222,
+          "mean_stressed_r_residual": -0.152297117159,
+          "mean_stop_residual": 0.160563576759
+        }
+      },
+      "strategies": {
+        "Cross": {
+          "n": 33,
+          "mean_stressed_r": -0.03424737607,
+          "stop_rate": 0.121212121212,
+          "mean_stressed_r_residual": -0.051851733575,
+          "mean_stop_residual": 0.089091567875
+        },
+        "Return": {
+          "n": 7,
+          "mean_stressed_r": 0.1793837345,
+          "stop_rate": 0.428571428571,
+          "mean_stressed_r_residual": 0.1665932757,
+          "mean_stop_residual": 0.190962159233
+        },
+        "Passive": {
+          "n": 29,
+          "mean_stressed_r": 0.053523264193,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.04701491322,
+          "mean_stop_residual": -0.038626590375
+        }
+      },
+      "density": {
+        "positive_periods": 4,
+        "periods_n_ge_2": 4,
+        "represented_strategies": 3,
+        "max_strategy_share": 0.478260869565,
+        "checks": {
+          "pooled_n_ge_10": true,
+          "all_four_periods": true,
+          "at_least_two_periods_n_ge_2": true,
+          "represented_strategies_ge_2": true,
+          "max_strategy_share_le_0_75": true
+        },
+        "eligible": true
+      },
+      "adverse_gate": {
+        "negative_r_periods": 2,
+        "nonnegative_stop_periods": 3,
+        "nonpositive_r_strategies": 1,
+        "checks": {
+          "pooled_mean_r_residual_le_neg_0_10": false,
+          "negative_r_periods_ge_3": false,
+          "pooled_mean_stop_residual_ge_0_05": false,
+          "nonnegative_stop_periods_ge_3": true,
+          "nonpositive_r_strategies_ge_2": false
+        },
+        "passed": false
+      }
+    },
+    "POST_ENTRY_120M/EMPLOYMENT": {
+      "role": "POST_ENTRY_120M",
+      "event_class": "EMPLOYMENT",
+      "pooled": {
+        "n": 65,
+        "mean_stressed_r": 0.076930671805,
+        "stop_rate": 0.123076923077,
+        "mean_stressed_r_residual": 0.056720595917,
+        "mean_stop_residual": 0.05729270779
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 24,
+          "mean_stressed_r": 0.081380964168,
+          "stop_rate": 0.041666666667,
+          "mean_stressed_r_residual": 0.067552536264,
+          "mean_stop_residual": 0.015293889469
+        },
+        "P2_2024": {
+          "n": 17,
+          "mean_stressed_r": 0.196067169592,
+          "stop_rate": 0.058823529412,
+          "mean_stressed_r_residual": 0.187173857356,
+          "mean_stop_residual": -0.035947262358
+        },
+        "P3_2025": {
+          "n": 14,
+          "mean_stressed_r": -0.021176819101,
+          "stop_rate": 0.285714285714,
+          "mean_stressed_r_residual": -0.068271708225,
+          "mean_stop_residual": 0.182426625018
+        },
+        "P4_2026_YTD": {
+          "n": 10,
+          "mean_stressed_r": 0.001068411163,
+          "stop_rate": 0.2,
+          "mean_stressed_r_residual": -0.016057379562,
+          "mean_stop_residual": 0.141410336891
+        }
+      },
+      "strategies": {
+        "Cross": {
+          "n": 31,
+          "mean_stressed_r": 0.147799856278,
+          "stop_rate": 0.032258064516,
+          "mean_stressed_r_residual": 0.129592158194,
+          "mean_stop_residual": -0.00045977784
+        },
+        "Pressure": {
+          "n": 1,
+          "mean_stressed_r": 0.43882359515,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.468697722318,
+          "mean_stop_residual": -0.227272727273
+        },
+        "Return": {
+          "n": 11,
+          "mean_stressed_r": -0.011066560244,
+          "stop_rate": 0.454545454545,
+          "mean_stressed_r_residual": -0.066639491086,
+          "mean_stop_residual": 0.260925059601
+        },
+        "Passive": {
+          "n": 22,
+          "mean_stressed_r": 0.00461848592,
+          "stop_rate": 0.090909090909,
+          "mean_stressed_r_residual": -0.003008249536,
+          "mean_stop_residual": 0.049789826865
+        }
+      },
+      "density": {
+        "positive_periods": 4,
+        "periods_n_ge_2": 4,
+        "represented_strategies": 4,
+        "max_strategy_share": 0.476923076923,
+        "checks": {
+          "pooled_n_ge_10": true,
+          "all_four_periods": true,
+          "at_least_two_periods_n_ge_2": true,
+          "represented_strategies_ge_2": true,
+          "max_strategy_share_le_0_75": true
+        },
+        "eligible": true
+      },
+      "adverse_gate": {
+        "negative_r_periods": 2,
+        "nonnegative_stop_periods": 3,
+        "nonpositive_r_strategies": 2,
+        "checks": {
+          "pooled_mean_r_residual_le_neg_0_10": false,
+          "negative_r_periods_ge_3": false,
+          "pooled_mean_stop_residual_ge_0_05": true,
+          "nonnegative_stop_periods_ge_3": true,
+          "nonpositive_r_strategies_ge_2": true
+        },
+        "passed": false
+      }
+    }
+  },
+  "role_results": {
+    "HELD_AT_RELEASE": {
+      "role": "HELD_AT_RELEASE",
+      "included_classes": [
+        "FOMC",
+        "CPI",
+        "EMPLOYMENT"
+      ],
+      "pooled": {
+        "n": 85,
+        "mean_stressed_r": 0.150792699607,
+        "stop_rate": 0.164705882353,
+        "mean_stressed_r_residual": 0.11685607502,
+        "mean_stop_residual": 0.02930905754
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 33,
+          "mean_stressed_r": 0.204054631304,
+          "stop_rate": 0.030303030303,
+          "mean_stressed_r_residual": 0.174141038973,
+          "mean_stop_residual": -0.038226880265
+        },
+        "P2_2024": {
+          "n": 19,
+          "mean_stressed_r": 0.106197762345,
+          "stop_rate": 0.263157894737,
+          "mean_stressed_r_residual": 0.081229204675,
+          "mean_stop_residual": 0.099588963783
+        },
+        "P3_2025": {
+          "n": 23,
+          "mean_stressed_r": 0.177301021109,
+          "stop_rate": 0.260869565217,
+          "mean_stressed_r_residual": 0.153119129548,
+          "mean_stop_residual": 0.056782815166
+        },
+        "P4_2026_YTD": {
+          "n": 10,
+          "mean_stressed_r": -0.00121043365,
+          "stop_rate": 0.2,
+          "mean_stressed_r_residual": -0.087898277779,
+          "mean_stop_residual": 0.055456187895
+        }
+      },
+      "class_status": {
+        "FOMC": {
+          "n": 13,
+          "eligible": true,
+          "adverse": false
+        },
+        "CPI": {
+          "n": 39,
+          "eligible": true,
+          "adverse": false
+        },
+        "EMPLOYMENT": {
+          "n": 33,
+          "eligible": true,
+          "adverse": false
+        }
+      },
+      "eligible_class_count": 3,
+      "adverse_class_count": 0,
+      "negative_r_periods": 1,
+      "checks": {
+        "required_class_gate": false,
+        "pooled_mean_r_residual_le_neg_0_10": false,
+        "pooled_mean_stop_residual_ge_0_05": false,
+        "negative_r_periods_ge_3": false
+      },
+      "passed": false
+    },
+    "POST_ENTRY_120M": {
+      "role": "POST_ENTRY_120M",
+      "included_classes": [
+        "CPI",
+        "EMPLOYMENT"
+      ],
+      "pooled": {
+        "n": 134,
+        "mean_stressed_r": 0.049837246717,
+        "stop_rate": 0.111940298507,
+        "mean_stressed_r_residual": 0.033621768208,
+        "mean_stop_residual": 0.051347848806
+      },
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 51,
+          "mean_stressed_r": 0.1126851813,
+          "stop_rate": 0.039215686275,
+          "mean_stressed_r_residual": 0.102192447171,
+          "mean_stop_residual": 0.018681528359
+        },
+        "P2_2024": {
+          "n": 39,
+          "mean_stressed_r": 0.047153006925,
+          "stop_rate": 0.128205128205,
+          "mean_stressed_r_residual": 0.03840434901,
+          "mean_stop_residual": 0.035073024203
+        },
+        "P3_2025": {
+          "n": 25,
+          "mean_stressed_r": 0.011642899734,
+          "stop_rate": 0.16,
+          "mean_stressed_r_residual": -0.026920785085,
+          "mean_stop_residual": 0.068033211599
+        },
+        "P4_2026_YTD": {
+          "n": 19,
+          "mean_stressed_r": -0.06309436577,
+          "stop_rate": 0.210526315789,
+          "mean_stressed_r_residual": -0.080591992108,
+          "mean_stop_residual": 0.150482924197
+        }
+      },
+      "class_status": {
+        "CPI": {
+          "n": 69,
+          "eligible": true,
+          "adverse": false
+        },
+        "EMPLOYMENT": {
+          "n": 65,
+          "eligible": true,
+          "adverse": false
+        },
+        "FOMC": {
+          "n": 0,
+          "eligible": false,
+          "adverse": false,
+          "structural_zero": true
+        }
+      },
+      "eligible_class_count": 2,
+      "adverse_class_count": 0,
+      "negative_r_periods": 2,
+      "checks": {
+        "required_class_gate": false,
+        "pooled_mean_r_residual_le_neg_0_10": false,
+        "pooled_mean_stop_residual_ge_0_05": true,
+        "negative_r_periods_ge_3": false
+      },
+      "passed": false
+    }
+  },
+  "selection": {
+    "passing_roles": [],
+    "selected_role": null,
+    "retained_later_question": "NONE",
+    "opens_automatically": false,
+    "trading_action_selected": false
+  },
+  "verdict": "NO_SCHEDULED_US_MACRO_EVENT_EXPOSURE_ROLE_PASSED",
+  "limitations": [
+    "All periods were already consumed and remain exploratory; there is no clean holdout.",
+    "Held-at-release full-lifecycle stressed R includes pre-release path, so residual association is not event-time incremental P/L.",
+    "Post-entry results are limited by native strategy schedules; FOMC has zero births inside the fixed two-hour window.",
+    "No event value, surprise, revision, text, direction, subgroup or alternate window was accessed."
+  ],
+  "next": "Write the fixed closure, close Unit 041, and recompare Programs 1-5 and 7 without opening an adjacent event question."
+}

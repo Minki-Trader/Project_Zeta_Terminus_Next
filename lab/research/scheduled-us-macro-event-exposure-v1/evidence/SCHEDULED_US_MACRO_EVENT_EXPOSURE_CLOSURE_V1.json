@@ -1,0 +1,104 @@
+{
+  "schema": "zeta-next-scheduled-us-macro-event-exposure-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "scheduled-us-macro-event-exposure-041",
+  "family": "scheduled-us-macro-event-exposure-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "hashes": {
+    "declaration_sha256": "8FABD941A14660C8CC5A580B0E98B9053D127EDB993E9B77E9C28F2D2DB60584",
+    "official_calendar_sha256": "B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE",
+    "result_sha256": "EF34E5C93726F6669EF5258906356E32DC2E1ACD422091577AED02B39D4029FA"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "orders": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "serialization_only_post_metric_corrections": 1,
+    "serialization_correction": "The empty passing-role array was changed from [null] to [] in the result artifact without rerunning, recalculating or changing any metric, gate or verdict.",
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED",
+    "program_6_opened": false
+  },
+  "integrity": {
+    "passed": true,
+    "calendar_events": 128,
+    "calendar_class_counts": {
+      "FOMC": 32,
+      "CPI": 48,
+      "EMPLOYMENT": 48
+    },
+    "data_rows": 16477,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.0477,
+    "stop_exits": 206,
+    "unique_exposed_lifecycles": 219,
+    "unexposed_lifecycles": 2014,
+    "multiply_matched_lifecycles": 0,
+    "minimum_unexposed_strategy_period_cell": 22
+  },
+  "findings": {
+    "HELD_AT_RELEASE": {
+      "n": 85,
+      "classes": {
+        "FOMC": 13,
+        "CPI": 39,
+        "EMPLOYMENT": 33
+      },
+      "mean_stressed_r": 0.150792699607,
+      "same_strategy_period_residual_r": 0.11685607502,
+      "stop_rate": 0.164705882353,
+      "same_strategy_period_stop_residual": 0.02930905754,
+      "negative_residual_periods": 1,
+      "eligible_class_books": 3,
+      "adverse_class_books": 0,
+      "passed": false,
+      "interpretation": "The frozen adverse-context hypothesis failed directly. P1-P3 residual R was positive and only P4 was negative; the pooled stop residual also missed +0.05."
+    },
+    "POST_ENTRY_120M": {
+      "n": 134,
+      "classes": {
+        "FOMC": 0,
+        "CPI": 69,
+        "EMPLOYMENT": 65
+      },
+      "mean_stressed_r": 0.049837246717,
+      "same_strategy_period_residual_r": 0.033621768208,
+      "stop_rate": 0.111940298507,
+      "same_strategy_period_stop_residual": 0.051347848806,
+      "negative_residual_periods": 2,
+      "eligible_class_books": 2,
+      "adverse_class_books": 0,
+      "passed": false,
+      "interpretation": "The pooled stop residual alone crossed +0.05, but residual R was positive, only two periods were negative and neither CPI nor Employment passed its complete adverse book gate."
+    },
+    "pooled_class_residual_r": {
+      "HELD_AT_RELEASE/FOMC": 0.063538768721,
+      "HELD_AT_RELEASE/CPI": 0.171470575538,
+      "HELD_AT_RELEASE/EMPLOYMENT": 0.073315452648,
+      "POST_ENTRY_120M/CPI": 0.011862002976,
+      "POST_ENTRY_120M/EMPLOYMENT": 0.056720595917
+    },
+    "structural_zero": "POST_ENTRY_120M/FOMC remained exactly zero and the fixed window was not widened.",
+    "causal_limit": "Positive full-lifecycle residuals do not prove scheduled events are beneficial. Held outcomes include pre-release path, post-entry exposure follows native strategy schedules, all periods are already consumed and no clean event-time mark outcome was measured."
+  },
+  "verdict": "NO_SCHEDULED_US_MACRO_EVENT_EXPOSURE_ROLE_PASSED",
+  "retained_later_question": "NONE",
+  "closed_scope": [
+    "No longer or shorter event window.",
+    "No event value, surprise, revision, direction, meeting subset, event-day proxy, speech, minutes, PPI, JOLTS or retail-release rescue.",
+    "No event filter, entry suppression, lot allocation, position exit, order rule, EA or Live candidate.",
+    "No event-time mark-path successor opens automatically."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED"
+  }
+}
