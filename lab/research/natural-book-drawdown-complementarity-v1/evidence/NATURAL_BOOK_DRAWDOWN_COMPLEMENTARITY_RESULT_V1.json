@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-natural-book-drawdown-complementarity-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_050_FIXED_AGGREGATION_COMPLETE",
+  "unit": "natural-book-drawdown-complementarity-050",
+  "family": "natural-book-drawdown-complementarity-v1",
+  "macro_program": {"id": 5, "name": "portfolio_capital_risk", "korean_name": "포트폴리오·자본·위험"},
+  "declaration": {
+    "path": "lab/research/natural-book-drawdown-complementarity-v1/evidence/NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_DECLARATION_V1.json",
+    "sha256": "F0B0D74808997B99C57356E7F46490209D7D05D34E2F1189DF2DE501B02B370F"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_aggregation_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "portfolio_files_verified": 6,
+    "file_hash_or_byte_mismatches": 0,
+    "rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {"RC16": 272, "RC4": 206, "Cross": 805, "Pressure": 118, "Return": 238, "Passive": 594},
+    "book_counts": {"US30_BOOK": 834, "US100_BOOK": 1399},
+    "period_book_counts": {
+      "P1_2022H2_2023": {"US30_BOOK": 270, "US100_BOOK": 499},
+      "P2_2024": {"US30_BOOK": 198, "US100_BOOK": 356},
+      "P3_2025": {"US30_BOOK": 231, "US100_BOOK": 323},
+      "P4_2026_YTD": {"US30_BOOK": 135, "US100_BOOK": 221}
+    },
+    "period_stressed_net": {
+      "P1_2022H2_2023": 148.8735,
+      "P2_2024": 54.6630,
+      "P3_2025": 113.0380,
+      "P4_2026_YTD": 90.4732
+    },
+    "pooled_stressed_net": 407.0477,
+    "lifecycle_pending_risk_close_order_or_partition_faults": 0
+  },
+  "book_economics": {
+    "pooled_stressed_net": {"US30_BOOK": 302.0270, "US100_BOOK": 105.0207},
+    "positive_periods": {"US30_BOOK": 4, "US100_BOOK": 4},
+    "periods": {
+      "P1_2022H2_2023": {
+        "stressed_net": {"US30_BOOK": 128.9900, "US100_BOOK": 19.8835, "FULL": 148.8735},
+        "maximum_closed_drawdown": {"US30_BOOK": 17.2950, "US100_BOOK": 13.9095, "FULL": 18.7790},
+        "full_book_diversification_relief": 0.398195773046
+      },
+      "P2_2024": {
+        "stressed_net": {"US30_BOOK": 12.2370, "US100_BOOK": 42.4260, "FULL": 54.6630},
+        "maximum_closed_drawdown": {"US30_BOOK": 24.2740, "US100_BOOK": 8.8625, "FULL": 17.7790},
+        "full_book_diversification_relief": 0.463461741584
+      },
+      "P3_2025": {
+        "stressed_net": {"US30_BOOK": 80.3100, "US100_BOOK": 32.7280, "FULL": 113.0380},
+        "maximum_closed_drawdown": {"US30_BOOK": 29.2450, "US100_BOOK": 17.8545, "FULL": 28.3905},
+        "full_book_diversification_relief": 0.397222900455
+      },
+      "P4_2026_YTD": {
+        "stressed_net": {"US30_BOOK": 80.4900, "US100_BOOK": 9.9832, "FULL": 90.4732},
+        "maximum_closed_drawdown": {"US30_BOOK": 18.7480, "US100_BOOK": 25.6450, "FULL": 31.1908},
+        "full_book_diversification_relief": 0.297393733246
+      }
+    },
+    "full_book_relief_periods_at_least_0_15": 4,
+    "weighted_full_book_diversification_relief": 0.383063975333,
+    "health_gate_checks": {
+      "both_books_pooled_net_positive": true,
+      "both_books_positive_in_at_least_three_periods": true,
+      "relief_at_least_0_15_in_three_periods": true,
+      "weighted_relief_at_least_0_15": true
+    },
+    "health_gate_passed": true
+  },
+  "variants": {
+    "US30_STRESS_US100_COUNTERBOOK": {
+      "periods": {
+        "P1_2022H2_2023": {"peak_time": "2023-08-11 22:00:00", "trough_time": "2023-10-03 17:30:00", "source_drawdown": 17.2950, "source_close_count": 30, "counterbook_close_count": 53, "counterbook_interval_net": 7.0445, "offset_ratio": 0.407314252674, "full_interval_net": -10.2505},
+        "P2_2024": {"peak_time": "2024-01-10 17:30:00", "trough_time": "2024-06-14 19:00:00", "source_drawdown": 24.2740, "source_close_count": 84, "counterbook_close_count": 168, "counterbook_interval_net": 18.8245, "offset_ratio": 0.775500535552, "full_interval_net": -5.4495},
+        "P3_2025": {"peak_time": "2025-04-28 17:30:00", "trough_time": "2025-06-16 16:56:01", "source_drawdown": 29.2450, "source_close_count": 35, "counterbook_close_count": 47, "counterbook_interval_net": 2.1950, "offset_ratio": 0.075055565054, "full_interval_net": -27.0500},
+        "P4_2026_YTD": {"peak_time": "2026-07-08 19:00:00", "trough_time": "2026-08-03 17:02:15", "source_drawdown": 18.7480, "source_close_count": 14, "counterbook_close_count": 21, "counterbook_interval_net": -6.0135, "offset_ratio": -0.320754213783, "full_interval_net": -24.7615}
+      },
+      "positive_offset_periods": 3,
+      "offset_ratio_at_least_0_20_periods": 2,
+      "weighted_offset_ratio": 0.246203747125,
+      "median_offset_ratio": 0.241184908864,
+      "largest_positive_offset_period_contribution": 0.670770381984,
+      "checks": {
+        "source_and_counterbook_close_in_every_episode": true,
+        "positive_offset_in_at_least_three_periods": true,
+        "offset_ratio_at_least_0_20_in_three_periods": false,
+        "weighted_offset_ratio_at_least_0_20": true,
+        "median_offset_ratio_at_least_0_20": true,
+        "positive_offset_contribution_at_most_0_60": false,
+        "bundle_health_gate": true
+      },
+      "passed": false
+    },
+    "US100_STRESS_US30_COUNTERBOOK": {
+      "periods": {
+        "P1_2022H2_2023": {"peak_time": "2023-04-26 16:15:00", "trough_time": "2023-08-11 21:00:00", "source_drawdown": 13.9095, "source_close_count": 101, "counterbook_close_count": 52, "counterbook_interval_net": 13.4820, "offset_ratio": 0.969265609835, "full_interval_net": -0.4275},
+        "P2_2024": {"peak_time": "2024-08-07 15:00:00", "trough_time": "2024-08-28 18:15:36", "source_drawdown": 8.8625, "source_close_count": 17, "counterbook_close_count": 14, "counterbook_interval_net": 9.7860, "offset_ratio": 1.104203102962, "full_interval_net": 0.9235},
+        "P3_2025": {"peak_time": "2025-06-23 16:00:00", "trough_time": "2025-10-22 19:31:04", "source_drawdown": 17.8545, "source_close_count": 122, "counterbook_close_count": 55, "counterbook_interval_net": 34.0560, "offset_ratio": 1.907418297908, "full_interval_net": 16.2015},
+        "P4_2026_YTD": {"peak_time": "2026-04-07 14:00:00", "trough_time": "2026-06-05 18:37:55", "source_drawdown": 25.6450, "source_close_count": 58, "counterbook_close_count": 35, "counterbook_interval_net": 46.9020, "offset_ratio": 1.828894521349, "full_interval_net": 21.2570}
+      },
+      "positive_offset_periods": 4,
+      "offset_ratio_at_least_0_20_periods": 4,
+      "weighted_offset_ratio": 1.572712251873,
+      "median_offset_ratio": 1.466548812156,
+      "largest_positive_offset_period_contribution": 0.450002878360,
+      "checks": {
+        "source_and_counterbook_close_in_every_episode": true,
+        "positive_offset_in_at_least_three_periods": true,
+        "offset_ratio_at_least_0_20_in_three_periods": true,
+        "weighted_offset_ratio_at_least_0_20": true,
+        "median_offset_ratio_at_least_0_20": true,
+        "positive_offset_contribution_at_most_0_60": true,
+        "bundle_health_gate": true
+      },
+      "passed": true
+    }
+  },
+  "passed_variants": ["US100_STRESS_US30_COUNTERBOOK"],
+  "verdict": "PARTIAL_ONE_WAY_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_NO_AUTOMATIC_SUCCESSOR",
+  "interpretation": {
+    "material_finding": "The natural books are profitable and reduce summed standalone drawdown, but their stress support is asymmetric. US30 offsets US100's maximum drawdown in all four periods and exceeds the entire US100 loss in three periods. US100 offsets US30 by at least 20% in only two periods, supplies only 7.51% in P3 and amplifies the P4 US30 episode by 32.08%.",
+    "not_proved": "This consumed-data path diagnosis does not prove a book-level allocation, priority, slot, entry, exit or sizing policy.",
+    "retained_later_question": null,
+    "reason_no_retained_question": "The declaration permits a later book-level capital-risk question only after a mutual pass; the observed result is one-way only."
+  }
+}

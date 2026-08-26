@@ -1,0 +1,74 @@
+{
+  "schema": "zeta-next-natural-book-drawdown-complementarity-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "natural-book-drawdown-complementarity-050",
+  "family": "natural-book-drawdown-complementarity-v1",
+  "macro_program": {"id": 5, "name": "portfolio_capital_risk", "korean_name": "포트폴리오·자본·위험"},
+  "hashes": {
+    "declaration_sha256": "F0B0D74808997B99C57356E7F46490209D7D05D34E2F1189DF2DE501B02B370F",
+    "result_sha256": "894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_aggregation_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "portfolio_files_verified": 6,
+    "rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "book_counts": {"US30_BOOK": 834, "US100_BOOK": 1399},
+    "pooled_stressed_net": 407.0477,
+    "faults": 0
+  },
+  "finding": {
+    "bundle_health_passed": true,
+    "book_pooled_stressed_net": {"US30_BOOK": 302.0270, "US100_BOOK": 105.0207},
+    "book_positive_periods": {"US30_BOOK": 4, "US100_BOOK": 4},
+    "weighted_full_book_diversification_relief": 0.383063975333,
+    "US100_STRESS_US30_COUNTERBOOK": {
+      "passed": true,
+      "positive_offset_periods": 4,
+      "offset_ratio_at_least_0_20_periods": 4,
+      "weighted_offset_ratio": 1.572712251873,
+      "median_offset_ratio": 1.466548812156,
+      "largest_positive_offset_period_contribution": 0.450002878360
+    },
+    "US30_STRESS_US100_COUNTERBOOK": {
+      "passed": false,
+      "positive_offset_periods": 3,
+      "offset_ratio_at_least_0_20_periods": 2,
+      "weighted_offset_ratio": 0.246203747125,
+      "median_offset_ratio": 0.241184908864,
+      "largest_positive_offset_period_contribution": 0.670770381984,
+      "failed_requirements": ["offset_ratio_at_least_0_20_in_three_periods", "positive_offset_contribution_at_most_0_60"]
+    },
+    "economic_interpretation": "US30 supplied broad and material protection during US100's worst native closed-loss episodes, but US100 did not reciprocate broadly during US30 stress. Natural-book diversification exists at the full path level and is directionally asymmetric rather than mutual."
+  },
+  "verdict": "PARTIAL_ONE_WAY_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_NO_AUTOMATIC_SUCCESSOR",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "closed_scope": [
+    "No book-level lot, risk budget, slot, reservation, admission priority or preemption question survives because the declaration required a mutual pass before retaining one.",
+    "No rolling or calendar window, alternate or second drawdown episode, sub-book, strategy, direction, period, cost multiplier or threshold rescue.",
+    "No entry filter, exit change, strategy removal, EA, MQL, Tester, Program 6 or Live action.",
+    "No adjacent Program 5 successor opens automatically."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}

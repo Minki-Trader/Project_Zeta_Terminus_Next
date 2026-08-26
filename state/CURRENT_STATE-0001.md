@@ -1004,3 +1004,12 @@
 - Each direction requires positive counterbook offset and at least 20% loss offset in three of four periods, weighted and median offset ratios at least 20%, and a 60% positive-contribution cap. Both books must also be broadly profitable and full-book drawdown relief must reach 15% broadly.
 - This unit changes no lot, slot, priority, admission, entry, exit or strategy membership. Only a mutual diagnostic pass may retain one later book-level capital-risk question, which cannot open automatically.
 - Declaration SHA-256 is `F0B0D74808997B99C57356E7F46490209D7D05D34E2F1189DF2DE501B02B370F`; outcomes remain unopened until this boundary is committed and pushed. Program 6, MQL, Tester, broker state and Live remain untouched.
+
+## STATE-0124 - 2026-08-26
+
+- The sole Unit 050 aggregation passed all six portfolio pins, 16,477 rows, zero duplicates/faults, 2,233 lifecycles, exact US30/US100 counts `834/1,399` and `$407.0477` pooled stressed net with no failed invocation or correction.
+- Both natural books were positive in all four periods and pooled US30/US100 stressed net was `$302.0270/$105.0207`. Full-book maximum closed-drawdown relief was `39.82%/46.35%/39.72%/29.74%`; weighted relief was `38.31%`, so the shared health gate passed.
+- US30 offset the native US100 maximum drawdown by `96.93%/110.42%/190.74%/182.89%`. It passed all four periods, weighted ratio `1.5727`, median `1.4665` and positive-period contribution cap `45.00%`.
+- US100 offset the native US30 maximum drawdown by `40.73%/77.55%/7.51%/-32.08%`. It reached 20% in only two periods and its largest positive-period contribution was `67.08%`; P4 amplified rather than relieved US30 stress.
+- Closed `PARTIAL_ONE_WAY_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_NO_AUTOMATIC_SUCCESSOR`. The asymmetry is a portfolio-path diagnosis only; mutual pass was required to retain a book-level capital question, so no allocation, lot, slot, priority, entry, exit, strategy-removal, EA or Live candidate survives.
+- Declaration/result/closure SHA-256 values are `F0B0D74808997B99C57356E7F46490209D7D05D34E2F1189DF2DE501B02B370F` / `894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1` / `014F331219802F78A060892F42BAF4AB7899FD5774AE3F1D8E1C234ED4ACFFE6`. Next is a whole-map comparison of Programs 1-5 and 7, not adjacent Program 5 work; Program 6, MQL, Tester, broker state and Live remained untouched.
