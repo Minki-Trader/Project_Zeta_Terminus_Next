@@ -1,0 +1,54 @@
+{
+  "schema": "zeta-next-us500-monthly-range-break-response-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_CONFIG_BINARY_AND_EVIDENCE_FROZEN",
+  "unit": "us500-monthly-range-break-response-053",
+  "family": "us500-monthly-range-break-response-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure",
+    "korean_name": "진입 신호·시장 구조"
+  },
+  "question": "When a completed US500 daily close breaks beyond the full high or low of the preceding twenty completed daily market bars, does the next five-daily-bar path support a frequent and cost-positive continuation or reversion response?",
+  "verdict": "NO_US500_MONTHLY_RANGE_BREAK_DIRECTION_PASSED",
+  "closure_reason": "P1 passed the complete source, real-tick, raw-tick-manifest, visible-specification and observer-fault integrity boundary and produced 22 resolved observations. Calendar halves were dense at 10/12 and upper breaks were 18, but lower breaks were only 4 versus the predeclared minimum of 5. The density contract therefore stopped the unit before continuation or reversion economics were read and before P2 could open.",
+  "economic_interpretation": "This is a structural breadth failure, not economic evidence for or against monthly-range continuation or reversion. The state occurred broadly across the year but was one-sided in breakout sign under the single frozen lookback and horizon.",
+  "artifacts": {
+    "declaration_sha256": "F4F88550DA1EC4F57C0D644BC44B4640D614C20CD40378D440F4AA6BF00B9688",
+    "compile_receipt_sha256": "662C1416226EEBA4469B2851EFBBECB86FBE4AA6CA34DCD0573E3914AD82A215",
+    "result_sha256": "C5F12CDEAFF4CA30F73EC162167C7CFD671E43B2DB10311A9A3B637E5ECBC7D8",
+    "p1_artifact_manifest_sha256": "AECFF624B388C52E8058F3261DC8D1FABECDEA0BDC987CDBAE13F3E19B269BAD",
+    "source_manifest_sha256": "07E96A37BDAE1FA9F81EE3EE1B944ED599C77945D1F0A34CDF8FFA793261D1E7",
+    "configuration_manifest_sha256": "F1466D9474DF8DC7118FD747AC49C2F7CBFD0A9D657EEBC0BCDB03DD94C288EB",
+    "binary_sha256": "4D0F26D728B31502F816A2EE8544C943BA5EEAB97734EF30DDCBD8BD391A4678"
+  },
+  "consumption": {
+    "p1_executed": true,
+    "p1_economic_columns_accessed": false,
+    "p2_executed": false,
+    "continuation_book_judged": false,
+    "reversion_book_judged": false,
+    "clean_holdout": false,
+    "promotion_evidence": false
+  },
+  "closed_without": {
+    "same_unit_rerun": true,
+    "alternate_lookback": true,
+    "alternate_horizon": true,
+    "breakout_buffer": true,
+    "one_side_only": true,
+    "session_or_weekday_filter": true,
+    "other_symbol": true,
+    "direction_or_period_subgroup": true,
+    "prototype": true,
+    "stop_size_lot_slot_or_portfolio_rule": true,
+    "live_change": true
+  },
+  "retained_question": null,
+  "retained_seed": null,
+  "selected_candidate": null,
+  "promotion": "none",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "recompare_programs_1_to_5_and_7_without_adjacent_us500_range_break_lookback_horizon_side_or_parameter_followup"
+}

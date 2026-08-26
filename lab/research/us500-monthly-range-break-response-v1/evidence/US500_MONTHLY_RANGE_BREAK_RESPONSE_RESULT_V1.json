@@ -1,0 +1,153 @@
+{
+  "schema": "zeta-next-us500-monthly-range-break-response-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "P1_INTEGRITY_PASSED_DENSITY_FAILED_ECONOMIC_ROWS_UNREAD",
+  "unit": "us500-monthly-range-break-response-053",
+  "family": "us500-monthly-range-break-response-v1",
+  "declaration": {
+    "path": "lab/research/us500-monthly-range-break-response-v1/evidence/US500_MONTHLY_RANGE_BREAK_RESPONSE_DECLARATION_V1.json",
+    "sha256": "F4F88550DA1EC4F57C0D644BC44B4640D614C20CD40378D440F4AA6BF00B9688"
+  },
+  "compile_receipt": {
+    "path": "lab/research/us500-monthly-range-break-response-v1/evidence/US500_MONTHLY_RANGE_BREAK_RESPONSE_COMPILE_RECEIPT_V1.json",
+    "sha256": "662C1416226EEBA4469B2851EFBBECB86FBE4AA6CA34DCD0573E3914AD82A215"
+  },
+  "p1_execution": {
+    "path": "P1_2025",
+    "configuration": "lab/research/us500-monthly-range-break-response-v1/mt5/config/tester/tester-us500-mrb53-v1-p1.ini",
+    "configuration_sha256": "98F42A3D226F2825F881F08F8101F3887F8ED0F3CDEA2419505C7F294EB26D5D",
+    "dedicated_runtime": "lab/runtime/mrb53-portable/",
+    "process_id": 24488,
+    "process_exit_code": 0,
+    "elapsed_seconds": 9.549,
+    "tester_from": "2025-01-06",
+    "tester_to_exclusive": "2026-01-01",
+    "last_trigger_cutoff": "2025-12-19 23:59:59",
+    "terminal_stopped_normally": true,
+    "p2_opened": false
+  },
+  "integrity": {
+    "passed": true,
+    "source_sha256_before_after": "799FDC88E43F065A759DA5CC7DC27DCE696B97E8E86865F36FF026EFEA072624",
+    "runtime_binary_sha256_before_after": "4D0F26D728B31502F816A2EE8544C943BA5EEAB97734EF30DDCBD8BD391A4678",
+    "html_real_ticks": "100% 실제 틱",
+    "html_100_label_matches": 1,
+    "html_99_label_matches": 0,
+    "detailed_agent_log_quality_failure_matches": 0,
+    "detailed_agent_log_generating_based_on_real_ticks_matches": 1,
+    "agent_log_bytes": 8278,
+    "agent_log_sha256": "306EA816A44249C4CD478582D65B664D4FAA7C299991D648D5373FB302A8CD2E",
+    "report_bytes": 22376,
+    "report_sha256": "B09EC4B12C63EC28E20B512BE5F98FF0397CC797CBDE5645403B3981FC35FC69",
+    "bases_tick_manifest": {
+      "files": 19,
+      "bytes": 200912747,
+      "sha256_before_after": "D0EEB124E89161358C4AD76A93CCEEF779A50DD4C54B5BA25BA721E56F146916"
+    },
+    "tester_bases_tick_manifest": {
+      "files": 19,
+      "bytes": 200606847,
+      "sha256_before_after": "AE3CA39CADE31991EC9BC37860E5EC819C8B0DAC7C6D31C075ECB9428FB864BB"
+    },
+    "excluded_current_month_telemetry": {
+      "path": "Bases/FPMarketsSC-Live/ticks/US500/202608.tkc",
+      "created_or_refreshed": true,
+      "inside_fixed_manifest": false,
+      "economic_or_integrity_use": false
+    },
+    "symbol_database_telemetry": {
+      "selected_pre_sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F",
+      "selected_post_sha256": "244977E225E30895A88B34AE497D7474234AF598E25EB39160FE5B557445E31B",
+      "symbols_pre_sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71",
+      "symbols_post_sha256": "D8E8679D19C166AEB20577CB6FC0EE979A6159FC4AD8B653F912128641EF3ED3",
+      "classification": "housekeeping telemetry under the frozen receipt; required completed-month ticks, detailed real-tick quality and every consumed start/end specification remained exact"
+    },
+    "observer_faults": {
+      "rate": 0,
+      "tick": 0,
+      "profit_calculation": 0,
+      "row": 0,
+      "unresolved": 0
+    },
+    "start_end_visible_spec_exact": {
+      "digits": "2/2",
+      "point": "0.01/0.01",
+      "tick_size": "0.01/0.01",
+      "tick_value": "0.01/0.01",
+      "contract_size": "1.0/1.0",
+      "volume_min": "0.01/0.01",
+      "volume_max": "200.0/200.0",
+      "volume_step": "0.01/0.01",
+      "stops_level": "0/0",
+      "freeze_level": "0/0",
+      "swap_mode": "2/2",
+      "swap_long": "-1.09/-1.09",
+      "swap_short": "0.44/0.44",
+      "swap_rollover3days": "5/5"
+    },
+    "summary_resolved_rows": 22,
+    "opportunity_file_data_rows": 22,
+    "artifact_manifest": {
+      "root": "lab/research/us500-monthly-range-break-response-v1/evidence/p1/",
+      "files": 10,
+      "bytes": 90874,
+      "sha256": "AECFF624B388C52E8058F3261DC8D1FABECDEA0BDC987CDBAE13F3E19B269BAD"
+    }
+  },
+  "outcome_free_density": {
+    "eligible_market_bars": 249,
+    "breakout_states_before_overlap": 43,
+    "overlap_skips": 21,
+    "opened_observations": 22,
+    "resolved_observations": 22,
+    "unique_trigger_times": 22,
+    "first_trigger": "2025-01-22 01:00:11",
+    "last_trigger": "2025-12-11 01:00:01",
+    "calendar_halves": {
+      "H1": 10,
+      "H2": 12
+    },
+    "breakout_sides": {
+      "UPPER": 18,
+      "LOWER": 4
+    }
+  },
+  "fixed_p1_density_gates": {
+    "resolved_at_least_18": {
+      "value": 22,
+      "passed": true
+    },
+    "each_calendar_half_at_least_6": {
+      "values": [10, 12],
+      "passed": true
+    },
+    "each_breakout_side_at_least_5": {
+      "values": {
+        "UPPER": 18,
+        "LOWER": 4
+      },
+      "passed": false
+    },
+    "all_density_gates_passed": false
+  },
+  "economic_outcome_boundary": {
+    "opportunity_rows_preserved": true,
+    "economic_columns_accessed": false,
+    "continuation_or_reversion_profit_aggregated": false,
+    "direction_selected": null,
+    "economic_interpretation": "Neither continuation nor reversion is economically accepted or rejected. The lower-break side failed the predeclared breadth floor before book economics could be read."
+  },
+  "verdict": "NO_US500_MONTHLY_RANGE_BREAK_DIRECTION_PASSED",
+  "failure_action": {
+    "p2_opened": false,
+    "same_unit_rerun": false,
+    "lookback_or_horizon_rescue": false,
+    "breakout_buffer_or_side_rescue": false,
+    "session_weekday_symbol_or_subgroup_rescue": false,
+    "prototype_question_retained": false,
+    "selected_candidate": null
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "close_unit_053_and_recompare_programs_1_to_5_and_7_without_adjacent_range_break_or_us500_parameter_followup"
+}
