@@ -1,0 +1,220 @@
+{
+  "schema": "zeta-next-prior-treasury-curve-move-context-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_049_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "prior-treasury-curve-move-context-049",
+  "family": "prior-treasury-curve-move-context-v1",
+  "title": "Prior U.S. Treasury Curve-Move Context Audit",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {"id": 6, "name": "execution_recovery_broker_safety", "korean_name": "실행·복구·브로커 안전"}
+  },
+  "question": "Does the latest strictly prior official U.S. Treasury 2-year and 10-year par-yield move define a broad parallel-rate-rise or parallel-rate-fall external context that materially separates strategy-period-centered stressed R and stop incidence from divergent-or-flat curve moves across the frozen six-strategy portfolio?",
+  "hypothesis": "A same-direction daily repricing of both the policy-sensitive 2-year point and the long-duration 10-year point is a broad rates-market state. Parallel rises may pressure equity-index continuation while parallel falls may ease discount-rate pressure; either state is informative only if its association is material, economically concordant and broad across periods and strategies relative to mixed or flat curve moves.",
+  "why_now": "Units 043-048 completed one durable macro allocation cycle 7→5→2→4→3→1. Program 2's latest VIX unit was invalid before economics, while its earlier scheduled-release unit closed validly with no event-window field. A fresh whole-map comparison therefore favors one distinct official-rates context over adjacent signal, weekday, RC4-management, sizing or meta follow-up.",
+  "macro_recomparison": {
+    "program_1": "Unit 048 just closed with no signal-transition field; no adjacent signal history or subgroup may open.",
+    "program_2": "Selected for a new official Treasury curve-move mechanism, not a VIX repair, VIX substitute or scheduled-release window.",
+    "program_3": "Unit 047 recently closed with no week-edge field; no adjacent calendar or session work may open.",
+    "program_4": "Unit 046 is closed invalid; no RC4 selector repair or neighboring management state may open.",
+    "program_5": "Unit 044 is closed invalid; no nearby sizing, lot or risk-envelope rescue may open.",
+    "program_7": "Unit 043 supplied the recent evidence-readiness diagnosis; a second adjacent meta audit is lower-value than an economic external-market question.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not continue automatically into yield magnitude, curve slope, inversion, other maturities, event windows or another rates source."
+  },
+  "research_bundle": {
+    "name": "strictly_prior_parallel_two_year_ten_year_curve_move_contexts",
+    "variants": [
+      {"id": "PARALLEL_RATE_RISE", "definition": "Both published 2-year and 10-year yields rose from the preceding Treasury record.", "comparator": "DIVERGENT_OR_FLAT"},
+      {"id": "PARALLEL_RATE_FALL", "definition": "Both published 2-year and 10-year yields fell from the preceding Treasury record.", "comparator": "DIVERGENT_OR_FLAT"}
+    ],
+    "context_anchor": {"id": "DIVERGENT_OR_FLAT", "definition": "The two yield changes had opposite signs or either published change was exactly zero."},
+    "single_bundle": true,
+    "parameter_grid": false,
+    "magnitude_threshold": null,
+    "curve_level_or_slope_used": false
+  },
+  "distinction_from_closed_work": {
+    "scheduled_us_macro_event_exposure_041": "Unit 041 classified held-at-release and post-entry windows around FOMC, CPI and employment releases. Unit 049 uses no event calendar, release clock, hold state or post-entry interval.",
+    "prior_vix_relative_regime_context_045": "Unit 045 ranked the level of prior VIX inside a trailing 252-session distribution and failed before economics because of its frozen lifecycle selector. Unit 049 neither repairs that selector nor uses volatility, ranks, quantiles, rolling windows or VIX-derived data.",
+    "external_mechanism": "Unit 049 uses the signs of two official nominal Treasury par-yield changes and treats the mixed/flat joint move as a natural comparator. No rate magnitude, curve steepness, inversion threshold or maturity search is permitted."
+  },
+  "boundary": {
+    "family_root": "lab/research/prior-treasury-curve-move-context-v1/",
+    "source_free_mql": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence_plus_frozen_official_source": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "official_external_source": {
+    "publisher": "U.S. Department of the Treasury",
+    "dataset": "Daily Treasury Par Yield Curve Rates",
+    "publisher_page": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "download_url_template": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{year}/all?_format=csv&field_tdr_date_value={year}&page=&type=daily_treasury_yield_curve",
+    "retrieved_at_local": "2026-08-26",
+    "publisher_description": "Official par yields are interpolated from the daily par yield curve using indicative bid-side Treasury market quotations obtained near 3:30 PM each trading day.",
+    "snapshot_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 5,
+      "bytes": 89890,
+      "rows": 1161,
+      "first_date": "2022-01-03",
+      "last_date": "2026-08-25",
+      "duplicate_dates": 0,
+      "sha256": "0ECE90826CD883898F8E386F5FE46F41B19A0CF194C9FC306A5E285047D2D331"
+    },
+    "files": [
+      {"year": 2022, "path": "lab/research/prior-treasury-curve-move-context-v1/source/treasury/daily-treasury-par-yield-curve-2022.csv", "bytes": 18226, "rows": 249, "first_date": "2022-01-03", "last_date": "2022-12-30", "sha256": "C33CB2758E5E34C2C23B7AB759D18681091860F3F9E5960112859F64F31CD814"},
+      {"year": 2023, "path": "lab/research/prior-treasury-curve-move-context-v1/source/treasury/daily-treasury-par-yield-curve-2023.csv", "bytes": 19098, "rows": 250, "first_date": "2023-01-03", "last_date": "2023-12-29", "sha256": "EDB7F3904E11DCAA502CDCC03AD9B1B16C893802D166CE9BC5FA1118251249D4"},
+      {"year": 2024, "path": "lab/research/prior-treasury-curve-move-context-v1/source/treasury/daily-treasury-par-yield-curve-2024.csv", "bytes": 19098, "rows": 250, "first_date": "2024-01-02", "last_date": "2024-12-31", "sha256": "6775840B76CD7FD41121F61D6F6C60184ECA6B2BA49954EC7372C463CBEEF34D"},
+      {"year": 2025, "path": "lab/research/prior-treasury-curve-move-context-v1/source/treasury/daily-treasury-par-yield-curve-2025.csv", "bytes": 20155, "rows": 249, "first_date": "2025-01-02", "last_date": "2025-12-31", "sha256": "CF2FA3DA7F160384B63D2EAD698532B1D76CD9F789CE4911E2304DB85B14E6D5"},
+      {"year": 2026, "path": "lab/research/prior-treasury-curve-move-context-v1/source/treasury/daily-treasury-par-yield-curve-2026.csv", "bytes": 13313, "rows": 163, "first_date": "2026-01-02", "last_date": "2026-08-25", "sha256": "C2E6A08432517D295827ECE3FD9AA05D7BF64584B5801811C1551F43529E25D2"}
+    ]
+  },
+  "immutable_portfolio_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "current_path_hash_manifest": {"algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.", "files": 6, "bytes": 5692770, "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"},
+    "files": [
+      {"period": "P1_2022H2_2023", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv", "bytes": 1411355, "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period": "P1_2022H2_2023", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv", "bytes": 536770, "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period": "P2_2024", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv", "bytes": 1395691, "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period": "P3_2025", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv", "bytes": 1418401, "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period": "P3_2025", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv", "bytes": 6936, "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period": "P4_2026_YTD", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv", "bytes": 923617, "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only official source rows and hashes, 2-year/10-year signs, strictly-prior date linkage, exact component identity, birth event and fresh period were used. No close value, stressed R, stop association, centered effect, gate or verdict was accessed.",
+    "treasury_records": 1161,
+    "treasury_moves": 1160,
+    "move_counts": {"PARALLEL_RATE_RISE": 449, "PARALLEL_RATE_FALL": 406, "DIVERGENT_OR_FLAT": 305},
+    "births": 2233,
+    "unclassified_births": 0,
+    "birth_role_counts": {"PARALLEL_RATE_RISE": 840, "PARALLEL_RATE_FALL": 779, "DIVERGENT_OR_FLAT": 614},
+    "period_role_counts": {
+      "P1_2022H2_2023": [342, 248, 179],
+      "P2_2024": [190, 193, 171],
+      "P3_2025": [179, 214, 161],
+      "P4_2026_YTD": [129, 124, 103],
+      "array_order": ["PARALLEL_RATE_RISE", "PARALLEL_RATE_FALL", "DIVERGENT_OR_FLAT"]
+    },
+    "strategy_role_counts": {
+      "RC16": [97, 88, 87],
+      "RC4": [67, 72, 67],
+      "Cross": [303, 295, 207],
+      "Pressure": [45, 38, 35],
+      "Return": [93, 86, 59],
+      "Passive": [235, 200, 159],
+      "array_order": ["PARALLEL_RATE_RISE", "PARALLEL_RATE_FALL", "DIVERGENT_OR_FLAT"]
+    },
+    "strategy_period_role_counts": {
+      "RC16": [[35,22,20],[25,21,26],[22,29,28],[15,16,13]],
+      "RC4": [[24,17,12],[12,21,20],[22,24,22],[9,10,13]],
+      "Cross": [[121,99,66],[73,72,52],[64,76,53],[45,48,36]],
+      "Pressure": [[13,12,10],[8,6,9],[13,10,9],[11,10,7]],
+      "Return": [[46,35,24],[18,19,13],[16,23,13],[13,9,9]],
+      "Passive": [[103,63,47],[54,54,51],[42,52,36],[36,31,25]],
+      "array_order": ["PARALLEL_RATE_RISE", "PARALLEL_RATE_FALL", "DIVERGENT_OR_FLAT"],
+      "period_order": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"]
+    },
+    "minimum_strategy_period_counts": {"PARALLEL_RATE_RISE": 8, "PARALLEL_RATE_FALL": 6, "DIVERGENT_OR_FLAT": 7},
+    "eligible": true
+  },
+  "fixed_classification": {
+    "record_order": "Parse official Date as MM/dd/yyyy, require unique dates and finite published 2 Yr and 10 Yr values, then order ascending.",
+    "strictly_prior_record": "For a birth on server calendar date D, use the latest Treasury record whose date is strictly less than D. Do not use same-date data regardless of birth time.",
+    "preceding_record": "Compare that selected record only with the immediately preceding official Treasury record, which may cross a weekend, holiday or year boundary.",
+    "PARALLEL_RATE_RISE": "Delta 2 Yr > 0 and delta 10 Yr > 0.",
+    "PARALLEL_RATE_FALL": "Delta 2 Yr < 0 and delta 10 Yr < 0.",
+    "DIVERGENT_OR_FLAT": "All other joint sign states, including either exact zero.",
+    "no_lookahead": true
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full portfolio CSV row; state_sequence is not an event primary key.",
+    "ordering": "Within each fresh period order by parsed server_time, numeric state_sequence, close-before-birth precedence, source path and source line.",
+    "exact_component_selection": "Use only the six complete component_id keys in strategy_identity. Prefix, suffix, substring, wildcard and inferred-family selectors are prohibited.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned risk from detail.",
+    "passive_pending": "PASSIVE_PLACE stores positive planned risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL begins Passive with the active risk.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle; value_b is frozen 2x-cost stressed net USD and EXTERNAL_CLOSE is a stop-loss exit.",
+    "stressed_r": "Close value_b divided by positive birth planned risk.",
+    "strategy_period_centering": "Within each of the 24 strategy x P1-P4 cells, subtract the full-cell mean stressed R and stop rate from every lifecycle before variant aggregation. Every role is included in the full-cell mean.",
+    "variant_effect": "For each variant, variant mean centered metric minus DIVERGENT_OR_FLAT mean centered metric."
+  },
+  "fixed_metrics": {
+    "role_context": "Report all three raw role economics without allowing the comparator to pass or rescue a variant.",
+    "variant_contrast": "For each variant report pooled centered R and stop differences, four period effects and six strategy effects.",
+    "period_contribution_share": "Absolute period contribution to the pooled centered-R contrast divided by the sum of absolute contributions across four periods.",
+    "strategy_contribution_share": "Absolute strategy contribution to the pooled centered-R contrast divided by the sum of absolute contributions across six strategies."
+  },
+  "fixed_integrity_gate": [
+    "All five Treasury files and all six portfolio files retain their listed bytes and hashes; Treasury has 1,161 unique finite records and portfolio data has 16,477 rows with zero exact duplicate full rows.",
+    "Reproduce exactly 1,160 source moves and all frozen move and birth role counts with zero unclassified birth.",
+    "Reconstruct exactly 2,233 lifecycles with strategy totals 272/206/805/118/238/594, 407.0477 USD 2x stressed net and 206 stop exits with zero overlap, pending, risk or close fault.",
+    "Reproduce every frozen period, strategy and strategy-period density.",
+    "Reconstruct exactly 24 finite strategy-period centering cells."
+  ],
+  "fixed_variant_gates": {
+    "apply_separately_to": ["PARALLEL_RATE_RISE", "PARALLEL_RATE_FALL"],
+    "comparator": "DIVERGENT_OR_FLAT",
+    "density": [
+      "Variant and comparator each contain at least 150 pooled lifecycles.",
+      "Variant and comparator each contain at least 100 lifecycles in every period.",
+      "Variant and comparator each contain at least 30 lifecycles in every strategy.",
+      "Every strategy-period cell contains at least five variant and five comparator lifecycles."
+    ],
+    "information": [
+      "Absolute variant-minus-comparator centered stressed-R difference is at least 0.10R.",
+      "Absolute variant-minus-comparator centered stop difference is at least 0.05.",
+      "The pooled channels are economically concordant: positive R requires negative stop difference, while negative R requires positive stop difference.",
+      "Return and stop differences each share their pooled sign in at least three of four periods.",
+      "Return and stop differences each share their pooled sign in at least four of six strategies.",
+      "No one period contributes more than 60% and no one strategy more than 40% of the absolute centered-R contrast contribution."
+    ],
+    "pass_rule": "A variant passes only if every density and information requirement passes. Zero is never counted as a sign."
+  },
+  "fixed_bundle_gate": {
+    "both_same_direction": "PASS_COMMON_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_DIAGNOSIS",
+    "both_opposite_directions": "PASS_DIVERGENT_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_DIAGNOSIS",
+    "exactly_one": "PARTIAL_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_DIAGNOSIS_NO_SUCCESSOR",
+    "neither": "NO_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_PASSED",
+    "invalid": "INVALID_TREASURY_SOURCE_OR_LIFECYCLE_RECONSTRUCTION_NO_CONTEXT_VERDICT",
+    "ambiguous": "AMBIGUOUS_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_NO_SUCCESSOR",
+    "authority_limit": "Consumed-data association only. A pass selects no entry filter, event exclusion, rate rule, size, priority, EA or Live action and cannot open an adjacent successor automatically."
+  },
+  "execution_budget": {"successful_fixed_in_memory_aggregations": 1, "implementation_only_pre_metric_correction_allowance": 1, "tester_paths": 0, "compile_paths": 0, "orders": 0, "retained_analysis_cli": false},
+  "stop_rules": [
+    "Commit and push this declaration and the five official source snapshots before reading role-conditioned close value, stressed R, stop association, centered effect, gate or verdict.",
+    "Run exactly one fixed in-memory aggregation over the frozen Treasury and portfolio files using complete component identities.",
+    "Do not alter the strict-prior rule, rate maturities, sign roles, comparator, centering, metrics, density or information gates.",
+    "Do not add rate magnitude, curve slope, inversion, rolling rank, alternate maturity, event window, strategy subset, symbol subset, session or period exception.",
+    "Do not repair or rerun Unit 045, modify MQL, compile, run MetaTrader, inspect Program 6, retain a CLI, query broker/account state or touch Live.",
+    "Close after one result and return to whole-map comparison without adjacent Program 2 rates work."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_and_official_source_then_run_one_fixed_prior_treasury_curve_move_aggregation"
+}

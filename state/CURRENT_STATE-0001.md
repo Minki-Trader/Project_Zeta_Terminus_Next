@@ -979,3 +979,11 @@
 - US100 persistence-minus-reversal was `+0.009248131607R/+0.001978148130 stop`. Both effects were negligible and non-concordant, sign breadth failed, and P4/Cross dominated the weak return contrast.
 - Closed `NO_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_PASSED` with no retained market-structure question, entry filter, direction rule, size, priority, EA or Live action. Declaration/result/closure SHA-256 values are `A3C2FDCF0114F50CC79D66252EF8CC4ACE924B48C91BD72E2BCF85A85330BD97` / `9B882CD3A27B6F5D3D23D245301D513E417ED1748BC1A309F7BC9C22BA5AA0D2` / `8A4AD3A46F14DB64E7DE7AE073BFAFFDF05C7D9A65CE33E548495BEC50DD73AC`.
 - Next is a fresh comparison of Programs 1-5 and 7, not another signal history, streak, timing, magnitude, direction, component or symbol subset. Program 6, MQL, Tester, broker state and Live remained untouched.
+
+## STATE-0121 - 2026-08-26
+
+- After the complete recent macro cycle `7 → 5 → 2 → 4 → 3 → 1`, compared all active programs and opened only Program 2 Unit 049 `prior-treasury-curve-move-context-v1`. This is a new official-rates mechanism, not a VIX repair or adjacent signal/timing/management/sizing/meta continuation.
+- Froze five official U.S. Treasury Daily Par Yield Curve source files covering 2022-01-03 through 2026-08-25: 1,161 unique rows, 89,890 bytes and manifest SHA-256 `0ECE90826CD883898F8E386F5FE46F41B19A0CF194C9FC306A5E285047D2D331`.
+- For every birth, the latest strictly prior Treasury date is compared only with the preceding official record. Joint 2Y/10Y signs define parallel rise, parallel fall or divergent/flat; there is no magnitude, slope, inversion, rank, maturity or event-window grid.
+- Outcome-free classification covered all 2,233 births with rise/fall/comparator `840/779/614`, all four periods and all six strategies. Minimum strategy-period counts are `8/6/7`, so one two-variant bundle is dense without a rescue threshold.
+- Each variant independently requires material centered R and stop separation, concordance, broad period/strategy signs and contribution caps. Declaration SHA-256 is `52D019971632C0B68D1426889532A27CCE2430C4B4308C736B902DAC2981403C`; economics remain unopened. One aggregation remains, then the whole macro map is compared again without adjacent Program 2 rates work. Program 6, MQL, Tester, broker state and Live remain untouched.
