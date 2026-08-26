@@ -1,0 +1,91 @@
+{
+  "schema": "zeta-next-portfolio-loss-cooccurrence-topology-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_054_CLOSED",
+  "unit": "portfolio-loss-cooccurrence-topology-054",
+  "family": "portfolio-loss-cooccurrence-topology-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "verdict": "NO_PORTFOLIO_LOSS_COOCCURRENCE_CLUSTER_PASSED",
+  "artifacts": {
+    "declaration": {
+      "path": "lab/research/portfolio-loss-cooccurrence-topology-v1/evidence/PORTFOLIO_LOSS_COOCCURRENCE_TOPOLOGY_DECLARATION_V1.json",
+      "sha256": "CE7894BD149D98753B10FD4E0C1D8CED8252587F6755B9B5BFF38F39E33F603C"
+    },
+    "result": {
+      "path": "lab/research/portfolio-loss-cooccurrence-topology-v1/evidence/PORTFOLIO_LOSS_COOCCURRENCE_TOPOLOGY_RESULT_V1.json",
+      "sha256": "61614AC1AB8372982A368505DE3484A389AFAAA47588CF19E3D8DFE20A3F711E"
+    }
+  },
+  "integrity": {
+    "portfolio_files_verified": 6,
+    "rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.0477,
+    "stop_exits": 206,
+    "birth_dates": 1000,
+    "strategy_dates": 2164,
+    "marginal_cells": 24,
+    "reconstruction_faults": 0,
+    "passed": true
+  },
+  "findings": {
+    "portfolio_negative_context": {
+      "negative_lifecycles": 960,
+      "absolute_negative_stressed_dollars": 1155.0193,
+      "US30_loss_share": 0.514686637704,
+      "US100_loss_share": 0.485313362296
+    },
+    "MULTI_STRATEGY_LOSS_DAY_CLUSTER": {
+      "eligible_dates": 766,
+      "observed_dates": 238,
+      "expected_dates": 232.744874429817,
+      "observed_expected_ratio": 1.022578909989,
+      "excess_dates": 5.255125570183,
+      "all_loss_dollar_share": 0.562955528102,
+      "P4_observed_expected_ratio": 0.909571823732,
+      "failed_gates": ["incidence_ratio_1.25", "pooled_excess_10_dates"],
+      "passed": false
+    },
+    "CROSS_BOOK_LOSS_DAY_CLUSTER": {
+      "eligible_dates": 550,
+      "observed_dates": 161,
+      "expected_dates": 152.551858301923,
+      "observed_expected_ratio": 1.055378818666,
+      "excess_dates": 8.448141698077,
+      "all_loss_dollar_share": 0.402635263324,
+      "P4_observed_expected_ratio": 0.728786911616,
+      "failed_gates": ["incidence_ratio_1.25"],
+      "passed": false
+    }
+  },
+  "interpretation": [
+    "Same-date loss groups contain substantial dollars, but the active-mask and strategy-period marginal benchmark explains nearly all observed co-occurrence frequency.",
+    "The latest P4 period is below independence expectation for both variants, so earlier mild excess is not a broad persistent common-loss state.",
+    "Loss-dollar severity alone cannot select a common-shock hedge, governor, suppression, lot, slot or admission response after the frozen incidence gate fails."
+  ],
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "same_unit_rerun": false,
+  "nearby_rescue": false,
+  "adjacent_program_5_successor": false,
+  "forbidden_successors": [
+    "alternate_server_or_new_york_day_boundary",
+    "weekday_or_session_partition",
+    "rolling_or_event_window",
+    "loss_or_stop_threshold",
+    "strategy_pair_or_subset",
+    "direction_symbol_or_book_subset",
+    "regime_duration_drawdown_or_memory_condition",
+    "hedge_strategy_removal_allocation_lot_slot_priority_or_admission_rule"
+  ],
+  "tester_runs": 0,
+  "mql_changes": 0,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "recompare_programs_1_to_5_and_7_without_adjacent_loss_day_allocation_or_risk_governor_followup"
+}

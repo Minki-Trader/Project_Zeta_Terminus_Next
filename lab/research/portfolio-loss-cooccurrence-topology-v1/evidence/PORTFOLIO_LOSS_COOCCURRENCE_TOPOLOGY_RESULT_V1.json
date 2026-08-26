@@ -1,0 +1,166 @@
+{
+  "schema": "zeta-next-portfolio-loss-cooccurrence-topology-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_054_FIXED_AGGREGATION_COMPLETE",
+  "unit": "portfolio-loss-cooccurrence-topology-054",
+  "family": "portfolio-loss-cooccurrence-topology-v1",
+  "declaration_sha256": "CE7894BD149D98753B10FD4E0C1D8CED8252587F6755B9B5BFF38F39E33F603C",
+  "outcomes_consumed": true,
+  "integrity": {
+    "file_pins_exact": true,
+    "portfolio_files": 6,
+    "portfolio_bytes": 5692770,
+    "portfolio_path_hash_manifest_sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42",
+    "rows": 16477,
+    "exact_duplicate_rows": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd": 407.0477,
+    "stop_exits": 206,
+    "reconstruction_faults": {
+      "unknown_component": 0,
+      "overlap": 0,
+      "pending": 0,
+      "risk": 0,
+      "close": 0,
+      "parse": 0
+    },
+    "birth_dates": 1000,
+    "multi_strategy_eligible_dates": 766,
+    "cross_book_eligible_dates": 550,
+    "strategy_dates": 2164,
+    "marginal_cells": 24,
+    "passed": true
+  },
+  "portfolio_context": {
+    "negative_lifecycles": 960,
+    "absolute_negative_stressed_dollars": 1155.0193,
+    "book_loss_dollars": {
+      "US30": {
+        "absolute_negative_stressed_dollars": 594.473,
+        "share": 0.514686637704
+      },
+      "US100": {
+        "absolute_negative_stressed_dollars": 560.5463,
+        "share": 0.485313362296
+      }
+    },
+    "marginal_loss_probabilities": {
+      "P1_2022H2_2023": {
+        "RC16": {"active_strategy_dates": 77, "losing_strategy_dates": 29, "loss_probability": 0.376623376623},
+        "RC4": {"active_strategy_dates": 53, "losing_strategy_dates": 21, "loss_probability": 0.396226415094},
+        "Cross": {"active_strategy_dates": 286, "losing_strategy_dates": 133, "loss_probability": 0.465034965035},
+        "Pressure": {"active_strategy_dates": 35, "losing_strategy_dates": 19, "loss_probability": 0.542857142857},
+        "Return": {"active_strategy_dates": 105, "losing_strategy_dates": 46, "loss_probability": 0.438095238095},
+        "Passive": {"active_strategy_dates": 184, "losing_strategy_dates": 77, "loss_probability": 0.41847826087}
+      },
+      "P2_2024": {
+        "RC16": {"active_strategy_dates": 72, "losing_strategy_dates": 32, "loss_probability": 0.444444444444},
+        "RC4": {"active_strategy_dates": 53, "losing_strategy_dates": 26, "loss_probability": 0.490566037736},
+        "Cross": {"active_strategy_dates": 197, "losing_strategy_dates": 100, "loss_probability": 0.507614213198},
+        "Pressure": {"active_strategy_dates": 23, "losing_strategy_dates": 11, "loss_probability": 0.478260869565},
+        "Return": {"active_strategy_dates": 50, "losing_strategy_dates": 27, "loss_probability": 0.54},
+        "Passive": {"active_strategy_dates": 140, "losing_strategy_dates": 48, "loss_probability": 0.342857142857}
+      },
+      "P3_2025": {
+        "RC16": {"active_strategy_dates": 79, "losing_strategy_dates": 36, "loss_probability": 0.455696202532},
+        "RC4": {"active_strategy_dates": 68, "losing_strategy_dates": 32, "loss_probability": 0.470588235294},
+        "Cross": {"active_strategy_dates": 193, "losing_strategy_dates": 90, "loss_probability": 0.466321243523},
+        "Pressure": {"active_strategy_dates": 32, "losing_strategy_dates": 18, "loss_probability": 0.5625},
+        "Return": {"active_strategy_dates": 52, "losing_strategy_dates": 24, "loss_probability": 0.461538461538},
+        "Passive": {"active_strategy_dates": 117, "losing_strategy_dates": 43, "loss_probability": 0.367521367521}
+      },
+      "P4_2026_YTD": {
+        "RC16": {"active_strategy_dates": 44, "losing_strategy_dates": 14, "loss_probability": 0.318181818182},
+        "RC4": {"active_strategy_dates": 32, "losing_strategy_dates": 17, "loss_probability": 0.53125},
+        "Cross": {"active_strategy_dates": 129, "losing_strategy_dates": 57, "loss_probability": 0.441860465116},
+        "Pressure": {"active_strategy_dates": 28, "losing_strategy_dates": 8, "loss_probability": 0.285714285714},
+        "Return": {"active_strategy_dates": 31, "losing_strategy_dates": 17, "loss_probability": 0.548387096774},
+        "Passive": {"active_strategy_dates": 84, "losing_strategy_dates": 30, "loss_probability": 0.357142857143}
+      }
+    }
+  },
+  "variants": {
+    "MULTI_STRATEGY_LOSS_DAY_CLUSTER": {
+      "eligible_dates": 766,
+      "observed_dates": 238,
+      "expected_dates": 232.744874429817,
+      "observed_expected_ratio": 1.022578909989,
+      "excess_dates": 5.255125570183,
+      "loss_dollars": 650.2245,
+      "all_loss_dollar_share": 0.562955528102,
+      "maximum_single_date_loss_dollars": 9.77,
+      "maximum_single_date_share": 0.015025579627,
+      "period_ratio_breadth": 3,
+      "periods": {
+        "P1_2022H2_2023": {"eligible_dates": 265, "observed_dates": 79, "expected_dates": 78.322413802749, "observed_expected_ratio": 1.008651242529, "excess_dates": 0.677586197251, "loss_dollars": 177.8925},
+        "P2_2024": {"eligible_dates": 183, "observed_dates": 64, "expected_dates": 60.476371133893, "observed_expected_ratio": 1.058264555231, "excess_dates": 3.523628866107, "loss_dollars": 154.465},
+        "P3_2025": {"eligible_dates": 196, "observed_dates": 65, "expected_dates": 60.963537464572, "observed_expected_ratio": 1.066211094423, "excess_dates": 4.036462535428, "loss_dollars": 211.703},
+        "P4_2026_YTD": {"eligible_dates": 122, "observed_dates": 30, "expected_dates": 32.982552028603, "observed_expected_ratio": 0.909571823732, "excess_dates": -2.982552028603, "loss_dollars": 106.164}
+      },
+      "positive_excess_contribution_shares": {
+        "P1_2022H2_2023": 0.082254517627,
+        "P2_2024": 0.427745420217,
+        "P3_2025": 0.490000062156,
+        "P4_2026_YTD": 0.0
+      },
+      "gates": {
+        "density": true,
+        "incidence": false,
+        "period_breadth": true,
+        "severity": true,
+        "date_concentration": true
+      },
+      "passed": false
+    },
+    "CROSS_BOOK_LOSS_DAY_CLUSTER": {
+      "eligible_dates": 550,
+      "observed_dates": 161,
+      "expected_dates": 152.551858301923,
+      "observed_expected_ratio": 1.055378818666,
+      "excess_dates": 8.448141698077,
+      "loss_dollars": 465.0515,
+      "all_loss_dollar_share": 0.402635263324,
+      "maximum_single_date_loss_dollars": 9.77,
+      "maximum_single_date_share": 0.021008425949,
+      "period_ratio_breadth": 3,
+      "periods": {
+        "P1_2022H2_2023": {"eligible_dates": 193, "observed_dates": 58, "expected_dates": 51.166797439205, "observed_expected_ratio": 1.133547591461, "excess_dates": 6.833202560795, "loss_dollars": 139.164},
+        "P2_2024": {"eligible_dates": 133, "observed_dates": 46, "expected_dates": 41.075826256697, "observed_expected_ratio": 1.119880089874, "excess_dates": 4.924173743303, "loss_dollars": 116.2005},
+        "P3_2025": {"eligible_dates": 134, "observed_dates": 41, "expected_dates": 38.35494351629, "observed_expected_ratio": 1.068962596245, "excess_dates": 2.64505648371, "loss_dollars": 146.418},
+        "P4_2026_YTD": {"eligible_dates": 90, "observed_dates": 16, "expected_dates": 21.954291089731, "observed_expected_ratio": 0.728786911616, "excess_dates": -5.954291089731, "loss_dollars": 63.269}
+      },
+      "positive_excess_contribution_shares": {
+        "P1_2022H2_2023": 0.474447800692,
+        "P2_2024": 0.341898748347,
+        "P3_2025": 0.183653450961,
+        "P4_2026_YTD": 0.0
+      },
+      "gates": {
+        "density": true,
+        "incidence": false,
+        "period_breadth": true,
+        "severity": true,
+        "date_concentration": true
+      },
+      "passed": false
+    }
+  },
+  "bundle_verdict": "NO_PORTFOLIO_LOSS_COOCCURRENCE_CLUSTER_PASSED",
+  "interpretation": "Same-date multi-strategy and cross-book losses contain material negative dollars, but their incidence is only 1.0226x and 1.0554x the fixed marginal-independence expectation. Both miss the 1.25x incidence gate, multi-strategy excess also misses ten dates, and P4 is below expectation for both variants. Severity without excess incidence does not establish a common-loss state suitable for a portfolio response.",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "same_unit_rerun": false,
+  "nearby_rescue": false,
+  "tester_runs": 0,
+  "mql_changes": 0,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED"
+}

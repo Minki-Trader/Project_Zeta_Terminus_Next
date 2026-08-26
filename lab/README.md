@@ -67,7 +67,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/macro-frontier-attrition-topology-v1/`: 닫힌 Program 7 / Unit 051 source-free family; Unit 039-050 funnel `12→8→3→0`, 권위 `4/12`·구분력 `5/8`·후보번역 `3/3` 모두 실질 attrition으로 단일 병목 없음, 후속 감사·기본 lane·프로그램 억제 없음
 - `research/held-position-first-peer-exit-state-v1/`: 닫힌 Program 4 / Unit 052 source-free family; peer stop `+0.05546R/+0.00736 stop`, peer native `+0.03656R/-0.08223 stop`이나 전자는 크기·일관성, 후자는 R크기·Return 집중 실패, 관리 후속 없음
 - `research/us500-monthly-range-break-response-v1/`: 닫힌 Program 1 / Unit 053 family; P1 2025 무결성·H1/H2 `10/12`는 통과했으나 upper/lower `18/4`로 양방향 최소 `5/5` 미달, 경제행·P2·prototype 미개봉
-- `research/portfolio-loss-cooccurrence-topology-v1/`: 열린 Program 5 / Unit 054 source-free family; 2,233 출생의 같은 서버 출생일 다전략·양 자연책 손실 동시발생을 strategy-period 주변손실률 독립 기준과 한 번 비교, 결과 미개봉
+- `research/portfolio-loss-cooccurrence-topology-v1/`: 닫힌 Program 5 / Unit 054 source-free family; 다전략 손실일 `1.0226x`, 양 자연책 손실일 `1.0554x` 독립기대 발생으로 둘 다 `1.25x` 관문 미달, 공통손실 대응·배분·lot·slot 후속 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
