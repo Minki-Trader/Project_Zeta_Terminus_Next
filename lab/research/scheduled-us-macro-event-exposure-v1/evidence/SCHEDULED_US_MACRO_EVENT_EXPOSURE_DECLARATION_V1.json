@@ -1,0 +1,374 @@
+{
+  "schema": "zeta-next-scheduled-us-macro-event-exposure-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_041_EVENT_CONDITIONED_OUTCOME_AGGREGATION",
+  "unit": "scheduled-us-macro-event-exposure-041",
+  "family": "scheduled-us-macro-event-exposure-v1",
+  "title": "Scheduled US Macro Release Exposure",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트",
+    "active_goal_programs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    }
+  },
+  "research_bundle": "scheduled_fomc_cpi_employment_incumbent_and_post_entry_exposure",
+  "question": "Across the frozen six-strategy portfolio, are official scheduled FOMC policy statements, CPI releases and Employment Situation releases broadly adverse contexts either for positions already held at release or for native entries born during the first 120 server minutes after release, relative to unexposed lifecycles of the same strategy and fresh period?",
+  "hypothesis": "A scheduled high-information US release may alter the economic context of incumbent risk or immediate native entry response. This unit screens association only; full-lifecycle residuals cannot establish the event-time P/L mechanism.",
+  "why_now": "After Program 5 Unit 039 and Program 4 Unit 040, the whole-map comparison selected underrepresented Program 2. The official calendar creates a new external context rather than extending Unit 040 age or threshold work or opening the retained Program 5 lot seed.",
+  "bundle_rotation": {
+    "previous_completed_macro_program": {
+      "id": 4,
+      "name": "position_management_exit"
+    },
+    "current_macro_program": {
+      "id": 2,
+      "name": "external_market_event"
+    },
+    "adjacent_unit_040_rescue_opened": false,
+    "retained_unit_039_lot_seed_opened": false,
+    "after_close": "Recompare Programs 1-5 and 7. Do not open another event, release window, surprise field or event-time mark study automatically."
+  },
+  "boundary": {
+    "family_root": "lab/research/scheduled-us-macro-event-exposure-v1/",
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "external_inputs": "Official scheduled release dates and times only; no released value, surprise, revision, policy text, press-conference content or market reaction.",
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "official_calendar": {
+    "path": "lab/research/scheduled-us-macro-event-exposure-v1/evidence/OFFICIAL_US_MACRO_EVENT_CALENDAR_V1.csv",
+    "bytes": 11397,
+    "sha256": "B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE",
+    "rows": 128,
+    "class_counts": {
+      "FOMC": 32,
+      "CPI": 48,
+      "EMPLOYMENT": 48
+    },
+    "scope": "2022-08-01 through the already-consumed P4 end 2026-08-21; FOMC begins at the first scheduled statement inside that scope.",
+    "sources": [
+      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "https://www.bls.gov/schedule/2022/",
+      "https://www.bls.gov/schedule/2023/",
+      "https://www.bls.gov/schedule/2024/",
+      "https://www.bls.gov/schedule/2025/",
+      "https://www.bls.gov/schedule/2026/"
+    ],
+    "source_verification": [
+      "All 32 direct FOMC statement URLs in the CSV were fetched before declaration and each stated release at exactly 2:00 p.m. EST or EDT.",
+      "The five official BLS annual release calendars list the exact 48 CPI and 48 Employment Situation dates in the CSV, each at 08:30 AM, and state that calendar times are Eastern Time.",
+      "The official 2025 calendar's missing October Employment Situation and missing October CPI release are not imputed; its delayed and later actual schedule is preserved exactly.",
+      "No unscheduled FOMC action, minutes, press conference, speech, PPI, JOLTS, retail release or other adjacent event is included."
+    ],
+    "timezone_contract": {
+      "eastern_to_utc": "Use the official ET wall time with US daylight saving: UTC-4 from the second Sunday in March transition through the first Sunday in November transition, otherwise UTC-5.",
+      "utc_to_server": "Use the frozen FPMarkets server contract from ZetaSessionClock: UTC+3 from 01:00 UTC on the last Sunday in March through 01:00 UTC on the last Sunday in October, otherwise UTC+2.",
+      "implementation": "The fixed aggregation uses Windows TimeZoneInfo IDs Eastern Standard Time and FLE Standard Time, which implement those two declared rules for 2022-2026.",
+      "observed_event_server_offset_counts": {
+        "UTC+2": 55,
+        "UTC+3": 73
+      },
+      "dst_mismatch_weeks": "Preserved. No fixed seven-hour ET-to-server shortcut is allowed."
+    }
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ]
+  },
+  "periods": [
+    "P1_2022H2_2023",
+    "P2_2024",
+    "P3_2025",
+    "P4_2026_YTD"
+  ],
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Calendar conversion plus lifecycle birth/close topology only. No close value_b, close reason, stressed R, stop result, event-conditioned economic association or selection verdict was accessed.",
+    "reconstruction_faults": 0,
+    "lifecycles": 2233,
+    "candidate_exposure_records": 219,
+    "unique_exposed_lifecycles": 219,
+    "multiply_matched_lifecycles": 0,
+    "unexposed_lifecycles": 2014,
+    "roles": {
+      "HELD_AT_RELEASE": {
+        "pooled": 85,
+        "class_counts": {
+          "FOMC": 13,
+          "CPI": 39,
+          "EMPLOYMENT": 33
+        },
+        "period_counts": {
+          "P1_2022H2_2023": 33,
+          "P2_2024": 19,
+          "P3_2025": 23,
+          "P4_2026_YTD": 10
+        },
+        "class_period_counts": {
+          "FOMC": {
+            "P1_2022H2_2023": 6,
+            "P2_2024": 4,
+            "P3_2025": 2,
+            "P4_2026_YTD": 1
+          },
+          "CPI": {
+            "P1_2022H2_2023": 17,
+            "P2_2024": 7,
+            "P3_2025": 12,
+            "P4_2026_YTD": 3
+          },
+          "EMPLOYMENT": {
+            "P1_2022H2_2023": 10,
+            "P2_2024": 8,
+            "P3_2025": 9,
+            "P4_2026_YTD": 6
+          }
+        },
+        "class_strategy_counts": {
+          "FOMC": {
+            "Cross": 8,
+            "Return": 5
+          },
+          "CPI": {
+            "Passive": 8,
+            "Pressure": 2,
+            "RC16": 14,
+            "RC4": 15
+          },
+          "EMPLOYMENT": {
+            "Passive": 5,
+            "Pressure": 3,
+            "RC16": 14,
+            "RC4": 11
+          }
+        }
+      },
+      "POST_ENTRY_120M": {
+        "pooled": 134,
+        "class_counts": {
+          "FOMC": 0,
+          "CPI": 69,
+          "EMPLOYMENT": 65
+        },
+        "period_counts": {
+          "P1_2022H2_2023": 51,
+          "P2_2024": 39,
+          "P3_2025": 25,
+          "P4_2026_YTD": 19
+        },
+        "class_period_counts": {
+          "FOMC": {
+            "P1_2022H2_2023": 0,
+            "P2_2024": 0,
+            "P3_2025": 0,
+            "P4_2026_YTD": 0
+          },
+          "CPI": {
+            "P1_2022H2_2023": 27,
+            "P2_2024": 22,
+            "P3_2025": 11,
+            "P4_2026_YTD": 9
+          },
+          "EMPLOYMENT": {
+            "P1_2022H2_2023": 24,
+            "P2_2024": 17,
+            "P3_2025": 14,
+            "P4_2026_YTD": 10
+          }
+        },
+        "class_strategy_counts": {
+          "FOMC": {},
+          "CPI": {
+            "Cross": 33,
+            "Passive": 29,
+            "Return": 7
+          },
+          "EMPLOYMENT": {
+            "Cross": 31,
+            "Passive": 22,
+            "Pressure": 1,
+            "Return": 11
+          }
+        },
+        "structural_zero": "There are no native lifecycle births in the declared two-hour window after any FOMC statement. The window is not widened and FOMC is not imputed into this role."
+      }
+    },
+    "minimum_unexposed_strategy_period_cell": 22
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a persisted-state version, not an event primary key.",
+    "ordering": "Within each fresh period order by parsed server_time, numeric state_sequence, fixed close-before-birth event precedence, then source path and line.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned_risk from detail.",
+    "passive_pending": "PASSIVE_PLACE stores one positive planned risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL begins Passive with that active risk.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle. value_b is the frozen 2x-cost stressed net USD and detail reason=DEAL_REASON_SL marks stop incidence.",
+    "stressed_r": "Close value_b divided by positive birth planned_risk.",
+    "event_roles": {
+      "HELD_AT_RELEASE": "A lifecycle is exposed when birth_server_time < release_server_time < close_server_time.",
+      "POST_ENTRY_120M": "A lifecycle is exposed when release_server_time <= birth_server_time < release_server_time + 120 minutes. The upper endpoint is exclusive."
+    },
+    "assignment": "Create one lifecycle-event exposure record for every match, then assign a lifecycle to its earliest matching release; ties use event class then role lexicographically. Feasibility found zero multi-match, but the rule remains frozen.",
+    "mutual_exclusion": "For one release, strict HELD timing and non-strict POST birth timing cannot both apply to one lifecycle.",
+    "unexposed_pool": "A lifecycle with no selected event exposure in either role or any class is globally unexposed.",
+    "comparator": "For every exposed lifecycle, compute benchmark mean stressed_r and stop rate from globally unexposed lifecycles of the same strategy and fresh period.",
+    "residuals": {
+      "stressed_r_residual": "exposed lifecycle stressed_r minus its same-strategy same-period unexposed benchmark mean",
+      "stop_residual": "exposed lifecycle stop indicator minus its same-strategy same-period unexposed benchmark stop rate"
+    },
+    "aggregation": "Within each fixed role-class book, report equal-lifecycle pooled mean residuals, each period mean residual, each supported strategy mean residual and raw exposed outcome summaries. Role-level summaries pool their eligible class books with equal lifecycle weight.",
+    "no_event_mark_claim": "HELD full-lifecycle stressed_r includes pre-release path. POST final stressed_r includes the complete post-birth lifecycle. These are screening associations, not event-time incremental P/L."
+  },
+  "fixed_integrity_gate": [
+    "The official calendar retains 11,397 bytes and SHA-256 B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE, with 128 unique events and exact class counts 32/48/48.",
+    "Calendar conversion yields exactly 55 event times at server UTC+2 and 73 at server UTC+3; every event remains within its declared fresh period.",
+    "All six economic files retain their listed byte lengths and hashes and contain zero exact duplicate full rows.",
+    "Reconstruct exactly 2,233 lifecycles with strategy totals RC16 272, RC4 206, Cross 805, Pressure 118, Return 238 and Passive 594; no same-strategy overlap, unmatched close, nonpositive planned risk or Passive pending fault is allowed.",
+    "Reconstruct exact frozen stressed net 407.0477 USD and exactly 206 stop exits.",
+    "Reconstruct exactly 219 uniquely exposed lifecycles and 2,014 globally unexposed lifecycles, with zero multi-match and the exact role/class/period/strategy densities frozen in pre_outcome_feasibility.",
+    "Every unexposed strategy-period benchmark cell contains at least 22 lifecycles and finite stressed R and stop rate."
+  ],
+  "book_density_gate": {
+    "requirements": [
+      "At least 10 exposed lifecycles pooled.",
+      "At least one exposure in all four fresh periods and at least two exposures in at least two periods.",
+      "At least two strategies represented pooled.",
+      "No single strategy contributes more than 75 percent of the book."
+    ],
+    "eligibility_from_feasibility": {
+      "HELD_AT_RELEASE/FOMC": "eligible",
+      "HELD_AT_RELEASE/CPI": "eligible",
+      "HELD_AT_RELEASE/EMPLOYMENT": "eligible",
+      "POST_ENTRY_120M/FOMC": "structural_zero_ineligible_no_window_rescue",
+      "POST_ENTRY_120M/CPI": "eligible",
+      "POST_ENTRY_120M/EMPLOYMENT": "eligible"
+    }
+  },
+  "fixed_adverse_book_gate": {
+    "apply_separately_to_each_eligible_role_class_book": true,
+    "requirements": [
+      "Pooled mean stressed_r residual is at most -0.10R.",
+      "At least three of four period mean stressed_r residuals are strictly negative.",
+      "Pooled mean stop residual is at least +0.05.",
+      "At least three of four period mean stop residuals are nonnegative.",
+      "At least two represented strategies have nonpositive mean stressed_r residual."
+    ],
+    "interpretation": "A book is adverse only if it passes every density and adverse requirement. Positive or mixed evidence is not transformed into a beneficial event policy."
+  },
+  "fixed_role_gate": {
+    "HELD_AT_RELEASE": [
+      "All FOMC, CPI and Employment books must remain density-eligible.",
+      "At least two of the three class books must pass every adverse-book requirement.",
+      "The pooled role mean stressed_r residual must be at most -0.10R and pooled mean stop residual at least +0.05.",
+      "At least three of four pooled period mean stressed_r residuals must be strictly negative."
+    ],
+    "POST_ENTRY_120M": [
+      "The CPI and Employment books must remain density-eligible and both must pass every adverse-book requirement.",
+      "The pooled role mean stressed_r residual must be at most -0.10R and pooled mean stop residual at least +0.05.",
+      "At least three of four pooled period mean stressed_r residuals must be strictly negative.",
+      "FOMC remains a structural zero; a pass is explicitly limited to scheduled BLS CPI/Employment post-release entry response and is not FOMC generalization."
+    ],
+    "selection": "If both roles pass, retain only the role with the lower pooled mean stressed_r residual, then higher pooled stop residual, then lexicographic role name.",
+    "passing_action": "Retain exactly one later independently named event-time mark-path measurement question for the selected role. It may measure event-to-plus-120-minute executable P/L under frozen entries, but it does not open automatically and cannot select a filter, size, exit, order rule, EA or Live behavior.",
+    "failure_action": "Close with no scheduled-event measurement seed. Do not rescue with a longer or shorter window, surprise magnitude, direction, strategy subset, specific meeting, event-day proxy, speech, minutes, PPI, JOLTS, retail release or same-family mark reconstruction."
+  },
+  "evidence_limit": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "official_schedule_available_ex_ante": true,
+    "full_lifecycle_association_not_mechanism": true,
+    "selection_or_promotion_claim": false
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "verdict_rules": {
+    "success": "PASS_ONE_SCHEDULED_MACRO_EVENT_MARK_PATH_MEASUREMENT_QUESTION when integrity passes and at least one role passes every frozen gate; retain exactly one role by the frozen ordering.",
+    "failure": "NO_SCHEDULED_US_MACRO_EVENT_EXPOSURE_ROLE_PASSED when integrity passes and neither role passes.",
+    "invalid": "INVALID_CALENDAR_INPUT_OR_RECONSTRUCTION_NO_EVENT_VERDICT when any calendar, timezone, input, lifecycle, exposure or benchmark integrity gate fails.",
+    "ambiguous": "AMBIGUOUS_NO_EVENT_SEED only if integrity passes but an unforeseen semantic condition prevents the fixed residual association from being interpreted without changing the contract."
+  },
+  "stop_rules": [
+    "Commit and push this declaration before accessing any event-conditioned close value, reason, stressed R, stop association or verdict.",
+    "Run exactly one fixed in-memory aggregation over the calendar and six immutable files.",
+    "Do not run MT5, compile MQL, create a reusable analysis CLI, query broker/account state or touch Live.",
+    "Do not alter the two-hour window or add an event, event value, surprise, direction, session, strategy subset or alternate comparator.",
+    "Close the family after the one result and recompare Programs 1-5 and 7 before any retained seed or nearby external-event question."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_the_single_fixed_event_exposure_aggregation"
+}

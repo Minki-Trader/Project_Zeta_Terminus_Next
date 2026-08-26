@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0103`
+- Latest state ID: `STATE-0104`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: none; Program 4 Unit 040 is closed invalid before economic judgment and all nearby age/threshold rescues remain closed
+- Active research boundary: Program 2 Unit 041 `scheduled-us-macro-event-exposure-v1` is declaration-frozen before its sole event-conditioned outcome aggregation
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -461,6 +461,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Closed `INVALID_P1_ENVIRONMENT_AND_REAL_TICK_GENERATION_NO_ECONOMIC_VERDICT`. The other 15 runs, all candidate paths and every nearby time/threshold/strategy/symbol rescue remained unopened.
 - Result/closure SHA-256 values are `5379F39F96C118FBC92E96C3147526AEF71F1C81F706B05B55968684903C8DE2` / `962A11A069292951751F983D5D82BE70C49CB6E5B19178287A7054CA6578F18F`. Program 6 and Live remained untouched.
 
+## Open scheduled US macro release exposure Unit 041
+
+- Rotated from Program 4 into underrepresented Program 2 `외부시장·이벤트`. The one bundle contains only official scheduled FOMC policy statements, CPI releases and Employment Situation releases; no event value, surprise, revision, text, speech or adjacent release is used.
+- The tracked calendar has 128 events: FOMC 32 at verified 14:00 ET and CPI/Employment 48 each at official 08:30 ET. Exact US and European DST rules convert them into frozen FPMarkets server time, including mismatch weeks; calendar SHA-256 is `B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE`.
+- Outcome-free topology reconstructed all 2,233 lifecycles and found 85 positions held at release plus 134 native births in the first 120 minutes after release, all unique and spread across all four periods. Held exposure covers FOMC/CPI/Employment `13/39/33`; post-entry covers CPI/Employment `69/65` while FOMC is an exact structural zero.
+- The FOMC post-entry zero is not rescued with a wider window. The two fixed roles compare full-lifecycle stressed R and stop incidence only with globally unexposed lifecycles of the same strategy and fresh period; this is exploratory association and selects no filter, size, exit, order, EA or Live behavior.
+- A pass can retain at most one later event-time mark-path measurement question, never an action, and it cannot open automatically. Declaration SHA-256 is `8FABD941A14660C8CC5A580B0E98B9053D127EDB993E9B77E9C28F2D2DB60584`; all event-conditioned outcomes remain unopened until the declaration commit is pushed.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -472,6 +480,6 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Current verdict
 
-Latest research verdict: `ONE_HOUR_ADVERSE_EXIT_MANAGEMENT_040_CLOSED_INVALID_ENVIRONMENT_AND_REAL_TICK_GENERATION_NO_ECONOMIC_VERDICT`
+Latest research verdict: `SCHEDULED_US_MACRO_EVENT_EXPOSURE_041_DECLARATION_FROZEN_OUTCOMES_UNOPENED`
 
 `LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_REALIZED_VARIANCE_ASYMMETRY_RESPONSE_032_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_033_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; NATIVE_DIRECTION_ASYMMETRY_VALUE_034_CLOSED_NO_FIELD; SAME_STRATEGY_INTERBIRTH_GAP_VALUE_035_CLOSED_NO_FIELD; US500_CLOSE_LOCATION_PRESSURE_RESPONSE_036_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; STRATEGY_OCCUPANCY_SLOT_VALUE_037_CLOSED_NO_INFORMATION_NO_PRIORITY_PROXY; US500_ORDINAL_ACCELERATION_RESPONSE_038_CLOSED_NO_DIRECTION_NO_PROTOTYPE`
