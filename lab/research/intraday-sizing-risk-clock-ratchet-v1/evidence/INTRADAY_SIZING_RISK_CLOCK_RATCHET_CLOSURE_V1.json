@@ -1,0 +1,118 @@
+{
+  "schema": "zeta-next-intraday-sizing-risk-clock-ratchet-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_NO_MATERIAL_INTRADAY_CLOCK_RATCHET",
+  "unit": "intraday-sizing-risk-clock-ratchet-067",
+  "verdict": "NO_MATERIAL_INTRADAY_CLOCK_RATCHET_PRESERVE_DAILY_SIZING",
+  "evidence": {
+    "declaration_sha256": "C2B322591722D7F4DCED243FB5186B297201018F10CA273E2A46544C8B6BAC34",
+    "premetric_correction_sha256": "5D0740994466EE3911F0D0F292390080F57591C66EDF5062717E4BD08A7BF68B",
+    "result_sha256": "233179BCCF440E7A41F7727A5718E7F2CB704854858950565B46D99E9C49C628",
+    "result_bytes": 13643
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_invocations": 0,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_source_and_event_pins_passed": true,
+    "cp2_event_rows": 16477,
+    "cp2_exact_duplicate_rows": 0,
+    "cp2_matched_admissions": 2346,
+    "cp2_filled_closed": 2233,
+    "cp2_expired": 113,
+    "binding_event_rows": 4165,
+    "binding_exact_duplicate_rows": 0,
+    "binding_matched_admissions": 599,
+    "binding_unmatched_boundary_births": 1,
+    "binding_matched_filled_closed": 563,
+    "binding_matched_expired": 36,
+    "cp2_risk_capital_identity_share": 1.0,
+    "binding_risk_capital_identity_share": 1.0
+  },
+  "findings": {
+    "density": {
+      "cp2_later_decisions": 1340,
+      "cp2_negative_later": 481,
+      "cp2_nonnegative_later": 859,
+      "binding_later_decisions": 346,
+      "binding_negative_later": 119,
+      "binding_nonnegative_later": 227,
+      "passed": true
+    },
+    "risk_clock": {
+      "cp2_definite_equity_binding_share": 0.024626865671641792,
+      "binding_definite_equity_binding_share": 0.0,
+      "cp2_later_median_absolute_ratio_deviation": 0.0,
+      "binding_later_median_absolute_ratio_deviation": 0.0,
+      "cp2_negative_minus_nonnegative_median_ratio": 0.0,
+      "binding_negative_minus_nonnegative_median_ratio": 0.0,
+      "interpretation": "The per-admission capital identity is exact, but stressed balance binds almost every decision and is unchanged within the relevant same-day sequences. Negative floating state therefore does not create the proposed narrower later risk geometry."
+    },
+    "lot_clock": {
+      "cp2_market_later_eligible": 1102,
+      "cp2_divergent": 0,
+      "cp2_divergent_share": 0.0,
+      "binding_market_later_eligible": 294,
+      "binding_divergent": 4,
+      "binding_divergent_share": 0.013605442176870748,
+      "binding_current_above_hypothetical": 4,
+      "binding_current_below_hypothetical": 0,
+      "interpretation": "The compounded tail contains only four stale market-lot decisions, all with the current daily multiplier above the intraday hypothetical value. This is below both the frozen five-percent and ten-decision requirements."
+    },
+    "outcome_transmission": {
+      "cp2_negative_minus_nonnegative_mean_stressed_r": 0.006232380235725553,
+      "cp2_negative_minus_nonnegative_stop_rate": 0.00043290043290043767,
+      "binding_negative_minus_nonnegative_mean_stressed_r": 0.04422439365430311,
+      "binding_negative_minus_nonnegative_stop_rate": -0.005767761650114583,
+      "cp2_period_r_adverse_count": 0,
+      "cp2_period_stop_adverse_count": 0,
+      "largest_cp2_negative_filled_component_share": 0.4989429175475687,
+      "interpretation": "Later negative-floating decisions are not economically worse in either cohort; both stressed-R contrasts are favorable and the stop-rate contrasts are negligible or favorable. No CP2 period passes either adverse path."
+    }
+  },
+  "gates": {
+    "mechanism_passed": false,
+    "transmission_passed": false,
+    "only_density_and_integrity_passed": true
+  },
+  "decision_translation": {
+    "preserve": [
+      "once-per-server-day market-component lot multiplier",
+      "per-admission conservative risk-capital calculation",
+      "fixed Passive base-volume semantics",
+      "current same-day order sequence and all six components"
+    ],
+    "discard": [
+      "the claim that negative intraday floating state materially narrows later planned risk",
+      "the claim that daily lot state is materially stale inside the observed decision sequence",
+      "a clock-alignment, ordinal, floating-state, lot, risk or admission change from this evidence"
+    ],
+    "observation": "A rare one-sided daily-lot overshoot exists in four binding-tail market decisions, but it is too sparse and has no adverse transmission; it is not a retained seed.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "second-only or third-only entry policy",
+    "negative-state or positive-state selector",
+    "component, clock-time or period-specific ratchet",
+    "alternate day boundary, sizing interval or lot step",
+    "risk floor, stop width, priority, admission, EA or Live change"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_all_programs_and_heights_before_any_successor"
+}
