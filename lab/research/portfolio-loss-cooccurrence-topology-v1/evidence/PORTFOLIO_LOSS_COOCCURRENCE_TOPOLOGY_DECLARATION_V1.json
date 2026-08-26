@@ -1,0 +1,250 @@
+{
+  "schema": "zeta-next-portfolio-loss-cooccurrence-topology-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_054_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "portfolio-loss-cooccurrence-topology-054",
+  "family": "portfolio-loss-cooccurrence-topology-v1",
+  "title": "Portfolio Loss Co-occurrence Topology",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    }
+  },
+  "question": "Across the unchanged six-strategy shared portfolio, do negative 2x-cost stressed lifecycles co-occur on the same server birth date across multiple strategies and across both natural symbol books materially more often than a strategy-period marginal-independence benchmark?",
+  "hypothesis": "If losses are a broad common-state portfolio burden rather than isolated strategy variance, multi-strategy and cross-book loss days should occur materially above a benchmark that preserves each strategy-period active-day loss rate and each day's actual active strategy mask, with broad period support and material loss-dollar concentration.",
+  "why_now": "After Unit 053 closed, Programs 1-5 and 7 were compared again. Program 3's broad order-funnel proposal is structurally confounded because post-order nonfill exists only for Passive while pre-order refusal spans the portfolio. Program 2's official financial-stress candidate lacks a frozen historical-vintage availability boundary. Programs 1, 4 and 7 are recent. Program 5 has a dense, source-free, whole-portfolio question that is independent of lot, slot, allocation and Unit 050's maximum-drawdown episode analysis.",
+  "macro_recomparison": {
+    "program_1": "Unit 053 just closed on US500 range-break breadth. No adjacent signal, symbol, range, side, horizon or parameter question may open.",
+    "program_2": "A distinct official STLFSI4 financial-stress level was considered, but the current historical series can revise and the exact historical publication-vintage boundary is not yet frozen. It is not opened or replaced with an adjacent external series.",
+    "program_3": "A native order-path funnel was considered and rejected before allocation. Its post-order nonfill stage is structurally Passive-only while pre-order refusal spans market and Passive strategies, so stage and order-type identity cannot be separated. No Passive-only or wider funnel rescue opens.",
+    "program_4": "Unit 052 is the immediately prior held-position management allocation and no peer-exit or adjacent management successor may open.",
+    "program_5": "Selected for a whole-portfolio loss co-occurrence question after three intervening macro units. It changes no lot, slot, priority, admission, strategy membership or drawdown episode.",
+    "program_7": "Unit 051 is recent and already closed the whole-epoch attrition topology without a successor. Unit 054 is economic portfolio-risk topology, not another research-process audit.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not continue automatically into alternate day boundaries, rolling windows, loss thresholds, strategy pairs, symbols, books, regimes, allocation, lot, slot or risk-governor variants."
+  },
+  "rejected_predeclaration_proposal": {
+    "proposal": "native-order-path-throughput-funnel",
+    "proposed_macro_program": {
+      "id": 3,
+      "name": "order_time_session"
+    },
+    "outcome_free_topology": {
+      "native_signals": 2429,
+      "pre_order_refusals": 83,
+      "risk_admission_skips": 78,
+      "passive_price_skips": 5,
+      "post_order_passive_expirations": 113,
+      "lifecycle_starts": 2233
+    },
+    "reason": "All post-order nonfill observations are Passive limit orders while pre-order refusals span structurally different strategy and order paths. A portfolio-wide stage diagnosis would confound stage with order type and strategy identity.",
+    "unit_allocated": false,
+    "family_created": false,
+    "economic_outcomes_accessed": false,
+    "nearby_rescue": false
+  },
+  "research_bundle": {
+    "name": "same_birth_date_cross_strategy_and_cross_book_loss_cooccurrence",
+    "variants": [
+      {
+        "id": "MULTI_STRATEGY_LOSS_DAY_CLUSTER",
+        "definition": "A server birth date has at least two distinct active strategies and at least two distinct strategies with one or more negative stressed lifecycles born on that date.",
+        "benchmark": "The exact day's active strategy mask under independent strategy-day loss Bernoulli states using same-strategy, same-period marginal active-day loss probabilities."
+      },
+      {
+        "id": "CROSS_BOOK_LOSS_DAY_CLUSTER",
+        "definition": "A server birth date has at least one active US30 strategy and one active US100 strategy, and at least one losing strategy in each natural book.",
+        "benchmark": "The exact day's active strategy mask under the same independent strategy-day loss Bernoulli states, aggregated to at-least-one-loss in each book."
+      }
+    ],
+    "natural_books": {
+      "US30": ["RC16", "RC4", "Pressure", "Return"],
+      "US100": ["Cross", "Passive"]
+    },
+    "single_bundle": true,
+    "parameter_grid": false,
+    "calendar_or_session_variant": false,
+    "strategy_pair_search": false,
+    "portfolio_action_inside_unit": false
+  },
+  "distinction_from_closed_work": {
+    "entry_time_crowding_017": "Unit 017 classified one new lifecycle by incumbent count at its birth. Unit 054 aggregates completed loss states by natural birth date and compares co-occurrence with an explicit marginal-independence benchmark; it does not condition a candidate entry or inspect incumbents.",
+    "same_strategy_outcome_memory_023": "Unit 023 used the immediately prior same-strategy outcome to condition the next lifecycle. Unit 054 has no sequential memory and asks only whether contemporaneous daily losses cluster across distinct strategies and books.",
+    "closed_drawdown_state_026": "Unit 026 conditioned births on causal prior closed drawdown. Unit 054 does not use prior drawdown, peaks or a response field.",
+    "portfolio_cost_resilience_039_and_allocation_044": "Those units studied cost multiples and deposit-funded volume. Unit 054 uses the already-fixed 2x stressed ledger at unchanged 0.01 births and selects no size or capital policy.",
+    "natural_book_drawdown_complementarity_050": "Unit 050 measured counterbook P/L during each book's single native maximum closed-drawdown episode. Unit 054 uses every server birth date, no drawdown episode, no continuous equity path and a marginal-independence co-occurrence benchmark."
+  },
+  "causal_limit": "The benchmark preserves period-specific marginal loss rates and actual active masks but does not prove a latent common cause. Same-day co-occurrence may reflect shared markets, correlated signals or portfolio path dependence. A pass is a consumed-data risk diagnosis only and selects no hedge, suppression, lot, slot, entry, exit or governor.",
+  "boundary": {
+    "family_root": "lab/research/portfolio-loss-cooccurrence-topology-v1/",
+    "source_free_mql": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_portfolio_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ]
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": {"strategy": "RC16", "book": "US30"},
+    "ZT-M30-US30-RANGE-COMP-64efb16616": {"strategy": "RC4", "book": "US30"},
+    "ZT-H1-US100-CROSS-IN-14b72317b7": {"strategy": "Cross", "book": "US100"},
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": {"strategy": "Pressure", "book": "US30"},
+    "ZT-H1-US30-RETURN-I-c870a788ec": {"strategy": "Return", "book": "US30"},
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": {"strategy": "Passive", "book": "US100"}
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only exact component identity, OPEN/PASSIVE_FILL event type and server_time were used. No CLOSE/EXTERNAL_CLOSE row, value_b, loss sign, planned risk, loss rate, independence expectation, severity, effect, gate or verdict was accessed.",
+    "births": 2233,
+    "duplicate_birth_keys": 0,
+    "server_birth_dates": 1000,
+    "multi_strategy_eligible_dates": 766,
+    "cross_book_eligible_dates": 550,
+    "period_topology": {
+      "P1_2022H2_2023": {"births": 769, "birth_dates": 345, "multi_strategy_eligible_dates": 265, "cross_book_eligible_dates": 193, "maximum_distinct_strategies": 4, "maximum_births_on_one_date": 5},
+      "P2_2024": {"births": 554, "birth_dates": 248, "multi_strategy_eligible_dates": 183, "cross_book_eligible_dates": 133, "maximum_distinct_strategies": 4, "maximum_births_on_one_date": 5},
+      "P3_2025": {"births": 554, "birth_dates": 247, "multi_strategy_eligible_dates": 196, "cross_book_eligible_dates": 134, "maximum_distinct_strategies": 4, "maximum_births_on_one_date": 5},
+      "P4_2026_YTD": {"births": 356, "birth_dates": 160, "multi_strategy_eligible_dates": 122, "cross_book_eligible_dates": 90, "maximum_distinct_strategies": 5, "maximum_births_on_one_date": 5}
+    },
+    "strategy_days": 2164,
+    "strategy_days_with_multiple_births": 65,
+    "multiple_birth_strategy": "Passive",
+    "maximum_births_per_strategy_date": 3,
+    "eligible": true
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row; state_sequence is not an event primary key.",
+    "exact_component_selection": "Use only the six complete component_id keys in strategy_identity. Prefix, suffix, substring, wildcard and inferred-family selectors are prohibited.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned risk from detail.",
+    "passive_pending": "PASSIVE_PLACE stores positive planned risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL begins Passive with the active placement risk.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the lifecycle; value_b is the fixed 2x-cost stressed net USD and EXTERNAL_CLOSE is the stop indicator.",
+    "loss": "A lifecycle is negative only when finite close value_b is strictly below zero. Exact zero is nonnegative.",
+    "birth_date_bucket": "Assign every lifecycle permanently to the yyyy-MM-dd server date of its OPEN or PASSIVE_FILL. Close date, weekday, session, holding age and rollover are ignored.",
+    "strategy_date_state": "For each strategy and birth date, active means at least one lifecycle was born; losing means at least one such lifecycle has negative stressed net. Sum absolute negative stressed dollars across all losing lifecycles for severity.",
+    "marginal_probability": "For each of 24 strategy x period cells, p(strategy loss | strategy active date) equals losing active strategy-dates divided by all active strategy-dates in that cell.",
+    "multi_strategy_expected_probability": "For each date with active strategy set A, expected P(at least two losing strategies) is 1 minus product(1-p_s) minus sum over s of p_s times product over j not equal s of (1-p_j). Sum date probabilities within period and pooled.",
+    "cross_book_expected_probability": "For each date with both books active, expected P(at least one US30 loss and at least one US100 loss) is [1-product over active US30 strategies(1-p_s)] times [1-product over active US100 strategies(1-p_s)]. Sum date probabilities within period and pooled."
+  },
+  "fixed_metrics": {
+    "context": "Report active dates, active strategy masks, strategy-period marginal active-day loss probabilities, negative lifecycle counts and total absolute negative stressed dollars.",
+    "variant_incidence": "For each variant report eligible dates, observed dates, expected dates, observed/expected ratio, observed-minus-expected excess and the four period values.",
+    "variant_severity": "Report the share of all portfolio absolute negative stressed dollars that belongs to variant dates, period shares and the largest single-date share of variant loss dollars.",
+    "contribution": "Report each period's positive excess-date contribution and each natural book's negative-dollar contribution for context; these do not create subvariants."
+  },
+  "fixed_integrity_gate": [
+    "All six files retain their listed bytes and hashes and contain 16,477 rows with zero exact duplicate full rows.",
+    "Reconstruct exactly 2,233 lifecycles with strategy totals 272/206/805/118/238/594, 407.0477 USD stressed net and 206 stop exits with zero overlap, pending, risk or close fault.",
+    "Reproduce exactly 2,233 births, 1,000 server birth dates, 766 multi-strategy eligible dates, 550 cross-book eligible dates, the four frozen period topology rows and 2,164 strategy-dates.",
+    "Every lifecycle receives exactly one finite close, strategy, book, period and birth-date bucket; every one of the 24 strategy-period marginal cells is finite.",
+    "Every expected date probability is finite and within [0,1]; pooled expected counts equal the sum of the four period expected counts."
+  ],
+  "fixed_variant_gates": {
+    "MULTI_STRATEGY_LOSS_DAY_CLUSTER": [
+      "At least 20 observed variant dates pooled and at least 3 in every period.",
+      "Pooled observed/expected incidence ratio is at least 1.25 and pooled observed-minus-expected excess is at least 10 dates.",
+      "Observed/expected incidence ratio is at least 1.00 in at least three of four periods.",
+      "Variant dates contain at least 40% of all portfolio absolute negative stressed dollars.",
+      "No one variant date contributes more than 15% of variant absolute negative stressed dollars."
+    ],
+    "CROSS_BOOK_LOSS_DAY_CLUSTER": [
+      "At least 10 observed variant dates pooled and at least 2 in every period.",
+      "Pooled observed/expected incidence ratio is at least 1.25 and pooled observed-minus-expected excess is at least 5 dates.",
+      "Observed/expected incidence ratio is at least 1.00 in at least three of four periods.",
+      "Variant dates contain at least 20% of all portfolio absolute negative stressed dollars.",
+      "No one variant date contributes more than 20% of variant absolute negative stressed dollars."
+    ],
+    "zero_expected_rule": "If expected incidence is zero while observed is positive, the ratio is positive infinity for reporting but integrity remains valid only if all contributing marginal probabilities and date masks are valid. If both are zero the variant fails density and ratio is null.",
+    "pass_rule": "A variant passes only if every listed density, incidence, breadth, severity and concentration requirement passes."
+  },
+  "fixed_bundle_gate": {
+    "both_pass": "PASS_CROSS_STRATEGY_AND_CROSS_BOOK_LOSS_COOCCURRENCE_DIAGNOSIS",
+    "multi_strategy_only": "PASS_MULTI_STRATEGY_LOSS_COOCCURRENCE_ONLY_NO_AUTOMATIC_SUCCESSOR",
+    "cross_book_only": "PASS_CROSS_BOOK_LOSS_COOCCURRENCE_ONLY_NO_AUTOMATIC_SUCCESSOR",
+    "neither": "NO_PORTFOLIO_LOSS_COOCCURRENCE_CLUSTER_PASSED",
+    "invalid": "INVALID_LOSS_COOCCURRENCE_OR_LIFECYCLE_RECONSTRUCTION_NO_RISK_VERDICT",
+    "authority_limit": "Consumed-data portfolio-risk diagnosis only. It selects no loss filter, hedge, strategy removal, entry, exit, lot, slot, priority, admission, capital rule, EA or Live behavior.",
+    "retained_question_rule": "If at least one variant passes, retain at most one independently named whole-portfolio risk-response observation question chosen by larger pooled observed/expected ratio, then larger loss-dollar share. It cannot open automatically."
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before reading close value_b, classifying a loss, estimating a marginal loss probability or calculating observed/expected incidence, severity, gates or verdict.",
+    "Run exactly one fixed in-memory aggregation over the six frozen files with complete component identities and server birth-date buckets.",
+    "Do not add close-date, New York date, weekday, session, rolling-window, loss-threshold, stop-only, strategy pair, strategy subset, direction, symbol, book, regime, duration, drawdown or outcome-memory variants.",
+    "Do not turn a diagnosis into allocation, hedging, suppression, lot, slot, priority, admission, entry, exit, EA or Live behavior inside Unit 054.",
+    "Do not modify MQL, compile, run MetaTrader, inspect Program 6, retain a CLI, query broker/account state or touch Live.",
+    "Close after one result and return to whole-map comparison without adjacent Program 5 loss-day, allocation or risk-governor work."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_portfolio_loss_cooccurrence_aggregation"
+}

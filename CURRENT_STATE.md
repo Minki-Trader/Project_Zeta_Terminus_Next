@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0131`
+- Latest state ID: `STATE-0132`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: none; Program 1 Unit 053 `us500-monthly-range-break-response-v1` is closed on P1 breakout-side density before any book economics, with no retained question or candidate
+- Active research boundary: Program 5 Unit 054 `portfolio-loss-cooccurrence-topology-v1` declaration is frozen with all loss outcomes unopened; one source-free aggregation is allowed only after the declaration boundary is committed and pushed
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -627,6 +627,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Outcome-free density was H1/H2 `10/12`, upper/lower break `18/4`. Total and both-half gates passed, but lower breaks missed the fixed minimum five by one, so the P1 density contract failed before continuation or reversion economic columns were accessed.
 - Closed `NO_US500_MONTHLY_RANGE_BREAK_DIRECTION_PASSED`. This is not an economic rejection of either book. P2, one-side rescue, alternate lookback/horizon/buffer, session/symbol/subgroup, prototype, stop, lot, slot, EA and Live behavior remained unopened.
 - Result/closure SHA-256 values are `C5F12CDEAFF4CA30F73EC162167C7CFD671E43B2DB10311A9A3B637E5ECBC7D8` / `C022EF748556D4D8019CC7A5B138098DB843149EA88E6DF2ED9CBFD91FC6E240`. Programs 1-5 and 7 must be compared again without adjacent US500 range-break parameter work; Program 6 and Live remained untouched.
+
+## Open portfolio loss co-occurrence topology Unit 054
+
+- Recompared Programs 1-5 and 7 after Unit 053. A Program 3 native order-funnel proposal was rejected before allocation because all post-order nonfill belongs to Passive while pre-order refusal spans structurally different portfolio order paths; no Passive-only or wider-stage rescue may open.
+- A distinct Program 2 official STLFSI4 financial-stress proposal was not opened because a causal historical-vintage and publication-availability boundary is not yet frozen. Programs 1, 4 and 7 are recent, so selected only Program 5 `포트폴리오·자본·위험` for one whole-portfolio question independent of lot, slot, allocation and Unit 050's maximum-drawdown episodes.
+- The single bundle asks whether negative 2x-cost stressed lifecycles born on the same server date co-occur across multiple strategies and across both natural books materially above a benchmark that preserves each strategy-period marginal active-day loss rate and every date's actual active strategy mask.
+- Outcome-free birth topology reconstructed all 2,233 births with zero duplicate key: 1,000 server birth dates, 766 multi-strategy eligible dates and 550 cross-book eligible dates. Period eligible counts are multi-strategy `265/183/196/122` and cross-book `193/133/134/90`; no close row, loss sign, marginal loss rate, expected count, severity or verdict was accessed.
+- Declaration SHA-256 is `CE7894BD149D98753B10FD4E0C1D8CED8252587F6755B9B5BFF38F39E33F603C`. It permits exactly one fixed source-free aggregation after commit/push and selects no hedge, suppression, entry, exit, lot, slot, priority, admission, capital rule, EA or Live behavior. Program 6 and Live remain untouched.
 
 ## Required completion evidence
 
