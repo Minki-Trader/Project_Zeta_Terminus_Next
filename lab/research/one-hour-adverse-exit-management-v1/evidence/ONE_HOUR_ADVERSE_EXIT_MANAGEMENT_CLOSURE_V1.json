@@ -1,0 +1,52 @@
+{
+  "schema": "zeta-next-one-hour-adverse-exit-management-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_INVALID_NO_ECONOMIC_VERDICT",
+  "unit": "one-hour-adverse-exit-management-040",
+  "family": "one-hour-adverse-exit-management-v1",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit",
+    "korean_name": "포지션 관리·청산"
+  },
+  "evidence": {
+    "declaration_sha256": "0FD749028D0D0B22D51C1B85D1B22262F6EE194D3CB60A7E0961C0BAABE11D7B",
+    "compile_receipt_sha256": "E27427F2DBC63D641CB75BB33F60F290F47302326C106A698A88EC1E17050604",
+    "result_sha256": "5379F39F96C118FBC92E96C3147526AEF71F1C81F706B05B55968684903C8DE2",
+    "source_manifest_sha256": "D1B77BE1505FF3AE4A2B6038DF504FB9CF227ECBDE86118312CBA01F702E4919",
+    "config_manifest_sha256": "72299FF2DF1305A566E17C210757D13038C5F51B250DF29E9129B6E6717690D8",
+    "binary_sha256": "C0AAA5739E8B180EA9E03A580CDA16C80996AE9BDA4C2E343ABF344AF971B8C9"
+  },
+  "execution": {
+    "declared_runs": 16,
+    "completed_runs": 1,
+    "unopened_runs": 15,
+    "completed_path": "P1_2022H2_2023 CONTROL",
+    "economic_results_used": 0,
+    "candidate_paths_opened": 0
+  },
+  "closure_reason": [
+    "P1 HTML displayed 100% real ticks but the detailed agent log explicitly recorded every-tick generation fallback for required US30 and US100.",
+    "Both frozen market manifests and both symbols database hashes changed during the first run.",
+    "Observed US30 and US100 swap values did not match the predeclared already-consumed visible contract anchor.",
+    "The declaration permits no environment-sync preflight, rebuild, repaired P1 or replacement matrix after any such mutation."
+  ],
+  "verdict": "INVALID_P1_ENVIRONMENT_AND_REAL_TICK_GENERATION_NO_ECONOMIC_VERDICT",
+  "economic_judgment": null,
+  "selected_threshold": null,
+  "retained_candidate_question": null,
+  "frozen_family": true,
+  "successor": {
+    "opened": false,
+    "nearby_age_threshold_strategy_symbol_or_session_rescue": false,
+    "same_program_followup_default": "ROTATE_AWAY_FROM_PROGRAM_4"
+  },
+  "unit_039_rc16_incremental_lot_seed": {
+    "consumed": false,
+    "opened": false
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "promotion": "NONE",
+  "next": "commit_and_push_the_invalid_closure_then_recompare_macro_programs_1_to_5_and_7_before_opening_one_new_serial_unit_outside_program_4"
+}

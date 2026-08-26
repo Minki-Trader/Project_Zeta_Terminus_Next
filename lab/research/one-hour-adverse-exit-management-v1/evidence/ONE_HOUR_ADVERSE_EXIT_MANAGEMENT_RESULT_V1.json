@@ -1,0 +1,190 @@
+{
+  "schema": "zeta-next-one-hour-adverse-exit-management-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "COMPLETE_INVALID_BEFORE_ECONOMIC_JUDGMENT",
+  "unit": "one-hour-adverse-exit-management-040",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit",
+    "korean_name": "포지션 관리·청산"
+  },
+  "frozen_inputs": {
+    "declaration_sha256": "0FD749028D0D0B22D51C1B85D1B22262F6EE194D3CB60A7E0961C0BAABE11D7B",
+    "compile_receipt_sha256": "E27427F2DBC63D641CB75BB33F60F290F47302326C106A698A88EC1E17050604",
+    "source_manifest_sha256": "D1B77BE1505FF3AE4A2B6038DF504FB9CF227ECBDE86118312CBA01F702E4919",
+    "config_manifest_sha256": "72299FF2DF1305A566E17C210757D13038C5F51B250DF29E9129B6E6717690D8",
+    "binary_sha256": "C0AAA5739E8B180EA9E03A580CDA16C80996AE9BDA4C2E343ABF344AF971B8C9",
+    "execution_commit": "42c9b70253452f44d4a64126bcfc04461ebae8af"
+  },
+  "execution": {
+    "platform": "MetaTrader 5 strategy tester build 6140",
+    "model": "Model=4 / real ticks",
+    "serial_only": true,
+    "declared_runs": 16,
+    "completed_runs": 1,
+    "unopened_runs": 15,
+    "completed_path": {
+      "period": "P1_2022H2_2023",
+      "path": "CONTROL",
+      "configuration": "tester-oaem40-p1-2022h2-2023-control.ini",
+      "process_exit_code": 0,
+      "wall_time": "00:07:33.6678922",
+      "normal_stop_rows": 1,
+      "html_100_percent_real_ticks_rows": 1
+    },
+    "control_experiment_counters": {
+      "evaluations": 0,
+      "triggers": 0,
+      "successes": 0,
+      "close_failures": 0,
+      "data_faults": 0,
+      "contract_satisfied": true
+    },
+    "remaining_paths_disposition": "UNOPENED_BY_PREDECLARED_INTEGRITY_STOP"
+  },
+  "integrity": {
+    "html_label": {
+      "value": "100% 실제 틱",
+      "passed_label_only": true,
+      "sufficient_for_unit": false
+    },
+    "detailed_generation": {
+      "passed": false,
+      "matching_warning_lines": 65,
+      "aggregate_every_tick_generation_used": {
+        "US30": {
+          "absent_minutes": 878,
+          "discarded_minutes": 462,
+          "total_minute_bars": 501132
+        },
+        "US100": {
+          "absent_minutes": 1920,
+          "discarded_minutes": 484,
+          "total_minute_bars": 501264
+        },
+        "US500_descriptive_outside_frozen_market_manifest": {
+          "absent_minutes": 155,
+          "discarded_minutes": 441,
+          "total_minute_bars": 501310
+        }
+      },
+      "interpretation": "The detailed agent log explicitly states every tick generation used for required US30 and US100. This independently fails the frozen zero-generation-fallback gate even though the HTML label says 100%."
+    },
+    "market_manifest_mutation": {
+      "passed": false,
+      "bases_before": {
+        "files": 131,
+        "bytes": 2515996622,
+        "sha256": "B35D945018EB97CA4CBA03FCBCF95CE3C6B6CE8E4674D60C1CFA16A7809497DB"
+      },
+      "bases_after": {
+        "files": 131,
+        "bytes": 2517146793,
+        "sha256": "2364F40E0CC84D98DBA52B7D67A50DB71FB7D761D5222A7368636D851D5DAE37"
+      },
+      "tester_bases_before": {
+        "files": 110,
+        "bytes": 2116195329,
+        "sha256": "B0C5439E628C20C250BB1D884843E19DAA410608500F1A31BF440E2C47D25C2F"
+      },
+      "tester_bases_after": {
+        "files": 110,
+        "bytes": 2116195329,
+        "sha256": "A0232CB18CB86EDECA95D54CF3951ED7DD0059C5263E0D6065F31EBA708FED18"
+      },
+      "changed_file_count": 16,
+      "changed_file_scope": "Two Bases symbol files, current US30/US100 history/tick/cache files and six Tester-bases US30/US100 2021-2023 HCS files.",
+      "interpretation": "The declaration forbids an environment-sync preflight or rebuild. Any mutation invalidates the unread remainder, so this independently stops the matrix."
+    },
+    "symbol_database_mutation": {
+      "passed": false,
+      "selected_before_sha256": "3C49F3018721D66BECFFBDA9C24EFFBB3B3A56EB9E4356458B321BD5DD93D64F",
+      "selected_after_sha256": "6C3A614EAA2AAB1833E811034A4EAC5EF65DED2029B1FF6D6837ACC2C7514AD6",
+      "symbols_before_sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71",
+      "symbols_after_sha256": "188EC5EFACD89B08469ECF28F11A783439910D250F04E0D9016665DCBC388BE7",
+      "bytes_unchanged": true,
+      "preserved_after_root": "lab/artifacts/ea-files/one-hour-adverse-exit-management-v1/p1-control/environment-after/"
+    },
+    "visible_contract_anchor": {
+      "passed": false,
+      "rows": 4,
+      "required_static_common_fields_start_end_equal": true,
+      "dynamic_spread_points_excluded_from_static_equality": true,
+      "anchor_vs_observed": {
+        "US30": {
+          "required_swap_long_short": "0.15/-4.65",
+          "observed_swap_long_short": "-7.84/3.32"
+        },
+        "US100": {
+          "required_swap_long_short": "-4.31/1.81",
+          "observed_swap_long_short": "-4.27/1.79"
+        }
+      },
+      "interpretation": "Both symbols retain contract size 1, tick size 0.01, minimum/step volume 0.01, zero stop/freeze levels, swap mode 2 and rollover day 5, but the frozen financing anchor does not match."
+    },
+    "frozen_code": {
+      "source_config_binary_unchanged": true,
+      "runtime_binary_sha256": "C0AAA5739E8B180EA9E03A580CDA16C80996AE9BDA4C2E343ABF344AF971B8C9"
+    },
+    "operational": {
+      "normal_stop": true,
+      "control_experimental_counters_zero": true,
+      "operational_faults_observed": false,
+      "does_not_override_environment_failure": true
+    }
+  },
+  "economic_boundary": {
+    "economic_summary_authorized": false,
+    "candidate_comparison_authorized": false,
+    "threshold_selection_authorized": false,
+    "disclosure": "A broad integrity regex searching for the word mismatch also surfaced one final portfolio summary line because it contained broker_mismatch=false. Its economic values are intentionally not transcribed, aggregated, compared or used in this result.",
+    "reason": "Integrity failed independently before economic reading through detailed generation fallback, frozen market/symbol mutation and financing-anchor mismatch.",
+    "control_reconciliation_claim": false,
+    "candidate_economic_verdict": null
+  },
+  "preserved_artifacts": {
+    "reports": {
+      "root": "lab/artifacts/backtests/one-hour-adverse-exit-management-v1/p1-control/",
+      "files": 5,
+      "bytes": 1647399,
+      "sha256": "507C2C0687D559675CA4215E723604AB97031FDFA11A0E27D79FF81F1BA0CF78",
+      "html_sha256": "261499196078C7AF42BD944037B62E5C52C00848D3D119CA41E52E95BE2B60DF"
+    },
+    "ea_and_environment": {
+      "root": "lab/artifacts/ea-files/one-hour-adverse-exit-management-v1/p1-control/",
+      "files": 12,
+      "bytes": 2792825,
+      "sha256": "4CFCFC45ABEF7AF17F35F8E1FBEDF5402A239DCFB11520C4FF5FABDF59E4D5D6"
+    },
+    "logs": {
+      "root": "lab/artifacts/logs/one-hour-adverse-exit-management-v1/p1-control/",
+      "files": 3,
+      "bytes": 4541984,
+      "sha256": "B5093060CA252936E60F5734BB3FD5F4A2DDE303528E19A66669AEBCECCE969A",
+      "agent_sha256": "6B10D788BF1DB69417FA2E55BC8AE32B893DA784285D93F19A43036AB4D5D271",
+      "tester_sha256": "BD6D114550121DB10972C5D2EB6B19CF4D1014428A2EAC25F481CCC36BB2DE56",
+      "terminal_sha256": "EEA65BA97FA2EABE635909A03E8BCA48C652329E41014AABF68B1EEDF245F3F6"
+    }
+  },
+  "gate_application": {
+    "html_100_percent": true,
+    "zero_detailed_generation_warning": false,
+    "market_manifests_unchanged": false,
+    "symbol_database_unchanged": false,
+    "visible_contract_anchor_match": false,
+    "source_config_binary_unchanged": true,
+    "economic_gate_opened": false,
+    "remaining_matrix_opened": false
+  },
+  "selection": {
+    "selected_threshold": null,
+    "retained_candidate_question": null,
+    "verdict": "INVALID_P1_ENVIRONMENT_AND_REAL_TICK_GENERATION_NO_ECONOMIC_VERDICT",
+    "nearby_age_or_threshold_rescue": false,
+    "seventeenth_or_replacement_path": false,
+    "live_change_or_promotion_authorized": false
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_commit_and_push_then_recompare_macro_programs_1_to_5_and_7_and_rotate_away_from_program_4"
+}

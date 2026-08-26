@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0101`
+- Latest state ID: `STATE-0102`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: Program 4 Unit 040 `one-hour-adverse-exit-management-v1`; source/config/binary/dedicated runtime frozen, all 16 outcomes unopened
+- Active research boundary: none; Program 4 Unit 040 is closed invalid before economic judgment and all nearby age/threshold rescues remain closed
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -450,6 +450,16 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Git-ignored `lab/runtime/oaem40-portable/` is a physical Lab-only copy with zero actual junction/symlink, zero other-family EX5, differing sampled file IDs and one hardlink path per sample. US30/US100 Bases and Tester-bases manifests are `B35D945018EB97CA4CBA03FCBCF95CE3C6B6CE8E4674D60C1CFA16A7809497DB` / `B0C5439E628C20C250BB1D884843E19DAA410608500F1A31BF440E2C47D25C2F`.
 - Compile/runtime receipt SHA-256 is `E27427F2DBC63D641CB75BB33F60F290F47302326C106A698A88EC1E17050604`. No Tester invocation or outcome has occurred; source/config/binary/runtime now freeze before the first control path.
 
+## Closed one-hour adverse position-state exit Unit 040
+
+- Opened only the first declared path, P1 2022H2-2023 CONTROL. It stopped normally after `00:07:33.6678922`, produced one `100% 실제 틱` HTML label and kept all Unit 040 control counters at zero.
+- Detailed agent telemetry independently invalidated the path before economics: required US30 used generated ticks for 878 absent and 462 discarded minutes, while US100 used generated ticks for 1,920 absent and 484 discarded minutes.
+- The frozen Bases manifest changed from `B35D9450...` to `2364F40E...`; Tester-bases changed from `B0C5439E...` to `A0232CB1...`. Both symbols files changed, together with current history/tick caches and six Tester HCS files.
+- The visible financing anchor also failed: US30 moved from required `0.15/-4.65` long/short swap to `-7.84/3.32`, and US100 from `-4.31/1.81` to `-4.27/1.79`. Static contract size, tick size, volume and stop/freeze fields stayed structurally compatible but cannot rescue the failed frozen environment.
+- A broad integrity regex exposed one final summary line because it contained `broker_mismatch=false`; those economic values were not transcribed, aggregated or used. No control reconciliation, candidate comparison or threshold judgment is authorized.
+- Closed `INVALID_P1_ENVIRONMENT_AND_REAL_TICK_GENERATION_NO_ECONOMIC_VERDICT`. The other 15 runs, all candidate paths and every nearby time/threshold/strategy/symbol rescue remained unopened.
+- Result/closure SHA-256 values are `5379F39F96C118FBC92E96C3147526AEF71F1C81F706B05B55968684903C8DE2` / `962A11A069292951751F983D5D82BE70C49CB6E5B19178287A7054CA6578F18F`. Program 6 and Live remained untouched.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -461,6 +471,6 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Current verdict
 
-Latest research verdict: `ONE_HOUR_ADVERSE_EXIT_MANAGEMENT_040_COMPILED_MATRIX_FROZEN_OUTCOMES_UNOPENED`
+Latest research verdict: `ONE_HOUR_ADVERSE_EXIT_MANAGEMENT_040_CLOSED_INVALID_ENVIRONMENT_AND_REAL_TICK_GENERATION_NO_ECONOMIC_VERDICT`
 
 `LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_REALIZED_VARIANCE_ASYMMETRY_RESPONSE_032_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_033_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; NATIVE_DIRECTION_ASYMMETRY_VALUE_034_CLOSED_NO_FIELD; SAME_STRATEGY_INTERBIRTH_GAP_VALUE_035_CLOSED_NO_FIELD; US500_CLOSE_LOCATION_PRESSURE_RESPONSE_036_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; STRATEGY_OCCUPANCY_SLOT_VALUE_037_CLOSED_NO_INFORMATION_NO_PRIORITY_PROXY; US500_ORDINAL_ACCELERATION_RESPONSE_038_CLOSED_NO_DIRECTION_NO_PROTOTYPE`

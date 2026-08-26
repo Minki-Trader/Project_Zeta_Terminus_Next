@@ -49,7 +49,7 @@
 - `research/strategy-occupancy-slot-value-v1/`: 닫힌 Unit 037 source-free family; 선행 슬롯가치 순위 상관 `-0.257/-0.257/+0.143`, 단순 R 대비 증분 중앙값 `-0.114`로 우선순위 Proxy 없음
 - `research/us500-ordinal-acceleration-response-v1/`: 닫힌 Unit 038 fresh observer family; 정렬 P1 `100% 실제 틱`·739건 빈도 통과, double-spread continuation/reversion `-$12.81/-$7.86`로 방향·prototype 없음
 - `research/portfolio-cost-resilience-envelope-v1/`: 닫힌 Program 5 / Unit 039 source-free family; 전체 포트폴리오는 4x에도 `+$332.7631`, RC16·RC4·Cross가 고정 관문 통과, RC16 추가-lot Proxy seed 하나만 보존하되 자동 후속은 열지 않음
-- `research/one-hour-adverse-exit-management-v1/`: 열린 Program 4 / Unit 040 family; 1시간 경과 독립 포지션의 실행가능 mark를 `0.00R/-0.25R/-0.50R` 고정 묶음으로만 평가, source/config/EX5/전용 runtime 동결·16결과 미개봉
+- `research/one-hour-adverse-exit-management-v1/`: 닫힌 Program 4 / Unit 040 family; P1 control HTML은 100%였으나 상세 tick 생성대체·시장/심볼 지문 변이·swap anchor 불일치로 경제판정 전 무효, 나머지 15경로·후보 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
