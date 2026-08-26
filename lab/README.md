@@ -70,7 +70,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/portfolio-loss-cooccurrence-topology-v1/`: 닫힌 Program 5 / Unit 054 source-free family; 다전략 손실일 `1.0226x`, 양 자연책 손실일 `1.0554x` 독립기대 발생으로 둘 다 `1.25x` 관문 미달, 공통손실 대응·배분·lot·slot 후속 없음
 - `research/macro-context-composition-confounding-v1/`: 닫힌 Program 7 / Unit 055 source-free family; 12개 맥락 대비의 R 보정은 전부 `0.05R` 미만, stop 민감 4건도 Units 041/052·Programs 2/4에 집중되어 광범위 구성혼재 진단 실패, 인접 estimator·weighting·meta 후속 없음
 - `research/intraday-portfolio-entry-handoff-v1/`: 닫힌 Program 3 / meso Unit 056 source-free family; incumbent 진입은 `+0.02331R/+0.01179 stop`, 자연청산 완전-flat 뒤 재진입은 `-0.00221R/+0.04228 stop`으로 크기·일관성 관문 실패, density 보조값 오류는 정확한 기출력 count로 공개 정정했고 재집계·인접 timing 후속 없음
-- `research/first-peer-profit-memory-checkpoint-v1/`: 열린 Program 4 / micro Unit 057 source-free family; 첫 peer 자연청산 때 대상 포지션이 이익을 유지한 `60`건과 이전 이익을 전부 반납한 `61`건의 엄격 checkpoint가 선언 동결되었고 연결 CLOSE 결과는 아직 미개봉
+- `research/first-peer-profit-memory-checkpoint-v1/`: 닫힌 Program 4 / micro Unit 057 source-free family; 첫 peer 자연청산 때 이익 유지 상태는 최종 `+0.36149R/-0.10313 stop`로 넓게 좋았지만 이후 잔여경로는 `+0.02200R`뿐이라 현재 가치 표식으로만 판정, 관리·확대관찰·인접 후속 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

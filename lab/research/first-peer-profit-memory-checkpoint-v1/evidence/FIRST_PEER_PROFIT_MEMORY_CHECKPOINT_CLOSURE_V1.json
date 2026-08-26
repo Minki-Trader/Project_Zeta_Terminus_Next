@@ -1,0 +1,113 @@
+{
+  "schema": "zeta-next-first-peer-profit-memory-checkpoint-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "first-peer-profit-memory-checkpoint-057",
+  "family": "first-peer-profit-memory-checkpoint-v1",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit",
+    "korean_name": "포지션 관리·청산"
+  },
+  "research_height": {
+    "primary": "micro",
+    "supporting": "meso"
+  },
+  "hashes": {
+    "declaration_sha256": "817DEFD86B37949C1101932970219174ADF0A2688243010B59954F68F5981678",
+    "result_sha256": "C182CA8C12B50A52F89D48282DB9751790E2F38739D4E4A3EFA8424AC027DFDA",
+    "lifecycle_ledger_sha256": "01EA88857947DF0C71557257179775A7D99F14C33CD262036EFEF6A24D755CEC"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_post_declaration_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "same_unit_metric_reruns": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "ledger_rows": 841,
+    "birth_rows": 356,
+    "close_rows": 356,
+    "first_peer_rows": 129,
+    "same_time_context_rows": 3,
+    "strict_checkpoint_rows": 126,
+    "strict_roles": {
+      "PROFIT_STILL_HELD": 61,
+      "PRIOR_PROFIT_GIVEN_BACK": 64,
+      "NEVER_POSITIVE": 1
+    },
+    "eligible_treatment": 60,
+    "eligible_comparator": 61,
+    "minimum_strategy_role_cell": 3,
+    "minimum_symbol_role_cell": 27,
+    "faults": 0
+  },
+  "finding": {
+    "eligible_raw_outcomes": {
+      "PROFIT_STILL_HELD": {
+        "n": 60,
+        "mean_final_stressed_r": 0.284469003117,
+        "stop_rate": 0.033333333333,
+        "positive_rate": 0.783333333333,
+        "mean_remaining_stressed_r": 0.068546131752,
+        "post_checkpoint_new_high_rate": 0.700000000000
+      },
+      "PRIOR_PROFIT_GIVEN_BACK": {
+        "n": 61,
+        "mean_final_stressed_r": -0.075973513106,
+        "stop_rate": 0.114754098361,
+        "positive_rate": 0.377049180328,
+        "mean_remaining_stressed_r": 0.048747325603,
+        "post_checkpoint_new_high_rate": 0.459016393443
+      }
+    },
+    "strategy_adjusted_PROFIT_STILL_HELD_minus_PRIOR_PROFIT_GIVEN_BACK": {
+      "final_stressed_r": 0.361488716480,
+      "stop": -0.103125000000,
+      "remaining_stressed_r": 0.021998101474,
+      "post_checkpoint_new_high": 0.228680555556,
+      "additional_peak_r": 0.080663203895,
+      "final_r_strategy_sign_breadth": 5,
+      "stop_strategy_sign_breadth": 4,
+      "remaining_r_strategy_sign_breadth": 4,
+      "new_high_strategy_sign_breadth": 4,
+      "all_four_symbol_sign_breadth_checks": true,
+      "maximum_strategy_final_r_contribution_share": 0.339960330584,
+      "maximum_symbol_final_r_contribution_share": 0.660039669416
+    },
+    "final_outcome_gate": "PASSED_ALL_REQUIREMENTS",
+    "future_path_gate": {
+      "status": "FAILED",
+      "failed_requirements": [
+        "absolute_remaining_stressed_r_residual_at_least_0_10"
+      ],
+      "other_requirements_passed": true
+    },
+    "economic_interpretation": "The checkpoint sharply identifies value already present: targets still profitable at first-peer natural exit finish much better and stop less often. However, the subsequent stressed-R change differs by only 0.0220R. The state does not establish a materially different future return path and therefore cannot justify a management response or broader matrix under the frozen bundle gate."
+  },
+  "verdict": "FINAL_LEVEL_ONLY_NO_POST_CHECKPOINT_PATH_SEED",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "closed_scope": [
+    "No first-peer profit-memory close, hold, breakeven, stop, trail, partial-close or cohort response.",
+    "No profit or giveback threshold, peak-fraction, elapsed-time, second-peer, peer-identity, direction, strategy, symbol, session or period rescue.",
+    "No broader multi-period observer matrix because the required remaining-path magnitude failed.",
+    "No lot, slot, priority, admission, MQL, Tester, Program 6, broker query or Live action."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 and all three heights after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "adjacent_profit_memory_or_peer_exit_successor": "FORBIDDEN",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}

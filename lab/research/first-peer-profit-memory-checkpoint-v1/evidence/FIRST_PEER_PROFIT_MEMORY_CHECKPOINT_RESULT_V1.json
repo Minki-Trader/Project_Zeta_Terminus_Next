@@ -1,0 +1,448 @@
+{
+  "schema": "zeta-next-first-peer-profit-memory-checkpoint-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_057_FIXED_AGGREGATION_COMPLETE",
+  "unit": "first-peer-profit-memory-checkpoint-057",
+  "family": "first-peer-profit-memory-checkpoint-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "817DEFD86B37949C1101932970219174ADF0A2688243010B59954F68F5981678",
+    "declaration_commit": "3e79ccf",
+    "lifecycle_ledger_bytes": 683465,
+    "lifecycle_ledger_sha256": "01EA88857947DF0C71557257179775A7D99F14C33CD262036EFEF6A24D755CEC"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_post_declaration_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "same_unit_metric_reruns": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false
+  },
+  "integrity": {
+    "ledger_rows": 841,
+    "birth_rows": 356,
+    "close_rows": 356,
+    "first_peer_rows": 129,
+    "same_time_context_rows": 3,
+    "strict_checkpoint_rows": 126,
+    "strict_role_counts": {
+      "PROFIT_STILL_HELD": 61,
+      "PRIOR_PROFIT_GIVEN_BACK": 64,
+      "NEVER_POSITIVE": 1
+    },
+    "duplicate_strict_positions": 0,
+    "faults": {
+      "file_hash_or_byte": 0,
+      "duplicate_record_id": 0,
+      "duplicate_close_position": 0,
+      "unknown_component": 0,
+      "missing_or_duplicate_linked_close": 0,
+      "close_before_checkpoint": 0,
+      "nonpositive_or_mismatched_risk": 0,
+      "nonfinite_metric": 0,
+      "peak_memory_regression": 0,
+      "mark_sample_regression": 0,
+      "partial_observation": 0,
+      "blank_peer_component": 0,
+      "blank_exit_class": 0
+    },
+    "fault_total": 0,
+    "passed": true
+  },
+  "density": {
+    "treatment_n": 60,
+    "comparator_n": 61,
+    "strategy_role_cells": {
+      "RC16": [
+        3,
+        5
+      ],
+      "RC4": [
+        9,
+        6
+      ],
+      "Cross": [
+        27,
+        32
+      ],
+      "Pressure": [
+        10,
+        6
+      ],
+      "Return": [
+        11,
+        12
+      ]
+    },
+    "symbol_role_cells": {
+      "US30": [
+        33,
+        29
+      ],
+      "US100": [
+        27,
+        32
+      ]
+    },
+    "minimum_strategy_role_cell": 3,
+    "minimum_symbol_role_cell": 27,
+    "passed": true
+  },
+  "checkpoint_role_context": {
+    "PROFIT_STILL_HELD": {
+      "n": 61,
+      "mean_checkpoint_mark_r": 0.2127066053181629,
+      "mean_checkpoint_peak_r": 0.32073977283859784,
+      "mean_checkpoint_giveback_r": 0.10803316752043492
+    },
+    "PRIOR_PROFIT_GIVEN_BACK": {
+      "n": 64,
+      "mean_checkpoint_mark_r": -0.12442008851571557,
+      "mean_checkpoint_peak_r": 0.10282554522307345,
+      "mean_checkpoint_giveback_r": 0.22724563373878892
+    },
+    "NEVER_POSITIVE": {
+      "n": 1,
+      "mean_checkpoint_mark_r": -0.0020914376542435216,
+      "mean_checkpoint_peak_r": -0.0020914376542435216,
+      "mean_checkpoint_giveback_r": 0
+    }
+  },
+  "eligible_role_future_outcomes": {
+    "PROFIT_STILL_HELD": {
+      "pooled": {
+        "n": 60,
+        "stressed_net_usd_2x": 100.96650000000128,
+        "mean_final_stressed_r": 0.28446900311678713,
+        "stop_rate": 0.03333333333333333,
+        "positive_rate": 0.7833333333333333,
+        "mean_remaining_stressed_r": 0.06854613175214945,
+        "post_checkpoint_new_high_rate": 0.7,
+        "mean_additional_peak_r": 0.20657704867682972
+      },
+      "strategies": {
+        "RC16": {
+          "n": 3,
+          "stressed_net_usd_2x": 14.031000000000132,
+          "mean_final_stressed_r": 0.7754658659345305,
+          "stop_rate": 0,
+          "positive_rate": 1,
+          "mean_remaining_stressed_r": 0.42253464705240856,
+          "post_checkpoint_new_high_rate": 1,
+          "mean_additional_peak_r": 0.4317970571450318
+        },
+        "RC4": {
+          "n": 9,
+          "stressed_net_usd_2x": 20.176000000000272,
+          "mean_final_stressed_r": 0.3967034975008322,
+          "stop_rate": 0.1111111111111111,
+          "positive_rate": 0.7777777777777778,
+          "mean_remaining_stressed_r": 0.09957605573805609,
+          "post_checkpoint_new_high_rate": 0.7777777777777778,
+          "mean_additional_peak_r": 0.2593617657376293
+        },
+        "Cross": {
+          "n": 27,
+          "stressed_net_usd_2x": 29.379500000000117,
+          "mean_final_stressed_r": 0.16621955161578245,
+          "stop_rate": 0.037037037037037035,
+          "positive_rate": 0.7777777777777778,
+          "mean_remaining_stressed_r": 0.03248937951058805,
+          "post_checkpoint_new_high_rate": 0.8518518518518519,
+          "mean_additional_peak_r": 0.19835480089593277
+        },
+        "Pressure": {
+          "n": 10,
+          "stressed_net_usd_2x": 10.215000000000364,
+          "mean_final_stressed_r": 0.15639792953392698,
+          "stop_rate": 0,
+          "positive_rate": 0.8,
+          "mean_remaining_stressed_r": -0.06876919818570817,
+          "post_checkpoint_new_high_rate": 0.3,
+          "mean_additional_peak_r": 0.042635959524726354
+        },
+        "Return": {
+          "n": 11,
+          "stressed_net_usd_2x": 27.165000000000365,
+          "mean_final_stressed_r": 0.46540944752097674,
+          "stop_rate": 0,
+          "positive_rate": 0.7272727272727273,
+          "mean_remaining_stressed_r": 0.15995074521822208,
+          "post_checkpoint_new_high_rate": 0.5454545454545454,
+          "mean_additional_peak_r": 0.27118514891805223
+        }
+      },
+      "symbols": {
+        "US30": {
+          "n": 33,
+          "stressed_net_usd_2x": 71.58700000000113,
+          "mean_final_stressed_r": 0.3812185543448817,
+          "stop_rate": 0.030303030303030304,
+          "positive_rate": 0.7878787878787878,
+          "mean_remaining_stressed_r": 0.09804711085888157,
+          "post_checkpoint_new_high_rate": 0.5757575757575758,
+          "mean_additional_peak_r": 0.2133043423157454
+        },
+        "US100": {
+          "n": 27,
+          "stressed_net_usd_2x": 29.379500000000117,
+          "mean_final_stressed_r": 0.16621955161578245,
+          "stop_rate": 0.037037037037037035,
+          "positive_rate": 0.7777777777777778,
+          "mean_remaining_stressed_r": 0.03248937951058805,
+          "post_checkpoint_new_high_rate": 0.8518518518518519,
+          "mean_additional_peak_r": 0.19835480089593277
+        }
+      }
+    },
+    "PRIOR_PROFIT_GIVEN_BACK": {
+      "pooled": {
+        "n": 61,
+        "stressed_net_usd_2x": -28.911999999998994,
+        "mean_final_stressed_r": -0.07597351310633375,
+        "stop_rate": 0.11475409836065574,
+        "positive_rate": 0.3770491803278688,
+        "mean_remaining_stressed_r": 0.04874732560292293,
+        "post_checkpoint_new_high_rate": 0.45901639344262296,
+        "mean_additional_peak_r": 0.12257760118306538
+      },
+      "strategies": {
+        "RC16": {
+          "n": 5,
+          "stressed_net_usd_2x": 1.9050000000001455,
+          "mean_final_stressed_r": 0.060671245241633975,
+          "stop_rate": 0,
+          "positive_rate": 0.6,
+          "mean_remaining_stressed_r": 0.1455813460357825,
+          "post_checkpoint_new_high_rate": 0.6,
+          "mean_additional_peak_r": 0.16114069765875316
+        },
+        "RC4": {
+          "n": 6,
+          "stressed_net_usd_2x": -6.066999999999753,
+          "mean_final_stressed_r": -0.11502797374625846,
+          "stop_rate": 0.3333333333333333,
+          "positive_rate": 0.5,
+          "mean_remaining_stressed_r": 0.03224742722269192,
+          "post_checkpoint_new_high_rate": 0.6666666666666666,
+          "mean_additional_peak_r": 0.16248023538272952
+        },
+        "Cross": {
+          "n": 32,
+          "stressed_net_usd_2x": -20.377999999999926,
+          "mean_final_stressed_r": -0.10687338962160405,
+          "stop_rate": 0.0625,
+          "positive_rate": 0.3125,
+          "mean_remaining_stressed_r": 0.024084415301527832,
+          "post_checkpoint_new_high_rate": 0.4375,
+          "mean_additional_peak_r": 0.09641515423810913
+        },
+        "Pressure": {
+          "n": 6,
+          "stressed_net_usd_2x": -0.5179999999999563,
+          "mean_final_stressed_r": -0.02749060517864192,
+          "stop_rate": 0.16666666666666666,
+          "positive_rate": 0.5,
+          "mean_remaining_stressed_r": 0.05353969593693489,
+          "post_checkpoint_new_high_rate": 0.5,
+          "mean_additional_peak_r": 0.1360282506831854
+        },
+        "Return": {
+          "n": 12,
+          "stressed_net_usd_2x": -3.8539999999995045,
+          "mean_final_stressed_r": -0.055223382021149924,
+          "stop_rate": 0.16666666666666666,
+          "positive_rate": 0.3333333333333333,
+          "mean_remaining_stressed_r": 0.08002134191606132,
+          "post_checkpoint_new_high_rate": 0.3333333333333333,
+          "mean_additional_peak_r": 0.14959952765485324
+        }
+      },
+      "symbols": {
+        "US30": {
+          "n": 29,
+          "stressed_net_usd_2x": -8.533999999999068,
+          "mean_final_stressed_r": -0.04187709764120799,
+          "stop_rate": 0.1724137931034483,
+          "positive_rate": 0.4482758620689655,
+          "mean_remaining_stressed_r": 0.07596157145273827,
+          "post_checkpoint_new_high_rate": 0.4827586206896552,
+          "mean_additional_peak_r": 0.15144650815681016
+        },
+        "US100": {
+          "n": 32,
+          "stressed_net_usd_2x": -20.377999999999926,
+          "mean_final_stressed_r": -0.10687338962160405,
+          "stop_rate": 0.0625,
+          "positive_rate": 0.3125,
+          "mean_remaining_stressed_r": 0.024084415301527832,
+          "post_checkpoint_new_high_rate": 0.4375,
+          "mean_additional_peak_r": 0.09641515423810913
+        }
+      }
+    }
+  },
+  "strategy_adjusted_treatment_residual": {
+    "treatment": "PROFIT_STILL_HELD",
+    "comparator": "PRIOR_PROFIT_GIVEN_BACK",
+    "pooled": {
+      "n": 60,
+      "final_stressed_r": 0.36148871648001685,
+      "stop": -0.10312500000000001,
+      "remaining_stressed_r": 0.021998101473835328,
+      "post_checkpoint_new_high": 0.22868055555555555,
+      "additional_peak_r": 0.08066320389541286
+    },
+    "strategies": {
+      "RC16": {
+        "treatment_n": 3,
+        "comparator_n": 5,
+        "final_stressed_r": 0.7147946206928966,
+        "stop": 0,
+        "remaining_stressed_r": 0.27695330101662613,
+        "post_checkpoint_new_high": 0.4000000000000001,
+        "additional_peak_r": 0.27065635948627864,
+        "residual_sum_final_stressed_r": 2.1443838620786897,
+        "final_r_contribution_share": 0.09886817874333431
+      },
+      "RC4": {
+        "treatment_n": 9,
+        "comparator_n": 6,
+        "final_stressed_r": 0.5117314712470907,
+        "stop": -0.22222222222222218,
+        "remaining_stressed_r": 0.06732862851536417,
+        "post_checkpoint_new_high": 0.11111111111111113,
+        "additional_peak_r": 0.09688153035489984,
+        "residual_sum_final_stressed_r": 4.605583241223816,
+        "final_r_contribution_share": 0.21234333794567237
+      },
+      "Cross": {
+        "treatment_n": 27,
+        "comparator_n": 32,
+        "final_stressed_r": 0.27309294123738653,
+        "stop": -0.02546296296296296,
+        "remaining_stressed_r": 0.008404964209060206,
+        "post_checkpoint_new_high": 0.41435185185185186,
+        "additional_peak_r": 0.10193964665782362,
+        "residual_sum_final_stressed_r": 7.373509413409436,
+        "final_r_contribution_share": 0.3399603305836998
+      },
+      "Pressure": {
+        "treatment_n": 10,
+        "comparator_n": 6,
+        "final_stressed_r": 0.1838885347125689,
+        "stop": -0.16666666666666669,
+        "remaining_stressed_r": -0.12230889412264304,
+        "post_checkpoint_new_high": -0.2,
+        "additional_peak_r": -0.09339229115845901,
+        "residual_sum_final_stressed_r": 1.8388853471256892,
+        "final_r_contribution_share": 0.08478297584830895
+      },
+      "Return": {
+        "treatment_n": 11,
+        "comparator_n": 12,
+        "final_stressed_r": 0.5206328295421266,
+        "stop": -0.16666666666666669,
+        "remaining_stressed_r": 0.07992940330216083,
+        "post_checkpoint_new_high": 0.21212121212121218,
+        "additional_peak_r": 0.12158562126319904,
+        "residual_sum_final_stressed_r": 5.726961124963393,
+        "final_r_contribution_share": 0.2640451768789846
+      }
+    },
+    "symbols": {
+      "US30": {
+        "treatment_n": 33,
+        "comparator_n": 29,
+        "final_stressed_r": 0.433812532587624,
+        "stop": -0.16666666666666669,
+        "remaining_stressed_r": 0.03311975923592408,
+        "post_checkpoint_new_high": 0.07676767676767682,
+        "additional_peak_r": 0.06325520527162222,
+        "residual_sum_final_stressed_r": 14.31581357539159,
+        "final_r_contribution_share": 0.6600396694163002
+      },
+      "US100": {
+        "treatment_n": 27,
+        "comparator_n": 32,
+        "final_stressed_r": 0.27309294123738653,
+        "stop": -0.02546296296296296,
+        "remaining_stressed_r": 0.008404964209060206,
+        "post_checkpoint_new_high": 0.41435185185185186,
+        "additional_peak_r": 0.10193964665782362,
+        "residual_sum_final_stressed_r": 7.373509413409436,
+        "final_r_contribution_share": 0.33996033058369973
+      }
+    },
+    "sign_breadth": {
+      "final_r_strategies": 5,
+      "stop_strategies": 4,
+      "remaining_r_strategies": 4,
+      "new_high_strategies": 4,
+      "final_r_symbols": 2,
+      "stop_symbols": 2,
+      "remaining_r_symbols": 2,
+      "new_high_symbols": 2
+    },
+    "maximum_strategy_final_r_contribution_share": 0.3399603305836998,
+    "maximum_symbol_final_r_contribution_share": 0.6600396694163002
+  },
+  "gates": {
+    "final_outcome": {
+      "checks": {
+        "absolute_final_r_at_least_0_10": true,
+        "absolute_stop_at_least_0_05": true,
+        "economic_concordance": true,
+        "final_r_strategy_breadth_4_of_5": true,
+        "stop_strategy_breadth_4_of_5": true,
+        "final_r_symbol_breadth_2_of_2": true,
+        "stop_symbol_breadth_2_of_2": true,
+        "strategy_contribution_at_most_0_55": true,
+        "symbol_contribution_at_most_0_70": true
+      },
+      "passed": true
+    },
+    "future_path": {
+      "checks": {
+        "absolute_remaining_r_at_least_0_10": false,
+        "absolute_new_high_at_least_0_10": true,
+        "remaining_sign_matches_final_r": true,
+        "new_high_sign_matches_final_r": true,
+        "remaining_strategy_breadth_3_of_5": true,
+        "new_high_strategy_breadth_3_of_5": true,
+        "remaining_symbol_breadth_2_of_2": true,
+        "new_high_symbol_breadth_2_of_2": true
+      },
+      "passed": false
+    }
+  },
+  "bundle": {
+    "verdict": "FINAL_LEVEL_ONLY_NO_POST_CHECKPOINT_PATH_SEED",
+    "retained_later_question": null,
+    "selected_candidate": null,
+    "automatic_successor": false
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "declaration": {
+    "path": "lab/research/first-peer-profit-memory-checkpoint-v1/evidence/FIRST_PEER_PROFIT_MEMORY_CHECKPOINT_DECLARATION_V1.json",
+    "sha256": "817DEFD86B37949C1101932970219174ADF0A2688243010B59954F68F5981678",
+    "declaration_commit": "3e79ccf"
+  },
+  "interpretation": {
+    "final_outcome": "PROFIT_STILL_HELD was strongly associated with a better final level: +0.361489R strategy-adjusted stressed R and -0.103125 stop incidence, with final-R breadth in 5/5 strategies, stop breadth in 4/5, both signs present in US30 and US100, and concentration caps passed.",
+    "future_path": "The post-checkpoint new-high rate residual was +0.228681 and broad, but the remaining stressed-R residual was only +0.021998R, below the fixed 0.10R gate. The checkpoint mostly identifies value already present rather than a materially different future return path.",
+    "causal_limit": "The P4 checkpoint association cannot justify closing, holding, breakeven, trailing or any other management response. A final-level tag without material remaining-path separation retains no broader observation seed under the frozen contract.",
+    "retained_later_question": null,
+    "selected_candidate": null
+  },
+  "authority": {
+    "metrics": "AUTHORITATIVE_SINGLE_FIXED_AGGREGATION",
+    "data_role": "CONSUMED_P4_EXPLORATORY_ONLY",
+    "same_unit_rerun": false,
+    "nearby_rescue": false,
+    "live_action": "NONE",
+    "outcomes_consumed": true
+  }
+}
