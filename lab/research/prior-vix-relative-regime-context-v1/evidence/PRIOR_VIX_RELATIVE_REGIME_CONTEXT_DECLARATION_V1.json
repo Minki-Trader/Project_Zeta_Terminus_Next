@@ -1,0 +1,296 @@
+{
+  "schema": "zeta-next-prior-vix-relative-regime-context-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_045_DECLARATION_FROZEN_ECONOMIC_OUTCOMES_UNOPENED",
+  "unit": "prior-vix-relative-regime-context-045",
+  "family": "prior-vix-relative-regime-context-v1",
+  "title": "Prior VIX Relative Volatility Regime Context",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    }
+  },
+  "question": "Does the most recent strictly prior Cboe VIX daily close, expressed as a causal position within its own trailing 252-session distribution, create a broad LOW or HIGH external-volatility context that materially separates the frozen six-strategy portfolio's 2x-cost stressed R and stop-loss incidence after controlling for strategy and period?",
+  "hypothesis": "A strategy-period-centered external volatility regime may distinguish opportunity quality across the whole portfolio without tuning an absolute VIX level. A LOW or HIGH trailing-distribution edge is informative only if return and stop effects are economically coherent and repeat across periods and strategies.",
+  "why_now": "Unit 044 closed Program 5 invalid with no sizing seed. A distinct Program 4 proposal then reconstructed every one of 2,233 lifecycles outcome-free and found zero later native nonzero signals while positions were held, so it was rejected without an allocated unit and without an adjacent age, mark or exit rescue. Whole-map comparison now favors a broad Program 2 external-volatility state that is structurally distinct from Unit 041's scheduled-release windows and can use an official immutable daily source plus the dense tracked portfolio evidence.",
+  "macro_rotation": {
+    "recent_closed_programs": [4, 2, 3, 7, 5],
+    "program_4_rejected_proposal": "held-position-first-later-native-signal-state",
+    "program_4_rejection_reason": "All 2,233 lifecycles had no later nonzero SIGNAL_DECIDED event while the same component position remained open; there is no reconfirm-versus-contradict bundle to allocate.",
+    "program_1": "A broad same-day prior-signal proposal was just rejected before Unit 044 and is not rescued with a narrower signal context.",
+    "program_2": "Selected for a different macro object from Unit 041: a causal prior-close relative volatility regime rather than scheduled event timing.",
+    "program_3": "Unit 042 recently closed; no adjacent clock or session variant.",
+    "program_4": "The new held-position signal proposal was structurally zero; no adjacent mark, age, exit or RC4-only rescue.",
+    "program_5": "Unit 044 just closed; no lot, deposit, slot or risk-geometry successor.",
+    "program_7": "Unit 043 recently closed; evidence-lane diagnosis cannot monopolize topic selection.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not open another VIX level, rolling window, percentile cut, volatility index, event or external-market successor automatically."
+  },
+  "research_bundle": {
+    "name": "causal_trailing_252_session_vix_low_middle_high_regimes",
+    "variants": [
+      {
+        "id": "LOW_RELATIVE_VIX",
+        "definition": "The prior close empirical percentile is at most one third."
+      },
+      {
+        "id": "HIGH_RELATIVE_VIX",
+        "definition": "The prior close empirical percentile is at least two thirds."
+      }
+    ],
+    "context_anchor": {
+      "id": "MIDDLE_RELATIVE_VIX",
+      "definition": "The prior close empirical percentile is strictly above one third and strictly below two thirds. It is reported but cannot independently select a successor."
+    },
+    "single_bundle": true,
+    "absolute_vix_threshold": false,
+    "alternate_window_or_percentile_grid": false,
+    "strategy_specific_threshold": false
+  },
+  "boundary": {
+    "family_root": "lab/research/prior-vix-relative-regime-context-v1/",
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_trade_or_counterfactual_outcomes": false,
+    "uses_already_consumed_next_economic_evidence": true,
+    "adds_one_official_external_daily_context_snapshot": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "official_external_source": {
+    "publisher": "Cboe Exchange, Inc.",
+    "index": "Cboe Volatility Index (VIX)",
+    "meaning": "Cboe's market estimate of expected volatility derived from SPX option prices.",
+    "historical_data_page": "https://www.cboe.com/tradable-products/vix/vix-historical-data",
+    "download_url": "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+    "retrieved_at_local": "2026-08-26T12:24:31+09:00",
+    "snapshot_path": "lab/research/prior-vix-relative-regime-context-v1/evidence/source/VIX_History_1990-01-02_through_2026-08-25.csv",
+    "bytes": 471901,
+    "sha256": "9E6A6958041079E56848337439BE5B250B2FE97131751FCD7CF4750A7D31720E",
+    "data_rows": 9258,
+    "unique_strictly_increasing_dates": 9258,
+    "first_date": "1990-01-02",
+    "last_date": "2026-08-25",
+    "consumed_fields": ["DATE", "CLOSE"],
+    "consumed_close_faults": 0,
+    "unconsumed_fields": ["OPEN", "HIGH", "LOW"],
+    "unconsumed_ohlc_note": "A preliminary non-contract check found 47 OHLC consistency anomalies from 1992-02-11 through 2006-02-08 and none from 2021 onward. OPEN/HIGH/LOW are not used for classification, metrics, gates or verdict; the exact file hash remains pinned.",
+    "source_limit": "Cboe states that the historical data is furnished for visitor convenience without an accuracy guarantee. This unit treats the exact downloaded snapshot as its finite external context input."
+  },
+  "immutable_portfolio_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ]
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "vix_history": "fixed external contextual covariate only",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "fixed_regime_classification": {
+    "birth_date": "UTC calendar date of OPEN or PASSIVE_FILL.",
+    "prior_close": "The latest Cboe VIX DATE strictly earlier than the birth UTC date. Same-date VIX is never used even if the portfolio birth occurs after the US close.",
+    "window": "Exactly 252 available VIX daily CLOSE observations ending at and including the selected prior close.",
+    "percentile": "Count of the 252 window closes less than or equal to the selected prior close divided by 252.",
+    "LOW": "percentile <= 1/3",
+    "MIDDLE": "1/3 < percentile < 2/3",
+    "HIGH": "percentile >= 2/3",
+    "causal_range": {
+      "first_birth_date": "2022-08-01",
+      "last_birth_date": "2026-08-20",
+      "first_selected_prior_close": "2022-07-29",
+      "latest_selected_prior_close": "2026-08-19",
+      "earliest_trailing_window_date": "2021-08-04",
+      "unique_selected_prior_close_dates": 998
+    }
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only event identity, OPEN/PASSIVE_FILL UTC birth dates, strategy, period, Cboe DATE/CLOSE and derived regime were accessed. No close value, stressed R, planned risk, stop association, conditional economic metric or Unit 045 verdict was accessed.",
+    "births": 2233,
+    "classified_births": 2233,
+    "faults": 0,
+    "unique_birth_dates": 1000,
+    "regime_counts": {
+      "LOW": 924,
+      "MIDDLE": 610,
+      "HIGH": 699
+    },
+    "period_counts": {
+      "P1_2022H2_2023": {"LOW": 519, "MIDDLE": 164, "HIGH": 86},
+      "P2_2024": {"LOW": 196, "MIDDLE": 132, "HIGH": 226},
+      "P3_2025": {"LOW": 121, "MIDDLE": 197, "HIGH": 236},
+      "P4_2026_YTD": {"LOW": 88, "MIDDLE": 117, "HIGH": 151}
+    },
+    "strategy_counts": {
+      "RC16": {"LOW": 103, "MIDDLE": 77, "HIGH": 92},
+      "RC4": {"LOW": 80, "MIDDLE": 56, "HIGH": 70},
+      "Cross": {"LOW": 355, "MIDDLE": 224, "HIGH": 226},
+      "Pressure": {"LOW": 30, "MIDDLE": 21, "HIGH": 67},
+      "Return": {"LOW": 105, "MIDDLE": 58, "HIGH": 75},
+      "Passive": {"LOW": 251, "MIDDLE": 174, "HIGH": 169}
+    },
+    "strategy_period_cells_per_regime": 24,
+    "minimum_strategy_period_cell": {"LOW": 2, "MIDDLE": 2, "HIGH": 6},
+    "maximum_strategy_period_cell": {"LOW": 196, "MIDDLE": 75, "HIGH": 78},
+    "eligible": true,
+    "predeclaration_execution_disclosure": {
+      "program_4_structural_classifications": 1,
+      "program_4_lifecycles": 2233,
+      "program_4_later_nonzero_signals_while_held": 0,
+      "vix_parser_stops_before_output": 2,
+      "vix_source_copy_parser_stops_before_filesystem_action": 1,
+      "successful_vix_birth_classifications": 1,
+      "discarded_derived_display": "The first successful classification displayed each regime's number of grouped cells, 24, as the minimum cell count. The classification and all pooled/period/strategy counts were correct; only that derived display was discarded and recomputed as 2/2/6 without opening economic outcomes.",
+      "postclassification_date_span_parser_stops_before_output": 1,
+      "economic_outcomes_accessed": false
+    }
+  },
+  "fixed_lifecycle_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a persisted-state version, not an event primary key.",
+    "ordering": "Within each period order by parsed server_time, numeric state_sequence, fixed close-before-birth precedence, then source path and line.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned_risk from detail.",
+    "passive_pending": "PASSIVE_PLACE supplies direction and positive planned_risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL begins one Passive lifecycle.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle. value_b is frozen 2x-cost stressed net USD.",
+    "stressed_r": "value_b at close divided by the positive planned risk frozen at birth or placement.",
+    "stop": "EXTERNAL_CLOSE is one stop-loss exit; CLOSE is not.",
+    "regime_attachment": "Attach exactly one regime from the birth UTC date before any close metric is used."
+  },
+  "fixed_centered_metrics": {
+    "cell": "One strategy-period combination across all regimes.",
+    "cell_mean_stressed_r": "Mean stressed R of every lifecycle in the cell.",
+    "cell_stop_rate": "Stop-loss fraction of every lifecycle in the cell.",
+    "lifecycle_centered_r": "Lifecycle stressed R minus its cell mean stressed R.",
+    "lifecycle_centered_stop": "Lifecycle stop indicator minus its cell stop rate.",
+    "variant_pooled_residual_r": "Mean lifecycle-centered R across the variant.",
+    "variant_pooled_stop_residual": "Mean lifecycle-centered stop across the variant.",
+    "period_residuals": "The same centered means within each of P1-P4.",
+    "strategy_residuals": "The same centered means within each of the six strategies.",
+    "contribution_share": "For periods and strategies separately, absolute centered-R numerator for one member divided by the sum of absolute member centered-R numerators."
+  },
+  "fixed_integrity_gate": [
+    "The Cboe source retains 471,901 bytes and SHA-256 9E6A6958041079E56848337439BE5B250B2FE97131751FCD7CF4750A7D31720E, with 9,258 unique strictly increasing DATE rows and finite positive CLOSE values.",
+    "All six portfolio files retain their listed byte lengths and hashes and contain zero exact duplicate full rows.",
+    "Reconstruct exactly 16,477 portfolio data rows, 2,233 lifecycles with strategy totals 272/206/805/118/238/594, 407.0477 USD stressed net and 206 stop-loss exits with zero lifecycle, pending, risk, close or regime fault.",
+    "Classify exactly LOW/MIDDLE/HIGH 924/610/699 with the frozen period and strategy counts and all 72 strategy-period-regime cells present.",
+    "Every lifecycle receives exactly one strictly prior close and a complete 252-close window; same-date or future VIX observations are never attached."
+  ],
+  "fixed_variant_gate": {
+    "apply_independently_to": ["LOW_RELATIVE_VIX", "HIGH_RELATIVE_VIX"],
+    "density_requirements": [
+      "At least 600 pooled lifecycles.",
+      "At least 80 lifecycles in each of P1-P4.",
+      "At least 30 pooled lifecycles in each of the six strategies.",
+      "All 24 strategy-period cells are represented."
+    ],
+    "information_requirements": [
+      "Absolute pooled centered stressed-R residual is at least 0.10R.",
+      "Absolute pooled centered stop residual is at least 0.05.",
+      "Pooled return and stop residuals are economically coherent: their signs are nonzero and opposite.",
+      "At least three of four period centered-R residuals share the pooled R sign.",
+      "At least three of four period centered-stop residuals share the pooled stop sign.",
+      "At least four of six strategy centered-R residuals share the pooled R sign.",
+      "At least four of six strategy centered-stop residuals share the pooled stop sign.",
+      "No one period contributes more than 60% and no one strategy contributes more than 55% of the variant's absolute centered-R numerator."
+    ],
+    "pass_rule": "A variant passes only if every density and information requirement passes.",
+    "selection_if_both_pass": "Select at most one later question by larger absolute pooled centered-R residual, then larger absolute pooled centered-stop residual, then lexicographic variant id.",
+    "failure_action": "Do not rescue with an absolute VIX level, another trailing window, quartile/quintile, trend, rate of change, realized volatility, another volatility index, strategy subset, direction, period, event or session."
+  },
+  "fixed_bundle_gate": {
+    "requirements": [
+      "All integrity gates pass.",
+      "Both edge variants complete their frozen reports.",
+      "At least one edge variant passes its full gate."
+    ],
+    "passing_action": "Retain exactly one later independently named portfolio-wide, entry-preserving VIX-context response question. Unit 045 selects no filter, lot, slot, exit, threshold, EA or Live behavior, and the later question cannot open automatically.",
+    "failure_action": "Close with no external-volatility seed and return to whole-map comparison."
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "verdict_rules": {
+    "success": "PASS_ONE_PRIOR_VIX_RELATIVE_REGIME_CONTEXT_QUESTION when integrity passes and at least one edge variant passes every frozen gate.",
+    "failure": "NO_PRIOR_VIX_RELATIVE_REGIME_CONTEXT_PASSED when integrity passes and neither edge variant passes every frozen gate.",
+    "invalid": "INVALID_VIX_SOURCE_OR_LIFECYCLE_RECONSTRUCTION_NO_CONTEXT_VERDICT when any source, input, lifecycle, regime or anchor integrity check fails.",
+    "ambiguous": "AMBIGUOUS_NO_VIX_CONTEXT_SEED only if integrity passes but an unforeseen semantic condition prevents exact application without changing the frozen contract."
+  },
+  "stop_rules": [
+    "Commit and push this declaration plus the exact Cboe snapshot before reading any Unit 045 close value, stressed R, stop association, residual, gate or verdict.",
+    "Run exactly one fixed in-memory aggregation over the seven immutable inputs.",
+    "Do not change the 252-session window, percentile formula, tercile cuts, prior-date rule, centered baseline, variants, metrics or gates.",
+    "Do not modify MQL, compile, run MetaTrader, retain an analysis CLI, query broker/account state or touch Live.",
+    "Close the family after one result and recompare Programs 1-5 and 7 without an adjacent VIX or Program 2 successor."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_and_cboe_snapshot_then_run_one_fixed_vix_context_aggregation"
+}
