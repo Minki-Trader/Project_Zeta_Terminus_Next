@@ -1531,3 +1531,10 @@
 - Froze average-rank Spearman, fixed three-low/three-high frequency halves, unweighted half mean per-fill value and low-frequency net-share minus fill-share. Stable passage requires both pooled bases and at least three-period breadth.
 - A pass is descriptive because component identity, signal and clock confound frequency. It cannot alter the authoritative three-fill requirement, remove a component or authorize priority/lot/slot changes; it only constrains future turnover evidence to preserve incremental value.
 - Declaration SHA-256 is `2E9D3BBA212C714458CB5781FB22BCC2E3EDF6BBB24FB38B91E55DDD7DC413FE`. No rank or half metric has opened. One synthesis, one premetric correction and zero reruns are budgeted; no raw reconstruction, data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0186 - 2026-08-27
+
+- Declaration commit `0478f501741b4009b8e22b837ab14a7324bf98f4` reached origin before the first Unit 074 invocation. All three immutable byte/hash pins and source schemas passed, then execution stopped at the Unit 039 verdict lookup before component record construction or any economic metric.
+- The pinned Unit 039 result stores its verdict at `selection.verdict`, not at top level. Used the one permitted premetric implementation correction to freeze that exact nested path and the observed top-level key set.
+- Correction receipt SHA-256 is `6C1B82849C4260178977EE3D57D0286522AA02096E5874C52415A61F87FEDED5`. Every component, base, period, per-fill, Spearman, half-transfer, gate, verdict, decision and exclusion remains unchanged.
+- No component per-fill value, rank, frequency-half mean, share delta, breadth or verdict was emitted. One successful synthesis remains, one premetric correction is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remained untouched.

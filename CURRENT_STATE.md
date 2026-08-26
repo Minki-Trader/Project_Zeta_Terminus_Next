@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0185`
+- Latest state ID: `STATE-0186`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -1035,6 +1035,12 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Metrics are count-versus-per-fill Spearman, the three highest-frequency versus three lowest-frequency components' unweighted mean per-fill value, and low-frequency net-share minus fill-share. A stable pass requires both pooled bases and broad period repetition.
 - Component identity, mechanism and clock remain confounded. A pass cannot edit the authoritative `≥3 fills/day` requirement or remove a component; it only requires later turnover candidates to show value-preserving incremental fills.
 - Declaration SHA-256 is `2E9D3BBA212C714458CB5781FB22BCC2E3EDF6BBB24FB38B91E55DDD7DC413FE`. No rank, half-transfer or verdict metric has opened; one synthesis, one premetric correction and zero reruns are budgeted. Program 6, broker/account state and Live remain untouched.
+
+## Frozen premetric Unit 039 verdict-path correction Unit 074
+
+- The first invocation verified all three bytes/hashes and source schemas, then stopped at `unit_039["verdict"]` before building any component record, rank, frequency half, share or verdict.
+- Unit 039 stores the authoritative value at `selection.verdict`. Froze that path and the exact Unit 039 top-level key set in place of the incorrect lookup.
+- Correction receipt SHA-256 is `6C1B82849C4260178977EE3D57D0286522AA02096E5874C52415A61F87FEDED5`. All component orders, inputs, periods, formulas, gates, decisions and exclusions remain unchanged. One synthesis and zero metric reruns remain; Program 6, broker/account state and Live remain untouched.
 
 ## Required completion evidence
 

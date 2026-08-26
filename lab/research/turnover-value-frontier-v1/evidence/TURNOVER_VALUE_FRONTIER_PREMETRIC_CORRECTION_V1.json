@@ -1,0 +1,53 @@
+{
+  "schema": "zeta-next-turnover-value-frontier-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "PREMETRIC_IMPLEMENTATION_CORRECTION_FROZEN",
+  "unit": "turnover-value-frontier-074",
+  "family": "turnover-value-frontier-v1",
+  "failed_invocation": {
+    "stage": "Unit 039 verdict-path assertion after byte/hash/schema load and before any component record construction or metric",
+    "exit_code": 1,
+    "exception": "KeyError: verdict",
+    "economic_metrics_emitted": 0,
+    "successful_fixed_syntheses_used": 0,
+    "metric_reruns_used": 0
+  },
+  "cause": "The immutable Unit 039 result stores the authoritative verdict at selection.verdict rather than a top-level verdict key.",
+  "correction": {
+    "remove": "unit_039['verdict']",
+    "replace_with": "unit_039['selection']['verdict']",
+    "expected_value": "PASS_ONE_COST_RESILIENT_INCREMENTAL_LOT_PROXY_QUESTION",
+    "exact_top_level_keys": [
+      "schema",
+      "created_at_local",
+      "status",
+      "unit",
+      "family",
+      "macro_program",
+      "declaration",
+      "execution",
+      "integrity",
+      "portfolio_cost_books",
+      "strategy_results",
+      "fixed_gate_application",
+      "economic_interpretation",
+      "selection",
+      "next"
+    ]
+  },
+  "unchanged": [
+    "all three immutable file byte/hash pins",
+    "six component order and both pooled evidence bases",
+    "four CP2 periods and 2x stressed net/count extraction",
+    "Spearman, frequency-half and share formulas",
+    "all integrity, pooled, period, falsifier and verdict gates",
+    "decision translations, exclusions and stop rules"
+  ],
+  "implementation_only_pre_metric_corrections_used": 1,
+  "successful_fixed_syntheses_remaining": 1,
+  "metric_reruns_used": 0,
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_correction_then_run_the_single_remaining_fixed_turnover_value_synthesis"
+}
