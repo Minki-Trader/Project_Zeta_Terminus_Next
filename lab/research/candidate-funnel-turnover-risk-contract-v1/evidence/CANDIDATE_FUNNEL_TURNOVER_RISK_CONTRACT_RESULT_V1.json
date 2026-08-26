@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-candidate-funnel-turnover-risk-contract-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_061_CLOSED_INVALID_DECLARED_SLOT_SEMANTIC",
+  "unit": "candidate-funnel-turnover-risk-contract-061",
+  "family": "candidate-funnel-turnover-risk-contract-v1",
+  "declaration": {
+    "sha256": "57685B5D98A00F017E4457D123697C50B78F4FF695022F7B78ABAB8414ECBCCD",
+    "commit": "eefba4d21dbfd7ed935df855c4d4234c063596db",
+    "committed_and_pushed_before_metrics": true
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 0,
+    "post_metric_corrections": 0,
+    "metric_reruns": 0,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "retained_analysis_cli": false,
+    "exit_code": 0
+  },
+  "integrity": {
+    "immutable_pins_passed": true,
+    "candidate_rows": 4043,
+    "candidate_columns": 48,
+    "candidate_unique_record_ids": 4043,
+    "lifecycle_rows": 841,
+    "lifecycle_columns": 60,
+    "lifecycle_unique_record_ids": 841,
+    "birth_rows_used": 356,
+    "close_rows_count_only": 356,
+    "first_peer_rows_count_only": 129,
+    "candidate_to_birth_matches": 356,
+    "expired_passive_pending_orders": 27,
+    "unmatched_births": 0,
+    "ambiguous_matches": 0,
+    "candidate_dropped_rows": 0,
+    "lifecycle_dropped_rows": 0,
+    "close_economic_fields_accessed": false
+  },
+  "structural_funnel_reproduced": {
+    "terminal_evaluations": 4043,
+    "evaluated_signals": 2734,
+    "passed_signals": 398,
+    "admitted_order_paths": 383,
+    "durable_births": 356,
+    "conditional_rates": {
+      "evaluated_over_terminal": 0.6762305218896859,
+      "passed_over_evaluated": 0.14557425018288223,
+      "admitted_over_passed": 0.9623115577889447,
+      "births_over_admitted": 0.9295039164490861,
+      "births_over_terminal": 0.08805342567400445
+    },
+    "terminal_reasons": {
+      "SIGNAL_SIGNAL_NOT_MET": 2336,
+      "GATE_EXISTING_EXPOSURE": 1302,
+      "GATE_SHADOW_ACCEPTED_OCCUPANCY": 7,
+      "OUTCOME_POSITION_OPEN": 264,
+      "OUTCOME_PENDING_ORDER": 119,
+      "OUTCOME_PROTECTION_OR_RISK_BLOCKED": 14,
+      "OUTCOME_PRICE_DISTANCE_BLOCKED": 1
+    },
+    "existing_exposure_unknown_signals": 1302,
+    "authority": "Structural reproduction only; existing-exposure rows are not lost signals and no blocked-candidate future outcome is inferred."
+  },
+  "single_aggregation_output_quarantined": {
+    "reason": "The aggregation completed under the declaration's frozen but semantically incorrect combined occupied-slot formula. These values are retained for audit and do not cast a Unit 061 economic or policy verdict.",
+    "blockers": {
+      "aggregate_risk_count": 14,
+      "distance_count": 1,
+      "risk_share_of_passed_signals": 0.035175879396984924,
+      "risk_share_of_durable_births": 0.03932584269662921,
+      "all_post_pass_share_of_passed_signals": 0.03768844221105527,
+      "components": {"RC16": 0, "RC4": 0, "Cross": 9, "Pressure": 1, "Return": 3, "Passive": 1},
+      "symbols": {"US30": 4, "US100": 10},
+      "months": {"2026.02": 2, "2026.03": 4, "2026.04": 3, "2026.06": 1, "2026.07": 1, "2026.08": 3},
+      "largest_component_share": 0.6428571428571429
+    },
+    "slot_and_risk_output": {
+      "active_slot_distribution": {"1": 1, "2": 5, "3": 8},
+      "reserved_slot_distribution": {"2": 6, "3": 8},
+      "declared_sum_distribution": {"3": 1, "4": 5, "6": 8},
+      "declared_sum_below_three_count": 0,
+      "zero_headroom_count": 8,
+      "strict_attempted_after_above_cap_count": 14,
+      "aggregate_risk_before_usd": {"min": 10.203160000000059, "median": 18.419220000000223, "mean": 17.145123428571708, "max": 23.69214000000048},
+      "aggregate_cap_usd": {"min": 15.288180000000086, "median": 18.66990000000023, "mean": 19.62750342857171, "max": 23.69214000000048},
+      "aggregate_headroom_usd": {"min": 0.0, "median": 0.0, "mean": 2.482380000000003, "max": 6.126959999999867},
+      "attempted_planned_risk_usd": {"min": 3.393199999999973, "median": 4.1465333333333545, "mean": 4.358361904761904, "max": 5.25986666666664},
+      "attempted_aggregate_after_usd": {"min": 15.299220000000087, "median": 24.558960000000294, "mean": 23.687624571428948, "max": 31.589520000000643},
+      "risk_excess_usd": {"min": 0.011040000000001271, "median": 6.139740000000074, "mean": 4.060121142857235, "max": 7.897380000000162},
+      "risk_excess_cap_fraction": {"min": 0.0007221265055749742, "median": 0.33333333333333326, "mean": 0.19349758595619507, "max": 0.33333333333333354}
+    },
+    "turnover_output": {
+      "day_denominator": 165,
+      "required_births": 495,
+      "observed_births": 356,
+      "average_births_per_day": 2.1575757575757577,
+      "aggregate_gap": 139,
+      "baseline_birth_distribution": {"0": 5, "1": 37, "2": 60, "3": 54, "4": 8, "5": 1},
+      "baseline_compliant_days": 63,
+      "baseline_compliant_day_rate": 0.38181818181818183,
+      "favorable_risk_release_births": 370,
+      "favorable_risk_release_remaining_gap": 125,
+      "favorable_risk_release_gap_coverage": 0.10071942446043165,
+      "favorable_risk_release_compliant_days": 63,
+      "favorable_risk_release_compliant_day_gain": 0,
+      "favorable_all_blockers_births": 371,
+      "favorable_all_blockers_remaining_gap": 124,
+      "favorable_all_blockers_compliant_days": 63
+    },
+    "provisional_machine_verdict": "CAP_BINDING_PRESENT_BUT_NO_MATERIAL_TURNOVER_BRIDGE",
+    "provisional_verdict_authoritative": false
+  },
+  "semantic_contradiction": {
+    "declared_formula": "combined occupied slots = active_slots + reserved_slots",
+    "declared_role": "The formula was used by the sub-three accounting-shape gate.",
+    "source_path": "lab/engineering/live-research-observation-ledger-v1/mt5/src/Include/ZetaTerminusNext/Observation/ZetaResearchObservation.mqh",
+    "source_bytes": 50530,
+    "source_sha256": "8F4021B3C1C1E288FF443714B766B4D85608F45D9FE2EDFFBEC0750465450FE5",
+    "source_semantics": "ResearchReservedMask initializes its mask from ResearchPositionMask and then optionally ORs the Passive pending-order bit. reserved_slots therefore counts the union of active positions and the pending reservation; it is not a disjoint additional-slot count.",
+    "observed_symptom": "The declared sum produced impossible three-slot-system values of four and six.",
+    "effect": "The frozen sub-three mechanism gate is not interpretable as declared. Replacing the formula with reserved_slots or a mask union would be a post-metric contract repair and is forbidden.",
+    "classification": "DECLARED_SLOT_TOPOLOGY_RECONSTRUCTION_FAILURE"
+  },
+  "verdict": "INVALID_CANDIDATE_FUNNEL_OR_RISK_CONTRACT_RECONSTRUCTION_NO_VERDICT",
+  "decision": {
+    "risk_accounting_counterfactual_retained": false,
+    "selected_candidate": null,
+    "risk_cap_change": false,
+    "lot_change": false,
+    "slot_change": false,
+    "admission_change": false,
+    "nearby_formula_repair": false,
+    "same_family_rerun": false,
+    "blocked_outcome_imputation": false,
+    "live_action": false
+  },
+  "next": "freeze_and_close_unit_061_then_recompare_the_whole_program_and_height_map_without_a_same_family_slot_formula_repair"
+}

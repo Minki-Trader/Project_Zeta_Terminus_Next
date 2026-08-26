@@ -74,7 +74,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/scheduled-us-macro-decision-regime-v1/`: 닫힌 무효 Program 2 / meso Unit 058 source-free family; 선언의 FOMC ±120분 후보 0행 전제가 동일 입력에서 14행·5/5 이벤트로 반증되어 채널 잔차 계산 전에 중단, BLS 의사결정 regime·FOMC rescue·후속 없음
 - `research/cross-component-same-symbol-signal-state-v1/`: 닫힌 Program 1 / meso Unit 059 source-free family; PERSIST−REVERSE는 `+0.09741R/-0.09897 stop`이나 R 크기와 Return/US30 집중 관문 실패, same-component US100도 같은 방향으로 material하여 cross-component 고유 field·후속·정책 없음
 - `research/native-hold-schedule-curve-v1/`: 닫힌 무효 Program 4 / meso Unit 060 family; 독립 source/config/EX5/runtime과 3개 보유시간 벡터는 정상 동결됐지만 첫 P1 NATIVE 상세 로그에서 US30·US100·US500 모두 생성 tick 대체가 확인되어 경제판정 전 중단, 나머지 11경로·후보·인접 환경구제 없음
-- `research/candidate-funnel-turnover-risk-contract-v1/`: 열린 Program 5 / macro Unit 061 source-free family; P4 후보→신호→admission→첫 fill 퍼널과 aggregate-risk blocker가 공식 일일 3회 lifecycle-start first-fill 의무의 실질 병목인지 한 번 판정하며 CLOSE 경제·막힌 후보 반사실·정책변경은 제외
+- `research/candidate-funnel-turnover-risk-contract-v1/`: 닫힌 무효 Program 5 / macro Unit 061 source-free family; `reserved_slots`가 active mask를 포함하는 union인데 선언이 active와 합산해 3-slot 체계에서 4·6을 만든 의미 오류로 risk-contract 판정 무효, 공식·정책 후보·같은-family 수리 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
