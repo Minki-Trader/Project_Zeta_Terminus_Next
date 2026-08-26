@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0193`
+- Latest state ID: `STATE-0194`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: Unit 077 `lab/research/pending-reservation-risk-tax-v1/`; declaration frozen before any pending risk-hour, admission-rate or direct-cap-relief metric
+- Active research boundary: Unit 077 `lab/research/pending-reservation-risk-tax-v1/`; sole pre-output implementation correction frozen, one fixed aggregation remains
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -1105,6 +1105,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Complete passage requires expired intervals to supply at least `20%` of pending risk-hours, expired-state block rate to exceed no-pending by at least `5pp` and `2x`, plus at least two direct expired-state blocks across two components and dates. Zero direct expired block plus no excess rate is the strong falsifier.
 - Declaration SHA-256 is `F2F0F2384E10E19B37BCED877481A1CD7187334D891BB24F0AF1666078CA4C9D`. No pending interval aggregate, risk-hour, joined row, block rate, direct-cause count or verdict has opened. One aggregation, one premetric correction and zero reruns are budgeted; no data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
 
+## Frozen pre-output empty-collection correction Unit 077
+
+- Declaration commit `7c55859` reached origin before the first fixed invocation. All pins, source semantics and prior-result anchors passed; the pipeline then stopped during final result-object preparation before `ConvertTo-Json` emitted any economic metric.
+- Under PowerShell StrictMode, direct property projection from an empty `directExpired` collection raised `The property 'Component' cannot be found on this object`. No risk-hour, group count, block rate, risk ratio, direct-cause detail, gate or verdict appeared on stdout and no judgment was made.
+- Used the sole allowed pre-output implementation correction to replace collection shorthand with explicit `ForEach-Object` property enumeration for component and date. This is empty-safe serialization preparation only.
+- All inputs, events, masks, joins, populations, formulas, thresholds, gates, verdicts, decisions and exclusions remain frozen. Correction receipt SHA-256 is `C7B50DD9874E2ADCD2B7989B194477651D5A72B492AE34801F221295C2D6E610`.
+- One successful aggregation remains; correction allowance is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remained untouched.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -1118,7 +1126,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 Latest closed research verdict: `AMBIGUOUS_THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_NO_CANDIDATE`
 
-Active research unit: Unit 077 `pending-reservation-risk-tax-v1`; declaration frozen, outcomes unopened
+Active research unit: Unit 077 `pending-reservation-risk-tax-v1`; pre-output correction frozen, one fixed aggregation remains
 
 Latest Frontier marker: `THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_076_CLOSED_AMBIGUOUS_NO_CANDIDATE`
 

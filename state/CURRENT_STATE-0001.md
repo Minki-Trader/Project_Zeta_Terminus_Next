@@ -1599,3 +1599,11 @@
 - A joined cap block is direct only when subtracting the interval's recorded pending risk restores cap compliance. No blocked-candidate return, fill, slippage or later outcome is imputed.
 - Complete passage requires material expired risk-hours, at least `+5pp` and `2x` expired-state block-rate lift, and two direct expired blocks spanning two components/dates. No direct expired block plus no rate lift is the strong falsifier.
 - Declaration SHA-256 is `F2F0F2384E10E19B37BCED877481A1CD7187334D891BB24F0AF1666078CA4C9D`. No interval aggregate, risk-hour, block-rate, direct-cause or verdict metric has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.
+
+## STATE-0194 - 2026-08-27
+
+- Unit 077 declaration commit `7c55859ae2c58536ad383e53455d487445d23be9` reached origin before the first invocation. All immutable pins, source semantics and prior-result anchors passed.
+- The fixed pipeline stopped during final result-object preparation because PowerShell StrictMode rejects shorthand property projection on an empty `directExpired` collection. `ConvertTo-Json` never ran, so stdout contained no resource or opportunity metric and no verdict was made.
+- Used the sole permitted pre-output implementation correction: explicit `ForEach-Object` enumeration replaces only `.Component` and `.Date` collection shorthand. It makes empty arrays serializable and changes no row, event, join, formula, threshold, gate or decision.
+- Correction receipt SHA-256 is `C7B50DD9874E2ADCD2B7989B194477651D5A72B492AE34801F221295C2D6E610`. One successful fixed aggregation remains, the implementation-correction allowance is exhausted and metric reruns remain zero.
+- No data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.

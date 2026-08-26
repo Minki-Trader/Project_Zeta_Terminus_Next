@@ -1,0 +1,46 @@
+{
+  "schema": "zeta-next-pending-reservation-risk-tax-preoutput-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FROZEN_BEFORE_ANY_RESOURCE_OR_OPPORTUNITY_METRIC_WAS_EMITTED",
+  "unit": "pending-reservation-risk-tax-077",
+  "declaration_sha256": "F2F0F2384E10E19B37BCED877481A1CD7187334D891BB24F0AF1666078CA4C9D",
+  "failed_invocation": {
+    "stage": "final result-object preparation after the fixed in-memory pipeline, before ConvertTo-Json output",
+    "exception": "StrictMode rejected direct property projection on an empty directExpired collection: The property 'Component' cannot be found on this object.",
+    "stdout_economic_metrics": 0,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0,
+    "judgment_or_verdict_made": false
+  },
+  "implementation_only_correction": {
+    "old": [
+      "$directExpired.Component | Sort-Object -Unique",
+      "$directExpired.Date | Sort-Object -Unique"
+    ],
+    "new": [
+      "$directExpired | ForEach-Object { $_.Component } | Sort-Object -Unique",
+      "$directExpired | ForEach-Object { $_.Date } | Sort-Object -Unique"
+    ],
+    "scope": "Empty-collection-safe property enumeration during output preparation only.",
+    "unchanged": [
+      "all seven immutable inputs and declaration hash",
+      "event ordering, interval pairing, endpoints, risk parsing and duration",
+      "candidate population, Passive bit 32 mask, interval join and group labels",
+      "risk-block and direct-reservation-cause formulas",
+      "resource, block-rate, risk-ratio and direct-count formulas",
+      "density, complete, falsifier, verdict and decision rules",
+      "all exclusions, automatic-followup prohibitions and execution budget"
+    ],
+    "outcome_dependent_spec_change": false
+  },
+  "budget_after_correction": {
+    "successful_fixed_aggregations_remaining": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_correction_sha_update_single_frontier_memory_commit_push_then_run_the_single_remaining_fixed_aggregation"
+}
