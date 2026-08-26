@@ -1,0 +1,70 @@
+{
+  "schema": "zeta-next-research-artifact-retention-sweep-v1",
+  "created_at_local": "2026-08-27",
+  "trigger": "system_drive_free_space_below_30_gib_before_a_new_dedicated_lab_portable",
+  "scope": "Only three exact Git-ignored duplicate Portable or import-quarantine roots belonging to closed invalid families.",
+  "preconditions": {
+    "repository": "Project_Zeta_Terminus_Next",
+    "git_head": "b49c193c978f0e6d40807f13207382bec9064e58",
+    "all_targets_verified_inside_workspace": true,
+    "all_targets_git_ignored": true,
+    "all_targets_owned_by_closed_families": true,
+    "active_process_owners_of_targets": 0,
+    "live_terminal_pid_observed_only_for_exclusion": 15080,
+    "live_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "free_space_before_gib_observed": 28.81
+  },
+  "removed_targets": [
+    {
+      "path": "lab/runtime/hsc60-portable/",
+      "family": "native-hold-schedule-curve-v1",
+      "closed_verdict": "INVALID_NATIVE_HOLD_SCHEDULE_MATRIX_NO_VERDICT",
+      "files_before": 709,
+      "bytes_before": 5971034772,
+      "files_after": 0,
+      "empty_directory_placeholders_after": 83
+    },
+    {
+      "path": "lab/runtime/msrl62-portable/",
+      "family": "market-stop-reverse-lot-sizing-v1",
+      "closed_verdict": "INVALID_MARKET_STOP_REVERSE_LOT_EXECUTION_OR_RECONSTRUCTION_NO_VERDICT",
+      "files_before": 781,
+      "bytes_before": 6349025755,
+      "files_after": 0,
+      "empty_directory_placeholders_after": 66
+    },
+    {
+      "path": "lab/runtime/msrl62-copy-import-quarantine/",
+      "family": "market-stop-reverse-lot-sizing-v1",
+      "closed_verdict": "INVALID_MARKET_STOP_REVERSE_LOT_EXECUTION_OR_RECONSTRUCTION_NO_VERDICT",
+      "files_before": 1152,
+      "bytes_before": 2096749730,
+      "files_after": 0,
+      "empty_directory_placeholders_after": 108
+    }
+  ],
+  "totals": {
+    "files_removed": 2642,
+    "bytes_removed": 14416810257,
+    "gib_removed": 13.43,
+    "free_space_immediately_after_gib_observed": 42.24,
+    "free_space_at_declaration_recheck_bytes": 45280346112,
+    "free_space_at_declaration_recheck_gib": 42.17
+  },
+  "preserved": [
+    "all tracked repository files",
+    "all family declarations, results, closures and compile receipts",
+    "all evidence-referenced Unit 060 and Unit 062 run artifacts",
+    "canonical lab/runtime/tester-portable/ market history",
+    "canonical candidate and lifecycle ledgers",
+    "sole forward baseline and every Live source, package, state, log and runtime"
+  ],
+  "method": {
+    "dry_run_first": true,
+    "command_family": "git clean -fdX -- <exact target>",
+    "recursive_target_resolution_verified": true,
+    "recovery": "The removed ignored duplicate runtime/cache files are not recoverable from Git; all durable evidence and canonical inputs required to interpret the closed units were preserved."
+  },
+  "result": "RETENTION_SWEEP_COMPLETE_NEW_DEDICATED_LAB_RUNTIME_ALLOWED"
+}

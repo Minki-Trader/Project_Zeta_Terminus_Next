@@ -1,0 +1,209 @@
+{
+  "schema": "zeta-next-all-slot-evaluation-clock-shape-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_063_DECLARATION_FROZEN_BEFORE_RUNTIME_COPY_DATA_ACQUISITION_OR_FORWARD_OUTCOME",
+  "unit": "all-slot-evaluation-clock-shape-063",
+  "family": "all-slot-evaluation-clock-shape-v1",
+  "title": "RC16 All-Slot Evaluation Clock Shape",
+  "macro_program": {
+    "id": 3,
+    "name": "order_time_session",
+    "korean_name": "주문·시각·세션"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"],
+    "transfer_path": "The unchanged RC16 micro signal is observed at every available M30 clock slot; its slot-wide eight-bar response and component-local non-overlap starts determine whether the current once-daily clock can plausibly transmit into the portfolio's missing daily turnover before any full-portfolio intervention is considered."
+  },
+  "central_question": "When the unchanged long-only RC16 range-compression signal is evaluated at every available US30 M30 decision bar rather than only 13:30, is its eight-bar market response broadly positive and sufficiently clock-diffuse across both 2025 and completed 2026 months to justify one later full-portfolio real-tick all-slot candidate?",
+  "research_bundle": {
+    "name": "full_clock_shape_then_component_local_capacity_transmission",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: the full supported M30 slot curve of ATR-normalized eight-bar forward return and maximum adverse excursion",
+      "transmission: greedy component-local non-overlap starts per eligible day versus the native 13:30 signal clock",
+      "falsification: native-slot concentration, four fixed clock quadrants and independent 2025 versus completed-month 2026 shape consistency"
+    ],
+    "not_a_time_selection_or_grid": true,
+    "all_supported_slots_reported": true
+  },
+  "why_now": {
+    "current_bottleneck": "The portfolio's historical average first-fill rate is about 2.14 per normal day versus a binding target of 3.0, while RC16 evaluates an M30-computable feature only once at 13:30. The actual information value is whether the clock broadly preserves the signal, not which neighboring minute looks best.",
+    "connection_bridge": "A broad all-slot shape could create at least the missing 0.86 lifecycle-starting opportunities per day before portfolio admission; a native-only shape would show that the binding RC16 result is inseparable from its clock. Either result changes whether a later portfolio intervention is worth implementing.",
+    "perspective_distance": "Units 061 and 062 were Program 5 macro-admission and micro stop/lot questions and both closed invalid. Unit 063 moves to Program 3, begins at the meso decision clock, uses direct bar-path observations rather than account-risk reconstruction or MQL intervention, and tests pre-entry opportunity creation.",
+    "difference_from_prior_program_3": "Unit 056 conditioned realized entries on incumbent or flat handoff and Unit 047 compared Monday and Friday entry states. Unit 063 changes neither admission nor a calendar subgroup: it observes one frozen signal over the complete clock surface before any trade exists.",
+    "decision_if_true": "Retain exactly one later, separately declared, full-portfolio real-tick RC16 all-slot candidate using every supported slot and the unchanged signal/hold contract. Unit 063 itself selects no time and authorizes no EA or Live change.",
+    "decision_if_false": "Preserve the 13:30 clock and close the all-slot expansion without selecting a favorable time subset, changing the signal threshold/window, or rescuing a session.",
+    "decision_if_invalid_or_sparse": "Record an observation gap or invalid reconstruction and retain no candidate. Do not repair the same family or infer a clock conclusion."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Cross common-beta decomposition remains connected but unopened. Its current-capital hedge is known to be constrained and it does not address the immediate turnover bottleneck as directly as Unit 063.",
+    "program_2": "No new causal external-market or scheduled-event source outranks the present clock question after invalid Unit 058.",
+    "program_3": "Selected because the all-slot proposal has both a concrete turnover bridge and a new complete-clock data role; it is not an adjacent repair of Units 042, 047 or 056.",
+    "program_4": "Unit 060 is closed invalid and no hold/environment repair is allowed.",
+    "program_5": "Units 061 and 062 are closed invalid without same-family repair; no further risk-accounting, ATR, lot or slot-cap variant opens here.",
+    "program_7": "No meta audit changes the immediate implementation decision before the two remaining external-memo proposals are assessed.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare all active programs and heights before considering Cross decomposition. Do not continue into a time, threshold, window, direction, hold or admission variant."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "US30 M30 bars from the sole Project Zeta Terminus Next Lab market-history lineage",
+      "the unchanged RC16 16-bar signed range-compression feature and long threshold 1.5",
+      "all actually available M30 clock labels in 2025 and 2026-01-02 through 2026-07-31",
+      "eight available M30 bars from evaluation open to exit open"
+    ],
+    "excluded": [
+      "RC4 or another component, symbol, direction, signal threshold, compression window or direction lookback",
+      "time-slot, session, weekday, month, volatility, feature-strength or outcome-tail selection",
+      "actual fills, spread/slippage P/L, stop placement, lot, risk, admission, shared slots or full-portfolio counterfactual",
+      "2026 partial August, current Live data, broker positions, orders, deals or account state",
+      "MQL source, MetaEditor compile, MT5 Strategy Tester, test CLI, validator, parity product or reusable analysis tool"
+    ],
+    "automatic_followups_forbidden": [
+      "best-slot or top-K-slot candidate",
+      "13:00, 13:30 or neighboring-window refinement",
+      "alternate threshold, compression length, hold length, direction or ATR definition",
+      "session-only, weekday, month or volatility rescue",
+      "immediate EA, portfolio, Live or promotion action"
+    ]
+  },
+  "immutable_inputs_before_forward_outcome": {
+    "sole_forward_baseline": {
+      "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+      "commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+      "rc16_source": "src/Include/ZetaTerminusNext/Strategies/ZetaRC16.mqh",
+      "shared_feature_source": "src/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh"
+    },
+    "candidate_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-candidates.csv",
+      "bytes": 2724613,
+      "sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+      "rc16_component_id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "known_evaluations_through_2026_07_31": 151,
+      "passed_through_2026_07_31": 39,
+      "not_met_through_2026_07_31": 112,
+      "duplicate_known_decision_bars": 0,
+      "first_known_decision_bar": "2026.01.02 13:30",
+      "last_known_decision_bar_through_july": "2026.07.29 13:30"
+    },
+    "canonical_us30_hcc": [
+      {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US30/2024.hcc", "bytes": 21317595, "sha256": "0F951D20E738BDABE4F8058A5F1546B1A3D928EB2684BDA535574856D6463940"},
+      {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US30/2025.hcc", "bytes": 21195126, "sha256": "5D67AEE850AF1E0CD2521ECCF8872DE71080973C4838585FFEFEC34AF88E4C58"},
+      {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US30/2026.hcc", "bytes": 14217381, "sha256": "E9778DE6189BF9C0860BB9C67F1AA40EFC47494A8C8A85033708DC2F0D71729B"}
+    ],
+    "retention_receipt": {
+      "path": "lab/evidence/RESEARCH_ARTIFACT_RETENTION_SWEEP_20260827_V2.json",
+      "bytes": 2960,
+      "sha256": "FBFCAE83F7D67911AC7FDBECE367F7DA1B02020A83EF42047C19214158C669EE"
+    }
+  },
+  "data_role_and_acquisition": {
+    "role": "Selection on complete 2025 clock shape plus temporal confirmation on completed 2026 months. This is market-path observation only, not trade or portfolio outcome evidence.",
+    "selection_period": {"name": "SELECTION_2025", "evaluation_from_inclusive": "2025-01-02 00:00:00", "evaluation_to_exclusive": "2026-01-01 00:00:00"},
+    "confirmation_period": {"name": "CONFIRM_2026_COMPLETE_MONTHS", "evaluation_from_inclusive": "2026-01-02 00:00:00", "evaluation_to_exclusive": "2026-08-01 00:00:00"},
+    "bar_acquisition_range": {"from_inclusive": "2024-12-01 00:00:00", "to_exclusive": "2026-08-01 00:00:00"},
+    "runtime": "lab/runtime/asec63-portable/",
+    "runtime_origin": "lab/runtime/tester-portable/",
+    "runtime_copy_scope": "One independent physical minimal Portable containing terminal support, Config and only the required US30 history/symbol scope; no junction, link, Tester cache, report tree, other-family executable or Live dependency.",
+    "acquisition_method": "One MetaTrader5 Python API copy_rates_range call for US30 TIMEFRAME_M30 through the dedicated Portable; permitted methods are initialize, symbol_select, copy_rates_range, last_error and shutdown only.",
+    "forbidden_api_calls": ["account_info", "positions_get", "orders_get", "history_orders_get", "history_deals_get", "order_send"],
+    "export": "evidence/US30_M30_BARS_20241201_20260801.csv",
+    "columns": ["time_epoch", "time_utc", "open", "high", "low", "close", "tick_volume", "spread", "real_volume"],
+    "time_contract": "Use the terminal bar epoch exactly as returned and format it without a timezone remap. The 151-row 13:30 candidate-ledger parity gate determines whether that clock contract matches the frozen EA.",
+    "no_live_or_broker_state": true
+  },
+  "frozen_reconstruction": {
+    "normal_window": 96,
+    "compression_window": 16,
+    "direction_lookback": 8,
+    "completed_bar_count": 112,
+    "information_set": "At evaluation bar i, use exactly the 112 completed available M30 bars i-112 through i-1. Entry proxy is open[i]; no current-bar high, low or close enters the signal.",
+    "prior_range_samples": "For sample 0 through 95, log(max(high[sample:sample+16]) / min(low[sample:sample+16])).",
+    "normal_range": "Exact median of the 96 prior range samples, averaging the two central sorted values.",
+    "current_range": "The log high-low range of completed-bar indices 96 through 111.",
+    "direction_return": "log(close[111] / close[103]).",
+    "signed_tightness": "sign(direction_return) divided by current_range/normal_range; exactly zero when direction_return is zero.",
+    "signal": "signed_tightness >= 1.5, long only.",
+    "atr": "ATR14 from the fourteen completed bars immediately before evaluation, using true range against the preceding completed close and an arithmetic mean.",
+    "forward_return_atr": "(open[i+8] - open[i]) / ATR14_at_i, using the eighth next available M30 bar open.",
+    "mae_atr": "max(0, open[i] - min(low[i:i+8])) / ATR14_at_i over the entry bar through the bar immediately before exit.",
+    "clock_slot": "HH:MM of each actually available evaluation bar; no absent slot is synthesized.",
+    "quadrants": {
+      "Q1": "00:00 <= slot < 06:00",
+      "Q2": "06:00 <= slot < 12:00",
+      "Q3": "12:00 <= slot < 18:00",
+      "Q4": "18:00 <= slot < 24:00"
+    },
+    "native_slot": "13:30",
+    "nonnative": "every supported slot other than 13:30",
+    "eligible_day": "A calendar date within the period with at least one valid evaluation bar after all warmup and forward-horizon requirements; zero-signal eligible days remain in daily-rate denominators.",
+    "component_local_nonoverlap": "Sort all qualifying signals chronologically. Accept the first and suppress later signals until index i+8; a signal at exactly i+8 may start. This is an RC16-only capacity shadow and does not reconstruct portfolio admission."
+  },
+  "fixed_integrity_gate": [
+    "Declaration commit is pushed before runtime copy, MT5 initialization, bar export or any forward return.",
+    "The three canonical HCC inputs and candidate ledger retain exact bytes and SHA-256 before and after acquisition; the dedicated runtime may synchronize only its own copy.",
+    "Export has the exact declared columns, finite positive OHLC, high >= max(open, close), low <= min(open, close), nonnegative volumes/spread, unique strictly increasing epoch and no row at or after the exclusive acquisition boundary.",
+    "Every reconstructed candidate-ledger-known RC16 decision through July matches one exported 13:30 evaluation, all 151 feature values within absolute 1e-10 and all 151 pass flags exactly; there are zero extra joins, missing joins or duplicate known bars.",
+    "No forward-return, MAE, slot mean, daily rate or candidate gate is emitted before all input and parity checks pass."
+  ],
+  "fixed_density_gate": {
+    "eligible_days_each_period_minimum": 140,
+    "nonnative_qualifying_signals_each_period_minimum": 500,
+    "supported_nonnative_slot_definition": "At least ten qualifying signals in each period for the same nonnative HH:MM slot.",
+    "supported_nonnative_slots_each_period_minimum": 20,
+    "native_slot_signals_each_period_minimum": 20,
+    "quadrant_signals_each_period_minimum": 50,
+    "all_required": true
+  },
+  "fixed_broad_shape_gate": {
+    "pooled_value": "Nonnative mean forward_return_atr is strictly positive in both periods.",
+    "typical_slot": "Median supported-nonnative-slot mean forward_return_atr is strictly positive in both periods.",
+    "slot_breadth": "At least 60 percent of supported nonnative slots have positive mean forward_return_atr in each period.",
+    "quadrant_breadth": "At least three of four fixed quadrant means are positive in each period.",
+    "native_not_unique": "When native 13:30 mean is positive, nonnative pooled mean is at least 0.75 times native in that period; when native mean is nonpositive, the strictly positive nonnative pooled requirement is sufficient.",
+    "temporal_stability": "Absolute difference between the two periods' nonnative pooled mean forward_return_atr is no more than 0.20 ATR.",
+    "adverse_path": "Nonnative median mae_atr is no more than native median mae_atr plus 0.25 ATR in each period.",
+    "slot_concentration": "No single supported nonnative slot contributes more than 20 percent and the top four contribute no more than 50 percent of total positive supported-slot forward-return sum in either period.",
+    "all_required": true
+  },
+  "fixed_capacity_transmission_gate": {
+    "all_slot_nonoverlap_starts_per_eligible_day": "At least 1.00 in each period.",
+    "incremental_over_native_signals_per_eligible_day": "All-slot non-overlap starts minus native 13:30 qualifying signals is at least 0.86 per eligible day in each period.",
+    "nonnative_share_of_nonoverlap_starts": "At least 0.75 in each period.",
+    "interpretation_limit": "Passing indicates opportunity capacity only. It does not establish fills, costs, coexistence with current positions, shared-slot feasibility, portfolio P/L or drawdown.",
+    "all_required": true
+  },
+  "fixed_verdict_rules": {
+    "success": "PASS_BROAD_RC16_ALL_SLOT_CLOCK_SHAPE_RETAIN_ONE_PORTFOLIO_CANDIDATE only when integrity, density, broad-shape and capacity-transmission gates all pass in both periods.",
+    "valid_failure": "NO_BROAD_RC16_ALL_SLOT_CLOCK_SHAPE when integrity and density pass but any broad-shape or capacity-transmission requirement fails.",
+    "insufficient_density": "INSUFFICIENT_RC16_ALL_SLOT_DENSITY_NO_CANDIDATE when integrity passes but any density requirement fails.",
+    "invalid": "INVALID_RC16_ALL_SLOT_DATA_OR_RECONSTRUCTION_NO_VERDICT when any immutable input, acquisition, schema, bar, time or 151-row parity gate fails.",
+    "ambiguous": "AMBIGUOUS_RC16_ALL_SLOT_CLOCK_SHAPE_NO_CANDIDATE only when all declared integrity conditions pass but an unforeseen semantic condition prevents applying the frozen gates."
+  },
+  "execution_budget": {
+    "dedicated_runtime_physical_copies": 1,
+    "bar_acquisitions": 1,
+    "acquisition_only_corrections_before_any_metric": 1,
+    "successful_fixed_aggregations": 1,
+    "implementation_or_parser_corrections_before_any_metric": 1,
+    "metric_reruns": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration, README, retention receipt, Frontier memory and state before creating the dedicated runtime or opening bar-path outcomes.",
+    "If runtime initialization or acquisition produces no usable output, one acquisition-only correction is allowed before any metric; otherwise no second acquisition.",
+    "Run immutable-input and 151-row feature parity checks before forward-return construction. Failure closes invalid without a metric rerun or data-source substitution.",
+    "After the first successful fixed aggregation emits any forward metric, make no correction or rerun. Close with the observed valid, invalid, sparse or ambiguous verdict.",
+    "Do not select a time, inspect a favorable subgroup as a rescue, change any threshold/window/hold/ATR rule, simulate portfolio admission, implement an EA or touch Live.",
+    "Freeze family and evidence, minimally update state, commit and push, then recompare the whole question map before the remaining Cross proposal."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_declaration_then_create_one_minimal_dedicated_portable_acquire_one_us30_m30_bar_snapshot_and_run_one_fixed_aggregation"
+}
