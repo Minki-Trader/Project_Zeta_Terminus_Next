@@ -1,0 +1,71 @@
+{
+  "schema": "zeta-next-pending-reservation-risk-tax-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_INVALID_DENSITY_NO_CANDIDATE",
+  "unit": "pending-reservation-risk-tax-077",
+  "family": "pending-reservation-risk-tax-v1",
+  "verdict": "INVALID_PENDING_RESERVATION_RISK_TAX_NO_VERDICT",
+  "evidence": {
+    "declaration_sha256": "F2F0F2384E10E19B37BCED877481A1CD7187334D891BB24F0AF1666078CA4C9D",
+    "preoutput_correction_sha256": "C7B50DD9874E2ADCD2B7989B194477651D5A72B492AE34801F221295C2D6E610",
+    "result_sha256": "EB6B7547CE3C6CF70D9A4349B258ABAEE4DD1D51E52C1DAB47D8D5B7B102AE76",
+    "result_bytes": 6184
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_preoutput_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "all_pins_and_anchors_passed": true,
+    "candidate_rows": 4043,
+    "passed_signals": 398,
+    "aggregate_risk_blocks": 14,
+    "pending_intervals": 119,
+    "filled_intervals": 92,
+    "expired_intervals": 27,
+    "strict_topology_and_join_passed": true,
+    "density_passed": false
+  },
+  "findings": {
+    "resource_quantity": "Expired intervals supplied 191.05855 of 274.12625 planned-risk-hours, or 69.6973%, because their mean duration was essentially one hour versus 0.14531 hours for filled intervals.",
+    "opportunity_density": "Only 4 non-Passive passed signals occurred during expired-pending state and 5 during filled-pending state, versus frozen minima of 10 and 20. Pending states contained only one aggregate-risk block versus the required two.",
+    "direct_accounting": "The sole direct cap-relief row occurred during a pending order that later filled, not expired. Expired-pending state contained zero blocks, but this cannot trigger the strong falsifier because density failed.",
+    "identification": "The ledger measures a large reserved resource quantity but does not contain enough contemporaneous decision opportunities to price its expired-order displacement effect."
+  },
+  "gates": {
+    "expired_risk_hour_share_passed": true,
+    "density_passed": false,
+    "complete_tax_passed": false,
+    "strong_falsifier_raw_conditions_passed": true,
+    "strong_falsifier_eligible": false,
+    "strong_falsifier_triggered": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "current full pending-risk reservation, Passive lifetime and first-come admission behavior",
+      "descriptive expired planned-risk-hour share only"
+    ],
+    "discard": [
+      "expired-pending tax or harmlessness conclusion",
+      "pending discount, shorter lifetime, cap, slot, priority, order-type, selector, EA or Live candidate"
+    ],
+    "observation_gap": "Wait for naturally denser future evidence; do not create a logger or same-family run to manufacture density.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "same_family_rescue_opened": false,
+  "whole_map_recomparison_required": true,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_closure_sha_update_single_frontier_memory_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_claude_hypothesis"
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-pending-reservation-risk-tax-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_077_FIXED_AGGREGATION_COMPLETE_DENSITY_FAILED",
+  "unit": "pending-reservation-risk-tax-077",
+  "family": "pending-reservation-risk-tax-v1",
+  "declaration": {
+    "sha256": "F2F0F2384E10E19B37BCED877481A1CD7187334D891BB24F0AF1666078CA4C9D",
+    "commit": "7c55859ae2c58536ad383e53455d487445d23be9",
+    "committed_and_pushed_before_aggregation": true
+  },
+  "preoutput_correction": {
+    "sha256": "C7B50DD9874E2ADCD2B7989B194477651D5A72B492AE34801F221295C2D6E610",
+    "commit": "dadb5c1",
+    "committed_and_pushed_before_remaining_aggregation": true,
+    "scope": "Empty-collection-safe output property enumeration only."
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_preoutput_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "integrity": {
+    "all_seven_input_pins_passed": true,
+    "source_semantics_passed": true,
+    "prior_result_anchors_passed": true,
+    "candidate_rows": 4043,
+    "unique_candidate_record_ids": 4043,
+    "all_component_passed_signals": 398,
+    "all_aggregate_risk_blocks": 14,
+    "pending_intervals": 119,
+    "filled_intervals": 92,
+    "expired_intervals": 27,
+    "non_passive_pending_mask_rows": 65,
+    "strict_interval_topology_passed": true,
+    "pending_mask_join_passed": true,
+    "density_passed": false
+  },
+  "pending_resource": {
+    "filled": {
+      "intervals": 92,
+      "planned_risk_hours": 83.06770386111111,
+      "mean_duration_hours": 0.14530797101449275,
+      "mean_planned_risk_usd": 6.599764130434784
+    },
+    "expired": {
+      "intervals": 27,
+      "planned_risk_hours": 191.05854886111112,
+      "mean_duration_hours": 0.9999794238683127,
+      "mean_planned_risk_usd": 7.076370370370371
+    },
+    "total_planned_risk_hours": 274.12625272222226,
+    "expired_share": 0.6969728253452421,
+    "expired_share_gate_at_least_0_20": true,
+    "interpretation": "Expired orders consume a large descriptive share because they remain pending for almost the full one-hour lifetime, while filled orders terminate quickly. This alone does not establish displaced opportunity."
+  },
+  "opportunity_population": {
+    "definition": "Non-Passive candidate rows with signal_known=1 and signal_passed=1.",
+    "rows": 277,
+    "expired_pending": {
+      "rows": 4,
+      "aggregate_risk_blocks": 0,
+      "block_rate": 0.0,
+      "direct_reservation_caused_blocks": 0
+    },
+    "filled_pending": {
+      "rows": 5,
+      "aggregate_risk_blocks": 1,
+      "block_rate": 0.2,
+      "direct_reservation_caused_blocks": 1
+    },
+    "no_pending": {
+      "rows": 268,
+      "aggregate_risk_blocks": 12,
+      "block_rate": 0.04477611940298507,
+      "direct_reservation_caused_blocks": 0
+    },
+    "expired_minus_no_pending_block_rate": -0.04477611940298507,
+    "expired_to_no_pending_risk_ratio": 0.0,
+    "direct_expired_components": 0,
+    "direct_expired_dates": 0
+  },
+  "direct_accounting_rows": [
+    {
+      "server_time": "2026.03.06 16:00:00",
+      "pending_terminal_class": "FILLED_PENDING",
+      "blocked_component": "Return",
+      "pending_planned_risk_usd": 6.0599,
+      "attempted_aggregate_after_usd": 18.303480000000192,
+      "aggregate_cap_usd": 18.179640000000187,
+      "after_removing_pending_usd": 12.243580000000193,
+      "interpretation": "This one recorded cap block is arithmetically attributable to pending reservation, but the pending order later filled and therefore is not evidence for the expired-order tax thesis."
+    }
+  ],
+  "fixed_gates": {
+    "density": {
+      "expired_pending_rows_at_least_10": false,
+      "filled_pending_rows_at_least_20": false,
+      "no_pending_rows_at_least_200": true,
+      "combined_pending_blocks_at_least_2": false,
+      "passed": false
+    },
+    "complete_tax": {
+      "expired_risk_hours_share_at_least_0_20": true,
+      "expired_rate_difference_at_least_0_05": false,
+      "expired_risk_ratio_at_least_2": false,
+      "direct_expired_blocks_at_least_2": false,
+      "direct_expired_components_at_least_2": false,
+      "direct_expired_dates_at_least_2": false,
+      "passed": false
+    },
+    "strong_falsifier": {
+      "zero_direct_expired_blocks": true,
+      "expired_rate_no_greater_than_no_pending": true,
+      "raw_conditions_passed": true,
+      "eligible_after_density": false,
+      "triggered": false
+    }
+  },
+  "verdict": "INVALID_PENDING_RESERVATION_RISK_TAX_NO_VERDICT",
+  "decision": {
+    "preserve": [
+      "current full pending planned-risk reservation",
+      "current Passive lifetime, order construction and first-come admission contract",
+      "the descriptive observation that expired intervals consumed 69.6973% of measured pending planned-risk-hours"
+    ],
+    "discard": [
+      "a current claim that expired pending reservation causes material cross-component admission loss",
+      "a current claim that pending reservation is economically harmless",
+      "pending discount, lifetime, cap, slot, priority, order-type, selector, EA or Live candidate"
+    ],
+    "observation_gap": "A naturally denser future ledger would need substantially more non-Passive passed signals and cap blocks during pending intervals. No new logger or same-family run is opened for that gap.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "filled-pending-only rescue based on the single Return block",
+    "long-lifetime or expired-only threshold variant",
+    "30/45-minute lifetime or fractional reservation counterfactual",
+    "component, date, month, session or clock subgroup",
+    "Unit 061 slot formula repair or turnover reinterpretation"
+  ],
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_update_single_frontier_memory_commit_push_then_recompare_and_continue_to_a_connected_distant_claude_hypothesis"
+}

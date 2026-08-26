@@ -1607,3 +1607,12 @@
 - Used the sole permitted pre-output implementation correction: explicit `ForEach-Object` enumeration replaces only `.Component` and `.Date` collection shorthand. It makes empty arrays serializable and changes no row, event, join, formula, threshold, gate or decision.
 - Correction receipt SHA-256 is `C7B50DD9874E2ADCD2B7989B194477651D5A72B492AE34801F221295C2D6E610`. One successful fixed aggregation remains, the implementation-correction allowance is exhausted and metric reruns remain zero.
 - No data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0195 - 2026-08-27
+
+- Unit 077 correction commit `dadb5c1bd8e6e64185be30b953461103e9fef142` reached origin before the one successful fixed aggregation. All seven pins, source/prior anchors, 4,043 unique candidate rows, 119 strict PLACE-to-FILL/EXPIRE intervals and pending-mask joins passed.
+- Filled versus expired pending resource was `83.06770 / 191.05855` planned-risk-hours; expired share `69.6973%` passed the resource threshold because expiries lasted essentially one hour while fills averaged `0.14531h`.
+- Decision opportunity was too sparse: expired-pending had `4` non-Passive passed rows and `0` cap blocks, filled-pending `5 / 1`, and no-pending `268 / 12`. The frozen minima were `10 / 20 / 200` plus two pending-state blocks.
+- The only direct cap-relief row was Return during an order that later filled. The raw expired-state falsifier conditions held, but density failure made them ineligible for a harmlessness verdict.
+- Closed `INVALID_PENDING_RESERVATION_RISK_TAX_NO_VERDICT`. Preserve full pending reservation, Passive lifetime and first-come admission; the large expired risk-hour share is descriptive only. No pending discount/lifetime, cap, slot, priority, order-type, selector, EA or Live candidate remains.
+- Result/closure SHA-256 values are `EB6B7547CE3C6CF70D9A4349B258ABAEE4DD1D51E52C1DAB47D8D5B7B102AE76` / `ACF6CB8817F57FE7CC0E1268DFC105EEECF43633C78CB21B41F19CF801D94920`. One successful aggregation, one pre-output correction and zero metric reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
