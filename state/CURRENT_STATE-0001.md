@@ -783,3 +783,10 @@
 - Exact CXR2 Live PID `15080` passed release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c` and new-entry `1/1` handshake. No second `terminal64.exe` was observed.
 - Local healthy snapshots advanced state sequence `2202 → 2203` and server time `2026.08.26 03:21:01 → 03:22:01`; owned positions, pending orders, margin and planned risk remained zero, with zero safety stop, persistence failure, broker mismatch, foreign exposure, warning or alert.
 - Computer-use visual verification found the exact Portable MT5 account window titled `81957644 - FPMarketsSC-Live - Hedge - First Prudential Markets Limited`. Korean dashboard PID `28508` has the expected title, a nonzero visible window handle and a responding process. The fresh Live start is complete.
+
+## STATE-0098 - 2026-08-26
+
+- The user's macro research map now assigns each unit to one of Programs 1-5 or 7 and prevents the Foundry from repeatedly opening nearby micro-hypotheses in one theme. Program 6 `실행·복구·브로커 안전` is outside this Goal. The considered same-symbol directional-overlap question was not declared because it was adjacent to recent slot/interactions work.
+- Opened only Unit 039 `portfolio-cost-resilience-envelope-v1` under Program 5 `포트폴리오·자본·위험`. The immutable six-strategy event matrix is evaluated once under exactly `2x/3x/4x` arithmetic observed-cost books; those are economic lot-allocation stresses, not Program 6 broker/execution research, and no alternate multiplier, cost-component split, subgroup or adjacent rescue is permitted.
+- A passing strategy may retain at most one later deposit-funded incremental-lot Proxy that preserves every base opportunity, base minimum lot and the exact 4%/12% gates. A fragile strategy cannot be suppressed or reduced by this unit.
+- Declaration SHA-256 is `E541EEC5CC149693EDD7531BB52D8CF1E45A4C50656B16A405E4F2CD164D0F43`. Outcomes remain unopened until this boundary is committed and pushed. No MQL, Tester, Live source, runtime, state, log or broker/account surface was opened.
