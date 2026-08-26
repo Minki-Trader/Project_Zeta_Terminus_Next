@@ -1,0 +1,256 @@
+{
+  "schema": "zeta-next-rc16-deposit-funded-incremental-volume-proxy-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_044_FIXED_AGGREGATION_COMPLETE_INVALID_RISK_ENVELOPE",
+  "unit": "rc16-deposit-funded-incremental-volume-proxy-044",
+  "family": "rc16-deposit-funded-incremental-volume-proxy-v1",
+  "declaration_sha256": "033EC1D8E53EFAB98C9388AFDB45ECC14A4CADB5D07C070D08B87E3E30BBFBCD",
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "post_declaration_failed_invocations": 0,
+    "post_metric_corrections": 0,
+    "predeclaration_discarded_structural_invocations": 2,
+    "predeclaration_note": "One preliminary static-risk attempt used the wrong planned-risk field/ordering and was discarded; a later volume-feasibility command had a syntax error before output. Neither accessed close economics or informed any frozen value or gate.",
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED",
+    "program_6_opened": false
+  },
+  "core_integrity": {
+    "passed": true,
+    "input_files": 6,
+    "data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "lifecycle_pending_risk_volume_close_faults": 0,
+    "actual_net_usd": 444.19,
+    "stressed_2x_net_usd": 407.047700000006,
+    "observed_cost_unit_usd": 37.142299999995,
+    "base_4x_net_usd": 332.763100000015,
+    "base_4x_profit_factor": 1.279836644064,
+    "base_4x_max_closed_drawdown_usd": 32.252399999998,
+    "base_4x_net_to_drawdown": 10.317467847355
+  },
+  "risk_envelopes": {
+    "DEPOSIT_200": {
+      "LINEAR": {
+        "admissions": 2346,
+        "births": 2233,
+        "passive_placements": 707,
+        "reconstruction_faults": 0,
+        "position_cap_violations": 0,
+        "aggregate_cap_violations": 2,
+        "nonpositive_capital_events": 0,
+        "minimum_conservative_capital_usd": 165.71,
+        "maximum_position_risk_fraction": 0.040042000764,
+        "maximum_aggregate_risk_fraction": 0.120083424808,
+        "passed": false
+      },
+      "SELECTIVE": {
+        "admissions": 2346,
+        "births": 2233,
+        "passive_placements": 707,
+        "reconstruction_faults": 0,
+        "position_cap_violations": 229,
+        "aggregate_cap_violations": 0,
+        "nonpositive_capital_events": 0,
+        "minimum_conservative_capital_usd": 181.8537,
+        "maximum_position_risk_fraction": 0.051922440077,
+        "maximum_aggregate_risk_fraction": 0.103110748193,
+        "passed": false
+      }
+    },
+    "DEPOSIT_300": {
+      "LINEAR": {
+        "admissions": 2346,
+        "births": 2233,
+        "passive_placements": 707,
+        "reconstruction_faults": 0,
+        "position_cap_violations": 1,
+        "aggregate_cap_violations": 3,
+        "nonpositive_capital_events": 0,
+        "minimum_conservative_capital_usd": 248.565,
+        "maximum_position_risk_fraction": 0.040042000764,
+        "maximum_aggregate_risk_fraction": 0.120083424808,
+        "passed": false
+      },
+      "SELECTIVE": {
+        "admissions": 2346,
+        "births": 2233,
+        "passive_placements": 707,
+        "reconstruction_faults": 0,
+        "position_cap_violations": 231,
+        "aggregate_cap_violations": 0,
+        "nonpositive_capital_events": 0,
+        "minimum_conservative_capital_usd": 278.2216,
+        "maximum_position_risk_fraction": 0.057650320568,
+        "maximum_aggregate_risk_fraction": 0.096097297814,
+        "passed": false
+      }
+    },
+    "passed": false,
+    "interpretation": "The fixed no-suppression 4%/12% closed-capital envelope failed. Selective extra RC16 volume scaled the observed stop budget above the 4% position cap broadly; even the exact linear anchor had small prior-snapshot aggregate overruns under this conservative Proxy contract."
+  },
+  "descriptive_books": {
+    "DEPOSIT_200": {
+      "DEPOSIT_ONLY": {
+        "executed_001_lifecycle_units": 2233,
+        "net_4x_usd": 332.7631,
+        "return_4x_percent": 166.38155,
+        "profit_factor_4x": 1.279836644064,
+        "max_closed_drawdown_4x_usd": 32.2524,
+        "max_closed_drawdown_4x_percent": 16.1262,
+        "net_to_drawdown_4x": 10.317467847355,
+        "net_per_001_lifecycle_unit_4x": 0.149020644872
+      },
+      "LINEAR": {
+        "executed_001_lifecycle_units": 4466,
+        "net_2x_usd": 814.0954,
+        "net_4x_usd": 665.5262,
+        "return_4x_percent": 332.7631,
+        "profit_factor_4x": 1.279836644064,
+        "max_closed_drawdown_4x_usd": 64.5048,
+        "max_closed_drawdown_4x_percent": 32.2524,
+        "net_to_drawdown_4x": 10.317467847355,
+        "net_per_001_lifecycle_unit_4x": 0.149020644872,
+        "period_net_4x_usd": {
+          "P1_2022H2_2023": 238.121,
+          "P2_2024": 76.978,
+          "P3_2025": 192.788,
+          "P4_2026_YTD": 157.6392
+        }
+      },
+      "SELECTIVE": {
+        "executed_001_lifecycle_units": 2505,
+        "net_2x_usd": 521.4857,
+        "net_4x_usd": 438.3771,
+        "return_4x_percent": 219.18855,
+        "profit_factor_4x": 1.327669061477,
+        "max_closed_drawdown_4x_usd": 36.0845,
+        "max_closed_drawdown_4x_percent": 18.04225,
+        "net_to_drawdown_4x": 12.148626141419,
+        "net_per_001_lifecycle_unit_4x": 0.175000838323,
+        "period_net_4x_usd": {
+          "P1_2022H2_2023": 156.5195,
+          "P2_2024": 46.753,
+          "P3_2025": 113.772,
+          "P4_2026_YTD": 121.3326
+        }
+      }
+    },
+    "DEPOSIT_300": {
+      "DEPOSIT_ONLY": {
+        "executed_001_lifecycle_units": 2233,
+        "net_4x_usd": 332.7631,
+        "return_4x_percent": 110.921033333338,
+        "profit_factor_4x": 1.279836644064,
+        "max_closed_drawdown_4x_usd": 32.2524,
+        "max_closed_drawdown_4x_percent": 10.7508,
+        "net_to_drawdown_4x": 10.317467847355,
+        "net_per_001_lifecycle_unit_4x": 0.149020644872
+      },
+      "LINEAR": {
+        "executed_001_lifecycle_units": 6699,
+        "net_2x_usd": 1221.1431,
+        "net_4x_usd": 998.2893,
+        "return_4x_percent": 332.7631,
+        "profit_factor_4x": 1.279836644064,
+        "max_closed_drawdown_4x_usd": 96.7572,
+        "max_closed_drawdown_4x_percent": 32.2524,
+        "net_to_drawdown_4x": 10.317467847355,
+        "net_per_001_lifecycle_unit_4x": 0.149020644872,
+        "period_net_4x_usd": {
+          "P1_2022H2_2023": 357.1815,
+          "P2_2024": 115.467,
+          "P3_2025": 289.182,
+          "P4_2026_YTD": 236.4588
+        }
+      },
+      "SELECTIVE": {
+        "executed_001_lifecycle_units": 2777,
+        "net_2x_usd": 635.9237,
+        "net_4x_usd": 543.9911,
+        "return_4x_percent": 181.330366666676,
+        "profit_factor_4x": 1.365930345365,
+        "max_closed_drawdown_4x_usd": 42.9015,
+        "max_closed_drawdown_4x_percent": 14.3005,
+        "net_to_drawdown_4x": 12.680001864738,
+        "net_per_001_lifecycle_unit_4x": 0.195891645661,
+        "period_net_4x_usd": {
+          "P1_2022H2_2023": 193.9785,
+          "P2_2024": 55.017,
+          "P3_2025": 131.15,
+          "P4_2026_YTD": 163.8456
+        }
+      }
+    },
+    "authority": "DESCRIPTIVE_ONLY_BECAUSE_RISK_ENVELOPE_INTEGRITY_FAILED"
+  },
+  "variant_results": {
+    "DEPOSIT_200_RC16_002": {
+      "incremental_rc16_period_net_4x_usd": {
+        "P1_2022H2_2023": 37.459,
+        "P2_2024": 8.264,
+        "P3_2025": 17.378,
+        "P4_2026_YTD": 42.513
+      },
+      "selective_to_linear_net_retention": 0.658692475217,
+      "selective_to_linear_volume_productivity_ratio": 1.174339558611,
+      "selective_minus_linear_net_to_drawdown": 1.831158294064,
+      "selective_minus_linear_drawdown_percentage_points": -14.21015,
+      "economic_checks_without_risk_envelope_passed": true,
+      "linear_risk_envelope_passed": false,
+      "selective_risk_envelope_passed": false,
+      "passed": false
+    },
+    "DEPOSIT_300_RC16_003": {
+      "incremental_rc16_period_net_4x_usd": {
+        "P1_2022H2_2023": 74.918,
+        "P2_2024": 16.528,
+        "P3_2025": 34.756,
+        "P4_2026_YTD": 85.026
+      },
+      "selective_to_linear_net_retention": 0.54492330029,
+      "selective_to_linear_volume_productivity_ratio": 1.314526895442,
+      "selective_minus_linear_net_to_drawdown": 2.362534017383,
+      "selective_minus_linear_drawdown_percentage_points": -17.9519,
+      "economic_checks_without_risk_envelope_passed": true,
+      "linear_risk_envelope_passed": false,
+      "selective_risk_envelope_passed": false,
+      "passed": false
+    }
+  },
+  "bundle": {
+    "both_variants_passed": false,
+    "descriptive_volume_productivity_improvement_positive_both": true,
+    "descriptive_net_to_drawdown_improvement_positive_both": true,
+    "all_base_opportunities_and_minimum_lots_preserved_in_arithmetic_books": true,
+    "passed": false
+  },
+  "selection": {
+    "retained_real_tick_ea_question": "NONE",
+    "selected_trading_candidate": "NONE",
+    "opens_automatically": false,
+    "stop_or_risk_geometry_rescue": false
+  },
+  "verdict": "INVALID_INPUT_OR_RISK_RECONSTRUCTION_NO_ALLOCATION_VERDICT",
+  "limitations": [
+    "All periods are already consumed and there is no clean holdout.",
+    "Scaled close economics assume notional linearity and cannot prove the changed stop geometry or actual open-equity path of a volume-modified EA.",
+    "The fixed prior-snapshot closed-capital envelope is intentionally conservative but not exact runtime proof.",
+    "The attractive descriptive economics cannot override the failed risk-envelope integrity contract."
+  ],
+  "next": "Write the fixed invalid closure, close Unit 044 with no EA seed, and recompare Programs 1-5 and 7 without a nearby volume, stop or risk rescue."
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "zeta-next-rc16-deposit-funded-incremental-volume-proxy-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_INVALID",
+  "unit": "rc16-deposit-funded-incremental-volume-proxy-044",
+  "family": "rc16-deposit-funded-incremental-volume-proxy-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "hashes": {
+    "declaration_sha256": "033EC1D8E53EFAB98C9388AFDB45ECC14A4CADB5D07C070D08B87E3E30BBFBCD",
+    "result_sha256": "FCD893F47B267AC1814F1B6E6E536A457F1C1EEB7404FA6B4B3310CAD80E1A4D"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "post_declaration_failed_invocations": 0,
+    "post_metric_corrections": 0,
+    "predeclaration_discarded_structural_invocations": 2,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED",
+    "program_6_opened": false
+  },
+  "core_integrity": {
+    "passed": true,
+    "input_files": 6,
+    "data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "lifecycles": 2233,
+    "lifecycle_pending_risk_volume_close_faults": 0,
+    "actual_net_usd": 444.19,
+    "stressed_2x_net_usd": 407.047700000006,
+    "base_4x_net_usd": 332.763100000015,
+    "base_4x_profit_factor": 1.279836644064,
+    "base_4x_max_closed_drawdown_usd": 32.252399999998,
+    "base_4x_net_to_drawdown": 10.317467847355
+  },
+  "risk_envelope": {
+    "passed": false,
+    "deposit_200": {
+      "linear_position_violations": 0,
+      "linear_aggregate_violations": 2,
+      "selective_position_violations": 229,
+      "selective_aggregate_violations": 0,
+      "linear_maximum_position_risk_fraction": 0.040042000764,
+      "linear_maximum_aggregate_risk_fraction": 0.120083424808,
+      "selective_maximum_position_risk_fraction": 0.051922440077,
+      "selective_maximum_aggregate_risk_fraction": 0.103110748193
+    },
+    "deposit_300": {
+      "linear_position_violations": 1,
+      "linear_aggregate_violations": 3,
+      "selective_position_violations": 231,
+      "selective_aggregate_violations": 0,
+      "linear_maximum_position_risk_fraction": 0.040042000764,
+      "linear_maximum_aggregate_risk_fraction": 0.120083424808,
+      "selective_maximum_position_risk_fraction": 0.057650320568,
+      "selective_maximum_aggregate_risk_fraction": 0.096097297814
+    },
+    "interpretation": "The frozen no-suppression 4% position and 12% aggregate closed-capital integrity contract failed at both deposits. Selective RC16 volume breached the position cap broadly, and the linear anchors also had small conservative-envelope overruns."
+  },
+  "descriptive_economics": {
+    "authority": "NON_AUTHORITATIVE_BECAUSE_RISK_ENVELOPE_INTEGRITY_FAILED",
+    "deposit_200": {
+      "linear_4x_net_usd": 665.5262,
+      "selective_4x_net_usd": 438.3771,
+      "selective_to_linear_net_retention": 0.658692475217,
+      "selective_to_linear_volume_productivity_ratio": 1.174339558611,
+      "selective_minus_linear_net_to_drawdown": 1.831158294064,
+      "selective_minus_linear_drawdown_percentage_points": -14.21015,
+      "economic_checks_without_risk_envelope_passed": true
+    },
+    "deposit_300": {
+      "linear_4x_net_usd": 998.2893,
+      "selective_4x_net_usd": 543.9911,
+      "selective_to_linear_net_retention": 0.54492330029,
+      "selective_to_linear_volume_productivity_ratio": 1.314526895442,
+      "selective_minus_linear_net_to_drawdown": 2.362534017383,
+      "selective_minus_linear_drawdown_percentage_points": -17.9519,
+      "economic_checks_without_risk_envelope_passed": true
+    },
+    "interpretation": "Both selective books would have passed every purely economic frozen check, but those attractive arithmetic results cannot authorize an allocation candidate after the risk-envelope integrity failure."
+  },
+  "verdict": "INVALID_INPUT_OR_RISK_RECONSTRUCTION_NO_ALLOCATION_VERDICT",
+  "retained_later_question": "NONE",
+  "selected_trading_candidate": "NONE",
+  "closed_scope": [
+    "No alternate deposit, volume step, partial tranche or blended strategy allocation.",
+    "No RC16 stop, risk or position-geometry rescue.",
+    "No opportunity suppression, base-lot reduction or changed 4%/12% envelope.",
+    "No substitution of another strategy or reuse of the descriptive economics as candidate authority.",
+    "No MQL, MetaTrader Tester, Program 6, EA or Live action."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable invalid closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}

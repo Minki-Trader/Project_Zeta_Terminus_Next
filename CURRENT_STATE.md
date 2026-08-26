@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0111`
+- Latest state ID: `STATE-0112`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: Program 5 Unit 044 `rc16-deposit-funded-incremental-volume-proxy-v1` is declaration-frozen before its sole scaled allocation aggregation
+- Active research boundary: none; Program 5 Unit 044 `rc16-deposit-funded-incremental-volume-proxy-v1` is closed invalid with no allocation or EA seed
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -500,13 +500,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Rejected before Unit 044 declaration and before reading any close value, stressed R, stop association or economic verdict. No Cross-only subgroup, one-signal relaxation, wider day/window or adjacent Program 1 context substitution is allowed after this density result.
 - No family was created and no seed survives. The compact Frontier ledger is synchronized through Unit 043 and records this rejected proposal. The next action is another whole-map comparison, not a rescue of this Program 1 proposal; Program 6 and Live remained untouched.
 
-## Open RC16 deposit-funded incremental volume Proxy Unit 044
+## Closed invalid RC16 deposit-funded incremental volume Proxy Unit 044
 
 - Recompared Programs 1-5 and 7 after the Program 1 proposal rejection and selected Program 5's sole Unit 039 seed only after intervening Programs `4/2/3/7`. This is not an automatic adjacent lot follow-up and does not reopen cost multiples, fragile-strategy suppression or same-symbol overlap.
 - Froze one natural-deposit bundle: at `$200`, RC16 alone moves to `0.02` while the other five strategies remain `0.01`; at `$300`, RC16 alone moves to `0.03`. Matching linear controls set every strategy to `0.02/0.03`, and deposit-only context keeps every strategy at `0.01`.
-- Outcome-free volume feasibility reconstructed all 2,233 births at exact `0.01`, including RC16 period counts `77/72/79/44`, with zero volume-step fault. A preliminary static-risk attempt was discarded because it mixed the wrong field/ordering contract; it read no close economics and informs no declaration value or gate.
-- Every book must preserve all 2,233 opportunities and the exact base minimum lot. Both selective deposits must pass a closed-capital 4%/12% risk envelope, positive all-period 4x economics, PF and net/DD improvement, no worse DD%, at least 50% linear-net retention, and at least 10% higher 4x net per executed 0.01-lifecycle unit.
-- A complete two-deposit pass can retain only one later independently named real-tick whole-six-strategy EA question; Unit 044 itself changes no source and authorizes no action. Declaration SHA-256 is `033EC1D8E53EFAB98C9388AFDB45ECC14A4CADB5D07C070D08B87E3E30BBFBCD`; scaled outcomes remain unopened until this boundary is committed and pushed. Program 6 and Live remain untouched.
+- Outcome-free volume feasibility reconstructed all 2,233 births at exact `0.01`, including RC16 period counts `77/72/79/44`, with zero volume-step fault. One preliminary static-risk attempt used the wrong field/ordering and one later feasibility command stopped on syntax before output; neither accessed close economics or informed a frozen value or gate.
+- The sole fixed aggregation then verified all six immutable files, 16,477 rows, 2,233 lifecycles, zero reconstruction fault and the base 4x anchors: net `$332.7631`, PF `1.27984`, closed DD `$32.2524` and net/DD `10.31747`.
+- The frozen risk-envelope integrity gate failed. At `$200`, LINEAR had `0/2` position/aggregate violations and SELECTIVE `229/0`; at `$300`, LINEAR had `1/3` and SELECTIVE `231/0`. Selective maximum position-risk fractions were `5.19224%` and `5.76503%`, above the fixed 4% cap.
+- Descriptively only, SELECTIVE retained `65.87%/54.49%` of LINEAR 4x net, raised volume productivity by `17.43%/31.45%`, improved net/DD by `+1.8312/+2.3625` and cut deposit-normalized closed DD by `14.2102/17.9519` points. Every purely economic gate passed, but none has candidate authority after risk integrity failed.
+- Closed `INVALID_INPUT_OR_RISK_RECONSTRUCTION_NO_ALLOCATION_VERDICT` with no allocation, EA or retained question. Declaration/result/closure SHA-256 values are `033EC1D8E53EFAB98C9388AFDB45ECC14A4CADB5D07C070D08B87E3E30BBFBCD` / `FCD893F47B267AC1814F1B6E6E536A457F1C1EEB7404FA6B4B3310CAD80E1A4D` / `CB7BAE6123D9CC03BC6359CA6DBD082EB6341B17FA1B8312596EE74863EEAF78`. No alternate deposit, partial tranche, stop/risk geometry, strategy substitution, opportunity suppression or base-lot reduction may rescue this unit. The next action is a whole-map Program 1-5 and 7 comparison; Program 6 and Live remain untouched.
 
 ## Required completion evidence
 
@@ -519,6 +521,6 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Current verdict
 
-Latest research verdict: `RC16_DEPOSIT_FUNDED_INCREMENTAL_VOLUME_PROXY_044_DECLARATION_FROZEN_OUTCOMES_UNOPENED`
+Latest research verdict: `INVALID_INPUT_OR_RISK_RECONSTRUCTION_NO_ALLOCATION_VERDICT`
 
 `LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_REALIZED_VARIANCE_ASYMMETRY_RESPONSE_032_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_033_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; NATIVE_DIRECTION_ASYMMETRY_VALUE_034_CLOSED_NO_FIELD; SAME_STRATEGY_INTERBIRTH_GAP_VALUE_035_CLOSED_NO_FIELD; US500_CLOSE_LOCATION_PRESSURE_RESPONSE_036_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; STRATEGY_OCCUPANCY_SLOT_VALUE_037_CLOSED_NO_INFORMATION_NO_PRIORITY_PROXY; US500_ORDINAL_ACCELERATION_RESPONSE_038_CLOSED_NO_DIRECTION_NO_PROTOTYPE`
