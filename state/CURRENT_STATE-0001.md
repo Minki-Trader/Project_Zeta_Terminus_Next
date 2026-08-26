@@ -1013,3 +1013,12 @@
 - US100 offset the native US30 maximum drawdown by `40.73%/77.55%/7.51%/-32.08%`. It reached 20% in only two periods and its largest positive-period contribution was `67.08%`; P4 amplified rather than relieved US30 stress.
 - Closed `PARTIAL_ONE_WAY_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_NO_AUTOMATIC_SUCCESSOR`. The asymmetry is a portfolio-path diagnosis only; mutual pass was required to retain a book-level capital question, so no allocation, lot, slot, priority, entry, exit, strategy-removal, EA or Live candidate survives.
 - Declaration/result/closure SHA-256 values are `F0B0D74808997B99C57356E7F46490209D7D05D34E2F1189DF2DE501B02B370F` / `894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1` / `014F331219802F78A060892F42BAF4AB7899FD5774AE3F1D8E1C234ED4ACFFE6`. Next is a whole-map comparison of Programs 1-5 and 7, not adjacent Program 5 work; Program 6, MQL, Tester, broker state and Live remained untouched.
+
+## STATE-0125 - 2026-08-26
+
+- Recompared Programs 1-5 and 7 after Unit 050 and opened only Program 7 Unit 051 `macro-frontier-attrition-topology-v1`. It is one finite whole-epoch audit, not an adjacent portfolio allocation, signal, rates, timing, RC4 or evidence-lane continuation.
+- Froze the complete first macro-allocation epoch Unit 039-050: 12 unique closed units with program counts `P1/P2/P3/P4/P5/P7 = 1/3/2/2/3/1`. All 12 closure files and top-level verdict schemas exist and match their frozen bytes/hashes.
+- The single bundle compares three nested attrition stages with one-unit-one-count: declared closure→authoritative verdict, authority→material PASS/PARTIAL finding, and material finding→implementable selected candidate. Retained seeds are context but do not count as selected candidates.
+- Each stage requires at least three lost units and at least 30% conditional loss. All three passing with no stage above 60% of total funnel loss yields the fixed multi-stage diagnosis; no epoch, subset, program weight or classification rescue exists.
+- This differs from Unit 043: it does not compare tracked versus fresh acquisition lanes and includes the complete post-043 macro epoch through Unit 050. It cannot create a default lane, scheduler, program suppression or candidate.
+- Census/declaration SHA-256 values are `F0D0D56EB22BB8E135A31262301C9878476806571E3775B94457C97693F2DA0D` / `9341B436F16ECD85CC670657ED756B53787BFD85850BDAE04456D9368A80D794`; classifications remain unopened until commit/push. Program 6, MQL, Tester, broker state and Live remain untouched.

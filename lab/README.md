@@ -64,6 +64,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/bidirectional-signal-transition-state-v1/`: 닫힌 Program 1 / Unit 048 source-free family; US30 지속-반전 `+0.04204R/-0.05170 stop`은 수익크기·양전략 stop 일관성 실패, US100 `+0.00925R/+0.00198 stop`은 무정보, 인접 신호 후속 없음
 - `research/prior-treasury-curve-move-context-v1/`: 닫힌 Program 2 / Unit 049 source-free family; 공식 미 재무부 2Y·10Y 동반상승 `-0.01578R/+0.00529 stop`, 동반하락 `+0.01560R/-0.00898 stop`으로 둘 다 크기·폭 관문 실패, 인접 금리 후속 없음
 - `research/natural-book-drawdown-complementarity-v1/`: 닫힌 Program 5 / Unit 050 source-free family; US30은 US100 최대 DD를 4/4 기간 광범위하게 상쇄했지만 역방향은 20% 기준 2/4와 P4 손실증폭으로 실패, 일방향 진단만 유지하고 배분·lot·slot 후속 없음
+- `research/macro-frontier-attrition-topology-v1/`: 열린 Program 7 / Unit 051 source-free family; 첫 거시 배분 epoch Unit 039-050 전체를 증거 권위·경제 구분력·후보 번역 세 attrition 층으로 한 번만 분류, underlying 결과·family 재개 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
