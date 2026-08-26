@@ -776,3 +776,10 @@
 - After Unit 038 was durably closed, the root launcher correctly refused to begin because `CURRENT_STATE.md` lacked its exact pre-start declaration even though the document already described the prior owner as absent.
 - A fresh process-only inventory found zero `terminal64.exe`; prior CXR2 PID `13328` and prior dashboard PID `4284` were absent. Current broker/account state was not polled at this documentation boundary.
 - The user explicitly directed Codex to complete the official fresh `0/0` preflight, start exact CXR2 at `1/1` Live only after that pass, and verify visible MT5 plus dashboard windows. `Existing real-account owner: none` is now stated explicitly for that fail-closed handoff; no safety gate is waived.
+
+## STATE-0097 - 2026-08-26
+
+- The official master path ran at committed Git `dfda2cc83a7c024033a7cf21de4b5f5c9ade7d01`. Preflight PID `28148` proved exact CXR2 release/Portfolio/account continuity, entries `0/0`, positions/orders/margin/planned risk `0/0/$0/$0`, balance/equity `$104.48/$104.48`, then stopped before Live start.
+- Exact CXR2 Live PID `15080` passed release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c` and new-entry `1/1` handshake. No second `terminal64.exe` was observed.
+- Local healthy snapshots advanced state sequence `2202 → 2203` and server time `2026.08.26 03:21:01 → 03:22:01`; owned positions, pending orders, margin and planned risk remained zero, with zero safety stop, persistence failure, broker mismatch, foreign exposure, warning or alert.
+- Computer-use visual verification found the exact Portable MT5 account window titled `81957644 - FPMarketsSC-Live - Hedge - First Prudential Markets Limited`. Korean dashboard PID `28508` has the expected title, a nonzero visible window handle and a responding process. The fresh Live start is complete.
