@@ -1504,3 +1504,12 @@
 - US100 did not broadly insure US30: the source-`US30_STRESS_US100_COUNTERBOOK` gate failed at `2/4` material periods, weighted offset `0.24620`, concentration `0.67077` and P4 offset `-0.32075`. The reverse US30-insures-US100 direction passed `4/4` with weighted `1.57271`.
 - Closed `NO_US100_INSURANCE_ONLY_ROLE_POSITIVE_RETURN_AND_WRONG_PROTECTION_DIRECTION`. Preserve US100 as a lower-yield positive-return sleeve that receives US30 protection; retain no cost-of-cover, shrink, allocation, slot, component, EA or Live candidate.
 - Result/closure SHA-256 values are `010200107F0C6935304C14406B1445BED15FC4DA892EF1FDA029F616120B6138` / `73618817E74660255EAF8A2A737A1738ADF3567AC2ABB1506293B8FDF3D2970F`. One successful synthesis, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0183 - 2026-08-27
+
+- Unit 072 closure commit `be6e45972719286af735ce3a2077352cffdc2aee` reached origin before Programs 1-5 and 7 plus micro/meso/macro heights were recomputed. No adjacent US100 book action opened.
+- Opened only Program 3 / micro→meso Unit 073 `order-type-realized-entry-cost-v1` from external card 22. Unit 072's high-turnover lower-yield US100 finding is the bridge; moving from macro book-role synthesis to entry-deal order mechanics supplies distance.
+- Pinned the current-spec P4 research lifecycle/candidate ledgers, their frozen result and the producing order-cost source. Premetric topology is 841 lifecycle rows, 356 births/closes, Cross 129 fills, Passive 92 fills, 119 Passive placed orders and 27 expiries.
+- Froze direct recorded cost per planned R, fill-time spread bps and lifecycle/attempted-order stressed value. Expiries receive zero realized net only in the attempt denominator and no imputed price, cost or counterfactual return.
+- The ledger cannot identify literal spread capture or adverse selection because placement-time executable quotes and expired-order returns are absent. It can distinguish a recorded direct-cost advantage, disadvantage or nondiscriminating recorder only.
+- Declaration SHA-256 is `56A22ADFFBA84DD53DB7010C445FA01EB3CADCAD1833C6329DA11D993ADE9708`. No order-type aggregate or verdict has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted; no data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
