@@ -66,6 +66,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/natural-book-drawdown-complementarity-v1/`: 닫힌 Program 5 / Unit 050 source-free family; US30은 US100 최대 DD를 4/4 기간 광범위하게 상쇄했지만 역방향은 20% 기준 2/4와 P4 손실증폭으로 실패, 일방향 진단만 유지하고 배분·lot·slot 후속 없음
 - `research/macro-frontier-attrition-topology-v1/`: 닫힌 Program 7 / Unit 051 source-free family; Unit 039-050 funnel `12→8→3→0`, 권위 `4/12`·구분력 `5/8`·후보번역 `3/3` 모두 실질 attrition으로 단일 병목 없음, 후속 감사·기본 lane·프로그램 억제 없음
 - `research/held-position-first-peer-exit-state-v1/`: 닫힌 Program 4 / Unit 052 source-free family; peer stop `+0.05546R/+0.00736 stop`, peer native `+0.03656R/-0.08223 stop`이나 전자는 크기·일관성, 후자는 R크기·Return 집중 실패, 관리 후속 없음
+- `research/us500-monthly-range-break-response-v1/`: 활성 Program 1 / Unit 053 family; 20개 완료 D1 범위 돌파 뒤 5개 D1 continuation/reversion 한 묶음을 고정했으며 P1 2025 전 MQL·compile·outcome 미개봉
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

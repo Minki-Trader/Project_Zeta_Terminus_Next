@@ -1,0 +1,184 @@
+{
+  "schema": "zeta-next-us500-monthly-range-break-response-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_053_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "us500-monthly-range-break-response-053",
+  "family": "us500-monthly-range-break-response-v1",
+  "title": "US500 Monthly-Range Break Response",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure",
+    "korean_name": "진입 신호·시장 구조",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    }
+  },
+  "question": "When a completed US500 daily close breaks beyond the full high or low of the preceding twenty completed daily market bars, does the next five-daily-bar path support a frequent and cost-positive continuation or reversion response?",
+  "hypothesis": "A close outside the preceding twenty-market-day range is a natural monthly-scale state change. Continuation represents persistent price discovery; reversion represents failed acceptance outside the old range. One of the two books is useful only if it survives actual executable spreads, an additional entry and exit spread, both breakout signs and separate calendar evidence.",
+  "why_now": "The whole-map comparison after Unit 052 first considered Program 3 through exact-time multi-signal order batches. Outcome-free feasibility found only 29 multi-signal timestamps among 2,400 exact signal times, so that proposal was rejected before allocation and is not widened. Program 1 now has the highest independent candidate value because this unit adds an unrepresented US500 monthly/weekly market structure and can translate directly to a later standalone prototype if it passes, without extending native-signal history, external rates, session edges, peer exits, book allocation or meta audits.",
+  "macro_recomparison": {
+    "program_1": "Selected for a fresh medium-horizon US500 price structure, not a transformation of current portfolio signals or an adjacent intraday observer state.",
+    "program_2": "Unit 049 is recent and closed without a rates successor; no adjacent external source or event variant opens.",
+    "program_3": "An independent exact-time multi-signal batch proposal was rejected outcome-free at 29 of 2,400 signal times. No wider clock window, scheduled-slot grouping or strategy subset may rescue it.",
+    "program_4": "Unit 052 just closed and no adjacent peer-exit or management state may open.",
+    "program_5": "Unit 050 is recent and explicitly retains no book allocation, lot or slot successor.",
+    "program_7": "Unit 051 is recent and explicitly retains no adjacent audit, scheduler or default lane.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not continue automatically into another US500 range length, holding horizon, breakout buffer, entry clock, symbol or direction subgroup."
+  },
+  "rejected_predeclaration_proposal": {
+    "program": 3,
+    "id": "exact-time-multi-signal-order-batch",
+    "outcome_free_feasibility": {
+      "native_signal_rows": 2429,
+      "exact_signal_times": 2400,
+      "single_signal_times": 2371,
+      "multi_signal_times": 29,
+      "maximum_signals_per_time": 2
+    },
+    "reason": "The proposed order-batch state is too sparse to support a broad portfolio Program 3 unit. No time-window widening or component-only rescue is allowed.",
+    "economic_outcomes_accessed": false,
+    "unit_allocated": false
+  },
+  "research_bundle": {
+    "name": "twenty_daily_bar_range_break_five_daily_bar_response",
+    "variants": [
+      {
+        "id": "CONTINUATION",
+        "definition": "BUY after an upper range break and SELL after a lower range break."
+      },
+      {
+        "id": "REVERSION",
+        "definition": "SELL after an upper range break and BUY after a lower range break."
+      }
+    ],
+    "single_state": "The just-completed US500 D1 close is strictly above the maximum high or below the minimum low of the preceding twenty completed US500 D1 market bars.",
+    "lookback_market_bars": 20,
+    "response_market_bars": 5,
+    "parameter_grid": false,
+    "breakout_buffer": false,
+    "alternate_horizon": false,
+    "entry_or_exit_action_inside_unit": false
+  },
+  "distinction_from_closed_work": {
+    "cross_index_residual_022": "Unit 022 used synchronized three-index M5 relative displacement and closed invalid. Unit 053 uses only US500 daily absolute range acceptance and no cross-index residual, volatility scaling or thirty-minute horizon.",
+    "us500_shock_027": "Unit 027 used a four-M15-bar volatility-normalized shock and closed invalid. Unit 053 uses a twenty-D1-bar price range and no volatility estimate.",
+    "us500_close_location_036": "Unit 036 used one M15 bar's close location and body fraction and closed invalid. Unit 053 requires a completed daily close outside a full preceding monthly-scale range.",
+    "us500_ordinal_acceleration_038": "Unit 038 used three strictly increasing same-sign M15 returns and rejected both one-hour books. Unit 053 has no return-order condition, acceleration rule or intraday horizon.",
+    "bidirectional_signal_transition_048": "Unit 048 used the immediately prior native component signal direction. Unit 053 is a new price-derived US500 state independent of all six portfolio signal streams.",
+    "session_and_week_edge_042_047": "Unit 053 has no New York clock, DST, weekday, holiday, open, close or session label. The first executable tick after a new D1 bar exists only to keep the daily-close state causal."
+  },
+  "boundary": {
+    "family_root": "lab/research/us500-monthly-range-break-response-v1/",
+    "implementation": "one fresh self-contained trade-free MQL observer plus two fixed tester configurations in the same family root",
+    "source_free_from_other_families": true,
+    "tester_runs_maximum": 2,
+    "orders": 0,
+    "positions": 0,
+    "economic_persistence": false,
+    "new_market_outcomes": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "data_roles": {
+    "P1_2025": {
+      "role": "discovery and direction selection",
+      "from": "2025-01-06",
+      "to_exclusive": "2026-01-01",
+      "last_trigger_no_later_than": "2025-12-19"
+    },
+    "P2_2026_JAN_JUL": {
+      "role": "conditional confirmation and latest-period veto for the P1-selected direction only",
+      "from": "2026-01-05",
+      "to_exclusive": "2026-08-01",
+      "last_trigger_no_later_than": "2026-07-24"
+    },
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false,
+    "data_consumption_note": "These market months have appeared in prior Next integrity or different-state observers, but the Unit 053 range-break outcomes have not been calculated. Both paths remain exploratory and cannot promote."
+  },
+  "fixed_observer_semantics": {
+    "chart_and_state_timeframe": "US500 D1",
+    "trigger_evaluation": "At the first valid executable tick after a new D1 market bar opens, load the just-completed bar and the preceding twenty completed D1 bars. Trigger upper if latest close is strictly above every preceding high; trigger lower if latest close is strictly below every preceding low.",
+    "entry_quote": "The first valid current US500 bid and ask used for that trigger evaluation.",
+    "overlap": "At most one unresolved observation exists. A trigger while one observation is unresolved is counted as an eligible evaluation but not opened or deferred.",
+    "resolution": "Resolve at the first valid executable quote after exactly five later D1 market-bar advances.",
+    "volume": 0.01,
+    "observed_cost": "BUY uses entry ask and exit bid; SELL uses entry bid and exit ask.",
+    "double_spread_cost": "Observed execution plus one additional observed entry spread and one additional observed exit spread.",
+    "profit_calculation": "OrderCalcProfit for continuation and reversion only; no order, position or trade operation."
+  },
+  "fixed_integrity_gate": [
+    "The one-source observer compiles on MetaEditor build 6140 at 0 errors and 0 warnings, owns no Include or trade-operation surface and is hash-frozen before P1.",
+    "The dedicated Git-ignored Portable is a physical Lab-only copy with no Live path, other-family EX5, Include link, junction, symbolic link or shared mutable runtime.",
+    "Before each path, freeze source, configuration, binary, the in-scope 2025-01 through 2026-07 US500 Bases and Tester-bases tick manifests, selected/full symbol databases and visible US500 contract fields.",
+    "Each opened path must independently show HTML 100% real ticks, zero detailed absent/discarded/mismatch/generation/load warning, unchanged required raw-tick manifests and unchanged visible specification before opportunity rows are read.",
+    "The observer must stop normally with zero rate, tick, profit-calculation and row fault; resolved opportunity rows must equal the summary, and unresolved observations must be zero because of the fixed cutoff."
+  ],
+  "fixed_path_metrics": {
+    "frequency": "Resolved count, eligible D1 evaluations, upper/lower counts and calendar-half counts.",
+    "economics": "For each book report observed and double-spread net, gross profit/loss, profit factor, maximum closed observation-sequence drawdown and net-to-drawdown.",
+    "breadth": "Report double-spread results by upper/lower breakout sign and by fixed calendar halves."
+  },
+  "fixed_p1_gates": {
+    "density": [
+      "At least 18 resolved observations in P1.",
+      "At least 6 resolved observations in each P1 calendar half.",
+      "At least 5 upper and 5 lower range breaks in P1."
+    ],
+    "direction_selection": [
+      "Double-spread net is positive.",
+      "Double-spread profit factor is at least 1.10.",
+      "Double-spread net-to-maximum-drawdown is at least 1.50.",
+      "Both P1 calendar halves have positive double-spread net.",
+      "Upper-break and lower-break double-spread nets are both positive.",
+      "Neither calendar half nor breakout sign contributes more than 80% of summed positive double-spread net."
+    ],
+    "selection_rule": "If exactly one book passes, select it. If both pass, select larger double-spread net-to-drawdown, then larger net, then larger PF. If neither passes, close without P2."
+  },
+  "fixed_p2_gates": {
+    "conditional_open": "Run only the one direction selected by P1; the observer may still write both mechanical books but the unselected book cannot select, switch or rescue.",
+    "density": [
+      "At least 10 resolved observations in P2.",
+      "At least 3 upper and 3 lower range breaks in P2."
+    ],
+    "confirmation": [
+      "Selected-direction double-spread net is positive.",
+      "Selected-direction double-spread profit factor is at least 1.05.",
+      "Selected-direction double-spread net-to-maximum-drawdown is at least 1.00.",
+      "Upper-break and lower-break double-spread nets are both nonnegative and at least one is positive."
+    ]
+  },
+  "fixed_bundle_verdicts": {
+    "p1_failure": "NO_US500_MONTHLY_RANGE_BREAK_DIRECTION_PASSED",
+    "p1_pass_p2_integrity_failure": "INVALID_CONFIRMATION_ENVIRONMENT_NO_RANGE_BREAK_VERDICT",
+    "p1_pass_p2_economic_failure": "NO_US500_MONTHLY_RANGE_BREAK_CONFIRMATION_PASSED",
+    "full_pass": "PASS_ONE_US500_MONTHLY_RANGE_BREAK_PROTOTYPE_QUESTION",
+    "ambiguous": "AMBIGUOUS_US500_MONTHLY_RANGE_BREAK_RESPONSE_NO_SUCCESSOR",
+    "authority_limit": "A full pass retains at most one later independently declared standalone US500 prototype question. Unit 053 selects no stop, size, lot, slot, portfolio admission, EA or Live behavior, and the retained question cannot open automatically."
+  },
+  "execution_budget": {
+    "source_files": 1,
+    "tester_configurations": 2,
+    "maximum_tester_paths": 2,
+    "maximum_direction_books_per_path": 2,
+    "implementation_only_pre_outcome_source_corrections": 1,
+    "environment_rebuild_allowance_per_path": 0,
+    "retained_analysis_cli": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before adding MQL, configuration, runtime, compile receipt or reading any Unit 053 opportunity outcome.",
+    "After declaration, implement only the fixed one-source observer and two fixed configurations inside this family root, then freeze source/config/binary/runtime evidence before P1.",
+    "Open P1 only after compile and full pre-run integrity evidence. If P1 fails integrity, density or both direction gates, close without P2.",
+    "Open P2 only for confirmation of the P1-selected direction. P2 cannot select or switch direction.",
+    "Do not add another range length, response horizon, breakout buffer, volatility filter, open/close clock, weekday/session, symbol, direction subgroup, stop, size or portfolio combination.",
+    "Do not inspect Program 6, query broker/account state, use Live source/logs, modify Live, retain a CLI or reopen a closed family.",
+    "Close at the first decisive invalid, failure, ambiguous or full-pass boundary and return to a whole-map comparison."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_implement_compile_and_freeze_the_fixed_observer_before_p1"
+}

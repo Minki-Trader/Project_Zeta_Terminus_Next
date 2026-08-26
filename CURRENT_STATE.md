@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0128`
+- Latest state ID: `STATE-0129`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: none; Program 4 Unit 052 `held-position-first-peer-exit-state-v1` is closed with no held-position peer-exit field, retained question or candidate
+- Active research boundary: Program 1 Unit 053 `us500-monthly-range-break-response-v1`; declaration is frozen and pushed-boundary preparation is active, while MQL, configuration, runtime, compile and outcomes remain unopened
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -603,6 +603,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Closed `NO_FIRST_PEER_EXIT_HELD_POSITION_STATE_PASSED`. The lower stop association after peer native close is insufficient for a management response and does not survive as a duration-adjusted, second-peer, peer-identity, book, strategy or timing rescue.
 - Declaration/result/closure SHA-256 values are `68421B30C3F4099DD59E84021B2AF0825E0E906A87CCAD5DADA797D0B8170F95` / `217ADD9403852442B416DAD4FAD9E6AFA9382AED29901E8B66565A9E250E2EFF` / `F32E5DC35B5063E6C14BF786C19878937923299393C7E8A0B2F8732A94BC8364`.
 - No close, hold, stop, trail, coordination, lot, slot, priority, EA or Live question survives. Programs 1-5 and 7 must be compared again without adjacent Program 4 peer-exit work; Program 6, MQL, Tester, broker state and Live remained untouched.
+
+## Open US500 monthly-range break response Unit 053
+
+- Recompared Programs 1-5 and 7 after Unit 052. An independent Program 3 exact-time multi-signal order-batch proposal was rejected before allocation because only 29 of 2,400 exact native-signal times contained more than one signal; no wider clock window or component subset may rescue it.
+- Opened only Program 1 Unit 053 `us500-monthly-range-break-response-v1`, a fresh monthly/weekly US500 price structure rather than an adjacent native-signal, external-rate, session-edge, peer-exit, book-allocation or meta question.
+- The sole state is a completed US500 D1 close strictly outside the full high/low of the preceding 20 completed D1 market bars. One natural bundle prices five-D1-bar continuation and reversion at `0.01` under observed and one-additional-entry/exit-spread costs; there is no parameter, range, buffer, horizon, session or symbol grid.
+- Frozen serial roles are P1 calendar 2025 discovery/direction selection and conditional P2 2026 January-July confirmation/latest veto for the P1-selected direction only. A full pass may retain one later standalone prototype question but selects no stop, lot, slot, admission, EA or Live behavior.
+- Declaration SHA-256 is `F4F88550DA1EC4F57C0D644BC44B4640D614C20CD40378D440F4AA6BF00B9688`. Source, configuration, runtime, compile and outcomes remain unopened until this declaration boundary is committed and pushed. Program 6 and Live remain untouched.
 
 ## Required completion evidence
 
