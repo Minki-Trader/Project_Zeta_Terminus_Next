@@ -1,0 +1,172 @@
+{
+  "schema": "zeta-next-cross-common-beta-decomposition-acquisition-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "unit": "cross-common-beta-decomposition-064",
+  "status": "DATA_AND_PREMETRIC_INTEGRITY_FROZEN_BEFORE_OUTCOME_AGGREGATION",
+  "declaration": {
+    "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_COMMON_BETA_DECOMPOSITION_DECLARATION_V1.json",
+    "bytes": 21524,
+    "sha256": "EFB97E2F2CA1EC7B9BCA878D8801AE7FCBB15AD4A92A81E8EA0DC743A1240DD1",
+    "commit": "1583161d7010dd06dd3826c9df2906d7ed3015da",
+    "origin_main_exact_before_runtime_copy": true
+  },
+  "runtime": {
+    "path": "lab/runtime/cbd64-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copies_used": 1,
+    "initial_files": 60,
+    "initial_bytes": 878717118,
+    "post_acquisition_files": 74,
+    "post_acquisition_bytes": 883296788,
+    "links_or_junctions": 0,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "acquisition_terminal_pid": 19052,
+    "acquisition_terminal_stopped_by_exact_path": true,
+    "remaining_terminal": {
+      "pid": 15080,
+      "path": "live-dev/runtime/portable/terminal64.exe",
+      "untouched": true
+    }
+  },
+  "acquisition": {
+    "python_metatrader5_version": "5.0.5640",
+    "bundles_used": 1,
+    "copy_rates_range_calls": 3,
+    "symbol_info_calls": 3,
+    "symbols": [
+      "US100",
+      "US30",
+      "US500"
+    ],
+    "from_utc_inclusive": "2022-07-01 00:00:00",
+    "to_utc_exclusive": "2026-08-21 00:00:00",
+    "raw_rows": {
+      "US100": 24422,
+      "US30": 24420,
+      "US500": 24421
+    },
+    "account_or_trade_calls": 0,
+    "account_positions_orders_deals_or_margin_queried": false,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "acquisition_corrections_used": 0
+  },
+  "bar_export": {
+    "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_THREE_INDEX_H1_BARS_20220701_20260821.csv",
+    "columns": [
+      "time_epoch",
+      "time_utc",
+      "us100_open",
+      "us30_open",
+      "us500_open"
+    ],
+    "rows": 24417,
+    "bytes": 1364263,
+    "sha256": "E1889F50F6238753408703C87959AFE27ED1DD69CEAD03679CA2618C1A2AC244",
+    "first_epoch": 1656637200,
+    "first_utc": "2022-07-01 01:00:00",
+    "last_epoch": 1787266800,
+    "last_utc": "2026-08-20 23:00:00",
+    "schema_exact": true,
+    "unique_strictly_increasing_epochs": true,
+    "positive_finite_opens": true,
+    "all_rows_before_exclusive_end": true,
+    "forward_fill_or_imputation": false
+  },
+  "symbol_spec_export": {
+    "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_THREE_INDEX_CURRENT_SYMBOL_SPECS_V1.json",
+    "bytes": 1509,
+    "sha256": "9B96022D17129F387ADACE0B2E31B8229F90FBA3571C77A1A79B6EEA7C2FC8A1",
+    "account_data_queried": false,
+    "symbols": {
+      "US100": {
+        "trade_contract_size": 1.0,
+        "volume_min": 0.01,
+        "volume_step": 0.01
+      },
+      "US30": {
+        "trade_contract_size": 1.0,
+        "volume_min": 0.01,
+        "volume_step": 0.01
+      },
+      "US500": {
+        "trade_contract_size": 1.0,
+        "volume_min": 0.01,
+        "volume_step": 0.01
+      }
+    },
+    "positive_contract_min_step": true,
+    "all_min_and_step_no_greater_than_0_01": true
+  },
+  "immutable_input_recheck": {
+    "source_and_event_files_exact": "8/8",
+    "canonical_hcc_files_exact": "15/15",
+    "canonical_hcc_manifest_sha256": "E1D4611FBBD4545FDF0AB561CC49E29FCB4C4F7725ABF2F0FCB44D81FF92A56C",
+    "dedicated_runtime_private_sync": {
+      "changed_files": [
+        {
+          "path": "US100/2026.hcc",
+          "sha256": "2ECCB445E28795BFD1AE96B96BBA6A7F6CEFAFC8CAE6AD68282B710B48E2C166"
+        },
+        {
+          "path": "US30/2026.hcc",
+          "sha256": "F1E900C77ED7223ACBE4923A0CB8CDFDF4BE513F8054E88846E1F380D084C41B"
+        },
+        {
+          "path": "US500/2026.hcc",
+          "sha256": "1E9FE4D07DF1D9A2D4C606BD2587D7BF91F5C89755693F187C59532695337E42"
+        }
+      ],
+      "scope": "ignored dedicated runtime only",
+      "authority": "none beyond frozen bar export and lifecycle mark gate"
+    }
+  },
+  "premetric_lifecycle_integrity": {
+    "immutable_files_checked": 23,
+    "immutable_failures": 0,
+    "parser_errors": 0,
+    "all_cross_lifecycles": 805,
+    "period_counts": {
+      "P1_2022H2_2023": 286,
+      "P2_2024": 197,
+      "P3_2025": 193,
+      "P4_2026_YTD": 129
+    },
+    "direction_counts": {
+      "BUY": 399,
+      "SELL": 406
+    },
+    "volume": 0.01,
+    "deal_reason_sl": 29,
+    "exact_scheduled_cohort": 756,
+    "exact_scheduled_period_counts": {
+      "P1_2022H2_2023": 276,
+      "P2_2024": 183,
+      "P3_2025": 179,
+      "P4_2026_YTD": 118
+    },
+    "exact_scheduled_coverage": {
+      "P1_2022H2_2023": 0.965034965034965,
+      "P2_2024": 0.9289340101522843,
+      "P3_2025": 0.927461139896373,
+      "P4_2026_YTD": 0.9147286821705426
+    },
+    "positive_planned_risk": true,
+    "scheduled_mark_lookups": 1512,
+    "missing_marks": 0,
+    "outcome_or_decomposition_metric_opened": false,
+    "premetric_parser_corrections_used": 1,
+    "correction": "The first integrity-only invocation interpreted the exclusive UTC end with the Windows local timezone. Only that comparison was changed to an explicit UTC datetime; lifecycle, market data, specification and outcome calculations were unchanged, and no stressed-R or decomposition metric had been read.",
+    "integrity_pass": true
+  },
+  "budget_after_boundary": {
+    "successful_fixed_aggregations_used": 0,
+    "successful_fixed_aggregations_remaining": 1,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "live_surface": "untouched",
+  "next": "Commit and push this frozen data boundary, then execute the one fixed decomposition and capital aggregation with zero metric rerun."
+}

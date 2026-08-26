@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0158`
+- Latest state ID: `STATE-0159`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: Program 1 / meso Unit 064 `cross-common-beta-decomposition-v1` declaration is frozen; synchronized three-index H1 data/spec acquisition and one fixed decomposition remain
+- Active research boundary: Program 1 / meso Unit 064 `cross-common-beta-decomposition-v1` declaration and synchronized three-index H1 data/spec boundary are frozen; one fixed decomposition remains
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -811,6 +811,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - All lifecycle periods are already consumed exploratory evidence with no clean holdout. A few individual CLOSE values were inadvertently displayed during feasibility formatting and are quarantined; no systematic stressed-R, index return, variance, mean, quality or capital result was calculated before declaration.
 - Declaration SHA-256 is `EFB97E2F2CA1EC7B9BCA878D8801AE7FCBB15AD4A92A81E8EA0DC743A1240DD1`. No Unit 064 runtime, symbol_info, H1 bar export, decomposition, MQL, compile, Tester, broker/account query, order or Live action has occurred. Commit and push this boundary first.
 
+## Frozen data boundary for Cross common-beta decomposition Unit 064
+
+- Declaration commit `1583161d7010dd06dd3826c9df2906d7ed3015da` reached local, origin and remote main before the single runtime copy and acquisition bundle. The dedicated `cbd64-portable` remained physically isolated with zero link/junction; its exact PID `19052` was stopped after acquisition, leaving only pre-existing Live PID `15080`, untouched.
+- Called only `initialize`, three `symbol_select`, three `symbol_info`, three `copy_rates_range` and `shutdown` through MetaTrader5 Python `5.0.5640`. No account, position, order, deal, margin or trade API, MQL compile or Tester path was used.
+- Froze `24,417` synchronized, unique, strictly increasing H1 rows from `2022-07-01 01:00` through `2026-08-20 23:00`. Bar/spec files are 1,364,263 / 1,509 bytes with SHA-256 `E1889F50F6238753408703C87959AFE27ED1DD69CEAD03679CA2618C1A2AC244` / `9B96022D17129F387ADACE0B2E31B8229F90FBA3571C77A1A79B6EEA7C2FC8A1`; all three symbols report contract `1`, min lot `0.01` and step `0.01`.
+- Rechecked 8/8 source/event and 15/15 canonical HCC pins. All 805 Cross lifecycles, `286/197/193/129` periods, `399/406` directions, 29 stops and 756 exact scheduled paths `276/183/179/118` reconstructed with zero parser fault; all 1,512 entry/exit mark lookups exist.
+- The first integrity-only invocation used local time for the exclusive UTC endpoint. Before any stressed-R or decomposition metric, the one permitted premetric parser correction changed only that comparison to explicit UTC and passed. No acquisition correction, outcome aggregation or metric rerun has been used.
+- Acquisition receipt SHA-256 is `B255F9C248C7A61999D99DD03ED4F7B486B11E8CE0D8AAB095EE7F5E0679886E`. Commit and push this data boundary before the sole fixed decomposition/capital aggregation.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -824,6 +833,6 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 Latest closed research verdict: `INSUFFICIENT_RC16_ALL_SLOT_DENSITY_NO_CANDIDATE`
 
-Active research unit: `cross-common-beta-decomposition-064`; declaration frozen, outcomes unopened
+Active research unit: `cross-common-beta-decomposition-064`; declaration and data frozen, outcomes unopened
 
 `LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_REALIZED_VARIANCE_ASYMMETRY_RESPONSE_032_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_033_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; NATIVE_DIRECTION_ASYMMETRY_VALUE_034_CLOSED_NO_FIELD; SAME_STRATEGY_INTERBIRTH_GAP_VALUE_035_CLOSED_NO_FIELD; US500_CLOSE_LOCATION_PRESSURE_RESPONSE_036_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; STRATEGY_OCCUPANCY_SLOT_VALUE_037_CLOSED_NO_INFORMATION_NO_PRIORITY_PROXY; US500_ORDINAL_ACCELERATION_RESPONSE_038_CLOSED_NO_DIRECTION_NO_PROTOTYPE; BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_048_CLOSED_NO_FIELD; PRIOR_TREASURY_CURVE_MOVE_CONTEXT_049_CLOSED_NO_FIELD; NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_050_CLOSED_PARTIAL_ONE_WAY_NO_SUCCESSOR; MACRO_FRONTIER_ATTRITION_TOPOLOGY_051_CLOSED_MULTI_STAGE_DIAGNOSIS; HELD_POSITION_FIRST_PEER_EXIT_STATE_052_CLOSED_NO_FIELD; US500_MONTHLY_RANGE_BREAK_RESPONSE_053_CLOSED_DENSITY_NO_DIRECTION; PORTFOLIO_LOSS_COOCCURRENCE_TOPOLOGY_054_CLOSED_NO_CLUSTER; MACRO_CONTEXT_COMPOSITION_CONFOUNDING_055_CLOSED_NO_BROAD_SHIFT; INTRADAY_PORTFOLIO_ENTRY_HANDOFF_056_CLOSED_NO_STATE; FIRST_PEER_PROFIT_MEMORY_CHECKPOINT_057_CLOSED_FINAL_LEVEL_ONLY; SCHEDULED_US_MACRO_DECISION_REGIME_058_CLOSED_INVALID_INTEGRITY; CROSS_COMPONENT_SAME_SYMBOL_SIGNAL_STATE_059_CLOSED_NO_FIELD; NATIVE_HOLD_SCHEDULE_CURVE_060_CLOSED_INVALID_REAL_TICK_INTEGRITY_NO_VERDICT; CANDIDATE_FUNNEL_TURNOVER_RISK_CONTRACT_061_CLOSED_INVALID_SLOT_SEMANTIC_NO_VERDICT; MARKET_STOP_REVERSE_LOT_SIZING_062_CLOSED_INVALID_HTML_ENVIRONMENT_NO_VERDICT; ALL_SLOT_EVALUATION_CLOCK_SHAPE_063_CLOSED_INSUFFICIENT_DENSITY_NO_CANDIDATE`
