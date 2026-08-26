@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0109`
+- Latest state ID: `STATE-0110`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: none; Program 7 Unit 043 `frontier-evidence-path-yield-audit-v1` is closed with meta diagnosis only and no retained successor
+- Active research boundary: none; a Program 1 same-day prior-signal-breadth proposal was rejected before Unit 044 declaration because outcome-free density was structurally Cross-concentrated
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -491,6 +491,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - The tracked-minus-fresh answer-rate gaps were `+0.888888889` overall, `+1.00` in the frozen early halves and `+0.75` in the late halves, passing the complete meta gate. Two classification invocations stopped before any rate because their STATE-0076 shorthand assertion was wrong; only that assertion was corrected to the exact bundled prose before the one successful fixed classification.
 - Closed `PASS_EVIDENCE_ACQUISITION_READINESS_MATERIAL_META_DIAGNOSIS`. This is not alpha proof: tracked evidence retained only one research seed in ten units and neither lane selected a trading candidate. No default lane, macro topic, integrity repair or successor survives.
 - Census/declaration/result/closure SHA-256 values are `F435D497B1F719521F361D8B9F6A56C7A3CF0837F9DC1FD396D34BABAC8BA999` / `F0687399C104F21105D566BBD4C82547C751185248FECECEA7404E7408BD99C2` / `1C41E3A27DE16D019275946FBBF2EE8543B8BCD763388097C451E4B004FB0A04` / `9C2A6C53916245C3E47ECC82950E00EB504237F4B306FD1B79E9CFF2B0B0FAF1`. Programs 1-5 and 7 remain equally eligible for whole-map recomparison; Program 6 and Live remained untouched.
+
+## Rejected predeclaration same-day prior-signal-breadth proposal
+
+- Recompared Programs 1-5 and 7 after Unit 043 and first considered Program 1 `진입 신호·시장 구조`, the only macro program absent from the recent `5 → 4 → 2 → 3 → 7` sequence. The proposal was independent of prior bar-pattern observers: it used only causal earlier same-server-day native signal directions before each admitted birth.
+- Outcome-free reconstruction matched all `2,233` births with zero direction or signal-link fault. Requiring at least two distinct prior other-strategy signals left 109 unanimous-alignment and 325 any-conflict births; 1,799 lacked the declared breadth.
+- Alignment density was structurally Cross `76`, Return `18`, Passive `10`, Pressure `4`, RC16 `1`, RC4 `0`. This does not support a broad market-structure bundle across the portfolio.
+- Rejected before Unit 044 declaration and before reading any close value, stressed R, stop association or economic verdict. No Cross-only subgroup, one-signal relaxation, wider day/window or adjacent Program 1 context substitution is allowed after this density result.
+- No family was created and no seed survives. The compact Frontier ledger is synchronized through Unit 043 and records this rejected proposal. The next action is another whole-map comparison, not a rescue of this Program 1 proposal; Program 6 and Live remained untouched.
 
 ## Required completion evidence
 

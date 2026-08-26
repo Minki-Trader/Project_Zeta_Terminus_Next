@@ -887,3 +887,11 @@
 - This is not alpha or modality-quality proof. Tracked evidence retained one bounded seed in ten units, both lanes selected zero trading candidates, and different questions/symbols/horizons prevent a causal modality claim.
 - Closed `PASS_EVIDENCE_ACQUISITION_READINESS_MATERIAL_META_DIAGNOSIS` with no default evidence lane, macro topic, Program 6 repair, adjacent meta audit or automatic successor. Census/declaration/result/closure SHA-256 values are `F435D497B1F719521F361D8B9F6A56C7A3CF0837F9DC1FD396D34BABAC8BA999` / `F0687399C104F21105D566BBD4C82547C751185248FECECEA7404E7408BD99C2` / `1C41E3A27DE16D019275946FBBF2EE8543B8BCD763388097C451E4B004FB0A04` / `9C2A6C53916245C3E47ECC82950E00EB504237F4B306FD1B79E9CFF2B0B0FAF1`. Live remained untouched.
 - The next action is a fresh whole-map comparison of Programs 1-5 and 7, not another Program 7 audit. Evidence readiness is one planning variable and cannot monopolize topic allocation.
+
+## STATE-0110 - 2026-08-26
+
+- Recompared all eligible macro programs after Unit 043 and first considered Program 1, the only program absent from the recent `5 → 4 → 2 → 3 → 7` sequence. Proposed a broad causal same-server-day native-signal context unrelated to prior bar-pattern observers.
+- Outcome-free reconstruction used only `SIGNAL_DECIDED` timestamps/directions and admitted birth timestamps/directions. It matched exactly 2,233 births with zero signal-link or direction fault and did not access close value, stressed R, stop association or any conditioned economic outcome.
+- Requiring at least two distinct prior other-strategy signals classified 109 births as unanimous alignment, 325 as any conflict and 1,799 as insufficient prior breadth. Alignment counts were Cross 76, Return 18, Passive 10, Pressure 4, RC16 1 and RC4 zero.
+- The intended broad market-structure bundle was therefore structurally concentrated in Cross. Rejected it before Unit 044 declaration and without opening a family; no Cross-only subset, one-prior-signal relaxation, wider time window or adjacent signal-context substitution is permitted.
+- Synchronized the compact Frontier ledger through closed Units 041-043 and this rejected proposal. No seed, unit, MQL, Tester, Program 6 or Live action opened. The next action is another whole-map comparison, not a Program 1 rescue.
