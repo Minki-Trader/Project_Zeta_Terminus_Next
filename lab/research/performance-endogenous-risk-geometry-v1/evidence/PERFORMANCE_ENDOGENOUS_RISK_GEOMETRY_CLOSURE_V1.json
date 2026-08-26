@@ -1,0 +1,119 @@
+{
+  "schema": "zeta-next-performance-endogenous-risk-geometry-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_PARTIAL_SCALE_DRIFT_NO_CANDIDATE",
+  "unit": "performance-endogenous-risk-geometry-069",
+  "verdict": "PARTIAL_CAPITAL_SCALE_DRIFT_WITHOUT_BROAD_HAZARD_TRANSMISSION_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "B6DE50236DDD5F414189BC050559A868C7DD2EA6D602E1493929F436CD26739F",
+    "premetric_correction_sha256": "31A5B7A4490A38FBF62197DB47393B684FA4B9A1DFBF77FC38504ADB86FBDE63",
+    "result_sha256": "CA178C4505A5584C3AB9C7FE9DD73826C3FBB12C0EAEBCAF5DB51D6E13C49100",
+    "result_bytes": 47036
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_source_and_input_pins_passed": true,
+    "cp2_event_rows": 16477,
+    "cp2_exact_duplicate_rows": 0,
+    "closed_lifecycles": 2233,
+    "h1_physical_rows": 24417,
+    "h1_synchronized_symbol_price_cells": 73251,
+    "h1_marks": 2233,
+    "global_component_period_cells": 24,
+    "gross_geometry_share_in_0_45_0_55": 1.0,
+    "actual_net_usd": 444.19,
+    "stressed_net_usd": 407.0477000000051,
+    "stops": 206
+  },
+  "findings": {
+    "global_scale_contrast": {
+      "high_low_capital_ratio": 1.7972211964549483,
+      "high_low_normalized_stop_ratio": 1.7389426841582412,
+      "high_low_physical_stop_percent_ratio": 1.3599383449609654,
+      "high_low_cost_r_ratio": 0.5386137381779798,
+      "high_minus_low_stop_rate": -0.059964726631393295,
+      "high_minus_low_mean_stressed_r": -0.07539023713790959,
+      "period_geometry_breadth": 4,
+      "component_geometry_breadth": 6,
+      "interpretation": "Widely separated capital tails show the source-level accounting identity clearly: higher capital carries wider physical and volatility-normalized stops and lower fixed stress cost per planned R. This contrast is heavily entangled with time and cannot establish the feedback by itself."
+    },
+    "chronology_falsifier": {
+      "median_absolute_capital_time_spearman_across_cells": 0.9277331155750368,
+      "maximum_absolute_capital_time_spearman_across_cells": 0.9651772755546341,
+      "interpretation": "Capital rank is almost chronology rank inside the global cells, so the frozen local time-block contrast is the decision-bearing lens."
+    },
+    "local_time_controlled_scale": {
+      "high_low_capital_ratio": 1.0825129235125612,
+      "high_low_normalized_stop_ratio": 1.0716742266440122,
+      "high_low_physical_stop_percent_ratio": 1.06053946097686,
+      "high_low_cost_r_ratio": 0.8892059761636527,
+      "geometry_period_breadth": 4,
+      "geometry_component_breadth": 5,
+      "cost_period_breadth": 3,
+      "cost_component_breadth": 6,
+      "interpretation": "A smaller but predeclared material geometry and cost-scale effect survives within chronological blocks, so the accounting-scale observation is preserved."
+    },
+    "hazard_and_quality_transmission": {
+      "local_high_stop_rate": 0.09074243813015583,
+      "local_low_stop_rate": 0.09165902841429881,
+      "high_minus_low_stop_rate": -0.0009165902841429818,
+      "periods_with_lower_high_capital_stop_rate": 2,
+      "components_with_lower_high_capital_stop_rate": 2,
+      "high_minus_low_mean_stressed_r": -0.05646406314452053,
+      "interpretation": "The local stop-rate reduction is only 0.09 percentage point rather than the required two points, reaches only two of four periods and two of six components, and higher-capital local rows have worse mean stressed R. Scale does not transmit into broad favorable lifecycle economics."
+    }
+  },
+  "gates": {
+    "geometry_passed": true,
+    "cost_scale_passed": true,
+    "hazard_transmission_passed": false,
+    "hazard_failed_conditions": [
+      "pooled_local_stop_rate_reduction",
+      "period_stop_rate_breadth",
+      "component_stop_rate_breadth",
+      "stressed_r_nonworse"
+    ],
+    "complete_candidate_gate_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "the observed capital-dependent stop and cost-R accounting geometry as a diagnostic fact",
+      "the current 4% per-position and 12% aggregate risk contract",
+      "current stop construction, fixed lot ladder, components and existing absolute/stressed economic gates"
+    ],
+    "discard": [
+      "the claim that higher capital broadly lowers stop hazard with nonworse normalized outcomes",
+      "capital-scale normalization of risk gates or reporting from this evidence",
+      "any stop, lot, risk fraction, slot, component, admission, EA or Live change"
+    ],
+    "observation": "R and cost burden are scale-dependent accounting quantities, but the observed geometry does not produce a broad favorable hazard-and-quality feedback after local time control.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "alternate capital deciles, terciles or tail thresholds",
+    "alternate H1 volatility window or timeframe",
+    "P2-only, P4-excluding, winner, loser, stop-only or component-specific rescue",
+    "alternate cost multiple or outcome threshold",
+    "geometric or reverse lot ladder, stop normalization, risk-gate, EA or Live change"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_all_programs_and_heights_before_any_successor"
+}
