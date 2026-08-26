@@ -1,0 +1,56 @@
+{
+  "schema": "zeta-next-bidirectional-signal-transition-state-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "bidirectional-signal-transition-state-048",
+  "family": "bidirectional-signal-transition-state-v1",
+  "macro_program": {"id": 1, "name": "entry_signal_market_structure", "korean_name": "진입 신호·시장 구조"},
+  "research_bundle": "same_component_direction_persistence_vs_reversal_by_bidirectional_symbol_book",
+  "verdict": "NO_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_PASSED",
+  "integrity": {
+    "passed": true,
+    "event_rows": 16477,
+    "signals": 2429,
+    "lifecycles": 2233,
+    "stressed_net_usd_2x": 407.04770000000565,
+    "stop_exits": 206,
+    "faults": 0,
+    "finite_centering_cells": 16
+  },
+  "variant_decisions": {
+    "US30_BIDIRECTIONAL_BOOK": {
+      "strategies": ["RC4", "Pressure"],
+      "persistence_reversal": [156, 160],
+      "persistence_minus_reversal_centered_r": 0.04204155092240498,
+      "persistence_minus_reversal_centered_stop": -0.05170074710861027,
+      "decision": "FAIL",
+      "reason": "The return effect missed 0.10R, the stop sign held in only one of two component strategies, and RC4 contributed 68.11%, above the 65% strategy cap."
+    },
+    "US100_BIDIRECTIONAL_BOOK": {
+      "strategies": ["Cross", "Passive"],
+      "persistence_reversal": [674, 718],
+      "persistence_minus_reversal_centered_r": 0.009248131607416112,
+      "persistence_minus_reversal_centered_stop": 0.0019781481297951663,
+      "decision": "FAIL",
+      "reason": "Both effects were economically negligible and non-concordant, sign breadth failed, and the contrast was concentrated in P4 and Cross."
+    }
+  },
+  "interpretation": "Immediate same-component signal-direction persistence versus reversal does not define a material, broad or coherent entry-market-structure state in either natural bidirectional symbol book. The modest US30 stop association cannot rescue the missing return effect or cross-strategy inconsistency, and the dense US100 book is effectively null.",
+  "retained_market_structure_question": null,
+  "selected_candidate": null,
+  "entry_filter_or_direction_rule": null,
+  "size_priority_or_slot_action": null,
+  "ea_or_live_action": null,
+  "same_unit_rerun": false,
+  "nearby_rescue": false,
+  "adjacent_program_1_successor": false,
+  "program_6_opened": false,
+  "mql_changes": 0,
+  "tester_runs": 0,
+  "live_surface": "UNTOUCHED",
+  "evidence": {
+    "declaration_sha256": "A3C2FDCF0114F50CC79D66252EF8CC4ACE924B48C91BD72E2BCF85A85330BD97",
+    "result_sha256": "9B882CD3A27B6F5D3D23D245301D513E417ED1748BC1A309F7BC9C22BA5AA0D2"
+  },
+  "next": "Recompare Programs 1-5 and 7 at the macro map. Do not continue into transition history length, streak, time decay, magnitude, current direction, strategy subset, symbol subset or another adjacent Program 1 signal hypothesis."
+}

@@ -971,3 +971,11 @@
 - Exact signal-to-birth reconstruction linked 2,429 native signals to all 2,233 births with zero fault. US30 persistence/reversal are `156/160`; US100 are `674/718`; every book-period has at least `27/27` and every bidirectional strategy-period cell at least `11/8`.
 - RC16 and Return are structurally +1-only with zero reversal and remain context only. This does not reopen Unit 016 strength, Unit 034 current direction, Unit 035 cadence or the rejected cross-strategy same-day signal proposal.
 - Each book independently requires material centered R and stop differences, economic concordance, three-of-four period and both-component breadth plus contribution caps. Declaration SHA-256 is `A3C2FDCF0114F50CC79D66252EF8CC4ACE924B48C91BD72E2BCF85A85330BD97`; conditioned outcomes remain unopened. One aggregation remains, then the whole map is compared again without adjacent Program 1 signal work. Program 6, MQL, Tester, broker state and Live remain untouched.
+
+## STATE-0120 - 2026-08-26
+
+- The sole Unit 048 aggregation passed all six immutable pins, 16,477 rows, zero duplicates/faults, 2,429 signals, all 2,233 lifecycles, `$407.0477` stressed net, 206 stops, every frozen relation count and 16 finite strategy-period centering cells.
+- US30 persistence-minus-reversal was `+0.042041550922R/-0.051700747109 stop`. The return effect missed `0.10R`; stop sign held in only RC4, not Pressure; and RC4's `68.11%` return contribution exceeded the `65%` strategy cap.
+- US100 persistence-minus-reversal was `+0.009248131607R/+0.001978148130 stop`. Both effects were negligible and non-concordant, sign breadth failed, and P4/Cross dominated the weak return contrast.
+- Closed `NO_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_PASSED` with no retained market-structure question, entry filter, direction rule, size, priority, EA or Live action. Declaration/result/closure SHA-256 values are `A3C2FDCF0114F50CC79D66252EF8CC4ACE924B48C91BD72E2BCF85A85330BD97` / `9B882CD3A27B6F5D3D23D245301D513E417ED1748BC1A309F7BC9C22BA5AA0D2` / `8A4AD3A46F14DB64E7DE7AE073BFAFFDF05C7D9A65CE33E548495BEC50DD73AC`.
+- Next is a fresh comparison of Programs 1-5 and 7, not another signal history, streak, timing, magnitude, direction, component or symbol subset. Program 6, MQL, Tester, broker state and Live remained untouched.

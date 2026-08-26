@@ -1,0 +1,203 @@
+{
+  "schema": "zeta-next-bidirectional-signal-transition-state-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_048_CLOSED_NO_SIGNAL_TRANSITION_STATE_PASSED",
+  "unit": "bidirectional-signal-transition-state-048",
+  "family": "bidirectional-signal-transition-state-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "A3C2FDCF0114F50CC79D66252EF8CC4ACE924B48C91BD72E2BCF85A85330BD97",
+    "declaration_commit": "158feff",
+    "six_event_file_pins_exact": true,
+    "current_path_hash_manifest_exact": true,
+    "files": 6,
+    "bytes": 5692770
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_shell_or_aggregation_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "same_unit_metric_reruns": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false
+  },
+  "integrity": {
+    "total_data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "parse_faults": 0,
+    "signal_events": 2429,
+    "unconsumed_signal_overwrites": 81,
+    "unconsumed_latest_signals_at_period_ends": 2,
+    "faults": {
+      "signal_direction": 0,
+      "market_link": 0,
+      "passive_link": 0,
+      "signal_time": 0,
+      "overlap": 0,
+      "orphan_close": 0,
+      "missing_close": 0,
+      "risk": 0,
+      "passive_pending_overlap": 0,
+      "passive_fill_without_place": 0,
+      "passive_expire_without_place": 0,
+      "passive_pending_at_end": 0,
+      "external_close_reason": 0,
+      "relation_anchor": 0,
+      "strategy_count_anchor": 0,
+      "centering_cell": 0
+    },
+    "fault_total": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd_2x": 407.04770000000565,
+    "stop_exits": 206,
+    "relation_counts": {
+      "FIRST_OBSERVED_SIGNAL": 21,
+      "SAME_DIRECTION_PERSISTENCE": 1334,
+      "OPPOSITE_DIRECTION_REVERSAL": 878
+    },
+    "period_relation_counts": {
+      "P1_2022H2_2023": [6, 464, 299],
+      "P2_2024": [5, 328, 221],
+      "P3_2025": [4, 333, 217],
+      "P4_2026_YTD": [6, 209, 141],
+      "array_order": ["FIRST_OBSERVED_SIGNAL", "SAME_DIRECTION_PERSISTENCE", "OPPOSITE_DIRECTION_REVERSAL"]
+    },
+    "strategy_relation_counts": {
+      "RC16": [4, 268, 0],
+      "RC4": [4, 93, 109],
+      "Cross": [3, 409, 393],
+      "Pressure": [4, 63, 51],
+      "Return": [2, 236, 0],
+      "Passive": [4, 265, 325],
+      "array_order": ["FIRST_OBSERVED_SIGNAL", "SAME_DIRECTION_PERSISTENCE", "OPPOSITE_DIRECTION_REVERSAL"]
+    },
+    "book_relation_counts": {
+      "US30_BIDIRECTIONAL_BOOK": [8, 156, 160],
+      "US100_BIDIRECTIONAL_BOOK": [7, 674, 718],
+      "array_order": ["FIRST_OBSERVED_SIGNAL", "SAME_DIRECTION_PERSISTENCE", "OPPOSITE_DIRECTION_REVERSAL"]
+    },
+    "book_period_persistence_reversal": {
+      "US30_BIDIRECTIONAL_BOOK": [[41, 45], [35, 39], [49, 49], [31, 27]],
+      "US100_BIDIRECTIONAL_BOOK": [[243, 254], [172, 182], [154, 168], [105, 114]],
+      "array_order": ["SAME_DIRECTION_PERSISTENCE", "OPPOSITE_DIRECTION_REVERSAL"],
+      "period_order": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"]
+    },
+    "centering_cells": {
+      "RC4": [[53, 0.10346639510326434, 0.1509433962264151], [53, 0.052922972852553964, 0.2641509433962264], [68, 0.06188340159870671, 0.29411764705882354], [32, 0.028895347654474525, 0.34375]],
+      "Pressure": [[35, 0.02850977279289924, 0.05714285714285714], [23, -0.009495965328524375, 0.21739130434782608], [32, -0.015885035136844902, 0.34375], [28, 0.16502963023837453, 0.10714285714285714]],
+      "Cross": [[286, 0.008703772208022334, 0.006993006993006993], [197, 0.0387463243990351, 0.04568527918781726], [193, 0.02991563533754035, 0.03626943005181347], [129, 0.007011916155595948, 0.08527131782945736]],
+      "Passive": [[213, 0.006652914095265505, 0.009389671361502348], [159, 0.015611259165317613, 0.050314465408805034], [130, 0.0018013619390951482, 0.07692307692307693], [92, 0.009167731215862276, 0.06521739130434782]],
+      "array_order": ["n", "mean_stressed_r", "stop_rate"],
+      "period_order": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"],
+      "finite_cells": 16
+    },
+    "exact_frozen_counts": true,
+    "gate_passed": true
+  },
+  "context_strategy_relation_metrics": {
+    "RC16": {
+      "FIRST_OBSERVED_SIGNAL": [4, 7.128000000000029, 0.45470841663773076, 0.0],
+      "SAME_DIRECTION_PERSISTENCE": [268, 107.310000000002, 0.06891762095485444, 0.08582089552238806],
+      "OPPOSITE_DIRECTION_REVERSAL": [0, 0.0, null, null]
+    },
+    "RC4": {
+      "FIRST_OBSERVED_SIGNAL": [4, 2.118000000000029, 0.12973257857583273, 0.25],
+      "SAME_DIRECTION_PERSISTENCE": [93, 41.92100000000071, 0.0851109780966195, 0.21505376344086022],
+      "OPPOSITE_DIRECTION_REVERSAL": [109, 35.02900000000066, 0.045753281266281275, 0.29357798165137616]
+    },
+    "Cross": {
+      "FIRST_OBSERVED_SIGNAL": [3, -1.955500000000029, -0.1602606337636426, 0.3333333333333333],
+      "SAME_DIRECTION_PERSISTENCE": [409, 62.530999999999366, 0.029608043414494228, 0.034229828850855744],
+      "OPPOSITE_DIRECTION_REVERSAL": [393, 20.68299999999958, 0.013159419101995567, 0.035623409669211195]
+    },
+    "Pressure": {
+      "FIRST_OBSERVED_SIGNAL": [4, -1.9619999999999709, -0.1420857736084596, 0.5],
+      "SAME_DIRECTION_PERSISTENCE": [63, 26.513000000000435, 0.06739714828610847, 0.15873015873015872],
+      "OPPOSITE_DIRECTION_REVERSAL": [51, 9.619000000000453, 0.023809139605879742, 0.17647058823529413]
+    },
+    "Return": {
+      "FIRST_OBSERVED_SIGNAL": [2, 1.2170000000000436, 0.1523889518049835, 0.0],
+      "SAME_DIRECTION_PERSISTENCE": [236, 73.13400000000223, 0.05526729030710128, 0.2288135593220339],
+      "OPPOSITE_DIRECTION_REVERSAL": [0, 0.0, null, null]
+    },
+    "Passive": {
+      "FIRST_OBSERVED_SIGNAL": [4, -2.468999999999978, -0.15544122931924523, 0.25],
+      "SAME_DIRECTION_PERSISTENCE": [265, 9.751699999999582, 0.009187530241890207, 0.045283018867924525],
+      "OPPOSITE_DIRECTION_REVERSAL": [325, 16.479500000000098, 0.009735195805214846, 0.04]
+    },
+    "array_order": ["n", "stressed_net_usd_2x", "mean_stressed_r", "stop_rate"]
+  },
+  "variants": [
+    {
+      "id": "US30_BIDIRECTIONAL_BOOK",
+      "strategies": ["RC4", "Pressure"],
+      "persistence_n": 156,
+      "reversal_n": 160,
+      "persistence_minus_reversal_mean_centered_stressed_r": 0.04204155092240498,
+      "persistence_minus_reversal_mean_centered_stop": -0.05170074710861027,
+      "period_effects": [
+        ["P1_2022H2_2023", 41, 45, 0.06718250272922896, -0.09930649602991994, 0.018275875887116606],
+        ["P2_2024", 35, 39, 0.00836809725462159, -0.07293914726236303, 0.0019106117462115155],
+        ["P3_2025", 49, 49, 0.05934363274044517, 0.029524309723889565, 0.01849176287698118],
+        ["P4_2026_YTD", 31, 27, 0.020178831267594642, -0.09341931216931215, 0.0033633004120956953]
+      ],
+      "strategy_effects": [
+        ["RC4", 93, 109, 0.04489088498825399, -0.09893765553427475, 0.028635090533452034],
+        ["Pressure", 63, 51, 0.036031381087822445, 0.033998200729567205, 0.01340646038895295]
+      ],
+      "effect_array_order": ["group", "persistence_n", "reversal_n", "persistence_minus_reversal_centered_r", "persistence_minus_reversal_centered_stop", "pooled_r_contrast_contribution"],
+      "sign_breadth": {"centered_r_periods": 4, "centered_stop_periods": 3, "centered_r_strategies": 2, "centered_stop_strategies": 1},
+      "maximum_period_stressed_r_contribution_share": 0.4398449265373427,
+      "maximum_strategy_stressed_r_contribution_share": 0.6811140384973687,
+      "density_passed": true,
+      "failed_information_gates": ["absolute_centered_stressed_r_at_least_0_10", "centered_stop_sign_in_both_strategies", "maximum_strategy_r_contribution_at_most_0_65"],
+      "passed": false
+    },
+    {
+      "id": "US100_BIDIRECTIONAL_BOOK",
+      "strategies": ["Cross", "Passive"],
+      "persistence_n": 674,
+      "reversal_n": 718,
+      "persistence_minus_reversal_mean_centered_stressed_r": 0.009248131607416112,
+      "persistence_minus_reversal_mean_centered_stop": 0.0019781481297951663,
+      "period_effects": [
+        ["P1_2022H2_2023", 243, 254, -0.004038209955783667, -0.007528789516721738, -0.0014396425025306422],
+        ["P2_2024", 172, 182, 0.007152388397732658, 0.014061312752964397, 0.0018211537836026474],
+        ["P3_2025", 154, 168, -0.005998173543220801, 0.013704344015224783, -0.00138896258491969],
+        ["P4_2026_YTD", 105, 114, 0.06526895817229693, -0.013245702730030354, 0.010255582911263796]
+      ],
+      "strategy_effects": [
+        ["Cross", 409, 393, 0.016626015826013238, -0.0006483974998861401, 0.0096245237726566],
+        ["Passive", 265, 325, -0.0007391738662206981, 0.005562019361573565, -0.0003763921652404917]
+      ],
+      "effect_array_order": ["group", "persistence_n", "reversal_n", "persistence_minus_reversal_centered_r", "persistence_minus_reversal_centered_stop", "pooled_r_contrast_contribution"],
+      "sign_breadth": {"centered_r_periods": 2, "centered_stop_periods": 2, "centered_r_strategies": 1, "centered_stop_strategies": 1},
+      "maximum_period_stressed_r_contribution_share": 0.6880474839852846,
+      "maximum_strategy_stressed_r_contribution_share": 0.9623642306786916,
+      "density_passed": true,
+      "failed_information_gates": ["absolute_centered_stressed_r_at_least_0_10", "absolute_centered_stop_at_least_0_05", "economic_concordance", "centered_r_sign_at_least_three_periods", "centered_stop_sign_at_least_three_periods", "centered_r_sign_in_both_strategies", "centered_stop_sign_in_both_strategies", "maximum_period_r_contribution_at_most_0_60", "maximum_strategy_r_contribution_at_most_0_65"],
+      "passed": false
+    }
+  ],
+  "bundle": {
+    "passing_variants": [],
+    "passing_count": 0,
+    "verdict": "NO_BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_PASSED",
+    "retained_market_structure_question": null,
+    "selected_candidate": null,
+    "automatic_successor": false,
+    "economic_interpretation": "The US30 book had a directionally favorable but only 0.04204R persistence effect; its stop separation did not agree across both component strategies and RC4 supplied 68.11% of absolute return contribution. The US100 effect was economically negligible, non-concordant and concentrated. Immediate same-component direction persistence versus reversal is not a usable entry-market-structure state in this consumed evidence."
+  },
+  "nearby_rescue": false,
+  "next": "close_unit_then_recompare_programs_1_to_5_and_7_without_adjacent_program_1_signal_transition_followup",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED"
+}

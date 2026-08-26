@@ -61,7 +61,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/prior-vix-relative-regime-context-v1/`: 닫힌 무효 Program 2 / Unit 045 source-free family; 공식 Cboe 스냅샷과 16,477행은 통과했으나 period selector가 0 lifecycle을 반환해 경제판정 전 무효, VIX-context seed·구제 없음
 - `research/rc4-adverse-compression-resolution-state-v1/`: 닫힌 무효 Program 4 / Unit 046 source-free family; selector가 RC16 272건을 함께 받아 RC4 `206 → 478`로 무결성 실패, 계산된 효과 전부 비권위·수정/재실행/인접 후속 없음
 - `research/new-york-week-edge-entry-state-v1/`: 닫힌 Program 3 / Unit 047 source-free family; 월요일 `-0.00544R/-0.00894 stop`, 금요일 `+0.00315R/+0.01697 stop`으로 둘 다 크기·일관성 관문 실패, 인접 달력/세션 후속 없음
-- `research/bidirectional-signal-transition-state-v1/`: 활성 Program 1 / Unit 048 source-free family; 직전 동일 component 신호의 방향 지속/반전을 US30(RC4+Pressure) `156/160`, US100(Cross+Passive) `674/718` 두 자연 책으로 묶어 판정, 결과 미열람
+- `research/bidirectional-signal-transition-state-v1/`: 닫힌 Program 1 / Unit 048 source-free family; US30 지속-반전 `+0.04204R/-0.05170 stop`은 수익크기·양전략 stop 일관성 실패, US100 `+0.00925R/+0.00198 stop`은 무정보, 인접 신호 후속 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
