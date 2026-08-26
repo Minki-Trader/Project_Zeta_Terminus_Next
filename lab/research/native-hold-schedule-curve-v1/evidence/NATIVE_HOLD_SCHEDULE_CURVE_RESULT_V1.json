@@ -1,0 +1,118 @@
+{
+  "schema": "zeta-next-native-hold-schedule-curve-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_INVALID_BEFORE_ECONOMIC_COMPARISON",
+  "unit": "native-hold-schedule-curve-060",
+  "family": "native-hold-schedule-curve-v1",
+  "verdict": "INVALID_NATIVE_HOLD_SCHEDULE_MATRIX_NO_VERDICT",
+  "declaration_sha256": "B94391E2296BD80E317BEEF8B1774A696BDC2A269EA9A9B6162239006A3C57D4",
+  "compile_receipt_sha256": "6B0D484A7C05722C4B61902C0A3697716ADD6D5181913462BA48BD0A1FA875A9",
+  "implementation_commit": "cb87d82976edf13d5bc65e802b0821a369fd2066",
+  "integrity_execution": {
+    "path": "P1 NATIVE",
+    "configuration": "tester-hsc60-p1-native.ini",
+    "profile_input": 0,
+    "profile_vector_logged": "8/12/4/8/6/16",
+    "profile_vector_exact": true,
+    "from": "2022.08.01",
+    "to": "2024.01.01",
+    "model": 4,
+    "process_exit_code": 0,
+    "wall_elapsed_seconds": 312.017,
+    "tester_internal_elapsed_seconds": 303.936,
+    "tester_ticks": 32152159,
+    "tester_bars": 16727,
+    "tester_reported_test_passed": true,
+    "html_reported_quality_percent": 100,
+    "runtime_integrity_at_final_line": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0
+    }
+  },
+  "fatal_detailed_tick_integrity": {
+    "gate": "Every path must report 100 percent real ticks and show no required-symbol detailed tick-generation fallback.",
+    "passed": false,
+    "required_symbols_with_fallback": ["US100", "US30", "US500"],
+    "every_tick_generation_used_summary_lines": 6,
+    "US100": {
+      "total_minute_bars": 501264,
+      "real_ticks_absent_minutes": 1920,
+      "real_ticks_discarded_minutes": 484,
+      "fallback": "every tick generation used"
+    },
+    "US30": {
+      "total_minute_bars": 501132,
+      "real_ticks_absent_minutes": 878,
+      "real_ticks_discarded_minutes": 462,
+      "fallback": "every tick generation used"
+    },
+    "US500": {
+      "total_minute_bars": 501310,
+      "real_ticks_absent_minutes": 155,
+      "real_ticks_discarded_minutes": 441,
+      "fallback": "every tick generation used"
+    },
+    "interpretation": "The HTML 100 percent label is insufficient because the detailed agent log proves generated ticks substituted for absent or discarded real ticks on every required symbol. The fixed integrity gate therefore invalidates the matrix before economics."
+  },
+  "artifact_evidence": {
+    "local_ignored_root": "lab/artifacts/backtests/native-hold-schedule-curve-v1/p1-native/",
+    "files": 15,
+    "bytes": 8208760,
+    "manifest_sha256": "B7290C042F8A6A9354E0B26EDCEC08A490BDBFD4843BB30375085A80C076E22B",
+    "manifest_algorithm": "Sort artifact-root-relative paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "agent_log_bytes": 2300738,
+    "agent_log_sha256": "BF56368BAF1CA625E66BB289F0ED069C1F8F3535D647493A121CB4556DCC5D73",
+    "html_report_bytes": 1517564,
+    "html_report_sha256": "BEAB68ACB7E9765876D6ECAB59BF51C5E49DBC86A59A69DE611FE6A81D7E1E92"
+  },
+  "frozen_implementation_recheck": {
+    "source_manifest_sha256": "02606504D2FAFC18D5E1054813384B252CCE2A40B01663EC4C3278A0DF6060EF",
+    "source_exact": true,
+    "configuration_manifest_sha256": "69607FE28BBDF15D8DDECB20B78A6C040E7C922B051E8933D284240D085D7C15",
+    "configuration_exact": true,
+    "binary_sha256": "6F6633DA0B8D4B650829EBE20060BFE51657586294282AEDBB365920AE89C455",
+    "source_or_configuration_changed_after_first_path": false
+  },
+  "economic_access_boundary": {
+    "authoritative_profile_comparison_performed": false,
+    "paired_common_birth_metrics_accessed": false,
+    "candidate_portfolio_metrics_accessed": false,
+    "candidate_capacity_metrics_accessed": false,
+    "candidate_gate_cast": false,
+    "selected_profile": null,
+    "inadvertent_exposure": "An integrity grep for mismatch also returned the P1 NATIVE final line because it contained broker_mismatch=false. That lone control summary is quarantined, is not reproduced here and was not used for any comparison or judgment.",
+    "economic_verdict": null
+  },
+  "execution_budget_used": {
+    "tester_paths_executed": 1,
+    "tester_paths_unopened": 11,
+    "executed": ["P1 NATIVE"],
+    "unopened": [
+      "P1 SHORT_25", "P1 LONG_25",
+      "P2 NATIVE", "P2 SHORT_25", "P2 LONG_25",
+      "P3 NATIVE", "P3 SHORT_25", "P3 LONG_25",
+      "P4 NATIVE", "P4 SHORT_25", "P4 LONG_25"
+    ],
+    "post_metric_reruns": 0,
+    "environment_rebuilds": 0,
+    "source_corrections_after_tester": 0
+  },
+  "termination": {
+    "reason": "The first required path failed an absolute predeclared integrity gate, so no later path can make the twelve-path matrix valid.",
+    "same_path_rerun": false,
+    "clean_environment_retry": false,
+    "remaining_matrix_opened": false,
+    "nearby_hold_variant_opened": false,
+    "component_or_period_rescue_opened": false,
+    "future_candidate": null
+  },
+  "program_6_opened": false,
+  "broker_or_account_query": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_the_invalid_result_and_closure_then_recompare_programs_1_to_5_and_7_without_adjacent_hold_or_environment_repair"
+}
