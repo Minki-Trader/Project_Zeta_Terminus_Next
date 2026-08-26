@@ -57,6 +57,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/scheduled-us-macro-event-exposure-v1/`: 닫힌 Program 2 / Unit 041 source-free family; 보유 노출 residual `+0.11686R`, 발표 후 진입 `+0.03362R`로 두 역할 모두 광범위 악화 관문 실패, mark-path seed·인접 이벤트 구제 없음
 - `research/server-new-york-dst-mismatch-session-v1/`: 닫힌 Program 3 / Unit 042 source-free family; 봄 `-0.03823R/+0.04509` stop, 가을 `+0.06071R/-0.05218` stop으로 크기·기간 폭·공통 방향 관문 실패, clock-remap seed·인접 세션 후속 없음
 - `research/frontier-evidence-path-yield-audit-v1/`: 닫힌 Program 7 / Unit 043 source-free meta family; 권위 경제판정 도달은 추적증거 `10/10`, fresh observer `1/9`, 후자는 무결성 이탈 `8/9`; 이는 alpha·기본 연구경로 증명이 아니며 seed 1개·거래후보 0개, 후속 없음
+- `research/rc16-deposit-funded-incremental-volume-proxy-v1/`: 활성 Program 5 / Unit 044 source-free family; `$200/$300`에서 RC16만 `0.02/0.03`, 나머지 `0.01`인 두 자연 예치 변형을 전전략 선형 sizing과 비교하도록 선언 동결, scaled 경제·위험 envelope 미개봉
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

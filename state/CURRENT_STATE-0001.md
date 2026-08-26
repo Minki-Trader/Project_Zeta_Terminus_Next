@@ -895,3 +895,11 @@
 - Requiring at least two distinct prior other-strategy signals classified 109 births as unanimous alignment, 325 as any conflict and 1,799 as insufficient prior breadth. Alignment counts were Cross 76, Return 18, Passive 10, Pressure 4, RC16 1 and RC4 zero.
 - The intended broad market-structure bundle was therefore structurally concentrated in Cross. Rejected it before Unit 044 declaration and without opening a family; no Cross-only subset, one-prior-signal relaxation, wider time window or adjacent signal-context substitution is permitted.
 - Synchronized the compact Frontier ledger through closed Units 041-043 and this rejected proposal. No seed, unit, MQL, Tester, Program 6 or Live action opened. The next action is another whole-map comparison, not a Program 1 rescue.
+
+## STATE-0111 - 2026-08-26
+
+- Recompared Programs 1-5 and 7 after the Program 1 proposal rejection. Selected the sole Unit 039 Program 5 RC16 incremental-volume seed only after closed Programs `4/2/3/7`; it is not an automatic adjacent follow-up.
+- Froze two natural deposit variants only: `$200` gives RC16 `0.02` and every other strategy `0.01`; `$300` gives RC16 `0.03` and every other strategy `0.01`. Deposit-matched LINEAR controls set all six strategies to `0.02/0.03`; DEPOSIT_ONLY context keeps all at `0.01`.
+- Outcome-free feasibility reconstructed exactly 2,233 birth volumes, all `0.01`, with RC16 counts `77/72/79/44` across P1-P4 and zero volume fault. One preliminary static-risk invocation was discarded because it parsed the wrong risk field/ordering; it accessed no close economics and supplies no frozen value or gate.
+- Every book must preserve all 2,233 opportunities and base lots. Each selective deposit independently requires a zero-violation closed-capital 4%/12% envelope, positive all-period 4x economics, PF and net/DD improvement, no worse DD%, at least 50% linear-net retention, and at least 10% higher 4x net per executed 0.01-lifecycle unit.
+- Both variants must pass before one later real-tick whole-six-strategy EA question can be retained; it cannot open automatically. Declaration SHA-256 is `033EC1D8E53EFAB98C9388AFDB45ECC14A4CADB5D07C070D08B87E3E30BBFBCD`; scaled outcomes remain unopened until this boundary is committed and pushed. No MQL, Tester, Program 6 or Live surface opened.

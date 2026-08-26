@@ -1,0 +1,260 @@
+{
+  "schema": "zeta-next-rc16-deposit-funded-incremental-volume-proxy-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_044_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "rc16-deposit-funded-incremental-volume-proxy-044",
+  "family": "rc16-deposit-funded-incremental-volume-proxy-v1",
+  "title": "RC16 Deposit-Funded Incremental Volume Proxy",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    }
+  },
+  "question": "At fresh deposits of 200 USD and 300 USD, does keeping every six-strategy base opportunity at 0.01 lot while assigning only the deposit-funded incremental 0.01 or 0.02 lot to RC16 produce a materially more volume-efficient and drawdown-efficient 4x-cost portfolio than deposit-matched linear 0.02 or 0.03 sizing without violating the fixed 4% position and 12% aggregate closed-capital risk envelope?",
+  "hypothesis": "Unit 039 selected RC16 as the single strongest broad cost-resilient strategy. If that information has allocation value rather than merely descriptive value, concentrating only the additional deposit-funded volume in RC16 should improve costed net per executed 0.01-lifecycle unit and net-to-drawdown at both natural deposit steps while retaining a material share of linear-sizing net and preserving every base opportunity.",
+  "why_now": "The Unit 039 seed did not open adjacently. Programs 4, 2, 3 and 7 were each completed afterward, and a newly considered Program 1 bundle was rejected outcome-free before declaration. A fresh whole-map comparison now selects the sole retained Program 5 seed over adjacent Program 1 rescue, another meta audit or a return to the just-completed event/session programs.",
+  "bundle_rotation": {
+    "seed_source_unit": 39,
+    "intervening_closed_units": [40, 41, 42, 43],
+    "intervening_programs": [4, 2, 3, 7],
+    "program_1_proposal_rejected_predeclaration": "same-day-prior-signal-breadth",
+    "automatic_adjacent_followup": false,
+    "after_close": "Recompare Programs 1-5 and 7. Do not open a nearby deposit, lot, strategy, risk-cap, slot or sizing successor automatically."
+  },
+  "research_bundle": {
+    "name": "natural_deposit_steps_for_one_selected_incremental_volume_policy",
+    "variants": [
+      {
+        "id": "DEPOSIT_200_RC16_002",
+        "deposit_usd": 200.0,
+        "selective_volume": "RC16 0.02; RC4, Cross, Pressure, Return and Passive 0.01",
+        "linear_comparator_volume": "All six strategies 0.02",
+        "deposit_only_context_volume": "All six strategies 0.01"
+      },
+      {
+        "id": "DEPOSIT_300_RC16_003",
+        "deposit_usd": 300.0,
+        "selective_volume": "RC16 0.03; RC4, Cross, Pressure, Return and Passive 0.01",
+        "linear_comparator_volume": "All six strategies 0.03",
+        "deposit_only_context_volume": "All six strategies 0.01"
+      }
+    ],
+    "parameter_grid": false,
+    "alternate_deposit_or_volume": false,
+    "selected_strategy_substitution": false
+  },
+  "boundary": {
+    "family_root": "lab/research/rc16-deposit-funded-incremental-volume-proxy-v1/",
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "seed_authority": {
+    "unit_039_declaration_sha256": "E541EEC5CC149693EDD7531BB52D8CF1E45A4C50656B16A405E4F2CD164D0F43",
+    "unit_039_result_sha256": "C026E483AE6605AE0EEC8031883E1D4B01AF9D70B5EE7627084074E1106E4A1C",
+    "unit_039_closure_sha256": "75ACA51F94CFB41CA6AD80B27A6E03F2ED319CAE691BD13724196646DABEC1AC",
+    "retained_seed": "rc16_deposit_funded_incremental_lot_allocation_proxy",
+    "selected_strategy": "RC16",
+    "closed_nearby_questions_remain_closed": [
+      "alternate cost multiples",
+      "fee component decomposition",
+      "cost-fragile strategy suppression or base-lot reduction",
+      "same-symbol directional overlap"
+    ]
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ]
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Birth event, strategy, period and recorded volume only. No close value, cost unit, scaled net, drawdown, risk-envelope outcome or selection verdict was accessed.",
+    "births": 2233,
+    "birth_volume_min": 0.01,
+    "birth_volume_max": 0.01,
+    "volume_step_faults": 0,
+    "strategy_birth_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "rc16_period_birth_counts": {
+      "P1_2022H2_2023": 77,
+      "P2_2024": 72,
+      "P3_2025": 79,
+      "P4_2026_YTD": 44
+    },
+    "candidate_200_max_volume": 0.02,
+    "candidate_300_max_volume": 0.03,
+    "linear_300_max_volume": 0.03,
+    "eligible": true
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a persisted-state version, not an event primary key.",
+    "ordering": "Within each fresh period order by parsed server_time, numeric state_sequence, fixed close-before-birth precedence, then source path and line.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies 0.01 volume and positive planned_risk from detail.",
+    "passive_pending": "PASSIVE_PLACE supplies positive planned_risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL moves the pending 0.01 risk into one Passive lifecycle.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle. value_a is native actual net USD and value_b is frozen 2x-cost stressed net USD.",
+    "observed_cost_unit": "actual net minus 2x-cost stressed net; it must be finite and nonnegative.",
+    "base_4x_net": "actual net minus three observed-cost units.",
+    "volume_scaling": {
+      "DEPOSIT_ONLY": "Every lifecycle and planned risk factor is 1.",
+      "LINEAR_200": "Every lifecycle net, cost and planned risk factor is 2.",
+      "LINEAR_300": "Every lifecycle net, cost and planned risk factor is 3.",
+      "SELECTIVE_200": "RC16 lifecycle net, cost and planned risk factor is 2; every other strategy factor is 1.",
+      "SELECTIVE_300": "RC16 lifecycle net, cost and planned risk factor is 3; every other strategy factor is 1."
+    },
+    "opportunity_identity": "Every book contains exactly the same 2,233 admitted births and close identities. No policy may delete, delay, replace or add an opportunity; every non-RC16 selective lifecycle remains exactly one 0.01 unit.",
+    "closed_drawdown": "Order scaled 4x close nets by the frozen event order, start cumulative net at zero, maintain a nonnegative running peak and take the largest peak-minus-current cumulative-net drawdown.",
+    "profit_factor": "Sum positive scaled 4x close net divided by absolute sum negative scaled 4x close net.",
+    "executed_volume_units": "Sum each lifecycle's 0.01-lot factor. LINEAR has 4,466/6,699 units at 200/300; SELECTIVE has 2,505/2,777 units.",
+    "volume_productivity": "Pooled scaled 4x net divided by executed 0.01-lifecycle units."
+  },
+  "fixed_closed_capital_risk_envelope": {
+    "purpose": "A necessary conservative source-free Proxy check that the frozen 4% position and 12% aggregate gates can preserve every base opportunity. It is not a substitute for later real-tick EA proof because per-position open marks are not present.",
+    "linear_capital": "At each admission, multiply the latest prior base ProjectStageBalance, account_equity and stressed_balance by deposit/100 and take their minimum.",
+    "selective_project_capital": "Latest prior base ProjectStageBalance plus deposit minus 100 plus cumulative extra RC16 actual close net.",
+    "selective_stressed_capital": "Latest prior base stressed_balance plus deposit minus 100 plus cumulative extra RC16 2x-cost close net.",
+    "selective_equity_lower_bound": "Latest prior base account_equity plus deposit minus 100 plus cumulative extra RC16 actual close net minus extra RC16 active planned risk. This charges the entire extra RC16 tranche at its stop budget while open.",
+    "selective_conservative_capital": "Minimum of selective project capital, selective stressed capital and selective equity lower bound.",
+    "checks": [
+      "Every scaled planned position risk is at most 4% of its book's conservative capital plus 0.01 USD tolerance.",
+      "Tracked active plus Passive pending scaled planned risk after each admission is at most 12% of conservative capital plus 0.01 USD tolerance.",
+      "Conservative capital remains strictly positive.",
+      "Any violation fails that deposit variant because opportunity suppression is forbidden."
+    ],
+    "runtime_limit": "A passing Proxy retains only one later EA implementation question that must prove exact open equity, margin, stop geometry, volume normalization and risk admission on normal real-tick paths."
+  },
+  "fixed_integrity_gate": [
+    "All six files retain their listed byte lengths and hashes and contain zero exact duplicate full rows.",
+    "Reconstruct exactly 16,477 data rows and 2,233 lifecycles with strategy totals 272/206/805/118/238/594 and zero overlap, pending, volume, risk or close fault.",
+    "Reconstruct actual net 444.1900 USD, 2x-cost stressed net 407.0477 USD and observed-cost unit 37.1423 USD.",
+    "Reconstruct base 4x portfolio net 332.7631 USD and base 4x max closed drawdown 32.2524 USD before any scaled comparison.",
+    "Every LINEAR and SELECTIVE book contains exactly 2,233 lifecycles and its frozen executed-volume-unit total.",
+    "Both LINEAR and SELECTIVE books pass every closed-capital 4%/12% risk-envelope check without suppressing an opportunity."
+  ],
+  "fixed_variant_gate": {
+    "apply_independently_to": ["DEPOSIT_200_RC16_002", "DEPOSIT_300_RC16_003"],
+    "requirements": [
+      "Selective 4x net is strictly positive in each of P1-P4 and pooled.",
+      "The incremental RC16 tranche contributes strictly positive 4x net in each of P1-P4.",
+      "Selective pooled 4x profit factor is at least the matching LINEAR profit factor.",
+      "Selective pooled 4x net-to-drawdown is strictly greater than matching LINEAR net-to-drawdown.",
+      "Selective 4x closed drawdown as a percentage of deposit is no greater than matching LINEAR.",
+      "Selective pooled 4x net retains at least 50% of matching LINEAR pooled 4x net.",
+      "Selective 4x net per executed 0.01-lifecycle unit is at least 10% greater than matching LINEAR.",
+      "Selective 4x return on deposit is strictly greater than the matching DEPOSIT_ONLY 4x return on deposit."
+    ],
+    "pass_rule": "Every integrity, risk-envelope and economic requirement must pass independently at both deposits.",
+    "failure_action": "Close with no incremental-volume candidate. Do not rescue with another deposit, partial tranche, another strategy, blended strategy set, changed return-retention or productivity threshold, altered cost book, opportunity suppression or base-lot reduction."
+  },
+  "fixed_bundle_gate": {
+    "requirements": [
+      "Both natural deposit variants pass their complete gates.",
+      "Selective-minus-linear volume-productivity improvement is positive at both deposits.",
+      "Selective-minus-linear net-to-drawdown improvement is positive at both deposits.",
+      "No strategy loses a base opportunity or falls below 0.01 lot."
+    ],
+    "passing_action": "Retain exactly one later independently named whole-six-strategy real-tick EA question implementing RC16-only deposit-funded incremental volume at 200/300 USD. It cannot open automatically and grants no Live authority.",
+    "failure_action": "Close with no EA question and no adjacent lot, deposit, slot or strategy-allocation rescue."
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "verdict_rules": {
+    "success": "PASS_ONE_RC16_INCREMENTAL_VOLUME_REAL_TICK_EA_QUESTION when integrity and both deposit variants plus the bundle pass every frozen gate.",
+    "failure": "NO_RC16_DEPOSIT_FUNDED_INCREMENTAL_VOLUME_PROXY_PASSED when integrity passes but either deposit or the bundle fails.",
+    "invalid": "INVALID_INPUT_OR_RISK_RECONSTRUCTION_NO_ALLOCATION_VERDICT when any input, lifecycle, volume, cost, risk-envelope or base-anchor integrity check fails.",
+    "ambiguous": "AMBIGUOUS_NO_INCREMENTAL_VOLUME_SEED only if integrity passes but an unforeseen semantic condition prevents the exact fixed comparison without changing its contract."
+  },
+  "stop_rules": [
+    "Commit and push this declaration before calculating any scaled close net, cost, drawdown, risk-envelope result, gate or verdict.",
+    "Run exactly one fixed in-memory aggregation over the six immutable files.",
+    "Do not modify MQL, compile, run MT5, retain an analysis CLI, query broker/account state or touch Live.",
+    "Do not alter deposits, volume assignments, selected strategy, cost book, opportunity set, risk fractions or economic thresholds.",
+    "Close the family after one result and recompare Programs 1-5 and 7 before any retained EA seed or nearby Program 5 question."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_rc16_incremental_volume_aggregation"
+}
