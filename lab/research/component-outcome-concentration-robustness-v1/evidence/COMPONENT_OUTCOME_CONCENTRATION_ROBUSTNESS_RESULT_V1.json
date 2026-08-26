@@ -1,0 +1,102 @@
+{
+  "schema": "zeta-next-component-outcome-concentration-robustness-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_075_INVALID_AT_IMMUTABLE_ROW_POPULATION_GATE",
+  "unit": "component-outcome-concentration-robustness-075",
+  "family": "component-outcome-concentration-robustness-v1",
+  "macro_program": {
+    "id": 7,
+    "name": "diagnostic_causal_meta"
+  },
+  "declaration": {
+    "sha256": "C7B60D9DEBA467A029940A7C662EC9C8F35C14C2F398516D5132295EB8B9BC67",
+    "commit": "f915d648bffda565d2e35dc7543a1e41abc217e8"
+  },
+  "premetric_correction": {
+    "sha256": "2FC1A05E86949AF7663F127AEA56B920772E04C54ECB5114157727EEF41461BB",
+    "commit": "d7ffe238d77f50ee96e6bee913ce1e92b7760ccf",
+    "used": 1,
+    "remaining": 0
+  },
+  "execution": {
+    "successful_fixed_reconstructions": 0,
+    "failed_invocations": 2,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "first_failure": {
+      "stage": "shell parse before execution",
+      "reason": "diagnostic string variable delimiter",
+      "economic_rows_read": 0,
+      "economic_metrics_emitted": 0
+    },
+    "second_failure": {
+      "stage": "fixed integrity population count before any top-k or residual calculation",
+      "reason": "the declaration selected event exactly CLOSE, but CP2 produced 2,027 selected rows instead of the required 2,233",
+      "economic_metrics_emitted": 0
+    }
+  },
+  "integrity": {
+    "all_12_byte_hash_pins_passed": true,
+    "source_verdict_anchors_passed": true,
+    "csv_headers_passed": true,
+    "fixed_row_population_passed": false,
+    "passed": false
+  },
+  "bounded_failure_diagnosis": {
+    "role": "post-failure topology diagnosis only; no concentration, residual, rank or book metric was calculated",
+    "cp2_fixed_001": {
+      "declared_required_final_lifecycles": 2233,
+      "event_exactly_close": 2027,
+      "external_close": 206,
+      "close_plus_external_close": 2233,
+      "finding": "The frozen selector omitted every stop-loss lifecycle, which the event schema records as EXTERNAL_CLOSE rather than CLOSE."
+    },
+    "binding_compounding": {
+      "declared_required_final_lifecycles": 2235,
+      "event_exactly_close": 504,
+      "external_close": 60,
+      "close_plus_external_close": 564,
+      "shortfall_even_if_external_close_were_added": 1671,
+      "finding": "The two pinned binding event artifacts contain only a retained subset of final lifecycle events and cannot reconstruct the authoritative 2,235-lifecycle binding distribution."
+    },
+    "identification_consequence": "Changing CLOSE to CLOSE plus EXTERNAL_CLOSE would be a forbidden second implementation correction and still would not repair the incomplete binding lifecycle population. The predeclared two-basis concentration question is not identifiable from the immutable artifacts."
+  },
+  "metrics": {
+    "top5_or_top10_shares_emitted": false,
+    "leave_top_k_nets_or_signs_emitted": false,
+    "component_ranks_or_pair_reversals_emitted": false,
+    "kendall_tau_emitted": false,
+    "book_residuals_emitted": false
+  },
+  "gates": {
+    "integrity_density_passed": false,
+    "broad_concentration_evaluated": false,
+    "sign_and_rank_fragility_evaluated": false,
+    "strong_falsifier_evaluated": false,
+    "complete_passed": false
+  },
+  "verdict": "INVALID_OUTCOME_CONCENTRATION_NO_VERDICT",
+  "interpretation": "Claude card 25 remains economically plausible but is not testable as frozen: the CP2 event type was underspecified and the binding event artifacts do not contain the full lifecycle distribution. No inference about outcome concentration, component-rank robustness or US100 book robustness is permitted.",
+  "decision_translation": {
+    "preserve": [
+      "all six components, both books and current first-come construction",
+      "the bounded Unit 072 US100 role and Unit 074 ambiguous turnover/value finding at their original authority",
+      "an explicit observation gap for a future naturally complete binding lifecycle ledger"
+    ],
+    "discard": [
+      "any claim that current component ranks are either tail-dependent or tail-robust",
+      "a top-k rule, winsorization rule, component/book removal, allocation, priority, lot, risk, slot, exit, EA or Live candidate from Unit 075"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_invalid_closure_commit_push_then_recompare_and_immediately_open_a_different_connected_distant_claude_hypothesis"
+}

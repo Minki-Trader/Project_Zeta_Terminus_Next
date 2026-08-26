@@ -1,0 +1,70 @@
+{
+  "schema": "zeta-next-component-outcome-concentration-robustness-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_INVALID_IMMUTABLE_POPULATION_NO_VERDICT",
+  "unit": "component-outcome-concentration-robustness-075",
+  "family": "component-outcome-concentration-robustness-v1",
+  "verdict": "INVALID_OUTCOME_CONCENTRATION_NO_VERDICT",
+  "evidence": {
+    "declaration_sha256": "C7B60D9DEBA467A029940A7C662EC9C8F35C14C2F398516D5132295EB8B9BC67",
+    "premetric_correction_sha256": "2FC1A05E86949AF7663F127AEA56B920772E04C54ECB5114157727EEF41461BB",
+    "result_sha256": "DB7E717CD1BF6D9F3132BAA03960004EFADEE91B3EF8C7A7FBD26F75F8C00E8B",
+    "result_bytes": 4653
+  },
+  "execution_accounting": {
+    "successful_fixed_reconstructions": 0,
+    "failed_invocations": 2,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "economic_metrics_emitted": 0
+  },
+  "integrity": {
+    "all_input_pins_passed": true,
+    "fixed_row_population_passed": false,
+    "cp2_declared": 2233,
+    "cp2_exact_close": 2027,
+    "cp2_external_close": 206,
+    "binding_declared": 2235,
+    "binding_exact_close": 504,
+    "binding_external_close": 60,
+    "binding_combined_available": 564,
+    "passed": false
+  },
+  "findings": {
+    "cp2_event_semantics": "The frozen exact-CLOSE selector excluded 206 EXTERNAL_CLOSE stop-loss lifecycles. A selector repair is not allowed after the sole correction was consumed.",
+    "binding_data_role": "Even a hypothetical CLOSE-plus-EXTERNAL_CLOSE repair would yield only 564 of the authoritative 2,235 binding lifecycles. The pinned event artifacts are not a complete binding lifecycle ledger.",
+    "identification": "Neither the broad concentration thesis nor its strong falsifier was evaluated. No top-k, residual, rank, Kendall or book-role metric exists from this unit."
+  },
+  "decision_translation": {
+    "preserve": [
+      "all six components, both books, current first-come construction and existing bounded decisions",
+      "the observation gap that full binding lifecycle-level outcomes are required before a cross-basis concentration claim"
+    ],
+    "discard": [
+      "any outcome-concentration or rank-robustness conclusion from Unit 075",
+      "any top-k, component, book, allocation, priority, lot, risk, slot, exit, EA or Live action"
+    ],
+    "additional_observation_required": "A naturally complete, independently authorized binding lifecycle ledger could make a materially new data role available; do not manufacture or reacquire it as an adjacent rescue.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "changing CLOSE to CLOSE plus EXTERNAL_CLOSE and rerunning CP2",
+    "CP2-only concentration or a binding 564-row tail analysis",
+    "alternate top-k, winsorization, bootstrap, report/deal reconstruction or new logger",
+    "component/book removal, allocation, priority, lot, risk, slot, exit, EA or Live change"
+  ],
+  "same_family_successor": false,
+  "whole_map_recomparison_required_after_push": true,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_and_immediately_open_a_different_connected_distant_claude_hypothesis"
+}

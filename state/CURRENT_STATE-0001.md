@@ -1562,3 +1562,12 @@
 - No declaration/hash assertion, CSV import, economic row, top-k share, residual sign, rank comparison, book aggregate or verdict executed or was emitted.
 - Used the sole permitted premetric implementation correction to change only diagnostic interpolation from `$basis:` to `${basis}:`. Row selection, component mapping, order, k, formulas, thresholds, gates, verdicts, exclusions and decisions are unchanged.
 - Correction receipt SHA-256 is `2FC1A05E86949AF7663F127AEA56B920772E04C54ECB5114157727EEF41461BB`. One successful reconstruction remains; premetric correction allowance is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0190 - 2026-08-27
+
+- Correction commit `d7ffe238d77f50ee96e6bee913ce1e92b7760ccf` reached origin before the single remaining fixed invocation. All 12 file pins, source verdict anchors and CSV headers passed, then the immutable row population failed before any new economic metric.
+- Exact `CLOSE` selected only `2,027` CP2 rows versus `2,233`. Post-failure topology diagnosis found `206 EXTERNAL_CLOSE` stop-loss rows; using them would require a forbidden second correction.
+- Binding is independently insufficient: the two pinned event artifacts contain `504 CLOSE` and `60 EXTERNAL_CLOSE`, only `564/2,235` authoritative final lifecycles. Changing the event selector therefore could not make the predeclared cross-basis question identifiable.
+- Closed `INVALID_OUTCOME_CONCENTRATION_NO_VERDICT`. No top-5/top-10 share, leave-top-k net/sign, component rank, pair reversal, Kendall tau or book residual was emitted. Neither concentration nor robustness may be claimed.
+- Preserve all components/books and prior Unit 072/074 authority; retain only an observation gap for a naturally complete future binding lifecycle ledger. No CP2-only, 564-row, alternate-k, report/deal reconstruction, logger or same-family rescue opens.
+- Result/closure SHA-256 values are `DB7E717CD1BF6D9F3132BAA03960004EFADEE91B3EF8C7A7FBD26F75F8C00E8B` / `49E4CF399264F3DB69BE274505216EFD6DCD6ED091B830210EA2418D2732666D`. Zero successful reconstructions, one premetric correction and zero metric reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
