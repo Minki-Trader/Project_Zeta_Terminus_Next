@@ -1,0 +1,236 @@
+{
+  "schema": "zeta-next-rc-compression-horizon-slot-independence-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_068_DECLARATION_FROZEN_BEFORE_SIGNAL_ASSOCIATION_OCCUPANCY_OR_OUTCOME_METRIC",
+  "unit": "rc-compression-horizon-slot-independence-068",
+  "family": "rc-compression-horizon-slot-independence-v1",
+  "title": "RC16 and RC4 Compression-Horizon Slot Independence",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "micro",
+      "macro"
+    ],
+    "transfer_path": "The shared US30 range-compression estimator is tested at the two native horizons and clocks; signal dependence must transmit through simultaneous lifecycle occupancy and stressed joint losses before the nominal two-slot treatment can be questioned."
+  },
+  "central_question": "Are RC16 and RC4 structurally dependent enough in signal occurrence, simultaneous occupancy and stressed loss realization that treating them as two independent 4% portfolio risk units materially overstates diversification?",
+  "research_bundle": {
+    "name": "p4_signal_dependence_cp2_overlap_and_stressed_loss_transmission",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: compare P4 same-date binary signal association and joint direction for RC16-RC4 against all other fixed-time US30 pairs",
+      "portfolio path: reconstruct four-period CP2 same-date birth density and exact interval overlap for the RC pair",
+      "transmission and falsification: compare stressed joint-loss incidence with marginal independence and eligible natural-control pairs, then cap date concentration"
+    ]
+  },
+  "why_now": {
+    "current_bottleneck": "Unit 067 showed that the day-fixed lot clock does not create material within-day risk distortion. The unresolved shared-capital question is therefore not order sequence but whether two components built from one estimator genuinely provide two independent risk services.",
+    "connection_bridge": "RC16 and RC4 both trade US30 M30 range compression, only thirty minutes apart, and together account for two nominal 4% risk reservations. A true duplicate would directly distort three-slot and 12% aggregate-risk interpretation.",
+    "perspective_distance": "Unit 067 was Program 3 meso order-state timing. Unit 068 moves to Program 5 meso-to-macro strategy-family dependence, using signal ecology, interval occupancy and joint loss rather than capital-clock state.",
+    "decision_if_true": "Retain one later separately declared Lab candidate that tests RC-family risk-unit accounting while preserving both signals and executions. Do not implement, merge or promote automatically.",
+    "decision_if_false": "Preserve RC16 and RC4 as distinct components and independent nominal slots; close without horizon, threshold, clock or pair rescue.",
+    "decision_if_partial": "Record signal-family similarity without a portfolio accounting candidate if occupancy or adverse-loss transmission does not pass."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Long-only beta and feature-supply cards remain either partly subsumed by Units 063-065 or limited to two recent years; neither changes shared capital as directly.",
+    "program_2": "Overnight drift and internal-index dispersion are connected to the benchmark question but do not yet change an existing component or risk contract without introducing a new sleeve or an n=4 regime claim.",
+    "program_3": "Execution-cost and pending-order questions remain useful, but opening another Program 3 unit immediately after Unit 067 offers less perspective distance than the RC family risk question.",
+    "program_4": "Long-horizon capital-stop feedback remains connected but would continue the same capital-clock mechanism just rejected intraday; it is not opened adjacently.",
+    "program_5": "Selected because RC16-RC4 is the only remaining existing-data question that can directly change whether two current 4% reservations represent two independent portfolio risks.",
+    "program_7": "Full compounding-rank attribution remains an observation gap because the retained binding journal covers only 564 of 2,235 closes; summary ranks cannot identify its causal path.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare every program and height. Do not automatically open an RC window, threshold, clock, direction, pair, slot-cap or component-removal variant."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "all signal-known P4 terminal candidate rows for RC16, RC4, Pressure and Return over the immutable 165-date candidate window",
+      "all admitted and closed RC16, RC4, Pressure and Return CP2 lifecycles across the four exact periods",
+      "same-date signal-pass association, joint signal direction, admission-date density, exact open-close interval overlap and stressed loss incidence",
+      "RC16-RC4 as the target pair and the other five fixed-time US30 pairs as natural controls"
+    ],
+    "excluded": [
+      "Passive and Cross because their symbols or evaluation topology are not comparable fixed-time US30 controls",
+      "signal-unknown occupancy short circuits, imputed signals, rejected-candidate outcomes or counterfactual entries",
+      "component removal, slot release, cap pooling, direction netting or same-family order priority",
+      "alternate compression window, threshold, entry time, hold, ARC, stop, period or subgroup",
+      "binding summary ranks or the incomplete binding event tail",
+      "MQL source, compile, Tester, acquisition, broker/account query or Live action"
+    ],
+    "automatic_followups_forbidden": [
+      "RC8, RC12, RC20 or any alternate horizon",
+      "positive-only RC4 or RC16 short variant",
+      "alternate 1.5 threshold or 13:00/13:30 clock",
+      "pair-specific slot sharing, cap or priority implementation",
+      "component deletion, merge, EA or Live change"
+    ]
+  },
+  "immutable_source_contract": {
+    "family": "protective-exit-order-reconciliation-v1",
+    "files": [
+      {
+        "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaRC16.mqh",
+        "bytes": 1393,
+        "sha256": "AC058C9820693C9349A08C2B14AABABC6AAF47A63178A2DA988F0FF922F4F003"
+      },
+      {
+        "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaRC4.mqh",
+        "bytes": 71057,
+        "sha256": "1B9E1909C1D68FE8D54E24A1CA3F081EBB50BDBB399ABB930534F82EF32D7C49"
+      },
+      {
+        "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh",
+        "bytes": 8601,
+        "sha256": "54981FB43CAB8FA3F7A9D97B8EA8D666319712BDBFDD5147DDEF36261B1BA64C"
+      }
+    ],
+    "semantics": {
+      "shared_estimator": "Both components call CalculateRangeCompression on US30 M30; RC16 uses window 16 at 13:30 and passes only feature >= 1.5 long, while RC4 uses window 4 at 13:00 and passes abs(feature) >= 1.5 in the feature sign direction.",
+      "risk_identity": "Each admitted component requests its own planned 4% position-risk budget and contributes separately to the 12% aggregate-risk contract.",
+      "causal_limit": "Shared formula ancestry alone is not economic redundancy; signal association must transmit to simultaneous risk and stressed joint loss."
+    }
+  },
+  "immutable_p4_candidate_input": {
+    "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-candidates.csv",
+    "bytes": 2724613,
+    "sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+    "premetric_topology": {
+      "rows": 4043,
+      "columns": 48,
+      "unique_record_ids": 4043,
+      "server_dates": 165,
+      "signal_known_rows": {
+        "RC16": 165,
+        "RC4": 165,
+        "Pressure": 165,
+        "Return": 159
+      },
+      "maximum_signal_known_rows_per_component_date": 1,
+      "nonzero_dropped_records_on_selected_rows": 0
+    }
+  },
+  "immutable_cp2_inputs": {
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ],
+    "premetric_topology": {
+      "event_rows": 16477,
+      "exact_duplicate_rows": 0,
+      "closed_lifecycles": 2233,
+      "component_lifecycles": {
+        "RC16": 272,
+        "RC4": 206,
+        "Pressure": 118,
+        "Return": 238
+      },
+      "period_lifecycles": {
+        "P1_2022H2_2023": 769,
+        "P2_2024": 554,
+        "P3_2025": 554,
+        "P4_2026_YTD": 356
+      },
+      "stressed_net_usd": 407.0477,
+      "stop_exits": 206
+    }
+  },
+  "frozen_reconstruction": {
+    "candidate_selection": "Select exactly one row per component/server date where signal_known=1 for RC16, RC4, Pressure and Return. Do not infer a signal from any signal_known=0 row.",
+    "signal_pair_metrics": "On the common known-date intersection for each of the six pairs, compute binary pass counts, phi coefficient and joint-pass lift P(A and B)/(P(A)P(B)); joint direction concordance uses only dates on which both pass.",
+    "lifecycle_reconstruction": "Within each independent CP2 period, market OPEN begins one component lifecycle and CLOSE or EXTERNAL_CLOSE ends it. Birth date is OPEN server date; stressed outcome is close value_b; loss means stressed outcome below zero.",
+    "interval_overlap": "For every same-date RC16-RC4 birth pair, overlap minutes are max(0, min(close times)-max(open times)); overlap coefficient is two times overlap divided by the sum of both lifecycle durations. Pool all pairs without selecting result or direction.",
+    "loss_independence": "For each pair, expected joint-loss dates equal joint-birth dates times each component's marginal stressed-loss probability over all of its active dates in the same scope. Ratio is observed divided by expected; period ratios use period-local marginals.",
+    "control_eligibility": "A non-target US30 pair is an eligible outcome control when it has at least 12 pooled joint-birth dates and expected pooled joint losses at least 2.0. At least three of the five controls must qualify.",
+    "concentration": "RC joint-loss dollar mass is the sum of absolute stressed losses of both RC components on dates when both lose; report its share of all RC negative stressed dollars and the largest date's share."
+  },
+  "fixed_mechanism_gate": {
+    "requirements": [
+      "The RC pair has 165 common signal-known dates, each component passes on at least 20 dates and at least 10 dates are joint passes.",
+      "RC pair binary phi is at least 0.20 and joint-pass lift is at least 1.50.",
+      "RC pair phi exceeds the median of the other five US30 pair phis by at least 0.10.",
+      "At least 0.80 of joint RC signal directions agree."
+    ],
+    "all_required": true
+  },
+  "fixed_portfolio_transmission_gate": {
+    "requirements": [
+      "At least 40 pooled RC joint-birth dates exist, at least five in each period, and joint-birth share among dates with either RC is at least 0.15 pooled and at least 0.10 in three of four periods.",
+      "At least 0.80 of joint-birth pairs have positive interval overlap and median overlap coefficient is at least 0.50.",
+      "Pooled RC observed/expected stressed joint-loss ratio is at least 1.25 and reaches at least 1.10 in three of four periods.",
+      "At least three natural-control pairs are eligible and the RC joint-loss ratio exceeds their median by at least 0.15.",
+      "RC joint-loss dates carry at least 0.20 of all RC negative stressed dollars and no single date carries more than 0.15 of the joint-loss mass."
+    ],
+    "all_required": true
+  },
+  "fixed_verdict_rules": {
+    "complete": "PASS_STRUCTURAL_RC_HORIZON_SLOT_REDUNDANCY_RETAIN_ACCOUNTING_CANDIDATE when integrity, the complete mechanism gate and the complete portfolio-transmission gate pass.",
+    "mechanism_only": "PARTIAL_RC_SIGNAL_DEPENDENCE_WITHOUT_PORTFOLIO_TRANSMISSION_PRESERVE_DISTINCT_SLOTS when mechanism passes but transmission fails.",
+    "no_material": "NO_MATERIAL_RC_HORIZON_SLOT_REDUNDANCY_PRESERVE_DISTINCT_SLOTS when mechanism fails and integrity passes.",
+    "invalid": "INVALID_RC_HORIZON_INDEPENDENCE_RECONSTRUCTION_NO_VERDICT when any pin, selected-row, lifecycle, control-density or numerical integrity condition fails."
+  },
+  "decision_translation": {
+    "complete": "Retain one future isolated Lab candidate for RC-family risk-unit accounting; preserve both components and do not implement automatically.",
+    "mechanism_only": "Record formula-family signal similarity but preserve two risk identities because shared portfolio risk did not transmit.",
+    "no_material": "Preserve RC16 and RC4 as distinct components and independent nominal risk slots.",
+    "invalid": "Preserve the observation gap and rotate away after budget exhaustion."
+  },
+  "execution_budget": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before calculating any pair phi, lift, joint-pass, overlap, joint-loss or control metric.",
+    "One implementation-only correction is allowed only if aggregation stops before emitting any target or control association, occupancy or outcome metric. After any such metric is emitted, make no correction or rerun.",
+    "Do not select a direction, period, loss subtype, component subset or alternate pair/control after metrics, and do not create MQL, run Tester, query broker/account state or touch Live."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_declaration_then_run_exactly_one_fixed_source_free_rc_pair_aggregation"
+}
