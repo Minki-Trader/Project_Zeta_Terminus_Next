@@ -1,0 +1,73 @@
+{
+  "schema": "zeta-next-scheduled-us-macro-decision-regime-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_INVALID",
+  "unit": "scheduled-us-macro-decision-regime-058",
+  "family": "scheduled-us-macro-decision-regime-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": "macro"
+  },
+  "hashes": {
+    "declaration_sha256": "B16E87B82A1A45433FA09480122544F836F54DAB7F0F7C7F76F80CBCE210A913",
+    "result_sha256": "40B952A434126CAD120485F019A6DCAAE4D4110DA870A789FFFBF47417A7E856",
+    "candidate_ledger_sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+    "official_calendar_sha256": "B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE",
+    "logger_result_sha256": "CFEE02835808D717344D2082E7B77B8FFB76B2C6CE1C54C4F43B95F340E55C0B"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 0,
+    "post_declaration_invocations_before_integrity_stop": 2,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "same_unit_metric_reruns": 0,
+    "channel_metrics_opened": false,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity_failure": {
+    "gate": "FOMC context-only zero-window-row reconstruction",
+    "declared_candidate_rows": 0,
+    "reconstructed_candidate_rows": 14,
+    "reconstructed_events_with_rows": 5,
+    "included_fomc_events": 5,
+    "row_semantics": "All 14 rows are EXISTING_EXPOSURE gate records.",
+    "event_row_counts": {
+      "FOMC_20260128": 2,
+      "FOMC_20260318": 6,
+      "FOMC_20260429": 2,
+      "FOMC_20260617": 2,
+      "FOMC_20260729": 2
+    },
+    "economic_metrics_before_stop": 0,
+    "why_terminal": "The declaration made this reconstruction an explicit integrity condition. Continuing after replacing the zero-row anchor would be a post-failure contract change."
+  },
+  "verdict": "INVALID_CALENDAR_OR_CANDIDATE_LEDGER_RECONSTRUCTION_NO_DECISION_REGIME_VERDICT",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "finding": "Unit 058 does not establish either a PRE_120M or POST_120M BLS decision regime. Its frozen context reconstruction was internally false, so no signal, existing-exposure or aggregate-risk residual is authoritative. The observed FOMC gate rows are an integrity diagnosis only, not a new event hypothesis.",
+  "closed_scope": [
+    "No PRE_120M or POST_120M CPI/Employment decision-regime conclusion from Unit 058.",
+    "No correction of the FOMC zero-row anchor followed by a same-family rerun.",
+    "No FOMC window, event-class, strategy, component, symbol, signal, gate or risk-heat rescue.",
+    "No event filter, lot, slot, priority, exit, MQL, Tester, Program 6, broker query or Live action."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 and micro, meso and macro after this durable invalid closure.",
+    "same_program_successor_default": "CLOSED",
+    "adjacent_scheduled_event_successor": "FORBIDDEN",
+    "fomc_observation_successor": "NOT_AUTOMATICALLY_OPENED",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}

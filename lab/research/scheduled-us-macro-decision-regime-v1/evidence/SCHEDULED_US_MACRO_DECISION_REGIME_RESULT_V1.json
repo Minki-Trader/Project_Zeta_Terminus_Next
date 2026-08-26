@@ -1,0 +1,112 @@
+{
+  "schema": "zeta-next-scheduled-us-macro-decision-regime-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_058_INVALID_BEFORE_CHANNEL_METRICS",
+  "unit": "scheduled-us-macro-decision-regime-058",
+  "family": "scheduled-us-macro-decision-regime-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "B16E87B82A1A45433FA09480122544F836F54DAB7F0F7C7F76F80CBCE210A913",
+    "declaration_commit": "415358d",
+    "candidate_ledger_bytes": 2724613,
+    "candidate_ledger_sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+    "official_calendar_bytes": 11397,
+    "official_calendar_sha256": "B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE",
+    "logger_result_bytes": 9181,
+    "logger_result_sha256": "CFEE02835808D717344D2082E7B77B8FFB76B2C6CE1C54C4F43B95F340E55C0B"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 0,
+    "post_declaration_invocations_before_integrity_stop": 2,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "same_unit_metric_reruns": 0,
+    "channel_residuals_calculated": false,
+    "role_verdict_metrics_calculated": false,
+    "diagnostic_fomc_only_reconstruction_after_stop": 1,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false
+  },
+  "implementation_correction": {
+    "trigger": "The first post-declaration invocation stopped before event residual construction because non-evaluated gate rows encode signal_passed as -1 rather than 0 or 1.",
+    "correction": "Accept -1 only when signal_known=0 while retaining binary 0/1 enforcement for every evaluated row.",
+    "economic_metrics_emitted_before_correction": false,
+    "within_declared_allowance": true
+  },
+  "integrity": {
+    "passed": false,
+    "passed_before_failure": {
+      "immutable_input_hashes_and_bytes": true,
+      "candidate_schema_columns": 48,
+      "candidate_rows": 4043,
+      "unique_record_ids": 4043,
+      "stage_result_counts": {
+        "GATE_EXISTING_EXPOSURE": 1302,
+        "GATE_SHADOW_ACCEPTED_OCCUPANCY": 7,
+        "OUTCOME_PENDING_ORDER": 119,
+        "OUTCOME_POSITION_OPEN": 264,
+        "OUTCOME_PRICE_DISTANCE_BLOCKED": 1,
+        "OUTCOME_PROTECTION_OR_RISK_BLOCKED": 14,
+        "SIGNAL_SIGNAL_NOT_MET": 2336
+      },
+      "included_calendar_events": {
+        "CPI": 8,
+        "EMPLOYMENT": 8,
+        "FOMC_context_only": 5
+      },
+      "candidate_timestamp_and_decision_bar_parse_faults": 0,
+      "overlapping_BLS_assignment_faults_before_stop": 0,
+      "aggregate_cap_risk_slot_or_mask_parse_faults": 0,
+      "research_dropped_records": 0
+    },
+    "failed_gate": "FOMC context-only zero-window-row reconstruction",
+    "declared_value": {
+      "FOMC_events": 5,
+      "candidate_rows_inside_plus_or_minus_120_minutes": 0
+    },
+    "reconstructed_value": {
+      "FOMC_events": 5,
+      "candidate_rows_inside_plus_or_minus_120_minutes": 14,
+      "events_with_rows": 5,
+      "stage": "GATE",
+      "result": "EXISTING_EXPOSURE",
+      "event_row_counts": {
+        "FOMC_20260128": 2,
+        "FOMC_20260318": 6,
+        "FOMC_20260429": 2,
+        "FOMC_20260617": 2,
+        "FOMC_20260729": 2
+      }
+    },
+    "interpretation": "The frozen declaration's zero-row FOMC anchor is false under its own calendar, timezone and candidate-ledger contract. Because this is an explicit integrity gate, CPI/Employment channel residuals and role gates cannot be opened or interpreted."
+  },
+  "economic_result": {
+    "PRE_120M": null,
+    "POST_120M": null,
+    "signal_pass_residual": null,
+    "existing_exposure_gate_residual": null,
+    "aggregate_risk_heat_residual": null,
+    "selected_role": null,
+    "retained_later_question": null
+  },
+  "selection": {
+    "verdict": "INVALID_CALENDAR_OR_CANDIDATE_LEDGER_RECONSTRUCTION_NO_DECISION_REGIME_VERDICT",
+    "candidate_selected": false,
+    "automatic_followup_opened": false,
+    "FOMC_rescue_opened": false,
+    "live_action": "NONE"
+  },
+  "stop_application": {
+    "reason_not_repaired": "Changing the declared FOMC context count, excluding its matching rows, widening or narrowing windows, or continuing to BLS metrics after a failed integrity gate would change the frozen contract after seeing the failure.",
+    "same_family_rerun": false,
+    "nearby_event_window_or_subgroup_rescue": false,
+    "next": "Close Unit 058 invalid and recompare Programs 1-5 and 7 plus all three heights without automatically opening FOMC or another scheduled-event successor."
+  },
+  "authority": {
+    "metrics": "NO_ECONOMIC_METRICS_AUTHORIZED",
+    "data_role": "CONSUMED_P4_EXPLORATORY_INTEGRITY_ONLY",
+    "lifecycle_close_outcomes_accessed": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  }
+}
