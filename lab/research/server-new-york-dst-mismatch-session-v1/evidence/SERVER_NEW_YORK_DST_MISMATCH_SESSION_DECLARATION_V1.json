@@ -1,0 +1,326 @@
+{
+  "schema": "zeta-next-server-new-york-dst-mismatch-session-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_042_DST_SESSION_OUTCOME_AGGREGATION",
+  "unit": "server-new-york-dst-mismatch-session-042",
+  "family": "server-new-york-dst-mismatch-session-v1",
+  "title": "FPMarkets Server-to-New-York DST Mismatch Session",
+  "macro_program": {
+    "id": 3,
+    "name": "order_time_session",
+    "korean_name": "주문·시각·세션",
+    "active_goal_programs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    }
+  },
+  "research_bundle": "spring_and_autumn_server_new_york_one_hour_gap_contraction",
+  "variants": [
+    "SPRING_US_AHEAD",
+    "AUTUMN_EU_BEHIND"
+  ],
+  "question": "When the frozen FPMarkets server-to-New-York clock gap contracts from seven hours to six during the two US/Europe daylight-saving mismatch intervals, do native portfolio births show a material and directionally coherent change in full-lifecycle stressed R and stop incidence relative to aligned-clock births of the same strategy and fresh period?",
+  "hypothesis": "Because frozen strategy evaluation hours are server-wall economic variables and are not remapped to New York time, both mismatch intervals move them one New York wall-clock hour later. A genuine session-clock effect should therefore appear with the same economic direction in spring and autumn.",
+  "why_now": "After closing Program 2 Unit 041, the whole-map comparison selected the only still-underrepresented Program 3. This deterministic session contract is independent of event-release outcomes, Unit 040 exit thresholds and the Unit 039 lot seed.",
+  "bundle_rotation": {
+    "previous_completed_macro_program": {
+      "id": 2,
+      "name": "external_market_event"
+    },
+    "current_macro_program": {
+      "id": 3,
+      "name": "order_time_session"
+    },
+    "adjacent_event_window_opened": false,
+    "prior_exit_or_lot_seed_opened": false,
+    "after_close": "Recompare Programs 1-5 and 7. Do not open a nearby DST subwindow, transition-day, weekday, holiday or clock-shift successor automatically."
+  },
+  "boundary": {
+    "family_root": "lab/research/server-new-york-dst-mismatch-session-v1/",
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "external_dataset": false,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "session_clock_source": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Time/ZetaSessionClock.mqh",
+    "session_clock_source_bytes": 9451,
+    "session_clock_source_sha256": "7D7267CDE4399F875C9AB43F2D2865AF220A561C16F6BEB8422C295537FDC763",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ]
+  },
+  "periods": [
+    "P1_2022H2_2023",
+    "P2_2024",
+    "P3_2025",
+    "P4_2026_YTD"
+  ],
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": "RC16",
+    "ZT-M30-US30-RANGE-COMP-64efb16616": "RC4",
+    "ZT-H1-US100-CROSS-IN-14b72317b7": "Cross",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": "Pressure",
+    "ZT-H1-US30-RETURN-I-c870a788ec": "Return",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": "Passive"
+  },
+  "clock_contract": {
+    "fpmarkets_summer": "UTC+3 from 01:00 UTC on the last Sunday in March inclusive through 01:00 UTC on the last Sunday in October exclusive; UTC+2 otherwise.",
+    "new_york_summer": "UTC-4 from 07:00 UTC on the second Sunday in March inclusive through 06:00 UTC on the first Sunday in November exclusive; UTC-5 otherwise.",
+    "aligned_state": "FPMarkets server minus New York wall time is seven hours.",
+    "mismatch_state": "FPMarkets server remains UTC+2 while New York is UTC-4, so the gap is six hours and a fixed server-wall evaluation occurs one New York hour later.",
+    "SPRING_US_AHEAD": "New York summer start inclusive through FPMarkets/Europe summer start exclusive.",
+    "AUTUMN_EU_BEHIND": "FPMarkets/Europe summer end inclusive through New York summer end exclusive.",
+    "implementation": "Convert each recorded server-wall birth through Windows FLE Standard Time to UTC, then classify with the exact transition rules above and cross-check Eastern Standard Time offsets. Market-week births avoid ambiguous Sunday transition instants.",
+    "prohibited_shortcut": "Do not classify by a fixed calendar-date list, month, week number or seven-hour ET/server shortcut."
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Admitted birth timestamp, strategy and fresh period only. No close value, stressed R, stop result, mismatch-conditioned outcome association or verdict was accessed.",
+    "reconstruction_faults": 0,
+    "births": 2233,
+    "states": {
+      "ALIGNED": 2064,
+      "SPRING_US_AHEAD": 127,
+      "AUTUMN_EU_BEHIND": 42
+    },
+    "period_state_counts": {
+      "P1_2022H2_2023": {
+        "ALIGNED": 718,
+        "SPRING_US_AHEAD": 27,
+        "AUTUMN_EU_BEHIND": 24
+      },
+      "P2_2024": {
+        "ALIGNED": 514,
+        "SPRING_US_AHEAD": 29,
+        "AUTUMN_EU_BEHIND": 11
+      },
+      "P3_2025": {
+        "ALIGNED": 515,
+        "SPRING_US_AHEAD": 32,
+        "AUTUMN_EU_BEHIND": 7
+      },
+      "P4_2026_YTD": {
+        "ALIGNED": 317,
+        "SPRING_US_AHEAD": 39,
+        "AUTUMN_EU_BEHIND": 0
+      }
+    },
+    "spring_strategy_counts": {
+      "RC16": 17,
+      "RC4": 8,
+      "Cross": 38,
+      "Pressure": 10,
+      "Return": 18,
+      "Passive": 36
+    },
+    "autumn_strategy_counts": {
+      "RC16": 6,
+      "RC4": 2,
+      "Cross": 17,
+      "Pressure": 1,
+      "Return": 6,
+      "Passive": 10
+    },
+    "aligned_strategy_counts": {
+      "RC16": 249,
+      "RC4": 196,
+      "Cross": 750,
+      "Pressure": 107,
+      "Return": 214,
+      "Passive": 548
+    },
+    "aligned_strategy_period_counts": {
+      "P1_2022H2_2023": {
+        "RC16": 71,
+        "RC4": 50,
+        "Cross": 270,
+        "Pressure": 31,
+        "Return": 96,
+        "Passive": 200
+      },
+      "P2_2024": {
+        "RC16": 64,
+        "RC4": 51,
+        "Cross": 182,
+        "Pressure": 22,
+        "Return": 47,
+        "Passive": 148
+      },
+      "P3_2025": {
+        "RC16": 72,
+        "RC4": 65,
+        "Cross": 180,
+        "Pressure": 31,
+        "Return": 46,
+        "Passive": 121
+      },
+      "P4_2026_YTD": {
+        "RC16": 42,
+        "RC4": 30,
+        "Cross": 118,
+        "Pressure": 23,
+        "Return": 25,
+        "Passive": 79
+      }
+    },
+    "structural_period_absence": "P1 begins after the 2022 spring interval and P4 ends before the 2026 autumn interval. Spring therefore spans P1-P4; autumn is judged only over P1-P3 and its P4 zero is never imputed or failed."
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row. state_sequence is a persisted-state version, not an event primary key.",
+    "ordering": "Within each fresh period order by parsed server_time, numeric state_sequence, fixed close-before-birth event precedence, then source path and line.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned_risk from detail.",
+    "passive_pending": "PASSIVE_PLACE stores one positive planned risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL begins Passive with that active risk.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle. value_b is frozen 2x-cost stressed net USD and detail reason=DEAL_REASON_SL marks stop incidence.",
+    "stressed_r": "Close value_b divided by positive birth planned_risk.",
+    "state_assignment": "Classify exactly once from birth server time into SPRING_US_AHEAD, AUTUMN_EU_BEHIND or ALIGNED using clock_contract.",
+    "comparator": "For every mismatch lifecycle, benchmark mean stressed_r and stop rate come from ALIGNED lifecycles of the same strategy and fresh period.",
+    "residuals": {
+      "stressed_r_residual": "mismatch lifecycle stressed_r minus its same-strategy same-period ALIGNED benchmark mean",
+      "stop_residual": "mismatch lifecycle stop indicator minus its same-strategy same-period ALIGNED benchmark stop rate"
+    },
+    "aggregation": "Report each mismatch variant's equal-lifecycle pooled, period and strategy raw outcomes and residuals. Do not pool spring and autumn until both independent variant gates are complete."
+  },
+  "fixed_integrity_gate": [
+    "The session clock source retains its declaration hash and still expresses the exact FPMarkets and New York transition rules; no source is modified.",
+    "All six economic files retain their listed byte lengths and hashes and contain zero exact duplicate full rows.",
+    "Reconstruct exactly 2,233 lifecycles with strategy totals RC16 272, RC4 206, Cross 805, Pressure 118, Return 238 and Passive 594; no overlap, unmatched close, nonpositive planned risk or Passive pending fault is allowed.",
+    "Reconstruct exact frozen stressed net 407.0477 USD and exactly 206 stop exits.",
+    "Reproduce exact state, period, strategy and aligned-cell densities frozen in pre_outcome_feasibility.",
+    "Every ALIGNED strategy-period benchmark cell contains at least 22 lifecycles and finite stressed R and stop rate."
+  ],
+  "fixed_density_gate": {
+    "SPRING_US_AHEAD": [
+      "At least 100 mismatch lifecycles pooled.",
+      "At least 20 mismatch lifecycles in each of P1-P4.",
+      "All six strategies have at least eight mismatch lifecycles pooled."
+    ],
+    "AUTUMN_EU_BEHIND": [
+      "At least 36 mismatch lifecycles pooled.",
+      "At least seven mismatch lifecycles in each of P1-P3; P4 is structurally outside scope.",
+      "At least four strategies have at least five mismatch lifecycles pooled."
+    ],
+    "eligibility_from_feasibility": {
+      "SPRING_US_AHEAD": "eligible",
+      "AUTUMN_EU_BEHIND": "eligible"
+    }
+  },
+  "fixed_variant_information_gate": {
+    "SPRING_US_AHEAD": [
+      "Absolute pooled mean stressed_r residual is at least 0.10R.",
+      "At least three of four period mean stressed_r residuals share the pooled nonzero sign.",
+      "Absolute pooled mean stop residual is at least 0.05.",
+      "At least three of four period mean stop residuals share the pooled nonzero sign.",
+      "At least four of six strategy mean stressed_r residuals share the pooled sign.",
+      "Economic coherence: positive stressed_r residual requires negative stop residual, or negative stressed_r residual requires positive stop residual."
+    ],
+    "AUTUMN_EU_BEHIND": [
+      "Absolute pooled mean stressed_r residual is at least 0.10R.",
+      "All three P1-P3 period mean stressed_r residuals share the pooled nonzero sign.",
+      "Absolute pooled mean stop residual is at least 0.05.",
+      "All three P1-P3 period mean stop residuals share the pooled nonzero sign.",
+      "At least three of the four density-supported strategies Cross, Passive, RC16 and Return share the pooled stressed_r sign.",
+      "Economic coherence: positive stressed_r residual requires negative stop residual, or negative stressed_r residual requires positive stop residual."
+    ],
+    "interpretation": "Each variant passes only if every density and information requirement passes. A near threshold, one season or one strategy never survives alone."
+  },
+  "fixed_bundle_gate": {
+    "requirements": [
+      "Both SPRING_US_AHEAD and AUTUMN_EU_BEHIND pass their complete variant gates.",
+      "The two pooled stressed_r residuals share the same nonzero sign.",
+      "The two pooled stop residuals share the same nonzero sign.",
+      "The shared stressed_r and stop directions remain economically coherent."
+    ],
+    "passing_action": "Retain exactly one later independently named New-York-aligned session-clock Proxy question. Unit 042 selects no time shift, signal, order, filter, size, stop, exit, EA or Live behavior, and the retained question cannot open automatically.",
+    "failure_action": "Close with no DST session-clock field. Do not rescue with transition-day removal, week expansion, spring/autumn pooling, weekday, holiday, strategy subset, entry hour, New York session label or alternate DST library."
+  },
+  "evidence_limit": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "clock_state_available_at_birth": true,
+    "association_not_mechanism": true,
+    "selection_or_promotion_claim": false
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "verdict_rules": {
+    "success": "PASS_ONE_NEW_YORK_ALIGNED_SESSION_CLOCK_PROXY_QUESTION when integrity passes and both variants plus the cross-variant bundle pass every frozen gate.",
+    "failure": "NO_SERVER_NEW_YORK_DST_MISMATCH_SESSION_FIELD_PASSED when integrity passes but either variant or the bundle fails.",
+    "invalid": "INVALID_CLOCK_INPUT_OR_RECONSTRUCTION_NO_SESSION_VERDICT when any source, input, lifecycle, clock-state or aligned-benchmark integrity gate fails.",
+    "ambiguous": "AMBIGUOUS_NO_SESSION_SEED only if integrity passes but an unforeseen semantic condition prevents the fixed residual association from being interpreted without changing the contract."
+  },
+  "stop_rules": [
+    "Fill the exact frozen session-clock source hash, then commit and push this declaration before accessing any mismatch-conditioned close value, stressed R, stop association or verdict.",
+    "Run exactly one fixed in-memory aggregation over the six immutable files.",
+    "Do not run MT5, compile or modify MQL, create a reusable analysis CLI, query broker/account state or touch Live.",
+    "Do not alter a DST interval, pool the variants before separate judgment or add a transition day, weekday, holiday, strategy subset, entry hour or alternate comparator.",
+    "Close the family after the one result and recompare Programs 1-5 and 7 before any retained seed or nearby session question."
+  ],
+  "outcomes_consumed": false,
+  "next": "freeze_source_hash_commit_and_push_declaration_then_run_the_single_fixed_dst_session_aggregation"
+}
