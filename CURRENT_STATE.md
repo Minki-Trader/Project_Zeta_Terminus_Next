@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0099`
+- Latest state ID: `STATE-0100`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: none; Program 5 Unit 039 `portfolio-cost-resilience-envelope-v1` is closed with RC16 as one retained but unopened incremental-lot Proxy seed
+- Active research boundary: Program 4 Unit 040 `one-hour-adverse-exit-management-v1`; declaration frozen, source/runtime/compile/outcomes not yet opened
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
@@ -431,6 +431,16 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Closed `PASS_ONE_COST_RESILIENT_INCREMENTAL_LOT_PROXY_QUESTION`. The retained RC16 seed is not opened automatically: a later whole-six-strategy, deposit-matched Proxy may assign only volume above the unchanged base minimum lot and must preserve every entry and the exact 4%/12% gates. Pressure, Return and Passive failures cannot suppress or reduce their base opportunities.
 - Declaration/result/closure SHA-256 values are `E541EEC5CC149693EDD7531BB52D8CF1E45A4C50656B16A405E4F2CD164D0F43` / `C026E483AE6605AE0EEC8031883E1D4B01AF9D70B5EE7627084074E1106E4A1C` / `75ACA51F94CFB41CA6AD80B27A6E03F2ED319CAE691BD13724196646DABEC1AC`. No MQL, Tester, Program 6 or Live surface was opened.
 
+## Open one-hour adverse position-state exit Unit 040
+
+- Recompared macro Programs 1-5 and 7 after Unit 039. Program 4 `포지션 관리·청산` was selected over more recent Programs 1/5/7 and not-yet-prepared Programs 2/3; Program 6 remains outside this Goal.
+- Outcome-free duration feasibility found `2,082/2,233` closed lifecycles surviving at least one server hour, with at least 23 survivors in every strategy-period cell. No mark, threshold book or Unit 040 economic result was calculated.
+- Froze one bundle only: exact parent control plus independent full-position close after at least 3,600 server seconds when current executable gross mark is `<=0.00R`, `<=-0.25R` or `<=-0.50R` of frozen entry planned risk.
+- Native exits retain priority; the overlay runs before later native entry checks and preserves every signal, base lot, protection, 4%/12% gate and RC4 compression mechanism. Candidate entry counts may not fall below control in any period.
+- This is distinct from the closed multi-position cohort exit family: it uses no group mask, simultaneous-profit state, natural-exit coordination, peak trail, motivating Live date or old candidate outcome.
+- Declaration SHA-256 is `0FD749028D0D0B22D51C1B85D1B22262F6EE194D3CB60A7E0961C0BAABE11D7B`. Source copy, implementation, compile, dedicated runtime and all 16 outcomes remain unopened until this declaration boundary is committed and pushed.
+- Minimal process/path context still identifies exact CXR2 PID `15080` and dashboard PID `28508`; no broker position, order, deal or account state was polled and no Live surface was changed.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -442,6 +452,6 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Current verdict
 
-Latest research verdict: `PORTFOLIO_COST_RESILIENCE_ENVELOPE_039_CLOSED_PASS_RC16_INCREMENTAL_LOT_SEED_RETAINED_NOT_OPENED`
+Latest research verdict: `ONE_HOUR_ADVERSE_EXIT_MANAGEMENT_040_OPEN_DECLARATION_FROZEN_OUTCOMES_UNOPENED`
 
 `LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_REALIZED_VARIANCE_ASYMMETRY_RESPONSE_032_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_033_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; NATIVE_DIRECTION_ASYMMETRY_VALUE_034_CLOSED_NO_FIELD; SAME_STRATEGY_INTERBIRTH_GAP_VALUE_035_CLOSED_NO_FIELD; US500_CLOSE_LOCATION_PRESSURE_RESPONSE_036_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; STRATEGY_OCCUPANCY_SLOT_VALUE_037_CLOSED_NO_INFORMATION_NO_PRIORITY_PROXY; US500_ORDINAL_ACCELERATION_RESPONSE_038_CLOSED_NO_DIRECTION_NO_PROTOTYPE`

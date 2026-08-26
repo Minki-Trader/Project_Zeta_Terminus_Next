@@ -1,0 +1,236 @@
+{
+  "schema": "zeta-next-one-hour-adverse-exit-management-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_040_IMPLEMENTATION_COMPILE_OR_OUTCOME",
+  "unit": "one-hour-adverse-exit-management-040",
+  "family": "one-hour-adverse-exit-management-v1",
+  "title": "One-Hour Adverse Position-State Exit Management",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit",
+    "korean_name": "포지션 관리·청산",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {
+      "id": 6,
+      "name": "execution_recovery_broker_safety",
+      "korean_name": "실행·복구·브로커 안전"
+    },
+    "unit_role": "One bounded position-management bundle after macro-program rotation, not an execution-safety task and not an automatic successor chain."
+  },
+  "macro_allocation": {
+    "previous_completed_unit": "portfolio-cost-resilience-envelope-039",
+    "previous_macro_program": {
+      "id": 5,
+      "name": "portfolio_capital_risk"
+    },
+    "programs_compared_before_open": {
+      "1": "Recently concentrated through fresh market-structure response units; not selected.",
+      "2": "Underrepresented, but a causally aligned immutable external-market/event dataset is not yet prepared; not opened speculatively.",
+      "3": "Underrepresented, but a strategy-neutral order/time/session contract is less immediately separable from existing signal clocks; not selected.",
+      "4": "Underrepresented in the recent sequence and supported by dense outcome-free one-hour survivor feasibility across every strategy and period; selected.",
+      "5": "Just completed in Unit 039; adjacent lot, slot and allocation work is not opened.",
+      "7": "Recently concentrated through multiple causal field diagnostics; not selected."
+    },
+    "selection_reason": "Program 4 supplies a distinct whole-position management question with dense causal exposure and rotates away from Program 5 without consuming the retained RC16 lot seed.",
+    "next_unit_default": "After Unit 040 closes, recompare Programs 1-5 and 7 and rotate away from Program 4. No nearby age, R-threshold, strategy or symbol rescue is automatic."
+  },
+  "research_bundle": "elapsed_position_age_and_adverse_mark_exit_thresholds",
+  "question": "For an otherwise frozen six-strategy V7 portfolio, does independently closing a still-open position after at least one server hour when its current executable gross mark is at or below one of three fixed planned-risk thresholds improve broad portfolio economics without reducing admitted entries?",
+  "economic_hypothesis": "A position that remains nonpositive or materially adverse after one hour may have lower remaining expectancy than the frozen natural exit, while an entry-preserving full close can release capacity for later native opportunities. The mechanism must prove this broadly as one fixed threshold bundle rather than by selecting a nearby threshold after outcomes.",
+  "distinction_from_closed_work": {
+    "closed_family": "lab/research/portfolio-exit-coordination-v1/",
+    "closed_verdict": "NO_MECHANISM_PASSED_RETAIN_FROZEN_V7",
+    "closed_causal_object": "Two-or-more-position cohort profit and coordinated group exits.",
+    "current_causal_object": "Each owned position independently, conditioned only on its own elapsed age and current executable mark divided by its frozen entry planned risk.",
+    "not_a_rescue": "No old cohort mask, simultaneous-profit state, natural-exit coordination, peak, 0.25R activation, half-peak trail, motivating Live date or old outcome is reused."
+  },
+  "boundary": {
+    "family_root": "lab/research/one-hour-adverse-exit-management-v1/",
+    "runtime_root": "lab/runtime/oaem40-portable/",
+    "artifact_roots": [
+      "lab/artifacts/backtests/one-hour-adverse-exit-management-v1/",
+      "lab/artifacts/ea-files/one-hour-adverse-exit-management-v1/",
+      "lab/artifacts/logs/one-hour-adverse-exit-management-v1/"
+    ],
+    "tester_only": true,
+    "serial_stream_only": true,
+    "mql_source_required": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "confirmation_or_promotion_evidence": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "frozen_parent": {
+    "root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "git_tree": "605fcec39cd1ba5479c156f71935299ea3c1288b",
+    "source_file_count": 15,
+    "source_manifest_sha256": "CFA02DAFCDA3028EA685EBE7DBA272A01C0BE7E1DF5B3B7C83E10BA2DB8D9954",
+    "copy_rule": "One physical self-contained copy into this family after the declaration boundary is committed; no source Include, compiled object, link or execution dependency may cross family roots.",
+    "immutable_source_rule": "The parent remains frozen. All Unit 040 source and configuration changes belong only to the new family."
+  },
+  "pre_declaration_feasibility": {
+    "source": "The six immutable already-consumed CXR2-equivalent event files used by Unit 039.",
+    "inspection_scope": "Birth and close server timestamps only. No lifecycle P/L, mark state, threshold trigger, candidate book or Unit 040 verdict was calculated.",
+    "closed_lifecycles": 2233,
+    "survived_at_least_60_server_minutes": 2082,
+    "survivors_by_strategy": {
+      "RC16": 271,
+      "RC4": 206,
+      "Cross": 798,
+      "Pressure": 116,
+      "Return": 225,
+      "Passive": 466
+    },
+    "survivors_by_strategy_and_period": {
+      "P1_2022H2_2023": {"RC16":77,"RC4":53,"Cross":286,"Pressure":35,"Return":103,"Passive":171},
+      "P2_2024": {"RC16":72,"RC4":53,"Cross":194,"Pressure":23,"Return":44,"Passive":126},
+      "P3_2025": {"RC16":78,"RC4":68,"Cross":191,"Pressure":30,"Return":49,"Passive":92},
+      "P4_2026_YTD": {"RC16":44,"RC4":32,"Cross":127,"Pressure":28,"Return":29,"Passive":77}
+    },
+    "density_interpretation": "Every strategy and every period has at least 23 one-hour survivors, so the common checkpoint is not selected from a sparse strategy or a single period.",
+    "unit_040_outcomes_consumed": false
+  },
+  "fixed_paths": [
+    {
+      "id": "CONTROL",
+      "input_kind": 0,
+      "threshold_r": null,
+      "definition": "Exact frozen parent economics. The experimental evaluation returns immediately and all experimental counters remain zero."
+    },
+    {
+      "id": "EXIT_AT_OR_BELOW_0R",
+      "input_kind": 1,
+      "threshold_r": 0.0,
+      "definition": "After at least 3,600 server seconds, close an independently owned position at the first eligible inherited dispatch whose executable gross mark divided by frozen entry planned risk is less than or equal to 0.00R."
+    },
+    {
+      "id": "EXIT_AT_OR_BELOW_NEG_025R",
+      "input_kind": 2,
+      "threshold_r": -0.25,
+      "definition": "After at least 3,600 server seconds, close an independently owned position at the first eligible inherited dispatch whose executable gross mark divided by frozen entry planned risk is less than or equal to -0.25R."
+    },
+    {
+      "id": "EXIT_AT_OR_BELOW_NEG_050R",
+      "input_kind": 3,
+      "threshold_r": -0.5,
+      "definition": "After at least 3,600 server seconds, close an independently owned position at the first eligible inherited dispatch whose executable gross mark divided by frozen entry planned risk is less than or equal to -0.50R."
+    }
+  ],
+  "fixed_causal_measurement": {
+    "age": "TimeCurrent minus the owned position's broker open time; evaluation begins only when age is at least 3,600 seconds.",
+    "eligible_dispatch": "An inherited processed Tester dispatch after ownership and reconciliation, with the symbol's close session available and a structurally valid executable tick no older than the inherited three-second limit.",
+    "gross_mark_usd": "OrderCalcProfit from the selected position's executed open price and current volume to current bid for BUY or current ask for SELL. It is causal, executable-side and excludes future swap, commission and slippage.",
+    "denominator": "The component's positive frozen entry_planned_risk_usd retained by the existing lifecycle state.",
+    "mark_r": "gross_mark_usd divided by entry_planned_risk_usd.",
+    "evaluation_frequency": "Every eligible inherited dispatch after one hour until a fixed threshold is met or the native position exits.",
+    "ordering": "Keep native fixed-hold and Passive management exits first, then evaluate the Unit 040 overlay, then allow later native entry checks, then retain inherited RC4 adverse-risk compression ordering.",
+    "scope": "All six owned strategy positions are evaluated independently. Passive pending orders are never evaluated or cancelled by Unit 040.",
+    "passive_reentry_boundary": "A successful Unit 040 Passive close applies the same current-bar decision seal and two-M15-bar next-entry boundary as its native close path.",
+    "close_action": "Full position close through the inherited CloseComponent path only. No partial close, stop modification, preemption, entry filter or lot change exists."
+  },
+  "implementation_contract": {
+    "single_entrypoint": "ZetaOneHourAdverseExitManagementV1.mq5",
+    "single_fixed_enum_input": "InpOneHourAdverseExitKind accepts only 0, 1, 2 or 3; arbitrary thresholds are impossible from configuration.",
+    "tester_only_hard_fail_outside_tester": true,
+    "independent_identity": {
+      "execution_version": "zt-next-lab-one-hour-adverse-exit-management-v1",
+      "release_id": "NEXT-LAB-ONE-HOUR-ADVERSE-EXIT-MANAGEMENT-V1",
+      "portfolio_id": "ZT-PORT-NEXT-LAB-OAEM40-V1",
+      "magic_range": "260826400..260826405",
+      "state_namespace": "ZetaTerminusNext\\lab\\oaem40"
+    },
+    "unchanged": [
+      "all six entry signals, native evaluation times and directions",
+      "order type, price, base volume and deposit sizing",
+      "initial protection, original natural exits and RC4 compression mechanism",
+      "4% per-position and 12% aggregate risk gates",
+      "margin, session-clock, calendar, reconciliation and stressed-cost accounting"
+    ],
+    "required_telemetry": [
+      "path kind and fixed threshold",
+      "eligible position evaluations",
+      "threshold triggers",
+      "successful and failed experimental closes",
+      "mark or lifecycle data faults",
+      "per-component trigger totals",
+      "existing final portfolio, component, scheduler, protection and fault counters"
+    ],
+    "compile_budget": "One first build-6140 compile. At most one source correction is permitted before any Tester outcome; disclose it and re-freeze every source/config/binary hash.",
+    "runtime_rule": "One new Git-ignored physical copy from lab/runtime/tester-portable with no Live, other-family link, Include, EX5, settings, state or log dependency."
+  },
+  "fresh_real_tick_periods": [
+    {"id":"P1_2022H2_2023","from":"2022-08-01","to_exclusive":"2024-01-01"},
+    {"id":"P2_2024","from":"2024-01-01","to_exclusive":"2025-01-01"},
+    {"id":"P3_2025","from":"2025-01-01","to_exclusive":"2026-01-01"},
+    {"id":"P4_2026_YTD","from":"2026-01-01","to_exclusive":"2026-08-21"}
+  ],
+  "run_matrix": {
+    "paths": 4,
+    "periods": 4,
+    "serial_real_tick_runs": 16,
+    "order": "Within P1, P2, P3 and P4 in order: CONTROL, EXIT_AT_OR_BELOW_0R, EXIT_AT_OR_BELOW_NEG_025R, EXIT_AT_OR_BELOW_NEG_050R.",
+    "model": "MT5 Model=4 / real ticks",
+    "fresh_deposit_usd": 100.0,
+    "prior_project_realized_net_usd": 0.0,
+    "base_volume": 0.01,
+    "leverage": "1:100",
+    "execution_mode": 0,
+    "optimization": false,
+    "adjacency": "All four paths for a period run serially in one frozen dedicated environment before moving to the next period."
+  },
+  "fixed_integrity_gate": [
+    "All 16 configurations retain frozen source, configuration and EX5 hashes and finish with one normal STOP.",
+    "Every HTML report states 100% real ticks and the detailed Tester and agent logs contain zero absent/discarded, tick-generation fallback, price/volume mismatch or load error.",
+    "Required US30 and US100 raw-tick manifests and visible contract/swap fingerprints are pinned before outcomes and remain exact before and after every four-path period block.",
+    "Report net, trade and deal totals reconcile to preserved family-local event/current evidence.",
+    "Safety stop, persistence failure, broker mismatch, foreign exposure, protection mismatch, mark/lifecycle data fault and experimental close failure are all zero.",
+    "CONTROL experimental evaluations, triggers and closes are exactly zero and its economics reconcile to the current frozen parent under the same environment.",
+    "No family source, Include, compiled object, setting, state or log resolves through Live or another family root."
+  ],
+  "fixed_economic_gate": {
+    "candidate_requirements": [
+      "At least 20 successful experimental closes pooled and at least one successful experimental close in every period.",
+      "Candidate closed lifecycle count is at least CONTROL in every period; no native admitted-entry count reduction is accepted.",
+      "Candidate pooled stressed net exceeds CONTROL by at least max(USD 10, 5% of absolute CONTROL pooled stressed net).",
+      "Candidate stressed net is at least CONTROL in at least three of four periods.",
+      "Candidate actual net is at least CONTROL in at least three of four periods.",
+      "Candidate summed stressed maximum closed drawdown does not exceed CONTROL and no period exceeds 115% of its CONTROL drawdown.",
+      "At least four of six component pooled stressed nets are at least their CONTROL values.",
+      "At least one immediately adjacent threshold in the fixed 0.00R, -0.25R, -0.50R ordering has positive pooled stressed-net delta versus CONTROL and retains at least CONTROL pooled lifecycle count; an isolated threshold spike cannot pass."
+    ],
+    "selection": "If multiple candidates pass every requirement, select at most one by highest pooled stressed net divided by summed stressed maximum closed drawdown, then highest pooled stressed net, then lower absolute threshold magnitude, then fewer experimental closes.",
+    "passing_action": "Retain exactly one exploratory later candidate question only. Do not promote, change Live or automatically open a successor.",
+    "failure_action": "Close with the frozen parent retained. Do not add 30/45/90/120-minute ages, -0.10R/-0.75R thresholds, strategy subsets, symbol/session exceptions, partial exits, trails or a seventeenth rescue path."
+  },
+  "evidence_limit": {
+    "all_historical_market_paths_already_consumed": true,
+    "clean_holdout": false,
+    "confirmation_claim": false,
+    "live_promotion_possible_in_v1": false,
+    "surviving_candidate_status": "exploratory_question_only_requiring_future_prospective_evidence"
+  },
+  "verdict_rules": {
+    "success": "PASS_ONE_ONE_HOUR_ADVERSE_EXIT_CANDIDATE_QUESTION when all integrity gates pass, at least one candidate passes every economic and adjacency gate, and the frozen ranking selects one.",
+    "failure": "NO_ONE_HOUR_ADVERSE_EXIT_THRESHOLD_PASSED when all integrity gates pass and no candidate passes every economic and adjacency gate.",
+    "invalid": "INVALID_RUNTIME_DATA_OR_RECONSTRUCTION_NO_ECONOMIC_VERDICT when any integrity or reconciliation gate fails.",
+    "ambiguous": "AMBIGUOUS_NO_CANDIDATE only if integrity passes but an unforeseen semantic condition outside the frozen contract prevents unique application without changing it."
+  },
+  "termination": [
+    "Commit and push this declaration before copying or modifying source, compiling, creating the dedicated runtime or opening a Tester outcome.",
+    "After implementation, freeze a compile receipt and commit/push it before the first run.",
+    "Execute exactly the 16 declared paths serially unless an integrity failure closes the remaining matrix unread.",
+    "Apply exactly one verdict, freeze the family, update the Frontier ledger and project state, review only current-repository changes, commit main and push origin/main.",
+    "Recompare macro Programs 1-5 and 7 after closure and normally rotate away from Program 4."
+  ],
+  "stop_rules": [
+    "Do not read Unit 040 Tester economics before the declaration and later compile/runtime receipt boundaries are committed and pushed.",
+    "Do not tune age, threshold, ordering, strategy scope, gate or period after any outcome.",
+    "Do not reuse the closed cohort-exit mechanisms or open an adjacent Program 4 rescue.",
+    "Do not consume or implement the retained Unit 039 RC16 incremental-lot seed inside Unit 040.",
+    "Do not open Program 6 execution, recovery or broker-safety research; report an encountered safety boundary without converting it into a unit.",
+    "Do not query, restart, stop or alter Live. Only already-permitted process/path identity context may be observed."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_make_one_self_contained_parent_copy_implement_compile_and_freeze_the_exact_four_path_matrix"
+}
