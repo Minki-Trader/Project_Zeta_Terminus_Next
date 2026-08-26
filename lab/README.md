@@ -78,7 +78,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/market-stop-reverse-lot-sizing-v1/`: 닫힌 무효 Program 5 / micro→macro Unit 062 family; fit 상세 real-tick 로그는 깨끗했지만 필수 HTML이 생성되지 않았고 사전 전체 환경 manifest도 동기화 중 변해 중앙값·후보 SET·selection/latest를 열지 않음. native stop/lot 보존, 같은-family 실행 수리 없음
 - `research/all-slot-evaluation-clock-shape-v1/`: 닫힌 밀도부족 Program 3 / meso Unit 063 source-free family; 19,604개 바·151개 네이티브 판단 parity 뒤 로컬 회전율은 통과했지만 Q4 밀도와 전체 시계 폭·네이티브 비고유성·집중·기간안정 관문이 실패해 13:30 보존, 특정 시각·all-slot 후보 없음
 - `research/cross-common-beta-decomposition-v1/`: 닫힌 Program 1 / meso Unit 064 source-free family; 공통분산 50.75%·제거가능분산 74.27%와 lot 중간/p90 자본 `$550/$1,000`은 확인했지만 공통평균 near-zero와 전기간·양방향 품질개선이 실패해 단일 US100 Cross 보존, 3-leg hedge seed·후보 없음
-- `research/portfolio-drift-benchmark-attribution-v1/`: 활성 Program 5 / macro Unit 065 source-free family; 2,233개 lifecycle의 시간가중 US30/US100 노출을 재구성하고 일별 beta 및 실제 지분DD 정합 signed/gross passive hurdle을 한 번 판정하며, 구성·lot·slot·거래·Live 변경은 제외
+- `research/portfolio-drift-benchmark-attribution-v1/`: 활성 Program 5 / macro Unit 065 source-free family; 2,233개 lifecycle의 시간가중 US30/US100 노출을 재구성하고 일별 beta 및 실제 지분DD 정합 signed/gross passive hurdle을 한 번 판정하며, 경제값 전 Passive `PLACE→FILL/EXPIRE` birth 계약만 단일 premetric 교정으로 동결했고 구성·lot·slot·거래·Live 변경은 제외
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

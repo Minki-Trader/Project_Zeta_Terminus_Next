@@ -1,0 +1,55 @@
+{
+  "schema": "zeta-next-portfolio-drift-benchmark-attribution-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "PREMETRIC_IMPLEMENTATION_CORRECTION_FROZEN",
+  "unit": "portfolio-drift-benchmark-attribution-065",
+  "declaration": {
+    "path": "lab/research/portfolio-drift-benchmark-attribution-v1/evidence/PORTFOLIO_DRIFT_BENCHMARK_ATTRIBUTION_DECLARATION_V1.json",
+    "sha256": "318E3F03649BD39DAA10381FDDFEB82060AA8814C9C0287D98EBE2F44A2E7AEC",
+    "unchanged": true
+  },
+  "failed_invocation": {
+    "stage": "lifecycle reconstruction before report, exposure, daily mapping, drawdown or benchmark evaluation",
+    "exception": "unmatched close ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8 2022.08.03 15:30:00",
+    "successful_fixed_aggregations_consumed": 0,
+    "economic_metrics_emitted": [],
+    "metric_reruns_consumed": 0
+  },
+  "root_cause": "The first implementation treated every executed-position birth as an OPEN event. The immutable event contract emits market births as OPEN, but the Passive component emits PASSIVE_PLACE followed by either PASSIVE_FILL or PASSIVE_EXPIRE; its executed lifecycle begins only at PASSIVE_FILL.",
+  "immutable_event_evidence": {
+    "passive_component_id": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+    "passive_place_rows": 707,
+    "passive_fill_rows": 594,
+    "passive_expire_rows": 113,
+    "topology_identity": "707 placements = 594 fills + 113 expirations",
+    "place_fields": "PASSIVE_PLACE value_a is limit price; detail carries direction, stop and planned_risk",
+    "fill_fields": "PASSIVE_FILL value_a is actual fill price and value_b is filled volume"
+  },
+  "corrected_implementation_contract": {
+    "market_birth": "For the five market components, OPEN remains the executed-position birth and all original field rules are unchanged.",
+    "passive_pending": "PASSIVE_PLACE opens one component-local pending record containing declared direction, stop and planned risk. It does not create exposure or occupancy.",
+    "passive_fill": "PASSIVE_FILL must match the single pending record, clears it, and creates the executed-position birth at fill server time using fill value_a/value_b plus the matched placement stop/planned risk. Direction inferred from actual fill versus stop must equal the placement direction.",
+    "passive_expire": "PASSIVE_EXPIRE must match and clear the single pending record without creating a lifecycle, exposure or occupancy.",
+    "close": "CLOSE or EXTERNAL_CLOSE continues to match the single active executed position for every component.",
+    "period_integrity": "Every period must end with zero active positions and zero Passive pending orders; exact Passive topology must remain 707/594/113."
+  },
+  "unchanged_contract": [
+    "all immutable file pins and the 2,233-lifecycle target population",
+    "entry-notional, duration, signed/gross exposure and occupancy formulas",
+    "period edges, daily boundary, market composite and correlation formulas",
+    "Tester equity-drawdown denominator and both passive benchmark formulas",
+    "all gates, verdict rules, exclusions and decision translations"
+  ],
+  "budget_after_freeze": {
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "successful_fixed_aggregations_used": 0,
+    "successful_fixed_aggregations_remaining": 1,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_correction_boundary_then_run_the_single_remaining_fixed_aggregation"
+}
