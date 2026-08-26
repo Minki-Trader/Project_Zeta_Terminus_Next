@@ -1022,3 +1022,12 @@
 - Each stage requires at least three lost units and at least 30% conditional loss. All three passing with no stage above 60% of total funnel loss yields the fixed multi-stage diagnosis; no epoch, subset, program weight or classification rescue exists.
 - This differs from Unit 043: it does not compare tracked versus fresh acquisition lanes and includes the complete post-043 macro epoch through Unit 050. It cannot create a default lane, scheduler, program suppression or candidate.
 - Census/declaration SHA-256 values are `F0D0D56EB22BB8E135A31262301C9878476806571E3775B94457C97693F2DA0D` / `9341B436F16ECD85CC670657ED756B53787BFD85850BDAE04456D9368A80D794`; classifications remain unopened until commit/push. Program 6, MQL, Tester, broker state and Live remain untouched.
+
+## STATE-0126 - 2026-08-26
+
+- The sole Unit 051 classification passed the frozen census hash, all 12 closure bytes/hashes, consecutive Unit 039-050 identities, exact program counts, verdict schemas and nested classification with zero fault and no failed invocation or correction.
+- The fixed funnel is `12 closures → 8 authoritative verdicts → 3 material PASS/PARTIAL findings → 0 implementable selected candidates`; exactly one material closure retained a bounded later question at its own close.
+- Evidence-authority attrition lost `4/12 = 33.33%`, economic-materiality attrition lost `5/8 = 62.50%`, and candidate-translation attrition lost `3/3 = 100%`. All three passed the fixed minimum of three units and 30% conditional loss.
+- Stage shares are `33.33%/41.67%/25.00%`, so none exceeded the 60% single-dominance threshold. Closed `PASS_MULTI_STAGE_MACRO_FRONTIER_ATTRITION_DIAGNOSIS`: there is no evidence for collapsing the Frontier into one acquisition lane, hypothesis type or translation tactic.
+- Census/declaration/result/closure SHA-256 values are `F0D0D56EB22BB8E135A31262301C9878476806571E3775B94457C97693F2DA0D` / `9341B436F16ECD85CC670657ED756B53787BFD85850BDAE04456D9368A80D794` / `BA7BAA76A146488CF1F8CF514655774054A29329C4F40E73406CFF0DAC7D3D9C` / `E4521F351F637EFCDDA4FC9A6A61527A3DE7A22C6992DB6AD89F9DB00077CBE9`.
+- No alternate epoch, underlying-unit repair, default lane, scheduler, program suppression, retained question or candidate survives. Next is a whole-map comparison of Programs 1-5 and 7 without adjacent Program 7 work; Program 6, MQL, Tester, broker state and Live remained untouched.
