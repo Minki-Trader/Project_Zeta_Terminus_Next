@@ -1,0 +1,92 @@
+{
+  "schema": "zeta-next-frontier-evidence-path-yield-audit-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "frontier-evidence-path-yield-audit-043",
+  "family": "frontier-evidence-path-yield-audit-v1",
+  "macro_program": {
+    "id": 7,
+    "name": "diagnostics_causal_meta",
+    "korean_name": "진단·인과·메타 연구"
+  },
+  "hashes": {
+    "census_sha256": "F435D497B1F719521F361D8B9F6A56C7A3CF0837F9DC1FD396D34BABAC8BA999",
+    "declaration_sha256": "F0687399C104F21105D566BBD4C82547C751185248FECECEA7404E7408BD99C2",
+    "result_sha256": "1C41E3A27DE16D019275946FBBF2EE8543B8BCD763388097C451E4B004FB0A04"
+  },
+  "execution": {
+    "successful_fixed_in_memory_classifications": 1,
+    "pre_metric_failed_invocations": 2,
+    "pre_metric_correction": "Only the STATE-0076 bundled-authority assertion was changed to match its exact prose after two pre-metric stops. Neither failed invocation completed the census, calculated a rate or produced a gate result; no population, classification rule, metric, threshold or verdict changed.",
+    "post_metric_corrections": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED",
+    "program_6_opened": false
+  },
+  "integrity": {
+    "passed": true,
+    "census_rows": 19,
+    "artifact_hashes_verified": 57,
+    "hash_mismatches": 0,
+    "tracked_lane_n": 10,
+    "fresh_observer_lane_n": 9,
+    "unit_028_030_final_authority": "STATE-0076 integrity correction"
+  },
+  "findings": {
+    "TRACKED_EVIDENCE_AGGREGATION": {
+      "n": 10,
+      "authoritative_economic_verdict_n": 10,
+      "authoritative_economic_verdict_rate": 1.0,
+      "integrity_attrition_n": 0,
+      "retained_later_seed_n": 1,
+      "selected_trading_candidate_n": 0,
+      "early_authoritative_rate": 1.0,
+      "late_authoritative_rate": 1.0
+    },
+    "FRESH_MARKET_OBSERVER": {
+      "n": 9,
+      "authoritative_economic_verdict_n": 1,
+      "authoritative_economic_verdict_rate": 0.1111111111111111,
+      "integrity_attrition_n": 8,
+      "retained_later_seed_n": 0,
+      "selected_trading_candidate_n": 0,
+      "early_authoritative_rate": 0.0,
+      "late_authoritative_rate": 0.25,
+      "integrity_reasons": {
+        "ENVIRONMENT_FINGERPRINT": 1,
+        "REAL_TICK_GENERATION": 4,
+        "HTML_REAL_TICK_LABEL": 3
+      }
+    },
+    "rate_differences": {
+      "overall_tracked_minus_fresh": 0.8888888888888888,
+      "early_tracked_minus_fresh": 1.0,
+      "late_tracked_minus_fresh": 0.75
+    },
+    "gate_passed": true,
+    "diagnosis": "Evidence-acquisition readiness materially separated the ability to reach an authoritative economic answer in this finite census.",
+    "economic_limit": "The tracked lane's one retained research seed and zero selected trading candidates show that answer yield is mostly reliable falsification, not alpha yield.",
+    "causal_limit": "Different questions, symbols and horizons prevent interpreting the rate gap as a causal effect of modality."
+  },
+  "verdict": "PASS_EVIDENCE_ACQUISITION_READINESS_MATERIAL_META_DIAGNOSIS",
+  "retained_later_question": "NONE",
+  "selected_trading_candidate": "NONE",
+  "closed_scope": [
+    "No alternate unit range, modality definition, chronology split, threshold or artifact subset.",
+    "No default tracked-evidence lane and no suppression of fresh-market questions.",
+    "No market-data, Tester, execution, recovery or broker-safety repair; Program 6 remains excluded.",
+    "No adjacent Program 7 audit or evidence-path follow-up opens automatically.",
+    "No signal, event, session, exit, lot, slot, EA or Live candidate."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}
