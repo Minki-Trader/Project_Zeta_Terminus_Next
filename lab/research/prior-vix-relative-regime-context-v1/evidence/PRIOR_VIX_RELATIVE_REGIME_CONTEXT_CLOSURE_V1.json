@@ -1,0 +1,58 @@
+{
+  "schema": "zeta-next-prior-vix-relative-regime-context-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_INVALID_NO_CONTEXT_VERDICT",
+  "unit": "prior-vix-relative-regime-context-045",
+  "family": "prior-vix-relative-regime-context-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "hashes": {
+    "cboe_source_sha256": "9E6A6958041079E56848337439BE5B250B2FE97131751FCD7CF4750A7D31720E",
+    "declaration_sha256": "DFE6F868CBDD759E3FE24F30EF9F9A6BC2905822F0D616E832905F225DC38850",
+    "result_sha256": "328833A0B46C1A017BD969660C9374D10FAB5B0898C37473A6DBEE10EBDFC8E5"
+  },
+  "execution": {
+    "post_declaration_parser_stops_before_metric": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "integrity_stage_invalid_aggregations": 1,
+    "economic_aggregations": 0,
+    "additional_corrections_or_reruns": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED",
+    "program_6_opened": false
+  },
+  "integrity": {
+    "source_and_file_checks_passed": true,
+    "portfolio_data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "expected_lifecycles": 2233,
+    "observed_lifecycles": 0,
+    "passed": false,
+    "reason": "The frozen period selector used Period-eq$period without the required simplified-syntax token boundaries, selected no rows and therefore failed the exact lifecycle anchor."
+  },
+  "economic_judgment": null,
+  "verdict": "INVALID_VIX_SOURCE_OR_LIFECYCLE_RECONSTRUCTION_NO_CONTEXT_VERDICT",
+  "retained_later_question": "NONE",
+  "selected_trading_candidate": "NONE",
+  "closed_scope": [
+    "No correction or rerun after the declared one implementation-only allowance was consumed.",
+    "No LOW, MIDDLE or HIGH economic metric or VIX-context interpretation.",
+    "No absolute VIX threshold, alternate rolling window, percentile cut, trend, rate of change, realized-volatility or other-index rescue.",
+    "No strategy, direction, period, event or session subset.",
+    "No MQL, MetaTrader Tester, Program 6, EA or Live action."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable invalid closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}

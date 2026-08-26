@@ -1,0 +1,67 @@
+{
+  "schema": "zeta-next-prior-vix-relative-regime-context-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_045_COMPLETE_INVALID_RECONSTRUCTION_BEFORE_CONTEXT_METRICS",
+  "unit": "prior-vix-relative-regime-context-045",
+  "family": "prior-vix-relative-regime-context-v1",
+  "declaration_sha256": "DFE6F868CBDD759E3FE24F30EF9F9A6BC2905822F0D616E832905F225DC38850",
+  "source_sha256": "9E6A6958041079E56848337439BE5B250B2FE97131751FCD7CF4750A7D31720E",
+  "execution": {
+    "post_declaration_invocations": 2,
+    "first_invocation": {
+      "status": "PARSER_STOP_BEFORE_INPUT_OR_METRIC",
+      "cause": "PowerShell interpreted a variable immediately followed by a colon inside a diagnostic string as an invalid variable reference.",
+      "correction": "Used explicit ${period} and ${key} variable delimiters only.",
+      "used_declared_implementation_only_pre_metric_correction": true
+    },
+    "second_invocation": {
+      "status": "INTEGRITY_STAGE_COMPLETED_INVALID",
+      "successful_fixed_economic_aggregation": false,
+      "economic_metric_stage_reached": false,
+      "additional_correction_or_rerun": false
+    },
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED",
+    "program_6_opened": false
+  },
+  "integrity": {
+    "cboe_source_hash_bytes_rows_and_close_checks_passed": true,
+    "portfolio_file_hash_and_byte_checks_passed": true,
+    "portfolio_data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "expected_lifecycles": 2233,
+    "observed_lifecycles": 0,
+    "passed": false,
+    "failure": "The frozen simplified Where-Object expression Period-eq$period was parsed as a property token rather than property/operator/value syntax and selected zero period rows. No lifecycle could enter the active/pending reconstruction.",
+    "bounded_nonproject_diagnostic": {
+      "frozen_expression_on_one_dummy_object_count": 0,
+      "correct_syntax_on_one_dummy_object_count": 1,
+      "project_data_reaggregated": false,
+      "economic_outcomes_accessed": false
+    }
+  },
+  "economic_boundary": {
+    "close_values_cast_or_aggregated": false,
+    "stressed_r_calculated": false,
+    "stop_association_calculated": false,
+    "strategy_period_centering_calculated": false,
+    "low_variant_metrics_calculated": false,
+    "high_variant_metrics_calculated": false,
+    "context_gate_reached": false,
+    "selection_reached": false,
+    "interpretation": "This result contains no evidence for or against a VIX regime effect. The zero lifecycle anchor is an implementation-integrity failure, not an economic observation."
+  },
+  "selection": {
+    "retained_later_question": "NONE",
+    "selected_trading_candidate": "NONE",
+    "alternate_vix_threshold_window_percentile_or_series": false,
+    "same_unit_rerun": false
+  },
+  "verdict": "INVALID_VIX_SOURCE_OR_LIFECYCLE_RECONSTRUCTION_NO_CONTEXT_VERDICT",
+  "next": "Freeze the invalid closure, then recompare Programs 1-5 and 7 without repairing or replacing Unit 045 and without an adjacent VIX or Program 2 successor."
+}
