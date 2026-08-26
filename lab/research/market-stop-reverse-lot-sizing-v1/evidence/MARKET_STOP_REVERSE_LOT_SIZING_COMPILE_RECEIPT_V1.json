@@ -1,0 +1,157 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-compile-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "SOURCE_BINARY_NATIVE_CONFIG_RUNTIME_FROZEN_BEFORE_FIT_OUTCOME",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "family": "market-stop-reverse-lot-sizing-v1",
+  "declaration": {
+    "path": "lab/research/market-stop-reverse-lot-sizing-v1/evidence/MARKET_STOP_REVERSE_LOT_SIZING_DECLARATION_V1.json",
+    "commit": "d714e2483cf02b5fce2d98c45f27289cf831ce2d",
+    "sha256": "B998176FFDC68C5CB8D6ED3F762811E18224D054AC168D8DB87A408204892D85",
+    "outcomes_consumed": false
+  },
+  "topology": {
+    "source_root": "lab/research/market-stop-reverse-lot-sizing-v1/mt5/",
+    "parent_root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "parent_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "one_time_physical_parent_copy": true,
+    "historical_lab_mt5_modified": false,
+    "parent_modified": false,
+    "cross_family_source_include_or_link": false,
+    "live_dependency": false
+  },
+  "implementation": {
+    "entrypoint": "lab/research/market-stop-reverse-lot-sizing-v1/mt5/src/Experts/ZetaMarketStopReverseLotSizingV1.mq5",
+    "entrypoint_bytes": 22167,
+    "entrypoint_sha256": "0A77F869A26BC5342EB816C38BE6E270FB3E5D82C7DF1F799FDB2F8D68CE0C83",
+    "code_only_manifest": {
+      "files": 15,
+      "bytes": 369454,
+      "sha256": "FF49BB6016DE3137AC2B3BC72321C177CFB7B3A9D328A76F24A23FCC99175CD5",
+      "algorithm": "Sort src-root-relative mq5/mqh paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8."
+    },
+    "source_and_binary_manifest": {
+      "files": 16,
+      "bytes": 574102,
+      "sha256": "0359403F63A5045CD836E47F308C228D19B90C7587349AD5F891EF3E7F501644",
+      "algorithm": "The code-only algorithm extended to mq5/mqh/ex5."
+    },
+    "parent_code_manifest_sha256": "CFA02DAFCDA3028EA685EBE7DBA272A01C0BE7E1DF5B3B7C83E10BA2DB8D9954",
+    "changed_source_files": [
+      "src/Experts/ZetaMarketStopReverseLotSizingV1.mq5",
+      "src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "src/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh",
+      "src/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh",
+      "src/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh"
+    ],
+    "unchanged_inherited_mqh_files": 10,
+    "change_boundary": [
+      "Tester-only Unit 062 identity, Magic and isolated state/event paths",
+      "one 0/1 market-stop profile with exact 2026-04-01 activation and five frozen component multipliers",
+      "completed-native-timeframe ATR14 from fourteen bars plus the preceding completed close",
+      "outward tick-grid market stop and greatest broker-step reverse-solved lot under the unchanged gross target",
+      "fail-closed ATR, minimum-distance and minimum-lot evidence plus native stop/ATR observation rows",
+      "market-entry plan volume propagation and bounded initialization/final counters"
+    ],
+    "unchanged_surfaces": [
+      "all six entry signals, decision times, directions and holds",
+      "Passive pending-order price, volume, protection, recovery and reconstruction semantics",
+      "position and aggregate risk fractions and the four-percent planned-risk ledger",
+      "cost, slippage stress, margin, session/calendar and ownership semantics",
+      "RC4 ARC checkpoints, shadow occupancy, protection and reconciliation"
+    ]
+  },
+  "native_configuration": {
+    "root": "lab/research/market-stop-reverse-lot-sizing-v1/mt5/config/tester/",
+    "files": 4,
+    "set_files": 1,
+    "ini_files": 3,
+    "bytes": 2832,
+    "sha256": "77B6398ED120D6B10AAE9DFE44DC57C4A41EDAD0ED43077421F952EDCECD700E",
+    "manifest_algorithm": "Sort tester-root-relative ini/set paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "paths_frozen": [
+      "FIT_NATIVE_GEOMETRY 2026-01-01 through exclusive 2026-04-01",
+      "NATIVE_SELECTION 2026-01-01 through exclusive 2026-06-01",
+      "NATIVE_LATEST 2026-01-01 through exclusive 2026-08-21, conditional"
+    ],
+    "candidate_set_status": "UNCREATED_UNTIL_VALID_FIT_MEDIANS_ARE_FROZEN",
+    "all_model_4": true,
+    "optimization": false,
+    "local_agents_only": true,
+    "deposit_currency_leverage": "$100 USD at 1:100"
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "final_result": "0 errors, 0 warnings",
+    "elapsed_ms": 2388,
+    "cpu": "X64 Regular",
+    "successful_compiles_used": 1,
+    "implementation_only_corrections_used": 1,
+    "failed_pre_outcome_attempt": {
+      "result": "5 errors, 0 warnings",
+      "cause": "MQL requires literal constant case labels; the inherited component identifiers are const int values.",
+      "correction": "Replace only the five-value switch in MarketStopMultiplier with an equivalent ordered if chain.",
+      "economic_or_configuration_change": false,
+      "tester_paths_before_correction": 0,
+      "log_path_local_ignored": "lab/research/market-stop-reverse-lot-sizing-v1/evidence/metaeditor-build-attempt-1.log",
+      "log_bytes": 15532,
+      "log_sha256": "B10E6039670F7366ACEB2896B549E2F540572F43BE8C5EA46BFC3540CD083904"
+    },
+    "final_log_path_local_ignored": "lab/research/market-stop-reverse-lot-sizing-v1/evidence/metaeditor-build.log",
+    "final_log_bytes": 16006,
+    "final_log_sha256": "37DFA031727699276C3F3CA6BC3C61B1DD1F372751B4A2DE23F98C57A0665067",
+    "binary_path": "lab/research/market-stop-reverse-lot-sizing-v1/mt5/src/Experts/ZetaMarketStopReverseLotSizingV1.ex5",
+    "binary_bytes": 204648,
+    "binary_sha256": "9185CEB7A109B7B7D13DC1A1B90A3109ED8DC3AAAEEF0ECED5BFEFE367995C7E"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/msrl62-portable/",
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "physical_copy_only": true,
+    "files_before_fit": 778,
+    "bytes_before_fit": 6473522201,
+    "actual_symbolic_or_junction_links": 0,
+    "one_drive_note": "Some copied files carry a cloud reparse attribute with empty LinkType and Target; actual SymbolicLink/Junction objects are zero.",
+    "runtime_source_matches_family_source": true,
+    "runtime_binary_matches_family_binary": true,
+    "runtime_ex5_files": 1,
+    "runtime_mq5_files": 1,
+    "runtime_own_zeta_mqh_files": 14,
+    "runtime_set_files": 1,
+    "runtime_other_family_ex5_files": 0,
+    "runtime_other_family_set_files": 0,
+    "copy_cleanup_disclosure": "The current canonical Tester Portable contained old inactive Zeta executables, settings, files and reports. Before source installation or compilation they were moved out of the active runtime into the Git-ignored sibling msrl62-copy-import-quarantine; no moved file is on an active Expert, Include, Profile or Files path.",
+    "copy_correction_disclosure": "The first Include-child copy used LiteralPath with a wildcard and copied zero headers. Exact source enumeration then installed all fourteen headers into the same single physical runtime before compilation.",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "source_runtime_dependency": false,
+    "other_family_runtime_dependency": false,
+    "live_dependency": false
+  },
+  "pre_fit_required_symbol_data": {
+    "symbols": ["US30", "US100", "US500"],
+    "scope": "Both Bases and Tester/bases: 2025-12 plus 2026-01 through 2026-08 raw tick files, 2025/2026 history files, tick indexes when present, and the server ticker/selected-symbol/symbol-specification databases.",
+    "files": 72,
+    "bytes": 1771251955,
+    "sha256": "048CCEDF2574872D3D542D40AFF151A9B2076DCE45CE0DDADFC0901E04902E23",
+    "algorithm": "Sort runtime-root-relative paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "pair_rule": "Recompute this exact scope before and after each adjacent control/candidate pair; any drift invalidates the complete pair."
+  },
+  "execution_budget": {
+    "source_copies_used": 1,
+    "runtime_copies_used": 1,
+    "successful_compiles_used": 1,
+    "implementation_only_compile_corrections_used": 1,
+    "fit_tester_paths_used": 0,
+    "selection_tester_paths_used": 0,
+    "conditional_latest_tester_paths_used": 0,
+    "tester_paths_remaining": 5,
+    "post_metric_reruns_allowed": 0
+  },
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_query": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_this_frozen_implementation_boundary_then_run_fit_native_geometry_once"
+}
