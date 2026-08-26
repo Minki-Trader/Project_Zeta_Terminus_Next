@@ -82,6 +82,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/loss-channel-risk-contract-attribution-v1/`: 닫힌 Program 4 / micro→macro Unit 066 source-free family; NONSTOP은 CP2 stressed 패자 `78.54%`이나 손실질량 `55.52%`, binding 실제 손실질량 `49.43%`, 폭 `1/4·3/6`으로 지배 관문 실패했고 STOP 사용률 중앙값이 `0.50373R` 대 `0.10325R`라 현 stop-tail 위험 해석 보존, 후보 없음
 - `research/intraday-sizing-risk-clock-ratchet-v1/`: 닫힌 Program 3 / meso Unit 067 source-free family; 일중 위험자본 비율 중앙값은 CP2·binding 모두 `1.0`, 시장 lot 불일치는 `0/1,102`·`4/294`, 음성 부동손익의 불리한 결과 전달은 `0/4` 기간이라 daily sizing과 admission별 conservative risk 보존, 후보 없음
 - `research/rc-compression-horizon-slot-independence-v1/`: 닫힌 Program 5 / meso→macro Unit 068 source-free family; RC 신호연관 `phi 0.224`·90일 전부 동시점유는 확인했지만 방향일치 `53.33%`, 공동손실 `1.169x`가 대조쌍 중앙 `1.506x`보다 낮고 RC 손실질량 `14.27%`라 RC16·RC4 별도 slot 보존, 후보 없음
+- `research/performance-endogenous-risk-geometry-v1/`: 활성 Program 4 / micro→macro Unit 069 source-free family; CP2 전수의 `planned_risk/0.04` 자본, 초기 stop 거리, prior-24 H1 open 변동성, stressed cost/R과 stop hazard를 전역 자본꼬리 및 시간블록 내 국소 대조로 한 번 판정
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

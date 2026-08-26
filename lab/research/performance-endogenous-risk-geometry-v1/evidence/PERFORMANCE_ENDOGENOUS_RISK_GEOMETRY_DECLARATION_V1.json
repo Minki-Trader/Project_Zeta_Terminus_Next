@@ -1,0 +1,242 @@
+{
+  "schema": "zeta-next-performance-endogenous-risk-geometry-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_069_DECLARATION_FROZEN_BEFORE_CAPITAL_TAIL_GEOMETRY_COST_OR_HAZARD_METRIC",
+  "unit": "performance-endogenous-risk-geometry-069",
+  "family": "performance-endogenous-risk-geometry-v1",
+  "title": "Performance-Endogenous Stop Geometry and Cost-R Feedback",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_liquidation",
+    "korean_name": "포지션 관리·청산"
+  },
+  "research_height": {
+    "primary": "micro",
+    "supporting": [
+      "meso",
+      "macro"
+    ],
+    "transfer_path": "Cumulative portfolio performance sets conservative capital; capital sets each initial physical stop and cost/R denominator; those entry contracts must then transmit through stop incidence and stressed lifecycle R across components and periods before portfolio gate interpretation changes."
+  },
+  "central_question": "Does performance-endogenous conservative capital materially widen volatility-normalized initial stops and dilute stressed cost per R, then broadly reduce stop hazard in higher-capital states enough to require capital-scale normalization of future economic gates?",
+  "research_bundle": {
+    "name": "global_capital_tail_geometry_local_time_block_contrast_and_hazard_transmission",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: derive risk capital and initial stop distance for every lifecycle, normalize by prior 24 completed H1 open-to-open volatility, and compare frozen within-component-period capital tails",
+      "natural contrast: within each component-period split chronology into four fixed equal-count blocks and compare above- versus below-block-median capital, excluding ties",
+      "portfolio transmission and falsification: test stressed incremental cost/R dilution and stop-rate change pooled, by four periods and six components; report stressed-R quality and chronology correlation without using it as rescue"
+    ]
+  },
+  "why_now": {
+    "current_bottleneck": "Unit 067 rejected a same-day risk-clock ratchet and Unit 068 preserved separate RC slots, but neither answers the external memo's central cross-day claim that accumulated performance changes the stop and cost geometry under which lifecycles are judged.",
+    "connection_bridge": "The source sets position budget to 4% of conservative capital, fills the physical stop near a 2% gross-risk target, and records planned risk, entry, stop and actual/stressed close values for every CP2 lifecycle. This directly connects realized portfolio state to subsequent stop hazard and cost efficiency.",
+    "perspective_distance": "Unit 068 was Program 5 meso strategy-pair dependence. Unit 069 moves to Program 4 micro lifecycle protection with macro feedback, using volatility-normalized entry geometry and within-time capital contrasts rather than pair overlap.",
+    "decision_if_true": "Retain one later separately declared Lab candidate for capital-scale-normalized risk geometry or gate reporting, while preserving all signals, sessions, holds and components. Do not implement automatically.",
+    "decision_if_false": "Preserve the current 4%/12% contract and existing absolute/stressed economic gates without capital-state qualification.",
+    "decision_if_partial": "Record accounting-scale drift only and retain no candidate when geometry or cost changes do not transmit broadly to stop hazard."
+  },
+  "whole_map_recomparison": {
+    "program_1": "RC pair independence just closed; long-only beta and short feature-supply cards remain partial or adjacent to Units 063-065.",
+    "program_2": "Overnight drift is measurable but changes a hypothetical missing sleeve more directly than the current contract; internal dispersion remains an n=4 regime claim.",
+    "program_3": "Passive execution cost remains a useful later question but has only one P4 observation window and does not address the portfolio-wide capital-scaled denominator.",
+    "program_4": "Selected because the full existing CP2 ledger and a new volatility-proxy role can distinguish algebraic stop widening from broad realized stop-hazard transmission without reopening Unit 062's alternate stop source.",
+    "program_5": "Unit 068 just closed; component removal and book-role questions require a fresh portfolio intervention or synthesis and offer less causal distance now.",
+    "program_7": "Full binding compounding-rank attribution remains unavailable at 564/2,235 retained event closes and is excluded rather than inferred from summary ranks.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare all programs and heights. Do not automatically open an alternate capital bin, volatility window, component, period, stop, lot-step, cost multiplier or scaling function."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "all 2,233 filled and closed CP2 lifecycles across four independent fresh-100-dollar periods and six components",
+      "market OPEN births and Passive PLACE-to-FILL births with exact entry, initial stop, volume and planned risk",
+      "actual and stressed close values, stop reason, entry time, symbol and component",
+      "prior 24 completed H1 open-to-open log-return RMS volatility for US30 or US100 from the immutable three-index export",
+      "global within-component-period bottom/top capital tails and local four-block below/above median contrasts"
+    ],
+    "excluded": [
+      "the incomplete binding event tail, binding-versus-CP2 aggregate stop-rate comparison or component-rank attribution",
+      "ATR, tick-path MAE, counterfactual stop hits or any unobserved intralifecycle price path",
+      "alternate capital quartile, local-block count, H1 volatility length, timeframe or normalization",
+      "component, period, direction, winner, loser or stop-only selector",
+      "new stop source, risk fraction, lot ladder, addition step, cost multiple, gate, MQL, Tester, broker/account query or Live action"
+    ],
+    "automatic_followups_forbidden": [
+      "capital decile, tercile or alternate tail split",
+      "12-, 48- or 72-hour volatility proxy",
+      "P2-only, high-profit-only, stop-only or component-specific scaling",
+      "geometric lot ladder or reverse-lot stop implementation",
+      "risk, stop, cost, lot, slot, component, EA or Live change"
+    ]
+  },
+  "immutable_source_contract": {
+    "files": [
+      {
+        "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh",
+        "bytes": 20510,
+        "sha256": "6AADF2FE0FAEAE0A4AA09E5482E0782B9C17DD377F9FBDE74729B27A6DF7FA1D"
+      },
+      {
+        "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+        "bytes": 17776,
+        "sha256": "27F72E7AA9188E31A834D890A5C2155E8B9721E2FBC17E3F7F8E1D5221DB0932"
+      }
+    ],
+    "semantics": {
+      "capital": "ConservativeRiskCapital is evaluated at admission and position_budget equals capital times 0.04.",
+      "physical_stop": "target_gross_risk equals position_budget times (1-0.25-0.25), and a tick-space binary search selects the farthest stop whose gross loss does not exceed that approximately 2% capital target.",
+      "planned_risk": "BufferedPlannedRisk records the risk contract used for admission; derived conservative capital is planned_risk/0.04 and must remain positive and finite.",
+      "cost_role": "The immutable stressed close subtracts one additional observed transaction-cost unit from actual close economics, so actual minus stressed is the fixed incremental stress cost used here."
+    }
+  },
+  "immutable_cp2_inputs": {
+    "files": [
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "bytes": 1411355,
+        "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"
+      },
+      {
+        "period": "P1_2022H2_2023",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "bytes": 536770,
+        "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"
+      },
+      {
+        "period": "P2_2024",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "bytes": 1395691,
+        "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "bytes": 1418401,
+        "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"
+      },
+      {
+        "period": "P3_2025",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "bytes": 6936,
+        "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"
+      },
+      {
+        "period": "P4_2026_YTD",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "bytes": 923617,
+        "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"
+      }
+    ],
+    "premetric_topology": {
+      "event_rows": 16477,
+      "exact_duplicate_rows": 0,
+      "placed_or_opened_admissions": 2346,
+      "filled_closed_lifecycles": 2233,
+      "passive_expirations": 113,
+      "period_lifecycles": {
+        "P1_2022H2_2023": 769,
+        "P2_2024": 554,
+        "P3_2025": 554,
+        "P4_2026_YTD": 356
+      },
+      "component_lifecycles": {
+        "RC16": 272,
+        "RC4": 206,
+        "Cross": 805,
+        "Pressure": 118,
+        "Return": 238,
+        "Passive": 594
+      },
+      "actual_net_usd": 444.19,
+      "stressed_net_usd": 407.0477,
+      "stops": 206,
+      "volume": 0.01
+    }
+  },
+  "immutable_volatility_proxy_input": {
+    "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_THREE_INDEX_H1_BARS_20220701_20260821.csv",
+    "bytes": 1364263,
+    "sha256": "E1889F50F6238753408703C87959AFE27ED1DD69CEAD03679CA2618C1A2AC244",
+    "physical_rows": 8139,
+    "synchronized_symbol_rows": 24417,
+    "first": "2022-07-01 01:00:00",
+    "last": "2026-08-20 23:00:00",
+    "allowed_columns": [
+      "time_utc",
+      "us30_open",
+      "us100_open"
+    ],
+    "role": "For each entry, take the last 25 H1 opens strictly before the entry hour and compute RMS of the 24 consecutive log returns; initial stop percent divided by that RMS is the fixed volatility-normalized distance."
+  },
+  "frozen_reconstruction": {
+    "lifecycle": "Market OPEN begins a lifecycle. Passive PLACE preserves direction, stop and planned risk; matched FILL supplies actual entry and volume, while EXPIRE creates no lifecycle. CLOSE or EXTERNAL_CLOSE supplies actual value_a, stressed value_b and stop reason.",
+    "risk_capital": "planned_risk/0.04.",
+    "physical_geometry": "absolute entry-to-initial-stop price distance divided by entry price; direct gross stop dollars are distance times volume because the pinned symbols have contract size one; report direct gross stop dollars/planned risk.",
+    "volatility_proxy": "RMS of 24 log changes across the last 25 synchronized symbol H1 opens strictly before floor(entry_time to the hour). No current incomplete H1 bar is used.",
+    "global_tails": "Within each of 24 component-period cells, use inclusive 25th and 75th conservative-capital quantiles. LOW is at or below q25 and HIGH at or above q75; require q25 below q75 and at least five observations in each tail.",
+    "local_time_blocks": "Within each component-period cell sort by entry time and split deterministically into four equal-count rank blocks using floor(4*rank/n). Inside each block, LOW is below and HIGH above that block's median conservative capital; exact median ties are excluded.",
+    "cost_r": "incremental stressed cost R equals (actual_net_usd-stressed_net_usd)/planned_risk and must be finite and nonnegative within one ten-thousandth dollar rounding tolerance.",
+    "outcome": "stop is close reason DEAL_REASON_SL; stressed R equals stressed_net_usd/planned_risk.",
+    "breadth": "For period breadth, pool local LOW/HIGH rows across all components within each period. For component breadth, pool across all periods within each component. No cell is selected by its result."
+  },
+  "fixed_geometry_gate": {
+    "requirements": [
+      "All 24 global component-period cells have distinct q25/q75 capital and at least five LOW and five HIGH lifecycles.",
+      "Pooled global HIGH/LOW median conservative capital ratio is at least 1.20.",
+      "Pooled global HIGH/LOW median volatility-normalized stop ratio is at least 1.20, reaches at least 1.15 in three of four periods and four of six components.",
+      "Pooled local-block HIGH/LOW median volatility-normalized stop ratio is at least 1.05, with HIGH greater in three of four periods and four of six components.",
+      "At least 0.99 of lifecycles have direct gross stop dollars/planned risk in [0.45,0.55], confirming the native half-budget physical geometry rather than a parser artifact."
+    ],
+    "all_required": true
+  },
+  "fixed_cost_scale_gate": {
+    "requirements": [
+      "Pooled local-block HIGH/LOW median incremental stressed cost-R ratio is at most 0.90.",
+      "Local HIGH median cost R is lower than LOW in at least three of four periods and four of six components."
+    ],
+    "all_required": true
+  },
+  "fixed_hazard_transmission_gate": {
+    "requirements": [
+      "Pooled local-block HIGH minus LOW stop rate is at most -0.02.",
+      "Local HIGH stop rate is lower than LOW in at least three of four periods and four of six components.",
+      "Pooled local HIGH minus LOW mean stressed R is nonnegative, so fewer stops are not purchased by worse normalized lifecycle economics."
+    ],
+    "all_required": true
+  },
+  "fixed_verdict_rules": {
+    "complete": "PASS_MATERIAL_PERFORMANCE_ENDOGENOUS_RISK_FEEDBACK_RETAIN_SCALE_NORMALIZATION_CANDIDATE when integrity and all geometry, cost-scale and hazard-transmission gates pass.",
+    "partial": "PARTIAL_CAPITAL_SCALE_DRIFT_WITHOUT_BROAD_HAZARD_TRANSMISSION_NO_CANDIDATE when integrity passes and geometry or cost scale passes but the complete result does not.",
+    "no_material": "NO_MATERIAL_PERFORMANCE_ENDOGENOUS_RISK_FEEDBACK_PRESERVE_CURRENT_GATES when integrity passes and both geometry and cost-scale gates fail.",
+    "invalid": "INVALID_PERFORMANCE_ENDOGENOUS_GEOMETRY_RECONSTRUCTION_NO_VERDICT when any pin, lifecycle, mark, tail, local-block, cost or numerical integrity condition fails."
+  },
+  "decision_translation": {
+    "complete": "Retain one future isolated Lab candidate for capital-scale-normalized risk geometry or research-gate reporting; preserve current trading behavior until separately tested.",
+    "partial": "Record the scale-dependent accounting observation but retain no implementation or gate change because adverse-outcome feedback is not broad.",
+    "no_material": "Preserve the 4%/12% contract and current absolute/stressed gates without capital-state qualification.",
+    "invalid": "Preserve the observation gap and rotate away after budget exhaustion."
+  },
+  "execution_budget": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before calculating any capital quantile, normalized stop, cost-R, stop-rate or stressed-R contrast.",
+    "One implementation-only correction is allowed only if aggregation stops before emitting any target geometry, cost or outcome metric. After any such metric is emitted, make no correction or rerun.",
+    "Do not change the 24-H1 proxy, quartiles, four local blocks, 20/15/5/10/2-percent thresholds, breadth, component or period treatment after metrics.",
+    "Do not create MQL, run Tester, acquire data, query broker/account state or touch Live."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_declaration_then_run_exactly_one_fixed_source_free_performance_endogenous_geometry_aggregation"
+}
