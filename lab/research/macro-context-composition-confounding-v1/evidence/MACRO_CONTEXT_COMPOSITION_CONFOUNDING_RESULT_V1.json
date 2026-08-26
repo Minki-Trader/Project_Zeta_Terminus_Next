@@ -1,0 +1,527 @@
+{
+  "schema": "zeta-next-macro-context-composition-confounding-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_055_FIXED_CLASSIFICATION_COMPLETE",
+  "unit": "macro-context-composition-confounding-055",
+  "family": "macro-context-composition-confounding-v1",
+  "macro_program": {
+    "id": 7,
+    "name": "diagnostic_causal_meta_research",
+    "korean_name": "진단·인과·메타 연구"
+  },
+  "declaration": {
+    "path": "lab/research/macro-context-composition-confounding-v1/evidence/MACRO_CONTEXT_COMPOSITION_CONFOUNDING_DECLARATION_V1.json",
+    "bytes": 13059,
+    "sha256": "8D579C5601E027D9271D4C584CE52DB060B54A6DED3DA2BBA47F55A36AD1AC5D",
+    "committed_and_pushed_before_classification": true,
+    "commit": "94a49b1a9dcf6d0a669d3b98e9c1cb67aa6a9fe7"
+  },
+  "census": {
+    "path": "lab/research/macro-context-composition-confounding-v1/evidence/MACRO_CONTEXT_COMPOSITION_CONFOUNDING_CENSUS_V1.json",
+    "bytes": 9514,
+    "sha256": "7349B341DC2EB9C540DAB04687F3274E69ADC7D4D1CF7369B40E5794F6250F31",
+    "artifact_files": 18,
+    "artifact_bytes": 202799,
+    "artifact_manifest_sha256": "7F8E10CE827A04AA37B18B0169CE761E8F3E52530D9AD342A10D9E7E00E77C4C"
+  },
+  "execution": {
+    "successful_fixed_in_memory_classifications": 1,
+    "failed_classification_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "reruns": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "census_pin_passed": true,
+    "artifact_manifest_passed": true,
+    "artifact_files_verified": 18,
+    "artifact_bytes_verified": 202799,
+    "authoritative_closures_verified": 6,
+    "source_units": 6,
+    "contrasts": 12,
+    "unique_contrast_ids": 12,
+    "contrasts_per_unit": 2,
+    "source_program_contrast_counts": {
+      "1": 2,
+      "2": 4,
+      "3": 4,
+      "4": 2
+    },
+    "finite_raw_and_centered_effects": 48,
+    "nonpositive_named_or_comparator_group_counts": 0,
+    "pin_schema_mapping_or_reconstruction_faults": 0,
+    "source_verdict_used_for_inclusion_weighting_or_classification": false
+  },
+  "thresholds": {
+    "full_material_r": 0.1,
+    "full_material_stop": 0.05,
+    "r_composition_sensitive_absolute_adjustment": 0.05,
+    "stop_composition_sensitive_absolute_adjustment": 0.025
+  },
+  "contrasts": [
+    {
+      "unit": 41,
+      "source_program": 2,
+      "family": "scheduled-us-macro-event-exposure-v1",
+      "id": "HELD_AT_RELEASE",
+      "count_basis": "named_role_vs_globally_unexposed_lifecycles",
+      "named_group_n": 85,
+      "comparator_group_n": 2014,
+      "R": {
+        "raw": 0.123865303842,
+        "centered": 0.116856075020,
+        "signed_adjustment": -0.007009228822,
+        "absolute_adjustment": 0.007009228822,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": 0.076821075998,
+        "centered": 0.029309057540,
+        "signed_adjustment": -0.047512018458,
+        "absolute_adjustment": 0.047512018458,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": true,
+        "composition_sensitive": true
+      }
+    },
+    {
+      "unit": 41,
+      "source_program": 2,
+      "family": "scheduled-us-macro-event-exposure-v1",
+      "id": "POST_ENTRY_120M",
+      "count_basis": "named_role_vs_globally_unexposed_lifecycles",
+      "named_group_n": 134,
+      "comparator_group_n": 2014,
+      "R": {
+        "raw": 0.022909850952,
+        "centered": 0.033621768208,
+        "signed_adjustment": 0.010711917256,
+        "absolute_adjustment": 0.010711917256,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": 0.024055492152,
+        "centered": 0.051347848806,
+        "signed_adjustment": 0.027292356654,
+        "absolute_adjustment": 0.027292356654,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": true,
+        "composition_sensitive": true
+      }
+    },
+    {
+      "unit": 42,
+      "source_program": 3,
+      "family": "server-new-york-dst-mismatch-session-v1",
+      "id": "SPRING_US_AHEAD",
+      "count_basis": "named_variant_vs_aligned_lifecycles",
+      "named_group_n": 127,
+      "comparator_group_n": 2064,
+      "R": {
+        "raw": -0.026993665180,
+        "centered": -0.038226621742,
+        "signed_adjustment": -0.011232956562,
+        "absolute_adjustment": 0.011232956562,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": 0.051131508271,
+        "centered": 0.045094352998,
+        "signed_adjustment": -0.006037155273,
+        "absolute_adjustment": 0.006037155273,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": true,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 42,
+      "source_program": 3,
+      "family": "server-new-york-dst-mismatch-session-v1",
+      "id": "AUTUMN_EU_BEHIND",
+      "count_basis": "named_variant_vs_aligned_lifecycles",
+      "named_group_n": 42,
+      "comparator_group_n": 2064,
+      "R": {
+        "raw": 0.052122559181,
+        "centered": 0.060707339059,
+        "signed_adjustment": 0.008584779878,
+        "absolute_adjustment": 0.008584779878,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": -0.066791251384,
+        "centered": -0.052181959490,
+        "signed_adjustment": 0.014609291894,
+        "absolute_adjustment": 0.014609291894,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 47,
+      "source_program": 3,
+      "family": "new-york-week-edge-entry-state-v1",
+      "id": "MONDAY_WEEK_REOPEN",
+      "count_basis": "named_role_vs_tuesday_thursday_midweek_lifecycles",
+      "named_group_n": 416,
+      "comparator_group_n": 1368,
+      "R": {
+        "raw": -0.001550111334,
+        "centered": -0.005443397944,
+        "signed_adjustment": -0.003893286609,
+        "absolute_adjustment": 0.003893286609,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": -0.010585357625,
+        "centered": -0.008941840274,
+        "signed_adjustment": 0.001643517350,
+        "absolute_adjustment": 0.001643517350,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 47,
+      "source_program": 3,
+      "family": "new-york-week-edge-entry-state-v1",
+      "id": "FRIDAY_WEEK_CLOSE",
+      "count_basis": "named_role_vs_tuesday_thursday_midweek_lifecycles",
+      "named_group_n": 449,
+      "comparator_group_n": 1368,
+      "R": {
+        "raw": 0.002480671779,
+        "centered": 0.003147841176,
+        "signed_adjustment": 0.000667169397,
+        "absolute_adjustment": 0.000667169397,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": 0.021446293908,
+        "centered": 0.016974001313,
+        "signed_adjustment": -0.004472292596,
+        "absolute_adjustment": 0.004472292596,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 48,
+      "source_program": 1,
+      "family": "bidirectional-signal-transition-state-v1",
+      "id": "US30_BIDIRECTIONAL_BOOK",
+      "count_basis": "same_direction_persistence_vs_opposite_direction_reversal_lifecycles",
+      "named_group_n": 156,
+      "comparator_group_n": 160,
+      "R": {
+        "raw": 0.039198729946,
+        "centered": 0.042041550922,
+        "signed_adjustment": 0.002842820977,
+        "absolute_adjustment": 0.002842820977,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": -0.063942307692,
+        "centered": -0.051700747109,
+        "signed_adjustment": 0.012241560584,
+        "absolute_adjustment": 0.012241560584,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 48,
+      "source_program": 1,
+      "family": "bidirectional-signal-transition-state-v1",
+      "id": "US100_BIDIRECTIONAL_BOOK",
+      "count_basis": "same_direction_persistence_vs_opposite_direction_reversal_lifecycles",
+      "named_group_n": 674,
+      "comparator_group_n": 718,
+      "R": {
+        "raw": 0.009969749330,
+        "centered": 0.009248131607,
+        "signed_adjustment": -0.000721617722,
+        "absolute_adjustment": 0.000721617722,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": 0.000971210831,
+        "centered": 0.001978148130,
+        "signed_adjustment": 0.001006937299,
+        "absolute_adjustment": 0.001006937299,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 49,
+      "source_program": 2,
+      "family": "prior-treasury-curve-move-context-v1",
+      "id": "PARALLEL_RATE_RISE",
+      "count_basis": "named_rate_state_vs_divergent_or_flat_lifecycles",
+      "named_group_n": 840,
+      "comparator_group_n": 614,
+      "R": {
+        "raw": -0.016801741775,
+        "centered": -0.015779425591,
+        "signed_adjustment": 0.001022316185,
+        "absolute_adjustment": 0.001022316185,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": -0.009310532030,
+        "centered": 0.005292058356,
+        "signed_adjustment": 0.014602590386,
+        "absolute_adjustment": 0.014602590386,
+        "raw_sign": -1,
+        "centered_sign": 1,
+        "direction_reversal": true,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 49,
+      "source_program": 2,
+      "family": "prior-treasury-curve-move-context-v1",
+      "id": "PARALLEL_RATE_FALL",
+      "count_basis": "named_rate_state_vs_divergent_or_flat_lifecycles",
+      "named_group_n": 779,
+      "comparator_group_n": 614,
+      "R": {
+        "raw": 0.015687090730,
+        "centered": 0.015598025004,
+        "signed_adjustment": -0.000089065726,
+        "absolute_adjustment": 0.000089065726,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": -0.014969496515,
+        "centered": -0.008979161710,
+        "signed_adjustment": 0.005990334805,
+        "absolute_adjustment": 0.005990334805,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      }
+    },
+    {
+      "unit": 52,
+      "source_program": 4,
+      "family": "held-position-first-peer-exit-state-v1",
+      "id": "PEER_STOP_FIRST",
+      "count_basis": "named_first_peer_exit_state_vs_no_peer_exit_while_held_lifecycles",
+      "named_group_n": 142,
+      "comparator_group_n": 1288,
+      "R": {
+        "raw": 0.064307460968,
+        "centered": 0.055455162610,
+        "signed_adjustment": -0.008852298358,
+        "absolute_adjustment": 0.008852298358,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": 0.053221502931,
+        "centered": 0.007358624921,
+        "signed_adjustment": -0.045862878010,
+        "absolute_adjustment": 0.045862878010,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": true,
+        "composition_sensitive": true
+      }
+    },
+    {
+      "unit": 52,
+      "source_program": 4,
+      "family": "held-position-first-peer-exit-state-v1",
+      "id": "PEER_NATIVE_CLOSE_FIRST",
+      "count_basis": "named_first_peer_exit_state_vs_no_peer_exit_while_held_lifecycles",
+      "named_group_n": 803,
+      "comparator_group_n": 1288,
+      "R": {
+        "raw": 0.048502673456,
+        "centered": 0.036555762079,
+        "signed_adjustment": -0.011946911377,
+        "absolute_adjustment": 0.011946911377,
+        "raw_sign": 1,
+        "centered_sign": 1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": false,
+        "composition_sensitive": false
+      },
+      "stop": {
+        "raw": -0.035705583874,
+        "centered": -0.082233090846,
+        "signed_adjustment": -0.046527506972,
+        "absolute_adjustment": 0.046527506972,
+        "raw_sign": -1,
+        "centered_sign": -1,
+        "direction_reversal": false,
+        "full_material_threshold_status_change": true,
+        "composition_sensitive": true
+      }
+    }
+  ],
+  "channel_summaries": {
+    "R": {
+      "sensitive_count": 0,
+      "sensitive_share": 0.0,
+      "sensitive_contrast_ids": [],
+      "represented_units": [],
+      "represented_unit_count": 0,
+      "represented_source_programs": [],
+      "represented_source_program_count": 0,
+      "median_absolute_adjustment": 0.005451257716,
+      "maximum_absolute_adjustment": 0.011946911377,
+      "direction_reversals": 0,
+      "full_material_threshold_status_changes": 0,
+      "sensitive_unit_contributions": {},
+      "maximum_sensitive_unit_share": null,
+      "sensitive_program_contributions": {},
+      "maximum_sensitive_program_share": null,
+      "gates": {
+        "sensitive_count_at_least_4": false,
+        "represented_units_at_least_3": false,
+        "represented_source_programs_at_least_3": false,
+        "median_absolute_adjustment_at_least_0_025": false,
+        "maximum_unit_share_at_most_0_50": false,
+        "maximum_program_share_at_most_0_60": false
+      },
+      "passed": false
+    },
+    "stop": {
+      "sensitive_count": 4,
+      "sensitive_share": 0.333333333333,
+      "sensitive_contrast_ids": [
+        "HELD_AT_RELEASE",
+        "POST_ENTRY_120M",
+        "PEER_STOP_FIRST",
+        "PEER_NATIVE_CLOSE_FIRST"
+      ],
+      "represented_units": [41, 52],
+      "represented_unit_count": 2,
+      "represented_source_programs": [2, 4],
+      "represented_source_program_count": 2,
+      "median_absolute_adjustment": 0.013422075485,
+      "maximum_absolute_adjustment": 0.047512018458,
+      "direction_reversals": 1,
+      "full_material_threshold_status_changes": 5,
+      "sensitive_unit_contributions": {
+        "41": 2,
+        "52": 2
+      },
+      "maximum_sensitive_unit_share": 0.5,
+      "sensitive_program_contributions": {
+        "2": 2,
+        "4": 2
+      },
+      "maximum_sensitive_program_share": 0.5,
+      "gates": {
+        "sensitive_count_at_least_4": true,
+        "represented_units_at_least_3": false,
+        "represented_source_programs_at_least_3": false,
+        "median_absolute_adjustment_at_least_0_0125": true,
+        "maximum_unit_share_at_most_0_50": true,
+        "maximum_program_share_at_most_0_60": true
+      },
+      "passed": false
+    }
+  },
+  "joint_sensitivity": {
+    "both_channels": 0,
+    "R_only": 0,
+    "stop_only": 4,
+    "neither": 8
+  },
+  "finding": {
+    "R": "All twelve raw-to-centered stressed-R adjustments were below 0.05R; the cross-census median was 0.005451257716R and the maximum was 0.011946911377R.",
+    "stop": "Four of twelve stop adjustments reached 0.025, but all four came from only Units 041 and 052 and only source Programs 2 and 4. The breadth gates therefore failed despite the count and median gates passing.",
+    "diagnosis": "Strategy-period composition materially changes selected stop associations around scheduled event exposure and first peer exit, but it does not produce a broad cross-unit, cross-program composition-confounding diagnosis. Centering remains required for source-unit interpretation; this finite audit neither privileges raw pooling nor revises any source verdict."
+  },
+  "verdict": "NO_BROAD_MATERIAL_MACRO_CONTEXT_COMPOSITION_SHIFT_IN_CENSUS",
+  "authority_limit": "Finite consumed-evidence causal diagnosis only. It cannot revise source verdicts, select an estimator, suppress a macro program, create a default lane, choose a trading behavior or authorize Live.",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "same_unit_rerun": false,
+  "nearby_rescue": false,
+  "adjacent_program_7_successor": false,
+  "next": "close_unit_055_then_recompare_programs_1_to_5_and_7_without_adjacent_estimator_weighting_scheduler_or_meta_census_work"
+}

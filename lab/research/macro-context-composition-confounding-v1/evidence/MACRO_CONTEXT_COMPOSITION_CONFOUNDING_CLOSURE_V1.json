@@ -1,0 +1,109 @@
+{
+  "schema": "zeta-next-macro-context-composition-confounding-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_055_CLOSED",
+  "unit": "macro-context-composition-confounding-055",
+  "family": "macro-context-composition-confounding-v1",
+  "macro_program": {
+    "id": 7,
+    "name": "diagnostic_causal_meta_research",
+    "korean_name": "진단·인과·메타 연구"
+  },
+  "verdict": "NO_BROAD_MATERIAL_MACRO_CONTEXT_COMPOSITION_SHIFT_IN_CENSUS",
+  "artifacts": {
+    "census": {
+      "path": "lab/research/macro-context-composition-confounding-v1/evidence/MACRO_CONTEXT_COMPOSITION_CONFOUNDING_CENSUS_V1.json",
+      "bytes": 9514,
+      "sha256": "7349B341DC2EB9C540DAB04687F3274E69ADC7D4D1CF7369B40E5794F6250F31"
+    },
+    "declaration": {
+      "path": "lab/research/macro-context-composition-confounding-v1/evidence/MACRO_CONTEXT_COMPOSITION_CONFOUNDING_DECLARATION_V1.json",
+      "bytes": 13059,
+      "sha256": "8D579C5601E027D9271D4C584CE52DB060B54A6DED3DA2BBA47F55A36AD1AC5D"
+    },
+    "result": {
+      "path": "lab/research/macro-context-composition-confounding-v1/evidence/MACRO_CONTEXT_COMPOSITION_CONFOUNDING_RESULT_V1.json",
+      "bytes": 18424,
+      "sha256": "091048B204229C4CB08004481A2513746EE851F79A9F1B9E298BCBD8B748641D"
+    },
+    "source_artifact_manifest": {
+      "files": 18,
+      "bytes": 202799,
+      "sha256": "7F8E10CE827A04AA37B18B0169CE761E8F3E52530D9AD342A10D9E7E00E77C4C"
+    }
+  },
+  "execution": {
+    "successful_fixed_in_memory_classifications": 1,
+    "failed_classification_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "reruns": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "source_units": 6,
+    "source_programs": [1, 2, 3, 4],
+    "contrasts": 12,
+    "source_artifacts_verified": 18,
+    "pin_schema_mapping_or_reconstruction_faults": 0
+  },
+  "findings": {
+    "R_COMPOSITION_CONFOUNDING": {
+      "sensitive_contrasts": 0,
+      "total_contrasts": 12,
+      "median_absolute_adjustment": 0.005451257716,
+      "maximum_absolute_adjustment": 0.011946911377,
+      "represented_units": 0,
+      "represented_source_programs": 0,
+      "passed": false
+    },
+    "STOP_COMPOSITION_CONFOUNDING": {
+      "sensitive_contrasts": 4,
+      "total_contrasts": 12,
+      "median_absolute_adjustment": 0.013422075485,
+      "maximum_absolute_adjustment": 0.047512018458,
+      "represented_units": [41, 52],
+      "represented_source_programs": [2, 4],
+      "failed_gates": [
+        "sensitive_contrasts_span_at_least_3_units",
+        "sensitive_contrasts_span_at_least_3_source_programs"
+      ],
+      "passed": false
+    },
+    "joint": {
+      "both_channels": 0,
+      "R_only": 0,
+      "stop_only": 4,
+      "neither": 8
+    },
+    "diagnosis": "Raw pooled and exact strategy-period-centered stressed-R associations were close throughout the complete census. Stop associations changed materially in four contrasts, but all were concentrated in scheduled-event exposure and first-peer-exit units, so no broad cross-program composition-confounding diagnosis passed."
+  },
+  "interpretation": [
+    "The result does not make raw pooling authoritative and does not say centering is unnecessary; each source unit retains its frozen centered interpretation.",
+    "The result does not reopen or revise Units 041, 042, 047, 048, 049 or 052 and selects no estimator, behavior, strategy or macro-program priority.",
+    "The concentrated stop shifts are finite causal-diagnostic context only and may not be rescued through alternate centering, weighting, matching, regression, thresholds or an adjacent meta census."
+  ],
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "same_unit_rerun": false,
+  "nearby_rescue": false,
+  "adjacent_program_7_successor": false,
+  "closed_scope": [
+    "No alternate centering dimension, weighting rule, matching method, regression, threshold or robust-sensitivity variant.",
+    "No source-unit repair, verdict revision, default research lane, macro-program suppression or mechanical scheduler.",
+    "No entry, held-position, portfolio, capital, lot, slot, exit, order, EA, MQL, Tester, Program 6, broker-account or Live action."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED",
+    "topic_monopoly": "FORBIDDEN"
+  }
+}
