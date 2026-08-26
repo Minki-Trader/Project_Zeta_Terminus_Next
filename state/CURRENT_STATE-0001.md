@@ -995,3 +995,12 @@
 - Parallel rate falls versus divergent/flat were `+0.015598025004R/-0.008979161710 stop`. Both magnitude gates failed, stop signs held in only three strategies, and P1's `66.44%` contribution exceeded the `60%` period cap.
 - Closed `NO_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_PASSED` with no retained external context, filter, rate rule, size, priority, EA or Live action. Treasury manifest/declaration/result/closure SHA-256 values are `0ECE90826CD883898F8E386F5FE46F41B19A0CF194C9FC306A5E285047D2D331` / `52D019971632C0B68D1426889532A27CCE2430C4B4308C736B902DAC2981403C` / `A4C5558B34F959F36CA51B9DFA78264E0BE837F61F8F8872C40E3A47A411B529` / `800A1B23FDD969C8DBE45D967F36332875F56A4E56AA64A602EAD2245AA6ABCE`.
 - Next is a fresh comparison of Programs 1-5 and 7, not another rate magnitude, slope, inversion, maturity, timing, source or subset. Program 6, MQL, Tester, broker state and Live remained untouched.
+
+## STATE-0123 - 2026-08-26
+
+- Recompared Programs 1-5 and 7 after Unit 049. Selected only Program 5 Unit 050 `natural-book-drawdown-complementarity-v1`, a broad untreated portfolio interaction rather than an adjacent signal, rates, session, RC4, sizing or meta continuation.
+- Froze the exhaustive natural symbol partition: US30 book is RC16+RC4+Pressure+Return and US100 book is Cross+Passive. Outcome-free birth topology is US30/US100 `834/1,399`, with period pairs `270/499`, `198/356`, `231/323` and `135/221`; no close value was accessed.
+- The one bundle has exactly two directions: US100 stressed P/L during each period's native US30 maximum closed-drawdown episode, and US30 stressed P/L during the corresponding US100 episode. Exact close timestamps are synchronized; there is no rolling/calendar window, alternate episode or sub-book search.
+- Each direction requires positive counterbook offset and at least 20% loss offset in three of four periods, weighted and median offset ratios at least 20%, and a 60% positive-contribution cap. Both books must also be broadly profitable and full-book drawdown relief must reach 15% broadly.
+- This unit changes no lot, slot, priority, admission, entry, exit or strategy membership. Only a mutual diagnostic pass may retain one later book-level capital-risk question, which cannot open automatically.
+- Declaration SHA-256 is `F0B0D74808997B99C57356E7F46490209D7D05D34E2F1189DF2DE501B02B370F`; outcomes remain unopened until this boundary is committed and pushed. Program 6, MQL, Tester, broker state and Live remain untouched.

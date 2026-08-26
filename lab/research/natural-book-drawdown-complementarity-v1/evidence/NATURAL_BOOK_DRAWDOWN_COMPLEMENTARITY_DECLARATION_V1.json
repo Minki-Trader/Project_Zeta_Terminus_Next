@@ -1,0 +1,208 @@
+{
+  "schema": "zeta-next-natural-book-drawdown-complementarity-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_050_DECLARATION_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "natural-book-drawdown-complementarity-050",
+  "family": "natural-book-drawdown-complementarity-v1",
+  "title": "Natural US30-US100 Book Drawdown Complementarity Audit",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험",
+    "active_goal_programs": [1, 2, 3, 4, 5, 7],
+    "excluded_goal_program": {"id": 6, "name": "execution_recovery_broker_safety", "korean_name": "실행·복구·브로커 안전"}
+  },
+  "question": "When either natural symbol book enters its own maximum 2x-cost stressed closed-drawdown episode, does the other book deliver positive and material stressed P/L during the same exact close-time interval broadly enough across four fresh periods to demonstrate portfolio drawdown complementarity?",
+  "hypothesis": "The US30 and US100 strategy books express different market and strategy structures. If that difference is economically useful at portfolio level, each book should repeatedly offset a material part of the other book's worst native closed-loss episode rather than merely adding pooled net outside stress intervals.",
+  "why_now": "After Units 043-049 allocated Programs 7→5→2→4→3→1→2, the whole-map comparison rejects adjacent signal and rates work and finds no clean nonadjacent Program 4 observable. Program 5 now has a broad untreated portfolio-interaction question that changes no lot, slot, priority, entry or exit rule: whether the two natural symbol books actually diversify each other's loss paths.",
+  "macro_recomparison": {
+    "program_1": "Unit 048 just closed with no signal-transition field; no adjacent signal history, direction or subgroup work may open.",
+    "program_2": "Unit 049 just closed with no Treasury curve-move field; no adjacent rates, VIX or event-context work may open.",
+    "program_3": "Unit 047 recently closed with no week-edge field; no nearby calendar or session work may open.",
+    "program_4": "The latest Unit 046 selector was invalid and its RC4 repair is forbidden; tracked evidence exposes no comparably broad, clean and nonadjacent management state for this boundary.",
+    "program_5": "Selected for a natural-book loss-path interaction diagnosis, not a sizing, slot, reservation, priority or cost-envelope successor.",
+    "program_7": "Unit 043 already supplied the evidence-readiness meta diagnosis; another adjacent audit would be less independent than the untreated portfolio interaction.",
+    "after_close": "Recompare Programs 1-5 and 7. Do not continue automatically into book sizing, slot assignment, priority, strategy removal, alternate drawdown windows or sub-book decompositions."
+  },
+  "research_bundle": {
+    "name": "mutual_natural_symbol_book_max_drawdown_offset",
+    "variants": [
+      {
+        "id": "US30_STRESS_US100_COUNTERBOOK",
+        "source_book": "US30_BOOK",
+        "counterbook": "US100_BOOK",
+        "definition": "Measure US100 stressed P/L strictly after the US30 book's running-peak time through the trough of its maximum closed drawdown in each fresh period."
+      },
+      {
+        "id": "US100_STRESS_US30_COUNTERBOOK",
+        "source_book": "US100_BOOK",
+        "counterbook": "US30_BOOK",
+        "definition": "Measure US30 stressed P/L strictly after the US100 book's running-peak time through the trough of its maximum closed drawdown in each fresh period."
+      }
+    ],
+    "single_bundle": true,
+    "parameter_grid": false,
+    "alternate_book_partition": false,
+    "rolling_or_calendar_window": false,
+    "policy_or_candidate_action_inside_unit": false
+  },
+  "natural_books": {
+    "US30_BOOK": ["RC16", "RC4", "Pressure", "Return"],
+    "US100_BOOK": ["Cross", "Passive"],
+    "partition_rule": "Every frozen component belongs to exactly one book by its traded symbol. The partition is exhaustive, mutually exclusive and cannot be changed after outcomes."
+  },
+  "distinction_from_closed_work": {
+    "strategy_independence_risk_allocation": "That family compared six standalone strategies with shared first-come and reservation policies around admission conflicts. Unit 050 preserves every realized lifecycle and asks only whether the two natural symbol books offset each other's worst closed-loss intervals.",
+    "portfolio_exit_coordination": "That family changed simultaneous profitable-cohort exits. Unit 050 changes no exit and uses each book's native realized close path.",
+    "entry_time_crowding_017": "Unit 017 conditioned entry outcomes on incumbent crowding. Unit 050 uses no birth crowding, incumbent identity, direction or admission choice.",
+    "closed_drawdown_state_026": "Unit 026 tested pre-birth portfolio drawdown as an entry information field. Unit 050 does not condition or filter births; it measures realized cross-book offset during native maximum drawdowns.",
+    "strategy_occupancy_slot_value_037": "Unit 037 tested prior-period strategy rankings for future conflict priority. Unit 050 has no ranking, prediction, slot or priority rule.",
+    "portfolio_cost_and_volume_039_044": "Units 039 and 044 stressed costs and selective RC16 volume. Unit 050 uses the unchanged native 2x-cost book, base volumes and observed admissions with no multiplier or sizing change."
+  },
+  "boundary": {
+    "family_root": "lab/research/natural-book-drawdown-complementarity-v1/",
+    "source_free_mql": true,
+    "tester_runs": 0,
+    "mql_change": false,
+    "new_market_outcomes": false,
+    "uses_only_already_consumed_next_evidence": true,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "confirmation_or_promotion_evidence": false,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_portfolio_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent shared portfolio control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "current_path_hash_manifest": {
+      "algorithm": "Sort root-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+      "files": 6,
+      "bytes": 5692770,
+      "sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42"
+    },
+    "files": [
+      {"period": "P1_2022H2_2023", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv", "bytes": 1411355, "sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period": "P1_2022H2_2023", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv", "bytes": 536770, "sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period": "P2_2024", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv", "bytes": 1395691, "sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period": "P3_2025", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv", "bytes": 1418401, "sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period": "P3_2025", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv", "bytes": 6936, "sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period": "P4_2026_YTD", "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv", "bytes": 923617, "sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ]
+  },
+  "strategy_identity": {
+    "ZT-M30-US30-RANGE-COMP-61f61deaba": {"name": "RC16", "book": "US30_BOOK"},
+    "ZT-M30-US30-RANGE-COMP-64efb16616": {"name": "RC4", "book": "US30_BOOK"},
+    "ZT-H1-US100-CROSS-IN-14b72317b7": {"name": "Cross", "book": "US100_BOOK"},
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46": {"name": "Pressure", "book": "US30_BOOK"},
+    "ZT-H1-US30-RETURN-I-c870a788ec": {"name": "Return", "book": "US30_BOOK"},
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": {"name": "Passive", "book": "US100_BOOK"}
+  },
+  "data_roles": {
+    "P1_2022H2_2023": "consumed exploratory breadth",
+    "P2_2024": "consumed exploratory breadth",
+    "P3_2025": "consumed exploratory breadth",
+    "P4_2026_YTD": "consumed latest-period veto",
+    "clean_holdout": false,
+    "selection_or_promotion_claim": false
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Only immutable hashes, complete component identity, birth event and fresh period were used. No CLOSE or EXTERNAL_CLOSE value, stressed net, drawdown interval, counterbook offset, relief ratio, gate or verdict was accessed.",
+    "births": 2233,
+    "book_births": {"US30_BOOK": 834, "US100_BOOK": 1399},
+    "period_book_births": {
+      "P1_2022H2_2023": {"US30_BOOK": 270, "US100_BOOK": 499},
+      "P2_2024": {"US30_BOOK": 198, "US100_BOOK": 356},
+      "P3_2025": {"US30_BOOK": 231, "US100_BOOK": 323},
+      "P4_2026_YTD": {"US30_BOOK": 135, "US100_BOOK": 221}
+    },
+    "minimum_book_period_births": 135,
+    "book_partition_faults": 0,
+    "eligible": true
+  },
+  "fixed_reconstruction": {
+    "event_identity": "Preserve every distinct full CSV row; state_sequence is not an event primary key.",
+    "ordering": "Within each fresh period order by parsed server_time, numeric state_sequence, close-before-birth precedence, source path and source line for lifecycle integrity. Drawdown paths aggregate all closes at the same exact server_time before updating either book.",
+    "exact_component_selection": "Use only the six complete component_id keys in strategy_identity. Prefix, suffix, substring, wildcard and inferred-family selectors are prohibited.",
+    "market_birth": "OPEN begins RC16, RC4, Cross, Pressure or Return and supplies positive planned risk from detail.",
+    "passive_pending": "PASSIVE_PLACE stores positive planned risk; PASSIVE_EXPIRE clears it and PASSIVE_FILL begins Passive with the active risk.",
+    "close": "CLOSE or EXTERNAL_CLOSE ends the active lifecycle; value_b is frozen 2x-cost stressed net USD.",
+    "book_close_path": "For every distinct close server_time, sum value_b separately for US30_BOOK and US100_BOOK, then advance both cumulative book balances simultaneously from a zero period-start sentinel.",
+    "maximum_drawdown_episode": "For the source book, initialize running peak to zero at PERIOD_START. Update the running peak only on a strictly higher cumulative value. At each close time after applying both books' aggregated closes, calculate peak minus current source cumulative. Select the largest drawdown; exact ties retain the earliest trough and the already-retained earliest peak.",
+    "episode_interval": "The counterbook interval net is its cumulative balance at the selected trough minus its cumulative balance at the selected source-book peak. This includes closes strictly after the peak time through and including the trough time. A PERIOD_START peak uses zero counterbook balance.",
+    "offset_ratio": "Counterbook interval net divided by the positive source-book maximum drawdown. Positive values offset source loss; negative values amplify it.",
+    "weighted_offset_ratio": "Across four periods, sum counterbook interval net divided by sum positive source-book maximum drawdown.",
+    "positive_offset_contribution": "For positive counterbook interval nets only, the largest period value divided by their sum.",
+    "full_book_diversification_relief": "For each period, 1 minus full-portfolio maximum closed drawdown divided by the sum of US30 and US100 book maximum closed drawdowns. The weighted ratio uses summed full drawdowns and summed book drawdowns across periods."
+  },
+  "fixed_metrics": {
+    "per_period": [
+      "US30, US100 and full-portfolio stressed net",
+      "US30, US100 and full-portfolio maximum closed drawdown",
+      "each source-book peak and trough server_time",
+      "source and counterbook close counts inside each episode",
+      "counterbook interval stressed net",
+      "offset ratio",
+      "full-book diversification relief"
+    ],
+    "per_variant": [
+      "positive counterbook-offset period count",
+      "periods with offset ratio at least 0.20",
+      "weighted offset ratio",
+      "median four-period offset ratio",
+      "largest positive-offset period contribution"
+    ]
+  },
+  "fixed_integrity_gate": [
+    "All six input files retain their listed bytes and SHA-256 values and contain 16,477 rows with zero exact duplicate full rows.",
+    "Reconstruct exactly 2,233 closed lifecycles with strategy totals RC16 272, RC4 206, Cross 805, Pressure 118, Return 238 and Passive 594.",
+    "Reconstruct exact book totals US30 834 and US100 1,399 and exact period-book totals 270/499, 198/356, 231/323 and 135/221.",
+    "Reconstruct exact period 2x stressed nets 148.8735, 54.6630, 113.0380 and 90.4732 USD and pooled 407.0477 USD.",
+    "Every lifecycle has one positive planned risk, one finite close value and exactly one close; no same-strategy overlap, Passive pending, book-partition or close-order fault is allowed.",
+    "Every book-period has a finite strictly positive maximum closed drawdown and a uniquely resolved peak/trough under the fixed tie rule."
+  ],
+  "fixed_bundle_health_gate": [
+    "US30_BOOK and US100_BOOK each have strictly positive pooled stressed net.",
+    "Each book has strictly positive stressed net in at least three of four periods.",
+    "Full-book diversification relief is at least 0.15 in at least three of four periods and its weighted four-period value is at least 0.15."
+  ],
+  "fixed_variant_gate": {
+    "apply_separately_to": ["US30_STRESS_US100_COUNTERBOOK", "US100_STRESS_US30_COUNTERBOOK"],
+    "requirements": [
+      "The source and counterbook each have at least one close strictly after the selected peak through the selected trough in every period.",
+      "Counterbook interval stressed net is strictly positive in at least three of four periods.",
+      "Offset ratio is at least 0.20 in at least three of four periods.",
+      "The four-period weighted offset ratio is at least 0.20.",
+      "The median of the four period offset ratios is at least 0.20.",
+      "No single period contributes more than 60% of summed positive counterbook interval net."
+    ],
+    "pass_rule": "A variant passes only if every requirement and every bundle health gate passes. Zero is not positive and an episode with no counterbook close cannot pass density."
+  },
+  "fixed_verdict_rules": {
+    "both_variants": "PASS_MUTUAL_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_DIAGNOSIS",
+    "exactly_one_variant": "PARTIAL_ONE_WAY_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_NO_AUTOMATIC_SUCCESSOR",
+    "neither_variant": "NO_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_PASSED",
+    "invalid": "INVALID_NATURAL_BOOK_OR_LIFECYCLE_RECONSTRUCTION_NO_COMPLEMENTARITY_VERDICT",
+    "ambiguous": "AMBIGUOUS_NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_NO_SUCCESSOR",
+    "authority_limit": "Consumed-data portfolio-path diagnosis only. A pass changes no lot, slot, priority, entry, exit, strategy membership, EA or Live surface.",
+    "retained_question_rule": "Only a mutual pass may retain one later independently declared book-level capital-risk question. It cannot open automatically and must wait for a fresh comparison of Programs 1-5 and 7."
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration before reading any close value or calculating book net, drawdown, interval, offset, ratio, gate or verdict for Unit 050.",
+    "Run exactly one fixed in-memory aggregation over the six frozen portfolio files using complete component identities and exact close timestamps.",
+    "Do not alter the natural book partition, maximum-drawdown tie rule, episode boundary, metrics, threshold, breadth, concentration or verdict gates.",
+    "Do not add a rolling window, calendar bucket, alternate drawdown episode, second-worst episode, strategy or direction subgroup, symbol proxy, cost multiplier, lot, slot, priority, entry filter, exit or strategy-removal rescue.",
+    "Do not modify MQL, compile, run MetaTrader, inspect Program 6, retain a CLI, query broker/account state or touch Live.",
+    "Close after one result and return to whole-map comparison without adjacent Program 5 sizing or book-allocation work."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_natural_book_drawdown_complementarity_aggregation"
+}
