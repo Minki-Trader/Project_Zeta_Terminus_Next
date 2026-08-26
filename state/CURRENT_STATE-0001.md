@@ -1329,3 +1329,11 @@
 - Pinned the six authoritative CP2-equivalent event files, four matching HTML reports and Unit 064's 24,417-row H1 export. Premetric topology remains 2,233 lifecycles `769/554/554/356`, component counts `272/206/805/118/238/594`, symbol counts `834/1,399`, actual/stressed `$444.19/$407.0477` and 206 stops.
 - Fixed material net-long/daily mapping, both passive-hurdle, strategy-excess, concentration, DD-basis, invalid and ambiguity gates. No benchmark weight, timeframe, daily boundary, period, leverage/cost assumption, component or symbol rescue is permitted after metrics.
 - Declaration SHA-256 is `318E3F03649BD39DAA10381FDDFEB82060AA8814C9C0287D98EBE2F44A2E7AEC`. No exposure weight, correlation, report drawdown, benchmark metric, acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action has opened; commit/push precedes the single aggregation.
+
+## STATE-0162 - 2026-08-27
+
+- The first Unit 065 aggregation invocation stopped at the first Passive close before reading report drawdowns or emitting any exposure weight, daily correlation, benchmark metric or verdict. It consumed no successful aggregation and no metric rerun.
+- The implementation had incorrectly required `OPEN` for every executed birth. Exact immutable topology is `707` Passive placements resolved by `594` fills plus `113` expirations; repository event semantics give direction/stop/planned risk at `PASSIVE_PLACE` and actual entry price/volume at `PASSIVE_FILL`.
+- Froze the one permitted premetric implementation correction: market components remain `OPEN`-born; Passive pending state begins at `PASSIVE_PLACE`, creates exposure only at matched `PASSIVE_FILL`, and clears without exposure at `PASSIVE_EXPIRE`. Direction inferred from fill versus stop must match the placement direction, with zero period-end pending state.
+- Correction receipt SHA-256 is `38781CFDF6FE14DF66BDAF458055D19A3B3C88EFFB8B99C6171863D1C5AA5C7E`. The declaration, input pins, 2,233-lifecycle target, formulas, gates, verdicts and exclusions are unchanged. One fixed aggregation remains; no further correction or metric rerun is available.
+- No exposure, correlation, report-DD, benchmark or verdict outcome has opened. Program 6, broker/account state and Live remain untouched; push this correction boundary before aggregation.
