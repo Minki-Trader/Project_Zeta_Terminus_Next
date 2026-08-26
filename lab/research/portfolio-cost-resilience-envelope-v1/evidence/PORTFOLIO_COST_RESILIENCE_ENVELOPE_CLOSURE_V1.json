@@ -1,0 +1,67 @@
+{
+  "schema": "zeta-next-portfolio-cost-resilience-envelope-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_SOURCE_FREE_PASS",
+  "unit": "portfolio-cost-resilience-envelope-039",
+  "family": "portfolio-cost-resilience-envelope-v1",
+  "macro_program": {"id":5,"name":"portfolio_capital_risk","korean_name":"포트폴리오·자본·위험"},
+  "evidence": {
+    "declaration_sha256": "E541EEC5CC149693EDD7531BB52D8CF1E45A4C50656B16A405E4F2CD164D0F43",
+    "result_sha256": "C026E483AE6605AE0EEC8031883E1D4B01AF9D70B5EE7627084074E1106E4A1C"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "post_declaration_failed_invocations": 0,
+    "alternate_cost_books_or_rescues": 0,
+    "mql_changes": 0,
+    "tester_runs": 0,
+    "orders": 0,
+    "positions": 0,
+    "program_6_execution_recovery_broker_safety_opened": false
+  },
+  "integrity_boundary": {
+    "passed": true,
+    "input_files": 6,
+    "data_rows": 16477,
+    "lifecycles": 2233,
+    "actual_net_usd": 444.1900,
+    "stressed_2x_net_usd": 407.0477,
+    "input_hash_byte_duplicate_lifecycle_risk_pending_close_or_cost_faults": 0
+  },
+  "economic_boundary": {
+    "portfolio_net_usd": {"2x":407.0477,"3x":369.9054,"4x":332.7631},
+    "portfolio_4x_profit_factor": 1.279836644064,
+    "portfolio_4x_max_closed_drawdown_usd": 32.2524,
+    "portfolio_4x_net_to_drawdown": 10.317467847355,
+    "passing_strategies": ["RC16", "RC4", "Cross"],
+    "selected_strategy": "RC16",
+    "selected_strategy_4x_net_usd": 105.6140,
+    "selected_strategy_4x_profit_factor": 1.710096011618,
+    "selected_strategy_4x_net_to_drawdown": 9.119592435888,
+    "selected_strategy_4x_to_2x_retention": 0.922892745417
+  },
+  "verdict": "PASS_ONE_COST_RESILIENT_INCREMENTAL_LOT_PROXY_QUESTION",
+  "retained_seed": {
+    "id": "rc16_deposit_funded_incremental_lot_allocation_proxy",
+    "macro_program": 5,
+    "opened": false,
+    "scope": "A later whole-six-strategy deposit-matched Proxy may assign only volume above the unchanged base minimum lot to RC16, preserve every base opportunity and the exact 4%/12% gates, and compare against deposit-matched linear sizing.",
+    "live_authority": false
+  },
+  "closed_nearby_questions": [
+    "alternate cost multiples",
+    "spread commission financing or slippage decomposition",
+    "strategy direction session symbol or period subgroup rescue",
+    "suppression removal delay or base-lot reduction of a cost-fragile strategy",
+    "same-symbol directional overlap"
+  ],
+  "macro_rotation": {
+    "unit_039_program": 5,
+    "next_selection_requires_recomparison": [1, 2, 3, 4, 5, 7],
+    "underrepresented_programs_to_explicitly_compare": [2, 3, 4],
+    "adjacent_program_5_seed_is_retained_not_automatically_opened": true,
+    "program_6_excluded_from_goal": true
+  },
+  "live_surface": "UNTOUCHED",
+  "next": "durably_commit_and_push_unit_039_then_recompare_macro_programs_before_opening_one_new_serial_unit"
+}

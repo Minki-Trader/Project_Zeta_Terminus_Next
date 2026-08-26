@@ -790,3 +790,11 @@
 - Opened only Unit 039 `portfolio-cost-resilience-envelope-v1` under Program 5 `포트폴리오·자본·위험`. The immutable six-strategy event matrix is evaluated once under exactly `2x/3x/4x` arithmetic observed-cost books; those are economic lot-allocation stresses, not Program 6 broker/execution research, and no alternate multiplier, cost-component split, subgroup or adjacent rescue is permitted.
 - A passing strategy may retain at most one later deposit-funded incremental-lot Proxy that preserves every base opportunity, base minimum lot and the exact 4%/12% gates. A fragile strategy cannot be suppressed or reduced by this unit.
 - Declaration SHA-256 is `E541EEC5CC149693EDD7531BB52D8CF1E45A4C50656B16A405E4F2CD164D0F43`. Outcomes remain unopened until this boundary is committed and pushed. No MQL, Tester, Live source, runtime, state, log or broker/account surface was opened.
+
+## STATE-0099 - 2026-08-26
+
+- Ran exactly one fixed source-free Unit 039 aggregation with no failed invocation or alternate book. All six immutable hashes stayed exact; `16,477` rows, `2,233` lifecycles, actual `+$444.19`, 2x stressed `+$407.0477` and observed-cost unit `$37.1423` reconstructed with zero fault.
+- The whole portfolio remained positive at 3x `+$369.9054` and 4x `+$332.7631`; 4x PF was `1.279836644064`, closed DD `$32.2524` and net/DD `10.317467847355`.
+- RC16, RC4 and Cross passed every fixed gate. RC16 was selected by the declared ordering with 4x net `+$105.614`, PF `1.710096011618`, net/DD `9.119592435888` and 4x-to-2x retention `0.922892745417`. Pressure, Return and Passive failed at least one breadth or resilience gate and receive no suppression consequence.
+- Closed `PASS_ONE_COST_RESILIENT_INCREMENTAL_LOT_PROXY_QUESTION`. The RC16 deposit-funded extra-lot seed is retained but not opened automatically; macro Programs 1-5 and 7 must be re-compared first, with underrepresented Programs 2, 3 and 4 explicit. Program 6 remains outside this Goal.
+- Result/closure SHA-256 values are `C026E483AE6605AE0EEC8031883E1D4B01AF9D70B5EE7627084074E1106E4A1C` / `75ACA51F94CFB41CA6AD80B27A6E03F2ED319CAE691BD13724196646DABEC1AC`. No MQL, Tester, Live source, runtime, state, log or broker/account surface was opened.

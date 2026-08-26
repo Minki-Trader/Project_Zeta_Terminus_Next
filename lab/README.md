@@ -48,7 +48,7 @@
 - `research/us500-close-location-pressure-response-v1/`: 닫힌 Unit 036 fresh observer family; P1은 3,088건 정상 해결·상세 경고 0이었으나 HTML `99% 실제 틱`으로 고정 100% 관문 실패, 경제행 미열람·P2-P3·prototype 없음
 - `research/strategy-occupancy-slot-value-v1/`: 닫힌 Unit 037 source-free family; 선행 슬롯가치 순위 상관 `-0.257/-0.257/+0.143`, 단순 R 대비 증분 중앙값 `-0.114`로 우선순위 Proxy 없음
 - `research/us500-ordinal-acceleration-response-v1/`: 닫힌 Unit 038 fresh observer family; 정렬 P1 `100% 실제 틱`·739건 빈도 통과, double-spread continuation/reversion `-$12.81/-$7.86`로 방향·prototype 없음
-- `research/portfolio-cost-resilience-envelope-v1/`: 활성 Program 5 / Unit 039 source-free family; 전체 6전략의 고정 `2x/3x/4x` 경제 비용 회복력과 향후 추가 lot 배분 정보가치를 한 묶음으로 판정하기 전 선언 동결 상태
+- `research/portfolio-cost-resilience-envelope-v1/`: 닫힌 Program 5 / Unit 039 source-free family; 전체 포트폴리오는 4x에도 `+$332.7631`, RC16·RC4·Cross가 고정 관문 통과, RC16 추가-lot Proxy seed 하나만 보존하되 자동 후속은 열지 않음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
