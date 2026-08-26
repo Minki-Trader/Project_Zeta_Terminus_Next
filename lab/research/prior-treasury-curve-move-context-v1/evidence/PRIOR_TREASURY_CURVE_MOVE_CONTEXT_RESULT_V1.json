@@ -1,0 +1,176 @@
+{
+  "schema": "zeta-next-prior-treasury-curve-move-context-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_049_CLOSED_NO_TREASURY_CURVE_MOVE_CONTEXT_PASSED",
+  "unit": "prior-treasury-curve-move-context-049",
+  "family": "prior-treasury-curve-move-context-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "52D019971632C0B68D1426889532A27CCE2430C4B4308C736B902DAC2981403C",
+    "declaration_commit": "c8f3ebb",
+    "official_treasury_file_pins_exact": true,
+    "portfolio_file_pins_exact": true,
+    "treasury_files": 5,
+    "treasury_bytes": 89890,
+    "portfolio_files": 6,
+    "portfolio_bytes": 5692770
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_tool_orchestration_invocations_before_shell": 1,
+    "orchestration_failure": "The first tool wrapper did not parse because a PowerShell backtick-newline literal terminated the JavaScript raw string. No shell process started, no file was read and no metric or gate was calculated. The transport-only expression was changed to [char]10; the frozen aggregation itself was unchanged.",
+    "failed_shell_or_aggregation_invocations": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "same_unit_metric_reruns": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false
+  },
+  "integrity": {
+    "treasury_records": 1161,
+    "treasury_duplicate_dates": 0,
+    "treasury_parse_faults": 0,
+    "treasury_moves": 1160,
+    "treasury_move_counts": {"PARALLEL_RATE_RISE": 449, "PARALLEL_RATE_FALL": 406, "DIVERGENT_OR_FLAT": 305},
+    "treasury_manifest_sha256": "0ECE90826CD883898F8E386F5FE46F41B19A0CF194C9FC306A5E285047D2D331",
+    "portfolio_rows": 16477,
+    "portfolio_exact_duplicate_full_rows": 0,
+    "portfolio_parse_faults": 0,
+    "faults": {
+      "unclassified_birth": 0,
+      "overlap": 0,
+      "orphan_close": 0,
+      "missing_close": 0,
+      "risk": 0,
+      "passive_pending_overlap": 0,
+      "passive_fill_without_place": 0,
+      "passive_expire_without_place": 0,
+      "passive_pending_at_end": 0,
+      "external_close_reason": 0,
+      "anchor": 0,
+      "centering_cell": 0
+    },
+    "fault_total": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {"RC16": 272, "RC4": 206, "Cross": 805, "Pressure": 118, "Return": 238, "Passive": 594},
+    "stressed_net_usd_2x": 407.04770000000565,
+    "stop_exits": 206,
+    "role_counts": {"PARALLEL_RATE_RISE": 840, "PARALLEL_RATE_FALL": 779, "DIVERGENT_OR_FLAT": 614},
+    "period_role_counts": {
+      "P1_2022H2_2023": [342, 248, 179],
+      "P2_2024": [190, 193, 171],
+      "P3_2025": [179, 214, 161],
+      "P4_2026_YTD": [129, 124, 103],
+      "array_order": ["PARALLEL_RATE_RISE", "PARALLEL_RATE_FALL", "DIVERGENT_OR_FLAT"]
+    },
+    "strategy_role_counts": {
+      "RC16": [97, 88, 87],
+      "RC4": [67, 72, 67],
+      "Cross": [303, 295, 207],
+      "Pressure": [45, 38, 35],
+      "Return": [93, 86, 59],
+      "Passive": [235, 200, 159],
+      "array_order": ["PARALLEL_RATE_RISE", "PARALLEL_RATE_FALL", "DIVERGENT_OR_FLAT"]
+    },
+    "strategy_period_role_counts": {
+      "RC16": [[35,22,20],[25,21,26],[22,29,28],[15,16,13]],
+      "RC4": [[24,17,12],[12,21,20],[22,24,22],[9,10,13]],
+      "Cross": [[121,99,66],[73,72,52],[64,76,53],[45,48,36]],
+      "Pressure": [[13,12,10],[8,6,9],[13,10,9],[11,10,7]],
+      "Return": [[46,35,24],[18,19,13],[16,23,13],[13,9,9]],
+      "Passive": [[103,63,47],[54,54,51],[42,52,36],[36,31,25]],
+      "array_order": ["PARALLEL_RATE_RISE", "PARALLEL_RATE_FALL", "DIVERGENT_OR_FLAT"],
+      "period_order": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"]
+    },
+    "centering_cells": {
+      "RC16": [[77,0.07711231752028519,0.025974025974025976],[72,0.027415966657505984,0.1527777777777778],[79,0.05836141898742872,0.08860759493670886],[44,0.17651377122824263,0.06818181818181818]],
+      "RC4": [[53,0.10346639510326434,0.1509433962264151],[53,0.052922972852553964,0.2641509433962264],[68,0.06188340159870671,0.29411764705882354],[32,0.028895347654474525,0.34375]],
+      "Cross": [[286,0.008703772208022334,0.006993006993006993],[197,0.0387463243990351,0.04568527918781726],[193,0.02991563533754035,0.03626943005181347],[129,0.007011916155595948,0.08527131782945736]],
+      "Pressure": [[35,0.02850977279289924,0.05714285714285714],[23,-0.009495965328524375,0.21739130434782608],[32,-0.015885035136844902,0.34375],[28,0.16502963023837453,0.10714285714285714]],
+      "Return": [[105,0.07197886705126841,0.09523809523809523],[50,-0.055092804466071135,0.38],[52,0.12657755536417153,0.3269230769230769],[31,0.06331241032481687,0.25806451612903225]],
+      "Passive": [[213,0.006652914095265505,0.009389671361502348],[159,0.015611259165317613,0.050314465408805034],[130,0.0018013619390951482,0.07692307692307693],[92,0.009167731215862276,0.06521739130434782]],
+      "array_order": ["n", "mean_stressed_r", "stop_rate"],
+      "period_order": ["P1_2022H2_2023", "P2_2024", "P3_2025", "P4_2026_YTD"],
+      "finite_cells": 24
+    },
+    "exact_frozen_counts": true,
+    "gate_passed": true
+  },
+  "role_metrics": {
+    "PARALLEL_RATE_RISE": {"n": 840, "stressed_net_usd_2x": 86.10400000000165, "mean_stressed_r": 0.01706326718556185, "stop_rate": 0.09166666666666666, "positive_rate": 0.5583333333333333},
+    "PARALLEL_RATE_FALL": {"n": 779, "stressed_net_usd_2x": 212.69720000000126, "mean_stressed_r": 0.04955209969109338, "stop_rate": 0.08600770218228498, "positive_rate": 0.5776636713735558},
+    "DIVERGENT_OR_FLAT": {"n": 614, "stressed_net_usd_2x": 108.24650000000179, "mean_stressed_r": 0.033865008960828696, "stop_rate": 0.10097719869706841, "positive_rate": 0.5765472312703583}
+  },
+  "variants": [
+    {
+      "id": "PARALLEL_RATE_RISE",
+      "comparator": "DIVERGENT_OR_FLAT",
+      "variant_n": 840,
+      "comparator_n": 614,
+      "variant_minus_comparator_mean_centered_stressed_r": -0.01577942559061023,
+      "variant_minus_comparator_mean_centered_stop": 0.005292058356026152,
+      "period_effects": [
+        ["P1_2022H2_2023",342,179,0.0061162664947075705,0.04753719015972332,0.0008002370464242079],
+        ["P2_2024",190,171,-0.04100978088363997,-0.01967788513800219,-0.009867453651708975],
+        ["P3_2025",179,161,-0.024585541445381276,-0.03426424428937371,-0.005398952107727209],
+        ["P4_2026_YTD",129,103,-0.008136664957686057,0.0180252578344728,-0.001313256877598259]
+      ],
+      "strategy_effects": [
+        ["RC16",97,87,-0.012251671662806891,-0.011212716989355265,-0.0009190723158799853],
+        ["RC4",67,67,-0.0038243511039755167,0.06980428048437058,-0.00032345781753181853],
+        ["Cross",303,207,-0.02040868064439294,0.02727874061233751,-0.007151559143812105],
+        ["Pressure",45,35,0.0016590838779233924,-0.0652693976141181,-0.00007146029109343036],
+        ["Return",93,59,-0.05163093474751834,-0.019928126552052748,-0.005976555929673335],
+        ["Passive",235,159,-0.004535409320094642,-0.015392000819245844,-0.0013373200926195708]
+      ],
+      "effect_array_order": ["group", "variant_n", "comparator_n", "variant_minus_comparator_centered_r", "variant_minus_comparator_centered_stop", "pooled_r_contrast_contribution"],
+      "sign_breadth": {"centered_r_periods": 3, "centered_stop_periods": 2, "centered_r_strategies": 5, "centered_stop_strategies": 2},
+      "maximum_period_stressed_r_contribution_share": 0.5677508979583087,
+      "maximum_strategy_stressed_r_contribution_share": 0.45322049923463203,
+      "density_passed": true,
+      "failed_information_gates": ["absolute_centered_stressed_r_at_least_0_10", "absolute_centered_stop_at_least_0_05", "centered_stop_sign_at_least_three_periods", "centered_stop_sign_at_least_four_strategies", "maximum_strategy_r_contribution_at_most_0_40"],
+      "passed": false
+    },
+    {
+      "id": "PARALLEL_RATE_FALL",
+      "comparator": "DIVERGENT_OR_FLAT",
+      "variant_n": 779,
+      "comparator_n": 614,
+      "variant_minus_comparator_mean_centered_stressed_r": 0.015598025004384735,
+      "variant_minus_comparator_mean_centered_stop": -0.008979161709515187,
+      "period_effects": [
+        ["P1_2022H2_2023",248,179,0.03689151053197927,0.022632260288895728,0.011352537800073904],
+        ["P2_2024",193,171,0.007918726921044063,-0.01263225997466086,0.0016142534334591305],
+        ["P3_2025",214,161,0.0121377550178351,-0.03586862185749632,0.003375053346499372],
+        ["P4_2026_YTD",124,103,-0.00443092211666728,-0.015187162912053354,-0.0007438195756476749]
+      ],
+      "strategy_effects": [
+        ["RC16",88,87,0.07194538616798395,-0.06370250567591448,0.008670512442556639],
+        ["RC4",72,67,0.0017636425132782022,0.06459084237985069,0.000152532334376603],
+        ["Cross",295,207,-0.0033561248362727215,0.022460859448986598,-0.0009005904315647893],
+        ["Pressure",38,35,-0.14704689280520916,0.021548825479848713,-0.007557198322566109],
+        ["Return",86,59,0.10509070722924221,-0.12862833584164335,0.011347154840771064],
+        ["Passive",200,159,0.01510602491791928,-0.011670103504134352,0.0038856141408113065]
+      ],
+      "effect_array_order": ["group", "variant_n", "comparator_n", "variant_minus_comparator_centered_r", "variant_minus_comparator_centered_stop", "pooled_r_contrast_contribution"],
+      "sign_breadth": {"centered_r_periods": 3, "centered_stop_periods": 3, "centered_r_strategies": 4, "centered_stop_strategies": 3},
+      "maximum_period_stressed_r_contribution_share": 0.6644481418241962,
+      "maximum_strategy_stressed_r_contribution_share": 0.34899715700090345,
+      "density_passed": true,
+      "failed_information_gates": ["absolute_centered_stressed_r_at_least_0_10", "absolute_centered_stop_at_least_0_05", "centered_stop_sign_at_least_four_strategies", "maximum_period_r_contribution_at_most_0_60"],
+      "passed": false
+    }
+  ],
+  "bundle": {
+    "passing_variants": [],
+    "passing_count": 0,
+    "verdict": "NO_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_PASSED",
+    "retained_external_context_question": null,
+    "selected_candidate": null,
+    "automatic_successor": false,
+    "economic_interpretation": "Parallel rate rises had a small adverse and stop-concordant association, while parallel rate falls had a small favorable and stop-concordant association. Both return effects were about 0.016R and both stop effects below 0.009, far below the fixed material gates; breadth and contribution checks also failed. The joint prior-day 2-year/10-year sign is not a usable external context in this consumed evidence."
+  },
+  "nearby_rescue": false,
+  "next": "close_unit_then_recompare_programs_1_to_5_and_7_without_adjacent_program_2_rates_followup",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED"
+}

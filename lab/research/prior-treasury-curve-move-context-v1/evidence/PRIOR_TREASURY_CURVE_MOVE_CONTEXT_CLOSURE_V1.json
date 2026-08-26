@@ -1,0 +1,57 @@
+{
+  "schema": "zeta-next-prior-treasury-curve-move-context-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "prior-treasury-curve-move-context-049",
+  "family": "prior-treasury-curve-move-context-v1",
+  "macro_program": {"id": 2, "name": "external_market_event", "korean_name": "외부시장·이벤트"},
+  "research_bundle": "strictly_prior_parallel_two_year_ten_year_curve_move_contexts",
+  "verdict": "NO_PRIOR_TREASURY_CURVE_MOVE_CONTEXT_PASSED",
+  "integrity": {
+    "passed": true,
+    "official_treasury_records": 1161,
+    "official_treasury_moves": 1160,
+    "portfolio_rows": 16477,
+    "lifecycles": 2233,
+    "stressed_net_usd_2x": 407.04770000000565,
+    "stop_exits": 206,
+    "faults": 0,
+    "finite_centering_cells": 24
+  },
+  "variant_decisions": {
+    "PARALLEL_RATE_RISE": {
+      "variant_comparator_n": [840, 614],
+      "variant_minus_comparator_centered_r": -0.01577942559061023,
+      "variant_minus_comparator_centered_stop": 0.005292058356026152,
+      "decision": "FAIL",
+      "reason": "Both economic magnitudes missed the fixed minima; stop signs held in only two periods and two strategies, and Cross contributed 45.32%, above the 40% strategy cap."
+    },
+    "PARALLEL_RATE_FALL": {
+      "variant_comparator_n": [779, 614],
+      "variant_minus_comparator_centered_r": 0.015598025004384735,
+      "variant_minus_comparator_centered_stop": -0.008979161709515187,
+      "decision": "FAIL",
+      "reason": "Both economic magnitudes missed the fixed minima; stop signs held in only three strategies and P1 contributed 66.44%, above the 60% period cap."
+    }
+  },
+  "interpretation": "The signs match a plausible discount-rate story—parallel rises slightly worse and parallel falls slightly better—but the effects are economically negligible relative to divergent or flat prior curve moves. The broad official-rates state supplies no actionable external-market field in this consumed evidence.",
+  "retained_external_context_question": null,
+  "selected_candidate": null,
+  "entry_filter_or_event_rule": null,
+  "size_priority_or_slot_action": null,
+  "ea_or_live_action": null,
+  "same_unit_rerun": false,
+  "nearby_rescue": false,
+  "adjacent_program_2_successor": false,
+  "rate_magnitude_slope_inversion_or_maturity_followup": false,
+  "program_6_opened": false,
+  "mql_changes": 0,
+  "tester_runs": 0,
+  "live_surface": "UNTOUCHED",
+  "evidence": {
+    "treasury_manifest_sha256": "0ECE90826CD883898F8E386F5FE46F41B19A0CF194C9FC306A5E285047D2D331",
+    "declaration_sha256": "52D019971632C0B68D1426889532A27CCE2430C4B4308C736B902DAC2981403C",
+    "result_sha256": "A4C5558B34F959F36CA51B9DFA78264E0BE837F61F8F8872C40E3A47A411B529"
+  },
+  "next": "Recompare Programs 1-5 and 7 at the macro map. Do not continue into rate magnitude, curve slope, inversion, alternate maturity, event timing, source substitution, strategy subset or another adjacent Program 2 question."
+}
