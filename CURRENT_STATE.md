@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0147`
+- Latest state ID: `STATE-0148`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: Program 4 / meso Unit 060 `native-hold-schedule-curve-v1`; declaration, three exact hold vectors, four-period 12-path real-tick budget, gates and termination are frozen before source derivation or outcomes
+- Active research boundary: Program 4 / meso Unit 060 `native-hold-schedule-curve-v1`; declaration plus isolated source/configuration/binary/runtime are frozen and pushed before outcomes, with all 12 serial real-tick paths still unopened
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -711,6 +711,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - The fixed budget is one physical baseline copy, one dedicated physical Portable, one successful build-6140 compile with at most two implementation-only pre-Tester corrections, and exactly 12 serial Model=4 real-tick paths with zero post-metric reruns. A profile must pass direct paired value and breadth/concentration, portfolio net/downside/drawdown/efficiency/stop and profile-specific capacity gates; at most one later independently declared confirmation question can survive.
 - Declaration SHA-256 is `B94391E2296BD80E317BEEF8B1774A696BDC2A269EA9A9B6162239006A3C57D4`. The required low-space retention sweep removed only three exact Git-ignored, closed-family duplicate Portable roots, reclaimed about `16.70 GiB`, left about `42.81 GiB` free and is recorded at SHA-256 `52A62A343ED757FA53E9E63B7C25BE0E593CA333393B9451245CBB1F2674BB72`.
 - No source has yet been copied, compiled or executed and no outcome has been consumed. Intermediate fractions, per-component/period/symbol/direction rescue, combined stop/risk/lot/slot changes, Program 6, broker queries, promotion and Live actions are forbidden.
+
+## Frozen native hold schedule curve Unit 060 implementation
+
+- After declaration commit `01a951895afd83758c50c85c0392c0f74dd1769f` reached local, origin and remote main, made the sole physical copy of the frozen CXR2 forward baseline into `lab/research/native-hold-schedule-curve-v1/mt5/`; the parent root and historical `lab/mt5/` remain byte-untouched.
+- Changed only the one Tester profile input and exact vector assignment, Unit 060 identities/Magic/file paths and initialization vector log, plus Passive's existing maximum-hold comparison to its component `hold_bars`. Twelve inherited MQL headers are exact; signals, entries, stops, sizing, risk caps, RC4 ARC checkpoint/thresholds, costs, session/calendar and Passive weak/reversal exits remain unchanged.
+- Froze three SETs and twelve period-major INIs. Code-only source is 15 files / 354,642 bytes / SHA-256 `02606504D2FAFC18D5E1054813384B252CCE2A40B01663EC4C3278A0DF6060EF`; configuration is 15 files / 8,956 bytes / SHA-256 `69607FE28BBDF15D8DDECB20B78A6C040E7C922B051E8933D284240D085D7C15`.
+- The first and only actual MetaEditor build-6140 compile passed in 2,560 ms at `0 errors / 0 warnings` with zero source correction. EX5 is 196,756 bytes / SHA-256 `6F6633DA0B8D4B650829EBE20060BFE51657586294282AEDBB365920AE89C455`; the launcher returned just before the same invocation's log flush became visible, and no second compile occurred.
+- Created Git-ignored `lab/runtime/hsc60-portable/` as one physical Lab-only copy. It contains one Unit 060 EX5, one Unit 060 MQ5, fourteen Unit 060 MQL headers and three Unit 060 SETs, zero other-family EX5/SET/Zeta Include and zero junction/symbolic link. Complete Bases and Tester/bases copies match their origins at SHA-256 `C47AA328D901D4CC672B2AC2F7565EB92BE6CD2DFD86355388E98127D102FDDD` / `A2CDEAF885CDC5B1246AD3B185B164DDABF6F1E4DBD37CE5EEEFFCE1079BC140`; sampled file IDs differ and hardlink lists contain one path.
+- Compile/runtime receipt SHA-256 is `6B0D484A7C05722C4B61902C0A3697716ADD6D5181913462BA48BD0A1FA875A9`. No Tester outcome has opened; source and configuration must remain exact through all twelve paths. Program 6, broker state, Live, dashboard and promotion remain untouched.
 
 ## Required completion evidence
 
