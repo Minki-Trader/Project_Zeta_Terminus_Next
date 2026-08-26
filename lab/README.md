@@ -60,6 +60,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/rc16-deposit-funded-incremental-volume-proxy-v1/`: 닫힌 무효 Program 5 / Unit 044 source-free family; 선택배분은 순수 경제 관문을 모두 통과했으나 `$200/$300`에서 고정 4% position cap을 `229/231`회 위반해 allocation·EA seed 없음, 인접 sizing 구제 없음
 - `research/prior-vix-relative-regime-context-v1/`: 닫힌 무효 Program 2 / Unit 045 source-free family; 공식 Cboe 스냅샷과 16,477행은 통과했으나 period selector가 0 lifecycle을 반환해 경제판정 전 무효, VIX-context seed·구제 없음
 - `research/rc4-adverse-compression-resolution-state-v1/`: 닫힌 무효 Program 4 / Unit 046 source-free family; selector가 RC16 272건을 함께 받아 RC4 `206 → 478`로 무결성 실패, 계산된 효과 전부 비권위·수정/재실행/인접 후속 없음
+- `research/new-york-week-edge-entry-state-v1/`: 활성 Program 3 / Unit 047 source-free family; 월요일 416·화~목 1,368·금요일 449 진입을 exact strategy-period midweek 기준과 비교하는 한 주간경계 묶음, 결과 미열람
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
