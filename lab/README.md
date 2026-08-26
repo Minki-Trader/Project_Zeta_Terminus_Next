@@ -68,6 +68,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/held-position-first-peer-exit-state-v1/`: 닫힌 Program 4 / Unit 052 source-free family; peer stop `+0.05546R/+0.00736 stop`, peer native `+0.03656R/-0.08223 stop`이나 전자는 크기·일관성, 후자는 R크기·Return 집중 실패, 관리 후속 없음
 - `research/us500-monthly-range-break-response-v1/`: 닫힌 Program 1 / Unit 053 family; P1 2025 무결성·H1/H2 `10/12`는 통과했으나 upper/lower `18/4`로 양방향 최소 `5/5` 미달, 경제행·P2·prototype 미개봉
 - `research/portfolio-loss-cooccurrence-topology-v1/`: 닫힌 Program 5 / Unit 054 source-free family; 다전략 손실일 `1.0226x`, 양 자연책 손실일 `1.0554x` 독립기대 발생으로 둘 다 `1.25x` 관문 미달, 공통손실 대응·배분·lot·slot 후속 없음
+- `research/macro-context-composition-confounding-v1/`: 열린 Program 7 / Unit 055 source-free family; Units 041/042/047/048/049/052의 권위 있는 12개 맥락 대비에서 raw 효과와 strategy-period centered 효과의 구성혼재 차이를 한 번만 분류하며 meta outcome은 선언 commit 전 미개봉
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

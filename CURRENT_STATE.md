@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0133`
+- Latest state ID: `STATE-0134`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -23,7 +23,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
-- Active research boundary: none; Program 5 Unit 054 `portfolio-loss-cooccurrence-topology-v1` is closed with neither co-occurrence variant passing and no retained question or candidate
+- Active research boundary: Program 7 Unit 055 `macro-context-composition-confounding-v1` is declaration-frozen with a 6-unit / 12-contrast authoritative census; raw-versus-centered meta effects remain unopened until the declaration boundary is committed and pushed
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -639,6 +639,15 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Cross-book loss dates were observed `161` times versus `152.551858` expected, ratio `1.055379` and excess `8.448142`. They held `40.26%` of negative dollars and passed density/severity/breadth, but failed the `1.25x` incidence gate; P4 was below expectation at `0.728787x`.
 - Closed `NO_PORTFOLIO_LOSS_COOCCURRENCE_CLUSTER_PASSED`. Material loss dollars on coincident dates do not establish excess common-loss incidence after preserving actual active masks and marginal strategy-period loss rates. No alternate day/window, strategy pair/subset, hedge, removal, allocation, lot, slot, priority, admission, EA or Live response survives.
 - Declaration/result/closure SHA-256 values are `CE7894BD149D98753B10FD4E0C1D8CED8252587F6755B9B5BFF38F39E33F603C` / `61614AC1AB8372982A368505DE3484A389AFAAA47588CF19E3D8DFE20A3F711E` / `E8FC76401A6F1844A40846F53AC85495793ADD3B8DCECBB77ADA9DFCB578A35C`. Programs 1-5 and 7 must be compared again without adjacent Program 5 loss-day, allocation or risk-governor work; Program 6 and Live remained untouched.
+
+## Open macro context composition confounding Unit 055
+
+- Recompleted the Goal startup boundary in authority order and confirmed clean `main == origin/main == remote main a1ef816569662217f050e03cb72f44eb1ee83f15`, frozen CXR2 forward baseline commit `0d4032786cecb7d7e8a4c3074609db5b105fa107`, exact local Live PID `15080` and dashboard PID `28508`, and no Lab Tester/MetaEditor process without querying broker positions, orders, deals or account state.
+- Recompared Programs 1-5 and 7. Official ALFRED STLFSI4 initial releases could be made causally strict, but the natural above-zero state covered only 7 of 197 releases and 68 births, with zero P2/P4 births; rejected before allocation with no threshold, percentile, lag or source substitution. Program 3's two independent exact-time/order-funnel proposals remain structurally sparse or confounded, while Programs 1, 4 and 5 are recent.
+- Opened only Program 7 Unit 055 `macro-context-composition-confounding-v1`, distinct from Unit 043 acquisition yield and Unit 051 attrition. Its verdict-independent census includes authoritative Units `041/042/047/048/049/052`, exactly two raw-versus-strategy-period-centered lifecycle contrasts per unit and source-program contrast counts `P1/P2/P3/P4 = 2/4/4/2`.
+- The frozen census pins 18 declaration/result/closure artifacts, 202,799 bytes and manifest SHA-256 `7F8E10CE827A04AA37B18B0169CE761E8F3E52530D9AD342A10D9E7E00E77C4C`; census SHA-256 is `7349B341DC2EB9C540DAB04687F3274E69ADC7D4D1CF7369B40E5794F6250F31`.
+- One fixed classification will call an R contrast composition-sensitive only at absolute raw-to-centered adjustment `>=0.05R`, and a stop contrast sensitive only at `>=0.025`. Each channel additionally requires at least 4/12 contrasts, three units, three source programs, a cross-census median floor and contribution caps; sign reversals and full material-threshold status changes are context only.
+- Declaration SHA-256 is `8D579C5601E027D9271D4C584CE52DB060B54A6DED3DA2BBA47F55A36AD1AC5D`. No raw-versus-centered adjustment, sensitivity flag, gate or meta verdict has been calculated. MQL, Tester, Program 6, broker state and Live remain untouched until the declaration boundary is committed and pushed.
 
 ## Required completion evidence
 
