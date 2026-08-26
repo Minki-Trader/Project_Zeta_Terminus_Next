@@ -1,0 +1,248 @@
+{
+  "schema": "zeta-next-scheduled-us-macro-decision-regime-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_UNIT_058_DECISION_REGIME_AGGREGATION",
+  "unit": "scheduled-us-macro-decision-regime-058",
+  "family": "scheduled-us-macro-decision-regime-v1",
+  "title": "Scheduled U.S. Macro Decision Regime",
+  "selection_card": {
+    "macro_program": {
+      "id": 2,
+      "name": "external_market_event",
+      "korean_name": "외부시장·이벤트"
+    },
+    "research_height": {
+      "primary": "meso",
+      "supporting": "macro"
+    },
+    "central_question": "Around official CPI and Employment Situation releases, does the causal portfolio decision process enter a materially different regime before or after the release, combining native signal incidence with existing-exposure gating or aggregate risk heat?",
+    "bundle": [
+      "PRE_120M",
+      "POST_120M"
+    ],
+    "why_now": "The recent closed rotation covered Programs 1, 5, 7, 3 and 4. Program 2 was not forced earlier because no new causal structure was ready. The newly frozen non-interfering candidate ledger now exposes evaluation, signal, gate and portfolio-risk state at exact server minutes against the already frozen official calendar.",
+    "connection_bridge": "This connects the user's scheduled-release question, passed and blocked candidate funnel, US30/US100 portfolio heat and capital-risk context. It uses upstream decision state that Unit 041 could not observe.",
+    "decision_if_true": "Retain exactly one later independently declared multi-period observation question for the selected PRE or POST role. No event-aware trading rule is selected here.",
+    "decision_if_false": "Do not spend another unit on a scheduled-BLS decision-state observer or event-specific admission idea from this evidence.",
+    "not_adjacent_or_random": "This is not a repair, window change or P4 subgroup rescue of Unit 041. Unit 041 compared full lifecycle outcomes for positions held at release or born afterward. Unit 058 reads no lifecycle close outcome and instead asks whether evaluation availability, signal production and pre-decision portfolio heat themselves change. It is also not opened merely because the logger is new: the exact calendar, joinable timestamps, two event classes and matched non-event rows are all already present.",
+    "automatic_followups_forbidden": [
+      "longer_or_shorter_release_window",
+      "FOMC_window_rescue",
+      "event_surprise_or_value",
+      "single_event_or_strategy_subset",
+      "event_filter_size_priority_exit_or_EA",
+      "adjacent_Program_2_successor"
+    ]
+  },
+  "boundary": {
+    "family_root": "lab/research/scheduled-us-macro-decision-regime-v1/",
+    "source_free": true,
+    "tester_runs": 0,
+    "mql_changes": 0,
+    "new_market_outcomes": false,
+    "lifecycle_close_outcomes_accessed": false,
+    "uses_only_already_consumed_exploratory_evidence": true,
+    "program_6_execution_recovery_broker_safety_opened": false,
+    "live_source_runtime_state_logs_or_broker_state_used": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "immutable_inputs": {
+    "candidate_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-candidates.csv",
+      "bytes": 2724613,
+      "sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+      "rows": 4043,
+      "schema_columns": 48,
+      "record_role": "P4 2026 YTD causal candidate, signal, gate and pre-decision portfolio context only"
+    },
+    "official_calendar": {
+      "path": "lab/research/scheduled-us-macro-event-exposure-v1/evidence/OFFICIAL_US_MACRO_EVENT_CALENDAR_V1.csv",
+      "bytes": 11397,
+      "sha256": "B52500889E585D13DF00C21AFBD0EC37E3D5839792021D83D1E8DE28A1987BFE",
+      "rows": 128,
+      "consumed_classes": [
+        "CPI",
+        "EMPLOYMENT"
+      ],
+      "context_only_class": "FOMC"
+    },
+    "logger_non_interference_result": {
+      "path": "lab/engineering/live-research-observation-ledger-v1/evidence/LIVE_RESEARCH_OBSERVATION_LEDGER_RESULT_V1.json",
+      "bytes": 9181,
+      "sha256": "CFEE02835808D717344D2082E7B77B8FFB76B2C6CE1C54C4F43B95F340E55C0B",
+      "required_verdict": "PASS_SAME_SPEC_EXACT_NON_INTERFERENCE_APPROVE_LATER_CONTROLLED_LIVE_PROMOTION"
+    }
+  },
+  "calendar_and_time_contract": {
+    "event_wall_time": "Use each official calendar release_date_et and release_time_et as Eastern Time.",
+    "conversion": "Convert Eastern Time to FPMarkets server time using Windows TimeZoneInfo IDs Eastern Standard Time and FLE Standard Time, preserving both DST systems and mismatch weeks.",
+    "candidate_clock": "Use candidate server_time for event distance and decision_bar for exact comparator weekday and HH:mm matching.",
+    "included_event_scope": "2026-01-01 through the frozen candidate path end before 2026-08-21.",
+    "included_events": {
+      "CPI": 8,
+      "EMPLOYMENT": 8
+    },
+    "FOMC_context_only": "Five in-scope FOMC statements produced exactly zero candidate rows inside the fixed plus-or-minus 120-minute window. FOMC is not widened, imputed or replaced."
+  },
+  "fixed_roles": {
+    "PRE_120M": "Candidate server time is at least 120 minutes before neither event and satisfies release_server_time - 120 minutes <= candidate_server_time < release_server_time.",
+    "POST_120M": "Candidate server time satisfies release_server_time <= candidate_server_time < release_server_time + 120 minutes.",
+    "UNEXPOSED": "Candidate row is outside both fixed roles for every included CPI and Employment release.",
+    "assignment": "A candidate row may match at most one included release. Any overlap is an integrity failure."
+  },
+  "fixed_comparator": {
+    "all_row_key": "component_id + server DayOfWeek from decision_bar + decision_bar HH:mm",
+    "all_row_pool": "UNEXPOSED candidate rows with the exact all_row_key",
+    "evaluated_signal_pool": "UNEXPOSED rows with signal_known=1 and the exact all_row_key",
+    "adjustment": "For each exposed row subtract the corresponding unexposed exact-key mean, then average residuals with equal exposed-row weight.",
+    "class_views": "Repeat the same fixed adjustment separately for CPI and Employment inside each role. Event class does not change the comparator key."
+  },
+  "fixed_channels": {
+    "SIGNAL_PASS": {
+      "population": "Rows with signal_known=1 only.",
+      "value": "1 when signal_passed=1, otherwise 0.",
+      "material_absolute_residual": 0.05
+    },
+    "EXISTING_EXPOSURE_GATE": {
+      "population": "All candidate rows.",
+      "value": "1 only when result=EXISTING_EXPOSURE, otherwise 0.",
+      "material_absolute_residual": 0.1
+    },
+    "AGGREGATE_RISK_HEAT": {
+      "population": "All candidate rows with positive aggregate_cap_usd.",
+      "value": "aggregate_risk_before_usd divided by aggregate_cap_usd.",
+      "material_absolute_residual": 0.1,
+      "interpretation": "A 0.10 change equals 10 percent of the portfolio aggregate-risk envelope, not ten percentage points of account capital."
+    }
+  },
+  "pre_outcome_feasibility": {
+    "scope": "Calendar conversion, candidate timestamps, stage/result labels, signal-known/pass flags and causal pre-decision context only. No lifecycle ledger, close result, stressed R, stop result or event-conditioned final outcome was accessed.",
+    "candidate_rows": 4043,
+    "unique_record_ids": 4043,
+    "evaluated_rows": 2734,
+    "passed_signal_rows": 398,
+    "passed_but_blocked_rows_context_only": 15,
+    "included_events": 16,
+    "roles": {
+      "PRE_120M": {
+        "rows": 139,
+        "evaluated_rows": 122,
+        "passed_signals": 8,
+        "existing_exposure_gates": 17,
+        "unique_events": 16,
+        "represented_components": 4,
+        "CPI": {
+          "rows": 67,
+          "evaluated_rows": 60,
+          "passed_signals": 3,
+          "existing_exposure_gates": 7,
+          "events": 8
+        },
+        "EMPLOYMENT": {
+          "rows": 72,
+          "evaluated_rows": 62,
+          "passed_signals": 5,
+          "existing_exposure_gates": 10,
+          "events": 8
+        },
+        "minimum_all_row_comparator_cell": 4,
+        "minimum_evaluated_comparator_cell": 12
+      },
+      "POST_120M": {
+        "rows": 85,
+        "evaluated_rows": 63,
+        "passed_signals": 22,
+        "existing_exposure_gates": 22,
+        "unique_events": 16,
+        "represented_components": 6,
+        "CPI": {
+          "rows": 42,
+          "evaluated_rows": 34,
+          "passed_signals": 10,
+          "existing_exposure_gates": 8,
+          "events": 8
+        },
+        "EMPLOYMENT": {
+          "rows": 43,
+          "evaluated_rows": 29,
+          "passed_signals": 12,
+          "existing_exposure_gates": 14,
+          "events": 8
+        },
+        "minimum_all_row_comparator_cell": 3,
+        "minimum_evaluated_comparator_cell": 14
+      }
+    },
+    "unexposed": {
+      "rows": 3819,
+      "evaluated_rows": 2549,
+      "passed_signals": 368
+    },
+    "predeclaration_tooling_disclosure": "One initial read-only timezone feasibility command used unsupported PowerShell overloads, emitted no usable event classification and accessed no outcome. The corrected predeclaration classification above completed under ErrorActionPreference Stop."
+  },
+  "fixed_integrity_gate": [
+    "All three immutable inputs retain their declared byte lengths and SHA-256 hashes.",
+    "The candidate ledger has exactly 48 columns, 4,043 rows, 4,043 unique record_id values and zero research_dropped_records.",
+    "Stage/result totals remain EXISTING_EXPOSURE 1,302; SHADOW_ACCEPTED_OCCUPANCY 7; PENDING_ORDER 119; POSITION_OPEN 264; PRICE_DISTANCE_BLOCKED 1; PROTECTION_OR_RISK_BLOCKED 14; SIGNAL_NOT_MET 2,336.",
+    "Exactly 2,734 rows have signal_known=1 and exactly 398 of those have signal_passed=1.",
+    "Calendar conversion yields exactly 8 CPI and 8 Employment events in scope and no exposed row matches more than one release.",
+    "Reproduce the exact PRE and POST feasibility counts, class counts, event counts and comparator minima declared above.",
+    "Every aggregate_cap_usd is positive; every risk heat value is finite and nonnegative; active_slots and masks parse without fault.",
+    "Every exposed row has an all-row comparator and every exposed evaluated row has an evaluated-signal comparator under the exact frozen key."
+  ],
+  "fixed_density_gate": {
+    "apply_to_each_role": true,
+    "requirements": [
+      "At least 75 exposed candidate rows and 50 evaluated rows pooled.",
+      "CPI and Employment each contribute at least 25 evaluated rows, at least 3 passed signals and all 8 scheduled events.",
+      "At least 4 components are represented pooled.",
+      "Every all-row comparator cell has at least 3 rows and every evaluated comparator cell at least 10 rows."
+    ],
+    "pre_outcome_status": {
+      "PRE_120M": "eligible",
+      "POST_120M": "eligible"
+    }
+  },
+  "fixed_material_gate": {
+    "apply_separately_to_each_role": true,
+    "signal_requirement": "Absolute pooled SIGNAL_PASS residual is at least 0.05.",
+    "posture_requirement": "At least one of EXISTING_EXPOSURE_GATE or AGGREGATE_RISK_HEAT has absolute pooled residual at least 0.10.",
+    "class_breadth": "For every channel used to pass, CPI and Employment residuals share the pooled nonzero sign and each absolute class residual reaches at least half that channel's pooled material threshold.",
+    "component_concentration": "For every channel used to pass, no component contributes more than 75 percent of the absolute centered residual numerator.",
+    "role_pass": "A role passes only when density, SIGNAL_PASS, at least one posture channel, class breadth and component concentration all pass.",
+    "selection_if_both_pass": "Prefer the role passing more of the three channels; then the larger sum abs(signal_residual)/0.05 + max(abs(existing_gate_residual)/0.10, abs(risk_heat_residual)/0.10); then lexicographic role name."
+  },
+  "evidence_limit": {
+    "P4_only": true,
+    "all_data_already_consumed_exploratory": true,
+    "causal_schedule_available_ex_ante": true,
+    "association_not_event_causality": true,
+    "no_lifecycle_economics": true,
+    "no_clean_holdout": true,
+    "selection_or_promotion_claim": false
+  },
+  "execution_budget": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_correction_allowance": 1,
+    "tester_paths": 0,
+    "compile_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "verdict_rules": {
+    "success": "PASS_ONE_BLS_DECISION_REGIME_MULTI_PERIOD_OBSERVATION_QUESTION when at least one role passes every frozen gate; retain exactly one role by the frozen ordering.",
+    "failure": "NO_SCHEDULED_BLS_DECISION_REGIME_ROLE_PASSED when integrity passes and neither role passes.",
+    "invalid": "INVALID_CALENDAR_OR_CANDIDATE_LEDGER_RECONSTRUCTION_NO_DECISION_REGIME_VERDICT when any input, time, row, count, risk, matching or comparator integrity gate fails.",
+    "ambiguous": "AMBIGUOUS_NO_DECISION_REGIME_SEED only when integrity passes but an unforeseen semantic condition blocks the fixed interpretation without changing the contract."
+  },
+  "stop_rules": [
+    "Commit and push this declaration before calculating any exposed-versus-comparator channel residual, class residual, component contribution, material gate or verdict.",
+    "Run exactly one fixed in-memory aggregation over the two immutable CSV inputs.",
+    "Do not access research-lifecycles.csv or any lifecycle close outcome for Unit 058.",
+    "Do not run MT5, compile MQL, create a reusable analysis CLI, query broker/account state or touch Live.",
+    "Do not widen or shift the 120-minute windows, add FOMC or another release, add surprise/value/direction, change the comparator, or rescue a role with a strategy/event subgroup.",
+    "Close the family after the one result and recompare Programs 1-5 and 7 plus all three heights before any retained question."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_run_one_fixed_scheduled_us_macro_decision_regime_aggregation"
+}

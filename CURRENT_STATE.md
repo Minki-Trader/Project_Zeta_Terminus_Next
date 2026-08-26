@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0142`
+- Latest state ID: `STATE-0143`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: none; Program 4 / micro Unit 057 `first-peer-profit-memory-checkpoint-v1` is durably closed as a final-level association with no material post-checkpoint return path and no retained management seed
+- Active research boundary: Program 2 / meso Unit 058 `scheduled-us-macro-decision-regime-v1` is declaration-frozen before one fixed source-free aggregation; no channel residual or verdict is open
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -677,6 +677,16 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Strategy adjustment preserved a broad final-level difference of `+0.361489R / -0.103125 stop`: final R agreed in `5/5` strategies, stop in `4/5`, both channels agreed across US30 and US100, and concentration caps passed. The new-high rate was also `+0.228681` higher.
 - The checkpoint-to-close remaining stressed-R difference was only `+0.021998R`, far below the frozen `0.10R` future-path gate. Thus the state identifies value already present but does not show a materially different subsequent return path.
 - Closed `FINAL_LEVEL_ONLY_NO_POST_CHECKPOINT_PATH_SEED`. Result/closure SHA-256 values are `C182CA8C12B50A52F89D48282DB9751790E2F38739D4E4A3EFA8424AC027DFDA` / `AFC17F7DD25E7DE167A93FEEEF47C71B21137B6A1A8A2A49D1669683DD884335`. No broad observer matrix, management response, retained seed, adjacent Program 4 successor, MQL, Tester, Program 6, broker query or Live action survives.
+
+## Open scheduled U.S. macro decision regime Unit 058
+
+- Recompleted the Goal startup boundary in authority order and confirmed clean `main == origin/main == remote main 130758a5ca0536332628202a093362971f6226e9`, frozen forward baseline `0d4032786cecb7d7e8a4c3074609db5b105fa107`, exact local CXR2 PID `15080`, dashboard PID `28508` and no Lab Tester or MetaEditor process without querying broker positions, orders, deals or account state.
+- Recompared Programs 1-5 and 7 plus all three heights after the recent `1 → 5 → 7 → 3 → 4` sequence. Program 1's ready logger fields repeat closed signal work, Programs 3/4 are immediate, Program 5 heat refinements would be adjacent to crowding/handoff and Program 7 is recent. Program 2 now has a genuinely new causal structure: the frozen official calendar plus exact candidate evaluation, gate and pre-decision portfolio context.
+- Opened only Program 2 / meso Unit 058 `scheduled-us-macro-decision-regime-v1`. Its two variants are the fixed 120 server minutes before and after official CPI/Employment releases, each compared with non-event rows matched by exact component, server weekday and decision minute.
+- Outcome-free feasibility over the immutable 4,043-row P4 candidate ledger found 16 included releases, eight CPI and eight Employment. PRE contains `139` rows / `122` evaluated / `8` passed / `17` existing-exposure gates; POST contains `85/63/22/22`. Both roles retain both classes, all 16 events, at least four components and exact comparator minima `3` all-row / `12` evaluated-row or better.
+- Five in-scope FOMC statements produced zero candidate rows inside the fixed ±120-minute window. FOMC is context-only and no wider window, event substitution or class rescue may open.
+- The one bundle judges native signal-pass residual plus at least one of existing-exposure gate residual or aggregate-risk-heat residual. It reads no lifecycle ledger or close outcome and can retain only one later multi-period observation question, never an event filter, lot, slot, priority, exit, EA or Live behavior.
+- Declaration SHA-256 is `B16E87B82A1A45433FA09480122544F836F54DAB7F0F7C7F76F80CBCE210A913`. Exactly one fixed in-memory aggregation may run only after this state and declaration are committed and pushed; MQL, Tester, Program 6 and Live remain untouched.
 
 ## Required completion evidence
 
