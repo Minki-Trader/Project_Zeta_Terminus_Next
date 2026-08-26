@@ -72,7 +72,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/intraday-portfolio-entry-handoff-v1/`: 닫힌 Program 3 / meso Unit 056 source-free family; incumbent 진입은 `+0.02331R/+0.01179 stop`, 자연청산 완전-flat 뒤 재진입은 `-0.00221R/+0.04228 stop`으로 크기·일관성 관문 실패, density 보조값 오류는 정확한 기출력 count로 공개 정정했고 재집계·인접 timing 후속 없음
 - `research/first-peer-profit-memory-checkpoint-v1/`: 닫힌 Program 4 / micro Unit 057 source-free family; 첫 peer 자연청산 때 이익 유지 상태는 최종 `+0.36149R/-0.10313 stop`로 넓게 좋았지만 이후 잔여경로는 `+0.02200R`뿐이라 현재 가치 표식으로만 판정, 관리·확대관찰·인접 후속 없음
 - `research/scheduled-us-macro-decision-regime-v1/`: 닫힌 무효 Program 2 / meso Unit 058 source-free family; 선언의 FOMC ±120분 후보 0행 전제가 동일 입력에서 14행·5/5 이벤트로 반증되어 채널 잔차 계산 전에 중단, BLS 의사결정 regime·FOMC rescue·후속 없음
-- `research/cross-component-same-symbol-signal-state-v1/`: 열린 Program 1 / meso Unit 059 source-free family; 다른 전략의 직전 동일심볼 통과신호 지속·반전이 후보→birth 전달과 component-adjusted lifecycle 가치로 이어지는지 한 번의 고정 집계로 판정하며 CLOSE 경제결과는 선언·push 전 미개봉
+- `research/cross-component-same-symbol-signal-state-v1/`: 닫힌 Program 1 / meso Unit 059 source-free family; PERSIST−REVERSE는 `+0.09741R/-0.09897 stop`이나 R 크기와 Return/US30 집중 관문 실패, same-component US100도 같은 방향으로 material하여 cross-component 고유 field·후속·정책 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

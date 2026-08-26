@@ -1,0 +1,457 @@
+{
+  "schema": "zeta-next-cross-component-same-symbol-signal-state-result-v1",
+  "created_at_local": "2026-08-26",
+  "unit": "cross-component-same-symbol-signal-state-059",
+  "family": "cross-component-same-symbol-signal-state-v1",
+  "declaration_commit": "266d80e68d44cbdd3f6cd65ee63bf70ff6633ed4",
+  "declaration_sha256": "0CA067CA282B1F76D6CE3A2E671E4996DA4F8C3A1890F2053AB90060D6F511B0",
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "pre_metric_correction": "The first invocation stopped before importing either ledger because the abbreviated declaration commit was expanded to the wrong full SHA. Only that exact assertion was corrected; inputs, roles, metrics and gates were unchanged.",
+    "tester_runs": 0,
+    "mql_changes": 0,
+    "retained_analysis_cli": false
+  },
+  "integrity": {
+    "passed": true,
+    "candidate_columns": 48,
+    "candidate_rows": 4043,
+    "unique_candidate_record_ids": 4043,
+    "lifecycle_columns": 60,
+    "lifecycle_rows": 841,
+    "unique_lifecycle_record_ids": 841,
+    "births": 356,
+    "closes": 356,
+    "exact_candidate_birth_matches": 356,
+    "expired_passive_pending_orders": 27,
+    "ambiguous_matches": 0,
+    "partial_rows": 0,
+    "dropped_record_rows": 0
+  },
+  "transmission": {
+    "primary": {
+      "PERSIST": {
+        "candidates": 159,
+        "market_births": 116,
+        "pending_orders": 36,
+        "pending_fills": 29,
+        "pending_expirations": 7,
+        "blocked": 7,
+        "durable_births": 145,
+        "durable_birth_rate": 0.9119496855345912
+      },
+      "REVERSE": {
+        "candidates": 131,
+        "market_births": 75,
+        "pending_orders": 50,
+        "pending_fills": 37,
+        "pending_expirations": 13,
+        "blocked": 6,
+        "durable_births": 112,
+        "durable_birth_rate": 0.8549618320610687
+      }
+    },
+    "by_current_component": {
+      "RC16": {
+        "PERSIST": {
+          "candidates": 24,
+          "durable_births": 24,
+          "durable_birth_rate": 1.0
+        },
+        "REVERSE": {
+          "candidates": 9,
+          "durable_births": 9,
+          "durable_birth_rate": 1.0
+        }
+      },
+      "RC4": {
+        "PERSIST": {
+          "candidates": 13,
+          "durable_births": 13,
+          "durable_birth_rate": 1.0
+        },
+        "REVERSE": {
+          "candidates": 16,
+          "durable_births": 16,
+          "durable_birth_rate": 1.0
+        }
+      },
+      "Cross": {
+        "PERSIST": {
+          "candidates": 50,
+          "durable_births": 45,
+          "durable_birth_rate": 0.9
+        },
+        "REVERSE": {
+          "candidates": 38,
+          "durable_births": 35,
+          "durable_birth_rate": 0.9210526315789473
+        }
+      },
+      "Pressure": {
+        "PERSIST": {
+          "candidates": 16,
+          "durable_births": 16,
+          "durable_birth_rate": 1.0
+        },
+        "REVERSE": {
+          "candidates": 9,
+          "durable_births": 8,
+          "durable_birth_rate": 0.8888888888888888
+        }
+      },
+      "Return": {
+        "PERSIST": {
+          "candidates": 19,
+          "durable_births": 18,
+          "durable_birth_rate": 0.9473684210526315
+        },
+        "REVERSE": {
+          "candidates": 9,
+          "durable_births": 7,
+          "durable_birth_rate": 0.7777777777777778
+        }
+      },
+      "Passive": {
+        "PERSIST": {
+          "candidates": 37,
+          "durable_births": 29,
+          "durable_birth_rate": 0.7837837837837838
+        },
+        "REVERSE": {
+          "candidates": 50,
+          "durable_births": 37,
+          "durable_birth_rate": 0.74
+        }
+      }
+    },
+    "durable_birth_rate_difference_persist_minus_reverse": 0.05698785347352253
+  },
+  "primary_cross_component": {
+    "raw": {
+      "PERSIST": {
+        "n": 145,
+        "mean_stressed_r": 0.08662030486832188,
+        "stop_rate": 0.0896551724137931,
+        "positive_rate": 0.593103448275862,
+        "actual_net_sum_usd": 70.03000000000002,
+        "stressed_net_sum_usd": 67.41750000000285
+      },
+      "REVERSE": {
+        "n": 112,
+        "mean_stressed_r": -0.018930788690915062,
+        "stop_rate": 0.17857142857142858,
+        "positive_rate": 0.5178571428571429,
+        "actual_net_sum_usd": -12.700000000000006,
+        "stressed_net_sum_usd": -14.576799999998585
+      }
+    },
+    "adjusted": {
+      "persist_minus_component_reverse_stressed_r": 0.09740762117637061,
+      "persist_minus_component_reverse_stop": -0.09896762526072875,
+      "persist_minus_component_reverse_positive": 0.08292837172147514
+    },
+    "by_current_component": {
+      "RC16": {
+        "PERSIST": {
+          "n": 24,
+          "mean_stressed_r": 0.208679141995567,
+          "stop_rate": 0.041666666666666664,
+          "positive_rate": 0.7083333333333334,
+          "actual_net_sum_usd": 32.13000000000001,
+          "stressed_net_sum_usd": 31.684000000000964
+        },
+        "REVERSE": {
+          "n": 9,
+          "mean_stressed_r": 0.15018586195664158,
+          "stop_rate": 0.1111111111111111,
+          "positive_rate": 0.6666666666666666,
+          "actual_net_sum_usd": 8.92,
+          "stressed_net_sum_usd": 8.76300000000032
+        },
+        "difference": {
+          "stressed_r": 0.05849328003892543,
+          "stop": -0.06944444444444445,
+          "positive": 0.04166666666666674
+        }
+      },
+      "RC4": {
+        "PERSIST": {
+          "n": 13,
+          "mean_stressed_r": 0.06210482984973983,
+          "stop_rate": 0.23076923076923078,
+          "positive_rate": 0.5384615384615384,
+          "actual_net_sum_usd": 4.560000000000001,
+          "stressed_net_sum_usd": 4.069000000000525
+        },
+        "REVERSE": {
+          "n": 16,
+          "mean_stressed_r": -0.06298610228823781,
+          "stop_rate": 0.4375,
+          "positive_rate": 0.375,
+          "actual_net_sum_usd": -8.5,
+          "stressed_net_sum_usd": -8.80999999999949
+        },
+        "difference": {
+          "stressed_r": 0.12509093213797765,
+          "stop": -0.20673076923076922,
+          "positive": 0.16346153846153844
+        }
+      },
+      "Cross": {
+        "PERSIST": {
+          "n": 45,
+          "mean_stressed_r": 0.005532096800271002,
+          "stop_rate": 0.022222222222222223,
+          "positive_rate": 0.5111111111111111,
+          "actual_net_sum_usd": 0.6499999999999959,
+          "stressed_net_sum_usd": -0.12499999999974809
+        },
+        "REVERSE": {
+          "n": 35,
+          "mean_stressed_r": -0.04664369179606416,
+          "stop_rate": 0.17142857142857143,
+          "positive_rate": 0.4857142857142857,
+          "actual_net_sum_usd": -9.7,
+          "stressed_net_sum_usd": -10.38849999999995
+        },
+        "difference": {
+          "stressed_r": 0.05217578859633516,
+          "stop": -0.1492063492063492,
+          "positive": 0.025396825396825362
+        }
+      },
+      "Pressure": {
+        "PERSIST": {
+          "n": 16,
+          "mean_stressed_r": 0.13157967560973446,
+          "stop_rate": 0.125,
+          "positive_rate": 0.5625,
+          "actual_net_sum_usd": 10.229999999999999,
+          "stressed_net_sum_usd": 9.912000000000482
+        },
+        "REVERSE": {
+          "n": 8,
+          "mean_stressed_r": 0.186510744544162,
+          "stop_rate": 0.125,
+          "positive_rate": 0.875,
+          "actual_net_sum_usd": 10.98,
+          "stressed_net_sum_usd": 10.820000000000292
+        },
+        "difference": {
+          "stressed_r": -0.054931068934427535,
+          "stop": 0.0,
+          "positive": -0.3125
+        }
+      },
+      "Return": {
+        "PERSIST": {
+          "n": 18,
+          "mean_stressed_r": 0.23871621046357516,
+          "stop_rate": 0.2222222222222222,
+          "positive_rate": 0.6111111111111112,
+          "actual_net_sum_usd": 22.439999999999998,
+          "stressed_net_sum_usd": 22.109000000000677
+        },
+        "REVERSE": {
+          "n": 7,
+          "mean_stressed_r": -0.2728034349912752,
+          "stop_rate": 0.42857142857142855,
+          "positive_rate": 0.0,
+          "actual_net_sum_usd": -12.309999999999999,
+          "stressed_net_sum_usd": -12.461999999999826
+        },
+        "difference": {
+          "stressed_r": 0.5115196454548503,
+          "stop": -0.20634920634920634,
+          "positive": 0.6111111111111112
+        }
+      },
+      "Passive": {
+        "PERSIST": {
+          "n": 29,
+          "mean_stressed_r": 0.0032127950294533305,
+          "stop_rate": 0.06896551724137931,
+          "positive_rate": 0.6551724137931034,
+          "actual_net_sum_usd": 0.020000000000000573,
+          "stressed_net_sum_usd": -0.23150000000005022
+        },
+        "REVERSE": {
+          "n": 37,
+          "mean_stressed_r": -0.011191247376556244,
+          "stop_rate": 0.05405405405405406,
+          "positive_rate": 0.5945945945945946,
+          "actual_net_sum_usd": -2.0899999999999985,
+          "stressed_net_sum_usd": -2.4992999999999306
+        },
+        "difference": {
+          "stressed_r": 0.014404042406009575,
+          "stop": 0.014911463187325252,
+          "positive": 0.0605778191985088
+        }
+      }
+    },
+    "by_symbol_adjusted": {
+      "US30": {
+        "n_persist_targets": 71,
+        "adjusted_stressed_r": 0.1599785542811885,
+        "adjusted_stop": -0.11364017437961106,
+        "adjusted_positive": 0.12852112676056338
+      },
+      "US100": {
+        "n_persist_targets": 74,
+        "adjusted_stressed_r": 0.037373347521748125,
+        "adjusted_stop": -0.08488990921423373,
+        "adjusted_positive": 0.03918397161640399
+      }
+    },
+    "component_contributions": {
+      "RC16": {
+        "r_numerator": 1.4038387209342098,
+        "stop_numerator": -1.6666666666666672,
+        "r_absolute_contribution_share": 0.08839237023833811
+      },
+      "RC4": {
+        "r_numerator": 1.6261821177937097,
+        "stop_numerator": -2.6875,
+        "r_absolute_contribution_share": 0.10239216919115222
+      },
+      "Cross": {
+        "r_numerator": 2.3479104868350817,
+        "stop_numerator": -6.714285714285719,
+        "r_absolute_contribution_share": 0.14783562381061388
+      },
+      "Pressure": {
+        "r_numerator": -0.8788971029508401,
+        "stop_numerator": 0.0,
+        "r_absolute_contribution_share": 0.05533954646423677
+      },
+      "Return": {
+        "r_numerator": 9.207353618187305,
+        "stop_numerator": -3.714285714285714,
+        "r_absolute_contribution_share": 0.5797388245513819
+      },
+      "Passive": {
+        "r_numerator": 0.4177172297742778,
+        "stop_numerator": 0.43243243243243235,
+        "r_absolute_contribution_share": 0.026301465744277108
+      }
+    },
+    "symbol_contributions": {
+      "US30": {
+        "r_numerator": 11.358477353964384,
+        "stop_numerator": -8.068452380952385,
+        "r_absolute_contribution_share": 0.8041909414585645
+      },
+      "US100": {
+        "r_numerator": 2.765627716609361,
+        "stop_numerator": -6.281853281853296,
+        "r_absolute_contribution_share": 0.19580905854143554
+      }
+    },
+    "breadth": {
+      "components_matching_r_sign": 5,
+      "components_matching_stop_sign": 4,
+      "symbols_matching_r_sign": 2,
+      "symbols_matching_stop_sign": 2
+    },
+    "concentration": {
+      "maximum_component_r_share": 0.5797388245513819,
+      "maximum_symbol_r_share": 0.8041909414585645
+    },
+    "gates": {
+      "r_magnitude": false,
+      "stop_magnitude": true,
+      "economic_concordance": true,
+      "component_r_breadth": true,
+      "component_stop_breadth": true,
+      "both_symbol_r_breadth": true,
+      "both_symbol_stop_breadth": true,
+      "component_concentration": false,
+      "symbol_concentration": false
+    },
+    "passed": false
+  },
+  "same_component_us100_control": {
+    "raw": {
+      "PERSIST": {
+        "n": 39,
+        "mean_stressed_r": 0.09010738023653951,
+        "stop_rate": 0.05128205128205128,
+        "positive_rate": 0.7948717948717948,
+        "actual_net_sum_usd": 26.160000000000004,
+        "stressed_net_sum_usd": 25.629500000000043
+      },
+      "REVERSE": {
+        "n": 35,
+        "mean_stressed_r": -0.0035619108475132815,
+        "stop_rate": 0.11428571428571428,
+        "positive_rate": 0.6,
+        "actual_net_sum_usd": -1.9900000000000015,
+        "stressed_net_sum_usd": -2.5354999999998853
+      }
+    },
+    "adjusted": {
+      "persist_minus_component_reverse_stressed_r": 0.11421055352461287,
+      "persist_minus_component_reverse_stop": -0.09947768281101614,
+      "persist_minus_component_reverse_positive": 0.18815289648622985
+    },
+    "by_component": {
+      "Cross": {
+        "PERSIST": {
+          "n": 22,
+          "mean_stressed_r": 0.08142750496836261,
+          "stop_rate": 0.09090909090909091,
+          "positive_rate": 0.7272727272727273,
+          "actual_net_sum_usd": 13.97,
+          "stressed_net_sum_usd": 13.628500000000022
+        },
+        "REVERSE": {
+          "n": 27,
+          "mean_stressed_r": 0.019084286613457544,
+          "stop_rate": 0.07407407407407407,
+          "positive_rate": 0.5925925925925926,
+          "actual_net_sum_usd": 2.9999999999999987,
+          "stressed_net_sum_usd": 2.521500000000124
+        },
+        "difference": {
+          "stressed_r": 0.06234321835490507,
+          "stop": 0.01683501683501684,
+          "positive": 0.13468013468013473
+        }
+      },
+      "Passive": {
+        "PERSIST": {
+          "n": 17,
+          "mean_stressed_r": 0.10134015999535667,
+          "stop_rate": 0.0,
+          "positive_rate": 0.8823529411764706,
+          "actual_net_sum_usd": 12.189999999999998,
+          "stressed_net_sum_usd": 12.001000000000023
+        },
+        "REVERSE": {
+          "n": 8,
+          "mean_stressed_r": -0.07999282727828985,
+          "stop_rate": 0.25,
+          "positive_rate": 0.625,
+          "actual_net_sum_usd": -4.99,
+          "stressed_net_sum_usd": -5.0570000000000075
+        },
+        "difference": {
+          "stressed_r": 0.18133298727364652,
+          "stop": -0.25,
+          "positive": 0.25735294117647056
+        }
+      }
+    },
+    "same_direction_material_veto": true
+  },
+  "verdict": "NO_CROSS_COMPONENT_SAME_SYMBOL_SIGNAL_STATE_PASSED",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "promotion": "none",
+  "program_6_opened": false,
+  "live_surface": "untouched",
+  "next": "close_unit_and_recompare_programs_1_to_5_and_7_and_micro_meso_macro_without_adjacent_signal_time_pair_direction_or_admission_rescue"
+}

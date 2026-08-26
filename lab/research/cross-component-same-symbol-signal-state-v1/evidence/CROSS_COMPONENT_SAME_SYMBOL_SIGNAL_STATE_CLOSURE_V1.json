@@ -1,0 +1,139 @@
+{
+  "schema": "zeta-next-cross-component-same-symbol-signal-state-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "cross-component-same-symbol-signal-state-059",
+  "family": "cross-component-same-symbol-signal-state-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure",
+    "korean_name": "진입 신호·시장 구조"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "micro",
+      "macro"
+    ]
+  },
+  "hashes": {
+    "declaration_sha256": "0CA067CA282B1F76D6CE3A2E671E4996DA4F8C3A1890F2053AB90060D6F511B0",
+    "result_sha256": "525B3DBBFCD7DFB92D94FE5240D42D94FDCD3D5BA77B4401DAC66CD2BFCA6961",
+    "candidate_ledger_sha256": "038CE51A44FE2AE5DAE40EB017F84C76802A209952E13BCA19391D760E94F62F",
+    "lifecycle_ledger_sha256": "01EA88857947DF0C71557257179775A7D99F14C33CD262036EFEF6A24D755CEC",
+    "logger_non_interference_result_sha256": "CFEE02835808D717344D2082E7B77B8FFB76B2C6CE1C54C4F43B95F340E55C0B"
+  },
+  "execution": {
+    "declaration_commit": "266d80e68d44cbdd3f6cd65ee63bf70ff6633ed4",
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "pre_metric_failed_invocations": 1,
+    "same_unit_metric_reruns": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "mql_changes": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "retained_analysis_cli": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "candidate_rows": 4043,
+    "lifecycle_rows": 841,
+    "births": 356,
+    "closes": 356,
+    "exact_candidate_birth_matches": 356,
+    "expired_passive_pending_orders": 27,
+    "ambiguous_matches": 0,
+    "partial_rows": 0,
+    "dropped_record_rows": 0
+  },
+  "finding": {
+    "candidate_to_birth_transmission": {
+      "PERSIST": {
+        "passed_candidates": 159,
+        "durable_births": 145,
+        "durable_birth_rate": 0.911949685535
+      },
+      "REVERSE": {
+        "passed_candidates": 131,
+        "durable_births": 112,
+        "durable_birth_rate": 0.854961832061
+      },
+      "persist_minus_reverse_birth_rate": 0.056987853474
+    },
+    "raw_final_outcomes": {
+      "PERSIST": {
+        "n": 145,
+        "mean_stressed_r": 0.086620304868,
+        "stop_rate": 0.089655172414,
+        "positive_rate": 0.593103448276
+      },
+      "REVERSE": {
+        "n": 112,
+        "mean_stressed_r": -0.018930788691,
+        "stop_rate": 0.178571428571,
+        "positive_rate": 0.517857142857
+      }
+    },
+    "component_adjusted_PERSIST_minus_REVERSE": {
+      "final_stressed_r": 0.097407621176,
+      "stop": -0.098967625261,
+      "positive": 0.082928371721,
+      "component_r_sign_breadth": 5,
+      "component_stop_sign_breadth": 4,
+      "symbol_r_sign_breadth": 2,
+      "symbol_stop_sign_breadth": 2,
+      "maximum_component_r_contribution_share": 0.579738824551,
+      "maximum_symbol_r_contribution_share": 0.804190941459
+    },
+    "primary_gate": {
+      "status": "FAILED",
+      "failed_requirements": [
+        "absolute_component_adjusted_final_stressed_r_at_least_0_10R",
+        "maximum_component_r_contribution_share_at_most_0_45",
+        "maximum_symbol_r_contribution_share_at_most_0_70"
+      ],
+      "requirements_passed": [
+        "absolute_component_adjusted_stop_at_least_0_05",
+        "economic_concordance",
+        "component_r_sign_breadth_at_least_4_of_6",
+        "component_stop_sign_breadth_at_least_4_of_6",
+        "both_symbol_r_sign_breadth",
+        "both_symbol_stop_sign_breadth"
+      ]
+    },
+    "same_component_us100_natural_control": {
+      "persist_n": 39,
+      "reverse_n": 35,
+      "component_adjusted_final_stressed_r": 0.114210553525,
+      "component_adjusted_stop": -0.099477682811,
+      "component_adjusted_positive": 0.188152896486,
+      "same_direction_material_veto": true
+    },
+    "economic_interpretation": "Cross-component PERSIST had a 5.70 percentage-point higher durable-birth rate, higher raw final stressed R and lower stop incidence than REVERSE. However, the frozen adjusted R effect stopped at 0.097408R, below 0.10R, and its R numerator was overconcentrated in Return and US30. The material same-direction US100 same-component control further shows that the apparent state is not specifically cross-component. The field therefore does not earn a later observation seed or any admission, priority, lot, slot, risk, entry, management or Live response."
+  },
+  "verdict": "NO_CROSS_COMPONENT_SAME_SYMBOL_SIGNAL_STATE_PASSED",
+  "retained_later_question": null,
+  "selected_candidate": null,
+  "closed_scope": [
+    "No cross-component same-symbol persistence or reversal filter, tag, priority or admission response.",
+    "No elapsed-time, same-day, current-direction, signal-magnitude, component-pair, strategy, symbol, session, event or period rescue.",
+    "No reopening of Unit 048 same-component signal memory and no repair of Unit 058 scheduled-event reconstruction.",
+    "No lot, slot, capital, risk, entry, protection, management, exit, MQL, Tester, Program 6, broker query or Live action."
+  ],
+  "whole_map_recomparison": {
+    "program_1": "Unit 059 is closed negative. Adjacent signal-history, freshness, direction, pair and admission successors remain closed.",
+    "program_2": "Unit 058 remains closed invalid; no FOMC or scheduled-event repair or rescue is opened.",
+    "program_3": "Unit 056 remains recent; no adjacent handoff, crowding, release or timing refinement is opened.",
+    "program_4": "Unit 057 remains recent; no adjacent profit-memory, peer-exit or management refinement is opened.",
+    "program_5": "Unit 054 remains recent; sparse blocked candidates still lack counterfactual outcomes, so no capacity, heat, lot or slot inference is opened.",
+    "program_7": "Unit 055 remains recent; no reconstruction, scheduler audit or Program 6 safety work is opened.",
+    "height_view": "The recent durable sequence spans macro, meso and micro. No ready candidate currently has both a concrete portfolio bridge and sufficient perspective distance to justify automatic opening at this closure boundary.",
+    "successor_opened": false,
+    "active_research_unit_after_close": null,
+    "goal_status": "ACTIVE_NOT_COMPLETE"
+  }
+}
