@@ -77,6 +77,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/candidate-funnel-turnover-risk-contract-v1/`: 닫힌 무효 Program 5 / macro Unit 061 source-free family; `reserved_slots`가 active mask를 포함하는 union인데 선언이 active와 합산해 3-slot 체계에서 4·6을 만든 의미 오류로 risk-contract 판정 무효, 공식·정책 후보·같은-family 수리 없음
 - `research/market-stop-reverse-lot-sizing-v1/`: 닫힌 무효 Program 5 / micro→macro Unit 062 family; fit 상세 real-tick 로그는 깨끗했지만 필수 HTML이 생성되지 않았고 사전 전체 환경 manifest도 동기화 중 변해 중앙값·후보 SET·selection/latest를 열지 않음. native stop/lot 보존, 같은-family 실행 수리 없음
 - `research/all-slot-evaluation-clock-shape-v1/`: 닫힌 밀도부족 Program 3 / meso Unit 063 source-free family; 19,604개 바·151개 네이티브 판단 parity 뒤 로컬 회전율은 통과했지만 Q4 밀도와 전체 시계 폭·네이티브 비고유성·집중·기간안정 관문이 실패해 13:30 보존, 특정 시각·all-slot 후보 없음
+- `research/cross-common-beta-decomposition-v1/`: 활성 Program 1 / meso Unit 064 source-free family; 805 Cross 중 정확한 H1-grid native close 756건의 US100 상대성분·US30/US500 공통베타 분산과 현재 lot-step 최소자본을 고정 판정하며 stop 경로·회귀 beta·비용·실행·Live는 제외
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 단일 공학 후보; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했으며 오늘 기회 보존을 위해 Live 승격만 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

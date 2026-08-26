@@ -1,0 +1,248 @@
+{
+  "schema": "zeta-next-cross-common-beta-decomposition-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_064_DECLARATION_FROZEN_BEFORE_RUNTIME_COPY_MARKET_DATA_OR_DECOMPOSITION_OUTCOME",
+  "unit": "cross-common-beta-decomposition-064",
+  "family": "cross-common-beta-decomposition-v1",
+  "title": "Cross Relative Return and Unhedged Common-Beta Decomposition",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure",
+    "korean_name": "진입 신호·시장 구조"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"],
+    "transfer_path": "The Cross component's relative-value micro signal is executed as one directional US100 position. Decomposing its four-hour lifecycle return into relative and peer-common paths identifies whether strategy-level variance is signal or unhedged beta, then current broker lot granularity and the frozen lot staircase translate that mechanism into a minimum-capital and three-slot portfolio boundary."
+  },
+  "central_question": "Across the exact scheduled four-hour Cross lifecycles, does the unhedged common US30/US500 component contribute large, near-zero-mean variance that materially dilutes the signed relative component, and if so at what frozen lot-staircase capital can a three-leg 0.5/0.5 notional hedge first be represented within ten-percent weight tolerance?",
+  "research_bundle": {
+    "name": "scheduled_cross_market_return_decomposition_and_capital_granularity",
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: exact signed log-return identity US100 = relative residual + 0.5 times US30/US500 common return",
+      "strategy transmission: variance, mean and per-trade quality attribution aligned to existing stressed-R lifecycle outcomes across four periods and both Cross directions",
+      "capital falsification: broker minimum/step lots, notional hedge error, current 4-percent-per-leg/12-percent aggregate occupancy and minimum frozen lot-staircase balance"
+    ]
+  },
+  "why_now": {
+    "current_bottleneck": "Cross supplies 805 of 2,233 historical lifecycles and trades a relative three-index feature as a single directional US100 leg. The US100 book earns far less per lifecycle than US30 in the external memo, but existing evidence does not say whether Cross's relative component or unhedged common beta drives its risk.",
+    "connection_bridge": "If common beta is large and mean-negligible, the result identifies a concrete risk-adjusted strategy-construction candidate and quantifies the capital/slot price of expressing it. If not, it prevents an infeasible multi-leg hedge from consuming the complete three-slot risk book.",
+    "perspective_distance": "Unit 063 was Program 3 meso timing over one US30 signal and closed without a candidate. Unit 064 changes program, symbol set, economic mechanism and post-entry data role: three-index lifecycle attribution with capital granularity rather than clock-wide opportunity generation.",
+    "same_program_exception": "Program 1 Unit 059 was a candidate-ledger cross-component signal-memory association. Unit 064 is allowed despite recent Program 1 history because it uses synchronized price paths, a structural return identity and a capital decision that no prior unit measured.",
+    "decision_if_true": "Retain exactly one later independently declared isolated capital-scaled three-leg Cross real-tick candidate at the reported capital boundary. Unit 064 itself does not implement a hedge, alter the current portfolio or select another ratio.",
+    "decision_if_false": "Preserve directional US100 Cross and close common-beta hedging without alternate peer weights, regression beta, rolling hedge, horizon, direction, period or cost rescue.",
+    "decision_if_material_but_infeasible": "Record the required-capital observation but retain no candidate when the frozen ten-percent hedge granularity cannot be reached broadly within the bounded 0.10 US100 lot / 1,450 USD staircase envelope."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Selected for a structural relative-versus-common market mechanism and actual strategy-construction decision, not as a continuation of signal memory or another conditional field.",
+    "program_2": "No new external event source changes a decision after Unit 058.",
+    "program_3": "Unit 063 just closed; no favorable time, session or clock rescue is allowed.",
+    "program_4": "Unit 060 is invalid and no hold/environment repair opens.",
+    "program_5": "Capital is a supporting translation only. Units 061/062 remain closed invalid and their risk/ATR formulas are not repaired.",
+    "program_7": "No meta audit outranks the final concrete external-memo mechanism.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare the whole map. Do not automatically open a hedge implementation, ratio variant, cost study or portfolio confirmation."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "all 805 frozen Cross lifecycles for topology and coverage",
+      "the exact scheduled H1-grid native-close cohort with 17:00 birth, 21:00 DEAL_REASON_EXPERT close and exactly 14,400 seconds duration",
+      "synchronized US100, US30 and US500 H1 opens at each included birth and close",
+      "current non-account symbol contract/minimum/step fields only for capital granularity"
+    ],
+    "excluded": [
+      "31 DEAL_REASON_SL paths and every off-grid/seconds-shifted native close from primary decomposition",
+      "tick reconstruction, intrabar peer marks, stop-path P/L decomposition or imputed exit price",
+      "Cross signal threshold, 120-bar scale, peer weights other than exact 0.5/0.5, direction, four-hour hold or session time",
+      "actual multi-leg costs, spread/slippage/swap/commission, margin, order semantics, portfolio admission or drawdown",
+      "US100 Passive or any US30 strategy outcome",
+      "MQL source, MetaEditor, Strategy Tester, broker/account/position/order/deal query, Live or promotion"
+    ],
+    "automatic_followups_forbidden": [
+      "OLS or rolling beta, PCA, volatility scaling or alternate 0.5 weights",
+      "one-peer hedge, direction, period, volatility, feature-strength or outcome subgroup",
+      "stop-path tick observer, cost rescue, lot-tolerance relaxation or higher search envelope",
+      "immediate hedge EA, portfolio insertion or Live action"
+    ]
+  },
+  "source_contract": {
+    "sole_forward_baseline_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "cross_source": {
+      "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaCross.mqh",
+      "bytes": 3545,
+      "sha256": "5B4AF23309DBAA28F6DA84F21A26343D0BE370923135D5952131D182A4FFF888"
+    },
+    "shared_source": {
+      "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh",
+      "bytes": 8601,
+      "sha256": "54981FB43CAB8FA3F7A9D97B8EA8D666319712BDBFDD5147DDEF36261B1BA64C"
+    },
+    "signal": "For each of 121 successive completed H1 return samples, US100 return minus 0.5 times the sum of US30 and US500 returns; the latest residual divided by the sample standard deviation of the prior 120 residuals.",
+    "entry": "17:00 once daily, buy for positive z-score and sell for negative when absolute z-score is at least 0.5.",
+    "native_hold": "four US100 H1 bars."
+  },
+  "immutable_lifecycle_inputs": {
+    "economic_identity": "exact frozen CP2 observation-equivalent control",
+    "source_family": "passive-refusal-depth-observation-v1",
+    "source_commit": "dc8ff1546d765d052a594782e3af4835b3f2d6e9",
+    "authoritative_event_manifest_sha256": "423C40B9C742D655FC0C75B370D526645E5FA8C339055BB2A4F99F2650763312",
+    "current_six_file_manifest_sha256": "B717AA3545C4F4EA8F670C94E546E028CC33488B8B707D2337BAE09AEF784A42",
+    "files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ],
+    "premetric_topology": {
+      "all_cross_lifecycles": 805,
+      "period_counts": {"P1_2022H2_2023":286,"P2_2024":197,"P3_2025":193,"P4_2026_YTD":129},
+      "direction_counts": {"BUY":399,"SELL":406},
+      "volume": 0.01,
+      "deal_reason_sl": 29,
+      "exact_scheduled_cohort": 756,
+      "exact_scheduled_period_counts": {"P1_2022H2_2023":276,"P2_2024":183,"P3_2025":179,"P4_2026_YTD":118},
+      "exact_scheduled_coverage": {"P1_2022H2_2023":0.965034965034965,"P2_2024":0.9289340101522843,"P3_2025":0.927461139896373,"P4_2026_YTD":0.9147286821705426}
+    },
+    "premetric_scope": "Only event types, times, source order, feature sign, entry volume and close reason were used for feasibility. Systematic close value_b, stressed-R, index returns, decomposition, variance, means, quality and capital results remain unopened."
+  },
+  "predeclaration_outcome_exposure": {
+    "all_periods_already_consumed_exploratory": true,
+    "clean_holdout": false,
+    "inadvertent_display": "A feasibility-format command displayed a few individual CLOSE value_a/value_b examples before declaration. They are quarantined, were not aggregated and did not set any threshold.",
+    "known_prior_aggregate": "The repository already records 805 Cross lifecycles and 130.5975 USD total 2x stressed net in prior consumed evidence.",
+    "consequence": "Unit 064 is exploratory diagnostic and can retain only a later independent Lab question, never confirmation or promotion evidence."
+  },
+  "canonical_history_inputs": {
+    "root": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/",
+    "years": [2022,2023,2024,2025,2026],
+    "symbols": ["US100","US30","US500"],
+    "files": 15,
+    "bytes": 297482295,
+    "manifest_algorithm": "Sort project-relative path|uppercase file SHA-256, join with LF, SHA-256 UTF-8.",
+    "manifest_sha256": "E1D4611FBBD4545FDF0AB561CC49E29FCB4C4F7725ABF2F0FCB44D81FF92A56C",
+    "file_sha256": {
+      "US100/2022.hcc":"8E97E47429E8621F86FACB7FE0B0F117F840E880C2A141E79E214B2F469B9243",
+      "US100/2023.hcc":"0881A4CB12E90E10F9537A7FF2548EC24D3C3028B66DE7129CE1A96E4C91FEBB",
+      "US100/2024.hcc":"74F4E3A7F063A798C5B80F1546356DF6211CF4741AC04E49BA0A7AB7F51A0319",
+      "US100/2025.hcc":"8B0151C9BF587F10FB9F9BC641F6B9FBC77DFF991D53F44DB73D3076944E1DFC",
+      "US100/2026.hcc":"D5E3DD3231644FFE95DFE2C59A684681C5D29D35D13145957C02B37ECBDD6704",
+      "US30/2022.hcc":"6E2360E200BEF93FF5E86A5CE86FDCD3641B68573D06BF68DC1834BCA7A0C798",
+      "US30/2023.hcc":"F656F724BC67B5EAF62D42D001FE1BAD13BDF86A37195E639FE6A36F5D1294FD",
+      "US30/2024.hcc":"0F951D20E738BDABE4F8058A5F1546B1A3D928EB2684BDA535574856D6463940",
+      "US30/2025.hcc":"5D67AEE850AF1E0CD2521ECCF8872DE71080973C4838585FFEFEC34AF88E4C58",
+      "US30/2026.hcc":"E9778DE6189BF9C0860BB9C67F1AA40EFC47494A8C8A85033708DC2F0D71729B",
+      "US500/2022.hcc":"2DCDBE20E48A67AE97F05137F39B3929A1C673B29B67A3A3BA9569412BA36044",
+      "US500/2023.hcc":"D990B7A82C280DE39BC917DA2CD06E7D876B9068E71ED0622B613F5216976579",
+      "US500/2024.hcc":"D307B0C95270AE88E33B59169585C3E61FABC525DB5E94299164BAFD38A1D639",
+      "US500/2025.hcc":"EED545F22A3B97EE4D6ED6BF8752AAB3F04B21A5FE60D4562667AFB0A96AE546",
+      "US500/2026.hcc":"A371DE7BEBFACC2B0223A20F1B9E375219419EB6FCEC9F0F0FF36D36805E21FB"
+    }
+  },
+  "data_acquisition": {
+    "runtime": "lab/runtime/cbd64-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copy": "One independent minimal Portable containing terminal support, Config, three symbols' HCC history and symbol database; no links, report tree, other-family executable or Live dependency.",
+    "range": {"from_utc_inclusive":"2022-07-01 00:00:00","to_utc_exclusive":"2026-08-21 00:00:00"},
+    "allowed_metatrader5_calls": ["initialize","symbol_select","copy_rates_range","symbol_info","last_error_on_failure_only","shutdown"],
+    "forbidden_calls": ["account_info","positions_get","orders_get","history_orders_get","history_deals_get","order_send","order_calc_margin"],
+    "bar_export": "evidence/CROSS_THREE_INDEX_H1_BARS_20220701_20260821.csv",
+    "spec_export": "evidence/CROSS_THREE_INDEX_CURRENT_SYMBOL_SPECS_V1.json",
+    "bar_columns": ["time_epoch","time_utc","us100_open","us30_open","us500_open"],
+    "synchronization": "Inner join the three exact H1 epochs and export only rows before the exclusive end. No missing symbol is forward-filled.",
+    "no_account_or_live_surface": true
+  },
+  "frozen_decomposition": {
+    "included_lifecycle": "OPEN at exactly 17:00:00, CLOSE at exactly 21:00:00, reason DEAL_REASON_EXPERT, duration exactly 14,400 seconds, one 0.01 US100 volume and synchronized entry/exit H1 opens on all three symbols.",
+    "direction": "sign of the frozen OPEN feature; +1 BUY, -1 SELL.",
+    "us100_total": "direction * log(US100_exit_open / US100_entry_open).",
+    "peer_common": "direction * 0.5 * (log(US30_exit_open / US30_entry_open) + log(US500_exit_open / US500_entry_open)).",
+    "relative_component": "us100_total minus peer_common.",
+    "identity_tolerance": 1e-15,
+    "stressed_r": "matched CLOSE value_b divided by positive OPEN planned_risk parsed from detail.",
+    "sample_variance": "unbiased n-1 sample variance within pooled, period and direction groups.",
+    "common_standalone_variance_ratio": "variance(peer_common) divided by variance(us100_total).",
+    "removable_variance_fraction": "1 minus variance(relative_component) divided by variance(us100_total).",
+    "covariance_allocated_common_share": "(variance(peer_common) + covariance(relative_component, peer_common)) divided by variance(us100_total); report only.",
+    "quality_ratio": "mean signed return divided by sample standard deviation, separately for total and relative component.",
+    "mapping": "Pearson correlation and sign concordance between us100_total and stressed_r; this validates only that the bar-open market proxy transmits to lifecycle value."
+  },
+  "fixed_integrity_and_density_gate": [
+    "Declaration commit reaches origin before runtime copy, symbol_info, bar acquisition or systematic stressed-R/decomposition outcome.",
+    "All six lifecycle files, two source files and fifteen canonical HCC files retain their exact sizes/hashes before and after acquisition.",
+    "Reconstruct exactly 805 Cross lifecycles and the exact scheduled cohort 756 with period counts 276/183/179/118 and at least 0.90 coverage in every period.",
+    "The bar export has unique strictly increasing synchronized epochs, finite positive opens, no row at or after the exclusive end and exact marks for all 756 entry and exit epochs.",
+    "Every included lifecycle has one feature direction, positive planned risk, one finite stressed-R and exact algebraic decomposition within 1e-15.",
+    "Each period has at least 100 included lifecycles and each pooled direction has at least 300."
+  ],
+  "fixed_market_to_lifecycle_mapping_gate": {
+    "pooled_pearson": "At least 0.80 between signed US100 H1-open return and stressed-R.",
+    "period_pearson": "At least 0.65 in every period.",
+    "pooled_sign_concordance": "At least 0.80, excluding exact zero pairs.",
+    "period_sign_concordance": "At least 0.70 in every period.",
+    "all_required": true
+  },
+  "fixed_common_beta_gate": {
+    "pooled": [
+      "Common standalone variance ratio is at least 0.50.",
+      "Removable variance fraction is at least 0.25.",
+      "Absolute common mean is no more than 0.10 times US100 total standard deviation.",
+      "Relative-component mean is strictly positive.",
+      "Relative quality ratio is positive and at least 1.20 times total quality ratio when total quality is positive; when total quality is nonpositive, relative quality must be strictly positive."
+    ],
+    "period_breadth": "At least three of four periods independently pass each of the five pooled-form conditions using their own data.",
+    "direction_breadth": "BUY and SELL separately each require common variance ratio at least 0.40, removable variance fraction at least 0.15, positive relative mean and relative quality strictly greater than total quality.",
+    "all_required": true
+  },
+  "frozen_capital_granularity": {
+    "ideal_peer_lots": "For each lifecycle and candidate US100 volume, peer lot = 0.5 * US100 volume * US100 contract_size * US100 entry price divided by peer contract_size * peer entry price.",
+    "rounding": "For each peer independently choose the valid broker min/step volume with smallest absolute notional-weight error from 0.5; ties choose the smaller volume.",
+    "weight_tolerance": "Both realized peer notional weights must be in [0.45, 0.55].",
+    "search": "US100 volumes 0.01 through 0.20 in exact 0.01 increments; do not relax tolerance or extend the envelope.",
+    "lot_staircase_capital": "For US100 volume 0.01*k, minimum frozen stressed balance is 100 + 150*(k-1) USD.",
+    "reference_capital": "At 100 USD, US100 volume is 0.01. Report exact peer lots and errors; do not force feasibility.",
+    "current_planned_risk_and_slots": "Three separately owned legs at the unchanged 4 percent planned risk reserve consume exactly 12 percent and all three available slots, leaving zero capacity for the other five components.",
+    "candidate_feasibility_gate": [
+      "At least 90 percent of included lifecycle entry price states achieve both weights within tolerance by US100 volume no greater than 0.10.",
+      "Median minimum staircase capital is no more than 850 USD and 90th-percentile minimum capital is no more than 1,450 USD.",
+      "All three current symbol volume minima and steps are positive and no greater than 0.01; otherwise no candidate."
+    ]
+  },
+  "fixed_verdict_rules": {
+    "success": "PASS_CROSS_COMMON_BETA_DILUTION_RETAIN_CAPITAL_SCALED_THREE_LEG_LAB_CANDIDATE when integrity/density, market-to-lifecycle mapping, common-beta and bounded capital-granularity gates all pass.",
+    "beta_failure": "NO_MATERIAL_CROSS_COMMON_BETA_DILUTION when integrity/density and mapping pass but any common-beta requirement fails.",
+    "capital_failure": "MATERIAL_CROSS_COMMON_BETA_NOT_GRANULARITY_FEASIBLE_NO_CANDIDATE when common-beta passes but the bounded capital gate fails.",
+    "mapping_failure": "INVALID_CROSS_BAR_PROXY_MAPPING_NO_BETA_VERDICT when integrity passes but the frozen H1-open proxy does not map to stressed-R under every mapping requirement.",
+    "invalid": "INVALID_CROSS_COMMON_BETA_DATA_OR_RECONSTRUCTION_NO_VERDICT when an immutable input, lifecycle, synchronization, spec, algebra or density condition fails.",
+    "ambiguous": "AMBIGUOUS_CROSS_COMMON_BETA_NO_CANDIDATE only when all stated integrity conditions pass but an unforeseen semantic condition prevents the fixed gates."
+  },
+  "execution_budget": {
+    "dedicated_runtime_physical_copies": 1,
+    "symbol_bar_acquisition_bundle": 1,
+    "copy_rates_range_calls": 3,
+    "symbol_info_calls": 3,
+    "acquisition_only_corrections_before_any_metric": 1,
+    "successful_fixed_aggregations": 1,
+    "premetric_parser_corrections": 1,
+    "metric_reruns": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration/state/Frontier memory before runtime copy or data acquisition.",
+    "After acquisition, freeze bar/spec exports and premetric 756-mark integrity in Git before the single outcome aggregation.",
+    "If acquisition produces no usable data, one acquisition-only correction is allowed before metrics; otherwise no second acquisition.",
+    "After any decomposition or stressed-R mapping metric is emitted, make no correction or rerun.",
+    "Do not include stop/off-grid paths, use tick imputation, change peer weights, relax lot tolerance, extend lot search or select a period/direction subgroup.",
+    "Do not implement a hedge, query account/broker state, run Tester, change MQL, touch Live or promote from this exploratory evidence."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_declaration_then_create_one_dedicated_runtime_acquire_three_synchronized_h1_series_and_current_nonaccount_specs"
+}
