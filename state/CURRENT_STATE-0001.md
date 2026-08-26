@@ -859,3 +859,12 @@
 - Outcome-free timing classified all 2,233 admitted births as aligned 2,064, spring mismatch 127 and autumn mismatch 42. Spring spans P1-P4 at `27/29/32/39` and all six strategies have at least eight. Autumn spans the available P1-P3 at `24/11/7`; Cross, Passive, RC16 and Return each have at least five. P1 spring and P4 autumn are structural absences from the data horizon.
 - Both variants are judged independently against aligned same-strategy same-period outcomes. A later clock-remap question survives only if both pass absolute `0.10R`, absolute `0.05` stop, period, strategy and coherence gates and share the same directions; no one-season or pooled rescue is allowed.
 - Declaration SHA-256 is `C82C942790E232273C8AE198CC9793D9F32EBF9AE352A8F2D723E7D702D9CA65`. Unit 042 selects no time shift, entry, order, size, exit, EA or Live behavior; conditioned outcomes remain unopened until this boundary is committed and pushed.
+
+## STATE-0107 - 2026-08-26
+
+- Ran exactly the one frozen Unit 042 aggregation. All six source event files retained their hashes; 16,477 distinct rows, 2,233 lifecycles, `+$407.0477` stressed net, 206 stops, aligned/spring/autumn counts `2,064/127/42` and all 2,233 UTC conversions passed integrity.
+- Spring mismatch residual R/stop were `-0.038226621742R/+0.045094352998`. Density and three-period direction breadth passed, but both absolute effects missed the frozen `0.10R/0.05` material minima.
+- Autumn mismatch residual R/stop were `+0.060707339059R/-0.052181959490`. Stop magnitude and supported-strategy breadth passed, but R magnitude failed and both directions held in only two of the three available periods.
+- The two seasons had opposite pooled R and stop signs and neither variant passed its complete gate. Closed `NO_SERVER_NEW_YORK_DST_MISMATCH_SESSION_FIELD_PASSED` without transition-day, weekday, holiday, entry-hour, one-season, subgroup or alternate-DST rescue.
+- No clock-remap seed, time shift, signal, order, lot, exit, EA or Live candidate survives. Declaration/result/closure SHA-256 values are `C82C942790E232273C8AE198CC9793D9F32EBF9AE352A8F2D723E7D702D9CA65` / `7BCBA94D18ACFF352435C5010A78AC67C25CA9581D5545D1A999D8E7FA16CE17` / `B4D4CBA924F40D92DF8E97F2F18940617499A8657C224E49EBE8AE731FC5FD15`.
+- The next action is a fresh whole-map comparison of Programs 1-5 and 7, not an adjacent Program 3 session question. Program 6 and Live remained untouched.

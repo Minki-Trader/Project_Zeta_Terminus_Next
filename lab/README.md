@@ -55,7 +55,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/portfolio-cost-resilience-envelope-v1/`: 닫힌 Program 5 / Unit 039 source-free family; 전체 포트폴리오는 4x에도 `+$332.7631`, RC16·RC4·Cross가 고정 관문 통과, RC16 추가-lot Proxy seed 하나만 보존하되 자동 후속은 열지 않음
 - `research/one-hour-adverse-exit-management-v1/`: 닫힌 Program 4 / Unit 040 family; P1 control HTML은 100%였으나 상세 tick 생성대체·시장/심볼 지문 변이·swap anchor 불일치로 경제판정 전 무효, 나머지 15경로·후보 없음
 - `research/scheduled-us-macro-event-exposure-v1/`: 닫힌 Program 2 / Unit 041 source-free family; 보유 노출 residual `+0.11686R`, 발표 후 진입 `+0.03362R`로 두 역할 모두 광범위 악화 관문 실패, mark-path seed·인접 이벤트 구제 없음
-- `research/server-new-york-dst-mismatch-session-v1/`: 활성 Program 3 / Unit 042 source-free family; 서버–뉴욕 시차가 7→6시간으로 줄어드는 봄 127건·가을 42건 두 묶음을 선언 동결, 조건부 결과 미개봉
+- `research/server-new-york-dst-mismatch-session-v1/`: 닫힌 Program 3 / Unit 042 source-free family; 봄 `-0.03823R/+0.04509` stop, 가을 `+0.06071R/-0.05218` stop으로 크기·기간 폭·공통 방향 관문 실패, clock-remap seed·인접 세션 후속 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그

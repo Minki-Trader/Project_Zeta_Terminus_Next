@@ -1,0 +1,92 @@
+{
+  "schema": "zeta-next-server-new-york-dst-mismatch-session-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED",
+  "unit": "server-new-york-dst-mismatch-session-042",
+  "family": "server-new-york-dst-mismatch-session-v1",
+  "macro_program": {
+    "id": 3,
+    "name": "order_time_session",
+    "korean_name": "주문·시각·세션"
+  },
+  "hashes": {
+    "declaration_sha256": "C82C942790E232273C8AE198CC9793D9F32EBF9AE352A8F2D723E7D702D9CA65",
+    "session_clock_source_sha256": "7D7267CDE4399F875C9AB43F2D2865AF220A561C16F6BEB8422C295537FDC763",
+    "result_sha256": "7BCBA94D18ACFF352435C5010A78AC67C25CA9581D5545D1A999D8E7FA16CE17"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "orders": 0,
+    "implementation_only_pre_metric_corrections": 0,
+    "serialization_only_post_metric_corrections": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED",
+    "program_6_opened": false
+  },
+  "integrity": {
+    "passed": true,
+    "data_rows": 16477,
+    "lifecycles": 2233,
+    "stressed_net_usd": 407.047700000006,
+    "stop_exits": 206,
+    "clock_state_counts": {
+      "ALIGNED": 2064,
+      "SPRING_US_AHEAD": 127,
+      "AUTUMN_EU_BEHIND": 42
+    },
+    "minimum_aligned_strategy_period_cell": 22,
+    "timezone_contract_crosscheck": "All 2,233 birth UTC conversions matched the declared FPMarkets and New York offsets."
+  },
+  "findings": {
+    "SPRING_US_AHEAD": {
+      "n": 127,
+      "mean_stressed_r": 0.006578387480,
+      "same_strategy_period_residual_r": -0.038226621742,
+      "stop_rate": 0.141732283465,
+      "same_strategy_period_stop_residual": 0.045094352998,
+      "same_r_sign_periods": 3,
+      "same_stop_sign_periods": 3,
+      "same_r_sign_supported_strategies": 4,
+      "density_passed": true,
+      "information_passed": false,
+      "passed": false,
+      "interpretation": "The spring book was directionally coherent but materially too small: absolute residual R was 0.03823R and absolute stop residual was 0.04509, below the frozen 0.10R and 0.05 minima."
+    },
+    "AUTUMN_EU_BEHIND": {
+      "n": 42,
+      "mean_stressed_r": 0.085694611841,
+      "same_strategy_period_residual_r": 0.060707339059,
+      "stop_rate": 0.023809523810,
+      "same_strategy_period_stop_residual": -0.052181959490,
+      "same_r_sign_periods": 2,
+      "same_stop_sign_periods": 2,
+      "same_r_sign_supported_strategies": 3,
+      "density_passed": true,
+      "information_passed": false,
+      "passed": false,
+      "interpretation": "The autumn stop magnitude passed, but residual R was only 0.06071R and both R and stop directions held in only two of the three available periods."
+    },
+    "bundle": {
+      "both_variants_passed": false,
+      "pooled_r_sign_same_nonzero": false,
+      "pooled_stop_sign_same_nonzero": false,
+      "interpretation": "Spring and autumn residual R and stop signs were opposite, so no common one-hour New York clock effect was established."
+    },
+    "causal_limit": "Mismatch state is known at birth, but lifecycle association does not prove that the one-hour New York wall-clock shift is the mechanism; all periods are already consumed and there is no clean holdout."
+  },
+  "verdict": "NO_SERVER_NEW_YORK_DST_MISMATCH_SESSION_FIELD_PASSED",
+  "retained_later_question": "NONE",
+  "closed_scope": [
+    "No transition-day, weekday, holiday, entry-hour or alternate DST classification rescue.",
+    "No one-season, pooled-season, strategy-subset or period-subset rescue.",
+    "No New-York-aligned time shift, signal, order, lot, exit, EA or Live candidate.",
+    "No adjacent Program 3 session question opens automatically."
+  ],
+  "macro_rotation": {
+    "next": "Recompare Programs 1-5 and 7 after this durable closure.",
+    "same_program_successor_default": "CLOSED",
+    "program_6": "EXCLUDED"
+  }
+}

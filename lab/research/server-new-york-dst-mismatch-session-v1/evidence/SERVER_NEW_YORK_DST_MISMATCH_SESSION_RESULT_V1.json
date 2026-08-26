@@ -1,0 +1,431 @@
+{
+  "schema": "zeta-next-server-new-york-dst-mismatch-session-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_042_FIXED_AGGREGATION_COMPLETE",
+  "unit": "server-new-york-dst-mismatch-session-042",
+  "family": "server-new-york-dst-mismatch-session-v1",
+  "declaration_sha256": "C82C942790E232273C8AE198CC9793D9F32EBF9AE352A8F2D723E7D702D9CA65",
+  "session_clock_source_sha256": "7D7267CDE4399F875C9AB43F2D2865AF220A561C16F6BEB8422C295537FDC763",
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 0,
+    "tester_runs": 0,
+    "compile_runs": 0,
+    "orders": 0,
+    "retained_analysis_cli": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "economic_files": 6,
+    "data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "lifecycles": 2233,
+    "strategy_totals": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd": 407.047700000006,
+    "stop_exits": 206,
+    "clock_state_counts": {
+      "ALIGNED": 2064,
+      "SPRING_US_AHEAD": 127,
+      "AUTUMN_EU_BEHIND": 42
+    },
+    "minimum_aligned_strategy_period_cell": 22,
+    "timezone_contract_crosscheck": "All 2,233 birth UTC conversions matched the declared FPMarkets and New York offsets."
+  },
+  "comparator": "ALIGNED same-strategy same-fresh-period lifecycle mean stressed R and stop rate.",
+  "aligned_benchmarks": {
+    "P1_2022H2_2023": {
+      "RC16": {
+        "n": 71,
+        "mean_stressed_r": 0.08127911106,
+        "stop_rate": 0.014084507042
+      },
+      "RC4": {
+        "n": 50,
+        "mean_stressed_r": 0.100723389941,
+        "stop_rate": 0.16
+      },
+      "Cross": {
+        "n": 270,
+        "mean_stressed_r": 0.008337010871,
+        "stop_rate": 0.007407407407
+      },
+      "Pressure": {
+        "n": 31,
+        "mean_stressed_r": 0.056820861167,
+        "stop_rate": 0.064516129032
+      },
+      "Return": {
+        "n": 96,
+        "mean_stressed_r": 0.061512324197,
+        "stop_rate": 0.104166666667
+      },
+      "Passive": {
+        "n": 200,
+        "mean_stressed_r": 0.008095734099,
+        "stop_rate": 0.01
+      }
+    },
+    "P2_2024": {
+      "RC16": {
+        "n": 64,
+        "mean_stressed_r": 0.024527073032,
+        "stop_rate": 0.140625
+      },
+      "RC4": {
+        "n": 51,
+        "mean_stressed_r": 0.050546225569,
+        "stop_rate": 0.254901960784
+      },
+      "Cross": {
+        "n": 182,
+        "mean_stressed_r": 0.04652489746,
+        "stop_rate": 0.043956043956
+      },
+      "Pressure": {
+        "n": 22,
+        "mean_stressed_r": -0.029874127168,
+        "stop_rate": 0.227272727273
+      },
+      "Return": {
+        "n": 47,
+        "mean_stressed_r": -0.088199164096,
+        "stop_rate": 0.404255319149
+      },
+      "Passive": {
+        "n": 148,
+        "mean_stressed_r": 0.012573805271,
+        "stop_rate": 0.054054054054
+      }
+    },
+    "P3_2025": {
+      "RC16": {
+        "n": 72,
+        "mean_stressed_r": 0.037069803401,
+        "stop_rate": 0.097222222222
+      },
+      "RC4": {
+        "n": 65,
+        "mean_stressed_r": 0.071611426563,
+        "stop_rate": 0.292307692308
+      },
+      "Cross": {
+        "n": 180,
+        "mean_stressed_r": 0.029345551327,
+        "stop_rate": 0.027777777778
+      },
+      "Pressure": {
+        "n": 31,
+        "mean_stressed_r": -0.000147767404,
+        "stop_rate": 0.322580645161
+      },
+      "Return": {
+        "n": 46,
+        "mean_stressed_r": 0.153903216816,
+        "stop_rate": 0.304347826087
+      },
+      "Passive": {
+        "n": 121,
+        "mean_stressed_r": 0.000397028754,
+        "stop_rate": 0.082644628099
+      }
+    },
+    "P4_2026_YTD": {
+      "RC16": {
+        "n": 42,
+        "mean_stressed_r": 0.198547658189,
+        "stop_rate": 0.047619047619
+      },
+      "RC4": {
+        "n": 30,
+        "mean_stressed_r": 0.009494570247,
+        "stop_rate": 0.333333333333
+      },
+      "Cross": {
+        "n": 118,
+        "mean_stressed_r": 0.004151173147,
+        "stop_rate": 0.084745762712
+      },
+      "Pressure": {
+        "n": 23,
+        "mean_stressed_r": 0.21572382773,
+        "stop_rate": 0.086956521739
+      },
+      "Return": {
+        "n": 25,
+        "mean_stressed_r": 0.104484317738,
+        "stop_rate": 0.2
+      },
+      "Passive": {
+        "n": 79,
+        "mean_stressed_r": 0.010874669753,
+        "stop_rate": 0.075949367089
+      }
+    }
+  },
+  "variant_results": {
+    "SPRING_US_AHEAD": {
+      "variant": "SPRING_US_AHEAD",
+      "pooled": {
+        "n": 127,
+        "mean_stressed_r": 0.00657838748,
+        "stop_rate": 0.141732283465,
+        "mean_stressed_r_residual": -0.038226621742,
+        "mean_stop_residual": 0.045094352998
+      },
+      "pooled_r_sign": -1,
+      "pooled_stop_sign": 1,
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 27,
+          "mean_stressed_r": 0.045250718876,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.003019682849,
+          "mean_stop_residual": -0.049991203026
+        },
+        "P2_2024": {
+          "n": 29,
+          "mean_stressed_r": -0.009401805517,
+          "stop_rate": 0.137931034483,
+          "mean_stressed_r_residual": -0.036058377137,
+          "mean_stop_residual": 0.046853749491
+        },
+        "P3_2025": {
+          "n": 32,
+          "mean_stressed_r": 0.01281657353,
+          "stop_rate": 0.21875,
+          "mean_stressed_r_residual": -0.03306825485,
+          "mean_stop_residual": 0.09481934718
+        },
+        "P4_2026_YTD": {
+          "n": 39,
+          "mean_stressed_r": -0.013430569044,
+          "stop_rate": 0.179487179487,
+          "mean_stressed_r_residual": -0.072626546309,
+          "mean_stop_residual": 0.068814550447
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 17,
+          "mean_stressed_r": 0.057306881883,
+          "stop_rate": 0.176470588235,
+          "mean_stressed_r_residual": -0.002872920383,
+          "mean_stop_residual": 0.08698987224
+        },
+        "RC4": {
+          "n": 8,
+          "mean_stressed_r": 0.073137181496,
+          "stop_rate": 0.375,
+          "mean_stressed_r_residual": 0.015043278416,
+          "mean_stop_residual": 0.114864253394
+        },
+        "Cross": {
+          "n": 38,
+          "mean_stressed_r": -0.0160066164,
+          "stop_rate": 0.105263157895,
+          "mean_stressed_r_residual": -0.039714888905,
+          "mean_stop_residual": 0.05952783959
+        },
+        "Pressure": {
+          "n": 10,
+          "mean_stressed_r": -0.160816337441,
+          "stop_rate": 0.2,
+          "mean_stressed_r_residual": -0.291391819033,
+          "mean_stop_residual": 0.098457223001
+        },
+        "Return": {
+          "n": 18,
+          "mean_stressed_r": 0.047652683061,
+          "stop_rate": 0.333333333333,
+          "mean_stressed_r_residual": -0.045530470916,
+          "mean_stop_residual": 0.124944752801
+        },
+        "Passive": {
+          "n": 36,
+          "mean_stressed_r": 0.017633535235,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.008787358419,
+          "mean_stop_residual": -0.060177630816
+        }
+      },
+      "same_r_sign_periods": 3,
+      "same_stop_sign_periods": 3,
+      "supported_strategies": [
+        "RC16",
+        "RC4",
+        "Cross",
+        "Pressure",
+        "Return",
+        "Passive"
+      ],
+      "same_r_sign_supported_strategies": 4,
+      "density": {
+        "checks": {
+          "pooled_n_ge_100": true,
+          "every_p1_p4_n_ge_20": true,
+          "all_six_strategies_n_ge_8": true
+        },
+        "passed": true
+      },
+      "information_gate": {
+        "checks": {
+          "abs_pooled_r_residual_ge_0_10": false,
+          "same_r_sign_periods_ge_3": true,
+          "abs_pooled_stop_residual_ge_0_05": false,
+          "same_stop_sign_periods_ge_3": true,
+          "same_r_sign_strategies_ge_4": true,
+          "r_stop_economically_coherent": true
+        },
+        "passed": false
+      },
+      "passed": false
+    },
+    "AUTUMN_EU_BEHIND": {
+      "variant": "AUTUMN_EU_BEHIND",
+      "pooled": {
+        "n": 42,
+        "mean_stressed_r": 0.085694611841,
+        "stop_rate": 0.02380952381,
+        "mean_stressed_r_residual": 0.060707339059,
+        "mean_stop_residual": -0.05218195949
+      },
+      "pooled_r_sign": 1,
+      "pooled_stop_sign": -1,
+      "periods": {
+        "P1_2022H2_2023": {
+          "n": 24,
+          "mean_stressed_r": 0.013242277723,
+          "stop_rate": 0.041666666667,
+          "mean_stressed_r_residual": -0.014638469907,
+          "mean_stop_residual": 0.014215516867
+        },
+        "P2_2024": {
+          "n": 11,
+          "mean_stressed_r": 0.229112274816,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.223113896739,
+          "mean_stop_residual": -0.153412417768
+        },
+        "P3_2025": {
+          "n": 7,
+          "mean_stressed_r": 0.108732001288,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.063825522021,
+          "mean_stop_residual": -0.120754015418
+        },
+        "P4_2026_YTD": {
+          "n": 0,
+          "mean_stressed_r": null,
+          "stop_rate": null,
+          "mean_stressed_r_residual": null,
+          "mean_stop_residual": null
+        }
+      },
+      "strategies": {
+        "RC16": {
+          "n": 6,
+          "mean_stressed_r": 0.160993673716,
+          "stop_rate": 0.166666666667,
+          "mean_stressed_r_residual": 0.10809058167,
+          "mean_stop_residual": 0.089311913146
+        },
+        "RC4": {
+          "n": 2,
+          "mean_stressed_r": 0.141327324159,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.055159915907,
+          "mean_stop_residual": -0.226153846154
+        },
+        "Cross": {
+          "n": 17,
+          "mean_stressed_r": 0.054014649561,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.032984864118,
+          "mean_stop_residual": -0.019601857837
+        },
+        "Pressure": {
+          "n": 1,
+          "mean_stressed_r": 0.43882359515,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.468697722318,
+          "mean_stop_residual": -0.227272727273
+        },
+        "Return": {
+          "n": 6,
+          "mean_stressed_r": 0.173105298943,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": 0.146098322074,
+          "mean_stop_residual": -0.237559744064
+        },
+        "Passive": {
+          "n": 10,
+          "mean_stressed_r": -0.004514742463,
+          "stop_rate": 0,
+          "mean_stressed_r_residual": -0.011518542611,
+          "mean_stop_residual": -0.028934331025
+        }
+      },
+      "same_r_sign_periods": 2,
+      "same_stop_sign_periods": 2,
+      "supported_strategies": [
+        "Cross",
+        "Passive",
+        "RC16",
+        "Return"
+      ],
+      "same_r_sign_supported_strategies": 3,
+      "density": {
+        "checks": {
+          "pooled_n_ge_36": true,
+          "every_p1_p3_n_ge_7": true,
+          "at_least_four_strategies_n_ge_5": true,
+          "p4_structural_zero": true
+        },
+        "passed": true
+      },
+      "information_gate": {
+        "checks": {
+          "abs_pooled_r_residual_ge_0_10": false,
+          "same_r_sign_periods_eq_3": false,
+          "abs_pooled_stop_residual_ge_0_05": true,
+          "same_stop_sign_periods_eq_3": false,
+          "same_r_sign_supported_strategies_ge_3": true,
+          "r_stop_economically_coherent": true
+        },
+        "passed": false
+      },
+      "passed": false
+    }
+  },
+  "bundle": {
+    "checks": {
+      "both_variants_passed": false,
+      "pooled_r_sign_same_nonzero": false,
+      "pooled_stop_sign_same_nonzero": false,
+      "shared_r_stop_direction_coherent": true
+    },
+    "passed": false
+  },
+  "selection": {
+    "retained_later_question": "NONE",
+    "opens_automatically": false,
+    "time_shift_selected": false,
+    "trading_action_selected": false
+  },
+  "verdict": "NO_SERVER_NEW_YORK_DST_MISMATCH_SESSION_FIELD_PASSED",
+  "limitations": [
+    "All periods were already consumed and remain exploratory; there is no clean holdout.",
+    "Mismatch state is available at birth, but final lifecycle association does not prove the one-hour New York clock shift is the mechanism.",
+    "P1 spring and P4 autumn are structurally outside the available horizon and were not imputed.",
+    "No transition-day, weekday, holiday, strategy subset, entry hour or alternate DST classification was accessed."
+  ],
+  "next": "Write the fixed closure, close Unit 042, and recompare Programs 1-5 and 7 without opening an adjacent session question."
+}
