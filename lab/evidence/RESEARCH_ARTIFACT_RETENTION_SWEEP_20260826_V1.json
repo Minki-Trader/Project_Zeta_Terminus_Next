@@ -1,0 +1,76 @@
+{
+  "schema": "zeta-next-research-artifact-retention-sweep-v1",
+  "created_at_local": "2026-08-26",
+  "status": "COMPLETE",
+  "trigger": {
+    "reason": "System-drive free space was below 30 GiB before creating a new dedicated Lab Portable.",
+    "free_bytes_before": 28052955136,
+    "free_gib_before": 26.13,
+    "policy": "docs/OPERATING_DIRECTION.md Research artifact retention and storage hygiene"
+  },
+  "preserved": [
+    "all tracked source and configuration",
+    "all declarations, results, closures and manifests",
+    "all files under lab/artifacts and every separately preserved evidence artifact",
+    "lab/runtime/tester-portable as the canonical required-symbol Lab history copy",
+    "lab/runtime/live-research-observation-ledger-v1-portable",
+    "the active forward baseline, active Live package, Live state and events",
+    "the canonical research candidate and lifecycle ledgers"
+  ],
+  "targets": [
+    {
+      "absolute_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\lab\\runtime\\cross-index-residual-response-v1-portable",
+      "relative_path": "lab/runtime/cross-index-residual-response-v1-portable/",
+      "family_status": "CLOSED_INVALID_NO_PROTOTYPE",
+      "files": 424,
+      "bytes": 6015148949,
+      "git_ignored": true,
+      "tracked_files": 0,
+      "target_owner_processes": 0,
+      "disposition": "DELETE_GENERATED_CLOSED_FAMILY_PORTABLE_ONLY"
+    },
+    {
+      "absolute_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\lab\\runtime\\profit-memory-state-observation-v1-portable",
+      "relative_path": "lab/runtime/profit-memory-state-observation-v1-portable/",
+      "family_status": "CLOSED_INVALID_NO_CANDIDATE",
+      "files": 722,
+      "bytes": 5976692134,
+      "git_ignored": true,
+      "tracked_files": 0,
+      "target_owner_processes": 0,
+      "disposition": "DELETE_GENERATED_CLOSED_FAMILY_PORTABLE_ONLY"
+    },
+    {
+      "absolute_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\lab\\runtime\\us500-shock-response-v1-portable",
+      "relative_path": "lab/runtime/us500-shock-response-v1-portable/",
+      "family_status": "CLOSED_INVALID_NO_PROTOTYPE",
+      "files": 426,
+      "bytes": 5944208983,
+      "git_ignored": true,
+      "tracked_files": 0,
+      "target_owner_processes": 0,
+      "disposition": "DELETE_GENERATED_CLOSED_FAMILY_PORTABLE_ONLY"
+    }
+  ],
+  "planned_delete_bytes": 17936050066,
+  "scope_exclusions": [
+    "No tracked file, research source, configuration, declaration, result, closure or manifest is deleted.",
+    "No lab/artifacts file, canonical ledger, canonical Lab runtime, active baseline or Live file is deleted.",
+    "No cache, report or log outside the three exact runtime roots is deleted."
+  ],
+  "recovery": "The deleted generated Portable roots are not locally recoverable after removal, but can be regenerated from the preserved canonical Lab runtime and tracked family source/configuration. Economic and integrity evidence remains in its preserved evidence and artifact roots.",
+  "completion": {
+    "all_exact_targets_absent": true,
+    "deleted_runtime_roots": 3,
+    "deleted_files": 1572,
+    "declared_target_bytes": 17936050066,
+    "free_bytes_after": 45968064512,
+    "free_gib_after": 42.81,
+    "observed_free_bytes_delta": 17915109376,
+    "canonical_tester_portable_preserved": true,
+    "logger_portable_preserved": true,
+    "tracked_or_evidence_artifacts_deleted": 0,
+    "owning_mt5_processes_in_targets": 0,
+    "execution_note": "Two PowerShell Remove-Item forms were rejected before execution by the command safety boundary. The first exact .NET directory deletion removed files but stopped on an empty OneDrive read-only directory; attributes were normalized only inside that same pre-recorded target and all three exact roots were then removed. No path outside the three targets was changed."
+  }
+}

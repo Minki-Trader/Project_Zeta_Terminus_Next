@@ -1,0 +1,266 @@
+{
+  "schema": "zeta-next-native-hold-schedule-curve-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_060_DECLARATION_FROZEN_BEFORE_SOURCE_DERIVATION_OR_OUTCOME",
+  "unit": "native-hold-schedule-curve-060",
+  "family": "native-hold-schedule-curve-v1",
+  "title": "Native Hold Schedule Curve",
+  "selection_card": {
+    "macro_program": {
+      "id": 4,
+      "name": "position_management_exit",
+      "korean_name": "포지션 관리·청산"
+    },
+    "research_height": {
+      "primary": "meso",
+      "supporting": [
+        "micro",
+        "macro"
+      ],
+      "transfer_path": "A finite portfolio-wide schedule changes each component's native-bar holding horizon, which changes individual lifecycle value first and then occupied time, admission release, birth composition, total stressed value and drawdown."
+    },
+    "central_question": "On a finite three-point curve around the current component-native fixed-hold vector, does a shorter or longer schedule materially and broadly improve direct common-birth stressed value and whole-portfolio efficiency without an unacceptable drawdown or turnover cost?",
+    "bundle_lenses": [
+      "paired common-birth lifecycle value across the SHORT_25, NATIVE and LONG_25 schedule points",
+      "actual portfolio stressed net, closed drawdown and net-to-drawdown efficiency across four normal real-tick periods",
+      "occupied-time, durable-birth and stop/admission transmission into portfolio capacity"
+    ],
+    "current_bottleneck": "Every non-Passive component closes at a fixed native-bar horizon and Passive has a fixed maximum horizon, but the current 8/12/4/8/6/16 vector has never received a valid direct portfolio intervention comparison. Existing lifecycle telemetry stores only the last mark and aggregate peak/trough/giveback, so it cannot reconstruct R(t).",
+    "why_now": "The user supplied an external structural review that correctly identified the fixed hold vector and asked to try it. Unit 059 is closed and the active stream is empty. This question changes the actual causal management contract and data role, rather than adding another conditional field or repairing a recent family.",
+    "connection_bridge": "Holding duration directly controls lifecycle exposure and the release of occupied portfolio capacity. The historical four-period control contains 2,233 lifecycles and only 206 stop exits, while Passive can also exit on its native signal; therefore the memo's exact claim that every non-stop is a time exit is not adopted, but the fixed/native close contract remains a major portfolio mechanism.",
+    "difference_from_prior_program_4_work": "Unit 040 tested a one-hour loss-conditioned close overlay and became invalid before economics; Unit 057 observed profit state at a peer exit and explicitly retained no management seed. Unit 060 neither repairs nor transforms them: it applies one unconditional finite hold-schedule intervention to the frozen forward baseline and judges actual portfolio outcomes. Unit 037 occupancy ranking and the 16-path portfolio-exit coordination family remain closed and are not used as selectors.",
+    "decision_if_true": "Retain exactly one independently declared later confirmation question for the selected SHORT_25 or LONG_25 schedule. Unit 060 itself authorizes no Live, lot, slot, risk, stop, entry, priority or promotion change.",
+    "decision_if_false": "Keep the NATIVE 8/12/4/8/6/16 vector and close the hold-duration axis without adjacent percentages, component-specific rescue or another management matrix.",
+    "targets": [
+      "the complete six-component portfolio under exactly three predeclared hold vectors",
+      "four fixed periods P1 2022-08-01 through 2023-12-31, P2 2024, P3 2025 and P4 2026-01-01 through 2026-08-20",
+      "exact common births between each candidate and its same-period NATIVE control plus the full realized portfolio"
+    ],
+    "excluded_scope": [
+      "profit, loss, giveback, peer-exit, signal, direction, session or event-conditioned management",
+      "stop placement, protection, ARC thresholds or checkpoint timing, Passive entry/exit strength, entry timing or signal logic",
+      "risk accounting, sizing, capital, lot, slot, priority, admission cap or aggregate-risk changes",
+      "per-component candidate schedules, profile interpolation, threshold optimization or period omission",
+      "Unit 040 repair, Unit 057 expansion or any use of current Live outcomes"
+    ],
+    "automatic_followups_forbidden": [
+      "5, 10, 15, 20, 30 or 50 percent hold variants",
+      "one-bar or component-specific refinement",
+      "strategy, symbol, direction, period, session, entry-state or exit-class rescue",
+      "combined hold and stop, risk, lot, slot, entry or admission change",
+      "another Program 4 successor or immediate Live candidate"
+    ]
+  },
+  "whole_map_comparison": {
+    "recent_closed_sequence": [
+      {"unit": 54, "program": 5, "height": "macro"},
+      {"unit": 55, "program": 7, "height": "macro"},
+      {"unit": 56, "program": 3, "height": "meso"},
+      {"unit": 57, "program": 4, "height": "micro"},
+      {"unit": 58, "program": 2, "height": "meso"},
+      {"unit": 59, "program": 1, "height": "meso"}
+    ],
+    "program_1": "Unit 059 just closed negative; signal-time, pair, direction and admission rescues remain forbidden.",
+    "program_2": "Unit 058 is closed invalid; no scheduled-event or FOMC repair is opened.",
+    "program_3": "Unit 056 is recent and closes adjacent handoff, crowding, release and timing work.",
+    "program_4": "Selected at meso height because the user-proposed question is an unconditional intervention on the dominant fixed/native holding contract, uses a new real-tick causal data role and changes a concrete implementation decision. It is not selected from Unit 057's failed remaining-path gate.",
+    "program_5": "The memo's risk-accounting, market-stop and slot claims are not opened. They are more invasive, partly adjacent to closed sizing/capacity work and do not outrank a bounded hold-only intervention.",
+    "program_7": "Unit 055 is recent; no new meta audit is needed before a direct economic intervention.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare Programs 1-5 and 7 plus micro, meso and macro. Do not open an adjacent duration or component rescue."
+  },
+  "proposal_audit": {
+    "accepted_source_facts": {
+      "native_hold_vector": [8, 12, 4, 8, 6, 16],
+      "component_order": ["RC16", "RC4", "Cross", "Pressure", "Return", "Passive"],
+      "non_passive_close_semantics": "Close when iBarShift from opened_at reaches the component hold_bars value.",
+      "passive_close_semantics": "Close at maximum hold, weak absolute state or direction reversal.",
+      "historical_context": "The consumed four-period control has 2,233 lifecycles and 206 stop exits."
+    },
+    "corrected_claims": [
+      "The P4 research lifecycle ledger cannot calculate R(t); it stores last mark, extrema, extremum times, maximum giveback and sample count, not every time-indexed mark.",
+      "The complement of 206 stop exits cannot all be called clock exits because Passive has native signal exits and other native semantics must be preserved.",
+      "Unit 057's +0.361R final-level separation does not imply that shortening hold improves future returns; its frozen remaining-path result was only +0.022R and retained no management seed."
+    ],
+    "implementation_consequence": "Use normal MT5 real-tick portfolio interventions. Do not perform a source-free pseudo-curve from extrema or reopen Unit 057."
+  },
+  "source_topology": {
+    "owning_root": "lab/research/native-hold-schedule-curve-v1/",
+    "source_root_after_derivation": "lab/research/native-hold-schedule-curve-v1/mt5/",
+    "one_time_parent": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "parent_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "parent_last_commit_verified": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "parent_source_files": 15,
+    "parent_source_bytes": 548058,
+    "parent_source_manifest_sha256": "BE4EB8B8BBA04ED20D735FB26F21C8C5F6E094C8D07C59880F201BCB953F937F",
+    "parent_config_manifest_sha256": "4585BE88CCDD1C93FE8E5C10FA9BB399BC4D5BA6B0B73687816752DC8B55E022",
+    "dedicated_runtime": "lab/runtime/hsc60-portable/",
+    "canonical_runtime_copy_origin": "lab/runtime/tester-portable/",
+    "cross_family_include_or_runtime_link": false,
+    "live_source_or_runtime_dependency": false,
+    "baseline_or_lab_mt5_modification": false
+  },
+  "storage_preflight": {
+    "receipt": "lab/evidence/RESEARCH_ARTIFACT_RETENTION_SWEEP_20260826_V1.json",
+    "receipt_sha256": "52A62A343ED757FA53E9E63B7C25BE0E593CA333393B9451245CBB1F2674BB72",
+    "free_gib_after_sweep": 42.81,
+    "new_runtime_allowed": true
+  },
+  "fixed_profiles": {
+    "component_order": ["RC16", "RC4", "Cross", "Pressure", "Return", "Passive"],
+    "NATIVE": {
+      "input_value": 0,
+      "hold_bars": [8, 12, 4, 8, 6, 16],
+      "role": "same-family control"
+    },
+    "SHORT_25": {
+      "input_value": 1,
+      "hold_bars": [6, 9, 3, 6, 5, 12],
+      "role": "earlier-curve candidate",
+      "note": "Nearest practical native-bar reduction around 25 percent; RC4 remains after its frozen bar-8 ARC checkpoint."
+    },
+    "LONG_25": {
+      "input_value": 2,
+      "hold_bars": [10, 15, 5, 10, 8, 20],
+      "role": "later-curve candidate and shape falsification"
+    },
+    "other_input_values": "INIT_PARAMETERS_INCORRECT"
+  },
+  "frozen_implementation": {
+    "assembly": "lab/research/native-hold-schedule-curve-v1/mt5/src/Experts/ZetaNativeHoldScheduleCurveV1.mq5",
+    "allowed_source_changes": [
+      "Add one integer input accepting only NATIVE=0, SHORT_25=1 or LONG_25=2.",
+      "Assign the exact predeclared hold vector during component initialization and log it once at Tester initialization.",
+      "Make Passive's existing maximum-hold comparison read its component hold_bars value while leaving its weak-state and reversal exits unchanged.",
+      "Assign Tester-only Unit 060 release, portfolio, Magic, state, event, snapshot and ownership identities and paths.",
+      "Rename the one assembly EA and its local description for this family."
+    ],
+    "frozen_unchanged_surfaces": [
+      "signals, decision hours, entry windows and Passive order placement",
+      "sizing, lot steps, risk capital, position and aggregate caps",
+      "stop search, protection, ownership, reconciliation and execution",
+      "RC4 ARC checkpoint and thresholds",
+      "cost and stressed-cost semantics",
+      "session clock and calendar"
+    ],
+    "new_trigger_state_or_failure_mode": false,
+    "new_logging_product": false,
+    "optimization": false
+  },
+  "fixed_periods": {
+    "P1_2022H2_2023": {"from": "2022.08.01", "to": "2024.01.01"},
+    "P2_2024": {"from": "2024.01.01", "to": "2025.01.01"},
+    "P3_2025": {"from": "2025.01.01", "to": "2026.01.01"},
+    "P4_2026_YTD": {"from": "2026.01.01", "to": "2026.08.21"}
+  },
+  "execution_matrix": {
+    "order": [
+      "P1 NATIVE", "P1 SHORT_25", "P1 LONG_25",
+      "P2 NATIVE", "P2 SHORT_25", "P2 LONG_25",
+      "P3 NATIVE", "P3 SHORT_25", "P3 LONG_25",
+      "P4 NATIVE", "P4 SHORT_25", "P4 LONG_25"
+    ],
+    "paths": 12,
+    "serial_only": true,
+    "model": "MT5 Model=4 / Every tick based on real ticks",
+    "symbol_period": "US30 M30 assembly with required US30, US100 and US500 data",
+    "deposit_currency_leverage": "$100 USD at 1:100",
+    "use_local_only": true,
+    "optimization": false
+  },
+  "fixed_reconstruction": {
+    "portfolio_metrics": [
+      "actual and stressed net USD",
+      "stressed maximum closed drawdown USD",
+      "stressed net divided by stressed maximum closed drawdown",
+      "durable births, closes, deals, risk skips and stop exits",
+      "total occupied component-hours and stressed net per occupied hour"
+    ],
+    "common_birth_key": "Exact component identity + entry server timestamp + direction + volume. Match only one birth per profile and period; ambiguity invalidates the paired lens.",
+    "paired_metric": "For each exact common birth, candidate final stressed R minus same-period NATIVE final stressed R using each path's positive planned risk. Aggregate with equal common-birth weight.",
+    "breadth_views": [
+      "six current components",
+      "US30 and US100 natural books",
+      "four periods"
+    ],
+    "transmission": "Report candidate-minus-NATIVE durable births, occupied hours, risk skips and stop rate. Separate exact common births from candidate-only and NATIVE-only births.",
+    "control_context": "Reproduce the NATIVE pooled 2,233 lifecycle topology with component counts 272/206/805/118/238/594 and 206 stop exits. Economic totals may reflect the single frozen current symbol specification and are compared only within this matrix."
+  },
+  "fixed_integrity_gate": [
+    "The declaration, cleanup receipt, parent commit and parent source/configuration manifests remain exact.",
+    "The final family source and configuration are committed and pushed before the first Tester path and remain unchanged through all paths.",
+    "MetaEditor build 6140 reports 0 errors and 0 warnings.",
+    "All twelve paths stop normally, report 100 percent real ticks, use Model=4 and show no required-symbol detailed tick-generation fallback.",
+    "The dedicated runtime contains no Live path, cross-family source, Include, EX5, setting, state, log, junction, symbolic link or shared mutable runtime dependency.",
+    "Each path logs the exact selected hold vector and finishes with zero safety, persistence, broker, foreign-exposure, protection, dropped-record or nonfinite-economic fault.",
+    "NATIVE reproduces exactly 2,233 pooled lifecycles, component counts 272/206/805/118/238/594 and 206 stop exits.",
+    "Every birth has one exact close, positive planned risk and finite actual/stressed economics; every candidate common-birth key is unique."
+  ],
+  "fixed_density_gate": [
+    "Each profile retains at least one birth for every component in every period.",
+    "Each candidate matches at least 70 percent of NATIVE pooled births and at least 20 exact common births for every component.",
+    "Both natural books and all four periods remain represented in each candidate's exact common-birth set."
+  ],
+  "candidate_gate": {
+    "applies_independently_to": ["SHORT_25", "LONG_25"],
+    "direct_lifecycle": [
+      "The pooled exact-common-birth paired stressed-R improvement over NATIVE is at least +0.02R.",
+      "The paired stressed-R sign is positive in at least four of six components, both US30 and US100 books, and at least three of four periods.",
+      "No component contributes more than 50 percent and no period more than 60 percent of the absolute paired stressed-R numerator."
+    ],
+    "portfolio_value": [
+      "Pooled stressed net exceeds NATIVE by at least max(20 USD, 10 percent of absolute NATIVE pooled stressed net).",
+      "Candidate-minus-NATIVE stressed net is positive in at least three of four periods.",
+      "In no period may candidate stressed net trail NATIVE by more than max(5 USD, 10 percent of absolute NATIVE period stressed net).",
+      "Pooled stressed maximum closed drawdown is no more than 105 percent of NATIVE.",
+      "Pooled stressed-net-to-drawdown is at least 105 percent of NATIVE.",
+      "Stop rate may not exceed NATIVE by more than 0.02."
+    ],
+    "capacity_translation": {
+      "SHORT_25": [
+        "Total occupied component-hours are at most 90 percent of NATIVE.",
+        "Durable births are at least NATIVE."
+      ],
+      "LONG_25": [
+        "Durable births are at least 95 percent of NATIVE.",
+        "Stressed net per occupied component-hour is at least 110 percent of NATIVE."
+      ]
+    }
+  },
+  "selection_rule": {
+    "eligible": "A profile is eligible only when integrity, density and every profile-specific candidate gate pass.",
+    "one_profile": "Select that profile.",
+    "two_profiles": "Select higher pooled stressed-net improvement, then higher stressed-net-to-drawdown ratio, then lower stressed drawdown, then SHORT_25.",
+    "none": "Select no profile.",
+    "authority": "A selected profile is exploratory evidence for one later independently declared confirmation question only."
+  },
+  "fixed_bundle_gate": {
+    "short_success": "PASS_SHORTER_NATIVE_HOLD_SCHEDULE_LATER_CONFIRMATION_QUESTION",
+    "long_success": "PASS_LONGER_NATIVE_HOLD_SCHEDULE_LATER_CONFIRMATION_QUESTION",
+    "failure": "NO_NATIVE_HOLD_SCHEDULE_PROFILE_PASSED",
+    "invalid": "INVALID_NATIVE_HOLD_SCHEDULE_MATRIX_NO_VERDICT",
+    "ambiguous": "AMBIGUOUS_NATIVE_HOLD_SCHEDULE_SEMANTICS_NO_CANDIDATE"
+  },
+  "execution_budget": {
+    "source_copies": 1,
+    "dedicated_runtime_copies": 1,
+    "successful_compiles": 1,
+    "implementation_only_compile_corrections_before_tester": 2,
+    "tester_paths": 12,
+    "post_metric_reruns": 0,
+    "optimization_paths": 0,
+    "orders_outside_tester": 0,
+    "retained_test_cli_or_validator": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration, Unit 060 state and Frontier memory before the one-time source copy.",
+    "Commit and push the frozen source, configurations, compile receipt and runtime receipt before the first Tester path.",
+    "Run the twelve paths serially in the declared order and do not read partial economic comparisons between paths; inspect only integrity needed to decide whether the next frozen path may run.",
+    "Any source/configuration change after the first Tester path invalidates the matrix; no repaired or replacement path is allowed.",
+    "Do not add another hold fraction, per-component profile, conditional exit, threshold, period, symbol or direction rescue.",
+    "Do not modify the frozen baseline, lab/mt5, Live, dashboard or Program 6 and do not query broker/account state.",
+    "Close after one matrix verdict and recompare the whole map without an adjacent Program 4 successor."
+  ],
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_make_one_physical_baseline_copy_and_one_dedicated_runtime"
+}
