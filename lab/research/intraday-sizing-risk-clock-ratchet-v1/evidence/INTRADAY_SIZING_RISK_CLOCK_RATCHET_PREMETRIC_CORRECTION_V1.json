@@ -1,0 +1,49 @@
+{
+  "schema": "zeta-next-intraday-sizing-risk-clock-ratchet-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "PREMETRIC_SOURCE_SCOPE_CORRECTION_FROZEN",
+  "unit": "intraday-sizing-risk-clock-ratchet-067",
+  "declaration": {
+    "path": "lab/research/intraday-sizing-risk-clock-ratchet-v1/evidence/INTRADAY_SIZING_RISK_CLOCK_RATCHET_DECLARATION_V1.json",
+    "sha256": "C2B322591722D7F4DCED243FB5186B297201018F10CA273E2A46544C8B6BAC34",
+    "unchanged": true
+  },
+  "trigger": "Pre-aggregation source review established that NormalizedVolume and day_volume_multiplier govern the five market components, while the Passive limit component passes InpBaseVolume directly to protection and order placement.",
+  "additional_source_pins": [
+    {
+      "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Strategies/ZetaPassive.mqh",
+      "bytes": 20696,
+      "sha256": "30914AE115132F5DDD6EE9FC5176EAFA323AA55AC536CEF1F73696E2A4633932"
+    },
+    {
+      "path": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/src/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh",
+      "bytes": 54956,
+      "sha256": "9E5972A824FBCE6E677B7B4C8E0D153D684EBC75019D5BD0B57282088DF8EC22"
+    }
+  ],
+  "corrected_scope": {
+    "all_admissions": "All matched market and Passive admissions remain in risk-capital identity, same-day ordinal, floating-state and filled-outcome views.",
+    "multiplier_eligible": "Only matched market OPEN admissions enter current-versus-hypothetical multiplier density, divergence count/share and the frozen five-percent/ten-decision multiplier gate.",
+    "passive_role": "Passive PLACE remains a per-admission risk-clock observation but is excluded from lot-clock divergence because its requested and placed volume is always the fixed base 0.01 lot.",
+    "recovered_binding_admission": "The single declared binding birth without ORDER_ATTEMPTED remains excluded from all attempt-state views."
+  },
+  "unchanged_contract": [
+    "all immutable event/source pins and both cohort populations",
+    "planned-risk/0.04 risk-capital identity and observed-minimum validation",
+    "FIRST/SECOND/THIRD_PLUS grouping and floating-state boundary",
+    "all 2/5/10-percent mechanism thresholds and outcome-transmission thresholds",
+    "verdict rules, exclusions and decision translations"
+  ],
+  "budget_after_freeze": {
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "successful_fixed_aggregations_used": 0,
+    "successful_fixed_aggregations_remaining": 1,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_source_scope_correction_then_run_the_single_fixed_aggregation"
+}

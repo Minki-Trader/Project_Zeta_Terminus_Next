@@ -1372,3 +1372,10 @@
 - Frozen views are FIRST/SECOND/THIRD_PLUS risk ratios, negative/flat/positive pre-order floating state, definite capital-binding source, current versus hypothetical multiplier and filled stop/stressed-R transmission. No component, time, period, direction or result selector is allowed.
 - A candidate requires the full mechanism and transmission gates in both cohorts, including 2% risk movement, 5% and ten stale binding decisions, material equity binding, adverse outcome transmission and `3/4` CP2 breadth. Partial divergence retains no candidate.
 - Declaration SHA-256 is `C2B322591722D7F4DCED243FB5186B297201018F10CA273E2A46544C8B6BAC34`. Outcomes remain unopened; one fixed aggregation, one premetric-only correction and zero reruns are budgeted. No acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0167 - 2026-08-27
+
+- Before any Unit 067 aggregation or outcome, exact source review established that the five market components route volume through `NormalizedVolume()` and the daily multiplier, whereas Passive passes fixed `InpBaseVolume` directly to stop calculation and limit placement.
+- Used the one permitted premetric correction to restrict only current-versus-hypothetical multiplier metrics and the frozen 5%/10-decision gate to matched market admissions. All admissions remain in risk-capital identity, same-day ordinal, floating-state and filled-outcome views.
+- Pinned `ZetaPassive.mqh` at 20,696 bytes / `30914AE115132F5DDD6EE9FC5176EAFA323AA55AC536CEF1F73696E2A4633932` and `ZetaOrders.mqh` at 54,956 bytes / `9E5972A824FBCE6E677B7B4C8E0D153D684EBC75019D5BD0B57282088DF8EC22`.
+- Correction receipt SHA-256 is `5D0740994466EE3911F0D0F292390080F57591C66EDF5062717E4BD08A7BF68B`. Population, other formulas, all thresholds, verdicts and exclusions are unchanged; no metrics have opened. One aggregation, zero correction/rerun remain; Live and Program 6 remain untouched.

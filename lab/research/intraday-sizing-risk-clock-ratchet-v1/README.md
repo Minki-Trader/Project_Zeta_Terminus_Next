@@ -6,4 +6,4 @@ The unit has one finite three-lens bundle: exact source-contract reconstruction 
 
 The authoritative pre-outcome contract is `evidence/INTRADAY_SIZING_RISK_CLOCK_RATCHET_DECLARATION_V1.json`. No MQL, runtime, acquisition, Tester path, reusable CLI, broker/account query or Live action is added.
 
-No result has opened. A complete pass may retain one later separately declared Lab clock-alignment candidate; it cannot change sizing, risk, lot, stop, priority, admission or Live behavior by itself.
+Premetric source review froze one scope correction: the five market components use the once-daily multiplier, while Passive always requests base `0.01` lot. All admissions remain in risk-clock, ordinal, floating-state and outcome views, but only market admissions enter multiplier-divergence metrics and their fixed gate. No result has opened. A complete pass may retain one later separately declared Lab clock-alignment candidate; it cannot change sizing, risk, lot, stop, priority, admission or Live behavior by itself.
