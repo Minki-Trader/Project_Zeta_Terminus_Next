@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0144`
+- Latest state ID: `STATE-0145`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: none; Program 2 / meso Unit 058 `scheduled-us-macro-decision-regime-v1` is closed invalid before channel metrics because its frozen FOMC zero-row integrity anchor reconstructed as 14 rows
+- Active research boundary: Program 1 / meso Unit 059 `cross-component-same-symbol-signal-state-v1`; declaration and candidate-to-birth topology are frozen while all matched CLOSE economic fields remain unopened pending the committed declaration boundary
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -690,6 +690,14 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Because zero FOMC rows was an explicit frozen integrity condition, Unit 058 is invalid. No PRE/POST signal-pass, existing-exposure or aggregate-risk residual was calculated; no BLS decision-regime verdict, retained observation question or event trading action exists.
 - Closed `INVALID_CALENDAR_OR_CANDIDATE_LEDGER_RECONSTRUCTION_NO_DECISION_REGIME_VERDICT`. Result/closure SHA-256 values are `40B952A434126CAD120485F019A6DCAAE4D4110DA870A789FFFBF47417A7E856` / `522DA084F8A97FFF82FE9E89D153FDCCFCCB090F5999DC8B1CB4DF1ADBFF134E`. No same-family repair, FOMC rescue, lifecycle outcome, MQL, Tester, Program 6, broker query or Live action may follow automatically.
 
+## Open cross-component same-symbol signal state Unit 059
+
+- Recompleted the active Goal startup boundary in authority order and confirmed clean `main == origin/main == remote main 5d82067f2b7ae1dd9f161f538280e1b0f1e0d240`, frozen CXR2 forward baseline `0d4032786cecb7d7e8a4c3074609db5b105fa107`, exact local CXR2 PID `15080`, dashboard PID `28508` and no Lab Tester/MetaEditor process without querying broker positions, orders, deals or account state.
+- Recompared Programs 1-5 and 7 plus all three heights after the complete recent `1 → 5 → 7 → 3 → 4 → 2` sequence. Program 2 Unit 058 is not repaired; Programs 3/4 are immediate, Program 5 lacks counterfactual outcomes for its 15 blocked rows and Program 7 is recent. Program 1 is selected for a newly ready cross-component same-symbol data role, not to complete a round.
+- Opened only Program 1 / meso Unit 059 `cross-component-same-symbol-signal-state-v1`. It asks whether a passed signal that persists or reverses the latest passed same-symbol direction from a different strategy has materially different candidate-to-birth transmission and component-adjusted final stressed-R/stop economics.
+- Outcome-free topology over the immutable 4,043-row candidate ledger classifies cross-component PERSIST/REVERSE `159/131` and links `145/112` durable births. All six current components have at least `7` linked births per role, US30/US100 cells have at least `40`, and a same-component US100 natural control retains `39/35` linked births. All 356 global births match one candidate key and one close by position identifier with zero ambiguity.
+- Declaration SHA-256 is `0CA067CA282B1F76D6CE3A2E671E4996DA4F8C3A1890F2053AB90060D6F511B0`. No matched CLOSE actual/stressed net, exit class, adjusted residual, material gate or verdict has been cast. Exactly one fixed in-memory aggregation may run only after this declaration boundary is committed and pushed; MQL, Tester, Program 6, broker state and Live remain untouched.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -701,6 +709,8 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Current verdict
 
-Latest research verdict: `INVALID_CALENDAR_OR_CANDIDATE_LEDGER_RECONSTRUCTION_NO_DECISION_REGIME_VERDICT`
+Latest closed research verdict: `INVALID_CALENDAR_OR_CANDIDATE_LEDGER_RECONSTRUCTION_NO_DECISION_REGIME_VERDICT`
+
+Active research unit: `CROSS_COMPONENT_SAME_SYMBOL_SIGNAL_STATE_059_DECLARATION_FROZEN_CLOSE_OUTCOMES_UNOPENED`
 
 `LEGACY_REPOSITORY_ARCHIVED; B75_RC16_FROZEN_LIFE_HOLD_CONFIRMED; STRATEGY_INDEPENDENCE_RISK_ALLOCATION_V1_CLOSED_RETAIN_FIRST_COME; DEPOSIT_CAPITAL_RISK_CAPACITY_V1_CLOSED_RETAIN_FROZEN_V7; FRONTIER_2025_THROUGH_2026_08_21_CONSUMED_EXPLORATORY_ONLY; COMPLEXITY_REFACTOR_CP1_ENTRY_GATE_EQUIVALENCE_PASSED; COMPLEXITY_REFACTOR_CP2_MARKET_ENTRY_EQUIVALENCE_PASSED; CP3_HOLD_CP2_SUFFICIENT_NO_ADDITIONAL_VALUE; CXR1_LIVE_PROMOTION_COMPLETE_THEN_STOPPED_FLAT; CXR2_PROTECTIVE_EXIT_RECONCILIATION_LIVE_HEALTHY; SOURCE_TOPOLOGY_GUARD_ACTIVE; LIVE_DEV_PERFORMANCE_FORENSICS_V1_CLOSED_NO_EXIT_HYPOTHESIS; TESTER_REPLAY_FINANCING_DRIFT_V1_CLOSED; STRATEGY_FRONTIER_COVERAGE_V1_CLOSED_NO_UNDEREXAMINED_TARGET; US30_CONTEXT_ROTATION_V1_CLOSED_INSUFFICIENT_DENSITY; RECEIVER_TIME_FIELD_GENERALIZATION_V1_CLOSED_NO_MECHANISM; PASSIVE_REFUSAL_DEPTH_OBSERVATION_V1_CLOSED_NO_SELECTOR_VALUE; RISK_CAPACITY_RELEASE_WINDOW_V1_CLOSED_INVALID_CONTRACT_NO_CANDIDATE; NATIVE_SIGNAL_STRENGTH_VALUE_V1_CLOSED_NO_FIELD; ENTRY_TIME_CROWDING_VALUE_V1_CLOSED_NO_FIELD; SERVER_DAY_CARRY_BURDEN_V1_CLOSED_NO_FIELD; PROTECTIVE_EXIT_ORDER_RECONCILIATION_019_CLOSED_PROMOTED; ACTUAL_LIVE_POSITION_ECONOMICS_020_CLOSED_RETAIN_PROFIT_MEMORY_OBSERVATION_WITH_LATE_MATURITY_GUARD; PROFIT_MEMORY_STATE_OBSERVATION_021_CLOSED_INVALID_SYMBOL_FINGERPRINT_NO_CANDIDATE; ACTUAL_POSITION_BUNDLE_020_021_CLOSED_NATURALLY; CROSS_INDEX_RESIDUAL_RESPONSE_022_CLOSED_INVALID_INTEGRITY_NO_PROTOTYPE; SAME_STRATEGY_OUTCOME_MEMORY_023_CLOSED_NO_FIELD; PASSIVE_FILL_AGE_VALUE_024_CLOSED_NO_FIELD; INITIAL_STOP_GEOMETRY_VALUE_025_CLOSED_NO_FIELD; CLOSED_DRAWDOWN_STATE_VALUE_026_CLOSED_NO_FIELD; US500_SHOCK_RESPONSE_027_CLOSED_INVALID_ENVIRONMENT_NO_PROTOTYPE; US100_SESSION_REOPEN_DISCONTINUITY_028_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US30_COMPRESSION_BREAK_RESPONSE_029_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_TICK_FLOW_IMBALANCE_RESPONSE_030_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_FAILED_EXTREME_AUCTION_RESPONSE_031_CLOSED_INVALID_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_REALIZED_VARIANCE_ASYMMETRY_RESPONSE_032_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; US100_DIRECTIONAL_PATH_EFFICIENCY_RESPONSE_033_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; NATIVE_DIRECTION_ASYMMETRY_VALUE_034_CLOSED_NO_FIELD; SAME_STRATEGY_INTERBIRTH_GAP_VALUE_035_CLOSED_NO_FIELD; US500_CLOSE_LOCATION_PRESSURE_RESPONSE_036_CLOSED_INVALID_HTML_REAL_TICK_QUALITY_NO_PROTOTYPE; STRATEGY_OCCUPANCY_SLOT_VALUE_037_CLOSED_NO_INFORMATION_NO_PRIORITY_PROXY; US500_ORDINAL_ACCELERATION_RESPONSE_038_CLOSED_NO_DIRECTION_NO_PROTOTYPE; BIDIRECTIONAL_SIGNAL_TRANSITION_STATE_048_CLOSED_NO_FIELD; PRIOR_TREASURY_CURVE_MOVE_CONTEXT_049_CLOSED_NO_FIELD; NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_050_CLOSED_PARTIAL_ONE_WAY_NO_SUCCESSOR; MACRO_FRONTIER_ATTRITION_TOPOLOGY_051_CLOSED_MULTI_STAGE_DIAGNOSIS; HELD_POSITION_FIRST_PEER_EXIT_STATE_052_CLOSED_NO_FIELD; US500_MONTHLY_RANGE_BREAK_RESPONSE_053_CLOSED_DENSITY_NO_DIRECTION; PORTFOLIO_LOSS_COOCCURRENCE_TOPOLOGY_054_CLOSED_NO_CLUSTER; MACRO_CONTEXT_COMPOSITION_CONFOUNDING_055_CLOSED_NO_BROAD_SHIFT; INTRADAY_PORTFOLIO_ENTRY_HANDOFF_056_CLOSED_NO_STATE; FIRST_PEER_PROFIT_MEMORY_CHECKPOINT_057_CLOSED_FINAL_LEVEL_ONLY; SCHEDULED_US_MACRO_DECISION_REGIME_058_CLOSED_INVALID_INTEGRITY`
