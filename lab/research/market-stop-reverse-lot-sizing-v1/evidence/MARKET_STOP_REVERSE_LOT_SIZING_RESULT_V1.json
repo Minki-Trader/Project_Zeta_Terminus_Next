@@ -1,0 +1,132 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_INVALID_BEFORE_MULTIPLIER_FIT_OR_ECONOMIC_COMPARISON",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "family": "market-stop-reverse-lot-sizing-v1",
+  "verdict": "INVALID_MARKET_STOP_REVERSE_LOT_EXECUTION_OR_RECONSTRUCTION_NO_VERDICT",
+  "declaration_sha256": "B998176FFDC68C5CB8D6ED3F762811E18224D054AC168D8DB87A408204892D85",
+  "compile_receipt_sha256": "6BAAC72ECCF381CDD91EC4019F5251460D280485C792959E49B4DF90602C900E",
+  "implementation_commits": [
+    "5810f9053093389faaada935b40e7f287ab6bfc3",
+    "317320ea29025f2361c1c93d32bf9d2d311bde3e"
+  ],
+  "fit_execution": {
+    "path": "FIT_NATIVE_GEOMETRY",
+    "configuration": "tester-msrl62-fit-native.ini",
+    "profile": 0,
+    "from_inclusive": "2026-01-01",
+    "to_exclusive": "2026-04-01",
+    "model": 4,
+    "process_exit_code": 0,
+    "wall_elapsed_seconds": 78.498,
+    "tester_reported_normal_finish": true,
+    "primary_symbol_ticks": 11558778,
+    "primary_symbol_bars": 2882,
+    "all_symbol_ticks": 66106278,
+    "required_symbol_real_tick_begin_lines": 3,
+    "forbidden_real_tick_absent_lines": 0,
+    "forbidden_real_tick_discarded_lines": 0,
+    "forbidden_every_tick_generation_lines": 0,
+    "forbidden_tick_mismatch_lines": 0,
+    "load_or_synchronization_fault_lines": 0,
+    "runtime_fault_fields": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0
+    },
+    "native_atr_observation_counter": 108,
+    "atr_unavailable_counter": 0,
+    "atr_rows_or_ratios_read": false,
+    "fitted_medians_calculated": false
+  },
+  "fatal_integrity_failures": {
+    "html_report": {
+      "expected_path": "lab/runtime/msrl62-portable/reports/market-stop-reverse-lot-sizing-v1/fit-native.htm",
+      "files_found": 0,
+      "quality_percent_available": false,
+      "gate_passed": false,
+      "cause": "The copied runtime's old reports tree was moved out of the active Portable during isolation cleanup, but the frozen nested Report parent was not recreated before the path. MetaTrader completed the test but emitted no HTML report.",
+      "interpretation": "The mandatory 100-percent HTML real-tick assertion cannot be made. The completed path cannot be repaired or repeated after execution under the zero post-metric rerun rule."
+    },
+    "pre_fit_environment_manifest": {
+      "before_files": 72,
+      "before_bytes": 1771251955,
+      "before_sha256": "048CCEDF2574872D3D542D40AFF151A9B2076DCE45CE0DDADFC0901E04902E23",
+      "after_files": 72,
+      "after_bytes": 1773897672,
+      "after_sha256": "66060B0320D2C0B6FC10500340903623D20ABB0EEA13917A06B963213FA2593E",
+      "exact": false,
+      "changed_files": 17,
+      "changed_raw_tick_files": 3,
+      "changed_history_files": 9,
+      "changed_symbol_or_tick_index_files": 5,
+      "fit_window_raw_tick_check": {
+        "scope": "US30/US100/US500, both Bases and Tester/bases, 2025-12 through 2026-03 .tkc files",
+        "files": 24,
+        "bytes": 390100408,
+        "sha256": "E53E9E2FDE02F20D6F24191A9B103E1036D46606E5924DC13F580365C75C2F8F",
+        "changed_vs_physical_copy_origin": 0
+      },
+      "drift_location": "The three changed .tkc files were 2026-08 and outside the fit window, but the copied symbol databases and index/history files also changed during terminal synchronization. The declaration froze the complete pre-fit environment identity, so the mismatch is independently fatal even though fit-window raw .tkc files stayed exact."
+    }
+  },
+  "artifact_evidence": {
+    "local_ignored_root": "lab/artifacts/backtests/market-stop-reverse-lot-sizing-v1/fit-native/",
+    "files": 7,
+    "bytes": 1496773,
+    "manifest_sha256": "24173AEFA44B3E33668D295A937230BCF5E58C9A0A9BD5B3E1C6DFF5701F79A5",
+    "manifest_algorithm": "Sort artifact-root file names ordinally, uppercase each file SHA-256, join name|hash with LF, then SHA-256 UTF-8.",
+    "agent_log_sha256": "98A48ED26DCAFCF52BF9F9002642351BC849EB768F8FCC18DC328777B1BF30F5",
+    "tester_log_sha256": "39684726C4F70D0837F17BCDDBDC3FA9E12AF414FE401A4950BCFB0C50682C96",
+    "terminal_log_sha256": "BA17F952963E01F7C3BF4348318336EF5E63A7EADE0ADD2AFA2786DD97CEEC31",
+    "event_ledger_sha256": "546EF1DF53C6BFBF0C491566A4486AF5C4A62146C72CB4985157B6A988590187",
+    "tester_cache_sha256": "E0A0F82DEC9F4905153003A95BAD8715065759229F7493FB0E7FB3F4E1786474"
+  },
+  "frozen_implementation_recheck": {
+    "source_manifest_sha256": "FF49BB6016DE3137AC2B3BC72321C177CFB7B3A9D328A76F24A23FCC99175CD5",
+    "source_exact": true,
+    "native_configuration_manifest_sha256": "77B6398ED120D6B10AAE9DFE44DC57C4A41EDAD0ED43077421F952EDCECD700E",
+    "native_configuration_exact": true,
+    "binary_sha256": "9185CEB7A109B7B7D13DC1A1B90A3109ED8DC3AAAEEF0ECED5BFEFE367995C7E",
+    "binary_exact": true,
+    "source_or_configuration_changed_after_first_path": false
+  },
+  "economic_access_boundary": {
+    "fit_component_medians_read": false,
+    "candidate_set_created": false,
+    "selection_control_opened": false,
+    "selection_candidate_opened": false,
+    "latest_paths_opened": false,
+    "candidate_stop_lot_or_portfolio_metrics_read": false,
+    "candidate_gate_cast": false,
+    "economic_verdict": null,
+    "inadvertent_exposure": "A tail read used to locate the normal stop and integrity counters also exposed the single native fit path's final economic summary. It is quarantined, is not reproduced as evidence and was not used to fit a multiplier, compare a candidate or cast a verdict."
+  },
+  "execution_budget_used": {
+    "fit_tester_paths_executed": 1,
+    "selection_tester_paths_executed": 0,
+    "latest_tester_paths_executed": 0,
+    "tester_paths_total_executed": 1,
+    "post_metric_reruns": 0,
+    "environment_rebuilds_after_path": 0,
+    "source_corrections_after_path": 0
+  },
+  "termination": {
+    "reason": "The first required path lacks the mandatory HTML 100-percent evidence and changed the frozen complete environment manifest. Either failure closes the family before multiplier extraction.",
+    "same_path_rerun": false,
+    "html_directory_repair": false,
+    "multiplier_fit": false,
+    "candidate_configuration": false,
+    "selection_or_latest_opened": false,
+    "adjacent_atr_mae_or_passive_variant_opened": false
+  },
+  "program_6_opened": false,
+  "manual_broker_or_account_query": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_invalid_result_and_closure_then_recompare_all_programs_without_same_family_execution_repair"
+}
