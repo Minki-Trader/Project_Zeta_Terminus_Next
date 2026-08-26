@@ -1,0 +1,102 @@
+{
+  "schema": "zeta-next-live-research-observation-ledger-declaration-v1",
+  "created_at_local": "2026-08-26",
+  "status": "FROZEN_BEFORE_SOURCE_DERIVATION_AND_OUTCOME",
+  "family": "live-research-observation-ledger-v1",
+  "kind": "serial_live_engineering_observation_patch",
+  "user_authority": [
+    "Leave the current dashboard completely unchanged and patch only logging for Codex research.",
+    "Establish periodic storage cleanup while excluding valuable research outputs.",
+    "Do not reattach or restart the EA in a way that skips today's trading opportunities.",
+    "Do not add validators or other tests."
+  ],
+  "topology": {
+    "owning_root": "lab/engineering/live-research-observation-ledger-v1/",
+    "source_root_after_derivation": "lab/engineering/live-research-observation-ledger-v1/mt5/",
+    "one_time_parent": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "parent_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "parent_compile_receipt": "lab/engineering/protective-exit-order-reconciliation-v1/evidence/PROTECTIVE_EXIT_ORDER_RECONCILIATION_COMPILE_RECEIPT_V1.json",
+    "dedicated_runtime": "lab/runtime/live-research-observation-ledger-v1-portable/",
+    "cross_family_include_or_runtime_link": false,
+    "live_source_dependency": false
+  },
+  "fixed_observation_scope": {
+    "candidate_ledger": [
+      "signal and final admission outcome",
+      "blocked signal candidates including risk, minimum-lot, margin, quote, session, broker and ownership reason",
+      "requested price, volume, stop and planned risk",
+      "risk capital, per-position cap, aggregate risk before/after, cap and headroom",
+      "active and reserved component masks, slot counts and US30/US100 book risk/direction",
+      "prior same-symbol nonzero signal direction with FIRST, PERSIST or REVERSE relation",
+      "RC4 SELL warning flag",
+      "exact UTC, server time and UTC-minute macro-event join key"
+    ],
+    "lifecycle_ledger": [
+      "stable position identifier and entry context",
+      "mark-to-market profit memory with peak, trough and maximum giveback in USD and planned-risk R",
+      "first natural expert close of another still-held component",
+      "entry and exit book context",
+      "actual and stressed lifecycle result plus exit reason/class",
+      "restart continuity and partial-observation flag"
+    ],
+    "research_state": "Independent optional alternating A/B observer state, saved after decisions/exits and on the existing 60-second snapshot cadence.",
+    "external_event_policy": "No network or calendar dependency enters the EA. Exact UTC/server timestamps provide a causal offline join key for later Codex research."
+  },
+  "non_interference_contract": {
+    "dashboard_files_or_process": "unchanged",
+    "core_event_ring": "unchanged; research rows never consume safety-event capacity",
+    "core_state_schema_or_paths": "unchanged",
+    "economic_fingerprint": "unchanged",
+    "entry_sizing_admission_protection_management_orders_costs": "unchanged",
+    "research_failure_effect": "Print one bounded warning and count a dropped research record only; never set persistence_failed, safety_stopped, broker_mismatch or change an order decision.",
+    "pre_order_disk_io": "forbidden; passed-signal rows are written only after the order/admission path has completed",
+    "new_inputs": false
+  },
+  "storage_rule": {
+    "trigger": "First weekend of each calendar month, and before any new Lab Portable when system-drive free space is below 30 GiB.",
+    "always_preserve": [
+      "tracked source and configuration",
+      "declarations, results, closures and manifests",
+      "every artifact named or hashed by durable evidence",
+      "sole canonical required-symbol history",
+      "active forward baseline and active Live package/state/events",
+      "canonical research candidate and lifecycle ledgers"
+    ],
+    "eligible_only": [
+      "Git-ignored closed-family Portable copies",
+      "generated Tester caches",
+      "unreferenced duplicate reports and logs",
+      "compile staging and temporary files"
+    ],
+    "safety": "No owner process may be using a target. Resolve and record exact absolute targets first; uncertainty means retain. No automatic destructive worker is added."
+  },
+  "fixed_verification": {
+    "compile": "Normal MetaEditor build 6140 compile must report 0 errors and 0 warnings.",
+    "economic_path": "Exactly one normal fixed P4 2026-YTD FPMarkets Every tick based on real ticks path after the candidate source/configuration is frozen.",
+    "economic_requirement": "Actual net, stressed net, lifecycle/deal counts, risk skips, stop exits and fault counters exactly match the frozen CXR2 Lab control; research rows must be populated and remain causally separate.",
+    "live_observation": "Only after a later stopped-flat promotion, one bounded entries-disabled recovery/restart observation followed by the existing exact 0/0 to 1/1 handoff.",
+    "forbidden": [
+      "new validator",
+      "unit, integration or regression test",
+      "parity or promotion checker",
+      "test-only CLI or infrastructure",
+      "dashboard modification"
+    ]
+  },
+  "current_day_no_skip_gate": {
+    "current_live_terminal_pid": 15080,
+    "current_dashboard_pid": 28508,
+    "during_lab_work": "Both remain untouched.",
+    "earliest_handoff": "After every 2026-08-26 scheduled entry window has expired and all owned positions, pending orders, margin, planned risk, retry, shadow and ARC state are locally proven zero at a stopped-flat boundary.",
+    "late_entry_policy": "Never manufacture a late replacement for any expired opportunity.",
+    "failed_handoff_policy": "Remain on the existing owner or entries-disabled according to the existing fail-closed runbook; never skip ahead to a 1/1 start."
+  },
+  "live_promotion": {
+    "authorized_in_principle_by_user": true,
+    "allowed_before_candidate_closure": false,
+    "release_requirement": "New frozen release/source manifests and hashes while preserving the exact Live execution version, economic identity, Portfolio, Magic, settings and core state schema/path.",
+    "stopped_flat_and_handshake_required": true
+  },
+  "outcomes_consumed": false,
+  "next": "commit_and_push_declaration_then_make_one_physical_baseline_copy"
+}

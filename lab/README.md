@@ -70,8 +70,11 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/portfolio-loss-cooccurrence-topology-v1/`: 닫힌 Program 5 / Unit 054 source-free family; 다전략 손실일 `1.0226x`, 양 자연책 손실일 `1.0554x` 독립기대 발생으로 둘 다 `1.25x` 관문 미달, 공통손실 대응·배분·lot·slot 후속 없음
 - `research/macro-context-composition-confounding-v1/`: 닫힌 Program 7 / Unit 055 source-free family; 12개 맥락 대비의 R 보정은 전부 `0.05R` 미만, stop 민감 4건도 Units 041/052·Programs 2/4에 집중되어 광범위 구성혼재 진단 실패, 인접 estimator·weighting·meta 후속 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
+- `engineering/live-research-observation-ledger-v1/`: 활성 단일 공학 family; dashboard·경제·주문·상태 계약은 유지하고 Codex 연구용 candidate/lifecycle ledger만 별도 기록하도록 선언됨
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구
 
 새 family는 `research/<family>/` 또는 `engineering/<family>/` 하나에 source·config·evidence를 함께 둔다. 다른 family root를 include하거나 닫힌 root를 다시 열지 않는다. 상세 강제 규칙은 `docs/OPERATING_DIRECTION.md`의 `Source topology discipline`이 권위다.
+
+용량 정리는 같은 문서의 `Research artifact retention and storage hygiene` 단일 규칙을 따른다. 매월 첫 주말 또는 시스템 드라이브 여유 `30 GiB` 미만에서 sweep하되, 증거가 가리키는 산출물과 canonical candidate/lifecycle ledger는 보존하고 닫힌 family의 중복 Portable·Tester cache·미참조 임시 산출물만 정확한 절대경로 확인 뒤 정리한다.
