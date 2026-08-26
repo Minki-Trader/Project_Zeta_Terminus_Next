@@ -827,3 +827,10 @@
 - A broad integrity regex also surfaced a final portfolio summary line because it contained `broker_mismatch=false`. Its economic values are excluded from result transcription, aggregation and comparison; no economic gate or candidate path opened.
 - Closed `INVALID_P1_ENVIRONMENT_AND_REAL_TICK_GENERATION_NO_ECONOMIC_VERDICT`. Exactly 15 declared paths remain unopened, no repaired P1, environment-sync preflight, alternative age/threshold, strategy/symbol subgroup or successor exists, and the default next action is macro rotation away from Program 4.
 - Result/closure SHA-256 values are `5379F39F96C118FBC92E96C3147526AEF71F1C81F706B05B55968684903C8DE2` / `962A11A069292951751F983D5D82BE70C49CB6E5B19178287A7054CA6578F18F`. Program 6 and Live remained untouched.
+
+## STATE-0103 - 2026-08-26
+
+- The user's seven-part macro map is now a mandatory operating rule rather than a unit-local note. Every Frontier research unit names one primary Program 1-5 or 7; Program 6 `실행·복구·브로커 안전` remains outside this Goal.
+- A declaration may allocate one bundle of two or three genuinely related variants to one macro question. The bundle closes together, and the next action is a whole-map comparison using coverage, causal readiness, independence from recent work and information value rather than automatic adjacency or mechanical round robin.
+- A pass may retain one bounded seed, but no seed, neighboring threshold, time window, subgroup, symbol, event, exit or sizing variation opens automatically. A sparse or structurally confounded outcome-free feasibility result is not rescued by widening the same proposal after density is known.
+- Recompared Programs 1-5 and 7 after invalid Program 4 Unit 040 and selected Program 2 `외부시장·이벤트` for outcome-free feasibility. The proposed single bundle is the official FOMC statement, CPI and Employment Situation calendar; no event-conditioned economic outcome has been read and no Unit 041 declaration exists yet.

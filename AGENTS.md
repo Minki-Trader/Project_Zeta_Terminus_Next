@@ -17,6 +17,7 @@ Then compare Git state and the relevant Next files and local processes. Do not q
 ## Boundaries
 
 - Maintain one active development judgment stream. Do not split migration, axes, or candidate development into concurrent or delegated streams.
+- Allocate each Frontier research unit to exactly one primary macro Program 1-5 or 7 under `Macro research allocation`; Program 6 is outside the current Goal. Freeze related variants once as one bundle, close them together, then recompare every active program before opening any successor. Do not continue into an adjacent threshold, window, subgroup, symbol, event, exit, sizing or retained-seed follow-up automatically.
 - The legacy Terminus repository is the only permitted adjacent-project reference and only for paths anchored in `CONTINUITY.md` or `lineage/`. Do not inspect or import any other adjacent project.
 - `live-dev/` and `lab/` share no compiled code, Include tree, settings, state, logs, or Portable runtime. A verified release moves one way from Lab to a frozen Live package.
 - Only `CURRENT_STATE.md` can authorize Next Live-Dev. While it says `DISABLED`, never place a real order or poll broker positions, orders, or deals.

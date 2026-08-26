@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0102`
+- Latest state ID: `STATE-0103`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,6 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 - Active engineering boundary: none; `protective-exit-order-reconciliation-v1` is closed, source-frozen and promoted as healthy CXR2
 - Active research boundary: none; Program 4 Unit 040 is closed invalid before economic judgment and all nearby age/threshold rescues remain closed
+- Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`

@@ -16,6 +16,24 @@ The active migration is not a new research search. `NEXT-E01/V7` is a behavior-p
 - Proxy best-of-many output is selection, not profit proof. Prefer broad profitable plateaus and terminate cost-negative core assumptions without nearby threshold, feature, label, model, or exit-number rescue.
 - Implementation defects are corrected and rerun; they are not economic failures.
 
+## Macro research allocation
+
+Frontier research is allocated across macro programs, not continued as a chain of nearby micro-hypotheses. Every new research unit must name exactly one primary program from the active map below. A unit may observe secondary interactions, but that does not create another active stream or authorize an adjacent successor.
+
+1. `entry_signal_market_structure` — 진입 신호·시장 구조
+2. `external_market_event` — 외부시장·이벤트
+3. `order_time_session` — 주문·시각·세션
+4. `position_management_exit` — 포지션 관리·청산
+5. `portfolio_capital_risk` — 포트폴리오·자본·위험
+6. `execution_recovery_broker_safety` — 실행·복구·브로커 안전; outside the current Goal and never opened by Frontier rotation
+7. `diagnostics_causal_meta` — 진단·인과·메타 연구
+
+At each durable unit boundary, recompare Programs 1-5 and 7 as a whole. Select the next primary program from research coverage, causal readiness, independence from recently closed work and expected information value; this is coverage-aware judgment, not mechanical round-robin scheduling. Recent concentration and an underrepresented ready program weigh against staying in the same neighborhood.
+
+One declaration may freeze a single research bundle containing two or three genuinely related variants needed to answer one macro question. The variants are allocated once, judged under one contract and closed together. After closure, do not extend the family with a nearby threshold, feature, time window, subgroup, symbol, event, exit or sizing rescue. A passing unit may retain one explicitly bounded later seed, but that seed is not opened automatically: all active macro programs must first be compared again, and any later work requires a newly named family and declaration.
+
+Outcome-free feasibility may reject a proposed bundle before declaration. A sparse or structurally confounded bundle is not rescued by widening its window or substituting an adjacent dataset after the density result is known. Invalid execution evidence closes that unit without making environment repair the next research topic; Program 6 remains outside this Goal.
+
 ## One stream and identity separation
 
 Maintain one attributable development stream to its next durable economic or engineering boundary, freeze source and evidence, then switch. No parallel or delegated candidate streams are allowed. Every legacy provenance family, Next descriptive research family, V5, every V6 version, and V7 keep separate source, binary, settings, Portfolio ID, Magic, state paths, evidence, and verdicts. Combination requires a separate user decision and fresh shared-account evidence.
