@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-rc-compression-horizon-slot-independence-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_NO_MATERIAL_RC_SLOT_REDUNDANCY",
+  "unit": "rc-compression-horizon-slot-independence-068",
+  "verdict": "NO_MATERIAL_RC_HORIZON_SLOT_REDUNDANCY_PRESERVE_DISTINCT_SLOTS",
+  "evidence": {
+    "declaration_sha256": "6B1E301F98B15733E72EAC39FA9C202C0FAC36816D706C16687B014A97BD2267",
+    "result_sha256": "03177E1D38B647711A5BE5CAC8085BEB88CAB55AF06918F4D245506F7D4F273B",
+    "result_bytes": 13246
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_invocations": 0,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_source_and_input_pins_passed": true,
+    "p4_candidate_rows": 4043,
+    "p4_unique_record_ids": 4043,
+    "p4_server_dates": 165,
+    "selected_signal_known_rows": {
+      "RC16": 165,
+      "RC4": 165,
+      "Pressure": 165,
+      "Return": 159
+    },
+    "cp2_event_rows": 16477,
+    "cp2_exact_duplicate_rows": 0,
+    "cp2_closed_lifecycles": 2233,
+    "cp2_selected_lifecycles": {
+      "RC16": 272,
+      "RC4": 206,
+      "Pressure": 118,
+      "Return": 238
+    },
+    "eligible_outcome_controls": 5
+  },
+  "findings": {
+    "signal_mechanism": {
+      "common_known_dates": 165,
+      "rc16_pass_dates": 44,
+      "rc4_pass_dates": 32,
+      "joint_pass_dates": 15,
+      "phi": 0.2241530158272311,
+      "joint_pass_lift": 1.7578125,
+      "median_control_phi": -0.06241350274953016,
+      "target_minus_median_control_phi": 0.28656651857676124,
+      "joint_direction_concordance": 0.5333333333333333,
+      "interpretation": "The shared estimator produces target-specific binary signal association, but nearly half of joint signals point in opposite directions because RC16 is long-only while RC4 follows feature sign. The frozen direction condition therefore rejects one-strategy equivalence."
+    },
+    "occupancy": {
+      "joint_birth_dates": 90,
+      "union_birth_dates": 388,
+      "joint_birth_share_of_either": 0.23195876288659795,
+      "positive_overlap_dates": 90,
+      "positive_overlap_share": 1.0,
+      "median_overlap_minutes": 240.0,
+      "median_overlap_coefficient": 0.8,
+      "period_joint_birth_shares": {
+        "P1_2022H2_2023": 0.17117117117117117,
+        "P2_2024": 0.2376237623762376,
+        "P3_2025": 0.2782608695652174,
+        "P4_2026_YTD": 0.2459016393442623
+      },
+      "interpretation": "The pair does consume simultaneous risk often enough to matter descriptively; all ninety same-date births overlap, typically for four hours. Occupancy alone cannot establish correlated adverse risk."
+    },
+    "stressed_loss_transmission": {
+      "observed_joint_loss_dates": 20,
+      "expected_joint_loss_dates": 17.115933752141633,
+      "observed_expected_ratio": 1.168501835168502,
+      "period_ratios": {
+        "P1_2022H2_2023": 1.410768300060496,
+        "P2_2024": 1.3377403846153846,
+        "P3_2025": 1.1657986111111112,
+        "P4_2026_YTD": 0.3943977591036415
+      },
+      "periods_at_least_1_10": 3,
+      "median_control_ratio": 1.506006006006006,
+      "target_minus_median_control_ratio": -0.33750417083750417,
+      "joint_loss_stressed_usd": 41.601000000000134,
+      "all_rc_negative_stressed_usd": 291.62799999999885,
+      "joint_loss_share_of_all_rc_negative": 0.142650911435117,
+      "largest_joint_loss_date_share": 0.15586163794139374,
+      "interpretation": "Joint RC losses are only 1.169 times marginal independence, below the 1.25 pooled gate and below the 1.506 natural-control median. They carry only 14.27% of RC negative dollars, and P4 is substantially below independence."
+    }
+  },
+  "gates": {
+    "mechanism_passed": false,
+    "mechanism_failed_condition": "joint_direction_concordance",
+    "portfolio_transmission_passed": false,
+    "transmission_passed_conditions": [
+      "joint_birth_density",
+      "joint_birth_share_and_period_breadth",
+      "exact_interval_overlap",
+      "natural_control_density"
+    ],
+    "transmission_failed_conditions": [
+      "pooled_joint_loss_incidence",
+      "joint_loss_excess_over_controls",
+      "joint_loss_mass_and_date_concentration"
+    ]
+  },
+  "decision_translation": {
+    "preserve": [
+      "RC16 and RC4 as distinct economic components",
+      "their separate nominal 4% risk identities within the current 12% aggregate contract",
+      "the native 16-bar long-only and 4-bar bidirectional signals, clocks, holds and RC4 ARC behavior"
+    ],
+    "discard": [
+      "the claim that shared compression ancestry makes RC16 and RC4 one adverse risk unit",
+      "a merged RC slot, shared risk reservation, component removal or priority change from this evidence"
+    ],
+    "observation": "Binary signal timing and occupancy overlap are real, but direction and adverse-loss behavior differentiate the horizons. Similarity does not translate into redundant portfolio risk.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "positive-RC4-only or same-direction subset",
+    "alternate RC horizon or compression threshold",
+    "13:00/13:30 clock alignment",
+    "period-specific or P4-excluding rescue",
+    "pair-specific slot sharing, cap, priority, component, EA or Live change"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_all_programs_and_heights_before_any_successor"
+}
