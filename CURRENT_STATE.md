@@ -5,7 +5,7 @@ Last updated: 2026-08-26
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0136`
+- Latest state ID: `STATE-0137`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -22,7 +22,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 ## Active work
 
-- Active engineering boundary: `lab/engineering/live-research-observation-ledger-v1/`; declaration-only boundary frozen before source derivation, with the running CXR2 terminal and dashboard unchanged
+- Active engineering boundary: `lab/engineering/live-research-observation-ledger-v1/`; source/configuration/EX5 compile boundary frozen and awaiting its single normal P4 real-tick observation, with the running CXR2 terminal and dashboard unchanged
 - Active research boundary: none; Program 7 Unit 055 `macro-context-composition-confounding-v1` is durably closed with no retained estimator, weighting, scheduler or adjacent meta successor
 - Active research scheduler: each future unit names one primary Program 1-5 or 7, freezes one bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6

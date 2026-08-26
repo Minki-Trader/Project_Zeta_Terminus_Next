@@ -1,0 +1,72 @@
+{
+  "schema": "zeta-next-live-research-observation-ledger-compile-receipt-v1",
+  "created_at_local": "2026-08-26",
+  "status": "IMPLEMENTED_COMPILED_AND_FROZEN_BEFORE_REAL_TICK_OUTCOME",
+  "family": "live-research-observation-ledger-v1",
+  "declaration": {
+    "path": "lab/engineering/live-research-observation-ledger-v1/evidence/LIVE_RESEARCH_OBSERVATION_LEDGER_DECLARATION_V1.json",
+    "sha256": "BFDA269CB8CC6316C5C0BE4CEE9097B9D6EB0B7DFE44BB564627BA3429D4F313"
+  },
+  "tree_manifest_algorithm": "Sort files by root-relative forward-slash path; for each file append UTF-8 path|byte_length|lowercase_file_sha256 plus LF; SHA-256 the complete UTF-8 payload.",
+  "source_manifest": {
+    "root": "lab/engineering/live-research-observation-ledger-v1/mt5/src/",
+    "files": 17,
+    "bytes": 634826,
+    "sha256": "B71A741C357A589F6FA6A368FF24FD9652CBF68C415DCC48CAAB6914AFD853D8"
+  },
+  "config_manifest": {
+    "root": "lab/engineering/live-research-observation-ledger-v1/mt5/config/",
+    "files": 2,
+    "bytes": 1401,
+    "sha256": "59A404314C7FD6ED032664EBC06BA975F13146384A18F5A5A5758F0F9384051B"
+  },
+  "compile": {
+    "final_result": "0 errors, 0 warnings",
+    "final_elapsed_ms": 2509,
+    "cpu": "X64 Regular",
+    "build": 6140,
+    "preliminary_successful_compile_before_final_context-field_refinement_ms": 2857,
+    "failed_compile_invocations": 0,
+    "source_or_configuration_change_allowed_after_this_receipt": false
+  },
+  "compiler_runtime": {
+    "dedicated_runtime": "lab/runtime/live-research-observation-ledger-v1-portable/",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "symbols_before_manifest": {
+      "root": "lab/runtime/live-research-observation-ledger-v1-portable/Bases/FPMarketsSC-Live/symbols/",
+      "files": 2,
+      "bytes": 431906,
+      "sha256": "96DBDD84DAF8C52E0BDC8C1BBAD452E20DC63891A2889DAFD164815B4AA8AF14"
+    },
+    "tracked_source_equals_runtime_source": true,
+    "runtime_source_files": 17,
+    "runtime_source_mismatches": 0,
+    "real_links_or_junctions": 0,
+    "cross_family_include_or_runtime_link": false
+  },
+  "binary": {
+    "artifact_path": "lab/artifacts/ea-files/live-research-observation-ledger-v1/ZetaNextPre500FiniteRiskPortfolioV7.ex5",
+    "bytes": 224254,
+    "sha256": "FF4ECC78D304B2DFBC9A67DE07BEA9ED7462B44E94A5738BAE0FC7E5A95AE4B4"
+  },
+  "compile_log": {
+    "artifact_path": "lab/artifacts/logs/live-research-observation-ledger-v1/rlo1.compile.log",
+    "bytes": 19372,
+    "sha256": "7C804C6673DA0AA38C3D1771475A41346ABC420ACDEDE8EC8CDB46E33758CDF4"
+  },
+  "non_outcome_setup_corrections": [
+    "The first runtime source-copy command used a wildcard with LiteralPath and therefore copied the EA and SET but not the Include children. Exact child enumeration immediately completed the physical copy before compilation.",
+    "Two read-only manifest commands were corrected after a PowerShell pipeline parse error and an assumed Tester symbols subdirectory that is not present. No source, configuration, binary or outcome changed."
+  ],
+  "implementation_boundary": {
+    "dashboard_changed": false,
+    "core_state_or_event_schema_changed": false,
+    "economic_or_order_behavior_changed": false,
+    "new_validator_or_test_added": false,
+    "live_terminal_or_dashboard_restarted": false
+  },
+  "outcomes_consumed": false,
+  "next": "commit_and_push_frozen_implementation_then_run_exactly_one_normal_p4_2026_ytd_real_tick_path"
+}
