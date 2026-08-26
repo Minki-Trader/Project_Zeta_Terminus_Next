@@ -1,0 +1,103 @@
+{
+  "schema": "zeta-next-all-slot-evaluation-clock-shape-closure-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_063_CLOSED_FROZEN",
+  "unit": "all-slot-evaluation-clock-shape-063",
+  "macro_program": {
+    "id": 3,
+    "name": "order_time_session"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "verdict": "INSUFFICIENT_RC16_ALL_SLOT_DENSITY_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "787372343BF323E4B226722F2000729F19CD4584E9ABAAF11D5595B28178D8AF",
+    "acquisition_receipt_sha256": "46BB0A35937C73A0EB5861B6FE33E20E8355535A29AE1DF3F79158087B9EEC39",
+    "bar_export_sha256": "1AAE390A264F6C7296A3689082ABD0CB9A3AE6B420754664EF16CFBED640EEF0",
+    "slot_metrics_sha256": "BCE32C14A2446B75A17BFD83C3FFFAB6526ECD98FD02D04280FC89F7AB1664C5",
+    "result_sha256": "CA56D5A7B23EB008965894D15349D0DD2DB1D5D5BEF05A95C2A4E42B519E00BB"
+  },
+  "integrity": {
+    "bar_rows": 19604,
+    "candidate_known_parity_rows": 151,
+    "candidate_passed": 39,
+    "candidate_not_met": 112,
+    "missing_joins": 0,
+    "flag_mismatches": 0,
+    "maximum_feature_absolute_difference": 0.0,
+    "passed": true
+  },
+  "observation": {
+    "selection_2025": {
+      "eligible_days": 258,
+      "nonnative_signals": 1559,
+      "native_signals": 79,
+      "supported_common_nonnative_slots": 23,
+      "nonnative_mean_forward_return_atr": 0.13887456674217422,
+      "native_mean_forward_return_atr": 0.6688205736563447,
+      "nonnative_to_native_ratio": 0.20764099104034311,
+      "positive_supported_slot_fraction": 0.5652173913043478,
+      "positive_quadrants": 2,
+      "q4_signal_count": 34,
+      "top_four_positive_contribution_share": 0.576261801222043,
+      "nonoverlap_starts_per_day": 1.5077519379844961,
+      "incremental_starts_over_native_per_day": 1.2015503875968991
+    },
+    "confirmation_2026_complete_months": {
+      "eligible_days": 151,
+      "nonnative_signals": 833,
+      "native_signals": 39,
+      "supported_common_nonnative_slots": 23,
+      "nonnative_mean_forward_return_atr": 0.48402031255202094,
+      "native_mean_forward_return_atr": 2.7661226033884203,
+      "nonnative_to_native_ratio": 0.17498151092764652,
+      "positive_supported_slot_fraction": 0.782608695652174,
+      "positive_quadrants": 4,
+      "q4_signal_count": 12,
+      "top_four_positive_contribution_share": 0.5201050900821733,
+      "nonoverlap_starts_per_day": 1.3774834437086092,
+      "incremental_starts_over_native_per_day": 1.119205298013245
+    },
+    "cross_period_nonnative_mean_drift_atr": 0.3451457458098467,
+    "capacity_transmission_passed_both_periods": true,
+    "density_passed_both_periods": false,
+    "broad_shape_passed_both_periods": false
+  },
+  "judgment": {
+    "reason": "The all-slot clock produced enough component-local starts and positive pooled nonnative response, but the declared complete-clock evidence was not dense in Q4 and the broad-shape gate independently failed. In 2025 only 13 of 23 supported nonnative slots and two of four quadrants were positive; in both periods nonnative mean was only about 17 to 21 percent of native 13:30, top-four concentration exceeded 50 percent, and cross-period drift exceeded 0.20 ATR.",
+    "economic_translation": "Opportunity count alone is not sufficient. The evidence does not support treating RC16 as a broadly portable all-day signal, so no full-portfolio all-slot real-tick candidate is worth opening from this bundle.",
+    "interpretation_limit": "Because the frozen density rule failed, this is not a definitive estimate for the sparse evening clock. It is nevertheless a terminal no-candidate decision under the declared bundle, and the observed broad-shape failures cannot be rescued by selecting favorable times."
+  },
+  "decision": {
+    "preserve_native_13_30_clock": true,
+    "selected_time_slot": null,
+    "selected_candidate": null,
+    "retained_later_question": null,
+    "full_portfolio_all_slot_candidate": false,
+    "time_threshold_window_session_or_subgroup_rescue": false,
+    "same_family_rerun": false,
+    "automatic_followup": false,
+    "promotion": "none",
+    "live_action": "none"
+  },
+  "budget": {
+    "runtime_copies_used": 1,
+    "bar_acquisitions_used": 1,
+    "acquisition_corrections_used": 0,
+    "successful_fixed_aggregations_used": 1,
+    "premetric_parser_corrections_used": 0,
+    "metric_reruns_used": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mql_changes": 0,
+    "orders": 0
+  },
+  "family_frozen": true,
+  "program_6_opened": false,
+  "broker_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "commit_push_closure_then_recompare_all_programs_and_heights_before_the_remaining_cross_common_beta_proposal"
+}

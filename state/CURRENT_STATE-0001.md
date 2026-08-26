@@ -1283,3 +1283,13 @@
 - Canonical US30 HCC files stayed byte/hash exact. The dedicated 2026 HCC synchronized privately, as allowed for that ignored copy. Dedicated terminal PID `11608` was stopped by exact path; pre-existing exact Live PID `15080` was excluded and untouched.
 - Premetric reconstruction joined all 151 known RC16 13:30 candidate rows, reproduced 39 pass and 112 miss flags with zero mismatch and maximum feature absolute difference `0`. No ATR, forward return, MAE, slot mean, daily rate or candidate gate was emitted.
 - Acquisition/parity receipt SHA-256 is `46BB0A35937C73A0EB5861B6FE33E20E8355535A29AE1DF3F79158087B9EEC39`. Freeze this data boundary in Git before the one allowed fixed aggregation; zero metric rerun remains.
+
+## STATE-0157 - 2026-08-27
+
+- Data commit `ff4c7f04bcef555d6697b240ffdb6800eb1c96a5` was pushed before exactly one Unit 063 aggregation. Immutable inputs and 151-row parity re-passed; there was no parser correction or metric rerun.
+- 2025/2026 nonnative means were positive at `+0.13887/+0.48402 ATR`, but native 13:30 was `+0.66882/+2.76612`, so ratios were only `20.76%/17.50%`. Common supported nonnative slots numbered 23.
+- Component-local capacity passed both periods: non-overlap starts/day `1.5078/1.3775`, incremental over native `1.2016/1.1192`, nonnative share `95.89%/97.60%`. This does not reconstruct shared admission or portfolio economics.
+- Q4 density was only `34/12` versus the frozen 50 requirement. The broad gate independently failed through 2025 slot/quadrant breadth, native uniqueness, top-four concentration `57.63%/52.01%` and nonnative mean drift `0.34515 ATR` versus `0.20`.
+- Closed `INSUFFICIENT_RC16_ALL_SLOT_DENSITY_NO_CANDIDATE`; preserve 13:30, retain no time, all-slot portfolio, threshold/window/session, EA or Live candidate. Slot/result/closure hashes are `BCE32C14...` / `CA56D5A7...` / `3D334555...`.
+- An exact-target cleanup command for ignored Unit 063 bytecode unexpectedly scoped to the ignored temp parent and also removed three unreferenced ignored temp copies. They had zero tracked/state reference and affected no evidence, canonical input, baseline or Live, but are not Git-recoverable; receipt SHA-256 `0A1E055B406BED7AD70CBFADF1F6B73AC73C668BF9B60BB1172987305A55FF54` preserves this disclosure.
+- Active research returns to none until the whole Program 1-5 and 7 plus height map is compared before the remaining Cross common-beta proposal. Program 6, broker/account query and Live remain untouched.
