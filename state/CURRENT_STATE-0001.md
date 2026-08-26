@@ -955,3 +955,11 @@
 - This is not a rescue of Unit 018 carry, Unit 017 crowding or Unit 042 DST mismatch. It uses birth weekday only, after four intervening macro allocations, with no hold duration, incumbent state, mismatch interval or shifted clock.
 - Outcome-free exact-component classification reproduced all 2,233 births and zero weekend birth: Monday/midweek/Friday `416/1,368/449`. Every role spans all four periods and six strategies; the minimum strategy-period counts are `3/12/4`.
 - Each edge independently requires material R and stop residuals, economic concordance, three-of-four period and four-of-six strategy breadth plus contribution caps. Declaration SHA-256 is `EB97CC2DA453DC53B5B2286FD8F7CA26CB096AE2481F3427340214BECD7D3258`; conditioned outcomes remain unopened. One fixed aggregation remains, then the whole map is compared again without adjacent Program 3 work. Program 6, MQL, Tester, broker state and Live remain untouched.
+
+## STATE-0118 - 2026-08-26
+
+- Unit 047's first aggregation invocation parser-stopped before input because escaped quotes made one hash index invalid. Used the sole pre-metric implementation correction for quoting and operator whitespace only; no input, classification, metric or gate changed.
+- The corrected sole aggregation passed exact clock/file pins, 16,477 rows, zero duplicates/faults, all 2,233 lifecycles, `$407.0477` stressed net, 206 stops, weekday topology and 24 finite strategy-period midweek benchmarks.
+- Monday residual R/stop were `-0.005443397944R/-0.008941840274`; the `0.10R/0.05` minima failed, channels were not economically concordant and return sign held in only two periods.
+- Friday residual R/stop were `+0.003147841176R/+0.016974001313`; both minima failed, channels were not concordant and return sign held in only two periods and three strategies.
+- Closed `NO_NEW_YORK_WEEK_EDGE_ENTRY_STATE_PASSED` with no retained context, filter, order, session, EA or Live action. Declaration/result/closure SHA-256 values are `EB97CC2DA453DC53B5B2286FD8F7CA26CB096AE2481F3427340214BECD7D3258` / `182E592E7A15842C7B638FB5FD962A0346A2A1E57AC5F624EB5A5EDC4A009AAB` / `596CBBBADE3B21E52B77F8F915567802B8D6E9F3F6A3BDC08C98B7DDECBC4A3B`. Next is a fresh whole-map comparison, not another weekday/calendar/session question. Program 6, MQL, Tester, broker state and Live remained untouched.

@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-new-york-week-edge-entry-state-result-v1",
+  "created_at_local": "2026-08-26",
+  "status": "UNIT_047_CLOSED_NO_WEEK_EDGE_STATE_PASSED",
+  "unit": "new-york-week-edge-entry-state-047",
+  "family": "new-york-week-edge-entry-state-v1",
+  "frozen_inputs": {
+    "declaration_sha256": "EB97CC2DA453DC53B5B2286FD8F7CA26CB096AE2481F3427340214BECD7D3258",
+    "declaration_commit": "319810f",
+    "session_clock_source_exact": true,
+    "six_event_file_pins_exact": true,
+    "files": 6,
+    "bytes": 5692770
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_shell_or_aggregation_invocations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "correction": "The first PowerShell invocation parser-stopped before reading any input because escaped quote characters made a hash index invalid. Only hash-index quoting and operator whitespace were corrected; no input, classification, metric or gate changed.",
+    "same_unit_metric_reruns": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "reusable_analysis_cli_or_script_retained": false
+  },
+  "integrity": {
+    "total_data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "faults": {
+      "overlap": 0,
+      "orphan_close": 0,
+      "missing_close": 0,
+      "risk": 0,
+      "passive_pending_overlap": 0,
+      "passive_fill_without_place": 0,
+      "passive_expire_without_place": 0,
+      "passive_pending_at_end": 0,
+      "weekday": 0
+    },
+    "fault_total": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {"RC16":272,"RC4":206,"Cross":805,"Pressure":118,"Return":238,"Passive":594},
+    "stressed_net_usd_2x": 407.04770000000565,
+    "stop_exits": 206,
+    "role_counts": {"MONDAY_WEEK_REOPEN":416,"TUESDAY_THURSDAY_MIDWEEK":1368,"FRIDAY_WEEK_CLOSE":449},
+    "period_role_counts": {
+      "P1_2022H2_2023": {"MONDAY_WEEK_REOPEN":141,"TUESDAY_THURSDAY_MIDWEEK":473,"FRIDAY_WEEK_CLOSE":155},
+      "P2_2024": {"MONDAY_WEEK_REOPEN":98,"TUESDAY_THURSDAY_MIDWEEK":340,"FRIDAY_WEEK_CLOSE":116},
+      "P3_2025": {"MONDAY_WEEK_REOPEN":106,"TUESDAY_THURSDAY_MIDWEEK":338,"FRIDAY_WEEK_CLOSE":110},
+      "P4_2026_YTD": {"MONDAY_WEEK_REOPEN":71,"TUESDAY_THURSDAY_MIDWEEK":217,"FRIDAY_WEEK_CLOSE":68}
+    },
+    "strategy_role_counts": {
+      "RC16": {"MONDAY_WEEK_REOPEN":70,"TUESDAY_THURSDAY_MIDWEEK":151,"FRIDAY_WEEK_CLOSE":51},
+      "RC4": {"MONDAY_WEEK_REOPEN":43,"TUESDAY_THURSDAY_MIDWEEK":116,"FRIDAY_WEEK_CLOSE":47},
+      "Cross": {"MONDAY_WEEK_REOPEN":153,"TUESDAY_THURSDAY_MIDWEEK":502,"FRIDAY_WEEK_CLOSE":150},
+      "Pressure": {"MONDAY_WEEK_REOPEN":28,"TUESDAY_THURSDAY_MIDWEEK":65,"FRIDAY_WEEK_CLOSE":25},
+      "Return": {"MONDAY_WEEK_REOPEN":28,"TUESDAY_THURSDAY_MIDWEEK":161,"FRIDAY_WEEK_CLOSE":49},
+      "Passive": {"MONDAY_WEEK_REOPEN":94,"TUESDAY_THURSDAY_MIDWEEK":373,"FRIDAY_WEEK_CLOSE":127}
+    },
+    "strategy_period_role_counts": {
+      "RC16": [[19,46,12],[18,33,21],[20,48,11],[13,24,7]],
+      "RC4": [[13,26,14],[7,34,12],[13,40,15],[10,16,6]],
+      "Cross": [[54,178,54],[39,121,37],[39,118,36],[21,85,23]],
+      "Pressure": [[7,21,7],[5,12,6],[6,18,8],[10,14,4]],
+      "Return": [[14,69,22],[5,36,9],[6,36,10],[3,20,8]],
+      "Passive": [[34,133,46],[24,104,31],[22,78,30],[14,58,20]],
+      "array_order": ["MONDAY_WEEK_REOPEN","TUESDAY_THURSDAY_MIDWEEK","FRIDAY_WEEK_CLOSE"],
+      "period_order": ["P1_2022H2_2023","P2_2024","P3_2025","P4_2026_YTD"]
+    },
+    "midweek_benchmarks": {
+      "RC16": [[46,0.06046497958392755,0.043478260869565216],[33,0.019307225696950193,0.12121212121212122],[48,0.11122791990923149,0.08333333333333333],[24,0.11940902027621125,0.08333333333333333]],
+      "RC4": [[26,0.1270019988956666,0.15384615384615385],[34,0.053935654365897916,0.29411764705882354],[40,0.012131323953744173,0.325],[16,0.06550003215822095,0.375]],
+      "Cross": [[178,0.009046610507662122,0.0056179775280898875],[121,0.022503059580475566,0.05785123966942149],[118,0.013755619345019397,0.03389830508474576],[85,0.022084778808439853,0.07058823529411765]],
+      "Pressure": [[21,0.059357874214603756,0.047619047619047616],[12,-0.0660618900663406,0.25],[18,-0.023123877477058696,0.3888888888888889],[14,0.1572379687083912,0.07142857142857142]],
+      "Return": [[69,0.07111401859118302,0.07246376811594203],[36,-0.06152742591814934,0.3888888888888889],[36,0.214345104902791,0.2777777777777778],[20,0.13745685421505238,0.2]],
+      "Passive": [[133,0.004834219331469394,0.015037593984962405],[104,0.005232775966494905,0.057692307692307696],[78,0.021217776266044326,0.038461538461538464],[58,0.00889283058985863,0.06896551724137931]],
+      "array_order": ["n","mean_stressed_r","stop_rate"],
+      "period_order": ["P1_2022H2_2023","P2_2024","P3_2025","P4_2026_YTD"],
+      "benchmark_faults": 0
+    },
+    "exact_frozen_counts": true,
+    "gate_passed": true
+  },
+  "role_metrics": {
+    "MONDAY_WEEK_REOPEN": {
+      "n": 416,
+      "stressed_net_usd_2x": 62.58300000000147,
+      "mean_stressed_r": 0.03125704060635322,
+      "stop_rate": 0.07932692307692307,
+      "positive_rate": 0.5721153846153846,
+      "period_mean_r_stop": [[0.015265748484786727,0.03546099290780142],[0.013614854010198957,0.09183673469387756],[0.03435488018926051,0.10377358490566038],[0.08274063891305507,0.11267605633802817]],
+      "strategy_mean_r_stop": {"RC16":[0.09180892325744638,0.05714285714285714],"RC4":[0.03526928018281131,0.2558139534883721],"Cross":[0.008609132954133583,0.026143790849673203],"Pressure":[0.03010965364170051,0.17857142857142858],"Return":[0.05292294105202751,0.21428571428571427],"Passive":[0.015081013010148837,0.031914893617021274]}
+    },
+    "TUESDAY_THURSDAY_MIDWEEK": {
+      "n": 1368,
+      "stressed_net_usd_2x": 249.86520000000314,
+      "mean_stressed_r": 0.032807151940582896,
+      "stop_rate": 0.08991228070175439,
+      "positive_rate": 0.5614035087719298,
+      "period_mean_r_stop": [[0.03063440066574121,0.03171247357293869],[0.008030292918657157,0.12941176470588237],[0.04852821516914215,0.12130177514792899],[0.05187684801985401,0.10599078341013825]],
+      "strategy_mean_r_stop": {"RC16":[0.07697539172935235,0.07947019867549669],"RC4":[0.057492393900079,0.28448275862068967],"Cross":[0.015604653707233213,0.035856573705179286],"Pressure":[0.034444222231400194,0.18461538461538463],"Return":[0.08172323484807312,0.20496894409937888],"Passive":[0.009002494891592907,0.040214477211796246]}
+    },
+    "FRIDAY_WEEK_CLOSE": {
+      "n": 449,
+      "stressed_net_usd_2x": 94.59950000000028,
+      "mean_stressed_r": 0.03528782371987119,
+      "stop_rate": 0.111358574610245,
+      "positive_rate": 0.5946547884187082,
+      "period_mean_r_stop": [[0.0467148256787422,0.03870967741935484],[0.06772828071740221,0.11206896551724138],[0.007782507347934579,0.18181818181818182],[-0.0016047279628580648,0.16176470588235295]],
+      "strategy_mean_r_stop": {"RC16":[0.04389896673134272,0.13725490196078433],"RC4":[0.11139706797965022,0.19148936170212766],"Cross":[0.05099884039538638,0.04666666666666667],"Pressure":[0.07239994481928949,0.16],"Return":[-0.026355607018585258,0.30612244897959184],"Passive":[0.0015852237480362388,0.06299212598425197]}
+    },
+    "period_order": ["P1_2022H2_2023","P2_2024","P3_2025","P4_2026_YTD"]
+  },
+  "variants": [
+    {
+      "id": "MONDAY_WEEK_REOPEN",
+      "n": 416,
+      "mean_stressed_r_residual": -0.005443397943653664,
+      "mean_stop_residual": -0.008941840274474677,
+      "period_residual_r_stop": [[-0.019229587701034483,0.00008112038663944153],[0.0024889457447054312,-0.021182651912216462],[-0.00840788590929071,-0.0099986265200528],[0.015411796404079227,-0.008387172255983535]],
+      "strategy_residual_r_stop": {"RC16":[0.01647691845151631,-0.025112930547713137],"RC4":[-0.03080707096104531,-0.0240424076607387],"Cross":[-0.006857440905247428,-0.008914744922260453],"Pressure":[-0.024134349622302483,0.013180272108843538],"Return":[-0.03230564190324815,0.027657004830917892],"Passive":[0.005706111025288909,-0.0075272836982687545]},
+      "sign_breadth": {"stressed_r_periods":2,"stop_periods":3,"stressed_r_strategies":4,"stop_strategies":4},
+      "maximum_period_stressed_r_contribution_share": 0.5487760523376662,
+      "maximum_strategy_stressed_r_contribution_share": 0.23471134972191882,
+      "density_passed": true,
+      "failed_information_gates": ["absolute_stressed_r_at_least_0_10","absolute_stop_at_least_0_05","economic_concordance","stressed_r_sign_at_least_three_periods"],
+      "passed": false
+    },
+    {
+      "id": "FRIDAY_WEEK_CLOSE",
+      "n": 449,
+      "mean_stressed_r_residual": 0.0031478411758408898,
+      "mean_stop_residual": 0.01697400131297744,
+      "period_residual_r_stop": [[0.0132018429386386,0.0025921185419992133],[0.058268016253572245,-0.017274342382677235],[-0.033087243487712484,0.05404781188679498],[-0.05518232454856505,0.04820753859353066]],
+      "strategy_residual_r_stop": {"RC16":[-0.018657930436855517,0.04770208478648378],"RC4":[0.047562474592722656,-0.08102676422451141],"Cross":[0.035503624522678606,0.01141509967265997],"Pressure":[0.053876159454438355,-0.04920634920634919],"Return":[-0.1131692286204426,0.11281672089125507],"Passive":[-0.007855563999896339,0.023516949917767333]},
+      "sign_breadth": {"stressed_r_periods":2,"stop_periods":3,"stressed_r_strategies":3,"stop_strategies":4},
+      "maximum_period_stressed_r_contribution_share": 0.4172955066816903,
+      "maximum_strategy_stressed_r_contribution_share": 0.3380783612025617,
+      "density_passed": true,
+      "failed_information_gates": ["absolute_stressed_r_at_least_0_10","absolute_stop_at_least_0_05","economic_concordance","stressed_r_sign_at_least_three_periods","stressed_r_sign_at_least_four_strategies"],
+      "passed": false
+    }
+  ],
+  "bundle": {
+    "passing_variants": [],
+    "passing_count": 0,
+    "verdict": "NO_NEW_YORK_WEEK_EDGE_ENTRY_STATE_PASSED",
+    "retained_context_question": null,
+    "automatic_successor": false,
+    "economic_interpretation": "After exact same-strategy-period midweek adjustment, Monday and Friday effects were economically negligible and lacked return/stop concordance. The natural market-week edges do not support a portfolio timing context in this consumed evidence."
+  },
+  "nearby_rescue": false,
+  "next": "close_unit_then_recompare_programs_1_to_5_and_7_without_adjacent_program_3_calendar_or_session_followup",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED"
+}

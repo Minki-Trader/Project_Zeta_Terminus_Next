@@ -1,0 +1,63 @@
+{
+  "schema": "zeta-next-new-york-week-edge-entry-state-closure-v1",
+  "created_at_local": "2026-08-26",
+  "status": "CLOSED_NO_FIELD",
+  "unit": "new-york-week-edge-entry-state-047",
+  "family": "new-york-week-edge-entry-state-v1",
+  "macro_program": {
+    "id": 3,
+    "name": "order_time_session",
+    "korean_name": "주문·시각·세션"
+  },
+  "evidence": {
+    "declaration_commit": "319810f",
+    "declaration_sha256": "EB97CC2DA453DC53B5B2286FD8F7CA26CB096AE2481F3427340214BECD7D3258",
+    "result_sha256": "182E592E7A15842C7B638FB5FD962A0346A2A1E57AC5F624EB5A5EDC4A009AAB"
+  },
+  "execution": {
+    "successful_fixed_in_memory_aggregations": 1,
+    "failed_pre_metric_parser_invocations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "same_unit_metric_reruns": 0,
+    "mql_files_added_or_changed": 0,
+    "tester_paths": 0,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "data_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "lifecycles": 2233,
+    "stressed_net_usd_2x": 407.0477,
+    "stop_exits": 206,
+    "role_counts": {"MONDAY_WEEK_REOPEN":416,"TUESDAY_THURSDAY_MIDWEEK":1368,"FRIDAY_WEEK_CLOSE":449},
+    "strategy_period_midweek_benchmarks": 24,
+    "faults": 0
+  },
+  "judgments": {
+    "MONDAY_WEEK_REOPEN": {
+      "mean_stressed_r_residual": -0.005443397943653664,
+      "mean_stop_residual": -0.008941840274474677,
+      "density_passed": true,
+      "information_passed": false,
+      "reason": "Both magnitudes missed by wide margins, return and stop were not economically concordant, and return sign held in only two periods."
+    },
+    "FRIDAY_WEEK_CLOSE": {
+      "mean_stressed_r_residual": 0.0031478411758408898,
+      "mean_stop_residual": 0.01697400131297744,
+      "density_passed": true,
+      "information_passed": false,
+      "reason": "Both magnitudes missed by wide margins, return and stop were not economically concordant, and return sign held in only two periods and three strategies."
+    }
+  },
+  "verdict": "NO_NEW_YORK_WEEK_EDGE_ENTRY_STATE_PASSED",
+  "economic_finding": "The portfolio's native entry economics are effectively invariant between the natural New York market-week edges and same-strategy-period midweek context at the declared material scale.",
+  "retained_context_question": null,
+  "selected_candidate": null,
+  "nearby_rescue": false,
+  "family_frozen": true,
+  "adjacent_program_3_successor": false,
+  "next": "Recompare Programs 1-5 and 7 as a whole. Do not open another weekday, calendar edge, holiday, month boundary, session slice or timing successor automatically.",
+  "goal_status": "ACTIVE_UNTIL_USER_CLEAR"
+}
