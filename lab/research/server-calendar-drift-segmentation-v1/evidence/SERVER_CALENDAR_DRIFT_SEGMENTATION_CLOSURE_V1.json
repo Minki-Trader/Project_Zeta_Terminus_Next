@@ -1,0 +1,111 @@
+{
+  "schema": "zeta-next-server-calendar-drift-segmentation-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_FALSIFIED_INTRADAY_DOMINANCE_NO_CANDIDATE",
+  "unit": "server-calendar-drift-segmentation-071",
+  "family": "server-calendar-drift-segmentation-v1",
+  "verdict": "NO_MATERIAL_OVERNIGHT_DRIFT_OMISSION_INTRADAY_DOMINATES",
+  "evidence": {
+    "declaration_sha256": "B5AB83C3E9390910B957F27AA6DF4222FDC63BD05CB9E084963ADE1F0BF7DD1B",
+    "result_sha256": "F6182E21FEF2688EC940B36B0473E5629CDA266C11D959896629D73A2A403230",
+    "result_bytes": 10956
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 0,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "all_input_pins_passed": true,
+    "h1_physical_rows": 24417,
+    "calendar_dates": 1069,
+    "date_transitions": 1068,
+    "symbol_date_rows": 3204,
+    "exact_13_00_dates": 1067,
+    "maximum_total_identity_error": 2.96637714392034e-16,
+    "maximum_active_identity_error": 3.135512682828079e-16,
+    "density_passed": true
+  },
+  "findings": {
+    "pooled_path": {
+      "total_log_return": 2.1481204244826757,
+      "gap_log_return": 0.36430321216390205,
+      "intraday_log_return": 1.783817212318777,
+      "gap_share_of_total": 0.16959161507513523,
+      "intraday_share_of_total": 0.8304083849248663,
+      "interpretation": "Only 16.96% of positive pooled calendar drift came from the previous-last to current-first gap; 83.04% came from the current-date intraday path."
+    },
+    "active_envelope": {
+      "active_population_total_log_return": 2.129789626919779,
+      "predecision_log_return": 0.5682180147381743,
+      "active_envelope_log_return": 1.1987026920980712,
+      "active_envelope_share_of_active_population_total": 0.5628268054961383,
+      "interpretation": "The exact 13:00-to-last envelope carried 56.28% of the positive active-population total, contradicting the frozen low-active-envelope condition."
+    },
+    "breadth": {
+      "intraday_share_at_least_0_50_periods": 4,
+      "intraday_share_at_least_0_50_symbols": 3,
+      "gap_share_at_least_0_50_periods": 0,
+      "gap_share_at_least_0_50_symbols": 0,
+      "p4_gap_log_return": -0.09569353850175857,
+      "interpretation": "Intraday dominance held in every period and symbol, while no period or symbol reached the gap-dominance threshold and the 2026 YTD gap contribution was negative."
+    },
+    "gap_composition": {
+      "short_gap_log_return": 0.34580900028719647,
+      "long_gap_log_return": 0.018494211876705587,
+      "short_gap_share_of_positive_gap": 0.9492340137028906,
+      "short_gap_positive_periods": 4,
+      "short_gap_positive_symbols": 3,
+      "largest_period_positive_gap_share": 0.4437378158707416,
+      "interpretation": "Ordinary short gaps supplied nearly all positive gap return, so implementability composition passed descriptively; however, the entire gap channel was too small to establish a material omitted overnight opportunity."
+    }
+  },
+  "gates": {
+    "integrity_density_passed": true,
+    "overnight_dominance_passed": false,
+    "short_gap_implementability_passed": true,
+    "intraday_falsifier_passed": true,
+    "failed_overnight_conditions": [
+      "pooled gap share at least 0.60",
+      "gap share at least 0.50 in three periods",
+      "gap share at least 0.50 in two symbols",
+      "pooled active-envelope share at most 0.40",
+      "active-envelope share at most 0.50 in three periods and two symbols"
+    ]
+  },
+  "decision_translation": {
+    "preserve": [
+      "the existing same-server-day portfolio orientation",
+      "the descriptive observation that ordinary short gaps are positive and carry most of the small aggregate gap contribution",
+      "the exact H1 server-calendar decomposition as a closed opportunity ceiling"
+    ],
+    "discard": [
+      "the claim that the portfolio omits most favorable index drift by avoiding overnight exposure",
+      "an overnight sleeve, weekend sleeve, session-boundary, hedge, lot, risk, slot, component, EA or Live candidate from this bundle"
+    ],
+    "observation": "Positive server-calendar gap drift exists, but it is only 16.96% of total drift and is dominated economically by the intraday path in every period and symbol.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "ordinary-short-gap-only or best-symbol rescue",
+    "weekday, month, period, positive-gap or long-gap subgroup",
+    "alternate midnight, New York, exchange-local, 13:30 or daylight-saving boundary",
+    "overnight execution, financing, spread, stop, allocation, component, EA or Live implementation"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_unit"
+}

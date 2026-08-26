@@ -1,0 +1,295 @@
+{
+  "gates": {
+    "integrity_density": {
+      "passed": true,
+      "periods": {
+        "P1_2022H2_2023": {
+          "date_transitions_at_least_140": true,
+          "exact_13_00_share_at_least_0_95": true
+        },
+        "P2_2024": {
+          "date_transitions_at_least_140": true,
+          "exact_13_00_share_at_least_0_95": true
+        },
+        "P3_2025": {
+          "date_transitions_at_least_140": true,
+          "exact_13_00_share_at_least_0_95": true
+        },
+        "P4_2026_YTD": {
+          "date_transitions_at_least_140": true,
+          "exact_13_00_share_at_least_0_95": true
+        }
+      }
+    },
+    "intraday_falsifier": {
+      "checks": {
+        "period_intraday_breadth_at_least_3": true,
+        "pooled_intraday_share_at_least_0_60": true,
+        "pooled_total_positive": true,
+        "symbol_intraday_breadth_at_least_2": true
+      },
+      "passed": true,
+      "period_intraday_breadth": 4,
+      "symbol_intraday_breadth": 3
+    },
+    "overnight_dominance": {
+      "checks": {
+        "period_active_low_breadth_at_least_3": false,
+        "period_gap_breadth_at_least_3": false,
+        "pooled_active_envelope_share_at_most_0_40": false,
+        "pooled_active_population_total_positive": true,
+        "pooled_gap_positive": true,
+        "pooled_gap_share_at_least_0_60": false,
+        "pooled_total_positive": true,
+        "symbol_active_low_breadth_at_least_2": false,
+        "symbol_gap_breadth_at_least_2": false
+      },
+      "passed": false,
+      "period_active_low_breadth": 2,
+      "period_gap_breadth": 0,
+      "symbol_active_low_breadth": 1,
+      "symbol_gap_breadth": 0
+    },
+    "short_gap_implementability": {
+      "checks": {
+        "largest_period_positive_gap_share_at_most_0_60": true,
+        "period_short_gap_positive_at_least_3": true,
+        "pooled_short_gap_positive": true,
+        "pooled_short_gap_share_at_least_0_50": true,
+        "symbol_short_gap_positive_at_least_2": true
+      },
+      "largest_period_positive_gap_share": 0.4437378158707416,
+      "passed": true,
+      "period_short_gap_positive": 4,
+      "symbol_short_gap_positive": 3
+    }
+  },
+  "integrity": {
+    "all_pins_passed": true,
+    "calendar_dates": 1069,
+    "date_transitions": 1068,
+    "h1_physical_rows": 24417,
+    "maximum_active_identity_error": 3.135512682828079e-16,
+    "maximum_total_identity_error": 2.96637714392034e-16,
+    "passed": true,
+    "same_day_lifecycle_anchor": {
+      "lifecycles": 2233,
+      "same_day": 2230
+    },
+    "symbol_date_rows": 3204
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "date_transitions": 386,
+      "dates_with_exact_13_00": 386,
+      "exact_13_00_date_share": 1,
+      "log_return": {
+        "active_envelope": 0.6071142407570674,
+        "active_population_intraday": 0.5817776639853324,
+        "active_population_total": 0.785895617433351,
+        "gap": 0.20411795344801836,
+        "intraday": 0.5817776639853324,
+        "long_gap": 0.09641069311037131,
+        "predecision": -0.025336576771735776,
+        "short_gap": 0.10770726033764703,
+        "total": 0.785895617433351
+      },
+      "shares": {
+        "active_envelope_of_active_population_intraday": 1.0435502741686107,
+        "active_envelope_of_active_population_total": 0.7725125669231189,
+        "gap_of_total": 0.2597265450017971,
+        "intraday_of_total": 0.7402734549982025,
+        "long_gap_of_gap": 0.47232833507182753,
+        "predecision_of_active_population_total": -0.03223911192491728,
+        "short_gap_of_gap": 0.5276716649281724
+      },
+      "symbol_date_rows": 1158
+    },
+    "P2_2024": {
+      "date_transitions": 259,
+      "dates_with_exact_13_00": 259,
+      "exact_13_00_date_share": 1,
+      "log_return": {
+        "active_envelope": 0.20227080911073425,
+        "active_population_intraday": 0.3641758459062693,
+        "active_population_total": 0.5456317525943708,
+        "gap": 0.18145590668810815,
+        "intraday": 0.3641758459062693,
+        "long_gap": 0.08534312110465471,
+        "predecision": 0.1619050367955327,
+        "short_gap": 0.09611278558345343,
+        "total": 0.5456317525943708
+      },
+      "shares": {
+        "active_envelope_of_active_population_intraday": 0.5554207160757011,
+        "active_envelope_of_active_population_total": 0.370709380729726,
+        "gap_of_total": 0.3325611198859328,
+        "intraday_of_total": 0.6674388801140794,
+        "long_gap_of_gap": 0.4703242934458178,
+        "predecision_of_active_population_total": 0.29672949938434917,
+        "short_gap_of_gap": 0.5296757065541822
+      },
+      "symbol_date_rows": 777
+    },
+    "P3_2025": {
+      "date_transitions": 258,
+      "dates_with_exact_13_00": 257,
+      "exact_13_00_date_share": 0.9961240310077519,
+      "log_return": {
+        "active_envelope": 0.1776304533498065,
+        "active_population_intraday": 0.37558640808462057,
+        "active_population_total": 0.4485750065337828,
+        "gap": 0.07442289052953412,
+        "intraday": 0.3924829135671439,
+        "long_gap": 0.006407748447569533,
+        "predecision": 0.1979559547348105,
+        "short_gap": 0.06801514208196457,
+        "total": 0.46690580409667953
+      },
+      "shares": {
+        "active_envelope_of_active_population_intraday": 0.47294164412303735,
+        "active_envelope_of_active_population_total": 0.39598829797136487,
+        "gap_of_total": 0.1593959421290976,
+        "intraday_of_total": 0.8406040578708991,
+        "long_gap_of_gap": 0.08609916118518227,
+        "predecision_of_active_population_total": 0.44129956384429586,
+        "short_gap_of_gap": 0.9139008388148177
+      },
+      "symbol_date_rows": 774
+    },
+    "P4_2026_YTD": {
+      "date_transitions": 165,
+      "dates_with_exact_13_00": 165,
+      "exact_13_00_date_share": 1,
+      "log_return": {
+        "active_envelope": 0.21168718888046312,
+        "active_population_intraday": 0.44538078886003146,
+        "active_population_total": 0.34968725035827436,
+        "gap": -0.09569353850175857,
+        "intraday": 0.44538078886003146,
+        "long_gap": -0.16966735078588996,
+        "predecision": 0.2336935999795669,
+        "short_gap": 0.0739738122841314,
+        "total": 0.34968725035827436
+      },
+      "shares": {
+        "active_envelope_of_active_population_intraday": 0.4752948357343483,
+        "active_envelope_of_active_population_total": 0.6053614727548048,
+        "gap_of_total": -0.27365463969222537,
+        "intraday_of_total": 1.2736546396922213,
+        "long_gap_of_gap": null,
+        "predecision_of_active_population_total": 0.6682931669374123,
+        "short_gap_of_gap": null
+      },
+      "symbol_date_rows": 495
+    }
+  },
+  "pooled": {
+    "date_transitions": 1068,
+    "dates_with_exact_13_00": 1067,
+    "exact_13_00_date_share": 0.9990636704119851,
+    "log_return": {
+      "active_envelope": 1.1987026920980712,
+      "active_population_intraday": 1.7669207068362536,
+      "active_population_total": 2.129789626919779,
+      "gap": 0.36430321216390205,
+      "intraday": 1.783817212318777,
+      "long_gap": 0.018494211876705587,
+      "predecision": 0.5682180147381743,
+      "short_gap": 0.34580900028719647,
+      "total": 2.1481204244826757
+    },
+    "shares": {
+      "active_envelope_of_active_population_intraday": 0.6784134044387307,
+      "active_envelope_of_active_population_total": 0.5628268054961383,
+      "gap_of_total": 0.16959161507513523,
+      "intraday_of_total": 0.8304083849248663,
+      "long_gap_of_gap": 0.05076598629710939,
+      "predecision_of_active_population_total": 0.26679537150341137,
+      "short_gap_of_gap": 0.9492340137028906
+    },
+    "symbol_date_rows": 3204
+  },
+  "schema": "zeta-next-server-calendar-drift-segmentation-once-v1",
+  "symbols": {
+    "US100": {
+      "date_transitions": 1068,
+      "dates_with_exact_13_00": 1067,
+      "exact_13_00_date_share": 0.9990636704119851,
+      "log_return": {
+        "active_envelope": 0.41214756621739435,
+        "active_population_intraday": 0.6907777006782726,
+        "active_population_total": 0.9185194924978208,
+        "gap": 0.22825981491563851,
+        "intraday": 0.6978144665305901,
+        "long_gap": 0.023500707116321393,
+        "predecision": 0.27863013446087415,
+        "short_gap": 0.20475910779931714,
+        "total": 0.9260742814462253
+      },
+      "shares": {
+        "active_envelope_of_active_population_intraday": 0.5966428357671475,
+        "active_envelope_of_active_population_total": 0.44870856806380965,
+        "gap_of_total": 0.24648110792923794,
+        "intraday_of_total": 0.7535188920707657,
+        "long_gap_of_gap": 0.10295595448987335,
+        "predecision_of_active_population_total": 0.3033470021449057,
+        "short_gap_of_gap": 0.8970440455101267
+      },
+      "symbol_date_rows": 1068
+    },
+    "US30": {
+      "date_transitions": 1068,
+      "dates_with_exact_13_00": 1067,
+      "exact_13_00_date_share": 0.9990636704119851,
+      "log_return": {
+        "active_envelope": 0.4100770748744866,
+        "active_population_intraday": 0.5057997981173205,
+        "active_population_total": 0.5231479387437077,
+        "gap": 0.017765604531882064,
+        "intraday": 0.511220878036744,
+        "long_gap": -0.020879121205038983,
+        "predecision": 0.09572272324283426,
+        "short_gap": 0.03864472573692104,
+        "total": 0.5289864825686292
+      },
+      "shares": {
+        "active_envelope_of_active_population_intraday": 0.8107497796576206,
+        "active_envelope_of_active_population_total": 0.783864456886229,
+        "gap_of_total": 0.03358423157736777,
+        "intraday_of_total": 0.9664157684226262,
+        "long_gap_of_gap": -1.1752553180821637,
+        "predecision_of_active_population_total": 0.18297448227112142,
+        "short_gap_of_gap": 2.1752553180821637
+      },
+      "symbol_date_rows": 1068
+    },
+    "US500": {
+      "date_transitions": 1068,
+      "dates_with_exact_13_00": 1067,
+      "exact_13_00_date_share": 0.9990636704119851,
+      "log_return": {
+        "active_envelope": 0.3764780510061904,
+        "active_population_intraday": 0.5703432080406606,
+        "active_population_total": 0.6881221956782505,
+        "gap": 0.11827779271638145,
+        "intraday": 0.5747818677514428,
+        "long_gap": 0.015872625965423177,
+        "predecision": 0.19386515703446594,
+        "short_gap": 0.10240516675095826,
+        "total": 0.6930596604678212
+      },
+      "shares": {
+        "active_envelope_of_active_population_intraday": 0.6600903555940141,
+        "active_envelope_of_active_population_total": 0.5471092974048211,
+        "gap_of_total": 0.17066033339257247,
+        "intraday_of_total": 0.829339666607432,
+        "long_gap_of_gap": 0.13419785405941906,
+        "predecision_of_active_population_total": 0.2817307133123092,
+        "short_gap_of_gap": 0.8658021459405808
+      },
+      "symbol_date_rows": 1068
+    }
+  },
+  "verdict": "NO_MATERIAL_OVERNIGHT_DRIFT_OMISSION_INTRADAY_DOMINATES"
+}
