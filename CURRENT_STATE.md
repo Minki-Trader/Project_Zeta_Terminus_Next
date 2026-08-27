@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0197`
+- Latest state ID: `STATE-0198`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: none; Unit 078 is frozen invalid and the whole map must be recomputed after its closure reaches origin before Unit 079 opens
+- Active research boundary: Unit 079 `lab/research/us30-cost-unit-spread-shape-v1/`; declaration frozen before any cost-unit/spread association or component-ratio metric
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -1141,6 +1141,16 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Preserve all clocks, native holds, exits and Units 057/060/063 at prior authority; retain no clock-alignment seed or clock/hold/exit/carry/window candidate.
 - Result/closure SHA-256 values are `B577113811D5755F862B6A86B427A4A656E6DCFAAD19178EB2BFDBA89AFC7B1D` / `7747EAD3BB149D7DDE851754F4A9F158343CB719920E0FE48A474F579B560268`. Zero successful aggregations, zero correction and zero metric reruns; Program 6, broker/account state and Live remained untouched.
 
+## Whole-map recomparison and open US30 cost-unit spread shape Unit 079
+
+- Unit 078 closure commit `19acdbf` reached origin before Programs 1-5 and 7 plus all heights were recomputed. No carry exclusion, expanded support, business-time, peak-only, trough-only or hold successor opened.
+- Claude card 23's literal premise was corrected: Unit 039 did not apply one flat dollar cost, but multiplied each lifecycle's own `actual_net - stressed_2x_net` cost unit. Opened the sharper Program 7 / meso diagnostic question of whether that base unit already tracks time-varying endpoint spread.
+- The bridge is Unit 039's US30 cost-rank authority, Unit 073's nondiscriminating current recorder and Unit 063's immutable 19,604-row US30 M30 spread path. The distance is Program 4 mark-coordinate integrity to Program 7 evidence-model diagnosis with microstructure input and Program 5 authority transfer.
+- Froze 122 complete RC16/RC4/Pressure/Return lifecycles through July, exact birth/final floor-to-M30 joins, lifecycle cost unit, entry-plus-exit raw spread proxy, average-rank Spearman and fixed Jan-Mar versus Apr-Jul repetition.
+- Responsive passage requires pooled rho at least `0.40`, both segment rhos at least `0.25`, and maximum component mean cost/spread ratio mismatch at most `1.25x`. Near-zero pooled/segment rhos plus mismatch at least `1.50x` is the shape-blind falsifier.
+- This is US30-only and the bar spread is contextual, not executed. A pass preserves Unit 039's bounded interpretation; a falsifier only downgrades US30 relative-rank authority. Neither result changes a component or opens a cost model automatically.
+- Declaration SHA-256 is `FE36B51A827F4E251122A810BDA39DBF9ACE1C4EBA83536B8F7FF465A9D77210`. No lifecycle cost, endpoint spread, rho, ratio, gate or verdict has opened. One aggregation, one premetric correction and zero reruns are budgeted; no acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -1154,7 +1164,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 Latest closed research verdict: `INVALID_MARK_EXTREMA_CLOCK_ANCHOR_NO_VERDICT`
 
-Active research unit: none; Unit 078 frozen invalid pending immediate whole-map recomparison
+Active research unit: Unit 079 `us30-cost-unit-spread-shape-v1`; declaration frozen, outcomes unopened
 
 Latest Frontier marker: `MARK_EXTREMA_CLOCK_ANCHOR_078_CLOSED_INVALID_TIME_SUPPORT_NO_CANDIDATE`
 

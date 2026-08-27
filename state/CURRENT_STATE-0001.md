@@ -1635,3 +1635,13 @@
 - Closed `INVALID_MARK_EXTREMA_CLOCK_ANCHOR_NO_VERDICT`. Do not exclude the carry row, expand/wrap the support, use business time, or rescue peak-only/trough-only/same-day-only.
 - Preserve all clocks, native holds and exits; discard the clock-alignment seed and every clock/hold/exit/carry/window/component candidate.
 - Result/closure SHA-256 values are `B577113811D5755F862B6A86B427A4A656E6DCFAAD19178EB2BFDBA89AFC7B1D` / `7747EAD3BB149D7DDE851754F4A9F158343CB719920E0FE48A474F579B560268`. Zero successful aggregations, zero correction and zero metric reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0198 - 2026-08-27
+
+- Unit 078 closure commit `19acdbfc346e3044323037e5433ec78ab76bbf57` reached origin before Programs 1-5 and 7 plus all heights were recomputed. No time-support or hold rescue opened.
+- Refined external card 23 before outcomes because Unit 039 uses lifecycle-specific cost units rather than one flat dollar amount. Opened only Program 7 / meso Unit 079 `us30-cost-unit-spread-shape-v1`.
+- The bridge joins Unit 039's observed-cost formula and US30 rank authority, Unit 073's zero direct recorder and Unit 063's exact-parity M30 spread export. The distance is lifecycle mark timing to evidence-model/microstructure diagnosis.
+- Froze 122 through-July US30 lifecycles, exact entry/final M30 bars, entry-plus-exit spread proxy, pooled and Jan-Mar/Apr-Jul Spearman, plus four component mean ratio mismatch.
+- Responsive passage is pooled rho `>=0.40`, both segments `>=0.25` and mismatch `<=1.25x`; near-zero pooled/segment rhos plus mismatch `>=1.50x` is the shape-blind falsifier.
+- Results cannot claim executed spread, US100, whole-portfolio or future broker costs, recalculate Unit 039, or change components/cost policy.
+- Declaration SHA-256 is `FE36B51A827F4E251122A810BDA39DBF9ACE1C4EBA83536B8F7FF465A9D77210`. No cost, spread, correlation, ratio or verdict metric has opened. One aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.
