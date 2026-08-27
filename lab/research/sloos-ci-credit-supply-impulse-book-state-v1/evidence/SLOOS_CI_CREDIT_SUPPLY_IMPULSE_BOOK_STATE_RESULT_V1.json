@@ -1,0 +1,429 @@
+{
+  "schema": "zeta-next-sloos-ci-credit-supply-impulse-book-state-result-v1",
+  "created_at_local": "2026-08-28T07:53:49+09:00",
+  "status": "UNIT_095_ONE_FIXED_ECONOMIC_AGGREGATION_COMPLETE",
+  "unit": "sloos-ci-credit-supply-impulse-book-state-095",
+  "family": "sloos-ci-credit-supply-impulse-book-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso_to_macro",
+    "supporting": [
+      "macro"
+    ]
+  },
+  "contract": {
+    "declaration": {
+      "commit": "aa411700bebc0528d386d6963d0f9e52ee532e9d",
+      "bytes": 26309,
+      "sha256": "BE106769AE10676D78523208A03273413FD2A7353000313DC413914C11DC76D3"
+    },
+    "acquisition": {
+      "commit": "c53665dda00199d4fd822b7dc4cb8a85e8bda8f4",
+      "bytes": 9246,
+      "sha256": "A20A042EAFF29F3EEC3D7913A1D975702735E693F14B23942AB4DA2C0509FEB2"
+    },
+    "economic_contract_changed": false
+  },
+  "execution": {
+    "meaningful_experiment_units": 1,
+    "source_acquisition_and_economic_aggregation_are_internal_stages": true,
+    "successful_official_source_freezes": 1,
+    "preexecution_syntax_parse_rejections": 1,
+    "syntax_rejection": {
+      "stage": "PowerShell AST parse before script body execution",
+      "cause": "A colon immediately after an interpolated Role variable required braced variable syntax.",
+      "correction": "Changed only $Role: to ${Role}: in one error-message string.",
+      "input_files_opened": 0,
+      "economic_metrics_emitted": 0,
+      "derived_output_written": false
+    },
+    "executed_one_shot_script": {
+      "bytes": 38259,
+      "sha256": "9D952A90FD8E82AB88BE2E96B062C7F621EC04730488FFDAD73C18502273002D",
+      "retained": false
+    },
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "economic_contract_changes": 0,
+    "post_result_threshold_or_gate_changes": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pins": 59,
+    "pin_failures": [],
+    "source_canonical_sha256": "BB07E099404D803704B33CFE1D1CE50DEA2640E3932F9D3A6E9B3A3CA5A3854D",
+    "event_rows": 16477,
+    "exact_duplicate_rows": 0,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles_before_release_day_exclusion": 2233,
+    "release_day_excluded_lifecycles": 45,
+    "included_lifecycles": 2188,
+    "final_counts_before_exclusion": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "stops_before_exclusion": 206,
+    "pooled_stressed_net_usd_before_exclusion": 407.04770000000565,
+    "component_counts_before_exclusion": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "period_counts_before_exclusion": {
+      "P1_2022H2_2023": 769,
+      "P2_2024": 554,
+      "P3_2025": 554,
+      "P4_2026_YTD": 356
+    },
+    "book_counts_before_exclusion": {
+      "US30_BOOK": 834,
+      "US100_BOOK": 1399
+    },
+    "centering_cells": 24,
+    "maximum_centered_r_residual": 6.842072128503872e-17,
+    "maximum_centered_stop_residual": 7.520865650686544e-17,
+    "contribution_identity_errors": {
+      "period_r": 3.469446951953614e-18,
+      "period_stop": 9.71445146547012e-17,
+      "component_r": 2.0816681711721685e-17,
+      "component_stop": 5.551115123125783e-17
+    },
+    "faults": []
+  },
+  "release_state": {
+    "rows": 19,
+    "anchor": 1,
+    "TIGHTENING_IMPULSE": 10,
+    "NON_TIGHTENING_IMPULSE": 8,
+    "release_day_excluded": true,
+    "strictly_later_server_date_activation": true
+  },
+  "density": {
+    "included_normal_days": {
+      "TIGHTENING_IMPULSE": 578,
+      "NON_TIGHTENING_IMPULSE": 456
+    },
+    "included_lifecycles": {
+      "TIGHTENING_IMPULSE": 1212,
+      "NON_TIGHTENING_IMPULSE": 976
+    },
+    "overlapping_release_regimes": {
+      "TIGHTENING_IMPULSE": 9,
+      "NON_TIGHTENING_IMPULSE": 8
+    },
+    "valid_periods": 4,
+    "minimum_period_book_state_lifecycles": 22,
+    "minimum_component_state_lifecycles": 48,
+    "passed": true
+  },
+  "book_metrics": {
+    "US30_BOOK": {
+      "tightening_n": 450,
+      "non_tightening_n": 364,
+      "tightening_stressed_net_usd": 177.53700000000376,
+      "non_tightening_stressed_net_usd": 120.28400000000235,
+      "tightening_raw_stressed_r": 0.06956926645802507,
+      "non_tightening_raw_stressed_r": 0.05281839474048723,
+      "tightening_raw_stop_rate": 0.1688888888888889,
+      "non_tightening_raw_stop_rate": 0.19505494505494506,
+      "tightening_centered_stressed_r": 0.0006779737256735246,
+      "non_tightening_centered_stressed_r": -0.000838154331189811,
+      "tightening_centered_stop": 0.016623319653172885,
+      "non_tightening_centered_stop": -0.020550807263537883,
+      "r_effect": 0.0015161280568633355,
+      "stop_effect": 0.037174126916710765
+    },
+    "US100_BOOK": {
+      "tightening_n": 762,
+      "non_tightening_n": 612,
+      "tightening_stressed_net_usd": 53.667499999999684,
+      "non_tightening_stressed_net_usd": 46.49219999999885,
+      "tightening_raw_stressed_r": 0.016711881061094606,
+      "non_tightening_raw_stressed_r": 0.01307203607187859,
+      "tightening_raw_stop_rate": 0.03412073490813648,
+      "non_tightening_raw_stop_rate": 0.0457516339869281,
+      "tightening_centered_stressed_r": 0.004711286521647127,
+      "non_tightening_centered_stressed_r": -0.005866013610286131,
+      "tightening_centered_stop": 0.005389927550319423,
+      "non_tightening_centered_stop": -0.00671098822441732,
+      "r_effect": 0.010577300131933257,
+      "stop_effect": 0.012100915774736744
+    }
+  },
+  "pooled_relative_book_effect": {
+    "relative_r_did": -0.009061172075069922,
+    "relative_stop_did": 0.02507321114197402,
+    "direction": "SMALL_RELATIVE_US30_ADVERSE_STOP_WITH_NEGLIGIBLE_R"
+  },
+  "period_metrics": {
+    "P1_2022H2_2023": {
+      "n": 755,
+      "US30_BOOK": {
+        "tightening_n": 242,
+        "non_tightening_n": 22,
+        "r_effect": -0.028169325921348548,
+        "stop_effect": 0.08018548296623165
+      },
+      "US100_BOOK": {
+        "tightening_n": 448,
+        "non_tightening_n": 43,
+        "r_effect": 0.014230352735114013,
+        "stop_effect": 0.008843254155920391
+      },
+      "relative_r_did": -0.04239967865646256,
+      "relative_stop_did": 0.07134222881031126,
+      "predicted_direction": true
+    },
+    "P2_2024": {
+      "n": 542,
+      "US30_BOOK": {
+        "tightening_n": 43,
+        "non_tightening_n": 152,
+        "r_effect": 0.0930165721999695,
+        "stop_effect": -0.05395624992314436
+      },
+      "US100_BOOK": {
+        "tightening_n": 83,
+        "non_tightening_n": 264,
+        "r_effect": 0.026512954784155555,
+        "stop_effect": 0.018558712217946416
+      },
+      "relative_r_did": 0.06650361741581395,
+      "relative_stop_did": -0.07251496214109077,
+      "predicted_direction": false
+    },
+    "P3_2025": {
+      "n": 544,
+      "US30_BOOK": {
+        "tightening_n": 119,
+        "non_tightening_n": 107,
+        "r_effect": 0.0043169915944645315,
+        "stop_effect": 0.13869968576403358
+      },
+      "US100_BOOK": {
+        "tightening_n": 152,
+        "non_tightening_n": 166,
+        "r_effect": 0.046235425183273955,
+        "stop_effect": -0.002530973095985065
+      },
+      "relative_r_did": -0.04191843358880942,
+      "relative_stop_did": 0.14123065886001865,
+      "predicted_direction": true
+    },
+    "P4_2026_YTD": {
+      "n": 347,
+      "US30_BOOK": {
+        "tightening_n": 46,
+        "non_tightening_n": 83,
+        "r_effect": -0.08405534167946235,
+        "stop_effect": -0.0048152252015342106
+      },
+      "US100_BOOK": {
+        "tightening_n": 79,
+        "non_tightening_n": 139,
+        "r_effect": -0.04588147086038781,
+        "stop_effect": 0.055369786449321556
+      },
+      "relative_r_did": -0.03817387081907454,
+      "relative_stop_did": -0.06018501165085577,
+      "predicted_direction": false
+    }
+  },
+  "component_metrics": {
+    "RC16": {
+      "book": "US30_BOOK",
+      "tightening_n": 130,
+      "non_tightening_n": 135,
+      "r_effect": 0.028637261502097045,
+      "stop_effect": -0.007491301119208102,
+      "declared_alignment": false
+    },
+    "RC4": {
+      "book": "US30_BOOK",
+      "tightening_n": 105,
+      "non_tightening_n": 95,
+      "r_effect": -0.043203051766044664,
+      "stop_effect": 0.03204419835770657,
+      "declared_alignment": true
+    },
+    "Cross": {
+      "book": "US100_BOOK",
+      "tightening_n": 440,
+      "non_tightening_n": 352,
+      "r_effect": 0.012684963703647259,
+      "stop_effect": 0.012801777278534399,
+      "declared_alignment": false
+    },
+    "Pressure": {
+      "book": "US30_BOOK",
+      "tightening_n": 65,
+      "non_tightening_n": 48,
+      "r_effect": -0.027703061246956172,
+      "stop_effect": 0.0898648330820641,
+      "declared_alignment": true
+    },
+    "Return": {
+      "book": "US30_BOOK",
+      "tightening_n": 150,
+      "non_tightening_n": 86,
+      "r_effect": 0.02429877767246646,
+      "stop_effect": 0.07129738844967655,
+      "declared_alignment": false
+    },
+    "Passive": {
+      "book": "US100_BOOK",
+      "tightening_n": 322,
+      "non_tightening_n": 260,
+      "r_effect": 0.007712161842352092,
+      "stop_effect": 0.011148276219122497,
+      "declared_alignment": false
+    }
+  },
+  "direction_breadth": {
+    "predicted_direction_periods": 2,
+    "required_periods": 3,
+    "us30_adverse_components": 2,
+    "required_us30_components": 3,
+    "us100_nonadverse_components": 0,
+    "required_us100_components": 2,
+    "joint_component_breadth": false
+  },
+  "contribution_concentration": {
+    "periods": {
+      "maximum_r_absolute_share": 0.34989380349095783,
+      "maximum_stop_absolute_share": 0.581451937635827,
+      "r_cap": 0.6,
+      "stop_cap": 0.6,
+      "parts": {
+        "P1_2022H2_2023": {
+          "r": -0.0044680476913942,
+          "stop": 0.007013757585748841,
+          "r_absolute_share": 0.148034192314136,
+          "stop_absolute_share": 0.10344013577671952
+        },
+        "P2_2024": {
+          "r": 0.010560683153547521,
+          "stop": -0.012440183409956734,
+          "r_absolute_share": 0.34989380349095783,
+          "stop_absolute_share": 0.18347002234977136
+        },
+        "P3_2025": {
+          "r": -0.009600169053856135,
+          "stop": 0.039425344018733245,
+          "r_absolute_share": 0.31807030052611246,
+          "stop_absolute_share": 0.581451937635827
+        },
+        "P4_2026_YTD": {
+          "r": -0.005553638483367112,
+          "stop": -0.00892570705255123,
+          "r_absolute_share": 0.18400170366879373,
+          "stop_absolute_share": 0.1316379042376821
+        }
+      }
+    },
+    "components": {
+      "maximum_r_absolute_share": 0.26046087087498154,
+      "maximum_stop_absolute_share": 0.3572849148936327,
+      "r_cap": 0.45,
+      "stop_cap": 0.45,
+      "parts": {
+        "RC16": {
+          "r": 0.00942482379893815,
+          "stop": -0.002465465947857981,
+          "r_absolute_share": 0.2292492303605393,
+          "stop_absolute_share": 0.04548328789649376
+        },
+        "RC4": {
+          "r": -0.010707987157269984,
+          "stop": 0.007942236727568748,
+          "r_absolute_share": 0.26046087087498154,
+          "stop_absolute_share": 0.14651958179992855
+        },
+        "Cross": {
+          "r": -0.007308693112263312,
+          "stop": -0.007375997567375842,
+          "r_absolute_share": 0.17777650878910975,
+          "stop_absolute_share": 0.13607351631535008
+        },
+        "Pressure": {
+          "r": -0.0038011448554609905,
+          "stop": 0.01233037911989891,
+          "r_absolute_share": 0.09245897336579735,
+          "stop_absolute_share": 0.22747269491615904
+        },
+        "Return": {
+          "r": 0.006600436270656177,
+          "stop": 0.01936697701710112,
+          "r_absolute_share": 0.16054888318041505,
+          "stop_absolute_share": 0.3572849148936327
+        },
+        "Passive": {
+          "r": -0.003268607019669943,
+          "stop": -0.004724918207360877,
+          "r_absolute_share": 0.0795055334291569,
+          "stop_absolute_share": 0.08716600417843581
+        }
+      }
+    }
+  },
+  "gates": {
+    "directional": {
+      "pooled_relative_r_lte_minus_0_10": false,
+      "pooled_relative_stop_gte_plus_0_05": false,
+      "us30_negative_r_positive_stop": false,
+      "us100_nonnegative_r_nonpositive_stop": false,
+      "at_least_three_periods_predicted_direction": false,
+      "at_least_three_us30_components_adverse": false,
+      "both_us100_components_nonadverse": false,
+      "period_r_contribution_cap_0_60": true,
+      "period_stop_contribution_cap_0_60": true,
+      "component_r_contribution_cap_0_45": true,
+      "component_stop_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_relative_r_below_0_05": true,
+      "absolute_relative_stop_below_0_025": false,
+      "no_more_than_two_predicted_periods": true,
+      "joint_component_breadth_absent": true,
+      "passed": false
+    }
+  },
+  "verdict": "AMBIGUOUS_SLOOS_CI_CREDIT_SUPPLY_BOOK_STATE_NO_CANDIDATE",
+  "economic_interpretation": {
+    "directional": "The pooled relative effect is only -0.009061R and +0.025073 stop versus the required -0.10R and +0.05. Both book-sign pairs, period breadth and component breadth also fail; only concentration controls pass.",
+    "strong_null": "Relative R is small and breadth is absent, but absolute relative stop is 0.02507321114197402, exceeding the strict below-0.025 null boundary by 0.00007321114197401928. The frozen verdict therefore remains ambiguous rather than no-field.",
+    "causal_limit": "The quarterly survey impulse is observational and may reflect macroeconomic expectations. No direct deployable causal book policy is identified."
+  },
+  "decision": {
+    "preserve": "Unconditional US30 and US100 book treatment and every current entry, exit, order, risk, lot, slot, admission and allocation behavior.",
+    "close": "The complete SLOOS credit-supply field, including level, magnitude, small-firm, demand, terms, respondent subgroup, lag, window, symbol, component and risk variants.",
+    "selected_candidate": null,
+    "retained_seed": null,
+    "implementation_authorized": false,
+    "promotion": "none"
+  },
+  "derived_rows": {
+    "path": "lab/research/sloos-ci-credit-supply-impulse-book-state-v1/evidence/SLOOS_CI_CREDIT_SUPPLY_IMPULSE_DERIVED_ROWS_V1.csv",
+    "rows": 2188,
+    "bytes": 1191326,
+    "sha256": "F165369C43EB702C0A5A47F0866AA9AF83B18162BB709A4F0794A73CC98188B3"
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_commit_push_then_recompare_programs_1_to_5_and_7_and_all_heights_before_any_successor"
+}

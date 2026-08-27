@@ -1,0 +1,149 @@
+{
+  "schema": "zeta-next-sloos-ci-credit-supply-impulse-book-state-closure-v1",
+  "created_at_local": "2026-08-28T07:53:49+09:00",
+  "status": "CLOSED_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "sloos-ci-credit-supply-impulse-book-state-095",
+  "family": "sloos-ci-credit-supply-impulse-book-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso_to_macro",
+    "supporting": [
+      "macro"
+    ]
+  },
+  "verdict": "AMBIGUOUS_SLOOS_CI_CREDIT_SUPPLY_BOOK_STATE_NO_CANDIDATE",
+  "integrity": {
+    "passed": true,
+    "pins": 59,
+    "official_source_files": 39,
+    "event_rows": 16477,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles_before_exclusion": 2233,
+    "release_day_excluded_lifecycles": 45,
+    "included_lifecycles": 2188,
+    "centering_cells": 24,
+    "maximum_identity_error": 9.71445146547012e-17,
+    "faults": []
+  },
+  "release_states": {
+    "anchor": 1,
+    "TIGHTENING_IMPULSE": 10,
+    "NON_TIGHTENING_IMPULSE": 8
+  },
+  "density": {
+    "state_days": {
+      "TIGHTENING_IMPULSE": 578,
+      "NON_TIGHTENING_IMPULSE": 456
+    },
+    "state_lifecycles": {
+      "TIGHTENING_IMPULSE": 1212,
+      "NON_TIGHTENING_IMPULSE": 976
+    },
+    "valid_periods": 4,
+    "minimum_period_book_state_lifecycles": 22,
+    "minimum_component_state_lifecycles": 48,
+    "passed": true
+  },
+  "book_effects": {
+    "US30_BOOK": {
+      "r_effect": 0.0015161280568633355,
+      "stop_effect": 0.037174126916710765
+    },
+    "US100_BOOK": {
+      "r_effect": 0.010577300131933257,
+      "stop_effect": 0.012100915774736744
+    }
+  },
+  "pooled_relative": {
+    "relative_r_did": -0.009061172075069922,
+    "relative_stop_did": 0.02507321114197402,
+    "directional_r_threshold_distance": 0.09093882792493008,
+    "directional_stop_threshold_distance": 0.02492678885802598,
+    "strong_null_stop_excess": 0.00007321114197401928
+  },
+  "breadth": {
+    "predicted_direction_periods": 2,
+    "required_periods": 3,
+    "us30_adverse_components": 2,
+    "required_us30_components": 3,
+    "us100_nonadverse_components": 0,
+    "required_us100_components": 2
+  },
+  "concentration": {
+    "maximum_period_r_share": 0.34989380349095783,
+    "maximum_period_stop_share": 0.581451937635827,
+    "maximum_component_r_share": 0.26046087087498154,
+    "maximum_component_stop_share": 0.3572849148936327,
+    "all_caps_passed": true
+  },
+  "gates": {
+    "directional": {
+      "magnitude": false,
+      "book_signs": false,
+      "period_breadth": false,
+      "component_breadth": false,
+      "concentration": true,
+      "passed": false
+    },
+    "strong_null": {
+      "r_magnitude": true,
+      "stop_magnitude": false,
+      "period_breadth_absent": true,
+      "component_breadth_absent": true,
+      "passed": false
+    }
+  },
+  "decision": {
+    "preserve_unconditional_books": true,
+    "selected_candidate": null,
+    "retained_seed": null,
+    "implementation_authorized": false,
+    "family_frozen": true,
+    "adjacent_sloos_rescue": false,
+    "automatic_successor_opened": false
+  },
+  "artifacts": {
+    "declaration": {
+      "bytes": 26309,
+      "sha256": "BE106769AE10676D78523208A03273413FD2A7353000313DC413914C11DC76D3"
+    },
+    "acquisition": {
+      "bytes": 9246,
+      "sha256": "A20A042EAFF29F3EEC3D7913A1D975702735E693F14B23942AB4DA2C0509FEB2"
+    },
+    "result": {
+      "bytes": 14873,
+      "sha256": "F3DC58E9B5D3D9242AB1D82F0370D999AF4C0DA7B9E315657114963E02D10303"
+    },
+    "derived_rows": {
+      "rows": 2188,
+      "bytes": 1191326,
+      "sha256": "F165369C43EB702C0A5A47F0866AA9AF83B18162BB709A4F0794A73CC98188B3"
+    }
+  },
+  "execution": {
+    "meaningful_experiment_units": 1,
+    "preexecution_syntax_parse_rejections": 1,
+    "successful_official_source_freezes": 1,
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "economic_contract_changes": 0,
+    "retained_script": false,
+    "mql_changes": 0,
+    "tester_paths": 0
+  },
+  "same_family_rescue": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_to_5_and_7_and_all_heights_before_any_successor"
+}
