@@ -1,0 +1,335 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-result-v2",
+  "created_at_local": "2026-08-28",
+  "status": "UNIT_062_VALID_SELECTION_COMPLETE_MINIMUM_LOT_INFEASIBLE_LATEST_UNOPENED",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "run": "implementation-correction-r1",
+  "family": "market-stop-reverse-lot-sizing-implementation-correction-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk"
+  },
+  "research_height": {
+    "primary": "micro",
+    "supporting": ["macro"]
+  },
+  "experiment_boundary": {
+    "meaningful_economic_experiments": 1,
+    "new_frontier_unit": false,
+    "unit_095_reserved": false,
+    "declaration_through_terminal_verdict_is_one_boundary": true,
+    "fit_selection_and_conditional_latest_are_internal_stages": true,
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "meaningless_micro_split": false
+  },
+  "authority_and_preoutcome_pins": {
+    "original_declaration": {
+      "path": "lab/research/market-stop-reverse-lot-sizing-v1/evidence/MARKET_STOP_REVERSE_LOT_SIZING_DECLARATION_V1.json",
+      "commit": "d714e2483cf02b5fce2d98c45f27289cf831ce2d",
+      "bytes": 17855,
+      "sha256": "B998176FFDC68C5CB8D6ED3F762811E18224D054AC168D8DB87A408204892D85"
+    },
+    "implementation_correction_declaration": {
+      "path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/evidence/MARKET_STOP_REVERSE_LOT_SIZING_IMPLEMENTATION_CORRECTION_DECLARATION_V1.json",
+      "commit": "8e3e39fd11ee7c5638e63e8c75f7001ba12a8bf5",
+      "bytes": 12887,
+      "sha256": "11BAD79A33CEF8B2D33F65A657B43E0210E7572139BB989AF920638602F71073"
+    },
+    "implementation_environment_receipt": {
+      "commit": "1ec39820a4edf04a416c0320e0b7ad0c204f4f51",
+      "bytes": 16023,
+      "sha256": "3027DFDBD3AA49A8AF796572983E4973BDCD1AC3B7F806803F50559CE2EAAB8C"
+    },
+    "fit_receipt": {
+      "commit": "f8dbbf16fa10b448410ced7fe9bc9b64b1a92ec0",
+      "pushed_to_origin_main_before_selection": true,
+      "bytes": 9280,
+      "sha256": "A485808D2A142E99813DA547780F6F24D8A89AC53C4ACF6937B266BE0B4FE6B3"
+    },
+    "code": {
+      "files": 15,
+      "bytes": 374415,
+      "sha256": "6F374B2C5290E2C752873D14C587269ED946C0087EAFE4C044E4AE9F20874A1C"
+    },
+    "configuration": {
+      "files": 7,
+      "bytes": 5804,
+      "sha256": "4FE84C28CE790FC8BD4C438BBB42828F6E81AF809AFCBDB0C72411835398E217"
+    },
+    "binary": {
+      "bytes": 206898,
+      "sha256": "DB5FE0C5C13203F7CE8255B1687278AF5277E9C181336DC3BBD96DB8E19706F6"
+    },
+    "selection_exercised_history": {
+      "files": 24,
+      "bytes": 398008120,
+      "sha256_before_native_after_native_before_candidate_and_after_candidate": "931AF14C35662723D90A38AA520FBF2793906E4F15A4075753554394231956AE",
+      "all_equal": true
+    }
+  },
+  "fit": {
+    "passed": true,
+    "valid_tester_paths": 1,
+    "observation_rows": 108,
+    "atr_unavailable": 0,
+    "component_counts": {
+      "RC16": 16,
+      "RC4": 11,
+      "Cross": 53,
+      "Pressure": 12,
+      "Return": 16
+    },
+    "frozen_medians": {
+      "RC16": 6.0934518298820581,
+      "RC4": 7.4567515364355126,
+      "Cross": 3.7593726235741176,
+      "Pressure": 3.1652902317298892,
+      "Return": 3.1698424509962217
+    },
+    "observation_sha256": "FBEC4649CA271CD0EB702DDCAFEB86E4A3534A0EAA5A010D5484DD6DBFA67538",
+    "median_vector_sha256": "A88E24C82D9406FEFD4B7FAEF70D3B62D77B8229B0547570C9349575990F03F2",
+    "outcome_close_or_pnl_fields_used": false
+  },
+  "selection_pair_integrity": {
+    "passed": true,
+    "adjacent_order": ["NATIVE_SELECTION", "ATR_REVERSE_LOT_SELECTION"],
+    "intervening_economic_paths": 0,
+    "native": {
+      "agent_start_line": 7688,
+      "model": 4,
+      "normal_reason": 1,
+      "html_real_ticks_percent": 100,
+      "primary_symbol_ticks": 21119676,
+      "primary_symbol_bars": 4837,
+      "required_symbol_real_tick_begin_lines": 3,
+      "forbidden_real_tick_absent_lines": 0,
+      "forbidden_real_tick_discarded_lines": 0,
+      "forbidden_every_tick_generation_lines": 0,
+      "forbidden_tick_mismatch_lines": 0,
+      "load_or_synchronization_fault_lines": 0,
+      "file_open_error_5004_lines": 0,
+      "contract_rows": 6,
+      "runtime_fault_fields": {
+        "safety_stopped": false,
+        "persistence_failed": false,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0
+      },
+      "full_first_fills": 240,
+      "full_close_rows": 240,
+      "event_actual_net_usd": 87.79,
+      "html_actual_net_usd": 87.79,
+      "reconstruction_equal": true,
+      "report": {
+        "bytes": 494082,
+        "sha256": "4D5DA7AB2E7B9F6F93A4D9E549573E96DB2EA3BAB5CD3FD45D1515F693AD71EC"
+      },
+      "event_ledger": {
+        "bytes": 692020,
+        "sha256": "BADDE4FF31B98D06AC844DADF3FEDEA515EB61E8FF73E9684FD11B766D9988B4"
+      }
+    },
+    "candidate": {
+      "agent_start_line": 10464,
+      "model": 4,
+      "normal_reason": 1,
+      "html_real_ticks_percent": 100,
+      "primary_symbol_ticks": 21119676,
+      "primary_symbol_bars": 4837,
+      "required_symbol_real_tick_begin_lines": 3,
+      "forbidden_real_tick_absent_lines": 0,
+      "forbidden_real_tick_discarded_lines": 0,
+      "forbidden_every_tick_generation_lines": 0,
+      "forbidden_tick_mismatch_lines": 0,
+      "load_or_synchronization_fault_lines": 0,
+      "file_open_error_5004_lines": 0,
+      "contract_rows": 6,
+      "runtime_fault_fields": {
+        "safety_stopped": false,
+        "persistence_failed": false,
+        "broker_mismatch": false,
+        "foreign_exposure": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0
+      },
+      "full_first_fills": 219,
+      "full_close_rows": 219,
+      "event_actual_net_usd": 73.43,
+      "html_actual_net_usd": 73.43,
+      "reconstruction_equal": true,
+      "report": {
+        "bytes": 454700,
+        "sha256": "1ACFBFA4DCA2D871ACD59C416E88A1D0BBBC979332E77F72404DE76F9D07B3BD"
+      },
+      "event_ledger": {
+        "bytes": 658311,
+        "sha256": "AFDFD7588B847D82D8F86466505246D506DEB8A0901279C20300452A65F47BFC"
+      }
+    },
+    "common_prefix": {
+      "period_end_exclusive": "2026.04.01 00:00:00",
+      "excluded_observation_events": ["NATIVE_STOP_ATR", "MARKET_STOP_REVERSE_LOT", "MARKET_STOP_MIN_LOT_BLOCK"],
+      "native_rows": 1071,
+      "candidate_rows": 1071,
+      "differences": 0,
+      "canonical_sha256": "8AD29724CE91DEA4D3022B73CC8B241A6C50204EDAF0C7B43F7331D6707C9F68"
+    },
+    "contract_and_swap_fingerprint": {
+      "native_start_end_equal": true,
+      "candidate_start_end_equal": true,
+      "native_candidate_equal": true,
+      "normalized_sha256": "68D42497E3B48BBE0CC164B64EAAA1265618027D246467AFD74C89897B89E37E"
+    },
+    "required_symbol_database": {
+      "bytes": 413696,
+      "sha256_at_all_six_pair_snapshots": "23A02AAB664E69DC27FA1F8709848E7120C5E68A3011B116EFA923879056ECA3",
+      "all_equal": true
+    },
+    "selected_symbol_metadata_diagnostic": {
+      "governing": false,
+      "pair_before_sha256": "A1FF0D17188797B473373E774A98C6C01207CA9DBAFFDE4899DD1B3A02BDD3EA",
+      "after_native_and_before_candidate_sha256": "A07232FDB678D628E4FA5156FB0D3B4479DA22218F24452384C2D3652FEC8F50",
+      "pair_after_sha256": "6DE1CA780C428AB1F1CAF61071A8A4F6B651DAB4F5E3095CFB687BDD5B15E24D",
+      "economic_input_change": false
+    },
+    "active_runtime_after_preservation": {
+      "report_files": 0,
+      "output_files": 0,
+      "unit_tst_files": 0,
+      "process_owners": 0
+    }
+  },
+  "selection_pair_artifact": {
+    "path": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/selection-pair-v1/",
+    "files": 48,
+    "bytes": 17627544,
+    "manifest_sha256": "CD6655A12CA921EF64A5EF4C1DDBA1089FE65FAE49E2459D84ECB1A419876719",
+    "native_files": 22,
+    "candidate_files": 22,
+    "pair_environment_files": 4,
+    "recoverable_moves": true
+  },
+  "mechanism": {
+    "native_selection_stop_atr": {
+      "RC16": {"count": 14, "median": 8.220490650688312, "absolute_fit_relative_shift": 0.34906960458361813, "shift_at_least_0_15": true},
+      "RC4": {"count": 11, "median": 9.618326545723662, "absolute_fit_relative_shift": 0.2898815923698361, "shift_at_least_0_15": true},
+      "Cross": {"count": 35, "median": 4.827923451566843, "absolute_fit_relative_shift": 0.2842364763982428, "shift_at_least_0_15": true},
+      "Pressure": {"count": 5, "median": 3.917851147174004, "absolute_fit_relative_shift": 0.23775415849712656, "shift_at_least_0_15": true},
+      "Return": {"count": 6, "median": 3.4759587111987336, "absolute_fit_relative_shift": 0.09657144319784883, "shift_at_least_0_15": false}
+    },
+    "native_component_shift_count_at_least_0_15": 4,
+    "native_median_absolute_component_shift": 0.2842364763982428,
+    "native_shift_gate": true,
+    "candidate_accepted_entries": 50,
+    "candidate_stop_atr_ratio_violations": 0,
+    "candidate_maximum_tick_tolerance_fraction_used": 0.957455283870763,
+    "candidate_ratio_gate": true,
+    "candidate_atr_unavailable": 0,
+    "candidate_sizing_attempts": 74,
+    "candidate_minimum_lot_blocks": 23,
+    "candidate_minimum_lot_block_rate": 0.3108108108108108,
+    "maximum_allowed_minimum_lot_block_rate": 0.10,
+    "minimum_lot_gate": false,
+    "candidate_non_native_volume_entries": 0,
+    "candidate_non_native_volume_share": 0.0,
+    "minimum_required_non_native_volume_share": 0.20,
+    "non_native_volume_gate": false,
+    "all_required": false
+  },
+  "selection_metrics": {
+    "period": ["2026.04.01", "2026.06.01"],
+    "native": {
+      "normal_dates": 43,
+      "first_fills": 92,
+      "average_first_fills_per_normal_date": 2.13953488372093,
+      "fill_counts": {"RC16": 14, "RC4": 11, "Cross": 35, "Pressure": 5, "Return": 6, "Passive": 21},
+      "natural_book_fills": {"US30_BOOK": 36, "US100_BOOK": 56},
+      "stressed_net_usd": 28.935000000001054,
+      "maximum_closed_drawdown_usd": 12.096999999999424,
+      "net_to_drawdown": 2.3919153509136506,
+      "component_stressed_net_usd": {"RC16": 22.721000000000352, "RC4": 2.164000000000236, "Cross": -15.031999999999751, "Pressure": 6.500000000000072, "Return": 8.738000000000103, "Passive": 3.8440000000000523},
+      "natural_book_stressed_net_usd": {"US30_BOOK": 40.12300000000076, "US100_BOOK": -11.187999999999699},
+      "stop_loss_count": 5,
+      "stressed_stop_loss_dollars": 14.627000000000043
+    },
+    "candidate": {
+      "normal_dates": 43,
+      "first_fills": 71,
+      "average_first_fills_per_normal_date": 1.6511627906976745,
+      "fill_counts": {"RC16": 10, "RC4": 7, "Cross": 24, "Pressure": 5, "Return": 4, "Passive": 21},
+      "natural_book_fills": {"US30_BOOK": 26, "US100_BOOK": 45},
+      "stressed_net_usd": 14.831500000000961,
+      "maximum_closed_drawdown_usd": 12.562000000000008,
+      "net_to_drawdown": 1.1806639070212508,
+      "component_stressed_net_usd": {"RC16": 11.156000000000347, "RC4": 4.3300000000002195, "Cross": -14.199499999999858, "Pressure": 1.2900000000000726, "Return": 8.37100000000013, "Passive": 3.8840000000000523},
+      "natural_book_stressed_net_usd": {"US30_BOOK": 25.14700000000077, "US100_BOOK": -10.315499999999806},
+      "stop_loss_count": 12,
+      "stressed_stop_loss_dollars": 28.532499999999967
+    },
+    "candidate_minus_native": {
+      "stressed_net_usd": -14.103500000000093,
+      "required_stressed_net_improvement_usd": 2.8935000000001057,
+      "first_fill_ratio": 0.7717391304347826,
+      "component_stressed_net_usd": {"RC16": -11.565000000000005, "RC4": 2.1659999999999835, "Cross": 0.832499999999893, "Pressure": -5.209999999999999, "Return": -0.36699999999997246, "Passive": 0.040000000000000036},
+      "treated_components_improved": 2,
+      "natural_book_stressed_net_usd": {"US30_BOOK": -14.975999999999988, "US100_BOOK": 0.8724999999998921},
+      "maximum_positive_component_share_of_portfolio_improvement": null,
+      "reason_share_not_defined": "candidate portfolio improvement was negative"
+    }
+  },
+  "selection_gates": {
+    "density": false,
+    "density_failures": ["candidate Return first fills 4 below 5"],
+    "portfolio_value": false,
+    "drawdown": true,
+    "efficiency": false,
+    "turnover": false,
+    "treated_breadth": false,
+    "risk_and_stops": false,
+    "mechanism": false,
+    "all_required": false
+  },
+  "terminal_decision": {
+    "verdict": "MARKET_STOP_REVERSE_LOT_INFEASIBLE_AT_REFERENCE_CAPITAL",
+    "primary_trigger": "minimum lot blocked 23 of 74 otherwise eligible treated sizing attempts, or 31.08108108108108 percent, above the frozen 10 percent maximum",
+    "corroborating_failures": [
+      "zero of 50 accepted treated entries changed the native daily-ladder volume, below the required 20 percent",
+      "candidate stressed selection net was 14.1035 USD below native instead of at least 2.8935 USD above",
+      "candidate first fills retained only 77.1739 percent of native and Return had four fills",
+      "candidate net-to-drawdown fell from 2.3919153509 to 1.1806639070",
+      "only two of five treated components improved and the US30 natural book was 14.9760 USD worse",
+      "candidate stop-loss count rose from 5 to 12 and stressed stop-loss dollars from 14.6270 to 28.5325"
+    ],
+    "native_stop_and_lot_preserved": true,
+    "candidate_retained": false,
+    "latest_paths_opened": false,
+    "latest_outcomes_consumed": false,
+    "adjacent_threshold_stop_atr_lot_capital_component_period_or_subgroup_rescue": false,
+    "live_authority": false
+  },
+  "execution_accounting": {
+    "valid_fit_tester_paths": 1,
+    "valid_selection_tester_paths": 2,
+    "valid_latest_tester_paths": 0,
+    "maximum_economically_valid_tester_paths": 5,
+    "successful_fit_aggregations": 1,
+    "successful_selection_aggregations": 1,
+    "rejected_fit_aggregation_invocations_before_vector": 1,
+    "no_process_selection_invocations_before_native_start": 1,
+    "tester_paths_created_by_no_process_invocation": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "economic_contract_changes": 0,
+    "retained_test_only_script_validator_or_cli": false
+  },
+  "program_6_opened": false,
+  "manual_broker_account_position_order_or_deal_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "freeze_one_closure_for_the_complete_unit_062_experiment_commit_and_push_then_recompare_programs_1_to_5_and_7_before_any_successor"
+}

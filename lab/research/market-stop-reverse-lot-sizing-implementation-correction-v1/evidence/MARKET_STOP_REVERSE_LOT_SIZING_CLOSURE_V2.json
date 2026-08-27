@@ -1,0 +1,151 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-closure-v2",
+  "created_at_local": "2026-08-28",
+  "status": "CLOSED_VALID_MINIMUM_LOT_INFEASIBLE_NATIVE_PRESERVED",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "run": "implementation-correction-r1",
+  "family": "market-stop-reverse-lot-sizing-implementation-correction-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk"
+  },
+  "research_height": {
+    "primary": "micro",
+    "supporting": ["macro"]
+  },
+  "experiment_boundary": {
+    "meaningful_economic_experiments": 1,
+    "new_frontier_unit": false,
+    "unit_095_reserved": false,
+    "declaration_through_verdict_completed_as_one_boundary": true,
+    "fit_and_selection_were_internal_stages": true,
+    "conditional_latest_was_correctly_not_opened": true,
+    "implementation_environment_invocation_and_aggregation_corrections_were_internal": true,
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "meaningless_micro_split": false
+  },
+  "evidence": {
+    "original_declaration": {
+      "bytes": 17855,
+      "sha256": "B998176FFDC68C5CB8D6ED3F762811E18224D054AC168D8DB87A408204892D85"
+    },
+    "implementation_correction_declaration": {
+      "bytes": 12887,
+      "sha256": "11BAD79A33CEF8B2D33F65A657B43E0210E7572139BB989AF920638602F71073"
+    },
+    "implementation_environment_receipt": {
+      "bytes": 16023,
+      "sha256": "3027DFDBD3AA49A8AF796572983E4973BDCD1AC3B7F806803F50559CE2EAAB8C"
+    },
+    "fit_receipt": {
+      "bytes": 9280,
+      "sha256": "A485808D2A142E99813DA547780F6F24D8A89AC53C4ACF6937B266BE0B4FE6B3"
+    },
+    "result": {
+      "path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/evidence/MARKET_STOP_REVERSE_LOT_SIZING_RESULT_V2.json",
+      "bytes": 14643,
+      "sha256": "08D0E5C3759199C8ADDD308C8164EE84E6948F407B4A5D57E0A8DDA1F00A1BC3"
+    },
+    "fit_artifact": {
+      "files": 22,
+      "bytes": 5812742,
+      "manifest_sha256": "4189910C060CC90EC8A41FCA600B6DEFD24A278BED9C0DF0257EEDA20170225F"
+    },
+    "selection_pair_artifact": {
+      "files": 48,
+      "bytes": 17627544,
+      "manifest_sha256": "CD6655A12CA921EF64A5EF4C1DDBA1089FE65FAE49E2459D84ECB1A419876719"
+    }
+  },
+  "integrity": {
+    "fit_passed": true,
+    "selection_pair_passed": true,
+    "both_selection_paths_model_4_html_real_ticks_100_and_normal_reason_1": true,
+    "detailed_real_tick_load_sync_tick_and_core_faults": 0,
+    "common_prefix_rows_each": 1071,
+    "common_prefix_differences": 0,
+    "common_prefix_sha256": "8AD29724CE91DEA4D3022B73CC8B241A6C50204EDAF0C7B43F7331D6707C9F68",
+    "selection_history_manifest_before_after_equal": true,
+    "selection_history_manifest_sha256": "931AF14C35662723D90A38AA520FBF2793906E4F15A4075753554394231956AE",
+    "symbol_database_all_six_snapshots_equal": true,
+    "symbol_database_sha256": "23A02AAB664E69DC27FA1F8709848E7120C5E68A3011B116EFA923879056ECA3",
+    "contract_start_end_and_pair_equal": true,
+    "contract_sha256": "68D42497E3B48BBE0CC164B64EAAA1265618027D246467AFD74C89897B89E37E",
+    "native_report_event_reconstruction_equal": true,
+    "candidate_report_event_reconstruction_equal": true,
+    "active_runtime_reports_output_cache_and_owners": 0
+  },
+  "fit_conclusion": {
+    "native_stop_regime_drift_exists": true,
+    "selection_components_with_absolute_shift_at_least_0_15": 4,
+    "median_absolute_component_shift": 0.2842364763982428,
+    "candidate_stop_atr_ratio_violations": 0,
+    "candidate_atr_unavailable": 0,
+    "interpretation": "The frozen ATR multipliers reproduced their intended outward stop geometry, and native stop-to-ATR geometry materially drifted. The experiment therefore reached the feasibility and economic test rather than failing its measurement premise."
+  },
+  "selection_conclusion": {
+    "native_stressed_net_usd": 28.935000000001054,
+    "candidate_stressed_net_usd": 14.831500000000961,
+    "candidate_minus_native_stressed_net_usd": -14.103500000000093,
+    "native_first_fills": 92,
+    "candidate_first_fills": 71,
+    "native_net_to_drawdown": 2.3919153509136506,
+    "candidate_net_to_drawdown": 1.1806639070212508,
+    "native_stop_loss_count": 5,
+    "candidate_stop_loss_count": 12,
+    "native_stressed_stop_loss_dollars": 14.627000000000043,
+    "candidate_stressed_stop_loss_dollars": 28.532499999999967,
+    "treated_components_improved": 2,
+    "candidate_us30_book_minus_native_usd": -14.975999999999988,
+    "candidate_sizing_attempts": 74,
+    "candidate_minimum_lot_blocks": 23,
+    "candidate_minimum_lot_block_rate": 0.3108108108108108,
+    "candidate_non_native_volume_entries": 0,
+    "candidate_non_native_volume_share": 0.0,
+    "passed_selection_gates": ["drawdown"],
+    "failed_selection_gates": ["mechanism", "density", "portfolio_value", "efficiency", "turnover", "treated_breadth", "risk_and_stops"]
+  },
+  "verdict": "MARKET_STOP_REVERSE_LOT_INFEASIBLE_AT_REFERENCE_CAPITAL",
+  "decision_translation": {
+    "preserve_native_stop_and_lot": true,
+    "retain_candidate": false,
+    "open_latest_pair": false,
+    "retain_binding_confirmation_question": false,
+    "minimum_lot_interpretation": "At the frozen 100 USD reference capital and unchanged gross-risk target, the market-defined stop required more than broker minimum volume risk in 23 of 74 treated sizing attempts. The declared response is rejection, not stop tightening, risk excess or a capital-threshold rescue.",
+    "economic_corroboration": "Even the feasible candidate subset did not change daily-ladder volume and materially reduced net, fills, efficiency, breadth and stop-loss behavior versus its adjacent native control.",
+    "adjacent_rescue": false,
+    "live_change": false
+  },
+  "frozen_exclusions": [
+    "No alternate capital, minimum lot, ATR period, multiplier, mean, quantile or volatility estimator.",
+    "No stop floor, component exception, Passive intervention, threshold, date, symbol, direction or subgroup rescue.",
+    "No change to gross risk, planned-risk accounting, admission, signals, clocks, holds, costs, RC4 ARC, ownership, protection or reconciliation.",
+    "No latest-window peek after the complete selection failure.",
+    "No promotion or Live authority."
+  ],
+  "execution_accounting": {
+    "valid_fit_tester_paths": 1,
+    "valid_selection_tester_paths": 2,
+    "valid_latest_tester_paths": 0,
+    "valid_tester_paths_total": 3,
+    "maximum_economically_valid_tester_paths": 5,
+    "successful_fit_aggregations": 1,
+    "successful_selection_aggregations": 1,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "economic_contract_changes": 0,
+    "retained_test_only_infrastructure": false
+  },
+  "historical_invalid_v1_preserved": true,
+  "family_frozen": true,
+  "retained_seed": null,
+  "automatic_successor_opened": false,
+  "whole_map_recompared": false,
+  "program_6_opened": false,
+  "manual_broker_account_position_order_or_deal_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "active_not_complete",
+  "next": "commit_and_push_the_complete_unit_062_experiment_then_recompare_programs_1_to_5_and_7_and_micro_meso_macro_before_opening_any_successor"
+}

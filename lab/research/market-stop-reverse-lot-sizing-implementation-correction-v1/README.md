@@ -10,4 +10,4 @@ This sibling completes the already declared Unit 062 economic experiment without
 
 The binding pre-outcome declaration is in `evidence/MARKET_STOP_REVERSE_LOT_SIZING_IMPLEMENTATION_CORRECTION_DECLARATION_V1.json`.
 
-Current stage: one valid native-geometry fit is frozen in `evidence/MARKET_STOP_REVERSE_LOT_SIZING_FIT_RECEIPT_V1.json`. The five exact fitted medians are embedded in `mt5/config/tester/candidate.set`; the adjacent native/candidate selection pair remains unopened and is the next internal stage of this same experiment.
+Closed result: the one valid fit and adjacent native/candidate selection pair completed with full integrity. Native stop-to-ATR drift was material, but the fitted profile blocked `23/74` sizing attempts at broker minimum lot, changed volume on `0/50` accepted entries and materially worsened selection value, turnover, efficiency, breadth and stop loss. Verdict `MARKET_STOP_REVERSE_LOT_INFEASIBLE_AT_REFERENCE_CAPITAL`; native stop/lot is preserved and latest remains unopened. See `evidence/MARKET_STOP_REVERSE_LOT_SIZING_RESULT_V2.json` and `evidence/MARKET_STOP_REVERSE_LOT_SIZING_CLOSURE_V2.json`.
