@@ -5,25 +5,25 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0214`
+- Latest state ID: `STATE-0215`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
 
 - Development: `ENABLED`, one serial stream only
 - Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-27 instruction to promote and attach the verified research observation ledger before today's evaluations without skipping a trade, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
-- Next V7 entries-disabled preflight: `ENABLED`; target RLO1 must prove exact connected `0/0`, flat continuity, research observer initialization and zero core fault before final authorization.
-- Next V7 new-entry authorization: `DISABLED`; CXR2 stopped normally at the verified pre-window flat boundary and RLO1 has not yet passed entries-disabled recovery.
-- Research-observation Live change: `PROMOTION_STAGED`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
+- Next V7 entries-disabled preflight: `PASSED`; committed RLO1 PIDs `21400` and `16484` proved exact connected `0/0`, flat continuity, zero core fault and observer create/recovery, then both stopped normally.
+- Next V7 new-entry authorization: `ENABLED`; the user's explicit 2026-08-27 attach-before-evaluation instruction authorizes the final committed `0/0 → 1/1` handoff after the passed RLO1 recovery.
+- Research-observation Live change: `READY_FOR_FINAL_HANDOFF`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
 - Last verified real-account owner configuration: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; PID `15080` stopped normally at server `2026.08.27 05:56:29`.
 - Existing real-account owner: none
-- User V7 Live direction: `PENDING_RLO1_HANDOFF`
+- User V7 Live direction: `FINAL_RLO1_HANDOFF_AUTHORIZED`
 
-Legacy B70 V6R6, parent V7, CXR1 and CXR2 are stopped and disabled. Immediately before stop, CXR2's actual MT5 Algo Trading was disabled and the local snapshot proved entries `1/0`, positions/orders/margin/planned risk `0/0/$0/$0`, retry/shadow/ARC zero, balance/equity `$104.54/$104.54`, project realized `$3.89`, stage `$103.89`, stressed `$99.401`; final stopped sequence is `3831`. Server `05:56:29` precedes Passive and every fixed 2026-08-27 evaluation window, so no current-day opportunity was consumed or skipped. Dashboard PID `28508` was stopped for the identity transition; its source remains unchanged and reads no research ledger.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 are stopped and disabled. Committed RLO1 entries-disabled PID `21400` initialized the research observer at core sequence `3832`, wrote both alternating state files and stopped normally; PID `16484` recovered observer sequence `2`, remained healthy through core sequence `3836` and stopped at sequence `3837`. Both runs held entries/positions/orders/margin/planned risk at `0/0/0/$0/$0`, preserved `$104.54/$104.54` balance/equity, and had zero safety/persistence/broker/foreign fault, warning or alert. No canonical candidate/lifecycle row was manufactured before a natural evaluation. No terminal or dashboard currently owns the account/UI.
 
 ## Active work
 
-- Active engineering boundary: controlled RLO1 Live promotion; verified package and local transition receipt are staged at a stopped-flat no-owner boundary, pending commit/push and entries-disabled recovery
+- Active engineering boundary: controlled RLO1 Live promotion; package boundary commit `d22ad50b7c6e5d576a3866460ab860949bee1731` and two entries-disabled recoveries passed, pending this evidence commit/push and the exact final `0/0 → 1/1` handoff
 - Active research boundary: none; Unit 083 is frozen and closed, the whole map is recomputed, and the seven unclosed Claude cards remain held at explicit identification or adjacency boundaries
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
