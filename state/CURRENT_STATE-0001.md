@@ -1756,3 +1756,13 @@
 - Closed `AMBIGUOUS_PASSIVE_SELF_BLOCKING_OPPORTUNITY_NO_CANDIDATE`. Preserve the one-position Passive constraint; frequent latent signals prove neither negligible supply nor positive enough value for a second layer.
 - Derived rows/result/closure SHA-256 values are `98E53BE6E44C1995A15A944CE3DD4E6557B2AC59D34E4B795C2511A4E3B78ED1` / `A17EF2DAB286BB891DD75D609EEFC19BE2407A436F52875476356595DB7BE230` / `A80443AA2F6814510E2CF229BD416490D820330938E7CF046A5EFFEF9A961E94`. One aggregation, one premetric serialization correction and zero metric reruns; no actual/stressed close economics, generic signal-unknown row, MQL, Tester, broker/account state, Program 6 or Live surface was consumed.
 - No seed or candidate opened. Recompare all remaining Claude cards and the whole Program/height map after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0211 - 2026-08-27
+
+- Unit 082 closure commit `e01e5085a208d06d64c3232b5df68e2a21541309` reached origin before Programs 1-5 and 7, all heights and the eight remaining Claude cards were recomputed. No Passive reset, horizon, layer or mark rescue opened.
+- Opened only Program 3 / meso Unit 083 `clock-permutation-passive-priority-v1` from external card 15. Unit 082 shifts the unresolved Passive mechanism from self-concurrency to whether continuous clock/pending reservation displaces later components.
+- Unit 061's invalid slot sum is not repaired. The exact raw roles are the fourteen aggregate-risk blocks, one distance negative control, 356 paired position intervals, 119 Passive pending intervals and the logged active/reserved union masks.
+- Froze inclusive/fractional reserved-occupant attribution, individual risk-removal pivotality, per-1,000 reserved-hour normalization and blocked-target admitted-component mean stressed-R context. No blocked outcome is imputed.
+- Passage requires Passive reservation in at least 7 blocks, individual pivotality in 5, four-month/three-target breadth, at least `2x` normalized rate and positive target-value advantage. Exact zero Passive presence plus the lowest normalized rate is the original strong falsifier; otherwise the unit closes ambiguous.
+- One source-free aggregation and one premetric implementation-only correction are budgeted; no acquisition, runtime, MQL, compile, Tester, optimization, Program 6, broker/account query or Live action is allowed.
+- Declaration SHA-256 is `1819F74475D2556FB831875630EE213D9DDDB6B5CDE6954E4E3A5229168D6040`; outcomes remain unopened until this boundary reaches `origin/main`.
