@@ -19,6 +19,7 @@
 #include <ZetaTerminusNext\Execution\ZetaOrders.mqh>
 #include <ZetaTerminusNext\Execution\ZetaProtectionAndReconciliation.mqh>
 #include <ZetaTerminusNext\Persistence\ZetaStateAndEvents.mqh>
+#include <ZetaTerminusNext\Observation\ZetaResearchObservation.mqh>
 
 // The EA owns assembly and the inherited event ordering only.
 
@@ -71,6 +72,7 @@ bool InitializeConnectedRuntime()
          (long)AccountInfoInteger(ACCOUNT_LOGIN);
 
    execution_state.runtime_ready = true;
+   InitializeResearchObservation();
    UpdateAccountRisk();
    const bool broker_reconciled = ReconcileBrokerState(true);
    if(recovered && broker_reconciled && !ReconcileArcPendingModify(true))
@@ -85,6 +87,7 @@ bool InitializeConnectedRuntime()
                (NewEntriesOperationallyAllowed() ? "entries-enabled" :
                                                    "entries-disabled"));
    SaveState();
+   ResearchSampleOpenPositions();
    PrintFormat("%s initialized portfolio=%s recovered=%s "
                "entries=%s safety=%s sequence=%I64d",
                EXECUTION_VERSION,
@@ -122,6 +125,8 @@ int OnInit()
       return(INIT_PARAMETERS_INCORRECT);
    FolderCreate("ZetaTerminusNext");
    FolderCreate("ZetaTerminusNext\\live");
+   FolderCreate("ZetaTerminusNext\\research");
+   FolderCreate(RESEARCH_OBSERVATION_DIRECTORY);
    if(tester_mode)
       ResetTesterArtifacts();
    if(!AcquireRuntimeOwnership())
@@ -181,6 +186,10 @@ void OnTick()
   {
    if(!execution_state.runtime_ready && !InitializeConnectedRuntime())
       return;
+
+   // Optional research sampling is read-only. It never authorizes, blocks,
+   // sizes, modifies or closes an order.
+   ResearchSampleOpenPositions();
 
    datetime current_server = 0;
    datetime us100_m15_bar = 0;
@@ -263,6 +272,7 @@ void OnTick()
       ProcessUS100Cross();
      }
    ProcessRC4AdverseRiskCompression();
+   ResearchSampleOpenPositions();
    if(tester_mode)
       tester_data_retry_active =
          TesterDataRetryRequired(current_server, us100_m15_bar);
@@ -288,6 +298,7 @@ void OnTimer()
    UpdateAccountRisk();
    if(!ReconcileBrokerState(false))
       return;
+   ResearchSampleOpenPositions();
    if(execution_state.passive_pending_order > 0 &&
       (execution_state.passive_cancel_pending || !NewEntriesOperationallyAllowed()))
      {
@@ -297,7 +308,10 @@ void OnTimer()
                                    "new entries disabled by runtime");
      }
    if((long)TimeGMT() - (long)last_snapshot_utc >= InpSnapshotSeconds)
+     {
       SaveState();
+      SaveResearchObservationState();
+     }
   }
 
 
@@ -323,6 +337,7 @@ void OnDeinit(const int reason)
                   (double)reason,
                   (portfolio_state.safety_stopped ? "safety" : "normal"));
       SaveState();
+      SaveResearchObservationState();
      }
    PrintFormat("%s final portfolio=%s reason=%d stressed_balance_2x=%.4f "
                 "stressed_net_2x=%.4f stressed_max_closed_dd=%.4f "

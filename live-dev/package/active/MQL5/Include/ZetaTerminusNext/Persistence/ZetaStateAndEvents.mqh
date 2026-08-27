@@ -81,6 +81,11 @@ void SetEntrySignalCheck(const int component,
    component_states[component].entry_check_signal_value = value;
    component_states[component].entry_check_direction = direction;
    component_states[component].entry_check_result = result;
+   ResearchCaptureSignalContext(component,
+                                component_states[component].entry_check_bar,
+                                value,
+                                passed,
+                                direction);
   }
 
 
@@ -1418,7 +1423,15 @@ bool PersistDecisionUntil(const int component,
   {
    component_states[component].last_decision_bar = bar;
    if(component_states[component].entry_check_signal_passed != 1)
-      return(SaveState());
+     {
+      const bool saved = SaveState();
+      if(saved && component_states[component].entry_check_signal_known == 1)
+         ResearchRecordCandidateOutcome(component,
+                                        "SIGNAL",
+                                        component_states[component].entry_check_result,
+                                        "signal evaluation completed without an order path");
+      return(saved);
+     }
    if(component < 0 || component >= COMPONENT_COUNT || bar <= 0 ||
       deadline < bar || MathAbs(component_states[component].entry_check_direction) != 1 ||
       !MathIsValidNumber(component_states[component].entry_check_signal_value) ||
@@ -1563,7 +1576,13 @@ bool FinalizeDecisionJournal(const int component,
       return(false);
      }
    ClearDecisionJournalState();
-   return(SaveState());
+   const bool saved = SaveState();
+   if(saved)
+      ResearchRecordCandidateOutcome(component,
+                                     "OUTCOME",
+                                     outcome,
+                                     "order and admission path completed");
+   return(saved);
   }
 
 

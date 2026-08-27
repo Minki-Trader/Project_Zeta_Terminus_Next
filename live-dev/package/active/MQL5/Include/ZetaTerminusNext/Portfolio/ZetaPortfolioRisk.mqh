@@ -291,6 +291,13 @@ bool CalculateProtectiveStop(const int component,
      }
    if(minimum_gross_risk > target_gross_risk + 1.0e-9)
      {
+      ResearchCaptureAdmissionContext(
+         component,
+         "RISK_MIN_LOT_SKIP",
+         minimum_gross_risk,
+         TrackedAggregatePlannedRisk() + minimum_gross_risk,
+         position_budget,
+         capital * InpMaximumAggregateRiskFraction);
       ++risk_admission_skips;
       RecordEvent(component,
                   "RISK_MIN_LOT_SKIP",
@@ -408,6 +415,14 @@ bool CalculateProtectiveStop(const int component,
    if(planned_risk > position_budget + tolerance ||
       aggregate_after > aggregate_budget + tolerance)
      {
+      ResearchCaptureAdmissionContext(
+         component,
+         (planned_risk > position_budget + tolerance
+          ? "POSITION_RISK_CAP" : "AGGREGATE_RISK_CAP"),
+         planned_risk,
+         aggregate_after,
+         position_budget,
+         aggregate_budget);
       ++risk_admission_skips;
       RecordEvent(component,
                   "RISK_ADMISSION_SKIP",
@@ -422,6 +437,12 @@ bool CalculateProtectiveStop(const int component,
      }
    if(aggregate_after > portfolio_state.maximum_aggregate_planned_risk_usd)
       portfolio_state.maximum_aggregate_planned_risk_usd = aggregate_after;
+   ResearchCaptureAdmissionContext(component,
+                                   "ADMITTED",
+                                   planned_risk,
+                                   aggregate_after,
+                                   position_budget,
+                                   aggregate_budget);
    planned_risk = position_budget;
    return(true);
   }

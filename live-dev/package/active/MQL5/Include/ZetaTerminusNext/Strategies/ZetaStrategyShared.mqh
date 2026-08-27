@@ -273,7 +273,12 @@ bool CommitOpportunityConsumption(const int component,
   {
    if(!result.consume_opportunity)
       return(true);
-   return(PersistDecision(component, result.current_bar));
+   const bool saved = PersistDecision(component, result.current_bar);
+   if(saved && result.begin_observation)
+      ResearchRecordGateObservation(component,
+                                    result.current_bar,
+                                    component_states[component].entry_check_result);
+   return(saved);
   }
 
 

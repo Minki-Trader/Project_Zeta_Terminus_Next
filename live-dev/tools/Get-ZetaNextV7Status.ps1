@@ -40,9 +40,9 @@ $runtimeModes = [ordered]@{
     }
 }
 
-$expectedExpertHash = '620D0351AF22EAA389BE7F36CBD3AB6C9D2204D182E897CFE6A845495428CFC6'
+$expectedExpertHash = 'CB225D97DA7BCEC30599B472F615C7A3775C359A0F8FA8293FBB9C222795775B'
 $expectedSchemaVersion = '7'
-$expectedReleaseId = 'NEXT-E01-V7-CXR2-14d84b9e4bb3'
+$expectedReleaseId = 'NEXT-E01-V7-RLO1-b32e7e176f2e'
 $expectedProjectId = 'project-zeta-terminus-next'
 $expectedExecutionVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c'
 $expectedEconomicVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6'

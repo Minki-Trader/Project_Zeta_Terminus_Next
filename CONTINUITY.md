@@ -59,12 +59,24 @@ The patch changes only the verified CP1 Entry Gate and CP2 market-entry transact
 
 This successor changes only current-order ownership classification for an exact broker-generated SL market order in transit plus the release ID. CXR1 stopped at a verified flat boundary, and both redundant state files had only the persisted false-positive safety latch cleared. CXR2 passed exact connected entries-disabled recovery, final `0/0 → 1/1` handoff and three persistent healthy snapshots.
 
+## Verified research-observation successor
+
+- Release: `NEXT-E01-V7-RLO1-b32e7e176f2e`
+- Parent release: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
+- Execution, Portfolio, Magic, core state marker/schema/paths and SET: unchanged from CXR2
+- Canonical source/settings SHA-256: `B32E7E176F2EF1B4A7AA6E9FB91D59FAC685325CC83A79DAA1947F5A431CA178`
+- MQ5 SHA-256: `1AC7F4F6A1EB99EE00A7BFA77182641D8CE5585BBEB05075C960459C98918D26`
+- EX5 SHA-256: `CB225D97DA7BCEC30599B472F615C7A3775C359A0F8FA8293FBB9C222795775B`
+- Engineering verdict: `PASS_SAME_SPEC_EXACT_NON_INTERFERENCE_APPROVE_CONTROLLED_LIVE_PROMOTION`
+
+This successor adds only the verified read-only research observation hooks and a separate `ZetaTerminusNext\research\canonical` namespace. Candidate/lifecycle ledgers append and flush; the Live EA has no reset/delete call, no automatic rotation or cleanup exists, and the dashboard continues to consume only the unchanged core Live snapshot. CXR2 stopped normally at server `2026.08.27 05:56:29`, before every current-day evaluation window, with entries `1/0`, no position/order/margin/risk/retry/shadow/ARC state and no consumed 2026-08-27 opportunity. RLO1 is committed pending exact connected entries-disabled recovery and the final `0/0 → 1/1` handoff.
+
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev authorization: `ENABLED`; exact CXR2 PID `15080` is the verified sole owner at entries `1/1` after the fresh committed preflight PID `28148` proved `0/0`, flat exposure and zero risk and stopped.
+- Next V7 Live-Dev authorization: `ENABLED`; CXR2 PID `15080` stopped normally at the verified pre-window flat boundary and no real-account owner is currently running. RLO1 is the only authorized target, pending its committed entries-disabled recovery and exact final `0/0 → 1/1` handoff.
 - V7 may not import or adopt B70 positions or state.
-- The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs including CXR2 `21944/24820/28148`, dashboard PIDs `4712/4284`, and prior CXR2 PID `13328` are no longer active. Exact CXR2 PID `15080` and Korean dashboard PID `28508` are active; Legacy, parent V7 and CXR1 must not restart.
+- The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs including CXR2 `21944/24820/28148`, dashboard PIDs `4712/4284/28508`, and CXR2 PIDs `13328/15080` are no longer active. Legacy, parent V7, CXR1 and CXR2 must not restart.
 
 ## Completed legacy closure
 

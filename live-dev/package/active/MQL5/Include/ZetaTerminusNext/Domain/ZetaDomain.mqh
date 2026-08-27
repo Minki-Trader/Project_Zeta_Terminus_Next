@@ -25,7 +25,7 @@ const string ECONOMIC_VERSION =
    "zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6";
 const string PROJECT_ID = "project-zeta-terminus-next";
 const string SCHEMA_VERSION = "7";
-const string RELEASE_ID = "NEXT-E01-V7-CXR2-14d84b9e4bb3";
+const string RELEASE_ID = "NEXT-E01-V7-RLO1-b32e7e176f2e";
 const string PORTFOLIO_ID = "ZT-PORT-NEXT-V7-2db5ef5ead1c";
 const string ECONOMIC_FINGERPRINT =
    "ref100-base0.01-step150-margin0.45-delay2-deviation100-inert-market-execution-quote-age3s-pre500-components6-passive-fixed0.01-always-m15-lb12-en1-ex0.25-offset0.25-activation4-hold16-posrisk0.04-aggrisk0.12-reserve0.25-headroom0.25-admission-reserved-broker-sl-session-clock-eet-v1-calendar2022-2028-rc4-check8-three-frozen-ordinal-heads-votesum-le-minus2-retain-original-loss0.25-one-shot-shadow-accepted-occupancy";
@@ -47,6 +47,20 @@ const string CURRENT_SNAPSHOT_PATH_B =
    "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c-current-b.csv";
 const string OWNERSHIP_PATH =
    "ZetaTerminusNext\\live\\zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c.lock";
+const string RESEARCH_OBSERVATION_DIRECTORY =
+   "ZetaTerminusNext\\research\\canonical";
+const string RESEARCH_OBSERVATION_SCHEMA =
+   "zeta-next-research-observation-ledger-v1";
+const string RESEARCH_OBSERVATION_MARKER =
+   "ZT_NEXT_RESEARCH_OBSERVATION_LEDGER_STATE_V1";
+const string RESEARCH_OBSERVATION_STATE_PATH_A =
+   "ZetaTerminusNext\\research\\canonical\\research-state-a.csv";
+const string RESEARCH_OBSERVATION_STATE_PATH_B =
+   "ZetaTerminusNext\\research\\canonical\\research-state-b.csv";
+const string RESEARCH_CANDIDATE_LEDGER_PATH =
+   "ZetaTerminusNext\\research\\canonical\\research-candidates.csv";
+const string RESEARCH_LIFECYCLE_LEDGER_PATH =
+   "ZetaTerminusNext\\research\\canonical\\research-lifecycles.csv";
 const int FILE_OPEN_ATTEMPTS = 5;
 const int FILE_RETRY_DELAY_MS = 100;
 const ulong COMPLETED_DEAL_RECONCILIATION_TIMEOUT_MS = 5000;
@@ -155,6 +169,33 @@ struct ExecutionState
    bool arc_modify_pending;
    bool arc_modify_retry_pending;
    long arc_modify_retry_after_msc;
+  };
+
+// Transient copy of a completed broker exit. It is intentionally outside the
+// durable trading-state schema and is consumed only after core SaveState().
+struct ResearchExitSnapshot
+  {
+   int component;
+   ulong deal_ticket;
+   ulong position_identifier;
+   datetime entry_time_server;
+   int direction;
+   double entry_volume;
+   double entry_feature;
+   double entry_stop_loss;
+   double entry_planned_risk_usd;
+   double entry_spread_price;
+   double entry_transaction_cost;
+   double entry_adverse_slippage;
+   bool entry_cost_known;
+   double deal_net;
+   double stressed_net;
+   bool full_exit;
+   double remaining_volume;
+   double execution_price;
+   long deal_time_msc;
+   ENUM_DEAL_REASON exit_reason;
+   string core_event_name;
   };
 
 struct DecisionIntent
@@ -426,6 +467,28 @@ void ProcessRC4AdverseRiskCompression();
 bool ReconcileArcPendingModify(const bool restart_recovery);
 bool IsArcTransientModifyRetcode(const uint retcode);
 void ProcessArcModifyRetry();
+void InitializeResearchObservation();
+void ResearchSampleOpenPositions();
+void SaveResearchObservationState();
+void ResearchCaptureSignalContext(const int component,
+                                  const datetime bar,
+                                  const double feature,
+                                  const bool passed,
+                                  const int direction);
+void ResearchCaptureAdmissionContext(const int component,
+                                     const string reason,
+                                     const double attempted_planned_risk,
+                                     const double attempted_aggregate_after,
+                                     const double position_cap,
+                                     const double aggregate_cap);
+void ResearchRecordCandidateOutcome(const int component,
+                                    const string stage,
+                                    const string result,
+                                    const string detail);
+void ResearchRecordGateObservation(const int component,
+                                   const datetime bar,
+                                   const string result);
+void ResearchHandleExitDeal(const ResearchExitSnapshot &snapshot);
 
 
 #endif

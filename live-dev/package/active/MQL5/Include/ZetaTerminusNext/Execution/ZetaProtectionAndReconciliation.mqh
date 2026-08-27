@@ -407,10 +407,37 @@ bool ApplyExitDeal(const int component,
       (ENUM_DEAL_REASON)HistoryDealGetInteger(deal, DEAL_REASON);
    const double admitted_stop_loss = component_states[component].entry_stop_loss;
    const double admitted_planned_risk = component_states[component].entry_planned_risk_usd;
-   const ulong completed_identifier = component_states[component].position_identifier;
-   const datetime completed_entry_time = component_states[component].entry_time_server;
-   const int completed_direction = component_states[component].entry_direction;
-   const double completed_arc_original_stop = arc_original_stop_loss;
+    const ulong completed_identifier = component_states[component].position_identifier;
+    const datetime completed_entry_time = component_states[component].entry_time_server;
+    const int completed_direction = component_states[component].entry_direction;
+    ResearchExitSnapshot research_exit = {};
+    research_exit.component = component;
+    research_exit.deal_ticket = deal;
+    research_exit.position_identifier = completed_identifier;
+    research_exit.entry_time_server = completed_entry_time;
+    research_exit.direction = completed_direction;
+    research_exit.entry_volume = component_states[component].entry_volume;
+    research_exit.entry_feature = component_states[component].entry_feature;
+    research_exit.entry_stop_loss = admitted_stop_loss;
+    research_exit.entry_planned_risk_usd = admitted_planned_risk;
+    research_exit.entry_spread_price =
+       component_states[component].entry_spread_price;
+    research_exit.entry_transaction_cost =
+       component_states[component].entry_transaction_cost;
+    research_exit.entry_adverse_slippage =
+       component_states[component].entry_adverse_slippage;
+    research_exit.entry_cost_known =
+       component_states[component].entry_cost_known;
+    research_exit.deal_net = deal_net;
+    research_exit.stressed_net = stressed_net;
+    research_exit.full_exit = (remaining_after_steps == 0);
+    research_exit.remaining_volume =
+       (double)remaining_after_steps * step;
+    research_exit.execution_price = execution_price;
+    research_exit.deal_time_msc = deal_time_msc;
+    research_exit.exit_reason = exit_reason;
+    research_exit.core_event_name = event_name;
+    const double completed_arc_original_stop = arc_original_stop_loss;
    const bool completed_arc_request_unresolved =
       (execution_state.arc_modify_pending || execution_state.arc_modify_retry_pending);
    const double completed_arc_protected_stop =
@@ -501,8 +528,9 @@ bool ApplyExitDeal(const int component,
                             executed_volume,
                             (double)remaining_after_steps * step,
                             deal));
-   SaveState();
-   return(true);
+    SaveState();
+    ResearchHandleExitDeal(research_exit);
+    return(true);
   }
 
 

@@ -490,6 +490,11 @@ void ProcessPassiveLimit()
    if(!signal_passed)
      {
       component_states[US100_PASSIVE_LIMIT].last_decision_bar = current_bar;
+      ResearchRecordCandidateOutcome(
+         US100_PASSIVE_LIMIT,
+         "SIGNAL",
+         component_states[US100_PASSIVE_LIMIT].entry_check_result,
+         "passive signal evaluation completed without an order path");
       return;
      }
    component_states[US100_PASSIVE_LIMIT].last_decision_bar = current_bar;

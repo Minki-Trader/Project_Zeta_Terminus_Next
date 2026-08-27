@@ -5,30 +5,30 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0213`
+- Latest state ID: `STATE-0214`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
 
 - Development: `ENABLED`, one serial stream only
-- Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-26 instruction to repair the three Live warnings and restore future entry readiness, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
-- Next V7 entries-disabled preflight: `PASSED`; CXR2 PID `21944` proved exact connected `0/0`, flat continuity and zero fault, then final preflight PID `24820` repeated exact `0/0` and stopped normally.
-- Next V7 new-entry authorization: `ENABLED`; exact CXR2 Live PID `15080` passed the fresh committed `0/0 → 1/1` handoff at Git `dfda2cc83a7c024033a7cf21de4b5f5c9ade7d01` under the user's explicit 2026-08-26 start instruction
-- Research-observation Live change: `AUTHORIZED_IN_PRINCIPLE` by the user's explicit 2026-08-26 logging patch instruction, but activation is deferred until all current-day windows expire and a stopped-flat, entries-disabled recovery and exact `0/0 → 1/1` handoff can occur without skipping or manufacturing an opportunity
-- Last verified real-account owner configuration: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; terminal PID `15080` is the active exact Live owner
-- Existing real-account owner: exact CXR2 Live PID `15080` only; preflight PID `28148` stopped before the Live start and no second `terminal64.exe` was observed
-- User V7 Live direction: `EFFECTIVE`
+- Next Live-Dev authorization: `ENABLED` by the user's explicit 2026-08-27 instruction to promote and attach the verified research observation ledger before today's evaluations without skipping a trade, subject to the stopped-flat, entries-disabled recovery and final `0/0 → 1/1` boundary.
+- Next V7 entries-disabled preflight: `ENABLED`; target RLO1 must prove exact connected `0/0`, flat continuity, research observer initialization and zero core fault before final authorization.
+- Next V7 new-entry authorization: `DISABLED`; CXR2 stopped normally at the verified pre-window flat boundary and RLO1 has not yet passed entries-disabled recovery.
+- Research-observation Live change: `PROMOTION_STAGED`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
+- Last verified real-account owner configuration: CXR2 release `NEXT-E01-V7-CXR2-14d84b9e4bb3`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; PID `15080` stopped normally at server `2026.08.27 05:56:29`.
+- Existing real-account owner: none
+- User V7 Live direction: `PENDING_RLO1_HANDOFF`
 
-Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh preflight PID `28148` proved exact CXR2 identity, entries `0/0`, positions/orders/margin/planned risk `0/0/$0/$0` and balance/equity `$104.48/$104.48`, then stopped. Exact Live PID `15080` passed release/Portfolio/account `1/1`; local healthy snapshots advanced `2202 → 2203` through server `2026.08.26 03:22:01` with zero owned position, pending order, margin, planned risk, safety stop, persistence fault, broker mismatch, foreign exposure, warning or alert. The FPMarketsSC-Live MT5 window was visually verified and Korean dashboard PID `28508` is visible and responding.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 are stopped and disabled. Immediately before stop, CXR2's actual MT5 Algo Trading was disabled and the local snapshot proved entries `1/0`, positions/orders/margin/planned risk `0/0/$0/$0`, retry/shadow/ARC zero, balance/equity `$104.54/$104.54`, project realized `$3.89`, stage `$103.89`, stressed `$99.401`; final stopped sequence is `3831`. Server `05:56:29` precedes Passive and every fixed 2026-08-27 evaluation window, so no current-day opportunity was consumed or skipped. Dashboard PID `28508` was stopped for the identity transition; its source remains unchanged and reads no research ledger.
 
 ## Active work
 
-- Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
+- Active engineering boundary: controlled RLO1 Live promotion; verified package and local transition receipt are staged at a stopped-flat no-owner boundary, pending commit/push and entries-disabled recovery
 - Active research boundary: none; Unit 083 is frozen and closed, the whole map is recomputed, and the seven unclosed Claude cards remain held at explicit identification or adjacency boundaries
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
-- V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
-- V7 parent release ID: `NEXT-E01-V7-CXR1-c0ad2f30d293`
+- V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
+- V7 parent release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
 - V7 Magic: `260824701..260824706`
 - Forward Lab baseline: frozen `lab/engineering/protective-exit-order-reconciliation-v1/mt5/` at `0d4032786cecb7d7e8a4c3074609db5b105fa107`; `lab/mt5/` and the predecessor CP2 root are historical frozen sources for future derivation only through this successor
@@ -53,7 +53,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
   - Latest: 84 first fills, actual `-$1.11`, stressed 2x `-$2.819`
   - Binding: 2,235 first fills, actual `+$1,019.04`, stressed 2x `+$940.6585`
   - After identity normalization, report summaries, all order rows and all deal rows have zero differences in both windows
-- Original modular V7 and CXR1 packages remain frozen in Git history; `live-dev/package/active/` now holds the separately manifested CXR2 successor
+- Original modular V7, CXR1 and CXR2 packages remain frozen in Git history; `live-dev/package/active/` now holds the separately manifested RLO1 successor pending its entries-disabled handoff
 - Next status reader, Korean 5-second dashboard, entries-disabled starter, 0/0-to-1/1 Live starter, Master launcher, flat stop and local cache-handoff tools are implemented
 - Offline operator check correctly refused readiness while legacy PID `24324` remained active; that legacy runtime has now stopped without a Next process starting
 - Local handoff receipt pins legacy final commit `4d04a00`, final state/event hashes, the sole cached account and prior project realized net `$4.33`; it copies no V6 state or position
