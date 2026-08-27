@@ -1,0 +1,71 @@
+{
+  "schema": "zeta-next-research-artifact-retention-sweep-v1",
+  "receipt_id": "RESEARCH_ARTIFACT_RETENTION_SWEEP_20260828_V4",
+  "date_local": "2026-08-28",
+  "status": "COMPLETED_EXACT_CLOSED_RUNTIME_CACHE_REMOVED",
+  "reason": "Pre-Unit-096 Portable storage hygiene: free space was 31.887 GiB, but the required lean physical Portable would likely lower the system drive below the 30 GiB operating floor.",
+  "scope": "Exactly one closed Unit 093 Git-ignored Portable runtime cache. Tracked source/configuration/evidence and the separately preserved valid 64-file matrix artifact are excluded.",
+  "preconditions": {
+    "workspace_root": "C:/Users/awdse/OneDrive/Desktop/Project_Zeta_Terminus_Next",
+    "git_branch": "main",
+    "git_head_before": "e29c5b7a75fccd13e9b4e7b5f4dce4c13fda48c1",
+    "minimum_free_bytes": 32212254720,
+    "c_free_bytes_before": 34238210048,
+    "c_free_gib_before": 31.887,
+    "target_absolute_path": "C:/Users/awdse/OneDrive/Desktop/Project_Zeta_Terminus_Next/lab/runtime/crcs93-portable",
+    "target_under_lab_runtime": true,
+    "target_root_link_type": null,
+    "target_git_ignored": true,
+    "tracked_files_under_target": 0,
+    "target_process_owners": 0,
+    "dry_run_command": "git clean -ndX -- lab/runtime/crcs93-portable/",
+    "dry_run_selected_only_declared_target": true
+  },
+  "eligible_closed_family": {
+    "unit": "cross-relative-convergence-sleeve-093",
+    "family": "cross-relative-convergence-sleeve-v1",
+    "closure_status": "CLOSED_FALSIFIED_PRESERVE_SIX_COMPONENTS_MAP_RECOMPARED",
+    "portable_regenerable_from_tracked_family": true,
+    "valid_matrix_preserved_path": "lab/artifacts/ea-files/cross-relative-convergence-sleeve-v1/valid-matrix-v1/",
+    "valid_matrix_files": 64,
+    "valid_matrix_sha256": "9A12FC32AAADD6C6C73D091758A2913845ABF1196C560C56BC8B11C3421C51E1"
+  },
+  "target": {
+    "path": "lab/runtime/crcs93-portable/",
+    "prior_file_count": 822,
+    "prior_logical_bytes": 6280588921,
+    "prior_logical_gib": 5.849,
+    "exists_after": false
+  },
+  "protected": [
+    "lab/runtime/tester-portable/",
+    "lab/runtime/rncr94-portable/",
+    "lab/runtime/live-research-observation-ledger-v1-portable/",
+    "lab/runtime/protective-exit-order-reconciliation-v1-portable/",
+    "lab/research/cross-relative-convergence-sleeve-v1/",
+    "lab/artifacts/ea-files/cross-relative-convergence-sleeve-v1/valid-matrix-v1/",
+    "live-dev/"
+  ],
+  "execution": {
+    "command": "git clean -fdX -- lab/runtime/crcs93-portable/",
+    "primary_result": "All files were removed. Windows read-only directory attributes left empty directory trees and emitted permission warnings.",
+    "empty_tree_completion": "The exact target was revalidated to contain zero files and remain equal to the predeclared absolute path; ReadOnly was cleared only on those empty directories and the exact tree was deleted with System.IO.Directory.Delete.",
+    "completed": true,
+    "scope_expanded": false
+  },
+  "postconditions": {
+    "target_absent": true,
+    "removed_roots": 1,
+    "removed_file_count": 822,
+    "prior_logical_bytes": 6280588921,
+    "c_free_bytes_after": 40518750208,
+    "c_free_gib_after": 37.736,
+    "observed_free_byte_increase": 6280540160,
+    "free_space_floor_passed_after": true,
+    "tracked_changes_from_cleanup": 0,
+    "scope_expanded": false,
+    "broker_or_account_state_queried": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "recoverability": "The selected root is an ignored, untracked closed-family runtime cache and is not recoverable from Git. It is regenerable from its frozen tracked family; all durable evidence and the valid matrix artifact remain protected."
+}
