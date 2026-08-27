@@ -1,0 +1,85 @@
+{
+  "schema": "zeta-next-research-artifact-retention-sweep-v1",
+  "receipt_id": "RESEARCH_ARTIFACT_RETENTION_SWEEP_20260827_V3",
+  "date_local": "2026-08-27",
+  "reason": "Mandatory pre-Portable retention sweep because C: free space was below the 30 GiB operating floor.",
+  "scope": "Exactly five closed invalid-or-no-candidate Lab Portable runtime caches. No tracked source, declaration, result, closure, evidence, artifact, canonical runtime, current logger runtime, or forward-baseline runtime was selected.",
+  "preconditions": {
+    "workspace_root": "C:/Users/awdse/OneDrive/Desktop/Project_Zeta_Terminus_Next",
+    "git_branch": "main",
+    "git_head_before": "3ec80cf",
+    "git_worktree_clean_before": true,
+    "minimum_free_bytes": 32212254720,
+    "c_free_bytes_before": 31116853248,
+    "c_free_gib_before": 28.98,
+    "all_targets_under_lab_runtime": true,
+    "all_targets_git_ignored": true,
+    "tracked_files_under_targets": 0,
+    "target_process_owners": 0,
+    "dry_run_command": "git clean -ndX -- <the five exact target roots>",
+    "dry_run_selected_only_declared_targets": true
+  },
+  "removed": [
+    {
+      "path": "lab/runtime/us100-session-reopen-discontinuity-v1-portable",
+      "prior_file_count": 204,
+      "prior_logical_bytes": 3547214391,
+      "exists_after": false
+    },
+    {
+      "path": "lab/runtime/us100-tick-flow-imbalance-response-v1-portable",
+      "prior_file_count": 510,
+      "prior_logical_bytes": 3563351250,
+      "exists_after": false
+    },
+    {
+      "path": "lab/runtime/us100-failed-extreme-auction-response-v1-portable",
+      "prior_file_count": 185,
+      "prior_logical_bytes": 3548481325,
+      "exists_after": false
+    },
+    {
+      "path": "lab/runtime/rva32-portable",
+      "prior_file_count": 151,
+      "prior_logical_bytes": 2932084105,
+      "exists_after": false
+    },
+    {
+      "path": "lab/runtime/pe33-portable",
+      "prior_file_count": 152,
+      "prior_logical_bytes": 2931902702,
+      "exists_after": false
+    }
+  ],
+  "totals": {
+    "removed_roots": 5,
+    "prior_file_count": 1202,
+    "prior_logical_bytes": 16523033773,
+    "prior_logical_gib": 15.39,
+    "c_free_bytes_after": 47619256320,
+    "c_free_gib_after": 44.35,
+    "observed_free_byte_increase": 16502403072,
+    "free_space_floor_passed_after": true
+  },
+  "execution": {
+    "primary_command": "git clean -fdX -- <the five exact target roots>",
+    "primary_result": "All files were removed. Windows read-only directory attributes left empty directory trees and caused a nonzero command exit.",
+    "empty_tree_completion": "Each exact root was revalidated to contain zero files and to remain beneath lab/runtime; the ReadOnly bit was cleared only on those empty directories, then those exact trees were deleted with System.IO.Directory.Delete.",
+    "scope_expanded": false
+  },
+  "preserved": [
+    "lab/runtime/tester-portable",
+    "lab/runtime/live-research-observation-ledger-v1-portable",
+    "lab/runtime/protective-exit-order-reconciliation-v1-portable",
+    "lab/evidence",
+    "lab/artifacts"
+  ],
+  "postconditions": {
+    "all_declared_targets_absent": true,
+    "all_declared_protected_roots_present": true,
+    "tracked_changes_from_cleanup": 0,
+    "git_status_after_cleanup_before_receipt": "## main...origin/main",
+    "broker_or_account_state_queried": false
+  },
+  "recoverability": "The removed roots were ignored, untracked runtime caches and are not recoverable from Git. They are regenerable from their frozen tracked families and evidence. Durable tracked evidence and artifacts were not removed."
+}
