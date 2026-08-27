@@ -60,6 +60,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/rc16-deposit-funded-incremental-volume-proxy-v1/`: 닫힌 무효 Program 5 / Unit 044 source-free family; 선택배분은 순수 경제 관문을 모두 통과했으나 `$200/$300`에서 고정 4% position cap을 `229/231`회 위반해 allocation·EA seed 없음, 인접 sizing 구제 없음
 - `research/prior-vix-relative-regime-context-v1/`: 닫힌 무효 Program 2 / Unit 045 source-free family; 공식 Cboe 스냅샷과 16,477행은 통과했으나 period selector가 0 lifecycle을 반환해 경제판정 전 무효, VIX-context seed·구제 없음
 - `research/rc4-adverse-compression-resolution-state-v1/`: 닫힌 무효 Program 4 / Unit 046 source-free family; selector가 RC16 272건을 함께 받아 RC4 `206 → 478`로 무결성 실패, 계산된 효과 전부 비권위·수정/재실행/인접 후속 없음
+- `research/rc4-adverse-compression-resolution-state-implementation-correction-v1/`: 진행 중인 Program 4 / Unit 046 구현교정 sibling; 원 선언·무효 결과를 보존하고 prefix selector만 정확한 RC4 ID로 교정해 같은 실험 계약을 한 실험 경계로 완주
 - `research/new-york-week-edge-entry-state-v1/`: 닫힌 Program 3 / Unit 047 source-free family; 월요일 `-0.00544R/-0.00894 stop`, 금요일 `+0.00315R/+0.01697 stop`으로 둘 다 크기·일관성 관문 실패, 인접 달력/세션 후속 없음
 - `research/bidirectional-signal-transition-state-v1/`: 닫힌 Program 1 / Unit 048 source-free family; US30 지속-반전 `+0.04204R/-0.05170 stop`은 수익크기·양전략 stop 일관성 실패, US100 `+0.00925R/+0.00198 stop`은 무정보, 인접 신호 후속 없음
 - `research/prior-treasury-curve-move-context-v1/`: 닫힌 Program 2 / Unit 049 source-free family; 공식 미 재무부 2Y·10Y 동반상승 `-0.01578R/+0.00529 stop`, 동반하락 `+0.01560R/-0.00898 stop`으로 둘 다 크기·폭 관문 실패, 인접 금리 후속 없음
