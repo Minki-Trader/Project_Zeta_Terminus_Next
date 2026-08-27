@@ -89,7 +89,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/order-type-realized-entry-cost-v1/`: 닫힌 Program 3 / micro→meso Unit 073 source-free family; Cross 129·Passive 92 cost-known fills 모두 기록 burden `0R`, Passive 체결 spread는 좁지만 배치 quote·미체결 반사실 부재로 비용우위·역선택·후보 없음
 - `research/turnover-value-frontier-v1/`: 닫힌 애매함 Program 5 / macro Unit 074 source-free family; binding rho `-0.771` 대 CP2 `-0.429`, 3/4 기간 음수지만 P2 `+0.543` 역전·median `-0.343`로 안정 frontier 실패, fill 목표·후보 변경 없음
 - `research/predecision-market-participation-state-v1/`: 닫힌 애매함 Program 2 / meso Unit 084 family; broad H1 참여상태는 유효했지만 HIGH-LOW `+0.01698R/+0.04462 stop`, 양 book `0/2`·기간 `1/4`·component `1/6` 방향폭으로 처리 후보 없음
-- `research/predecision-gold-yen-risk-state-v1/`: 열린 Program 2 / meso Unit 088 source-free family; XAUUSD 상승·USDJPY 하락의 12:00 이전 공동 risk-off 상태가 두 book의 신호공급·stressed-R·stop 부담을 바꾸는지 묻는 선언만 동결됐으며 외부 H1 자료와 결과는 아직 미개봉
+- `research/predecision-gold-yen-risk-state-v1/`: 열린 Program 2 / meso Unit 088 source-free family; XAUUSD·USDJPY H1 원시 획득을 별도 커밋 전 단계로 동결했으며 가격방향·risk state·신호공급·stressed-R·stop 결과는 아직 미개봉
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 Lab 공학 원본; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했고, 별도 manifest의 RLO1 Live 번역은 정식 `0/0 → 1/1` 경계를 거쳐 현재 활성 소유자로 부착 완료
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물

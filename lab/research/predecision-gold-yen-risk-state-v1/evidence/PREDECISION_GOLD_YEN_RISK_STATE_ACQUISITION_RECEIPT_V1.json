@@ -1,0 +1,107 @@
+{
+  "schema": "zeta-next-predecision-gold-yen-risk-state-acquisition-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "ONE_DEDICATED_RUNTIME_AND_ONE_TWO_SYMBOL_H1_ACQUISITION_COMPLETE_BEFORE_RISK_STATE_OR_LIFECYCLE_METRICS",
+  "unit": "predecision-gold-yen-risk-state-088",
+  "family": "predecision-gold-yen-risk-state-v1",
+  "declaration": {
+    "path": "lab/research/predecision-gold-yen-risk-state-v1/evidence/PREDECISION_GOLD_YEN_RISK_STATE_DECLARATION_V1.json",
+    "bytes": 20773,
+    "sha256": "66B4D0054E77E17C83FADC3655D98BB87D79946FC6EAE301AEE002C2D0744FAE",
+    "commit": "ead921025f0225c32e62827c61c67961e035f4e5",
+    "committed_and_pushed_before_runtime_or_acquisition": true,
+    "outcomes_consumed": false
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/pgyr88-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copy": true,
+    "pre_acquisition_files": 17,
+    "pre_acquisition_bytes": 126574029,
+    "post_acquisition_files": 496,
+    "post_acquisition_bytes": 414477355,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "symbolic_or_junction_links": 0,
+    "onedrive_reparse_markers_with_empty_link_type": 18,
+    "link_interpretation": "Every reparse-marked hydrated path has empty LinkType and Target. There is no symbolic link, junction or cross-family target.",
+    "source_or_executable_from_another_lab_family": false,
+    "live_dependency": false,
+    "ignored_local_runtime": true
+  },
+  "acquisition": {
+    "python": "3.13.9",
+    "metatrader5_package": "5.0.5640",
+    "symbols": ["XAUUSD", "USDJPY"],
+    "timeframe": "H1",
+    "from_inclusive": "2022-07-01 00:00:00 UTC request",
+    "to_inclusive": "2026-08-21 23:59:59 UTC request",
+    "successful_acquisition_batches": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "copy_rates_range_calls": 2,
+    "symbol_info_calls": 2,
+    "api_calls_executed": ["initialize", "symbol_select", "symbol_info", "copy_rates_range", "shutdown"],
+    "forbidden_account_position_order_deal_check_or_send_calls_executed": false,
+    "returned_rows_by_call": {
+      "XAUUSD": 24485,
+      "USDJPY": 25753
+    },
+    "terminal_process_exit": {
+      "shutdown_called": true,
+      "path_scoped_post_shutdown_cleanup": true,
+      "exact_dedicated_path_processes_stopped_after_shutdown": 1,
+      "exact_dedicated_path_processes_remaining": 0,
+      "other_terminal_processes_touched": false,
+      "exact_live_pid_8080_remained": true
+    }
+  },
+  "bar_exports": [
+    {
+      "symbol": "XAUUSD",
+      "path": "lab/research/predecision-gold-yen-risk-state-v1/evidence/XAUUSD_H1_BARS_20220701_20260821.csv",
+      "bytes": 1777063,
+      "sha256": "A96D7708963684ABD34A67F0991809B3064ECB1740C11AB70DAD79FFC32187AC",
+      "rows": 24485,
+      "first_time": "2022.07.01 01:00:00",
+      "last_time": "2026.08.21 23:00:00",
+      "exact_11_rows": 1068,
+      "positive_tick_volume_rows": 24485
+    },
+    {
+      "symbol": "USDJPY",
+      "path": "lab/research/predecision-gold-yen-risk-state-v1/evidence/USDJPY_H1_BARS_20220701_20260821.csv",
+      "bytes": 1861013,
+      "sha256": "65C791D658EC2F54D7EE64BF1EE76E0CCA343899B76D907E24E156616417A196",
+      "rows": 25753,
+      "first_time": "2022.07.01 00:00:00",
+      "last_time": "2026.08.21 23:00:00",
+      "exact_11_rows": 1073,
+      "positive_tick_volume_rows": 25753
+    }
+  ],
+  "bar_integrity": {
+    "columns": 9,
+    "column_names": ["time_epoch", "time_server", "open", "high", "low", "close", "tick_volume", "spread", "real_volume"],
+    "unique_strictly_increasing_epoch_for_each_symbol": true,
+    "finite_positive_ohlc_for_each_symbol": true,
+    "nonnegative_volume_and_spread_for_each_symbol": true,
+    "positive_tick_volume_for_every_row": true,
+    "state_return_or_sign_calculated": false
+  },
+  "symbol_specs": {
+    "path": "lab/research/predecision-gold-yen-risk-state-v1/evidence/PREDECISION_GOLD_YEN_SYMBOL_SPECS_V1.json",
+    "bytes": 427,
+    "sha256": "7085E9CB964AFDAD3B2D72563B8856DDCBB0AAAF06FB32248CF4A679F14C0928",
+    "XAUUSD": {"digits": 2, "point": 0.01, "trade_tick_size": 0.01, "spread_float": true},
+    "USDJPY": {"digits": 3, "point": 0.001, "trade_tick_size": 0.001, "spread_float": true}
+  },
+  "storage": {
+    "system_drive_free_gib_after_acquisition": 32.381,
+    "mandatory_sweep_threshold_gib": 30,
+    "sweep_required": false
+  },
+  "gold_yen_returns_states_supply_or_lifecycle_metrics_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_sha_update_single_frontier_memory_and_state_commit_push_then_run_the_one_fixed_gold_yen_state_and_lifecycle_aggregation"
+}

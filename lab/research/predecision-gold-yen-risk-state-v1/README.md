@@ -17,3 +17,10 @@ be committed and pushed before any CP2 lifecycle outcome is reconstructed. A
 pass may retain only one later, independently declared whole-portfolio
 risk/lot-treatment question. This unit changes no entry, order, exit, priority,
 allocation, lot, risk, slot, component, EA or Live behavior.
+
+The one declared acquisition is now frozen. One physical 17-file copy of the
+neutral Lab runtime acquired 24,485 XAUUSD and 25,753 USDJPY H1 bars with two
+range calls. Both raw paths and symbol specs pass their pre-outcome structural
+checks. No gold/yen return, state assignment, signal-supply statistic,
+lifecycle outcome or verdict has been calculated. The acquisition commit must
+reach `origin/main` before the single fixed aggregation begins.
