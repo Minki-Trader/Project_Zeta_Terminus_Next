@@ -1653,3 +1653,12 @@
 - Used the sole premetric implementation correction to insert whitespace: `-gt 0`. Every data selection, join, formula, threshold, verdict, decision and exclusion remains unchanged.
 - Correction receipt SHA-256 is `2E322BCB7648EC3170D3E71ED7E0600E04C44EBDE5A51A7F9BD97F2CADCB65EE`. One successful aggregation remains; correction allowance is exhausted and metric reruns remain zero.
 - No acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0200 - 2026-08-27
+
+- Unit 079 correction commit `5ff8847c490249bb46963437971097cc82f26496` reached origin before the one successful fixed aggregation. Every pin, authority anchor, lifecycle/bar join, positivity and density gate passed.
+- Pooled lifecycle cost/spread rho was `+0.17311`; fixed segments were Jan-Mar `+0.40040` and Apr-Jul `+0.00966`. The required pooled and second-segment time response failed.
+- Component means moved together much more closely: maximum relative cost-ratio versus spread-ratio mismatch was `1.04300x`, so the shape-blind mismatch condition also failed.
+- Closed `AMBIGUOUS_US30_COST_UNIT_SPREAD_SHAPE_NO_POLICY_CHANGE`. Unit 039 remains at prior bounded authority—neither strengthened nor downgraded—and all components/behavior are preserved.
+- No entry-only, exit-only, segment, component, neighboring-bar, US100 acquisition, cost decomposition, multiplier, logger, EA or Live successor opens.
+- Result/closure SHA-256 values are `F4694FCAB57AB94979421F782081C68EDACCB247FCAFB6B5C568891C68FD5826` / `AEBBD0F2991AF96ED92D0CB6B903784ADC19B90522269ED3EA1FD9A31696FAC6`. One aggregation, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.

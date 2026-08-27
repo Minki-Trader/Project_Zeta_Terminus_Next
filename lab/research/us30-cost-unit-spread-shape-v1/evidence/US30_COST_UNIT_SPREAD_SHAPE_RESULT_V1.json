@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-us30-cost-unit-spread-shape-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_079_FIXED_AGGREGATION_COMPLETE_AMBIGUOUS",
+  "unit": "us30-cost-unit-spread-shape-079",
+  "family": "us30-cost-unit-spread-shape-v1",
+  "declaration": {
+    "sha256": "FE36B51A827F4E251122A810BDA39DBF9ACE1C4EBA83536B8F7FF465A9D77210",
+    "commit": "ba76e82110f25bb856b4cb36fca13dba9ea7614b",
+    "committed_and_pushed_before_aggregation": true
+  },
+  "premetric_correction": {
+    "sha256": "2E322BCB7648EC3170D3E71ED7E0600E04C44EBDE5A51A7F9BD97F2CADCB65EE",
+    "commit": "5ff8847",
+    "committed_and_pushed_before_remaining_aggregation": true,
+    "scope": "Comparison-token whitespace only."
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "integrity": {
+    "all_seven_pins_and_authority_anchors_passed": true,
+    "bar_rows": 19604,
+    "full_p4_us30_lifecycles": 135,
+    "through_july_lifecycles": 122,
+    "component_counts": {
+      "RC16": 39,
+      "RC4": 29,
+      "Pressure": 25,
+      "Return": 29
+    },
+    "positive_cost_units": 122,
+    "positive_cost_share": 1.0,
+    "endpoint_joins": 244,
+    "segment_a_rows": 55,
+    "segment_b_rows": 67,
+    "all_density_and_rank_variance_passed": true
+  },
+  "association": {
+    "pooled_spearman": 0.17311292125466513,
+    "segment_a_january_march_spearman": 0.4004004032270471,
+    "segment_b_april_july_spearman": 0.00966489106968063,
+    "interpretation": "The lifecycle-level association is weak pooled and does not repeat: the first segment passes its threshold while the second is effectively zero."
+  },
+  "component_alignment": {
+    "pooled_mean_observed_cost_unit_usd": 0.019016393442588323,
+    "pooled_mean_entry_plus_exit_spread_points": 282.4590163934426,
+    "maximum_ratio_mismatch": 1.04300050586922,
+    "components": [
+      {
+        "component": "RC16",
+        "n": 39,
+        "segment_a": 16,
+        "segment_b": 23,
+        "mean_cost_unit_usd": 0.017974358974319413,
+        "mean_endpoint_spread_points": 278.46153846153845,
+        "cost_ratio": 0.945203359858173,
+        "spread_ratio": 0.9858475824813608,
+        "ratio_mismatch": 1.04300050586922
+      },
+      {
+        "component": "RC4",
+        "n": 29,
+        "segment_a": 11,
+        "segment_b": 18,
+        "mean_cost_unit_usd": 0.01958620689651757,
+        "mean_endpoint_spread_points": 286.2068965517241,
+        "cost_ratio": 1.0299643281808166,
+        "spread_ratio": 1.0132687573798709,
+        "ratio_mismatch": 1.0164769422518438
+      },
+      {
+        "component": "Pressure",
+        "n": 25,
+        "segment_a": 12,
+        "segment_b": 13,
+        "mean_cost_unit_usd": 0.01991999999997202,
+        "mean_endpoint_spread_points": 288.4,
+        "cost_ratio": 1.0475172413797464,
+        "spread_ratio": 1.0210330818340105,
+        "ratio_mismatch": 1.0259385910377794
+      },
+      {
+        "component": "Return",
+        "n": 29,
+        "segment_a": 16,
+        "segment_b": 13,
+        "mean_cost_unit_usd": 0.019068965517207173,
+        "mean_endpoint_spread_points": 278.9655172413793,
+        "cost_ratio": 1.0027645659928928,
+        "spread_ratio": 0.9876318370124283,
+        "ratio_mismatch": 1.015322236903825
+      }
+    ],
+    "interpretation": "At the four-component mean level the relative cost and spread shapes align closely, but this does not rescue the missing lifecycle-level temporal repetition."
+  },
+  "fixed_gates": {
+    "time_responsive": {
+      "pooled_rho_at_least_0_40": false,
+      "segment_a_rho_at_least_0_25": true,
+      "segment_b_rho_at_least_0_25": false,
+      "maximum_ratio_mismatch_at_most_1_25": true,
+      "passed": false
+    },
+    "shape_blind_falsifier": {
+      "absolute_pooled_rho_at_most_0_10": false,
+      "absolute_segment_a_rho_at_most_0_10": false,
+      "absolute_segment_b_rho_at_most_0_10": true,
+      "maximum_ratio_mismatch_at_least_1_50": false,
+      "triggered": false
+    }
+  },
+  "identification_limits": {
+    "executed_spread_identified": false,
+    "fee_components_identified": false,
+    "us100_or_whole_portfolio_identified": false,
+    "future_broker_cost_identified": false,
+    "reason": "The bar spread is a M30 quoted context proxy; it is not the executable quote at the deal timestamp and the evidence covers US30 only."
+  },
+  "verdict": "AMBIGUOUS_US30_COST_UNIT_SPREAD_SHAPE_NO_POLICY_CHANGE",
+  "decision": {
+    "preserve": [
+      "Unit 039 at its existing bounded arithmetic cost-envelope authority",
+      "all four US30 components and current portfolio behavior",
+      "the descriptive four-component mean-ratio alignment"
+    ],
+    "discard": [
+      "a claim that Unit 039 is proven time-shape responsive",
+      "a claim that Unit 039 is proven spread-shape blind",
+      "any cost-rank downgrade, recalculation, multiplier, component, logger, EA or Live candidate"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "entry-only, exit-only, segment-A-only or component-only rescue",
+    "neighboring-bar, daily-average, median, maximum or tick-volume proxy",
+    "US100/US500 acquisition or whole-portfolio extrapolation",
+    "cost decomposition, alternate multiplier or Unit 039 rank repair"
+  ],
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_update_single_frontier_memory_commit_push_then_recompare_and_continue_to_a_connected_distant_claude_hypothesis"
+}

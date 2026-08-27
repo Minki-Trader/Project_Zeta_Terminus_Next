@@ -1,0 +1,67 @@
+{
+  "schema": "zeta-next-us30-cost-unit-spread-shape-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS_NO_POLICY_CHANGE",
+  "unit": "us30-cost-unit-spread-shape-079",
+  "family": "us30-cost-unit-spread-shape-v1",
+  "verdict": "AMBIGUOUS_US30_COST_UNIT_SPREAD_SHAPE_NO_POLICY_CHANGE",
+  "evidence": {
+    "declaration_sha256": "FE36B51A827F4E251122A810BDA39DBF9ACE1C4EBA83536B8F7FF465A9D77210",
+    "premetric_correction_sha256": "2E322BCB7648EC3170D3E71ED7E0600E04C44EBDE5A51A7F9BD97F2CADCB65EE",
+    "result_sha256": "F4694FCAB57AB94979421F782081C68EDACCB247FCAFB6B5C568891C68FD5826",
+    "result_bytes": 5803
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "all_pins_anchors_topology_joins_and_density_passed": true,
+    "bar_rows": 19604,
+    "through_july_lifecycles": 122,
+    "positive_cost_share": 1.0,
+    "endpoint_joins": 244,
+    "segment_rows": [55, 67]
+  },
+  "findings": {
+    "pooled_spearman": 0.17311292125466513,
+    "segment_a_spearman": 0.4004004032270471,
+    "segment_b_spearman": 0.00966489106968063,
+    "maximum_component_ratio_mismatch": 1.04300050586922,
+    "interpretation": "Component mean cost ratios closely match mean endpoint-spread ratios, but lifecycle-level time response is weak pooled and does not repeat in April-July."
+  },
+  "gates": {
+    "time_responsive_passed": false,
+    "shape_blind_falsifier_triggered": false,
+    "complete_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "Unit 039 at its prior bounded arithmetic authority",
+      "all US30 components and current behavior"
+    ],
+    "discard": [
+      "both a proven time-responsive claim and a proven shape-blind claim",
+      "cost-rank strengthening or downgrade",
+      "alternate proxy, cost decomposition, multiplier, logger, component, EA or Live candidate"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "interpretation_limit": "Quoted M30 endpoint spread is contextual and US30-only; no executed-spread, fee-component, whole-portfolio or future-broker conclusion is identified.",
+  "same_family_rescue_opened": false,
+  "whole_map_recomparison_required": true,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_closure_sha_update_single_frontier_memory_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_claude_hypothesis"
+}
