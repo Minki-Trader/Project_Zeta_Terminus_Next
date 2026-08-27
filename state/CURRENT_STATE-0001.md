@@ -1690,3 +1690,13 @@
 - Closed `AMBIGUOUS_RC16_FEATURE_SUPPLY_DECAY_NO_CANDIDATE`. Preserve native RC16 and current portfolio behavior; the descriptive decline authorizes neither a research-allocation preference nor a month, volatility, threshold, clock, component, EA or Live candidate.
 - Result/closure SHA-256 values are `50E136D896AA780683359F73ACAD9596335E8AD33459267DCD4867E7502C6C83` / `C6CF54C7B40F78D20E56CCFD93A7E38ED6B76C8197F9DBD0AED9CF0808416FE7`. One successful aggregation, one premetric correction and zero metric reruns; Program 6, broker/account state and Live remained untouched.
 - Recompare Programs 1-5 and 7 plus all heights after push and continue serially; the Frontier Goal remains active and incomplete.
+
+## STATE-0204 - 2026-08-27
+
+- Unit 080 closure commit `b92f0f91ff7afe64162fd024a5fe98cde8afbdbc` reached origin before Programs 1-5 and 7 plus all heights were recomputed. No RC16 month, volatility, clock, threshold or signal-supply rescue opened.
+- Opened only Program 5 / macro Unit 081 `component-removal-counterfactual-v1` from external card 28. Units 072-074 left a profitable but lower-yield US100 book, nondiscriminating recorded Passive cost and unstable turnover value; the direct unresolved decision is whether Passive or Return consumes more shared capacity than it contributes.
+- The perspective moves from Unit 080's Program 1 monthly single-feature supply to a whole-contract real-tick portfolio intervention. Froze exactly `NATIVE / WITHOUT_PASSIVE / WITHOUT_RETURN`; combined or other removals are forbidden.
+- Four fresh `$100` periods and twelve serial Model=4 paths measure stressed net, actual equity drawdown, remaining-five net/birth externality, total turnover, risk skips and stop rate under unchanged signal, exit, stop, lot, risk, slot, priority, order and cost semantics.
+- A removal must beat net and equity DD together in `3/4` periods, preserve pooled net, improve remaining-five net and births broadly, retain at least `85%` of turnover, not raise risk skips and keep stop-rate drift within `2pp`. Passage freezes one future Lab candidate only; no Live action or automatic confirmation follows.
+- Source owner is `lab/research/component-removal-counterfactual-v1/`, copied once from the sole forward baseline; dedicated runtime is `lab/runtime/crc81-portable/`. System-drive free space was `41.61 GiB`, above the `30 GiB` mandatory-sweep threshold.
+- Declaration SHA-256 is `9BA09D8EA3047AB7D4EC2C073B075BC2462CFD42D00FF511C242139A62AE03AA`. No source copy, runtime copy, compile or Tester outcome has opened. Program 6, broker/account state and Live remain untouched.
