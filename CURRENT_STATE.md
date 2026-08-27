@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0250`
+- Latest state ID: `STATE-0251`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery 
 ## Active work
 
 - Active engineering boundary: none; bounded RLO1 unexpected-stop recovery completed through committed no-owner evidence, exact `0/0 → 1/1`, two healthy snapshots and dashboard restoration
-- Active research boundary: none; Unit 091 is closed and the post-091 whole-map comparison is frozen at a user-directed clean pause with no successor opened
+- Active research boundary: Unit 090 implementation-correction sibling is frozen before outcomes; its receipt and authority boundary must reach `origin/main` before the one inherited fixed aggregation
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

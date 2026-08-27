@@ -1,0 +1,97 @@
+{
+  "schema": "zeta-next-standard-options-expiration-week-state-acquisition-receipt-v2",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_090_COMMITTED_ARTIFACT_RECEIPT_RECONSTRUCTED_BEFORE_ECONOMIC_OUTCOMES",
+  "unit": "standard-options-expiration-week-state-090",
+  "run": "implementation-correction-r1",
+  "family": "standard-options-expiration-week-state-implementation-correction-v1",
+  "declaration": {
+    "path": "lab/research/standard-options-expiration-week-state-v1/evidence/STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_DECLARATION_V1.json",
+    "commit": "8f517faccad105b7e49319423ac9ef9cb9736cc7",
+    "bytes": 25579,
+    "sha256": "93D074F2C38CFEC5EB51FE4636AE0F9F51B05B2149A2AEB2E27DA52406BB5351"
+  },
+  "artifact_origin": {
+    "commit": "c196d3acad80e47c1eb45c0d90dc4d0f04e1a4f4",
+    "reacquired": false,
+    "source_downloads_in_correction_run": 0,
+    "schedule_outputs_in_correction_run": 0
+  },
+  "official_sources": {
+    "files": 6,
+    "bytes": 4265092,
+    "items": [
+      {
+        "role": "semantic_authority",
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_facts.html",
+        "bytes": 57497,
+        "sha256": "75000DE50BAA895A9FF7C01CD7FB95F5FED6B8DD6C7922AA7CFFE2E748F73104",
+        "semantic_third_friday_present": true
+      },
+      {
+        "role": "annual_calendar_2022",
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2022.pdf",
+        "bytes": 704801,
+        "sha256": "6F3B1E751D0C0CF14B52D685095234A717D5F8E43ED9F96136BA1A4BAE59B3B8",
+        "pdf_signature": "%PDF"
+      },
+      {
+        "role": "annual_calendar_2023",
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2023.pdf",
+        "bytes": 427097,
+        "sha256": "FDFBE54A47B4A6A15E5527694BE8DE6465A42F5788DAB0365C49C5E855594F3A",
+        "pdf_signature": "%PDF"
+      },
+      {
+        "role": "annual_calendar_2024",
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2024.pdf",
+        "bytes": 960613,
+        "sha256": "D56420FBF7344221CAF4DB2F599F51ABE4A42B77E9D5406D5BDD6C1BD226A70B",
+        "pdf_signature": "%PDF"
+      },
+      {
+        "role": "annual_calendar_2025",
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2025.pdf",
+        "bytes": 1105574,
+        "sha256": "6BDC3ED80C411B20926E347F7B09BF69AAE15328FF2B98A6228CD896DD1E250E",
+        "pdf_signature": "%PDF"
+      },
+      {
+        "role": "annual_calendar_2026",
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2026.pdf",
+        "bytes": 1009510,
+        "sha256": "421A0699055B99EBC2DEA6DA53666939BC0918882D1F615DA5664582A52B3C9E",
+        "pdf_signature": "%PDF"
+      }
+    ]
+  },
+  "deterministic_schedule": {
+    "path": "lab/research/standard-options-expiration-week-state-v1/evidence/standard_options_expiration_weeks_2022_08_2026_08.csv",
+    "rows": 49,
+    "bytes": 2536,
+    "sha256": "7BC2F2C088A836EFF746DABDD58EAACF27C78C0D3C47B70FC9D10DD8F1C43C8A",
+    "first_month": "2022-08",
+    "last_month": "2026-08",
+    "third_friday_and_monday_boundaries_recomputed": true,
+    "row_faults": 0
+  },
+  "receipt_implementation": {
+    "failed_v1_operation": "Measure-Object over ordered-dictionary bytes properties",
+    "corrected_operation": "explicit Int64 values summed after concrete source-record materialization",
+    "data_or_economic_rule_changed": false
+  },
+  "integrity": {
+    "all_source_byte_and_sha_pins_match": true,
+    "semantic_statement_present": true,
+    "all_pdf_signatures_valid": true,
+    "schedule_pin_and_rows_match": true,
+    "passed": true
+  },
+  "supply_or_lifecycle_metrics_consumed": false,
+  "cp2_event_files_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_and_correction_declaration_hashes_commit_push_then_run_the_single_fixed_aggregation"
+}
