@@ -1681,3 +1681,12 @@
 - Used the sole premetric correction to type the immutable anchors correctly: retain Unit 063's all-slot `258` separately and require exact native `257/79` plus `151/39` for this unit. Months, feature, ATR, metrics, gates, decisions and exclusions are unchanged.
 - Correction receipt SHA-256 is `FB8028BCA32CCC788F7895C1094442EA6768DF96966F4CB3E93BB14D9B0358B7`. One successful fixed aggregation remains; correction allowance is exhausted and metric reruns remain zero.
 - No acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0203 - 2026-08-27
+
+- Unit 080 correction commit `5544ac76b88ebc0f1bb90d608ca225c3f44e9188` reached origin before the one successful fixed aggregation. Every immutable pin, corrected native count anchor, bar constraint, month-density, variance and finite gate passed.
+- Native RC16 supply was `79/257 = 30.7393%` in 2025 and `39/151 = 25.8278%` in completed 2026 months, a rate ratio of `0.8402213`. This misses the frozen material-decay ceiling of `0.80`.
+- Across the nineteen fixed months, signal rate versus log median pre-decision ATR fraction had Pearson `-0.170376`; calendar index after residualizing both variables on log volatility had correlation `-0.451656`. This misses the decay threshold `<= -0.50` and is too negative for the no-decay falsifier `>= -0.20`.
+- Closed `AMBIGUOUS_RC16_FEATURE_SUPPLY_DECAY_NO_CANDIDATE`. Preserve native RC16 and current portfolio behavior; the descriptive decline authorizes neither a research-allocation preference nor a month, volatility, threshold, clock, component, EA or Live candidate.
+- Result/closure SHA-256 values are `50E136D896AA780683359F73ACAD9596335E8AD33459267DCD4867E7502C6C83` / `C6CF54C7B40F78D20E56CCFD93A7E38ED6B76C8197F9DBD0AED9CF0808416FE7`. One successful aggregation, one premetric correction and zero metric reruns; Program 6, broker/account state and Live remained untouched.
+- Recompare Programs 1-5 and 7 plus all heights after push and continue serially; the Frontier Goal remains active and incomplete.

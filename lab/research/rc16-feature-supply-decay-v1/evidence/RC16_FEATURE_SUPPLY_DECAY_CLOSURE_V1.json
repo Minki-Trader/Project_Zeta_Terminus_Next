@@ -1,0 +1,66 @@
+{
+  "schema": "zeta-next-rc16-feature-supply-decay-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "rc16-feature-supply-decay-080",
+  "family": "rc16-feature-supply-decay-v1",
+  "verdict": "AMBIGUOUS_RC16_FEATURE_SUPPLY_DECAY_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "4C7A8BAD37806338FEF06426C06B6B8EE1CF3E9504B075F14D2D47E485821078",
+    "premetric_correction_sha256": "FB8028BCA32CCC788F7895C1094442EA6768DF96966F4CB3E93BB14D9B0358B7",
+    "result_sha256": "50E136D896AA780683359F73ACAD9596335E8AD33459267DCD4867E7502C6C83",
+    "result_bytes": 7213
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "all_pins_anchors_bar_topology_month_density_variance_and_finite_checks_passed": true,
+    "bar_rows": 19604,
+    "months": 19,
+    "native_evaluations": [257, 151],
+    "native_signals": [79, 39],
+    "minimum_monthly_native_evaluations": 19
+  },
+  "findings": {
+    "selection_2025_signal_rate": 0.30739299610894943,
+    "confirmation_2026_january_july_signal_rate": 0.2582781456953642,
+    "rate_ratio_2026_over_2025": 0.840221309414033,
+    "signal_rate_vs_log_volatility_pearson": -0.1703756689182851,
+    "partial_calendar_correlation_after_log_volatility_residualization": -0.4516564169910098,
+    "interpretation": "The observed decline is below the frozen material threshold, while the residual calendar slope remains too negative for the no-decay falsifier; neither causal reading is identified."
+  },
+  "gates": {
+    "calendar_decay_passed": false,
+    "no_structural_decay_falsifier_triggered": false,
+    "complete_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "native RC16 feature, threshold and 13:30 clock",
+      "current admission, turnover and portfolio behavior"
+    ],
+    "discard": [
+      "structural calendar-decay and pure volatility-conditioning claims",
+      "research-allocation, month, volatility-regime, clock, threshold, component, EA or Live candidate"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "same_family_rescue_opened": false,
+  "whole_map_recomparison_required": true,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_closure_sha_update_single_frontier_memory_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_claude_hypothesis"
+}
