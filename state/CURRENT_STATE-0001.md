@@ -1921,3 +1921,11 @@
 - Frozen export topology is exactly `1,152 = 96 × 3 × 4` unique event-symbol-offset rows at release and plus `5/10/15` minutes. Every OHLC is finite positive, volume/spread nonnegative, and timezone/epoch field matches the frozen Windows Eastern-to-FLE contract with zero fault.
 - Event-window/spec hashes are `18C27637200322945F75CF3A1FE6E52218D80005318E418470B749DCF61D30DE` / `0625452192D01F2D52D323C29199983A287A32FA782EE1C661DB1BC80B9E832A`; acquisition receipt SHA-256 is `49FACD06040BB6E006410AECF6E223AE3C0CC256EC54078AC6B12CA9928C2EE6`.
 - Zero corrections were used and system free space is `32.892 GiB`, so no sweep is required. No fifteen-minute return, shock direction, ALIGNED/OPPOSED role, conditional lifecycle metric, verdict, Program 6, broker/account state or Live surface was consumed or touched. Commit/push this boundary before the sole fixed aggregation.
+
+## STATE-0229 - 2026-08-27
+
+- Unit 087 acquisition commit `c352b8d62378d39bfce1388ff31e579f46a43a09` reached origin before the fixed premetric shock-role check. All seventeen pins, 96 events, 1,152 unique M5 rows, 2,233 births and 126 strict post-shock birth topology passed.
+- The frozen nonzero-median integrity gate failed on five releases: CPI `2023-02-14/2024-07-11` and Employment `2023-07-07/2024-04-05/2024-12-06`. Four had zero US500 return between opposite US30/US100 signs; one had zero US100 and US500 returns.
+- The first invocation stopped at the first neutral median before role assignment or lifecycle outcome access. One bounded M5-only diagnosis enumerated all five; no event exclusion, two-index vote, tiebreak, zero convention, epsilon, threshold, alternate horizon or conditional outcome was added.
+- Closed `INVALID_REALIZED_MACRO_SHOCK_ALIGNMENT_NO_VERDICT` with no aligned/opposed economic claim and no treatment seed. Result/closure SHA-256 values are `7FD5C24C36E3374B3B55FBE59A0E44FFC42C9A6D7BC96AA89DB408AC92C4E138` / `46CCCC569DCECFF30EAB6D9E8CBEAB820F95632FC4922F950F3A3D5369D01ECA`.
+- One acquisition, one premetric invocation, one bounded integrity diagnosis, zero corrections, zero lifecycle aggregations and zero metric reruns; Program 6, broker/account state and Live remained untouched. Recompare the whole map only after the closure reaches origin.

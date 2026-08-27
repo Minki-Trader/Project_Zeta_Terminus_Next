@@ -1,0 +1,71 @@
+{
+  "schema": "zeta-next-realized-scheduled-macro-shock-alignment-closure-v1",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_INVALID_PREMETRIC",
+  "unit": "realized-scheduled-macro-shock-alignment-087",
+  "family": "realized-scheduled-macro-shock-alignment-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "micro",
+      "macro"
+    ]
+  },
+  "hashes": {
+    "declaration_sha256": "E24A8F8252155D4878B426C0A3E6F99B30C781B31DDC87F702B296728186A8E5",
+    "acquisition_receipt_sha256": "49FACD06040BB6E006410AECF6E223AE3C0CC256EC54078AC6B12CA9928C2EE6",
+    "event_window_sha256": "18C27637200322945F75CF3A1FE6E52218D80005318E418470B749DCF61D30DE",
+    "symbol_spec_sha256": "0625452192D01F2D52D323C29199983A287A32FA782EE1C661DB1BC80B9E832A",
+    "result_sha256": "7FD5C24C36E3374B3B55FBE59A0E44FFC42C9A6D7BC96AA89DB408AC92C4E138"
+  },
+  "integrity": {
+    "tracked_pins": 17,
+    "tracked_pin_faults": 0,
+    "calendar_events": 96,
+    "event_window_rows": 1152,
+    "births": 2233,
+    "strict_window_birth_topology": 126,
+    "excluded_exact_plus_fifteen_births": 5,
+    "neutral_median_events": 5,
+    "failed_gate": "Every three-symbol median fifteen-minute return must be finite and nonzero."
+  },
+  "finding": "Five official releases produced an exact zero median under the frozen three-index return rule. Four had US500 unchanged while US30 and US100 had opposite signs; one Employment release had US100 and US500 both unchanged. Therefore one common LONG or SHORT shock state cannot be assigned to all 96 releases under the declared semantics.",
+  "verdict": "INVALID_REALIZED_MACRO_SHOCK_ALIGNMENT_NO_VERDICT",
+  "selected_state": null,
+  "selected_candidate": null,
+  "retained_seed": null,
+  "economic_interpretation": "No claim is made about whether shock-aligned or shock-opposed entries are good or bad. The unit stopped before role density and before any lifecycle stressed-R or stop outcome was opened.",
+  "execution": {
+    "successful_m5_acquisition_batches": 1,
+    "post_acquisition_premetric_invocations": 1,
+    "bounded_integrity_diagnoses": 1,
+    "successful_fixed_lifecycle_aggregations": 0,
+    "corrections_used": 0,
+    "metric_reruns": 0,
+    "conditional_lifecycle_metrics_consumed": false,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "broker_or_account_state_queried": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "closed_scope": [
+    "No dropping the five neutral events or using only events that have a later birth.",
+    "No two-index vote, designated tiebreak symbol, zero-sign convention, epsilon, magnitude threshold or alternative median rule.",
+    "No 5, 10, 30, 60 or other shock horizon and no shorter or longer birth window.",
+    "No CPI-only, Employment-only, symbol, book, component, period, direction or event subset rescue.",
+    "No surprise, value, revision, text, volume, spread, volatility, beta, correlation or dispersion augmentation.",
+    "No event filter, admission, priority, preemption, allocation, lot, slot, risk, exit, MQL, Tester, Program 6 or Live candidate."
+  ],
+  "family_frozen": true,
+  "whole_map_recompared": false,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}

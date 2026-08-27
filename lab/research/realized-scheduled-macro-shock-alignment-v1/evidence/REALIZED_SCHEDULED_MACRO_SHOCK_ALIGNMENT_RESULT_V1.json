@@ -1,0 +1,127 @@
+{
+  "schema": "zeta-next-realized-scheduled-macro-shock-alignment-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_087_PREMETRIC_INTEGRITY_STOP_NO_CONDITIONAL_LIFECYCLE_OUTCOME",
+  "unit": "realized-scheduled-macro-shock-alignment-087",
+  "family": "realized-scheduled-macro-shock-alignment-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "boundary": {
+    "declaration_commit": "62674dea470428220957edb09ecaf73993337a57",
+    "acquisition_commit": "c352b8d62378d39bfce1388ff31e579f46a43a09",
+    "both_pushed_before_their_successor_stage": true,
+    "tracked_pins_checked": 17,
+    "tracked_pin_faults": 0,
+    "declaration_sha256": "E24A8F8252155D4878B426C0A3E6F99B30C781B31DDC87F702B296728186A8E5",
+    "acquisition_receipt_sha256": "49FACD06040BB6E006410AECF6E223AE3C0CC256EC54078AC6B12CA9928C2EE6",
+    "event_window_sha256": "18C27637200322945F75CF3A1FE6E52218D80005318E418470B749DCF61D30DE",
+    "symbol_spec_sha256": "0625452192D01F2D52D323C29199983A287A32FA782EE1C661DB1BC80B9E832A"
+  },
+  "integrity_before_failure": {
+    "calendar_events": 96,
+    "event_window_rows": 1152,
+    "unique_event_symbol_offset_keys": 1152,
+    "complete_lifecycle_births": 2233,
+    "strict_post_shock_birth_topology": 126,
+    "events_with_strict_window_births": 81,
+    "excluded_exact_plus_fifteen_births": 5,
+    "multiple_event_matches": 0,
+    "timezone_or_epoch_faults": 0,
+    "tracked_pins_passed": true
+  },
+  "terminal_integrity_failure": {
+    "gate": "Every three-symbol median fifteen-minute return must be finite and nonzero before LONG or SHORT shock assignment.",
+    "neutral_median_events": 5,
+    "events": [
+      {
+        "event_id": "CPI_20230214",
+        "event_class": "CPI",
+        "returns": {
+          "US30": 0.00007289554217833413,
+          "US100": -0.00021911608658687848,
+          "US500": 0.0
+        },
+        "median_return": 0.0
+      },
+      {
+        "event_id": "CPI_20240711",
+        "event_class": "CPI",
+        "returns": {
+          "US30": -0.00010074275120350467,
+          "US100": 0.00021772335962508225,
+          "US500": 0.0
+        },
+        "median_return": 0.0
+      },
+      {
+        "event_id": "EMPLOYMENT_20230707",
+        "event_class": "EMPLOYMENT",
+        "returns": {
+          "US30": 0.00004421237858898718,
+          "US100": 0.0,
+          "US500": 0.0
+        },
+        "median_return": 0.0
+      },
+      {
+        "event_id": "EMPLOYMENT_20240405",
+        "event_class": "EMPLOYMENT",
+        "returns": {
+          "US30": 0.00003881671137535992,
+          "US100": -0.00012830060290985139,
+          "US500": 0.0
+        },
+        "median_return": 0.0
+      },
+      {
+        "event_id": "EMPLOYMENT_20241206",
+        "event_class": "EMPLOYMENT",
+        "returns": {
+          "US30": 0.0001340428671095068,
+          "US100": -0.00026241547524041636,
+          "US500": 0.0
+        },
+        "median_return": 0.0
+      }
+    ],
+    "first_fixed_invocation_behavior": "Stopped on CPI_20230214 at the declared nonzero-median integrity assertion before birth role assignment or lifecycle outcome access.",
+    "bounded_diagnosis": "Read only the frozen event-window opens and enumerated all five zero-median events. No tie rule, event exclusion, symbol substitution, threshold or conditional lifecycle metric was added.",
+    "why_terminal": "The declaration makes any zero median an invalid unit. Dropping five events, using two-index voting, treating zero as agreement, selecting a tiebreak symbol or applying a magnitude epsilon would be a post-result contract change."
+  },
+  "unopened_metrics": [
+    "ALIGNED and OPPOSED birth counts",
+    "role density gates",
+    "component-period-centered stressed-R contrast",
+    "component-period-centered stop-incidence contrast",
+    "event-class, book, period or component economic contrast",
+    "unanimous-shock economic contrast",
+    "same-release mixed-direction economic contrast",
+    "strong-null gate",
+    "passing-state selection"
+  ],
+  "execution": {
+    "post_acquisition_premetric_invocations": 1,
+    "bounded_integrity_diagnoses": 1,
+    "successful_fixed_lifecycle_aggregations": 0,
+    "implementation_or_acquisition_corrections_used": 0,
+    "metric_reruns": 0,
+    "lifecycle_outcome_file_content_opened": false,
+    "conditional_lifecycle_metrics_consumed": false,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "broker_or_account_state_queried": false,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "verdict": "INVALID_REALIZED_MACRO_SHOCK_ALIGNMENT_NO_VERDICT",
+  "selected_state": null,
+  "selected_candidate": null,
+  "retained_seed": null,
+  "promotion": "NONE",
+  "next": "close_and_freeze_without_tie_or_event_exclusion_rescue_then_commit_push_and_recompare_the_whole_map"
+}
