@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0198`
+- Latest state ID: `STATE-0199`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: Unit 079 `lab/research/us30-cost-unit-spread-shape-v1/`; declaration frozen before any cost-unit/spread association or component-ratio metric
+- Active research boundary: Unit 079 `lab/research/us30-cost-unit-spread-shape-v1/`; sole premetric tokenization correction frozen, one fixed aggregation remains
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -1151,6 +1151,13 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - This is US30-only and the bar spread is contextual, not executed. A pass preserves Unit 039's bounded interpretation; a falsifier only downgrades US30 relative-rank authority. Neither result changes a component or opens a cost model automatically.
 - Declaration SHA-256 is `FE36B51A827F4E251122A810BDA39DBF9ACE1C4EBA83536B8F7FF465A9D77210`. No lifecycle cost, endpoint spread, rho, ratio, gate or verdict has opened. One aggregation, one premetric correction and zero reruns are budgeted; no acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
 
+## Frozen premetric comparison-token correction Unit 079
+
+- Declaration commit `ba76e82` reached origin before the first invocation. All pins and authority anchors, 19,604 bar rows, 135 full US30 lifecycles, the 122 through-July population and all 244 endpoint joins passed before aggregation.
+- PowerShell stopped at the positive-cost density count because `-gt0` was tokenized as an unknown parameter. No positive share, cost/spread mean, Spearman, component ratio, gate or verdict was emitted.
+- Used the sole implementation correction to change only `Where-Object Cost -gt0` to `Where-Object Cost -gt 0`. Population, joins, formulas, thresholds, decisions and exclusions are unchanged.
+- Correction receipt SHA-256 is `2E322BCB7648EC3170D3E71ED7E0600E04C44EBDE5A51A7F9BD97F2CADCB65EE`. One successful aggregation remains; correction allowance is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remained untouched.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -1164,7 +1171,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 Latest closed research verdict: `INVALID_MARK_EXTREMA_CLOCK_ANCHOR_NO_VERDICT`
 
-Active research unit: Unit 079 `us30-cost-unit-spread-shape-v1`; declaration frozen, outcomes unopened
+Active research unit: Unit 079 `us30-cost-unit-spread-shape-v1`; premetric correction frozen, one fixed aggregation remains
 
 Latest Frontier marker: `MARK_EXTREMA_CLOCK_ANCHOR_078_CLOSED_INVALID_TIME_SUPPORT_NO_CANDIDATE`
 

@@ -1645,3 +1645,11 @@
 - Responsive passage is pooled rho `>=0.40`, both segments `>=0.25` and mismatch `<=1.25x`; near-zero pooled/segment rhos plus mismatch `>=1.50x` is the shape-blind falsifier.
 - Results cannot claim executed spread, US100, whole-portfolio or future broker costs, recalculate Unit 039, or change components/cost policy.
 - Declaration SHA-256 is `FE36B51A827F4E251122A810BDA39DBF9ACE1C4EBA83536B8F7FF465A9D77210`. No cost, spread, correlation, ratio or verdict metric has opened. One aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.
+
+## STATE-0199 - 2026-08-27
+
+- Unit 079 declaration commit `ba76e82110f25bb856b4cb36fca13dba9ea7614b` reached origin before the first invocation. All pins/anchors, bar topology, full/selected lifecycle counts and 244 endpoint joins passed.
+- Execution stopped immediately before the first aggregate because PowerShell parsed `Where-Object Cost -gt0` as an unknown parameter. No positive share, mean, Spearman, component ratio, gate or verdict was emitted.
+- Used the sole premetric implementation correction to insert whitespace: `-gt 0`. Every data selection, join, formula, threshold, verdict, decision and exclusion remains unchanged.
+- Correction receipt SHA-256 is `2E322BCB7648EC3170D3E71ED7E0600E04C44EBDE5A51A7F9BD97F2CADCB65EE`. One successful aggregation remains; correction allowance is exhausted and metric reruns remain zero.
+- No acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.

@@ -1,0 +1,43 @@
+{
+  "schema": "zeta-next-us30-cost-unit-spread-shape-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FROZEN_BEFORE_ANY_COST_SPREAD_AGGREGATE_WAS_EMITTED",
+  "unit": "us30-cost-unit-spread-shape-079",
+  "declaration_sha256": "FE36B51A827F4E251122A810BDA39DBF9ACE1C4EBA83536B8F7FF465A9D77210",
+  "failed_invocation": {
+    "stage": "positive-cost density count immediately before the first aggregate association metric",
+    "exception": "PowerShell parsed `Where-Object Cost -gt0` as an unknown parameter because the comparison operator and zero lacked whitespace.",
+    "endpoint_join_rows_constructed": 122,
+    "cost_spread_aggregate_metrics_emitted": 0,
+    "correlations_emitted": 0,
+    "component_ratios_emitted": 0,
+    "gates_or_verdicts_emitted": 0,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "implementation_only_correction": {
+    "old": "$positiveCost=@($joined|Where-Object Cost -gt0).Count",
+    "new": "$positiveCost=@($joined|Where-Object Cost -gt 0).Count",
+    "scope": "Whitespace tokenization in one comparison only.",
+    "unchanged": [
+      "all immutable files and declaration hash",
+      "component population, lifecycle reconstruction and July boundary",
+      "M30 floor join and endpoint spread proxy",
+      "observed cost-unit formula and positivity threshold",
+      "calendar segments, Spearman average ranks and component ratios",
+      "all density, responsive, falsifier, verdict and decision rules",
+      "all exclusions, execution budgets and followup prohibitions"
+    ],
+    "outcome_dependent_spec_change": false
+  },
+  "budget_after_correction": {
+    "successful_fixed_aggregations_remaining": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_correction_sha_update_single_frontier_memory_commit_push_then_run_the_single_remaining_fixed_aggregation"
+}
