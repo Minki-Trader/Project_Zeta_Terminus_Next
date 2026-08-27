@@ -1,0 +1,174 @@
+{
+  "schema": "zeta-next-cftc-leveraged-money-relative-flow-closure-v1",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_NO_FIELD",
+  "unit": "cftc-leveraged-money-relative-flow-089",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "macro"
+    ]
+  },
+  "verdict": "NO_MATERIAL_CFTC_LEVERAGED_MONEY_RELATIVE_BOOK_FIELD",
+  "integrity": {
+    "passed": true,
+    "pins": 22,
+    "pin_failures": [],
+    "paired_reports": 242,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2233,
+    "stops": 206,
+    "minimum_normal_period_state_count": 60,
+    "minimum_period_book_state_lifecycle_count": 54,
+    "minimum_pooled_component_state_lifecycle_count": 49,
+    "requirements": {
+      "all_declared_and_acquired_pins": true,
+      "raw_zip_schema_and_normalized_target_identity": true,
+      "paired_target_and_state_integrity": true,
+      "official_exception_and_target_revision_guard": true,
+      "ordinary_release_and_variable_sources": true,
+      "event_and_lifecycle_anchors": true,
+      "normal_day_and_signal_counts_with_no_duplicate_or_unmatched_event": true,
+      "coverage_each_period_at_least_0_95": true,
+      "declared_state_density": true,
+      "relative_r_contribution_identity": true
+    },
+    "faults": []
+  },
+  "report_flow_state_counts": {
+    "NQ_SHIFT": 118,
+    "DJ_SHIFT": 123,
+    "FLAT": 0,
+    "FIRST_UNDEFINED": 1
+  },
+  "normal_day_state_counts": {
+    "NQ_SHIFT": 508,
+    "DJ_SHIFT": 543
+  },
+  "signal_state_counts": {
+    "NQ_SHIFT": 1154,
+    "DJ_SHIFT": 1275
+  },
+  "birth_state_counts": {
+    "NQ_SHIFT": 1056,
+    "DJ_SHIFT": 1177
+  },
+  "book_effects": {
+    "US30_BOOK": {
+      "nq_n": 390,
+      "dj_n": 444,
+      "centered_stressed_r": -0.039479045771763366,
+      "centered_stop_rate": -0.001281417603103666,
+      "raw_mean_stressed_r": -0.04080617458313079,
+      "raw_stop_rate": -0.007761607761607753
+    },
+    "US100_BOOK": {
+      "nq_n": 666,
+      "dj_n": 733,
+      "centered_stressed_r": 0.008587210762263082,
+      "centered_stop_rate": -0.013666127758194336,
+      "raw_mean_stressed_r": 0.009608316548621815,
+      "raw_stop_rate": -0.017718946777609806
+    }
+  },
+  "pooled_relative_book_effect": {
+    "book_r_effects": {
+      "US30_BOOK": -0.039479045771763366,
+      "US100_BOOK": 0.008587210762263082
+    },
+    "book_stop_effects": {
+      "US30_BOOK": -0.001281417603103666,
+      "US100_BOOK": -0.013666127758194336
+    },
+    "relative_r_did": 0.04806625653402645,
+    "relative_stop_did": -0.01238471015509067,
+    "direction": "NQ_BETTER"
+  },
+  "direction_breadth": {
+    "periods": {
+      "NQ_BETTER": 2,
+      "NONCONCORDANT": 1,
+      "DJ_BETTER": 1
+    },
+    "components": {
+      "DJ_BETTER": 2,
+      "NQ_BETTER": 4
+    },
+    "nq_us100_full": true,
+    "nq_us30_opposite_count": 2,
+    "dj_us100_full": false,
+    "dj_us30_opposite_count": 2,
+    "nq_complete_component_breadth": false,
+    "dj_complete_component_breadth": false
+  },
+  "contribution_caps": {
+    "period_max_absolute_share": 0.5134634212127698,
+    "component_max_absolute_share": 0.32674883494967444
+  },
+  "gates": {
+    "nasdaq_shift": {
+      "pooled_relative_r_did_at_least_0_10": false,
+      "pooled_relative_stop_did_at_most_minus_0_05": false,
+      "us100_book_effect_positive_r_negative_stop": true,
+      "us30_book_effect_negative_r_positive_stop": false,
+      "at_least_three_periods_nq_relative": false,
+      "both_us100_components_nq_better": true,
+      "at_least_three_us30_components_dj_better": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "dow_shift": {
+      "pooled_relative_r_did_at_most_minus_0_10": false,
+      "pooled_relative_stop_did_at_least_0_05": false,
+      "us100_book_effect_negative_r_positive_stop": false,
+      "us30_book_effect_positive_r_negative_stop": false,
+      "at_least_three_periods_dj_relative": false,
+      "both_us100_components_dj_better": false,
+      "at_least_three_us30_components_nq_better": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_pooled_relative_r_did_below_0_05": true,
+      "absolute_pooled_relative_stop_did_below_0_025": true,
+      "neither_direction_more_than_two_periods": true,
+      "neither_direction_has_full_component_breadth": true,
+      "passed": true
+    }
+  },
+  "selected_candidate": null,
+  "retained_seed": null,
+  "result": {
+    "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/CFTC_LEVERAGED_MONEY_RELATIVE_FLOW_RESULT_V1.json",
+    "bytes": 53445,
+    "sha256": "D50023853DFA354ED65E8A54A64D413C75E726AA8FDE0B3970E9E18B5E7F4C33"
+  },
+  "derived_rows": {
+    "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/CFTC_LEVERAGED_MONEY_RELATIVE_FLOW_DERIVED_ROWS_V1.csv",
+    "bytes": 1413748,
+    "rows": 2233,
+    "sha256": "9511D6B2AF55F6744ABCCB45E08BB16B94CCB8FB9B12757DFBC4E1EA943CB587"
+  },
+  "successful_official_acquisition_batches": 1,
+  "premetric_script_parse_rejections": 1,
+  "acquisition_or_serialization_corrections_used": 1,
+  "successful_fixed_aggregations": 1,
+  "metric_reruns": 0,
+  "same_family_rescue": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}

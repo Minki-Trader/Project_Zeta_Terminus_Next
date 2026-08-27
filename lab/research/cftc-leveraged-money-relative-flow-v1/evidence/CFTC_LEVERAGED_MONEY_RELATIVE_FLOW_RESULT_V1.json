@@ -1,0 +1,1590 @@
+{
+  "schema": "zeta-next-cftc-leveraged-money-relative-flow-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_089_ONE_FIXED_AGGREGATION_COMPLETE",
+  "unit": "cftc-leveraged-money-relative-flow-089",
+  "family": "cftc-leveraged-money-relative-flow-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "declaration": {
+    "sha256": "1124CF997DC6B85F6DB4C10B85E96B23FE55A40EE0A2560BFBEE2FAC04E2D9C9",
+    "commit": "e0d9a886a8f0c6f5cc2f20dfe2a2927b28f65f72"
+  },
+  "acquisition": {
+    "receipt_sha256": "9F232F90B77A636FEE581CA7BEBC9824B76B1520D830BE080C4E6835AD5431F6",
+    "commit": "2687bfe7790c70ad1f736ad9d73d70d3ddb0fee9"
+  },
+  "execution": {
+    "successful_official_acquisition_batches": 1,
+    "premetric_script_parse_rejections": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "successful_fixed_aggregations": 1,
+    "metric_reruns": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pin_checks": [
+      {
+        "role": "unit_089_declaration",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/CFTC_LEVERAGED_MONEY_RELATIVE_FLOW_DECLARATION_V1.json",
+        "expected_bytes": 27031,
+        "actual_bytes": 27031,
+        "expected_sha256": "1124CF997DC6B85F6DB4C10B85E96B23FE55A40EE0A2560BFBEE2FAC04E2D9C9",
+        "actual_sha256": "1124CF997DC6B85F6DB4C10B85E96B23FE55A40EE0A2560BFBEE2FAC04E2D9C9",
+        "passed": true
+      },
+      {
+        "role": "unit_089_acquisition_receipt",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/CFTC_LEVERAGED_MONEY_RELATIVE_FLOW_ACQUISITION_V1.json",
+        "expected_bytes": 8096,
+        "actual_bytes": 8096,
+        "expected_sha256": "9F232F90B77A636FEE581CA7BEBC9824B76B1520D830BE080C4E6835AD5431F6",
+        "actual_sha256": "9F232F90B77A636FEE581CA7BEBC9824B76B1520D830BE080C4E6835AD5431F6",
+        "passed": true
+      },
+      {
+        "role": "unit_089_normalized_target_rows",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/CFTC_TFF_TARGET_ROWS_2022_2026.csv",
+        "expected_bytes": 58005,
+        "actual_bytes": 58005,
+        "expected_sha256": "B97235D84783BDEBE38D2E51F0631A8F8A71F6FBAF5623339050CCCAA66A80A5",
+        "actual_sha256": "B97235D84783BDEBE38D2E51F0631A8F8A71F6FBAF5623339050CCCAA66A80A5",
+        "passed": true
+      },
+      {
+        "role": "cp2_P1_2022H2_2023_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "expected_bytes": 1411355,
+        "actual_bytes": 1411355,
+        "expected_sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA",
+        "actual_sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA",
+        "passed": true
+      },
+      {
+        "role": "cp2_P1_2022H2_2023_events-b.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "expected_bytes": 536770,
+        "actual_bytes": 536770,
+        "expected_sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8",
+        "actual_sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8",
+        "passed": true
+      },
+      {
+        "role": "cp2_P2_2024_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "expected_bytes": 1395691,
+        "actual_bytes": 1395691,
+        "expected_sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178",
+        "actual_sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178",
+        "passed": true
+      },
+      {
+        "role": "cp2_P3_2025_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "expected_bytes": 1418401,
+        "actual_bytes": 1418401,
+        "expected_sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0",
+        "actual_sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0",
+        "passed": true
+      },
+      {
+        "role": "cp2_P3_2025_events-b.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "expected_bytes": 6936,
+        "actual_bytes": 6936,
+        "expected_sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29",
+        "actual_sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29",
+        "passed": true
+      },
+      {
+        "role": "cp2_P4_2026_YTD_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "expected_bytes": 923617,
+        "actual_bytes": 923617,
+        "expected_sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9",
+        "actual_sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9",
+        "passed": true
+      },
+      {
+        "role": "unit_050_result",
+        "path": "lab/research/natural-book-drawdown-complementarity-v1/evidence/NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_RESULT_V1.json",
+        "expected_bytes": 8237,
+        "actual_bytes": 8237,
+        "expected_sha256": "894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1",
+        "actual_sha256": "894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1",
+        "passed": true
+      },
+      {
+        "role": "unit_072_result",
+        "path": "lab/research/us100-book-economic-role-v1/evidence/US100_BOOK_ECONOMIC_ROLE_RESULT_V1.json",
+        "expected_bytes": 4661,
+        "actual_bytes": 4661,
+        "expected_sha256": "010200107F0C6935304C14406B1445BED15FC4DA892EF1FDA029F616120B6138",
+        "actual_sha256": "010200107F0C6935304C14406B1445BED15FC4DA892EF1FDA029F616120B6138",
+        "passed": true
+      },
+      {
+        "role": "unit_076_closure",
+        "path": "lab/research/three-index-dispersion-book-relative-value-v1/evidence/THREE_INDEX_DISPERSION_BOOK_RELATIVE_VALUE_CLOSURE_V1.json",
+        "expected_bytes": 4021,
+        "actual_bytes": 4021,
+        "expected_sha256": "B307DEC9F0C707CF46F7063AE21F73A8A12318A95C1F5AA05968AE4907B72A61",
+        "actual_sha256": "B307DEC9F0C707CF46F7063AE21F73A8A12318A95C1F5AA05968AE4907B72A61",
+        "passed": true
+      },
+      {
+        "role": "unit_085_result",
+        "path": "lab/research/portfolio-native-signal-supply-frontier-v1/evidence/PORTFOLIO_NATIVE_SIGNAL_SUPPLY_FRONTIER_RESULT_V1.json",
+        "expected_bytes": 9225,
+        "actual_bytes": 9225,
+        "expected_sha256": "155788C50824C7D49E56AC8DDF95A4E3A11F8539A5F092AAD435234A537C7821",
+        "actual_sha256": "155788C50824C7D49E56AC8DDF95A4E3A11F8539A5F092AAD435234A537C7821",
+        "passed": true
+      },
+      {
+        "role": "unit_088_closure",
+        "path": "lab/research/predecision-gold-yen-risk-state-v1/evidence/PREDECISION_GOLD_YEN_RISK_STATE_CLOSURE_V1.json",
+        "expected_bytes": 5301,
+        "actual_bytes": 5301,
+        "expected_sha256": "1E5DD8B6882C72B62C8F494B049A017D9115B5C16303D390DD0FAFDC40D39995",
+        "actual_sha256": "1E5DD8B6882C72B62C8F494B049A017D9115B5C16303D390DD0FAFDC40D39995",
+        "passed": true
+      },
+      {
+        "role": "tff_futures_only_2022",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/fut_fin_txt_2022.zip",
+        "expected_bytes": 494559,
+        "actual_bytes": 494559,
+        "expected_sha256": "94C9C1FDEE9DFBE377A09923DDFE26B88D3460605DD076081F221AD367D88601",
+        "actual_sha256": "94C9C1FDEE9DFBE377A09923DDFE26B88D3460605DD076081F221AD367D88601",
+        "passed": true
+      },
+      {
+        "role": "tff_futures_only_2023",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/fut_fin_txt_2023.zip",
+        "expected_bytes": 506931,
+        "actual_bytes": 506931,
+        "expected_sha256": "43C3DBDD4D01FCEEFAD5E457003751CDC0974C7CF46097B322E26E9E2FE44D7A",
+        "actual_sha256": "43C3DBDD4D01FCEEFAD5E457003751CDC0974C7CF46097B322E26E9E2FE44D7A",
+        "passed": true
+      },
+      {
+        "role": "tff_futures_only_2024",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/fut_fin_txt_2024.zip",
+        "expected_bytes": 563591,
+        "actual_bytes": 563591,
+        "expected_sha256": "3F00585741A7CF76C207DF640951D644DD91FF22A1106B38CA37A2469C765637",
+        "actual_sha256": "3F00585741A7CF76C207DF640951D644DD91FF22A1106B38CA37A2469C765637",
+        "passed": true
+      },
+      {
+        "role": "tff_futures_only_2025",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/fut_fin_txt_2025.zip",
+        "expected_bytes": 627068,
+        "actual_bytes": 627068,
+        "expected_sha256": "2EA0CDA6395F7DD6501C27422BE3763E1F2F5B41B768CFD36B871F092A07D438",
+        "actual_sha256": "2EA0CDA6395F7DD6501C27422BE3763E1F2F5B41B768CFD36B871F092A07D438",
+        "passed": true
+      },
+      {
+        "role": "tff_futures_only_2026",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/fut_fin_txt_2026.zip",
+        "expected_bytes": 459690,
+        "actual_bytes": 459690,
+        "expected_sha256": "FA2D2F664E11F641039D41EF6B958F615BDABEB5C908C9E7D8DBB7719D94778A",
+        "actual_sha256": "FA2D2F664E11F641039D41EF6B958F615BDABEB5C908C9E7D8DBB7719D94778A",
+        "passed": true
+      },
+      {
+        "role": "cot_release_schedule",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/cftc_commitments_of_traders.html",
+        "expected_bytes": 84057,
+        "actual_bytes": 84057,
+        "expected_sha256": "5626664766611D4C841BF565DB58FCC04AAC62F32FC9877517372F4FBD114980",
+        "actual_sha256": "5626664766611D4C841BF565DB58FCC04AAC62F32FC9877517372F4FBD114980",
+        "passed": true
+      },
+      {
+        "role": "historical_special_announcements",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/cftc_historical_special_announcements.html",
+        "expected_bytes": 125751,
+        "actual_bytes": 125751,
+        "expected_sha256": "C3E48149722D685106272ECA58C5980A96D55F6BC5A4B124DBA1835DA3AB829B",
+        "actual_sha256": "C3E48149722D685106272ECA58C5980A96D55F6BC5A4B124DBA1835DA3AB829B",
+        "passed": true
+      },
+      {
+        "role": "tff_variable_names",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/source/cftc_tff_variable_names.html",
+        "expected_bytes": 35862,
+        "actual_bytes": 35862,
+        "expected_sha256": "CB3F6A7A5B743E345454F5FC356B4C3447C4DB43EDB61BF76E69539D9B05F0BE",
+        "actual_sha256": "CB3F6A7A5B743E345454F5FC356B4C3447C4DB43EDB61BF76E69539D9B05F0BE",
+        "passed": true
+      }
+    ],
+    "pin_failures": [],
+    "zip_schema_checks": {
+      "2022": {
+        "entry": "FinFutYY.txt",
+        "total_rows": 2719,
+        "target_rows": 104,
+        "missing_required_fields": [],
+        "passed": true
+      },
+      "2023": {
+        "entry": "FinFutYY.txt",
+        "total_rows": 2809,
+        "target_rows": 104,
+        "missing_required_fields": [],
+        "passed": true
+      },
+      "2024": {
+        "entry": "FinFutYY.txt",
+        "total_rows": 3163,
+        "target_rows": 106,
+        "missing_required_fields": [],
+        "passed": true
+      },
+      "2025": {
+        "entry": "FinFutYY.txt",
+        "total_rows": 3686,
+        "target_rows": 104,
+        "missing_required_fields": [],
+        "passed": true
+      },
+      "2026": {
+        "entry": "FinFutYY.txt",
+        "total_rows": 2865,
+        "target_rows": 66,
+        "missing_required_fields": [],
+        "passed": true
+      }
+    },
+    "normalized_matches_raw": true,
+    "official_source_checks": {
+      "official_2025_report_new_publish_pairs": "13/13",
+      "official_2023_ion_actual_original_schedule_pairs": "7/7",
+      "study_horizon_target_revision_guard": true,
+      "ordinary_release_schedule": true,
+      "variable_source": true,
+      "receipt_literal_long_date_false_negative_preserved": true
+    },
+    "report_integrity": {
+      "normalized_rows": 484,
+      "raw_target_rows": 484,
+      "paired_reports": 242,
+      "report_dates_unique": true,
+      "report_dates_strictly_increasing": true,
+      "relative_levels_unique": true,
+      "finite_states_after_first": true,
+      "state_counts": {
+        "NQ_SHIFT": 118,
+        "DJ_SHIFT": 123,
+        "FLAT": 0,
+        "null": 1
+      }
+    },
+    "event_rows": 16477,
+    "exact_duplicate_rows": 0,
+    "normal_day_rows": 1051,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2233,
+    "final_counts": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "stop_count": 206,
+    "component_counts": {
+      "Cross": 805,
+      "Return": 238,
+      "Passive": 594,
+      "RC16": 272,
+      "RC4": 206,
+      "Pressure": 118
+    },
+    "book_counts": {
+      "US100_BOOK": 1399,
+      "US30_BOOK": 834
+    },
+    "period_counts": {
+      "P1_2022H2_2023": 769,
+      "P2_2024": 554,
+      "P3_2025": 554,
+      "P4_2026_YTD": 356
+    },
+    "period_book_counts": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": 270,
+        "US100_BOOK": 499
+      },
+      "P2_2024": {
+        "US30_BOOK": 198,
+        "US100_BOOK": 356
+      },
+      "P3_2025": {
+        "US30_BOOK": 231,
+        "US100_BOOK": 323
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": 135,
+        "US100_BOOK": 221
+      }
+    },
+    "period_stressed_net": {
+      "P1_2022H2_2023": 148.87350000000094,
+      "P2_2024": 54.66299999999781,
+      "P3_2025": 113.03800000000109,
+      "P4_2026_YTD": 90.47320000000524
+    },
+    "pooled_stressed_net": 407.0477000000051,
+    "anchor_checks": {
+      "event_rows": true,
+      "exact_duplicate_rows": true,
+      "size_day_rows_and_unique_dates": true,
+      "native_signals": true,
+      "lifecycles": true,
+      "final_counts": true,
+      "component_counts": true,
+      "book_counts": true,
+      "period_counts": true,
+      "period_book_counts": true,
+      "period_stressed_net": true,
+      "pooled_stressed_net": true,
+      "stop_count": true,
+      "pairing": true,
+      "prior_result_hash": true
+    },
+    "pairing_faults": [],
+    "normal_day_coverage": {
+      "P1_2022H2_2023": {
+        "total": 366,
+        "mapped": 366,
+        "fraction": 1.0
+      },
+      "P2_2024": {
+        "total": 260,
+        "mapped": 260,
+        "fraction": 1.0
+      },
+      "P3_2025": {
+        "total": 259,
+        "mapped": 259,
+        "fraction": 1.0
+      },
+      "P4_2026_YTD": {
+        "total": 166,
+        "mapped": 166,
+        "fraction": 1.0
+      }
+    },
+    "lifecycle_coverage": {
+      "P1_2022H2_2023": {
+        "total": 769,
+        "mapped": 769,
+        "fraction": 1.0
+      },
+      "P2_2024": {
+        "total": 554,
+        "mapped": 554,
+        "fraction": 1.0
+      },
+      "P3_2025": {
+        "total": 554,
+        "mapped": 554,
+        "fraction": 1.0
+      },
+      "P4_2026_YTD": {
+        "total": 356,
+        "mapped": 356,
+        "fraction": 1.0
+      }
+    },
+    "normal_day_state_counts": {
+      "P1_2022H2_2023": {
+        "NQ_SHIFT": 188,
+        "DJ_SHIFT": 178
+      },
+      "P2_2024": {
+        "NQ_SHIFT": 140,
+        "DJ_SHIFT": 120
+      },
+      "P3_2025": {
+        "NQ_SHIFT": 120,
+        "DJ_SHIFT": 139
+      },
+      "P4_2026_YTD": {
+        "NQ_SHIFT": 60,
+        "DJ_SHIFT": 106
+      }
+    },
+    "period_book_state_counts": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 137,
+          "DJ_SHIFT": 133
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 253,
+          "DJ_SHIFT": 246
+        }
+      },
+      "P2_2024": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 101,
+          "DJ_SHIFT": 97
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 194,
+          "DJ_SHIFT": 162
+        }
+      },
+      "P3_2025": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 98,
+          "DJ_SHIFT": 133
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 142,
+          "DJ_SHIFT": 181
+        }
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 54,
+          "DJ_SHIFT": 81
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 77,
+          "DJ_SHIFT": 144
+        }
+      }
+    },
+    "component_state_counts": {
+      "RC16": {
+        "NQ_SHIFT": 135,
+        "DJ_SHIFT": 137
+      },
+      "RC4": {
+        "NQ_SHIFT": 93,
+        "DJ_SHIFT": 113
+      },
+      "Cross": {
+        "NQ_SHIFT": 395,
+        "DJ_SHIFT": 410
+      },
+      "Pressure": {
+        "NQ_SHIFT": 49,
+        "DJ_SHIFT": 69
+      },
+      "Return": {
+        "NQ_SHIFT": 113,
+        "DJ_SHIFT": 125
+      },
+      "Passive": {
+        "NQ_SHIFT": 271,
+        "DJ_SHIFT": 323
+      }
+    },
+    "minimum_normal_period_state_count": 60,
+    "minimum_period_book_state_lifecycle_count": 54,
+    "minimum_pooled_component_state_lifecycle_count": 49,
+    "requirements": {
+      "all_declared_and_acquired_pins": true,
+      "raw_zip_schema_and_normalized_target_identity": true,
+      "paired_target_and_state_integrity": true,
+      "official_exception_and_target_revision_guard": true,
+      "ordinary_release_and_variable_sources": true,
+      "event_and_lifecycle_anchors": true,
+      "normal_day_and_signal_counts_with_no_duplicate_or_unmatched_event": true,
+      "coverage_each_period_at_least_0_95": true,
+      "declared_state_density": true,
+      "relative_r_contribution_identity": true
+    },
+    "faults": []
+  },
+  "positioning_state": {
+    "paired_reports": 242,
+    "first_report_date": "2022-01-04",
+    "last_report_date": "2026-08-18",
+    "report_flow_state_counts": {
+      "NQ_SHIFT": 118,
+      "DJ_SHIFT": 123,
+      "FLAT": 0,
+      "FIRST_UNDEFINED": 1
+    },
+    "ordinary_availability_rule": "server_date strictly greater than report_date plus seven calendar days",
+    "exception_rows": 20
+  },
+  "causal_mapping": {
+    "normal_day_state_counts": {
+      "P1_2022H2_2023": {
+        "NQ_SHIFT": 188,
+        "DJ_SHIFT": 178
+      },
+      "P2_2024": {
+        "NQ_SHIFT": 140,
+        "DJ_SHIFT": 120
+      },
+      "P3_2025": {
+        "NQ_SHIFT": 120,
+        "DJ_SHIFT": 139
+      },
+      "P4_2026_YTD": {
+        "NQ_SHIFT": 60,
+        "DJ_SHIFT": 106
+      }
+    },
+    "period_book_state_lifecycle_counts": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 137,
+          "DJ_SHIFT": 133
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 253,
+          "DJ_SHIFT": 246
+        }
+      },
+      "P2_2024": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 101,
+          "DJ_SHIFT": 97
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 194,
+          "DJ_SHIFT": 162
+        }
+      },
+      "P3_2025": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 98,
+          "DJ_SHIFT": 133
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 142,
+          "DJ_SHIFT": 181
+        }
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": {
+          "NQ_SHIFT": 54,
+          "DJ_SHIFT": 81
+        },
+        "US100_BOOK": {
+          "NQ_SHIFT": 77,
+          "DJ_SHIFT": 144
+        }
+      }
+    },
+    "component_state_lifecycle_counts": {
+      "RC16": {
+        "NQ_SHIFT": 135,
+        "DJ_SHIFT": 137
+      },
+      "RC4": {
+        "NQ_SHIFT": 93,
+        "DJ_SHIFT": 113
+      },
+      "Cross": {
+        "NQ_SHIFT": 395,
+        "DJ_SHIFT": 410
+      },
+      "Pressure": {
+        "NQ_SHIFT": 49,
+        "DJ_SHIFT": 69
+      },
+      "Return": {
+        "NQ_SHIFT": 113,
+        "DJ_SHIFT": 125
+      },
+      "Passive": {
+        "NQ_SHIFT": 271,
+        "DJ_SHIFT": 323
+      }
+    }
+  },
+  "signal_and_birth_supply": {
+    "pooled": {
+      "NQ_SHIFT": {
+        "normal_days": 508,
+        "signals": 1154,
+        "durable_births": 1056,
+        "books": {
+          "US30_BOOK": {
+            "signals": 394,
+            "signals_per_day": 0.7755905511811023,
+            "durable_births": 390,
+            "durable_births_per_day": 0.7677165354330708
+          },
+          "US100_BOOK": {
+            "signals": 760,
+            "signals_per_day": 1.4960629921259843,
+            "durable_births": 666,
+            "durable_births_per_day": 1.311023622047244
+          }
+        },
+        "us100_minus_us30_signals_per_day": 0.7204724409448819,
+        "us100_minus_us30_births_per_day": 0.5433070866141732
+      },
+      "DJ_SHIFT": {
+        "normal_days": 543,
+        "signals": 1275,
+        "durable_births": 1177,
+        "books": {
+          "US30_BOOK": {
+            "signals": 452,
+            "signals_per_day": 0.8324125230202578,
+            "durable_births": 444,
+            "durable_births_per_day": 0.8176795580110497
+          },
+          "US100_BOOK": {
+            "signals": 823,
+            "signals_per_day": 1.5156537753222836,
+            "durable_births": 733,
+            "durable_births_per_day": 1.3499079189686924
+          }
+        },
+        "us100_minus_us30_signals_per_day": 0.6832412523020258,
+        "us100_minus_us30_births_per_day": 0.5322283609576427
+      }
+    },
+    "periods": {
+      "P1_2022H2_2023": {
+        "NQ_SHIFT": {
+          "normal_days": 188,
+          "signals": 425,
+          "durable_births": 390,
+          "books": {
+            "US30_BOOK": {
+              "signals": 137,
+              "signals_per_day": 0.7287234042553191,
+              "durable_births": 137,
+              "durable_births_per_day": 0.7287234042553191
+            },
+            "US100_BOOK": {
+              "signals": 288,
+              "signals_per_day": 1.5319148936170213,
+              "durable_births": 253,
+              "durable_births_per_day": 1.3457446808510638
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.8031914893617021,
+          "us100_minus_us30_births_per_day": 0.6170212765957447
+        },
+        "DJ_SHIFT": {
+          "normal_days": 178,
+          "signals": 406,
+          "durable_births": 379,
+          "books": {
+            "US30_BOOK": {
+              "signals": 134,
+              "signals_per_day": 0.7528089887640449,
+              "durable_births": 133,
+              "durable_births_per_day": 0.7471910112359551
+            },
+            "US100_BOOK": {
+              "signals": 272,
+              "signals_per_day": 1.5280898876404494,
+              "durable_births": 246,
+              "durable_births_per_day": 1.3820224719101124
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.7752808988764045,
+          "us100_minus_us30_births_per_day": 0.6348314606741573
+        }
+      },
+      "P2_2024": {
+        "NQ_SHIFT": {
+          "normal_days": 140,
+          "signals": 319,
+          "durable_births": 295,
+          "books": {
+            "US30_BOOK": {
+              "signals": 103,
+              "signals_per_day": 0.7357142857142858,
+              "durable_births": 101,
+              "durable_births_per_day": 0.7214285714285714
+            },
+            "US100_BOOK": {
+              "signals": 216,
+              "signals_per_day": 1.542857142857143,
+              "durable_births": 194,
+              "durable_births_per_day": 1.3857142857142857
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.8071428571428572,
+          "us100_minus_us30_births_per_day": 0.6642857142857143
+        },
+        "DJ_SHIFT": {
+          "normal_days": 120,
+          "signals": 272,
+          "durable_births": 259,
+          "books": {
+            "US30_BOOK": {
+              "signals": 100,
+              "signals_per_day": 0.8333333333333334,
+              "durable_births": 97,
+              "durable_births_per_day": 0.8083333333333333
+            },
+            "US100_BOOK": {
+              "signals": 172,
+              "signals_per_day": 1.4333333333333333,
+              "durable_births": 162,
+              "durable_births_per_day": 1.35
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.6,
+          "us100_minus_us30_births_per_day": 0.5416666666666667
+        }
+      },
+      "P3_2025": {
+        "NQ_SHIFT": {
+          "normal_days": 120,
+          "signals": 267,
+          "durable_births": 240,
+          "books": {
+            "US30_BOOK": {
+              "signals": 99,
+              "signals_per_day": 0.825,
+              "durable_births": 98,
+              "durable_births_per_day": 0.8166666666666667
+            },
+            "US100_BOOK": {
+              "signals": 168,
+              "signals_per_day": 1.4,
+              "durable_births": 142,
+              "durable_births_per_day": 1.1833333333333333
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.575,
+          "us100_minus_us30_births_per_day": 0.3666666666666667
+        },
+        "DJ_SHIFT": {
+          "normal_days": 139,
+          "signals": 342,
+          "durable_births": 314,
+          "books": {
+            "US30_BOOK": {
+              "signals": 134,
+              "signals_per_day": 0.9640287769784173,
+              "durable_births": 133,
+              "durable_births_per_day": 0.9568345323741008
+            },
+            "US100_BOOK": {
+              "signals": 208,
+              "signals_per_day": 1.4964028776978417,
+              "durable_births": 181,
+              "durable_births_per_day": 1.3021582733812949
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.5323741007194245,
+          "us100_minus_us30_births_per_day": 0.3453237410071941
+        }
+      },
+      "P4_2026_YTD": {
+        "NQ_SHIFT": {
+          "normal_days": 60,
+          "signals": 143,
+          "durable_births": 131,
+          "books": {
+            "US30_BOOK": {
+              "signals": 55,
+              "signals_per_day": 0.9166666666666666,
+              "durable_births": 54,
+              "durable_births_per_day": 0.9
+            },
+            "US100_BOOK": {
+              "signals": 88,
+              "signals_per_day": 1.4666666666666666,
+              "durable_births": 77,
+              "durable_births_per_day": 1.2833333333333334
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.5499999999999999,
+          "us100_minus_us30_births_per_day": 0.3833333333333334
+        },
+        "DJ_SHIFT": {
+          "normal_days": 106,
+          "signals": 255,
+          "durable_births": 225,
+          "books": {
+            "US30_BOOK": {
+              "signals": 84,
+              "signals_per_day": 0.7924528301886793,
+              "durable_births": 81,
+              "durable_births_per_day": 0.7641509433962265
+            },
+            "US100_BOOK": {
+              "signals": 171,
+              "signals_per_day": 1.6132075471698113,
+              "durable_births": 144,
+              "durable_births_per_day": 1.3584905660377358
+            }
+          },
+          "us100_minus_us30_signals_per_day": 0.820754716981132,
+          "us100_minus_us30_births_per_day": 0.5943396226415093
+        }
+      }
+    },
+    "role": "Transmission context only; supply cannot independently select a treatment."
+  },
+  "component_period_center_baselines": {
+    "P1_2022H2_2023|Cross": {
+      "n": 286,
+      "mean_stressed_r": 0.008703772208022343,
+      "mean_stop_rate": 0.006993006993006993
+    },
+    "P1_2022H2_2023|Return": {
+      "n": 105,
+      "mean_stressed_r": 0.07197886705126844,
+      "mean_stop_rate": 0.09523809523809523
+    },
+    "P1_2022H2_2023|Passive": {
+      "n": 213,
+      "mean_stressed_r": 0.0066529140952654945,
+      "mean_stop_rate": 0.009389671361502348
+    },
+    "P1_2022H2_2023|RC16": {
+      "n": 77,
+      "mean_stressed_r": 0.07711231752028519,
+      "mean_stop_rate": 0.025974025974025976
+    },
+    "P1_2022H2_2023|RC4": {
+      "n": 53,
+      "mean_stressed_r": 0.10346639510326434,
+      "mean_stop_rate": 0.1509433962264151
+    },
+    "P1_2022H2_2023|Pressure": {
+      "n": 35,
+      "mean_stressed_r": 0.02850977279289924,
+      "mean_stop_rate": 0.05714285714285714
+    },
+    "P2_2024|Passive": {
+      "n": 159,
+      "mean_stressed_r": 0.015611259165317618,
+      "mean_stop_rate": 0.050314465408805034
+    },
+    "P2_2024|Pressure": {
+      "n": 23,
+      "mean_stressed_r": -0.009495965328524375,
+      "mean_stop_rate": 0.21739130434782608
+    },
+    "P2_2024|Cross": {
+      "n": 197,
+      "mean_stressed_r": 0.038746324399035116,
+      "mean_stop_rate": 0.04568527918781726
+    },
+    "P2_2024|Return": {
+      "n": 50,
+      "mean_stressed_r": -0.05509280446607114,
+      "mean_stop_rate": 0.38
+    },
+    "P2_2024|RC16": {
+      "n": 72,
+      "mean_stressed_r": 0.027415966657505973,
+      "mean_stop_rate": 0.1527777777777778
+    },
+    "P2_2024|RC4": {
+      "n": 53,
+      "mean_stressed_r": 0.05292297285255396,
+      "mean_stop_rate": 0.2641509433962264
+    },
+    "P3_2025|Pressure": {
+      "n": 32,
+      "mean_stressed_r": -0.015885035136844895,
+      "mean_stop_rate": 0.34375
+    },
+    "P3_2025|RC16": {
+      "n": 79,
+      "mean_stressed_r": 0.0583614189874287,
+      "mean_stop_rate": 0.08860759493670886
+    },
+    "P3_2025|RC4": {
+      "n": 68,
+      "mean_stressed_r": 0.0618834015987067,
+      "mean_stop_rate": 0.29411764705882354
+    },
+    "P3_2025|Cross": {
+      "n": 193,
+      "mean_stressed_r": 0.029915635337540356,
+      "mean_stop_rate": 0.03626943005181347
+    },
+    "P3_2025|Passive": {
+      "n": 130,
+      "mean_stressed_r": 0.0018013619390951452,
+      "mean_stop_rate": 0.07692307692307693
+    },
+    "P3_2025|Return": {
+      "n": 52,
+      "mean_stressed_r": 0.1265775553641715,
+      "mean_stop_rate": 0.3269230769230769
+    },
+    "P4_2026_YTD|Passive": {
+      "n": 92,
+      "mean_stressed_r": 0.009167731215862278,
+      "mean_stop_rate": 0.06521739130434782
+    },
+    "P4_2026_YTD|Cross": {
+      "n": 129,
+      "mean_stressed_r": 0.007011916155595951,
+      "mean_stop_rate": 0.08527131782945736
+    },
+    "P4_2026_YTD|RC16": {
+      "n": 44,
+      "mean_stressed_r": 0.17651377122824258,
+      "mean_stop_rate": 0.06818181818181818
+    },
+    "P4_2026_YTD|RC4": {
+      "n": 32,
+      "mean_stressed_r": 0.028895347654474525,
+      "mean_stop_rate": 0.34375
+    },
+    "P4_2026_YTD|Return": {
+      "n": 31,
+      "mean_stressed_r": 0.06331241032481687,
+      "mean_stop_rate": 0.25806451612903225
+    },
+    "P4_2026_YTD|Pressure": {
+      "n": 28,
+      "mean_stressed_r": 0.16502963023837453,
+      "mean_stop_rate": 0.10714285714285714
+    }
+  },
+  "books": {
+    "US30_BOOK": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 390,
+          "stressed_net_usd": 112.04900000000289,
+          "raw_mean_stressed_r": 0.04056591760963094,
+          "raw_stop_rate": 0.17692307692307693,
+          "centered_mean_stressed_r": -0.021017621490003517,
+          "centered_mean_stop_rate": -0.0006821935440983537
+        },
+        "DJ_SHIFT": {
+          "n": 444,
+          "stressed_net_usd": 189.97800000000362,
+          "raw_mean_stressed_r": 0.08137209219276173,
+          "raw_stop_rate": 0.18468468468468469,
+          "centered_mean_stressed_r": 0.018461424281759845,
+          "centered_mean_stop_rate": 0.0005992240590053123
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 390,
+        "dj_n": 444,
+        "centered_stressed_r": -0.039479045771763366,
+        "centered_stop_rate": -0.001281417603103666,
+        "raw_mean_stressed_r": -0.04080617458313079,
+        "raw_stop_rate": -0.007761607761607753
+      }
+    },
+    "US100_BOOK": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 666,
+          "stressed_net_usd": 67.66949999999972,
+          "raw_mean_stressed_r": 0.02060066106217299,
+          "raw_stop_rate": 0.03003003003003003,
+          "centered_mean_stressed_r": 0.004499231943344417,
+          "centered_mean_stop_rate": -0.007160308539497104
+        },
+        "DJ_SHIFT": {
+          "n": 733,
+          "stressed_net_usd": 37.35119999999888,
+          "raw_mean_stressed_r": 0.010992344513551177,
+          "raw_stop_rate": 0.047748976807639835,
+          "centered_mean_stressed_r": -0.0040879788189186654,
+          "centered_mean_stop_rate": 0.006505819218697232
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 666,
+        "dj_n": 733,
+        "centered_stressed_r": 0.008587210762263082,
+        "centered_stop_rate": -0.013666127758194336,
+        "raw_mean_stressed_r": 0.009608316548621815,
+        "raw_stop_rate": -0.017718946777609806
+      }
+    }
+  },
+  "pooled_relative_book_effect": {
+    "book_r_effects": {
+      "US30_BOOK": -0.039479045771763366,
+      "US100_BOOK": 0.008587210762263082
+    },
+    "book_stop_effects": {
+      "US30_BOOK": -0.001281417603103666,
+      "US100_BOOK": -0.013666127758194336
+    },
+    "relative_r_did": 0.04806625653402645,
+    "relative_stop_did": -0.01238471015509067,
+    "direction": "NQ_BETTER"
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "books": {
+        "US30_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 137,
+              "stressed_net_usd": 46.96800000000065,
+              "raw_mean_stressed_r": 0.053593837939892724,
+              "raw_stop_rate": 0.08029197080291971,
+              "centered_mean_stressed_r": -0.02215196563072494,
+              "centered_mean_stop_rate": 0.0004413068453834216
+            },
+            "DJ_SHIFT": {
+              "n": 133,
+              "stressed_net_usd": 82.02200000000033,
+              "raw_mean_stressed_r": 0.09499725323236334,
+              "raw_stop_rate": 0.08270676691729323,
+              "centered_mean_stressed_r": 0.0228181901609723,
+              "centered_mean_stop_rate": -0.0004545792317107354
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 137,
+            "dj_n": 133,
+            "centered_stressed_r": -0.04497015579169724,
+            "centered_stop_rate": 0.000895886077094157,
+            "raw_mean_stressed_r": -0.041403415292470616,
+            "raw_stop_rate": -0.0024147961143735214
+          }
+        },
+        "US100_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 253,
+              "stressed_net_usd": 27.87699999999997,
+              "raw_mean_stressed_r": 0.01674195231571297,
+              "raw_stop_rate": 0.007905138339920948,
+              "centered_mean_stressed_r": 0.008840689803986787,
+              "centered_mean_stop_rate": -2.569384075813971e-05
+            },
+            "DJ_SHIFT": {
+              "n": 246,
+              "stressed_net_usd": -7.993500000000002,
+              "raw_mean_stressed_r": -0.001338879601989598,
+              "raw_stop_rate": 0.008130081300813009,
+              "centered_mean_stressed_r": -0.009092254148002668,
+              "centered_mean_stop_rate": 2.6424966308167824e-05
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 253,
+            "dj_n": 246,
+            "centered_stressed_r": 0.017932943951989456,
+            "centered_stop_rate": -5.2118807066307534e-05,
+            "raw_mean_stressed_r": 0.01808083191770257,
+            "raw_stop_rate": -0.0002249429608920609
+          }
+        }
+      },
+      "relative_r_did": 0.0629030997436867,
+      "relative_stop_did": -0.0009480048841604646,
+      "direction": "NQ_BETTER"
+    },
+    "P2_2024": {
+      "books": {
+        "US30_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 101,
+              "stressed_net_usd": -14.51300000000083,
+              "raw_mean_stressed_r": -0.04122638588967659,
+              "raw_stop_rate": 0.24752475247524752,
+              "centered_mean_stressed_r": -0.0448268175073248,
+              "centered_mean_stop_rate": -0.007063310925021952
+            },
+            "DJ_SHIFT": {
+              "n": 97,
+              "stressed_net_usd": 26.749999999999417,
+              "raw_mean_stressed_r": 0.06154314133529389,
+              "raw_stop_rate": 0.24742268041237114,
+              "centered_mean_stressed_r": 0.046675346064327876,
+              "centered_mean_stop_rate": 0.007354581478631106
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 101,
+            "dj_n": 97,
+            "centered_stressed_r": -0.09150216357165267,
+            "centered_stop_rate": -0.014417892403653057,
+            "raw_mean_stressed_r": -0.10276952722497049,
+            "raw_stop_rate": 0.00010207206287637938
+          }
+        },
+        "US100_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 194,
+              "stressed_net_usd": 27.714999999999637,
+              "raw_mean_stressed_r": 0.03382325453091466,
+              "raw_stop_rate": 0.041237113402061855,
+              "centered_mean_stressed_r": 0.005571186526555524,
+              "centered_mean_stop_rate": -0.006548002834450888
+            },
+            "DJ_SHIFT": {
+              "n": 162,
+              "stressed_net_usd": 14.710999999999586,
+              "raw_mean_stressed_r": 0.021935214412950464,
+              "raw_stop_rate": 0.05555555555555555,
+              "centered_mean_stressed_r": -0.006671667815751678,
+              "centered_mean_stop_rate": 0.007841435493107854
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 194,
+            "dj_n": 162,
+            "centered_stressed_r": 0.012242854342307201,
+            "centered_stop_rate": -0.014389438327558741,
+            "raw_mean_stressed_r": 0.0118880401179642,
+            "raw_stop_rate": -0.014318442153493698
+          }
+        }
+      },
+      "relative_r_did": 0.10374501791395987,
+      "relative_stop_did": 2.845407609431555e-05,
+      "direction": "NONCONCORDANT"
+    },
+    "P3_2025": {
+      "books": {
+        "US30_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 98,
+              "stressed_net_usd": 44.702000000001064,
+              "raw_mean_stressed_r": 0.07602519714982406,
+              "raw_stop_rate": 0.25510204081632654,
+              "centered_mean_stressed_r": 0.00897103018393736,
+              "centered_mean_stop_rate": 0.013978303103130241
+            },
+            "DJ_SHIFT": {
+              "n": 133,
+              "stressed_net_usd": 35.608000000001056,
+              "raw_mean_stressed_r": 0.055953878515744716,
+              "raw_stop_rate": 0.22556390977443608,
+              "centered_mean_stressed_r": -0.00661023276711173,
+              "centered_mean_stop_rate": -0.01029980228651703
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 98,
+            "dj_n": 133,
+            "centered_stressed_r": 0.015581262951049089,
+            "centered_stop_rate": 0.024278105389647274,
+            "raw_mean_stressed_r": 0.020071318634079342,
+            "raw_stop_rate": 0.02953813104189046
+          }
+        },
+        "US100_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 142,
+              "stressed_net_usd": 27.320499999999775,
+              "raw_mean_stressed_r": 0.03481929539106886,
+              "raw_stop_rate": 0.028169014084507043,
+              "centered_mean_stressed_r": 0.016188966981073413,
+              "centered_mean_stop_rate": -0.024419133373376967
+            },
+            "DJ_SHIFT": {
+              "n": 181,
+              "stressed_net_usd": 5.407499999999203,
+              "raw_mean_stressed_r": 0.005875992965170604,
+              "raw_stop_rate": 0.0718232044198895,
+              "centered_mean_stressed_r": -0.012700736526587987,
+              "centered_mean_stop_rate": 0.01915755214927917
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 142,
+            "dj_n": 181,
+            "centered_stressed_r": 0.0288897035076614,
+            "centered_stop_rate": -0.04357668552265614,
+            "raw_mean_stressed_r": 0.028943302425898255,
+            "raw_stop_rate": -0.04365419033538245
+          }
+        }
+      },
+      "relative_r_did": 0.013308440556612313,
+      "relative_stop_did": -0.06785479091230341,
+      "direction": "NQ_BETTER"
+    },
+    "P4_2026_YTD": {
+      "books": {
+        "US30_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 54,
+              "stressed_net_usd": 34.89200000000201,
+              "raw_mean_stressed_r": 0.09614347637343226,
+              "raw_stop_rate": 0.14814814814814814,
+              "centered_mean_stressed_r": -0.02803158295329837,
+              "centered_mean_stop_rate": -0.018203589272137652
+            },
+            "DJ_SHIFT": {
+              "n": 81,
+              "stressed_net_usd": 45.5980000000028,
+              "raw_mean_stressed_r": 0.12448177409338673,
+              "raw_stop_rate": 0.20987654320987653,
+              "centered_mean_stressed_r": 0.01868772196886559,
+              "centered_mean_stop_rate": 0.012135726181425114
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 54,
+            "dj_n": 81,
+            "centered_stressed_r": -0.04671930492216396,
+            "centered_stop_rate": -0.030339315453562766,
+            "raw_mean_stressed_r": -0.02833829771995447,
+            "raw_stop_rate": -0.06172839506172839
+          }
+        },
+        "US100_BOOK": {
+          "states": {
+            "NQ_SHIFT": {
+              "n": 77,
+              "stressed_net_usd": -15.242999999999666,
+              "raw_mean_stressed_r": -0.026256168740225877,
+              "raw_stop_rate": 0.07792207792207792,
+              "centered_mean_stressed_r": -0.0340240200468243,
+              "centered_mean_stop_rate": -0.00031734359337999346
+            },
+            "DJ_SHIFT": {
+              "n": 144,
+              "stressed_net_usd": 25.226200000000098,
+              "raw_mean_stressed_r": 0.026178426728670833,
+              "raw_stop_rate": 0.0763888888888889,
+              "centered_mean_stressed_r": 0.018193399608371335,
+              "centered_mean_stop_rate": 0.00016969067146013617
+            }
+          },
+          "nq_minus_dj": {
+            "nq_n": 77,
+            "dj_n": 144,
+            "centered_stressed_r": -0.052217419655195635,
+            "centered_stop_rate": -0.00048703426484012966,
+            "raw_mean_stressed_r": -0.052434595468896714,
+            "raw_stop_rate": 0.0015331890331890252
+          }
+        }
+      },
+      "relative_r_did": -0.005498114733031675,
+      "relative_stop_did": 0.029852281188722636,
+      "direction": "DJ_BETTER"
+    }
+  },
+  "components": {
+    "RC16": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 135,
+          "stressed_net_usd": 29.52700000000092,
+          "raw_mean_stressed_r": 0.025226896547241022,
+          "raw_stop_rate": 0.1037037037037037,
+          "centered_mean_stressed_r": -0.05259601509604474,
+          "centered_mean_stop_rate": 0.023443834906563456
+        },
+        "DJ_SHIFT": {
+          "n": 137,
+          "stressed_net_usd": 84.91100000000104,
+          "raw_mean_stressed_r": 0.1232344894056525,
+          "raw_stop_rate": 0.06569343065693431,
+          "centered_mean_stressed_r": 0.05182819005814627,
+          "centered_mean_stop_rate": -0.02310158914150414
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 135,
+        "dj_n": 137,
+        "centered_stressed_r": -0.10442420515419101,
+        "centered_stop_rate": 0.046545424048067593,
+        "raw_mean_stressed_r": -0.09800759285841149,
+        "raw_stop_rate": 0.03801027304676939
+      },
+      "book": "US30_BOOK",
+      "direction": "DJ_BETTER"
+    },
+    "RC4": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 93,
+          "stressed_net_usd": 5.8810000000004985,
+          "raw_mean_stressed_r": -0.007837300950674411,
+          "raw_stop_rate": 0.27956989247311825,
+          "centered_mean_stressed_r": -0.07496593117504267,
+          "centered_mean_stop_rate": 0.027492227871063212
+        },
+        "DJ_SHIFT": {
+          "n": 113,
+          "stressed_net_usd": 73.18700000000092,
+          "raw_mean_stressed_r": 0.12522325596217992,
+          "raw_stop_rate": 0.23893805309734514,
+          "centered_mean_stressed_r": 0.06169762477238024,
+          "centered_mean_stop_rate": -0.022626346831936987
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 93,
+        "dj_n": 113,
+        "centered_stressed_r": -0.1366635559474229,
+        "centered_stop_rate": 0.0501185747030002,
+        "raw_mean_stressed_r": -0.13306055691285434,
+        "raw_stop_rate": 0.04063183937577311
+      },
+      "book": "US30_BOOK",
+      "direction": "DJ_BETTER"
+    },
+    "Cross": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 395,
+          "stressed_net_usd": 46.39249999999973,
+          "raw_mean_stressed_r": 0.02384890850449043,
+          "raw_stop_rate": 0.030379746835443037,
+          "centered_mean_stressed_r": 0.0027326651682780504,
+          "centered_mean_stop_rate": -0.003205139535971442
+        },
+        "DJ_SHIFT": {
+          "n": 410,
+          "stressed_net_usd": 34.86599999999917,
+          "raw_mean_stressed_r": 0.018000587080604275,
+          "raw_stop_rate": 0.041463414634146344,
+          "centered_mean_stressed_r": -0.002632689613341051,
+          "centered_mean_stop_rate": 0.0030878783334359018
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 395,
+        "dj_n": 410,
+        "centered_stressed_r": 0.005365354781619101,
+        "centered_stop_rate": -0.006293017869407344,
+        "raw_mean_stressed_r": 0.005848321423886155,
+        "raw_stop_rate": -0.011083667798703307
+      },
+      "book": "US100_BOOK",
+      "direction": "NQ_BETTER"
+    },
+    "Pressure": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 49,
+          "stressed_net_usd": 14.455000000000474,
+          "raw_mean_stressed_r": 0.03469167524357896,
+          "raw_stop_rate": 0.14285714285714285,
+          "centered_mean_stressed_r": 5.1687234396205375e-05,
+          "centered_mean_stop_rate": -0.04046457092153631
+        },
+        "DJ_SHIFT": {
+          "n": 69,
+          "stressed_net_usd": 19.71500000000044,
+          "raw_mean_stressed_r": 0.04626161276167383,
+          "raw_stop_rate": 0.2028985507246377,
+          "centered_mean_stressed_r": -3.6705427324827394e-05,
+          "centered_mean_stop_rate": 0.02873570978485913
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 49,
+        "dj_n": 69,
+        "centered_stressed_r": 8.839266172103278e-05,
+        "centered_stop_rate": -0.06920028070639545,
+        "raw_mean_stressed_r": -0.011569937518094868,
+        "raw_stop_rate": -0.060041407867494845
+      },
+      "book": "US30_BOOK",
+      "direction": "NQ_BETTER"
+    },
+    "Return": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 113,
+          "stressed_net_usd": 62.186000000001,
+          "raw_mean_stressed_r": 0.10127481181730869,
+          "raw_stop_rate": 0.19469026548672566,
+          "centered_mean_stressed_r": 0.051972465324409044,
+          "centered_mean_stop_rate": -0.03544235762334534
+        },
+        "DJ_SHIFT": {
+          "n": 125,
+          "stressed_net_usd": 12.165000000001205,
+          "raw_mean_stressed_r": 0.015230437445839915,
+          "raw_stop_rate": 0.256,
+          "centered_mean_stressed_r": -0.04698310865326577,
+          "centered_mean_stop_rate": 0.032039891291504204
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 113,
+        "dj_n": 125,
+        "centered_stressed_r": 0.09895557397767482,
+        "centered_stop_rate": -0.06748224891484955,
+        "raw_mean_stressed_r": 0.08604437437146877,
+        "raw_stop_rate": -0.061309734513274344
+      },
+      "book": "US30_BOOK",
+      "direction": "NQ_BETTER"
+    },
+    "Passive": {
+      "states": {
+        "NQ_SHIFT": {
+          "n": 271,
+          "stressed_net_usd": 21.27699999999999,
+          "raw_mean_stressed_r": 0.015866130657319153,
+          "raw_stop_rate": 0.02952029520295203,
+          "centered_mean_stressed_r": 0.007074117095193917,
+          "centered_mean_stop_rate": -0.012925222769728234
+        },
+        "DJ_SHIFT": {
+          "n": 323,
+          "stressed_net_usd": 2.485199999999716,
+          "raw_mean_stressed_r": 0.002096432895929596,
+          "raw_stop_rate": 0.05572755417956656,
+          "centered_mean_stressed_r": -0.005935249946741645,
+          "centered_mean_stop_rate": 0.010844381952310685
+        }
+      },
+      "nq_minus_dj": {
+        "nq_n": 271,
+        "dj_n": 323,
+        "centered_stressed_r": 0.013009367041935564,
+        "centered_stop_rate": -0.02376960472203892,
+        "raw_mean_stressed_r": 0.013769697761389556,
+        "raw_stop_rate": -0.026207258976614533
+      },
+      "book": "US100_BOOK",
+      "direction": "NQ_BETTER"
+    }
+  },
+  "direction_breadth": {
+    "periods": {
+      "NQ_BETTER": 2,
+      "NONCONCORDANT": 1,
+      "DJ_BETTER": 1
+    },
+    "components": {
+      "DJ_BETTER": 2,
+      "NQ_BETTER": 4
+    },
+    "nq_us100_full": true,
+    "nq_us30_opposite_count": 2,
+    "dj_us100_full": false,
+    "dj_us30_opposite_count": 2,
+    "nq_complete_component_breadth": false,
+    "dj_complete_component_breadth": false
+  },
+  "contribution_concentration": {
+    "periods": {
+      "definition": "Additive contribution to pooled US100-minus-US30 NQ_SHIFT-minus-DJ_SHIFT centered-R DID, normalized by total absolute group contribution.",
+      "parts": {
+        "P1_2022H2_2023": {
+          "signed_contribution": 0.021026591685475784,
+          "absolute_contribution_share": 0.43353010086794813
+        },
+        "P2_2024": {
+          "signed_contribution": 0.024903428116417964,
+          "absolute_contribution_share": 0.5134634212127698
+        },
+        "P3_2025": {
+          "signed_contribution": 0.0023535487959979264,
+          "absolute_contribution_share": 0.04852589816691116
+        },
+        "P4_2026_YTD": {
+          "signed_contribution": -0.0002173120638652268,
+          "absolute_contribution_share": 0.0044805797523709305
+        }
+      },
+      "signed_sum": 0.04806625653402645,
+      "maximum_absolute_share": 0.5134634212127698
+    },
+    "components": {
+      "definition": "Additive contribution to pooled US100-minus-US30 NQ_SHIFT-minus-DJ_SHIFT centered-R DID, normalized by total absolute group contribution.",
+      "parts": {
+        "RC16": {
+          "signed_contribution": 0.03419834453490226,
+          "absolute_contribution_share": 0.32674883494967444
+        },
+        "RC4": {
+          "signed_contribution": 0.03357881470200195,
+          "absolute_contribution_share": 0.32082952353651095
+        },
+        "Cross": {
+          "signed_contribution": 0.003093307021857378,
+          "absolute_contribution_share": 0.029555069968430974
+        },
+        "Pressure": {
+          "signed_contribution": -1.2198258956087809e-05,
+          "absolute_contribution_share": 0.00011654853346039356
+        },
+        "Return": {
+          "signed_contribution": -0.028285915206184793,
+          "absolute_contribution_share": 0.270258398902132
+        },
+        "Passive": {
+          "signed_contribution": 0.005493903740405715,
+          "absolute_contribution_share": 0.05249162410979132
+        }
+      },
+      "signed_sum": 0.04806625653402642,
+      "maximum_absolute_share": 0.32674883494967444
+    }
+  },
+  "gates": {
+    "nasdaq_shift": {
+      "pooled_relative_r_did_at_least_0_10": false,
+      "pooled_relative_stop_did_at_most_minus_0_05": false,
+      "us100_book_effect_positive_r_negative_stop": true,
+      "us30_book_effect_negative_r_positive_stop": false,
+      "at_least_three_periods_nq_relative": false,
+      "both_us100_components_nq_better": true,
+      "at_least_three_us30_components_dj_better": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "dow_shift": {
+      "pooled_relative_r_did_at_most_minus_0_10": false,
+      "pooled_relative_stop_did_at_least_0_05": false,
+      "us100_book_effect_negative_r_positive_stop": false,
+      "us30_book_effect_positive_r_negative_stop": false,
+      "at_least_three_periods_dj_relative": false,
+      "both_us100_components_dj_better": false,
+      "at_least_three_us30_components_nq_better": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_pooled_relative_r_did_below_0_05": true,
+      "absolute_pooled_relative_stop_did_below_0_025": true,
+      "neither_direction_more_than_two_periods": true,
+      "neither_direction_has_full_component_breadth": true,
+      "passed": true
+    }
+  },
+  "verdict": "NO_MATERIAL_CFTC_LEVERAGED_MONEY_RELATIVE_BOOK_FIELD",
+  "interpretation": "The complete strong-null rule passed. Preserve unconditional book treatment, retain no CFTC seed and rotate away.",
+  "derived_rows": {
+    "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/CFTC_LEVERAGED_MONEY_RELATIVE_FLOW_DERIVED_ROWS_V1.csv",
+    "rows": 2233,
+    "bytes": 1413748,
+    "sha256": "9511D6B2AF55F6744ABCCB45E08BB16B94CCB8FB9B12757DFBC4E1EA943CB587"
+  },
+  "selected_candidate": null,
+  "retained_seed": null,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "close_without_adjacent_variant_then_commit_push_and_recompare_the_whole_frontier"
+}
