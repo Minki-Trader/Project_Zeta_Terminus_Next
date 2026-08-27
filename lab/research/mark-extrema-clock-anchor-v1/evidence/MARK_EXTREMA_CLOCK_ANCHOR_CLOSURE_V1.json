@@ -1,0 +1,75 @@
+{
+  "schema": "zeta-next-mark-extrema-clock-anchor-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_INVALID_TIME_SUPPORT_NO_CANDIDATE",
+  "unit": "mark-extrema-clock-anchor-078",
+  "family": "mark-extrema-clock-anchor-v1",
+  "verdict": "INVALID_MARK_EXTREMA_CLOCK_ANCHOR_NO_VERDICT",
+  "evidence": {
+    "declaration_sha256": "F5928175F9EF7497EDAC9F88AEBA85C7A56D8D8610449591ABF0C172293DA7FF",
+    "result_sha256": "B577113811D5755F862B6A86B427A4A656E6DCFAAD19178EB2BFDBA89AFC7B1D",
+    "result_bytes": 3787
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 0,
+    "failed_integrity_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "pins_and_anchors_passed": true,
+    "ledger_topology_passed": true,
+    "rows": 841,
+    "births": 356,
+    "closes": 356,
+    "first_peer_rows": 129,
+    "common_24_hour_support_passed": false,
+    "out_of_support_lifecycles": 1,
+    "failed_position_identifier": 314,
+    "failed_component": "RC4",
+    "failed_trough_elapsed_minutes": 3612.0
+  },
+  "metrics": {
+    "extrema_bins_emitted": 0,
+    "hhi_metrics_emitted": 0,
+    "top_bin_metrics_emitted": 0,
+    "pairwise_jsd_metrics_emitted": 0,
+    "session_gate_cast": false,
+    "duration_falsifier_cast": false
+  },
+  "finding": "One RC4 lifecycle entered Friday 2026-04-03 13:00 and recorded its trough Monday 2026-04-06 01:12, 3,612 elapsed minutes after entry. The frozen identical 48-bin support ended before 1,440 minutes, so the all-lifecycle coordinate comparison is not defined as declared.",
+  "decision_translation": {
+    "preserve": [
+      "all component clocks, native holds and exits",
+      "prior Unit 057/060/063 boundaries"
+    ],
+    "discard": [
+      "session-clock and duration-anchor claims from this unit",
+      "the clock-alignment observation seed",
+      "clock, hold, exit, carry, window, component, EA or Live candidate"
+    ],
+    "same_family_rescue": false,
+    "observation_gap": "Do not exclude the carry row or redefine elapsed support after outcomes. A naturally new evidence role would require its own future question and declaration.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "position-314 exclusion or same-day-only population",
+    "48/72/96-hour, business-time or modulo-24 support",
+    "peak-only or trough-only analysis",
+    "alternate bin width, time window, component or exit-class subgroup",
+    "Unit 060 hold rerun or any clock/exit intervention"
+  ],
+  "whole_map_recomparison_required": true,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_closure_sha_update_single_frontier_memory_commit_push_then_recompare_and_immediately_open_the_next_connected_distant_claude_hypothesis"
+}

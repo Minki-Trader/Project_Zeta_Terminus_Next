@@ -1626,3 +1626,12 @@
 - Session passage requires both extrema to show at least `+0.03` wall HHI, `+0.05` wall top-bin share and wall JSD at most `0.75x` elapsed JSD. Exact inverse conditions for both extrema form the duration-anchor falsifier.
 - A pass can retain only a later separately declared cross-period observation seed. No hold, exit, window, time-slot, component, clock-remap, EA or Live successor opens automatically.
 - Declaration SHA-256 is `F5928175F9EF7497EDAC9F88AEBA85C7A56D8D8610449591ABF0C172293DA7FF`. No extrema bin, concentration, divergence or verdict has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.
+
+## STATE-0197 - 2026-08-27
+
+- Unit 078 declaration commit `8c65394080207356ba505b49b90ba8f4160bb413` reached origin before the fixed invocation. All seven pins, prior/source anchors and ledger topology/count requirements passed.
+- The immutable common `[0,1440)` elapsed support failed on one RC4 lifecycle: position `314`, entry `2026.04.03 13:00`, final `2026.04.06 03:30`, trough `2026.04.06 01:12`, elapsed `3,612` minutes.
+- The invocation stopped at that integrity gate before any extrema bin, HHI, top-bin share or JSD. Bounded diagnosis confirmed exactly one out-of-support lifecycle and emitted no economic coordinate metric.
+- Closed `INVALID_MARK_EXTREMA_CLOCK_ANCHOR_NO_VERDICT`. Do not exclude the carry row, expand/wrap the support, use business time, or rescue peak-only/trough-only/same-day-only.
+- Preserve all clocks, native holds and exits; discard the clock-alignment seed and every clock/hold/exit/carry/window/component candidate.
+- Result/closure SHA-256 values are `B577113811D5755F862B6A86B427A4A656E6DCFAAD19178EB2BFDBA89AFC7B1D` / `7747EAD3BB149D7DDE851754F4A9F158343CB719920E0FE48A474F579B560268`. Zero successful aggregations, zero correction and zero metric reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.

@@ -1,0 +1,94 @@
+{
+  "schema": "zeta-next-mark-extrema-clock-anchor-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_078_STOPPED_AT_FIXED_TIME_SUPPORT_INTEGRITY_GATE",
+  "unit": "mark-extrema-clock-anchor-078",
+  "family": "mark-extrema-clock-anchor-v1",
+  "declaration": {
+    "sha256": "F5928175F9EF7497EDAC9F88AEBA85C7A56D8D8610449591ABF0C172293DA7FF",
+    "commit": "8c65394",
+    "committed_and_pushed_before_invocation": true
+  },
+  "execution": {
+    "successful_fixed_aggregations": 0,
+    "failed_integrity_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "extrema_bins_emitted": 0,
+    "hhi_metrics_emitted": 0,
+    "top_bin_metrics_emitted": 0,
+    "jsd_metrics_emitted": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli": false
+  },
+  "integrity_before_failure": {
+    "all_seven_input_pins_passed": true,
+    "source_and_prior_verdict_anchors_passed": true,
+    "ledger_rows": 841,
+    "unique_record_ids": 841,
+    "birth_rows": 356,
+    "close_rows": 356,
+    "first_peer_rows": 129,
+    "six_component_close_counts": {
+      "RC16": 44,
+      "RC4": 32,
+      "Cross": 129,
+      "Pressure": 28,
+      "Return": 31,
+      "Passive": 92
+    },
+    "birth_close_pairing_before_failed_row": "No duplicate or missing BIRTH key was encountered before the support failure.",
+    "fixed_common_24_hour_support_passed": false
+  },
+  "failed_row": {
+    "position_identifier": 314,
+    "component": "RC4",
+    "component_id": "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "entry_time_server": "2026.04.03 13:00:00",
+    "final_time_server": "2026.04.06 03:30:00",
+    "peak_time_server": "2026.04.03 15:30:01",
+    "peak_elapsed_minutes": 150.01666666666668,
+    "trough_time_server": "2026.04.06 01:12:00",
+    "trough_elapsed_minutes": 3612.0,
+    "fixed_limit_minutes_exclusive": 1440,
+    "failure": "The trough elapsed coordinate lies outside the predeclared identical 48-bin support."
+  },
+  "bounded_post_failure_topology_diagnosis": {
+    "purpose": "Identify the exact integrity failure only; no coordinate or economic metric was calculated.",
+    "out_of_support_lifecycles": 1,
+    "components": {"RC4": 1},
+    "maximum_peak_elapsed_minutes_among_failed_rows": 150.01666666666668,
+    "maximum_trough_elapsed_minutes_among_failed_rows": 3612.0,
+    "interpretation": "A single weekend-spanning lifecycle makes the predeclared identical 24-hour elapsed support false."
+  },
+  "verdict": "INVALID_MARK_EXTREMA_CLOCK_ANCHOR_NO_VERDICT",
+  "decision": {
+    "preserve": [
+      "all current component clocks, native hold schedules and exit behavior",
+      "Units 057, 060 and 063 at their prior authority"
+    ],
+    "discard": [
+      "any session-anchor or duration-anchor conclusion from Unit 078",
+      "the cross-period clock-alignment observation seed",
+      "any wall-clock, elapsed-time, hold, exit, carry, window, component, EA or Live candidate"
+    ],
+    "not_allowed": [
+      "exclude position 314",
+      "expand to 48/72/96-hour or business-time support",
+      "wrap weekend elapsed time modulo 24 hours",
+      "use peak-only, trough-only or same-day-only rescue"
+    ],
+    "observation_gap": "A future naturally complete evidence role would need a support definition frozen before outcomes that represents both same-day and rare carry lifecycles. This unit does not open it.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_update_single_frontier_memory_commit_push_then_recompare_and_continue_to_a_connected_distant_claude_hypothesis"
+}
