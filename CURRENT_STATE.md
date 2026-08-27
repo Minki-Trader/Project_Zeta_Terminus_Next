@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0240`
+- Latest state ID: `STATE-0241`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -19,7 +19,7 @@ Last updated: 2026-08-27
 - Existing real-account owner: exact RLO1 Live PID `9976` only; recovery preflight PID `22108` stopped normally and no second `terminal64.exe` was observed
 - User V7 Live direction: `EFFECTIVE_AFTER_GUARDED_RESTART`
 
-Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery boundary commit `41473c378289f87d3f5f82e2a3cb95dfa99c2800` reached `origin/main` before any replacement runtime started. Exact RLO1 preflight PID `22108` proved release/Portfolio/account continuity, entries `0/0`, positions/orders `0/0`, margin `0`, balance/equity `$104.54/$104.54`, then stopped normally. Live PID `9976` passed the same release's exact `1/1` handshake, is responding with the EA-attached MT5 window, and healthy local snapshots advanced at `17:29:30 → 17:30:30`; the latter was three seconds old with zero alert. Korean dashboard PID `14324` is the single visible responding dashboard and reads only the core snapshot. At verification the local snapshot held zero position, pending order, margin, planned risk, retry, shadow and ARC ownership. No broker position, order, deal or account state was queried.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery boundary commit `41473c378289f87d3f5f82e2a3cb95dfa99c2800` reached `origin/main` before any replacement runtime started. Exact RLO1 preflight PID `22108` proved release/Portfolio/account continuity, entries `0/0`, positions/orders `0/0`, margin `0`, balance/equity `$104.54/$104.54`, then stopped normally. Live PID `9976` passed the same release's exact `1/1` handshake, is responding with the EA-attached MT5 window, and healthy local snapshots advanced at `17:29:30 → 17:30:30`; the latter was three seconds old with zero alert. Korean dashboard PID `14324` is the single visible responding dashboard and reads only the core snapshot. At verification the local snapshot held zero position, pending order, margin, planned risk, retry, shadow and ARC ownership. Live resumed at server `11:29:31`; a read-only local dashboard at server `11:31:31` showed every fixed strategy still before its `13:00/13:30/15:00/16:00/17:00` evaluation and Passive still before its first completed `12:00` decision bar. Research state peers resumed alternating writes, while canonical candidate/lifecycle ledgers remain absent because no natural evaluation has occurred. No 2026-08-27 scheduled entry evaluation or canonical observation opportunity was skipped during the outage. No broker position, order, deal or account state was queried.
 
 ## Active work
 

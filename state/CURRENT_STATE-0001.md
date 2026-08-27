@@ -2018,3 +2018,10 @@
 - Exact same-release Live PID `9976` passed committed Git, release, Portfolio and entries `1/1` handshake. The EA-attached MT5 window is visible and responding. Local core snapshots advanced from `17:29:30` to `17:30:30`; the second was three seconds old, healthy and alert-free at verification.
 - The fresh local snapshot held zero component position, passive pending order, margin, aggregate planned risk, retry, shadow and ARC lifecycle ownership. Korean dashboard PID `14324` is the sole matching visible dashboard and is responding. It continues to read only local core snapshots.
 - Bounded RLO1 operational recovery is complete. Legacy, parent V7, CXR1 and CXR2 remain stopped and disabled. No broker position, order, deal or account state was queried, and no release, source, binary, SET, identity, execution, economic, research or dashboard behavior changed.
+
+## STATE-0241 - 2026-08-27
+
+- Read-only local dashboard evidence at KST `17:32:21` / server `11:31:31` showed exact Live PID `9976`, state sequence `4130`, connection/account match, Algo Trading on, entries `1/1`, zero fatal fault and every six-strategy row still before its current-day evaluation.
+- Live resumed at server `11:29:31`. Passive was still outside its decision session with latest completed M15 bar `11:30`; its first eligible completed bar is `12:00` and is evaluated after the next M15 start within the frozen two-minute delay. RC4, RC16, Pressure, Return and Cross fixed windows are later at server `13:00`, `13:30`, `15:00`, `16:00` and `17:00`.
+- Research state A/B resumed alternating writes at local `17:30:30/17:31:30`. Canonical candidate and lifecycle ledgers remain absent because no natural gate, signal, birth or lifecycle evaluation has occurred. The outage therefore skipped no 2026-08-27 scheduled entry evaluation or canonical observation opportunity.
+- This conclusion uses only the restored local snapshot/dashboard, frozen evaluation schedule and local research files. No broker position, order, deal, account or history state was queried.
