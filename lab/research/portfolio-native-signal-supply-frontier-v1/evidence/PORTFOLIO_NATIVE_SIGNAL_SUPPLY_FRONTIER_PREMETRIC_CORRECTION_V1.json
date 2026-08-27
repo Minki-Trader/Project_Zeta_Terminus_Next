@@ -1,0 +1,37 @@
+{
+  "schema": "zeta-next-portfolio-native-signal-supply-frontier-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_085_SINGLE_PREOUTPUT_IMPLEMENTATION_CORRECTION_FROZEN",
+  "unit": "portfolio-native-signal-supply-frontier-085",
+  "declaration": {
+    "sha256": "94457F0BE10A14663F6BD24B126C8E6DC82F30C38CDF56951E0FFB7504A66F69",
+    "commit": "ab5e436",
+    "committed_and_pushed_before_invocation": true
+  },
+  "failed_invocation": {
+    "stage": "supply-gate expression evaluation after immutable and lifecycle reconstruction but before result serialization",
+    "exception": "PowerShell parsed irreducible_supply_share -lt0.65 as an unknown -lt0 parameter",
+    "stdout_economic_metrics_emitted": 0,
+    "stdout_verdict_emitted": false,
+    "result_json_created": false,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "correction": {
+    "scope": "comparison-operator tokenization only",
+    "old": "compact comparisons such as -lt0.65, -ge-0.10, -le0.05, -lt0 and -gt0 in final gate expressions",
+    "new": "explicit script blocks and whitespace around the same operators and unchanged numeric constants",
+    "inputs_population_pairing_metrics_thresholds_gates_verdicts_and_decisions_changed": false,
+    "data_reacquired": false
+  },
+  "budget_after_correction": {
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "successful_fixed_aggregations_remaining": 1,
+    "metric_reruns_remaining": 0
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_correction_sha_update_state_and_frontier_commit_push_then_run_the_single_remaining_fixed_aggregation"
+}

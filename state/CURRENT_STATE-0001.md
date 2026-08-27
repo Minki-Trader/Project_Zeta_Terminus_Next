@@ -1863,3 +1863,10 @@
 - Signal-deficit/sufficient days are `618/433`, with `906/1,327` admitted lifecycles. Both states span four periods, both books and all six components; every component-period state has at least three births.
 - Froze one three-lens bundle: daily shortfall mechanism, complete component/book coverage, and component-period-centered stressed-R/stop comparison of deficit-day versus sufficient-day admitted lifecycles. The result can retain only one non-automatic future independent-signal discovery seed; it cannot impute absent opportunities or select an entry, clock, admission, risk, lot, slot, EA or Live behavior.
 - Declaration SHA-256 is `94457F0BE10A14663F6BD24B126C8E6DC82F30C38CDF56951E0FFB7504A66F69`. One fixed source-free aggregation, one premetric implementation correction and zero reruns are budgeted. No acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
+## STATE-0222 - 2026-08-27
+
+- Unit 085 declaration commit `ab5e436` was on `origin/main` before the first invocation. All immutable pins, 16,477 event rows, 1,051 normal days, 2,429 signals, 2,233 births/lifecycles and final pairing passed.
+- Execution stopped at the final supply-gate expression because PowerShell parsed `irreducible_supply_share -lt0.65` as an unknown parameter. Result serialization did not run, stdout emitted zero economic metric and zero verdict, and no result file was created.
+- Used the sole permitted implementation correction to add comparison-operator whitespace and explicit script blocks to the unchanged gate expressions. No input, population, metric, constant, threshold, verdict, decision or exclusion changed.
+- Correction receipt SHA-256 is `4057E9FDE8D2D8EF910AA77C8FA0159D88C851BEF5445139B3ECC769545AD190`. One successful fixed aggregation remains; correction allowance is exhausted and metric reruns remain zero. Program 6, broker/account state and Live remained untouched.
