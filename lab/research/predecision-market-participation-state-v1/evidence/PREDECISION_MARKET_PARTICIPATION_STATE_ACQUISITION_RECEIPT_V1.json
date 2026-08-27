@@ -1,0 +1,117 @@
+{
+  "schema": "zeta-next-predecision-market-participation-state-acquisition-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "ONE_DEDICATED_RUNTIME_AND_ONE_THREE_SYMBOL_H1_ACQUISITION_COMPLETE_BEFORE_LIFECYCLE_METRICS",
+  "unit": "predecision-market-participation-state-084",
+  "family": "predecision-market-participation-state-v1",
+  "declaration": {
+    "path": "lab/research/predecision-market-participation-state-v1/evidence/PREDECISION_MARKET_PARTICIPATION_STATE_DECLARATION_V1.json",
+    "bytes": 20552,
+    "sha256": "CA52A6B99FEFBA095490769821DA0A268FA47A3292A5EF106616777C7687DD9C",
+    "commit": "fa74a05c6437666d72bdac7407e3b65ad763d269",
+    "committed_and_pushed_before_runtime_or_acquisition": true,
+    "outcomes_consumed": false
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/pmps84-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copy": true,
+    "pre_acquisition_files": 17,
+    "pre_acquisition_bytes": 126574029,
+    "post_acquisition_files": 501,
+    "post_acquisition_bytes": 508861633,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "symbolic_or_junction_links": 0,
+    "onedrive_reparse_markers_with_empty_link_type": 19,
+    "link_interpretation": "Every reparse-marked hydrated path has empty LinkType and Target. There is no symbolic link, junction or cross-family target.",
+    "source_or_executable_from_another_lab_family": false,
+    "live_dependency": false,
+    "ignored_local_runtime": true
+  },
+  "acquisition": {
+    "python": "3.13.9",
+    "metatrader5_package": "5.0.5640",
+    "symbols": ["US30", "US100", "US500"],
+    "timeframe": "H1",
+    "from_inclusive": "2022-07-01 00:00:00 UTC request",
+    "to_inclusive": "2026-08-21 23:59:59 UTC request",
+    "successful_acquisition_batches": 1,
+    "acquisition_or_serialization_corrections_used": 0,
+    "copy_rates_range_calls": 3,
+    "symbol_info_calls": 3,
+    "api_calls_executed": ["initialize", "symbol_select", "symbol_info", "copy_rates_range", "shutdown"],
+    "forbidden_account_position_order_deal_or_send_calls_executed": false,
+    "terminal_process_exit": {
+      "shutdown_called": true,
+      "exact_dedicated_path_processes_stopped_after_shutdown": 1,
+      "exact_dedicated_path_processes_remaining": 0,
+      "other_terminal_processes_touched": false
+    }
+  },
+  "bar_exports": [
+    {
+      "symbol": "US30",
+      "path": "lab/research/predecision-market-participation-state-v1/evidence/US30_H1_BARS_20220701_20260821.csv",
+      "bytes": 2763746,
+      "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92",
+      "rows": 24443,
+      "first_time": "2022.07.01 01:00:00",
+      "last_time": "2026.08.21 23:00:00",
+      "exact_11_rows": 1069,
+      "positive_tick_volume_rows": 24443
+    },
+    {
+      "symbol": "US100",
+      "path": "lab/research/predecision-market-participation-state-v1/evidence/US100_H1_BARS_20220701_20260821.csv",
+      "bytes": 2508477,
+      "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812",
+      "rows": 24445,
+      "first_time": "2022.07.01 01:00:00",
+      "last_time": "2026.08.21 23:00:00",
+      "exact_11_rows": 1069,
+      "positive_tick_volume_rows": 24445
+    },
+    {
+      "symbol": "US500",
+      "path": "lab/research/predecision-market-participation-state-v1/evidence/US500_H1_BARS_20220701_20260821.csv",
+      "bytes": 2727471,
+      "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85",
+      "rows": 24444,
+      "first_time": "2022.07.01 01:00:00",
+      "last_time": "2026.08.21 23:00:00",
+      "exact_11_rows": 1069,
+      "positive_tick_volume_rows": 24444
+    }
+  ],
+  "bar_integrity": {
+    "columns": 9,
+    "column_names": ["time_epoch", "time_server", "open", "high", "low", "close", "tick_volume", "spread", "real_volume"],
+    "unique_strictly_increasing_epoch_for_each_symbol": true,
+    "finite_positive_ohlc_for_each_symbol": true,
+    "nonnegative_volume_and_spread_for_each_symbol": true,
+    "positive_tick_volume_for_every_row": true,
+    "common_exact_11_rows": 1069,
+    "common_exact_11_first": "2022.07.01 11:00:00",
+    "common_exact_11_last": "2026.08.21 11:00:00",
+    "row_after_fixed_end": false
+  },
+  "symbol_specs": {
+    "path": "lab/research/predecision-market-participation-state-v1/evidence/PREDECISION_MARKET_PARTICIPATION_SYMBOL_SPECS_V1.json",
+    "bytes": 554,
+    "sha256": "146B40A5FD671BBBB7009A093511C9765701D2C6E83B1CDAFF15525790607613",
+    "all_symbols_digits": 2,
+    "all_symbols_point": 0.01,
+    "all_symbols_trade_tick_size": 0.01,
+    "all_symbols_spread_float": true
+  },
+  "storage": {
+    "system_drive_free_gib_after_acquisition": 33.515,
+    "mandatory_sweep_threshold_gib": 30,
+    "sweep_required": false
+  },
+  "market_scores_regimes_or_lifecycle_metrics_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_sha_update_single_frontier_memory_and_state_commit_push_then_run_the_one_fixed_market_state_lifecycle_aggregation"
+}
