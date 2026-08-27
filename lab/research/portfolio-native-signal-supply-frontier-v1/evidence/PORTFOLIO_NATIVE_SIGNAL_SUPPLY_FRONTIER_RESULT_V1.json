@@ -1,0 +1,149 @@
+{
+  "schema": "zeta-next-portfolio-native-signal-supply-frontier-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_085_ONE_FIXED_AGGREGATION_COMPLETE",
+  "unit": "portfolio-native-signal-supply-frontier-085",
+  "family": "portfolio-native-signal-supply-frontier-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "declaration": {
+    "sha256": "94457F0BE10A14663F6BD24B126C8E6DC82F30C38CDF56951E0FFB7504A66F69",
+    "commit": "ab5e436756a7799231504797a34a5a9bd3f8c684"
+  },
+  "premetric_correction": {
+    "sha256": "4057E9FDE8D2D8EF910AA77C8FA0159D88C851BEF5445139B3ECC769545AD190",
+    "commit": "21abafd02b0e33c6efc9c7ca71af858a51055b2e"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_preoutput_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "pre_input_boundary_assertion_failures": 1,
+    "pre_input_boundary_failure_detail": "A model-supplied full commit SHA did not match the already-pushed correction commit. The invocation stopped before immutable input access; the exact Git SHA was then read and the same aggregation was invoked.",
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "integrity": {
+    "passed": true,
+    "immutable_pins": 11,
+    "event_rows": 16477,
+    "duplicate_rows": 0,
+    "normal_size_days": 1051,
+    "native_signal_events": 2429,
+    "durable_births": 2233,
+    "complete_lifecycles": 2233,
+    "close_finals": 2027,
+    "external_close_finals": 206,
+    "stressed_net_usd": 407.04770000000565,
+    "stop_exits": 206,
+    "component_period_cells": 24,
+    "minimum_component_period_state_births": 3,
+    "overlap_faults": 0,
+    "unmatched_close_faults": 0,
+    "planned_risk_faults": 0,
+    "period_end_active_lifecycles": 0
+  },
+  "supply_mechanism": {
+    "required_births_at_three_per_day": 3153,
+    "actual_daily_shortfall": 994,
+    "perfect_conversion_signal_shortfall": 918,
+    "post_signal_recoverable_shortfall": 76,
+    "irreducible_supply_share_of_actual_shortfall": 0.9235412474849095,
+    "signal_deficit_day_share": 0.588011417697431,
+    "signal_compliant_days": 433,
+    "birth_compliant_days": 389,
+    "perfect_conversion_compliant_day_rate_gain": 0.04186489058039962,
+    "periods": {
+      "P1_2022H2_2023": {"days":366,"signals":831,"births":769,"signal_shortfall":331,"birth_shortfall":351,"irreducible_supply_share":0.9430199430199431,"signal_deficit_days":219,"signal_sufficient_days":147,"signal_compliant_days":147,"birth_compliant_days":135},
+      "P2_2024": {"days":260,"signals":591,"births":554,"signal_shortfall":239,"birth_shortfall":251,"irreducible_supply_share":0.952191235059761,"signal_deficit_days":160,"signal_sufficient_days":100,"signal_compliant_days":100,"birth_compliant_days":98},
+      "P3_2025": {"days":259,"signals":609,"births":554,"signal_shortfall":216,"birth_shortfall":240,"irreducible_supply_share":0.9,"signal_deficit_days":148,"signal_sufficient_days":111,"signal_compliant_days":111,"birth_compliant_days":93},
+      "P4_2026_YTD": {"days":166,"signals":398,"births":356,"signal_shortfall":132,"birth_shortfall":152,"irreducible_supply_share":0.868421052631579,"signal_deficit_days":91,"signal_sufficient_days":75,"signal_compliant_days":75,"birth_compliant_days":63}
+    },
+    "gate_passed": true,
+    "interpretation": "Even converting every observed native passed signal into a same-day durable birth cannot satisfy the three-start obligation on most deficient days. Post-signal admission, order and pending conversion can recover only 76 of the 994 missing daily starts in this fixed evidence."
+  },
+  "lifecycle_economics": {
+    "state_counts": {
+      "SIGNAL_DEFICIT": 906,
+      "SIGNAL_SUFFICIENT": 1327
+    },
+    "pooled_deficit_minus_sufficient": {
+      "raw_stressed_r": -0.0038621295438308507,
+      "raw_stop_rate": -0.0567987676563012,
+      "component_period_centered_stressed_r": 0.000622867370240354,
+      "component_period_centered_stop_rate": -0.023145532689026575
+    },
+    "books": {
+      "US30_BOOK": {"deficit_n":241,"sufficient_n":593,"raw_stressed_r_difference":0.010950375205798668,"raw_stop_rate_difference":-0.07956588973711279,"centered_stressed_r_difference":0.004820454594389462,"centered_stop_rate_difference":-0.05809628052759351},
+      "US100_BOOK": {"deficit_n":665,"sufficient_n":734,"raw_stressed_r_difference":0.001702906507476733,"raw_stop_rate_difference":-0.009010264079818073,"centered_stressed_r_difference":-0.0014063373962427076,"centered_stop_rate_difference":-0.007183782173670124}
+    },
+    "periods": {
+      "P1_2022H2_2023": {"deficit_n":318,"sufficient_n":451,"centered_stressed_r_difference":-0.01024060531221966,"centered_stop_rate_difference":-0.01592420579875088},
+      "P2_2024": {"deficit_n":231,"sufficient_n":323,"centered_stressed_r_difference":-0.011132326294551461,"centered_stop_rate_difference":0.0018302025960846712},
+      "P3_2025": {"deficit_n":222,"sufficient_n":332,"centered_stressed_r_difference":0.016174422505207512,"centered_stop_rate_difference":-0.052961655047419905},
+      "P4_2026_YTD": {"deficit_n":135,"sufficient_n":221,"centered_stressed_r_difference":0.01900443368302743,"centered_stop_rate_difference":-0.0321258349148634}
+    },
+    "components": {
+      "RC16": {"deficit_n":95,"sufficient_n":177,"centered_stressed_r_difference":-0.001320683118964662,"centered_stop_rate_difference":-0.09365250943407881},
+      "RC4": {"deficit_n":67,"sufficient_n":139,"centered_stressed_r_difference":0.051484393571178955,"centered_stop_rate_difference":-0.06390844883686872},
+      "Cross": {"deficit_n":459,"sufficient_n":346,"centered_stressed_r_difference":-0.024423944846020416,"centered_stop_rate_difference":0.024115840067835285},
+      "Pressure": {"deficit_n":18,"sufficient_n":100,"centered_stressed_r_difference":-0.055700449875632496,"centered_stop_rate_difference":0.196674301242236},
+      "Return": {"deficit_n":61,"sufficient_n":177,"centered_stressed_r_difference":-0.01256914669245512,"centered_stop_rate_difference":-0.09426986772127456},
+      "Passive": {"deficit_n":206,"sufficient_n":388,"centered_stressed_r_difference":0.03216282480742138,"centered_stop_rate_difference":-0.053984504257570634}
+    },
+    "absolute_centered_r_contribution_shares": {
+      "periods": {"P1_2022H2_2023":0.2669758891781294,"P2_2024":0.20958478729041793,"P3_2025":0.30080092563754135,"P4_2026_YTD":0.22263839789391124},
+      "components": {"RC16":0.006292285411713715,"RC4":0.1793823889215556,"Cross":0.3713560757301966,"Pressure":0.06548336974079243,"Return":0.043945434053149705,"Passive":0.3335404461425919},
+      "maximum_period_share": 0.30080092563754135,
+      "maximum_component_share": 0.3713560757301966,
+      "numerator_definition": "Absolute sum of component-period-centered stressed R among SIGNAL_DEFICIT lifecycles inside each reported period or component, divided by the corresponding sum of absolute subgroup numerators."
+    }
+  },
+  "gates": {
+    "supply_mechanism_passed": true,
+    "book_nonadverse_count": 2,
+    "period_nonadverse_count": 4,
+    "component_nonadverse_count": 5,
+    "nonadverse_value_passed": true,
+    "book_hostile_direction_count": 0,
+    "period_hostile_direction_count": 1,
+    "component_hostile_direction_count": 2,
+    "hostile_value_passed": false
+  },
+  "verdict": "PASS_UPSTREAM_SIGNAL_SUPPLY_GAP_WITH_NONADVERSE_DEFICIT_DAY_VALUE_RETAIN_DISCOVERY_SEED",
+  "decision_translation": {
+    "preserve": [
+      "all six current components and every base opportunity",
+      "current admission, first-come priority, order, risk, lot, slot, cap, stop and exit behavior",
+      "the authoritative three-lifecycle-starts-per-normal-day requirement"
+    ],
+    "retain_unopened_seed": {
+      "id": "independent_entry_discovery_on_signal_deficit_days",
+      "scope": "One later independently declared question may seek a genuinely new signal mechanism whose incremental opportunities occur on days with fewer than three existing native signals, while preserving and evaluating the complete portfolio.",
+      "automatic_open": false,
+      "concrete_signal_selected": false,
+      "implementation_selected": false
+    },
+    "discard": [
+      "treating post-signal admission, risk, slot or order conversion as the primary route to the daily turnover target",
+      "using completed-day signal count as an intraday filter",
+      "assuming an unobserved new signal would inherit the value of existing deficit-day fills"
+    ]
+  },
+  "causal_limits": [
+    "The day state is complete only after all native decision clocks and therefore supports research allocation, not a deployable same-day rule.",
+    "Observed lifecycle non-adversity does not identify the return, stop or correlation of a missing or newly invented signal.",
+    "All four periods are consumed exploratory evidence and cannot promote a future entry mechanism without its own frozen full-portfolio evaluation."
+  ],
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED"
+}

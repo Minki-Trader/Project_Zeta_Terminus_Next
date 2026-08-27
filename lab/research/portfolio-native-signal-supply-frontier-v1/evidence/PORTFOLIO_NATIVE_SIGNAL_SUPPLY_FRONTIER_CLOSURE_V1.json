@@ -1,0 +1,98 @@
+{
+  "schema": "zeta-next-portfolio-native-signal-supply-frontier-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_PASS_RETAIN_ONE_UNOPENED_DISCOVERY_SEED",
+  "unit": "portfolio-native-signal-supply-frontier-085",
+  "family": "portfolio-native-signal-supply-frontier-v1",
+  "verdict": "PASS_UPSTREAM_SIGNAL_SUPPLY_GAP_WITH_NONADVERSE_DEFICIT_DAY_VALUE_RETAIN_DISCOVERY_SEED",
+  "evidence": {
+    "declaration_sha256": "94457F0BE10A14663F6BD24B126C8E6DC82F30C38CDF56951E0FFB7504A66F69",
+    "premetric_correction_sha256": "4057E9FDE8D2D8EF910AA77C8FA0159D88C851BEF5445139B3ECC769545AD190",
+    "result_sha256": "155788C50824C7D49E56AC8DDF95A4E3A11F8539A5F092AAD435234A537C7821",
+    "result_bytes": 9225
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_preoutput_invocations": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "pre_input_boundary_assertion_failures": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "event_rows": 16477,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "durable_births_and_lifecycles": 2233,
+    "stressed_net_usd": 407.04770000000565,
+    "stops": 206,
+    "faults": 0
+  },
+  "findings": {
+    "supply": {
+      "actual_daily_shortfall": 994,
+      "perfect_conversion_signal_shortfall": 918,
+      "post_signal_recoverable_shortfall": 76,
+      "irreducible_supply_share": 0.9235412474849095,
+      "signal_deficit_days": 618,
+      "signal_sufficient_days": 433,
+      "signal_compliant_days": 433,
+      "birth_compliant_days": 389,
+      "perfect_conversion_compliant_day_rate_gain": 0.04186489058039962,
+      "gate_passed": true
+    },
+    "deficit_day_value": {
+      "deficit_births": 906,
+      "sufficient_births": 1327,
+      "centered_stressed_r_difference": 0.000622867370240354,
+      "centered_stop_rate_difference": -0.023145532689026575,
+      "nonadverse_books": 2,
+      "nonadverse_periods": 4,
+      "nonadverse_components": 5,
+      "maximum_period_contribution_share": 0.30080092563754135,
+      "maximum_component_contribution_share": 0.3713560757301966,
+      "nonadverse_gate_passed": true,
+      "hostile_gate_passed": false
+    }
+  },
+  "decision_translation": {
+    "preserve": [
+      "all six frozen components and every current opportunity",
+      "current entry, order, admission, priority, risk, lot, slot, cap, stop and exit behavior",
+      "the authoritative at-least-three-starts-per-normal-day requirement"
+    ],
+    "retained_seed": {
+      "id": "independent_entry_discovery_on_signal_deficit_days",
+      "status": "UNOPENED_REQUIRES_WHOLE_MAP_RECOMPARISON",
+      "authority": "One future independent research question only; no concrete signal, implementation or Live right."
+    },
+    "discard": [
+      "post-signal conversion or capacity relaxation as the primary turnover solution in this evidence",
+      "completed-day signal count as an intraday trading filter",
+      "imputed value for absent or newly invented signals"
+    ],
+    "selected_candidate": null,
+    "future_lab_candidate": null,
+    "live_candidate": null,
+    "promotion": "none"
+  },
+  "automatic_followups_not_opened": [
+    "zero, one or two-signal subgroups",
+    "component pair, book, period, month, weekday, clock or threshold variants",
+    "Unit 061 repair or candidate-ledger capacity work",
+    "a concrete entry mechanism without a new declaration and whole-map comparison"
+  ],
+  "whole_map_recomparison_required_after_push": true,
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "freeze_family_commit_push_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}
