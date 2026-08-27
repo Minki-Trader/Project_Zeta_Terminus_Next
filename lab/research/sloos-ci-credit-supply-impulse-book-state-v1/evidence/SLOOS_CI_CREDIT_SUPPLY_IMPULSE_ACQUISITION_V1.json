@@ -1,0 +1,257 @@
+{
+  "schema": "zeta-next-sloos-ci-credit-supply-impulse-acquisition-v1",
+  "created_at_local": "2026-08-28T07:41:38+09:00",
+  "status": "OFFICIAL_SOURCE_AND_OUTCOME_FREE_DENSITY_FROZEN_BEFORE_ECONOMIC_AGGREGATION",
+  "unit": "sloos-ci-credit-supply-impulse-book-state-095",
+  "family": "sloos-ci-credit-supply-impulse-book-state-v1",
+  "declaration": {
+    "commit": "aa411700bebc0528d386d6963d0f9e52ee532e9d",
+    "path": "lab/research/sloos-ci-credit-supply-impulse-book-state-v1/evidence/SLOOS_CI_CREDIT_SUPPLY_IMPULSE_BOOK_STATE_DECLARATION_V1.json",
+    "bytes": 26309,
+    "sha256": "BE106769AE10676D78523208A03273413FD2A7353000313DC413914C11DC76D3",
+    "pushed_before_acquisition": true
+  },
+  "official_source_acquisition": {
+    "owner": "Board of Governors of the Federal Reserve System",
+    "archive_html": 1,
+    "release_summary_html": 19,
+    "table_1_html": 19,
+    "files": 39,
+    "bytes": 14725691,
+    "http_200": 39,
+    "non_200": 0,
+    "directory": "lab/research/sloos-ci-credit-supply-impulse-book-state-v1/evidence/source/",
+    "git_storage_contract": "The family-scoped .gitattributes rule marks every family file -text so raw HTTP CRLF and evidence LF bytes are stored and checked out without newline transformation.",
+    "canonical_manifest_definition": "Sort source-manifest rows by relative path, join path|bytes|sha256 with LF and terminate with LF, then SHA-256 UTF-8 without BOM.",
+    "canonical_manifest_sha256": "BB07E099404D803704B33CFE1D1CE50DEA2640E3932F9D3A6E9B3A3CA5A3854D",
+    "manifest": {
+      "path": "lab/research/sloos-ci-credit-supply-impulse-book-state-v1/evidence/SLOOS_OFFICIAL_SOURCE_MANIFEST_V1.csv",
+      "rows": 39,
+      "bytes": 7134,
+      "sha256": "79117586961228ECBE45861BC86B97A7896DE0D4AAAB28846F6FF6022C8383AD"
+    },
+    "faults": []
+  },
+  "source_schema_integrity": {
+    "declared_release_ids": 19,
+    "unique_release_ids": 19,
+    "unique_last_update_dates": 19,
+    "strictly_increasing_last_update_dates": true,
+    "first_release_id": "202201",
+    "first_last_update_date": "2022-01-31",
+    "last_release_id": "202607",
+    "last_last_update_date": "2026-08-03",
+    "question_1a_blocks": 19,
+    "all_respondents_percent_vectors": 19,
+    "positive_total_bank_counts": 19,
+    "maximum_absolute_response_sum_error_percentage_points": 0.1,
+    "allowed_response_sum_error_percentage_points": 0.2,
+    "faults": []
+  },
+  "normalized_credit_supply_impulse": {
+    "path": "lab/research/sloos-ci-credit-supply-impulse-book-state-v1/evidence/SLOOS_CI_CREDIT_SUPPLY_IMPULSE_RELEASES_V1.csv",
+    "rows": 19,
+    "bytes": 4845,
+    "sha256": "62A1A855DF7B0284B8396A9EC5A2AC8982B150E19C5507E268791A2554959968",
+    "anchor_rows": 1,
+    "finite_impulse_rows": 18,
+    "state_counts": {
+      "TIGHTENING_IMPULSE": 10,
+      "NON_TIGHTENING_IMPULSE": 8,
+      "ANCHOR_ONLY": 1
+    },
+    "net_formula": "tightened_considerably_pct + tightened_somewhat_pct - eased_somewhat_pct - eased_considerably_pct",
+    "impulse_formula": "net_tightening_t - net_tightening_t_minus_1",
+    "treatment_rule": "impulse > 0",
+    "comparator_rule": "impulse <= 0",
+    "row_hash_faults": 0,
+    "formula_faults": 0,
+    "state_faults": 0
+  },
+  "causal_mapping_contract": {
+    "release_day_excluded": true,
+    "state_activates_on_strictly_later_server_date": true,
+    "same_day_timezone_or_dst_estimation": false,
+    "defined_release_regimes": {
+      "TIGHTENING_IMPULSE": 10,
+      "NON_TIGHTENING_IMPULSE": 8
+    },
+    "regimes_overlapping_at_least_one_cp2_normal_day": {
+      "TIGHTENING_IMPULSE": 9,
+      "NON_TIGHTENING_IMPULSE": 8
+    },
+    "release_day_normal_days_excluded": 17,
+    "release_day_births_excluded": 45,
+    "unmapped_normal_days": 0,
+    "unmapped_births": 0
+  },
+  "outcome_free_project_structure": {
+    "method": "Streamed the six pinned CP2 event CSVs and used only server_time, event and component_id. Final value_a/value_b, detail, planned risk, stressed R and stop reason were not selected, emitted or judged.",
+    "event_rows": 16477,
+    "normal_days_before_release_day_exclusion": 1051,
+    "normal_days_after_release_day_exclusion": 1034,
+    "native_signals": 2429,
+    "births_before_release_day_exclusion": 2233,
+    "births_after_release_day_exclusion": 2188,
+    "state_days": {
+      "TIGHTENING_IMPULSE": 578,
+      "NON_TIGHTENING_IMPULSE": 456
+    },
+    "state_births": {
+      "TIGHTENING_IMPULSE": 1212,
+      "NON_TIGHTENING_IMPULSE": 976
+    },
+    "period_state_days": {
+      "P1_2022H2_2023": {
+        "TIGHTENING_IMPULSE": 323,
+        "NON_TIGHTENING_IMPULSE": 37
+      },
+      "P2_2024": {
+        "TIGHTENING_IMPULSE": 64,
+        "NON_TIGHTENING_IMPULSE": 192
+      },
+      "P3_2025": {
+        "TIGHTENING_IMPULSE": 127,
+        "NON_TIGHTENING_IMPULSE": 128
+      },
+      "P4_2026_YTD": {
+        "TIGHTENING_IMPULSE": 64,
+        "NON_TIGHTENING_IMPULSE": 99
+      }
+    },
+    "period_book_state_births": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": {
+          "TIGHTENING_IMPULSE": 242,
+          "NON_TIGHTENING_IMPULSE": 22
+        },
+        "US100_BOOK": {
+          "TIGHTENING_IMPULSE": 448,
+          "NON_TIGHTENING_IMPULSE": 43
+        }
+      },
+      "P2_2024": {
+        "US30_BOOK": {
+          "TIGHTENING_IMPULSE": 43,
+          "NON_TIGHTENING_IMPULSE": 152
+        },
+        "US100_BOOK": {
+          "TIGHTENING_IMPULSE": 83,
+          "NON_TIGHTENING_IMPULSE": 264
+        }
+      },
+      "P3_2025": {
+        "US30_BOOK": {
+          "TIGHTENING_IMPULSE": 119,
+          "NON_TIGHTENING_IMPULSE": 107
+        },
+        "US100_BOOK": {
+          "TIGHTENING_IMPULSE": 152,
+          "NON_TIGHTENING_IMPULSE": 166
+        }
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": {
+          "TIGHTENING_IMPULSE": 46,
+          "NON_TIGHTENING_IMPULSE": 83
+        },
+        "US100_BOOK": {
+          "TIGHTENING_IMPULSE": 79,
+          "NON_TIGHTENING_IMPULSE": 139
+        }
+      }
+    },
+    "pooled_book_state_births": {
+      "US30_BOOK": {
+        "TIGHTENING_IMPULSE": 450,
+        "NON_TIGHTENING_IMPULSE": 364
+      },
+      "US100_BOOK": {
+        "TIGHTENING_IMPULSE": 762,
+        "NON_TIGHTENING_IMPULSE": 612
+      }
+    },
+    "component_state_births": {
+      "RC16": {
+        "TIGHTENING_IMPULSE": 130,
+        "NON_TIGHTENING_IMPULSE": 135
+      },
+      "RC4": {
+        "TIGHTENING_IMPULSE": 105,
+        "NON_TIGHTENING_IMPULSE": 95
+      },
+      "Cross": {
+        "TIGHTENING_IMPULSE": 440,
+        "NON_TIGHTENING_IMPULSE": 352
+      },
+      "Pressure": {
+        "TIGHTENING_IMPULSE": 65,
+        "NON_TIGHTENING_IMPULSE": 48
+      },
+      "Return": {
+        "TIGHTENING_IMPULSE": 150,
+        "NON_TIGHTENING_IMPULSE": 86
+      },
+      "Passive": {
+        "TIGHTENING_IMPULSE": 322,
+        "NON_TIGHTENING_IMPULSE": 260
+      }
+    },
+    "minimum_period_book_state_births": 22,
+    "minimum_pooled_component_state_births": 48,
+    "periods_with_all_four_book_state_cells_at_least_20": 4,
+    "cp2_final_value_consumed": false,
+    "cp2_planned_risk_consumed": false,
+    "cp2_stressed_r_consumed": false,
+    "cp2_stop_reason_consumed": false
+  },
+  "density_gate": {
+    "at_least_six_overlapping_release_regimes_each_state": true,
+    "each_state_in_at_least_three_periods": true,
+    "at_least_120_normal_days_each_state": true,
+    "at_least_150_pooled_lifecycles_each_book_state": true,
+    "at_least_three_periods_with_each_period_book_state_cell_at_least_20": true,
+    "at_least_20_lifecycles_each_pooled_component_state": true,
+    "passed": true
+  },
+  "internal_implementation_audit": {
+    "uncommitted_manifest_url_transcription_faults": 1,
+    "fault": "The initially drafted 202507 Table 1 manifest URL contained one duplicated path segment.",
+    "correction": "The exact declared URL template check corrected only that manifest text before this receipt. The already downloaded source bytes, URL actually requested, file bytes, SHA-256, normalized row and treatment state did not change.",
+    "source_redownloads_due_to_fault": 0,
+    "economic_contract_changes": 0,
+    "conditional_economic_outcomes_consumed": false,
+    "separate_research_unit": false,
+    "pure_implementation_correction_numeric_cap": null
+  },
+  "execution": {
+    "successful_official_source_freezes": 1,
+    "failed_source_downloads": 0,
+    "successful_normalizations": 1,
+    "economic_aggregations": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "retained_test_only_cli_validator_or_parity_checker": false,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "source_file_faults": 0,
+    "source_schema_faults": 0,
+    "normalized_row_faults": 0,
+    "causal_mapping_faults": 0,
+    "outcome_free_density_faults": 0,
+    "passed": true
+  },
+  "selected_candidate": null,
+  "retained_seed": null,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_095_SLOOS_OFFICIAL_ACQUISITION_AND_DENSITY_FROZEN_OUTCOMES_UNOPENED",
+  "goal_status": "active_not_complete",
+  "next": "commit_push_acquisition_then_execute_one_fixed_economic_aggregation"
+}
