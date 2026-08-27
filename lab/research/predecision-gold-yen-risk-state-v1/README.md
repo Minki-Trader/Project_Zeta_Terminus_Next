@@ -1,6 +1,6 @@
 # Pre-Decision Gold-Yen Risk State V1
 
-This open source-free Frontier family asks whether a causal early-server-day
+This closed source-free Frontier family asked whether a causal early-server-day
 cross-asset risk state, observed before every native portfolio decision, changes
 the current six-component portfolio's signal supply, stressed lifecycle value
 and stop burden.
@@ -24,3 +24,12 @@ range calls. Both raw paths and symbol specs pass their pre-outcome structural
 checks. No gold/yen return, state assignment, signal-supply statistic,
 lifecycle outcome or verdict has been calculated. The acquisition commit must
 reach `origin/main` before the single fixed aggregation begins.
+
+The fixed aggregation passed all integrity and density gates over 1,051 normal
+days and 2,233 complete lifecycles. The mapped risk-off minus risk-on contrast
+was only `+0.007661995R` but carried `+0.025057126` more centered stop burden.
+US30 and US100 books pointed in opposite concordant directions and no period
+was concordant. The result missed the strong-null stop bound by `0.000057126`,
+so the unit closes ambiguous rather than material or null. No treatment or
+retained seed remains; no nearby gold, yen, hour, threshold or subgroup rescue
+is authorized.

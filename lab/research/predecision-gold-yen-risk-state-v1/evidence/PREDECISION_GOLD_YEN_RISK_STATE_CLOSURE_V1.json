@@ -1,0 +1,164 @@
+{
+  "schema": "zeta-next-predecision-gold-yen-risk-state-closure-v1",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS",
+  "unit": "predecision-gold-yen-risk-state-088",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "micro",
+      "macro"
+    ]
+  },
+  "verdict": "AMBIGUOUS_PREDECISION_GOLD_YEN_RISK_STATE_NO_CANDIDATE",
+  "integrity": {
+    "passed": true,
+    "pins": 17,
+    "event_rows": 16477,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2231,
+    "stops": 206,
+    "requirements": {
+      "all_17_pins": true,
+      "bar_integrity": true,
+      "state_construction_integrity": true,
+      "event_and_lifecycle_anchors": true,
+      "normal_and_lifecycle_coverage_each_period_at_least_0_95": true,
+      "both_primary_state_normal_date_share_each_period_at_least_0_12": true,
+      "each_component_primary_state_at_least_15_lifecycles": true,
+      "each_period_book_primary_state_at_least_20_lifecycles": true
+    }
+  },
+  "state_date_counts": {
+    "RISK_ON": 330,
+    "MIXED": 407,
+    "RISK_OFF": 309
+  },
+  "pooled_risk_off_minus_risk_on": {
+    "risk_off_n": 665,
+    "risk_on_n": 695,
+    "stressed_net_usd": 5.803499999999104,
+    "raw_mean_stressed_r": 0.007269899875560863,
+    "raw_stop_rate": 0.026191377724887763,
+    "centered_stressed_r": 0.0076619953800152315,
+    "centered_stop_rate": 0.0250571262502141
+  },
+  "direction_breadth": {
+    "books": {
+      "US30_BOOK": "ADVERSE_RISK_OFF",
+      "US100_BOOK": "FAVORABLE_RISK_OFF"
+    },
+    "periods": {
+      "P1_2022H2_2023": "NONCONCORDANT",
+      "P2_2024": "NONCONCORDANT",
+      "P3_2025": "NONCONCORDANT",
+      "P4_2026_YTD": "NONCONCORDANT"
+    },
+    "components": {
+      "RC16": "ADVERSE_RISK_OFF",
+      "RC4": "NONCONCORDANT",
+      "Cross": "NONCONCORDANT",
+      "Pressure": "ADVERSE_RISK_OFF",
+      "Return": "NONCONCORDANT",
+      "Passive": "FAVORABLE_RISK_OFF"
+    },
+    "favorable_counts": {
+      "books": 1,
+      "periods": 0,
+      "components": 1
+    },
+    "adverse_counts": {
+      "books": 1,
+      "periods": 0,
+      "components": 2
+    }
+  },
+  "contribution_caps": {
+    "period_max_absolute_share": 0.36425032014718955,
+    "component_max_absolute_share": 0.3041819076198069
+  },
+  "gates": {
+    "favorable": {
+      "pooled_centered_stressed_r_at_least_0_10": false,
+      "pooled_centered_stop_rate_at_most_minus_0_05": false,
+      "both_books_concordant": false,
+      "at_least_three_periods_concordant": false,
+      "at_least_four_components_concordant": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "adverse": {
+      "pooled_centered_stressed_r_at_most_minus_0_10": false,
+      "pooled_centered_stop_rate_at_least_0_05": false,
+      "both_books_concordant": false,
+      "at_least_three_periods_concordant": false,
+      "at_least_four_components_concordant": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_pooled_centered_stressed_r_below_0_05": true,
+      "absolute_pooled_centered_stop_rate_below_0_025": false,
+      "favorable_period_breadth_at_most_2": true,
+      "adverse_period_breadth_at_most_2": true,
+      "favorable_component_breadth_at_most_3": true,
+      "adverse_component_breadth_at_most_3": true,
+      "passed": false
+    }
+  },
+  "supply_context": {
+    "RISK_OFF": {
+      "normal_days": 309,
+      "signals": 730,
+      "mean_signals_per_day": 2.3624595469255665,
+      "durable_births": 665,
+      "mean_durable_births_per_day": 2.1521035598705502,
+      "fewer_than_three_signal_days": 174,
+      "fewer_than_three_signal_day_share": 0.5631067961165048
+    },
+    "RISK_ON": {
+      "normal_days": 330,
+      "signals": 746,
+      "mean_signals_per_day": 2.2606060606060607,
+      "durable_births": 695,
+      "mean_durable_births_per_day": 2.106060606060606,
+      "fewer_than_three_signal_days": 205,
+      "fewer_than_three_signal_day_share": 0.6212121212121212
+    },
+    "MIXED": {
+      "normal_days": 407,
+      "signals": 951,
+      "mean_signals_per_day": 2.3366093366093366,
+      "durable_births": 871,
+      "mean_durable_births_per_day": 2.14004914004914,
+      "fewer_than_three_signal_days": 234,
+      "fewer_than_three_signal_day_share": 0.5749385749385749
+    }
+  },
+  "selected_candidate": null,
+  "retained_seed": null,
+  "result_sha256": "DA4AED2639602F5F75D37558EFA9795CABDF5922AA6225FF2B5104130F35FBA6",
+  "derived_rows_sha256": "DC374D41BC58BBA90D77B2B111B33836773708ED2DE8FA7E85179AE31A7458DB",
+  "successful_fixed_aggregations": 1,
+  "host_command_length_rejections_before_python": 1,
+  "successful_bar_acquisition_batches": 1,
+  "corrections_used": 1,
+  "metric_reruns": 0,
+  "same_family_rescue": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}

@@ -1,0 +1,1146 @@
+{
+  "schema": "zeta-next-predecision-gold-yen-risk-state-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_088_ONE_FIXED_AGGREGATION_COMPLETE",
+  "unit": "predecision-gold-yen-risk-state-088",
+  "family": "predecision-gold-yen-risk-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "declaration": {
+    "sha256": "66B4D0054E77E17C83FADC3655D98BB87D79946FC6EAE301AEE002C2D0744FAE",
+    "commit": "ead921025f0225c32e62827c61c67961e035f4e5"
+  },
+  "acquisition": {
+    "receipt_sha256": "BBC1E25DE42EEE3080FC945B3643E51D0B1CF73B906EF14D5DBB05DF52D1BC7D",
+    "commit": "bbfe5feed0b0edfd97679d54f026e072b597f8e3"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "host_command_length_rejections_before_python": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "metric_reruns": 0,
+    "successful_bar_acquisition_batches": 1,
+    "runtime_copies": 1,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pins": 17,
+    "pin_failures": [],
+    "bar_rows": {
+      "XAUUSD": 24485,
+      "USDJPY": 25753
+    },
+    "bar_integrity_faults": [],
+    "state_construction_faults": [],
+    "event_rows": 16477,
+    "exact_duplicate_rows": 0,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2231,
+    "final_counts": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "stop_count": 206,
+    "period_counts": {
+      "P1_2022H2_2023": 769,
+      "P2_2024": 554,
+      "P3_2025": 554,
+      "P4_2026_YTD": 356
+    },
+    "component_counts": {
+      "Cross": 805,
+      "Return": 238,
+      "Passive": 594,
+      "RC16": 272,
+      "RC4": 206,
+      "Pressure": 118
+    },
+    "book_counts": {
+      "US100_BOOK": 1399,
+      "US30_BOOK": 834
+    },
+    "period_book_counts": {
+      "P1_2022H2_2023": {
+        "US100_BOOK": 499,
+        "US30_BOOK": 270
+      },
+      "P2_2024": {
+        "US100_BOOK": 356,
+        "US30_BOOK": 198
+      },
+      "P3_2025": {
+        "US30_BOOK": 231,
+        "US100_BOOK": 323
+      },
+      "P4_2026_YTD": {
+        "US100_BOOK": 221,
+        "US30_BOOK": 135
+      }
+    },
+    "period_stressed_net": {
+      "P1_2022H2_2023": 148.87350000000094,
+      "P2_2024": 54.66299999999781,
+      "P3_2025": 113.03800000000109,
+      "P4_2026_YTD": 90.47320000000524
+    },
+    "pooled_stressed_net": 407.0477000000051,
+    "anchor_checks": {
+      "event_rows": true,
+      "exact_duplicate_rows": true,
+      "size_day_rows_and_unique_dates": true,
+      "signal_rows": true,
+      "lifecycles": true,
+      "final_counts": true,
+      "component_counts": true,
+      "book_counts": true,
+      "period_counts": true,
+      "period_book_counts": true,
+      "period_stressed_net": true,
+      "pooled_stressed_net": true,
+      "stop_count": true,
+      "pairing": true
+    },
+    "pairing_faults": [],
+    "normal_day_coverage": {
+      "P1_2022H2_2023": {
+        "total": 366,
+        "mapped": 365,
+        "fraction": 0.9972677595628415
+      },
+      "P2_2024": {
+        "total": 260,
+        "mapped": 259,
+        "fraction": 0.9961538461538462
+      },
+      "P3_2025": {
+        "total": 259,
+        "mapped": 258,
+        "fraction": 0.9961389961389961
+      },
+      "P4_2026_YTD": {
+        "total": 166,
+        "mapped": 164,
+        "fraction": 0.9879518072289156
+      }
+    },
+    "lifecycle_coverage": {
+      "P1_2022H2_2023": {
+        "total": 769,
+        "mapped": 768,
+        "fraction": 0.9986996098829649
+      },
+      "P2_2024": {
+        "total": 554,
+        "mapped": 554,
+        "fraction": 1.0
+      },
+      "P3_2025": {
+        "total": 554,
+        "mapped": 554,
+        "fraction": 1.0
+      },
+      "P4_2026_YTD": {
+        "total": 356,
+        "mapped": 355,
+        "fraction": 0.9971910112359551
+      }
+    },
+    "normal_day_state_counts": {
+      "P1_2022H2_2023": {
+        "RISK_ON": 128,
+        "MIXED": 117,
+        "RISK_OFF": 120
+      },
+      "P2_2024": {
+        "MIXED": 120,
+        "RISK_OFF": 66,
+        "RISK_ON": 73
+      },
+      "P3_2025": {
+        "RISK_OFF": 85,
+        "RISK_ON": 73,
+        "MIXED": 100
+      },
+      "P4_2026_YTD": {
+        "RISK_ON": 56,
+        "RISK_OFF": 38,
+        "MIXED": 70
+      }
+    },
+    "component_primary_state_counts": {
+      "RC16": {
+        "RISK_OFF": 73,
+        "RISK_ON": 80
+      },
+      "RC4": {
+        "RISK_OFF": 58,
+        "RISK_ON": 61
+      },
+      "Cross": {
+        "RISK_OFF": 232,
+        "RISK_ON": 266
+      },
+      "Pressure": {
+        "RISK_OFF": 37,
+        "RISK_ON": 40
+      },
+      "Return": {
+        "RISK_OFF": 83,
+        "RISK_ON": 69
+      },
+      "Passive": {
+        "RISK_OFF": 182,
+        "RISK_ON": 179
+      }
+    },
+    "period_book_primary_state_counts": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": {
+          "RISK_OFF": 95,
+          "RISK_ON": 88
+        },
+        "US100_BOOK": {
+          "RISK_OFF": 172,
+          "RISK_ON": 163
+        }
+      },
+      "P2_2024": {
+        "US30_BOOK": {
+          "RISK_OFF": 47,
+          "RISK_ON": 52
+        },
+        "US100_BOOK": {
+          "RISK_OFF": 91,
+          "RISK_ON": 98
+        }
+      },
+      "P3_2025": {
+        "US30_BOOK": {
+          "RISK_OFF": 82,
+          "RISK_ON": 70
+        },
+        "US100_BOOK": {
+          "RISK_OFF": 96,
+          "RISK_ON": 97
+        }
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": {
+          "RISK_OFF": 27,
+          "RISK_ON": 40
+        },
+        "US100_BOOK": {
+          "RISK_OFF": 55,
+          "RISK_ON": 87
+        }
+      }
+    },
+    "requirements": {
+      "all_17_pins": true,
+      "bar_integrity": true,
+      "state_construction_integrity": true,
+      "event_and_lifecycle_anchors": true,
+      "normal_and_lifecycle_coverage_each_period_at_least_0_95": true,
+      "both_primary_state_normal_date_share_each_period_at_least_0_12": true,
+      "each_component_primary_state_at_least_15_lifecycles": true,
+      "each_period_book_primary_state_at_least_20_lifecycles": true
+    }
+  },
+  "market_state": {
+    "definition": {
+      "RISK_OFF": "XAUUSD return > 0 and USDJPY return < 0",
+      "RISK_ON": "XAUUSD return < 0 and USDJPY return > 0",
+      "MIXED": "all other finite sign combinations"
+    },
+    "periods": {
+      "P1_2022H2_2023": {
+        "mapped_dates": 365,
+        "state_date_counts": {
+          "RISK_OFF": 120,
+          "MIXED": 117,
+          "RISK_ON": 128
+        },
+        "state_date_shares": {
+          "RISK_OFF": 0.3287671232876712,
+          "RISK_ON": 0.3506849315068493,
+          "MIXED": 0.32054794520547947
+        },
+        "state_mean_symbol_returns": {
+          "RISK_OFF": {
+            "XAUUSD": 0.0033521431869386322,
+            "USDJPY": -0.0036261131642382582
+          },
+          "RISK_ON": {
+            "XAUUSD": -0.00330047846721895,
+            "USDJPY": 0.0034711318598357826
+          },
+          "MIXED": {
+            "XAUUSD": 0.0006845405135923651,
+            "USDJPY": 0.00046897119492365837
+          }
+        }
+      },
+      "P2_2024": {
+        "mapped_dates": 259,
+        "state_date_counts": {
+          "MIXED": 120,
+          "RISK_ON": 73,
+          "RISK_OFF": 66
+        },
+        "state_date_shares": {
+          "RISK_OFF": 0.2548262548262548,
+          "RISK_ON": 0.28185328185328185,
+          "MIXED": 0.46332046332046334
+        },
+        "state_mean_symbol_returns": {
+          "RISK_OFF": {
+            "XAUUSD": 0.0035334300678875863,
+            "USDJPY": -0.003540567256722844
+          },
+          "RISK_ON": {
+            "XAUUSD": -0.0036661926759106937,
+            "USDJPY": 0.0029367769206553635
+          },
+          "MIXED": {
+            "XAUUSD": 0.001585458973877782,
+            "USDJPY": 0.0011398269793305683
+          }
+        }
+      },
+      "P3_2025": {
+        "mapped_dates": 258,
+        "state_date_counts": {
+          "RISK_OFF": 85,
+          "MIXED": 100,
+          "RISK_ON": 73
+        },
+        "state_date_shares": {
+          "RISK_OFF": 0.32945736434108525,
+          "RISK_ON": 0.28294573643410853,
+          "MIXED": 0.3875968992248062
+        },
+        "state_mean_symbol_returns": {
+          "RISK_OFF": {
+            "XAUUSD": 0.006168694639641334,
+            "USDJPY": -0.003314140032298328
+          },
+          "RISK_ON": {
+            "XAUUSD": -0.005481973855732077,
+            "USDJPY": 0.003309661465368179
+          },
+          "MIXED": {
+            "XAUUSD": 0.001688708351123977,
+            "USDJPY": 0.0007633968695966976
+          }
+        }
+      },
+      "P4_2026_YTD": {
+        "mapped_dates": 164,
+        "state_date_counts": {
+          "MIXED": 70,
+          "RISK_ON": 56,
+          "RISK_OFF": 38
+        },
+        "state_date_shares": {
+          "RISK_OFF": 0.23170731707317074,
+          "RISK_ON": 0.34146341463414637,
+          "MIXED": 0.4268292682926829
+        },
+        "state_mean_symbol_returns": {
+          "RISK_OFF": {
+            "XAUUSD": 0.008975799434955916,
+            "USDJPY": -0.0022082920622334286
+          },
+          "RISK_ON": {
+            "XAUUSD": -0.008925377870075428,
+            "USDJPY": 0.00223180551066427
+          },
+          "MIXED": {
+            "XAUUSD": 0.0030002022496303632,
+            "USDJPY": 0.0007272266108387729
+          }
+        }
+      }
+    },
+    "pooled_state_date_counts": {
+      "RISK_ON": 330,
+      "MIXED": 407,
+      "RISK_OFF": 309
+    }
+  },
+  "signal_and_birth_supply": {
+    "periods": {
+      "P1_2022H2_2023": {
+        "RISK_OFF": {
+          "normal_days": 120,
+          "signals": 288,
+          "mean_signals_per_day": 2.4,
+          "durable_births": 267,
+          "mean_durable_births_per_day": 2.225,
+          "fewer_than_three_signal_days": 67,
+          "fewer_than_three_signal_day_share": 0.5583333333333333
+        },
+        "RISK_ON": {
+          "normal_days": 128,
+          "signals": 266,
+          "mean_signals_per_day": 2.078125,
+          "durable_births": 251,
+          "mean_durable_births_per_day": 1.9609375,
+          "fewer_than_three_signal_days": 89,
+          "fewer_than_three_signal_day_share": 0.6953125
+        },
+        "MIXED": {
+          "normal_days": 117,
+          "signals": 276,
+          "mean_signals_per_day": 2.358974358974359,
+          "durable_births": 250,
+          "mean_durable_births_per_day": 2.1367521367521367,
+          "fewer_than_three_signal_days": 62,
+          "fewer_than_three_signal_day_share": 0.5299145299145299
+        }
+      },
+      "P2_2024": {
+        "RISK_OFF": {
+          "normal_days": 66,
+          "signals": 146,
+          "mean_signals_per_day": 2.212121212121212,
+          "durable_births": 138,
+          "mean_durable_births_per_day": 2.090909090909091,
+          "fewer_than_three_signal_days": 44,
+          "fewer_than_three_signal_day_share": 0.6666666666666666
+        },
+        "RISK_ON": {
+          "normal_days": 73,
+          "signals": 161,
+          "mean_signals_per_day": 2.2054794520547945,
+          "durable_births": 150,
+          "mean_durable_births_per_day": 2.0547945205479454,
+          "fewer_than_three_signal_days": 45,
+          "fewer_than_three_signal_day_share": 0.6164383561643836
+        },
+        "MIXED": {
+          "normal_days": 120,
+          "signals": 284,
+          "mean_signals_per_day": 2.3666666666666667,
+          "durable_births": 266,
+          "mean_durable_births_per_day": 2.216666666666667,
+          "fewer_than_three_signal_days": 70,
+          "fewer_than_three_signal_day_share": 0.5833333333333334
+        }
+      },
+      "P3_2025": {
+        "RISK_OFF": {
+          "normal_days": 85,
+          "signals": 202,
+          "mean_signals_per_day": 2.376470588235294,
+          "durable_births": 178,
+          "mean_durable_births_per_day": 2.0941176470588236,
+          "fewer_than_three_signal_days": 46,
+          "fewer_than_three_signal_day_share": 0.5411764705882353
+        },
+        "RISK_ON": {
+          "normal_days": 73,
+          "signals": 176,
+          "mean_signals_per_day": 2.410958904109589,
+          "durable_births": 167,
+          "mean_durable_births_per_day": 2.287671232876712,
+          "fewer_than_three_signal_days": 41,
+          "fewer_than_three_signal_day_share": 0.5616438356164384
+        },
+        "MIXED": {
+          "normal_days": 100,
+          "signals": 231,
+          "mean_signals_per_day": 2.31,
+          "durable_births": 209,
+          "mean_durable_births_per_day": 2.09,
+          "fewer_than_three_signal_days": 60,
+          "fewer_than_three_signal_day_share": 0.6
+        }
+      },
+      "P4_2026_YTD": {
+        "RISK_OFF": {
+          "normal_days": 38,
+          "signals": 94,
+          "mean_signals_per_day": 2.473684210526316,
+          "durable_births": 82,
+          "mean_durable_births_per_day": 2.1578947368421053,
+          "fewer_than_three_signal_days": 17,
+          "fewer_than_three_signal_day_share": 0.4473684210526316
+        },
+        "RISK_ON": {
+          "normal_days": 56,
+          "signals": 143,
+          "mean_signals_per_day": 2.5535714285714284,
+          "durable_births": 127,
+          "mean_durable_births_per_day": 2.267857142857143,
+          "fewer_than_three_signal_days": 30,
+          "fewer_than_three_signal_day_share": 0.5357142857142857
+        },
+        "MIXED": {
+          "normal_days": 70,
+          "signals": 160,
+          "mean_signals_per_day": 2.2857142857142856,
+          "durable_births": 146,
+          "mean_durable_births_per_day": 2.085714285714286,
+          "fewer_than_three_signal_days": 42,
+          "fewer_than_three_signal_day_share": 0.6
+        }
+      }
+    },
+    "pooled": {
+      "RISK_OFF": {
+        "normal_days": 309,
+        "signals": 730,
+        "mean_signals_per_day": 2.3624595469255665,
+        "durable_births": 665,
+        "mean_durable_births_per_day": 2.1521035598705502,
+        "fewer_than_three_signal_days": 174,
+        "fewer_than_three_signal_day_share": 0.5631067961165048
+      },
+      "RISK_ON": {
+        "normal_days": 330,
+        "signals": 746,
+        "mean_signals_per_day": 2.2606060606060607,
+        "durable_births": 695,
+        "mean_durable_births_per_day": 2.106060606060606,
+        "fewer_than_three_signal_days": 205,
+        "fewer_than_three_signal_day_share": 0.6212121212121212
+      },
+      "MIXED": {
+        "normal_days": 407,
+        "signals": 951,
+        "mean_signals_per_day": 2.3366093366093366,
+        "durable_births": 871,
+        "mean_durable_births_per_day": 2.14004914004914,
+        "fewer_than_three_signal_days": 234,
+        "fewer_than_three_signal_day_share": 0.5749385749385749
+      }
+    },
+    "role": "Transmission context only; supply metrics cannot independently select a treatment."
+  },
+  "pooled": {
+    "states": {
+      "RISK_OFF": {
+        "n": 665,
+        "stressed_net_usd": 125.72850000000099,
+        "raw_mean_stressed_r": 0.03629762431114425,
+        "raw_stop_rate": 0.10676691729323308,
+        "centered_mean_stressed_r": 0.0032589835113261603,
+        "centered_mean_stop_rate": 0.01721832049740703
+      },
+      "RISK_ON": {
+        "n": 695,
+        "stressed_net_usd": 119.92500000000189,
+        "raw_mean_stressed_r": 0.029027724435583387,
+        "raw_stop_rate": 0.08057553956834532,
+        "centered_mean_stressed_r": -0.004403011868689071,
+        "centered_mean_stop_rate": -0.00783880575280707
+      },
+      "MIXED": {
+        "n": 871,
+        "stressed_net_usd": 161.3612000000022,
+        "raw_mean_stressed_r": 0.03381430607971111,
+        "raw_stop_rate": 0.09070034443168772,
+        "centered_mean_stressed_r": 0.0010251081672870367,
+        "centered_mean_stop_rate": -0.00689117466426494
+      }
+    },
+    "risk_off_minus_risk_on": {
+      "risk_off_n": 665,
+      "risk_on_n": 695,
+      "stressed_net_usd": 5.803499999999104,
+      "raw_mean_stressed_r": 0.007269899875560863,
+      "raw_stop_rate": 0.026191377724887763,
+      "centered_stressed_r": 0.0076619953800152315,
+      "centered_stop_rate": 0.0250571262502141
+    }
+  },
+  "books": {
+    "US30_BOOK": {
+      "states": {
+        "RISK_OFF": {
+          "n": 251,
+          "stressed_net_usd": 82.74700000000125,
+          "raw_mean_stressed_r": 0.06187113180026995,
+          "raw_stop_rate": 0.21912350597609562,
+          "centered_mean_stressed_r": -0.0014713307019151415,
+          "centered_mean_stop_rate": 0.04202571170749302
+        },
+        "RISK_ON": {
+          "n": 250,
+          "stressed_net_usd": 105.83200000000242,
+          "raw_mean_stressed_r": 0.06494845370213148,
+          "raw_stop_rate": 0.14,
+          "centered_mean_stressed_r": -0.000888099589165818,
+          "centered_mean_stop_rate": -0.03522658853136396
+        },
+        "MIXED": {
+          "n": 331,
+          "stressed_net_usd": 113.4150000000028,
+          "raw_mean_stressed_r": 0.06108837746776104,
+          "raw_stop_rate": 0.18429003021148035,
+          "centered_mean_stressed_r": 0.0017864921555050043,
+          "centered_mean_stop_rate": -0.005262255304349722
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 251,
+        "risk_on_n": 250,
+        "stressed_net_usd": -23.085000000001173,
+        "raw_mean_stressed_r": -0.003077321901861531,
+        "raw_stop_rate": 0.0791235059760956,
+        "centered_stressed_r": -0.0005832311127493236,
+        "centered_stop_rate": 0.07725230023885699
+      }
+    },
+    "US100_BOOK": {
+      "states": {
+        "RISK_OFF": {
+          "n": 414,
+          "stressed_net_usd": 42.98149999999974,
+          "raw_mean_stressed_r": 0.020792913248896545,
+          "raw_stop_rate": 0.03864734299516908,
+          "centered_mean_stressed_r": 0.006126879326600476,
+          "centered_mean_stop_rate": 0.0021780905608573095
+        },
+        "RISK_ON": {
+          "n": 445,
+          "stressed_net_usd": 14.092999999999467,
+          "raw_mean_stressed_r": 0.00884753945437659,
+          "raw_stop_rate": 0.04719101123595506,
+          "centered_mean_stressed_r": -0.006377681688645955,
+          "centered_mean_stop_rate": 0.00754758906660692
+        },
+        "MIXED": {
+          "n": 540,
+          "stressed_net_usd": 47.94619999999939,
+          "raw_mean_stressed_r": 0.017096310469628652,
+          "raw_stop_rate": 0.03333333333333333,
+          "centered_mean_stressed_r": 0.0005584079819163936,
+          "centered_mean_stop_rate": -0.007889641901546306
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 414,
+        "risk_on_n": 445,
+        "stressed_net_usd": 28.888500000000274,
+        "raw_mean_stressed_r": 0.011945373794519955,
+        "raw_stop_rate": -0.008543668240785979,
+        "centered_stressed_r": 0.01250456101524643,
+        "centered_stop_rate": -0.005369498505749611
+      }
+    }
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "states": {
+        "RISK_OFF": {
+          "n": 267,
+          "stressed_net_usd": 60.287500000000385,
+          "raw_mean_stressed_r": 0.03657066956010519,
+          "raw_stop_rate": 0.0449438202247191,
+          "centered_mean_stressed_r": 0.004940777310123086,
+          "centered_mean_stop_rate": 0.009252466755044455
+        },
+        "RISK_ON": {
+          "n": 251,
+          "stressed_net_usd": 39.05150000000033,
+          "raw_mean_stressed_r": 0.023164488199356972,
+          "raw_stop_rate": 0.03187250996015936,
+          "centered_mean_stressed_r": -0.007608305389358452,
+          "centered_mean_stop_rate": -0.0033067995912618633
+        },
+        "MIXED": {
+          "n": 250,
+          "stressed_net_usd": 48.535500000000226,
+          "raw_mean_stressed_r": 0.03275783391340666,
+          "raw_stop_rate": 0.024,
+          "centered_mean_stressed_r": 0.002361988443704431,
+          "centered_mean_stop_rate": -0.006561607704760563
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 267,
+        "risk_on_n": 251,
+        "stressed_net_usd": 21.236000000000054,
+        "raw_mean_stressed_r": 0.01340618136074822,
+        "raw_stop_rate": 0.013071310264559738,
+        "centered_stressed_r": 0.012549082699481538,
+        "centered_stop_rate": 0.012559266346306318
+      }
+    },
+    "P2_2024": {
+      "states": {
+        "RISK_OFF": {
+          "n": 138,
+          "stressed_net_usd": 19.98349999999944,
+          "raw_mean_stressed_r": 0.02430615132153192,
+          "raw_stop_rate": 0.15942028985507245,
+          "centered_mean_stressed_r": 0.004732390055151041,
+          "centered_mean_stop_rate": 0.03993588716728317
+        },
+        "RISK_ON": {
+          "n": 150,
+          "stressed_net_usd": 7.059999999999418,
+          "raw_mean_stressed_r": 0.014876650727918838,
+          "raw_stop_rate": 0.09333333333333334,
+          "centered_mean_stressed_r": -0.009489013627568457,
+          "centered_mean_stop_rate": -0.019799926031727085
+        },
+        "MIXED": {
+          "n": 266,
+          "stressed_net_usd": 27.619499999998954,
+          "raw_mean_stressed_r": 0.02381687728196376,
+          "raw_stop_rate": 0.11278195488721804,
+          "centered_mean_stressed_r": 0.0028957978064827953,
+          "centered_mean_stop_rate": -0.009553246332052689
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 138,
+        "risk_on_n": 150,
+        "stressed_net_usd": 12.923500000000024,
+        "raw_mean_stressed_r": 0.009429500593613083,
+        "raw_stop_rate": 0.06608695652173911,
+        "centered_stressed_r": 0.014221403682719498,
+        "centered_stop_rate": 0.05973581319901025
+      }
+    },
+    "P3_2025": {
+      "states": {
+        "RISK_OFF": {
+          "n": 178,
+          "stressed_net_usd": 38.67850000000028,
+          "raw_mean_stressed_r": 0.0481595624986836,
+          "raw_stop_rate": 0.1797752808988764,
+          "centered_mean_stressed_r": 0.009069961464934972,
+          "centered_mean_stop_rate": 0.04009565851572054
+        },
+        "RISK_ON": {
+          "n": 167,
+          "stressed_net_usd": 38.56100000000053,
+          "raw_mean_stressed_r": 0.03732788913121155,
+          "raw_stop_rate": 0.10179640718562874,
+          "centered_mean_stressed_r": -0.0005682459608387797,
+          "centered_mean_stop_rate": -0.030108536416096867
+        },
+        "MIXED": {
+          "n": 209,
+          "stressed_net_usd": 35.79850000000028,
+          "raw_mean_stressed_r": 0.029158230745581108,
+          "raw_stop_rate": 0.11004784688995216,
+          "centered_mean_stressed_r": -0.007270603183245689,
+          "centered_mean_stop_rate": -0.010090438441675028
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 178,
+        "risk_on_n": 167,
+        "stressed_net_usd": 0.11749999999974392,
+        "raw_mean_stressed_r": 0.010831673367472046,
+        "raw_stop_rate": 0.07797887371324766,
+        "centered_stressed_r": 0.009638207425773752,
+        "centered_stop_rate": 0.07020419493181741
+      }
+    },
+    "P4_2026_YTD": {
+      "states": {
+        "RISK_OFF": {
+          "n": 82,
+          "stressed_net_usd": 6.779000000000887,
+          "raw_mean_stressed_r": 0.029840248624704323,
+          "raw_stop_rate": 0.06097560975609756,
+          "centered_mean_stressed_r": -0.017310810672441907,
+          "centered_mean_stop_rate": -0.044736648020786925
+        },
+        "RISK_ON": {
+          "n": 127,
+          "stressed_net_usd": 35.252500000001604,
+          "raw_mean_stressed_r": 0.04641517205190313,
+          "raw_stop_rate": 0.13385826771653545,
+          "centered_mean_stressed_r": 0.002896382075475683,
+          "centered_mean_stop_rate": 0.02661536366498468
+        },
+        "MIXED": {
+          "n": 146,
+          "stressed_net_usd": 49.40770000000274,
+          "raw_mean_stressed_r": 0.06050303105649246,
+          "raw_stop_rate": 0.136986301369863,
+          "centered_mean_stressed_r": 0.007203054462704292,
+          "centered_mean_stop_rate": 0.001974342138708722
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 82,
+        "risk_on_n": 127,
+        "stressed_net_usd": -28.473500000000715,
+        "raw_mean_stressed_r": -0.01657492342719881,
+        "raw_stop_rate": -0.07288265796043789,
+        "centered_stressed_r": -0.02020719274791759,
+        "centered_stop_rate": -0.0713520116857716
+      }
+    }
+  },
+  "components": {
+    "RC16": {
+      "states": {
+        "RISK_OFF": {
+          "n": 73,
+          "stressed_net_usd": 15.019000000000306,
+          "raw_mean_stressed_r": 0.040519226789069954,
+          "raw_stop_rate": 0.0958904109589041,
+          "centered_mean_stressed_r": -0.028139115723850933,
+          "centered_mean_stop_rate": 0.014802939823245919
+        },
+        "RISK_ON": {
+          "n": 80,
+          "stressed_net_usd": 41.28400000000085,
+          "raw_mean_stressed_r": 0.08064125340827706,
+          "raw_stop_rate": 0.0625,
+          "centered_mean_stressed_r": 0.005322704795503199,
+          "centered_mean_stop_rate": -0.023828285351852975
+        },
+        "MIXED": {
+          "n": 118,
+          "stressed_net_usd": 57.136000000000784,
+          "raw_mean_stressed_r": 0.09122310179381732,
+          "raw_stop_rate": 0.09322033898305085,
+          "centered_mean_stressed_r": 0.01379948359492256,
+          "centered_mean_stop_rate": 0.006997018822468521
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 73,
+        "risk_on_n": 80,
+        "stressed_net_usd": -26.265000000000548,
+        "raw_mean_stressed_r": -0.04012202661920711,
+        "raw_stop_rate": 0.033390410958904104,
+        "centered_stressed_r": -0.03346182051935413,
+        "centered_stop_rate": 0.03863122517509889
+      }
+    },
+    "RC4": {
+      "states": {
+        "RISK_OFF": {
+          "n": 58,
+          "stressed_net_usd": 28.43600000000013,
+          "raw_mean_stressed_r": 0.09089620915803598,
+          "raw_stop_rate": 0.25862068965517243,
+          "centered_mean_stressed_r": 0.018494084717777776,
+          "centered_mean_stop_rate": 0.013947548083392691
+        },
+        "RISK_ON": {
+          "n": 61,
+          "stressed_net_usd": 23.041000000000423,
+          "raw_mean_stressed_r": 0.061225838221875,
+          "raw_stop_rate": 0.21311475409836064,
+          "centered_mean_stressed_r": -0.009801863565171738,
+          "centered_mean_stop_rate": -0.03180378344526999
+        },
+        "MIXED": {
+          "n": 86,
+          "stressed_net_usd": 28.557000000000848,
+          "raw_mean_stressed_r": 0.05310386701183284,
+          "raw_stop_rate": 0.29069767441860467,
+          "centered_mean_stressed_r": -0.005520270187856221,
+          "centered_mean_stop_rate": 0.013152011643310379
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 58,
+        "risk_on_n": 61,
+        "stressed_net_usd": 5.394999999999708,
+        "raw_mean_stressed_r": 0.029670370936160977,
+        "raw_stop_rate": 0.04550593555681179,
+        "centered_stressed_r": 0.028295948282949512,
+        "centered_stop_rate": 0.04575133152866268
+      }
+    },
+    "Cross": {
+      "states": {
+        "RISK_OFF": {
+          "n": 232,
+          "stressed_net_usd": 26.602499999999782,
+          "raw_mean_stressed_r": 0.024587783216682393,
+          "raw_stop_rate": 0.03879310344827586,
+          "centered_mean_stressed_r": 0.00465936384106279,
+          "centered_mean_stop_rate": 0.0054268840137096964
+        },
+        "RISK_ON": {
+          "n": 266,
+          "stressed_net_usd": 12.903999999999671,
+          "raw_mean_stressed_r": 0.010729906174459488,
+          "raw_stop_rate": 0.041353383458646614,
+          "centered_mean_stressed_r": -0.00937585501840454,
+          "centered_mean_stop_rate": 0.0047228247487319675
+        },
+        "MIXED": {
+          "n": 307,
+          "stressed_net_usd": 41.75199999999944,
+          "raw_mean_stressed_r": 0.026847031966270148,
+          "raw_stop_rate": 0.029315960912052116,
+          "centered_mean_stressed_r": 0.004602622227260715,
+          "centered_mean_stop_rate": -0.008193187212844797
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 232,
+        "risk_on_n": 266,
+        "stressed_net_usd": 13.698500000000111,
+        "raw_mean_stressed_r": 0.013857877042222905,
+        "raw_stop_rate": -0.002560280010370751,
+        "centered_stressed_r": 0.014035218859467331,
+        "centered_stop_rate": 0.0007040592649777289
+      }
+    },
+    "Pressure": {
+      "states": {
+        "RISK_OFF": {
+          "n": 37,
+          "stressed_net_usd": -8.284999999999636,
+          "raw_mean_stressed_r": -0.04447957959458722,
+          "raw_stop_rate": 0.2972972972972973,
+          "centered_mean_stressed_r": -0.09035238451426228,
+          "centered_mean_stop_rate": 0.11203206311901964
+        },
+        "RISK_ON": {
+          "n": 40,
+          "stressed_net_usd": 31.951000000000352,
+          "raw_mean_stressed_r": 0.11419885728387946,
+          "raw_stop_rate": 0.075,
+          "centered_mean_stressed_r": 0.07193140601160587,
+          "centered_mean_stop_rate": -0.09224087732919253
+        },
+        "MIXED": {
+          "n": 41,
+          "stressed_net_usd": 10.504000000000199,
+          "raw_mean_stressed_r": 0.04804228100330274,
+          "raw_stop_rate": 0.17073170731707318,
+          "centered_mean_stressed_r": 0.01136053625764562,
+          "centered_mean_stop_rate": -0.011111005908195722
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 37,
+        "risk_on_n": 40,
+        "stressed_net_usd": -40.23599999999999,
+        "raw_mean_stressed_r": -0.15867843687846667,
+        "raw_stop_rate": 0.2222972972972973,
+        "centered_stressed_r": -0.16228379052586817,
+        "centered_stop_rate": 0.20427294044821218
+      }
+    },
+    "Return": {
+      "states": {
+        "RISK_OFF": {
+          "n": 83,
+          "stressed_net_usd": 47.577000000000446,
+          "raw_mean_stressed_r": 0.10777728723011196,
+          "raw_stop_rate": 0.26506024096385544,
+          "centered_mean_stressed_r": 0.04765340668743386,
+          "centered_mean_stop_rate": 0.054381866352328855
+        },
+        "RISK_ON": {
+          "n": 69,
+          "stressed_net_usd": 9.55600000000079,
+          "raw_mean_stressed_r": 0.02149395260842252,
+          "raw_stop_rate": 0.2028985507246377,
+          "centered_mean_stressed_r": -0.04242295425971694,
+          "centered_mean_stop_rate": -0.01841620900526931
+        },
+        "MIXED": {
+          "n": 86,
+          "stressed_net_usd": 17.218000000000977,
+          "raw_mean_stressed_r": 0.033944893558202606,
+          "raw_stop_rate": 0.20930232558139536,
+          "centered_mean_stressed_r": -0.011954057106238852,
+          "centered_mean_stop_rate": -0.037709028905578035
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 83,
+        "risk_on_n": 69,
+        "stressed_net_usd": 38.02099999999966,
+        "raw_mean_stressed_r": 0.08628333462168944,
+        "raw_stop_rate": 0.06216169023921775,
+        "centered_stressed_r": 0.0900763609471508,
+        "centered_stop_rate": 0.07279807535759816
+      }
+    },
+    "Passive": {
+      "states": {
+        "RISK_OFF": {
+          "n": 182,
+          "stressed_net_usd": 16.37899999999996,
+          "raw_mean_stressed_r": 0.015955496586664033,
+          "raw_stop_rate": 0.038461538461538464,
+          "centered_mean_stressed_r": 0.007997558407066096,
+          "centered_mean_stop_rate": -0.0019632285658556237
+        },
+        "RISK_ON": {
+          "n": 179,
+          "stressed_net_usd": 1.1889999999997967,
+          "raw_mean_stressed_r": 0.006050279412242228,
+          "raw_stop_rate": 0.055865921787709494,
+          "centered_mean_stressed_r": -0.0019222956231946505,
+          "centered_mean_stop_rate": 0.01174528352780657
+        },
+        "MIXED": {
+          "n": 233,
+          "stressed_net_usd": 6.194199999999949,
+          "raw_mean_stressed_r": 0.004248793304525911,
+          "raw_stop_rate": 0.03862660944206009,
+          "centered_mean_stressed_r": -0.004770234822035137,
+          "centered_mean_stop_rate": -0.0074896916415950745
+        }
+      },
+      "risk_off_minus_risk_on": {
+        "risk_off_n": 182,
+        "risk_on_n": 179,
+        "stressed_net_usd": 15.190000000000161,
+        "raw_mean_stressed_r": 0.009905217174421804,
+        "raw_stop_rate": -0.01740438332617103,
+        "centered_stressed_r": 0.009919854030260748,
+        "centered_stop_rate": -0.013708512093662193
+      }
+    }
+  },
+  "directions": {
+    "books": {
+      "US30_BOOK": "ADVERSE_RISK_OFF",
+      "US100_BOOK": "FAVORABLE_RISK_OFF"
+    },
+    "periods": {
+      "P1_2022H2_2023": "NONCONCORDANT",
+      "P2_2024": "NONCONCORDANT",
+      "P3_2025": "NONCONCORDANT",
+      "P4_2026_YTD": "NONCONCORDANT"
+    },
+    "components": {
+      "RC16": "ADVERSE_RISK_OFF",
+      "RC4": "NONCONCORDANT",
+      "Cross": "NONCONCORDANT",
+      "Pressure": "ADVERSE_RISK_OFF",
+      "Return": "NONCONCORDANT",
+      "Passive": "FAVORABLE_RISK_OFF"
+    },
+    "favorable_counts": {
+      "books": 1,
+      "periods": 0,
+      "components": 1
+    },
+    "adverse_counts": {
+      "books": 1,
+      "periods": 0,
+      "components": 2
+    }
+  },
+  "contribution_concentration": {
+    "periods": {
+      "definition": "Additive period contribution to pooled centered RISK_OFF-minus-RISK_ON stressed-R, normalized by the sum of absolute group contributions.",
+      "parts": {
+        "P1_2022H2_2023": {
+          "signed_contribution": 0.004731488366133513,
+          "absolute_contribution_share": 0.36425032014718955
+        },
+        "P2_2024": {
+          "signed_contribution": 0.0030300484438567426,
+          "absolute_contribution_share": 0.23326615862277444
+        },
+        "P3_2025": {
+          "signed_contribution": 0.0025642916384660706,
+          "absolute_contribution_share": 0.19741019695781506
+        },
+        "P4_2026_YTD": {
+          "signed_contribution": -0.002663833068441095,
+          "absolute_contribution_share": 0.205073324272221
+        }
+      },
+      "signed_sum": 0.0076619953800152315,
+      "maximum_absolute_share": 0.36425032014718955
+    },
+    "components": {
+      "definition": "Additive component contribution to pooled centered RISK_OFF-minus-RISK_ON stressed-R, normalized by the sum of absolute group contributions.",
+      "parts": {
+        "RC16": {
+          "signed_contribution": -0.003701641004750035,
+          "absolute_contribution_share": 0.11082956007057547
+        },
+        "RC4": {
+          "signed_contribution": 0.002473325364839755,
+          "absolute_contribution_share": 0.0740529839994833
+        },
+        "Cross": {
+          "signed_contribution": 0.0052139791636037075,
+          "absolute_contribution_share": 0.15610995668618816
+        },
+        "Pressure": {
+          "signed_contribution": -0.009167062190064306,
+          "absolute_contribution_share": 0.2744678558403425
+        },
+        "Return": {
+          "signed_contribution": 0.01015949374365064,
+          "absolute_contribution_share": 0.3041819076198069
+        },
+        "Passive": {
+          "signed_contribution": 0.0026839003027354694,
+          "absolute_contribution_share": 0.08035773578360364
+        }
+      },
+      "signed_sum": 0.007661995380015231,
+      "maximum_absolute_share": 0.3041819076198069
+    }
+  },
+  "gates": {
+    "favorable": {
+      "pooled_centered_stressed_r_at_least_0_10": false,
+      "pooled_centered_stop_rate_at_most_minus_0_05": false,
+      "both_books_concordant": false,
+      "at_least_three_periods_concordant": false,
+      "at_least_four_components_concordant": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "adverse": {
+      "pooled_centered_stressed_r_at_most_minus_0_10": false,
+      "pooled_centered_stop_rate_at_least_0_05": false,
+      "both_books_concordant": false,
+      "at_least_three_periods_concordant": false,
+      "at_least_four_components_concordant": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_pooled_centered_stressed_r_below_0_05": true,
+      "absolute_pooled_centered_stop_rate_below_0_025": false,
+      "favorable_period_breadth_at_most_2": true,
+      "adverse_period_breadth_at_most_2": true,
+      "favorable_component_breadth_at_most_3": true,
+      "adverse_component_breadth_at_most_3": true,
+      "passed": false
+    }
+  },
+  "verdict": "AMBIGUOUS_PREDECISION_GOLD_YEN_RISK_STATE_NO_CANDIDATE",
+  "interpretation": "The state is valid but meets neither material direction nor the complete strong-null rule. Preserve unconditional behavior, retain no seed and rotate away.",
+  "derived_rows": {
+    "path": "lab/research/predecision-gold-yen-risk-state-v1/evidence/PREDECISION_GOLD_YEN_RISK_STATE_DERIVED_ROWS_V1.csv",
+    "rows": 2231,
+    "bytes": 507587,
+    "sha256": "DC374D41BC58BBA90D77B2B111B33836773708ED2DE8FA7E85179AE31A7458DB"
+  },
+  "selected_candidate": null,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "close_without_adjacent_variant_then_commit_push_and_recompare_the_whole_frontier"
+}
