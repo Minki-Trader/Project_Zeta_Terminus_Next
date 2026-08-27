@@ -1,11 +1,11 @@
 # Project Zeta Terminus Next Current State
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0267`
+- Latest state ID: `STATE-0268`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery 
 ## Active work
 
 - Active engineering boundary: none; bounded RLO1 unexpected-stop recovery completed through committed no-owner evidence, exact `0/0 → 1/1`, two healthy snapshots and dashboard restoration
-- Active research boundary: one experiment-level Program 1 / meso-to-macro Unit 093 `cross-relative-convergence-sleeve-v1`; its CONTROL and inseparable US30+US500 DUAL_APPEND source/configuration/runtime are frozen and compiled, and the declared four serial paths, one aggregation, verdict and closure remain inside this same boundary
+- Active research boundary: one experiment-level Program 1 / meso-to-macro Unit 093 `cross-relative-convergence-sleeve-v1`; its CONTROL and inseparable US30+US500 DUAL_APPEND implementation remains frozen, the first environment-synchronization/report-directory preflight is discarded with zero valid path, and environment V2 is refrozen before restarting all four serial paths inside this same boundary
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

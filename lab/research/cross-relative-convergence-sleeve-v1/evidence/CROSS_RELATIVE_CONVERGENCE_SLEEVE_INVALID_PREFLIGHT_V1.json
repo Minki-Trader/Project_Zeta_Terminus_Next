@@ -1,0 +1,104 @@
+{
+  "schema": "zeta-next-cross-relative-convergence-sleeve-invalid-preflight-v1",
+  "created_at_local": "2026-08-28",
+  "status": "INVALIDATED_BEFORE_VALID_MATRIX",
+  "unit": "cross-relative-convergence-sleeve-093",
+  "family": "cross-relative-convergence-sleeve-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "classification": "INTERNAL_ENVIRONMENT_SYNCHRONIZATION_AND_REPORT_DIRECTORY_PREFLIGHT",
+    "micro_split": false
+  },
+  "reasons": [
+    "The dedicated terminal synchronized its copied symbols database and required 2026 history/tick cache during the first invocation, so the committed pre-invocation environment fingerprint did not remain equal.",
+    "The declared nested report directory did not yet exist in the freshly isolated runtime, and MT5 completed the calculation without emitting the required HTML report."
+  ],
+  "invocation": {
+    "configuration": "BINDING_LONG CONTROL",
+    "configuration_path": "lab/runtime/crcs93-portable/MQL5/Profiles/Tester/ZetaCrcs93/tester-crcs93-binding-control.ini",
+    "started_local": "2026-08-27T23:55:34.6238776+09:00",
+    "ended_local": "2026-08-28T00:06:26.9608261+09:00",
+    "wall_seconds": 652.337,
+    "process_exit_code": 0,
+    "automatic_testing_finished": true,
+    "normal_stop_reason": 1,
+    "required_html_report_created": false,
+    "economic_outcome_usable_for_selection": false,
+    "counts_as_one_of_the_four_declared_matrix_paths": false,
+    "matrix_paths_completed": 0
+  },
+  "outcome_quarantine": {
+    "economic_artifacts_aggregated": false,
+    "economic_comparison_performed": false,
+    "candidate_gate_evaluated": false,
+    "note": "One final telemetry line containing economic fields was exposed while checking normal-stop integrity. Its values are intentionally omitted here and are excluded from every Unit 093 comparison, gate and verdict."
+  },
+  "environment_drift": {
+    "symbols_database": {
+      "bytes_before_and_after": 413696,
+      "sha256_before": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71",
+      "sha256_after": "9A89FBACFBDD0DDADC67C165C5546352B9697DD50B603BD4224C929F218CF639",
+      "changed": true
+    },
+    "broad_required_symbol_cache": {
+      "files_before_and_after": 360,
+      "bytes_before": 5675335007,
+      "bytes_after": 5680018435,
+      "manifest_sha256_before": "143C0E70A249D983D66FCF3BE12F805671A12AD9D4557A79EF9B3B9B4F7BB71E",
+      "manifest_sha256_after": "5A720B84A9FFE5911CC7D5E99D8478DB5CAD0E39D01EEFE8FBF3A8E352C7B45A",
+      "changed": true
+    },
+    "terminal_build_and_hash_changed": false,
+    "source_configuration_or_binary_changed": false
+  },
+  "path_integrity_observed_but_not_economically_used": {
+    "profile_rows": 1,
+    "profile": "CONTROL input=0",
+    "component_identity_rows": 8,
+    "contract_rows_start": 3,
+    "contract_rows_end": 3,
+    "normalized_contract_sha256_start": "28F516938DDFD8CC02150D374DC782A4A94A471E7E9932C6026453CD81B703B5",
+    "normalized_contract_sha256_end": "28F516938DDFD8CC02150D374DC782A4A94A471E7E9932C6026453CD81B703B5",
+    "normalized_contract_start_end_equal": true,
+    "safety_stopped": false,
+    "persistence_failed": false,
+    "broker_mismatch": false,
+    "foreign_exposure": false,
+    "protection_calculation_failures": 0,
+    "protection_mismatches": 0
+  },
+  "frozen_implementation_unchanged": {
+    "entrypoint_sha256": "6EAB57D1F155DB9F03D1B6E12A54C609DB5AC53E9E197B4D44CA11C2FD65CED3",
+    "code_manifest_sha256": "0E5CF230DDAF14B9479303028F27159DEABB08F510171175DC38A6C136ACF607",
+    "configuration_manifest_sha256": "1CA4C618C369333C440FAE6F37A99A63D8F6F9947AC085843E2210529A622315",
+    "binary_sha256": "CCA32E218B31F375C8FFF7482EE566C23C6BF4F36965AB355CE6A33EFB10CDA6",
+    "economic_contract_changes": 0
+  },
+  "preserved_local_ignored_artifacts": {
+    "root": "lab/artifacts/ea-files/cross-relative-convergence-sleeve-v1/invalid-preflight-binding-control/",
+    "files": 16,
+    "bytes": 13544265,
+    "manifest_sha256": "AADE59E4E3A177B6AAAF7617A28816CD0E313505CE68467C2D732F96DC6F6B65",
+    "includes": [
+      "six Unit 093 state/event/current/lock files",
+      "one Model=4 Tester cache",
+      "distinct terminal, Tester and agent logs across the date boundary",
+      "the synchronized symbols database"
+    ]
+  },
+  "repair": {
+    "report_directory_created": "lab/runtime/crcs93-portable/reports/cross-relative-convergence-sleeve-v1/",
+    "source_change": false,
+    "configuration_change": false,
+    "binary_change": false,
+    "economic_contract_change": false,
+    "pure_implementation_correction_numeric_cap": null,
+    "matrix_action": "Discard the whole incomplete matrix without economic use, freeze the synchronized environment, commit and push, then restart all four paths from BINDING_LONG CONTROL."
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_environment_v2_commit_push_then_restart_all_four_paths_from_binding_long_control"
+}

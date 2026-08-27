@@ -1,0 +1,133 @@
+{
+  "schema": "zeta-next-cross-relative-convergence-sleeve-environment-before-matrix-v2",
+  "created_at_local": "2026-08-28",
+  "status": "REFROZEN_AFTER_INVALID_SYNCHRONIZATION_PREFLIGHT_BEFORE_VALID_MATRIX",
+  "unit": "cross-relative-convergence-sleeve-093",
+  "family": "cross-relative-convergence-sleeve-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "internal_environment_refreeze": true
+  },
+  "preflight_invalidation": {
+    "path": "lab/research/cross-relative-convergence-sleeve-v1/evidence/CROSS_RELATIVE_CONVERGENCE_SLEEVE_INVALID_PREFLIGHT_V1.json",
+    "bytes": 5057,
+    "sha256": "C515D9FF74C59966DEE4349BD307D9B1F3D3193D0F502E7E7461FFE6B5F43F6C",
+    "invalid_matrix_paths": 1,
+    "valid_matrix_paths": 0,
+    "economic_outcomes_used": false
+  },
+  "frozen_implementation": {
+    "commit": "4fef1514336dc4cd5db5ba52497ff29578d78586",
+    "compile_runtime_receipt_sha256": "F470ED6EB93C5B7D43568D06716110E9E0CE6E44E0CBCE141BAC5C306932B9C0",
+    "code_manifest_sha256": "0E5CF230DDAF14B9479303028F27159DEABB08F510171175DC38A6C136ACF607",
+    "configuration_manifest_sha256": "1CA4C618C369333C440FAE6F37A99A63D8F6F9947AC085843E2210529A622315",
+    "binary_sha256": "CCA32E218B31F375C8FFF7482EE566C23C6BF4F36965AB355CE6A33EFB10CDA6",
+    "source_configuration_or_binary_changed_after_preflight": false
+  },
+  "runtime": {
+    "path": "lab/runtime/crcs93-portable/",
+    "terminal_build": 6140,
+    "terminal_bytes": 121846032,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "process_owners": 0,
+    "filesystem_symbolic_or_junction_links": 0,
+    "report_directory": "lab/runtime/crcs93-portable/reports/cross-relative-convergence-sleeve-v1/",
+    "report_directory_exists": true
+  },
+  "symbol_database": {
+    "runtime_path": "lab/runtime/crcs93-portable/Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+    "bytes": 413696,
+    "last_write_local": "2026-08-27T23:55:38.9145108+09:00",
+    "sha256": "9A89FBACFBDD0DDADC67C165C5546352B9697DD50B603BD4224C929F218CF639",
+    "preserved_before_valid_matrix_path": "lab/artifacts/ea-files/cross-relative-convergence-sleeve-v1/environment/symbols-before-valid-matrix-v2.dat",
+    "preserved_bytes": 413696,
+    "preserved_sha256": "9A89FBACFBDD0DDADC67C165C5546352B9697DD50B603BD4224C929F218CF639"
+  },
+  "exercised_history_contract": {
+    "algorithm": "For each pair, include exact Tester/bases/FPMarketsSC-Live history HCS years needed for the declared interval and its H1/M15/M30 warm-up, plus every monthly real-tick TKC intersecting the interval; sort runtime-relative Windows paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "BINDING_LONG": {
+      "period": ["2024.01.01", "2026.06.01"],
+      "symbols": ["US30", "US100", "US500"],
+      "history_years": [2023, 2024, 2025, 2026],
+      "tick_months": ["202401", "202605"],
+      "tick_months_are_inclusive_continuous_range": true,
+      "files": 99,
+      "bytes": 1540722694,
+      "sha256": "520F2AB7F4945224FEE1D503F9772D8523BDA1E0F9E85D4CA4E18520C213BA51",
+      "missing_files": 0
+    },
+    "ISOLATED_LATEST": {
+      "period": ["2026.06.01", "2026.08.01"],
+      "symbols": ["US30", "US100", "US500"],
+      "history_years": [2026],
+      "tick_months": ["202606", "202607"],
+      "files": 9,
+      "bytes": 385315910,
+      "sha256": "3F610650D0FD8AF458DE046755E78AF66797282D86A4F5CFEE8E0D3FFBA268F2",
+      "missing_files": 0
+    }
+  },
+  "broader_required_symbol_cache_snapshot": {
+    "role": "Diagnostic synchronization envelope only; pair validity is governed by the exact exercised-history manifests above.",
+    "surfaces": [
+      "Bases/FPMarketsSC-Live/history",
+      "Bases/FPMarketsSC-Live/ticks",
+      "Tester/bases/FPMarketsSC-Live/history",
+      "Tester/bases/FPMarketsSC-Live/ticks"
+    ],
+    "symbols": ["US30", "US100", "US500"],
+    "files": 360,
+    "bytes": 5680018435,
+    "sha256": "5A720B84A9FFE5911CC7D5E99D8478DB5CAD0E39D01EEFE8FBF3A8E352C7B45A"
+  },
+  "contract_and_swap_fingerprint_plan": {
+    "symbols": ["US30", "US100", "US500"],
+    "fields": [
+      "contract_size",
+      "tick_size",
+      "tick_value",
+      "tick_value_profit",
+      "tick_value_loss",
+      "volume_min",
+      "volume_step",
+      "stops_level",
+      "freeze_level",
+      "swap_mode",
+      "swap_long",
+      "swap_short",
+      "rollover3days",
+      "swap_sunday",
+      "swap_monday",
+      "swap_tuesday",
+      "swap_wednesday",
+      "swap_thursday",
+      "swap_friday",
+      "swap_saturday"
+    ],
+    "before_and_after_binding_pair": "CONTROL START, CONTROL END, DUAL_APPEND START and DUAL_APPEND END must normalize equal.",
+    "before_and_after_latest_pair": "CONTROL START, CONTROL END, DUAL_APPEND START and DUAL_APPEND END must normalize equal.",
+    "rows_deferred_until_corresponding_valid_paths": true
+  },
+  "matrix_continuity_rule": {
+    "before_and_after_each_adjacent_pair_equal": [
+      "terminal build and hash",
+      "pair-specific exercised-history manifest",
+      "symbols-*.dat hash",
+      "normalized US30/US100/US500 contract and swap fingerprint"
+    ],
+    "on_drift": "Discard the whole incomplete Unit 093 matrix without economic use, re-freeze the unchanged implementation and restart all four declared paths fresh.",
+    "economic_outcomes_inspected_before_complete_valid_matrix": false
+  },
+  "governance": {
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "post_valid_complete_matrix_selective_reruns": 0
+  },
+  "valid_tester_paths_started": 0,
+  "economic_outcomes_consumed": false,
+  "broker_or_account_state_queried": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_hash_update_single_frontier_memory_commit_push_then_restart_binding_long_control"
+}
