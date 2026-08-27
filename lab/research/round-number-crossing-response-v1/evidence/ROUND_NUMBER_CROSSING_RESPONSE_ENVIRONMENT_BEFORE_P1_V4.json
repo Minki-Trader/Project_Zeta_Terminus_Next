@@ -1,0 +1,110 @@
+{
+  "schema": "zeta-next-round-number-crossing-response-environment-before-p1-v4",
+  "created_at_local": "2026-08-28",
+  "status": "ALL_THREE_P1_SYMBOL_CACHES_SYNCHRONIZED_AND_REFROZEN_BEFORE_FULL_P1_RESTART",
+  "unit": "round-number-crossing-response-094",
+  "family": "round-number-crossing-response-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "environment_refreeze_inside_unit_094": true,
+    "implementation_events_are_not_experiments": true,
+    "micro_split": false
+  },
+  "superseded_environment": {
+    "path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_ENVIRONMENT_BEFORE_P1_V3.json",
+    "bytes": 7131,
+    "sha256": "BB1B783B8E4FFE30A9D81A6F7860B10CAD207178815784643843E0383272A970",
+    "role": "Preserved V3 boundary; superseded as the active start pin after the first US500 selection rewrote its annual HCS cache."
+  },
+  "invalid_matrix_refreeze": {
+    "path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_INVALID_MATRIX_ENVIRONMENT_REFREEZE_V3.json",
+    "bytes": 5296,
+    "sha256": "D84008431FAE1A1BB72A8DCB86A17BE4A854B9D6A77A01EF40693870D3FA30B8",
+    "discarded_paths": 3,
+    "valid_matrix_paths": 0,
+    "economic_outcomes_used": false
+  },
+  "frozen_implementation": {
+    "compile_receipt_sha256": "4513BA2BD1CA34CCDE16CD45E453BDE29B2C5D3B8BCE320A21981295C7528C92",
+    "runtime_receipt_sha256": "0A421DFEE97B6009B7C504F42870E0EB89C92E8745E8DF7DAE1146DF95D57012",
+    "code_manifest_sha256": "E51F674EA5E6EE4FCB893E048B948249C89C5CB362B3054061B1D626D028D152",
+    "configuration_manifest_sha256": "9531DCD2010852CF424D87B1973C669A2A3EE86EDBFA6EC74B84FE73E75FD6D2",
+    "source_and_binary_manifest_sha256": "0EBA3E697EB7A92F35D0594BBD5DE91E71EAE69431EB337E98828F3369437834",
+    "binary_sha256": "22CBFD2110112FAFFBE02BF330B13B9AC91327BC0451528CAE2A70CC285A6557",
+    "runtime_source_and_set_parity_mismatches": 0,
+    "economic_contract_changes": 0
+  },
+  "runtime": {
+    "path": "lab/runtime/rncr94-portable/",
+    "terminal_build": 6140,
+    "terminal_bytes": 121846032,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "diagnostic_files": 770,
+    "diagnostic_logical_bytes": 6245687289,
+    "process_owners": 0,
+    "filesystem_symbolic_or_junction_links": 0,
+    "active_report_files": 0,
+    "active_observer_output_files": 0,
+    "active_unit_tst_files": 0,
+    "free_c_bytes": 37766664192
+  },
+  "symbol_database": {
+    "runtime_path": "lab/runtime/rncr94-portable/Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+    "bytes": 413696,
+    "sha256": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4",
+    "preserved_before_restart": "lab/artifacts/ea-files/round-number-crossing-response-v1/environment/symbols-before-p1-v4.dat",
+    "preserved_bytes": 413696,
+    "preserved_sha256": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4"
+  },
+  "exercised_history_contract": {
+    "algorithm": "For each symbol-period path, hash its exact annual Tester HCS plus every monthly real-tick TKC intersecting the interval using sorted runtime-relative Windows path|uppercase-file-hash rows joined by LF and SHA-256 UTF-8.",
+    "v3_to_v4_changes": "Only P1_US500 changed because normal synchronization rewrote US500/2024.hcs; all P1 US500 TKCs, P1 US30, P1 US100 and the nine later-stage path manifests remained exact.",
+    "all_three_p1_first_selection_synchronizations_now_absorbed": true,
+    "paths": {
+      "P1_US30": {"period": ["2024.01.01", "2025.01.01"], "files": 13, "bytes": 166983248, "sha256": "6CF2069B74AA0CA0C0A7A93A4356AB017973C5AE353E34B058BF6D178EB94CA0", "missing_files": 0},
+      "P1_US100": {"period": ["2024.01.01", "2025.01.01"], "files": 13, "bytes": 326349798, "sha256": "9ABB95C6EBABFC0614B3C4BFE2052A52D9165B722927E655B7813AD9D65C65A4", "missing_files": 0},
+      "P1_US500": {"period": ["2024.01.01", "2025.01.01"], "files": 13, "bytes": 68087438, "sha256": "2FD7E1A2768EE5AAACE78B8B562138A312022AA3AEA85FA5033A0C1C3AEDE71D", "missing_files": 0},
+      "P2_US30": {"period": ["2025.01.01", "2026.01.01"], "files": 13, "bytes": 169296166, "sha256": "BC0E28B44E40076DC6DD666CD7EE5DEB5E7980C2DBAC391FC389D13D513562C3", "missing_files": 0},
+      "P2_US100": {"period": ["2025.01.01", "2026.01.01"], "files": 13, "bytes": 352708624, "sha256": "D1F11A562C497D46F0D95363CD8C7286EA337032F6FB1AC933946B84E5EEE074", "missing_files": 0},
+      "P2_US500": {"period": ["2025.01.01", "2026.01.01"], "files": 13, "bytes": 81864116, "sha256": "FCEF5230EAB90AB505A54CD3C42C3C255D3B3D2E7A1D91CEEE3AABF5BF40EA68", "missing_files": 0},
+      "P3_US30": {"period": ["2026.01.01", "2026.06.01"], "files": 6, "bytes": 66117111, "sha256": "2906D09D2C7AE62BD1EE438AED15738682827476425B5B0C2C98D49A7C937891", "missing_files": 0},
+      "P3_US100": {"period": ["2026.01.01", "2026.06.01"], "files": 6, "bytes": 229936180, "sha256": "5A8B29A45A4D1E5FEA84D5A0C5AFF63E7193F7489FD9511728CDC4CE58AFAED4", "missing_files": 0},
+      "P3_US500": {"period": ["2026.01.01", "2026.06.01"], "files": 6, "bytes": 71274649, "sha256": "D21956083576123D44BBAEC2A0BB801A1A38A85400B789683F6FEB7C4240D5AC", "missing_files": 0},
+      "P4_US30": {"period": ["2026.06.01", "2026.08.01"], "files": 3, "bytes": 41961810, "sha256": "F67CF410F47CB0917AFB1D1FCFED0BF4346F4574FA7D9197F8FFDB76B7FD1353", "missing_files": 0},
+      "P4_US100": {"period": ["2026.06.01", "2026.08.01"], "files": 3, "bytes": 289988583, "sha256": "770922EE4E197102A49BE63E1686EECB0AF202F00B47755CAD2CCF09DAA5F013", "missing_files": 0},
+      "P4_US500": {"period": ["2026.06.01", "2026.08.01"], "files": 3, "bytes": 53365517, "sha256": "D9A92155E5B148750AD1B6BD92742F9F160CD9DB76F2CFA644857634D52F8B1C", "missing_files": 0}
+    }
+  },
+  "discarded_attempt_artifact": {
+    "path": "lab/artifacts/ea-files/round-number-crossing-response-v1/invalid-matrix-attempt-v3/",
+    "files": 40,
+    "bytes": 17541246,
+    "manifest_sha256": "7E2301FCB8F8B0F5B4BD6C251F2FC216CEA84DADEAA200973842A7D65219368B",
+    "missing_declared_path_raw_files": 0,
+    "deleted_files": 0
+  },
+  "per_path_artifact_rule": {
+    "active_staging_root": "lab/artifacts/ea-files/round-number-crossing-response-v1/active-p1-matrix-v1/",
+    "after_each_non_economic_integrity_pass": "Immediately move observer files and reports and copy the then-current three logs before opening the next path; do not inspect opportunities.csv economic fields.",
+    "on_later_matrix_drift": "Move the whole active staging root recoverably into the next invalid-matrix-attempt root."
+  },
+  "matrix_continuity_rule": {
+    "before_and_after_each_path_equal": ["terminal build and hash", "source/configuration/binary hashes", "path-specific exercised-history manifest", "symbols database hash", "observer start/end symbol specification"],
+    "on_fault_or_drift": "Discard every path in the incomplete matrix without economic use, preserve it, refreeze and restart at P1 US30.",
+    "economic_aggregation_before_complete_valid_p1": false
+  },
+  "governance": {
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "post_valid_stage_selective_tester_reruns": 0
+  },
+  "attempted_tester_paths_in_unit": 6,
+  "invalidated_p1_attempts": 3,
+  "valid_tester_paths": 0,
+  "economic_outcomes_consumed": false,
+  "broker_or_account_state_queried": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_hash_update_current_state_and_frontier_ledger_commit_push_then_restart_p1_us30"
+}

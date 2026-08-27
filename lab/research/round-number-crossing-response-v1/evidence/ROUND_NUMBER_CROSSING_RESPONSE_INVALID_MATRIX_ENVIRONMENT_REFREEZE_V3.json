@@ -1,0 +1,87 @@
+{
+  "schema": "zeta-next-round-number-crossing-response-invalid-matrix-environment-refreeze-v3",
+  "created_at_local": "2026-08-28",
+  "status": "THIRD_INCOMPLETE_P1_MATRIX_DISCARDED_BEFORE_ECONOMIC_USE_AND_ALL_THREE_P1_SYMBOL_CACHES_REFROZEN",
+  "unit": "round-number-crossing-response-094",
+  "family": "round-number-crossing-response-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "environment_refreeze_inside_unit_094": true,
+    "implementation_events_are_not_experiments": true,
+    "micro_split": false
+  },
+  "frozen_parent": {
+    "commit_pushed_before_matrix": "832c4b1277b0c7f13f56403722b7367896e59e7c",
+    "environment_path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_ENVIRONMENT_BEFORE_P1_V3.json",
+    "environment_bytes": 7131,
+    "environment_sha256": "BB1B783B8E4FFE30A9D81A6F7860B10CAD207178815784643843E0383272A970",
+    "source_manifest_sha256": "E51F674EA5E6EE4FCB893E048B948249C89C5CB362B3054061B1D626D028D152",
+    "configuration_manifest_sha256": "9531DCD2010852CF424D87B1973C669A2A3EE86EDBFA6EC74B84FE73E75FD6D2",
+    "binary_sha256": "22CBFD2110112FAFFBE02BF330B13B9AC91327BC0451528CAE2A70CC285A6557"
+  },
+  "discarded_complete_path_attempt": {
+    "paths_run_in_declared_order": ["P1 US30", "P1 US100", "P1 US500"],
+    "P1_US30": {"history_quality": "100% real ticks", "deinit_reason": 1, "eligible_days": 259, "valid_ticks": 35139751, "resolved": 2366, "round_resolved": 1168, "placebo_resolved": 1198, "faults_or_contract_change": 0, "v3_environment_continuity_passed": true},
+    "P1_US100": {"history_quality": "100% real ticks", "deinit_reason": 1, "eligible_days": 259, "valid_ticks": 65421654, "resolved": 1477, "round_resolved": 722, "placebo_resolved": 755, "faults_or_contract_change": 0, "v3_environment_continuity_passed": true},
+    "P1_US500": {"history_quality": "100% real ticks", "deinit_reason": 1, "eligible_days": 259, "valid_ticks": 14649874, "resolved": 2796, "round_resolved": 1399, "placebo_resolved": 1397, "faults_or_contract_change": 0, "v3_environment_continuity_passed": false},
+    "integrity_fields_only_read": true,
+    "opportunity_economic_rows_read": false,
+    "economic_aggregation_or_judgment": false,
+    "valid_matrix_paths_after_discard": 0
+  },
+  "mandatory_environment_drift": {
+    "symbol_database_sha256_before_and_after": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4",
+    "changed_exercised_history_file": {
+      "path": "lab/runtime/rncr94-portable/Tester/bases/FPMarketsSC-Live/history/US500/2024.hcs",
+      "bytes_before_and_after": 2295034,
+      "sha256_before": "BCA93D250EE38B097C7FAAE30861404EFC04A639FF1F037D21EF69E727095D6E",
+      "sha256_after": "E9A5977D34A513B5283D97599D7877A066393BBAB961B80584B62544755F6462"
+    },
+    "p1_us500_manifest_sha256_before": "7C7E43E7917771DB3F161AB565C36264D5C5498DBCFDB6617BB8DF094B9E42A9",
+    "p1_us500_manifest_sha256_after": "2FD7E1A2768EE5AAACE78B8B562138A312022AA3AEA85FA5033A0C1C3AEDE71D",
+    "p1_us500_real_tick_tkc_files_changed": 0,
+    "p1_us30_or_us100_manifest_changed_during_matrix": false,
+    "other_declared_path_manifests_changed": 0,
+    "terminal_source_configuration_binary_or_symbols_changed": false,
+    "cause_evidence": "Normal local Tester synchronization rewrote only the first-selected US500 annual HCS cache; exact monthly TKCs remained byte-identical.",
+    "declaration_consequence": "The complete three-path attempt is still an invalid matrix and cannot enter economic aggregation."
+  },
+  "preserved_invalid_attempt": {
+    "path": "lab/artifacts/ea-files/round-number-crossing-response-v1/invalid-matrix-attempt-v3/",
+    "files": 40,
+    "bytes": 17541246,
+    "manifest_sha256": "7E2301FCB8F8B0F5B4BD6C251F2FC216CEA84DADEAA200973842A7D65219368B",
+    "manifest_algorithm": "Sort attempt-root-relative Windows paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "each_path_raw_report_and_log_files": 12,
+    "matrix_environment_files": 4,
+    "missing_declared_path_raw_files": 0,
+    "active_outputs_after_recoverable_move": 0,
+    "active_reports_after_recoverable_move": 0,
+    "deleted_files": 0
+  },
+  "postpath_staging_invocation_correction": {
+    "parser_stops_before_execution": 1,
+    "input_or_output_opened": false,
+    "cause": "Missing PowerShell foreach whitespace in the first US30 integrity-and-staging invocation.",
+    "correction": "Whitespace only; the corrected invocation performed the sole US30 integrity read and immediate staging.",
+    "economic_contract_change": false
+  },
+  "unchanged_contract": {
+    "source_configuration_and_binary": true,
+    "grids_placebo_window_horizon_books_costs_periods_and_gates": true,
+    "economic_contract_changes": 0,
+    "implementation_source_corrections": 0
+  },
+  "governance": {
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "restart_from": "P1 US30"
+  },
+  "economic_outcomes_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_all_three_p1_symbol_synchronized_environment_v4_commit_push_then_restart_p1_us30"
+}
