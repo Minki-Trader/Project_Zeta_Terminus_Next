@@ -1,0 +1,803 @@
+{
+  "schema": "zeta-next-predecision-market-participation-state-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_084_ONE_FIXED_AGGREGATION_COMPLETE",
+  "unit": "predecision-market-participation-state-084",
+  "family": "predecision-market-participation-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "declaration": {
+    "sha256": "CA52A6B99FEFBA095490769821DA0A268FA47A3292A5EF106616777C7687DD9C",
+    "commit": "fa74a05c6437666d72bdac7407e3b65ad763d269"
+  },
+  "acquisition": {
+    "receipt_sha256": "DC9FDCA7E7708DA806A0B41F124E648A26A487BDE43C3C7527C07AE07E9D4661",
+    "commit": "9c3e0e81547e886b79c20748cfa1c9baed15f933"
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 0,
+    "premetric_event_pairing_checks": 1,
+    "acquisition_or_serialization_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisition_batches": 1,
+    "runtime_copies": 1,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pins": 18,
+    "pin_failures": [],
+    "bar_rows": {
+      "US30": 24443,
+      "US100": 24445,
+      "US500": 24444
+    },
+    "common_score_dates_after_20_observation_baseline": 1049,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2233,
+    "final_counts": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "period_counts": {
+      "P1_2022H2_2023": 769,
+      "P2_2024": 554,
+      "P3_2025": 554,
+      "P4_2026_YTD": 356
+    },
+    "component_counts": {
+      "Cross": 805,
+      "Return": 238,
+      "Passive": 594,
+      "RC16": 272,
+      "RC4": 206,
+      "Pressure": 118
+    },
+    "book_counts": {
+      "US100_BOOK": 1399,
+      "US30_BOOK": 834
+    },
+    "anchor_checks": {
+      "lifecycles": true,
+      "final_counts": true,
+      "component_counts": true,
+      "book_counts": true,
+      "period_book_counts": true,
+      "period_stressed_net": true,
+      "pooled_stressed_net": true
+    },
+    "coverage": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": {
+          "total": 270,
+          "mapped": 270,
+          "fraction": 1.0
+        },
+        "US100_BOOK": {
+          "total": 499,
+          "mapped": 499,
+          "fraction": 1.0
+        }
+      },
+      "P2_2024": {
+        "US30_BOOK": {
+          "total": 198,
+          "mapped": 198,
+          "fraction": 1.0
+        },
+        "US100_BOOK": {
+          "total": 356,
+          "mapped": 356,
+          "fraction": 1.0
+        }
+      },
+      "P3_2025": {
+        "US30_BOOK": {
+          "total": 231,
+          "mapped": 231,
+          "fraction": 1.0
+        },
+        "US100_BOOK": {
+          "total": 323,
+          "mapped": 323,
+          "fraction": 1.0
+        }
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": {
+          "total": 135,
+          "mapped": 135,
+          "fraction": 1.0
+        },
+        "US100_BOOK": {
+          "total": 221,
+          "mapped": 221,
+          "fraction": 1.0
+        }
+      }
+    },
+    "coverage_passed": true,
+    "component_state_counts": {
+      "RC16": {
+        "LOW": 116,
+        "MID": 96,
+        "HIGH": 60
+      },
+      "RC4": {
+        "LOW": 96,
+        "MID": 68,
+        "HIGH": 42
+      },
+      "Cross": {
+        "LOW": 255,
+        "MID": 278,
+        "HIGH": 272
+      },
+      "Pressure": {
+        "LOW": 18,
+        "MID": 27,
+        "HIGH": 73
+      },
+      "Return": {
+        "LOW": 67,
+        "MID": 81,
+        "HIGH": 90
+      },
+      "Passive": {
+        "LOW": 168,
+        "MID": 193,
+        "HIGH": 233
+      }
+    },
+    "period_book_state_counts": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": {
+          "LOW": 98,
+          "MID": 94,
+          "HIGH": 78
+        },
+        "US100_BOOK": {
+          "LOW": 150,
+          "MID": 162,
+          "HIGH": 187
+        }
+      },
+      "P2_2024": {
+        "US30_BOOK": {
+          "LOW": 64,
+          "MID": 72,
+          "HIGH": 62
+        },
+        "US100_BOOK": {
+          "LOW": 109,
+          "MID": 119,
+          "HIGH": 128
+        }
+      },
+      "P3_2025": {
+        "US30_BOOK": {
+          "LOW": 88,
+          "MID": 64,
+          "HIGH": 79
+        },
+        "US100_BOOK": {
+          "LOW": 100,
+          "MID": 115,
+          "HIGH": 108
+        }
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": {
+          "LOW": 47,
+          "MID": 42,
+          "HIGH": 46
+        },
+        "US100_BOOK": {
+          "LOW": 64,
+          "MID": 75,
+          "HIGH": 82
+        }
+      }
+    },
+    "component_density_passed": true,
+    "period_book_density_passed": true,
+    "broad_state_mechanism_passed": true
+  },
+  "market_state": {
+    "periods": {
+      "P1_2022H2_2023": {
+        "eligible_dates": 366,
+        "q1": -0.16515375317158926,
+        "q2": 0.07135936044743636,
+        "state_date_counts": {
+          "LOW": 122,
+          "MID": 122,
+          "HIGH": 122
+        }
+      },
+      "P2_2024": {
+        "eligible_dates": 259,
+        "q1": -0.16424158280922116,
+        "q2": 0.286753998139227,
+        "state_date_counts": {
+          "MID": 86,
+          "HIGH": 86,
+          "LOW": 87
+        }
+      },
+      "P3_2025": {
+        "eligible_dates": 257,
+        "q1": -0.23259539069389798,
+        "q2": 0.1951465160557377,
+        "state_date_counts": {
+          "HIGH": 85,
+          "MID": 86,
+          "LOW": 86
+        }
+      },
+      "P4_2026_YTD": {
+        "eligible_dates": 166,
+        "q1": -0.23008432948836915,
+        "q2": 0.3057985682546577,
+        "state_date_counts": {
+          "MID": 55,
+          "LOW": 56,
+          "HIGH": 55
+        }
+      }
+    },
+    "high_dates": 348,
+    "low_dates": 351,
+    "high_dates_two_of_three_positive_fraction": 1.0,
+    "low_dates_two_of_three_negative_fraction": 1.0,
+    "tick_volume_role": "broker quote participation, not exchange volume or direct liquidity"
+  },
+  "pooled": {
+    "states": {
+      "LOW": {
+        "n": 720,
+        "stressed_net_usd": 135.9937000000018,
+        "raw_mean_stressed_r": 0.03169758978720538,
+        "raw_stop_rate": 0.0763888888888889,
+        "centered_mean_stressed_r": -0.004196629257076529,
+        "centered_mean_stop_rate": -0.019152088749939303
+      },
+      "MID": {
+        "n": 743,
+        "stressed_net_usd": 101.3520000000014,
+        "raw_mean_stressed_r": 0.024832573187189465,
+        "raw_stop_rate": 0.08075370121130551,
+        "centered_mean_stressed_r": -0.009178031867776144,
+        "centered_mean_stop_rate": -0.007830084236288896
+      },
+      "HIGH": {
+        "n": 770,
+        "stressed_net_usd": 169.7020000000019,
+        "raw_mean_stressed_r": 0.04214867411988682,
+        "raw_stop_rate": 0.11818181818181818,
+        "centered_mean_stressed_r": 0.01278032564006854,
+        "centered_mean_stop_rate": 0.025463969464310322
+      }
+    },
+    "high_minus_low": {
+      "stressed_net_usd": 33.708300000000094,
+      "raw_mean_stressed_r": 0.010451084332681437,
+      "raw_stop_rate": 0.041792929292929284,
+      "centered_stressed_r": 0.01697695489714507,
+      "centered_stop_rate": 0.044616058214249625
+    }
+  },
+  "books": {
+    "US30_BOOK": {
+      "states": {
+        "LOW": {
+          "n": 297,
+          "stressed_net_usd": 124.23700000000201,
+          "raw_mean_stressed_r": 0.06974466826327445,
+          "raw_stop_rate": 0.15151515151515152,
+          "centered_mean_stressed_r": 0.00568552919552873,
+          "centered_mean_stop_rate": -0.024735189007569748
+        },
+        "MID": {
+          "n": 272,
+          "stressed_net_usd": 78.39400000000232,
+          "raw_mean_stressed_r": 0.05177442855043344,
+          "raw_stop_rate": 0.15073529411764705,
+          "centered_mean_stressed_r": -0.013822635146389109,
+          "centered_mean_stop_rate": -0.021682494046154452
+        },
+        "HIGH": {
+          "n": 265,
+          "stressed_net_usd": 99.39600000000218,
+          "raw_mean_stressed_r": 0.06472870098653534,
+          "raw_stop_rate": 0.24528301886792453,
+          "centered_mean_stressed_r": 0.007815677693380397,
+          "centered_mean_stop_rate": 0.049977318927555574
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": -24.840999999999838,
+        "raw_mean_stressed_r": -0.005015967276739114,
+        "raw_stop_rate": 0.09376786735277301,
+        "centered_stressed_r": 0.0021301484978516663,
+        "centered_stop_rate": 0.07471250793512532
+      }
+    },
+    "US100_BOOK": {
+      "states": {
+        "LOW": {
+          "n": 423,
+          "stressed_net_usd": 11.756699999999785,
+          "raw_mean_stressed_r": 0.004983683623156883,
+          "raw_stop_rate": 0.02364066193853428,
+          "centered_mean_stressed_r": -0.011135166042948307,
+          "centered_mean_stop_rate": -0.015232039632879626
+        },
+        "MID": {
+          "n": 471,
+          "stressed_net_usd": 22.957999999999085,
+          "raw_mean_stressed_r": 0.009273794718394643,
+          "raw_stop_rate": 0.040339702760084924,
+          "centered_mean_stressed_r": -0.006495798127260801,
+          "centered_mean_stop_rate": 0.0001696089023171159
+        },
+        "HIGH": {
+          "n": 505,
+          "stressed_net_usd": 70.30599999999973,
+          "raw_mean_stressed_r": 0.0302997491304574,
+          "raw_stop_rate": 0.05148514851485148,
+          "centered_mean_stressed_r": 0.015385536938825684,
+          "centered_mean_stop_rate": 0.012600528656864793
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 58.549299999999945,
+        "raw_mean_stressed_r": 0.025316065507300516,
+        "raw_stop_rate": 0.027844486576317204,
+        "centered_stressed_r": 0.02652070298177399,
+        "centered_stop_rate": 0.027832568289744418
+      }
+    }
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "states": {
+        "LOW": {
+          "n": 248,
+          "stressed_net_usd": 64.63250000000035,
+          "raw_mean_stressed_r": 0.045822255484474876,
+          "raw_stop_rate": 0.04032258064516129,
+          "centered_mean_stressed_r": 0.01056841353120815,
+          "centered_mean_stop_rate": 0.0038411427696315365
+        },
+        "MID": {
+          "n": 256,
+          "stressed_net_usd": 54.01000000000037,
+          "raw_mean_stressed_r": 0.031339197630621686,
+          "raw_stop_rate": 0.01953125,
+          "centered_mean_stressed_r": -0.0009251404670694936,
+          "centered_mean_stop_rate": -0.01598858334508082
+        },
+        "HIGH": {
+          "n": 265,
+          "stressed_net_usd": 30.231000000000243,
+          "raw_mean_stressed_r": 0.01696824935044019,
+          "raw_stop_rate": 0.04150943396226415,
+          "centered_mean_stressed_r": -0.008996719230829555,
+          "centered_mean_stop_rate": 0.011850845016875734
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": -34.401500000000105,
+        "raw_mean_stressed_r": -0.028854006134034688,
+        "raw_stop_rate": 0.0011868533171028595,
+        "centered_stressed_r": -0.019565132762037706,
+        "centered_stop_rate": 0.008009702247244198
+      }
+    },
+    "P2_2024": {
+      "states": {
+        "LOW": {
+          "n": 173,
+          "stressed_net_usd": -4.897500000000908,
+          "raw_mean_stressed_r": -0.006490934524097534,
+          "raw_stop_rate": 0.12716763005780346,
+          "centered_mean_stressed_r": -0.030555279706974935,
+          "centered_mean_stop_rate": 0.008029817298620866
+        },
+        "MID": {
+          "n": 191,
+          "stressed_net_usd": 22.58349999999893,
+          "raw_mean_stressed_r": 0.02618666385429479,
+          "raw_stop_rate": 0.10471204188481675,
+          "centered_mean_stressed_r": 0.00015614393756708227,
+          "centered_mean_stop_rate": -0.012105742007991133
+        },
+        "HIGH": {
+          "n": 190,
+          "stressed_net_usd": 36.97699999999979,
+          "raw_mean_stressed_r": 0.04232797223715874,
+          "raw_stop_rate": 0.12631578947368421,
+          "centered_mean_stressed_r": 0.02766442051174395,
+          "centered_mean_stop_rate": 0.004858096478236298
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 41.8745000000007,
+        "raw_mean_stressed_r": 0.048818906761256275,
+        "raw_stop_rate": -0.0008518405841192456,
+        "centered_stressed_r": 0.05821970021871889,
+        "centered_stop_rate": -0.003171720820384568
+      }
+    },
+    "P3_2025": {
+      "states": {
+        "LOW": {
+          "n": 188,
+          "stressed_net_usd": 32.93600000000053,
+          "raw_mean_stressed_r": 0.031571720464172774,
+          "raw_stop_rate": 0.0797872340425532,
+          "centered_mean_stressed_r": -0.009478926214591756,
+          "centered_mean_stop_rate": -0.04989972705135611
+        },
+        "MID": {
+          "n": 179,
+          "stressed_net_usd": 27.170000000000517,
+          "raw_mean_stressed_r": 0.027363330895413263,
+          "raw_stop_rate": 0.10614525139664804,
+          "centered_mean_stressed_r": -0.009990004845603754,
+          "centered_mean_stop_rate": -0.010802315433620778
+        },
+        "HIGH": {
+          "n": 187,
+          "stressed_net_usd": 52.932000000000045,
+          "raw_mean_stressed_r": 0.0538326746415027,
+          "raw_stop_rate": 0.20320855614973263,
+          "centered_mean_stressed_r": 0.019092240618750384,
+          "centered_mean_stop_rate": 0.060506754803599294
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 19.995999999999512,
+        "raw_mean_stressed_r": 0.022260954177329928,
+        "raw_stop_rate": 0.12342132210717943,
+        "centered_stressed_r": 0.02857116683334214,
+        "centered_stop_rate": 0.11040648185495541
+      }
+    },
+    "P4_2026_YTD": {
+      "states": {
+        "LOW": {
+          "n": 111,
+          "stressed_net_usd": 43.322700000001824,
+          "raw_mean_stressed_r": 0.0598720136220045,
+          "raw_stop_rate": 0.07207207207207207,
+          "centered_mean_stressed_r": 0.012842899971308037,
+          "centered_mean_stop_rate": -0.060811864989471894
+        },
+        "MID": {
+          "n": 117,
+          "stressed_net_usd": -2.411499999998413,
+          "raw_mean_stressed_r": 0.004513489386267885,
+          "raw_stop_rate": 0.13675213675213677,
+          "centered_mean_stressed_r": -0.04123123370000108,
+          "centered_mean_stop_rate": 0.021548170383952698
+        },
+        "HIGH": {
+          "n": 128,
+          "stressed_net_usd": 49.56200000000183,
+          "raw_mean_stressed_r": 0.07694428212050808,
+          "raw_stop_rate": 0.140625,
+          "centered_mean_stressed_r": 0.02655072223503856,
+          "centered_mean_stop_rate": 0.0330389146789759
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 6.239300000000007,
+        "raw_mean_stressed_r": 0.01707226849850358,
+        "raw_stop_rate": 0.06855292792792793,
+        "centered_stressed_r": 0.013707822263730523,
+        "centered_stop_rate": 0.09385077966844779
+      }
+    }
+  },
+  "components": {
+    "RC16": {
+      "states": {
+        "LOW": {
+          "n": 116,
+          "stressed_net_usd": 39.16300000000061,
+          "raw_mean_stressed_r": 0.0505318780247554,
+          "raw_stop_rate": 0.0603448275862069,
+          "centered_mean_stressed_r": -0.023066207507294455,
+          "centered_mean_stop_rate": -0.022413820659674004
+        },
+        "MID": {
+          "n": 96,
+          "stressed_net_usd": 50.06400000000071,
+          "raw_mean_stressed_r": 0.09808320000630516,
+          "raw_stop_rate": 0.07291666666666667,
+          "centered_mean_stressed_r": 0.026692580264958823,
+          "centered_mean_stop_rate": -0.017578636348414833
+        },
+        "HIGH": {
+          "n": 60,
+          "stressed_net_usd": 25.21100000000064,
+          "raw_mean_stressed_r": 0.08351785051625014,
+          "raw_stop_rate": 0.15,
+          "centered_mean_stressed_r": 0.0018865394235018193,
+          "centered_mean_stop_rate": 0.0714592047661668
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": -13.951999999999966,
+        "raw_mean_stressed_r": 0.03298597249149474,
+        "raw_stop_rate": 0.08965517241379309,
+        "centered_stressed_r": 0.024952746930796275,
+        "centered_stop_rate": 0.0938730254258408
+      }
+    },
+    "RC4": {
+      "states": {
+        "LOW": {
+          "n": 96,
+          "stressed_net_usd": 67.96400000000082,
+          "raw_mean_stressed_r": 0.12730728743955408,
+          "raw_stop_rate": 0.19791666666666666,
+          "centered_mean_stressed_r": 0.06316968418845337,
+          "centered_mean_stop_rate": -0.06444481536718462
+        },
+        "MID": {
+          "n": 68,
+          "stressed_net_usd": 14.24900000000031,
+          "raw_mean_stressed_r": 0.030802159880861407,
+          "raw_stop_rate": 0.23529411764705882,
+          "centered_mean_stressed_r": -0.03455993447779062,
+          "centered_mean_stop_rate": -0.016916967258601555
+        },
+        "HIGH": {
+          "n": 42,
+          "stressed_net_usd": -3.1449999999997083,
+          "raw_mean_stressed_r": -0.021302084066241823,
+          "raw_stop_rate": 0.42857142857142855,
+          "centered_mean_stressed_r": -0.08843366994289908,
+          "centered_mean_stop_rate": 0.17469181068653877
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": -71.10900000000053,
+        "raw_mean_stressed_r": -0.1486093715057959,
+        "raw_stop_rate": 0.2306547619047619,
+        "centered_stressed_r": -0.15160335413135245,
+        "centered_stop_rate": 0.23913662605372338
+      }
+    },
+    "Cross": {
+      "states": {
+        "LOW": {
+          "n": 255,
+          "stressed_net_usd": 16.33449999999968,
+          "raw_mean_stressed_r": 0.009286312163407378,
+          "raw_stop_rate": 0.01568627450980392,
+          "centered_mean_stressed_r": -0.011856845303877634,
+          "centered_mean_stop_rate": -0.020762807460438844
+        },
+        "MID": {
+          "n": 278,
+          "stressed_net_usd": 20.173999999999488,
+          "raw_mean_stressed_r": 0.01463544347763579,
+          "raw_stop_rate": 0.03597122302158273,
+          "centered_mean_stressed_r": -0.00654096612198666,
+          "centered_mean_stop_rate": -0.0002773838766493546
+        },
+        "HIGH": {
+          "n": 272,
+          "stressed_net_usd": 44.74999999999973,
+          "raw_mean_stressed_r": 0.03810256130099207,
+          "raw_stop_rate": 0.05514705882352941,
+          "centered_mean_stressed_r": 0.017801044611768707,
+          "centered_mean_stop_rate": 0.019748634632795685
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 28.41550000000005,
+        "raw_mean_stressed_r": 0.028816249137584696,
+        "raw_stop_rate": 0.03946078431372549,
+        "centered_stressed_r": 0.029657889915646343,
+        "centered_stop_rate": 0.040511442093234526
+      }
+    },
+    "Pressure": {
+      "states": {
+        "LOW": {
+          "n": 18,
+          "stressed_net_usd": 3.331000000000095,
+          "raw_mean_stressed_r": 0.021423793257741262,
+          "raw_stop_rate": 0.16666666666666666,
+          "centered_mean_stressed_r": -0.025091834542556885,
+          "centered_mean_stop_rate": 0.018799603174603177
+        },
+        "MID": {
+          "n": 27,
+          "stressed_net_usd": -8.048999999999795,
+          "raw_mean_stressed_r": -0.036363991903892064,
+          "raw_stop_rate": 0.18518518518518517,
+          "centered_mean_stressed_r": -0.0864160613628621,
+          "centered_mean_stop_rate": 0.038263457556935825
+        },
+        "HIGH": {
+          "n": 73,
+          "stressed_net_usd": 38.888000000000616,
+          "raw_mean_stressed_r": 0.07518003931858365,
+          "raw_stop_rate": 0.1780821917808219,
+          "centered_mean_stressed_r": 0.03814913258305893,
+          "centered_mean_stop_rate": -0.018787756317535945
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 35.55700000000052,
+        "raw_mean_stressed_r": 0.05375624606084239,
+        "raw_stop_rate": 0.01141552511415525,
+        "centered_stressed_r": 0.06324096712561582,
+        "centered_stop_rate": -0.03758735949213912
+      }
+    },
+    "Return": {
+      "states": {
+        "LOW": {
+          "n": 67,
+          "stressed_net_usd": 13.779000000000488,
+          "raw_mean_stressed_r": 0.033512548514691855,
+          "raw_stop_rate": 0.23880597014925373,
+          "centered_mean_stressed_r": -0.018632155498616566,
+          "centered_mean_stop_rate": 0.01644718625941544
+        },
+        "MID": {
+          "n": 81,
+          "stressed_net_usd": 22.130000000001093,
+          "raw_mean_stressed_r": 0.043875781168137166,
+          "raw_stop_rate": 0.16049382716049382,
+          "centered_mean_stressed_r": -0.020233768690948714,
+          "centered_mean_stop_rate": -0.05052899841430308
+        },
+        "HIGH": {
+          "n": 90,
+          "stressed_net_usd": 38.442000000000625,
+          "raw_mean_stressed_r": 0.08387310434424894,
+          "raw_stop_rate": 0.2777777777777778,
+          "centered_mean_stressed_r": 0.03208099647082396,
+          "centered_mean_stop_rate": 0.03323208213530795
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 24.66300000000014,
+        "raw_mean_stressed_r": 0.050360555829557084,
+        "raw_stop_rate": 0.03897180762852406,
+        "centered_stressed_r": 0.050713151969440526,
+        "centered_stop_rate": 0.01678489587589251
+      }
+    },
+    "Passive": {
+      "states": {
+        "LOW": {
+          "n": 168,
+          "stressed_net_usd": -4.577799999999895,
+          "raw_mean_stressed_r": -0.0015470918397233304,
+          "raw_stop_rate": 0.03571428571428571,
+          "centered_mean_stressed_r": -0.010039760021894857,
+          "centered_mean_stop_rate": -0.0068371241803343846
+        },
+        "MID": {
+          "n": 193,
+          "stressed_net_usd": 2.783999999999598,
+          "raw_mean_stressed_r": 0.0015507980600058383,
+          "raw_stop_rate": 0.046632124352331605,
+          "centered_mean_stressed_r": -0.006430737492370706,
+          "centered_mean_stop_rate": 0.0008134637860097521
+        },
+        "HIGH": {
+          "n": 233,
+          "stressed_net_usd": 25.556000000000004,
+          "raw_mean_stressed_r": 0.021190886854125075,
+          "raw_stop_rate": 0.04721030042918455,
+          "centered_mean_stressed_r": 0.012565716822772029,
+          "centered_mean_stop_rate": 0.004255958590542037
+        }
+      },
+      "high_minus_low": {
+        "stressed_net_usd": 30.1337999999999,
+        "raw_mean_stressed_r": 0.022737978693848405,
+        "raw_stop_rate": 0.01149601471489884,
+        "centered_stressed_r": 0.022605476844666884,
+        "centered_stop_rate": 0.011093082770876422
+      }
+    }
+  },
+  "directions": {
+    "books": {
+      "US30_BOOK": {
+        "favorable": false,
+        "adverse": false
+      },
+      "US100_BOOK": {
+        "favorable": false,
+        "adverse": false
+      }
+    },
+    "periods": {
+      "P1_2022H2_2023": {
+        "favorable": false,
+        "adverse": true
+      },
+      "P2_2024": {
+        "favorable": true,
+        "adverse": false
+      },
+      "P3_2025": {
+        "favorable": false,
+        "adverse": false
+      },
+      "P4_2026_YTD": {
+        "favorable": false,
+        "adverse": false
+      }
+    },
+    "components": {
+      "RC16": {
+        "favorable": false,
+        "adverse": false
+      },
+      "RC4": {
+        "favorable": false,
+        "adverse": true
+      },
+      "Cross": {
+        "favorable": false,
+        "adverse": false
+      },
+      "Pressure": {
+        "favorable": true,
+        "adverse": false
+      },
+      "Return": {
+        "favorable": false,
+        "adverse": false
+      },
+      "Passive": {
+        "favorable": false,
+        "adverse": false
+      }
+    },
+    "counts": {
+      "favorable_books": 0,
+      "adverse_books": 0,
+      "favorable_periods": 1,
+      "adverse_periods": 1,
+      "favorable_components": 1,
+      "adverse_components": 1
+    }
+  },
+  "gates": {
+    "favorable_high_passed": false,
+    "adverse_high_passed": false,
+    "strong_null_triggered": false,
+    "complete_passed": false
+  },
+  "verdict": "AMBIGUOUS_PREDECISION_MARKET_PARTICIPATION_STATE_NO_CANDIDATE",
+  "interpretation": "The valid state does not meet either material two-sided passage rule or the complete strong-null breadth rule. Preserve unconditional behavior and retain no seed.",
+  "derived_rows": {
+    "path": "lab/research/predecision-market-participation-state-v1/evidence/PREDECISION_MARKET_PARTICIPATION_STATE_DERIVED_ROWS_V1.csv",
+    "rows": 2233
+  },
+  "selected_candidate": null,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_result_and_closure_then_commit_push_and_recompare_the_whole_frontier_map"
+}

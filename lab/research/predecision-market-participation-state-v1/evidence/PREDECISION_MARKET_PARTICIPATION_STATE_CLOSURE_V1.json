@@ -1,0 +1,103 @@
+{
+  "schema": "zeta-next-predecision-market-participation-state-closure-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FROZEN_CLOSED_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "predecision-market-participation-state-084",
+  "family": "predecision-market-participation-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "central_question": "When broad US30, US100 and US500 broker H1 tick participation is unusually high immediately before the first native decision, does the current portfolio's lifecycle value and stop burden change materially and broadly relative to unusually low participation?",
+  "verdict": "AMBIGUOUS_PREDECISION_MARKET_PARTICIPATION_STATE_NO_CANDIDATE",
+  "integrity": {
+    "passed": true,
+    "pins": 18,
+    "market_score_dates_after_baseline": 1049,
+    "mapped_lifecycles": 2233,
+    "coverage_fraction": 1.0,
+    "component_density_passed": true,
+    "period_book_density_passed": true,
+    "high_dates_two_of_three_positive_fraction": 1.0,
+    "low_dates_two_of_three_negative_fraction": 1.0
+  },
+  "primary_effect": {
+    "high_minus_low_centered_stressed_r": 0.01697695489714507,
+    "high_minus_low_centered_stop_rate": 0.044616058214249625,
+    "favorable_gate": false,
+    "adverse_gate": false,
+    "strong_null": false
+  },
+  "breadth": {
+    "favorable_books": 0,
+    "adverse_books": 0,
+    "favorable_periods": 1,
+    "adverse_periods": 1,
+    "favorable_components": 1,
+    "adverse_components": 1,
+    "only_favorable_period": "P2_2024",
+    "only_adverse_period": "P1_2022H2_2023",
+    "only_favorable_component": "Pressure",
+    "only_adverse_component": "RC4"
+  },
+  "interpretation": [
+    "The treatment is valid broad quote participation rather than a one-index extreme: both frozen mechanism fractions are 1.0.",
+    "The pooled centered stressed-R difference is only +0.01698R, far below the +0.10R favorable magnitude and not adverse.",
+    "The stop-rate difference is +0.04462, below the +0.05 adverse magnitude but above the absolute 0.025 strong-null bound.",
+    "Both books have slightly positive stressed-R differences but also higher stop rates, so neither book is economically concordant in either declared direction.",
+    "Only one period and one component align in each direction; the pattern is not broad enough for a portfolio treatment."
+  ],
+  "decision": {
+    "preserve": [
+      "all six components and both books",
+      "unconditional entry, order, exit, priority, allocation, lot, risk, slot and cap behavior",
+      "the interpretation of tick volume as broker quote participation only"
+    ],
+    "discard": [
+      "pre-decision H1 participation as a current portfolio treatment field",
+      "favorable-state and adverse-state admission or sizing candidates"
+    ],
+    "additional_observation_required": false,
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "promotion": "none"
+  },
+  "automatic_followups_not_opened": [
+    "another bar clock, timeframe, twenty-observation window or volume field",
+    "quartile, quintile, absolute threshold or cross-period threshold rescue",
+    "price-volume, dispersion-volume, volatility-volume or event-volume interaction",
+    "book, component, period, direction, month, weekday or best-state subgroup",
+    "admission, allocation, priority, removal, lot, risk, slot, EA or Live change"
+  ],
+  "evidence": {
+    "declaration_sha256": "CA52A6B99FEFBA095490769821DA0A268FA47A3292A5EF106616777C7687DD9C",
+    "acquisition_receipt_sha256": "DC9FDCA7E7708DA806A0B41F124E648A26A487BDE43C3C7527C07AE07E9D4661",
+    "derived_rows_sha256": "8AD9879E22DDFF2B591E4B606D3BD6F701A998615641A99A2EA363811E3651F7",
+    "result_sha256": "E5C49D92E1A544FD52B0CDE70E35C16CAEFC34D4E0D63B94ED683379EA39C68A"
+  },
+  "execution": {
+    "dedicated_runtime_copies": 1,
+    "successful_acquisition_batches": 1,
+    "copy_rates_range_calls": 3,
+    "symbol_info_calls": 3,
+    "successful_fixed_aggregations": 1,
+    "premetric_event_pairing_checks": 1,
+    "corrections_used": 0,
+    "metric_reruns": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "same_family_rescue": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_without_reopening_participation_variants"
+}
