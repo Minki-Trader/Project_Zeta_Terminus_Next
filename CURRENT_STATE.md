@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0200`
+- Latest state ID: `STATE-0201`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: none; Unit 079 is frozen ambiguous and the whole map must be recomputed after its closure reaches origin before Unit 080 opens
+- Active research boundary: Unit 080 `lab/research/rc16-feature-supply-decay-v1/`; declaration frozen before any monthly supply, volatility or partial-calendar metric
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -1167,6 +1167,17 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Keep Unit 039 at its previous bounded arithmetic authority: do not strengthen or downgrade its US30 cost ranks. Preserve all components and retain no alternate proxy, decomposition, multiplier, logger, EA or Live candidate.
 - Result/closure SHA-256 values are `F4694FCAB57AB94979421F782081C68EDACCB247FCAFB6B5C568891C68FD5826` / `AEBBD0F2991AF96ED92D0CB6B903784ADC19B90522269ED3EA1FD9A31696FAC6`. One aggregation, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched.
 
+## Whole-map recomparison and open RC16 feature supply decay Unit 080
+
+- Unit 079 closure commit `c510a9e` reached origin before Programs 1-5 and 7 plus all heights were recomputed. No entry-only, exit-only, segment, proxy, cost-rank or data-acquisition rescue opened.
+- Card 14 was not opened after outcome-free structural precheck: only one component pair had at least 20 near and 20 far overlapping-entry observations, so a broad schedule effect could not be separated from component identity. Card 15 remains on Unit 077's sparse blocker channel.
+- Selected Claude card 17 as Program 1 / meso Unit 080, narrowed from whole-portfolio impossibility to the identifiable question of whether native RC16 supply decays beyond pre-decision volatility.
+- The bridge is Unit 063's exact 258/79 versus 151/39 eligible/signal counts and failed all-slot expansion. The distance is Program 7 cost representation to Program 1 pre-entry feature availability with monthly signal-supply and volatility roles.
+- Froze exact native 13:30 feature reconstruction, nineteen January-2025 through July-2026 months, monthly median ATR14/open, annual rate ratio and partial calendar correlation after linear residualization on log volatility.
+- Calendar decay requires 2026/2025 rate ratio at most `0.80` and partial calendar correlation at most `-0.50`. Ratio at least `0.80` and partial correlation at least `-0.20` is the no-structural-decay falsifier.
+- Even a pass cannot declare the whole portfolio target unreachable or implement a component; it retains only a non-automatic future research-allocation seed. No month, regime, threshold, slot or signal successor opens automatically.
+- Declaration SHA-256 is `4C7A8BAD37806338FEF06426C06B6B8EE1CF3E9504B075F14D2D47E485821078`. No monthly rate, volatility, annual ratio, correlation, gate or verdict has opened. One aggregation, one premetric correction and zero reruns are budgeted; no acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -1180,7 +1191,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 Latest closed research verdict: `AMBIGUOUS_US30_COST_UNIT_SPREAD_SHAPE_NO_POLICY_CHANGE`
 
-Active research unit: none; Unit 079 frozen ambiguous pending immediate whole-map recomparison
+Active research unit: Unit 080 `rc16-feature-supply-decay-v1`; declaration frozen, outcomes unopened
 
 Latest Frontier marker: `US30_COST_UNIT_SPREAD_SHAPE_079_CLOSED_AMBIGUOUS_NO_POLICY_CHANGE`
 

@@ -1662,3 +1662,13 @@
 - Closed `AMBIGUOUS_US30_COST_UNIT_SPREAD_SHAPE_NO_POLICY_CHANGE`. Unit 039 remains at prior bounded authority—neither strengthened nor downgraded—and all components/behavior are preserved.
 - No entry-only, exit-only, segment, component, neighboring-bar, US100 acquisition, cost decomposition, multiplier, logger, EA or Live successor opens.
 - Result/closure SHA-256 values are `F4694FCAB57AB94979421F782081C68EDACCB247FCAFB6B5C568891C68FD5826` / `AEBBD0F2991AF96ED92D0CB6B903784ADC19B90522269ED3EA1FD9A31696FAC6`. One aggregation, one premetric correction and zero reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0201 - 2026-08-27
+
+- Unit 079 closure commit `c510a9eae8f8d43d112ac6eb01366d0715703369` reached origin before Programs 1-5 and 7 plus all heights were recomputed. No cost-shape rescue opened.
+- Outcome-free overlap topology rejected card 14 before opening because only one component pair supports both near and far entry-gap controls at 20 observations. Opened only Program 1 / meso Unit 080 `rc16-feature-supply-decay-v1` from external card 17.
+- Narrowed the claim from whole-portfolio turnover impossibility to observable native RC16 supply decay beyond volatility. The bridge is Unit 063's exact 2025/2026 native counts and failed all-slot expansion.
+- Froze nineteen monthly signal rates, median pre-decision ATR14/open, annual rate ratio, volatility correlation and partial calendar correlation after volatility residualization.
+- Decay requires annual ratio `<=0.80` and partial r `<=-0.50`; ratio `>=0.80` and partial r `>=-0.20` is the no-decay falsifier.
+- A pass retains research-allocation observation only; no component, threshold, clock, month, regime, EA or Live candidate opens.
+- Declaration SHA-256 is `4C7A8BAD37806338FEF06426C06B6B8EE1CF3E9504B075F14D2D47E485821078`. No monthly supply, volatility, correlation or verdict metric has opened. One aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.
