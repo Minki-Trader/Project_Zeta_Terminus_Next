@@ -30,3 +30,10 @@ non-automatic whole-portfolio real-tick book-risk question. Null, ambiguous or
 invalid closure retains no seed, and no magnitude, lag, smoothing, balance-sheet
 component, period, book or component rescue follows.
 
+Implementation governance follows `docs/OPERATING_DIRECTION.md`: economic
+contract changes and metric reruns remain zero, while a demonstrable parser,
+serialization, invocation or deterministic aggregation defect is recorded,
+corrected and rerun as needed to execute that unchanged contract. The original
+declaration's arbitrary one-correction cap is superseded only procedurally by
+`evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_IMPLEMENTATION_POLICY_ALIGNMENT_V1.json`;
+the original declaration and first failed-invocation record remain byte-frozen.
