@@ -1,0 +1,425 @@
+{
+  "schema": "zeta-next-standard-options-expiration-week-state-result-v2",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_090_IMPLEMENTATION_CORRECTED_FIXED_AGGREGATION_COMPLETE_AMBIGUOUS",
+  "unit": "standard-options-expiration-week-state-090",
+  "run": "implementation-correction-r1",
+  "family": "standard-options-expiration-week-state-implementation-correction-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "contract": {
+    "original_declaration": {
+      "path": "lab/research/standard-options-expiration-week-state-v1/evidence/STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_DECLARATION_V1.json",
+      "commit": "8f517faccad105b7e49319423ac9ef9cb9736cc7",
+      "bytes": 25579,
+      "sha256": "93D074F2C38CFEC5EB51FE4636AE0F9F51B05B2149A2AEB2E27DA52406BB5351"
+    },
+    "implementation_correction_declaration": {
+      "path": "lab/research/standard-options-expiration-week-state-implementation-correction-v1/evidence/STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_IMPLEMENTATION_CORRECTION_DECLARATION_V1.json",
+      "commit": "b6908f2",
+      "bytes": 4818,
+      "sha256": "1A20B1D356B9D5E984311EB735F890A7AAC5CF905EC2464951F0427AD867AEA0"
+    },
+    "acquisition_receipt": {
+      "path": "lab/research/standard-options-expiration-week-state-implementation-correction-v1/evidence/STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_ACQUISITION_RECEIPT_V2.json",
+      "commit": "b6908f2",
+      "bytes": 4229,
+      "sha256": "2190A37B97C74DACCD7BBA7B179FD003996365C80F56E11B99269E9C59D61657"
+    },
+    "economic_contract_changed": false
+  },
+  "execution": {
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "deterministic_same_code_output_recovery_executions": 1,
+    "output_recovery_reason": "The first complete JSON fixed the verdict, but the tool display truncated part of the already emitted book and period report. The unchanged script and inputs were reexecuted only to serialize that omitted report subset; no code, input, metric, gate or verdict changed.",
+    "source_reacquisition_batches": 0,
+    "retained_analysis_script_or_cli": false,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pin_checks_passed": 20,
+    "pin_failures": [],
+    "immutable_cp2_and_closed_boundary_pins": "10/10",
+    "official_source_and_schedule_pins": "7/7",
+    "declaration_and_receipt_pins": "3/3",
+    "event_rows": 16477,
+    "exact_duplicate_rows": 0,
+    "normal_days": 1051,
+    "normal_day_duplicate_keys": 0,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "final_counts": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "component_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "book_counts": {
+      "US30_BOOK": 834,
+      "US100_BOOK": 1399
+    },
+    "period_counts": {
+      "P1_2022H2_2023": 769,
+      "P2_2024": 554,
+      "P3_2025": 554,
+      "P4_2026_YTD": 356
+    },
+    "period_stressed_net_usd": {
+      "P1_2022H2_2023": 148.87350000000094,
+      "P2_2024": 54.66299999999781,
+      "P3_2025": 113.03800000000109,
+      "P4_2026_YTD": 90.47320000000524
+    },
+    "pooled_stressed_net_usd": 407.0477000000051,
+    "pairing_faults": 0,
+    "passive_pending_faults": 0,
+    "component_period_centering_cells": 24,
+    "minimum_treatment_component_period_births": 3,
+    "minimum_comparator_component_period_births": 15,
+    "treatment_weekday_day_counts": {
+      "Monday": 49,
+      "Tuesday": 49,
+      "Wednesday": 49,
+      "Thursday": 49,
+      "Friday": 47
+    },
+    "all_anchor_checks_passed": true
+  },
+  "schedule_state": {
+    "covered_months": 49,
+    "first_month": "2022-08",
+    "last_month": "2026-08",
+    "STANDARD_EXPIRATION_WEEK": {
+      "normal_days": 243,
+      "native_signals": 580,
+      "durable_births": 525
+    },
+    "OTHER_WEEK": {
+      "normal_days": 808,
+      "native_signals": 1849,
+      "durable_births": 1708
+    }
+  },
+  "supply_transmission": {
+    "pooled": {
+      "raw_treatment_minus_comparator": {
+        "signals_per_day": 0.09846493908650089,
+        "births_per_day": 0.04663244102187969,
+        "sub_three_signal_day_rate": -0.02080532127286805
+      },
+      "period_weekday_adjusted_treatment_minus_comparator": {
+        "signals_per_day": 0.0975573214210855,
+        "births_per_day": 0.04607295838205724,
+        "sub_three_signal_day_rate": -0.020368546020179314
+      }
+    },
+    "period_weekday_adjusted_by_period": {
+      "P1_2022H2_2023": {
+        "signals_per_day": -0.000125130927764989,
+        "births_per_day": -0.054785252681928714,
+        "sub_three_signal_day_rate": 0.032778150404287706
+      },
+      "P2_2024": {
+        "signals_per_day": 0.1410913799482057,
+        "births_per_day": 0.10958194598594155,
+        "sub_three_signal_day_rate": -0.01858860525342212
+      },
+      "P3_2025": {
+        "signals_per_day": 0.138377291926832,
+        "births_per_day": 0.0839632071371758,
+        "sub_three_signal_day_rate": -0.05940868975077669
+      },
+      "P4_2026_YTD": {
+        "signals_per_day": 0.18155474292574802,
+        "births_per_day": 0.11058171410186232,
+        "sub_three_signal_day_rate": -0.07975504501674024
+      }
+    },
+    "economic_role": "Descriptive transmission only; supply does not independently select a candidate."
+  },
+  "portfolio_lifecycle": {
+    "pooled": {
+      "treatment_n": 525,
+      "comparator_n": 1708,
+      "treatment_stressed_net_usd": 129.23350000000113,
+      "comparator_stressed_net_usd": 277.81420000000395,
+      "raw_treatment_minus_comparator": {
+        "stressed_r": 0.01571556426844319,
+        "stop_rate": -0.025979703356752537
+      },
+      "component_period_centered_treatment_minus_comparator": {
+        "stressed_r": 0.016491622488134773,
+        "stop_rate": -0.03171894207616869
+      }
+    },
+    "books": {
+      "US30_BOOK": {
+        "treatment_n": 201,
+        "comparator_n": 633,
+        "raw_stressed_r": 0.0590713229631852,
+        "raw_stop_rate": -0.06811912003961237,
+        "centered_stressed_r": 0.062157346246326184,
+        "centered_stop_rate": -0.07576787508038904,
+        "direction": "FAVORABLE"
+      },
+      "US100_BOOK": {
+        "treatment_n": 324,
+        "comparator_n": 1075,
+        "raw_stressed_r": -0.01177171662044594,
+        "raw_stop_rate": -0.002962962962962966,
+        "centered_stressed_r": -0.01148792593706515,
+        "centered_stop_rate": -0.004732947339753182,
+        "direction": "NONCONCORDANT"
+      }
+    },
+    "periods": {
+      "P1_2022H2_2023": {
+        "treatment_n": 175,
+        "comparator_n": 594,
+        "raw_stressed_r": 0.03474004353044938,
+        "raw_stop_rate": -0.02897546897546898,
+        "centered_stressed_r": 0.033144562191546593,
+        "centered_stop_rate": -0.03383025486275058,
+        "direction": "FAVORABLE"
+      },
+      "P2_2024": {
+        "treatment_n": 133,
+        "comparator_n": 421,
+        "raw_stressed_r": -0.01710743760294905,
+        "raw_stop_rate": 0.021324094083188957,
+        "centered_stressed_r": -0.017114681242360194,
+        "centered_stop_rate": 0.023182858090033273,
+        "direction": "ADVERSE"
+      },
+      "P3_2025": {
+        "treatment_n": 130,
+        "comparator_n": 424,
+        "raw_stressed_r": 0.006084832267587076,
+        "raw_stop_rate": -0.039150943396226406,
+        "centered_stressed_r": 0.005543701324939868,
+        "centered_stop_rate": -0.04666280368867084,
+        "direction": "FAVORABLE"
+      },
+      "P4_2026_YTD": {
+        "treatment_n": 87,
+        "comparator_n": 269,
+        "raw_stressed_r": 0.04124019378561257,
+        "raw_stop_rate": -0.0800752040336709,
+        "centered_stressed_r": 0.05050874985671568,
+        "centered_stop_rate": -0.08921180860200142,
+        "direction": "FAVORABLE"
+      }
+    },
+    "components": {
+      "RC16": {
+        "treatment_n": 54,
+        "comparator_n": 218,
+        "raw_stressed_r": 0.015727407027050763,
+        "raw_stop_rate": -0.013081889228678228,
+        "centered_stressed_r": 0.016500225271481893,
+        "centered_stop_rate": -0.01731295438956183,
+        "direction": "FAVORABLE"
+      },
+      "RC4": {
+        "treatment_n": 46,
+        "comparator_n": 160,
+        "raw_stressed_r": 0.22090866080713187,
+        "raw_stop_rate": -0.10733695652173914,
+        "centered_stressed_r": 0.22228895761219178,
+        "centered_stop_rate": -0.10866465363062781,
+        "direction": "FAVORABLE"
+      },
+      "Cross": {
+        "treatment_n": 179,
+        "comparator_n": 626,
+        "raw_stressed_r": -0.026744298996540194,
+        "raw_stop_rate": 0.003962375283345532,
+        "centered_stressed_r": -0.026579602523729894,
+        "centered_stop_rate": 0.003990924952806502,
+        "direction": "ADVERSE"
+      },
+      "Pressure": {
+        "treatment_n": 30,
+        "comparator_n": 88,
+        "raw_stressed_r": -0.06265915383195864,
+        "raw_stop_rate": -0.10454545454545455,
+        "centered_stressed_r": -0.03215522254022513,
+        "centered_stop_rate": -0.12183220990965556,
+        "direction": "NONCONCORDANT"
+      },
+      "Return": {
+        "treatment_n": 71,
+        "comparator_n": 167,
+        "raw_stressed_r": 0.042354210915811666,
+        "raw_stop_rate": -0.10255545247533102,
+        "centered_stressed_r": 0.03102978906843107,
+        "centered_stop_rate": -0.08433558214713759,
+        "direction": "FAVORABLE"
+      },
+      "Passive": {
+        "treatment_n": 145,
+        "comparator_n": 449,
+        "raw_stressed_r": 0.008073258793002493,
+        "raw_stop_rate": -0.012287842715613242,
+        "centered_stressed_r": 0.007661554097967082,
+        "centered_stop_rate": -0.015819242203119845,
+        "direction": "FAVORABLE"
+      }
+    },
+    "weekdays": {
+      "Monday": {
+        "treatment_n": 97,
+        "comparator_n": 319,
+        "raw_stressed_r": 0.015218161378237664,
+        "raw_stop_rate": -0.06311605209578904,
+        "centered_stressed_r": 0.01478212247438564,
+        "centered_stop_rate": -0.0504724707033536,
+        "direction": "FAVORABLE"
+      },
+      "Tuesday": {
+        "treatment_n": 123,
+        "comparator_n": 363,
+        "raw_stressed_r": -0.029249432900170177,
+        "raw_stop_rate": 0.003628300745817367,
+        "centered_stressed_r": -0.02764654502671406,
+        "centered_stop_rate": 0.007106613117961319,
+        "direction": "ADVERSE"
+      },
+      "Wednesday": {
+        "treatment_n": 98,
+        "comparator_n": 343,
+        "raw_stressed_r": 0.013008176095589082,
+        "raw_stop_rate": -0.002915451895043733,
+        "centered_stressed_r": 0.014554035893081232,
+        "centered_stop_rate": -0.01701933339916929,
+        "direction": "FAVORABLE"
+      },
+      "Thursday": {
+        "treatment_n": 104,
+        "comparator_n": 337,
+        "raw_stressed_r": 0.05244212299436056,
+        "raw_stop_rate": -0.058748002739100656,
+        "centered_stressed_r": 0.05318953672426484,
+        "centered_stop_rate": -0.06916606882085549,
+        "direction": "FAVORABLE"
+      },
+      "Friday": {
+        "treatment_n": 103,
+        "comparator_n": 346,
+        "raw_stressed_r": 0.03726305009621424,
+        "raw_stop_rate": -0.01851955777540827,
+        "centered_stressed_r": 0.03719585851167256,
+        "centered_stop_rate": -0.0394693167652918,
+        "direction": "FAVORABLE"
+      }
+    }
+  },
+  "direction_breadth": {
+    "books": {"FAVORABLE": 1, "ADVERSE": 0, "NONCONCORDANT": 1},
+    "periods": {"FAVORABLE": 3, "ADVERSE": 1, "NONCONCORDANT": 0},
+    "components": {"FAVORABLE": 4, "ADVERSE": 1, "NONCONCORDANT": 1},
+    "weekdays": {"FAVORABLE": 4, "ADVERSE": 1, "NONCONCORDANT": 0}
+  },
+  "contribution_concentration": {
+    "periods": {
+      "signed_sum": 0.01649162248813474,
+      "maximum_absolute_share": 0.44438623153646356,
+      "parts": {
+        "P1_2022H2_2023": {"signed_contribution": 0.011157117169106466, "absolute_share": 0.44438623153646356},
+        "P2_2024": {"signed_contribution": -0.0043075898036324875, "absolute_share": 0.17157062804194254},
+        "P3_2025": {"signed_contribution": 0.001373538450510907, "absolute_share": 0.05470782162108087},
+        "P4_2026_YTD": {"signed_contribution": 0.008268556672149851, "absolute_share": 0.329335318800513}
+      }
+    },
+    "components": {
+      "signed_sum": 0.016491622488134777,
+      "maximum_absolute_share": 0.5136800133870788,
+      "parts": {
+        "RC16": {"signed_contribution": 0.0017783317248354696, "absolute_share": 0.04618866478103894},
+        "RC4": {"signed_contribution": 0.019777438221057913, "absolute_share": 0.5136800133870788},
+        "Cross": {"signed_contribution": -0.0092134337905741, "absolute_share": 0.23930080023427364},
+        "Pressure": {"signed_contribution": -0.0017914924922581693, "absolute_share": 0.04653048979954303},
+        "Return": {"signed_contribution": 0.0038496233465851754, "absolute_share": 0.09998638600744456},
+        "Passive": {"signed_contribution": 0.002091155478488487, "absolute_share": 0.054313645790621014}
+      }
+    },
+    "weekdays": {
+      "signed_sum": 0.016491622488134773,
+      "maximum_absolute_share": 0.3539636937267471,
+      "parts": {
+        "Monday": {"signed_contribution": 0.0027510091912242864, "absolute_share": 0.09250591775430014},
+        "Tuesday": {"signed_contribution": -0.006623557429897288, "absolute_share": 0.22272490430258546},
+        "Wednesday": {"signed_contribution": 0.002508184388915141, "absolute_share": 0.08434064834597899},
+        "Thursday": {"signed_contribution": 0.010526433318442639, "absolute_share": 0.3539636937267471},
+        "Friday": {"signed_contribution": 0.007329553019449995, "absolute_share": 0.24646483587038837}
+      }
+    }
+  },
+  "gates": {
+    "favorable": {
+      "pooled_centered_stressed_r_at_least_0_10": false,
+      "pooled_centered_stop_at_most_minus_0_05": false,
+      "both_books_favorable": false,
+      "at_least_three_periods_favorable": true,
+      "at_least_four_components_favorable": true,
+      "at_least_three_weekdays_favorable": true,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": false,
+      "weekday_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "adverse": {
+      "pooled_centered_stressed_r_at_most_minus_0_10": false,
+      "pooled_centered_stop_at_least_0_05": false,
+      "both_books_adverse": false,
+      "at_least_three_periods_adverse": false,
+      "at_least_four_components_adverse": false,
+      "at_least_three_weekdays_adverse": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": false,
+      "weekday_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_pooled_centered_stressed_r_below_0_05": true,
+      "absolute_pooled_centered_stop_below_0_025": false,
+      "neither_direction_more_than_two_periods": false,
+      "neither_direction_more_than_three_components": false,
+      "neither_direction_more_than_two_weekdays": false,
+      "neither_book_pair_concordant_complete": true,
+      "passed": false
+    }
+  },
+  "verdict": "AMBIGUOUS_STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_NO_CANDIDATE",
+  "economic_interpretation": "The fixed week shows a small positive pooled centered return and lower stop burden, with favorable direction in three periods, four components and four weekdays. It does not pass because +0.01649R is far below +0.10R, -0.03172 stop is short of -0.05, US100 does not share the favorable return direction, and RC4 supplies 51.37 percent of absolute component contribution. The strong null also fails, so this is ambiguous rather than no-field.",
+  "decision": {
+    "preserve": "Unconditional portfolio, book, entry, exit, risk, lot, slot, admission and allocation behavior.",
+    "discard": "Standard-expiration-week-conditioned portfolio treatment from this bounded question.",
+    "selected_candidate": null,
+    "retained_seed": null,
+    "promotion": "none"
+  },
+  "limits": "The schedule association does not identify dealer gamma, positioning, options volume, open interest, settlement flow or a tradable intraday expiration signal.",
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_ambiguous_closure_commit_push_then_recompare_the_whole_map_before_unit_091_implementation_correction"
+}

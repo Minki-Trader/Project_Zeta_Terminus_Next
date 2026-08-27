@@ -1,0 +1,91 @@
+{
+  "schema": "zeta-next-standard-options-expiration-week-state-closure-v2",
+  "closed_at_local": "2026-08-27",
+  "status": "FAMILY_CLOSED_FROZEN_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "standard-options-expiration-week-state-090",
+  "run": "implementation-correction-r1",
+  "family": "standard-options-expiration-week-state-implementation-correction-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "verdict": "AMBIGUOUS_STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_NO_CANDIDATE",
+  "result": {
+    "path": "lab/research/standard-options-expiration-week-state-implementation-correction-v1/evidence/STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_RESULT_V2.json",
+    "bytes": 16572,
+    "sha256": "FD15ACE832E3FFE57728429FC553026FA1B752BCE914CDBE93728C919037622A"
+  },
+  "historical_v1_boundary": {
+    "verdict": "INVALID_STANDARD_OPTIONS_EXPIRATION_SCHEDULE_OR_LIFECYCLE_RECONSTRUCTION_NO_VERDICT",
+    "closure_path": "lab/research/standard-options-expiration-week-state-v1/evidence/STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_CLOSURE_V1.json",
+    "closure_sha256": "E4C12780DCA68CA499020C9A665DE985E4FDEB073832412C538E0B02324A5DCE",
+    "preserved": true,
+    "relationship": "The V1 file remains the immutable record of the failed invocation. This V2 sibling supplies the first valid economic verdict under the unchanged contract and supersedes V1 only as the current economic status of the question."
+  },
+  "decisive_metrics": {
+    "centered_stressed_r_treatment_minus_comparator": 0.016491622488134773,
+    "centered_stop_rate_treatment_minus_comparator": -0.03171894207616869,
+    "centered_signal_rate_per_day_treatment_minus_comparator": 0.0975573214210855,
+    "centered_birth_rate_per_day_treatment_minus_comparator": 0.04607295838205724,
+    "book_directions": {
+      "US30_BOOK": "FAVORABLE",
+      "US100_BOOK": "NONCONCORDANT"
+    },
+    "favorable_breadth": {
+      "periods": "3/4",
+      "components": "4/6",
+      "weekdays": "4/5"
+    },
+    "maximum_component_absolute_contribution_share": 0.5136800133870788,
+    "dominant_component": "RC4"
+  },
+  "why_ambiguous": [
+    "The pooled centered stressed-R difference is +0.01649R, below the predeclared +0.10R favorable threshold.",
+    "The centered stop-rate difference is -0.03172, short of the predeclared -0.05 favorable threshold.",
+    "US30 is favorable but US100 has negative centered return with only a small stop reduction, so both books are not concordant.",
+    "RC4 contributes 51.37 percent of absolute component contribution, above the 45 percent cap.",
+    "The stop magnitude and directional breadth also prevent the complete strong-null rule from passing."
+  ],
+  "decision_translation": {
+    "preserve": [
+      "unconditional current portfolio and both-book behavior",
+      "all current entry, order, exit, priority, admission, allocation, lot, risk, slot, cap, EA and Live behavior",
+      "the V1 INVALID record as implementation history and this V2 result as the first economic verdict"
+    ],
+    "discard": [
+      "calendar-conditioned risk, lot, slot, admission or allocation treatment",
+      "a standard-expiration-week implementation or Live candidate",
+      "favorable, adverse or no-field relabeling of this ambiguous result"
+    ],
+    "selected_candidate": null,
+    "retained_seed": null,
+    "promotion": "none"
+  },
+  "automatic_followups_not_opened": [
+    "exact expiration day, Thursday, Friday, quarterly, end-of-month, holiday, month, weekday or clock rescue",
+    "options volume, open interest, gamma, volatility, threshold, magnitude or interaction rescue",
+    "best period, component, direction or book subgroup",
+    "risk, lot, slot, admission, allocation, EA or Live implementation"
+  ],
+  "execution": {
+    "source_reacquisition_batches": 0,
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "deterministic_same_code_output_recovery_executions": 1,
+    "retained_analysis_script_or_cli": false
+  },
+  "family_frozen": true,
+  "same_family_economic_rescue": false,
+  "automatic_successor_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_before_opening_the_separately_user_directed_unit_091_implementation_correction"
+}
