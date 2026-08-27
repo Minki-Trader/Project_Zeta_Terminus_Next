@@ -1,0 +1,98 @@
+{
+  "schema": "zeta-next-prior-cash-breadth-book-rotation-acquisition-receipt-v2",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_091_COMMITTED_ARTIFACT_RECEIPT_RECONSTRUCTED_BEFORE_CP2_OUTCOMES",
+  "unit": "prior-cash-breadth-book-rotation-091",
+  "run": "implementation-correction-r1",
+  "family": "prior-cash-breadth-book-rotation-implementation-correction-v1",
+  "declaration": {
+    "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/PRIOR_CASH_BREADTH_BOOK_ROTATION_DECLARATION_V1.json",
+    "commit": "0da94f768cb9afdb5a80de17f289e4d9d3e6a430",
+    "bytes": 25534,
+    "sha256": "310CE6F607CBB982CE77CDD35A7FA63AD0C984CF4D95A95F1418EE43AD818896"
+  },
+  "artifact_origin": {
+    "commit": "1177eedd983fc656c2348440f7a58c9926b241b8",
+    "reacquired": false,
+    "source_downloads_in_correction_run": 0,
+    "normalized_csv_outputs_in_correction_run": 0
+  },
+  "official_sources": {
+    "files": 4,
+    "bytes": 1082403,
+    "items": [
+      {
+        "role": "equal_weight_semantic_authority",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/invesco_rsp.html",
+        "bytes": 624720,
+        "sha256": "388D9D78DF457B28B87B37289811F14518949393360F3BF2C22E462687A7220E",
+        "identity": "RSP and S&P 500 Equal Weight",
+        "identity_present": true,
+        "equal_weight_language_present": true
+      },
+      {
+        "role": "capitalization_weight_semantic_authority",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/state_street_spy.html",
+        "bytes": 231305,
+        "sha256": "C4CA9EF7145716EC74CF87042CE2D10E2B0BD03408F451F81BB176212A1E495A",
+        "identity": "SPY and S&P 500",
+        "identity_present": true,
+        "float_adjusted_market_capitalization_weighted_language_present": true
+      },
+      {
+        "role": "rsp_daily_ohlc",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/nasdaq_rsp_historical.json",
+        "bytes": 112811,
+        "sha256": "E8430DE5A03B8562F0642831812BF048CD4CB202743948AAEC29CDAE3292023C",
+        "status_code": 200,
+        "rows": 1044
+      },
+      {
+        "role": "spy_daily_ohlc",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/nasdaq_spy_historical.json",
+        "bytes": 113567,
+        "sha256": "7F7F9B9D4BA00CD0D702782618702D71C6476622DD4DA1BF4B2216718CD7959D",
+        "status_code": 200,
+        "rows": 1044
+      }
+    ]
+  },
+  "normalized_external_data": {
+    "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/prior_cash_breadth_ohlc_20220624_20260821.csv",
+    "rows": 1044,
+    "bytes": 93222,
+    "sha256": "2B3BE869ADBBD9BCE4573447C9AFA195672F2B051A81C50686237A3DCE5FFA44",
+    "first_date": "2022-06-24",
+    "last_date": "2026-08-21",
+    "state_counts": {
+      "BROAD_LEADS": 486,
+      "MEGACAP_LEADS": 558
+    },
+    "duplicate_dates": 0,
+    "nonpositive_open_or_close": 0,
+    "zero_relative_return_dates": 0,
+    "raw_ohlc_mismatches": 0,
+    "relative_return_mismatches": 0,
+    "state_sign_mismatches": 0,
+    "raw_and_normalized_dates_identical": true
+  },
+  "receipt_implementation": {
+    "failed_v1_operation": "Materialization of a generic PowerShell source-record collection inside the ordered receipt object",
+    "corrected_operation": "Concrete four-item source-record array assigned before ordered receipt construction",
+    "data_or_economic_rule_changed": false
+  },
+  "integrity": {
+    "all_source_byte_and_sha_pins_match": true,
+    "semantic_identities_and_weighting_language_present": true,
+    "both_nasdaq_status_and_1044_row_checks_pass": true,
+    "normalized_csv_pin_and_raw_identity_pass": true,
+    "passed": true
+  },
+  "supply_or_lifecycle_metrics_consumed": false,
+  "cp2_event_files_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_and_correction_declaration_hashes_commit_push_then_run_the_single_fixed_aggregation"
+}
