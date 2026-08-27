@@ -1710,3 +1710,13 @@
 - The 5.55-GiB dedicated runtime contains zero junction/symbolic links, only this family's one EA/14 includes/one EX5/three SETs, and physical Bases/Tester-bases manifests exactly match their origin. Runtime receipt SHA-256 is `3F24B9CBFADB34098D46629FEF61AB95B8B825F0EDF0861DF0F62E534CDB5694`.
 - Compile receipt SHA-256 is `1D3DB64DBD817C7180D81FF3CD59FFCC436ABCD685BF4817262DC6423142D585`. All twelve Tester paths remain; no Tester outcome has opened. Commit and push this frozen boundary before P1 NATIVE.
 - Program 6, broker/account state and Live PID/source/package/settings/state/logs/dashboard remain untouched.
+
+## STATE-0206 - 2026-08-27
+
+- Unit 081 implementation-freeze commit `5264e44048890ba11ef580ac8237d006ae09804d` reached origin before the first and only Tester path, P1 NATIVE. The terminal exited `0`, the exact `NATIVE input=0` six-component profile logged, and the HTML summary displayed `100% real ticks`.
+- The detailed Agent log nevertheless proved generated-tick substitution on every required symbol: US100 had `1,920` absent and `484` discarded minutes of `501,264`; US30 `878 / 462` of `501,132`; US500 `155 / 441` of `501,310`. Each summary line states `every tick generation used`.
+- This triggers the declaration's absolute required-symbol real-tick stop. The remaining eleven paths were not started; no runtime repair, data substitution, replacement, rerun or reduced matrix opened.
+- No net, equity drawdown, remaining-five externality, turnover, risk-skip, stop-rate, candidate-gate or other economic comparison was accessed. Closed `INVALID_COMPONENT_REMOVAL_COUNTERFACTUAL_MATRIX_NO_VERDICT`; preserve all six components and infer neither benefit nor harm from removing Passive or Return.
+- Frozen family source/configuration/binary hashes remained exactly `7D6ED9EDA0D2969A0FF1BA87C7455AADFFD36409129C5131A4A53BA43D2F695C` / `5028654E1C5AA49A57C0ACCAEE7EFD5918280E3EA7EDEBB39EB5A50810E77E63` / `B8782638C24AF33CAB4A7921829D85A34391F6F4C4189CCE0AC4C6BC687E8273`.
+- The 15 ignored generated artifacts were captured before any next path at `lab/artifacts/backtests/component-removal-counterfactual-v1/p1-native/`; artifact manifest/result/closure SHA-256 values are `9DDA87765B8440DE63BF2880B0CF9CF717D15D518DB83872C878F1FDF904A2EF` / `334AE7CE09518CC476EE179C029C309651F7D715E0C6817435C18E9DF7A66158` / `31D0BEC1EC36AF2F648231011FA646509EB871322D6BF9045F7B9420DEFCBCC8`.
+- No candidate or retained seed opened. Program 6, broker/account state and Live remained untouched. Recompare Programs 1-5 and 7 plus all heights after push and continue serially; the Frontier Goal remains active and incomplete.

@@ -1,0 +1,136 @@
+{
+  "schema": "zeta-next-component-removal-counterfactual-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_081_STOPPED_INVALID_AT_FIRST_PATH_INTEGRITY_GATE",
+  "unit": "component-removal-counterfactual-081",
+  "family": "component-removal-counterfactual-v1",
+  "declaration": {
+    "sha256": "9BA09D8EA3047AB7D4EC2C073B075BC2462CFD42D00FF511C242139A62AE03AA",
+    "commit": "006f0f53e25c0593c2a79a74cc770b9636d356e4",
+    "committed_and_pushed_before_derivation": true
+  },
+  "implementation_freeze": {
+    "commit": "5264e44048890ba11ef580ac8237d006ae09804d",
+    "committed_and_pushed_before_first_tester_path": true,
+    "source_manifest_sha256_before_first_path": "7D6ED9EDA0D2969A0FF1BA87C7455AADFFD36409129C5131A4A53BA43D2F695C",
+    "source_manifest_sha256_after_first_path": "7D6ED9EDA0D2969A0FF1BA87C7455AADFFD36409129C5131A4A53BA43D2F695C",
+    "configuration_manifest_sha256_before_first_path": "5028654E1C5AA49A57C0ACCAEE7EFD5918280E3EA7EDEBB39EB5A50810E77E63",
+    "configuration_manifest_sha256_after_first_path": "5028654E1C5AA49A57C0ACCAEE7EFD5918280E3EA7EDEBB39EB5A50810E77E63",
+    "binary_sha256_before_first_path": "B8782638C24AF33CAB4A7921829D85A34391F6F4C4189CCE0AC4C6BC687E8273",
+    "binary_sha256_after_first_path": "B8782638C24AF33CAB4A7921829D85A34391F6F4C4189CCE0AC4C6BC687E8273",
+    "source_or_configuration_changed_after_first_path": false
+  },
+  "execution": {
+    "declared_paths": 12,
+    "tester_paths_started": 1,
+    "tester_paths_completed": 1,
+    "tester_paths_not_started": 11,
+    "executed_path": "P1 NATIVE",
+    "unopened_paths": [
+      "P1 WITHOUT_PASSIVE",
+      "P1 WITHOUT_RETURN",
+      "P2 NATIVE",
+      "P2 WITHOUT_PASSIVE",
+      "P2 WITHOUT_RETURN",
+      "P3 NATIVE",
+      "P3 WITHOUT_PASSIVE",
+      "P3 WITHOUT_RETURN",
+      "P4 NATIVE",
+      "P4 WITHOUT_PASSIVE",
+      "P4 WITHOUT_RETURN"
+    ],
+    "terminal_process_exit_code": 0,
+    "successful_compiles_used": 1,
+    "implementation_only_compile_corrections_used": 1,
+    "post_metric_reruns": 0,
+    "optimization_paths": 0,
+    "orders_outside_tester": 0
+  },
+  "first_path_integrity": {
+    "profile_log_exact": true,
+    "profile_log": "component_set profile=NATIVE input=0 enabled=RC16/RC4/Cross/Pressure/Return/Passive",
+    "model": 4,
+    "report_exists": true,
+    "report_bytes": 1517578,
+    "html_history_quality": "100% real ticks",
+    "required_symbol_detailed_tick_generation_fallback": true,
+    "required_symbols": {
+      "US100": {
+        "total_minute_bars": 501264,
+        "real_ticks_absent_minutes": 1920,
+        "real_ticks_discarded_minutes": 484,
+        "generation_mode": "every tick generation used"
+      },
+      "US30": {
+        "total_minute_bars": 501132,
+        "real_ticks_absent_minutes": 878,
+        "real_ticks_discarded_minutes": 462,
+        "generation_mode": "every tick generation used"
+      },
+      "US500": {
+        "total_minute_bars": 501310,
+        "real_ticks_absent_minutes": 155,
+        "real_ticks_discarded_minutes": 441,
+        "generation_mode": "every tick generation used"
+      }
+    },
+    "interpretation": "The HTML summary reports 100 percent real ticks, but the detailed Agent log proves generated-tick substitution for every required symbol. The declaration requires both checks, so the absolute integrity gate fails."
+  },
+  "artifact_freeze": {
+    "path": "lab/artifacts/backtests/component-removal-counterfactual-v1/p1-native/",
+    "manifest_path": "lab/research/component-removal-counterfactual-v1/evidence/COMPONENT_REMOVAL_COUNTERFACTUAL_P1_NATIVE_ARTIFACT_MANIFEST_V1.json",
+    "manifest_bytes": 2781,
+    "manifest_sha256": "9DDA87765B8440DE63BF2880B0CF9CF717D15D518DB83872C878F1FDF904A2EF",
+    "files": 15,
+    "bytes": 8319387,
+    "report_sha256": "31B42A7E94A04944B422723169393E3A70F5CD8A07E71DC734F10D895EE4E100",
+    "agent_log_sha256": "8631441F750780B6851514F3E301DCAAF23383D69A6364DB6BD6861EAC4DC2F7",
+    "captured_before_any_next_path": true
+  },
+  "frozen_stop_rule_application": {
+    "rule": "A failed required-symbol real-tick or topology gate stops the remaining matrix and closes invalid without a runtime repair or data substitution.",
+    "triggered": true,
+    "remaining_matrix_stopped": true,
+    "runtime_repair_attempted": false,
+    "data_substitution_attempted": false,
+    "replacement_or_rerun_attempted": false
+  },
+  "outcome_consumption_boundary": {
+    "economic_profile_comparison_opened": false,
+    "net_profit_accessed": false,
+    "equity_drawdown_accessed": false,
+    "remaining_five_net_or_births_accessed": false,
+    "turnover_risk_skip_or_stop_rate_accessed": false,
+    "candidate_gate_calculated": false,
+    "candidate_metrics": null,
+    "selected_candidate": null
+  },
+  "verdict": "INVALID_COMPONENT_REMOVAL_COUNTERFACTUAL_MATRIX_NO_VERDICT",
+  "decision": {
+    "preserve": [
+      "all six frozen portfolio components and current admission, risk, lot, slot, priority, order, stop and exit behavior",
+      "the Unit 081 source and first-path artifacts as frozen invalid evidence only"
+    ],
+    "discard": [
+      "any claim that removing Passive or Return improves or harms portfolio economics",
+      "any five-component Lab or Live candidate from Unit 081",
+      "runtime repair, data substitution, path replacement or reduced-period rescue inside this family"
+    ],
+    "additional_observation_required": "A future reopening would require a genuinely new environment/data role that supplies complete required-symbol real ticks before outcomes, not a repair of this frozen matrix.",
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "automatic_followups_not_opened": [
+    "P1 candidate-only comparison",
+    "P2-P4 matrix continuation",
+    "single-symbol, shorter-window or generated-tick acceptance rescue",
+    "combined removal or removal of another component",
+    "threshold, risk, slot, priority, order, stop or exit variants"
+  ],
+  "same_family_rescue_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_update_single_frontier_memory_commit_push_then_recompare_and_continue_serially_to_the_next_connected_distant_claude_hypothesis"
+}
