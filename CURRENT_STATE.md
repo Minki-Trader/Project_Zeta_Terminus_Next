@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0201`
+- Latest state ID: `STATE-0202`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: Unit 080 `lab/research/rc16-feature-supply-decay-v1/`; declaration frozen before any monthly supply, volatility or partial-calendar metric
+- Active research boundary: Unit 080 `lab/research/rc16-feature-supply-decay-v1/`; the sole premetric semantic correction is frozen, leaving one fixed monthly supply aggregation and no further correction or rerun
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`

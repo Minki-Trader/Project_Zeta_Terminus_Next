@@ -1,0 +1,58 @@
+{
+  "schema": "zeta-next-rc16-feature-supply-decay-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FROZEN_BEFORE_ANY_MONTHLY_SUPPLY_VOLATILITY_OR_CORRELATION_METRIC_WAS_EMITTED",
+  "unit": "rc16-feature-supply-decay-080",
+  "declaration_sha256": "4C7A8BAD37806338FEF06426C06B6B8EE1CF3E9504B075F14D2D47E485821078",
+  "failed_invocation": {
+    "stage": "Unit 063 annual-count integrity assertion before construction of monthly rows",
+    "exception": "The declaration incorrectly treated Unit 063's 258 all-slot eligible calendar dates as the number of exact native 13:30 evaluations.",
+    "monthly_rows_emitted": 0,
+    "annual_rate_ratio_emitted": false,
+    "volatility_association_emitted": false,
+    "partial_calendar_correlation_emitted": false,
+    "gates_or_verdicts_emitted": false,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "bounded_structural_diagnosis": {
+    "unit_063_selection_period_all_slot_eligible_dates": 258,
+    "exact_13_30_native_evaluations": 257,
+    "exact_13_30_native_signals": 79,
+    "date_without_13_30_bar": "2025-11-28",
+    "available_slots_on_that_date": [
+      "01:00", "01:30", "02:00", "02:30", "03:00", "03:30", "04:00", "04:30",
+      "05:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30",
+      "19:00", "19:30", "20:00"
+    ],
+    "unit_063_confirmation_exact_13_30_evaluations": 151,
+    "unit_063_confirmation_exact_13_30_signals": 39,
+    "new_economic_metrics_emitted": 0
+  },
+  "implementation_only_correction": {
+    "old_integrity_anchor": "258/79 exact native 13:30 eligible evaluations/signals in 2025 and 151/39 in completed-month 2026",
+    "new_integrity_anchor": "257/79 exact native 13:30 evaluations/signals in 2025 and 151/39 in completed-month 2026; separately retain Unit 063's 258 all-slot eligible-date anchor",
+    "scope": "Correct the semantic type of one already pinned Unit 063 count before monthly aggregation.",
+    "unchanged": [
+      "all immutable files and declaration hash",
+      "selection and confirmation boundaries",
+      "nineteen fixed calendar months",
+      "exact 13:30 native feature, threshold and ATR reconstruction",
+      "monthly signal-rate and volatility definitions",
+      "annual ratio and residualized partial-correlation definitions",
+      "all density, decay, falsifier, verdict and decision rules",
+      "all exclusions, execution budgets and automatic-followup prohibitions"
+    ],
+    "outcome_dependent_spec_change": false
+  },
+  "budget_after_correction": {
+    "successful_fixed_aggregations_remaining": 1,
+    "implementation_only_pre_metric_corrections_used": 1,
+    "implementation_only_pre_metric_corrections_remaining": 0,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_correction_sha_update_single_frontier_memory_commit_push_then_run_the_single_remaining_fixed_aggregation"
+}

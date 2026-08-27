@@ -1672,3 +1672,12 @@
 - Decay requires annual ratio `<=0.80` and partial r `<=-0.50`; ratio `>=0.80` and partial r `>=-0.20` is the no-decay falsifier.
 - A pass retains research-allocation observation only; no component, threshold, clock, month, regime, EA or Live candidate opens.
 - Declaration SHA-256 is `4C7A8BAD37806338FEF06426C06B6B8EE1CF3E9504B075F14D2D47E485821078`. No monthly supply, volatility, correlation or verdict metric has opened. One aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.
+
+## STATE-0202 - 2026-08-27
+
+- Unit 080 declaration commit `efa33f7` reached origin before the first fixed invocation. All six immutable pins, bar topology, feature arithmetic and the known `79/39` native signal anchors passed.
+- The invocation stopped at the annual-count integrity assertion before any monthly row, annual rate ratio, volatility association, partial correlation, gate or verdict was emitted.
+- Bounded structural diagnosis found that Unit 063's `258` is an all-slot eligible-calendar-date count, not an exact 13:30 evaluation count. There are `257` exact native evaluations in 2025 because `2025-11-28` has bars but no 13:30 bar; their `79` signals are unchanged. Completed-month 2026 remains exact `151/39`.
+- Used the sole premetric correction to type the immutable anchors correctly: retain Unit 063's all-slot `258` separately and require exact native `257/79` plus `151/39` for this unit. Months, feature, ATR, metrics, gates, decisions and exclusions are unchanged.
+- Correction receipt SHA-256 is `FB8028BCA32CCC788F7895C1094442EA6768DF96966F4CB3E93BB14D9B0358B7`. One successful fixed aggregation remains; correction allowance is exhausted and metric reruns remain zero.
+- No acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
