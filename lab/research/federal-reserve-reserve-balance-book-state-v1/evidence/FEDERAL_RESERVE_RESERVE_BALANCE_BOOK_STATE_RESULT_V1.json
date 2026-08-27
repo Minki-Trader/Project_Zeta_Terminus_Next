@@ -1,0 +1,781 @@
+{
+  "schema": "zeta-next-federal-reserve-reserve-balance-book-state-result-v1",
+  "created_at_local": "2026-08-27T22:07:51+09:00",
+  "status": "UNIT_092_ONE_FIXED_AGGREGATION_COMPLETE",
+  "unit": "federal-reserve-reserve-balance-book-state-092",
+  "family": "federal-reserve-reserve-balance-book-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "macro"
+    ]
+  },
+  "contract": {
+    "declaration": {
+      "commit": "2bd4c26a85f4456b9e26b5560e3648d5fa388f94",
+      "bytes": 22651,
+      "sha256": "920F26FB0F2D766AC831EF1449BAF230F360FFDEC0866707E5E12551F2898CF7"
+    },
+    "first_parser_correction": {
+      "commit": "f2a1f9e180823f65418a0ecdc431649b70241639",
+      "bytes": 3177,
+      "sha256": "EAD5E6FDA40F0276FEA31D36E6259E8EC583AE245FBBD3AD5CC5B6E08B9E0A8D"
+    },
+    "implementation_policy_alignment": {
+      "commit": "5d05bea7a4a226077fc097a8e81d0f45d763a7a0",
+      "bytes": 6190,
+      "sha256": "848ACDBB983F544D39DD5C35744EB193425C91A37E67D8DF85C92860B7C3B93A"
+    },
+    "acquisition": {
+      "commit": "f0261302ce82729e62fcbe7179a86311fdb8c106",
+      "bytes": 86731,
+      "sha256": "4891A4934B676378800E5B30808C9F5F26B486791F7ECE38B401E2CC8D2F444F"
+    },
+    "aggregation_parser_correction": {
+      "commit": "0c2459c8d81c57b64d85b3125e6147be81a60dbe",
+      "bytes": 4136,
+      "sha256": "6A4C3912E0B0450DB5B3613EF2601F8B97017F07F5D250B27556FE94E5A6D635"
+    },
+    "economic_contract_changed": false
+  },
+  "execution": {
+    "recorded_implementation_failures": 3,
+    "recorded_implementation_corrections": 3,
+    "preexecution_syntax_precheck": {
+      "rejected_before_body": 1,
+      "failed_script_bytes": 54014,
+      "failed_script_sha256": "49EA3F59A3FEC7DCCECB06C9BB2B268B1FE7321C34D5DF2D540F2E7D8E4BD91D",
+      "cause": "The format-operator expression assigned to lifecycle_id lacked grouping parentheses, so its commas were parsed as method-argument separators.",
+      "correction": "Wrap the unchanged format expression in parentheses.",
+      "input_files_opened": 0,
+      "economic_outcomes_consumed": false
+    },
+    "successful_official_acquisition_batches": 1,
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "retained_analysis_script_or_cli": false,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pin_checks": [
+      {
+        "role": "unit_092_declaration",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_DECLARATION_V1.json",
+        "expected_bytes": 22651,
+        "actual_bytes": 22651,
+        "expected_sha256": "920F26FB0F2D766AC831EF1449BAF230F360FFDEC0866707E5E12551F2898CF7",
+        "actual_sha256": "920F26FB0F2D766AC831EF1449BAF230F360FFDEC0866707E5E12551F2898CF7",
+        "passed": true
+      },
+      {
+        "role": "unit_092_first_parser_correction",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_ACQUISITION_CORRECTION_V1.json",
+        "expected_bytes": 3177,
+        "actual_bytes": 3177,
+        "expected_sha256": "EAD5E6FDA40F0276FEA31D36E6259E8EC583AE245FBBD3AD5CC5B6E08B9E0A8D",
+        "actual_sha256": "EAD5E6FDA40F0276FEA31D36E6259E8EC583AE245FBBD3AD5CC5B6E08B9E0A8D",
+        "passed": true
+      },
+      {
+        "role": "unit_092_implementation_policy_alignment",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_IMPLEMENTATION_POLICY_ALIGNMENT_V1.json",
+        "expected_bytes": 6190,
+        "actual_bytes": 6190,
+        "expected_sha256": "848ACDBB983F544D39DD5C35744EB193425C91A37E67D8DF85C92860B7C3B93A",
+        "actual_sha256": "848ACDBB983F544D39DD5C35744EB193425C91A37E67D8DF85C92860B7C3B93A",
+        "passed": true
+      },
+      {
+        "role": "unit_092_acquisition_receipt",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_ACQUISITION_V1.json",
+        "expected_bytes": 86731,
+        "actual_bytes": 86731,
+        "expected_sha256": "4891A4934B676378800E5B30808C9F5F26B486791F7ECE38B401E2CC8D2F444F",
+        "actual_sha256": "4891A4934B676378800E5B30808C9F5F26B486791F7ECE38B401E2CC8D2F444F",
+        "passed": true
+      },
+      {
+        "role": "unit_092_aggregation_parser_correction",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_AGGREGATION_IMPLEMENTATION_CORRECTION_V1.json",
+        "expected_bytes": 4136,
+        "actual_bytes": 4136,
+        "expected_sha256": "6A4C3912E0B0450DB5B3613EF2601F8B97017F07F5D250B27556FE94E5A6D635",
+        "actual_sha256": "6A4C3912E0B0450DB5B3613EF2601F8B97017F07F5D250B27556FE94E5A6D635",
+        "passed": true
+      },
+      {
+        "role": "unit_092_normalized_releases",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/H41_RESERVE_BALANCE_RELEASES_20220721_20260820.csv",
+        "expected_bytes": 82424,
+        "actual_bytes": 82424,
+        "expected_sha256": "7645E3513198DD835C378A721D486D43866E6D687D20CF5BC573AE1D2930D89F",
+        "actual_sha256": "7645E3513198DD835C378A721D486D43866E6D687D20CF5BC573AE1D2930D89F",
+        "passed": true
+      },
+      {
+        "role": "official_h41_schedule",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/source/federal_reserve_h41_release_schedule.html",
+        "expected_bytes": 78177,
+        "actual_bytes": 78177,
+        "expected_sha256": "C4AA30DB513D6AF69DECCD032CDE3305FF8B1620B9B8BA57B416DBB225A8E9E7",
+        "actual_sha256": "C4AA30DB513D6AF69DECCD032CDE3305FF8B1620B9B8BA57B416DBB225A8E9E7",
+        "passed": true
+      },
+      {
+        "role": "official_h41_release_index",
+        "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/source/federal_reserve_h41_release_dates.json",
+        "expected_bytes": 79503,
+        "actual_bytes": 79503,
+        "expected_sha256": "BD12F2622028A44AB48F00FB50120A5DC1B8F1734942B1D3DB05F866C15CB6CA",
+        "actual_sha256": "BD12F2622028A44AB48F00FB50120A5DC1B8F1734942B1D3DB05F866C15CB6CA",
+        "passed": true
+      },
+      {
+        "role": "cp2_P1_2022H2_2023_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv",
+        "expected_bytes": 1411355,
+        "actual_bytes": 1411355,
+        "expected_sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA",
+        "actual_sha256": "44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA",
+        "passed": true
+      },
+      {
+        "role": "cp2_P1_2022H2_2023_events-b.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv",
+        "expected_bytes": 536770,
+        "actual_bytes": 536770,
+        "expected_sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8",
+        "actual_sha256": "0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8",
+        "passed": true
+      },
+      {
+        "role": "cp2_P2_2024_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv",
+        "expected_bytes": 1395691,
+        "actual_bytes": 1395691,
+        "expected_sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178",
+        "actual_sha256": "3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178",
+        "passed": true
+      },
+      {
+        "role": "cp2_P3_2025_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv",
+        "expected_bytes": 1418401,
+        "actual_bytes": 1418401,
+        "expected_sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0",
+        "actual_sha256": "4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0",
+        "passed": true
+      },
+      {
+        "role": "cp2_P3_2025_events-b.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv",
+        "expected_bytes": 6936,
+        "actual_bytes": 6936,
+        "expected_sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29",
+        "actual_sha256": "15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29",
+        "passed": true
+      },
+      {
+        "role": "cp2_P4_2026_YTD_events-a.csv",
+        "path": "lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv",
+        "expected_bytes": 923617,
+        "actual_bytes": 923617,
+        "expected_sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9",
+        "actual_sha256": "9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9",
+        "passed": true
+      },
+      {
+        "role": "unit_050_result",
+        "path": "lab/research/natural-book-drawdown-complementarity-v1/evidence/NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_RESULT_V1.json",
+        "expected_bytes": 8237,
+        "actual_bytes": 8237,
+        "expected_sha256": "894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1",
+        "actual_sha256": "894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1",
+        "passed": true
+      },
+      {
+        "role": "unit_072_result",
+        "path": "lab/research/us100-book-economic-role-v1/evidence/US100_BOOK_ECONOMIC_ROLE_RESULT_V1.json",
+        "expected_bytes": 4661,
+        "actual_bytes": 4661,
+        "expected_sha256": "010200107F0C6935304C14406B1445BED15FC4DA892EF1FDA029F616120B6138",
+        "actual_sha256": "010200107F0C6935304C14406B1445BED15FC4DA892EF1FDA029F616120B6138",
+        "passed": true
+      },
+      {
+        "role": "unit_085_result",
+        "path": "lab/research/portfolio-native-signal-supply-frontier-v1/evidence/PORTFOLIO_NATIVE_SIGNAL_SUPPLY_FRONTIER_RESULT_V1.json",
+        "expected_bytes": 9225,
+        "actual_bytes": 9225,
+        "expected_sha256": "155788C50824C7D49E56AC8DDF95A4E3A11F8539A5F092AAD435234A537C7821",
+        "actual_sha256": "155788C50824C7D49E56AC8DDF95A4E3A11F8539A5F092AAD435234A537C7821",
+        "passed": true
+      },
+      {
+        "role": "unit_089_closure",
+        "path": "lab/research/cftc-leveraged-money-relative-flow-v1/evidence/CFTC_LEVERAGED_MONEY_RELATIVE_FLOW_CLOSURE_V1.json",
+        "expected_bytes": 5720,
+        "actual_bytes": 5720,
+        "expected_sha256": "C53D263846F530A4518BBFC816D0F7029635EC3A143A929AF698AC1C4700B4BF",
+        "actual_sha256": "C53D263846F530A4518BBFC816D0F7029635EC3A143A929AF698AC1C4700B4BF",
+        "passed": true
+      },
+      {
+        "role": "unit_091_corrected_closure",
+        "path": "lab/research/prior-cash-breadth-book-rotation-implementation-correction-v1/evidence/PRIOR_CASH_BREADTH_BOOK_ROTATION_CLOSURE_V2.json",
+        "expected_bytes": 4662,
+        "actual_bytes": 4662,
+        "expected_sha256": "50CDBCBC5717988421C58BACF2D4D77C5C6A1E679B2BF0669458B6EC5F4F0ED1",
+        "actual_sha256": "50CDBCBC5717988421C58BACF2D4D77C5C6A1E679B2BF0669458B6EC5F4F0ED1",
+        "passed": true
+      }
+    ],
+    "pin_failures": [],
+    "release_faults": [],
+    "event_rows": 16477,
+    "exact_duplicate_rows": 0,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2233,
+    "final_counts": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "stop_count": 206,
+    "component_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "book_counts": {
+      "US30_BOOK": 834,
+      "US100_BOOK": 1399
+    },
+    "period_counts": {
+      "P1_2022H2_2023": 769,
+      "P2_2024": 554,
+      "P3_2025": 554,
+      "P4_2026_YTD": 356
+    },
+    "period_book_counts": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": 270,
+        "US100_BOOK": 499
+      },
+      "P2_2024": {
+        "US30_BOOK": 198,
+        "US100_BOOK": 356
+      },
+      "P3_2025": {
+        "US30_BOOK": 231,
+        "US100_BOOK": 323
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": 135,
+        "US100_BOOK": 221
+      }
+    },
+    "period_stressed_net_usd": {
+      "P1_2022H2_2023": 148.873500000001,
+      "P2_2024": 54.66299999999782,
+      "P3_2025": 113.03800000000116,
+      "P4_2026_YTD": 90.47320000000519
+    },
+    "pooled_stressed_net_usd": 407.04770000000565,
+    "centering_cells": 24,
+    "maximum_centered_r_residual": 4.67247768254353E-15,
+    "maximum_centered_stop_residual": 8.744741042399085E-15,
+    "period_state_day_counts": {
+      "P1_2022H2_2023": {
+        "RESERVE_EXPAND": 205,
+        "RESERVE_CONTRACT": 161
+      },
+      "P2_2024": {
+        "RESERVE_EXPAND": 120,
+        "RESERVE_CONTRACT": 140
+      },
+      "P3_2025": {
+        "RESERVE_EXPAND": 106,
+        "RESERVE_CONTRACT": 153
+      },
+      "P4_2026_YTD": {
+        "RESERVE_EXPAND": 104,
+        "RESERVE_CONTRACT": 62
+      }
+    },
+    "period_book_state_lifecycle_counts": {
+      "P1_2022H2_2023": {
+        "US30_BOOK": {
+          "RESERVE_EXPAND": 142,
+          "RESERVE_CONTRACT": 128
+        },
+        "US100_BOOK": {
+          "RESERVE_EXPAND": 273,
+          "RESERVE_CONTRACT": 226
+        }
+      },
+      "P2_2024": {
+        "US30_BOOK": {
+          "RESERVE_EXPAND": 99,
+          "RESERVE_CONTRACT": 99
+        },
+        "US100_BOOK": {
+          "RESERVE_EXPAND": 155,
+          "RESERVE_CONTRACT": 201
+        }
+      },
+      "P3_2025": {
+        "US30_BOOK": {
+          "RESERVE_EXPAND": 102,
+          "RESERVE_CONTRACT": 129
+        },
+        "US100_BOOK": {
+          "RESERVE_EXPAND": 122,
+          "RESERVE_CONTRACT": 201
+        }
+      },
+      "P4_2026_YTD": {
+        "US30_BOOK": {
+          "RESERVE_EXPAND": 76,
+          "RESERVE_CONTRACT": 59
+        },
+        "US100_BOOK": {
+          "RESERVE_EXPAND": 143,
+          "RESERVE_CONTRACT": 78
+        }
+      }
+    },
+    "pooled_component_state_lifecycle_counts": {
+      "RC16": {
+        "RESERVE_EXPAND": 124,
+        "RESERVE_CONTRACT": 148
+      },
+      "RC4": {
+        "RESERVE_EXPAND": 100,
+        "RESERVE_CONTRACT": 106
+      },
+      "Cross": {
+        "RESERVE_EXPAND": 403,
+        "RESERVE_CONTRACT": 402
+      },
+      "Pressure": {
+        "RESERVE_EXPAND": 62,
+        "RESERVE_CONTRACT": 56
+      },
+      "Return": {
+        "RESERVE_EXPAND": 133,
+        "RESERVE_CONTRACT": 105
+      },
+      "Passive": {
+        "RESERVE_EXPAND": 290,
+        "RESERVE_CONTRACT": 304
+      }
+    },
+    "minimum_period_state_days": 62,
+    "minimum_period_book_state_lifecycles": 59,
+    "minimum_pooled_component_state_lifecycles": 56,
+    "release_to_portfolio_day_lag_days": {
+      "minimum": 1.0,
+      "maximum": 11.0
+    },
+    "period_relative_r_contribution_identity_error": 0.0,
+    "component_relative_r_contribution_identity_error": 2.7755575615628914E-17,
+    "faults": []
+  },
+  "reserve_state": {
+    "releases": {
+      "RESERVE_EXPAND": 108,
+      "RESERVE_CONTRACT": 106,
+      "ZERO": 0
+    },
+    "normal_days": {
+      "RESERVE_EXPAND": 535,
+      "RESERVE_CONTRACT": 516
+    },
+    "native_signals": {
+      "RESERVE_EXPAND": 1215,
+      "RESERVE_CONTRACT": 1214
+    },
+    "durable_births": {
+      "RESERVE_EXPAND": 1112,
+      "RESERVE_CONTRACT": 1121
+    }
+  },
+  "supply_transmission": {
+    "by_state": {
+      "RESERVE_EXPAND": {
+        "days": 535,
+        "signals": 1215,
+        "births": 1112,
+        "signals_per_day": 2.2710280373831777,
+        "births_per_day": 2.0785046728971963,
+        "fewer_than_three_signal_days": 319,
+        "fewer_than_three_signal_day_rate": 0.5962616822429907
+      },
+      "RESERVE_CONTRACT": {
+        "days": 516,
+        "signals": 1214,
+        "births": 1121,
+        "signals_per_day": 2.352713178294574,
+        "births_per_day": 2.1724806201550386,
+        "fewer_than_three_signal_days": 299,
+        "fewer_than_three_signal_day_rate": 0.5794573643410853
+      }
+    },
+    "expand_minus_contract": {
+      "signals_per_day": -0.08168514091139611,
+      "births_per_day": -0.09397594725784231,
+      "fewer_than_three_signal_day_rate": 0.016804317901905397
+    },
+    "economic_role": "Descriptive transmission only; supply cannot independently select a candidate."
+  },
+  "portfolio_lifecycle": {
+    "pooled": {
+      "n": 2233,
+      "US100_BOOK": {
+        "expand_n": 693,
+        "contract_n": 706,
+        "expand_stressed_net_usd": 56.239999999999355,
+        "contract_stressed_net_usd": 48.78069999999925,
+        "raw_stressed_r": 0.0018278553659137158,
+        "raw_stop_rate": -0.017855609923598588,
+        "centered_stressed_r": 0.003984913912791852,
+        "centered_stop_rate": -0.016890278955889244
+      },
+      "US30_BOOK": {
+        "expand_n": 419,
+        "contract_n": 415,
+        "expand_stressed_net_usd": 231.74700000000428,
+        "contract_stressed_net_usd": 70.28000000000239,
+        "raw_stressed_r": 0.06928319559040773,
+        "raw_stop_rate": -0.08087529114069641,
+        "centered_stressed_r": 0.07182865681286571,
+        "centered_stop_rate": -0.08061723584616962
+      },
+      "relative_r_did": -0.06784374290007386,
+      "relative_stop_did": 0.06372695689028038,
+      "direction": "CONTRACTION_US30"
+    },
+    "periods": {
+      "P1_2022H2_2023": {
+        "n": 769,
+        "US100_BOOK": {
+          "expand_n": 273,
+          "contract_n": 226,
+          "expand_stressed_net_usd": 12.253999999999989,
+          "contract_stressed_net_usd": 7.6294999999999815,
+          "raw_stressed_r": 0.0008746215085069118,
+          "raw_stop_rate": -0.0015235501961165677,
+          "centered_stressed_r": 0.0008492259430405134,
+          "centered_stop_rate": -0.00149387254728629
+        },
+        "US30_BOOK": {
+          "expand_n": 142,
+          "contract_n": 128,
+          "expand_stressed_net_usd": 106.36000000000077,
+          "contract_stressed_net_usd": 22.630000000000287,
+          "raw_stressed_r": 0.09131537640619676,
+          "raw_stop_rate": -0.11245598591549295,
+          "centered_stressed_r": 0.09519518501077506,
+          "centered_stop_rate": -0.11523444914771647
+        },
+        "relative_r_did": -0.09434595906773455,
+        "relative_stop_did": 0.11374057660043017,
+        "direction": "CONTRACTION_US30"
+      },
+      "P2_2024": {
+        "n": 554,
+        "US100_BOOK": {
+          "expand_n": 155,
+          "contract_n": 201,
+          "expand_stressed_net_usd": 25.539999999999626,
+          "contract_stressed_net_usd": 16.88599999999958,
+          "raw_stressed_r": 0.026782223553828748,
+          "raw_stop_rate": -0.01601669073984914,
+          "centered_stressed_r": 0.026457716299547414,
+          "centered_stop_rate": -0.01595175880665794
+        },
+        "US30_BOOK": {
+          "expand_n": 99,
+          "contract_n": 99,
+          "expand_stressed_net_usd": 7.711999999999677,
+          "contract_stressed_net_usd": 4.524999999998907,
+          "raw_stressed_r": 0.0017307080281725954,
+          "raw_stop_rate": -0.01010101010101011,
+          "centered_stressed_r": 0.005749839946903078,
+          "centered_stop_rate": -0.020384972687406376
+        },
+        "relative_r_did": 0.020707876352644337,
+        "relative_stop_did": 0.004433213880748438,
+        "direction": "NONCONCORDANT"
+      },
+      "P3_2025": {
+        "n": 554,
+        "US100_BOOK": {
+          "expand_n": 122,
+          "contract_n": 201,
+          "expand_stressed_net_usd": 13.131999999999577,
+          "contract_stressed_net_usd": 19.595999999999414,
+          "raw_stressed_r": -0.005478652362122111,
+          "raw_stop_rate": -0.005546040290351523,
+          "centered_stressed_r": -0.006257120335270484,
+          "centered_stop_rate": -0.0044203643167119834
+        },
+        "US30_BOOK": {
+          "expand_n": 102,
+          "contract_n": 129,
+          "expand_stressed_net_usd": 51.068000000000985,
+          "contract_stressed_net_usd": 29.24200000000115,
+          "raw_stressed_r": 0.06309252827351716,
+          "raw_stop_rate": -0.09279525763793889,
+          "centered_stressed_r": 0.065379247489985,
+          "centered_stop_rate": -0.0925782433579582
+        },
+        "relative_r_did": -0.07163636782525548,
+        "relative_stop_did": 0.08815787904124621,
+        "direction": "CONTRACTION_US30"
+      },
+      "P4_2026_YTD": {
+        "n": 356,
+        "US100_BOOK": {
+          "expand_n": 143,
+          "contract_n": 78,
+          "expand_stressed_net_usd": 5.3140000000001235,
+          "contract_stressed_net_usd": 4.669200000000311,
+          "raw_stressed_r": -0.010912644485876173,
+          "raw_stop_rate": -0.07925407925407923,
+          "centered_stressed_r": -0.010932745325598934,
+          "centered_stop_rate": -0.07906709625617614
+        },
+        "US30_BOOK": {
+          "expand_n": 76,
+          "contract_n": 59,
+          "expand_stressed_net_usd": 66.60700000000277,
+          "contract_stressed_net_usd": 13.883000000002063,
+          "raw_stressed_r": 0.12445520810763548,
+          "raw_stop_rate": -0.0624442462087422,
+          "centered_stressed_r": 0.13725335224762938,
+          "centered_stop_rate": -0.08335092524666203
+        },
+        "relative_r_did": -0.14818609757322831,
+        "relative_stop_did": 0.004283828990485891,
+        "direction": "CONTRACTION_US30"
+      }
+    },
+    "components": {
+      "RC16": {
+        "book": "US30_BOOK",
+        "expand_n": 124,
+        "contract_n": 148,
+        "raw_stressed_r": 0.13613737942502693,
+        "raw_stop_rate": -0.05165649520488231,
+        "centered_stressed_r": 0.1272326174477765,
+        "centered_stop_rate": -0.0503784735614054,
+        "book_adjusted_relative_r": -0.1272326174477765,
+        "book_adjusted_relative_stop": 0.0503784735614054,
+        "book_adjusted_direction": "CONTRACTION_US30"
+      },
+      "RC4": {
+        "book": "US30_BOOK",
+        "expand_n": 100,
+        "contract_n": 106,
+        "raw_stressed_r": 0.07988976772234349,
+        "raw_stop_rate": -0.11132075471698111,
+        "centered_stressed_r": 0.08517903982703667,
+        "centered_stop_rate": -0.12247871861453732,
+        "book_adjusted_relative_r": -0.08517903982703667,
+        "book_adjusted_relative_stop": 0.12247871861453732,
+        "book_adjusted_direction": "CONTRACTION_US30"
+      },
+      "Cross": {
+        "book": "US100_BOOK",
+        "expand_n": 403,
+        "contract_n": 402,
+        "raw_stressed_r": -0.00991659311094872,
+        "raw_stop_rate": -0.00754293050874659,
+        "centered_stressed_r": -0.005748005368824195,
+        "centered_stop_rate": -0.009327920123407604,
+        "book_adjusted_relative_r": -0.005748005368824195,
+        "book_adjusted_relative_stop": -0.009327920123407604,
+        "book_adjusted_direction": "NONCONCORDANT"
+      },
+      "Pressure": {
+        "book": "US30_BOOK",
+        "expand_n": 62,
+        "contract_n": 56,
+        "raw_stressed_r": -0.0864916469481484,
+        "raw_stop_rate": -0.06912442396313362,
+        "centered_stressed_r": -0.07287994205202034,
+        "centered_stop_rate": -0.06272797732346794,
+        "book_adjusted_relative_r": 0.07287994205202034,
+        "book_adjusted_relative_stop": 0.06272797732346794,
+        "book_adjusted_direction": "NONCONCORDANT"
+      },
+      "Return": {
+        "book": "US30_BOOK",
+        "expand_n": 133,
+        "contract_n": 105,
+        "raw_stressed_r": 0.06816375199388255,
+        "raw_stop_rate": -0.12230576441102758,
+        "centered_stressed_r": 0.07077575345170714,
+        "centered_stop_rate": -0.08966537577548991,
+        "book_adjusted_relative_r": -0.07077575345170714,
+        "book_adjusted_relative_stop": 0.08966537577548991,
+        "book_adjusted_direction": "CONTRACTION_US30"
+      },
+      "Passive": {
+        "book": "US100_BOOK",
+        "expand_n": 290,
+        "contract_n": 304,
+        "raw_stressed_r": 0.017396745199401875,
+        "raw_stop_rate": -0.03162431941923775,
+        "centered_stressed_r": 0.017183872836860504,
+        "centered_stop_rate": -0.02715059692742849,
+        "book_adjusted_relative_r": 0.017183872836860504,
+        "book_adjusted_relative_stop": -0.02715059692742849,
+        "book_adjusted_direction": "EXPANSION_US100"
+      }
+    }
+  },
+  "direction_breadth": {
+    "periods": {
+      "EXPANSION_US100": 0,
+      "CONTRACTION_US30": 3,
+      "NONCONCORDANT": 1
+    },
+    "components": {
+      "EXPANSION_US100": 1,
+      "CONTRACTION_US30": 3,
+      "NONCONCORDANT": 2
+    },
+    "expansion_us100_full": false,
+    "expansion_us30_opposite_count": 0,
+    "expansion_complete_component_breadth": false,
+    "contraction_us100_full": false,
+    "contraction_us30_opposite_count": 3,
+    "contraction_complete_component_breadth": false
+  },
+  "contribution_concentration": {
+    "periods": {
+      "signed_sum": -0.06784374290007386,
+      "absolute_denominator": 0.07835512266577094,
+      "maximum_absolute_share": 0.388439049146224,
+      "parts": {
+        "P1_2022H2_2023": {
+          "signed_contribution": -0.03043618934402781,
+          "absolute_share": 0.388439049146224
+        },
+        "P2_2024": {
+          "signed_contribution": 0.005255689882848537,
+          "absolute_share": 0.06707525563155631
+        },
+        "P3_2025": {
+          "signed_contribution": -0.01921999460182291,
+          "absolute_share": 0.24529340198734798
+        },
+        "P4_2026_YTD": {
+          "signed_contribution": -0.02344324883707168,
+          "absolute_share": 0.2991922932348717
+        }
+      }
+    },
+    "components": {
+      "signed_sum": -0.06784374290007389,
+      "absolute_denominator": 0.10299931688107847,
+      "maximum_absolute_share": 0.3997445438785223,
+      "parts": {
+        "RC16": {
+          "signed_contribution": -0.041173414946426096,
+          "absolute_share": 0.3997445438785223
+        },
+        "RC4": {
+          "signed_contribution": -0.021022062167718118,
+          "absolute_share": 0.20409904457900327
+        },
+        "Cross": {
+          "signed_contribution": -0.0033077460751547586,
+          "absolute_share": 0.03211425255347892
+        },
+        "Pressure": {
+          "signed_contribution": 0.010285127002555683,
+          "absolute_share": 0.09985626423552636
+        },
+        "Return": {
+          "signed_contribution": -0.0199183067012772,
+          "absolute_share": 0.19338290101743674
+        },
+        "Passive": {
+          "signed_contribution": 0.007292659987946611,
+          "absolute_share": 0.07080299373603235
+        }
+      }
+    }
+  },
+  "gates": {
+    "reserve_expansion_us100": {
+      "pooled_relative_r_did_at_least_plus_0_10": false,
+      "pooled_relative_stop_did_at_most_minus_0_05": false,
+      "us100_positive_r_negative_stop": true,
+      "us30_negative_r_positive_stop": false,
+      "at_least_three_periods_expansion_us100": false,
+      "both_us100_components_expansion_us100": false,
+      "at_least_three_us30_components_opposite": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "reserve_contraction_us30": {
+      "pooled_relative_r_did_at_most_minus_0_10": false,
+      "pooled_relative_stop_did_at_least_plus_0_05": true,
+      "us100_negative_r_positive_stop": false,
+      "us30_positive_r_negative_stop": true,
+      "at_least_three_periods_contraction_us30": true,
+      "both_us100_components_contraction_us30": false,
+      "at_least_three_us30_components_opposite": true,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_pooled_relative_r_did_below_0_05": false,
+      "absolute_pooled_relative_stop_did_below_0_025": false,
+      "neither_direction_more_than_two_periods": false,
+      "neither_direction_has_full_component_breadth": true,
+      "passed": false
+    }
+  },
+  "verdict": "AMBIGUOUS_FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_NO_CANDIDATE",
+  "economic_interpretation": "Neither complete directional gate passes and the complete strong-null rule also fails. The frozen result is ambiguous and retains no candidate or seed.",
+  "decision": {
+    "preserve": "Unconditional US30 and US100 book treatment and all current entry, exit, order, priority, risk, lot, slot, admission and allocation behavior.",
+    "discard": "H.4.1 reserve-balance-conditioned book rotation from this bounded question unless the exact directional pass retained one later question.",
+    "selected_candidate": null,
+    "retained_seed": null,
+    "implementation_authorized": false,
+    "promotion": "none"
+  },
+  "derived_rows": {
+    "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_DERIVED_ROWS_V1.csv",
+    "rows": 2233,
+    "bytes": 1347568,
+    "sha256": "3C20C262D84CC3FDC82A83F9752DCA8678E7EA6F99D2F1E3095E5D13B9FF2F67"
+  },
+  "limits": "The dated-release association does not identify a balance-sheet component, liquidity magnitude, intraday publication effect, deployable risk scale or causal policy intervention.",
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_commit_push_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}

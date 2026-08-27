@@ -50,3 +50,16 @@ before its body executed because five diagnostic strings used an undelimited
 `$period:` interpolation. The recorded correction changes those strings only to
 `${period}:`; no input, reconstruction, metric, gate or verdict changes, and no
 economic field or output was opened by the rejected invocation.
+
+Unit 092 is closed `AMBIGUOUS_FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_NO_CANDIDATE`.
+The centered expansion-minus-contraction effects were `+0.003985R/-0.016890`
+stop for US100 and `+0.071829R/-0.080617` stop for US30, so the relative
+US100-minus-US30 DID was `-0.067844R/+0.063727` stop. Contraction-US30
+direction held in three periods but missed the `-0.10R` magnitude and complete
+US100 component/book signs. Strong null also failed. Preserve unconditional
+book treatment and retain no H.4.1 seed, candidate, implementation or adjacent
+follow-up.
+
+Implementation failures and corrections are internal audit history within this
+single experiment. They do not create additional Frontier research units or
+separate scheduling boundaries.

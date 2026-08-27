@@ -1,0 +1,171 @@
+{
+  "schema": "zeta-next-federal-reserve-reserve-balance-book-state-closure-v1",
+  "created_at_local": "2026-08-27T22:07:51+09:00",
+  "status": "CLOSED_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "federal-reserve-reserve-balance-book-state-092",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": [
+      "macro"
+    ]
+  },
+  "verdict": "AMBIGUOUS_FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_NO_CANDIDATE",
+  "integrity": {
+    "passed": true,
+    "pins": 19,
+    "pin_failures": [],
+    "releases": 214,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "mapped_lifecycles": 2233,
+    "stops": 206,
+    "minimum_period_state_days": 62,
+    "minimum_period_book_state_lifecycles": 59,
+    "minimum_pooled_component_state_lifecycles": 56,
+    "requirements": {
+      "all_declared_and_acquired_pins": true,
+      "release_date_row_and_state_integrity": true,
+      "event_and_lifecycle_anchors": true,
+      "causal_mapping_complete": true,
+      "declared_density": true,
+      "relative_r_contribution_identity": true
+    },
+    "faults": []
+  },
+  "reserve_state_counts": {
+    "releases": {
+      "RESERVE_EXPAND": 108,
+      "RESERVE_CONTRACT": 106
+    },
+    "normal_days": {
+      "RESERVE_EXPAND": 535,
+      "RESERVE_CONTRACT": 516
+    },
+    "signals": {
+      "RESERVE_EXPAND": 1215,
+      "RESERVE_CONTRACT": 1214
+    },
+    "births": {
+      "RESERVE_EXPAND": 1112,
+      "RESERVE_CONTRACT": 1121
+    }
+  },
+  "supply_effect_expand_minus_contract": {
+    "signals_per_day": -0.08168514091139611,
+    "births_per_day": -0.09397594725784231,
+    "fewer_than_three_signal_day_rate": 0.016804317901905397
+  },
+  "book_effects": {
+    "US100_BOOK": {
+      "expand_n": 693,
+      "contract_n": 706,
+      "expand_stressed_net_usd": 56.239999999999355,
+      "contract_stressed_net_usd": 48.78069999999925,
+      "raw_stressed_r": 0.0018278553659137158,
+      "raw_stop_rate": -0.017855609923598588,
+      "centered_stressed_r": 0.003984913912791852,
+      "centered_stop_rate": -0.016890278955889244
+    },
+    "US30_BOOK": {
+      "expand_n": 419,
+      "contract_n": 415,
+      "expand_stressed_net_usd": 231.74700000000428,
+      "contract_stressed_net_usd": 70.28000000000239,
+      "raw_stressed_r": 0.06928319559040773,
+      "raw_stop_rate": -0.08087529114069641,
+      "centered_stressed_r": 0.07182865681286571,
+      "centered_stop_rate": -0.08061723584616962
+    }
+  },
+  "pooled_relative_book_effect": {
+    "relative_r_did": -0.06784374290007386,
+    "relative_stop_did": 0.06372695689028038,
+    "direction": "CONTRACTION_US30"
+  },
+  "direction_breadth": {
+    "periods": {
+      "EXPANSION_US100": 0,
+      "CONTRACTION_US30": 3,
+      "NONCONCORDANT": 1
+    },
+    "components": {
+      "EXPANSION_US100": 1,
+      "CONTRACTION_US30": 3,
+      "NONCONCORDANT": 2
+    },
+    "expansion_complete_component_breadth": false,
+    "contraction_complete_component_breadth": false
+  },
+  "contribution_caps": {
+    "period_max_absolute_share": 0.388439049146224,
+    "component_max_absolute_share": 0.3997445438785223
+  },
+  "gates": {
+    "reserve_expansion_us100": {
+      "pooled_relative_r_did_at_least_plus_0_10": false,
+      "pooled_relative_stop_did_at_most_minus_0_05": false,
+      "us100_positive_r_negative_stop": true,
+      "us30_negative_r_positive_stop": false,
+      "at_least_three_periods_expansion_us100": false,
+      "both_us100_components_expansion_us100": false,
+      "at_least_three_us30_components_opposite": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "reserve_contraction_us30": {
+      "pooled_relative_r_did_at_most_minus_0_10": false,
+      "pooled_relative_stop_did_at_least_plus_0_05": true,
+      "us100_negative_r_positive_stop": false,
+      "us30_positive_r_negative_stop": true,
+      "at_least_three_periods_contraction_us30": true,
+      "both_us100_components_contraction_us30": false,
+      "at_least_three_us30_components_opposite": true,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_pooled_relative_r_did_below_0_05": false,
+      "absolute_pooled_relative_stop_did_below_0_025": false,
+      "neither_direction_more_than_two_periods": false,
+      "neither_direction_has_full_component_breadth": true,
+      "passed": false
+    }
+  },
+  "selected_candidate": null,
+  "retained_seed": null,
+  "result": {
+    "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_RESULT_V1.json",
+    "bytes": 30531,
+    "sha256": "0E9065F9AF477C6725EC077190B7039DA011DC9161FD00328E8727E7244163CC"
+  },
+  "derived_rows": {
+    "path": "lab/research/federal-reserve-reserve-balance-book-state-v1/evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_DERIVED_ROWS_V1.csv",
+    "bytes": 1347568,
+    "rows": 2233,
+    "sha256": "3C20C262D84CC3FDC82A83F9752DCA8678E7EA6F99D2F1E3095E5D13B9FF2F67"
+  },
+  "recorded_implementation_failures": 3,
+  "recorded_implementation_corrections": 3,
+  "preexecution_syntax_precheck_rejections": 1,
+  "economic_contract_changes": 0,
+  "successful_official_acquisition_batches": 1,
+  "successful_fixed_economic_aggregations": 1,
+  "economic_metric_reruns_or_rejudgments": 0,
+  "same_family_rescue": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}
