@@ -1,0 +1,93 @@
+{
+  "schema": "zeta-next-signal-deficit-late-session-relative-dislocation-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_ECONOMIC_FAILURE_NO_CANDIDATE",
+  "unit": "signal-deficit-late-session-relative-dislocation-086",
+  "family": "signal-deficit-late-session-relative-dislocation-v1",
+  "verdict": "FAIL_LATE_SESSION_RELATIVE_DISLOCATION_NO_P1_DIRECTION_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "DC7D74309C04713DD1FB6D8F72D80010E28DE5A141C51736F8358AB83EB24E0C",
+    "declaration_commit": "6245dc66d070102bbc13082e13f1c71be95619d2",
+    "result_sha256": "B9D4E4BC77AB24A4A40A2017DF760781FD7C907D60D85469A50362BBF3C831CE",
+    "result_bytes": 5874
+  },
+  "integrity": {
+    "passed": true,
+    "pins": 13,
+    "event_rows": 16477,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "signal_deficit_days": 618,
+    "eligible_candidates": 576,
+    "exact_two_signal_candidates": 353,
+    "density_passed": true,
+    "faults": 0
+  },
+  "p1_findings": {
+    "continuation": {
+      "double_spread_net_usd": -26.877450000000007,
+      "profit_factor": 0.7599672602860841,
+      "net_to_maximum_closed_drawdown": -0.5818448483011683,
+      "both_calendar_splits_positive": false,
+      "both_books_positive": false,
+      "gate_passed": false
+    },
+    "reversion": {
+      "double_spread_net_usd": 14.571650000000005,
+      "profit_factor": 1.1594919819751779,
+      "maximum_closed_drawdown_usd": 15.94824999999996,
+      "net_to_maximum_closed_drawdown": 0.9136833194864666,
+      "calendar_split_nets_usd": {"P1_2022H2":9.242550000000065,"P1_2023":5.329099999999936},
+      "book_nets_usd": {"US30":24.752500000000005,"US100":-10.180849999999994},
+      "both_calendar_splits_positive": true,
+      "both_books_positive": false,
+      "gate_passed": false
+    }
+  },
+  "selection": {
+    "selected_direction": null,
+    "retained_candidate": null,
+    "p2_p3_confirmation_opened": false,
+    "p4_latest_veto_opened": false,
+    "reason": "Continuation was plainly negative. Reversion passed pooled net, profit factor and both calendar splits, but missed the frozen 1.25 net-to-drawdown floor and was contradicted across existing books because US100 was negative."
+  },
+  "decision_translation": {
+    "preserve": [
+      "all six current components and every current opportunity",
+      "current entry, order, admission, priority, risk, lot, slot, stop and exit behavior",
+      "the authoritative at-least-three-starts-per-normal-day requirement"
+    ],
+    "discard": [
+      "the fixed late-session relative-dislocation continuation book",
+      "the fixed late-session relative-dislocation reversion book",
+      "the structural coverage upper bound as evidence of admitted or profitable fills"
+    ],
+    "automatic_followups_not_opened": [
+      "Unit 022 observer repair",
+      "18:00 or 20:00 entry, another exit or holding horizon",
+      "residual-strength threshold, zero/one/two-signal subgroup, symbol-only or direction-side rescue",
+      "US500 trade, hedge, admission, priority, risk, lot, slot, EA or Live candidate"
+    ],
+    "future_lab_candidate": null,
+    "live_candidate": null,
+    "promotion": "none"
+  },
+  "execution_accounting": {
+    "successful_fixed_source_free_aggregations": 1,
+    "implementation_only_pre_metric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "same_family_successor": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "whole_map_recomparison_required_after_push": true,
+  "next": "freeze_family_commit_push_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}
