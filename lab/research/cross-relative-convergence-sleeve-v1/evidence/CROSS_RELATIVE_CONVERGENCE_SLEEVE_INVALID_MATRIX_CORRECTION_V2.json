@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-cross-relative-convergence-sleeve-invalid-matrix-correction-v2",
+  "created_at_local": "2026-08-28",
+  "status": "SECOND_INCOMPLETE_MATRIX_DISCARDED_AND_TRANSIENT_STATE_SLOT_WRITE_CORRECTED",
+  "unit": "cross-relative-convergence-sleeve-093",
+  "family": "cross-relative-convergence-sleeve-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "internal_implementation_correction": true,
+    "micro_split": false,
+    "note": "The four Tester paths, this correction, recompilation and the next full restart remain internal events of the one frozen CONTROL versus DUAL_APPEND experiment."
+  },
+  "discarded_matrix": {
+    "root": "lab/artifacts/ea-files/cross-relative-convergence-sleeve-v1/invalid-matrix-attempt-v2/",
+    "paths_preserved": [
+      {
+        "path": "binding-control",
+        "process_exit": 0,
+        "wall_seconds": 670.404,
+        "files": 16,
+        "bytes": 16321065,
+        "manifest_sha256": "69C1B5BC00E0197C13CE96D40DC7C71E7ED36C5DFEBC3E3F7B32E606781DF5ED",
+        "integrity_before_matrix_fault": "PASS_PENDING_ADJACENT_PAIR"
+      },
+      {
+        "path": "binding-dual-append",
+        "process_exit": 0,
+        "wall_seconds": 789.721,
+        "files": 16,
+        "bytes": 30816863,
+        "manifest_sha256": "58B437D5F291D7B255F8BDC3FD9DCB4F87F4E08C6FE7AD26D17F3F13E3CD0911",
+        "integrity_before_matrix_fault": "PASS"
+      },
+      {
+        "path": "latest-control",
+        "process_exit": 0,
+        "wall_seconds": 65.343,
+        "files": 16,
+        "bytes": 20281686,
+        "manifest_sha256": "614305274096156451EC4D0CCD4AA37770290FED65604DF08E8BAF24C04D8A2A",
+        "integrity_before_matrix_fault": "PASS_PENDING_ADJACENT_PAIR"
+      },
+      {
+        "path": "latest-dual-append",
+        "process_exit": 0,
+        "wall_seconds": 37.611,
+        "files": 16,
+        "bytes": 19965841,
+        "manifest_sha256": "B9FAD489149A92A69AA2D8396A42DD8AC3509F602E73787A2742659D2DCC6E29",
+        "integrity_before_matrix_fault": "FAIL_PERSISTENCE"
+      }
+    ],
+    "files": 64,
+    "bytes": 87385455,
+    "manifest_sha256": "5128D6C9A1C1EB318F527BA0EACF3EB13C7E17B498175F2A012FD7E17A0D7E82",
+    "valid_matrix_paths": 0,
+    "economic_aggregation_or_comparison_performed": false,
+    "economic_outcomes_used": false,
+    "density_shortfall_used_as_economic_evidence": false
+  },
+  "fault": {
+    "path": "ISOLATED_LATEST DUAL_APPEND",
+    "server_time": "2026.06.05 13:00:00",
+    "local_log_time": "2026-08-28T01:36:05.524+09:00",
+    "message": "persistence failure; new entries blocked: cannot open state snapshot error=5004",
+    "mt5_error": 5004,
+    "final_integrity": {
+      "reason": 1,
+      "safety_stopped": false,
+      "persistence_failed": true,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calc_failures": 0,
+      "protection_mismatches": 0
+    },
+    "effect": "The sticky persistence guard correctly blocked later entries, so the apparent latest density was a fault artifact and was not judged.",
+    "matrix_rule": "Discard the whole incomplete matrix and restart all four paths after an implementation-only correction."
+  },
+  "root_cause_evidence": {
+    "permanent_path_or_schema_failure": false,
+    "transient_selected_slot_open_failure": true,
+    "sequence_before_failed_save": 166,
+    "failed_save_sequence": 167,
+    "failed_preferred_slot": "STATE_PATH_B",
+    "later_successful_snapshot_writes_in_same_tester_path": [
+      {
+        "slot": "STATE_PATH_B",
+        "sequence": 207,
+        "last_write_local": "2026-08-28T01:36:18.8801317+09:00"
+      },
+      {
+        "slot": "STATE_PATH_A",
+        "sequence": 208,
+        "last_write_local": "2026-08-28T01:36:19.0754762+09:00"
+      }
+    ],
+    "interpretation": "The same two paths and unchanged schema became writable again inside the same execution. Existing five by 100 ms retries exhausted on the parity-selected B slot, while the redundant A slot was never attempted. LoadState already selects the highest valid sequence independent of slot, and WriteCurrentSnapshot already uses a preferred/fallback slot pattern.",
+    "not_an_economic_or_data_failure": true
+  },
+  "correction": {
+    "owning_file": "lab/research/cross-relative-convergence-sleeve-v1/mt5/src/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh",
+    "before_bytes": 74056,
+    "before_sha256": "EF319D25F3437B458AC23B0A2089BC70D00E71A1B4756F42991AF77A4A896054",
+    "after_bytes": 74849,
+    "after_sha256": "21DB4CFCC8CA6018CD5D07C3A0A644EA2FBE7B448E114B5D6D97DBC6DEAAFFE7",
+    "line_endings": "CRLF_ONLY",
+    "bare_lf": 0,
+    "behavior": "SaveState first performs the unchanged bounded retry on the parity-selected state slot. Only if that open fails, it performs the same bounded retry on the already existing alternate state slot and records a bounded recovery line. If both slots fail, it restores the prior sequence and timestamp and invokes the unchanged sticky persistence failure guard.",
+    "why_sequence_semantics_are_preserved": "ReadState validates the payload sequence and LoadState selects the highest valid sequence regardless of A/B pathname. No reader requires sequence parity to match the slot name.",
+    "new_state_path_or_format": false,
+    "persistence_failure_guard_weakened": false,
+    "economic_contract_changes": 0
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "path": "lab/research/cross-relative-convergence-sleeve-v1/evidence/METAEDITOR_COMPILE_LOG_V6.txt",
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_ms": 2179,
+    "cpu": "X64 Regular",
+    "bytes": 16804,
+    "sha256": "F6FA7812AD94DD515127440CDC7E30D96A5C7707CC88BDA6F27E411BA7C83560"
+  },
+  "corrected_freeze": {
+    "code_files": 16,
+    "code_bytes": 365369,
+    "code_manifest_sha256": "8894F80AF26140EEC66D9C6E7C1173240D97DF4641D19E5F6BEDE9D2E9CDE540",
+    "configuration_files": 6,
+    "configuration_bytes": 3977,
+    "configuration_manifest_sha256": "1CA4C618C369333C440FAE6F37A99A63D8F6F9947AC085843E2210529A622315",
+    "source_and_binary_files": 17,
+    "source_and_binary_bytes": 569235,
+    "source_and_binary_manifest_sha256": "C3BC22EE9B5F3022408A8F00D33D54943BB25887E22F76450DA1C4F2004E348B",
+    "binary_bytes": 203866,
+    "binary_sha256": "261243A9696294B33CC669C634ECDD52B850D5087BC5BA1A9F11EBCF9E273B56",
+    "runtime_source_and_configuration_parity_mismatches": 0
+  },
+  "unchanged_contract": {
+    "profiles_periods_and_matrix_order": true,
+    "signal_threshold_scale_clock_direction_and_hold": true,
+    "market_order_fill_and_component_order": true,
+    "risk_stop_cost_metric_density_candidate_and_verdict_rules": true,
+    "terminal_or_symbol_data_change": false,
+    "economic_contract_changes": 0
+  },
+  "governance": {
+    "pure_implementation_correction_numeric_cap": null,
+    "post_valid_complete_matrix_selective_reruns_or_rejudgments": 0,
+    "program_6_opened": false,
+    "broker_or_account_state_queried": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "next": "refreeze_compile_runtime_and_environment_commit_push_then_restart_all_four_declared_paths_from_binding_long_control"
+}

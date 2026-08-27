@@ -1109,11 +1109,30 @@ bool SaveState()
    const datetime previous_snapshot = last_snapshot_utc;
    ++state_sequence;
    last_snapshot_utc = TimeGMT();
-   const string path =
+   const string preferred_path =
       ((state_sequence % 2) == 0 ? STATE_PATH_A : STATE_PATH_B);
-   const int handle = OpenFileWithRetry(path,
-                                        FILE_WRITE | FILE_CSV | FILE_ANSI,
-                                        ',');
+   const string alternate_path =
+      ((state_sequence % 2) == 0 ? STATE_PATH_B : STATE_PATH_A);
+   string path = preferred_path;
+   int handle = OpenFileWithRetry(path,
+                                  FILE_WRITE | FILE_CSV | FILE_ANSI,
+                                  ',');
+   if(handle == INVALID_HANDLE)
+     {
+      const int preferred_error = GetLastError();
+      handle = OpenFileWithRetry(alternate_path,
+                                 FILE_WRITE | FILE_CSV | FILE_ANSI,
+                                 ',');
+      if(handle != INVALID_HANDLE)
+        {
+         path = alternate_path;
+         PrintFormat("%s state snapshot write recovered via alternate slot "
+                     "preferred=%s alternate=%s sequence=%I64d "
+                     "preferred_error=%d",
+                     EXECUTION_VERSION, preferred_path, alternate_path,
+                     state_sequence, preferred_error);
+        }
+     }
    if(handle == INVALID_HANDLE)
      {
       state_sequence = previous_sequence;
