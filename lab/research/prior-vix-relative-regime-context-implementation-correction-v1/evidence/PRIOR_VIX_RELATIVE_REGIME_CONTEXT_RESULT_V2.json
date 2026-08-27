@@ -1,0 +1,209 @@
+{
+  "schema": "zeta-next-prior-vix-relative-regime-context-result-v2",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_045_IMPLEMENTATION_CORRECTION_COMPLETE_VALID",
+  "unit": "prior-vix-relative-regime-context-045",
+  "run": "implementation-correction-r1",
+  "family": "prior-vix-relative-regime-context-implementation-correction-v1",
+  "declaration": {
+    "bytes": 8763,
+    "sha256": "C2B91464E8B6B3CC87735F24080EB3A0C4B1D67BCE8474E8D89506EE8C6BD5C7"
+  },
+  "correction": {
+    "historical_expression": "Where-Object Period-eq$period",
+    "corrected_expression": "Where-Object { $_.Period -eq $period }",
+    "economic_contract_changes": 0
+  },
+  "execution": {
+    "successful_corrected_valid_aggregations": 1,
+    "internal_runtime_defects_corrected_before_valid_result": 2,
+    "internal_runtime_corrections": [
+      "Wrap zero-or-one failing gate selections in array subexpressions before reading Count",
+      "Use native PowerShell boolean literals in the result object"
+    ],
+    "post_valid_result_metric_reruns_or_rejudgments": 0,
+    "retained_analysis_cli": false,
+    "new_data_acquisitions": 0,
+    "mql_changes": 0,
+    "compile_runs": 0,
+    "tester_runs": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "program_6_opened": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "integrity": {
+    "passed": true,
+    "pins_checked": 11,
+    "cboe": {
+      "bytes": 471901,
+      "sha256": "9E6A6958041079E56848337439BE5B250B2FE97131751FCD7CF4750A7D31720E",
+      "rows": 9258,
+      "unique_strictly_increasing_dates": 9258,
+      "positive_finite_close_faults": 0,
+      "first_date": "1990-01-02",
+      "last_date": "2026-08-25"
+    },
+    "portfolio": {
+      "files": 6,
+      "event_rows": 16477,
+      "exact_duplicate_full_rows": 0,
+      "lifecycles": 2233,
+      "strategy_counts": {
+        "RC16": 272,
+        "RC4": 206,
+        "Cross": 805,
+        "Pressure": 118,
+        "Return": 238,
+        "Passive": 594
+      },
+      "stressed_net_usd_2x": 407.04770000000565,
+      "final_counts": {
+        "CLOSE": 2027,
+        "EXTERNAL_CLOSE": 206
+      },
+      "stops": 206,
+      "faults": 0
+    },
+    "classification": {
+      "births": 2233,
+      "unique_birth_dates": 1000,
+      "unique_selected_prior_close_dates": 998,
+      "first_birth_date": "2022-08-01",
+      "last_birth_date": "2026-08-20",
+      "first_selected_prior_close": "2022-07-29",
+      "latest_selected_prior_close": "2026-08-19",
+      "earliest_trailing_window_date": "2021-08-04",
+      "regime_counts": {
+        "LOW": 924,
+        "MIDDLE": 610,
+        "HIGH": 699
+      },
+      "period_counts": {
+        "P1_2022H2_2023": {"LOW": 519, "MIDDLE": 164, "HIGH": 86},
+        "P2_2024": {"LOW": 196, "MIDDLE": 132, "HIGH": 226},
+        "P3_2025": {"LOW": 121, "MIDDLE": 197, "HIGH": 236},
+        "P4_2026_YTD": {"LOW": 88, "MIDDLE": 117, "HIGH": 151}
+      },
+      "strategy_counts": {
+        "RC16": {"LOW": 103, "MIDDLE": 77, "HIGH": 92},
+        "RC4": {"LOW": 80, "MIDDLE": 56, "HIGH": 70},
+        "Cross": {"LOW": 355, "MIDDLE": 224, "HIGH": 226},
+        "Pressure": {"LOW": 30, "MIDDLE": 21, "HIGH": 67},
+        "Return": {"LOW": 105, "MIDDLE": 58, "HIGH": 75},
+        "Passive": {"LOW": 251, "MIDDLE": 174, "HIGH": 169}
+      },
+      "strategy_period_regime_cells": 72,
+      "strictly_prior_and_complete_252_window_faults": 0
+    },
+    "centering": {
+      "strategy_period_cells": 24,
+      "maximum_cell_centered_r_sum_residual": 4.67247768254353e-15,
+      "maximum_cell_centered_stop_sum_residual": 8.744741042399085e-15
+    }
+  },
+  "reports": {
+    "LOW_RELATIVE_VIX": {
+      "regime": "LOW",
+      "n": 924,
+      "stressed_net_usd": 106.57170000000215,
+      "raw_mean_stressed_r": 0.01717407323270842,
+      "raw_stop_rate": 0.048701298701298704,
+      "pooled_centered_r_residual": -0.014559122062559422,
+      "pooled_centered_stop_residual": -0.020674803650258453,
+      "centered_r_numerator": -13.452628785804906,
+      "centered_stop_numerator": -19.103518572838812,
+      "periods": {
+        "P1_2022H2_2023": {"n": 519, "centered_r": -0.01559394952608595, "centered_stop": -0.018854367591615958, "centered_r_numerator": -8.093259804038608, "absolute_centered_r_contribution_share": 0.561438915930947},
+        "P2_2024": {"n": 196, "centered_r": -0.021073878191122747, "centered_stop": 0.010032866495089035, "centered_r_numerator": -4.130480125460059, "absolute_centered_r_contribution_share": 0.2865362462175513},
+        "P3_2025": {"n": 121, "centered_r": -0.014133714048971237, "centered_stop": -0.07941982774493438, "centered_r_numerator": -1.7101793999255197, "absolute_centered_r_contribution_share": 0.11863714888560631},
+        "P4_2026_YTD": {"n": 88, "centered_r": 0.005469210722946346, "centered_stop": -0.019031187144211103, "centered_r_numerator": 0.4812905436192785, "absolute_centered_r_contribution_share": 0.033387688965895314}
+      },
+      "strategies": {
+        "RC16": {"n": 103, "centered_r": -0.025806911283592648, "centered_stop": -0.027640916973594887, "centered_r_numerator": -2.658111862210043, "absolute_centered_r_contribution_share": 0.19211560369500752},
+        "RC4": {"n": 80, "centered_r": -0.043593628529504005, "centered_stop": 0.009023394145394024, "centered_r_numerator": -3.48749028236032, "absolute_centered_r_contribution_share": 0.25205910650391655},
+        "Cross": {"n": 355, "centered_r": -0.004351232437961676, "centered_stop": -0.01013608322514701, "centered_r_numerator": -1.5446875154763948, "absolute_centered_r_contribution_share": 0.11164262075455089},
+        "Pressure": {"n": 30, "centered_r": 0.006389552290715478, "centered_stop": -0.012958074534161496, "centered_r_numerator": 0.19168656872146436, "absolute_centered_r_contribution_share": 0.01385418777655592},
+        "Return": {"n": 105, "centered_r": -0.029386524353822174, "centered_stop": -0.08549390906072929, "centered_r_numerator": -3.085585057151328, "absolute_centered_r_contribution_share": 0.22301132034152132},
+        "Passive": {"n": 251, "centered_r": -0.011428050347921449, "centered_stop": -0.0159938781827154, "centered_r_numerator": -2.8684406373282836, "absolute_centered_r_contribution_share": 0.2073171609284477}
+      },
+      "sign_breadth": {"centered_r_periods": 3, "centered_stop_periods": 3, "centered_r_strategies": 5, "centered_stop_strategies": 5},
+      "concentration": {"maximum_period_centered_r_contribution_share": 0.561438915930947, "maximum_strategy_centered_r_contribution_share": 0.25205910650391655},
+      "density_gates": {"pooled_at_least_600": true, "each_period_at_least_80": true, "each_strategy_at_least_30": true, "all_24_strategy_period_cells": true},
+      "information_gates": {"absolute_pooled_centered_r_at_least_0_10": false, "absolute_pooled_centered_stop_at_least_0_05": false, "economic_coherence_nonzero_opposite_signs": false, "centered_r_sign_at_least_three_periods": true, "centered_stop_sign_at_least_three_periods": true, "centered_r_sign_at_least_four_strategies": true, "centered_stop_sign_at_least_four_strategies": true, "maximum_period_r_contribution_at_most_0_60": true, "maximum_strategy_r_contribution_at_most_0_55": true},
+      "failed_gates": ["absolute_pooled_centered_r_at_least_0_10", "absolute_pooled_centered_stop_at_least_0_05", "economic_coherence_nonzero_opposite_signs"],
+      "passed": false
+    },
+    "MIDDLE_RELATIVE_VIX_CONTEXT": {
+      "regime": "MIDDLE",
+      "n": 610,
+      "stressed_net_usd": 110.43250000000113,
+      "raw_mean_stressed_r": 0.03405302870282979,
+      "raw_stop_rate": 0.08360655737704918,
+      "pooled_centered_r_residual": 0.0016633270935942916,
+      "pooled_centered_stop_residual": -0.009082144384354954,
+      "centered_r_numerator": 1.0146295270925179,
+      "centered_stop_numerator": -5.540108074456522,
+      "periods": {
+        "P1_2022H2_2023": {"n": 164, "centered_r": 0.02093504447757255, "centered_stop": 0.024527997879890354, "centered_r_numerator": 3.4333472943218983, "absolute_centered_r_contribution_share": 0.3080265832840748},
+        "P2_2024": {"n": 132, "centered_r": -0.0037436910887076896, "centered_stop": -0.021127641543013827, "centered_r_numerator": -0.494167223709415, "absolute_centered_r_contribution_share": 0.04433476384457973},
+        "P3_2025": {"n": 197, "centered_r": -0.02320635906886827, "centered_stop": -0.015035363037810674, "centered_r_numerator": -4.571652736567049, "absolute_centered_r_contribution_share": 0.4101509261049464},
+        "P4_2026_YTD": {"n": 117, "centered_r": 0.022624805068778498, "centered_stop": -0.03258020961223936, "centered_r_numerator": 2.6471021930470844, "absolute_centered_r_contribution_share": 0.23748772676639915}
+      },
+      "strategies": {
+        "RC16": {"n": 77, "centered_r": -0.028013498636565114, "centered_stop": 0.04325787050182904, "centered_r_numerator": -2.157039395015514, "absolute_centered_r_contribution_share": 0.13268444787042},
+        "RC4": {"n": 56, "centered_r": 0.09084493889892177, "centered_stop": -0.04977851989852544, "centered_r_numerator": 5.087316578339619, "absolute_centered_r_contribution_share": 0.3129325282138261},
+        "Cross": {"n": 224, "centered_r": -0.012098375674362283, "centered_stop": -0.013158764381313968, "centered_r_numerator": -2.7100361510571513, "absolute_centered_r_contribution_share": 0.16670054855873884},
+        "Pressure": {"n": 21, "centered_r": 0.046058367907186495, "centered_stop": -0.08890121265897666, "centered_r_numerator": 0.9672257260509164, "absolute_centered_r_contribution_share": 0.05949627611052924},
+        "Return": {"n": 58, "centered_r": -0.047483891357541406, "centered_stop": 0.0051197097303882525, "centered_r_numerator": -2.7540656987374015, "absolute_centered_r_contribution_share": 0.1694089071716775},
+        "Passive": {"n": 174, "centered_r": 0.014834646365011766, "centered_stop": -0.008998973941894452, "centered_r_numerator": 2.581228467512047, "absolute_centered_r_contribution_share": 0.15877729207480845}
+      },
+      "sign_breadth": {"centered_r_periods": 2, "centered_stop_periods": 3, "centered_r_strategies": 3, "centered_stop_strategies": 4},
+      "concentration": {"maximum_period_centered_r_contribution_share": 0.4101509261049464, "maximum_strategy_centered_r_contribution_share": 0.3129325282138261},
+      "density_gates": null,
+      "information_gates": null,
+      "failed_gates": [],
+      "passed": null
+    },
+    "HIGH_RELATIVE_VIX": {
+      "regime": "HIGH",
+      "n": 699,
+      "stressed_net_usd": 190.04350000000176,
+      "raw_mean_stressed_r": 0.05305601490906123,
+      "raw_stop_rate": 0.15736766809728184,
+      "pooled_centered_r_residual": 0.01779399035581173,
+      "pooled_centered_stop_residual": 0.03525554599040861,
+      "centered_r_numerator": 12.437999258712399,
+      "centered_stop_numerator": 24.643626647295616,
+      "periods": {
+        "P1_2022H2_2023": {"n": 86, "centered_r": 0.054185029182752475, "centered_stop": 0.06700959450868312, "centered_r_numerator": 4.659912509716713, "absolute_centered_r_contribution_share": 0.24926269954470565},
+        "P2_2024": {"n": 226, "centered_r": 0.020463041368006526, "centered_stop": 0.003638968365665413, "centered_r_numerator": 4.624647349169475, "absolute_centered_r_contribution_share": 0.24737633599183795},
+        "P3_2025": {"n": 236, "centered_r": 0.026617932781748167, "centered_stop": 0.0532701935406176, "centered_r_numerator": 6.281832136492567, "absolute_centered_r_contribution_share": 0.3360205654427648},
+        "P4_2026_YTD": {"n": 151, "centered_r": -0.02071783269315472, "centered_stop": 0.03633529134650717, "centered_r_numerator": -3.1283927366663624, "absolute_centered_r_contribution_share": 0.16734039902069156}
+      },
+      "strategies": {
+        "RC16": {"n": 92, "centered_r": 0.05233860062201686, "centered_stop": -0.00525914761261487, "centered_r_numerator": 4.815151257225551, "absolute_centered_r_contribution_share": 0.26817173430390423},
+        "RC4": {"n": 70, "centered_r": -0.02285466137113288, "centered_stop": 0.029510365466941493, "centered_r_numerator": -1.5998262959793015, "absolute_centered_r_contribution_share": 0.08909962936968314},
+        "Cross": {"n": 226, "centered_r": 0.018826210913865275, "centered_stop": 0.028964038789121654, "centered_r_numerator": 4.254723666533552, "absolute_centered_r_contribution_share": 0.2369596641281008},
+        "Pressure": {"n": 67, "centered_r": -0.017297198429438512, "centered_stop": 0.03366668211736348, "centered_r_numerator": -1.1589122947723802, "absolute_centered_r_contribution_share": 0.06454366714417602},
+        "Return": {"n": 75, "centered_r": 0.07786201007851642, "centered_stop": 0.11573223049352097, "centered_r_numerator": 5.839650755888732, "absolute_centered_r_contribution_share": 0.3252295072944643},
+        "Passive": {"n": 169, "centered_r": 0.0016994802947706258, "centered_stop": 0.033019437217462824, "centered_r_numerator": 0.28721216981623576, "absolute_centered_r_contribution_share": 0.0159957977596714}
+      },
+      "sign_breadth": {"centered_r_periods": 3, "centered_stop_periods": 4, "centered_r_strategies": 4, "centered_stop_strategies": 5},
+      "concentration": {"maximum_period_centered_r_contribution_share": 0.3360205654427648, "maximum_strategy_centered_r_contribution_share": 0.3252295072944643},
+      "density_gates": {"pooled_at_least_600": true, "each_period_at_least_80": true, "each_strategy_at_least_30": true, "all_24_strategy_period_cells": true},
+      "information_gates": {"absolute_pooled_centered_r_at_least_0_10": false, "absolute_pooled_centered_stop_at_least_0_05": false, "economic_coherence_nonzero_opposite_signs": false, "centered_r_sign_at_least_three_periods": true, "centered_stop_sign_at_least_three_periods": true, "centered_r_sign_at_least_four_strategies": true, "centered_stop_sign_at_least_four_strategies": true, "maximum_period_r_contribution_at_most_0_60": true, "maximum_strategy_r_contribution_at_most_0_55": true},
+      "failed_gates": ["absolute_pooled_centered_r_at_least_0_10", "absolute_pooled_centered_stop_at_least_0_05", "economic_coherence_nonzero_opposite_signs"],
+      "passed": false
+    }
+  },
+  "selection": {
+    "selected_variant": null,
+    "retained_later_independently_named_question": null,
+    "selected_trading_candidate": null,
+    "automatic_successor_opened": false,
+    "unit_045_rule_change": null
+  },
+  "verdict": "NO_PRIOR_VIX_RELATIVE_REGIME_CONTEXT_PASSED",
+  "next": "freeze_result_and_closure_then_recompare_programs_1_5_and_7_without_adjacent_vix_rescue"
+}

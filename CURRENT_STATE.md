@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0264`
+- Latest state ID: `STATE-0265`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery 
 ## Active work
 
 - Active engineering boundary: none; bounded RLO1 unexpected-stop recovery completed through committed no-owner evidence, exact `0/0 → 1/1`, two healthy snapshots and dashboard restoration
-- Active research boundary: Program 2 / meso Unit 045 implementation-correction sibling; the original broad prior-VIX relative-regime experiment is reopened only to replace the fused period selector with valid exact property/operator/value syntax, then it closes as one experiment boundary
+- Active research boundary: none; corrected Unit 045 is validly closed null with no VIX-context seed, the whole map is recomputed, and only a genuinely independent meaningful experiment may open after this boundary reaches `origin/main`
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

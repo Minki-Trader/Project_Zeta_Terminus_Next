@@ -1,0 +1,172 @@
+{
+  "schema": "zeta-next-prior-vix-relative-regime-context-closure-v2",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_VALID_NO_CONTEXT_SEED_MAP_RECOMPARED",
+  "unit": "prior-vix-relative-regime-context-045",
+  "run": "implementation-correction-r1",
+  "family": "prior-vix-relative-regime-context-implementation-correction-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "experiment_level_boundary": {
+    "meaningful_experiment_units": 1,
+    "new_frontier_unit_number": false,
+    "new_economic_hypothesis": false,
+    "internal_declaration_parser_aggregation_and_packaging_steps_are_separate_units": false,
+    "closed_question": "the original Unit 045 causal trailing-252-session prior-VIX LOW/MIDDLE/HIGH context experiment"
+  },
+  "artifact_pins": {
+    "historical_declaration": {
+      "bytes": 18760,
+      "sha256": "DFE6F868CBDD759E3FE24F30EF9F9A6BC2905822F0D616E832905F225DC38850"
+    },
+    "historical_invalid_result": {
+      "bytes": 3144,
+      "sha256": "328833A0B46C1A017BD969660C9374D10FAB5B0898C37473A6DBEE10EBDFC8E5"
+    },
+    "historical_invalid_closure": {
+      "bytes": 2425,
+      "sha256": "087BD9AF56F3F1F4EE9BC64CDE9641C5045AEE02A9920235A38177BB9E9DD6A6"
+    },
+    "correction_declaration": {
+      "bytes": 8763,
+      "sha256": "C2B91464E8B6B3CC87735F24080EB3A0C4B1D67BCE8474E8D89506EE8C6BD5C7"
+    },
+    "result": {
+      "bytes": 14542,
+      "sha256": "895AF6DC3123C77552A3AF9C1783A00241A4B311E0A9A31FA9272E584FD72F99"
+    },
+    "cboe_source": {
+      "bytes": 471901,
+      "sha256": "9E6A6958041079E56848337439BE5B250B2FE97131751FCD7CF4750A7D31720E"
+    }
+  },
+  "implementation_correction": {
+    "historical_defect": "Where-Object Period-eq$period was parsed as a fused property token and selected zero period rows.",
+    "exact_correction": "Where-Object { $_.Period -eq $period }",
+    "economic_contract_changes": 0,
+    "source_or_input_changes": 0,
+    "vix_window_percentile_or_cut_changes": 0,
+    "population_centering_metric_gate_or_verdict_changes": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pins_checked": 11,
+    "cboe_rows": 9258,
+    "cboe_unique_strictly_increasing_dates": 9258,
+    "portfolio_event_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "lifecycles": 2233,
+    "strategy_counts": {
+      "RC16": 272,
+      "RC4": 206,
+      "Cross": 805,
+      "Pressure": 118,
+      "Return": 238,
+      "Passive": 594
+    },
+    "stressed_net_usd_2x": 407.04770000000565,
+    "final_counts": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "regime_counts": {
+      "LOW": 924,
+      "MIDDLE": 610,
+      "HIGH": 699
+    },
+    "strategy_period_regime_cells": 72,
+    "strictly_prior_and_complete_252_window_faults": 0,
+    "identity_check_faults": 0
+  },
+  "edge_verdicts": {
+    "LOW_RELATIVE_VIX": {
+      "n": 924,
+      "pooled_centered_r_residual": -0.014559122062559422,
+      "pooled_centered_stop_residual": -0.020674803650258453,
+      "period_r_stop_sign_breadth": [3, 3],
+      "strategy_r_stop_sign_breadth": [5, 5],
+      "maximum_period_r_contribution": 0.561438915930947,
+      "maximum_strategy_r_contribution": 0.25205910650391655,
+      "density_passed": true,
+      "failed_information_gates": [
+        "absolute_pooled_centered_r_at_least_0_10",
+        "absolute_pooled_centered_stop_at_least_0_05",
+        "economic_coherence_nonzero_opposite_signs"
+      ],
+      "passed": false
+    },
+    "HIGH_RELATIVE_VIX": {
+      "n": 699,
+      "pooled_centered_r_residual": 0.01779399035581173,
+      "pooled_centered_stop_residual": 0.03525554599040861,
+      "period_r_stop_sign_breadth": [3, 4],
+      "strategy_r_stop_sign_breadth": [4, 5],
+      "maximum_period_r_contribution": 0.3360205654427648,
+      "maximum_strategy_r_contribution": 0.3252295072944643,
+      "density_passed": true,
+      "failed_information_gates": [
+        "absolute_pooled_centered_r_at_least_0_10",
+        "absolute_pooled_centered_stop_at_least_0_05",
+        "economic_coherence_nonzero_opposite_signs"
+      ],
+      "passed": false
+    }
+  },
+  "economic_judgment": {
+    "verdict": "NO_PRIOR_VIX_RELATIVE_REGIME_CONTEXT_PASSED",
+    "interpretation": "Both edge regimes are dense and their small centered residuals show substantial period and strategy breadth, but neither effect is remotely material under the frozen thresholds and both pair return and stop residuals with the same rather than opposite sign. The fixed prior-VIX relative state therefore does not supply a portfolio-wide entry-quality context.",
+    "middle_context_only": true,
+    "retained_later_question": null,
+    "selected_trading_candidate": null,
+    "new_filter_lot_slot_risk_exit_ea_or_live_rule": null,
+    "automatic_successor_opened": false
+  },
+  "execution": {
+    "successful_corrected_valid_aggregations": 1,
+    "internal_runtime_defects_corrected_before_valid_result": 2,
+    "internal_runtime_corrections": [
+      "Wrap zero-or-one failing gate selections in array subexpressions before reading Count",
+      "Use native PowerShell boolean literals in the result object"
+    ],
+    "post_valid_result_metric_reruns_or_rejudgments": 0,
+    "economic_contract_changes": 0,
+    "retained_analysis_cli": false,
+    "new_data_acquisitions": 0,
+    "mql_changes": 0,
+    "compile_runs": 0,
+    "tester_runs": 0,
+    "orders": 0,
+    "broker_account_queries": 0,
+    "program_6_opened": false,
+    "live_research_ledger_read": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "closed_scope": [
+    "No absolute VIX threshold, alternate trailing window, percentile cut, trend, rate of change, realized-volatility or alternate-index rescue.",
+    "No strategy, direction, period, event, session or book subgroup rescue.",
+    "No filter, lot, slot, risk, exit, EA, MQL, Tester, Program 6, broker/account or Live action."
+  ],
+  "whole_map": {
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "program_1": "No fresh independent role; Unit 085's retained object was consumed by failed Unit 086 and cannot be rescued adjacently.",
+    "program_2": "Unit 045 now contributes a valid null and no seed. Recent Program 2 concentration is an explicit negative; no adjacent external-state successor is ready.",
+    "program_3": "No dense new clock, session or order-role question is presently ready.",
+    "program_4": "Corrected Unit 046 retained only a bounded adverse-state diagnosis and no management successor.",
+    "program_5": "Unit 061 cannot be reopened without a semantic contract change, while Unit 075 lacks complete binding data for its proposed allocation question.",
+    "program_7": "No evidence-path question with a decision-changing role is presently ready.",
+    "program_6": "EXCLUDED_FROM_GOAL",
+    "adjacent_vix_rescue": false,
+    "successor_opened": false,
+    "next_selection_rule": "After this experiment boundary reaches origin/main, select only a genuinely independent meaningful experiment from the complete map; do not manufacture a micro follow-up."
+  },
+  "marker": "FRONTIER_UNIT_045_CORRECTED_VALID_NULL_MAP_RECOMPARED",
+  "goal_status": "active_not_complete",
+  "next": "commit_push_unit_045_experiment_boundary_then_select_only_an_independent_meaningful_frontier_experiment"
+}
