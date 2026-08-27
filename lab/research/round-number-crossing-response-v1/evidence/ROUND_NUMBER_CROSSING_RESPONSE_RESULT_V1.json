@@ -1,0 +1,281 @@
+{
+  "schema": "zeta-next-round-number-crossing-response-result-v1",
+  "created_at_local": "2026-08-28",
+  "status": "CLOSED_NO_DISCOVERY_DIRECTION_VALID_P1",
+  "unit": "round-number-crossing-response-094",
+  "family": "round-number-crossing-response-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "micro_to_meso",
+    "supporting": ["macro"]
+  },
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "declaration_implementation_environment_p1_aggregation_and_verdict_are_one_experiment": true,
+    "implementation_and_environment_corrections_are_internal": true,
+    "pure_implementation_correction_numeric_cap": null,
+    "micro_split": false
+  },
+  "fixed_contract": {
+    "symbols_and_grids": {
+      "US30": {"round": 100.0, "placebo_offset": 50.0},
+      "US100": {"round": 100.0, "placebo_offset": 50.0},
+      "US500": {"round": 10.0, "placebo_offset": 5.0}
+    },
+    "server_window": "[12:00,17:00)",
+    "crossing": "first unique strict crossing per symbol/date/lattice/level/direction",
+    "response_minutes": 30,
+    "books": ["CONTINUATION", "REVERSION"],
+    "volume": 0.01,
+    "costs": ["observed executable spread", "doubled observed entry and exit spread"],
+    "orders_or_positions": false
+  },
+  "pins": {
+    "declaration": {
+      "bytes": 20320,
+      "sha256": "36195DA79E74A4664A529A3EA03F9322382111CB7E2D8B5439116715E293E686"
+    },
+    "head_and_origin_main_before_valid_p1": "45ab6f48215faff7af5b89ea7e3af010e17f1ce0",
+    "parent_baseline_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "code_manifest_sha256": "E51F674EA5E6EE4FCB893E048B948249C89C5CB362B3054061B1D626D028D152",
+    "configuration_manifest_sha256": "9531DCD2010852CF424D87B1973C669A2A3EE86EDBFA6EC74B84FE73E75FD6D2",
+    "source_and_binary_manifest_sha256": "0EBA3E697EB7A92F35D0594BBD5DE91E71EAE69431EB337E98828F3369437834",
+    "compile_receipt_sha256": "4513BA2BD1CA34CCDE16CD45E453BDE29B2C5D3B8BCE320A21981295C7528C92",
+    "runtime_receipt_sha256": "0A421DFEE97B6009B7C504F42870E0EB89C92E8745E8DF7DAE1146DF95D57012",
+    "environment_v4": {
+      "bytes": 7623,
+      "sha256": "4C380771D67A5182F8F81B6042C132F79744C7A43B9F472D16CDE4DC2A5A6B78"
+    },
+    "terminal": {
+      "build": 6140,
+      "sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400"
+    },
+    "binary": {
+      "bytes": 28852,
+      "sha256": "22CBFD2110112FAFFBE02BF330B13B9AC91327BC0451528CAE2A70CC285A6557"
+    },
+    "symbols_before_and_after_sha256": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4",
+    "P1_exercised_history_manifests": {
+      "US30": "6CF2069B74AA0CA0C0A7A93A4356AB017973C5AE353E34B058BF6D178EB94CA0",
+      "US100": "9ABB95C6EBABFC0614B3C4BFE2052A52D9165B722927E655B7813AD9D65C65A4",
+      "US500": "2FD7E1A2768EE5AAACE78B8B562138A312022AA3AEA85FA5033A0C1C3AEDE71D"
+    }
+  },
+  "frozen_P1_matrix": {
+    "root": "lab/artifacts/ea-files/round-number-crossing-response-v1/valid-p1-matrix-v1/",
+    "paths": 3,
+    "files": 38,
+    "bytes": 13133674,
+    "manifest_sha256": "375DE8EA117907020FE03E2A750091CD544F3D450DEF1A8555C9B6CAA8FB1D49",
+    "manifest_algorithm": "Sort matrix-root-relative Windows paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "children": {
+      "P1_US30": {"files": 12, "bytes": 4381903, "sha256": "8ED1DA5F33B47F99735FD9CF3368B82FDCF683B2C1629CCD4FA77834029A15CD"},
+      "P1_US100": {"files": 12, "bytes": 4144095, "sha256": "2179CC10D06804E3A76BA66365FFA6845AE42C394959D35940147CE6212BC152"},
+      "P1_US500": {"files": 12, "bytes": 3780284, "sha256": "1D7DB2282BF790DDDF718598AE01FB4B8A2DDC66A8FBF47F8A911A152931C70C"}
+    },
+    "matrix_level_symbol_files": 2,
+    "deleted_files": 0
+  },
+  "input_hashes": {
+    "US30": {
+      "opportunities_sha256": "858C4E7ACC3655102F4D3F69966E120B14B3106610862E9E0E7D087477A25BF3",
+      "summary_sha256": "07A3D1515D261D137C265CE87CCEFF4E8D53937767E5E05411F69C438C1621D1"
+    },
+    "US100": {
+      "opportunities_sha256": "107880D91C9C46CBA307A5DDCE85F6900ECE48510B0E0E52A1719D886BE9779C",
+      "summary_sha256": "2B630381C823D301C7D0A83C874875A14422C37A9073784595BD172C070ABE7F"
+    },
+    "US500": {
+      "opportunities_sha256": "4E3E8DD83CA25348DBB74CC570038C4CB69EF422E7E8592DABCBC9E3F203C2EE",
+      "summary_sha256": "44E899D220C6A3BC4D91BE2315D3172DC1605CF0A774E2E5650191321FF0879C"
+    }
+  },
+  "integrity": {
+    "all_required": true,
+    "passed": true,
+    "total_rows": 6639,
+    "total_eligible_days_with_zero_crossing_days_retained": 777,
+    "total_round_rows": 3289,
+    "total_placebo_rows": 3350,
+    "paths": {
+      "US30": {
+        "rows": 2366,
+        "eligible_days": 259,
+        "valid_ticks": 35139751,
+        "round_rows": 1168,
+        "placebo_rows": 1198,
+        "round_event_dates": 254,
+        "placebo_event_dates": 255,
+        "unique_keys": 2366,
+        "minimum_elapsed_milliseconds": 1800000,
+        "maximum_elapsed_milliseconds": 2489203,
+        "maximum_serialized_spread_identity_error": 5.821121362714621e-12,
+        "maximum_serialized_cost_identity_error": 6.38378239159465e-16,
+        "faults": 0,
+        "report_quality": "100% real ticks",
+        "deinit_reason": 1,
+        "environment_continuity": true
+      },
+      "US100": {
+        "rows": 1477,
+        "eligible_days": 259,
+        "valid_ticks": 65421654,
+        "round_rows": 722,
+        "placebo_rows": 755,
+        "round_event_dates": 236,
+        "placebo_event_dates": 240,
+        "unique_keys": 1477,
+        "minimum_elapsed_milliseconds": 1800000,
+        "maximum_elapsed_milliseconds": 1821176,
+        "maximum_serialized_spread_identity_error": 2.9105606813573104e-12,
+        "maximum_serialized_cost_identity_error": 2.636779683484747e-16,
+        "faults": 0,
+        "report_quality": "100% real ticks",
+        "deinit_reason": 1,
+        "environment_continuity": true
+      },
+      "US500": {
+        "rows": 2796,
+        "eligible_days": 259,
+        "valid_ticks": 14649874,
+        "round_rows": 1399,
+        "placebo_rows": 1397,
+        "round_event_dates": 257,
+        "placebo_event_dates": 257,
+        "unique_keys": 2796,
+        "minimum_elapsed_milliseconds": 1800000,
+        "maximum_elapsed_milliseconds": 1855725,
+        "maximum_serialized_spread_identity_error": 7.640554855470327e-13,
+        "maximum_serialized_cost_identity_error": 4.683753385137379e-17,
+        "faults": 0,
+        "report_quality": "100% real ticks",
+        "deinit_reason": 1,
+        "environment_continuity": true
+      }
+    }
+  },
+  "P1_direction_economics": {
+    "CONTINUATION": {
+      "pooled": {
+        "round_count": 3289,
+        "placebo_count": 3350,
+        "round_observed_net": -25.899999999999977,
+        "round_double_spread_net": -91.01000000000003,
+        "round_extra_spread_cost": 65.10999999999945,
+        "round_mean_double_spread_net": -0.02767102462754638,
+        "round_mean_extra_spread_cost": 0.019796290665855715,
+        "placebo_observed_net": -29.10999999999993,
+        "placebo_double_spread_net": -95.69000000000028,
+        "placebo_extra_spread_cost": 66.58000000000037,
+        "placebo_mean_double_spread_net": -0.028564179104477696,
+        "round_minus_placebo_mean_double_spread_net": 0.0008931544769313175,
+        "round_crossings_per_eligible_day": 4.232947232947233,
+        "positive_difference_symbols": 2,
+        "positive_symbol_net_total": 0.0,
+        "maximum_round_event_share": 0.42535725144420794,
+        "maximum_positive_round_net_share": null
+      },
+      "symbols": {
+        "US30": {"round_count": 1168, "placebo_count": 1198, "round_observed_net": -12.900000000000016, "round_double_spread_net": -43.590000000000025, "round_extra_spread_cost": 30.689999999999987, "round_mean_double_spread_net": -0.03732020547945208, "round_mean_extra_spread_cost": 0.026275684931506837, "placebo_observed_net": -10.959999999999983, "placebo_double_spread_net": -42.020000000000024, "placebo_extra_spread_cost": 31.05999999999997, "placebo_mean_double_spread_net": -0.035075125208681154, "round_minus_placebo_mean_double_spread_net": -0.002245080270770923, "difference_positive": false, "negative_one_own_round_cost_floor_pass": true, "round_event_share": 0.3551231377318334},
+        "US100": {"round_count": 722, "placebo_count": 755, "round_observed_net": -8.490000000000002, "round_double_spread_net": -29.339999999999968, "round_extra_spread_cost": 20.849999999999937, "round_mean_double_spread_net": -0.040637119113573365, "round_mean_extra_spread_cost": 0.028878116343490218, "placebo_observed_net": -12.129999999999999, "placebo_double_spread_net": -33.79999999999999, "placebo_extra_spread_cost": 21.669999999999963, "placebo_mean_double_spread_net": -0.04476821192052979, "round_minus_placebo_mean_double_spread_net": 0.004131092806956421, "difference_positive": true, "negative_one_own_round_cost_floor_pass": true, "round_event_share": 0.21951961082395866},
+        "US500": {"round_count": 1399, "placebo_count": 1397, "round_observed_net": -4.509999999999996, "round_double_spread_net": -18.079999999999973, "round_extra_spread_cost": 13.569999999999762, "round_mean_double_spread_net": -0.012923516797712633, "round_mean_extra_spread_cost": 0.009699785561114912, "placebo_observed_net": -6.0199999999999925, "placebo_double_spread_net": -19.869999999999994, "placebo_extra_spread_cost": 13.849999999999755, "placebo_mean_double_spread_net": -0.014223335719398707, "round_minus_placebo_mean_double_spread_net": 0.0012998189216860741, "difference_positive": true, "negative_one_own_round_cost_floor_pass": true, "round_event_share": 0.42535725144420794}
+      },
+      "gates": {
+        "pooled_round_double_spread_net_strictly_positive": false,
+        "pooled_difference_at_least_round_mean_cost": false,
+        "positive_difference_symbols_at_least_two": true,
+        "no_symbol_below_negative_one_own_round_cost": true,
+        "round_crossings_per_eligible_day_at_least_3": true,
+        "maximum_round_event_share_at_most_0_60": true,
+        "maximum_positive_round_net_share_at_most_0_70": false,
+        "positive_net_concentration_reason": "No symbol has positive aggregate ROUND doubled-spread net, so the positive-net denominator is zero.",
+        "passed": false
+      }
+    },
+    "REVERSION": {
+      "pooled": {
+        "round_count": 3289,
+        "placebo_count": 3350,
+        "round_observed_net": -39.00999999999995,
+        "round_double_spread_net": -104.14000000000017,
+        "round_extra_spread_cost": 65.1299999999994,
+        "round_mean_double_spread_net": -0.0316631194892065,
+        "round_mean_extra_spread_cost": 0.019802371541501794,
+        "placebo_observed_net": -36.70000000000011,
+        "placebo_double_spread_net": -103.20000000000003,
+        "placebo_extra_spread_cost": 66.50000000000041,
+        "placebo_mean_double_spread_net": -0.03080597014925374,
+        "round_minus_placebo_mean_double_spread_net": -0.0008571493399527584,
+        "round_crossings_per_eligible_day": 4.232947232947233,
+        "positive_difference_symbols": 1,
+        "positive_symbol_net_total": 0.0,
+        "maximum_round_event_share": 0.42535725144420794,
+        "maximum_positive_round_net_share": null
+      },
+      "symbols": {
+        "US30": {"round_count": 1168, "placebo_count": 1198, "round_observed_net": -17.62999999999997, "round_double_spread_net": -48.41000000000009, "round_extra_spread_cost": 30.77999999999998, "round_mean_double_spread_net": -0.041446917808219255, "round_mean_extra_spread_cost": 0.02635273972602738, "placebo_observed_net": -20.100000000000026, "placebo_double_spread_net": -51.43000000000001, "placebo_extra_spread_cost": 31.330000000000023, "placebo_mean_double_spread_net": -0.04292988313856428, "round_minus_placebo_mean_double_spread_net": 0.001482965330345025, "difference_positive": true, "negative_one_own_round_cost_floor_pass": true, "round_event_share": 0.3551231377318334},
+        "US100": {"round_count": 722, "placebo_count": 755, "round_observed_net": -12.750000000000004, "round_double_spread_net": -33.73000000000001, "round_extra_spread_cost": 20.979999999999958, "round_mean_double_spread_net": -0.04671745152354572, "round_mean_extra_spread_cost": 0.029058171745152295, "placebo_observed_net": -9.480000000000008, "placebo_double_spread_net": -31.019999999999996, "placebo_extra_spread_cost": 21.53999999999995, "placebo_mean_double_spread_net": -0.04108609271523178, "round_minus_placebo_mean_double_spread_net": -0.00563135880831394, "difference_positive": false, "negative_one_own_round_cost_floor_pass": true, "round_event_share": 0.21951961082395866},
+        "US500": {"round_count": 1399, "placebo_count": 1397, "round_observed_net": -8.63000000000001, "round_double_spread_net": -21.99999999999996, "round_extra_spread_cost": 13.369999999999763, "round_mean_double_spread_net": -0.01572551822730519, "round_mean_extra_spread_cost": 0.009556826304503047, "placebo_observed_net": -7.119999999999993, "placebo_double_spread_net": -20.749999999999982, "placebo_extra_spread_cost": 13.62999999999976, "placebo_mean_double_spread_net": -0.014853256979241218, "round_minus_placebo_mean_double_spread_net": -0.0008722612480639713, "difference_positive": false, "negative_one_own_round_cost_floor_pass": true, "round_event_share": 0.42535725144420794}
+      },
+      "gates": {
+        "pooled_round_double_spread_net_strictly_positive": false,
+        "pooled_difference_at_least_round_mean_cost": false,
+        "positive_difference_symbols_at_least_two": false,
+        "no_symbol_below_negative_one_own_round_cost": true,
+        "round_crossings_per_eligible_day_at_least_3": true,
+        "maximum_round_event_share_at_most_0_60": true,
+        "maximum_positive_round_net_share_at_most_0_70": false,
+        "positive_net_concentration_reason": "No symbol has positive aggregate ROUND doubled-spread net, so the positive-net denominator is zero.",
+        "passed": false
+      }
+    }
+  },
+  "selection": {
+    "passing_directions": [],
+    "selected_direction": null,
+    "P2_P4_authorized": false,
+    "unopened_confirmation_paths": [
+      "P2 US30", "P2 US100", "P2 US500",
+      "P3 US30", "P3 US100", "P3 US500",
+      "P4 US30", "P4 US100", "P4 US500"
+    ],
+    "verdict": "NO_ROUND_NUMBER_CROSSING_DIRECTION_SELECTED_CLOSE_AXIS"
+  },
+  "translation": {
+    "preserve_six_component_forward_baseline": true,
+    "retain_continuation": false,
+    "retain_reversion": false,
+    "retained_candidate": null,
+    "retained_question": null,
+    "adjacent_grid_offset_band_horizon_clock_level_symbol_direction_cost_event_or_subgroup_rescue": false,
+    "prototype": false,
+    "promotion": false,
+    "live_change": false
+  },
+  "execution_accounting": {
+    "valid_P1_tester_paths": 3,
+    "invalidated_pre_V4_tester_paths": 6,
+    "total_tester_path_executions_in_unit": 9,
+    "valid_path_tester_reruns": 0,
+    "successful_economic_aggregations": 1,
+    "failed_aggregation_invocations_before_success": 1,
+    "failed_invocation_rows_opened": 2366,
+    "failed_invocation_metrics_or_judgment_emitted": false,
+    "failed_invocation_correction": "A missing PowerShell variable sigil on one boolean literal stopped the first aggregation after US30 integrity parsing and before any metric or judgment object; the token-only correction reused the exact frozen matrix.",
+    "header_only_reads_before_aggregation": 3,
+    "integrity_invocation_corrections_before_staging_US30": 2,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "economic_contract_changes": 0,
+    "retained_analysis_script": false
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_094_P1_VALID_NO_DIRECTION_SELECTED_CLOSE_AXIS",
+  "next": "compute_result_hash_create_closure_recompare_programs_1_5_7_commit_push_complete_unit_094"
+}
