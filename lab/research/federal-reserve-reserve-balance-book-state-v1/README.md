@@ -44,3 +44,9 @@ release CSV and a receipt containing each full-page and target-row hash. All
 archive dates and target rows passed, including 36 legacy-title dates, and the
 state split is 108 expansion versus 106 contraction. The acquisition artifacts
 must reach `origin/main` before the one fixed CP2 aggregation opens.
+
+The first fixed-aggregation invocation was rejected by PowerShell parsing
+before its body executed because five diagnostic strings used an undelimited
+`$period:` interpolation. The recorded correction changes those strings only to
+`${period}:`; no input, reconstruction, metric, gate or verdict changes, and no
+economic field or output was opened by the rejected invocation.
