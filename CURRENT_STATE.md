@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0238`
+- Latest state ID: `STATE-0239`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -15,15 +15,15 @@ Last updated: 2026-08-27
 - Next V7 entries-disabled preflight: `PASSED`; committed RLO1 PIDs `21400` and `16484` proved exact connected `0/0`, flat continuity, zero core fault and observer create/recovery, then both stopped normally.
 - Next V7 new-entry authorization: `ENABLED`; the user's explicit 2026-08-27 attach-before-evaluation instruction authorizes the final committed `0/0 → 1/1` handoff after the passed RLO1 recovery.
 - Research-observation Live change: `LIVE_ATTACHED`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
-- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; exact Live PID `8080` is the active sole owner.
-- Existing real-account owner: exact RLO1 Live PID `8080` only; final preflight PID `3424` stopped normally and no second `terminal64.exe` was observed
-- User V7 Live direction: `EFFECTIVE`
+- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; former exact Live PID `8080` stopped unexpectedly during the Codex MSIX update boundary and the target identity remains unchanged.
+- Existing real-account owner: none
+- User V7 Live direction: `RESTART_AUTHORIZED`; after the unexpected external process loss, the user explicitly requested the existing committed RLO1 release and dashboard be restarted through the guarded final `0/0 → 1/1` launcher.
 
-Legacy B70 V6R6, parent V7, CXR1 and CXR2 are stopped and disabled. Final RLO1 preflight PID `3424` passed exact `0/0` and stopped normally; Live PID `8080` passed exact `1/1` at committed Git `ed5ebce4374773af5399df5f031778c042851c76`. Healthy Live snapshots advanced `3838 → 3841` through server `2026.08.27 06:12:05` with zero position, pending order, margin, planned risk, retry, shadow, ARC, fault, warning or alert. Both research state peers continue updating on the actual US30 M30 chart; candidate/lifecycle ledgers remain absent until the first natural evaluation, so no synthetic row was manufactured. The MT5 chart visibly shows the attached EA and enabled Algo Trading. Unchanged Korean dashboard PID `28332` is visible and responding and reads only the core snapshot.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Former exact RLO1 PID `8080` and dashboard PID `28332` are absent. Their last local core snapshot was written at local `2026-08-27 17:00:23` with entries `1/1` and zero position, pending order, margin, planned risk, retry, shadow and ARC ownership. MT5 recorded no normal expert-removal or terminal-shutdown footer. Windows then staged and installed Codex `26.820.9563.0`, removed predecessor `26.820.7780.0`, and relaunched the Codex process tree at `17:03:02`; process-termination auditing was not enabled, so the common external teardown is high-confidence rather than a captured per-PID kill event. No terminal or dashboard currently owns the account/UI. No broker position, order, deal or account state was queried. The only authorized next Live action is the committed master launcher's exact `0/0` flat preflight followed by the same RLO1 `1/1` handshake and dashboard restore.
 
 ## Active work
 
-- Active engineering boundary: none; controlled RLO1 promotion and actual-chart verification are complete and frozen in `LIVE_RESEARCH_OBSERVATION_LEDGER_LIVE_PROMOTION_V1.json`
+- Active engineering boundary: bounded RLO1 unexpected-stop recovery; the no-owner/last-local-flat boundary must reach `origin/main` before the unchanged master launcher performs exact `0/0 → 1/1` and restores the dashboard
 - Active research boundary: none; Unit 089 is closed no-field with evidence frozen, pending closure push and whole-map recomparison
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
