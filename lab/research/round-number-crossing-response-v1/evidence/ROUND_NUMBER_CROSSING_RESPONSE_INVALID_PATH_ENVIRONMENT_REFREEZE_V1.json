@@ -1,0 +1,105 @@
+{
+  "schema": "zeta-next-round-number-crossing-response-invalid-path-environment-refreeze-v1",
+  "created_at_local": "2026-08-28",
+  "status": "FIRST_P1_US30_PATH_DISCARDED_BEFORE_ECONOMIC_USE_AND_CURRENT_CACHE_REFROZEN",
+  "unit": "round-number-crossing-response-094",
+  "family": "round-number-crossing-response-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "environment_refreeze_inside_unit_094": true,
+    "implementation_events_are_not_experiments": true,
+    "micro_split": false
+  },
+  "frozen_parent": {
+    "commit_pushed_before_path": "fc7c734ff02cdbb14b74dd4c1e6e5e4ce0706944",
+    "environment_path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_ENVIRONMENT_BEFORE_P1_V1.json",
+    "environment_bytes": 8832,
+    "environment_sha256": "ECDAAA4F5A66A51C7C4E0F8D895DEDF14A901C931D8C4B5E15653A591221337D",
+    "source_manifest_sha256": "E51F674EA5E6EE4FCB893E048B948249C89C5CB362B3054061B1D626D028D152",
+    "configuration_manifest_sha256": "9531DCD2010852CF424D87B1973C669A2A3EE86EDBFA6EC74B84FE73E75FD6D2",
+    "binary_sha256": "22CBFD2110112FAFFBE02BF330B13B9AC91327BC0451528CAE2A70CC285A6557"
+  },
+  "preprocess_invocation_correction": {
+    "failed_terminal_process_starts": 0,
+    "failed_tester_paths": 0,
+    "input_or_output_opened": false,
+    "cause": "The first shell preflight matched the runtime root name rncr94-portable in every Tester absolute path and rejected the untouched target as nonfresh.",
+    "correction": "Match only the runtime-relative Tester path for RNCR94V1 or the family report name.",
+    "economic_contract_change": false
+  },
+  "discarded_path": {
+    "declared_order": 1,
+    "period": "P1_DISCOVERY_2024",
+    "symbol": "US30",
+    "run_code": 1,
+    "model": 4,
+    "report_history_quality": "100% real ticks",
+    "deinit_reason": 1,
+    "eligible_days": 259,
+    "valid_ticks": 35139751,
+    "triggers": 2366,
+    "resolved": 2366,
+    "unresolved": 0,
+    "round_resolved": 1168,
+    "placebo_resolved": 1198,
+    "time_faults": 0,
+    "tick_faults": 0,
+    "profit_calc_faults": 0,
+    "row_faults": 0,
+    "specification_changed": 0,
+    "integrity_fields_only_read": true,
+    "opportunity_economic_rows_read": false,
+    "economic_aggregation_or_judgment": false,
+    "valid_matrix_paths_after_discard": 0
+  },
+  "mandatory_environment_drift": {
+    "symbol_database": {
+      "path": "lab/runtime/rncr94-portable/Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+      "bytes_before_and_after": 413696,
+      "sha256_before": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71",
+      "sha256_after": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4"
+    },
+    "changed_exercised_history_file": {
+      "path": "lab/runtime/rncr94-portable/Tester/bases/FPMarketsSC-Live/history/US30/2024.hcs",
+      "bytes_before_and_after": 3050639,
+      "sha256_before": "26023C5A238E408F6E1C092F06D3091017263F1474E2A4F4FB4229B8A2347107",
+      "sha256_after": "445FEC2D5A3702E5612B8CDD83B0BE3E3F0E012BC930DCFE9CCA14D7A21C92C0"
+    },
+    "p1_us30_manifest_sha256_before": "C534A6B9D81AF58D9FE7F1451690A8E71A5D89556E012ABBAD6F1D82136972D7",
+    "p1_us30_manifest_sha256_after": "6CF2069B74AA0CA0C0A7A93A4356AB017973C5AE353E34B058BF6D178EB94CA0",
+    "p1_us30_real_tick_tkc_files_changed": 0,
+    "other_declared_path_manifests_changed": 0,
+    "terminal_source_configuration_or_binary_changed": false,
+    "cause_evidence": "Normal terminal/tester synchronization refreshed the symbols database and rewrote only the selected-symbol annual HCS cache before the path; the exact monthly TKCs remained byte-identical.",
+    "declaration_consequence": "The exact before/after continuity requirement fails independently of the otherwise clean observer summary, so the path cannot enter economic state."
+  },
+  "preserved_invalid_attempt": {
+    "path": "lab/artifacts/ea-files/round-number-crossing-response-v1/invalid-matrix-attempt-v1/",
+    "files": 14,
+    "bytes": 7723176,
+    "manifest_sha256": "74F6BED60AAAD121DA26A82F5EFB41CD47E25AA94759A937A966559608123861",
+    "manifest_algorithm": "Sort attempt-root-relative Windows paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "contains_before_and_after_symbols_and_us30_hcs": true,
+    "active_outputs_after_recoverable_move": 0,
+    "active_reports_after_recoverable_move": 0,
+    "deleted_files": 0
+  },
+  "unchanged_contract": {
+    "source_configuration_and_binary": true,
+    "grids_placebo_window_horizon_books_costs_periods_and_gates": true,
+    "economic_contract_changes": 0,
+    "implementation_source_corrections": 0
+  },
+  "governance": {
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "restart_from": "P1 US30"
+  },
+  "economic_outcomes_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_the_current_dedicated_environment_v2_commit_push_then_restart_p1_us30"
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "zeta-next-round-number-crossing-response-environment-before-p1-v2",
+  "created_at_local": "2026-08-28",
+  "status": "CURRENT_SYNCHRONIZED_DEDICATED_ENVIRONMENT_REFROZEN_BEFORE_FULL_P1_RESTART",
+  "unit": "round-number-crossing-response-094",
+  "family": "round-number-crossing-response-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "environment_refreeze_inside_unit_094": true,
+    "implementation_events_are_not_experiments": true,
+    "micro_split": false
+  },
+  "superseded_environment": {
+    "path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_ENVIRONMENT_BEFORE_P1_V1.json",
+    "bytes": 8832,
+    "sha256": "ECDAAA4F5A66A51C7C4E0F8D895DEDF14A901C931D8C4B5E15653A591221337D",
+    "role": "Preserved exact initial copied-cache boundary; superseded only as the active path-start pin after its first US30 path drifted."
+  },
+  "invalid_path_refreeze": {
+    "path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_INVALID_PATH_ENVIRONMENT_REFREEZE_V1.json",
+    "bytes": 5135,
+    "sha256": "05215D651F0654F21004C473C303366298F3B2268473BD64BBDA54D8587867A0",
+    "discarded_paths": 1,
+    "valid_matrix_paths": 0,
+    "economic_outcomes_used": false
+  },
+  "frozen_implementation": {
+    "compile_receipt_path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_COMPILE_RECEIPT_V1.json",
+    "compile_receipt_bytes": 5486,
+    "compile_receipt_sha256": "4513BA2BD1CA34CCDE16CD45E453BDE29B2C5D3B8BCE320A21981295C7528C92",
+    "runtime_receipt_path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_RUNTIME_RECEIPT_V1.json",
+    "runtime_receipt_bytes": 3899,
+    "runtime_receipt_sha256": "0A421DFEE97B6009B7C504F42870E0EB89C92E8745E8DF7DAE1146DF95D57012",
+    "code_manifest_sha256": "E51F674EA5E6EE4FCB893E048B948249C89C5CB362B3054061B1D626D028D152",
+    "configuration_manifest_sha256": "9531DCD2010852CF424D87B1973C669A2A3EE86EDBFA6EC74B84FE73E75FD6D2",
+    "source_and_binary_manifest_sha256": "0EBA3E697EB7A92F35D0594BBD5DE91E71EAE69431EB337E98828F3369437834",
+    "binary_sha256": "22CBFD2110112FAFFBE02BF330B13B9AC91327BC0451528CAE2A70CC285A6557",
+    "runtime_source_and_set_parity_mismatches": 0,
+    "economic_contract_changes": 0
+  },
+  "runtime": {
+    "path": "lab/runtime/rncr94-portable/",
+    "terminal_build": 6140,
+    "terminal_bytes": 121846032,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "diagnostic_files": 771,
+    "diagnostic_logical_bytes": 6241803239,
+    "process_owners": 0,
+    "filesystem_symbolic_or_junction_links": 0,
+    "report_directory": "lab/runtime/rncr94-portable/reports/round-number-crossing-response-v1/",
+    "report_directory_exists": true,
+    "active_report_files": 0,
+    "active_observer_output_files": 0,
+    "active_unit_tst_files": 0
+  },
+  "symbol_database": {
+    "runtime_path": "lab/runtime/rncr94-portable/Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+    "bytes": 413696,
+    "sha256": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4",
+    "preserved_before_restart": "lab/artifacts/ea-files/round-number-crossing-response-v1/environment/symbols-before-p1-v2.dat",
+    "preserved_bytes": 413696,
+    "preserved_sha256": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4",
+    "change_from_v1": "Normal terminal synchronization before the discarded first path; V2 freezes the resulting current database and any further change invalidates the next incomplete matrix."
+  },
+  "exercised_history_contract": {
+    "algorithm": "For each declared symbol-period path, include its exact Tester/bases/FPMarketsSC-Live annual HCS file and every monthly real-tick TKC intersecting the declared interval; sort runtime-relative Windows paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "no_bar_warmup_required": "The standalone observer uses consecutive valid ticks only and requests no CopyRates or indicator history; the annual chart HCS for the exercised year plus the exact real-tick months is complete.",
+    "v1_to_v2_changes": "Only P1_US30 changed because normal synchronization rewrote US30/2024.hcs; all twelve P1 US30 TKCs and every other declared path manifest remained exact.",
+    "paths": {
+      "P1_US30": {"period": ["2024.01.01", "2025.01.01"], "history_year": 2024, "tick_months": ["202401", "202412"], "tick_months_are_inclusive_continuous_range": true, "files": 13, "bytes": 166983248, "sha256": "6CF2069B74AA0CA0C0A7A93A4356AB017973C5AE353E34B058BF6D178EB94CA0", "missing_files": 0},
+      "P1_US100": {"period": ["2024.01.01", "2025.01.01"], "history_year": 2024, "tick_months": ["202401", "202412"], "tick_months_are_inclusive_continuous_range": true, "files": 13, "bytes": 326349798, "sha256": "0E2028C0BA18125C40B6CED5B3B1AB79C26F0C4531716A7CFC22510CD5B2D2D1", "missing_files": 0},
+      "P1_US500": {"period": ["2024.01.01", "2025.01.01"], "history_year": 2024, "tick_months": ["202401", "202412"], "tick_months_are_inclusive_continuous_range": true, "files": 13, "bytes": 68087438, "sha256": "7C7E43E7917771DB3F161AB565C36264D5C5498DBCFDB6617BB8DF094B9E42A9", "missing_files": 0},
+      "P2_US30": {"period": ["2025.01.01", "2026.01.01"], "history_year": 2025, "tick_months": ["202501", "202512"], "tick_months_are_inclusive_continuous_range": true, "files": 13, "bytes": 169296166, "sha256": "BC0E28B44E40076DC6DD666CD7EE5DEB5E7980C2DBAC391FC389D13D513562C3", "missing_files": 0},
+      "P2_US100": {"period": ["2025.01.01", "2026.01.01"], "history_year": 2025, "tick_months": ["202501", "202512"], "tick_months_are_inclusive_continuous_range": true, "files": 13, "bytes": 352708624, "sha256": "D1F11A562C497D46F0D95363CD8C7286EA337032F6FB1AC933946B84E5EEE074", "missing_files": 0},
+      "P2_US500": {"period": ["2025.01.01", "2026.01.01"], "history_year": 2025, "tick_months": ["202501", "202512"], "tick_months_are_inclusive_continuous_range": true, "files": 13, "bytes": 81864116, "sha256": "FCEF5230EAB90AB505A54CD3C42C3C255D3B3D2E7A1D91CEEE3AABF5BF40EA68", "missing_files": 0},
+      "P3_US30": {"period": ["2026.01.01", "2026.06.01"], "history_year": 2026, "tick_months": ["202601", "202605"], "tick_months_are_inclusive_continuous_range": true, "files": 6, "bytes": 66117111, "sha256": "2906D09D2C7AE62BD1EE438AED15738682827476425B5B0C2C98D49A7C937891", "missing_files": 0},
+      "P3_US100": {"period": ["2026.01.01", "2026.06.01"], "history_year": 2026, "tick_months": ["202601", "202605"], "tick_months_are_inclusive_continuous_range": true, "files": 6, "bytes": 229936180, "sha256": "5A8B29A45A4D1E5FEA84D5A0C5AFF63E7193F7489FD9511728CDC4CE58AFAED4", "missing_files": 0},
+      "P3_US500": {"period": ["2026.01.01", "2026.06.01"], "history_year": 2026, "tick_months": ["202601", "202605"], "tick_months_are_inclusive_continuous_range": true, "files": 6, "bytes": 71274649, "sha256": "D21956083576123D44BBAEC2A0BB801A1A38A85400B789683F6FEB7C4240D5AC", "missing_files": 0},
+      "P4_US30": {"period": ["2026.06.01", "2026.08.01"], "history_year": 2026, "tick_months": ["202606", "202607"], "tick_months_are_inclusive_continuous_range": true, "files": 3, "bytes": 41961810, "sha256": "F67CF410F47CB0917AFB1D1FCFED0BF4346F4574FA7D9197F8FFDB76B7FD1353", "missing_files": 0},
+      "P4_US100": {"period": ["2026.06.01", "2026.08.01"], "history_year": 2026, "tick_months": ["202606", "202607"], "tick_months_are_inclusive_continuous_range": true, "files": 3, "bytes": 289988583, "sha256": "770922EE4E197102A49BE63E1686EECB0AF202F00B47755CAD2CCF09DAA5F013", "missing_files": 0},
+      "P4_US500": {"period": ["2026.06.01", "2026.08.01"], "history_year": 2026, "tick_months": ["202606", "202607"], "tick_months_are_inclusive_continuous_range": true, "files": 3, "bytes": 53365517, "sha256": "D9A92155E5B148750AD1B6BD92742F9F160CD9DB76F2CFA644857634D52F8B1C", "missing_files": 0}
+    }
+  },
+  "contract_fingerprint_plan": {
+    "source": "Each observer path writes exact start and end normalized symbol specification strings into summary.csv.",
+    "per_path_requirement": "start_specification equals end_specification exactly and specification_changed is zero; the symbols database and path-specific exercised-history manifest also remain equal to this V2 receipt after the path.",
+    "rows_deferred_until_corresponding_fresh_path": true
+  },
+  "matrix_continuity_rule": {
+    "before_and_after_each_path_equal": [
+      "terminal build and hash",
+      "source/configuration/binary hashes",
+      "path-specific exercised-history manifest",
+      "symbols-81957644.dat hash",
+      "observer start/end normalized symbol specification"
+    ],
+    "on_fault_or_drift": "Discard every path in the incomplete Unit 094 matrix without economic use, preserve the failed attempt, refreeze the unchanged contract and restart at P1 US30.",
+    "economic_aggregation_before_complete_valid_p1": false
+  },
+  "governance": {
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "post_valid_stage_selective_tester_reruns": 0
+  },
+  "attempted_tester_paths": 1,
+  "valid_tester_paths": 0,
+  "economic_outcomes_consumed": false,
+  "broker_or_account_state_queried": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_hash_update_current_state_and_frontier_ledger_commit_push_then_restart_p1_us30"
+}
