@@ -1302,6 +1302,15 @@ bool SaveState()
   }
 
 
+void CloseEventSegmentHandle()
+  {
+   if(event_segment_handle != INVALID_HANDLE)
+      FileClose(event_segment_handle);
+   event_segment_handle = INVALID_HANDLE;
+   event_segment_handle_index = -1;
+  }
+
+
 bool RecordEvent(const int component,
                  const string event_name,
                  const double value_a,
@@ -1317,7 +1326,18 @@ bool RecordEvent(const int component,
       (replace_segment
        ? FILE_WRITE | FILE_CSV | FILE_ANSI | FILE_SHARE_READ
        : FILE_READ | FILE_WRITE | FILE_CSV | FILE_ANSI | FILE_SHARE_READ);
-   const int handle = OpenFileWithRetry(path, flags, ',');
+   int handle = event_segment_handle;
+   if(handle == INVALID_HANDLE ||
+      event_segment_handle_index != target_segment || replace_segment)
+     {
+      CloseEventSegmentHandle();
+      handle = OpenFileWithRetry(path, flags, ',');
+      if(handle != INVALID_HANDLE)
+        {
+         event_segment_handle = handle;
+         event_segment_handle_index = target_segment;
+        }
+     }
    if(handle == INVALID_HANDLE)
      {
       MarkPersistenceFailure("cannot open event segment");
@@ -1326,48 +1346,50 @@ bool RecordEvent(const int component,
    if(!replace_segment)
       FileSeek(handle, 0, SEEK_END);
    if(FileSize(handle) == 0)
-      FileWrite(handle,
-                 "utc", "server_time", "event", "execution_version",
-                 "schema_version", "release_id", "project_id",
-                 "portfolio_id", "component_id", "value_a", "value_b",
-                 "detail", "stressed_balance", "project_stage_balance",
-                 "account_equity",
-                "account_margin", "state_sequence");
+     {
+      const uint header_bytes =
+         FileWrite(handle,
+                   "utc", "server_time", "event", "execution_version",
+                   "schema_version", "release_id", "project_id",
+                   "portfolio_id", "component_id", "value_a", "value_b",
+                   "detail", "stressed_balance", "project_stage_balance",
+                   "account_equity", "account_margin", "state_sequence");
+      if(header_bytes == 0)
+        {
+         CloseEventSegmentHandle();
+         MarkPersistenceFailure("event header write failed");
+         return(false);
+        }
+     }
    const string component_id =
       (component >= 0 && component < COMPONENT_COUNT
        ? component_definitions[component].id : "PORTFOLIO");
-   FileWrite(handle,
-             TimeToString(TimeGMT(), TIME_DATE | TIME_SECONDS),
-             TimeToString(TimeCurrent(), TIME_DATE | TIME_SECONDS),
-              event_name,
-              EXECUTION_VERSION,
-              SCHEMA_VERSION,
-              RELEASE_ID,
-              PROJECT_ID,
-              PORTFOLIO_ID,
-             component_id,
-             value_a,
-             value_b,
-             detail,
-             portfolio_state.stressed_balance,
-             InpReferenceCapitalUSD + portfolio_state.project_realized_net,
-             AccountInfoDouble(ACCOUNT_EQUITY),
-             AccountInfoDouble(ACCOUNT_MARGIN),
-             state_sequence);
+   const uint event_bytes =
+      FileWrite(handle,
+                TimeToString(TimeGMT(), TIME_DATE | TIME_SECONDS),
+                TimeToString(TimeCurrent(), TIME_DATE | TIME_SECONDS),
+                event_name,
+                EXECUTION_VERSION,
+                SCHEMA_VERSION,
+                RELEASE_ID,
+                PROJECT_ID,
+                PORTFOLIO_ID,
+                component_id,
+                value_a,
+                value_b,
+                detail,
+                portfolio_state.stressed_balance,
+                InpReferenceCapitalUSD + portfolio_state.project_realized_net,
+                AccountInfoDouble(ACCOUNT_EQUITY),
+                AccountInfoDouble(ACCOUNT_MARGIN),
+                state_sequence);
    FileFlush(handle);
-   FileClose(handle);
-   const int verify = OpenFileWithRetry(path,
-                                        FILE_READ | FILE_BIN |
-                                        FILE_SHARE_READ,
-                                        ',');
-   if(verify == INVALID_HANDLE || FileSize(verify) <= 0)
+   if(event_bytes == 0 || FileSize(handle) <= 0)
      {
-      if(verify != INVALID_HANDLE)
-         FileClose(verify);
-      MarkPersistenceFailure("event verification failed");
+      CloseEventSegmentHandle();
+      MarkPersistenceFailure("event write verification failed");
       return(false);
      }
-   FileClose(verify);
    event_segment = target_segment;
    event_segment_records = target_records + 1;
    ++event_records;
@@ -1400,6 +1422,7 @@ bool AcquireRuntimeOwnership()
 
 void ReleaseRuntimeOwnership()
   {
+   CloseEventSegmentHandle();
    if(ownership_handle == INVALID_HANDLE)
       return;
    FileClose(ownership_handle);
@@ -1409,6 +1432,7 @@ void ReleaseRuntimeOwnership()
 
 void ResetTesterArtifacts()
   {
+   CloseEventSegmentHandle();
    FileDelete(STATE_PATH_A);
    FileDelete(STATE_PATH_B);
    FileDelete(EVENT_PATH_A);
