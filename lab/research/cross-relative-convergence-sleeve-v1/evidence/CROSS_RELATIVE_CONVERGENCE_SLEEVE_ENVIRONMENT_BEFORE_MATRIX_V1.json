@@ -1,0 +1,100 @@
+{
+  "schema": "zeta-next-cross-relative-convergence-sleeve-environment-before-matrix-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FROZEN_BEFORE_FIRST_VALID_MATRIX_PATH",
+  "unit": "cross-relative-convergence-sleeve-093",
+  "family": "cross-relative-convergence-sleeve-v1",
+  "runtime": {
+    "path": "lab/runtime/crcs93-portable/",
+    "terminal_build": 6140,
+    "terminal_bytes": 121846032,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "process_owners": 0,
+    "filesystem_symbolic_or_junction_links": 0,
+    "free_bytes_on_c": 39644205056
+  },
+  "symbol_database": {
+    "runtime_path": "lab/runtime/crcs93-portable/Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+    "bytes": 413696,
+    "last_write_local": "2026-08-25T11:19:08.6142195+09:00",
+    "sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71",
+    "preserved_before_matrix_path": "lab/artifacts/ea-files/cross-relative-convergence-sleeve-v1/environment/symbols-before-matrix.dat",
+    "preserved_bytes": 413696,
+    "preserved_sha256": "7B1879245BE5AA6A79329C05E308E1A81DC1AA1D660039E8FC595CDE7995CC71"
+  },
+  "required_symbol_data": {
+    "symbols": ["US30", "US100", "US500"],
+    "surfaces": [
+      "Bases/FPMarketsSC-Live/history",
+      "Bases/FPMarketsSC-Live/ticks",
+      "Tester/bases/FPMarketsSC-Live/history",
+      "Tester/bases/FPMarketsSC-Live/ticks"
+    ],
+    "files": 360,
+    "bytes": 5675335007,
+    "combined_manifest_sha256": "143C0E70A249D983D66FCF3BE12F805671A12AD9D4557A79EF9B3B9B4F7BB71E",
+    "combined_algorithm": "For each exact required-symbol directory, sort runtime-relative file paths ordinally with Windows separators, uppercase file SHA-256, join path|hash with LF, SHA-256 UTF-8; then sort directory|manifest rows ordinally and repeat.",
+    "directory_manifests": [
+      {"surface":"Bases","kind":"history","symbol":"US30","files":14,"bytes":203234563,"sha256":"7CAF70EF4F800432B564B440F2DAC9EBE1B19090B581B8CA2DAA03CEE7298DF2"},
+      {"surface":"Bases","kind":"history","symbol":"US100","files":14,"bytes":223030063,"sha256":"6278B260728744F46F9C626D04CB7F7F957BFDA00F8FC975A4AE0F5312211950"},
+      {"surface":"Bases","kind":"history","symbol":"US500","files":17,"bytes":329287421,"sha256":"1DDEC1E4297A977A8191A44AA5025C2E6C4AAEA5261BD6603A5550FECA8B8AAE"},
+      {"surface":"Bases","kind":"ticks","symbol":"US30","files":50,"bytes":566666600,"sha256":"91DEA98B28B6D8757E0F9A39DACC7EDCE79EA31D0E4DEB78223507E3F8508474"},
+      {"surface":"Bases","kind":"ticks","symbol":"US100","files":50,"bytes":1522632972,"sha256":"33ABCB08CDDD9644A3C20411A03BE2E3D6598876B1CEFCF2AF38ABEB7266CB18"},
+      {"surface":"Bases","kind":"ticks","symbol":"US500","files":50,"bytes":352043529,"sha256":"7CD8C39C9337AC60CC1F1268DF6079CC036E16F07462AA669507173FB727DB75"},
+      {"surface":"Tester/bases","kind":"history","symbol":"US30","files":6,"bytes":17436458,"sha256":"3106E9999D2DF82835CE6D4D89D0E54BBAC2E26101F5D3C3C89B17DCE4811D4D"},
+      {"surface":"Tester/bases","kind":"history","symbol":"US100","files":6,"bytes":17428570,"sha256":"BA855021277C722DA935D10261D0CC0632A4864DBE5DA8C27C6CC16D440EE095"},
+      {"surface":"Tester/bases","kind":"history","symbol":"US500","files":6,"bytes":13562965,"sha256":"12EA679325BB1D1531C46DD9F5A507D0AD70750874AC2AE83DD72E4FAF2A352B"},
+      {"surface":"Tester/bases","kind":"ticks","symbol":"US30","files":49,"bytes":564420957,"sha256":"615C2689ABA441382A5BD405ED072B67CF676BC0D9F867E3C50A4CE856C53F60"},
+      {"surface":"Tester/bases","kind":"ticks","symbol":"US100","files":49,"bytes":1516909344,"sha256":"76697429D4471B0230A3E1BC09B980786638B63422312FDC6187D887AAF171E0"},
+      {"surface":"Tester/bases","kind":"ticks","symbol":"US500","files":49,"bytes":348681565,"sha256":"10DFAD58D4150F1E5414021C67901A3D49C76687AFBB0E800AA9F3AAAA889894"}
+    ]
+  },
+  "contract_and_swap_fingerprint_plan": {
+    "symbols": ["US30", "US100", "US500"],
+    "fields": [
+      "contract_size",
+      "tick_size",
+      "tick_value",
+      "tick_value_profit",
+      "tick_value_loss",
+      "volume_min",
+      "volume_step",
+      "stops_level",
+      "freeze_level",
+      "swap_mode",
+      "swap_long",
+      "swap_short",
+      "rollover3days",
+      "swap_sunday",
+      "swap_monday",
+      "swap_tuesday",
+      "swap_wednesday",
+      "swap_thursday",
+      "swap_friday",
+      "swap_saturday"
+    ],
+    "before_binding_pair": "BINDING_LONG CONTROL START rows",
+    "between_binding_paths": "BINDING_LONG CONTROL END equals BINDING_LONG DUAL_APPEND START",
+    "after_binding_pair": "BINDING_LONG DUAL_APPEND END",
+    "before_latest_pair": "ISOLATED_LATEST CONTROL START",
+    "between_latest_paths": "ISOLATED_LATEST CONTROL END equals ISOLATED_LATEST DUAL_APPEND START",
+    "after_latest_pair": "ISOLATED_LATEST DUAL_APPEND END",
+    "all_rows_deferred_until_the_corresponding_valid_path": true
+  },
+  "matrix_continuity_rule": {
+    "before_and_after_each_adjacent_pair_equal": [
+      "terminal build and hash",
+      "required-symbol data manifest",
+      "symbols-*.dat hash",
+      "normalized US30/US100/US500 contract and swap fingerprint"
+    ],
+    "on_drift": "Discard the whole incomplete Unit 093 matrix without economic use, re-freeze the unchanged implementation and restart all four declared paths fresh.",
+    "economic_outcomes_inspected_before_complete_valid_matrix": false
+  },
+  "tester_paths_started": 0,
+  "economic_outcomes_consumed": false,
+  "broker_or_account_state_queried": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_hashes_update_single_frontier_memory_commit_push_then_start_binding_long_control"
+}
