@@ -1,0 +1,75 @@
+{
+  "schema": "zeta-next-passive-self-blocking-opportunity-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "passive-self-blocking-opportunity-082",
+  "family": "passive-self-blocking-opportunity-v1",
+  "verdict": "AMBIGUOUS_PASSIVE_SELF_BLOCKING_OPPORTUNITY_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "53662D22A2000ADC40B4AE3A0F1F2E8018123C5E8C2941A1B73487E4D2FCE8D1",
+    "acquisition_receipt_sha256": "24276B69496E0AC645587A81C827A01CC994DB6EAD603DE609519DA0BA78B39C",
+    "premetric_correction_sha256": "6FFF4D9E74DA51BC6AB0474D1B2ADCEC72A85D916FF5CA1E1C0AC8481CD36C80",
+    "bar_export_sha256": "2530006F7A97E7DD026016DAD9458B3637363BCB673A75B25B965DFE317BA248",
+    "derived_rows_sha256": "98E53BE6E44C1995A15A944CE3DD4E6557B2AC59D34E4B795C2511A4E3B78ED1",
+    "result_sha256": "A17EF2DAB286BB891DD75D609EEFC19BE2407A436F52875476356595DB7BE230",
+    "result_bytes": 7251
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "metric_reruns": 0,
+    "runtime_copies": 1,
+    "bar_acquisitions": 1,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "optimization_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "passive_control_rows": 1921,
+    "feature_maximum_absolute_difference": 2.220446049250313e-16,
+    "signal_mismatches": 0,
+    "order_price_maximum_absolute_difference": 0.0,
+    "paired_passive_lifecycles": 92,
+    "touch_proxy_sensitivity": 1.0,
+    "touch_proxy_specificity": 1.0
+  },
+  "findings": {
+    "native_control_rate": 0.06298802706923477,
+    "raw_shadow_rate": 0.5456389452332657,
+    "raw_rate_ratio_to_control": 8.662581932174408,
+    "distinct_rearm_episodes_lifecycles_months": [20, 20, 8],
+    "touched_episodes_and_rate": [18, 0.9],
+    "mean_and_median_four_hour_mark_range": [-0.24404233314852566, 0.06350122336176592],
+    "eligible_positive_months": [2, 4],
+    "interpretation": "The constraint hides frequent and reachable state renewals, but their forward mark value is not broad: mean and calendar breadth fail while the median remains slightly positive."
+  },
+  "gates": {
+    "material_distinct_opportunity_passed": false,
+    "strong_null_triggered": false,
+    "complete_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "one-position Passive constraint",
+      "all existing portfolio risk, lot, slot, priority, order, stop and exit behavior"
+    ],
+    "discard": [
+      "negligible-hidden-supply and proven-positive-hidden-value claims",
+      "second Passive layer, pyramiding or Live candidate from Unit 082"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "same_family_rescue_opened": false,
+  "whole_map_recomparison_required": true,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_closure_sha_update_single_frontier_memory_commit_push_then_recompare_all_remaining_claude_cards_and_continue_only_if_one_has_both_bridge_and_distance"
+}

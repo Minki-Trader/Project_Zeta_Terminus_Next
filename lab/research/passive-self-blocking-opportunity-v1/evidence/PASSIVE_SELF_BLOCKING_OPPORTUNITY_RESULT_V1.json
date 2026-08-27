@@ -1,0 +1,158 @@
+{
+  "schema": "zeta-next-passive-self-blocking-opportunity-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_082_FIXED_AGGREGATION_COMPLETE_AMBIGUOUS",
+  "unit": "passive-self-blocking-opportunity-082",
+  "family": "passive-self-blocking-opportunity-v1",
+  "declaration": {
+    "sha256": "53662D22A2000ADC40B4AE3A0F1F2E8018123C5E8C2941A1B73487E4D2FCE8D1",
+    "commit": "1f3529f794dac39872f9892e457f859599ee3aca",
+    "committed_and_pushed_before_acquisition_or_metrics": true
+  },
+  "acquisition": {
+    "receipt_sha256": "24276B69496E0AC645587A81C827A01CC994DB6EAD603DE609519DA0BA78B39C",
+    "commit": "496e53adf8519e8f91809e1d024d832132e94f30",
+    "committed_and_pushed_before_aggregation": true,
+    "bar_rows": 17166,
+    "bar_sha256": "2530006F7A97E7DD026016DAD9458B3637363BCB673A75B25B965DFE317BA248",
+    "symbol_spec_sha256": "24BF4729055E07A11D29CACB062D5F1ED3931B4D5421A2E06282CE45FD2144CF"
+  },
+  "premetric_correction": {
+    "sha256": "6FFF4D9E74DA51BC6AB0474D1B2ADCEC72A85D916FF5CA1E1C0AC8481CD36C80",
+    "commit": "beb7a9be95ee98afded985ce46466128ab1b959f",
+    "committed_and_pushed_before_remaining_aggregation": true,
+    "scope": "Temporary normalized BIRTH record consumer key position_identifier -> position_id before any metric output."
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "metric_reruns": 0,
+    "dedicated_runtime_copies": 1,
+    "bar_acquisitions": 1,
+    "copy_rates_range_calls": 1,
+    "symbol_info_calls": 1,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "optimization_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli_or_validator": false
+  },
+  "integrity": {
+    "all_nine_immutable_hashes_passed": true,
+    "candidate_rows": 4043,
+    "passive_candidate_rows": 1921,
+    "candidate_join_misses": 0,
+    "maximum_feature_absolute_difference": 2.220446049250313e-16,
+    "signal_classification_mismatches": 0,
+    "native_pending_order_rows": 119,
+    "maximum_reconstructed_order_price_absolute_difference": 0.0,
+    "trade_tick_size": 0.01,
+    "passive_births": 92,
+    "passive_closes": 92,
+    "unique_exact_pairs": 92,
+    "actual_fill_matches": 92,
+    "touch_proxy_confusion": {"true_positive": 92, "true_negative": 27, "false_positive": 0, "false_negative": 0},
+    "touch_proxy_sensitivity": 1.0,
+    "touch_proxy_specificity": 1.0,
+    "all_fixed_integrity_requirements_passed": true
+  },
+  "native_control": {
+    "signal_passes": 121,
+    "observations": 1921,
+    "signal_pass_rate": 0.06298802706923477
+  },
+  "raw_blocked_shadow_supply": {
+    "signal_passes": 269,
+    "observations": 493,
+    "signal_pass_rate": 0.5456389452332657,
+    "rate_ratio_to_native_control": 8.662581932174408,
+    "interpretation": "Held Passive state frequently remains or again becomes entry-strength in the incumbent direction; the literal below-half-control falsifier does not trigger."
+  },
+  "distinct_rearm": {
+    "episodes": 20,
+    "unique_lifecycles": 20,
+    "calendar_months": 8,
+    "definition": "First same-direction entry-threshold re-cross per lifecycle after at least one post-birth subthreshold state; immediate entry-signal persistence is excluded."
+  },
+  "limit_touch_and_forward_mark": {
+    "proxy_touched_episodes": 18,
+    "proxy_touch_rate": 0.9,
+    "complete_sixteen_bar_marks": 18,
+    "pooled_mean_four_hour_mark_range": -0.24404233314852566,
+    "pooled_median_four_hour_mark_range": 0.06350122336176592,
+    "eligible_months_with_at_least_three_marks": 4,
+    "positive_eligible_months": 2,
+    "positive_eligible_month_share": 0.5,
+    "calendar_months": {
+      "2026-01": {"n": 1, "mean_mark_range": 4.119703703703729},
+      "2026-02": {"n": 4, "mean_mark_range": 0.7243767872653482},
+      "2026-03": {"n": 3, "mean_mark_range": -2.037663717774565},
+      "2026-04": {"n": 3, "mean_mark_range": -6.215217558411066},
+      "2026-05": {"n": 4, "mean_mark_range": 3.5680348133440782},
+      "2026-06": {"n": 1, "mean_mark_range": 2.514053614947194},
+      "2026-07": {"n": 1, "mean_mark_range": -3.9181877022653757},
+      "2026-08": {"n": 1, "mean_mark_range": 0.480665813060177}
+    },
+    "interpretation": "The latent signals are reachable, but their mark distribution has a positive median and a negative mean with only half of adequately populated months positive. Reachability does not translate into broad positive value."
+  },
+  "fixed_gates": {
+    "material_distinct_opportunity": {
+      "raw_rate_at_least_half_control": true,
+      "rearm_episodes_at_least_20": true,
+      "rearm_lifecycles_at_least_15": true,
+      "rearm_months_at_least_4": true,
+      "touched_episodes_at_least_15": true,
+      "touch_rate_at_least_0_60": true,
+      "mean_mark_at_least_0_10": false,
+      "median_mark_above_0": true,
+      "eligible_months_at_least_3": true,
+      "positive_eligible_month_share_at_least_0_75": false,
+      "passed": false
+    },
+    "strong_null": {
+      "raw_rate_below_half_control": false,
+      "rearm_episodes_at_most_10": false,
+      "touch_rate_below_0_30": false,
+      "both_mean_and_median_nonpositive_with_at_least_15_marks": false,
+      "triggered": false
+    }
+  },
+  "derived_rows": {
+    "path": "lab/research/passive-self-blocking-opportunity-v1/evidence/PASSIVE_SELF_BLOCKING_SHADOW_ROWS_V1.csv",
+    "rows": 493,
+    "bytes": 54326,
+    "sha256": "98E53BE6E44C1995A15A944CE3DD4E6557B2AC59D34E4B795C2511A4E3B78ED1"
+  },
+  "verdict": "AMBIGUOUS_PASSIVE_SELF_BLOCKING_OPPORTUNITY_NO_CANDIDATE",
+  "decision": {
+    "preserve": [
+      "the one-position Passive constraint and all current admission, risk, lot, slot, priority, order, stop and exit behavior",
+      "the distinction between frequent persistent/re-armed signal supply and unproven broad economic value"
+    ],
+    "discard": [
+      "the claim that self-blocked Passive opportunity is negligible",
+      "the claim that frequent or reachable shadow signals justify a second Passive layer",
+      "any immediate-persistence pyramid, second-layer EA, risk/slot change or Live candidate from this unit"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "interpretation_limits": [
+    "The four-bar touch proxy is validated exactly against this period's native pending-order fills but remains a bar-level proxy for shadow episodes.",
+    "The sixteen-bar mark is not a stop-, cost-, exit- or portfolio-P/L counterfactual.",
+    "No actual/stressed CLOSE economics or generic signal-unknown existing-exposure row was consumed."
+  ],
+  "automatic_followups_not_opened": [
+    "alternate reset definition, threshold, session, touch window or mark horizon",
+    "immediate persistent-signal pyramid, third layer or unlimited stacking",
+    "another period, component, stop, cost, lot, risk, slot, priority or order variant",
+    "full-portfolio real-tick candidate execution"
+  ],
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_update_single_frontier_memory_commit_push_then_recompare_all_remaining_claude_cards_and_continue_only_if_one_has_both_bridge_and_distance"
+}

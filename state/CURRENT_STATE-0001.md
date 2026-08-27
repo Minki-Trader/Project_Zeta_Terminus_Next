@@ -1746,3 +1746,13 @@
 - Used the sole premetric acquisition/serialization correction to change only that temporary dictionary key reference. Inputs, populations, fields, feature/limit/touch/mark formulas, thresholds, gates, decisions and exclusions remain unchanged; no data was reacquired.
 - Correction receipt SHA-256 is `6FFF4D9E74DA51BC6AB0474D1B2ADCEC72A85D916FF5CA1E1C0AC8481CD36C80`. One successful fixed aggregation remains; correction allowance is exhausted and metric reruns remain zero.
 - Program 6, broker/account state and Live remain untouched.
+
+## STATE-0210 - 2026-08-27
+
+- Unit 082 correction commit `beb7a9be95ee98afded985ce46466128ab1b959f` reached origin before the one successful fixed aggregation. All nine hashes, 17,166-bar topology, 1,921 control joins, 92 lifecycle pairs and finite checks passed.
+- Passive feature reconstruction matched all 1,921 native rows with maximum absolute difference `2.22e-16` and zero signal mismatches. All 119 pending-order prices matched exactly; the four-bar touch proxy classified all `92` fills and `27` expiries with sensitivity/specificity `1.0/1.0`.
+- Native unblocked pass rate was `121/1,921 = 6.2988%`; held-state same-direction raw passes were `269/493 = 54.5639%`, or `8.6626x`. Distinct post-reset re-arm occurred in 20 lifecycles across all eight months, and `18/20 = 90%` had a proxy limit touch.
+- Reachability did not translate broadly: the 18 complete four-hour marks had mean `-0.24404 range`, median `+0.06350 range`, and only `2/4` adequately populated months positive. The mean and `75%` calendar-breadth gates failed, while the positive median prevented the strong-null rule.
+- Closed `AMBIGUOUS_PASSIVE_SELF_BLOCKING_OPPORTUNITY_NO_CANDIDATE`. Preserve the one-position Passive constraint; frequent latent signals prove neither negligible supply nor positive enough value for a second layer.
+- Derived rows/result/closure SHA-256 values are `98E53BE6E44C1995A15A944CE3DD4E6557B2AC59D34E4B795C2511A4E3B78ED1` / `A17EF2DAB286BB891DD75D609EEFC19BE2407A436F52875476356595DB7BE230` / `A80443AA2F6814510E2CF229BD416490D820330938E7CF046A5EFFEF9A961E94`. One aggregation, one premetric serialization correction and zero metric reruns; no actual/stressed close economics, generic signal-unknown row, MQL, Tester, broker/account state, Program 6 or Live surface was consumed.
+- No seed or candidate opened. Recompare all remaining Claude cards and the whole Program/height map after push; the Frontier Goal remains active and incomplete.
