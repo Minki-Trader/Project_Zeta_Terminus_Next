@@ -28,3 +28,12 @@ lifecycle aggregation. A complete pass may retain only one later,
 independently declared whole-portfolio risk/lot treatment question. This unit
 changes no entry, order, exit, priority, allocation, lot, risk, slot, component,
 EA or Live behavior.
+
+The official acquisition is now frozen before metrics. Five annual TFF ZIPs
+and three CFTC HTML snapshots total 2,897,509 bytes. The normalized file has
+484 target rows forming 242 exact Nasdaq/DJIA report-date pairs from 2022-01-04
+through 2026-08-18. Its SHA-256 is
+`B97235D84783BDEBE38D2E51F0631A8F8A71F6FBAF5623339050CCCAA66A80A5`;
+the acquisition receipt SHA-256 is
+`9F232F90B77A636FEE581CA7BEBC9824B76B1520D830BE080C4E6835AD5431F6`.
+No positioning state, supply result or lifecycle outcome has yet been emitted.
