@@ -1,0 +1,78 @@
+{
+  "schema": "zeta-next-prior-cash-breadth-book-rotation-premetric-acquisition-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_091_SOLE_PREMETRIC_ACQUISITION_CORRECTION_FROZEN",
+  "unit": "prior-cash-breadth-book-rotation-091",
+  "declaration_commit": "0da94f768cb9afdb5a80de17f289e4d9d3e6a430",
+  "declaration": {
+    "bytes": 25534,
+    "sha256": "310CE6F607CBB982CE77CDD35A7FA63AD0C984CF4D95A95F1418EE43AD818896"
+  },
+  "failed_invocation": {
+    "stage": "first semantic-authority source fetch",
+    "source_role": "equal_weight_semantic_authority",
+    "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500-equal-weight-index/",
+    "cause": "S&P DJI returned HTTP 403 to the bounded non-browser curl request",
+    "source_files_persisted": 0,
+    "normalized_csv_created": false,
+    "acquisition_receipt_created": false,
+    "supply_metrics_emitted": 0,
+    "lifecycle_metrics_emitted": 0,
+    "cp2_final_outcomes_consumed": false
+  },
+  "correction": {
+    "scope": "semantic-authority retrieval endpoints only",
+    "old_sources": [
+      {
+        "role": "equal_weight_semantic_authority",
+        "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500-equal-weight-index/"
+      },
+      {
+        "role": "capitalization_weight_semantic_authority",
+        "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/"
+      }
+    ],
+    "new_sources": [
+      {
+        "role": "equal_weight_semantic_authority",
+        "authority": "Invesco, the RSP fund sponsor",
+        "url": "https://www.invesco.com/us/financial-products/etfs/product-detail?productId=RSP",
+        "expected_semantics": "RSP follows the S&P 500 Equal Weight Index and gives the S&P 500 constituents equal-weight exposure."
+      },
+      {
+        "role": "capitalization_weight_semantic_authority",
+        "authority": "State Street, the SPY fund sponsor",
+        "url": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "expected_semantics": "SPY follows the S&P 500 Index, whose holdings are float-adjusted market-capitalization weighted."
+      }
+    ],
+    "unchanged": [
+      "RSP and SPY instrument identities",
+      "two semantic HTML plus two Nasdaq raw JSON source count",
+      "Nasdaq RSP/SPY historical URLs and date bounds",
+      "prior-session open-to-close relative log-return sign state",
+      "strictly prior date mapping and four-calendar-day staleness cap",
+      "CP2 inputs, reconstruction, centering, relative DID, outcomes and reports",
+      "density, directional, strong-null, contribution and verdict gates",
+      "target, exclusions, decision translation and no-automatic-followup rule"
+    ]
+  },
+  "retrieval_preflight": {
+    "method": "status-only curl checks with no persisted source body",
+    "invesco_rsp_http_status": 200,
+    "state_street_spy_http_status": 200,
+    "nasdaq_rsp_summary_http_status": 200,
+    "nasdaq_spy_summary_http_status": 200,
+    "economic_or_lifecycle_data_read": false
+  },
+  "acquisition_or_serialization_corrections_used": 1,
+  "acquisition_or_serialization_corrections_remaining": 0,
+  "successful_official_source_batches_used": 0,
+  "successful_fixed_aggregations_used": 0,
+  "metric_reruns_used": 0,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_correction_sha_update_single_frontier_memory_and_state_commit_push_then_run_the_single_corrected_official_source_batch"
+}
