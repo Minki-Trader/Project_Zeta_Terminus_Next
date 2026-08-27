@@ -1700,3 +1700,13 @@
 - A removal must beat net and equity DD together in `3/4` periods, preserve pooled net, improve remaining-five net and births broadly, retain at least `85%` of turnover, not raise risk skips and keep stop-rate drift within `2pp`. Passage freezes one future Lab candidate only; no Live action or automatic confirmation follows.
 - Source owner is `lab/research/component-removal-counterfactual-v1/`, copied once from the sole forward baseline; dedicated runtime is `lab/runtime/crc81-portable/`. System-drive free space was `41.61 GiB`, above the `30 GiB` mandatory-sweep threshold.
 - Declaration SHA-256 is `9BA09D8EA3047AB7D4EC2C073B075BC2462CFD42D00FF511C242139A62AE03AA`. No source copy, runtime copy, compile or Tester outcome has opened. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0205 - 2026-08-27
+
+- Unit 081 declaration commit `006f0f53e25c0593c2a79a74cc770b9636d356e4` reached origin before one physical copy of the 15-file forward baseline into `lab/research/component-removal-counterfactual-v1/mt5/` and one dedicated runtime copy into `lab/runtime/crc81-portable/`.
+- The only tracked source changes are one validated `NATIVE / WITHOUT_PASSIVE / WITHOUT_RETURN` input, skipping only the corresponding strategy process call, one profile log and independent Tester identity/Magic/state paths. The other 13 inherited modules are byte-identical and the frozen baseline and `lab/mt5/` remain unchanged.
+- First compile failed before Tester because runtime staging flattened the one-file `Domain` directory. The sole used compile correction moved the unchanged runtime file into the declared directory; tracked source, configuration and economics did not change. Correction SHA-256 is `DE918679B8C4115F3DA0F282CFBEB6939DFE6D3251C0C913372B9CD7F0F45BB3`.
+- The corrected MetaEditor build 6140 compile passed `0 errors / 0 warnings`; EX5 is `196,380` bytes / `B8782638C24AF33CAB4A7921829D85A34391F6F4C4189CCE0AC4C6BC687E8273`. Code-only/configuration manifests are `7D6ED9EDA0D2969A0FF1BA87C7455AADFFD36409129C5131A4A53BA43D2F695C` / `5028654E1C5AA49A57C0ACCAEE7EFD5918280E3EA7EDEBB39EB5A50810E77E63`.
+- The 5.55-GiB dedicated runtime contains zero junction/symbolic links, only this family's one EA/14 includes/one EX5/three SETs, and physical Bases/Tester-bases manifests exactly match their origin. Runtime receipt SHA-256 is `3F24B9CBFADB34098D46629FEF61AB95B8B825F0EDF0861DF0F62E534CDB5694`.
+- Compile receipt SHA-256 is `1D3DB64DBD817C7180D81FF3CD59FFCC436ABCD685BF4817262DC6423142D585`. All twelve Tester paths remain; no Tester outcome has opened. Commit and push this frozen boundary before P1 NATIVE.
+- Program 6, broker/account state and Live PID/source/package/settings/state/logs/dashboard remain untouched.

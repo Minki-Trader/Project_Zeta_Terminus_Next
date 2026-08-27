@@ -1,0 +1,137 @@
+{
+  "schema": "zeta-next-component-removal-counterfactual-compile-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "SOURCE_BINARY_CONFIGURATION_AND_RUNTIME_FROZEN_BEFORE_ANY_TESTER_PATH",
+  "unit": "component-removal-counterfactual-081",
+  "family": "component-removal-counterfactual-v1",
+  "declaration": {
+    "path": "lab/research/component-removal-counterfactual-v1/evidence/COMPONENT_REMOVAL_COUNTERFACTUAL_DECLARATION_V1.json",
+    "sha256": "9BA09D8EA3047AB7D4EC2C073B075BC2462CFD42D00FF511C242139A62AE03AA",
+    "commit": "006f0f53e25c0593c2a79a74cc770b9636d356e4",
+    "committed_and_pushed_before_derivation": true,
+    "outcomes_consumed": false
+  },
+  "implementation": {
+    "root": "lab/research/component-removal-counterfactual-v1/mt5/",
+    "one_time_physical_parent_copy": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "parent_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "parent_code_only_manifest": {
+      "files": 15,
+      "bytes": 353210,
+      "sha256": "41789B9416C1C0B771AE86F7CD2DB2918BAD55A71FC400B6E54CD525DB15235C"
+    },
+    "code_only_manifest": {
+      "files": 15,
+      "bytes": 354095,
+      "sha256": "7D6ED9EDA0D2969A0FF1BA87C7455AADFFD36409129C5131A4A53BA43D2F695C",
+      "algorithm": "Sort src-root-relative mq5/mqh paths ordinally with Windows separators, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8."
+    },
+    "source_and_binary_manifest": {
+      "files": 16,
+      "bytes": 550475,
+      "sha256": "6F5BDEC37F506032C6D0A4D76664463810C475551A97B7AD7CF82CE815E15424",
+      "algorithm": "The code-only algorithm extended to mq5/mqh/ex5."
+    },
+    "entrypoint": "lab/research/component-removal-counterfactual-v1/mt5/src/Experts/ZetaComponentRemovalCounterfactualV1.mq5",
+    "entrypoint_bytes": 21098,
+    "entrypoint_sha256": "0D9280CE2D4C0072E98798210A0720BE4603B5332E2BE77C57124786CA0A55D9",
+    "domain_bytes": 17858,
+    "domain_sha256": "89FD6A45BE265D3CFAD55F9A7084528960F8A2157E81819BE90C762DBA63A7A8",
+    "changed_source_files": [
+      "src/Experts/ZetaComponentRemovalCounterfactualV1.mq5",
+      "src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh"
+    ],
+    "unchanged_inherited_mqh_files": 13,
+    "allowed_changes_only": [
+      "one validated three-value component-set profile input",
+      "skip only ProcessPassiveLimit for WITHOUT_PASSIVE",
+      "skip only ProcessUS30ReturnReversalLong for WITHOUT_RETURN",
+      "Tester-only Unit 081 assembly, release, portfolio, Magic and file identity",
+      "one initialization log containing profile and exact enabled components"
+    ],
+    "unchanged_surfaces": [
+      "all enabled component signals, clocks and entries",
+      "holds, exits, stops, protection and RC4 ARC",
+      "sizing, lot ladder, capital, position and aggregate risk",
+      "slots, first-come ordering, execution costs and Passive order behavior when enabled",
+      "session calendar, state ordering and protective reconciliation"
+    ],
+    "baseline_modified": false,
+    "lab_mt5_modified": false,
+    "cross_family_include_or_link": false,
+    "live_dependency": false
+  },
+  "profiles": {
+    "NATIVE": {"input": 0, "enabled": ["RC16", "RC4", "Cross", "Pressure", "Return", "Passive"]},
+    "WITHOUT_PASSIVE": {"input": 1, "enabled": ["RC16", "RC4", "Cross", "Pressure", "Return"]},
+    "WITHOUT_RETURN": {"input": 2, "enabled": ["RC16", "RC4", "Cross", "Pressure", "Passive"]},
+    "other_values": "INIT_PARAMETERS_INCORRECT"
+  },
+  "configuration": {
+    "root": "lab/research/component-removal-counterfactual-v1/mt5/config/tester/",
+    "files": 15,
+    "set_files": 3,
+    "ini_files": 12,
+    "bytes": 9150,
+    "sha256": "5028654E1C5AA49A57C0ACCAEE7EFD5918280E3EA7EDEBB39EB5A50810E77E63",
+    "manifest_algorithm": "Sort tester-root-relative ini/set paths ordinally with Windows separators, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "matrix_order": [
+      "P1 NATIVE", "P1 WITHOUT_PASSIVE", "P1 WITHOUT_RETURN",
+      "P2 NATIVE", "P2 WITHOUT_PASSIVE", "P2 WITHOUT_RETURN",
+      "P3 NATIVE", "P3 WITHOUT_PASSIVE", "P3 WITHOUT_RETURN",
+      "P4 NATIVE", "P4 WITHOUT_PASSIVE", "P4 WITHOUT_RETURN"
+    ],
+    "all_model_4": true,
+    "all_us30_m30": true,
+    "all_local_only": true,
+    "optimization": false,
+    "deposit_currency_leverage": "$100 USD at 1:100"
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_ms": 2932,
+    "cpu": "X64 Regular",
+    "successful_compiles": 1,
+    "compile_attempts": 2,
+    "implementation_only_compile_corrections_used": 1,
+    "correction_receipt_sha256": "DE918679B8C4115F3DA0F282CFBEB6939DFE6D3251C0C913372B9CD7F0F45BB3",
+    "correction_scope": "Runtime Include directory placement only; tracked source/configuration and economics unchanged.",
+    "binary_path_local_ignored": "lab/research/component-removal-counterfactual-v1/mt5/src/Experts/ZetaComponentRemovalCounterfactualV1.ex5",
+    "binary_bytes": 196380,
+    "binary_sha256": "B8782638C24AF33CAB4A7921829D85A34391F6F4C4189CCE0AC4C6BC687E8273",
+    "runtime_binary_matches_family_binary": true,
+    "successful_compile_log_path_local_ignored": "lab/research/component-removal-counterfactual-v1/evidence/metaeditor-build.log",
+    "successful_compile_log_bytes": 16020,
+    "successful_compile_log_sha256": "5495586E1084C6E22315EC0B7ED97CB094AC7DF8A41666E98AB2B298AD795D8E",
+    "failed_attempt_log_path_local_ignored": "lab/research/component-removal-counterfactual-v1/evidence/metaeditor-build-attempt-1.log",
+    "failed_attempt_log_bytes": 5498,
+    "failed_attempt_log_sha256": "FBF004DDED888EC2AF8C6504D67EFE172EC3F8676180C990F722E015788DA200"
+  },
+  "dedicated_runtime": {
+    "receipt_sha256": "3F24B9CBFADB34098D46629FEF61AB95B8B825F0EDF0861DF0F62E534CDB5694",
+    "path": "lab/runtime/crc81-portable/",
+    "files_after_compile_before_outcome": 684,
+    "bytes_after_compile_before_outcome": 5955005735,
+    "filesystem_symbolic_or_junction_links": 0,
+    "source_runtime_and_set_byte_parity": true,
+    "market_data_matches_physical_origin": true,
+    "live_dependency": false
+  },
+  "execution_budget": {
+    "source_copies_used": 1,
+    "dedicated_runtime_copies_used": 1,
+    "successful_compiles_used": 1,
+    "implementation_only_compile_corrections_used": 1,
+    "implementation_only_compile_corrections_remaining": 1,
+    "tester_paths_used": 0,
+    "tester_paths_remaining": 12,
+    "post_metric_reruns_allowed": 0
+  },
+  "source_or_configuration_change_allowed_after_first_tester_path": false,
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_sha_update_single_frontier_memory_commit_push_then_run_p1_native"
+}

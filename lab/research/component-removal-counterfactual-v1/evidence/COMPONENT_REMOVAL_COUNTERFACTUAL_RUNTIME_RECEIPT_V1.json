@@ -1,0 +1,79 @@
+{
+  "schema": "zeta-next-component-removal-counterfactual-runtime-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "DEDICATED_PHYSICAL_RUNTIME_FROZEN_BEFORE_ANY_TESTER_PATH",
+  "unit": "component-removal-counterfactual-081",
+  "family": "component-removal-counterfactual-v1",
+  "declaration": {
+    "sha256": "9BA09D8EA3047AB7D4EC2C073B075BC2462CFD42D00FF511C242139A62AE03AA",
+    "commit": "006f0f53e25c0593c2a79a74cc770b9636d356e4",
+    "committed_and_pushed_before_runtime_copy": true
+  },
+  "runtime": {
+    "path": "lab/runtime/crc81-portable/",
+    "git_ignored": true,
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "physical_copy_only": true,
+    "files_after_compile_before_outcome": 684,
+    "bytes_after_compile_before_outcome": 5955005735,
+    "filesystem_symbolic_or_junction_links": 0,
+    "live_dependency": false,
+    "cross_family_source_or_runtime_dependency": false,
+    "shared_mutable_runtime_dependency": false
+  },
+  "executables": [
+    {"name": "terminal64.exe", "version": "5.0.0.6140", "bytes": 121846032, "sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400"},
+    {"name": "MetaEditor64.exe", "version": "5.0.0.6140", "bytes": 116791384, "sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7"},
+    {"name": "metatester64.exe", "version": "5.0.0.6140", "bytes": 21810944, "sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F"}
+  ],
+  "market_data": {
+    "manifest_algorithm": "Sort root-relative paths ordinally with Windows separators, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "bases": {
+      "files": 222,
+      "bytes": 3199243900,
+      "sha256": "0386AE6531F5A4998F0D6F3D506C22498A95A2661C54FF59ECD86B4738FBEA08",
+      "physical_copy_matches_origin": true
+    },
+    "tester_bases": {
+      "files": 165,
+      "bytes": 2478439859,
+      "sha256": "70E4D3D11BAEF52FF10BEE737A86657BA9B210FE37DDCE98D8033AD6FDBF0E07",
+      "physical_copy_matches_origin": true
+    },
+    "required_symbols": ["US30", "US100", "US500"],
+    "fixed_test_window": "2022-08-01 through 2026-08-20 inclusive"
+  },
+  "physical_separation_sample": {
+    "relative_path": "Bases/FPMarketsSC-Live/history/US30/2025.hcc",
+    "origin_file_id": "0x00000000000000000039000000021403",
+    "copy_file_id": "0x0000000000000000002600000006bbae",
+    "file_ids_differ": true,
+    "origin_hardlink_list_paths": 1,
+    "copy_hardlink_list_paths": 1
+  },
+  "family_payload": {
+    "runtime_mq5_files": 1,
+    "runtime_family_mqh_files": 14,
+    "runtime_family_ex5_files": 1,
+    "runtime_family_set_files": 3,
+    "other_family_mq5_mqh_ex5_or_set_files": 0,
+    "all_15_source_files_match_the_tracked_family_bytes": true,
+    "runtime_binary_matches_tracked_family_binary": true,
+    "runtime_set_files_match_tracked_family_configuration": true
+  },
+  "compile_staging_correction": {
+    "receipt_sha256": "DE918679B8C4115F3DA0F282CFBEB6939DFE6D3251C0C913372B9CD7F0F45BB3",
+    "scope": "One missing runtime Domain path component before the successful compile; no source, configuration or economic change."
+  },
+  "free_space": {
+    "before_copy_gib": 41.61,
+    "after_compile_gib": 36.04,
+    "mandatory_sweep_threshold_gib": 30,
+    "threshold_passed": true
+  },
+  "tester_paths_started": 0,
+  "economic_outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_compile_receipt_state_and_frontier_memory_commit_push_then_start_p1_native"
+}
