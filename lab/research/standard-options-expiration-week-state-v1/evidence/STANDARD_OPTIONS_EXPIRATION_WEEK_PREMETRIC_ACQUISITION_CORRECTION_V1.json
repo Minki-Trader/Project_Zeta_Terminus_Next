@@ -1,0 +1,47 @@
+{
+  "schema": "zeta-next-standard-options-expiration-week-premetric-acquisition-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FROZEN_BEFORE_SUCCESSFUL_SOURCE_BATCH_OR_ANY_SUPPLY_OR_LIFECYCLE_RESULT",
+  "unit": "standard-options-expiration-week-state-090",
+  "family": "standard-options-expiration-week-state-v1",
+  "declaration": {
+    "commit": "8f517faccad105b7e49319423ac9ef9cb9736cc7",
+    "bytes": 25579,
+    "sha256": "93D074F2C38CFEC5EB51FE4636AE0F9F51B05B2149A2AEB2E27DA52406BB5351"
+  },
+  "failed_invocation": {
+    "stage": "first source fetch before any later Cboe PDF, deterministic schedule or acquisition receipt",
+    "requested_url": "https://www.theocc.com/clearance-and-settlement/clearing/equity-options-product-specifications",
+    "failure": "The OCC site returned a Cloudflare managed JavaScript challenge to non-browser Invoke-WebRequest.",
+    "persisted_source_files": 0,
+    "schedule_files": 0,
+    "receipt_files": 0,
+    "supply_metrics_emitted": 0,
+    "lifecycle_metrics_emitted": 0,
+    "cp2_final_outcomes_consumed": false
+  },
+  "correction": {
+    "scope": "semantic-authority retrieval only",
+    "old_semantic_url": "https://www.theocc.com/clearance-and-settlement/clearing/equity-options-product-specifications",
+    "new_semantic_url": "https://optionsfacts.cboe.com/",
+    "new_semantic_expected_statement": "Cboe's official Options Facts page states that SPX standard monthly options expire on the third Friday of every month.",
+    "source_role_unchanged": "official public authority for the third-Friday standard-monthly convention",
+    "download_counts_unchanged": "one official HTML plus five annual official Cboe PDFs",
+    "calendar_rule_unchanged": "calendar Monday through Friday containing the calendar third Friday",
+    "treatment_comparator_centering_outcomes_thresholds_breadth_concentration_verdicts_unchanged": true,
+    "official_cboe_annual_pdf_urls_unchanged": true,
+    "program_6_live_and_broker_boundaries_unchanged": true
+  },
+  "budget": {
+    "acquisition_or_serialization_corrections_allowed": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "successful_official_source_batches_used": 0,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_push_correction_then_run_the_single_remaining_official_source_batch"
+}

@@ -2042,3 +2042,9 @@
 - Unit 090 does not reopen macro-release exposure, Monday/Friday edge or overnight drift. Treatment contains all five weekdays almost evenly and uses no price, return window, options position, open interest, volume or gamma field.
 - Outcome-free topology is `1,051` normal days, `2,429` signals and `2,233` births. Standard-expiration weeks contain `243/580/525` versus other weeks `808/1,849/1,708`; all four periods, both books and all six components exist, and minimum treatment/comparator component-period births are `3/15`.
 - Declaration SHA-256 is `93D074F2C38CFEC5EB51FE4636AE0F9F51B05B2149A2AEB2E27DA52406BB5351` over `25,579` bytes. One six-file official OCC/Cboe source batch, one deterministic schedule/receipt, one premetric acquisition-or-serialization correction, one fixed aggregation and zero reruns are frozen. No lifecycle outcome, Program 6, MQL, compile, Tester, broker/account query or Live surface has opened.
+
+## STATE-0244 - 2026-08-27
+
+- Unit 090 declaration commit `8f517faccad105b7e49319423ac9ef9cb9736cc7` reached origin before acquisition. The first source fetch stopped at the first OCC URL because Cloudflare returned a managed JavaScript challenge to non-browser `Invoke-WebRequest`; zero source file, schedule, receipt, supply metric or lifecycle outcome was persisted or emitted.
+- Used the sole premetric acquisition/serialization correction to replace only that blocked semantic-authority retrieval with Cboe's official Options Facts HTML, which states the same third-Friday standard-monthly convention. The five annual Cboe PDF URLs, one-HTML/five-PDF count, treatment week, comparator, centering, outcomes, gates and verdicts are unchanged.
+- Correction receipt SHA-256 is `CD9EF2CF571A7DE717E967B7CFF5885FEB8E4EF35423BAAB3CFAAB7F1CDDF878` over `2,498` bytes. Correction allowance is exhausted; one successful official batch and one aggregation remain. Program 6, broker/account state and Live remain untouched.
