@@ -2055,3 +2055,9 @@
 - Final acquisition-receipt object preparation then failed because PowerShell rejected the ordered-dictionary `bytes` property in the convenience total-source-byte aggregation. No receipt, supply metric or lifecycle metric was emitted; CP2 final value, planned risk and stop reason remained unread.
 - The receipt is a frozen integrity requirement and the sole premetric correction was already consumed. Closed `INVALID_STANDARD_OPTIONS_EXPIRATION_SCHEDULE_OR_LIFECYCLE_RECONSTRUCTION_NO_VERDICT` without an unauthorized second correction or aggregation. This is no evidence for or against expiration-week economics and retains no seed or implementation.
 - Result/closure SHA-256 values are `B8D7AE04C64B97D4778753DC7A5C73825846ACFB696E95E21FB61616E6AF09AA` / `E4C12780DCA68CA499020C9A665DE985E4FDEB073832412C538E0B02324A5DCE`. One source batch, one correction, zero aggregation/rerun; Program 6, broker/account state and Live untouched. Whole-map recomparison follows only after push.
+
+## STATE-0246 - 2026-08-27
+
+- Unit 090 closure commit `c196d3acad80e47c1eb45c0d90dc4d0f04e1a4f4` reached origin before Programs 1-5 and 7 and all heights were recomputed. No receipt repair, exact-day, quarterly/EOM, holiday, weekday, options-data, threshold or subgroup rescue opened.
+- Program 1 gets no signal seed from a premetric invalidity; Unit 085's seed remains consumed. Program 2 records only an invalid derivatives-calendar role. Programs 3/4 have no new clock, occupancy or remaining-path checkpoint, and Program 5 gets no risk/lot/slot authority without an economic result. Program 7 restatement changes no portfolio decision.
+- RLO1 natural accumulation and complete binding evidence remain observation gaps. Live polling, replay, synthetic rows and repair are forbidden. External cards `01/03/14/20/24/26/29` remain discarded. Marker `FRONTIER_MAP_AFTER_090_NO_SUCCESSOR`; Goal active and incomplete at the observation boundary.
