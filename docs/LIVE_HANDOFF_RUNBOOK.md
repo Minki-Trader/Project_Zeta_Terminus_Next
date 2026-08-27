@@ -83,3 +83,12 @@ Legacy와 모든 Next 터미널/테스터가 정지한 상태에서만 `Import-Z
 - 정지된 state A/B는 원본을 백업한 뒤 `safety_stopped` 한 바이트씩만 `1 → 0`으로 바꿨다. 다른 모든 바이트와 current/event 파일은 보존됐고 `broker_mismatch`는 런타임 재대조에서 0으로 복구됐다.
 - Committed entries-disabled PID `21944`와 final preflight PID `24820`이 각각 exact `0/0`을 통과하고 정상 정지한 뒤 Live PID `13328`이 exact `1/1`을 통과했다. Persistent sequence `2008 → 2009 → 2010`에서 fault/warning/alert가 모두 0이다.
 - Dashboard PID `4284`가 새 CXR2 로컬 스냅숏을 표시한다. CXR1과 이전 runtime은 재시작하지 않는다.
+
+## 10. 2026-08-27 RLO1 연구 관찰 ledger 전환 완료
+
+- CXR2 PID `15080`은 실제 MT5 Algo Trading을 꺼 entries `1/0`으로 만든 뒤, 서버 `05:56:29`의 pre-window flat에서 정상 정지했다. 포지션·주문·margin·계획위험·retry·shadow·ARC는 모두 0이었고 2026-08-27 기회는 하나도 소비하거나 건너뛰지 않았다.
+- Target `NEXT-E01-V7-RLO1-b32e7e176f2e`, EX5 SHA-256 `CB225D97DA7BCEC30599B472F615C7A3775C359A0F8FA8293FBB9C222795775B`는 검증된 관찰 모듈과 후행 기록 훅만 승격했다. Execution, economic version, Portfolio, Magic, core state marker/schema/path와 SET은 CXR2와 같다.
+- 별도 `ZetaTerminusNext\research\canonical` namespace의 candidate/lifecycle ledger는 append-only이며 자동 교체·회전·정리 대상이 아니다. Live main은 연구 reset/delete를 호출하지 않는다. 대시보드는 연구 파일을 읽지 않고 기존 core snapshot만 표시한다.
+- Committed entries-disabled PIDs `21400/16484`가 observer 생성과 복구를 포함한 exact `0/0`을 통과하고 정상 정지했다. Final preflight PID `3424`도 exact `0/0`을 통과하고 정지한 뒤 Live PID `8080`이 exact `1/1`을 통과했다.
+- 실제 `US30,M30` 차트에서 EA 부착과 Algo Trading 활성화를 확인했다. Persistent healthy sequences `3838 → 3840 → 3841`에서 fault/warning/alert는 모두 0이고 research state A/B가 계속 갱신된다. 자연스러운 첫 평가 전에는 검증을 위해 candidate/lifecycle 행을 인위적으로 만들지 않는다.
+- Dashboard PID `28332`가 변경 없는 한국어 UI를 표시한다. CXR2와 이전 runtime은 재시작하지 않는다.
