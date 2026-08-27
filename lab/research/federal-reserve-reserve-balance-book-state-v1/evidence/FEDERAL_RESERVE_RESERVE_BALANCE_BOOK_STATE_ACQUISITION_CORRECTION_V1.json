@@ -1,0 +1,70 @@
+{
+  "schema": "zeta-next-federal-reserve-reserve-balance-book-state-acquisition-correction-v1",
+  "created_at_local": "2026-08-27T21:29:15+09:00",
+  "status": "PREMETRIC_IMPLEMENTATION_CORRECTION_FROZEN",
+  "unit": "federal-reserve-reserve-balance-book-state-092",
+  "family": "federal-reserve-reserve-balance-book-state-v1",
+  "declaration": {
+    "bytes": 22651,
+    "sha256": "920F26FB0F2D766AC831EF1449BAF230F360FFDEC0866707E5E12551F2898CF7"
+  },
+  "failed_invocation": {
+    "stage": "official H.4.1 archive displayed-release-date integrity check",
+    "http_fetches_completed": 214,
+    "first_failure": "2022-07-21",
+    "cause": "The fixed parser recognized the modern body text 'Release Date: Month DD, YYYY' but older H.4.1 pages expose the date only in the legacy title form '... Thursday, Month D, YYYY'.",
+    "normalized_release_csv_created": false,
+    "acquisition_receipt_created": false,
+    "cp2_event_csv_imported": false,
+    "cp2_final_value_read": false,
+    "planned_risk_read": false,
+    "stressed_r_calculated": false,
+    "stop_reason_read": false,
+    "economic_metric_emitted": false,
+    "verdict_emitted": false
+  },
+  "bounded_source_only_diagnosis": {
+    "legacy_examples": [
+      {
+        "release_date": "20220721",
+        "title": "FRB: H.4.1 Release-- Factors Affecting Reserve Balances -- Thursday, July 21, 2022",
+        "modern_body_pattern_present": false
+      },
+      {
+        "release_date": "20230105",
+        "title": "FRB: H.4.1 Release-- Factors Affecting Reserve Balances -- Thursday, January 5, 2023",
+        "modern_body_pattern_present": false
+      }
+    ],
+    "modern_example": {
+      "release_date": "20240104",
+      "title": "Federal Reserve Balance Sheet: Factors Affecting Reserve Balances - H.4.1 - January 04, 2024",
+      "modern_body_pattern_present": true
+    },
+    "scope": "Only official page bytes, title/date strings and parser behavior were inspected. No CP2 economic field was opened."
+  },
+  "implementation_only_change": {
+    "before": "Require the modern Release Date body pattern on every archive page.",
+    "after": "Use the unchanged modern body pattern when present; otherwise parse the exact weekday-prefixed date from the legacy H.4.1 title and still require equality with the archive URL date.",
+    "unchanged": [
+      "214 declared release URLs and date range",
+      "target Reserve balances with Federal Reserve Banks row",
+      "week-change field and sign states",
+      "strict next-server-date causal mapping",
+      "all CP2 populations, centering, metrics, gates, verdicts, decisions and exclusions",
+      "bounded source persistence and full-page hash contract"
+    ]
+  },
+  "budget": {
+    "successful_official_acquisition_batches": 0,
+    "acquisition_or_serialization_corrections_used": 1,
+    "acquisition_or_serialization_corrections_remaining": 0,
+    "successful_fixed_aggregations": 0,
+    "metric_reruns": 0
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "untouched",
+  "next": "commit_push_correction_then_run_the_single_remaining_successful_official_acquisition_batch"
+}
