@@ -1,0 +1,90 @@
+{
+  "schema": "zeta-next-passive-self-blocking-opportunity-acquisition-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "ONE_DEDICATED_RUNTIME_AND_ONE_US100_M15_ACQUISITION_COMPLETE_BEFORE_METRICS",
+  "unit": "passive-self-blocking-opportunity-082",
+  "family": "passive-self-blocking-opportunity-v1",
+  "declaration": {
+    "sha256": "53662D22A2000ADC40B4AE3A0F1F2E8018123C5E8C2941A1B73487E4D2FCE8D1",
+    "commit": "1f3529f794dac39872f9892e457f859599ee3aca",
+    "committed_and_pushed_before_runtime_or_acquisition": true,
+    "outcomes_consumed": false
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/psbo82-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copy": true,
+    "pre_acquisition_files": 17,
+    "pre_acquisition_bytes": 158577878,
+    "post_acquisition_files": 31,
+    "post_acquisition_bytes": 162892293,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "symbolic_or_junction_links": 0,
+    "onedrive_reparse_markers_with_empty_link_type": 71,
+    "link_interpretation": "The Windows/OneDrive reparse attribute is present on hydrated files and directories, but every PowerShell LinkType and Target is empty. There is no symbolic link, junction or cross-family path target.",
+    "source_or_executable_from_another_lab_family": false,
+    "live_dependency": false,
+    "ignored_local_runtime": true
+  },
+  "acquisition": {
+    "python": "3.13.9",
+    "metatrader5_package": "5.0.5640",
+    "symbol": "US100",
+    "timeframe": "M15",
+    "from_inclusive": "2025-12-01 00:00:00 UTC request",
+    "to_inclusive": "2026-08-21 23:59:59 UTC request",
+    "successful_acquisitions": 1,
+    "acquisition_or_serialization_corrections_used": 0,
+    "copy_rates_range_calls": 1,
+    "symbol_info_calls": 1,
+    "api_calls_executed": ["initialize", "symbol_select", "symbol_info", "copy_rates_range", "shutdown"],
+    "forbidden_account_position_order_deal_or_send_calls_executed": false,
+    "terminal_process_exit": {
+      "shutdown_called": true,
+      "exact_dedicated_path_processes_stopped_after_shutdown": 1,
+      "exact_dedicated_path_processes_remaining": 0,
+      "other_terminal_processes_touched": false
+    }
+  },
+  "bar_export": {
+    "path": "lab/research/passive-self-blocking-opportunity-v1/evidence/US100_M15_BARS_20251201_20260821.csv",
+    "bytes": 1893127,
+    "sha256": "2530006F7A97E7DD026016DAD9458B3637363BCB673A75B25B965DFE317BA248",
+    "rows": 17166,
+    "columns": 9,
+    "column_names": ["time_epoch", "time_server", "open", "high", "low", "close", "tick_volume", "spread", "real_volume"],
+    "first_time": "2025.12.01 01:00:00",
+    "last_time": "2026.08.21 23:45:00",
+    "unique_strictly_increasing_epoch": true,
+    "finite_positive_valid_ohlc": true,
+    "nonnegative_volume_and_spread": true,
+    "row_at_or_after_fixed_end": false
+  },
+  "symbol_spec": {
+    "path": "lab/research/passive-self-blocking-opportunity-v1/evidence/PASSIVE_SELF_BLOCKING_US100_SYMBOL_SPEC_V1.json",
+    "bytes": 593,
+    "sha256": "24BF4729055E07A11D29CACB062D5F1ED3931B4D5421A2E06282CE45FD2144CF",
+    "digits": 2,
+    "point": 0.01,
+    "trade_tick_size": 0.01,
+    "spread_float": true
+  },
+  "canonical_history_after_acquisition": [
+    {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US100/2025.hcc", "bytes": 21195306, "sha256": "8B0151C9BF587F10FB9F9BC641F6B9FBC77DFF991D53F44DB73D3076944E1DFC", "matches_declaration": true},
+    {"path": "lab/runtime/tester-portable/Bases/FPMarketsSC-Live/history/US100/2026.hcc", "bytes": 14217501, "sha256": "D5E3DD3231644FFE95DFE2C59A684681C5D29D35D13145957C02B37ECBDD6704", "matches_declaration": true}
+  ],
+  "dedicated_history_after_acquisition": [
+    {"path": "lab/runtime/psbo82-portable/Bases/FPMarketsSC-Live/history/US100/2025.hcc", "bytes": 21195306, "sha256": "8B0151C9BF587F10FB9F9BC641F6B9FBC77DFF991D53F44DB73D3076944E1DFC", "matches_origin": true},
+    {"path": "lab/runtime/psbo82-portable/Bases/FPMarketsSC-Live/history/US100/2026.hcc", "bytes": 14396688, "sha256": "982113E3D38DA23C9AE38163C985C158137B6ED2605FFCB0053275A59B5AEF79", "private_runtime_synchronized_forward": true}
+  ],
+  "storage": {
+    "system_drive_free_gib_after_acquisition": 35.811,
+    "mandatory_sweep_threshold_gib": 30,
+    "sweep_required": false
+  },
+  "shadow_metrics_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_sha_update_single_frontier_memory_commit_push_then_run_the_one_fixed_integrity_and_shadow_aggregation"
+}

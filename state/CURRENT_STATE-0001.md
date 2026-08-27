@@ -1729,3 +1729,12 @@
 - Froze three lenses: raw held-state pass rate versus `121/1,921`; genuinely distinct same-direction threshold re-arm after a subthreshold reset; and a calibrated four-bar limit-touch plus sixteen-bar mark response. Immediate signal persistence is not a distinct opportunity.
 - A future one-extra-layer Lab candidate requires at least 20 re-arm episodes across 15 lifecycles and four months, calibrated touch and positive pooled/median/calendar mark value. The original card's below-half-control pass-rate falsifier is retained. No actual/stressed close P/L is consumed.
 - Declaration SHA-256 is `53662D22A2000ADC40B4AE3A0F1F2E8018123C5E8C2941A1B73487E4D2FCE8D1`. One minimal physical runtime, one US100 M15 `copy_rates_range`, one symbol-info read and one fixed aggregation are budgeted; no MQL, compile, Tester, optimization, validator or retained CLI is allowed. Program 6, broker/account state and Live remain untouched.
+
+## STATE-0208 - 2026-08-27
+
+- Unit 082 declaration commit `1f3529f794dac39872f9892e457f859599ee3aca` reached origin before one physical minimal copy at `lab/runtime/psbo82-portable/` and the only acquisition.
+- The isolated MetaTrader5 call bundle used only initialize, symbol-select, symbol-info, one US100 M15 `copy_rates_range` and shutdown. It made no account, position, order, deal or send call; the exact dedicated terminal process was stopped and no other terminal process was touched.
+- Frozen export `US100_M15_BARS_20251201_20260821.csv` has 17,166 unique ordered valid rows from `2025.12.01 01:00` through `2026.08.21 23:45`, 1,893,127 bytes and SHA-256 `2530006F7A97E7DD026016DAD9458B3637363BCB673A75B25B965DFE317BA248`.
+- US100 spec is digits/point/tick-size `2 / 0.01 / 0.01`; its receipt SHA-256 is `24BF4729055E07A11D29CACB062D5F1ED3931B4D5421A2E06282CE45FD2144CF`. The canonical 2025/2026 HCC files retained their declaration hashes; only the private runtime's 2026 copy synchronized forward.
+- Runtime symbolic/junction links are zero. OneDrive reparse attributes have empty LinkType/Target and are recorded separately, not treated as filesystem links. Acquisition receipt SHA-256 is `24276B69496E0AC645587A81C827A01CC994DB6EAD603DE609519DA0BA78B39C`.
+- No signal parity, shadow pass, re-arm, touch, mark, gate or verdict metric has opened. Commit and push this acquisition boundary before the one fixed aggregation; Program 6, broker/account state and Live remain untouched.
