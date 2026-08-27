@@ -1,0 +1,79 @@
+{
+  "schema": "zeta-next-clock-permutation-passive-priority-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "clock-permutation-passive-priority-083",
+  "family": "clock-permutation-passive-priority-v1",
+  "verdict": "AMBIGUOUS_CLOCK_PERMUTATION_PASSIVE_PRIORITY_NO_CANDIDATE",
+  "evidence": {
+    "declaration_sha256": "1819F74475D2556FB831875630EE213D9DDDB6B5CDE6954E4E3A5229168D6040",
+    "declaration_commit": "f6e7b9daf28524241dcf5d7cb87dce347b8cb6df",
+    "derived_rows_sha256": "09229DB10F63074966F8358717725D3640B579711C7A66C652C6436ED67E43B3",
+    "derived_rows_bytes": 4888,
+    "result_sha256": "09EF5950804A7D0799C3851190771C690E996B15344206E56B77536D486F96C1",
+    "result_bytes": 7840
+  },
+  "execution_accounting": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 0,
+    "implementation_only_premetric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "optimization_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "immutable_inputs_verified": 7,
+    "risk_blocks": 14,
+    "distance_negative_controls": 1,
+    "paired_positions": 356,
+    "passive_pending_intervals_fills_expiries": [119, 92, 27],
+    "mask_mismatches": 0,
+    "maximum_risk_before_absolute_difference_usd": 0.0,
+    "fractional_attribution_sum": 14.000000000000002
+  },
+  "findings": {
+    "passive_reserved_and_pivotal_blocks": [10, 10],
+    "passive_pivotal_months": 6,
+    "passive_pivotal_nonpassive_target_components": 3,
+    "passive_reserved_hours": 240.74916666666667,
+    "passive_pivotal_rate_per_1000_reserved_hours": 41.53700774319052,
+    "other_component_median_pivotal_rate_per_1000_reserved_hours": 31.193291956834425,
+    "rate_ratio": 1.3316006467246173,
+    "passive_pivotal_target_context_mean_stressed_r": 0.039846258081224974,
+    "passive_mean_admitted_stressed_r": 0.00918951091974254,
+    "target_context_advantage_r": 0.030656747161482433,
+    "interpretation": "Passive capacity presence is broad, but its occupancy-normalized pivotal rate and blocked-target value context do not meet the frozen disproportionate-priority thresholds. Every incumbent at these fourteen blocks is individually pivotal, so raw pivotal presence is not Passive-specific."
+  },
+  "gates": {
+    "structural_passive_priority_passed": false,
+    "strong_falsifier_triggered": false,
+    "complete_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "first-come evaluation and admission",
+      "all existing clock, priority, pending-order, risk, cap, lot, slot, stop and exit behavior"
+    ],
+    "discard": [
+      "zero Passive capacity-footprint claim",
+      "disproportionate Passive priority claim",
+      "priority selector, suppression, clock permutation and Live candidacy from Unit 083"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "same_family_rescue_opened": false,
+  "whole_map_recomparison_required": true,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_closure_sha_update_single_frontier_memory_commit_push_then_recompare_the_seven_remaining_claude_cards"
+}

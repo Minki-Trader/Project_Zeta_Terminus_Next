@@ -1,0 +1,172 @@
+{
+  "schema": "zeta-next-clock-permutation-passive-priority-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_083_FIXED_AGGREGATION_COMPLETE_AMBIGUOUS",
+  "unit": "clock-permutation-passive-priority-083",
+  "family": "clock-permutation-passive-priority-v1",
+  "declaration": {
+    "sha256": "1819F74475D2556FB831875630EE213D9DDDB6B5CDE6954E4E3A5229168D6040",
+    "commit": "f6e7b9daf28524241dcf5d7cb87dce347b8cb6df",
+    "committed_and_pushed_before_metrics": true
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "failed_premetric_invocations": 0,
+    "implementation_only_premetric_corrections_used": 0,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "optimization_paths": 0,
+    "orders": 0,
+    "retained_analysis_cli_or_validator": false
+  },
+  "integrity": {
+    "all_seven_immutable_hashes_and_bytes_passed": true,
+    "candidate_rows_columns_unique_ids": [4043, 48, 4043],
+    "lifecycle_rows_columns_unique_ids": [841, 60, 841],
+    "aggregate_risk_blocks": 14,
+    "price_distance_negative_controls": 1,
+    "paired_position_intervals": 356,
+    "passive_pending_intervals": 119,
+    "passive_pending_fills": 92,
+    "passive_pending_expiries": 27,
+    "active_and_reserved_mask_mismatches": 0,
+    "attempted_component_already_reserved_rows": 0,
+    "maximum_risk_before_absolute_difference_usd": 0.0,
+    "fractional_attribution_sum": 14.000000000000002,
+    "all_fixed_integrity_requirements_passed": true
+  },
+  "component_metrics": {
+    "RC16": {
+      "reserved_hours": 172.17583333333334,
+      "inclusive_blocks": 8,
+      "fractional_blocks": 3.166666666666667,
+      "individually_pivotal_blocks": 8,
+      "inclusive_rate_per_1000_reserved_hours": 46.464128240993944,
+      "pivotal_rate_per_1000_reserved_hours": 46.464128240993944,
+      "admitted_closes": 44,
+      "mean_admitted_stressed_r": 0.17677586670224132
+    },
+    "RC4": {
+      "reserved_hours": 224.40722222222223,
+      "inclusive_blocks": 7,
+      "fractional_blocks": 2.8333333333333335,
+      "individually_pivotal_blocks": 7,
+      "inclusive_rate_per_1000_reserved_hours": 31.193291956834425,
+      "pivotal_rate_per_1000_reserved_hours": 31.193291956834425,
+      "admitted_closes": 32,
+      "mean_admitted_stressed_r": 0.02671482447945081
+    },
+    "Cross": {
+      "reserved_hours": 495.6011111111111,
+      "inclusive_blocks": 0,
+      "fractional_blocks": 0.0,
+      "individually_pivotal_blocks": 0,
+      "inclusive_rate_per_1000_reserved_hours": 0.0,
+      "pivotal_rate_per_1000_reserved_hours": 0.0,
+      "admitted_closes": 129,
+      "mean_admitted_stressed_r": 0.007155782876102954
+    },
+    "Pressure": {
+      "reserved_hours": 107.42,
+      "inclusive_blocks": 7,
+      "fractional_blocks": 2.8333333333333335,
+      "individually_pivotal_blocks": 7,
+      "inclusive_rate_per_1000_reserved_hours": 65.16477378514243,
+      "pivotal_rate_per_1000_reserved_hours": 65.16477378514243,
+      "admitted_closes": 28,
+      "mean_admitted_stressed_r": 0.16517299629636603
+    },
+    "Return": {
+      "reserved_hours": 156.67305555555555,
+      "inclusive_blocks": 4,
+      "fractional_blocks": 1.3333333333333333,
+      "individually_pivotal_blocks": 4,
+      "inclusive_rate_per_1000_reserved_hours": 25.530873740964466,
+      "pivotal_rate_per_1000_reserved_hours": 25.530873740964466,
+      "admitted_closes": 31,
+      "mean_admitted_stressed_r": 0.06345162908642199
+    },
+    "Passive": {
+      "reserved_hours": 240.74916666666667,
+      "inclusive_blocks": 10,
+      "fractional_blocks": 3.833333333333334,
+      "individually_pivotal_blocks": 10,
+      "inclusive_rate_per_1000_reserved_hours": 41.53700774319052,
+      "pivotal_rate_per_1000_reserved_hours": 41.53700774319052,
+      "admitted_closes": 92,
+      "mean_admitted_stressed_r": 0.00918951091974254
+    }
+  },
+  "passive_priority": {
+    "reserved_risk_blocks": 10,
+    "individually_pivotal_blocks": 10,
+    "pivotal_calendar_months": ["2026.02", "2026.03", "2026.04", "2026.06", "2026.07", "2026.08"],
+    "pivotal_nonpassive_target_components": ["Cross", "Pressure", "Return"],
+    "pivotal_rate_per_1000_reserved_hours": 41.53700774319052,
+    "other_component_median_pivotal_rate_per_1000_reserved_hours": 31.193291956834425,
+    "pivotal_rate_ratio_to_other_median": 1.3316006467246173,
+    "pivotal_target_context_mean_stressed_r": 0.039846258081224974,
+    "passive_mean_admitted_stressed_r": 0.00918951091974254,
+    "target_context_advantage_over_passive_r": 0.030656747161482433
+  },
+  "fixed_gates": {
+    "structural_passive_priority": {
+      "reserved_blocks_at_least_7": true,
+      "pivotal_blocks_at_least_5": true,
+      "pivotal_months_at_least_4": true,
+      "nonpassive_target_components_at_least_3": true,
+      "normalized_rate_ratio_at_least_2": false,
+      "target_context_mean_above_zero": true,
+      "target_context_advantage_at_least_0_10r": false,
+      "passed": false
+    },
+    "strong_falsifier": {
+      "passive_reserved_blocks_exactly_zero": false,
+      "passive_inclusive_rate_is_lowest": false,
+      "triggered": false
+    }
+  },
+  "derived_rows": {
+    "path": "lab/research/clock-permutation-passive-priority-v1/evidence/CLOCK_PERMUTATION_PASSIVE_PRIORITY_BLOCK_ROWS_V1.csv",
+    "rows": 15,
+    "capacity_attribution_rows": 14,
+    "negative_control_rows": 1,
+    "bytes": 4888,
+    "sha256": "09229DB10F63074966F8358717725D3640B579711C7A66C652C6436ED67E43B3"
+  },
+  "verdict": "AMBIGUOUS_CLOCK_PERMUTATION_PASSIVE_PRIORITY_NO_CANDIDATE",
+  "decision": {
+    "preserve": [
+      "current first-come evaluation and admission behavior",
+      "all current clock, priority, pending-order, risk, cap, lot, slot, stop and exit contracts",
+      "the observation that Passive is frequently present at risk blocks without treating presence as disproportionate causal harm"
+    ],
+    "discard": [
+      "the claim that Passive has no cross-component capacity footprint in P4",
+      "the claim that its footprint is at least twice the other-component median after reserved-time normalization",
+      "a priority selector, Passive suppression, clock permutation or Live candidate from this unit"
+    ],
+    "retained_seed": null,
+    "future_lab_candidate": null,
+    "live_candidate": null
+  },
+  "interpretation": "Passive was a reserved and individually pivotal occupant in 10 of 14 risk blocks across six months, but every observed occupant was individually pivotal because each cap overshoot was smaller than any incumbent risk. Passive's normalized rate was only 1.33 times the other-component median, below the frozen 2x threshold, and the blocked-target admitted-value context advantage was only 0.031R, below 0.10R. Presence is real; disproportionate clock privilege with decision value is not established.",
+  "interpretation_limits": [
+    "The complete P4 census contains only fourteen capacity blocks; it does not identify blocked-candidate realized outcomes.",
+    "Target value is admitted component mean stressed R, used only as context and never as a blocked-trade counterfactual.",
+    "Reserved-hour normalization uses exact observed position unions and Passive pending intervals; it is not a clock intervention."
+  ],
+  "automatic_followups_not_opened": [
+    "priority selector, clock permutation, Passive suppression or pending-risk discount",
+    "larger period, relaxed block count, alternate occupancy denominator or pivotal formula",
+    "Unit 061 slot arithmetic repair, component removal or blocked-outcome imputation"
+  ],
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_closure_update_single_frontier_memory_commit_push_then_recompare_the_seven_remaining_claude_cards"
+}
