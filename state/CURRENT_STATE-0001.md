@@ -1616,3 +1616,13 @@
 - The only direct cap-relief row was Return during an order that later filled. The raw expired-state falsifier conditions held, but density failure made them ineligible for a harmlessness verdict.
 - Closed `INVALID_PENDING_RESERVATION_RISK_TAX_NO_VERDICT`. Preserve full pending reservation, Passive lifetime and first-come admission; the large expired risk-hour share is descriptive only. No pending discount/lifetime, cap, slot, priority, order-type, selector, EA or Live candidate remains.
 - Result/closure SHA-256 values are `EB6B7547CE3C6CF70D9A4349B258ABAEE4DD1D51E52C1DAB47D8D5B7B102AE76` / `ACF6CB8817F57FE7CC0E1268DFC105EEECF43633C78CB21B41F19CF801D94920`. One successful aggregation, one pre-output correction and zero metric reruns; Program 6, broker/account state and Live remained untouched. Recompare and continue serially after push; the Frontier Goal remains active and incomplete.
+
+## STATE-0196 - 2026-08-27
+
+- Unit 077 closure commit `48d3f7a29a1dbc5cb98f0330a50e20ad222d427c` reached origin before Programs 1-5 and 7 plus micro/meso/macro heights were recomputed. No adjacent pending or density rescue opened.
+- Cards 14/15 reused the sparse blocker channel, card 17 lacked calendar span, and cards 24/26/29 remained too close to closed stop/ARC/remap paths. Opened only Program 4 / meso Unit 078 `mark-extrema-clock-anchor-v1` from external card 21.
+- The new causal data role is exact `peak_time_server` and `trough_time_server` on all 356 complete P4 lifecycles. This differs from Unit 060's invalid hold intervention and Unit 063's pre-entry forward-return clock scan.
+- Froze identical 30-minute/48-bin wall-clock and elapsed-time supports, pooled HHI/top-bin share, six component histograms and all 15 pairwise Jensen-Shannon divergences for both peak and trough.
+- Session passage requires both extrema to show at least `+0.03` wall HHI, `+0.05` wall top-bin share and wall JSD at most `0.75x` elapsed JSD. Exact inverse conditions for both extrema form the duration-anchor falsifier.
+- A pass can retain only a later separately declared cross-period observation seed. No hold, exit, window, time-slot, component, clock-remap, EA or Live successor opens automatically.
+- Declaration SHA-256 is `F5928175F9EF7497EDAC9F88AEBA85C7A56D8D8610449591ABF0C172293DA7FF`. No extrema bin, concentration, divergence or verdict has opened. One fixed aggregation, one premetric correction and zero reruns are budgeted; Program 6, broker/account state and Live remain untouched.

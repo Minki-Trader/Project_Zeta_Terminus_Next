@@ -5,7 +5,7 @@ Last updated: 2026-08-27
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0195`
+- Latest state ID: `STATE-0196`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/live-research-observation-ledger-v1/` is verified and frozen, and only a separately authorized future stopped-flat Live promotion remains deferred by the no-skip gate
-- Active research boundary: none; Unit 077 is frozen invalid and the whole map must be recomputed after its closure reaches origin before Unit 078 opens
+- Active research boundary: Unit 078 `lab/research/mark-extrema-clock-anchor-v1/`; declaration frozen before any extrema bin, concentration or cross-component alignment metric
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-CXR2-14d84b9e4bb3`
@@ -1122,6 +1122,16 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 - Closed `INVALID_PENDING_RESERVATION_RISK_TAX_NO_VERDICT`. Preserve full pending-risk reservation, Passive lifetime and first-come admission; retain no pending discount, lifetime, cap, slot, priority, order-type, selector, EA or Live candidate. The `69.6973%` expired risk-hour share remains descriptive only.
 - Result/closure SHA-256 values are `EB6B7547CE3C6CF70D9A4349B258ABAEE4DD1D51E52C1DAB47D8D5B7B102AE76` / `ACF6CB8817F57FE7CC0E1268DFC105EEECF43633C78CB21B41F19CF801D94920`. One successful aggregation, one pre-output correction and zero metric reruns; Program 6, broker/account state and Live remained untouched.
 
+## Whole-map recomparison and open mark extrema clock anchor Unit 078
+
+- Unit 077 closure commit `48d3f7a` reached origin before Programs 1-5 and 7 plus all heights were recomputed. No filled-only, lifetime, pending-discount, cap or blocker-density rescue opened.
+- Cards 14/15 would reuse the just-failed sparse occupancy channel; card 17 lacks enough calendar span for a structural trend; cards 24/26/29 remain too close to frozen stop, ARC and clock-remap boundaries. Selected Claude card 21 as Program 4 / meso with micro and macro transfer.
+- The bridge is Unit 057's final-level-only gap, Unit 063's distinctive native clock and the current logger's newly complete exact peak/trough times for all 356 P4 lifecycles. The distance is Program 3 pre-fill resource occupancy to Program 4 post-entry mark-path timing and a different causal coordinate.
+- Froze identical 48-bin, 30-minute supports for server wall-clock and elapsed-from-entry coordinates. Peak and trough are separate lenses; all 15 component-pair base-2 Jensen-Shannon divergences test which coordinate better aligns six component histograms.
+- Complete session anchoring requires, for both peak and trough, wall HHI advantage at least `0.03`, wall top-bin-share advantage at least `0.05`, and mean wall JSD at most `0.75x` elapsed JSD. The exact inverse requirements form the duration-anchor falsifier.
+- Unit 060 is not repaired or reopened. Even a pass preserves all behavior and retains only one non-automatic cross-period clock-alignment observation seed; no hold, exit, window or clock intervention opens here.
+- Declaration SHA-256 is `F5928175F9EF7497EDAC9F88AEBA85C7A56D8D8610449591ABF0C172293DA7FF`. No extrema bin, HHI, top-bin share, JSD, gate or verdict has opened. One aggregation, one premetric correction and zero reruns are budgeted; no data acquisition, runtime, MQL, compile, Tester, Program 6, broker/account query or Live action occurred.
+
 ## Required completion evidence
 
 1. concise human lineage summaries and complete hash-anchored legacy indexes
@@ -1135,7 +1145,7 @@ Legacy B70 V6R6, parent V7 and CXR1 are stopped and disabled. The official fresh
 
 Latest closed research verdict: `INVALID_PENDING_RESERVATION_RISK_TAX_NO_VERDICT`
 
-Active research unit: none; Unit 077 frozen invalid pending immediate whole-map recomparison
+Active research unit: Unit 078 `mark-extrema-clock-anchor-v1`; declaration frozen, outcomes unopened
 
 Latest Frontier marker: `PENDING_RESERVATION_RISK_TAX_077_CLOSED_INVALID_DENSITY_NO_CANDIDATE`
 

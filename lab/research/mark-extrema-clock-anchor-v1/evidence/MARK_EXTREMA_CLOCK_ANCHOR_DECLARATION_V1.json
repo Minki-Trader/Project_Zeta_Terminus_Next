@@ -1,0 +1,202 @@
+{
+  "schema": "zeta-next-mark-extrema-clock-anchor-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_078_DECLARATION_FROZEN_BEFORE_EXTREMA_CLOCK_AGGREGATION",
+  "unit": "mark-extrema-clock-anchor-078",
+  "family": "mark-extrema-clock-anchor-v1",
+  "title": "Lifecycle Mark Extrema: Session Clock versus Elapsed Duration",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit",
+    "korean_name": "포지션 관리·청산"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"],
+    "transfer_path": "Lifecycle peak/trough timing identifies whether mark opportunity is organized by a shared market-session clock or by time since each component's entry; that distinction changes which causal variable future portfolio construction would need to preserve."
+  },
+  "central_question": "Across all six current components, are lifecycle peak and trough marks jointly more concentrated and more cross-component-aligned in server wall-clock time than in elapsed time since entry?",
+  "research_bundle": {
+    "name": "peak_clock_concentration_trough_natural_contrast_and_cross_component_jsd",
+    "single_center_question": true,
+    "lenses": [
+      "value-production lens: pooled peak-mark wall-clock versus elapsed-time concentration on identical 30-minute supports",
+      "adverse-path natural contrast: the same frozen comparison for trough marks",
+      "mechanism and falsification: mean pairwise Jensen-Shannon divergence of the six component histograms under wall-clock versus elapsed coordinates"
+    ]
+  },
+  "idea_provenance": {
+    "source": "user-supplied Claude 30-card memo",
+    "memo_sha256": "032D8DD706D4D8C43E4EBFF391895E3C485DCB2F0531BE4C39DC2C699DE4A0BB",
+    "card": 21,
+    "authority_note": "The memo supplies the economic question only. Project Zeta Terminus Next is sole authority. The frozen comparison is diagnostic and cannot reopen a hold-duration treatment."
+  },
+  "why_now": {
+    "current_bottleneck": "Unit 057 could see only a final post-checkpoint level, Unit 060 could not validly test hold interventions, and Unit 063 found a distinctive native clock without identifying whether lifecycle value itself is session-anchored. The current-spec P4 ledger now preserves exact peak and trough times for every completed lifecycle.",
+    "connection_bridge": "Unit 077 showed that time occupancy can be large while decision overlap is too sparse. The denser 356-lifecycle extrema ledger supplies a different, complete timing role tied directly to realized position paths rather than admission events.",
+    "perspective_distance": "Unit 077 was Program 3 pre-fill resource occupancy. Unit 078 moves to Program 4 post-entry mark-path timing, uses lifecycle extrema rather than candidate/event rows, and tests a clock-versus-duration causal coordinate instead of capacity displacement.",
+    "decision_if_true": "Preserve all current behavior and retain one non-automatic future cross-period clock-alignment observation seed. Any later intervention must change clock alignment without changing hold duration and must be separately declared.",
+    "decision_if_false": "Preserve current component clocks and native hold schedules; discard a shared session-clock explanation and do not reopen hold-curve research.",
+    "decision_if_ambiguous_or_invalid": "Make no clock, hold, exit or component change; record the bounded result or observation gap and rotate away."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Card 17 cannot establish a structural feature trend from its short 2024-12 through 2026-07 span; Unit 070 remains closed ambiguous without a direction rescue.",
+    "program_2": "Unit 076 closed the internal-dispersion field and no regime continuation opens.",
+    "program_3": "Cards 14 and 15 would reuse the same sparse blocker/occupancy channel immediately after Unit 077; card 23 is US30-only and remains lower-value than a complete six-component path question.",
+    "program_4": "Selected because the new logger field gives all 356 completed P4 lifecycles exact extrema times. This is not a hold-length intervention, Unit 060 repair or exit-rule variant; Unit 060's hold schedule and no-rerun boundary remain frozen.",
+    "program_5": "Card 28 requires a new multi-path Tester intervention while the direct real-tick lane remains fragile; current complete source-free evidence has higher decision efficiency.",
+    "program_7": "Unit 075's binding-tail gap remains closed. Card 18 requires a new shadow logger and is effectively Passive-only, so it does not outrank the complete extrema field.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare Programs 1-5 and 7 plus all heights, then continue serially. Do not automatically open any peak window, trough window, entry-clock, hold, exit, component or cross-period successor."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "all 356 exact CLOSE lifecycle rows in the current-spec P4 research-lifecycles ledger",
+      "all six components with their complete entry, peak, trough and final server times",
+      "peak and trough coordinates binned identically in 30-minute wall-clock and elapsed-time supports",
+      "pooled HHI/top-bin concentration and all 15 component-pair Jensen-Shannon divergences"
+    ],
+    "excluded": [
+      "FIRST_PEER_NATURAL_EXIT rows as outcomes, partial observations, missing extrema or incomplete lifecycle rows",
+      "peak/trough R magnitude filters, winner/loser, stop/native, direction, symbol, month, weekday or time-window selection",
+      "alternative 5/15/60-minute bins, kernel smoothing, circular-window search or favorable coordinate remapping",
+      "hold schedule, exit rule, clock shift, session remap, component removal, slot, lot, risk or admission counterfactual",
+      "new data, runtime, MQL, compile, Tester, broker/account query or Live action"
+    ],
+    "automatic_followups_forbidden": [
+      "best peak or trough wall-clock window",
+      "component-only, symbol-only, winner-only, stop-only, month or session subgroup",
+      "15-minute or 60-minute bin rescue and alternate divergence/concentration statistic",
+      "shorter/longer hold, time exit, trailing, breakeven, partial close or Unit 060 rerun",
+      "entry-clock shift, DST remap, EA or Live change"
+    ]
+  },
+  "immutable_inputs": {
+    "lifecycle_ledger": {
+      "path": "lab/artifacts/backtests/live-research-observation-ledger-v1/p4-2026-ytd/ea-files/research-lifecycles.csv",
+      "bytes": 683465,
+      "sha256": "01EA88857947DF0C71557257179775A7D99F14C33CD262036EFEF6A24D755CEC",
+      "expected_rows": 841,
+      "role": "Complete current-spec birth, first-peer and final lifecycle observations with exact extrema times."
+    },
+    "observation_source": {
+      "path": "lab/engineering/live-research-observation-ledger-v1/mt5/src/Include/ZetaTerminusNext/Observation/ZetaResearchObservation.mqh",
+      "bytes": 50530,
+      "sha256": "8F4021B3C1C1E288FF443714B766B4D85608F45D9FE2EDFFBEC0750465450FE5",
+      "role": "Authority for peak/trough initialization, strict update and exact server-time persistence."
+    },
+    "unit_057_closure": {
+      "path": "lab/research/first-peer-profit-memory-checkpoint-v1/evidence/FIRST_PEER_PROFIT_MEMORY_CHECKPOINT_CLOSURE_V1.json",
+      "bytes": 4517,
+      "sha256": "AFC17F7DD25E7DE167A93FEEEF47C71B21137B6A1A8A2A49D1669683DD884335",
+      "role": "Authority that the older checkpoint path retained only final level and cannot answer time-indexed mark-path questions."
+    },
+    "unit_060_closure": {
+      "path": "lab/research/native-hold-schedule-curve-v1/evidence/NATIVE_HOLD_SCHEDULE_CURVE_CLOSURE_V1.json",
+      "bytes": 5234,
+      "sha256": "4EE05657C5AF2423CFA2FBB95A136EDB96710B0BA05D0CE504757CE2EAC1BFAD",
+      "role": "Authority that no hold intervention was established and no duration or same-family Tester repair may open here."
+    },
+    "unit_063_result": {
+      "path": "lab/research/all-slot-evaluation-clock-shape-v1/evidence/ALL_SLOT_EVALUATION_CLOCK_SHAPE_RESULT_V1.json",
+      "bytes": 9232,
+      "sha256": "CA56D5A7B23EB008965894D15349D0DD2DB1D5D5BEF05A95C2A4E42B519E00BB",
+      "role": "Prior evidence that native 13:30 response was distinctive while broad all-slot portability failed."
+    },
+    "unit_063_closure": {
+      "path": "lab/research/all-slot-evaluation-clock-shape-v1/evidence/ALL_SLOT_EVALUATION_CLOCK_SHAPE_CLOSURE_V1.json",
+      "bytes": 4768,
+      "sha256": "3D33455551304B269E591D1CBEED60F8F6DE0719FD4E09B8CF63555EFAF15F5D",
+      "role": "Authority prohibiting a favorable-slot or time-threshold rescue."
+    },
+    "unit_077_closure": {
+      "path": "lab/research/pending-reservation-risk-tax-v1/evidence/PENDING_RESERVATION_RISK_TAX_CLOSURE_V1.json",
+      "bytes": 3426,
+      "sha256": "ACF6CB8817F57FE7CC0E1268DFC105EEECF43633C78CB21B41F19CF801D94920",
+      "role": "Immediate prior closure and rotation boundary."
+    }
+  },
+  "component_mapping": [
+    {"name":"RC16","component_id":"ZT-M30-US30-RANGE-COMP-61f61deaba","required_close_rows":44},
+    {"name":"RC4","component_id":"ZT-M30-US30-RANGE-COMP-64efb16616","required_close_rows":32},
+    {"name":"Cross","component_id":"ZT-H1-US100-CROSS-IN-14b72317b7","required_close_rows":129},
+    {"name":"Pressure","component_id":"ZT-M30-US30-INTRADAY-R-2eb111fc46","required_close_rows":28},
+    {"name":"Return","component_id":"ZT-H1-US30-RETURN-I-c870a788ec","required_close_rows":31},
+    {"name":"Passive","component_id":"ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8","required_close_rows":92}
+  ],
+  "frozen_lifecycle_and_time_semantics": {
+    "population": "Use event=CLOSE rows only. Pair each to exactly one BIRTH row by component_id plus position_identifier and require identical entry_time_server.",
+    "final_time": "The CLOSE row server_time is the lifecycle terminal time regardless of native or external exit detail.",
+    "extrema_integrity": "Require entry_time_server <= peak_time_server <= final server_time and entry_time_server <= trough_time_server <= final server_time, strictly positive mark_samples, partial_observation=0 and research_dropped_records=0.",
+    "maximum_span": "Both peak and trough elapsed minutes must be in [0,1440); any lifecycle outside the common 24-hour support invalidates the unit.",
+    "wall_coordinate": "Minute of server day including seconds as a fractional minute, modulo 1,440.",
+    "elapsed_coordinate": "Exact elapsed minutes from entry_time_server to the extremum.",
+    "binning": "For both coordinates use floor(minutes/30), yielding the identical fixed support bins 0 through 47. Do not rebin after outcomes."
+  },
+  "frozen_metrics": {
+    "pooled_hhi": "For peak and trough separately and each coordinate, sum squared pooled bin shares over all 48 bins.",
+    "pooled_top_bin_share": "Maximum pooled bin share; ties report the earliest numeric bin without changing any metric.",
+    "component_histograms": "For each extremum and coordinate, create one 48-bin probability vector per component using all of its required rows.",
+    "pairwise_jsd": "For every one of the 15 component pairs, calculate base-2 Jensen-Shannon divergence between their vectors, with zero-probability terms contributing zero. Report the unweighted mean of 15 divergences.",
+    "coordinate_interpretation": "Higher pooled HHI means stronger shared concentration. Lower mean pairwise JSD means the six components align more closely under that coordinate."
+  },
+  "fixed_integrity_density_gate": {
+    "requirements": [
+      "All seven byte/hash pins and prior verdict/source anchors pass.",
+      "The lifecycle ledger has exactly 841 unique rows: 356 BIRTH, 356 CLOSE and 129 FIRST_PEER_NATURAL_EXIT.",
+      "Exactly 356 one-to-one BIRTH/CLOSE pairs satisfy every extrema, span, mark-sample, partial and dropped-record requirement.",
+      "The six CLOSE counts are exactly 44, 32, 129, 28, 31 and 92, so every component has at least 25 observations.",
+      "All four 48-bin histograms per component sum to one within 1e-12 and all 15 pairwise divergences are finite in [0,1]."
+    ],
+    "all_required": true
+  },
+  "fixed_session_anchor_gate": {
+    "per_extremum_requirements": [
+      "wall-clock pooled HHI minus elapsed-time pooled HHI is at least 0.03",
+      "wall-clock pooled top-bin share minus elapsed-time pooled top-bin share is at least 0.05",
+      "mean wall-clock pairwise JSD is at most 0.75 times mean elapsed-time pairwise JSD"
+    ],
+    "complete_requirement": "Every per-extremum requirement must pass independently for both peak and trough."
+  },
+  "fixed_duration_anchor_falsifier": {
+    "per_extremum_requirements": [
+      "elapsed-time pooled HHI minus wall-clock pooled HHI is at least 0.03",
+      "elapsed-time pooled top-bin share minus wall-clock pooled top-bin share is at least 0.05",
+      "mean elapsed-time pairwise JSD is at most 0.75 times mean wall-clock pairwise JSD"
+    ],
+    "trigger_requirement": "Every per-extremum requirement must pass independently for both peak and trough."
+  },
+  "fixed_verdict_rules": {
+    "complete": "PASS_MARK_EXTREMA_SESSION_CLOCK_ANCHOR_RETAIN_OBSERVATION_SEED when integrity and both peak/trough session-anchor gates pass.",
+    "falsified": "MARK_EXTREMA_DURATION_ANCHORED_NO_CLOCK_SEED when integrity passes and both peak/trough duration-anchor falsifier gates pass.",
+    "ambiguous": "AMBIGUOUS_MARK_EXTREMA_CLOCK_ANCHOR_NO_CANDIDATE when integrity passes and neither preceding rule applies.",
+    "invalid": "INVALID_MARK_EXTREMA_CLOCK_ANCHOR_NO_VERDICT when any immutable, lifecycle, time, support, density or histogram requirement fails."
+  },
+  "decision_translation": {
+    "complete": "Preserve current behavior; retain one non-automatic cross-period clock-alignment observation seed. This P4 diagnostic alone cannot authorize a clock or exit change.",
+    "falsified": "Preserve current component clocks and native holds; discard a shared session-clock mechanism and open no duration/hold successor.",
+    "ambiguous_or_invalid": "Make no clock, hold, exit or portfolio change and rotate away."
+  },
+  "execution_budget": {
+    "successful_fixed_aggregations": 1,
+    "implementation_only_pre_metric_corrections": 1,
+    "metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push declaration, state and Frontier memory before calculating any extrema bin, HHI, top-bin share, Jensen-Shannon divergence, gate or verdict.",
+    "One implementation-only correction is allowed only before any new extrema metric is emitted. After any new metric, make no correction or rerun.",
+    "Do not alter the 30-minute bins, common support, population, component counts, concentration, divergence, thresholds, verdicts or decisions after outcomes.",
+    "Do not select a favorable time, component or outcome; do not reopen Unit 060; do not acquire data, modify MQL, compile, run Tester, query broker/account state or touch Live."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_declaration_sha_update_single_frontier_memory_commit_push_then_run_exactly_one_fixed_extrema_clock_aggregation"
+}
