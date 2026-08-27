@@ -1,0 +1,108 @@
+{
+  "schema": "zeta-next-round-number-crossing-response-invalid-matrix-environment-refreeze-v2",
+  "created_at_local": "2026-08-28",
+  "status": "SECOND_INCOMPLETE_P1_MATRIX_DISCARDED_BEFORE_ECONOMIC_USE_AND_TWO_SYMBOL_CACHE_REFROZEN",
+  "unit": "round-number-crossing-response-094",
+  "family": "round-number-crossing-response-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "environment_refreeze_inside_unit_094": true,
+    "implementation_events_are_not_experiments": true,
+    "micro_split": false
+  },
+  "frozen_parent": {
+    "commit_pushed_before_matrix": "8f9c6b014ced5320d3e9f52892614ff1fff6f21a",
+    "environment_path": "lab/research/round-number-crossing-response-v1/evidence/ROUND_NUMBER_CROSSING_RESPONSE_ENVIRONMENT_BEFORE_P1_V2.json",
+    "environment_bytes": 9522,
+    "environment_sha256": "232561C68FF8EEDEB918D242E3B016C9BAE3A5C894C365AA53BD9F13918E9AF4",
+    "source_manifest_sha256": "E51F674EA5E6EE4FCB893E048B948249C89C5CB362B3054061B1D626D028D152",
+    "configuration_manifest_sha256": "9531DCD2010852CF424D87B1973C669A2A3EE86EDBFA6EC74B84FE73E75FD6D2",
+    "binary_sha256": "22CBFD2110112FAFFBE02BF330B13B9AC91327BC0451528CAE2A70CC285A6557"
+  },
+  "discarded_incomplete_matrix": {
+    "paths_run_in_declared_order": ["P1 US30", "P1 US100"],
+    "P1_US30": {
+      "model": 4,
+      "report_history_quality": "100% real ticks",
+      "deinit_reason": 1,
+      "eligible_days": 259,
+      "valid_ticks": 35139751,
+      "triggers_and_resolved": 2366,
+      "round_resolved": 1168,
+      "placebo_resolved": 1198,
+      "faults_or_contract_change": 0,
+      "v2_environment_continuity_passed": true
+    },
+    "P1_US100": {
+      "model": 4,
+      "report_history_quality": "100% real ticks",
+      "deinit_reason": 1,
+      "eligible_days": 259,
+      "valid_ticks": 65421654,
+      "triggers_and_resolved": 1477,
+      "round_resolved": 722,
+      "placebo_resolved": 755,
+      "faults_or_contract_change": 0,
+      "v2_environment_continuity_passed": false
+    },
+    "integrity_fields_only_read": true,
+    "opportunity_economic_rows_read": false,
+    "economic_aggregation_or_judgment": false,
+    "valid_matrix_paths_after_discard": 0
+  },
+  "mandatory_environment_drift": {
+    "symbol_database_sha256_before_and_after": "8715357D29B1E66C3845B5C3FC79DD748F09FE8EED1A87D6759BE9F85317D6F4",
+    "changed_exercised_history_file": {
+      "path": "lab/runtime/rncr94-portable/Tester/bases/FPMarketsSC-Live/history/US100/2024.hcs",
+      "bytes_before_and_after": 3057561,
+      "sha256_before": "5C456E274F6E2551086675A9778EC2417D35AAA2A632957FB39850B41EC670E9",
+      "sha256_after": "4068F0BFDD6B029C933264208CF16622AC73BBD171E0AF446D1911AEFC0BD44B"
+    },
+    "p1_us100_manifest_sha256_before": "0E2028C0BA18125C40B6CED5B3B1AB79C26F0C4531716A7CFC22510CD5B2D2D1",
+    "p1_us100_manifest_sha256_after": "9ABB95C6EBABFC0614B3C4BFE2052A52D9165B722927E655B7813AD9D65C65A4",
+    "p1_us100_real_tick_tkc_files_changed": 0,
+    "p1_us30_manifest_changed_during_matrix": false,
+    "other_declared_path_manifests_changed": 0,
+    "terminal_source_configuration_binary_or_symbols_changed": false,
+    "cause_evidence": "Normal local Tester synchronization rewrote only the newly selected US100 annual HCS cache; exact monthly TKCs remained byte-identical.",
+    "declaration_consequence": "The incomplete US30-US100 matrix is discarded independently of both clean observer summaries."
+  },
+  "preserved_invalid_attempt": {
+    "path": "lab/artifacts/ea-files/round-number-crossing-response-v1/invalid-matrix-attempt-v2/",
+    "files": 20,
+    "bytes": 10626748,
+    "manifest_sha256": "1139699CDA68E01CE61B523DE11CB02AE1FBF1951D2D17F016742443C6E42038",
+    "manifest_algorithm": "Sort attempt-root-relative Windows paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "missing_current_attempt_us30_observer_files": 2,
+    "missing_reason": "The local Tester Agent reinitialized its MQL5/Files surface for the next path before the prior US30 files were staged. The matrix was already invalid and no economics were consumed; reports and cumulative logs remain preserved.",
+    "artifact_staging_correction_for_next_restart": "After each path passes non-economic integrity, move its observer files and reports immediately into one active-matrix staging root and copy the then-current logs before opening the next path.",
+    "active_outputs_after_recoverable_move": 0,
+    "active_reports_after_recoverable_move": 0,
+    "deleted_files": 0
+  },
+  "postprocess_invocation_correction": {
+    "parser_stops_before_execution": 1,
+    "input_or_output_opened": false,
+    "cause": "Missing PowerShell whitespace in a foreach token while preparing the V3 manifest snapshot.",
+    "correction": "Whitespace only; the corrected invocation made the sole symbols V3 preservation copy and computed the unchanged manifests.",
+    "economic_contract_change": false
+  },
+  "unchanged_contract": {
+    "source_configuration_and_binary": true,
+    "grids_placebo_window_horizon_books_costs_periods_and_gates": true,
+    "economic_contract_changes": 0,
+    "implementation_source_corrections": 0
+  },
+  "governance": {
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "restart_from": "P1 US30"
+  },
+  "economic_outcomes_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_two_symbol_synchronized_environment_v3_commit_push_then_restart_p1_us30"
+}
