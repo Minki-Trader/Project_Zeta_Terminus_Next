@@ -91,6 +91,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/predecision-market-participation-state-v1/`: 닫힌 애매함 Program 2 / meso Unit 084 family; broad H1 참여상태는 유효했지만 HIGH-LOW `+0.01698R/+0.04462 stop`, 양 book `0/2`·기간 `1/4`·component `1/6` 방향폭으로 처리 후보 없음
 - `research/predecision-gold-yen-risk-state-v1/`: 닫힌 애매함 Program 2 / meso Unit 088 source-free family; risk-off minus risk-on은 `+0.00766R/+0.02506 stop`, 양 book은 반대 방향이고 기간 concordance는 `0/4`; strong-null stop 경계를 `0.000057` 넘겨 처리 후보 없이 종료
 - `research/cftc-leveraged-money-relative-flow-v1/`: 닫힌 no-field Program 2 / meso→macro Unit 089 source-free family; 공식 공표일 이후 CFTC Nasdaq-DJIA leveraged-money flow의 US100-US30 DID는 `+0.04807R/-0.01238 stop`으로 strong-null 통과, unconditional book 처리 보존·risk/lot seed 없음
+- `research/standard-options-expiration-week-state-v1/`: 열린 Program 2 / meso Unit 090 source-free family; 공개된 월간 표준 옵션 셋째 금요일을 포함한 월–금 주간이 기존 6전략의 신호·birth 공급과 전체 lifecycle stressed-R/stop을 바꾸는지 한 번만 판별하며, 공식 schedule source와 결과는 선언 push 뒤 순서대로만 개봉
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 Lab 공학 원본; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했고, 별도 manifest의 RLO1 Live 번역은 정식 `0/0 → 1/1` 경계를 거쳐 현재 활성 소유자로 부착 완료
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
