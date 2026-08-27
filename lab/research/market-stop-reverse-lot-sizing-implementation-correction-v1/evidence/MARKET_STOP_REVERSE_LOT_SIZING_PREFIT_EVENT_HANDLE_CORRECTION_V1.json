@@ -1,0 +1,134 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-prefit-event-handle-correction-v1",
+  "created_at_local": "2026-08-28",
+  "status": "INVALID_PREFIT_EVENT_HANDLE_ATTEMPT_CORRECTED_FINAL_CRLF_BINARY_COMPILED_AND_PREFIT_RETRY_PASSED",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "run": "implementation-correction-r1",
+  "family": "market-stop-reverse-lot-sizing-implementation-correction-v1",
+  "experiment_boundary": {
+    "new_experiment": false,
+    "new_frontier_unit": false,
+    "implementation_event_internal": true,
+    "whole_experiment_boundary_unchanged": true,
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0
+  },
+  "invalid_prefit_attempt": {
+    "period": "2026-01-01 through exclusive 2026-04-01",
+    "model": 4,
+    "html_real_ticks": "100 percent",
+    "normal_reason": 1,
+    "fault_server_time": "2026-01-22 13:30:00",
+    "fault": "cannot open event segment error 5004",
+    "native_atr_observations_before_fault": 23,
+    "expected_native_atr_observations": 108,
+    "valid_economic_path": false,
+    "candidate_set_created": false,
+    "multiplier_or_economic_row_consumed": false,
+    "economic_aggregation_or_judgment": false
+  },
+  "artifact": {
+    "path": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/invalid-prefit-event-handle-attempt-v3/",
+    "files": 22,
+    "bytes": 1627085,
+    "manifest_sha256": "5A5CB8509CFB9750C10A5003C875A47A7E8C78C9EFC45AC795559F2A35E13C10",
+    "economic_fields_quarantined_and_unused": true
+  },
+  "diagnosis": {
+    "event_file_behavior_before": "Every event opened the selected CSV with bounded retry, wrote and flushed one row, closed it, reopened the same path for size verification, then closed it again.",
+    "failure_surface": "The full fit preflight repeatedly exercised the same OneDrive-backed event path until a transient reopen returned error 5004. The sticky persistence guard then correctly invalidated the path.",
+    "classification": "post-decision persistence handle-lifetime defect; no signal, ATR, stop, lot, order, hold, outcome, metric, gate, or decision-rule change"
+  },
+  "correction": {
+    "domain_path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+    "domain_before_bytes": 18478,
+    "domain_before_sha256": "B33BA89A9CA947D14CD04BB61E8DF790DCB36C37217DA4C8BB98D7FB9C93A74B",
+    "domain_after_bytes": 18604,
+    "domain_after_sha256": "EEA8AFD29DA1E7F3C0ECE3B50938DDD3279B3EC01E80123126951C6E1B3E4F68",
+    "persistence_path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/src/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh",
+    "persistence_before_bytes": 74595,
+    "persistence_before_sha256": "9FEA5AB6961A6BDDF1215F20ABAE726231DA3EF85365FA67B39B60FA6D8BC128",
+    "persistence_after_bytes": 75309,
+    "persistence_after_sha256": "B137B99162F781463D0B290B20BD78A410A616323C3C6569E665C6DB3BBDC4B0",
+    "entrypoint_path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/src/Experts/ZetaMarketStopReverseLotSizingImplementationCorrectionV1.mq5",
+    "entrypoint_before_bytes": 24374,
+    "entrypoint_before_sha256": "325A0891564121D91574130D80A6300B8DC8D8D87FEBF6C4E0C721EF4B3F04E8",
+    "entrypoint_after_bytes": 24516,
+    "entrypoint_after_sha256": "07AFA8A7B30569315AC34049512E695DEE43A5984BC12E763EA475710BB5EE7E",
+    "exact_change": "Keep one selected event-segment handle open, flush and size-check each row through that handle, close only on segment rotation, reset, or deinitialization, and retain the same bounded open retries and sticky failure guard.",
+    "event_paths_schema_fields_rotation_capacity_and_row_order_changed": false,
+    "state_schema_path_payload_and_readback_changed": false,
+    "economic_or_configuration_change": false
+  },
+  "compile": {
+    "metaeditor_build": 6140,
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2457,
+    "log_path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/evidence/metaeditor-build.log",
+    "log_bytes": 17188,
+    "log_sha256": "F4BE93B251ABEEBA1D4965C6A5BE8CFC7C75E301B800F450C4851F023375E94F",
+    "ex5_bytes": 206898,
+    "ex5_sha256": "DB5FE0C5C13203F7CE8255B1687278AF5277E9C181336DC3BBD96DB8E19706F6"
+  },
+  "reproducibility_normalization": {
+    "files": 19,
+    "scope": "all family mq5, mqh, ini and set text inputs",
+    "change": "normalize line endings to CRLF before the final source and configuration freeze because repository core.autocrlf is true",
+    "source_tokens_configuration_values_or_economic_contract_changed": false,
+    "final_exact_source_recompiled": true,
+    "pre_normalization_binary_sha256": "FF4ADEDB5275A4B49229CEAFA4F065CBE7513DFF6D848B0C4E3FD85C6FAE160E",
+    "final_binary_sha256": "DB5FE0C5C13203F7CE8255B1687278AF5277E9C181336DC3BBD96DB8E19706F6"
+  },
+  "superseded_pre_normalization_prefit": {
+    "role": "successful integrity-only preflight under the semantically equal pre-normalization binary; retained as invocation history but not used for the final freeze",
+    "artifact": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/successful-prefit-integrity-attempt-v4/",
+    "files": 24,
+    "bytes": 3257189,
+    "manifest_sha256": "57A339961FDC3C330B04DC700852580F92A504943821765486D8F932409D4537",
+    "economic_fields_quarantined_and_unused": true
+  },
+  "prefit_retry_verification": {
+    "role": "integrity-only preflight; not an economically valid FIT_NATIVE_GEOMETRY path",
+    "period": "2026-01-01 through exclusive 2026-04-01",
+    "model": 4,
+    "html_real_ticks": "100 percent",
+    "normal_reason": 1,
+    "required_symbol_real_tick_begin_lines": 3,
+    "persistence_failure_lines": 0,
+    "file_open_error_5004_lines": 0,
+    "native_atr_observations": 108,
+    "atr_unavailable": 0,
+    "required_contract_rows": 6,
+    "required_contract_start_end_equal": true,
+    "normalized_contract_sha256": "68D42497E3B48BBE0CC164B64EAAA1265618027D246467AFD74C89897B89E37E",
+    "runtime_fault_fields": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0
+    },
+    "artifact": {
+      "path": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/successful-prefit-exact-binary-attempt-v5/",
+      "files": 18,
+      "bytes": 4075922,
+      "manifest_sha256": "D21FF43347804C8792D398EC77831395FFF93475D9C1BF0267468766DF0E8F6D",
+      "economic_fields_quarantined_and_unused": true
+    }
+  },
+  "execution_accounting": {
+    "valid_fit_tester_paths": 0,
+    "invalidated_premetric_environment_invocations": 3,
+    "successful_integrity_only_preflights": 2,
+    "successful_economic_aggregations": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "economic_contract_changes": 0
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_source_binary_configuration_runtime_and_exact_governing_environment_then_commit_push_before_the_first_valid_fit_path"
+}

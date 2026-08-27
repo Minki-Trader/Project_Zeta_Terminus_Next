@@ -1,0 +1,312 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-compile-runtime-environment-receipt-v1",
+  "created_at_local": "2026-08-28",
+  "status": "SOURCE_BINARY_CONFIGURATION_RUNTIME_AND_CAUSAL_ENVIRONMENT_FROZEN_BEFORE_VALID_FIT",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "run": "implementation-correction-r1",
+  "family": "market-stop-reverse-lot-sizing-implementation-correction-v1",
+  "experiment_boundary": {
+    "meaningful_economic_experiments": 1,
+    "new_experiment": false,
+    "fit_selection_and_conditional_latest_are_internal_stages": true,
+    "implementation_and_environment_corrections_are_internal": true,
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0,
+    "micro_split": false
+  },
+  "declaration": {
+    "path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/evidence/MARKET_STOP_REVERSE_LOT_SIZING_IMPLEMENTATION_CORRECTION_DECLARATION_V1.json",
+    "commit": "8e3e39fd11ee7c5638e63e8c75f7001ba12a8bf5",
+    "bytes": 12887,
+    "sha256": "11BAD79A33CEF8B2D33F65A657B43E0210E7572139BB989AF920638602F71073",
+    "outcomes_consumed": false
+  },
+  "prevalid_corrections": [
+    {
+      "path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/evidence/MARKET_STOP_REVERSE_LOT_SIZING_PREFIT_STATE_SLOT_CORRECTION_V1.json",
+      "bytes": 5408,
+      "sha256": "C93E653A64F0E8F326F150C0338FBC8AB739F6B00034DB04C53DD61DD4FECB56",
+      "role": "preserve the selected-slot retries, then use the already existing alternate A/B state slot before retaining the original rollback and sticky failure guard"
+    },
+    {
+      "path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/evidence/MARKET_STOP_REVERSE_LOT_SIZING_PREFIT_EVENT_HANDLE_CORRECTION_V1.json",
+      "bytes": 7343,
+      "sha256": "61B4F9E64486798195E8B19ACA7187CF1843355FB8251EDE044FF625516FDEC2",
+      "role": "retain one selected event-segment handle through rows and close it only on rotation, reset or deinitialization"
+    }
+  ],
+  "topology": {
+    "source_root": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/",
+    "parent_root": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/",
+    "parent_commit": "0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "parent_code_manifest_sha256": "CFA02DAFCDA3028EA685EBE7DBA272A01C0BE7E1DF5B3B7C83E10BA2DB8D9954",
+    "one_time_physical_parent_copy": true,
+    "source_family_copies_used": 1,
+    "historical_lab_mt5_modified": false,
+    "parent_modified": false,
+    "closed_unit_062_root_modified": false,
+    "cross_family_source_include_or_link": false,
+    "live_dependency": false
+  },
+  "implementation": {
+    "entrypoint": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/src/Experts/ZetaMarketStopReverseLotSizingImplementationCorrectionV1.mq5",
+    "entrypoint_bytes": 24516,
+    "entrypoint_sha256": "07AFA8A7B30569315AC34049512E695DEE43A5984BC12E763EA475710BB5EE7E",
+    "code_only_manifest": {
+      "files": 15,
+      "bytes": 374415,
+      "sha256": "6F374B2C5290E2C752873D14C587269ED946C0087EAFE4C044E4AE9F20874A1C",
+      "algorithm": "Sort src-root-relative mq5/mqh paths ordinally with Windows separators, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8."
+    },
+    "source_and_binary_manifest": {
+      "files": 16,
+      "bytes": 581313,
+      "sha256": "720E056B0898AA5DC8FA08D06D262F3D036CE26780CF5D998ECA0C281CB4D8B8",
+      "algorithm": "Apply the code-only algorithm after adding the final EX5 as virtual path Compiled\\ZetaMarketStopReverseLotSizingImplementationCorrectionV1.ex5."
+    },
+    "changed_source_files": [
+      "src/Experts/ZetaMarketStopReverseLotSizingImplementationCorrectionV1.mq5",
+      "src/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "src/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh",
+      "src/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh",
+      "src/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh"
+    ],
+    "unchanged_inherited_mqh_files": 10,
+    "line_ending_freeze": {
+      "files": 19,
+      "scope": "all mq5, mqh, ini and set inputs",
+      "format": "CRLF_ONLY",
+      "reason": "core.autocrlf=true must not change the recorded source or configuration bytes after checkout",
+      "source_tokens_configuration_values_or_economic_contract_changed": false
+    },
+    "change_boundary": [
+      "isolated Unit 062 correction identity, Magic and Tester state/event namespace",
+      "the already declared five-component completed-native-timeframe ATR14 observation and profile activation",
+      "the already declared outward market stop and greatest broker-step reverse-solved lot under unchanged gross risk",
+      "explicit treated-component membership instead of relying on identifier contiguity",
+      "alternate existing A/B state-slot fallback after preferred retries",
+      "persistent selected event CSV handle with the same path, schema, row order, capacity, flush and sticky failure semantics",
+      "START/END required-symbol contract and swap fingerprint logging"
+    ],
+    "unchanged_economic_surfaces": [
+      "all six signals, clocks, directions and holds",
+      "Passive price, volume, protection, recovery and reconstruction",
+      "ATR period, component multiplier estimator, activation and dates",
+      "position and aggregate risk fractions and planned-risk accounting",
+      "cost, stress, margin, session, calendar, ownership, protection and reconciliation",
+      "all fixed fit, mechanism, selection, latest and verdict gates"
+    ]
+  },
+  "configuration": {
+    "root": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/config/tester/",
+    "files": 4,
+    "set_files": 1,
+    "ini_files": 3,
+    "bytes": 3136,
+    "sha256": "46EB6535E74655D7EB0451EB627FF624FB1C780DBE69129C54D8D75C1087D6C3",
+    "manifest_algorithm": "Sort tester-root-relative ini/set paths ordinally with Windows separators, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "all_model_4": true,
+    "optimization": false,
+    "local_agents_only": true,
+    "candidate_set_status": "UNCREATED_UNTIL_ONE_VALID_FIT_FREEZES_FIVE_MEDIANS"
+  },
+  "compile": {
+    "terminal_build": 6140,
+    "successful_compiles_through_final_freeze": 5,
+    "pure_implementation_correction_numeric_cap": null,
+    "final_result": "0 errors, 0 warnings",
+    "elapsed_ms": 2457,
+    "cpu": "X64 Regular",
+    "final_log_path_local_ignored": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/evidence/metaeditor-build.log",
+    "final_log_bytes": 17188,
+    "final_log_sha256": "F4BE93B251ABEEBA1D4965C6A5BE8CFC7C75E301B800F450C4851F023375E94F",
+    "binary_path_local_ignored": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/src/Experts/ZetaMarketStopReverseLotSizingImplementationCorrectionV1.ex5",
+    "binary_bytes": 206898,
+    "binary_sha256": "DB5FE0C5C13203F7CE8255B1687278AF5277E9C181336DC3BBD96DB8E19706F6"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/msrl62ic1-portable/",
+    "physical_copy_origin": "lab/runtime/tester-portable/",
+    "copy_mode": "selective physical file copy of the platform, standard Trade dependencies, one family source/configuration, and only the three required symbols' 2025/2026 history plus 2025-12 through 2026-08 ticks",
+    "initial_files": 110,
+    "initial_bytes": 2032799608,
+    "files_at_freeze": 162,
+    "bytes_at_freeze": 2135772238,
+    "runtime_metadata_bytes": 701,
+    "runtime_metadata_sha256": "871160EAC359217177A7E86D45E146B83A9CDA1F8DF6C858A17499958B01922F",
+    "terminal_bytes": 121846032,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_bytes": 116791384,
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester_bytes": 21810944,
+    "metatester_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "source_binary_and_native_set_parity_mismatches": 0,
+    "runtime_expert_files": 2,
+    "runtime_own_zeta_mqh_files": 14,
+    "runtime_set_files": 1,
+    "runtime_other_family_ex5_files": 0,
+    "runtime_other_family_set_files": 0,
+    "filesystem_symbolic_or_junction_links": 0,
+    "process_owners": 0,
+    "report_parent_exists": true,
+    "active_output_files": 0,
+    "active_report_files": 0,
+    "active_unit_tst_files": 0,
+    "live_dependency": false
+  },
+  "storage_retention_disclosure": {
+    "closed_runtime_targets_considered": [
+      "lab/runtime/crcs93-portable/",
+      "lab/runtime/rncr94-portable/"
+    ],
+    "recursive_removal_commands_executed": 0,
+    "files_deleted": 0,
+    "reason": "The command safety interlock rejected both exact-path cleanup invocations before execution. The dedicated lean runtime fit the available disk, so no destructive workaround was used."
+  },
+  "governing_exercised_history": {
+    "algorithm": "Include exact Tester/bases/FPMarketsSC-Live HCS years needed by the interval and completed-bar warm-up plus every monthly real-tick TKC intersecting the interval and its causal warm-up; sort runtime-relative Windows paths ordinally, uppercase each file SHA-256, join path|hash with LF, then SHA-256 UTF-8.",
+    "FIT_NATIVE_GEOMETRY": {
+      "period": ["2026.01.01", "2026.04.01"],
+      "history_years": [2025, 2026],
+      "tick_months": ["202512", "202603"],
+      "tick_months_are_inclusive_continuous_range": true,
+      "files": 18,
+      "bytes": 209680891,
+      "sha256": "4563567F0679D6935255145CBFC147731626C79C3CB5D1B86E5F5ADD7A06C401",
+      "missing_files": 0
+    },
+    "SELECTION_PAIR": {
+      "period": ["2026.01.01", "2026.06.01"],
+      "history_years": [2025, 2026],
+      "tick_months": ["202512", "202605"],
+      "tick_months_are_inclusive_continuous_range": true,
+      "files": 24,
+      "bytes": 398008120,
+      "sha256": "931AF14C35662723D90A38AA520FBF2793906E4F15A4075753554394231956AE",
+      "missing_files": 0
+    },
+    "CONDITIONAL_LATEST_PAIR": {
+      "period": ["2026.01.01", "2026.08.21"],
+      "history_years": [2025, 2026],
+      "tick_months": ["202512", "202608"],
+      "tick_months_are_inclusive_continuous_range": true,
+      "files": 33,
+      "bytes": 834957791,
+      "sha256": "48305B540875E2223EE2D000BB2EA8363DC459F6020276D05F31E594F9D68D2D",
+      "missing_files": 0
+    }
+  },
+  "required_symbol_database": {
+    "runtime_path": "lab/runtime/msrl62ic1-portable/Bases/FPMarketsSC-Live/symbols/symbols-81957644.dat",
+    "bytes": 413696,
+    "sha256": "23A02AAB664E69DC27FA1F8709848E7120C5E68A3011B116EFA923879056ECA3",
+    "preserved_before_valid_fit": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/environment/symbols-before-valid-fit-v2.dat",
+    "preserved_bytes": 413696,
+    "preserved_sha256": "23A02AAB664E69DC27FA1F8709848E7120C5E68A3011B116EFA923879056ECA3"
+  },
+  "selected_symbol_metadata_clarification": {
+    "runtime_path": "lab/runtime/msrl62ic1-portable/Bases/FPMarketsSC-Live/symbols/selected-81957644.dat",
+    "bytes": 18210,
+    "sha256": "0C1078A9D93BCFAB499B7F3667531B7EF98DD51C257EE86B1842A4559589B16C",
+    "preserved_before_valid_fit": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/environment/selected-before-valid-fit-v2.dat",
+    "role": "diagnostic terminal-maintained Market Watch selection metadata, not a consumed Tester history, symbol specification or economic input",
+    "reason": "It changed across identical integrity preflights while the full server symbol database, all three explicit Expert symbol resolutions, exact contract/swap rows and exercised Tester HCS/TKC inputs stayed equal. The declaration's causal-input clause makes normal metadata that cannot enter the frozen path non-governing.",
+    "economic_contract_change": false
+  },
+  "required_contract_and_swap_fingerprint": {
+    "symbols": ["US30", "US100", "US500"],
+    "fields_per_symbol": 20,
+    "start_rows": 3,
+    "end_rows": 3,
+    "start_end_equal": true,
+    "normalized_sha256": "68D42497E3B48BBE0CC164B64EAAA1265618027D246467AFD74C89897B89E37E",
+    "algorithm": "Replace stage START or END with NORMALIZED, sort the three full MSRL62IC1_CONTRACT rows ordinally, join with LF and SHA-256 UTF-8.",
+    "pair_rule": "The control START, control END, candidate START and candidate END rows must all normalize equal within each adjacent selection or latest pair."
+  },
+  "broader_required_symbol_cache_diagnostics": {
+    "role": "synchronization envelope only; path validity is governed by exact Tester exercised-history manifests, the full server symbol database and emitted contract/swap fingerprints",
+    "FIT_NATIVE_GEOMETRY": {
+      "files": 39,
+      "bytes": 513172341,
+      "sha256": "E40F296A5748374057EEEB5E41F5392E288AB3D9E3D2ED1E226411ADD06776F6"
+    },
+    "SELECTION_PAIR": {
+      "files": 51,
+      "bytes": 889923399,
+      "sha256": "C5855D9E9C9B3CDAE2B9AC8844CAB84E3D1738A0B10CC1B158B886EDC3610C07"
+    },
+    "CONDITIONAL_LATEST_PAIR": {
+      "files": 69,
+      "bytes": 1776965717,
+      "sha256": "805D56EB90737BDDAC55EB3B8C477F0D7B62CAF3C098B3E993DA31D0967330FC"
+    }
+  },
+  "successful_prefit_integrity_path": {
+    "role": "integrity-only preflight invalid as an economic path",
+    "period": ["2026.01.01", "2026.04.01"],
+    "model": 4,
+    "normal_reason": 1,
+    "html_real_ticks": "100 percent",
+    "primary_symbol_ticks": 11558778,
+    "primary_symbol_bars": 2882,
+    "required_symbol_real_tick_begin_lines": 3,
+    "forbidden_real_tick_absent_lines": 0,
+    "forbidden_real_tick_discarded_lines": 0,
+    "forbidden_every_tick_generation_lines": 0,
+    "forbidden_tick_mismatch_lines": 0,
+    "load_or_synchronization_fault_lines": 0,
+    "persistence_failure_lines": 0,
+    "file_open_error_5004_lines": 0,
+    "native_atr_observations": 108,
+    "atr_unavailable": 0,
+    "runtime_fault_fields": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0
+    },
+    "artifact": {
+      "path": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/successful-prefit-exact-binary-attempt-v5/",
+      "files": 18,
+      "bytes": 4075922,
+      "manifest_sha256": "D21FF43347804C8792D398EC77831395FFF93475D9C1BF0267468766DF0E8F6D",
+      "deleted_files": 0,
+      "recoverable_move": true,
+      "economic_fields_quarantined_and_unused": true
+    }
+  },
+  "fit_continuity_rule": {
+    "before_and_after_valid_fit_equal": [
+      "source code manifest",
+      "native SET and fit INI hashes",
+      "EX5 hash",
+      "terminal build and hash",
+      "FIT_NATIVE_GEOMETRY exercised-history manifest",
+      "symbols-81957644.dat hash",
+      "normalized START and END contract/swap fingerprint"
+    ],
+    "on_governing_fault_or_drift": "Discard the not-yet-valid fit path without multiplier extraction or economic use, correct only demonstrable non-economic defects, refreeze and restart the fit fresh.",
+    "economic_aggregation_before_valid_fit": false
+  },
+  "execution_accounting": {
+    "invalidated_premetric_integrity_attempts": 3,
+    "successful_integrity_only_preflights": 2,
+    "valid_fit_tester_paths": 0,
+    "valid_selection_tester_paths": 0,
+    "valid_latest_tester_paths": 0,
+    "maximum_economically_valid_tester_paths": 5,
+    "economic_aggregations": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "economic_contract_changes": 0
+  },
+  "economic_outcomes_consumed": false,
+  "candidate_set_created": false,
+  "program_6_opened": false,
+  "manual_broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "commit_and_push_this_frozen_prevalid_boundary_then_run_exactly_one_valid_FIT_NATIVE_GEOMETRY_path"
+}

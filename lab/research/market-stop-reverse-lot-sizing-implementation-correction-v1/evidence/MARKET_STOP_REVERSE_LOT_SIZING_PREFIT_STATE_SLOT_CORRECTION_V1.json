@@ -1,0 +1,102 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-prefit-state-slot-correction-v1",
+  "created_at_local": "2026-08-28",
+  "status": "INVALID_PREFIT_ENVIRONMENT_ATTEMPT_STATE_SLOT_OPEN_CORRECTED_BEFORE_RETRY",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "run": "implementation-correction-r1",
+  "family": "market-stop-reverse-lot-sizing-implementation-correction-v1",
+  "experiment_boundary": {
+    "new_experiment": false,
+    "new_frontier_unit": false,
+    "implementation_event_internal": true,
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0
+  },
+  "environment_preflight": {
+    "short_sync_invocation": {
+      "period": "2025-12-31 through exclusive 2026-01-02",
+      "purpose": "outcome-free symbol and history synchronization only",
+      "normal_reason": 1,
+      "economic_opportunities": 0,
+      "economic_metrics_or_judgment_consumed": false
+    },
+    "full_fit_window_invocation": {
+      "period": "2026-01-01 through exclusive 2026-04-01",
+      "purpose": "complete multi-symbol cache synchronization before the valid fit boundary",
+      "model": 4,
+      "html_real_ticks": "100 percent",
+      "normal_reason": 1,
+      "fit_raw_tick_files": 24,
+      "fit_raw_tick_files_changed_from_copy_origin": 0,
+      "invalidity": "At server 2026-01-02 17:00:00 the preferred state slot returned file-open error 5004. The sticky persistence guard correctly blocked later entries, so the path cannot supply a fit population.",
+      "native_atr_observations": 0,
+      "candidate_set_created": false,
+      "multiplier_or_economic_row_consumed": false,
+      "economic_aggregation_or_judgment": false
+    },
+    "cache_refreeze_after_full_window": {
+      "fit_scope": {
+        "files": 39,
+        "bytes": 512487928,
+        "sha256": "A41D01A8A01EF00BADED898B7F846DE19C51741C739522911ADB49D127B1212E"
+      },
+      "selection_scope": {
+        "files": 51,
+        "bytes": 889238986,
+        "sha256": "6C58B3B6C769784110C58D2A062F8D1181CC9EFBF3BA590EE6B685E8EC43E830"
+      },
+      "latest_scope": {
+        "files": 69,
+        "bytes": 1776281304,
+        "sha256": "B4BFE07C224A0A46B6626B4E2ED4EA44F92B2AF5B0197E3489E29640F2C26E08"
+      },
+      "symbols_database_sha256": "23A02AAB664E69DC27FA1F8709848E7120C5E68A3011B116EFA923879056ECA3",
+      "selected_symbols_sha256": "961F8A2835DDC201543BAF7FF6D01D193BE23F8D1830ADF1D2D31C37F99C98E5"
+    }
+  },
+  "artifact": {
+    "path": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/invalid-prefit-environment-attempt-v1/",
+    "files": 19,
+    "bytes": 284008,
+    "manifest_sha256": "DB4800C9652F9AE6B6E79D34BCFE54635C68DE3DFA9F4BE17B0999C89153BB0A",
+    "economic_fields_quarantined_and_unused": true
+  },
+  "diagnosis": {
+    "preferred_state_slot": "The sequence-selected A/B state path was retried through the existing bounded OpenFileWithRetry routine and still returned 5004.",
+    "alternate_state_slot": "The other pre-existing A/B slot was not attempted even though LoadState already accepts the greatest valid sequence independent of slot name and WriteCurrentSnapshot already falls back to its alternate slot.",
+    "classification": "post-decision persistence invocation defect; no signal, stop, lot, order, hold, market outcome, metric, gate, or terminal decision changes"
+  },
+  "correction": {
+    "path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/src/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh",
+    "before_bytes": 74306,
+    "before_sha256": "1D74E1832E7F0DA6F94022FD7E0E5A2C1D3D5E64AB72B7A029AA99028D214BF9",
+    "after_bytes": 74595,
+    "after_sha256": "9FEA5AB6961A6BDDF1215F20ABAE726231DA3EF85365FA67B39B60FA6D8BC128",
+    "exact_change": "SaveState keeps the same preferred-slot retries and, only if they all fail, tries the already existing alternate state slot through the same bounded retry before preserving the original rollback and sticky failure behavior.",
+    "state_schema_path_payload_and_readback_changed": false,
+    "economic_or_configuration_change": false
+  },
+  "contract_fingerprint_instrumentation": {
+    "path": "lab/research/market-stop-reverse-lot-sizing-implementation-correction-v1/mt5/src/Experts/ZetaMarketStopReverseLotSizingImplementationCorrectionV1.mq5",
+    "before_bytes": 22191,
+    "before_sha256": "B9EE9F6F03F8BF5DC243CA3EEE0BDB74E5F62F00E243F9FEFDAD277F3E9E979D",
+    "after_bytes": 24374,
+    "after_sha256": "325A0891564121D91574130D80A6300B8DC8D8D87FEBF6C4E0C721EF4B3F04E8",
+    "exact_change": "Print the declared twenty normalized contract and swap fields for US30, US100, and US500 at START and END so each path and adjacent pair can prove equality.",
+    "trading_state_order_metric_or_gate_change": false,
+    "economic_contract_change": false
+  },
+  "execution_accounting": {
+    "valid_fit_tester_paths": 0,
+    "invalidated_premetric_environment_invocations": 2,
+    "successful_economic_aggregations": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "economic_contract_changes": 0
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "mirror_corrected_source_compile_then_repeat_the_complete_prefit_integrity_path_before_freezing_the_valid_fit_boundary"
+}
