@@ -294,6 +294,22 @@ bool ReconcilePassivePendingOrder()
   }
 
 
+bool ExecutionMatchedSampledExitQuote(const string symbol,
+                                      const int entry_direction,
+                                      const double execution_price,
+                                      const MqlTick &sampled_tick)
+  {
+   const double tick_size = SymbolInfoDouble(symbol, SYMBOL_TRADE_TICK_SIZE);
+   const double executable_price =
+      (entry_direction > 0 ? sampled_tick.bid : sampled_tick.ask);
+   const double price_tolerance = MathMax(1.0e-8, tick_size * 1.0e-6);
+   return(MathAbs(entry_direction) == 1 && tick_size > 0.0 &&
+          execution_price > 0.0 && sampled_tick.time_msc > 0 &&
+          sampled_tick.ask > sampled_tick.bid && sampled_tick.bid > 0.0 &&
+          MathAbs(executable_price - execution_price) <= price_tolerance);
+  }
+
+
 bool ApplyExitDeal(const int component,
                    const ulong deal,
                    const MqlTick &sampled_tick,
@@ -338,6 +354,8 @@ bool ApplyExitDeal(const int component,
      }
    const double executed_volume = HistoryDealGetDouble(deal, DEAL_VOLUME);
    const string symbol = component_definitions[component].symbol;
+   const int direction = component_states[component].entry_direction;
+   const double execution_price = HistoryDealGetDouble(deal, DEAL_PRICE);
    const double step = SymbolInfoDouble(symbol, SYMBOL_VOLUME_STEP);
    long remaining_before_steps = 0;
    long executed_steps = 0;
@@ -373,6 +391,21 @@ bool ApplyExitDeal(const int component,
          QuoteAtMilliseconds(symbol,
                              deal_time_msc,
                              exit_tick);
+   if(!exit_quote_known &&
+      ExecutionMatchedSampledExitQuote(symbol,
+                                       direction,
+                                       execution_price,
+                                       sampled_tick))
+     {
+      exit_tick = sampled_tick;
+      exit_quote_known = true;
+      PrintFormat("%s exit quote recovered from execution-matched pre-submit quote component=%s deal=%I64u sampled_msc=%I64d deal_msc=%I64d",
+                  EXECUTION_VERSION,
+                  component_definitions[component].id,
+                  deal,
+                  sampled_tick.time_msc,
+                  deal_time_msc);
+     }
    const double exit_transaction_cost =
       HistoryDealGetDouble(deal, DEAL_COMMISSION) +
       HistoryDealGetDouble(deal, DEAL_SWAP) +
@@ -380,8 +413,6 @@ bool ApplyExitDeal(const int component,
    const double deal_net =
       HistoryDealGetDouble(deal, DEAL_PROFIT) + exit_transaction_cost +
       allocated_entry_transaction_cost;
-   const int direction = component_states[component].entry_direction;
-   const double execution_price = HistoryDealGetDouble(deal, DEAL_PRICE);
    const double adverse_exit_price =
       (!exit_quote_known ? 0.0 :
        (direction > 0

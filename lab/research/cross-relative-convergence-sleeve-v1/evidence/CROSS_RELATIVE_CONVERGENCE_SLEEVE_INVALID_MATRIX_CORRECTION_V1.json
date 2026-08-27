@@ -1,0 +1,157 @@
+{
+  "schema": "zeta-next-cross-relative-convergence-sleeve-invalid-matrix-correction-v1",
+  "created_at_local": "2026-08-28",
+  "status": "INCOMPLETE_MATRIX_INVALIDATED_AND_PURE_IMPLEMENTATION_DEFECT_CORRECTED",
+  "unit": "cross-relative-convergence-sleeve-093",
+  "family": "cross-relative-convergence-sleeve-v1",
+  "experiment_boundary": {
+    "meaningful_experiments": 1,
+    "new_experiment": false,
+    "classification": "INTERNAL_IMPLEMENTATION_CORRECTION_WITHIN_UNIT_093",
+    "micro_split": false,
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0
+  },
+  "discarded_incomplete_matrix": {
+    "executed_paths": [
+      {
+        "path": "BINDING_LONG CONTROL",
+        "started_local": "2026-08-28T00:17:01+09:00",
+        "ended_local": "2026-08-28T00:27:49+09:00",
+        "process_exit_code": 0,
+        "normal_stop_reason": 1,
+        "standalone_integrity_passed": true,
+        "counts_as_valid_matrix_path_after_pair_failure": false,
+        "economic_outcome_used": false
+      },
+      {
+        "path": "BINDING_LONG DUAL_APPEND",
+        "started_local": "2026-08-28T00:31:42+09:00",
+        "ended_local": "2026-08-28T00:34:52+09:00",
+        "process_exit_code": 0,
+        "normal_stop_reason": 1,
+        "standalone_integrity_passed": false,
+        "safety_stopped": true,
+        "broker_mismatch": true,
+        "persistence_failed": false,
+        "foreign_exposure": false,
+        "protection_calculation_failures": 0,
+        "protection_mismatches": 0,
+        "counts_as_valid_matrix_path": false,
+        "economic_outcome_used": false
+      }
+    ],
+    "valid_matrix_paths_after_discard": 0,
+    "economic_artifacts_aggregated": false,
+    "economic_comparison_performed": false,
+    "density_or_candidate_gate_evaluated": false,
+    "rule": "The adjacent CONTROL and DUAL_APPEND pair is one indivisible matrix segment. A pure implementation fault in DUAL_APPEND discards both paths without using either economic outcome."
+  },
+  "failure": {
+    "server_time": "2024.05.10 19:15:00",
+    "component": "ZT-H1-US500-CROSS-CONV-63b2eb323d",
+    "event": "SAFETY_STOP",
+    "detail": "cost reconstruction incomplete after exit",
+    "close_identity": {
+      "entry_order": 605,
+      "entry_deal": 598,
+      "close_order": 607,
+      "close_deal": 600,
+      "close_deal_time_msc": 1715368500129,
+      "pre_submit_bid": 5218.02,
+      "pre_submit_ask": 5218.52,
+      "exit_execution_price": 5218.02,
+      "reconciliation_wait_ms": 78,
+      "remaining_volume": 0.0
+    }
+  },
+  "diagnosis": {
+    "entry_cost_was_known": {
+      "proved": true,
+      "evidence": [
+        "The lifecycle was created by the normal market-entry path at server 2024.05.10 17:00:00, not recovery or restart adoption.",
+        "WaitForEntryDealAggregation invokes AggregateEntryDeals with sampled_tick_known=true for a normal submitted market entry, so aggregate.cost_known remains true and SeedProvisionalMarketLifecycle persists entry_cost_known=true.",
+        "No EA reinitialization occurred between this OPEN and CLOSE.",
+        "Within the source, no active-lifecycle path can change only entry_cost_known to false; ClearEntryTracking would also clear the identifier, volume and direction and would have failed earlier exit-state checks."
+      ]
+    },
+    "exit_quote_was_rejected": {
+      "proved": true,
+      "evidence": [
+        "ApplyExitDeal reached complete_cost=false after entry identity, direction and volume validation while entry_cost_known was true.",
+        "The structurally valid pre-submit US500 quote exceeded the fixed three-second freshness classification, otherwise sampled_tick_known would already have made exit_quote_known true.",
+        "The standard CopyTicksRange lookup found no valid US500 bid/ask within plus or minus five seconds of the foreign-symbol deal timestamp, otherwise QuoteAtMilliseconds would have made exit_quote_known true.",
+        "The broker/tester nevertheless filled the long-position exit at 5218.02, exactly the pre-submit bid used for that sell-side exit."
+      ]
+    },
+    "root_cause": "The accounting layer treated a stale-classified foreign-symbol pre-submit quote as unusable even when the completed deal itself proved that its actionable side was the exact execution quote. This was an evidence-classification defect after execution, not a signal, order, hold, risk, stop or market-price defect."
+  },
+  "preserved_local_ignored_artifacts": {
+    "root": "lab/artifacts/ea-files/cross-relative-convergence-sleeve-v1/invalid-matrix-attempt-v1/",
+    "files": 32,
+    "bytes": 37767230,
+    "manifest_sha256": "10BF26E7F09BADA156593A7AC762808C09C9C8A8CB7618D6A77E668840C28830",
+    "paths": {
+      "binding_control": {
+        "files": 16,
+        "bytes": 21045693,
+        "manifest_sha256": "7ADCE511D06C71D85BF6302936E5FC3AEF3D418C258CE7FE0BBD6073DDE581B7"
+      },
+      "binding_dual_append": {
+        "files": 16,
+        "bytes": 16721537,
+        "manifest_sha256": "3C0D99A6FC43BE650B336B863DB45D2CB332BDD2A261E3570930A16B8C2160A4"
+      }
+    },
+    "includes": [
+      "both HTML reports and report graphs",
+      "both path-specific Tester cache files",
+      "both path state, event, current and lock outputs",
+      "terminal, Tester and agent logs",
+      "symbols database snapshots"
+    ]
+  },
+  "correction": {
+    "source_path": "lab/research/cross-relative-convergence-sleeve-v1/mt5/src/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh",
+    "scope": "After the existing fresh-sampled and exact-time-history quote paths both fail, accept the already captured structurally valid pre-submit quote only when the completed exit deal's execution price equals the directionally actionable sampled bid or ask within max(1e-8, tick_size*1e-6).",
+    "fail_closed_preserved": "A missing, invalid or nonmatching sampled quote still leaves cost incomplete and engages the existing safety stop.",
+    "audit_log": "Each accepted fallback emits one bounded execution-matched exit-quote recovery log row with component, deal and sampled/deal millisecond timestamps.",
+    "changed_source_files": 1,
+    "configuration_changes": 0,
+    "signal_changes": 0,
+    "profile_changes": 0,
+    "period_changes": 0,
+    "entry_or_exit_schedule_changes": 0,
+    "order_or_fill_changes": 0,
+    "risk_or_stop_changes": 0,
+    "cost_formula_changes": 0,
+    "metric_gate_or_verdict_changes": 0,
+    "economic_contract_changes": 0
+  },
+  "compile_audit": {
+    "build": 6140,
+    "v4_logic_compile_before_line_ending_normalization": {
+      "errors": 0,
+      "warnings": 0,
+      "elapsed_ms": 2193,
+      "log_bytes": 16804,
+      "log_sha256": "1FD71B70AD767592A807DB7A2F0D24CDE99F892CDAED6CCEC4C5BFE8CE95E5E1"
+    },
+    "v5_final_crlf_compile": {
+      "errors": 0,
+      "warnings": 0,
+      "elapsed_ms": 2125,
+      "cpu": "X64 Regular",
+      "log_bytes": 16804,
+      "log_sha256": "72CA21A9F481160603D3AF29E0A619702A92D31F609F57D56E5D82A798999600",
+      "binary_bytes": 203610,
+      "binary_sha256": "EF72EA27C0B441ECC7E9E03A19EC7257F895398225CC7F354492CDE4FDD814F2"
+    }
+  },
+  "matrix_action": "Commit and push the refrozen correction and environment, remove only active Unit 093 runtime outputs after preservation, then restart all four declared paths from BINDING_LONG CONTROL. No selective path patch or result reuse is allowed.",
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_corrected_source_binary_and_environment_v3_commit_push_then_restart_all_four_paths"
+}
