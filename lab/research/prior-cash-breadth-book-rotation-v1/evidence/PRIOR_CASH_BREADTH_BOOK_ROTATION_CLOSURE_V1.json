@@ -1,0 +1,68 @@
+{
+  "schema": "zeta-next-prior-cash-breadth-book-rotation-closure-v1",
+  "created_at_local": "2026-08-27",
+  "status": "FAMILY_CLOSED_FROZEN_INVALID_PREMETRIC",
+  "unit": "prior-cash-breadth-book-rotation-091",
+  "family": "prior-cash-breadth-book-rotation-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "verdict": "INVALID_PRIOR_CASH_BREADTH_OR_LIFECYCLE_RECONSTRUCTION_NO_VERDICT",
+  "reason": "The corrected official source batch and normalized external CSV completed, but the required acquisition receipt failed during ordered-object construction after the sole acquisition/serialization correction had already been used. The integrity contract bars CP2 outcomes without that committed receipt.",
+  "evidence": {
+    "declaration_sha256": "310CE6F607CBB982CE77CDD35A7FA63AD0C984CF4D95A95F1418EE43AD818896",
+    "correction_sha256": "9B522267AD72073D4B9261F074C5898290A774CECF6DDBA27320FCDAF8F1E479",
+    "persisted_source_files": 4,
+    "persisted_source_bytes": 1082403,
+    "normalized_csv_rows": 1044,
+    "normalized_csv_bytes": 93222,
+    "normalized_csv_sha256": "2B3BE869ADBBD9BCE4573447C9AFA195672F2B051A81C50686237A3DCE5FFA44",
+    "required_acquisition_receipt_present": false,
+    "result_bytes": 6248,
+    "result_sha256": "EDAAE479AC41733F62B1F79A933532448B4C35123A609145C0E4C782BF43E757"
+  },
+  "authorized_interpretation": [
+    "The official RSP/SPY source snapshots and 1,044-row external state file are valid frozen acquisition artifacts.",
+    "No claim for or against breadth-conditioned native supply, US30 value, US100 value, relative book DID, stop burden, risk, lot or slot is authorized.",
+    "Current unconditional book behavior and Units 050/072 economic boundaries remain unchanged."
+  ],
+  "forbidden_interpretation": [
+    "Treating the declaration's outcome-free feasibility counts as an economic result",
+    "Reconstructing or hand-writing the missing receipt after correction exhaustion",
+    "Running the fixed aggregation, reading CP2 final value or using any state-conditioned lifecycle metric",
+    "Opening a magnitude, threshold, neutral band, lag, lookback, ETF, index, sector, period, component, book or direction rescue",
+    "Using the unused aggregation implementation correction to repair an acquisition-stage failure",
+    "Risk, lot, slot, admission, priority, EA or Live implementation"
+  ],
+  "decision_translation": {
+    "preserve": "Unconditional current behavior and all prior portfolio evidence.",
+    "discard": "The current Unit 091 implementation path and every adjacent same-family rescue.",
+    "additional_observation_needed": "Only a materially new independently justified future question may reuse public data; this closed family and missing receipt cannot be repaired.",
+    "retained_seed": null,
+    "selected_candidate": null,
+    "promotion": "none"
+  },
+  "execution": {
+    "successful_official_source_batches": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "successful_fixed_aggregations": 0,
+    "aggregation_implementation_corrections_used": 0,
+    "metric_reruns": 0,
+    "retained_analysis_scripts": 0
+  },
+  "family_frozen": true,
+  "same_family_repair": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_and_pause_without_opening_a_successor"
+}

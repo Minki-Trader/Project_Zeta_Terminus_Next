@@ -1,0 +1,153 @@
+{
+  "schema": "zeta-next-prior-cash-breadth-book-rotation-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "CLOSED_INVALID_PREMETRIC",
+  "unit": "prior-cash-breadth-book-rotation-091",
+  "family": "prior-cash-breadth-book-rotation-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "verdict": "INVALID_PRIOR_CASH_BREADTH_OR_LIFECYCLE_RECONSTRUCTION_NO_VERDICT",
+  "declaration": {
+    "commit": "0da94f768cb9afdb5a80de17f289e4d9d3e6a430",
+    "bytes": 25534,
+    "sha256": "310CE6F607CBB982CE77CDD35A7FA63AD0C984CF4D95A95F1418EE43AD818896"
+  },
+  "premetric_correction": {
+    "commit": "08a2c5d49d2f4cdb09e5b2ac5fdf4f3deb99f8ac",
+    "bytes": 3536,
+    "sha256": "9B522267AD72073D4B9261F074C5898290A774CECF6DDBA27320FCDAF8F1E479",
+    "reason": "The first S&P DJI semantic-source request returned HTTP 403 before any source body or metric was persisted.",
+    "replacement_only": "Official Invesco RSP and State Street SPY sponsor pages replaced the two semantic retrieval endpoints; every economic rule remained unchanged.",
+    "corrections_used": 1,
+    "corrections_remaining": 0
+  },
+  "persisted_corrected_source_batch": {
+    "successful_batches": 1,
+    "files": 4,
+    "total_bytes": 1082403,
+    "sources": [
+      {
+        "role": "equal_weight_semantic_authority",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/invesco_rsp.html",
+        "bytes": 624720,
+        "sha256": "388D9D78DF457B28B87B37289811F14518949393360F3BF2C22E462687A7220E"
+      },
+      {
+        "role": "rsp_daily_ohlc",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/nasdaq_rsp_historical.json",
+        "bytes": 112811,
+        "sha256": "E8430DE5A03B8562F0642831812BF048CD4CB202743948AAEC29CDAE3292023C"
+      },
+      {
+        "role": "spy_daily_ohlc",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/nasdaq_spy_historical.json",
+        "bytes": 113567,
+        "sha256": "7F7F9B9D4BA00CD0D702782618702D71C6476622DD4DA1BF4B2216718CD7959D"
+      },
+      {
+        "role": "capitalization_weight_semantic_authority",
+        "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/source/state_street_spy.html",
+        "bytes": 231305,
+        "sha256": "C4CA9EF7145716EC74CF87042CE2D10E2B0BD03408F451F81BB176212A1E495A"
+      }
+    ],
+    "semantic_checks": {
+      "invesco_rsp_equal_weight_identity_present": true,
+      "equal_weight_language_present": true,
+      "state_street_spy_sp500_identity_present": true,
+      "market_cap_weight_language_present": true
+    },
+    "nasdaq_raw_integrity_before_failure": {
+      "rsp_rows": 1044,
+      "spy_rows": 1044,
+      "common_rows": 1044,
+      "first_date": "2022-06-24",
+      "last_date": "2026-08-21",
+      "duplicate_dates": 0,
+      "nonpositive_open_or_close": 0,
+      "zero_relative_return_dates": 0
+    }
+  },
+  "normalized_external_data": {
+    "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/prior_cash_breadth_ohlc_20220624_20260821.csv",
+    "rows": 1044,
+    "bytes": 93222,
+    "sha256": "2B3BE869ADBBD9BCE4573447C9AFA195672F2B051A81C50686237A3DCE5FFA44",
+    "first_date": "2022-06-24",
+    "last_date": "2026-08-21",
+    "state_counts": {
+      "BROAD_LEADS": 486,
+      "MEGACAP_LEADS": 558
+    },
+    "relative_return_min": -0.01795804134347663,
+    "relative_return_max": 0.015962074618566646,
+    "economic_role": "External treatment data only; no CP2 date join, supply aggregation or lifecycle outcome was opened."
+  },
+  "failure": {
+    "stage": "final acquisition-receipt object construction",
+    "error": "PowerShell Argument types do not match",
+    "technical_boundary": "The ordered receipt object rejected materialization of the generic source-record collection before receipt serialization.",
+    "receipt_created": false,
+    "stdout_supply_metrics": 0,
+    "stdout_lifecycle_metrics": 0,
+    "cp2_event_files_opened_by_corrected_batch": false,
+    "cp2_final_value_b_read": false,
+    "planned_risk_read": false,
+    "stop_reason_read": false,
+    "state_conditioned_lifecycle_outcomes_calculated": false
+  },
+  "integrity_gate": {
+    "official_source_files_present": true,
+    "normalized_csv_present": true,
+    "required_acquisition_receipt_present": false,
+    "additional_acquisition_or_serialization_correction_available": false,
+    "passed": false
+  },
+  "economic_results": {
+    "native_day_state_counts": null,
+    "signal_or_birth_transmission": null,
+    "book_effects": null,
+    "relative_stressed_r_did": null,
+    "relative_stop_did": null,
+    "period_or_component_breadth": null,
+    "contribution_caps": null,
+    "directional_gate": null,
+    "strong_null_gate": null,
+    "reason": "The frozen receipt integrity requirement failed before CP2 outcomes were authorized."
+  },
+  "decision": {
+    "selected_candidate": null,
+    "retained_seed": null,
+    "preserve": "Current unconditional US30 and US100 book behavior and all prior economic boundaries.",
+    "discard": "Unit 091 breadth-conditioned book treatment from the current bounded run.",
+    "additional_observation": "A valid receipt-backed acquisition would be required for any future independent question, but this family cannot repair or reopen.",
+    "promotion": "none"
+  },
+  "execution_accounting": {
+    "successful_official_source_batches": 1,
+    "premetric_acquisition_or_serialization_corrections_used": 1,
+    "successful_fixed_aggregations": 0,
+    "aggregation_implementation_corrections_used": 0,
+    "metric_reruns": 0,
+    "retained_analysis_scripts": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "same_family_repair": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "compute_result_sha_create_closure_update_single_frontier_memory_and_state_commit_push_then_recompare_all_programs_and_heights_without_opening_a_successor"
+}
