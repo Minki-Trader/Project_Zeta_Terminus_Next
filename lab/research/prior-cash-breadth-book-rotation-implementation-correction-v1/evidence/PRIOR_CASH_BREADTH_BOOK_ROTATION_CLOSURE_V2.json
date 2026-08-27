@@ -1,0 +1,91 @@
+{
+  "schema": "zeta-next-prior-cash-breadth-book-rotation-closure-v2",
+  "closed_at_local": "2026-08-27",
+  "status": "FAMILY_CLOSED_FROZEN_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "prior-cash-breadth-book-rotation-091",
+  "run": "implementation-correction-r1",
+  "family": "prior-cash-breadth-book-rotation-implementation-correction-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "verdict": "AMBIGUOUS_PRIOR_CASH_BREADTH_BOOK_ROTATION_NO_CANDIDATE",
+  "result": {
+    "path": "lab/research/prior-cash-breadth-book-rotation-implementation-correction-v1/evidence/PRIOR_CASH_BREADTH_BOOK_ROTATION_RESULT_V2.json",
+    "bytes": 12713,
+    "sha256": "3E080881AA0DCC973F6BA86417D429CA83402D18C0FD0AFF06FA822BDD550F71"
+  },
+  "historical_v1_boundary": {
+    "verdict": "INVALID_PRIOR_CASH_BREADTH_OR_LIFECYCLE_RECONSTRUCTION_NO_VERDICT",
+    "closure_path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/PRIOR_CASH_BREADTH_BOOK_ROTATION_CLOSURE_V1.json",
+    "closure_sha256": "FA658DAD6EAE20D316DF2737C22A5486DAD22CDE233EF45B12E621CA1F7F9A91",
+    "preserved": true,
+    "relationship": "The V1 file remains the immutable record of the failed invocation. This sibling supplies the first valid economic verdict under the unchanged contract and supersedes V1 only as the current economic status of the question."
+  },
+  "decisive_metrics": {
+    "relative_us30_minus_us100_centered_r_did": -0.002465685375169957,
+    "relative_us30_minus_us100_centered_stop_did": -0.0010850926659611163,
+    "book_effects": {
+      "US30_BOOK": {"centered_r": -0.008811463658432963, "centered_stop": 0.0045699695039860926},
+      "US100_BOOK": {"centered_r": -0.006345778283263006, "centered_stop": 0.005655062169947209}
+    },
+    "period_relative_r_dids": {
+      "P1_2022H2_2023": -0.039335800355798665,
+      "P2_2024": 0.02434159448427161,
+      "P3_2025": -0.07532112624929616,
+      "P4_2026_YTD": 0.14534559892529325
+    },
+    "period_signs": {"positive": 2, "negative": 2},
+    "negative_orientation_aligned_components": ["RC16", "Pressure", "Return", "Passive"],
+    "maximum_period_absolute_contribution_share": 0.3794797854746058,
+    "maximum_component_absolute_contribution_share": 0.34358773002704474
+  },
+  "why_ambiguous": [
+    "The relative centered DID magnitude is only 0.00247R, far below the 0.10R directional threshold.",
+    "The relative stop DID is -0.00109 and does not satisfy the selected-direction stop relation.",
+    "Both US30 and US100 centered book effects are slightly negative instead of strictly opposite.",
+    "Period relative DID signs split two positive and two negative, including a +0.14535R P4 reversal.",
+    "The first three strong-null requirements pass, but its final component-orientation requirement fails because RC16, Pressure, Return and Passive form a complete negative book-adjusted orientation across both books."
+  ],
+  "decision_translation": {
+    "preserve": [
+      "unconditional US30 and US100 book treatment",
+      "all current entry, order, exit, priority, admission, allocation, lot, risk, slot, cap, EA and Live behavior",
+      "the V1 INVALID record as implementation history and this sibling result as the first economic verdict"
+    ],
+    "discard": [
+      "prior-cash-breadth-conditioned book risk, slot, admission or allocation treatment",
+      "a breadth book-rotation implementation or Live candidate",
+      "directional-pass or no-field relabeling of this ambiguous result"
+    ],
+    "selected_candidate": null,
+    "retained_seed": null,
+    "promotion": "none"
+  },
+  "automatic_followups_not_opened": [
+    "relative-return magnitude, epsilon, neutral band, threshold, lag or lookback rescue",
+    "alternate ETF, index, sector, month, weekday, event, period, component, book or direction subgroup",
+    "risk, lot, slot, admission, allocation, priority, EA or Live implementation",
+    "a P4-only or aligned-component rescue"
+  ],
+  "execution": {
+    "source_reacquisition_batches": 0,
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "retained_analysis_script_or_cli": false
+  },
+  "family_frozen": true,
+  "same_family_economic_rescue": false,
+  "automatic_successor_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "active_not_complete",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_and_pause_without_a_successor"
+}

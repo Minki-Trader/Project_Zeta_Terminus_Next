@@ -1,0 +1,268 @@
+{
+  "schema": "zeta-next-prior-cash-breadth-book-rotation-result-v2",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_091_IMPLEMENTATION_CORRECTED_FIXED_AGGREGATION_COMPLETE_AMBIGUOUS",
+  "unit": "prior-cash-breadth-book-rotation-091",
+  "run": "implementation-correction-r1",
+  "family": "prior-cash-breadth-book-rotation-implementation-correction-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "contract": {
+    "original_declaration": {
+      "path": "lab/research/prior-cash-breadth-book-rotation-v1/evidence/PRIOR_CASH_BREADTH_BOOK_ROTATION_DECLARATION_V1.json",
+      "commit": "0da94f768cb9afdb5a80de17f289e4d9d3e6a430",
+      "bytes": 25534,
+      "sha256": "310CE6F607CBB982CE77CDD35A7FA63AD0C984CF4D95A95F1418EE43AD818896"
+    },
+    "implementation_correction_declaration": {
+      "path": "lab/research/prior-cash-breadth-book-rotation-implementation-correction-v1/evidence/PRIOR_CASH_BREADTH_BOOK_ROTATION_IMPLEMENTATION_CORRECTION_DECLARATION_V1.json",
+      "commit": "8c561bd",
+      "bytes": 5142,
+      "sha256": "2C32DC598F9238AA92AA21B412DE1B93135BFE98F17222308250F2EFCA758980"
+    },
+    "acquisition_receipt": {
+      "path": "lab/research/prior-cash-breadth-book-rotation-implementation-correction-v1/evidence/PRIOR_CASH_BREADTH_BOOK_ROTATION_ACQUISITION_RECEIPT_V2.json",
+      "commit": "8c561bd",
+      "bytes": 4067,
+      "sha256": "2266C6349D4162669E177896327FB842CA392E4082B4409CC704854CD36F1D9D"
+    },
+    "economic_contract_changed": false
+  },
+  "execution": {
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "source_reacquisition_batches": 0,
+    "retained_analysis_script_or_cli": false,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pin_checks": "20/20",
+    "external_faults": 0,
+    "event_rows": 16477,
+    "exact_duplicate_rows": 0,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "lifecycles": 2233,
+    "final_counts": {
+      "CLOSE": 2027,
+      "EXTERNAL_CLOSE": 206
+    },
+    "pooled_stressed_net_usd": 407.0477000000051,
+    "pairing_faults": 0,
+    "pending_faults": 0,
+    "component_period_centering_cells": 24,
+    "minimum_period_book_state_births": 67,
+    "minimum_period_component_state_births": 8,
+    "all_anchor_checks_passed": true
+  },
+  "external_state": {
+    "official_common_cash_dates": 1044,
+    "first_date": "2022-06-24",
+    "last_date": "2026-08-21",
+    "cash_state_counts": {
+      "BROAD_LEADS": 486,
+      "MEGACAP_LEADS": 558
+    },
+    "relative_intraday_log_return_min": -0.01795804134347663,
+    "relative_intraday_log_return_max": 0.015962074618566646,
+    "normal_day_state_counts": {
+      "BROAD_LEADS": 487,
+      "MEGACAP_LEADS": 564
+    },
+    "signal_state_counts": {
+      "BROAD_LEADS": 1131,
+      "MEGACAP_LEADS": 1298
+    },
+    "birth_state_counts": {
+      "BROAD_LEADS": 1040,
+      "MEGACAP_LEADS": 1193
+    },
+    "lag_distribution_calendar_days": {
+      "1": 809,
+      "2": 13,
+      "3": 202,
+      "4": 27
+    },
+    "maximum_lag_days": 4,
+    "all_mappings_strictly_prior": true
+  },
+  "supply_transmission": {
+    "pooled": {
+      "BROAD_LEADS": {
+        "days": 487,
+        "signals": 1131,
+        "births": 1040,
+        "signals_per_day": 2.3223819301848048,
+        "births_per_day": 2.135523613963039,
+        "us30_birth_share": 0.3855769230769231,
+        "us100_birth_share": 0.614423076923077
+      },
+      "MEGACAP_LEADS": {
+        "days": 564,
+        "signals": 1298,
+        "births": 1193,
+        "signals_per_day": 2.301418439716312,
+        "births_per_day": 2.1152482269503547,
+        "us30_birth_share": 0.3629505448449287,
+        "us100_birth_share": 0.6370494551550713
+      },
+      "broad_minus_megacap": {
+        "signals_per_day": 0.020963490468492773,
+        "births_per_day": 0.020275387012684165,
+        "us30_birth_share": 0.022626378231994427,
+        "us100_birth_share": -0.022626378231994316
+      }
+    },
+    "periods": {
+      "P1_2022H2_2023": {
+        "BROAD_LEADS": {"days": 171, "signals_per_day": 2.239766081871345, "births_per_day": 2.08187134502924, "us30_birth_share": 0.351123595505618},
+        "MEGACAP_LEADS": {"days": 195, "signals_per_day": 2.2974358974358973, "births_per_day": 2.117948717948718, "us30_birth_share": 0.35108958837772397}
+      },
+      "P2_2024": {
+        "BROAD_LEADS": {"days": 121, "signals_per_day": 2.355371900826446, "births_per_day": 2.190082644628099, "us30_birth_share": 0.3849056603773585},
+        "MEGACAP_LEADS": {"days": 139, "signals_per_day": 2.2014388489208634, "births_per_day": 2.079136690647482, "us30_birth_share": 0.33217993079584773}
+      },
+      "P3_2025": {
+        "BROAD_LEADS": {"days": 117, "signals_per_day": 2.358974358974359, "births_per_day": 2.111111111111111, "us30_birth_share": 0.4291497975708502},
+        "MEGACAP_LEADS": {"days": 142, "signals_per_day": 2.3450704225352115, "births_per_day": 2.1619718309859155, "us30_birth_share": 0.40716612377850164}
+      },
+      "P4_2026_YTD": {
+        "BROAD_LEADS": {"days": 78, "signals_per_day": 2.3974358974358974, "births_per_day": 2.2051282051282053, "us30_birth_share": 0.3953488372093023},
+        "MEGACAP_LEADS": {"days": 88, "signals_per_day": 2.397727272727273, "births_per_day": 2.090909090909091, "us30_birth_share": 0.3641304347826087}
+      }
+    },
+    "economic_role": "Descriptive transmission only; signal, birth and book-share differences cannot independently select a candidate."
+  },
+  "portfolio_result": {
+    "pooled": {
+      "US30_BOOK": {
+        "broad_n": 401,
+        "megacap_n": 433,
+        "raw_broad_minus_megacap_r": -0.013912175598780281,
+        "raw_broad_minus_megacap_stop": 0.006709554059424194,
+        "centered_broad_minus_megacap_r": -0.008811463658432963,
+        "centered_broad_minus_megacap_stop": 0.0045699695039860926
+      },
+      "US100_BOOK": {
+        "broad_n": 639,
+        "megacap_n": 760,
+        "raw_broad_minus_megacap_r": -0.006733802809465034,
+        "raw_broad_minus_megacap_stop": 0.005411415863602671,
+        "centered_broad_minus_megacap_r": -0.006345778283263006,
+        "centered_broad_minus_megacap_stop": 0.005655062169947209
+      },
+      "relative_us30_minus_us100_raw_r_did": -0.007178372789315247,
+      "relative_us30_minus_us100_raw_stop_did": 0.001298138195821523,
+      "relative_us30_minus_us100_centered_r_did": -0.002465685375169957,
+      "relative_us30_minus_us100_centered_stop_did": -0.0010850926659611163
+    },
+    "periods": {
+      "P1_2022H2_2023": {
+        "relative_raw_r_did": -0.04211300719691961,
+        "relative_raw_stop_did": 0.0028822613310518566,
+        "relative_centered_r_did": -0.039335800355798665,
+        "relative_centered_stop_did": 0.0029619476298727975
+      },
+      "P2_2024": {
+        "relative_raw_r_did": 0.01608885181650479,
+        "relative_raw_stop_did": 0.021775268961966694,
+        "relative_centered_r_did": 0.02434159448427161,
+        "relative_centered_stop_did": 0.01941257843332091
+      },
+      "P3_2025": {
+        "relative_raw_r_did": -0.07880828538543434,
+        "relative_raw_stop_did": 0.001148721477906553,
+        "relative_centered_r_did": -0.07532112624929616,
+        "relative_centered_stop_did": 0.00439789443299201
+      },
+      "P4_2026_YTD": {
+        "relative_raw_r_did": 0.14684210440353246,
+        "relative_raw_stop_did": -0.04719051799824406,
+        "relative_centered_r_did": 0.14534559892529325,
+        "relative_centered_stop_did": -0.04338765312406049
+      }
+    },
+    "components": {
+      "RC16": {"book": "US30_BOOK", "broad_n": 130, "megacap_n": 142, "raw_r": -0.04860665548692553, "raw_stop": 0.07378114842903577, "centered_r": -0.04980685230587663, "centered_stop": 0.0684187051632229},
+      "RC4": {"book": "US30_BOOK", "broad_n": 90, "megacap_n": 116, "raw_r": 0.05610264924228668, "raw_stop": -0.08199233716475093, "centered_r": 0.05603847548427312, "centered_stop": -0.08313335066188697},
+      "Cross": {"book": "US100_BOOK", "broad_n": 363, "megacap_n": 442, "raw_r": -0.015790122001592362, "raw_stop": 0.014665370280343544, "centered_r": -0.01524553935004019, "centered_stop": 0.015878696881526634},
+      "Pressure": {"book": "US30_BOOK", "broad_n": 63, "megacap_n": 55, "raw_r": -0.03000082163363557, "raw_stop": -0.04126984126984129, "centered_r": -0.019058000931058652, "centered_stop": -0.04220895736423687},
+      "Return": {"book": "US30_BOOK", "broad_n": 118, "megacap_n": 120, "raw_r": -0.023056488718452922, "raw_stop": 0.03742937853107345, "centered_r": -0.012346970467632374, "centered_stop": 0.029592446949199276},
+      "Passive": {"book": "US100_BOOK", "broad_n": 276, "megacap_n": 318, "raw_r": 0.005875735814390011, "raw_stop": -0.007314738856986608, "centered_r": 0.005656445157860372, "centered_stop": -0.008133249365021453}
+    }
+  },
+  "falsification": {
+    "relative_period_signs": {
+      "positive": 2,
+      "negative": 2
+    },
+    "positive_orientation_aligned_components": ["RC4", "Cross"],
+    "negative_orientation_aligned_components": ["RC16", "Pressure", "Return", "Passive"],
+    "positive_orientation_complete": false,
+    "negative_orientation_complete": true,
+    "period_contribution": {
+      "maximum_absolute_share": 0.3794797854746058,
+      "parts": {
+        "P1_2022H2_2023": {"signed": -0.01254397207412171, "absolute_share": 0.20277710914463676},
+        "P2_2024": {"signed": 0.0062226448265178275, "absolute_share": 0.10059093895451476},
+        "P3_2025": {"signed": -0.01961931470312221, "absolute_share": 0.31715216642624267},
+        "P4_2026_YTD": {"signed": 0.023474956575556122, "absolute_share": 0.3794797854746058}
+      }
+    },
+    "component_contribution": {
+      "maximum_absolute_share": 0.34358773002704474,
+      "parts": {
+        "RC16": {"signed": -0.016236247777903723, "absolute_share": 0.34358773002704474},
+        "RC4": {"signed": 0.013641224985881292, "absolute_share": 0.2886724563335221},
+        "Cross": {"signed": 0.008753446290180985, "absolute_share": 0.18523841110937095},
+        "Pressure": {"signed": -0.002688019142195329, "absolute_share": 0.056883241003074916},
+        "Return": {"signed": -0.003528421724215195, "absolute_share": 0.0746676465760203},
+        "Passive": {"signed": -0.0024076680069179766, "absolute_share": 0.05095051495096689}
+      }
+    }
+  },
+  "gates": {
+    "directional": {
+      "absolute_relative_centered_r_did_at_least_0_10": false,
+      "r_sign_times_relative_stop_did_at_most_minus_0_025": false,
+      "book_centered_r_effects_strictly_opposite": false,
+      "relative_r_sign_in_at_least_three_periods": false,
+      "at_least_four_aligned_components_with_both_books": true,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_55": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_relative_centered_r_did_at_most_0_05": true,
+      "absolute_relative_centered_stop_did_at_most_0_025": true,
+      "neither_r_sign_in_at_least_three_periods": true,
+      "neither_book_adjusted_component_orientation_complete": false,
+      "passed": false
+    }
+  },
+  "verdict": "AMBIGUOUS_PRIOR_CASH_BREADTH_BOOK_ROTATION_NO_CANDIDATE",
+  "economic_interpretation": "The pooled relative book field is economically near zero: US30-minus-US100 centered DID is -0.00247R and stop DID is -0.00109. Both book effects are slightly negative under BROAD_LEADS, and period DIDs split two positive and two negative, including a large P4 reversal. Directional magnitude, stop relation, opposite-book sign and period breadth all fail. The strong-null rule misses only because the negative book-adjusted component orientation contains RC16, Pressure, Return and Passive with representation from both books. The predeclared rules therefore require ambiguous rather than no-field.",
+  "decision": {
+    "preserve": "Unconditional US30 and US100 book treatment and all current entry, exit, risk, lot, slot, admission and allocation behavior.",
+    "discard": "Prior-cash-breadth-conditioned book rotation from this bounded question.",
+    "selected_candidate": null,
+    "retained_seed": null,
+    "promotion": "none"
+  },
+  "limits": "RSP-minus-SPY association does not identify sectors, dealer flow, futures positioning, intraday timing or a deployable allocation rule.",
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_ambiguous_closure_commit_push_then_recompare_the_whole_map_and_pause_without_a_successor"
+}
