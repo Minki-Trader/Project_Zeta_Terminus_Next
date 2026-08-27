@@ -1738,3 +1738,11 @@
 - US100 spec is digits/point/tick-size `2 / 0.01 / 0.01`; its receipt SHA-256 is `24BF4729055E07A11D29CACB062D5F1ED3931B4D5421A2E06282CE45FD2144CF`. The canonical 2025/2026 HCC files retained their declaration hashes; only the private runtime's 2026 copy synchronized forward.
 - Runtime symbolic/junction links are zero. OneDrive reparse attributes have empty LinkType/Target and are recorded separately, not treated as filesystem links. Acquisition receipt SHA-256 is `24276B69496E0AC645587A81C827A01CC994DB6EAD603DE609519DA0BA78B39C`.
 - No signal parity, shadow pass, re-arm, touch, mark, gate or verdict metric has opened. Commit and push this acquisition boundary before the one fixed aggregation; Program 6, broker/account state and Live remain untouched.
+
+## STATE-0209 - 2026-08-27
+
+- Unit 082 acquisition commit `496e53adf8519e8f91809e1d024d832132e94f30` reached origin before the first fixed invocation.
+- The invocation stopped while constructing the normalized Passive BIRTH dictionary because the temporary record uses `position_id` but its consumer referenced `position_identifier`. This occurred before pair integrity, touch calibration, shadow population, any metric payload or derived row file.
+- Used the sole premetric acquisition/serialization correction to change only that temporary dictionary key reference. Inputs, populations, fields, feature/limit/touch/mark formulas, thresholds, gates, decisions and exclusions remain unchanged; no data was reacquired.
+- Correction receipt SHA-256 is `6FFF4D9E74DA51BC6AB0474D1B2ADCEC72A85D916FF5CA1E1C0AC8481CD36C80`. One successful fixed aggregation remains; correction allowance is exhausted and metric reruns remain zero.
+- Program 6, broker/account state and Live remain untouched.

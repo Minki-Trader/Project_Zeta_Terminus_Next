@@ -1,0 +1,45 @@
+{
+  "schema": "zeta-next-passive-self-blocking-opportunity-premetric-correction-v1",
+  "created_at_local": "2026-08-27",
+  "status": "SOLE_PREMETRIC_SERIALIZATION_CORRECTION_FROZEN",
+  "unit": "passive-self-blocking-opportunity-082",
+  "family": "passive-self-blocking-opportunity-v1",
+  "declaration_sha256": "53662D22A2000ADC40B4AE3A0F1F2E8018123C5E8C2941A1B73487E4D2FCE8D1",
+  "acquisition_receipt_sha256": "24276B69496E0AC645587A81C827A01CC994DB6EAD603DE609519DA0BA78B39C",
+  "failed_invocation": {
+    "commit_pushed_before_invocation": "496e53adf8519e8f91809e1d024d832132e94f30",
+    "stage": "In-memory normalized Passive BIRTH record dictionary construction before pair integrity, touch calibration, shadow population or any metric output.",
+    "exception": "KeyError: position_identifier",
+    "cause": "The normalized temporary BIRTH record intentionally names the field position_id, while its immediately following dictionary consumer referenced the source-ledger name position_identifier.",
+    "stdout_metric_payload_emitted": false,
+    "derived_row_file_created": false,
+    "integrity_metrics_emitted": false,
+    "shadow_metrics_emitted": false,
+    "successful_fixed_aggregations_used": 0,
+    "metric_reruns_used": 0
+  },
+  "correction": {
+    "old_expression": "birth_by_id = {row[\"position_identifier\"]: row for row in birth_records}",
+    "new_expression": "birth_by_id = {row[\"position_id\"]: row for row in birth_records}",
+    "classification": "Pre-output normalized-record key serialization/plumbing correction.",
+    "input_population_changed": false,
+    "field_roles_changed": false,
+    "feature_or_limit_formula_changed": false,
+    "touch_or_mark_formula_changed": false,
+    "threshold_or_verdict_rule_changed": false,
+    "data_reacquired": false
+  },
+  "budget": {
+    "acquisition_or_serialization_corrections_allowed": 1,
+    "acquisition_or_serialization_corrections_used": 1,
+    "acquisition_or_serialization_corrections_remaining": 0,
+    "successful_fixed_aggregations_used": 0,
+    "successful_fixed_aggregations_remaining": 1,
+    "metric_reruns_used": 0,
+    "metric_reruns_remaining": 0
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_correction_sha_update_single_frontier_memory_commit_push_then_run_the_single_remaining_fixed_aggregation_with_only_the_frozen_key_correction"
+}
