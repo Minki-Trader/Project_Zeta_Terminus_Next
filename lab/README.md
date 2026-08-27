@@ -46,6 +46,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/us100-tick-flow-imbalance-response-v1/`: 닫힌 Unit 030 family; 보존 P1 상세 로그의 생성 대체 때문에 경제판정 권위 철회, prototype 없음은 유지
 - `research/us100-failed-extreme-auction-response-v1/`: 닫힌 Unit 031 family; P1 HTML 100% 표기와 달리 상세 로그가 1,920분 부재·484분 폐기 및 생성 대체를 증명해 4,129 경제행 미열람, prototype 없음
 - `research/us100-realized-variance-asymmetry-response-v1/`: 닫힌 Unit 032 fresh observer family; 경로길이 교정 뒤 P1은 정상 종료·상세 경고 0이었으나 HTML이 `99% 실제 틱`으로 고정 100% 관문 실패, 1,529 경제행 미열람·P2-P4·prototype 없음
+- `research/us100-realized-variance-asymmetry-response-authoritative-history-v1/`: 열린 Program 1 / meso Unit 096 단일 실험 family; Unit 032의 경제 미판정 계약을 threshold·window·horizon·기간 변경 없이 그대로 고정하고, 이후 Unit 094에서 새로 동기화되어 2024 US100 `100% 실제 틱`을 통과한 annual HCS 입력 아래 선언부터 최종 판정까지 한 번만 완결한다. 현재는 선언만 존재하며 source/config/runtime/compile/Tester/경제결과는 미개봉
 - `research/us100-directional-path-efficiency-response-v1/`: 닫힌 Unit 033 fresh observer family; P1은 1,127건 정상 해결·상세 경고 0이었으나 HTML `99% 실제 틱`으로 고정 100% 관문 실패, 경제행 미열람·P2-P3·prototype 없음
 - `research/native-direction-asymmetry-value-v1/`: 닫힌 Unit 034 source-free family; 전 전략 return `|SELL-BUY|<0.10R`, RC4 stop 부담은 컸으나 수익효과 미달로 방향 처리 후보 없음
 - `research/same-strategy-interbirth-gap-value-v1/`: 닫힌 Unit 035 source-free family; 전 전략 밀도는 통과했으나 pooled `|rho|<0.20`이고 RC16 근접 tail도 `0.08111R/-0.03409`로 수익·stop 크기 미달, cadence 처리 후보 없음
