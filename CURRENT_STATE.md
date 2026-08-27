@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0281`
+- Latest state ID: `STATE-0282`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -24,7 +24,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery 
 ## Active work
 
 - Active engineering boundary: none; bounded RLO1 unexpected-stop recovery completed through committed no-owner evidence, exact `0/0 → 1/1`, two healthy snapshots and dashboard restoration
-- Active research boundary: Unit 062 market-stop/reverse-lot implementation-correction r1; this is the original declaration-through-verdict experiment resumed under an immutable sibling, not Unit 095. Fit, selection, conditional latest and any pure implementation/environment corrections are internal stages with no arbitrary correction-count cap
+- Active research boundary: Unit 062 market-stop/reverse-lot implementation-correction r1; this is the original declaration-through-verdict experiment resumed under an immutable sibling, not Unit 095. The single valid fit and fitted candidate configuration are frozen; the adjacent native/candidate selection pair is next. Fit, selection, conditional latest and any pure implementation/environment corrections are internal stages with no arbitrary correction-count cap
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

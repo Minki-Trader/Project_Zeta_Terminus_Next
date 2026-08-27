@@ -1,0 +1,59 @@
+{
+  "schema": "zeta-next-market-stop-reverse-lot-sizing-fit-aggregation-correction-v1",
+  "created_at_local": "2026-08-28",
+  "status": "FIRST_FIT_AGGREGATION_INVOCATION_REJECTED_BEFORE_MEDIAN_VECTOR_OR_CANDIDATE_SET",
+  "unit": "market-stop-reverse-lot-sizing-062",
+  "run": "implementation-correction-r1",
+  "family": "market-stop-reverse-lot-sizing-implementation-correction-v1",
+  "experiment_boundary": {
+    "new_experiment": false,
+    "new_frontier_unit": false,
+    "fit_aggregation_is_internal": true,
+    "pure_implementation_correction_numeric_cap": null,
+    "economic_contract_changes": 0
+  },
+  "fixed_input": {
+    "artifact": "lab/artifacts/ea-files/market-stop-reverse-lot-sizing-implementation-correction-v1/valid-fit-native-geometry-v1/",
+    "artifact_files": 22,
+    "artifact_bytes": 5812742,
+    "artifact_manifest_sha256": "4189910C060CC90EC8A41FCA600B6DEFD24A278BED9C0DF0257EEDA20170225F",
+    "event_path": "output/msrl62ic1-events-a.csv",
+    "event_bytes": 416965,
+    "event_sha256": "07F709494639B422079C47F8B2A1C24AB0B3D5EBF8C078256B75F23259C3E37C",
+    "event_rows": 1180,
+    "native_stop_atr_rows": 108,
+    "native_stop_atr_unavailable_rows": 0,
+    "observation_sha256": "FBEC4649CA271CD0EB702DDCAFEB86E4A3534A0EAA5A010D5484DD6DBFA67538"
+  },
+  "fault": {
+    "stage": "ephemeral median aggregation after valid fit integrity and before any fit receipt or candidate setting",
+    "expression": "return$values[[int][Math]::Floor($n/2)]",
+    "effect": "PowerShell parsed the odd-count branch as a command name. RC4 and Cross therefore did not return their declared single middle order statistic and the five-component median vector was incomplete and invalid.",
+    "tester_rerun": false,
+    "source_or_configuration_change": false,
+    "candidate_set_created": false,
+    "fit_receipt_created": false,
+    "selection_or_latest_opened": false,
+    "economic_outcome_metric_or_verdict_opened": false
+  },
+  "correction": {
+    "exact_change": "Insert whitespace between the PowerShell return keyword and the existing odd-count middle-element expression, then recompute all five medians once from the same exact 108-row observation set.",
+    "estimator_component_mapping_input_rows_sorting_even_count_formula_or_precision_change": false,
+    "retained_script_or_validator": false
+  },
+  "execution_accounting_before_retry": {
+    "valid_fit_tester_paths": 1,
+    "fit_tester_reruns": 0,
+    "rejected_fit_aggregation_invocations": 1,
+    "successful_fit_aggregations": 0,
+    "frozen_median_vectors": 0,
+    "candidate_sets": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "post_valid_stage_selective_tester_reruns": 0,
+    "economic_contract_changes": 0
+  },
+  "program_6_opened": false,
+  "manual_broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "apply_the_token_only_correction_to_the_same_frozen_observation_set_then_freeze_one_fit_receipt_and_candidate_set"
+}
