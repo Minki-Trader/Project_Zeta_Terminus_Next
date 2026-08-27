@@ -1,0 +1,238 @@
+{
+  "schema": "zeta-next-predecision-market-participation-state-declaration-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_084_DECLARATION_FROZEN_BEFORE_VOLUME_ACQUISITION_OR_LIFECYCLE_OUTCOMES",
+  "unit": "predecision-market-participation-state-084",
+  "family": "predecision-market-participation-state-v1",
+  "title": "Pre-Decision Broad H1 Tick Participation and Portfolio Lifecycle Economics",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트",
+    "reason": "The treatment is a causal pre-decision market-activity state shared by all six components, not an execution or broker-safety intervention."
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"],
+    "transfer_path": "three-index quote participation before the first decision -> component lifecycle stressed-R and stop channel -> both-book and whole-portfolio treatment decision"
+  },
+  "central_question": "When broad US30, US100 and US500 broker H1 tick participation is unusually high immediately before the first native decision, does the current portfolio's lifecycle value and stop burden change materially and broadly relative to unusually low participation?",
+  "research_bundle": {
+    "single_center_question": true,
+    "lenses": [
+      "mechanism: verify that HIGH and LOW composite states represent broad same-direction participation across at least two of three indices rather than one-symbol extremes",
+      "lifecycle transmission: compare component-period-centered stressed return on planned risk and stop rate between HIGH and LOW states",
+      "portfolio result and falsification: require concordant direction across both books, at least three periods and at least four components"
+    ],
+    "common_boundary": "Only the completed exact-11:00 server-time H1 bars known at 12:00 and the complete fixed-0.01 CP2 lifecycles; no same-day later market bar or fitted outcome threshold is allowed."
+  },
+  "frontier_disposition_and_selection": {
+    "user_directed_discard_without_verdict": {
+      "cards": ["01", "03", "14", "20", "24", "26", "29"],
+      "meaning": "Remove the seven held external cards from the active Frontier. This is neither success, failure, invalidity nor ambiguity and does not revise their prior evidence."
+    },
+    "outcome_free_candidates_rejected_before_opening": [
+      {
+        "candidate": "prior_three_index_direction_consensus",
+        "precheck": "2,233 births split aligned/opposed/mixed 723/780/730, but state assignment is structurally component-confounded; RC4 had only one opposed row and Pressure only seventeen."
+      },
+      {
+        "candidate": "prior_common_three_index_move_magnitude",
+        "precheck": "Outcome-free period terciles exist, but the minimum component-period-regime cell is one because strategy clocks select different bars."
+      },
+      {
+        "candidate": "rc4_sell_warning_context",
+        "precheck": "Only sixteen P4 warning births exist and all sixteen are RC4's own tag, so they cannot identify a cross-component warning transmission."
+      },
+      {
+        "candidate": "market_component_existing_exposure_shadow",
+        "precheck": "The P4 ledger has 1,302 existing-exposure rows, but zero occur at an exact native evaluation time; they are post-entry observations, not suppressed scheduled opportunities."
+      },
+      {
+        "candidate": "market_entry_decision_latency",
+        "precheck": "Of 264 P4 market births, 263 have zero-second decision-to-open delay and one has twenty seconds, leaving no useful state density."
+      },
+      {
+        "candidate": "rolling_three_index_correlation_state",
+        "precheck": "The outcome-free state is dense, but Unit 076 explicitly froze correlation/covariance variants as automatic follow-ups to the same H1 relative-market mechanism."
+      }
+    ],
+    "selected_candidate": "predecision_broad_h1_tick_participation",
+    "selection_reason": "It introduces a previously unused causal market-data role, has an exact pre-decision clock, applies to every component and book, and changes whether a future portfolio treatment is worth a separate confirmatory unit."
+  },
+  "why_now": {
+    "current_bottleneck": "The complete CP2 population contains substantial period, component and book variation, while direct recorded order costs and US30 spread shape did not provide a discriminating state. A broad market-activity treatment is still absent.",
+    "connection_bridge": [
+      "Unit 073 found recorded market and Passive entry-cost burden nondiscriminating, and Unit 079 found the available US30 cost/spread shape unable to support a clock-cost candidate.",
+      "Units 050 and 065 left materially different book/period economics not explained by a stable allocation or passive benchmark.",
+      "The three fixed daily decision clocks allow one completed 11:00 H1 participation state to precede every native decision, and a dedicated isolated runtime can now acquire the omitted tick-volume field."
+    ],
+    "perspective_distance_from_recent": "Unit 083 was Program 3 P4 admission-clock and incumbent-risk-mask attribution. Unit 084 moves to Program 2 over four periods, changes the causal time to a shared pre-decision market state and changes the data role to newly acquired H1 tick participation plus complete lifecycle outcomes.",
+    "decision_if_high_is_favorable": "Preserve current behavior and retain exactly one non-automatic future full-portfolio confirmatory seed for favoring or relaxing treatment only in broad high-participation states.",
+    "decision_if_high_is_adverse": "Preserve current behavior and retain exactly one non-automatic future full-portfolio confirmatory seed for suppressing or tightening treatment only in broad high-participation states.",
+    "decision_if_no_field_ambiguous_or_invalid": "Preserve unconditional entry, allocation, lot, slot and risk behavior; retain no participation-state candidate and rotate away."
+  },
+  "whole_map_recomparison": {
+    "program_1": "Recent signal-state candidates are closed or structurally confounded; the rejected direction/magnitude prechecks do not identify a new component decision.",
+    "program_2": "Selected because an unconsumed H1 participation role has an exact prior clock and can explain lifecycle and book variation without reopening Unit 076 price dispersion.",
+    "program_3": "Unit 083 closed the available Passive priority census; entry delay is effectively degenerate and no adjacent clock rescue opens.",
+    "program_4": "The discarded partial-close, MAE and RC4 cards still lack causal triggers or clean role data; no exit rule is reopened.",
+    "program_5": "The question must transmit to both books and the whole portfolio, but begins at a market-state mechanism rather than another direct allocation aggregation.",
+    "program_7": "No evidence-production audit is needed because the new role is explicitly acquired and frozen before the single aggregation.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare Programs 1-5 and 7 and all heights. Do not automatically open any participation, volume, clock, lookback, symbol, threshold, price-volume, component, period, allocation, lot, slot or risk variant."
+  },
+  "target_and_exclusions": {
+    "target": [
+      "US30, US100 and US500 H1 bars requested from 2022-07-01 through 2026-08-21 in one dedicated physical Lab runtime",
+      "exact 11:00 server-time H1 tick_volume for each symbol and the preceding twenty exact-11:00 observations",
+      "all complete fixed-0.01 CP2 lifecycles across P1 2022-08-01 through 2023-12-31, P2 2024, P3 2025 and P4 2026-01-01 through 2026-08-21",
+      "all six components, both US30 and US100 books, stressed return on planned risk and DEAL_REASON_SL stop rate"
+    ],
+    "excluded": [
+      "true exchange volume, traded-volume, depth, liquidity or slippage causality claims",
+      "price return, dispersion, correlation, covariance, beta, volatility, trend, spread or scheduled-event interaction",
+      "same-day bars completing after 12:00, timezone remapping, DST subgroup, overnight or other clock",
+      "binding, latest, Live or incomplete lifecycle tails; outcome-fitted threshold or rolling re-estimation",
+      "entry, order, exit, priority, reservation, allocation, lot, risk, slot, cap, component, EA or Live change",
+      "MQL source copy, MetaEditor compile, Strategy Tester, optimization or broker/account/position/order/deal query"
+    ],
+    "automatic_followups_forbidden": [
+      "another lookback, median window, bar hour, timeframe, volume field, symbol subset or quantile",
+      "price-volume, dispersion-volume, volatility-volume, direction, month, weekday, component or best-period rescue",
+      "dynamic admission, allocation, priority, removal, lot, risk, slot, EA or Live implementation"
+    ]
+  },
+  "immutable_inputs_before_acquisition": {
+    "cp2_event_files": [
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-a.csv","bytes":1411355,"sha256":"44D83809C70DC76FD01EA5545E4BB38E03F0F7331739130E094DA1A7E6E1DBCA"},
+      {"period":"P1_2022H2_2023","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p1-2022h2-2023/observation/events-b.csv","bytes":536770,"sha256":"0E9CCB7100FB96A2D5EE60CAC24C87D0F21191B1BC53E8B0628182ABFEBBC6A8"},
+      {"period":"P2_2024","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p2-2024/observation/events-a.csv","bytes":1395691,"sha256":"3EE6839825498CB30721C57A38244B7AC72FE28BE25C29AD1D55DBD47BB19178"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-a.csv","bytes":1418401,"sha256":"4B8B7322631BC9E3500900ECC1B3DE894DF63A0DFCFECE9B6C57659C928D83D0"},
+      {"period":"P3_2025","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p3-2025/observation/events-b.csv","bytes":6936,"sha256":"15D881EA0479C5E18F1AD38E64E649831BB1781BF09D85EE2CBC8DD0E02FBF29"},
+      {"period":"P4_2026_YTD","path":"lab/artifacts/ea-files/passive-refusal-depth-observation-v1/valid-p4-2026-ytd/observation/events-a.csv","bytes":923617,"sha256":"9C5C5A11B49625F6DAE07FB2761670185074DD20B7A3194F594230FD326CECC9"}
+    ],
+    "clock_coordinate_export": {
+      "path": "lab/research/cross-common-beta-decomposition-v1/evidence/CROSS_THREE_INDEX_H1_BARS_20220701_20260821.csv",
+      "bytes": 1364263,
+      "sha256": "E1889F50F6238753408703C87959AFE27ED1DD69CEAD03679CA2618C1A2AC244",
+      "role": "Proves the synchronized H1 server-time coordinate and date coverage only. It contains no volume field and supplies no Unit 084 treatment or outcome."
+    },
+    "unit_050_result": {"path":"lab/research/natural-book-drawdown-complementarity-v1/evidence/NATURAL_BOOK_DRAWDOWN_COMPLEMENTARITY_RESULT_V1.json","bytes":8237,"sha256":"894FE4960D8BDEDE1BF4F5B1712713DB080F0B3CCFF07CDB9A6B33B9B091BCF1"},
+    "unit_073_closure": {"path":"lab/research/order-type-realized-entry-cost-v1/evidence/ORDER_TYPE_REALIZED_ENTRY_COST_CLOSURE_V1.json","bytes":4905,"sha256":"857D4D5CAA256F0C7B8096173B3C97AF74B0661CE4531A0D2E7EE4B41DC15BC1"},
+    "unit_079_closure": {"path":"lab/research/us30-cost-unit-spread-shape-v1/evidence/US30_COST_UNIT_SPREAD_SHAPE_CLOSURE_V1.json","bytes":2758,"sha256":"AEBBD0F2991AF96ED92D0CB6B903784ADC19B90522269ED3EA1FD9A31696FAC6"},
+    "unit_083_closure": {"path":"lab/research/clock-permutation-passive-priority-v1/evidence/CLOCK_PERMUTATION_PASSIVE_PRIORITY_CLOSURE_V1.json","bytes":3391,"sha256":"78D41E6DBFBB9F5BA0445F830CCF2FCC0AC823FABE0EC65B469E58AA1437F5CF"},
+    "neutral_runtime_terminal": {"path":"lab/runtime/tester-portable/terminal64.exe","bytes":121846032,"sha256":"90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400"}
+  },
+  "acquisition_contract": {
+    "dedicated_runtime": "lab/runtime/pmps84-portable/",
+    "runtime_origin": "lab/runtime/tester-portable/",
+    "copy_rule": "One physical minimal copy from the neutral Lab runtime; no source, executable, settings, state, log or runtime dependency on another family or Live.",
+    "request": "For each of US30, US100 and US500 call copy_rates_range once at H1 from 2022-07-01 00:00:00 through 2026-08-21 23:59:59 UTC request coordinates and preserve terminal-formatted server time.",
+    "required_fields": ["time_epoch", "time_server", "open", "high", "low", "close", "tick_volume", "spread", "real_volume"],
+    "allowed_api_calls": ["initialize", "symbol_select", "symbol_info", "copy_rates_range", "shutdown"],
+    "forbidden_api_calls": "Every account, position, order, deal, send or trading-state API.",
+    "freeze_before_outcomes": "Export each symbol, symbol specs and one acquisition receipt; commit and push them before reconstructing any lifecycle or calculating any conditional outcome."
+  },
+  "component_mapping": [
+    {"name":"RC16","component_id":"ZT-M30-US30-RANGE-COMP-61f61deaba","book":"US30_BOOK","birth_event":"OPEN"},
+    {"name":"RC4","component_id":"ZT-M30-US30-RANGE-COMP-64efb16616","book":"US30_BOOK","birth_event":"OPEN"},
+    {"name":"Cross","component_id":"ZT-H1-US100-CROSS-IN-14b72317b7","book":"US100_BOOK","birth_event":"OPEN"},
+    {"name":"Pressure","component_id":"ZT-M30-US30-INTRADAY-R-2eb111fc46","book":"US30_BOOK","birth_event":"OPEN"},
+    {"name":"Return","component_id":"ZT-H1-US30-RETURN-I-c870a788ec","book":"US30_BOOK","birth_event":"OPEN"},
+    {"name":"Passive","component_id":"ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8","book":"US100_BOOK","birth_event":"PASSIVE_FILL"}
+  ],
+  "frozen_market_state": {
+    "time_semantics": "Use time_server exactly as emitted by the dedicated terminal; do not timezone-remap.",
+    "current_observation": "For each symbol and server date, use tick_volume of the H1 bar opening exactly 11:00 and completing at 12:00.",
+    "baseline": "For each symbol, median tick_volume of the preceding twenty available exact-11:00 bars, excluding the current date; require all values positive.",
+    "symbol_score": "Natural log of current tick_volume divided by its twenty-observation median.",
+    "composite_score": "Median of the three simultaneous symbol scores.",
+    "causal_boundary": "The completed bar and score are known at 12:00 before the earliest 12:15 decision.",
+    "period_windows": {
+      "P1_2022H2_2023": ["2022-08-01", "2023-12-31"],
+      "P2_2024": ["2024-01-01", "2024-12-31"],
+      "P3_2025": ["2025-01-01", "2025-12-31"],
+      "P4_2026_YTD": ["2026-01-01", "2026-08-21"]
+    },
+    "regime_thresholds": "Within each fixed period, sort all eligible market dates by composite score. q1 is one-based rank ceiling(N/3), q2 is ceiling(2N/3). LOW is score <= q1, MID is q1 < score <= q2, HIGH is score > q2; ties remain in the lower regime.",
+    "lifecycle_assignment": "Assign each lifecycle by birth server-calendar date to that period's market state."
+  },
+  "frozen_lifecycle_reconstruction": {
+    "ordering": "Within each period concatenate pinned files, preserve stable source-file/source-row order for equal server timestamps, and pair each component's birth with its next final event.",
+    "birth": "OPEN for RC16, RC4, Cross, Pressure and Return; PASSIVE_FILL for Passive.",
+    "final": "CLOSE or EXTERNAL_CLOSE. Stressed P/L is value_b; planned_risk and DEAL_REASON are parsed from detail.",
+    "stressed_r": "value_b divided by positive planned_risk at final close.",
+    "stop": "One when close detail reason is DEAL_REASON_SL, otherwise zero for DEAL_REASON_EXPERT.",
+    "centered_outcomes": "For each lifecycle subtract its component-period all-state mean stressed_r and stop rate. Report raw values too; HIGH-minus-LOW centered differences are the primary composition-controlled effects."
+  },
+  "fixed_integrity_and_density_gate": {
+    "requirements": [
+      "All declared byte/hash pins pass, three acquired exports are unique and strictly increasing, and exact common 11:00 bars exist with positive tick_volume.",
+      "Lifecycle reconstruction yields exactly 2,233 complete pairs, including 2,027 CLOSE and 206 EXTERNAL_CLOSE finals, with component, period, book and stressed-net anchors matching Unit 050 within 1e-9.",
+      "At least 95% of lifecycles in every period and book map to a state.",
+      "Each pooled component-state cell has at least 15 lifecycles and each period-book-state cell has at least 25.",
+      "At least 60% of HIGH dates have positive symbol scores in at least two indices, and at least 60% of LOW dates have negative symbol scores in at least two indices."
+    ],
+    "all_required": true
+  },
+  "fixed_material_direction_gates": {
+    "favorable_high": [
+      "Pooled centered HIGH-minus-LOW stressed_r is at least +0.10R.",
+      "Pooled centered HIGH-minus-LOW stop rate is at most -0.05.",
+      "The concordant favorable direction, stressed_r positive and stop-rate nonpositive, appears in both books, at least three of four periods and at least four of six components."
+    ],
+    "adverse_high": [
+      "Pooled centered HIGH-minus-LOW stressed_r is at most -0.10R.",
+      "Pooled centered HIGH-minus-LOW stop rate is at least +0.05.",
+      "The concordant adverse direction, stressed_r negative and stop-rate nonnegative, appears in both books, at least three of four periods and at least four of six components."
+    ],
+    "all_requirements_of_one_direction_required": true
+  },
+  "fixed_strong_null": {
+    "requirements": [
+      "Absolute pooled centered HIGH-minus-LOW stressed_r is less than 0.05R.",
+      "Absolute pooled centered HIGH-minus-LOW stop rate is less than 0.025.",
+      "Neither concordant direction appears in more than two periods or more than three components."
+    ],
+    "all_required": true
+  },
+  "fixed_verdict_rules": {
+    "favorable": "PASS_HIGH_PARTICIPATION_FAVORABLE_PORTFOLIO_STATE when integrity and every favorable gate pass.",
+    "adverse": "PASS_HIGH_PARTICIPATION_ADVERSE_PORTFOLIO_STATE when integrity and every adverse gate pass.",
+    "no_field": "NO_MATERIAL_PREDECISION_MARKET_PARTICIPATION_FIELD when integrity passes and the complete strong-null rule triggers.",
+    "ambiguous": "AMBIGUOUS_PREDECISION_MARKET_PARTICIPATION_STATE_NO_CANDIDATE when integrity passes and no preceding economic verdict applies.",
+    "invalid": "INVALID_PREDECISION_MARKET_PARTICIPATION_STATE_NO_VERDICT when any pin, acquisition, bar, lifecycle, coverage, density or broad-state integrity requirement fails."
+  },
+  "decision_translation": {
+    "favorable_or_adverse": "Preserve all current behavior and retain exactly one non-automatic future full-portfolio real-tick conditional-treatment seed in the observed direction; this exploratory per-period tercile is not a deployable threshold.",
+    "no_field_or_ambiguous": "Preserve unconditional behavior, retain no seed and rotate away.",
+    "invalid": "Preserve the observation gap and rotate away without same-family repair after budget exhaustion."
+  },
+  "execution_budget": {
+    "dedicated_runtime_copies": 1,
+    "successful_bar_acquisition_batches": 1,
+    "copy_rates_range_calls": 3,
+    "symbol_info_calls": 3,
+    "acquisition_or_serialization_corrections_before_metrics": 1,
+    "successful_fixed_aggregations": 1,
+    "metric_reruns": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "retained_cli_validator_or_parity_checker": false
+  },
+  "stop_rules": [
+    "Commit and push this declaration, the user-directed discard and the single Frontier memory before creating the runtime or acquiring volume.",
+    "Commit and push the acquired bar exports, symbol specs and receipt before reconstructing lifecycles or calculating any conditional outcome.",
+    "One implementation-only correction is allowed only before any conditional lifecycle metric is emitted. After any new metric, make no correction or rerun.",
+    "Do not change the clock, baseline, score, period terciles, outcomes, thresholds, breadth, verdicts or decisions after results.",
+    "Do not create MQL, compile, run Tester, query broker/account/position/order/deal state, touch Live or open Program 6."
+  ],
+  "outcomes_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_declaration_sha_update_single_frontier_memory_and_state_commit_push_then_create_one_dedicated_runtime_and_acquire_three_h1_volume_paths"
+}
