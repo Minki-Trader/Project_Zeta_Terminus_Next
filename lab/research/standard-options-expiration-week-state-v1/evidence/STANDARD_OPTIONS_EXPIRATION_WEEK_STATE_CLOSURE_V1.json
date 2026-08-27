@@ -1,0 +1,57 @@
+{
+  "schema": "zeta-next-standard-options-expiration-week-state-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_INVALID_PREMETRIC_NO_ECONOMIC_VERDICT",
+  "unit": "standard-options-expiration-week-state-090",
+  "family": "standard-options-expiration-week-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "verdict": "INVALID_STANDARD_OPTIONS_EXPIRATION_SCHEDULE_OR_LIFECYCLE_RECONSTRUCTION_NO_VERDICT",
+  "reason": "All six official Cboe sources and the 49-row deterministic schedule were persisted, but final acquisition-receipt serialization failed after the sole premetric correction allowance had already been used. The predeclared receipt integrity requirement therefore cannot pass without an unauthorized second correction.",
+  "economic_outcomes": {
+    "opened": false,
+    "supply_result": null,
+    "stressed_r_result": null,
+    "stop_result": null,
+    "breadth_result": null,
+    "concentration_result": null
+  },
+  "preserve": [
+    "all current entry, order, exit, priority, allocation, lot, risk, slot, cap, component, EA and Live behavior",
+    "the official source snapshots and deterministic schedule only as frozen premetric evidence",
+    "the historical fact that Unit 090 has no economic verdict"
+  ],
+  "discard": [
+    "any favorable, adverse, null or ambiguous claim about standard-expiration-week portfolio economics",
+    "any calendar-conditioned risk, lot, slot, admission, allocation or implementation seed",
+    "a second serialization correction, missing receipt reconstruction or same-family rerun"
+  ],
+  "automatic_followups_not_opened": [
+    "exact expiration day, quarterly expiration, end-of-month, holiday, month, weekday or clock variant",
+    "options volume, open interest, gamma, volatility, threshold or interaction variant",
+    "best period, component, direction or book subgroup",
+    "risk, lot, slot, admission, allocation, EA or Live implementation"
+  ],
+  "family_frozen": true,
+  "same_family_repair": false,
+  "selected_candidate": null,
+  "retained_seed": null,
+  "promotion": "none",
+  "successful_official_source_batches": 1,
+  "premetric_acquisition_or_serialization_corrections_used": 1,
+  "successful_fixed_aggregations": 0,
+  "metric_reruns": 0,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "whole_map_recompared": false,
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "commit_push_closure_then_recompare_programs_1_5_and_7_and_all_heights_before_any_successor"
+}

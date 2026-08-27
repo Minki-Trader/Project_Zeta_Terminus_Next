@@ -1,0 +1,102 @@
+{
+  "schema": "zeta-next-standard-options-expiration-week-state-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "INVALID_PREMETRIC_NO_PORTFOLIO_OUTCOME_OPENED",
+  "unit": "standard-options-expiration-week-state-090",
+  "family": "standard-options-expiration-week-state-v1",
+  "declaration": {
+    "commit": "8f517faccad105b7e49319423ac9ef9cb9736cc7",
+    "bytes": 25579,
+    "sha256": "93D074F2C38CFEC5EB51FE4636AE0F9F51B05B2149A2AEB2E27DA52406BB5351"
+  },
+  "premetric_correction": {
+    "commit": "1176bb9e484200282ef3f9e58354422b54212a53",
+    "bytes": 2498,
+    "sha256": "CD9EF2CF571A7DE717E967B7CFF5885FEB8E4EF35423BAAB3CFAAB7F1CDDF878",
+    "allowance_exhausted": true
+  },
+  "persisted_official_sources": {
+    "files": 6,
+    "bytes": 4265092,
+    "semantic_statement_present": true,
+    "all_pdf_signatures_valid": true,
+    "items": [
+      {
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_facts.html",
+        "bytes": 57497,
+        "sha256": "75000DE50BAA895A9FF7C01CD7FB95F5FED6B8DD6C7922AA7CFFE2E748F73104"
+      },
+      {
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2022.pdf",
+        "bytes": 704801,
+        "sha256": "6F3B1E751D0C0CF14B52D685095234A717D5F8E43ED9F96136BA1A4BAE59B3B8"
+      },
+      {
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2023.pdf",
+        "bytes": 427097,
+        "sha256": "FDFBE54A47B4A6A15E5527694BE8DE6465A42F5788DAB0365C49C5E855594F3A"
+      },
+      {
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2024.pdf",
+        "bytes": 960613,
+        "sha256": "D56420FBF7344221CAF4DB2F599F51ABE4A42B77E9D5406D5BDD6C1BD226A70B"
+      },
+      {
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2025.pdf",
+        "bytes": 1105574,
+        "sha256": "6BDC3ED80C411B20926E347F7B09BF69AAE15328FF2B98A6228CD896DD1E250E"
+      },
+      {
+        "path": "lab/research/standard-options-expiration-week-state-v1/evidence/source/cboe_options_expiration_calendar_2026.pdf",
+        "bytes": 1009510,
+        "sha256": "421A0699055B99EBC2DEA6DA53666939BC0918882D1F615DA5664582A52B3C9E"
+      }
+    ]
+  },
+  "deterministic_schedule": {
+    "path": "lab/research/standard-options-expiration-week-state-v1/evidence/standard_options_expiration_weeks_2022_08_2026_08.csv",
+    "rows": 49,
+    "bytes": 2536,
+    "sha256": "7BC2F2C088A836EFF746DABDD58EAACF27C78C0D3C47B70FC9D10DD8F1C43C8A",
+    "row_integrity_passed_before_receipt_serialization": true
+  },
+  "failed_boundary": {
+    "stage": "final acquisition-receipt object preparation after all six official sources and the deterministic schedule were persisted",
+    "exception": "PowerShell Measure-Object rejected the ordered-dictionary bytes property while calculating the convenience total source_bytes field.",
+    "acquisition_receipt_created": false,
+    "stdout_supply_metrics": 0,
+    "stdout_lifecycle_metrics": 0,
+    "cp2_final_value_b_read": false,
+    "planned_risk_read": false,
+    "stop_reason_read": false,
+    "conditional_outcomes_calculated": false
+  },
+  "integrity_gate": {
+    "official_sources_present": true,
+    "deterministic_schedule_present": true,
+    "required_acquisition_receipt_present": false,
+    "additional_correction_available": false,
+    "passed": false
+  },
+  "execution_accounting": {
+    "successful_official_source_batches": 1,
+    "premetric_acquisition_or_serialization_corrections_used": 1,
+    "pre_input_boundary_assertion_failures": 1,
+    "post_source_receipt_serialization_failures": 1,
+    "successful_fixed_aggregations": 0,
+    "metric_reruns": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "verdict": "INVALID_STANDARD_OPTIONS_EXPIRATION_SCHEDULE_OR_LIFECYCLE_RECONSTRUCTION_NO_VERDICT",
+  "economic_interpretation": "No finding for or against standard-expiration-week economics exists because the frozen acquisition integrity boundary failed before any portfolio outcome opened.",
+  "selected_candidate": null,
+  "retained_seed": null,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "UNTOUCHED",
+  "next": "freeze_invalid_closure_commit_push_then_recompare_all_programs_without_same_family_repair"
+}
