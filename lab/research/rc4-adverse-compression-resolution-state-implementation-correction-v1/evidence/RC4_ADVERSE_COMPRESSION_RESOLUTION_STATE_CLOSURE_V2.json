@@ -1,0 +1,147 @@
+{
+  "schema": "zeta-next-rc4-adverse-compression-resolution-state-implementation-correction-closure-v1",
+  "closed_at_local": "2026-08-27",
+  "status": "CLOSED_VALID_PARTIAL_NO_SUCCESSOR_MAP_RECOMPARED",
+  "unit": "rc4-adverse-compression-resolution-state-046",
+  "run": "implementation-correction-r1",
+  "family": "rc4-adverse-compression-resolution-state-implementation-correction-v1",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "experiment_level_boundary": {
+    "meaningful_experiment_units": 1,
+    "new_unit_number": false,
+    "new_hypothesis": false,
+    "implementation_declaration_and_aggregation_are_internal_events": true,
+    "original_unit_046_question_now_has_first_authoritative_verdict": true
+  },
+  "evidence": {
+    "original_declaration": {
+      "bytes": 17347,
+      "sha256": "4A6B232832A5F8409555ECC5BF226BCD9692924041C63004EF270678D1089203"
+    },
+    "correction_declaration": {
+      "bytes": 8972,
+      "sha256": "602A3A44D5671E574F34BA3B5F077B8998B243521D909470E98944ACFF2DC728",
+      "commit": "08feeb9",
+      "pushed_before_corrected_aggregation": true
+    },
+    "corrected_result": {
+      "bytes": 11992,
+      "sha256": "1CE9AF7CA5CF014F7B688745DAF50FF8DB0D19CABF42C5EB244726388E10761A"
+    },
+    "historical_invalid_result_sha256": "99EBBE00CAF61BCE80811F7EA7372034AD5244251A40E348E41AF0B4E5226779",
+    "historical_invalid_closure_sha256": "542B70F96F3F38C48833C2BA861E9D4ED51FE25E37AA73C5C5A7BA9ABB2A6381"
+  },
+  "correction": {
+    "old_selector": "ZT-M30-US30-RANGE-COMP-*",
+    "exact_selector": "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "removed_rc16_lifecycles": 272,
+    "economic_contract_changes": 0,
+    "result_informed_rule_changes": 0,
+    "historical_artifacts_preserved": true
+  },
+  "execution": {
+    "successful_corrected_valid_aggregations": 1,
+    "post_valid_result_metric_reruns_or_rejudgments": 0,
+    "internal_syntax_prechecks": 2,
+    "syntax_defects_corrected_before_input_access": 1,
+    "pure_implementation_correction_numeric_cap": null,
+    "retained_analysis_cli": false,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pins": 12,
+    "event_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "rc4_lifecycles": 206,
+    "directions": {"BUY":108,"SELL":98},
+    "stressed_net_usd_2x": 79.06800000000142,
+    "stop_exits": 53,
+    "roles": {
+      "NO_CHECKPOINT": 20,
+      "NONADVERSE_NO_COMPRESSION": 117,
+      "ADVERSE_COMPRESSED": 42,
+      "ADVERSE_REFUSED": 27,
+      "ADVERSE_UNRESOLVED": 0
+    },
+    "direction_period_cells": 8,
+    "faults": 0
+  },
+  "findings": {
+    "ADVERSE_VOTE_STATE": {
+      "treatment_comparator_n": [69,117],
+      "centered_stressed_r_difference": -0.27186684059750743,
+      "centered_stop_difference": 0.42057456535854587,
+      "expected_period_r_stop_signs": [4,4],
+      "expected_direction_r_stop_signs": [2,2],
+      "maximum_period_contribution_share": 0.41458640046400447,
+      "passed": true,
+      "interpretation": "The existing adverse vote is a broad causal risk-state marker: subsequent value is lower and stop incidence higher in every period and both directions after direction-period centering."
+    },
+    "COMPRESSION_APPLIED_STATE": {
+      "treatment_comparator_n": [42,27],
+      "centered_stressed_r_difference": 0.33234853049707064,
+      "centered_stop_difference": 0.09533669576329692,
+      "expected_period_r_stop_signs": [4,2],
+      "expected_direction_r_stop_signs": [2,0],
+      "maximum_period_contribution_share": 0.46155046808937383,
+      "compressed_stopouts": 22,
+      "compressed_stopout_mean_stressed_r": -0.13522765361185932,
+      "compressed_stopout_share_no_worse_than_negative_0_50r": 1.0,
+      "passed": false,
+      "failed_gates": [
+        "pooled stop effect was +0.09534 instead of at most -0.10",
+        "expected stop-reduction direction appeared in only two of four periods",
+        "expected stop-reduction direction appeared in neither BUY nor SELL"
+      ],
+      "interpretation": "Applied compression is associated with higher final stressed R and tightly contains compressed stop losses, but it does not show the required broad reduction in stop incidence versus geometry refusal."
+    }
+  },
+  "verdict": "PARTIAL_RC4_MANAGEMENT_STATE_DIAGNOSIS_NO_SUCCESSOR",
+  "decision": {
+    "preserve_existing_rc4_management": true,
+    "adverse_vote_state_is_informative": true,
+    "compression_causal_benefit_proven": false,
+    "retained_question": null,
+    "selected_candidate": null,
+    "new_management_rule": null,
+    "checkpoint_vote_fraction_or_geometry_change": false,
+    "mql_or_live_action": false
+  },
+  "authority_limit": "Compression versus refusal is observational, not randomized, and lacks an uncompressed counterfactual. The partial result diagnoses the existing state but cannot authorize a different exit or stop rule.",
+  "whole_map": {
+    "programs_compared": [1,2,3,4,5,7],
+    "heights_compared": ["micro","meso","macro"],
+    "program_assessment": {
+      "1": "No new independent entry role follows from an RC4 management-state diagnosis; Unit 085's seed remains consumed by failed Unit 086.",
+      "2": "Recent external-state concentration remains disfavored, but the historical Unit 045 VIX experiment is separately identifiable as a contract-preserving parser completion rather than a new adjacent state hypothesis.",
+      "3": "No new dense priority, occupancy, handoff, latency or clock mechanism appears.",
+      "4": "The adverse vote is a valid risk-state marker, but applied compression fails the joint stop gate and the original authority limit permits no successor or rule change.",
+      "5": "No lot, slot, capital, admission or risk authority follows; Unit 061 requires a semantic contract change and Unit 075 lacks complete binding data, so neither is an implementation-only completion.",
+      "7": "Restating the corrected selector or partial result changes no portfolio decision."
+    },
+    "height_assessment": {
+      "micro": "No new checkpoint, stop or exit rule.",
+      "meso": "One existing RC4 state is broadly informative; the applied-versus-refused resolution contrast is incomplete.",
+      "macro": "Current unconditional portfolio construction and frozen RC4 management remain authoritative."
+    },
+    "adjacent_rc4_successor": false,
+    "successor_opened": false,
+    "next_ready_experiment_after_commit": "prior-vix-relative-regime-context-045 implementation correction under its unchanged original contract"
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_research_ledger_read": false,
+  "live_surface": "untouched",
+  "goal_status": "active_not_complete",
+  "next": "commit_and_push_this_unit_046_experiment_boundary_then_open_only_the_separately_identified_unit_045_contract_preserving_parser_completion"
+}

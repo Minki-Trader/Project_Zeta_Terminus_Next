@@ -1,0 +1,296 @@
+{
+  "schema": "zeta-next-rc4-adverse-compression-resolution-state-implementation-correction-result-v1",
+  "created_at_local": "2026-08-27",
+  "status": "UNIT_046_CORRECTED_VALID_EXPERIMENT_COMPLETE",
+  "unit": "rc4-adverse-compression-resolution-state-046",
+  "run": "implementation-correction-r1",
+  "family": "rc4-adverse-compression-resolution-state-implementation-correction-v1",
+  "macro_program": {
+    "id": 4,
+    "name": "position_management_exit"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "experiment_level_boundary": {
+    "meaningful_experiment_units": 1,
+    "new_unit_number": false,
+    "new_economic_hypothesis": false,
+    "original_unit_046_contract_preserved": true
+  },
+  "declarations": {
+    "original": {
+      "bytes": 17347,
+      "sha256": "4A6B232832A5F8409555ECC5BF226BCD9692924041C63004EF270678D1089203"
+    },
+    "correction": {
+      "bytes": 8972,
+      "sha256": "602A3A44D5671E574F34BA3B5F077B8998B243521D909470E98944ACFF2DC728",
+      "commit": "08feeb9",
+      "pushed_before_corrected_aggregation": true
+    }
+  },
+  "historical_invalid": {
+    "result_sha256": "99EBBE00CAF61BCE80811F7EA7372034AD5244251A40E348E41AF0B4E5226779",
+    "closure_sha256": "542B70F96F3F38C48833C2BA861E9D4ED51FE25E37AA73C5C5A7BA9ABB2A6381",
+    "preserved": true,
+    "authoritative_economic_inference": false
+  },
+  "correction": {
+    "old_selector": "ZT-M30-US30-RANGE-COMP-*",
+    "exact_selector": "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "removed_rc16_lifecycles": 272,
+    "economic_contract_changes": 0,
+    "result_informed_rule_changes": 0
+  },
+  "execution": {
+    "historical_invalid_metric_emitting_aggregations": 1,
+    "successful_corrected_valid_aggregations": 1,
+    "post_valid_result_metric_reruns_or_rejudgments": 0,
+    "recorded_implementation_defects": 1,
+    "recorded_implementation_corrections": 1,
+    "pure_implementation_correction_numeric_cap": null,
+    "retained_analysis_cli": false,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0
+  },
+  "integrity": {
+    "passed": true,
+    "pins": 12,
+    "event_rows": 16477,
+    "exact_duplicate_full_rows": 0,
+    "rc4_lifecycles": 206,
+    "directions": {"BUY": 108, "SELL": 98},
+    "stressed_net_usd_2x": 79.06800000000142,
+    "stop_exits": 53,
+    "roles": {
+      "NO_CHECKPOINT": 20,
+      "NONADVERSE_NO_COMPRESSION": 117,
+      "ADVERSE_COMPRESSED": 42,
+      "ADVERSE_REFUSED": 27,
+      "ADVERSE_UNRESOLVED": 0
+    },
+    "period_roles": {
+      "P1_2022H2_2023": {"NO_CHECKPOINT":2,"NONADVERSE_NO_COMPRESSION":37,"ADVERSE_COMPRESSED":11,"ADVERSE_REFUSED":3,"ADVERSE_UNRESOLVED":0},
+      "P2_2024": {"NO_CHECKPOINT":5,"NONADVERSE_NO_COMPRESSION":26,"ADVERSE_COMPRESSED":13,"ADVERSE_REFUSED":9,"ADVERSE_UNRESOLVED":0},
+      "P3_2025": {"NO_CHECKPOINT":9,"NONADVERSE_NO_COMPRESSION":39,"ADVERSE_COMPRESSED":11,"ADVERSE_REFUSED":9,"ADVERSE_UNRESOLVED":0},
+      "P4_2026_YTD": {"NO_CHECKPOINT":4,"NONADVERSE_NO_COMPRESSION":15,"ADVERSE_COMPRESSED":7,"ADVERSE_REFUSED":6,"ADVERSE_UNRESOLVED":0}
+    },
+    "direction_roles": {
+      "BUY": {"NO_CHECKPOINT":7,"NONADVERSE_NO_COMPRESSION":71,"ADVERSE_COMPRESSED":16,"ADVERSE_REFUSED":14,"ADVERSE_UNRESOLVED":0},
+      "SELL": {"NO_CHECKPOINT":13,"NONADVERSE_NO_COMPRESSION":46,"ADVERSE_COMPRESSED":26,"ADVERSE_REFUSED":13,"ADVERSE_UNRESOLVED":0}
+    },
+    "direction_period_cells": {
+      "P1_2022H2_2023_BUY": {"n":31,"mean_stressed_r":0.12411628522390847,"stop_rate":0.12903225806451613},
+      "P1_2022H2_2023_SELL": {"n":22,"mean_stressed_r":0.07436882266053851,"stop_rate":0.18181818181818182},
+      "P2_2024_BUY": {"n":30,"mean_stressed_r":0.023002198073492665,"stop_rate":0.16666666666666666},
+      "P2_2024_SELL": {"n":23,"mean_stressed_r":0.09195007039045998,"stop_rate":0.391304347826087},
+      "P3_2025_BUY": {"n":31,"mean_stressed_r":0.07637313839624386,"stop_rate":0.25806451612903225},
+      "P3_2025_SELL": {"n":37,"mean_stressed_r":0.049743351849418825,"stop_rate":0.32432432432432434},
+      "P4_2026_YTD_BUY": {"n":16,"mean_stressed_r":0.13009291449084728,"stop_rate":0.1875},
+      "P4_2026_YTD_SELL": {"n":16,"mean_stressed_r":-0.07230221918189825,"stop_rate":0.5}
+    },
+    "faults": 0
+  },
+  "natural_role_metrics": {
+    "NO_CHECKPOINT": {
+      "n": 20,
+      "stressed_net_usd_2x": -45.15699999999997,
+      "mean_stressed_r": -0.4397612185021547,
+      "mean_centered_stressed_r": -0.4925953763670048,
+      "stop_rate": 0.85,
+      "mean_centered_stop": 0.5307942908004268,
+      "positive_rate": 0.05,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [-0.60618093443377,0.8445747800586509],
+        "P2_2024": [-0.402392498486509,0.4536231884057972],
+        "P3_2025": [-0.5209620734868358,0.4829022570958055],
+        "P4_2026_YTD": [-0.48473112616462166,0.578125]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [-0.5852641010366286,0.6406490015360984],
+        "SELL": [-0.4426968323141303,0.47164175425044985]
+      }
+    },
+    "NONADVERSE_NO_COMPRESSION": {
+      "n": 117,
+      "stressed_net_usd_2x": 152.08100000000098,
+      "mean_stressed_r": 0.22663396188416485,
+      "mean_centered_stressed_r": 0.15382107273423715,
+      "stop_rate": 0.02564102564102564,
+      "mean_centered_stop": -0.2130942517513344,
+      "positive_rate": 0.7264957264957265,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [0.0800418227794558,-0.11912499009273197],
+        "P2_2024": [0.16520945533934273,-0.25306577480490533],
+        "P3_2025": [0.2010614033218002,-0.2373639147832696],
+        "P4_2026_YTD": [0.19324516657951737,-0.3125]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [0.134862209238088,-0.16900461911252457],
+        "SELL": [0.18308366639133683,-0.2811456412590629]
+      }
+    },
+    "ADVERSE_COMPRESSED": {
+      "n": 42,
+      "stressed_net_usd_2x": 15.038000000000174,
+      "mean_stressed_r": 0.06853220488320705,
+      "mean_centered_stressed_r": 0.012003657113844327,
+      "stop_rate": 0.5238095238095238,
+      "mean_centered_stop": 0.24478597716676254,
+      "positive_rate": 0.4523809523809524,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [-0.09000110845816438,0.29672087443348444],
+        "P2_2024": [-0.005499315915584373,0.3277591973244147],
+        "P3_2025": [-0.0337426628645549,0.2392010779107553],
+        "P4_2026_YTD": [0.2766894557477101,0.017857142857142856]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [0.015633685728132493,0.26285282258064524],
+        "SELL": [0.009769793351205465,0.2336679184505271]
+      }
+    },
+    "ADVERSE_REFUSED": {
+      "n": 27,
+      "stressed_net_usd_2x": -42.893999999999714,
+      "mean_stressed_r": -0.26584973482167734,
+      "mean_centered_stressed_r": -0.3203448733832263,
+      "stop_rate": 0.4074074074074074,
+      "mean_centered_stop": 0.1494492814034656,
+      "positive_rate": 0.18518518518518517,
+      "period_centered_r_stop": {
+        "P1_2022H2_2023": [-0.2530577936441721,-0.1818181818181818],
+        "P2_2024": [-0.245776915498641,0.005636070853462177],
+        "P3_2025": [-0.30906297518428677,0.2533178339629953],
+        "P4_2026_YTD": [-0.4827631973780407,0.375]
+      },
+      "direction_centered_r_stop": {
+        "BUY": [-0.4091790800212836,0.2363671274961598],
+        "SELL": [-0.22467726623454928,0.055845447149794974]
+      }
+    },
+    "ADVERSE_UNRESOLVED": {
+      "n": 0,
+      "stressed_net_usd_2x": 0.0,
+      "mean_stressed_r": null,
+      "mean_centered_stressed_r": null,
+      "stop_rate": null,
+      "mean_centered_stop": null,
+      "positive_rate": null,
+      "period_centered_r_stop": {"P1_2022H2_2023":null,"P2_2024":null,"P3_2025":null,"P4_2026_YTD":null},
+      "direction_centered_r_stop": {"BUY":null,"SELL":null}
+    }
+  },
+  "variants": {
+    "ADVERSE_VOTE_STATE": {
+      "id": "ADVERSE_VOTE_STATE",
+      "treatment_n": 69,
+      "comparator_n": 117,
+      "centered_stressed_r_difference": -0.27186684059750743,
+      "centered_stop_difference": 0.42057456535854587,
+      "period_effects_r_stop": {
+        "P1_2022H2_2023": [-0.2049836494917647,0.31330178104371653],
+        "P2_2024": [-0.2690041529025412,0.44904732948211223],
+        "P3_2025": [-0.35869820673023445,0.4829175329175328],
+        "P4_2026_YTD": [-0.26707231996676917,0.4951923076923077]
+      },
+      "direction_effects_r_stop": {
+        "BUY": [-0.317474480859683,0.4194974506537433],
+        "SELL": [-0.25146289290204965,0.4555394026093459]
+      },
+      "period_contribution_numerators": {
+        "P1_2022H2_2023": -0.05066288687113993,
+        "P2_2024": -0.06980717383952108,
+        "P3_2025": -0.11271229484884188,
+        "P4_2026_YTD": -0.038684485038004514
+      },
+      "period_contribution_shares": {
+        "P1_2022H2_2023": 0.18635184327663248,
+        "P2_2024": 0.25676972478916243,
+        "P3_2025": 0.41458640046400447,
+        "P4_2026_YTD": 0.1422920314702005
+      },
+      "maximum_period_centered_r_contribution_share": 0.41458640046400447,
+      "gates": {
+        "density": true,
+        "pooled_r": true,
+        "pooled_stop": true,
+        "expected_period_r_signs": 4,
+        "expected_period_stop_signs": 4,
+        "expected_direction_r_signs": 2,
+        "expected_direction_stop_signs": 2,
+        "concentration": true,
+        "information": true,
+        "passed": true
+      }
+    },
+    "COMPRESSION_APPLIED_STATE": {
+      "id": "COMPRESSION_APPLIED_STATE",
+      "treatment_n": 42,
+      "comparator_n": 27,
+      "centered_stressed_r_difference": 0.33234853049707064,
+      "centered_stop_difference": 0.09533669576329692,
+      "period_effects_r_stop": {
+        "P1_2022H2_2023": [0.1630566851860077,0.47853905625166626],
+        "P2_2024": [0.24027759958305664,0.32212312647095254],
+        "P3_2025": [0.27532031231973186,-0.014116756052239998],
+        "P4_2026_YTD": [0.7594526531257508,-0.35714285714285715]
+      },
+      "direction_effects_r_stop": {
+        "BUY": [0.4248127657494161,0.02648569508448545],
+        "SELL": [0.23444705958575474,0.17782247130073212]
+      },
+      "period_contribution_numerators": {
+        "P1_2022H2_2023": 0.004545813745230037,
+        "P2_2024": 0.08022346928758042,
+        "P3_2025": 0.09418362764452169,
+        "P4_2026_YTD": 0.1533956198197385
+      },
+      "period_contribution_shares": {
+        "P1_2022H2_2023": 0.013677851195644457,
+        "P2_2024": 0.24138355348704485,
+        "P3_2025": 0.28338812722793677,
+        "P4_2026_YTD": 0.46155046808937383
+      },
+      "maximum_period_centered_r_contribution_share": 0.46155046808937383,
+      "compressed_stop_containment": {
+        "stopouts": 22,
+        "mean_stressed_r": -0.13522765361185932,
+        "share_no_worse_than_negative_0_50r": 1.0
+      },
+      "gates": {
+        "density": true,
+        "pooled_r": true,
+        "pooled_stop": false,
+        "expected_period_r_signs": 4,
+        "expected_period_stop_signs": 2,
+        "expected_direction_r_signs": 2,
+        "expected_direction_stop_signs": 0,
+        "concentration": true,
+        "containment": true,
+        "information": false,
+        "passed": false
+      }
+    }
+  },
+  "bundle": {
+    "passing_variants": ["ADVERSE_VOTE_STATE"],
+    "passing_count": 1,
+    "verdict": "PARTIAL_RC4_MANAGEMENT_STATE_DIAGNOSIS_NO_SUCCESSOR",
+    "retained_question": null,
+    "selected_candidate": null,
+    "new_management_rule": null
+  },
+  "authority_limit": "Existing-state observational diagnosis only; compression versus refusal is not randomized and has no uncompressed counterfactual.",
+  "exclusions_honored": {
+    "alternate_checkpoint_vote_fraction_geometry_direction_period_role_or_component_variant": false,
+    "mql_compile_or_tester": false,
+    "program_6": false,
+    "broker_or_account_state_query": false,
+    "live_research_ledger_read": false,
+    "live_surface": "untouched"
+  },
+  "next": "persist_result_and_closure_recompare_all_programs_and_heights_then_select_only_another_meaningful_experiment"
+}
