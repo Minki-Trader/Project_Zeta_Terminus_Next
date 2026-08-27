@@ -37,3 +37,10 @@ corrected and rerun as needed to execute that unchanged contract. The original
 declaration's arbitrary one-correction cap is superseded only procedurally by
 `evidence/FEDERAL_RESERVE_RESERVE_BALANCE_BOOK_STATE_IMPLEMENTATION_POLICY_ALIGNMENT_V1.json`;
 the original declaration and first failed-invocation record remain byte-frozen.
+
+The corrected official acquisition is frozen before economic outcomes. It
+persisted the official schedule page, release-date index, a 214-row normalized
+release CSV and a receipt containing each full-page and target-row hash. All
+archive dates and target rows passed, including 36 legacy-title dates, and the
+state split is 108 expansion versus 106 contraction. The acquisition artifacts
+must reach `origin/main` before the one fixed CP2 aggregation opens.
