@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-realized-scheduled-macro-shock-alignment-acquisition-receipt-v1",
+  "created_at_local": "2026-08-27",
+  "status": "ONE_DEDICATED_RUNTIME_AND_ONE_FIXED_THREE_SYMBOL_M5_EVENT_WINDOW_ACQUISITION_COMPLETE_BEFORE_SHOCK_OR_LIFECYCLE_METRICS",
+  "unit": "realized-scheduled-macro-shock-alignment-087",
+  "family": "realized-scheduled-macro-shock-alignment-v1",
+  "declaration": {
+    "path": "lab/research/realized-scheduled-macro-shock-alignment-v1/evidence/REALIZED_SCHEDULED_MACRO_SHOCK_ALIGNMENT_DECLARATION_V1.json",
+    "bytes": 26669,
+    "sha256": "E24A8F8252155D4878B426C0A3E6F99B30C781B31DDC87F702B296728186A8E5",
+    "commit": "62674dea470428220957edb09ecaf73993337a57",
+    "committed_and_pushed_before_runtime_or_acquisition": true,
+    "event_conditional_outcomes_consumed": false
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/rmsa87-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copy": true,
+    "pre_acquisition_files": 17,
+    "pre_acquisition_bytes": 126574029,
+    "post_acquisition_files": 505,
+    "post_acquisition_bytes": 577206913,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "symbolic_or_junction_links": 0,
+    "onedrive_reparse_markers_with_empty_link_type": 18,
+    "link_interpretation": "Every reparse-marked hydrated path has empty LinkType and Target. There is no symbolic link, junction or cross-family target.",
+    "source_or_executable_from_another_lab_family": false,
+    "live_dependency": false,
+    "ignored_local_runtime": true
+  },
+  "acquisition": {
+    "python": "3.13.9",
+    "metatrader5_package": "5.0.5640",
+    "symbols": [
+      "US30",
+      "US100",
+      "US500"
+    ],
+    "timeframe": "M5",
+    "annual_request_slices": [
+      "2022-08-01T00:00:00Z through 2022-12-31T23:59:59Z",
+      "2023-01-01T00:00:00Z through 2023-12-31T23:59:59Z",
+      "2024-01-01T00:00:00Z through 2024-12-31T23:59:59Z",
+      "2025-01-01T00:00:00Z through 2025-12-31T23:59:59Z",
+      "2026-01-01T00:00:00Z through 2026-08-21T23:59:59Z"
+    ],
+    "successful_acquisition_batches": 1,
+    "acquisition_or_serialization_corrections_used": 0,
+    "copy_rates_range_calls": 15,
+    "symbol_info_calls": 3,
+    "api_calls_executed": [
+      "initialize",
+      "symbol_select",
+      "symbol_info",
+      "copy_rates_range",
+      "shutdown"
+    ],
+    "forbidden_account_position_order_deal_or_send_calls_executed": false,
+    "returned_rows_by_call": {
+      "US30": [
+        29921,
+        70342,
+        70951,
+        70467,
+        45483
+      ],
+      "US100": [
+        29922,
+        70344,
+        70934,
+        70461,
+        45484
+      ],
+      "US500": [
+        29913,
+        70363,
+        70951,
+        70479,
+        45483
+      ]
+    },
+    "terminal_process_exit": {
+      "shutdown_called": true,
+      "path_scoped_post_shutdown_cleanup": true,
+      "exact_dedicated_path_processes_remaining": 0,
+      "other_terminal_processes_touched": false
+    }
+  },
+  "event_window_export": {
+    "path": "lab/research/realized-scheduled-macro-shock-alignment-v1/evidence/REALIZED_SCHEDULED_MACRO_SHOCK_EVENT_WINDOWS_V1.csv",
+    "bytes": 253832,
+    "sha256": "18C27637200322945F75CF3A1FE6E52218D80005318E418470B749DCF61D30DE",
+    "rows": 1152,
+    "columns": 18,
+    "column_names": [
+      "event_id",
+      "event_class",
+      "release_date_et",
+      "release_time_et",
+      "event_utc",
+      "event_server",
+      "symbol",
+      "offset_minutes",
+      "time_epoch",
+      "time_utc",
+      "time_server",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "events": 96,
+    "event_class_counts": {
+      "CPI": 48,
+      "EMPLOYMENT": 48
+    },
+    "symbols": 3,
+    "offset_rows": {
+      "0": 288,
+      "5": 288,
+      "10": 288,
+      "15": 288
+    },
+    "unique_event_symbol_offset_keys": 1152,
+    "first_event": "CPI_20220810",
+    "last_event": "EMPLOYMENT_20260807",
+    "finite_positive_ohlc": true,
+    "nonnegative_volume_and_spread": true,
+    "windows_timezone_contract_match": true,
+    "windows_timezone_or_epoch_faults": 0,
+    "shock_return_or_direction_calculated": false
+  },
+  "symbol_specs": {
+    "path": "lab/research/realized-scheduled-macro-shock-alignment-v1/evidence/REALIZED_SCHEDULED_MACRO_SHOCK_SYMBOL_SPECS_V1.json",
+    "bytes": 754,
+    "sha256": "0625452192D01F2D52D323C29199983A287A32FA782EE1C661DB1BC80B9E832A",
+    "all_symbols_digits": 2,
+    "all_symbols_point": 0.01,
+    "all_symbols_trade_tick_size": 0.01,
+    "all_symbols_spread_float": true
+  },
+  "storage": {
+    "system_drive_free_gib_after_acquisition": 32.892,
+    "mandatory_sweep_threshold_gib": 30,
+    "sweep_required": false
+  },
+  "shock_returns_roles_or_conditional_lifecycle_metrics_consumed": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "next": "compute_receipt_sha_update_single_frontier_memory_and_state_commit_push_then_run_the_one_fixed_shock_role_and_lifecycle_aggregation"
+}
