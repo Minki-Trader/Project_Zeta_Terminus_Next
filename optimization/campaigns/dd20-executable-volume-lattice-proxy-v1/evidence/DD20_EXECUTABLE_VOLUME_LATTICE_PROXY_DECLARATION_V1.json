@@ -1,0 +1,90 @@
+{
+  "schema": "zeta-dd20-executable-volume-lattice-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_SELECTION_OUTCOMES_UNOPENED",
+  "campaign": "dd20-executable-volume-lattice-proxy-v1",
+  "objective": "Find the maximum doubled-cost-stressed selection profit available inside a conservatively calibrated 20 percent MT5 equity-drawdown budget before spending another MT5 run.",
+  "independence": {
+    "root": "optimization/campaigns/dd20-executable-volume-lattice-proxy-v1/",
+    "raw_input_root": "optimization/artifacts/raw/dd20-executable-volume-lattice-proxy-v1/input/",
+    "source_or_runtime_link_to_other_campaign": false,
+    "live_or_lab_source_runtime_state_log_shared": false,
+    "broker_or_live_action": false
+  },
+  "frozen_inputs": {
+    "files": 8,
+    "bytes": 21520346,
+    "canonical_manifest_sha256": "59AC979CDDBFA897EEF645B87BF59AC53D55DF7BE7DF4E745E1BE3AAF7313BD1",
+    "parent_lifecycle_sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85",
+    "parent_selection_report_sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B",
+    "parent_forward_report_sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3",
+    "high_exposure_selection_lifecycle_sha256": "234FF296ABC7A7831F3355BF4BF1810067921B4D266319214FB74F7C520E31CB",
+    "high_exposure_selection_tst_sha256": "3A5928E1CCA73F34064A6398F942A087D4ABD232123352C71E8FB90BE184CB54",
+    "high_exposure_forward_lifecycle_sha256": "2A66CF325B02A3EF3F2C4CD65D520DAAAC92811ED4B8AF2DC1B1187F8C2B2AA8",
+    "high_exposure_forward_report_sha256": "D1DD1BBC43A3916A259BA3B11C8D4B39AC700A304CB5033AAB51D5C4A3E0EB5E",
+    "high_exposure_forward_tst_sha256": "E01227854BCA16BC304F23EB36C9D5DE6DE7E1A7F5E4A2BF103C98763B5F1012"
+  },
+  "implementation": {
+    "contract_path": "optimization/campaigns/dd20-executable-volume-lattice-proxy-v1/config/proxy-contract.json",
+    "contract_bytes": 5886,
+    "contract_sha256": "D9361362207B81B426E2FEEE825E13618DE38769460A37A88E24D5C5E8257048",
+    "script_path": "optimization/campaigns/dd20-executable-volume-lattice-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 27795,
+    "script_sha256": "BB256591D268E26AB928E01DDB6B51B7ED5F8EDB32879AD1E228FE178985C950",
+    "python_ast_parse": "PASS",
+    "json_parse": "PASS",
+    "economic_output_opened_during_parse": false
+  },
+  "search": {
+    "components": 6,
+    "weight_grid": [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
+    "minimum_active_components": 4,
+    "exact_compositions": 112752,
+    "reference_capital_usd": 100.0,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "base_and_volume_step_lots": 0.01,
+    "daily_addition_step_usd": 150.0,
+    "selection_only_role": "maximum_full_stressed_profit"
+  },
+  "economic_model": {
+    "event_driven": true,
+    "source_birth_and_close_order_preserved": true,
+    "candidate_daily_sizing_ladder_recomputed": true,
+    "component_volume_step_recomputed_with_positive_MathRound_semantics": true,
+    "candidate_open_planned_risk_recomputed": true,
+    "aggregate_0_18_admission_recomputed": true,
+    "candidate_close_net_scaled_by_executable_volume_ratio": true,
+    "selection_epochs": 4,
+    "full_selection_calibration": "upward-only envelope of raw closed-balance DD and the affine line through the preserved 1/1/1/1/1/1 and 3/3/1/2.5/1/0 selection MT5 relative-equity-DD anchors",
+    "hard_calibrated_selection_dd_pct": 20.0
+  },
+  "gates": {
+    "full_and_all_epoch_actual_net_positive": true,
+    "full_and_all_epoch_stressed_net_positive": true,
+    "all_balances_positive": true,
+    "full_calibrated_dd_at_or_below_20_pct": true,
+    "all_epoch_raw_dd_at_or_below_20_pct": true,
+    "selection_role_count": 1,
+    "later_opened_only_after_role_freeze": true,
+    "later_used_for_selection_or_tuning": false,
+    "later_actual_and_stressed_net_positive": true,
+    "later_raw_dd_at_or_below_20_pct": true,
+    "failed_candidate_rescue_or_retune": false,
+    "maximum_mt5_shortlist_size": 1
+  },
+  "limitations": [
+    "The proxy can reject source births but cannot reconstruct signals that the parent path itself skipped.",
+    "It preserves the source exit path and scales close economics; altered protective-stop geometry can change exit time and outcome in MT5.",
+    "Conservative capital uses closed actual/stressed balances because candidate intratrade equity is unavailable; the two selection MT5 DD anchors supply the prospective upward-only calibration.",
+    "Margin, broker stop rounding, same-tick ordering outside recorded lifecycle events and floating mark-to-market paths remain MT5-only effects."
+  ],
+  "boundary": {
+    "selection_outcomes_opened": false,
+    "later_outcomes_opened_by_this_campaign": false,
+    "proxy_run_started": false,
+    "mt5_started": false,
+    "original_15_combination_rerun": false,
+    "automatic_live_promotion": false
+  }
+}
