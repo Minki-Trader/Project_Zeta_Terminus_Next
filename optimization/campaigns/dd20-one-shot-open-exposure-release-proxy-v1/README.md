@@ -34,3 +34,13 @@ The independent forward cannot arm because maximum stressed closed balance is on
 ## Declared boundary
 
 All `136` candidate economics are unopened. The copied raw input contains `10` files / `12,310,256` bytes with canonical manifest `878768593041D6B2FFD5C0ECE7D06A1DA6D9493CD4955703C2A0120677A7C314`. Freeze and push this declaration before exactly one proxy process opens the candidate frontier.
+
+## Proxy result
+
+Declaration commit `d0c7bf324cc8c1dd8ec34da4a18d9ae688ac17d6` reached `origin/main` before one process evaluated all `136` paths in `1.0713894` seconds. Every copied input, lifecycle/native/sampled anchor, predecessor identity, terminal-lock snapshot identity, zero-error balance alignment, binding-open-exposure exclusion and forward non-arming check passed. All candidates released open exposure, stayed positive, exceeded the qualified profit floor after reserves and retained four positive epochs. **Budgeted DD passed zero**, so no MT5 shortlist exists.
+
+Maximum conservative profit and minimum family DD coincide in the trigger `17.0% / 17.5%`, retain-`0` tie; the declared ordering selects `17.5%`. At `2026.03.10 14:30:00` it releases two open positions, pays the `$25` action reserve and earns actual/stressed `+$2,188.60 / +$2,098.874`, or conservative `+$2,138.60 / +$2,048.874` after the additional `$50` reserve. That is `+$3.21 / +$3.21` above the rejected accelerator before the uncertainty reserve.
+
+Its worse sampled-equity DD is `29.805002%` and budgeted native DD is `30.248564%`, missing the hard limit by `10.248564` points. Even the family minimum is worse than the untouched accelerator's `27.894257%` sampled DD: a one-time release changes only the small book present at its first trigger, while later full-exposure births recreate the independent damaging path. Earlier or partial releases retain less profit and do not produce a lower DD candidate.
+
+This is a valid economic empty frontier, not an environment, design or engineering failure. Forward remains exact and unarmed at actual/stressed `+$23.01 / +$21.256`, native DD `12.436759%`, with positive June and July. Freeze this family without MT5. Continue proxy-first with an economically distinct recurring open-exposure governor that can act again after recovery and later births; do not retune this one-shot grid or rerun any closed path.
