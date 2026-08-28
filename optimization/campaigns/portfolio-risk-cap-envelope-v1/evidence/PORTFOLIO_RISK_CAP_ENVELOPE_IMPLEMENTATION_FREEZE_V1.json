@@ -25,7 +25,7 @@
     "held_constant": "All six signals, clocks, directions, orders, costs, stops, holds, sizing ladder and portfolio ordering."
   },
   "economic_contract": {
-    "selection_interval": "2022-07-01T00:00:00/2026-06-01T00:00:00",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
     "isolated_forward_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
     "model": "MT5 real ticks",
     "optimization": "slow complete algorithm",
@@ -44,7 +44,7 @@
     "source_manifest_sha256": "11D918CF0ED16562ADB76CE2E37EF682BBEBC3B47D8DE27F05BE6AE8A5ED4A51",
     "configuration_file_count": 2,
     "configuration_total_bytes": 1550,
-    "configuration_manifest_sha256": "A7152EA3D894AFCBCDF8D63F32ED35215180AE8754A829FD4F99957CB8EAB2AC",
+    "configuration_manifest_sha256": "14076DD3CA21E045A1F45C0028035C87D5AC17A4BE419C9BD52127D2FCB7B1B5",
     "manifest_algorithm": "Sort slash-normalized relative paths ordinally; for each file append path|bytes|SHA256; join UTF-8 lines with LF; SHA-256 the joined payload.",
     "text_format": "UTF-8 without BOM, CRLF",
     "inherited_include_modules_content_equal_after_eol_normalization": 14,
@@ -82,6 +82,12 @@
     "is_lab_terminal": false
   },
   "non_economic_corrections": [
+    {
+      "condition": "The pre-run inventory showed that complete local real-tick files for all three required symbols begin in 2022-08, while the initial INI began in 2022-07.",
+      "resolution": "Before any Tester path or economic output opened, the selection start was aligned to the established complete-history boundary 2022-08-01.",
+      "tester_started": false,
+      "economic_verdict": null
+    },
     {
       "condition": "Optional Sounds directory was absent from the source material during the first copy invocation.",
       "resolution": "The copy was repeated with absent optional directories skipped.",

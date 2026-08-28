@@ -1,0 +1,75 @@
+{
+  "schema": "zeta-portfolio-risk-cap-envelope-first-use-refreeze-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "ENVIRONMENT_REFROZEN_ECONOMICS_UNREAD",
+  "campaign_commit": "7ce0f7cea497d5ff40875908c506dfaa60e4f597",
+  "corrections": [
+    {
+      "condition": "The first terminal invocation contained a forward slash before Config in an otherwise absolute Windows path, so MT5 loaded the runtime directory instead of risk-cap-search.ini.",
+      "resolution": "The exact dedicated terminal was stopped normally and the argument was rebuilt with an all-backslash absolute path.",
+      "automatic_testing_started": false,
+      "campaign_report_files": 0,
+      "economic_verdict": null
+    },
+    {
+      "condition": "The corrected first optimization start enabled all 20 local agents. Their duplicate data preparation reached 842 temporary files / 51.688 GiB while free C: space fell to 30.925 GiB.",
+      "resolution": "Before the 30 GiB log-capacity reserve was crossed, the exact dedicated terminal was stopped normally. MT5 reclaimed the temporary files and free space recovered to 87.076 GiB.",
+      "automatic_testing_started": true,
+      "campaign_report_files": 0,
+      "economic_output_read": false,
+      "economic_verdict": null
+    },
+    {
+      "condition": "Optimization concurrency required an explicit capacity-safe bound.",
+      "resolution": "In the dedicated optimization terminal UI only, all local agents were disabled and Core 01 through Core 04 were re-enabled. The Live/Master window received no input.",
+      "enabled_local_agents": 4,
+      "disabled_local_agents": 16,
+      "agents_dat_bytes": 82188,
+      "agents_dat_sha256": "25ADB492670A5D38EEDFB95710792C652EC6015DFF5C26BEE66BEABAC1C186BF",
+      "economic_verdict": null
+    }
+  ],
+  "first_use_environment_change": {
+    "pre_use_symbols_manifest_sha256": "5AF03BAF8BEB71D06C4585D7F80D750B0F90E94DD48F3045B11E6B61CF3523DC",
+    "refrozen_symbols_manifest_sha256": "60E15E704C4804755ED45378398B16E7497C9C0D6ED2F814273E45C9494F8C2E",
+    "pre_use_tester_history_manifest_sha256": "62FE7253E6C3227B874AB9CA3BB84100F1031050980E46ED388009C13F531A09",
+    "refrozen_tester_history_manifest_sha256": "DD0579926479A7B64DB0F7E62C4B9E0FE19BDC3B8297AF6FD93904315FF41252",
+    "changed_tester_history_files": [
+      "US100/2022.hcs",
+      "US100/2023.hcs",
+      "US100/2024.hcs",
+      "US100/2025.hcs",
+      "US100/2026.hcs",
+      "US30/2022.hcs",
+      "US500/2022.hcs"
+    ],
+    "base_real_ticks_manifest_unchanged": true,
+    "base_real_ticks_manifest_sha256": "F1754A94464B0BB96759B587724CABE66D100F2E3AA8399361788F3D76AFE86F",
+    "tester_real_ticks_manifest_unchanged": true,
+    "tester_real_ticks_manifest_sha256": "34DE3740F205A205FF528067D5BD505CE47ACB1C62DD3EFE0AA56B84DF575822"
+  },
+  "refrozen_tester_history_files": {
+    "US100/2022.hcs": "C4F12C8B0CE4D617180056900F3CEFA62BEB671AE3C0BB55085BC16E5F4E110D",
+    "US100/2023.hcs": "B0F05FB831350E320A8145DA5F679A7907C13DA3A442C1A6A555E62C5E622E3D",
+    "US100/2024.hcs": "F679FE01D1FB019F693F86C68E4399301AAAE88CAB072DB493C1D80A06682FA7",
+    "US100/2025.hcs": "24BECD76C7A245EC0CD8512165A2C722AB1DEF52919976B85905759E6C112BB9",
+    "US100/2026.hcs": "0215B2B87C7C5042F4C0B0845B3456C0DA99FF0AA082235999CEE410F82214A9",
+    "US30/2022.hcs": "0BF7A756A479C3135FBF8620679997F1EC9467F51A4AF8432CB96B4F6F143430",
+    "US30/2023.hcs": "AE320F955F7A56AB3461EC9893DE33412F024C5BB2E87AD463BA01438057E18F",
+    "US30/2024.hcs": "26023C5A238E408F6E1C092F06D3091017263F1474E2A4F4FB4229B8A2347107",
+    "US30/2025.hcs": "F569135E4559386059A0DEA84A397DBD3DA27F4290397E9BB58E6FA5ECFA542C",
+    "US30/2026.hcs": "D853050BC5B7950035A31BC86EF4C0960258F43EE600BD177D8355E14A73F8B9",
+    "US500/2022.hcs": "ACF3BFB0F314E95F73DDEDA321A17639BD52BB1AE773D37A4BD682A35B372813",
+    "US500/2023.hcs": "CE54B9A1E3E1735C89429BA5D73C78ED67D2513E150C0AB9C30A445B3772DD21",
+    "US500/2024.hcs": "BCA93D250EE38B097C7FAAE30861404EFC04A639FF1F037D21EF69E727095D6E",
+    "US500/2025.hcs": "43CDE6CF0F89CFD5B8CC56FD89E97621C536B2F2DEC53C30843CA1F2E2C5647C",
+    "US500/2026.hcs": "21CE71E3323E7AEC98AF99B99815D9C62416FFA074680F6F6ED5F1A1EFBEFF62"
+  },
+  "preserved_raw_correction_artifacts": {
+    "path": "optimization/artifacts/raw/portfolio-risk-cap-envelope-v1/pre-economic-corrections-20260828/",
+    "file_count": 22,
+    "total_bytes": 292302,
+    "combined_manifest_sha256": "472A3054E7BB5A424B6C385C3BECFE6539CE3B70524D3B626D6CEA40EA853B87"
+  },
+  "next_run_rule": "Run the complete 15-combination search with exactly four local agents. If a governing environment fingerprint changes, preserve the run without reading economic values, refreeze and restart the complete search."
+}

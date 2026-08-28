@@ -1,0 +1,127 @@
+{
+  "schema": "zeta-portfolio-risk-cap-envelope-completion-boundary-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_COMPLETE_ECONOMICS_UNOPENED",
+  "campaign_commit": "7ce0f7cea497d5ff40875908c506dfaa60e4f597",
+  "user_direction": {
+    "received_during_run": true,
+    "direction": "Do not restart the current 15-combination search; leave it to finish and organize the completed output.",
+    "full_search_restart_permitted": false
+  },
+  "completion": {
+    "launch_utc": "2026-08-28T02:54:02.2150554Z",
+    "exit_utc": "2026-08-28T05:48:09.7326564Z",
+    "terminal_exit_code": 0,
+    "post_exit_process_owners": 0,
+    "selection_passes": 15,
+    "forward_passes": 15,
+    "selection_agent_initializations": {
+      "3000": 4,
+      "3001": 4,
+      "3002": 4,
+      "3003": 3
+    },
+    "forward_agent_initializations": {
+      "3000": 4,
+      "3001": 4,
+      "3002": 4,
+      "3003": 3
+    },
+    "valid_run_nonzero_severity_lines": 1,
+    "nonzero_severity_line": "MT5 Cloud Network informational advertisement after completion",
+    "operational_error_lines": 0
+  },
+  "reports": {
+    "selection": {
+      "path": "optimization/runtime/portfolio-risk-cap-envelope-v1-portable/reports/portfolio-risk-cap-envelope-v1/risk-cap-search.xml",
+      "bytes": 13843,
+      "sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B",
+      "rows_including_header": 16
+    },
+    "forward": {
+      "path": "optimization/runtime/portfolio-risk-cap-envelope-v1-portable/reports/portfolio-risk-cap-envelope-v1/risk-cap-search.forward.xml",
+      "bytes": 14914,
+      "sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3",
+      "rows_including_header": 16
+    }
+  },
+  "implementation_after_run": {
+    "source_file_count": 16,
+    "source_total_bytes": 415635,
+    "source_manifest_sha256": "11D918CF0ED16562ADB76CE2E37EF682BBEBC3B47D8DE27F05BE6AE8A5ED4A51",
+    "source_manifest_matches_freeze": true,
+    "runtime_source_mismatches": 0,
+    "configuration_file_count": 2,
+    "configuration_total_bytes": 1550,
+    "configuration_manifest_sha256": "14076DD3CA21E045A1F45C0028035C87D5AC17A4BE419C9BD52127D2FCB7B1B5",
+    "runtime_configuration_mismatches": 0,
+    "ini_sha256": "FFE35A07ECA371F39E0CE734BBA4E4B349CD8D0C919D28054130DDCC19E47903",
+    "set_sha256": "69663C3A3CB123D5DE3341F3F15B5BB71E77F5FE0E2CC8467A85FB3A0F2AFEFF",
+    "ex5_bytes": 225542,
+    "ex5_sha256": "795E22154D389C3FEBCE0B8E37D3A2E4AECD08F71BADEB3B7AE1F51BE7D40D22",
+    "ex5_matches_freeze": true,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7"
+  },
+  "market_data_after_run": {
+    "base_real_ticks": {
+      "file_count": 144,
+      "total_bytes": 2374717001,
+      "manifest_sha256": "F1754A94464B0BB96759B587724CABE66D100F2E3AA8399361788F3D76AFE86F",
+      "matches_refreeze": true
+    },
+    "tester_real_ticks": {
+      "file_count": 144,
+      "total_bytes": 2372398601,
+      "manifest_sha256": "34DE3740F205A205FF528067D5BD505CE47ACB1C62DD3EFE0AA56B84DF575822",
+      "matches_refreeze": true
+    },
+    "symbols_and_selection_state": {
+      "file_count": 3,
+      "total_bytes": 432424,
+      "post_exit_manifest_sha256": "2B97AF032B6654A9100B542ACAD0132FD842B849458FEA0E509AC6422AD17FEF",
+      "refrozen_manifest_sha256": "60E15E704C4804755ED45378398B16E7497C9C0D6ED2F814273E45C9494F8C2E",
+      "combined_manifest_matches_refreeze": false,
+      "selected_state_rewritten_at_exit": true,
+      "selected_state_modified_local": "2026-08-28T14:48:09.5473817+09:00",
+      "contract_file_modified_local": "2026-08-28T11:39:52.0249145+09:00",
+      "contract_file_sha256": "02B331EA0EA2FE6BC1FC703702E232FEC4AEE4CC89886C3CE4F9F3EB381860D6",
+      "classification": "POST_EXIT_SELECTION_LIST_REWRITE_NOT_CONTRACT_DRIFT"
+    },
+    "tester_history": {
+      "file_count": 15,
+      "total_bytes": 40230658,
+      "refrozen_manifest_sha256": "DD0579926479A7B64DB0F7E62C4B9E0FE19BDC3B8297AF6FD93904315FF41252",
+      "post_materialization_manifest_sha256": "59B79CCBD8F11A8A058ADDAA1298197BC027D6355BC046FB2648160E3A5CB845",
+      "unchanged_files": 7,
+      "materialized_files": [
+        "US30/2023.hcs",
+        "US30/2024.hcs",
+        "US30/2025.hcs",
+        "US30/2026.hcs",
+        "US500/2023.hcs",
+        "US500/2024.hcs",
+        "US500/2025.hcs",
+        "US500/2026.hcs"
+      ],
+      "materialization_interval_local": "2026-08-28T11:55:00.2208158+09:00/2026-08-28T11:55:35.7830846+09:00",
+      "first_required_auxiliary_cache_allocation_local": "2026-08-28T11:55:40.797+09:00",
+      "changed_after_first_required_auxiliary_cache_allocation": false,
+      "all_four_agents_reported_identical_required_cache_counts": true,
+      "classification": "FIRST_ACCESS_MATERIALIZATION_BEFORE_SHARED_REQUIRED_CACHE_USE_NOT_MID_MATRIX_DRIFT"
+    }
+  },
+  "raw_artifact_bundle": {
+    "path": "optimization/artifacts/raw/portfolio-risk-cap-envelope-v1/completed-search-20260828T054809Z/",
+    "file_count": 70,
+    "total_bytes": 360831444,
+    "combined_manifest_sha256": "E564C33D749E1FF5557F5C67D022A1A348450535078B5619B0AC46AC339738D5"
+  },
+  "boundary": {
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "full_search_restart": false,
+    "eligible_for_economic_open": true,
+    "basis": "All 15 selection and 15 forward passes completed on identical frozen real-tick inputs. The only annual HCS changes were deterministic first-access materialization completed before each agent allocated the same required auxiliary caches; no HCS changed afterward. The post-exit selected-symbol list rewrite did not alter the synchronized contract file. The user explicitly directed that this completed 15-combination search not be restarted."
+  }
+}

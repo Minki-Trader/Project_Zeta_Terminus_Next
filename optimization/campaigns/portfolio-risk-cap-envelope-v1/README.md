@@ -12,7 +12,7 @@ The complete selection grid is:
 - InpMaximumAggregateRiskFraction: 0.10 / 0.12 / 0.14 / 0.16 / 0.18
 - 15 exhaustive combinations, including the parent 0.04 / 0.12
 
-Selection uses 2022-07-01 through 2026-06-01. The latest two completed months, 2026-06-01 through 2026-08-01, are the MT5 custom forward interval and do not select parameters.
+Selection uses 2022-08-01 through 2026-06-01, the first month for which all three required symbols have complete local real-tick files. The latest two completed months, 2026-06-01 through 2026-08-01, are the MT5 custom forward interval and do not select parameters.
 
 The custom economic criterion is robust recovery: the lesser of actual and doubled-cost stressed net divided by the greater of actual equity and stressed closed drawdown. The full result also retains actual/stressed net, both drawdowns, lifecycle count, risk skips, stop exits and component economics.
 
@@ -24,6 +24,10 @@ Only valid complete economic output can reach that decision. Runtime, history, c
 
 This EA is tester-only, owns Magic 260828801..260828806, and uses only the dedicated optimization/runtime/portfolio-risk-cap-envelope-v1-portable/ terminal. It has no Live or Lab authority.
 
-## Current boundary
+## Result
 
-The final CRLF/UTF-8 source compiled on MetaEditor build 6140 at `0 errors / 0 warnings`. The frozen EX5 SHA-256 is `795E22154D389C3FEBCE0B8E37D3A2E4AECD08F71BADEB3B7AE1F51BE7D40D22`. No Tester path or economic result has been opened; the exact implementation boundary is recorded in `evidence/PORTFOLIO_RISK_CAP_ENVELOPE_IMPLEMENTATION_FREEZE_V1.json`.
+All 15 selection and all 15 isolated-forward passes completed normally on the frozen implementation and real-tick inputs. The highest custom-score candidate was `0.04 / 0.10`: selection robust recovery improved `11.445184%`, all six parent-positive components stayed positive, and isolated-forward robust net/drawdown improved from `-$2.819 / $18.82` to `+$3.9943 / $14.66`. It retained only `1,902 / 2,119 = 89.759320%` of parent closed lifecycles, below the frozen `90%` gate. The original contract therefore closes `NO_REPLACEMENT_RETAIN_PARENT_0.04_0.12`; this is a valid economic non-replacement, not an environment or engineering failure.
+
+The maximum-profit point was `0.04 / 0.18`: selection actual/stressed net was `$1,166.89 / $1,085.408`, `18.50%` above the parent, with `11.3757%` MT5 equity drawdown and `2,177` lifecycles. Its higher absolute robust drawdown and weaker custom score kept it from replacing the parent under this campaign's original objective, but it remains a non-dominated high-profit frontier observation.
+
+After the result, the user stated a prospective preference for explosive profit under a hard `20%` equity-drawdown budget and requested proxy exploration before any further MT5 run. That new objective does not retroactively change this campaign's frozen gate. The completed 15 combinations will not be rerun. Exact matrices, gate arithmetic and retained frontier evidence are recorded in `evidence/PORTFOLIO_RISK_CAP_ENVELOPE_RESULT_V1.json`.

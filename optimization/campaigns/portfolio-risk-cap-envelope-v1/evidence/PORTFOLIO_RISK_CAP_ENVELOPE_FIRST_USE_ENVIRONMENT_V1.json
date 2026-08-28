@@ -1,0 +1,78 @@
+{
+  "schema": "zeta-portfolio-risk-cap-envelope-first-use-environment-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "FROZEN_BEFORE_FIRST_TESTER_USE",
+  "campaign_commit": "7ce0f7cea497d5ff40875908c506dfaa60e4f597",
+  "selection_start_correction": {
+    "initial_value": "2022-07-01",
+    "final_value": "2022-08-01",
+    "reason": "All three required symbols have complete local real-tick month files beginning at 2022-08; this also matches the established long Binding boundary.",
+    "tester_or_economic_output_opened_before_correction": false,
+    "economic_verdict": null
+  },
+  "implementation": {
+    "source_file_count": 16,
+    "source_total_bytes": 415635,
+    "source_manifest_sha256": "11D918CF0ED16562ADB76CE2E37EF682BBEBC3B47D8DE27F05BE6AE8A5ED4A51",
+    "configuration_file_count": 2,
+    "configuration_total_bytes": 1550,
+    "configuration_manifest_sha256": "14076DD3CA21E045A1F45C0028035C87D5AC17A4BE419C9BD52127D2FCB7B1B5",
+    "ex5_bytes": 225542,
+    "ex5_sha256": "795E22154D389C3FEBCE0B8E37D3A2E4AECD08F71BADEB3B7AE1F51BE7D40D22",
+    "runtime_source_and_configuration_mismatches": 0
+  },
+  "runtime": {
+    "path": "optimization/runtime/portfolio-risk-cap-envelope-v1-portable/",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "process_owners_before_run": 0,
+    "existing_campaign_report_files": 0,
+    "free_bytes_before_run": 91227549696,
+    "master_terminal": false
+  },
+  "governing_environment": {
+    "manifest_algorithm": "Sort slash-normalized relative paths ordinally; for each file append path|bytes|SHA256; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "symbols_and_tickers": {
+      "root": "Bases/FPMarketsSC-Live/",
+      "file_count": 3,
+      "total_bytes": 432424,
+      "manifest_sha256": "5AF03BAF8BEB71D06C4585D7F80D750B0F90E94DD48F3045B11E6B61CF3523DC"
+    },
+    "tester_history_2022_2026": {
+      "root": "Tester/bases/FPMarketsSC-Live/history/",
+      "file_count": 15,
+      "total_bytes": 40230658,
+      "manifest_sha256": "62FE7253E6C3227B874AB9CA3BB84100F1031050980E46ED388009C13F531A09",
+      "files": {
+        "US100/2022.hcs": "264951CC382D3F4154448B945718EB73D988FA14C7BE2F81D4B573EAF0145D70",
+        "US100/2023.hcs": "681B3473EBCC6994DCCF1B174BDA5E2E7CAC5CF63019844A882325D452754154",
+        "US100/2024.hcs": "5C456E274F6E2551086675A9778EC2417D35AAA2A632957FB39850B41EC670E9",
+        "US100/2025.hcs": "B66FFFB9D5FEB171510DD74411CABCC3D6F72B34671C5862A62AB7DE81575CF8",
+        "US100/2026.hcs": "B15BCAF1D2EEB5D1897D4A36BD7CEC7004928817DAA26DE1965A847BE38295DF",
+        "US30/2022.hcs": "933C3B176718972F2A6FFDB42B334320A46506F05BD546E44DAA2B1A5133D28F",
+        "US30/2023.hcs": "AE320F955F7A56AB3461EC9893DE33412F024C5BB2E87AD463BA01438057E18F",
+        "US30/2024.hcs": "26023C5A238E408F6E1C092F06D3091017263F1474E2A4F4FB4229B8A2347107",
+        "US30/2025.hcs": "F569135E4559386059A0DEA84A397DBD3DA27F4290397E9BB58E6FA5ECFA542C",
+        "US30/2026.hcs": "D853050BC5B7950035A31BC86EF4C0960258F43EE600BD177D8355E14A73F8B9",
+        "US500/2022.hcs": "6380DF49696B8BDC768024A3C1056A2DB2522A6E859C44D7CDBC0A67483FCE21",
+        "US500/2023.hcs": "CE54B9A1E3E1735C89429BA5D73C78ED67D2513E150C0AB9C30A445B3772DD21",
+        "US500/2024.hcs": "BCA93D250EE38B097C7FAAE30861404EFC04A639FF1F037D21EF69E727095D6E",
+        "US500/2025.hcs": "43CDE6CF0F89CFD5B8CC56FD89E97621C536B2F2DEC53C30843CA1F2E2C5647C",
+        "US500/2026.hcs": "21CE71E3323E7AEC98AF99B99815D9C62416FFA074680F6F6ED5F1A1EFBEFF62"
+      }
+    },
+    "base_real_ticks_202208_202607": {
+      "root": "Bases/FPMarketsSC-Live/ticks/",
+      "file_count": 144,
+      "total_bytes": 2374717001,
+      "manifest_sha256": "F1754A94464B0BB96759B587724CABE66D100F2E3AA8399361788F3D76AFE86F"
+    },
+    "tester_real_ticks_202208_202607": {
+      "root": "Tester/bases/FPMarketsSC-Live/ticks/",
+      "file_count": 144,
+      "total_bytes": 2372398601,
+      "manifest_sha256": "34DE3740F205A205FF528067D5BD505CE47ACB1C62DD3EFE0AA56B84DF575822"
+    }
+  },
+  "first_use_rule": "If any governing fingerprint changes during first use, preserve the attempt without reading economic values, refreeze the environment and restart the complete 15-combination search."
+}
