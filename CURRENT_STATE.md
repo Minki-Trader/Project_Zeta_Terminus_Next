@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0356`
+- Latest state ID: `STATE-0357`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: none; `dd20-persistent-global-drawdown-regime-proxy-v1` is durably closed as a valid economic empty frontier with `0/42` DD passes and no MT5 shortlist. The next serial stage must declare a distinct time-bounded drawdown quarantine that isolates the causal damage interval before resuming full original exposure; no closed path or original 15-combination rerun is authorized.
+- Active optimization boundary: `dd20-time-bounded-drawdown-quarantine-proxy-v1` is frozen with all `144` candidate economics unopened and zero proxy invocations. It varies only immutable-global-high trigger, current-book retention, quarantine birth multiplier and minimum quarantine duration; full original exposure resumes after duration plus a clean modified book. Push this declaration before exactly one proxy process. No closed path, original 15-combination rerun or MT5 launch is authorized at this boundary.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
