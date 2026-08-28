@@ -1,0 +1,121 @@
+{
+  "schema": "zeta-dd20-native-gap-july-robustness-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_SOURCE_CONFIG_FROZEN_ECONOMICS_UNOPENED",
+  "campaign": "dd20-native-gap-july-robustness-mt5-v1",
+  "proxy_result_commit": "7600ceeaed8834b5aa7869d85faca86de6c5e067",
+  "source_derivation": {
+    "predecessor_campaign": "dd20-exposure-margin-mt5-v1",
+    "predecessor_closed_result_commit": "4f31ecda1085aa5d869c41e6088e8aad7c4d89b6",
+    "method": "one-time physical copy into a self-contained Optimization family",
+    "non_domain_include_modules_byte_equal": 14,
+    "intentionally_changed_source_files": [
+      "MQL5/Include/ZetaOptimizationDD20NativeGapJulyRobustnessMT5V1/Domain/ZetaDomain.mqh",
+      "MQL5/Experts/ZetaOptimization/ZetaDD20NativeGapJulyRobustnessMT5V1.mq5"
+    ],
+    "copied_ex5": false,
+    "cross_family_source_or_include_link": false
+  },
+  "candidate": {
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_risk_multipliers": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "effective_position_risk_fractions_before_aggregate_cap": [0.064, 0.032, 0.016, 0.128, 0.048, 0.0],
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "stressed_balance_addition_step_usd": 150.0,
+    "zero_weight_component_disabled": true
+  },
+  "proxy_nomination": {
+    "selection_actual_net_usd": 1763.4818571429,
+    "selection_stressed_2x_cost_net_usd": 1693.3220714286,
+    "selection_raw_drawdown_pct": 17.4282210109,
+    "selection_calibrated_mt5_drawdown_pct": 19.2109084672,
+    "selection_budgeted_mt5_drawdown_pct": 19.9609084672,
+    "paired_forward_actual_net_usd": 28.87,
+    "paired_forward_stressed_2x_cost_net_usd": 27.236,
+    "paired_forward_budgeted_mt5_drawdown_pct": 15.3107732697,
+    "independent_june_stressed_2x_cost_net_usd": 18.48,
+    "independent_july_stressed_2x_cost_net_usd": 8.756,
+    "conservative_july_actual_net_usd": 1.48,
+    "conservative_july_stressed_2x_cost_net_usd": 0.9025,
+    "proxy_is_confirmation": false,
+    "maximum_mt5_hypotheses": 1
+  },
+  "identity": {
+    "expert": "ZetaDD20NativeGapJulyRobustnessMT5V1",
+    "include_root": "ZetaOptimizationDD20NativeGapJulyRobustnessMT5V1",
+    "execution_version": "zt-opt-live-v7-dd20-native-gap-july-robustness-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20NGJR1-20260828",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20NGJR1-20260828",
+    "schema_version": "opt-dd20-ngjr-mt5-1",
+    "magic": [260828841, 260828842, 260828843, 260828844, 260828845, 260828846],
+    "state_and_research_root": "ZetaOptimization\\dd20-native-gap-july-robustness-mt5-v1",
+    "report_root": "reports\\dd20-native-gap-july-robustness-mt5-v1"
+  },
+  "source": {
+    "files": 16,
+    "bytes": 420584,
+    "canonical_manifest_sha256": "10DD41727723B7F786409BE42FD3634AF978A95D8CFCC77894455E5C7232E58E",
+    "expert_bytes": 25245,
+    "expert_sha256": "2C8F359C7CA016788BD955B951D71163A0D8CB56B05D3CC55AA470DB7CBB0470",
+    "domain_bytes": 20373,
+    "domain_sha256": "B9F5C6969301D1BC77D05C060EA7364157AD00DBDABACA76F9E8C49415D5A5E0"
+  },
+  "configuration": {
+    "files": 3,
+    "bytes": 2465,
+    "canonical_manifest_sha256": "C7FF923A04B77C19C4F222CDD818A7C612663F6BA7C1EEF0F3FA8EA97FB2AADF",
+    "candidate_set_bytes": 1237,
+    "candidate_set_sha256": "9959B9F2CDF3BD952D2B7032BBB7F725D15859194B2948FB1BA3D74C35489688",
+    "selection_ini_bytes": 615,
+    "selection_ini_sha256": "FF7313B1267409A53F178CC47D8B4A94D5EE0B43AC1FB0DE0ED388BF268955DD",
+    "forward_ini_bytes": 613,
+    "forward_ini_sha256": "8416D007468F55DFAC3373D9C6A69DA1712B12893E3CA1404A08CA46D957C01B"
+  },
+  "readme": {
+    "bytes": 3053,
+    "sha256": "50B9B7C0F2E0AC79E1F80F84FA05D1044E98C69B8D07BCD39FE94183EE0C2114"
+  },
+  "tester_contract": {
+    "model": "real_ticks",
+    "selection": {"from": "2022-08-01", "to": "2026-06-01", "maximum_runs": 1},
+    "forward": {"from": "2026-06-01", "to": "2026-08-01", "maximum_runs": 1, "opens_after_complete_valid_selection": true},
+    "selection_comparator_actual_net_usd": 1166.89,
+    "selection_comparator_stressed_2x_cost_net_usd": 1085.408,
+    "hard_native_mt5_equity_drawdown_pct": 20.0,
+    "selection_actual_above_comparator": true,
+    "selection_stressed_above_comparator": true,
+    "all_four_selection_epochs_actual_and_stressed_positive": true,
+    "selection_native_equity_drawdown_at_or_below_hard_cap": true,
+    "full_forward_actual_and_stressed_positive": true,
+    "full_forward_native_equity_drawdown_at_or_below_hard_cap": true,
+    "continuous_june_actual_and_stressed_positive": true,
+    "continuous_july_actual_and_stressed_positive": true,
+    "environment_or_engineering_defect_has_no_economic_verdict": true
+  },
+  "boundary": {
+    "dedicated_portable_exists": false,
+    "compiled_ex5_exists": false,
+    "selection_opened": false,
+    "forward_opened": false,
+    "economic_output_exists": false,
+    "original_15_combination_restart": false,
+    "prior_high_exposure_candidate_rerun": false,
+    "near_miss_candidate_rerun": false,
+    "exposure_margin_candidate_rerun": false,
+    "proxy_neighbor_substitution": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
