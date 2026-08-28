@@ -1,0 +1,85 @@
+{
+  "schema": "zeta-dd20-chronological-stability-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_SELECTION_JUNE_AND_JULY_OUTCOMES_UNOPENED",
+  "campaign": "dd20-chronological-stability-proxy-v1",
+  "objective": "Maximize doubled-cost-stressed long-selection profit inside the 20 percent DD budget among candidates that are independently positive in June 2026, then require untouched July 2026 confirmation before MT5.",
+  "predecessor_information": {
+    "closed_campaign": "dd20-executable-volume-lattice-proxy-v1",
+    "closed_winner_weights": [3.0, 1.0, 2.5, 2.0, 1.0, 0.5],
+    "closed_winner_selection_stressed_net_usd": 6588.551761905,
+    "closed_winner_selection_drawdown_pct": 19.2788208692,
+    "closed_winner_later_stressed_net_usd": -12.808,
+    "closed_winner_later_drawdown_pct": 28.0193664944,
+    "closed_winner_later_us100_cross_stressed_net_usd": -37.278,
+    "predecessor_winner_or_tie_reopened": false
+  },
+  "independence": {
+    "root": "optimization/campaigns/dd20-chronological-stability-proxy-v1/",
+    "raw_input_root": "optimization/artifacts/raw/dd20-chronological-stability-proxy-v1/input/",
+    "input_files": 5,
+    "input_bytes": 21208263,
+    "input_manifest_sha256": "FDD7AB28C8F21B5FBE23801E4AF2BBBB1E080EDE063A49FD393C02241A7C2CF7",
+    "source_or_runtime_link_to_other_campaign": false,
+    "live_or_lab_source_runtime_state_log_shared": false
+  },
+  "implementation": {
+    "contract_path": "optimization/campaigns/dd20-chronological-stability-proxy-v1/config/proxy-contract.json",
+    "contract_bytes": 7170,
+    "contract_sha256": "FCEBF020E792706A171A38DB977920F6C37A8C2B1D61EEA73AE77B53265EC933",
+    "script_path": "optimization/campaigns/dd20-chronological-stability-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 33121,
+    "script_sha256": "891E7270B2B730019CF7E74F6A74612A962575E3CED129364AA1A97D8E5A9E08",
+    "python_ast_parse": "PASS",
+    "json_parse": "PASS",
+    "cross_campaign_code_import": false
+  },
+  "search": {
+    "weight_grid": [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
+    "minimum_active_components": 4,
+    "exact_compositions": 112752,
+    "reference_capital_usd": 100.0,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "daily_addition_step_usd": 150.0,
+    "selection_role_count": 1,
+    "selection_role": "maximum_full_stressed_profit_after_june_stability"
+  },
+  "chronology": {
+    "long_selection": "2022-08-01 through 2026-06-01",
+    "june_development": "2026-06-01 through 2026-07-01",
+    "june_births_and_closes": 43,
+    "june_used_in_gate_and_ranking": true,
+    "july_confirmation": "2026-07-01 through 2026-08-01",
+    "july_births_and_closes": 43,
+    "positions_crossing_july_boundary": 0,
+    "july_opened_only_after_winner_freezes": true,
+    "july_used_in_gate_or_ranking": false,
+    "july_failed_winner_rescue_or_retune": false
+  },
+  "gates": {
+    "selection_full_and_four_epoch_actual_stressed_positive": true,
+    "selection_balances_positive": true,
+    "selection_full_calibrated_dd_at_or_below_20_percent": true,
+    "selection_epoch_raw_dd_at_or_below_20_percent": true,
+    "june_actual_and_stressed_positive": true,
+    "june_balance_positive": true,
+    "june_raw_dd_at_or_below_20_percent": true,
+    "july_actual_and_stressed_positive": true,
+    "july_balance_positive": true,
+    "july_raw_dd_at_or_below_20_percent": true,
+    "maximum_mt5_shortlist_size": 1
+  },
+  "boundary": {
+    "selection_outcomes_opened": false,
+    "june_outcomes_opened": false,
+    "july_outcomes_opened": false,
+    "proxy_started": false,
+    "mt5_started": false,
+    "original_15_combination_rerun": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

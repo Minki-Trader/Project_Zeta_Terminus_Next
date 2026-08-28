@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0311`
+- Latest state ID: `STATE-0312`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-executable-volume-lattice-proxy-v1` is validly closed with no MT5 shortlist. Of `112,752` executable-lattice compositions, the frozen maximum-profit `3/1/2.5/2/1/0.5` role earned selection actual/stressed `+$6,976.9515 / +$6,588.5518` at `19.278821%` proxy DD, but the untouched later segment was `-$9.28 / -$12.808` at `28.019366%` DD, dominated by US100-cross `-$37.278` stressed contribution. It is rejected without rescue or MT5; the next serial stage returns to a distinct chronological/component-stability proxy, never the original 15 points.
+- Active optimization boundary: `dd20-chronological-stability-proxy-v1` is declared with economic outcomes unopened. It preserves the `112,752` executable-lattice search and hard selection DD gates, promotes June 2026 to an explicit positive/DD-bounded development checkpoint, freezes one maximum-selection-stressed-profit winner, and only then opens untouched July 2026 as an independent `$100` confirmation. July cannot rank, tune or rescue and can nominate at most one MT5 candidate; the original 15 points remain closed.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
