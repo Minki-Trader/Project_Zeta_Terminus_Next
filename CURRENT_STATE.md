@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0323`
+- Latest state ID: `STATE-0324`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-exposure-margin-mt5-v1` has compiled the sole proxy survivor `1.8/1.3/1.4/2.6/1.5/0` at `0 errors / 0 warnings` in a new dedicated physical Portable. All `19` source/configuration copies match, the report directory is empty and no process owns the runtime. Commit/push this implementation freeze, then run exactly one selection and one full paired-month forward; no prior run reruns.
+- Active optimization boundary: `dd20-exposure-margin-mt5-v1` is validly closed. Selection actual/stressed was `+$4,169.94 / +$3,942.2615`, but native maximum relative equity DD `20.488349%` missed the hard cap by `0.488349` points. Full forward passed at `+$27.87 / +$25.9725` and `15.487346%` DD, while continuous July stressed net was `-$2.2375`. Freeze/push this result, then open a distinct fast proxy using the new valid anchor; no exact or prior candidate reruns.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

@@ -29,4 +29,6 @@ The EA has unique Optimization identity, Magic `260828831..260828836`, state, re
 
 One normal MetaEditor build 6140 compiled the unique EA at `0 errors / 0 warnings`. The EX5 is `229,116` bytes at SHA-256 `C7F678FC16FD1ADFD1F6AAEB4B3345BC01C13D112899934A5B3EF3D1912AE768`; all `19` campaign source/configuration files match their copies in the new physical Portable.
 
-The dedicated runtime has no process owner and its unique report directory is empty. Selection, forward, reports and every economic output remain unopened. Commit and push this implementation freeze before the single selection run.
+Exactly one selection and one full paired-month forward completed with valid 100%-real-tick economics. Selection actual/stressed net is `+$4,169.94 / +$3,942.2615`, but native maximum relative equity DD is `20.4883486%`, exceeding the hard budget by `0.4883486` percentage points. Full forward actual/stressed is `+$27.87 / +$25.9725` at `15.4873460%` DD; its continuous June/July stressed slices are `+$28.210 / -$2.2375`.
+
+Status is `EXPLOSIVE_PROFIT_AND_FULL_FORWARD_CONFIRMED_BUT_SELECTION_DD_MISSES_20_PERCENT_BY_0_4883PP_AND_CONTINUOUS_JULY_IS_NEGATIVE`. This exact candidate is closed without rescue, retune or rerun and has no Live or Lab authority.
