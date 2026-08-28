@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0313`
+- Latest state ID: `STATE-0314`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-chronological-stability-proxy-v1` is validly closed without an MT5 shortlist. The June-stable maximum-profit `3/1/2/1.5/1/0` winner earned selection actual/stressed `+$6,532.4496 / +$6,186.2932` at `19.977049%` DD and June `+$8.95 / +$7.284`, but untouched July was `-$10.25 / -$11.376` at a DD-passing `17.356191%`; cross contributed `-$17.314`. It closes without rescue. The next distinct proxy may require paired June-and-July stability for every candidate before one possible MT5 shortlist; the original 15 remain untouched.
+- Active optimization boundary: `dd20-paired-month-stability-proxy-v1` is declared with all outcomes unopened. It keeps the exact `112,752` executable-lattice and long-selection `20%` DD gates, then requires every candidate to be independently actual/stressed positive and DD-safe in both June and July 2026 before ranking maximum long-selection stressed profit. No proxy holdout remains afterward; at most one paired-month-stable candidate may advance to one MT5 selection/full-forward hypothesis. The original 15 and all closed proxy/MT5 candidates remain untouched.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
