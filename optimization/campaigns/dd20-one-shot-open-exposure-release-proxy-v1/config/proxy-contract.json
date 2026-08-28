@@ -1,0 +1,144 @@
+{
+  "schema": "zeta-dd20-one-shot-open-exposure-release-proxy-contract-v1",
+  "campaign": "dd20-one-shot-open-exposure-release-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-one-shot-open-exposure-release-proxy-v1/input",
+    "files": [
+      {"name": "accelerated-forward-lifecycles.csv", "bytes": 49308, "sha256": "B69918537277E24BAA3EC2599E01DE4D6957FB5F7CA3BB33931AEC57CDC953B6"},
+      {"name": "accelerated-forward.tst", "bytes": 38370, "sha256": "19F61893A07C47E1C365D2406963FFE0CA689A05EDFB7B972F646B8670CEBB6B"},
+      {"name": "accelerated-mt5-result.json", "bytes": 16597, "sha256": "23A5F81310D1133C335479FD3A3B03111A0ABEFAE6F0AE156E5BD0DEC90A9873"},
+      {"name": "accelerated-selection-candidates.csv", "bytes": 8077724, "sha256": "EF9E6490479D0E5B413AE6784B5AA421F782A93BEEA2BA69A206323541A95B0C"},
+      {"name": "accelerated-selection-lifecycles.csv", "bytes": 2499873, "sha256": "DD1B048DF6D1A450F7572B810E8BB7B5A5D93AC11F558D423945CFF9FD017FDE"},
+      {"name": "accelerated-selection.tst", "bytes": 1451170, "sha256": "228E077D67EED5BB2C9836DDE169CFE91202A1458F671792394EF43045146285"},
+      {"name": "closed-drawdown-responsive-result.json", "bytes": 6070, "sha256": "407AAC44E3237E4D3CA0D7397A168E9B2478054E792B170E6EE8BD49EF688875"},
+      {"name": "qualified-mt5-result.json", "bytes": 16235, "sha256": "80775495EBF3E0C6C3770322135ED410B91985CB6592B32875292AF7FECC51EA"},
+      {"name": "terminal-lock-raw-result.json", "bytes": 148532, "sha256": "AE296E822C32D2748E275B4A71B2299DD9866802FC16E268E90ED906615788A3"},
+      {"name": "terminal-lock-result.json", "bytes": 6377, "sha256": "9564C7DB0402C114DEC1409F16E3C017572AC7A8B308E761658C69B67EA757A4"}
+    ],
+    "files_total": 10,
+    "bytes_total": 12310256,
+    "canonical_manifest_sha256": "878768593041D6B2FFD5C0ECE7D06A1DA6D9493CD4955703C2A0120677A7C314",
+    "selection_candidate_file": "accelerated-selection-candidates.csv",
+    "selection_lifecycle_file": "accelerated-selection-lifecycles.csv",
+    "selection_cache_file": "accelerated-selection.tst",
+    "forward_lifecycle_file": "accelerated-forward-lifecycles.csv",
+    "forward_cache_file": "accelerated-forward.tst",
+    "accelerated_result_file": "accelerated-mt5-result.json",
+    "qualified_result_file": "qualified-mt5-result.json",
+    "terminal_lock_raw_result_file": "terminal-lock-raw-result.json",
+    "terminal_lock_result_file": "terminal-lock-result.json",
+    "closed_predecessor_result_file": "closed-drawdown-responsive-result.json"
+  },
+  "fixed_accelerator": {
+    "component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "open_exposure_release": {
+    "arming_rule": "latch once doubled-cost-stressed closed balance reaches $550",
+    "trigger_state": "first recorded sampled account-equity drawdown from its all-time sampled high after arming",
+    "candidate_drawdown_triggers_pct": [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0, 12.5, 13.0, 13.5, 14.0, 14.5, 15.0, 15.5, 16.0, 16.5, 17.0, 17.5],
+    "candidate_retained_open_exposure_fractions": [0.0, 0.25, 0.5, 0.75],
+    "expected_candidates": 136,
+    "excluded_nonbinding_trigger_range_pct": [18.0, 19.0],
+    "excluded_reason": "the already recorded first-trigger snapshot at 18%-19% has zero open lifecycle exposure",
+    "action": "once only, realize the released fraction of aggregate marked floating P/L and retain the declared fraction of every position open at the trigger",
+    "affected_lifecycle_close": "each affected position later contributes only its retained fraction of frozen actual/stressed close economics",
+    "later_original_births_retained_at_full_exposure": true,
+    "freed_capacity_synthetic_births": false,
+    "one_shot_only": true,
+    "rearm_or_reset": false,
+    "permanent_terminal_stop": false,
+    "release_action_and_proxy_reserve_usd": 25.0,
+    "selection_profit_uncertainty_reserve_usd": 50.0,
+    "transition_equity_envelope": "until the last affected original close, apply min(-action reserve, final candidate-minus-baseline equity delta); afterward apply the exact final delta to sampled actual/stressed equity",
+    "closed_terminal_lock_grid_recomputed": false
+  },
+  "selection_observation": {
+    "candidate_rows": 11810,
+    "births": 1297,
+    "closed_lifecycles": 1297,
+    "actual_net_usd": 2185.39,
+    "stressed_net_usd": 2095.664,
+    "activation_time_server": "2025.04.23 17:30:00",
+    "activation_actual_balance_usd": 584.85,
+    "activation_stressed_balance_usd": 558.418999999997,
+    "sampled_maximum_equity_drawdown_pct": 27.894257064721973,
+    "native_maximum_equity_drawdown_pct": 28.08781892431453,
+    "native_minus_sampled_gap_percentage_points": 0.19356185959255612,
+    "terminal_lock_source_triggers": 37,
+    "binding_open_exposure_trigger_minimum_pct": 1.0,
+    "binding_open_exposure_trigger_maximum_pct": 17.5,
+    "binding_trigger_values": 34,
+    "unique_binding_lock_times": 17,
+    "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+  },
+  "forward_observation": {
+    "births": 30,
+    "closed_lifecycles": 30,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "open_exposure_release_armed": false,
+    "native_maximum_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_net_usd": 19.79,
+    "june_stressed_net_usd": 18.976,
+    "july_actual_net_usd": 3.22,
+    "july_stressed_net_usd": 2.280,
+    "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+  },
+  "qualified_anchor": {
+    "campaign": "dd20-native-gap-july-robustness-mt5-v1",
+    "result_status": "VALID_MT5_COMPLETE_ALL_ECONOMIC_GATES_PASS",
+    "selection_actual_net_usd": 1691.54,
+    "selection_stressed_net_usd": 1626.26,
+    "selection_native_equity_drawdown_pct": 19.55037176500623,
+    "rerun": false
+  },
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4_RECENT_SELECTION", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "snapshot_alignment": {
+    "method": "within each server timestamp, match candidate account balance to the nearest before/after lifecycle-close state and transfer cumulative doubled-cost drag to sampled equity",
+    "maximum_allowed_balance_alignment_error_usd": 0.011
+  },
+  "selection_drawdown_calibration": {
+    "qualified_native_floor_reserve_percentage_points": 0.25,
+    "sampled_to_native_gap_percentage_points": 0.19356185959255612,
+    "release_detection_transition_and_execution_reserve_percentage_points": 0.25,
+    "budgeted_formula": "max(qualified native DD + 0.25, worse conservative sampled actual/stressed equity DD + 0.193561860 + 0.25)",
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_gates": {
+    "profit": "after the $25 action reserve embedded in the path and a further $50 uncertainty reserve, actual and doubled-cost-stressed net must each strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four modified actual and stressed epoch nets must be positive",
+    "capital": "actual and stressed modified closed balances and sampled equity envelopes must remain positive",
+    "drawdown": "budgeted native equity DD must be at or below 20%"
+  },
+  "selection_role": {
+    "id": "maximum_conservative_stressed_profit_one_shot_open_exposure_release",
+    "ordering": "maximize conservative stressed selection net, then conservative actual net and recent-epoch stressed net, minimize budgeted DD, prefer the larger trigger and retained fraction",
+    "maximum_distinct_roles": 1
+  },
+  "output_top_records": 136,
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1,
+    "drawdown_responsive_grid_rerun": false,
+    "profit_realization_grid_rerun": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "original_15_combination_rerun": false
+  }
+}

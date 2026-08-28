@@ -1,0 +1,89 @@
+{
+  "schema": "zeta-dd20-one-shot-open-exposure-release-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "DECLARED_ALL_CANDIDATE_ECONOMICS_UNOPENED",
+  "campaign": "dd20-one-shot-open-exposure-release-proxy-v1",
+  "predecessor_result_commit": "bc72d90dd7cd91df338b6ff6c464ce891eadf737",
+  "economic_question": "Can a one-shot nonterminal release of already-open aggregate exposure at a causal sampled-equity drawdown trigger cut the damaging open-risk path while preserving enough later original profit to beat the qualified anchor inside 20% native equity DD?",
+  "fixed_accelerator": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "new_mechanism": {
+    "name": "one-shot nonterminal open-exposure release",
+    "arming_balance_usd": 550.0,
+    "trigger_state": "first post-arming sampled equity DD from all-time sampled equity high",
+    "candidate_drawdown_triggers_pct": [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0, 12.5, 13.0, 13.5, 14.0, 14.5, 15.0, 15.5, 16.0, 16.5, 17.0, 17.5],
+    "retained_open_exposure_fractions": [0.0, 0.25, 0.5, 0.75],
+    "candidate_count": 136,
+    "excluded_nonbinding_triggers_pct": [18.0, 18.5, 19.0],
+    "excluded_reason": "the recorded first-trigger snapshot has zero open lifecycle exposure",
+    "release_action_and_proxy_reserve_usd": 25.0,
+    "selection_profit_uncertainty_reserve_usd": 50.0,
+    "later_original_births_retained_at_full_exposure": true,
+    "freed_capacity_synthetic_births": false,
+    "one_shot_only": true,
+    "rearm_or_reset": false,
+    "permanent_terminal_stop": false,
+    "closed_terminal_lock_grid_recomputed": false
+  },
+  "counterfactual": {
+    "release_economics": "realize the released fraction of aggregate marked floating P/L at the recorded trigger and subtract $25",
+    "affected_future_close": "retain only the declared fraction of each affected lifecycle's frozen actual/stressed close economics",
+    "doubled_cost": "preserve the full observed cost drag across released and retained fractions",
+    "transition_equity_envelope": "until the last affected original close, charge min(-$25, final candidate-minus-baseline delta); afterward apply the exact final delta to sampled actual/stressed equity",
+    "interpretation": "a conservative fixed-path proxy, not candidate-specific MT5 proof"
+  },
+  "selection_gates": {
+    "profit": "after the embedded $25 action reserve and an additional $50 uncertainty reserve, actual and doubled-cost-stressed net must each strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four modified actual and stressed epoch nets must be positive",
+    "capital": "actual/stressed closed balances and sampled equity envelopes must remain positive",
+    "drawdown": "max(qualified native 19.550371765% + 0.25 points, worse conservative sampled equity DD + 0.193561860 points + 0.25 points) <= 20%",
+    "maximum_roles": 1
+  },
+  "forward_gate": {
+    "open_exposure_release_armed": false,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_stressed_usd": [19.79, 18.976],
+    "july_actual_stressed_usd": [3.22, 2.280]
+  },
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-one-shot-open-exposure-release-proxy-v1/input/",
+    "files": 10,
+    "bytes": 12310256,
+    "canonical_manifest_sha256": "878768593041D6B2FFD5C0ECE7D06A1DA6D9493CD4955703C2A0120677A7C314"
+  },
+  "implementation": {
+    "readme_bytes": 4387,
+    "readme_sha256": "4CCBFCEB90DE83FE594D81703A3EF7BE8D9682B35854AE476EB5E6299FD7EABB",
+    "contract_bytes": 8573,
+    "contract_sha256": "3C3C268AC1BA1CCE9EA4E5F904AB65D8BA0259BE3F8B9B54C8AF7A70A9753609",
+    "script_bytes": 42214,
+    "script_sha256": "A8D3CCA29602F189117D9326A1DE12018678ED65FF2F9DE86EC4D454756AF68A"
+  },
+  "boundary": {
+    "candidate_economics_opened": false,
+    "proxy_process_invocations": 0,
+    "mt5_launched": false,
+    "drawdown_responsive_grid_rerun": false,
+    "profit_realization_grid_rerun": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
