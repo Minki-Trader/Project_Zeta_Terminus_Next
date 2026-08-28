@@ -33,3 +33,13 @@ All `72` candidates must preserve the exact unarmed forward at actual/stressed `
 ## Declared boundary
 
 All `72` candidate economics are unopened. The copied raw input contains `8` files / `4,083,815` bytes with canonical manifest `FE8C6D3A282B7AAF883463FE843156EB6BA1D79F7F7CF0C166B3FF18A6F2C5D3`. Freeze and push this declaration before exactly one proxy process opens the candidate frontier.
+
+## Proxy result
+
+Declaration commit `32c95f07d7e2c9c1f4b6152d1d31d2d7c83756a6` reached `origin/main` before one process evaluated all `72` paths in `0.1653041` seconds. Every copied input, lifecycle/native anchor, predecessor identity, drawdown-state structure and forward non-arming check passed. All candidates bound, stayed positive, retained positive capital and kept all four epochs positive. Conservative profit passed `32`; **budgeted DD passed zero**, so no MT5 shortlist exists.
+
+Maximum conservative profit comes from trigger `7%` and multiplier `0.75`. It scales `202` of `458` post-activation births across five risk-off episodes and earns actual/stressed `+$2,099.9125 / +$2,016.883375`, conservative `+$1,999.9125 / +$1,916.883375`. Its raw/budgeted DD is `20.001912% / 25.628513%`.
+
+The economically nearest DD boundary is trigger `8%`, multiplier `0.25`. It scales `305` births across seven episodes, earns actual/stressed `+$1,851.785 / +$1,786.828875` and remains above the qualified floor after the `$100` reserve at `+$1,751.785 / +$1,686.828875`. Its raw DD reaches the family minimum `15.643837%`, but budgeted DD is `21.270438%`, still `1.270438` points over the hard budget. Thirteen paths tie that raw/budgeted floor, but none supplies higher conservative stressed profit than this one.
+
+This is a valid economic empty frontier, not an environment or engineering failure. Reducing only future births cannot cut through the existing-exposure/pre-activation DD floor. Forward remains exact and unarmed at `+$23.01 / +$21.256`, native DD `12.436759%`, with positive June and July. Freeze this family without MT5. Continue proxy-first with an economically distinct nonterminal release of already-open aggregate exposure that still permits later original births; do not retune this trigger/multiplier grid or rerun any closed path.
