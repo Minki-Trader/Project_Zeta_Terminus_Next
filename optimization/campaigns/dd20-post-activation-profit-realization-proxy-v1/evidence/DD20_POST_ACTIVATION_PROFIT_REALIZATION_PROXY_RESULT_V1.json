@@ -1,0 +1,148 @@
+{
+  "schema": "zeta-dd20-post-activation-profit-realization-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE",
+  "campaign": "dd20-post-activation-profit-realization-proxy-v1",
+  "frozen_declaration_commit": "0a19a7b245b237d3bc53726b2b33ae8f52582889",
+  "run": {
+    "process_invocations": 1,
+    "process_exit_code": 0,
+    "started_local": "2026-08-28T23:39:39.7800509+09:00",
+    "ended_local": "2026-08-28T23:39:40.1353387+09:00",
+    "proxy_wall_time_seconds": 0.17533880000701174,
+    "shell_wall_time_seconds": 0.3552878,
+    "candidate_profit_targets": 49,
+    "minimum_profit_target_r": 0.05,
+    "maximum_profit_target_r": 2.45,
+    "target_step_r": 0.05,
+    "selection_eligible_candidates": 0,
+    "mt5_shortlist_size": 0
+  },
+  "anchor_reproduction": {
+    "accelerated_selection_lifecycle_and_native_anchor": "PASS",
+    "accelerated_forward_lifecycle_and_native_anchor": "PASS",
+    "qualified_result_identity": "PASS",
+    "risk_ceiling_result_and_dd_gap": "PASS",
+    "terminal_lock_result_identity": "PASS",
+    "post_activation_lifecycle_structure": "PASS",
+    "forward_never_arms": "PASS"
+  },
+  "selection_gate_counts": {
+    "positive": 49,
+    "profit_above_qualified_after_reserve": 38,
+    "positive_capital": 49,
+    "all_four_epochs": 48,
+    "budgeted_drawdown_at_or_below_20_percent": 0,
+    "all_selection_gates": 0
+  },
+  "maximum_profit_diagnostic": {
+    "profit_target_r": 1.2,
+    "profit_realizations": 16,
+    "actual_net_usd": 2321.208958877,
+    "stressed_net_usd": 2231.4829588771,
+    "conservative_actual_net_usd": 2221.208958877,
+    "conservative_stressed_net_usd": 2131.4829588771,
+    "actual_stressed_improvement_over_accelerated_usd": [135.818958877, 135.8189588771],
+    "actual_closed_balance_drawdown_pct": 18.5052750262,
+    "stressed_closed_balance_drawdown_pct": 19.6113616986,
+    "budgeted_native_equity_drawdown_pct": 25.2379626142,
+    "hard_budget_miss_percentage_points": 5.2379626142,
+    "epochs_actual_stressed_usd": [
+      [116.46, 110.887],
+      [61.97, 53.1825],
+      [269.68, 255.2],
+      [1873.098958877, 1812.2134588771]
+    ],
+    "profit_gate": true,
+    "all_epochs_gate": true,
+    "drawdown_gate": false
+  },
+  "lowest_drawdown_diagnostic": {
+    "profit_target_r": 0.1,
+    "profit_realizations": 345,
+    "actual_net_usd": 834.0872400903,
+    "stressed_net_usd": 744.3612400904,
+    "conservative_actual_net_usd": 734.0872400903,
+    "conservative_stressed_net_usd": 644.3612400904,
+    "raw_worse_closed_balance_drawdown_pct": 15.6438372884,
+    "budgeted_native_equity_drawdown_pct": 21.2704382041,
+    "hard_budget_miss_percentage_points": 1.2704382041,
+    "profit_gate": false,
+    "all_epochs_gate": true,
+    "drawdown_gate": false
+  },
+  "lowest_drawdown_profit_eligible_diagnostic": {
+    "profit_target_r": 0.6,
+    "profit_realizations": 86,
+    "actual_net_usd": 2013.15665628,
+    "stressed_net_usd": 1923.43065628,
+    "conservative_actual_net_usd": 1913.15665628,
+    "conservative_stressed_net_usd": 1823.43065628,
+    "raw_worse_closed_balance_drawdown_pct": 19.3682523881,
+    "budgeted_native_equity_drawdown_pct": 24.9948533037,
+    "hard_budget_miss_percentage_points": 4.9948533037,
+    "profit_gate": true,
+    "all_epochs_gate": true,
+    "drawdown_gate": false
+  },
+  "forward_invariance": {
+    "profit_realization_armed": false,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_net_usd": 19.79,
+    "june_stressed_net_usd": 18.976,
+    "july_actual_net_usd": 3.22,
+    "july_stressed_net_usd": 2.280
+  },
+  "calibration": {
+    "qualified_native_floor_pct": 19.80037176500623,
+    "accelerated_native_minus_raw_closed_balance_gap_percentage_points": 5.126600915631486,
+    "profit_realization_timing_and_path_reserve_percentage_points": 0.5,
+    "selection_profit_uncertainty_reserve_usd": 100.0,
+    "minimum_absolute_realization_reserve_usd": 0.25,
+    "planned_risk_realization_reserve_fraction": 0.025,
+    "hard_native_equity_drawdown_pct": 20.0
+  },
+  "raw_artifact": {
+    "path": "optimization/artifacts/raw/dd20-post-activation-profit-realization-proxy-v1/output/proxy-result.json",
+    "bytes": 166352,
+    "sha256": "58412BBE29753A210B47219CDAF8F6E9434CCCE9530087C854202CECE4E71C96"
+  },
+  "implementation": {
+    "readme_bytes": 5848,
+    "readme_sha256": "DBDFEE55901EBA0310635150001605F4C2FC6A6E13AD9B9356FDDF46C5FC1ED2",
+    "contract_sha256": "6E03A95C5563D2119A5FA1A0F8C2EC5CF961A73330FB46FAB96A9EC6D0C894B6",
+    "script_sha256": "57301A42EBCB49F9CC5D62FAF4A142D60CE72B66EA97C49A2F4247D56B69E4FA",
+    "input_files": 8,
+    "input_bytes": 4083775,
+    "input_manifest_sha256": "5E00A8A048A13088F111D7608F0FDB0BB54D61C0BB06A31C7C95DD9BA8E70D80"
+  },
+  "economic_verdict": {
+    "classification": "POST_ACTIVATION_UNIFORM_R_TARGET_PROFIT_DD_FRONTIERS_DISJOINT_NO_MT5_SHORTLIST",
+    "valid_economic_result": true,
+    "new_proxy_candidate_qualified": false,
+    "qualified_success_anchor_retained": true,
+    "interpretation": "Thirty-eight of 49 uniform R targets passed conservative profit, but none passed budgeted DD. The maximum-profit 1.20R target improved the rejected accelerator by about $135.82 but budgeted 25.237963% DD; the minimum-DD 0.10R target still budgeted 21.270438% and destroyed the required profit. The profit and DD regions are disjoint.",
+    "next_action": "Freeze the complete uniform R-target family without MT5. Continue proxy-first with an economically distinct state-dependent nonterminal exposure control, rather than component/subgroup retuning or another profit-realization threshold."
+  },
+  "boundary": {
+    "proxy_rerun": false,
+    "profit_realization_grid_rerun": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "mt5_launched": false,
+    "free_space_gib_after_run": 72.309,
+    "research_artifacts_preserved": true,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

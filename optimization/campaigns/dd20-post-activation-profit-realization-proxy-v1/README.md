@@ -33,3 +33,13 @@ All `49` candidates must preserve the exact unarmed forward at actual/stressed `
 ## Declared boundary
 
 All `49` candidate economics are unopened. The copied raw input contains `8` files / `4,083,775` bytes with canonical manifest `5E00A8A048A13088F111D7608F0FDB0BB54D61C0BB06A31C7C95DD9BA8E70D80`. Freeze and push this declaration before exactly one proxy process opens the candidate frontier.
+
+## Proxy result
+
+Declaration commit `0a19a7b245b237d3bc53726b2b33ae8f52582889` reached `origin/main` before one process evaluated all `49` targets in `0.1753388` seconds. Every input, lifecycle/native anchor, predecessor identity, post-activation structure and forward non-arming check passed. All candidates bound in selection, all `49` remained positive with positive capital, `48` retained all four positive epochs and `38` conservatively exceeded both qualified profit floors. **Zero** passed budgeted DD, so no intersection or MT5 shortlist exists.
+
+The maximum-profit `1.20R` target realizes `16` positions and earns actual/stressed `+$2,321.208959 / +$2,231.482959`, conservative `+$2,221.208959 / +$2,131.482959`. It improves even on the rejected accelerator by `+$135.818959` on both cost views, but its raw/budgeted DD is `19.611362% / 25.237963%`.
+
+The lowest-DD `0.10R` target realizes `345` positions and reaches raw/budgeted `15.643837% / 21.270438%`, still `1.270438` points over the hard budget while conservative stressed profit falls to only `+$644.361240`. The lowest-DD target that also passes the profit gate is `0.60R`: conservative actual/stressed `+$1,913.156656 / +$1,823.430656`, but budgeted DD is `24.994853%`. Uniform per-position realization therefore also has disjoint profit and DD regions.
+
+This is a valid economic empty frontier, not an environment or engineering failure. The forward remains exact and unarmed at `+$23.01 / +$21.256`, native DD `12.436759%`, with positive June and July. Freeze this complete R-target family without MT5. Continue proxy-first with an economically distinct state-dependent, nonterminal exposure control rather than component/subgroup retuning or another realization threshold; do not rerun any closed path.

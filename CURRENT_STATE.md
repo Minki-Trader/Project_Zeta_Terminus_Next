@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0347`
+- Latest state ID: `STATE-0348`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-post-activation-profit-realization-proxy-v1` is declared with all `49` candidate economics unopened. After the fixed accelerator arms at stressed balance `$550`, each `0.05R..2.45R` candidate realizes an eligible position at its target and preserves later original births without synthesizing freed opportunities. Freeze and push this declaration before exactly one proxy process; no MT5 or closed-path rerun is authorized during the proxy.
+- Active optimization boundary: `dd20-post-activation-profit-realization-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE`. Conservative profit passed `38/49`, but budgeted DD passed `0/49`; maximum-profit `1.20R` reached `+$2,321.21 / +$2,231.48` at `25.237963%`, while minimum-DD `0.10R` still budgeted `21.270438%` and lost the profit gate. Push the result, then continue proxy-first with a distinct state-dependent nonterminal exposure control; do not retune this family.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
