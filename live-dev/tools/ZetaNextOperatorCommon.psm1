@@ -416,7 +416,23 @@ function Test-ZetaNextFlatStatus {
         [Parameter(Mandatory)]$Receipt
     )
 
-    if ([int]$Status.new_entries_input -ne 0 -or [int]$Status.new_entries_effective -ne 0 -or
+    $referenceCapital =
+        [double]$Receipt.expected_project_stage_balance_usd -
+        [double]$Receipt.expected_project_realized_net_usd
+    $realizedDelta =
+        [double]$Status.project_realized_net -
+        [double]$Receipt.expected_project_realized_net_usd
+    $expectedAccountBalance = [double]$Receipt.expected_account_balance_usd + $realizedDelta
+    $expectedAccountEquity = [double]$Receipt.expected_account_equity_usd + $realizedDelta
+    $expectedProjectStageBalance = $referenceCapital + [double]$Status.project_realized_net
+    $componentStressedNet = [double](@($Status.components) |
+        Measure-Object -Property stressed_net -Sum |
+        Select-Object -ExpandProperty Sum)
+    $expectedStressedBalance = $referenceCapital + $componentStressedNet
+
+    if (-not [double]::IsFinite($referenceCapital) -or $referenceCapital -le 0.0 -or
+        -not [double]::IsFinite($componentStressedNet) -or
+        [int]$Status.new_entries_input -ne 0 -or [int]$Status.new_entries_effective -ne 0 -or
         [double]$Status.account_balance -le 0.0 -or [double]$Status.account_equity -le 0.0 -or
         [math]::Abs([double]$Status.account_balance - [double]$Status.account_equity) -gt 0.01 -or
         [math]::Abs([double]$Status.account_margin) -gt 0.01 -or
@@ -425,11 +441,10 @@ function Test-ZetaNextFlatStatus {
         [long]$Status.arc.lifecycle_identifier -ne 0 -or
         [int]$Status.retry.pending -ne 0 -or [int]$Status.shadow.occupied -ne 0 -or
         @($Status.components | Where-Object { [long]$_.position_identifier -ne 0 }).Count -ne 0 -or
-        [math]::Abs([double]$Status.account_balance - [double]$Receipt.expected_account_balance_usd) -gt 0.005 -or
-        [math]::Abs([double]$Status.account_equity - [double]$Receipt.expected_account_equity_usd) -gt 0.005 -or
-        [math]::Abs([double]$Status.project_realized_net - [double]$Receipt.expected_project_realized_net_usd) -gt 0.005 -or
-        [math]::Abs([double]$Status.project_stage_balance - [double]$Receipt.expected_project_stage_balance_usd) -gt 0.005 -or
-        [math]::Abs([double]$Status.stressed_balance - [double]$Receipt.expected_stressed_balance_usd) -gt 0.005) {
+        [math]::Abs([double]$Status.account_balance - $expectedAccountBalance) -gt 0.005 -or
+        [math]::Abs([double]$Status.account_equity - $expectedAccountEquity) -gt 0.005 -or
+        [math]::Abs([double]$Status.project_stage_balance - $expectedProjectStageBalance) -gt 0.005 -or
+        [math]::Abs([double]$Status.stressed_balance - $expectedStressedBalance) -gt 0.005) {
         return $false
     }
     $true

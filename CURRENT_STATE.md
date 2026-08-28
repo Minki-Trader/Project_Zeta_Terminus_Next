@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0293`
+- Latest state ID: `STATE-0294`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -19,11 +19,11 @@ Last updated: 2026-08-28
 - Existing real-account owner: none locally; no exact Live terminal or dashboard process is active, and guarded recovery remains pending after the detached-launch patch reaches `origin/main`
 - User V7 Live direction: `EFFECTIVE_AFTER_GUARDED_RESTART`
 
-Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery boundary commit `41473c378289f87d3f5f82e2a3cb95dfa99c2800` reached `origin/main` before former replacement Live PID `9976` and dashboard PID `14324` started. Both are now absent after the latest Codex shutdown/update boundary, with no normal operator stop requested. The last alternating core snapshot at local `2026-08-28 09:49:02` / UTC `00:49:02` is exact RLO1 sequence `5137`, entries `1/1`, connected/account-bound, and flat with zero position identifier, pending order, margin, aggregate planned risk, retry, shadow or ARC ownership. Its SHA-256 is `34712DAA7DEC24E107C92E0C45DDE573B9F96A9E32AD52619371F380F67104CF`. No broker position, order, deal or account state was queried. The root launcher now dispatches through a current-user Task Scheduler host, but no task registration or Live restart occurs before this no-owner patch boundary is committed and pushed.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached-launch boundary commit `5cd7a955410444d86269f3ef20bbf72266900f9d` reached `origin/main` before the current-user scheduled task was registered and invoked. Its first scheduler-owned preflight connected to the exact account, recovered RLO1 sequence `5138 → 5139`, proved entries `0/0`, account balance/equity `$105.20/$105.20`, zero component position, order, margin, aggregate risk, retry, shadow, ARC or fault, then stopped normally without starting final Live or the dashboard. The preflight was rejected only because the operator predicate still compared post-trade balance/project/stressed values to the immutable initial RLO1 transition receipt. That recurring-restart defect is corrected by retaining the original reference capital and account anchor while advancing expected account balance by exact project-realized delta and recomputing current project/stressed balances from recovered component state. Corrected module SHA-256 is `91C840A65C17DDE12AA63F38E6214768C7CF26DE0EB8896EAFB64DDF68A81A71`; the stopped preflight snapshot is `E76BBC7EC0D3DC4BE7BFC181946BF8953572E59DB253D6B71A1A6EAE500AD4A1`. No owner is active; retry only after this correction is committed and pushed.
 
 ## Active work
 
-- Active engineering boundary: detached Master lifetime patch implemented; commit/push the no-owner boundary, then perform one guarded `0/0 → 1/1` recovery through the scheduler-owned host
+- Active engineering boundary: detached Master registered; commit/push the post-trade continuity-predicate correction, then retry the guarded `0/0 → 1/1` scheduler-owned recovery
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
