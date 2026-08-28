@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0330`
+- Latest state ID: `STATE-0331`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-qualified-profit-redistribution-proxy-v1` is declared with all economics unopened. Its `184,041`-row component-redistribution lattice must conservatively exceed the first qualified MT5 anchor's `+$1,691.54 / +$1,626.26`, pay the five-anchor DD and profit shortfalls plus reserves, and keep full June-July and both continuous months positive. Push the declaration, then run this proxy once; no MT5 or prior/original-15 rerun is authorized during the proxy.
+- Active optimization boundary: `dd20-qualified-profit-redistribution-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE`: all `184,041` redistributions were evaluated once, but none cleared the combined conservative selection-profit, five-anchor DD and four-epoch contract, so no MT5 shortlist exists. Push the result, retain the first qualified MT5 anchor, then continue with a distinct proxy mechanism; no campaign grid, prior candidate or original-15 rerun is authorized.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

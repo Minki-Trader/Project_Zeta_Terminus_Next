@@ -18,4 +18,10 @@ The input is an independent physical 19-file copy totaling `34,559,535` bytes, i
 
 ## Current boundary
 
-All selection, paired-forward, June, July, ranking and shortlist economics are unopened. Commit and push this declaration before the single proxy invocation.
+Declaration commit `0a42761f15e475cd435ecd7965196098514c1aa3` reached `origin/main` before exactly one proxy process opened economics. It evaluated all `184,041` frozen compositions plus four external anchor rows in `87.9067` seconds and exited `0`. Every copied-input, selection proxy/native MT5, paired proxy/native MT5 and continuous-July anchor check passed.
+
+No composition passed the combined selection contract. The funnel is selection `0`, paired-forward `0`, June `0`, raw July `0`, final `0`; the latter stages are conditional on selection eligibility. No winner was ranked and the MT5 shortlist is empty.
+
+The valid economic result is `CONSERVATIVE_QUALIFIED_PROFIT_REDISTRIBUTION_FRONTIER_EMPTY_NO_MT5_SHORTLIST`. Under the frozen five-anchor DD correction and the global worst selection-profit correction plus `$50`, this grid contains no conservatively superior replacement for the qualified MT5 anchor. That anchor remains retained without rerun. The raw output is `58,429` bytes at SHA-256 `3D82DE2E676B0BEB18A54A71E627DDE6DA24E28C85B9F6FF89FB41728932DC10`.
+
+This campaign closes without MT5. A successor must be economically distinct—for example, composition-local proxy-error calibration or a new mechanism—and may not rerun this grid, the qualified anchor, earlier MT5 candidates or the original 15 combinations.

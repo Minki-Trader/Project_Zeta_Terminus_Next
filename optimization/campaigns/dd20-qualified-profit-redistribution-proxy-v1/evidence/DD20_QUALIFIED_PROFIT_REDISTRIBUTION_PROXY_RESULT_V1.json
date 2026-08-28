@@ -1,0 +1,107 @@
+{
+  "schema": "zeta-dd20-qualified-profit-redistribution-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE",
+  "campaign": "dd20-qualified-profit-redistribution-proxy-v1",
+  "frozen_declaration_commit": "0a42761f15e475cd435ecd7965196098514c1aa3",
+  "run": {
+    "process_invocations": 1,
+    "process_exit_code": 0,
+    "wall_time_seconds": 87.9067413,
+    "compositions": 184041,
+    "evaluation_rows_including_external_anchors": 184045,
+    "selection_eligible_compositions": 0,
+    "paired_forward_eligible_compositions": 0,
+    "june_eligible_compositions": 0,
+    "raw_july_eligible_compositions": 0,
+    "final_eligible_compositions": 0,
+    "selection_winner": null,
+    "mt5_shortlist": []
+  },
+  "anchor_reproduction": {
+    "all_selection_proxy_anchors": "PASS",
+    "all_external_native_selection_anchors": "PASS",
+    "all_paired_proxy_drawdown_anchors": "PASS",
+    "all_external_native_forward_anchors": "PASS",
+    "all_continuous_july_anchors": "PASS"
+  },
+  "qualified_success_floor": {
+    "component_risk_multipliers": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "observed_selection_actual_net_usd": 1691.54,
+    "observed_selection_stressed_2x_cost_net_usd": 1626.26,
+    "observed_selection_native_mt5_equity_drawdown_pct": 19.55037176500623,
+    "candidate_rerun": false,
+    "retained": true
+  },
+  "selection_drawdown_calibration": {
+    "anchor_ids": ["base", "near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "observed_minus_raw_gap_percentage_points": [-1.4658628896, 0.8334885169, -1.3112701486, 1.7826874563, 2.1221507541],
+    "worst_positive_gap_percentage_points": 2.1221507541,
+    "uncertainty_reserve_percentage_points": 0.25,
+    "maximum_eligible_raw_drawdown_pct": 17.6278492459,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_profit_calibration": {
+    "anchor_ids": ["base", "near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "proxy_minus_observed_actual_shortfall_usd": [0.0, -235.0664166667, 659.7999404762, 255.6802142857, 71.9418571429],
+    "proxy_minus_observed_stressed_shortfall_usd": [0.0, -240.3812738094, 615.1108690477, 234.2145, 67.0620714286],
+    "worst_actual_shortfall_usd": 659.7999404762,
+    "worst_stressed_shortfall_usd": 615.1108690477,
+    "uncertainty_reserve_usd": 50.0,
+    "qualified_actual_floor_usd": 1691.54,
+    "qualified_stressed_floor_usd": 1626.26,
+    "minimum_raw_proxy_actual_net_usd_strictly_above": 2401.3399404762,
+    "minimum_raw_proxy_stressed_net_usd_strictly_above": 2291.3708690477
+  },
+  "paired_forward_drawdown_calibration": {
+    "anchor_ids": ["base", "near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "observed_minus_raw_gap_percentage_points": [1.9550709531, 5.6021825077, 0.702561032, 4.5577325318, 3.2281682805],
+    "worst_positive_gap_percentage_points": 5.6021825077,
+    "uncertainty_reserve_percentage_points": 0.5,
+    "maximum_eligible_raw_drawdown_pct": 13.8978174923
+  },
+  "continuous_july_calibration": {
+    "anchor_ids": ["near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "proxy_minus_observed_actual_shortfall_usd": [4.69, 5.47, 6.82, 6.08],
+    "proxy_minus_observed_stressed_shortfall_usd": [4.483, 5.553, 6.8535, 6.476],
+    "worst_actual_shortfall_usd": 6.82,
+    "worst_stressed_shortfall_usd": 6.8535,
+    "uncertainty_reserve_usd": 1.0
+  },
+  "raw_artifact": {
+    "path": "optimization/artifacts/raw/dd20-qualified-profit-redistribution-proxy-v1/output/proxy-result.json",
+    "bytes": 58429,
+    "sha256": "3D82DE2E676B0BEB18A54A71E627DDE6DA24E28C85B9F6FF89FB41728932DC10"
+  },
+  "implementation": {
+    "contract_sha256": "5C3E96E43BF09AA9A65472EF64CC9DC3DB209ED15AD01CBA1925A450863A7EA8",
+    "script_sha256": "A68CA64E2BB38B54281C01C55BCD94B85D074303980F34304B45F5C5135A1ACA",
+    "input_files": 19,
+    "input_bytes": 34559535,
+    "input_manifest_sha256": "F79651BAD1CD082DA6E1B3E89BCB59576F4567EC57F1C2C75D7523E8F4475BB8"
+  },
+  "economic_verdict": {
+    "classification": "CONSERVATIVE_QUALIFIED_PROFIT_REDISTRIBUTION_FRONTIER_EMPTY_NO_MT5_SHORTLIST",
+    "valid_economic_result": true,
+    "new_candidate_qualified": false,
+    "qualified_success_anchor_retained": true,
+    "interpretation": "Across all 184,041 frozen redistributions, no row simultaneously cleared the conservatively corrected qualified-profit floor, the five-anchor native-DD budget and every positive epoch requirement. Downstream counts remain zero because they are conditional on selection eligibility. This is an economic empty frontier under the declared contract, not an environment, design, invocation or engineering failure.",
+    "successor_information": "The global selection-profit correction is dominated by the structurally distant high-exposure anchor. A distinct proxy may estimate composition-local profit error or search a new economic mechanism, but this campaign, its rows and all preserved MT5 anchors remain closed without rerun."
+  },
+  "boundary": {
+    "proxy_rerun": false,
+    "qualified_success_candidate_rerun": false,
+    "near_miss_candidate_rerun": false,
+    "exposure_margin_candidate_rerun": false,
+    "prior_high_exposure_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "mt5_launched": false,
+    "maximum_mt5_shortlist_size": 1,
+    "free_space_gib_after_run": 77.103,
+    "research_artifacts_preserved": true,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
