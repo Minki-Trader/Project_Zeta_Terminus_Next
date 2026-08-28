@@ -33,3 +33,13 @@ The independent forward must remain exact and unarmed at actual/stressed `+$23.0
 ## Declared boundary
 
 All `42` candidate economics are unopened. The copied raw input contains `8` files / `12,156,352` bytes with canonical manifest `9457C3041082EDC3973FB8E70A509EB6BFFA621CBF980E2346B3856AC5FA60E8`. Freeze and push this declaration before exactly one proxy process opens the candidate frontier.
+
+## Proxy result
+
+Declaration commit `e19e9778a6d1be6006a68ecf70a892fc40bbabdd` reached `origin/main` before one process evaluated all `42` paths in `1.0245463` seconds. Every copied input, lifecycle/native/sampled anchor, predecessor identity, zero-error balance alignment, modification-delta identity, immutable-global-high, clean-book recovery and forward non-arming check passed. All candidates entered risk-off across `1..4` episodes and scaled `335..430` later births. Every path remained positive with positive capital and four positive epochs. Conservative profit passed only `1`; **budgeted DD passed zero**, so no MT5 shortlist exists.
+
+Maximum conservative profit and minimum family DD coincide at trigger `10%`, current-book retain `0`, future-birth multiplier `0.50`. Two cleanly recovered regimes release four current positions and scale `347` later births. The path earns actual/stressed `+$1,856.42 / +$1,788.52775`, conservative `+$1,756.42 / +$1,688.52775`, so it remains above the qualified anchor after the `$100` reserve.
+
+Closed-balance DD reaches actual/stressed `17.601675% / 18.628193%`, but the declared concurrent open-path envelope lifts worse sampled-equity DD to `27.159394%` and budgeted native DD to `27.852956%`, missing the hard limit by `7.852956` points. Long persistent scaling makes `347` observed positive peak marks unavailable while those lifecycles are open; their conservative transition charges dominate the closed-balance improvement.
+
+This is a valid economic empty frontier, not an environment, design or engineering failure. An immutable global high prevents the predecessor's staircase, and one path preserves the required final profit, but keeping the entire recovery interval at reduced exposure creates too much open-path opportunity loss under the declared envelope. Forward stays exact and unarmed at `+$23.01 / +$21.256`, native DD `12.436759%`, with positive June and July. Freeze this family without MT5. Continue proxy-first with an economically distinct time-bounded drawdown quarantine that isolates the damaging interval and then resumes full original exposure, rather than retuning this trigger/retention/multiplier grid or rerunning any closed path.
