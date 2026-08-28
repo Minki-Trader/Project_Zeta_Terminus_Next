@@ -33,3 +33,11 @@ The independent forward cannot arm because its maximum stressed closed balance i
 ## Declared boundary
 
 All `37` candidate economics are unopened. The copied raw input contains `9` files / `12,427,130` bytes with canonical manifest `56F47DC1965561C14564799F8115D116181AAB156FF92858639D5D9487B790F6`. Freeze and push this declaration before exactly one proxy process opens the candidate frontier.
+
+## Proxy result
+
+Declaration commit `18196eef5f1b21191efe9090aad48d6383e3a9af` reached `origin/main` before one process evaluated all `37` triggers in `0.5007635` seconds. Every copied input, lifecycle/native anchor, predecessor identity, zero-error snapshot alignment and forward non-arming check passed. All candidates fired in selection, all `37` stayed positive and passed the budgeted DD gate, and `24` retained all four positive epochs. **Zero** strictly exceeded the qualified actual and stressed profit floor, so the intersection and MT5 shortlist are empty.
+
+The maximum-profit terminal result is the economically tied `14.5%..16.5%` lock at `2026.03.06 15:30:00`; ranking selects `16.5%`. It liquidates marked equity with `1,191` lifecycles already closed and earns actual/stressed `+$1,428.82 / +$1,373.40` after the `$25` reserve. Budgeted DD is `19.800372%` and all epochs remain positive, but it falls short of the qualified anchor by `$262.72 / $252.86`. Higher `17%..19%` triggers lock four days later at still lower profit, while earlier locks discard still more of the later profit path.
+
+The permanent terminal response therefore solves the declared DD side but exits before the subsequent profitable recovery and cannot preserve enough explosive profit. This is a valid economic empty frontier, not an environment or engineering failure. Forward remains invariant at `+$23.01 / +$21.256`, native DD `12.436759%`, with positive June and July. No MT5 shortlist exists. Freeze this entire terminal-lock family and continue proxy-first with a distinct nonterminal open-profit realization or temporary exposure-release mechanism that can retain later entries; do not retune this trigger grid or rerun any closed path.

@@ -1,0 +1,135 @@
+{
+  "schema": "zeta-dd20-equity-high-watermark-terminal-lock-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE",
+  "campaign": "dd20-equity-high-watermark-terminal-lock-proxy-v1",
+  "frozen_declaration_commit": "18196eef5f1b21191efe9090aad48d6383e3a9af",
+  "run": {
+    "process_invocations": 1,
+    "process_exit_code": 0,
+    "started_local": "2026-08-28T23:24:50.4412264+09:00",
+    "ended_local": "2026-08-28T23:24:51.2759735+09:00",
+    "proxy_wall_time_seconds": 0.5007634999928996,
+    "shell_wall_time_seconds": 0.8347471,
+    "candidate_drawdown_triggers": 37,
+    "minimum_trigger_pct": 1.0,
+    "maximum_trigger_pct": 19.0,
+    "trigger_step_percentage_points": 0.5,
+    "selection_eligible_candidates": 0,
+    "mt5_shortlist_size": 0
+  },
+  "anchor_reproduction": {
+    "accelerated_selection_lifecycle_native_and_sampled_anchor": "PASS",
+    "accelerated_forward_lifecycle_and_native_anchor": "PASS",
+    "qualified_result_identity": "PASS",
+    "closed_predecessor_identity": "PASS",
+    "selection_snapshot_balance_alignment": "PASS_ZERO_ERROR",
+    "forward_snapshot_balance_alignment": "PASS_ZERO_ERROR",
+    "forward_never_arms": "PASS"
+  },
+  "selection_gate_counts": {
+    "positive": 37,
+    "profit_strictly_above_qualified": 0,
+    "budgeted_drawdown_at_or_below_20_percent": 37,
+    "all_four_epochs": 24,
+    "all_selection_gates": 0
+  },
+  "maximum_profit_diagnostic": {
+    "ranked_trigger_pct": 16.5,
+    "economically_tied_triggers_pct": [14.5, 15.0, 15.5, 16.0, 16.5],
+    "lock_time_server": "2026.03.06 15:30:00",
+    "lock_stage_result": "GATE / EXISTING_EXPOSURE",
+    "closed_lifecycles_before_lock": 1191,
+    "lock_account_balance_usd": 1599.9,
+    "lock_account_equity_usd": 1553.82,
+    "lock_stressed_balance_usd": 1544.48,
+    "lock_stressed_equity_usd": 1498.4,
+    "liquidation_and_proxy_reserve_usd": 25.0,
+    "actual_terminal_net_usd": 1428.82,
+    "stressed_terminal_net_usd": 1373.4,
+    "actual_shortfall_to_qualified_usd": 262.72,
+    "stressed_shortfall_to_qualified_usd": 252.86,
+    "sampled_current_drawdown_at_lock_pct": 16.6807871736,
+    "maximum_sampled_drawdown_through_lock_pct": 18.8265749108,
+    "budgeted_native_equity_drawdown_pct": 19.80037176500623,
+    "epochs": [
+      {"id": "E1", "actual_net_usd": 116.46, "stressed_net_usd": 110.887},
+      {"id": "E2", "actual_net_usd": 61.97, "stressed_net_usd": 53.1825},
+      {"id": "E3", "actual_net_usd": 269.68, "stressed_net_usd": 255.2},
+      {"id": "E4_RECENT_SELECTION", "actual_net_usd": 980.71, "stressed_net_usd": 954.1305}
+    ],
+    "profit_gate": false,
+    "all_epochs_gate": true,
+    "drawdown_gate": true
+  },
+  "terminal_lock_frontier": {
+    "all_candidates_fired_in_selection": true,
+    "unique_lock_times": 18,
+    "maximum_profit_trigger_range_pct": [14.5, 16.5],
+    "maximum_profit_lock_time_server": "2026.03.06 15:30:00",
+    "later_trigger_range_pct": [17.0, 19.0],
+    "later_lock_time_range_server": ["2026.03.10 14:30:00", "2026.03.10 15:00:00"],
+    "later_maximum_stressed_terminal_net_usd": 1353.234,
+    "interpretation": "The permanent lock controls DD but terminates before the subsequent profitable recovery. No trigger in the complete declared range retains enough terminal profit to beat the qualified anchor."
+  },
+  "forward_invariance": {
+    "terminal_lock_armed": false,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_net_usd": 19.79,
+    "june_stressed_net_usd": 18.976,
+    "july_actual_net_usd": 3.22,
+    "july_stressed_net_usd": 2.280
+  },
+  "calibration": {
+    "qualified_native_floor_pct": 19.80037176500623,
+    "selection_full_path_sampled_dd_pct": 27.894257064721973,
+    "selection_native_minus_sampled_gap_percentage_points": 0.19356185959255612,
+    "terminal_detection_and_liquidation_reserve_percentage_points": 0.25,
+    "liquidation_and_proxy_reserve_usd": 25.0,
+    "selection_snapshot_maximum_alignment_error_usd": 0.0,
+    "forward_snapshot_maximum_alignment_error_usd": 0.0,
+    "hard_native_equity_drawdown_pct": 20.0
+  },
+  "raw_artifact": {
+    "path": "optimization/artifacts/raw/dd20-equity-high-watermark-terminal-lock-proxy-v1/output/proxy-result.json",
+    "bytes": 148532,
+    "sha256": "AE296E822C32D2748E275B4A71B2299DD9866802FC16E268E90ED906615788A3"
+  },
+  "implementation": {
+    "readme_bytes": 5764,
+    "readme_sha256": "6EE78905F14EB214A481DDC35FE7DAD5A0B16146FF068B78D378C4F120D494E0",
+    "contract_sha256": "1BE3DA5255BEA30F9229454479EF79C933C9FDC19336B9627896B774A2232D3F",
+    "script_sha256": "69276ABA8A625423E95A77E4F732F29096113EE98B61AADD0B68610BFC9B5F8F",
+    "input_files": 9,
+    "input_bytes": 12427130,
+    "input_manifest_sha256": "56F47DC1965561C14564799F8115D116181AAB156FF92858639D5D9487B790F6"
+  },
+  "economic_verdict": {
+    "classification": "PERMANENT_EQUITY_TERMINAL_LOCK_DD_SAFE_BUT_PROFIT_FLOOR_UNREACHABLE_NO_MT5_SHORTLIST",
+    "valid_economic_result": true,
+    "new_proxy_candidate_qualified": false,
+    "qualified_success_anchor_retained": true,
+    "interpretation": "All 37 permanent terminal locks met the conservative DD budget, but none beat both qualified profit floors. The maximum-profit 14.5%-16.5% lock tied at +$1,428.82 / +$1,373.40 and gave up the subsequent recovery, leaving $262.72 / $252.86 shortfalls.",
+    "next_action": "Freeze the entire terminal-lock family without MT5. Continue proxy-first with an economically distinct nonterminal open-profit realization or temporary exposure-release mechanism that preserves the possibility of later entries, rather than retuning terminal-lock triggers."
+  },
+  "boundary": {
+    "proxy_rerun": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "mt5_launched": false,
+    "free_space_gib_after_run": 72.107,
+    "research_artifacts_preserved": true,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
