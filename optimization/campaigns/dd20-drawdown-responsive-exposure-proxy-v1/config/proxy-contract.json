@@ -1,0 +1,130 @@
+{
+  "schema": "zeta-dd20-drawdown-responsive-exposure-proxy-contract-v1",
+  "campaign": "dd20-drawdown-responsive-exposure-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-drawdown-responsive-exposure-proxy-v1/input",
+    "files": [
+      {"name": "accelerated-forward-lifecycles.csv", "bytes": 49308, "sha256": "B69918537277E24BAA3EC2599E01DE4D6957FB5F7CA3BB33931AEC57CDC953B6"},
+      {"name": "accelerated-forward.tst", "bytes": 38370, "sha256": "19F61893A07C47E1C365D2406963FFE0CA689A05EDFB7B972F646B8670CEBB6B"},
+      {"name": "accelerated-mt5-result.json", "bytes": 16597, "sha256": "23A5F81310D1133C335479FD3A3B03111A0ABEFAE6F0AE156E5BD0DEC90A9873"},
+      {"name": "accelerated-selection-lifecycles.csv", "bytes": 2499873, "sha256": "DD1B048DF6D1A450F7572B810E8BB7B5A5D93AC11F558D423945CFF9FD017FDE"},
+      {"name": "accelerated-selection.tst", "bytes": 1451170, "sha256": "228E077D67EED5BB2C9836DDE169CFE91202A1458F671792394EF43045146285"},
+      {"name": "closed-profit-realization-result.json", "bytes": 6417, "sha256": "E4DE69FEFF31EA2BFC0BF37547375754F3B18B14B544FBCE18F69FE54ED58F7C"},
+      {"name": "closed-risk-ceiling-result.json", "bytes": 5845, "sha256": "7B381FEF4977637DBF3B2675B10EF72A8F5560B83270FDB39DAE27208E32F94B"},
+      {"name": "qualified-mt5-result.json", "bytes": 16235, "sha256": "80775495EBF3E0C6C3770322135ED410B91985CB6592B32875292AF7FECC51EA"}
+    ],
+    "files_total": 8,
+    "bytes_total": 4083815,
+    "canonical_manifest_sha256": "FE8C6D3A282B7AAF883463FE843156EB6BA1D79F7F7CF0C166B3FF18A6F2C5D3",
+    "selection_lifecycle_file": "accelerated-selection-lifecycles.csv",
+    "selection_cache_file": "accelerated-selection.tst",
+    "forward_lifecycle_file": "accelerated-forward-lifecycles.csv",
+    "forward_cache_file": "accelerated-forward.tst",
+    "accelerated_result_file": "accelerated-mt5-result.json",
+    "qualified_result_file": "qualified-mt5-result.json",
+    "risk_ceiling_result_file": "closed-risk-ceiling-result.json",
+    "profit_realization_result_file": "closed-profit-realization-result.json"
+  },
+  "fixed_accelerator": {
+    "component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "drawdown_responsive_exposure": {
+    "arming_rule": "latch once doubled-cost-stressed closed balance reaches $550",
+    "state": "candidate doubled-cost-stressed closed balance drawdown from its own all-time closed-balance high",
+    "decision_time": "each already-observed post-activation BIRTH before admitting its frozen position",
+    "candidate_drawdown_triggers_pct": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0],
+    "candidate_risk_multipliers": [0.1, 0.25, 0.5, 0.75],
+    "expected_candidates": 72,
+    "action": "when current stressed closed-balance drawdown is at or above the trigger, multiply only the new position's frozen volume/risk and actual/stressed lifecycle economics by the candidate risk multiplier",
+    "recovery": "when the candidate stressed closed-balance drawdown is below the trigger at a later birth, use full frozen exposure automatically",
+    "existing_positions_resized": false,
+    "later_original_births_retained": true,
+    "freed_capacity_synthetic_births": false,
+    "per_scaled_position_modeling_reserve_usd": 0.1,
+    "selection_profit_uncertainty_reserve_usd": 100.0,
+    "permanent_terminal_stop": false
+  },
+  "selection_observation": {
+    "births": 1297,
+    "closed_lifecycles": 1297,
+    "actual_net_usd": 2185.39,
+    "stressed_net_usd": 2095.664,
+    "activation_time_server": "2025.04.23 17:30:00",
+    "activation_actual_balance_usd": 584.85,
+    "activation_stressed_balance_usd": 558.418999999997,
+    "post_activation_births": 458,
+    "baseline_post_activation_birth_drawdown_minimum_pct": 0.0,
+    "baseline_post_activation_birth_drawdown_median_pct": 4.741408376575789,
+    "baseline_post_activation_birth_drawdown_ninetieth_percentile_pct": 14.623300959433134,
+    "baseline_post_activation_birth_drawdown_maximum_pct": 22.961218008683,
+    "baseline_post_activation_births_at_or_above_one_pct": 344,
+    "baseline_post_activation_births_at_or_above_eighteen_pct": 17,
+    "native_maximum_equity_drawdown_pct": 28.08781892431453,
+    "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+  },
+  "forward_observation": {
+    "births": 30,
+    "closed_lifecycles": 30,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "drawdown_responsive_exposure_armed": false,
+    "native_maximum_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_net_usd": 19.79,
+    "june_stressed_net_usd": 18.976,
+    "july_actual_net_usd": 3.22,
+    "july_stressed_net_usd": 2.280,
+    "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+  },
+  "qualified_anchor": {
+    "campaign": "dd20-native-gap-july-robustness-mt5-v1",
+    "result_status": "VALID_MT5_COMPLETE_ALL_ECONOMIC_GATES_PASS",
+    "selection_actual_net_usd": 1691.54,
+    "selection_stressed_net_usd": 1626.26,
+    "selection_native_equity_drawdown_pct": 19.55037176500623,
+    "rerun": false
+  },
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4_RECENT_SELECTION", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "selection_drawdown_calibration": {
+    "qualified_native_floor_reserve_percentage_points": 0.25,
+    "accelerated_native_minus_raw_closed_balance_gap_percentage_points": 5.126600915631486,
+    "state_dependent_scaling_and_lattice_reserve_percentage_points": 0.5,
+    "budgeted_formula": "max(qualified native DD + 0.25, worse candidate closed-balance DD + 5.126600916 + 0.5)",
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_gates": {
+    "profit": "after per-scaled-position reserves and a $100 global uncertainty reserve, actual and doubled-cost-stressed net must each strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four candidate actual and stressed epoch nets must be positive",
+    "capital": "actual and stressed candidate closed balances must remain positive",
+    "drawdown": "budgeted native equity DD must be at or below 20%"
+  },
+  "selection_role": {
+    "id": "maximum_conservative_stressed_profit_drawdown_responsive_exposure",
+    "ordering": "maximize conservative stressed selection net, then conservative actual net and recent-epoch stressed net, minimize budgeted DD, prefer the larger trigger and risk multiplier",
+    "maximum_distinct_roles": 1
+  },
+  "output_top_records": 72,
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1,
+    "profit_realization_grid_rerun": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "original_15_combination_rerun": false
+  }
+}

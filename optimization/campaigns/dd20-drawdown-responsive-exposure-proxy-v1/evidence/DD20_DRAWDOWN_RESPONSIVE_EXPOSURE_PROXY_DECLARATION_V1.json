@@ -1,0 +1,89 @@
+{
+  "schema": "zeta-dd20-drawdown-responsive-exposure-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_ALL_CANDIDATE_ECONOMICS_UNOPENED",
+  "campaign": "dd20-drawdown-responsive-exposure-proxy-v1",
+  "predecessor_result_commit": "b82fdc8707e4114a83aba5510029dff31e578b73",
+  "economic_question": "Can reversible state-dependent exposure reduction on new births during candidate stressed closed-balance drawdown retain explosive later profit while reducing the raw/native DD budget enough to beat the qualified anchor inside 20%?",
+  "fixed_accelerator": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "new_mechanism": {
+    "name": "drawdown-responsive new-position exposure multiplier",
+    "arming_balance_usd": 550.0,
+    "observed_activation_time_server": "2025.04.23 17:30:00",
+    "state": "candidate doubled-cost-stressed closed-balance drawdown from its own all-time high at each birth",
+    "candidate_drawdown_triggers_pct": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0],
+    "candidate_risk_multipliers": [0.1, 0.25, 0.5, 0.75],
+    "candidate_count": 72,
+    "action": "multiply only the new position's frozen planned risk and lifecycle economics while the state is at or above the trigger",
+    "recovery": "full frozen exposure resumes automatically at a later birth below the trigger",
+    "existing_positions_resized": false,
+    "later_original_births_retained": true,
+    "freed_capacity_synthetic_births": false,
+    "per_scaled_position_modeling_reserve_usd": 0.1,
+    "selection_profit_uncertainty_reserve_usd": 100.0,
+    "permanent_terminal_stop": false,
+    "closed_exit_grid_repeated": false
+  },
+  "observed_structure": {
+    "post_activation_births": 458,
+    "baseline_stressed_closed_balance_birth_dd_range_pct": [0.0, 22.961218008683],
+    "baseline_birth_dd_median_pct": 4.741408376575789,
+    "baseline_birth_dd_ninetieth_percentile_pct": 14.623300959433134,
+    "births_at_or_above_one_pct": 344,
+    "births_at_or_above_eighteen_pct": 17
+  },
+  "selection_gates": {
+    "profit": "after every $0.10 scaled-position reserve and a $100 global uncertainty reserve, actual and doubled-cost-stressed net must each strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four candidate actual and stressed epoch nets must be positive",
+    "capital": "actual and stressed candidate closed balances must remain positive",
+    "drawdown": "max(qualified native 19.550371765% + 0.25 points, worse candidate closed-balance DD + 5.126600916 points + 0.5 points) <= 20%",
+    "maximum_roles": 1
+  },
+  "forward_gate": {
+    "drawdown_responsive_exposure_armed": false,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_stressed_usd": [19.79, 18.976],
+    "july_actual_stressed_usd": [3.22, 2.280]
+  },
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-drawdown-responsive-exposure-proxy-v1/input/",
+    "files": 8,
+    "bytes": 4083815,
+    "canonical_manifest_sha256": "FE8C6D3A282B7AAF883463FE843156EB6BA1D79F7F7CF0C166B3FF18A6F2C5D3"
+  },
+  "implementation": {
+    "readme_bytes": 4063,
+    "readme_sha256": "DA227217C629F6649AC0B42C7DE3DDBBCB174870A857267AE62E48AB4F687296",
+    "contract_bytes": 7453,
+    "contract_sha256": "675933D7F7CDE9C2346AF0E75BBCE75E1DCCD8C5633A618AF138410E208830EE",
+    "script_bytes": 35376,
+    "script_sha256": "4E3A150EB167DC6ED970227A82A715EFA79E184EFB69DA97841B6B2012A8F502"
+  },
+  "boundary": {
+    "candidate_economics_opened": false,
+    "proxy_process_invocations": 0,
+    "mt5_launched": false,
+    "profit_realization_grid_rerun": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
