@@ -94,7 +94,8 @@ do {
         }
         $terminalIds = @(Get-ExactProcessIds -Name 'terminal64.exe' -ExecutablePath $terminalPath)
         $dashboardIds = @(Get-DashboardProcessIds -DashboardPath $dashboardPath)
-        if ($detail -match "(?m)^LAUNCH=$launchId RESULT=OK$" -and
+        $successMarker = "LAUNCH=$launchId RESULT=OK"
+        if ($detail.IndexOf($successMarker, [System.StringComparison]::Ordinal) -ge 0 -and
             $terminalIds.Count -eq 1 -and $dashboardIds.Count -eq 1) {
             Write-Output "Detached Master is active: terminal PID $($terminalIds[0]), dashboard PID $($dashboardIds[0])."
             exit 0
