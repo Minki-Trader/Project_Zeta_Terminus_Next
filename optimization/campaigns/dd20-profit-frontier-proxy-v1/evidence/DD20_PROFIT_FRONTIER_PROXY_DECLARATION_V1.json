@@ -1,0 +1,93 @@
+{
+  "schema": "zeta-dd20-profit-frontier-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "PROXY_IMPLEMENTATION_FROZEN_ECONOMICS_UNOPENED",
+  "campaign": "dd20-profit-frontier-proxy-v1",
+  "user_objective": {
+    "maximum_tolerated_mt5_equity_drawdown_pct": 20.0,
+    "primary_preference": "explosive actual and doubled-cost-stressed profit inside the hard drawdown budget",
+    "proxy_before_mt5": true,
+    "reason": "The prior exhaustive 15-combination MT5 selection plus forward run was too slow for broad exploration.",
+    "prior_15_combination_restart": false
+  },
+  "economic_parent": {
+    "source_campaign": "portfolio-risk-cap-envelope-v1",
+    "source_result_sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314",
+    "frontier_position_risk_fraction": 0.04,
+    "frontier_aggregate_risk_fraction": 0.18,
+    "selection_actual_net_usd": 1166.89,
+    "selection_stressed_net_usd": 1085.408,
+    "selection_mt5_equity_drawdown_pct": 11.3757,
+    "selection_closed_lifecycles": 2177,
+    "later_actual_net_usd": -1.74,
+    "later_stressed_net_usd": -3.669,
+    "later_mt5_equity_drawdown_pct": 15.8976,
+    "later_closed_lifecycles": 86
+  },
+  "campaign_owned_raw_input": {
+    "path": "optimization/artifacts/raw/dd20-profit-frontier-proxy-v1/input/",
+    "file_count": 3,
+    "total_bytes": 16874215,
+    "manifest_sha256": "8FA3E642B8CFCE607178386119AF480878E3B56EDFD857902666A048B2D266B3",
+    "files": [
+      {"path": "agent-3002-research-lifecycles.csv", "bytes": 16845458, "sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85"},
+      {"path": "risk-cap-search.forward.xml", "bytes": 14914, "sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3"},
+      {"path": "risk-cap-search.xml", "bytes": 13843, "sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B"}
+    ],
+    "copied_not_linked": true
+  },
+  "implementation": {
+    "readme_bytes": 3039,
+    "readme_sha256": "2E986913A0BE4F54BEBADD9AD1FEE378ECB18ED9858ADA91AFE3D8FF54226540",
+    "contract_bytes": 2489,
+    "contract_sha256": "5AC91BA731EAB3C56593A51D2F79E4521F139F5377475BB9DA72656BFC97E165",
+    "script_bytes": 20764,
+    "script_sha256": "4FBA49A154ECE4D7EDF00ED260B88FC66069F014407909EB084E7AC6F85C1435",
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "python_ast_parse": "OK",
+    "text_format": "UTF-8 without BOM, CRLF"
+  },
+  "proxy_contract": {
+    "selection_segment": "agent 3002 segment 3 / pass 13 / 0.04-0.18 / 2022-08-01 through 2026-06-01",
+    "later_segment": "agent 3002 segment 6 / pass 13 forward / 2026-06-01 through 2026-08-01",
+    "selection_split_server": "2024-07-01T00:00:00",
+    "component_count": 6,
+    "weight_grid": [0.50, 0.75, 1.00, 1.25, 1.50, 1.75, 2.00],
+    "exhaustive_combinations": 117649,
+    "proxy_balance": "Start at USD 100 and add each lifecycle actual or stressed net multiplied by its component weight in original close order.",
+    "proxy_drawdown": "The worse of actual and stressed peak-to-current closed-balance percentage drawdowns, with no downward calibration to observed MT5 equity DD.",
+    "selection_gates": [
+      "full selection actual and stressed net positive",
+      "both 23-month blocks actual and stressed net positive",
+      "full and block actual/stressed balances remain positive",
+      "full and block proxy drawdown at or below 20 percent",
+      "all six components retained at multiplier 0.50 or greater"
+    ],
+    "selection_roles": [
+      "maximum full-selection stressed profit",
+      "broad one-step-neighborhood profit plateau",
+      "maximum weaker-block stressed-net uplift versus unweighted base"
+    ],
+    "distinct_role_replacement": "If two roles select the same weights, take the next distinct candidate in the second role's frozen ordering.",
+    "maximum_selected_roles": 3,
+    "later_used_in_selection_or_tuning": false,
+    "later_confirmation_gate": "Positive actual net, positive stressed net, positive balance and proxy drawdown at or below 20 percent; no rescue or retuning.",
+    "maximum_mt5_shortlist": 3
+  },
+  "limitations": [
+    "The fixed observed path does not feed changed weights back into stop geometry, aggregate admission, margin, overlap, balance-dependent sizing or execution.",
+    "Closed-balance proxy drawdown is not MT5 mark-to-market equity drawdown.",
+    "Proxy output can shortlist but cannot establish an economic improvement or authorize Live adoption."
+  ],
+  "boundary": {
+    "selection_proxy_output_opened": false,
+    "later_proxy_output_opened": false,
+    "mt5_launched": false,
+    "mt5_process_owner": 0,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "economic_verdict": null
+  }
+}

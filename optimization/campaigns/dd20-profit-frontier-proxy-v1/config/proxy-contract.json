@@ -1,0 +1,61 @@
+{
+  "schema": "zeta-dd20-profit-frontier-proxy-contract-v1",
+  "campaign": "dd20-profit-frontier-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "lifecycle_path": "optimization/artifacts/raw/dd20-profit-frontier-proxy-v1/input/agent-3002-research-lifecycles.csv",
+    "lifecycle_sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85",
+    "selection_segment_index": 3,
+    "selection_expected": {
+      "closed_lifecycles": 2177,
+      "actual_net_usd": 1166.89,
+      "stressed_net_usd": 1085.408,
+      "mt5_equity_drawdown_pct": 11.3757
+    },
+    "later_segment_index": 6,
+    "later_expected": {
+      "closed_lifecycles": 86,
+      "actual_net_usd": -1.74,
+      "stressed_net_usd": -3.669,
+      "mt5_equity_drawdown_pct": 15.8976
+    }
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "weight_grid": [0.50, 0.75, 1.00, 1.25, 1.50, 1.75, 2.00],
+  "selection_split_server": "2024.07.01 00:00:00",
+  "hard_proxy_drawdown_pct": 20.0,
+  "selection_gates": {
+    "full_actual_net_positive": true,
+    "full_stressed_net_positive": true,
+    "both_block_actual_net_positive": true,
+    "both_block_stressed_net_positive": true,
+    "full_and_block_balances_positive": true,
+    "full_and_block_proxy_drawdown_at_or_below_hard_cap": true,
+    "all_six_components_retained": true
+  },
+  "roles": {
+    "maximum_stressed_profit": "maximize full-selection stressed net, then actual net, then minimize proxy drawdown",
+    "broad_profit_plateau": "maximize median stressed net across self and eligible one-step grid neighbors, then broad-support count, then full stressed net",
+    "balanced_half_stability": "maximize the lesser of the two block stressed-net uplift ratios versus the unweighted base, then full stressed net, then minimize proxy drawdown"
+  },
+  "plateau_neighbor_floor_fraction": 0.90,
+  "maximum_distinct_selection_roles": 3,
+  "later_confirmation": {
+    "used_in_selection_or_weight_tuning": false,
+    "actual_net_positive": true,
+    "stressed_net_positive": true,
+    "proxy_drawdown_at_or_below_hard_cap": true,
+    "failed_role_rescue_or_retune": false
+  },
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 3
+  }
+}
