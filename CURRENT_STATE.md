@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0304`
+- Latest state ID: `STATE-0305`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-capital-composition-mt5-v1` is compiled and frozen with economics unopened. It materializes only proxy survivor `3.0/3.0/1.0/2.5/1.0/0.0` at fixed `0.04/0.18`, unique Magic `260828811..260828816` and a separate physical Portable. One selection plus one custom-forward pass may run after the implementation commit; the original 15-point matrix remains preserved without rerun.
+- Active optimization boundary: `dd20-capital-composition-mt5-v1` remains economics-unopened after a one-value optimizer configuration rejection before Tester start. Corrected invocation is one normal real-tick selection run followed by one normal isolated-forward run of the same fixed `3.0/3.0/1.0/2.5/1.0/0.0` candidate. No matrix and no preserved 15-point rerun.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

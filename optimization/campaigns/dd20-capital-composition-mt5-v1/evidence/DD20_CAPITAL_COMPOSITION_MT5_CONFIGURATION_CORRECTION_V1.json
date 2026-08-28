@@ -1,0 +1,76 @@
+{
+  "schema": "zeta-dd20-capital-composition-mt5-configuration-correction-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "CORRECTED_READY_ECONOMICS_UNOPENED",
+  "campaign": "dd20-capital-composition-mt5-v1",
+  "implementation_commit": "b55cc2a",
+  "implementation_declaration_sha256": "828C4274D333CB979B456F64572178FF436446968931588EC3129FD215D654DD",
+  "non_economic_attempt": {
+    "terminal_pid": 28328,
+    "started_local": "2026-08-28T16:42:10.3127162+09:00",
+    "condition": "MT5 rejected an optimization parameter whose start and stop were both 0.04.",
+    "terminal_message": "tester optimization cannot be started",
+    "terminal_code": -1000012361,
+    "tester_started": false,
+    "reports_created": 0,
+    "candidate_lifecycle_files_created": 0,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "raw_log_path": "optimization/artifacts/raw/dd20-capital-composition-mt5-v1/non-economic-attempts/attempt-1-one-point-optimization-settings-error.log",
+    "raw_log_bytes": 3614,
+    "raw_log_sha256": "5C19E726896B4B9C6D82E9D708E02C9829636D5B32AEDE5314368FF06DA28125"
+  },
+  "correction": {
+    "method": "Run the same fixed candidate once over selection and once over the isolated later interval as two serial non-optimization real-tick tests.",
+    "candidate_source_changed": false,
+    "candidate_ex5_changed": false,
+    "candidate_identity_changed": false,
+    "candidate_economic_inputs_changed": false,
+    "optimized_parameters": 0,
+    "selection_config": {
+      "path": "optimization/campaigns/dd20-capital-composition-mt5-v1/mt5/config/selection.ini",
+      "bytes": 599,
+      "sha256": "AAD2B53928CF9694BC5972157DD6599D2A430433C5E79A6D99A898F07085EAEB",
+      "interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+      "optimization": false
+    },
+    "forward_config": {
+      "path": "optimization/campaigns/dd20-capital-composition-mt5-v1/mt5/config/forward.ini",
+      "bytes": 597,
+      "sha256": "34BD36DE9D4BB409A5F538E35FA9902EF3A6AEE9EA79ABF4B02313E1A6D721C9",
+      "interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+      "optimization": false
+    },
+    "candidate_set": {
+      "path": "optimization/campaigns/dd20-capital-composition-mt5-v1/mt5/MQL5/Profiles/Tester/ZetaOptimization/dd20-capital-composition-mt5-v1/candidate.set",
+      "bytes": 1214,
+      "sha256": "EF51B2B428F5DAA4BB88C3273E046DE4B80263BDD315D25BE08489052C9C7F62"
+    },
+    "active_configuration_file_count": 3,
+    "active_configuration_total_bytes": 2410,
+    "active_configuration_manifest_sha256": "1EB135728077099BACE874D952398F482A1DD0E3E160775998CF6055768E78A4",
+    "runtime_configuration_mismatches": 0,
+    "readme_bytes": 2528,
+    "readme_sha256": "9E33ED7808A01D482CFCA700C919837EAC4295D0B5717951010C966559026F9F"
+  },
+  "frozen_candidate": {
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "component_risk_multipliers": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+    "source_manifest_sha256": "E5062C7C830C8F7552C6E1E8E43FAF0106F8EEA4B1CFF3EA97C966676C28EED3",
+    "ex5_sha256": "4B010C24436B27A4CFEFC3CA8DB9E762C4A9DD30ADF6EFEB8AA83ADE8638A172",
+    "prior_15_combination_restart": false
+  },
+  "boundary": {
+    "dedicated_runtime_process_owners": 0,
+    "terminal_startup_account_synchronization_logged": true,
+    "assistant_direct_broker_state_query": false,
+    "ea_initialized": false,
+    "broker_order_or_account_mutation": false,
+    "selection_economics_opened": false,
+    "forward_economics_opened": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "automatic_live_promotion": false
+  }
+}

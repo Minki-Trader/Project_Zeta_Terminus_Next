@@ -14,7 +14,7 @@ The zero-weight impulse-passive component is explicitly disabled in this tester-
 
 ## Economic run
 
-The single candidate uses real ticks from 2022-08-01 through 2026-06-01 for selection and the already isolated 2026-06-01 through 2026-08-01 custom forward interval. The preserved `0.04 / 0.18` reports remain the exact economic comparator; they are not rerun. The hard decision budget is `20%` MT5 equity drawdown in both intervals, with actual and doubled-cost-stressed net retained.
+The single candidate uses real ticks from 2022-08-01 through 2026-06-01 for selection and a second isolated real-tick run from 2026-06-01 through 2026-08-01. The preserved `0.04 / 0.18` reports remain the exact economic comparator; they are not rerun. The hard decision budget is `20%` MT5 equity drawdown in both intervals, with actual and doubled-cost-stressed net retained.
 
 Only complete valid economic output can decide this hypothesis. Compilation, runtime, history, configuration, report, logging, design or engineering defects are correction states without an economic verdict or retry limit.
 
@@ -22,4 +22,4 @@ The EA has unique Optimization identity, Magic `260828811..260828816`, state, re
 
 ## Current boundary
 
-The isolated EA compiled with MetaEditor build 6140 at `0 errors / 0 warnings`. Source, configuration, EX5 and the physical dedicated Portable are frozen with no MT5 economic output opened. The implementation declaration is `evidence/DD20_CAPITAL_COMPOSITION_MT5_IMPLEMENTATION_FREEZE_V1.json`; commit and push it before the one-candidate run.
+The isolated EA compiled with MetaEditor build 6140 at `0 errors / 0 warnings`. The initial one-value optimizer invocation was rejected before Tester start, report or lifecycle output. Configuration now uses one normal selection run and one normal isolated-forward run with the same fixed candidate; this correction has no economic verdict. Commit and push `evidence/DD20_CAPITAL_COMPOSITION_MT5_CONFIGURATION_CORRECTION_V1.json` before retrying.
