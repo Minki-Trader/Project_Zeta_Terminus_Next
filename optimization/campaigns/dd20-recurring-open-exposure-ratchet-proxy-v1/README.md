@@ -33,3 +33,13 @@ The independent forward must remain exact and unarmed at actual/stressed `+$23.0
 ## Declared boundary
 
 All `27` candidate economics are unopened. The copied raw input contains `8` files / `12,155,742` bytes with canonical manifest `F0FEF6A4A6029ED9B55534EC1AA3031321FFD2B1FF16B59A16A76D37F48D339A`. Freeze and push this declaration before exactly one proxy process opens the candidate frontier.
+
+## Proxy result
+
+Declaration commit `bd14ccaab4bb354e40e34668f037c744db6b4a17` reached `origin/main` before one process evaluated all `27` paths in `0.4920819` seconds. Every copied input, lifecycle/native/sampled anchor, predecessor identity, zero-error balance alignment, action-delta identity, lifecycle-clear rearm and forward non-arming check passed. Every candidate released open exposure across `3..76` episodes and affected `4..101` unique positions. Positive/capital/epoch gates passed `18`, conservative profit passed `13`, and **budgeted DD passed zero**, so no MT5 shortlist exists.
+
+Maximum conservative profit comes from trigger `18%`, retain `0.50`. Three releases affecting five positions cost `$75` and leave actual/stressed `+$2,070.58 / +$1,980.854`, conservative `+$1,995.58 / +$1,905.854`. Its worse sampled-equity DD is `35.543947%` and budgeted native DD is `36.237509%`.
+
+The family minimum DD is trigger `12%`, retain `0.50`. Six releases affecting seven positions cost `$150` and retain actual/stressed `+$2,059.095 / +$1,969.369`, conservative `+$1,984.095 / +$1,894.369`. Its worse sampled-equity DD remains `35.091642%` and budgeted native DD is `35.785203%`, missing the hard limit by `15.785203` points.
+
+This is a valid economic empty frontier, not an environment, design or engineering failure. Resetting the high-watermark after each lifecycle-clear cooldown permits successive lower local peaks, so action reserves and released winners create a staircase loss against the unchanged global account high. Recurrence without a persistent global floor therefore worsens full-path relative DD even when profit remains high. Forward stays exact and unarmed at `+$23.01 / +$21.256`, native DD `12.436759%`, with positive June and July. Freeze this family without MT5. Continue proxy-first with an economically distinct persistent global-high drawdown regime that jointly releases existing exposure and constrains later births until global recovery; do not retune this local-ratchet grid or rerun any closed path.
