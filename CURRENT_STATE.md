@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0296`
+- Latest state ID: `STATE-0297`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -19,11 +19,11 @@ Last updated: 2026-08-28
 - Existing real-account owner: exact RLO1 Live PID `23180` only; detached preflight PID `31064` stopped normally and no second `terminal64.exe` was observed
 - User V7 Live direction: `EFFECTIVE_AFTER_GUARDED_RESTART`
 
-Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached-launch commit `5cd7a955410444d86269f3ef20bbf72266900f9d` and post-trade continuity correction `3cf18efa76f4e5c33a113f9f0b422973526cf5d2` both reached `origin/main` before the successful retry. Scheduler-owned preflight PID `31064` passed exact RLO1/account `0/0` with balance/equity `$105.20/$105.20` and stopped normally; final Live PID `23180` passed the same release's exact `1/1` handshake. Korean dashboard PID `19280` is visible and responding. Stable Windows PowerShell host PID `11700` is a child of Task Scheduler service `svchost.exe` PID `2560`, remains running with task result `267009`, and anchors both children outside the Codex process lifetime. Local Live snapshot sequence `5143` is healthy, connected/account-matched and zero-alert with no position, pending order, margin or planned risk; SHA-256 is `8C0B0277AEC8B21A608BC4971B4EAA45ED786B6AA400D9DC7B1B5080E82B828B`. The canonical recorder state advanced after final Live startup at local `10:37:29`. The lifetime patch and guarded recovery are complete.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached recovery remains exact Live PID `23180` with Korean dashboard PID `19280`. After the user narrowed the requirement to Codex-lifetime breakaway only, commits `e0349a2cb882e8a9f033144ead5223968655b778` and `626375543bfc07a111cab6787a0542136d3df6c2` replaced the scheduled/resident host with a one-shot `Win32_Process.Create` broker and corrected only its CRLF completion-marker read. The committed one-shot worker restored both existing windows without duplication and exited. Scheduled task `Project Zeta Terminus Next Master Runtime` was then unregistered and old resident host PID `11700` ended; exact Live PID `23180` and dashboard PID `19280` remained alive. No matching scheduled task, PowerShell host, PID/health monitor or automatic restart remains. Local Live snapshot sequence `5157` is healthy with entries `1/1` and zero alert.
 
 ## Active work
 
-- Active engineering boundary: user narrowed the launcher scope to Codex-lifetime breakaway only; commit/push the one-shot Windows broker replacement, then remove the scheduled task and resident PID loop without restarting Live
+- Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
