@@ -16,6 +16,12 @@ Full paired-forward DD adds `3.2281682805` points plus `0.5`. Independent July s
 
 Exactly one role may freeze: maximum conservative stressed selection profit, then conservative actual, raw stressed, recent-selection stressed, conservative July stressed, full-pair stressed, weaker-month stressed and lower budgeted DD; an exact economic tie prefers the lower cap and then the larger addition step. The proxy records individual gate counts and top diagnostics and may nominate at most one MT5 hypothesis.
 
-## Current boundary
+## Result
 
-The independent input is eight copied files totaling `21,289,416` bytes, including the closed constant-ladder result used only to prove every new cap binds. Candidate selection, paired-forward, June, July, ranking and shortlist economics are unopened. Commit and push this declaration before the single proxy invocation. No MT5, Live, Lab, broker-state query, prior candidate or original-15 rerun is authorized.
+The single proxy process exited `0` in `1.0329898` seconds and evaluated all `168` new binding-cap paths plus the closed calibration row. Every lifecycle/native/proxy anchor and the closed-path construction gate passed.
+
+All `168` candidates were positive and conservatively exceeded the qualified MT5 profit floor. However, `0` passed budgeted DD and `0` passed every epoch, so the selection conjunction and all conditional forward/month counts are zero. There is no MT5 shortlist.
+
+The maximum-profit diagnostic was step `$50`, cap `60`: proxy actual/stressed `+$13,015.3142 / +$12,517.3760`, conservative `+$7,267.4562 / +$6,988.2869`, but budgeted DD remained `48.924974%`. A hard terminal cap therefore preserves much of the explosive profit but does not fix the earlier low-step exposure ramp that creates the DD and epoch failures.
+
+This is a valid economic empty frontier. The qualified MT5 result remains the active success anchor. This capped grid, the constant ladder, all MT5 anchors and the original 15 combinations remain closed without rerun. The next distinct proxy will delay acceleration until a stressed closed-profit buffer has accumulated, retain the `$150` baseline slope before that point, and cap only the later accelerated regime.

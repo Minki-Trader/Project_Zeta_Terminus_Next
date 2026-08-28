@@ -1,0 +1,126 @@
+{
+  "schema": "zeta-dd20-capped-profit-accelerator-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE",
+  "campaign": "dd20-capped-profit-accelerator-proxy-v1",
+  "frozen_declaration_commit": "e336d4851ceb08ffaa75a188364f10386a984293",
+  "run": {
+    "process_invocations": 1,
+    "process_exit_code": 0,
+    "wall_time_seconds": 1.0329898,
+    "candidate_pairs": 168,
+    "evaluation_rows_including_closed_anchor": 169,
+    "selection_eligible_candidates": 0,
+    "paired_forward_eligible_candidates": 0,
+    "june_eligible_candidates": 0,
+    "raw_july_eligible_candidates": 0,
+    "final_eligible_candidates": 0,
+    "selection_winner": null,
+    "mt5_shortlist": []
+  },
+  "anchor_reproduction": {
+    "qualified_selection_lifecycle_and_native_anchor": "PASS",
+    "qualified_forward_lifecycle_and_native_anchor": "PASS",
+    "qualified_selection_proxy_anchor": "PASS",
+    "qualified_paired_proxy_anchor": "PASS",
+    "qualified_continuous_july_anchor": "PASS",
+    "closed_constant_ladder_candidate_construction": "PASS"
+  },
+  "fixed_identity": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01
+  },
+  "search": {
+    "addition_step_grid_values": 18,
+    "maximum_day_multiplier_cap_grid_values": 11,
+    "candidate_pairs_after_binding_filter": 168,
+    "all_candidate_caps_bind_on_closed_uncapped_paths": true,
+    "closed_constant_ladder_paths_reused_as_candidates": 0
+  },
+  "selection_gate_counts": {
+    "positive": 168,
+    "conservative_profit_strictly_above_qualified": 168,
+    "budgeted_drawdown_at_or_below_20_percent": 0,
+    "all_four_epochs": 0,
+    "all_selection_gates": 0
+  },
+  "maximum_profit_diagnostic": {
+    "addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 60,
+    "proxy_actual_net_usd": 13015.3142380952,
+    "proxy_stressed_net_usd": 12517.3759523813,
+    "conservative_actual_net_usd": 7267.4561904762,
+    "conservative_stressed_net_usd": 6988.2869404764,
+    "raw_closed_balance_drawdown_pct": 46.5528230411,
+    "calibrated_mt5_drawdown_pct": 48.6749737952,
+    "budgeted_selection_drawdown_pct": 48.9249737952,
+    "maximum_day_multiplier": 60,
+    "profit_gate": true,
+    "drawdown_gate": false,
+    "all_epochs_gate": false
+  },
+  "closed_qualified_anchor": {
+    "addition_step_usd": 150.0,
+    "uncapped": true,
+    "selection_proxy_actual_net_usd": 1763.4818571429,
+    "selection_proxy_stressed_net_usd": 1693.3220714286,
+    "selection_proxy_raw_closed_balance_drawdown_pct": 17.4282210109,
+    "selection_observed_actual_net_usd": 1691.54,
+    "selection_observed_stressed_net_usd": 1626.26,
+    "selection_observed_native_mt5_equity_drawdown_pct": 19.550371765,
+    "selection_budgeted_drawdown_pct": 19.800371765,
+    "maximum_day_multiplier": 12,
+    "candidate_rerun": false,
+    "retained": true
+  },
+  "calibration": {
+    "selection_native_minus_raw_gap_percentage_points": 2.1221507541,
+    "selection_drawdown_uncertainty_reserve_percentage_points": 0.25,
+    "incremental_profit_retention_fraction": 0.5,
+    "selection_profit_uncertainty_reserve_usd": 50.0,
+    "paired_native_minus_raw_gap_percentage_points": 3.2281682805,
+    "paired_drawdown_uncertainty_reserve_percentage_points": 0.5,
+    "continuous_july_actual_shortfall_usd": 6.08,
+    "continuous_july_stressed_shortfall_usd": 6.476,
+    "continuous_july_uncertainty_reserve_usd": 1.0
+  },
+  "raw_artifact": {
+    "path": "optimization/artifacts/raw/dd20-capped-profit-accelerator-proxy-v1/output/proxy-result.json",
+    "bytes": 193335,
+    "sha256": "A369F31EB1A98FD075984A9FF1476E55B20863DC0E3196F0A0D3E10384494405"
+  },
+  "implementation": {
+    "contract_sha256": "AD45CA30C1F7B32CC7DC185A19EAF9B048D2EA1DA27EF6EF011209FEAE73817D",
+    "script_sha256": "3B1313D6C517BA0B9351E21266EA0A09E19C67542CEF596B85825E8F1DC6C509",
+    "input_files": 8,
+    "input_bytes": 21289416,
+    "input_manifest_sha256": "3355E8FE4DE3FA5BA7946887280AD5557E3E820875E81A1F0C6A4CA1BFBF895B"
+  },
+  "economic_verdict": {
+    "classification": "CAPPED_ACCELERATOR_EARLY_RAMP_DD_FRONTIER_EMPTY_NO_MT5_SHORTLIST",
+    "valid_economic_result": true,
+    "new_candidate_qualified": false,
+    "qualified_success_anchor_retained": true,
+    "interpretation": "Every one of the 168 binding-cap paths remained positive and conservatively exceeded the qualified profit floor, but none passed the budgeted DD gate or every selection epoch. Clipping only the terminal maximum multiplier preserves profit but does not repair the drawdown created by activating the low-step ladder too early. This is a valid economic empty frontier, not an environment, design, invocation or engineering failure.",
+    "successor_information": "Keep the qualified anchor and change the timing of acceleration. A distinct deferred accelerator should follow the exact $150 baseline slope until a causally observed stressed-profit buffer is accumulated, then use a faster post-threshold step with a maximum multiplier cap. Do not rerun this capped grid, the constant ladder, any MT5 anchor or the original 15 combinations."
+  },
+  "boundary": {
+    "proxy_rerun": false,
+    "capped_accelerator_grid_rerun": false,
+    "constant_ladder_grid_rerun": false,
+    "qualified_success_candidate_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "mt5_launched": false,
+    "maximum_mt5_shortlist_size": 1,
+    "free_space_gib_after_run": 77.542,
+    "research_artifacts_preserved": true,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
