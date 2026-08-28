@@ -1,0 +1,122 @@
+{
+  "schema": "zeta-dd20-local-error-profit-frontier-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_ALL_ECONOMICS_UNOPENED",
+  "campaign": "dd20-local-error-profit-frontier-proxy-v1",
+  "predecessor_closed_result_commit": "7635c9c59575db685c00f6bfcc9b3b0f06a3e0ab",
+  "objective": "maximize actual and doubled-cost-stressed profit above the first fully qualified DD20 MT5 candidate using composition-local upper error envelopes while retaining the hard 20 percent native equity-DD and continuous June-July gates",
+  "distance_model": {
+    "metric": "unweighted_l1_component_multiplier_distance",
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "anchor_ids": ["base", "near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "upper_envelope_formula": "max(0, min over anchors(anchor observed error + frozen maximum pairwise absolute-error slope * candidate-to-anchor L1 distance))",
+    "nonnegative_anchor_error_reproduction_and_negative_error_conservative_clamp_required": true
+  },
+  "search": {
+    "component_weight_grids": [
+      [1.55, 1.65, 1.75, 1.85, 1.95, 2.05, 2.15, 2.25, 2.35, 2.45],
+      [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+      [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+      [2.8, 2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0],
+      [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2],
+      [0.0]
+    ],
+    "compositions": 204490,
+    "evaluation_rows_including_external_anchors": 204495,
+    "exact_rows_reused_from_closed_integer_tenth_grid": 0,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "addition_step_usd": 150.0,
+    "maximum_distinct_roles": 1
+  },
+  "qualified_success_floor": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "observed_selection_actual_net_usd": 1691.54,
+    "observed_selection_stressed_2x_cost_net_usd": 1626.26,
+    "observed_selection_native_mt5_equity_drawdown_pct": 19.55037176500623,
+    "candidate_rerun": false
+  },
+  "selection_drawdown_model": {
+    "anchor_observed_minus_raw_gap_percentage_points": [-1.4658628896, 0.833488516952653, -1.311270148539697, 1.7826874562839, 2.12215075410623],
+    "frozen_l1_lipschitz_slope_percentage_points_per_weight": 0.8629081267,
+    "binding_pair": ["near_miss", "exposure_margin"],
+    "binding_pair_l1_distance": 1.1,
+    "uncertainty_reserve_percentage_points": 0.25,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_profit_model": {
+    "anchor_proxy_minus_observed_actual_error_usd": [0.0, -235.0664166667, 659.7999404762, 255.6802142857, 71.9418571429],
+    "anchor_proxy_minus_observed_stressed_error_usd": [0.0, -240.3812738094, 615.1108690477, 234.2145000001, 67.0620714286],
+    "frozen_actual_l1_lipschitz_slope_usd_per_weight": 446.1333008658,
+    "frozen_stressed_l1_lipschitz_slope_usd_per_weight": 431.4507034632,
+    "binding_pair": ["near_miss", "exposure_margin"],
+    "binding_pair_l1_distance": 1.1,
+    "uncertainty_reserve_usd": 50.0,
+    "conservative_actual_and_stressed_must_strictly_exceed_qualified_success": true
+  },
+  "paired_forward_drawdown_model": {
+    "anchor_observed_minus_raw_gap_percentage_points": [1.9550709531, 5.602182507732568, 0.702561031948552, 4.5577325317609, 3.228168280513035],
+    "frozen_l1_lipschitz_slope_percentage_points_per_weight": 1.2249053689,
+    "binding_pair": ["near_miss", "high_exposure"],
+    "binding_pair_l1_distance": 4.0,
+    "uncertainty_reserve_percentage_points": 0.5,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "continuous_july_model": {
+    "anchor_ids": ["near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "anchor_proxy_minus_observed_actual_error_usd": [4.69, 5.47, 6.82, 6.08],
+    "anchor_proxy_minus_observed_stressed_error_usd": [4.483, 5.553, 6.8535, 6.476],
+    "frozen_actual_l1_lipschitz_slope_usd_per_weight": 1.9363636364,
+    "frozen_stressed_l1_lipschitz_slope_usd_per_weight": 2.155,
+    "binding_pair": ["near_miss", "exposure_margin"],
+    "binding_pair_l1_distance": 1.1,
+    "uncertainty_reserve_usd": 1.0,
+    "conservative_actual_and_stressed_must_be_positive": true
+  },
+  "selection_role": {
+    "id": "maximum_composition_local_conservative_selection_stressed_profit_above_qualified_success",
+    "ordering": "maximize composition-local conservative selection stressed net, then conservative selection actual net, conservative July stressed net, full paired-forward stressed net, weaker independent-month stressed net, recent-selection stressed net, minimize budgeted selection DD, minimize budgeted paired-forward DD, then lexicographic weights"
+  },
+  "frozen_implementation": {
+    "readme_bytes": 2898,
+    "readme_sha256": "021236B46E2D5447846AD3A8520948FF18C009ED95D696A387C8A2D01C30E2FE",
+    "contract_bytes": 19492,
+    "contract_sha256": "C9DE5982AD797475CE396BEF065C3D14C346769BAFE52B75F177480A8637B5BF",
+    "script_bytes": 59221,
+    "script_sha256": "58BB1C85299BDF28B4812D5F7F26F9F91DACF253AC61506D85B42149A0AAA392",
+    "python_ast_parse": "PASS",
+    "json_parse": "PASS"
+  },
+  "independent_input": {
+    "path": "optimization/artifacts/raw/dd20-local-error-profit-frontier-proxy-v1/input/",
+    "files": 19,
+    "bytes": 34559535,
+    "canonical_manifest_sha256": "F79651BAD1CD082DA6E1B3E89BCB59576F4567EC57F1C2C75D7523E8F4475BB8",
+    "physical_copy_no_cross_family_mutable_link": true
+  },
+  "boundary": {
+    "selection_economics_opened": false,
+    "paired_forward_economics_opened": false,
+    "june_economics_opened": false,
+    "july_economics_opened": false,
+    "ranking_opened": false,
+    "proxy_output_exists": false,
+    "mt5_launched": false,
+    "maximum_mt5_shortlist_size": 1,
+    "closed_global_error_grid_rerun": false,
+    "qualified_success_candidate_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
