@@ -1,0 +1,153 @@
+{
+  "schema": "zeta-dd20-native-gap-july-robustness-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST",
+  "campaign": "dd20-native-gap-july-robustness-proxy-v1",
+  "frozen_declaration_commit": "37edf73",
+  "execution": {
+    "process_exit_code": 0,
+    "wall_time_seconds": 14.3433941,
+    "compositions": 49049,
+    "evaluation_rows_including_external_anchors": 49053,
+    "selection_proxy_anchor_reproduction_gate": true,
+    "external_native_selection_anchor_gate": true,
+    "paired_proxy_dd_anchor_reproduction_gate": true,
+    "external_native_forward_anchor_gate": true,
+    "continuous_july_anchor_gate": true
+  },
+  "funnel": {
+    "selection_eligible": 1509,
+    "paired_forward_eligible": 1509,
+    "june_eligible": 1509,
+    "raw_july_eligible": 815,
+    "conservative_july_final_eligible": 647,
+    "mt5_shortlist": 1
+  },
+  "winner": {
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_risk_multipliers": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "selection": {
+      "actual_net_usd": 1763.4818571429,
+      "stressed_2x_cost_net_usd": 1693.3220714286,
+      "raw_closed_balance_drawdown_pct": 17.4282210109,
+      "worst_positive_native_gap_percentage_points": 1.7826874563,
+      "calibrated_mt5_drawdown_pct": 19.2109084672,
+      "uncertainty_reserve_percentage_points": 0.75,
+      "budgeted_mt5_drawdown_pct": 19.9609084672,
+      "budgeted_drawdown_headroom_percentage_points": 0.0390915328,
+      "accepted_lifecycles": 1291,
+      "aggregate_risk_skips": 29,
+      "disabled_component_skips": 857,
+      "minimum_balance_usd": 99.565,
+      "actual_delta_vs_preserved_comparator_usd": 596.5918571429,
+      "actual_improvement_vs_preserved_comparator_pct": 51.1266577949,
+      "stressed_delta_vs_preserved_comparator_usd": 607.9140714286,
+      "stressed_improvement_vs_preserved_comparator_pct": 56.0078856456,
+      "actual_retained_vs_exposure_margin_proxy_pct": 39.8471123087,
+      "stressed_retained_vs_exposure_margin_proxy_pct": 40.5442787515,
+      "components_stressed_net_usd": {
+        "range_61": 615.1606547619,
+        "range_64": 193.0736190476,
+        "us100_cross": 76.4846904762,
+        "intraday": 610.2639285714,
+        "return": 198.3391785714,
+        "impulse": 0.0
+      },
+      "epoch_stressed_net_usd": {
+        "E1": 109.207,
+        "E2": 61.589,
+        "E3": 266.4335,
+        "E4_RECENT_SELECTION": 1256.0925714286
+      }
+    },
+    "paired_forward": {
+      "actual_net_usd": 28.87,
+      "stressed_2x_cost_net_usd": 27.236,
+      "raw_closed_balance_drawdown_pct": 9.208590762,
+      "worst_positive_native_gap_percentage_points": 5.6021825077,
+      "calibrated_mt5_drawdown_pct": 14.8107732697,
+      "uncertainty_reserve_percentage_points": 0.5,
+      "budgeted_mt5_drawdown_pct": 15.3107732697,
+      "accepted_lifecycles": 30,
+      "aggregate_risk_skips": 1,
+      "minimum_balance_usd": 100.0,
+      "stressed_delta_vs_exposure_margin_proxy_usd": 3.249
+    },
+    "independent_june": {
+      "actual_net_usd": 19.57,
+      "stressed_2x_cost_net_usd": 18.48,
+      "raw_closed_balance_drawdown_pct": 9.208590762,
+      "accepted_lifecycles": 15
+    },
+    "independent_july": {
+      "actual_net_usd": 9.3,
+      "stressed_2x_cost_net_usd": 8.756,
+      "raw_closed_balance_drawdown_pct": 8.0046863735,
+      "accepted_lifecycles": 15,
+      "worst_observed_actual_shortfall_usd": 6.82,
+      "worst_observed_stressed_shortfall_usd": 6.8535,
+      "uncertainty_reserve_usd": 1.0,
+      "conservative_actual_net_usd": 1.48,
+      "conservative_stressed_2x_cost_net_usd": 0.9025,
+      "components_stressed_net_usd": {
+        "range_61": -0.848,
+        "range_64": -1.6,
+        "us100_cross": 0.0,
+        "intraday": 13.248,
+        "return": -2.044,
+        "impulse": 0.0
+      }
+    }
+  },
+  "calibration": {
+    "selection_observed_minus_raw_gaps_percentage_points": [-1.4658628896, 0.8334885169, -1.3112701486, 1.7826874563],
+    "selection_worst_positive_gap_percentage_points": 1.7826874563,
+    "paired_forward_observed_minus_raw_gaps_percentage_points": [1.9550709531, 5.6021825077, 0.702561032, 4.5577325318],
+    "paired_forward_worst_positive_gap_percentage_points": 5.6021825077,
+    "continuous_july_proxy_minus_observed_actual_shortfalls_usd": [4.69, 5.47, 6.82],
+    "continuous_july_proxy_minus_observed_stressed_shortfalls_usd": [4.483, 5.553, 6.8535]
+  },
+  "economic_verdict": {
+    "classification": "NATIVE_GAP_AND_CONTINUOUS_JULY_ROBUSTNESS_PRESERVES_PROFIT_UPLIFT_ONE_MT5_HYPOTHESIS",
+    "selection_actual_positive_gate": true,
+    "selection_stressed_positive_gate": true,
+    "all_selection_epochs_actual_and_stressed_positive_gate": true,
+    "budgeted_selection_drawdown_gate": true,
+    "paired_forward_actual_and_stressed_positive_gate": true,
+    "budgeted_paired_forward_drawdown_gate": true,
+    "independent_june_actual_and_stressed_positive_gate": true,
+    "raw_independent_july_actual_and_stressed_positive_gate": true,
+    "conservative_july_actual_and_stressed_positive_gate": true,
+    "preserved_comparator_actual_and_stressed_profit_uplift_gate": true,
+    "interpretation": "The maximum-profit qualified proxy role improves preserved selection actual/stressed economics by 51.13/56.01 percent while paying the worst observed native-DD gaps and explicit reserves. Its conservative July stressed margin is only $0.9025 and its budgeted selection DD headroom is only 0.0391 percentage points, so it is one bounded MT5 hypothesis rather than confirmed economic success.",
+    "successor_information": "Freeze exactly weights 1.6/0.8/0.4/3.2/1.2/0 in one new dedicated MT5 family. Do not retune to the nearby lower-profit rows, rerun any anchor, or restart the original 15. One real-tick selection and, after a complete valid selection, one full June-July forward may test the hypothesis."
+  },
+  "raw_artifact": {
+    "path": "optimization/artifacts/raw/dd20-native-gap-july-robustness-proxy-v1/output/proxy-result.json",
+    "bytes": 224393,
+    "sha256": "7FADA2E70B6421BECADD06948840FF543F99C9B7979382C08551240DF8267091",
+    "input_manifest_sha256": "8410AE98D84F42877C1284C7C1C2C0E52D13124A4C0621A304794E5FABD79C3E"
+  },
+  "boundary": {
+    "proxy_completed": true,
+    "proxy_holdout_remaining": false,
+    "mt5_shortlist_size": 1,
+    "failed_candidate_rescue_or_retune": false,
+    "mt5_launched": false,
+    "exposure_margin_candidate_rerun": false,
+    "near_miss_candidate_rerun": false,
+    "prior_high_exposure_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

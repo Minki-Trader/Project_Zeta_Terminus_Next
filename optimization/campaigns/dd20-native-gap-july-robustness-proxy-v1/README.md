@@ -17,4 +17,8 @@ The input is a physical 15-file copy with no mutable cross-family link. The orig
 
 ## Current boundary
 
-The contract, economic proxy implementation and independent input are frozen before output. Selection, paired-forward, June, July, ranking and shortlist economics remain unopened. Commit and push this declaration before the single proxy invocation.
+Declaration commit `37edf73` reached `origin/main` before one valid proxy invocation. The process completed all `49,049` candidates in `14.34` seconds without MT5. `1,509` passed selection, the full pair and June; `815` passed raw July and `647` remained after the worst continuous-July shortfalls and the additional `$1` reserve.
+
+The sole maximum-profit role is `1.6 / 0.8 / 0.4 / 3.2 / 1.2 / 0`. Selection actual/stressed proxy net is `+$1,763.4819 / +$1,693.3221`, improving the preserved comparator by `51.13% / 56.01%`. Raw/calibrated/budgeted selection DD is `17.428221% / 19.210908% / 19.960908%`. Full paired-forward actual/stressed is `+$28.87 / +$27.236` at budgeted DD `15.310773%`; June stressed is `+$18.48`, raw July stressed is `+$8.756`, and conservative July stressed is `+$0.9025`.
+
+Status is `VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST`. The narrow budgeted DD headroom and conservative July margin make this exactly one MT5 hypothesis, not confirmed success. All anchors and the original 15 remain closed without rerun.
