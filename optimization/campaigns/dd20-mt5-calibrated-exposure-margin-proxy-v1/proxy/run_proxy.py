@@ -216,18 +216,24 @@ def piecewise_calibration(
     return np.maximum(raw_values, projected), [float(value) for value in slopes]
 
 
-def affine_calibration(
+def exposure_gap_calibration(
     raw_values: np.ndarray,
+    weights: np.ndarray,
     raw_low: float,
     observed_low: float,
+    exposure_low: float,
     raw_high: float,
     observed_high: float,
+    exposure_high: float,
 ) -> tuple[np.ndarray, float, float]:
-    if raw_high <= raw_low + 1.0e-12 or observed_high <= observed_low:
-        raise RuntimeError("paired-forward DD anchors do not define an increasing line")
-    slope = (observed_high - observed_low) / (raw_high - raw_low)
-    intercept = observed_low - slope * raw_low
-    projected = slope * raw_values + intercept
+    if exposure_high <= exposure_low + 1.0e-12:
+        raise RuntimeError("paired-forward anchors do not increase exposure sum")
+    gap_low = observed_low - raw_low
+    gap_high = observed_high - raw_high
+    slope = (gap_high - gap_low) / (exposure_high - exposure_low)
+    intercept = gap_low - slope * exposure_low
+    exposure_sum = np.sum(weights, axis=1)
+    projected = raw_values + slope * exposure_sum + intercept
     return np.maximum(raw_values, projected), float(slope), float(intercept)
 
 
@@ -702,20 +708,23 @@ def main() -> None:
     paired = simulate(paired_events, evaluation_weights, config, [])
     paired_base_index = anchor_indices["base"]
     paired_near_index = anchor_indices["near_miss"]
-    calibrated_paired_dd, paired_slope, paired_intercept = affine_calibration(
+    calibrated_paired_dd, paired_slope, paired_intercept = exposure_gap_calibration(
         paired["raw_drawdown_pct"],
+        evaluation_weights,
         float(paired["raw_drawdown_pct"][paired_base_index]),
         float(
             paired_calibration["base_anchor"][
                 "observed_mt5_equity_drawdown_relative_pct"
             ]
         ),
+        float(np.sum(evaluation_weights[paired_base_index])),
         float(paired["raw_drawdown_pct"][paired_near_index]),
         float(
             paired_calibration["near_miss_anchor"][
                 "observed_mt5_equity_drawdown_relative_pct"
             ]
         ),
+        float(np.sum(evaluation_weights[paired_near_index])),
     )
     paired_reserve = float(
         paired_calibration["uncertainty_reserve_percentage_points"]
@@ -939,8 +948,8 @@ def main() -> None:
             "piecewise_slopes": calibration_slopes,
             "selection_anchors": anchor_records,
             "paired_forward_rule": paired_calibration["rule"],
-            "paired_forward_affine_slope": paired_slope,
-            "paired_forward_affine_intercept": paired_intercept,
+            "paired_forward_gap_slope_per_weight_sum": paired_slope,
+            "paired_forward_gap_intercept": paired_intercept,
         },
         "selection_winner": selection_winner,
         "top_qualified": top_qualified,

@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0319`
+- Latest state ID: `STATE-0320`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-mt5-calibrated-exposure-margin-proxy-v1` is declared and outcome-free. Its `16,807` local compositions redistribute exposure around the closed `2/1.5/2/2.5/1.5/0` upper anchor. Selection uses three MT5 DD anchors plus `0.5` percentage-point reserve; full June/July uses two anchors plus `0.25` reserve, followed by independent June and July gates. The exact near miss, prior candidate and original 15 remain closed without rerun; no MT5 may launch during this proxy.
+- Active optimization boundary: `dd20-mt5-calibrated-exposure-margin-proxy-v1` remains outcome-free after correcting its paired-forward calibration. The first invocation stopped before any economic JSON because raw paired DD moved opposite to observed MT5 DD between anchors. The corrected equation fits observed-minus-raw gap against total exposure, still adds the frozen `0.25`-point reserve, and changes no grid, selection calibration, gate or ranking. Commit/push this correction, then rerun the same proxy; the exact near miss, prior candidate and original 15 remain closed.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

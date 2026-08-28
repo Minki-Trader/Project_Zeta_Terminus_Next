@@ -194,7 +194,7 @@
       }
     },
     "uncertainty_reserve_percentage_points": 0.25,
-    "rule": "affine full-June-July DD projection through the preserved base and near-miss MT5 anchors using sequential paired-period proxy raw DD; take max(raw, projected), then add a frozen 0.25 percentage-point uncertainty reserve before the 20 percent gate"
+    "rule": "fit the observed-minus-raw full-June-July DD gap against total component weight through the preserved base and near-miss MT5 anchors; add the projected gap to each candidate raw DD, take max(raw, projected), then add a frozen 0.25 percentage-point uncertainty reserve before the 20 percent gate"
   },
   "hard_mt5_equity_drawdown_pct": 20.0,
   "selection_gates": {

@@ -1,0 +1,63 @@
+{
+  "schema": "zeta-dd20-mt5-calibrated-exposure-margin-proxy-correction-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "PAIRED_FORWARD_DD_CALIBRATION_CORRECTED_ALL_ECONOMICS_UNOPENED",
+  "campaign": "dd20-mt5-calibrated-exposure-margin-proxy-v1",
+  "declaration_commit": "c71e5ce234755d6551f108a7505e29bbd00caeb0",
+  "non_economic_attempt": {
+    "invocation_number": 1,
+    "process_exit_code": 1,
+    "stopped_condition": "The two paired-forward raw closed-balance DD anchors did not define an increasing affine line.",
+    "raw_output_created": false,
+    "selection_output_created": false,
+    "paired_forward_output_created": false,
+    "june_or_july_output_created": false,
+    "ranking_or_shortlist_created": false,
+    "economic_verdict": null
+  },
+  "diagnosis": {
+    "base_weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+    "base_total_weight": 6.0,
+    "base_proxy_raw_paired_drawdown_pct": 13.94252904693448,
+    "base_observed_mt5_paired_drawdown_pct": 15.8976,
+    "base_observed_minus_raw_gap_percentage_points": 1.9550709530655208,
+    "near_miss_weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "near_miss_total_weight": 9.5,
+    "near_miss_proxy_raw_paired_drawdown_pct": 13.073119622237758,
+    "near_miss_observed_mt5_paired_drawdown_pct": 18.675302129932568,
+    "near_miss_observed_minus_raw_gap_percentage_points": 5.60218250769481,
+    "interpretation": "Closed-balance DD fell while floating-equity MT5 DD rose, so raw paired DD cannot be the independent affine calibration axis. This invalidated only the paired-forward design equation, not any candidate economics."
+  },
+  "correction": {
+    "axis": "total component exposure weight",
+    "rule": "Fit observed-minus-raw paired-forward DD gap against total weight through the two frozen MT5 anchors; add the projected gap to each candidate raw DD; never reduce below raw DD; then add the already frozen 0.25 percentage-point uncertainty reserve.",
+    "gap_slope_percentage_points_per_weight_sum": 1.0420318727512254,
+    "gap_intercept_percentage_points": -4.297120283441831,
+    "hard_mt5_equity_drawdown_pct": 20.0,
+    "uncertainty_reserve_percentage_points": 0.25,
+    "candidate_grid_changed": false,
+    "selection_calibration_changed": false,
+    "economic_gates_or_ranking_changed": false
+  },
+  "corrected_implementation": {
+    "contract_bytes": 10967,
+    "contract_sha256": "6B135F2E470416E10055B0698C9F512889C3EACD94FDF68975D9186A82BD77D9",
+    "script_bytes": 42089,
+    "script_sha256": "7DA403771CB806A9A756378D91231DC9C6D448B76144C0D7DC4C3F800C45625F",
+    "readme_bytes": 2893,
+    "readme_sha256": "5B0151094878503AF7D271AE9A75CDC176DA73210F2F00AE22816F3F39FE31C6",
+    "python_ast_parse": "PASS"
+  },
+  "boundary": {
+    "corrected_proxy_started": false,
+    "economic_output_opened": false,
+    "mt5_launched": false,
+    "near_miss_candidate_rerun": false,
+    "prior_high_exposure_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
