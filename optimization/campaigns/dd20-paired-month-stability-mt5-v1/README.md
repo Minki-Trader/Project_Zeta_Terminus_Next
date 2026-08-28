@@ -27,4 +27,4 @@ The EA has unique Optimization identity, Magic `260828821..260828826`, state, re
 
 ## Current boundary
 
-The hypothesis, source and configuration are frozen before compilation or outcome access. Exactly one new dedicated physical Portable may be created, compiled and used for the declared selection plus full June/July forward. No MT5 tester, report or economic result has opened yet.
+The hypothesis, source and configuration were frozen before compilation or outcome access. The dedicated physical Portable now holds the exact files and the EA compiled on build 6140 at `0 errors / 0 warnings`; EX5 SHA-256 is `7CBB59370764B8299406DF14A8A7546BFC6DFFCBE80B5FD0F43DA227F68C0DBD`. No MT5 tester, report or economic result has opened yet. Commit this implementation freeze before the one declared selection and full June/July forward.

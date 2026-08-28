@@ -1,0 +1,131 @@
+{
+  "schema": "zeta-dd20-paired-month-stability-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "COMPILED_READY_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-paired-month-stability-mt5-v1",
+    "declaration_commit": "951069476afaf17d207055ca445508a99e41682b",
+    "declaration_bytes": 5602,
+    "declaration_sha256": "613A58EDDC058BEE64885A886366E850D280257F1354EFC3A136DB86B5F62C89",
+    "release_id": "OPT-LIVE-V7-DD20PMS1-20260828",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20PMS1-20260828",
+    "magic_range": "260828821..260828826",
+    "tester_only": true
+  },
+  "frozen_hypothesis": {
+    "source_proxy_campaign": "dd20-paired-month-stability-proxy-v1",
+    "source_proxy_result_sha256": "5AE6AA0EC679A0BA406B61211039886DD838BFBD527B5902697301D34871D685",
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "effective_position_risk_fractions_before_aggregate_cap": [0.08, 0.06, 0.08, 0.10, 0.06, 0.0],
+    "zero_weight_component_disabled": true
+  },
+  "implementation": {
+    "source_file_count": 16,
+    "source_total_bytes": 420443,
+    "source_manifest_sha256": "89612D4D5316E85C3C7FA1C6DC68CDF50AA090FB52820EB5197AA632ACCFBD61",
+    "configuration_file_count": 3,
+    "configuration_total_bytes": 2418,
+    "configuration_manifest_sha256": "B3B4F0C6FDB2863B7C8DC5120EE42DF96A14ED2B4E03FCBF45AB5BE36223F7A2",
+    "manifest_algorithm": "Sort slash-normalized campaign-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "runtime_source_and_configuration_parity_files": 19,
+    "runtime_source_and_configuration_mismatches": 0,
+    "inherited_include_modules_byte_equal": 14,
+    "intentionally_changed_include_modules": [
+      "Domain/ZetaDomain.mqh"
+    ],
+    "assembly_changed": true,
+    "cross_campaign_include_or_source_link": false,
+    "economic_change": "Replace only the six frozen exposure multipliers while retaining final executable-volume, planned-risk, stop-geometry and protection behavior."
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2651,
+    "launcher_exit_code": 0,
+    "launcher_returned_before_artifacts_were_flushed": true,
+    "single_compile_invocation": true,
+    "ex5_path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20PairedMonthStabilityMT5V1.ex5",
+    "ex5_bytes": 229376,
+    "ex5_sha256": "7CBB59370764B8299406DF14A8A7546BFC6DFFCBE80B5FD0F43DA227F68C0DBD",
+    "raw_log_path": "optimization/artifacts/raw/dd20-paired-month-stability-mt5-v1/compile/compile-final-20260828.log",
+    "raw_log_bytes": 21194,
+    "raw_log_sha256": "323D861A9FA2E63EBF220F1F5644F08274B829711981788FCCF31B9A6623CFA2"
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-paired-month-stability-mt5-v1-portable/",
+    "physical_copy_source": "optimization/runtime/dd20-capital-composition-mt5-v1-portable/",
+    "physical_copy_source_file_count": 726,
+    "physical_copy_source_logical_bytes": 5780698228,
+    "terminal_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "file_count_after_overlay_and_compile": 744,
+    "logical_bytes_after_overlay_and_compile": 5781349845,
+    "file_reparse_points": 0,
+    "directory_reparse_points": 0,
+    "terminal_file_identity_distinct_from_source_runtime": true,
+    "terminal_target_hardlink_count": 1,
+    "process_owners_at_freeze": 0,
+    "free_space_gib_at_freeze": 88.020,
+    "copied_inert_predecessor_named_files_retained": 35,
+    "copied_inert_predecessor_named_bytes_retained": 3183295,
+    "copied_predecessor_paths_referenced_by_new_ea_or_configuration": false,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_terminal": false,
+    "is_live_terminal": false,
+    "is_lab_terminal": false
+  },
+  "economic_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "isolated_forward_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+    "expected_selection_passes": 1,
+    "expected_forward_passes": 1,
+    "run_forward_after_any_complete_valid_selection": true,
+    "hard_mt5_equity_drawdown_pct": 20.0,
+    "selection_actual_comparator_usd": 1166.89,
+    "selection_stressed_comparator_usd": 1085.408,
+    "forward_actual_and_stressed_must_be_positive": true,
+    "failed_candidate_rescue_or_retune": false,
+    "prior_15_combination_restart": false,
+    "prior_mt5_candidate_restart": false
+  },
+  "non_economic_corrections": [
+    {
+      "condition": "The desktop command wrapper rejected recursive removal of inert predecessor-named files inside the already verified new runtime.",
+      "resolution": "Retained the 35 inert copied files totaling 3,183,295 bytes. Unique EA, Include, SET, report and configuration paths reference none of them; 88.020 GiB remained free.",
+      "tester_started": false,
+      "economic_verdict": null
+    },
+    {
+      "condition": "MetaEditor returned before its asynchronous compile artifacts were flushed.",
+      "resolution": "Observed the artifacts from the same single invocation and froze the normal 0-error/0-warning log and EX5 without recompiling.",
+      "tester_started": false,
+      "economic_verdict": null
+    }
+  ],
+  "boundary": {
+    "compiled": true,
+    "tester_started": false,
+    "selection_report_opened": false,
+    "forward_report_opened": false,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

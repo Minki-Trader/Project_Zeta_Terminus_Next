@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0316`
+- Latest state ID: `STATE-0317`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-paired-month-stability-mt5-v1` has frozen the sole proxy survivor `2/1.5/2/2.5/1.5/0` in an independent source/configuration family. Its dedicated Portable, compilation and economics remain unopened; the next serial action creates that physical runtime, compiles the one EA, then runs exactly one selection plus one full June/July forward. No original 15 or prior candidate rerun.
+- Active optimization boundary: `dd20-paired-month-stability-mt5-v1` has frozen the sole proxy survivor `2/1.5/2/2.5/1.5/0` in an independent dedicated Portable. Source/configuration parity is exact and build 6140 compiled at `0 errors / 0 warnings`; economics remain unopened. The next serial action runs exactly one selection and then one full June/July forward. No original 15 or prior candidate rerun.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
