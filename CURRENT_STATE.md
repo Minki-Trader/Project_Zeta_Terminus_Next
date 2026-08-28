@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0346`
+- Latest state ID: `STATE-0347`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-equity-high-watermark-terminal-lock-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE`. All `37` locks passed budgeted DD, but profit passed `0`; the best `14.5%..16.5%` lock earned only `+$1,428.82 / +$1,373.40`, below the qualified anchor by `$262.72 / $252.86`, because permanent termination discarded the later recovery. Push the result, then continue proxy-first with a distinct nonterminal open-profit realization or temporary exposure-release mechanism; do not retune or rerun this family.
+- Active optimization boundary: `dd20-post-activation-profit-realization-proxy-v1` is declared with all `49` candidate economics unopened. After the fixed accelerator arms at stressed balance `$550`, each `0.05R..2.45R` candidate realizes an eligible position at its target and preserves later original births without synthesizing freed opportunities. Freeze and push this declaration before exactly one proxy process; no MT5 or closed-path rerun is authorized during the proxy.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

@@ -1,0 +1,91 @@
+{
+  "schema": "zeta-dd20-post-activation-profit-realization-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_ALL_CANDIDATE_ECONOMICS_UNOPENED",
+  "campaign": "dd20-post-activation-profit-realization-proxy-v1",
+  "predecessor_result_commit": "a51a57358afbb63b13e1d582535bea27e7822c05",
+  "economic_question": "Can a causal post-activation per-position R-multiple profit realization retain later opportunities, improve stressed profit and reduce the closed-balance drawdown enough to beat the qualified anchor inside the hard 20% native equity-DD budget?",
+  "fixed_accelerator": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "new_mechanism": {
+    "name": "post-activation per-position R-multiple profit realization",
+    "arming_balance_usd": 550.0,
+    "observed_activation_time_server": "2025.04.23 17:30:00",
+    "eligible_positions": "recorded entry at or after activation",
+    "candidate_profit_targets_r": [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15, 1.20, 1.25, 1.30, 1.35, 1.40, 1.45, 1.50, 1.55, 1.60, 1.65, 1.70, 1.75, 1.80, 1.85, 1.90, 1.95, 2.00, 2.05, 2.10, 2.15, 2.20, 2.25, 2.30, 2.35, 2.40, 2.45],
+    "candidate_count": 49,
+    "target_step_r": 0.05,
+    "trigger": "recorded peak_mark_r reaches the candidate target",
+    "counterfactual_exit_time": "recorded peak_time_server as a conservative delayed realization time",
+    "minimum_absolute_realization_reserve_usd": 0.25,
+    "planned_risk_realization_reserve_fraction": 0.025,
+    "selection_profit_uncertainty_reserve_usd": 100.0,
+    "later_original_births_retained": true,
+    "freed_capacity_synthetic_births": false,
+    "permanent_terminal_stop": false,
+    "closed_terminal_lock_grid_repeated": false
+  },
+  "observed_structure": {
+    "post_activation_entry_lifecycles": 458,
+    "post_activation_actual_stressed_net_usd": [1699.34, 1636.1475],
+    "post_activation_peak_mark_r_range": [-0.00141727373224864, 2.48884022300863],
+    "post_activation_lifecycles_at_or_above_2_45_r": 1,
+    "all_actual_minus_stressed_cost_drag_usd": 89.726,
+    "post_activation_actual_minus_stressed_cost_drag_usd": 63.1925,
+    "maximum_sampled_equity_dd_time_server": "2026.04.13 16:00:00",
+    "maximum_sampled_equity_peak_trough_usd": [1864.9, 1344.7],
+    "post_activation_positive_peak_then_nonpositive_close_count": 204
+  },
+  "selection_gates": {
+    "profit": "after a $100 global uncertainty reserve, actual and doubled-cost-stressed net must each strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four modified actual and stressed epoch nets must be positive",
+    "capital": "actual and stressed modified closed balances must remain positive",
+    "drawdown": "max(qualified native 19.550371765% + 0.25 points, worse modified closed-balance DD + 5.126600916 points + 0.5 points) <= 20%",
+    "maximum_roles": 1
+  },
+  "forward_gate": {
+    "profit_realization_armed": false,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_stressed_usd": [19.79, 18.976],
+    "july_actual_stressed_usd": [3.22, 2.280]
+  },
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-post-activation-profit-realization-proxy-v1/input/",
+    "files": 8,
+    "bytes": 4083775,
+    "canonical_manifest_sha256": "5E00A8A048A13088F111D7608F0FDB0BB54D61C0BB06A31C7C95DD9BA8E70D80"
+  },
+  "implementation": {
+    "readme_bytes": 4072,
+    "readme_sha256": "466C5C22D9475A89B069621105705450844EF5661FEBC6C93CB9DAAB9FD23DBF",
+    "contract_bytes": 7520,
+    "contract_sha256": "6E03A95C5563D2119A5FA1A0F8C2EC5CF961A73330FB46FAB96A9EC6D0C894B6",
+    "script_bytes": 31176,
+    "script_sha256": "57301A42EBCB49F9CC5D62FAF4A142D60CE72B66EA97C49A2F4247D56B69E4FA"
+  },
+  "boundary": {
+    "candidate_economics_opened": false,
+    "proxy_process_invocations": 0,
+    "mt5_launched": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
