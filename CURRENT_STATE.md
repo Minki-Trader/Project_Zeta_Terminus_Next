@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0297`
+- Latest state ID: `STATE-0298`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -15,8 +15,9 @@ Last updated: 2026-08-28
 - Next V7 entries-disabled preflight: `PASSED`; committed RLO1 PIDs `21400` and `16484` proved exact connected `0/0`, flat continuity, zero core fault and observer create/recovery, then both stopped normally.
 - Next V7 new-entry authorization: `ENABLED`; the user's explicit 2026-08-27 attach-before-evaluation instruction authorizes the final committed `0/0 → 1/1` handoff after the passed RLO1 recovery.
 - Research-observation Live change: `LIVE_ATTACHED`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
-- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; scheduler-owned Live PID `23180` is the active sole owner.
+- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; one-shot-broker-started Live PID `23180` is the active sole owner.
 - Existing real-account owner: exact RLO1 Live PID `23180` only; detached preflight PID `31064` stopped normally and no second `terminal64.exe` was observed
+- Independent Live-derived optimization: `ENABLED` by the user's explicit 2026-08-28 continuous-Goal instruction; economic verdicts only, unlimited environment/engineering correction, no automatic pause, and never the Master terminal
 - User V7 Live direction: `EFFECTIVE_AFTER_GUARDED_RESTART`
 
 Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached recovery remains exact Live PID `23180` with Korean dashboard PID `19280`. After the user narrowed the requirement to Codex-lifetime breakaway only, commits `e0349a2cb882e8a9f033144ead5223968655b778` and `626375543bfc07a111cab6787a0542136d3df6c2` replaced the scheduled/resident host with a one-shot `Win32_Process.Create` broker and corrected only its CRLF completion-marker read. The committed one-shot worker restored both existing windows without duplication and exited. Scheduled task `Project Zeta Terminus Next Master Runtime` was then unregistered and old resident host PID `11700` ended; exact Live PID `23180` and dashboard PID `19280` remained alive. No matching scheduled task, PowerShell host, PID/health monitor or automatic restart remains. Local Live snapshot sequence `5157` is healthy with entries `1/1` and zero alert.
@@ -25,6 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
+- Active optimization boundary: `portfolio-risk-cap-envelope-v1` implementation and dedicated Portable are frozen with economics unopened; after this large-stage commit/push, run the exhaustive 15-point selection plus isolated latest forward comparison and continue to the next economically distinct stage without self-pausing
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
@@ -32,7 +34,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 - V7 Portfolio ID: `ZT-PORT-NEXT-V7-2db5ef5ead1c`
 - V7 Magic: `260824701..260824706`
 - Forward Lab baseline: frozen `lab/engineering/protective-exit-order-reconciliation-v1/mt5/` at `0d4032786cecb7d7e8a4c3074609db5b105fa107`; `lab/mt5/` and the predecessor CP2 root are historical frozen sources for future derivation only through this successor
-- Required isolation: Live-Dev and Lab share no source Include tree, EX5, settings, Portable runtime, state, or logs
+- Required isolation: Live-Dev, Lab and Optimization share no source Include tree, EX5, settings, Portable runtime, state, logs or mutable output; optimization uses only `optimization/runtime/<family>-portable/`
 - B75: closed in Next solely as the inherited RC16 frozen-life HOLD confirmation
 
 ## Completed migration evidence

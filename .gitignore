@@ -25,6 +25,12 @@
 /lab/runtime/hsc60-portable/
 /lab/runtime/msrl62-portable/
 /lab/runtime/msrl62-copy-import-quarantine/
+
+# Independent Live-derived optimization runtimes and replaceable large outputs.
+/optimization/runtime/
+/optimization/artifacts/raw/*
+!/optimization/artifacts/raw/.gitkeep
+/optimization/artifacts/temp/
 /lab/runtime/asec63-portable/
 /lab/runtime/cbd64-portable/
 /lab/runtime/crc81-portable/
@@ -57,6 +63,8 @@
 !live-dev/package/**/*.ex5
 !lab/control-v6r6/**/*.ex5
 !lab/mt5/src/Experts/ZetaNextPre500FiniteRiskPortfolioV7.ex5
+!optimization/baseline/**/*.ex5
+!optimization/campaigns/**/*.ex5
 
 # Replaceable local analysis output.
 __pycache__/

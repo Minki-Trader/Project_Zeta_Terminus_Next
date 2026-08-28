@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "project_id": "project-zeta-terminus-next",
+  "release_id": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+  "parent_release_id": "NEXT-E01-V7-CXR2-14d84b9e4bb3",
+  "portfolio_id": "ZT-PORT-NEXT-V7-2db5ef5ead1c",
+  "execution_version": "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c",
+  "status": "verified_research_observation_ledger_live_promotion",
+  "source_lane": "lab/engineering/live-research-observation-ledger-v1/mt5",
+  "promotion_basis": {
+    "candidate_commit": "082efb4c0857f76e8947d51ff07a25ab595b55fb",
+    "declaration": "lab/engineering/live-research-observation-ledger-v1/evidence/LIVE_RESEARCH_OBSERVATION_LEDGER_DECLARATION_V1.json",
+    "compile_receipt": "lab/engineering/live-research-observation-ledger-v1/evidence/LIVE_RESEARCH_OBSERVATION_LEDGER_COMPILE_RECEIPT_V1.json",
+    "result": "lab/engineering/live-research-observation-ledger-v1/evidence/LIVE_RESEARCH_OBSERVATION_LEDGER_RESULT_V1.json",
+    "promoted_implementation_files": 8,
+    "promoted_observation_module_byte_equal_to_candidate": true,
+    "live_hooks_preserve_candidate_ordering": true
+  },
+  "identity_continuity": {
+    "new_release_id": true,
+    "execution_version_unchanged": true,
+    "portfolio_id_unchanged": true,
+    "magic_numbers_unchanged": true,
+    "core_state_marker_schema_and_paths_unchanged": true,
+    "economic_settings_unchanged": true,
+    "separate_research_namespace_added": true
+  },
+  "research_retention": {
+    "canonical_namespace": "ZetaTerminusNext\\research\\canonical",
+    "canonical_ledgers_append_only": true,
+    "automatic_rotation_or_cleanup": false,
+    "live_ea_reset_or_delete_call_present": false,
+    "dashboard_consumes_research_logs": false
+  },
+  "magic_numbers": [260824701, 260824702, 260824703, 260824704, 260824705, 260824706],
+  "canonical_identity": {
+    "file_count": 17,
+    "sha256": "B32E7E176F2EF1B4A7AA6E9FB91D59FAC685325CC83A79DAA1947F5A431CA178",
+    "suffix": "b32e7e176f2e",
+    "method": "Sort every package .mq5/.mqh plus the base SET by package-relative slash path; normalize line endings to LF; replace RELEASE_ID with <RELEASE_ID>; concatenate FILE:<path>, content and END_FILE records as UTF-8; SHA-256 the result."
+  },
+  "compiler": {
+    "mt5_version": "5.0.0.6140",
+    "result": "0 errors, 0 warnings",
+    "compile_log_sha256": "9AF145DA37A5666B543AF314393436B3F4AF14EDDE12136FC27D46903E465046"
+  },
+  "compiled_binary": {
+    "path": "MQL5/Experts/ZetaTerminusNext/ZetaNextPre500FiniteRiskPortfolioV7.ex5",
+    "bytes": 224536,
+    "sha256": "CB225D97DA7BCEC30599B472F615C7A3775C359A0F8FA8293FBB9C222795775B"
+  },
+  "files": [
+    {"path":"MQL5/Experts/ZetaTerminusNext/ZetaNextPre500FiniteRiskPortfolioV7.mq5","bytes":20649,"sha256":"1AC7F4F6A1EB99EE00A7BFA77182641D8CE5585BBEB05075C960459C98918D26"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh","bytes":20710,"sha256":"3393D64CC5D403858A28101BAC4CE01CE8BBE4634C4E6DCBD68A7D1B28B39034"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh","bytes":54956,"sha256":"9E5972A824FBCE6E677B7B4C8E0D153D684EBC75019D5BD0B57282088DF8EC22"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Execution/ZetaOwnership.mqh","bytes":12473,"sha256":"0D4C619B3251F9E99113883108BF3E15A5C2E50B2EA436A9BB2BE8EA6919049A"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh","bytes":32700,"sha256":"FA484CCF4BC2B4B99489BB3FB92A25CCC340D2BF21EDDC246AED71B4AA706999"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Observation/ZetaResearchObservation.mqh","bytes":50530,"sha256":"8F4021B3C1C1E288FF443714B766B4D85608F45D9FE2EDFFBEC0750465450FE5"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh","bytes":74891,"sha256":"BD659C54E354C1ED194A90CDE6DFD8C949F7F3BCB13340358C0F3EC7445A0DB0"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh","bytes":21330,"sha256":"699CBB47455E3FB6330DD3503AE4F37D1DAA5CDD3C78BE253DAF76A181E36329"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Strategies/ZetaCross.mqh","bytes":3545,"sha256":"5B4AF23309DBAA28F6DA84F21A26343D0BE370923135D5952131D182A4FFF888"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Strategies/ZetaPassive.mqh","bytes":20902,"sha256":"AA24946E85EEF2BAA38FD4514A0A98DDBF84A16FAEFF019EA3982CD296085EEA"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Strategies/ZetaPressure.mqh","bytes":3872,"sha256":"091FD76C30A6CC402A009059AB7FB3CFB4C097E7016B10C64C09F200611B7A71"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Strategies/ZetaRC16.mqh","bytes":1393,"sha256":"AC058C9820693C9349A08C2B14AABABC6AAF47A63178A2DA988F0FF922F4F003"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Strategies/ZetaRC4.mqh","bytes":71057,"sha256":"1B9E1909C1D68FE8D54E24A1CA3F081EBB50BDBB399ABB930534F82EF32D7C49"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Strategies/ZetaReturn.mqh","bytes":3254,"sha256":"46FF51B8C95262E856EBB0D3D7B59DFFA35CE2C11BB30E5AF4AE22F91EE1DE9D"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh","bytes":8859,"sha256":"11B9763FDC8BFA74B85E8F2C6715E9B3BA4BE50956D06DB2AFDF97BB47810653"},
+    {"path":"MQL5/Include/ZetaTerminusNext/Time/ZetaSessionClock.mqh","bytes":9451,"sha256":"7D7267CDE4399F875C9AB43F2D2865AF220A561C16F6BEB8422C295537FDC763"},
+    {"path":"MQL5/Presets/ZetaTerminusNext/next-v7-modular.set","bytes":925,"sha256":"BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8"}
+  ]
+}

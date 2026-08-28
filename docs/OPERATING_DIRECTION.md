@@ -6,6 +6,19 @@ Develop separately attributable economic capabilities for FPMarkets `US100`, `US
 
 The active migration is not a new research search. `NEXT-E01/V7` is a behavior-preserving engineering successor to B70 V6R6. Its parent entry opportunities, first-fill timing and direction, orders, sizing, costs, protection, RC4 management, and portfolio risk are frozen.
 
+## Continuous Live-Dev optimization
+
+The active user Goal is continuous economic optimization of the existing frozen Live-Dev behavior in the independent root `optimization/`. This is the primary work lane until the user pauses it. It is not a continuation of the Lab Frontier scheduler, and completing one search or comparison never pauses the Goal automatically.
+
+- The optimization parent is a byte-pinned one-time copy of the exact active Live package, kept under `optimization/baseline/`. It is never executed with Live identity. Every active optimization campaign owns a self-contained root under `optimization/campaigns/<family>/`, with separate release/execution/Portfolio/Magic, state, output, configuration, evidence and dedicated physical Portable runtime.
+- No optimization compile, test or optimization run may use the Master terminal, `live-dev/runtime/portable/`, a Lab Portable, or any state/log path owned by Live or Lab. The Master Live PID and dashboard remain outside the optimization boundary.
+- Optimization methods and search algorithms are not otherwise restricted. Only a complete valid economic result may produce `ECONOMIC_IMPROVEMENT`, `NO_ECONOMIC_IMPROVEMENT` or another economic comparison. Missing environment, invalid history, invocation failure, parser/serialization fault, design defect or engineering defect is `CORRECTION_REQUIRED`, never an optimization success or failure.
+- Pure environment, design and engineering corrections have no numeric retry cap. They are recorded and rerun until the declared economic comparison is valid. If a design correction changes the economic search contract after any result was seen, version the campaign and continue; do not relabel the invalid predecessor as an economic failure.
+- Keep the latest two completed months isolated from parameter selection by default. Search output is optimization information, not promotion authority; confirm selected candidates on the isolated latest period and compare whole-portfolio net, stressed net, drawdown, efficiency, turnover and component breadth before freezing an economic conclusion.
+- Maintain one optimization judgment stream. Subagents may gather bounded implementation or information inputs, but may not create a parallel candidate stream and may not be used to build or review validators, test harnesses, rule checkers or similar review machinery.
+- A new clue may temporarily open one serial Lab Unit, allocated under the normal Program rules. The optimization campaign pauses while that Unit is active, resumes after the Unit closes, and remains the Goal. A Lab detour is optional and never becomes the continuing primary lane.
+- Commit and push `main` at comparatively large phase boundaries such as lane/baseline freeze, a complete economic search stage, or a frozen successor campaign—not for every parser, environment or invocation correction.
+
 ## Evidence and economic boundaries
 
 - Hold out the latest two completed months from proxy selection by default. If they influence selection or tuning, they are current broker/cost/execution evidence only.
@@ -15,10 +28,11 @@ The active migration is not a new research search. `NEXT-E01/V7` is a behavior-p
 - A frozen-entry management family preserves verified signal generation, opportunity timestamps, and directions. It may change only causal sizing, hold, protection, breakeven, trailing, legal partial close, full close, or no action, subject to the safety layer.
 - Proxy best-of-many output is selection, not profit proof. Prefer broad profitable plateaus and terminate cost-negative core assumptions without nearby threshold, feature, label, model, or exit-number rescue.
 - Implementation defects are corrected and rerun; they are not economic failures.
+- In the optimization lane, environment and design defects follow the same rule and cannot close a campaign economically. Only valid economic numbers may judge optimization performance.
 
 ## Macro research allocation
 
-Frontier research is allocated across macro programs, not continued as a chain of nearby micro-hypotheses. Every new research unit must name exactly one primary program from the active map below. A unit may observe secondary interactions, but that does not create another active stream or authorize an adjacent successor.
+Frontier research, including any temporary Lab detour from optimization, is allocated across macro programs rather than continued as a chain of nearby micro-hypotheses. Every new research unit must name exactly one primary program from the active map below. A unit may observe secondary interactions, but that does not create another active stream or authorize an adjacent successor. Optimization campaigns are not numbered Frontier units.
 
 1. `entry_signal_market_structure` — 진입 신호·시장 구조
 2. `external_market_event` — 외부시장·이벤트
@@ -36,7 +50,7 @@ Outcome-free feasibility may reject a proposed bundle before declaration. A spar
 
 ## One stream and identity separation
 
-Maintain one attributable development stream to its next durable economic or engineering boundary, freeze source and evidence, then switch. No parallel or delegated candidate streams are allowed. Every legacy provenance family, Next descriptive research family, V5, every V6 version, and V7 keep separate source, binary, settings, Portfolio ID, Magic, state paths, evidence, and verdicts. Combination requires a separate user decision and fresh shared-account evidence.
+Maintain one attributable development judgment stream to its next durable economic or engineering boundary, freeze source and evidence, then switch. No parallel or delegated candidate streams are allowed. Every legacy provenance family, Next descriptive research family, optimization campaign, V5, every V6 version, and V7 keep separate source, binary, settings, Portfolio ID, Magic, state paths, evidence, and verdicts. Combination requires a separate user decision and fresh shared-account evidence.
 
 The inherited B75 task is complete in Next as `RC16 Explicit Frozen-Life HOLD Confirmation`. It audited only the frozen B45/B55/B60/B65/B68/B74 decision records and confirmed full-volume HOLD to the original catastrophic stop or fixed eight-M30 exit. It opened no new data, outcome, latest period, model, executable, identity, deployment, or Live change.
 
@@ -54,18 +68,20 @@ The filesystem must make the current baseline, an active experiment and closed e
 
 - The sole forward Lab baseline is the exact root named in `CURRENT_STATE.md` and `lab/README.md`. It is the frozen CXR2 root `lab/engineering/protective-exit-order-reconciliation-v1/mt5/` at commit `0d4032786cecb7d7e8a4c3074609db5b105fa107`, promoted after the user's explicit repair direction and durable state updates. A later successor baseline requires an explicit user decision and a durable state update.
 - `lab/mt5/` is a frozen historical mixed V7/Frontier workspace. No new or modified `.mq5`, `.mqh`, EA wrapper or Adapter may be placed there. It is not a forward baseline.
-- Every new family owns one self-contained root under `lab/research/<family>/` or `lab/engineering/<family>/`, including its source, configuration, evidence references and Git-ignored runtime path. It may copy from the frozen baseline once, but it may not include, link or execute source from another Lab family, `lab/mt5/` or `live-dev/`.
+- Every new Lab family owns one self-contained root under `lab/research/<family>/` or `lab/engineering/<family>/`, including its source, configuration, evidence references and Git-ignored runtime path. It may copy from the frozen Lab baseline once, but it may not include, link or execute source from another Lab family, `lab/mt5/`, `optimization/` or `live-dev/`.
+- `optimization/` is a third isolated lane. Its frozen baseline is a one-time byte-pinned copy of the exact active Live package named in `CURRENT_STATE.md`. A campaign under `optimization/campaigns/<family>/` copies that optimization baseline once, changes identity and all mutable paths before execution, and never includes, links or executes `live-dev/`, `lab/` or another optimization campaign. Runtime and large generated outputs stay under the campaign's dedicated `optimization/runtime/` and `optimization/artifacts/` paths.
 - A baseline contains one assembly EA and only the modules needed by that EA. Experimental wrappers and adapters stay inside their family root. A predeclared multi-EA comparison may contain multiple entrypoints only inside that comparison root.
 - A family root has only two mutable states: the one currently active serial stream, or none. Once a verdict closes or promotes the family, its tracked source and configuration are immutable. A follow-up creates a newly named/versioned sibling root instead of reopening or extending the closed root.
 - Evidence and documentation must use full root-anchored paths. A basename alone never identifies a source file. Frozen evidence trees are not physically reorganized merely for appearance; any later archival move requires a complete reference audit and a separate user-authorized boundary.
-- Live promotion copies only the exact verified files from one closed Lab candidate into `live-dev/package/active/`, assigns a new release ID and hashes, records the source manifest and evidence, and leaves no Lab link. The active Live package contains one EA, its required Include tree, one base SET and release/source manifests—never experimental wrappers or adapters.
+- Live promotion still copies only the exact verified files from one closed Lab engineering candidate into `live-dev/package/active/`, assigns a new release ID and hashes, records the source manifest and evidence, and leaves no Lab or optimization link. An optimization result has no direct promotion authority; a user-authorized promotion must first enter a separately named Lab engineering handoff family. The active Live package contains one EA, its required Include tree, one base SET and release/source manifests—never experimental wrappers or adapters.
 - At every durable boundary, `CURRENT_STATE.md` and `lab/README.md` must still name the same sole forward baseline. If a proposed change cannot state its owning root and lifecycle before code is added, implementation does not begin.
 
 ## Live and Lab isolation
 
-- `lab/` owns evolving source, frozen controls, tester configuration, research, and DEV evidence.
+- `lab/` owns Lab research/engineering source, frozen controls, tester configuration and Lab evidence.
+- `optimization/` owns the independent frozen Live-derived baseline, evolving optimization campaigns, their configuration/evidence and dedicated generated runtime/artifacts.
 - `live-dev/` owns only a frozen release snapshot, Next-specific settings, operator tools, state, logs, and its own Portable terminal.
-- Live never includes or executes a Lab path. Lab never writes Live state. Promotion is a deliberate one-way frozen copy with new release identity and hashes.
+- Live, Lab and optimization never include or execute one another's paths and never share EX5, settings, state, logs or Portable runtime. Lab and optimization never write Live state. Promotion is a deliberate one-way frozen copy with new release identity and hashes.
 - Legacy B70 V6R6 and superseded V7 releases remain stopped. Only the exact release named as owner in `CURRENT_STATE.md` has Live authority. A later engineering patch requires verified Lab evidence, a new frozen release manifest, explicit user authorization, a stopped-flat boundary, entries-disabled recovery and an exact final handshake before it may replace that owner.
 - V7 uses Magic `260824701..260824706`, a new Portfolio ID and state namespace, and never adopts V6R6 state or positions. Only final project-attributable realized P/L may be carried into its prior-realized input at handoff.
 
@@ -77,10 +93,10 @@ On duplicate-runtime risk, unknown ownership, corrupt state, broker/local mismat
 
 ## Engineering practice
 
-Use the lightest normal implementation that preserves causal ordering, broker costs, rounding, minimum volume, shared-account risk, restart recovery, and bounded logging. Do not create CI, unit/integration/regression tests, separate validators, parity checkers, promotion checkers, test-only infrastructure, or a project-specific Skill. Verify V7 with MetaEditor compilation, normal fixed-window MT5 real-tick executions, post-result ledger comparison, and bounded entries-disabled operating observation.
+Use the lightest normal implementation that preserves causal ordering, broker costs, rounding, minimum volume, shared-account risk, restart recovery, and bounded logging. Do not create CI, unit/integration/regression tests, separate validators, parity checkers, promotion checkers, test-only infrastructure, or a project-specific Skill. Verify V7 with MetaEditor compilation, normal fixed-window MT5 real-tick executions, post-result ledger comparison, and bounded entries-disabled operating observation. Normal MT5 parameter optimization and campaign-owned economic result recording are permitted optimization work, not test infrastructure.
 
 ## Research artifact retention and storage hygiene
 
-Run one serial retention sweep on the first weekend of every calendar month, and before creating any new Lab Portable whenever the system drive has less than `30 GiB` free. The sweep never runs while a Live, Lab Tester, MetaEditor or dashboard process owns a target path. Preserve tracked source/configuration, declarations/results/closures, manifests and every artifact named or hashed by durable evidence; preserve the sole canonical required-symbol history copy, the active forward baseline, the active Live package, Live state/events and the canonical research candidate/lifecycle ledgers. Only Git-ignored closed-family Portable copies, generated Tester caches, unreferenced duplicate reports/logs, compile staging and temporary files are eligible. Resolve and record exact absolute targets before deletion; if uniqueness or evidence reachability is uncertain, retain the item. Research detail telemetry must be bounded at creation instead of relying on later deletion.
+Run one serial retention sweep on the first weekend of every calendar month, before creating any new Lab or optimization Portable when the system drive has less than `30 GiB` free, and whenever planned runtime plus log growth would leave less than `30 GiB`. The sweep never runs while a Live, Lab Tester, optimization Tester, MetaEditor or dashboard process owns a target path. Preserve tracked source/configuration, declarations/results/closures, manifests and every artifact named or hashed by durable evidence; preserve the sole canonical required-symbol history copy, active baselines, the active Live package, Live state/events and the canonical research candidate/lifecycle ledgers. Only Git-ignored closed-family/campaign Portable copies, generated Tester/optimization caches, unreferenced duplicate reports/logs, compile staging and temporary files are eligible. Resolve and record exact absolute targets before deletion; if uniqueness or evidence reachability is uncertain, retain the item. Bound detail telemetry at creation, reserve enough free space for EA logging throughout every run, and stop starting new paths before capacity becomes uncertain.
 
 Keep `CURRENT_STATE.md` concise and current. Store historical transitions in numbered state chunks, human research summaries under `docs/lineage/`, and complete immutable references under `lineage/`.

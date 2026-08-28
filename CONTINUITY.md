@@ -71,10 +71,21 @@ This successor changes only current-order ownership classification for an exact 
 
 This successor adds only the verified read-only research observation hooks and a separate `ZetaTerminusNext\research\canonical` namespace. Candidate/lifecycle ledgers append and flush; the Live EA has no reset/delete call, no automatic rotation or cleanup exists, and the dashboard continues to consume only the unchanged core Live snapshot. CXR2 stopped normally at server `2026.08.27 05:56:29`, before every current-day evaluation window, with entries `1/0`, no position/order/margin/risk/retry/shadow/ARC state and no consumed 2026-08-27 opportunity. Committed RLO1 entries-disabled PIDs `21400/16484` passed create/recovery at exact `0/0`; final preflight PID `3424` stopped normally and exact Live PID `8080` passed `1/1`. PID `8080` and dashboard PID `28332` were later lost together during the 2026-08-27 Codex MSIX replacement boundary without a normal MT5 shutdown footer; the last local snapshot at `17:00:23` was flat and zero-risk. Recovery commit `41473c378289f87d3f5f82e2a3cb95dfa99c2800` reached origin, fresh preflight PID `22108` passed exact `0/0` and stopped, and replacement Live PID `9976` plus dashboard PID `14324` resumed before the remaining evaluation windows. Those replacement processes were again lost together at the next Codex shutdown/update boundary; the last local core snapshot at `2026-08-28 09:49:02` was flat and zero-risk. Detached preflight PID `31064` then passed `0/0` and stopped before exact Live PID `23180` and dashboard PID `19280` recovered. The temporary scheduled/resident implementation was removed after the user clarified scope; commits `e0349a2cb882e8a9f033144ead5223968655b778` / `626375543bfc07a111cab6787a0542136d3df6c2` now use only a one-shot Windows process broker. No scheduled task, resident launcher, PID/health monitor or automatic restart remains.
 
+## Independent Live-derived optimization anchor
+
+- Parent release: `NEXT-E01-V7-RLO1-b32e7e176f2e`
+- Parent commit at derivation: `f4e1effb647d5ef81921eddc64fcd6bef2289f57`
+- Exact frozen parent copy: `optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/`
+- Frozen parent manifest SHA-256: `7A968666241AD90629F14ADF48E983AB04A4DD88053F1413EBB209FB51976698`
+- Active campaign: `optimization/campaigns/portfolio-risk-cap-envelope-v1/`
+- Dedicated runtime: `optimization/runtime/portfolio-risk-cap-envelope-v1-portable/`
+
+This is the sole continuous economic-optimization stream and is physically independent from Live-Dev and Lab. Its first campaign changes only the existing per-position and aggregate planned-risk caps across 15 exhaustive combinations while all six signal and execution behaviors remain fixed. It is tester-only, has unique identity/Magic/state paths, and may run only from its dedicated Portable, never the Master, Live or Lab terminal. Engineering, configuration, history and report faults are correction states with no economic verdict or arbitrary retry cap. No result promotes automatically; explicit user authorization and a separate Lab engineering handoff are required before any possible Live change.
+
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev authorization: `ENABLED`; exact restarted RLO1 PID `9976` is the verified sole owner at entries `1/1` after recovery preflight PID `22108` proved `0/0`, flat exposure and zero risk and stopped.
+- Next V7 Live-Dev authorization: `ENABLED`; exact RLO1 PID `23180` is the verified sole owner at entries `1/1` after detached preflight PID `31064` proved `0/0`, flat exposure and zero risk and stopped.
 - V7 may not import or adopt B70 positions or state.
 - The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs including CXR2 `21944/24820/28148` and RLO1 `21400/16484/3424/22108/31064`, dashboard PIDs `4712/4284/28508/28332/14324`, CXR2 PIDs `13328/15080`, former RLO1 PIDs `8080/9976` and removed scheduler host PID `11700` are no longer active. Exact RLO1 PID `23180` and Korean dashboard PID `19280` are active; Legacy, parent V7, CXR1 and CXR2 must not restart.
 
