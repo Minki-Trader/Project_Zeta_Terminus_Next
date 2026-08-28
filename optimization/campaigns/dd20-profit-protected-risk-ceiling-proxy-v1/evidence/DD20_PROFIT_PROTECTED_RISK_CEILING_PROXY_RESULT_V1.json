@@ -1,0 +1,134 @@
+{
+  "schema": "zeta-dd20-profit-protected-risk-ceiling-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE",
+  "campaign": "dd20-profit-protected-risk-ceiling-proxy-v1",
+  "frozen_declaration_commit": "d293316",
+  "run": {
+    "process_invocations": 1,
+    "process_exit_code": 0,
+    "wall_time_seconds": 0.28618330002063885,
+    "candidate_hard_caps": 31,
+    "minimum_hard_cap_usd": 30.0,
+    "maximum_hard_cap_usd": 330.0,
+    "selection_eligible_candidates": 0,
+    "mt5_shortlist_size": 0
+  },
+  "anchor_reproduction": {
+    "accelerated_selection_lifecycle_and_native_anchor": "PASS",
+    "accelerated_forward_lifecycle_and_native_anchor": "PASS",
+    "qualified_selection_lifecycle_and_native_anchor": "PASS",
+    "qualified_forward_lifecycle_and_native_anchor": "PASS",
+    "closed_result_identity": "PASS",
+    "candidate_binding_and_forward_invariance": "PASS"
+  },
+  "selection_gate_counts": {
+    "positive": 31,
+    "conservative_profit_strictly_above_qualified": 18,
+    "budgeted_drawdown_at_or_below_20_percent": 0,
+    "all_four_epochs": 17,
+    "all_selection_gates": 0
+  },
+  "maximum_profit_diagnostic": {
+    "hard_aggregate_risk_cap_usd": 250.0,
+    "economically_tied_caps_usd": [250.0, 260.0, 270.0],
+    "actual_net_usd": 2233.75,
+    "stressed_net_usd": 2144.8080000001,
+    "conservative_actual_net_usd": 2183.75,
+    "conservative_stressed_net_usd": 2094.8080000001,
+    "raw_retained_path_drawdown_pct": 20.8640669287,
+    "budgeted_native_equity_drawdown_pct": 26.4906678443,
+    "accepted_lifecycles": 1294,
+    "hard_cap_skips": 3,
+    "profit_gate": true,
+    "all_epochs_gate": false,
+    "drawdown_gate": false
+  },
+  "best_profit_and_epoch_diagnostic": {
+    "hard_aggregate_risk_cap_usd": 200.0,
+    "actual_net_usd": 2033.62,
+    "stressed_net_usd": 1950.2220000001,
+    "conservative_actual_net_usd": 1983.62,
+    "conservative_stressed_net_usd": 1900.2220000001,
+    "actual_improvement_over_qualified_usd_before_reserve": 342.08,
+    "stressed_improvement_over_qualified_usd_before_reserve": 323.9620000001,
+    "raw_retained_path_drawdown_pct": 19.6113616986,
+    "budgeted_native_equity_drawdown_pct": 25.2379626142,
+    "hard_budget_miss_percentage_points": 5.2379626142,
+    "accepted_lifecycles": 1284,
+    "hard_cap_skips": 13,
+    "profit_gate": true,
+    "all_epochs_gate": true,
+    "drawdown_gate": false
+  },
+  "lowest_drawdown_diagnostic": {
+    "hard_aggregate_risk_cap_usd": 30.0,
+    "actual_net_usd": 537.45,
+    "stressed_net_usd": 503.1055,
+    "conservative_actual_net_usd": 487.45,
+    "conservative_stressed_net_usd": 453.1055,
+    "raw_retained_path_drawdown_pct": 15.0531368121,
+    "budgeted_native_equity_drawdown_pct": 20.6797377277,
+    "hard_budget_miss_percentage_points": 0.6797377277,
+    "accepted_lifecycles": 992,
+    "hard_cap_skips": 305,
+    "profit_gate": false,
+    "all_epochs_gate": true,
+    "drawdown_gate": false
+  },
+  "forward_invariance": {
+    "all_candidate_caps_nonbinding": true,
+    "accepted_lifecycles": 30,
+    "hard_cap_skips": 0,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_net_usd": 19.79,
+    "june_stressed_net_usd": 18.976,
+    "july_actual_net_usd": 3.22,
+    "july_stressed_net_usd": 2.280
+  },
+  "calibration": {
+    "qualified_native_floor_pct": 19.80037176500623,
+    "accelerated_native_minus_raw_gap_percentage_points": 5.126600915631486,
+    "accelerated_gap_uncertainty_reserve_percentage_points": 0.5,
+    "retained_path_profit_uncertainty_reserve_usd": 50.0,
+    "hard_native_equity_drawdown_pct": 20.0
+  },
+  "raw_artifact": {
+    "path": "optimization/artifacts/raw/dd20-profit-protected-risk-ceiling-proxy-v1/output/proxy-result.json",
+    "bytes": 106441,
+    "sha256": "4F72A7FD2411D605ACCF19F5D4E210B1D70B8A674405D1ACC3713A618660A55C"
+  },
+  "implementation": {
+    "contract_sha256": "7AE4D9EAB131B636473CF172F73AF846F144B147F3E6A023BEC31DAF5255AB4C",
+    "script_sha256": "44FAE008573DF1C7BA4725E8AA33362126CE8C9BCD29A62F3784A9EBD3C7C775",
+    "input_files": 10,
+    "input_bytes": 8120013,
+    "input_manifest_sha256": "5EB9F1D5CD25B7E915A2CEF066259C9A500B2EAE5EE449FA21472DAEB4E58D20"
+  },
+  "economic_verdict": {
+    "classification": "FIXED_DOLLAR_RISK_CEILING_PROFIT_DD_FRONTIERS_DISJOINT_NO_MT5_SHORTLIST",
+    "valid_economic_result": true,
+    "new_proxy_candidate_qualified": false,
+    "qualified_success_anchor_retained": true,
+    "interpretation": "All 31 fixed dollar risk ceilings produced positive actual and stressed net and preserved the exact forward, but none met the budgeted native-DD gate. The lowest-DD $30 ceiling still budgeted 20.679738% while retaining too little profit, and the highest-profit all-epoch $200 ceiling budgeted 25.237963%. Aggregate admission restriction alone therefore cannot preserve the desired profit and fit the hard 20% native equity-DD budget.",
+    "next_action": "Freeze this valid empty frontier without MT5. Continue proxy-first with an economically distinct mechanism that directly limits equity high-watermark giveback or realizes open profit, rather than another aggregate-cap, activation-threshold, post-step or multiplier-cap grid."
+  },
+  "boundary": {
+    "proxy_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "mt5_launched": false,
+    "free_space_gib_after_run": 71.629,
+    "research_artifacts_preserved": true,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

@@ -29,6 +29,10 @@ Budgeted DD must remain at or below the hard `20%` limit. The sole role, if any,
 
 The full forward, June and July must remain exactly `+$23.01 / +$21.256`, `+$19.79 / +$18.976` and `+$3.22 / +$2.280`; native forward DD remains the observed `12.436759%`. No MT5 may launch during this proxy and at most one role may be shortlisted afterward.
 
-## Current boundary
+## Proxy result
 
-Ten copied input files total `8,120,013` bytes at canonical manifest `5EB9F1D5CD25B7E915A2CEF066259C9A500B2EAE5EE449FA21472DAEB4E58D20`. Candidate economics, gate counts, ranking and output are unopened. The rejected accelerator, its 256-path proxy, the qualified anchor, every prior candidate and the original 15 combinations remain closed without rerun. No Live or Lab mutation and no broker-state query occurred.
+One process completed all `31` hard caps in `0.2861833` seconds. Every candidate was positive, `18` conservatively exceeded the qualified profit floor, and `17` kept every epoch, but **zero** passed budgeted native DD. The maximum-profit caps `$250/$260/$270` tied at actual/stressed `+$2,233.75 / +$2,144.808`; the ranked `$250` diagnostic budgeted `26.490668%` DD and failed the epoch gate.
+
+The best cap passing both profit and epoch gates was `$200`: actual/stressed `+$2,033.62 / +$1,950.222`, conservative `+$1,983.62 / +$1,900.222`, but budgeted DD was `25.237963%`. The lowest-DD `$30` cap reached raw/budgeted `15.053137% / 20.679738%`, still missed the hard budget by `0.679738` points and retained only conservative stressed `+$453.1055`. Profit and DD regions are therefore disjoint.
+
+This is a valid economic empty frontier, not an environment or engineering failure. The independent forward was unchanged for all candidates at `+$23.01 / +$21.256`, with positive June and July. No MT5 shortlist exists. The fixed dollar ceiling, rejected accelerator, its 256-path proxy, qualified anchor, all prior candidates and the original 15 combinations remain closed without rerun. Continue proxy-first with a distinct equity high-watermark giveback or open-profit realization mechanism.
