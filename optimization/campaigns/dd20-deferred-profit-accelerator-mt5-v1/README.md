@@ -28,6 +28,12 @@ After a dedicated physical Portable is created and this exact source compiles, r
 
 Economic qualification requires selection actual/stressed net strictly above the qualified anchor `+$1,691.54 / +$1,626.26`, positive actual/stressed net in all four selection epochs, native maximum relative selection equity DD `<=20%`, positive full-forward actual/stressed net, native maximum relative forward equity DD `<=20%`, and positive continuous June and July actual/stressed slices. Environment, compilation, invocation, history, reporting or logging defects are correction states with no economic verdict.
 
+## Implementation freeze
+
+Declaration commit `f9ffbac83c73b8ccb577f6abf47caa9eea611fed` reached `origin/main` before a new physical Portable was copied from the stopped qualified-candidate Optimization runtime. The source had no reparse point or process owner; the new target has a distinct terminal file ID, one terminal hard link and zero reparse points.
+
+All 19 source/configuration files match their runtime overlays. One MetaEditor build 6140 invocation produced `0 errors / 0 warnings` in `2,315 ms`; the launcher returned `1`, while that same invocation wrote the complete compile log and the expected `231,652`-byte EX5. It was not reinvoked. The runtime owns zero process and its unique report directory is empty.
+
 ## Current boundary
 
-The self-contained 16-file source and three fixed configuration files are frozen with no EX5, runtime, Tester report or economics opened. Commit and push this declaration before creating the dedicated Portable and compiling once. The qualified anchor, every proxy grid, all prior MT5 candidates and the original 15 combinations remain closed without rerun. No Live or Lab mutation and no broker-state query are authorized.
+The exact compiled candidate is ready with selection and forward economics still unopened. Freeze and push this implementation before the single selection run. The qualified anchor, every proxy grid, all prior MT5 candidates and the original 15 combinations remain closed without rerun. No Live or Lab mutation and no broker-state query occurred.
