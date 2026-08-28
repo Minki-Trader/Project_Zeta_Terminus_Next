@@ -18,6 +18,12 @@ The four selection epochs remain positive with positive balances and raw DD at o
 
 Exactly one role may freeze: maximum conservative stressed selection profit, then conservative actual, raw stressed, recent-selection stressed, conservative July stressed, full-pair stressed, weaker-month stressed and lower budgeted DD. An exact economic tie prefers the lower cap, later activation and larger post-activation step. The proxy may nominate at most one MT5 hypothesis.
 
-## Current boundary
+## Result
 
-The independent input is nine physical copies totaling `21,482,751` bytes, including both closed ladder outputs only to bind predecessor identity and non-rerun scope. Candidate selection, paired-forward, June, July, ranking and shortlist economics are unopened. Commit and push this declaration before the single proxy invocation. No MT5, Live, Lab, broker-state query, prior candidate or original-15 rerun is authorized.
+The single proxy process exited `0` in `1.0472407` seconds and evaluated all `256` new deferred paths plus the closed calibration row. Every input, native/proxy anchor, predecessor identity and candidate-construction gate passed.
+
+The funnel retained `206` profit-passing, `106` DD-passing, `149` all-epoch-passing and `56` combined selection paths. All `56` also passed full paired-forward, June, raw July and conservative July. Exactly one maximum-profit role froze: activation at `+$450` stressed closed profit, `$50` post-activation step and maximum multiplier `14`.
+
+The winner's proxy actual/stressed selection net is `+$2,647.4747 / +$2,554.1534`; after the 50%-incremental credit and `$50` reserve it remains `+$2,083.5364 / +$2,006.6757`, improving the qualified observed anchor by `+$391.9964 / +$380.4157`. Raw/calibrated/budgeted DD is `17.428221% / 19.550372% / 19.800372%`, leaving `0.199628` percentage points. Every epoch is positive. Fresh June/July remain unchanged at proxy stressed `+$18.48 / +$8.756`, and conservative July stressed is `+$1.28`.
+
+This valid proxy nominates one MT5 hypothesis but does not prove its native equity DD or realized profit. Freeze and push this result, then materialize only this deferred accelerator in one new dedicated MT5 family for one selection and one independently initialized full June/July forward. No grid, anchor, prior candidate or original 15 combinations rerun.
