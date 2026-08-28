@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0294`
+- Latest state ID: `STATE-0295`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -15,15 +15,15 @@ Last updated: 2026-08-28
 - Next V7 entries-disabled preflight: `PASSED`; committed RLO1 PIDs `21400` and `16484` proved exact connected `0/0`, flat continuity, zero core fault and observer create/recovery, then both stopped normally.
 - Next V7 new-entry authorization: `ENABLED`; the user's explicit 2026-08-27 attach-before-evaluation instruction authorizes the final committed `0/0 → 1/1` handoff after the passed RLO1 recovery.
 - Research-observation Live change: `LIVE_ATTACHED`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
-- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; former Live PID `9976` is absent after the latest Codex process-lifetime boundary.
-- Existing real-account owner: none locally; no exact Live terminal or dashboard process is active, and guarded recovery remains pending after the detached-launch patch reaches `origin/main`
+- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; scheduler-owned Live PID `23180` is the active sole owner.
+- Existing real-account owner: exact RLO1 Live PID `23180` only; detached preflight PID `31064` stopped normally and no second `terminal64.exe` was observed
 - User V7 Live direction: `EFFECTIVE_AFTER_GUARDED_RESTART`
 
-Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached-launch boundary commit `5cd7a955410444d86269f3ef20bbf72266900f9d` reached `origin/main` before the current-user scheduled task was registered and invoked. Its first scheduler-owned preflight connected to the exact account, recovered RLO1 sequence `5138 → 5139`, proved entries `0/0`, account balance/equity `$105.20/$105.20`, zero component position, order, margin, aggregate risk, retry, shadow, ARC or fault, then stopped normally without starting final Live or the dashboard. The preflight was rejected only because the operator predicate still compared post-trade balance/project/stressed values to the immutable initial RLO1 transition receipt. That recurring-restart defect is corrected by retaining the original reference capital and account anchor while advancing expected account balance by exact project-realized delta and recomputing current project/stressed balances from recovered component state. Corrected module SHA-256 is `91C840A65C17DDE12AA63F38E6214768C7CF26DE0EB8896EAFB64DDF68A81A71`; the stopped preflight snapshot is `E76BBC7EC0D3DC4BE7BFC181946BF8953572E59DB253D6B71A1A6EAE500AD4A1`. No owner is active; retry only after this correction is committed and pushed.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached-launch commit `5cd7a955410444d86269f3ef20bbf72266900f9d` and post-trade continuity correction `3cf18efa76f4e5c33a113f9f0b422973526cf5d2` both reached `origin/main` before the successful retry. Scheduler-owned preflight PID `31064` passed exact RLO1/account `0/0` with balance/equity `$105.20/$105.20` and stopped normally; final Live PID `23180` passed the same release's exact `1/1` handshake. Korean dashboard PID `19280` is visible and responding. Stable Windows PowerShell host PID `11700` is a child of Task Scheduler service `svchost.exe` PID `2560`, remains running with task result `267009`, and anchors both children outside the Codex process lifetime. Local Live snapshot sequence `5143` is healthy, connected/account-matched and zero-alert with no position, pending order, margin or planned risk; SHA-256 is `8C0B0277AEC8B21A608BC4971B4EAA45ED786B6AA400D9DC7B1B5080E82B828B`. The canonical recorder state advanced after final Live startup at local `10:37:29`. The lifetime patch and guarded recovery are complete.
 
 ## Active work
 
-- Active engineering boundary: detached Master registered; commit/push the post-trade continuity-predicate correction, then retry the guarded `0/0 → 1/1` scheduler-owned recovery
+- Active engineering boundary: none; detached Master lifetime patch, post-trade continuity correction and guarded scheduler-owned `0/0 → 1/1` recovery are complete
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
