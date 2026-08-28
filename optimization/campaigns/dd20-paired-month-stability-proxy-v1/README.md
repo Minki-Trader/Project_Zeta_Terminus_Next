@@ -17,3 +17,9 @@ The selection-only maximum failed the combined recent segment, and the next June
 - Both months are development gates in this campaign. No proxy holdout remains afterward. A passing role authorizes exactly one MT5 selection plus full June/July forward hypothesis; MT5 real-tick economics and maximum relative equity DD remain the confirmation.
 
 The original 15 combinations, the rejected `3/3/1/2.5/1/0` MT5 candidate and both closed proxy winners remain untouched. This campaign has no Live or Lab authority.
+
+## Closed boundary
+
+The proxy completed in `22.94` seconds. Of `112,752` compositions, `14,888` passed long selection, `12,099` also passed June, and `2,824` passed June and July independently. The maximum-selection-profit paired-month survivor is `2 / 1.5 / 2 / 2.5 / 1.5 / 0`.
+
+It produced selection actual/stressed `+$5,551.5636 / +$5,237.1427` at `19.423399%` proxy DD, June `+$29.21 / +$27.474` at `13.073120%`, and July `+$4.10 / +$3.00` at `12.995201%`. Status is `VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST`. This is exactly one MT5 hypothesis, not economic success or Live authority.

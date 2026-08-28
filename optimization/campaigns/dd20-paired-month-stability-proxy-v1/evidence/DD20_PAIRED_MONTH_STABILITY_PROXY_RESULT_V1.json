@@ -1,0 +1,121 @@
+{
+  "schema": "zeta-dd20-paired-month-stability-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST",
+  "campaign": "dd20-paired-month-stability-proxy-v1",
+  "declaration_commit": "5bda67d",
+  "implementation": {
+    "contract_bytes": 7253,
+    "contract_sha256": "B77D423658A60571E759EBDF7FE1A3D13442643DF3874E2F55B70708C4893037",
+    "script_bytes": 34082,
+    "script_sha256": "C1C39B151C7235FE022B5C0F714038F8EF3AC7E7401A0E62320EBFDCDA944589",
+    "input_files": 5,
+    "input_bytes": 21208263,
+    "input_manifest_sha256": "FDD7AB28C8F21B5FBE23801E4AF2BBBB1E080EDE063A49FD393C02241A7C2CF7",
+    "raw_output_path": "optimization/artifacts/raw/dd20-paired-month-stability-proxy-v1/output/proxy-result.json",
+    "raw_output_bytes": 138439,
+    "raw_output_sha256": "1DAAA5C55ECAA0D72E22CBFD2CA20CAA19BAD0FADA8610A11CFFA540E3DACFB8",
+    "wall_time_seconds": 22.9429214,
+    "process_exit_code": 0,
+    "unweighted_base_reproduction_gate": "PASS"
+  },
+  "funnel": {
+    "compositions": 112752,
+    "long_selection_eligible": 14888,
+    "june_qualified": 12099,
+    "paired_june_and_july_qualified": 2824,
+    "paired_fraction_of_june_qualified": 0.2334077196,
+    "frozen_roles": 1,
+    "mt5_shortlist_size": 1,
+    "proxy_holdout_remaining": false
+  },
+  "shortlisted_candidate": {
+    "role": "maximum_full_stressed_profit_after_paired_month_stability",
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "active_components": 5,
+    "selection": {
+      "actual_net_usd": 5551.5635833333,
+      "stressed_net_usd": 5237.1427261906,
+      "raw_and_calibrated_drawdown_pct": 19.4233990482,
+      "minimum_balance_usd": 98.79,
+      "accepted_lifecycles": 1427,
+      "aggregate_risk_skips": 191,
+      "disabled_component_skips": 559,
+      "epoch_stressed_net_usd": [217.85, 153.552, 851.372, 4014.3687261906],
+      "epoch_raw_drawdown_pct": [17.4138262306, 17.9305166145, 19.4233990482, 16.678183152],
+      "component_stressed_net_usd": {
+        "range_61": 2035.1666666667,
+        "range_64": 808.9817619048,
+        "us100_cross": 435.8356190476,
+        "intraday": 1432.7598571429,
+        "return": 524.3988214286,
+        "impulse": 0.0
+      }
+    },
+    "june": {
+      "actual_net_usd": 29.21,
+      "stressed_net_usd": 27.474,
+      "raw_drawdown_pct": 13.0731196222,
+      "minimum_balance_usd": 95.826,
+      "accepted_lifecycles": 31,
+      "aggregate_risk_skips": 3,
+      "disabled_component_skips": 9,
+      "component_stressed_net_usd": {
+        "range_61": 11.196,
+        "range_64": -1.98,
+        "us100_cross": -0.33,
+        "intraday": 12.444,
+        "return": 6.144,
+        "impulse": 0.0
+      }
+    },
+    "july": {
+      "actual_net_usd": 4.1,
+      "stressed_net_usd": 3.0,
+      "raw_drawdown_pct": 12.9952013278,
+      "minimum_balance_usd": 96.457,
+      "accepted_lifecycles": 24,
+      "aggregate_risk_skips": 7,
+      "disabled_component_skips": 12,
+      "component_stressed_net_usd": {
+        "range_61": -0.848,
+        "range_64": -3.2,
+        "us100_cross": -13.276,
+        "intraday": 19.524,
+        "return": 0.8,
+        "impulse": 0.0
+      }
+    }
+  },
+  "economic_interpretation": {
+    "classification": "PAIRED_MONTH_STABLE_EXPLOSIVE_SELECTION_ONE_MT5_HYPOTHESIS",
+    "proxy_economic_success": false,
+    "reason_not_success": "The proxy has no remaining unseen month and cannot prove candidate-specific stop paths, floating equity DD or broker execution. One MT5 selection plus full June/July forward remains required.",
+    "selection_profit_character": "Selection stressed net is 5.825 times the unweighted comparator net while proxy DD remains 0.577 percentage points below the 20 percent cap.",
+    "recent_stability": "Both June and July independently remain actual/stressed positive and below 14 percent raw DD. July has only a $3.00 stressed margin, so MT5 confirmation is material rather than ceremonial."
+  },
+  "mt5_shortlist": [
+    {
+      "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18,
+      "selection_stressed_net_usd": 5237.1427261906,
+      "selection_proxy_drawdown_pct": 19.4233990482,
+      "june_stressed_net_usd": 27.474,
+      "july_stressed_net_usd": 3.0,
+      "maximum_shortlist_size": 1
+    }
+  ],
+  "boundary": {
+    "valid_proxy_completed": true,
+    "paired_month_gate_predeclared": true,
+    "failed_candidate_rescue_or_retune": false,
+    "mt5_launched": false,
+    "prior_15_combination_restart": false,
+    "prior_mt5_candidate_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
