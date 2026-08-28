@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0301`
+- Latest state ID: `STATE-0302`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-profit-frontier-proxy-v1` completed `117,649` allocations in about 26 seconds and closed `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST`; all three selection roles amplified later loss and breached the proxy DD cap, so MT5 remains unopened. Recompare economically distinct proxy directions before naming any successor.
+- Active optimization boundary: `dd20-capital-composition-proxy-v1` is frozen with proxy economics unopened. It reallocates four fixed whole-portfolio gross budgets among six components over exactly `29,016` compositions, freezes three selection-only roles across four epochs, and only then may open the isolated later segment. No MT5 launches during this proxy stage and the original 15-point MT5 matrix remains preserved without rerun.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

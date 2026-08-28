@@ -35,4 +35,6 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 `campaigns/portfolio-risk-cap-envelope-v1/` is closed `NO_REPLACEMENT_RETAIN_PARENT_0.04_0.12`. Its 15 selection and 15 isolated-forward passes are preserved without rerun. The same result retained `0.04 / 0.18` as a non-dominated maximum-profit frontier point: selection actual/stressed net `$1,166.89 / $1,085.408`, MT5 equity drawdown `11.3757%`.
 
-The user's prospective objective is now maximum actual and doubled-cost-stressed profit inside a hard `20%` MT5 equity-drawdown budget. `campaigns/dd20-profit-frontier-proxy-v1/` is the active serial stage. It exhaustively explores six-component allocation weights over the copied `0.04 / 0.18` lifecycle stream and may produce at most three candidates before any further MT5 real-tick execution.
+`campaigns/dd20-profit-frontier-proxy-v1/` is closed `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST`. Near-uniform gross leverage almost doubled selection profit, but every frozen role amplified the isolated later loss and exceeded the proxy DD cap; none reached MT5.
+
+The user's prospective objective remains maximum actual and doubled-cost-stressed profit inside a hard `20%` MT5 equity-drawdown budget. `campaigns/dd20-capital-composition-proxy-v1/` is the active serial stage. It holds four whole-portfolio gross budgets fixed, exhaustively reallocates each among the six components over `29,016` compositions, freezes at most three selection roles before opening the isolated later segment, and launches no MT5 during the proxy stage.

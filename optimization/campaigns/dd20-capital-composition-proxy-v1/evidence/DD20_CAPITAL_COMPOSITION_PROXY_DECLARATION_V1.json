@@ -1,0 +1,149 @@
+{
+  "schema": "zeta-dd20-capital-composition-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "PROXY_IMPLEMENTATION_FROZEN_ECONOMICS_UNOPENED",
+  "campaign": "dd20-capital-composition-proxy-v1",
+  "user_objective": {
+    "maximum_tolerated_mt5_equity_drawdown_pct": 20.0,
+    "primary_preference": "explosive actual and doubled-cost-stressed profit inside the hard drawdown budget",
+    "proxy_before_mt5": true,
+    "prior_15_combination_restart": false,
+    "maximum_mt5_shortlist_size": 3
+  },
+  "economic_parent": {
+    "source_campaign": "portfolio-risk-cap-envelope-v1",
+    "source_result_sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314",
+    "frontier_position_risk_fraction": 0.04,
+    "frontier_aggregate_risk_fraction": 0.18,
+    "selection_actual_net_usd": 1166.89,
+    "selection_stressed_net_usd": 1085.408,
+    "selection_mt5_equity_drawdown_pct": 11.3757,
+    "selection_closed_lifecycles": 2177,
+    "later_actual_net_usd": -1.74,
+    "later_stressed_net_usd": -3.669,
+    "later_mt5_equity_drawdown_pct": 15.8976,
+    "later_closed_lifecycles": 86
+  },
+  "predecessor_proxy": {
+    "campaign": "dd20-profit-frontier-proxy-v1",
+    "result_sha256": "11EEFB4AA6F74766D0898BFBA7B9C6ABEDC2DC2B8CBF247AF3FA736F763151DE",
+    "classification": "GROSS_LEVERAGE_AMPLIFIES_SELECTION_AND_LATER_LOSS_NO_CONFIRMABLE_ALLOCATION",
+    "successor_reason": "Reallocate fixed whole-portfolio gross budgets among components instead of increasing nearly every component together. This is a distinct economic question supported by the preserved lifecycle stream."
+  },
+  "campaign_owned_raw_input": {
+    "path": "optimization/artifacts/raw/dd20-capital-composition-proxy-v1/input/",
+    "file_count": 3,
+    "total_bytes": 16874215,
+    "manifest_sha256": "8FA3E642B8CFCE607178386119AF480878E3B56EDFD857902666A048B2D266B3",
+    "files": [
+      {
+        "path": "agent-3002-research-lifecycles.csv",
+        "bytes": 16845458,
+        "sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85"
+      },
+      {
+        "path": "risk-cap-search.forward.xml",
+        "bytes": 14914,
+        "sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3"
+      },
+      {
+        "path": "risk-cap-search.xml",
+        "bytes": 13843,
+        "sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B"
+      }
+    ],
+    "copied_not_linked": true
+  },
+  "implementation": {
+    "readme_bytes": 2838,
+    "readme_sha256": "9A0445DE1C0C4302F9210AF0F52C49239CCF630B1339C19678A98BC171E965C0",
+    "contract_bytes": 2734,
+    "contract_sha256": "30FFFE9A30725E42FB44A1E68117146DC756D58FFB343376C3D9C378088ECA5F",
+    "script_bytes": 21464,
+    "script_sha256": "BE13DFCEE1782241EAC28D60136406F7384EFC23399F8A86C01814696822B6D9",
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "python_ast_parse": "OK",
+    "contract_json_parse": "OK",
+    "text_format": "UTF-8 without BOM, CRLF"
+  },
+  "proxy_contract": {
+    "selection_segment": "agent 3002 segment 3 / pass 13 / 0.04-0.18 / 2022-08-01 through 2026-06-01",
+    "later_segment": "agent 3002 segment 6 / pass 13 forward / 2026-06-01 through 2026-08-01",
+    "component_count": 6,
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "weight_grid": [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
+    "gross_weight_budgets": [6.0, 7.5, 9.0, 10.5],
+    "minimum_active_components": 4,
+    "exhaustive_compositions": 29016,
+    "selection_epochs": [
+      {
+        "id": "E1",
+        "start": "2022-08-01",
+        "end": "2023-06-01",
+        "closed_lifecycles": 473,
+        "unweighted_stressed_net_usd": 115.281
+      },
+      {
+        "id": "E2",
+        "start": "2023-06-01",
+        "end": "2024-06-01",
+        "closed_lifecycles": 576,
+        "unweighted_stressed_net_usd": 60.732
+      },
+      {
+        "id": "E3",
+        "start": "2024-06-01",
+        "end": "2025-06-01",
+        "closed_lifecycles": 570,
+        "unweighted_stressed_net_usd": 293.6905
+      },
+      {
+        "id": "E4_RECENT_SELECTION",
+        "start": "2025-06-01",
+        "end": "2026-06-01",
+        "closed_lifecycles": 558,
+        "unweighted_stressed_net_usd": 615.7045
+      }
+    ],
+    "proxy_balance": "Start at USD 100 and add each lifecycle actual or stressed net multiplied by its component weight in original close order.",
+    "proxy_drawdown": "The worse actual/stressed peak-to-current closed-balance percentage drawdown, with no downward calibration to observed MT5 equity DD.",
+    "selection_gates": [
+      "full selection actual and stressed net positive",
+      "every frozen epoch actual and stressed net positive",
+      "full and epoch actual/stressed balances remain positive",
+      "full and epoch proxy drawdown at or below 20 percent",
+      "at least four components retain a positive multiplier"
+    ],
+    "selection_roles": [
+      "maximum full-selection stressed profit",
+      "maximum recent-selection-epoch stressed profit while every epoch passes",
+      "maximum weakest-epoch stressed-net uplift ratio versus the unweighted base"
+    ],
+    "distinct_role_replacement": "If role winners duplicate, advance to the next distinct candidate under that role's frozen ordering.",
+    "later_used_in_selection_or_tuning": false,
+    "later_confirmation_gate": "Positive actual net, positive stressed net, positive balance and proxy drawdown at or below 20 percent; no rescue or retuning.",
+    "maximum_mt5_shortlist": 3
+  },
+  "limitations": [
+    "The fixed observed path does not feed changed composition back into stop geometry, aggregate admission, margin, overlap, balance-dependent sizing or execution.",
+    "Closed-balance proxy drawdown is not MT5 mark-to-market equity drawdown.",
+    "Proxy output can shortlist but cannot establish MT5 economic improvement or authorize Live adoption."
+  ],
+  "boundary": {
+    "selection_proxy_output_opened": false,
+    "later_proxy_output_opened": false,
+    "mt5_launched": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "economic_verdict": null
+  }
+}
