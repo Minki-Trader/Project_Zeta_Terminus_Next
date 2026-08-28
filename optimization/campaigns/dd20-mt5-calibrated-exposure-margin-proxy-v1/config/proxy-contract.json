@@ -1,0 +1,235 @@
+{
+  "schema": "zeta-dd20-mt5-calibrated-exposure-margin-proxy-contract-v1",
+  "campaign": "dd20-mt5-calibrated-exposure-margin-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-mt5-calibrated-exposure-margin-proxy-v1/input",
+    "files": [
+      {"name": "high-exposure-selection-lifecycles.csv", "bytes": 2713564, "sha256": "234FF296ABC7A7831F3355BF4BF1810067921B4D266319214FB74F7C520E31CB"},
+      {"name": "high-exposure-selection.tst", "bytes": 1620484, "sha256": "3A5928E1CCA73F34064A6398F942A087D4ABD232123352C71E8FB90BE184CB54"},
+      {"name": "near-miss-forward-lifecycles.csv", "bytes": 92997, "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E"},
+      {"name": "near-miss-forward.tst", "bytes": 64996, "sha256": "8DB1233E7507AA42D96DAC2A530D7EBC8128193066096373841AF43852F339AD"},
+      {"name": "near-miss-selection-lifecycles.csv", "bytes": 2685969, "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"},
+      {"name": "near-miss-selection.tst", "bytes": 1597220, "sha256": "BECAF1036266D69F31B670FF3CE3B871AFF51FE271994467A3DC6F266C3C7AAF"},
+      {"name": "parent-forward-report.xml", "bytes": 14914, "sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3"},
+      {"name": "parent-selection-forward-lifecycles.csv", "bytes": 16845458, "sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85"},
+      {"name": "parent-selection-report.xml", "bytes": 13843, "sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B"}
+    ],
+    "files_total": 9,
+    "bytes_total": 25649445,
+    "canonical_manifest_sha256": "8DAF875A76F2B5A5A3A5CCB7709771385EF403A0ED03C2894E2C5F63347BC5DE",
+    "selection_segment_index": 3,
+    "selection_expected": {
+      "births": 2177,
+      "closed_lifecycles": 2177,
+      "actual_net_usd": 1166.89,
+      "stressed_net_usd": 1085.408
+    },
+    "later_segment_index": 6
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "economic_execution_model": {
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "aggregate_tolerance_usd": 0.01,
+    "day_multiplier": "1 + floor(max(0, stressed_closed_balance - 100) / 150 + 1e-9), frozen on the first source event of each server day",
+    "component_volume": "MathRound-positive equivalent of base_volume * day_multiplier * component_weight to the 0.01 lot step",
+    "passive_pending_component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+    "passive_pending_volume_basis": "the lifecycle birth volume preserves the earlier unobserved reservation-day base ladder; apply the candidate weight with positive MathRound semantics to those source base steps",
+    "executable_multiplier": "normalized component volume divided by normalized unweighted base volume",
+    "conservative_capital_proxy": "minimum of actual closed balance and stressed closed balance",
+    "position_planned_risk": "conservative capital * 0.04 * executable multiplier",
+    "aggregate_admission": "accept only when tracked open planned risk plus proposed position planned risk is at or below conservative capital * 0.18 plus $0.01",
+    "close_economics": "source lifecycle actual and stressed close net scaled by candidate normalized volume divided by the source birth volume"
+  },
+  "component_weight_grids": [
+    [1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2],
+    [1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7],
+    [1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0],
+    [2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8],
+    [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8],
+    [0.0]
+  ],
+  "expected_compositions": 16807,
+  "native_cache_offsets": {
+    "total_net_profit": "0xB2C",
+    "equity_drawdown_relative_pct": "0xBBC"
+  },
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4_RECENT_SELECTION", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "paired_forward_period": {
+    "id": "FULL_JUNE_JULY_2026",
+    "start": "2026.06.01 00:00:00",
+    "end": "2026.08.01 00:00:00",
+    "expected": {
+      "births": 86,
+      "closed_lifecycles": 86,
+      "component_birth_counts": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": 9,
+        "ZT-M30-US30-RANGE-COMP-64efb16616": 7,
+        "ZT-H1-US100-CROSS-IN-14b72317b7": 34,
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": 8,
+        "ZT-H1-US30-RETURN-I-c870a788ec": 7,
+        "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": 21
+      }
+    },
+    "starts_from_reference_capital": true,
+    "used_in_candidate_gate_and_ranking": true
+  },
+  "development_period": {
+    "id": "JUNE_2026_DEVELOPMENT",
+    "start": "2026.06.01 00:00:00",
+    "end": "2026.07.01 00:00:00",
+    "expected": {
+      "births": 43,
+      "closed_lifecycles": 43,
+      "component_birth_counts": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": 7,
+        "ZT-M30-US30-RANGE-COMP-64efb16616": 4,
+        "ZT-H1-US100-CROSS-IN-14b72317b7": 18,
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": 3,
+        "ZT-H1-US30-RETURN-I-c870a788ec": 2,
+        "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": 9
+      }
+    },
+    "starts_from_reference_capital": true,
+    "used_in_candidate_gate_and_ranking": true
+  },
+  "july_development_period": {
+    "id": "JULY_2026_DEVELOPMENT",
+    "start": "2026.07.01 00:00:00",
+    "end": "2026.08.01 00:00:00",
+    "expected": {
+      "births": 43,
+      "closed_lifecycles": 43,
+      "component_birth_counts": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": 2,
+        "ZT-M30-US30-RANGE-COMP-64efb16616": 3,
+        "ZT-H1-US100-CROSS-IN-14b72317b7": 16,
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": 5,
+        "ZT-H1-US30-RETURN-I-c870a788ec": 5,
+        "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": 12
+      }
+    },
+    "starts_from_reference_capital": true,
+    "used_in_candidate_gate_and_ranking": true
+  },
+  "selection_mt5_drawdown_calibration": {
+    "anchors": [
+      {
+        "id": "base",
+        "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        "observed_mt5_equity_drawdown_relative_pct": 11.3757,
+        "observed_actual_net_usd": 1166.89,
+        "observed_stressed_net_usd": 1085.408,
+        "observed_closed_lifecycles": 2177
+      },
+      {
+        "id": "near_miss",
+        "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+        "observed_mt5_equity_drawdown_relative_pct": 20.256887565152653,
+        "observed_actual_net_usd": 5786.63,
+        "observed_stressed_net_usd": 5477.524,
+        "observed_closed_lifecycles": 1428,
+        "lifecycle_file": "near-miss-selection-lifecycles.csv",
+        "native_cache_file": "near-miss-selection.tst",
+        "lifecycle_expected": {
+          "births": 1428,
+          "closed_lifecycles": 1428,
+          "actual_net_usd": 5786.63,
+          "stressed_net_usd": 5477.524
+        },
+        "expected_proxy_selection": {
+          "actual_net_usd": 5551.5635833333,
+          "stressed_net_usd": 5237.1427261906,
+          "raw_drawdown_pct": 19.4233990482
+        }
+      },
+      {
+        "id": "high_exposure",
+        "weights": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+        "observed_mt5_equity_drawdown_relative_pct": 27.072835062460303,
+        "observed_actual_net_usd": 2822.33,
+        "observed_stressed_net_usd": 2648.883,
+        "observed_closed_lifecycles": 1448
+      }
+    ],
+    "uncertainty_reserve_percentage_points": 0.5,
+    "rule": "piecewise-linear selection DD projection through the base, near-miss and high-exposure observed MT5 anchors using each anchor's executable-lattice raw DD; take max(raw, projected), then add a frozen 0.5 percentage-point uncertainty reserve before the 20 percent gate"
+  },
+  "paired_forward_mt5_drawdown_calibration": {
+    "base_anchor": {
+      "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "observed_mt5_equity_drawdown_relative_pct": 15.8976,
+      "observed_actual_net_usd": -1.74,
+      "observed_stressed_net_usd": -3.669
+    },
+    "near_miss_anchor": {
+      "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "observed_mt5_equity_drawdown_relative_pct": 18.675302129932568,
+      "observed_actual_net_usd": 32.74,
+      "observed_stressed_net_usd": 30.626,
+      "observed_closed_lifecycles": 54,
+      "lifecycle_file": "near-miss-forward-lifecycles.csv",
+      "native_cache_file": "near-miss-forward.tst",
+      "lifecycle_expected": {
+        "births": 54,
+        "closed_lifecycles": 54,
+        "actual_net_usd": 32.74,
+        "stressed_net_usd": 30.626
+      }
+    },
+    "uncertainty_reserve_percentage_points": 0.25,
+    "rule": "affine full-June-July DD projection through the preserved base and near-miss MT5 anchors using sequential paired-period proxy raw DD; take max(raw, projected), then add a frozen 0.25 percentage-point uncertainty reserve before the 20 percent gate"
+  },
+  "hard_mt5_equity_drawdown_pct": 20.0,
+  "selection_gates": {
+    "unweighted_base_reproduces_source_close_economics_and_count": true,
+    "near_miss_reproduces_frozen_proxy_and_native_mt5_anchors": true,
+    "full_actual_and_stressed_net_positive": true,
+    "every_epoch_actual_and_stressed_net_positive": true,
+    "full_and_epoch_balances_positive": true,
+    "budgeted_selection_mt5_drawdown_at_or_below_hard_cap": true,
+    "every_epoch_raw_drawdown_at_or_below_hard_cap": true
+  },
+  "paired_forward_gates": {
+    "full_actual_net_positive": true,
+    "full_stressed_net_positive": true,
+    "minimum_balance_positive": true,
+    "budgeted_mt5_drawdown_at_or_below_hard_cap": true
+  },
+  "monthly_gates": {
+    "june_actual_and_stressed_positive": true,
+    "july_actual_and_stressed_positive": true,
+    "both_months_minimum_balance_positive": true,
+    "both_months_raw_drawdown_at_or_below_20_percent": true,
+    "both_months_start_independently_from_reference_capital": true
+  },
+  "selection_role": {
+    "id": "maximum_selection_stressed_profit_with_mt5_calibrated_margin_and_paired_stability",
+    "ordering": "maximize selection stressed net, then full paired-forward stressed net, weaker independent-month stressed net, selection actual net, recent-selection stressed net, minimize budgeted selection DD, minimize budgeted paired-forward DD, then lexicographic weights",
+    "maximum_distinct_roles": 1
+  },
+  "output_top_selection_records": 20,
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1,
+    "near_miss_candidate_rerun": false,
+    "prior_high_exposure_candidate_rerun": false,
+    "original_15_combination_rerun": false
+  }
+}
