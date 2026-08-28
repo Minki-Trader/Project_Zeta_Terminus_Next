@@ -1,0 +1,97 @@
+{
+  "schema": "zeta-dd20-local-error-profit-frontier-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE",
+  "campaign": "dd20-local-error-profit-frontier-proxy-v1",
+  "frozen_declaration_commit": "17212fa8d830ee983310a26907e67597c6c46cb7",
+  "run": {
+    "process_invocations": 1,
+    "process_exit_code": 0,
+    "wall_time_seconds": 97.8264745,
+    "compositions": 204490,
+    "evaluation_rows_including_external_anchors": 204495,
+    "exact_rows_reused_from_closed_integer_tenth_grid": 0,
+    "selection_eligible_compositions": 0,
+    "paired_forward_eligible_compositions": 0,
+    "june_eligible_compositions": 0,
+    "raw_july_eligible_compositions": 0,
+    "final_eligible_compositions": 0,
+    "selection_winner": null,
+    "mt5_shortlist": []
+  },
+  "anchor_reproduction": {
+    "all_selection_proxy_anchors": "PASS",
+    "all_external_native_selection_anchors": "PASS",
+    "all_paired_proxy_drawdown_anchors": "PASS",
+    "all_external_native_forward_anchors": "PASS",
+    "all_continuous_july_anchors": "PASS",
+    "all_nonnegative_local_anchor_envelopes": "PASS",
+    "all_negative_anchor_errors_conservatively_clamped_to_zero": "PASS"
+  },
+  "qualified_success_floor": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "observed_selection_actual_net_usd": 1691.54,
+    "observed_selection_stressed_2x_cost_net_usd": 1626.26,
+    "observed_selection_native_mt5_equity_drawdown_pct": 19.55037176500623,
+    "candidate_rerun": false,
+    "retained": true
+  },
+  "composition_local_selection": {
+    "gap_l1_lipschitz_slope_percentage_points_per_weight": 0.8629081267,
+    "candidate_gap_upper_range_percentage_points": [1.1480180125, 5.1854746039],
+    "drawdown_uncertainty_reserve_percentage_points": 0.25,
+    "actual_error_l1_lipschitz_slope_usd_per_weight": 446.1333008658,
+    "stressed_error_l1_lipschitz_slope_usd_per_weight": 431.4507034632,
+    "candidate_actual_shortfall_range_usd": [94.2485221861, 1968.0083858225],
+    "candidate_stressed_shortfall_range_usd": [88.6346066018, 1900.7275611471],
+    "profit_uncertainty_reserve_usd": 50.0,
+    "corrected_actual_and_stressed_must_strictly_exceed_qualified_success": true
+  },
+  "composition_local_paired_forward": {
+    "gap_l1_lipschitz_slope_percentage_points_per_weight": 1.2249053689,
+    "candidate_gap_upper_range_percentage_points": [3.289413549, 8.2357290509],
+    "drawdown_uncertainty_reserve_percentage_points": 0.5
+  },
+  "composition_local_continuous_july": {
+    "actual_error_l1_lipschitz_slope_usd_per_weight": 1.9363636364,
+    "stressed_error_l1_lipschitz_slope_usd_per_weight": 2.155,
+    "candidate_actual_shortfall_range_usd": [6.1768181818, 14.3095454545],
+    "candidate_stressed_shortfall_range_usd": [6.58375, 15.63475],
+    "uncertainty_reserve_usd": 1.0
+  },
+  "raw_artifact": {
+    "path": "optimization/artifacts/raw/dd20-local-error-profit-frontier-proxy-v1/output/proxy-result.json",
+    "bytes": 61892,
+    "sha256": "19D67D594211426D602936F9D089C249FD8469EC757BF079CCD729522C6A4BF4"
+  },
+  "implementation": {
+    "contract_sha256": "C9DE5982AD797475CE396BEF065C3D14C346769BAFE52B75F177480A8637B5BF",
+    "script_sha256": "58BB1C85299BDF28B4812D5F7F26F9F91DACF253AC61506D85B42149A0AAA392",
+    "input_files": 19,
+    "input_bytes": 34559535,
+    "input_manifest_sha256": "F79651BAD1CD082DA6E1B3E89BCB59576F4567EC57F1C2C75D7523E8F4475BB8"
+  },
+  "economic_verdict": {
+    "classification": "COMPOSITION_LOCAL_STATIC_WEIGHT_FRONTIER_EMPTY_NO_MT5_SHORTLIST",
+    "valid_economic_result": true,
+    "new_candidate_qualified": false,
+    "qualified_success_anchor_retained": true,
+    "interpretation": "None of the 204,490 new half-step static component allocations simultaneously exceeded the qualified MT5 profit floor after composition-local error and reserve, stayed inside the native-DD budget, and kept every selection epoch positive. Downstream counts are zero because the full-pair and month gates are conditional on selection eligibility. This is a valid economic empty frontier, not an environment, design, invocation or engineering failure.",
+    "successor_information": "Two separate static-weight searches now leave the qualified anchor intact without a higher conservative selection candidate. Continue with a distinct capital-growth mechanism such as the stressed-balance addition ladder rather than another neighboring static-weight grid. Do not rerun either closed grid or any MT5 anchor."
+  },
+  "boundary": {
+    "proxy_rerun": false,
+    "closed_global_error_grid_rerun": false,
+    "qualified_success_candidate_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "mt5_launched": false,
+    "maximum_mt5_shortlist_size": 1,
+    "free_space_gib_after_run": 77.5,
+    "research_artifacts_preserved": true,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

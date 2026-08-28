@@ -22,4 +22,10 @@ The input is another independent physical 19-file copy totaling `34,559,535` byt
 
 ## Current boundary
 
-All selection, paired-forward, June, July, ranking and shortlist economics are unopened. Commit and push this declaration before the single proxy invocation.
+Declaration commit `17212fa8d830ee983310a26907e67597c6c46cb7` reached `origin/main` before exactly one proxy process opened economics. It evaluated all `204,490` new rows plus five external anchors in `97.8265` seconds and exited `0`. Every copied-input, proxy/native anchor and nonnegative local-envelope check passed.
+
+No row passed the combined selection contract. Selection eligibility is `0`; conditional paired-forward, June, raw July and final counts are also `0`. No winner was ranked and the MT5 shortlist is empty. Across the grid, local selection DD charges ranged `1.148018..5.185475` points, actual/stressed profit charges ranged `$94.2485..$1,968.0084 / $88.6346..$1,900.7276`, and the separate reserves remained applied.
+
+Status is `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE`; classification is `COMPOSITION_LOCAL_STATIC_WEIGHT_FRONTIER_EMPTY_NO_MT5_SHORTLIST`. The raw result is `61,892` bytes at SHA-256 `19D67D594211426D602936F9D089C249FD8469EC757BF079CCD729522C6A4BF4`. The qualified MT5 anchor remains retained without rerun.
+
+This campaign closes without MT5. After two distinct static-weight frontiers produced no conservatively superior candidate, the next proxy changes the profit mechanism by exploring the stressed-balance capital addition ladder rather than opening another neighboring component grid.
