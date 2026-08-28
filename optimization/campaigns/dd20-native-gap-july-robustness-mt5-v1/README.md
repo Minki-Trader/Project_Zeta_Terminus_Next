@@ -25,12 +25,14 @@ After a dedicated physical Portable is created and this exact source compiles, r
 
 Economic qualification requires selection actual/stressed net above the preserved `+$1,166.89 / +$1,085.408` comparator, positive actual/stressed net in all four selection epochs, native maximum relative selection equity DD `<=20%`, positive full-forward actual/stressed net, native maximum relative forward equity DD `<=20%`, and positive continuous June and July actual/stressed slices. Environment, compilation, invocation, history, reporting or logging defects are correction states with no economic verdict.
 
-## Current boundary
+## Closed result
 
-Declaration commit `94eb447` reached `origin/main` before a new physical Portable was copied from the closed capital-composition runtime. The new terminal has a distinct file identity, one hard-link entry, zero reparse points and no process owner.
+Implementation commit `954b659492e2c06026335d3d783bce888bed9e5e` reached `origin/main` before exactly one selection and one independently initialized full June-July forward ran. Both passes used build 6140 real ticks, reported `100% real ticks`, stopped normally, produced complete HTML/native-cache/EA economics and ended with zero safety, persistence, broker, foreign, protection or catchup fault.
 
-All 19 campaign source/configuration files match their runtime copies. One MetaEditor build 6140 invocation compiled `ZetaDD20NativeGapJulyRobustnessMT5V1` at `0 errors / 0 warnings` in `2,825 ms`; the generated EX5 is `229,492` bytes. The launcher returned code `1` after the valid log and binary were emitted, so compilation was not repeated.
+Selection actual/stressed net is `+$1,691.54 / +$1,626.26` across `1,295` closed lifecycles. This beats the preserved comparator by `+$524.65 / +$540.852`, or `44.9614% / 49.8294%`. All four chronological epochs are positive. Native maximum relative equity DD is `19.550371765%`, leaving `0.449628235` percentage points under the hard `20%` cap.
 
-The dedicated runtime contains `744` files / `5,781,350,163` logical bytes and retains 35 inert predecessor-named files totaling `3,183,295` bytes. No new EA, Include, SET, INI or report path references them, and more than `77 GiB` remains free for logs and evidence.
+The independent full forward earned actual/stressed `+$23.01 / +$21.256` at native maximum relative equity DD `12.436759043%`. Its continuous slices are June `+$19.79 / +$18.976` and July `+$3.22 / +$2.280`; all required actual and stressed gates pass. The proxy's deliberately conservative July estimate remained below the observed positive result.
 
-Status is `COMPILED_READY_ECONOMICS_UNOPENED`. Selection, forward, reports and economic output remain unopened. Commit and push this implementation freeze before the sole selection.
+Selection raw evidence is preserved as `24` files / `53,559,254` bytes / canonical manifest `1C1222D9DC407440A135D0E01BC305595E1805707B71D21D8BBA828D345523B9`. Forward evidence is `20` files / `27,819,980` bytes / manifest `80F49175F770B9536DD9E0F10870C1826F1C1139B2CCFB21EAA423DFC9F20BF9`. The original 15 combinations and all prior candidates remain closed without rerun.
+
+Status is `VALID_MT5_COMPLETE_ALL_ECONOMIC_GATES_PASS`; classification is `MT5_CONFIRMED_DD20_NATIVE_GAP_JULY_ROBUST_PROFIT_UPLIFT_CANDIDATE`. This is a qualified optimization success anchor, not an automatic Live promotion. The Goal continues with a distinct proxy-first search for more stressed profit through component redistribution inside the native DD budget.
