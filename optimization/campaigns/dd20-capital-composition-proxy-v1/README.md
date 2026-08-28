@@ -20,6 +20,8 @@ The prior proxy showed that near-uniform gross leverage nearly doubled selection
 
 This remains an allocation proxy, not MT5 profit or mark-to-market DD proof. It changes no MT5, MQL, Live, Lab or broker state and can nominate at most three MT5 candidates. The declaration is `evidence/DD20_CAPITAL_COMPOSITION_PROXY_DECLARATION_V1.json`.
 
-## Current boundary
+## Closed boundary
 
-Implementation and campaign-owned input are frozen with all proxy economic output unopened.
+The proxy completed all `29,016` compositions in `12.55` seconds. Of `12,330` selection-eligible compositions, the predeclared recent-selection role at weights `3.0 / 3.0 / 1.0 / 2.5 / 1.0 / 0.0` was the sole isolated-later survivor. It produced selection actual/stressed net `$2,557.205 / $2,430.3735` at `19.850887%` proxy DD and later actual/stressed net `+$16.955 / +$13.855` at `16.810504%` proxy DD.
+
+Status is `VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST`. The frozen survivor is one MT5 hypothesis, not MT5 proof and not Live authority. The two failed roles remain failed without retuning. Durable result evidence is `evidence/DD20_CAPITAL_COMPOSITION_PROXY_RESULT_V1.json`.

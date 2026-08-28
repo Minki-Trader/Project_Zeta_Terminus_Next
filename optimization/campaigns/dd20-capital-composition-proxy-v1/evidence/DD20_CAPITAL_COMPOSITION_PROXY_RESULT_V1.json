@@ -1,0 +1,141 @@
+{
+  "schema": "zeta-dd20-capital-composition-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST",
+  "campaign": "dd20-capital-composition-proxy-v1",
+  "declaration_commit": "96813045bb7d4632e832906c0dfd6f0c626d5003",
+  "declaration_sha256": "7AC71402776BB83032D6715C76114CC688AB6BD170FEEFDE5A288AEE9AF8DC47",
+  "implementation": {
+    "contract_sha256": "30FFFE9A30725E42FB44A1E68117146DC756D58FFB343376C3D9C378088ECA5F",
+    "script_sha256": "BE13DFCEE1782241EAC28D60136406F7384EFC23399F8A86C01814696822B6D9",
+    "input_lifecycle_sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85",
+    "raw_output_path": "optimization/artifacts/raw/dd20-capital-composition-proxy-v1/output/proxy-result.json",
+    "raw_output_bytes": 48721,
+    "raw_output_sha256": "800FE4FCB22E540831268E6BDC1A313966BAA5FD3E5B27E357F2DEDB9C1DE9CE",
+    "wall_time_seconds": 12.5527326,
+    "process_exit_code": 0
+  },
+  "selection_search": {
+    "compositions": 29016,
+    "eligible_compositions": 12330,
+    "eligible_fraction": 0.4249379653,
+    "known_later_used_in_ranking_or_weight_tuning": false,
+    "selection_lifecycles": 2177,
+    "hard_proxy_drawdown_pct": 20.0,
+    "gross_weight_budgets": [6.0, 7.5, 9.0, 10.5],
+    "minimum_active_components": 4,
+    "epoch_lifecycles": [473, 576, 570, 558]
+  },
+  "component_order": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "unweighted_base": {
+    "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+    "selection_actual_net_usd": 1166.89,
+    "selection_stressed_net_usd": 1085.408,
+    "selection_proxy_drawdown_pct": 12.8415628896,
+    "selection_observed_mt5_equity_drawdown_pct": 11.3757,
+    "later_actual_net_usd": -1.74,
+    "later_stressed_net_usd": -3.669,
+    "later_proxy_drawdown_pct": 13.9425290469,
+    "later_observed_mt5_equity_drawdown_pct": 15.8976
+  },
+  "selected_roles": [
+    {
+      "role": "maximum_full_stressed_profit",
+      "weights": [3.0, 3.0, 3.0, 0.0, 1.5, 0.0],
+      "gross_weight_budget": 10.5,
+      "active_components": 4,
+      "selection_actual_net_usd": 2727.045,
+      "selection_stressed_net_usd": 2542.272,
+      "selection_proxy_drawdown_pct": 15.6910268606,
+      "weakest_epoch_stressed_uplift_ratio": 2.2449917127,
+      "later_actual_net_usd": -14.22,
+      "later_stressed_net_usd": -18.201,
+      "later_proxy_drawdown_pct": 39.2583568815,
+      "later_confirmation_passed": false,
+      "later_failed_conditions": [
+        "actual_net_positive",
+        "stressed_net_positive",
+        "proxy_drawdown_at_or_below_20_pct"
+      ]
+    },
+    {
+      "role": "maximum_recent_selection_stressed_profit",
+      "weights": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+      "gross_weight_budget": 10.5,
+      "active_components": 5,
+      "selection_actual_net_usd": 2557.205,
+      "selection_stressed_net_usd": 2430.3735,
+      "selection_proxy_drawdown_pct": 19.8508865383,
+      "weakest_epoch_stressed_uplift_ratio": 1.6336704796,
+      "selection_actual_delta_vs_base_usd": 1390.315,
+      "selection_actual_improvement_vs_base_pct": 119.1470489935,
+      "selection_stressed_delta_vs_base_usd": 1344.9655,
+      "selection_stressed_improvement_vs_base_pct": 123.9133579262,
+      "epoch_stressed_net_usd": [216.908, 139.815, 479.7935, 1593.857],
+      "epoch_proxy_drawdown_pct": [16.2970209043, 10.3018420044, 18.1718836537, 11.2257499206],
+      "later_actual_net_usd": 16.955,
+      "later_stressed_net_usd": 13.855,
+      "later_proxy_drawdown_pct": 16.810504205,
+      "later_actual_delta_vs_base_usd": 18.695,
+      "later_stressed_delta_vs_base_usd": 17.524,
+      "later_confirmation_passed": true
+    },
+    {
+      "role": "maximum_weakest_epoch_uplift",
+      "weights": [3.0, 3.0, 2.5, 0.0, 2.0, 0.0],
+      "gross_weight_budget": 10.5,
+      "active_components": 4,
+      "selection_actual_net_usd": 2694.56,
+      "selection_stressed_net_usd": 2522.09425,
+      "selection_proxy_drawdown_pct": 16.0678648714,
+      "weakest_epoch_stressed_uplift_ratio": 2.3003238567,
+      "later_actual_net_usd": -9.445,
+      "later_stressed_net_usd": -13.1045,
+      "later_proxy_drawdown_pct": 34.8381295313,
+      "later_confirmation_passed": false,
+      "later_failed_conditions": [
+        "actual_net_positive",
+        "stressed_net_positive",
+        "proxy_drawdown_at_or_below_20_pct"
+      ]
+    }
+  ],
+  "mt5_shortlist": [
+    {
+      "role": "maximum_recent_selection_stressed_profit",
+      "weights": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+      "gross_weight_budget": 10.5,
+      "selection_stressed_net_usd": 2430.3735,
+      "selection_proxy_drawdown_pct": 19.8508865383,
+      "later_stressed_net_usd": 13.855,
+      "later_proxy_drawdown_pct": 16.810504205
+    }
+  ],
+  "economic_interpretation": {
+    "selection": "Fixed-budget composition more than doubled actual and stressed selection profit versus the unweighted 0.04/0.18 path while remaining just inside the 20 percent proxy-DD budget.",
+    "later": "One predeclared recent-selection role reversed the base's negative later actual and stressed net while remaining inside the later proxy-DD budget; the other two roles amplified the later loss and failed without rescue.",
+    "classification": "FIXED_BUDGET_COMPOSITION_REVERSES_LATER_LOSS_ONE_MT5_HYPOTHESIS",
+    "mt5_shortlist_size": 1,
+    "mt5_launch_authorized_by_this_result": true,
+    "economic_success": false,
+    "reason_not_success": "This is valid proxy selection information, not MT5 real-tick profit or mark-to-market equity-DD proof."
+  },
+  "boundary": {
+    "proxy_completed": true,
+    "selection_roles_frozen_before_later_open": true,
+    "later_failed_role_rescue_or_retune": false,
+    "mt5_launched": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false,
+    "prior_15_combination_restart": false
+  }
+}
