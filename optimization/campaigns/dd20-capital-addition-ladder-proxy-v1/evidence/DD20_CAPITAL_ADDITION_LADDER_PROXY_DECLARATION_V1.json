@@ -1,0 +1,138 @@
+{
+  "schema": "zeta-dd20-capital-addition-ladder-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_ALL_ECONOMICS_UNOPENED",
+  "campaign": "dd20-capital-addition-ladder-proxy-v1",
+  "predecessor_closed_result_commit": "6bf6772bde30ca5898f01eeae2b2f49f0288e648",
+  "objective": "increase profit compounding above the first fully qualified DD20 MT5 result by changing only the stressed-balance addition step while retaining the hard 20 percent native equity-DD and every chronological and June-July economic gate",
+  "fixed_candidate_identity": {
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01
+  },
+  "search": {
+    "candidate_addition_step_ranges_usd": [
+      {"start": 50, "end": 145, "increment": 5, "count": 20},
+      {"start": 155, "end": 300, "increment": 5, "count": 30}
+    ],
+    "candidate_steps": 50,
+    "closed_anchor_addition_step_usd": 150.0,
+    "closed_anchor_in_candidate_grid": false,
+    "evaluation_rows_including_closed_anchor": 51,
+    "day_multiplier_formula": "1 + floor(max(0, stressed closed balance - 100) / candidate addition step)",
+    "maximum_distinct_roles": 1
+  },
+  "qualified_success_anchor": {
+    "addition_step_usd": 150.0,
+    "selection_proxy_actual_net_usd": 1763.4818571429,
+    "selection_proxy_stressed_net_usd": 1693.3220714286,
+    "selection_proxy_raw_drawdown_pct": 17.4282210109,
+    "selection_observed_actual_net_usd": 1691.54,
+    "selection_observed_stressed_net_usd": 1626.26,
+    "selection_observed_native_mt5_equity_drawdown_pct": 19.55037176500623,
+    "paired_proxy_actual_net_usd": 28.87,
+    "paired_proxy_stressed_net_usd": 27.236,
+    "paired_proxy_raw_drawdown_pct": 9.208590762,
+    "paired_observed_actual_net_usd": 23.01,
+    "paired_observed_stressed_net_usd": 21.256,
+    "paired_observed_native_mt5_equity_drawdown_pct": 12.436759042513035,
+    "continuous_july_proxy_actual_net_usd": 9.30,
+    "continuous_july_proxy_stressed_net_usd": 8.756,
+    "continuous_july_observed_actual_net_usd": 3.22,
+    "continuous_july_observed_stressed_net_usd": 2.280,
+    "rerun": false
+  },
+  "selection_drawdown_contract": {
+    "native_minus_raw_gap_percentage_points": 2.1221507541,
+    "uncertainty_reserve_percentage_points": 0.25,
+    "maximum_eligible_raw_drawdown_pct": 17.6278492459,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_incremental_profit_contract": {
+    "incremental_proxy_profit_retention_fraction": 0.5,
+    "uncertainty_reserve_usd": 50.0,
+    "conservative_actual_formula": "1691.54 + 0.5 * (candidate proxy actual - 1763.4818571429) - 50",
+    "conservative_stressed_formula": "1626.26 + 0.5 * (candidate proxy stressed - 1693.3220714286) - 50",
+    "both_conservative_nets_must_strictly_exceed_observed_qualified_nets": true
+  },
+  "paired_forward_drawdown_contract": {
+    "native_minus_raw_gap_percentage_points": 3.2281682805,
+    "uncertainty_reserve_percentage_points": 0.5,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "continuous_july_contract": {
+    "proxy_minus_observed_actual_shortfall_usd": 6.08,
+    "proxy_minus_observed_stressed_shortfall_usd": 6.476,
+    "uncertainty_reserve_usd": 1.0,
+    "both_conservative_nets_must_be_positive": true
+  },
+  "selection_gates": {
+    "full_actual_and_stressed_positive": true,
+    "conservative_actual_and_stressed_strictly_above_qualified_success": true,
+    "budgeted_selection_drawdown_at_or_below_20_percent": true,
+    "all_four_epochs_actual_and_stressed_positive": true,
+    "all_four_epoch_balances_positive": true,
+    "all_four_epoch_raw_drawdowns_at_or_below_20_percent": true
+  },
+  "downstream_gates": {
+    "full_pair_actual_and_stressed_positive_with_budgeted_drawdown_at_or_below_20_percent": true,
+    "june_actual_and_stressed_positive": true,
+    "raw_july_actual_and_stressed_positive": true,
+    "corrected_july_actual_and_stressed_positive": true,
+    "fresh_reference_capital_for_full_pair_and_each_month": true
+  },
+  "diagnostics": {
+    "individual_selection_gate_counts_predeclared": true,
+    "top_selection_rows_by_conservative_stressed_profit_predeclared": 20,
+    "top_drawdown_eligible_rows_by_conservative_stressed_profit_predeclared": 20
+  },
+  "selection_role": {
+    "id": "maximum_conservative_stressed_profit_capital_addition_ladder",
+    "ordering": "maximize conservative selection stressed net, then conservative actual net, raw selection stressed net, recent-selection stressed net, conservative July stressed net, full-pair stressed net, minimize budgeted selection DD, then prefer the larger addition step"
+  },
+  "frozen_implementation": {
+    "readme_bytes": 2551,
+    "readme_sha256": "C2F274FF4CB02274A77D1490152942EF1D190020900F1325982A0E1347AB4579",
+    "contract_bytes": 8206,
+    "contract_sha256": "383343F1BA993BEB692017C5984A7A24E658AE958831EE79B2DD4392268FAAA4",
+    "script_bytes": 41940,
+    "script_sha256": "F680B66C9A7CF88CCC15887BD6CB95733DB39AAFA3BB0DAE315AD4EBBDBAB8A8",
+    "python_ast_parse": "PASS",
+    "json_parse": "PASS"
+  },
+  "independent_input": {
+    "path": "optimization/artifacts/raw/dd20-capital-addition-ladder-proxy-v1/input/",
+    "files": 7,
+    "bytes": 20922675,
+    "canonical_manifest_sha256": "5F9638D4A2632E92A1AD84C45FF4C86629F620889ACFCA1CC9B2DD89C0AFD4C4",
+    "physical_copy_no_cross_family_mutable_link": true
+  },
+  "boundary": {
+    "selection_economics_opened": false,
+    "paired_forward_economics_opened": false,
+    "june_economics_opened": false,
+    "july_economics_opened": false,
+    "ranking_opened": false,
+    "proxy_output_exists": false,
+    "mt5_launched": false,
+    "maximum_mt5_shortlist_size": 1,
+    "closed_qualified_anchor_rerun": false,
+    "closed_static_weight_grid_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

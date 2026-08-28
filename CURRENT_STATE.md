@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0333`
+- Latest state ID: `STATE-0334`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-local-error-profit-frontier-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE`: all `204,490` new rows and five external anchors were evaluated once, but the composition-local selection frontier is empty and no MT5 shortlist exists. Push the result, retain the qualified MT5 anchor, then move to a distinct capital-addition-ladder proxy rather than another static-weight grid; no prior grid/candidate/original-15 rerun is authorized.
+- Active optimization boundary: `dd20-capital-addition-ladder-proxy-v1` is declared with all economics unopened. It fixes the qualified component mix and explores exactly 50 new stressed-balance addition steps `$50..$145` and `$155..$300`; closed `$150` is calibration only. Push the declaration, then run this proxy once with individual economic gate diagnostics and at most one shortlist; no anchor, static grid, prior candidate or original-15 rerun is authorized.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
