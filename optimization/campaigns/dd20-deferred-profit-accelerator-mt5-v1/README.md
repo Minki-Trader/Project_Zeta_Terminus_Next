@@ -34,6 +34,10 @@ Declaration commit `f9ffbac83c73b8ccb577f6abf47caa9eea611fed` reached `origin/ma
 
 All 19 source/configuration files match their runtime overlays. One MetaEditor build 6140 invocation produced `0 errors / 0 warnings` in `2,315 ms`; the launcher returned `1`, while that same invocation wrote the complete compile log and the expected `231,652`-byte EX5. It was not reinvoked. The runtime owns zero process and its unique report directory is empty.
 
-## Current boundary
+## MT5 result
 
-The exact compiled candidate is ready with selection and forward economics still unopened. Freeze and push this implementation before the single selection run. The qualified anchor, every proxy grid, all prior MT5 candidates and the original 15 combinations remain closed without rerun. No Live or Lab mutation and no broker-state query occurred.
+Exactly one real-tick selection and one independently initialized real-tick forward completed normally at `100% real ticks`. Selection actual/stressed net was `+$2,185.39 / +$2,095.664`, exceeding the qualified anchor by `+$493.85 / +$469.404`; all four selection epochs remained positive. Native maximum relative equity DD was `28.087819%`, however, exceeding the hard `20%` budget by `8.087819` percentage points.
+
+The independent June/July forward reproduced the qualified path at actual/stressed `+$23.01 / +$21.256` and native equity DD `12.436759%`. June was `+$19.79 / +$18.976`; July was `+$3.22 / +$2.280`. The activation threshold was never reached from the fresh `$100` forward account.
+
+This is a valid economic rejection: `MT5_PROFIT_UPLIFT_CONFIRMED_BUT_SELECTION_NATIVE_DD_EXCEEDS_20_PERCENT`. Selection and forward HTML, native caches, EA lifecycle/candidate/state files and terminal/tester/agent logs are preserved under `optimization/artifacts/raw/dd20-deferred-profit-accelerator-mt5-v1/`. The exact candidate, its proxy grid, the qualified anchor, all prior candidates and the original 15 combinations remain closed without rerun. The qualified MT5 anchor remains authoritative; continue with a distinct proxy-first drawdown-shaping mechanism using the observed `10.659598`-point native-minus-raw DD gap as an external correction.
