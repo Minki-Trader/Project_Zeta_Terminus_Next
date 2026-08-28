@@ -6,6 +6,8 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 한 선언은 한 거시 질문에 필요한 관련 변형 2–3개를 한 번만 묶을 수 있고, 종료 뒤에는 전 프로그램을 다시 비교한다. 같은 주제의 인접 임계값·창·하위집단·심볼·이벤트·청산·사이징이나 보존 seed를 자동으로 이어서 열지 않는다.
 
+현재 active research family는 없다. Unit 096은 하나의 선언-to-closure 실험으로 종료됐고, 이후 독립 source/schema sweep도 완전한 비인접 후보를 찾지 못해 Unit 097은 비어 있다. 최신 scheduler marker는 `FRONTIER_MAP_AFTER_096_INDEPENDENT_SOURCE_SCHEMA_AUDIT_NO_READY_WHOLE_EXPERIMENT`; feasibility와 구현 단계는 별도 실험으로 세지 않는다.
+
 ## 앞으로의 단 하나의 기준
 
 - 기준 root: `engineering/protective-exit-order-reconciliation-v1/mt5/`
