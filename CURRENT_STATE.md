@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0321`
+- Latest state ID: `STATE-0322`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-mt5-calibrated-exposure-margin-proxy-v1` is validly closed with one MT5 hypothesis. Of `16,807` local candidates, the fixed funnel retained `127 / 52 / 52 / 5` through selection margin, full paired forward, June and July. Maximum-profit weights `1.8/1.3/1.4/2.6/1.5/0` produced selection actual/stressed `+$4,425.6202 / +$4,176.4760` at calibrated/budgeted DD `19.288409% / 19.788409%`, full paired forward `+$26.42 / +$23.987`, June stressed `+$19.371` and July `+$4.616`. The next serial stage materializes only this candidate in a new dedicated MT5 family; no prior run reruns.
+- Active optimization boundary: `dd20-exposure-margin-mt5-v1` has frozen the sole proxy survivor `1.8/1.3/1.4/2.6/1.5/0` in a self-contained tester-only source and fixed selection/forward configuration. Compilation, dedicated runtime, Tester, reports and all economics remain unopened. Commit/push this declaration before creating the new Portable; the original 15, prior high-exposure candidate and exact near miss remain closed without rerun.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
