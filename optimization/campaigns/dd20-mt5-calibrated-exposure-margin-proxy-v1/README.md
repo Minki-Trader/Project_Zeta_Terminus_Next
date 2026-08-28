@@ -16,4 +16,8 @@ The original 15 combinations, the prior high-exposure MT5 point and the exact ne
 
 ## Current boundary
 
-The first invocation emitted no economic output because the originally declared paired-forward raw-DD affine assumption was not monotonic between its two anchors. That design condition was corrected to the exposure-weight gap calibration above. Selection, full paired forward, June, July, ranking and shortlist remain unopened. This campaign has no Live or Lab authority and cannot promote anything automatically.
+The first invocation emitted no economic output because the originally declared paired-forward raw-DD affine assumption was not monotonic between its two anchors. After the exposure-gap correction, one valid invocation completed all `16,807` candidates in `4.13` seconds. `127` passed selection margin, `52` passed full paired forward and June, and `5` also passed July.
+
+The sole maximum-profit role is `1.8 / 1.3 / 1.4 / 2.6 / 1.5 / 0`. Selection actual/stressed proxy net is `+$4,425.6202 / +$4,176.4760`; calibrated DD is `19.288409%` and budgeted DD after the frozen `0.5`-point reserve is `19.788409%`. Full paired-forward actual/stressed is `+$26.42 / +$23.987` at budgeted DD `15.843967%`; June stressed is `+$19.371` and July `+$4.616`.
+
+Status is `VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST`. This is exactly one new MT5 hypothesis, not economic success or Live authority. The near miss, prior candidate and original 15 remain closed without rerun.
