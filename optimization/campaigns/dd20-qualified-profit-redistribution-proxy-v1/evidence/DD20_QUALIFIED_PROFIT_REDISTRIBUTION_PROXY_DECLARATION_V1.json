@@ -1,0 +1,131 @@
+{
+  "schema": "zeta-dd20-qualified-profit-redistribution-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_ALL_ECONOMICS_UNOPENED",
+  "campaign": "dd20-qualified-profit-redistribution-proxy-v1",
+  "predecessor_closed_result_commit": "3846e7b64da18db931e4ea1d33d5b89d105ce18d",
+  "objective": "find a materially higher actual and doubled-cost-stressed selection-profit candidate than the first fully qualified DD20 MT5 success through component redistribution, while preserving the hard 20 percent native equity-DD budget and conservative June-July stability",
+  "qualified_success_floor": {
+    "component_risk_multipliers": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "selection_actual_net_usd": 1691.54,
+    "selection_stressed_2x_cost_net_usd": 1626.26,
+    "selection_native_mt5_equity_drawdown_pct": 19.55037176500623,
+    "forward_actual_net_usd": 23.01,
+    "forward_stressed_2x_cost_net_usd": 21.256,
+    "forward_native_mt5_equity_drawdown_pct": 12.436759042513035,
+    "continuous_june_actual_net_usd": 19.79,
+    "continuous_june_stressed_net_usd": 18.976,
+    "continuous_july_actual_net_usd": 3.22,
+    "continuous_july_stressed_net_usd": 2.280,
+    "rerun": false
+  },
+  "search": {
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_weight_grids": [
+      [1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4],
+      [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+      [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+      [2.8, 2.9, 3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0],
+      [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2],
+      [0.0]
+    ],
+    "compositions": 184041,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "addition_step_usd": 150.0,
+    "maximum_distinct_roles": 1
+  },
+  "selection_drawdown_contract": {
+    "anchor_ids": ["base", "near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "raw_closed_balance_drawdown_pct": [12.8415628896, 19.4233990482, 28.384105211, 18.7056611452, 17.4282210109],
+    "observed_native_mt5_equity_drawdown_pct": [11.3757, 20.256887565152653, 27.072835062460303, 20.4883486014839, 19.55037176500623],
+    "observed_minus_raw_gap_percentage_points": [-1.4658628896, 0.833488516952653, -1.311270148539697, 1.7826874562839, 2.12215075410623],
+    "frozen_worst_positive_gap_percentage_points": 2.1221507541,
+    "frozen_uncertainty_reserve_percentage_points": 0.25,
+    "maximum_eligible_raw_drawdown_pct": 17.6278492459,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_profit_contract": {
+    "anchor_ids": ["base", "near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "proxy_minus_observed_actual_shortfall_usd": [0.0, -235.0664166667, 659.7999404762, 255.6802142857, 71.9418571429],
+    "proxy_minus_observed_stressed_shortfall_usd": [0.0, -240.3812738094, 615.1108690477, 234.2145000001, 67.0620714286],
+    "frozen_worst_actual_shortfall_usd": 659.7999404762,
+    "frozen_worst_stressed_shortfall_usd": 615.1108690477,
+    "frozen_uncertainty_reserve_usd": 50.0,
+    "minimum_proxy_actual_net_usd_strictly_above": 2401.3399404762,
+    "minimum_proxy_stressed_net_usd_strictly_above": 2291.3708690477,
+    "candidate_conservative_actual_formula": "proxy selection actual net - 659.7999404762 - 50.0",
+    "candidate_conservative_stressed_formula": "proxy selection stressed net - 615.1108690477 - 50.0"
+  },
+  "paired_forward_drawdown_contract": {
+    "anchor_ids": ["base", "near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "raw_closed_balance_drawdown_pct": [13.9425290469, 13.0731196222, 15.1479638928, 10.9296134433, 9.208590762],
+    "observed_native_mt5_equity_drawdown_pct": [15.8976, 18.675302129932568, 15.850524924748552, 15.4873459750609, 12.436759042513035],
+    "observed_minus_raw_gap_percentage_points": [1.9550709531, 5.602182507732568, 0.702561031948552, 4.5577325317609, 3.228168280513035],
+    "frozen_worst_positive_gap_percentage_points": 5.6021825077,
+    "frozen_uncertainty_reserve_percentage_points": 0.5,
+    "maximum_eligible_raw_drawdown_pct": 13.8978174923,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "continuous_july_contract": {
+    "anchor_ids": ["near_miss", "high_exposure", "exposure_margin", "qualified_success"],
+    "independent_proxy_actual_net_usd": [4.1, 9.96, 5.5, 9.30],
+    "continuous_mt5_actual_net_usd": [-0.59, 4.49, -1.32, 3.22],
+    "proxy_minus_observed_actual_shortfall_usd": [4.69, 5.47, 6.82, 6.08],
+    "independent_proxy_stressed_net_usd": [3.0, 9.061, 4.616, 8.756],
+    "continuous_mt5_stressed_net_usd": [-1.483, 3.508, -2.2375, 2.280],
+    "proxy_minus_observed_stressed_shortfall_usd": [4.483, 5.553, 6.8535, 6.476],
+    "frozen_worst_actual_shortfall_usd": 6.82,
+    "frozen_worst_stressed_shortfall_usd": 6.8535,
+    "frozen_uncertainty_reserve_usd": 1.0,
+    "candidate_conservative_actual_formula": "independent July actual net - 6.82 - 1.00",
+    "candidate_conservative_stressed_formula": "independent July stressed net - 6.8535 - 1.00"
+  },
+  "selection_role": {
+    "id": "maximum_conservative_selection_stressed_profit_above_qualified_success_with_native_gap_and_continuous_july_robustness",
+    "ordering": "maximize conservative selection stressed net, then conservative selection actual net, conservative July stressed net, full paired-forward stressed net, weaker independent-month stressed net, recent-selection stressed net, minimize budgeted selection DD, minimize budgeted paired-forward DD, then lexicographic weights"
+  },
+  "frozen_implementation": {
+    "readme_bytes": 3207,
+    "readme_sha256": "8597554F802386A08676920541F6C9C18F710F5B679A29B6B009039A1924CF69",
+    "contract_bytes": 19384,
+    "contract_sha256": "5C3E96E43BF09AA9A65472EF64CC9DC3DB209ED15AD01CBA1925A450863A7EA8",
+    "script_bytes": 52324,
+    "script_sha256": "A68CA64E2BB38B54281C01C55BCD94B85D074303980F34304B45F5C5135A1ACA",
+    "python_ast_parse": "PASS",
+    "json_parse": "PASS"
+  },
+  "independent_input": {
+    "path": "optimization/artifacts/raw/dd20-qualified-profit-redistribution-proxy-v1/input/",
+    "files": 19,
+    "bytes": 34559535,
+    "canonical_manifest_sha256": "F79651BAD1CD082DA6E1B3E89BCB59576F4567EC57F1C2C75D7523E8F4475BB8",
+    "physical_copy_no_cross_family_mutable_link": true
+  },
+  "boundary": {
+    "selection_economics_opened": false,
+    "paired_forward_economics_opened": false,
+    "june_economics_opened": false,
+    "july_economics_opened": false,
+    "ranking_opened": false,
+    "proxy_output_exists": false,
+    "mt5_launched": false,
+    "maximum_mt5_shortlist_size": 1,
+    "qualified_success_candidate_rerun": false,
+    "near_miss_candidate_rerun": false,
+    "exposure_margin_candidate_rerun": false,
+    "prior_high_exposure_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

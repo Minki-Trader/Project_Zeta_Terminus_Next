@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0329`
+- Latest state ID: `STATE-0330`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-native-gap-july-robustness-mt5-v1` is closed as the first DD20 candidate to pass every frozen MT5 economic gate: selection actual/stressed `+$1,691.54 / +$1,626.26` at `19.550372%` native equity DD, all four epochs positive, and full June-July actual/stressed `+$23.01 / +$21.256` with both continuous months positive. Push this result, then continue with a distinct proxy-first profit-redistribution search; no prior candidate or original-15 rerun is authorized.
+- Active optimization boundary: `dd20-qualified-profit-redistribution-proxy-v1` is declared with all economics unopened. Its `184,041`-row component-redistribution lattice must conservatively exceed the first qualified MT5 anchor's `+$1,691.54 / +$1,626.26`, pay the five-anchor DD and profit shortfalls plus reserves, and keep full June-July and both continuous months positive. Push the declaration, then run this proxy once; no MT5 or prior/original-15 rerun is authorized during the proxy.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
