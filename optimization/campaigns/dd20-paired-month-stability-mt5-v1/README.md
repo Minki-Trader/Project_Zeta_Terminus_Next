@@ -27,4 +27,6 @@ The EA has unique Optimization identity, Magic `260828821..260828826`, state, re
 
 ## Current boundary
 
-The hypothesis, source and configuration were frozen before compilation or outcome access. The dedicated physical Portable now holds the exact files and the EA compiled on build 6140 at `0 errors / 0 warnings`; EX5 SHA-256 is `7CBB59370764B8299406DF14A8A7546BFC6DFFCBE80B5FD0F43DA227F68C0DBD`. No MT5 tester, report or economic result has opened yet. Commit this implementation freeze before the one declared selection and full June/July forward.
+The candidate completed both declared intervals with valid MT5 economics. Selection produced actual/stressed net `+$5,786.63 / +$5,477.524`, but maximum relative MT5 equity drawdown was `20.2568876%`, exceeding the hard `20%` budget by `0.2568876` percentage points. The full June/July forward produced `+$32.74 / +$30.626` at `18.6753021%` drawdown.
+
+The result is closed as `EXPLOSIVE_PROFIT_AND_FORWARD_CONFIRMED_BUT_SELECTION_DD_MISSES_20_PERCENT_BY_0_2569PP`. It is the highest-profit observed MT5 candidate and materially closer to the budget than the prior `27.072835%` candidate, but it is not yet a qualifying replacement. This exact candidate will not rerun or be retuned inside the family.
