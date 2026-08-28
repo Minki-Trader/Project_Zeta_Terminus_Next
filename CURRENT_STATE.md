@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0344`
+- Latest state ID: `STATE-0345`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-profit-protected-risk-ceiling-proxy-v1` is closed with a valid empty frontier. All `31` caps were positive and preserved the exact forward, but budgeted DD passed `0`; the best profit-and-epoch cap `$200` budgeted `25.237963%`, while the lowest-DD `$30` cap still budgeted `20.679738%` and lost the profit gate. Push the result, then continue proxy-first with a distinct equity high-watermark giveback or open-profit realization mechanism; do not rerun any closed cap/accelerator/anchor/prior/original-15 path.
+- Active optimization boundary: `dd20-equity-high-watermark-terminal-lock-proxy-v1` is declared with all `37` candidate economics unopened. The fixed rejected accelerator path arms only after stressed closed balance reaches `$550`; thereafter a `1.0%..19.0%` sampled equity giveback permanently liquidates and stops the path with a `$25` reserve. Freeze and push this declaration before exactly one proxy process; no MT5 or closed-path rerun is authorized during the proxy.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

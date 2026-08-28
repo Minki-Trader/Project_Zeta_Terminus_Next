@@ -1,0 +1,84 @@
+{
+  "schema": "zeta-dd20-equity-high-watermark-terminal-lock-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_ALL_CANDIDATE_ECONOMICS_UNOPENED",
+  "campaign": "dd20-equity-high-watermark-terminal-lock-proxy-v1",
+  "predecessor_result_commit": "cba666b68d28f2a3354e3c5ed568fef0d08b1e9a",
+  "economic_question": "Can a causal permanent equity high-watermark terminal lock preserve more of the rejected accelerator's marked profit while fitting the hard 20% native equity-DD budget and retaining all four positive epochs?",
+  "fixed_accelerator": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "new_mechanism": {
+    "name": "causal equity high-watermark permanent terminal lock",
+    "arming_rule": "arm once doubled-cost-stressed closed balance reaches $550",
+    "candidate_drawdown_triggers_pct": [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0, 12.5, 13.0, 13.5, 14.0, 14.5, 15.0, 15.5, 16.0, 16.5, 17.0, 17.5, 18.0, 18.5, 19.0],
+    "candidate_count": 37,
+    "trigger_step_percentage_points": 0.5,
+    "action": "liquidate every owned position at current sampled marked equity, subtract the fixed reserve, disable all future entries and end the path",
+    "liquidation_and_proxy_reserve_usd": 25.0,
+    "permanent_stop": true,
+    "reentry_or_reset": false,
+    "closed_accelerator_path_repeated": false
+  },
+  "observed_anchors": {
+    "selection_actual_stressed_net_usd": [2185.39, 2095.664],
+    "selection_activation_time_server": "2025.04.23 17:30:00",
+    "selection_activation_actual_stressed_balance_usd": [584.85, 558.418999999997],
+    "selection_sampled_native_equity_drawdown_pct": [27.894257064721973, 28.08781892431453],
+    "native_minus_sampled_gap_percentage_points": 0.19356185959255612,
+    "forward_maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "forward_terminal_lock_armed": false
+  },
+  "selection_gates": {
+    "profit": "actual and doubled-cost-stressed marked terminal net after the $25 reserve must each strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four actual and stressed epoch nets through the lock must be positive",
+    "drawdown": "max(qualified native 19.550371765% + 0.25 points, maximum sampled equity DD through lock + 0.193561860 points + 0.25 points) <= 20%",
+    "maximum_roles": 1
+  },
+  "snapshot_alignment": {
+    "method": "within each server timestamp, match candidate account balance to the nearest before/after lifecycle-close state and transfer the matched cumulative doubled-cost drag to sampled equity",
+    "maximum_allowed_balance_alignment_error_usd": 0.011
+  },
+  "forward_gate": {
+    "terminal_lock_armed": false,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_stressed_usd": [19.79, 18.976],
+    "july_actual_stressed_usd": [3.22, 2.280]
+  },
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-equity-high-watermark-terminal-lock-proxy-v1/input/",
+    "files": 9,
+    "bytes": 12427130,
+    "canonical_manifest_sha256": "56F47DC1965561C14564799F8115D116181AAB156FF92858639D5D9487B790F6"
+  },
+  "implementation": {
+    "readme_bytes": 4030,
+    "readme_sha256": "1351F73C8C54A6C36C34BA26C09B0338945857D046047F80D715E577AB812819",
+    "contract_bytes": 7237,
+    "contract_sha256": "1BE3DA5255BEA30F9229454479EF79C933C9FDC19336B9627896B774A2232D3F",
+    "script_bytes": 32236,
+    "script_sha256": "69276ABA8A625423E95A77E4F732F29096113EE98B61AADD0B68610BFC9B5F8F"
+  },
+  "boundary": {
+    "candidate_economics_opened": false,
+    "proxy_process_invocations": 0,
+    "mt5_launched": false,
+    "accelerated_candidate_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

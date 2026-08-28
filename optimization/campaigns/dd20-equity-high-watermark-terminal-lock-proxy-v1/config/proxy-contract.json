@@ -1,0 +1,126 @@
+{
+  "schema": "zeta-dd20-equity-high-watermark-terminal-lock-proxy-contract-v1",
+  "campaign": "dd20-equity-high-watermark-terminal-lock-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-equity-high-watermark-terminal-lock-proxy-v1/input",
+    "files": [
+      {"name": "accelerated-forward-candidates.csv", "bytes": 272008, "sha256": "4AFFC0B32F62AC8B684D895D250FAF49DB1BAACC61EB32F84ED1A8DD37622DAC"},
+      {"name": "accelerated-forward-lifecycles.csv", "bytes": 49308, "sha256": "B69918537277E24BAA3EC2599E01DE4D6957FB5F7CA3BB33931AEC57CDC953B6"},
+      {"name": "accelerated-forward.tst", "bytes": 38370, "sha256": "19F61893A07C47E1C365D2406963FFE0CA689A05EDFB7B972F646B8670CEBB6B"},
+      {"name": "accelerated-mt5-result.json", "bytes": 16597, "sha256": "23A5F81310D1133C335479FD3A3B03111A0ABEFAE6F0AE156E5BD0DEC90A9873"},
+      {"name": "accelerated-selection-candidates.csv", "bytes": 8077724, "sha256": "EF9E6490479D0E5B413AE6784B5AA421F782A93BEEA2BA69A206323541A95B0C"},
+      {"name": "accelerated-selection-lifecycles.csv", "bytes": 2499873, "sha256": "DD1B048DF6D1A450F7572B810E8BB7B5A5D93AC11F558D423945CFF9FD017FDE"},
+      {"name": "accelerated-selection.tst", "bytes": 1451170, "sha256": "228E077D67EED5BB2C9836DDE169CFE91202A1458F671792394EF43045146285"},
+      {"name": "closed-risk-ceiling-result.json", "bytes": 5845, "sha256": "7B381FEF4977637DBF3B2675B10EF72A8F5560B83270FDB39DAE27208E32F94B"},
+      {"name": "qualified-mt5-result.json", "bytes": 16235, "sha256": "80775495EBF3E0C6C3770322135ED410B91985CB6592B32875292AF7FECC51EA"}
+    ],
+    "files_total": 9,
+    "bytes_total": 12427130,
+    "canonical_manifest_sha256": "56F47DC1965561C14564799F8115D116181AAB156FF92858639D5D9487B790F6",
+    "selection_candidate_file": "accelerated-selection-candidates.csv",
+    "selection_lifecycle_file": "accelerated-selection-lifecycles.csv",
+    "selection_cache_file": "accelerated-selection.tst",
+    "forward_candidate_file": "accelerated-forward-candidates.csv",
+    "forward_lifecycle_file": "accelerated-forward-lifecycles.csv",
+    "forward_cache_file": "accelerated-forward.tst",
+    "accelerated_result_file": "accelerated-mt5-result.json",
+    "qualified_result_file": "qualified-mt5-result.json",
+    "closed_predecessor_result_file": "closed-risk-ceiling-result.json"
+  },
+  "fixed_accelerator": {
+    "component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "terminal_lock": {
+    "arming_rule": "arm once doubled-cost-stressed closed balance reaches $550, the same causal +$450 accelerator threshold",
+    "high_watermark": "maximum sampled account equity from selection start through the current snapshot",
+    "trigger": "after arming, when sampled account equity drawdown from the high watermark first reaches the candidate percentage",
+    "action": "liquidate all owned positions at current marked equity, subtract the frozen liquidation/proxy reserve, disable all future entries and end the economic path",
+    "liquidation_and_proxy_reserve_usd": 25.0,
+    "candidate_drawdown_triggers_pct": [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0, 12.5, 13.0, 13.5, 14.0, 14.5, 15.0, 15.5, 16.0, 16.5, 17.0, 17.5, 18.0, 18.5, 19.0],
+    "expected_candidates": 37,
+    "permanent_stop": true,
+    "reentry_or_reset": false
+  },
+  "selection_observation": {
+    "candidate_rows": 11810,
+    "births": 1297,
+    "closed_lifecycles": 1297,
+    "actual_net_usd": 2185.39,
+    "stressed_net_usd": 2095.664,
+    "activation_time_server": "2025.04.23 17:30:00",
+    "activation_actual_balance_usd": 584.85,
+    "activation_stressed_balance_usd": 558.418999999997,
+    "sampled_maximum_equity_drawdown_pct": 27.894257064721973,
+    "native_maximum_equity_drawdown_pct": 28.08781892431453,
+    "native_minus_sampled_gap_percentage_points": 0.19356185959255612,
+    "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+  },
+  "forward_observation": {
+    "candidate_rows": 402,
+    "births": 30,
+    "closed_lifecycles": 30,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "terminal_lock_armed": false,
+    "native_maximum_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_net_usd": 19.79,
+    "june_stressed_net_usd": 18.976,
+    "july_actual_net_usd": 3.22,
+    "july_stressed_net_usd": 2.280,
+    "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+  },
+  "qualified_anchor": {
+    "campaign": "dd20-native-gap-july-robustness-mt5-v1",
+    "result_status": "VALID_MT5_COMPLETE_ALL_ECONOMIC_GATES_PASS",
+    "selection_actual_net_usd": 1691.54,
+    "selection_stressed_net_usd": 1626.26,
+    "selection_native_equity_drawdown_pct": 19.55037176500623,
+    "rerun": false
+  },
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4_RECENT_SELECTION", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "selection_drawdown_calibration": {
+    "qualified_native_floor_reserve_percentage_points": 0.25,
+    "sampled_to_native_gap_percentage_points": 0.19356185959255612,
+    "terminal_detection_and_liquidation_reserve_percentage_points": 0.25,
+    "budgeted_formula": "max(qualified native DD + 0.25, sampled global equity DD at terminal lock + 0.193561860 + 0.25)",
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_profit_gate": {
+    "actual_terminal_net": "sampled account equity at trigger minus $100 minus $25",
+    "stressed_terminal_net": "sampled account equity less cumulative actual-versus-stressed closed-cost drag at trigger, minus $100 and $25",
+    "both_must_strictly_exceed_qualified_observed_nets": true,
+    "all_four_epoch_actual_and_stressed_nets_must_be_positive": true
+  },
+  "snapshot_alignment": {
+    "method": "within each server timestamp, match every candidate snapshot account balance to the nearest before/after lifecycle-close balance state, then transfer the matched cumulative stressed cost drag to equity",
+    "maximum_allowed_balance_alignment_error_usd": 0.011
+  },
+  "selection_role": {
+    "id": "maximum_stressed_profit_equity_high_watermark_terminal_lock",
+    "ordering": "maximize stressed terminal selection net, then actual terminal net, recent-epoch stressed net, minimize budgeted DD, prefer the larger trigger percentage",
+    "maximum_distinct_roles": 1
+  },
+  "output_top_records": 37,
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1,
+    "accelerated_candidate_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "original_15_combination_rerun": false
+  }
+}
