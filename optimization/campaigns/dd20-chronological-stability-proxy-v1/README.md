@@ -17,3 +17,9 @@ The prior executable-lattice proxy found a selection winner with stressed profit
 - July 2026 contains exactly `43` births and closes, has no position crossing its month boundary, starts independently at `$100`, and remains unopened until the winner freezes. It cannot rank, tune or rescue the winner. Positive actual/stressed net, positive balance and raw DD at or below `20%` are required for the sole possible MT5 shortlist position.
 
 The proxy still preserves source exits and cannot model candidate-specific signal recovery, stop-path changes, complete floating equity, margin or broker execution. It is a fast economic screen, not MT5 proof, and it never reruns the original 15 combinations.
+
+## Closed boundary
+
+The proxy completed all `112,752` long-selection compositions in `22.57` seconds. `14,888` passed long-selection gates and `12,099` also passed June. The frozen winner was `3 / 1 / 2 / 1.5 / 1 / 0`, with selection actual/stressed `+$6,532.4496 / +$6,186.2932` at `19.977049%` DD and June `+$8.95 / +$7.284` at `17.956620%` DD.
+
+Untouched July rejected it on profit, not DD: actual/stressed `-$10.25 / -$11.376` at `17.356191%` DD. US100-cross was `-$17.314` stressed while intraday was `+$8.832`. Status is `VALID_PROXY_COMPLETE_JUNE_STABLE_WINNER_FAILS_JULY_NO_MT5_SHORTLIST`; the exact winner closes without rescue, retuning or MT5.

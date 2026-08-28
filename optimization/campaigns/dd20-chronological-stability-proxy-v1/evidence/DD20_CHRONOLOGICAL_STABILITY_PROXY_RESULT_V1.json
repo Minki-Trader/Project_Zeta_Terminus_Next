@@ -1,0 +1,114 @@
+{
+  "schema": "zeta-dd20-chronological-stability-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_JUNE_STABLE_WINNER_FAILS_JULY_NO_MT5_SHORTLIST",
+  "campaign": "dd20-chronological-stability-proxy-v1",
+  "declaration_commit": "1e206e8",
+  "implementation": {
+    "contract_bytes": 7170,
+    "contract_sha256": "FCEBF020E792706A171A38DB977920F6C37A8C2B1D61EEA73AE77B53265EC933",
+    "script_bytes": 33121,
+    "script_sha256": "891E7270B2B730019CF7E74F6A74612A962575E3CED129364AA1A97D8E5A9E08",
+    "input_files": 5,
+    "input_bytes": 21208263,
+    "input_manifest_sha256": "FDD7AB28C8F21B5FBE23801E4AF2BBBB1E080EDE063A49FD393C02241A7C2CF7",
+    "raw_output_path": "optimization/artifacts/raw/dd20-chronological-stability-proxy-v1/output/proxy-result.json",
+    "raw_output_bytes": 103178,
+    "raw_output_sha256": "50D1CDEAB017D4CC461C9F0CC046AF4343F98C83CE64B50D40F9DA6AADD8D8A3",
+    "wall_time_seconds": 22.5719744,
+    "process_exit_code": 0,
+    "unweighted_base_reproduction_gate": "PASS"
+  },
+  "search": {
+    "compositions": 112752,
+    "long_selection_eligible": 14888,
+    "long_selection_eligible_fraction": 0.1320415602,
+    "june_evaluated": 14888,
+    "june_qualified": 12099,
+    "june_qualified_fraction_of_selection_eligible": 0.8126679205,
+    "july_used_in_ranking_or_tuning": false,
+    "winner_frozen_before_july_open": true,
+    "hard_drawdown_pct": 20.0
+  },
+  "selection_winner": {
+    "weights": [3.0, 1.0, 2.0, 1.5, 1.0, 0.0],
+    "active_components": 5,
+    "actual_net_usd": 6532.4496190476,
+    "stressed_net_usd": 6186.2931904764,
+    "raw_and_calibrated_drawdown_pct": 19.9770491556,
+    "minimum_balance_usd": 93.121,
+    "accepted_lifecycles": 1374,
+    "aggregate_risk_skips": 244,
+    "disabled_component_skips": 559,
+    "epoch_stressed_net_usd": [206.579, 199.496, 1264.7901666667, 4515.4280238097],
+    "epoch_raw_drawdown_pct": [19.9770491556, 19.745610617, 19.7268698688, 17.1355274864],
+    "component_stressed_net_usd": {
+      "range_61": 3602.5983928573,
+      "range_64": 704.7826071429,
+      "us100_cross": 374.0278809524,
+      "intraday": 1011.4018571429,
+      "return": 493.482452381,
+      "impulse": 0.0
+    }
+  },
+  "june_development": {
+    "interval": "2026-06-01 through 2026-07-01",
+    "actual_net_usd": 8.95,
+    "stressed_net_usd": 7.284,
+    "raw_drawdown_pct": 17.9566196515,
+    "minimum_balance_usd": 93.522,
+    "accepted_lifecycles": 28,
+    "aggregate_risk_skips": 6,
+    "disabled_component_skips": 9,
+    "component_stressed_net_usd": {
+      "range_61": 16.794,
+      "range_64": -0.99,
+      "us100_cross": -15.06,
+      "intraday": 3.468,
+      "return": 3.072,
+      "impulse": 0.0
+    },
+    "development_passed": true
+  },
+  "july_untouched_confirmation": {
+    "interval": "2026-07-01 through 2026-08-01",
+    "actual_net_usd": -10.25,
+    "stressed_net_usd": -11.376,
+    "raw_drawdown_pct": 17.3561909995,
+    "minimum_balance_usd": 84.219,
+    "accepted_lifecycles": 28,
+    "aggregate_risk_skips": 3,
+    "disabled_component_skips": 12,
+    "component_stressed_net_usd": {
+      "range_61": -1.272,
+      "range_64": -1.6,
+      "us100_cross": -17.314,
+      "intraday": 8.832,
+      "return": -0.022,
+      "impulse": 0.0
+    },
+    "actual_net_positive": false,
+    "stressed_net_positive": false,
+    "raw_drawdown_at_or_below_20_percent": true,
+    "confirmation_passed": false,
+    "winner_rescued_or_retuned": false
+  },
+  "economic_verdict": {
+    "classification": "EXPLOSIVE_SELECTION_AND_JUNE_POSITIVE_BUT_JULY_PROFIT_FAIL_NO_MT5_SHORTLIST",
+    "economic_success": false,
+    "mt5_shortlist_size": 0,
+    "interpretation": "Adding June stability removed the prior 2.5x-cross winner and retained very large selection profit, but the one frozen winner still lost in untouched July. DD itself passed July; actual and stressed profit did not.",
+    "successor_information": "US100-cross was negative in both June and July for the frozen winner, while intraday was positive in both. A distinct paired-month stability proxy may now require every candidate to pass June and July independently before ranking by long-selection profit; no unseen proxy month remains afterward, so only MT5 real-tick execution may serve as the next confirmation."
+  },
+  "boundary": {
+    "valid_proxy_completed": true,
+    "july_opened_only_after_winner_froze": true,
+    "july_failed_winner_rescue_or_retune": false,
+    "mt5_launched": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
