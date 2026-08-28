@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0307`
+- Latest state ID: `STATE-0308`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-capital-composition-mt5-v1` remains without a valid economic verdict. A partial selection retry showed the proxy allocation had been implemented as wider stops without larger notional, so it was stopped as a design correction. The corrected EA scales executable component volume and planned-risk budget together, preserving parent stop geometry up to broker volume steps; it compiles cleanly and awaits the same candidate rerun. No matrix and no preserved 15-point rerun.
+- Active optimization boundary: `dd20-capital-composition-mt5-v1` is economically closed. The exact `3/3/1/2.5/1/0` exposure produced selection actual/stressed `+$2,822.33 / +$2,648.883` but maximum relative MT5 equity DD `27.072835%`, above the hard `20%` budget; forward was `+$36.67 / +$34.6175` at `15.850525%` DD. Classification is `EXPLOSIVE_PROFIT_CONFIRMED_BUT_SELECTION_MT5_DD_EXCEEDS_20_PERCENT`. The next serial stage returns to an independent proxy before any further MT5 candidate; no original 15-point rerun.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
