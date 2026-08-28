@@ -14,6 +14,12 @@ This independent fast proxy keeps the first fully qualified component mix `1.6 /
 
 The proxy predeclares individual selection-gate counts and top economic diagnostics even if the conjunction is empty. Its independent input is seven files totaling `20,922,675` bytes, containing only the parent lifecycle/reports and qualified-anchor lifecycle/native-cache facts. No closed candidate, static grid or original 15 combinations rerun, and the proxy launches no MT5. A valid result may nominate at most one new ladder hypothesis.
 
-## Current boundary
+## Result
 
-All candidate selection, paired-forward, June, July, ranking and shortlist economics are unopened. Commit and push this declaration before the single proxy invocation.
+The single proxy process exited `0` in `1.0580888` seconds and evaluated all `50` new steps plus the closed `$150` calibration row. Every lifecycle, native-cache, proxy and continuous-July anchor gate passed.
+
+The constant-ladder profit and DD regions are disjoint. All `50` candidates were positive; `18` (`$50..$135`) conservatively beat the qualified MT5 profit floor, `26` passed budgeted DD, and `30` passed every epoch, but no candidate passed all selection gates. Therefore all conditional paired-forward and month counts are zero and there is no MT5 shortlist.
+
+The explosive endpoint `$50` generated proxy actual/stressed `+$46,296.3484 / +$44,789.1023` and conservative `+$23,907.9733 / +$23,124.1501`, but its budgeted DD was `48.924974%` and its maximum day multiplier reached `899`. The highest-profit DD-eligible endpoint `$155` stayed at `19.460019%` budgeted DD and passed every epoch, but conservative actual/stressed profit fell to `+$1,603.9634 / +$1,540.0281`, below the qualified `+$1,691.54 / +$1,626.26` floor.
+
+This is a valid economic empty frontier, not an environment, design, invocation or engineering failure. The qualified MT5 result remains the active success anchor. The constant ladder, all MT5 anchors and the original 15 combinations remain closed without rerun. The next economically distinct proxy will cap the maximum day multiplier while retaining a lower addition step, seeking the missing profit/DD bridge before any MT5 run.
