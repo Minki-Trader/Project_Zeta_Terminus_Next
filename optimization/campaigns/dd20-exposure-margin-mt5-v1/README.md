@@ -27,4 +27,6 @@ The EA has unique Optimization identity, Magic `260828831..260828836`, state, re
 
 ## Current boundary
 
-Source and fixed configuration are derived and frozen with all compilation, runtime, Tester, reports and economic output still unopened. Commit and push this declaration before creating the dedicated runtime.
+One normal MetaEditor build 6140 compiled the unique EA at `0 errors / 0 warnings`. The EX5 is `229,116` bytes at SHA-256 `C7F678FC16FD1ADFD1F6AAEB4B3345BC01C13D112899934A5B3EF3D1912AE768`; all `19` campaign source/configuration files match their copies in the new physical Portable.
+
+The dedicated runtime has no process owner and its unique report directory is empty. Selection, forward, reports and every economic output remain unopened. Commit and push this implementation freeze before the single selection run.
