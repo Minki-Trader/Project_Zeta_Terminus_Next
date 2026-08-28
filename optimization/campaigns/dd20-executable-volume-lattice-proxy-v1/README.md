@@ -24,3 +24,9 @@ This is a substantially closer economic proxy, not MT5 proof. It cannot reconstr
 ## Implementation correction before valid economics
 
 The first invocation incorrectly recomputed impulse-passive volume at fill time. The EA freezes that volume when the pending order is reserved, before the lifecycle `BIRTH`; this made the unweighted anchor fail to reproduce its source net and rendered the output economically unread. The preserved non-economic attempt changed no contract, ranking or gate. The corrected replay binds the passive source reservation ladder and refuses to emit a result unless unweighted actual/stressed net, close count and zero-skip identity reproduce exactly.
+
+## Closed boundary
+
+The corrected proxy reproduced the unweighted source exactly and completed all `112,752` compositions in `22.02` seconds. `14,888` passed the selection gates. The frozen maximum-profit role was `3 / 1 / 2.5 / 2 / 1 / 0.5`, with selection actual/stressed `+$6,976.9515 / +$6,588.5518` and raw/calibrated DD `19.278821%`.
+
+The untouched later segment rejected it: actual/stressed `-$9.28 / -$12.808` and raw DD `28.019366%`. US100-cross alone contributed `-$37.278` stressed later net. Status is `VALID_PROXY_COMPLETE_SELECTION_WINNER_FAILS_LATER_NO_MT5_SHORTLIST`; the winner and its quantized impulse-weight tie are closed without rescue, retuning or MT5.

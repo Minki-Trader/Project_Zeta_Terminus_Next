@@ -1,0 +1,137 @@
+{
+  "schema": "zeta-dd20-executable-volume-lattice-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_SELECTION_WINNER_FAILS_LATER_NO_MT5_SHORTLIST",
+  "campaign": "dd20-executable-volume-lattice-proxy-v1",
+  "declaration_commit": "b53903a",
+  "corrected_implementation_commit": "84792e7",
+  "implementation": {
+    "contract_bytes": 6254,
+    "contract_sha256": "A7C44EEB546D4CBD1DA154D3DC5F941DB57035C37702F4F61CEC0EC63278F457",
+    "script_bytes": 29156,
+    "script_sha256": "8E28BF9FE1D99746B1697D95816E540A16E581D4E2B8E3BFF37E1EB6DDB392BC",
+    "input_files": 8,
+    "input_bytes": 21520346,
+    "input_manifest_sha256": "59AC979CDDBFA897EEF645B87BF59AC53D55DF7BE7DF4E745E1BE3AAF7313BD1",
+    "raw_output_path": "optimization/artifacts/raw/dd20-executable-volume-lattice-proxy-v1/output/proxy-result.json",
+    "raw_output_bytes": 67042,
+    "raw_output_sha256": "20B63A4F8B09AD36E008A756E4DBBECBB422ADF2DB0A002E2E021E7FCB48AEC1",
+    "wall_time_seconds": 22.0153683,
+    "process_exit_code": 0,
+    "unweighted_base_reproduction_gate": "PASS"
+  },
+  "selection_search": {
+    "compositions": 112752,
+    "eligible_compositions": 14888,
+    "eligible_fraction": 0.1320415602,
+    "component_weight_grid": [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
+    "minimum_active_components": 4,
+    "selection_lifecycle_births_and_closes": 2177,
+    "selection_role": "maximum_full_stressed_profit",
+    "selection_role_frozen_before_later_open": true,
+    "known_later_used_in_selection_ranking_or_tuning": false,
+    "hard_selection_drawdown_pct": 20.0
+  },
+  "calibration": {
+    "affine_slope": 1.0099464256,
+    "affine_intercept": -1.5935905397,
+    "upward_only": true,
+    "base_anchor": {
+      "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "proxy_actual_net_usd": 1166.89,
+      "proxy_stressed_net_usd": 1085.408,
+      "proxy_raw_drawdown_pct": 12.8415628896,
+      "observed_mt5_equity_drawdown_pct": 11.3757,
+      "accepted_lifecycles": 2177,
+      "aggregate_or_disabled_skips": 0
+    },
+    "high_exposure_anchor": {
+      "weights": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+      "proxy_actual_net_usd": 3482.1299404762,
+      "proxy_stressed_net_usd": 3263.9938690477,
+      "proxy_raw_drawdown_pct": 28.384105211,
+      "accepted_lifecycles": 1445,
+      "aggregate_risk_skips": 173,
+      "disabled_component_skips": 559,
+      "observed_mt5_actual_net_usd": 2822.33,
+      "observed_mt5_stressed_net_usd": 2648.883,
+      "observed_mt5_equity_drawdown_pct": 27.0728350625,
+      "observed_mt5_closed_lifecycles": 1448,
+      "observed_mt5_risk_admission_skips": 172
+    },
+    "interpretation": "Raw executable-lattice closed-balance DD was already above observed MT5 DD at both selection anchors, so the upward-only envelope did not reduce any shortlisted candidate DD. Profit remains proxy-only and is not calibrated to MT5."
+  },
+  "selection_winner": {
+    "weights": [3.0, 1.0, 2.5, 2.0, 1.0, 0.5],
+    "active_components": 6,
+    "actual_net_usd": 6976.9515476191,
+    "stressed_net_usd": 6588.551761905,
+    "actual_delta_vs_unweighted_usd": 5810.0615476191,
+    "actual_improvement_vs_unweighted_pct": 497.9099613176,
+    "stressed_delta_vs_unweighted_usd": 5503.143761905,
+    "stressed_improvement_vs_unweighted_pct": 507.0115350085,
+    "raw_and_calibrated_selection_drawdown_pct": 19.2788208692,
+    "minimum_balance_usd": 90.491,
+    "accepted_lifecycles": 1811,
+    "aggregate_risk_skips": 366,
+    "disabled_component_skips": 0,
+    "epoch_stressed_net_usd": [240.8925, 152.4265, 1284.282, 4910.950761905],
+    "epoch_raw_drawdown_pct": [18.9885067792, 18.519934972, 19.2788208692, 17.1795063815],
+    "component_stressed_net_usd": {
+      "range_61": 3134.782107143,
+      "range_64": 758.7392857143,
+      "us100_cross": 620.1851666667,
+      "intraday": 1479.543952381,
+      "return": 558.06825,
+      "impulse": 37.233
+    },
+    "quantized_tie": {
+      "other_weights": [3.0, 1.0, 2.5, 2.0, 1.0, 1.0],
+      "same_economics": true,
+      "winner_selected_by_frozen_lexicographic_tie_break": true
+    }
+  },
+  "isolated_later_confirmation": {
+    "interval": "2026-06-01 through 2026-08-01",
+    "actual_net_usd": -9.28,
+    "stressed_net_usd": -12.808,
+    "raw_drawdown_pct": 28.0193664944,
+    "minimum_balance_usd": 85.2625,
+    "accepted_lifecycles": 73,
+    "aggregate_risk_skips": 13,
+    "actual_delta_vs_unweighted_usd": -7.54,
+    "stressed_delta_vs_unweighted_usd": -9.139,
+    "component_stressed_net_usd": {
+      "range_61": 15.522,
+      "range_64": -2.59,
+      "us100_cross": -37.278,
+      "intraday": 12.3,
+      "return": 3.05,
+      "impulse": -3.812
+    },
+    "actual_net_positive": false,
+    "stressed_net_positive": false,
+    "raw_drawdown_at_or_below_20_pct": false,
+    "confirmation_passed": false,
+    "candidate_rescued_or_retuned": false
+  },
+  "economic_verdict": {
+    "classification": "EXPLOSIVE_SELECTION_PROFIT_BUT_CROSS_DRIVEN_LATER_LOSS_AND_DD_NO_MT5_SHORTLIST",
+    "economic_success": false,
+    "mt5_shortlist_size": 0,
+    "interpretation": "The executable-lattice proxy found much larger selection compounding inside its conservative 20 percent selection DD gate, but the one frozen maximum-profit role lost money and breached 20 percent DD in the untouched later segment. It is rejected without MT5.",
+    "successor_information": "The selection profit accelerator is a 2.5x US100-cross allocation, but that same component supplied -$37.278 of later stressed net. A distinct next proxy should target chronological and component sign stability while retaining range-61 and intraday profit concentration; this exact winner and its quantized tie are closed."
+  },
+  "boundary": {
+    "valid_proxy_completed": true,
+    "invalid_attempt_preserved_separately": true,
+    "selection_role_frozen_before_later_open": true,
+    "later_failed_candidate_rescue_or_retune": false,
+    "mt5_launched": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
