@@ -1,0 +1,156 @@
+{
+  "schema": "zeta-dd20-profit-protected-risk-ceiling-proxy-contract-v1",
+  "campaign": "dd20-profit-protected-risk-ceiling-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-profit-protected-risk-ceiling-proxy-v1/input",
+    "files": [
+      {"name": "accelerated-forward-lifecycles.csv", "bytes": 49308, "sha256": "B69918537277E24BAA3EC2599E01DE4D6957FB5F7CA3BB33931AEC57CDC953B6"},
+      {"name": "accelerated-forward.tst", "bytes": 38370, "sha256": "19F61893A07C47E1C365D2406963FFE0CA689A05EDFB7B972F646B8670CEBB6B"},
+      {"name": "accelerated-mt5-result.json", "bytes": 16597, "sha256": "23A5F81310D1133C335479FD3A3B03111A0ABEFAE6F0AE156E5BD0DEC90A9873"},
+      {"name": "accelerated-selection-lifecycles.csv", "bytes": 2499873, "sha256": "DD1B048DF6D1A450F7572B810E8BB7B5A5D93AC11F558D423945CFF9FD017FDE"},
+      {"name": "accelerated-selection.tst", "bytes": 1451170, "sha256": "228E077D67EED5BB2C9836DDE169CFE91202A1458F671792394EF43045146285"},
+      {"name": "qualified-forward-lifecycles.csv", "bytes": 49308, "sha256": "BF9CD5867C7C6128D679879368D646017A3DB1909F093A1F00698CD7496ADD99"},
+      {"name": "qualified-forward.tst", "bytes": 38180, "sha256": "95EA84A24A83C08D14474A0977E5AB8400172FBB8311E902F5FC7B7FC0936E5A"},
+      {"name": "qualified-mt5-result.json", "bytes": 16235, "sha256": "80775495EBF3E0C6C3770322135ED410B91985CB6592B32875292AF7FECC51EA"},
+      {"name": "qualified-selection-lifecycles.csv", "bytes": 2512200, "sha256": "39BB3B07C44B0890B82D42D0264B0DB18F48938FB63C321E77998714520A4E2C"},
+      {"name": "qualified-selection.tst", "bytes": 1448772, "sha256": "E13240A05200939E39216498EDA05DFB89CE13415C78C0A183DFD05889DCBA74"}
+    ],
+    "files_total": 10,
+    "bytes_total": 8120013,
+    "canonical_manifest_sha256": "5EB9F1D5CD25B7E915A2CEF066259C9A500B2EAE5EE449FA21472DAEB4E58D20",
+    "accelerated_selection_lifecycle_file": "accelerated-selection-lifecycles.csv",
+    "accelerated_selection_cache_file": "accelerated-selection.tst",
+    "accelerated_forward_lifecycle_file": "accelerated-forward-lifecycles.csv",
+    "accelerated_forward_cache_file": "accelerated-forward.tst",
+    "accelerated_result_file": "accelerated-mt5-result.json",
+    "qualified_selection_lifecycle_file": "qualified-selection-lifecycles.csv",
+    "qualified_selection_cache_file": "qualified-selection.tst",
+    "qualified_forward_lifecycle_file": "qualified-forward-lifecycles.csv",
+    "qualified_forward_cache_file": "qualified-forward.tst",
+    "qualified_result_file": "qualified-mt5-result.json"
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "fixed_accelerator": {
+    "component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18
+  },
+  "retained_path_model": {
+    "hard_aggregate_risk_cap_rule": "accept a copied accelerated-path birth only when retained open planned risk plus that birth's frozen planned risk is at or below the candidate fixed dollar cap plus $0.01",
+    "position_budget_and_stop_geometry": "unchanged from the copied accelerated MT5 lifecycle for every retained birth",
+    "rejected_birth": "contributes no risk and no later close economics",
+    "freed_capacity": "does not synthesize opportunities hidden by the original accelerated path; MT5 remains authoritative",
+    "actual_and_stressed_balance": "start independently at $100 and add only retained CLOSE actual/stressed net",
+    "drawdown": "maximum of actual and doubled-cost-stressed closed-balance relative drawdown"
+  },
+  "candidate_hard_aggregate_risk_caps_usd": [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330],
+  "expected_candidates": 31,
+  "candidate_rule": "every cap is strictly above the accelerated forward maximum aggregate planned risk and strictly below the accelerated selection maximum, so every candidate is nonbinding in the independent forward and binding at least once in selection",
+  "aggregate_tolerance_usd": 0.01,
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4_RECENT_SELECTION", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "accelerated_anchor": {
+    "campaign": "dd20-deferred-profit-accelerator-mt5-v1",
+    "result_status": "VALID_MT5_COMPLETE_SELECTION_DD20_FAIL_FORWARD_ALL_GATES_PASS",
+    "selection": {
+      "births": 1297,
+      "closed_lifecycles": 1297,
+      "actual_net_usd": 2185.39,
+      "stressed_net_usd": 2095.664,
+      "raw_retained_path_drawdown_pct": 22.961218008683044,
+      "native_equity_drawdown_pct": 28.08781892431453,
+      "maximum_position_planned_risk_usd": 247.25828571429307,
+      "maximum_aggregate_planned_risk_usd": 340.6669714285816,
+      "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+    },
+    "forward": {
+      "births": 30,
+      "closed_lifecycles": 30,
+      "actual_net_usd": 23.01,
+      "stressed_net_usd": 21.256,
+      "raw_retained_path_drawdown_pct": 8.879072845643291,
+      "native_equity_drawdown_pct": 12.436759042513035,
+      "maximum_aggregate_planned_risk_usd": 20.791360000000196,
+      "cache_offsets": {"total_net_profit": "0xBEA", "equity_drawdown_relative_pct": "0xC7A"}
+    },
+    "rerun": false
+  },
+  "qualified_anchor": {
+    "campaign": "dd20-native-gap-july-robustness-mt5-v1",
+    "result_status": "VALID_MT5_COMPLETE_ALL_ECONOMIC_GATES_PASS",
+    "selection": {
+      "births": 1295,
+      "closed_lifecycles": 1295,
+      "actual_net_usd": 1691.54,
+      "stressed_net_usd": 1626.26,
+      "raw_retained_path_drawdown_pct": 19.61136169858155,
+      "native_equity_drawdown_pct": 19.55037176500623,
+      "cache_offsets": {"total_net_profit": "0xB2C", "equity_drawdown_relative_pct": "0xBBC"}
+    },
+    "forward": {
+      "births": 30,
+      "closed_lifecycles": 30,
+      "actual_net_usd": 23.01,
+      "stressed_net_usd": 21.256,
+      "native_equity_drawdown_pct": 12.436759042513035,
+      "cache_offsets": {"total_net_profit": "0xB2C", "equity_drawdown_relative_pct": "0xBBC"}
+    },
+    "rerun": false
+  },
+  "selection_drawdown_calibration": {
+    "accelerated_native_minus_raw_gap_percentage_points": 5.126600915631486,
+    "accelerated_gap_uncertainty_reserve_percentage_points": 0.5,
+    "qualified_native_floor_reserve_percentage_points": 0.25,
+    "budgeted_formula": "max(qualified native DD + 0.25, candidate retained-path raw DD + accelerated native-minus-raw gap + 0.5)",
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_profit_calibration": {
+    "retained_path_uncertainty_reserve_usd": 50.0,
+    "conservative_actual_formula": "candidate retained-path actual net minus $50",
+    "conservative_stressed_formula": "candidate retained-path stressed net minus $50",
+    "both_conservative_nets_must_strictly_exceed_qualified_observed_nets": true
+  },
+  "forward_invariance": {
+    "minimum_candidate_hard_cap_usd": 30.0,
+    "accelerated_forward_maximum_aggregate_planned_risk_usd": 20.791360000000196,
+    "all_candidates_must_retain_all_30_forward_lifecycles": true,
+    "full_forward_actual_net_usd": 23.01,
+    "full_forward_stressed_net_usd": 21.256,
+    "full_forward_native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_net_usd": 19.79,
+    "june_stressed_net_usd": 18.976,
+    "july_actual_net_usd": 3.22,
+    "july_stressed_net_usd": 2.280
+  },
+  "selection_role": {
+    "id": "maximum_conservative_stressed_profit_profit_protected_risk_ceiling",
+    "ordering": "maximize conservative selection stressed net, then conservative actual net, retained-path stressed net, recent-selection stressed net, minimize budgeted DD, then prefer the lower hard dollar cap",
+    "maximum_distinct_roles": 1
+  },
+  "output_top_records": 31,
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "original_15_combination_rerun": false
+  }
+}

@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0342`
+- Latest state ID: `STATE-0343`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-deferred-profit-accelerator-mt5-v1` is closed after exactly one valid real-tick selection and one independently initialized forward. Selection improved actual/stressed profit to `+$2,185.39 / +$2,095.664`, but native equity DD reached `28.087819%`, so the hard `20%` gate rejects it; the forward passed unchanged at `+$23.01 / +$21.256` and `12.436759%` DD. Push the result, then continue with a distinct proxy-first drawdown-shaping mechanism calibrated by this candidate's `10.659598`-point native-minus-raw DD gap; do not rerun this path, any prior candidate or the original 15 combinations.
+- Active optimization boundary: `dd20-profit-protected-risk-ceiling-proxy-v1` is declared with candidate economics unopened. It fixes the rejected accelerator and varies only `31` new hard aggregate planned-risk caps `$30..$330` by `$10`; every cap must bind in selection and remain nonbinding in the exact forward. Push the declaration, then invoke this proxy once. Do not rerun the rejected accelerator, its 256-path proxy, any anchor/prior candidate or the original 15 combinations.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

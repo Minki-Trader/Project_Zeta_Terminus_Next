@@ -1,0 +1,77 @@
+{
+  "schema": "zeta-dd20-profit-protected-risk-ceiling-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_ALL_CANDIDATE_ECONOMICS_UNOPENED",
+  "campaign": "dd20-profit-protected-risk-ceiling-proxy-v1",
+  "predecessor_result_commit": "8237175db0634f9c0f3cb8e9a072e13b7c1b1966",
+  "economic_question": "Can a fixed aggregate planned-risk dollar ceiling preserve the rejected accelerator's high realized profit while removing enough of its high-capital retained path to fit the hard 20% native equity-DD budget?",
+  "fixed_accelerator": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "new_mechanism": {
+    "name": "profit-protected fixed aggregate planned-risk dollar ceiling",
+    "candidate_caps_usd": [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330],
+    "candidate_count": 31,
+    "aggregate_tolerance_usd": 0.01,
+    "selection_maximum_observed_aggregate_planned_risk_usd": 340.6669714285816,
+    "forward_maximum_observed_aggregate_planned_risk_usd": 20.791360000000196,
+    "all_candidates_must_bind_in_selection": true,
+    "all_candidates_must_be_nonbinding_in_forward": true,
+    "closed_accelerator_path_repeated": false
+  },
+  "retained_path_scope": {
+    "source": "the one already completed deferred-accelerator MT5 selection lifecycle",
+    "admission": "retain only copied births whose retained aggregate planned risk fits the candidate hard dollar cap",
+    "rejected_birth_economics": "zero",
+    "retained_birth_volume_stop_and_exit": "unchanged",
+    "freed_capacity_re_admission": false,
+    "interpretation": "a causal retained-path proxy and not candidate-specific MT5 proof"
+  },
+  "selection_gates": {
+    "conservative_profit": "subtract $50 from retained-path actual and stressed net; both must strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four actual and stressed epoch nets positive, positive minimum balances and raw epoch DD at or below 20%",
+    "drawdown": "max(qualified native 19.550371765% + 0.25 points, candidate raw retained-path DD + 5.126600916 points + 0.5 points) <= 20%",
+    "maximum_roles": 1
+  },
+  "forward_gate": {
+    "all_candidates_retain_lifecycles": 30,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_stressed_usd": [19.79, 18.976],
+    "july_actual_stressed_usd": [3.22, 2.280]
+  },
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-profit-protected-risk-ceiling-proxy-v1/input/",
+    "files": 10,
+    "bytes": 8120013,
+    "canonical_manifest_sha256": "5EB9F1D5CD25B7E915A2CEF066259C9A500B2EAE5EE449FA21472DAEB4E58D20"
+  },
+  "implementation": {
+    "readme_bytes": 3550,
+    "readme_sha256": "B41A44E4203012184B29E6F7341DA690A5A86A9572BDA048DE2EA5BDF61B85EF",
+    "contract_bytes": 8705,
+    "contract_sha256": "7AE4D9EAB131B636473CF172F73AF846F144B147F3E6A023BEC31DAF5255AB4C",
+    "script_bytes": 34286,
+    "script_sha256": "44FAE008573DF1C7BA4725E8AA33362126CE8C9BCD29A62F3784A9EBD3C7C775"
+  },
+  "boundary": {
+    "candidate_economics_opened": false,
+    "proxy_process_invocations": 0,
+    "mt5_launched": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
