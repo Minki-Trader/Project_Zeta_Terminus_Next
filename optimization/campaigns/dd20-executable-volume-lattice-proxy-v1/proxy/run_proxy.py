@@ -166,6 +166,10 @@ def simulate(
     position_fraction = float(model["position_risk_fraction"])
     aggregate_fraction = float(model["aggregate_risk_fraction"])
     aggregate_tolerance = float(model["aggregate_tolerance_usd"])
+    component_names = [str(value) for value in config["components"]]
+    passive_component_index = component_names.index(
+        str(model["passive_pending_component"])
+    )
 
     actual_balance = np.full(candidate_count, reference, dtype=np.float64)
     stressed_balance = np.full(candidate_count, reference, dtype=np.float64)
@@ -212,9 +216,16 @@ def simulate(
             if event.position_identifier in open_positions:
                 raise RuntimeError("duplicate open source position")
             component_weight = weights[:, event.component_index]
-            requested_steps = day_multiplier.astype(np.float64) * component_weight
+            if event.component_index == passive_component_index:
+                source_base_steps = int(np.floor(event.source_volume_lots / volume_step + 0.5))
+                if source_base_steps < 1:
+                    raise RuntimeError("passive source reservation volume is invalid")
+                base_steps = np.full(candidate_count, source_base_steps, dtype=np.int32)
+            else:
+                base_steps = day_multiplier
+            requested_steps = base_steps.astype(np.float64) * component_weight
             target_steps = np.floor(requested_steps + 0.5).astype(np.int32)
-            executable_multiplier = target_steps / day_multiplier.astype(np.float64)
+            executable_multiplier = target_steps / base_steps.astype(np.float64)
             conservative_capital = np.minimum(actual_balance, stressed_balance)
             position_budget = (
                 conservative_capital * position_fraction * executable_multiplier
@@ -470,6 +481,21 @@ def main() -> None:
     high_index = find_weight_index(
         weights, calibration["high_exposure_anchor"]["weights"]
     )
+    selection_expected = config["input"]["selection_expected"]
+    if (
+        abs(float(selection["actual_net"][base_index]) - float(selection_expected["actual_net_usd"]))
+        > 1.0e-7
+        or abs(
+            float(selection["stressed_net"][base_index])
+            - float(selection_expected["stressed_net_usd"])
+        )
+        > 1.0e-7
+        or int(selection["accepted_count"][base_index])
+        != int(selection_expected["closed_lifecycles"])
+        or int(selection["aggregate_skip_count"][base_index]) != 0
+        or int(selection["disabled_skip_count"][base_index]) != 0
+    ):
+        raise RuntimeError("unweighted base does not reproduce source lifecycle economics")
     base_raw_dd = float(selection["raw_drawdown_pct"][base_index])
     high_raw_dd = float(selection["raw_drawdown_pct"][high_index])
     base_observed_dd = float(
@@ -585,6 +611,7 @@ def main() -> None:
             "script_sha256": sha256(SCRIPT_PATH),
             "input_manifest_sha256": config["input"]["canonical_manifest_sha256"],
             "wall_time_seconds": time.perf_counter() - started,
+            "unweighted_base_reproduction_gate": "PASS",
         },
         "selection_search": {
             "compositions": int(len(weights)),

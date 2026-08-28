@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0309`
+- Latest state ID: `STATE-0310`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: `dd20-executable-volume-lattice-proxy-v1` is declared with selection outcomes unopened. It searches exactly `112,752` six-component exposure compositions while replaying the `0.01` lot lattice, `$150` daily sizing ladder and `0.04 / 0.18` position/aggregate risk admission. Full DD uses an upward-only calibration from the two preserved selection MT5 anchors; one maximum-stressed-profit role freezes before isolated-later access and can nominate at most one MT5 candidate. The closed original 15 points and the rejected `3/3/1/2.5/1/0` MT5 path will not rerun.
+- Active optimization boundary: `dd20-executable-volume-lattice-proxy-v1` remains the one declared campaign. Its first invocation is economically unread because impulse-passive reservation volume was incorrectly recomputed at later fill-time `BIRTH`, causing the unweighted anchor to miss its source net. The corrected implementation binds passive source reservation steps and now hard-requires exact `1/1/1/1/1/1` source-net/count/zero-skip reproduction before output. Contract, `112,752` combinations, economic gates and ranking are unchanged; rerun awaits the correction boundary on `origin/main`, with no MT5 or original 15-point rerun.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

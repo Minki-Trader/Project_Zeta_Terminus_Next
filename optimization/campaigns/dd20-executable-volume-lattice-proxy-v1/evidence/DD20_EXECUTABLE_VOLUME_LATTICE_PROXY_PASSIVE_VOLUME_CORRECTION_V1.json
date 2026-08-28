@@ -1,0 +1,48 @@
+{
+  "schema": "zeta-dd20-executable-volume-lattice-proxy-passive-volume-correction-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "IMPLEMENTATION_CORRECTED_BEFORE_VALID_ECONOMIC_OUTPUT",
+  "campaign": "dd20-executable-volume-lattice-proxy-v1",
+  "declaration_commit": "b53903a",
+  "invalid_attempt": {
+    "raw_path": "optimization/artifacts/raw/dd20-executable-volume-lattice-proxy-v1/non-economic-attempts/attempt-1-passive-reservation-volume-not-bound.json",
+    "bytes": 67310,
+    "sha256": "67BC3044AA4848AB26F2AC1FB819DF79568FFAE2D873D442C9C095E16989C029",
+    "wall_time_seconds": 21.5866916,
+    "compositions_processed": 112752,
+    "unweighted_proxy_actual_net_usd": 1284.7045714286,
+    "unweighted_proxy_stressed_net_usd": 1189.9610714286,
+    "required_source_actual_net_usd": 1166.89,
+    "required_source_stressed_net_usd": 1085.408,
+    "economic_readability": false,
+    "economic_verdict": null
+  },
+  "root_cause": {
+    "component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+    "source_births_whose_volume_differs_from_fill_day_recalculation": 333,
+    "explanation": "Impulse-passive volume and planned risk are frozen when its pending order is reserved. The lifecycle BIRTH occurs only when that order later fills, so recomputing its base ladder at BIRTH uses the wrong server day and candidate balance state.",
+    "other_components_with_this_mismatch": 0
+  },
+  "correction": {
+    "economic_contract_changed": false,
+    "weight_grid_or_count_changed": false,
+    "ranking_or_gate_changed": false,
+    "passive_volume_rule": "Use the source BIRTH volume as the preserved reservation-day unweighted base steps, then apply the candidate weight with positive MathRound semantics.",
+    "hard_output_gate_added": "The 1/1/1/1/1/1 path must reproduce source actual/stressed net, all 2,177 closes and zero proxy skips before any result can be emitted.",
+    "corrected_contract_bytes": 6254,
+    "corrected_contract_sha256": "A7C44EEB546D4CBD1DA154D3DC5F941DB57035C37702F4F61CEC0EC63278F457",
+    "corrected_script_bytes": 29156,
+    "corrected_script_sha256": "8E28BF9FE1D99746B1697D95816E540A16E581D4E2B8E3BFF37E1EB6DDB392BC",
+    "python_ast_parse": "PASS",
+    "json_parse": "PASS"
+  },
+  "boundary": {
+    "valid_selection_economics_opened": false,
+    "invalid_later_numbers_used_for_judgment_or_tuning": false,
+    "mt5_started": false,
+    "original_15_combination_rerun": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false
+  }
+}

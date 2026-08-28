@@ -49,6 +49,8 @@
     "aggregate_tolerance_usd": 0.01,
     "day_multiplier": "1 + floor(max(0, stressed_closed_balance - 100) / 150 + 1e-9), frozen on the first source event of each server day",
     "component_volume": "MathRound-positive equivalent of base_volume * day_multiplier * component_weight to the 0.01 lot step",
+    "passive_pending_component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+    "passive_pending_volume_basis": "the lifecycle birth volume preserves the earlier unobserved reservation-day base ladder; apply the candidate weight with positive MathRound semantics to those source base steps",
     "executable_multiplier": "normalized component volume divided by normalized unweighted base volume",
     "conservative_capital_proxy": "minimum of actual closed balance and stressed closed balance",
     "position_planned_risk": "conservative capital * 0.04 * executable multiplier",
@@ -84,6 +86,7 @@
   },
   "hard_selection_calibrated_drawdown_pct": 20.0,
   "selection_gates": {
+    "unweighted_base_reproduces_source_close_economics_and_count": true,
     "full_actual_and_stressed_net_positive": true,
     "every_epoch_actual_and_stressed_net_positive": true,
     "full_and_epoch_balances_positive": true,
