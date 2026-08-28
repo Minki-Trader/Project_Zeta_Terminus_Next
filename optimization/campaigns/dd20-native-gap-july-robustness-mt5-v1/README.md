@@ -27,4 +27,10 @@ Economic qualification requires selection actual/stressed net above the preserve
 
 ## Current boundary
 
-Source and configuration are frozen with compilation and all Tester economics unopened. Commit and push this declaration before creating the dedicated runtime.
+Declaration commit `94eb447` reached `origin/main` before a new physical Portable was copied from the closed capital-composition runtime. The new terminal has a distinct file identity, one hard-link entry, zero reparse points and no process owner.
+
+All 19 campaign source/configuration files match their runtime copies. One MetaEditor build 6140 invocation compiled `ZetaDD20NativeGapJulyRobustnessMT5V1` at `0 errors / 0 warnings` in `2,825 ms`; the generated EX5 is `229,492` bytes. The launcher returned code `1` after the valid log and binary were emitted, so compilation was not repeated.
+
+The dedicated runtime contains `744` files / `5,781,350,163` logical bytes and retains 35 inert predecessor-named files totaling `3,183,295` bytes. No new EA, Include, SET, INI or report path references them, and more than `77 GiB` remains free for logs and evidence.
+
+Status is `COMPILED_READY_ECONOMICS_UNOPENED`. Selection, forward, reports and economic output remain unopened. Commit and push this implementation freeze before the sole selection.
