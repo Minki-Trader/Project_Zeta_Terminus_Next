@@ -1,0 +1,146 @@
+{
+  "schema": "zeta-dd20-capital-composition-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "COMPILED_READY_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-capital-composition-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20CC1-20260828",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20CC1-20260828",
+    "magic_range": "260828811..260828816",
+    "tester_only": true
+  },
+  "proxy_hypothesis": {
+    "source_campaign": "dd20-capital-composition-proxy-v1",
+    "source_result_sha256": "32B78270416CFCCA2CCAAFD61341C10728053EE1FF2A4B44B41174C5907A9400",
+    "source_role": "maximum_recent_selection_stressed_profit",
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_risk_multipliers": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "effective_position_risk_fractions_before_aggregate_cap": [0.12, 0.12, 0.04, 0.10, 0.04, 0.0],
+    "zero_weight_component_disabled": true,
+    "proxy_selection_actual_net_usd": 2557.205,
+    "proxy_selection_stressed_net_usd": 2430.3735,
+    "proxy_selection_drawdown_pct": 19.8508865383,
+    "proxy_later_actual_net_usd": 16.955,
+    "proxy_later_stressed_net_usd": 13.855,
+    "proxy_later_drawdown_pct": 16.810504205
+  },
+  "preserved_comparator": {
+    "source_campaign": "portfolio-risk-cap-envelope-v1",
+    "source_result_sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314",
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "selection_report_sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B",
+    "forward_report_sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3",
+    "selection_actual_net_usd": 1166.89,
+    "selection_stressed_net_usd": 1085.408,
+    "selection_mt5_equity_drawdown_pct": 11.3757,
+    "selection_closed_lifecycles": 2177,
+    "forward_actual_net_usd": -1.74,
+    "forward_stressed_net_usd": -3.669,
+    "forward_mt5_equity_drawdown_pct": 15.8976,
+    "forward_closed_lifecycles": 86,
+    "rerun": false
+  },
+  "implementation": {
+    "readme_bytes": 2433,
+    "readme_sha256": "31FA7547BCD3FAD9EF11DBC6AB9D098C3CC6FBF7C5A816EA0F8C32D550C1317F",
+    "source_file_count": 16,
+    "source_total_bytes": 418776,
+    "source_manifest_sha256": "E5062C7C830C8F7552C6E1E8E43FAF0106F8EEA4B1CFF3EA97C966676C28EED3",
+    "configuration_file_count": 2,
+    "configuration_total_bytes": 1862,
+    "configuration_manifest_sha256": "FEBFA92D3FED307A0BFC91AA35C48B4E13032637F796678DD1C47B482CA225E6",
+    "manifest_algorithm": "Sort slash-normalized campaign-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "text_format": "UTF-8 without BOM, CRLF",
+    "inherited_include_modules_content_equal_after_eol_normalization": 12,
+    "intentionally_changed_include_modules": [
+      "Domain/ZetaDomain.mqh",
+      "Portfolio/ZetaPortfolioRisk.mqh",
+      "Strategies/ZetaPassive.mqh"
+    ],
+    "assembly_changed": true,
+    "economic_change": "Positive component multipliers scale only component protective-stop position budgets before the unchanged aggregate cap; the zero multiplier disables the impulse-passive component."
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 4040,
+    "process_exit_code": 1,
+    "ex5_path": "optimization/campaigns/dd20-capital-composition-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20CapitalCompositionMT5V1.ex5",
+    "ex5_bytes": 228066,
+    "ex5_sha256": "4B010C24436B27A4CFEFC3CA8DB9E762C4A9DD30ADF6EFEB8AA83ADE8638A172",
+    "raw_log_path": "optimization/artifacts/raw/dd20-capital-composition-mt5-v1/compile-final-20260828.log",
+    "raw_log_bytes": 20786,
+    "raw_log_sha256": "14FE92634BD915D3EA5A621EFF4667DE21185214BB9CD8265DB29CE9A5C42331"
+  },
+  "economic_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "isolated_forward_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+    "expected_selection_passes": 1,
+    "expected_forward_passes": 1,
+    "hard_mt5_equity_drawdown_pct": 20.0,
+    "candidate_gate": [
+      "complete valid selection and custom-forward economic output",
+      "selection actual net exceeds preserved 0.04/0.18 actual net USD 1166.89",
+      "selection doubled-cost-stressed net exceeds preserved 0.04/0.18 stressed net USD 1085.408",
+      "selection MT5 equity drawdown is at or below 20 percent",
+      "isolated-forward actual and doubled-cost-stressed net are both positive",
+      "isolated-forward MT5 equity drawdown is at or below 20 percent"
+    ],
+    "success_classification": "MT5_CONFIRMED_DD20_PROFIT_CANDIDATE",
+    "nonconfirmation_classification": "MT5_VALID_NONCONFIRMATION_OF_PROXY_HYPOTHESIS",
+    "failed_candidate_rescue_or_retune": false,
+    "prior_15_combination_restart": false
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-capital-composition-mt5-v1-portable/",
+    "terminal_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "file_count": 702,
+    "logical_bytes": 5756067370,
+    "file_reparse_points": 0,
+    "directory_reparse_points": 0,
+    "terminal_file_identity_distinct_from_source_runtime": true,
+    "terminal_target_hardlink_count": 1,
+    "campaign_source_and_configuration_parity_files": 18,
+    "campaign_source_and_configuration_mismatches": 0,
+    "process_owners_at_freeze": 0,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_terminal": false,
+    "is_live_terminal": false,
+    "is_lab_terminal": false,
+    "free_space_gib_at_freeze": 93.703
+  },
+  "non_economic_corrections": [
+    {
+      "condition": "The first include overlay used a literal wildcard that PowerShell did not expand.",
+      "resolution": "Copied the fifteen concrete include children into the already resolved campaign runtime, then confirmed all eighteen source/configuration files byte-equal before compilation.",
+      "tester_started": false,
+      "economic_verdict": null
+    }
+  ],
+  "boundary": {
+    "tester_started": false,
+    "selection_report_opened": false,
+    "forward_report_opened": false,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
