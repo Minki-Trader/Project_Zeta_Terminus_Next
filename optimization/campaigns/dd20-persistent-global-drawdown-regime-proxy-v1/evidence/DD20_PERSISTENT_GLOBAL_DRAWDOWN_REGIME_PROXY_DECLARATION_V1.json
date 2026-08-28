@@ -1,0 +1,97 @@
+{
+  "schema": "zeta-dd20-persistent-global-drawdown-regime-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "DECLARED_ALL_CANDIDATE_ECONOMICS_UNOPENED",
+  "campaign": "dd20-persistent-global-drawdown-regime-proxy-v1",
+  "predecessor_result_commit": "f13607ff064447617a4431b179d81e627a0cf6e1",
+  "economic_question": "Can an immutable global equity high-watermark regime that releases current exposure and persistently scales later births until true recovery retain explosive accelerator profit inside 20% native equity DD?",
+  "fixed_accelerator": {
+    "weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "pre_activation_addition_step_usd": 150.0,
+    "activation_growth_threshold_usd": 450.0,
+    "post_activation_addition_step_usd": 50.0,
+    "maximum_day_multiplier_cap": 14,
+    "varied_in_this_campaign": false
+  },
+  "new_mechanism": {
+    "name": "persistent immutable-global-high drawdown regime",
+    "arming_balance_usd": 550.0,
+    "trigger_state": "candidate stressed sampled-equity drawdown from the immutable global high-watermark",
+    "candidate_drawdown_triggers_pct": [6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0],
+    "retained_current_open_exposure_fractions": [0.0, 0.25],
+    "risk_off_future_birth_multipliers": [0.1, 0.25, 0.5],
+    "candidate_count": 42,
+    "entry_action": "realize the released current-book fraction of aggregate marked floating P/L, retain the declared fraction and subtract $25",
+    "persistent_birth_control": "every later original birth enters at the declared multiplier and pays $0.10 while risk-off",
+    "recovery_drawdown_pct": 2.0,
+    "clean_book_recovery_required": true,
+    "global_high_reset": false,
+    "release_action_and_proxy_reserve_usd_per_episode": 25.0,
+    "per_scaled_position_modeling_reserve_usd": 0.1,
+    "selection_profit_uncertainty_reserve_usd": 100.0,
+    "later_original_births_preserved": true,
+    "freed_capacity_synthetic_births": false,
+    "permanent_terminal_stop": false,
+    "closed_recurring_local_ratchet_grid_recomputed": false
+  },
+  "counterfactual": {
+    "release_economics": "per regime entry, realize the released fraction of aggregate marked floating P/L and subtract $25",
+    "released_future_close": "retain only the declared fraction of each affected lifecycle's frozen actual/stressed close economics while preserving full observed doubled-cost drag",
+    "scaled_birth_economics": "multiply frozen actual/stressed lifecycle economics by the risk-off multiplier and subtract $0.10",
+    "release_transition_equity_envelope": "through the last released original close, apply min(-$25, release final candidate-minus-baseline delta); afterward settle the exact delta",
+    "scaled_birth_transition_equity_envelope": "from birth through original close, apply min(-$0.10, final candidate-minus-baseline delta, forfeited positive observed peak mark less $0.10); afterward settle the exact delta",
+    "identity_check": "all settled and active final modification deltas must exactly reconcile modified closed-path economics to the untouched accelerator",
+    "interpretation": "a conservative fixed-path global-regime proxy, not candidate-specific MT5 proof"
+  },
+  "selection_gates": {
+    "profit": "after embedded $25 regime-entry reserves, $0.10 scaled-birth reserves and an additional $100 uncertainty reserve, actual and doubled-cost-stressed net must each strictly exceed qualified observed +$1,691.54 / +$1,626.26",
+    "epochs": "all four modified actual and stressed epoch nets must be positive",
+    "capital": "actual/stressed closed balances and sampled equity envelopes must remain positive",
+    "drawdown": "max(qualified native 19.550371765% + 0.25 points, worse conservative sampled equity DD + 0.193561860 points + 0.50 points) <= 20%",
+    "maximum_roles": 1
+  },
+  "forward_gate": {
+    "persistent_global_drawdown_regime_armed": false,
+    "maximum_stressed_closed_balance_usd": 129.94600000000122,
+    "actual_net_usd": 23.01,
+    "stressed_net_usd": 21.256,
+    "native_equity_drawdown_pct": 12.436759042513035,
+    "june_actual_stressed_usd": [19.79, 18.976],
+    "july_actual_stressed_usd": [3.22, 2.280]
+  },
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-persistent-global-drawdown-regime-proxy-v1/input/",
+    "files": 8,
+    "bytes": 12156352,
+    "canonical_manifest_sha256": "9457C3041082EDC3973FB8E70A509EB6BFFA621CBF980E2346B3856AC5FA60E8"
+  },
+  "implementation": {
+    "readme_bytes": 4513,
+    "readme_sha256": "924E1254B971548783421915BD95715BEAC845C9345E6A736B79711C32894ED1",
+    "contract_bytes": 8590,
+    "contract_sha256": "7D749AB13682C4FC2A08A3D75608B069B6E7A2B4B3C2D1784EEDED8FB3492C84",
+    "script_bytes": 50351,
+    "script_sha256": "A96953EB1B79297FC1ABCA2CFCDF493BA982C336B7F0CEA5244B99EEC150704A",
+    "python_syntax_compile": "PASS"
+  },
+  "boundary": {
+    "candidate_economics_opened": false,
+    "proxy_process_invocations": 0,
+    "mt5_launched": false,
+    "recurring_local_ratchet_grid_rerun": false,
+    "one_shot_open_exposure_release_grid_rerun": false,
+    "drawdown_responsive_grid_rerun": false,
+    "profit_realization_grid_rerun": false,
+    "terminal_lock_grid_rerun": false,
+    "risk_ceiling_grid_rerun": false,
+    "accelerated_candidate_rerun": false,
+    "deferred_proxy_grid_rerun": false,
+    "qualified_anchor_rerun": false,
+    "prior_candidate_rerun": false,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
