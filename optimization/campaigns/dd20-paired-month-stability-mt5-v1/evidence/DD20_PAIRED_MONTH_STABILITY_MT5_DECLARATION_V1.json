@@ -1,0 +1,114 @@
+{
+  "schema": "zeta-dd20-paired-month-stability-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "DECLARED_DERIVED_SOURCE_CONFIGURATION_FROZEN_RUNTIME_AND_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-paired-month-stability-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20PMS1-20260828",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20PMS1-20260828",
+    "magic_range": "260828821..260828826",
+    "tester_only": true
+  },
+  "source_derivation": {
+    "one_time_copy_from_campaign": "dd20-capital-composition-mt5-v1",
+    "source_final_implementation_commit": "cec1a7d8fbad84ebce26af15c10da1516e4ffce5",
+    "source_closed_result_commit": "c637e306eb60119d1f16d5c44d07e8ae87966d5e",
+    "source_result_sha256": "152817D52C2E84A422711CA94451D3E2C948626CC11B655D1FFEEAC70398269E",
+    "inherited_include_modules_byte_equal": 14,
+    "intentionally_changed_include_modules": [
+      "Domain/ZetaDomain.mqh"
+    ],
+    "assembly_changed": true,
+    "cross_campaign_include_or_source_link": false,
+    "compiled_binary_copied": false
+  },
+  "proxy_hypothesis": {
+    "source_campaign": "dd20-paired-month-stability-proxy-v1",
+    "source_result_commit": "b172f2b832c17d9062f70e776d7b0e6a611124a1",
+    "source_result_sha256": "5AE6AA0EC679A0BA406B61211039886DD838BFBD527B5902697301D34871D685",
+    "source_role": "maximum_full_stressed_profit_after_paired_month_stability",
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "effective_position_risk_fractions_before_aggregate_cap": [0.08, 0.06, 0.08, 0.10, 0.06, 0.0],
+    "zero_weight_component_disabled": true,
+    "selection_actual_net_usd": 5551.5635833333,
+    "selection_stressed_net_usd": 5237.1427261906,
+    "selection_proxy_drawdown_pct": 19.4233990482,
+    "june_actual_net_usd": 29.21,
+    "june_stressed_net_usd": 27.474,
+    "june_proxy_drawdown_pct": 13.0731196222,
+    "july_actual_net_usd": 4.10,
+    "july_stressed_net_usd": 3.00,
+    "july_proxy_drawdown_pct": 12.9952013278
+  },
+  "preserved_comparator": {
+    "source_campaign": "portfolio-risk-cap-envelope-v1",
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "selection_actual_net_usd": 1166.89,
+    "selection_stressed_net_usd": 1085.408,
+    "selection_mt5_equity_drawdown_pct": 11.3757,
+    "forward_actual_net_usd": -1.74,
+    "forward_stressed_net_usd": -3.669,
+    "forward_mt5_equity_drawdown_pct": 15.8976,
+    "rerun": false
+  },
+  "implementation": {
+    "readme_bytes": 3130,
+    "readme_sha256": "ACD9C71ACBE775653E55F44C4960CDB3DF6610038C96A63EB92B7AF37F73FF76",
+    "source_file_count": 16,
+    "source_total_bytes": 420443,
+    "source_manifest_sha256": "89612D4D5316E85C3C7FA1C6DC68CDF50AA090FB52820EB5197AA632ACCFBD61",
+    "configuration_file_count": 3,
+    "configuration_total_bytes": 2418,
+    "configuration_manifest_sha256": "B3B4F0C6FDB2863B7C8DC5120EE42DF96A14ED2B4E03FCBF45AB5BE36223F7A2",
+    "manifest_algorithm": "Sort slash-normalized campaign-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "economic_change": "Replace only the six frozen component exposure multipliers while retaining the final corrected executable-volume, planned-risk, stop-geometry and protection implementation.",
+    "identity_change": "Use an independent execution/release/portfolio/schema/Magic/path namespace.",
+    "expected_compiled_binary": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20PairedMonthStabilityMT5V1.ex5"
+  },
+  "economic_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "isolated_forward_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+    "expected_selection_passes": 1,
+    "expected_forward_passes": 1,
+    "run_forward_after_any_complete_valid_selection": true,
+    "hard_mt5_equity_drawdown_pct": 20.0,
+    "candidate_gate": [
+      "complete valid selection and full paired-month forward economic output",
+      "selection actual net exceeds preserved comparator USD 1166.89",
+      "selection doubled-cost-stressed net exceeds preserved comparator USD 1085.408",
+      "selection maximum relative MT5 equity drawdown is at or below 20 percent",
+      "full paired-month forward actual and doubled-cost-stressed net are both positive",
+      "full paired-month forward maximum relative MT5 equity drawdown is at or below 20 percent"
+    ],
+    "success_classification": "MT5_CONFIRMED_DD20_PAIRED_MONTH_STABLE_EXPLOSIVE_PROFIT_CANDIDATE",
+    "nonconfirmation_classification": "MT5_VALID_NONCONFIRMATION_OF_PAIRED_MONTH_PROXY_HYPOTHESIS",
+    "failed_candidate_rescue_or_retune": false,
+    "prior_15_combination_restart": false,
+    "prior_mt5_candidate_restart": false
+  },
+  "boundary": {
+    "runtime_created": false,
+    "compiled": false,
+    "tester_started": false,
+    "selection_report_opened": false,
+    "forward_report_opened": false,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
