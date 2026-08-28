@@ -59,7 +59,7 @@ Legacy와 모든 Next 터미널/테스터가 정지한 상태에서만 `Import-Z
 
 ## 6. 한 번의 0/0 → 1/1 인계
 
-[`ZETA_NEXT_MASTER_TERMINAL_AND_DASHBOARD.cmd`](../ZETA_NEXT_MASTER_TERMINAL_AND_DASHBOARD.cmd)를 실행한다. Master는 먼저 AllowLiveTrading `1`, entries `0/0`인 flat preflight를 열어 exact handshake를 확인하고 정상 정지한다. 그 뒤에만 entries `1/1` Live를 시작하고 한국어 대시보드를 연다.
+[`ZETA_NEXT_MASTER_TERMINAL_AND_DASHBOARD.cmd`](../ZETA_NEXT_MASTER_TERMINAL_AND_DASHBOARD.cmd)를 실행한다. Master는 현재 사용자 예약 작업 `Project Zeta Terminus Next Master Runtime`을 통해 Codex 프로세스 수명 밖에서 시작된다. 먼저 AllowLiveTrading `1`, entries `0/0`인 flat preflight를 열어 exact handshake를 확인하고 정상 정지한 뒤에만 entries `1/1` Live와 한국어 대시보드를 연다. 예약 작업의 Windows PowerShell host는 자신이 연 MT5/대시보드가 끝날 때까지 살아 있어 Codex 종료·업데이트가 MT5 내부 연구 기록기와 UI를 함께 종료하지 못하게 한다.
 
 1/1 handshake가 실패했지만 Next가 flat임을 로컬 스냅숏으로 입증하면 Next를 정지한다. Legacy 복구는 별도 운영 판단이다. Next 노출이 없다고 입증할 수 없거나 주문·포지션이 생겼다면 Next를 계속 실행해 그 위험을 관리하고 Legacy를 재시작하지 않는다.
 

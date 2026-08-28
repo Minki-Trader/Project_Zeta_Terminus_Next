@@ -5,7 +5,7 @@ Last updated: 2026-08-28
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0292`
+- Latest state ID: `STATE-0293`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -15,15 +15,15 @@ Last updated: 2026-08-28
 - Next V7 entries-disabled preflight: `PASSED`; committed RLO1 PIDs `21400` and `16484` proved exact connected `0/0`, flat continuity, zero core fault and observer create/recovery, then both stopped normally.
 - Next V7 new-entry authorization: `ENABLED`; the user's explicit 2026-08-27 attach-before-evaluation instruction authorizes the final committed `0/0 → 1/1` handoff after the passed RLO1 recovery.
 - Research-observation Live change: `LIVE_ATTACHED`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
-- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; exact restarted Live PID `9976` is the active sole owner.
-- Existing real-account owner: exact RLO1 Live PID `9976` only; recovery preflight PID `22108` stopped normally and no second `terminal64.exe` was observed
+- Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; former Live PID `9976` is absent after the latest Codex process-lifetime boundary.
+- Existing real-account owner: none locally; no exact Live terminal or dashboard process is active, and guarded recovery remains pending after the detached-launch patch reaches `origin/main`
 - User V7 Live direction: `EFFECTIVE_AFTER_GUARDED_RESTART`
 
-Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery boundary commit `41473c378289f87d3f5f82e2a3cb95dfa99c2800` reached `origin/main` before any replacement runtime started. Exact RLO1 preflight PID `22108` proved release/Portfolio/account continuity, entries `0/0`, positions/orders `0/0`, margin `0`, balance/equity `$104.54/$104.54`, then stopped normally. Live PID `9976` passed the same release's exact `1/1` handshake, is responding with the EA-attached MT5 window, and healthy local snapshots advanced at `17:29:30 → 17:30:30`; the latter was three seconds old with zero alert. Korean dashboard PID `14324` is the single visible responding dashboard and reads only the core snapshot. At verification the local snapshot held zero position, pending order, margin, planned risk, retry, shadow and ARC ownership. Live resumed at server `11:29:31`; a read-only local dashboard at server `11:31:31` showed every fixed strategy still before its `13:00/13:30/15:00/16:00/17:00` evaluation and Passive still before its first completed `12:00` decision bar. Research state peers resumed alternating writes, while canonical candidate/lifecycle ledgers remain absent because no natural evaluation has occurred. No 2026-08-27 scheduled entry evaluation or canonical observation opportunity was skipped during the outage. No broker position, order, deal or account state was queried.
+Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Recovery boundary commit `41473c378289f87d3f5f82e2a3cb95dfa99c2800` reached `origin/main` before former replacement Live PID `9976` and dashboard PID `14324` started. Both are now absent after the latest Codex shutdown/update boundary, with no normal operator stop requested. The last alternating core snapshot at local `2026-08-28 09:49:02` / UTC `00:49:02` is exact RLO1 sequence `5137`, entries `1/1`, connected/account-bound, and flat with zero position identifier, pending order, margin, aggregate planned risk, retry, shadow or ARC ownership. Its SHA-256 is `34712DAA7DEC24E107C92E0C45DDE573B9F96A9E32AD52619371F380F67104CF`. No broker position, order, deal or account state was queried. The root launcher now dispatches through a current-user Task Scheduler host, but no task registration or Live restart occurs before this no-owner patch boundary is committed and pushed.
 
 ## Active work
 
-- Active engineering boundary: none; bounded RLO1 unexpected-stop recovery completed through committed no-owner evidence, exact `0/0 → 1/1`, two healthy snapshots and dashboard restoration
+- Active engineering boundary: detached Master lifetime patch implemented; commit/push the no-owner boundary, then perform one guarded `0/0 → 1/1` recovery through the scheduler-owned host
 - Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
