@@ -555,7 +555,8 @@ bool ReconstructEntryTracking(const int component, const ulong ticket)
          1.0 - InpUnmodelledRiskReserveFraction -
          InpStopPlacementHeadroomFraction;
       const double current_position_budget =
-         ConservativeRiskCapital() * InpMaximumPositionRiskFraction;
+         ConservativeRiskCapital() * InpMaximumPositionRiskFraction *
+         ComponentRiskMultiplier(component);
       if(broker_stop_loss <= 0.0 || modeled_target_fraction <= 0.0 ||
          !GrossStopRisk(component_definitions[component].symbol,
                         direction,
@@ -1138,9 +1139,7 @@ bool ValidateMarketEntry(const MarketEntryPlan &plan,
                           actual_planned_risk);
    const bool position_risk_within_cap =
       risk_known &&
-      actual_planned_risk <=
-      plan.admitted_capital * InpMaximumPositionRiskFraction +
-      protection_tolerance;
+      actual_planned_risk <= plan.admitted_planned_risk + protection_tolerance;
    const bool aggregate_risk_within_cap =
       risk_known &&
       plan.aggregate_before + actual_planned_risk <=

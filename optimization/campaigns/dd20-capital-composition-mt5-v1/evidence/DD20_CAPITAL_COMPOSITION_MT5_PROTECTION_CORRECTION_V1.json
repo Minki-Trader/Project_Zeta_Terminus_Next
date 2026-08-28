@@ -1,0 +1,98 @@
+{
+  "schema": "zeta-dd20-capital-composition-mt5-protection-correction-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "CORRECTED_COMPILED_READY_NO_ECONOMIC_VERDICT",
+  "campaign": "dd20-capital-composition-mt5-v1",
+  "configuration_correction_commit": "41be679",
+  "invalid_selection_run": {
+    "terminal_pid": 20716,
+    "started_local": "2026-08-28T16:46:08.7531940+09:00",
+    "tester_elapsed": "0:02:06.980",
+    "full_interval_processed": true,
+    "on_tester_status": "CORRECTION_REQUIRED",
+    "closed_lifecycles_before_safety_stop": 4,
+    "safety_stopped": true,
+    "broker_mismatch": true,
+    "protection_mismatches": 1,
+    "reports_created": 0,
+    "economic_verdict": null,
+    "preserved_artifact_path": "optimization/artifacts/raw/dd20-capital-composition-mt5-v1/non-economic-attempts/attempt-2-selection-position-cap-mismatch/",
+    "preserved_artifact_file_count": 12,
+    "preserved_artifact_total_bytes": 390636,
+    "preserved_artifact_manifest_sha256": "91AD3430EB98A8B2BBC9AAB71F8E6EAEBB3F37CF02C0A9C63EA2D215C415E136"
+  },
+  "diagnosis": {
+    "component": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "event_server": "2022-08-03T13:30:00",
+    "requested_and_broker_stop": 31931.11,
+    "actual_buffered_planned_risk_usd": 8.0599,
+    "admitted_multiplier_adjusted_budget_usd": 12.0983,
+    "aggregate_before_usd": 0.0,
+    "stop_present": true,
+    "stop_direction_valid": true,
+    "stop_exact": true,
+    "risk_known": true,
+    "aggregate_cap_passed": true,
+    "position_cap_passed_by_stale_assertion": false,
+    "cause": "Post-open confirmation compared actual risk against admitted capital times the unmultiplied 0.04 base instead of the frozen component budget."
+  },
+  "correction": {
+    "candidate_economic_inputs_changed": false,
+    "admission_logic_changed": false,
+    "component_weights_changed": false,
+    "recovery_position_budget": "Multiply the 0.04 base by the frozen component multiplier.",
+    "post_open_position_cap": "Compare actual buffered risk with the already admitted component planned-risk budget plus the unchanged tolerance.",
+    "observation_position_cap_fallback": "Report the multiplier-adjusted component cap.",
+    "all_remaining_relevant_unmultiplied_cap_uses": 0
+  },
+  "corrected_implementation": {
+    "readme_bytes": 2775,
+    "readme_sha256": "CAAF2BE521E7626687D1329C6C7EFC319DB48D7B3E8304FD6CF10A1EF0436DDA",
+    "source_file_count": 16,
+    "source_total_bytes": 418852,
+    "source_manifest_sha256": "E9BE8903D22394774CDF7EF802FC088962D361CE680BCD17407FCB5298D6EEE2",
+    "active_configuration_file_count": 3,
+    "active_configuration_total_bytes": 2410,
+    "active_configuration_manifest_sha256": "1EB135728077099BACE874D952398F482A1DD0E3E160775998CF6055768E78A4",
+    "inherited_include_modules_content_equal_after_eol_normalization": 10,
+    "intentionally_changed_include_modules": [
+      "Domain/ZetaDomain.mqh",
+      "Execution/ZetaOrders.mqh",
+      "Observation/ZetaResearchObservation.mqh",
+      "Portfolio/ZetaPortfolioRisk.mqh",
+      "Strategies/ZetaPassive.mqh"
+    ],
+    "runtime_source_mismatches": 0,
+    "runtime_configuration_mismatches": 0
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2922,
+    "process_exit_code": 1,
+    "ex5_bytes": 228294,
+    "ex5_sha256": "6386BF731C3E2D9953EE515CFF51D0B6E7D62C3EEEA564750746A536A7DBF8EB",
+    "raw_log_path": "optimization/artifacts/raw/dd20-capital-composition-mt5-v1/compile-correction-2-20260828.log",
+    "raw_log_bytes": 20786,
+    "raw_log_sha256": "CC40205BECCB8970BD87BC6D7877DC17AD11FEBDA353B8F175A173301088139E"
+  },
+  "frozen_candidate": {
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "component_risk_multipliers": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "forward_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+    "prior_15_combination_restart": false,
+    "failed_run_retuned": false
+  },
+  "boundary": {
+    "dedicated_runtime_process_owners": 0,
+    "valid_selection_economics_opened": false,
+    "forward_economics_opened": false,
+    "economic_verdict": null,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_order_or_account_mutation": false,
+    "automatic_live_promotion": false
+  }
+}
