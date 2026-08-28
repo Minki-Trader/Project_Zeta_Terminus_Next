@@ -37,4 +37,12 @@ All 144 candidate economics are unopened. The copied raw input contains 8 files 
 
 ## Proxy result
 
-Unopened at declaration.
+Declaration commit 05979560d89dcfbd96a4d7e2ca7325af60406f1c reached origin/main before one process evaluated all 144 paths in 2.3496965 seconds. Every copied input, lifecycle/native/sampled anchor, predecessor identity, zero-error balance alignment, modification-delta identity, immutable-global-high, minimum-duration, clean-book exit, full-exposure resumption, post-exit rearm and forward non-arming check passed. All paths completed and rearmed across 2..8 quarantines while scaling 2..104 later births.
+
+Every path remained positive with positive capital and four positive epochs. Conservative profit passed 140 of 144 paths, but budgeted DD passed zero, so no MT5 shortlist exists.
+
+Maximum conservative profit is trigger 10%, current-book retain 0, quarantine birth multiplier 0 and minimum duration 336 hours. Three completed quarantines release five current positions and suppress 50 later births. The path earns actual/stressed +$2,230.81 / +$2,149.024, conservative +$2,130.81 / +$2,049.024. Its actual/stressed closed-balance DD is only 14.669887% / 15.898319%, but the declared concurrent open-path envelope reaches worse sampled-equity DD 34.143478% and budgeted native DD 34.837040%.
+
+Family minimum DD is trigger 8%, current-book retain 0, quarantine multiplier 0.50 and minimum duration 336 hours. Four completed quarantines release five positions and scale 72 later births. It retains actual/stressed +$2,195.765 / +$2,110.895 and conservative +$2,095.765 / +$2,010.895, but stressed closed-balance DD is 21.309035%, worse sampled-equity DD is 25.044572%, and budgeted native DD is 25.738134%, missing the hard limit by 5.738134 points.
+
+This is a valid economic empty frontier, not an environment, design or engineering failure. Bounding the quarantine restores final profit much better than the persistent predecessor, but the best DD path still exceeds 20% before MT5, while stronger suppression makes observed positive marks unavailable during quarantine and increases concurrent open-path DD. Forward stays exact and unarmed at +$23.01 / +$21.256, native DD 12.436759%, with positive June and July. Freeze this family without MT5 or any rerun and close the first optimization phase without opening a successor.
