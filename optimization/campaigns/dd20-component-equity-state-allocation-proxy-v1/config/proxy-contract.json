@@ -1,0 +1,198 @@
+{
+  "schema": "zeta-dd20-component-equity-state-allocation-proxy-contract-v1",
+  "campaign": "dd20-component-equity-state-allocation-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-component-equity-state-allocation-proxy-v1/input",
+    "files": [
+      {"name": "exposure-margin-forward-lifecycles.csv", "bytes": 105506, "sha256": "EAD4C04CF41B55BAE9FBC887B1D4BC00971F0C72DF523AEFAB79E48F814B69B2"},
+      {"name": "exposure-margin-forward.tst", "bytes": 73924, "sha256": "4246FB21E2EDB4B892EE2A8199E2693BEC21F593D934FCF1682BBED18768D9FF"},
+      {"name": "exposure-margin-selection-lifecycles.csv", "bytes": 2828925, "sha256": "572A76047E6314E7FEA6BC97C47D5FF79D64DEC30AF43443A53103F32B412BC2"},
+      {"name": "exposure-margin-selection.tst", "bytes": 1681892, "sha256": "DFB28E3933FD48AC9104C709D813574A17A4E5D4A646809039E8CA8A9258505C"},
+      {"name": "high-exposure-forward-lifecycles.csv", "bytes": 100787, "sha256": "2A66CF325B02A3EF3F2C4CD65D520DAAAC92811ED4B8AF2DC1B1187F8C2B2AA8"},
+      {"name": "high-exposure-forward.tst", "bytes": 70596, "sha256": "E01227854BCA16BC304F23EB36C9D5DE6DE7E1A7F5E4A2BF103C98763B5F1012"},
+      {"name": "high-exposure-selection-lifecycles.csv", "bytes": 2713564, "sha256": "234FF296ABC7A7831F3355BF4BF1810067921B4D266319214FB74F7C520E31CB"},
+      {"name": "high-exposure-selection.tst", "bytes": 1620484, "sha256": "3A5928E1CCA73F34064A6398F942A087D4ABD232123352C71E8FB90BE184CB54"},
+      {"name": "near-miss-forward-lifecycles.csv", "bytes": 92997, "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E"},
+      {"name": "near-miss-forward.tst", "bytes": 64996, "sha256": "8DB1233E7507AA42D96DAC2A530D7EBC8128193066096373841AF43852F339AD"},
+      {"name": "near-miss-selection-lifecycles.csv", "bytes": 2685969, "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"},
+      {"name": "near-miss-selection.tst", "bytes": 1597220, "sha256": "BECAF1036266D69F31B670FF3CE3B871AFF51FE271994467A3DC6F266C3C7AAF"},
+      {"name": "parent-forward-report.xml", "bytes": 14914, "sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3"},
+      {"name": "parent-selection-forward-lifecycles.csv", "bytes": 16845458, "sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85"},
+      {"name": "parent-selection-report.xml", "bytes": 13843, "sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B"},
+      {"name": "qualified-success-forward-lifecycles.csv", "bytes": 49308, "sha256": "BF9CD5867C7C6128D679879368D646017A3DB1909F093A1F00698CD7496ADD99"},
+      {"name": "qualified-success-forward.tst", "bytes": 38180, "sha256": "95EA84A24A83C08D14474A0977E5AB8400172FBB8311E902F5FC7B7FC0936E5A"},
+      {"name": "qualified-success-selection-lifecycles.csv", "bytes": 2512200, "sha256": "39BB3B07C44B0890B82D42D0264B0DB18F48938FB63C321E77998714520A4E2C"},
+      {"name": "qualified-success-selection.tst", "bytes": 1448772, "sha256": "E13240A05200939E39216498EDA05DFB89CE13415C78C0A183DFD05889DCBA74"}
+    ],
+    "files_total": 19,
+    "bytes_total": 34559535,
+    "canonical_manifest_sha256": "F79651BAD1CD082DA6E1B3E89BCB59576F4567EC57F1C2C75D7523E8F4475BB8",
+    "parent_lifecycle_file": "parent-selection-forward-lifecycles.csv",
+    "selection_segment_index": 3,
+    "later_segment_index": 6
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "fixed_anchor_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+  "economic_execution_model": {
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "aggregate_tolerance_usd": 0.01,
+    "day_multiplier": "1 + floor(max(0, stressed_closed_balance - 100) / 150 + 1e-9), frozen on the first source event of each server day",
+    "component_volume": "positive MathRound equivalent of base steps times effective component weight to the 0.01 lot step",
+    "passive_pending_component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+    "passive_pending_volume_basis": "source lifecycle birth volume preserves the reservation-day base ladder",
+    "conservative_capital_proxy": "minimum of actual and doubled-cost-stressed closed balance",
+    "position_planned_risk": "conservative capital times 0.04 times executable multiplier",
+    "aggregate_admission": "tracked admitted open planned risk plus proposed planned risk must not exceed conservative capital times 0.18 plus 0.01 USD",
+    "close_economics": "source actual and stressed close net scaled by candidate normalized volume divided by source birth volume"
+  },
+  "component_equity_state": {
+    "lookbacks": [5, 10, 20, 40],
+    "symmetric_bands_r": [0.0, 0.05, 0.1],
+    "loss_multipliers": [0.0, 0.25, 0.5, 0.75],
+    "gain_multipliers": [1.0, 1.125, 1.25],
+    "expected_candidates": 144,
+    "warmup_overlay": 1.0,
+    "neutral_overlay": 1.0,
+    "state_observation": "candidate stressed close increment divided by admitted planned risk",
+    "state_admission": "only admitted closes enter the candidate-local component deque",
+    "minimum_non_neutral_executable_birth_decisions": 25,
+    "minimum_nonzero_anchor_components_with_non_neutral_executable_decisions": 3
+  },
+  "selection": {
+    "expected": {
+      "births": 2177,
+      "closed_lifecycles": 2177,
+      "actual_net_usd": 1166.89,
+      "stressed_net_usd": 1085.408
+    },
+    "epochs": [
+      {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+      {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+      {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+      {"id": "E4", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+    ],
+    "profit_calibration": {
+      "proxy_minus_native_actual_error_usd": 71.9418571429,
+      "proxy_minus_native_stressed_error_usd": 67.0620714286,
+      "uncertainty_reserve_usd": 50.0,
+      "qualified_native_actual_net_usd": 1691.54,
+      "qualified_native_stressed_net_usd": 1626.26
+    },
+    "drawdown_calibration": {
+      "native_minus_raw_gap_percentage_points": 2.1221507541,
+      "state_and_execution_reserve_percentage_points": 0.75,
+      "hard_equity_drawdown_pct": 20.0
+    }
+  },
+  "forward": {
+    "periods": [
+      {
+        "id": "FULL_JUNE_JULY_2026",
+        "start": "2026.06.01 00:00:00",
+        "end": "2026.08.01 00:00:00",
+        "expected": {
+          "births": 86,
+          "closed_lifecycles": 86,
+          "component_birth_counts": {
+            "ZT-M30-US30-RANGE-COMP-61f61deaba": 9,
+            "ZT-M30-US30-RANGE-COMP-64efb16616": 7,
+            "ZT-H1-US100-CROSS-IN-14b72317b7": 34,
+            "ZT-M30-US30-INTRADAY-R-2eb111fc46": 8,
+            "ZT-H1-US30-RETURN-I-c870a788ec": 7,
+            "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": 21
+          }
+        }
+      },
+      {
+        "id": "JUNE_2026_CONTINUOUS_SLICE",
+        "start": "2026.06.01 00:00:00",
+        "end": "2026.07.01 00:00:00",
+        "expected": {
+          "births": 43,
+          "closed_lifecycles": 43,
+          "component_birth_counts": {
+            "ZT-M30-US30-RANGE-COMP-61f61deaba": 7,
+            "ZT-M30-US30-RANGE-COMP-64efb16616": 4,
+            "ZT-H1-US100-CROSS-IN-14b72317b7": 18,
+            "ZT-M30-US30-INTRADAY-R-2eb111fc46": 3,
+            "ZT-H1-US30-RETURN-I-c870a788ec": 2,
+            "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": 9
+          }
+        }
+      },
+      {
+        "id": "JULY_2026_CONTINUOUS_SLICE",
+        "start": "2026.07.01 00:00:00",
+        "end": "2026.08.01 00:00:00",
+        "expected": {
+          "births": 43,
+          "closed_lifecycles": 43,
+          "component_birth_counts": {
+            "ZT-M30-US30-RANGE-COMP-61f61deaba": 2,
+            "ZT-M30-US30-RANGE-COMP-64efb16616": 3,
+            "ZT-H1-US100-CROSS-IN-14b72317b7": 16,
+            "ZT-M30-US30-INTRADAY-R-2eb111fc46": 5,
+            "ZT-H1-US30-RETURN-I-c870a788ec": 5,
+            "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8": 12
+          }
+        }
+      }
+    ],
+    "drawdown_calibration": {
+      "native_minus_raw_gap_percentage_points": 5.6021825077,
+      "uncertainty_reserve_percentage_points": 0.5,
+      "hard_equity_drawdown_pct": 20.0
+    },
+    "july_profit_calibration": {
+      "proxy_minus_continuous_native_actual_error_usd": 6.82,
+      "proxy_minus_continuous_native_stressed_error_usd": 6.8535,
+      "uncertainty_reserve_usd": 1.0
+    }
+  },
+  "qualified_control": {
+    "selection": {
+      "lifecycle_file": "qualified-success-selection-lifecycles.csv",
+      "cache_file": "qualified-success-selection.tst",
+      "expected_lifecycle": {"births": 1295, "closed_lifecycles": 1295, "actual_net_usd": 1691.54, "stressed_net_usd": 1626.26},
+      "native_total_net_profit_usd": 1691.54,
+      "native_equity_drawdown_relative_pct": 19.55037176500623,
+      "expected_neutral_proxy": {"actual_net_usd": 1763.4818571429, "stressed_net_usd": 1693.3220714286, "raw_drawdown_pct": 17.4282210109}
+    },
+    "forward": {
+      "lifecycle_file": "qualified-success-forward-lifecycles.csv",
+      "cache_file": "qualified-success-forward.tst",
+      "expected_lifecycle": {"births": 30, "closed_lifecycles": 30, "actual_net_usd": 23.01, "stressed_net_usd": 21.256},
+      "native_total_net_profit_usd": 23.01,
+      "native_equity_drawdown_relative_pct": 12.436759042513035,
+      "expected_neutral_proxy": {"actual_net_usd": 28.87, "stressed_net_usd": 27.236, "raw_drawdown_pct": 9.208590762}
+    },
+    "cache_offsets": {"total_net_profit": "0xB2C", "equity_drawdown_relative_pct": "0xBBC"}
+  },
+  "selection_ranking": [
+    "maximum_conservative_stressed_net_usd",
+    "maximum_conservative_actual_net_usd",
+    "maximum_E4_stressed_net_usd",
+    "minimum_budgeted_drawdown_pct",
+    "lexicographic_lookback_band_loss_gain"
+  ],
+  "output_top_selection_records": 20,
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1,
+    "qualified_control_rerun": false,
+    "prior_candidate_rerun": false,
+    "original_15_combination_rerun": false
+  }
+}
