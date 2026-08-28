@@ -1,0 +1,166 @@
+{
+  "schema": "zeta-dd20-deferred-profit-accelerator-proxy-contract-v1",
+  "campaign": "dd20-deferred-profit-accelerator-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-deferred-profit-accelerator-proxy-v1/input",
+    "files": [
+      {"name": "closed-capped-accelerator-proxy-result.json", "bytes": 193335, "sha256": "A369F31EB1A98FD075984A9FF1476E55B20863DC0E3196F0A0D3E10384494405"},
+      {"name": "closed-constant-ladder-proxy-result.json", "bytes": 366741, "sha256": "E76A5099FF602664669F75B13E5C356DA3AA241DAEA35046E98C21E9498FF23D"},
+      {"name": "parent-forward-report.xml", "bytes": 14914, "sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3"},
+      {"name": "parent-selection-forward-lifecycles.csv", "bytes": 16845458, "sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85"},
+      {"name": "parent-selection-report.xml", "bytes": 13843, "sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B"},
+      {"name": "qualified-success-forward-lifecycles.csv", "bytes": 49308, "sha256": "BF9CD5867C7C6128D679879368D646017A3DB1909F093A1F00698CD7496ADD99"},
+      {"name": "qualified-success-forward.tst", "bytes": 38180, "sha256": "95EA84A24A83C08D14474A0977E5AB8400172FBB8311E902F5FC7B7FC0936E5A"},
+      {"name": "qualified-success-selection-lifecycles.csv", "bytes": 2512200, "sha256": "39BB3B07C44B0890B82D42D0264B0DB18F48938FB63C321E77998714520A4E2C"},
+      {"name": "qualified-success-selection.tst", "bytes": 1448772, "sha256": "E13240A05200939E39216498EDA05DFB89CE13415C78C0A183DFD05889DCBA74"}
+    ],
+    "files_total": 9,
+    "bytes_total": 21482751,
+    "canonical_manifest_sha256": "60D2B1322E055FCFDBDC4D328D9BDD30F0326A40C46D83B9E8CDBD9A75ADE6A8",
+    "closed_constant_ladder_result_file": "closed-constant-ladder-proxy-result.json",
+    "closed_capped_accelerator_result_file": "closed-capped-accelerator-proxy-result.json",
+    "parent_lifecycle_file": "parent-selection-forward-lifecycles.csv",
+    "selection_segment_index": 3,
+    "selection_expected": {
+      "births": 2177,
+      "closed_lifecycles": 2177,
+      "actual_net_usd": 1166.89,
+      "stressed_net_usd": 1085.408
+    },
+    "later_segment_index": 6
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "fixed_component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+  "economic_execution_model": {
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "aggregate_tolerance_usd": 0.01,
+    "pre_activation_addition_step_usd": 150.0,
+    "deferred_uncapped_day_multiplier": "1 + floor(min(growth, activation_growth) / 150) + floor(max(0, growth - activation_growth) / post_activation_step), where growth is max(0, stressed closed balance - 100)",
+    "capped_day_multiplier": "minimum of the deferred uncapped day multiplier and the candidate maximum-day-multiplier cap, frozen on the first source event of each server day",
+    "component_volume": "MathRound-positive equivalent of base_volume * capped_day_multiplier * fixed_component_weight to the 0.01 lot step",
+    "passive_pending_component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+    "passive_pending_volume_basis": "the lifecycle birth volume preserves the earlier unobserved reservation-day base ladder; apply the fixed component weight with positive MathRound semantics to those source base steps",
+    "executable_multiplier": "normalized component volume divided by normalized unweighted base volume",
+    "conservative_capital_proxy": "minimum of actual closed balance and stressed closed balance",
+    "position_planned_risk": "conservative capital * 0.04 * executable multiplier",
+    "aggregate_admission": "accept only when tracked open planned risk plus proposed position planned risk is at or below conservative capital * 0.18 plus $0.01",
+    "close_economics": "source lifecycle actual and stressed close net scaled by candidate normalized volume divided by the source birth volume"
+  },
+  "candidate_activation_growth_thresholds_usd": [300, 450, 600, 750, 900, 1050, 1200, 1350],
+  "candidate_post_activation_addition_steps_usd": [25, 50, 75, 100],
+  "candidate_maximum_day_multiplier_caps": [14, 16, 18, 20, 24, 30, 40, 60],
+  "candidate_triple_rule": "full Cartesian product; every activation threshold is a $150 multiple and every cap is above the baseline multiplier at activation, so the baseline slope is exact before activation and the accelerated regime has executable headroom",
+  "expected_candidates": 256,
+  "baseline_addition_step_usd": 150.0,
+  "baseline_anchor_activation_growth_threshold_usd": 1000000000000.0,
+  "baseline_anchor_post_activation_addition_step_usd": 150.0,
+  "baseline_anchor_maximum_day_multiplier_cap": 2147483647,
+  "closed_anchor_in_candidate_grid": false,
+  "native_cache_offsets": {
+    "total_net_profit": "0xB2C",
+    "equity_drawdown_relative_pct": "0xBBC"
+  },
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4_RECENT_SELECTION", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "paired_forward_period": {
+    "start": "2026.06.01 00:00:00",
+    "end": "2026.08.01 00:00:00",
+    "expected": {"births": 86, "closed_lifecycles": 86},
+    "starts_from_reference_capital": true
+  },
+  "development_period": {
+    "start": "2026.06.01 00:00:00",
+    "end": "2026.07.01 00:00:00",
+    "expected": {"births": 43, "closed_lifecycles": 43},
+    "starts_from_reference_capital": true
+  },
+  "july_development_period": {
+    "start": "2026.07.01 00:00:00",
+    "end": "2026.08.01 00:00:00",
+    "expected": {"births": 43, "closed_lifecycles": 43},
+    "starts_from_reference_capital": true
+  },
+  "qualified_success_anchor": {
+    "addition_step_usd": 150.0,
+    "selection": {
+      "lifecycle_file": "qualified-success-selection-lifecycles.csv",
+      "native_cache_file": "qualified-success-selection.tst",
+      "lifecycle_expected": {"births": 1295, "closed_lifecycles": 1295, "actual_net_usd": 1691.54, "stressed_net_usd": 1626.26},
+      "observed_native_mt5_equity_drawdown_pct": 19.55037176500623,
+      "expected_proxy_actual_net_usd": 1763.4818571429,
+      "expected_proxy_stressed_net_usd": 1693.3220714286,
+      "expected_proxy_raw_drawdown_pct": 17.4282210109
+    },
+    "paired_forward": {
+      "lifecycle_file": "qualified-success-forward-lifecycles.csv",
+      "native_cache_file": "qualified-success-forward.tst",
+      "lifecycle_expected": {"births": 30, "closed_lifecycles": 30, "actual_net_usd": 23.01, "stressed_net_usd": 21.256},
+      "observed_native_mt5_equity_drawdown_pct": 12.436759042513035,
+      "expected_proxy_actual_net_usd": 28.87,
+      "expected_proxy_stressed_net_usd": 27.236,
+      "expected_proxy_raw_drawdown_pct": 9.208590762
+    },
+    "continuous_july": {
+      "expected_proxy_actual_net_usd": 9.30,
+      "expected_proxy_stressed_net_usd": 8.756,
+      "observed_actual_net_usd": 3.22,
+      "observed_stressed_net_usd": 2.280,
+      "observed_closes": 15
+    },
+    "rerun": false
+  },
+  "selection_drawdown_calibration": {
+    "native_minus_raw_gap_percentage_points": 2.1221507541,
+    "uncertainty_reserve_percentage_points": 0.25,
+    "maximum_eligible_raw_drawdown_pct": 17.6278492459,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "selection_incremental_profit_calibration": {
+    "incremental_proxy_profit_retention_fraction": 0.5,
+    "uncertainty_reserve_usd": 50.0,
+    "conservative_actual_formula": "observed qualified actual + 0.5 * (candidate proxy actual - qualified proxy actual) - 50",
+    "conservative_stressed_formula": "observed qualified stressed + 0.5 * (candidate proxy stressed - qualified proxy stressed) - 50",
+    "both_conservative_nets_must_strictly_exceed_observed_qualified_nets": true
+  },
+  "paired_forward_drawdown_calibration": {
+    "native_minus_raw_gap_percentage_points": 3.2281682805,
+    "uncertainty_reserve_percentage_points": 0.5,
+    "hard_native_mt5_equity_drawdown_pct": 20.0
+  },
+  "continuous_july_calibration": {
+    "proxy_minus_observed_actual_shortfall_usd": 6.08,
+    "proxy_minus_observed_stressed_shortfall_usd": 6.476,
+    "uncertainty_reserve_usd": 1.0,
+    "both_conservative_nets_must_be_positive": true
+  },
+  "selection_role": {
+    "id": "maximum_conservative_stressed_profit_deferred_accelerator",
+    "ordering": "maximize conservative selection stressed net, then conservative actual, raw stressed, recent-selection stressed, conservative July stressed, full-pair stressed, weaker-month stressed, minimize budgeted DD, prefer lower cap, higher activation threshold, then larger post-activation step",
+    "maximum_distinct_roles": 1
+  },
+  "output_top_selection_records": 20,
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1,
+    "qualified_success_candidate_rerun": false,
+    "closed_constant_ladder_rerun": false,
+    "closed_capped_accelerator_rerun": false,
+    "prior_candidate_rerun": false,
+    "original_15_combination_rerun": false
+  }
+}
