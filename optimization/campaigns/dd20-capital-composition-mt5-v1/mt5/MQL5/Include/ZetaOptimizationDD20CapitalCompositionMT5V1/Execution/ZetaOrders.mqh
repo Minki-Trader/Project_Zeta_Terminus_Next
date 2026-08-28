@@ -556,8 +556,11 @@ bool ReconstructEntryTracking(const int component, const ulong ticket)
          InpStopPlacementHeadroomFraction;
       const double current_position_budget =
          ConservativeRiskCapital() * InpMaximumPositionRiskFraction *
-         ComponentRiskMultiplier(component);
-      if(broker_stop_loss <= 0.0 || modeled_target_fraction <= 0.0 ||
+         ExecutableComponentVolumeMultiplier(component,
+                                             component_definitions[component].symbol,
+                                             aggregate.volume);
+      if(broker_stop_loss <= 0.0 || current_position_budget <= 0.0 ||
+         modeled_target_fraction <= 0.0 ||
          !GrossStopRisk(component_definitions[component].symbol,
                         direction,
                         aggregate.volume,
@@ -790,7 +793,7 @@ bool BuildMarketEntryPlan(const int component,
       return(false);
      }
    const string symbol = component_definitions[component].symbol;
-   const double volume = NormalizedVolume(symbol);
+   const double volume = NormalizedComponentVolume(component, symbol);
    if(volume <= 0.0)
      {
       component_states[component].entry_check_result = "VOLUME_INVALID";

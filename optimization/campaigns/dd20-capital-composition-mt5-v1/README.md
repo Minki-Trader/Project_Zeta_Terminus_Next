@@ -6,11 +6,11 @@ This independent tester-only campaign materializes exactly the sole survivor fro
 
 - Preserved MT5 parent: position risk `0.04`, aggregate risk `0.18`.
 - Component order: range-61 / range-64 / US100 cross / US30 intraday pressure / US30 return / US100 impulse-passive.
-- Component risk multipliers: `3.0 / 3.0 / 1.0 / 2.5 / 1.0 / 0.0`.
+- Component exposure multipliers: `3.0 / 3.0 / 1.0 / 2.5 / 1.0 / 0.0`.
 - Effective per-position risk budgets before the unchanged global aggregate cap: `0.12 / 0.12 / 0.04 / 0.10 / 0.04 / disabled`.
 - Aggregate planned-risk cap remains `0.18`; all signals, clocks, directions, volume ladder, costs, order types, stops, holds, ordering and execution logic otherwise remain inherited.
 
-The zero-weight impulse-passive component is explicitly disabled in this tester-only family. Positive multipliers scale only that component's protective-stop risk budget. Real MT5 feedback through stop geometry, aggregate admission, overlap, margin and the existing sizing ladder is intentionally allowed because that is what the close-order proxy could not establish.
+The zero-weight impulse-passive component is explicitly disabled in this tester-only family. Positive multipliers scale component volume and its planned-risk budget together, preserving the parent's stop geometry up to executable volume-step quantization. Real MT5 feedback through aggregate admission, overlap, margin and the existing sizing ladder is intentionally allowed because that is what the close-order proxy could not establish.
 
 ## Economic run
 
@@ -22,4 +22,4 @@ The EA has unique Optimization identity, Magic `260828811..260828816`, state, re
 
 ## Current boundary
 
-The first normal selection run exposed a remaining parent protection assertion: a range-61 entry with actual buffered risk `$8.0599` was inside its multiplier-adjusted admitted budget `$12.0983` and the aggregate cap, but the post-open assertion still compared it to the unmultiplied 4% cap. It safety-stopped after four lifecycles, so the output is `CORRECTION_REQUIRED`, not an economic result. All protection admission, reconstruction, post-open confirmation and observation fallback paths now use the same component budget. The corrected EX5 compiles `0 errors / 0 warnings`; commit and push `evidence/DD20_CAPITAL_COMPOSITION_MT5_PROTECTION_CORRECTION_V1.json` before rerunning selection.
+The next selection retry revealed a deeper materialization error before completion: proxy weights multiply whole lifecycle P/L, but the EA widened stops while retaining base volume. That partial run was stopped and preserved without an economic verdict. The implementation now scales executable component volume and planned-risk budget together, so a `3×` component carries approximately `3×` notional at the same parent stop geometry; the `2.5×` leg uses the nearest broker volume step and its actual executable ratio. Compile and freeze this design correction before rerunning the unchanged proxy weights.

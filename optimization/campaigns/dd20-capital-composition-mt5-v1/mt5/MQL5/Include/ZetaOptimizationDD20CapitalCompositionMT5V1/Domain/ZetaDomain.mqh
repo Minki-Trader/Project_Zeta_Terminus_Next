@@ -2,7 +2,7 @@
 #define ZETA_NEXT_DOMAIN_MQH
 
 // Isolated optimization copy of the completed 0.04 / 0.18 frontier path.
-// Only the six frozen proxy-selected component risk multipliers differ.
+// Only the six frozen proxy-selected component exposure multipliers differ.
 
 input double InpReferenceCapitalUSD  = 100.0;
 input double InpPriorProjectRealizedNetUSD = 0.0;
@@ -35,7 +35,7 @@ const string SCHEMA_VERSION = "opt-dd20-cc-mt5-1";
 const string RELEASE_ID = "OPT-LIVE-V7-DD20CC1-20260828";
 const string PORTFOLIO_ID = "ZT-OPT-LIVE-V7-DD20CC1-20260828";
 const string ECONOMIC_FINGERPRINT =
-   "parent-rlo1-b32e7e176f2e-ref100-base0.01-posrisk0.04-aggrisk0.18-component-risk-multipliers-3-3-1-2.5-1-0";
+   "parent-rlo1-b32e7e176f2e-ref100-base0.01-posrisk0.04-aggrisk0.18-component-exposure-multipliers-3-3-1-2.5-1-0";
 const string EXECUTION_FINGERPRINT =
    "isolated-tester-only-dd20-capital-composition-one-candidate-real-tick-v1";
 const string STATE_MARKER =

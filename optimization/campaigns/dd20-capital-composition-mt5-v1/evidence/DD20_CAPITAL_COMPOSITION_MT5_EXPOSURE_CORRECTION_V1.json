@@ -1,0 +1,97 @@
+{
+  "schema": "zeta-dd20-capital-composition-mt5-exposure-correction-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "CORRECTED_COMPILED_READY_NO_ECONOMIC_VERDICT",
+  "campaign": "dd20-capital-composition-mt5-v1",
+  "protection_correction_commit": "9e1ee1d",
+  "stopped_partial_selection": {
+    "terminal_pid": 14376,
+    "metatester_pid": 17564,
+    "started_local": "2026-08-28T16:52:52.6768421+09:00",
+    "last_snapshot_server": "2025-05-12T21:00:00",
+    "closed_lifecycles": 123,
+    "partial_actual_net_usd": 155.74,
+    "partial_stressed_net_usd": 135.4075,
+    "safety_stopped": false,
+    "persistence_failed": false,
+    "broker_mismatch": false,
+    "protection_mismatches": 0,
+    "completion": false,
+    "economic_verdict": null,
+    "stop_reason": "The run did not materialize the proxy's lifecycle P/L scaling because notional volume remained at the parent level.",
+    "dedicated_processes_only_stopped": true,
+    "live_pid_23180_preserved": true,
+    "preserved_artifact_path": "optimization/artifacts/raw/dd20-capital-composition-mt5-v1/non-economic-attempts/attempt-3-selection-risk-budget-without-volume-scaling/",
+    "preserved_artifact_file_count": 13,
+    "preserved_artifact_total_bytes": 13934204,
+    "preserved_artifact_manifest_sha256": "C681EB8FE1171165342B5F5E1A19B62B588C63DB501CD3FB2C0A39A02DAFBEAD"
+  },
+  "diagnosis": {
+    "proxy_operation": "Multiply every observed lifecycle actual and doubled-cost-stressed P/L by its component weight.",
+    "incorrect_mt5_operation": "Keep parent volume and widen the stop to spend a larger component risk budget.",
+    "economic_mismatch": "Time exits and non-stop P/L did not scale with the proxy weight, so the candidate notional allocation was absent.",
+    "classification": "DESIGN_CORRECTION_REQUIRED",
+    "optimization_failure": false
+  },
+  "corrected_materialization": {
+    "component_exposure_multipliers": [3.0, 3.0, 1.0, 2.5, 1.0, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "component_volume": "Broker-normalize base volume times daily sizing-ladder multiplier times component exposure multiplier.",
+    "executable_component_multiplier": "Broker-normalized component volume divided by the unchanged parent-ladder normalized volume.",
+    "component_position_budget": "Conservative capital times 0.04 times the executable component multiplier.",
+    "stop_geometry": "Volume and budget scale together, retaining parent stop geometry up to broker price/volume quantization.",
+    "unchanged_feedback": [
+      "aggregate planned-risk admission",
+      "margin admission",
+      "component and portfolio overlap",
+      "daily stressed-balance sizing ladder",
+      "signals, clocks, directions, costs, exits and ordering"
+    ],
+    "zero_weight_impulse_passive_disabled": true,
+    "weights_retuned": false
+  },
+  "corrected_implementation": {
+    "readme_bytes": 2766,
+    "readme_sha256": "73E176E5C83149E4FCB6E8BF025B4DAF6B5B80975838557983A7047DB76628F9",
+    "source_file_count": 16,
+    "source_total_bytes": 420414,
+    "source_manifest_sha256": "7382D0D5C7B3BBD770A883052D821626D640288F9D005B48F1CD55A4CCCA4B7A",
+    "active_configuration_file_count": 3,
+    "active_configuration_total_bytes": 2410,
+    "active_configuration_manifest_sha256": "1EB135728077099BACE874D952398F482A1DD0E3E160775998CF6055768E78A4",
+    "inherited_include_modules_content_equal_after_eol_normalization": 10,
+    "intentionally_changed_include_modules": [
+      "Domain/ZetaDomain.mqh",
+      "Execution/ZetaOrders.mqh",
+      "Observation/ZetaResearchObservation.mqh",
+      "Portfolio/ZetaPortfolioRisk.mqh",
+      "Strategies/ZetaPassive.mqh"
+    ],
+    "runtime_source_mismatches": 0,
+    "runtime_configuration_mismatches": 0
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2993,
+    "process_exit_code": 1,
+    "ex5_bytes": 229536,
+    "ex5_sha256": "6E2BFF8001148DE9222BE35BACF0ADCAFB4E3B6F23302D76D3E145CCC1B56375",
+    "raw_log_path": "optimization/artifacts/raw/dd20-capital-composition-mt5-v1/compile-design-correction-3-20260828.log",
+    "raw_log_bytes": 20786,
+    "raw_log_sha256": "CEE07E12092166FECC75B326B70338102A0F20987181C6BF6E75E75DFBAF6A9E"
+  },
+  "boundary": {
+    "dedicated_runtime_process_owners": 0,
+    "valid_selection_economics_opened": false,
+    "forward_economics_opened": false,
+    "economic_verdict": null,
+    "prior_15_combination_restart": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_order_or_account_mutation": false,
+    "automatic_live_promotion": false,
+    "free_space_gib": 92.97
+  }
+}

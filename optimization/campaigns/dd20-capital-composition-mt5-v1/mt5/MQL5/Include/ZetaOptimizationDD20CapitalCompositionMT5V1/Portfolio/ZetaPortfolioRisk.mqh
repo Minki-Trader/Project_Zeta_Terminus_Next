@@ -250,6 +250,38 @@ double ComponentRiskMultiplier(const int component)
   }
 
 
+double NormalizedComponentVolume(const int component, const string symbol)
+  {
+   const double multiplier = ComponentRiskMultiplier(component);
+   const double minimum = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MIN);
+   const double maximum = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MAX);
+   const double step = SymbolInfoDouble(symbol, SYMBOL_VOLUME_STEP);
+   if(!MathIsValidNumber(multiplier) || multiplier <= 0.0 || step <= 0.0)
+      return(0.0);
+   const double requested =
+      InpBaseVolume * portfolio_state.day_volume_multiplier * multiplier;
+   const double normalized = MathRound(requested / step) * step;
+   if(normalized < minimum || normalized > maximum)
+      return(0.0);
+   return(normalized);
+  }
+
+
+double ExecutableComponentVolumeMultiplier(const int component,
+                                           const string symbol,
+                                           const double volume)
+  {
+   if(ComponentRiskMultiplier(component) <= 0.0 || volume <= 0.0)
+      return(0.0);
+   const double base_volume = NormalizedVolume(symbol);
+   if(base_volume <= 0.0)
+      return(0.0);
+   const double multiplier = volume / base_volume;
+   return(MathIsValidNumber(multiplier) && multiplier > 0.0
+          ? multiplier : 0.0);
+  }
+
+
 bool CalculateProtectiveStop(const int component,
                              const string symbol,
                              const int direction,
@@ -265,7 +297,8 @@ bool CalculateProtectiveStop(const int component,
    const double tick_size =
       SymbolInfoDouble(symbol, SYMBOL_TRADE_TICK_SIZE);
    const int digits = (int)SymbolInfoInteger(symbol, SYMBOL_DIGITS);
-   const double risk_multiplier = ComponentRiskMultiplier(component);
+   const double risk_multiplier =
+      ExecutableComponentVolumeMultiplier(component, symbol, volume);
    if(!MathIsValidNumber(risk_multiplier) || risk_multiplier < 0.0)
      {
       ++protection_calculation_failures;
@@ -273,7 +306,7 @@ bool CalculateProtectiveStop(const int component,
                   "PROTECTION_CALC_FAIL",
                   risk_multiplier,
                   (double)component,
-                  "invalid component risk multiplier");
+                  "invalid executable component exposure multiplier");
       return(false);
      }
    if(risk_multiplier <= 1.0e-9)
