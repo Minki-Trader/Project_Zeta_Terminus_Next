@@ -1,0 +1,115 @@
+{
+  "schema": "zeta-dd20-profit-frontier-proxy-result-v1",
+  "recorded_date_local": "2026-08-28",
+  "status": "VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST",
+  "campaign": "dd20-profit-frontier-proxy-v1",
+  "declaration_commit": "eb63d5d",
+  "declaration_sha256": "0240972BA41FDBD257AD685B69BE9EDB5F6860FB416BE1D795108D719A68D97F",
+  "implementation": {
+    "contract_sha256": "5AC91BA731EAB3C56593A51D2F79E4521F139F5377475BB9DA72656BFC97E165",
+    "script_sha256": "4FBA49A154ECE4D7EDF00ED260B88FC66069F014407909EB084E7AC6F85C1435",
+    "input_lifecycle_sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85",
+    "raw_output_path": "optimization/artifacts/raw/dd20-profit-frontier-proxy-v1/output/proxy-result.json",
+    "raw_output_bytes": 15275,
+    "raw_output_sha256": "DA1EC7FCA0810019638F257BA036D55033D2CF720638CC7B4C72C91623C56227"
+  },
+  "selection_search": {
+    "combinations": 117649,
+    "eligible_combinations": 105330,
+    "eligible_fraction": 0.8952910776972188,
+    "latest_used_in_ranking_or_weight_tuning": false,
+    "selection_lifecycles": 2177,
+    "block_a_lifecycles": 1011,
+    "block_b_lifecycles": 1166,
+    "hard_proxy_drawdown_pct": 20.0
+  },
+  "unweighted_base": {
+    "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+    "selection_actual_net_usd": 1166.89,
+    "selection_stressed_net_usd": 1085.408,
+    "selection_proxy_drawdown_pct": 12.8415628896,
+    "selection_observed_mt5_equity_drawdown_pct": 11.3757,
+    "later_actual_net_usd": -1.74,
+    "later_stressed_net_usd": -3.669,
+    "later_proxy_drawdown_pct": 13.9425290469,
+    "later_observed_mt5_equity_drawdown_pct": 15.8976
+  },
+  "component_order": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "selected_roles": [
+    {
+      "role": "maximum_stressed_profit",
+      "weights": [2.0, 2.0, 2.0, 1.75, 2.0, 2.0],
+      "selection_actual_net_usd": 2299.8375,
+      "selection_stressed_net_usd": 2138.4835,
+      "selection_proxy_drawdown_pct": 19.9140468001,
+      "block_a_stressed_net_usd": 374.21825,
+      "block_b_stressed_net_usd": 1764.26525,
+      "weaker_block_stressed_uplift_ratio": 1.9643500137,
+      "broad_support_neighbors": 5,
+      "later_actual_net_usd": -4.9775,
+      "later_stressed_net_usd": -8.762,
+      "later_proxy_drawdown_pct": 26.02381969,
+      "later_confirmation_passed": false,
+      "later_failed_conditions": ["actual_net_positive", "stressed_net_positive", "proxy_drawdown_at_or_below_20_pct"]
+    },
+    {
+      "role": "broad_profit_plateau",
+      "weights": [2.0, 2.0, 2.0, 2.0, 1.75, 2.0],
+      "selection_actual_net_usd": 2295.8475,
+      "selection_stressed_net_usd": 2135.36475,
+      "selection_proxy_drawdown_pct": 19.8137403553,
+      "block_a_stressed_net_usd": 367.33575,
+      "block_b_stressed_net_usd": 1768.029,
+      "weaker_block_stressed_uplift_ratio": 1.9615720419,
+      "broad_support_neighbors": 6,
+      "later_actual_net_usd": -3.77,
+      "later_stressed_net_usd": -7.595,
+      "later_proxy_drawdown_pct": 25.1527697276,
+      "later_confirmation_passed": false,
+      "later_failed_conditions": ["actual_net_positive", "stressed_net_positive", "proxy_drawdown_at_or_below_20_pct"]
+    },
+    {
+      "role": "balanced_half_stability",
+      "weights": [2.0, 2.0, 2.0, 1.75, 2.0, 1.75],
+      "selection_actual_net_usd": 2288.2775,
+      "selection_stressed_net_usd": 2129.045625,
+      "selection_proxy_drawdown_pct": 19.99232255,
+      "block_a_stressed_net_usd": 370.306625,
+      "block_b_stressed_net_usd": 1758.739,
+      "weaker_block_stressed_uplift_ratio": 1.9581970334,
+      "broad_support_neighbors": 4,
+      "later_actual_net_usd": -4.085,
+      "later_stressed_net_usd": -7.809,
+      "later_proxy_drawdown_pct": 25.8413152663,
+      "later_confirmation_passed": false,
+      "later_failed_conditions": ["actual_net_positive", "stressed_net_positive", "proxy_drawdown_at_or_below_20_pct"]
+    }
+  ],
+  "economic_interpretation": {
+    "selection": "The fixed-path proxy can nearly double stressed net while spending almost the full 20 percent proxy drawdown budget.",
+    "later": "All three frozen selection roles amplify the already negative later path and exceed the 20 percent proxy drawdown budget.",
+    "classification": "GROSS_LEVERAGE_AMPLIFIES_SELECTION_AND_LATER_LOSS_NO_CONFIRMABLE_ALLOCATION",
+    "mt5_shortlist_size": 0,
+    "mt5_launch_authorized_by_this_result": false,
+    "economic_failure": false,
+    "reason_not_failure": "This is a valid proxy information result. It rejects only the declared fixed-path gross-allocation shortlist and is not an environment, design, invocation or engineering judgment."
+  },
+  "boundary": {
+    "proxy_completed": true,
+    "selection_roles_frozen_before_later_open": true,
+    "later_failed_role_rescue_or_retune": false,
+    "mt5_launched": false,
+    "mt5_process_owner": 0,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

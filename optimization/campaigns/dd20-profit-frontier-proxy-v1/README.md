@@ -22,6 +22,8 @@ This is selection research, not MT5 profit proof. It does not simulate changed s
 
 The campaign uses no MT5 runtime, MQL source, broker state, Lab path, Live path, validator, parity checker or test harness. The frozen declaration is `evidence/DD20_PROFIT_FRONTIER_PROXY_DECLARATION_V1.json`.
 
-## Current boundary
+## Result
 
-Implementation and campaign-owned inputs are frozen with proxy economic output unopened. Do not launch MT5 before the proxy result produces its bounded shortlist.
+The deterministic proxy completed all `117,649` combinations in about 26 seconds; `105,330` passed the selection gates. The three frozen roles raised selection stressed net from `$1,085.408` to `$2,129.046-$2,138.484` while using `19.81-19.99%` proxy drawdown.
+
+After those weights were fixed, all three failed the later confirmation: actual net was `-$3.77` to `-$4.98`, stressed net was `-$7.595` to `-$8.762`, and proxy drawdown was `25.15-26.02%`. No role was rescued or retuned. The result is `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST`, and this campaign launches no MT5 path. Exact evidence is `evidence/DD20_PROFIT_FRONTIER_PROXY_RESULT_V1.json`.
