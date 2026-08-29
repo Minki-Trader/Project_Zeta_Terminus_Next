@@ -1,0 +1,74 @@
+{
+  "schema": "zeta-next-three-index-h1-body-engulfing-snapshot-receipt-v1",
+  "created_at_local": "2026-08-29",
+  "status": "ONE_TIME_LAB_OWNED_INPUT_COPY_COMPLETE_BEFORE_ECONOMIC_OUTCOMES",
+  "unit": "three-index-h1-body-engulfing-response-102",
+  "family": "three-index-h1-body-engulfing-response-v1",
+  "source_boundary": {
+    "bar_source_family": "lab/research/predecision-market-participation-state-v1/",
+    "source_acquisition_receipt": {
+      "path": "lab/research/predecision-market-participation-state-v1/evidence/PREDECISION_MARKET_PARTICIPATION_STATE_ACQUISITION_RECEIPT_V1.json",
+      "bytes": 5107,
+      "sha256": "DC9FDCA7E7708DA806A0B41F124E648A26A487BDE43C3C7527C07AE07E9D4661"
+    },
+    "source_acquisition": "Dedicated physical Lab Portable through MetaTrader5 copy_rates_range; no account, position, order, deal or send call.",
+    "formal_cross_family_read": false,
+    "live_dependency": false
+  },
+  "lab_owned_root": "lab/artifacts/raw/three-index-h1-body-engulfing-response-v1/input/",
+  "files": [
+    {
+      "name": "SYMBOL_POINT_SPECS_V1.json",
+      "bytes": 554,
+      "sha256": "146B40A5FD671BBBB7009A093511C9765701D2C6E83B1CDAFF15525790607613"
+    },
+    {
+      "name": "SYMBOL_TRADE_SPECS_V1.json",
+      "bytes": 1509,
+      "sha256": "9B96022D17129F387ADACE0B2E31B8229F90FBA3571C77A1A79B6EEA7C2FC8A1"
+    },
+    {
+      "name": "US100_H1_BARS_20220701_20260821.csv",
+      "bytes": 2508477,
+      "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812"
+    },
+    {
+      "name": "US30_H1_BARS_20220701_20260821.csv",
+      "bytes": 2763746,
+      "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92"
+    },
+    {
+      "name": "US500_H1_BARS_20220701_20260821.csv",
+      "bytes": 2727471,
+      "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85"
+    }
+  ],
+  "manifest_rule": "Sort name|bytes|uppercase SHA-256 by name, join with LF and SHA-256 UTF-8 without a trailing LF.",
+  "manifest_sha256": "4AD5B00BB48321782A3158F8C78D6C77B10B715C9A5582127CF2B5B5EBC0796D",
+  "premetric_scan": {
+    "scope": "Only current/prior H1 open-close body geometry and timestamps through the exact t+5 exit boundary were consumed. No future open, spread, P/L, profit factor, drawdown, selected direction, gate or verdict was read or calculated.",
+    "strict_body_engulfing": "Prior and signal bars are non-doji and opposite in sign; the signal open-close body contains the prior open-close body inclusively with at least one strict boundary.",
+    "nonoverlap": "At most one unresolved observation per symbol through the fixed t+5 exit open.",
+    "pooled_signals_per_normal_day": {
+      "P1_2022H2_2023": 5.527322404371585,
+      "P2_2024": 5.123552123552123,
+      "P3_2025": 5.381322957198444,
+      "P4_2026_JAN_MAY": 5.2924528301886795,
+      "P5_LATEST_2026_JUN_JUL": 5.777777777777778
+    },
+    "pooled_unique_signal_hours_per_normal_day": {
+      "P1_2022H2_2023": 3.879781420765027,
+      "P2_2024": 3.8996138996139,
+      "P3_2025": 3.914396887159533,
+      "P4_2026_JAN_MAY": 3.80188679245283,
+      "P5_LATEST_2026_JUN_JUL": 4.6
+    },
+    "structurally_eligible": true
+  },
+  "economics_consumed": false,
+  "runtime_created": false,
+  "mql_created": false,
+  "tester_paths": 0,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED"
+}

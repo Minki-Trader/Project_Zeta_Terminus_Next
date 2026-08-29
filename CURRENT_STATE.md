@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0376`
+- Latest state ID: `STATE-0377`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -25,7 +25,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 ## Active work
 
 - Active engineering boundary: none; the one-shot Codex-lifetime breakaway mechanism remains available, the scheduled task/resident PID loop is removed, and no terminal or dashboard process was observed after the user's reboot
-- Active research boundary: none; source-free Program 5 / meso→macro Unit 101 `paired-anchor-component-capital-subsidy-v1` is closed `VALID_COMPONENT_CAPITAL_SUBSIDY_NONCONFIRMATION_NO_SEED`. Its exact component-local no-add path removed `82.934705%` of source lot steps and lowered raw closed DD `20.401029% → 17.815650%`, but actual/stressed profit collapsed from `+$5,786.63 / +$5,477.524` to `+$837.206701 / +$784.255010`; all five component and all four epoch deltas were negative. The shared global `$150` ladder remains preserved with no seed, adjacent capital-ownership rescue, Lab MQL or Live authority.
+- Active research boundary: none; source-free Program 1 / micro→meso Unit 102 `three-index-h1-body-engulfing-response-v1` is closed `FAIL_H1_BODY_ENGULFING_NO_P1_DIRECTION_NO_SEED`. Exact four-hour nonoverlapping structural supply was dense at `5.12..5.78` signals/day, but P1 `2,023`-signal continuation/reversion doubled-spread economics were `-$87.65035 / -$12.57265` with PF `0.82455 / 0.97276`. Neither direction passed any of seven discovery gates, so P2-P5 economics remained unopened and no seed, MT5 shortlist, adjacent candlestick rescue, Lab MQL or Live authority exists.
 - Active optimization boundary: none; source-free `dd20-paired-month-component-state-combination-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST_COMPONENT_STATE_COMBINATION_NONCONFIRMATION`. The exact fixed state role made `64` non-neutral decisions across five components but displaced nine Cross admissions, reducing gross actual/stressed by `$187.0011 / $179.2354`; conservative deltas were `-$282.3884 / -$274.1520` and budgeted DD was `21.732774%`. Forward and the current three-close Live-Dev snapshot remained exactly neutral. No MT5 shortlist or adjacent state/admission rescue exists; the paired-month anchor remains unchanged pending another full-map comparison.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6

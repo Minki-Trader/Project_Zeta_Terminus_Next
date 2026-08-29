@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-three-index-h1-body-engulfing-response-closure-v1",
+  "created_at_local": "2026-08-29",
+  "status": "UNIT_102_CLOSED_VALID_ECONOMIC_NONCONFIRMATION",
+  "unit": "three-index-h1-body-engulfing-response-102",
+  "family": "three-index-h1-body-engulfing-response-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "artifacts": {
+    "snapshot_receipt": {
+      "bytes": 3369,
+      "sha256": "D789F2DD540543A9AB1B7A85377B20AF3B2237A5CCEE49F35E379AE3212DC6EC"
+    },
+    "declaration": {
+      "bytes": 24278,
+      "sha256": "CF66877704399EE2D109A17893F8B25C9DA1E8497CD4B9F42CF983DA862B2E90"
+    },
+    "script": {
+      "bytes": 29858,
+      "sha256": "F182334F2C2920F5C124083C2CD24242C12221A0072564CFA74ACAF58D9133E6"
+    },
+    "result": {
+      "bytes": 23333,
+      "sha256": "4E45652FA47DAE321FB2A79C391EF81E78E21F4C08E5E66D7372796A07705B46"
+    },
+    "raw_result": {
+      "bytes": 23333,
+      "sha256": "4E45652FA47DAE321FB2A79C391EF81E78E21F4C08E5E66D7372796A07705B46"
+    },
+    "packaging_correction": {
+      "bytes": 1545,
+      "sha256": "3B99E757B842B1C5850CDAD182B7347C470CBFBC6342218B1E919D7FFB07CD8F"
+    },
+    "input_manifest_sha256": "4AD5B00BB48321782A3158F8C78D6C77B10B715C9A5582127CF2B5B5EBC0796D"
+  },
+  "execution": {
+    "successful_formal_processes": 1,
+    "economic_metric_reruns": 0,
+    "engineering_or_design_corrections": 0,
+    "post_result_packaging_corrections": 1,
+    "packaging_effect": "Evidence pins and serialization only; no input, economic payload, gate or verdict changed.",
+    "internal_elapsed_seconds": 3.9111530000009225,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "broker_or_account_queries": 0
+  },
+  "integrity_and_density": {
+    "passed": true,
+    "input_files": 5,
+    "physical_h1_rows": 73332,
+    "signals": 5554,
+    "P1_signals": 2023,
+    "pooled_signals_per_day_range": [
+      5.123552123552123,
+      5.777777777777778
+    ],
+    "unique_signal_hours_per_day_range": [
+      3.80188679245283,
+      4.6
+    ],
+    "all_density_checks": true,
+    "faults": 0
+  },
+  "P1_economics": {
+    "CONTINUATION": {
+      "gross_usd": -37.538850000000366,
+      "observed_usd": -62.59460000000036,
+      "double_spread_usd": -87.65035000000037,
+      "double_spread_profit_factor": 0.8245515021854405,
+      "maximum_closed_drawdown_usd": 98.0361500000003,
+      "net_to_drawdown": -0.8940615273039598,
+      "calendar_split_double_spread_usd": {
+        "P1_2022H2": -32.698449999999866,
+        "P1_2023": -54.9519000000005
+      },
+      "symbol_double_spread_usd": {
+        "US30": -49.584750000000184,
+        "US100": -25.21670000000019,
+        "US500": -12.848899999999992
+      },
+      "signal_side_double_spread_usd": {
+        "UP": -0.9494500000006515,
+        "DOWN": -86.70089999999972
+      },
+      "passed_discovery_gates": 0,
+      "total_discovery_gates": 7,
+      "passed": false
+    },
+    "REVERSION": {
+      "gross_usd": 37.538850000000366,
+      "observed_usd": 12.483100000000368,
+      "double_spread_usd": -12.57264999999964,
+      "double_spread_profit_factor": 0.9727603022947486,
+      "maximum_closed_drawdown_usd": 37.09129999999966,
+      "net_to_drawdown": -0.3389649324774207,
+      "calendar_split_double_spread_usd": {
+        "P1_2022H2": 2.128649999999865,
+        "P1_2023": -14.701299999999506
+      },
+      "symbol_double_spread_usd": {
+        "US30": 1.2577500000001813,
+        "US100": -12.519299999999811,
+        "US500": -1.3111000000000115
+      },
+      "signal_side_double_spread_usd": {
+        "UP": -48.839949999999355,
+        "DOWN": 36.26729999999971
+      },
+      "passed_discovery_gates": 0,
+      "total_discovery_gates": 7,
+      "passed": false
+    }
+  },
+  "decision": {
+    "verdict": "FAIL_H1_BODY_ENGULFING_NO_P1_DIRECTION_NO_SEED",
+    "economic_interpretation": "The mechanism is structurally dense, but continuation loses before costs and reversion's positive gross/observed edge is fully consumed under doubled spread. Reversion also reverses sign from 2022H2 to 2023, is negative in US100 and US500, and splits sharply between UP and DOWN signals.",
+    "selected_direction": null,
+    "retained_seed": null,
+    "P2_P5_economics_opened": false,
+    "mt5_shortlist": null,
+    "optimization_candidate": null,
+    "live_authority": false
+  },
+  "closed_scope": [
+    "No body-size ratio, wick, high-low, close-location, volatility or volume rescue.",
+    "No timeframe, holding duration, clock, session, weekday, symbol or direction subgroup rescue.",
+    "No overlap, simultaneous priority, risk, lot, stop, target or exit grid.",
+    "No MQL, SET, runtime, compile, Tester, broker/account query, Optimization mutation or Live action."
+  ],
+  "whole_map_next": "Commit and push Unit 102 once, then immediately recompare Programs 1-5 and 7 plus all heights without an adjacent candlestick successor.",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_102_CLOSED_VALID_BODY_ENGULFING_NO_P1_DIRECTION_NO_SEED"
+}
