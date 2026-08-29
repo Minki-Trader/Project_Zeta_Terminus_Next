@@ -1,7 +1,13 @@
 /lab/research/sloos-ci-credit-supply-impulse-book-state-v1/** -text
 /optimization/baseline/** -text whitespace=cr-at-eol
+# The active Live release is a byte-pinned package. Its source manifest uses
+# raw hashes, so Git must reproduce the exact stored bytes on every checkout.
+/live-dev/package/active/** -text
 /optimization/campaigns/**/*.mq5 text eol=crlf
 /optimization/campaigns/**/*.mqh text eol=crlf
 /optimization/campaigns/**/*.set text eol=crlf
 /optimization/campaigns/**/*.ini text eol=crlf
 /optimization/campaigns/**/*.ex5 -text
+# This closed candidate SET contains intentionally mixed terminators and is
+# pinned as an exact artifact rather than normalized text.
+/optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/Profiles/Tester/ZetaOptimization/dd20-paired-month-stability-mt5-v1/candidate.set -text

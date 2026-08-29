@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "record_id": "REPOSITORY_INTEGRITY_ERRATA_V1",
+  "reviewed_base_commit": "5dcf136ba8106be022b0f551450dae7e9b12c002",
+  "scope": "Non-economic clean-checkout materialization, durable commit-reference and paired-month terminology correction",
+  "economic_verdict_changed": false,
+  "candidate_changed": false,
+  "live_behavior_changed": false,
+  "compiled_binary_changed": false,
+  "mt5_or_broker_access_used": false,
+  "clean_checkout_materialization": {
+    "active_live_package": {
+      "path": "live-dev/package/active/**",
+      "storage": "raw_bytes_-text",
+      "source_manifest_sha256": "AEB9FDB813164331645EEB63B927F1670F513800D72221F44061883180A72568",
+      "reason": "SOURCE_MANIFEST.json binds raw byte hashes; text normalization cannot reconstruct the mixed line terminators of the verified package."
+    },
+    "paired_month_candidate_set": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/Profiles/Tester/ZetaOptimization/dd20-paired-month-stability-mt5-v1/candidate.set",
+      "storage": "raw_bytes_-text",
+      "bytes": 1212,
+      "sha256": "07B754B5BF8723348BF8D04A335D4AF7A833F7B21DF67B13DF8B308AA8D5E956",
+      "reason": "The canonical closed-candidate SET contains mixed line terminators and must remain byte-exact."
+    }
+  },
+  "commit_reference_errata": [
+    {
+      "record": "lab/research/pending-reservation-risk-tax-v1/evidence/PENDING_RESERVATION_RISK_TAX_RESULT_V1.json",
+      "field": "source.declaration.commit",
+      "preserved_incorrect_transcription": "7c55859ae2c58536ad383e53455d487445d23be9",
+      "authoritative_commit": "7c55859aa21886c6519dd8e862991989554faa0b",
+      "commit_subject": "frontier: open pending reservation unit 077"
+    },
+    {
+      "record": "lab/research/us30-cost-unit-spread-shape-v1/evidence/US30_COST_UNIT_SPREAD_SHAPE_RESULT_V1.json",
+      "field": "source.declaration.commit",
+      "preserved_incorrect_transcription": "ba76e82110f25bb856b4cb36fca13dba9ea7614b",
+      "authoritative_commit": "ba76e821fd0ec17a7e5e1486517d7add89b56bd8",
+      "commit_subject": "frontier: open US30 cost shape unit 079"
+    }
+  ],
+  "commit_reference_policy": "The two closed result payloads and their pinned SHA-256 values remain unchanged. Consumers must apply this errata record when resolving their source.declaration.commit fields.",
+  "paired_month_interval_terminology": {
+    "proxy_contract": "optimization/campaigns/dd20-paired-month-stability-proxy-v1/config/proxy-contract.json",
+    "june_used_in_candidate_gate_and_ranking": true,
+    "july_used_in_candidate_gate_and_ranking": true,
+    "proxy_holdout_remaining": false,
+    "current_term": "proxy-selected native June-July execution/cost confirmation",
+    "superseded_for_this_interval": [
+      "untouched forward",
+      "qualified forward",
+      "independent OOS forward"
+    ],
+    "interpretation": "The later native MT5 path remains valid execution, cost, stop-path and floating-equity-DD evidence for the proxy-selected candidate, but it is not independent statistical holdout evidence.",
+    "closed_evidence_files_rewritten": false,
+    "unrelated_earlier_chronological_holdouts_affected": false
+  }
+}
