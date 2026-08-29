@@ -1,0 +1,179 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-economic-efficiency-result-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "VALID_COMPLETE_PASS",
+  "campaign": "dd20-paired-month-live-control-economic-efficiency-proxy-v1",
+  "declaration": {
+    "path": "optimization/campaigns/dd20-paired-month-live-control-economic-efficiency-proxy-v1/evidence/DD20_PAIRED_MONTH_LIVE_CONTROL_ECONOMIC_EFFICIENCY_DECLARATION_V1.json",
+    "bytes": 10624,
+    "sha256": "1B2DE114D7571F45CD9D4BD7EF4DC3BFB8D69ED68208CFED271562D5A9528911"
+  },
+  "raw_output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-live-control-economic-efficiency-proxy-v1/output/formal-result.json",
+    "bytes": 7380,
+    "sha256": "36B5B86B0258171FF2CE37FCBBF4F9BB81AD1EA8E8BE313F8A374057FA8071F2"
+  },
+  "execution": {
+    "valid_complete_formal_processes": 1,
+    "complete_fixed_policy_comparisons": 1,
+    "economic_metric_reruns": 0,
+    "invalid_pre_output_invocations": 2,
+    "engineering_corrections": 2,
+    "corrections": [
+      "Reconciled cent-displayed component sums to higher-precision aggregate anchors within the bounded half-cent-per-component rounding envelope.",
+      "Synchronized the formal process's config self-pin after the precision contract correction."
+    ],
+    "tester_paths": 0,
+    "mql_or_settings_changes": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "input_files": 3,
+    "input_bytes": 32879,
+    "input_bundle_manifest_sha256": "E564295A18A4CE614CF698449B2FEB21C6AE3A0612DA21B16742AF71A9E0EE29",
+    "candidate_component_totals_match": true,
+    "control_component_totals_match_within_declared_display_rounding": true,
+    "candidate_identity_exact": true,
+    "active_live_control_identity_exact": true,
+    "prior_cost_resilience_context_exact": true
+  },
+  "fixed_candidate": {
+    "identity": "dd20-paired-month-stability-mt5-v1",
+    "weights": [
+      2.0,
+      1.5,
+      2.0,
+      2.5,
+      1.5,
+      0.0
+    ],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "changed_or_retuned": false
+  },
+  "active_live_control": {
+    "selection_pass": 4,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12
+  },
+  "selection": {
+    "candidate": {
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524,
+      "closed_lifecycles": 1428,
+      "native_relative_equity_dd_pct": 20.256887565153,
+      "actual_net_per_close_usd": 4.052261904762,
+      "stressed_net_per_close_usd": 3.835801120448,
+      "actual_net_per_native_dd_point_usd": 285.662344789561,
+      "stressed_net_per_native_dd_point_usd": 270.403041058629,
+      "risk_admission_skips": 192,
+      "risk_skip_rate": 0.118518518519,
+      "stop_loss_exits": 130,
+      "stop_exit_rate": 0.091036414566
+    },
+    "active_live_control": {
+      "actual_net_usd": 984.69,
+      "stressed_net_usd": 915.8725,
+      "closed_lifecycles": 2119,
+      "native_relative_equity_dd_pct": 9.1948,
+      "actual_net_per_close_usd": 0.464695611137,
+      "stressed_net_per_close_usd": 0.432219207173,
+      "actual_net_per_native_dd_point_usd": 107.092052029408,
+      "stressed_net_per_native_dd_point_usd": 99.607658676643,
+      "risk_admission_skips": 60,
+      "risk_skip_rate": 0.027535566774,
+      "stop_loss_exits": 136,
+      "stop_exit_rate": 0.064181217555
+    },
+    "comparison": {
+      "candidate_minus_control_actual_usd": 4801.94,
+      "candidate_minus_control_stressed_usd": 4561.6515,
+      "candidate_to_control_actual_net_ratio": 5.876600757599,
+      "candidate_to_control_stressed_net_ratio": 5.980662155486,
+      "turnover_retention": 0.673902784332,
+      "control_active_five_closes_excluding_passive": 1560,
+      "active_five_turnover_retention": 0.915384615385,
+      "candidate_to_control_actual_per_close_ratio": 8.720250003748,
+      "candidate_to_control_stressed_per_close_ratio": 8.874666041648,
+      "candidate_to_control_actual_per_dd_point_ratio": 2.667446737421,
+      "candidate_to_control_stressed_per_dd_point_ratio": 2.714681226837,
+      "native_dd_percentage_point_increase": 11.062087565153,
+      "native_dd_ratio": 2.203080824504,
+      "risk_skip_rate_percentage_point_delta": 9.098295174477,
+      "stop_exit_rate_percentage_point_delta": 2.685519701038
+    },
+    "breadth": {
+      "candidate_positive_active_components_actual_and_stressed": "5 / 5",
+      "control_positive_components_actual_and_stressed": "6 / 6"
+    }
+  },
+  "forward": {
+    "candidate": {
+      "actual_net_usd": 32.74,
+      "stressed_net_usd": 30.626,
+      "closed_lifecycles": 54,
+      "native_relative_equity_dd_pct": 18.675302129933,
+      "actual_net_per_close_usd": 0.606296296296,
+      "stressed_net_per_close_usd": 0.567148148148,
+      "risk_admission_skips": 11,
+      "risk_skip_rate": 0.169230769231,
+      "stop_loss_exits": 17,
+      "stop_exit_rate": 0.314814814815
+    },
+    "active_live_control": {
+      "actual_net_usd": -1.11,
+      "stressed_net_usd": -2.819,
+      "closed_lifecycles": 84,
+      "native_relative_equity_dd_pct": 16.8321,
+      "actual_net_per_close_usd": -0.013214285714,
+      "stressed_net_per_close_usd": -0.03355952381,
+      "risk_admission_skips": 2,
+      "risk_skip_rate": 0.023255813953,
+      "stop_loss_exits": 31,
+      "stop_exit_rate": 0.369047619048
+    },
+    "comparison": {
+      "candidate_minus_control_actual_usd": 33.85,
+      "candidate_minus_control_stressed_usd": 33.445,
+      "turnover_retention": 0.642857142857,
+      "candidate_minus_control_actual_per_close_usd": 0.619510582011,
+      "candidate_minus_control_stressed_per_close_usd": 0.600707671958,
+      "native_dd_percentage_point_increase": 1.843202129933,
+      "risk_skip_rate_percentage_point_delta": 14.597495527728,
+      "stop_exit_rate_percentage_point_delta": -5.42328042328,
+      "control_net_ratios_reported": false,
+      "control_net_ratio_reason": "The exact control forward actual and stressed nets are nonpositive, so only signs and absolute differences are authoritative."
+    }
+  },
+  "cost_resilience_context": {
+    "verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_COST_RESILIENCE_VS_ACTIVE_LIVE_CONTROL",
+    "selection_candidate_to_control_4x_net_ratio": 6.243996209384,
+    "forward_candidate_minus_control_4x_usd": 32.635
+  },
+  "gate_application": {
+    "selection_actual_and_stressed_net_strictly_higher": true,
+    "selection_actual_and_stressed_net_per_close_strictly_higher": true,
+    "selection_actual_and_stressed_net_per_dd_point_strictly_higher": true,
+    "selection_component_breadth_passed": true,
+    "forward_actual_and_stressed_positive_and_strictly_higher": true,
+    "forward_actual_and_stressed_net_per_close_strictly_higher": true,
+    "forward_native_dd_below_20_percent": true,
+    "selection_exact_pragmatic_context_retained_without_rejudgment": true,
+    "prior_4x_cost_pass_retained": true,
+    "all_declared_gates_passed": true
+  },
+  "verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_ECONOMIC_EFFICIENCY_WITH_LOWER_TURNOVER_DISCLOSED",
+  "economic_interpretation": "The fixed candidate closes 67.39% as many selection lifecycles as the control, or 91.54% after removing the control Passive closes deliberately disabled by the candidate, yet produces 8.72x / 8.87x actual / stressed net per close and 2.67x / 2.71x net per native DD point. It adds 11.0621 selection DD percentage points and raises admission skips materially, so the pass is an economic-density qualification with explicitly higher risk rather than raw DD dominance. In forward it remains positive at +32.74 / +30.626 while the exact control is negative at -1.11 / -2.819, with 64.29% turnover and a 1.8432-point DD increase.",
+  "risk_and_authority_boundary": {
+    "candidate_selection_nominal_20_percent_gate_passed": false,
+    "candidate_selection_nominal_miss_percentage_points": 0.256887565153,
+    "candidate_selection_pragmatic_qualification_rejudged_here": false,
+    "candidate_has_lower_turnover_than_control": true,
+    "candidate_has_higher_native_dd_than_control": true,
+    "new_candidate_or_mt5_shortlist": false,
+    "fixed_candidate_changed": false,
+    "live_authority": false,
+    "lab_live_master_or_broker_surface": "UNTOUCHED"
+  }
+}

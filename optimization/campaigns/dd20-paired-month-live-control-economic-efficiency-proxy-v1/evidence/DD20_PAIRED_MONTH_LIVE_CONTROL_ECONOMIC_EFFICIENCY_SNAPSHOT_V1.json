@@ -1,0 +1,64 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-economic-efficiency-snapshot-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "FIXED_SOURCE_RESULTS_COPIED_COMPOSITE_EFFICIENCY_METRICS_UNCOMPUTED",
+  "campaign": "dd20-paired-month-live-control-economic-efficiency-proxy-v1",
+  "parent_main_commit": "06cf07bd42a6d65742ff36cd1af1468a2e42c009",
+  "campaign_owned_inputs": [
+    {
+      "name": "candidate-result.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+      "byte_equal_at_intake": true
+    },
+    {
+      "name": "live-control-result.json",
+      "bytes": 14873,
+      "sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314",
+      "byte_equal_at_intake": true
+    },
+    {
+      "name": "cost-resilience-result.json",
+      "bytes": 8126,
+      "sha256": "E967C614EEDB78D6564CC84F18F2ED9F313BFFE9EDC3F6226E6464F1D786FF13",
+      "byte_equal_at_intake": true
+    }
+  ],
+  "input_bundle": {
+    "files": 3,
+    "bytes": 32879,
+    "ordered_manifest_sha256": "E564295A18A4CE614CF698449B2FEB21C6AE3A0612DA21B16742AF71A9E0EE29"
+  },
+  "already_published_source_anchors": {
+    "candidate": {
+      "weights": "2 / 1.5 / 2 / 2.5 / 1.5 / 0",
+      "risk": "0.04 / 0.18",
+      "selection_actual_stressed_closes_dd": "5786.63 / 5477.524 / 1428 / 20.256887565%",
+      "forward_actual_stressed_closes_dd": "32.74 / 30.626 / 54 / 18.675302130%",
+      "selection_active_components": 5
+    },
+    "active_live_control": {
+      "risk": "0.04 / 0.12",
+      "selection_pass": 4,
+      "selection_actual_stressed_closes_dd": "984.69 / 915.8725 / 2119 / 9.1948%",
+      "forward_actual_stressed_closes_dd": "-1.11 / -2.819 / 84 / 16.8321%",
+      "selection_active_components": 6
+    },
+    "cost_resilience": {
+      "verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_COST_RESILIENCE_VS_ACTIVE_LIVE_CONTROL",
+      "candidate_to_control_selection_4x_net_ratio": 6.243996209384,
+      "candidate_minus_control_forward_4x_usd": 32.635
+    }
+  },
+  "new_metrics_not_computed_at_snapshot": [
+    "actual and stressed net per close",
+    "actual and stressed net per native equity-DD percentage point",
+    "full and active-five turnover retention",
+    "risk-skip and stop-exit rate deltas",
+    "strict composite efficiency verdict"
+  ],
+  "candidate_grid_or_parameter_search": false,
+  "forward_used_for_selection_or_tuning": false,
+  "runtime_mql_compile_tester_or_order_path": false,
+  "live_lab_master_and_broker_account_surface": "UNTOUCHED"
+}

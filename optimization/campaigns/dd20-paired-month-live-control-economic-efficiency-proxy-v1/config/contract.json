@@ -1,0 +1,90 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-economic-efficiency-contract-v1",
+  "campaign": "dd20-paired-month-live-control-economic-efficiency-proxy-v1",
+  "parent_main_commit": "06cf07bd42a6d65742ff36cd1af1468a2e42c009",
+  "inputs": [
+    {
+      "name": "candidate-result.json",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-economic-efficiency-proxy-v1/input/candidate-result.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+    },
+    {
+      "name": "live-control-result.json",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-economic-efficiency-proxy-v1/input/live-control-result.json",
+      "bytes": 14873,
+      "sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314"
+    },
+    {
+      "name": "cost-resilience-result.json",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-economic-efficiency-proxy-v1/input/cost-resilience-result.json",
+      "bytes": 8126,
+      "sha256": "E967C614EEDB78D6564CC84F18F2ED9F313BFFE9EDC3F6226E6464F1D786FF13"
+    }
+  ],
+  "input_manifest_rule": "UTF-8 bytes of name|bytes|uppercase_sha256 plus LF in declared order",
+  "input_manifest_sha256": "E564295A18A4CE614CF698449B2FEB21C6AE3A0612DA21B16742AF71A9E0EE29",
+  "input_files": 3,
+  "input_bytes": 32879,
+  "fixed_candidate": {
+    "weights": [
+      2.0,
+      1.5,
+      2.0,
+      2.5,
+      1.5,
+      0.0
+    ],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "active_components": 5,
+    "disabled_component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  },
+  "active_live_control": {
+    "selection_pass": 4,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "active_components": 6
+  },
+  "intervals": {
+    "selection": "2022-08-01 through 2026-06-01",
+    "forward": "2026-06-01 through 2026-08-01"
+  },
+  "formulas": {
+    "net_per_close": "net_usd / closed_lifecycles",
+    "net_per_native_dd_point": "net_usd / native_relative_equity_dd_pct",
+    "turnover_retention": "candidate_closed_lifecycles / control_closed_lifecycles",
+    "active_five_turnover_retention_selection": "candidate_closed_lifecycles / sum(control selection closes excluding disabled Passive)",
+    "risk_skip_rate": "risk_admission_skips / (closed_lifecycles + risk_admission_skips)",
+    "stop_exit_rate": "stop_loss_exits / closed_lifecycles",
+    "ratio": "candidate metric / control metric only when both values are strictly positive",
+    "percentage_point_delta": "candidate pct minus control pct",
+    "component_sum_reconciliation": "Close counts must match exactly. Component money is source-disclosed to cents, so an aggregate must fall within one half-cent of display rounding per component plus 1e-7."
+  },
+  "strict_economic_gates": [
+    "Candidate selection actual and doubled-cost net each strictly exceed the exact active Live control.",
+    "Candidate selection actual/stressed net per close each strictly exceed control.",
+    "Candidate selection actual/stressed net per native equity-DD percentage point each strictly exceed control.",
+    "All five candidate active components and all six control components have positive selection actual and stressed net; displayed component sums reconcile to aggregate anchors within the declared half-cent-per-component rounding envelope.",
+    "Candidate full forward actual and stressed net are strictly positive while each strictly exceeds control.",
+    "Candidate full forward actual/stressed net per close each strictly exceed control.",
+    "Candidate forward native equity DD remains below 20%; candidate selection exact 20.256887565% retains its already-recorded pragmatic qualification and nominal miss disclosure.",
+    "The prior fixed 4x cost comparison retains its exact pass verdict, candidate selection/control ratio and positive candidate forward advantage."
+  ],
+  "required_disclosures": [
+    "Candidate versus control selection and forward close counts and turnover retention.",
+    "Selection candidate versus control native DD ratio and percentage-point increase.",
+    "Forward candidate versus control native DD percentage-point increase.",
+    "Risk-admission skip rates and stop-exit rates for both policies in both intervals.",
+    "Selection turnover after excluding the control's Passive closes, because Passive is deliberately disabled in the fixed candidate.",
+    "No ratio is reported against a nonpositive control forward net; absolute differences and signs are used instead."
+  ],
+  "verdicts": {
+    "pass": "PASS_FIXED_DEVELOPMENT_CANDIDATE_ECONOMIC_EFFICIENCY_WITH_LOWER_TURNOVER_DISCLOSED",
+    "nonconfirmation": "VALID_FIXED_DEVELOPMENT_CANDIDATE_ECONOMIC_EFFICIENCY_NOT_CONFIRMED",
+    "correction": "CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT"
+  },
+  "output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-live-control-economic-efficiency-proxy-v1/output/formal-result.json"
+  }
+}

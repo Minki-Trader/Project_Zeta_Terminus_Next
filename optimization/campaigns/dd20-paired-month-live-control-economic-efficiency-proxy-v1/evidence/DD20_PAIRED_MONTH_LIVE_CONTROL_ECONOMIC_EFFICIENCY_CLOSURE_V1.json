@@ -1,0 +1,102 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-economic-efficiency-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_VALID_PASS",
+  "campaign": "dd20-paired-month-live-control-economic-efficiency-proxy-v1",
+  "verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_ECONOMIC_EFFICIENCY_WITH_LOWER_TURNOVER_DISCLOSED",
+  "evidence": {
+    "snapshot": {
+      "bytes": 2527,
+      "sha256": "2835213D7B16D4CC847D671F3C94ADB709185BCEF8885944232987C8D136C60D"
+    },
+    "config": {
+      "bytes": 4999,
+      "sha256": "B7F8F3729EB7E9376E0BBD5F627E4A37B3BA9DBE0A92590BCF99D7902EF7B8C1"
+    },
+    "formal_process": {
+      "bytes": 21564,
+      "sha256": "9EC35778E36AF53668339FF4396D77137BBF7241D265A74B4B669E837858E781"
+    },
+    "declaration": {
+      "bytes": 10624,
+      "sha256": "1B2DE114D7571F45CD9D4BD7EF4DC3BFB8D69ED68208CFED271562D5A9528911"
+    },
+    "raw_output": {
+      "bytes": 7380,
+      "sha256": "36B5B86B0258171FF2CE37FCBBF4F9BB81AD1EA8E8BE313F8A374057FA8071F2"
+    },
+    "result": {
+      "bytes": 8182,
+      "sha256": "B7E27A43DDA7D547E123C9ACABD48B19851FCFE2A22A6EA9CEF9CF0C5091C97D"
+    },
+    "readme": {
+      "bytes": 2805,
+      "sha256": "9FBADD54403732ED75853CD801DAA64E2D68D5C31D747B38DCA452F0AEABB6E5"
+    }
+  },
+  "execution": {
+    "valid_complete_formal_processes": 1,
+    "complete_fixed_policy_comparisons": 1,
+    "metric_reruns": 0,
+    "invalid_pre_output_invocations": 2,
+    "engineering_corrections": 2,
+    "economic_failures_from_engineering_faults": 0,
+    "tester_paths": 0,
+    "mql_or_settings_changes": 0
+  },
+  "economic_summary": {
+    "candidate_selection_actual_stressed_usd": "5786.63 / 5477.524",
+    "control_selection_actual_stressed_usd": "984.69 / 915.8725",
+    "candidate_minus_control_selection_actual_stressed_usd": "4801.94 / 4561.6515",
+    "candidate_selection_closes": 1428,
+    "control_selection_closes": 2119,
+    "selection_turnover_retention": 0.673902784332,
+    "selection_active_five_turnover_retention": 0.915384615385,
+    "candidate_to_control_selection_actual_stressed_net_per_close_ratio": "8.720250003748 / 8.874666041648",
+    "candidate_to_control_selection_actual_stressed_net_per_dd_point_ratio": "2.667446737421 / 2.714681226837",
+    "candidate_selection_native_dd_pct": 20.256887565153,
+    "control_selection_native_dd_pct": 9.1948,
+    "selection_native_dd_percentage_point_increase": 11.062087565153,
+    "selection_native_dd_ratio": 2.203080824504,
+    "candidate_control_positive_component_breadth": "5 / 5 and 6 / 6",
+    "candidate_forward_actual_stressed_usd": "32.74 / 30.626",
+    "control_forward_actual_stressed_usd": "-1.11 / -2.819",
+    "candidate_minus_control_forward_actual_stressed_usd": "33.85 / 33.445",
+    "forward_turnover_retention": 0.642857142857,
+    "forward_native_dd_percentage_point_increase": 1.843202129933,
+    "all_declared_gates_passed": true
+  },
+  "risk_and_authority_limits": {
+    "candidate_selection_nominal_20_percent_gate_passed": false,
+    "candidate_selection_nominal_miss_percentage_points": 0.256887565153,
+    "candidate_selection_pragmatic_acceptance_rejudged": false,
+    "candidate_lower_turnover_disclosed": true,
+    "candidate_higher_drawdown_disclosed": true,
+    "control_forward_net_ratios_reported": false,
+    "fixed_candidate_changed": false,
+    "new_candidate_or_mt5_shortlist": false,
+    "live_authority": false
+  },
+  "closed_scope": [
+    "No adjacent efficiency threshold, period, component normalization, symbol or direction follow-up.",
+    "No weight, risk, cap, admission, exit, retained-seed or turnover rescue.",
+    "No candidate replacement, forward tuning, MQL, SET, compile, MT5, Lab or Live action.",
+    "Do not reinterpret profit-density dominance as raw drawdown dominance or deployment authority."
+  ],
+  "retention": {
+    "campaign_owned_input_files": 3,
+    "campaign_owned_input_bytes": 32879,
+    "campaign_owned_input_bundle_manifest_sha256": "E564295A18A4CE614CF698449B2FEB21C6AE3A0612DA21B16742AF71A9E0EE29",
+    "raw_output_preserved": true,
+    "runtime_or_reproducible_cache_created": false
+  },
+  "surface": {
+    "paired_month_development_candidate": "FIXED_AND_STRENGTHENED",
+    "closed_lab_handoff": "UNCHANGED",
+    "live_dev_package_runtime_state_and_logs": "UNTOUCHED",
+    "master_terminal": "UNTOUCHED",
+    "broker_account_positions_orders_and_deals": "UNQUERIED"
+  },
+  "successor_boundary": "Return immediately to a complete Optimization map comparison. This pass closes direct same-period economic efficiency versus the active Live-derived control, but it cannot authorize a neighboring ratio, period, component normalization, MT5 rerun or Live promotion. Any successor must answer a distinct remaining economic decision gap and begin proxy-first.",
+  "goal_status": "ACTIVE_NOT_COMPLETE"
+}
