@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0364`
+- Latest state ID: `STATE-0365`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -17,7 +17,7 @@ Last updated: 2026-08-29
 - Research-observation Live change: `LIVE_ATTACHED`; release `NEXT-E01-V7-RLO1-b32e7e176f2e` preserves CXR2 execution/economic/Portfolio/Magic/core-state/SET identity and adds only the separate append-only `ZetaTerminusNext\research\canonical` namespace.
 - Last verified real-account owner configuration: RLO1 release `NEXT-E01-V7-RLO1-b32e7e176f2e`, Portfolio `ZT-PORT-NEXT-V7-2db5ef5ead1c`, Magic `260824701..260824706`; one-shot-broker-started Live PID `23180` is the active sole owner.
 - Existing real-account owner: exact RLO1 Live PID `23180` only; detached preflight PID `31064` stopped normally and no second `terminal64.exe` was observed
-- Independent Live-derived optimization: `ENABLED`; economic verdicts only, unlimited environment/engineering correction, no automatic pause, never the Master terminal, and radical isolated strategy/portfolio experiments are permitted. The prospective objective is maximum actual/stressed profit inside a hard `20%` MT5 equity-DD budget, with proxy exploration before any further MT5 shortlist run.
+- Independent Live-derived optimization: `ENABLED`; economic verdicts only, unlimited environment/engineering correction, no automatic pause, never the Master terminal, and radical isolated strategy/portfolio experiments are permitted. The prospective objective is maximum actual/stressed profit around a nominal `20%` MT5 equity-DD line, with proxy exploration before any further MT5 shortlist run. Per the user's explicit 2026-08-29 direction, marginal proportional misses receive economic judgment rather than an automatic fail; nominal and effective tolerance gates are recorded separately and exact adverse numbers remain disclosed.
 - User V7 Live direction: `EFFECTIVE_AFTER_GUARDED_RESTART`
 
 Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached recovery remains exact Live PID `23180` with Korean dashboard PID `19280`. After the user narrowed the requirement to Codex-lifetime breakaway only, commits `e0349a2cb882e8a9f033144ead5223968655b778` and `626375543bfc07a111cab6787a0542136d3df6c2` replaced the scheduled/resident host with a one-shot `Win32_Process.Create` broker and corrected only its CRLF completion-marker read. The committed one-shot worker restored both existing windows without duplication and exited. Scheduled task `Project Zeta Terminus Next Master Runtime` was then unregistered and old resident host PID `11700` ended; exact Live PID `23180` and dashboard PID `19280` remained alive. No matching scheduled task, PowerShell host, PID/health monitor or automatic restart remains. Local Live snapshot sequence `5157` is healthy with entries `1/1` and zero alert.
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; source-free Program 1 / meso→macro Unit 098 `legacy-us500-h4-staged-overlay-optimization-eligibility-v1` is closed. It retains one exact lineage-pinned US500 H4 staged-overlay Optimization information seed and opens no current shared-account economic verdict, Lab MQL or Live authority. No adjacent H4 threshold, window, stop, balance gate, volume or legacy-candidate follow-up is authorized.
-- Active optimization boundary: none; `dd20-gain-overlay-base-quantum-reservation-mt5-v1` is closed after complete selection missed the current anchor by `$1.01 / $0.588`. `dd20-component-equity-state-native-margin-mt5-v1` remains qualified at selection `+$1,693.46 / +$1,626.677`, DD `19.797353%`, and forward `+$23.01 / +$21.256`. After Unit 098 reaches `origin/main`, exactly one separately owned Optimization campaign may consume its fixed H4 staged-overlay seed; no automatic Live promotion is authorized.
+- Active optimization boundary: none; `dd20-legacy-us500-h4-staged-overlay-mt5-v1` is closed after complete selection earned `+$1,736.50 / +$1,668.5262`, all four epochs positive and native DD `20.402009%`. The nominal 20% gate is false, but its `0.402009`-point / `2.010043%` proportional overshoot is accepted under the user's explicit pragmatic tolerance. The independent forward passes full `+$23.01 / +$21.256`, DD `12.436759%`, June and July. This campaign is the qualified Optimization anchor under the updated judgment; the exact H4 role is frozen and no automatic Live promotion is authorized.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

@@ -1,0 +1,99 @@
+{
+  "schema": "zeta-dd20-legacy-us500-h4-staged-overlay-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "DECLARED_SOURCE_IMPLEMENTATION_IN_PROGRESS_ECONOMICS_UNOPENED",
+  "campaign": "dd20-legacy-us500-h4-staged-overlay-mt5-v1",
+  "parent_main_commit": "aa6bd60ad0c4c0ebefbeeaa1b69f1dcc061e0d7b",
+  "source_seed_unit": "legacy-us500-h4-staged-overlay-optimization-eligibility-098",
+  "qualified_parent": {
+    "campaign": "dd20-component-equity-state-native-margin-mt5-v1",
+    "selection_actual_stressed_usd": [1693.46, 1626.677],
+    "selection_native_equity_dd_pct": 19.79735349716446,
+    "forward_actual_stressed_usd": [23.01, 21.256],
+    "forward_native_equity_dd_pct": 12.4367590425
+  },
+  "source_derivation": {
+    "baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "baseline_release_id": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "baseline_source_manifest_sha256": "AEB9FDB813164331645EEB63B927F1670F513800D72221F44061883180A72568",
+    "method": "One-time physical copy of exactly 16 MQ5/MQH files from the frozen Optimization baseline. Apply the recorded baseline-to-qualified-anchor behavioral patch without copying or including predecessor source, then add one newly owned exact H4 overlay include.",
+    "baseline_source_files_copied": 16,
+    "copied_ex5": false,
+    "cross_campaign_source_or_include_link": false,
+    "legacy_source_persisted_in_campaign": false,
+    "legacy_source_authority": {
+      "repository_commit": "4c0899255c701e2c6b53e7f44457c431aef2ad76",
+      "path": "mt5/src/Experts/ZetaUS500H4StateV1.mq5",
+      "sha256": "02B00AC2ADB1521FE4C8923D94AA1F7ADE6F9AD51008C8AEF693A8006C3443C5",
+      "use": "Read-only exact implementation authority; translated into the campaign-owned shared-account overlay module."
+    }
+  },
+  "fixed_anchor": {
+    "base_component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "addition_step_usd": 150.0,
+    "component_state_lookback": 40,
+    "component_state_band_r": 0.10,
+    "loss_neutral_gain_overlays": [0.0, 1.0, 1.125],
+    "event_order": "Every inherited six-component closure, passive action, entry and RC4 compression completes in its original order before the H4 overlay is evaluated on the same dispatched tick."
+  },
+  "candidate": {
+    "id": "ZT-H4-US500-V2-VOLATILITY-EXP-b4d28831f9",
+    "symbol": "US500",
+    "timeframe": "H4",
+    "style": "reversion",
+    "volume": 0.01,
+    "lookback_h4_bars": 12,
+    "entry_strength": 1.5,
+    "exit_strength": 0.6,
+    "maximum_hold_h4_bars": 30,
+    "initial_stop_loss": null,
+    "take_profit": null,
+    "new_entry_account_balance_gate_usd": 500.0,
+    "close_on_balance_falling_below_gate": false,
+    "used_plus_required_margin_fraction_of_equity": 0.20,
+    "maximum_owned_positions": 1,
+    "outside_six_component_planned_risk_state_and_slot_accounting": true,
+    "shares_account_balance_equity_margin_execution_and_downstream_state": true
+  },
+  "identity": {
+    "expert": "ZetaDD20H4SO1",
+    "include_root": "ZetaOptDD20H4SO1",
+    "execution_version": "zt-opt-live-v7-dd20-legacy-us500-h4-staged-overlay-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20H4SO1-20260829",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20H4SO1-20260829",
+    "schema_version": "opt-dd20-h4so-mt5-1",
+    "core_magic": [260829891, 260829892, 260829893, 260829894, 260829895, 260829896],
+    "h4_overlay_magic": 260829897,
+    "state_and_research_root": "ZetaOptimization\\dd20-h4so1",
+    "report_root": "reports\\dd20-legacy-us500-h4-staged-overlay-mt5-v1"
+  },
+  "tester_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "chart_symbol_period": "US30 M30",
+    "deposit_usd": 100.0,
+    "leverage": "1:100",
+    "selection_interval": "2022-08-01 through 2026-06-01",
+    "selection_actual_net_usd": "strictly greater than 1693.46",
+    "selection_stressed_net_usd": "strictly greater than 1626.677",
+    "selection_all_four_epochs": "actual and stressed positive",
+    "selection_native_equity_dd_pct": "at most 20.0",
+    "conditional_forward_interval": "2026-06-01 through 2026-08-01",
+    "conditional_forward": "full, June and July actual/stressed positive and native equity DD at most 20.0",
+    "maximum_complete_valid_selection_runs": 1,
+    "maximum_complete_valid_forward_runs": 1,
+    "environment_design_or_engineering_fault_economic_verdict": null
+  },
+  "exclusions": [
+    "no grid or parameter search",
+    "no stop, take-profit, sizing, stage-balance, H4 threshold, lookback or hold variation",
+    "no alternate legacy candidate or current anchor rerun",
+    "no tests, validators, CI or test-only infrastructure",
+    "no Live, Lab, Master terminal or broker account query",
+    "no automatic promotion"
+  ],
+  "selection_opened": false,
+  "forward_opened": false,
+  "economic_output_opened": false
+}

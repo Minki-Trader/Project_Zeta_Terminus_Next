@@ -1,0 +1,114 @@
+{
+  "schema": "zeta-dd20-legacy-us500-h4-staged-overlay-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "COMPILED_FIXED_CANDIDATE_ECONOMICS_UNOPENED",
+  "campaign": "dd20-legacy-us500-h4-staged-overlay-mt5-v1",
+  "parent_main_commit": "aa6bd60ad0c4c0ebefbeeaa1b69f1dcc061e0d7b",
+  "declaration": {
+    "bytes": 4861,
+    "sha256": "F39A0F8E5545A14FF72D3E987273ECA37580F3EE37CB9C10BFF3F715BDDFB2AE"
+  },
+  "implementation": {
+    "source_file_count": 17,
+    "source_total_bytes": 456475,
+    "source_manifest_sha256": "CFE04967BEE1904AEB7FFC8EAEB8AFE58A6E8FC7437A86029E35927B61ACBFE2",
+    "configuration_file_count": 3,
+    "configuration_total_bytes": 2530,
+    "configuration_manifest_sha256": "333EE05BC4E4DCA7FA72440597D526678268A6BFB400855A093744D76B92C3B1",
+    "manifest_algorithm": "Sort slash-normalized paths relative to campaign mt5; append path|bytes|SHA256 per file; join UTF-8 lines with LF and final LF; SHA-256 the payload.",
+    "runtime_source_and_configuration_parity_files": 20,
+    "runtime_source_and_configuration_mismatches": 0,
+    "baseline_source_files_physically_derived": 16,
+    "new_campaign_owned_h4_overlay_source_files": 1,
+    "cross_campaign_include_or_source_link": false,
+    "copied_predecessor_ex5": false,
+    "economic_change": "Add the exact frozen legacy US500 H4 staged overlay as one separately owned 0.01 position outside the six-component planned-risk, state and slot accounting while sharing actual balance, equity, native margin, execution and downstream account state.",
+    "readme_bytes_at_freeze": 2234,
+    "readme_sha256_at_freeze": "65B4741BF38AC7D9715EA14DEC0BD6EE65605EBA3CE634A097500019858A5835"
+  },
+  "source_pins": {
+    "expert_sha256": "446138C9E45962C2EC382488351C9C9786913A8C2979A72911E04F68A3208CF7",
+    "domain_sha256": "C871A21BEDE62BD2021ED5546D49BF4DC8EEA82BD9BEECA1AD67B9186CDF049C",
+    "h4_overlay_sha256": "EA258F7124BA3B336F0982C9E0C9CD339094083164112A52FE74CB921A55F246",
+    "ownership_sha256": "1C1A16F1B696587C3C336EF8E92C7E36B3B6023FD78B737DBDE3FDBF5D3397F6"
+  },
+  "configuration_pins": {
+    "candidate_set_sha256": "162CD355CBA47A1272E0B245835D23D4B77A59F44E80E6DE096506746E0FC9C0",
+    "selection_ini_sha256": "E551640DBC18869738CDA61A0FBF30F2348A529F63D40967EA4AD99706E304E2",
+    "forward_ini_sha256": "3124E18564909054CAECE8CBE801141308AF9FED4E316684961A4FA56765BAE3"
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "compiler_elapsed_ms": 3009,
+    "compile_invocations": 1,
+    "ex5_path": "optimization/campaigns/dd20-legacy-us500-h4-staged-overlay-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20H4SO1.ex5",
+    "ex5_bytes": 247568,
+    "ex5_sha256": "323D7C010273C3AC2F95CC45DBA1FC4E7408AECCD1E2F761EACD2C4C28FEFAE2",
+    "runtime_and_campaign_ex5_match": true,
+    "raw_log_path": "optimization/artifacts/raw/dd20-legacy-us500-h4-staged-overlay-mt5-v1/compile/compile-final-runtime-metaeditor.log",
+    "raw_log_bytes": 2838,
+    "raw_log_sha256": "2E8A69CD2C3818EFA29F42CD5C6C6710BED2DEBE1A30237DAA0B071778FDD578"
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-legacy-us500-h4-staged-overlay-mt5-v1-portable/",
+    "physical_copy_source": "optimization/runtime/dd20-native-gap-july-robustness-mt5-v1-portable/",
+    "physical_copy_source_file_count": 756,
+    "physical_copy_source_logical_bytes": 5793009225,
+    "terminal_file_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "file_reparse_points": 0,
+    "directory_reparse_points": 0,
+    "process_owners_at_freeze": 0,
+    "predecessor_named_files_may_remain_inert": true,
+    "predecessor_paths_referenced_by_new_ea_or_configuration": false,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_terminal": false,
+    "is_live_terminal": false,
+    "is_lab_terminal": false
+  },
+  "economic_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "conditional_forward_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+    "expected_valid_selection_passes": 1,
+    "maximum_valid_forward_passes": 1,
+    "run_forward_only_after_every_selection_gate_passes": true,
+    "selection_actual_net_must_strictly_exceed_usd": 1693.46,
+    "selection_stressed_net_must_strictly_exceed_usd": 1626.677,
+    "all_four_selection_epochs_actual_and_stressed_positive": true,
+    "hard_mt5_equity_drawdown_pct": 20.0,
+    "forward_full_june_and_july_actual_and_stressed_positive": true,
+    "candidate_rescue_or_retune": false,
+    "anchor_or_proxy_rerun": false
+  },
+  "setup_corrections_without_economic_verdict": [
+    {
+      "condition": "The frozen Optimization baseline contains no candidate-local selection or forward INI.",
+      "resolution": "Create the two fixed candidate tester configurations from the declared intervals and isolated campaign identity before any tester invocation."
+    },
+    {
+      "condition": "The dedicated physical runtime copy retains inert predecessor files and history.",
+      "resolution": "Overlay the unique expert, Include root, tester profile, state/research root and report root; the new source and configuration reference no predecessor campaign path."
+    }
+  ],
+  "boundary": {
+    "compiled": true,
+    "candidate_changed_after_compile_or_during_economic_run": false,
+    "tester_invocations_without_complete_economic_output": 0,
+    "valid_selection_runs_at_freeze": 0,
+    "forward_runs_at_freeze": 0,
+    "selection_report_opened": false,
+    "forward_report_opened": false,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "master_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
