@@ -1,0 +1,187 @@
+{
+  "schema": "zeta-next-router-account-contribution-label-alignment-durable-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VALID_COMPLETE_ACCOUNT_CONTRIBUTION_LABEL_NONCONFIRMATION_NO_SEED",
+  "unit": 100,
+  "family": "router-account-contribution-label-alignment-v1",
+  "primary_program": "diagnostics_causal_meta",
+  "research_height": "meso_to_macro",
+  "formal_process": {
+    "invocations": 1,
+    "started_at_utc": "2026-08-29T10:09:41Z",
+    "completed_at_utc": "2026-08-29T10:09:42Z",
+    "launcher_exit_code": 0,
+    "launcher_wall_seconds": 1.5752614,
+    "economic_reruns": 0,
+    "engineering_corrections_after_outcome_open": 0
+  },
+  "frozen_contract": {
+    "declaration_bytes": 6588,
+    "declaration_sha256": "9267521A319153333846994B2352F886EA0CDF70DAD7E051BCA48D71F5D79A41",
+    "analysis_script_bytes": 25239,
+    "analysis_script_sha256": "D2B6368FDFBEFFE6C962E0816302E930BB2F61CFCD22A23FC964B98E0EDF4BF4",
+    "snapshot_receipt_bytes": 2713,
+    "snapshot_receipt_sha256": "B3BDDA20BD74A8465B563C571E71BB8A20015A228DFF8F8D73A18684246BF6D9"
+  },
+  "input_integrity": {
+    "valid_for_economic_judgment": true,
+    "router_snapshot": {
+      "rows": 1620,
+      "economic_window_rows": 1620,
+      "bytes": 274974,
+      "sha256": "D9CB0A7A89573896274348ED4AB188C38F15A4C974D14B99C94BE628A5BE2FCE"
+    },
+    "anchor_snapshot": {
+      "closed_lifecycles": 1428,
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524000000163,
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"
+    },
+    "router_duplicate_keys": 0,
+    "anchor_duplicate_keys": 0,
+    "feature_mismatches": 0,
+    "unknown_components": 0,
+    "nonpositive_planned_risks": 0,
+    "router_quarter_key_mismatches": 0
+  },
+  "matching": {
+    "matched_anchor_closes": 1428,
+    "unmatched_anchor_closes": 0,
+    "unique_match_fraction": 1.0,
+    "component_counts": {
+      "ZT-M30-US30-RANGE-COMP-61f61deaba": 258,
+      "ZT-M30-US30-RANGE-COMP-64efb16616": 196,
+      "ZT-H1-US100-CROSS-IN-14b72317b7": 660,
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46": 88,
+      "ZT-H1-US30-RETURN-I-c870a788ec": 226
+    }
+  },
+  "model_process": {
+    "quarter_fit_attempts": 16,
+    "quarter_fit_successes": 14,
+    "warmup_quarters": 2,
+    "model_ready_matched_rows": 1279,
+    "model_ready_component_coverage": 5,
+    "fit_information": "only matched anchor lifecycles closed before each calendar-quarter start",
+    "label": "stressed_net_usd / entry planned_risk_usd",
+    "ridge_alpha": 10.0,
+    "label_clip_quantiles": [0.02, 0.98]
+  },
+  "variants": {
+    "ORIGINAL_VIRTUAL_NET_RANK": {
+      "rows": 1279,
+      "pooled_spearman_rank_vs_stressed_r": 0.01503277895231423,
+      "components_with_positive_spearman": 4,
+      "component_spearman": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": -0.08437502296906085,
+        "ZT-M30-US30-RANGE-COMP-64efb16616": 0.08548547225674175,
+        "ZT-H1-US100-CROSS-IN-14b72317b7": 0.010904761299920409,
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": 0.13485909288080233,
+        "ZT-H1-US30-RETURN-I-c870a788ec": 0.021941767528708068
+      },
+      "bottom_quartile": {
+        "rows": 335,
+        "mean_stressed_r": 0.013651312969856139,
+        "actual_net_usd": 344.46,
+        "stressed_net_usd": 272.27900000004973,
+        "nonpositive_stressed_epochs": 1
+      },
+      "top_quartile": {
+        "rows": 315,
+        "mean_stressed_r": 0.02636730097885729,
+        "actual_net_usd": 757.6899999999999,
+        "stressed_net_usd": 680.3860000000401
+      },
+      "top_minus_bottom_mean_stressed_r": 0.012715988009001152,
+      "interpretation": "The consumed fixed-0.01 virtual-net rank is effectively uninformative about matched shared-account stressed R."
+    },
+    "PRIOR_QUARTER_ACCOUNT_STRESSED_R_RIDGE": {
+      "rows": 1279,
+      "pooled_spearman_rank_vs_stressed_r": 0.004564215461680821,
+      "components_with_positive_spearman": 3,
+      "component_spearman": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": -0.08600732026033803,
+        "ZT-M30-US30-RANGE-COMP-64efb16616": 0.08637868745366353,
+        "ZT-H1-US100-CROSS-IN-14b72317b7": -0.013268526167251642,
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": 0.1171164601669207,
+        "ZT-H1-US30-RETURN-I-c870a788ec": 0.018702524501679217
+      },
+      "bottom_quartile": {
+        "rows": 327,
+        "mean_stressed_r": 0.011911334022598901,
+        "actual_net_usd": 640.6899999999999,
+        "stressed_net_usd": 568.1830000000507,
+        "epoch_stressed_net_usd": {
+          "E1": 3.3890000000007783,
+          "E2": -10.923000000005159,
+          "E3": -24.980999999998232,
+          "E4": 600.6980000000533
+        },
+        "nonpositive_stressed_epochs": 2
+      },
+      "top_quartile": {
+        "rows": 309,
+        "mean_stressed_r": 0.03731452902025898,
+        "actual_net_usd": 1172.4099999999999,
+        "stressed_net_usd": 1097.1660000000427
+      },
+      "top_minus_bottom_mean_stressed_r": 0.02540319499766008,
+      "interpretation": "Changing only the label to causal prior-quarter shared-account stressed R does not produce a useful prospective rank."
+    }
+  },
+  "prospective_account_r_gates": {
+    "unique_match_fraction_at_least_0.95": true,
+    "model_ready_matched_rows_at_least_500": true,
+    "all_five_components_covered": true,
+    "pooled_spearman_at_least_0.10": false,
+    "at_least_four_positive_component_spearman": false,
+    "top_minus_bottom_mean_stressed_r_at_least_0.10": false,
+    "bottom_quartile_full_stressed_net_nonpositive": false,
+    "bottom_quartile_nonpositive_in_at_least_three_epochs": false,
+    "all_required_gates_pass": false
+  },
+  "raw_artifacts": {
+    "files": 4,
+    "bytes": 3316090,
+    "items": [
+      {
+        "path": "lab/artifacts/raw/router-account-contribution-label-alignment-v1/input/anchor-lifecycles.csv",
+        "bytes": 2685969,
+        "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"
+      },
+      {
+        "path": "lab/artifacts/raw/router-account-contribution-label-alignment-v1/input/router-decisions.csv",
+        "bytes": 274974,
+        "sha256": "D9CB0A7A89573896274348ED4AB188C38F15A4C974D14B99C94BE628A5BE2FCE"
+      },
+      {
+        "path": "lab/artifacts/raw/router-account-contribution-label-alignment-v1/output/matched-lifecycles.csv",
+        "bytes": 337391,
+        "sha256": "05C966D50745E4F4A9CD55FD9A6545A54DF39077B1BD0E63F93ABA6391E49843"
+      },
+      {
+        "path": "lab/artifacts/raw/router-account-contribution-label-alignment-v1/output/result.json",
+        "bytes": 17756,
+        "sha256": "EC5B955F9AE12737F3B19EF0E96D2B108C1D1DE624FDCA4B651A14F84D31C46B"
+      }
+    ],
+    "retention": "preserved locally as useful ignored causal artifacts"
+  },
+  "economic_judgment": {
+    "classification": "VALID_ACCOUNT_CONTRIBUTION_LABEL_NONCONFIRMATION_NO_SEED",
+    "retained_seed": null,
+    "failed_hypothesis": "The frozen ten-feature quarterly Ridge form becomes prospectively informative when its label alone is changed from independent fixed-0.01 virtual net to matched shared-account stressed R.",
+    "not_an_engineering_failure": true,
+    "optimization_authority": false,
+    "live_authority": false
+  },
+  "boundary": {
+    "mql_or_settings_changes": 0,
+    "compile_or_tester_paths": 0,
+    "tests_or_validators_added": 0,
+    "live_changes": 0,
+    "optimization_changes": 0,
+    "broker_or_account_queries": 0
+  }
+}

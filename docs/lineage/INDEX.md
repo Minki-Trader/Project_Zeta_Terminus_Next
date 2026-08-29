@@ -12,6 +12,6 @@
 | [전략 독립성·위험배분](STRATEGY_INDEPENDENCE_AND_RISK_ALLOCATION.md) | 선진입 슬롯 점유로 더 좋은 후속 전략이 막히며 이를 당시 정보로 개선할 수 있는가 | 차단 headroom은 확인; 세 인과 예약 정책은 2024 위험·반기 기준 미통과, 선착순 유지 |
 | [예치자본·위험용량](DEPOSIT_CAPITAL_AND_RISK_CAPACITY.md) | `$200/$300` 예치금과 12% 위험용량을 어떤 방식으로 써야 하는가 | 선형 lot은 달러 손익·DD만 일관되게 확대; 폭·사다리는 양 예치금 게이트 미통과, V7 유지 |
 | [실행·복구·브로커 안전](EXECUTION_PERSISTENCE_AND_BROKER_SAFETY.md) | 동일 경제를 실계좌에서 안전하게 소유할 수 있는가 | B70 V6R6이 현재 Legacy Live 부모; V7은 구조적 후계 개발 중 |
-| [진단·인과·메타 연구](DESCRIPTIVE_CAUSAL_AND_META_RESEARCH.md) | 무엇을 알며 무엇을 아직 모르는가 | 설명적 headroom은 있으나 자동 정책이나 열화 예측 모델 근거는 부족 |
+| [진단·인과·메타 연구](DESCRIPTIVE_CAUSAL_AND_META_RESEARCH.md) | 무엇을 알며 무엇을 아직 모르는가 | 설명적 headroom은 있으나 자동 정책 근거는 부족하고, Unit 100의 shared-account label 교체도 유용한 prospective rank를 만들지 못함 |
 
 완전 파일 색인은 `lineage/legacy-files.jsonl`, 연구 관련 완전 색인은 `lineage/research-lineage.jsonl`, 실행체 계보는 `lineage/executable-lineage.json`에 있다.

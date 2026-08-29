@@ -1,0 +1,125 @@
+{
+  "schema": "zeta-next-router-account-contribution-label-alignment-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "DECLARED_INPUT_SOURCES_AND_ANALYSIS_CONTRACT_FROZEN_OUTCOME_UNOPENED",
+  "unit": 100,
+  "family": "router-account-contribution-label-alignment-v1",
+  "primary_program": "diagnostics_causal_meta",
+  "research_height": "meso_to_macro",
+  "whole_map_selection": {
+    "programs_recompared": [1, 2, 3, 4, 5, 7],
+    "program_1": "The exact market-state router native path is economically consumed and closed; adjacent model, label, percentile, feature, hold, component, risk or volume rescue is prohibited inside Optimization.",
+    "program_2": "No new independent external-market or scheduled-event evidence is ready.",
+    "program_3": "No new dense order/session timing field is ready.",
+    "program_4": "Existing hold, stop, realization, peer-exit and drawdown-management families are closed without a new independent current clue.",
+    "program_5": "Static composition, capital ladder, aggregate risk, component state and reserve families are closed without a new independent current clue.",
+    "program_7": "The complete router candidate creates a new attributable label-versus-shared-account-contribution mismatch with zero engineering fault.",
+    "selection_reason": "Program 7 has the sole current complete and non-speculative information question. The unit diagnoses one fixed bundle and does not continue the Program 1 router family inside Optimization."
+  },
+  "input_sources_before_snapshot": {
+    "router_decisions": {
+      "path": "optimization/artifacts/raw/dd20-market-state-router-mt5-v1/selection/ea-files/router/router-decisions.csv",
+      "bytes": 274974,
+      "sha256": "D9CB0A7A89573896274348ED4AB188C38F15A4C974D14B99C94BE628A5BE2FCE",
+      "rows": 1620,
+      "economic_origin": "one complete valid native Optimization selection"
+    },
+    "qualified_anchor_lifecycles": {
+      "path": "optimization/artifacts/raw/dd20-paired-month-stability-mt5-v1/selection/ea-files/research/research-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "closed_lifecycles": 1428,
+      "economic_origin": "qualified paired-month anchor"
+    },
+    "router_result": {
+      "path": "optimization/campaigns/dd20-market-state-router-mt5-v1/evidence/DD20_MARKET_STATE_ROUTER_MT5_RESULT_V1.json",
+      "bytes": 11451,
+      "sha256": "CE7D23E4973B901D5A497906096D7CCB0038FD5E1500BC67B374DB005C9CBB4C"
+    },
+    "anchor_result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+  },
+  "lab_snapshot": {
+    "root": "lab/artifacts/raw/router-account-contribution-label-alignment-v1/input/",
+    "copy_once_before_formal_analysis": true,
+    "formal_analysis_reads_only_snapshot": true,
+    "shared_mutable_output": false
+  },
+  "fixed_match": {
+    "anchor_rows": "event=CLOSE and partial_observation=0",
+    "key": ["component_id", "entry_time_server truncated to server minute", "direction"],
+    "feature_check": "absolute anchor entry_feature minus router feature <= 1e-9 * max(1, absolute anchor entry_feature)",
+    "duplicate_key_allowed": false,
+    "warmup_disclosure": true,
+    "warmup_in_fitted_rank_gates": false,
+    "epochs": [
+      "2022-08-01/2023-06-01",
+      "2023-06-01/2024-06-01",
+      "2024-06-01/2025-06-01",
+      "2025-06-01/2026-06-01"
+    ]
+  },
+  "variants": [
+    {
+      "id": "ORIGINAL_VIRTUAL_NET_RANK",
+      "rank": "exact rank recorded by the native fixed-0.01 virtual-net router",
+      "role": "diagnose the consumed native router; cannot retain another copy of the already failed candidate"
+    },
+    {
+      "id": "PRIOR_QUARTER_ACCOUNT_STRESSED_R_RIDGE",
+      "features": ["clipped_signal", "absolute_clipped_signal", "direction", "weekday_sine", "weekday_cosine", "five_component_indicators"],
+      "signal_clip": [-20.0, 20.0],
+      "label": "anchor stressed_net_usd divided by entry planned_risk_usd",
+      "label_availability": "only after the matched anchor lifecycle closes",
+      "model": "pooled expanding Ridge",
+      "ridge_alpha": 10.0,
+      "label_clip_quantiles": [0.02, 0.98],
+      "minimum_total_samples": 80,
+      "minimum_samples_per_component": 8,
+      "fit_schedule": "calendar quarter",
+      "fit_information": "only matched anchor lifecycles closed before the current quarter",
+      "rank": "component-relative percentile among the current fit's training predictions",
+      "minimum_rank": 0.25,
+      "parameter_search": false
+    }
+  ],
+  "prospective_gates_for_account_r_variant": {
+    "unique_match_fraction_minimum": 0.95,
+    "model_ready_matched_rows_minimum": 500,
+    "model_ready_component_coverage_required": 5,
+    "pooled_spearman_rank_vs_stressed_r_minimum": 0.10,
+    "components_with_positive_spearman_minimum": 4,
+    "top_minus_bottom_quartile_mean_stressed_r_minimum": 0.10,
+    "bottom_quartile_full_stressed_net_maximum_usd": 0.0,
+    "bottom_quartile_nonpositive_stressed_epochs_minimum": 3,
+    "all_gates_required": true,
+    "maximum_retained_seeds": 1,
+    "retained_seed_id_if_all_pass": "CAUSAL_PRIOR_QUARTER_ACCOUNT_STRESSED_R_RIDGE_ROUTER",
+    "automatic_optimization_open": false
+  },
+  "fixed_metric_conventions": {
+    "rank_target": "matched anchor stressed_net_usd divided by entry planned_risk_usd",
+    "bottom_quartile": "rank < 0.25",
+    "top_quartile": "rank >= 0.75",
+    "spearman_ties": "average ranks",
+    "epoch_assignment": "anchor entry_time_server",
+    "bottom_quartile_nonpositive_epoch": "an epoch counts only when it has at least one bottom-quartile row and its summed stressed_net_usd is <= 0",
+    "floating_gate_comparison": "direct comparison to the frozen decimal boundary without rounding"
+  },
+  "stop_rules": [
+    "Run one formal source-free analysis process after the snapshot and script are frozen.",
+    "If input or match integrity fails, correct engineering without an economic verdict and rerun the unchanged contract.",
+    "If any prospective account-R gate fails on complete valid numbers, retain no seed and close both variants.",
+    "Do not add another label, threshold, bin, component, epoch, feature, estimator or in-family rescue.",
+    "Return to a whole-map comparison after closure."
+  ],
+  "boundary": {
+    "economic_output_opened": false,
+    "formal_analysis_processes": 0,
+    "mql_or_settings_changes": 0,
+    "compile_or_tester_paths": 0,
+    "tests_or_validators": 0,
+    "live_changes": 0,
+    "optimization_changes": 0,
+    "broker_or_account_queries": 0
+  }
+}

@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0373`
+- Latest state ID: `STATE-0374`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -25,8 +25,8 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 ## Active work
 
 - Active engineering boundary: none; the one-shot Codex-lifetime breakaway mechanism remains available, the scheduled task/resident PID loop is removed, and no terminal or dashboard process was observed after the user's reboot
-- Active research boundary: none; source-free Program 1 / meso→macro Unit 099 `legacy-market-state-router-optimization-eligibility-v1` is closed. It retains one exact lineage-pinned quarterly pooled Ridge router as a native Optimization information seed and opens no current shared-account economic verdict, Lab MQL or Live authority. The current selection candidate ledger has `7,352 / 12,265` existing-exposure rows with unevaluated native signals, so exact ledger subtraction is unavailable and one fixed native path is required; no model, percentile, feature, memory, update, component, threshold or alternate-router follow-up is authorized.
-- Active optimization boundary: none; native `dd20-market-state-router-mt5-v1` is closed `VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_FORWARD_NOT_OPENED`. The exact Unit 099 quarterly pooled Ridge router completed one valid `100%`-real-tick selection with zero core/router fault. It blocked `377 / 1,620` independent signals and reduced reported maximum relative equity DD to `12.52%`, but actual/stressed profit collapsed to `+$914.29 / +$869.242`, trailing the qualified paired-month anchor by `$4,872.34 / $4,608.282`; all four epochs remained positive. Both mandatory profit gates failed, so forward opened zero times. The exact candidate and every adjacent model/label/percentile/feature/hold/component/risk/volume rescue are frozen; the paired-month anchor remains unchanged pending a fresh whole-map comparison.
+- Active research boundary: none; source-free Program 7 / meso→macro Unit 100 `router-account-contribution-label-alignment-v1` is closed `VALID_ACCOUNT_CONTRIBUTION_LABEL_NONCONFIRMATION_NO_SEED`. All `1,428` qualified-anchor closes matched uniquely, but the original virtual-net rank had pooled stressed-R Spearman `0.01503` and the frozen prior-quarter account-stressed-R label variant only `0.00456`; its bottom quartile still earned stressed `+$568.183`. Five required information/economic gates failed with complete valid inputs, so no seed, adjacent label/model/threshold rescue, Lab MQL or Live authority exists.
+- Active optimization boundary: none; native `dd20-market-state-router-mt5-v1` remains closed `VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_FORWARD_NOT_OPENED`. It blocked `377 / 1,620` signals and reduced reported DD to `12.52%`, but actual/stressed profit collapsed to `+$914.29 / +$869.242`, trailing the qualified paired-month anchor by `$4,872.34 / $4,608.282`. Unit 100 then eliminated label-versus-shared-account contribution as an adjacent repair. The exact router and every adjacent model/label/percentile/feature/hold/component/risk/volume rescue are frozen; the paired-month anchor remains unchanged pending the now-required full Optimization-map comparison.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
