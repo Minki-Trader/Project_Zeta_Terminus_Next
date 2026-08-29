@@ -1,0 +1,144 @@
+{
+  "schema": "zeta-paired-month-live-replacement-handoff-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VERIFIED_LAB_DEVELOPMENT_CANDIDATE_ECONOMICS_AND_ENTRIES_DISABLED_RECOVERY_COMPLETE_LIVE_UNCHANGED",
+  "family": {
+    "id": "paired-month-live-replacement-handoff-v1",
+    "owner_root": "lab/engineering/paired-month-live-replacement-handoff-v1/",
+    "lifecycle": "CLOSED_VERIFIED_LAB_ENGINEERING_HANDOFF",
+    "live_authority": false,
+    "changes_forward_lab_baseline": false
+  },
+  "authorization": {
+    "user_direction": "Fix the replacement target as the development candidate and continue autonomously through Lab or Optimization.",
+    "development_handoff_authorized": true,
+    "live_package_mutation_authorized": false,
+    "real_order_activation_authorized": false
+  },
+  "fixed_target": {
+    "optimization_campaign": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "optimization_result": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/evidence/DD20_PAIRED_MONTH_STABILITY_MT5_RESULT_V1.json",
+    "optimization_result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+    "pragmatic_recomparison": "optimization/campaigns/dd20-pragmatic-threshold-anchor-recomparison-v1/evidence/DD20_PRAGMATIC_THRESHOLD_ANCHOR_RECOMPARISON_V1.json",
+    "pragmatic_recomparison_sha256": "4F75409B084DAEA04CDCD3757D7C6230CAF7345DD2F5BAC9A1FDF933962642B4",
+    "frozen_executable_commit": "b3f69a16a2dc8b2e39548033546f883dfecd1ea6",
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "effective_position_risk_fractions_before_aggregate_cap": [0.08, 0.06, 0.08, 0.10, 0.06, 0.0],
+    "passive_disabled": true,
+    "retune_or_adjacent_rescue_allowed": false
+  },
+  "economic_anchor": {
+    "selection_interval": "2022-08-01 through 2026-06-01",
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_2x_cost_net_usd": 5477.524,
+    "selection_closed_lifecycles": 1428,
+    "selection_native_equity_drawdown_pct": 20.256887565152653,
+    "forward_interval": "2026-06-01 through 2026-08-01",
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_2x_cost_net_usd": 30.626,
+    "forward_closed_lifecycles": 54,
+    "forward_native_equity_drawdown_pct": 18.675302129932568
+  },
+  "source_topology": {
+    "handoff_rule": "docs/OPERATING_DIRECTION.md Source topology discipline, including the user-authorized Optimization-to-Lab handoff required before any Live promotion",
+    "one_time_frozen_implementation_input": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/",
+    "input_text_source_files": 16,
+    "input_mql5_tree_manifest_sha256_including_binary_and_set": "D2D502A76684391D5FED7999E1FA5209C11B7E9BA14C1CAF30D9B58C080C0036",
+    "derived_source_root": "lab/engineering/paired-month-live-replacement-handoff-v1/mt5/src/",
+    "derived_text_source_files": 16,
+    "derived_text_source_bytes": 419983,
+    "derived_source_manifest_sha256": "067007BB0C26D35EF7754D28BECC2E7033790A891A9EEF65141363F206444877",
+    "derived_configuration_files": 5,
+    "derived_configuration_bytes": 3832,
+    "derived_configuration_manifest_sha256": "835089071BA42E65F707557B33DAC0CBC2473DE229F2AEBFCF6EE1A34CDC2B50",
+    "forward_lab_safety_reference": "lab/engineering/protective-exit-order-reconciliation-v1/mt5/ at 0d4032786cecb7d7e8a4c3074609db5b105fa107",
+    "external_include_link_or_execution_allowed": false,
+    "live_dev_source_or_runtime_read_by_candidate_allowed": false
+  },
+  "allowed_engineering_changes": [
+    "replace Optimization tester-only identity with a unique Lab engineering identity",
+    "remove only the unconditional non-tester OnInit rejection while retaining entries-disabled-by-default and account authorization gates",
+    "assign unique Lab release, Portfolio, Magic, state, research-ledger and ownership paths",
+    "retain the existing candidate/lifecycle observation contract with component-multiplier-aware attempted-risk recording",
+    "materialize fixed selection, forward and entries-disabled configurations",
+    "prepare the release-specific operator contract required by a later controlled Live translation"
+  ],
+  "forbidden_changes": [
+    "change any signal, direction, clock, hold, stop, exit, sizing ladder, component multiplier, risk cap, cost or portfolio ordering term",
+    "append to or mutate the current RLO1 canonical research ledgers",
+    "adopt current RLO1 state, positions, orders, deals or ownership",
+    "use the Master terminal or live-dev runtime",
+    "create a validator, parity checker, test harness, CI or test-only infrastructure",
+    "promote or enable real entries automatically"
+  ],
+  "lab_identity": {
+    "expert": "ZetaPairedMonthLiveReplacementHandoffV1",
+    "include_root": "ZetaPairedMonthLiveReplacementHandoffV1",
+    "execution_version": "zt-next-lab-paired-month-live-replacement-handoff-v1",
+    "release_id": "NEXT-LAB-PMLRH1-20260829",
+    "portfolio_id": "ZT-PORT-NEXT-LAB-PMLRH1-20260829",
+    "schema_version": "lab-pmlrh-1",
+    "magic": [260829941, 260829942, 260829943, 260829944, 260829945, 260829946],
+    "mutable_root": "ZetaTerminusNext\\lab\\pmlrh1",
+    "entries_enabled_default": false
+  },
+  "logging_contract": {
+    "old_rlo1_logs": "immutable historical evidence; never appended, rotated or cleaned by this family",
+    "new_candidate_logs": "family-local state, events, current snapshots, research candidate and lifecycle ledgers",
+    "cross_release_analysis": "read-only union only with explicit schema, release, Portfolio and Magic identity",
+    "state_migration": "none",
+    "permitted_handoff_value": "final project-attributable realized P/L only"
+  },
+  "verification_contract": {
+    "compile": "MetaEditor build 6140 with 0 errors and 0 warnings",
+    "economic_execution": "normal MT5 fixed-window 100% real-tick selection and isolated forward in one dedicated non-Master Lab Portable",
+    "economic_acceptance": "exact preserved closed-lifecycle counts and economic results unless an evidenced environment or engineering correction is required",
+    "fault_acceptance": "zero safety, persistence, broker, foreign-exposure, protection-calculation or protection-mismatch fault",
+    "connected_acceptance": "bounded entries-disabled create and recovery observation with separate state/log paths before closure",
+    "engineering_corrections": "unlimited and never classified as an economic failure"
+  },
+  "runtime": {
+    "dedicated_path": "lab/runtime/pmlrh1-portable/",
+    "master_terminal": false,
+    "live_terminal": false,
+    "remote_agents": false,
+    "cloud_agents": false,
+    "materialized": true,
+    "terminal_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7"
+  },
+  "storage_boundary": {
+    "free_space_before_correction_gib": 2.06,
+    "correction": "Dehydrated seven closed Optimization Portable trees with OneDrive Files On-Demand; no tracked source, evidence, raw artifact, current Live file or canonical ledger was deleted.",
+    "free_space_after_correction_gib": 40.253,
+    "candidate_failure": false
+  },
+  "boundary": {
+    "source_copied": true,
+    "source_changed": true,
+    "compiled": true,
+    "tester_started": true,
+    "selection_complete": true,
+    "forward_complete": true,
+    "connected_runtime_started": true,
+    "entries_disabled_create_complete": true,
+    "entries_disabled_recovery_complete": true,
+    "live_dev_modified": false,
+    "broker_positions_orders_deals_or_account_queried": true,
+    "query_scope": "normal bounded connected Lab create/recovery reconciliation only, after fixed-window economics",
+    "orders_sent": 0,
+    "automatic_live_promotion": false,
+    "separate_final_live_authorization_still_required": true
+  }
+}

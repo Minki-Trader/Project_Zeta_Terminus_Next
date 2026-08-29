@@ -1,0 +1,113 @@
+{
+  "schema": "zeta-paired-month-live-replacement-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "COMPILED_FIXED_WINDOW_AND_CONNECTED_EVIDENCE_COMPLETE",
+  "family": "paired-month-live-replacement-handoff-v1",
+  "declaration": {
+    "path": "lab/engineering/paired-month-live-replacement-handoff-v1/evidence/PAIRED_MONTH_LIVE_REPLACEMENT_HANDOFF_DECLARATION_V1.json",
+    "bytes": 8246,
+    "sha256": "AD66944F367D9631548487EAD9F8B5EAFB3DCCF9904BC5B984E9DE234EF65C23"
+  },
+  "operator_and_log_contract": {
+    "path": "lab/engineering/paired-month-live-replacement-handoff-v1/evidence/PAIRED_MONTH_OPERATOR_AND_LOG_CONTRACT_V1.json",
+    "bytes": 4112,
+    "sha256": "9C8D6DFC0E25D470967558BDEAC6116E44B61B16BE6E9306742EDF07CA4A88E3"
+  },
+  "frozen_optimization_input": {
+    "campaign": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "commit": "b3f69a16a2dc8b2e39548033546f883dfecd1ea6",
+    "current_tree_matches_commit": true,
+    "mql5_tree_manifest_sha256_including_binary_and_set": "D2D502A76684391D5FED7999E1FA5209C11B7E9BA14C1CAF30D9B58C080C0036"
+  },
+  "derived_implementation": {
+    "source_root": "lab/engineering/paired-month-live-replacement-handoff-v1/mt5/src/",
+    "source_files": 16,
+    "source_bytes": 419983,
+    "source_manifest_sha256": "067007BB0C26D35EF7754D28BECC2E7033790A891A9EEF65141363F206444877",
+    "configuration_root": "lab/engineering/paired-month-live-replacement-handoff-v1/mt5/config/",
+    "configuration_files": 5,
+    "configuration_bytes": 3832,
+    "configuration_manifest_sha256": "835089071BA42E65F707557B33DAC0CBC2473DE229F2AEBFCF6EE1A34CDC2B50",
+    "manifest_algorithm": "Sort slash-normalized root-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "inherited_include_modules_byte_equal": 14,
+    "intentionally_changed_include_modules": ["Domain/ZetaDomain.mqh"],
+    "assembly_changed": true,
+    "assembly_change_scope": [
+      "rename descriptions and self-contained Include root",
+      "remove only the unconditional non-tester rejection",
+      "create the unique Lab mutable directories"
+    ],
+    "domain_change_scope": [
+      "unique Lab execution, economic, schema, release and Portfolio identity",
+      "unique Magic 260829941..260829946",
+      "unique state, event, ownership and research paths"
+    ],
+    "economic_source_change": false,
+    "signal_clock_hold_stop_exit_sizing_or_ordering_change": false,
+    "cross_family_include_link_or_execution": false
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "invocations": 1,
+    "result": "0 errors, 0 warnings",
+    "compiler_elapsed_ms": 2181,
+    "launcher_wall_ms": 4216,
+    "launcher_exit_code": 1,
+    "launcher_exit_interpretation": "MetaEditor returned its normal nonzero launcher code while the authoritative compile log and EX5 were complete; no second compile was run.",
+    "ex5_path": "lab/artifacts/raw/paired-month-live-replacement-handoff-v1/compile/ZetaPairedMonthLiveReplacementHandoffV1.ex5",
+    "ex5_bytes": 229524,
+    "ex5_sha256": "EB90290622EC075D182AD96F95D40EB227F982BDA669FC1CA2B5B859934C3378",
+    "log_path": "lab/artifacts/raw/paired-month-live-replacement-handoff-v1/compile/compile-20260829.log",
+    "log_bytes": 17754,
+    "log_sha256": "39C7066FAC4589677684632F443E7DF9FAC426C2C4F3F610C3664F7B842A5A54"
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/pmlrh1-portable/",
+    "physical_copy_source": "lab/runtime/tester-portable/",
+    "copy_exit_code": 1,
+    "initial_files": 762,
+    "initial_logical_bytes": 6472948717,
+    "initial_file_reparse_points": 0,
+    "initial_directory_reparse_points": 0,
+    "terminal_hardlink_paths": 1,
+    "terminal_file_identity_distinct_from_source_runtime": true,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "source_runtime_execution": false,
+    "master_terminal": false,
+    "live_terminal": false,
+    "remote_agents": false,
+    "cloud_agents": false,
+    "free_space_before_copy_gib": 39.95,
+    "free_space_after_copy_gib": 33.483
+  },
+  "non_economic_corrections": [
+    {
+      "condition": "System-drive free space was only 2.06 GiB before materialization.",
+      "resolution": "Seven exact closed Optimization Portable trees were made OneDrive online-only without deleting tracked source, evidence, raw artifacts, Live files or canonical ledgers; free space rose to 40.253 GiB.",
+      "candidate_failure": false
+    },
+    {
+      "condition": "The first include-tree copy used LiteralPath with a wildcard and copied no include module.",
+      "resolution": "Before compile or economic output, the one-time family copy was completed with an exact source-root Path copy; 14 inherited modules then matched byte-for-byte.",
+      "candidate_failure": false
+    },
+    {
+      "condition": "The first complete selection run had full normal tester and EA economic output but no native HTML because the new nested report parent did not yet exist.",
+      "resolution": "The complete attempt was preserved, the exact report parent was created, the short forward run proved report emission, and one final unchanged selection run produced the native report. This was output packaging correction, not an economic failure or candidate retune.",
+      "candidate_failure": false
+    }
+  ],
+  "boundary": {
+    "source_frozen": true,
+    "compiled": true,
+    "selection_complete": true,
+    "forward_complete": true,
+    "connected_create_complete": true,
+    "connected_recovery_complete": true,
+    "live_dev_modified": false,
+    "master_started": false,
+    "orders_sent": 0,
+    "automatic_live_promotion": false
+  }
+}

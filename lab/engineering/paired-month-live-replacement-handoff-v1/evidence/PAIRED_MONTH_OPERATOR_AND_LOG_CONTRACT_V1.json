@@ -1,0 +1,80 @@
+{
+  "schema": "zeta-paired-month-operator-and-log-contract-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "FROZEN_LAB_OPERATOR_TRANSLATION_CONTRACT_LIVE_UNCHANGED",
+  "family": "paired-month-live-replacement-handoff-v1",
+  "authority": {
+    "development_candidate_fixed": true,
+    "lab_observation_authorized": true,
+    "live_dev_package_mutation_authorized": false,
+    "real_entry_activation_authorized": false
+  },
+  "current_live_owner": {
+    "release_id": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "portfolio_id": "ZT-PORT-NEXT-V7-2db5ef5ead1c",
+    "magic_range": "260824701..260824706",
+    "aggregate_risk_fraction": 0.12,
+    "state_and_logs": "immutable current-release material; this Lab family never appends, rotates, cleans, adopts or rewrites it"
+  },
+  "lab_candidate": {
+    "release_id": "NEXT-LAB-PMLRH1-20260829",
+    "execution_version": "zt-next-lab-paired-month-live-replacement-handoff-v1",
+    "economic_version": "zt-next-paired-month-live-replacement-economic-v1",
+    "portfolio_id": "ZT-PORT-NEXT-LAB-PMLRH1-20260829",
+    "schema_version": "lab-pmlrh-1",
+    "magic": [260829941, 260829942, 260829943, 260829944, 260829945, 260829946],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "effective_position_risk_fractions_before_aggregate_cap": [0.08, 0.06, 0.08, 0.10, 0.06, 0.0],
+    "entries_enabled_default": false
+  },
+  "lab_mutable_paths": {
+    "root": "MQL5/Files/ZetaTerminusNext/lab/pmlrh1/",
+    "state_a": "state/state-a.csv",
+    "state_b": "state/state-b.csv",
+    "events_a": "state/events-a.csv",
+    "events_b": "state/events-b.csv",
+    "current_a": "state/current-a.csv",
+    "current_b": "state/current-b.csv",
+    "ownership_relative_path": "state/runtime.lock",
+    "ownership_storage_non_tester": "Terminal Common/Files/ZetaTerminusNext/lab/pmlrh1/state/runtime.lock",
+    "ownership_storage_tester": "Tester Agent MQL5/Files/ZetaTerminusNext/lab/pmlrh1/state/runtime.lock",
+    "research_state_a": "research/research-state-a.csv",
+    "research_state_b": "research/research-state-b.csv",
+    "research_candidates": "research/research-candidates.csv",
+    "research_lifecycles": "research/research-lifecycles.csv"
+  },
+  "logger_reuse": {
+    "core_state_and_events": "byte-identical inherited logger module from the fixed Optimization candidate",
+    "research_observation": "byte-identical inherited component-multiplier-aware candidate and lifecycle observer from the fixed Optimization candidate",
+    "cross_release_state_recovery": false,
+    "cross_release_log_analysis": "read-only union is allowed only after explicit release_id, execution_version, portfolio_id, schema and Magic normalization",
+    "state_migration": "none",
+    "permitted_live_handoff_value": "only the final project-attributable realized P/L after the old owner is stopped and flat"
+  },
+  "later_live_translation": {
+    "required_new_release_namespace": true,
+    "required_new_manifest_and_hash": true,
+    "operator_reader_changes": [
+      "expect the newly frozen Live release, execution, Portfolio, schema and Magic identity",
+      "replace the 0.12 aggregate-risk expectation with 0.18",
+      "display the six component multipliers and effective pre-cap position-risk fractions",
+      "read only the new release state and current snapshots for ownership and health",
+      "retain old RLO1 events and research ledgers only as historical read-only evidence"
+    ],
+    "forbidden": [
+      "treat old and new state snapshots as one recovery stream",
+      "append new rows to RLO1 files",
+      "adopt RLO1 positions, orders, deals, Magic or runtime.lock",
+      "change Live tools or package before the final promotion authorization boundary"
+    ]
+  },
+  "promotion_boundary": {
+    "lab_compile_and_fixed_window_economics_required": true,
+    "bounded_entries_disabled_create_and_recovery_required": true,
+    "stopped_flat_old_owner_required": true,
+    "new_entries_disabled_during_handoff": true,
+    "separate_final_user_authorization_required": true
+  }
+}

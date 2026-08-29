@@ -1,0 +1,313 @@
+{
+  "schema": "zeta-paired-month-live-replacement-result-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "VALID_LAB_TRANSLATION_AND_ENTRIES_DISABLED_RECOVERY_COMPLETE_FIXED_REPLACEMENT_DEVELOPMENT_CANDIDATE_READY_FOR_SEPARATE_LIVE_TRANSLATION_AUTHORIZATION",
+  "family": {
+    "id": "paired-month-live-replacement-handoff-v1",
+    "lifecycle": "CLOSED_VERIFIED_LAB_ENGINEERING_HANDOFF",
+    "fixed_development_candidate": true,
+    "live_package_mutation_authorized": false,
+    "real_entry_activation_authorized": false
+  },
+  "evidence_pins": {
+    "declaration": {
+      "path": "lab/engineering/paired-month-live-replacement-handoff-v1/evidence/PAIRED_MONTH_LIVE_REPLACEMENT_HANDOFF_DECLARATION_V1.json",
+      "bytes": 8246,
+      "sha256": "AD66944F367D9631548487EAD9F8B5EAFB3DCCF9904BC5B984E9DE234EF65C23"
+    },
+    "operator_and_log_contract": {
+      "path": "lab/engineering/paired-month-live-replacement-handoff-v1/evidence/PAIRED_MONTH_OPERATOR_AND_LOG_CONTRACT_V1.json",
+      "bytes": 4112,
+      "sha256": "9C8D6DFC0E25D470967558BDEAC6116E44B61B16BE6E9306742EDF07CA4A88E3"
+    },
+    "implementation_freeze": {
+      "path": "lab/engineering/paired-month-live-replacement-handoff-v1/evidence/PAIRED_MONTH_LIVE_REPLACEMENT_IMPLEMENTATION_FREEZE_V1.json",
+      "bytes": 5796,
+      "sha256": "74331FC1695FCEE27E6E9D61EE39F907CAA1C1FA0BEA0B0D8A1AA4D69DDA5B82"
+    }
+  },
+  "fixed_candidate": {
+    "optimization_campaign": "dd20-paired-month-stability-mt5-v1",
+    "optimization_result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+    "pragmatic_recomparison_sha256": "4F75409B084DAEA04CDCD3757D7C6230CAF7345DD2F5BAC9A1FDF933962642B4",
+    "component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "effective_position_risk_fractions_before_aggregate_cap": [0.08, 0.06, 0.08, 0.10, 0.06, 0.0],
+    "passive_disabled": true,
+    "retuned_during_handoff": false
+  },
+  "implementation": {
+    "lab_release_id": "NEXT-LAB-PMLRH1-20260829",
+    "lab_execution_version": "zt-next-lab-paired-month-live-replacement-handoff-v1",
+    "lab_economic_version": "zt-next-paired-month-live-replacement-economic-v1",
+    "lab_portfolio_id": "ZT-PORT-NEXT-LAB-PMLRH1-20260829",
+    "lab_schema_version": "lab-pmlrh-1",
+    "lab_magic": [260829941, 260829942, 260829943, 260829944, 260829945, 260829946],
+    "source_files": 16,
+    "source_bytes": 419983,
+    "source_manifest_sha256": "067007BB0C26D35EF7754D28BECC2E7033790A891A9EEF65141363F206444877",
+    "configuration_files": 5,
+    "configuration_bytes": 3832,
+    "configuration_manifest_sha256": "835089071BA42E65F707557B33DAC0CBC2473DE229F2AEBFCF6EE1A34CDC2B50",
+    "inherited_include_modules_byte_equal": 14,
+    "economic_source_changed": false,
+    "cross_family_include_link_or_execution": false
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "invocations": 1,
+    "result": "0 errors, 0 warnings",
+    "ex5_bytes": 229524,
+    "ex5_sha256": "EB90290622EC075D182AD96F95D40EB227F982BDA669FC1CA2B5B859934C3378",
+    "compile_log_bytes": 17754,
+    "compile_log_sha256": "39C7066FAC4589677684632F443E7DF9FAC426C2C4F3F610C3664F7B842A5A54"
+  },
+  "selection": {
+    "interval": "2022-08-01 through 2026-06-01",
+    "history_quality": "100% real ticks",
+    "normal_tester_stop": true,
+    "wall_time_seconds": 839.358,
+    "all_symbol_ticks": 520082264,
+    "actual_net_usd": 5786.64,
+    "stressed_2x_cost_net_usd": 5477.564,
+    "closed_lifecycles": 1428,
+    "risk_admission_skips": 192,
+    "stop_loss_exits": 130,
+    "actual_closed_drawdown_usd": 631.76,
+    "stressed_closed_drawdown_usd": 637.752,
+    "mt5_balance_drawdown_absolute_usd": 1.18,
+    "mt5_equity_drawdown_absolute_usd": 3.31,
+    "mt5_balance_drawdown_maximal_usd": 624.37,
+    "mt5_balance_drawdown_at_maximal_pct_reported": 11.29,
+    "mt5_equity_drawdown_maximal_usd": 665.41,
+    "mt5_equity_drawdown_at_maximal_pct_reported": 14.67,
+    "mt5_balance_drawdown_relative_usd": 299.16,
+    "mt5_balance_drawdown_relative_pct_reported": 18.77,
+    "mt5_equity_drawdown_relative_usd": 54.41,
+    "mt5_equity_drawdown_relative_pct_reported": 20.26,
+    "profit_factor_reported": 1.50,
+    "components": [
+      {"component": "ZT-M30-US30-RANGE-COMP-61f61deaba", "closed": 258, "actual_net_usd": 2199.25, "stressed_net_usd": 2141.498},
+      {"component": "ZT-M30-US30-RANGE-COMP-64efb16616", "closed": 196, "actual_net_usd": 833.05, "stressed_net_usd": 785.006},
+      {"component": "ZT-H1-US100-CROSS-IN-14b72317b7", "closed": 660, "actual_net_usd": 793.91, "stressed_net_usd": 658.418},
+      {"component": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "closed": 88, "actual_net_usd": 1432.09, "stressed_net_usd": 1401.027},
+      {"component": "ZT-H1-US30-RETURN-I-c870a788ec", "closed": 226, "actual_net_usd": 528.34, "stressed_net_usd": 491.615},
+      {"component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8", "closed": 0, "actual_net_usd": 0.0, "stressed_net_usd": 0.0}
+    ],
+    "epochs": [
+      {"id": "E1", "closed": 298, "actual_net_usd": 228.51, "stressed_net_usd": 211.022},
+      {"id": "E2", "closed": 371, "actual_net_usd": 172.10, "stressed_net_usd": 142.114},
+      {"id": "E3", "closed": 381, "actual_net_usd": 903.79, "stressed_net_usd": 851.834},
+      {"id": "E4", "closed": 378, "actual_net_usd": 4482.24, "stressed_net_usd": 4272.594}
+    ],
+    "all_epoch_actual_and_stressed_positive": true,
+    "faults": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0,
+      "catchup_failures": 0
+    },
+    "artifact": {
+      "root": "lab/artifacts/raw/paired-month-live-replacement-handoff-v1/selection/",
+      "files": 19,
+      "bytes": 34277710,
+      "bundle_manifest_sha256": "CEB53A96B57B075118B9116A19FF06154B6696CDD88ADC61F80C5CC7B20987C4",
+      "report_bytes": 2758712,
+      "report_sha256": "39D63EB0A67A7C7579489F7E6946501F62EEF3DCF70DE98C0FC83DBC40468AF5",
+      "lifecycle_sha256": "96F9FFDDA2ECC3A3F2641B9EE6AD3AACDB2652FED8F51DA722B3FEC7EF90EEF6",
+      "candidate_sha256": "D24700593A1AF7782CB9C9CA6AA4A8B6FEE3F0992F22B66D0F29EF57572AD9A2",
+      "native_tester_cache_bytes": 1597220,
+      "native_tester_cache_sha256": "3BA85D5FBB2041D2DBCAFE80CBFC39F26387527C0A82DFFB41C1CCE178826862"
+    }
+  },
+  "forward": {
+    "interval": "2026-06-01 through 2026-08-01",
+    "history_quality": "100% real ticks",
+    "normal_tester_stop": true,
+    "wall_time_seconds": 59.563,
+    "actual_net_usd": 32.75,
+    "stressed_2x_cost_net_usd": 30.628,
+    "closed_lifecycles": 54,
+    "risk_admission_skips": 11,
+    "stop_loss_exits": 17,
+    "actual_closed_drawdown_usd": 25.34,
+    "stressed_closed_drawdown_usd": 18.57,
+    "mt5_balance_drawdown_absolute_usd": 4.04,
+    "mt5_equity_drawdown_absolute_usd": 4.45,
+    "mt5_balance_drawdown_maximal_and_relative_usd": 18.28,
+    "mt5_balance_drawdown_maximal_and_relative_pct_reported": 12.44,
+    "mt5_equity_drawdown_maximal_and_relative_usd": 27.95,
+    "mt5_equity_drawdown_maximal_and_relative_pct_reported": 18.66,
+    "profit_factor_reported": 1.32,
+    "components": [
+      {"component": "ZT-M30-US30-RANGE-COMP-61f61deaba", "closed": 9, "actual_net_usd": 15.81, "stressed_net_usd": 15.466},
+      {"component": "ZT-M30-US30-RANGE-COMP-64efb16616", "closed": 7, "actual_net_usd": -8.24, "stressed_net_usd": -8.52},
+      {"component": "ZT-H1-US100-CROSS-IN-14b72317b7", "closed": 28, "actual_net_usd": -10.56, "stressed_net_usd": -11.62},
+      {"component": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "closed": 5, "actual_net_usd": 30.13, "stressed_net_usd": 29.848},
+      {"component": "ZT-H1-US30-RETURN-I-c870a788ec", "closed": 5, "actual_net_usd": 5.61, "stressed_net_usd": 5.454},
+      {"component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8", "closed": 0, "actual_net_usd": 0.0, "stressed_net_usd": 0.0}
+    ],
+    "months": [
+      {"id": "2026-06", "closed": 30, "actual_net_usd": 33.34, "stressed_net_usd": 32.111},
+      {"id": "2026-07", "closed": 24, "actual_net_usd": -0.59, "stressed_net_usd": -1.483}
+    ],
+    "faults": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0,
+      "catchup_failures": 0
+    },
+    "artifact": {
+      "root": "lab/artifacts/raw/paired-month-live-replacement-handoff-v1/forward/",
+      "files": 18,
+      "bytes": 9213388,
+      "bundle_manifest_sha256": "4122FF042727667BAE37609D981DE1BC8A0DE949C89E5CA96D803602C96B82D6",
+      "report_bytes": 131074,
+      "report_sha256": "B6CF836982EBED8FC6B71969E702FFB7CB983D97EB5367DDD6EC9EF5E8CFFCAA",
+      "lifecycle_sha256": "28A9E874D81B2F5E019D8D9FD24D38977586D652EE46444F21D13268A54F5587",
+      "candidate_sha256": "517DD489135CA7F0378D635A60E26B582B13BDD5F458BFF0138516D89638EE86",
+      "native_tester_cache_bytes": 64996,
+      "native_tester_cache_sha256": "FEA66927CE22A2508041B6E12EAB7121F1D16D9F06B78B6133470FE7C014BA06"
+    }
+  },
+  "translation_reproduction": {
+    "same_fixed_windows": true,
+    "same_complete_all_symbol_tick_total_on_selection": true,
+    "same_per_symbol_generated_and_passed_tick_counts_on_selection": true,
+    "same_closed_lifecycle_counts": true,
+    "same_risk_skip_stop_exit_scheduler_and_arc_counts": true,
+    "optimization_selection_actual_net_usd": 5786.63,
+    "lab_selection_actual_net_usd": 5786.64,
+    "selection_actual_delta_usd": 0.01,
+    "optimization_selection_stressed_net_usd": 5477.524,
+    "lab_selection_stressed_net_usd": 5477.564,
+    "selection_stressed_delta_usd": 0.040,
+    "selection_settlement_differences": [
+      {
+        "event": "2023-04-07 entry / 2023-04-10 settlement, Range61",
+        "lab_minus_optimization_actual_usd": 0.01,
+        "lab_minus_optimization_stressed_usd": 0.02
+      },
+      {
+        "event": "2025-04-04 Return stop settlement one second later at a 0.25 worse exit price",
+        "lab_minus_optimization_actual_usd": -0.02,
+        "lab_minus_optimization_stressed_usd": -0.02
+      },
+      {
+        "event": "2026-04-03 entry / 2026-04-06 settlement, Range64",
+        "lab_minus_optimization_actual_usd": 0.02,
+        "lab_minus_optimization_stressed_usd": 0.04
+      }
+    ],
+    "optimization_forward_actual_net_usd": 32.74,
+    "lab_forward_actual_net_usd": 32.75,
+    "forward_actual_delta_usd": 0.01,
+    "optimization_forward_stressed_net_usd": 30.626,
+    "lab_forward_stressed_net_usd": 30.628,
+    "forward_stressed_delta_usd": 0.002,
+    "interpretation": "The exact tick corpus, lifecycle population and decision-path counts are preserved. The disclosed cent-level differences are normal MT5 transaction-settlement timing under the new release and log identity, not signal, sizing, order, data-corpus or economic-source drift. They require no retune and do not invalidate the translation."
+  },
+  "connected_entries_disabled_acceptance": {
+    "dedicated_non_master_runtime": "lab/runtime/pmlrh1-portable/",
+    "terminal_ea_trading_allowed": false,
+    "input_new_entries": false,
+    "create": {
+      "start_event": "START entries-disabled",
+      "final_state_sequence": 2,
+      "new_entries_input_effective": "0/0",
+      "terminal_connected_account_identity_match": "1/1",
+      "owned_positions": 0,
+      "pending_orders": 0,
+      "account_margin_usd": 0.0,
+      "aggregate_planned_risk_usd": 0.0,
+      "normal_stop": true,
+      "forced_stop": false,
+      "artifact_files": 8,
+      "artifact_bytes": 20759,
+      "artifact_bundle_manifest_sha256": "3177C55558461305BCAF61B4B81A20FA8B8411D62B2B440EEDC24B2DEF8BD0F9"
+    },
+    "recovery": {
+      "start_event": "RESUME entries-disabled",
+      "observer_recovered": true,
+      "final_state_sequence": 4,
+      "new_entries_input_effective": "0/0",
+      "terminal_connected_account_identity_match": "1/1",
+      "owned_positions": 0,
+      "pending_orders": 0,
+      "account_margin_usd": 0.0,
+      "aggregate_planned_risk_usd": 0.0,
+      "normal_stop": true,
+      "forced_stop": false,
+      "artifact_files": 12,
+      "artifact_bytes": 51023,
+      "artifact_bundle_manifest_sha256": "F2AB904A8A61D754289D48CEA27C9EABE63C380E1617EFC4C18B97B6D9703596",
+      "events_sha256": "FA2A8FA56F1AECDF50D0411F8EF65ABCFE17C6A7B314929AFBEB4CA6EDC1D838",
+      "current_snapshot_sha256": "E1CE534B05F3C9D6B238053A05A113CEA81F6361FE68FE2455C1A1FE2D5B55C7",
+      "terminal_log_sha256": "5AE69291C1B2F55E0C28F5327DDE3D9F01994191254435FAA698D5629F69E127",
+      "expert_log_sha256": "683CFC8FA49A8114017ABBD719BBB310E70C7A660AD3CE76BDA7C86ED8F42C21"
+    },
+    "faults": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0,
+      "catchup_failures": 0
+    },
+    "orders_sent": 0
+  },
+  "preserved_engineering_correction": {
+    "root": "lab/artifacts/raw/paired-month-live-replacement-handoff-v1/selection-attempt-1-report-parent-correction/",
+    "files": 14,
+    "bytes": 23040626,
+    "bundle_manifest_sha256": "02611E16BE626D6AB990C012C924411024252CBD7C9952C019E324D74E5A810F",
+    "classification": "COMPLETE_ECONOMIC_OUTPUT_WITH_MISSING_HTML_REPORT_PARENT_CORRECTED_WITHOUT_RETUNE_OR_FAILURE"
+  },
+  "economic_judgment": {
+    "nominal_selection_equity_drawdown_line_pct": 20.0,
+    "optimization_precise_selection_equity_drawdown_pct": 20.256887565152653,
+    "nominal_excess_percentage_points": 0.256887565152653,
+    "proportional_excess_pct_of_nominal_line": 1.284437825763263,
+    "pragmatic_drawdown_tolerance_passed": true,
+    "selection_actual_and_stressed_positive": true,
+    "selection_all_four_epochs_actual_and_stressed_positive": true,
+    "full_forward_actual_and_stressed_positive": true,
+    "forward_native_equity_drawdown_below_nominal_line": true,
+    "classification": "VERIFIED_LAB_TRANSLATION_RETAINS_REQUALIFIED_PAIRED_MONTH_PRAGMATIC_ANCHOR",
+    "candidate_failure": false,
+    "interpretation": "The Lab-capable implementation preserves the fixed candidate's exceptional selection profit, four positive long selection epochs and positive complete forward. The nominal selection drawdown miss remains fully disclosed and economically accepted under the user's pragmatic judgment; this engineering handoff adds no economic rescue or retune."
+  },
+  "logging_and_live_boundary": {
+    "current_rlo1_state_and_logs": "immutable historical evidence; never appended, rotated, cleaned, adopted or rewritten by this family",
+    "lab_candidate_state_and_logs": "unique ZetaTerminusNext/lab/pmlrh1 namespace",
+    "cross_release_analysis": "read-only union only after explicit release, execution, Portfolio, schema and Magic normalization",
+    "cross_release_recovery": false,
+    "permitted_state_handoff": "none; only final project-attributable realized P/L may transfer after a later authorized stopped-flat old-owner boundary",
+    "current_live_package_modified": false,
+    "current_live_runtime_started": false,
+    "master_terminal_started": false,
+    "automatic_live_promotion": false,
+    "separate_final_user_authorization_required": true,
+    "later_live_requirements": [
+      "freeze a new Live release namespace, source/settings manifest and hash from this exact closed Lab candidate",
+      "update operator expectations to the new identity, 0.18 aggregate cap and six component multipliers",
+      "prove the old owner stopped and flat",
+      "recover the new owner with entries disabled",
+      "perform an exact final 0/0 to 1/1 handoff only after separate user authorization"
+    ]
+  },
+  "verdict": {
+    "lab_engineering_handoff_passed": true,
+    "replacement_development_candidate_ready": true,
+    "live_promotion_status": "NOT_AUTHORIZED",
+    "next": "Close and commit this entire Lab engineering unit once. Keep Live unchanged and resume the independent Optimization whole-map comparison until the user separately authorizes final Live translation and activation."
+  }
+}

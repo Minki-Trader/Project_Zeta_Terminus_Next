@@ -8,6 +8,8 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 
 현재 active research family는 없다. Unit 105 `us500-shock-response-environment-correction-v1`은 경제 미판정 Unit 027의 과도한 미래 tick-manifest 결합만 교정하고 원래 신호·기간·경제 관문을 그대로 재현했다. P1 `1,264`개 M15 좌표와 전체 `3,446`개 기회를 무결하게 복원했지만 continuation/reversion observed net은 `-$16.7491 / -$13.2710`, doubled-spread net은 `-$46.7692 / -$43.2911`, stressed PF는 `0.74915 / 0.76467`이었고 양쪽 모두 4/4기간 손실·경제관문 `0/5`였다. retained seed·MT5 clue·인접 shock 구제·Optimization candidate·Lab MQL·Live 권한은 없다. 최신 scheduler marker는 `FRONTIER_UNIT_105_CLOSED_VALID_US500_SHOCK_RESPONSE_NO_DIRECTION_NO_SEED`; Optimization Goal은 전체 맵 재비교로 복귀한다.
 
+현재 active engineering family는 없다. `engineering/paired-month-live-replacement-handoff-v1/`은 고정 `dd20-paired-month-stability-mt5-v1` 교체 후보를 별도 Lab identity·Magic·상태·이벤트·research 원장과 전용 비-Master Portable로 번역해 build 6140 `0 errors / 0 warnings`, selection `+$5,786.64 / +$5,477.564`, forward `+$32.75 / +$30.628`, entries-disabled create/recovery `0/0`·flat·zero-risk·zero-fault를 통과하고 닫혔다. 현재 Live RLO1 package·runtime·상태·로그는 변경하지 않았고, 별도 최종 사용자 승인 전에는 Live 승격이나 실진입 권한이 없다.
+
 ## 앞으로의 단 하나의 기준
 
 - 기준 root: `engineering/protective-exit-order-reconciliation-v1/mt5/`
@@ -116,6 +118,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/sloos-ci-credit-supply-impulse-book-state-v1/`: 닫힌 Program 2 / meso→macro Unit 095 단일 실험 family; 공식 39개 SLOOS 원문과 2,188개 causal lifecycle을 한 번 집계한 US30-US100 효과는 `-0.009061R/+0.025073 stop`, 기간 `2/4`, US30 component `2/4`, US100 non-adverse `0/2`였다. 방향성 gate는 실패하고 strict strong-null은 stop이 경계를 `0.0000732` 넘겨 `AMBIGUOUS_SLOOS_CI_CREDIT_SUPPLY_BOOK_STATE_NO_CANDIDATE`; 후보·seed·구현·인접 SLOOS 구제 없음
 - `engineering/protective-exit-order-reconciliation-v1/`: 현재 forward baseline을 소유하는 닫힌 정상 SL 과도주문 소유권 대조 수리 family; P4 실틱 경제 완전동등성, CXR2 `0/0 → 1/1` 승격과 다중 영속 healthy snapshot 통과
 - `engineering/live-research-observation-ledger-v1/`: 검증·동결된 Lab 공학 원본; dashboard·경제·주문·core 상태 계약을 유지한 별도 candidate/lifecycle ledger가 build 6140 `0 errors / 0 warnings`, P4 `100% 실제 틱`, 현재 명세 부모와 `2,676` core payload 행 완전동등성을 통과했고, 별도 manifest의 RLO1 Live 번역은 정식 `0/0 → 1/1` 경계를 거쳐 현재 활성 소유자로 부착 완료
+- `engineering/paired-month-live-replacement-handoff-v1/`: 닫힌 verified serial engineering handoff; 고정 paired-month 경제 후보를 self-contained Live-capable Lab package로 번역해 compile·selection·forward·entries-disabled create/recovery를 통과. RLO1과 forward Lab baseline은 변경하지 않았으며 별도 최종 Live 승인 대기
 - `runtime/`: Git 제외, family별 독립 Portable과 임시 산출물
 - `artifacts/`: 실틱 결과, EA 출력과 빌드 로그
 - `tools/`: 정상 Lab compile·MT5 실행 도구
