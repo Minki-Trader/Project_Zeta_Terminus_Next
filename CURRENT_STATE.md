@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0369`
+- Latest state ID: `STATE-0370`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; the one-shot Codex-lifetime breakaway mechanism remains available, the scheduled task/resident PID loop is removed, and no terminal or dashboard process was observed after the user's reboot
 - Active research boundary: none; source-free Program 1 / meso→macro Unit 098 `legacy-us500-h4-staged-overlay-optimization-eligibility-v1` is closed. It retains one exact lineage-pinned US500 H4 staged-overlay Optimization information seed and opens no current shared-account economic verdict, Lab MQL or Live authority. No adjacent H4 threshold, window, stop, balance gate, volume or legacy-candidate follow-up is authorized.
-- Active optimization boundary: none; source-free `dd20-live-rlo1-post-forward-economic-proxy-v1` is closed `VALID_LIVE_DERIVED_POST_FORWARD_PROXY_SUPPORTS_CURRENT_ANCHOR_NO_NEW_MT5_SHORTLIST`. A byte-equal Optimization snapshot of `44` RLO1 candidate rows and `7` lifecycle rows contained exactly three complete closes. The frozen paired-month anchor's pre-existing weights transform the observed Live control actual/stressed `+$0.66 / +$0.593` into `+$1.08 / +$0.968`, a `+$0.42 / +$0.375` delta, while the Return/Cross pair's normalized `$15.9216` planned risk stays below the `$17.9118` aggregate cap and doubled `$8.28` margin stays below `$47.6145`. This three-lifecycle post-forward proxy tunes no term, makes no native profit/DD claim and opens no MT5 shortlist. The user closed the frequency-lane separation work; US500 H1 remains Cross input, no split or adjacent rescue continues, and the qualified paired-month anchor remains unchanged pending a fresh whole-map comparison.
+- Active optimization boundary: none; source-free `dd20-uniform-entry-strength-floor-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE_UNIFORM_FLOOR_DEGRADES_PROFIT_AND_DRAWDOWN`. One blind global multiplier grid `1.00..1.50` tightened the five existing active entry thresholds without component-specific tuning. The control reproduced `1,428` closes at actual/stressed `+$5,786.63 / +$5,477.524` and conservative closed-balance DD `20.401029%`. Every stronger floor reduced both profit measures and increased DD: the highest-profit noncontrol `1.05` fell to `+$4,842.47 / +$4,555.237` at `25.422685%`, while the lowest-DD noncontrol `1.20` still reached `24.278549%` at only `+$3,822.97 / +$3,579.443`. Selection-eligible count is zero, so June/July and MT5 stayed unopened. The family and every component/direction/period/subgroup/nearby-floor rescue are frozen; the paired-month anchor remains unchanged pending a fresh whole-map comparison.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

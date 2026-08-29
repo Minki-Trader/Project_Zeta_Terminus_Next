@@ -1,0 +1,59 @@
+{
+  "schema": "zeta-dd20-uniform-entry-strength-floor-proxy-declaration-v1",
+  "declared_date_local": "2026-08-29",
+  "status": "DECLARED_SELECTION_AND_HOLDOUT_OUTCOMES_UNOPENED",
+  "campaign": "dd20-uniform-entry-strength-floor-proxy-v1",
+  "parent_main_commit": "06f608e9f88157bb7052b104fd627d30b3411bc4",
+  "whole_map_selection": {
+    "recently_closed_or_frozen": [
+      "static component composition and weights",
+      "capital and aggregate-risk grids",
+      "executable-volume and gain-reserve grids",
+      "profit realization and drawdown governors",
+      "component equity-state allocation",
+      "peer-exit coordination",
+      "US500 H4 and frequency-lane combination",
+      "Live RLO1 post-forward support"
+    ],
+    "chosen_axis": "One blind global multiplicative floor on the five existing active entry thresholds.",
+    "why_not_lab": "This changes no predictor and tests no explanatory hypothesis. It is direct one-dimensional optimization of already-existing hard-coded thresholds, without using an observed component outcome to choose a subgroup.",
+    "component_specific_or_adjacent_rescue": false
+  },
+  "frozen_contract": "optimization/campaigns/dd20-uniform-entry-strength-floor-proxy-v1/config/proxy-contract.json",
+  "input_snapshot": {
+    "root": "optimization/artifacts/raw/dd20-uniform-entry-strength-floor-proxy-v1/input/",
+    "selection_lifecycle_sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+    "forward_lifecycle_sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+    "snapshot_only": true
+  },
+  "outcome_blind_freeze": {
+    "grid": [1.0, 1.05, 1.1, 1.15, 1.2, 1.3, 1.5],
+    "selection_economics_opened": false,
+    "conditioned_holdout_opened": false,
+    "ranking_opened": false,
+    "mt5_shortlist_opened": false,
+    "formal_proxy_process_limit": 1
+  },
+  "interpretation_boundary": {
+    "proxy_can_remove_observed_native_lifecycles": true,
+    "proxy_can_synthesize_freed_admissions": false,
+    "proxy_can_claim_native_profit_or_drawdown": false,
+    "proxy_can_tune_one_component": false,
+    "proxy_can_open_more_than_one_mt5_candidate": false,
+    "new_predictor_or_research_hypothesis": false
+  },
+  "stop_rules": {
+    "no_grid_extension_after_outcome": true,
+    "no_component_subgroup_direction_time_or_regime_rescue": true,
+    "no_threshold_loosening": true,
+    "no_prior_proxy_or_mt5_rerun": true,
+    "no_live_lab_or_master_change": true
+  },
+  "execution_boundary": {
+    "mql_or_settings_changes": 0,
+    "compiles": 0,
+    "tester_or_runtime_invocations": 0,
+    "tests_or_validators": 0,
+    "broker_positions_orders_deals_or_account_queried": false
+  }
+}

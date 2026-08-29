@@ -1,0 +1,115 @@
+{
+  "schema": "zeta-dd20-uniform-entry-strength-floor-proxy-contract-v1",
+  "campaign": "dd20-uniform-entry-strength-floor-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-uniform-entry-strength-floor-proxy-v1/input",
+    "files": [
+      {
+        "name": "anchor-selection-lifecycles.csv",
+        "bytes": 2685969,
+        "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+        "rows": 3287,
+        "births": 1428,
+        "closes": 1428,
+        "actual_net_usd": 5786.63,
+        "stressed_net_usd": 5477.524
+      },
+      {
+        "name": "anchor-forward-lifecycles.csv",
+        "bytes": 92997,
+        "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+        "rows": 115,
+        "births": 54,
+        "closes": 54,
+        "actual_net_usd": 32.74,
+        "stressed_net_usd": 30.626
+      }
+    ],
+    "copied_once": true,
+    "read_source_campaign_after_snapshot": false
+  },
+  "qualified_anchor": {
+    "campaign": "dd20-paired-month-stability-mt5-v1",
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "selection_native_relative_equity_dd_pct": 20.256887565152653,
+    "effective_pragmatic_dd_limit_pct": 21.2,
+    "selection_result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+  },
+  "components": [
+    {
+      "id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "rule": "positive",
+      "native_threshold": 1.5
+    },
+    {
+      "id": "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "rule": "absolute",
+      "native_threshold": 1.5
+    },
+    {
+      "id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "rule": "absolute",
+      "native_threshold": 0.5
+    },
+    {
+      "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "rule": "absolute",
+      "native_threshold": 0.5
+    },
+    {
+      "id": "ZT-H1-US30-RETURN-I-c870a788ec",
+      "rule": "negative",
+      "native_threshold": 0.5
+    }
+  ],
+  "global_threshold_multipliers": [1.0, 1.05, 1.1, 1.15, 1.2, 1.3, 1.5],
+  "selection_period": {
+    "start": "2022.08.01 00:00:00",
+    "end": "2026.06.01 00:00:00"
+  },
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "holdout_periods": [
+    {"id": "JUNE_2026", "start": "2026.06.01 00:00:00", "end": "2026.07.01 00:00:00"},
+    {"id": "JULY_2026", "start": "2026.07.01 00:00:00", "end": "2026.08.01 00:00:00"}
+  ],
+  "fixed_path_model": {
+    "retained_trade_net": "Use each retained native CLOSE row's exact actual and stressed net without rescaling.",
+    "removed_trade_net": 0.0,
+    "newly_freed_admission_or_sizing_feedback": "Not synthesized; requires native MT5 confirmation.",
+    "raw_drawdown": "Maximum of actual and stressed closed-balance relative drawdown from 100 dollars.",
+    "selection_dd_calibration": "Multiply candidate raw DD by native-anchor-DD divided by control raw DD, never reducing raw DD."
+  },
+  "selection_gates": {
+    "multiplier_above_control": true,
+    "actual_net_strictly_above_anchor": true,
+    "stressed_net_strictly_above_anchor": true,
+    "all_four_epochs_actual_and_stressed_positive": true,
+    "all_five_components_retain_at_least_one_close": true,
+    "minimum_actual_and_stressed_balance_positive": true,
+    "calibrated_dd_no_worse_than_anchor": true,
+    "calibrated_dd_at_or_below_effective_pragmatic_limit": true
+  },
+  "selection_role": {
+    "id": "maximum_selection_stressed_profit_uniform_floor",
+    "ordering": "stressed net, actual net, lower calibrated DD, lower multiplier",
+    "maximum_distinct_roles": 1
+  },
+  "holdout_gates": {
+    "open_only_for_selection_winner": true,
+    "each_month_actual_and_stressed_positive": true,
+    "each_month_minimum_balance_positive": true,
+    "each_month_raw_dd_at_or_below_effective_pragmatic_limit": true
+  },
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1
+  }
+}

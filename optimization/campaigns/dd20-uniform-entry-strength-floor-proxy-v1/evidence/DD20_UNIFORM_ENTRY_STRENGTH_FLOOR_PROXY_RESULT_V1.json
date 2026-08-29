@@ -1,0 +1,177 @@
+{
+  "schema": "zeta-dd20-uniform-entry-strength-floor-proxy-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE_UNIFORM_FLOOR_DEGRADES_PROFIT_AND_DRAWDOWN",
+  "campaign": "dd20-uniform-entry-strength-floor-proxy-v1",
+  "parent_main_commit": "06f608e9f88157bb7052b104fd627d30b3411bc4",
+  "formal_process": {
+    "invocations": 1,
+    "elapsed_seconds": 0.0789036,
+    "process_exit_code": 0,
+    "receipt_command_engineering_corrections_before_proxy": 1,
+    "economic_reruns": 0
+  },
+  "input_receipts": [
+    {
+      "name": "anchor-selection-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "rows": 3287,
+      "births": 1428,
+      "closes": 1428,
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524
+    },
+    {
+      "name": "anchor-forward-lifecycles.csv",
+      "bytes": 92997,
+      "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+      "rows": 115,
+      "births": 54,
+      "closes": 54,
+      "actual_net_usd": 32.74,
+      "stressed_net_usd": 30.626
+    }
+  ],
+  "raw_output": {
+    "path": "optimization/artifacts/raw/dd20-uniform-entry-strength-floor-proxy-v1/output/proxy-result.json",
+    "bytes": 27876,
+    "sha256": "22E254A970FD6998231D255BE5256BD6DEC1EBE4C89BAB42682E29F7FF2247F7"
+  },
+  "control_reproduction": {
+    "multiplier": 1.0,
+    "actual_net_usd": 5786.63,
+    "stressed_net_usd": 5477.524,
+    "raw_closed_balance_drawdown_pct": 20.4010291664,
+    "native_relative_equity_drawdown_pct": 20.2568875652,
+    "drawdown_calibration_factor": 0.9929345917,
+    "calibration_never_reduces_raw_drawdown": true,
+    "retained_closes": 1428,
+    "removed_closes": 0,
+    "gate": "PASS"
+  },
+  "selection_records": [
+    {
+      "multiplier": 1.0,
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524,
+      "calibrated_drawdown_pct": 20.4010291664,
+      "retained_closes": 1428,
+      "removed_closes": 0,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "multiplier": 1.05,
+      "actual_net_usd": 4842.47,
+      "stressed_net_usd": 4555.237,
+      "calibrated_drawdown_pct": 25.4226851397,
+      "retained_closes": 1344,
+      "removed_closes": 84,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "multiplier": 1.1,
+      "actual_net_usd": 3830.08,
+      "stressed_net_usd": 3555.078,
+      "calibrated_drawdown_pct": 24.2844058949,
+      "retained_closes": 1285,
+      "removed_closes": 143,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "multiplier": 1.15,
+      "actual_net_usd": 3930.58,
+      "stressed_net_usd": 3671.282,
+      "calibrated_drawdown_pct": 30.4321777093,
+      "retained_closes": 1207,
+      "removed_closes": 221,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "multiplier": 1.2,
+      "actual_net_usd": 3822.97,
+      "stressed_net_usd": 3579.443,
+      "calibrated_drawdown_pct": 24.2785491901,
+      "retained_closes": 1143,
+      "removed_closes": 285,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "multiplier": 1.3,
+      "actual_net_usd": 3486.17,
+      "stressed_net_usd": 3264.855,
+      "calibrated_drawdown_pct": 34.2316196794,
+      "retained_closes": 1038,
+      "removed_closes": 390,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "multiplier": 1.5,
+      "actual_net_usd": 2778.03,
+      "stressed_net_usd": 2586.491,
+      "calibrated_drawdown_pct": 36.9028712356,
+      "retained_closes": 887,
+      "removed_closes": 541,
+      "all_epochs_positive": false,
+      "selection_eligible": false
+    }
+  ],
+  "gate_counts": {
+    "above_control_candidates": 6,
+    "actual_profit_improvement": 0,
+    "stressed_profit_improvement": 0,
+    "all_four_epochs_positive": 5,
+    "five_component_breadth": 6,
+    "balance_positive": 6,
+    "calibrated_dd_no_worse_than_anchor": 0,
+    "calibrated_dd_within_21_2_pct": 0,
+    "all_selection_gates": 0
+  },
+  "economic_comparison": {
+    "highest_profit_noncontrol": {
+      "multiplier": 1.05,
+      "actual_net_usd": 4842.47,
+      "stressed_net_usd": 4555.237,
+      "actual_delta_vs_anchor_usd": -944.16,
+      "stressed_delta_vs_anchor_usd": -922.287,
+      "calibrated_drawdown_pct": 25.4226851397,
+      "drawdown_delta_vs_native_anchor_percentage_points": 5.1657975745
+    },
+    "lowest_drawdown_noncontrol": {
+      "multiplier": 1.2,
+      "actual_net_usd": 3822.97,
+      "stressed_net_usd": 3579.443,
+      "calibrated_drawdown_pct": 24.2785491901,
+      "drawdown_delta_vs_native_anchor_percentage_points": 4.0216616249
+    },
+    "interpretation": "Every stronger uniform floor removes economically useful native entries faster than it removes adverse path concentration. All six noncontrol factors reduce actual and stressed profit and increase the conservative calibrated closed-balance drawdown above both the anchor and the pragmatic 21.2 percent line."
+  },
+  "conditional_boundaries": {
+    "selection_eligible_count": 0,
+    "selection_winner": null,
+    "june_or_july_holdout_opened": false,
+    "mt5_shortlist_size": 0,
+    "mt5_launched": false
+  },
+  "economic_verdict": {
+    "classification": "UNIFORM_ENTRY_STRENGTH_FLOOR_VALID_ECONOMIC_NONCONFIRMATION",
+    "candidate_retained": false,
+    "anchor_changed": false,
+    "next_action": "Freeze this complete global-floor family without holdout or MT5. Recompare the full Optimization map before any economically distinct successor; do not rescue a component, direction, period, threshold, subgroup or nearby floor."
+  },
+  "execution_boundary": {
+    "mql_or_settings_changes": 0,
+    "compiles": 0,
+    "tester_or_runtime_invocations": 0,
+    "tests_or_validators": 0,
+    "live_lab_or_master_mutation": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "native_profit_or_drawdown_claim": false
+  }
+}
