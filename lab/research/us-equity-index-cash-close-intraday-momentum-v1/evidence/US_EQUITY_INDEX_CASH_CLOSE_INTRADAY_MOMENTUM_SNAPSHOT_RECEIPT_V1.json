@@ -1,0 +1,82 @@
+{
+  "schema": "zeta-next-us-equity-index-cash-close-intraday-momentum-snapshot-receipt-v1",
+  "created_at_local": "2026-08-30",
+  "status": "LAB_OWNED_INPUT_SNAPSHOT_FROZEN_ECONOMICS_UNOPENED",
+  "unit": "us-equity-index-cash-close-intraday-momentum-108",
+  "family": "us-equity-index-cash-close-intraday-momentum-v1",
+  "copy_boundary": {
+    "lab_owned_root": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/",
+    "one_time_sources": [
+      "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US30_M1.parquet",
+      "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US100_M1.parquet",
+      "optimization/artifacts/raw/dd20-dual-portfolio-internal-formula-lattice-proxy-v1/market/acquisition-receipt.json"
+    ],
+    "formal_process_reads_only_lab_owned_snapshot": true,
+    "formal_process_follows_no_provenance_path_embedded_in_receipt": true,
+    "cross_family_include_link_or_execution": false
+  },
+  "manifest_rule": "Sort relative-name|bytes|uppercase-SHA256 by relative name, join with LF, hash UTF-8 without trailing LF.",
+  "manifest_sha256": "F1324FE29EA31A59379AA985B0CD93EA380492BC7A85ECBA15E15D7C723837A0",
+  "input_files": 3,
+  "input_bytes": 40239474,
+  "files": [
+    {
+      "name": "market/US100_M1.parquet",
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+      "bytes": 21213599,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2",
+      "rows": 1618383,
+      "first_utc": "2022-01-03T01:00:00+00:00",
+      "last_utc": "2026-07-31T23:59:00+00:00"
+    },
+    {
+      "name": "market/US30_M1.parquet",
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+      "bytes": 19018323,
+      "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063",
+      "rows": 1617902,
+      "first_utc": "2022-01-03T01:00:00+00:00",
+      "last_utc": "2026-07-31T23:59:00+00:00"
+    },
+    {
+      "name": "spec/acquisition-receipt.json",
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    }
+  ],
+  "premetric_feasibility": {
+    "scope": "Timestamps, 09:30..15:59 ET completeness, prior-session gaps and predictor signs only. No 15:30-to-16:00 return, P/L, cost-adjusted result, drawdown, profit factor, gate or verdict was calculated.",
+    "complete_sessions": {"US30": 1143, "US100": 1143},
+    "common_complete_sessions": 1141,
+    "eligible_with_prior_gap_1_to_4_all_dates": 1133,
+    "frozen_period_starts": {
+      "P1_2022H2_2023": 706,
+      "P2_2024": 484,
+      "P3_2025": 490,
+      "P4_2026_JAN_MAY": 204,
+      "P5_LATEST_2026_JUN_JUL": 90
+    },
+    "zero_predictors": 0,
+    "economics_opened": false
+  },
+  "frozen_process": {
+    "config": {
+      "path": "lab/research/us-equity-index-cash-close-intraday-momentum-v1/config/contract.json",
+      "bytes": 10995,
+      "sha256": "73A870481E1B6CA9787F2DAF20D532434195978CD89DBE81ADEF4B20350C6D07"
+    },
+    "analysis": {
+      "path": "lab/research/us-equity-index-cash-close-intraday-momentum-v1/analysis/run_analysis.py",
+      "bytes": 30920,
+      "sha256": "7990D9B7E833A51B06BAEEA122C331A99296B058B7D36D7D79EF67931B1ACD07"
+    },
+    "role": "One fixed source-free economic aggregation, not a CLI product, test, validator, harness or trading executable."
+  },
+  "mql_changes": 0,
+  "compile_paths": 0,
+  "tester_paths": 0,
+  "mt5_paths": 0,
+  "broker_account_queries": 0,
+  "live_surface": "UNTOUCHED"
+}

@@ -1,0 +1,208 @@
+{
+  "schema": "zeta-next-us-equity-index-cash-close-intraday-momentum-contract-v1",
+  "family": "us-equity-index-cash-close-intraday-momentum-v1",
+  "unit": "us-equity-index-cash-close-intraday-momentum-108",
+  "status": "FROZEN_OUTCOMES_UNOPENED",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "roots": {
+    "input": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input",
+    "output": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output"
+  },
+  "literature_anchor": [
+    {
+      "title": "Market intraday momentum",
+      "journal": "Journal of Financial Economics",
+      "year": 2018,
+      "doi": "10.1016/j.jfineco.2018.05.009",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0304405X18301351",
+      "role": "Previous-close-to-intraday-return direction predicts the final half hour in U.S. equity index products."
+    },
+    {
+      "title": "Hedging demand and market intraday momentum",
+      "journal": "Journal of Financial Economics",
+      "year": 2021,
+      "doi": "10.1016/j.jfineco.2021.04.029",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0304405X21001598",
+      "role": "The sign of the return from the previous close to the start of the last 30 minutes predicts the last 30-minute return across broad futures markets."
+    }
+  ],
+  "immutable_inputs": {
+    "manifest_rule": "Sort relative-name|bytes|uppercase-SHA256 by relative name, join with LF, hash UTF-8 without trailing LF.",
+    "manifest_sha256": "F1324FE29EA31A59379AA985B0CD93EA380492BC7A85ECBA15E15D7C723837A0",
+    "files": [
+      {
+        "name": "market/US100_M1.parquet",
+        "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+        "bytes": 21213599,
+        "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2",
+        "rows": 1618383,
+        "first_utc": "2022-01-03T01:00:00+00:00",
+        "last_utc": "2026-07-31T23:59:00+00:00"
+      },
+      {
+        "name": "market/US30_M1.parquet",
+        "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+        "bytes": 19018323,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063",
+        "rows": 1617902,
+        "first_utc": "2022-01-03T01:00:00+00:00",
+        "last_utc": "2026-07-31T23:59:00+00:00"
+      },
+      {
+        "name": "spec/acquisition-receipt.json",
+        "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+        "bytes": 7552,
+        "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+      }
+    ]
+  },
+  "symbols": ["US30", "US100"],
+  "bar_files": {
+    "US30": "market/US30_M1.parquet",
+    "US100": "market/US100_M1.parquet"
+  },
+  "required_schema": {
+    "time": "int64",
+    "open": "double",
+    "high": "double",
+    "low": "double",
+    "close": "double",
+    "tick_volume": "uint64",
+    "spread": "int32",
+    "real_volume": "uint64"
+  },
+  "trade_spec": {
+    "point": 0.01,
+    "trade_contract_size": 1.0,
+    "trade_tick_size": 0.01,
+    "trade_tick_value": 0.01,
+    "volume": 0.01,
+    "starting_balance_usd": 100.0
+  },
+  "fixed_rule": {
+    "timezone": "America/New_York",
+    "regular_session_minutes_inclusive": ["09:30", "15:59"],
+    "complete_session_minutes": 390,
+    "paired_calendar": "A date is eligible only when both US30 and US100 contain the same complete 390-minute 09:30..15:59 ET session.",
+    "prior_session": "Use the immediately preceding paired complete session only when its calendar gap is 1..4 days.",
+    "predictor": "Current 15:30 M1 open midpoint divided by the prior paired session 15:59 M1 close midpoint minus one.",
+    "direction": "Continuation only: BUY for predictor greater than zero and SELL for predictor less than zero. A zero predictor is an integrity failure because the frozen feasibility scan found none.",
+    "entry": "Current 15:30 ET M1 open. Export price is bid; midpoint is bid plus one half recorded spread times point.",
+    "exit": "Current 15:59 ET M1 close, economically the 16:00 cash-session boundary. Export price is bid; midpoint is bid plus one half recorded spread times point.",
+    "bundle": "Trade both symbols at 0.01 lot on every eligible paired day. The two-symbol bundle is indivisible and no symbol is selected post hoc.",
+    "overlap": "Each symbol has at most one 30-minute position and both positions close before the next session.",
+    "no_threshold": true,
+    "no_direction_selection": true
+  },
+  "fixed_cost_proxy": {
+    "gross_usd": "direction * (exit_midpoint - entry_midpoint) * contract_size * volume",
+    "observed_usd": "gross minus one half of entry-plus-exit full-spread burden; algebraically identical to executable bid/ask entry and exit.",
+    "stressed_usd": "gross minus the full entry-plus-exit spread burden, i.e. doubled observed half-spread cost from midpoint.",
+    "binding": "stressed_usd",
+    "commission_swap_financing": "Zero in the fixed 30-minute proxy; a retained seed would still require native Tester economics in a later separately declared Optimization campaign."
+  },
+  "periods": {
+    "P1_2022H2_2023": {"from_inclusive": "2022-08-01", "to_exclusive": "2024-01-01", "role": "initial literature-transfer evidence; report 2022H2 and 2023 separately"},
+    "P2_2024": {"from_inclusive": "2024-01-01", "to_exclusive": "2025-01-01", "role": "first confirmation"},
+    "P3_2025": {"from_inclusive": "2025-01-01", "to_exclusive": "2026-01-01", "role": "second confirmation"},
+    "P4_2026_JAN_MAY": {"from_inclusive": "2026-01-01", "to_exclusive": "2026-06-01", "role": "third confirmation before latest holdout"},
+    "P5_LATEST_2026_JUN_JUL": {"from_inclusive": "2026-06-01", "to_exclusive": "2026-08-01", "role": "latest two completed months; nominal veto with predeclared practical marginal-loss allowance"}
+  },
+  "period_splits": {
+    "P1A_2022H2": {"from_inclusive": "2022-08-01", "to_exclusive": "2023-01-01"},
+    "P1B_2023": {"from_inclusive": "2023-01-01", "to_exclusive": "2024-01-01"},
+    "P2_P4_CONFIRMATION": {"from_inclusive": "2024-01-01", "to_exclusive": "2026-06-01"},
+    "P1_P4_PRELATEST": {"from_inclusive": "2022-08-01", "to_exclusive": "2026-06-01"},
+    "P1_P5_FULL": {"from_inclusive": "2022-08-01", "to_exclusive": "2026-08-01"}
+  },
+  "premetric_feasibility": {
+    "economic_columns_opened": false,
+    "complete_sessions": {"US30": 1143, "US100": 1143},
+    "common_complete_sessions": 1141,
+    "eligible_with_prior_gap_1_to_4_all_dates": 1133,
+    "gap_days": {"1": 888, "2": 12, "3": 209, "4": 24},
+    "periods": {
+      "P1_2022H2_2023": {"days": 353, "starts": 706, "US30": {"up": 181, "down": 172, "zero": 0}, "US100": {"up": 196, "down": 157, "zero": 0}, "same_direction_days": 264, "opposite_direction_days": 89},
+      "P1A_2022H2": {"days": 103, "starts": 206, "US30": {"up": 52, "down": 51, "zero": 0}, "US100": {"up": 49, "down": 54, "zero": 0}, "same_direction_days": 80, "opposite_direction_days": 23},
+      "P1B_2023": {"days": 250, "starts": 500, "US30": {"up": 129, "down": 121, "zero": 0}, "US100": {"up": 147, "down": 103, "zero": 0}, "same_direction_days": 184, "opposite_direction_days": 66},
+      "P2_2024": {"days": 242, "starts": 484, "US30": {"up": 131, "down": 111, "zero": 0}, "US100": {"up": 137, "down": 105, "zero": 0}, "same_direction_days": 170, "opposite_direction_days": 72},
+      "P3_2025": {"days": 245, "starts": 490, "US30": {"up": 125, "down": 120, "zero": 0}, "US100": {"up": 137, "down": 108, "zero": 0}, "same_direction_days": 183, "opposite_direction_days": 62},
+      "P4_2026_JAN_MAY": {"days": 102, "starts": 204, "US30": {"up": 50, "down": 52, "zero": 0}, "US100": {"up": 60, "down": 42, "zero": 0}, "same_direction_days": 82, "opposite_direction_days": 20},
+      "P5_LATEST_2026_JUN_JUL": {"days": 45, "starts": 90, "US30": {"up": 27, "down": 18, "zero": 0}, "US100": {"up": 21, "down": 24, "zero": 0}, "same_direction_days": 23, "opposite_direction_days": 22}
+    }
+  },
+  "economic_gates": {
+    "p1": {
+      "profit_factor_min": 1.05,
+      "net_to_drawdown_min": 1.25,
+      "positive_combined": true,
+      "positive_p1_splits": true,
+      "positive_each_symbol": true,
+      "positive_each_predictor_side": true
+    },
+    "confirmation_p2_p4": {
+      "positive_each_combined_period": true,
+      "pooled_profit_factor_min": 1.05,
+      "pooled_net_to_drawdown_min": 1.25,
+      "positive_each_symbol_pooled": true,
+      "positive_each_predictor_side_pooled": true,
+      "positive_symbol_period_cells_min": 5,
+      "symbol_period_cells_total": 6
+    },
+    "prelatest_p1_p4": {
+      "profit_factor_min": 1.075,
+      "net_to_drawdown_min": 1.5,
+      "nominal_max_drawdown_percent": 20.0,
+      "practical_max_drawdown_percent": 21.2,
+      "maximum_symbol_share_of_positive_net": 0.75,
+      "maximum_top_five_positive_day_share": 0.40
+    },
+    "latest": {
+      "nominal_net_min_usd": 0.0,
+      "practical_floor_formula": "-0.25 * positive P1-P4 average stressed USD per paired day * P5 paired days",
+      "full_path_profit_factor_min": 1.05,
+      "full_path_net_positive": true
+    },
+    "verdicts": {
+      "nominal_pass": "PASS_RETAIN_ONE_FIXED_TWO_INDEX_CASH_CLOSE_MOMENTUM_LAB_SEED",
+      "practical_pass": "PASS_PRACTICAL_MARGINAL_LATEST_OR_DD_RETAIN_ONE_FIXED_TWO_INDEX_CASH_CLOSE_MOMENTUM_LAB_SEED",
+      "nonconfirmation": "VALID_NO_CASH_CLOSE_INTRADAY_MOMENTUM_AFTER_COST_NO_SEED",
+      "ambiguous": "AMBIGUOUS_CASH_CLOSE_INTRADAY_MOMENTUM_NO_SEED",
+      "correction": "CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT"
+    }
+  },
+  "outputs": {
+    "result": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/analysis-result.json",
+    "trades": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/trades.csv",
+    "days": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/paired-days.csv"
+  },
+  "execution_contract": {
+    "formal_source_free_processes": 1,
+    "economic_aggregations": 1,
+    "direction_books": 1,
+    "threshold_points": 0,
+    "grid_points": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "engineering_correction_limit": null
+  },
+  "exclusions": [
+    "reversion direction or direction selection",
+    "entry or exit time neighbor",
+    "predictor threshold, magnitude bucket, volatility filter or session subgroup",
+    "single-symbol retention, weighting or post-hoc symbol deletion",
+    "US500 substitution or synthetic US500 M1 construction",
+    "stop, hold, sizing, capital, risk, ladder, admission or collision change",
+    "bootstrap, significance rescue, grid, MQL, SET, compile, Tester, MT5, Master, Live or broker/account path"
+  ]
+}
