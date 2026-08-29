@@ -1,0 +1,110 @@
+{
+  "schema": "zeta-next-gain-overlay-base-quantum-reservation-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "FIT_SUPPORTS_ONE_BOUNDED_OPTIMIZATION_SEED_NATIVE_ECONOMICS_UNOPENED",
+  "unit": "gain-overlay-base-quantum-reservation-097",
+  "family": "gain-overlay-base-quantum-reservation-v1",
+  "primary_program": "portfolio_capital_risk",
+  "research_height": "macro",
+  "evidence": {
+    "declaration_bytes": 6499,
+    "declaration_sha256": "9EB0D09B1CB5606F04F48382329EA33B9CF2E372CB18D5EBA3F71D1406884C31",
+    "fit_rows_bytes": 6373,
+    "fit_rows_sha256": "519B5009593F6760859DDE5279B253094EA6D0D68898D7322EBA6FFC463F6B4A",
+    "fit_rows": 42
+  },
+  "paired_native_attribution": {
+    "prior_qualified_anchor_actual_usd": 1691.54,
+    "prior_qualified_anchor_stressed_usd": 1626.26,
+    "current_anchor_actual_usd": 1693.46,
+    "current_anchor_stressed_usd": 1626.677,
+    "current_anchor_delta_actual_usd": 1.92,
+    "current_anchor_delta_stressed_usd": 0.417,
+    "changed_executable_volumes": 42,
+    "changed_volume_interval": "2026-01-14 through 2026-05-29",
+    "direct_changed_volume_delta_actual_usd": 13.54,
+    "direct_changed_volume_delta_stressed_usd": 11.797,
+    "admission_substitution_delta_actual_usd": -10.12,
+    "admission_substitution_delta_stressed_usd": -9.88,
+    "later_same_volume_stop_geometry_delta_actual_usd": -1.50,
+    "later_same_volume_stop_geometry_delta_stressed_usd": -1.50,
+    "identity_actual_usd": "13.54 - 10.12 - 1.50 = 1.92",
+    "identity_stressed_usd": "11.797 - 9.88 - 1.50 = 0.417"
+  },
+  "identified_admission_substitution": {
+    "cause": "At 2026-05-15 15:00, Intraday-R gain volume increased from 0.32 to 0.36 and planned risk from 195.213312 to 220.203792 dollars.",
+    "blocked_base_opportunity": "At 16:00, the prior anchor admitted Return volume 0.12 with planned risk 73.204992 dollars and later actual/stressed net -2.12/-2.384 dollars; the current anchor blocked it at the aggregate cap.",
+    "replacement": "At 17:00, the current anchor instead admitted Cross volume 0.04 with planned risk 24.467088 dollars and actual/stressed net -12.24/-12.264 dollars.",
+    "replacement_delta_actual_usd": -10.12,
+    "replacement_delta_stressed_usd": -9.88,
+    "candidate_structural_bridge": {
+      "gain_path_headroom_after_intraday_usd": 55.050948,
+      "one_base_quantum_reserve_usd": 61.16772,
+      "reserve_binds": true,
+      "neutral_path_intraday_risk_usd": 195.213312,
+      "aggregate_cap_usd": 275.25474,
+      "neutral_path_headroom_usd": 80.041428,
+      "prior_return_risk_usd": 73.204992,
+      "neutral_path_can_hold_prior_return_risk": true
+    }
+  },
+  "fixed_reserve_fit": {
+    "reserve_fraction": 0.04,
+    "parameter_searches": 0,
+    "reason_for_value": "The exact unchanged base position-risk quantum, not an outcome-selected threshold.",
+    "changed_volume_rows": 42,
+    "reserve_binding_rows": 9,
+    "reserve_binding_components": 2,
+    "reserve_binding_months": 2,
+    "binding_component_counts": {
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46": 8,
+      "ZT-H1-US30-RETURN-I-c870a788ec": 1
+    },
+    "binding_direct_delta_actual_usd": 0.20,
+    "binding_direct_delta_stressed_usd": -0.44,
+    "retained_unbound_direct_delta_actual_usd": 13.34,
+    "retained_unbound_direct_delta_stressed_usd": 12.237
+  },
+  "candidate_selection_proxy": {
+    "method": "Start from the prior native anchor, retain only the direct native deltas on rows where one base quantum remains, assign zero admission-substitution penalty as the mechanism hypothesis, charge the full observed -1.50/-1.50 later stop-geometry propagation, then subtract an additional 5 dollars from both views.",
+    "pre_uncertainty_actual_usd": 1703.38,
+    "pre_uncertainty_stressed_usd": 1636.997,
+    "additional_uncertainty_reserve_usd": 5.0,
+    "conservative_actual_usd": 1698.38,
+    "conservative_stressed_usd": 1631.997,
+    "margin_over_current_anchor_actual_usd": 4.92,
+    "margin_over_current_anchor_stressed_usd": 5.32,
+    "profit_fit_passed": true,
+    "native_drawdown_estimate": null,
+    "native_drawdown_fit_passed": null,
+    "interpretation": "The fixed reserve retains positive fitted direct overlay value and prices the known downstream balance/stop propagation, while its only hypothesized benefit is removal of the identified admission substitution. This selects one native-information candidate; it is not economic proof."
+  },
+  "density_and_limits": {
+    "complete_observed_admission_substitutions": 1,
+    "reserve_binding_rows": 9,
+    "forward_non_neutral_overlay_evaluations": 0,
+    "general_admission_priority_claim_supported": false,
+    "native_profit_claim_supported": false,
+    "native_drawdown_claim_supported": false,
+    "why_a_seed_is_still_bounded": "The reserve is the unchanged 4% base quantum, no threshold or subgroup was searched, the paired native action identity is complete, and the future optimization contract permits exactly one candidate with the current full native gates."
+  },
+  "decision": {
+    "classification": "RETAIN_ONE_BASE_QUANTUM_RESERVED_GAIN_OVERLAY_OPTIMIZATION_SEED",
+    "retained_seed": "ONE_BASE_QUANTUM_RESERVED_GAIN_OVERLAY",
+    "candidate_count": 1,
+    "same_family_followup": false,
+    "automatic_optimization_open": false,
+    "automatic_live_authority": false,
+    "required_next_boundary": "Commit and push Unit 097 once, recompare Programs 1-5 and 7, then decide whether this one seed should enter a separately named optimization campaign."
+  },
+  "execution_accounting": {
+    "formal_lab_candidate_economic_runs": 0,
+    "mql_files_added_or_modified": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "runtime_copies": 0,
+    "tests_or_validators": 0,
+    "broker_or_account_queries": 0,
+    "live_changes": 0
+  }
+}

@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 한 선언은 한 거시 질문에 필요한 관련 변형 2–3개를 한 번만 묶을 수 있고, 종료 뒤에는 전 프로그램을 다시 비교한다. 같은 주제의 인접 임계값·창·하위집단·심볼·이벤트·청산·사이징이나 보존 seed를 자동으로 이어서 열지 않는다.
 
-현재 active research family는 없다. Unit 096은 하나의 선언-to-closure 실험으로 종료됐고, 이후 독립 source/schema sweep도 완전한 비인접 후보를 찾지 못해 Unit 097은 비어 있다. 최신 scheduler marker는 `FRONTIER_MAP_AFTER_096_INDEPENDENT_SOURCE_SCHEMA_AUDIT_NO_READY_WHOLE_EXPERIMENT`; feasibility와 구현 단계는 별도 실험으로 세지 않는다.
+현재 active research family는 없다. Optimization의 새 native action 귀속이 Program 5의 완전한 admission-substitution 한 건을 제공하여 source-free Unit 097 `gain-overlay-base-quantum-reservation-v1`을 열고 한 단위로 닫았다. 정확한 `4%` base quantum reserve 하나만 별도 Optimization 후보 seed로 보존하며, Lab 경제성·native DD·Live 권한은 열지 않았다. 최신 scheduler marker는 `FRONTIER_UNIT_097_CLOSED_ONE_BOUNDED_OPTIMIZATION_SEED_NO_LAB_ECONOMIC_VERDICT`; feasibility와 구현 단계는 별도 실험으로 세지 않는다.
 
 ## 앞으로의 단 하나의 기준
 
@@ -49,6 +49,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 - `research/us100-failed-extreme-auction-response-v1/`: 닫힌 Unit 031 family; P1 HTML 100% 표기와 달리 상세 로그가 1,920분 부재·484분 폐기 및 생성 대체를 증명해 4,129 경제행 미열람, prototype 없음
 - `research/us100-realized-variance-asymmetry-response-v1/`: 닫힌 Unit 032 fresh observer family; 경로길이 교정 뒤 P1은 정상 종료·상세 경고 0이었으나 HTML이 `99% 실제 틱`으로 고정 100% 관문 실패, 1,529 경제행 미열람·P2-P4·prototype 없음
 - `research/us100-realized-variance-asymmetry-response-authoritative-history-v1/`: 닫힌 무효 Program 1 / meso Unit 096 단일 실험 family; Unit 032의 경제 미판정 계약을 그대로 재현하고 첫-use symbols/HCS drift를 보존·재동결했지만 안정 P1도 HTML `99% 실제 틱`으로 필수 100% 관문 실패. 1,529 opportunity 경제열·P2-P4·방향판정은 미개봉이고 `INVALID_STABLE_P1_HTML_REAL_TICK_QUALITY_NO_ECONOMIC_VERDICT_NO_CANDIDATE_CLOSE_AXIS`; 전체 realized-variance asymmetry 축·인접 구제·prototype 없음
+- `research/gain-overlay-base-quantum-reservation-v1/`: 닫힌 source-free Program 5 / macro Unit 097 family; 새 Optimization native pair의 `42`개 증액을 `+$13.54/+$11.797`, admission 교체를 `-$10.12/-$9.88`, 후속 geometry를 `-$1.50/-$1.50`로 완전 귀속했다. 검색하지 않은 기존 `4%` base quantum reserve는 9개 증액에서만 bind하고 `$5` 추가 reserve 뒤 proxy `+$1,698.38/+$1,631.997`로 현재 anchor보다 `+$4.92/+$5.32`; native 경제/DD는 미개봉이며 정확히 한 Optimization seed만 보존
 - `research/us100-directional-path-efficiency-response-v1/`: 닫힌 Unit 033 fresh observer family; P1은 1,127건 정상 해결·상세 경고 0이었으나 HTML `99% 실제 틱`으로 고정 100% 관문 실패, 경제행 미열람·P2-P3·prototype 없음
 - `research/native-direction-asymmetry-value-v1/`: 닫힌 Unit 034 source-free family; 전 전략 return `|SELL-BUY|<0.10R`, RC4 stop 부담은 컸으나 수익효과 미달로 방향 처리 후보 없음
 - `research/same-strategy-interbirth-gap-value-v1/`: 닫힌 Unit 035 source-free family; 전 전략 밀도는 통과했으나 pooled `|rho|<0.20`이고 RC16 근접 tail도 `0.08111R/-0.03409`로 수익·stop 크기 미달, cadence 처리 후보 없음

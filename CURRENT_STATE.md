@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0361`
+- Latest state ID: `STATE-0362`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -25,8 +25,8 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 ## Active work
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
-- Active research boundary: none; Unit 096 is durably closed and pushed, and the post-096 independent source/schema sweep found no complete nonadjacent experiment, so Unit 097 remains unreserved while the Goal stays active
-- Active optimization boundary: none; phase-two `dd20-component-equity-state-native-margin-mt5-v1` is closed as a complete valid MT5 success. The first complete selection earned actual/stressed `+$1,693.46 / +$1,626.677`, all four epochs passed, and native equity DD was `19.797353%`; the independent forward retained `+$23.01 / +$21.256` at `12.436759%` with positive June and July. It strictly improves the prior qualified anchor by `+$1.92 / +$0.417` and is now the authoritative optimization anchor, with only `0.202647` DD points remaining. Two earlier incomplete invocations were path-engineering corrections with no economic verdict. Recompare the whole active map before an economically distinct proxy-first successor; no adjacent state retune or automatic Live promotion is authorized.
+- Active research boundary: none; source-free Program 5 / macro Unit 097 `gain-overlay-base-quantum-reservation-v1` is closed as one fit-supported Optimization seed with no Lab native-economic verdict. It freezes only the unchanged `4%` base risk quantum against incremental gain-overlay volume; no threshold grid, Lab source/runtime, test, validator or Live authority opened.
+- Active optimization boundary: none; phase-two `dd20-component-equity-state-native-margin-mt5-v1` remains the authoritative qualified anchor at selection actual/stressed `+$1,693.46 / +$1,626.677`, native equity DD `19.797353%`, and forward `+$23.01 / +$21.256`. Unit 097 retained exactly one nonadjacent Program 5 seed after attributing the narrow uplift to `42` volume changes, one harmful admission substitution and later geometry propagation. Recompare the whole active map after the Unit 097 push before that seed may enter one separately owned proxy/native Optimization campaign; no automatic Live promotion is authorized.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
