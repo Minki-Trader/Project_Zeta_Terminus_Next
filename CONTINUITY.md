@@ -82,7 +82,7 @@ This successor adds only the verified read-only research observation hooks and a
 - Proxy-selected native June-July confirmation: actual/stressed `+$32.74 / +$30.626`, native relative equity DD `18.675302130%`
 - Latest closed campaign: `optimization/campaigns/dd20-dual-portfolio-internal-formula-lattice-proxy-v1/`
 - Latest verdict: `NO_ROBUST_SHARED_FORMULA_REPLACEMENT_CLUE_FIXED_CANDIDATE_RETAINED_LAB_ONLY_INTERACTION_SEEDS_RECORDED`
-- Latest Lab follow-up: Unit 108 `us-equity-index-cash-close-intraday-momentum-v1`, `VALID_NO_CASH_CLOSE_INTRADAY_MOMENTUM_AFTER_COST_NO_SEED`; literature-fixed US30+US100 15:30→16:00 continuation was strong only in 2025 and failed P1, P4, latest, doubled-cost DD/efficiency and cross-symbol breadth
+- Latest Lab follow-up: Unit 109 `three-index-europe-open-inventory-drift-v1`, `VALID_NO_THREE_INDEX_EUROPE_OPEN_DRIFT_AFTER_COST_NO_SEED`; the NY Fed-fixed US30+US100+US500 02:00→03:00 ET LONG bundle was prelatest gross-negative and failed all four prelatest blocks, every symbol/weekday, doubled-cost DD/efficiency and monthly breadth; latest alone was positive
 - Latest scheduler evidence: `optimization/evidence/OPTIMIZATION_POST_FORMULA_INTERACTION_WHOLE_MAP_AUDIT_V1.json`, `NO_INDEPENDENT_READY_MECHANISM_POST_FORMULA_AXIS_EXHAUSTED_FIXED_DEVELOPMENT_CANDIDATE_RETAINED`
 - Active dedicated runtime: none; the latest campaign's zero-shortlist acquisition Portable was sent to the recoverable Windows Recycle Bin after its complete market/output artifacts were preserved
 

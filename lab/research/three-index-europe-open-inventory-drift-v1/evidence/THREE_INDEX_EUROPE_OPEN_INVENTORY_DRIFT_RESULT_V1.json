@@ -1,0 +1,254 @@
+{
+  "schema": "zeta-next-three-index-europe-open-inventory-drift-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "UNIT_109_VALID_ECONOMIC_NONCONFIRMATION_NO_SEED",
+  "unit": "three-index-europe-open-inventory-drift-109",
+  "family": "three-index-europe-open-inventory-drift-v1",
+  "declaration_commit": "db6b2e916b4c30fbc45196c806c26aac55e1de09",
+  "verdict": "VALID_NO_THREE_INDEX_EUROPE_OPEN_DRIFT_AFTER_COST_NO_SEED",
+  "validity": {
+    "immutable_input_files": 4,
+    "immutable_input_bytes": 1946576,
+    "input_manifest_sha256": "48105EF2680FE9AA1FDC7CDCD4F2BD8C3E66A3F819C6697BB8BF1F8208ED778D",
+    "common_exact_02_03_dates": 1182,
+    "research_period_bundle_days": 1033,
+    "research_period_trades": 3099,
+    "structural_counts_reproduced": true,
+    "schema_time_ohlc_volume_spread_geometry_passed": true,
+    "observed_entry_ask_exit_bid_identity_passed_at_tolerance_usd": 1e-10,
+    "recorded_zero_entry_spread_trade_rows": 14,
+    "recorded_zero_exit_spread_trade_rows": 13,
+    "trade_rows_with_any_recorded_zero_spread": 26,
+    "bundle_days_with_any_recorded_zero_spread": 22,
+    "zero_spread_interpretation": "The declared proxy accepts nonnegative recorded bar spreads. A zero entry spread can only undercharge a LONG entry and a zero exit spread can only undercharge doubled stress; no replacement estimate was introduced. The prelatest gross path, observed executable path and stressed path are all negative, so these optimistic rows cannot manufacture the no-seed conclusion.",
+    "formal_source_free_processes": 1,
+    "complete_economic_aggregations": 1,
+    "economic_contract_changes_after_declaration": 0,
+    "engineering_corrections_after_declaration": 0,
+    "valid_economic_result": true
+  },
+  "supply": {
+    "bundle_days": 1033,
+    "trades": 3099,
+    "starts_per_eligible_day": 3,
+    "period_bundle_days": {
+      "P1_2022H2_2023": 366,
+      "P2_2024": 259,
+      "P3_2025": 257,
+      "P4_2026_JAN_MAY": 106,
+      "P5_LATEST_2026_JUN_JUL": 45
+    },
+    "period_starts": {
+      "P1_2022H2_2023": 1098,
+      "P2_2024": 777,
+      "P3_2025": 771,
+      "P4_2026_JAN_MAY": 318,
+      "P5_LATEST_2026_JUN_JUL": 135
+    },
+    "structural_role": "The exact bundle meets the project-wide three-starts-per-day supply line, so rejection is purely economic rather than a frequency or environment result."
+  },
+  "period_economics": {
+    "P1_2022H2_2023": {
+      "bundle_days": 366,
+      "starts": 1098,
+      "gross_net_usd": -2.9326,
+      "observed_net_usd": -17.3467,
+      "stressed_net_usd": -31.7608,
+      "stressed_profit_factor": 0.5244097011,
+      "stressed_max_closed_dd_percent": 32.0643,
+      "stressed_net_to_dd": -0.9905346444,
+      "splits_stressed_usd": {"2022H2": -5.17395, "2023": -26.58685},
+      "symbols_stressed_usd": {"US30": -16.4755, "US100": -11.53875, "US500": -3.74655},
+      "weekdays_stressed_usd": {"MON": -12.893, "TUE": -0.6759, "WED": -7.9229, "THU": -3.3241, "FRI": -6.9449},
+      "interpretation": "The initial transfer fails before confirmation: midpoint gross is already negative, both calendar splits lose, every index loses and all five weekdays lose. Cost widens an existing adverse drift rather than erasing a positive one."
+    },
+    "P2_2024": {
+      "bundle_days": 259,
+      "starts": 777,
+      "gross_net_usd": 0.68795,
+      "observed_net_usd": -6.9485,
+      "stressed_net_usd": -14.58495,
+      "stressed_profit_factor": 0.645796475,
+      "stressed_max_closed_dd_percent": 15.0138,
+      "stressed_net_to_dd": -0.9714362786,
+      "symbols_stressed_usd": {"US30": -5.7829, "US100": -6.53025, "US500": -2.2718},
+      "interpretation": "A negligible positive midpoint drift is much smaller than executable cost. Every symbol is negative after the predeclared stress."
+    },
+    "P3_2025": {
+      "bundle_days": 257,
+      "starts": 771,
+      "gross_net_usd": -4.5796,
+      "observed_net_usd": -13.3104,
+      "stressed_net_usd": -22.0412,
+      "stressed_profit_factor": 0.6827919695,
+      "stressed_max_closed_dd_percent": 24.3378,
+      "stressed_net_to_dd": -0.9056364996,
+      "symbols_stressed_usd": {"US30": -11.34775, "US100": -7.75695, "US500": -2.9365},
+      "interpretation": "The year is negative before cost and on all three symbols after stress; it independently rejects a stable transferred long drift."
+    },
+    "P4_2026_JAN_MAY": {
+      "bundle_days": 106,
+      "starts": 318,
+      "gross_net_usd": -3.1603,
+      "observed_net_usd": -5.9293,
+      "stressed_net_usd": -8.6983,
+      "stressed_profit_factor": 0.7336132472,
+      "stressed_max_closed_dd_percent": 10.0284,
+      "stressed_net_to_dd": -0.8673666786,
+      "symbols_stressed_usd": {"US30": -5.7285, "US100": -2.3145, "US500": -0.6553},
+      "interpretation": "The third confirmation block is again negative at gross, observed and stress and on every symbol."
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "bundle_days": 45,
+      "starts": 135,
+      "gross_net_usd": 9.7112,
+      "observed_net_usd": 8.6987,
+      "stressed_net_usd": 7.6862,
+      "stressed_profit_factor": 1.6652357172,
+      "stressed_max_closed_dd_percent": 3.2998,
+      "stressed_net_to_dd": 2.3292926844,
+      "symbols_stressed_usd": {"US30": 1.524, "US100": 5.6475, "US500": 0.5147},
+      "months_stressed_usd": {"2026-06": 8.1334, "2026-07": -0.4472},
+      "nominal_floor_usd": 0.0,
+      "practical_floor_usd": 0.0,
+      "interpretation": "The latest block passes on all symbols, but its profit is concentrated in June while July is negative. It is the sole positive frozen period and cannot retroactively select a latest-only regime or rescue four failed earlier blocks."
+    }
+  },
+  "pooled_economics": {
+    "P2_P4_CONFIRMATION": {
+      "bundle_days": 622,
+      "starts": 1866,
+      "gross_observed_stressed_net_usd": [-7.05195, -26.1882, -45.32445],
+      "stressed_profit_factor": 0.6837416831,
+      "stressed_max_closed_dd_percent": 46.2682,
+      "stressed_net_to_dd": -0.9796026212,
+      "symbols_stressed_usd": {"US30": -22.85915, "US100": -16.6017, "US500": -5.8636},
+      "positive_symbol_period_cells": 0,
+      "required_positive_symbol_period_cells": 7,
+      "positive_weekdays": 1,
+      "required_positive_weekdays": 4,
+      "interpretation": "All three confirmation blocks are negative, all 9/9 symbol-period cells are negative, and only Friday is positive when weekdays are pooled."
+    },
+    "P1_P4_PRELATEST": {
+      "bundle_days": 988,
+      "starts": 2964,
+      "gross_net_usd": -9.98455,
+      "observed_net_usd": -43.5349,
+      "stressed_net_usd": -77.08525,
+      "gross_to_observed_cost_usd": 33.55035,
+      "observed_to_stressed_increment_usd": 33.55035,
+      "total_doubled_cost_burden_usd": 67.1007,
+      "stressed_profit_factor": 0.6330959821,
+      "stressed_max_closed_dd_percent": 77.60015,
+      "nominal_dd_limit_percent": 20.0,
+      "practical_dd_limit_percent": 21.2,
+      "stressed_net_to_dd": -0.9933647035,
+      "symbols_gross_usd": {"US30": -6.96115, "US100": -2.81495, "US500": -0.20845},
+      "symbols_stressed_usd": {"US30": -39.33465, "US100": -28.14045, "US500": -9.61015},
+      "weekdays_stressed_usd": {"MON": -27.3087, "TUE": -20.0886, "WED": -17.8426, "THU": -11.47545, "FRI": -0.3699},
+      "positive_months": 8,
+      "months": 46,
+      "top_five_positive_day_share": 0.104542285,
+      "interpretation": "There is no pre-latest latent gross alpha: every symbol is gross-negative and all weekdays are stressed-negative. The path loses 77.09% of starting balance with only 8/46 positive months."
+    },
+    "P1_P5_FULL": {
+      "bundle_days": 1033,
+      "starts": 3099,
+      "gross_net_usd": -0.27335,
+      "observed_net_usd": -34.8362,
+      "stressed_net_usd": -69.39905,
+      "gross_to_observed_cost_usd": 34.56285,
+      "observed_to_stressed_increment_usd": 34.56285,
+      "stressed_profit_factor": 0.686898885,
+      "stressed_max_closed_dd_percent": 77.60015,
+      "stressed_net_to_dd": -0.8943159259,
+      "symbols_gross_usd": {"US30": -4.17715, "US100": 3.37255, "US500": 0.53125},
+      "symbols_stressed_usd": {"US30": -37.81065, "US100": -22.49295, "US500": -9.09545},
+      "weekdays_stressed_usd": {"MON": -28.0393, "TUE": -14.3988, "WED": -17.4055, "THU": -7.77895, "FRI": -1.7765},
+      "interpretation": "The latest gain lifts midpoint gross only to approximately flat, while observed and stressed paths remain decisively negative. Every symbol and every weekday loses after stress."
+    }
+  },
+  "temporal_shape": {
+    "prelatest_positive_months": 8,
+    "prelatest_months": 46,
+    "full_positive_months": 9,
+    "full_months": 48,
+    "best_month": {"month": "2026-06", "stressed_net_usd": 8.1334},
+    "worst_month": {"month": "2025-04", "stressed_net_usd": -8.1675},
+    "prelatest_positive_days": 404,
+    "prelatest_negative_days": 584,
+    "full_positive_days": 430,
+    "full_negative_days": 603,
+    "top_five_positive_day_share": 0.104542285,
+    "interpretation": "The loss is broad rather than one adverse-tail artifact. The top five winning days supply only 10.45% of prelatest positive-day profit, while 38/46 prelatest months and four of four prelatest periods lose."
+  },
+  "gate_result": {
+    "nominal_pass": false,
+    "practical_pass": false,
+    "passed_checks": [
+      "P1-P4 top-five positive-day share <=35%",
+      "P5 nominal net >=$0",
+      "P5 practical net >=$0"
+    ],
+    "material_failures": [
+      "P1 gross/observed/stressed net and PF/efficiency",
+      "both P1 calendar splits, all three symbols and all five weekdays",
+      "P2, P3 and P4 combined stressed economics",
+      "0/9 positive P2-P4 symbol-period cells versus required 7/9",
+      "1/5 positive pooled confirmation weekdays versus required 4/5",
+      "P1-P4 PF 0.6331 versus 1.075 and net/DD -0.9934 versus 1.50",
+      "P1-P4 DD 77.6002% versus nominal/practical 20.0%/21.2%",
+      "8/46 positive P1-P4 months versus required 28/46",
+      "full net -$69.3991 and PF 0.6869 versus positive and 1.05"
+    ],
+    "marginal_judgment": "Not applicable. The prelatest path is negative before cost, its stressed DD exceeds the practical line by 56.40015 percentage points, all prelatest symbols are gross-negative, and the latest gain does not restore positive full economics."
+  },
+  "causal_interpretation": {
+    "literature_transfer": "The exact New York Fed futures-hour sign does not transfer as an unconditional three-CFD economic sleeve across this 2022-2026 FPMarkets surface.",
+    "cost_role": "Cost is material but not the root cause. P1, P3, P4 and pooled P1-P4 are already midpoint-gross negative; full gross is approximately zero. Recorded zero-spread rows make the proxy more favorable, not less.",
+    "latest_role": "June-July 2026 contains a real positive local episode, mostly June. Selecting latest-only, June-only, Tuesday/Thursday, US100-heavy, DST or adjacent-clock treatment would be post-outcome rescue and is forbidden.",
+    "breadth_role": "All three prelatest symbols, all five prelatest weekdays, all three confirmation periods and all nine confirmation symbol-period cells are negative. This is stronger than a marginal gate miss.",
+    "portfolio_role": "A standalone exact bundle with negative gross and stressed economics cannot be integrated, reweighted or risk-sized into the fixed candidate as a rescue."
+  },
+  "decision": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "single_symbol_survivor": null,
+    "weekday_or_month_survivor": null,
+    "dst_or_clock_survivor": null,
+    "adjacent_rescue": false,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged",
+    "live_authority": false
+  },
+  "raw_artifacts": {
+    "analysis_result": {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/analysis-result.json",
+      "bytes": 187836,
+      "sha256": "D818534D91EF27B406A483B1FBEC1197E840C3CCA00E0CC058287ED088B89CBF"
+    },
+    "trades": {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/trades.csv",
+      "bytes": 663797,
+      "sha256": "913C8563742D0B1DA893A9F0CF0C97075D0B8B7EEB105F18923A76D0DEB9A7C9"
+    },
+    "bundle_days": {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/bundle-days.csv",
+      "bytes": 71988,
+      "sha256": "454ECD1820AE626E9CEA60DF4628C5A13FBA0DBB2D92B7FA87E67F61B46FA41A"
+    }
+  },
+  "execution": {
+    "elapsed_seconds": 10.1598802,
+    "direction_books": 1,
+    "threshold_points": 0,
+    "grid_points": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "live_surface": "UNTOUCHED"
+  }
+}

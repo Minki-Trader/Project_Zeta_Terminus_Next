@@ -1,0 +1,146 @@
+{
+  "schema": "zeta-next-three-index-europe-open-inventory-drift-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_VALID_NO_THREE_INDEX_EUROPE_OPEN_DRIFT_AFTER_COST_NO_SEED",
+  "unit": "three-index-europe-open-inventory-drift-109",
+  "family": "three-index-europe-open-inventory-drift-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "declaration_commit": "db6b2e916b4c30fbc45196c806c26aac55e1de09",
+  "verdict": "VALID_NO_THREE_INDEX_EUROPE_OPEN_DRIFT_AFTER_COST_NO_SEED",
+  "classification": {
+    "valid_complete_economic_nonconfirmation": true,
+    "environment_failure": false,
+    "design_failure": false,
+    "engineering_failure": false,
+    "correction_required": false,
+    "research_success": false,
+    "research_failure_basis": "Complete valid gross, observed and doubled-spread economic numbers only."
+  },
+  "complete_path": {
+    "bundle_days": 1033,
+    "trades": 3099,
+    "P1_stressed_net_usd": -31.7608,
+    "P2_stressed_net_usd": -14.58495,
+    "P3_stressed_net_usd": -22.0412,
+    "P4_stressed_net_usd": -8.6983,
+    "P5_stressed_net_usd": 7.6862,
+    "full_gross_net_usd": -0.27335,
+    "full_observed_net_usd": -34.8362,
+    "full_stressed_net_usd": -69.39905,
+    "full_stressed_profit_factor": 0.686898885,
+    "full_stressed_max_closed_dd_percent": 77.60015,
+    "full_stressed_net_to_dd": -0.8943159259,
+    "full_symbols_stressed_usd": {"US30": -37.81065, "US100": -22.49295, "US500": -9.09545},
+    "full_weekdays_stressed_usd": {"MON": -28.0393, "TUE": -14.3988, "WED": -17.4055, "THU": -7.77895, "FRI": -1.7765},
+    "prelatest_positive_months": 8,
+    "prelatest_months": 46,
+    "full_positive_months": 9,
+    "full_months": 48
+  },
+  "why_no_seed": [
+    "P1 is already gross-negative -$2.9326 and loses -$31.7608 stressed at PF 0.5244; both P1 splits, all three symbols and all five weekdays are negative.",
+    "P2, P3 and P4 each lose stressed money. P2-P4 pooled gross/observed/stressed is -$7.0520/-$26.1882/-$45.3245, all 9/9 symbol-period cells are negative and only one weekday is positive.",
+    "P1-P4 is gross-negative -$9.9846 before cost, stressed -$77.0853 at PF 0.6331 and 77.6002% closed DD, with only 8/46 positive months.",
+    "Latest +$7.6862 is real but concentrated in June +$8.1334 while July is -$0.4472; a latest-only or June-only rule is a forbidden post-outcome regime rescue.",
+    "Full midpoint gross is approximately flat -$0.2734 and observed/stressed is -$34.8362/-$69.3991. Every symbol and weekday is stressed-negative, so no execution-cost assumption, weighting or diversification claim can create a robust sleeve."
+  ],
+  "economic_interpretation": {
+    "mechanism": "The NY Fed's S&P futures Europe-open drift does not transfer as an unconditional three-index FPMarkets CFD sleeve over the complete project horizon.",
+    "cost": "Observed and doubled cost deepen the loss, but cost is not the primary rejection cause because the full prelatest bundle and all three prelatest symbols are already gross-negative.",
+    "zero_spreads": "Twenty-six research trade rows contain at least one recorded zero bar spread. The frozen contract accepts the recorded nonnegative values. Missing positive entry or stress burden would only worsen LONG execution; the valid no-seed verdict is conservative in favor of the hypothesis.",
+    "latest": "The sole positive frozen period shows the effect can occur locally, not that it is stable or selectable. Its June concentration cannot reopen a period, month, weekday, symbol, DST or clock subgroup.",
+    "breadth": "Four negative prelatest periods, zero of nine positive confirmation symbol-period cells, all-negative prelatest symbols/weekdays and 38/46 negative prelatest months establish broad nonconfirmation rather than a marginal threshold miss.",
+    "risk": "The prelatest 77.6002% closed DD exceeds the 21.2% practical line by 56.4002 percentage points while net is negative, so pragmatic tolerance is irrelevant."
+  },
+  "decision": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "single_symbol_survivor": null,
+    "weekday_or_month_survivor": null,
+    "dst_or_clock_survivor": null,
+    "latest_rescue": null,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged",
+    "live_change": false,
+    "promotion_authority": false
+  },
+  "closed_neighborhood": [
+    "exact unconditional 02:00..03:00 America/New_York LONG on US30+US100+US500",
+    "short, reversion or direction selection",
+    "01:00..02:00, 03:00..04:00, partial or any neighboring clock",
+    "Europe-clock-aligned asynchronous-DST adjustment or mismatch subgroup",
+    "latest-only, June-only, weekday, month, holiday, volatility, event, trend or regime subgroup",
+    "US30-only, US100-only, US500-only, symbol deletion, substitution, weighting or notional normalization",
+    "threshold, magnitude bucket, rank, stop, hold, sizing, risk, capital, admission, collision or fixed-candidate integration rescue"
+  ],
+  "whole_map_recomparison": {
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "program_1": "The unconditional long bundle creates no entry-signal seed. Latest-period strength cannot select a new signal, direction or price threshold; existing formula, cross-relative, lead-lag and cash-close axes remain closed.",
+    "program_2": "The exact new European-participant mechanism is now economically nonconfirmed. Neighboring hours, DST alignment, weekday/month or a different overseas session are adjacent external-state rescues and do not open automatically.",
+    "program_3": "The 02:00..03:00 clock is part of the failed fixed mechanism rather than an order-clock clue. No delay, pending, alternate session or clock remap is ready.",
+    "program_4": "The one-hour exit supplies no profitable held-position checkpoint, stop or management seed.",
+    "program_5": "A bundle that is prelatest gross-negative, loses on every symbol and exceeds the risk line cannot be reweighted or integrated into the fixed candidate as a rescue. Existing allocation, capital and admission neighborhoods remain closed.",
+    "program_7": "Input, spread optimism, temporal concentration and breadth attribution are resolved. Another significance or diagnostic statistic cannot create treatment value.",
+    "program_6_excluded": true,
+    "immediate_successor_ready": false,
+    "automatic_successor_opened": false,
+    "optimization_resumed": true,
+    "next": "Continue the Optimization whole-map discovery stream for a genuinely independent complete causal source; do not reopen the Europe-open neighborhood."
+  },
+  "artifacts": {
+    "snapshot_receipt": {
+      "path": "lab/research/three-index-europe-open-inventory-drift-v1/evidence/THREE_INDEX_EUROPE_OPEN_INVENTORY_DRIFT_SNAPSHOT_RECEIPT_V1.json",
+      "bytes": 2843,
+      "sha256": "B13D1FF64EF5EB798244E5D0713DD9548B52F89F0C1DE6FB8890F1E72ED9C114"
+    },
+    "declaration": {
+      "path": "lab/research/three-index-europe-open-inventory-drift-v1/evidence/THREE_INDEX_EUROPE_OPEN_INVENTORY_DRIFT_DECLARATION_V1.json",
+      "bytes": 12543,
+      "sha256": "50967BCB6E39DCA0F1F1142B85F94E60E47933B10671158E8392F2099C245666"
+    },
+    "result": {
+      "path": "lab/research/three-index-europe-open-inventory-drift-v1/evidence/THREE_INDEX_EUROPE_OPEN_INVENTORY_DRIFT_RESULT_V1.json",
+      "bytes": 12765,
+      "sha256": "0EEBDDCE3280222876132E4E174586113812089B212D03B5D30E4BF3363C6790"
+    },
+    "raw_analysis_result": {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/analysis-result.json",
+      "bytes": 187836,
+      "sha256": "D818534D91EF27B406A483B1FBEC1197E840C3CCA00E0CC058287ED088B89CBF"
+    },
+    "raw_trades": {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/trades.csv",
+      "bytes": 663797,
+      "sha256": "913C8563742D0B1DA893A9F0CF0C97075D0B8B7EEB105F18923A76D0DEB9A7C9"
+    },
+    "raw_bundle_days": {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/bundle-days.csv",
+      "bytes": 71988,
+      "sha256": "454ECD1820AE626E9CEA60DF4628C5A13FBA0DBB2D92B7FA87E67F61B46FA41A"
+    },
+    "preservation": "All four family-owned inputs and all three complete raw outputs are useful attributable artifacts and remain preserved. Python bytecode is reproducible and removed; no Portable, Tester cache, compile staging or temporary result exists."
+  },
+  "execution": {
+    "elapsed_seconds": 10.1598802,
+    "formal_source_free_processes": 1,
+    "complete_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "threshold_or_grid_points": 0,
+    "engineering_corrections_after_declaration": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "marker": "FRONTIER_UNIT_109_CLOSED_VALID_NO_THREE_INDEX_EUROPE_OPEN_DRIFT_AFTER_COST_NO_SEED_MAP_RECOMPARED"
+}
