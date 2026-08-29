@@ -1,0 +1,217 @@
+{
+  "schema": "zeta-next-dual-portfolio-formula-interaction-spillover-result-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "VALID_COMPLETE_NO_TRANSFERABLE_DIRECT_FORMULA_INTERACTION_NO_SEED",
+  "unit": "dual-portfolio-formula-interaction-spillover-causality-107",
+  "family": "dual-portfolio-formula-interaction-spillover-causality-v1",
+  "declaration_commit": "c69c217b1f37a42ef7782e984a9434739d48ef1a",
+  "verdict": "VALID_NO_TRANSFERABLE_DIRECT_FORMULA_INTERACTION_NO_SEED",
+  "integrity": {
+    "frozen_input_files": 10,
+    "frozen_input_bytes": 54681323,
+    "frozen_input_manifest_sha256": "0161C4BE661740AAB3627B8647EFA57880429A3B29CC0426DAADF554FF3EBF01",
+    "feature_anchor": {
+      "passed": true,
+      "compared_rows": 5085,
+      "exact_within_1e_8": 5085,
+      "maximum_absolute_error": 1.794120407794253e-13
+    },
+    "economic_anchor": {
+      "passed": true,
+      "selection_events": 20676,
+      "june_july_events": 941,
+      "contracts": 2
+    },
+    "selection_reproduction": {
+      "passed": true,
+      "point_contract_books": 4,
+      "actual_stressed_net_native_equivalent_dd_and_closes": "all exact within 1e-7 and exact integer count"
+    },
+    "component_attribution_identity": {
+      "passed": true,
+      "tolerance_usd": 1e-7,
+      "meaning": "changed-component plus unchanged-component stressed uplift equals total stressed uplift"
+    },
+    "engineering_corrections": {
+      "count": 1,
+      "classification": "non-economic family-scoped raw-byte Git materialization before any later interaction outcome opened",
+      "economic_contract_changed": false,
+      "economic_verdicts_before_correction": 0
+    }
+  },
+  "fixed_points": [
+    {
+      "point_id": "9FD4A8BEEA47022BDF5C",
+      "role": "PAIRED_RC4_DIRECTION_RETURN_CENTERING",
+      "changes": ["RC4 direction_fraction 0.50 to 0.75", "Return centering_k 0.0 to 1.0"],
+      "direct_components": ["RC4_US30_M30", "RETURN_US30_H1"]
+    },
+    {
+      "point_id": "766FECB1566CBDB2A5A6",
+      "role": "REPLACEMENT_RC4_DIRECTION_PRESSURE_POLARITY",
+      "changes": ["RC4 direction_fraction 0.50 to 0.75", "Pressure SYMMETRIC_CONTINUATION to NEGATIVE_SHORT"],
+      "direct_components": ["RC4_US30_M30", "PRESSURE_US30_M30"]
+    }
+  ],
+  "known_e1_e3_reproduction": {
+    "9FD4A8BEEA47022BDF5C": {
+      "LIVE_CONTROL": {
+        "actual_stressed_net_usd": [586.81, 539.2691962683],
+        "stressed_uplift_vs_baseline_usd": 146.5646410365,
+        "native_equivalent_dd_pct": 9.0411043229,
+        "closed_lifecycles": 1594,
+        "direct_component_stressed_uplift_usd": 160.148342,
+        "unchanged_component_spillover_stressed_uplift_usd": -13.583701,
+        "direct_absolute_attribution_share": 0.860465
+      },
+      "FIXED_REPLACEMENT": {
+        "actual_stressed_net_usd": [1889.71, 1759.7390645728],
+        "stressed_uplift_vs_baseline_usd": 542.0239849894,
+        "native_equivalent_dd_pct": 19.6962902534,
+        "closed_lifecycles": 1055,
+        "direct_component_stressed_uplift_usd": 511.555949,
+        "unchanged_component_spillover_stressed_uplift_usd": 30.468036,
+        "direct_absolute_attribution_share": 0.749987
+      },
+      "selection_interpretation": "The discovery improvement was genuinely majority-direct in both contracts, led by RC4 plus Return rather than merely mislabeled unchanged-component spillover."
+    },
+    "766FECB1566CBDB2A5A6": {
+      "LIVE_CONTROL": {
+        "actual_stressed_net_usd": [570.42, 525.8683403904],
+        "stressed_uplift_vs_baseline_usd": 133.1637851586,
+        "native_equivalent_dd_pct": 7.7606691494,
+        "closed_lifecycles": 1558,
+        "direct_component_stressed_uplift_usd": 99.052899,
+        "unchanged_component_spillover_stressed_uplift_usd": 34.110886,
+        "direct_absolute_attribution_share": 0.683418
+      },
+      "FIXED_REPLACEMENT": {
+        "actual_stressed_net_usd": [1917.43, 1788.732303804],
+        "stressed_uplift_vs_baseline_usd": 571.0172242206,
+        "native_equivalent_dd_pct": 19.2465504113,
+        "closed_lifecycles": 1039,
+        "direct_component_stressed_uplift_usd": 370.082566,
+        "unchanged_component_spillover_stressed_uplift_usd": 200.934658,
+        "direct_absolute_attribution_share": 0.631244
+      },
+      "selection_interpretation": "The discovery improvement was also majority-direct, but a material unchanged-component spillover contribution already existed in the replacement contract."
+    }
+  },
+  "formula_unseen_later_economics": {
+    "9FD4A8BEEA47022BDF5C": {
+      "E4": {
+        "LIVE_CONTROL": {
+          "stressed_net_uplift_dd_closes": [104.527454, -12.696351, 21.385385, 559],
+          "direct_spillover_share": [-13.626351, 0.93, 0.793320]
+        },
+        "FIXED_REPLACEMENT": {
+          "stressed_net_uplift_dd_closes": [204.855374, -69.364923, 40.214502, 377],
+          "direct_spillover_share": [-28.776722, -40.588201, 0.430706]
+        },
+        "interpretation": "Both required contracts reverse. Live's reversal is directly RC4/Return; the replacement also amplifies the loss through unchanged Cross, Pressure and RC16 spillover while proxy DD expands far beyond the fixed ceiling."
+      },
+      "JUNE_2026": {
+        "LIVE_CONTROL_stressed_net_uplift": [7.078938, 0.0],
+        "FIXED_REPLACEMENT_stressed_net_uplift": [32.826764, 0.0],
+        "interpretation": "The point is economically identical to baseline in June and therefore supplies no positive transfer."
+      },
+      "JULY_2026": {
+        "LIVE_CONTROL_stressed_net_uplift": [-7.441444, -0.483916],
+        "FIXED_REPLACEMENT_stressed_net_uplift": [1.731853, -0.967833]
+      },
+      "JUNE_JULY_CONTINUOUS": {
+        "LIVE_CONTROL": {
+          "stressed_net_uplift_dd_closes": [-2.272506, -0.493916, 14.420561, 83],
+          "direct_spillover_share": [-0.533916, 0.04, 0.930303]
+        },
+        "FIXED_REPLACEMENT": {
+          "stressed_net_uplift_dd_closes": [30.638617, -0.957833, 13.464772, 53],
+          "direct_spillover_share": [-1.067833, 0.11, 0.906608]
+        },
+        "interpretation": "The direct Return change removes one close and loses in both contracts; no shared-account rescue exists."
+      },
+      "gate_pass": false,
+      "failed_primary_checks": 12
+    },
+    "766FECB1566CBDB2A5A6": {
+      "E4": {
+        "LIVE_CONTROL": {
+          "stressed_net_uplift_dd_closes": [88.612355, -28.611450, 21.178165, 535],
+          "direct_spillover_share": [-31.662712, 3.051262, 0.824250]
+        },
+        "FIXED_REPLACEMENT": {
+          "stressed_net_uplift_dd_closes": [157.436589, -116.783708, 23.487026, 367],
+          "direct_spillover_share": [-93.462078, -23.321630, 0.717917]
+        },
+        "interpretation": "The replacement-specific point fails directly: changed RC4 and Pressure lose $93.462078 stressed, unchanged components lose another $23.321630, and proxy DD exceeds 21.2 percent."
+      },
+      "JUNE_2026": {
+        "LIVE_CONTROL_stressed_net_uplift": [3.427873, -3.651066],
+        "FIXED_REPLACEMENT_stressed_net_uplift": [11.816239, -21.010525]
+      },
+      "JULY_2026": {
+        "LIVE_CONTROL_stressed_net_uplift": [-6.168774, 0.788754],
+        "FIXED_REPLACEMENT_stressed_net_uplift": [0.717915, -1.981770]
+      },
+      "JUNE_JULY_CONTINUOUS": {
+        "LIVE_CONTROL": {
+          "stressed_net_uplift_dd_closes": [-3.570901, -1.792311, 12.798681, 79],
+          "direct_spillover_share": [0.027508, -1.819820, 0.153790]
+        },
+        "FIXED_REPLACEMENT": {
+          "stressed_net_uplift_dd_closes": [9.164154, -22.432295, 13.273310, 55],
+          "direct_spillover_share": [-10.693737, -11.738558, 0.532349]
+        },
+        "interpretation": "Pressure polarity loses directly and also changes Cross/RC16 shared-account economics adversely; the exact selection interaction does not transfer."
+      },
+      "gate_pass": false,
+      "failed_primary_checks": 5
+    }
+  },
+  "economic_interpretation": {
+    "selection_uplift_real_but_regime_local": true,
+    "pure_spillover_explanation_rejected_for_selection": true,
+    "later_direct_formula_transfer_rejected": true,
+    "shared_account_spillover_can_amplify_later_loss": true,
+    "meaning": "Both interactions had real majority-direct discovery uplift, but the changed components themselves reversed in E4 and continuous June-July. The failure is economic, not an environment or engineering fault, and no neighbor or retune is permitted."
+  },
+  "decision": {
+    "retained_lab_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "fixed_replacement_changed_rejected_or_promoted": false,
+    "adjacent_formula_rescue": false,
+    "family_frozen": true,
+    "next": "Return to a fresh Optimization whole-map comparison; the complete internal-formula axis remains closed unless materially new independent evidence creates a different causal mechanism."
+  },
+  "execution": {
+    "formal_source_free_processes": 1,
+    "selection_economic_tasks": 6,
+    "later_economic_tasks": 24,
+    "fixed_formula_points_plus_baseline": 3,
+    "grid_or_retune_points": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "mql_compile_tester_mt5_or_runtime_paths": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "elapsed_seconds": 30.860696399999142
+  },
+  "artifacts": {
+    "raw_analysis_result": {
+      "path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/output/analysis-result.json",
+      "bytes": 153300,
+      "sha256": "A8F0454456C9527950DDFB9870DE667543F76A3A4A2B2FE06A7042D84593BFE1"
+    },
+    "engineering_corrections": {
+      "path": "lab/research/dual-portfolio-formula-interaction-spillover-causality-v1/evidence/ENGINEERING_CORRECTIONS.md",
+      "bytes": 1049,
+      "sha256": "A74C009EBE10553E36AAA72111C4ABA0A56D9D87FE81567241206AD6500F5725"
+    }
+  },
+  "authority_boundary": {
+    "formula_intervals_are_not_clean_whole_portfolio_oos": true,
+    "lab_hypothesis_only": true,
+    "optimization_authority": false,
+    "live_authority": false,
+    "live_master_broker_account_surface": "UNTOUCHED_OR_UNQUERIED"
+  }
+}
