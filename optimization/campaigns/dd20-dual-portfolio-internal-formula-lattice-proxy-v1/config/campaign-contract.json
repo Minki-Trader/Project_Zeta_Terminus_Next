@@ -1,0 +1,223 @@
+{
+  "schema": "zeta-dd20-dual-portfolio-internal-formula-lattice-proxy-contract-v1",
+  "campaign": "dd20-dual-portfolio-internal-formula-lattice-proxy-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "DECLARED_FORMULA_SPACE_AND_PAIRED_ECONOMIC_PROTOCOL_FROZEN_OUTCOMES_UNOPENED",
+  "parent_main_commit": "f3c1e9e20905e99a5d8c7e20d523878949407300",
+  "purpose": "Broadly parameterize the internal formulas of both the exact active Live-derived control and the fixed replacement candidate, then identify robust economic plateaus rather than a single maximum.",
+  "source_contract": {
+    "frozen_live_baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/",
+    "fixed_replacement": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "semantic_formula_identity": "RC16, RC4 including ARC, Cross, Pressure and Return are byte-equal after CRLF/LF normalization; Passive differs only by the replacement's exact zero-weight disable guard.",
+    "cross_campaign_code_link": false,
+    "proxy_only_no_mql_derivation": true
+  },
+  "component_order": [
+    "RC16_US30_M30",
+    "RC4_US30_M30",
+    "CROSS_US100_H1",
+    "PRESSURE_US30_M30",
+    "RETURN_US30_H1",
+    "PASSIVE_US100_M15"
+  ],
+  "paired_contracts": [
+    {
+      "id": "LIVE_CONTROL",
+      "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "reference_selection": {"actual_net_usd": 984.69, "stressed_net_usd": 915.8725, "closed_lifecycles": 2119, "native_relative_equity_dd_pct": 9.1948},
+      "reference_forward": {"actual_net_usd": -1.11, "stressed_net_usd": -2.819, "closed_lifecycles": 84, "native_relative_equity_dd_pct": 16.8321}
+    },
+    {
+      "id": "FIXED_REPLACEMENT",
+      "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18,
+      "reference_selection": {"actual_net_usd": 5786.63, "stressed_net_usd": 5477.524, "closed_lifecycles": 1428, "native_relative_equity_dd_pct": 20.256887565152653},
+      "reference_forward": {"actual_net_usd": 32.74, "stressed_net_usd": 30.626, "closed_lifecycles": 54, "native_relative_equity_dd_pct": 18.675302129932568}
+    }
+  ],
+  "fixed_economic_model": {
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "daily_addition_step_usd": 150.0,
+    "daily_ladder": "1 + floor(max(0, stressed_closed_balance - 100) / 150)",
+    "component_volume": "positive MathRound(base_volume * daily_ladder * fixed_weight) to 0.01 lots",
+    "conservative_capital": "min(actual_closed_balance, stressed_closed_balance)",
+    "gross_stop_risk_fraction_of_planned_budget": 0.5,
+    "aggregate_admission": "tracked full planned component risk must not exceed conservative_capital * contract aggregate fraction plus USD 0.01",
+    "execution_priority": ["PASSIVE_STATE_AND_PENDING", "EXITS", "RC4_ARC", "RC4_1300", "RC16_1330", "PRESSURE_1500", "RETURN_1600", "CROSS_1700"],
+    "fixed_entry_delay_minutes": 2,
+    "fixed_clocks_server_time": {"RC4": "13:00", "RC16": "13:30", "PRESSURE": "15:00", "RETURN": "16:00", "CROSS": "17:00", "PASSIVE_DECISION_BARS": "12:00 through 15:45"},
+    "cost_stress": "actual M1 bid/ask proxy plus one additional entry spread-price times executable lots",
+    "profit_conversion": "index price difference times executable lots; verified against preserved native lifecycle close economics",
+    "risk_and_weight_optimization": false
+  },
+  "market_snapshot": {
+    "source_runtime": "optimization/runtime/dd20-paired-month-stability-mt5-v1-portable/",
+    "dedicated_runtime": "optimization/runtime/dd20-dual-portfolio-internal-formula-lattice-proxy-v1-portable/",
+    "copy_mode": "one-time lean physical copy; no links; omit closed Tester caches, reports, logs, mail, news, subscriptions, trades and tick archives",
+    "output_root": "optimization/artifacts/raw/dd20-dual-portfolio-internal-formula-lattice-proxy-v1/market/",
+    "request_utc": ["2022-01-01T00:00:00Z", "2026-08-01T00:00:00Z"],
+    "series": ["US30_M1", "US30_M30", "US30_H1", "US30_D1", "US100_M1", "US100_M15", "US100_H1", "US500_H1"],
+    "permitted_mt5_python_calls": ["initialize", "symbol_select", "symbol_info", "copy_rates_range", "shutdown"],
+    "broker_account_position_order_deal_queries": false
+  },
+  "intervals": [
+    {"id": "E1", "start": "2022-08-01T00:00:00", "end": "2023-06-01T00:00:00", "selection_visible": true},
+    {"id": "E2", "start": "2023-06-01T00:00:00", "end": "2024-06-01T00:00:00", "selection_visible": true},
+    {"id": "E3", "start": "2024-06-01T00:00:00", "end": "2025-06-01T00:00:00", "selection_visible": true},
+    {"id": "E4", "start": "2025-06-01T00:00:00", "end": "2026-06-01T00:00:00", "selection_visible": false},
+    {"id": "JUNE_2026", "start": "2026-06-01T00:00:00", "end": "2026-07-01T00:00:00", "selection_visible": false, "independent_reference_capital": true},
+    {"id": "JULY_2026", "start": "2026-07-01T00:00:00", "end": "2026-08-01T00:00:00", "selection_visible": false, "independent_reference_capital": true},
+    {"id": "JUNE_JULY_CONTINUOUS", "start": "2026-06-01T00:00:00", "end": "2026-08-01T00:00:00", "selection_visible": false, "independent_reference_capital": true}
+  ],
+  "parameter_axes": {
+    "rc16": {
+      "compression": [2, 4, 8, 12, 16, 24, 32, 48, 64],
+      "normal_window": [24, 48, 96, 192, 384],
+      "direction_fraction": [0.125, 0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["POSITIVE_LONG", "SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 8, 12, 16, 24, 32, 48]
+    },
+    "rc4": {
+      "compression": [1, 2, 4, 6, 8, 12, 16, 24, 32],
+      "normal_window": [24, 48, 96, 192, 384],
+      "direction_fraction": [0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [2, 4, 6, 8, 12, 16, 24, 32, 48]
+    },
+    "cross": {
+      "scale_window": [12, 24, 48, 72, 120, 240, 480],
+      "centering_k": [0.0, 0.5, 1.0],
+      "peer_total_beta": [0.0, 0.25, 0.5, 1.0, 1.5, 2.0],
+      "us30_peer_share": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 6, 8, 12, 24]
+    },
+    "pressure": {
+      "daily_scale_window": [3, 5, 10, 20, 40, 60, 120],
+      "daily_scale_quantile": [0.25, 0.5, 0.75],
+      "location_center": [0.25, 0.5, 0.75],
+      "location_power": [0.5, 1.0, 2.0, 4.0],
+      "range_power": [0.0, 0.5, 1.0, 1.5, 2.0, 3.0],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 8, 12, 16, 24, 32]
+    },
+    "return": {
+      "lookback": [1, 2, 4, 8, 12, 24, 48],
+      "scale_window": [12, 24, 48, 72, 120, 240, 480],
+      "normalization_power": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "centering_k": [0.0, 0.5, 1.0],
+      "scale_overlap": ["BASELINE_OVERLAP", "PRE_IMPULSE"],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["NEGATIVE_LONG_REVERSION", "SYMMETRIC_REVERSION", "SYMMETRIC_MOMENTUM", "POSITIVE_SHORT_REVERSION"],
+      "hold_bars": [1, 2, 4, 6, 8, 12, 24]
+    },
+    "passive": {
+      "lookback": [1, 2, 4, 8, 12, 16, 24, 48, 96],
+      "scale_window": [24, 48, 96, 192, 384, 768],
+      "normalization_power": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "centering_k": [0.0, 0.5, 1.0],
+      "entry_threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "exit_fraction_of_entry": [0.0, 0.1, 0.25, 0.5, 0.75],
+      "limit_offset_range_scale": [0.0, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0],
+      "activation_bars": [1, 2, 4, 8, 16, 32],
+      "maximum_hold_bars": [2, 4, 8, 16, 24, 32, 48, 64],
+      "cooldown_bars": [0, 1, 2, 4, 8, 16],
+      "mode": ["CONTRARIAN", "MOMENTUM"]
+    },
+    "arc": {
+      "checkpoint_bars": [2, 4, 8, 10, 11, 12],
+      "retained_loss_fraction": [0.05, 0.1, 0.25, 0.5, 0.75, 0.95],
+      "vote_threshold": [-3, -2, -1, 0],
+      "ordinal_profile": ["QUARTER", "HALF", "BASELINE", "DOUBLE", "QUADRUPLE", "LOWER_HALF_UPPER_DOUBLE", "LOWER_DOUBLE_UPPER_HALF"],
+      "market_penalty_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "decision_dynamics_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "negative_support_penalty_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "confirmation_pressure_share": [0.0, 0.25, 0.5, 0.7, 1.0]
+    }
+  },
+  "baseline_point": {
+    "rc16": [16, 96, 0.5, 1.5, 0.0, "POSITIVE_LONG", 8],
+    "rc4": [4, 96, 0.5, 1.5, 0.0, "SYMMETRIC_CONTINUATION", 12],
+    "cross": [120, 0.0, 1.0, 0.5, 0.5, 0.0, "SYMMETRIC_CONTINUATION", 4],
+    "pressure": [20, 0.5, 0.5, 1.0, 1.0, 0.5, 0.0, "SYMMETRIC_CONTINUATION", 8],
+    "return": [4, 120, 0.5, 0.0, "BASELINE_OVERLAP", 0.5, 0.0, "NEGATIVE_LONG_REVERSION", 6],
+    "passive": [12, 96, 0.5, 0.0, 1.0, 0.25, 0.25, 4, 16, 2, "CONTRARIAN"],
+    "arc": [8, 0.25, -2, "BASELINE", 1.0, 1.0, 1.0, 0.7]
+  },
+  "point_design": {
+    "broad_target_unique_points": 8192,
+    "exact_baseline_first": true,
+    "atlas": ["all one-axis levels", "all-axis center", "all loose", "all strict", "all fastest", "all slowest", "32 family polarity masks", "family fast/slow by loose/strict corners", "asymmetric threshold corners"],
+    "sobol": {"implementation": "scipy.stats.qmc.Sobol", "scramble": false, "base2_rows": 16384, "map": "floor(u * axis_level_count) capped at last level", "deduplicate": "canonical JSON parameter payload", "fill_order": "atlas then Sobol source order until 8192 unique"},
+    "antithetic_balance": "unscrambled Sobol base2 net plus explicit extreme atlas",
+    "plateau_stage": {"maximum_basin_medoids": 8, "neighbors_per_basin": 64, "maximum_additional_points": 512, "normalized_offsets": [-0.25, -0.1, 0.1, 0.25], "selection_data_only": true}
+  },
+  "anchor_gate": {
+    "feature_comparison": "baseline daily decision features versus the fixed candidate observation ledger wherever signal_known=1",
+    "minimum_exact_feature_match_fraction": 0.995,
+    "maximum_feature_absolute_error": 1e-8,
+    "closed_lifecycle_relative_tolerance": 0.12,
+    "actual_net_relative_tolerance": 0.20,
+    "stressed_net_relative_tolerance": 0.20,
+    "applies_before_nonbaseline_judgment": true,
+    "miss_classification": "CORRECTION_REQUIRED_NO_OPTIMIZATION_VERDICT"
+  },
+  "selection_protocol": {
+    "nominee_freeze_data": ["E1", "E2", "E3"],
+    "later_data_cannot_replace_nominee": true,
+    "eligibility": [
+      "complete finite actual and stressed economics for both paired contracts",
+      "each E1-E3 actual and stressed net positive for the contract being ranked",
+      "actual and stressed balance stay positive",
+      "nominal proxy drawdown at or below 20 percent is recorded separately from pragmatic proportional review",
+      "no single component or month supplies the entire stressed profit",
+      "minimum economic sample and nonzero component breadth",
+      "local plateau sign and drawdown are stable"
+    ],
+    "lexicographic_order": [
+      "maximize the smaller paired-contract worst-epoch stressed uplift versus each contract's exact baseline",
+      "maximize local-neighborhood stressed-net tenth percentile",
+      "minimize the larger paired-contract proxy drawdown",
+      "maximize component and month breadth",
+      "minimize normalized distance from the exact formula baseline",
+      "canonical point hash ascending"
+    ],
+    "contract_specific_ceilings_also_recorded": true,
+    "cross_contract_surface_rank_correlation": true
+  },
+  "advanced_analysis": {
+    "economic_metrics": ["actual/stressed net", "gross profit/loss", "profit factor", "expected payoff", "closes and frequency", "risk skips and stop exits", "closed and M1 mark-to-market proxy drawdown", "drawdown duration and time under water", "recovery", "daily Sharpe and Sortino", "epoch and month stability", "component breadth", "HHI/top-10 concentration", "leave-one-component-out diagnostics", "plateau volume and sensitivity", "cross-contract rank transfer"],
+    "search_bias_diagnostics": ["seed-fixed 10000-resample three-month stationary block bootstrap on paired monthly stressed uplift", "Deflated Sharpe", "CSCV/PBO", "SPA or White Reality Check when numerically identified"],
+    "diagnostics_never_rescue_bad_economics": true
+  },
+  "forward_protocol": {
+    "open_after_nominee_freeze": ["E4", "JUNE_2026", "JULY_2026", "JUNE_JULY_CONTINUOUS"],
+    "june_and_july_start_independently_at_usd": 100.0,
+    "runner_up_rescue": false,
+    "maximum_mt5_shortlist": 1,
+    "mt5_role_frozen_before_e4": true,
+    "mt5_runtime": "new dedicated non-Master Optimization Portable only",
+    "adjacent_exact_control_allowed_only_for_validity": true
+  },
+  "proxy_authority": {
+    "economic_clue_only": true,
+    "native_equity_drawdown_proof": false,
+    "m1_tick_ordering_proof": false,
+    "live_or_lab_authority": false,
+    "environment_design_engineering_faults_are_corrections_not_economic_failures": true
+  }
+}

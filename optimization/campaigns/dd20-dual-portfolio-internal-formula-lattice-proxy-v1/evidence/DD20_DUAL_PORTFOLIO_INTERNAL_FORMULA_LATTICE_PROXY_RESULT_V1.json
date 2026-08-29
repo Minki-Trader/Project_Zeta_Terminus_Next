@@ -1,0 +1,257 @@
+{
+  "schema": "zeta-dd20-dual-portfolio-internal-formula-lattice-proxy-result-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "VALID_COMPLETE_ECONOMIC_FAILURE_NO_ROBUST_PAIRED_FORMULA_CLUE",
+  "campaign": "dd20-dual-portfolio-internal-formula-lattice-proxy-v1",
+  "verdict": "NO_ROBUST_SHARED_FORMULA_REPLACEMENT_CLUE_FIXED_CANDIDATE_RETAINED_LAB_ONLY_INTERACTION_SEEDS_RECORDED",
+  "scope": {
+    "paired_contracts": [
+      "LIVE_CONTROL weights 1/1/1/1/1/1 at risk 0.04/0.12",
+      "FIXED_REPLACEMENT weights 2/1.5/2/2.5/1.5/0 at risk 0.04/0.18"
+    ],
+    "formula_dimensions": 59,
+    "broad_points": 8192,
+    "new_plateau_points": 447,
+    "total_unique_points": 8639,
+    "paired_economic_tasks": 17278,
+    "range_character": "exact baseline, one-axis atlas, centers, extremes, polarity/asymmetry corners and deterministic unscrambled Sobol coverage, followed by eight owned 64-neighbor one-axis plateaus",
+    "selection_intervals": [
+      "E1 2022-08-01..2023-06-01",
+      "E2 2023-06-01..2024-06-01",
+      "E3 2024-06-01..2025-06-01"
+    ],
+    "later_intervals_opened_only_after_freeze": [
+      "E4 2025-06-01..2026-06-01",
+      "June 2026 independent",
+      "July 2026 independent",
+      "June-July 2026 continuous"
+    ]
+  },
+  "integrity": {
+    "feature_anchor": {
+      "compared_rows": 5085,
+      "exact_within_1e_8": 5085,
+      "maximum_absolute_error": 1.794120407794253e-13,
+      "passed": true
+    },
+    "economic_anchor": {
+      "live_control_selection_actual_stressed_closes": "987.09 / 914.639235 / 2138 versus native 984.69 / 915.8725 / 2119",
+      "fixed_replacement_selection_actual_stressed_closes": "6070.79 / 5763.972958 / 1428 versus native 5786.63 / 5477.524 / 1428",
+      "live_control_forward_actual_stressed_closes": "-0.79 / -1.778590 / 84 versus native -1.11 / -2.819 / 84",
+      "fixed_replacement_forward_actual_stressed_closes": "33.11 / 31.596449 / 54 versus native 32.74 / 30.626 / 54",
+      "passed": true
+    },
+    "market_snapshot": {
+      "series": 8,
+      "rows": 3480565,
+      "bytes": 46078313,
+      "period": "2022-01-03..2026-07-31",
+      "account_position_order_deal_queries": 0
+    },
+    "engineering_corrections": {
+      "economic_verdicts_before_final_correction": 0,
+      "invalid_attempts_preserved": [
+        "market-invalid-attempt-01",
+        "output-invalid-neighborhood-attempt-01",
+        "output-invalid-neighborhood-attempt-02",
+        "output-invalid-reporting-attempt-03"
+      ],
+      "interpretation": "history truncation, Cross positional semantics, native max(entry,exit) stress, near-zero anchor materiality, neighborhood topology/ownership and ceiling serialization were corrected as engineering states; none was counted as an optimization failure"
+    }
+  },
+  "surface": {
+    "core_eligible_points": {
+      "LIVE_CONTROL": 1277,
+      "FIXED_REPLACEMENT": 1273,
+      "PAIRED": 1037
+    },
+    "robust_eligible_medoids": {
+      "LIVE_CONTROL": 7,
+      "FIXED_REPLACEMENT": 0,
+      "PAIRED": 0
+    },
+    "distribution": {
+      "live_control_stressed_net_min_median_max_usd": [-100.0379, -21.9110, 597.9566],
+      "fixed_replacement_stressed_net_min_median_max_usd": [-100.0712, -32.3407, 2194.7556],
+      "live_control_native_equivalent_dd_median_pct": 38.7253,
+      "fixed_replacement_native_equivalent_dd_median_pct": 76.4534,
+      "baseline_stressed_net_percentile": {
+        "LIVE_CONTROL": 0.9770806806343327,
+        "FIXED_REPLACEMENT": 0.9833314040976965
+      },
+      "baseline_lower_dd_percentile": {
+        "LIVE_CONTROL": 0.9641162171547633,
+        "FIXED_REPLACEMENT": 0.9791642551221206
+      },
+      "paired_points_with_strictly_positive_worst_epoch_uplift": 10,
+      "paired_points_tied_with_baseline_worst_epoch_uplift": 19
+    },
+    "cross_contract_transfer": {
+      "stressed_net_spearman": 0.8320374326604605,
+      "worst_epoch_uplift_spearman": 0.8429140672443021,
+      "top_decile_jaccard": 0.8461538461538461,
+      "interpretation": "broad formula direction transfers strongly, but the replacement contract's concentration, 0.18 cap and zero Passive weight turn local perturbations into a materially less stable DD surface"
+    },
+    "search_bias": {
+      "paired_cscv_pbo": 0.6428571428571429,
+      "paired_white_reality_check_p_value": 0.5161483851614839,
+      "live_control_cscv_pbo": 0.4857142857142857,
+      "live_control_white_reality_check_p_value": 0.1982801719828017,
+      "fixed_replacement_cscv_pbo": 0.7428571428571429,
+      "fixed_replacement_white_reality_check_p_value": 0.2136786321367863,
+      "interpretation": "neither the paired nor contract-specific searched maximum rejects selection luck; the fixed-replacement surface is especially unstable"
+    },
+    "highest_main_effect_axes": [
+      "Cross mode eta-squared 0.09459",
+      "Return mode eta-squared 0.08029",
+      "RC16 threshold eta-squared 0.07875",
+      "RC4 threshold eta-squared 0.07396",
+      "Pressure threshold eta-squared 0.07159"
+    ],
+    "main_effect_interpretation": "no axis explains ten percent of the paired robust objective; polarity semantics lead, while threshold centers generally dominate loose extremes and the economic surface remains interaction-heavy"
+  },
+  "exact_baseline_e1_e3": {
+    "LIVE_CONTROL": {
+      "actual_net_usd": 435.34,
+      "stressed_net_usd": 392.7045552318,
+      "epoch_stressed_net_usd": [113.3511191887, 54.6609403786, 224.6924956645],
+      "native_equivalent_dd_pct": 9.1948,
+      "closed_lifecycles": 1588
+    },
+    "FIXED_REPLACEMENT": {
+      "actual_net_usd": 1331.42,
+      "stressed_net_usd": 1217.7150795834,
+      "epoch_stressed_net_usd": [204.1720913361, 115.6664417887, 897.8765464587],
+      "native_equivalent_dd_pct": 20.2568875652,
+      "closed_lifecycles": 1052
+    }
+  },
+  "descriptive_contract_ceilings": {
+    "LIVE_CONTROL": {
+      "point_id": "3F4F24BA657B37E9F7ED",
+      "formula_change": "Return scale overlap BASELINE_OVERLAP to PRE_IMPULSE",
+      "selection_actual_stressed_usd": [435.34, 392.7045552318],
+      "economic_uplift_vs_baseline_usd": 0.0,
+      "robust_eligible": true,
+      "interpretation": "the formula switch produced no lifecycle or dollar change in E1-E4, June, July or the continuous book; it is a flat formula ceiling, not a candidate"
+    },
+    "FIXED_REPLACEMENT": {
+      "point_id": "45CF8636096AD7DF5E0E",
+      "formula_change": "Pressure mode SYMMETRIC_CONTINUATION to NEGATIVE_SHORT",
+      "selection_actual_stressed_usd": [1472.25, 1356.9227070365],
+      "selection_stressed_uplift_usd": 139.2076274531,
+      "selection_stressed_uplift_pct": 11.4319,
+      "epoch_stressed_net_usd": [208.9578777968, 157.9574847248, 990.0073445148],
+      "worst_epoch_stressed_uplift_fraction": 0.0234399639512,
+      "point_native_equivalent_dd_pct": 18.7695226189,
+      "local_q10_stressed_net_usd": 625.9987307412,
+      "local_p90_native_equivalent_dd_pct": 26.7358622834,
+      "closed_lifecycles": 1039,
+      "positive_components": 5,
+      "positive_months": 23,
+      "component_uplift_vs_baseline_usd": {
+        "RC16": 33.9568,
+        "RC4": -21.5864,
+        "Cross": 8.2614,
+        "Pressure": 33.0438,
+        "Return": 85.5312,
+        "Passive": 0.0
+      },
+      "stationary_bootstrap_monthly_uplift_mean_q025_q50_q975": [-0.0976319, 0.1082036, 0.3601430],
+      "stationary_bootstrap_probability_mean_at_or_below_zero": 0.1558,
+      "deflated_sharpe_probability": 0.8958814944,
+      "pearson_kurtosis": 12.9981442495,
+      "robust_eligible": false,
+      "interpretation": "point profit and DD improve in selection, but the local DD plateau fails, uplift is dominated by portfolio sizing/collision spillovers and late months, and search-bias diagnostics do not establish a transferable edge"
+    }
+  },
+  "fixed_replacement_ceiling_later_economics": {
+    "E4": {
+      "baseline_stressed_usd": 274.2202964754,
+      "ceiling_stressed_usd": 160.628175,
+      "uplift_usd": -113.592121,
+      "ceiling_stressed_dd_pct": 20.192562
+    },
+    "JUNE_2026": {
+      "baseline_stressed_usd": 32.8267638420,
+      "ceiling_stressed_usd": 11.816239,
+      "uplift_usd": -21.010525,
+      "ceiling_stressed_dd_pct": 13.273310
+    },
+    "JULY_2026": {
+      "baseline_stressed_usd": 2.6996855177,
+      "ceiling_stressed_usd": 0.717915,
+      "uplift_usd": -1.981770,
+      "ceiling_stressed_dd_pct": 11.739156
+    },
+    "JUNE_JULY_CONTINUOUS": {
+      "baseline_stressed_usd": 31.5964493597,
+      "ceiling_stressed_usd": 9.164154,
+      "uplift_usd": -22.432295,
+      "ceiling_stressed_dd_pct": 13.273310
+    },
+    "runner_up_rescue": false
+  },
+  "monthly_concentration": {
+    "fixed_replacement_ceiling_largest_positive_uplift_months_usd": {
+      "2025-04": 104.035,
+      "2025-03": 52.907,
+      "2024-04": 44.235
+    },
+    "fixed_replacement_ceiling_largest_negative_uplift_months_usd": {
+      "2025-01": -50.660,
+      "2024-11": -49.104
+    },
+    "interpretation": "the apparent selection advantage is late and lumpy, then reverses in every unopened later interval"
+  },
+  "lab_only_hypothesis_clues": [
+    {
+      "point_id": "9FD4A8BEEA47022BDF5C",
+      "bundle": "RC4 direction fraction 0.5 to 0.75 plus Return centering 0.0 to 1.0",
+      "live_control_stressed_net_worst_epoch_uplift_dd": [539.269196, 0.175826712, 9.041104],
+      "fixed_replacement_stressed_net_worst_epoch_uplift_dd": [1759.739065, 0.215641, 19.696290],
+      "boundary": "post-selection plateau neighbor with no owned unopened neighborhood and no E4/forward access; never an Optimization nominee"
+    },
+    {
+      "point_id": "766FECB1566CBDB2A5A6",
+      "bundle": "Pressure NEGATIVE_SHORT plus RC4 direction fraction 0.5 to 0.75",
+      "live_control_stressed_net_worst_epoch_uplift_dd": [525.868340, -0.025156, 7.760669],
+      "fixed_replacement_stressed_net_worst_epoch_uplift_dd": [1788.732304, 0.286591, 19.246550],
+      "boundary": "replacement-specific post-selection interaction; Live worst epoch is lower than baseline; never an Optimization nominee"
+    }
+  ],
+  "artifacts": {
+    "campaign_contract": {
+      "bytes": 13533,
+      "sha256": "F9BDC0E3AA14B113C5046A8435FF15BB494A813CB0ED9CB6461B51FC475DA801"
+    },
+    "market_receipt": {
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    },
+    "selection_freeze": {
+      "bytes": 52782,
+      "sha256": "5D94BC0FC2A5AFA46AD4B93004F5C79EB9558E105A8F68E2D0765C52AC46F319"
+    },
+    "selection_points": {
+      "bytes": 4180455,
+      "sha256": "15C9A9218E46DF2B78363C4A2D9E09DC3B073499C3F644EBC30065539C951A5F"
+    },
+    "selection_daily_stressed": {
+      "bytes": 57355,
+      "sha256": "118426F6973F3B020C744B46E904AEA9523DBD368EED7DD80E62D8A9196C449D"
+    },
+    "raw_proxy_result": {
+      "bytes": 206603,
+      "sha256": "BFFCBE7137AD4B2E8A5E7245B0A2FE95F098794106B2406705203FCE267365D8"
+    }
+  },
+  "authority_boundary": {
+    "mt5_shortlist": 0,
+    "mql_or_set_change": false,
+    "fixed_replacement_changed_rejected_or_promoted": false,
+    "lab_unit_opened": false,
+    "live_dev_master_broker_account_surface": "UNTOUCHED_OR_UNQUERIED",
+    "proxy_authority": "economic clue screening only"
+  }
+}
