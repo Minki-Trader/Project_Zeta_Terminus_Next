@@ -1,0 +1,132 @@
+{
+  "schema": "zeta-next-paired-month-lifecycle-concentration-robustness-contract-v1",
+  "family": "paired-month-lifecycle-concentration-robustness-v1",
+  "unit": "paired-month-lifecycle-concentration-robustness-106",
+  "parent_main_commit": "b18f4084bf87cd7202b969a08d53633a8769a3a9",
+  "inputs": {
+    "selection": {
+      "path": "lab/artifacts/raw/paired-month-lifecycle-concentration-robustness-v1/input/selection-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "rows": 3287,
+      "events": {
+        "BIRTH": 1428,
+        "CLOSE": 1428,
+        "FIRST_PEER_NATURAL_EXIT": 431
+      },
+      "actual_net_anchor_usd": 5786.63,
+      "stressed_net_anchor_usd": 5477.524
+    },
+    "forward": {
+      "path": "lab/artifacts/raw/paired-month-lifecycle-concentration-robustness-v1/input/forward-lifecycles.csv",
+      "bytes": 92997,
+      "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+      "rows": 115,
+      "events": {
+        "BIRTH": 54,
+        "CLOSE": 54,
+        "FIRST_PEER_NATURAL_EXIT": 7
+      },
+      "actual_net_anchor_usd": 32.74,
+      "stressed_net_anchor_usd": 30.626
+    },
+    "ordered_manifest_rule": "UTF-8 bytes of basename|bytes|uppercase_sha256 plus LF, selection then forward",
+    "ordered_manifest_sha256": "158C728D08D13A43EE83EA0AFB02CF58C1E521160E2679E4054CB51C101807ED",
+    "total_files": 2,
+    "total_bytes": 2778966
+  },
+  "components": [
+    {
+      "name": "RC16",
+      "component_id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "selection_closes": 258,
+      "forward_closes": 9
+    },
+    {
+      "name": "RC4",
+      "component_id": "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "selection_closes": 196,
+      "forward_closes": 7
+    },
+    {
+      "name": "Cross",
+      "component_id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "selection_closes": 660,
+      "forward_closes": 28
+    },
+    {
+      "name": "Pressure",
+      "component_id": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "selection_closes": 88,
+      "forward_closes": 5
+    },
+    {
+      "name": "Return",
+      "component_id": "ZT-H1-US30-RETURN-I-c870a788ec",
+      "selection_closes": 226,
+      "forward_closes": 5
+    }
+  ],
+  "selection_epochs": [
+    {
+      "id": "E1",
+      "start": "2022.08.01 00:00:00",
+      "end": "2023.06.01 00:00:00"
+    },
+    {
+      "id": "E2",
+      "start": "2023.06.01 00:00:00",
+      "end": "2024.06.01 00:00:00"
+    },
+    {
+      "id": "E3",
+      "start": "2024.06.01 00:00:00",
+      "end": "2025.06.01 00:00:00"
+    },
+    {
+      "id": "E4",
+      "start": "2025.06.01 00:00:00",
+      "end": "2026.06.01 00:00:00"
+    }
+  ],
+  "forward_months": [
+    {
+      "id": "JUNE",
+      "start": "2026.06.01 00:00:00",
+      "end": "2026.07.01 00:00:00"
+    },
+    {
+      "id": "JULY",
+      "start": "2026.07.01 00:00:00",
+      "end": "2026.08.01 00:00:00"
+    }
+  ],
+  "selection_rules": {
+    "ranking_basis": "stressed_net_usd descending, then server_time, position_identifier and frozen component order",
+    "top_k_values": [5, 10],
+    "minimum_positive_closes_per_component": 10,
+    "broad_concentration": {
+      "minimum_components_top10_share_at_least_threshold": 3,
+      "top10_gross_positive_share_threshold": 0.3,
+      "median_top10_gross_positive_share_threshold": 0.35
+    },
+    "sign_and_rank_fragility": {
+      "minimum_components_nonpositive_after_top10": 3,
+      "minimum_pair_reversals": 2,
+      "maximum_kendall_tau_a": 0.6
+    },
+    "strong_robustness": {
+      "all_five_component_residuals_positive": true,
+      "maximum_pair_reversals": 0
+    }
+  },
+  "forward_diagnostic_rules": {
+    "ranking_basis": "stressed_net_usd descending, then server_time, position_identifier and frozen component order",
+    "top_k_values": [3, 5],
+    "minimum_positive_closes": 5,
+    "warning": "Report whether full-forward stressed net becomes nonpositive after top-3 or top-5 removal; this small-sample diagnostic is not a primary verdict gate."
+  },
+  "output": {
+    "path": "lab/artifacts/raw/paired-month-lifecycle-concentration-robustness-v1/output/formal-result.json"
+  }
+}

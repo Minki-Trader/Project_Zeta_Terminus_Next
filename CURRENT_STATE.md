@@ -5,7 +5,7 @@ Last updated: 2026-08-30
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0383`
+- Latest state ID: `STATE-0384`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 ## Active work
 
 - Active engineering boundary: none; `lab/engineering/paired-month-live-replacement-handoff-v1/` is closed verified. The fixed paired-month implementation compiled at build 6140 with `0 errors / 0 warnings`, reproduced selection `+$5,786.64 / +$5,477.564` across `1,428` closes and forward `+$32.75 / +$30.628` across `54` closes, then passed bounded connected entries-disabled create/recovery at sequences `2 / 4` with entries `0/0`, flat zero-risk state and zero fault before normal stops. The candidate is ready only for a later separately authorized Live translation; current RLO1 package/runtime/state/logs remain unchanged.
-- Active research boundary: none; Program 1 / meso→micro correction Unit 105 `us500-shock-response-environment-correction-v1` is closed `FAIL_US500_SHOCK_RESPONSE_NO_DIRECTION_NO_SEED`. The valid fixed proxy reproduced all `1,264` parent P1 M15 signal coordinates and pooled `3,446` opportunities, but continuation/reversion observed nets were `-$16.7491 / -$13.2710` and doubled-spread nets were `-$46.7692 / -$43.2911`; both directions lost in all four periods and passed `0/5` economic gates. No seed, MT5 clue, adjacent shock-response rescue, Optimization candidate, MQL or Live authority exists.
+- Active research boundary: none; source-free Program 7 / meso→macro Unit 106 `paired-month-lifecycle-concentration-robustness-v1` is closed `AMBIGUOUS_SELECTION_COMPONENT_OUTCOME_CONCENTRATION`. On the naturally complete fixed-candidate selection ledger, `4/5` component top-10 shares exceeded `30%`, their median was `51.8291%`, four component residual signs failed and the 50-row union left `-$2,300.692` stressed net. However, all ten component rank pairs stayed exact at tau `1.0`, so broad concentration passed while sign/rank fragility and strong robustness both failed. Forward top-3 removal left `-$8.878` as a declared small-sample warning. The fixed candidate and every realized lifecycle remain preserved; no seed, retune, MT5, reallocation or Live authority exists.
 - Active optimization boundary: none; source-free `dd20-paired-month-live-control-cost-resilience-proxy-v1` is closed `PASS_FIXED_DEVELOPMENT_CANDIDATE_COST_RESILIENCE_VS_ACTIVE_LIVE_CONTROL`. At the fixed `4x` observed-cost book, the paired-month candidate retained selection `+$4,859.312` / PF `1.4011` and full forward `+$26.398` / PF `1.2504`, versus the exact active Live-derived control `+$778.2375 / -$6.237`. All four selection epochs and all five active components stayed positive; June was `+$29.667` and July `-$3.269`, only `12.38%` of positive full forward and inside the frozen pragmatic bounds. This arithmetic stress does not establish native `3x/4x` capital-ladder or open-equity DD. It strengthens but does not change the fixed candidate, creates no new MT5 shortlist or Live authority, and returns Optimization to a whole-map comparison.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6

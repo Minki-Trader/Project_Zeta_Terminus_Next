@@ -1,0 +1,124 @@
+{
+  "schema": "zeta-next-paired-month-lifecycle-concentration-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_VALID_AMBIGUOUS_NO_POLICY_CHANGE",
+  "unit": "paired-month-lifecycle-concentration-robustness-106",
+  "family": "paired-month-lifecycle-concentration-robustness-v1",
+  "macro_program": {
+    "id": 7,
+    "name": "diagnostic_causal_meta"
+  },
+  "verdict": "AMBIGUOUS_SELECTION_COMPONENT_OUTCOME_CONCENTRATION",
+  "evidence": {
+    "snapshot": {
+      "bytes": 2943,
+      "sha256": "731E46D101F3FDBEDCF46213C8A6AA9C2E73668E63D76AC5BDABF36856127331"
+    },
+    "config": {
+      "bytes": 4167,
+      "sha256": "77786A97A93839AD51DB272EA5B812F39A8CB693DC98B2F4571C6111A7B5429D"
+    },
+    "formal_process": {
+      "bytes": 19114,
+      "sha256": "B953F4AE338418CDC98E6DAD4C2A5B12A05F32E480F8B9BC4D9DA651F6DA6270"
+    },
+    "declaration": {
+      "bytes": 14130,
+      "sha256": "161C9585AD404C5481C16AF704D00D01DCF2E26B230F76C443F4538136A1A392"
+    },
+    "raw_result": {
+      "bytes": 11483,
+      "sha256": "958A3D0952003A2C465C2D69052CEF30B0126311632CEA851D8DD87486BBBFE8"
+    },
+    "result": {
+      "bytes": 7049,
+      "sha256": "A99EAE7BA6F2AA5DD0170912CE26C02733EAFA2ABC2A9F01E68714757DC082BA"
+    },
+    "readme": {
+      "bytes": 1944,
+      "sha256": "953A5CF7DAFD33E68327AF797ACE49FE6A9D25CF614649239F5A5D96892C1A81"
+    }
+  },
+  "execution_accounting": {
+    "formal_source_free_processes": 1,
+    "complete_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "post_declaration_engineering_or_design_corrections": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_or_tester_paths": 0,
+    "orders": 0,
+    "broker_account_queries": 0
+  },
+  "integrity": {
+    "passed": true,
+    "input_files_and_bytes": "2 / 2778966",
+    "input_bundle_manifest_sha256": "158C728D08D13A43EE83EA0AFB02CF58C1E521160E2679E4054CB51C101807ED",
+    "selection_births_and_closes": "1428 / 1428",
+    "forward_births_and_closes": "54 / 54",
+    "negative_cost_units": 0,
+    "candidate_anchor_or_identity_faults": 0
+  },
+  "economic_finding": {
+    "selection_original_actual_stressed_usd": [
+      5786.63,
+      5477.524000000163
+    ],
+    "components_top10_share_at_least_30_percent": "4 / 5",
+    "median_component_top10_gross_positive_share": 0.5182910303383416,
+    "components_nonpositive_after_top10": "4 / 5",
+    "leave_component_top10_portfolio_actual_stressed_usd": [
+      -2030.27,
+      -2300.6919999998895
+    ],
+    "removed_selection_winners_by_epoch": "0 / 0 / 4 / 46",
+    "leave_top10_epoch_stressed_usd": "211.002 / 142.114 / 271.730 / -2925.538",
+    "component_rank_pair_reversals": "0 / 10",
+    "component_rank_kendall_tau_a": 1.0,
+    "broad_concentration_passed": true,
+    "sign_and_rank_fragility_passed": false,
+    "strong_robustness_falsifier_passed": false,
+    "forward_top3_share_and_residual_stressed_usd": "29.5253% / -8.878",
+    "forward_top5_share_and_residual_stressed_usd": "42.9202% / -26.800",
+    "forward_small_sample_tail_warning": true
+  },
+  "classification": {
+    "reason": "Dollar mass and four component signs are top-winner dependent, but all ten relative component rank pairs remain exact. The predeclared concentration-plus-rank-fragility thesis and its all-positive strong falsifier therefore both fail.",
+    "research_hypothesis_failure": false,
+    "engineering_or_environment_failure": false,
+    "valid_ambiguous_economic_result": true
+  },
+  "decision_translation": {
+    "fixed_development_candidate": "PRESERVE_UNCHANGED",
+    "all_realized_lifecycles": "PRESERVE",
+    "pooled_component_rank_use": "Do not use pooled component ranks alone as authority for a future reallocation because dollar mass is tail-concentrated even though relative order is stable.",
+    "candidate_rejection_or_replacement": false,
+    "retained_lab_or_optimization_seed": null,
+    "new_mt5_shortlist": false,
+    "live_authority": false
+  },
+  "closed_scope": [
+    "alternate selection or forward top-k and percentage-tail variants",
+    "winsorization, bootstrap, resampling, shuffling, normalization or significance variants",
+    "component/book/symbol/direction/epoch/month/cost subgroup concentration rescue",
+    "component removal, reweighting, capital allocation, priority, lot, risk, slot, ladder, admission, stop or exit translation",
+    "MQL, SET, runtime, compile, Strategy Tester, MT5, Lab engineering or Live action"
+  ],
+  "retention": {
+    "lab_owned_input_files": 2,
+    "lab_owned_input_bytes": 2778966,
+    "raw_result_preserved": true,
+    "runtime_or_reproducible_cache_created": false
+  },
+  "surface": {
+    "lab_forward_baseline": "UNCHANGED",
+    "paired_month_development_candidate": "FIXED_UNCHANGED",
+    "closed_lab_engineering_handoff": "UNCHANGED",
+    "live_dev_package_runtime_state_and_logs": "UNTOUCHED",
+    "master_terminal": "UNTOUCHED",
+    "broker_account_positions_orders_and_deals": "UNQUERIED"
+  },
+  "successor_boundary": "Return immediately to a complete Program 1-5 and 7 map comparison. Do not open a normalized-R, equal-lot, alternate-k, E4-only, forward-extension or allocation successor automatically.",
+  "goal_status": "ACTIVE_NOT_COMPLETE"
+}

@@ -1,0 +1,195 @@
+{
+  "schema": "zeta-next-paired-month-lifecycle-concentration-result-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "VALID_COMPLETE_AMBIGUOUS",
+  "unit": "paired-month-lifecycle-concentration-robustness-106",
+  "family": "paired-month-lifecycle-concentration-robustness-v1",
+  "verdict": "AMBIGUOUS_SELECTION_COMPONENT_OUTCOME_CONCENTRATION",
+  "evidence": {
+    "declaration": {
+      "path": "lab/research/paired-month-lifecycle-concentration-robustness-v1/evidence/PAIRED_MONTH_LIFECYCLE_CONCENTRATION_DECLARATION_V1.json",
+      "bytes": 14130,
+      "sha256": "161C9585AD404C5481C16AF704D00D01DCF2E26B230F76C443F4538136A1A392"
+    },
+    "snapshot": {
+      "bytes": 2943,
+      "sha256": "731E46D101F3FDBEDCF46213C8A6AA9C2E73668E63D76AC5BDABF36856127331"
+    },
+    "config": {
+      "bytes": 4167,
+      "sha256": "77786A97A93839AD51DB272EA5B812F39A8CB693DC98B2F4571C6111A7B5429D"
+    },
+    "formal_process": {
+      "bytes": 19114,
+      "sha256": "B953F4AE338418CDC98E6DAD4C2A5B12A05F32E480F8B9BC4D9DA651F6DA6270"
+    },
+    "raw_result": {
+      "path": "lab/artifacts/raw/paired-month-lifecycle-concentration-robustness-v1/output/formal-result.json",
+      "bytes": 11483,
+      "sha256": "958A3D0952003A2C465C2D69052CEF30B0126311632CEA851D8DD87486BBBFE8"
+    }
+  },
+  "execution": {
+    "formal_source_free_processes": 1,
+    "complete_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "post_declaration_engineering_or_design_corrections": 0,
+    "internal_elapsed_seconds": 0.20529940000051283,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_or_tester_paths": 0,
+    "orders": 0,
+    "broker_account_queries": 0
+  },
+  "integrity": {
+    "passed": true,
+    "input_files": 2,
+    "input_bytes": 2778966,
+    "input_bundle_manifest_sha256": "158C728D08D13A43EE83EA0AFB02CF58C1E521160E2679E4054CB51C101807ED",
+    "selection_rows_births_closes": "3287 / 1428 / 1428",
+    "forward_rows_births_closes": "115 / 54 / 54",
+    "selection_positive_stressed_closes": 771,
+    "forward_positive_stressed_closes": 30,
+    "negative_cost_units": 0,
+    "candidate_anchor_or_identity_faults": 0
+  },
+  "fixed_candidate": {
+    "identity": "dd20-paired-month-stability-mt5-v1",
+    "weights": [
+      2.0,
+      1.5,
+      2.0,
+      2.5,
+      1.5,
+      0.0
+    ],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "changed_or_retuned": false
+  },
+  "selection": {
+    "original": {
+      "closes": 1428,
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524000000163,
+      "gross_positive_stressed_usd": 17298.50400000011
+    },
+    "component_top10": [
+      {
+        "name": "RC16",
+        "gross_positive_share": 0.44347428707265635,
+        "residual_actual_net_usd": 458.68,
+        "residual_stressed_net_usd": 410.22800000005304
+      },
+      {
+        "name": "RC4",
+        "gross_positive_share": 0.5182910303383416,
+        "residual_actual_net_usd": -498.65,
+        "residual_stressed_net_usd": -542.1979999999712
+      },
+      {
+        "name": "Cross",
+        "gross_positive_share": 0.2639617864849276,
+        "residual_actual_net_usd": -745.81,
+        "residual_stressed_net_usd": -875.2240000000041
+      },
+      {
+        "name": "Pressure",
+        "gross_positive_share": 0.7445727530175368,
+        "residual_actual_net_usd": -388.9,
+        "residual_stressed_net_usd": -409.18199999999297
+      },
+      {
+        "name": "Return",
+        "gross_positive_share": 0.5306978771328954,
+        "residual_actual_net_usd": -855.59,
+        "residual_stressed_net_usd": -884.3159999999739
+      }
+    ],
+    "leave_component_top10_portfolio": {
+      "removed_closes": 50,
+      "residual_closes": 1378,
+      "residual_actual_net_usd": -2030.27,
+      "residual_stressed_net_usd": -2300.6919999998895
+    },
+    "leave_component_top10_epoch_residual_stressed_usd": {
+      "E1": 211.00200000000592,
+      "E2": 142.11399999998162,
+      "E3": 271.73000000000684,
+      "E4": -2925.5379999998836
+    },
+    "removed_winner_epoch_counts": {
+      "E1": 0,
+      "E2": 0,
+      "E3": 4,
+      "E4": 46
+    },
+    "rank_robustness": {
+      "original_and_residual_order": [
+        "RC16",
+        "Pressure",
+        "RC4",
+        "Cross",
+        "Return"
+      ],
+      "pair_reversals": 0,
+      "pair_count": 10,
+      "kendall_tau_a": 1.0
+    },
+    "gate_application": {
+      "components_top10_share_at_least_0_30": "4 / 5",
+      "median_top10_gross_positive_share": 0.5182910303383416,
+      "broad_concentration_passed": true,
+      "components_nonpositive_after_top10": "4 / 5",
+      "sign_and_rank_fragility_passed": false,
+      "strong_robustness_falsifier_passed": false
+    }
+  },
+  "forward_diagnostic": {
+    "primary_verdict_gate": false,
+    "original_actual_stressed_usd": [
+      32.74,
+      30.626000000002755
+    ],
+    "top3": {
+      "gross_positive_share": 0.2952532567994776,
+      "residual_actual_stressed_usd": [
+        -6.88,
+        -8.87799999999748
+      ],
+      "june_residual_stressed_usd": -7.394999999998692,
+      "july_residual_stressed_usd": -1.4829999999987882
+    },
+    "top5": {
+      "gross_positive_share": 0.42920244848539,
+      "residual_actual_stressed_usd": [
+        -24.91,
+        -26.799999999997745
+      ],
+      "june_residual_stressed_usd": -7.394999999998692,
+      "july_residual_stressed_usd": -19.404999999999053
+    },
+    "small_sample_tail_warning": true
+  },
+  "economic_interpretation": {
+    "supported": "Dollar outcomes are broadly concentrated: four component signs and the full portfolio change sign after the frozen top-ten diagnostic, and 46 of the 50 selected winners occur in E4 under the larger compounding scale.",
+    "not_supported": "Relative component hierarchy is not fragile: every one of ten component rank pairs survives exactly, so the predeclared sign-and-rank fragility bundle does not pass.",
+    "classification": "The evidence is neither broadly rank-fragile nor strongly robust. It is a valid ambiguous concentration result, not an engineering failure and not a fixed-candidate optimization failure.",
+    "forward": "The 54-close forward depends on a small number of winners under the diagnostic, but its top-3/top-5 result is intentionally only a small-sample warning."
+  },
+  "decision_translation": {
+    "fixed_development_candidate": "PRESERVED_UNCHANGED",
+    "pooled_component_rank_authority": "Do not use pooled ranks alone to justify a later reallocation; dollar mass is tail-concentrated even though relative rank is stable.",
+    "candidate_rejection_or_replacement": false,
+    "retained_optimization_seed": null,
+    "new_mt5_shortlist": false,
+    "live_authority": false
+  },
+  "reporting_boundary": {
+    "realized_winner_removal_is_not_predictive": true,
+    "compounding_scale_and_E4_concentration_are_not_separated_by_this_unit": true,
+    "alternate_normalization_k_bootstrap_or_subgroup_rescue": false,
+    "lab_forward_baseline_live_dev_master_and_broker_account_surface": "UNTOUCHED"
+  }
+}

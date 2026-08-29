@@ -1,0 +1,71 @@
+{
+  "schema": "zeta-next-paired-month-lifecycle-concentration-snapshot-receipt-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "OUTCOME_FREE_STRUCTURE_FROZEN",
+  "unit": "paired-month-lifecycle-concentration-robustness-106",
+  "family": "paired-month-lifecycle-concentration-robustness-v1",
+  "parent_main_commit": "b18f4084bf87cd7202b969a08d53633a8769a3a9",
+  "source_topology": {
+    "role": "one-time provenance only",
+    "selection_source": "optimization/artifacts/raw/dd20-paired-month-live-control-cost-resilience-proxy-v1/input/candidate-selection-lifecycles.csv",
+    "forward_source": "optimization/artifacts/raw/dd20-paired-month-live-control-cost-resilience-proxy-v1/input/candidate-forward-lifecycles.csv",
+    "execution_reads_source_paths": false,
+    "lab_owned_copy_root": "lab/artifacts/raw/paired-month-lifecycle-concentration-robustness-v1/input/",
+    "hardlinks_or_includes": false
+  },
+  "lab_owned_inputs": [
+    {
+      "name": "selection-lifecycles.csv",
+      "path": "lab/artifacts/raw/paired-month-lifecycle-concentration-robustness-v1/input/selection-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "byte_equal_at_intake": true
+    },
+    {
+      "name": "forward-lifecycles.csv",
+      "path": "lab/artifacts/raw/paired-month-lifecycle-concentration-robustness-v1/input/forward-lifecycles.csv",
+      "bytes": 92997,
+      "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+      "byte_equal_at_intake": true
+    }
+  ],
+  "input_bundle": {
+    "files": 2,
+    "bytes": 2778966,
+    "ordered_manifest_rule": "UTF-8 bytes of basename|bytes|uppercase_sha256 plus LF, selection then forward",
+    "ordered_manifest_sha256": "158C728D08D13A43EE83EA0AFB02CF58C1E521160E2679E4054CB51C101807ED"
+  },
+  "outcome_free_structure": {
+    "selection": {
+      "rows": 3287,
+      "births": 1428,
+      "closes": 1428,
+      "first_peer_natural_exit": 431,
+      "unique_position_identifiers": 1428,
+      "component_close_counts": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": 258,
+        "ZT-M30-US30-RANGE-COMP-64efb16616": 196,
+        "ZT-H1-US100-CROSS-IN-14b72317b7": 660,
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": 88,
+        "ZT-H1-US30-RETURN-I-c870a788ec": 226
+      }
+    },
+    "forward": {
+      "rows": 115,
+      "births": 54,
+      "closes": 54,
+      "first_peer_natural_exit": 7,
+      "unique_position_identifiers": 54,
+      "component_close_counts": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": 9,
+        "ZT-M30-US30-RANGE-COMP-64efb16616": 7,
+        "ZT-H1-US100-CROSS-IN-14b72317b7": 28,
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": 5,
+        "ZT-H1-US30-RETURN-I-c870a788ec": 5
+      }
+    }
+  },
+  "economic_columns_read_for_snapshot": false,
+  "concentration_rank_residual_or_verdict_computed": false,
+  "live_lab_runtime_master_and_broker_account_surface": "UNTOUCHED"
+}
