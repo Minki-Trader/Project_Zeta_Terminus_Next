@@ -1,0 +1,318 @@
+{
+  "schema": "zeta-next-us500-epu-volatility-disconnect-cash-session-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "UNIT_110_VALID_MIXED_ECONOMIC_TRANSFER_NO_SEED",
+  "unit": "us500-epu-volatility-disconnect-cash-session-110",
+  "family": "us500-epu-volatility-disconnect-cash-session-v1",
+  "declaration_commit": "f8f7f8101a56f179243d11401693a3b92a8c1243",
+  "verdict": "AMBIGUOUS_EPU_VOLATILITY_DISCONNECT_TRANSFER_NO_SEED",
+  "validity": {
+    "immutable_input_files": 3,
+    "immutable_input_bytes": 7257603,
+    "input_manifest_sha256": "063DE9F5B8515DF29241C091141EF9634C039B44BAD5A522DADDFC00C7A1C56D",
+    "epu_rows": 15215,
+    "epu_duplicate_dates": 0,
+    "epu_null_values": 0,
+    "bar_rows": 97707,
+    "complete_cash_sessions": 1046,
+    "complete_source_weeks": 188,
+    "causal_state_weeks_after_warmup": 162,
+    "minimum_source_age_days": 31,
+    "state_day_rows": 747,
+    "schema_time_ohlc_volume_spread_geometry_passed": true,
+    "observed_entry_ask_exit_bid_identity_passed_at_tolerance_usd": 1e-10,
+    "recorded_zero_entry_spread_rows": 1,
+    "recorded_zero_exit_spread_rows": 0,
+    "zero_spread_interpretation": "The one zero entry-spread row is accepted by the frozen nonnegative-spread contract. Any missing positive LONG entry cost would reduce observed and doubled-stress economics, so it cannot manufacture either the latest loss or the no-seed conclusion.",
+    "premetric_design_corrections": 1,
+    "premetric_design_correction": "Before any target return or P/L was opened, the predictor-only classifier was corrected from separate EPU/volatility thresholds to the paper's disconnect = EPU / realized-volatility ratio plus volatility state. This was a design correction, not an economic verdict.",
+    "formal_source_free_processes": 1,
+    "complete_economic_aggregations": 1,
+    "economic_contract_changes_after_declaration": 0,
+    "engineering_corrections_after_declaration": 2,
+    "post_aggregation_orchestration_correction": "Two read-only PowerShell artifact-summary commands contained the same empty pipe element pattern. Their corrected forms only reported existing file hashes, index equality and bytecode absence; no source, raw output, metric or verdict changed.",
+    "economic_metric_reruns_or_rejudgments": 0,
+    "valid_complete_economic_result": true
+  },
+  "state_and_supply": {
+    "state_week_counts": {
+      "HIGH_D_LOW_V": 92,
+      "HIGH_D_HIGH_V": 7,
+      "LOW_D_LOW_V": 54,
+      "LOW_D_HIGH_V": 9
+    },
+    "state_day_counts": {
+      "HIGH_D_LOW_V": 420,
+      "HIGH_D_HIGH_V": 34,
+      "LOW_D_LOW_V": 251,
+      "LOW_D_HIGH_V": 42
+    },
+    "primary_days_by_period": {
+      "P1_2023": 112,
+      "P2_2024": 70,
+      "P3_2025": 160,
+      "P4_2026_JAN_MAY": 43,
+      "P5_LATEST_2026_JUN_JUL": 35
+    },
+    "primary_2023_halves": {
+      "2023H1": 64,
+      "2023H2": 48
+    },
+    "density_gate_passed": true,
+    "structural_role": "All five frozen primary periods and both P1 halves have sufficient observations. The verdict is purely economic, not a density, data, clock or environment result."
+  },
+  "primary_period_economics": {
+    "P1_2023": {
+      "days": 112,
+      "gross_net_usd": 3.1542,
+      "observed_net_usd": 2.5967,
+      "stressed_net_usd": 2.0392,
+      "stressed_profit_factor": 1.2118715389,
+      "stressed_max_closed_dd_percent": 1.7575,
+      "stressed_net_to_dd": 1.160284495,
+      "stressed_mean_usd_per_day": 0.0182071429,
+      "stressed_mean_to_standard_deviation": 0.0718468534,
+      "halves_stressed_net_usd": {
+        "2023H1": 1.3557,
+        "2023H2": 0.6835
+      },
+      "gate": "FAIL_NET_TO_DRAWDOWN_ONLY",
+      "interpretation": "The initial period is positive after doubled spread, PF passes, both halves pass and the state mean beats both controls. Net/DD is 1.1603 versus the fixed 1.25 line, a 0.0897 absolute or 7.18% proportional miss. This isolated miss is marginal, but it is not the only failed terminal condition."
+    },
+    "P2_2024": {
+      "days": 70,
+      "gross_net_usd": 4.2284,
+      "observed_net_usd": 3.9216,
+      "stressed_net_usd": 3.6148,
+      "stressed_profit_factor": 1.5165180613,
+      "stressed_max_closed_dd_percent": 1.0875,
+      "stressed_net_to_dd": 3.323954023,
+      "stressed_mean_usd_per_day": 0.05164,
+      "stressed_mean_to_standard_deviation": 0.1446664702,
+      "gate": "PASS",
+      "interpretation": "The first confirmation year is positive and economically separated from the negative low-disconnect control. Its 2024H1 path is negative -$0.3317 but 2024H2 is +$3.9465, so the year-level confirmation is genuine but not half-year uniform."
+    },
+    "P3_2025": {
+      "days": 160,
+      "gross_net_usd": 4.2258,
+      "observed_net_usd": 3.5228,
+      "stressed_net_usd": 2.8198,
+      "stressed_profit_factor": 1.1244422869,
+      "stressed_max_closed_dd_percent": 3.087,
+      "stressed_net_to_dd": 0.9134434726,
+      "stressed_mean_usd_per_day": 0.01762375,
+      "stressed_mean_to_standard_deviation": 0.0438735777,
+      "gate": "PASS",
+      "interpretation": "The second confirmation remains positive in both halves and above low-disconnect, although its efficiency is weaker than 2024 and its high-disconnect/high-volatility control loses."
+    },
+    "P4_2026_JAN_MAY": {
+      "days": 43,
+      "gross_net_usd": 7.7327,
+      "observed_net_usd": 7.6252,
+      "stressed_net_usd": 7.5177,
+      "stressed_profit_factor": 3.311573704,
+      "stressed_max_closed_dd_percent": 1.185,
+      "stressed_net_to_dd": 6.3440506329,
+      "stressed_mean_usd_per_day": 0.1748302326,
+      "stressed_mean_to_standard_deviation": 0.4632783783,
+      "gate": "PASS",
+      "interpretation": "January-May is the strongest frozen block. April contributes +$3.6257, 48.23% of this block's stressed net, but the remaining block is still positive."
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "days": 35,
+      "gross_net_usd": -0.4048,
+      "observed_net_usd": -0.4923,
+      "stressed_net_usd": -0.5798,
+      "stressed_profit_factor": 0.9039032071,
+      "stressed_max_closed_dd_percent": 3.0778,
+      "stressed_net_to_dd": -0.1883813113,
+      "stressed_mean_usd_per_day": -0.0165657143,
+      "stressed_mean_to_standard_deviation": -0.0361181671,
+      "months_stressed_net_usd": {
+        "2026-06": -1.563,
+        "2026-07": 0.9832
+      },
+      "nominal_floor_usd": 0.0,
+      "gate": "FAIL_NOMINAL_NET",
+      "interpretation": "The latest primary state reverses before cost and after cost. Its per-day loss magnitude is 39.88% of the positive prelatest per-day edge, so the small dollar total is not merely an inconsequential zero crossing. June loses and July recovers only part of it; selecting July or excluding June would be a forbidden post-outcome rescue."
+    }
+  },
+  "pooled_primary_economics": {
+    "P1_P4_PRELATEST": {
+      "days": 385,
+      "gross_net_usd": 19.3411,
+      "observed_net_usd": 17.6663,
+      "stressed_net_usd": 15.9915,
+      "gross_to_observed_cost_usd": 1.6748,
+      "observed_to_stressed_increment_usd": 1.6748,
+      "total_doubled_cost_burden_usd": 3.3496,
+      "cost_erosion_of_gross_fraction": 0.1731855996,
+      "stressed_profit_factor": 1.3759627411,
+      "stressed_max_closed_dd_percent": 3.087,
+      "stressed_net_to_dd": 5.1802721088,
+      "stressed_mean_usd_per_day": 0.0415363636,
+      "stressed_mean_to_standard_deviation": 0.1168980973,
+      "positive_months": 19,
+      "active_months": 33,
+      "all_prelatest_gates_passed": true,
+      "interpretation": "Historical transfer is economically meaningful, cost-resilient and low-drawdown. Cost removes 17.32% of midpoint gross rather than manufacturing the effect, and all three confirmation periods remain positive."
+    },
+    "P1_P5_FULL": {
+      "days": 420,
+      "gross_net_usd": 18.9363,
+      "observed_net_usd": 17.174,
+      "stressed_net_usd": 15.4117,
+      "total_doubled_cost_burden_usd": 3.5246,
+      "cost_erosion_of_gross_fraction": 0.1861292861,
+      "stressed_profit_factor": 1.317320145,
+      "stressed_max_closed_dd_percent": 3.087,
+      "stressed_net_to_dd": 4.992452219,
+      "stressed_mean_usd_per_day": 0.0366945238,
+      "stressed_mean_to_standard_deviation": 0.1006045531,
+      "positive_months": 20,
+      "active_months": 35,
+      "best_month": {"month": "2026-04", "stressed_net_usd": 3.6257},
+      "worst_month": {"month": "2025-03", "stressed_net_usd": -1.7123},
+      "top_five_positive_month_share": 0.5312602064,
+      "full_net_and_profit_factor_gates_passed": true,
+      "interpretation": "Full economics remain positive because the strong historical book dominates the latest loss. This satisfies the full-book gates but cannot replace the separately required latest nonnegative condition."
+    }
+  },
+  "state_controls": {
+    "P1_P4_PRELATEST": {
+      "primary_HIGH_D_LOW_V": {
+        "days": 385,
+        "stressed_net_usd": 15.9915,
+        "profit_factor": 1.3759627411,
+        "mean_usd_per_day": 0.0415363636,
+        "mean_to_standard_deviation": 0.1168980973
+      },
+      "high_disconnect_high_volatility": {
+        "days": 34,
+        "stressed_net_usd": -1.4987,
+        "profit_factor": 0.7660036223,
+        "mean_usd_per_day": -0.0440794118,
+        "mean_to_standard_deviation": -0.09358264
+      },
+      "low_disconnect_pooled": {
+        "days": 283,
+        "stressed_net_usd": -3.65585,
+        "profit_factor": 0.8885505026,
+        "mean_usd_per_day": -0.0129181979,
+        "mean_to_standard_deviation": -0.0446832171
+      },
+      "unconditional": {
+        "days": 702,
+        "stressed_net_usd": 10.83695,
+        "profit_factor": 1.1325744856,
+        "mean_usd_per_day": 0.0154372507,
+        "mean_to_standard_deviation": 0.0457014434
+      },
+      "primary_mean_multiple_of_unconditional": 2.6906580978,
+      "primary_risk_adjusted_multiple_of_unconditional": 2.5578644465,
+      "interpretation": "Before the latest block, the exact paper state separates economically: low disconnect and high-disconnect/high-volatility both lose, while primary mean/day is 2.69x and mean/standard-deviation is 2.56x unconditional. This is real historical mechanism information, not a cost or unconditional-market artifact."
+    },
+    "confirmation_periods": {
+      "P2_2024": {
+        "primary_stressed_net_usd": 3.6148,
+        "primary_mean_usd_per_day": 0.05164,
+        "low_disconnect_mean_usd_per_day": -0.0256965986,
+        "high_disconnect_pooled_stressed_net_usd": 3.6148
+      },
+      "P3_2025": {
+        "primary_stressed_net_usd": 2.8198,
+        "primary_mean_usd_per_day": 0.01762375,
+        "low_disconnect_mean_usd_per_day": -0.0206727273,
+        "high_disconnect_pooled_stressed_net_usd": 1.2576
+      },
+      "P4_2026_JAN_MAY": {
+        "primary_stressed_net_usd": 7.5177,
+        "primary_mean_usd_per_day": 0.1748302326,
+        "low_disconnect_mean_usd_per_day": 0.0055911765,
+        "high_disconnect_pooled_stressed_net_usd": 7.5177
+      },
+      "all_primary_periods_positive": true,
+      "primary_mean_above_low_disconnect_periods": 3,
+      "required_primary_mean_breadth": 2,
+      "high_disconnect_pooled_positive_periods": 3,
+      "required_high_disconnect_positive_breadth": 3
+    },
+    "latest": {
+      "primary_stressed_net_usd": -0.5798,
+      "low_disconnect_stressed_net_usd": -0.9036,
+      "unconditional_stressed_net_usd": -1.4834,
+      "interpretation": "Primary still loses less than the controls in June-July, so relative separation does not vanish completely. The actionable LONG treatment nevertheless loses, and a relative-loss filter is not the declared decision."
+    }
+  },
+  "gate_result": {
+    "passed": false,
+    "passed_checks": [
+      "all five period density floors",
+      "P1 positive net and PF",
+      "both P1 halves positive",
+      "P1 mean/day above low-disconnect and unconditional controls",
+      "P2, P3 and P4 primary nets each positive",
+      "primary mean/day above low-disconnect in 3/3 confirmation periods",
+      "high-disconnect pooled net positive in 3/3 confirmation periods",
+      "all prelatest PF, net/DD, DD, month-breadth and state-control gates",
+      "full net positive and full PF >=1.05"
+    ],
+    "failed_checks": [
+      "P1 stressed net/DD 1.160284495 below 1.25",
+      "P5 stressed net -$0.5798 below the fixed nonnegative floor"
+    ],
+    "marginal_judgment": "The P1 efficiency miss alone is proportionally small. It cannot be waived because the independent latest gate also fails: the latest state loses before cost and after cost, and its per-day reversal is 39.88% of the positive prelatest per-day edge. The mixed book therefore carries information but does not meet the frozen retention contract."
+  },
+  "economic_interpretation": {
+    "mechanism": "A publication-safe high EPU/realized-volatility disconnect combined with low realized volatility identifies a strong 2023 through May-2026 US500 cash-session premium, including three positive confirmation periods and decisive state-control separation.",
+    "cost": "The effect is not a spread illusion. P1-P4 midpoint gross +$19.3411 remains +$15.9915 after doubled spread, and the latest period is already negative at midpoint gross.",
+    "initial_efficiency": "P1 is positive in both halves but misses net/DD by 7.18%. This is a marginal early-efficiency weakness rather than a sign failure or environment fault.",
+    "latest_role": "June-July changes the treatment sign. June -$1.5630 followed by July +$0.9832 shows a mixed local reversal, not a stable disappearance that can be causally detected before entry. Latest still beats losing controls relatively, but relative outperformance while losing money is not an executable retained sleeve.",
+    "temporal_shape": "Seven of eight displayed calendar halves are positive, 20/35 active months are positive and full economics remain strong. That breadth explains why the result is ambiguous rather than a broad historical rejection. It does not satisfy the exact latest gate or authorize selecting a favorable half, month or historical-only window.",
+    "state_role": "High disconnect alone is insufficient: its high-volatility control loses. Low volatility is economically essential to the historical separation, consistent with the literature's stated mechanism.",
+    "causality_limit": "The five-week lag solves the publisher's disclosed 30-day revision problem, but this broker-M15 cash-session transfer is not an exact CRSP/five-minute or multiweek-hold replication. The result supports historical state attribution only, not a deployable forecast after the observed latest reversal.",
+    "portfolio_role": "A standalone state with a failed terminal gate cannot enter the fixed replacement portfolio, be weighted, risk-sized or sent to MT5 as an integration rescue."
+  },
+  "decision": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "state_survivor": null,
+    "threshold_or_lag_survivor": null,
+    "clock_or_symbol_survivor": null,
+    "historical_only_or_latest_subgroup_survivor": null,
+    "adjacent_rescue": false,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged",
+    "live_authority": false
+  },
+  "raw_artifacts": {
+    "analysis_result": {
+      "path": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/output/analysis-result.json",
+      "bytes": 187999,
+      "sha256": "C0CC58206F6FBCE5AB05C4DF73D1CE353347DD1FF22DF60C1B89F162107E7046"
+    },
+    "states": {
+      "path": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/output/states.csv",
+      "bytes": 24653,
+      "sha256": "5CCFA6F87ECC126C49C7C7830902E558054C32BB04460F47D6542557BD107B1F"
+    },
+    "trades": {
+      "path": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/output/trades.csv",
+      "bytes": 234353,
+      "sha256": "0273EE4D82055A7D3FAD462539CCDDC64938102B50E9A134544467A201ECD0AA"
+    }
+  },
+  "execution": {
+    "elapsed_seconds": 0.6412339,
+    "direction_books": 1,
+    "threshold_points": 0,
+    "grid_points": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "live_surface": "UNTOUCHED"
+  }
+}

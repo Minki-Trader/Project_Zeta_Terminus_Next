@@ -1,0 +1,169 @@
+{
+  "schema": "zeta-next-us500-epu-volatility-disconnect-cash-session-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_AMBIGUOUS_EPU_VOLATILITY_DISCONNECT_TRANSFER_NO_SEED",
+  "unit": "us500-epu-volatility-disconnect-cash-session-110",
+  "family": "us500-epu-volatility-disconnect-cash-session-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "declaration_commit": "f8f7f8101a56f179243d11401693a3b92a8c1243",
+  "verdict": "AMBIGUOUS_EPU_VOLATILITY_DISCONNECT_TRANSFER_NO_SEED",
+  "classification": {
+    "valid_complete_economic_mixed_result": true,
+    "environment_failure": false,
+    "design_failure": false,
+    "engineering_failure": false,
+    "correction_required": false,
+    "research_success": false,
+    "research_nonconfirmation": true,
+    "historical_mechanism_information_retained": true,
+    "optimization_seed_retained": false,
+    "research_failure_basis": "Only the single complete valid gross, observed and doubled-spread economic aggregation. The premetric state-translation fault was corrected before any target outcome was opened and is not part of the verdict."
+  },
+  "complete_path": {
+    "all_state_days": 747,
+    "primary_days": 420,
+    "period_primary_days": {
+      "P1_2023": 112,
+      "P2_2024": 70,
+      "P3_2025": 160,
+      "P4_2026_JAN_MAY": 43,
+      "P5_LATEST_2026_JUN_JUL": 35
+    },
+    "period_stressed_net_usd": {
+      "P1_2023": 2.0392,
+      "P2_2024": 3.6148,
+      "P3_2025": 2.8198,
+      "P4_2026_JAN_MAY": 7.5177,
+      "P5_LATEST_2026_JUN_JUL": -0.5798
+    },
+    "prelatest_gross_observed_stressed_net_usd": [19.3411, 17.6663, 15.9915],
+    "prelatest_stressed_profit_factor": 1.3759627411,
+    "prelatest_stressed_max_closed_dd_percent": 3.087,
+    "prelatest_stressed_net_to_dd": 5.1802721088,
+    "prelatest_positive_months": 19,
+    "prelatest_active_months": 33,
+    "full_gross_observed_stressed_net_usd": [18.9363, 17.174, 15.4117],
+    "full_stressed_profit_factor": 1.317320145,
+    "full_stressed_max_closed_dd_percent": 3.087,
+    "full_stressed_net_to_dd": 4.992452219,
+    "full_positive_months": 20,
+    "full_active_months": 35,
+    "latest_months_stressed_net_usd": {
+      "2026-06": -1.563,
+      "2026-07": 0.9832
+    }
+  },
+  "why_no_seed": [
+    "P1 is profitable, PF-positive, positive in both halves and superior to controls, but stressed net/DD is 1.1603 versus the fixed 1.25 gate. The 7.18% proportional miss is marginal in isolation and is recorded as such.",
+    "The independent latest terminal gate fails: June-July midpoint gross/observed/stressed is -$0.4048/-$0.4923/-$0.5798 at PF 0.9039. The sign is adverse before cost, so execution assumptions cannot rescue it.",
+    "Latest per-day loss magnitude is 39.88% of the positive prelatest per-day edge. June loses -$1.5630 and July gains +$0.9832; choosing July, excluding June or waiting for a favorable month is an outcome-selected regime rule absent from the frozen mechanism.",
+    "The full book remains strongly positive only because 2023 through May 2026 contributes +$15.9915 stressed at PF 1.3760 and 3.087% DD. Full profitability cannot substitute for a separately declared latest nonnegative gate.",
+    "Primary state relative performance remains better than low-disconnect and unconditional controls in the latest block, but it still loses money. A relative-loss selector is not the declared executable action and cannot be introduced after outcome consumption."
+  ],
+  "economic_interpretation": {
+    "historical_transfer": "The paper-fixed state has substantial historical explanatory value on this broker surface. P1-P4 midpoint gross +$19.3411 remains +$15.9915 after doubled spread; P2, P3 and P4 are each positive; 19/33 active months are positive; and prelatest PF/net-DD/DD all pass by wide margins.",
+    "state_separation": "Prelatest HIGH_D_LOW_V mean/day is +$0.041536 versus low-disconnect -$0.012918 and unconditional +$0.015437. Its mean/standard-deviation is 0.116898 versus -0.044683 and 0.045701. High-disconnect/high-volatility loses -$1.4987, confirming that low volatility is economically material to the historical separation.",
+    "cost": "Doubled spread removes $3.3496, or 17.32% of prelatest gross. The historical result is cost-resilient, while the latest failure already exists at midpoint gross. The no-seed decision is therefore not a spread-model artifact.",
+    "early_efficiency": "P1 net/DD misses by only 0.0897, but the later independent reversal prevents treating the early miss as a harmless marginal line crossing. Both failures point to unstable time transfer rather than environment or data insufficiency.",
+    "latest": "June is negative and July positive, so the latest loss is neither one unrecovered bad tail nor a stable state disappearance with a previsible selector. The existing formula gives no causal rule for choosing which month to trade.",
+    "breadth_and_concentration": "Seven of eight displayed calendar halves and 20/35 active months are positive; the top five positive months supply 53.13% of positive-month profit. This breadth supports an ambiguous historical premium, not a broad null. It also makes the exact latest reversal more decision-relevant because there is no declared concentration filter to isolate it.",
+    "replication_scope": "The publication-safe five-week mapping is causal with respect to the source's disclosed 30-day revision window. It remains a broker-M15, cash-session-only transfer rather than an exact CRSP/five-minute or multiweek-hold replication, so the result cannot claim that the paper's broader asset-pricing relation failed.",
+    "decision_scope": "The exact executable treatment fails its frozen retention contract. Historical attribution is preserved as information, but there is no Optimization parameter, MT5 shortlist, portfolio weight or Live right."
+  },
+  "decision": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "alternate_state": null,
+    "threshold_or_history_variant": null,
+    "publication_lag_variant": null,
+    "clock_direction_or_symbol_variant": null,
+    "month_period_or_regime_variant": null,
+    "integration_or_sizing_variant": null,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged",
+    "live_change": false,
+    "promotion_authority": false
+  },
+  "closed_neighborhood": [
+    "daily EPU category, equity-market uncertainty, alternate news index, revised/latest-only vintage or external-source substitution",
+    "disconnect normalization, difference, residual, logarithm, rank, percentile, quartile or absolute threshold",
+    "alternate warmup, expanding/rolling history, standard-deviation multiplier or publication lag",
+    "HIGH_D_HIGH_V, low-disconnect, combined-state, relative-loss or state-survivor rule",
+    "historical-only, latest-only, June exclusion, July-only, weekday, month, event, magnitude, trend or volatility subgroup",
+    "overnight or one-to-twelve-week hold, neighboring cash clock, partial session, short or reversion",
+    "US30/US100 transfer, symbol basket, deletion, substitution, weighting or notional normalization",
+    "stop, exit, size, risk, capital, ladder, admission, collision or fixed-candidate portfolio-integration rescue"
+  ],
+  "whole_map_recomparison": {
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "program_1": "Unit 110 creates no price-entry formula seed. Translating the state into a threshold, short rule, other index or timing signal would be an adjacent post-outcome treatment.",
+    "program_2": "The exact EPU/realized-volatility state has historical information but no retained executable seed after its latest reversal. An alternate EPU field, lag, threshold, state or macro source is not an automatic successor.",
+    "program_3": "09:30 and 16:00 are fixed transfer boundaries rather than a discovered order-clock clue. No neighboring entry, exit, pending or session variant is ready.",
+    "program_4": "Same-session closure supplies no retained stop, hold, giveback, checkpoint or exit-governor seed.",
+    "program_5": "A treatment that fails its latest terminal gate cannot be weighted, risk-sized or integrated into the fixed candidate as a rescue. Existing allocation, capital and admission neighborhoods remain closed.",
+    "program_7": "Revision safety, state attribution, cost role, temporal shape and control separation are resolved. Another diagnostic or significance statistic cannot create executable value.",
+    "program_6_excluded": true,
+    "immediate_successor_ready": false,
+    "automatic_successor_opened": false,
+    "optimization_resumed": true,
+    "next": "Continue serial Optimization whole-map discovery for a genuinely independent complete causal mechanism; do not reopen the EPU/volatility-disconnect neighborhood."
+  },
+  "artifacts": {
+    "snapshot_receipt": {
+      "path": "lab/research/us500-epu-volatility-disconnect-cash-session-v1/evidence/US500_EPU_VOLATILITY_DISCONNECT_CASH_SESSION_SNAPSHOT_RECEIPT_V1.json",
+      "bytes": 5276,
+      "sha256": "319911E3826E93F173B1492E772783B545AE62FE647AC7FA8D2476AB3B007B70"
+    },
+    "declaration": {
+      "path": "lab/research/us500-epu-volatility-disconnect-cash-session-v1/evidence/US500_EPU_VOLATILITY_DISCONNECT_CASH_SESSION_DECLARATION_V1.json",
+      "bytes": 15485,
+      "sha256": "6A436C0A7FC6F0817128171E6989A9E2FB80BCD84FF5A4D53B890CA7B0140EB0"
+    },
+    "result": {
+      "path": "lab/research/us500-epu-volatility-disconnect-cash-session-v1/evidence/US500_EPU_VOLATILITY_DISCONNECT_CASH_SESSION_RESULT_V1.json",
+      "bytes": 16265,
+      "sha256": "67CE59E01DA500936A87BB02081B5F80AAE48E74CB77D7B3E109FA74906828B4"
+    },
+    "raw_analysis_result": {
+      "path": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/output/analysis-result.json",
+      "bytes": 187999,
+      "sha256": "C0CC58206F6FBCE5AB05C4DF73D1CE353347DD1FF22DF60C1B89F162107E7046"
+    },
+    "raw_states": {
+      "path": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/output/states.csv",
+      "bytes": 24653,
+      "sha256": "5CCFA6F87ECC126C49C7C7830902E558054C32BB04460F47D6542557BD107B1F"
+    },
+    "raw_trades": {
+      "path": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/output/trades.csv",
+      "bytes": 234353,
+      "sha256": "0273EE4D82055A7D3FAD462539CCDDC64938102B50E9A134544467A201ECD0AA"
+    },
+    "preservation": "All three family-owned inputs and all three complete raw outputs are useful attributable artifacts and remain preserved. Python bytecode is reproducible and removed; no Portable, Tester cache, compile staging or temporary result exists."
+  },
+  "execution": {
+    "elapsed_seconds": 0.6412339,
+    "formal_source_free_processes": 1,
+    "complete_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "threshold_or_grid_points": 0,
+    "premetric_design_corrections": 1,
+    "engineering_corrections_after_declaration": 2,
+    "post_aggregation_orchestration_correction": "Two read-only PowerShell artifact-summary commands contained the same empty pipe element pattern. Their corrected forms only reported existing hashes, index equality and bytecode absence; no tracked or raw artifact, economic metric, gate or verdict changed.",
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "marker": "FRONTIER_UNIT_110_CLOSED_AMBIGUOUS_EPU_VOLATILITY_DISCONNECT_TRANSFER_NO_SEED_MAP_RECOMPARED"
+}
