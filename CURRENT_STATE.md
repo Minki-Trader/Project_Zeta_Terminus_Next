@@ -5,7 +5,7 @@ Last updated: 2026-08-30
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0398`
+- Latest state ID: `STATE-0399`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -27,8 +27,8 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Repository integrity correction: `CLOSED_NON_ECONOMIC_MATERIALIZATION_AND_EVIDENCE_ERRATA`; the user-authorized patch stores the exact active Live package and the fixed candidate SET as raw Git bytes, supersedes the fixed candidate's misleading untouched/OOS June-July terminology without rewriting closed evidence, and maps two malformed long commit transcriptions to their real commits. Active Live source, EX5, SET, release identity, candidate, economics and every runtime remain unchanged. Clean-checkout and existing operator integrity pass; no compile, Tester, MT5 launch or broker/account query occurred. Durable record: `lineage/REPOSITORY_INTEGRITY_ERRATA_V1.json`.
 - Active engineering boundary: none; `lab/engineering/paired-month-live-replacement-handoff-v1/` is closed verified. The fixed paired-month implementation compiled at build 6140 with `0 errors / 0 warnings`, reproduced selection `+$5,786.64 / +$5,477.564` across `1,428` closes and forward `+$32.75 / +$30.628` across `54` closes, then passed bounded connected entries-disabled create/recovery at sequences `2 / 4` with entries `0/0`, flat zero-risk state and zero fault before normal stops. The candidate is ready only for a later separately authorized Live translation; current RLO1 package/runtime/state/logs remain unchanged.
-- Active research boundary: none. Program 2 / meso→macro Unit 110 `us500-epu-volatility-disconnect-cash-session-v1` is closed `AMBIGUOUS_EPU_VOLATILITY_DISCONNECT_TRANSFER_NO_SEED`. P1-P4 historical state transfer was economically strong at stressed `+$15.9915`, PF `1.3760`, DD `3.087%` and net/DD `5.1803`, but P1 net/DD missed its fixed line and latest June-July reversed to gross/observed/stressed `-$0.4048/-$0.4923/-$0.5798`. No seed, candidate or MT5 shortlist survives.
-- Active optimization boundary: resumed whole-map independent causal-source discovery. No Optimization campaign or runtime is open; fixed candidate `dd20-paired-month-stability-mt5-v1` and useful artifacts remain unchanged. Do not reopen Unit 110 through an adjacent EPU field, state, threshold, lag, period, clock, symbol, direction, hold, sizing or integration rescue, and do not pause the Goal after this one unit.
+- Active research boundary: Program 3 / meso→macro Unit 111 `us500-turn-of-month-cash-session-rebalancing-v1` is declared with economic outcomes unopened. The exact paper-fixed bundle is US500 0.01-lot LONG from 09:30 to 16:00 ET on the final four and first four official NYSE sessions. Official-calendar and boundary-availability corrections completed before price/spread outcomes; frozen primary density is `142/95/95/40/16` across P1-P5 with both roles present in every period.
+- Active optimization boundary: one serial Lab detour is active after whole-map discovery of the independent 2026 turn-of-month rebalancing source. No Optimization campaign or runtime is open; fixed candidate `dd20-paired-month-stability-mt5-v1` and useful artifacts remain unchanged. After one declaration-pinned source-free aggregation, close the entire interval bundle and resume the whole map without a width, role, clock, direction, symbol, subgroup, cost, sizing or integration rescue and without pausing the Goal.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

@@ -1,0 +1,154 @@
+{
+  "schema": "zeta-next-us500-turn-of-month-cash-session-rebalancing-snapshot-receipt-v1",
+  "created_at_local": "2026-08-30",
+  "status": "INPUTS_OFFICIAL_CALENDAR_BOUNDARY_GEOMETRY_AND_DENSITY_FROZEN_ECONOMIC_OUTCOMES_UNOPENED",
+  "unit": "us500-turn-of-month-cash-session-rebalancing-111",
+  "family": "us500-turn-of-month-cash-session-rebalancing-v1",
+  "declaration": {
+    "path": "lab/research/us500-turn-of-month-cash-session-rebalancing-v1/evidence/US500_TURN_OF_MONTH_CASH_SESSION_REBALANCING_DECLARATION_V1.json",
+    "bytes": 17334,
+    "sha256": "E949B5566B21F69255CD7117D5750FF64C703F61B89116A2D3C1F33552CAE71E"
+  },
+  "implementation": {
+    "config": {
+      "path": "lab/research/us500-turn-of-month-cash-session-rebalancing-v1/config/contract.json",
+      "bytes": 6914,
+      "sha256": "CD58B522195023E4D5894E98C747C722F5F701B542C4F1200460848C1E5C2CBF"
+    },
+    "analysis": {
+      "path": "lab/research/us500-turn-of-month-cash-session-rebalancing-v1/analysis/run_analysis.py",
+      "bytes": 33342,
+      "sha256": "A082A1BAA622733D7EB7ACD549B47C356DD6EA9118E447DF1FBB0D9B91BE75F9"
+    }
+  },
+  "input_manifest": {
+    "root": "lab/artifacts/raw/us500-turn-of-month-cash-session-rebalancing-v1/input/",
+    "files": 2,
+    "bytes": 7008021,
+    "sha256": "96AD9D95F2C0B2981D0B3A446225839E5D1E0232F80B0D8BFA2C06FFF30D4460"
+  },
+  "inputs": [
+    {
+      "name": "US500_M15_BARS_20220701_20260821.csv",
+      "origin": "one-time physical byte-equal copy from the closed Unit 105 immutable acquisition into the family-owned input root",
+      "source_path": "lab/artifacts/raw/us500-shock-response-environment-correction-v1/input/US500_M15_BARS_20220701_20260821.csv",
+      "bytes": 7007401,
+      "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A",
+      "rows": 97707,
+      "first_utc": "2022-07-01T01:00:00+00:00",
+      "last_utc": "2026-08-21T23:45:00+00:00"
+    },
+    {
+      "name": "US500_SYMBOL_SPEC_V1.json",
+      "origin": "one-time physical byte-equal copy from the closed Unit 105 immutable acquisition into the family-owned input root",
+      "source_path": "lab/artifacts/raw/us500-shock-response-environment-correction-v1/input/US500_SYMBOL_SPEC_V1.json",
+      "bytes": 620,
+      "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918",
+      "symbol": "US500",
+      "point": 0.01,
+      "contract_size": 1.0,
+      "tick_value": 0.01,
+      "minimum_volume": 0.01
+    }
+  ],
+  "literature_sources": [
+    {
+      "role": "primary interval and mechanism",
+      "doi": "10.1016/j.intfin.2026.102309",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S1042443126000259",
+      "working_paper_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7201062",
+      "computational_input": false
+    },
+    {
+      "role": "supporting settlement and institutional-flow mechanism",
+      "publisher_url": "https://academic.oup.com/rfs/article/33/11/4894/5735312",
+      "computational_input": false
+    }
+  ],
+  "source_acquisition_environment_correction": {
+    "direct_ssrn_pdf_attempts": 1,
+    "result": "Cloudflare challenge; no PDF file created",
+    "response": "Use primary publisher and SSRN metadata pages only because literature bytes are not a computational input",
+    "research_or_optimization_failure": false,
+    "economic_outcomes_opened": false
+  },
+  "premetric_processes": {
+    "successful_total": 4,
+    "economic_aggregations": 0,
+    "design_corrections": [
+      "Replace observed-CFD-date month ranking with exact official NYSE equities session ranking.",
+      "Replace irrelevant 26-interior-bar eligibility with exact fixed 09:30 and 15:45 trade-boundary eligibility while retaining full-bar geometry as a diagnostic."
+    ],
+    "environment_note": "No installed exchange-calendar package was required; exact official closure dates were frozen from NYSE sources in the family contract.",
+    "research_or_optimization_failure": false
+  },
+  "premetric_integrity": {
+    "bar_rows": 97707,
+    "observed_cash_session_dates": 1070,
+    "trade_boundary_eligible_observed_dates": 1048,
+    "full_26_bar_observed_dates": 1046,
+    "official_session_dates": 1039,
+    "official_closure_dates_in_observed_range": 42,
+    "observed_cfd_dates_not_official_sessions": 32,
+    "official_sessions_without_observed_cash_bars": 1,
+    "official_sessions_with_observed_bars_but_missing_a_trade_boundary": 6,
+    "declared_complete_official_sessions": 1017,
+    "primary_days": 388,
+    "primary_days_by_period": {
+      "P1_2022H2_2023": 142,
+      "P2_2024": 95,
+      "P3_2025": 95,
+      "P4_2026_JAN_MAY": 40,
+      "P5_LATEST_2026_JUN_JUL": 16
+    },
+    "primary_days_by_role_and_period": {
+      "PRE4": {
+        "P1_2022H2_2023": 70,
+        "P2_2024": 47,
+        "P3_2025": 47,
+        "P4_2026_JAN_MAY": 20,
+        "P5_LATEST_2026_JUN_JUL": 8
+      },
+      "POST4": {
+        "P1_2022H2_2023": 72,
+        "P2_2024": 48,
+        "P3_2025": 48,
+        "P4_2026_JAN_MAY": 20,
+        "P5_LATEST_2026_JUN_JUL": 8
+      }
+    },
+    "primary_days_by_p1_split": {
+      "2022H2": 47,
+      "2023H1": 48,
+      "2023H2": 47
+    },
+    "selected_boundary_ineligible_dates": [
+      "2022-11-25",
+      "2023-12-26",
+      "2024-11-29",
+      "2025-11-28"
+    ],
+    "density_passed": true
+  },
+  "outcome_firewall": {
+    "economic_outcomes_opened": false,
+    "price_or_spread_fields_loaded": false,
+    "entry_to_exit_returns_calculated": false,
+    "gross_observed_or_stressed_usd_calculated": false,
+    "profit_factor_or_drawdown_calculated": false,
+    "control_comparison_calculated": false,
+    "gate_or_verdict_calculated": false
+  },
+  "environment": {
+    "mql_source_or_set_changes": 0,
+    "runtime_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_processes_started": 0,
+    "orders_or_positions": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "program_6_opened": false,
+    "master_live_optimization_surfaces": "UNTOUCHED"
+  },
+  "next": "Commit and push the declaration boundary, then run exactly one formal source-free complete economic aggregation or correct engineering without a research-failure count."
+}

@@ -1,0 +1,186 @@
+{
+  "schema": "zeta-next-us500-turn-of-month-cash-session-rebalancing-contract-v1",
+  "family": "us500-turn-of-month-cash-session-rebalancing-v1",
+  "input_root": "lab/artifacts/raw/us500-turn-of-month-cash-session-rebalancing-v1/input",
+  "output_root": "lab/artifacts/raw/us500-turn-of-month-cash-session-rebalancing-v1/output",
+  "files": {
+    "bars": "US500_M15_BARS_20220701_20260821.csv",
+    "spec": "US500_SYMBOL_SPEC_V1.json"
+  },
+  "immutable_inputs": {
+    "files": [
+      {
+        "name": "US500_M15_BARS_20220701_20260821.csv",
+        "bytes": 7007401,
+        "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A"
+      },
+      {
+        "name": "US500_SYMBOL_SPEC_V1.json",
+        "bytes": 620,
+        "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918"
+      }
+    ],
+    "manifest_sha256": "96AD9D95F2C0B2981D0B3A446225839E5D1E0232F80B0D8BFA2C06FFF30D4460",
+    "bar_rows": 97707
+  },
+  "formal_declaration": {
+    "path": "lab/research/us500-turn-of-month-cash-session-rebalancing-v1/evidence/US500_TURN_OF_MONTH_CASH_SESSION_REBALANCING_DECLARATION_V1.json",
+    "bytes": 17334,
+    "sha256": "E949B5566B21F69255CD7117D5750FF64C703F61B89116A2D3C1F33552CAE71E"
+  },
+  "required_bar_schema": [
+    "time_epoch",
+    "time_server",
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread",
+    "real_volume"
+  ],
+  "calendar_rule": {
+    "timezone": "America/New_York",
+    "trading_date_inventory": "every official NYSE equities session from the first through last observed ET date; observed CFD-only holiday dates are ignored, and official sessions with absent or incomplete bars retain calendar rank but cannot trade",
+    "trade_boundary_eligible_session": "an exact 09:30 ET M15 entry bar and exact 15:45 ET M15 exit bar are both present; missing interior bars do not alter the fixed open-to-close trade and therefore do not invalidate it",
+    "full_bar_geometry_diagnostic": "exactly 26 M15 bars at 09:30, 09:45, ..., 15:45 ET is reported separately but is not an economic eligibility requirement",
+    "primary_state": "TOM_ALL",
+    "pre_month_end_role": "PRE4: the final four official NYSE equities sessions of each calendar month",
+    "post_month_start_role": "POST4: the first four official NYSE equities sessions of each calendar month",
+    "rest_of_month_role": "ROM: all other official NYSE equities sessions",
+    "role_overlap": "forbidden; a normal U.S. trading month has more than eight dates",
+    "early_close_treatment": "an official early-close date retains its calendar rank but is ineligible when the fixed 09:30 entry or 15:45 exit bar is absent",
+    "paper_sample_end": "2023-12-31",
+    "project_confirmation_start": "2024-01-01"
+  },
+  "official_session_calendar": {
+    "exchange": "NYSE equities",
+    "construction": "all America/New_York weekdays minus the exact frozen official exchange-closure dates",
+    "sources": [
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2022_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2023_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2024_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2025_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/nyse/ICE_NYSE_2026_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/markets/hours-calendars",
+      "https://www.nyse.com/publicdocs/nyse/markets/american-options/rule-interpretations/2025/National_Day_of_Mourning_20250102.pdf"
+    ],
+    "closed_dates": [
+      "2022-07-04",
+      "2022-09-05",
+      "2022-11-24",
+      "2022-12-26",
+      "2023-01-02",
+      "2023-01-16",
+      "2023-02-20",
+      "2023-04-07",
+      "2023-05-29",
+      "2023-06-19",
+      "2023-07-04",
+      "2023-09-04",
+      "2023-11-23",
+      "2023-12-25",
+      "2024-01-01",
+      "2024-01-15",
+      "2024-02-19",
+      "2024-03-29",
+      "2024-05-27",
+      "2024-06-19",
+      "2024-07-04",
+      "2024-09-02",
+      "2024-11-28",
+      "2024-12-25",
+      "2025-01-01",
+      "2025-01-09",
+      "2025-01-20",
+      "2025-02-17",
+      "2025-04-18",
+      "2025-05-26",
+      "2025-06-19",
+      "2025-07-04",
+      "2025-09-01",
+      "2025-11-27",
+      "2025-12-25",
+      "2026-01-01",
+      "2026-01-19",
+      "2026-02-16",
+      "2026-04-03",
+      "2026-05-25",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-09-07",
+      "2026-11-26",
+      "2026-12-25"
+    ]
+  },
+  "trade_rule": {
+    "symbol": "US500",
+    "direction": "LONG",
+    "eligible_target": "each complete PRE4 or POST4 cash session inside a declared period",
+    "entry": "09:30 ET M15 open",
+    "exit": "15:45 ET M15 close representing 16:00 ET",
+    "volume": 0.01,
+    "starting_balance_usd": 100.0,
+    "gross": "midpoint-to-midpoint cash-session P/L",
+    "observed": "executable entry ask to exit bid",
+    "stressed": "gross less the full entry-plus-exit spread burden",
+    "commission_swap_financing": "zero because every position closes in the same cash session"
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "from_inclusive": "2022-07-01",
+      "to_exclusive": "2024-01-01"
+    },
+    "P2_2024": {
+      "from_inclusive": "2024-01-01",
+      "to_exclusive": "2025-01-01"
+    },
+    "P3_2025": {
+      "from_inclusive": "2025-01-01",
+      "to_exclusive": "2026-01-01"
+    },
+    "P4_2026_JAN_MAY": {
+      "from_inclusive": "2026-01-01",
+      "to_exclusive": "2026-06-01"
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "from_inclusive": "2026-06-01",
+      "to_exclusive": "2026-08-01"
+    }
+  },
+  "p1_splits": {
+    "2022H2": ["2022-07-01", "2023-01-01"],
+    "2023H1": ["2023-01-01", "2023-07-01"],
+    "2023H2": ["2023-07-01", "2024-01-01"]
+  },
+  "economic_gates": {
+    "minimum_primary_days_by_period": {
+      "P1_2022H2_2023": 100,
+      "P2_2024": 60,
+      "P3_2025": 60,
+      "P4_2026_JAN_MAY": 24,
+      "P5_LATEST_2026_JUN_JUL": 8
+    },
+    "p1_period": "P1_2022H2_2023",
+    "p1_profit_factor_min": 1.05,
+    "p1_net_to_drawdown_min": 1.25,
+    "p1_positive_splits_required": 3,
+    "p1_positive_roles_required": 2,
+    "confirmation_periods": ["P2_2024", "P3_2025", "P4_2026_JAN_MAY"],
+    "confirmation_positive_periods_required": 3,
+    "confirmation_positive_role_period_cells_required": 5,
+    "confirmation_role_period_cells_total": 6,
+    "confirmation_mean_above_rom_periods_required": 2,
+    "prelatest_profit_factor_min": 1.075,
+    "prelatest_net_to_drawdown_min": 1.5,
+    "prelatest_positive_month_fraction_min": 0.60,
+    "prelatest_top_five_positive_day_share_max": 0.35,
+    "nominal_drawdown_max_percent": 20.0,
+    "practical_drawdown_max_percent": 21.2,
+    "latest_period": "P5_LATEST_2026_JUN_JUL",
+    "latest_nominal_floor_usd": 0.0,
+    "latest_practical_reversal_fraction": 0.25,
+    "full_profit_factor_min": 1.05,
+    "full_net_to_drawdown_min": 1.25
+  }
+}
