@@ -1,0 +1,90 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-native-quality-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_VALID_MIXED",
+  "campaign": "dd20-paired-month-live-control-native-quality-recomparison-v1",
+  "verdict": "VALID_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_TRADEOFF_SELECTION_MIXED_FORWARD_DOMINANT",
+  "evidence": {
+    "snapshot": {
+      "bytes": 2977,
+      "sha256": "E29B5648FA0CDC15207293C21D29DC210A31EC9398B21A9394298F9721F602DA"
+    },
+    "config": {
+      "bytes": 5376,
+      "sha256": "7F8636F8B9B599586C31F52BC3EB5D5267227482FEED5A882CE5438B07002E0F"
+    },
+    "formal_process": {
+      "bytes": 20948,
+      "sha256": "4A03ACB4128FA8923FFAC08B8962E8F0A8B06F17067D3A3138961C9F56AB3F59"
+    },
+    "declaration": {
+      "bytes": 8369,
+      "sha256": "E9C1F9A63F54C93A5307E3D4E8D52C0784A41874B8E06A9643BAD4E041E87372"
+    },
+    "raw_output": {
+      "bytes": 4916,
+      "sha256": "C7B6B600C57AA3FE08DDE34B5AE8BA9FE6CFBA77F03D6A393D22D36722E0B7CE"
+    },
+    "result": {
+      "bytes": 6085,
+      "sha256": "A2737F623C37EF46BEF8829D1048A2C82256D072A55BDCC7FEADAF18B2B1945F"
+    },
+    "readme": {
+      "bytes": 1882,
+      "sha256": "D9F4CF58739B52E96A853012A427ACE123466705A065953B83DB6380877B61A9"
+    }
+  },
+  "execution": {
+    "formal_source_free_processes": 1,
+    "complete_fixed_policy_comparisons": 1,
+    "metric_reruns": 0,
+    "post_declaration_corrections": 0,
+    "tester_paths": 0,
+    "mql_or_settings_changes": 0
+  },
+  "economic_summary": {
+    "selection_candidate_control_profit_factor": "1.495473495568 / 1.413892",
+    "selection_candidate_pf_advantage_pct": 5.769994848806,
+    "selection_candidate_control_recovery_factor": "8.696337596369 / 10.965367",
+    "selection_candidate_recovery_shortfall_pct": 20.692690026981,
+    "selection_candidate_control_sharpe": "5.35 / 5.625108",
+    "selection_candidate_sharpe_shortfall_pct": 4.890714987161,
+    "selection_candidate_expected_payoff_ratio": 8.720242706548,
+    "forward_candidate_control_profit_factor": "1.320383599178 / 0.984324",
+    "forward_candidate_control_recovery_factor": "1.170539864140 / -0.055472",
+    "forward_candidate_control_sharpe": "5.57 / -0.340238",
+    "forward_candidate_pf_recovery_sharpe_all_higher": true,
+    "native_quality_dominance": false,
+    "selection_native_quality_tradeoff": true,
+    "forward_native_quality_dominance": true
+  },
+  "prior_context_retained": {
+    "economic_efficiency_verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_ECONOMIC_EFFICIENCY_WITH_LOWER_TURNOVER_DISCLOSED",
+    "candidate_selection_relative_dd_pct": 20.256887565153,
+    "control_selection_relative_dd_pct": 9.1948,
+    "candidate_to_control_actual_stressed_net_per_relative_dd_point": "2.66745 / 2.71468",
+    "interpretation": "Relative-DD profit density and native dollar Recovery Factor answer different economic questions. The former remains superior while the latter discloses the late compounding-dollar drawdown cost."
+  },
+  "closed_scope": [
+    "No adjacent PF, Recovery, Sharpe, Z-score, AHPR, LR, holding-time or report-statistic threshold.",
+    "No component, epoch, month, symbol, direction, weight, risk or tail normalization.",
+    "No candidate retune, replacement, rejection, promotion, MQL, SET, compile, MT5, Lab or Live action.",
+    "Do not reinterpret forward dominance as erasing the valid long-selection native quality tradeoff."
+  ],
+  "retention": {
+    "campaign_owned_input_files": 7,
+    "campaign_owned_input_bytes": 2951454,
+    "campaign_owned_input_bundle_manifest_sha256": "FE62607C1625907090662CEF15FAD93D68BEF5BF5F74F07A1A04AC7D6539ED2E",
+    "raw_output_preserved": true,
+    "runtime_or_reproducible_cache_created": false
+  },
+  "surface": {
+    "paired_month_development_candidate": "FIXED_WITH_NATIVE_SELECTION_QUALITY_TRADEOFF_DISCLOSED",
+    "closed_lab_handoff": "UNCHANGED",
+    "live_dev_package_runtime_state_and_logs": "UNTOUCHED",
+    "master_terminal": "UNTOUCHED",
+    "broker_account_positions_orders_and_deals": "UNQUERIED"
+  },
+  "successor_boundary": "Return immediately to a complete Optimization map comparison. This classification closes existing native PF, Recovery Factor and Sharpe comparison and cannot authorize another report-statistic, component, epoch, tail, MT5 or Live follow-up. Any successor must answer a distinct economic decision gap and remain proxy-first.",
+  "goal_status": "ACTIVE_NOT_COMPLETE"
+}

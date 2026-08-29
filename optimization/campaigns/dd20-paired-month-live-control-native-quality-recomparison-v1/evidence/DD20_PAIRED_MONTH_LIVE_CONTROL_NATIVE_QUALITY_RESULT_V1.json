@@ -1,0 +1,143 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-native-quality-result-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "VALID_COMPLETE_MIXED",
+  "campaign": "dd20-paired-month-live-control-native-quality-recomparison-v1",
+  "declaration": {
+    "path": "optimization/campaigns/dd20-paired-month-live-control-native-quality-recomparison-v1/evidence/DD20_PAIRED_MONTH_LIVE_CONTROL_NATIVE_QUALITY_DECLARATION_V1.json",
+    "bytes": 8369,
+    "sha256": "E9C1F9A63F54C93A5307E3D4E8D52C0784A41874B8E06A9643BAD4E041E87372"
+  },
+  "raw_output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/output/formal-result.json",
+    "bytes": 4916,
+    "sha256": "C7B6B600C57AA3FE08DDE34B5AE8BA9FE6CFBA77F03D6A393D22D36722E0B7CE"
+  },
+  "execution": {
+    "formal_source_free_processes": 1,
+    "complete_fixed_policy_comparisons": 1,
+    "economic_metric_reruns": 0,
+    "engineering_or_design_corrections_after_declaration": 0,
+    "tester_paths": 0,
+    "mql_or_settings_changes": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "input_files": 7,
+    "input_bytes": 2951454,
+    "input_bundle_manifest_sha256": "FE62607C1625907090662CEF15FAD93D68BEF5BF5F74F07A1A04AC7D6539ED2E",
+    "candidate_identity_exact": true,
+    "control_pass4_risk_identity_exact": true,
+    "candidate_native_reports_match_frozen_result_anchors": true,
+    "control_native_xml_rows_match_frozen_result_anchors": true,
+    "prior_economic_efficiency_pass_exact": true
+  },
+  "fixed_candidate": {
+    "identity": "dd20-paired-month-stability-mt5-v1",
+    "weights": [
+      2.0,
+      1.5,
+      2.0,
+      2.5,
+      1.5,
+      0.0
+    ],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "changed_or_retuned": false
+  },
+  "active_live_control": {
+    "selection_pass": 4,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12
+  },
+  "selection": {
+    "candidate": {
+      "actual_net_usd": 5786.63,
+      "closed_lifecycles": 1428,
+      "expected_payoff_usd": 4.052261904762,
+      "profit_factor": 1.495473495568,
+      "recovery_factor": 8.696337596369,
+      "sharpe_displayed": 5.35,
+      "maximal_equity_dd_usd": 665.41,
+      "relative_equity_dd_pct": 20.256887565153
+    },
+    "active_live_control": {
+      "actual_net_usd": 984.69,
+      "closed_lifecycles": 2119,
+      "expected_payoff_usd": 0.464696,
+      "profit_factor": 1.413892,
+      "recovery_factor": 10.965367,
+      "sharpe": 5.625108,
+      "relative_equity_dd_pct": 9.1948
+    },
+    "comparison": {
+      "candidate_to_control_expected_payoff_ratio": 8.720242706548,
+      "candidate_minus_control_profit_factor": 0.081581495568,
+      "candidate_to_control_profit_factor_ratio": 1.057699948488,
+      "candidate_minus_control_recovery_factor": -2.269029403631,
+      "candidate_to_control_recovery_factor_ratio": 0.79307309973,
+      "candidate_recovery_factor_shortfall_pct": 20.692690026981,
+      "candidate_minus_control_sharpe": -0.275108,
+      "candidate_to_control_sharpe_ratio": 0.951092850128,
+      "candidate_sharpe_shortfall_pct": 4.890714987161,
+      "higher_profit_factor": true,
+      "lower_recovery_factor": true,
+      "lower_sharpe": true
+    }
+  },
+  "forward": {
+    "candidate": {
+      "actual_net_usd": 32.74,
+      "closed_lifecycles": 54,
+      "expected_payoff_usd": 0.606296296296,
+      "profit_factor": 1.320383599178,
+      "recovery_factor": 1.17053986414,
+      "sharpe_displayed": 5.57,
+      "maximal_equity_dd_usd": 27.97,
+      "relative_equity_dd_pct": 18.675302129933
+    },
+    "active_live_control": {
+      "actual_net_usd": -1.11,
+      "closed_lifecycles": 84,
+      "expected_payoff_usd": -0.013214,
+      "profit_factor": 0.984324,
+      "recovery_factor": -0.055472,
+      "sharpe": -0.340238,
+      "relative_equity_dd_pct": 16.8321
+    },
+    "comparison": {
+      "candidate_minus_control_expected_payoff_usd": 0.619510296296,
+      "candidate_minus_control_profit_factor": 0.336059599178,
+      "candidate_to_control_profit_factor_ratio": 1.341411566901,
+      "candidate_minus_control_recovery_factor": 1.22601186414,
+      "candidate_minus_control_sharpe": 5.910238,
+      "candidate_higher_pf_recovery_and_sharpe": true,
+      "control_recovery_or_sharpe_ratios_reported": false
+    }
+  },
+  "prior_economic_efficiency_context": {
+    "verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_ECONOMIC_EFFICIENCY_WITH_LOWER_TURNOVER_DISCLOSED",
+    "selection_actual_stressed_net_per_close_ratio": "8.72025 / 8.87467",
+    "selection_actual_stressed_net_per_relative_dd_point_ratio": "2.66745 / 2.71468",
+    "selection_turnover_retention": 0.673902784332,
+    "selection_native_relative_dd_ratio": 2.203080824504
+  },
+  "classification": {
+    "native_quality_dominance": false,
+    "selection_native_quality_tradeoff": true,
+    "forward_native_quality_dominance": true,
+    "prior_economic_efficiency_pass_retained": true
+  },
+  "verdict": "VALID_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_TRADEOFF_SELECTION_MIXED_FORWARD_DOMINANT",
+  "economic_interpretation": "The fixed candidate's selection profit factor is 5.77% above the active Live-derived control and its expected payoff is 8.72x, but its native recovery factor is 20.69% lower and displayed Sharpe is 4.89% lower. This is consistent with the already-disclosed larger late compounding-dollar drawdown: relative-DD profit density is superior, while native dollar recovery and return smoothness are not. The untouched forward reverses that concern materially, with candidate PF 1.3204 versus 0.9843, positive recovery 1.1705 versus -0.0555 and Sharpe 5.57 versus -0.3402. The result strengthens forward replacement quality but preserves a real long-path risk-quality tradeoff.",
+  "authority_boundary": {
+    "candidate_sharpe_precision": "two decimals from the native candidate HTML reports",
+    "fixed_candidate_changed": false,
+    "new_candidate_or_mt5_shortlist": false,
+    "candidate_rejected_or_promoted": false,
+    "live_authority": false,
+    "lab_live_master_and_broker_surface": "UNTOUCHED"
+  }
+}

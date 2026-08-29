@@ -1,0 +1,109 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-native-quality-declaration-v1",
+  "declared_at_local": "2026-08-30",
+  "status": "DECLARED_EXISTING_NATIVE_REPORT_QUALITY_CLASSIFICATION_UNOPENED",
+  "campaign": "dd20-paired-month-live-control-native-quality-recomparison-v1",
+  "parent_main_commit": "ee3eff836106b4aa4534dd67961609f978d67dcb",
+  "question": "Does the already-fixed paired-month replacement development candidate dominate the exact active Live-derived control in native actual profit factor, recovery factor and Sharpe across selection and untouched forward, or does its much higher profit density retain a measurable native selection-quality tradeoff?",
+  "economic_hypothesis": "The fixed candidate should have higher native profit factor in selection and broad native-quality dominance in the untouched forward, while its late compounding-dollar drawdown may leave selection recovery factor or Sharpe below the control despite superior net per relative-DD point.",
+  "whole_map_recomparison": {
+    "optimization_anchor": "dd20-paired-month-stability-mt5-v1 remains the sole fixed replacement development candidate and its exact 0.04 / 0.18 policy is not searched or retuned.",
+    "program_1_entry_signal_market_structure": "Signal supply, concrete entry families, uniform entry-strength floors and the pooled market-state router are closed.",
+    "program_2_external_market_event": "No synchronized independent event state is ready; external-state families remain closed.",
+    "program_3_order_time_session": "Order, clock, session, normalized spread and cost-decomposition neighborhoods remain closed.",
+    "program_4_position_management_exit": "Protective stop, profit realization, peer exit and drawdown-governor mechanisms remain closed.",
+    "program_5_portfolio_capital_risk": "Static weights, risk caps, capital ladders, occupancy exposure and component-state combinations remain closed.",
+    "program_7_diagnostics_causal_meta": "The direct same-period net, stressed net, relative-DD efficiency, turnover and component breadth comparison is closed. Unit 106 then disclosed compounding-dollar concentration and the candidate remains 2.203x the control's selection relative DD. Existing native reports can now answer the distinct replacement-quality question without another Tester run.",
+    "selected_role": "One fixed-policy native actual quality classification using already-complete native reports; no adjacent metric threshold, component normalization, interval extension, candidate search or MT5 path."
+  },
+  "frozen_inputs": {
+    "snapshot": {
+      "path": "optimization/campaigns/dd20-paired-month-live-control-native-quality-recomparison-v1/evidence/DD20_PAIRED_MONTH_LIVE_CONTROL_NATIVE_QUALITY_SNAPSHOT_V1.json",
+      "bytes": 2977,
+      "sha256": "E29B5648FA0CDC15207293C21D29DC210A31EC9398B21A9394298F9721F602DA"
+    },
+    "config": {
+      "path": "optimization/campaigns/dd20-paired-month-live-control-native-quality-recomparison-v1/config/contract.json",
+      "bytes": 5376,
+      "sha256": "7F8636F8B9B599586C31F52BC3EB5D5267227482FEED5A882CE5438B07002E0F"
+    },
+    "formal_process": {
+      "path": "optimization/campaigns/dd20-paired-month-live-control-native-quality-recomparison-v1/proxy/run_proxy.py",
+      "bytes": 20948,
+      "sha256": "4A03ACB4128FA8923FFAC08B8962E8F0A8B06F17067D3A3138961C9F56AB3F59"
+    },
+    "input_root": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/",
+    "input_files": 7,
+    "input_bytes": 2951454,
+    "input_bundle_manifest_sha256": "FE62607C1625907090662CEF15FAD93D68BEF5BF5F74F07A1A04AC7D6539ED2E"
+  },
+  "known_before_declaration": {
+    "scope": "The native reports were previously completed and their displayed metrics are visible. This declaration does not claim outcome blindness; it freezes exact reconstruction, comparisons and classification before the formal aggregation.",
+    "candidate_selection_displayed_pf_recovery_sharpe": "1.50 / 8.70 / 5.35",
+    "control_selection_exact_pf_recovery_sharpe": "1.413892 / 10.965367 / 5.625108",
+    "candidate_forward_displayed_pf_recovery_sharpe": "1.32 / 1.17 / 5.57",
+    "control_forward_exact_pf_recovery_sharpe": "0.984324 / -0.055472 / -0.340238",
+    "prior_efficiency_verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_ECONOMIC_EFFICIENCY_WITH_LOWER_TURNOVER_DISCLOSED"
+  },
+  "fixed_candidate": {
+    "weights": [
+      2.0,
+      1.5,
+      2.0,
+      2.5,
+      1.5,
+      0.0
+    ],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "candidate_search": false,
+    "retune": false,
+    "development_candidate_changed_by_this_unit": false
+  },
+  "active_live_control": {
+    "selection_pass": 4,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "selection_interval": "2022-08-01 through 2026-06-01",
+    "forward_interval": "2026-06-01 through 2026-08-01",
+    "rerun": false
+  },
+  "metric_authority": {
+    "candidate_profit_factor": "Reconstruct from exact displayed native gross profit divided by absolute gross loss and require two-decimal agreement with displayed PF.",
+    "candidate_recovery_factor": "Reconstruct from native actual net divided by maximal equity drawdown dollars and require two-decimal agreement with displayed Recovery Factor.",
+    "candidate_sharpe": "Use the native report's displayed two-decimal value and disclose its precision.",
+    "control": "Use the exact pass-4 native optimization XML row and verify profit, DD, trades and 0.04 / 0.12 identity against the frozen result JSON.",
+    "context": "Retain the prior economic-efficiency pass exactly; this unit neither replaces nor rejudges its net, stressed-net, turnover or relative-DD-point metrics."
+  },
+  "classification_contract": {
+    "dominance": "PASS_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_DOMINANCE only if candidate PF, Recovery Factor and Sharpe each strictly exceed control in both selection and forward, with the prior efficiency pass exact.",
+    "tradeoff": "VALID_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_TRADEOFF_SELECTION_MIXED_FORWARD_DOMINANT if candidate selection PF is strictly higher, selection Recovery Factor or Sharpe is lower with every difference disclosed, all three forward metrics are strictly higher, and the prior efficiency pass remains exact.",
+    "nonconfirmation": "VALID_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_NOT_CONFIRMED for any other complete valid economic relation.",
+    "invalid": "CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT for any input, design, parser or engineering fault."
+  },
+  "required_disclosures": [
+    "Selection and forward candidate/control PF, Recovery Factor and Sharpe, with differences and only economically valid ratios.",
+    "Candidate native report Sharpe has two-decimal display precision while control XML retains more decimals.",
+    "Selection relative-DD and prior profit-density context remain visible so native Recovery Factor is not mistaken for the already-closed relative-DD-point metric.",
+    "No ratio is reported against nonpositive control forward Recovery Factor or Sharpe.",
+    "A mixed selection classification does not become a candidate retune, rejection, promotion or Live action."
+  ],
+  "execution_contract": {
+    "formal_source_free_processes": 1,
+    "complete_fixed_policy_comparisons": 1,
+    "economic_metric_reruns": 0,
+    "engineering_correction_limit": "none; an invalid or incomplete invocation receives no economic verdict and may be corrected without changing the fixed question",
+    "mql_set_compile_or_tester_paths": 0,
+    "master_live_or_lab_runtime_paths": 0,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "stop_rules": [
+    "Run the frozen formal source-free process once after all hashes match and output is absent.",
+    "Do not add another PF, Recovery, Sharpe, Z-score, AHPR, LR, holding-time or report-statistic threshold.",
+    "Do not open an adjacent component, epoch, month, symbol, direction, weight, risk or tail normalization from this classification.",
+    "Do not rerun MT5 or retune, replace or promote the fixed development candidate.",
+    "Freeze the complete result, update state minimally, commit and push once, then return to a whole-map comparison without pausing the Goal."
+  ],
+  "outcomes_consumed_by_formal_process": false,
+  "live_surface": "UNTOUCHED"
+}

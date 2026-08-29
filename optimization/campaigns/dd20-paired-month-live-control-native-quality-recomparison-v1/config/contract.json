@@ -1,0 +1,112 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-native-quality-recomparison-contract-v1",
+  "campaign": "dd20-paired-month-live-control-native-quality-recomparison-v1",
+  "parent_main_commit": "ee3eff836106b4aa4534dd67961609f978d67dcb",
+  "inputs": [
+    {
+      "name": "candidate-forward-report.htm",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/candidate-forward-report.htm",
+      "bytes": 131062,
+      "sha256": "35BBC7192FA979447A90E776C74EEBAAC0E628055EACE91E0357511DD9CFBE7C"
+    },
+    {
+      "name": "candidate-result.json",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/candidate-result.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+    },
+    {
+      "name": "candidate-selection-report.htm",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/candidate-selection-report.htm",
+      "bytes": 2758700,
+      "sha256": "785033DA11EEC836C75B25167564ED10A71CFCA169F0BB3A0F91F9CB2D7C5F42"
+    },
+    {
+      "name": "control-forward-optimization.xml",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/control-forward-optimization.xml",
+      "bytes": 14914,
+      "sha256": "6FA18C8F36C0499CBCF200394D77461D58FF8487FD488FBC69F0C99AA8B6F9E3"
+    },
+    {
+      "name": "control-selection-optimization.xml",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/control-selection-optimization.xml",
+      "bytes": 13843,
+      "sha256": "0ABAEE7D78E22AE5948A29C7943A02F3D29FF678C1C0819FD9C419E0BF1D733B"
+    },
+    {
+      "name": "economic-efficiency-result.json",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/economic-efficiency-result.json",
+      "bytes": 8182,
+      "sha256": "B7E27A43DDA7D547E123C9ACABD48B19851FCFE2A22A6EA9CEF9CF0C5091C97D"
+    },
+    {
+      "name": "live-control-result.json",
+      "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/input/live-control-result.json",
+      "bytes": 14873,
+      "sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314"
+    }
+  ],
+  "input_manifest_rule": "UTF-8 bytes of name|bytes|uppercase_sha256 plus LF in declared order",
+  "input_manifest_sha256": "FE62607C1625907090662CEF15FAD93D68BEF5BF5F74F07A1A04AC7D6539ED2E",
+  "input_files": 7,
+  "input_bytes": 2951454,
+  "fixed_candidate": {
+    "identity": "dd20-paired-month-stability-mt5-v1",
+    "weights": [
+      2.0,
+      1.5,
+      2.0,
+      2.5,
+      1.5,
+      0.0
+    ],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18
+  },
+  "active_live_control": {
+    "selection_pass": 4,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12
+  },
+  "intervals": {
+    "selection": "2022-08-01 through 2026-06-01",
+    "forward": "2026-06-01 through 2026-08-01"
+  },
+  "native_metrics": [
+    "actual expected payoff",
+    "actual profit factor",
+    "native recovery factor",
+    "native Sharpe ratio",
+    "native maximum and relative equity drawdown context"
+  ],
+  "metric_authority": {
+    "candidate_profit_factor": "gross profit divided by absolute gross loss from the native HTML report; displayed native PF must agree after two-decimal rounding",
+    "candidate_recovery_factor": "actual net divided by native maximal equity drawdown USD from the native HTML report; displayed native Recovery Factor must agree after two-decimal rounding",
+    "candidate_sharpe": "native HTML report displayed value, whose two-decimal precision is disclosed",
+    "control_metrics": "exact pass-4 values in the original native optimization XML",
+    "relative_dd_and_economic_context": "exact frozen candidate/control result JSON values and the closed economic-efficiency verdict"
+  },
+  "classification_gates": {
+    "dominance": [
+      "Candidate selection and forward actual profit factor each strictly exceed control.",
+      "Candidate selection and forward native recovery factor each strictly exceed control.",
+      "Candidate selection and forward native Sharpe each strictly exceed control.",
+      "The prior economic-efficiency comparison retains its exact pass verdict."
+    ],
+    "tradeoff": [
+      "Candidate selection actual profit factor strictly exceeds control.",
+      "At least one of candidate selection recovery factor or Sharpe is lower than control and every difference is disclosed.",
+      "Candidate forward actual profit factor, recovery factor and Sharpe each strictly exceed control.",
+      "The prior economic-efficiency comparison retains its exact pass verdict."
+    ]
+  },
+  "verdicts": {
+    "dominance": "PASS_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_DOMINANCE",
+    "tradeoff": "VALID_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_TRADEOFF_SELECTION_MIXED_FORWARD_DOMINANT",
+    "nonconfirmation": "VALID_FIXED_DEVELOPMENT_CANDIDATE_NATIVE_QUALITY_NOT_CONFIRMED",
+    "correction": "CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT"
+  },
+  "output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-live-control-native-quality-recomparison-v1/output/formal-result.json"
+  }
+}
