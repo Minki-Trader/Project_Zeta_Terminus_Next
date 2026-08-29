@@ -1,0 +1,238 @@
+{
+  "schema": "zeta-next-prior-broad-dollar-portfolio-state-snapshot-receipt-v1",
+  "created_at_local": "2026-08-29",
+  "status": "UNIT_104_SNAPSHOT_AND_CAUSAL_DENSITY_FROZEN_OUTCOMES_UNOPENED",
+  "unit": "prior-broad-dollar-portfolio-state-104",
+  "family": "prior-broad-dollar-portfolio-state-v1",
+  "purpose": "Pin one official Federal Reserve nominal broad-dollar surface and exact qualified paired-anchor lifecycle copies before any state-conditioned lifecycle outcome is read.",
+  "official_sources": {
+    "daily_table": {
+      "url": "https://www.federalreserve.gov/releases/h10/summary/jrxwtfb_nb.htm",
+      "retrieved_date_local": "2026-08-29",
+      "release_date_displayed": "Monday, August 24, 2026",
+      "table_title": "Nominal Broad Dollar Index - Daily Index",
+      "official_semantics": "The nominal broad dollar index is a weighted average of the foreign exchange values of the U.S. dollar against a broad group of major U.S. trading partners; a higher index value denotes dollar appreciation.",
+      "snapshot": "FED_H10_NOMINAL_BROAD_DOLLAR_DAILY_20260824.html"
+    },
+    "release_schedule": {
+      "url": "https://www.federalreserve.gov/releases/h10/",
+      "retrieved_date_local": "2026-08-29",
+      "official_schedule": "On Mondays at 4:15 p.m. the Federal Reserve Board releases daily bilateral exchange rates and U.S. dollar indexes for the previous business week. A Monday federal holiday shifts release to the following business day.",
+      "snapshot": "FED_H10_RELEASE_SCHEDULE_20260824.html"
+    },
+    "series_reference": {
+      "url": "https://fred.stlouisfed.org/series/DTWEXBGS",
+      "series": "Nominal Broad U.S. Dollar Index",
+      "source": "Board of Governors of the Federal Reserve System (US)",
+      "frequency": "Daily",
+      "data_download_used_for_formal_input": false
+    }
+  },
+  "acquisition_corrections": [
+    {
+      "stage": "FRED graph CSV transport",
+      "outcome": "The HTTP request ended with a remote connection reset before a response artifact existed.",
+      "persisted_partial_file": false,
+      "economic_outcome_opened": false,
+      "classification": "ACQUISITION_ENGINEERING_CORRECTION_NOT_RESEARCH_FAILURE"
+    },
+    {
+      "stage": "FRED graph CSV curl transport",
+      "outcome": "The alternate transfer remained at zero received bytes and was interrupted without an output artifact.",
+      "persisted_partial_file": false,
+      "economic_outcome_opened": false,
+      "classification": "ACQUISITION_ENGINEERING_CORRECTION_NOT_RESEARCH_FAILURE"
+    },
+    {
+      "stage": "Official Board source substitution",
+      "outcome": "The official H.10 daily table and release-schedule pages downloaded successfully. The daily table was mechanically normalized to one date/value CSV without selecting or reading lifecycle economics.",
+      "persisted_partial_file": false,
+      "economic_outcome_opened": false,
+      "classification": "CORRECTED_READY"
+    }
+  ],
+  "normalization": {
+    "input_html": "FED_H10_NOMINAL_BROAD_DOLLAR_DAILY_20260824.html",
+    "output_csv": "FED_H10_NOMINAL_BROAD_DOLLAR_20220601_20260821.csv",
+    "columns": [
+      "date",
+      "nominal_broad_dollar_index"
+    ],
+    "finite_unique_rows": 1057,
+    "first": {
+      "date": "2022-06-01",
+      "value": 118.6954
+    },
+    "last": {
+      "date": "2026-08-21",
+      "value": 118.0628
+    },
+    "transformation": "Retain each finite official daily date/value observation in ascending date order. Group by ISO week and use the last finite daily observation only inside the later frozen aggregation.",
+    "economic_field_consumed": false
+  },
+  "causal_state_contract": {
+    "weekly_reference": "For each ISO week, use its last finite official daily index observation.",
+    "state": "STRENGTHENING when current weekly last minus prior weekly last is strictly positive; NONSTRENGTHENING when strictly negative; an exact zero invalidates the frozen structural anchor.",
+    "birth_lookup": "For lifecycle server date D, use the latest weekly state whose reference observation date is no later than D minus seven calendar days.",
+    "availability_reason": "The fixed seven-day exclusion makes the selected prior-business-week observation available under the official Monday 16:15 publication schedule, including the following-business-day holiday rule.",
+    "birth_ownership": "The state is assigned once at BIRTH and the matching CLOSE outcome remains owned by that birth state.",
+    "observed_reference_age_days": {
+      "minimum": 7,
+      "maximum": 14
+    }
+  },
+  "immutable_inputs": {
+    "root": "lab/artifacts/raw/prior-broad-dollar-portfolio-state-v1/input/",
+    "manifest_rule": "Sort name|bytes|uppercase SHA-256 by name, join with LF and SHA-256 UTF-8 without a trailing LF.",
+    "manifest_sha256": "FAA4C232817CFD02C44F751ECEA2DC7EFEDBAFF21EFA71C0AAF27A7DF78A83F5",
+    "files": [
+      {
+        "name": "FED_H10_NOMINAL_BROAD_DOLLAR_20220601_20260821.csv",
+        "bytes": 21172,
+        "sha256": "77ACE7C29576DE95EB29CA46D51379EA5E79F69E40F21734C26BD2D88112ECB4",
+        "role": "mechanically normalized official daily index"
+      },
+      {
+        "name": "FED_H10_NOMINAL_BROAD_DOLLAR_DAILY_20260824.html",
+        "bytes": 888669,
+        "sha256": "DD71EF8BB18A135C4548895365874415215BC7E8EBCD02F8955F27642F543FE5",
+        "role": "byte-exact official daily-table source"
+      },
+      {
+        "name": "FED_H10_RELEASE_SCHEDULE_20260824.html",
+        "bytes": 79322,
+        "sha256": "A73250B92746944C5FFDE33A225C960EE81789357AFDF676479BE3DE719D57CA",
+        "role": "byte-exact official causal-publication schedule"
+      },
+      {
+        "name": "PAIRED_MONTH_FORWARD_RESEARCH_LIFECYCLES.csv",
+        "bytes": 92997,
+        "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+        "role": "exact independently forward-tested anchor lifecycle copy"
+      },
+      {
+        "name": "PAIRED_MONTH_SELECTION_RESEARCH_LIFECYCLES.csv",
+        "bytes": 2685969,
+        "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+        "role": "exact selection-tested anchor lifecycle copy"
+      },
+      {
+        "name": "PAIRED_MONTH_STABILITY_MT5_RESULT_V1.json",
+        "bytes": 9880,
+        "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+        "role": "exact source economic anchors and native Tester provenance"
+      }
+    ],
+    "total_bytes": 3778009
+  },
+  "premetric_structure": {
+    "scope": "Only official date/value observations plus lifecycle event, server date, component, symbol and position identity were used. Actual net, stressed net, planned risk, stop reason, state-conditioned R, gate and verdict were not read or calculated.",
+    "daily_rows": 1057,
+    "weekly_records": 221,
+    "weekly_states": {
+      "total": 220,
+      "STRENGTHENING": 111,
+      "NONSTRENGTHENING": 109,
+      "flat": 0
+    },
+    "lifecycle_births": 1482,
+    "periods": {
+      "P1": {
+        "births": 516,
+        "birth_dates": 336,
+        "reference_weeks": 74,
+        "NONSTRENGTHENING": 237,
+        "STRENGTHENING": 279
+      },
+      "P2": {
+        "births": 357,
+        "birth_dates": 235,
+        "reference_weeks": 53,
+        "NONSTRENGTHENING": 153,
+        "STRENGTHENING": 204
+      },
+      "P3": {
+        "births": 388,
+        "birth_dates": 235,
+        "reference_weeks": 53,
+        "NONSTRENGTHENING": 211,
+        "STRENGTHENING": 177
+      },
+      "P4": {
+        "births": 167,
+        "birth_dates": 102,
+        "reference_weeks": 22,
+        "NONSTRENGTHENING": 98,
+        "STRENGTHENING": 69
+      },
+      "P5": {
+        "births": 54,
+        "birth_dates": 40,
+        "reference_weeks": 10,
+        "NONSTRENGTHENING": 23,
+        "STRENGTHENING": 31
+      }
+    },
+    "P1_splits": {
+      "P1_2022H2": {
+        "births": 149,
+        "birth_dates": 99,
+        "NONSTRENGTHENING": 74,
+        "STRENGTHENING": 75
+      },
+      "P1_2023": {
+        "births": 367,
+        "birth_dates": 237,
+        "NONSTRENGTHENING": 163,
+        "STRENGTHENING": 204
+      }
+    },
+    "P1_book_state_births": {
+      "US100": {
+        "NONSTRENGTHENING": 120,
+        "STRENGTHENING": 135
+      },
+      "US30": {
+        "NONSTRENGTHENING": 117,
+        "STRENGTHENING": 144
+      }
+    },
+    "P1_component_state_births": {
+      "Cross": {
+        "NONSTRENGTHENING": 120,
+        "STRENGTHENING": 135
+      },
+      "Return": {
+        "NONSTRENGTHENING": 46,
+        "STRENGTHENING": 52
+      },
+      "Pressure": {
+        "NONSTRENGTHENING": 13,
+        "STRENGTHENING": 20
+      },
+      "Range61": {
+        "NONSTRENGTHENING": 38,
+        "STRENGTHENING": 39
+      },
+      "Range64": {
+        "NONSTRENGTHENING": 20,
+        "STRENGTHENING": 33
+      }
+    },
+    "structurally_eligible": true,
+    "economics_consumed": false
+  },
+  "boundary": {
+    "family_owned_copies_only": true,
+    "source_free": true,
+    "mql_change": false,
+    "runtime_copy": false,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders_or_positions": 0,
+    "broker_or_account_queries": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "economics_consumed": false,
+  "next": "Freeze and hash one declaration and aggregation script, then execute one valid source-free economic aggregation."
+}

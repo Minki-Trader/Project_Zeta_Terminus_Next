@@ -1,0 +1,143 @@
+{
+  "schema": "zeta-next-prior-broad-dollar-portfolio-state-closure-v1",
+  "created_at_local": "2026-08-29",
+  "status": "UNIT_104_CLOSED_VALID_ECONOMIC_NONCONFIRMATION",
+  "unit": "prior-broad-dollar-portfolio-state-104",
+  "family": "prior-broad-dollar-portfolio-state-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "artifacts": {
+    "snapshot_receipt": {
+      "bytes": 9318,
+      "sha256": "E4F4B8C088EF44452A0E74B3B36FE4A4A1335870F47DAE83ABFC76CFE0752BF7"
+    },
+    "declaration": {
+      "bytes": 21591,
+      "sha256": "44CA13ADD33E440194FC5C9BDE489B6D45A416054AC8C31BD026BFE1A24C26F2"
+    },
+    "script": {
+      "bytes": 33255,
+      "sha256": "6C95364CF506C67891FE30C72EAB95179D30D7BBEE9AECC6F69A58883C2D8E57"
+    },
+    "result": {
+      "bytes": 19937,
+      "sha256": "2161E5D5AAE2C6800E7D9C9FAF9FD8259BB0BA6BFF0667CB476DD2429EF05574"
+    },
+    "raw_result": {
+      "bytes": 19937,
+      "sha256": "2161E5D5AAE2C6800E7D9C9FAF9FD8259BB0BA6BFF0667CB476DD2429EF05574"
+    },
+    "readme": {
+      "bytes": 4204,
+      "sha256": "4E60529E93973C9FF1A4F1E419EFA92C56BA7CD0C4345797C168BE38E5B2AAB9"
+    },
+    "input_manifest_sha256": "FAA4C232817CFD02C44F751ECEA2DC7EFEDBAFF21EFA71C0AAF27A7DF78A83F5",
+    "preserved_ignored_input_bytes": 3778009,
+    "preserved_ignored_output_bytes": 19937
+  },
+  "execution": {
+    "successful_formal_processes": 1,
+    "economic_metric_reruns": 0,
+    "preoutcome_acquisition_engineering_corrections": 2,
+    "acquisition_correction": "Two FRED CSV transports produced zero persisted bytes and opened no lifecycle outcome. Official Board H.10 HTML was then acquired and mechanically normalized. These were acquisition engineering corrections, not research failures.",
+    "post_result_packaging_corrections": 1,
+    "packaging_correction": "Removed one superfluous Markdown hard-break whitespace pair from the family README before commit. No input, script, economic metric, gate, verdict or formal process changed.",
+    "internal_elapsed_seconds": 0.1250729000003048,
+    "new_data_acquisitions_during_formal_process": 0,
+    "runtime_copies": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "broker_or_account_queries": 0
+  },
+  "integrity_and_density": {
+    "passed": true,
+    "input_files": 6,
+    "official_daily_rows": 1057,
+    "weekly_records": 221,
+    "weekly_states": 220,
+    "strengthening_weeks": 111,
+    "nonstrengthening_weeks": 109,
+    "flat_weeks": 0,
+    "selection_closed_lifecycles": 1428,
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524000000163,
+    "selection_stop_loss_exits": 130,
+    "forward_closed_lifecycles": 54,
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_net_usd": 30.626000000002755,
+    "forward_stop_loss_exits": 17,
+    "mapped_births": 1482,
+    "causal_state_age_days": [
+      7,
+      14
+    ],
+    "P1_births": 516,
+    "P1_strengthening_births": 279,
+    "P1_nonstrengthening_births": 237,
+    "faults": 0
+  },
+  "P1_economics": {
+    "NONSTRENGTHENING": {
+      "count": 237,
+      "actual_net_usd": 162.01,
+      "stressed_net_usd": 146.90000000000063,
+      "mean_stressed_r": 0.02969326952183967,
+      "stop_count": 7,
+      "stop_rate": 0.029535864978902954
+    },
+    "STRENGTHENING": {
+      "count": 279,
+      "actual_net_usd": 225.83,
+      "stressed_net_usd": 207.39399999999912,
+      "mean_stressed_r": 0.05135160645984404,
+      "stop_count": 19,
+      "stop_rate": 0.06810035842293907
+    },
+    "strengthening_minus_nonstrengthening": {
+      "mean_stressed_r": 0.02165833693800437,
+      "stop_rate": 0.03856449344403612
+    },
+    "strengthening_stressed_net_by_calendar": {
+      "P1_2022H2": 74.67300000000128,
+      "P1_2023": 132.72099999999784
+    },
+    "strengthening_stressed_net_by_book": {
+      "US30": 153.97299999999925,
+      "US100": 53.42099999999988
+    },
+    "strengthening_stressed_net_by_component": {
+      "Cross": 53.42099999999988,
+      "Return": 17.360000000001538,
+      "Pressure": 11.909999999999345,
+      "Range61": 43.85599999999846,
+      "Range64": 80.8469999999999
+    },
+    "passed_discovery_gates": 0,
+    "total_discovery_gates": 9,
+    "passed": false
+  },
+  "decision": {
+    "verdict": "FAIL_PRIOR_BROAD_DOLLAR_NO_P1_PORTFOLIO_RISK_STATE_NO_SEED",
+    "economic_interpretation": "Prior broad-dollar strengthening does not identify a loss state in discovery. The strengthening cohort earns positive actual and doubled-cost stressed money, has a positive rather than adverse mean stressed-R effect, stays profitable in both calendar splits and both books, and is positive in all five components. A modestly higher pooled stop rate cannot justify suppressing profitable births.",
+    "retained_seed": null,
+    "P2_P5_economics_opened": false,
+    "mt5_shortlist": null,
+    "optimization_candidate": null,
+    "live_authority": false
+  },
+  "closed_scope": [
+    "No broad-dollar level, magnitude, percentile, z-score, moving average, alternate endpoint or threshold rescue.",
+    "No alternate publication lag/window, contemporaneous state, AFE/EME subindex or other currency-index rescue.",
+    "No US30/US100 rotation, symbol, component, direction, session, weekday or event subgroup rescue.",
+    "No risk, lot, weight, capital, slot, stop, target, exit, capacity-replacement or compounding rescue.",
+    "No MQL, SET, runtime, compile, Tester, broker/account query, Optimization mutation or Live action."
+  ],
+  "whole_map_next": "Commit and push Unit 104 once, then immediately recompare Programs 1-5 and 7 plus all heights without an adjacent broad-dollar successor.",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_104_CLOSED_VALID_PRIOR_BROAD_DOLLAR_NO_P1_PORTFOLIO_RISK_STATE_NO_SEED"
+}
