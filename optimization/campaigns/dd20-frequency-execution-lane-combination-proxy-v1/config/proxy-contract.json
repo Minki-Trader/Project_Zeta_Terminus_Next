@@ -1,0 +1,116 @@
+{
+  "schema": "zeta-dd20-frequency-execution-lane-combination-proxy-contract-v1",
+  "recorded_date_local": "2026-08-29",
+  "campaign": "dd20-frequency-execution-lane-combination-proxy-v1",
+  "hypothesis": "Separate high/mid-frequency US30+US100 execution ownership from low-frequency US500 H4 execution ownership for search, preserve US500 H1 as a read-only dependency of the US100 Cross signal, and advance at most one exact frozen-lane combination to a final shared-account MT5 run.",
+  "candidate_count": 1,
+  "grid": false,
+  "source_snapshots": {
+    "high_mid_anchor_result": {
+      "source_campaign": "dd20-paired-month-stability-mt5-v1",
+      "source_result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+      "selection_lifecycle_sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "forward_lifecycle_sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E"
+    },
+    "low_frequency_shared_result": {
+      "source_campaign": "dd20-legacy-us500-h4-staged-overlay-mt5-v1",
+      "source_result_sha256": "EE34D231896BA7CD3F1041FEA03A54CDD9C69E9CDE12095946930B113A479BB1"
+    },
+    "low_frequency_standalone_lineage": {
+      "candidate_id": "ZT-H4-US500-V2-VOLATILITY-EXP-b4d28831f9",
+      "summary_sha256": "DD97B2DA10C3BFEFE9CC5F9C2575E5ADC14D3ACDA789A4D5C14A707069815A11",
+      "source_sha256": "02B00AC2ADB1521FE4C8923D94AA1F7ADE6F9AD51008C8AEF693A8006C3443C5"
+    }
+  },
+  "execution_lanes": {
+    "high_mid_frequency": {
+      "owned_trade_symbols": ["US30", "US100"],
+      "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "active_components": 5,
+      "disabled_component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+      "read_only_market_dependencies": [
+        {
+          "symbol": "US500",
+          "timeframe": "H1",
+          "consumer": "ZT-H1-US100-CROSS-IN-14b72317b7",
+          "reason": "US100 relative momentum subtracts the mean of synchronized US30 and US500 H1 returns"
+        }
+      ]
+    },
+    "low_frequency": {
+      "owned_trade_symbols": ["US500"],
+      "timeframe": "H4",
+      "fixed_volume": 0.01,
+      "lookback_h4_bars": 12,
+      "entry_strength": 1.5,
+      "exit_strength": 0.6,
+      "maximum_hold_h4_bars": 30,
+      "new_entry_balance_gate_usd": 500.0,
+      "margin_to_equity_gate_pct": 20.0,
+      "outside_high_mid_planned_risk_and_slot_accounting": true
+    },
+    "final_combination": {
+      "shares_balance_equity_margin_and_downstream_state": true,
+      "isolated_lane_results_may_be_summed_for_final_verdict": false,
+      "required_confirmation": "one complete combined full-portfolio MT5 selection and then one independently initialized forward only if selection is valid and effectively eligible"
+    }
+  },
+  "high_mid_economics": {
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524,
+    "selection_native_equity_drawdown_pct": 20.256887565152653,
+    "selection_epochs": [
+      {"id": "E1", "actual_net_usd": 228.5, "stressed_net_usd": 211.002},
+      {"id": "E2", "actual_net_usd": 172.1, "stressed_net_usd": 142.114},
+      {"id": "E3", "actual_net_usd": 903.81, "stressed_net_usd": 851.854},
+      {"id": "E4", "actual_net_usd": 4482.22, "stressed_net_usd": 4272.554}
+    ],
+    "selection_first_close_balance_at_or_above_500_server": "2024.01.22 17:30:00",
+    "selection_last_close_balance_below_500_server": "2024.06.20 21:00:00",
+    "selection_maximum_closed_balance_usd": 6189.78,
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_net_usd": 30.626,
+    "forward_native_equity_drawdown_pct": 18.675302129932568,
+    "forward_maximum_closed_balance_usd": 146.88,
+    "forward_june_actual_net_usd": 33.33,
+    "forward_june_stressed_net_usd": 32.109,
+    "forward_july_actual_net_usd": -0.59,
+    "forward_july_stressed_net_usd": -1.483,
+    "already_qualified_under_user_pragmatic_judgment": true
+  },
+  "low_frequency_economics": {
+    "standalone_full_actual_net_usd": 15.36,
+    "standalone_full_stressed_net_usd": 13.0091,
+    "standalone_native_equity_drawdown_pct": 6.32,
+    "standalone_lifecycles": 171,
+    "prior_shared_selection_h4_closed": 40,
+    "prior_shared_selection_h4_direct_actual_net_usd": 6.76,
+    "prior_shared_selection_h4_direct_stressed_net_usd": 6.1752,
+    "prior_shared_selection_total_actual_uplift_usd": 43.04,
+    "prior_shared_selection_total_stressed_uplift_usd": 41.8492,
+    "prior_shared_selection_core_interaction_actual_uplift_usd": 36.28,
+    "prior_shared_selection_core_interaction_stressed_uplift_usd": 35.674,
+    "prior_shared_selection_native_drawdown_charge_percentage_points": 0.6046550817513214,
+    "prior_shared_h4_epoch_direct": [
+      {"id": "E1", "actual_net_usd": 0.0, "stressed_net_usd": 0.0},
+      {"id": "E2", "actual_net_usd": 0.0, "stressed_net_usd": 0.0},
+      {"id": "E3", "actual_net_usd": -2.41, "stressed_net_usd": -2.4712},
+      {"id": "E4", "actual_net_usd": 9.17, "stressed_net_usd": 8.6464}
+    ]
+  },
+  "proxy_contract": {
+    "nominal_equity_drawdown_line_pct": 20.0,
+    "conservative_user_example_proportional_reference_pct": 6.0,
+    "direct_only_projection": "add only the prior shared H4 direct net and epoch contributions to the high/mid anchor",
+    "coupled_information_projection": "add the prior shared total H4-associated uplift to the high/mid anchor",
+    "drawdown_projection": "add the positive prior shared H4 native drawdown charge to the high/mid native drawdown",
+    "forward_projection": "retain the high/mid forward exactly because its maximum closed balance is below the unchanged 500-dollar H4 new-entry gate",
+    "shortlist_gates": [
+      "direct-only projected selection actual and stressed net exceed the high/mid anchor",
+      "all direct-only projected selection epochs remain actual and stressed positive",
+      "projected drawdown proportional excess stays below the conservative 6% end of the user's 10% to 10.6% example",
+      "fresh full forward remains actual and stressed positive and below nominal 20% drawdown",
+      "exact candidate count is one"
+    ]
+  }
+}

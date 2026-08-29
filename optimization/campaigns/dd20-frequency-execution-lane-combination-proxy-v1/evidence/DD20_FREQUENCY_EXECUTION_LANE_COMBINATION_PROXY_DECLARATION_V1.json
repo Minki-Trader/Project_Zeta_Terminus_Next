@@ -1,0 +1,51 @@
+{
+  "schema": "zeta-dd20-frequency-execution-lane-combination-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "FROZEN_BEFORE_PROXY_EXECUTION",
+  "campaign": "dd20-frequency-execution-lane-combination-proxy-v1",
+  "user_hypothesis": "Separate US30+US100 high/mid-frequency execution from US500 low-frequency execution to reduce repeated combined testing, while retaining a final combined portfolio gate.",
+  "scope": {
+    "source_free": true,
+    "candidate_count": 1,
+    "grid": false,
+    "high_mid_lane": "exact qualified dd20-paired-month-stability-mt5-v1 anchor",
+    "low_frequency_lane": "exact ZT-H4-US500-V2-VOLATILITY-EXP-b4d28831f9 staged overlay",
+    "high_mid_owned_trade_symbols": ["US30", "US100"],
+    "high_mid_read_only_data_symbols": ["US500"],
+    "low_frequency_owned_trade_symbols": ["US500"],
+    "combined_mt5_shortlist_maximum": 1
+  },
+  "fixed_dependency_judgment": {
+    "execution_ownership_can_split": true,
+    "high_mid_data_universe_can_drop_us500": false,
+    "reason": "The frozen US100 Cross feature requires synchronized US100, US30 and US500 H1 closes. Removing US500 changes the entry signal and is outside this campaign."
+  },
+  "frozen_files": {
+    "contract": {
+      "path": "optimization/campaigns/dd20-frequency-execution-lane-combination-proxy-v1/config/proxy-contract.json",
+      "sha256": "B14D7115552FEA77D593B204BB68635982D5B75DEB1740E8C80CF11A25CCD8BF"
+    },
+    "proxy": {
+      "path": "optimization/campaigns/dd20-frequency-execution-lane-combination-proxy-v1/proxy/run_proxy.py",
+      "sha256": "52E9D07226C9773A22E968693C50F92AD15BCEBE3268CB5BFF29FE6C81C3C917"
+    }
+  },
+  "frozen_projection_contract": {
+    "direct_only_profit": "add only prior shared H4 direct actual/stressed and epoch contributions to the current paired anchor",
+    "coupled_information_profit": "add prior shared total H4-associated uplift to the current paired anchor as nonbinding information",
+    "drawdown": "add the prior shared H4 native drawdown charge to the paired anchor native drawdown",
+    "forward": "retain the paired forward only if its maximum closed balance remains below the unchanged 500-dollar H4 entry gate",
+    "pragmatic_proxy_reference": "projected proportional DD overshoot must stay below 6%, the conservative end of the user's 10% to 10.6% example",
+    "final_economic_authority": "none; one complete combined MT5 run is mandatory if shortlisted"
+  },
+  "pre_execution_boundary": {
+    "proxy_process_invocations": 0,
+    "proxy_result_opened": false,
+    "candidate_source_created": false,
+    "compile_invocations": 0,
+    "mt5_invocations": 0,
+    "live_lab_or_master_modified": false,
+    "broker_account_positions_orders_or_deals_queried": false,
+    "validator_test_or_ci_added": false
+  }
+}

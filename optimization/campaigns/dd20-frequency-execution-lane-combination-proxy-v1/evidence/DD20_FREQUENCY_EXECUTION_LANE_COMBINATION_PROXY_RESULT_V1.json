@@ -1,0 +1,90 @@
+{
+  "schema": "zeta-dd20-frequency-execution-lane-combination-proxy-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VALID_PROXY_COMPLETE_ONE_COMBINED_MT5_SHORTLIST",
+  "campaign": "dd20-frequency-execution-lane-combination-proxy-v1",
+  "contract_sha256": "B14D7115552FEA77D593B204BB68635982D5B75DEB1740E8C80CF11A25CCD8BF",
+  "elapsed_seconds": 0.0009184999998979038,
+  "process_invocations": 1,
+  "candidate_count": 1,
+  "grid": false,
+  "dependency_finding": {
+    "execution_lane_split_feasible": true,
+    "high_mid_market_data_can_exclude_us500": false,
+    "reason": "US100 relative momentum subtracts the mean of synchronized US30 and US500 H1 returns",
+    "high_mid_trade_symbols": [
+      "US30",
+      "US100"
+    ],
+    "high_mid_read_only_symbols": [
+      "US500"
+    ],
+    "low_frequency_trade_symbols": [
+      "US500"
+    ]
+  },
+  "projection": {
+    "direct_only_selection_actual_net_usd": 5793.39,
+    "direct_only_selection_stressed_net_usd": 5483.6992,
+    "coupled_information_selection_actual_net_usd": 5829.67,
+    "coupled_information_selection_stressed_net_usd": 5519.3732,
+    "projected_selection_native_equity_drawdown_pct": 20.861542646903974,
+    "projected_selection_drawdown_excess_percentage_points": 0.8615426469039744,
+    "projected_selection_drawdown_proportional_excess_pct": 4.307713234519872,
+    "projected_selection_epochs": [
+      {
+        "id": "E1",
+        "actual_net_usd": 228.5,
+        "stressed_net_usd": 211.002
+      },
+      {
+        "id": "E2",
+        "actual_net_usd": 172.1,
+        "stressed_net_usd": 142.114
+      },
+      {
+        "id": "E3",
+        "actual_net_usd": 901.4,
+        "stressed_net_usd": 849.3828
+      },
+      {
+        "id": "E4",
+        "actual_net_usd": 4491.39,
+        "stressed_net_usd": 4281.2004
+      }
+    ],
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_net_usd": 30.626,
+    "forward_native_equity_drawdown_pct": 18.675302129932568,
+    "forward_maximum_closed_balance_usd": 146.88,
+    "forward_h4_new_entries": 0
+  },
+  "gates": {
+    "direct_only_selection_actual_improves_anchor": true,
+    "direct_only_selection_stressed_improves_anchor": true,
+    "all_direct_only_selection_epochs_actual_positive": true,
+    "all_direct_only_selection_epochs_stressed_positive": true,
+    "projected_selection_nominal_drawdown_gate": false,
+    "projected_selection_pragmatic_reference_gate": true,
+    "forward_h4_stage_gate_inactive": true,
+    "forward_actual_positive": true,
+    "forward_stressed_positive": true,
+    "forward_nominal_drawdown_gate": true,
+    "exact_candidate_count_is_one": true
+  },
+  "economic_verdict": {
+    "one_combined_mt5_shortlist": true,
+    "selected_high_mid_lane": "dd20-paired-month-stability-mt5-v1",
+    "selected_low_frequency_lane": "ZT-H4-US500-V2-VOLATILITY-EXP-b4d28831f9",
+    "classification": "FROZEN_TWO_LANE_COMBINATION_HAS_POSITIVE_PROXY_INFORMATION",
+    "interpretation": "Both frozen lane evidences support exactly one combined MT5 candidate. The direct-only projection improves selection net, all four projected epochs remain positive, and the observed H4 drawdown charge produces a 4.3077% proportional overshoot, below the conservative 6% end of the user's example. The full forward remains the qualified high/mid path because its maximum closed balance never reaches the unchanged H4 stage gate. These are selection projections only: earlier activation and shared margin on the stronger anchor make one complete combined MT5 run mandatory."
+  },
+  "boundary": {
+    "proxy_complete": true,
+    "mt5_invocations": 0,
+    "candidate_source_or_runtime_created": false,
+    "live_lab_or_master_modified": false,
+    "isolated_lane_arithmetic_is_final_verdict": false,
+    "adjacent_threshold_or_h4_parameter_search": false
+  }
+}
