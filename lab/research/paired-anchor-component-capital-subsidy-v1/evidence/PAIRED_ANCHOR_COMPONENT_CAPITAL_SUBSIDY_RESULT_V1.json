@@ -1,0 +1,137 @@
+{
+  "schema": "zeta-next-paired-anchor-component-capital-subsidy-result-v1",
+  "created_at_local": "2026-08-29",
+  "status": "VALID_FIXED_SOURCE_FREE_REPLAY_COMPLETE",
+  "unit": "paired-anchor-component-capital-subsidy-101",
+  "family": "paired-anchor-component-capital-subsidy-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk"
+  },
+  "evidence": {
+    "declaration": {
+      "bytes": 12074,
+      "sha256": "25C328630AC28D84FE1C1B958BF2C0C6B412A31DC0D574721F318A6C330420A5"
+    },
+    "design_correction": {
+      "bytes": 1884,
+      "sha256": "79F4658128D69688A595B37C0098F0CFDA0C583BF7774CA562896246A4897BAF"
+    },
+    "formal_script": {
+      "bytes": 25043,
+      "sha256": "EB3586FAFA7A69C6D28C75933847275DEBC6340D2FEF16D02AEE00A55DF9FB2D"
+    },
+    "lab_owned_input": {
+      "path": "lab/artifacts/raw/paired-anchor-component-capital-subsidy-v1/input/selection-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"
+    },
+    "raw_formal_result": {
+      "path": "lab/artifacts/raw/paired-anchor-component-capital-subsidy-v1/output/formal-result.json",
+      "bytes": 8799,
+      "sha256": "562CDA4B10FA179699000775854CA5C59CC182A5A9383E08F7FC3B8614FD500A"
+    }
+  },
+  "execution": {
+    "preoutput_design_corrections": 1,
+    "successful_formal_processes": 1,
+    "economic_metric_reruns": 0,
+    "formal_elapsed_seconds": 0.13912280000113242,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "broker_or_account_queries": 0
+  },
+  "integrity": {
+    "passed": true,
+    "rows": 3287,
+    "births": 1428,
+    "closes": 1428,
+    "first_peer_rows": 431,
+    "source_fills_above_requested": 0,
+    "request_shortfall_births": 9,
+    "maximum_request_shortfall_steps": 1,
+    "unmapped_components": 0,
+    "open_positions_at_end": 0,
+    "source_actual_anchor_delta_usd": 0.0,
+    "source_stressed_anchor_delta_usd": 1.6279955161735415e-10
+  },
+  "control": {
+    "actual_net_usd": 5786.63,
+    "stressed_net_usd": 5477.524000000163,
+    "raw_closed_drawdown_pct": 20.40102916636169,
+    "maximum_global_day_multiplier": 39,
+    "source_lot_steps": 18271
+  },
+  "component_local_no_add": {
+    "actual_net_usd": 837.2067005610943,
+    "stressed_net_usd": 784.2550095041948,
+    "candidate_minus_control_actual_usd": -4949.423299438906,
+    "candidate_minus_control_stressed_usd": -4693.268990495968,
+    "raw_closed_drawdown_pct": 17.815649893986134,
+    "candidate_lot_steps": 3118,
+    "removed_lot_steps": 15153,
+    "removed_source_lot_step_fraction": 0.8293470527064748,
+    "reduced_lifecycles": 1249
+  },
+  "component_deltas_actual_stressed_usd": {
+    "RC16": [-1916.7034879957937, -1869.2584879958595],
+    "RC4": [-664.2298303833385, -623.795521440283],
+    "Cross": [-633.4033657720822, -520.272365772079],
+    "Pressure": [-1349.0302657168374, -1322.6112657168605],
+    "Return": [-386.05634957085397, -357.3313495708873]
+  },
+  "epoch_candidate_actual_stressed_and_deltas_usd": {
+    "E1": {
+      "candidate": [207.72666666666655, 194.9696666666711],
+      "delta": [-20.773333333333454, -16.03233333333492]
+    },
+    "E2": {
+      "candidate": [85.49158333333335, 72.29658333332561],
+      "delta": [-86.60841666666667, -69.81741666665606]
+    },
+    "E3": {
+      "candidate": [205.98574503274506, 194.61807836607952],
+      "delta": [-697.8242549672549, -657.2359216339268]
+    },
+    "E4": {
+      "candidate": [338.0027055283494, 322.37068113811847],
+      "delta": [-4144.217294471652, -3950.1833188620535]
+    }
+  },
+  "gate_summary": {
+    "integrity": true,
+    "material_binding": true,
+    "profit_actual": false,
+    "profit_stressed": false,
+    "drawdown_not_worse": true,
+    "all_candidate_epochs_positive": true,
+    "epochs_with_nonnegative_both_delta": 0,
+    "required_epochs_with_nonnegative_both_delta": 3,
+    "components_with_nonnegative_both_delta": 0,
+    "required_components_with_nonnegative_both_delta": 3,
+    "economic_seed_gate_passed": false
+  },
+  "verdict": "VALID_COMPONENT_CAPITAL_SUBSIDY_NONCONFIRMATION_NO_SEED",
+  "interpretation": "The global-to-component capital transfer is large and lowers raw drawdown when removed, but every component and epoch loses actual and stressed profit. Shared realized-profit compounding is an economic growth engine in this anchor, not a harmful subsidy identified by the frozen no-add test.",
+  "decision_translation": {
+    "preserve": "paired-month anchor shared global $150 daily ladder",
+    "retained_seed": null,
+    "forward_opened": false,
+    "optimization_candidate": null,
+    "closed_without_rescue": [
+      "component-local ladder",
+      "book-local ladder",
+      "partial sharing",
+      "component exception",
+      "alternate step or cap",
+      "freed-risk admission reuse"
+    ]
+  },
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE"
+}

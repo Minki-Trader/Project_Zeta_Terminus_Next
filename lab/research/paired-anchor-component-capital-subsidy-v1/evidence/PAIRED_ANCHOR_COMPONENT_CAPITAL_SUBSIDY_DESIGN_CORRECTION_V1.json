@@ -1,0 +1,34 @@
+{
+  "schema": "zeta-next-paired-anchor-component-capital-subsidy-design-correction-v1",
+  "created_at_local": "2026-08-29",
+  "status": "CORRECTED_BEFORE_ANY_ECONOMIC_METRIC_OUTPUT_NO_VERDICT",
+  "unit": "paired-anchor-component-capital-subsidy-101",
+  "family": "paired-anchor-component-capital-subsidy-v1",
+  "failed_invocation": {
+    "count": 1,
+    "stage": "source-volume integrity before formal output serialization",
+    "exit_code": 1,
+    "first_mismatch_csv_physical_row": 2375,
+    "server_time": "2025.05.12 15:00:00",
+    "component": "Pressure",
+    "reconstructed_normalized_request_lots": 0.23,
+    "durable_adopted_aggregate_fill_lots": 0.22,
+    "economic_metrics_emitted": false,
+    "economic_verdict": null
+  },
+  "cause": "The first design incorrectly required durable aggregate filled volume to equal the EA's normalized order request. The lifecycle BIRTH records the adopted aggregate position fill, which may be smaller than the request. The no-add candidate operates on filled volume and must preserve that shortfall rather than impute the unfilled step.",
+  "correction": {
+    "old_declaration_sha256": "C8311205902077157170CC9F0108EAA61DC0446C9F9AED9E055E0B9D78430B44",
+    "corrected_declaration_sha256": "25C328630AC28D84FE1C1B958BF2C0C6B412A31DC0D574721F318A6C330420A5",
+    "source_integrity_rule": "Require a positive exact 0.01-lot aggregate fill no greater than the reconstructed normalized request; preserve and disclose every request-minus-fill shortfall.",
+    "candidate_rule": "Unchanged: min(actual source filled steps, component-local requested steps).",
+    "hypothesis_changed": false,
+    "economic_gate_changed": false,
+    "threshold_changed": false,
+    "input_changed": false,
+    "forward_opened": false
+  },
+  "classification": "DESIGN_CORRECTION_NOT_RESEARCH_FAILURE",
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED"
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-paired-anchor-component-capital-subsidy-declaration-v1",
+  "created_at_local": "2026-08-29",
+  "status": "UNIT_101_DESIGN_CORRECTED_BEFORE_ANY_ECONOMIC_METRIC_OUTPUT_AND_REFROZEN",
+  "unit": "paired-anchor-component-capital-subsidy-101",
+  "family": "paired-anchor-component-capital-subsidy-v1",
+  "title": "Paired-anchor global-to-component capital subsidy attribution",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk",
+    "korean_name": "포트폴리오·자본·위험"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"],
+    "transfer_path": "A shared realized-profit ladder transfers scale across components; a causal component-owned ladder tests whether that transfer creates or destroys account profit before any native candidate is opened."
+  },
+  "central_question": "On the complete paired-month selection lifecycle path, does conservatively removing only volume financed by another component's realized stressed profit increase both actual and doubled-cost profit without worsening raw closed-balance drawdown?",
+  "why_now": {
+    "new_data_role": "The current Optimization anchor naturally produced a complete 1,428-birth and 1,428-close compounding lifecycle ledger. Unit 075 explicitly lacked a complete compounding lifecycle distribution; this file now exists without Lab reacquisition or observer work.",
+    "optimization_bottleneck": "Static weights, global addition-step grids, aggregate caps, drawdown governors, component outcome states, gain reservations, entry strength, protective headroom and the market-state router are closed. The surviving anchor still uses one global daily profit ladder for five economically different components.",
+    "independence": "This is not another weight, step, cap, state, router, threshold, lookback, subgroup or admission-priority search. The `$150` ladder and weights remain exact; only ownership of already-realized growth is changed, and the candidate is forbidden to add volume or admit an unobserved opportunity.",
+    "decision_if_true": "Retain exactly one component-local no-add information seed for a separately owned Optimization proxy campaign after a fresh whole-map comparison.",
+    "decision_if_false": "Preserve the shared global ladder and close component-local, book-local and component-specific capital ownership without rescue."
+  },
+  "whole_map_recomparison": {
+    "program_1": "The exact H4 and router seeds were consumed; uniform signal strengthening and every adjacent router or signal-label rescue are frozen.",
+    "program_2": "No new causal external-state field is present in the complete anchor ledger.",
+    "program_3": "The only two entry-delay rows are economically degenerate and Unit 083 already closed adjacent clock rescue.",
+    "program_4": "No new time-indexed held-position intervention is available; hold, peer-exit, profit-memory and stop neighborhoods remain frozen.",
+    "program_5": "Selected because the complete current anchor exposes a previously unmeasured ownership distinction between shared account capital and component-earned growth without changing any closed scalar parameter.",
+    "program_7": "Unit 100 closed the router label mismatch with no seed; another label, model or attribution rescue is not opened.",
+    "excluded_program_6": "execution_recovery_broker_safety",
+    "after_close": "Recompare Programs 1-5 and 7. Do not automatically open a book-local, component-specific, partial-sharing, alternate-step, cap, window, threshold or admission-reuse successor."
+  },
+  "immutable_inputs": {
+    "lab_owned_lifecycle_copy": {
+      "path": "lab/artifacts/raw/paired-anchor-component-capital-subsidy-v1/input/selection-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "physical_copy_equal_to_source_at_intake": true
+    },
+    "anchor_result": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/evidence/DD20_PAIRED_MONTH_STABILITY_MT5_RESULT_V1.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+    },
+    "anchor_risk_source": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/Include/ZetaOptimizationDD20PairedMonthStabilityMT5V1/Portfolio/ZetaPortfolioRisk.mqh",
+      "bytes": 24335,
+      "sha256": "EEACBFBA705C1DBD6F22929DB9B899F6CA8DAA771324EE9369E6BC3C57C5B68A",
+      "role": "Pins the original daily multiplier and volume normalization formula only; formal replay reads the Lab-owned CSV and declaration, never campaign source."
+    }
+  },
+  "fixed_anchor": {
+    "reference_capital_usd": 100.0,
+    "addition_step_usd": 150.0,
+    "base_and_volume_step_lots": 0.01,
+    "expected_rows": 3287,
+    "expected_births": 1428,
+    "expected_closes": 1428,
+    "expected_first_peer_rows": 431,
+    "expected_actual_net_usd": 5786.63,
+    "expected_stressed_net_usd": 5477.524,
+    "native_selection_equity_drawdown_pct": 20.256887565152653,
+    "expected_core_faults": 0
+  },
+  "components": [
+    {"name":"RC16","component_id":"ZT-M30-US30-RANGE-COMP-61f61deaba","weight":2.0},
+    {"name":"RC4","component_id":"ZT-M30-US30-RANGE-COMP-64efb16616","weight":1.5},
+    {"name":"Cross","component_id":"ZT-H1-US100-CROSS-IN-14b72317b7","weight":2.0},
+    {"name":"Pressure","component_id":"ZT-M30-US30-INTRADAY-R-2eb111fc46","weight":2.5},
+    {"name":"Return","component_id":"ZT-H1-US30-RETURN-I-c870a788ec","weight":1.5}
+  ],
+  "selection_epochs": [
+    {"id":"E1","start":"2022.08.01 00:00:00","end":"2023.06.01 00:00:00"},
+    {"id":"E2","start":"2023.06.01 00:00:00","end":"2024.06.01 00:00:00"},
+    {"id":"E3","start":"2024.06.01 00:00:00","end":"2025.06.01 00:00:00"},
+    {"id":"E4","start":"2025.06.01 00:00:00","end":"2026.06.01 00:00:00"}
+  ],
+  "frozen_replay": {
+    "ordering": "Preserve physical CSV order after requiring nondecreasing server_time. Use only BIRTH and CLOSE rows; FIRST_PEER_NATURAL_EXIT is counted for integrity and has no economic action.",
+    "source_global_day_multiplier": "At the first retained event of each server date, 1 + floor(max(0, source cumulative stressed close net) / 150 + 1e-9).",
+    "source_requested_steps": "floor(global_day_multiplier * fixed component weight + 0.5). This is the normalized order request before broker fill aggregation.",
+    "source_filled_steps": "The lifecycle BIRTH volume is the adopted aggregate fill. It must be a positive exact 0.01-lot step no greater than source_requested_steps. A smaller fill is preserved and disclosed; it is not imputed back to requested volume.",
+    "component_local_day_multiplier": "For each component independently at the first retained event of each server date, 1 + floor(max(0, that component's cumulative candidate stressed close net) / 150 + 1e-9).",
+    "candidate_steps": "min(source target steps, floor(component_local_day_multiplier * fixed component weight + 0.5)). Candidate steps must be at least one because all fixed active weights are positive.",
+    "candidate_close": "Multiply the source lifecycle actual and stressed close net by candidate_steps/source_steps fixed at its BIRTH; update shared candidate balances and only that component's candidate stressed-profit ledger at CLOSE.",
+    "no_add_contract": "Never exceed source steps, create a lifecycle, reuse freed risk capacity, alter event order, or change a source entry, stop, exit, direction, symbol or cost.",
+    "raw_closed_drawdown": "Maximum percentage peak-to-subsequent-close decline over shared actual and stressed candidate closed balances, starting at $100; report the worse of the two books.",
+    "marginal_removed_value": "Source close net minus candidate scaled close net, attributed to the component and frozen epoch. Negative removed value means the removed cross-subsidized slice lost money."
+  },
+  "fixed_integrity_gate": {
+    "requirements": [
+      "All immutable byte/hash pins pass.",
+      "The exact declared row/event counts, unique BIRTH/CLOSE position identities, five mapped components and nondecreasing event times pass.",
+      "Every source birth volume is a positive exact 0.01-lot step no greater than the reconstructed shared `$150` normalized request; request-minus-fill counts and maximum shortfall are disclosed.",
+      "Source actual and stressed totals match `5786.63 / 5477.524` within 1e-7 and all numeric fields used by replay are finite.",
+      "Every close belongs to exactly one frozen epoch and both source and candidate balances remain positive."
+    ],
+    "all_required": true
+  },
+  "fixed_material_binding_gate": {
+    "minimum_reduced_lifecycles": 100,
+    "minimum_removed_source_lot_step_fraction": 0.10,
+    "all_required": true
+  },
+  "fixed_economic_seed_gate": {
+    "minimum_candidate_minus_control_actual_usd": 50.0,
+    "minimum_candidate_minus_control_stressed_usd": 50.0,
+    "candidate_raw_closed_drawdown_must_not_exceed_control": true,
+    "all_four_candidate_epochs_actual_and_stressed_must_be_positive": true,
+    "minimum_epochs_with_nonnegative_actual_and_stressed_delta": 3,
+    "minimum_components_with_nonnegative_actual_and_stressed_delta": 3,
+    "maximum_single_component_share_of_positive_stressed_improvement": 0.70,
+    "all_required": true
+  },
+  "fixed_verdict_rules": {
+    "pass": "PASS_COMPONENT_LOCAL_NO_ADD_CAPITAL_SUBSIDY_OPTIMIZATION_SEED when integrity, material binding and every economic seed gate pass.",
+    "nonconfirmation": "VALID_COMPONENT_CAPITAL_SUBSIDY_NONCONFIRMATION_NO_SEED when integrity passes but either material binding or any economic seed gate fails.",
+    "correction": "Any environment, input-copy, design or implementation defect is a correction state with no economic verdict and no arbitrary retry cap. Metrics and thresholds remain frozen while the defect is corrected."
+  },
+  "decision_translation": {
+    "pass": "Retain exactly one later component-local no-add Optimization information seed. It has no native, forward, Lab engineering or Live authority and may open only after another complete macro-map comparison.",
+    "nonconfirmation": "Preserve the paired anchor's shared global ladder; retain no capital-ownership seed and freeze component-local, book-local, partial-sharing, component-specific, threshold, step, cap and admission-reuse rescues."
+  },
+  "exclusions": [
+    "June or July forward economics",
+    "book-local, partial-sharing, winner-only, component exception or alternate initial capital",
+    "another addition step, cap, delay, threshold, state, lookback, epoch, symbol or direction subgroup",
+    "newly admitted opportunities, freed-risk reuse, changed priority or preemption",
+    "MQL, SET, runtime, compile, Tester, test, validator, broker/account query or Live/Optimization mutation"
+  ],
+  "execution_accounting": {
+    "formal_successful_replays": 1,
+    "economic_metric_reruns": 0,
+    "engineering_or_design_corrections": "unlimited without verdict while preserving the frozen contract",
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0
+  },
+  "preoutput_design_correction": {
+    "used": true,
+    "economic_metrics_emitted_before_correction": false,
+    "cause": "The first invocation treated the adopted aggregate fill as necessarily equal to the normalized order request. At the first mismatch, the 2025-05-12 Pressure request reconstructed as 0.23 lot while the durable aggregate fill was 0.22 lot. The no-add hypothesis acts on actual filled volume, so the corrected integrity contract preserves any positive filled step at or below the request.",
+    "hypothesis_gate_threshold_or_input_changed": false
+  },
+  "outcomes_consumed_by_successful_formal_unit": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "next": "hash the frozen declaration, implement the exact source-free replay, execute one valid process, close Unit 101, commit and push the whole unit once, then recompare the full map"
+}

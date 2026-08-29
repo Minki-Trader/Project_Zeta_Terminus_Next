@@ -1,0 +1,75 @@
+{
+  "schema": "zeta-next-paired-anchor-component-capital-subsidy-closure-v1",
+  "closed_at_local": "2026-08-29",
+  "status": "CLOSED_VALID_ECONOMIC_NONCONFIRMATION_NO_SEED",
+  "unit": "paired-anchor-component-capital-subsidy-101",
+  "family": "paired-anchor-component-capital-subsidy-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk"
+  },
+  "verdict": "VALID_COMPONENT_CAPITAL_SUBSIDY_NONCONFIRMATION_NO_SEED",
+  "evidence": {
+    "declaration_sha256": "25C328630AC28D84FE1C1B958BF2C0C6B412A31DC0D574721F318A6C330420A5",
+    "design_correction_sha256": "79F4658128D69688A595B37C0098F0CFDA0C583BF7774CA562896246A4897BAF",
+    "formal_script_sha256": "EB3586FAFA7A69C6D28C75933847275DEBC6340D2FEF16D02AEE00A55DF9FB2D",
+    "result_sha256": "E6F43E86CCD452F859E405FD3D9C7C1675B86BD216BFAFB938ABA688E348233A",
+    "raw_result_sha256": "562CDA4B10FA179699000775854CA5C59CC182A5A9383E08F7FC3B8614FD500A",
+    "readme_sha256": "39CD7CA66594BA4A99F8FBB78F128A3A9532B740C8A5A80639C8F8A78F52F783"
+  },
+  "execution_accounting": {
+    "preoutput_design_corrections": 1,
+    "successful_formal_processes": 1,
+    "economic_metric_reruns": 0,
+    "new_data_acquisitions": 0,
+    "runtime_copies": 0,
+    "mql_source_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "broker_or_account_queries": 0
+  },
+  "integrity": {
+    "passed": true,
+    "births_and_closes": "1428 / 1428",
+    "anchor_actual_stressed_usd": [5786.63, 5477.524000000163],
+    "fill_above_request_faults": 0,
+    "one_step_fill_shortfalls": 9,
+    "dropped_or_unmapped_faults": 0
+  },
+  "economic_finding": {
+    "materially_bound": true,
+    "reduced_lifecycles": 1249,
+    "removed_lot_steps": 15153,
+    "removed_source_lot_step_fraction": 0.8293470527064748,
+    "candidate_actual_stressed_usd": [837.2067005610943, 784.2550095041948],
+    "candidate_minus_control_actual_stressed_usd": [-4949.423299438906, -4693.268990495968],
+    "control_candidate_raw_closed_drawdown_pct": [20.40102916636169, 17.815649893986134],
+    "candidate_positive_epochs": 4,
+    "epochs_with_nonnegative_actual_and_stressed_delta": 0,
+    "components_with_nonnegative_actual_and_stressed_delta": 0,
+    "economic_seed_gate_passed": false
+  },
+  "decision_translation": {
+    "preserve": [
+      "the qualified paired-month anchor",
+      "the shared global $150 daily realized-profit ladder",
+      "all five active component weights, entries, stops, exits and shared admission behavior"
+    ],
+    "retained_seed": null,
+    "future_optimization_candidate": null,
+    "closed_scope": [
+      "component-local and book-local profit ladders",
+      "partial sharing and component exceptions",
+      "alternate addition step or cap",
+      "freed-risk opportunity admission or priority reuse"
+    ]
+  },
+  "same_family_successor": false,
+  "whole_map_recomparison_required_after_push": true,
+  "forward_opened": false,
+  "program_6_opened": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "commit and push Unit 101 once, then return immediately to a complete Optimization-map comparison without an adjacent capital-ownership rescue"
+}
