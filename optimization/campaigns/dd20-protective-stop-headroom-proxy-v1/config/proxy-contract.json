@@ -1,0 +1,101 @@
+{
+  "schema": "zeta-dd20-protective-stop-headroom-proxy-contract-v1",
+  "campaign": "dd20-protective-stop-headroom-proxy-v1",
+  "reference_capital_usd": 100.0,
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-protective-stop-headroom-proxy-v1/input",
+    "files": [
+      {
+        "name": "anchor-selection-lifecycles.csv",
+        "bytes": 2685969,
+        "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+        "rows": 3287,
+        "births": 1428,
+        "closes": 1428,
+        "actual_net_usd": 5786.63,
+        "stressed_net_usd": 5477.524
+      },
+      {
+        "name": "anchor-forward-lifecycles.csv",
+        "bytes": 92997,
+        "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+        "rows": 115,
+        "births": 54,
+        "closes": 54,
+        "actual_net_usd": 32.74,
+        "stressed_net_usd": 30.626
+      }
+    ],
+    "copied_once": true,
+    "read_source_campaign_after_snapshot": false
+  },
+  "qualified_anchor": {
+    "campaign": "dd20-paired-month-stability-mt5-v1",
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "unmodelled_risk_reserve_fraction": 0.25,
+    "stop_placement_headroom_fraction": 0.25,
+    "selection_native_relative_equity_dd_pct": 20.256887565152653,
+    "effective_pragmatic_dd_limit_pct": 21.2,
+    "selection_result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec"
+  ],
+  "stop_headroom_grid": [0.25, 0.3, 0.35, 0.4, 0.45, 0.5],
+  "timing_bounds": ["trough_time", "native_close_time"],
+  "selection_period": {
+    "start": "2022.08.01 00:00:00",
+    "end": "2026.06.01 00:00:00"
+  },
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "holdout_periods": [
+    {"id": "JUNE_2026", "start": "2026.06.01 00:00:00", "end": "2026.07.01 00:00:00"},
+    {"id": "JULY_2026", "start": "2026.07.01 00:00:00", "end": "2026.08.01 00:00:00"}
+  ],
+  "fixed_path_model": {
+    "candidate_gross_stop_r": "-(1 - 0.25 reserve - candidate headroom)",
+    "hit_condition": "observed trough_mark_r is at or below candidate gross stop R",
+    "hypothetical_stop_actual_net": "-planned_risk_usd * candidate gross stop fraction",
+    "hypothetical_stop_stressed_net": "hypothetical actual net minus max(0, native actual net - native stressed net)",
+    "unhit_trade": "preserve exact native actual/stressed close net",
+    "volume_or_admission_change": "none",
+    "raw_drawdown": "maximum of actual and stressed closed-balance relative DD from 100 dollars under each timing bound",
+    "selection_dd_calibration": "multiply candidate raw DD by native-anchor-DD divided by control raw DD, never reducing raw DD"
+  },
+  "selection_gates": {
+    "headroom_above_control": true,
+    "both_timing_bounds_actual_net_strictly_above_anchor": true,
+    "both_timing_bounds_stressed_net_strictly_above_anchor": true,
+    "both_timing_bounds_all_four_epochs_actual_and_stressed_positive": true,
+    "all_five_components_retain_at_least_one close": true,
+    "both_timing_bounds_minimum_balance_positive": true,
+    "worst_timing_calibrated_dd_no_worse_than_native_anchor": true,
+    "worst_timing_calibrated_dd_at_or_below_effective_limit": true
+  },
+  "selection_role": {
+    "id": "maximum_robust_stressed_profit_protective_headroom",
+    "ordering": "minimum stressed net across timing bounds, minimum actual net, lower worst calibrated DD, lower headroom",
+    "maximum_distinct_roles": 1
+  },
+  "holdout_gates": {
+    "open_only_for_selection_winner": true,
+    "each_month_and_timing_bound_actual_and_stressed_positive": true,
+    "each_month_and_timing_bound_minimum_balance_positive": true,
+    "each_month_worst_timing_raw_dd_at_or_below_effective_limit": true
+  },
+  "mt5": {
+    "launch_during_proxy": false,
+    "maximum_shortlist_size": 1
+  }
+}

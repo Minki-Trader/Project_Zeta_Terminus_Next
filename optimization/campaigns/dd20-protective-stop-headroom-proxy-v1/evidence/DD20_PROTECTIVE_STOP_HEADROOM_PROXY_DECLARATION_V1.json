@@ -1,0 +1,52 @@
+{
+  "schema": "zeta-dd20-protective-stop-headroom-proxy-declaration-v1",
+  "declared_date_local": "2026-08-29",
+  "status": "DECLARED_SELECTION_AND_HOLDOUT_OUTCOMES_UNOPENED",
+  "campaign": "dd20-protective-stop-headroom-proxy-v1",
+  "parent_main_commit": "46298fe7a36ecff5e5c33895d20d0bb4c8ea0120",
+  "whole_map_selection": {
+    "latest_closed": "dd20-uniform-entry-strength-floor-proxy-v1",
+    "chosen_axis": "One existing global stop-placement headroom input, evaluated under two timing bounds.",
+    "why_distinct": "It changes loss-side protective distance at unchanged volume and declared risk budgets; it does not retune risk fraction, volume, weights, signals, profit targets, drawdown governors, peer exits or frequency lanes.",
+    "why_not_lab": "This is direct bounded optimization of an existing input and introduces no predictor or explanatory hypothesis.",
+    "adjacent_rescue": false
+  },
+  "frozen_contract": "optimization/campaigns/dd20-protective-stop-headroom-proxy-v1/config/proxy-contract.json",
+  "input_snapshot": {
+    "root": "optimization/artifacts/raw/dd20-protective-stop-headroom-proxy-v1/input/",
+    "selection_lifecycle_sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+    "forward_lifecycle_sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+    "snapshot_only": true
+  },
+  "outcome_blind_freeze": {
+    "headroom_grid": [0.25, 0.3, 0.35, 0.4, 0.45, 0.5],
+    "gross_stop_risk_fractions": [0.5, 0.45, 0.4, 0.35, 0.3, 0.25],
+    "timing_bounds": ["trough_time", "native_close_time"],
+    "selection_economics_opened": false,
+    "conditioned_holdout_opened": false,
+    "ranking_opened": false,
+    "mt5_shortlist_opened": false,
+    "formal_proxy_process_limit": 1
+  },
+  "interpretation_boundary": {
+    "native_first_stop_crossing_observed": false,
+    "native_minimum_distance_or_fill_claim": false,
+    "native_profit_or_drawdown_claim": false,
+    "volume_admission_or_later_path_synthesized": false,
+    "new_predictor_or_research_hypothesis": false
+  },
+  "stop_rules": {
+    "no_grid_extension_after_outcome": true,
+    "no_component_symbol_direction_epoch_or_nearby_headroom_rescue": true,
+    "no_reserve_risk_volume_or_weight_retune": true,
+    "no_prior_proxy_or_mt5_rerun": true,
+    "no_live_lab_or_master_change": true
+  },
+  "execution_boundary": {
+    "mql_or_settings_changes": 0,
+    "compiles": 0,
+    "tester_or_runtime_invocations": 0,
+    "tests_or_validators": 0,
+    "broker_positions_orders_deals_or_account_queried": false
+  }
+}

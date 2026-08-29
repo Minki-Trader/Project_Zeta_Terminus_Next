@@ -1,0 +1,167 @@
+{
+  "schema": "zeta-dd20-protective-stop-headroom-proxy-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE_TIGHTER_PROTECTIVE_STOPS_DEGRADE_PROFIT_AND_DRAWDOWN",
+  "campaign": "dd20-protective-stop-headroom-proxy-v1",
+  "parent_main_commit": "46298fe7a36ecff5e5c33895d20d0bb4c8ea0120",
+  "formal_process": {
+    "invocations": 1,
+    "elapsed_seconds": 0.102509,
+    "process_exit_code": 0,
+    "engineering_corrections": 0,
+    "economic_reruns": 0
+  },
+  "input_receipts": [
+    {
+      "name": "anchor-selection-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "rows": 3287,
+      "births": 1428,
+      "closes": 1428,
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524
+    },
+    {
+      "name": "anchor-forward-lifecycles.csv",
+      "bytes": 92997,
+      "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+      "rows": 115,
+      "births": 54,
+      "closes": 54,
+      "actual_net_usd": 32.74,
+      "stressed_net_usd": 30.626
+    }
+  ],
+  "raw_output": {
+    "path": "optimization/artifacts/raw/dd20-protective-stop-headroom-proxy-v1/output/proxy-result.json",
+    "bytes": 49014,
+    "sha256": "247217C1E3F9E7C1DC81663D50161ABF0CDC94BD70326B07B369684FD7374CA7"
+  },
+  "control_reproduction": {
+    "headroom_fraction": 0.25,
+    "gross_stop_risk_fraction": 0.5,
+    "actual_net_usd": 5786.63,
+    "stressed_net_usd": 5477.524,
+    "raw_closed_balance_drawdown_pct": 20.4010291664,
+    "native_relative_equity_drawdown_pct": 20.2568875652,
+    "drawdown_calibration_factor": 0.9929345917,
+    "calibration_never_reduces_raw_drawdown": true,
+    "gate": "PASS"
+  },
+  "selection_records": [
+    {
+      "headroom_fraction": 0.25,
+      "gross_stop_risk_fraction": 0.5,
+      "hypothetical_stop_closes": 0,
+      "robust_actual_net_usd": 5786.63,
+      "robust_stressed_net_usd": 5477.524,
+      "worst_calibrated_drawdown_pct": 20.4010291664,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "headroom_fraction": 0.3,
+      "gross_stop_risk_fraction": 0.45,
+      "hypothetical_stop_closes": 142,
+      "robust_actual_net_usd": 5065.4557720358,
+      "robust_stressed_net_usd": 4756.3497720359,
+      "worst_calibrated_drawdown_pct": 23.1906669156,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "headroom_fraction": 0.35,
+      "gross_stop_risk_fraction": 0.4,
+      "hypothetical_stop_closes": 187,
+      "robust_actual_net_usd": 4708.3733966755,
+      "robust_stressed_net_usd": 4399.2673966757,
+      "worst_calibrated_drawdown_pct": 25.3665268006,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "headroom_fraction": 0.4,
+      "gross_stop_risk_fraction": 0.35,
+      "hypothetical_stop_closes": 249,
+      "robust_actual_net_usd": 4414.3789622184,
+      "robust_stressed_net_usd": 4105.2729622185,
+      "worst_calibrated_drawdown_pct": 34.4109666078,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "headroom_fraction": 0.45,
+      "gross_stop_risk_fraction": 0.3,
+      "hypothetical_stop_closes": 331,
+      "robust_actual_net_usd": 3990.8392915302,
+      "robust_stressed_net_usd": 3681.7332915303,
+      "worst_calibrated_drawdown_pct": 34.6587167412,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    },
+    {
+      "headroom_fraction": 0.5,
+      "gross_stop_risk_fraction": 0.25,
+      "hypothetical_stop_closes": 425,
+      "robust_actual_net_usd": 3976.4754248529,
+      "robust_stressed_net_usd": 3667.3694248531,
+      "worst_calibrated_drawdown_pct": 36.6057471411,
+      "all_epochs_positive": true,
+      "selection_eligible": false
+    }
+  ],
+  "timing_bound_comparison": {
+    "bounds": ["trough_time", "native_close_time"],
+    "selection_total_profit_equal_within_floating_precision": true,
+    "selection_drawdown_equal_within_floating_precision": true,
+    "candidate_passes_only_if_both_bounds_pass": true
+  },
+  "gate_counts_above_control": {
+    "candidates": 5,
+    "both_bounds_actual_profit_improvement": 0,
+    "both_bounds_stressed_profit_improvement": 0,
+    "both_bounds_all_epochs_positive": 5,
+    "five_component_breadth": 5,
+    "both_bounds_balance_positive": 5,
+    "worst_dd_no_worse_than_native_anchor": 0,
+    "worst_dd_within_21_2_pct": 0,
+    "all_selection_gates": 0
+  },
+  "economic_comparison": {
+    "best_noncontrol": {
+      "headroom_fraction": 0.3,
+      "gross_stop_risk_fraction": 0.45,
+      "hypothetical_stop_closes": 142,
+      "actual_net_usd": 5065.4557720358,
+      "stressed_net_usd": 4756.3497720359,
+      "actual_delta_vs_anchor_usd": -721.1742279642,
+      "stressed_delta_vs_anchor_usd": -721.1742279641,
+      "worst_calibrated_drawdown_pct": 23.1906669156,
+      "drawdown_delta_vs_native_anchor_percentage_points": 2.9337793504
+    },
+    "interpretation": "Even the smallest tighter-stop move cuts native recovery paths that are economically valuable. Every noncontrol headroom loses actual and stressed profit while conservative closed-balance drawdown rises above both the anchor and the pragmatic 21.2 percent line."
+  },
+  "conditional_boundaries": {
+    "selection_eligible_count": 0,
+    "selection_winner": null,
+    "june_or_july_holdout_opened": false,
+    "mt5_shortlist_size": 0,
+    "mt5_launched": false
+  },
+  "economic_verdict": {
+    "classification": "TIGHTER_PROTECTIVE_STOP_HEADROOM_VALID_ECONOMIC_NONCONFIRMATION",
+    "candidate_retained": false,
+    "anchor_changed": false,
+    "next_action": "Freeze this complete headroom family without holdout or MT5. Recompare the full Optimization map; do not rescue a component, symbol, direction, epoch, reserve, risk, volume or nearby headroom."
+  },
+  "execution_boundary": {
+    "mql_or_settings_changes": 0,
+    "compiles": 0,
+    "tester_or_runtime_invocations": 0,
+    "tests_or_validators": 0,
+    "live_lab_or_master_mutation": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "native_first_crossing_fill_profit_or_drawdown_claim": false
+  }
+}
