@@ -1,0 +1,118 @@
+{
+  "schema": "zeta-next-us500-epu-volatility-disconnect-cash-session-contract-v1",
+  "family": "us500-epu-volatility-disconnect-cash-session-v1",
+  "input_root": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/input",
+  "output_root": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/output",
+  "files": {
+    "epu": "All_Daily_Policy_Data_20260830.csv",
+    "bars": "US500_M15_BARS_20220701_20260821.csv",
+    "spec": "US500_SYMBOL_SPEC_V1.json"
+  },
+  "immutable_inputs": {
+    "files": [
+      {
+        "name": "All_Daily_Policy_Data_20260830.csv",
+        "bytes": 249582,
+        "sha256": "55B5F38219A7DB6D51949C72EE34C561E530242A41434708E12689F9D43EED89"
+      },
+      {
+        "name": "US500_M15_BARS_20220701_20260821.csv",
+        "bytes": 7007401,
+        "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A"
+      },
+      {
+        "name": "US500_SYMBOL_SPEC_V1.json",
+        "bytes": 620,
+        "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918"
+      }
+    ],
+    "manifest_sha256": "063DE9F5B8515DF29241C091141EF9634C039B44BAD5A522DADDFC00C7A1C56D",
+    "epu_rows": 15215,
+    "bar_rows": 97707
+  },
+  "formal_declaration": {
+    "path": "lab/research/us500-epu-volatility-disconnect-cash-session-v1/evidence/US500_EPU_VOLATILITY_DISCONNECT_CASH_SESSION_DECLARATION_V1.json",
+    "bytes": 15485,
+    "sha256": "6A436C0A7FC6F0817128171E6989A9E2FB80BCD84FF5A4D53B890CA7B0140EB0"
+  },
+  "required_bar_schema": [
+    "time_epoch",
+    "time_server",
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread",
+    "real_volume"
+  ],
+  "state_rule": {
+    "timezone": "America/New_York",
+    "source_week": "exact Monday-Friday with five complete 09:30..16:00 ET US500 M15 cash sessions",
+    "uncertainty": "mean daily_policy_index on the five complete source-session dates",
+    "realized_volatility": "sqrt of summed squared 26-bar cash-session log returns over the source week",
+    "disconnect": "uncertainty divided by realized_volatility; normalization to a full-sample mean of one is omitted because it cannot change a standardized threshold",
+    "expanding_warmup_complete_weeks": 26,
+    "high_threshold_standard_deviations": 0.5,
+    "publication_safe_lag_calendar_weeks": 5,
+    "epu_revision_window_days": 30,
+    "primary_state": "HIGH_D_LOW_V"
+  },
+  "trade_rule": {
+    "symbol": "US500",
+    "direction": "LONG",
+    "target_session": "each complete 09:30..16:00 ET cash session in the target week",
+    "entry": "09:30 ET M15 open",
+    "exit": "15:45 ET M15 close representing 16:00 ET",
+    "volume": 0.01,
+    "starting_balance_usd": 100.0,
+    "gross": "midpoint-to-midpoint cash-session P/L",
+    "observed": "executable entry ask to exit bid",
+    "stressed": "gross less the full entry-plus-exit spread burden",
+    "commission_swap_financing": "zero because every position closes in the same cash session"
+  },
+  "periods": {
+    "P1_2023": {
+      "from_inclusive": "2023-01-01",
+      "to_exclusive": "2024-01-01"
+    },
+    "P2_2024": {
+      "from_inclusive": "2024-01-01",
+      "to_exclusive": "2025-01-01"
+    },
+    "P3_2025": {
+      "from_inclusive": "2025-01-01",
+      "to_exclusive": "2026-01-01"
+    },
+    "P4_2026_JAN_MAY": {
+      "from_inclusive": "2026-01-01",
+      "to_exclusive": "2026-06-01"
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "from_inclusive": "2026-06-01",
+      "to_exclusive": "2026-08-01"
+    }
+  },
+  "economic_gates": {
+    "minimum_primary_days_by_period": {
+      "P1_2023": 20,
+      "P2_2024": 20,
+      "P3_2025": 20,
+      "P4_2026_JAN_MAY": 8,
+      "P5_LATEST_2026_JUN_JUL": 5
+    },
+    "p1_period": "P1_2023",
+    "p1_halves": ["2023H1", "2023H2"],
+    "p1_profit_factor_min": 1.05,
+    "p1_net_to_drawdown_min": 1.25,
+    "confirmation_periods": ["P2_2024", "P3_2025", "P4_2026_JAN_MAY"],
+    "confirmation_mean_breadth_min": 2,
+    "high_disconnect_positive_breadth_min": 3,
+    "prelatest_profit_factor_min": 1.075,
+    "prelatest_net_to_drawdown_min": 1.5,
+    "prelatest_positive_months_min": 16,
+    "nominal_drawdown_max_percent": 20.0,
+    "latest_period": "P5_LATEST_2026_JUN_JUL",
+    "full_profit_factor_min": 1.05
+  }
+}

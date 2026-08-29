@@ -1,0 +1,124 @@
+{
+  "schema": "zeta-next-us500-epu-volatility-disconnect-cash-session-snapshot-receipt-v1",
+  "created_at_local": "2026-08-30",
+  "status": "INPUTS_PREDICTOR_GEOMETRY_AND_DENSITY_FROZEN_ECONOMIC_OUTCOMES_UNOPENED",
+  "unit": "us500-epu-volatility-disconnect-cash-session-110",
+  "family": "us500-epu-volatility-disconnect-cash-session-v1",
+  "declaration": {
+    "path": "lab/research/us500-epu-volatility-disconnect-cash-session-v1/evidence/US500_EPU_VOLATILITY_DISCONNECT_CASH_SESSION_DECLARATION_V1.json",
+    "bytes": 15485,
+    "sha256": "6A436C0A7FC6F0817128171E6989A9E2FB80BCD84FF5A4D53B890CA7B0140EB0"
+  },
+  "implementation": {
+    "config": {
+      "path": "lab/research/us500-epu-volatility-disconnect-cash-session-v1/config/contract.json",
+      "bytes": 4235,
+      "sha256": "C2BBE144BB0F3FC899AFACE27BABA888D63DEBC4325D375BBC8AC1F5675C3142"
+    },
+    "analysis": {
+      "path": "lab/research/us500-epu-volatility-disconnect-cash-session-v1/analysis/run_analysis.py",
+      "bytes": 30454,
+      "sha256": "FBEE00D213A68554DD372EF780F5FCB2CD244E699ADE8318CAE82B129279E28B"
+    }
+  },
+  "input_manifest": {
+    "root": "lab/artifacts/raw/us500-epu-volatility-disconnect-cash-session-v1/input/",
+    "files": 3,
+    "bytes": 7257603,
+    "sha256": "063DE9F5B8515DF29241C091141EF9634C039B44BAD5A522DADDFC00C7A1C56D"
+  },
+  "inputs": [
+    {
+      "name": "All_Daily_Policy_Data_20260830.csv",
+      "origin": "https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv",
+      "acquired_at_local": "2026-08-30T06:02:37+09:00",
+      "bytes": 249582,
+      "sha256": "55B5F38219A7DB6D51949C72EE34C561E530242A41434708E12689F9D43EED89",
+      "rows": 15215,
+      "first_date": "1985-01-01",
+      "last_date": "2026-08-28",
+      "null_values": 0,
+      "duplicate_dates": 0,
+      "publisher_revision_window_days": 30
+    },
+    {
+      "name": "US500_M15_BARS_20220701_20260821.csv",
+      "origin": "one-time physical byte-equal copy from the closed Unit 105 immutable acquisition into the family-owned input root",
+      "source_path": "lab/artifacts/raw/us500-shock-response-environment-correction-v1/input/US500_M15_BARS_20220701_20260821.csv",
+      "bytes": 7007401,
+      "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A",
+      "rows": 97707,
+      "first_utc": "2022-07-01T01:00:00+00:00",
+      "last_utc": "2026-08-21T23:45:00+00:00"
+    },
+    {
+      "name": "US500_SYMBOL_SPEC_V1.json",
+      "origin": "one-time physical byte-equal copy from the closed Unit 105 immutable acquisition into the family-owned input root",
+      "source_path": "lab/artifacts/raw/us500-shock-response-environment-correction-v1/input/US500_SYMBOL_SPEC_V1.json",
+      "bytes": 620,
+      "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918",
+      "symbol": "US500",
+      "point": 0.01,
+      "contract_size": 1.0,
+      "tick_value": 0.01,
+      "minimum_volume": 0.01
+    }
+  ],
+  "predictor_only_processes": {
+    "successful_initial_mistranslated_state_classifications": 1,
+    "successful_corrected_disconnect_state_classifications": 2,
+    "economic_aggregations": 0,
+    "design_correction": "The first predictor-only state used EPU and volatility separately. The paper uses disconnect = EPU / realized volatility plus volatility; corrected before target return calculation.",
+    "shell_only_orchestration_note": "One combined rg/premetric command used a POSIX-style exit token in PowerShell. The shell diagnostic did not change a file or calculation and the corrected predictor process completed independently.",
+    "research_or_optimization_failure": false
+  },
+  "premetric_integrity": {
+    "complete_cash_sessions": 1046,
+    "incomplete_cash_session_dates_excluded": 24,
+    "bars_per_complete_session": 26,
+    "complete_source_weeks": 188,
+    "warmup_complete_weeks": 26,
+    "causal_state_weeks": 162,
+    "first_source_week_monday": "2023-01-30",
+    "first_target_week_monday": "2023-03-06",
+    "minimum_finalized_age_days": 31,
+    "target_days_in_declared_periods": 747,
+    "primary_days_by_period": {
+      "P1_2023": 112,
+      "P2_2024": 70,
+      "P3_2025": 160,
+      "P4_2026_JAN_MAY": 43,
+      "P5_LATEST_2026_JUN_JUL": 35
+    },
+    "primary_days_by_2023_half": {
+      "2023H1": 64,
+      "2023H2": 48
+    },
+    "all_state_target_day_counts": {
+      "HIGH_D_LOW_V": 420,
+      "HIGH_D_HIGH_V": 34,
+      "LOW_D_LOW_V": 251,
+      "LOW_D_HIGH_V": 42
+    },
+    "density_passed": true
+  },
+  "outcome_firewall": {
+    "economic_outcomes_opened": false,
+    "target_entry_to_exit_returns_calculated": false,
+    "gross_observed_or_stressed_usd_calculated": false,
+    "profit_factor_or_drawdown_calculated": false,
+    "gate_or_verdict_calculated": false
+  },
+  "environment": {
+    "mql_source_or_set_changes": 0,
+    "runtime_copies": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_processes_started": 0,
+    "orders_or_positions": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "program_6_opened": false,
+    "master_live_optimization_surfaces": "UNTOUCHED"
+  },
+  "next": "Commit and push the declaration boundary, then run exactly one formal source-free complete economic aggregation or correct engineering without a research-failure count."
+}

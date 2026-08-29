@@ -5,7 +5,7 @@ Last updated: 2026-08-30
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0396`
+- Latest state ID: `STATE-0397`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -27,8 +27,8 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Repository integrity correction: `CLOSED_NON_ECONOMIC_MATERIALIZATION_AND_EVIDENCE_ERRATA`; the user-authorized patch stores the exact active Live package and the fixed candidate SET as raw Git bytes, supersedes the fixed candidate's misleading untouched/OOS June-July terminology without rewriting closed evidence, and maps two malformed long commit transcriptions to their real commits. Active Live source, EX5, SET, release identity, candidate, economics and every runtime remain unchanged. Clean-checkout and existing operator integrity pass; no compile, Tester, MT5 launch or broker/account query occurred. Durable record: `lineage/REPOSITORY_INTEGRITY_ERRATA_V1.json`.
 - Active engineering boundary: none; `lab/engineering/paired-month-live-replacement-handoff-v1/` is closed verified. The fixed paired-month implementation compiled at build 6140 with `0 errors / 0 warnings`, reproduced selection `+$5,786.64 / +$5,477.564` across `1,428` closes and forward `+$32.75 / +$30.628` across `54` closes, then passed bounded connected entries-disabled create/recovery at sequences `2 / 4` with entries `0/0`, flat zero-risk state and zero fault before normal stops. The candidate is ready only for a later separately authorized Live translation; current RLO1 package/runtime/state/logs remain unchanged.
-- Active research boundary: none. Program 2 / meso→macro Unit 109 `three-index-europe-open-inventory-drift-v1` is closed `VALID_NO_THREE_INDEX_EUROPE_OPEN_DRIFT_AFTER_COST_NO_SEED`. Its 3,099-trade full path was gross/observed/stressed `-$0.27335 / -$34.8362 / -$69.39905`, PF `0.6869`, DD `77.6002%`; all four prelatest periods, all three symbols, all five weekdays and 38/46 prelatest months were negative. Latest alone was positive. No seed, MT5 shortlist or adjacent clock/DST/symbol/subgroup rescue remains.
-- Active optimization boundary: resumed after Unit 109 closure and its Programs 1-5/7 whole-map comparison. No campaign or runtime is open and no immediate independent mechanism is ready. This is readiness, not Goal completion; fixed candidate `dd20-paired-month-stability-mt5-v1` and useful artifacts remain unchanged while independent causal-source discovery continues.
+- Active research boundary: Program 2 / meso→macro Unit 110 `us500-epu-volatility-disconnect-cash-session-v1` is declared with economics unopened. It freezes the Federal Reserve paper's five-day EPU/realized-volatility disconnect, prior-only mean-plus-0.5-SD states, 26-week warmup and a five-week publication-safe lag, then asks whether `HIGH_D_LOW_V` transfers to doubled-spread US500 09:30→16:00 ET 0.01-lot LONG economics. Predictor-only feasibility found `420` primary target days, including `112/70/160/43/35` in P1-P5 and both 2023 halves; no target return, P/L, PF, DD, gate or verdict has opened.
+- Active optimization boundary: temporarily detoured to the one serial Unit 110 Lab information unit after a genuinely independent source became ready. No Optimization campaign or runtime is open; fixed candidate `dd20-paired-month-stability-mt5-v1` and useful artifacts remain unchanged. After one valid Unit 110 verdict, return immediately to the Optimization whole map without an adjacent state/threshold/clock/integration rescue or reporting pause.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
