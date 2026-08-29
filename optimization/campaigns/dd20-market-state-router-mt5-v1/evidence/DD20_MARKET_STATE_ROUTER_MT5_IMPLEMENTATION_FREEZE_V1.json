@@ -1,0 +1,97 @@
+{
+  "schema": "zeta-dd20-market-state-router-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "COMPILED_READY_ECONOMICS_UNOPENED_AT_FREEZE",
+  "campaign": {
+    "id": "dd20-market-state-router-mt5-v1",
+    "declaration_bytes": 5114,
+    "declaration_sha256": "8B36E996B2719A6F140D6DF65EE532B10EC5FD99219AD200B592AFC8C541196B",
+    "release_id": "OPT-LIVE-V7-DD20MSR1-20260829",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20MSR1-20260829",
+    "magic_range": "260829921..260829926",
+    "tester_only": true
+  },
+  "implementation": {
+    "source_file_count": 17,
+    "source_total_bytes": 451264,
+    "source_manifest_sha256": "06D55DF682E6FCAB658581E5EBC5D9FBF1A2FB36370543A8A2680D524C55CD9A",
+    "configuration_file_count": 4,
+    "configuration_total_bytes": 3817,
+    "configuration_manifest_sha256": "20A04ABBF6EA396C0658EBF9E8FA25EA9AAAFCADB609D31602D4191BD3E54A3C",
+    "manifest_algorithm": "Sort slash-normalized campaign-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "runtime_source_and_set_parity_files": 19,
+    "runtime_ini_parity_files": 2,
+    "runtime_overlay_mismatches": 0,
+    "cross_campaign_include_or_source_link": false,
+    "economic_change": "Apply one exact expanding quarterly pooled Ridge market-state admission router to the five active paired-month components while preserving risk, weights, signals, exits and the disabled passive component."
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2843,
+    "launcher_exit_code": 1,
+    "single_compile_invocation": true,
+    "ex5_path": "optimization/campaigns/dd20-market-state-router-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20MSR1.ex5",
+    "ex5_bytes": 248878,
+    "ex5_sha256": "30571A969D52EBBDA006B9606ED69BA44EC7F41DD05296599C8B539A0ABE6FE5",
+    "runtime_ex5_match": true,
+    "raw_log_path": "optimization/artifacts/raw/dd20-market-state-router-mt5-v1/compile/compile-20260829.log",
+    "raw_log_bytes": 17712,
+    "raw_log_sha256": "B4A8F6F40B655A80D9472B65CB1452EE96F2FEF0BEBCD6BFD0D7424BA88B6B16"
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/msr1-portable/",
+    "physical_copy_source": "optimization/runtime/dd20-native-gap-july-robustness-mt5-v1-portable/",
+    "physical_copy_source_file_count": 756,
+    "physical_copy_source_logical_bytes": 5793009225,
+    "terminal_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "terminal_hardlink_count": 1,
+    "one_drive_pin_reparse_attributes_present_without_symbolic_link_targets": true,
+    "process_owners_at_freeze": 0,
+    "report_files_at_freeze": 0,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_terminal": false,
+    "is_live_terminal": false,
+    "is_lab_terminal": false
+  },
+  "frozen_forward_design": {
+    "tester_history_from": "2022-08-01T00:00:00",
+    "router_warmup_through": "2026-06-01T00:00:00",
+    "core_actual_trading_start_epoch": 1780272000,
+    "core_actual_trading_start": "2026-06-01T00:00:00",
+    "tester_to": "2026-08-01T00:00:00",
+    "fresh_core_account_before_actual_start": true,
+    "causal_router_training_preserved": true
+  },
+  "non_economic_corrections": [
+    {
+      "condition": "An invalid component could reach a later component-state write after engaging the safety stop.",
+      "resolution": "Returned immediately after the safety stop before the first compile or Tester invocation.",
+      "tester_started": false,
+      "economic_verdict": null
+    },
+    {
+      "condition": "MetaEditor launcher returned exit code 1 even though its compile log completed.",
+      "resolution": "Used the same invocation's complete 0-error, 0-warning compiler result and expected EX5; no recompile was performed.",
+      "tester_started": false,
+      "economic_verdict": null
+    }
+  ],
+  "boundary_at_freeze": {
+    "compiled": true,
+    "tester_started": false,
+    "selection_report_opened": false,
+    "forward_report_opened": false,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "master_terminal_modified_or_started": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

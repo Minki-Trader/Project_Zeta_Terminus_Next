@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0372`
+- Latest state ID: `STATE-0373`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; the one-shot Codex-lifetime breakaway mechanism remains available, the scheduled task/resident PID loop is removed, and no terminal or dashboard process was observed after the user's reboot
 - Active research boundary: none; source-free Program 1 / meso→macro Unit 099 `legacy-market-state-router-optimization-eligibility-v1` is closed. It retains one exact lineage-pinned quarterly pooled Ridge router as a native Optimization information seed and opens no current shared-account economic verdict, Lab MQL or Live authority. The current selection candidate ledger has `7,352 / 12,265` existing-exposure rows with unevaluated native signals, so exact ledger subtraction is unavailable and one fixed native path is required; no model, percentile, feature, memory, update, component, threshold or alternate-router follow-up is authorized.
-- Active optimization boundary: none; source-free `dd20-protective-stop-headroom-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE_TIGHTER_PROTECTIVE_STOPS_DEGRADE_PROFIT_AND_DRAWDOWN`. The existing global stop-headroom input was frozen at `0.25..0.50` with reserve, volume, risk budgets, weights and signals unchanged, and each candidate had to pass both observed-trough-time and native-close-time bounds. The control reproduced `+$5,786.63 / +$5,477.524` at conservative DD `20.401029%`. Even the smallest tighter move, headroom `0.30`, converted `142` lifecycles to hypothetical stops, reduced profit to `+$5,065.455772 / +$4,756.349772`, and raised DD to `23.190667%`; every larger value was worse. Selection-eligible count is zero, so June/July and MT5 stayed unopened. This family and every component/symbol/direction/epoch/reserve/risk/volume/nearby-headroom rescue are frozen; the paired-month anchor remains unchanged pending a fresh whole-map comparison.
+- Active optimization boundary: none; native `dd20-market-state-router-mt5-v1` is closed `VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_FORWARD_NOT_OPENED`. The exact Unit 099 quarterly pooled Ridge router completed one valid `100%`-real-tick selection with zero core/router fault. It blocked `377 / 1,620` independent signals and reduced reported maximum relative equity DD to `12.52%`, but actual/stressed profit collapsed to `+$914.29 / +$869.242`, trailing the qualified paired-month anchor by `$4,872.34 / $4,608.282`; all four epochs remained positive. Both mandatory profit gates failed, so forward opened zero times. The exact candidate and every adjacent model/label/percentile/feature/hold/component/risk/volume rescue are frozen; the paired-month anchor remains unchanged pending a fresh whole-map comparison.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

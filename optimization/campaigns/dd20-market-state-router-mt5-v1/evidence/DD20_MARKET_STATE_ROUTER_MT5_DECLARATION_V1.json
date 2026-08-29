@@ -1,0 +1,112 @@
+{
+  "schema": "zeta-dd20-market-state-router-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "DURABLE_TRANSCRIPTION_OF_PRE_ECONOMIC_README_AND_IMPLEMENTATION_FREEZE",
+  "campaign": {
+    "id": "dd20-market-state-router-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20MSR1-20260829",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20MSR1-20260829",
+    "execution_version": "zt-opt-live-v7-dd20-market-state-router-mt5-v1",
+    "schema_version": "opt-dd20-msr-mt5-1",
+    "magic_range": "260829921..260829926",
+    "tester_only": true
+  },
+  "source_derivation": {
+    "one_time_copy_from_frozen_optimization_baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/",
+    "lab_seed_family": "legacy-market-state-router-optimization-eligibility-v1",
+    "lab_unit": 99,
+    "retained_seed": "EXACT_QUARTERLY_POOLED_RIDGE_ROUTER_ON_PAIRED_MONTH_ANCHOR",
+    "lab_commit": "dc88eb5",
+    "legacy_anchor_commit": "4c0899255c701e2c6b53e7f44457c431aef2ad76",
+    "legacy_router_source_sha256": "C5C9649170CE73571DAD42AE252444272218C356FBBAE9291D47015EB65FF05A",
+    "legacy_router_kernel_sha256": "7CC33BDA84C42F6392199B0C85D27AF9752CF58C095F58662E2A9F302E675A2C",
+    "cross_campaign_include_or_source_link": false,
+    "compiled_binary_copied": false
+  },
+  "native_path_reason": {
+    "qualified_anchor_candidate_rows": 12265,
+    "existing_exposure_signal_unknown_rows": 7352,
+    "fixed_path_proxy_exact": false,
+    "reason": "Earlier router blocks change later occupancy, expose previously unobserved signals, change virtual labels and quarterly fits, and recursively change later ranks and account economics."
+  },
+  "frozen_candidate": {
+    "core_component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "maximum_position_risk_fraction": 0.04,
+    "maximum_aggregate_risk_fraction": 0.18,
+    "routed_components": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec"
+    ],
+    "passive_component_disabled_and_not_routed": true,
+    "virtual_hold_bars": [8, 12, 4, 8, 6],
+    "virtual_timeframes": ["M30", "M30", "H1", "M30", "H1"],
+    "virtual_label_volume": 0.01,
+    "feature_count": 10,
+    "ridge_alpha": 10.0,
+    "label_clip_quantiles": [0.02, 0.98],
+    "minimum_total_samples": 80,
+    "minimum_samples_per_component": 8,
+    "refit_schedule": "calendar quarter",
+    "component_relative_minimum_percentile": 0.25,
+    "warmup_allows": true,
+    "candidate_count": 1,
+    "grid": false
+  },
+  "qualified_control": {
+    "campaign": "dd20-paired-month-stability-mt5-v1",
+    "result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524,
+    "selection_native_equity_drawdown_pct": 20.256887565152653,
+    "all_four_selection_epochs_actual_and_stressed_positive": true,
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_net_usd": 30.626,
+    "forward_native_equity_drawdown_pct": 18.675302129932568,
+    "june_actual_net_usd": 33.33,
+    "june_stressed_net_usd": 32.109,
+    "july_actual_net_usd": -0.59,
+    "july_stressed_net_usd": -1.483
+  },
+  "economic_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "forward_warmup_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "forward_economic_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+    "expected_selection_passes": 1,
+    "maximum_forward_passes": 1,
+    "run_forward_only_after_complete_valid_effectively_qualified_selection": true,
+    "selection_actual_comparator_usd": 5786.63,
+    "selection_stressed_comparator_usd": 5477.524,
+    "selection_epochs_must_all_be_positive": true,
+    "nominal_mt5_equity_drawdown_pct": 20.0,
+    "maximum_effective_selection_equity_drawdown_pct": 20.256887565152653,
+    "forward_equity_drawdown_pct": 20.0,
+    "forward_full_june_and_july_actual_and_stressed_must_be_positive": true,
+    "failed_candidate_rescue_or_retune": false
+  },
+  "pre_economic_freeze": {
+    "readme_owned_the_contract_before_selection_started": true,
+    "source_file_count": 17,
+    "source_total_bytes": 451264,
+    "source_manifest_sha256": "06D55DF682E6FCAB658581E5EBC5D9FBF1A2FB36370543A8A2680D524C55CD9A",
+    "configuration_file_count": 4,
+    "configuration_total_bytes": 3817,
+    "configuration_manifest_sha256": "20A04ABBF6EA396C0658EBF9E8FA25EA9AAAFCADB609D31602D4191BD3E54A3C",
+    "runtime_source_and_set_parity_files": 19,
+    "runtime_ini_parity_files": 2,
+    "runtime_overlay_mismatches": 0,
+    "report_files_before_selection": 0,
+    "terminal_or_metaeditor_processes_before_selection": 0,
+    "selection_launch_utc": "2026-08-29T09:24:06.1173646Z"
+  },
+  "boundary": {
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "master_terminal_modified_or_started": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

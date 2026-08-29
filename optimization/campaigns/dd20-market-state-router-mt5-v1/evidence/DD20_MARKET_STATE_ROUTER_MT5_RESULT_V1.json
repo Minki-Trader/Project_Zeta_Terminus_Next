@@ -1,0 +1,244 @@
+{
+  "schema": "zeta-dd20-market-state-router-mt5-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_FORWARD_NOT_OPENED",
+  "campaign": "dd20-market-state-router-mt5-v1",
+  "implementation_freeze": {
+    "bytes": 4524,
+    "sha256": "798FDC30C4C597AE57FA1741A2C4436A698E91EED65223AA19D208CEF2E8FFE7"
+  },
+  "candidate": {
+    "release_id": "OPT-LIVE-V7-DD20MSR1-20260829",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20MSR1-20260829",
+    "magic_range": "260829921..260829926",
+    "component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "minimum_router_percentile": 0.25,
+    "ex5_bytes": 248878,
+    "ex5_sha256": "30571A969D52EBBDA006B9606ED69BA44EC7F41DD05296599C8B539A0ABE6FE5"
+  },
+  "qualified_control": {
+    "campaign": "dd20-paired-month-stability-mt5-v1",
+    "result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524,
+    "selection_closed_lifecycles": 1428,
+    "selection_native_equity_drawdown_pct": 20.256887565152653,
+    "all_four_selection_epochs_actual_and_stressed_positive": true,
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_net_usd": 30.626,
+    "forward_native_equity_drawdown_pct": 18.675302129932568
+  },
+  "selection": {
+    "interval": "2022-08-01 through 2026-06-01",
+    "tester_model": "every tick based on real ticks",
+    "history_quality": "100% real ticks",
+    "valid_economic_output": true,
+    "normal_tester_stop": true,
+    "terminal_exit_code": 0,
+    "wall_time_seconds": 1423.98,
+    "tester_elapsed_seconds": 1413.507,
+    "bars": 45160,
+    "primary_symbol_ticks": 132257500,
+    "all_symbol_ticks": 520082264,
+    "us100_ticks_generated": 309933497,
+    "us30_ticks_generated": 132257500,
+    "us500_ticks_generated_for_inherited_read_only_dependency": 77891267,
+    "traded_instruments_reported": 2,
+    "actual_net_usd": 914.29,
+    "stressed_2x_cost_net_usd": 869.242,
+    "closed_lifecycles": 1242,
+    "risk_admission_skips": 2348,
+    "stop_loss_exits": 93,
+    "stressed_closed_drawdown_usd": 73.127,
+    "mt5_balance_drawdown_absolute_usd": 0.59,
+    "mt5_equity_drawdown_absolute_usd": 1.60,
+    "mt5_balance_drawdown_maximal_usd": 71.39,
+    "mt5_balance_drawdown_at_maximal_pct": 7.94,
+    "mt5_balance_drawdown_relative_usd": 15.52,
+    "mt5_balance_drawdown_relative_pct": 12.03,
+    "mt5_equity_drawdown_maximal_usd": 85.44,
+    "mt5_equity_drawdown_at_maximal_pct": 9.43,
+    "mt5_equity_drawdown_relative_usd": 16.19,
+    "mt5_equity_drawdown_relative_pct_reported": 12.52,
+    "components": [
+      {
+        "component": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+        "closed": 185,
+        "actual_net_usd": 177.27,
+        "stressed_net_usd": 171.207,
+        "closed_delta_vs_control": -73,
+        "actual_delta_vs_control_usd": -2021.97,
+        "stressed_delta_vs_control_usd": -1970.271
+      },
+      {
+        "component": "ZT-M30-US30-RANGE-COMP-64efb16616",
+        "closed": 145,
+        "actual_net_usd": 232.66,
+        "stressed_net_usd": 226.344,
+        "closed_delta_vs_control": -51,
+        "actual_delta_vs_control_usd": -600.37,
+        "stressed_delta_vs_control_usd": -558.622
+      },
+      {
+        "component": "ZT-H1-US100-CROSS-IN-14b72317b7",
+        "closed": 632,
+        "actual_net_usd": 189.83,
+        "stressed_net_usd": 167.449,
+        "closed_delta_vs_control": -28,
+        "actual_delta_vs_control_usd": -604.08,
+        "stressed_delta_vs_control_usd": -490.969
+      },
+      {
+        "component": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+        "closed": 94,
+        "actual_net_usd": 137.80,
+        "stressed_net_usd": 133.921,
+        "closed_delta_vs_control": 6,
+        "actual_delta_vs_control_usd": -1294.29,
+        "stressed_delta_vs_control_usd": -1267.106
+      },
+      {
+        "component": "ZT-H1-US30-RETURN-I-c870a788ec",
+        "closed": 186,
+        "actual_net_usd": 176.73,
+        "stressed_net_usd": 170.321,
+        "closed_delta_vs_control": -40,
+        "actual_delta_vs_control_usd": -351.63,
+        "stressed_delta_vs_control_usd": -321.314
+      },
+      {
+        "component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "closed": 0,
+        "actual_net_usd": 0.0,
+        "stressed_net_usd": 0.0
+      }
+    ],
+    "faults": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0,
+      "research_dropped_records": 0,
+      "router_model_fit_failures": 0,
+      "router_signal_mismatch_faults": 0,
+      "router_virtual_start_failures": 0,
+      "router_virtual_close_data_waits": 0,
+      "router_output_failures": 0
+    }
+  },
+  "router": {
+    "virtual_lifecycles": 1620,
+    "samples_at_end": 1620,
+    "model_fit_attempts": 16,
+    "model_fit_count": 14,
+    "warmup_signal_rows": 171,
+    "model_ready_signal_rows": 1449,
+    "first_model_ready_server_time": "2023-01-03T16:00:00",
+    "allowed_signals": 1243,
+    "blocked_signals": 377,
+    "blocked_signal_pct": 23.2716049383,
+    "core_consults": 1620,
+    "core_allowed": 1243,
+    "core_blocked": 377,
+    "core_virtual_occupied_blocks": 0,
+    "core_missing_decision_blocks": 0,
+    "component_rows": [
+      {"component": "ZT-M30-US30-RANGE-COMP-61f61deaba", "signals": 258, "allowed": 185, "blocked": 73, "virtual_net_usd": 105.5955},
+      {"component": "ZT-M30-US30-RANGE-COMP-64efb16616", "signals": 196, "allowed": 145, "blocked": 51, "virtual_net_usd": 87.11},
+      {"component": "ZT-H1-US100-CROSS-IN-14b72317b7", "signals": 818, "allowed": 633, "blocked": 185, "virtual_net_usd": 75.4294},
+      {"component": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "signals": 108, "allowed": 94, "blocked": 14, "virtual_net_usd": 33.7195},
+      {"component": "ZT-H1-US30-RETURN-I-c870a788ec", "signals": 240, "allowed": 186, "blocked": 54, "virtual_net_usd": 75.445}
+    ]
+  },
+  "selection_temporal_reconstruction": {
+    "epochs": [
+      {"id": "E1", "interval": "2022-08-01 through 2023-06-01", "closed": 302, "actual_net_usd": 111.50, "stressed_net_usd": 104.9875},
+      {"id": "E2", "interval": "2023-06-01 through 2024-06-01", "closed": 308, "actual_net_usd": 49.82, "stressed_net_usd": 44.1675},
+      {"id": "E3", "interval": "2024-06-01 through 2025-06-01", "closed": 334, "actual_net_usd": 254.50, "stressed_net_usd": 243.841},
+      {"id": "E4", "interval": "2025-06-01 through 2026-06-01", "closed": 298, "actual_net_usd": 498.47, "stressed_net_usd": 476.246}
+    ],
+    "all_epoch_actual_positive": true,
+    "all_epoch_stressed_positive": true,
+    "actual_epoch_sum_usd": 914.29,
+    "stressed_epoch_sum_usd": 869.242
+  },
+  "economic_comparison": {
+    "actual_delta_vs_qualified_control_usd": -4872.34,
+    "actual_delta_vs_qualified_control_pct": -84.1999574882,
+    "stressed_delta_vs_qualified_control_usd": -4608.282,
+    "stressed_delta_vs_qualified_control_pct": -84.1307495869,
+    "actual_profit_retained_pct": 15.8000425118,
+    "stressed_profit_retained_pct": 15.8692504131,
+    "closed_lifecycle_delta": -186,
+    "closed_lifecycle_retained_pct": 86.974789916,
+    "reported_equity_drawdown_delta_percentage_points": -7.73688756515
+  },
+  "gates": {
+    "complete_valid_selection_output": true,
+    "selection_actual_exceeds_qualified_control": false,
+    "selection_stressed_exceeds_qualified_control": false,
+    "all_four_selection_epochs_actual_positive": true,
+    "all_four_selection_epochs_stressed_positive": true,
+    "selection_nominal_20pct_drawdown_gate": true,
+    "selection_effective_anchor_drawdown_gate": true,
+    "overall_effective_selection_gate": false,
+    "forward_authorized_by_contract": false
+  },
+  "forward": {
+    "invocations": 0,
+    "opened": false,
+    "reason": "The complete valid selection missed both mandatory profit-improvement gates, so the frozen conditional forward was not authorized."
+  },
+  "engineering_corrections": [
+    {
+      "condition": "The first artifact-copy command used LiteralPath with a wildcard after creating only empty destination directories.",
+      "resolution": "Copied the same completed immutable run files by enumerating exact source children; no runtime output or economic result changed.",
+      "economic_verdict": null
+    }
+  ],
+  "raw_artifacts": {
+    "selection": {
+      "path": "optimization/artifacts/raw/dd20-market-state-router-mt5-v1/selection/",
+      "files": 22,
+      "bytes": 33567114,
+      "bundle_manifest_sha256": "3082CEAE7C13E06EFF7EECCF308FE89FBA7F6F8B47679748CDF0D19A1F189256",
+      "report_bytes": 2400144,
+      "report_sha256": "2F896D8670F4DE15A8B03DF7DD440A626E4848B06FCD2968C53C976F67646405",
+      "native_tester_cache_bytes": 1389252,
+      "native_tester_cache_sha256": "4A977920CC451778D81743AA1F2AD6ED5A557E187850369844AD47B10C7A4F22",
+      "lifecycle_sha256": "EA918DB20A553337F7D35D9675662C6CD01A47253D3ED13E43158819A9C52F8D",
+      "candidate_sha256": "4F0C69118819C555DBC05806F97DEBBBB0478ADEA0972416E0AF19F37622AA81",
+      "router_decision_sha256": "D9CB0A7A89573896274348ED4AB188C38F15A4C974D14B99C94BE628A5BE2FCE",
+      "router_summary_sha256": "CE9B89E14358A5CABED5162A44376A0FCEC9C5264F433152B82AA9F15D312B01",
+      "agent_log_sha256": "E37AFDFA4B2C15AD41A8A0BE97368419CD4A32C720EFF2C014A797A40A291D20",
+      "tester_log_sha256": "A6C6DEE2B9C44A392A65A65B93AEF49F47BD7F209A5B6AF29D90871506E27C95"
+    }
+  },
+  "economic_verdict": {
+    "classification": "MT5_VALID_MARKET_STATE_ROUTER_DRAWDOWN_REDUCTION_WITH_SEVERE_PROFIT_DESTRUCTION",
+    "economic_improvement": false,
+    "qualified_anchor_retained": "dd20-paired-month-stability-mt5-v1",
+    "candidate_closed": true,
+    "failed_candidate_rescue_or_retune": false,
+    "interpretation": "The exact router reduced reported maximum relative equity drawdown from 20.256887565 percent to 12.52 percent and kept every epoch and active component profitable. It also blocked 377 of 1,620 signals and collapsed actual/stressed profit to only 15.80/15.87 percent of the qualified anchor. Every active component lost economic contribution versus the control; the pressure component even closed six more lifecycles while losing USD 1294.29/USD 1267.106, confirming path-dependent sizing and admission damage rather than a simple trade-count subtraction. This is complete valid economic nonconfirmation, not an engineering or environment failure.",
+    "new_research_hypothesis_clue": "The virtual fixed-hold label and component-relative pooled rank are misaligned with the anchor's compounded shared-account contribution; any model, label, threshold, hold or feature change is a new research hypothesis and was not rescued in this campaign.",
+    "lab_unit_opened": false,
+    "lab_unit_note": "The clue is recorded but no optional successor Lab unit is opened automatically."
+  },
+  "boundary": {
+    "tester_invocations": 1,
+    "complete_valid_economic_selection_passes": 1,
+    "forward_invocations": 0,
+    "candidate_closed": true,
+    "valid_economic_result_rerun_or_replaced": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "master_terminal_modified_or_started": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
