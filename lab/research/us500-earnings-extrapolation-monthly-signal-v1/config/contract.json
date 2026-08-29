@@ -1,0 +1,284 @@
+{
+  "schema": "zeta-next-us500-earnings-extrapolation-monthly-signal-contract-v1",
+  "family": "us500-earnings-extrapolation-monthly-signal-v1",
+  "input_root": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/",
+  "output_root": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/output/",
+  "files": {
+    "author_returns": "source/vwretd_clean_202106.tab",
+    "author_code": "source/TSMomentumImplementation_final.do",
+    "author_metadata": "source/dataverse_metadata_v1.json",
+    "d1_bars": "market/US500_D1_BARS_20210601_20260821.csv",
+    "m15_bars": "market/US500_M15_BARS_20220701_20260821.csv",
+    "spec": "market/US500_SYMBOL_SPEC_V1.json"
+  },
+  "immutable_inputs": {
+    "files": [
+      {
+        "name": "market/US500_D1_BARS_20210601_20260821.csv",
+        "bytes": 99208,
+        "sha256": "0FCC172DC1591D4A5241BD7648BD2B2F0FF9057A35DF6394F70A3031BA4B349F"
+      },
+      {
+        "name": "market/US500_M15_BARS_20220701_20260821.csv",
+        "bytes": 7007401,
+        "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A"
+      },
+      {
+        "name": "market/US500_SYMBOL_SPEC_V1.json",
+        "bytes": 620,
+        "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918"
+      },
+      {
+        "name": "source/TSMomentumImplementation_final.do",
+        "bytes": 10368,
+        "sha256": "050D4B37CF2B0E3B0579C755DA11BC6912FCDEC335A30AC60AFD8A60446A9528"
+      },
+      {
+        "name": "source/dataverse_metadata_v1.json",
+        "bytes": 39839,
+        "sha256": "910F4BAFB018326A82C4587132E964A84EB08FC75E315E9668EC779D2A8DE5A6"
+      },
+      {
+        "name": "source/vwretd_clean_202106.tab",
+        "bytes": 34896,
+        "sha256": "4BFB7621521976FB51B59D6F14B706E55A287A3DB5F15A896CA8128098D5CA65"
+      }
+    ],
+    "manifest_sha256": "A7E6AD82FAD2A01A72BCE53AE4083B2AC82887487D71716390583DDB85E7ECE2",
+    "author_rows": 1147,
+    "author_nonmissing_returns": 1146,
+    "d1_rows": 1351,
+    "m15_rows": 97707
+  },
+  "acquisition_summary": {
+    "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/acquisition-summary.json",
+    "bytes": 2921,
+    "sha256": "0B34309C54C35244AB003E5416C80251599FD59C9BE6F3DEC8C25E230F0EC900",
+    "runtime": "lab/runtime/ussr105-portable/",
+    "mt5_copy_rates_range_calls": 1,
+    "tester_calls": 0,
+    "forbidden_account_position_order_deal_trade_calls": 0
+  },
+  "formal_declaration": {
+    "path": "lab/research/us500-earnings-extrapolation-monthly-signal-v1/evidence/US500_EARNINGS_EXTRAPOLATION_MONTHLY_SIGNAL_DECLARATION_V1.json",
+    "bytes": 21337,
+    "sha256": "C33ACD7EBC7AC6FA36A986730F0551448F726E75947755220FC49C16F5FEE7D7"
+  },
+  "required_author_schema": [
+    "date",
+    "vwretd",
+    "ym"
+  ],
+  "required_d1_schema": [
+    "time_epoch",
+    "time_utc",
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread",
+    "real_volume"
+  ],
+  "required_m15_schema": [
+    "time_epoch",
+    "time_server",
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread",
+    "real_volume"
+  ],
+  "source_signal_rule": {
+    "paper": "Hongye Guo, Earnings Extrapolation and Predictable Stock Market Returns, Review of Financial Studies 38(6), 2025, 1730-1782",
+    "doi": "10.1093/rfs/hhaf020",
+    "publisher_url": "https://academic.oup.com/rfs/article/38/6/1730/8101501",
+    "replication_doi": "10.7910/DVN/AFOM9J",
+    "replication_version": "1.0",
+    "replication_license": "CC0 1.0",
+    "newsy_target_months": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "origin_and_target": "At the end of origin month t, predict target month t+1.",
+    "raw_predictor": "Sum the returns of the latest four newsy months known by the end of t.",
+    "demeaning": "Subtract the expanding mean of the raw four-newsy-month sum over strictly earlier origin months.",
+    "target_flip": "Multiply the demeaned predictor by -1 when t+1 is newsy and by +1 otherwise.",
+    "expanding_beta": "Fit an OLS slope with intercept of realized next-month return on the flipped demeaned predictor using origin rows through t-1, whose target returns are known by the end of t.",
+    "paper_portfolio_excess_weight": "expanding_beta times flipped_demeaned_predictor",
+    "executable_direction": "LONG when paper portfolio excess weight is positive and SHORT when negative; zero is flat and must not be thresholded.",
+    "no_flip_control": "Use the same source expanding beta but suppress only the target-month sign flip before taking direction.",
+    "long_only_control": "LONG every eligible cash session.",
+    "thresholds_or_grid_points": 0
+  },
+  "return_splice": {
+    "through_2021_06": "Author CC0 CRSP value-weighted monthly return series vwretd_clean_202106.tab.",
+    "from_2021_07": "US500 D1 last-close monthly price return, close_last_month / close_last_prior_month - 1.",
+    "splice_month": "2021-07",
+    "target_start": "2022-07",
+    "target_end_exclusive": "2026-08",
+    "causal_rule": "Every target uses only returns and expanding regressions available at the end of the preceding month.",
+    "translation_limit": "The source history is a CRSP total-market return while the bridge is a broker US500 CFD price return. The target is a fixed-direction regular-cash CFD sleeve, not an exact total-return or overnight replication."
+  },
+  "official_session_calendar": {
+    "exchange": "NYSE equities",
+    "construction": "all America/New_York weekdays minus the exact frozen official exchange-closure dates",
+    "sources": [
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2022_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2023_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2024_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2025_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/nyse/ICE_NYSE_2026_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/markets/hours-calendars",
+      "https://www.nyse.com/publicdocs/nyse/markets/american-options/rule-interpretations/2025/National_Day_of_Mourning_20250102.pdf"
+    ],
+    "closed_dates": [
+      "2022-07-04",
+      "2022-09-05",
+      "2022-11-24",
+      "2022-12-26",
+      "2023-01-02",
+      "2023-01-16",
+      "2023-02-20",
+      "2023-04-07",
+      "2023-05-29",
+      "2023-06-19",
+      "2023-07-04",
+      "2023-09-04",
+      "2023-11-23",
+      "2023-12-25",
+      "2024-01-01",
+      "2024-01-15",
+      "2024-02-19",
+      "2024-03-29",
+      "2024-05-27",
+      "2024-06-19",
+      "2024-07-04",
+      "2024-09-02",
+      "2024-11-28",
+      "2024-12-25",
+      "2025-01-01",
+      "2025-01-09",
+      "2025-01-20",
+      "2025-02-17",
+      "2025-04-18",
+      "2025-05-26",
+      "2025-06-19",
+      "2025-07-04",
+      "2025-09-01",
+      "2025-11-27",
+      "2025-12-25",
+      "2026-01-01",
+      "2026-01-19",
+      "2026-02-16",
+      "2026-04-03",
+      "2026-05-25",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-09-07",
+      "2026-11-26",
+      "2026-12-25"
+    ]
+  },
+  "trade_rule": {
+    "symbol": "US500",
+    "timezone": "America/New_York",
+    "entry_minute": 570,
+    "exit_bar_minute": 945,
+    "exit_represents_minute": 960,
+    "volume": 0.01,
+    "starting_balance_usd": 100.0,
+    "gross": "direction times exit-mid minus entry-mid times contract size and volume",
+    "observed": "gross less one half of the entry-plus-exit spread burden",
+    "stressed": "gross less the full entry-plus-exit spread burden",
+    "binding_measure": "stressed_usd",
+    "swap_commission_financing": 0.0,
+    "carry_reason": "Every trade opens and closes inside one regular cash session.",
+    "drawdown": "closed-balance cumulative daily path"
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "from_inclusive": "2022-07-01",
+      "to_exclusive": "2024-01-01"
+    },
+    "P2_2024": {
+      "from_inclusive": "2024-01-01",
+      "to_exclusive": "2025-01-01"
+    },
+    "P3_2025": {
+      "from_inclusive": "2025-01-01",
+      "to_exclusive": "2026-01-01"
+    },
+    "P4_2026_JAN_MAY": {
+      "from_inclusive": "2026-01-01",
+      "to_exclusive": "2026-06-01"
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "from_inclusive": "2026-06-01",
+      "to_exclusive": "2026-08-01"
+    }
+  },
+  "p1_splits": {
+    "2022H2": [
+      "2022-07-01",
+      "2023-01-01"
+    ],
+    "2023H1": [
+      "2023-01-01",
+      "2023-07-01"
+    ],
+    "2023H2": [
+      "2023-07-01",
+      "2024-01-01"
+    ]
+  },
+  "economic_gates": {
+    "minimum_days_by_period": {
+      "P1_2022H2_2023": 340,
+      "P2_2024": 225,
+      "P3_2025": 225,
+      "P4_2026_JAN_MAY": 90,
+      "P5_LATEST_2026_JUN_JUL": 35
+    },
+    "p1_period": "P1_2022H2_2023",
+    "latest_period": "P5_LATEST_2026_JUN_JUL",
+    "confirmation_periods": [
+      "P2_2024",
+      "P3_2025",
+      "P4_2026_JAN_MAY"
+    ],
+    "p1_profit_factor_min": 1.05,
+    "p1_net_to_drawdown_min": 1.25,
+    "p1_positive_splits_required": 3,
+    "p1_positive_target_types_required": 2,
+    "p1_positive_directions_required": 2,
+    "confirmation_positive_periods_required": 3,
+    "confirmation_positive_target_type_period_cells_required": 5,
+    "confirmation_mean_above_each_control_periods_required": 2,
+    "prelatest_profit_factor_min": 1.075,
+    "prelatest_net_to_drawdown_min": 1.5,
+    "prelatest_positive_month_fraction_min": 0.6,
+    "prelatest_top_five_positive_day_share_max": 0.35,
+    "prelatest_positive_directions_required": 2,
+    "nominal_drawdown_max_percent": 20.0,
+    "practical_drawdown_max_percent": 21.2,
+    "latest_nominal_floor_usd": 0.0,
+    "latest_practical_reversal_fraction": 0.25,
+    "full_profit_factor_min": 1.05,
+    "full_net_to_drawdown_min": 1.25,
+    "retention_limit": 1
+  },
+  "closed_neighborhood": [
+    "one, two, three, five or other newsy-return lookback; compounded, weighted or decay transforms",
+    "different expanding window, intercept, estimator, threshold, magnitude band or beta sign override",
+    "alternative newsy calendar, earnings release timing, industry, country, constituent or symbol",
+    "overnight, close-to-close, futures, cash-equity, month hold, first-week or partial-month path",
+    "neighboring cash entry or exit clock, skip day, weekday, month, quarter or latest-only survivor",
+    "long-only source rewrite, short-only rewrite, opposite-direction rescue or no-flip promotion",
+    "cost substitution, stop, trailing, exit, size, risk, weight, capital, allocation or candidate-integration rescue"
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "schema": "zeta-next-us500-earnings-extrapolation-monthly-signal-snapshot-receipt-v1",
+  "created_at_local": "2026-08-30",
+  "status": "SOURCE_FORMULA_INPUTS_AND_SESSION_GEOMETRY_FROZEN_TARGET_ECONOMICS_UNOPENED",
+  "unit": "us500-earnings-extrapolation-monthly-signal-112",
+  "family": "us500-earnings-extrapolation-monthly-signal-v1",
+  "literature_source": {
+    "title": "Earnings Extrapolation and Predictable Stock Market Returns",
+    "author": "Hongye Guo",
+    "journal": "The Review of Financial Studies",
+    "volume": 38,
+    "issue": 6,
+    "year": 2025,
+    "pages": "1730-1782",
+    "doi": "10.1093/rfs/hhaf020",
+    "publisher_url": "https://academic.oup.com/rfs/article/38/6/1730/8101501",
+    "replication_doi": "10.7910/DVN/AFOM9J",
+    "replication_version": "1.0",
+    "replication_license": "CC0 1.0",
+    "dataset_publication_date": "2025-01-06"
+  },
+  "source_formula_freeze": {
+    "implementation_file_id": 10802971,
+    "implementation_file": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/source/TSMomentumImplementation_final.do",
+    "implementation_bytes": 10368,
+    "implementation_sha256": "050D4B37CF2B0E3B0579C755DA11BC6912FCDEC335A30AC60AFD8A60446A9528",
+    "author_return_file_id": 10802963,
+    "author_return_file": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/source/vwretd_clean_202106.tab",
+    "author_return_bytes": 34896,
+    "author_return_sha256": "4BFB7621521976FB51B59D6F14B706E55A287A3DB5F15A896CA8128098D5CA65",
+    "author_rows": 1147,
+    "author_nonmissing_returns": 1146,
+    "author_first_month": "1925-12",
+    "author_last_month": "2021-06",
+    "metadata_file": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/source/dataverse_metadata_v1.json",
+    "metadata_bytes": 39839,
+    "metadata_sha256": "910F4BAFB018326A82C4587132E964A84EB08FC75E315E9668EC779D2A8DE5A6",
+    "metadata_files": 50,
+    "newsy_months": [
+      "January",
+      "April",
+      "July",
+      "October"
+    ],
+    "formula": [
+      "At the end of origin month t, sum the latest four newsy-month returns known by t.",
+      "Subtract the expanding mean of that four-newsy-month sum over strictly earlier origins.",
+      "Flip the demeaned signal when target month t+1 is newsy.",
+      "Estimate the expanding OLS slope with intercept on origins through t-1, whose realized targets are known by t.",
+      "The paper portfolio excess weight is slope times flipped demeaned signal; this unit uses only its sign."
+    ],
+    "formula_search_or_grid_points": 0
+  },
+  "input_freeze": {
+    "files": 6,
+    "bytes": 7192332,
+    "manifest_sha256": "A7E6AD82FAD2A01A72BCE53AE4083B2AC82887487D71716390583DDB85E7ECE2",
+    "acquisition_summary": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/acquisition-summary.json",
+      "bytes": 2921,
+      "sha256": "0B34309C54C35244AB003E5416C80251599FD59C9BE6F3DEC8C25E230F0EC900"
+    },
+    "broker_d1": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/market/US500_D1_BARS_20210601_20260821.csv",
+      "bytes": 99208,
+      "sha256": "0FCC172DC1591D4A5241BD7648BD2B2F0FF9057A35DF6394F70A3031BA4B349F",
+      "rows": 1351,
+      "first_utc": "2021-06-01T00:00:00+00:00",
+      "last_utc": "2026-08-21T00:00:00+00:00"
+    },
+    "target_m15": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/market/US500_M15_BARS_20220701_20260821.csv",
+      "bytes": 7007401,
+      "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A",
+      "rows": 97707,
+      "first_utc": "2022-07-01T01:00:00+00:00",
+      "last_utc": "2026-08-21T23:45:00+00:00"
+    },
+    "symbol_spec": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/input/market/US500_SYMBOL_SPEC_V1.json",
+      "bytes": 620,
+      "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918"
+    }
+  },
+  "acquisition_boundary": {
+    "runtime": "lab/runtime/ussr105-portable/",
+    "runtime_terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metatrader5_package": "5.0.5640",
+    "d1_copy_rates_range_calls": 1,
+    "api_calls": [
+      "initialize",
+      "symbol_select",
+      "copy_rates_range",
+      "shutdown"
+    ],
+    "account_position_order_deal_trade_or_margin_calls": 0,
+    "tester_calls": 0,
+    "exact_dedicated_terminal_processes_after_shutdown": 1,
+    "exact_dedicated_terminal_processes_stopped": 1,
+    "exact_dedicated_terminal_processes_remaining": 0,
+    "other_terminal_processes_touched": false,
+    "master_terminal_touched": false,
+    "live_or_optimization_runtime_touched": false
+  },
+  "return_splice": {
+    "author_history_through": "2021-06",
+    "broker_bridge_from": "2021-07",
+    "broker_complete_month_through": "2026-07",
+    "broker_bridge_months": 61,
+    "combined_months": 1208,
+    "combined_first_month": "1925-12",
+    "combined_last_complete_month": "2026-07",
+    "target_first_month": "2022-07",
+    "target_last_month": "2026-07",
+    "target_months": 49,
+    "causal_expanding_regression": true,
+    "minimum_training_observations": 1147,
+    "maximum_training_observations": 1195,
+    "expanding_beta_min": 0.11613068808545035,
+    "expanding_beta_max": 0.12007290487659421
+  },
+  "premetric_predictor_geometry": {
+    "target_type_month_counts": {
+      "NEWSY": 17,
+      "NON_NEWSY": 32
+    },
+    "primary_direction_month_counts": {
+      "LONG": 24,
+      "SHORT": 25,
+      "FLAT": 0
+    },
+    "no_flip_direction_month_counts": {
+      "LONG": 21,
+      "SHORT": 28,
+      "FLAT": 0
+    },
+    "primary_no_flip_direction_disagreement_months": 17,
+    "target_m15_price_or_spread_fields_loaded": false
+  },
+  "premetric_session_geometry": {
+    "official_target_sessions": 1024,
+    "boundary_eligible_sessions": 1017,
+    "official_sessions_without_observed_cash_bars": 1,
+    "official_sessions_with_bars_but_without_boundaries": 6,
+    "official_sessions_without_full_geometry": 9,
+    "observed_cfd_dates_not_official_sessions": 32,
+    "days_by_period": {
+      "P1_2022H2_2023": 374,
+      "P2_2024": 250,
+      "P3_2025": 248,
+      "P4_2026_JAN_MAY": 102,
+      "P5_LATEST_2026_JUN_JUL": 43
+    },
+    "days_by_p1_split": {
+      "2022H2": 126,
+      "2023H1": 124,
+      "2023H2": 124
+    },
+    "days_by_target_type_and_period": {
+      "NEWSY": {
+        "P1_2022H2_2023": 122,
+        "P2_2024": 88,
+        "P3_2025": 86,
+        "P4_2026_JAN_MAY": 41,
+        "P5_LATEST_2026_JUN_JUL": 22
+      },
+      "NON_NEWSY": {
+        "P1_2022H2_2023": 252,
+        "P2_2024": 162,
+        "P3_2025": 162,
+        "P4_2026_JAN_MAY": 61,
+        "P5_LATEST_2026_JUN_JUL": 21
+      }
+    },
+    "days_by_primary_direction_and_period": {
+      "LONG": {
+        "P1_2022H2_2023": 228,
+        "P2_2024": 67,
+        "P3_2025": 125,
+        "P4_2026_JAN_MAY": 61,
+        "P5_LATEST_2026_JUN_JUL": 21
+      },
+      "SHORT": {
+        "P1_2022H2_2023": 146,
+        "P2_2024": 183,
+        "P3_2025": 123,
+        "P4_2026_JAN_MAY": 41,
+        "P5_LATEST_2026_JUN_JUL": 22
+      }
+    },
+    "density_passed": true,
+    "cash_session_return_or_cost_calculated": false
+  },
+  "premetric_corrections": [
+    {
+      "sequence": 1,
+      "stage": "source metadata acquisition",
+      "fault": "The first metadata snapshot used PowerShell object reserialization and emitted a depth warning.",
+      "correction": "Before any freeze or target outcome, replace it with the exact raw Dataverse API response bytes and validate dataset version 1.0, CC0 license and both fixed file IDs.",
+      "research_failure": false,
+      "target_economic_fields_opened": false
+    },
+    {
+      "sequence": 2,
+      "stage": "first predictor-only premetric invocation",
+      "fault": "The installed pandas version does not support Series.reset_index(names=...), so the invocation stopped after source predictor construction and before target M15 session loading.",
+      "correction": "Use rename_axis('month').reset_index(name='monthly_return') without changing source formula, data, periods, costs, gates or target geometry.",
+      "research_failure": false,
+      "target_m15_price_or_spread_fields_loaded": false,
+      "economic_rows_or_metrics_emitted": 0
+    }
+  ],
+  "implementation": {
+    "acquisition_script": {
+      "path": "lab/research/us500-earnings-extrapolation-monthly-signal-v1/analysis/acquire_inputs.py",
+      "bytes": 10158,
+      "sha256": "A3F86946252684D75402D5DEE2AE36A8C86BD22C4811054AB8E651AE60A9AD2A"
+    },
+    "analysis_script": {
+      "path": "lab/research/us500-earnings-extrapolation-monthly-signal-v1/analysis/run_analysis.py",
+      "bytes": 47459,
+      "sha256": "65925DB087FBFF312FAE6CCF56D3A411739FD0576CCE7072699AA5FCEC60FB24"
+    },
+    "premetric_invocations": 2,
+    "complete_premetric_invocations": 1,
+    "target_economic_aggregations": 0,
+    "engineering_correction_limit": null
+  },
+  "outcome_firewall": {
+    "target_m15_price_or_spread_fields_loaded": false,
+    "cash_session_return_calculated": false,
+    "gross_observed_or_stressed_usd_calculated": false,
+    "profit_factor_or_drawdown_calculated": false,
+    "economic_gate_or_verdict_calculated": false
+  },
+  "marker": "FRONTIER_UNIT_112_RFS_EARNINGS_EXTRAPOLATION_MONTHLY_SIGNAL_SNAPSHOT_FROZEN_ECONOMICS_UNOPENED"
+}
