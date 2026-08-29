@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0367`
+- Latest state ID: `STATE-0368`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; source-free Program 1 / meso→macro Unit 098 `legacy-us500-h4-staged-overlay-optimization-eligibility-v1` is closed. It retains one exact lineage-pinned US500 H4 staged-overlay Optimization information seed and opens no current shared-account economic verdict, Lab MQL or Live authority. No adjacent H4 threshold, window, stop, balance gate, volume or legacy-candidate follow-up is authorized.
-- Active optimization boundary: none; `dd20-frequency-execution-lane-combination-proxy-v1` is closed `VALID_PROXY_COMPLETE_ONE_COMBINED_MT5_SHORTLIST`. Execution ownership can split into US30+US100 high/mid frequency and US500 H4 low frequency, while US500 H1 remains a read-only dependency of the unchanged US100 Cross signal. The sole exact frozen-lane combination projects direct-only `+$5,793.39 / +$5,483.6992`, coupled-information `+$5,829.67 / +$5,519.3732`, all positive epochs and `20.861543%` DD (`4.307713%` proportional overshoot); forward remains `+$32.74 / +$30.626` at `18.675302%` with zero H4 entries. Exactly one separately owned combined MT5 candidate may open after this whole proxy unit reaches `origin/main`; proxy sums are not final economics and no Live authority exists.
+- Active optimization boundary: none; `dd20-frequency-lane-combined-portfolio-mt5-v1` is closed `MT5_VALID_NONCONFIRMATION_OF_FREQUENCY_LANE_COMBINED_PORTFOLIO_REPLACEMENT`. Its complete valid selection produced actual/stressed `+$5,546.61 / +$5,237.2907` at reported relative equity DD `20.26%`, trailing the qualified paired-month anchor by `$240.02 / $240.2333`; all four epochs and the pragmatic `21.2%` DD gate passed, but both mandatory profit-improvement gates failed and the conditional forward opened zero times. The US500 H4 lane itself earned `+$10.14 / +$8.8217`, while shared balance/equity and downstream executable-volume quantization reduced the core enough to overwhelm it. Execution ownership may still split into US30+US100 high/mid frequency and US500 H4 low frequency for faster proxy/staging, but US500 H1 remains a read-only dependency of unchanged US100 Cross and every shortlisted combined account still requires one full three-symbol MT5 confirmation. The paired-month anchor remains qualified; the economic-quarantine/sizing-quantum clue is recorded for optional Lab work, no Lab unit opened, and no adjacent combined-candidate rescue or retune is authorized.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

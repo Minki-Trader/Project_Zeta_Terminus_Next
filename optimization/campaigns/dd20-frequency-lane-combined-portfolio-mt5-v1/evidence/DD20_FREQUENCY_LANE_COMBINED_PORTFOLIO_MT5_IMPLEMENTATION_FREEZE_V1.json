@@ -1,0 +1,120 @@
+{
+  "schema": "zeta-dd20-frequency-lane-combined-portfolio-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "COMPILED_READY_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-frequency-lane-combined-portfolio-mt5-v1",
+    "declaration_bytes": 6479,
+    "declaration_sha256": "C58F77D4F2472ACB292106D4D0C049721F86EEF5054AB318AF41AA5B524CEB14",
+    "release_id": "OPT-LIVE-V7-DD20FLCP1-20260829",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20FLCP1-20260829",
+    "magic_range": "260829901..260829907",
+    "tester_only": true
+  },
+  "frozen_candidate": {
+    "high_mid_component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "high_mid_position_risk_fraction": 0.04,
+    "high_mid_aggregate_risk_fraction": 0.18,
+    "low_frequency_candidate_id": "ZT-H4-US500-V2-VOLATILITY-EXP-b4d28831f9",
+    "low_frequency_symbol_timeframe": "US500 H4",
+    "low_frequency_fixed_volume": 0.01,
+    "low_frequency_balance_gate_usd": 500.0,
+    "low_frequency_margin_fraction": 0.20,
+    "low_frequency_lookback_entry_exit_hold": "12 / 1.5 / 0.6 / 30",
+    "high_mid_us500_h1_dependency_is_read_only": true,
+    "candidate_count": 1,
+    "grid": false
+  },
+  "implementation": {
+    "source_file_count": 17,
+    "source_total_bytes": 446134,
+    "source_manifest_sha256": "5C5411709DC3FCB383F0F4188C7CEDDC3212031295D32361A3D99318488E1C4A",
+    "configuration_file_count": 3,
+    "configuration_total_bytes": 2341,
+    "configuration_manifest_sha256": "A384D47C7DBBED73E1B1813ED70AA18D5B40FDF7B8F0252E52726D88B9CD24C7",
+    "manifest_algorithm": "Sort slash-normalized campaign-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "runtime_source_and_configuration_parity_files": 20,
+    "runtime_source_and_configuration_mismatches": 0,
+    "cross_campaign_include_or_source_link": false,
+    "economic_change": "Combine the qualified high/mid-frequency control with one exact independently owned fixed US500 H4 execution lane while preserving shared account economics."
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2855,
+    "launcher_exit_code": 1,
+    "single_compile_invocation": true,
+    "ex5_path": "optimization/campaigns/dd20-frequency-lane-combined-portfolio-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20FLCP1.ex5",
+    "ex5_bytes": 241502,
+    "ex5_sha256": "D2421A69F9255A236A519011A4668B983679C0B9E8ED7BE465D193C7FC8B58CF",
+    "raw_log_path": "optimization/artifacts/raw/dd20-frequency-lane-combined-portfolio-mt5-v1/compile/compile-final-20260829.log",
+    "raw_log_bytes": 21444,
+    "raw_log_sha256": "675D0A703BA748E5C530381838525033B29A18E6D0D9A8AE6DA2854AA0E49E2D"
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-frequency-lane-combined-portfolio-mt5-v1-portable/",
+    "physical_copy_source": "optimization/runtime/dd20-native-gap-july-robustness-mt5-v1-portable/",
+    "physical_copy_source_file_count": 756,
+    "physical_copy_source_logical_bytes": 5793009225,
+    "terminal_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "file_count_after_overlay_and_compile": 777,
+    "logical_bytes_after_overlay_and_compile": 5793699760,
+    "file_reparse_points": 0,
+    "directory_reparse_points": 0,
+    "terminal_file_identity_distinct_from_source_runtime": true,
+    "terminal_target_hardlink_count": 1,
+    "process_owners_at_freeze": 0,
+    "free_space_gib_at_freeze": 45.460,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_terminal": false,
+    "is_live_terminal": false,
+    "is_lab_terminal": false
+  },
+  "economic_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "isolated_forward_interval": "2026-06-01T00:00:00/2026-08-01T00:00:00",
+    "expected_selection_passes": 1,
+    "expected_forward_passes": 1,
+    "run_forward_only_after_complete_valid_effectively_qualified_selection": true,
+    "selection_actual_comparator_usd": 5786.63,
+    "selection_stressed_comparator_usd": 5477.524,
+    "selection_epochs_must_all_be_positive": true,
+    "nominal_mt5_equity_drawdown_pct": 20.0,
+    "maximum_pragmatic_proportional_overshoot_pct": 6.0,
+    "maximum_effective_mt5_equity_drawdown_pct": 21.2,
+    "forward_actual_and_stressed_must_be_positive": true,
+    "failed_candidate_rescue_or_retune": false
+  },
+  "non_economic_corrections": [
+    {
+      "condition": "The initial recursive copy began while OneDrive was not running and stalled before enumerating any source file; the already verified new target remained empty.",
+      "resolution": "Started synchronization, pinned and hydrated all 756 source-runtime files, then physically copied all 5.395 GiB with robocopy into the same isolated empty target in 5.993 seconds with zero failures.",
+      "tester_started": false,
+      "economic_verdict": null
+    },
+    {
+      "condition": "MetaEditor launcher returned exit code 1 even though its normal compile log completed.",
+      "resolution": "Used the same single invocation's completed compiler output, which reports code generated with 0 errors and 0 warnings; no recompile was performed.",
+      "tester_started": false,
+      "economic_verdict": null
+    }
+  ],
+  "boundary": {
+    "compiled": true,
+    "tester_started": false,
+    "selection_report_opened": false,
+    "forward_report_opened": false,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "master_terminal_modified_or_started": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

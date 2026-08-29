@@ -1,0 +1,288 @@
+{
+  "schema": "zeta-dd20-frequency-lane-combined-portfolio-mt5-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VALID_MT5_COMPLETE_SELECTION_NONCONFIRMS_COMBINED_REPLACEMENT_FORWARD_NOT_OPENED",
+  "campaign": "dd20-frequency-lane-combined-portfolio-mt5-v1",
+  "candidate": {
+    "release_id": "OPT-LIVE-V7-DD20FLCP1-20260829",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20FLCP1-20260829",
+    "magic_range": "260829901..260829907",
+    "high_mid_position_risk_fraction": 0.04,
+    "high_mid_aggregate_risk_fraction": 0.18,
+    "high_mid_component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "low_frequency_candidate_id": "ZT-H4-US500-V2-VOLATILITY-EXP-b4d28831f9",
+    "low_frequency_symbol_timeframe": "US500 H4",
+    "low_frequency_fixed_volume": 0.01,
+    "low_frequency_balance_gate_usd": 500.0,
+    "ex5_bytes": 241502,
+    "ex5_sha256": "D2421A69F9255A236A519011A4668B983679C0B9E8ED7BE465D193C7FC8B58CF"
+  },
+  "qualified_control": {
+    "campaign": "dd20-paired-month-stability-mt5-v1",
+    "result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524,
+    "selection_native_equity_drawdown_pct": 20.256887565152653,
+    "all_four_selection_epochs_actual_and_stressed_positive": true,
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_net_usd": 30.626,
+    "forward_native_equity_drawdown_pct": 18.675302129932568
+  },
+  "selection": {
+    "interval": "2022-08-01 through 2026-06-01",
+    "tester_model": "every tick based on real ticks",
+    "history_quality": "100% real ticks",
+    "valid_economic_output": true,
+    "normal_tester_stop": true,
+    "wall_time_seconds": 861.066,
+    "tester_report_generated": true,
+    "bars": 45160,
+    "primary_symbol_ticks": 132257500,
+    "all_symbol_ticks": 520082264,
+    "actual_net_usd": 5546.61,
+    "stressed_2x_cost_net_usd": 5237.2907,
+    "core_actual_net_usd": 5536.47,
+    "core_stressed_net_usd": 5228.469,
+    "core_closed_lifecycles": 1430,
+    "risk_admission_skips": 190,
+    "stop_loss_exits": 131,
+    "actual_closed_drawdown_usd": 689.22,
+    "stressed_closed_drawdown_usd": 711.1865,
+    "mt5_balance_drawdown_absolute_usd": 1.18,
+    "mt5_equity_drawdown_absolute_usd": 3.31,
+    "mt5_balance_drawdown_maximal_usd": 697.87,
+    "mt5_balance_drawdown_at_maximal_pct": 12.91,
+    "mt5_balance_drawdown_relative_usd": 299.04,
+    "mt5_balance_drawdown_relative_pct": 18.77,
+    "mt5_equity_drawdown_maximal_usd": 720.78,
+    "mt5_equity_drawdown_at_maximal_pct": 15.87,
+    "mt5_equity_drawdown_relative_usd": 54.41,
+    "mt5_equity_drawdown_relative_pct_reported": 20.26,
+    "nominal_equity_drawdown_line_pct": 20.0,
+    "nominal_drawdown_excess_percentage_points_reported": 0.26,
+    "maximum_effective_equity_drawdown_pct": 21.2,
+    "effective_drawdown_gate_passed": true,
+    "components": [
+      {
+        "component": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+        "closed": 258,
+        "actual_net_usd": 2147.76,
+        "stressed_net_usd": 2090.706,
+        "actual_delta_vs_control_usd": -51.48,
+        "stressed_delta_vs_control_usd": -50.772
+      },
+      {
+        "component": "ZT-M30-US30-RANGE-COMP-64efb16616",
+        "closed": 196,
+        "actual_net_usd": 835.21,
+        "stressed_net_usd": 788.054,
+        "actual_delta_vs_control_usd": 2.18,
+        "stressed_delta_vs_control_usd": 3.088
+      },
+      {
+        "component": "ZT-H1-US100-CROSS-IN-14b72317b7",
+        "closed": 661,
+        "actual_net_usd": 667.6,
+        "stressed_net_usd": 532.62,
+        "actual_delta_vs_control_usd": -126.31,
+        "stressed_delta_vs_control_usd": -125.798
+      },
+      {
+        "component": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+        "closed": 89,
+        "actual_net_usd": 1382.48,
+        "stressed_net_usd": 1350.104,
+        "actual_delta_vs_control_usd": -49.61,
+        "stressed_delta_vs_control_usd": -50.923
+      },
+      {
+        "component": "ZT-H1-US30-RETURN-I-c870a788ec",
+        "closed": 226,
+        "actual_net_usd": 503.42,
+        "stressed_net_usd": 466.985,
+        "actual_delta_vs_control_usd": -24.94,
+        "stressed_delta_vs_control_usd": -24.65
+      },
+      {
+        "component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+        "closed": 0,
+        "actual_net_usd": 0.0,
+        "stressed_net_usd": 0.0,
+        "actual_delta_vs_control_usd": 0.0,
+        "stressed_delta_vs_control_usd": 0.0
+      }
+    ],
+    "low_frequency_lane": {
+      "entries": 79,
+      "exits": 79,
+      "open_positions_at_end": 0,
+      "actual_net_usd": 10.14,
+      "stressed_net_usd": 8.8217,
+      "margin_skips": 0,
+      "stage_gate_blocks": 249,
+      "state_unavailable": 0,
+      "late_entry_windows": 1727,
+      "entry_failures": 0,
+      "exit_failures": 0,
+      "partial_or_placed_outcomes": 0,
+      "faults": 0,
+      "pending_exit_deal": 0
+    },
+    "faults": {
+      "safety_stopped": false,
+      "persistence_failed": false,
+      "broker_mismatch": false,
+      "foreign_exposure": false,
+      "protection_calculation_failures": 0,
+      "protection_mismatches": 0,
+      "research_dropped_records": 0
+    }
+  },
+  "selection_temporal_reconstruction": {
+    "core_close_count": 1430,
+    "h4_close_count": 79,
+    "epochs": [
+      {
+        "id": "E1",
+        "interval": "2022-08-01 through 2023-06-01",
+        "core_closed": 298,
+        "h4_closed": 0,
+        "actual_net_usd": 228.51,
+        "stressed_net_usd": 211.022,
+        "actual_delta_vs_control_usd": 0.01,
+        "stressed_delta_vs_control_usd": 0.02
+      },
+      {
+        "id": "E2",
+        "interval": "2023-06-01 through 2024-06-01",
+        "core_closed": 371,
+        "h4_closed": 9,
+        "actual_net_usd": 173.04,
+        "stressed_net_usd": 143.0591,
+        "actual_delta_vs_control_usd": 0.94,
+        "stressed_delta_vs_control_usd": 0.9451
+      },
+      {
+        "id": "E3",
+        "interval": "2024-06-01 through 2025-06-01",
+        "core_closed": 381,
+        "h4_closed": 34,
+        "actual_net_usd": 902.29,
+        "stressed_net_usd": 849.8212,
+        "actual_delta_vs_control_usd": -1.52,
+        "stressed_delta_vs_control_usd": -2.0328
+      },
+      {
+        "id": "E4",
+        "interval": "2025-06-01 through 2026-06-01",
+        "core_closed": 380,
+        "h4_closed": 36,
+        "actual_net_usd": 4242.77,
+        "stressed_net_usd": 4033.3884,
+        "actual_delta_vs_control_usd": -239.45,
+        "stressed_delta_vs_control_usd": -239.1656,
+        "core_actual_delta_vs_control_usd": -248.62,
+        "core_stressed_delta_vs_control_usd": -247.812,
+        "h4_actual_net_usd": 9.17,
+        "h4_stressed_net_usd": 8.6464
+      }
+    ],
+    "all_epoch_actual_positive": true,
+    "all_epoch_stressed_positive": true,
+    "actual_epoch_sum_usd": 5546.61,
+    "stressed_epoch_sum_usd": 5237.2907
+  },
+  "economic_comparison": {
+    "actual_delta_vs_qualified_control_usd": -240.02,
+    "actual_delta_vs_qualified_control_pct": -4.147837342,
+    "stressed_delta_vs_qualified_control_usd": -240.2333,
+    "stressed_delta_vs_qualified_control_pct": -4.385800957,
+    "core_actual_delta_vs_qualified_control_usd": -250.16,
+    "core_stressed_delta_vs_qualified_control_usd": -249.055,
+    "h4_direct_actual_net_usd": 10.14,
+    "h4_direct_stressed_net_usd": 8.8217,
+    "actual_delta_vs_coupled_information_proxy_usd": -283.06,
+    "stressed_delta_vs_coupled_information_proxy_usd": -282.0825,
+    "actual_delta_vs_direct_only_proxy_usd": -246.78,
+    "stressed_delta_vs_direct_only_proxy_usd": -246.4085
+  },
+  "gates": {
+    "complete_valid_selection_output": true,
+    "selection_actual_exceeds_qualified_control": false,
+    "selection_stressed_exceeds_qualified_control": false,
+    "all_four_selection_epochs_actual_positive": true,
+    "all_four_selection_epochs_stressed_positive": true,
+    "selection_nominal_20pct_drawdown_gate": false,
+    "selection_pragmatic_21_2pct_drawdown_gate": true,
+    "overall_effective_selection_gate": false,
+    "forward_authorized_by_contract": false
+  },
+  "forward": {
+    "invocations": 0,
+    "opened": false,
+    "reason": "The complete valid selection missed both required profit-improvement gates, so the declared conditional forward was not authorized."
+  },
+  "engineering_corrections": [
+    {
+      "condition": "The first runtime clone began while OneDrive was not running and stalled before copying a source file.",
+      "resolution": "Hydrated all 756 source-runtime files and physically copied the same frozen runtime with zero failures before compilation.",
+      "economic_verdict": null
+    },
+    {
+      "condition": "The first selection invocation was stopped by the user for a machine reboot at simulated 2024-03-07.",
+      "resolution": "Preserved the incomplete logs and 11 generated files, reset the unique runtime directory, and restarted the unchanged frozen candidate from 2022-08-01.",
+      "economic_verdict": null
+    },
+    {
+      "condition": "The second selection invocation completed the EA economic output but the new nested report directory had not been pre-created, so MT5 emitted no HTML report.",
+      "resolution": "Preserved the complete no-report output, created only the declared report directory, reset the unique runtime files, and reran the same EX5, SET and interval. The third invocation reproduced every terminal economic number exactly and generated the complete report bundle.",
+      "economic_verdict": null
+    }
+  ],
+  "raw_artifacts": {
+    "final_selection": {
+      "path": "optimization/artifacts/raw/dd20-frequency-lane-combined-portfolio-mt5-v1/selection/final/",
+      "files": 20,
+      "bytes": 27246409,
+      "bundle_manifest_sha256": "02DDB592C6698EF2E9FFA38006A773B43C3EDE2AE07D3B6DB3F87CA54AEAE5C4",
+      "report_bytes": 2918628,
+      "report_sha256": "44526BC36B46E352682D9387AC0346C044CDBF8F8F6F32462555CBF0D826F0C1",
+      "native_tester_cache_bytes": 1687044,
+      "native_tester_cache_sha256": "E7F9A907217F48738E1E8A0E92F8CDDE832FFC8958A858AAC58843F7E69C64D4",
+      "lifecycle_sha256": "164202E9629EC1380560CD2DDC41B394ADA8564827A3F68F02F8491B14BF3A33",
+      "candidate_sha256": "A4AE3AA85674899D216BEBCA28DA7E3B1628E9676FAC9E51C2AAE6155DA3602D",
+      "agent_log_sha256": "A06577903D4D11EB8E7B4E5237881A927AEC5B807FBC4BA141AF90DA4DF5DB52",
+      "tester_log_sha256": "03EEB2EE7B3C8B5BA7D05ADA833DF70601C4870B7B8DDA2225EC9FD92255F4D5"
+    },
+    "correction_evidence": {
+      "path": "optimization/artifacts/raw/dd20-frequency-lane-combined-portfolio-mt5-v1/selection/",
+      "files_excluding_final_selection": 25,
+      "bytes_excluding_final_selection": 32189722,
+      "bundle_manifest_sha256": "136E0AE2CECD47EBA693260B623B74867A8DB5D57107E783CAC2F98AFA7E683E"
+    }
+  },
+  "economic_verdict": {
+    "classification": "MT5_VALID_NONCONFIRMATION_OF_FREQUENCY_LANE_COMBINED_PORTFOLIO_REPLACEMENT",
+    "economic_improvement": false,
+    "qualified_anchor_retained": "dd20-paired-month-stability-mt5-v1",
+    "candidate_closed": true,
+    "failed_candidate_rescue_or_retune": false,
+    "interpretation": "The low-frequency lane earned positive direct actual and stressed net and all four combined selection epochs remained positive, while drawdown stayed inside the declared pragmatic boundary. The combined account nevertheless lost USD 240.02 actual and USD 240.2333 stressed selection net versus the qualified control. The loss concentrated in E4: positive H4 net of USD 9.17/USD 8.6464 coincided with a core reduction of USD 248.62/USD 247.812. H4 recorded no margin skip, and the combined core had two more closes and two fewer risk-admission skips than the control, so the result is not explained by simple H4 margin blocking. The evidence instead shows that shared balance/equity and downstream executable-volume quantization can change the core path enough to overwhelm additive H4 profit. The exact combined candidate therefore does not replace the control and will not rerun or be retuned inside this family.",
+    "workflow_conclusion": "Frequency-lane separation remains useful for fast proxy and ownership staging, but US100 Cross retains read-only US500 H1 data dependence and any shortlisted account-level combination still requires one full three-symbol MT5 confirmation.",
+    "new_research_hypothesis_clue": "Economically quarantine low-frequency lane PnL from high/mid downstream sizing or study sizing-quantum boundary sensitivity before recombination.",
+    "lab_unit_opened": false,
+    "lab_unit_note": "The clue is recorded but not worked inside Optimization; opening a Lab unit is optional and was not required to close this optimization unit."
+  },
+  "boundary": {
+    "tester_invocations": 3,
+    "complete_valid_economic_selection_passes": 1,
+    "forward_invocations": 0,
+    "candidate_closed": true,
+    "valid_economic_result_rerun_or_replaced": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "master_terminal_modified_or_started": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}
