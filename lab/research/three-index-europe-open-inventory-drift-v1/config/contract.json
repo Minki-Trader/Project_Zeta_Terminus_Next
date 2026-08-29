@@ -1,0 +1,220 @@
+{
+  "schema": "zeta-next-three-index-europe-open-inventory-drift-contract-v1",
+  "family": "three-index-europe-open-inventory-drift-v1",
+  "unit": "three-index-europe-open-inventory-drift-109",
+  "status": "FROZEN_OUTCOMES_UNOPENED",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "roots": {
+    "input": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input",
+    "output": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output"
+  },
+  "literature_anchor": [
+    {
+      "title": "The Overnight Drift",
+      "publisher": "Federal Reserve Bank of New York",
+      "series": "Staff Report No. 917",
+      "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr917.pdf?sc_lang=en",
+      "frozen_role": "The externally observed largest positive S&P 500 futures hour is 02:00..03:00 U.S. Eastern, around arrival of European market participants; the paper reports approximately 1.48 basis points per day and broad year, weekday and month signs."
+    },
+    {
+      "title": "The Overnight Drift in U.S. Equity Returns",
+      "publisher": "Federal Reserve Bank of New York Liberty Street Economics",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2021/05/the-overnight-drift-in-us-equity-returns/",
+      "frozen_role": "Public explanation of inventory resolution and demand for immediacy around overseas trader arrival."
+    }
+  ],
+  "immutable_inputs": {
+    "manifest_rule": "Sort relative-name|bytes|uppercase-SHA256 by relative name, join with LF, hash UTF-8 without trailing LF.",
+    "manifest_sha256": "48105EF2680FE9AA1FDC7CDCD4F2BD8C3E66A3F819C6697BB8BF1F8208ED778D",
+    "files": [
+      {
+        "name": "market/US100_H1.parquet",
+        "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/market/US100_H1.parquet",
+        "bytes": 688340,
+        "sha256": "084A7E4EDE916123A93BE46757B371BAEF8994F5B4651AA391328AB05FF32695",
+        "rows": 27029,
+        "first_utc": "2022-01-03T01:00:00+00:00",
+        "last_utc": "2026-07-31T23:00:00+00:00"
+      },
+      {
+        "name": "market/US30_H1.parquet",
+        "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/market/US30_H1.parquet",
+        "bytes": 632070,
+        "sha256": "2C8A8300E18529AB50D7853D80B0B12F5096A185DCEA8D16627229ED77036784",
+        "rows": 27026,
+        "first_utc": "2022-01-03T01:00:00+00:00",
+        "last_utc": "2026-07-31T23:00:00+00:00"
+      },
+      {
+        "name": "market/US500_H1.parquet",
+        "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/market/US500_H1.parquet",
+        "bytes": 618614,
+        "sha256": "F7B32DA88B0F64B185B51E7E4B1DB0F88D21F2019DE65210CFC799FABB96D311",
+        "rows": 27028,
+        "first_utc": "2022-01-03T01:00:00+00:00",
+        "last_utc": "2026-07-31T23:00:00+00:00"
+      },
+      {
+        "name": "spec/acquisition-receipt.json",
+        "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/spec/acquisition-receipt.json",
+        "bytes": 7552,
+        "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+      }
+    ]
+  },
+  "symbols": ["US30", "US100", "US500"],
+  "bar_files": {
+    "US30": "market/US30_H1.parquet",
+    "US100": "market/US100_H1.parquet",
+    "US500": "market/US500_H1.parquet"
+  },
+  "required_schema": {
+    "time": "int64",
+    "open": "double",
+    "high": "double",
+    "low": "double",
+    "close": "double",
+    "tick_volume": "uint64",
+    "spread": "int32",
+    "real_volume": "uint64"
+  },
+  "trade_spec": {
+    "point": 0.01,
+    "trade_contract_size": 1.0,
+    "trade_tick_size": 0.01,
+    "trade_tick_value": 0.01,
+    "volume": 0.01,
+    "starting_balance_usd": 100.0
+  },
+  "fixed_rule": {
+    "timezone": "America/New_York",
+    "date_range": ["2022-08-01", "2026-08-01"],
+    "eligible_day": "Monday through Friday with exactly one 02:00 and one 03:00 New York H1 open for every symbol; both timestamps must remain on the same New York calendar date.",
+    "direction": "LONG only for every symbol and eligible day. No direction selection or short/reversion book.",
+    "entry": "Exact 02:00 ET H1 open bid/ask proxy.",
+    "exit": "Exact 03:00 ET next H1 open bid/ask proxy.",
+    "bundle": "US30, US100 and US500 each trade 0.01 lot simultaneously. The three-index bundle is indivisible and no symbol or weight is selected post hoc.",
+    "starts_per_eligible_day": 3,
+    "overlap": "One simultaneous one-hour bundle; all legs close before another bundle may start.",
+    "no_threshold": true,
+    "no_direction_selection": true,
+    "dst_rule": "Convert UTC epochs with America/New_York and always use fixed 02:00..03:00 ET. The paper's Europe-clock-aligned asynchronous-DST variation is excluded rather than searched."
+  },
+  "fixed_cost_proxy": {
+    "gross_usd": "Long midpoint-to-midpoint P/L times contract size and volume.",
+    "observed_usd": "Exit bid minus entry ask, algebraically gross minus one half of entry-plus-exit full-spread burden.",
+    "stressed_usd": "Gross minus the full entry-plus-exit spread burden, i.e. doubled observed half-spread cost from midpoint.",
+    "binding": "stressed_usd",
+    "commission_swap_financing": "Zero in the fixed one-hour proxy; any retained seed would require native Tester economics in a later separately declared Optimization campaign."
+  },
+  "periods": {
+    "P1_2022H2_2023": {"from_inclusive": "2022-08-01", "to_exclusive": "2024-01-01", "role": "initial transfer; report 2022H2 and 2023 separately"},
+    "P2_2024": {"from_inclusive": "2024-01-01", "to_exclusive": "2025-01-01", "role": "first confirmation"},
+    "P3_2025": {"from_inclusive": "2025-01-01", "to_exclusive": "2026-01-01", "role": "second confirmation"},
+    "P4_2026_JAN_MAY": {"from_inclusive": "2026-01-01", "to_exclusive": "2026-06-01", "role": "third confirmation before latest holdout"},
+    "P5_LATEST_2026_JUN_JUL": {"from_inclusive": "2026-06-01", "to_exclusive": "2026-08-01", "role": "latest two completed months; nominal veto with predeclared practical marginal-loss allowance"}
+  },
+  "period_splits": {
+    "P1A_2022H2": {"from_inclusive": "2022-08-01", "to_exclusive": "2023-01-01"},
+    "P1B_2023": {"from_inclusive": "2023-01-01", "to_exclusive": "2024-01-01"},
+    "P2_P4_CONFIRMATION": {"from_inclusive": "2024-01-01", "to_exclusive": "2026-06-01"},
+    "P1_P4_PRELATEST": {"from_inclusive": "2022-08-01", "to_exclusive": "2026-06-01"},
+    "P1_P5_FULL": {"from_inclusive": "2022-08-01", "to_exclusive": "2026-08-01"}
+  },
+  "premetric_feasibility": {
+    "economic_columns_opened": false,
+    "common_eligible_all_dates": 1182,
+    "symbols": {
+      "US30": {"exact_02_rows": 1182, "exact_03_rows": 1182, "eligible_dates": 1182, "duplicate_utc": 0},
+      "US100": {"exact_02_rows": 1182, "exact_03_rows": 1182, "eligible_dates": 1182, "duplicate_utc": 0},
+      "US500": {"exact_02_rows": 1182, "exact_03_rows": 1182, "eligible_dates": 1182, "duplicate_utc": 0}
+    },
+    "periods": {
+      "P1_2022H2_2023": {"days": 366, "starts": 1098, "weekday_counts_mon0": [71, 73, 74, 74, 74], "months": 17},
+      "P1A_2022H2": {"days": 109, "starts": 327, "weekday_counts_mon0": [21, 22, 22, 22, 22], "months": 5},
+      "P1B_2023": {"days": 257, "starts": 771, "weekday_counts_mon0": [50, 51, 52, 52, 52], "months": 12},
+      "P2_2024": {"days": 259, "starts": 777, "weekday_counts_mon0": [52, 53, 51, 52, 51], "months": 12},
+      "P3_2025": {"days": 257, "starts": 771, "weekday_counts_mon0": [52, 52, 52, 51, 50], "months": 12},
+      "P4_2026_JAN_MAY": {"days": 106, "starts": 318, "weekday_counts_mon0": [21, 21, 21, 21, 22], "months": 5},
+      "P5_LATEST_2026_JUN_JUL": {"days": 45, "starts": 135, "weekday_counts_mon0": [9, 9, 9, 9, 9], "months": 2}
+    }
+  },
+  "economic_gates": {
+    "p1": {
+      "profit_factor_min": 1.05,
+      "net_to_drawdown_min": 1.25,
+      "positive_combined": true,
+      "positive_p1_splits": true,
+      "positive_each_symbol": true,
+      "positive_weekdays_min": 4,
+      "weekday_total": 5
+    },
+    "confirmation_p2_p4": {
+      "positive_each_combined_period": true,
+      "pooled_profit_factor_min": 1.05,
+      "pooled_net_to_drawdown_min": 1.25,
+      "positive_each_symbol_pooled": true,
+      "positive_symbol_period_cells_min": 7,
+      "symbol_period_cells_total": 9,
+      "positive_weekdays_min": 4,
+      "weekday_total": 5
+    },
+    "prelatest_p1_p4": {
+      "profit_factor_min": 1.075,
+      "net_to_drawdown_min": 1.5,
+      "nominal_max_drawdown_percent": 20.0,
+      "practical_max_drawdown_percent": 21.2,
+      "positive_months_min": 28,
+      "month_total": 46,
+      "maximum_top_five_positive_day_share": 0.35
+    },
+    "latest": {
+      "nominal_net_min_usd": 0.0,
+      "practical_floor_formula": "-0.25 * positive P1-P4 average stressed USD per eligible day * P5 eligible days",
+      "full_path_profit_factor_min": 1.05,
+      "full_path_net_positive": true
+    },
+    "verdicts": {
+      "nominal_pass": "PASS_RETAIN_ONE_FIXED_THREE_INDEX_EUROPE_OPEN_DRIFT_LAB_SEED",
+      "practical_pass": "PASS_PRACTICAL_MARGINAL_LATEST_OR_DD_RETAIN_ONE_FIXED_THREE_INDEX_EUROPE_OPEN_DRIFT_LAB_SEED",
+      "nonconfirmation": "VALID_NO_THREE_INDEX_EUROPE_OPEN_DRIFT_AFTER_COST_NO_SEED",
+      "ambiguous": "AMBIGUOUS_THREE_INDEX_EUROPE_OPEN_DRIFT_NO_SEED",
+      "correction": "CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT"
+    }
+  },
+  "outputs": {
+    "result": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/analysis-result.json",
+    "trades": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/trades.csv",
+    "days": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/output/bundle-days.csv"
+  },
+  "execution_contract": {
+    "formal_source_free_processes": 1,
+    "economic_aggregations": 1,
+    "direction_books": 1,
+    "threshold_points": 0,
+    "grid_points": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "engineering_correction_limit": null
+  },
+  "exclusions": [
+    "short, reversion or direction selection",
+    "01:00..02:00, 03:00..04:00, partial hour or any neighboring clock",
+    "Europe-clock-aligned asynchronous-DST variation or DST subgroup",
+    "weekday, month, holiday, volatility, trend, event or regime filter",
+    "single-symbol retention, deletion, substitution, weighting or notional normalization",
+    "entry threshold, return magnitude bucket or signal rank",
+    "stop, hold, sizing, capital, risk, ladder, admission, collision or existing-candidate integration change",
+    "bootstrap, significance rescue, grid, MQL, SET, compile, Tester, MT5, Master, Live or broker/account path"
+  ]
+}

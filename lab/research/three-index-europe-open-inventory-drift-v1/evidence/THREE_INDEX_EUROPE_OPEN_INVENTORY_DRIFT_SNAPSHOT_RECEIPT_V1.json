@@ -1,0 +1,66 @@
+{
+  "schema": "zeta-next-three-index-europe-open-inventory-drift-snapshot-receipt-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "LAB_OWNED_BYTE_EQUAL_INPUT_SNAPSHOT_FROZEN_ECONOMIC_OUTCOMES_UNOPENED",
+  "unit": "three-index-europe-open-inventory-drift-109",
+  "family": "three-index-europe-open-inventory-drift-v1",
+  "parent_main_commit": "0dd934acddc9a83e5ad682c1c61ada4560f329f0",
+  "copy_boundary": {
+    "mode": "one-time physical byte-equal copy with no links",
+    "source": "optimization/artifacts/raw/dd20-dual-portfolio-internal-formula-lattice-proxy-v1/market/",
+    "lab_owned_root": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/",
+    "formal_process_reads_source_lane_after_freeze": false,
+    "mql_set_ex5_runtime_log_or_state_copied": false,
+    "new_mt5_network_or_broker_calls": 0
+  },
+  "files": [
+    {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/market/US100_H1.parquet",
+      "bytes": 688340,
+      "sha256": "084A7E4EDE916123A93BE46757B371BAEF8994F5B4651AA391328AB05FF32695"
+    },
+    {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/market/US30_H1.parquet",
+      "bytes": 632070,
+      "sha256": "2C8A8300E18529AB50D7853D80B0B12F5096A185DCEA8D16627229ED77036784"
+    },
+    {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/market/US500_H1.parquet",
+      "bytes": 618614,
+      "sha256": "F7B32DA88B0F64B185B51E7E4B1DB0F88D21F2019DE65210CFC799FABB96D311"
+    },
+    {
+      "path": "lab/artifacts/raw/three-index-europe-open-inventory-drift-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    }
+  ],
+  "totals": {
+    "files": 4,
+    "bytes": 1946576,
+    "ordered_relative_name_bytes_sha256_manifest": "48105EF2680FE9AA1FDC7CDCD4F2BD8C3E66A3F819C6697BB8BF1F8208ED778D"
+  },
+  "frozen_process": {
+    "config_path": "lab/research/three-index-europe-open-inventory-drift-v1/config/contract.json",
+    "config_bytes": 10849,
+    "config_sha256": "6F0C07E86A22660DFB565C6D2DAEACBC8DF882E598BE8E4A017F21704A9FE387",
+    "analysis_path": "lab/research/three-index-europe-open-inventory-drift-v1/analysis/run_analysis.py",
+    "analysis_bytes": 24950,
+    "analysis_sha256": "1BF04FF899DD50E4BCEBD2B6B5097A8D68B759D416C4098BA079C3321159D896"
+  },
+  "outcome_free_scan": {
+    "columns_opened": ["time"],
+    "price_or_spread_rows_opened": false,
+    "economic_metric_opened": false,
+    "common_eligible_all_dates": 1182,
+    "research_period_days": 1033,
+    "research_period_starts": 3099,
+    "p1_days": 366,
+    "p2_days": 259,
+    "p3_days": 257,
+    "p4_days": 106,
+    "p5_days": 45
+  },
+  "later_economics_consumed": false,
+  "optimization_candidate_or_live_authority": false
+}
