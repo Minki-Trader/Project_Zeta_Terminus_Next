@@ -1,0 +1,29 @@
+{
+  "schema": "zeta-dd20-portfolio-occupancy-exposure-design-correction-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "PRE_RESULT_SOURCE_EXECUTABLE_STEP_AUTHORITY_CORRECTED_NO_ECONOMIC_VERDICT",
+  "campaign": "dd20-portfolio-occupancy-exposure-proxy-v1",
+  "attempt": {
+    "process_exit_code": 1,
+    "stopped_at": "selection control volume identity on 2025-05-12 15:00",
+    "condition": "The lifecycle close totals do not preserve the transaction-level settlement precision used by the MT5 daily $150 volume-ladder boundary. Reconstructing the ladder from close totals requested 0.23 lot where the immutable source birth was 0.22 lot.",
+    "complete_selection_candidate_metrics": 0,
+    "forward_opened": false,
+    "raw_result_written": false,
+    "economic_verdict": false
+  },
+  "correction": {
+    "old_config_bytes": 5262,
+    "old_config_sha256": "E0B9F334DBA3C0B9B42E3B7E7D806513BA35F6F52140B7C69857FACD00715400",
+    "new_config_bytes": 5327,
+    "new_config_sha256": "42FF7D9F89DAC656D9A7AEB2A0B6152E51B73402EF79B7DA7662369752E47ABE",
+    "old_script_bytes": 33547,
+    "old_script_sha256": "EC5F3E8C9F3B8C7FB64868A5CD8B3EBE88E3598F09869D5CAF285C055BEA4FA2",
+    "new_script_bytes": 33044,
+    "new_script_sha256": "9DCC93E811F6F25C34B40A56EE01C78D7D4FDC94D73A8177B252711A8BC5450E",
+    "change": "Treat each immutable source birth's executable steps as the fixed base path and apply the already-declared occupancy factor with positive MathRound semantics. Planned risk and fixed natural-close economics scale by the same executable-step ratio.",
+    "reason": "This representation preserves the exact control and uses only information the copied lifecycle evidence actually owns. Full capital-ladder feedback remains reserved for MT5 if one proxy role qualifies.",
+    "input_grid_occupancy_state_signal_risk_cap_exit_cost_gate_ranking_or_holdout_changed": false
+  },
+  "classification": "DESIGN_CORRECTION_NOT_RESEARCH_OR_OPTIMIZATION_FAILURE"
+}

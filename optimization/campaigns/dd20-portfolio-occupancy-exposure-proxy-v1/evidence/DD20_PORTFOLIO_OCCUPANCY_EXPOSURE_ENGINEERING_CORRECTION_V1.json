@@ -1,0 +1,24 @@
+{
+  "schema": "zeta-dd20-portfolio-occupancy-exposure-engineering-correction-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "PRE_RESULT_CLOSE_VOLUME_SOURCE_CORRECTED_NO_ECONOMIC_VERDICT",
+  "campaign": "dd20-portfolio-occupancy-exposure-proxy-v1",
+  "attempt": {
+    "process_exit_code": 1,
+    "stopped_at": "the first selection CLOSE scale calculation",
+    "condition": "The paired lifecycle ledger stores executable volume on BIRTH rows and zero in every CLOSE-row volume field. The new script incorrectly divided by the CLOSE-row field.",
+    "complete_selection_candidate_metrics": 0,
+    "forward_opened": false,
+    "raw_result_written": false,
+    "economic_verdict": false
+  },
+  "correction": {
+    "old_script_bytes": 33564,
+    "old_script_sha256": "F2C76534C4A8F2DB83932E58EF9D5122126EEA67A54D1FB0FE40EF141F4A8580",
+    "new_script_bytes": 33547,
+    "new_script_sha256": "EC5F3E8C9F3B8C7FB64868A5CD8B3EBE88E3598F09869D5CAF285C055BEA4FA2",
+    "change": "Scale CLOSE economics by candidate target steps divided by the source steps already frozen from the matching BIRTH row.",
+    "input_config_grid_signal_occupancy_risk_exit_cost_gate_or_ranking_changed": false
+  },
+  "classification": "ENGINEERING_CORRECTION_NOT_RESEARCH_OR_OPTIMIZATION_FAILURE"
+}

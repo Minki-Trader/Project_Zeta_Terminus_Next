@@ -5,7 +5,7 @@ Last updated: 2026-08-30
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0381`
+- Latest state ID: `STATE-0382`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -27,7 +27,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; `lab/engineering/paired-month-live-replacement-handoff-v1/` is closed verified. The fixed paired-month implementation compiled at build 6140 with `0 errors / 0 warnings`, reproduced selection `+$5,786.64 / +$5,477.564` across `1,428` closes and forward `+$32.75 / +$30.628` across `54` closes, then passed bounded connected entries-disabled create/recovery at sequences `2 / 4` with entries `0/0`, flat zero-risk state and zero fault before normal stops. The candidate is ready only for a later separately authorized Live translation; current RLO1 package/runtime/state/logs remain unchanged.
 - Active research boundary: none; Program 1 / meso→micro correction Unit 105 `us500-shock-response-environment-correction-v1` is closed `FAIL_US500_SHOCK_RESPONSE_NO_DIRECTION_NO_SEED`. The valid fixed proxy reproduced all `1,264` parent P1 M15 signal coordinates and pooled `3,446` opportunities, but continuation/reversion observed nets were `-$16.7491 / -$13.2710` and doubled-spread nets were `-$46.7692 / -$43.2911`; both directions lost in all four periods and passed `0/5` economic gates. No seed, MT5 clue, adjacent shock-response rescue, Optimization candidate, MQL or Live authority exists.
-- Active optimization boundary: none; source-free `dd20-paired-month-component-state-combination-proxy-v1` remains closed `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST_COMPONENT_STATE_COMBINATION_NONCONFIRMATION`. The exact fixed state role made `64` non-neutral decisions across five components but displaced nine Cross admissions, reducing gross actual/stressed by `$187.0011 / $179.2354`; conservative deltas were `-$282.3884 / -$274.1520` and budgeted DD was `21.732774%`. Forward and the current three-close Live-Dev snapshot remained exactly neutral. No adjacent state/admission rescue exists; the paired-month anchor is fixed and its separate Lab engineering handoff is now closed verified, so Optimization returns to a whole-map comparison.
+- Active optimization boundary: none; source-free `dd20-portfolio-occupancy-exposure-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE_PORTFOLIO_OCCUPANCY_EXPOSURE_PROFIT_DD_DISJOINT`. The exact control's empty/occupied cohorts were both strongly profitable. Eight of `24` noncontrols conservatively improved profit, but DD passed `0/24`; the nearest empty `1.125` / occupied `1` role remained `+$90.717 / +$90.581` conservatively above the anchor while budgeted DD reached `22.468569%`, beyond the pragmatic `21.2%` proxy screen. Candidate June/July outcomes and MT5 remained unopened. No adjacent occupancy factor, subgroup, partial-admission or skipped-signal rescue exists; the paired-month anchor and its closed verified Lab development candidate remain fixed while Optimization returns to a whole-map comparison.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

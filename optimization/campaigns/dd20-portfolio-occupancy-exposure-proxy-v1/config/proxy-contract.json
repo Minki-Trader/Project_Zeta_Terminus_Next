@@ -1,0 +1,125 @@
+{
+  "schema": "zeta-dd20-portfolio-occupancy-exposure-proxy-contract-v1",
+  "campaign": "dd20-portfolio-occupancy-exposure-proxy-v1",
+  "parent_main_commit": "68c3eb8bc2f8759a9c548e7d077a745963242440",
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-portfolio-occupancy-exposure-proxy-v1/input",
+    "files": [
+      {
+        "name": "selection-lifecycles.csv",
+        "bytes": 2685969,
+        "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"
+      },
+      {
+        "name": "forward-lifecycles.csv",
+        "bytes": 92997,
+        "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E"
+      }
+    ],
+    "bytes_total": 2778966
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "paired_month_anchor": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "reference_capital_usd": 100.0,
+    "addition_step_usd": 150.0,
+    "volume_step_lots": 0.01,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "aggregate_tolerance_usd": 0.01,
+    "selection": {
+      "lifecycle_file": "selection-lifecycles.csv",
+      "births": 1428,
+      "closes": 1428,
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524,
+      "native_relative_equity_drawdown_pct": 20.256887565152653
+    },
+    "forward": {
+      "lifecycle_file": "forward-lifecycles.csv",
+      "births": 54,
+      "closes": 54,
+      "actual_net_usd": 32.74,
+      "stressed_net_usd": 30.626,
+      "native_relative_equity_drawdown_pct": 18.675302129932568
+    }
+  },
+  "occupancy_rule": {
+    "state": "candidate admitted open-position count immediately before each frozen source birth",
+    "empty_book_condition": "candidate admitted open-position count equals zero",
+    "occupied_book_condition": "candidate admitted open-position count is at least one",
+    "empty_book_factors": [1.0, 1.125, 1.25, 1.375, 1.5],
+    "occupied_book_factors": [0.0, 0.25, 0.5, 0.75, 1.0],
+    "control_factors": [1.0, 1.0],
+    "candidate_count_including_control": 25,
+    "noncontrol_candidate_count": 24,
+    "factor_application": "MathRound(the exact source executable volume steps times the causal occupancy factor) to 0.01-lot steps; the source steps retain the frozen daily capital ladder and component weight path",
+    "source_opportunities_only": true,
+    "source_skipped_opportunity_replacement": false
+  },
+  "outcome_free_structure": {
+    "selection_births_by_source_post_entry_active_slots": {"1": 928, "2": 500},
+    "selection_epochs": [
+      {"id": "E1", "births": 298, "slots_1": 199, "slots_2": 99},
+      {"id": "E2", "births": 371, "slots_1": 241, "slots_2": 130},
+      {"id": "E3", "births": 381, "slots_1": 245, "slots_2": 136},
+      {"id": "E4", "births": 378, "slots_1": 243, "slots_2": 135}
+    ],
+    "selection_components_with_empty_book_births": 5,
+    "selection_components_with_occupied_book_births": 4,
+    "forward_births_by_source_post_entry_active_slots": {"1": 41, "2": 13}
+  },
+  "selection_periods": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "forward_periods": [
+    {"id": "FULL", "start": "2026.06.01 00:00:00", "end": "2026.08.01 00:00:00"},
+    {"id": "JUNE", "start": "2026.06.01 00:00:00", "end": "2026.07.01 00:00:00"},
+    {"id": "JULY", "start": "2026.07.01 00:00:00", "end": "2026.08.01 00:00:00"}
+  ],
+  "selection_gates": {
+    "minimum_modified_birth_decisions": 100,
+    "minimum_admitted_fraction_of_control": 0.80,
+    "maximum_prior_adverse_proxy_overstatement_actual_usd": 255.6802,
+    "maximum_prior_adverse_proxy_overstatement_stressed_usd": 234.2145,
+    "new_occupancy_uncertainty_reserve_usd": 25.0,
+    "new_mechanism_drawdown_reserve_percentage_points": 0.25,
+    "nominal_drawdown_line_pct": 20.0,
+    "maximum_proxy_screening_drawdown_pct": 21.2,
+    "all_four_epochs_actual_and_stressed_positive": true,
+    "strict_conservative_actual_and_stressed_profit_improvement": true,
+    "selection_ranking": [
+      "maximum conservative stressed net",
+      "maximum conservative actual net",
+      "minimum budgeted drawdown",
+      "smaller total absolute factor departure from control",
+      "higher empty-book factor",
+      "higher occupied-book factor"
+    ],
+    "maximum_forward_candidate": 1
+  },
+  "forward_gates": {
+    "maximum_actual_net_degradation_vs_anchor_usd": 5.0,
+    "maximum_stressed_net_degradation_vs_anchor_usd": 5.0,
+    "june_actual_and_stressed_positive": true,
+    "minimum_july_actual_net_usd": -2.0,
+    "minimum_july_stressed_net_usd": -3.0,
+    "minimum_admitted_fraction_of_control": 0.80,
+    "new_mechanism_drawdown_reserve_percentage_points": 0.25,
+    "maximum_proxy_screening_drawdown_pct": 21.2,
+    "maximum_mt5_shortlist": 1
+  },
+  "output": {
+    "path": "optimization/artifacts/raw/dd20-portfolio-occupancy-exposure-proxy-v1/output/proxy-result.json"
+  }
+}

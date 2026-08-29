@@ -1,0 +1,147 @@
+{
+  "schema": "zeta-dd20-portfolio-occupancy-exposure-proxy-result-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "VALID_PROXY_COMPLETE_NO_SELECTION_ELIGIBLE_PORTFOLIO_OCCUPANCY_EXPOSURE_PROFIT_DD_DISJOINT",
+  "campaign": "dd20-portfolio-occupancy-exposure-proxy-v1",
+  "parent_main_commit": "68c3eb8bc2f8759a9c548e7d077a745963242440",
+  "evidence_pins": {
+    "config": {"bytes": 5327, "sha256": "42FF7D9F89DAC656D9A7AEB2A0B6152E51B73402EF79B7DA7662369752E47ABE"},
+    "script": {"bytes": 33044, "sha256": "9DCC93E811F6F25C34B40A56EE01C78D7D4FDC94D73A8177B252711A8BC5450E"},
+    "snapshot_receipt": {"bytes": 2811, "sha256": "C15DEEEB769BF4741E41D742689DBF60798EA9C0D3CF7B4E048F2A457062B9C8"},
+    "declaration": {"bytes": 7235, "sha256": "E1A9A692AEC49F695652B6F77938FD12E68E61591CB2E0F1B3DEFADFF5ED8A08"},
+    "engineering_correction": {"bytes": 1276, "sha256": "A1BC3F291A64FCFDAA0A804BA261089BECAD83A1479473BF3F008DA877A9A015"},
+    "design_correction": {"bytes": 1971, "sha256": "4A0E968258E08C911443016D5A6AC24296D52824980858BC13225C4511E21911"}
+  },
+  "input": {
+    "campaign_owned_files": 2,
+    "bytes": 2778966,
+    "bundle_manifest_sha256": "466EC0A4AA3A15FF1DF863679D873A4277260D883E4630A2A0D99248A4F80ED3",
+    "selection_lifecycle_sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+    "forward_lifecycle_sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+    "hashes_and_bytes_match": true,
+    "selection_births": 1428,
+    "selection_closes": 1428,
+    "source_post_entry_slots": {"1": 928, "2": 500},
+    "forward_births": 54,
+    "forward_source_post_entry_slots": {"1": 41, "2": 13}
+  },
+  "execution": {
+    "process_invocations": 3,
+    "incomplete_pre_result_engineering_or_design_invocations": 2,
+    "complete_valid_economic_processes": 1,
+    "economic_metric_reruns": 0,
+    "complete_process_exit_code": 0,
+    "complete_internal_wall_time_seconds": 0.2054938,
+    "selection_paths_including_control": 25,
+    "noncontrol_selection_paths": 24,
+    "forward_candidate_paths": 0,
+    "mt5_paths": 0,
+    "correction_interpretation": "The first invocation stopped at the first CLOSE because CLOSE rows intentionally carry zero volume; the second stopped at an unavailable transaction-precision capital-ladder reconstruction boundary. Neither wrote a result or completed one candidate. The corrected fixed-source-step proxy then produced the sole complete valid economic output."
+  },
+  "control": {
+    "factors_empty_occupied": [1.0, 1.0],
+    "actual_net_usd": 5786.63,
+    "stressed_net_usd": 5477.524,
+    "raw_worse_closed_balance_drawdown_pct": 20.4010291664,
+    "admitted_lifecycles": 1428,
+    "risk_skips": 0,
+    "zero_step_skips": 0,
+    "modified_birth_decisions": 0,
+    "exact_source_volume_admission_and_economic_reproduction": true,
+    "occupancy_economics": {
+      "empty_book": {"births": 928, "actual_net_usd": 3405.42, "stressed_net_usd": 3197.325},
+      "occupied_book": {"births": 500, "actual_net_usd": 2381.21, "stressed_net_usd": 2280.199}
+    }
+  },
+  "selection_funnel": {
+    "noncontrol_paths": 24,
+    "minimum_modified_birth_decisions_passed": 24,
+    "minimum_80pct_admission_passed": 19,
+    "positive_capital_passed": 24,
+    "all_four_epochs_actual_and_stressed_positive_passed": 20,
+    "strict_conservative_actual_profit_improvement_passed": 8,
+    "strict_conservative_stressed_profit_improvement_passed": 8,
+    "proxy_drawdown_screen_passed": 0,
+    "complete_selection_eligible": 0
+  },
+  "nearest_complete_non_dd_path": {
+    "empty_book_factor": 1.125,
+    "occupied_book_factor": 1.0,
+    "actual_net_usd": 6158.0269529831,
+    "stressed_net_usd": 5827.3194123329,
+    "gross_delta_vs_anchor_actual_usd": 371.3969529831,
+    "gross_delta_vs_anchor_stressed_usd": 349.7954123327,
+    "conservative_actual_net_usd": 5877.3467529831,
+    "conservative_stressed_net_usd": 5568.1049123329,
+    "conservative_delta_vs_anchor_actual_usd": 90.7167529831,
+    "conservative_delta_vs_anchor_stressed_usd": 90.5809123327,
+    "admitted_lifecycles": 1396,
+    "risk_skips": 32,
+    "zero_step_skips": 0,
+    "modified_birth_decisions": 741,
+    "all_four_epochs_actual_and_stressed_positive": true,
+    "raw_worse_closed_balance_drawdown_pct": 22.3627104049,
+    "adverse_raw_drawdown_delta_percentage_points": 1.9616812385,
+    "budgeted_drawdown_pct": 22.4685688037,
+    "nominal_20pct_excess_percentage_points": 2.4685688037,
+    "proportional_excess_pct_of_nominal_line": 12.3428440185,
+    "proxy_21_2pct_screen_excess_percentage_points": 1.2685688037,
+    "failed_gate": "proxy_drawdown_screen"
+  },
+  "maximum_profit_path": {
+    "empty_book_factor": 1.5,
+    "occupied_book_factor": 1.0,
+    "actual_net_usd": 7403.676565812,
+    "stressed_net_usd": 6996.5968950805,
+    "gross_delta_vs_anchor_actual_usd": 1617.046565812,
+    "gross_delta_vs_anchor_stressed_usd": 1519.0728950803,
+    "conservative_actual_net_usd": 7122.996365812,
+    "conservative_stressed_net_usd": 6737.3823950805,
+    "admitted_lifecycles": 1376,
+    "risk_skips": 52,
+    "all_four_epochs_actual_and_stressed_positive": true,
+    "raw_worse_closed_balance_drawdown_pct": 27.0002189795,
+    "budgeted_drawdown_pct": 27.1060773782,
+    "failed_gate": "proxy_drawdown_screen"
+  },
+  "occupied_book_suppression_diagnostic": {
+    "path": "empty 1.0 / occupied 0.75",
+    "actual_net_usd": 5171.9687804547,
+    "stressed_net_usd": 4889.4212804548,
+    "delta_vs_anchor_actual_usd": -614.6612195453,
+    "delta_vs_anchor_stressed_usd": -588.1027195454,
+    "budgeted_drawdown_pct": 24.229314213,
+    "interpretation": "The already-occupied cohort is strongly profitable in the exact control. Even the mild global suppression removes profit and worsens the relative closed-balance path, so overlap is not an identified harmful exposure class."
+  },
+  "economic_interpretation": {
+    "profit_and_drawdown_frontiers_intersect": false,
+    "every_noncontrol_drawdown_gate_failed": true,
+    "profitable_empty_book_scaling_clue": "Boosting empty-book births raises profit, but the smallest 1.125 factor already pushes budgeted DD to 22.468569%, materially beyond the 21.2% pragmatic proxy ceiling.",
+    "occupied_book_harm_hypothesis_confirmed": false,
+    "classification": "GLOBAL_OCCUPANCY_EXPOSURE_PROFIT_DD_DISJOINT_NO_SELECTION_WINNER",
+    "candidate_failure": true,
+    "engineering_or_environment_failure": false
+  },
+  "holdout_and_mt5_boundary": {
+    "forward_input_hash_verified": true,
+    "candidate_forward_outcomes_opened": false,
+    "reason": "No noncontrol selection path passed the complete frozen selection funnel.",
+    "mt5_shortlist_size": 0,
+    "mql_or_settings_created": false,
+    "compile_or_strategy_tester_started": false,
+    "adjacent_occupancy_factor_or_subgroup_rescue_allowed": false
+  },
+  "raw_output": {
+    "path": "optimization/artifacts/raw/dd20-portfolio-occupancy-exposure-proxy-v1/output/proxy-result.json",
+    "bytes": 176924,
+    "sha256": "A847BB07F54C6E95280D7373EDD4B77C8CFFB6C99E9B072AA834695D0E71CF4A"
+  },
+  "boundary": {
+    "live_modified": false,
+    "lab_modified": false,
+    "master_started": false,
+    "broker_or_account_positions_orders_deals_queried": false,
+    "tests_or_validators_added": false,
+    "automatic_live_promotion": false
+  }
+}

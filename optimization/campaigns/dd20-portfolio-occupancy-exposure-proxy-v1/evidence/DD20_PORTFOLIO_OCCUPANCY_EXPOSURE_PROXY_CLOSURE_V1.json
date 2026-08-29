@@ -1,0 +1,55 @@
+{
+  "schema": "zeta-dd20-portfolio-occupancy-exposure-proxy-closure-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "CLOSED_VALID_ECONOMIC_NONCONFIRMATION_NO_MT5_SHORTLIST",
+  "campaign": "dd20-portfolio-occupancy-exposure-proxy-v1",
+  "result": {
+    "path": "optimization/campaigns/dd20-portfolio-occupancy-exposure-proxy-v1/evidence/DD20_PORTFOLIO_OCCUPANCY_EXPOSURE_PROXY_RESULT_V1.json",
+    "bytes": 7305,
+    "sha256": "364D5A72B6CF58C3A33F82727DFDCF5F04589F854D21B7DCABB8292B1F6AEEF2",
+    "classification": "GLOBAL_OCCUPANCY_EXPOSURE_PROFIT_DD_DISJOINT_NO_SELECTION_WINNER"
+  },
+  "closed_question": {
+    "hypothesis": "Concentrate executable exposure in an empty portfolio and discount births stacked on existing exposure.",
+    "complete_noncontrol_paths": 24,
+    "selection_eligible_paths": 0,
+    "forward_paths": 0,
+    "mt5_shortlist": 0,
+    "verdict": "The exact occupied-book cohort is strongly profitable, global occupied-book suppression loses profit and worsens DD, and every profitable empty-book boost breaches the predeclared DD screen."
+  },
+  "engineering_boundary": {
+    "incomplete_pre_result_invocations": 2,
+    "complete_valid_economic_processes": 1,
+    "economic_metric_reruns": 0,
+    "corrections": [
+      "Use source BIRTH steps rather than zero CLOSE-row volume as the fixed scaling denominator.",
+      "Use immutable source executable steps as the fixed base path because lifecycle close totals do not preserve MT5 transaction-level ladder-boundary precision."
+    ],
+    "corrections_counted_as_economic_failures": false
+  },
+  "frozen_neighborhood": [
+    "empty-book or occupied-book factor interpolation or extension",
+    "component, symbol, direction, epoch, session or event occupancy subgroup",
+    "admission replacement, delayed retry, partial-fill or skipped-opportunity synthesis",
+    "risk-cap, stop, exit, ladder or static-weight rescue attached to this occupancy rule",
+    "rerun of the paired-month anchor or any of these 25 proxy paths"
+  ],
+  "preserved_artifacts": {
+    "input_files": 2,
+    "input_bytes": 2778966,
+    "input_bundle_manifest_sha256": "466EC0A4AA3A15FF1DF863679D873A4277260D883E4630A2A0D99248A4F80ED3",
+    "raw_result_bytes": 176924,
+    "raw_result_sha256": "A847BB07F54C6E95280D7373EDD4B77C8CFFB6C99E9B072AA834695D0E71CF4A",
+    "retention": "Useful ignored immutable input and complete raw economic output remain preserved; no runtime or reproducible cache was created."
+  },
+  "authority": {
+    "paired_month_anchor_changed": false,
+    "fixed_live_replacement_development_candidate_changed": false,
+    "live_or_lab_authority_created": false,
+    "mql_or_settings_created": false,
+    "strategy_tester_started": false,
+    "broker_or_account_query": false
+  },
+  "successor_boundary": "Return to a complete Optimization map comparison. Do not continue automatically into another occupancy factor, occupancy subgroup, partial admission, skipped-signal reconstruction or an adjacent exposure-stacking rescue. Any successor must be economically distinct and proxy-first; the paired-month anchor and closed Lab development candidate remain fixed.",
+  "marker": "DD20_PORTFOLIO_OCCUPANCY_EXPOSURE_PROXY_V1_CLOSED_VALID_PROFIT_DD_DISJOINT_NO_MT5_SHORTLIST"
+}
