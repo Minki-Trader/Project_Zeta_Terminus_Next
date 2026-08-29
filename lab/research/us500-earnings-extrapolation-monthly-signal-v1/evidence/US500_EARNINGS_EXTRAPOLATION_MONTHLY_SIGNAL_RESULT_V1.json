@@ -1,0 +1,432 @@
+{
+  "schema": "zeta-next-us500-earnings-extrapolation-monthly-signal-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "UNIT_112_COMPLETE_VALID_AMBIGUOUS_TEMPORAL_REVERSAL_NO_SEED",
+  "unit": "us500-earnings-extrapolation-monthly-signal-112",
+  "family": "us500-earnings-extrapolation-monthly-signal-v1",
+  "declaration": {
+    "commit": "048896fcd425ae80f793f2094c7dd93430a4b919",
+    "origin_main_before_target_economics": true,
+    "path": "lab/research/us500-earnings-extrapolation-monthly-signal-v1/evidence/US500_EARNINGS_EXTRAPOLATION_MONTHLY_SIGNAL_DECLARATION_V1.json",
+    "bytes": 21337,
+    "sha256": "C33ACD7EBC7AC6FA36A986730F0551448F726E75947755220FC49C16F5FEE7D7"
+  },
+  "execution": {
+    "premetric_invocations": 2,
+    "complete_premetric_invocations": 1,
+    "premetric_corrections": 2,
+    "formal_invocations": 1,
+    "complete_economic_aggregations": 1,
+    "post_declaration_engineering_corrections": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "formal_elapsed_seconds": 4.20494730000064,
+    "source_free_formal_process": true,
+    "threshold_or_grid_points": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths_after_declaration": 0,
+    "tests_or_validators": 0,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "integrity": {
+    "input_files": 6,
+    "input_bytes": 7192332,
+    "input_manifest_sha256": "A7E6AD82FAD2A01A72BCE53AE4083B2AC82887487D71716390583DDB85E7ECE2",
+    "author_rows": 1147,
+    "author_nonmissing_returns": 1146,
+    "author_range": "1925-12 through 2021-06",
+    "broker_d1_rows": 1351,
+    "broker_d1_range_utc": "2021-06-01 through 2026-08-21",
+    "combined_months": 1208,
+    "combined_range": "1925-12 through completed 2026-07",
+    "target_months": 49,
+    "target_range": "2022-07 through 2026-07",
+    "strictly_causal_expanding_regressions": true,
+    "minimum_training_observations": 1147,
+    "maximum_training_observations": 1195,
+    "expanding_beta_min": 0.11613068808545035,
+    "expanding_beta_max": 0.12007290487659421,
+    "official_target_sessions": 1024,
+    "eligible_sessions": 1017,
+    "days_by_period": {
+      "P1_2022H2_2023": 374,
+      "P2_2024": 250,
+      "P3_2025": 248,
+      "P4_2026_JAN_MAY": 102,
+      "P5_LATEST_2026_JUN_JUL": 43
+    },
+    "primary_direction_days": {
+      "LONG": 502,
+      "SHORT": 515,
+      "FLAT": 0
+    },
+    "target_type_days": {
+      "NEWSY": 359,
+      "NON_NEWSY": 658
+    },
+    "primary_no_flip_direction_disagreement_days": 359,
+    "density_passed": true,
+    "zero_entry_spread_rows_primary": 2,
+    "zero_exit_spread_rows_primary": 0,
+    "zero_entry_spread_details": [
+      {
+        "date": "2022-09-13",
+        "direction": "SHORT",
+        "target_type": "NON_NEWSY",
+        "stressed_usd": 1.4309999999999992
+      },
+      {
+        "date": "2023-04-28",
+        "direction": "SHORT",
+        "target_type": "NEWSY",
+        "stressed_usd": -0.44049999999999273
+      }
+    ],
+    "zero_spread_interpretation": "Any missing positive spread burden would reduce observed and stressed P/L for either direction, so the two optimistic entry records cannot create a pass."
+  },
+  "full_primary_economics": {
+    "gross": {
+      "net_usd": 4.16985000000011,
+      "profit_factor": 1.03102180345828,
+      "closed_drawdown_percent": 11.7247000000002,
+      "net_to_drawdown": 0.355646626352917,
+      "mean_usd_per_day": 0.00410014749262547
+    },
+    "observed": {
+      "net_usd": -0.245999999999891,
+      "profit_factor": 0.998199001544028,
+      "closed_drawdown_percent": 13.9347,
+      "net_to_drawdown": -0.0176537708023776,
+      "mean_usd_per_day": -0.000241887905604613
+    },
+    "stressed": {
+      "net_usd": -4.6618499999999,
+      "profit_factor": 0.966410425640147,
+      "closed_drawdown_percent": 17.5946999999999,
+      "net_to_drawdown": -0.264957629286087,
+      "mean_usd_per_day": -0.00458392330383471,
+      "win_rate": 0.4945919370698132
+    },
+    "observed_cost_burden_usd": 4.41585,
+    "stressed_cost_burden_usd": 8.83170000000001,
+    "observed_cost_burden_percent_of_gross_net": 105.899492787508,
+    "stressed_cost_burden_percent_of_gross_net": 211.798985575015,
+    "interpretation": "The source direction has a small positive gross edge, but executable observed bid/ask already turns it negative and doubled cost deepens the loss. Cost matters, but it is not the only rejection because chronology and control comparisons also fail before or independently of cost."
+  },
+  "period_economics": {
+    "P1_2022H2_2023": {
+      "days": 374,
+      "gross_observed_stressed_usd": [
+        13.7838000000001,
+        11.9186000000001,
+        10.0534000000001
+      ],
+      "stressed_profit_factor": 1.25692045059596,
+      "stressed_closed_drawdown_percent": 5.52475000000001,
+      "stressed_net_to_drawdown": 1.81970224897055,
+      "stressed_mean_usd_per_day": 0.0268807486631018
+    },
+    "P2_2024": {
+      "days": 250,
+      "gross_observed_stressed_usd": [
+        -5.60874999999999,
+        -6.71989999999999,
+        -7.83104999999999
+      ],
+      "stressed_profit_factor": 0.748120808607131,
+      "stressed_closed_drawdown_percent": 9.28054999999991,
+      "stressed_net_to_drawdown": -0.843813136074917
+    },
+    "P3_2025": {
+      "days": 248,
+      "gross_observed_stressed_usd": [
+        0.768800000000057,
+        -0.308199999999941,
+        -1.38519999999995
+      ],
+      "stressed_profit_factor": 0.965280162420264,
+      "stressed_closed_drawdown_percent": 9.00090000000003,
+      "stressed_net_to_drawdown": -0.153895721538951
+    },
+    "P4_2026_JAN_MAY": {
+      "days": 102,
+      "gross_observed_stressed_usd": [
+        -3.06850000000004,
+        -3.32350000000004,
+        -3.57850000000004
+      ],
+      "stressed_profit_factor": 0.822588321616609,
+      "stressed_closed_drawdown_percent": 5.78430000000002,
+      "stressed_net_to_drawdown": -0.618657400204006
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "days": 43,
+      "gross_observed_stressed_usd": [
+        -1.70549999999998,
+        -1.81299999999998,
+        -1.92049999999998
+      ],
+      "stressed_profit_factor": 0.774074771192624,
+      "stressed_closed_drawdown_percent": 3.63309999999997,
+      "stressed_net_to_drawdown": -0.528611929206463
+    }
+  },
+  "p1_diagnosis": {
+    "stressed_splits_usd": {
+      "2022H2": 7.88825000000004,
+      "2023H1": 2.80659999999997,
+      "2023H2": -0.641449999999942
+    },
+    "gross_observed_stressed_2023H2_usd": [
+      0.597250000000059,
+      -0.022099999999942,
+      -0.641449999999942
+    ],
+    "stressed_target_type_usd": {
+      "NEWSY": 4.57630000000002,
+      "NON_NEWSY": 5.47710000000004
+    },
+    "stressed_direction_usd": {
+      "LONG": 6.72355000000002,
+      "SHORT": 3.32985000000005
+    },
+    "stressed_controls_usd": {
+      "PRIMARY": 10.0534000000001,
+      "NO_FLIP": -1.53119999999998,
+      "LONG_ONLY": 0.492299999999967
+    },
+    "primary_minus_no_flip_usd": 11.5846,
+    "primary_minus_long_only_usd": 9.5611,
+    "gate_summary": "P1 passes net, PF, net/DD, both target types, both directions and both control comparisons, but fails the mandatory all-three-splits rule because the effect is already stressed-negative in 2023H2."
+  },
+  "confirmation_diagnosis": {
+    "positive_primary_periods": 0,
+    "required_positive_primary_periods": 3,
+    "positive_target_type_period_cells": 1,
+    "required_positive_target_type_period_cells": 5,
+    "sole_positive_target_type_period_cell": {
+      "cell": "NON_NEWSY:P4_2026_JAN_MAY",
+      "stressed_usd": 1.30889999999996,
+      "profit_factor": 1.11571307330528,
+      "days": 61
+    },
+    "primary_mean_above_both_controls_periods": 1,
+    "required_primary_mean_above_both_controls_periods": 2,
+    "sole_relative_control_win": "P3_2025, where all three stressed paths remain negative",
+    "p2_target_type_stressed_usd": {
+      "NEWSY": -2.86554999999994,
+      "NON_NEWSY": -4.96550000000005
+    },
+    "p3_target_type_stressed_usd": {
+      "NEWSY": -0.0607000000000965,
+      "NON_NEWSY": -1.32449999999985
+    },
+    "p4_target_type_stressed_usd": {
+      "NEWSY": -4.8874,
+      "NON_NEWSY": 1.30889999999996
+    },
+    "p4_control_contrast_stressed_usd": {
+      "PRIMARY": -3.57850000000004,
+      "NO_FLIP": 5.78629999999996,
+      "LONG_ONLY": 5.78629999999996,
+      "primary_minus_each_control": -9.3648
+    },
+    "interpretation": "The source target-newsy flip is strongly adverse in early 2026; same-beta no-flip equals LONG_ONLY and is profitable while primary loses. This is diagnostic evidence against the transferred flip, not authority to promote the no-flip control or a long-only rewrite."
+  },
+  "prelatest_diagnosis": {
+    "days": 974,
+    "gross_observed_stressed_usd": [
+      5.87535000000009,
+      1.56700000000009,
+      -2.74134999999991
+    ],
+    "stressed_profit_factor": 0.9789593055384999,
+    "stressed_closed_drawdown_percent": 15.9666999999999,
+    "stressed_net_to_drawdown": -0.171691708368037,
+    "positive_months": 21,
+    "active_months": 47,
+    "positive_month_fraction": 0.446808510638298,
+    "top_five_positive_day_share": 0.0483791616635952,
+    "stressed_controls_usd": {
+      "NO_FLIP": -2.20364999999989,
+      "LONG_ONLY": 4.17234999999971
+    },
+    "direction_net_positive": {
+      "LONG": true,
+      "SHORT": false
+    },
+    "checks": {
+      "net_positive": false,
+      "profit_factor": false,
+      "net_to_drawdown": false,
+      "positive_month_fraction": false,
+      "top_five_positive_day_share": true,
+      "both_directions_positive": false,
+      "mean_above_no_flip": false,
+      "mean_above_long_only": false,
+      "nominal_drawdown": true,
+      "practical_drawdown": true
+    }
+  },
+  "latest_diagnosis": {
+    "gross_observed_stressed_usd": [
+      -1.70549999999998,
+      -1.81299999999998,
+      -1.92049999999998
+    ],
+    "stressed_months_usd": {
+      "2026-06": -1.67469999999999,
+      "2026-07": -0.24579999999999
+    },
+    "stressed_target_types_usd": {
+      "NEWSY": -0.24579999999999,
+      "NON_NEWSY": -1.67469999999999
+    },
+    "nominal_floor_usd": 0.0,
+    "practical_floor_usd": 0.0,
+    "nominal_pass": false,
+    "practical_pass": false,
+    "reason_practical_equals_nominal": "Prelatest binding mean is negative, so the declared positive-edge reversal allowance is zero."
+  },
+  "full_controls_and_attribution": {
+    "views_stressed": {
+      "PRIMARY": {
+        "net_usd": -4.6618499999999,
+        "profit_factor": 0.966410425640147,
+        "closed_drawdown_percent": 17.5946999999999,
+        "net_to_drawdown": -0.264957629286087
+      },
+      "NO_FLIP": {
+        "net_usd": -3.8525499999999,
+        "profit_factor": 0.972195267880052,
+        "closed_drawdown_percent": 11.4882,
+        "net_to_drawdown": -0.33534844449086
+      },
+      "LONG_ONLY": {
+        "net_usd": 2.52344999999971,
+        "profit_factor": 1.01868917657863,
+        "closed_drawdown_percent": 9.01710000000001,
+        "net_to_drawdown": 0.279851615264298
+      }
+    },
+    "primary_minus_no_flip_usd": -0.8093,
+    "primary_minus_long_only_usd": -7.18529999999961,
+    "same_day_cost_identity": "All views trade the same 1,017 sessions at 0.01 lot, so view net differences are identical under gross, observed and stressed accounting and cannot be blamed on unequal turnover.",
+    "target_type_gross_observed_stressed_usd": {
+      "NEWSY": [
+        -0.40465,
+        -1.9439,
+        -3.48315
+      ],
+      "NON_NEWSY": [
+        4.57450000000011,
+        1.69790000000011,
+        -1.1786999999999
+      ]
+    },
+    "direction_gross_observed_stressed_usd": {
+      "LONG": [
+        7.76249999999991,
+        5.60539999999991,
+        3.44829999999991
+      ],
+      "SHORT": [
+        -3.5926499999998,
+        -5.8513999999998,
+        -8.11014999999981
+      ]
+    },
+    "direction_interpretation": "The transferred short leg is the dominant full-path drag and the long leg remains positive, but both legs were positive in P1. A post-outcome long-only, short suppression or opposite-direction rule is therefore an undeclared adjacent rewrite, and LONG_ONLY already exists only as a non-promotable control."
+  },
+  "temporal_interpretation": {
+    "initial_effect": "P1 is economically strong, broad across newsy/non-newsy and LONG/SHORT, and far superior to both controls.",
+    "decay_boundary": "The first mandatory crack appears in 2023H2: gross remains +$0.59725 but executable observed is -$0.02210 and stress is -$0.64145.",
+    "post_boundary": "Every complete confirmation period is stressed-negative; P2 and P4 are negative even before cost, P3 is only +$0.7688 gross and negative at observed cost, and both latest months are negative.",
+    "cost_counterfactual": "Zero cost would make the full path +$4.16985 but still leave P2, P4 and latest negative, leave full PF only 1.0310 and net/DD 0.3556, and underperform cost-identical LONG_ONLY by $7.1853. Lower cost cannot restore temporal breadth or control superiority.",
+    "classification": "The evidence is not a complete strong null because P1 is materially positive and broad. It is not a pass because every later period, prelatest, latest, full-path and control-breadth requirement fails. The correct frozen class is temporal-instability ambiguity with no seed."
+  },
+  "gate_summary": {
+    "density": true,
+    "p1_checks_passed": 7,
+    "p1_checks_total": 8,
+    "p1_failed_check": "all three chronological splits positive",
+    "confirmation_checks_passed": 0,
+    "confirmation_checks_total": 3,
+    "prelatest_common_checks_passed": 1,
+    "prelatest_common_checks_total": 8,
+    "nominal_drawdown": true,
+    "practical_drawdown": true,
+    "latest_nominal": false,
+    "latest_practical": false,
+    "full_checks_passed": 0,
+    "full_checks_total": 3,
+    "strong_null": false,
+    "nominal_pass": false,
+    "practical_pass": false
+  },
+  "verdict": {
+    "name": "AMBIGUOUS_RFS_NEWSY_MONTH_US500_CASH_SESSION_DIRECTION_NO_SEED",
+    "valid_complete_economic_verdict": true,
+    "environment_design_or_engineering_failure": false,
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "strategy_tester_required": false,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1",
+    "fixed_development_candidate_status": "UNCHANGED_UNTOUCHED",
+    "promotion_authority": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "scope_limit": {
+    "refuted": "No stable, executable FPMarkets US500 09:30..16:00 ET regular-cash-session direction seed survives from the exact source formula and fixed 2021-07 broker splice.",
+    "not_refuted": "The result does not refute the paper's aggregate total-return, overnight, month-hold, futures, cash-equity, industry, country or historical-sample evidence.",
+    "closed_neighbors": [
+      "other newsy-return lookback, compounding, weighting, decay or magnitude",
+      "other expanding mean, beta, estimator, threshold or sign handling",
+      "alternate target calendar, earnings timing, industry, constituent, country or symbol",
+      "overnight, close-to-close, month hold, first-week or partial-month execution",
+      "neighboring cash clock, skipped date, period or latest-only survivor",
+      "long-only rewrite, short suppression, opposite-direction rescue or no-flip promotion",
+      "cost substitution, stop, exit, size, risk, capital, allocation or candidate integration"
+    ]
+  },
+  "raw_artifacts": {
+    "analysis_result": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/output/analysis-result.json",
+      "bytes": 270360,
+      "sha256": "4D3A067306E8B62667E907E8A203862777FE988EBB3C2B9FB21A4FA268FF42B2"
+    },
+    "calendar": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/output/calendar.csv",
+      "bytes": 24651,
+      "sha256": "B89DD9C533E238DB1D4E79DB46B62121F31A5FADECA5F715DF47E33054A95C9A"
+    },
+    "combined_monthly_returns": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/output/combined-monthly-returns.csv",
+      "bytes": 24146,
+      "sha256": "0792E803E249404B866735AEE81836C4EF2CD93EC1D11D61A39B059ABC6467D4"
+    },
+    "signals": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/output/signals.csv",
+      "bytes": 13360,
+      "sha256": "C8C823048BD596F6DE976CB561D472E7BB3E1A42700FD3353C02B38385454C72"
+    },
+    "trades": {
+      "path": "lab/artifacts/raw/us500-earnings-extrapolation-monthly-signal-v1/output/trades.csv",
+      "bytes": 1347285,
+      "sha256": "08772E33206EC5BA7B584E12F7BB2CCD16371705E4250C74891D2C47AC5E099E",
+      "rows_all_views": 3051,
+      "rows_primary": 1017
+    }
+  },
+  "preservation": {
+    "useful_source_inputs_preserved": true,
+    "useful_market_inputs_preserved": true,
+    "complete_raw_outputs_preserved": true,
+    "reproducible_python_bytecode_removed": true,
+    "portable_runtime_created": false,
+    "terminal64_processes_remaining": 0
+  },
+  "marker": "FRONTIER_UNIT_112_AMBIGUOUS_RFS_NEWSY_MONTH_US500_CASH_SESSION_DIRECTION_NO_SEED"
+}

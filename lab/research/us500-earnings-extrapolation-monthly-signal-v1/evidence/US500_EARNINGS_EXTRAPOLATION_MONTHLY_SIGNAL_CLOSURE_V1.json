@@ -1,0 +1,152 @@
+{
+  "schema": "zeta-next-us500-earnings-extrapolation-monthly-signal-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_VALID_AMBIGUOUS_TEMPORAL_INSTABILITY_NO_SEED",
+  "unit": "us500-earnings-extrapolation-monthly-signal-112",
+  "family": "us500-earnings-extrapolation-monthly-signal-v1",
+  "result": {
+    "path": "lab/research/us500-earnings-extrapolation-monthly-signal-v1/evidence/US500_EARNINGS_EXTRAPOLATION_MONTHLY_SIGNAL_RESULT_V1.json",
+    "bytes": 17098,
+    "sha256": "858ABD62939FE1CC71439D48F4B7F05DF14F96A552F0846401FB8BA5CDEB731B"
+  },
+  "verdict": "AMBIGUOUS_RFS_NEWSY_MONTH_US500_CASH_SESSION_DIRECTION_NO_SEED",
+  "judgment": {
+    "valid_complete_economics": true,
+    "environment_design_or_engineering_failure": false,
+    "why_not_pass": "P1 loses its mandatory 2023H2 split and every complete later period is stressed-negative. Confirmation passes zero of three period-net gates, one of six target-type cells and one of three both-control comparisons. Prelatest is negative, loses to both controls, has only 21/47 positive months and a negative short leg; latest June and July both lose; all full gates fail.",
+    "why_not_strong_null": "P1 is materially positive at stressed +$10.0534, PF 1.2569, DD 5.5248% and net/DD 1.8197, with both target types, both directions and both control comparisons positive. That broad initial effect prevents honest reclassification as a uniform no-field null.",
+    "economic_shape": "A broad 2022H2-through-2023H1 effect decays by 2023H2 and reverses afterward. The full source direction is only +$4.16985 gross, -$0.246 observed and -$4.66185 stressed; the small gross edge is not executable and is inferior to cost-identical LONG_ONLY by $7.1853.",
+    "cost_interpretation": "Observed bid/ask burden consumes 105.90% of full gross net and doubled burden 211.80%. Lower cost could change the full sign, but cannot repair gross-negative P2/P4/latest, the chronological split, control inferiority, target-type breadth or latest failure.",
+    "mechanism_interpretation": "The target-newsy flip is initially valuable but later harmful. In P4 the primary loses -$3.5785 while same-beta NO_FLIP and LONG_ONLY each earn +$5.7863. This diagnoses a transferred mechanism breakdown and does not authorize promotion of either control.",
+    "direction_interpretation": "Full LONG contribution remains stressed +$3.4483 while SHORT loses -$8.11015, but both directions were positive in P1. Suppressing shorts or rewriting to LONG is therefore an undeclared post-outcome adjacent rule and is closed with the family."
+  },
+  "headline_economics": {
+    "full_gross_observed_stressed_usd": [
+      4.16985000000011,
+      -0.245999999999891,
+      -4.6618499999999
+    ],
+    "full_stressed_profit_factor": 0.966410425640147,
+    "full_stressed_closed_drawdown_percent": 17.5946999999999,
+    "full_stressed_net_to_drawdown": -0.264957629286087,
+    "period_stressed_usd": {
+      "P1_2022H2_2023": 10.0534000000001,
+      "P2_2024": -7.83104999999999,
+      "P3_2025": -1.38519999999995,
+      "P4_2026_JAN_MAY": -3.57850000000004,
+      "P5_LATEST_2026_JUN_JUL": -1.92049999999998
+    },
+    "p1_split_stressed_usd": {
+      "2022H2": 7.88825000000004,
+      "2023H1": 2.80659999999997,
+      "2023H2": -0.641449999999942
+    },
+    "full_control_stressed_usd": {
+      "NO_FLIP": -3.8525499999999,
+      "LONG_ONLY": 2.52344999999971
+    },
+    "full_target_type_stressed_usd": {
+      "NEWSY": -3.48315,
+      "NON_NEWSY": -1.1786999999999
+    },
+    "full_direction_stressed_usd": {
+      "LONG": 3.44829999999991,
+      "SHORT": -8.11014999999981
+    },
+    "prelatest_stressed_usd": -2.74134999999991,
+    "prelatest_positive_months": 21,
+    "prelatest_active_months": 47,
+    "latest_month_stressed_usd": {
+      "2026-06": -1.67469999999999,
+      "2026-07": -0.24579999999999
+    }
+  },
+  "gate_closure": {
+    "density_passed": true,
+    "p1_passed": false,
+    "p1_failed_only": "2023H2 stressed net must be positive",
+    "confirmation_passed": false,
+    "prelatest_passed": false,
+    "nominal_drawdown_passed": true,
+    "practical_drawdown_passed": true,
+    "latest_nominal_passed": false,
+    "latest_practical_passed": false,
+    "full_passed": false,
+    "strong_null": false,
+    "nominal_pass": false,
+    "practical_pass": false
+  },
+  "research_outputs": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "strategy_tester": "NOT_RUN_NOT_REQUIRED",
+    "implementation_candidate": null,
+    "promotion_authority": false
+  },
+  "scope": {
+    "closed_transfer": "Exact Guo (2025) author-history plus fixed broker splice, source expanding beta and target flip, sign-only 0.01-lot FPMarkets US500 09:30..16:00 ET regular-cash execution through July 2026.",
+    "literature_not_refuted": "Aggregate total-return, overnight, full-month, futures, cash-equity, industry, country and source-sample results remain outside this proxy verdict.",
+    "reason": "The paper and the project consume different return carriers and holding intervals; only the declared executable cash sleeve is economically judged."
+  },
+  "closed_neighborhood": [
+    "one, two, three, five or other newsy-return lookback; compounded, weighted or decay transforms",
+    "different expanding window, intercept, estimator, threshold, magnitude band or beta sign override",
+    "alternative newsy calendar, earnings release timing, industry, country, constituent or symbol",
+    "overnight, close-to-close, futures, cash-equity, month hold, first-week or partial-month path",
+    "neighboring cash entry or exit clock, skip day, weekday, month, quarter or latest-only survivor",
+    "long-only source rewrite, short suppression, opposite-direction rescue or no-flip promotion",
+    "cost substitution, stop, trailing, exit, size, risk, weight, capital, allocation or candidate integration"
+  ],
+  "engineering_record": {
+    "source_acquisition_processes": 1,
+    "premetric_invocations": 2,
+    "premetric_corrections": 2,
+    "formal_invocations": 1,
+    "complete_economic_aggregations": 1,
+    "post_declaration_engineering_corrections": 0,
+    "economic_metric_reruns": 0,
+    "engineering_correction_limit": null,
+    "tests_or_validators_added": 0,
+    "mql_or_set_changes": 0,
+    "compile_or_tester_paths": 0,
+    "broker_or_account_state_queried": false
+  },
+  "preservation": {
+    "source_inputs": "PRESERVED_USEFUL",
+    "market_inputs": "PRESERVED_USEFUL",
+    "complete_raw_outputs": "PRESERVED_USEFUL",
+    "analysis_result_sha256": "4D3A067306E8B62667E907E8A203862777FE988EBB3C2B9FB21A4FA268FF42B2",
+    "signals_sha256": "C8C823048BD596F6DE976CB561D472E7BB3E1A42700FD3353C02B38385454C72",
+    "trades_sha256": "08772E33206EC5BA7B584E12F7BB2CCD16371705E4250C74891D2C47AC5E099E",
+    "reproducible_python_bytecode": "REMOVED",
+    "portable_runtime_created": false,
+    "terminal64_processes_remaining": 0
+  },
+  "fixed_development_candidate": {
+    "family": "dd20-paired-month-stability-mt5-v1",
+    "status": "UNCHANGED_UNTOUCHED",
+    "rejected_by_unit_112": false,
+    "promoted_by_unit_112": false,
+    "live_authority": false
+  },
+  "whole_map_recomparison": {
+    "program_1": "The exact independent monthly signal has a real historical P1 effect but no stable executable continuation. No lookback, flip, direction, symbol or integration successor opens.",
+    "program_2": "No external market or event state was introduced or authorized by the temporal breakdown.",
+    "program_3": "The fixed cash boundary was only the execution carrier and cannot become a clock or session rescue.",
+    "program_4": "No held-position, stop, exit or overnight evidence was consumed, so no management successor exists.",
+    "program_5": "Sign-only 0.01 volume supplies no lot, risk, capital or allocation authority.",
+    "program_7": "Temporal and control attribution explains ambiguity but cannot reclassify a candidate or select a post-outcome survivor.",
+    "heights": {
+      "micro": "No new signal threshold, order or position rule.",
+      "meso": "The regular-cash translation closes ambiguous with no executable information seed.",
+      "macro": "The aggregate paper effect is historically visible but temporally unstable in the project horizon and does not alter portfolio construction."
+    },
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true,
+    "goal_paused": false
+  },
+  "next": "Commit and push the complete Unit 112 closure once, then continue serial Optimization whole-map discovery for a genuinely independent causal mechanism without an earnings-extrapolation formula or cash-session translation rescue and without reporting pause.",
+  "marker": "FRONTIER_UNIT_112_CLOSED_AMBIGUOUS_RFS_NEWSY_MONTH_US500_CASH_SESSION_DIRECTION_NO_SEED_MAP_RECOMPARED"
+}
