@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0365`
+- Latest state ID: `STATE-0366`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; one-shot Codex-lifetime breakaway is active, and the scheduled task/resident PID loop were removed without restarting Live
 - Active research boundary: none; source-free Program 1 / meso→macro Unit 098 `legacy-us500-h4-staged-overlay-optimization-eligibility-v1` is closed. It retains one exact lineage-pinned US500 H4 staged-overlay Optimization information seed and opens no current shared-account economic verdict, Lab MQL or Live authority. No adjacent H4 threshold, window, stop, balance gate, volume or legacy-candidate follow-up is authorized.
-- Active optimization boundary: none; `dd20-legacy-us500-h4-staged-overlay-mt5-v1` is closed after complete selection earned `+$1,736.50 / +$1,668.5262`, all four epochs positive and native DD `20.402009%`. The nominal 20% gate is false, but its `0.402009`-point / `2.010043%` proportional overshoot is accepted under the user's explicit pragmatic tolerance. The independent forward passes full `+$23.01 / +$21.256`, DD `12.436759%`, June and July. This campaign is the qualified Optimization anchor under the updated judgment; the exact H4 role is frozen and no automatic Live promotion is authorized.
+- Active optimization boundary: none; source-free `dd20-pragmatic-threshold-anchor-recomparison-v1` is closed after consistently applying the user's pragmatic judgment to all eight complete MT5 results without a rerun. `dd20-paired-month-stability-mt5-v1` is now the qualified Optimization anchor: selection `+$5,786.63 / +$5,477.524`, four positive reconstructed epochs and native DD `20.256888%` (`0.256888` points / `1.284438%` proportionally above nominal); full forward `+$32.74 / +$30.626` at `18.675302%` DD. June is `+$33.33 / +$32.109`; July's disclosed marginal `-$0.59 / -$1.483` is accepted economically rather than hidden or treated as an automatic cliff. No Live authority exists. The user-directed next distinct Optimization structure is a serial US30+US100 high/mid-frequency lane and US500 low-frequency lane followed by one combined full-portfolio MT5 confirmation.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`
