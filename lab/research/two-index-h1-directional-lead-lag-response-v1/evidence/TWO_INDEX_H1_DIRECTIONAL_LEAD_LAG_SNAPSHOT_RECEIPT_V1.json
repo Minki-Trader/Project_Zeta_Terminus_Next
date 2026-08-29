@@ -1,0 +1,107 @@
+{
+  "schema": "zeta-next-two-index-h1-directional-lead-lag-snapshot-receipt-v1",
+  "created_at_local": "2026-08-29",
+  "status": "ONE_TIME_LAB_OWNED_INPUT_COPY_COMPLETE_BEFORE_ECONOMIC_OUTCOMES",
+  "unit": "two-index-h1-directional-lead-lag-response-103",
+  "family": "two-index-h1-directional-lead-lag-response-v1",
+  "source_boundary": {
+    "bar_source_family": "lab/research/predecision-market-participation-state-v1/",
+    "source_acquisition_receipt": {
+      "path": "lab/research/predecision-market-participation-state-v1/evidence/PREDECISION_MARKET_PARTICIPATION_STATE_ACQUISITION_RECEIPT_V1.json",
+      "bytes": 5107,
+      "sha256": "DC9FDCA7E7708DA806A0B41F124E648A26A487BDE43C3C7527C07AE07E9D4661"
+    },
+    "trade_spec_copy_source": {
+      "family": "lab/research/three-index-h1-body-engulfing-response-v1/",
+      "snapshot_receipt_path": "lab/research/three-index-h1-body-engulfing-response-v1/evidence/THREE_INDEX_H1_BODY_ENGULFING_SNAPSHOT_RECEIPT_V1.json",
+      "snapshot_receipt_bytes": 3369,
+      "snapshot_receipt_sha256": "D789F2DD540543A9AB1B7A85377B20AF3B2237A5CCEE49F35E379AE3212DC6EC",
+      "source_file": "lab/artifacts/raw/three-index-h1-body-engulfing-response-v1/input/SYMBOL_TRADE_SPECS_V1.json",
+      "source_file_bytes": 1509,
+      "source_file_sha256": "9B96022D17129F387ADACE0B2E31B8229F90FBA3571C77A1A79B6EEA7C2FC8A1",
+      "origin": "Dedicated physical Lab Portable symbol_info snapshot; no account, position, order, deal or send call."
+    },
+    "copy_rule": "One-time physical copy into this family-owned ignored raw input root before any future follower open, spread, P/L or gate was consumed.",
+    "formal_cross_family_read": false,
+    "live_dependency": false
+  },
+  "lab_owned_root": "lab/artifacts/raw/two-index-h1-directional-lead-lag-response-v1/input/",
+  "files": [
+    {
+      "name": "SYMBOL_POINT_SPECS_V1.json",
+      "bytes": 554,
+      "sha256": "146B40A5FD671BBBB7009A093511C9765701D2C6E83B1CDAFF15525790607613"
+    },
+    {
+      "name": "SYMBOL_TRADE_SPECS_V1.json",
+      "bytes": 1509,
+      "sha256": "9B96022D17129F387ADACE0B2E31B8229F90FBA3571C77A1A79B6EEA7C2FC8A1"
+    },
+    {
+      "name": "US100_H1_BARS_20220701_20260821.csv",
+      "bytes": 2508477,
+      "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812",
+      "rows": 24445,
+      "first_time": "2022.07.01 01:00:00",
+      "last_time": "2026.08.21 23:00:00"
+    },
+    {
+      "name": "US30_H1_BARS_20220701_20260821.csv",
+      "bytes": 2763746,
+      "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92",
+      "rows": 24443,
+      "first_time": "2022.07.01 01:00:00",
+      "last_time": "2026.08.21 23:00:00"
+    }
+  ],
+  "total_bytes": 5274286,
+  "manifest_rule": "Sort name|bytes|uppercase SHA-256 by name, join with LF and SHA-256 UTF-8 without a trailing LF.",
+  "manifest_sha256": "05B505E1A5FC19873018AA6A380106917F3781E1DE2AEA52A2AEC08ADDB5D3DD",
+  "premetric_scan": {
+    "scope": "Only completed leader H1 open-close sign, exact hourly continuity, timestamps, fixed period membership and the fixed unresolved-observation boundary were consumed. Follower future opens, spreads, P/L, profit factor, drawdown, selected leader direction, gate and verdict were not read or calculated.",
+    "signal": "For each ordered pair, a non-doji completed leader H1 body supplies its sign; enter the follower at the next H1 open and exit at the following H1 open. Ignore every candidate signal through and including the exit row.",
+    "physical_rows": {
+      "US30": 24443,
+      "US100": 24445,
+      "total": 48888
+    },
+    "common_epochs": 24440,
+    "variants": {
+      "US100_TO_US30": {
+        "total": 7191,
+        "periods": {
+          "P1": {"normal_days": 366, "signals": 2548, "signals_per_day": 6.961748633879782, "unique_signal_hours": 2548, "up": 1302, "down": 1246, "signal_dates": 366},
+          "P2": {"normal_days": 259, "signals": 1802, "signals_per_day": 6.957528957528957, "unique_signal_hours": 1802, "up": 988, "down": 814, "signal_dates": 259},
+          "P3": {"normal_days": 258, "signals": 1791, "signals_per_day": 6.941860465116279, "unique_signal_hours": 1791, "up": 948, "down": 843, "signal_dates": 258},
+          "P4": {"normal_days": 106, "signals": 737, "signals_per_day": 6.952830188679245, "unique_signal_hours": 737, "up": 392, "down": 345, "signal_dates": 106},
+          "P5": {"normal_days": 45, "signals": 313, "signals_per_day": 6.955555555555556, "unique_signal_hours": 313, "up": 154, "down": 159, "signal_dates": 45}
+        },
+        "p1_splits": {
+          "P1_2022H2": {"signals": 760, "dates": 109, "up": 375, "down": 385},
+          "P1_2023": {"signals": 1788, "dates": 257, "up": 927, "down": 861}
+        }
+      },
+      "US30_TO_US100": {
+        "total": 7191,
+        "periods": {
+          "P1": {"normal_days": 366, "signals": 2548, "signals_per_day": 6.961748633879782, "unique_signal_hours": 2548, "up": 1328, "down": 1220, "signal_dates": 366},
+          "P2": {"normal_days": 259, "signals": 1802, "signals_per_day": 6.957528957528957, "unique_signal_hours": 1802, "up": 945, "down": 857, "signal_dates": 259},
+          "P3": {"normal_days": 258, "signals": 1791, "signals_per_day": 6.941860465116279, "unique_signal_hours": 1791, "up": 927, "down": 864, "signal_dates": 258},
+          "P4": {"normal_days": 106, "signals": 737, "signals_per_day": 6.952830188679245, "unique_signal_hours": 737, "up": 390, "down": 347, "signal_dates": 106},
+          "P5": {"normal_days": 45, "signals": 313, "signals_per_day": 6.955555555555556, "unique_signal_hours": 313, "up": 162, "down": 151, "signal_dates": 45}
+        },
+        "p1_splits": {
+          "P1_2022H2": {"signals": 760, "dates": 109, "up": 385, "down": 375},
+          "P1_2023": {"signals": 1788, "dates": 257, "up": 943, "down": 845}
+        }
+      }
+    },
+    "structurally_eligible": true
+  },
+  "economics_consumed": false,
+  "runtime_created": false,
+  "mql_created": false,
+  "tester_paths": 0,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED"
+}
