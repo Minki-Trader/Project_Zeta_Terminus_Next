@@ -5,7 +5,7 @@ Last updated: 2026-08-29
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0374`
+- Latest state ID: `STATE-0375`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -26,7 +26,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Active engineering boundary: none; the one-shot Codex-lifetime breakaway mechanism remains available, the scheduled task/resident PID loop is removed, and no terminal or dashboard process was observed after the user's reboot
 - Active research boundary: none; source-free Program 7 / meso→macro Unit 100 `router-account-contribution-label-alignment-v1` is closed `VALID_ACCOUNT_CONTRIBUTION_LABEL_NONCONFIRMATION_NO_SEED`. All `1,428` qualified-anchor closes matched uniquely, but the original virtual-net rank had pooled stressed-R Spearman `0.01503` and the frozen prior-quarter account-stressed-R label variant only `0.00456`; its bottom quartile still earned stressed `+$568.183`. Five required information/economic gates failed with complete valid inputs, so no seed, adjacent label/model/threshold rescue, Lab MQL or Live authority exists.
-- Active optimization boundary: none; native `dd20-market-state-router-mt5-v1` remains closed `VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_FORWARD_NOT_OPENED`. It blocked `377 / 1,620` signals and reduced reported DD to `12.52%`, but actual/stressed profit collapsed to `+$914.29 / +$869.242`, trailing the qualified paired-month anchor by `$4,872.34 / $4,608.282`. Unit 100 then eliminated label-versus-shared-account contribution as an adjacent repair. The exact router and every adjacent model/label/percentile/feature/hold/component/risk/volume rescue are frozen; the paired-month anchor remains unchanged pending the now-required full Optimization-map comparison.
+- Active optimization boundary: none; source-free `dd20-paired-month-component-state-combination-proxy-v1` is closed `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST_COMPONENT_STATE_COMBINATION_NONCONFIRMATION`. The exact fixed state role made `64` non-neutral decisions across five components but displaced nine Cross admissions, reducing gross actual/stressed by `$187.0011 / $179.2354`; conservative deltas were `-$282.3884 / -$274.1520` and budgeted DD was `21.732774%`. Forward and the current three-close Live-Dev snapshot remained exactly neutral. No MT5 shortlist or adjacent state/admission rescue exists; the paired-month anchor remains unchanged pending another full-map comparison.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

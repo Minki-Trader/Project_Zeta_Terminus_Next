@@ -1,0 +1,48 @@
+{
+  "schema": "zeta-dd20-paired-month-component-state-combination-engineering-correction-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "CORRECTED_REPEATED_LITERAL_FAMILY_NO_ECONOMIC_VERDICT",
+  "campaign": "dd20-paired-month-component-state-combination-proxy-v1",
+  "incomplete_invocations": [
+    {
+      "attempt": 1,
+      "launcher_exit_code": 1,
+      "launcher_wall_seconds": 0.8812777,
+      "durable_result_created": false,
+      "candidate_values_persisted_or_reported": false,
+      "failure_point": "Live boundary result-object construction before output serialization",
+      "error": "NameError: Python name 'false' is not defined",
+      "economic_verdict": null
+    },
+    {
+      "attempt": 2,
+      "launcher_exit_code": 1,
+      "launcher_wall_seconds": 0.9626577,
+      "durable_result_created": false,
+      "candidate_values_persisted_or_reported": false,
+      "failure_point": "Final result-object construction before output serialization",
+      "error": "NameError: Python name 'true' is not defined",
+      "economic_verdict": null
+    }
+  ],
+  "correction": {
+    "before_script_bytes": 33300,
+    "before_script_sha256": "90C6E24B5A00DBF043B8C77507D61D636BB511B4E5CBE3BC9D7E2AF13BD22CDF",
+    "intermediate_script_bytes": 33300,
+    "intermediate_script_sha256": "F89DEB3888EE9CB6BCA3FB4F7E28F80075642EFD329C5A880302E1CC4A88F064",
+    "after_script_bytes": 33300,
+    "after_script_sha256": "7A36A20379351B1447DFFAD33C9F47B7182631E0DD97214223F4686DA1A8B130",
+    "change": "Replace every remaining JSON-style true/false literal in Python result metadata with True/False after the repeated same-family NameError.",
+    "economic_contract_changed": false,
+    "candidate_or_gate_changed": false,
+    "input_snapshot_changed": false,
+    "syntax_compilation_after_correction": "completed without error"
+  },
+  "boundary_after_correction": {
+    "incomplete_invocations": 2,
+    "complete_formal_processes": 0,
+    "economic_reruns": 0,
+    "output_path_exists": false,
+    "same_frozen_single_candidate_must_run": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "zeta-dd20-paired-month-component-state-combination-design-correction-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "CORRECTED_NO_ECONOMIC_VERDICT",
+  "campaign": "dd20-paired-month-component-state-combination-proxy-v1",
+  "invalid_complete_output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-component-state-combination-proxy-v1/engineering-design-attempt-1/proxy-result.json",
+    "bytes": 27073,
+    "sha256": "D8338AE2F64599642895E61B782F39E169EB4A1444DF63977A1D3C7FDB7BDEA5",
+    "launcher_exit_code": 0,
+    "launcher_wall_seconds": 1.0062741,
+    "internal_elapsed_seconds": 0.10349070000029315,
+    "economic_verdict": null
+  },
+  "design_fault": {
+    "contract": "The independently initialized full June/July forward must remain exactly equal to the pragmatic paired-month anchor, including its already disclosed marginal July loss.",
+    "incorrect_implementation": "The exact-neutral gate reused the selection all-period-positive helper and therefore required June and July each to be positive.",
+    "observed_exact_forward": {
+      "full_actual_stressed_usd": [32.74, 30.626],
+      "june_actual_stressed_usd": [33.33, 32.109],
+      "july_actual_stressed_usd": [-0.59, -1.483],
+      "candidate_equal_to_control": true,
+      "component_state_non_neutral_decisions": 0,
+      "candidate_path_diverged": false
+    },
+    "reason_no_verdict": "The frozen pragmatic anchor accepts the small July loss from a positive full forward. Requiring July positivity contradicts the declaration and is a design error, not candidate economics."
+  },
+  "correction": {
+    "before_script_bytes": 33300,
+    "before_script_sha256": "7A36A20379351B1447DFFAD33C9F47B7182631E0DD97214223F4686DA1A8B130",
+    "after_script_bytes": 33867,
+    "after_script_sha256": "3EEE051832C07E585884A389ED13B07F8EDC7E90C275B3D0DBE892D65A4E9A2A",
+    "change": "Require exact candidate/control equality for full, June and July period nets, no state/path divergence, zero candidate skips and positive capital; do not require the already accepted July slice itself to be profitable.",
+    "candidate_or_selection_gate_changed": false,
+    "forward_contract_changed": false,
+    "input_snapshot_changed": false,
+    "syntax_compilation_after_correction": "completed without error"
+  },
+  "boundary_after_correction": {
+    "incomplete_engineering_invocations": 2,
+    "invalid_design_outputs": 1,
+    "valid_complete_formal_processes": 0,
+    "same_frozen_single_candidate_must_run": true
+  }
+}

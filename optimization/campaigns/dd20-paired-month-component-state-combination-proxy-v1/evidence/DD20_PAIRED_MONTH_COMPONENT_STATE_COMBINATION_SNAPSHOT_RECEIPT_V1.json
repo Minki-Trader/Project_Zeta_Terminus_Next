@@ -1,0 +1,73 @@
+{
+  "schema": "zeta-dd20-paired-month-component-state-combination-snapshot-receipt-v1",
+  "recorded_date_local": "2026-08-29",
+  "copied_at_utc": "2026-08-29T10:25:59.9803389Z",
+  "status": "CAMPAIGN_INPUT_SNAPSHOT_FROZEN_ECONOMICS_UNOPENED",
+  "campaign": "dd20-paired-month-component-state-combination-proxy-v1",
+  "frozen_contract": {
+    "readme": {
+      "bytes": 3303,
+      "sha256": "478247FE95C3D3FFA34AB994CBADACE263B76566A7781E54A830EB2DA967C7D1"
+    },
+    "config": {
+      "bytes": 4409,
+      "sha256": "4820C778A57CCA70AE767B782F3C8CE79C2F2CEFB640965072E68A6E5ACD44E5"
+    },
+    "declaration": {
+      "bytes": 4989,
+      "sha256": "BAB6BA1586D6622F3C60513D5D6F854CE525592B22B0F1C08AF4EB91E4CA45E6"
+    },
+    "proxy_script": {
+      "bytes": 33300,
+      "sha256": "90C6E24B5A00DBF043B8C77507D61D636BB511B4E5CBE3BC9D7E2AF13BD22CDF",
+      "python_compilation": "completed without error before input copy"
+    }
+  },
+  "snapshot_root": "optimization/artifacts/raw/dd20-paired-month-component-state-combination-proxy-v1/input/",
+  "files": [
+    {
+      "name": "selection-lifecycles.csv",
+      "source": "qualified paired-month selection artifact",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B",
+      "source_snapshot_equal": true
+    },
+    {
+      "name": "forward-lifecycles.csv",
+      "source": "independent paired-month June/July forward artifact",
+      "bytes": 92997,
+      "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E",
+      "source_snapshot_equal": true
+    },
+    {
+      "name": "live-research-candidates.csv",
+      "source": "current local RLO1 Live-Dev canonical observation ledger",
+      "bytes": 30266,
+      "sha256": "CBEC8F934C6EF4E9E3B5A68153088E77FEF6D1C74B4EA064AF6771BA32422448",
+      "source_snapshot_equal": true,
+      "same_as_already_consumed_post_forward_snapshot": true
+    },
+    {
+      "name": "live-research-lifecycles.csv",
+      "source": "current local RLO1 Live-Dev canonical observation ledger",
+      "bytes": 6773,
+      "sha256": "396E7007A8216CFE59AA00863718930A1A6CD50D16665072DE95F2135DF71D2D",
+      "source_snapshot_equal": true,
+      "same_as_already_consumed_post_forward_snapshot": true
+    }
+  ],
+  "totals": {
+    "files": 4,
+    "bytes": 2816005
+  },
+  "boundary": {
+    "formal_proxy_processes_before_receipt": 0,
+    "candidate_economics_opened_before_receipt": false,
+    "formal_process_reads_only_campaign_snapshot": true,
+    "live_file_modified": false,
+    "live_runtime_started_or_queried": false,
+    "master_terminal_used": false,
+    "lab_path_used": false,
+    "broker_positions_orders_deals_or_account_queried": false
+  }
+}

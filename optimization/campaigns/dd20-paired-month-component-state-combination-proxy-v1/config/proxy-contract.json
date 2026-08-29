@@ -1,0 +1,115 @@
+{
+  "schema": "zeta-dd20-paired-month-component-state-combination-proxy-contract-v1",
+  "campaign": "dd20-paired-month-component-state-combination-proxy-v1",
+  "parent_main_commit": "82b91ec1f178df1316deb883c7d3241d2f974f1e",
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-paired-month-component-state-combination-proxy-v1/input",
+    "files": [
+      {
+        "name": "selection-lifecycles.csv",
+        "bytes": 2685969,
+        "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"
+      },
+      {
+        "name": "forward-lifecycles.csv",
+        "bytes": 92997,
+        "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E"
+      },
+      {
+        "name": "live-research-candidates.csv",
+        "bytes": 30266,
+        "sha256": "CBEC8F934C6EF4E9E3B5A68153088E77FEF6D1C74B4EA064AF6771BA32422448"
+      },
+      {
+        "name": "live-research-lifecycles.csv",
+        "bytes": 6773,
+        "sha256": "396E7007A8216CFE59AA00863718930A1A6CD50D16665072DE95F2135DF71D2D"
+      }
+    ],
+    "bytes_total": 2816005
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "paired_month_anchor": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "reference_capital_usd": 100.0,
+    "addition_step_usd": 150.0,
+    "volume_step_lots": 0.01,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "aggregate_tolerance_usd": 0.01,
+    "selection": {
+      "lifecycle_file": "selection-lifecycles.csv",
+      "births": 1428,
+      "closes": 1428,
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524,
+      "native_relative_equity_drawdown_pct": 20.256887565152653
+    },
+    "forward": {
+      "lifecycle_file": "forward-lifecycles.csv",
+      "births": 54,
+      "closes": 54,
+      "actual_net_usd": 32.74,
+      "stressed_net_usd": 30.626,
+      "native_relative_equity_drawdown_pct": 18.675302129932568
+    }
+  },
+  "component_state": {
+    "lookback_admitted_closes": 40,
+    "symmetric_mean_band_r": 0.10,
+    "loss_overlay": 0.0,
+    "neutral_overlay": 1.0,
+    "gain_overlay": 1.125,
+    "label": "candidate doubled-cost-stressed close increment divided by admitted planned risk",
+    "state_membership": "admitted completed closes only",
+    "fresh_each_segment": true,
+    "candidate_count": 1
+  },
+  "selection_periods": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "forward_periods": [
+    {"id": "FULL", "start": "2026.06.01 00:00:00", "end": "2026.08.01 00:00:00"},
+    {"id": "JUNE", "start": "2026.06.01 00:00:00", "end": "2026.07.01 00:00:00"},
+    {"id": "JULY", "start": "2026.07.01 00:00:00", "end": "2026.08.01 00:00:00"}
+  ],
+  "selection_gates": {
+    "minimum_non_neutral_executable_decisions": 25,
+    "minimum_components_with_non_neutral_executable_decisions": 3,
+    "prior_incremental_proxy_to_native_error_actual_usd": 85.3873452381,
+    "prior_incremental_proxy_to_native_error_stressed_usd": 84.9166309524,
+    "new_combination_uncertainty_reserve_usd": 10.0,
+    "prior_native_component_state_dd_increment_percentage_points": 0.24698173215822905,
+    "new_combination_dd_reserve_percentage_points": 0.25,
+    "nominal_dd_line_pct": 20.0,
+    "maximum_proxy_screening_proportional_overshoot": 0.06,
+    "all_four_epochs_positive": true,
+    "strict_actual_and_stressed_profit_improvement": true
+  },
+  "live_boundary": {
+    "candidate_file": "live-research-candidates.csv",
+    "lifecycle_file": "live-research-lifecycles.csv",
+    "candidate_rows": 44,
+    "lifecycle_rows": 7,
+    "births": 3,
+    "closes": 3,
+    "first_peer_rows": 1,
+    "actual_net_usd": 0.66,
+    "stressed_net_usd": 0.593,
+    "maximum_component_closes_below_lookback_required": true,
+    "role": "no-retune current Live neutral-behavior boundary only"
+  },
+  "output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-component-state-combination-proxy-v1/output/proxy-result.json"
+  }
+}
