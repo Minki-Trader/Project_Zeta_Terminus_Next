@@ -1,0 +1,146 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-cost-resilience-proxy-result-v1",
+  "recorded_at_local": "2026-08-30",
+  "status": "VALID_COMPLETE_PASS",
+  "campaign": "dd20-paired-month-live-control-cost-resilience-proxy-v1",
+  "declaration": {
+    "path": "optimization/campaigns/dd20-paired-month-live-control-cost-resilience-proxy-v1/evidence/DD20_PAIRED_MONTH_LIVE_CONTROL_COST_RESILIENCE_PROXY_DECLARATION_V1.json",
+    "bytes": 8025,
+    "sha256": "FD126AE34D845EC6839EC2247F5782DAC449783E2A33F5450AE530E6047F4971"
+  },
+  "raw_output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-live-control-cost-resilience-proxy-v1/output/proxy-result.json",
+    "bytes": 15994,
+    "sha256": "7FA1C1DF01A332EB5CF175DDFEE4E772887A70E2DAB5E45FEEB5C81204926BB3"
+  },
+  "execution": {
+    "formal_source_free_processes": 1,
+    "complete_fixed_candidate_paths": 1,
+    "cost_books": 4,
+    "economic_metric_reruns": 0,
+    "engineering_or_design_corrections_after_declaration": 0,
+    "internal_elapsed_seconds": 0.0592277,
+    "tester_paths": 0,
+    "mql_or_settings_changes": 0,
+    "orders": 0
+  },
+  "integrity": {
+    "passed": true,
+    "input_files": 4,
+    "input_bytes": 2803719,
+    "input_bundle_manifest_sha256": "AFEDAC40C69CEAE09E5AE88C602CAECE7B1FC3383DB385CACC9D35181EB645A8",
+    "selection_births_and_closes": "1428 / 1428",
+    "forward_births_and_closes": "54 / 54",
+    "negative_cost_units": 0,
+    "candidate_source_anchor_faults": 0,
+    "active_live_control_anchor_faults": 0
+  },
+  "fixed_candidate": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "changed_or_retuned": false
+  },
+  "candidate_selection_cost_books": [
+    {"cost_multiplier":1,"net_usd":5786.63,"profit_factor":1.495473495568,"fixed_path_closed_balance_dd_pct":18.768821521783},
+    {"cost_multiplier":2,"net_usd":5477.524,"profit_factor":1.463373087511,"fixed_path_closed_balance_dd_pct":20.401029166362},
+    {"cost_multiplier":3,"net_usd":5168.418,"profit_factor":1.431881688695,"fixed_path_closed_balance_dd_pct":22.264378769671},
+    {"cost_multiplier":4,"net_usd":4859.312,"profit_factor":1.401127675058,"fixed_path_closed_balance_dd_pct":26.751687784354}
+  ],
+  "active_live_control_selection_cost_books": [
+    {"cost_multiplier":1,"net_usd":984.69},
+    {"cost_multiplier":2,"net_usd":915.8725},
+    {"cost_multiplier":3,"net_usd":847.055},
+    {"cost_multiplier":4,"net_usd":778.2375}
+  ],
+  "candidate_selection_4x_breadth": {
+    "epochs": [
+      {"id":"E1","closes":298,"net_usd":176.006,"profit_factor":1.382943078322},
+      {"id":"E2","closes":371,"net_usd":82.142,"profit_factor":1.100094072002},
+      {"id":"E3","closes":381,"net_usd":747.942,"profit_factor":1.302810526316},
+      {"id":"E4","closes":378,"net_usd":3853.222,"profit_factor":1.460698676904}
+    ],
+    "active_components": [
+      {"component":"ZT-M30-US30-RANGE-COMP-61f61deaba","closes":258,"net_usd":2025.954,"profit_factor":2.119063058923},
+      {"component":"ZT-M30-US30-RANGE-COMP-64efb16616","closes":196,"net_usd":688.838,"profit_factor":1.375079090059},
+      {"component":"ZT-H1-US100-CROSS-IN-14b72317b7","closes":660,"net_usd":387.434,"profit_factor":1.073341217043},
+      {"component":"ZT-M30-US30-INTRADAY-R-2eb111fc46","closes":88,"net_usd":1338.901,"profit_factor":2.277535843303},
+      {"component":"ZT-H1-US30-RETURN-I-c870a788ec","closes":226,"net_usd":418.185,"profit_factor":1.195728637924}
+    ],
+    "all_four_epochs_positive": true,
+    "all_five_active_components_positive": true
+  },
+  "candidate_forward_cost_books": [
+    {"cost_multiplier":1,"net_usd":32.74,"profit_factor":1.320383599178,"fixed_path_closed_balance_dd_pct":12.445533769063},
+    {"cost_multiplier":2,"net_usd":30.626,"profit_factor":1.296846982195,"fixed_path_closed_balance_dd_pct":12.767888451145},
+    {"cost_multiplier":3,"net_usd":28.512,"profit_factor":1.273443943608,"fixed_path_closed_balance_dd_pct":13.096676527366},
+    {"cost_multiplier":4,"net_usd":26.398,"profit_factor":1.250407892241,"fixed_path_closed_balance_dd_pct":13.432092530633}
+  ],
+  "active_live_control_forward_cost_books": [
+    {"cost_multiplier":1,"net_usd":-1.11},
+    {"cost_multiplier":2,"net_usd":-2.819},
+    {"cost_multiplier":3,"net_usd":-4.528},
+    {"cost_multiplier":4,"net_usd":-6.237}
+  ],
+  "candidate_forward_4x_temporal_detail": {
+    "full": {"closes":54,"net_usd":26.398,"profit_factor":1.250407892241},
+    "june": {"closes":30,"net_usd":29.667,"profit_factor":1.521892866567},
+    "july": {"closes":24,"net_usd":-3.269,"profit_factor":0.932702007205},
+    "july_nominal_positive": false,
+    "july_absolute_loss_usd": 3.269,
+    "july_loss_share_of_positive_full_forward": 0.123835139026,
+    "july_pragmatic_bound_passed": true
+  },
+  "four_x_comparison": {
+    "selection_candidate_minus_active_live_control_usd": 4081.0745,
+    "selection_candidate_to_active_live_control_net_ratio": 6.243996209384,
+    "forward_candidate_minus_active_live_control_usd": 32.635,
+    "candidate_selection_net_retention_vs_1x": 0.839748178128,
+    "candidate_forward_net_retention_vs_1x": 0.806291997557
+  },
+  "gate_application": {
+    "selection_4x_positive": true,
+    "selection_4x_profit_factor_at_least_1_25": true,
+    "selection_4x_retention_at_least_75_percent": true,
+    "selection_four_epoch_breadth": true,
+    "selection_five_active_component_breadth": true,
+    "selection_candidate_strictly_above_control": true,
+    "forward_4x_positive": true,
+    "forward_4x_profit_factor_at_least_1_10": true,
+    "forward_4x_retention_at_least_75_percent": true,
+    "forward_candidate_strictly_above_control": true,
+    "june_4x_positive": true,
+    "july_4x_absolute_and_proportional_bounds": true,
+    "all_gates_passed": true
+  },
+  "native_drawdown_context": {
+    "candidate_selection_relative_equity_dd_pct": 20.256887565153,
+    "candidate_forward_relative_equity_dd_pct": 18.675302129933,
+    "active_live_control_selection_relative_equity_dd_pct": 9.1948,
+    "active_live_control_forward_relative_equity_dd_pct": 16.8321,
+    "three_x_or_four_x_native_open_equity_dd_available": false,
+    "interpretation": "The candidate retains its already-accepted marginal selection-DD miss and materially higher selection risk than the active Live control. This arithmetic cost unit neither hides nor rejudges that native risk evidence."
+  },
+  "reporting_authority_boundary": {
+    "authoritative": [
+      "all lifecycle counts and identities",
+      "1x through 4x net and profit factor",
+      "full-path candidate closed-balance drawdown diagnostics",
+      "selection epoch and active-component 4x net and profit factor",
+      "forward full, June and July 4x net and profit factor",
+      "all declared gates and the fixed-candidate comparison verdict"
+    ],
+    "quarantined_raw_diagnostics": "The raw output also emits epoch-local and component-local closed-balance drawdown/minimum/ending fields after resetting each isolated slice to 100 dollars. Those reset-capital fields are not a valid whole-account capital path, were not declared gates, did not affect any verdict and carry no authority. They remain preserved rather than rewritten.",
+    "no_metric_rerun_or_gate_change": true
+  },
+  "verdict": "PASS_FIXED_DEVELOPMENT_CANDIDATE_COST_RESILIENCE_VS_ACTIVE_LIVE_CONTROL",
+  "economic_interpretation": "At 4x observed cost the fixed candidate retains +4859.312 selection net and +26.398 full-forward net, versus +778.2375 and -6.237 for the exact active Live control. All four long epochs and all five active components remain positive. July weakens from the already-accepted 2x loss to -3.269, but stays inside the predeclared 5-dollar and 15-percent proportional bounds. The evidence materially strengthens the fixed candidate's replacement-development case without changing it.",
+  "boundary": {
+    "new_candidate_or_mt5_shortlist": false,
+    "fixed_candidate_changed": false,
+    "live_authority": false,
+    "lab_or_live_mutation": false,
+    "master_or_mt5_runtime_used": false,
+    "broker_account_positions_orders_or_deals_queried": false
+  }
+}

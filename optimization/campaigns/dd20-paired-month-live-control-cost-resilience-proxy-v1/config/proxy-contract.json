@@ -1,0 +1,97 @@
+{
+  "schema": "zeta-dd20-paired-month-live-control-cost-resilience-proxy-contract-v1",
+  "campaign": "dd20-paired-month-live-control-cost-resilience-proxy-v1",
+  "input": {
+    "root": "optimization/artifacts/raw/dd20-paired-month-live-control-cost-resilience-proxy-v1/input",
+    "files": [
+      {"name": "candidate-forward-lifecycles.csv", "bytes": 92997, "sha256": "1BDB9031C282BA174D0116EF6F471A910ADD335399A553CECDA0FFBF64C1215E"},
+      {"name": "candidate-selection-lifecycles.csv", "bytes": 2685969, "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"},
+      {"name": "live-control-result.json", "bytes": 14873, "sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314"},
+      {"name": "paired-candidate-result.json", "bytes": 9880, "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"}
+    ],
+    "files_count": 4,
+    "bytes_total": 2803719,
+    "bundle_manifest_sha256": "AFEDAC40C69CEAE09E5AE88C602CAECE7B1FC3383DB385CACC9D35181EB645A8"
+  },
+  "candidate": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "selection": {
+      "rows": 3287,
+      "births": 1428,
+      "closes": 1428,
+      "actual_net_usd": 5786.63,
+      "stressed_2x_net_usd": 5477.524,
+      "native_relative_equity_drawdown_pct": 20.256887565152653
+    },
+    "forward": {
+      "rows": 115,
+      "births": 54,
+      "closes": 54,
+      "actual_net_usd": 32.74,
+      "stressed_2x_net_usd": 30.626,
+      "native_relative_equity_drawdown_pct": 18.675302129932568
+    }
+  },
+  "active_live_control": {
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "selection_pass": 4,
+    "selection": {
+      "actual_net_usd": 984.69,
+      "stressed_2x_net_usd": 915.8725,
+      "native_relative_equity_drawdown_pct": 9.1948,
+      "closed_lifecycles": 2119
+    },
+    "forward": {
+      "actual_net_usd": -1.11,
+      "stressed_2x_net_usd": -2.819,
+      "native_relative_equity_drawdown_pct": 16.8321,
+      "closed_lifecycles": 84
+    }
+  },
+  "components": [
+    "ZT-M30-US30-RANGE-COMP-61f61deaba",
+    "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+    "ZT-H1-US30-RETURN-I-c870a788ec",
+    "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+  ],
+  "selection_epochs": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+    {"id": "E4", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+  ],
+  "forward_periods": [
+    {"id": "FULL", "start": "2026.06.01 00:00:00", "end": "2026.08.01 00:00:00"},
+    {"id": "JUNE", "start": "2026.06.01 00:00:00", "end": "2026.07.01 00:00:00"},
+    {"id": "JULY", "start": "2026.07.01 00:00:00", "end": "2026.08.01 00:00:00"}
+  ],
+  "cost_books": {
+    "multipliers": [1, 2, 3, 4],
+    "observed_cost_unit": "actual_net_usd minus stressed_2x_net_usd",
+    "formula": "actual_net_usd minus (multiplier minus 1) times observed_cost_unit",
+    "scope_limit": "Arithmetic closed-path stress only; no claim that spread, commission, swap, slippage, capital-ladder feedback or native open-equity path scales linearly."
+  },
+  "gates": {
+    "selection_4x_net_strictly_positive": true,
+    "selection_4x_profit_factor_minimum": 1.25,
+    "selection_4x_to_1x_net_retention_minimum": 0.75,
+    "selection_all_four_epochs_4x_positive": true,
+    "selection_all_five_active_components_4x_positive": true,
+    "selection_candidate_4x_strictly_above_active_live_control_4x": true,
+    "forward_4x_net_strictly_positive": true,
+    "forward_4x_profit_factor_minimum": 1.10,
+    "forward_4x_to_1x_net_retention_minimum": 0.75,
+    "forward_candidate_4x_strictly_above_active_live_control_4x": true,
+    "june_4x_net_strictly_positive": true,
+    "july_4x_maximum_absolute_loss_usd": 5.0,
+    "july_4x_maximum_loss_share_of_positive_full_forward": 0.15
+  },
+  "output": {
+    "path": "optimization/artifacts/raw/dd20-paired-month-live-control-cost-resilience-proxy-v1/output/proxy-result.json"
+  }
+}
