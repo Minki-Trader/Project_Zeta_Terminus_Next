@@ -77,10 +77,14 @@ This successor adds only the verified read-only research observation hooks and a
 - Parent commit at derivation: `f4e1effb647d5ef81921eddc64fcd6bef2289f57`
 - Exact frozen parent copy: `optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/`
 - Frozen parent manifest SHA-256: `7A968666241AD90629F14ADF48E983AB04A4DD88053F1413EBB209FB51976698`
-- Active campaign: `optimization/campaigns/portfolio-risk-cap-envelope-v1/`
-- Dedicated runtime: `optimization/runtime/portfolio-risk-cap-envelope-v1-portable/`
+- Current qualified anchor: `optimization/campaigns/dd20-component-equity-state-native-margin-mt5-v1/`
+- Qualified selection: actual/stressed `+$1,693.46 / +$1,626.677`, native relative equity DD `19.797353497%`
+- Qualified forward: actual/stressed `+$23.01 / +$21.256`, native relative equity DD `12.436759043%`
+- Latest closed campaign: `optimization/campaigns/dd20-gain-overlay-base-quantum-reservation-mt5-v1/`
+- Latest verdict: `VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_NO_FORWARD_RETAIN_CURRENT_ANCHOR`
+- Active dedicated runtime: none; the latest reproducible campaign Portable was removed from the workspace after useful artifacts were hash-pinned
 
-This is the sole continuous economic-optimization stream and is physically independent from Live-Dev and Lab. Its first campaign changes only the existing per-position and aggregate planned-risk caps across 15 exhaustive combinations while all six signal and execution behaviors remain fixed. It is tester-only, has unique identity/Magic/state paths, and may run only from its dedicated Portable, never the Master, Live or Lab terminal. Engineering, configuration, history and report faults are correction states with no economic verdict or arbitrary retry cap. No result promotes automatically; explicit user authorization and a separate Lab engineering handoff are required before any possible Live change.
+This is the sole continuous economic-optimization stream and is physically independent from Live-Dev and Lab. The current qualified anchor uses fixed component weights `1.6 / 0.8 / 0.4 / 3.2 / 1.2 / 0` plus causal 40-close component-local stressed-R state. The latest one-base-quantum gain-overlay reserve candidate completed valid selection at `+$1,692.45 / +$1,626.089` and `19.550371765%` DD but missed both strict anchor-profit gates, so no forward opened and the anchor did not change. Every campaign is tester-only, has unique identity/Magic/state paths, and may run only from its dedicated Portable, never the Master, Live or Lab terminal. Engineering, configuration, history and report faults are correction states with no economic verdict or arbitrary retry cap. No result promotes automatically; explicit user authorization and a separate Lab engineering handoff are required before any possible Live change.
 
 ## Authority boundary
 

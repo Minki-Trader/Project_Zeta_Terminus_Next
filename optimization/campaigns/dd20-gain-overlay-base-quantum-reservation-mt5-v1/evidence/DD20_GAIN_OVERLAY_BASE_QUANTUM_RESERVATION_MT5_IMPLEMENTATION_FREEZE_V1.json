@@ -1,0 +1,92 @@
+{
+  "schema": "zeta-dd20-gain-overlay-base-quantum-reservation-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "COMPILED_FIXED_CANDIDATE_BEFORE_VALID_SELECTION",
+  "campaign": "dd20-gain-overlay-base-quantum-reservation-mt5-v1",
+  "parent_main_commit": "b787f725d38726d896903d78ccc8df10b9c2a7c8",
+  "implementation": {
+    "source_file_count": 16,
+    "source_total_bytes": 430687,
+    "source_manifest_sha256": "286FB3A53D89056D1E15C01E8A0A92FE46B560F5A790CF8089222CBE3D04EADA",
+    "configuration_file_count": 3,
+    "configuration_total_bytes": 2643,
+    "configuration_manifest_sha256": "1A2C21E0FCBC5A48E3B6B986D7621F875CA2CE88C085F9D2052ED147920C1362",
+    "manifest_algorithm": "Sort slash-normalized paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF and final LF; SHA-256 the payload.",
+    "runtime_source_and_configuration_parity_files": 19,
+    "runtime_source_and_configuration_mismatches": 0,
+    "baseline_source_files_physically_derived": 16,
+    "semantic_change_source_files": 7,
+    "remaining_include_modules_changed_only_for_isolated_include_guards": 9,
+    "cross_campaign_include_or_source_link": false,
+    "copied_predecessor_ex5": false,
+    "economic_change": "Preserve the fixed component equity-state anchor and reserve one 4% risk-capital quantum only from gain-overlay executable volume above neutral, with neutral volume as an immutable floor."
+  },
+  "source_pins": {
+    "expert_sha256": "50D503D9F87871D5601146D60AA585F4B6162A3C0B2E1934F22178F118E68D3B",
+    "domain_sha256": "D78E2BDA287F06123790386E1C0A0194687FE5F7B08E21E4789B734CE2EACB4A",
+    "portfolio_sha256": "A6DFF7AC43BE4F3654A9DF11493C839AE8BB1040ACDA4AFACC56F80BF0D4A932",
+    "orders_sha256": "A99B323E2D6D0A39B405986694D1C84662B8C30D7CBEC0AC3C1FB6CC24B4C3F8",
+    "protection_sha256": "AD5F3ABB70C0E8A4CABB6ABCD8E392EF5C80C8112D81427554A5F8586C99D545"
+  },
+  "configuration_pins": {
+    "candidate_set_sha256": "D9FB0F090C8A21B1048ACC6EC26038C792EB89D0CB536F86896CFC93D0D4BC7A",
+    "selection_ini_sha256": "59872B78CD949516950A0CD020CE41FD0F3CE663FDA2985EF46333550EF8BF84",
+    "forward_ini_sha256": "A0A74D469EB60BEC732A5903A29A45911A7470C96E558F4EACAE1A44B4FC4551"
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "compiler_elapsed_ms": 2392,
+    "launcher_process_exit_code": 1,
+    "compile_invocations": 1,
+    "ex5_path": "optimization/campaigns/dd20-gain-overlay-base-quantum-reservation-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20GOBQR1.ex5",
+    "ex5_bytes": 237618,
+    "ex5_sha256": "AA3E641AE5E3829C12E69BC391378DFE993857AC2AA2274EC6975BF52457BD3F",
+    "runtime_and_campaign_ex5_match": true,
+    "raw_log_path": "optimization/artifacts/raw/dd20-gain-overlay-base-quantum-reservation-mt5-v1/compile/compile-final-20260829.log",
+    "raw_log_bytes": 21050,
+    "raw_log_sha256": "6B8524EF83D36CB7FAE5AA1A26A9E93353F63BEBB3251B770AE4B734BCCCB9E5"
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-gain-overlay-base-quantum-reservation-mt5-v1-portable/",
+    "physical_copy_source": "optimization/runtime/dd20-native-gap-july-robustness-mt5-v1-portable/",
+    "terminal_file_version": "5.0.0.6140",
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "inherited_campaign_source_and_profiles_moved_out_before_compile": true,
+    "active_expert_include_and_profile_families": 1,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_terminal": false,
+    "is_live_terminal": false,
+    "is_lab_terminal": false
+  },
+  "setup_corrections_without_economic_verdict": [
+    {
+      "condition": "The frozen optimization baseline contains source and a preset but no selection or forward INI files.",
+      "resolution": "Create the two candidate-local tester INIs from the frozen dates and current campaign contract; no Tester invocation had started."
+    },
+    {
+      "condition": "The physical runtime copy contained inert source and profiles from its copy-source campaigns.",
+      "resolution": "Move those exact inherited source/profile paths to optimization/artifacts/temp before overlaying this campaign, leaving one active expert, Include root and tester profile."
+    },
+    {
+      "condition": "MetaEditor returned launcher code 1.",
+      "resolution": "The complete log ended Result: 0 errors, 0 warnings and the expected EX5 was produced and hash-matched; this is the established launcher behavior, not a compile failure."
+    }
+  ],
+  "boundary": {
+    "compiled": true,
+    "candidate_changed_after_compile_or_during_economic_run": false,
+    "tester_invocations_without_complete_economic_output": 0,
+    "valid_selection_runs_at_freeze": 0,
+    "forward_runs_at_freeze": 0,
+    "current_anchor_rerun": false,
+    "prior_candidate_or_proxy_rerun": false,
+    "live_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

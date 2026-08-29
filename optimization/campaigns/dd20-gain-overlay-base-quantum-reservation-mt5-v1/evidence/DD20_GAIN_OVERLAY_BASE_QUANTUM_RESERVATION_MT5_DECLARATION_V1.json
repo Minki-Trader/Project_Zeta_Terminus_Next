@@ -1,0 +1,105 @@
+{
+  "schema": "zeta-dd20-gain-overlay-base-quantum-reservation-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "DURABLE_RECORD_OF_FROZEN_PRE_TESTER_CONTRACT",
+  "campaign": "dd20-gain-overlay-base-quantum-reservation-mt5-v1",
+  "parent_main_commit": "b787f725d38726d896903d78ccc8df10b9c2a7c8",
+  "contract_authority": {
+    "lab_unit": "gain-overlay-base-quantum-reservation-097",
+    "lab_family": "lab/research/gain-overlay-base-quantum-reservation-v1",
+    "lab_result_commit": "b787f725d38726d896903d78ccc8df10b9c2a7c8",
+    "lab_declaration_sha256": "9EB0D09B1CB5606F04F48382329EA33B9CF2E372CB18D5EBA3F71D1406884C31",
+    "lab_result_sha256": "5F6382846388AFF23910097B4AC89830EAA5A9F9665580510D30B2BCF6FE5A06",
+    "classification": "RETAIN_ONE_BASE_QUANTUM_RESERVED_GAIN_OVERLAY_OPTIMIZATION_SEED",
+    "note": "Unit 097 froze the sole candidate and all gates before this campaign source or Tester path existed; this campaign file packages that already-authoritative contract under the user's one-commit research-unit policy."
+  },
+  "source_derivation": {
+    "baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "baseline_release_id": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "baseline_canonical_source_settings_sha256": "B32E7E176F2EF1B4A7AA6E9FB91D59FAC685325CC83A79DAA1947F5A431CA178",
+    "baseline_source_manifest_sha256": "AEB9FDB813164331645EEB63B927F1670F513800D72221F44061883180A72568",
+    "method": "one-time physical copy of the frozen baseline MQ5/MQH source into one self-contained optimization family",
+    "baseline_source_files_copied": 16,
+    "copied_baseline_ex5": false,
+    "copied_predecessor_campaign_source": false,
+    "cross_family_source_or_include_link": false
+  },
+  "candidate": {
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "base_component_weights": [1.6, 0.8, 0.4, 3.2, 1.2, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "addition_step_usd": 150.0,
+    "component_state": {
+      "lookback_completed_lifecycles": 40,
+      "symmetric_mean_band_r": 0.10,
+      "loss_overlay": 0.0,
+      "neutral_and_warmup_overlay": 1.0,
+      "gain_overlay": 1.125,
+      "observation": "completed admitted lifecycle accumulated doubled-cost-stressed net divided by original admitted planned risk",
+      "fresh_in_memory_process_only": true
+    },
+    "gain_overlay_reserve": {
+      "fraction_of_current_risk_capital": 0.04,
+      "applies_only_when_gain_executable_volume_exceeds_same_path_neutral_volume": true,
+      "algorithm": "Remove incremental executable volume steps until aggregate cap minus prior tracked risk minus candidate planned risk is at least one reserve quantum, or neutral executable volume is reached.",
+      "neutral_volume_is_floor": true,
+      "neutral_floor_shortfall_resolution": "retain neutral and use the original position and aggregate admission checks",
+      "reorder_preempt_partial_close_or_synthetic_opportunity": false
+    },
+    "unchanged": [
+      "signals",
+      "clocks",
+      "directions",
+      "component first-come order",
+      "position and aggregate caps",
+      "stop geometry",
+      "exit behavior",
+      "fresh-process state",
+      "selection and conditional-forward gates"
+    ]
+  },
+  "identity": {
+    "expert": "ZetaDD20GOBQR1",
+    "include_root": "ZetaOptDD20GOBQR1",
+    "execution_version": "zt-opt-live-v7-dd20-gain-overlay-base-quantum-reservation-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20GOBQR1-20260829",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20GOBQR1-20260829",
+    "schema_version": "opt-dd20-gobqr-mt5-1",
+    "magic": [260829871, 260829872, 260829873, 260829874, 260829875, 260829876],
+    "state_and_research_root": "ZetaOptimization\\dd20-gobqr1",
+    "report_root": "reports\\dd20-gain-overlay-base-quantum-reservation-mt5-v1"
+  },
+  "tester_contract": {
+    "model": "MT5 every tick based on real ticks",
+    "symbol": "US30",
+    "period": "M30",
+    "deposit_usd": 100.0,
+    "currency": "USD",
+    "leverage": "1:100",
+    "selection": {"from": "2022-08-01", "to": "2026-06-01", "maximum_valid_runs": 1},
+    "conditional_forward": {"from": "2026-06-01", "to": "2026-08-01", "maximum_valid_runs": 1},
+    "current_anchor_actual_net_usd": 1693.46,
+    "current_anchor_stressed_net_usd": 1626.677,
+    "selection_actual_and_stressed_must_strictly_exceed_current_anchor": true,
+    "all_four_selection_epochs_actual_and_stressed_positive": true,
+    "hard_native_mt5_equity_drawdown_pct": 20.0,
+    "forward_opens_only_after_every_selection_gate_passes": true
+  },
+  "exclusions": [
+    "no reserve-fraction grid",
+    "no component, symbol, clock, event or direction exception",
+    "no lookback, band or overlay retune",
+    "no admission reorder, preemption, partial close or exit change",
+    "no current anchor or closed-path rerun",
+    "no test, validator, parity checker or test-only infrastructure",
+    "no Live authority"
+  ]
+}
