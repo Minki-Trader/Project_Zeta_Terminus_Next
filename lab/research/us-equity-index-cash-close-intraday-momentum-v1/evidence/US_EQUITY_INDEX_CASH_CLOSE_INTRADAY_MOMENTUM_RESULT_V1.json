@@ -1,0 +1,225 @@
+{
+  "schema": "zeta-next-us-equity-index-cash-close-intraday-momentum-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "UNIT_108_VALID_ECONOMIC_NONCONFIRMATION_NO_SEED",
+  "unit": "us-equity-index-cash-close-intraday-momentum-108",
+  "family": "us-equity-index-cash-close-intraday-momentum-v1",
+  "declaration_commit": "febacad7a18bb20e35c2f4d47a650d0ea249c040",
+  "verdict": "VALID_NO_CASH_CLOSE_INTRADAY_MOMENTUM_AFTER_COST_NO_SEED",
+  "validity": {
+    "immutable_input_files": 3,
+    "immutable_input_bytes": 40239474,
+    "input_manifest_sha256": "F1324FE29EA31A59379AA985B0CD93EA380492BC7A85ECBA15E15D7C723837A0",
+    "complete_sessions": {"US30": 1143, "US100": 1143},
+    "common_complete_sessions": 1141,
+    "eligible_with_prior_gap_1_to_4_all_dates": 1133,
+    "structural_counts_reproduced": true,
+    "schema_ohlc_time_volume_spread_geometry_passed": true,
+    "symbol_contract_reproduced": true,
+    "observed_bid_ask_identity_max_error_usd": 1e-9,
+    "formal_source_free_processes": 1,
+    "complete_economic_aggregations": 1,
+    "economic_contract_changes_after_declaration": 0,
+    "engineering_corrections_after_declaration": 0,
+    "valid_economic_result": true
+  },
+  "supply": {
+    "paired_days": 987,
+    "trades": 1974,
+    "starts_per_eligible_day": 2,
+    "period_starts": {
+      "P1_2022H2_2023": 706,
+      "P2_2024": 484,
+      "P3_2025": 490,
+      "P4_2026_JAN_MAY": 204,
+      "P5_LATEST_2026_JUN_JUL": 90
+    },
+    "zero_predictors": 0,
+    "structurally_additive_not_standalone_high_turnover": "Two starts per paired day can only be an additive sleeve; it is below the project-wide three actual starts/day standalone high-turnover line."
+  },
+  "period_economics": {
+    "P1_2022H2_2023": {
+      "trades": 706,
+      "gross_net_usd": 2.7519,
+      "observed_net_usd": -8.3546,
+      "stressed_net_usd": -19.4611,
+      "stressed_profit_factor": 0.8281911297,
+      "stressed_max_closed_dd_usd": 19.4611,
+      "stressed_net_to_dd": -1.0,
+      "splits_stressed_usd": {"2022H2": -12.649, "2023": -6.8121},
+      "symbols_stressed_usd": {"US30": -11.4, "US100": -8.0611},
+      "predictor_sides_stressed_usd": {"UP": -0.3936, "DOWN": -19.0675},
+      "interpretation": "The initial evidence block fails before any confirmation logic. Gross edge is only $2.7519 and is already negative under observed bid/ask cost; both calendar splits, symbols and predictor signs fail the required breadth."
+    },
+    "P2_2024": {
+      "trades": 484,
+      "gross_net_usd": 12.7121,
+      "observed_net_usd": 7.1475,
+      "stressed_net_usd": 1.5829,
+      "stressed_profit_factor": 1.0191622087,
+      "stressed_max_closed_dd_usd": 11.5692,
+      "stressed_net_to_dd": 0.1368201777,
+      "symbols_stressed_usd": {"US30": 3.8245, "US100": -2.2416},
+      "predictor_sides_stressed_usd": {"UP": 3.979, "DOWN": -2.3961},
+      "interpretation": "Combined dollars are barely positive after stress, but PF, efficiency, US100 and DOWN continuation show no broad confirmation."
+    },
+    "P3_2025": {
+      "trades": 490,
+      "gross_net_usd": 38.7999,
+      "observed_net_usd": 33.5835,
+      "stressed_net_usd": 28.3671,
+      "stressed_profit_factor": 1.297851564,
+      "stressed_max_closed_dd_usd": 9.1053,
+      "stressed_net_to_dd": 3.115449244,
+      "symbols_stressed_usd": {"US30": 21.82075, "US100": 6.54635},
+      "predictor_sides_stressed_usd": {"UP": 8.15235, "DOWN": 20.21475},
+      "interpretation": "This is a real, broad and cost-resilient 2025 regime. It cannot select the rule retroactively because the literature direction was fixed, and it cannot rescue negative initial, 2026 and latest blocks."
+    },
+    "P4_2026_JAN_MAY": {
+      "trades": 204,
+      "gross_net_usd": -0.6615,
+      "observed_net_usd": -2.5455,
+      "stressed_net_usd": -4.4295,
+      "stressed_profit_factor": 0.901756,
+      "stressed_max_closed_dd_usd": 11.4305,
+      "stressed_net_to_dd": -0.387516,
+      "symbols_stressed_usd": {"US30": -2.633, "US100": -1.7965},
+      "predictor_sides_stressed_usd": {"UP": 3.8655, "DOWN": -8.295},
+      "interpretation": "The mechanism turns negative even before observed cost and loses on both symbols after stress."
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "trades": 90,
+      "gross_net_usd": 0.3605,
+      "observed_net_usd": -0.411,
+      "stressed_net_usd": -1.1825,
+      "stressed_profit_factor": 0.946043,
+      "stressed_max_closed_dd_usd": 7.0915,
+      "stressed_net_to_dd": -0.166749,
+      "symbols_stressed_usd": {"US30": -3.0115, "US100": 1.829},
+      "predictor_sides_stressed_usd": {"UP": -4.132, "DOWN": 2.9495},
+      "nominal_floor_usd": 0.0,
+      "practical_floor_usd": -0.0723654459,
+      "interpretation": "The latest loss fails both nominal and predeclared practical tolerance. Its symbol and predictor-side orientation also reverses relative to earlier blocks."
+    }
+  },
+  "pooled_economics": {
+    "P2_P4_CONFIRMATION": {
+      "trades": 1178,
+      "gross_observed_stressed_net_usd": [50.8505, 38.1855, 25.5205],
+      "stressed_profit_factor": 1.1144772022,
+      "stressed_max_closed_dd_percent": 13.1639,
+      "stressed_net_to_dd": 1.9386731896,
+      "symbols_stressed_usd": {"US30": 23.01225, "US100": 2.50825},
+      "positive_symbol_period_cells": 3,
+      "required_positive_symbol_period_cells": 5,
+      "interpretation": "Pooled confirmation looks positive only because strong 2025 offsets 2024 breadth failure and fully negative P4."
+    },
+    "P1_P4_PRELATEST": {
+      "trades": 1884,
+      "gross_net_usd": 53.6024,
+      "observed_net_usd": 29.8309,
+      "stressed_net_usd": 6.0594,
+      "gross_to_observed_cost_usd": 23.7715,
+      "observed_to_stressed_increment_usd": 23.7715,
+      "total_doubled_cost_burden_usd": 47.543,
+      "stressed_profit_factor": 1.0180230584,
+      "stressed_max_closed_dd_usd": 27.02105,
+      "stressed_max_closed_dd_percent": 27.02105,
+      "nominal_dd_limit_percent": 20.0,
+      "practical_dd_limit_percent": 21.2,
+      "stressed_net_to_dd": 0.2242473923,
+      "symbols_stressed_usd": {"US30": 11.61225, "US100": -5.55285},
+      "predictor_sides_stressed_usd": {"UP": 15.60325, "DOWN": -9.54385},
+      "maximum_symbol_share_of_positive_net": 1.0,
+      "top_five_positive_day_share": 0.0963656987,
+      "interpretation": "Day-level profit is not dominated by a handful of outliers, but economic value is regime- and symbol-concentrated. Only 11.30% of gross net survives doubled cost, with PF near one and DD materially beyond both risk lines."
+    },
+    "P1_P5_FULL": {
+      "trades": 1974,
+      "gross_net_usd": 53.9629,
+      "observed_net_usd": 29.4199,
+      "stressed_net_usd": 4.8769,
+      "stressed_profit_factor": 1.0136181313,
+      "stressed_max_closed_dd_usd": 27.02105,
+      "stressed_max_closed_dd_percent": 27.02105,
+      "stressed_net_to_dd": 0.1804852143,
+      "symbols_stressed_usd": {"US30": 8.60075, "US100": -3.72385},
+      "predictor_sides_stressed_usd": {"UP": 11.47125, "DOWN": -6.59435},
+      "interpretation": "The full path remains nominally positive only in dollars. PF 1.0136, 27.02% DD, negative US100 and unstable sign orientation make it economically unusable."
+    }
+  },
+  "temporal_shape": {
+    "months": 48,
+    "positive_months": 22,
+    "negative_months": 26,
+    "best_month": {"month": "2024-08", "stressed_net_usd": 11.9224},
+    "worst_month": {"month": "2022-08", "stressed_net_usd": -6.5982},
+    "positive_days_p1_p4": 451,
+    "negative_days_p1_p4": 491,
+    "top_five_positive_day_share": 0.0963656987,
+    "interpretation": "The failure is not a single-tail-event artifact. The broad 2025 block is surrounded by negative initial, 2026 and latest economics; monthly breadth is 22/48 positive."
+  },
+  "gate_result": {
+    "nominal_pass": false,
+    "practical_pass": false,
+    "material_failures": [
+      "P1 stressed net, PF and efficiency",
+      "both P1 splits, both symbols and both predictor sides",
+      "P4 combined and both-symbol economics",
+      "only 3/6 positive P2-P4 symbol-period cells versus required 5/6",
+      "P1-P4 PF 1.0180 versus 1.075 and net/DD 0.2242 versus 1.50",
+      "P1-P4 DD 27.0211% versus nominal/practical 20.0%/21.2%",
+      "US100 negative pooled P1-P4 and maximum positive-symbol share 1.0 versus 0.75",
+      "P5 -$1.1825 versus nominal $0 and practical -$0.0724",
+      "full-path PF 1.0136 versus 1.05"
+    ],
+    "marginal_judgment": "Not applicable as a rescue. DD exceeds the practical line by 5.8211 percentage points, latest loss is about 16.34 times the allowed absolute loss, and multiple independent economic breadth/efficiency gates fail."
+  },
+  "causal_interpretation": {
+    "literature_transfer": "A real 2025 cash-close momentum regime exists in this FPMarkets proxy, but the exact unconditional two-index rule does not transfer reliably across the complete project horizon.",
+    "cost_role": "Cost matters materially: observed execution turns weak P1 gross profit negative and doubled cost consumes 88.70% of pooled P1-P4 gross net. Cost is not the sole cause because P1A and P4 are already gross-negative and temporal/symbol orientation reverses.",
+    "regime_role": "P3 contributes +$28.3671 stressed while the full P1-P5 path retains only +$4.8769; other blocks remove $23.4902. This is regime concentration, not broad stationary alpha.",
+    "direction_role": "UP and DOWN subgroup signs change across blocks. A long-only, short-only or regime router would be a new post-outcome rescue and is forbidden by the declaration.",
+    "portfolio_role": "Because the standalone bundle fails stressed economics, shared-account admission or diversification cannot be invoked as a rescue. No Optimization integration counterfactual is authorized."
+  },
+  "decision": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "single_symbol_survivor": null,
+    "direction_survivor": null,
+    "adjacent_rescue": false,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged",
+    "live_authority": false
+  },
+  "raw_artifacts": {
+    "analysis_result": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/analysis-result.json",
+      "bytes": 177020,
+      "sha256": "40653654FD1D1B9905A9000A9755E7C1D76B75B5E320D248315DF530D36F68B7"
+    },
+    "trades": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/trades.csv",
+      "bytes": 463986,
+      "sha256": "2A4AB4B671F308C3825A00ED5BC102421A77C08761C51CE6E577E0192D8173CD"
+    },
+    "paired_days": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/paired-days.csv",
+      "bytes": 61811,
+      "sha256": "86A5FBA56AAD2AD5AFB2B8C179890520F9B521E06F5D5271C2256108265D91AF"
+    }
+  },
+  "execution": {
+    "elapsed_seconds": 2.9100241,
+    "direction_books": 1,
+    "threshold_points": 0,
+    "grid_points": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "live_surface": "UNTOUCHED"
+  }
+}

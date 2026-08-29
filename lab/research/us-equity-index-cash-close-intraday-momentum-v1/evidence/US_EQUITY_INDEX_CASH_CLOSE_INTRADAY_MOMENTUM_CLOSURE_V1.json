@@ -1,0 +1,145 @@
+{
+  "schema": "zeta-next-us-equity-index-cash-close-intraday-momentum-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_VALID_NO_CASH_CLOSE_INTRADAY_MOMENTUM_AFTER_COST_NO_SEED",
+  "unit": "us-equity-index-cash-close-intraday-momentum-108",
+  "family": "us-equity-index-cash-close-intraday-momentum-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "declaration_commit": "febacad7a18bb20e35c2f4d47a650d0ea249c040",
+  "verdict": "VALID_NO_CASH_CLOSE_INTRADAY_MOMENTUM_AFTER_COST_NO_SEED",
+  "classification": {
+    "valid_complete_economic_nonconfirmation": true,
+    "environment_failure": false,
+    "design_failure": false,
+    "engineering_failure": false,
+    "correction_required": false,
+    "research_success": false,
+    "research_failure_basis": "Complete valid doubled-spread economic numbers only."
+  },
+  "complete_path": {
+    "paired_days": 987,
+    "trades": 1974,
+    "P1_stressed_net_usd": -19.4611,
+    "P2_stressed_net_usd": 1.5829,
+    "P3_stressed_net_usd": 28.3671,
+    "P4_stressed_net_usd": -4.4295,
+    "P5_stressed_net_usd": -1.1825,
+    "full_gross_net_usd": 53.9629,
+    "full_observed_net_usd": 29.4199,
+    "full_stressed_net_usd": 4.8769,
+    "full_stressed_profit_factor": 1.0136181313,
+    "full_stressed_max_closed_dd_percent": 27.02105,
+    "full_stressed_net_to_dd": 0.1804852143,
+    "full_symbols_stressed_usd": {"US30": 8.60075, "US100": -3.72385},
+    "full_predictor_sides_stressed_usd": {"UP": 11.47125, "DOWN": -6.59435},
+    "positive_months": 22,
+    "negative_months": 26
+  },
+  "why_no_seed": [
+    "Initial P1 stressed net is -$19.4611 at PF 0.8282; both P1 calendar splits, both symbols and both predictor signs are negative.",
+    "Only P3 2025 is a broad strong regime. P2 is barely positive and lacks US100/DOWN breadth; P4 is negative gross and stressed on both symbols.",
+    "Only 3/6 P2-P4 symbol-period cells are positive versus the frozen 5/6 gate.",
+    "P1-P4 stressed PF 1.0180 and net/DD 0.2242 miss 1.075 and 1.50; DD 27.0211% exceeds both 20.0% nominal and 21.2% practical lines.",
+    "Latest stressed -$1.1825 misses zero and the predeclared practical floor -$0.0724 by a material amount.",
+    "Full stressed PF 1.0136, negative US100, negative DOWN continuation and 22/48 positive months are not a deployable additive alpha surface."
+  ],
+  "economic_interpretation": {
+    "gross_edge": "The full midpoint path is positive +$53.9629, so the literature mechanism is not wholly absent.",
+    "observed_execution": "Executable bid/ask cost leaves +$29.4199, but initial and latest transfer still fail and the result remains temporally and cross-symbol unstable.",
+    "stress": "Doubled cost leaves only +$4.8769, PF 1.0136 and DD 27.0211%; the margin is economically negligible relative to path risk.",
+    "regime": "P3 contributes +$28.3671 stressed while all other frozen periods net -$23.4902. The apparent pooled edge is chiefly a 2025 regime, not stable unconditional close momentum.",
+    "outliers": "Top five positive paired days supply only 9.64% of positive-day profit, so the issue is not one or two lucky days. Failure is temporal-regime and breadth instability.",
+    "cost_not_only_cause": "P1A and P4 are gross-negative, and symbol/predictor orientation reverses. Lowering the cost assumption cannot restore the declared broad transfer contract."
+  },
+  "decision": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "single_symbol_survivor": null,
+    "direction_survivor": null,
+    "latest_rescue": null,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged",
+    "live_change": false,
+    "promotion_authority": false
+  },
+  "closed_neighborhood": [
+    "exact previous-cash-close-to-15:30 continuation through 16:00",
+    "UP-only or DOWN-only post-outcome direction filtering",
+    "US30-only or US100-only post-outcome retention",
+    "reversion direction",
+    "neighboring 15:00, 15:15, 15:29, 15:45 or other clock",
+    "predictor magnitude, rank, threshold, volatility, day, month, event or same/opposite-direction subgroup",
+    "US500 substitution or synthetic US500 M1",
+    "stop, hold, sizing, risk, capital, admission, collision or portfolio integration rescue"
+  ],
+  "whole_map_recomparison": {
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "program_1": "Unit 108 creates no seed. Formula, interaction, cross-relative, lead-lag, body, shock and adjacent signal axes remain closed; predictor-side and one-symbol outcomes cannot select a successor.",
+    "program_2": "No new causal external state was materialized by this unit; existing external-state families remain closed without a ready action.",
+    "program_3": "The cash clock is part of the failed fixed mechanism. Moving it is an adjacent rescue, and no independent order/session input is ready.",
+    "program_4": "Fixed close generated no held-position checkpoint or management seed; current stop/exit neighborhoods remain closed.",
+    "program_5": "A failed standalone bundle cannot be integrated or risk-weighted into the fixed candidate as a rescue. No new allocation or capital mechanism is ready.",
+    "program_7": "Input, cost and regime attribution are resolved by complete economics; another diagnostic does not create treatment value.",
+    "program_6_excluded": true,
+    "immediate_successor_ready": false,
+    "automatic_successor_opened": false,
+    "optimization_resumed": true,
+    "next": "Continue the Optimization whole-map discovery stream for a genuinely independent complete causal source; do not reopen this cash-close neighborhood."
+  },
+  "artifacts": {
+    "snapshot_receipt": {
+      "path": "lab/research/us-equity-index-cash-close-intraday-momentum-v1/evidence/US_EQUITY_INDEX_CASH_CLOSE_INTRADAY_MOMENTUM_SNAPSHOT_RECEIPT_V1.json",
+      "bytes": 3741,
+      "sha256": "C0D822B0CB1A5971B7F35281BAF4A24C0C4AD2D730520D17AFB39296A942B13D"
+    },
+    "declaration": {
+      "path": "lab/research/us-equity-index-cash-close-intraday-momentum-v1/evidence/US_EQUITY_INDEX_CASH_CLOSE_INTRADAY_MOMENTUM_DECLARATION_V1.json",
+      "bytes": 15398,
+      "sha256": "C4DB365FA38A74783AF9049BFED8924461ADF25C1722095BFF988EC812122AB3"
+    },
+    "result": {
+      "path": "lab/research/us-equity-index-cash-close-intraday-momentum-v1/evidence/US_EQUITY_INDEX_CASH_CLOSE_INTRADAY_MOMENTUM_RESULT_V1.json",
+      "bytes": 11134,
+      "sha256": "A03EB887D2A91BC263DF2EBB3FFC9604BEC1B02C8DE91A742BD620A4BAF41F61"
+    },
+    "raw_analysis_result": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/analysis-result.json",
+      "bytes": 177020,
+      "sha256": "40653654FD1D1B9905A9000A9755E7C1D76B75B5E320D248315DF530D36F68B7"
+    },
+    "raw_trades": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/trades.csv",
+      "bytes": 463986,
+      "sha256": "2A4AB4B671F308C3825A00ED5BC102421A77C08761C51CE6E577E0192D8173CD"
+    },
+    "raw_paired_days": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/output/paired-days.csv",
+      "bytes": 61811,
+      "sha256": "86A5FBA56AAD2AD5AFB2B8C179890520F9B521E06F5D5271C2256108265D91AF"
+    },
+    "preservation": "All three family-owned inputs and all complete raw outputs are useful attributable artifacts and remain preserved. No Portable, Tester cache, compile staging or temporary result exists."
+  },
+  "execution": {
+    "elapsed_seconds": 2.9100241,
+    "formal_source_free_processes": 1,
+    "complete_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "threshold_or_grid_points": 0,
+    "engineering_corrections_after_declaration": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_paths": 0,
+    "broker_account_queries": 0,
+    "live_surface": "UNTOUCHED"
+  },
+  "marker": "FRONTIER_UNIT_108_CLOSED_VALID_NO_CASH_CLOSE_INTRADAY_MOMENTUM_AFTER_COST_NO_SEED_MAP_RECOMPARED"
+}
