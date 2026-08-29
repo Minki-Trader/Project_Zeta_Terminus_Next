@@ -1,0 +1,241 @@
+{
+  "schema": "zeta-next-dual-portfolio-formula-interaction-spillover-causality-contract-v1",
+  "family": "dual-portfolio-formula-interaction-spillover-causality-v1",
+  "unit": "dual-portfolio-formula-interaction-spillover-causality-107",
+  "recorded_date_local": "2026-08-30",
+  "status": "DECLARED_TWO_FIXED_FORMULA_INTERACTIONS_LATER_ECONOMICS_UNOPENED",
+  "parent_main_commit": "bee59805b6bf9db17f44ccf7011261fd58de1976",
+  "purpose": "Test exactly two frozen post-selection formula interactions on formula-unseen later intervals and separate changed-component economics from unchanged-component shared-account spillover without any retune.",
+  "source_contract": {
+    "frozen_live_baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/",
+    "fixed_replacement": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "semantic_formula_identity": "RC16, RC4 including ARC, Cross, Pressure and Return are byte-equal after CRLF/LF normalization; Passive differs only by the replacement's exact zero-weight disable guard.",
+    "one_time_source_copy": "optimization/campaigns/dd20-dual-portfolio-internal-formula-lattice-proxy-v1/proxy/run_proxy.py",
+    "one_time_input_copy": "optimization/artifacts/raw/dd20-dual-portfolio-internal-formula-lattice-proxy-v1/market plus the fixed candidate decision ledgers",
+    "formal_process_reads_optimization_live_or_other_lab_paths": false,
+    "cross_campaign_code_link": false,
+    "proxy_only_no_mql_derivation": true
+  },
+  "component_order": [
+    "RC16_US30_M30",
+    "RC4_US30_M30",
+    "CROSS_US100_H1",
+    "PRESSURE_US30_M30",
+    "RETURN_US30_H1",
+    "PASSIVE_US100_M15"
+  ],
+  "paired_contracts": [
+    {
+      "id": "LIVE_CONTROL",
+      "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "reference_selection": {"actual_net_usd": 984.69, "stressed_net_usd": 915.8725, "closed_lifecycles": 2119, "native_relative_equity_dd_pct": 9.1948},
+      "reference_forward": {"actual_net_usd": -1.11, "stressed_net_usd": -2.819, "closed_lifecycles": 84, "native_relative_equity_dd_pct": 16.8321}
+    },
+    {
+      "id": "FIXED_REPLACEMENT",
+      "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18,
+      "reference_selection": {"actual_net_usd": 5786.63, "stressed_net_usd": 5477.524, "closed_lifecycles": 1428, "native_relative_equity_dd_pct": 20.256887565152653},
+      "reference_forward": {"actual_net_usd": 32.74, "stressed_net_usd": 30.626, "closed_lifecycles": 54, "native_relative_equity_dd_pct": 18.675302129932568}
+    }
+  ],
+  "fixed_economic_model": {
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "daily_addition_step_usd": 150.0,
+    "daily_ladder": "1 + floor(max(0, stressed_closed_balance - 100) / 150)",
+    "component_volume": "positive MathRound(base_volume * daily_ladder * fixed_weight) to 0.01 lots",
+    "conservative_capital": "min(actual_closed_balance, stressed_closed_balance)",
+    "gross_stop_risk_fraction_of_planned_budget": 0.5,
+    "aggregate_admission": "tracked full planned component risk must not exceed conservative_capital * contract aggregate fraction plus USD 0.01",
+    "execution_priority": ["PASSIVE_STATE_AND_PENDING", "EXITS", "RC4_ARC", "RC4_1300", "RC16_1330", "PRESSURE_1500", "RETURN_1600", "CROSS_1700"],
+    "fixed_entry_delay_minutes": 2,
+    "fixed_clocks_server_time": {"RC4": "13:00", "RC16": "13:30", "PRESSURE": "15:00", "RETURN": "16:00", "CROSS": "17:00", "PASSIVE_DECISION_BARS": "12:00 through 15:45"},
+    "cost_stress": "actual M1 bid/ask proxy plus one additional entry spread-price times executable lots",
+    "profit_conversion": "index price difference times executable lots; verified against preserved native lifecycle close economics",
+    "risk_and_weight_optimization": false
+  },
+  "market_snapshot": {
+    "lab_owned_input_root": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/",
+    "copy_mode": "one-time byte-equal physical copy with no links and no runtime",
+    "request_utc": ["2022-01-01T00:00:00Z", "2026-08-01T00:00:00Z"],
+    "series": ["US30_M1", "US30_M30", "US30_H1", "US30_D1", "US100_M1", "US100_M15", "US100_H1", "US500_H1"],
+    "new_mt5_or_network_calls": 0,
+    "broker_account_position_order_deal_queries": false
+  },
+  "intervals": [
+    {"id": "E1", "start": "2022-08-01T00:00:00", "end": "2023-06-01T00:00:00", "selection_visible": true},
+    {"id": "E2", "start": "2023-06-01T00:00:00", "end": "2024-06-01T00:00:00", "selection_visible": true},
+    {"id": "E3", "start": "2024-06-01T00:00:00", "end": "2025-06-01T00:00:00", "selection_visible": true},
+    {"id": "E4", "start": "2025-06-01T00:00:00", "end": "2026-06-01T00:00:00", "selection_visible": false},
+    {"id": "JUNE_2026", "start": "2026-06-01T00:00:00", "end": "2026-07-01T00:00:00", "selection_visible": false, "independent_reference_capital": true},
+    {"id": "JULY_2026", "start": "2026-07-01T00:00:00", "end": "2026-08-01T00:00:00", "selection_visible": false, "independent_reference_capital": true},
+    {"id": "JUNE_JULY_CONTINUOUS", "start": "2026-06-01T00:00:00", "end": "2026-08-01T00:00:00", "selection_visible": false, "independent_reference_capital": true}
+  ],
+  "parameter_axes": {
+    "rc16": {
+      "compression": [2, 4, 8, 12, 16, 24, 32, 48, 64],
+      "normal_window": [24, 48, 96, 192, 384],
+      "direction_fraction": [0.125, 0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["POSITIVE_LONG", "SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 8, 12, 16, 24, 32, 48]
+    },
+    "rc4": {
+      "compression": [1, 2, 4, 6, 8, 12, 16, 24, 32],
+      "normal_window": [24, 48, 96, 192, 384],
+      "direction_fraction": [0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [2, 4, 6, 8, 12, 16, 24, 32, 48]
+    },
+    "cross": {
+      "scale_window": [12, 24, 48, 72, 120, 240, 480],
+      "centering_k": [0.0, 0.5, 1.0],
+      "peer_total_beta": [0.0, 0.25, 0.5, 1.0, 1.5, 2.0],
+      "us30_peer_share": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 6, 8, 12, 24]
+    },
+    "pressure": {
+      "daily_scale_window": [3, 5, 10, 20, 40, 60, 120],
+      "daily_scale_quantile": [0.25, 0.5, 0.75],
+      "location_center": [0.25, 0.5, 0.75],
+      "location_power": [0.5, 1.0, 2.0, 4.0],
+      "range_power": [0.0, 0.5, 1.0, 1.5, 2.0, 3.0],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 8, 12, 16, 24, 32]
+    },
+    "return": {
+      "lookback": [1, 2, 4, 8, 12, 24, 48],
+      "scale_window": [12, 24, 48, 72, 120, 240, 480],
+      "normalization_power": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "centering_k": [0.0, 0.5, 1.0],
+      "scale_overlap": ["BASELINE_OVERLAP", "PRE_IMPULSE"],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["NEGATIVE_LONG_REVERSION", "SYMMETRIC_REVERSION", "SYMMETRIC_MOMENTUM", "POSITIVE_SHORT_REVERSION"],
+      "hold_bars": [1, 2, 4, 6, 8, 12, 24]
+    },
+    "passive": {
+      "lookback": [1, 2, 4, 8, 12, 16, 24, 48, 96],
+      "scale_window": [24, 48, 96, 192, 384, 768],
+      "normalization_power": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "centering_k": [0.0, 0.5, 1.0],
+      "entry_threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "exit_fraction_of_entry": [0.0, 0.1, 0.25, 0.5, 0.75],
+      "limit_offset_range_scale": [0.0, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0],
+      "activation_bars": [1, 2, 4, 8, 16, 32],
+      "maximum_hold_bars": [2, 4, 8, 16, 24, 32, 48, 64],
+      "cooldown_bars": [0, 1, 2, 4, 8, 16],
+      "mode": ["CONTRARIAN", "MOMENTUM"]
+    },
+    "arc": {
+      "checkpoint_bars": [2, 4, 8, 10, 11, 12],
+      "retained_loss_fraction": [0.05, 0.1, 0.25, 0.5, 0.75, 0.95],
+      "vote_threshold": [-3, -2, -1, 0],
+      "ordinal_profile": ["QUARTER", "HALF", "BASELINE", "DOUBLE", "QUADRUPLE", "LOWER_HALF_UPPER_DOUBLE", "LOWER_DOUBLE_UPPER_HALF"],
+      "market_penalty_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "decision_dynamics_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "negative_support_penalty_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "confirmation_pressure_share": [0.0, 0.25, 0.5, 0.7, 1.0]
+    }
+  },
+  "baseline_point": {
+    "rc16": [16, 96, 0.5, 1.5, 0.0, "POSITIVE_LONG", 8],
+    "rc4": [4, 96, 0.5, 1.5, 0.0, "SYMMETRIC_CONTINUATION", 12],
+    "cross": [120, 0.0, 1.0, 0.5, 0.5, 0.0, "SYMMETRIC_CONTINUATION", 4],
+    "pressure": [20, 0.5, 0.5, 1.0, 1.0, 0.5, 0.0, "SYMMETRIC_CONTINUATION", 8],
+    "return": [4, 120, 0.5, 0.0, "BASELINE_OVERLAP", 0.5, 0.0, "NEGATIVE_LONG_REVERSION", 6],
+    "passive": [12, 96, 0.5, 0.0, 1.0, 0.25, 0.25, 4, 16, 2, "CONTRARIAN"],
+    "arc": [8, 0.25, -2, "BASELINE", 1.0, 1.0, 1.0, 0.7]
+  },
+  "frozen_inputs": [
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US100_H1.parquet", "bytes": 688340, "sha256": "084A7E4EDE916123A93BE46757B371BAEF8994F5B4651AA391328AB05FF32695"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US100_M1.parquet", "bytes": 21213599, "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US100_M15.parquet", "bytes": 2664798, "sha256": "B56B41B764ADB09F8E620DA82DFC0C034CAED2883CF7375EF4D9474306D3F2FF"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US30_D1.parquet", "bytes": 37369, "sha256": "8E8515F5BA5CC7B0EA0ED45E3404BF9692073739343F3654087F61F504AAD283"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US30_H1.parquet", "bytes": 632070, "sha256": "2C8A8300E18529AB50D7853D80B0B12F5096A185DCEA8D16627229ED77036784"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US30_M1.parquet", "bytes": 19018323, "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US30_M30.parquet", "bytes": 1205200, "sha256": "62FEE2990F43849831F69CF73F8649069482223BB021E25C650383C56890E974"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/market/US500_H1.parquet", "bytes": 618614, "sha256": "F7B32DA88B0F64B185B51E7E4B1DB0F88D21F2019DE65210CFC799FABB96D311"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/candidate-ledgers/selection-research-candidates.csv", "bytes": 8290085, "sha256": "B3231924CD1357072C4198D6A530B5DA932C96EA6A050E35600E2279CAD1007A"},
+    {"path": "lab/artifacts/raw/dual-portfolio-formula-interaction-spillover-causality-v1/input/candidate-ledgers/june-july-research-candidates.csv", "bytes": 312925, "sha256": "6E9F54D6CB5B8EE08DAF09268FBEC219A86BF12CEBED68AC1C8930A6C30FD1BE"}
+  ],
+  "fixed_interaction_points": [
+    {
+      "point_id": "9FD4A8BEEA47022BDF5C",
+      "role": "PAIRED_RC4_DIRECTION_RETURN_CENTERING",
+      "changes": {"rc4.direction_fraction": 0.75, "return.centering_k": 1.0},
+      "direct_components": ["RC4_US30_M30", "RETURN_US30_H1"],
+      "selection_anchors": {
+        "LIVE_CONTROL": {"actual_net_usd": 586.81, "stressed_net_usd": 539.2691962683, "native_equivalent_dd_pct": 9.0411043229, "closed_lifecycles": 1594},
+        "FIXED_REPLACEMENT": {"actual_net_usd": 1889.71, "stressed_net_usd": 1759.7390645728, "native_equivalent_dd_pct": 19.6962902534, "closed_lifecycles": 1055}
+      }
+    },
+    {
+      "point_id": "766FECB1566CBDB2A5A6",
+      "role": "REPLACEMENT_RC4_DIRECTION_PRESSURE_POLARITY",
+      "changes": {"rc4.direction_fraction": 0.75, "pressure.mode": "NEGATIVE_SHORT"},
+      "direct_components": ["RC4_US30_M30", "PRESSURE_US30_M30"],
+      "selection_anchors": {
+        "LIVE_CONTROL": {"actual_net_usd": 570.42, "stressed_net_usd": 525.8683403904, "native_equivalent_dd_pct": 7.7606691494, "closed_lifecycles": 1558},
+        "FIXED_REPLACEMENT": {"actual_net_usd": 1917.43, "stressed_net_usd": 1788.7323038040, "native_equivalent_dd_pct": 19.2465504113, "closed_lifecycles": 1039}
+      }
+    }
+  ],
+  "frozen_spread_cost_multipliers": [1.0858742106257528, 1.4561182603429468, 1.6366200035139182, 1.1608144941469056, 1.1488271090562758, 1.2082764527958718],
+  "anchor_gate": {
+    "feature_comparison": "baseline daily decision features versus the fixed candidate observation ledger wherever signal_known=1",
+    "minimum_exact_feature_match_fraction": 0.995,
+    "maximum_feature_absolute_error": 1e-8,
+    "closed_lifecycle_relative_tolerance": 0.12,
+    "actual_net_relative_tolerance": 0.20,
+    "stressed_net_relative_tolerance": 0.20,
+    "applies_before_nonbaseline_judgment": true,
+    "miss_classification": "CORRECTION_REQUIRED_NO_OPTIMIZATION_VERDICT"
+  },
+  "fixed_analysis_protocol": {
+    "discovery_reproduction_interval": "E1-E3 2022-08-01 through 2025-06-01",
+    "formula_unseen_later_intervals": ["E4", "JUNE_2026", "JULY_2026", "JUNE_JULY_CONTINUOUS"],
+    "primary_generalization_intervals": ["E4", "JUNE_JULY_CONTINUOUS"],
+    "selection_anchor_absolute_tolerance": 1e-7,
+    "attribution_identity_absolute_tolerance": 1e-7,
+    "direct_attribution_share": "sum absolute stressed uplift of changed components divided by sum absolute stressed uplift of all components",
+    "unchanged_spillover": "all unchanged-component stressed uplift versus the exact formula baseline under the same portfolio contract",
+    "paired_point_live_and_replacement_required": true,
+    "replacement_point_live_contract_is_diagnostic_only": true,
+    "replacement_proxy_dd_ceiling_pct": 21.2,
+    "live_proxy_dd_ceiling_pct": 20.0,
+    "minimum_direct_absolute_attribution_share": 0.5,
+    "minimum_direct_component_stressed_uplift_usd": 0.0,
+    "june_and_july_individually_are_diagnostics_not_rescue_gates": true,
+    "candidate_portfolio_selection_caveat": "The fixed portfolio weights previously used E4 and June/July. These intervals are unseen only by the two formula interactions, so the result can validate an incremental formula hypothesis but cannot become clean whole-portfolio OOS evidence."
+  },
+  "fixed_verdict_rules": {
+    "priority": ["9FD4A8BEEA47022BDF5C", "766FECB1566CBDB2A5A6"],
+    "retain_one_exact_lab_seed": "Retain the first priority point whose required contracts have positive stressed uplift, positive stressed net, proxy DD within the stated ceiling, positive direct-component stressed uplift and direct absolute attribution share at least 0.5 in both E4 and continuous June-July.",
+    "nonconfirmation": "If neither point passes every fixed transfer and direct-attribution gate, close VALID_NO_TRANSFERABLE_DIRECT_FORMULA_INTERACTION and retain no seed.",
+    "ambiguous_spillover": "If a point transfers economically but fails direct attribution, classify it as portfolio spillover evidence only and retain no formula seed.",
+    "correction": "Any input, point identity, feature anchor, economic anchor, selection reproduction, parser, serialization or implementation fault is CORRECTION_REQUIRED with no economic verdict and no numeric retry cap."
+  },
+  "proxy_authority": {
+    "lab_research_hypothesis_only": true,
+    "native_equity_drawdown_proof": false,
+    "m1_tick_ordering_proof": false,
+    "optimization_or_live_authority": false,
+    "maximum_retained_seed": 1,
+    "mql_compile_tester_or_runtime": false,
+    "environment_design_engineering_faults_are_corrections_not_economic_failures": true
+  }
+}
