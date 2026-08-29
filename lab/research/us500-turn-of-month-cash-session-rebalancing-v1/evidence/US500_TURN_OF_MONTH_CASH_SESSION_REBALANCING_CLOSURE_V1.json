@@ -1,0 +1,157 @@
+{
+  "schema": "zeta-next-us500-turn-of-month-cash-session-rebalancing-closure-v1",
+  "closed_at_local": "2026-08-30",
+  "status": "CLOSED_VALID_NO_US500_TURN_OF_MONTH_CASH_SESSION_EFFECT_AFTER_COST_NO_SEED",
+  "unit": "us500-turn-of-month-cash-session-rebalancing-111",
+  "family": "us500-turn-of-month-cash-session-rebalancing-v1",
+  "declaration_commit": "afc50a0a6303d469a33b8781b9f1f9fcc646790a",
+  "result": {
+    "path": "lab/research/us500-turn-of-month-cash-session-rebalancing-v1/evidence/US500_TURN_OF_MONTH_CASH_SESSION_REBALANCING_RESULT_V1.json",
+    "bytes": 12358,
+    "sha256": "6395FE4343A5D79436FC3A5319FE68319AA9AFA9DD8726E55D1FADD508981ECF"
+  },
+  "classification": {
+    "verdict": "VALID_NO_US500_TURN_OF_MONTH_CASH_SESSION_EFFECT_AFTER_COST_NO_SEED",
+    "complete_valid_economic_aggregation": true,
+    "economic_hypothesis_failed": true,
+    "environment_failure": false,
+    "design_failure": false,
+    "engineering_failure": false,
+    "marginal_gate_judgment": false,
+    "reason": "The full source-fixed interval is gross-negative, every post-paper confirmation block through May 2026 is gross- and stressed-negative, both P1 stressed roles are negative, all relative-control gates fail and full stressed PF is 0.8334. The result does not depend on a borderline DD or latest threshold."
+  },
+  "economic_close": {
+    "primary_days": 388,
+    "full_gross_observed_stressed_usd": [
+      -6.3103000000001765,
+      -8.001299999999887,
+      -9.692300000000175
+    ],
+    "full_stressed_profit_factor": 0.8333763116997401,
+    "full_stressed_closed_drawdown_percent": 13.616600000000263,
+    "full_stressed_net_to_drawdown": -0.71180030257186,
+    "period_stressed_usd": {
+      "P1_2022H2_2023": -1.2866999999999988,
+      "P2_2024": -4.066099999999985,
+      "P3_2025": -4.511100000000163,
+      "P4_2026_JAN_MAY": -0.6650000000000185,
+      "P5_LATEST_2026_JUN_JUL": 0.8365999999999894
+    },
+    "p1_split_stressed_usd": {
+      "2022H2": -2.700399999999988,
+      "2023H1": 2.3257999999999717,
+      "2023H2": -0.9120999999999821
+    },
+    "full_role_stressed_usd": {
+      "PRE4": -9.388900000000048,
+      "POST4": -0.3034000000001289
+    },
+    "prelatest_primary_stressed_usd": -10.528900000000165,
+    "prelatest_rom_control_stressed_usd": 14.701249999999877,
+    "prelatest_unconditional_control_stressed_usd": 4.172349999999714,
+    "prelatest_primary_mean_usd": -0.028303494623656358,
+    "prelatest_rom_mean_usd": 0.02442068106312272,
+    "prelatest_unconditional_mean_usd": 0.00428372689938369,
+    "prelatest_positive_months": 18,
+    "prelatest_active_months": 47,
+    "full_positive_months": 19,
+    "full_active_months": 49,
+    "latest_months_stressed_usd": {
+      "2026-06": 0.8421000000000004,
+      "2026-07": -0.00550000000001101
+    },
+    "strong_null": true
+  },
+  "causal_interpretation": {
+    "supported": "A small latest-only regular-session episode exists in June-July 2026, and POST4 is materially less harmful than PRE4 over the full history.",
+    "not_supported": "The paper-fixed full eight-session interval does not concentrate positive US500 regular-cash-session return. It underperforms ROM and unconditional controls before latest and loses before cost over the full path.",
+    "translation_scope": "This closes only the FPMarkets US500 09:30..16:00 ET cash-session transfer. It does not refute close-to-close, overnight, futures, cash-equity, international or longer-hold forms studied in the literature.",
+    "why_no_partial_survivor": "PRE4-only, POST4-only and latest-only choices were declared closed before outcomes. POST4 remains stressed-negative full-history and the latest gain is supplied by June while July is approximately flat."
+  },
+  "engineering_accounting": {
+    "premetric_processes": 4,
+    "premetric_design_corrections": 2,
+    "source_acquisition_environment_corrections": 1,
+    "formal_invocations_attempted": 2,
+    "complete_valid_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "post_declaration_engineering_corrections": 1,
+    "correction": {
+      "bytes": 3677,
+      "sha256": "BC0041CF1EEF4360F46EC098DA6B3C78A8F23444BF0D1605F9EB6254487B1D08"
+    },
+    "engineering_correction_limit": null
+  },
+  "artifacts": {
+    "input_manifest_sha256": "96AD9D95F2C0B2981D0B3A446225839E5D1E0232F80B0D8BFA2C06FFF30D4460",
+    "raw_analysis_result": {
+      "bytes": 111949,
+      "sha256": "F75D9E0AD456DBE625061D5C09A3E06ED4DA01E5B6A028695D575A3E5765B206"
+    },
+    "raw_calendar": {
+      "bytes": 58921,
+      "sha256": "588B2EAB201EA66BDD8376E1C27C2A57DDCED020BA319A8083C42A6A4E6E5325"
+    },
+    "raw_trades": {
+      "bytes": 205795,
+      "sha256": "A159F46F7BCC9FD3EFCE0E2DC662256EB0D7049221237F96C9854AEBD5437A79"
+    },
+    "useful_inputs_and_outputs_preserved": true,
+    "reproducible_bytecode_or_cache_preserved": false,
+    "portable_or_runtime_preserved": false
+  },
+  "closed_neighborhood": [
+    "last/first one, two, three, five or other day-count; asymmetric PRE/POST widths or shifted interval",
+    "PRE4-only, POST4-only, month-end-only, month-start-only or latest-only survivor",
+    "close-to-close, overnight, futures, cash-equity, early-close, next-open or multi-day hold",
+    "neighboring entry/exit clock, partial session, short, reversal or direction switch",
+    "US30, US100, symbol basket, weighting, notional normalization or cross-country transfer",
+    "weekday, month, quarter, year, volatility, trend, magnitude, event or subgroup",
+    "spread substitution, cost threshold, stop, exit, size, risk, weight, capital, ladder, admission, collision or fixed-candidate integration rescue"
+  ],
+  "decision": {
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "mt5_strategy_tester_required": false,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged",
+    "live_promotion_or_deployment_authority": false
+  },
+  "whole_map_recomparison": {
+    "programs_compared": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "heights_compared": [
+      "micro",
+      "meso",
+      "macro"
+    ],
+    "program_1": "No price signal or formula treatment emerges from a losing calendar interval.",
+    "program_2": "No external state was tested or selected, and the result supplies no new event condition.",
+    "program_3": "The complete exact interval closes; adjacent day counts, partial roles and clocks are frozen.",
+    "program_4": "A losing same-session path grants no stop, hold, checkpoint or exit successor.",
+    "program_5": "Negative standalone economics grant no weight, risk, admission or fixed-candidate integration trial.",
+    "program_7": "Role and latest diagnostics explain failure shape but create no prospective treatment.",
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true
+  },
+  "environment": {
+    "mql_source_or_set_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_processes_started": 0,
+    "runtime_copies": 0,
+    "master_terminal_touched": false,
+    "broker_account_position_order_or_deal_queries": 0,
+    "live_surface": "UNTOUCHED",
+    "lab_forward_baseline": "UNTOUCHED"
+  },
+  "next": "Commit and push the complete Unit 111 closure once, then continue the Optimization whole map for a genuinely independent complete mechanism without a turn-of-month rescue or reporting pause.",
+  "marker": "FRONTIER_UNIT_111_CLOSED_VALID_NO_US500_TURN_OF_MONTH_CASH_SESSION_EFFECT_AFTER_COST_NO_SEED_MAP_RECOMPARED"
+}

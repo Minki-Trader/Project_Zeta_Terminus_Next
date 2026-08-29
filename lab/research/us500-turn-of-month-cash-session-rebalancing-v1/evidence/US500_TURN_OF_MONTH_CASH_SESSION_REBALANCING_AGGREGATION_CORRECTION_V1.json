@@ -1,0 +1,76 @@
+{
+  "schema": "zeta-next-us500-turn-of-month-cash-session-rebalancing-aggregation-correction-v1",
+  "created_at_local": "2026-08-30",
+  "status": "POST_DECLARATION_PREMETRIC_SYMBOL_SPEC_SCHEMA_CORRECTION_FROZEN",
+  "unit": "us500-turn-of-month-cash-session-rebalancing-111",
+  "family": "us500-turn-of-month-cash-session-rebalancing-v1",
+  "authority": {
+    "sole_policy": "docs/OPERATING_DIRECTION.md",
+    "rule": "Environment, design and implementation faults are corrected without becoming economic research failures or consuming a valid economic judgment."
+  },
+  "declaration_boundary": {
+    "commit": "afc50a0a6303d469a33b8781b9f1f9fcc646790a",
+    "path": "lab/research/us500-turn-of-month-cash-session-rebalancing-v1/evidence/US500_TURN_OF_MONTH_CASH_SESSION_REBALANCING_DECLARATION_V1.json",
+    "bytes": 17334,
+    "sha256": "E949B5566B21F69255CD7117D5750FF64C703F61B89116A2D3C1F33552CAE71E"
+  },
+  "failed_invocation": {
+    "stage": "After immutable input and declaration verification plus formal bar/calendar loading; before symbol-spec normalization and before any trade or economic aggregation.",
+    "exception": "RuntimeError: symbol specification lacks required fields",
+    "cause": "The immutable Unit 105 symbol snapshot exposes the original MetaTrader names trade_contract_size, trade_tick_value and volume_min, while the initial Unit 111 loader expected normalized aliases contract_size, tick_value and minimum_volume.",
+    "initial_analysis": {
+      "bytes": 33342,
+      "sha256": "A082A1BAA622733D7EB7ACD549B47C356DD6EA9118E447DF1FBB0D9B91BE75F9"
+    },
+    "immutable_input_verification_passed": true,
+    "declaration_verification_passed": true,
+    "price_and_spread_fields_loaded": true,
+    "trade_rows_built": 0,
+    "gross_observed_or_stressed_usd_calculated": false,
+    "profit_factor_or_drawdown_calculated": false,
+    "control_comparison_calculated": false,
+    "gate_or_verdict_calculated": false,
+    "result_created": false,
+    "trades_created": false,
+    "calendar_output_created": false,
+    "economic_metric_emitted": false,
+    "economic_verdict_emitted": false
+  },
+  "implementation_only_correction": {
+    "corrected_analysis": {
+      "bytes": 34413,
+      "sha256": "F578A992BDD6D92E132F47499CA95A316DC183A2B78424FD5592AA6A31522257"
+    },
+    "mapping": {
+      "trade_contract_size": "contract_size",
+      "trade_tick_value": "tick_value",
+      "volume_min": "minimum_volume"
+    },
+    "additional_integrity_checks": [
+      "declared volume lies inside volume_min..volume_max and aligns to volume_step",
+      "point, contract size, tick size and tick value are positive",
+      "trade_tick_size multiplied by trade_contract_size equals trade_tick_value"
+    ],
+    "input_bytes_changed": false,
+    "calendar_or_role_changed": false,
+    "entry_or_exit_changed": false,
+    "volume_changed": false,
+    "cost_formula_changed": false,
+    "period_or_split_changed": false,
+    "gate_or_threshold_changed": false,
+    "verdict_rule_changed": false
+  },
+  "execution_accounting_after_correction": {
+    "formal_invocations_attempted": 1,
+    "complete_valid_economic_aggregations": 0,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "post_declaration_engineering_corrections": 1,
+    "pure_engineering_correction_numeric_cap": null
+  },
+  "program_6_opened": false,
+  "mql_set_compile_tester_mt5_paths": 0,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_111_AGGREGATION_SYMBOL_SPEC_SCHEMA_CORRECTION_FROZEN_NO_ECONOMIC_OUTPUT",
+  "next": "Run the unchanged declared formal aggregation once; only a complete valid economic aggregation may judge the unit."
+}

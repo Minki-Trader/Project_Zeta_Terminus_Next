@@ -1,0 +1,311 @@
+{
+  "schema": "zeta-next-us500-turn-of-month-cash-session-rebalancing-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "COMPLETE_VALID_ECONOMIC_AGGREGATION",
+  "unit": "us500-turn-of-month-cash-session-rebalancing-111",
+  "family": "us500-turn-of-month-cash-session-rebalancing-v1",
+  "declaration": {
+    "commit": "afc50a0a6303d469a33b8781b9f1f9fcc646790a",
+    "bytes": 17334,
+    "sha256": "E949B5566B21F69255CD7117D5750FF64C703F61B89116A2D3C1F33552CAE71E"
+  },
+  "input_integrity": {
+    "files": 2,
+    "bytes": 7008021,
+    "manifest_sha256": "96AD9D95F2C0B2981D0B3A446225839E5D1E0232F80B0D8BFA2C06FFF30D4460",
+    "bar_rows": 97707,
+    "official_session_dates": 1039,
+    "declared_trade_boundary_eligible_sessions": 1017,
+    "primary_rows": 388,
+    "rom_rows": 629
+  },
+  "execution": {
+    "formal_invocations_attempted": 2,
+    "complete_valid_economic_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "valid_process_elapsed_seconds": 1.048416099998576,
+    "post_declaration_engineering_corrections": 1,
+    "correction": {
+      "path": "lab/research/us500-turn-of-month-cash-session-rebalancing-v1/evidence/US500_TURN_OF_MONTH_CASH_SESSION_REBALANCING_AGGREGATION_CORRECTION_V1.json",
+      "bytes": 3677,
+      "sha256": "BC0041CF1EEF4360F46EC098DA6B3C78A8F23444BF0D1605F9EB6254487B1D08"
+    },
+    "corrected_analysis": {
+      "bytes": 34413,
+      "sha256": "F578A992BDD6D92E132F47499CA95A316DC183A2B78424FD5592AA6A31522257"
+    },
+    "economic_contract_changes": 0,
+    "threshold_or_grid_points": 0,
+    "mql_set_compile_tester_mt5_paths": 0
+  },
+  "trade_integrity": {
+    "first_date": "2022-07-01",
+    "last_date": "2026-07-31",
+    "all_rows": 1017,
+    "tom_rows": 388,
+    "rom_rows": 629,
+    "zero_entry_spread_rows": 2,
+    "zero_exit_spread_rows": 0,
+    "zero_entry_spread_primary_date": "2023-04-28",
+    "zero_entry_spread_control_date": "2022-09-13",
+    "zero_spread_interpretation": "A missing positive LONG entry burden would worsen the affected path. Full and confirmation primary gross are already negative, so the recorded optimistic rows cannot manufacture the no-seed verdict."
+  },
+  "primary_full": {
+    "count": 388,
+    "gross": {
+      "net_usd": -6.3103000000001765,
+      "profit_factor": 0.8881140579509684,
+      "closed_drawdown_percent": 11.016700000000114,
+      "net_to_drawdown": -0.5727940308804008,
+      "mean_usd": -0.01626365979381489
+    },
+    "observed": {
+      "net_usd": -8.001299999999887,
+      "profit_factor": 0.8603115245218212,
+      "closed_drawdown_percent": 12.07649999999984,
+      "net_to_drawdown": -0.6625512358713198,
+      "mean_usd": -0.020621907216494553
+    },
+    "stressed": {
+      "net_usd": -9.692300000000175,
+      "profit_factor": 0.8333763116997401,
+      "closed_drawdown_percent": 13.616600000000263,
+      "net_to_drawdown": -0.71180030257186,
+      "mean_usd": -0.02498015463917571,
+      "mean_to_standard_deviation": -0.07053126755038275,
+      "win_rate": 0.47164948453608246
+    },
+    "doubled_cost_burden_usd": 3.382,
+    "gross_sign_already_negative": true
+  },
+  "period_economics": {
+    "P1_2022H2_2023": {
+      "count": 142,
+      "gross_observed_stressed_usd": [
+        0.13070000000000115,
+        -0.5780000000000247,
+        -1.2866999999999988
+      ],
+      "stressed_profit_factor": 0.9303270033626279,
+      "stressed_closed_drawdown_percent": 4.520300000000063,
+      "stressed_net_to_drawdown": -0.28464924894364996,
+      "stressed_mean_usd": -0.009061267605633794
+    },
+    "P2_2024": {
+      "count": 95,
+      "gross_observed_stressed_usd": [
+        -3.2184999999999855,
+        -3.642299999999841,
+        -4.066099999999985
+      ],
+      "stressed_profit_factor": 0.6602892399722636,
+      "stressed_mean_usd": -0.042801052631578795
+    },
+    "P3_2025": {
+      "count": 95,
+      "gross_observed_stressed_usd": [
+        -3.674100000000161,
+        -4.092599999999994,
+        -4.511100000000163
+      ],
+      "stressed_profit_factor": 0.7296816294245523,
+      "stressed_mean_usd": -0.04748526315789645
+    },
+    "P4_2026_JAN_MAY": {
+      "count": 40,
+      "gross_observed_stressed_usd": [
+        -0.4650000000000183,
+        -0.5650000000000183,
+        -0.6650000000000185
+      ],
+      "stressed_profit_factor": 0.9214903840477883,
+      "stressed_mean_usd": -0.016625000000000462
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "count": 16,
+      "gross_observed_stressed_usd": [
+        0.9165999999999894,
+        0.8765999999999894,
+        0.8365999999999894
+      ],
+      "stressed_profit_factor": 1.3250952047874351,
+      "stressed_closed_drawdown_percent": 0.8075000000000045,
+      "stressed_net_to_drawdown": 1.0360371517027673,
+      "stressed_mean_usd": 0.052287499999999335,
+      "months_stressed_usd": {
+        "2026-06": 0.8421000000000004,
+        "2026-07": -0.00550000000001101
+      }
+    }
+  },
+  "p1_split_stressed": {
+    "2022H2": {
+      "count": 47,
+      "net_usd": -2.700399999999988,
+      "profit_factor": 0.7073403344496119
+    },
+    "2023H1": {
+      "count": 48,
+      "net_usd": 2.3257999999999717,
+      "profit_factor": 1.5419550273796954
+    },
+    "2023H2": {
+      "count": 47,
+      "net_usd": -0.9120999999999821,
+      "profit_factor": 0.8157038653492596
+    }
+  },
+  "role_decomposition_full": {
+    "PRE4": {
+      "count": 192,
+      "gross_observed_stressed_usd": [
+        -7.730900000000047,
+        -8.559899999999896,
+        -9.388900000000048
+      ],
+      "stressed_profit_factor": 0.6758340310565969,
+      "stressed_mean_usd": -0.04890052083333358
+    },
+    "POST4": {
+      "count": 196,
+      "gross_observed_stressed_usd": [
+        1.4205999999998742,
+        0.5586000000000086,
+        -0.3034000000001289
+      ],
+      "stressed_profit_factor": 0.9896115635555527,
+      "stressed_mean_usd": -0.0015479591836741271
+    },
+    "only_positive_confirmation_role_period_cell": "POST4:P4_2026_JAN_MAY",
+    "positive_confirmation_role_period_cells": 1,
+    "required_positive_confirmation_role_period_cells": 5
+  },
+  "prelatest": {
+    "count": 372,
+    "gross_observed_stressed_usd": [
+      -7.226900000000164,
+      -8.87790000000016,
+      -10.528900000000165
+    ],
+    "stressed_profit_factor": 0.8106156264726913,
+    "stressed_closed_drawdown_percent": 13.616600000000263,
+    "stressed_net_to_drawdown": -0.7732400158629881,
+    "stressed_mean_usd": -0.028303494623656358,
+    "positive_months": 18,
+    "active_months": 47,
+    "positive_month_fraction": 0.3829787234042553,
+    "top_five_positive_day_share": 0.09135388814307747,
+    "rom_control": {
+      "count": 602,
+      "net_usd": 14.701249999999877,
+      "profit_factor": 1.2068506777653003,
+      "mean_usd": 0.02442068106312272,
+      "net_to_drawdown": 3.236663657779431
+    },
+    "unconditional_control": {
+      "count": 974,
+      "net_usd": 4.172349999999714,
+      "profit_factor": 1.0329394665706646,
+      "mean_usd": 0.00428372689938369,
+      "net_to_drawdown": 0.46271528540214785
+    },
+    "primary_minus_rom_mean_usd": -0.05272417568677908,
+    "primary_minus_unconditional_mean_usd": -0.03258722152304005
+  },
+  "full_controls": {
+    "ROM": {
+      "count": 629,
+      "stressed_net_usd": 12.215749999999886,
+      "stressed_profit_factor": 1.1589491393982279,
+      "stressed_closed_drawdown_percent": 4.5420999999999765,
+      "stressed_net_to_drawdown": 2.6894498139626934,
+      "stressed_mean_usd": 0.019420906200317785
+    },
+    "UNCONDITIONAL": {
+      "count": 1017,
+      "stressed_net_usd": 2.523449999999709,
+      "stressed_profit_factor": 1.0186891765786292,
+      "stressed_closed_drawdown_percent": 9.017100000000013,
+      "stressed_net_to_drawdown": 0.2798516152642984,
+      "stressed_mean_usd": 0.002481268436577885
+    },
+    "primary_minus_rom_mean_usd": -0.044401060839493495,
+    "primary_minus_unconditional_mean_usd": -0.027461423075753596
+  },
+  "temporal_concentration": {
+    "full_positive_months": 19,
+    "full_active_months": 49,
+    "full_positive_month_fraction": 0.3877551020408163,
+    "only_positive_p1_split": "2023H1",
+    "only_positive_frozen_period": "P5_LATEST_2026_JUN_JUL",
+    "latest_primary_mean_usd": 0.052287499999999335,
+    "latest_rom_mean_usd": -0.09205555555555527,
+    "latest_unconditional_mean_usd": -0.038346511627907025,
+    "latest_primary_minus_rom_mean_usd": 0.1443430555555546,
+    "latest_primary_minus_unconditional_mean_usd": 0.09063401162790636,
+    "interpretation": "The latest 16-day local separation is genuine descriptive information, but June supplies essentially all latest net and every initial/confirmation/full economic gate has already failed. It cannot become a latest-only or POST4-only candidate."
+  },
+  "gate_summary": {
+    "density_passed": true,
+    "p1_checks_passed": 0,
+    "p1_checks_total": 7,
+    "positive_p1_splits": 1,
+    "required_positive_p1_splits": 3,
+    "positive_p1_roles": 0,
+    "required_positive_p1_roles": 2,
+    "positive_confirmation_periods": 0,
+    "required_positive_confirmation_periods": 3,
+    "positive_confirmation_role_period_cells": 1,
+    "required_positive_confirmation_role_period_cells": 5,
+    "confirmation_mean_above_rom_periods": 0,
+    "required_confirmation_mean_above_rom_periods": 2,
+    "prelatest_common_checks_passed": 1,
+    "prelatest_common_checks_total": 7,
+    "nominal_drawdown_check": true,
+    "practical_drawdown_check": true,
+    "latest_nominal_check": true,
+    "latest_practical_check": true,
+    "full_checks_passed": 0,
+    "full_checks_total": 3,
+    "strong_null": true,
+    "nominal_pass": false,
+    "practical_pass": false
+  },
+  "economic_interpretation": [
+    "The primary interval loses before execution cost over the full path and in every post-paper confirmation block through May 2026, so spread assumptions do not create the rejection.",
+    "P1 is only marginally gross-positive at +$0.1307 with PF 1.0074, then turns negative at observed and stressed cost; two of its three chronological splits and both PRE4/POST4 stressed roles are negative.",
+    "PRE4 is the dominant structural drag at -$9.3889 stressed. POST4 is approximately flat at -$0.3034 stressed and does not survive doubled cost or the frozen role/period breadth gates.",
+    "Rest-of-month cash sessions are economically superior: prelatest primary mean is -$0.028303 versus ROM +$0.024421 and unconditional +$0.004284. Selecting the source-fixed interval destroys rather than concentrates the available regular-session drift.",
+    "The 13.6166% stressed drawdown is below nominal and practical limits, but low drawdown cannot rescue negative net, PF below one and negative net/DD.",
+    "June-July 2026 is a local positive reversal, not transferable evidence: June earns +$0.8421 while July is -$0.0055, and all initial, confirmation, role-breadth, control and full-path gates fail independently.",
+    "The result is a cash-session translation null, not a refutation of the paper's close-to-close or overnight-inclusive international finding. The hypothesized institutional rebalancing premium is not monetizable here through the fixed FPMarkets US500 regular-session path."
+  ],
+  "decision": {
+    "verdict": "VALID_NO_US500_TURN_OF_MONTH_CASH_SESSION_EFFECT_AFTER_COST_NO_SEED",
+    "research_or_optimization_failure": true,
+    "environment_design_or_engineering_failure": false,
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "fixed_development_candidate": "unchanged",
+    "live_authority": false
+  },
+  "raw_outputs": {
+    "analysis_result": {
+      "path": "lab/artifacts/raw/us500-turn-of-month-cash-session-rebalancing-v1/output/analysis-result.json",
+      "bytes": 111949,
+      "sha256": "F75D9E0AD456DBE625061D5C09A3E06ED4DA01E5B6A028695D575A3E5765B206"
+    },
+    "calendar": {
+      "path": "lab/artifacts/raw/us500-turn-of-month-cash-session-rebalancing-v1/output/calendar.csv",
+      "bytes": 58921,
+      "sha256": "588B2EAB201EA66BDD8376E1C27C2A57DDCED020BA319A8083C42A6A4E6E5325"
+    },
+    "trades": {
+      "path": "lab/artifacts/raw/us500-turn-of-month-cash-session-rebalancing-v1/output/trades.csv",
+      "bytes": 205795,
+      "sha256": "A159F46F7BCC9FD3EFCE0E2DC662256EB0D7049221237F96C9854AEBD5437A79"
+    }
+  },
+  "marker": "FRONTIER_UNIT_111_VALID_NO_US500_TURN_OF_MONTH_CASH_SESSION_EFFECT_AFTER_COST_NO_SEED"
+}

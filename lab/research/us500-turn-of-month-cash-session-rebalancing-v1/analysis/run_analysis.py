@@ -317,14 +317,43 @@ def premetric_payload(
 
 def load_spec(config: dict[str, Any], input_root: Path) -> dict[str, Any]:
     spec = load_json(input_root / config["files"]["spec"])
-    required = ("symbol", "point", "contract_size", "tick_value", "minimum_volume")
+    required = (
+        "symbol",
+        "point",
+        "trade_contract_size",
+        "trade_tick_size",
+        "trade_tick_value",
+        "volume_min",
+        "volume_max",
+        "volume_step",
+    )
     if any(name not in spec for name in required):
         raise RuntimeError("symbol specification lacks required fields")
     if spec["symbol"] != config["trade_rule"]["symbol"]:
         raise RuntimeError("symbol specification mismatch")
-    if float(spec["minimum_volume"]) > float(config["trade_rule"]["volume"]):
-        raise RuntimeError("declared volume is below the minimum")
-    return spec
+    volume = float(config["trade_rule"]["volume"])
+    minimum = float(spec["volume_min"])
+    maximum = float(spec["volume_max"])
+    step = float(spec["volume_step"])
+    if volume < minimum or volume > maximum:
+        raise RuntimeError("declared volume is outside the symbol volume range")
+    step_units = (volume - minimum) / step
+    if abs(step_units - round(step_units)) > 1e-9:
+        raise RuntimeError("declared volume is not aligned to the symbol volume step")
+    point = float(spec["point"])
+    contract_size = float(spec["trade_contract_size"])
+    tick_size = float(spec["trade_tick_size"])
+    tick_value = float(spec["trade_tick_value"])
+    if point <= 0.0 or contract_size <= 0.0 or tick_size <= 0.0 or tick_value <= 0.0:
+        raise RuntimeError("symbol specification contains a nonpositive economic field")
+    if abs(tick_size * contract_size - tick_value) > 1e-10:
+        raise RuntimeError("symbol tick-value identity mismatch")
+    return {
+        **spec,
+        "contract_size": contract_size,
+        "tick_value": tick_value,
+        "minimum_volume": minimum,
+    }
 
 
 def build_trades(declared: pd.DataFrame, spec: dict[str, Any], config: dict[str, Any]) -> pd.DataFrame:
