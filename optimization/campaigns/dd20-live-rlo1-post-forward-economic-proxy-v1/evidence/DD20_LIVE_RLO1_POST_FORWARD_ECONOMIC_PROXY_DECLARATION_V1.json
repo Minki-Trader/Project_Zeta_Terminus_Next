@@ -1,0 +1,93 @@
+{
+  "schema": "zeta-dd20-live-rlo1-post-forward-economic-proxy-declaration-v1",
+  "declared_date_local": "2026-08-29",
+  "status": "DECLARED_FIXED_POLICY_POST_FORWARD_PROXY_OUTCOME_UNAGGREGATED",
+  "campaign": "dd20-live-rlo1-post-forward-economic-proxy-v1",
+  "parent_main_commit": "872c8d7eaa2bdec1c58516468a6ef075a351d1c1",
+  "user_direction": "Use data produced by Live-Dev for Optimization after closing the frequency-lane split work.",
+  "evidence_role": {
+    "live_rows_seen_during_intake": true,
+    "parameter_or_candidate_selection_allowed": false,
+    "permitted_use": "Compare only the exact already-qualified paired-month policy with the exact observed Live control path on the three complete post-forward lifecycles.",
+    "native_profit_or_drawdown_claim_allowed": false
+  },
+  "frozen_inputs": {
+    "snapshot_receipt": "optimization/campaigns/dd20-live-rlo1-post-forward-economic-proxy-v1/evidence/DD20_LIVE_RLO1_SNAPSHOT_RECEIPT_V1.json",
+    "snapshot_candidates_sha256": "CBEC8F934C6EF4E9E3B5A68153088E77FEF6D1C74B4EA064AF6771BA32422448",
+    "snapshot_lifecycles_sha256": "396E7007A8216CFE59AA00863718930A1A6CD50D16665072DE95F2135DF71D2D",
+    "qualified_anchor_result": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/evidence/DD20_PAIRED_MONTH_STABILITY_MT5_RESULT_V1.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+    },
+    "qualified_anchor_set": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/Profiles/Tester/ZetaOptimization/dd20-paired-month-stability-mt5-v1/candidate.set",
+      "bytes": 1212,
+      "sha256": "07B754B5BF8723348BF8D04A335D4AF7A833F7B21DF67B13DF8B308AA8D5E956"
+    },
+    "live_control_set": {
+      "path": "live-dev/package/active/MQL5/Presets/ZetaTerminusNext/next-v7-modular.set",
+      "bytes": 925,
+      "sha256": "BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8"
+    }
+  },
+  "fixed_policies": {
+    "observed_live_control": {
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "base_volume": 0.01
+    },
+    "qualified_paired_anchor": {
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18,
+      "component_order": [
+        "ZT-M30-US30-RANGE-COMP-61f61deaba",
+        "ZT-M30-US30-RANGE-COMP-64efb16616",
+        "ZT-H1-US100-CROSS-IN-14b72317b7",
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+        "ZT-H1-US30-RETURN-I-c870a788ec",
+        "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+      ],
+      "multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0]
+    }
+  },
+  "frozen_transform": {
+    "formal_process_invocations": 1,
+    "include_only_complete_close_rows": true,
+    "observed_volume": 0.01,
+    "volume_step": 0.01,
+    "normalization": "anchor_volume = round(observed_volume * component_multiplier / volume_step) * volume_step",
+    "fixed_path_net": "anchor_proxy_net = observed_net * anchor_volume / observed_volume",
+    "admission_check": "Use the observed 99.51-dollar conservative capital at the Return/Cross pair: normalized executable risk is approximately 8% plus 8%, below the frozen 18% aggregate cap; doubled observed margin also remains below the 45% margin limit.",
+    "path_check": "Passive closed before the pair. Return and Cross exited by expert logic and their observed troughs remained inside the unchanged proportional protective-stop geometry, so the proxy retains their entry/exit times and scales volume only.",
+    "required_outputs": [
+      "row-level transformed actual and stressed net",
+      "observed Live control sum",
+      "qualified-anchor proxy sum and delta",
+      "explicit small-sample and post-intake limits"
+    ]
+  },
+  "gates": {
+    "input_hashes_match": true,
+    "three_complete_lifecycles": true,
+    "anchor_proxy_actual_not_below_live_control": true,
+    "anchor_proxy_stressed_not_below_live_control": true,
+    "new_mt5_shortlist_allowed": false
+  },
+  "stop_rules": {
+    "no_weight_threshold_or_rule_retune": true,
+    "no_peer_exit_or_static_composition_reopen": true,
+    "no_frequency_lane_followup": true,
+    "no_live_data_success_claim": true,
+    "no_automatic_live_or_lab_change": true
+  },
+  "execution_boundary": {
+    "proxy_only": true,
+    "mql_or_settings_changes": 0,
+    "compiles": 0,
+    "tester_or_runtime_invocations": 0,
+    "tests_or_validators": 0,
+    "live_or_master_process_started": false,
+    "broker_positions_orders_deals_or_account_queried": false
+  }
+}

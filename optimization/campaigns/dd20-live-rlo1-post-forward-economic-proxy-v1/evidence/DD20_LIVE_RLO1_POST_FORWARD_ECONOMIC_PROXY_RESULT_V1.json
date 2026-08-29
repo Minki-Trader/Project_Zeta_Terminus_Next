@@ -1,0 +1,147 @@
+{
+  "schema": "zeta-dd20-live-rlo1-post-forward-economic-proxy-result-v1",
+  "recorded_date_local": "2026-08-29",
+  "status": "VALID_LIVE_DERIVED_POST_FORWARD_PROXY_SUPPORTS_CURRENT_ANCHOR_NO_NEW_MT5_SHORTLIST",
+  "campaign": "dd20-live-rlo1-post-forward-economic-proxy-v1",
+  "parent_main_commit": "872c8d7eaa2bdec1c58516468a6ef075a351d1c1",
+  "inputs": {
+    "snapshot_receipt": {
+      "path": "optimization/campaigns/dd20-live-rlo1-post-forward-economic-proxy-v1/evidence/DD20_LIVE_RLO1_SNAPSHOT_RECEIPT_V1.json",
+      "bytes": 1531,
+      "sha256": "2DE46DCC0C8CA57A0DD98BBF0C409FE826ECB187E8A0442C650C1B3F4114D9C8"
+    },
+    "frozen_declaration": {
+      "path": "optimization/campaigns/dd20-live-rlo1-post-forward-economic-proxy-v1/evidence/DD20_LIVE_RLO1_POST_FORWARD_ECONOMIC_PROXY_DECLARATION_V1.json",
+      "bytes": 4507,
+      "sha256": "602889CA6EE40C7F5FC9B2F3B3144A821CE9EF59DBE27E12F616F587B00762D1"
+    },
+    "optimization_snapshot_only": true,
+    "candidate_rows": 44,
+    "lifecycle_rows": 7,
+    "complete_close_rows": 3,
+    "partial_observations": 0,
+    "research_dropped_records": 0
+  },
+  "formal_process": {
+    "invocations": 1,
+    "elapsed_seconds": 0.086345,
+    "parameters_tuned": 0,
+    "new_candidate_selected": false,
+    "mt5_shortlist_opened": false
+  },
+  "row_level_output": {
+    "path": "optimization/campaigns/dd20-live-rlo1-post-forward-economic-proxy-v1/evidence/LIVE_RLO1_POST_FORWARD_TRANSFORM_V1.csv",
+    "rows_including_total": 4,
+    "transform": "Normalize observed 0.01 entry volume by the already-qualified component multiplier to the 0.01 volume step, preserve the observed entry/exit path, and scale actual/stressed net by normalized volume divided by observed volume."
+  },
+  "complete_lifecycles": [
+    {
+      "component_id": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+      "symbol": "US100",
+      "position_identifier": 247479731,
+      "observed_entry_volume": 0.01,
+      "anchor_multiplier": 0.0,
+      "normalized_anchor_volume": 0.0,
+      "volume_scale": 0.0,
+      "exit_reason": "DEAL_REASON_EXPERT",
+      "trough_mark_r": -0.10060260963169364,
+      "observed_actual_net_usd": 0.12,
+      "observed_stressed_net_usd": 0.109,
+      "anchor_proxy_actual_net_usd": 0.0,
+      "anchor_proxy_stressed_net_usd": 0.0
+    },
+    {
+      "component_id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "symbol": "US100",
+      "position_identifier": 247571424,
+      "observed_entry_volume": 0.01,
+      "anchor_multiplier": 2.0,
+      "normalized_anchor_volume": 0.02,
+      "volume_scale": 2.0,
+      "exit_reason": "DEAL_REASON_EXPERT",
+      "trough_mark_r": -0.48738820219073364,
+      "observed_actual_net_usd": -1.32,
+      "observed_stressed_net_usd": -1.354,
+      "anchor_proxy_actual_net_usd": -2.64,
+      "anchor_proxy_stressed_net_usd": -2.708
+    },
+    {
+      "component_id": "ZT-H1-US30-RETURN-I-c870a788ec",
+      "symbol": "US30",
+      "position_identifier": 247538844,
+      "observed_entry_volume": 0.01,
+      "anchor_multiplier": 1.5,
+      "normalized_anchor_volume": 0.02,
+      "volume_scale": 2.0,
+      "exit_reason": "DEAL_REASON_EXPERT",
+      "trough_mark_r": -0.0628077580142698,
+      "observed_actual_net_usd": 1.86,
+      "observed_stressed_net_usd": 1.838,
+      "anchor_proxy_actual_net_usd": 3.72,
+      "anchor_proxy_stressed_net_usd": 3.676
+    }
+  ],
+  "admission_proxy": {
+    "conservative_risk_capital_usd": 99.51,
+    "normalized_planned_risk_per_surviving_position_usd": 7.9608,
+    "normalized_pair_planned_risk_usd": 15.9216,
+    "qualified_anchor_aggregate_risk_fraction": 0.18,
+    "aggregate_cap_usd": 17.9118,
+    "aggregate_headroom_usd": 1.9902,
+    "doubled_observed_pair_margin_usd": 8.28,
+    "conservative_margin_limit_usd": 47.6145,
+    "risk_gate_passed": true,
+    "margin_gate_passed": true
+  },
+  "aggregates": {
+    "observed_live_control": {
+      "actual_net_usd": 0.66,
+      "stressed_net_usd": 0.593
+    },
+    "qualified_anchor_fixed_path_proxy": {
+      "actual_net_usd": 1.08,
+      "stressed_net_usd": 0.968
+    },
+    "qualified_anchor_minus_live_control": {
+      "actual_net_usd": 0.42,
+      "stressed_net_usd": 0.375
+    },
+    "actual_not_below_gate_passed": true,
+    "stressed_not_below_gate_passed": true
+  },
+  "qualified_anchor_context": {
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524,
+    "selection_native_relative_equity_dd_percent": 20.256887565,
+    "selection_positive_epochs": 4,
+    "forward_actual_net_usd": 32.74,
+    "forward_stressed_net_usd": 30.626,
+    "forward_native_relative_equity_dd_percent": 18.67530213,
+    "anchor_changed": false
+  },
+  "limits": {
+    "complete_lifecycle_sample_size": 3,
+    "post_forward_observation_only": true,
+    "rows_were_visible_before_declaration": true,
+    "native_profit_claim": false,
+    "native_drawdown_claim": false,
+    "weight_threshold_exit_risk_or_rule_retune_allowed": false,
+    "peer_exit_static_composition_or_frequency_lane_reopen_allowed": false,
+    "automatic_live_or_lab_change_allowed": false
+  },
+  "verdict": {
+    "economic_information": "The exact already-qualified anchor fixed before these Live rows improves the three-lifecycle actual/stressed fixed-path proxy by 0.42 / 0.375 dollars while remaining inside its frozen aggregate-risk and margin admission limits.",
+    "decision": "Retain the qualified paired-month anchor. Treat this as supportive post-forward robustness information only; open no new MT5 shortlist and make no Live or Lab change.",
+    "whole_map_recomparison_required": true
+  },
+  "execution_boundary": {
+    "mql_or_settings_changes": 0,
+    "compiles": 0,
+    "tester_or_runtime_invocations": 0,
+    "tests_or_validators": 0,
+    "live_or_master_process_started": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "live_file_modified": false,
+    "lab_path_used": false
+  }
+}
