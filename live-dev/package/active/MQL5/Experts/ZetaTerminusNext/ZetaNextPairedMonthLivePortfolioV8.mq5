@@ -1,7 +1,7 @@
 #property strict
-#property version   "7.00"
-#property description "Project Zeta Terminus Next modular V7 portfolio"
-#property description "Execution version: zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c"
+#property version   "8.00"
+#property description "Project Zeta Terminus Next paired-month Live portfolio V8"
+#property description "Execution version: zt-next-paired-month-live-portfolio-v8"
 
 #include <Trade\Trade.mqh>
 
@@ -113,7 +113,13 @@ int OnInit()
        MathAbs(InpAdditionStepUSD - 150.0) > 1.0e-9 ||
        MathAbs(InpMaximumMarginFraction - 0.45) > 1.0e-9 ||
        MathAbs(InpMaximumPositionRiskFraction - 0.04) > 1.0e-9 ||
-       MathAbs(InpMaximumAggregateRiskFraction - 0.12) > 1.0e-9 ||
+       MathAbs(InpMaximumAggregateRiskFraction - 0.18) > 1.0e-9 ||
+       MathAbs(InpRC16RiskMultiplier - 2.0) > 1.0e-9 ||
+       MathAbs(InpRC4RiskMultiplier - 1.5) > 1.0e-9 ||
+       MathAbs(InpUS100CrossRiskMultiplier - 2.0) > 1.0e-9 ||
+       MathAbs(InpUS30PressureRiskMultiplier - 2.5) > 1.0e-9 ||
+       MathAbs(InpUS30ReturnRiskMultiplier - 1.5) > 1.0e-9 ||
+       MathAbs(InpUS100PassiveRiskMultiplier) > 1.0e-9 ||
        MathAbs(InpUnmodelledRiskReserveFraction - 0.25) > 1.0e-9 ||
        MathAbs(InpStopPlacementHeadroomFraction - 0.25) > 1.0e-9 ||
        InpMaxEntryDelayMinutes != 2 || InpDeviationPoints != 100 ||
@@ -125,7 +131,9 @@ int OnInit()
       return(INIT_PARAMETERS_INCORRECT);
    FolderCreate("ZetaTerminusNext");
    FolderCreate("ZetaTerminusNext\\live");
-   FolderCreate("ZetaTerminusNext\\research");
+   FolderCreate("ZetaTerminusNext\\live\\v8-pmlr1");
+   FolderCreate("ZetaTerminusNext\\live\\v8-pmlr1\\state");
+   FolderCreate("ZetaTerminusNext\\live\\v8-pmlr1\\research");
    FolderCreate(RESEARCH_OBSERVATION_DIRECTORY);
    if(tester_mode)
       ResetTesterArtifacts();
@@ -321,6 +329,83 @@ void OnTradeTransaction(const MqlTradeTransaction &transaction,
   {
    if(execution_state.runtime_ready && !execution_state.trade_operation_active)
       execution_state.pending_reconcile = true;
+  }
+
+
+double OnTester()
+  {
+   long closed_lifecycles = 0;
+   for(int component = 0; component < COMPONENT_COUNT; ++component)
+      closed_lifecycles += component_states[component].closed_trades;
+
+   const bool correction_required =
+      (portfolio_state.safety_stopped || persistence_failed ||
+       execution_state.broker_mismatch || execution_state.foreign_exposure ||
+       protection_calculation_failures != 0 || protection_mismatches != 0 ||
+       research_dropped_records != 0 || closed_lifecycles <= 0);
+   if(correction_required)
+     {
+      PrintFormat("OPTIMIZATION_RESULT status=CORRECTION_REQUIRED "
+                  "position_risk=%.6f aggregate_risk=%.6f "
+                  "weights=%.1f/%.1f/%.1f/%.1f/%.1f/%.1f "
+                  "closed=%I64d safety=%d persistence=%d broker=%d foreign=%d "
+                  "protection_calc=%I64d protection_mismatch=%I64d "
+                  "research_dropped=%I64d final_server=%s",
+                  InpMaximumPositionRiskFraction,
+                  InpMaximumAggregateRiskFraction,
+                  InpRC16RiskMultiplier,
+                  InpRC4RiskMultiplier,
+                  InpUS100CrossRiskMultiplier,
+                  InpUS30PressureRiskMultiplier,
+                  InpUS30ReturnRiskMultiplier,
+                  InpUS100PassiveRiskMultiplier,
+                  closed_lifecycles,
+                  (portfolio_state.safety_stopped ? 1 : 0),
+                  (persistence_failed ? 1 : 0),
+                  (execution_state.broker_mismatch ? 1 : 0),
+                  (execution_state.foreign_exposure ? 1 : 0),
+                  protection_calculation_failures,
+                  protection_mismatches,
+                  research_dropped_records,
+                  TimeToString(TimeCurrent(), TIME_DATE|TIME_MINUTES));
+      return(-1.0e100);
+     }
+
+   const double actual_net = portfolio_state.project_realized_net;
+   const double stressed_net =
+      portfolio_state.stressed_balance - InpReferenceCapitalUSD;
+   const double actual_dd = portfolio_state.account_maximum_drawdown;
+   const double stressed_dd =
+      portfolio_state.stressed_maximum_closed_drawdown;
+   const double robust_net = MathMin(actual_net, stressed_net);
+   const double robust_dd = MathMax(0.01, MathMax(actual_dd, stressed_dd));
+   const double robust_recovery = robust_net / robust_dd;
+
+   PrintFormat("OPTIMIZATION_RESULT status=ECONOMIC position_risk=%.6f "
+               "aggregate_risk=%.6f weights=%.1f/%.1f/%.1f/%.1f/%.1f/%.1f "
+               "actual_net=%.6f stressed_net=%.6f "
+               "actual_dd=%.6f stressed_dd=%.6f robust_net=%.6f "
+               "robust_recovery=%.9f closed=%I64d risk_skips=%I64d "
+               "stop_exits=%I64d final_server=%s",
+               InpMaximumPositionRiskFraction,
+               InpMaximumAggregateRiskFraction,
+               InpRC16RiskMultiplier,
+               InpRC4RiskMultiplier,
+               InpUS100CrossRiskMultiplier,
+               InpUS30PressureRiskMultiplier,
+               InpUS30ReturnRiskMultiplier,
+               InpUS100PassiveRiskMultiplier,
+               actual_net,
+               stressed_net,
+               actual_dd,
+               stressed_dd,
+               robust_net,
+               robust_recovery,
+               closed_lifecycles,
+               risk_admission_skips,
+               stop_loss_exits,
+               TimeToString(TimeCurrent(), TIME_DATE|TIME_MINUTES));
+   return(robust_recovery);
   }
 
 

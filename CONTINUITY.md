@@ -19,7 +19,7 @@ The legacy repository is read-only to Next except for the explicit anchored path
 - EX5 SHA-256: `C5E569092B492F350A0B47DBF060A82293A302002F73A842FA52465BE2716E92`
 - Tester SET SHA-256: `BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8`
 
-Core operational lineage: `B48 → B49/V6R2 → B52/V6R3 → B66/V6R4 → B67/V6R5 → B70/V6R6 → NEXT-E01/V7`.
+Core operational lineage: `B48 → B49/V6R2 → B52/V6R3 → B66/V6R4 → B67/V6R5 → B70/V6R6 → NEXT-E01/V7 → NEXT-E01/V7-RLO1 → NEXT-E02/V8-PMLR1`.
 
 ## Verified structural successor
 
@@ -71,6 +71,21 @@ This successor changes only current-order ownership classification for an exact 
 
 This successor adds only the verified read-only research observation hooks and a separate `ZetaTerminusNext\research\canonical` namespace. Candidate/lifecycle ledgers append and flush; the Live EA has no reset/delete call, no automatic rotation or cleanup exists, and the dashboard continues to consume only the unchanged core Live snapshot. CXR2 stopped normally at server `2026.08.27 05:56:29`, before every current-day evaluation window, with entries `1/0`, no position/order/margin/risk/retry/shadow/ARC state and no consumed 2026-08-27 opportunity. Committed RLO1 entries-disabled PIDs `21400/16484` passed create/recovery at exact `0/0`; final preflight PID `3424` stopped normally and exact Live PID `8080` passed `1/1`. PID `8080` and dashboard PID `28332` were later lost together during the 2026-08-27 Codex MSIX replacement boundary without a normal MT5 shutdown footer; the last local snapshot at `17:00:23` was flat and zero-risk. Recovery commit `41473c378289f87d3f5f82e2a3cb95dfa99c2800` reached origin, fresh preflight PID `22108` passed exact `0/0` and stopped, and replacement Live PID `9976` plus dashboard PID `14324` resumed before the remaining evaluation windows. Those replacement processes were again lost together at the next Codex shutdown/update boundary; the last local core snapshot at `2026-08-28 09:49:02` was flat and zero-risk. Detached preflight PID `31064` then passed `0/0` and stopped before exact Live PID `23180` and dashboard PID `19280` recovered. The temporary scheduled/resident implementation was removed after the user clarified scope; commits `e0349a2cb882e8a9f033144ead5223968655b778` / `626375543bfc07a111cab6787a0542136d3df6c2` now use only a one-shot Windows process broker. No scheduled task, resident launcher, PID/health monitor or automatic restart remains.
 
+## Verified paired-month Live translation successor
+
+- Release: `NEXT-E02-V8-PMLR1-b1c77d3b6356`
+- Parent release: `NEXT-E01-V7-RLO1-b32e7e176f2e`
+- Execution: `zt-next-paired-month-live-portfolio-v8`
+- Economic version: `zt-next-paired-month-live-replacement-economic-v1`
+- Portfolio ID: `ZT-PORT-NEXT-V8-PMLR1-20260831`
+- Magic: `260831901..260831906`
+- Canonical source/settings SHA-256: `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`
+- MQ5 SHA-256: `3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E`
+- EX5 SHA-256: `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`
+- Engineering verdict: `PASS_EXACT_FIXED_CANDIDATE_LIVE_IDENTITY_TRANSLATION_PENDING_CONNECTED_V8_PREFLIGHT`
+
+The fixed candidate comes only from `optimization/campaigns/dd20-paired-month-stability-mt5-v1/` through the closed verified `lab/engineering/paired-month-live-replacement-handoff-v1/`. Its weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, base risk `0.04`, aggregate cap `0.18` and Passive-disabled contract did not change. The translation changes only release/execution/Portfolio/Magic/schema identity, isolated `ZetaTerminusNext\live\v8-pmlr1\state|research` namespaces, SET/manifests and operators. RLO1 retired normally at sequence `6425`, entries `0/0`, zero position/order/margin/risk and project realized net `+$4.55`; only that realized P/L continuity may carry. Its state, current/event files and canonical research ledgers are immutable and are not V8 recovery material. Connected V8 entries-disabled create/recovery, actual-tick synchronization and final `0/0 → 1/1` remain separate operating gates controlled by `CURRENT_STATE.md`.
+
 ## Independent Live-derived optimization anchor
 
 - Parent release: `NEXT-E01-V7-RLO1-b32e7e176f2e`
@@ -94,7 +109,8 @@ This is the sole continuous economic-optimization stream and is physically indep
 ## Authority boundary
 
 - Legacy B70 V6R6 Live-Dev: stopped at the verified flat boundary and `DISABLED`.
-- Next V7 Live-Dev authorization: `ENABLED`; exact RLO1 PID `23180` was the last verified sole owner at entries `1/1` after detached preflight PID `31064` proved `0/0`, flat exposure and zero risk and stopped. No `terminal64.exe` was observed after the user's reboot, and this Optimization unit did not restart Live.
+- Next V7 RLO1: `RETIRED_STOPPED_FLAT`; final retirement PID `23484` proved exact entries `0/0`, position/order/margin/risk `0/0/0/0`, sequence `6424`, then stopped normally at sequence `6425`. RLO1 must never restart after V8 owns exposure.
+- Next V8 paired-month Live-Dev: translated, compiled and identity-pinned; entries-disabled create/recovery is authorized by `CURRENT_STATE.md`, while new entries remain disabled until the actual-tick, three-symbol synchronization, sole-owner, flatness and zero-fault gates pass.
 - V7 may not import or adopt B70 positions or state.
 - The original V7 PID `10112`, CXR1 PID `21548`, prior entries-disabled/preflight PIDs including CXR2 `21944/24820/28148` and RLO1 `21400/16484/3424/22108/31064`, dashboard PIDs `4712/4284/28508/28332/14324`, CXR2 PIDs `13328/15080`, former RLO1 PIDs `8080/9976` and removed scheduler host PID `11700` are no longer active. Exact RLO1 PID `23180` and Korean dashboard PID `19280` were the last verified owners before the user's reboot; no terminal or dashboard process is now observed. Legacy, parent V7, CXR1 and CXR2 must not restart.
 

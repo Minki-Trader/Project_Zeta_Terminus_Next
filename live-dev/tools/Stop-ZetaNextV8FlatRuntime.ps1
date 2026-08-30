@@ -7,7 +7,7 @@ $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 
 if (-not $ConfirmFlatStop) {
-    throw 'Stopping the Next V7 terminal requires -ConfirmFlatStop.'
+    throw 'Stopping the Next V8 terminal requires -ConfirmFlatStop.'
 }
 
 $commonModule = Join-Path $PSScriptRoot 'ZetaNextOperatorCommon.psm1'
@@ -30,9 +30,9 @@ $flat = (
     @($status.components | Where-Object { [long]$_.position_identifier -ne 0 }).Count -eq 0
 )
 if (-not $flat) {
-    throw 'Refusing to stop Next V7: the local snapshot is not 0-entry, flat, zero-margin, zero-risk, and free of pending ownership.'
+    throw 'Refusing to stop Next V8: the local snapshot is not 0-entry, flat, zero-margin, zero-risk, and free of pending ownership.'
 }
 
 $processId = [int]$inventory.ExactLive[0].Id
 Stop-ZetaNextRuntime -Contract $contract -ProcessId $processId
-Write-Output "Stopped verified-flat Next V7 runtime PID $processId. State and bounded logs were preserved."
+Write-Output "Stopped verified-flat Next V8 runtime PID $processId. State and bounded logs were preserved."

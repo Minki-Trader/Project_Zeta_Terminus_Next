@@ -46,7 +46,7 @@ $projectRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent (Split-Path -Pa
 $workerPowerShell = [System.IO.Path]::GetFullPath($WorkerPowerShellPath)
 $oncePath = Join-Path $PSScriptRoot 'Invoke-ZetaNextDetachedMasterOnce.ps1'
 $openPath = Join-Path $PSScriptRoot 'Open-ZetaNextMasterTerminalAndDashboard.ps1'
-$dashboardPath = Join-Path $PSScriptRoot 'Show-ZetaNextV7Dashboard.ps1'
+$dashboardPath = Join-Path $PSScriptRoot 'Show-ZetaNextV8Dashboard.ps1'
 $terminalPath = Join-Path $projectRoot 'live-dev\runtime\portable\terminal64.exe'
 $logPath = Join-Path $projectRoot 'live-dev\logs\master-detached-once.log'
 

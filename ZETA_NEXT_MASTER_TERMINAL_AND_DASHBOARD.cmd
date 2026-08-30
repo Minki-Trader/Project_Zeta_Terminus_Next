@@ -1,6 +1,6 @@
 @echo off
 setlocal
-title Project Zeta Terminus Next V7 Live-Dev Launcher
+title Project Zeta Terminus Next V8 Live-Dev Launcher
 cd /d "%~dp0"
 
 set "SYSTEM_POWERSHELL=%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe"
@@ -26,7 +26,7 @@ if not defined PWSH_EXE (
 "%SYSTEM_POWERSHELL%" -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0live-dev\tools\Start-ZetaNextDetachedMaster.ps1" -WorkerPowerShellPath "%PWSH_EXE%"
 if errorlevel 1 (
     echo.
-    echo The detached Next V7 Live-Dev launcher stopped at a safety check. Review the error above.
+    echo The detached Next V8 Live-Dev launcher stopped at a safety check. Review the error above.
     echo.
     pause
     exit /b 1

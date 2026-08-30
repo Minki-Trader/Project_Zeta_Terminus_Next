@@ -14,19 +14,19 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 $liveDevRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $projectRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent $liveDevRoot))
 $statePath = Join-Path $projectRoot 'CURRENT_STATE.md'
-$statusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV7Status.ps1'
-$windowTitle = 'Project Zeta Terminus Next V7 Live-Dev 대시보드'
+$statusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV8Status.ps1'
+$windowTitle = 'Project Zeta Terminus Next V8 Live-Dev 대시보드'
 $script:RenderingForGui = $false
 
 foreach ($requiredPath in @($statePath, $statusScript)) {
     if (-not (Test-Path -LiteralPath $requiredPath -PathType Leaf)) {
-        throw "Required Next V7 dashboard file is missing: $requiredPath"
+        throw "Required Next V8 dashboard file is missing: $requiredPath"
     }
 }
 
-function Test-V7OperatorAuthorized {
+function Test-V8OperatorAuthorized {
     $text = Get-Content -LiteralPath $statePath -Raw
-    return $text -match 'Next V7 new-entry authorization:\s+`ENABLED`'
+    return $text -match 'Next V8 paired-month new-entry authorization:\s+`ENABLED`'
 }
 
 function Write-UiLine {
@@ -187,7 +187,7 @@ function Format-RemainingHold {
 
 function Get-ComponentView {
     param([string]$ComponentId)
-    # Display-only descriptions mirror the frozen active V7 source. They are
+    # Display-only descriptions mirror the frozen active V8 source. They are
     # never consumed by the EA and cannot alter an entry decision.
     switch ($ComponentId) {
         'ZT-M30-US30-RANGE-COMP-61f61deaba' {
@@ -252,12 +252,12 @@ function Get-KoreanAlert {
     if ($Alert -like 'runtime_config_missing=*') { return '현재 실행 모드의 터미널 설정이 없음' }
     if ($Alert -like 'runtime_set_missing=*' -or $Alert -like 'runtime_set_entries_mismatch=*') { return '현재 실행 모드의 EA 설정이 잘못됨' }
     if ($Alert -eq 'runtime_mode_unrecognized' -or $Alert -like 'runtime_mode=*') { return '실행 중인 MT5 모드를 확인할 수 없음' }
-    if ($Alert -eq 'next_v7_live_authorization_missing') { return 'Next V7 신규 주문 권한이 상태 문서에 없음' }
-    if ($Alert -eq 'next_v7_current_snapshot_unavailable') { return 'Next V7 상태 파일을 아직 읽을 수 없음' }
-    if ($Alert -eq 'next_v7_ex5_missing' -or $Alert -eq 'next_v7_ex5_hash_mismatch') { return '동결된 V7 EX5가 없거나 해시가 다름' }
+    if ($Alert -eq 'next_v8_live_authorization_missing') { return 'Next V8 신규 주문 권한이 상태 문서에 없음' }
+    if ($Alert -eq 'next_v8_current_snapshot_unavailable') { return 'Next V8 상태 파일을 아직 읽을 수 없음' }
+    if ($Alert -eq 'next_v8_ex5_missing' -or $Alert -eq 'next_v8_ex5_hash_mismatch') { return '동결된 V8 EX5가 없거나 해시가 다름' }
     if ($Alert -like 'legacy_terminus_terminal_running=*') { return 'Legacy Terminus 터미널이 실행 중이므로 Next는 시작할 수 없음' }
     if ($Alert -like 'other_next_terminal_running=*') { return '다른 Next 터미널이 실행 중임' }
-    if ($Alert -like 'snapshot_identity=*') { return '실행 중 EA의 Next V7 신분이 다름' }
+    if ($Alert -like 'snapshot_identity=*') { return '실행 중 EA의 Next V8 신분이 다름' }
     if ($Alert -like 'component_identity=*' -or $Alert -like 'duplicate_component_identity=*') { return '전략 Magic 또는 구성요소 신분 불일치' }
     if ($Alert -like 'safety_stopped=*') { return 'EA 안전 정지 발생' }
     if ($Alert -like 'persistence_failed=*') { return '상태 저장 실패' }
@@ -275,7 +275,7 @@ function Render-Dashboard {
     $healthText = if ($healthy) { '● 정상' } else { '● 확인 필요' }
     $healthColor = if ($healthy) { [ConsoleColor]::Green } else { [ConsoleColor]::Red }
     $hasSnapshot = -not [string]::IsNullOrWhiteSpace([string]$Status.execution_version)
-    $liveMode = ([string]$Status.operator_mode -eq 'NEXT_V7_LIVE')
+    $liveMode = ([string]$Status.operator_mode -eq 'NEXT_V8_LIVE')
     $entryReady = ($hasSnapshot -and $liveMode -and
         [int]$Status.new_entries_input -eq 1 -and
         [int]$Status.new_entries_effective -eq 1)
@@ -287,15 +287,15 @@ function Render-Dashboard {
     $terminalTradingText = if ([int]$Status.terminal_allow_live_trading -eq 1) { 'ON' } else { 'OFF' }
     $liveAuthorityText = if ([bool]$Status.live_promotion_authorized) { '허용' } else { '없음' }
     $modeLine = if ($entryReady) {
-        '신규 주문 허용 · Next V7 전용 Magic/상태 사용'
+        '신규 주문 허용 · Next V8 전용 Magic/상태 사용'
     } elseif ($entriesDisabledReady) {
-        '신규 주문 차단 · Next V7 전용 Magic/상태 사용'
+        '신규 주문 차단 · Next V8 전용 Magic/상태 사용'
     } else {
         '신규 주문 준비 안 됨 · 아래 안전상태와 경고 확인'
     }
     $modeColor = if ($entryReady -or $entriesDisabledReady) { [ConsoleColor]::Green } else { [ConsoleColor]::Red }
 
-    Write-UiLine -Text 'PROJECT ZETA TERMINUS NEXT · V7 LIVE-DEV' -Color White
+    Write-UiLine -Text 'PROJECT ZETA TERMINUS NEXT · V8 LIVE-DEV' -Color White
     Write-UiLine -Text $modeLine -Color $modeColor
     Write-UiLine -Text ("{0}  |  KST {1}  |  서버 {2}" -f $healthText, (Get-Date).ToString('yyyy-MM-dd HH:mm:ss'), $Status.server_time) -Color $healthColor
     Write-UiLine -Text ("PID {0}  ·  상태순번 {1}  ·  스냅샷 {2}초 전  ·  {3}초마다 갱신" -f $Status.project_terminal_pid, $Status.state_sequence, $Status.snapshot_age_seconds, $RefreshSeconds) -Color Gray
@@ -314,6 +314,7 @@ function Render-Dashboard {
     Write-UiLine -Text ("잔고 {0}  |  자산 {1}  |  증거금 {2}" -f (Format-Money $Status.account_balance), (Format-Money $Status.account_equity), (Format-Money $Status.account_margin)) -Color Cyan
     Write-UiLine -Text ("프로젝트 실현손익 {0}  |  단계잔고 {1}  |  2x비용 스트레스잔고 {2}" -f (Format-Money $Status.project_realized_net), (Format-Money $Status.project_stage_balance), (Format-Money $Status.stressed_balance)) -Color Gray
     Write-UiLine -Text ("현재 계획위험 {0}  |  관측 최대 계획위험 {1}" -f (Format-Money $Status.aggregate_planned_risk), (Format-Money $Status.maximum_aggregate_planned_risk)) -Color Gray
+    Write-UiLine -Text '위험계약: 기본 4% · 총 cap 18% · 배수 2 / 1.5 / 2 / 2.5 / 1.5 / 0 · Passive 비활성' -Color DarkCyan
 
     Write-Rule -Title '6개 전략 · 보유 및 진입평가'
     $estimatedServerEpoch = Get-EstimatedServerEpoch -Status $Status
@@ -349,14 +350,14 @@ function Render-Dashboard {
         $signalDecision = Get-KoreanSignalDecision $component.entry_check_signal_known $component.entry_check_signal_passed
         $entryResult = Get-KoreanEntryResult ([string]$component.entry_check_result)
         $color = if ($hasPosition) { [ConsoleColor]::Yellow } else { [ConsoleColor]::Gray }
-        Write-UiLine -Text ("[{0}] {1}  ·  Magic {2}" -f $view.Short, $view.Name, $component.magic) -Color White
+        Write-UiLine -Text ("[{0}] {1}  ·  Magic {2}  ·  위험 x{3} (cap 전 {4:P0})" -f $view.Short, $view.Name, $component.magic, [double]$component.risk_multiplier, [double]$component.effective_position_risk_fraction_before_aggregate_cap) -Color White
         Write-UiLine -Text ("     보유: {0}  ·  관리: {1}" -f $positionState, $managementState) -Color $color
         Write-UiLine -Text ("     기준: {0}  ·  평가창: {1}" -f $view.EntryRule, $view.EvaluationWindow) -Color DarkCyan
         Write-UiLine -Text ("     최근평가: 서버 {0}  ·  {1} {2}  ·  신호 {3}  ·  {4}" -f $evaluationTime, $view.SignalLabel, $signalValue, $signalDecision, $entryResult) -Color Gray
         Write-UiLine -Text ("     주문후보: {0}  ·  가격 {1}  ·  수량 {2}  ·  SL {3}  ·  위험 {4}" -f (Get-KoreanDirection $component.entry_check_direction), (Format-Price $component.entry_check_order_price), (Format-Volume $component.entry_check_volume), (Format-Price $component.entry_check_stop_loss), (Format-PositiveMoney $component.entry_check_planned_risk)) -Color Gray
     }
 
-    Write-Rule -Title '최근 V7 이벤트'
+    Write-Rule -Title '최근 V8 이벤트'
     $events = @($Status.latest_events)
     if ($events.Count -eq 0) {
         Write-UiLine -Text '기록된 이벤트 없음' -Color DarkGray
@@ -392,7 +393,7 @@ function Render-Dashboard {
 function Render-Failure {
     param([string]$Message)
     if (-not $Once -and -not $script:RenderingForGui) { Clear-Host }
-    Write-UiLine -Text 'PROJECT ZETA TERMINUS NEXT · V7 LIVE-DEV' -Color White
+    Write-UiLine -Text 'PROJECT ZETA TERMINUS NEXT · V8 LIVE-DEV' -Color White
     Write-UiLine -Text "상태 판독 실패: $Message" -Color Red
 }
 
@@ -416,7 +417,7 @@ function Show-GraphicalDashboard {
     $createdNew = $false
     $mutex = [System.Threading.Mutex]::new(
         $true,
-        'Local\ProjectZetaTerminusNextV7LiveDevDashboard',
+        'Local\ProjectZetaTerminusNextV8LiveDevDashboard',
         [ref]$createdNew
     )
     if (-not $createdNew) {
@@ -433,14 +434,14 @@ function Show-GraphicalDashboard {
     $form.ForeColor = [System.Drawing.Color]::WhiteSmoke
 
     $titleLabel = [System.Windows.Forms.Label]::new()
-    $titleLabel.Text = 'PROJECT ZETA TERMINUS NEXT  ·  V7 LIVE-DEV'
+    $titleLabel.Text = 'PROJECT ZETA TERMINUS NEXT  ·  V8 LIVE-DEV'
     $titleLabel.Font = [System.Drawing.Font]::new('Malgun Gothic', 18, [System.Drawing.FontStyle]::Bold)
     $titleLabel.ForeColor = [System.Drawing.Color]::White
     $titleLabel.AutoSize = $true
     $titleLabel.Location = [System.Drawing.Point]::new(22, 18)
 
     $modeLabel = [System.Windows.Forms.Label]::new()
-    $modeLabel.Text = 'Next V7 Live-Dev 상태 확인 중'
+    $modeLabel.Text = 'Next V8 Live-Dev 상태 확인 중'
     $modeLabel.Font = [System.Drawing.Font]::new('Malgun Gothic', 10, [System.Drawing.FontStyle]::Bold)
     $modeLabel.ForeColor = [System.Drawing.Color]::FromArgb(255, 196, 64)
     $modeLabel.AutoSize = $true
@@ -507,9 +508,9 @@ function Show-GraphicalDashboard {
                 $healthLabel.Text = "● 정상 작동  ·  PID $($status.project_terminal_pid)  ·  신규진입 $($status.new_entries_input)/$($status.new_entries_effective)"
                 $healthLabel.ForeColor = [System.Drawing.Color]::FromArgb(68, 214, 117)
                 $modeLabel.Text = if ([int]$status.expected_new_entries -eq 1) {
-                    '신규 주문 허용 · Next V7 Live-Dev'
+                    '신규 주문 허용 · Next V8 Live-Dev'
                 } else {
-                    '신규 주문 차단 · Next V7 점검 모드'
+                    '신규 주문 차단 · Next V8 점검 모드'
                 }
                 $modeLabel.ForeColor = [System.Drawing.Color]::FromArgb(68, 214, 117)
             } else {

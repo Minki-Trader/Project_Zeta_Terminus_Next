@@ -1,4 +1,21 @@
-# V6R6에서 Next V7으로 한 번만 인계하는 절차
+# Live 인계 절차
+
+## 현재 절차: RLO1에서 paired-month V8으로 한 번만 교체
+
+현재 target은 `NEXT-E02-V8-PMLR1-b1c77d3b6356`, Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`이다. Canonical source/settings SHA-256은 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256은 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`다. 고정 경제 계약은 component multiplier `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, base position risk `0.04`, aggregate cap `0.18`, Passive disabled다.
+
+1. RLO1은 신규진입 금지로 한 번만 기동해 exact identity와 `0/0`, owned positions/pending orders/margin/planned risk `0/0/0/0`, fault `0`, 미완료 decision `0`을 확인하고 정상 정지한다. 이 경계는 sequence `6425`, balance/equity `$105.20/$105.20`, project realized net `+$4.55`, project stage balance `$104.55`로 완료됐다.
+2. RLO1 core/research state, current/event 파일, order/deal, Magic와 `runtime.lock`은 퇴역 historical read-only다. V8은 이를 복구·채택·merge·append·rotate·clean·rewrite하지 않는다. 기존 `Import-ZetaNextLegacyRuntimeHandoff.ps1`은 V8에 사용하지 않는다. 로컬 `live-release-transition-pmlr1.json`은 동일 계정과 최종 귀속 실현손익만 묶는다.
+3. `CURRENT_STATE.md`가 V8 entries-disabled preflight를 `ENABLED`로 기록하고 exact package commit이 `origin/main`에 도달한 뒤 `Start-ZetaNextV8EntriesDisabled.ps1 -ConfirmEntriesDisabled`를 실행한다. 터미널이 꺼져 있으면 실행기가 직접 정확한 Portable을 켠다. 신규 namespace가 처음 생성되고 exact release/Portfolio/Magic/account, entries `0/0`, zero exposure/risk/fault, 증가하는 snapshot을 통과해야 한다.
+4. `Show-ZetaNextV8Dashboard.ps1 -Once -ExpectedMode EntriesDisabled`로 새 snapshot만 확인한다. `Stop-ZetaNextV8FlatRuntime.ps1 -ConfirmFlatStop`으로 정상 정지한 뒤 같은 starter로 재기동하여 fresh-state recovery, sequence 증가, 동일한 `0/0`와 append behavior를 확인한다. RLO1 파일 해시는 전후 동일해야 한다.
+5. `Get-ZetaNextV8MarketStatus.ps1`은 계정·포지션·주문·deal을 조회하지 않고 실제 FPMarkets US30 tick 연속성과 US30/US100/US500 M15/M30/H1의 synchronized/non-stale bar만 관찰한다. 시장 폐장이나 tick 부재는 실패나 일시정지 사유가 아니다. MT5를 entries-disabled로 계속 두고 실제 tick이 돌아올 때까지 기다린다. 첫 tick을 놓치면 그 다음 가장 이른 안전한 window를 쓴다. 평가 시각 보호구간 안에서는 handoff하지 않는다.
+6. 연속 tick, 세 symbol/timeframe sync, sole terminal PID, exact identity, entries `0/0`, position/order/margin/risk `0`, 모든 safety/persistence/broker/foreign/protection fault `0`이 동시에 직접 증명된 뒤에만 조건부 사전승인을 적용한다. 그때 V8 preflight를 `PASSED`, V8 new-entry authorization을 `ENABLED`로 커밋·푸시한다. 추가 사용자 확인은 필요하지 않다.
+7. `ZETA_NEXT_MASTER_TERMINAL_AND_DASHBOARD.cmd` 또는 `Start-ZetaNextV8Live.ps1`이 다시 exact `0/0` preflight와 market gate를 통과한 뒤에만 `1/1`을 연다. 노출이 생기지 않았음이 입증된 handshake 실패는 정상 정지 후 수정·재시도한다. 무노출을 입증할 수 없거나 주문·포지션이 생겼다면 V8을 계속 실행해 관리하고 RLO1을 절대 재시작하지 않는다.
+8. `1/1`, continuous ticks, synchronized data, persistent healthy sequence, sole owner, zero alert/warning/fault와 퇴역 파일 불변성을 안정화한 후 evidence, manifests, `CURRENT_STATE.md`를 마감하고 `main == origin/main`, clean worktree를 증명한다.
+
+아래 V6R6→V7 및 V7 patch 절차는 완료된 역사 기록이며 현재 V8에 재사용하거나 소유권을 부여하지 않는다.
+
+## 역사 절차: V6R6에서 Next V7으로 한 번만 인계
 
 이 문서는 완료된 실행 순서다. 1~7단계, 양쪽 최종 태그와 legacy GitHub archive가 모두 완료됐고 정확한 V7이 유일한 Live 소유자다. 운영 재시작은 Next 전용 소유권 절차를 유지한다.
 

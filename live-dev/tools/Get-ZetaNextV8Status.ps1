@@ -12,49 +12,58 @@ $liveDevRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $projectRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent $liveDevRoot))
 $runtimeRoot = Join-Path $liveDevRoot 'runtime\portable'
 $terminalPath = Join-Path $runtimeRoot 'terminal64.exe'
-$expertPath = Join-Path $runtimeRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextPre500FiniteRiskPortfolioV7.ex5'
-$liveDirectory = Join-Path $runtimeRoot 'MQL5\Files\ZetaTerminusNext\live'
+$expertPath = Join-Path $runtimeRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextPairedMonthLivePortfolioV8.ex5'
+$liveDirectory = Join-Path $runtimeRoot 'MQL5\Files\ZetaTerminusNext\live\v8-pmlr1\state'
 $statePath = Join-Path $projectRoot 'CURRENT_STATE.md'
 $legacyRoot = 'C:\Users\awdse\OneDrive\Desktop\Project_Zeta_Terminus'
 $runtimeModes = [ordered]@{
     EntriesDisabled = [pscustomobject]@{
-        OperatorMode = 'NEXT_V7_ENTRIES_DISABLED'
-        ConfigPath = Join-Path $runtimeRoot 'config\terminal-next-v7-entries-disabled.ini'
-        SetPath = Join-Path $runtimeRoot 'MQL5\Presets\ZetaTerminusNextRuntime\next-v7-entries-disabled.set'
+        OperatorMode = 'NEXT_V8_ENTRIES_DISABLED'
+        ConfigPath = Join-Path $runtimeRoot 'config\terminal-next-v8-entries-disabled.ini'
+        SetPath = Join-Path $runtimeRoot 'MQL5\Presets\ZetaTerminusNextV8Runtime\next-v8-entries-disabled.set'
         ExpectedEntries = 0
         AllowLiveTrading = 0
     }
     LivePreflight = [pscustomobject]@{
-        OperatorMode = 'NEXT_V7_LIVE_PREFLIGHT'
-        ConfigPath = Join-Path $runtimeRoot 'config\terminal-next-v7-live-preflight.ini'
-        SetPath = Join-Path $runtimeRoot 'MQL5\Presets\ZetaTerminusNextRuntime\next-v7-live-preflight.set'
+        OperatorMode = 'NEXT_V8_LIVE_PREFLIGHT'
+        ConfigPath = Join-Path $runtimeRoot 'config\terminal-next-v8-live-preflight.ini'
+        SetPath = Join-Path $runtimeRoot 'MQL5\Presets\ZetaTerminusNextV8Runtime\next-v8-live-preflight.set'
         ExpectedEntries = 0
         AllowLiveTrading = 1
     }
     Live = [pscustomobject]@{
-        OperatorMode = 'NEXT_V7_LIVE'
-        ConfigPath = Join-Path $runtimeRoot 'config\terminal-next-v7-live.ini'
-        SetPath = Join-Path $runtimeRoot 'MQL5\Presets\ZetaTerminusNextRuntime\next-v7-live.set'
+        OperatorMode = 'NEXT_V8_LIVE'
+        ConfigPath = Join-Path $runtimeRoot 'config\terminal-next-v8-live.ini'
+        SetPath = Join-Path $runtimeRoot 'MQL5\Presets\ZetaTerminusNextV8Runtime\next-v8-live.set'
         ExpectedEntries = 1
         AllowLiveTrading = 1
     }
 }
 
-$expectedExpertHash = 'CB225D97DA7BCEC30599B472F615C7A3775C359A0F8FA8293FBB9C222795775B'
-$expectedSchemaVersion = '7'
-$expectedReleaseId = 'NEXT-E01-V7-RLO1-b32e7e176f2e'
+$expectedExpertHash = 'E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274'
+$expectedSchemaVersion = '8'
+$expectedReleaseId = 'NEXT-E02-V8-PMLR1-b1c77d3b6356'
 $expectedProjectId = 'project-zeta-terminus-next'
-$expectedExecutionVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c'
-$expectedEconomicVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6'
-$expectedPortfolioId = 'ZT-PORT-NEXT-V7-2db5ef5ead1c'
-$filePrefix = 'zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c'
+$expectedExecutionVersion = 'zt-next-paired-month-live-portfolio-v8'
+$expectedEconomicVersion = 'zt-next-paired-month-live-replacement-economic-v1'
+$expectedPortfolioId = 'ZT-PORT-NEXT-V8-PMLR1-20260831'
+$currentSnapshotPattern = 'current-?.csv'
+$eventPattern = 'events-?.csv'
 $expectedComponents = [ordered]@{
-    'ZT-M30-US30-RANGE-COMP-61f61deaba' = 260824701L
-    'ZT-M30-US30-RANGE-COMP-64efb16616' = 260824702L
-    'ZT-H1-US100-CROSS-IN-14b72317b7' = 260824703L
-    'ZT-M30-US30-INTRADAY-R-2eb111fc46' = 260824704L
-    'ZT-H1-US30-RETURN-I-c870a788ec' = 260824705L
-    'ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8' = 260824706L
+    'ZT-M30-US30-RANGE-COMP-61f61deaba' = 260831901L
+    'ZT-M30-US30-RANGE-COMP-64efb16616' = 260831902L
+    'ZT-H1-US100-CROSS-IN-14b72317b7' = 260831903L
+    'ZT-M30-US30-INTRADAY-R-2eb111fc46' = 260831904L
+    'ZT-H1-US30-RETURN-I-c870a788ec' = 260831905L
+    'ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8' = 260831906L
+}
+$expectedRiskMultipliers = [ordered]@{
+    'ZT-M30-US30-RANGE-COMP-61f61deaba' = 2.0
+    'ZT-M30-US30-RANGE-COMP-64efb16616' = 1.5
+    'ZT-H1-US100-CROSS-IN-14b72317b7' = 2.0
+    'ZT-M30-US30-INTRADAY-R-2eb111fc46' = 2.5
+    'ZT-H1-US30-RETURN-I-c870a788ec' = 1.5
+    'ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8' = 0.0
 }
 
 function Read-SharedText {
@@ -101,7 +110,7 @@ function Convert-CsvPair {
     return @($Lines[$index], $Lines[$index + 1]) | ConvertFrom-Csv | Select-Object -First 1
 }
 
-function Read-V7Snapshot {
+function Read-V8Snapshot {
     param([Parameter(Mandatory)][string]$Path)
 
     $lines = @((Read-SharedText -Path $Path) -split "`r?`n" | Where-Object { $_.Length -gt 0 })
@@ -170,7 +179,7 @@ $authorizationText = if (Test-Path -LiteralPath $statePath -PathType Leaf) {
 } else {
     ''
 }
-$livePromotionAuthorized = $authorizationText -match 'Next V7 new-entry authorization:\s+`ENABLED`'
+$livePromotionAuthorized = $authorizationText -match 'Next V8 paired-month new-entry authorization:\s+`ENABLED`'
 $detectedMode = $null
 $processCommandLine = $null
 if ($processes.Count -eq 1) {
@@ -204,9 +213,9 @@ $modeContract = $runtimeModes[$activeMode]
 
 $snapshots = @()
 if (Test-Path -LiteralPath $liveDirectory -PathType Container) {
-    foreach ($file in Get-ChildItem -LiteralPath $liveDirectory -File -Filter "$filePrefix-current-?.csv") {
+    foreach ($file in Get-ChildItem -LiteralPath $liveDirectory -File -Filter $currentSnapshotPattern) {
         try {
-            $parsed = Read-V7Snapshot -Path $file.FullName
+            $parsed = Read-V8Snapshot -Path $file.FullName
             if ($null -ne $parsed -and [long]$parsed.Snapshot.state_sequence -ge 0) {
                 $snapshots += $parsed
             }
@@ -219,7 +228,7 @@ $latest = $snapshots | Sort-Object { [long]$_.Snapshot.state_sequence } -Descend
 
 $events = @()
 if (Test-Path -LiteralPath $liveDirectory -PathType Container) {
-    foreach ($file in Get-ChildItem -LiteralPath $liveDirectory -File -Filter "$filePrefix-events-?.csv") {
+    foreach ($file in Get-ChildItem -LiteralPath $liveDirectory -File -Filter $eventPattern) {
         try {
             $events += @((Read-SharedText -Path $file.FullName) | ConvertFrom-Csv)
         } catch {
@@ -245,9 +254,9 @@ if ($otherNextProcesses.Count -gt 0) {
     $alerts.Add("other_next_terminal_running=$(@($otherNextProcesses.Id) -join ',')")
 }
 if (-not (Test-Path -LiteralPath $expertPath -PathType Leaf)) {
-    $alerts.Add('next_v7_ex5_missing')
+    $alerts.Add('next_v8_ex5_missing')
 } elseif ((Get-FileHash -Algorithm SHA256 -LiteralPath $expertPath).Hash -ne $expectedExpertHash) {
-    $alerts.Add('next_v7_ex5_hash_mismatch')
+    $alerts.Add('next_v8_ex5_hash_mismatch')
 }
 if ($processes.Count -eq 1 -and [string]::IsNullOrWhiteSpace($detectedMode)) {
     $alerts.Add('runtime_mode_unrecognized')
@@ -255,7 +264,7 @@ if ($processes.Count -eq 1 -and [string]::IsNullOrWhiteSpace($detectedMode)) {
     $alerts.Add("runtime_mode=$detectedMode,expected=$ExpectedMode")
 }
 if ($activeMode -eq 'Live' -and -not $livePromotionAuthorized) {
-    $alerts.Add('next_v7_live_authorization_missing')
+    $alerts.Add('next_v8_live_authorization_missing')
 }
 
 $terminalAllowLiveTrading = $null
@@ -280,7 +289,7 @@ if (-not (Test-Path -LiteralPath $modeContract.SetPath -PathType Leaf)) {
     }
 }
 if ($null -eq $latest) {
-    $alerts.Add('next_v7_current_snapshot_unavailable')
+    $alerts.Add('next_v8_current_snapshot_unavailable')
 }
 
 $snapshotAgeSeconds = $null
@@ -295,6 +304,14 @@ if ($null -ne $latest) {
     $shadow = $latest.Shadow
     $seal = $latest.Seal
     $components = @($latest.Components)
+    foreach ($component in $components) {
+        $id = [string]$component.component_id
+        if ($expectedRiskMultipliers.Contains($id)) {
+            $multiplier = [double]$expectedRiskMultipliers[$id]
+            $component | Add-Member -NotePropertyName risk_multiplier -NotePropertyValue $multiplier -Force
+            $component | Add-Member -NotePropertyName effective_position_risk_fraction_before_aggregate_cap -NotePropertyValue (0.04 * $multiplier) -Force
+        }
+    }
 
     if ([string]$snapshot.schema_version -ne $expectedSchemaVersion -or
         [string]$snapshot.release_id -ne $expectedReleaseId -or
@@ -385,6 +402,13 @@ $status = [ordered]@{
     execution_version = if ($null -ne $snapshot) { [string]$snapshot.execution_version } else { $null }
     economic_version = if ($null -ne $snapshot) { [string]$snapshot.economic_version } else { $null }
     portfolio_id = if ($null -ne $snapshot) { [string]$snapshot.portfolio_id } else { $null }
+    risk_contract = [ordered]@{
+        base_position_risk_fraction = 0.04
+        aggregate_risk_fraction = 0.18
+        component_risk_multipliers = @($expectedRiskMultipliers.Values)
+        effective_position_risk_fractions_before_aggregate_cap = @($expectedRiskMultipliers.Values | ForEach-Object { 0.04 * [double]$_ })
+        passive_disabled = $true
+    }
     state_sequence = if ($null -ne $snapshot) { [long]$snapshot.state_sequence } else { $null }
     server_time = if ($null -ne $snapshot) { [string]$snapshot.server_time } else { $null }
     new_entries_input = if ($null -ne $snapshot) { [int]$snapshot.new_entries_input } else { $null }

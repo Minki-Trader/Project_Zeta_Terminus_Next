@@ -439,7 +439,8 @@ bool ResearchAppendCandidateRow(const int component,
                 risk_capital,
                 (research_attempted_position_cap[component] > 0.0
                  ? research_attempted_position_cap[component]
-                 : risk_capital * InpMaximumPositionRiskFraction),
+                 : risk_capital * InpMaximumPositionRiskFraction *
+                   MathMax(0.0, ComponentRiskMultiplier(component))),
                 aggregate_before,
                 aggregate_cap,
                 MathMax(0.0, aggregate_cap - aggregate_before),

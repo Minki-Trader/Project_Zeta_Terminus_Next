@@ -228,7 +228,7 @@ bool PlacePassiveLimit(const int direction,
                         0.0,
                         ORDER_TIME_SPECIFIED,
                         expiration,
-                        "ZN 6 V7")
+                        "ZN 6 V8")
        : trade.SellLimit(InpBaseVolume,
                          limit_price,
                          "US100",
@@ -236,7 +236,7 @@ bool PlacePassiveLimit(const int direction,
                          0.0,
                          ORDER_TIME_SPECIFIED,
                          expiration,
-                         "ZN 6 V7"));
+                         "ZN 6 V8"));
    const uint retcode = trade.ResultRetcode();
    const string retcode_description = trade.ResultRetcodeDescription();
    const ulong returned_order = trade.ResultOrder();
@@ -358,6 +358,12 @@ bool PlacePassiveLimit(const int direction,
 
 void ProcessPassiveLimit()
   {
+   if(ComponentRiskMultiplier(US100_PASSIVE_LIMIT) <= 1.0e-9)
+     {
+      component_states[US100_PASSIVE_LIMIT].entry_check_result =
+         "COMPONENT_DISABLED";
+      return;
+     }
    const datetime current_bar = iTime("US100", PERIOD_M15, 0);
    if(current_bar == 0)
       return;
