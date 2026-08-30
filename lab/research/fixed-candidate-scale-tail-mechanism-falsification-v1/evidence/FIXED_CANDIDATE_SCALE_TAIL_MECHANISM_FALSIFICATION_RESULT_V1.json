@@ -1,0 +1,193 @@
+{
+  "schema": "zeta-next-fixed-candidate-scale-tail-mechanism-falsification-result-v1",
+  "recorded_at_local": "2026-08-30T17:02:32+09:00",
+  "status": "VALID_COMPLETE_NO_FACTOR_CAP_SEED",
+  "unit": 118,
+  "family": "fixed-candidate-scale-tail-mechanism-falsification-v1",
+  "primary_macro_program": "7 diagnostic_causal_meta",
+  "research_height": "meso_to_macro",
+  "process_accounting": {
+    "invocations": 2,
+    "valid_complete_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "engineering_corrections": 1,
+    "valid_process_duration_seconds": 0.292767,
+    "failed_process_result_files_written": 0,
+    "failed_process_economic_verdicts": 0
+  },
+  "integrity": {
+    "immutable_files": 8,
+    "input_manifest_bytes": 828,
+    "input_manifest_sha256": "50F9D0B4754FCA35907B7F369E12FB6205501EE926FA7A77AE8BE91B5449F219",
+    "selection_decision_rows": 12265,
+    "selection_lifecycles": 1428,
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524,
+    "august_control_decision_rows": 515,
+    "august_control_lifecycles": 44,
+    "august_control_actual_net_usd": 13.05,
+    "august_control_stressed_net_usd": 12.455,
+    "august_candidate_decision_rows": 255,
+    "august_candidate_lifecycles": 29,
+    "august_candidate_actual_net_usd": 29.62,
+    "august_candidate_stressed_net_usd": 28.586,
+    "all_parent_anchors_reproduced": true,
+    "all_research_dropped_records_zero": true,
+    "all_partial_observations_zero": true
+  },
+  "selection_decision_sampled_drawdown": {
+    "sampled_relative_equity_drawdown_pct": 18.571213489913,
+    "sampled_drawdown_usd": 49.34,
+    "sampled_peak_equity_usd": 265.68,
+    "sampled_trough_equity_usd": 216.34,
+    "sampled_max_server_time": "2023.01.19 17:30:00",
+    "risk_capital_usd": 212.053000000002,
+    "ladder_level": 1,
+    "native_relative_equity_drawdown_pct": 20.256887565152653,
+    "native_relative_equity_drawdown_usd": 54.41,
+    "native_implied_peak_equity_usd": 268.6,
+    "absolute_sampling_gap_percentage_points": 1.68567407524,
+    "classification": "DIRECTIONAL_WITHIN_2PP_SUPPORTING_ONLY",
+    "exact_tick_localization_claimed": false,
+    "seed_authority": false
+  },
+  "selection_occupancy": {
+    "maximum_simultaneous_positions": 2,
+    "calendar_span_hours": 33533.0,
+    "occupied_hours": 5188.588889,
+    "single_position_hours": 3994.648333,
+    "two_position_hours": 1193.940556,
+    "two_position_share_of_occupied_time": 0.230108914,
+    "cross_index_overlap_hours": 660.476667,
+    "same_side_cross_index_overlap_hours": 319.458333,
+    "same_side_share_of_cross_index_overlap": 0.483678454,
+    "same_side_cross_index_episodes": 154
+  },
+  "fixed_012_factor_cap_observed_path_binding": {
+    "gross_aggregate_cap_fraction": 0.18,
+    "proposed_same_direction_broad_equity_cap_fraction": 0.12,
+    "all_realized_births_that_would_bind": 241,
+    "all_realized_birth_binding_fraction": 0.168767507003,
+    "cross_index_same_direction_births_that_would_bind": 154,
+    "cross_index_same_direction_birth_binding_fraction": 0.107843137255,
+    "binding_by_proposed_component": {
+      "Cross": 154,
+      "Return": 31,
+      "Pressure": 6,
+      "Range61": 50
+    },
+    "counterfactual_economic_path_replayed": false,
+    "meaning": "The proposed cap is a broad intervention on the realized path, not a narrow filter with demonstrated tail attribution."
+  },
+  "august_common_path": {
+    "match_key": "component_id plus exact entry_time_server",
+    "common_closes": 27,
+    "control_only_closes": 17,
+    "candidate_only_closes": 2,
+    "equal_direction_fraction": 1.0,
+    "maximum_entry_price_difference_basis_points": 0.0,
+    "median_candidate_to_control_volume_ratio": 2.0,
+    "median_candidate_to_control_planned_risk_ratio": 2.222987118981,
+    "median_absolute_stressed_r_difference": 0.024498369917,
+    "control_common_stressed_net_usd": 10.737000000001,
+    "candidate_common_stressed_net_usd": 24.356000000002,
+    "common_stressed_uplift_usd": 13.619000000001,
+    "total_candidate_minus_control_stressed_net_usd": 16.131000000001,
+    "common_uplift_share_of_total": 0.84427499845,
+    "stop_distance_ratio": {
+      "minimum": 0.992896367575,
+      "median": 1.100139961172,
+      "maximum": 1.187600539107,
+      "inside_frozen_0_90_to_1_10": 12,
+      "above_1_10": 15,
+      "below_0_90": 0,
+      "inside_band_fraction": 0.444444444444
+    },
+    "frozen_gates": {
+      "common_count": true,
+      "equal_direction": true,
+      "entry_geometry": true,
+      "stop_geometry": false,
+      "material_volume_scale": true,
+      "normalized_economy": true,
+      "common_path_dominance": true
+    },
+    "pure_scale_mechanism_supported": false,
+    "descriptive_interpretation": "Most uplift is on identical signal-time entries and is strongly scale-dominated, but capital/protection geometry changes enough to reject the stricter pure-scale mechanism."
+  },
+  "august_worst_day_tail": {
+    "date": "2026-08-25",
+    "stressed_net_usd": -10.038,
+    "closed_lifecycles": 2,
+    "losing_lifecycles": 2,
+    "losing_stop_lifecycles": 1,
+    "gross_negative_exit_economics_usd": 10.038,
+    "trades": [
+      {
+        "component": "Pressure",
+        "symbol": "US30",
+        "direction": "LONG",
+        "birth_server_time": "2026.08.25 15:00:00",
+        "close_server_time": "2026.08.25 16:46:51",
+        "exit_class": "STOP",
+        "planned_risk_usd": 16.39152,
+        "stressed_net_usd": -8.306,
+        "risk_capital_usd": 136.596000000001,
+        "factor_cap_usd": 16.39152,
+        "same_direction_risk_before_usd": 0.0,
+        "would_bind_012_factor_cap": false
+      },
+      {
+        "component": "Cross",
+        "symbol": "US100",
+        "direction": "LONG",
+        "birth_server_time": "2026.08.25 17:00:00",
+        "close_server_time": "2026.08.25 21:00:00",
+        "exit_class": "NATIVE",
+        "planned_risk_usd": 10.2632,
+        "stressed_net_usd": -1.732,
+        "risk_capital_usd": 128.290000000002,
+        "factor_cap_usd": 15.3948,
+        "same_direction_risk_before_usd": 0.0,
+        "would_bind_012_factor_cap": false
+      }
+    ],
+    "gap_between_pressure_close_and_cross_birth_seconds": 789,
+    "positive_holding_interval_overlap_seconds": 0,
+    "cross_index_same_direction_stop_pair_exists": false,
+    "frozen_gates": {
+      "worst_day_anchor": true,
+      "minimum_two_losing_stops": false,
+      "cross_index_same_direction_overlap_pair": false,
+      "pair_gross_loss_concentration": false,
+      "later_pair_birth_would_bind_012_cap": false
+    },
+    "cross_index_same_direction_tail_supported": false
+  },
+  "economic_verdict": {
+    "classification": "VALID_SCALE_MECHANISM_NOT_CONFIRMED_NO_FACTOR_CAP_SEED",
+    "optimization_failure": false,
+    "engineering_or_environment_failure": false,
+    "fixed_candidate_changed": false,
+    "fixed_candidate_rejected": false,
+    "retained_information_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "meaning": "The strict pure-scale mechanism misses one frozen geometry gate, and the proposed factor-side cap cannot address the exact observed worst-day path because the two losses are sequential and neither birth binds."
+  },
+  "raw_formal_result": {
+    "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/output/formal-result.json",
+    "bytes": 30829,
+    "sha256": "BEBF13B44D5BDFB512A447D69033541CF4DE80579D177FEE8057ECCD7157DA20"
+  },
+  "boundaries": {
+    "grid_or_retune_points": 0,
+    "new_market_data": false,
+    "mql_set_compile_tester_or_mt5": false,
+    "tests_validators_or_test_infrastructure": 0,
+    "counterfactual_pnl_replay": false,
+    "master_terminal_or_broker_account_surface": "UNTOUCHED",
+    "live_surface": "UNTOUCHED",
+    "automatic_successor_or_live_authority": false
+  }
+}

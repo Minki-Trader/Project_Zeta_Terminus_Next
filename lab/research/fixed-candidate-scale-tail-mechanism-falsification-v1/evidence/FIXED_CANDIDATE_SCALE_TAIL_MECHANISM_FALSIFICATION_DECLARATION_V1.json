@@ -1,0 +1,175 @@
+{
+  "schema": "zeta-next-fixed-candidate-scale-tail-mechanism-falsification-declaration-v1",
+  "created_at_local": "2026-08-30",
+  "status": "DECLARED_RAW_LENSES_UNOPENED_PARENT_AGGREGATES_KNOWN",
+  "unit": 118,
+  "family": "fixed-candidate-scale-tail-mechanism-falsification-v1",
+  "primary_macro_program": "7 diagnostic_causal_meta",
+  "research_height": "meso_to_macro",
+  "question": "Do exact raw records support executable scale as the main candidate/control uplift mechanism and cross-index same-direction overlap as the August downside-tail mechanism strongly enough to retain one later factor-side cap seed?",
+  "known_parent_context": {
+    "fixed_candidate": {
+      "component_weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18
+    },
+    "selection": {
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524,
+      "closed_lifecycles": 1428,
+      "native_relative_equity_drawdown_usd": 54.41,
+      "native_relative_equity_drawdown_pct": 20.256887565152653
+    },
+    "august_control": {
+      "actual_net_usd": 13.05,
+      "stressed_net_usd": 12.455,
+      "closed_lifecycles": 44,
+      "native_relative_equity_drawdown_pct": 6.06
+    },
+    "august_candidate": {
+      "actual_net_usd": 29.62,
+      "stressed_net_usd": 28.586,
+      "closed_lifecycles": 29,
+      "native_relative_equity_drawdown_pct": 13.44
+    },
+    "august_known_decomposition": {
+      "common_closes": 27,
+      "common_control_stressed_net_usd": 10.737,
+      "common_candidate_stressed_net_usd": 24.356,
+      "common_uplift_share_of_total_pct": 84.427500465,
+      "control_only_closes": 17,
+      "candidate_only_closes": 2,
+      "candidate_worst_exit_day": "2026-08-25",
+      "candidate_worst_exit_day_stressed_net_usd": -10.038
+    }
+  },
+  "immutable_lab_inputs": [
+    {
+      "name": "august-candidate-decisions.csv",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/august-candidate-decisions.csv",
+      "bytes": 173432,
+      "sha256": "7019555A3766AE1DC67A7C7DFDBA2F334BF2A3E09E7011E8E7A1DC39A3C5040F"
+    },
+    {
+      "name": "august-candidate-lifecycles.csv",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/august-candidate-lifecycles.csv",
+      "bytes": 53831,
+      "sha256": "7763C42D55C2713E5E019FBED14C21FC46E34BA96AE6CDDC3EAECE212D9664B1"
+    },
+    {
+      "name": "august-control-decisions.csv",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/august-control-decisions.csv",
+      "bytes": 359264,
+      "sha256": "CF3EB484CD60F8090EEBF149FF2E1B59FA035FD9DA4A675BA55CDE43CE0F725A"
+    },
+    {
+      "name": "august-control-lifecycles.csv",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/august-control-lifecycles.csv",
+      "bytes": 87295,
+      "sha256": "7D505CE4A250E50A9480A1A7F7775D63F4D5999DD8D1613CCC71D1EB1DAFE341"
+    },
+    {
+      "name": "august-relative-native-result.json",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/august-relative-native-result.json",
+      "bytes": 22912,
+      "sha256": "5FAB3236ACBC83691AD745DF134C26CE43902738E2D41E720EF5211503C89690"
+    },
+    {
+      "name": "selection-candidate-decisions.csv",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/selection-candidate-decisions.csv",
+      "bytes": 8290085,
+      "sha256": "B3231924CD1357072C4198D6A530B5DA932C96EA6A050E35600E2279CAD1007A"
+    },
+    {
+      "name": "selection-candidate-lifecycles.csv",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/selection-candidate-lifecycles.csv",
+      "bytes": 2685969,
+      "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"
+    },
+    {
+      "name": "selection-native-result.json",
+      "path": "lab/artifacts/raw/fixed-candidate-scale-tail-mechanism-falsification-v1/input/selection-native-result.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+    }
+  ],
+  "input_manifest": {
+    "canonical_rule": "sort by file name; UTF-8 lines of name TAB bytes TAB uppercase SHA-256 LF; terminal LF",
+    "bytes": 828,
+    "sha256": "50F9D0B4754FCA35907B7F369E12FB6205501EE926FA7A77AE8BE91B5449F219"
+  },
+  "formal_lenses": {
+    "selection_decision_sampled_drawdown": {
+      "method": "Use every finite positive account_equity in file order, compute its running-peak relative drawdown, and compare the maximum sampled drawdown with the native MT5 relative-equity anchor.",
+      "resolved_absolute_gap_at_or_below_percentage_points": 0.5,
+      "directional_absolute_gap_at_or_below_percentage_points": 2.0,
+      "otherwise": "UNRESOLVED_SAMPLING_GAP, a design limit rather than a research failure",
+      "ladder_rule": "1 + floor(max(0, risk_capital_usd - 100) / 150 + 1e-9)"
+    },
+    "selection_occupancy": {
+      "interval_rule": "Half-open BIRTH-to-CLOSE intervals; CLOSE applies before BIRTH at a shared timestamp.",
+      "same_side_cross_index_rule": "At least one US30 and one US100 position are simultaneously active and their planned-risk-weighted direction nets have the same nonzero sign.",
+      "proposed_factor_side_cap_fraction": 0.12,
+      "gross_cap_fraction_unchanged": 0.18,
+      "cap_tolerance_usd": 0.01,
+      "binding_rule": "At a realized BIRTH, active plus proposed same-direction broad-equity planned risk exceeds risk_capital_usd times 0.12 plus 0.01 USD."
+    },
+    "august_common_scale": {
+      "match_key": "component_id plus exact entry_time_server",
+      "required_common_closes": 27,
+      "required_equal_direction_fraction": 1.0,
+      "maximum_entry_price_difference_basis_points": 0.05,
+      "stop_distance_ratio_band": [0.9, 1.1],
+      "minimum_fraction_in_stop_distance_band": 0.9,
+      "minimum_median_candidate_to_control_volume_ratio": 1.9,
+      "maximum_median_absolute_stressed_r_difference": 0.1,
+      "minimum_common_uplift_share_of_total": 0.7,
+      "meaning": "These joint conditions distinguish near-identical common signal geometry with materially larger executable exposure from an unrelated path-selection explanation."
+    },
+    "august_tail": {
+      "required_worst_exit_day": "2026-08-25",
+      "minimum_losing_stop_positions": 2,
+      "required_pair": "A different-symbol US30/US100 losing STOP pair with equal direction and positive holding-interval overlap.",
+      "minimum_pair_share_of_gross_negative_exit_economics": 0.8,
+      "required_012_cap_binding_on_later_pair_birth": true,
+      "meaning": "The observed tail must be both economically concentrated and mechanically addressable by the exact proposed factor-side cap."
+    }
+  },
+  "verdict_order": [
+    "integrity and exact parent-anchor reproduction; any fault is an engineering correction with no research verdict",
+    "common-path executable-scale mechanism",
+    "cross-index same-direction August-tail mechanism and exact 0.12 cap binding",
+    "decision-sampled drawdown localization as supporting information only"
+  ],
+  "classifications": {
+    "both_mechanisms": "VALID_SCALE_AND_CROSS_INDEX_SAME_SIDE_TAIL_CONFIRMED_RETAIN_ONE_FACTOR_SIDE_CAP_SEED",
+    "scale_only": "VALID_SCALE_CONFIRMED_CROSS_INDEX_SAME_SIDE_TAIL_NOT_CONFIRMED_NO_FACTOR_CAP_SEED",
+    "scale_not_confirmed": "VALID_SCALE_MECHANISM_NOT_CONFIRMED_NO_FACTOR_CAP_SEED"
+  },
+  "retained_seed_if_eligible": {
+    "destination": "one later self-contained Optimization proxy after whole-map recompare",
+    "single_point": {
+      "component_weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "position_risk_fraction": 0.04,
+      "gross_aggregate_risk_fraction": 0.18,
+      "same_direction_broad_equity_factor_cap_fraction": 0.12
+    },
+    "authority": "information seed only; no automatic campaign, MT5 escalation, candidate replacement, Lab handoff or Live promotion"
+  },
+  "closed_adjacent_space": [
+    "factor-side cap levels other than the exact consultant-proposed 0.12",
+    "beta, correlation, volatility or dynamic factor thresholds",
+    "component, symbol, direction, event or calendar exceptions",
+    "weight, position-risk, gross-cap, ladder or exit retuning",
+    "counterfactual PnL replay from absent blocked-path signals"
+  ],
+  "boundaries": {
+    "economic_raw_lenses_opened_at_declaration": false,
+    "formal_processes_started": 0,
+    "new_market_data": false,
+    "mql_set_compile_tester_or_mt5": false,
+    "optimization_live_or_other_lab_path_read_by_formal_process": false,
+    "master_terminal_or_broker_account_surface": "UNTOUCHED",
+    "automatic_successor_or_live_authority": false
+  }
+}

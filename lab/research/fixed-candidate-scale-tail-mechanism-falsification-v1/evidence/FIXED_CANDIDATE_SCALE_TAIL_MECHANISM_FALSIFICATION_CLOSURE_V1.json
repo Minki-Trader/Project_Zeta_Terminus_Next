@@ -1,0 +1,131 @@
+{
+  "schema": "zeta-next-fixed-candidate-scale-tail-mechanism-falsification-closure-v1",
+  "created_at_local": "2026-08-30",
+  "status": "CLOSED_COMPLETE_VALID_NO_FACTOR_CAP_SEED",
+  "unit": 118,
+  "family": "fixed-candidate-scale-tail-mechanism-falsification-v1",
+  "primary_macro_program": "7 diagnostic_causal_meta",
+  "research_height": "meso_to_macro",
+  "verdict": {
+    "classification": "VALID_SCALE_MECHANISM_NOT_CONFIRMED_NO_FACTOR_CAP_SEED",
+    "pure_scale_mechanism_supported": false,
+    "cross_index_same_direction_tail_supported": false,
+    "retained_seed": null,
+    "optimization_campaign_opened": false,
+    "mt5_escalation": false,
+    "fixed_development_candidate": "unchanged",
+    "candidate_rejected": false,
+    "candidate_promoted_to_live": false
+  },
+  "economic_basis": {
+    "common_path": {
+      "matched_lifecycles": 27,
+      "equal_direction_fraction": 1.0,
+      "maximum_entry_price_difference_basis_points": 0.0,
+      "median_volume_ratio": 2.0,
+      "median_absolute_stressed_r_difference": 0.024498369917,
+      "common_uplift_share_of_total": 0.84427499845,
+      "stop_distance_inside_frozen_band": "12/27",
+      "median_stop_distance_ratio": 1.100139961172,
+      "maximum_stop_distance_ratio": 1.187600539107,
+      "interpretation": "Common-path uplift is strongly scale-dominated, but protection geometry and capital path are not invariant, so the declared stricter pure-scale mechanism does not pass."
+    },
+    "observed_worst_day": {
+      "date": "2026-08-25",
+      "stressed_net_usd": -10.038,
+      "us30_pressure_long_stop_usd": -8.306,
+      "pressure_close_server_time": "2026.08.25 16:46:51",
+      "us100_cross_long_native_usd": -1.732,
+      "cross_birth_server_time": "2026.08.25 17:00:00",
+      "gap_seconds": 789,
+      "overlap_seconds": 0,
+      "losing_stop_count": 1,
+      "either_birth_blocked_by_exact_012_cap": false,
+      "interpretation": "The common-direction losses are sequential within a day, not simultaneous cross-index exposure; the proposed active-exposure cap cannot address this exact tail."
+    },
+    "selection_context": {
+      "maximum_positions": 2,
+      "two_position_share_of_occupied_time": 0.230108914,
+      "same_side_cross_index_overlap_hours": 319.458333,
+      "same_side_cross_index_episodes": 154,
+      "exact_012_cross_index_bindings": 154,
+      "exact_012_cross_index_binding_fraction_of_births": 0.107843137255,
+      "meaning": "The cap would be broad enough to change more than one tenth of realized births without direct evidence that those interventions target the observed worst-day loss."
+    },
+    "drawdown_localization": {
+      "decision_sampled_relative_equity_dd_pct": 18.571213489913,
+      "native_relative_equity_dd_pct": 20.256887565152653,
+      "gap_percentage_points": 1.68567407524,
+      "sampled_max_risk_capital_usd": 212.053000000002,
+      "sampled_max_ladder": 1,
+      "classification": "DIRECTIONAL_SUPPORT_ONLY_NOT_TICK_EXACT"
+    }
+  },
+  "engineering_correction": {
+    "failed_processes": 1,
+    "valid_complete_processes": 1,
+    "economic_metric_reruns": 0,
+    "failure": "Control Passive pending-order fills have no exact fill-time POSITION_OPEN decision row.",
+    "correction": "Control cap binding was removed from scope; control occupancy stayed descriptive and candidate binding retained exact market-entry decision joins.",
+    "economic_output_before_correction": false,
+    "research_failure": false
+  },
+  "closed_space": [
+    "the exact consultant-proposed 0.12 same-direction broad-equity factor cap",
+    "all neighboring factor-cap levels",
+    "beta, correlation, volatility or dynamic factor thresholds",
+    "component, symbol, direction, event or calendar exceptions",
+    "weight, position-risk, gross-cap, ladder, stop or exit rescue",
+    "same-day sequential-loss reinterpretation as simultaneous exposure"
+  ],
+  "whole_map_recomparison": {
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "program_1": "No new entry signal is created by common-path attribution; signal and formula neighborhoods remain closed.",
+    "program_2": "No new causal external event or cross-asset input became project-ready.",
+    "program_3": "The 789-second sequential boundary describes the realized path but does not predeclare a new clock or cooldown treatment.",
+    "program_4": "Pressure STOP plus later Cross NATIVE loss does not identify a previsible exit checkpoint or position-management treatment.",
+    "program_5": "The 0.12 factor cap is directly falsified on the observed tail and would broadly bind 10.78% of births; adjacent caps and risk retunes remain closed.",
+    "program_7": "The diagnosis resolves the consultant's scale/concentration claim without retaining a treatment.",
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true
+  },
+  "durable_material": {
+    "declaration": {
+      "bytes": 8781,
+      "sha256": "523550E92689C783E8D383B08C82B4F79FFC48939D27700291961C890C339743"
+    },
+    "snapshot_receipt": {
+      "bytes": 6438,
+      "sha256": "9EBF03C8EBFEDD927CBFDC9ED0D2DDE2F7AC1CD33D963F4CE17F77BB802F69D8"
+    },
+    "analysis": {
+      "bytes": 40881,
+      "sha256": "17B46AA01689075890C5810B524E4EC5DBF142950C2C512C4959918D6BBFE484"
+    },
+    "result": {
+      "bytes": 7806,
+      "sha256": "7FC8258E2E157363E6E9AA70202C57A63E7D8EB1A940D9B864050B8FF7246C6B"
+    },
+    "readme": {
+      "bytes": 3127,
+      "sha256": "1B1D8D90D0080F8DA9672EB99152B6D52B45A5064D3AAAD5FBDEF9D855DF0F82"
+    },
+    "raw_formal_result": {
+      "bytes": 30829,
+      "sha256": "BEBF13B44D5BDFB512A447D69033541CF4DE80579D177FEE8057ECCD7157DA20"
+    },
+    "lab_owned_input_manifest_sha256": "50F9D0B4754FCA35907B7F369E12FB6205501EE926FA7A77AE8BE91B5449F219"
+  },
+  "boundaries": {
+    "grid_or_retune_points": 0,
+    "mql_set_compile_tester_or_mt5": false,
+    "tests_validators_or_test_infrastructure": 0,
+    "master_terminal_or_broker_account_surface": "UNTOUCHED",
+    "live_surface": "UNTOUCHED",
+    "automatic_successor_or_live_authority": false
+  },
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "marker": "FRONTIER_UNIT_118_CLOSED_VALID_SCALE_TAIL_MECHANISM_FALSIFIED_NO_FACTOR_CAP_SEED_MAP_RECOMPARED"
+}
