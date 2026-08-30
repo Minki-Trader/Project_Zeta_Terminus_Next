@@ -1,0 +1,186 @@
+{
+  "schema": "zeta-dd20-paired-clean-requal-mt5-v2-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PRECONTROL_ENVIRONMENT_CAPTURED_TESTER_AND_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-paired-clean-requal-mt5-v2",
+    "declaration": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_DECLARATION_V1.json",
+    "declaration_bytes": 10573,
+    "declaration_sha256": "D3E1F10124AECAAA799581C54B7240C4100DB236E36987FC4AA226B9D6A0B14F",
+    "release_id": "OPT-LIVE-V8-DD20PCR2-20260831",
+    "portfolio_id": "ZT-OPT-LIVE-V8-DD20PCR2-20260831",
+    "economic_schema": "opt-dd20-pcr-mt5-2",
+    "magic_range": "260831941..260831946",
+    "program": 5,
+    "height": "meso-to-macro",
+    "tester_only": true
+  },
+  "implementation": {
+    "source_file_count": 16,
+    "source_total_bytes": 448350,
+    "source_manifest_sha256": "A1543D6031969ABEB7680D19560A8BCB4C2D4B0DBB173AC86212163B85E671FC",
+    "configuration_file_count": 4,
+    "configuration_total_bytes": 3585,
+    "configuration_manifest_sha256": "76DD8AB5C08CBD16F7A96B981A56876B8646605310BC45FB33C88F5CF8EF4017",
+    "source_configuration_and_ex5_file_count": 21,
+    "source_configuration_and_ex5_total_bytes": 693133,
+    "source_configuration_and_ex5_manifest_sha256": "A77AA3A5812BB978C370C93BD256ED0DBC162453DCE513087EDBCC3896CE92A6",
+    "manifest_algorithm": "Sort slash-normalized root-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "runtime_source_configuration_and_ex5_parity_files": 21,
+    "runtime_source_configuration_and_ex5_mismatches": 0,
+    "assembly_source": {
+      "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20PairedCleanRequalMT5V2.mq5",
+      "bytes": 30101,
+      "sha256": "17C3C96143FE5346424C629D661CC11E443EA7E3F478478A8F15B608596FD309"
+    },
+    "include_comparison_to_v1": {
+      "modules": 15,
+      "byte_identical": 9,
+      "changed": [
+        "Domain/ZetaDomain.mqh: V2 identity and reason-observation counters",
+        "Execution/ZetaOrders.mqh: order comment identity only",
+        "Persistence/ZetaStateAndEvents.mqh: reason-observation counter reset and tester persistence fields",
+        "Strategies/ZetaPassive.mqh: order comment identity only",
+        "Strategies/ZetaPressure.mqh: read-only classification of existing false returns",
+        "Strategies/ZetaRC4.mqh: read-only classification, one row per existing false return, and reconciliation counters"
+      ]
+    },
+    "economic_algorithm_changes": 0,
+    "observation_only_change": "Every existing failed RC4 head calculation retains the same false/no-action result and now emits one reason row. Invalid classes make OnTester correction-required; only complete-history zero-range, zero-variance or exact session-boundary no-action may remain valid.",
+    "control_set": {
+      "bytes": 1195,
+      "sha256": "8BFC028D633B7E5CD3B8E13CD9694538670DA5CAB23F4467B2DBF1A36BC90231",
+      "multipliers": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    },
+    "candidate_set": {
+      "bytes": 1198,
+      "sha256": "9B2B982D11FDA24AB68B2CCDC6A15E9CE49227A81DA8D2812C0096732AE4C6CE",
+      "multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "economic_inputs_equal_to_exact_v8_set": true
+    },
+    "control_ini": {
+      "bytes": 594,
+      "sha256": "14CFC51083E091CA156BBD192DF91071F006CB7DE57ED8D63D191464C79607EE"
+    },
+    "candidate_ini": {
+      "bytes": 598,
+      "sha256": "8A4D51616D0F3AF17C784C09E7C7AC7089603684789FEAF8BBD3B941AFA16A04"
+    }
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "total_compile_invocations": 2,
+    "first_nonfinal_compile": {
+      "result": "0 errors, 0 warnings",
+      "elapsed_ms": 2242,
+      "raw_log_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/compile/compile-attempt-1-20260831.log",
+      "raw_log_bytes": 18696,
+      "raw_log_sha256": "0D39B5572AA9291068AD11EA510E32DD9663066205AE7AB740FA38236CE4232F",
+      "tester_started": false
+    },
+    "final_compile": {
+      "result": "0 errors, 0 warnings",
+      "elapsed_ms": 2437,
+      "raw_log_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/compile/compile-attempt-2-final-20260831.log",
+      "raw_log_bytes": 18696,
+      "raw_log_sha256": "2F93F8E50D7A6D33776D8550031B1A47043CBB493A88318A5C089B331B011C5C",
+      "ex5_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20PairedCleanRequalMT5V2.ex5",
+      "ex5_bytes": 241198,
+      "ex5_sha256": "96E8B9D4CBAFA7D408681D23FCD09C0B62B1C9DD536ACD52B5AC07D1C918A78E",
+      "runtime_ex5_parity": true
+    },
+    "raw_compile_bundle_files": 3,
+    "raw_compile_bundle_bytes": 38430,
+    "raw_compile_bundle_manifest_sha256": "03D1A0D5FE7F2A547E4AD4040BCFBCD318CB0830A2DF0FB570EA11A78D48D9A0",
+    "economic_output_opened": false
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-pcr2-portable/",
+    "current_file_count": 620,
+    "current_total_bytes": 5193461985,
+    "terminal64_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor64_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "metatester64_sha256": "46DA12974EA4B393FA6855576DA57549A1E3255DBE5C667CCE60D7F32C1A889F",
+    "zeta_include_roots": ["ZetaOptimizationDD20PairedCleanRequalMT5V2"],
+    "other_campaign_zeta_ea_include_or_set": 0,
+    "process_owners_at_freeze": 0,
+    "active_tst_files": 0,
+    "active_tester_log_files": 0,
+    "active_report_files": 0,
+    "active_campaign_output_files": 0
+  },
+  "precontrol_environment": {
+    "server": "FPMarketsSC-Live",
+    "symbols": ["US30", "US100", "US500"],
+    "interval": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "tester_hcs": {
+      "file_count": 12,
+      "total_bytes": 31235885,
+      "manifest_sha256": "A63FE8ACFD4BD63BC5C1632F9A551B48A1F4A33735DAE3AACC7FBDDFC8465392"
+    },
+    "tester_tkc": {
+      "file_count": 93,
+      "total_bytes": 1888823215,
+      "manifest_sha256": "DD5ECA01F96D0B02491EEE7382D203F11B37BDD4BD694CC51DF281F084278C52"
+    },
+    "base_source_tkc": {
+      "file_count": 93,
+      "total_bytes": 1890320515,
+      "manifest_sha256": "F94915E27CFB3D57B559C6AE78181E3DA53D1F9F45D40A58F1FCC8146453F766"
+    },
+    "combined_hcs_and_tkc": {
+      "file_count": 198,
+      "total_bytes": 3810379615,
+      "manifest_sha256": "995AC8A37F6D91B2E9D97DEE1C31D0DB78ABE31D96E5B1EF1C707BDE171CA5E6",
+      "equal_to_v1_clean_control_environment": true
+    },
+    "full_symbol_database": {
+      "bytes": 413696,
+      "sha256": "6521CE8BEE66935AD03EA1B6D1B67EEA4837EF4201D18E5DFE081F6D4C417BC1",
+      "binding": true
+    },
+    "selected_symbol_database": {
+      "bytes": 18210,
+      "sha256": "72A20FD194294C00FEB1CDD9D40907EEB096EEE1FFD1B14D29EDA002315B7CF3",
+      "binding": false
+    },
+    "pair_rule": "Recompute source/configuration/EX5, all 198 HCS/TKC files and the full symbol database after CONTROL and after CANDIDATE. Any binding mismatch invalidates the pair without economic judgment."
+  },
+  "execution_contract": {
+    "tester_model": "Every tick based on real ticks",
+    "model_value": 4,
+    "primary_symbol": "US30",
+    "period": "M30",
+    "deposit_usd": 100.0,
+    "currency": "USD",
+    "leverage": "1:100",
+    "optimization": false,
+    "local_agents_only": true,
+    "path_order": ["CONTROL", "CANDIDATE"],
+    "path_count": 2,
+    "source_retune_after_freeze": false,
+    "economic_output_opened": false
+  },
+  "isolation": {
+    "v8_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v8_entries_disabled_pid": 30592,
+    "v8_entries_state": "0/0",
+    "v8_modified": false,
+    "live_lab_or_other_optimization_source_runtime_state_log_or_output_modified": false,
+    "master_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "direct_live_authority": false
+  },
+  "boundary": {
+    "campaign_source_created": true,
+    "configuration_created": true,
+    "runtime_created": true,
+    "compiled": true,
+    "tester_started": false,
+    "control_started": false,
+    "candidate_started": false,
+    "economic_output_opened": false,
+    "economic_verdict": null,
+    "next_action": "Commit and push this implementation freeze, then run the exact CONTROL once. A complete valid CONTROL is followed immediately by the unchanged CANDIDATE."
+  }
+}

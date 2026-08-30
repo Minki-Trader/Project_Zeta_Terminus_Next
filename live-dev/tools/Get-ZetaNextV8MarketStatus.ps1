@@ -60,6 +60,7 @@ result = {
     "us30_max_update_gap_seconds": float(duration),
     "us30_continuous_ticks": False,
     "all_symbol_ticks_fresh": False,
+    "symbol_tick_reference_msc": 0,
     "symbol_ticks": [],
     "timeframes": [],
     "market_data_ready": False,
@@ -106,16 +107,23 @@ try:
     if not result["us30_continuous_ticks"]:
         result["reasons"].append("US30 did not produce at least three updates with every observed gap <= 3 seconds")
 
-    wall_msc = int(time.time() * 1000)
-    symbol_ticks_fresh = True
-    reference_tick_epoch = 0
+    symbol_tick_samples = []
     for symbol in symbols:
         tick = mt5.symbol_info_tick(symbol)
         tick_msc = int(tick.time_msc) if tick is not None else 0
-        age_seconds = (wall_msc - tick_msc) / 1000.0 if tick_msc > 0 else None
-        fresh = age_seconds is not None and -1.0 <= age_seconds <= 5.0
-        if symbol == "US30" and tick_msc > 0:
-            reference_tick_epoch = tick_msc // 1000
+        symbol_tick_samples.append((symbol, tick_msc))
+
+    reference_tick_msc = max((item[1] for item in symbol_tick_samples), default=0)
+    result["symbol_tick_reference_msc"] = reference_tick_msc
+    symbol_ticks_fresh = reference_tick_msc > 0
+    reference_tick_epoch = reference_tick_msc // 1000 if reference_tick_msc > 0 else 0
+    for symbol, tick_msc in symbol_tick_samples:
+        age_seconds = (
+            (reference_tick_msc - tick_msc) / 1000.0
+            if reference_tick_msc > 0 and tick_msc > 0
+            else None
+        )
+        fresh = age_seconds is not None and 0.0 <= age_seconds <= 5.0
         result["symbol_ticks"].append({
             "symbol": symbol,
             "time_msc": tick_msc,
@@ -238,6 +246,7 @@ $result = [ordered]@{
     us30_max_update_gap_seconds = [double]$market.us30_max_update_gap_seconds
     us30_continuous_ticks = [bool]$market.us30_continuous_ticks
     all_symbol_ticks_fresh = [bool]$market.all_symbol_ticks_fresh
+    symbol_tick_reference_msc = [long]$market.symbol_tick_reference_msc
     symbol_ticks = @($market.symbol_ticks)
     timeframes = @($market.timeframes)
     market_data_ready = [bool]$market.market_data_ready

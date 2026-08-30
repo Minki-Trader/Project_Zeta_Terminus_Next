@@ -20,5 +20,4 @@ A pass opens only a separately named Lab economic-handoff correction. A valid no
 
 ## Boundary
 
-The dedicated future runtime is `optimization/runtime/dd20-pcr2-portable/`. Declaration is frozen before source derivation, configuration, runtime creation, compilation or Tester execution. Live, Lab and every other Optimization campaign remain isolated. V8 PID `30592` remains the exact entries-disabled `0/0` owner and is outside this campaign.
-
+The declaration reached `origin/main` before derivation. The self-contained source, four fixed configuration files, final build-6140 `0 errors / 0 warnings` EX5 and dedicated non-Master `optimization/runtime/dd20-pcr2-portable/` are now frozen by `DD20_PAIRED_CLEAN_REQUAL_MT5_V2_IMPLEMENTATION_FREEZE_V1.json`. Tester and economic output remain unopened until that implementation boundary reaches `origin/main`; the sole next action is exact CONTROL, followed immediately by the unchanged CANDIDATE only if CONTROL is complete and valid. Live, Lab and every other Optimization campaign remain isolated. V8 PID `30592` remains the exact entries-disabled `0/0` owner and is outside this campaign.
