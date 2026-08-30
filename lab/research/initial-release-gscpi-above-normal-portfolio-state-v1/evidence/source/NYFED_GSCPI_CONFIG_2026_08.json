@@ -1,0 +1,76 @@
+{
+  "overview": {
+    "introText": "The GSCPI integrates transportation cost data and manufacturing indicators to provide a gauge of global supply chain conditions.",
+    "imagePath": "/medialibrary/research/interactives/gscpi/images/global-supply-chain_460.jpg",
+    "bodyTexts": [
+      "Supply chain disruptions have become a major challenge for the global economy since the start of the COVID-19 pandemic. Assessing the intensity of these issues has also posed a challenge, as conventional measures tend to focus on specific dimensions of global supply chains.",
+      "The goal behind constructing the Global Supply Chain Pressure Index (GSCPI) was to develop a parsimonious measure of global supply chain pressures that could be used to gauge the importance of supply constraints with respect to economic outcomes. <a href=\"https://libertystreeteconomics.newyorkfed.org/2022/01/the-global-supply-side-of-inflationary-pressures/\" >Related research</a> indicates, for example, that changes in the GSCPI are associated with goods and producer price inflation in the United States and the euro area, both during the pandemic period and stretching back to 1997 (the starting point of the dataset).",
+      "The GSCPI integrates a number of commonly used metrics with the aim of providing a comprehensive summary of potential supply chain disruptions. Global transportation costs are measured by employing data from the <a href=\"https://www.balticexchange.com/en/data-services/market-information0/dry-services.html\" >Baltic Dry Index (BDI)</a> and the <a href=\"https://www.harperpetersen.com/harpex\">Harpex index</a>, as well as airfreight cost indices from the <a href=\"https://www.bls.gov/mxp/publications/factsheets/air-freight-facts.htm\">U.S. Bureau of Labor Statistics</a>. The GSCPI also uses several supply chain-related components from <a href=\"https://ihsmarkit.com/products/pmi.html\">Purchasing Managers’ Index (PMI) surveys</a>, focusing on manufacturing firms across seven interconnected economies: China, the euro area, Japan, South Korea, Taiwan, the United Kingdom, and the United States. For complete details on the data and methodology used to construct the GSCPI, see the foundational <a href=\"https://newyorkfed.org/research/staff_reports/sr1017\" >Staff Report.</a>",
+      "The GSCPI is updated at or shortly after 10:00 a.m. on the fourth business day of each month."
+    ],
+    "citeText": "Federal Reserve Bank of New York, Global Supply Chain Pressure Index, https://www.newyorkfed.org/research/policy/gscpi.",
+    "relatedReadings": [
+      "<a href=\"https://libertystreeteconomics.newyorkfed.org/2023/01/global-supply-chain-pressure-index-the-china-factor/\">Global Supply Chain Pressure Index: The China Factor</a> (January 2023)",
+      "<a href=\"https://libertystreeteconomics.newyorkfed.org/2022/05/global-supply-chain-pressure-index-may-2022-update/\">Global Supply Chain Pressure Index: May 2022 Update</a> (May 2022)",
+      "<a href=\"https://libertystreeteconomics.newyorkfed.org/2022/03/global-supply-chain-pressure-index-march-2022-update/\">Global Supply Chain Pressure Index: March 2022 Update</a> (March 2022)",
+      "<a href=\"https://libertystreeteconomics.newyorkfed.org/2022/01/the-global-supply-side-of-inflationary-pressures/\">The Global Supply Side of Inflationary Pressures</a> (January 2022)",
+      "<a href=\"https://libertystreeteconomics.newyorkfed.org/2022/01/a-new-barometer-of-global-supply-chain-pressures/\">A New Barometer of Global Supply Chain Pressures</a> (January 2022)"
+      
+      
+    ],
+    "disclaimerText": [
+      "The Global Supply Chain Pressure Index (GSCPI) does not represent official estimates of the Federal Reserve Bank of New York, its President, the Federal Reserve System, or the Federal Open Market Committee."
+    ]
+  },
+  "interactive": {
+    "summaryTitle":"Estimates for July 2026",
+    "summaryList": [
+      
+      "The GSCPI fell to 0.79 in July, down from 1.19 in June (revised down from an initial reading of 1.25). GSCPI readings measure standard deviations from the index’s historical average. "],
+    "sources": "Sources: Bureau of Labor Statistics; Harper Petersen Holding GmbH; Baltic Exchange; IHS Markit; Institute for Supply Management; Haver Analytics; Refinitiv; authors’ calculations.",
+    "notes": "Notes: GSCPI readings for the most recent months can be revised as realized data become available, replacing the imputed values generated through principal component analysis. Further, for some series, mainly the BLS airfreight cost indices, each new release comes with revisions to up to twelve months of previous data. Thus, revisions can have an impact up to a year back in time."
+  },
+  "faq": {
+    "faqList": [
+      {
+        "title": "Which subcomponents of the Purchasing Managers’ Index (PMI) are incorporated in the GSCPI?",
+        "bodyList": [
+          "The following subcomponents of the country-specific manufacturing PMIs are used: “delivery time,” which captures the extent to which supply chain delays in the economy impact producers—a variable that may be viewed as identifying a purely supply-side constraint; “backlogs,” which quantifies the volume of orders that firms have received but have yet to either start working on or complete; and, finally, “purchased stocks,” which measures the extent of inventory accumulation by firms in the economy. Note that in the case of the U.S., the PMI data start only in 2007, so for the U.S., PMI data are combined with those from the manufacturing survey of the <a href=\"https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/\">Institute for Supply Management (ISM)</a>."
+        ]
+      },
+      {
+        "title": "Does the GSCPI control for demand-side factors?",
+        "bodyList": [
+          "Movements in the GSCPI’s underlying data—both the country-specific PMI components as well as the transportation cost series—can be due to changes in either demand- or supply-side factors. To better isolate the supply-side drivers of each data series, the index uses additional information available from the PMI surveys for the seven relevant economies.",
+          "More specifically, the index incorporates data on the “new orders” PMI subcomponent, which captures the extent of customer demand for firms’ products, and regresses the three country-specific supply chain PMI measures (delivery time, backlogs, and purchased stocks) on the contemporaneous value and two lags of this new orders component in an attempt to purge demand factors from these three supply chain PMI subcomponents. The residuals from these regressions for each country are then used as inputs in constructing our global supply chain pressure index.",
+          "Regarding the transport cost variables, the GSCPI uses both a GDP-weighted average of the aforementioned “new orders” PMI subcomponents as well as a similarly weighted average of the “quantities purchased” PMI subcomponents for our seven economies. The latter captures the extent of firms’ demand for intermediate inputs (both domestic and foreign), to proxy for producers’ input demand. In a similar vein as for the country-specific supply chain measures, the index uses regressions based on these two GDP-weighted demand proxies and their lags to cleanse the six global transport cost measures as much as possible from demand effects."
+        ]
+      },
+      {
+        "title": "How does the GSCPI deal with gaps and discrepancies in the dataset?",
+        "bodyList": [
+          "The GSCPI dataset is made up of monthly time series of uneven length: the supply chain variables start in 1997 for the U.S. and the European economies in the sample, but they don’t start until 2001 for Japan and 2004 for the other Asian economies; the Harpex index starts in 2001, the Baltic Dry Index goes back to 1985, and the U.S. Bureau of Labor Statistics (BLS) airfreight price indices go back to 2005 on a monthly frequency but are quarterly from 1997 to 2005. In addition, some series are published with a one-month lag. The aim is to estimate a common, or “global,” component from these time series. To be able to do that while also dealing with data gaps, the GSCPI methodology follows <a href=\"https://www.tandfonline.com/doi/abs/10.1198/073500102317351921\">Stock and Watson (2002)</a> and extracts this common component for the full 1997-2021 period through <i>principal component analysis</i> while simultaneously filling the data gaps using this estimated common component."
+        ]
+      },
+      {
+        "title": "Are previous GSCPI readings revised as new data come in?",
+        "bodyList": [
+          "GSCPI readings for the most recent months can be revised as realized data become available, replacing the imputed values generated through principal component analysis. Further, for some series, mainly the BLS airfreight cost indices, each new release comes with revisions to up to twelve months of previous data. Thus, revisions can have an impact up to a year back in time."
+        ]
+      }
+    ]
+  },
+   "sideArea": {
+    "aboutTitle": "About the GSCPI",
+    "aboutTexts": [
+      "The GSCPI tracks the state of global supply chains using data from the transportation and manufacturing sectors. The index is updated at or shortly after 10:00 a.m. on the fourth business day of each month.",
+      "The GSCPI is not an official estimate of the Federal Reserve Bank of New York, its President, the Federal Reserve System, or the Federal Open Market Committee.",
+      "The GSCPI is a product of the <a href=\"https://www.newyorkfed.org/research/amec\">Applied Macroeconomics and Econometrics Center</a> (AMEC)."
+    ],
+    "interactiveImageTitle": "Explore the GSCPI",
+    "interactiveImagePath": "/medialibrary/research/interactives/gscpi/images/GSC_2022_GSCPI-chart-overivew.jpg",
+    "videoImageTitle": "Video: The Global Supply Chain Pressure Index, Explained",
+    "videoImagePath": "/medialibrary/Research/Interactives/gscpi/images/GSCPI_video",
+    "videoLink": "https://bcove.video/3NfeGqU"
+  }
+}

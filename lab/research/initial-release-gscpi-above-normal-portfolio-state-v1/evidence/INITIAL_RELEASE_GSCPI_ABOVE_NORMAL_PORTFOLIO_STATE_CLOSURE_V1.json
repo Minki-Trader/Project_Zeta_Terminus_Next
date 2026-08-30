@@ -1,0 +1,89 @@
+{
+  "schema": "zeta-next-initial-release-gscpi-above-normal-portfolio-state-closure-v1",
+  "created_at_local": "2026-08-30",
+  "status": "CLOSED_VALID",
+  "unit": "initial-release-gscpi-above-normal-portfolio-state-116",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "verdict": "NO_MATERIAL_INITIAL_RELEASE_GSCPI_ABOVE_NORMAL_PORTFOLIO_FIELD",
+  "confirmatory_primary_effect": {
+    "raw_mean_stressed_r": 0.008567485372874897,
+    "raw_stop_rate": -0.01632451150136037,
+    "centered_stressed_r": 0.008764809303799062,
+    "centered_stop_rate": 0.009366162371937428
+  },
+  "full_horizon_descriptive_effect": {
+    "raw_mean_stressed_r": 0.011158393515055928,
+    "raw_stop_rate": -0.0018866932249963914,
+    "centered_stressed_r": 0.004836769677809027,
+    "centered_stop_rate": 0.006390997658332962
+  },
+  "state_counts": {
+    "ABOVE_NORMAL": 972,
+    "AT_OR_BELOW_NORMAL": 1252,
+    "UNAVAILABLE": 9
+  },
+  "direction_breadth": {
+    "books": {
+      "NONCONCORDANT": 1,
+      "ADVERSE_ABOVE_NORMAL": 1
+    },
+    "confirmatory_periods": {
+      "NONCONCORDANT": 3
+    },
+    "components": {
+      "NONCONCORDANT": 3,
+      "FAVORABLE_ABOVE_NORMAL": 2,
+      "ADVERSE_ABOVE_NORMAL": 1
+    }
+  },
+  "gates": {
+    "favorable": {
+      "centered_stressed_r_at_least_0_10": false,
+      "centered_stop_rate_at_most_minus_0_05": false,
+      "both_books": false,
+      "at_least_two_of_three_periods": false,
+      "at_least_four_components": false,
+      "period_contribution_cap_0_60": false,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "adverse": {
+      "centered_stressed_r_at_most_minus_0_10": false,
+      "centered_stop_rate_at_least_0_05": false,
+      "both_books": false,
+      "at_least_two_of_three_periods": false,
+      "at_least_four_components": false,
+      "period_contribution_cap_0_60": false,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_centered_stressed_r_below_0_05": true,
+      "absolute_centered_stop_rate_below_0_025": true,
+      "favorable_period_breadth_at_most_1": true,
+      "adverse_period_breadth_at_most_1": true,
+      "favorable_component_breadth_at_most_3": true,
+      "adverse_component_breadth_at_most_3": true,
+      "passed": true
+    }
+  },
+  "declaration_sha256": "CBD4A49E6EF4F01F59EA907654132F43A795EAEAB62AB29FDA9FDE6EC742BCB5",
+  "result_sha256": "0AE059CC18ADAB1F611E7989C38AE840D78150AF95BEF8D2AA6F84991C3F819F",
+  "derived_rows_sha256": "3A85F529C1CB61E5B1B06A447DB3C423DE18EFD8065B86DBADE138083D14620E",
+  "selected_candidate": null,
+  "retained_seed": null,
+  "optimization_candidate": null,
+  "mt5_escalation": false,
+  "same_family_rescue": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "goal_status": "active_not_complete",
+  "next": "update_state_close_unit_116_recompare_whole_map_and_return_to_optimization_boundary"
+}
