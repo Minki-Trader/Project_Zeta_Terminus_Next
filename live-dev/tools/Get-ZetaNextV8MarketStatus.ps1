@@ -202,11 +202,11 @@ if (-not [string]::IsNullOrWhiteSpace([string]$status.server_time)) {
     )
     $serverMinute = $serverTime.Hour * 60 + $serverTime.Minute
     $protectedRanges = @(
-        @(12 * 60 + 58, 13 * 60 + 3),
-        @(13 * 60 + 28, 13 * 60 + 33),
-        @(14 * 60 + 58, 15 * 60 + 3),
-        @(15 * 60 + 58, 16 * 60 + 3),
-        @(16 * 60 + 58, 17 * 60 + 3)
+        @((12 * 60 + 58), (13 * 60 + 3)),
+        @((13 * 60 + 28), (13 * 60 + 33)),
+        @((14 * 60 + 58), (15 * 60 + 3)),
+        @((15 * 60 + 58), (16 * 60 + 3)),
+        @((16 * 60 + 58), (17 * 60 + 3))
     )
     $insideProtectedRange = $false
     foreach ($range in $protectedRanges) {

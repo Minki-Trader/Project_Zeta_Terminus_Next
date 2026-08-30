@@ -29,14 +29,19 @@ $release = Assert-ZetaNextReleaseIntegrity -Contract $contract
 $receipt = Get-ZetaNextHandoffReceipt -Contract $contract
 
 $preflightMode = Write-ZetaNextRuntimeMode -Contract $contract -Receipt $receipt -Mode LivePreflight
+$preflightPriorSequence = -1L
+try {
+    $preflightPriorSequence = [long](Get-ZetaNextRuntimeStatus -Contract $contract -Mode LivePreflight).state_sequence
+} catch { }
 $preflightProcess = $null
 try {
     $preflightProcess = Start-ZetaNextRuntime -Contract $contract -RuntimeMode $preflightMode
-    Write-Output "Next V8 0/0 flat preflight started (PID $($preflightProcess.Id))."
+    Write-Output "Next V8 0/0 flat preflight started (PID $($preflightProcess.Id)); waiting after sequence $preflightPriorSequence."
     $preflightStatus = Wait-ZetaNextRuntimeStatus `
         -Contract $contract `
         -RuntimeMode $preflightMode `
         -ProcessId $preflightProcess.Id `
+        -MinimumStateSequenceExclusive $preflightPriorSequence `
         -TimeoutSeconds 60 `
         -Predicate { param($candidate) Test-ZetaNextFlatStatus -Status $candidate -Receipt $receipt }
     if ($null -eq $preflightStatus) {
@@ -78,13 +83,18 @@ do {
 
 $null = Assert-ZetaNextExclusiveTerminalBoundary -Contract $contract
 $liveMode = Write-ZetaNextRuntimeMode -Contract $contract -Receipt $receipt -Mode Live
+$livePriorSequence = -1L
+try {
+    $livePriorSequence = [long](Get-ZetaNextRuntimeStatus -Contract $contract -Mode Live).state_sequence
+} catch { }
 $liveProcess = Start-ZetaNextRuntime -Contract $contract -RuntimeMode $liveMode
-Write-Output "Next V8 1/1 Live runtime started (PID $($liveProcess.Id)); waiting for exact handshake."
+Write-Output "Next V8 1/1 Live runtime started (PID $($liveProcess.Id)); waiting for an exact handshake after sequence $livePriorSequence."
 
 $liveStatus = Wait-ZetaNextRuntimeStatus `
     -Contract $contract `
     -RuntimeMode $liveMode `
     -ProcessId $liveProcess.Id `
+    -MinimumStateSequenceExclusive $livePriorSequence `
     -TimeoutSeconds 60 `
     -Predicate { param($candidate) Test-ZetaNextLiveStatus -Status $candidate }
 if ($null -eq $liveStatus) {

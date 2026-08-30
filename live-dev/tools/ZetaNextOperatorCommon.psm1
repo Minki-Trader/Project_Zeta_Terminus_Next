@@ -397,6 +397,7 @@ function Wait-ZetaNextRuntimeStatus {
         [Parameter(Mandatory)]$RuntimeMode,
         [Parameter(Mandatory)][int]$ProcessId,
         [Parameter(Mandatory)][scriptblock]$Predicate,
+        [long]$MinimumStateSequenceExclusive = -1,
         [ValidateRange(5, 180)][int]$TimeoutSeconds = 60
     )
 
@@ -413,7 +414,11 @@ function Wait-ZetaNextRuntimeStatus {
         } catch { return $null }
         try {
             $status = Get-ZetaNextRuntimeStatus -Contract $Contract -Mode $RuntimeMode.Mode
-            if ([bool]$status.healthy -and (& $Predicate $status)) { return $status }
+            if ([bool]$status.healthy -and
+                [long]$status.state_sequence -gt $MinimumStateSequenceExclusive -and
+                (& $Predicate $status)) {
+                return $status
+            }
         } catch { }
         Start-Sleep -Milliseconds 250
     } while ((Get-Date) -lt $deadline)

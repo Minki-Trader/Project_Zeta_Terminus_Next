@@ -18,8 +18,8 @@ Import-Module $commonModule -Force
 
 $contract = Get-ZetaNextOperatorContract
 $authorization = Get-Content -LiteralPath $contract.StatePath -Raw
-if ($authorization -notmatch 'Next V8 paired-month entries-disabled preflight:\s+`ENABLED`') {
-    throw 'CURRENT_STATE.md does not enable the Next V8 paired-month entries-disabled handoff preflight.'
+if ($authorization -notmatch 'Next V8 paired-month entries-disabled preflight:\s+`(?:ENABLED|PASSED)`') {
+    throw 'CURRENT_STATE.md does not authorize the Next V8 paired-month entries-disabled runtime.'
 }
 if ($authorization -notmatch 'Next V8 paired-month new-entry authorization:\s+`DISABLED`') {
     throw 'Entries-disabled mode requires Next V8 paired-month new-entry authorization to remain DISABLED.'
@@ -32,15 +32,20 @@ $null = Assert-ZetaNextExclusiveTerminalBoundary -Contract $contract
 $release = Assert-ZetaNextReleaseIntegrity -Contract $contract
 $receipt = Get-ZetaNextHandoffReceipt -Contract $contract
 $runtimeMode = Write-ZetaNextRuntimeMode -Contract $contract -Receipt $receipt -Mode EntriesDisabled
+$priorSequence = -1L
+try {
+    $priorSequence = [long](Get-ZetaNextRuntimeStatus -Contract $contract -Mode EntriesDisabled).state_sequence
+} catch { }
 
 $process = $null
 try {
     $process = Start-ZetaNextRuntime -Contract $contract -RuntimeMode $runtimeMode
-    Write-Output "Next V8 entries-disabled runtime started (PID $($process.Id)); waiting for 0/0 flat snapshot."
+    Write-Output "Next V8 entries-disabled runtime started (PID $($process.Id)); waiting for a new 0/0 flat snapshot after sequence $priorSequence."
     $status = Wait-ZetaNextRuntimeStatus `
         -Contract $contract `
         -RuntimeMode $runtimeMode `
         -ProcessId $process.Id `
+        -MinimumStateSequenceExclusive $priorSequence `
         -TimeoutSeconds 60 `
         -Predicate { param($candidate) Test-ZetaNextFlatStatus -Status $candidate -Receipt $receipt }
     if ($null -eq $status) {
