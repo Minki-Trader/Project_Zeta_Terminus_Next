@@ -1,0 +1,291 @@
+{
+  "schema": "zeta-next-us500-blockbuster-release-next-week-mood-contract-v1",
+  "family": "us500-blockbuster-release-next-week-mood-v1",
+  "input_root": "lab/artifacts/raw/us500-blockbuster-release-next-week-mood-v1/input/",
+  "output_root": "lab/artifacts/raw/us500-blockbuster-release-next-week-mood-v1/output/",
+  "files": {
+    "events": "source/blockbuster_events_over_4000.csv",
+    "bars": "market/US500_M15_BARS_20220701_20260821.csv",
+    "spec": "market/US500_SYMBOL_SPEC_V1.json"
+  },
+  "immutable_inputs": {
+    "files": [
+      {
+        "name": "market/US500_M15_BARS_20220701_20260821.csv",
+        "bytes": 7007401,
+        "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A"
+      },
+      {
+        "name": "market/US500_SYMBOL_SPEC_V1.json",
+        "bytes": 620,
+        "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918"
+      },
+      {
+        "name": "source/blockbuster_events_over_4000.csv",
+        "bytes": 7421,
+        "sha256": "8D58DDA01208C47538853CE1A50ABB7C84476184DEF22DB2C3A7C0A48E4219BC"
+      },
+      {
+        "name": "source/box_office_mojo_2022.html",
+        "bytes": 400082,
+        "sha256": "5198DD8DA27B233FF0C0C44511D26A80483FF8E9296CD6EA225712EB2C8039E0"
+      },
+      {
+        "name": "source/box_office_mojo_2023.html",
+        "bytes": 479396,
+        "sha256": "6A36C21C69CD94BCC7FD68AF0B3AB3C510ED9E31F17FCB72096F87DDBFF86633"
+      },
+      {
+        "name": "source/box_office_mojo_2024.html",
+        "bytes": 505763,
+        "sha256": "778321C55EB68D8AEB6B33221F964AA3147DBC2D70E0B83A09E80B23985109E2"
+      },
+      {
+        "name": "source/box_office_mojo_2025.html",
+        "bytes": 499511,
+        "sha256": "7E0D7805E21228171B7AA6F2D8E519E02D0753EEC9FF2D955B1849AD7BC7E6D8"
+      },
+      {
+        "name": "source/box_office_mojo_2026.html",
+        "bytes": 415689,
+        "sha256": "66D9CF6909DC9B72EFC645DADE3B42E7F57255592F9E1CC8E147B6822FC38F20"
+      },
+      {
+        "name": "source/hong_wei_2025_review_of_finance.html",
+        "bytes": 476269,
+        "sha256": "742323B805A277650016D5EFB67484FA931DA5D6F8D60BEAC2DC6C0C448D3D04"
+      }
+    ],
+    "manifest_sha256": "740D4012B7D60BB76DA9285E753CC677D0CE41BB48A1E1A838C9A185EA6D66C9",
+    "event_rows": 72,
+    "bar_rows": 97707
+  },
+  "acquisition_summary": {
+    "path": "lab/artifacts/raw/us500-blockbuster-release-next-week-mood-v1/input/acquisition-summary.json",
+    "bytes": 6231,
+    "sha256": "2448134B19F757733F4F4DA3107556F05968E285DC626B6C1DAF4F9B4F0F0E6F"
+  },
+  "formal_declaration": {
+    "path": "lab/research/us500-blockbuster-release-next-week-mood-v1/evidence/US500_BLOCKBUSTER_RELEASE_NEXT_WEEK_MOOD_DECLARATION_V1.json",
+    "bytes": 18610,
+    "sha256": "24370DF4922CB8FD6F66C4D72C5E8CC6538CDFC0B63D626CB6469ADDA0767279"
+  },
+  "premetric_receipt_path": "lab/research/us500-blockbuster-release-next-week-mood-v1/evidence/US500_BLOCKBUSTER_RELEASE_NEXT_WEEK_MOOD_SNAPSHOT_RECEIPT_V1.json",
+  "required_event_schema": [
+    "year",
+    "release",
+    "release_date",
+    "opening_theaters",
+    "release_week_monday",
+    "target_week_monday",
+    "target_period",
+    "source_file"
+  ],
+  "required_bar_schema": [
+    "time_epoch",
+    "time_server",
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread",
+    "real_volume"
+  ],
+  "literature_rule": {
+    "paper": "Sanghyun Hong and Xiaopeng Wei, Blockbuster or bust? Silver screen effect and stock returns, Review of Finance 29(2), 2025, 603-632",
+    "doi": "10.1093/rof/rfaf004",
+    "publisher_url": "https://academic.oup.com/rof/article/29/2/603/7990917",
+    "movie_source": "Box Office Mojo domestic in-year releases",
+    "source_sample": "January 2000 through December 2019, with a COVID robustness extension through December 2021 reported by the authors",
+    "release_week": "Monday through Sunday containing the release date",
+    "blockbuster": "Opening in strictly more than 4,000 theaters on the release date",
+    "predictor": "Integer number of qualifying blockbuster releases in the release week",
+    "target": "Positive S&P 500 return in the immediately subsequent Monday-through-Sunday week",
+    "reported_magnitude": "Approximately fifty basis points more subsequent-week market return per additional blockbuster in the controlled specification",
+    "exact_4000_excluded": true,
+    "threshold_or_direction_grid_points": 0
+  },
+  "calendar_rule": {
+    "timezone": "America/New_York",
+    "release_week": "Monday through Sunday",
+    "target_week": "The next Monday through Sunday",
+    "cash_transfer": "Every official eligible trading session in the target week",
+    "same_week_control": "The same count-scaled cash sleeve in the release week, using only source events whose target week lies in scope and whose release week begins on or after July 1, 2022",
+    "zero_release_control": "A one-tranche LONG cash sleeve on every eligible target-period session whose preceding release week has zero qualifying releases"
+  },
+  "official_session_calendar": {
+    "exchange": "NYSE equities",
+    "construction": "all America/New_York weekdays minus exact frozen official exchange-closure dates",
+    "sources": [
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2022_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2023_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2024_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2025_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/nyse/ICE_NYSE_2026_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/markets/hours-calendars",
+      "https://www.nyse.com/publicdocs/nyse/markets/american-options/rule-interpretations/2025/National_Day_of_Mourning_20250102.pdf"
+    ],
+    "closed_dates": [
+      "2022-07-04",
+      "2022-09-05",
+      "2022-11-24",
+      "2022-12-26",
+      "2023-01-02",
+      "2023-01-16",
+      "2023-02-20",
+      "2023-04-07",
+      "2023-05-29",
+      "2023-06-19",
+      "2023-07-04",
+      "2023-09-04",
+      "2023-11-23",
+      "2023-12-25",
+      "2024-01-01",
+      "2024-01-15",
+      "2024-02-19",
+      "2024-03-29",
+      "2024-05-27",
+      "2024-06-19",
+      "2024-07-04",
+      "2024-09-02",
+      "2024-11-28",
+      "2024-12-25",
+      "2025-01-01",
+      "2025-01-09",
+      "2025-01-20",
+      "2025-02-17",
+      "2025-04-18",
+      "2025-05-26",
+      "2025-06-19",
+      "2025-07-04",
+      "2025-09-01",
+      "2025-11-27",
+      "2025-12-25",
+      "2026-01-01",
+      "2026-01-19",
+      "2026-02-16",
+      "2026-04-03",
+      "2026-05-25",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-09-07",
+      "2026-11-26",
+      "2026-12-25"
+    ]
+  },
+  "trade_rule": {
+    "symbol": "US500",
+    "direction": "LONG",
+    "entry": "09:30 America/New_York M15 open",
+    "exit": "15:45 America/New_York M15 close representing 16:00",
+    "volume": 0.01,
+    "primary_volume": "0.01 lot multiplied by the integer release count; the sole count-two target week therefore uses 0.02 lot",
+    "starting_balance_usd": 100.0,
+    "gross": "count-scaled midpoint exit minus midpoint entry",
+    "observed": "count-scaled executable entry ask to exit bid",
+    "stressed": "count-scaled gross less the full entry-plus-exit spread burden",
+    "binding_measure": "stressed_usd",
+    "commission_swap_financing": 0.0,
+    "carry_reason": "Every tranche opens and closes inside one regular cash session",
+    "drawdown": "closed-balance cumulative active-session path"
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "from_inclusive": "2022-07-01",
+      "to_exclusive": "2024-01-01"
+    },
+    "P2_2024": {
+      "from_inclusive": "2024-01-01",
+      "to_exclusive": "2025-01-01"
+    },
+    "P3_2025": {
+      "from_inclusive": "2025-01-01",
+      "to_exclusive": "2026-01-01"
+    },
+    "P4_2026_JAN_MAY": {
+      "from_inclusive": "2026-01-01",
+      "to_exclusive": "2026-06-01"
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "from_inclusive": "2026-06-01",
+      "to_exclusive": "2026-08-01"
+    }
+  },
+  "p1_splits": {
+    "2022H2": [
+      "2022-07-01",
+      "2023-01-01"
+    ],
+    "2023H1": [
+      "2023-01-01",
+      "2023-07-01"
+    ],
+    "2023H2": [
+      "2023-07-01",
+      "2024-01-01"
+    ]
+  },
+  "economic_gates": {
+    "minimum_event_weeks_by_period": {
+      "P1_2022H2_2023": 20,
+      "P2_2024": 12,
+      "P3_2025": 8,
+      "P4_2026_JAN_MAY": 3,
+      "P5_LATEST_2026_JUN_JUL": 2
+    },
+    "minimum_primary_days_by_period": {
+      "P1_2022H2_2023": 110,
+      "P2_2024": 80,
+      "P3_2025": 45,
+      "P4_2026_JAN_MAY": 15,
+      "P5_LATEST_2026_JUN_JUL": 8
+    },
+    "minimum_p1_event_weeks_by_split": {
+      "2022H2": 10,
+      "2023H1": 8,
+      "2023H2": 5
+    },
+    "p1_period": "P1_2022H2_2023",
+    "latest_period": "P5_LATEST_2026_JUN_JUL",
+    "confirmation_periods": [
+      "P2_2024",
+      "P3_2025",
+      "P4_2026_JAN_MAY"
+    ],
+    "p1_profit_factor_min": 1.05,
+    "p1_net_to_drawdown_min": 1.25,
+    "p1_positive_splits_required": 3,
+    "p1_positive_event_week_fraction_min": 0.52,
+    "confirmation_positive_periods_required": 3,
+    "confirmation_mean_above_zero_release_periods_required": 2,
+    "confirmation_positive_event_week_fraction_min": 0.5,
+    "confirmation_positive_event_week_fraction_periods_required": 2,
+    "prelatest_profit_factor_min": 1.075,
+    "prelatest_net_to_drawdown_min": 1.5,
+    "prelatest_positive_event_week_fraction_min": 0.52,
+    "prelatest_top_five_positive_week_share_max": 0.4,
+    "nominal_drawdown_max_percent": 20.0,
+    "practical_drawdown_max_percent": 21.2,
+    "latest_nominal_floor_usd": 0.0,
+    "latest_practical_reversal_fraction": 0.25,
+    "full_profit_factor_min": 1.05,
+    "full_net_to_drawdown_min": 1.25,
+    "retention_limit": 1
+  },
+  "verdict_taxonomy": {
+    "nominal_pass": "PASS_RETAIN_ONE_FIXED_BLOCKBUSTER_RELEASE_NEXT_WEEK_US500_CASH_LONG_SEED",
+    "practical_pass": "PASS_PRACTICAL_RETAIN_ONE_FIXED_BLOCKBUSTER_RELEASE_NEXT_WEEK_US500_CASH_LONG_SEED",
+    "strong_null": "VALID_NO_BLOCKBUSTER_RELEASE_NEXT_WEEK_US500_CASH_EFFECT_AFTER_COST_NO_SEED",
+    "other_valid": "AMBIGUOUS_BLOCKBUSTER_RELEASE_NEXT_WEEK_US500_CASH_TRANSFER_NO_SEED",
+    "environment_design_or_engineering_fault": "CORRECTION_STATE_WITHOUT_RESEARCH_VERDICT"
+  },
+  "closed_neighborhood": [
+    "3,000, 3,500, exactly 4,000, 4,500 or other theater threshold",
+    "binary any-release, gross-sales, search-volume, genre, rating, positivity, distributor or title weighting",
+    "same-week promotion, two-week, delayed-week, partial-week, weekday or neighboring release clock",
+    "overnight, close-to-close, weekend, futures, cash-equity, ETF, international or other-symbol carrier",
+    "short, opposite-direction, event exclusion, holiday exclusion, period-only or latest-only rescue",
+    "spread substitution, stop, trailing, exit, size, risk, capital, allocation or fixed-candidate integration rescue"
+  ]
+}
