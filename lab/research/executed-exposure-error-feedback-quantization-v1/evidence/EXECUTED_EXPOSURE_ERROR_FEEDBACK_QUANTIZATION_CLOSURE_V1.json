@@ -1,0 +1,61 @@
+{
+  "schema": "zeta-next-executed-exposure-error-feedback-quantization-closure-v1",
+  "created_at_local": "2026-08-30",
+  "unit": 117,
+  "family": "executed-exposure-error-feedback-quantization-v1",
+  "primary_macro_program": "5 portfolio_capital_risk",
+  "research_height": "meso_to_macro",
+  "status": "CLOSED_COMPLETE_VALID_ECONOMIC_ADVERSE_NO_SEED",
+  "verdict": "VALID_ERROR_FEEDBACK_QUANTIZATION_ECONOMIC_ADVERSE_NO_SEED",
+  "result": {
+    "path": "lab/research/executed-exposure-error-feedback-quantization-v1/evidence/EXECUTED_EXPOSURE_ERROR_FEEDBACK_QUANTIZATION_RESULT_V1.json",
+    "bytes": 7804,
+    "sha256": "B618BE0C526936008FDEEB967116103D2E9747D33E2113159F4BE28AAFAB9291"
+  },
+  "economic_decision": {
+    "control_selection_actual_stressed_usd": [5551.5635833333, 5237.1427261906],
+    "treatment_selection_actual_stressed_usd": [5404.3803214286, 5078.5594642859],
+    "treatment_minus_control_selection_actual_stressed_usd": [-147.1832619048, -158.5832619048],
+    "control_treatment_selection_raw_closed_drawdown_pct": [19.4233990482, 22.5177084628],
+    "treatment_minus_control_selection_raw_closed_drawdown_percentage_points": 3.0943094146,
+    "control_treatment_selection_accepted_lifecycles": [1427, 1441],
+    "control_treatment_selection_aggregate_risk_skips": [191, 177],
+    "selection_joint_admissions_with_changed_volume": 456,
+    "selection_joint_admissions": 1417,
+    "dominant_component_stressed_delta": {"component": "Pressure", "usd": -181.4253809524},
+    "dominant_epoch_stressed_delta": {"epoch": "E4", "usd": -240.2334285714},
+    "recent_june_july_continuous_stressed_delta_usd": 6.61,
+    "recent_june_july_continuous_drawdown_worsening_percentage_points": 1.5168233534,
+    "meaning": "The treatment materially changes executable exposure and frees capacity, but the complete selection loses profit and worsens drawdown. Recent-window improvement is regime-local and has no authority to override the frozen full-selection gates."
+  },
+  "research_closure": {
+    "retained_optimization_seed": null,
+    "mt5_escalation": false,
+    "fixed_development_candidate_changed": false,
+    "mathfloor_mathceil_or_rounding_mode_rescue": false,
+    "residual_phase_reset_or_cadence_rescue": false,
+    "component_exception_or_subgroup_rescue": false,
+    "base_volume_lot_step_or_weight_alignment_rescue": false,
+    "adjacent_quantization_successor": null,
+    "family_closed": true
+  },
+  "classification_semantics": {
+    "optimization_failure": false,
+    "engineering_or_environment_failure": false,
+    "hypothesis_economically_adverse": true,
+    "explanation": "The formal process passed integrity and materiality. The adverse verdict therefore belongs to this bounded economic treatment, not to the environment, implementation or continuous Optimization Goal."
+  },
+  "preservation": {
+    "lab_owned_input_preserved": true,
+    "raw_formal_result_preserved": true,
+    "reproducible_temporary_artifacts_remaining": false,
+    "pycache_remaining": false
+  },
+  "surfaces": {
+    "mql_set_compile_tester_mt5_runtime_or_broker_paths": 0,
+    "master_terminal": "UNTOUCHED",
+    "live": "UNTOUCHED",
+    "optimization_candidate": "UNCHANGED"
+  },
+  "marker": "FRONTIER_UNIT_117_CLOSED_VALID_ERROR_FEEDBACK_QUANTIZATION_ECONOMIC_ADVERSE_NO_SEED_MAP_RECOMPARED"
+}

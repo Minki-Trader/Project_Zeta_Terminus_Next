@@ -1,0 +1,180 @@
+{
+  "schema": "zeta-next-executed-exposure-error-feedback-quantization-declaration-v1",
+  "created_at_local": "2026-08-30",
+  "status": "DECLARED_OUTCOMES_UNOPENED",
+  "unit": 117,
+  "family": "executed-exposure-error-feedback-quantization-v1",
+  "primary_macro_program": "5 portfolio_capital_risk",
+  "research_height": "meso_to_macro",
+  "question": "Does parameter-free component-local error feedback remove economically harmful upward lot-step quantization while preserving the fixed replacement's profit frontier?",
+  "causal_clue": {
+    "nominal_component_weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "ladder_one_independent_mathround_executable_weights": [2.0, 2.0, 2.0, 3.0, 2.0, 0.0],
+    "meaning": "At odd low ladder steps, positive half-step requests round upward independently. The already-frozen proxy and MT5 evidence include this behavior; it is not an engineering defect. Error feedback is a distinct economic treatment rather than a correction to past evidence."
+  },
+  "immutable_inputs": {
+    "lab_owned_lifecycle_copy": {
+      "path": "lab/artifacts/raw/executed-exposure-error-feedback-quantization-v1/input/parent-selection-forward-lifecycles.csv",
+      "bytes": 16845458,
+      "sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85",
+      "physical_copy_equal_to_source_at_intake": true,
+      "source_universe": "all-ones position risk 0.04 aggregate risk 0.18 lifecycle births and closes"
+    },
+    "verified_execution_source_reference": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/mt5/MQL5/Include/ZetaOptimizationDD20PairedMonthStabilityMT5V1/Portfolio/ZetaPortfolioRisk.mqh",
+      "bytes": 24335,
+      "sha256": "EEACBFBA705C1DBD6F22929DB9B899F6CA8DAA771324EE9369E6BC3C57C5B68A",
+      "read_by_formal_process": false
+    },
+    "fixed_proxy_result_reference": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-proxy-v1/evidence/DD20_PAIRED_MONTH_STABILITY_PROXY_RESULT_V1.json",
+      "bytes": 4762,
+      "sha256": "5AE6AA0EC679A0BA406B61211039886DD838BFBD527B5902697301D34871D685",
+      "read_by_formal_process": false
+    },
+    "fixed_native_result_reference": {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/evidence/DD20_PAIRED_MONTH_STABILITY_MT5_RESULT_V1.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+      "read_by_formal_process": false
+    }
+  },
+  "components": [
+    {"id": "ZT-M30-US30-RANGE-COMP-61f61deaba", "name": "Range61", "weight": 2.0},
+    {"id": "ZT-M30-US30-RANGE-COMP-64efb16616", "name": "Range64", "weight": 1.5},
+    {"id": "ZT-H1-US100-CROSS-IN-14b72317b7", "name": "Cross", "weight": 2.0},
+    {"id": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "name": "Pressure", "weight": 2.5},
+    {"id": "ZT-H1-US30-RETURN-I-c870a788ec", "name": "Return", "weight": 1.5},
+    {"id": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8", "name": "Passive", "weight": 0.0}
+  ],
+  "fixed_execution_contract": {
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "aggregate_tolerance_usd": 0.01,
+    "day_multiplier": "1 + floor(max(0, stressed closed balance - 100) / 150 + 1e-9), frozen on the first source event of each server day",
+    "conservative_capital": "minimum of actual and doubled-cost-stressed closed balance",
+    "planned_risk": "conservative capital * 0.04 * executable multiplier",
+    "admission": "first come; tracked full planned risk plus proposed full planned risk at or below conservative capital * 0.18 plus 0.01 USD",
+    "close_economy": "source actual and stressed lifecycle close net scaled by admitted executable lot steps divided by source birth volume steps"
+  },
+  "policies": {
+    "control": {
+      "id": "INDEPENDENT_POSITIVE_MATHROUND",
+      "rule": "target_steps = floor(base_steps * weight + 0.5) independently at every birth"
+    },
+    "treatment": {
+      "id": "ADMITTED_COMPONENT_ERROR_FEEDBACK",
+      "initial_residual_steps": 0.0,
+      "rule": "tentative_steps = floor(base_steps * weight + prior_component_residual + 0.5); if admitted, residual = base_steps * weight + prior residual - tentative_steps; if skipped, residual is unchanged",
+      "state_scope": "one residual per component, causal and independent in each tester-like segment",
+      "free_parameters": 0
+    }
+  },
+  "segments": {
+    "selection": {
+      "source_segment_index": 3,
+      "expected_births": 2177,
+      "expected_closes": 2177,
+      "source_actual_net_usd": 1166.89,
+      "source_stressed_net_usd": 1085.408,
+      "epochs": [
+        {"id": "E1", "start": "2022.08.01 00:00:00", "end": "2023.06.01 00:00:00"},
+        {"id": "E2", "start": "2023.06.01 00:00:00", "end": "2024.06.01 00:00:00"},
+        {"id": "E3", "start": "2024.06.01 00:00:00", "end": "2025.06.01 00:00:00"},
+        {"id": "E4", "start": "2025.06.01 00:00:00", "end": "2026.06.01 00:00:00"}
+      ],
+      "control_proxy_anchor": {
+        "actual_net_usd": 5551.5635833333,
+        "stressed_net_usd": 5237.1427261906,
+        "raw_closed_drawdown_pct": 19.4233990482,
+        "accepted_lifecycles": 1427,
+        "aggregate_risk_skips": 191,
+        "disabled_component_skips": 559
+      }
+    },
+    "june": {
+      "source_segment_index": 6,
+      "start": "2026.06.01 00:00:00",
+      "end": "2026.07.01 00:00:00",
+      "expected_births": 43,
+      "expected_closes": 43,
+      "control_proxy_anchor": {"actual_net_usd": 29.21, "stressed_net_usd": 27.474, "raw_closed_drawdown_pct": 13.0731196222, "accepted_lifecycles": 31, "aggregate_risk_skips": 3, "disabled_component_skips": 9}
+    },
+    "july": {
+      "source_segment_index": 6,
+      "start": "2026.07.01 00:00:00",
+      "end": "2026.08.01 00:00:00",
+      "expected_births": 43,
+      "expected_closes": 43,
+      "control_proxy_anchor": {"actual_net_usd": 4.1, "stressed_net_usd": 3.0, "raw_closed_drawdown_pct": 12.9952013278, "accepted_lifecycles": 24, "aggregate_risk_skips": 7, "disabled_component_skips": 12}
+    },
+    "june_july_continuous": {
+      "source_segment_index": 6,
+      "start": "2026.06.01 00:00:00",
+      "end": "2026.08.01 00:00:00",
+      "expected_births": 86,
+      "expected_closes": 86,
+      "source_actual_net_usd": -1.74,
+      "source_stressed_net_usd": -3.669
+    }
+  },
+  "fixed_gates": {
+    "material_binding": {
+      "minimum_selection_changed_joint_admission_fraction": 0.05,
+      "minimum_fractional_components_with_changed_joint_volume": 2,
+      "maximum_absolute_final_treatment_residual_steps": 0.500000001
+    },
+    "nominal_seed": {
+      "selection_stressed_net_not_below_control": true,
+      "selection_raw_closed_drawdown_strictly_below_control": true,
+      "all_other_practical_seed_gates": true
+    },
+    "practical_seed": {
+      "minimum_selection_stressed_net_retention": 0.95,
+      "minimum_selection_raw_drawdown_improvement_percentage_points": 0.25,
+      "minimum_selection_stressed_net_per_drawdown_ratio_to_control": 1.0,
+      "treatment_accepted_lifecycles_not_below_control": true,
+      "treatment_aggregate_skips_not_above_control": true,
+      "all_four_selection_epochs_actual_and_stressed_positive": true,
+      "all_five_active_selection_components_actual_and_stressed_positive": true,
+      "june_july_independent_actual_and_stressed_positive": true,
+      "june_july_continuous_actual_and_stressed_positive": true,
+      "june_and_july_raw_closed_drawdown_at_or_below_pct": 20.0
+    },
+    "strong_null": {
+      "maximum_absolute_selection_stressed_net_change_fraction": 0.03,
+      "maximum_absolute_selection_raw_drawdown_change_percentage_points": 0.25,
+      "maximum_absolute_selection_accepted_lifecycle_change": 1
+    },
+    "economic_adverse": {
+      "selection_stressed_net_retention_below": 0.90,
+      "selection_raw_drawdown_worse": true,
+      "any_selection_epoch_actual_or_stressed_nonpositive": true,
+      "june_or_july_actual_or_stressed_nonpositive": true
+    }
+  },
+  "decision_order": [
+    "integrity and exact control reproduction",
+    "material binding",
+    "nominal seed",
+    "practical seed",
+    "strong null",
+    "economic adverse or ambiguous no-seed"
+  ],
+  "source_free_limit": "The replay universe contains only births with observed close economics in the frozen all-ones 0.18 source path. It may compare policy decisions on those events but cannot assign value to an unobserved signal outside that universe.",
+  "success_authority": "A practical or nominal pass retains exactly one fixed Optimization seed for a one-point non-Master MT5 comparison after whole-map recompare; it does not itself change the fixed candidate.",
+  "failure_closure": "No MathFloor, MathCeil, phase, reset cadence, component exception, base-volume, lot-step, nominal-weight alignment or adjacent rounding rescue opens from a miss, null or adverse result.",
+  "boundaries": {
+    "economic_outcomes_opened_at_declaration": false,
+    "grid_points": 0,
+    "fixed_control_treatment_paths": 2,
+    "mql_set_compile_tester_or_mt5": false,
+    "optimization_live_or_other_lab_path_read_by_formal_process": false,
+    "master_or_broker_account_surface": "UNTOUCHED",
+    "automatic_live_promotion": false
+  }
+}

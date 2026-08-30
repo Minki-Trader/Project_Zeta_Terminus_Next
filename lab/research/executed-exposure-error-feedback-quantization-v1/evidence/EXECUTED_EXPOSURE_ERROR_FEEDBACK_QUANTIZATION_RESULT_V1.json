@@ -1,0 +1,154 @@
+{
+  "schema": "zeta-next-executed-exposure-error-feedback-quantization-result-v1",
+  "created_at_local": "2026-08-30",
+  "unit": 117,
+  "family": "executed-exposure-error-feedback-quantization-v1",
+  "primary_macro_program": "5 portfolio_capital_risk",
+  "research_height": "meso_to_macro",
+  "status": "CLOSED_VALID_ECONOMIC_ADVERSE_NO_SEED",
+  "formal_material": {
+    "declaration": {
+      "path": "lab/research/executed-exposure-error-feedback-quantization-v1/evidence/EXECUTED_EXPOSURE_ERROR_FEEDBACK_QUANTIZATION_DECLARATION_V1.json",
+      "bytes": 9333,
+      "sha256": "732A5010568248C597822FC7435A2341310CD515819D4345758492F2ACD990D7"
+    },
+    "snapshot_receipt": {
+      "path": "lab/research/executed-exposure-error-feedback-quantization-v1/evidence/EXECUTED_EXPOSURE_ERROR_FEEDBACK_QUANTIZATION_SNAPSHOT_RECEIPT_V1.json",
+      "bytes": 1636,
+      "sha256": "590601BDD718BDE738142111BA77B2DE13332E6E079ACE3819A0518645E9FEF4"
+    },
+    "analysis": {
+      "path": "lab/research/executed-exposure-error-feedback-quantization-v1/analysis/run_analysis.py",
+      "bytes": 34244,
+      "sha256": "C95143C86E6920394811D4AC6D500F786FAAD48E2958E708825E93FC69FFF61E"
+    },
+    "lab_owned_input": {
+      "path": "lab/artifacts/raw/executed-exposure-error-feedback-quantization-v1/input/parent-selection-forward-lifecycles.csv",
+      "bytes": 16845458,
+      "sha256": "30E9E48DF6EFB14897B0C79F1C53C30F674E1FAA352DDD74CA1E4DA89F343B85"
+    },
+    "raw_result": {
+      "path": "lab/artifacts/raw/executed-exposure-error-feedback-quantization-v1/output/formal-result.json",
+      "bytes": 66559,
+      "sha256": "A06B556DD923E76A732535246F1EAE175B6BDE5AEC755FBDC82F24AB2766D6E1"
+    }
+  },
+  "integrity": {
+    "passed": true,
+    "source_all_ones_reproductions": 4,
+    "fixed_control_anchor_reproductions": 3,
+    "formal_processes": 1,
+    "economic_metric_reruns": 0,
+    "fixed_policy_paths_per_segment": 2,
+    "grid_points": 0,
+    "elapsed_seconds": 0.9487026,
+    "mql_set_compile_tester_mt5_runtime_or_broker_paths": 0
+  },
+  "policies": {
+    "control": "INDEPENDENT_POSITIVE_MATHROUND",
+    "treatment": "ADMITTED_COMPONENT_ERROR_FEEDBACK",
+    "treatment_free_parameters": 0,
+    "fixed_candidate_weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18
+  },
+  "selection": {
+    "control": {
+      "actual_net_usd": 5551.5635833333,
+      "stressed_net_usd": 5237.1427261906,
+      "stressed_profit_factor": 1.4373981672,
+      "raw_closed_drawdown_pct": 19.4233990482,
+      "accepted_lifecycles": 1427,
+      "aggregate_risk_skips": 191,
+      "maximum_day_multiplier": 37
+    },
+    "treatment": {
+      "actual_net_usd": 5404.3803214286,
+      "stressed_net_usd": 5078.5594642859,
+      "stressed_profit_factor": 1.4118671567,
+      "raw_closed_drawdown_pct": 22.5177084628,
+      "accepted_lifecycles": 1441,
+      "aggregate_risk_skips": 177,
+      "maximum_day_multiplier": 36
+    },
+    "treatment_minus_control": {
+      "actual_net_usd": -147.1832619048,
+      "stressed_net_usd": -158.5832619048,
+      "stressed_net_retention_fraction": 0.9697195073,
+      "raw_drawdown_improvement_percentage_points": -3.0943094146,
+      "stressed_net_per_drawdown_ratio": 0.836463843,
+      "accepted_lifecycles": 14,
+      "aggregate_risk_skips": -14
+    },
+    "material_binding": {
+      "joint_admitted_lifecycles": 1417,
+      "changed_joint_volume_lifecycles": 456,
+      "changed_joint_admission_fraction": 0.3218066337,
+      "control_only_admitted_lifecycles": 10,
+      "treatment_only_admitted_lifecycles": 24,
+      "fractional_components_with_changed_joint_volume": 3,
+      "maximum_absolute_final_treatment_residual_steps": 0.5
+    }
+  },
+  "selection_component_stressed_attribution": [
+    {"component": "Range61", "control_usd": 2035.1666666667, "treatment_usd": 2038.2516904763, "delta_usd": 3.0850238096, "accepted_control_treatment": [258, 258]},
+    {"component": "Range64", "control_usd": 808.9817619048, "treatment_usd": 828.9216190477, "delta_usd": 19.9398571429, "accepted_control_treatment": [196, 196]},
+    {"component": "Cross", "control_usd": 435.8356190476, "treatment_usd": 433.4483571429, "delta_usd": -2.3872619047, "accepted_control_treatment": [660, 663]},
+    {"component": "Pressure", "control_usd": 1432.7598571429, "treatment_usd": 1251.3344761905, "delta_usd": -181.4253809524, "accepted_control_treatment": [88, 96]},
+    {"component": "Return", "control_usd": 524.3988214286, "treatment_usd": 526.6033214286, "delta_usd": 2.2045, "accepted_control_treatment": [225, 228]},
+    {"component": "Passive", "control_usd": 0.0, "treatment_usd": 0.0, "delta_usd": 0.0, "accepted_control_treatment": [0, 0]}
+  ],
+  "selection_epoch_stressed_attribution": [
+    {"epoch": "E1", "control_usd": 217.85, "treatment_usd": 215.516, "delta_usd": -2.334},
+    {"epoch": "E2", "control_usd": 153.552, "treatment_usd": 192.305, "delta_usd": 38.753},
+    {"epoch": "E3", "control_usd": 851.372, "treatment_usd": 896.6031666667, "delta_usd": 45.2311666667},
+    {"epoch": "E4", "control_usd": 4014.3687261906, "treatment_usd": 3774.1352976192, "delta_usd": -240.2334285714}
+  ],
+  "recent_windows": {
+    "june": {
+      "control_actual_stressed_usd": [29.21, 27.474],
+      "treatment_actual_stressed_usd": [30.97, 29.286],
+      "treatment_minus_control_stressed_usd": 1.812,
+      "control_treatment_raw_drawdown_pct": [13.0731196222, 12.8197684465],
+      "accepted_control_treatment": [31, 31],
+      "aggregate_skips_control_treatment": [3, 3]
+    },
+    "july": {
+      "control_actual_stressed_usd": [4.1, 3.0],
+      "treatment_actual_stressed_usd": [8.93, 7.798],
+      "treatment_minus_control_stressed_usd": 4.798,
+      "control_treatment_raw_drawdown_pct": [12.9952013278, 14.9579665175],
+      "accepted_control_treatment": [24, 27],
+      "aggregate_skips_control_treatment": [7, 4]
+    },
+    "june_july_continuous": {
+      "control_actual_stressed_usd": [33.31, 30.474],
+      "treatment_actual_stressed_usd": [39.9, 37.084],
+      "treatment_minus_control_stressed_usd": 6.61,
+      "control_treatment_raw_drawdown_pct": [13.0731196222, 14.5899429756],
+      "accepted_control_treatment": [55, 58],
+      "aggregate_skips_control_treatment": [10, 7]
+    },
+    "interpretation": "The recent-window profit improvement is real within the frozen replay, but July and the continuous view buy it with worse drawdown. It cannot select a period-specific quantization rule against the complete-selection E4 reversal."
+  },
+  "gates": {
+    "material_binding_passed": true,
+    "nominal_seed_passed": false,
+    "practical_seed_passed": false,
+    "strong_null_passed": false,
+    "economic_adverse_triggered": true,
+    "economic_adverse_reason": "selection raw closed drawdown worsened by 3.0943094146 percentage points"
+  },
+  "economic_interpretation": {
+    "finding": "Independent positive rounding's low-ladder upward exposure is not a removable distortion on this fixed portfolio path. Error feedback frees aggregate capacity and increases admissions, but the changed occupancy path transfers most of the damage to Pressure and E4, reducing profit while increasing drawdown.",
+    "dominant_component_delta": {"component": "Pressure", "stressed_usd": -181.4253809524},
+    "dominant_epoch_delta": {"epoch": "E4", "stressed_usd": -240.2334285714},
+    "recent_window_override_forbidden": true,
+    "source_free_limit": "The frozen all-ones ledger can value policy decisions only for observed births and cannot value signals absent from that universe."
+  },
+  "classification": "VALID_ERROR_FEEDBACK_QUANTIZATION_ECONOMIC_ADVERSE_NO_SEED",
+  "retained_optimization_seed": null,
+  "fixed_candidate_changed": false,
+  "optimization_or_mt5_opened": false,
+  "live_surface": "UNTOUCHED"
+}
