@@ -1,0 +1,189 @@
+{
+  "schema": "zeta-next-us30-compression-break-response-environment-correction-closure-v1",
+  "created_at_local": "2026-08-30",
+  "status": "UNIT_122_CLOSED_VALID_BROAD_ECONOMIC_NONCONFIRMATION",
+  "unit": "us30-compression-break-response-environment-correction-122",
+  "family": "us30-compression-break-response-environment-correction-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "artifacts": {
+    "declaration": {
+      "bytes": 24724,
+      "sha256": "D3C4343DF2098849550C0A8A22621774856C000A993ABA1FECD7BEC462099B9F"
+    },
+    "acquisition_receipt": {
+      "bytes": 10865,
+      "sha256": "392F0D3563EF3AB0850E5BB1C9D2634D7D6F510CDDC4AAC9BEE93320C0FB9C95"
+    },
+    "result": {
+      "bytes": 12103,
+      "sha256": "8250CCD9DF2EEC61C52D3DEC84CBAEC9A0A21FCE75006EB457D400FA3E6784FB"
+    },
+    "readme": {
+      "bytes": 1988,
+      "sha256": "A6E43AEDD7DB94E9B5A1D45D15AAA2B3F91EFDBD643545B871D2487238ADEA80"
+    },
+    "bar_acquisition_script": {
+      "bytes": 10921,
+      "sha256": "6A39D8AFB2AC0E961D10497D47B5A54A7DF68B871DAD328386355F3DB6ABB703"
+    },
+    "tick_acquisition_script": {
+      "bytes": 9297,
+      "sha256": "7526159185183FF4180D3887BE8A8A818DE4268F87593295360BD1F03B2E51BD"
+    },
+    "proxy_script": {
+      "bytes": 43705,
+      "sha256": "B845E8B6D4DB280F35385AADA7F283F4CF4CA18489DC93DB7DC085965FE78F23"
+    },
+    "preserved_ignored_raw_files": 6,
+    "preserved_ignored_raw_bytes": 54254456,
+    "raw_ordered_manifest_sha256": "0E2CD2D0A967B7A7B7DA7FC26A81FB2C43D60863D22F6EBAF2B662C4A2AA6323",
+    "bar_surface_sha256": "003652FD51801E5CC380C6819440A31086A92EC9CD9A9D5399BAC50E00BE40B3",
+    "raw_first_tick_sha256": "326868CD2F295AD377412A216CEBCF5806F3ED77438838FC93AA4DE133E53E7E",
+    "structural_anchor_sha256": "AC01918887068502680706AEB7F9B865B3B820417C1E57E36DA30366BEC6D19A",
+    "raw_result_sha256": "8531F3CCF806BFDDED97A5A51B04D3651A7C2587DAA8FB9A06C9FE1231C26A3B",
+    "raw_opportunities_sha256": "6B05691BA12623DF9A77A85B12E173FE730B0989D7DDCF6E883C77616616AAA1"
+  },
+  "parent_correction": {
+    "parent": "us30-compression-break-response-029",
+    "parent_valid_economic_verdicts": 0,
+    "parent_fault": "The parent P1 preserved 291 structural rows but its Tester reported generated ticks after real-tick gaps, so no economic column or P2-P4 path was validly consumed.",
+    "correction_method": "One family-owned US30 M5 completed-bar surface, a rate-consistent exact first-tick carrier, recorded-M5 fallback, exact P1 structural parity and a fixed four-scenario economic coverage envelope.",
+    "signal_period_cost_gate_changed": false,
+    "additional_conservative_coverage_rule": true,
+    "invalid_parent_economic_columns_formally_selected_aggregated_or_printed": false,
+    "correction_complete": true
+  },
+  "acquisition_and_integrity": {
+    "bar_rows": 284403,
+    "raw_first_tick_rows": 282853,
+    "rate_consistent_exact_first_tick_rows": 282761,
+    "rate_inconsistent_rows_rejected": 92,
+    "bar_proxy_fallback_rows": 1642,
+    "fallback_priced_opportunities": 1,
+    "P1_parent_structural_matches": 291,
+    "P1_exact_coordinate_direction_horizon_matches": 291,
+    "P1_maximum_break_mid_abs_difference": 7.275957614183426e-12,
+    "P1_maximum_volatility_or_ratio_abs_difference": 4.996003610813204e-13,
+    "P1_eligible_days": 366,
+    "P1_compression_evaluations": 12444,
+    "P1_triggers": 291,
+    "P1_resolved": 291,
+    "P1_unresolved": 0,
+    "P1_rate_faults": 0,
+    "passed": true
+  },
+  "frequency_gate": {
+    "pooled_resolved": 710,
+    "pooled_eligible_days": 1034,
+    "opportunities_per_eligible_day": 0.6866537717601547,
+    "period_resolved": [291, 216, 148, 55],
+    "period_opportunities_per_eligible_day": [0.7950819672131147, 0.833976833976834, 0.5736434108527132, 0.36423841059602646],
+    "passed_requirements": 3,
+    "total_requirements": 3,
+    "passed": true
+  },
+  "recorded_spread_economics": {
+    "CONTINUATION": {
+      "observed_net_usd": 22.958100000003288,
+      "observed_profit_factor": 1.2487350947027125,
+      "double_spread_net_usd": 0.2841000000094566,
+      "double_spread_profit_factor": 1.0027067480057572,
+      "double_spread_maximum_closed_drawdown_usd": 18.867399999994177,
+      "double_spread_net_to_drawdown": 0.01505771860508307,
+      "double_spread_period_nets_usd": [-12.809499999997607, 9.708500000000567, 10.376000000003478, -6.990899999996982],
+      "positive_stressed_periods": 2,
+      "passed_economic_requirements": 2,
+      "total_economic_requirements": 5
+    },
+    "REVERSION": {
+      "observed_net_usd": -45.632099999997116,
+      "observed_profit_factor": 0.6404755620511734,
+      "double_spread_net_usd": -68.30609999999095,
+      "double_spread_profit_factor": 0.5120609476459251,
+      "double_spread_maximum_closed_drawdown_usd": 72.030499999994,
+      "double_spread_net_to_drawdown": -0.9482941254051636,
+      "double_spread_period_nets_usd": [-20.832499999997637, -26.244499999999825, -22.810999999996493, 1.5819000000030066],
+      "positive_stressed_periods": 1,
+      "passed_economic_requirements": 0,
+      "total_economic_requirements": 5
+    }
+  },
+  "coverage_robustness": {
+    "scenario_selected_directions": {
+      "RECORDED_SPREAD_FALLBACK": null,
+      "OMIT_UNAVAILABLE_FALLBACK_OPPORTUNITY": null,
+      "ZERO_SPREAD_FALLBACK_OPTIMISTIC": null,
+      "MAX_OBSERVED_SPREAD_FALLBACK_ADVERSE": null
+    },
+    "continuation_stressed_net_range_usd": [-9.306899999990566, 0.34710000000941293],
+    "continuation_stressed_profit_factor_range": [0.9183847961001873, 1.003306977236158],
+    "reversion_stressed_net_range_usd": [-77.89709999999097, -67.66309999999099],
+    "coverage_uncertainty_changes_verdict": false,
+    "all_scenarios_no_direction": true
+  },
+  "decision": {
+    "verdict": "FAIL_US30_COMPRESSION_BREAK_NO_DIRECTION_IN_ANY_COVERAGE_SCENARIO_NO_SEED",
+    "economic_classification": "VALID_BROAD_COST_AND_TEMPORAL_ECONOMIC_NONCONFIRMATION",
+    "interpretation": "Frequency is sufficient, but continuation's USD 22.9581 observed net collapses to USD 0.2841 under doubled spread, with PF 1.0027, net-to-drawdown 0.0151 and only two positive paths. The optimistic fallback endpoint still passes only two of five gates. Reversion is substantially negative. The signal has no robust after-cost direction and its positive 2024/2025 island is contradicted by P1 and 2026.",
+    "retained_seed": null,
+    "mt5_clue": null,
+    "mt5_shortlist": null,
+    "optimization_candidate": null,
+    "fixed_development_candidate_changed_or_rejected": false,
+    "live_authority": false
+  },
+  "execution": {
+    "dedicated_runtime_copies": 1,
+    "metatrader5_initialization_batches_total": 8,
+    "successful_non_economic_output_batches": 2,
+    "preoutcome_environment_or_engineering_corrections": 6,
+    "protected_structural_invocations": 2,
+    "protected_invocation_economic_outputs": 0,
+    "successful_fixed_economic_aggregations": 1,
+    "coverage_scenarios_inside_aggregation": 4,
+    "economic_metric_reruns": 0,
+    "mql_copies_or_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "positions": 0,
+    "broker_or_account_queries": 0
+  },
+  "housekeeping": {
+    "dedicated_runtime": "Marked OneDrive online-only after exact process closeout; reproducible and cloud-recoverable.",
+    "dedicated_runtime_files": 673,
+    "dedicated_runtime_logical_bytes": 1004036310,
+    "python_cache_directories": 0,
+    "useful_raw_bundle_preserved": true,
+    "material_files_deleted": 0,
+    "system_drive_free_gib_after_closeout": 139.579
+  },
+  "closed_scope": [
+    "No compression threshold, recent/reference window, completed range, breakout buffer, cooldown, horizon, direction subgroup, period exception or symbol rescue.",
+    "No exclusion or retrospective selection of the losing P1/2026 paths or isolated continuation-positive 2024/2025 island.",
+    "No stop, target, lot, sizing, weight, priority, capacity, slot, capital, admission or portfolio reconstruction.",
+    "No MQL, SET, compile, Tester, MT5 escalation, Optimization mutation, broker/account query or Live action.",
+    "No automatic additive prototype or retained-seed successor."
+  ],
+  "whole_map_recomparison": {
+    "program_1": "Units 120, 121 and 122 now provide three distinct complete economic nonconfirmations across US100 variance asymmetry, US500 close-location pressure and US30 compression break. The 2024/2025 continuation island cannot authorize an adjacent threshold, window, horizon, period or direction rescue because P1 and 2026 are negative and costs remove almost all pooled edge.",
+    "program_2": "GSCPI remains strong-null, ADS nonconcordant and RORO causally unreconstructible. No complete independent external-state action opens.",
+    "program_3": "No new synchronized order, quote, clock or naturally dense pending-reservation treatment exists.",
+    "program_4": "A fixed entry response with no robust direction supplies no active-position checkpoint, exit treatment or remaining-path action.",
+    "program_5": "No weight, risk, ladder, cap, occupancy, admission or capital action follows from the failed entry mechanism; the fixed replacement candidate remains unchanged.",
+    "program_7": "The correction demonstrates that rate-consistent tick reconciliation plus a predeclared coverage envelope can finish an invalid parent without turning data gaps into research failures. Further parity or subgroup work cannot create economic action.",
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true
+  },
+  "program_6_opened": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_122",
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "marker": "FRONTIER_UNIT_122_CLOSED_VALID_US30_COMPRESSION_BREAK_NO_DIRECTION_NO_SEED_MAP_RECOMPARED"
+}

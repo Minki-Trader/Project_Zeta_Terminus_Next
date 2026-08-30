@@ -1,0 +1,216 @@
+{
+  "schema": "zeta-next-us30-compression-break-response-environment-correction-acquisition-receipt-v1",
+  "created_at_local": "2026-08-30",
+  "status": "VALID_TWO_OUTPUT_BATCH_NON_ECONOMIC_ACQUISITION",
+  "unit": "us30-compression-break-response-environment-correction-122",
+  "family": "us30-compression-break-response-environment-correction-v1",
+  "declaration_sha256": "D3C4343DF2098849550C0A8A22621774856C000A993ABA1FECD7BEC462099B9F",
+  "implementation": {
+    "bar_and_anchor_acquisition_script": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/analysis/acquire_us30_m5_surface.py",
+      "bytes": 10921,
+      "sha256": "6A39D8AFB2AC0E961D10497D47B5A54A7DF68B871DAD328386355F3DB6ABB703"
+    },
+    "supplementary_first_tick_acquisition_script": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/analysis/acquire_us30_m5_first_ticks.py",
+      "bytes": 9297,
+      "sha256": "7526159185183FF4180D3887BE8A8A818DE4268F87593295360BD1F03B2E51BD"
+    },
+    "proxy_script_frozen_but_not_economically_run": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/analysis/run_us30_cbr_proxy.py",
+      "bytes": 43705,
+      "sha256": "B845E8B6D4DB280F35385AADA7F283F4CF4CA18489DC93DB7DC085965FE78F23"
+    },
+    "python": "3.13.9",
+    "metatrader5_package": "5.0.5640"
+  },
+  "preoutcome_engineering_corrections": [
+    {
+      "attempt": 1,
+      "result": "STOPPED_BEFORE_OUTPUT",
+      "fault": "One four-year M5 copy_rates_range call returned Terminal: Invalid params.",
+      "economic_rows_or_outputs": 0,
+      "correction": "The same fixed request was split into seventeen contiguous 90-day calls inside one initialization batch, then merged by epoch with conflicting-duplicate rejection.",
+      "signal_period_cost_gate_or_decision_change": false,
+      "research_failure": false
+    },
+    {
+      "attempt": 2,
+      "result": "CORRECTED_BEFORE_FORMAL_PROXY_INVOCATION",
+      "fault": "Source review found P2-P4 structural construction occurred before the declared P1 structural assertion.",
+      "economic_rows_or_outputs": 0,
+      "correction": "The frozen proxy constructs and proves P1 first, then opens P2-P4 structural and economic work.",
+      "signal_period_cost_gate_or_decision_change": false,
+      "research_failure": false
+    },
+    {
+      "attempt": 3,
+      "result": "STRUCTURAL_INVOCATION_STOPPED_BEFORE_OUTPUT",
+      "fault": "The bar-open/stored-spread approximation produced 289 rows versus the 291-row parent. The only missing coordinates were 2022-12-20 13:25 and 2023-12-21 07:20; no economic output path was created.",
+      "economic_rows_or_outputs": 0,
+      "correction": "Acquire the exact first valid bid/ask tick stream and use it for signal mid and execution pricing without changing the signal, periods, costs or gates.",
+      "signal_period_cost_gate_or_decision_change": false,
+      "research_failure": false
+    },
+    {
+      "attempt": 4,
+      "result": "FIRST_TICK_ACQUISITION_STOPPED_BEFORE_OUTPUT",
+      "fault": "Multiple distinct valid historical rows shared the first time_msc of M5 epoch 1659361800, so the initial identical-row assertion was too strict for the ordered tick stream.",
+      "economic_rows_or_outputs": 0,
+      "correction": "Require nondecreasing time_msc and preserve the first valid returned row while measuring but not substituting later same-millisecond rows.",
+      "signal_period_cost_gate_or_decision_change": false,
+      "research_failure": false
+    },
+    {
+      "attempt": 5,
+      "result": "COMPLETE_TICK_SCAN_STOPPED_BEFORE_OUTPUT",
+      "fault": "The dedicated history lacked a valid first bid/ask tick for 1,550 acquired bars, including 1,379 pre-period warm-up rows and 171 rows inside fixed calendar periods. Universal bar coverage was stronger than actual price use.",
+      "economic_rows_or_outputs": 0,
+      "correction": "Emit every available exact first tick and require exact availability at each actually used signal-mid, entry and resolution coordinate. Any required absence remains a pre-economic correction state.",
+      "signal_period_cost_gate_or_decision_change": false,
+      "research_failure": false
+    },
+    {
+      "attempt": 6,
+      "result": "RAW_FIRST_AVAILABLE_CARRIER_RECONCILED_BEFORE_ECONOMIC_OUTPUT",
+      "fault": "One raw first-available tick arrived 154 seconds into its M5 bar with bid USD 75.75 below authoritative M5 open and created a 292nd P1 signal. Ninety-two raw first-returned bids differed from M5 open.",
+      "economic_rows_or_outputs": 0,
+      "correction": "The frozen proxy accepts 282,761 rate-consistent exact rows at USD 0.0051 bar-open tolerance and uses recorded M5 open/spread for 1,642 other bars. The hybrid restores exact 291-row P1 structure; one fallback-priced opportunity is enclosed by four fixed economic scenarios inside one aggregation.",
+      "signal_period_cost_gate_or_decision_change": false,
+      "additional_conservative_coverage_decision_rule": true,
+      "research_failure": false
+    }
+  ],
+  "runtime": {
+    "path": "lab/runtime/cbrec122-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "initial_physical_copy": {
+      "files": 14,
+      "bytes": 261334975,
+      "root_executables_and_icon": 4,
+      "config_files": 10,
+      "hardlink_paths_for_terminal": 1,
+      "terminal_link_type": null
+    },
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "expanded_after_all_acquisition_and_correction_calls": {
+      "files": 673,
+      "bytes": 1004035620
+    },
+    "terminal_or_metaeditor_processes_after_closeout": 0,
+    "master_terminal": "UNTOUCHED"
+  },
+  "acquisition": {
+    "initialization_batches_total": 8,
+    "successful_output_batches": 2,
+    "stopped_or_bounded_diagnostic_batches": 6,
+    "all_attempt_and_diagnostic_calls": {
+      "copy_rates_range": 18,
+      "copy_ticks_range": 102
+    },
+    "successful_bar_surface_calls": {
+      "copy_rates_range": 17,
+      "chunk_shape": "contiguous 90-day UTC requests with the final request shortened to 2026-07-31T23:59:59+00:00",
+      "duplicate_epoch_rows": 0
+    },
+    "successful_first_tick_carrier_calls": {
+      "copy_ticks_range": 49,
+      "chunk_shape": "contiguous 30-day UTC requests ending at the exclusive boundary minus one microsecond",
+      "returned_and_valid_bid_ask_ticks": 146460183,
+      "preserved_first_tick_rows": 282853
+    },
+    "allowed_api_calls": [
+      "initialize",
+      "symbol_select",
+      "symbol_info",
+      "copy_rates_range",
+      "copy_ticks_range",
+      "shutdown"
+    ],
+    "broker_account_position_order_deal_history_margin_check_send_or_trade_calls": 0,
+    "request": {
+      "symbol": "US30",
+      "timeframe": "M5",
+      "from_utc": "2022-07-25T00:00:00+00:00",
+      "to_exclusive_utc": "2026-08-01T00:00:00+00:00"
+    }
+  },
+  "outputs": {
+    "bars": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/US30_M5_BARS_20220725_20260731.csv",
+      "rows": 284403,
+      "bytes": 21246617,
+      "sha256": "003652FD51801E5CC380C6819440A31086A92EC9CD9A9D5399BAC50E00BE40B3",
+      "first_time": "2022.07.25 01:00:00",
+      "last_time": "2026.07.31 23:55:00",
+      "positive_tick_volume_rows": 284403,
+      "strictly_increasing_unique_epochs": true,
+      "finite_positive_ohlc": true,
+      "nonnegative_volume_and_spread": true
+    },
+    "first_ticks": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/US30_M5_FIRST_TICKS_20220725_20260731.csv",
+      "rows": 282853,
+      "bytes": 32609032,
+      "sha256": "326868CD2F295AD377412A216CEBCF5806F3ED77438838FC93AA4DE133E53E7E",
+      "first_bar_time": "2022.08.01 01:00:00",
+      "last_bar_time": "2026.07.31 23:55:00",
+      "bar_surface_rows_without_available_first_tick": 1550,
+      "pre_period_rows_without_available_first_tick": 1379,
+      "fixed_period_rows_without_available_first_tick": 171,
+      "fixed_period_missing_runs": [
+        {"first": "2022.09.06 16:30:00", "last": "2022.09.06 16:35:00", "rows": 2},
+        {"first": "2022.09.29 01:00:00", "last": "2022.09.29 13:10:00", "rows": 147},
+        {"first": "2022.09.29 14:40:00", "last": "2022.09.29 14:40:00", "rows": 1},
+        {"first": "2023.01.06 22:20:00", "last": "2023.01.06 22:20:00", "rows": 1},
+        {"first": "2023.04.28 12:30:00", "last": "2023.04.28 14:05:00", "rows": 20}
+      ],
+      "total_valid_bid_ask_ticks_scanned": 146460183,
+      "same_first_millisecond_followup_rows": 606,
+      "different_same_first_millisecond_followup_rows": 601,
+      "same_millisecond_policy": "Preserve the first valid row in nondecreasing copy_ticks_range return order; later rows sharing the first millisecond do not replace it.",
+      "coverage_sufficiency": "Deferred strictly to every signal-mid, entry and resolution use before economic output.",
+      "downstream_rate_consistency_contract": {
+        "bar_open_abs_tolerance_usd": 0.0051,
+        "accepted_exact_rows": 282761,
+        "rejected_raw_rows": 92,
+        "total_fallback_bar_rows": 1642,
+        "maximum_accepted_exact_first_tick_spread_usd": 321.8,
+        "p1_fallback_priced_opportunities": 1,
+        "p2_p3_p4_fallback_priced_opportunities": 0
+      },
+      "economic_columns_selected_or_emitted": false
+    },
+    "symbol_spec": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/US30_SYMBOL_SPEC_V1.json",
+      "bytes": 619,
+      "sha256": "F2018E23D153241B06D4F20B7E9C557D3EE2FB0384848ECBF15D8CAD0823F81D",
+      "point": 0.01,
+      "trade_tick_size": 0.01,
+      "trade_tick_value": 0.01,
+      "trade_contract_size": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01
+    },
+    "structural_anchor": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/UNIT029_P1_SIGNAL_STRUCTURE.csv",
+      "rows": 291,
+      "columns": 17,
+      "bytes": 57789,
+      "sha256": "AC01918887068502680706AEB7F9B865B3B820417C1E57E36DA30366BEC6D19A",
+      "parent_path": "lab/artifacts/backtests/us30-compression-break-response-v1/p1-integrity-invalid/opportunities.csv",
+      "parent_bytes": 85716,
+      "parent_sha256": "B9709DEFA2E8CC56015036DA06AB8EE7FEB38EAFD0858D3A93C997A5775BC68E",
+      "economic_columns_selected_printed_aggregated_or_emitted": false
+    }
+  },
+  "storage": {
+    "system_drive_free_gib_after_closeout": 140.586,
+    "mandatory_sweep_threshold_gib": 30,
+    "sweep_required": false
+  },
+  "outcomes_consumed": false,
+  "live_surface": "UNTOUCHED",
+  "optimization_surface": "UNTOUCHED",
+  "next": "Verify all receipt pins, prove the exact 291-row rate-consistent-plus-fallback P1 gate, then run the one frozen four-scenario economic aggregation."
+}

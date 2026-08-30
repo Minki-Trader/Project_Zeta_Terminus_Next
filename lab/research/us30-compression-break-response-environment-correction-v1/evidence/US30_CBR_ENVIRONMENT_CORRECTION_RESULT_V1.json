@@ -1,0 +1,274 @@
+{
+  "schema": "zeta-next-us30-compression-break-response-environment-correction-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "ONE_VALID_FIXED_FOUR_PERIOD_COVERAGE_ENVELOPE_COMPLETE",
+  "unit": "us30-compression-break-response-environment-correction-122",
+  "family": "us30-compression-break-response-environment-correction-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "frozen_inputs": {
+    "declaration": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/evidence/US30_CBR_ENVIRONMENT_CORRECTION_DECLARATION_V1.json",
+      "bytes": 24724,
+      "sha256": "D3C4343DF2098849550C0A8A22621774856C000A993ABA1FECD7BEC462099B9F"
+    },
+    "acquisition_receipt": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/evidence/US30_CBR_ENVIRONMENT_CORRECTION_ACQUISITION_RECEIPT_V1.json",
+      "bytes": 10865,
+      "sha256": "392F0D3563EF3AB0850E5BB1C9D2634D7D6F510CDDC4AAC9BEE93320C0FB9C95"
+    },
+    "bar_acquisition_script": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/analysis/acquire_us30_m5_surface.py",
+      "bytes": 10921,
+      "sha256": "6A39D8AFB2AC0E961D10497D47B5A54A7DF68B871DAD328386355F3DB6ABB703"
+    },
+    "tick_acquisition_script": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/analysis/acquire_us30_m5_first_ticks.py",
+      "bytes": 9297,
+      "sha256": "7526159185183FF4180D3887BE8A8A818DE4268F87593295360BD1F03B2E51BD"
+    },
+    "proxy_script": {
+      "path": "lab/research/us30-compression-break-response-environment-correction-v1/analysis/run_us30_cbr_proxy.py",
+      "bytes": 43705,
+      "sha256": "B845E8B6D4DB280F35385AADA7F283F4CF4CA18489DC93DB7DC085965FE78F23"
+    },
+    "bars": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/US30_M5_BARS_20220725_20260731.csv",
+      "rows": 284403,
+      "bytes": 21246617,
+      "sha256": "003652FD51801E5CC380C6819440A31086A92EC9CD9A9D5399BAC50E00BE40B3"
+    },
+    "raw_first_ticks": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/US30_M5_FIRST_TICKS_20220725_20260731.csv",
+      "rows": 282853,
+      "bytes": 32609032,
+      "sha256": "326868CD2F295AD377412A216CEBCF5806F3ED77438838FC93AA4DE133E53E7E"
+    },
+    "symbol_spec": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/US30_SYMBOL_SPEC_V1.json",
+      "bytes": 619,
+      "sha256": "F2018E23D153241B06D4F20B7E9C557D3EE2FB0384848ECBF15D8CAD0823F81D"
+    },
+    "structural_anchor": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/input/UNIT029_P1_SIGNAL_STRUCTURE.csv",
+      "rows": 291,
+      "bytes": 57789,
+      "sha256": "AC01918887068502680706AEB7F9B865B3B820417C1E57E36DA30366BEC6D19A"
+    }
+  },
+  "parent_correction": {
+    "parent_unit": "us30-compression-break-response-029",
+    "parent_valid_economic_verdicts": 0,
+    "parent_fault": "The parent preserved 291 resolved non-economic P1 structures, but its native Tester used generated ticks after real-tick gaps and every opportunity economic column remained formally unread.",
+    "correction_method": "Use one family-owned completed M5 surface plus rate-consistent exact first ticks, recorded-M5 fallback where exact history is absent or rate-inconsistent, exact 291-row P1 structural parity and a four-scenario economic coverage envelope for the sole fallback-priced opportunity.",
+    "signal_period_cost_gate_or_decision_changed": false,
+    "additional_coverage_robustness_rule": true,
+    "parent_economic_columns_selected_aggregated_or_printed": false,
+    "correction_complete": true
+  },
+  "acquisition_and_integrity": {
+    "bar_rows": 284403,
+    "bar_first_last": [
+      "2022.07.25 01:00:00",
+      "2026.07.31 23:55:00"
+    ],
+    "raw_first_tick_rows": 282853,
+    "rate_consistent_exact_first_tick_rows": 282761,
+    "rate_inconsistent_first_rows_rejected": 92,
+    "bar_proxy_fallback_rows": 1642,
+    "bar_open_tolerance_usd": 0.0051,
+    "maximum_rate_consistent_exact_first_tick_spread_usd": 321.8,
+    "same_first_millisecond_followups": 606,
+    "different_same_first_millisecond_followups": 601,
+    "raw_ticks_scanned": 146460183,
+    "fallback_priced_opportunities": 1,
+    "fallback_entry_resolution": [
+      "2022.09.29 06:40:00",
+      "2022.09.29 07:40:00"
+    ],
+    "p2_p3_p4_fallback_priced_opportunities": 0,
+    "account_position_order_deal_or_trade_calls": 0
+  },
+  "p1_structural_integrity": {
+    "parent_rows": 291,
+    "proxy_rows": 291,
+    "exact_coordinate_direction_horizon_matches": 291,
+    "exact_second_timestamp_matches_descriptive": 291,
+    "maximum_recent_volatility_abs_difference": 4.985790426348391e-13,
+    "maximum_reference_volatility_abs_difference": 4.994569211339006e-13,
+    "maximum_compression_ratio_abs_difference": 4.996003610813204e-13,
+    "maximum_range_high_abs_difference": 0.0,
+    "maximum_range_low_abs_difference": 0.0,
+    "maximum_break_mid_abs_difference": 7.275957614183426e-12,
+    "evaluations": 100263,
+    "eligible_continuous_days": 366,
+    "eligible_compression_evaluations": 12444,
+    "triggers": 291,
+    "resolved": 291,
+    "unresolved": 0,
+    "rate_faults": 0,
+    "passed": true
+  },
+  "frequency": {
+    "period_resolved": {
+      "P1_2022H2_2023": 291,
+      "P2_2024": 216,
+      "P3_2025": 148,
+      "P4_2026_COMPLETE_MONTHS": 55
+    },
+    "period_opportunities_per_eligible_day": {
+      "P1_2022H2_2023": 0.7950819672131147,
+      "P2_2024": 0.833976833976834,
+      "P3_2025": 0.5736434108527132,
+      "P4_2026_COMPLETE_MONTHS": 0.36423841059602646
+    },
+    "pooled_resolved": 710,
+    "pooled_eligible_continuous_days": 1034,
+    "pooled_opportunities_per_eligible_day": 0.6866537717601547,
+    "gates_passed": 3,
+    "gates_total": 3,
+    "passed": true
+  },
+  "recorded_spread_economics": {
+    "CONTINUATION": {
+      "observed": {
+        "net_usd": 22.958100000003288,
+        "profit_factor": 1.2487350947027125,
+        "maximum_closed_drawdown_usd": 13.99339999999805,
+        "net_to_drawdown": 1.6406377292156649,
+        "wins_losses_zeros": [345, 365, 0]
+      },
+      "double_spread": {
+        "net_usd": 0.2841000000094566,
+        "profit_factor": 1.0027067480057572,
+        "maximum_closed_drawdown_usd": 18.867399999994177,
+        "net_to_drawdown": 0.01505771860508307,
+        "wins_losses_zeros": [296, 414, 0],
+        "period_nets_usd": [-12.809499999997607, 9.708500000000567, 10.376000000003478, -6.990899999996982],
+        "positive_periods": 2
+      },
+      "economic_gates_passed": 2,
+      "economic_gates_total": 5,
+      "passed": false
+    },
+    "REVERSION": {
+      "observed": {
+        "net_usd": -45.632099999997116,
+        "profit_factor": 0.6404755620511734,
+        "maximum_closed_drawdown_usd": 54.6339999999998,
+        "net_to_drawdown": -0.8352326390159476,
+        "wins_losses_zeros": [322, 387, 1]
+      },
+      "double_spread": {
+        "net_usd": -68.30609999999095,
+        "profit_factor": 0.5120609476459251,
+        "maximum_closed_drawdown_usd": 72.030499999994,
+        "net_to_drawdown": -0.9482941254051636,
+        "wins_losses_zeros": [278, 431, 1],
+        "period_nets_usd": [-20.832499999997637, -26.244499999999825, -22.810999999996493, 1.5819000000030066],
+        "positive_periods": 1
+      },
+      "economic_gates_passed": 0,
+      "economic_gates_total": 5,
+      "passed": false
+    }
+  },
+  "coverage_envelope": {
+    "RECORDED_SPREAD_FALLBACK": {
+      "resolved": 710,
+      "continuation_stressed_net_usd": 0.2841000000094566,
+      "continuation_stressed_profit_factor": 1.0027067480057572,
+      "continuation_gates_passed": 2,
+      "reversion_stressed_net_usd": -68.30609999999095,
+      "reversion_stressed_profit_factor": 0.5120609476459251,
+      "reversion_gates_passed": 0,
+      "selected_direction": null
+    },
+    "OMIT_UNAVAILABLE_FALLBACK_OPPORTUNITY": {
+      "resolved": 709,
+      "continuation_stressed_net_usd": -0.23289999999058703,
+      "continuation_stressed_profit_factor": 0.9977810573372251,
+      "continuation_gates_passed": 1,
+      "reversion_stressed_net_usd": -67.66309999999099,
+      "reversion_stressed_profit_factor": 0.5144238083619581,
+      "reversion_gates_passed": 0,
+      "selected_direction": null
+    },
+    "ZERO_SPREAD_FALLBACK_OPTIMISTIC": {
+      "resolved": 710,
+      "continuation_stressed_net_usd": 0.34710000000941293,
+      "continuation_stressed_profit_factor": 1.003306977236158,
+      "continuation_gates_passed": 2,
+      "reversion_stressed_net_usd": -68.24309999999099,
+      "reversion_stressed_profit_factor": 0.5122914969341322,
+      "reversion_gates_passed": 0,
+      "selected_direction": null
+    },
+    "MAX_OBSERVED_SPREAD_FALLBACK_ADVERSE": {
+      "resolved": 710,
+      "continuation_stressed_net_usd": -9.306899999990566,
+      "continuation_stressed_profit_factor": 0.9183847961001873,
+      "continuation_gates_passed": 1,
+      "reversion_stressed_net_usd": -77.89709999999097,
+      "reversion_stressed_profit_factor": 0.479227837946284,
+      "reversion_gates_passed": 0,
+      "selected_direction": null
+    },
+    "all_scenarios_frequency_passed": true,
+    "all_scenarios_selected_no_direction": true,
+    "coverage_uncertainty_changes_research_verdict": false
+  },
+  "decision": {
+    "verdict": "FAIL_US30_COMPRESSION_BREAK_NO_DIRECTION_IN_ANY_COVERAGE_SCENARIO_NO_SEED",
+    "economic_classification": "VALID_BROAD_COST_AND_TEMPORAL_ECONOMIC_NONCONFIRMATION",
+    "interpretation": "The event is frequent, but continuation's observed profit is almost entirely consumed by doubled spread: stressed PF is 1.0027, net-to-drawdown 0.0151 and only 2024/2025 are positive while P1 and 2026 lose. Even the zero-spread fallback endpoint passes only two of five gates. Reversion is broadly negative. All four fixed coverage scenarios select no direction, so the result is an economic failure rather than a remaining environment ambiguity.",
+    "retained_seed": null,
+    "mt5_clue": null,
+    "mt5_shortlist": null,
+    "optimization_candidate": null,
+    "fixed_development_candidate_changed_or_rejected": false,
+    "live_authority": false
+  },
+  "execution": {
+    "dedicated_runtime_copies": 1,
+    "metatrader5_initialization_batches_total": 8,
+    "successful_non_economic_output_batches": 2,
+    "preoutcome_environment_or_engineering_corrections": 6,
+    "protected_structural_invocations_before_valid_economics": 2,
+    "protected_invocation_economic_outputs": 0,
+    "successful_fixed_economic_aggregations": 1,
+    "coverage_scenarios_inside_aggregation": 4,
+    "economic_metric_reruns": 0,
+    "grid_or_retune_points": 0,
+    "mql_copies_or_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "positions": 0,
+    "broker_or_account_queries": 0,
+    "elapsed_seconds": 14.092243599996436
+  },
+  "raw_artifacts": {
+    "raw_result": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/output/US30_CBR_ENVIRONMENT_CORRECTION_RAW_RESULT_V1.json",
+      "bytes": 73318,
+      "sha256": "8531F3CCF806BFDDED97A5A51B04D3651A7C2587DAA8FB9A06C9FE1231C26A3B"
+    },
+    "opportunities": {
+      "path": "lab/artifacts/raw/us30-compression-break-response-environment-correction-v1/output/US30_CBR_ENVIRONMENT_CORRECTION_OPPORTUNITIES_V1.csv",
+      "rows": 710,
+      "bytes": 267081,
+      "sha256": "6B05691BA12623DF9A77A85B12E173FE730B0989D7DDCF6E883C77616616AAA1"
+    },
+    "bundle_files": 6,
+    "bundle_bytes": 54254456,
+    "ordered_manifest_sha256": "0E2CD2D0A967B7A7B7DA7FC26A81FB2C43D60863D22F6EBAF2B662C4A2AA6323",
+    "ordered_manifest_rule": "UTF-8 lines sorted by full path relative to repository: path|bytes|SHA256 followed by LF"
+  },
+  "program_6_opened": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_122",
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_122_VALID_US30_COMPRESSION_BREAK_NO_DIRECTION_NO_SEED"
+}
