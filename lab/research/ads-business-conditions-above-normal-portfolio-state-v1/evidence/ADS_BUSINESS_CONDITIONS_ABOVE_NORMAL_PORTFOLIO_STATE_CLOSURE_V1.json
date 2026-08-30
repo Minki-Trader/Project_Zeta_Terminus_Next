@@ -1,0 +1,120 @@
+{
+  "schema": "zeta-next-ads-business-conditions-above-normal-portfolio-state-closure-v1",
+  "created_at_local": "2026-08-30",
+  "status": "CLOSED_VALID",
+  "unit": "ads-business-conditions-above-normal-portfolio-state-119",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event",
+    "korean_name": "외부시장·이벤트"
+  },
+  "verdict": "AMBIGUOUS_ADS_ABOVE_NORMAL_PORTFOLIO_STATE_NO_CANDIDATE",
+  "primary_effect": {
+    "raw_mean_stressed_r": 0.019218499936662574,
+    "raw_stop_rate": 0.009894086496028243,
+    "centered_stressed_r": 0.020000485776668738,
+    "centered_stop_rate": 0.026841454138833154
+  },
+  "state_counts": {
+    "ABOVE_NORMAL": 1100,
+    "AT_OR_BELOW_NORMAL": 1133,
+    "UNAVAILABLE": 0
+  },
+  "direction_breadth": {
+    "books": {
+      "NONCONCORDANT": 2
+    },
+    "periods": {
+      "NONCONCORDANT": 3,
+      "ADVERSE_ABOVE_NORMAL": 1
+    },
+    "components": {
+      "NONCONCORDANT": 5,
+      "ADVERSE_ABOVE_NORMAL": 1
+    }
+  },
+  "contribution_caps": {
+    "periods": {
+      "signed_contributions": {
+        "P1_2022H2_2023": 0.0053653217815398495,
+        "P2_2024": -0.0017709845374438127,
+        "P3_2025": 0.012720140338988502,
+        "P4_2026_YTD": 0.0036860081935842
+      },
+      "absolute_shares": {
+        "P1_2022H2_2023": 0.2278998437236104,
+        "P2_2024": 0.07522514319812894,
+        "P3_2025": 0.5403064556858473,
+        "P4_2026_YTD": 0.15656855739241324
+      },
+      "maximum_absolute_share": 0.5403064556858473,
+      "sum_matches_pooled": true
+    },
+    "components": {
+      "signed_contributions": {
+        "RC16": 0.010156530547469761,
+        "RC4": 0.005794038327633231,
+        "Cross": 0.0006607637126340756,
+        "Pressure": 0.003254700134429451,
+        "Return": -0.003142829401236456,
+        "Passive": 0.0032772824557386745
+      },
+      "absolute_shares": {
+        "RC16": 0.3863834240464873,
+        "RC4": 0.2204217628868581,
+        "Cross": 0.025137338442488787,
+        "Pressure": 0.12381808692523484,
+        "Return": 0.11956220478716863,
+        "Passive": 0.12467718291176239
+      },
+      "maximum_absolute_share": 0.3863834240464873,
+      "sum_matches_pooled": true
+    }
+  },
+  "gates": {
+    "favorable": {
+      "centered_stressed_r_at_least_0_10": false,
+      "centered_stop_rate_at_most_minus_0_05": false,
+      "both_books": false,
+      "at_least_three_of_four_periods": false,
+      "at_least_four_components": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "adverse": {
+      "centered_stressed_r_at_most_minus_0_10": false,
+      "centered_stop_rate_at_least_0_05": false,
+      "both_books": false,
+      "at_least_three_of_four_periods": false,
+      "at_least_four_components": false,
+      "period_contribution_cap_0_60": true,
+      "component_contribution_cap_0_45": true,
+      "passed": false
+    },
+    "strong_null": {
+      "absolute_centered_stressed_r_below_0_05": true,
+      "absolute_centered_stop_rate_below_0_025": false,
+      "favorable_period_breadth_at_most_2": true,
+      "adverse_period_breadth_at_most_2": true,
+      "favorable_component_breadth_at_most_3": true,
+      "adverse_component_breadth_at_most_3": true,
+      "passed": false
+    }
+  },
+  "declaration_sha256": "106431AEF3A3B7EECB0280EF15813385F7B606074C65C1F473EA6C05726263DE",
+  "result_sha256": "0E8B112983F730608139AA264C954268E8CEFBC3547181E17D6DD62CDEAEFEB1",
+  "derived_rows_sha256": "275C996E109BCE66E80A4FA63F4D0BDB7533460DB45882121E1A2D4996083FAF",
+  "selected_candidate": null,
+  "retained_seed": null,
+  "optimization_candidate": null,
+  "mt5_escalation": false,
+  "same_family_rescue": false,
+  "automatic_followup_opened": false,
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "promotion": "none",
+  "live_surface": "UNTOUCHED",
+  "goal_status": "active_not_complete",
+  "next": "update_state_close_unit_119_recompare_whole_map_and_return_to_optimization_boundary"
+}
