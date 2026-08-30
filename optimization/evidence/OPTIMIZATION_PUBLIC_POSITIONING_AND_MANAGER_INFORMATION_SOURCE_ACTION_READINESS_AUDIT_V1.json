@@ -1,0 +1,243 @@
+{
+  "schema": "zeta-next-optimization-public-positioning-and-manager-information-source-action-readiness-audit-v1",
+  "created_at_local": "2026-08-31",
+  "status": "PRE_UNIT_THREE_SOURCE_ACTION_READINESS_NOT_READY_NO_RESEARCH_UNIT_OPENED_FIXED_DEVELOPMENT_CANDIDATE_RETAINED",
+  "boundary_type": "combined_pre_unit_independent_source_causality_and_action_readiness_screen_not_a_research_unit_or_optimization_campaign",
+  "parent_main_commit": "fa837d6d5b8f89def35b8d58d47bb6879214c88a",
+  "question": "Can CFTC positioning, aggregate S&P 500 insider trading, or SEC filing manager tone provide one point-in-time, primary-literature-grounded and project-ready action for the fixed US30/US100 replacement before any portfolio outcome is opened?",
+  "screen_contract": {
+    "prospective_primary_program_if_any_source_became_ready": 2,
+    "prospective_height_if_any_source_became_ready": "meso_or_macro",
+    "research_units_allocated": 0,
+    "target_portfolio_outcomes_read": false,
+    "direction_threshold_or_normalization_selected_from_project_outcomes": false,
+    "proxy_opened": false,
+    "mt5_opened": false,
+    "lab_unit_opened": false,
+    "optimization_campaign_opened": false,
+    "live_or_runtime_surface_opened": false,
+    "failure_semantics": "Source, causality and action ambiguity is a readiness/design state. It is not an economic hypothesis failure and cannot be promoted into one without opening complete valid economics under a frozen contract."
+  },
+  "screens": {
+    "cftc_cot_position_revelation": {
+      "prospective_program_and_height": "Program 2 / meso external scheduled information release",
+      "official_source": {
+        "cftc_cot_description_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm",
+        "cftc_historical_compressed_url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalCompressed/index.htm",
+        "available_project_period_files": "Official annual Traders in Financial Futures files exist for 2022 through 2026 and contain Dow Jones, Nasdaq-100 and S&P 500 consolidated contracts.",
+        "official_timing": "The report describes each Tuesday's open interest and is normally released Friday. Exact historical release dates outside the CFTC's retained recent schedule are not supplied as one complete point-in-time calendar."
+      },
+      "primary_paper": {
+        "title": "Are Speculators Informed?",
+        "author": "Krista Schwarz",
+        "journal": "Journal of Futures Markets 32(1), 2012, 1-23",
+        "doi": "10.1002/fut.20509",
+        "author_repository_pdf": "https://repository.upenn.edu/bitstreams/2d1bbecb-0861-462f-bda8-632ad26e91f6/download",
+        "paper_role": "Tests whether the unexpected component of Tuesday speculative positions moves futures prices when the positions become public around the Friday 15:30 ET COT release.",
+        "unexpected_position_construction": "A recursive augmented autoregression predicts the Tuesday legacy non-commercial position from its prior Tuesday position and the prior Friday-to-Friday futures return; the residual is the announcement surprise.",
+        "economic_horizon": "Five-minute futures return around the COT announcement, with additional weekly and monthly return tests.",
+        "published_breadth": "The announcement coefficient is significant for only four of eight contracts. E-mini Nasdaq is positive, while E-mini Dow and E-mini S&P announcement coefficients are not significant; explanatory power is small and longer-horizon results are mixed or adverse."
+      },
+      "readiness_gaps": [
+        "The project-period TFF categories are not the paper's legacy non-commercial classification. A legacy reconstruction would still require exact contract-continuous futures returns and release vintages before a paper-equivalent residual can be frozen.",
+        "The paper's key action is a five-minute futures announcement response. It does not identify a month-level regime, a fixed trade gate, or a transfer into the fixed candidate's existing intraday US30/US100 lifecycle decisions.",
+        "The primary evidence is not concordant across the two adjudicated books: Nasdaq is informative in the paper, while Dow is not. S&P/US500 remains read-only Cross context rather than a third book that can manufacture breadth.",
+        "Using Friday as a generic release date, a modern TFF category, CFD return, rolling percentile or raw net-position sign would create a new treatment not validated by the paper."
+      ],
+      "decision": {
+        "point_in_time_paper_equivalent_carrier_complete": false,
+        "fixed_both_book_direction_available": false,
+        "distinct_candidate_action_available": false,
+        "pre_unit_ready": false,
+        "classification": "PRE_UNIT_COT_RELEASE_CARRIER_AND_PROJECT_ACTION_NOT_READY_NO_OUTCOME_OPENED"
+      }
+    },
+    "aggregate_sp500_insider_trading": {
+      "prospective_program_and_height": "Program 2 / macro corporate private-information aggregation",
+      "official_source": {
+        "sec_dataset_url": "https://www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets",
+        "sec_documentation_url": "https://www.sec.gov/files/insider_transactions_readme.pdf",
+        "coverage": "January 2006 through June 2026 at the screen date, updated quarterly.",
+        "source_semantics": "As-filed Forms 3, 4 and 5 XML flattened by the SEC, including filing date, original submission date, form, issuer CIK/symbol, owner relationship and nonderivative/derivative transaction tables."
+      },
+      "primary_paper": {
+        "title": "Aggregate insider trading in the S&P 500 and the predictability of international equity premia",
+        "authors": ["Andre Guettler", "Patrick Hable", "Patrick Launhardt", "Felix Miebs"],
+        "journal": "Finance Research Letters 54, 2023, 103725",
+        "doi": "10.1016/j.frl.2023.103725",
+        "working_paper_url": "https://affi2023.eventsadmin.com/Papers/ViewContribution?cid=8591&h=9472DCC0A29B86D8F3D3F512BC238BF4",
+        "formula": "AIT_t = (sum purchases over the prior 12 months - sum sales over the prior 12 months) / (sum purchases + sum sales over the prior 12 months).",
+        "universe": "S&P 500 membership at each month-end from Compustat; non-S&P 500 AIT is reported as noise.",
+        "paper_cleaning": "2iQ transaction processing; reporting-date timing; exclude trades outside the SOX two-business-day reporting window, employee stock options, automated preannounced 10b5-1 trades, and observations with missing volume or value.",
+        "published_horizon": "Predicts the US equity premium at 1, 3, 6 and 12 months over 2004-2018 and is used as a continuous predictive-regression input rather than a fixed binary trade signal."
+      },
+      "readiness_gaps": [
+        "The SEC bulk source does not contain historical point-in-time S&P 500 membership. Replacing Compustat month-end membership with today's constituents or a survivorship-biased list would destroy the paper's only informative universe distinction.",
+        "The SEC source cannot reproduce the paper's proprietary 2iQ cleaning. In particular, a clean structured 10b5-1 affirmative field was mandated only after the project horizon began; earlier plan classification is buried in nonuniform footnotes.",
+        "The paper supplies a continuous forecast variable and mean-variance allocation exercise, not a natural AIT sign threshold or a frozen US30/US100 candidate gate.",
+        "Raw purchases-minus-sales, Form 4 counts, current-constituent subsets, value thresholds or a purchase-only signal would be unvalidated substitutes selected after seeing source availability."
+      ],
+      "decision": {
+        "official_transaction_source_complete": true,
+        "paper_universe_and_cleaning_reconstructible": false,
+        "point_in_time_membership_complete": false,
+        "fixed_project_action_available": false,
+        "pre_unit_ready": false,
+        "classification": "PRE_UNIT_AGGREGATE_INSIDER_PAPER_UNIVERSE_CLEANING_AND_ACTION_NOT_READY_NO_OUTCOME_OPENED"
+      }
+    },
+    "sec_financial_statement_manager_sentiment": {
+      "prospective_program_and_height": "Program 2 / macro corporate disclosure sentiment",
+      "primary_paper": {
+        "title": "Manager Sentiment and Stock Returns",
+        "authors": ["Fuwei Jiang", "Joshua Lee", "Xiumin Martin", "Guofu Zhou"],
+        "journal": "Journal of Financial Economics 132(1), 2019, 126-149",
+        "doi": "10.1016/j.jfineco.2018.10.001",
+        "paper_pdf": "https://down.aefweb.net/WorkingPapers/w677.pdf",
+        "update_pdf": "https://guofuzhou.github.io/JLMZ_update.pdf",
+        "author_data_page": "https://guofuzhou.github.io/zpublications.html",
+        "firm_document_tone": "(Loughran-McDonald positive-word count - negative-word count) / total word count for the full filing after images, tables, exhibits, HTML, symbols and non-text are removed.",
+        "financial_statement_component": "Simple cross-sectional mean across nonfinancial, nonutility positive-asset 10-K and 10-Q filings in each filing month, then a four-month moving average weighted by monthly report count.",
+        "published_composite": "SMS = 0.5 * standardized conference-call tone + 0.5 * standardized financial-statement tone; each component is standardized to full-sample mean zero and unit variance.",
+        "published_direction": "Higher manager sentiment predicts lower future aggregate market returns; the action is contrarian over one month through one year.",
+        "update_evidence": "The 2019 update extends only through December 2017. The financial-statement-only coefficient remains significant and negative while the updated conference-call component is insignificant.",
+        "updated_financial_statement_coefficients": {
+          "one_month": [-0.80, -2.80],
+          "three_month": [-2.13, -3.97],
+          "six_month": [-3.48, -4.14],
+          "one_year": [-4.80, -4.59],
+          "tuple_semantics": "coefficient, t-statistic"
+        }
+      },
+      "author_index_capture": {
+        "url": "https://guofuzhou.github.io/JLMZ_MS_Index2017.xlsx",
+        "local_ignored_artifact": "optimization/artifacts/raw/manager-sentiment-source-readiness-v1/JLMZ_MS_Index2017.xlsx",
+        "bytes": 8496,
+        "sha256": "0479B2671448B4BF7670226CFB8708D391375ED58EF3FFB72829B121236CD34D",
+        "workbook_created_and_modified": "2019-11-14 09:38:15",
+        "rows": 180,
+        "oldest_month": "2003-01",
+        "newest_month": "2017-12",
+        "fields": ["date", "Manager Sentiment Index"],
+        "limitations": "Static revised composite only; no financial-statement component, source filing manifest, vintage history, release timestamps or values after 2017."
+      },
+      "primary_text_resource_capture": {
+        "notre_dame_summary_page": "https://sraf.nd.edu/sec-edgar-data/lm_10x_summaries/",
+        "summary_url": "https://drive.google.com/file/d/1nNoON97aL_6e9jZYZ38lUs-EO4kuMiCj/view?usp=sharing",
+        "summary_local_ignored_artifact": "optimization/artifacts/raw/manager-sentiment-source-readiness-v1/Loughran-McDonald_10X_Summaries_1993-2025.csv",
+        "summary_bytes": 196768524,
+        "summary_sha256": "A3E847B450A2842FD7EE4E1F24025256F68721D32052879D51CB5E1BDD92878F",
+        "summary_rows": 1249506,
+        "summary_coverage": "1993-08-13 through 2025-12-31",
+        "summary_fields_used": ["CIK", "FILING_DATE", "ACC_NUM", "FORM_TYPE", "CoName", "SIC", "N_Words", "N_Negative", "N_Positive", "NetFileSize"],
+        "dictionary_page": "https://sraf.nd.edu/loughranmcdonald-master-dictionary/",
+        "dictionary_url": "https://drive.google.com/file/d/1iq2RUf8qGFEAk1g8wQntP3habOnR3fXF/view?usp=sharing",
+        "dictionary_local_ignored_artifact": "optimization/artifacts/raw/manager-sentiment-source-readiness-v1/Loughran-McDonald_MasterDictionary_1993-2025.csv",
+        "dictionary_bytes": 9093460,
+        "dictionary_sha256": "E2D1328682BAB7D2187684FB9F5420BB730401C9EEFC00DAF835EDD203F4859D",
+        "dictionary_rows": 86553,
+        "sentiment_category_vintage_audit": {
+          "negative": {"2009": 2305, "2011": 13, "2012": 1, "2014": 26, "removed_2020": 10},
+          "positive": {"2009": 345, "2011": 1, "2012": 1, "removed_2020": 7},
+          "post_2020_positive_or_negative_additions": 0,
+          "meaning": "Positive and negative category membership is available as a pre-project fixed 2020 lexicon. Future neutral master-dictionary additions can still affect N_Words, so NetFileSize was screened as an outcome-free length denominator."
+        }
+      },
+      "source_only_reconstruction_audit": {
+        "portfolio_outcomes_opened": false,
+        "base_public_variant": "Only exact 10-K and 10-Q forms; exclude SIC 4900-4999 utilities and SIC 6000-6999 financials; per-filing tone uses current positive-minus-negative counts divided by N_Words; monthly cross-sectional mean; four-month report-count-weighted moving average.",
+        "mean_monthly_filings_2021_2025": 1482.6833333333,
+        "overlap_with_author_composite_months": 180,
+        "correlation_with_author_composite_2003_2017": 0.3933932962,
+        "net_file_character_denominator_correlation_with_author_composite": 0.3904930803,
+        "net_file_character_and_n_words_direction_agreement_2022_07_through_2025_12": 1.0,
+        "candidate_signal_months": 42,
+        "candidate_apply_months": "2022-08 through 2026-01",
+        "normalization_sensitivity": {
+          "trailing_12_month_z": {"low_tone_long_months": 15, "high_tone_short_months": 27},
+          "expanding_from_2003_z": {"low_tone_long_months": 42, "high_tone_short_months": 0},
+          "trailing_60_month_z": {"low_tone_long_months": 25, "high_tone_short_months": 17},
+          "expanding_vs_trailing_60_direction_agreement": 0.5952380952,
+          "same_calendar_month_trailing_10_year_z": {"low_tone_long_months": 42, "high_tone_short_months": 0},
+          "same_calendar_month_trailing_5_year_z": {"low_tone_long_months": 30, "high_tone_short_months": 12},
+          "calendar_pattern": "For signal years 2023, 2024 and 2025, the trailing-12 rule is exactly high in January and July-December and low in February-June in every year. The apparent binary action is therefore perfectly identified by month of year over the three complete years.",
+          "meaning": "The paper's full-sample standardization does not define a causal post-2017 zero. In the project period, reasonable strictly-prior normalizations produce materially different or degenerate actions before any portfolio result is read. Selecting a window now would select the hypothesis itself."
+        }
+      },
+      "readiness_gaps": [
+        "The author series ends in 2017, is a revised composite and has no point-in-time vintages. It cannot supply the 2022-2026 field directly.",
+        "The public SEC/Notre Dame surface can construct a financial-statement-only tone proxy, but it cannot reproduce the Compustat positive-asset universe or the proprietary conference-call component. The moderate 0.39 correlation confirms it is not the published composite.",
+        "Full-sample standardization is look-ahead. Strictly prior expanding normalization makes all 42 candidate months low-tone, while rolling windows introduce a largely deterministic calendar regime and materially disagree with one another.",
+        "The paper predicts monthly to annual S&P 500 excess returns and implements continuous mean-variance allocation. It does not identify a zero threshold, a short-horizon lifecycle gate, or concordant separate actions for the fixed US30 and US100 books.",
+        "Opening outcomes under a chosen 12-, 60-, five-year seasonal or other normalization would test an invented normalization/calendar treatment, not a source-ready replication of manager sentiment."
+      ],
+      "decision": {
+        "public_text_source_available": true,
+        "pre_project_sentiment_lexicon_available": true,
+        "paper_equivalent_current_index_available": false,
+        "causal_normalization_and_binary_action_identified": false,
+        "short_horizon_two_book_transfer_identified": false,
+        "pre_unit_ready": false,
+        "classification": "PRE_UNIT_MANAGER_SENTIMENT_NORMALIZATION_ACTION_AND_PROJECT_TRANSFER_NOT_READY_NO_OUTCOME_OPENED"
+      }
+    }
+  },
+  "combined_readiness_decision": {
+    "independent_primary_mechanisms_screened": 3,
+    "sources_with_real_official_or_author_data": 3,
+    "sources_with_exact_point_in_time_paper_carrier_and_fixed_project_action": 0,
+    "target_outcome_rows_consumed": 0,
+    "research_units_opened": 0,
+    "pre_unit_ready": false,
+    "reason": "Each clue has a real information mechanism, but the exact information surprise, investable universe, causal normalization or fixed two-book action is missing. Starting portfolio aggregation would force Codex to invent the decisive treatment from source convenience. The correct state is design/readiness correction without an economic verdict.",
+    "classification": "PRE_UNIT_THREE_SOURCE_ACTION_READINESS_NOT_READY_NO_RESEARCH_UNIT_OPENED_FIXED_DEVELOPMENT_CANDIDATE_RETAINED"
+  },
+  "fixed_development_candidate": {
+    "campaign": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "selection_actual_stressed_net_usd": [5786.63, 5477.524],
+    "selection_native_relative_equity_dd_pct": 20.256887565,
+    "june_july_actual_stressed_net_usd": [32.74, 30.626],
+    "june_july_native_relative_equity_dd_pct": 18.67530213,
+    "august_relative_support": {
+      "candidate_actual_stressed_usd": [29.62, 28.586],
+      "live_derived_control_actual_stressed_usd": [13.05, 12.455],
+      "candidate_control_equity_dd_pct": [13.44, 6.06]
+    },
+    "changed_or_rejected": false,
+    "live_authority": false
+  },
+  "future_readiness_conditions": [
+    "COT: exact legacy non-commercial series, continuous futures-return carrier and actual historical release availability sufficient to reproduce the paper's unexpected-position residual, plus an independently justified US30/US100 action beyond the five-minute futures response.",
+    "Insider trading: point-in-time historical S&P 500 membership and a reproducible predeclared cleaning rule that handles late filings, options and 10b5-1 plans across the full horizon, plus a fixed action not selected from project outcomes.",
+    "Manager sentiment: an author or primary-source current financial-statement series with vintages, or an independently supported causal normalization and monthly-to-project action that is fixed without choosing a rolling window from project outcomes.",
+    "Any future source must state its primary Program and height, complete data support, direction, action, lag, costs and economic falsification gates before opening candidate lifecycle outcomes."
+  ],
+  "forbidden_automatic_successors": [
+    "COT category, contract, release window, lag, percentile, net-position sign or Friday-calendar substitution",
+    "insider purchase-only, count, dollar threshold, executive subset, current-constituent or rolling-window rescue",
+    "manager-tone 12/60-month, five/ten-year seasonal, expanding, percentile, sign, month, form, sector, component or denominator search",
+    "retrospective selection of the normalization that best aligns with fixed-candidate profit, drawdown, direction, book, component or month",
+    "treating US500 as a third adjudicated book",
+    "Proxy, MT5 or Lab economics before one exact source-to-action contract becomes ready",
+    "another GPT consultation because this combined readiness boundary is not a closed research unit"
+  ],
+  "environment": {
+    "useful_raw_manager_source_artifacts_retained_locally_under_ignored_path": true,
+    "retained_local_raw_bytes": 205870480,
+    "temporary_browser_or_web_ai_watcher": "The completed GPT checkpoint watcher PIDs 39024 and 36116 were stopped as an engineering correction. Signed-in Chrome PID 17380 and CDP listener 9222 were preserved.",
+    "temporary_low_value_html_captures_removed": true,
+    "system_drive_free_gib_after_cleanup": 129.476,
+    "terminal64_or_metaeditor64_processes": 0,
+    "mql_compile_tester_or_mt5": false,
+    "broker_account_position_order_or_deal_query": false,
+    "master_live_lab_or_optimization_runtime_touched": false,
+    "computer_use": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "mandatory_post_unit_gpt_checkpoint_triggered": false,
+  "marker": "OPTIMIZATION_PUBLIC_POSITIONING_AND_MANAGER_INFORMATION_SOURCE_ACTION_NOT_READY_NO_UNIT_FIXED_CANDIDATE_RETAINED_GOAL_ACTIVE"
+}
