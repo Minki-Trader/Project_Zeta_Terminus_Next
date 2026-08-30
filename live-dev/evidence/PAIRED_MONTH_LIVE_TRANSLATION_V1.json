@@ -1,8 +1,9 @@
 {
   "schema": "zeta-next-paired-month-live-translation-v1",
   "recorded_at_utc": "2026-08-30T17:37:09.3651447Z",
+  "updated_at_utc": "2026-08-30T17:55:20.4926211Z",
   "project_id": "project-zeta-terminus-next",
-  "verdict": "PASS_EXACT_FIXED_CANDIDATE_LIVE_IDENTITY_TRANSLATION_PENDING_CONNECTED_V8_PREFLIGHT",
+  "verdict": "PASS_EXACT_FIXED_CANDIDATE_LIVE_IDENTITY_TRANSLATION_AND_CONNECTED_ENTRIES_DISABLED_CREATE_RECOVERY",
   "authority": {
     "source": "user persistent Goal activated 2026-08-31 KST",
     "replacement_mandatory": true,
@@ -106,10 +107,74 @@
     "realized_pl_carry_verified_usd": 4.55
   },
   "connected_target_preflight": {
-    "status": "PENDING_COMMITTED_PUSHED_PACKAGE",
-    "entries_disabled_create": "pending",
-    "entries_disabled_recovery": "pending",
-    "continuous_tick_and_three_symbol_sync_gate": "pending",
-    "final_0_0_to_1_1": "pending"
+    "status": "PASSED_ENTRIES_DISABLED_SAFE_MARKET_WAIT",
+    "package_commit": "83cf08f6227425930cf1e9986648d1f9970edfe6",
+    "fresh_create": {
+      "process_id": 25020,
+      "initial_sequence": 2,
+      "observed_sequence": 3,
+      "normal_stop_sequence": 4,
+      "entries": "0/0",
+      "positions": 0,
+      "pending_orders": 0,
+      "account_margin_usd": 0.0,
+      "aggregate_planned_risk_usd": 0.0,
+      "alerts": 0,
+      "warnings": 0
+    },
+    "actual_recovery": {
+      "process_id": 20140,
+      "resume_event_observed": true,
+      "observed_sequences": [5, 6],
+      "normal_stop_sequence": 7,
+      "entries": "0/0",
+      "positions": 0,
+      "pending_orders": 0,
+      "account_margin_usd": 0.0,
+      "aggregate_planned_risk_usd": 0.0,
+      "alerts": 0,
+      "warnings": 0
+    },
+    "operator_correction": {
+      "commit": "ab00020e77379085804c39b3f849258ab189f8c6",
+      "reason": "The initial recovery starter could accept a recent STOP snapshot from the preceding process before the new process persisted RESUME.",
+      "correction": "Entries-disabled, final preflight and Live waits require a state sequence strictly greater than the sequence present before the exact process starts.",
+      "economic_or_runtime_state_change": false
+    },
+    "corrected_wait_owner": {
+      "process_id": 30592,
+      "pre_start_sequence": 7,
+      "accepted_sequence": 8,
+      "latest_event": "RESUME",
+      "entries": "0/0",
+      "positions": 0,
+      "pending_orders": 0,
+      "account_margin_usd": 0.0,
+      "aggregate_planned_risk_usd": 0.0,
+      "account_balance_usd": 105.2,
+      "account_equity_usd": 105.2,
+      "project_realized_net_usd": 4.55,
+      "alerts": 0,
+      "warnings": 0,
+      "runtime_left_open_entries_disabled": true
+    },
+    "rlo1_core_and_research_hashes_unchanged": true,
+    "market_closed_probe": {
+      "process_id": 20140,
+      "observation_seconds": 12,
+      "server_time": "2026.08.28 23:59:59",
+      "same_sole_process": true,
+      "local_runtime_healthy": true,
+      "terminal_connected": true,
+      "us30_tick_updates": 1,
+      "continuous_ticks": false,
+      "all_three_symbol_ticks_fresh": false,
+      "ready_for_handoff": false,
+      "account_or_trade_state_queried": false,
+      "classification": "expected market-closed wait; not a failure or pause"
+    },
+    "continuous_tick_and_three_symbol_sync_gate": "pending_actual_open_market_data",
+    "final_0_0_to_1_1": "pending_safe_window",
+    "research_development_resumed_during_market_wait": true
   }
 }
