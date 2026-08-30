@@ -1,0 +1,349 @@
+{
+  "schema": "zeta-next-us500-preopen-laguardia-sunshine-cash-direction-contract-v1",
+  "family": "us500-preopen-laguardia-sunshine-cash-direction-v1",
+  "input_root": "lab/artifacts/raw/us500-preopen-laguardia-sunshine-cash-direction-v1/input/",
+  "output_root": "lab/artifacts/raw/us500-preopen-laguardia-sunshine-cash-direction-v1/output/",
+  "files": {
+    "weather": "source/laguardia_morning_sky_daily_20220701_20260731.csv",
+    "bars": "market/US500_M15_BARS_20220701_20260821.csv",
+    "spec": "market/US500_SYMBOL_SPEC_V1.json"
+  },
+  "immutable_inputs": {
+    "files": [
+      {
+        "name": "market/US500_M15_BARS_20220701_20260821.csv",
+        "bytes": 7007401,
+        "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A"
+      },
+      {
+        "name": "market/US500_SYMBOL_SPEC_V1.json",
+        "bytes": 620,
+        "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918"
+      },
+      {
+        "name": "source/LCD_USW00014732_2022.csv",
+        "bytes": 9486732,
+        "sha256": "6733DF673DE67EA3B1B9AF050EB03EC143A114EC488D73AF6C66E0E1AC04DA0C"
+      },
+      {
+        "name": "source/LCD_USW00014732_2023.csv",
+        "bytes": 9428298,
+        "sha256": "AF6753C1E2334C3817692FB0E790D34AC37FE25245329448C696433382C7990B"
+      },
+      {
+        "name": "source/LCD_USW00014732_2024.csv",
+        "bytes": 9353813,
+        "sha256": "2D0566D47190BADFA599755E6A6E789AEE6B18629409F07DFB59429E93248C72"
+      },
+      {
+        "name": "source/LCD_USW00014732_2025.csv",
+        "bytes": 9054975,
+        "sha256": "CFCE47461806982B78BBBB1A78C08BBCCBABDAF07240CFA092EE4460CBC0E1FB"
+      },
+      {
+        "name": "source/LCD_USW00014732_2026.csv",
+        "bytes": 5540306,
+        "sha256": "0952B32366E7211D6074FD08A29601DDBAC1D7E7EBA95159DF5774C6C3D221E2"
+      },
+      {
+        "name": "source/hirshleifer_shumway_2003_good_day_sunshine.pdf",
+        "bytes": 788610,
+        "sha256": "08DB7D0F68DD17B34F263D1C3158A004FB93DD03ED255E45FB0BDBFBB0AAE6D3"
+      },
+      {
+        "name": "source/laguardia_morning_sky_daily_20220701_20260731.csv",
+        "bytes": 222298,
+        "sha256": "68B05B15E4F948758E4091FD455706BA2E95E3D2D0B36B2F9720320A85BBE5A5"
+      },
+      {
+        "name": "source/laguardia_morning_sky_hourly_20220701_20260731.csv",
+        "bytes": 872768,
+        "sha256": "38C7FAAB4B3CBB8B7055499F04F6BFCD92DB7630D8475CC93EA7E604DFE222CF"
+      },
+      {
+        "name": "source/lcdv2_DOCUMENTATION.pdf",
+        "bytes": 686406,
+        "sha256": "B50906A80F06EAC6D5C4C238F61EC0C1AC13FF481DD88B2CB1295A8C25D9395F"
+      }
+    ],
+    "manifest_sha256": "FD39AB2AC907152391DDC31ADFBD307701FED145B21875F10120FEB447E77BE3",
+    "weather_rows": 1492,
+    "bar_rows": 97707
+  },
+  "acquisition_summary": {
+    "path": "lab/artifacts/raw/us500-preopen-laguardia-sunshine-cash-direction-v1/input/acquisition-summary.json",
+    "bytes": 15606,
+    "sha256": "34F09E0EDD3BAE524E2BF26718846598ADF2310692445BCD8626331F26D217A0"
+  },
+  "formal_declaration": {
+    "path": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/evidence/US500_PREOPEN_LAGUARDIA_SUNSHINE_CASH_DIRECTION_DECLARATION_V1.json",
+    "bytes": 13129,
+    "sha256": "B8C9413B00B2FBFD40C9010A9FDEBD814D65CBCC8F884C829DD3A3D7574CCA01"
+  },
+  "premetric_receipt_path": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/evidence/US500_PREOPEN_LAGUARDIA_SUNSHINE_CASH_DIRECTION_SNAPSHOT_RECEIPT_V1.json",
+  "required_weather_schema": [
+    "date",
+    "period",
+    "observation_count",
+    "complete_four_hours",
+    "sky_cover_mean_oktas",
+    "direction",
+    "classification",
+    "sky_05_oktas",
+    "obs_05_utc",
+    "sky_06_oktas",
+    "obs_06_utc",
+    "sky_07_oktas",
+    "obs_07_utc",
+    "sky_08_oktas",
+    "obs_08_utc"
+  ],
+  "required_bar_schema": [
+    "time_epoch",
+    "time_server",
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread",
+    "real_volume"
+  ],
+  "literature_rule": {
+    "paper": "David Hirshleifer and Tyler Shumway, Good Day Sunshine: Stock Returns and the Weather, Journal of Finance 58(3), 2003, 1009-1032",
+    "doi": "10.1111/1540-6261.00556",
+    "author_pdf_url": "https://www.tylergshumway.org/Hirshleifer-GoodDaySunshine-2003.pdf",
+    "source_morning_measure": "Average sky cover from 5 a.m. through 8 a.m. local time",
+    "source_transaction_cost_rule": "LONG when average morning sky cover is from zero through four inclusive; SHORT otherwise",
+    "reported_context": "The authors report a sunny-minus-overcast return difference across 26 exchanges and separately evaluate the threshold trading strategy after transaction costs",
+    "transfer": "Use the New York LaGuardia morning measure to set the same-day US500 regular-cash direction",
+    "threshold_or_direction_grid_points": 0
+  },
+  "weather_rule": {
+    "dataset": "NOAA NCEI Local Climatological Data Version 2 station/year CSV",
+    "station": "USW00014732",
+    "station_name": "LA GUARDIA AIRPORT, NY US",
+    "timezone": "America/New_York",
+    "source_date_clock": "LCDv2 DATE is local standard time and is first interpreted at fixed UTC-05:00 before conversion to actual America/New_York clock",
+    "report_type": "FM-15",
+    "hours": [5, 6, 7, 8],
+    "hour_selection": "one routine row per actual local hour, nearest minute 51; latest required observation must precede the 09:30 entry",
+    "sky_mapping_oktas": {
+      "CLR": 0,
+      "SKC": 0,
+      "NSC": 0,
+      "NCD": 0,
+      "FEW": 2,
+      "SCT": 4,
+      "BKN": 7,
+      "OVC": 8,
+      "VV": 8,
+      "X": 8
+    },
+    "hourly_amount": "maximum decoded HourlySkyConditions amount",
+    "daily_amount": "arithmetic mean of exactly four hourly amounts",
+    "primary_direction": "LONG if mean <= 4.0; SHORT if mean > 4.0",
+    "partial_day_policy": "exclude the day rather than impute or relax the four-hour requirement"
+  },
+  "official_session_calendar": {
+    "exchange": "NYSE equities",
+    "construction": "all America/New_York weekdays minus exact frozen official exchange-closure dates",
+    "sources": [
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2022_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2023_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2024_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2025_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/nyse/ICE_NYSE_2026_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/markets/hours-calendars",
+      "https://www.nyse.com/publicdocs/nyse/markets/american-options/rule-interpretations/2025/National_Day_of_Mourning_20250102.pdf"
+    ],
+    "closed_dates": [
+      "2022-07-04",
+      "2022-09-05",
+      "2022-11-24",
+      "2022-12-26",
+      "2023-01-02",
+      "2023-01-16",
+      "2023-02-20",
+      "2023-04-07",
+      "2023-05-29",
+      "2023-06-19",
+      "2023-07-04",
+      "2023-09-04",
+      "2023-11-23",
+      "2023-12-25",
+      "2024-01-01",
+      "2024-01-15",
+      "2024-02-19",
+      "2024-03-29",
+      "2024-05-27",
+      "2024-06-19",
+      "2024-07-04",
+      "2024-09-02",
+      "2024-11-28",
+      "2024-12-25",
+      "2025-01-01",
+      "2025-01-09",
+      "2025-01-20",
+      "2025-02-17",
+      "2025-04-18",
+      "2025-05-26",
+      "2025-06-19",
+      "2025-07-04",
+      "2025-09-01",
+      "2025-11-27",
+      "2025-12-25",
+      "2026-01-01",
+      "2026-01-19",
+      "2026-02-16",
+      "2026-04-03",
+      "2026-05-25",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-09-07",
+      "2026-11-26",
+      "2026-12-25"
+    ]
+  },
+  "trade_rule": {
+    "symbol": "US500",
+    "entry": "09:30 America/New_York M15 open",
+    "exit": "15:45 America/New_York M15 close representing 16:00",
+    "volume": 0.01,
+    "starting_balance_usd": 100.0,
+    "gross": "direction multiplied by midpoint exit minus midpoint entry",
+    "observed": "direction-correct executable bid/ask entry and exit",
+    "stressed": "directional gross less the full entry-plus-exit spread burden",
+    "binding_measure": "stressed_usd",
+    "commission_swap_financing": 0.0,
+    "carry_reason": "Every position opens and closes inside one regular cash session",
+    "drawdown": "closed-balance cumulative eligible-session path"
+  },
+  "views": {
+    "PRIMARY_WEATHER_DIRECTION": "promotable primary LONG sunny/mixed and SHORT cloudy rule",
+    "SUNNY_LONG_ONLY": "nonpromotable primary side contribution diagnostic",
+    "CLOUDY_SHORT_ONLY": "nonpromotable primary side contribution diagnostic",
+    "UNCONDITIONAL_LONG": "nonpromotable same-day cash-drift control on the exact eligible dates"
+  },
+  "periods": {
+    "P1_2022H2_2023": {
+      "from_inclusive": "2022-07-01",
+      "to_exclusive": "2024-01-01"
+    },
+    "P2_2024": {
+      "from_inclusive": "2024-01-01",
+      "to_exclusive": "2025-01-01"
+    },
+    "P3_2025": {
+      "from_inclusive": "2025-01-01",
+      "to_exclusive": "2026-01-01"
+    },
+    "P4_2026_JAN_MAY": {
+      "from_inclusive": "2026-01-01",
+      "to_exclusive": "2026-06-01"
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "from_inclusive": "2026-06-01",
+      "to_exclusive": "2026-08-01"
+    }
+  },
+  "p1_splits": {
+    "2022H2": [
+      "2022-07-01",
+      "2023-01-01"
+    ],
+    "2023H1": [
+      "2023-01-01",
+      "2023-07-01"
+    ],
+    "2023H2": [
+      "2023-07-01",
+      "2024-01-01"
+    ]
+  },
+  "economic_gates": {
+    "minimum_eligible_days_by_period": {
+      "P1_2022H2_2023": 350,
+      "P2_2024": 230,
+      "P3_2025": 220,
+      "P4_2026_JAN_MAY": 90,
+      "P5_LATEST_2026_JUN_JUL": 38
+    },
+    "minimum_direction_days_by_period": {
+      "P1_2022H2_2023": {
+        "LONG": 80,
+        "SHORT": 80
+      },
+      "P2_2024": {
+        "LONG": 50,
+        "SHORT": 50
+      },
+      "P3_2025": {
+        "LONG": 40,
+        "SHORT": 40
+      },
+      "P4_2026_JAN_MAY": {
+        "LONG": 15,
+        "SHORT": 15
+      },
+      "P5_LATEST_2026_JUN_JUL": {
+        "LONG": 8,
+        "SHORT": 8
+      }
+    },
+    "minimum_p1_days_by_split": {
+      "2022H2": 100,
+      "2023H1": 100,
+      "2023H2": 100
+    },
+    "p1_period": "P1_2022H2_2023",
+    "latest_period": "P5_LATEST_2026_JUN_JUL",
+    "confirmation_periods": [
+      "P2_2024",
+      "P3_2025",
+      "P4_2026_JAN_MAY"
+    ],
+    "p1_profit_factor_min": 1.05,
+    "p1_net_to_drawdown_min": 1.25,
+    "p1_positive_splits_required": 3,
+    "p1_positive_month_fraction_min": 0.55,
+    "p1_both_direction_sides_positive": true,
+    "p1_must_beat_unconditional_long": true,
+    "confirmation_positive_periods_required": 3,
+    "confirmation_beat_unconditional_periods_required": 2,
+    "confirmation_both_sides_positive_periods_required": 2,
+    "confirmation_positive_month_fraction_min": 0.5,
+    "confirmation_positive_month_fraction_periods_required": 2,
+    "prelatest_profit_factor_min": 1.075,
+    "prelatest_net_to_drawdown_min": 1.5,
+    "prelatest_positive_month_fraction_min": 0.55,
+    "prelatest_top_five_positive_day_share_max": 0.35,
+    "prelatest_both_direction_sides_positive": true,
+    "prelatest_must_beat_unconditional_long": true,
+    "nominal_drawdown_max_percent": 20.0,
+    "practical_drawdown_max_percent": 21.2,
+    "latest_nominal_floor_usd": 0.0,
+    "latest_practical_reversal_fraction": 0.25,
+    "full_profit_factor_min": 1.05,
+    "full_net_to_drawdown_min": 1.25,
+    "full_both_direction_sides_positive": true,
+    "full_must_beat_unconditional_long": true,
+    "retention_limit": 1
+  },
+  "verdict_taxonomy": {
+    "nominal_pass": "PASS_RETAIN_ONE_FIXED_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_SEED",
+    "practical_pass": "PASS_PRACTICAL_RETAIN_ONE_FIXED_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_SEED",
+    "strong_null": "VALID_NO_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_AFTER_COST_NO_SEED",
+    "other_valid": "AMBIGUOUS_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_NO_SEED",
+    "environment_design_or_engineering_fault": "CORRECTION_STATE_WITHOUT_RESEARCH_VERDICT"
+  },
+  "closed_neighborhood": [
+    "other New York airport, weather station, city, region or multi-city aggregation",
+    "other morning hour, partial-hour set, close-to-open weather window or delayed weather use",
+    "other sunny/cloudy cutoff, categorical weighting, deseasonalization, forecast or rolling weather transform",
+    "temperature, precipitation, humidity, wind, visibility, pressure or composite weather state",
+    "direction inversion or promotion of the sunny-only, cloudy-only or unconditional control",
+    "overnight, close-to-close, next-day, next-week, futures, ETF, international or other-symbol carrier",
+    "spread substitution, stop, trailing, exit, sizing, risk, capital, allocation or fixed-candidate integration rescue"
+  ]
+}

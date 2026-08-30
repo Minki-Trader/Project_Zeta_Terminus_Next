@@ -1,0 +1,255 @@
+{
+  "schema": "zeta-next-us500-preopen-laguardia-sunshine-cash-direction-declaration-v1",
+  "date": "2026-08-30",
+  "status": "UNIT_114_DECLARED_SOURCE_FIXED_LAGUARDIA_MORNING_SKY_TARGET_ECONOMICS_UNOPENED",
+  "unit": "us500-preopen-laguardia-sunshine-cash-direction-114",
+  "family": "us500-preopen-laguardia-sunshine-cash-direction-v1",
+  "title": "Hirshleifer-Shumway morning sunshine transfer to same-day US500 regular-cash direction",
+  "goal_context": {
+    "primary_goal": "continuous isolated Optimization development around the fixed Live replacement candidate",
+    "lab_role": "one bounded independent-source research detour that may retain at most one information seed",
+    "fixed_candidate": "dd20-paired-month-stability-mt5-v1",
+    "candidate_effect": "unchanged; this declaration grants no integration, MT5, implementation or Live authority",
+    "pause_policy": "close the whole unit and return immediately to serial Optimization whole-map discovery without a reporting pause"
+  },
+  "scheduler": {
+    "primary_program": "Program 2",
+    "research_height": "micro-to-meso",
+    "selection_reason": "A pre-open exogenous local weather observation can change same-session market direction without reusing closed price, volatility, macro-surprise, calendar-rank, native-signal, exit, sizing or portfolio-state decisions.",
+    "distance_from_unit_113": "Unit 113 used a weekly scheduled entertainment release count and a next-week long-only horizon. Unit 114 uses four same-morning physical sky observations and a same-day bidirectional cash rule; neither source, transform, horizon nor direction rule overlaps.",
+    "whole_map_comparison": "Programs 1, 3, 4, 5 and 7 had no comparably complete independent causal source after the formula, price-pattern, calendar, macro-state, management, capacity and meta axes already closed. The weather rule alone provides dense post-paper evidence through the latest period with exact pre-open observability."
+  },
+  "literature": {
+    "paper": "David Hirshleifer and Tyler Shumway, Good Day Sunshine: Stock Returns and the Weather, Journal of Finance 58(3), 2003, 1009-1032",
+    "doi": "10.1111/1540-6261.00556",
+    "author_pdf_url": "https://www.tylergshumway.org/Hirshleifer-GoodDaySunshine-2003.pdf",
+    "morning_measure": "average sky cover from 5 a.m. through 8 a.m. local time",
+    "transaction_cost_rule": "LONG if average morning sky cover is between zero and four inclusive; SHORT otherwise",
+    "reported_scope": "26 international exchanges, with a sunny-minus-overcast return difference and a separate transaction-cost exercise",
+    "transfer_scope": "New York LaGuardia morning sky cover to same-day FPMarkets US500 regular-cash direction",
+    "nonclaim": "The transfer neither reproduces the paper's full country panel nor refutes the historical paper sample."
+  },
+  "source": {
+    "provider": "NOAA National Centers for Environmental Information",
+    "dataset": "Local Climatological Data Version 2",
+    "dataset_url": "https://www.ncei.noaa.gov/products/land-based-station/local-climatological-data",
+    "documentation_url": "https://www.ncei.noaa.gov/oa/local-climatological-data/v2/doc/lcdv2_DOCUMENTATION.pdf",
+    "lineage": "LCDv2 hourly observations are derived from GHCNh and the station/year CSVs expose current routine FM-15 METAR sky conditions.",
+    "station": "USW00014732",
+    "station_name": "LA GUARDIA AIRPORT, NY US",
+    "source_years": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "source_clock": "LCDv2 DATE is local standard time; attach fixed UTC-05:00 before converting to actual America/New_York time.",
+    "routine_report_type": "FM-15",
+    "target_actual_local_hours": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "hour_selection": "nearest actual-local minute to 51, then later minute, UTC timestamp and source row",
+    "hourly_sky_amount": "maximum decoded category in HourlySkyConditions",
+    "sky_mapping_oktas": {
+      "CLR": 0,
+      "SKC": 0,
+      "NSC": 0,
+      "NCD": 0,
+      "FEW": 2,
+      "SCT": 4,
+      "BKN": 7,
+      "OVC": 8,
+      "VV": 8,
+      "X": 8
+    },
+    "daily_measure": "arithmetic mean of exactly four selected hourly amounts",
+    "partial_day_policy": "exclude without imputation",
+    "primary_direction": "LONG when mean <= 4.0, SHORT when mean > 4.0",
+    "threshold_grid_points": 0
+  },
+  "engineering_correction": {
+    "initial_source": "direct GHCNh yearly PSV",
+    "parser_correction": "LaGuardia routine METAR sky codes reside in sky_cover_summation_* rather than the provisional sky_cover_layer_* assumption.",
+    "environment_fault": "Even after parser correction, direct GHCNh LaGuardia FM15 rows stopped at 2026-04-13 and supplied zero complete P5 days.",
+    "outcome_state": "No M15 price, spread, return, P/L, PF, DD, control or verdict was loaded or calculated.",
+    "correction": "Discard the provisional family raw surface and reacquire all five years from one uniform current NOAA LCDv2 series; do not splice only the tail.",
+    "research_judgment": "none; input-environment correction only",
+    "record": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/evidence/ENGINEERING_CORRECTIONS.md"
+  },
+  "boundary": {
+    "family_root": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/",
+    "input_root": "lab/artifacts/raw/us500-preopen-laguardia-sunshine-cash-direction-v1/input/",
+    "output_root": "lab/artifacts/raw/us500-preopen-laguardia-sunshine-cash-direction-v1/output/",
+    "source_independence": "The family contains no MQL and includes or links no Live, Optimization, Lab baseline or other research family source.",
+    "runtime": null,
+    "master_terminal_touched": false,
+    "mt5_calls": 0,
+    "strategy_tester_calls": 0,
+    "broker_account_position_order_deal_calls": 0,
+    "live_log_or_research_ledger_poll": 0
+  },
+  "immutable_input": {
+    "file_count": 10,
+    "ordered_manifest_sha256": "FD39AB2AC907152391DDC31ADFBD307701FED145B21875F10120FEB447E77BE3",
+    "acquisition_summary": {
+      "path": "lab/artifacts/raw/us500-preopen-laguardia-sunshine-cash-direction-v1/input/acquisition-summary.json",
+      "bytes": 15606,
+      "sha256": "34F09E0EDD3BAE524E2BF26718846598ADF2310692445BCD8626331F26D217A0"
+    },
+    "paper": {
+      "bytes": 788610,
+      "sha256": "08DB7D0F68DD17B34F263D1C3158A004FB93DD03ED255E45FB0BDBFBB0AAE6D3"
+    },
+    "lcdv2_documentation": {
+      "bytes": 686406,
+      "sha256": "B50906A80F06EAC6D5C4C238F61EC0C1AC13FF481DD88B2CB1295A8C25D9395F"
+    },
+    "lcdv2_year_files_bytes": 42864124,
+    "normalized_hourly": {
+      "rows": 5856,
+      "bytes": 872768,
+      "sha256": "38C7FAAB4B3CBB8B7055499F04F6BFCD92DB7630D8475CC93EA7E604DFE222CF"
+    },
+    "normalized_daily": {
+      "rows": 1492,
+      "complete_rows": 1442,
+      "bytes": 222298,
+      "sha256": "68B05B15E4F948758E4091FD455706BA2E95E3D2D0B36B2F9720320A85BBE5A5"
+    },
+    "market_m15": {
+      "rows": 97707,
+      "bytes": 7007401,
+      "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A",
+      "copy_only_before_declaration": true
+    },
+    "symbol_spec": {
+      "bytes": 620,
+      "sha256": "9DF9AAE5DEB54547283DE612FF00081248759E8F7A04A3158D7A607AFABE5918"
+    }
+  },
+  "semantic_contract_sha256": "B04F93BE81C2AE4798563C3808C8DBC67D06A6944A0AD7AE9DE1653FB121136D",
+  "analysis_code": {
+    "path": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/analysis/run_analysis.py",
+    "bytes": 47357,
+    "sha256": "A5153DB7FE112B3B0D27C78E7C7E39958804CA48E17702CA769CEF34A2C6D034"
+  },
+  "acquisition_code": {
+    "path": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/analysis/acquire_inputs.py",
+    "bytes": 19323,
+    "sha256": "C7E675778321A3DCCD6B4AA395D24263E1780314BB250454E5E6CCFE0C86D726"
+  },
+  "premetric_receipt": {
+    "path": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/evidence/US500_PREOPEN_LAGUARDIA_SUNSHINE_CASH_DIRECTION_SNAPSHOT_RECEIPT_V1.json",
+    "bytes": 9627,
+    "sha256": "3BFEBB45E9368D070BAAD67B460C9DA8914A8818E3A6EA6435E67FDACD25E753"
+  },
+  "outcome_firewall": {
+    "m15_columns_loaded": [
+      "time_epoch",
+      "time_server"
+    ],
+    "price_or_spread_fields_loaded": false,
+    "entry_to_exit_returns_calculated": false,
+    "gross_observed_or_stressed_usd_calculated": false,
+    "profit_factor_or_drawdown_calculated": false,
+    "economic_gate_or_verdict_calculated": false
+  },
+  "premetric_geometry": {
+    "official_sessions": 1024,
+    "eligible_sessions": 985,
+    "eligible_days_by_period": {
+      "P1_2022H2_2023": 370,
+      "P2_2024": 247,
+      "P3_2025": 234,
+      "P4_2026_JAN_MAY": 91,
+      "P5_LATEST_2026_JUN_JUL": 43
+    },
+    "direction_days_by_period": {
+      "P1_2022H2_2023": {
+        "LONG": 132,
+        "SHORT": 238
+      },
+      "P2_2024": {
+        "LONG": 80,
+        "SHORT": 167
+      },
+      "P3_2025": {
+        "LONG": 66,
+        "SHORT": 168
+      },
+      "P4_2026_JAN_MAY": {
+        "LONG": 25,
+        "SHORT": 66
+      },
+      "P5_LATEST_2026_JUN_JUL": {
+        "LONG": 15,
+        "SHORT": 28
+      }
+    },
+    "p1_split_days": {
+      "2022H2": 123,
+      "2023H1": 123,
+      "2023H2": 124
+    },
+    "preopen_lead_minutes": {
+      "minimum": 36.0,
+      "maximum": 40.0
+    },
+    "official_sessions_without_complete_weather": 33,
+    "weather_complete_but_market_boundary_ineligible": 6,
+    "all_density_and_causal_timing_gates_passed": true
+  },
+  "trade_rule": {
+    "symbol": "US500",
+    "volume": 0.01,
+    "starting_balance_usd": 100.0,
+    "entry": "exact 09:30 America/New_York M15 open",
+    "exit": "exact 15:45 America/New_York M15 close representing 16:00",
+    "direction": "LONG when the four-hour mean is <= 4.0, SHORT otherwise",
+    "gross": "direction times midpoint exit minus midpoint entry",
+    "observed": "direction-correct executable bid/ask entry and exit",
+    "binding_stress": "gross less the full entry-plus-exit spread burden",
+    "commission_swap_financing_usd": 0.0,
+    "same_session": true
+  },
+  "views": {
+    "PRIMARY_WEATHER_DIRECTION": "sole promotable view",
+    "SUNNY_LONG_ONLY": "nonpromotable side-contribution diagnostic",
+    "CLOUDY_SHORT_ONLY": "nonpromotable side-contribution diagnostic",
+    "UNCONDITIONAL_LONG": "nonpromotable same-date regular-cash drift control"
+  },
+  "economic_gate_summary": {
+    "density": "Every period and P1 split must meet frozen eligible-day minima, both directions must meet period minima, and every latest weather observation must precede entry.",
+    "p1": "positive stressed net, PF >= 1.05, net/DD >= 1.25, all three splits positive, >=55% positive months, both direction-side contributions positive and net above unconditional LONG",
+    "confirmation": "P2-P4 all positive; at least two periods beat unconditional LONG, have both sides positive and meet >=50% positive-month breadth",
+    "prelatest": "positive stressed net, PF >= 1.075, net/DD >= 1.50, >=55% positive months, top-five positive-day share <=35%, both sides positive and net above unconditional LONG",
+    "drawdown": "nominal <=20.0%; practical <=21.2%",
+    "latest": "nominal net >=0; practical loss no worse than 25% of positive prelatest mean times latest days",
+    "full": "positive stressed net, PF >=1.05, net/DD >=1.25, both sides positive and net above unconditional LONG",
+    "retention_limit": 1,
+    "strong_null": "P1 and full/prelatest nonpositive with at most one positive confirmation period"
+  },
+  "closed_neighborhood": [
+    "other New York airport, weather station, city, region or multi-city aggregation",
+    "other morning hour, partial-hour set, close-to-open weather window or delayed weather use",
+    "other sunny/cloudy cutoff, category weight, deseasonalization, forecast or rolling weather transform",
+    "temperature, precipitation, humidity, wind, visibility, pressure or composite weather state",
+    "direction inversion or promotion of sunny-only, cloudy-only or unconditional controls",
+    "overnight, close-to-close, next-day, next-week, futures, ETF, international or other-symbol carrier",
+    "spread substitution, stop, trailing, exit, sizing, risk, capital, allocation or fixed-candidate integration rescue"
+  ],
+  "formal_run_contract": {
+    "precondition": "This exact declaration and semantic contract must reach origin/main before any price or spread field opens.",
+    "allowed": "one complete formal aggregation over the frozen 985-session surface",
+    "engineering_fault": "correct without research verdict or numeric retry cap while preserving the outcome firewall whenever possible",
+    "economic_rerun": "none after one complete valid aggregation",
+    "selective_period_rerun": false,
+    "post_outcome_gate_change": false
+  },
+  "next": "Commit and push the complete outcome-unopened Unit 114 declaration, run exactly one complete formal aggregation, close the whole family, and return immediately to serial Optimization whole-map discovery.",
+  "marker": "FRONTIER_UNIT_114_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_DECLARED_ECONOMICS_UNOPENED"
+}
