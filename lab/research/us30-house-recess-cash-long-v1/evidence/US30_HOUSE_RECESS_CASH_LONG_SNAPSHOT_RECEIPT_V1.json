@@ -1,0 +1,121 @@
+{
+  "schema": "zeta-next-us30-house-recess-cash-long-premetric-v1",
+  "date": "2026-08-30",
+  "status": "COMPLETE_OUTCOME_UNOPENED_GEOMETRY",
+  "family": "us30-house-recess-cash-long-v1",
+  "semantic_contract_sha256": "22DA6C8760066AB1D900B147304A370A301245CE693D33DCEEDFEBA457DD0B3C",
+  "input_integrity": {
+    "manifest_sha256": "086995133B4C02D6912BE3661D1B5F7C2F253BB9420D68DAB75C3C447A5CE7D0",
+    "file_count": 8
+  },
+  "acquisition_summary": {
+    "path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/input/acquisition-summary.json",
+    "bytes": 4798,
+    "sha256": "EA767EEE9BED7A7CCA14DB8548025C96FA4CE40966006B531E4CC33F53EA3152"
+  },
+  "eligibility_integrity": {
+    "official_sessions": 1024,
+    "eligible_sessions": 1017,
+    "ineligible_boundary_sessions": 7,
+    "entry_missing_sessions": 2,
+    "exit_missing_sessions": 7,
+    "market_rows": 1617902,
+    "first_epoch": 1641171600,
+    "last_epoch": 1785542340,
+    "market_columns_loaded": ["time"],
+    "price_or_spread_fields_loaded": false,
+    "house_schedule": {
+      "rows": 790,
+      "first_date": "2022-01-03",
+      "last_date": "2026-08-27",
+      "duplicate_dates": 0,
+      "announced_next_chain_faults": 0
+    },
+    "density": {
+      "eligible_days_by_period": {
+        "P1_2022H2_2023": 374,
+        "P2_2024": 250,
+        "P3_2025": 248,
+        "P4_2026_JAN_MAY": 102,
+        "P5_LATEST_2026_JUN_JUL": 43
+      },
+      "state_days_by_period": {
+        "P1_2022H2_2023": {"HOUSE_RECESS": 122, "HOUSE_OPEN": 252},
+        "P2_2024": {"HOUSE_RECESS": 87, "HOUSE_OPEN": 163},
+        "P3_2025": {"HOUSE_RECESS": 86, "HOUSE_OPEN": 162},
+        "P4_2026_JAN_MAY": {"HOUSE_RECESS": 27, "HOUSE_OPEN": 75},
+        "P5_LATEST_2026_JUN_JUL": {"HOUSE_RECESS": 15, "HOUSE_OPEN": 28}
+      },
+      "p1_split_days": {"2022H2": 126, "2023H1": 124, "2023H2": 124},
+      "p1_split_recess_days": {"2022H2": 49, "2023H1": 33, "2023H2": 40},
+      "matched_dual_state_cells": {
+        "full": 157,
+        "prelatest": 152,
+        "periods": {
+          "P1_2022H2_2023": 59,
+          "P2_2024": 36,
+          "P3_2025": 40,
+          "P4_2026_JAN_MAY": 17,
+          "P5_LATEST_2026_JUN_JUL": 5
+        }
+      },
+      "notice_lead_calendar_days": {"minimum": 1, "maximum": 5},
+      "checks": {
+        "eligible_P1_2022H2_2023": true,
+        "eligible_P2_2024": true,
+        "eligible_P3_2025": true,
+        "eligible_P4_2026_JAN_MAY": true,
+        "eligible_P5_LATEST_2026_JUN_JUL": true,
+        "state_P1_2022H2_2023_HOUSE_RECESS": true,
+        "state_P1_2022H2_2023_HOUSE_OPEN": true,
+        "state_P2_2024_HOUSE_RECESS": true,
+        "state_P2_2024_HOUSE_OPEN": true,
+        "state_P3_2025_HOUSE_RECESS": true,
+        "state_P3_2025_HOUSE_OPEN": true,
+        "state_P4_2026_JAN_MAY_HOUSE_RECESS": true,
+        "state_P4_2026_JAN_MAY_HOUSE_OPEN": true,
+        "state_P5_LATEST_2026_JUN_JUL_HOUSE_RECESS": true,
+        "state_P5_LATEST_2026_JUN_JUL_HOUSE_OPEN": true,
+        "split_2022H2": true,
+        "split_2023H1": true,
+        "split_2023H2": true,
+        "split_recess_2022H2": true,
+        "split_recess_2023H1": true,
+        "split_recess_2023H2": true,
+        "causal_notice_lead_positive": true,
+        "house_membership_crosscheck": true,
+        "period_complete": true,
+        "matched_cells_full": true,
+        "matched_cells_p1": true,
+        "matched_cells_P2_2024": true,
+        "matched_cells_P3_2025": true,
+        "matched_cells_P4_2026_JAN_MAY": true,
+        "matched_cells_latest": true
+      },
+      "density_passed": true
+    }
+  },
+  "eligible_surface": {
+    "first_date": "2022-07-01",
+    "last_date": "2026-07-31",
+    "calendar_months": 49,
+    "weekdays": ["Friday", "Monday", "Thursday", "Tuesday", "Wednesday"]
+  },
+  "outcome_firewall": {
+    "price_or_spread_fields_loaded": false,
+    "entry_or_exit_price_loaded": false,
+    "return_or_pnl_calculated": false,
+    "profit_factor_or_drawdown_calculated": false,
+    "matched_control_or_economic_gate_calculated": false,
+    "verdict_calculated": false
+  },
+  "predeclaration_schema_probe_disclosure": {
+    "occurred_before_family_open": true,
+    "rows_displayed": 4,
+    "target_cash_boundary_rows_displayed": 0,
+    "house_state_joined": false,
+    "return_or_economic_metric_calculated": false,
+    "purpose": "confirm inherited Parquet schema and physical date range before the family opened"
+  },
+  "live_master_broker_account_touched": false
+}

@@ -1,0 +1,220 @@
+{
+  "schema": "zeta-next-us30-house-recess-cash-long-contract-v1",
+  "family": "us30-house-recess-cash-long-v1",
+  "input_root": "lab/artifacts/raw/us30-house-recess-cash-long-v1/input/",
+  "output_root": "lab/artifacts/raw/us30-house-recess-cash-long-v1/output/",
+  "files": {
+    "house_schedule": "source/house_floor_schedule_frozen_20260830.csv",
+    "bars": "market/US30_M1_20220103_20260731.parquet"
+  },
+  "immutable_inputs": {
+    "files": [
+      {
+        "name": "market/US30_M1_20220103_20260731.parquet",
+        "bytes": 19018323,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+      },
+      {
+        "name": "source/HDoc-117-2-FloorProceedings.xml",
+        "bytes": 3270770,
+        "sha256": "29ADD2BE6B97A8739DF0C395E52239FEEF645F1CF3A437F396A8CC3ABA6607E8"
+      },
+      {
+        "name": "source/HDoc-118-1-FloorProceedings.xml",
+        "bytes": 4193924,
+        "sha256": "7422AB9507674F182F9C562E00E8150E5D94ECF0CF7A5E9180357CDB03C8055B"
+      },
+      {
+        "name": "source/HDoc-118-2-FloorProceedings.xml",
+        "bytes": 4031506,
+        "sha256": "B3F1EC9F4238C78756D7E313EBA06FCC9296B98F84F86DE3AFDAE70ABEA53EF6"
+      },
+      {
+        "name": "source/HDoc-119-1-FloorProceedings.xml",
+        "bytes": 3083340,
+        "sha256": "FE4FDBD980C4318D5C3FA24706DB8268043A3FB78B576928BB3D535B5933935B"
+      },
+      {
+        "name": "source/HDoc-119-2-FloorProceedings.xml",
+        "bytes": 2153705,
+        "sha256": "92CC9725B1AF560A2098436597D17AF0D9F92C2698C3340E099F44B7BB55DA30"
+      },
+      {
+        "name": "source/house_floor_schedule_frozen_20260830.csv",
+        "bytes": 49104,
+        "sha256": "FCAD0FA00944F7FFD4E5861AA187B51B3BF7000E8AA77D40989BAF64CCD769DB"
+      },
+      {
+        "name": "source/lamb_ma_pace_kennedy_1997_congressional_calendar.pdf",
+        "bytes": 459308,
+        "sha256": "8EDB28112A11D6B7CA1EBFDCADB1893295A8C504F384ABFD3B10204C6F01FB99"
+      }
+    ],
+    "manifest_sha256": "086995133B4C02D6912BE3661D1B5F7C2F253BB9420D68DAB75C3C447A5CE7D0"
+  },
+  "acquisition_summary": {
+    "path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/input/acquisition-summary.json",
+    "bytes": 4798,
+    "sha256": "EA767EEE9BED7A7CCA14DB8548025C96FA4CE40966006B531E4CC33F53EA3152"
+  },
+  "formal_declaration": {
+    "path": "lab/research/us30-house-recess-cash-long-v1/evidence/US30_HOUSE_RECESS_CASH_LONG_DECLARATION_V1.json",
+    "bytes": 10954,
+    "sha256": "951CBC531DEAE0A03DEEE0B5873884359A9E270AE8BE1B116CE973C79CE7DC12"
+  },
+  "premetric_receipt_path": "lab/research/us30-house-recess-cash-long-v1/evidence/US30_HOUSE_RECESS_CASH_LONG_SNAPSHOT_RECEIPT_V1.json",
+  "literature_rule": {
+    "paper": "Robert P. Lamb, K.C. Ma, R. David Pace, and William F. Kennedy, The Congressional Calendar and Stock Market Performance, Financial Services Review 6(1), 1997, 19-25",
+    "doi": "10.1016/S1057-0810(97)90029-9",
+    "primary_pdf_url": "https://openjournals.libs.uga.edu/fsr/article/download/3805/3252/10829",
+    "source_state": "House of Representatives in recess versus in session",
+    "reported_djia_daily_mean": {
+      "recess_percent": 0.0541,
+      "session_percent": 0.0042
+    },
+    "reported_total_return_share_during_recess_percent": 89.0,
+    "transfer": "Hold FPMarkets US30 long only during the regular cash session on causally known House-recess dates",
+    "nonreplication": "The paper uses historical DJIA daily returns; the broker-safe 09:30-to-16:00 cash-session transfer excludes overnight return and is not claimed as an exact replication.",
+    "threshold_direction_or_state_grid_points": 0
+  },
+  "house_rule": {
+    "provider": "Office of the Clerk, U.S. House of Representatives",
+    "dataset": "official bulk House floor proceedings XML",
+    "classification": "For each NYSE date, use the latest strictly prior House legislative day and its announced next legislative date. Equal means HOUSE_OPEN; an earlier target date means HOUSE_RECESS.",
+    "direct_membership_crosscheck": "The causal state must agree exactly with whether the target date appears in the official legislative-date set.",
+    "multiple_announcement_policy": "When repeated same-day proceedings expose several next timestamps, select the earliest announced calendar date strictly after the current legislative date.",
+    "causal_requirement": "The prior legislative day and announced next date must both establish the state before the target 09:30 entry.",
+    "imputation": "none"
+  },
+  "official_session_calendar": {
+    "exchange": "NYSE equities",
+    "from_inclusive": "2022-07-01",
+    "to_exclusive": "2026-08-01",
+    "construction": "all America/New_York weekdays minus exact frozen official exchange-closure dates",
+    "sources": [
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2022_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2023_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2024_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/ICE_NYSE_2025_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/publicdocs/nyse/ICE_NYSE_2026_Yearly_Trading_Calendar.pdf",
+      "https://www.nyse.com/markets/hours-calendars",
+      "https://www.nyse.com/publicdocs/nyse/markets/american-options/rule-interpretations/2025/National_Day_of_Mourning_20250102.pdf"
+    ],
+    "closed_dates": [
+      "2022-07-04", "2022-09-05", "2022-11-24", "2022-12-26",
+      "2023-01-02", "2023-01-16", "2023-02-20", "2023-04-07", "2023-05-29", "2023-06-19", "2023-07-04", "2023-09-04", "2023-11-23", "2023-12-25",
+      "2024-01-01", "2024-01-15", "2024-02-19", "2024-03-29", "2024-05-27", "2024-06-19", "2024-07-04", "2024-09-02", "2024-11-28", "2024-12-25",
+      "2025-01-01", "2025-01-09", "2025-01-20", "2025-02-17", "2025-04-18", "2025-05-26", "2025-06-19", "2025-07-04", "2025-09-01", "2025-11-27", "2025-12-25",
+      "2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25", "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25"
+    ]
+  },
+  "trade_rule": {
+    "symbol": "US30",
+    "timezone": "America/New_York",
+    "entry": "exact 09:30 M1 open",
+    "exit": "exact 15:59 M1 close representing the 16:00 boundary",
+    "direction": "LONG on HOUSE_RECESS; cash on HOUSE_OPEN",
+    "volume": 0.01,
+    "point": 0.01,
+    "trade_contract_size": 1.0,
+    "starting_balance_usd": 100.0,
+    "gross": "midpoint exit minus midpoint entry times volume and contract size",
+    "observed": "exit bid minus entry ask times volume and contract size",
+    "stressed": "midpoint gross less the full entry-plus-exit spread burden",
+    "binding_measure": "stressed_usd",
+    "commission_swap_financing_usd": 0.0,
+    "carry_reason": "Every exposed position opens and closes in one regular cash session",
+    "drawdown": "closed-balance path from a 100 USD starting balance"
+  },
+  "views": {
+    "FIXED_HOUSE_RECESS_US30_CASH_LONG": "sole promotable primary, exposed only on House-recess days",
+    "HOUSE_OPEN_LONG": "nonpromotable disjoint-state long control",
+    "UNCONDITIONAL_LONG": "nonpromotable same-surface regular-cash drift control"
+  },
+  "periods": {
+    "P1_2022H2_2023": {"from_inclusive": "2022-07-01", "to_exclusive": "2024-01-01"},
+    "P2_2024": {"from_inclusive": "2024-01-01", "to_exclusive": "2025-01-01"},
+    "P3_2025": {"from_inclusive": "2025-01-01", "to_exclusive": "2026-01-01"},
+    "P4_2026_JAN_MAY": {"from_inclusive": "2026-01-01", "to_exclusive": "2026-06-01"},
+    "P5_LATEST_2026_JUN_JUL": {"from_inclusive": "2026-06-01", "to_exclusive": "2026-08-01"}
+  },
+  "p1_splits": {
+    "2022H2": ["2022-07-01", "2023-01-01"],
+    "2023H1": ["2023-01-01", "2023-07-01"],
+    "2023H2": ["2023-07-01", "2024-01-01"]
+  },
+  "matched_control": {
+    "cell": "calendar_month x weekday",
+    "cell_value": "HOUSE_RECESS stressed mean minus HOUSE_OPEN stressed mean",
+    "aggregation": "equal weight across cells containing both states",
+    "minimum_dual_state_cells_full": 35,
+    "minimum_dual_state_cells_p1": 15,
+    "minimum_dual_state_cells_confirmation_period": 8,
+    "minimum_dual_state_cells_latest": 2
+  },
+  "economic_gates": {
+    "minimum_eligible_days_by_period": {
+      "P1_2022H2_2023": 360,
+      "P2_2024": 240,
+      "P3_2025": 240,
+      "P4_2026_JAN_MAY": 95,
+      "P5_LATEST_2026_JUN_JUL": 40
+    },
+    "minimum_state_days_by_period": {
+      "P1_2022H2_2023": {"HOUSE_RECESS": 100, "HOUSE_OPEN": 230},
+      "P2_2024": {"HOUSE_RECESS": 75, "HOUSE_OPEN": 150},
+      "P3_2025": {"HOUSE_RECESS": 75, "HOUSE_OPEN": 150},
+      "P4_2026_JAN_MAY": {"HOUSE_RECESS": 20, "HOUSE_OPEN": 65},
+      "P5_LATEST_2026_JUN_JUL": {"HOUSE_RECESS": 12, "HOUSE_OPEN": 25}
+    },
+    "minimum_p1_days_by_split": {"2022H2": 120, "2023H1": 120, "2023H2": 120},
+    "minimum_p1_recess_days_by_split": {"2022H2": 40, "2023H1": 28, "2023H2": 35},
+    "p1_period": "P1_2022H2_2023",
+    "latest_period": "P5_LATEST_2026_JUN_JUL",
+    "confirmation_periods": ["P2_2024", "P3_2025", "P4_2026_JAN_MAY"],
+    "p1_profit_factor_min": 1.05,
+    "p1_net_to_drawdown_min": 1.25,
+    "p1_positive_splits_required": 3,
+    "p1_positive_month_fraction_min": 0.55,
+    "p1_positive_weekdays_required": 4,
+    "confirmation_positive_periods_required": 3,
+    "confirmation_matched_positive_periods_required": 2,
+    "confirmation_control_superiority_periods_required": 2,
+    "confirmation_positive_month_fraction_min": 0.5,
+    "confirmation_positive_month_fraction_periods_required": 2,
+    "confirmation_pooled_profit_factor_min": 1.05,
+    "confirmation_pooled_net_to_drawdown_min": 1.25,
+    "prelatest_profit_factor_min": 1.075,
+    "prelatest_net_to_drawdown_min": 1.5,
+    "prelatest_positive_month_fraction_min": 0.55,
+    "prelatest_top_five_positive_day_share_max": 0.35,
+    "prelatest_positive_weekdays_required": 4,
+    "nominal_drawdown_max_percent": 20.0,
+    "practical_drawdown_max_percent": 21.2,
+    "latest_nominal_floor_usd": 0.0,
+    "latest_practical_reversal_fraction": 0.25,
+    "full_profit_factor_min": 1.05,
+    "full_net_to_drawdown_min": 1.25,
+    "full_positive_weekdays_required": 4,
+    "retention_limit": 1
+  },
+  "control_superiority": {
+    "state_control": "primary stressed mean per exposed day must exceed HOUSE_OPEN_LONG stressed mean per exposed day",
+    "unconditional_control": "primary stressed net-to-drawdown must exceed UNCONDITIONAL_LONG stressed net-to-drawdown",
+    "both_required": true
+  },
+  "verdict_taxonomy": {
+    "nominal_pass": "PASS_RETAIN_ONE_FIXED_HOUSE_RECESS_US30_CASH_LONG_SEED",
+    "practical_pass": "PASS_PRACTICAL_RETAIN_ONE_FIXED_HOUSE_RECESS_US30_CASH_LONG_SEED",
+    "strong_null": "VALID_NO_HOUSE_RECESS_US30_CASH_LONG_AFTER_COST_NO_SEED",
+    "other_valid": "AMBIGUOUS_HOUSE_RECESS_US30_CASH_LONG_NO_SEED",
+    "environment_design_or_engineering_fault": "CORRECTION_STATE_WITHOUT_RESEARCH_VERDICT"
+  },
+  "closed_neighborhood": [
+    "Senate calendar, joint-Congress calendar, committee schedule, presidential calendar or state legislature",
+    "alternate House open/recess definition, intraday adjournment timestamp, recess length, lead length or transition-day filter",
+    "direction inversion, House-open short, weekday/month exclusion or promotion of either control",
+    "close-to-close, overnight, premarket, after-hours, futures, ETF, US100, US500 or another carrier",
+    "alternate entry/exit clock, stop, trailing, spread substitution, sizing, leverage, capital, allocation or fixed-candidate integration rescue"
+  ]
+}

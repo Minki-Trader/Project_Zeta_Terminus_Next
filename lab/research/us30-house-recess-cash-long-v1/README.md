@@ -1,0 +1,13 @@
+# US30 House recess cash long v1
+
+Unit 115 is the active Program 2 / macro→meso Lab family. It transfers the fixed primary-literature House-of-Representatives recess state to one exact FPMarkets US30 rule: 0.01 lot LONG from the exact 09:30 ET M1 open to the 15:59 M1 close on causally known `HOUSE_RECESS` dates, and cash on `HOUSE_OPEN` dates. No state, direction, threshold, clock, carrier, spread, size or integration grid exists.
+
+The official House Clerk bulk proceedings contain 790 unique legislative dates from 2022-01-03 through 2026-08-27 and reproduce every announced-next-date chain without mismatch. For each target NYSE session, the latest strictly prior House day announces the next House date 1–5 calendar days ahead. That pre-entry announcement yields 337 recess and 680 open dates across 1,017 exact-boundary-eligible sessions; direct House-date membership agrees on every date.
+
+This is an outcome-unopened declaration. The premetric run read only the 1,617,902 M1 timestamps, not prices or spreads. It froze P1/P2/P3/P4/latest geometry at `374/250/248/102/43`, recess counts `122/87/86/27/15`, P1 split recess counts `49/33/40`, and 157 full dual-state month×weekday cells. Before the family opened, a four-row first/last schema probe displayed no target cash boundary, joined no House state and calculated no return or economic metric; that disclosure is preserved explicitly.
+
+Gross, executable observed and binding full-entry-plus-exit-spread stress are separate. `HOUSE_OPEN_LONG` and `UNCONDITIONAL_LONG` are nonpromotable controls; the primary also must beat an equal-weight calendar-month×weekday recess-minus-open comparison. P1, P2-P4, prelatest, latest, full, breadth, concentration, DD and both control-superiority gates were frozen before target prices opened. At most one exact `FIXED_HOUSE_RECESS_US30_CASH_LONG` information seed can survive.
+
+The paper uses historical DJIA daily returns. This broker-safe cash-session transfer intentionally omits overnight return and is not an exact replication or a claim against the paper. The entire House/Senate/state variant, calendar transform, direction, horizon, carrier, clock, cost, size and integration neighborhood closes with this bundle. No MQL, SET, compile, MT5, Strategy Tester, runtime, broker/account query, Live mutation or fixed-candidate change exists.
+
+The declaration must reach `origin/main` before the one allowed complete formal aggregation. Environment, design or engineering faults remain correction states without a research verdict. After a complete valid aggregation, the family closes once and the continuous Goal returns immediately to serial Optimization whole-map discovery without a reporting pause.
