@@ -1,0 +1,365 @@
+{
+  "schema": "zeta-next-optimization-post-august-anchor-whole-map-audit-v1",
+  "created_at_local": "2026-08-30",
+  "status": "NO_INDEPENDENT_READY_MECHANISM_POST_AUGUST_SUPPORT_FIXED_DEVELOPMENT_CANDIDATE_STRENGTHENED",
+  "boundary_type": "scheduler_and_source_readiness_audit_not_an_optimization_campaign_or_research_unit",
+  "parent_main_commit": "aa909b965478c71a62617ed950e1a3939375bb72",
+  "fixed_development_candidate": {
+    "campaign": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "designation": "sole_fixed_replacement_development_candidate",
+    "status_after_audit": "STRENGTHENED_UNCHANGED",
+    "live_authority": false
+  },
+  "pinned_inputs": [
+    {
+      "path": "optimization/evidence/OPTIMIZATION_POST_FORMULA_INTERACTION_WHOLE_MAP_AUDIT_V1.json",
+      "bytes": 10015,
+      "sha256": "6A7E3F760435155C06BDB3ABE1DFC268CF98C44C775B438CF93F2D2DFC0176FD"
+    },
+    {
+      "path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/evidence/DD20_PAIRED_MONTH_STABILITY_MT5_RESULT_V1.json",
+      "bytes": 9880,
+      "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+    },
+    {
+      "path": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/evidence/DD20_PAIRED_ANCHOR_AUGUST_2026_MT5_RESULT_V1.json",
+      "bytes": 19334,
+      "sha256": "AEB86F104206005788D724BC5C6BDFA227DB47BAA3B31A80C6F30F2D7D9B0799"
+    },
+    {
+      "path": "lineage/REPOSITORY_INTEGRITY_ERRATA_V1.json",
+      "bytes": 3203,
+      "sha256": "FBC2E779D481E7CA290E4EB1D6F490AEC7C7314C0904EE6BCD84E86C1B1B448C"
+    }
+  ],
+  "new_information": {
+    "campaign": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/",
+    "classification": "VALID_FIXED_PAIRED_ANCHOR_AUGUST_THROUGH_28_SUPPORT",
+    "interval": "2026-08-01 through exclusive 2026-08-29",
+    "actual_stressed_net_usd": [29.62, 28.586],
+    "native_relative_equity_drawdown_pct": 13.44,
+    "closed_lifecycles": 29,
+    "active_components_positive": 5,
+    "active_components_total": 5,
+    "second_half_stressed_net_usd": 3.294,
+    "final_week_stressed_net_usd": -1.118,
+    "risk_admission_skips": 8,
+    "stop_loss_exits": 3,
+    "interpretive_limit": "The fixed candidate did not consume August for selection, but broader project work had observed portions of August. August 31 is excluded. This is bounded near-month evidence, not a pristine project-wide OOS or completed-month result."
+  },
+  "cross_window_economic_recomparison": {
+    "windows": [
+      {
+        "name": "selection",
+        "actual_stressed_net_usd": [5786.63, 5477.524],
+        "native_relative_equity_drawdown_pct": 20.256887565,
+        "closed_lifecycles": 1428,
+        "stressed_net_per_close_usd": 3.835801120,
+        "risk_admission_skip_rate_pct_of_opens_plus_blocks": 11.851851852,
+        "stop_exit_rate_pct_of_closes": 9.103641457,
+        "active_component_signs": [1, 1, 1, 1, 1]
+      },
+      {
+        "name": "proxy_selected_native_june_july",
+        "actual_stressed_net_usd": [32.74, 30.626],
+        "native_relative_equity_drawdown_pct": 18.675302130,
+        "closed_lifecycles": 54,
+        "stressed_net_per_close_usd": 0.567148148,
+        "risk_admission_skip_rate_pct_of_opens_plus_blocks": 16.923076923,
+        "stop_exit_rate_pct_of_closes": 31.481481481,
+        "active_component_signs": [1, -1, -1, 1, 1],
+        "independent_oos": false
+      },
+      {
+        "name": "august_through_28",
+        "actual_stressed_net_usd": [29.62, 28.586],
+        "native_relative_equity_drawdown_pct": 13.44,
+        "closed_lifecycles": 29,
+        "stressed_net_per_close_usd": 0.985724138,
+        "risk_admission_skip_rate_pct_of_opens_plus_blocks": 21.621621622,
+        "stop_exit_rate_pct_of_closes": 10.344827586,
+        "active_component_signs": [1, 1, 1, 1, 1]
+      }
+    ],
+    "component_order": ["Range61", "Range64", "Cross", "Pressure", "Return"],
+    "components_positive_in_all_three_windows": ["Range61", "Pressure", "Return"],
+    "components_negative_in_june_july_but_positive_in_selection_and_august": ["Range64", "Cross"],
+    "range64_plus_cross_stressed_net_usd": {
+      "selection": 1443.384,
+      "june_july": -20.160,
+      "august_through_28": 10.160
+    },
+    "conclusion": "The two June-July negative components both recovered in August while the full portfolio remained positive in every compared window. Retrospective component removal or month-state weighting would convert one already-consumed weak interval into a rule and sacrifice positive selection and August economics; no causal state selects that action."
+  },
+  "apparent_clues_and_disposition": [
+    {
+      "clue": "First-half concentration and a slightly negative final August week",
+      "economic_facts": "The first half supplies 88.476877 percent of August stressed net; the second half remains +3.294 and the final week is -1.118.",
+      "disposition": "No previsible state, external event or independent causal action is attached. A late-month, week, rolling-window, component or threshold reaction would be an adjacent retrospective rescue and is not opened."
+    },
+    {
+      "clue": "Risk-admission skip rate rises across the three observed windows",
+      "economic_facts": "Opens-plus-blocks rates are 11.851852 / 16.923077 / 21.621622 percent; six of eight August blocks are Cross.",
+      "disposition": "The blocked opportunities have no realized counterfactual in this run, all five admitted components are positive, and allocation/admission/cap/reservation/occupancy neighborhoods are already closed. The rate alone cannot select a risk action."
+    },
+    {
+      "clue": "June-July stop-exit rate is high",
+      "economic_facts": "Stop rates are 9.103641 / 31.481481 / 10.344828 percent in selection / June-July / August.",
+      "disposition": "The August normalization breaks persistence. Stops, headroom, hold, giveback, peer exit and open-exposure management neighborhoods are already closed; no new management treatment is selected."
+    },
+    {
+      "clue": "August native PF, Recovery and Sharpe exceed June-July values",
+      "economic_facts": "August reports 1.93 / 1.65 / 9.32 across only 29 closes.",
+      "disposition": "These are supportive quality observations with a small sample, not a distinct economic action or a reason to optimize a reporting statistic."
+    }
+  ],
+  "program_recomparison": {
+    "program_1_entry_signal_market_structure": "August adds no new signal feature, direction or market-structure state. Component sign recovery argues against a retrospective Range64/Cross removal; formula, threshold, overlap and router neighborhoods remain frozen.",
+    "program_2_external_market_event": "No external causal state is joined to the August outcome. Calendar, macro, participation, flow, weather and political-state families remain closed or nonbridging; a date segment alone cannot create an event treatment.",
+    "program_3_order_time_session": "No new order/session contrast exists. The prior execution-lane split is closed, and US100 Cross still causally reads US500 data even though August US500 is read-only.",
+    "program_4_position_management_exit": "Three August stops and one weak week do not define a persistent or previsible management state. Existing stop, hold, ARC, peer-exit, giveback and drawdown-release neighborhoods remain closed.",
+    "program_5_portfolio_capital_risk": "Higher observed block incidence is real but lacks blocked-trade economics and points directly into already-closed cap, admission, reservation, occupancy, allocation and weight neighborhoods. No independent capital action is ready.",
+    "program_7_diagnostic_causal_meta": "Cross-window signs, PF and concentration explain the new evidence without creating a distinct intervention. Another subgroup, month, bootstrap, ratio or significance statistic would not change an economic decision."
+  },
+  "natural_rlo1_readiness_metadata_only": {
+    "rows_or_economics_read": false,
+    "rechecked_at_local": "2026-08-30",
+    "files": [
+      {"path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/research/canonical/research-candidates.csv", "bytes": 30266, "last_write_local": "2026-08-28T23:00:00.5099301+09:00", "sha256": "CBEC8F934C6EF4E9E3B5A68153088E77FEF6D1C74B4EA064AF6771BA32422448"},
+      {"path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/research/canonical/research-lifecycles.csv", "bytes": 6773, "last_write_local": "2026-08-28T04:00:00.5708370+09:00", "sha256": "396E7007A8216CFE59AA00863718930A1A6CD50D16665072DE95F2135DF71D2D"},
+      {"path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/research/canonical/research-state-a.csv", "bytes": 1199, "last_write_local": "2026-08-29T07:55:55.8763427+09:00", "sha256": "F8C38217401E7A5430520F6B58BFF6BEAEC2AE0CE18BA6FE2013E11A74ECB09C"},
+      {"path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/research/canonical/research-state-b.csv", "bytes": 1199, "last_write_local": "2026-08-29T07:55:00.1957496+09:00", "sha256": "D6054AB1AA446D76E9F904C8A1A234484D632CF32129A5DF604C38825AB6AB17"}
+    ],
+    "unchanged_since_post_formula_audit": true,
+    "terminal64_processes": 0,
+    "conclusion": "No new complete naturally written RLO1 lifecycle exists. Live files were not opened, Live was not restarted, and broker/account state was not queried."
+  },
+  "independent_source_readiness_audit": {
+    "method": "Outcome-free source and causal-action screening before any target economics, campaign, Lab unit or MT5 path is opened.",
+    "target_economics_opened": false,
+    "new_lab_unit_opened": false,
+    "new_optimization_campaign_opened": false,
+    "mt5_or_tester_path_opened": false,
+    "candidate_dispositions": [
+      {
+        "candidate": "first-half-hour or opening-window momentum",
+        "primary_program": 3,
+        "disposition": "NOT_ELIGIBLE_AS_SUCCESSOR",
+        "reason": "The mechanism is directly adjacent to the clock/window neighborhood frozen by Lab Unit 108. The August first-half concentration is an outcome segment, not an independently timed opening-state action."
+      },
+      {
+        "candidate": "volatility-managed exposure or volatility scaling",
+        "primary_program": 5,
+        "disposition": "NOT_ELIGIBLE_AS_SUCCESSOR",
+        "reason": "Volatility scaling, risk magnitude, cap, occupancy, admission and related allocation neighborhoods are already frozen. A new label does not provide an independent mechanism."
+      },
+      {
+        "candidate": "FINRA margin debt or broad financial-conditions timing",
+        "primary_program": 2,
+        "disposition": "NOT_READY",
+        "reason": "The reviewed primary evidence does not provide a fixed, currently reproducible causal direction and hold action that is independent of already-closed rates, macro and risk neighborhoods. No target outcome was inspected to manufacture one."
+      },
+      {
+        "candidate": "technical-composite equity-premium timing",
+        "primary_program": 1,
+        "disposition": "NOT_READY",
+        "reason": "The contemporary primary replication reports weak post-GFC and investment performance, while implementation would reopen already-frozen formula and technical-signal neighborhoods."
+      },
+      {
+        "candidate": "annual equity issuance, accrual, cash-flow-accrual or year-end growth predictors",
+        "primary_program": 2,
+        "disposition": "NOT_READY",
+        "reason": "Annual cadence, causal reporting lag, exact current public carrier and a fixed portfolio action are not jointly pinned. The reviewed replication does not establish an immediately usable intrayear intervention for this campaign."
+      },
+      {
+        "candidate": "aggregate short-interest index SII",
+        "primary_program": 2,
+        "disposition": "SOURCE_CONSTRUCTION_NOT_EXACTLY_CONTINUABLE",
+        "reason": "This was the strongest non-adjacent candidate, but exact current construction cannot be reproduced from the official FINRA file alone. Replacing missing denominators or universe filters would create a new proxy hypothesis rather than implement the published SII."
+      },
+      {
+        "candidate": "AAII weekly bullish-minus-bearish contrarian state",
+        "primary_program": 2,
+        "disposition": "NO_TRUE_POST_PUBLICATION_DECISIONS_AT_THE_PUBLISHED_FIXED_THRESHOLD",
+        "reason": "The official history is current and the published action is reproducible, but all 49 official observations after the paper sample ended have absolute bullish-minus-bearish spread at or below 30 percentage points. The exact selected rule therefore makes zero independent decisions; reusing 2022-2025 would overlap the selection sample, and relaxing the threshold would create a new searched hypothesis."
+      },
+      {
+        "candidate": "aggregate SEC Form 4 insider sentiment",
+        "primary_program": 2,
+        "disposition": "NO_FIXED_IMMEDIATE_EXECUTABLE_ACTION_AND_ALREADY_REJECTED_OUTCOME_FREE",
+        "reason": "The SEC official flattened carrier is current through 2026 Q2, but the primary literature uses multiple standardized transaction/share/value constructions and overlapping 1/3/6/12-month continuous regressions rather than one fixed trade threshold and action. A sign rule would be a new hypothesis, while the repository's post-Unit-112 source screen already rejected Form 4 for horizon and causal-action readiness."
+      },
+      {
+        "candidate": "weekend Bitcoin or crypto-to-equity price discovery",
+        "primary_program": 2,
+        "disposition": "NOT_ELIGIBLE_AS_AN_INDEPENDENT_SUCCESSOR",
+        "reason": "The permitted lineage already records multiple crypto cross-asset flow, risk-transmission and Bitcoin-perpetual deleveraging families, including a no-repeatable-after-cost decision. Moving the same external crypto role to a weekend/Monday horizon would be an adjacent source-clock relabel, not a new attributable mechanism."
+      }
+    ],
+    "short_interest_exactness_audit": {
+      "published_construction": {
+        "ewsi": "Equal-weighted mean across eligible firms of short positions divided by shares outstanding, after a price-above-USD-5 filter and a market-capitalization filter above the NYSE fifth percentile.",
+        "sii": "Standardized residual from a linear time-trend regression of log(EWSI).",
+        "causal_availability": "FINRA publishes the twice-monthly security-level position snapshots on the seventh business day after the reporting settlement date.",
+        "fixed_direction_and_horizon": "Higher SII predicts lower next-month aggregate returns in the published mechanism."
+      },
+      "author_carrier": {
+        "source_page": "https://www.matthewringgenberg.com/data",
+        "update_file_bytes": 32877,
+        "update_file_sha256": "31C2D271444263F3E3A45E31C0CB6F556DA5E1BC2F8330361AB09446103DF3DE",
+        "observations": 588,
+        "first_month": "1973-01",
+        "last_month": "2021-12",
+        "out_of_sample_observations": 528,
+        "out_of_sample_first_month": "1978-01",
+        "out_of_sample_last_month": "2021-12",
+        "windows_code_zip_bytes": 542930,
+        "windows_code_zip_sha256": "643326370C83F47D74DA482AA95A58558A39E9497235E30346EB550C6B5334A6"
+      },
+      "official_current_carrier": {
+        "source_page": "https://www.finra.org/finra-data/browse-catalog/equity-short-interest",
+        "sample_file": "FINRA historical equity short-interest file for settlement 2026-07-31",
+        "sample_file_bytes": 2184507,
+        "sample_file_sha256": "83243898B616055E3EEEEF3E4A2EB4768FC74169FA0C96A54F27D42D2F1FB320",
+        "rows_including_header": 22342,
+        "data_records": 22341,
+        "delimiter": "pipe",
+        "field_count": 14,
+        "fields": [
+          "accountingYearMonthNumber",
+          "symbolCode",
+          "issueName",
+          "issuerServicesGroupExchangeCode",
+          "marketClassCode",
+          "currentShortPositionQuantity",
+          "previousShortPositionQuantity",
+          "stockSplitFlag",
+          "averageDailyVolumeQuantity",
+          "daysToCoverQuantity",
+          "revisionFlag",
+          "changePercent",
+          "changePreviousNumber",
+          "settlementDate"
+        ],
+        "required_but_absent_for_exact_ewsi": [
+          "shares outstanding at the construction date",
+          "price for the USD 5 eligibility filter",
+          "market capitalization for the NYSE fifth-percentile eligibility filter",
+          "a pinned security-history join that preserves the paper's exact universe"
+        ]
+      },
+      "engineering_corrections": [
+        "A PowerShell temporary-directory invocation used an unsupported parameter combination and was corrected locally.",
+        "The bundled Poppler binary path was discovered from the dependency layout after an initial path assumption and the two-page source README was then rendered and read.",
+        "A console encoding mismatch during PDF extraction was corrected by writing UTF-8 bytes."
+      ],
+      "research_classification": "PRE_UNIT_SOURCE_READINESS_NOT_MET",
+      "optimization_failure": false,
+      "engineering_failure": false,
+      "proxy_substitution_authorized": false,
+      "conclusion": "The published SII remains economically interesting, but the author update ends in 2021-12 and the current official FINRA carrier lacks exact EWSI denominators and filters. No approximation is opened, no target economics are read, and no research success or failure is declared."
+    },
+    "aaii_weekly_sentiment_exactness_audit": {
+      "published_source": {
+        "title": "Can AAII Beat the Market? A Long-Horizon Backtest of Sentiment-Driven Strategies in E-mini S&P 500",
+        "authors": [
+          "Raul Gomez Martinez",
+          "Maria Luisa Medrano-Garcia",
+          "Aref Mahdavi Ardekani",
+          "Damien Dupre"
+        ],
+        "source_page": "https://ssrn.com/abstract=6143986",
+        "status": "preprint_not_peer_reviewed",
+        "version_date": "2026-01-28",
+        "pdf_bytes": 378712,
+        "pdf_sha256": "007DEE611181E0855CE2FAB7424BB3566D92852240441D6E69458FF1622D2B24",
+        "sample": "2001-01-01 through 2025-09-20",
+        "instrument": "back-adjusted E-mini S&P 500 futures",
+        "signal": "S equals AAII bullish percentage minus bearish percentage",
+        "fixed_published_action": "Long one contract for one week when S is below -30 percentage points, short one contract for one week when S is above +30 percentage points, otherwise flat; enter on the first trading day following publication.",
+        "selection_caveat": "The paper evaluated absolute thresholds of 0, 10, 20, 30, 40 and 50 percentage points and selected 30 on the full reported sample. It reports no train-test split and no formal data-snooping correction.",
+        "reported_30_point_economics": {
+          "net_pnl_usd": 85366,
+          "profit_factor": 1.11,
+          "sharpe": 0.29,
+          "annual_roi_pct": 3.14,
+          "pnl_to_drawdown": 2.90,
+          "market_sessions": 2519,
+          "winning_ratio_pct": 53.0
+        },
+        "reported_passive_long_context": {
+          "net_pnl_usd": 191559,
+          "profit_factor": 1.08,
+          "sharpe": 0.36,
+          "annual_roi_pct": 2.63,
+          "pnl_to_drawdown": 2.38
+        }
+      },
+      "official_current_carrier": {
+        "results_page": "https://www.aaii.com/sentimentsurvey/sent_results?reload=true",
+        "history_file": "https://www.aaii.com/files/surveys/sentiment.xls",
+        "history_file_bytes": 1313792,
+        "history_file_sha256": "16A66EFE16FAC6E688EF86F93B29A05171CAC852BEC86CF359E5D8DCB79E3B5F",
+        "valid_observations": 2038,
+        "first_reported_date": "1987-07-24",
+        "last_reported_date": "2026-08-27",
+        "post_paper_sample_start": "2025-09-21",
+        "post_paper_observations": 49,
+        "post_paper_long_decisions": 0,
+        "post_paper_short_decisions": 0,
+        "post_paper_total_decisions": 0,
+        "boundary_rule": "Strictly greater than 30 percentage points in absolute spread, matching the paper's S < -tau and S > tau inequalities.",
+        "target_prices_or_returns_opened": false
+      },
+      "causal_timing_note": "AAII's current official page says the weekly survey closes Wednesday 23:59 Eastern and results are published Thursday morning, whereas the preprint describes Thursday 16:00 Eastern. A future unit would need to freeze a conservative post-release execution time before reading outcomes; the discrepancy is secondary here because the true post-paper interval contains zero fixed-threshold decisions.",
+      "adjacency_note": "The information source is a Program 2 external sentiment state rather than the pure weekday treatment closed by Lab Unit 111. Its Friday implementation surface would still require an explicit non-calendar causal declaration, but no such unit is opened because the independent decision census is empty.",
+      "engineering_correction": "The official carrier is legacy BIFF XLS. The original bytes remained unchanged; a hidden read-only Excel instance produced a temporary OpenXML copy so the required spreadsheet reader could inspect values. This format bridge is not a research or engineering failure and is not retained as evidence.",
+      "research_classification": "PRE_UNIT_INDEPENDENT_DECISION_SUPPORT_NOT_MET",
+      "optimization_failure": false,
+      "engineering_failure": false,
+      "new_lab_unit_opened": false,
+      "threshold_relaxation_authorized": false,
+      "conclusion": "The exact published 30-point AAII rule is currently reproducible but has no independent post-paper decisions. No target economics, Lab unit, optimization campaign or tester path is opened, and no success or failure is declared."
+    },
+    "overall_disposition": "NO_INDEPENDENT_SOURCE_WITH_EXACT_CURRENT_CONSTRUCTION_AND_FIXED_ACTION_IS_READY",
+    "effect_on_fixed_candidate": "NONE; the fixed development candidate remains strengthened and unchanged."
+  },
+  "verdict": {
+    "classification": "NO_INDEPENDENT_READY_MECHANISM_POST_AUGUST_SUPPORT_FIXED_DEVELOPMENT_CANDIDATE_STRENGTHENED",
+    "optimization_failure": false,
+    "engineering_or_environment_failure": false,
+    "fixed_candidate_changed": false,
+    "fixed_candidate_rejected": false,
+    "new_lab_unit_opened": false,
+    "new_optimization_campaign_opened": false,
+    "mt5_or_tester_path_opened": false,
+    "meaning": "The only new complete economic evidence supports the fixed candidate. Its internal caution signals have no independent causal action and point into closed adjacent neighborhoods. This is a readiness boundary, not Goal completion or a reporting pause."
+  },
+  "next_readiness_conditions": [
+    "materially new naturally written complete RLO1 lifecycle evidence beyond the already consumed three-close snapshot",
+    "a new continuity- or lineage-pinned economic mechanism whose exact role has not already been incorporated, tested or frozen",
+    "an independent source with exact causal timing, a fixed actionable contrast, sufficient sample support and complete economic terminal decisions",
+    "for AAII specifically, nonzero decisions strictly after the published selection sample under the unchanged 30-point threshold and a predeclared conservative post-release execution time"
+  ],
+  "forbidden_automatic_successors": [
+    "late-August, final-week, half-month, month-end, component, direction or symbol rescue",
+    "Cross-specific cap, reservation, admission-order, weight, threshold, risk or blocked-opportunity imputation",
+    "stop, hold, exit, giveback, open-exposure or drawdown-governor retune",
+    "formula, weight, risk, ladder, occupancy, allocation or candidate-quality-statistic neighbor",
+    "AAII threshold relaxation, sign inversion, holding-period search, release-time search or reuse of the paper's 2001-2025 selection sample as independent evidence",
+    "Live restart, broker/account polling, synthetic Live rows or Master terminal use"
+  ],
+  "environment": {
+    "system_drive_free_gib": 54.837,
+    "mandatory_storage_sweep_threshold_gib": 30,
+    "storage_sweep_required": false,
+    "master_live_lab_runtime_or_output_modified": false,
+    "broker_account_position_order_or_deal_query": false,
+    "live_surface": "METADATA_ONLY_UNCHANGED"
+  },
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "marker": "OPTIMIZATION_POST_AUGUST_ANCHOR_WHOLE_MAP_AUDIT_NO_READY_INDEPENDENT_MECHANISM_FIXED_CANDIDATE_STRENGTHENED_GOAL_ACTIVE"
+}
