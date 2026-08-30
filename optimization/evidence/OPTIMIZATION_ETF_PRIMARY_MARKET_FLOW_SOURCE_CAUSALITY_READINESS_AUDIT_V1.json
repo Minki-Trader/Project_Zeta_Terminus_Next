@@ -1,0 +1,225 @@
+{
+  "schema": "zeta-next-optimization-etf-primary-market-flow-source-causality-readiness-audit-v1",
+  "created_at_local": "2026-08-30",
+  "status": "PRE_UNIT_SOURCE_CAUSALITY_NOT_READY_NO_RESEARCH_UNIT_OPENED_FIXED_DEVELOPMENT_CANDIDATE_RETAINED",
+  "boundary_type": "pre-unit-independent-source-and-causality-readiness-screen_not_a_research_unit_or_optimization_campaign",
+  "parent_main_commit": "53a61a2e1d9561fd2a693a244659a54a5efb4f2b",
+  "question": "Can point-in-time primary-market flow and premium/discount information for DIA, QQQ and SPY supply a complete independent causal action for the fixed US30/US100 portfolio, including US500 only in its actual read-only Cross-context role, before any project outcome is opened?",
+  "screen_contract": {
+    "prospective_program_if_ready": 1,
+    "prospective_height_if_ready": "meso",
+    "research_unit_allocated": false,
+    "target_outcomes_read": false,
+    "direction_or_threshold_selected_from_project_outcome": false,
+    "proxy_opened": false,
+    "mt5_opened": false,
+    "lab_unit_opened": false,
+    "optimization_campaign_opened": false,
+    "live_or_runtime_surface_opened": false
+  },
+  "published_mechanism": {
+    "primary_paper": {
+      "title": "Are the flows of exchange-traded funds informative?",
+      "authors": ["Liao Xu", "Xiangkang Yin", "Jing Zhao"],
+      "journal_year": "Financial Management, 2022",
+      "doi": "10.1111/fima.12396",
+      "publisher_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fima.12396",
+      "sample": "366 passive US equity ETFs, February 2001 through December 2016, with at least 20 percent primary-market-flow days",
+      "daily_flow_formula": "(shares_outstanding_t - shares_outstanding_t_minus_1) / shares_outstanding_t_minus_1",
+      "decomposition": "Flow_i_t = beta0_i + beta1_i * Imbalance_i_t + beta2_i * Mispricing_i_t + residual_i_t",
+      "unexpected_flow_carrier": "The residual is the unexpected flow orthogonal to demand-driven and arbitrage-driven components; it is not raw sponsor flow or premium/discount alone.",
+      "required_imbalance": "Buyer-initiated minus seller-initiated ETF trade volume, scaled by prior-day shares outstanding; the paper classifies trades with the Lee-Ready algorithm using Thomson Reuters Tick History trade and quote data.",
+      "required_mispricing": "ETF close price minus NAV, scaled by close price, sourced in the paper from Bloomberg.",
+      "estimation_timing": "One-year rolling historical window per ETF to avoid look-ahead bias.",
+      "recording_timing_constraint": "The paper states that sponsor recording can differ by one or more days and uses Bloomberg-adjusted flow data; weekly robustness is used to reduce timing peculiarities.",
+      "published_action": "A cross-sectional portfolio across the ETF sample that is long positive-unexpected-flow ETFs and short negative-unexpected-flow ETFs for next-day ETF returns.",
+      "published_action_not_claimed": "The paper does not prevalidate a fixed raw-flow or premium/discount sign rule for DIA, QQQ and SPY alone, nor a transfer rule into FPMarkets US30, US100 or US500 CFDs."
+    },
+    "adverse_transfer_evidence": {
+      "title": "Intraday arbitrage between ETFs and their underlying portfolios",
+      "authors": ["Travis Box", "Ryan Davis", "Richard B. Evans", "Andrew Lynch"],
+      "journal_year": "Journal of Financial Economics, 2021",
+      "doi": "10.1016/j.jfineco.2021.04.023",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0304405X21001537",
+      "relevance": "Across 423 passive US equity ETFs, ETF returns did not lead portfolio prices and daily primary-market activity showed little relation to constituent returns. This does not disprove the unexpected-flow paper's ETF-return result, but it is direct adverse evidence against assuming ETF activity causally transfers into the corresponding underlying index and then into this broker's CFD action."
+    }
+  },
+  "official_source_captures": {
+    "state_street_spy": {
+      "project_role_screened": "possible US500 context source only; US500 is not a third adjudicated book",
+      "product_page": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-500-etf-trust-spy",
+      "premium_discount_xlsx": {
+        "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/pdhist-us-en-spy.xlsx",
+        "http_status": 200,
+        "bytes": 30031,
+        "sha256": "CB011DC33AC0DE5F74E7E8314D28B33BCFD89618AF04422EEC5F29770C3C153C",
+        "valid_daily_rows": 415,
+        "oldest_date": "2025-01-02",
+        "newest_date": "2026-08-28",
+        "fields": ["Date", "Premium/Discount"]
+      },
+      "nav_history_xlsx": {
+        "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/navhist-us-en-spy.xlsx",
+        "http_status": 200,
+        "bytes": 276474,
+        "sha256": "D340564AACAD4045890AA939EB7FBAC181D3CF934E34D9F5394A88457C7B8F6B",
+        "valid_daily_rows": 5724,
+        "oldest_date": "2003-12-01",
+        "newest_date": "2026-08-27",
+        "fields": ["Date", "NAV", "Shares Outstanding", "Total Net Assets"],
+        "rows_since_2022_07_01": 1043,
+        "adjacent_shares_outstanding_changes_since_2022_07_01": 1039,
+        "adjacent_comparisons_since_2022_07_01": 1042
+      }
+    },
+    "state_street_dia": {
+      "project_role_screened": "possible US30-book source",
+      "product_page": "https://www.ssga.com/us/en/individual/etfs/state-street-spdr-dow-jones-industrial-average-etf-trust-dia",
+      "premium_discount_xlsx": {
+        "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/pdhist-us-en-dia.xlsx",
+        "http_status": 200,
+        "bytes": 30017,
+        "sha256": "5CA443D1818C29554AF30EE00C0BCA6C70A493B17E3DC6826D65CA514576CA70",
+        "valid_daily_rows": 415,
+        "oldest_date": "2025-01-02",
+        "newest_date": "2026-08-28",
+        "fields": ["Date", "Premium/Discount"]
+      },
+      "nav_history_xlsx": {
+        "url": "https://www.ssga.com/library-content/products/fund-data/etfs/us/navhist-us-en-dia.xlsx",
+        "http_status": 200,
+        "bytes": 267737,
+        "sha256": "17CDBC3E756C94AC76DBFD137D75E9BFD7FA78D9CA1ADF7254A30642C2B4C711",
+        "valid_daily_rows": 5724,
+        "oldest_date": "2003-12-01",
+        "newest_date": "2026-08-27",
+        "fields": ["Date", "NAV", "Shares Outstanding", "Total Net Assets"]
+      }
+    },
+    "invesco_qqq": {
+      "project_role_screened": "possible US100-book source",
+      "product_page": "https://www.invesco.com/us/en/financial-products/etfs/invesco-qqq-trust-series-1.html",
+      "cusip": "46090E103",
+      "current_price_listing_api": {
+        "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46090E103/prices?idType=cusip&variationType=priceListing&productType=ETF&productSubType=ETF",
+        "http_status": 200,
+        "bytes": 519,
+        "sha256": "CF798ED411F3822571974F961CE91BE8614BACAE4EAA9CA81CADBFA723CF4A7",
+        "effective_date": "2026-08-28",
+        "shares_outstanding": 678600000,
+        "limitation": "Current snapshot only; no historical shares-outstanding series."
+      },
+      "premium_discount_api": {
+        "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46090E103/navs?idType=cusip&productType=ETF&variationType=premiumDiscounts",
+        "http_status": 200,
+        "bytes": 48607,
+        "sha256": "4FEA9FF2C5657CC7BD3E6E99CB48BB44F62C88862719CB16A8EF4887F5A1CB58",
+        "available_periods": [
+          {"label": "2026 Q2", "oldest_date": "2026-04-01", "newest_date": "2026-06-30", "calendar_rows": 91},
+          {"label": "2026 Q1", "oldest_date": "2026-01-01", "newest_date": "2026-03-31", "calendar_rows": 90},
+          {"label": "2025 previous year", "oldest_date": "2025-01-01", "newest_date": "2025-12-31", "calendar_rows": 365}
+        ],
+        "limitation": "Only the previous calendar year and completed current-year quarters are exposed. Calendar rows carry values through weekends and holidays; no 2022H2-2024 history, current Q3 daily history, release timestamp or vintage is supplied."
+      },
+      "frequency_summary_api": {
+        "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46090E103/frequencyPremiumDiscounts?idType=cusip&productType=ETF&loadType=initial",
+        "http_status": 200,
+        "bytes": 2137,
+        "sha256": "24BF4CDEB6A5A0E8CCD5C1D337B73CCB06410B8D94E2D99B33817F50D4500D17",
+        "limitation": "Quarterly and annual frequency bins only; not a daily flow carrier."
+      },
+      "nav_history_api": {
+        "url": "https://dng-api.invesco.com/cache/v1/accounts/en_US/shareclasses/46090E103/navs?idType=cusip&productType=ETF",
+        "http_status": 200,
+        "bytes": 173756,
+        "sha256": "FD7A728F013155189D9612F3A25FB89BF593B015A4C157E7B23CCBE00C6C223A",
+        "oldest_date": "2016-07-20",
+        "newest_date": "2026-08-30",
+        "calendar_rows": 3694,
+        "series": ["NAV"],
+        "unique_nav_values": 2542,
+        "adjacent_equal_nav_values": 1152,
+        "limitation": "NAV only, with non-trading-day carry; no historical shares outstanding, total net assets, close price, release timestamp or vintage."
+      }
+    }
+  },
+  "causal_and_data_gaps": [
+    "The exact published unexpected-flow carrier cannot be reconstructed because no complete all-three historical shares-outstanding series exists and no buyer/seller-initiated ETF order imbalance is present.",
+    "Sponsor premium/discount is not the published residual. Demand-driven and arbitrage-driven components can carry different or opposite next-day signs, so substituting raw flow or premium/discount would create a new unvalidated hypothesis.",
+    "SPY and DIA premium/discount history begins only in 2025; QQQ exposes only 2025 plus completed 2026 quarters. None covers the full 2022H2-2026 project horizon with one common field definition.",
+    "No captured sponsor source supplies historical release timestamps or vintages. The primary paper explicitly warns that sponsor flow recording can differ by one or more days and instead uses Bloomberg-adjusted timing.",
+    "The published investment action is cross-sectional across hundreds of ETFs. A fixed three-ETF sign action would not reproduce that portfolio or its diversification and ranking mechanism.",
+    "The paper predicts next-day ETF returns, not this portfolio's intraday entries or exits and not broker CFD returns. Independent published evidence is adverse to assuming ETF activity leads underlying portfolio prices.",
+    "Project topology has only US30_BOOK and US100_BOOK. SPY/US500 could at most become a newly justified context input to Cross; it cannot be treated as a third book or a separate profit sleeve."
+  ],
+  "readiness_decision": {
+    "source_complete_for_exact_published_carrier": false,
+    "point_in_time_timing_complete": false,
+    "fixed_attributable_direction_available": false,
+    "distinct_project_action_available": false,
+    "full_project_horizon_available": false,
+    "etf_to_index_cfd_transfer_identified": false,
+    "adequate_decision_support_available": false,
+    "pre_unit_ready": false,
+    "reason": "Opening economics now would measure an invented raw-flow or premium/discount proxy with unresolved timing and transfer, not the published unexpected-flow mechanism. The correct action is to reject this source construction before outcome consumption, not to label the economic hypothesis failed."
+  },
+  "fixed_development_candidate": {
+    "campaign": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "selection_actual_stressed_net_usd": [5786.63, 5477.524],
+    "selection_native_relative_equity_dd_pct": 20.256887565,
+    "june_july_actual_stressed_net_usd": [32.74, 30.626],
+    "june_july_native_relative_equity_dd_pct": 18.67530213,
+    "august_relative_support": {
+      "candidate_actual_stressed_usd": [29.62, 28.586],
+      "live_derived_control_actual_stressed_usd": [13.05, 12.455],
+      "candidate_control_equity_dd_pct": [13.44, 6.06]
+    },
+    "changed_or_rejected": false,
+    "live_authority": false
+  },
+  "verdict": {
+    "classification": "PRE_UNIT_SOURCE_CAUSALITY_NOT_READY_NO_RESEARCH_UNIT_OPENED_FIXED_DEVELOPMENT_CANDIDATE_RETAINED",
+    "optimization_failure": false,
+    "hypothesis_economic_failure": false,
+    "engineering_or_environment_failure": false,
+    "browser_and_http_access_corrections_completed": true,
+    "candidate_changed": false,
+    "candidate_rejected": false,
+    "new_lab_unit_opened": false,
+    "new_optimization_campaign_opened": false,
+    "proxy_or_mt5_opened": false,
+    "live_authority": false,
+    "mandatory_post_unit_gpt_checkpoint_triggered": false,
+    "meaning": "A genuine independent mechanism clue was screened against its primary literature and all three official sponsor surfaces. The clue is not currently constructible or causally transferable, so no research unit was opened and no result was manufactured."
+  },
+  "future_readiness_conditions": [
+    "Point-in-time historical shares outstanding for DIA, QQQ and SPY covering the common project horizon, with actual availability timestamps or a defensible sponsor-timing adjustment fixed before outcomes.",
+    "Buyer/seller-initiated ETF trade volume sufficient to construct daily order imbalance plus consistent close/NAV mispricing, or a different primary-source mechanism whose exact fixed action is constructible from available data.",
+    "A predeclared ETF-to-US30/US100 action and timing bridge supported independently of this project's outcomes, with SPY limited to the actual read-only US500 Cross-context role.",
+    "A finite Proxy design with frozen costs and economic falsification gates that does not substitute a three-ETF raw sign for the paper's 366-ETF unexpected-flow portfolio."
+  ],
+  "forbidden_automatic_successors": [
+    "raw creation/redemption sign, premium/discount sign or sponsor-flow threshold substitution",
+    "nearby ETF, quarter, weekday, lag, window, rolling length, percentile, rank or subgroup rescue",
+    "treating US500 as a third adjudicated book",
+    "retrospective release-time alignment or revised-history backfill treated as point-in-time",
+    "Proxy, MT5 or Lab economics before all required carrier and transfer fields are fixed",
+    "another GPT consultation because this readiness screen is not a closed research unit"
+  ],
+  "environment": {
+    "source_files_saved_to_repository": false,
+    "source_workbooks_inspected_in_memory": true,
+    "temporary_browser_profile_removed": true,
+    "temporary_spreadsheet_dependency_junction_removed": true,
+    "mql_compile_tester_or_mt5": false,
+    "broker_account_position_order_or_deal_query": false,
+    "master_live_lab_or_optimization_runtime_touched": false,
+    "computer_use": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "marker": "OPTIMIZATION_ETF_PRIMARY_MARKET_FLOW_SOURCE_CAUSALITY_NOT_READY_NO_UNIT_FIXED_CANDIDATE_RETAINED_GOAL_ACTIVE"
+}
