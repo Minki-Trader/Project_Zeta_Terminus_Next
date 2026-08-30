@@ -1,0 +1,131 @@
+{
+  "schema": "zeta-dd20-fixed-pair-august-relative-proxy-result-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "MEANINGFUL_FIXED_PAIR_AUGUST_RELATIVE_CLUE_ADVANCE_TO_PAIRED_MT5",
+  "campaign": {
+    "id": "dd20-fixed-pair-august-relative-proxy-v1",
+    "primary_macro_program": "5 portfolio_capital_risk",
+    "contract_bytes": 12151,
+    "contract_sha256": "F7031520997D13D84B5D72E93193BADA398D6030D8DD20ABFFA10ADB38867091",
+    "executed_formula_points": 1,
+    "executed_fixed_contracts": 2,
+    "parameter_weight_risk_or_formula_search": false
+  },
+  "fixed_pair": {
+    "control": {
+      "component_exposure_multipliers": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    },
+    "candidate": {
+      "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18
+    },
+    "interval": "2026-08-01T00:00:00/2026-08-29T00:00:00",
+    "weekly_epochs": 4,
+    "identical_source_free_market_book": true
+  },
+  "execution": {
+    "elapsed_seconds": 2.3942013,
+    "events": 420,
+    "complete_finite_pair": true,
+    "positive_balance_survival": true,
+    "engineering_correction": {
+      "condition": "The first runner invocation used the JSON token false instead of Python False after simulation and before writing the result artifact.",
+      "classification": "ENGINEERING_RUNNER_SYNTAX_CORRECTION_NO_OPTIMIZATION_VERDICT",
+      "resolution": "The single token was corrected and the unchanged frozen pair was rerun once to completion.",
+      "economic_contract_or_gate_changed": false
+    }
+  },
+  "market_snapshot": {
+    "dedicated_physical_portable": "optimization/runtime/dd20-fixed-pair-august-relative-proxy-v1-portable/",
+    "series_files": 8,
+    "series_rows": 1261261,
+    "series_bytes": 17476573,
+    "request_from_utc": "2025-01-01T00:00:00Z",
+    "request_through_utc": "2026-08-28T23:59:59Z",
+    "account_position_order_or_deal_api_queries": 0,
+    "acquisition_receipt_bytes": 7388,
+    "acquisition_receipt_sha256": "873EA4BA1C75F7AC69F6BB5C4A913993074A19D4889A19950A90F28A6E83D596",
+    "market_bundle_files": 9,
+    "market_bundle_bytes": 17483961,
+    "market_bundle_manifest_sha256": "455D6F384F55D82A2E36BD4FDCD510D01C9C59EA9BEBE271DBF5623202209A83"
+  },
+  "candidate_native_anchor": {
+    "native_actual_net_usd": 29.62,
+    "proxy_actual_net_usd": 29.76,
+    "actual_relative_error": 0.0047265361,
+    "native_stressed_net_usd": 28.586,
+    "proxy_stressed_net_usd": 28.8747685758,
+    "stressed_relative_error": 0.0101017483,
+    "native_closed_lifecycles": 29,
+    "proxy_closed_lifecycles": 29,
+    "all_frozen_anchor_checks_passed": true
+  },
+  "economics": {
+    "control": {
+      "actual_net_usd": 16.55,
+      "stressed_net_usd": 15.9751603942,
+      "closed_lifecycles": 47,
+      "stressed_profit_factor": 1.7096154567,
+      "stressed_closed_drawdown_pct": 3.7356871887,
+      "weekly_stressed_net_usd": [11.6326613711, 2.0833842492, 2.4257333488, -0.1666185749]
+    },
+    "candidate": {
+      "actual_net_usd": 29.76,
+      "stressed_net_usd": 28.8747685758,
+      "closed_lifecycles": 29,
+      "stressed_profit_factor": 1.8969093467,
+      "stressed_closed_drawdown_pct": 8.4730620435,
+      "weekly_stressed_net_usd": [20.5195714148, 4.7302664506, 4.6106410655, -0.9857103552],
+      "positive_active_components": 5,
+      "largest_positive_component_share_of_stressed_net": 0.3288332213
+    },
+    "candidate_minus_control": {
+      "actual_net_usd": 13.21,
+      "stressed_net_usd": 12.8996081816,
+      "closed_lifecycles": -18,
+      "stressed_closed_drawdown_excess_percentage_points": 4.7373748548,
+      "weekly_stressed_net_usd": [8.8869100437, 2.6468822015, 2.1849077166, -0.8190917803],
+      "weeks_not_worse": 3
+    }
+  },
+  "frozen_judgment": {
+    "mandatory_anchor_completeness_and_survival_passed": true,
+    "nominal_checks": {
+      "candidate_stressed_net_positive": true,
+      "candidate_stressed_uplift_at_least_usd_5": true,
+      "candidate_stressed_profit_factor_above_control": true,
+      "candidate_stressed_closed_drawdown_excess_at_most_5pp": true,
+      "candidate_positive_active_components_at_least_3": true,
+      "candidate_weeks_not_worse_at_least_2": true,
+      "candidate_largest_component_share_at_most_80pct": true
+    },
+    "nominal_checks_passed": 7,
+    "nominal_checks_total": 7,
+    "practical_advance": true,
+    "interpretation": "The already fixed replacement displayed enough same-book profit, PF, breadth and drawdown separation to justify one binding adjacent native pair. This is escalation evidence, not native drawdown proof or a new candidate selection."
+  },
+  "artifacts": {
+    "engine_bytes": 159398,
+    "engine_sha256": "26E86E2AF6E645FF265136803AC4D5B69410CD04A2F84555D00454DC7A5690A2",
+    "runner_bytes": 13311,
+    "runner_sha256": "12C9D0BDF10A92A8F8D0D821C9F76D72FAF1231DBEBD409700F0573ECF4FF160",
+    "acquisition_source_bytes": 10075,
+    "acquisition_source_sha256": "E1E2A15DA556736FA349D0921DA37A3F1271FB8F8E480B97FB35A257655C4980",
+    "raw_result_bytes": 13995,
+    "raw_result_sha256": "3CE68A7E8201767AAFC63E7E3F13F617DF93EBBC37E7F0A8BAF585DB8340CEC1",
+    "all_raw_files": 10,
+    "all_raw_bytes": 17497956,
+    "all_raw_manifest_sha256": "E2865316B684F4103994E786DF1703D41ECE691D8CC048CF16649F53133EF27F"
+  },
+  "boundary": {
+    "campaign_closed": true,
+    "single_paired_mt5_escalation_authorized": "dd20-fixed-pair-august-relative-mt5-v1",
+    "candidate_changed": false,
+    "live_lab_release_or_promotion_authority": false,
+    "master_terminal_touched": false,
+    "continuous_optimization_goal_paused": false
+  }
+}

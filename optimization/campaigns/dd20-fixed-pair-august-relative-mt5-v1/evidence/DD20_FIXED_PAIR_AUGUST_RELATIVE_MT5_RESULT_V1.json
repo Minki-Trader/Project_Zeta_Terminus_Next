@@ -1,0 +1,416 @@
+{
+  "schema": "zeta-dd20-fixed-pair-august-relative-mt5-result-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "VALID_FIXED_REPLACEMENT_RELATIVE_AUGUST_MT5_SUPPORT",
+  "campaign": {
+    "id": "dd20-fixed-pair-august-relative-mt5-v1",
+    "primary_macro_program": "5 portfolio_capital_risk",
+    "release_id": "OPT-LIVE-V7-DD20FPAUGR1-20260830",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20FPAUGR1-20260830",
+    "magic_range": "260830851..260830856",
+    "declaration_sha256": "793AC03EA06B3DF6D8CD8510DDE633B07BD0044B9F4A7906C6B0ACC8A70B2844",
+    "implementation_freeze_sha256": "431B74828EFEED3B7A274D0243D04D7B16AA14E1440BE4B2D706C2AA0D1DE903",
+    "synchronized_refreeze_sha256": "AE8F12ABE0A6A51C5B4E65BEEA8155A46B4DE145C64FF332FA496508FE4E52DB",
+    "economic_fingerprint_correction_sha256": "6F707C2831F7DCE88CA0195B4ECA4FEAD6698DACA7966A1DC547795AD02CD1E6",
+    "tester_only": true
+  },
+  "fixed_pair": {
+    "control": {
+      "component_exposure_multipliers": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    },
+    "candidate": {
+      "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18
+    },
+    "run_order": ["CONTROL", "CANDIDATE"],
+    "same_compiled_binary": true,
+    "parameter_weight_risk_formula_or_date_search": false
+  },
+  "implementation": {
+    "source_file_count": 16,
+    "source_total_bytes": 419018,
+    "source_manifest_sha256": "D58C41845FE0EE9319571D3E13565B5397F6CF229127DD65E021FF66191EB478",
+    "configuration_file_count": 4,
+    "configuration_total_bytes": 3529,
+    "configuration_manifest_sha256": "BEBE0232F18333CDD90ABA87DF86193493A5FCE19A068BB0130332FD43FB4F66",
+    "compile_result": "0 errors, 0 warnings",
+    "compile_invocations": 1,
+    "ex5_bytes": 230352,
+    "ex5_sha256": "2C45F031FC371FB14A7826D6D8B80AA16C455D86C9E00E26D87A82620FD75CBF",
+    "runtime_source_configuration_and_ex5_parity_files": 21,
+    "runtime_parity_mismatches": 0,
+    "cross_lane_or_cross_campaign_include_link_or_execution": false
+  },
+  "engineering_corrections": {
+    "optimization_failures": 0,
+    "invalid_control_attempts": 2,
+    "candidate_attempts_before_binding_control": 0,
+    "attempts": [
+      {
+        "id": "invalid-sync-attempt-01",
+        "condition": "The first CONTROL caused six connected Base annual HCC/Daily-cache containers to synchronize and change the originally broad 61-file market manifest; the configured nested report directory was also absent.",
+        "classification": "INVALID_ENVIRONMENT_SYNCHRONIZATION_NO_ECONOMIC_VERDICT",
+        "preserved_files": 14,
+        "preserved_bytes": 966831,
+        "preserved_manifest_sha256": "BBBADDD828B77C0AC082381211544EF4BCD6F7B09F0F6F4CC10C84905F09470D",
+        "economic_fields_used_for_judgment": false
+      },
+      {
+        "id": "invalid-fingerprint-attempt-02",
+        "condition": "The synchronized CONTROL changed the same six connected Base HCC/Daily containers again while every Tester-consumed HCS/TKC file and required-symbol tick archive stayed byte-identical, proving the broad container fingerprint was over-inclusive.",
+        "classification": "INVALID_FINGERPRINT_DESIGN_NO_ECONOMIC_VERDICT",
+        "preserved_files": 20,
+        "preserved_bytes": 1194838,
+        "preserved_manifest_sha256": "BD5BD873D74AA7FB3F71DA63902BB7E5DE68E7E492EBDF33CB32D46D7A57C808",
+        "economic_fields_used_for_judgment": false
+      }
+    ],
+    "binding_resolution": "Before any candidate run or accepted economic judgment, the fingerprint was narrowed by file role to the exact Tester-consumed HCS/TKC inputs. The pair then restarted from CONTROL.",
+    "post_control_packaging_correction": "Two artifact-packaging assumptions were corrected before moving the accepted CONTROL output: Select-Object has no -Single parameter, and the complete bundle contained 22 rather than 21 files. No source, setting, market input, output content or gate changed; the successfully sealed archive hash is authoritative."
+  },
+  "binding_market_fingerprint": {
+    "description": "Six annual Tester HCS files for US30/US100/US500 plus twelve July-August Base and Tester TKC files consumed by the Strategy Tester.",
+    "files": 18,
+    "bytes": 513661932,
+    "manifest_sha256": "872D180D820F5E1754A810D179FC7B5F2FF8743FB31DFEE96F8A7B749BA4AE6E",
+    "manifest_algorithm": "Sort slash-normalized runtime-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF including a final LF; SHA-256 the payload.",
+    "byte_equal_to_initial_physical_shell_copy": true,
+    "control_pre_exact": true,
+    "control_post_exact": true,
+    "candidate_pre_exact": true,
+    "candidate_post_exact": true,
+    "excluded_connected_containers": "Only the six Base 2026 HCC/Daily-cache containers proven to rewrite on every terminal authorization; they are upstream synchronization state rather than frozen Tester HCS/TKC economic input.",
+    "selected_symbol_tick_counts_identical_between_roles": true
+  },
+  "execution_accounting": {
+    "configuration_interval": "2026-08-01T00:00:00/2026-08-29T00:00:00",
+    "completed_market_sessions": "2026-08-03 through 2026-08-28",
+    "completed_market_session_count": 20,
+    "august_31_excluded": true,
+    "initial_deposit_usd": 100.0,
+    "currency": "USD",
+    "leverage": "1:100",
+    "primary_symbol_period": "US30 M30",
+    "tester_model": "MT5 every tick based on real ticks",
+    "terminal_build": 6140,
+    "valid_paths": 2,
+    "both_history_quality": "100% real ticks",
+    "both_primary_bars": 920,
+    "both_primary_ticks": 2624216,
+    "both_all_symbol_ticks": 23743053,
+    "both_us30_passed_ticks": 2624216,
+    "both_us100_passed_ticks": 18511908,
+    "both_us500_passed_ticks": 2606930,
+    "both_final_server_time": "2026-08-28T23:59:58",
+    "control_agent_test_seconds": 26.445,
+    "candidate_agent_test_seconds": 21.130,
+    "both_normal_tester_stop": true,
+    "both_terminal_exit_and_shutdown_code": 0,
+    "automatic_terminal_login_for_history_synchronization": true,
+    "automatic_account_sync_line_used_for_context_or_judgment": false,
+    "explicit_broker_position_order_deal_or_account_query": false
+  },
+  "economics": {
+    "control": {
+      "final_balance_usd": 113.05,
+      "actual_net_usd": 13.05,
+      "stressed_net_usd": 12.455,
+      "extra_stress_cost_usd": 0.595,
+      "stressed_net_retention_pct": 95.440613027,
+      "closed_lifecycles": 44,
+      "winning_lifecycles": 27,
+      "losing_lifecycles": 17,
+      "report_trades": 44,
+      "report_deals": 88,
+      "actual_gross_profit_usd": 35.76,
+      "actual_gross_loss_usd": 22.71,
+      "actual_profit_factor_exact": 1.574636724,
+      "stressed_gross_profit_usd": 35.404,
+      "stressed_gross_loss_usd": 22.949,
+      "stressed_profit_factor": 1.542725173,
+      "actual_net_per_close_usd": 0.296590909,
+      "stressed_net_per_close_usd": 0.283068182
+    },
+    "candidate": {
+      "final_balance_usd": 129.62,
+      "actual_net_usd": 29.62,
+      "stressed_net_usd": 28.586,
+      "extra_stress_cost_usd": 1.034,
+      "stressed_net_retention_pct": 96.509115463,
+      "closed_lifecycles": 29,
+      "winning_lifecycles": 18,
+      "losing_lifecycles": 11,
+      "report_trades": 29,
+      "report_deals": 58,
+      "actual_gross_profit_usd": 61.60,
+      "actual_gross_loss_usd": 31.98,
+      "actual_profit_factor_exact": 1.926203877,
+      "stressed_gross_profit_usd": 60.95,
+      "stressed_gross_loss_usd": 32.364,
+      "stressed_profit_factor": 1.883265357,
+      "actual_net_per_close_usd": 1.02137931,
+      "stressed_net_per_close_usd": 0.985724138
+    },
+    "candidate_minus_control": {
+      "actual_net_usd": 16.57,
+      "stressed_net_usd": 16.131,
+      "actual_net_multiple": 2.269731801,
+      "stressed_net_multiple": 2.295142513,
+      "closed_lifecycles": -15,
+      "closed_lifecycle_reduction_pct": 34.090909091,
+      "stressed_net_per_close_multiple": 3.482285192,
+      "stressed_profit_factor_delta": 0.340540184,
+      "stressed_profit_factor_gain_pct": 22.07393708
+    }
+  },
+  "native_report_metrics": {
+    "control": {
+      "reported_profit_factor": 1.57,
+      "expected_payoff_usd": 0.30,
+      "recovery_factor": 1.83,
+      "sharpe_ratio": 7.75,
+      "minimum_margin_level_pct": 1517.49,
+      "balance_drawdown_absolute_usd": 2.00,
+      "balance_drawdown_maximal_usd": 4.28,
+      "balance_drawdown_relative_pct": 3.71,
+      "equity_drawdown_absolute_usd": 2.82,
+      "equity_drawdown_maximal_usd": 7.13,
+      "equity_drawdown_relative_pct": 6.06
+    },
+    "candidate": {
+      "reported_profit_factor": 1.93,
+      "expected_payoff_usd": 1.02,
+      "recovery_factor": 1.65,
+      "sharpe_ratio": 9.32,
+      "minimum_margin_level_pct": 1057.92,
+      "balance_drawdown_absolute_usd": 4.00,
+      "balance_drawdown_maximal_usd": 11.48,
+      "balance_drawdown_relative_pct": 8.35,
+      "equity_drawdown_absolute_usd": 1.89,
+      "equity_drawdown_maximal_usd": 17.90,
+      "equity_drawdown_relative_pct": 13.44
+    },
+    "candidate_minus_control": {
+      "balance_drawdown_relative_percentage_points": 4.64,
+      "equity_drawdown_relative_percentage_points": 7.38,
+      "equity_drawdown_relative_multiple": 2.217821782,
+      "recovery_factor_change_pct": -9.836065574,
+      "stressed_net_per_native_equity_dd_percentage_point_control": 2.055280528,
+      "stressed_net_per_native_equity_dd_percentage_point_candidate": 2.126934524,
+      "stressed_net_per_native_equity_dd_gain_pct": 3.486336526
+    }
+  },
+  "closed_lifecycle_drawdown": {
+    "control": {
+      "actual_max_usd": 4.28,
+      "actual_max_pct_of_peak": 3.705948567,
+      "stressed_max_usd": 4.369,
+      "stressed_max_pct_of_peak": 3.798932230
+    },
+    "candidate": {
+      "actual_max_usd": 11.48,
+      "actual_max_pct_of_peak": 8.354559348,
+      "stressed_max_usd": 11.656,
+      "stressed_max_pct_of_peak": 8.533192773
+    },
+    "both_peak_server_time": "2026-08-24T22:00:00",
+    "both_trough_server_time": "2026-08-27T21:00:00"
+  },
+  "component_economics": [
+    {"component": "ZT-M30-US30-RANGE-COMP-61f61deaba", "role": "US30 Range61", "control_closed": 6, "candidate_closed": 6, "control_stressed_net_usd": 2.460, "candidate_stressed_net_usd": 5.510, "delta_stressed_net_usd": 3.050, "candidate_stressed_profit_factor": 1.583686441, "candidate_stressed_net_share_pct": 19.275170},
+    {"component": "ZT-M30-US30-RANGE-COMP-64efb16616", "role": "US30 Range64", "control_closed": 4, "candidate_closed": 4, "control_stressed_net_usd": 1.918, "candidate_stressed_net_usd": 3.846, "delta_stressed_net_usd": 1.928, "candidate_stressed_profit_factor": 1.951038576, "candidate_stressed_net_share_pct": 13.454138},
+    {"component": "ZT-H1-US100-CROSS-IN-14b72317b7", "role": "US100 Cross", "control_closed": 15, "candidate_closed": 11, "control_stressed_net_usd": 0.156, "candidate_stressed_net_usd": 6.314, "delta_stressed_net_usd": 6.158, "candidate_stressed_profit_factor": 1.933747412, "candidate_stressed_net_share_pct": 22.087735},
+    {"component": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "role": "US30 Pressure", "control_closed": 5, "candidate_closed": 4, "control_stressed_net_usd": 3.538, "candidate_stressed_net_usd": 9.296, "delta_stressed_net_usd": 5.758, "candidate_stressed_profit_factor": 2.119190946, "candidate_stressed_net_share_pct": 32.519415},
+    {"component": "ZT-H1-US30-RETURN-I-c870a788ec", "role": "US30 Return", "control_closed": 4, "candidate_closed": 4, "control_stressed_net_usd": 0.422, "candidate_stressed_net_usd": 3.620, "delta_stressed_net_usd": 3.198, "candidate_stressed_profit_factor": 1.949632739, "candidate_stressed_net_share_pct": 12.663542},
+    {"component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8", "role": "US100 Passive", "control_closed": 10, "candidate_closed": 0, "control_stressed_net_usd": 3.961, "candidate_stressed_net_usd": 0.0, "delta_stressed_net_usd": -3.961, "candidate_stressed_profit_factor": null, "candidate_stressed_net_share_pct": 0.0}
+  ],
+  "chronology": {
+    "weeks": [
+      {"interval": "2026-08-01..2026-08-07", "control_closed": 14, "candidate_closed": 9, "control_stressed_net_usd": 11.597, "candidate_stressed_net_usd": 20.576, "candidate_minus_control_usd": 8.979},
+      {"interval": "2026-08-08..2026-08-14", "control_closed": 7, "candidate_closed": 6, "control_stressed_net_usd": 1.127, "candidate_stressed_net_usd": 4.716, "candidate_minus_control_usd": 3.589},
+      {"interval": "2026-08-15..2026-08-21", "control_closed": 12, "candidate_closed": 6, "control_stressed_net_usd": -0.118, "candidate_stressed_net_usd": 4.412, "candidate_minus_control_usd": 4.530},
+      {"interval": "2026-08-22..2026-08-28", "control_closed": 11, "candidate_closed": 8, "control_stressed_net_usd": -0.151, "candidate_stressed_net_usd": -1.118, "candidate_minus_control_usd": -0.967}
+    ],
+    "candidate_weeks_not_worse": 3,
+    "control_positive_stressed_exit_days": "13/19",
+    "candidate_positive_stressed_exit_days": "13/19",
+    "control_best_day": {"date": "2026-08-05", "stressed_net_usd": 6.953},
+    "candidate_best_day": {"date": "2026-08-05", "stressed_net_usd": 12.318},
+    "control_worst_day": {"date": "2026-08-25", "stressed_net_usd": -3.203},
+    "candidate_worst_day": {"date": "2026-08-25", "stressed_net_usd": -10.038},
+    "interpretation": "The uplift exists in the first three weeks but does not broaden the count of positive exit days. The final week and common worst day show materially amplified downside, so the support is not a low-tail-risk dominance claim."
+  },
+  "symbol_direction_and_exit_economics": {
+    "symbols": [
+      {"symbol": "US30", "control_stressed_net_usd": 8.338, "candidate_stressed_net_usd": 22.272, "delta_usd": 13.934},
+      {"symbol": "US100", "control_stressed_net_usd": 4.117, "candidate_stressed_net_usd": 6.314, "delta_usd": 2.197}
+    ],
+    "directions": [
+      {"direction": "LONG", "control_stressed_net_usd": 13.429, "candidate_stressed_net_usd": 23.600, "delta_usd": 10.171},
+      {"direction": "SHORT", "control_stressed_net_usd": -0.974, "candidate_stressed_net_usd": 4.986, "delta_usd": 5.960}
+    ],
+    "exits": [
+      {"exit_class": "NATIVE", "control_stressed_net_usd": 25.655, "candidate_stressed_net_usd": 46.054, "delta_usd": 20.399},
+      {"exit_class": "STOP", "control_stressed_net_usd": -13.200, "candidate_stressed_net_usd": -17.468, "delta_usd": -4.268}
+    ],
+    "interpretation": "The net improvement comes from larger native-exit profit, partly offset by deeper aggregate stop losses. Both long and short sleeves improve; the control short sleeve is negative while the candidate short sleeve is positive."
+  },
+  "descriptive_path_decomposition": {
+    "match_key": "component_id plus exact entry_time_server",
+    "common_closes": 27,
+    "common_control_stressed_net_usd": 10.737,
+    "common_candidate_stressed_net_usd": 24.356,
+    "common_stressed_uplift_usd": 13.619,
+    "common_stressed_uplift_share_of_total_pct": 84.427500465,
+    "control_only_closes": 17,
+    "control_only_stressed_net_usd": 1.718,
+    "candidate_only_closes": 2,
+    "candidate_only_stressed_net_usd": 4.230,
+    "differential_path_stressed_uplift_usd": 2.512,
+    "differential_path_share_of_total_pct": 15.572499535,
+    "candidate_only_cross_august_3_stressed_net_usd": 5.988,
+    "interpretation": "Most uplift is generated on 27 common signal-time lifecycles through changed executable sizing, while a smaller path-selection contribution comes from different capacity occupancy. One candidate-only August 3 Cross win is material and is offset partly by one candidate-only Return loss and positive control-only Passive economics. This is portfolio path dependence, not evidence that any multiplier is independently optimal."
+  },
+  "risk_admission_and_breadth": {
+    "control_aggregate_risk_blocks": 5,
+    "candidate_aggregate_risk_blocks": 8,
+    "control_blocks_by_component": {"Cross": 2, "Return": 1, "Passive": 2},
+    "candidate_blocks_by_component": {"Cross": 6, "Return": 1, "Pressure": 1},
+    "control_stop_exits": 6,
+    "candidate_stop_exits": 3,
+    "control_maximum_aggregate_planned_risk_usd": 13.5127,
+    "candidate_maximum_aggregate_planned_risk_usd": 20.7526,
+    "candidate_positive_active_components": 5,
+    "candidate_active_components": 5,
+    "candidate_largest_component_stressed_net_share_pct": 32.519415,
+    "interpretation": "The higher nominal aggregate cap does not make admission slack: larger component budgets cause more binding cap blocks, six in Cross. Candidate economics therefore combine scale with altered opportunity occupancy."
+  },
+  "proxy_to_native_bridge": {
+    "control": {
+      "proxy_stressed_net_usd": 15.9751603942,
+      "native_stressed_net_usd": 12.455,
+      "proxy_minus_native_usd": 3.5201603942,
+      "proxy_closes": 47,
+      "native_closes": 44,
+      "proxy_stressed_profit_factor": 1.7096154567,
+      "native_stressed_profit_factor": 1.542725173
+    },
+    "candidate": {
+      "proxy_stressed_net_usd": 28.8747685758,
+      "native_stressed_net_usd": 28.586,
+      "proxy_minus_native_usd": 0.2887685758,
+      "proxy_closes": 29,
+      "native_closes": 29,
+      "proxy_stressed_profit_factor": 1.8969093467,
+      "native_stressed_profit_factor": 1.883265357
+    },
+    "relative": {
+      "proxy_candidate_minus_control_stressed_net_usd": 12.8996081816,
+      "native_candidate_minus_control_stressed_net_usd": 16.131,
+      "proxy_minus_native_relative_uplift_usd": -3.2313918184,
+      "proxy_stressed_closed_dd_excess_percentage_points": 4.7373748548,
+      "native_equity_dd_excess_percentage_points": 7.38
+    },
+    "interpretation": "The proxy was accurate on the anchored candidate but optimistic on the previously unanchored control. It conservatively understated native relative profit separation, while its closed-balance DD check could not establish the stricter native equity-DD relation. The native escalation was therefore economically necessary rather than ceremonial."
+  },
+  "anchor_reproduction": {
+    "expected_actual_net_usd": 29.62,
+    "observed_actual_net_usd": 29.62,
+    "expected_stressed_net_usd": 28.586,
+    "observed_stressed_net_usd": 28.586,
+    "expected_closed_lifecycles": 29,
+    "observed_closed_lifecycles": 29,
+    "expected_native_relative_equity_drawdown_pct": 13.44,
+    "observed_native_relative_equity_drawdown_pct": 13.44,
+    "all_frozen_anchor_checks_passed": true
+  },
+  "faults": {
+    "both_safety_stopped": false,
+    "both_persistence_failed": false,
+    "both_broker_mismatch": false,
+    "both_foreign_exposure": false,
+    "both_protection_calculation_failures": 0,
+    "both_protection_mismatches": 0,
+    "both_research_dropped_records": 0,
+    "both_data_unavailable": 0,
+    "both_catchup_failures": 0
+  },
+  "frozen_judgment": {
+    "mandatory_validity": {
+      "both_complete_normal_100pct_real_ticks": true,
+      "both_finite_consistent_and_attributable": true,
+      "both_zero_core_fault": true,
+      "candidate_native_anchor_reproduced": true,
+      "same_fingerprint_adjacency_preserved": true
+    },
+    "core_relative_support": {
+      "candidate_actual_and_stressed_net_positive": true,
+      "candidate_stressed_net_exceeds_control_by_at_least_usd_5": true,
+      "candidate_stressed_profit_factor_exceeds_control": true,
+      "candidate_native_equity_dd_at_or_below_21_2pct": true
+    },
+    "contextual_nominal_checks": {
+      "candidate_minus_control_native_equity_dd_at_most_5pp": false,
+      "candidate_weeks_not_worse_at_least_3": true,
+      "candidate_positive_active_components_at_least_4": true,
+      "largest_candidate_component_share_at_most_60pct": true
+    },
+    "nominal_judgment": "MISS_DD_EXCESS_7_38PP_ABOVE_5_0PP",
+    "practical_drawdown_rule": {
+      "dd_excess_above_5_and_at_or_below_7_5pp": true,
+      "every_core_condition_passed": true,
+      "all_three_non_dd_contextual_checks_passed": true,
+      "practical_rule_passed": true
+    },
+    "classification": "VALID_FIXED_REPLACEMENT_RELATIVE_AUGUST_MT5_SUPPORT",
+    "interpretation": "The fixed candidate more than doubled stressed profit and materially improved PF and per-close economics while staying inside its 21.2% total-DD envelope. Its 7.38pp equity-DD excess requires the disclosed practical allowance, and recovery factor plus late-tail behavior worsen. The evidence supports the fixed profit-seeking replacement development candidate under the frozen practical contract; it does not prove universal risk-adjusted dominance or authorize Live replacement."
+  },
+  "artifacts": {
+    "raw_root": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-mt5-v1/",
+    "control_valid_bundle": {
+      "files": 22,
+      "bytes": 1416127,
+      "manifest_sha256": "107E404BAC916579F6B84121FE60F2859E4A1D23F0D11EE828EAD8765216EBF0",
+      "report_bundle_manifest_sha256": "EB800BE4C0AD3549601F22741C8D57FF799C17BF8D8F965C478329AA4DE563DB",
+      "html_sha256": "EFD41326FF9652020F88F63E58A9F48E37F9D14825FF0290AD7518403C7F55A5",
+      "lifecycle_sha256": "7D505CE4A250E50A9480A1A7F7775D63F4D5999DD8D1613CCC71D1EB1DAFE341",
+      "candidate_observation_sha256": "CF3EB484CD60F8090EEBF149FF2E1B59FA035FD9DA4A675BA55CDE43CE0F725A"
+    },
+    "candidate_valid_bundle": {
+      "files": 22,
+      "bytes": 1002684,
+      "manifest_sha256": "A00E078DD56CBBB17DB8613659B564D1B825FB86B73687A8C727790CF93604D4",
+      "report_bundle_manifest_sha256": "A69F361D1190E19CB5F15176968AB670FD0485DC5DD7D087328221906868E5B2",
+      "html_sha256": "E31EC92DD95EA8C45085C8F06ED8C765DCB8079D48712A11A8ACA68C24071D78",
+      "lifecycle_sha256": "7763C42D55C2713E5E019FBED14C21FC46E34BA96AE6CDDC3EAECE212D9664B1",
+      "candidate_observation_sha256": "7019555A3766AE1DC67A7C7DFDBA2F334BF2A3E09E7011E8E7A1DC39A3C5040F"
+    },
+    "combined_valid_bundle": {
+      "files": 44,
+      "bytes": 2418811,
+      "manifest_sha256": "A33595231459F15D1791BF7CAE79DC6F37610F92FCDE78C7E18B4562052A43BA"
+    },
+    "compile_log_bytes": 21760,
+    "compile_log_sha256": "219A6387CA43846663490C051FEC41E53E951F7549AA6616E6CE85C1D8CFB440",
+    "all_raw_files": 79,
+    "all_raw_bytes": 4602240,
+    "all_raw_manifest_sha256": "2957607727FDDA2992D382C26A12E38871FF6CFC35E23AFF99FA0942F933496A"
+  },
+  "boundary": {
+    "campaign_closed": true,
+    "complete_valid_paths": 2,
+    "invalid_environment_or_fingerprint_paths": 2,
+    "invalid_paths_received_economic_verdict": false,
+    "fixed_candidate_changed": false,
+    "weight_risk_threshold_date_formula_or_portfolio_search": false,
+    "adjacent_rescue_or_successor_opened": false,
+    "live_or_lab_source_runtime_state_or_log_modified": false,
+    "master_terminal_touched": false,
+    "explicit_broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false,
+    "continuous_optimization_goal_paused": false
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "zeta-dd20-fixed-pair-august-relative-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "COMPILED_DEDICATED_ADJACENT_PAIR_RUNTIME_READY_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-fixed-pair-august-relative-mt5-v1",
+    "declaration_bytes": 7071,
+    "declaration_sha256": "793AC03EA06B3DF6D8CD8510DDE633B07BD0044B9F4A7906C6B0ACC8A70B2844",
+    "readme_bytes": 2014,
+    "readme_sha256": "9FC8DBDDA31CD29E86AD8E5BB75E9577B64B2D25773117B906161375F9E956F5",
+    "release_id": "OPT-LIVE-V7-DD20FPAUGR1-20260830",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20FPAUGR1-20260830",
+    "magic_range": "260830851..260830856",
+    "tester_only": true
+  },
+  "fixed_policy": {
+    "single_compiled_binary": true,
+    "accepted_contracts": [
+      {
+        "id": "CONTROL",
+        "component_exposure_multipliers": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+        "base_position_risk_fraction": 0.04,
+        "aggregate_risk_fraction": 0.12
+      },
+      {
+        "id": "CANDIDATE",
+        "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+        "base_position_risk_fraction": 0.04,
+        "aggregate_risk_fraction": 0.18
+      }
+    ],
+    "all_other_weight_or_risk_tuples_rejected_at_initialization": true,
+    "role_specific_economic_and_execution_fingerprints_derived_from_exact_tuple": true,
+    "retune_grid_or_third_variant": false
+  },
+  "implementation": {
+    "one_time_frozen_baseline_copy": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/",
+    "closed_patch_oracle": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/",
+    "non_domain_headers_lf_normalized_equal_to_patch_oracle": 14,
+    "source_file_count": 16,
+    "source_total_bytes": 419018,
+    "source_manifest_sha256": "D58C41845FE0EE9319571D3E13565B5397F6CF229127DD65E021FF66191EB478",
+    "configuration_file_count": 4,
+    "configuration_total_bytes": 3529,
+    "configuration_manifest_sha256": "BEBE0232F18333CDD90ABA87DF86193493A5FCE19A068BB0130332FD43FB4F66",
+    "runtime_source_configuration_and_ex5_parity_files": 21,
+    "runtime_source_configuration_and_ex5_mismatches": 0,
+    "cross_lane_or_cross_campaign_include_link_or_execution": false,
+    "other_campaign_ea_ex5_set_or_zeta_include_in_runtime": 0
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2068,
+    "launcher_exit_code": null,
+    "launcher_exit_note": "The post-process PowerShell display expression was invalid and did not preserve the launcher code. The authoritative MetaEditor log completed with 0 errors and 0 warnings and emitted the expected EX5; no redundant compile was used to repair a reporting-only field.",
+    "compile_invocations": 1,
+    "ex5_path": "optimization/campaigns/dd20-fixed-pair-august-relative-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20FixedPairAugustRelativeMT5V1.ex5",
+    "ex5_bytes": 230352,
+    "ex5_sha256": "2C45F031FC371FB14A7826D6D8B80AA16C455D86C9E00E26D87A82620FD75CBF",
+    "raw_log_path": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-mt5-v1/compile/compile-final-20260830.log",
+    "raw_log_bytes": 21760,
+    "raw_log_sha256": "219A6387CA43846663490C051FEC41E53E951F7549AA6616E6CE85C1D8CFB440"
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-fixed-pair-august-relative-mt5-v1-portable/",
+    "physical_shell_and_history_source": "optimization/runtime/dd20-paired-anchor-august-2026-mt5-v1-portable/",
+    "terminal_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "file_count_after_overlay_and_compile": 362,
+    "logical_bytes_after_overlay_and_compile": 1334311230,
+    "filesystem_links": 0,
+    "terminal_target_hardlink_count": 1,
+    "process_owners_at_freeze": 0,
+    "free_space_gib_at_freeze": 52.764,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_live_or_lab_terminal": false
+  },
+  "frozen_market_fingerprint": {
+    "base_history_ticks_and_tester_base_files": 61,
+    "bytes": 1056457896,
+    "manifest_sha256": "3E6782FD7C0D8FDB7F486DAB8B017097E3EA6E659BBD33DAE30C013CB3CA060E",
+    "selected_tick_files": 12,
+    "selected_tick_bytes": 498797663,
+    "selected_tick_manifest_sha256": "90BF44E81793B092F5431CCE1430B95AA71CFF0D0072BC13DC154E933243E0C7",
+    "symbols": ["US30", "US100", "US500"],
+    "months": ["202607", "202608"],
+    "same_pair_rule": "If the market fingerprint changes during CONTROL, the path is a first-use synchronization correction and neither role is judged. Re-freeze the synchronized fingerprint and restart CONTROL then CANDIDATE. If it changes between role starts, the entire pair is invalid and restarts."
+  },
+  "non_economic_corrections": [
+    {
+      "condition": "The first baseline Include copy used LiteralPath with a wildcard, so only the EA baseline copy and the patch-oracle overlay materialized.",
+      "resolution": "Before compilation, the 15 baseline headers were copied with wildcard expansion and the exact closed patch-oracle headers were overlaid again. The final isolated source manifest and 14-header semantic equality were then frozen.",
+      "tester_started": false,
+      "economic_verdict": null
+    },
+    {
+      "condition": "The compile launcher summary used an invalid inline PowerShell if expression after MetaEditor exited.",
+      "resolution": "The authoritative compile log and emitted EX5 were read directly. Because both proved 0 errors and 0 warnings with byte-identical runtime/campaign EX5, no duplicate compile was introduced merely to recover a non-economic launcher-code field.",
+      "tester_started": false,
+      "economic_verdict": null
+    }
+  ],
+  "boundary": {
+    "compiled": true,
+    "runtime_ready": true,
+    "tester_started": false,
+    "report_or_economic_output_opened": false,
+    "economic_verdict": null,
+    "live_or_lab_source_runtime_state_or_log_modified": false,
+    "master_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

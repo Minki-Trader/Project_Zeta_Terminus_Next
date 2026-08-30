@@ -1,0 +1,66 @@
+{
+  "schema": "zeta-dd20-fixed-pair-august-relative-mt5-economic-fingerprint-correction-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "OVERBROAD_CONTAINER_FINGERPRINT_CORRECTED_PAIRED_ECONOMICS_UNOPENED",
+  "campaign": "dd20-fixed-pair-august-relative-mt5-v1",
+  "problem": {
+    "declared_manifest": "all Base history/ticks plus Tester base files",
+    "first_control_result": "invalidated after six Base 2026 HCC/Daily-cache files changed",
+    "synchronized_restart_control_result": "invalidated again after the same six Base HCC/Daily-cache containers changed on the next terminal authorization",
+    "repeatability_observation": "The connected terminal rewrites those six Base containers on each launch even when the Tester-consumed HCS/TKC files and every required-symbol tick archive are byte-identical.",
+    "classification": "ENGINEERING_FINGERPRINT_DESIGN_ERROR_NOT_AN_OPTIMIZATION_FAILURE"
+  },
+  "outcome_independence": {
+    "candidate_started": false,
+    "either_invalid_control_economics_judged": false,
+    "rule_change_uses": "file identity, path role and repeated container mutation only",
+    "source_binary_settings_or_economic_gate_changed": false
+  },
+  "corrected_binding_fingerprint": {
+    "description": "The exact files consumed by Strategy Tester: six US30/US100/US500 Tester HCS files, six corresponding Tester TKC files and six corresponding Base TKC source archives for July-August 2026.",
+    "files": 18,
+    "bytes": 513661932,
+    "manifest_sha256": "872D180D820F5E1754A810D179FC7B5F2FF8743FB31DFEE96F8A7B749BA4AE6E",
+    "byte_equal_to_initial_physical_shell_copy": true,
+    "symbols": ["US30", "US100", "US500"],
+    "months": ["202607", "202608"],
+    "required_stability": "The 18-file hash must match before and after the new CONTROL and before and after the immediately adjacent CANDIDATE. Any mismatch invalidates and restarts the whole pair.",
+    "additional_run_validity": "Both role reports must show 100 percent real ticks and complete normal Tester termination."
+  },
+  "nonbinding_connected_base_containers": {
+    "excluded_paths": [
+      "Bases/FPMarketsSC-Live/history/US30/2026.hcc",
+      "Bases/FPMarketsSC-Live/history/US30/cache/Daily.hc",
+      "Bases/FPMarketsSC-Live/history/US100/2026.hcc",
+      "Bases/FPMarketsSC-Live/history/US100/cache/Daily.hc",
+      "Bases/FPMarketsSC-Live/history/US500/2026.hcc",
+      "Bases/FPMarketsSC-Live/history/US500/cache/Daily.hc"
+    ],
+    "reason": "mutable connected-terminal containers are upstream sync state, not the byte-frozen Tester HCS/TKC economic input",
+    "size_or_path_change_still_disclosed": true
+  },
+  "invalid_attempt_artifacts": [
+    {
+      "id": "invalid-sync-attempt-01",
+      "path": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-mt5-v1/invalid-sync-attempt-01/control/",
+      "files": 14,
+      "bytes": 966831,
+      "manifest_sha256": "BBBADDD828B77C0AC082381211544EF4BCD6F7B09F0F6F4CC10C84905F09470D"
+    },
+    {
+      "id": "invalid-fingerprint-attempt-02",
+      "path": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-mt5-v1/invalid-fingerprint-attempt-02/control/",
+      "files": 20,
+      "bytes": 1194838,
+      "manifest_sha256": "BD5BD873D74AA7FB3F71DA63902BB7E5DE68E7E492EBDF33CB32D46D7A57C808"
+    }
+  ],
+  "restart_boundary": {
+    "next_role": "CONTROL",
+    "run_order_after_correction": ["CONTROL", "CANDIDATE"],
+    "role_report_directory_materialized": true,
+    "paired_economic_verdict": null,
+    "environment_corrections_have_no_retry_cap": true,
+    "master_live_lab_untouched": true
+  }
+}

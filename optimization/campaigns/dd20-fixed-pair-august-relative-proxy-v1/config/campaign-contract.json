@@ -1,0 +1,216 @@
+{
+  "schema": "zeta-dd20-fixed-pair-august-relative-proxy-contract-v1",
+  "campaign": "dd20-fixed-pair-august-relative-proxy-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "DECLARED_EXACT_FIXED_PAIR_AUGUST_RELATIVE_PROTOCOL_FROZEN_OUTCOMES_UNOPENED",
+  "parent_main_commit": "1ef1cbacba5446b7c377a593f1f302d6bbac7fbb",
+  "purpose": "Correct the unmeasured August 2026 replacement gap by comparing the exact active Live-derived control and the already fixed replacement contract on one identical source-free proxy book, without parameter search or candidate change.",
+  "source_contract": {
+    "frozen_live_baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/",
+    "fixed_replacement": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "semantic_formula_identity": "RC16, RC4 including ARC, Cross, Pressure and Return are byte-equal after CRLF/LF normalization; Passive differs only by the replacement's exact zero-weight disable guard.",
+    "isolated_proxy_engine_copy": {
+      "source_path": "optimization/campaigns/dd20-dual-portfolio-internal-formula-lattice-proxy-v1/proxy/run_proxy.py",
+      "source_sha256": "46C8E60D3D87E2C3B8BDC43096CFD20F08F8C8D13FB13805096736D12A1D4136",
+      "copy_rule": "one-time mechanical copy into this campaign, then identity/path/direct-execution isolation; no sibling campaign is imported or executed"
+    },
+    "source_contract_sha256": "F9BDC0E3AA14B113C5046A8435FF15BB494A813CB0ED9CB6461B51FC475DA801",
+    "cross_campaign_code_link": false,
+    "proxy_only_no_mql_derivation": true
+  },
+  "component_order": [
+    "RC16_US30_M30",
+    "RC4_US30_M30",
+    "CROSS_US100_H1",
+    "PRESSURE_US30_M30",
+    "RETURN_US30_H1",
+    "PASSIVE_US100_M15"
+  ],
+  "paired_contracts": [
+    {
+      "id": "LIVE_CONTROL",
+      "weights": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "august_native_reference": null
+    },
+    {
+      "id": "FIXED_REPLACEMENT",
+      "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18,
+      "august_native_reference": {"actual_net_usd": 29.62, "stressed_net_usd": 28.586, "closed_lifecycles": 29, "native_relative_equity_dd_pct": 13.44}
+    }
+  ],
+  "fixed_economic_model": {
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "daily_addition_step_usd": 150.0,
+    "daily_ladder": "1 + floor(max(0, stressed_closed_balance - 100) / 150)",
+    "component_volume": "positive MathRound(base_volume * daily_ladder * fixed_weight) to 0.01 lots",
+    "conservative_capital": "min(actual_closed_balance, stressed_closed_balance)",
+    "gross_stop_risk_fraction_of_planned_budget": 0.5,
+    "aggregate_admission": "tracked full planned component risk must not exceed conservative_capital * contract aggregate fraction plus USD 0.01",
+    "execution_priority": ["PASSIVE_STATE_AND_PENDING", "EXITS", "RC4_ARC", "RC4_1300", "RC16_1330", "PRESSURE_1500", "RETURN_1600", "CROSS_1700"],
+    "fixed_entry_delay_minutes": 2,
+    "fixed_clocks_server_time": {"RC4": "13:00", "RC16": "13:30", "PRESSURE": "15:00", "RETURN": "16:00", "CROSS": "17:00", "PASSIVE_DECISION_BARS": "12:00 through 15:45"},
+    "cost_stress": "actual M1 bid/ask proxy plus one additional entry spread-price times executable lots",
+    "profit_conversion": "index price difference times executable lots; verified against preserved native lifecycle close economics",
+    "risk_and_weight_optimization": false
+  },
+  "market_snapshot": {
+    "physical_shell_source": "optimization/runtime/dd20-paired-anchor-august-2026-mt5-v1-portable/",
+    "dedicated_runtime": "optimization/runtime/dd20-fixed-pair-august-relative-proxy-v1-portable/",
+    "copy_mode": "one-time lean physical copy; no links; omit closed Tester caches, reports, logs, mail, news, subscriptions, trades and tick archives",
+    "output_root": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-proxy-v1/market/",
+    "request_utc": ["2025-01-01T00:00:00Z", "2026-08-29T00:00:00Z"],
+    "series": ["US30_M1", "US30_M30", "US30_H1", "US30_D1", "US100_M1", "US100_M15", "US100_H1", "US500_H1"],
+    "permitted_mt5_python_calls": ["initialize", "symbol_select", "symbol_info", "copy_rates_range", "shutdown"],
+    "broker_account_position_order_deal_queries": false
+  },
+  "intervals": [
+    {"id": "AUGUST_2026", "start": "2026-08-01T00:00:00", "end": "2026-08-29T00:00:00", "independent_reference_capital": true},
+    {"id": "AUGUST_WEEK_1", "start": "2026-08-01T00:00:00", "end": "2026-08-08T00:00:00"},
+    {"id": "AUGUST_WEEK_2", "start": "2026-08-08T00:00:00", "end": "2026-08-15T00:00:00"},
+    {"id": "AUGUST_WEEK_3", "start": "2026-08-15T00:00:00", "end": "2026-08-22T00:00:00"},
+    {"id": "AUGUST_WEEK_4", "start": "2026-08-22T00:00:00", "end": "2026-08-29T00:00:00"}
+  ],
+  "parameter_axes": {
+    "rc16": {
+      "compression": [2, 4, 8, 12, 16, 24, 32, 48, 64],
+      "normal_window": [24, 48, 96, 192, 384],
+      "direction_fraction": [0.125, 0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["POSITIVE_LONG", "SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 8, 12, 16, 24, 32, 48]
+    },
+    "rc4": {
+      "compression": [1, 2, 4, 6, 8, 12, 16, 24, 32],
+      "normal_window": [24, 48, 96, 192, 384],
+      "direction_fraction": [0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [2, 4, 6, 8, 12, 16, 24, 32, 48]
+    },
+    "cross": {
+      "scale_window": [12, 24, 48, 72, 120, 240, 480],
+      "centering_k": [0.0, 0.5, 1.0],
+      "peer_total_beta": [0.0, 0.25, 0.5, 1.0, 1.5, 2.0],
+      "us30_peer_share": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 6, 8, 12, 24]
+    },
+    "pressure": {
+      "daily_scale_window": [3, 5, 10, 20, 40, 60, 120],
+      "daily_scale_quantile": [0.25, 0.5, 0.75],
+      "location_center": [0.25, 0.5, 0.75],
+      "location_power": [0.5, 1.0, 2.0, 4.0],
+      "range_power": [0.0, 0.5, 1.0, 1.5, 2.0, 3.0],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["SYMMETRIC_CONTINUATION", "SYMMETRIC_REVERSION", "POSITIVE_LONG", "NEGATIVE_SHORT"],
+      "hold_bars": [1, 2, 4, 8, 12, 16, 24, 32]
+    },
+    "return": {
+      "lookback": [1, 2, 4, 8, 12, 24, 48],
+      "scale_window": [12, 24, 48, 72, 120, 240, 480],
+      "normalization_power": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "centering_k": [0.0, 0.5, 1.0],
+      "scale_overlap": ["BASELINE_OVERLAP", "PRE_IMPULSE"],
+      "threshold": [0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "threshold_log_skew": [-0.75, -0.4, 0.0, 0.4, 0.75],
+      "mode": ["NEGATIVE_LONG_REVERSION", "SYMMETRIC_REVERSION", "SYMMETRIC_MOMENTUM", "POSITIVE_SHORT_REVERSION"],
+      "hold_bars": [1, 2, 4, 6, 8, 12, 24]
+    },
+    "passive": {
+      "lookback": [1, 2, 4, 8, 12, 16, 24, 48, 96],
+      "scale_window": [24, 48, 96, 192, 384, 768],
+      "normalization_power": [0.0, 0.25, 0.5, 0.75, 1.0],
+      "centering_k": [0.0, 0.5, 1.0],
+      "entry_threshold": [0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0],
+      "exit_fraction_of_entry": [0.0, 0.1, 0.25, 0.5, 0.75],
+      "limit_offset_range_scale": [0.0, 0.1, 0.25, 0.5, 1.0, 2.0, 4.0],
+      "activation_bars": [1, 2, 4, 8, 16, 32],
+      "maximum_hold_bars": [2, 4, 8, 16, 24, 32, 48, 64],
+      "cooldown_bars": [0, 1, 2, 4, 8, 16],
+      "mode": ["CONTRARIAN", "MOMENTUM"]
+    },
+    "arc": {
+      "checkpoint_bars": [2, 4, 8, 10, 11, 12],
+      "retained_loss_fraction": [0.05, 0.1, 0.25, 0.5, 0.75, 0.95],
+      "vote_threshold": [-3, -2, -1, 0],
+      "ordinal_profile": ["QUARTER", "HALF", "BASELINE", "DOUBLE", "QUADRUPLE", "LOWER_HALF_UPPER_DOUBLE", "LOWER_DOUBLE_UPPER_HALF"],
+      "market_penalty_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "decision_dynamics_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "negative_support_penalty_scale": [0.0, 0.5, 1.0, 2.0, 4.0],
+      "confirmation_pressure_share": [0.0, 0.25, 0.5, 0.7, 1.0]
+    }
+  },
+  "baseline_point": {
+    "rc16": [16, 96, 0.5, 1.5, 0.0, "POSITIVE_LONG", 8],
+    "rc4": [4, 96, 0.5, 1.5, 0.0, "SYMMETRIC_CONTINUATION", 12],
+    "cross": [120, 0.0, 1.0, 0.5, 0.5, 0.0, "SYMMETRIC_CONTINUATION", 4],
+    "pressure": [20, 0.5, 0.5, 1.0, 1.0, 0.5, 0.0, "SYMMETRIC_CONTINUATION", 8],
+    "return": [4, 120, 0.5, 0.0, "BASELINE_OVERLAP", 0.5, 0.0, "NEGATIVE_LONG_REVERSION", 6],
+    "passive": [12, 96, 0.5, 0.0, 1.0, 0.25, 0.25, 4, 16, 2, "CONTRARIAN"],
+    "arc": [8, 0.25, -2, "BASELINE", 1.0, 1.0, 1.0, 0.7]
+  },
+  "point_design": {
+    "executed_formula_points": 1,
+    "executed_contracts": 2,
+    "parameter_search": false,
+    "risk_or_weight_search": false,
+    "lookup_axes_note": "parameter_axes retain the proven engine's semantic index tables; only baseline_point is resolved or executed"
+  },
+  "spread_cost_calibration": {
+    "source": "frozen component calibration from the isolated source engine's four native control/candidate selection and forward books",
+    "multipliers": [1.0858742106257528, 1.4561182603429468, 1.6366200035139182, 1.1608144941469056, 1.1488271090562758, 1.2082764527958718],
+    "recalibration_on_august": false
+  },
+  "anchor_gate": {
+    "target": "FIXED_REPLACEMENT proxy versus its already preserved August native MT5 result",
+    "closed_lifecycle_relative_tolerance": 0.12,
+    "actual_net_relative_tolerance": 0.20,
+    "stressed_net_relative_tolerance": 0.20,
+    "net_error_denominator": "max(abs(native net), USD 5)",
+    "applies_before_relative_judgment": true,
+    "miss_classification": "CORRECTION_REQUIRED_NO_OPTIMIZATION_VERDICT"
+  },
+  "relative_judgment": {
+    "mandatory": [
+      "candidate native anchor passes",
+      "both paired books have complete finite actual and stressed economics",
+      "both actual and stressed balances stay positive"
+    ],
+    "nominal_clue_checks": {
+      "candidate_stressed_net_positive": true,
+      "candidate_stressed_uplift_vs_control_usd_at_least": 5.0,
+      "candidate_stressed_profit_factor_above_control": true,
+      "candidate_stressed_closed_dd_excess_vs_control_at_most_percentage_points": 5.0,
+      "candidate_positive_active_components_at_least": 3,
+      "candidate_weeks_not_worse_than_control_at_least": 2,
+      "largest_positive_component_share_of_candidate_stressed_net_at_most": 0.80
+    },
+    "practical_rule": "Anchor, completeness, survival, positive candidate stress, material stressed uplift and profit-factor advantage are mandatory. At most one marginal miss among DD excess, component breadth, week breadth and concentration may be accepted only when the economic magnitude and the preserved native 13.44 percent candidate DD jointly support a single paired MT5 check; nominal and practical judgments are both disclosed.",
+    "no_candidate_reselection_or_retune": true
+  },
+  "mt5_escalation": {
+    "maximum_shortlist": 1,
+    "role": "same-window paired relative verification only",
+    "required_if_meaningful_proxy_clue": "new dedicated non-Master Optimization Portable; exact control then exact candidate immediately adjacent under one unchanged tester fingerprint",
+    "existing_candidate_only_august_run_is_anchor_not_a_valid_paired_matrix": true
+  },
+  "proxy_authority": {
+    "economic_clue_only": true,
+    "native_equity_drawdown_proof": false,
+    "m1_tick_ordering_proof": false,
+    "live_or_lab_authority": false,
+    "environment_design_engineering_faults_are_corrections_not_economic_failures": true,
+    "live_dev_master_broker_surfaces_untouched": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "zeta-dd20-fixed-pair-august-relative-mt5-synchronized-market-refreeze-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "FIRST_CONTROL_INVALID_SYNC_CORRECTION_COMPLETE_PAIRED_ECONOMICS_UNOPENED",
+  "campaign": "dd20-fixed-pair-august-relative-mt5-v1",
+  "trigger": {
+    "role_started": "CONTROL",
+    "terminal_exit_code": 0,
+    "elapsed_seconds": 40.828,
+    "pre_run_market_manifest_sha256": "3E6782FD7C0D8FDB7F486DAB8B017097E3EA6E659BBD33DAE30C013CB3CA060E",
+    "post_run_market_manifest_sha256": "D6361E49070A92BB6AB0F5752F1BF70BEB3BE289422B0F96AA121D631D9D70DC",
+    "classification": "INVALID_FIRST_USE_HISTORY_SYNCHRONIZATION_NO_ECONOMIC_VERDICT",
+    "declared_rule_applied": "Neither the first CONTROL path nor any emitted economic line is judged. The synchronized fingerprint is frozen and the pair restarts from CONTROL."
+  },
+  "changed_market_files": [
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US100/2026.hcc",
+      "before_sha256": "1B0B07BE2D239B6D791DD8AE8E10AF9EEE50753EECAAFD28D74097F918901F92",
+      "after_sha256": "5814B7245157054CCF23A2DA5842E82359AC2342C6E3743B280443CF03F59CBF"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US100/cache/Daily.hc",
+      "before_sha256": "08CDE0EB5DD237EDBAE9A1F08B28249AFF300A25EDDD6DB37A7B479CE0230D81",
+      "after_sha256": "B71EC82728F27E8E5A60D8A3FCF79D94E5DEFEBDAC7A96F692453F454C9B56A3"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US30/2026.hcc",
+      "before_sha256": "D5FCBAAAC532AD80E4A4AF0DC22A1C10E09A6B5183C6F8DD480ACA5EA710FA93",
+      "after_sha256": "E2E8D95C5BE84A4A7BEE9A0EA933DE4A7D23EEDCFB4E2851D48CFA5E24BE7C77"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US30/cache/Daily.hc",
+      "before_sha256": "B38213FAE13CF5802D3455BC0B2F6DD4BA3C124C59E8BA9D530138A79B559C32",
+      "after_sha256": "57FB20DC6F0F44D322B813E0E84160E44C48115054457024AC91A6C7B226E925"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US500/2026.hcc",
+      "before_sha256": "C3483251959B38D8D2DE800C518D99EF5B4ED4796C2A339068FA6DDB934AA0EE",
+      "after_sha256": "5C65F902470A55BC9A32351D9AE175A4B461FF9A4DF27BCF1805011F895674B1"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US500/cache/Daily.hc",
+      "before_sha256": "84409D59591038675EE0D5BAF0BEC62AAC33EFD18A00D053D1F5EB5432CFCF39",
+      "after_sha256": "7B2F5B5EA557F17839208A98FE9B810D2A21FA91258513F5C173451581CE9E61"
+    }
+  ],
+  "synchronized_fingerprint": {
+    "market_files": 61,
+    "market_bytes": 1056457896,
+    "market_manifest_sha256": "D6361E49070A92BB6AB0F5752F1BF70BEB3BE289422B0F96AA121D631D9D70DC",
+    "tick_files": 12,
+    "tick_bytes": 498797663,
+    "tick_manifest_sha256": "90BF44E81793B092F5431CCE1430B95AA71CFF0D0072BC13DC154E933243E0C7",
+    "tick_files_changed": 0,
+    "tester_history_or_tick_files_changed": 0,
+    "base_2026_history_and_daily_cache_files_changed": 6
+  },
+  "invalid_attempt_artifacts": {
+    "path": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-mt5-v1/invalid-sync-attempt-01/control/",
+    "files": 14,
+    "bytes": 966831,
+    "manifest_sha256": "BBBADDD828B77C0AC082381211544EF4BCD6F7B09F0F6F4CC10C84905F09470D",
+    "economic_authority": false
+  },
+  "additional_environment_correction": {
+    "condition": "The role-specific nested report directory did not exist, so the invalid first path emitted no HTML report even though the Tester and EA ledgers completed.",
+    "resolution_before_restart": "Create the exact dedicated runtime report directory. No tester setting, source, binary, tick or economic parameter changes."
+  },
+  "restart_boundary": {
+    "invalid_mutable Tester Files, logs and result cache are archived then removed": true,
+    "report_directory_created": true,
+    "next_role": "CONTROL",
+    "candidate_unopened": true,
+    "paired_economic_verdict": null,
+    "master_live_lab_untouched": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "zeta-dd20-fixed-pair-august-relative-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "DECLARED_FIXED_PAIR_RELATIVE_CONFIRMATION_ECONOMICS_UNOPENED",
+  "primary_macro_program": "5 portfolio_capital_risk",
+  "campaign": {
+    "id": "dd20-fixed-pair-august-relative-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20FPAUGR1-20260830",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20FPAUGR1-20260830",
+    "magic_range": "260830851..260830856",
+    "tester_only": true
+  },
+  "question": "On one unchanged August 1-through-28 native real-tick fingerprint, does the already fixed replacement-development contract materially outperform the exact active Live-derived control?",
+  "source_derivation": {
+    "one_time_copy_from_frozen_optimization_baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/",
+    "baseline_release_id": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "baseline_canonical_identity_sha256": "B32E7E176F2EF1B4A7AA6E9FB91D59FAC685325CC83A79DAA1947F5A431CA178",
+    "baseline_source_manifest_file_sha256": "AEB9FDB813164331645EEB63B927F1670F513800D72221F44061883180A72568",
+    "economic_and_tester_patch_reference": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/",
+    "patch_reference_implementation_freeze_sha256": "498EC0DCEB16DD8121417C23AB63A2E33C8DC3AFDD3835E081F52D557A03DB76",
+    "patch_reference_result_sha256": "AEB86F104206005788D724BC5C6BDFA227DB47BAA3B31A80C6F30F2D7D9B0799",
+    "identity_and_mutable_paths_change_before_execution": true,
+    "compiled_binary_copied": false,
+    "cross_lane_or_cross_campaign_include_link_or_execution": false
+  },
+  "proxy_authorization": {
+    "campaign": "dd20-fixed-pair-august-relative-proxy-v1",
+    "contract_sha256": "F7031520997D13D84B5D72E93193BADA398D6030D8DD20ABFFA10ADB38867091",
+    "result_sha256": "3CE68A7E8201767AAFC63E7E3F13F617DF93EBBC37E7F0A8BAF585DB8340CEC1",
+    "candidate_proxy_actual_stressed_closes": [29.76, 28.8747685758, 29],
+    "candidate_native_anchor_actual_stressed_closes": [29.62, 28.586, 29],
+    "control_proxy_actual_stressed": [16.55, 15.9751603942],
+    "candidate_minus_control_actual_stressed": [13.21, 12.8996081816],
+    "stressed_profit_factor_control_candidate": [1.7096154567, 1.8969093467],
+    "candidate_minus_control_stressed_closed_dd_percentage_points": 4.7373748548,
+    "candidate_weeks_not_worse": 3,
+    "candidate_positive_active_components": 5,
+    "nominal_checks_passed": "7/7",
+    "authority": "one paired native relative check only"
+  },
+  "fixed_variants": [
+    {
+      "id": "CONTROL",
+      "order": 1,
+      "component_exposure_multipliers": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "id": "CANDIDATE",
+      "order": 2,
+      "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.18
+    }
+  ],
+  "adjacent_fingerprint_contract": {
+    "compiled_ex5": "one byte-identical file for both runs",
+    "runtime": "optimization/runtime/dd20-fixed-pair-august-relative-mt5-v1-portable/",
+    "runtime_type": "new dedicated physical non-Master Optimization Portable",
+    "run_order": ["CONTROL", "CANDIDATE"],
+    "unchanged_between_runs": [
+      "terminal/metaeditor build and binaries",
+      "compiled EX5",
+      "all MQL includes",
+      "US30, US100 and US500 base and Tester tick/history files",
+      "US30 M30 primary symbol/period",
+      "every-tick-based-on-real-ticks model",
+      "August 1 inclusive to August 29 exclusive dates",
+      "USD 100 deposit, USD currency, 1:100 leverage and execution mode",
+      "formula, clocks, stops, sizing, reserve/headroom and cost observation"
+    ],
+    "allowed_differences": [
+      "the eight declared aggregate-risk and component-multiplier input values",
+      "role-specific SET path, report path and archived output root"
+    ],
+    "between_run_action": "stop the first terminal, preserve its complete role artifacts, remove only generated mutable Tester Files/log/report material from the dedicated runtime, then launch the second config without source, binary, history or tick mutation",
+    "mid_matrix_drift": "invalid matrix correction state with both paths restarted"
+  },
+  "economic_contract": {
+    "tester_model": "MT5 every tick based on real ticks",
+    "configuration_interval": "2026-08-01T00:00:00/2026-08-29T00:00:00",
+    "intended_completed_market_sessions": "2026-08-03 through 2026-08-28",
+    "expected_complete_valid_economic_paths": 2,
+    "candidate_native_reproduction_anchor": {
+      "actual_net_usd": 29.62,
+      "stressed_net_usd": 28.586,
+      "closed_lifecycles": 29,
+      "native_relative_equity_drawdown_pct": 13.44,
+      "net_and_report_tolerance_usd": 0.02,
+      "closed_lifecycle_tolerance": 0,
+      "miss_classification": "CORRECTION_REQUIRED_INVALID_PAIR_NO_ECONOMIC_VERDICT"
+    },
+    "mandatory_validity": [
+      "both reports complete normally with 100 percent real ticks",
+      "both role outputs are finite, internally consistent and attributable",
+      "normal Tester stop and zero safety, persistence, broker, foreign-exposure, protection or research-drop fault",
+      "candidate reproduces its frozen native August anchor",
+      "same-fingerprint adjacency contract has no drift"
+    ],
+    "core_relative_support": [
+      "candidate actual and doubled-observed-cost-stressed net are positive",
+      "candidate stressed net exceeds control by at least USD 5",
+      "candidate stressed profit factor exceeds control",
+      "candidate native maximum relative equity drawdown is at or below the practical 21.2 percent envelope"
+    ],
+    "contextual_nominal_checks": {
+      "candidate_minus_control_native_relative_equity_drawdown_at_most_percentage_points": 5.0,
+      "candidate_weeks_not_worse_than_control_at_least": 3,
+      "candidate_positive_active_components_at_least": 4,
+      "largest_candidate_component_share_of_stressed_net_at_most": 0.60
+    },
+    "practical_drawdown_rule": "A candidate-minus-control native DD excess above nominal 5.0 but at or below 7.5 percentage points may be accepted only if every core support condition and all three non-DD contextual checks pass; nominal and practical judgments are both disclosed.",
+    "support_classification": "VALID_FIXED_REPLACEMENT_RELATIVE_AUGUST_MT5_SUPPORT",
+    "non_support_classification": "VALID_NO_FIXED_REPLACEMENT_RELATIVE_AUGUST_MT5_SUPPORT",
+    "invalid_environment_or_engineering_attempts": "correction states with no arbitrary count cap and no economic verdict",
+    "automatic_retune_runner_up_or_successor": false,
+    "live_promotion_authority": false
+  },
+  "boundary": {
+    "declaration_frozen": true,
+    "compiled": false,
+    "runtime_created": false,
+    "tester_started": false,
+    "report_or_paired_economic_output_opened": false,
+    "live_or_lab_source_runtime_state_or_log_modified": false,
+    "master_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false
+  }
+}
