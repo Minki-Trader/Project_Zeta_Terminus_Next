@@ -1,0 +1,237 @@
+{
+  "schema": "zeta-next-standard-options-expiration-week-state-engineering-correction-closure-v1",
+  "created_at_local": "2026-08-30",
+  "status": "UNIT_123_CLOSED_COMPLETE_VALID_AMBIGUOUS_NO_CANDIDATE",
+  "unit": "standard-options-expiration-week-state-engineering-correction-123",
+  "family": "standard-options-expiration-week-state-engineering-correction-v1",
+  "macro_program": {
+    "id": 2,
+    "name": "external_market_event"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["micro", "macro"]
+  },
+  "artifacts": {
+    "declaration": {
+      "bytes": 17116,
+      "sha256": "94720EF140624B078D14DC79EC6844AE6A031E1A899F761C4F38AED64B18F319"
+    },
+    "input_receipt": {
+      "bytes": 6962,
+      "sha256": "A90FA7D93BD4FC3AE1E937DFEED7531D68999CF8A57E765BD4E65F67CA8E2329"
+    },
+    "analysis_script": {
+      "bytes": 42737,
+      "sha256": "2A81E379A03D48E617B2DE8C145E0CDF0E920BF2D1327D773A08B617B974A645"
+    },
+    "daily_supply_rows": {
+      "rows": 1051,
+      "bytes": 114527,
+      "sha256": "6E2552C1E42553273E00246001F3D4312714A0AA146F2B1560B7B0BFC73EA6BA"
+    },
+    "lifecycle_rows": {
+      "rows": 2233,
+      "bytes": 671894,
+      "sha256": "5D6599CD5DFC5CF20D5B5601E4FC437ADFA14E17F051A68BBBE46472B1EEAC85"
+    },
+    "result": {
+      "bytes": 45124,
+      "sha256": "AA9F4AEA09AF3EDFA3FF5ADB9BF1A73FFD840E059A249A7392597AD6A8E6A150"
+    },
+    "readme": {
+      "bytes": 2264,
+      "sha256": "D06338CC7F99A1476C3132875F6FCB37AA8F0FD3835657AE3AD198DD69BA2D43"
+    }
+  },
+  "parent_engineering_correction": {
+    "parent_unit": "standard-options-expiration-week-state-090",
+    "parent_valid_economic_verdicts": 0,
+    "parent_outcomes_opened": false,
+    "parent_fault": "Acquisition-receipt preparation failed on a PowerShell convenience-total expression after all official sources and the deterministic schedule had already been persisted.",
+    "correction": "Directly serialize and independently verify the already immutable declaration, parent record and 17 required inputs, then run the unchanged aggregation once.",
+    "treatment_comparator_centering_outcomes_gates_or_decision_changed": false,
+    "research_failure_from_engineering": false,
+    "correction_complete": true
+  },
+  "integrity": {
+    "verified_required_inputs": 17,
+    "verified_parent_records": 3,
+    "official_source_snapshots": 6,
+    "deterministic_schedule_months": 49,
+    "distinct_event_rows": 16477,
+    "normal_days": 1051,
+    "native_signals": 2429,
+    "complete_lifecycles": 2233,
+    "close_finals": 2027,
+    "external_close_finals": 206,
+    "actual_net_usd": 444.19,
+    "stressed_net_usd": 407.0477,
+    "daily_period_weekday_centering_cells": 20,
+    "lifecycle_component_period_centering_cells": 24,
+    "minimum_treatment_component_period_births": 3,
+    "minimum_other_component_period_births": 15,
+    "treatment_days_each_weekday": [49, 49, 49, 49, 47],
+    "passed": true
+  },
+  "supply_transmission": {
+    "treatment_days_signals_births": [243, 580, 525],
+    "other_days_signals_births": [808, 1849, 1708],
+    "raw_treatment_minus_other": {
+      "signals_per_day": 0.09846493908650089,
+      "births_per_day": 0.04663244102187969,
+      "sub_three_signal_day_rate": -0.02080532127286805
+    },
+    "period_weekday_centered_treatment_minus_other": {
+      "signals_per_day": 0.0975573214210855,
+      "births_per_day": 0.04607295838205724,
+      "sub_three_signal_day_rate": -0.020368546020179314
+    },
+    "relative_to_other_week": {
+      "centered_signal_rate_uplift_fraction": 0.04263274206545716,
+      "centered_birth_rate_uplift_fraction": 0.021795641506699947,
+      "centered_sub_three_signal_rate_change_percentage_points": -2.0368546020179314
+    },
+    "interpretation": "The public week label is associated with a small broadening of native supply, but the signal gain attenuates before durable birth and does not itself define a new entry."
+  },
+  "pooled_lifecycle_economics": {
+    "treatment": {
+      "lifecycles": 525,
+      "actual_net_usd": 137.92,
+      "stressed_net_usd": 129.23350000000113,
+      "planned_risk_usd": 3324.8319,
+      "mean_stressed_r": 0.0450378546205479,
+      "stop_rate": 0.07238095238095238
+    },
+    "other": {
+      "lifecycles": 1708,
+      "actual_net_usd": 306.27,
+      "stressed_net_usd": 277.81420000000395,
+      "planned_risk_usd": 10879.833,
+      "mean_stressed_r": 0.02932229035210471,
+      "stop_rate": 0.09836065573770492
+    },
+    "raw_treatment_minus_other": {
+      "mean_stressed_r": 0.01571556426844319,
+      "stop_rate": -0.025979703356752537
+    },
+    "component_period_centered_treatment_minus_other": {
+      "stressed_r": 0.016491622488134773,
+      "stop_rate": -0.03171894207616869
+    },
+    "favorable_magnitude_gate_shortfall": {
+      "stressed_r_required": 0.1,
+      "stressed_r_observed": 0.016491622488134773,
+      "stressed_r_shortfall": 0.08350837751186523,
+      "stop_reduction_required": -0.05,
+      "stop_reduction_observed": -0.03171894207616869,
+      "additional_stop_reduction_required": 0.018281057923831312
+    }
+  },
+  "internal_structure": {
+    "books": {
+      "US30_BOOK": {
+        "centered_stressed_r": 0.062157346246326184,
+        "centered_stop_rate": -0.07576787508038904,
+        "direction": "FAVORABLE_STANDARD_EXPIRATION_WEEK"
+      },
+      "US100_BOOK": {
+        "centered_stressed_r": -0.01148792593706515,
+        "centered_stop_rate": -0.004732947339753182,
+        "direction": "NONCONCORDANT"
+      }
+    },
+    "periods": {
+      "P1_2022H2_2023": [0.033144562191546593, -0.03383025486275058, "FAVORABLE"],
+      "P2_2024": [-0.017114681242360194, 0.023182858090033273, "ADVERSE"],
+      "P3_2025": [0.005543701324939868, -0.04666280368867084, "FAVORABLE"],
+      "P4_2026_YTD": [0.05050874985671568, -0.08921180860200142, "FAVORABLE"]
+    },
+    "component_concentration": {
+      "RC4_centered_stressed_r": 0.22228895761219178,
+      "RC4_centered_stop_rate": -0.10866465363062781,
+      "RC4_absolute_contribution_share": 0.5136800133870788,
+      "component_cap": 0.45,
+      "cap_passed": false,
+      "Cross_centered_stressed_r": -0.026579602523729894,
+      "Cross_centered_stop_rate": 0.003990924952806502,
+      "Cross_direction": "ADVERSE_STANDARD_EXPIRATION_WEEK"
+    },
+    "weekdays": {
+      "favorable": ["Monday", "Wednesday", "Thursday", "Friday"],
+      "adverse": ["Tuesday"],
+      "maximum_absolute_contribution_share": 0.3539636937267472,
+      "weekday_cap_passed": true
+    },
+    "interpretation": "The apparent broad direction is an asymmetric US30 and RC4-heavy state, not a whole-portfolio field. P2 and Tuesday reverse sign; US100 does not supply value agreement."
+  },
+  "gates": {
+    "favorable": {
+      "passed": false,
+      "failed_core_reasons": [
+        "centered stressed-R magnitude below +0.10",
+        "centered stop reduction smaller than 5 percentage points",
+        "books not concordant",
+        "RC4 pushes maximum component contribution above 45 percent"
+      ],
+      "passed_breadth": "3/4 periods, 4/6 components and 4/5 weekdays are directionally favorable",
+      "passed_contribution_caps": "period and weekday",
+      "failed_contribution_caps": "component"
+    },
+    "adverse": {
+      "passed": false
+    },
+    "strong_null": {
+      "passed": false,
+      "why": "Value magnitude is inside the null band, but centered stop reduction exceeds the null band and favorable direction is broader than the null breadth limits."
+    }
+  },
+  "decision": {
+    "verdict": "AMBIGUOUS_STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_NO_CANDIDATE",
+    "economic_classification": "VALID_SMALL_SUPPLY_AND_STOP_SHIFT_WITHOUT_WHOLE_PORTFOLIO_VALUE_AUTHORITY",
+    "interpretation": "Absolute treatment and comparator economics are both positive. The decision-relevant conditional difference is only +0.01649R, and its favorable appearance depends materially on US30/RC4 while US100, Cross, P2 and Tuesday prevent a coherent whole-portfolio action.",
+    "retained_seed": null,
+    "retained_risk_or_slot_question": null,
+    "mt5_clue": null,
+    "mt5_shortlist": null,
+    "optimization_candidate": null,
+    "fixed_development_candidate_changed_or_rejected": false,
+    "live_authority": false
+  },
+  "closed_scope": [
+    "No exact expiration-day, Thursday, Friday, quarterly, end-of-month, holiday, month, weekday or clock rescue.",
+    "No US30-only, RC4-only, best-period, best-component, best-book or best-direction rescue.",
+    "No options volume, open interest, gamma, volatility, threshold, magnitude or interaction proxy.",
+    "No risk, lot, slot, admission, allocation, component, weight, cap, stop, exit, EA or portfolio reconstruction.",
+    "No MQL, compile, Tester, MT5, Optimization mutation, broker/account query or Live action."
+  ],
+  "whole_map_recomparison": {
+    "program_1": "Units 120-122 remain complete economic nonconfirmations for the corrected US100, US500 and US30 price-state mechanisms. Unit 123 adds no entry signal and cannot rescue those families.",
+    "program_2": "The formerly unread standard-expiration-week question now has a complete valid answer: modest supply and stop improvement, but only +0.01649R, no both-book agreement and RC4 concentration. ADS remains nonconcordant, GSCPI strong-null and RORO causally unreconstructible; no external-state action is ready.",
+    "program_3": "Four favorable weekdays and one adverse weekday do not authorize a weekday or clock treatment because the treatment is the full previsible week and weekday rescue was frozen out.",
+    "program_4": "The calendar state supplies no held-position checkpoint or exit treatment, and its value gate does not pass.",
+    "program_5": "The predeclared risk-or-slot successor required a directional pass. Ambiguity retains no seed, so weights, risk, slots and the fixed replacement candidate remain unchanged.",
+    "program_7": "Unlimited engineering correction converted Unit 090's receipt fault into a complete economic answer without carrying the fault into the research verdict. No further receipt, subgroup or parity work can create value authority.",
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true
+  },
+  "execution": {
+    "successful_fixed_aggregations": 1,
+    "metric_reruns": 0,
+    "unit_123_additional_engineering_corrections": 0,
+    "mql_copies_or_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "mt5_runs": 0,
+    "broker_or_account_queries": 0,
+    "tests_validators_or_test_infrastructure": 0
+  },
+  "program_6_opened": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_123",
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "marker": "FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED"
+}
