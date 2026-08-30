@@ -1,0 +1,233 @@
+{
+  "schema": "zeta-next-us100-realized-variance-asymmetry-response-environment-correction-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "ONE_VALID_FIXED_PROXY_AGGREGATION_COMPLETE",
+  "unit": "us100-realized-variance-asymmetry-response-environment-correction-120",
+  "family": "us100-realized-variance-asymmetry-response-environment-correction-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "parent_correction": {
+    "parent": "us100-realized-variance-asymmetry-response-authoritative-history-096",
+    "parent_had_valid_economic_result": false,
+    "parent_direction_metrics_calculated": false,
+    "unit_120_signal_threshold_window_sign_count_horizon_period_cost_or_gate_changes": 0,
+    "invalid_parent_economic_columns_formally_read": false,
+    "environment_correction_complete": true
+  },
+  "frozen_inputs": {
+    "declaration": {
+      "bytes": 20728,
+      "sha256": "8FC56435482F4EDF72D1ED3BADD3849C87522B2B4B26F06FCA3B17EF7774852B"
+    },
+    "acquisition_receipt": {
+      "bytes": 6465,
+      "sha256": "9AA623160969FEF3D2A42FC659E1E4613CFF2D3B0DFE82307577DDA87A96B0C6"
+    },
+    "acquisition_script": {
+      "bytes": 6844,
+      "sha256": "F2E2F004BA0997852B33899EA0407988FE9B6C930508BC3E687B09BB999783EF"
+    },
+    "proxy_script": {
+      "bytes": 27941,
+      "sha256": "9198877BC6508179A07CF261EA95002785CBC0BA23F9B91856C802854F076C6B"
+    },
+    "structural_anchor": {
+      "bytes": 274355,
+      "sha256": "A57F177639D8533E432F2206C2C256D780AEA0BC84C466460E67DD786CB6F3D5"
+    },
+    "bar_surface": {
+      "bytes": 4797400,
+      "sha256": "0B1EB416AA32F5CCA9AED98FBFB33B5D5DACF21252AF84B04643E6AAFA534FD6"
+    },
+    "symbol_spec": {
+      "bytes": 647,
+      "sha256": "0BC92D949E6F259DEC4B95416C5AFC8F9E000ED198078172CC45D255D157E117"
+    }
+  },
+  "premetric_corrections": {
+    "operator_preview": {
+      "parent_rows_with_economic_columns_displayed": 2,
+      "aggregate_metric_or_selection_calculated": false,
+      "formal_input_excludes_every_parent_economic_field": true,
+      "economic_contract_changed": false
+    },
+    "protected_structural_invocation": {
+      "invocations": 1,
+      "stopped_before_economics": true,
+      "output_files_created": 0,
+      "fault": "The comparator cleared seconds but did not floor a delayed parent first-tick timestamp to its containing M15 bar.",
+      "correction": "Compare the containing 15-minute resolution coordinate. Exact tick seconds remain descriptive.",
+      "signal_source_period_cost_metric_or_gate_changed": false
+    }
+  },
+  "acquisition": {
+    "dedicated_runtime": "lab/runtime/rva120-portable/",
+    "successful_batches": 1,
+    "copy_rates_range_calls": 1,
+    "symbol_info_calls": 1,
+    "bars": 62696,
+    "first_last": ["2023.12.01 01:00:00", "2026.07.31 23:45:00"],
+    "terminal_and_metaeditor_exact_dedicated_processes_stopped": 2,
+    "other_processes_touched": false,
+    "forbidden_account_position_order_deal_or_trade_calls": 0
+  },
+  "structural_integrity": {
+    "passed": true,
+    "p1_parent_parity": {
+      "anchor_rows": 1529,
+      "proxy_rows": 1529,
+      "m15_window_entry_resolution_horizon_count_and_direction_identities_equal": true,
+      "exact_first_tick_resolution_timestamp_rows_descriptive": 1363,
+      "maximum_positive_energy_abs_difference": 4.996117960261084e-17,
+      "maximum_negative_energy_abs_difference": 4.996139136084765e-17,
+      "maximum_total_energy_abs_difference": 4.999527267873782e-17,
+      "maximum_variance_imbalance_abs_difference": 4.996003610813204e-13,
+      "energy_tolerance": 5e-12,
+      "imbalance_tolerance": 5e-10
+    },
+    "periods": {
+      "P1_2024_H1": {
+        "eligible_variance_days": 128,
+        "eligible_variance_evaluations": 4916,
+        "finalized_bars": 11703,
+        "triggers": 1530,
+        "resolved": 1529,
+        "unresolved": 1,
+        "rate_faults": 0
+      },
+      "P2_2024_H2": {
+        "eligible_variance_days": 131,
+        "eligible_variance_evaluations": 5163,
+        "finalized_bars": 11964,
+        "triggers": 1512,
+        "resolved": 1512,
+        "unresolved": 0,
+        "rate_faults": 0
+      },
+      "P3_2025": {
+        "eligible_variance_days": 258,
+        "eligible_variance_evaluations": 10153,
+        "finalized_bars": 23496,
+        "triggers": 2977,
+        "resolved": 2976,
+        "unresolved": 1,
+        "rate_faults": 0
+      },
+      "P4_2026_COMPLETE_MONTHS": {
+        "eligible_variance_days": 151,
+        "eligible_variance_evaluations": 5898,
+        "finalized_bars": 13781,
+        "triggers": 1757,
+        "resolved": 1757,
+        "unresolved": 0,
+        "rate_faults": 0
+      }
+    }
+  },
+  "frequency_gate": {
+    "pooled_resolved": 7774,
+    "pooled_eligible_variance_days": 668,
+    "pooled_opportunities_per_eligible_variance_day": 11.637724550898204,
+    "paths_at_least_0_25": 4,
+    "pooled_at_least_0_40": true,
+    "at_least_three_paths_at_0_25": true,
+    "pooled_at_least_200": true,
+    "passed": true
+  },
+  "economics": {
+    "DOMINANT_VARIANCE": {
+      "path_observed_net_usd": {
+        "P1_2024_H1": -11.29,
+        "P2_2024_H2": 19.78,
+        "P3_2025": -10.88,
+        "P4_2026_COMPLETE_MONTHS": -25.66
+      },
+      "path_double_spread_net_usd": {
+        "P1_2024_H1": -40.80,
+        "P2_2024_H2": -18.79,
+        "P3_2025": -85.11,
+        "P4_2026_COMPLETE_MONTHS": -47.63
+      },
+      "pooled_observed_net_usd": -28.05,
+      "pooled_observed_profit_factor": 0.9818088666372669,
+      "pooled_double_spread_net_usd": -192.33,
+      "pooled_double_spread_profit_factor": 0.8820582319466248,
+      "pooled_double_spread_maximum_closed_drawdown_usd": 204.98,
+      "pooled_double_spread_net_over_maximum_closed_drawdown": -0.938286662113377,
+      "positive_double_spread_paths": 0,
+      "passed_economic_gates": 0,
+      "total_economic_gates": 5
+    },
+    "COUNTER_VARIANCE": {
+      "path_observed_net_usd": {
+        "P1_2024_H1": -17.62,
+        "P2_2024_H2": -59.03,
+        "P3_2025": -65.03,
+        "P4_2026_COMPLETE_MONTHS": 3.83
+      },
+      "path_double_spread_net_usd": {
+        "P1_2024_H1": -46.89,
+        "P2_2024_H2": -97.57,
+        "P3_2025": -139.14,
+        "P4_2026_COMPLETE_MONTHS": -17.90
+      },
+      "pooled_observed_net_usd": -137.85,
+      "pooled_observed_profit_factor": 0.9136213249116475,
+      "pooled_double_spread_net_usd": -301.50,
+      "pooled_double_spread_profit_factor": 0.8209056294439462,
+      "pooled_double_spread_maximum_closed_drawdown_usd": 343.66,
+      "pooled_double_spread_net_over_maximum_closed_drawdown": -0.8773206075772566,
+      "positive_double_spread_paths": 0,
+      "passed_economic_gates": 0,
+      "total_economic_gates": 5
+    }
+  },
+  "selection": {
+    "frequency_passed": true,
+    "passing_directions": [],
+    "selected_direction": null,
+    "verdict": "FAIL_US100_REALIZED_VARIANCE_ASYMMETRY_NO_DIRECTION_NO_SEED",
+    "economic_interpretation": "The state is abundant but neither symmetric return direction contains executable value. Both pooled observed paths are negative, doubled spread makes both materially worse, and every one of four doubled-spread periods loses for both directions. This is broad economic nonconfirmation rather than an environment, engineering or marginal nominal-gate failure.",
+    "retained_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "live_authority": false
+  },
+  "raw_artifacts": {
+    "raw_result": {
+      "path": "lab/artifacts/raw/us100-realized-variance-asymmetry-response-environment-correction-v1/output/US100_RVA_ENVIRONMENT_CORRECTION_RAW_RESULT_V1.json",
+      "bytes": 15474,
+      "sha256": "FFE490F5CA49956E77D9C1240A4AE4410F78E24EA5CAD5662D3043B4A56FF26D"
+    },
+    "opportunities": {
+      "path": "lab/artifacts/raw/us100-realized-variance-asymmetry-response-environment-correction-v1/output/US100_RVA_ENVIRONMENT_CORRECTION_OPPORTUNITIES_V1.csv",
+      "rows": 7774,
+      "bytes": 943615,
+      "sha256": "CABD09FC562BA919BC79110A80C07BA0FA4C112CBFFD6B3084DF526738A737A9"
+    },
+    "complete_family_raw_bundle": {
+      "files": 5,
+      "bytes": 6031491,
+      "ordered_manifest_sha256": "D608BF8710D027FA6DA6E33C9D6DAE82F7BAB790BA5852C39CB29711608577FD"
+    }
+  },
+  "execution": {
+    "dedicated_runtime_copies": 1,
+    "successful_acquisition_batches": 1,
+    "protected_premetric_proxy_invocations": 1,
+    "successful_fixed_proxy_aggregations": 1,
+    "economic_metric_reruns_or_rejudgments": 0,
+    "mql_source_copies_or_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders_or_positions": 0,
+    "broker_or_account_queries": 0,
+    "valid_aggregation_elapsed_seconds": 0.6857028000085847
+  },
+  "program_6_opened": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_120",
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_120_RVA_CORRECTION_VALID_ECONOMIC_NO_DIRECTION_NO_SEED_PENDING_CLOSURE"
+}

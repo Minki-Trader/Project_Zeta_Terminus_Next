@@ -1,0 +1,183 @@
+{
+  "schema": "zeta-next-us100-realized-variance-asymmetry-response-environment-correction-closure-v1",
+  "created_at_local": "2026-08-30",
+  "status": "UNIT_120_CLOSED_VALID_ECONOMIC_NONCONFIRMATION",
+  "unit": "us100-realized-variance-asymmetry-response-environment-correction-120",
+  "family": "us100-realized-variance-asymmetry-response-environment-correction-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "artifacts": {
+    "declaration": {
+      "bytes": 20728,
+      "sha256": "8FC56435482F4EDF72D1ED3BADD3849C87522B2B4B26F06FCA3B17EF7774852B"
+    },
+    "acquisition_receipt": {
+      "bytes": 6465,
+      "sha256": "9AA623160969FEF3D2A42FC659E1E4613CFF2D3B0DFE82307577DDA87A96B0C6"
+    },
+    "result": {
+      "bytes": 8927,
+      "sha256": "B1147223300B1ABFB5EFA04A8518BA68E8D42EF044B36D19F96DDF8771864B77"
+    },
+    "acquisition_script": {
+      "bytes": 6844,
+      "sha256": "F2E2F004BA0997852B33899EA0407988FE9B6C930508BC3E687B09BB999783EF"
+    },
+    "proxy_script": {
+      "bytes": 27941,
+      "sha256": "9198877BC6508179A07CF261EA95002785CBC0BA23F9B91856C802854F076C6B"
+    },
+    "preserved_ignored_raw_files": 5,
+    "preserved_ignored_raw_bytes": 6031491,
+    "raw_ordered_manifest_sha256": "D608BF8710D027FA6DA6E33C9D6DAE82F7BAB790BA5852C39CB29711608577FD",
+    "bar_surface_sha256": "0B1EB416AA32F5CCA9AED98FBFB33B5D5DACF21252AF84B04643E6AAFA534FD6",
+    "structural_anchor_sha256": "A57F177639D8533E432F2206C2C256D780AEA0BC84C466460E67DD786CB6F3D5",
+    "raw_result_sha256": "FFE490F5CA49956E77D9C1240A4AE4410F78E24EA5CAD5662D3043B4A56FF26D",
+    "raw_opportunities_sha256": "CABD09FC562BA919BC79110A80C07BA0FA4C112CBFFD6B3084DF526738A737A9"
+  },
+  "parent_correction": {
+    "parents": [
+      "us100-realized-variance-asymmetry-response-032",
+      "us100-realized-variance-asymmetry-response-authoritative-history-096"
+    ],
+    "parent_valid_economic_verdicts": 0,
+    "parent_fault": "The exact fixed signal had never passed the pre-outcome 100%-real-tick environment gate, so no direction economics had been accepted or rejected.",
+    "correction_method": "One family-owned US100 M15 bar-open/spread proxy with exact P1 non-economic structural parity and unchanged parent periods, signal, symmetric direction books, costs and gates.",
+    "signal_or_economic_contract_changed": false,
+    "invalid_parent_economic_columns_formally_used": false,
+    "correction_complete": true
+  },
+  "premetric_history": {
+    "operator_preview_rows": 2,
+    "operator_preview_aggregate_or_selection": false,
+    "protected_structural_invocations": 1,
+    "protected_invocation_economic_outputs": 0,
+    "implementation_correction": "Floor delayed parent first-valid-tick resolve timestamps to their containing M15 coordinate before structural comparison.",
+    "economic_contract_changes": 0,
+    "classification": "CORRECTION_HISTORY_NOT_RESEARCH_FAILURE"
+  },
+  "acquisition_and_integrity": {
+    "bars": 62696,
+    "first_last": ["2023.12.01 01:00:00", "2026.07.31 23:45:00"],
+    "symbol_spec_equal_parent_visible_contract": true,
+    "P1_eligible_days": 128,
+    "P1_eligible_evaluations": 4916,
+    "P1_finalized_bars": 11703,
+    "P1_triggers": 1530,
+    "P1_resolved": 1529,
+    "P1_unresolved": 1,
+    "P1_m15_structure_matches": 1529,
+    "P1_maximum_energy_abs_difference": 4.999527267873782e-17,
+    "P1_maximum_imbalance_abs_difference": 4.996003610813204e-13,
+    "P2_resolved": 1512,
+    "P3_resolved": 2976,
+    "P4_resolved": 1757,
+    "pooled_resolved": 7774,
+    "pooled_eligible_days": 668,
+    "pooled_opportunities_per_eligible_day": 11.637724550898204,
+    "all_period_rate_faults": 0,
+    "passed": true
+  },
+  "frequency_gate": {
+    "pooled_at_least_0_40_per_day": true,
+    "four_paths_at_least_0_25_per_day": true,
+    "pooled_at_least_200": true,
+    "passed_requirements": 3,
+    "total_requirements": 3,
+    "passed": true
+  },
+  "economics": {
+    "DOMINANT_VARIANCE": {
+      "observed_pooled_net_usd": -28.05,
+      "observed_profit_factor": 0.9818088666372669,
+      "double_spread_pooled_net_usd": -192.33,
+      "double_spread_profit_factor": 0.8820582319466248,
+      "double_spread_maximum_closed_drawdown_usd": 204.98,
+      "double_spread_net_over_maximum_closed_drawdown": -0.938286662113377,
+      "double_spread_period_nets_usd": {
+        "P1": -40.80,
+        "P2": -18.79,
+        "P3": -85.11,
+        "P4": -47.63
+      },
+      "positive_double_spread_periods": 0,
+      "passed_economic_requirements": 0,
+      "total_economic_requirements": 5
+    },
+    "COUNTER_VARIANCE": {
+      "observed_pooled_net_usd": -137.85,
+      "observed_profit_factor": 0.9136213249116475,
+      "double_spread_pooled_net_usd": -301.50,
+      "double_spread_profit_factor": 0.8209056294439462,
+      "double_spread_maximum_closed_drawdown_usd": 343.66,
+      "double_spread_net_over_maximum_closed_drawdown": -0.8773206075772566,
+      "double_spread_period_nets_usd": {
+        "P1": -46.89,
+        "P2": -97.57,
+        "P3": -139.14,
+        "P4": -17.90
+      },
+      "positive_double_spread_periods": 0,
+      "passed_economic_requirements": 0,
+      "total_economic_requirements": 5
+    }
+  },
+  "decision": {
+    "verdict": "FAIL_US100_REALIZED_VARIANCE_ASYMMETRY_NO_DIRECTION_NO_SEED",
+    "economic_classification": "VALID_BROAD_ECONOMIC_NONCONFIRMATION",
+    "interpretation": "The signal is abundant, but both symmetric books lose at observed cost in aggregate and lose after doubled spread in every path. Dominant variance retains no period under stress and counter variance retains none; PF stays below 0.89 and net-to-drawdown is negative. The full fixed realized-variance-asymmetry return-direction question is now economically answered rather than closed on environment telemetry.",
+    "retained_seed": null,
+    "mt5_clue": null,
+    "mt5_shortlist": null,
+    "optimization_candidate": null,
+    "fixed_development_candidate_changed_or_rejected": false,
+    "live_authority": false
+  },
+  "execution": {
+    "dedicated_runtime_copies": 1,
+    "successful_acquisition_batches": 1,
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "protected_premetric_invocations": 1,
+    "mql_copies_or_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "positions": 0,
+    "broker_or_account_queries": 0
+  },
+  "housekeeping": {
+    "dedicated_runtime": "Marked OneDrive online-only after exact process closeout; reproducible and cloud-recoverable.",
+    "python_cache": "One 32,866-byte reproducible __pycache__ directory was moved to the Windows Recycle Bin and remains recoverable.",
+    "useful_raw_bundle_preserved": true,
+    "material_files_deleted": 0,
+    "system_drive_free_gib_after_closeout": 143.82
+  },
+  "closed_scope": [
+    "No return-window, threshold, sign-count, energy, price-basis, period, continuity, overlap or horizon rescue.",
+    "No direction, month, session, volatility, spread, event, symbol or subgroup rescue.",
+    "No stop, target, lot, sizing, weight, priority, capacity, slot, capital, admission or portfolio reconstruction.",
+    "No MQL, SET, compile, Tester, MT5 escalation, Optimization mutation, broker/account query or Live action.",
+    "No automatic additive prototype or retained-seed successor."
+  ],
+  "whole_map_recomparison": {
+    "program_1": "The only economically unread exact realized-variance-asymmetry contract is now broadly negative in both symmetric directions. Formula, return-window, threshold, horizon, symbol and integration neighbors close with it.",
+    "program_2": "GSCPI remains strong-null, ADS remains nonconcordant and RORO remains causally unreconstructible. No adjacent external-state substitute opens.",
+    "program_3": "No synchronized independent order, quote, clock or naturally dense pending-reservation treatment is newly available.",
+    "program_4": "The fixed four-bar observation provides no return direction and no active-position exit checkpoint.",
+    "program_5": "No weights, risk, ladder, cap, occupancy, admission or capital action follows from two losing books.",
+    "program_7": "The environment correction resolves an old unanswered question; further parity, ratios or subgroup descriptions cannot create an action.",
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true
+  },
+  "program_6_opened": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_120",
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "marker": "FRONTIER_UNIT_120_CLOSED_VALID_RVA_NO_DIRECTION_NO_SEED_MAP_RECOMPARED"
+}

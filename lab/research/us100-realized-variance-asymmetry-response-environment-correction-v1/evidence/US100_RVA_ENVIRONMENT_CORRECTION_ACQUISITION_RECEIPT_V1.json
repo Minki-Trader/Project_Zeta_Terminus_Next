@@ -1,0 +1,132 @@
+{
+  "schema": "zeta-next-us100-realized-variance-asymmetry-response-environment-correction-acquisition-receipt-v1",
+  "created_at_local": "2026-08-30",
+  "status": "ONE_DEDICATED_RUNTIME_AND_ONE_US100_M15_ACQUISITION_COMPLETE_BEFORE_ECONOMIC_METRICS",
+  "unit": "us100-realized-variance-asymmetry-response-environment-correction-120",
+  "family": "us100-realized-variance-asymmetry-response-environment-correction-v1",
+  "declaration": {
+    "path": "lab/research/us100-realized-variance-asymmetry-response-environment-correction-v1/evidence/US100_RVA_ENVIRONMENT_CORRECTION_DECLARATION_V1.json",
+    "bytes": 20728,
+    "sha256": "8FC56435482F4EDF72D1ED3BADD3849C87522B2B4B26F06FCA3B17EF7774852B",
+    "frozen_before_runtime_or_acquisition": true,
+    "market_data_or_target_economics_opened_before_freeze": false,
+    "single_unit_commit_policy": "Declaration, acquisition, valid aggregation and closure receive one commit/push only after Unit 120 closes."
+  },
+  "frozen_inputs": {
+    "declaration_sha256": "8FC56435482F4EDF72D1ED3BADD3849C87522B2B4B26F06FCA3B17EF7774852B",
+    "acquisition_script_sha256": "F2E2F004BA0997852B33899EA0407988FE9B6C930508BC3E687B09BB999783EF",
+    "proxy_script_sha256": "9198877BC6508179A07CF261EA95002785CBC0BA23F9B91856C802854F076C6B",
+    "structural_anchor_sha256": "A57F177639D8533E432F2206C2C256D780AEA0BC84C466460E67DD786CB6F3D5",
+    "bar_sha256": "0B1EB416AA32F5CCA9AED98FBFB33B5D5DACF21252AF84B04643E6AAFA534FD6",
+    "spec_sha256": "0BC92D949E6F259DEC4B95416C5AFC8F9E000ED198078172CC45D255D157E117"
+  },
+  "implementation": {
+    "acquisition_script": {
+      "path": "lab/research/us100-realized-variance-asymmetry-response-environment-correction-v1/analysis/acquire_us100_m15_surface.py",
+      "bytes": 6844,
+      "sha256": "F2E2F004BA0997852B33899EA0407988FE9B6C930508BC3E687B09BB999783EF"
+    },
+    "proxy_script": {
+      "path": "lab/research/us100-realized-variance-asymmetry-response-environment-correction-v1/analysis/run_us100_rva_proxy.py",
+      "bytes": 27941,
+      "sha256": "9198877BC6508179A07CF261EA95002785CBC0BA23F9B91856C802854F076C6B"
+    }
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/rva120-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copy": true,
+    "pre_acquisition_files": 14,
+    "pre_acquisition_bytes": 261334975,
+    "post_closeout_files": 584,
+    "post_closeout_bytes": 383537439,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "symbolic_or_junction_links": 0,
+    "onedrive_reparse_markers_with_empty_link_type": 8,
+    "source_or_executable_from_another_lab_family": false,
+    "live_or_optimization_dependency": false,
+    "ignored_local_runtime": true
+  },
+  "acquisition": {
+    "python": "3.13.9",
+    "metatrader5_package": "5.0.5640",
+    "symbol": "US100",
+    "timeframe": "M15",
+    "from_inclusive": "2023-12-01 00:00:00 UTC request",
+    "to_inclusive": "2026-07-31 23:59:59 UTC request",
+    "successful_acquisition_batches": 1,
+    "acquisition_or_serialization_corrections": 0,
+    "copy_rates_range_calls": 1,
+    "symbol_info_calls": 1,
+    "api_calls_executed": ["initialize", "symbol_select", "symbol_info", "copy_rates_range", "shutdown"],
+    "forbidden_account_position_order_deal_history_margin_check_send_or_trade_calls_executed": false,
+    "terminal_process_closeout": {
+      "shutdown_called": true,
+      "exact_dedicated_terminal_processes_stopped_after_shutdown": 1,
+      "exact_dedicated_metaeditor_processes_stopped_after_shutdown": 1,
+      "exact_dedicated_terminal_or_metaeditor_processes_remaining": 0,
+      "other_processes_touched": false
+    }
+  },
+  "bar_export": {
+    "path": "lab/artifacts/raw/us100-realized-variance-asymmetry-response-environment-correction-v1/input/US100_M15_BARS_20231201_20260731.csv",
+    "bytes": 4797400,
+    "sha256": "0B1EB416AA32F5CCA9AED98FBFB33B5D5DACF21252AF84B04643E6AAFA534FD6",
+    "rows": 62696,
+    "columns": 9,
+    "column_names": ["time_epoch", "time_server", "open", "high", "low", "close", "tick_volume", "spread", "real_volume"],
+    "first_time": "2023.12.01 01:00:00",
+    "last_time": "2026.07.31 23:45:00",
+    "unique_strictly_increasing_epoch": true,
+    "finite_positive_ohlc": true,
+    "nonnegative_volume_and_spread": true,
+    "positive_tick_volume_rows": 62696,
+    "row_after_fixed_end": false
+  },
+  "symbol_spec": {
+    "path": "lab/artifacts/raw/us100-realized-variance-asymmetry-response-environment-correction-v1/input/US100_SYMBOL_SPEC_V1.json",
+    "bytes": 647,
+    "sha256": "0BC92D949E6F259DEC4B95416C5AFC8F9E000ED198078172CC45D255D157E117",
+    "symbol": "US100",
+    "description": "US Tech 100 Index Cash",
+    "digits": 2,
+    "point": 0.01,
+    "trade_tick_size": 0.01,
+    "trade_tick_value": 0.01,
+    "trade_tick_value_profit": 0.01,
+    "trade_tick_value_loss": 0.01,
+    "trade_contract_size": 1.0,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "trade_stops_level": 0,
+    "trade_freeze_level": 0,
+    "currency_profit": "USD"
+  },
+  "structural_anchor": {
+    "path": "lab/artifacts/raw/us100-realized-variance-asymmetry-response-environment-correction-v1/input/UNIT096_P1_SIGNAL_STRUCTURE.csv",
+    "bytes": 274355,
+    "sha256": "A57F177639D8533E432F2206C2C256D780AEA0BC84C466460E67DD786CB6F3D5",
+    "rows": 1529,
+    "economic_columns_present": false
+  },
+  "storage": {
+    "system_drive_free_gib_after_acquisition_and_exact_process_stop": 143.549,
+    "mandatory_sweep_threshold_gib": 30,
+    "storage_sweep_required": false,
+    "raw_surface_preserved": true,
+    "runtime_is_reproducible_and_may_be_dehydrated_after_use": true
+  },
+  "formal_parent_economic_columns_read": false,
+  "structural_signal_or_new_economic_metrics_consumed": false,
+  "premetric_proxy_corrections": {
+    "protected_invocations": 1,
+    "economic_outputs_created": 0,
+    "correction": "The parent resolve timestamp is the first valid tick inside the resolution bar. The comparator now floors that timestamp to its containing 15-minute coordinate instead of only clearing seconds; this changes no signal, source, period, cost, metric or gate.",
+    "research_failure": false
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_120",
+  "live_surface": "UNTOUCHED",
+  "next": "Run one structural-integrity-first fixed proxy aggregation, or correct engineering without verdict until one valid result exists."
+}
