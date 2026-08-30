@@ -1,0 +1,203 @@
+{
+  "schema": "zeta-next-us500-close-location-pressure-response-environment-correction-result-v1",
+  "created_at_local": "2026-08-30",
+  "status": "ONE_VALID_FIXED_SEQUENTIAL_PROXY_AGGREGATION_COMPLETE",
+  "unit": "us500-close-location-pressure-response-environment-correction-121",
+  "family": "us500-close-location-pressure-response-environment-correction-v1",
+  "macro_program": {
+    "id": 1,
+    "name": "entry_signal_market_structure"
+  },
+  "frozen_inputs": {
+    "declaration": {
+      "path": "lab/research/us500-close-location-pressure-response-environment-correction-v1/evidence/US500_CLP_ENVIRONMENT_CORRECTION_DECLARATION_V1.json",
+      "bytes": 15797,
+      "sha256": "D94FD344B1EF3B6DFDA60D79541A84BDA109574D1533C0B3787F3965FB62D2BA"
+    },
+    "acquisition_receipt": {
+      "path": "lab/research/us500-close-location-pressure-response-environment-correction-v1/evidence/US500_CLP_ENVIRONMENT_CORRECTION_ACQUISITION_RECEIPT_V1.json",
+      "bytes": 6722,
+      "sha256": "4579940DC15E4CF3B3398545393105B5621BB11DBFE04E5CF80934EADD66041E"
+    },
+    "acquisition_script": {
+      "path": "lab/research/us500-close-location-pressure-response-environment-correction-v1/analysis/acquire_us500_m15_surface.py",
+      "bytes": 9428,
+      "sha256": "9A6894B3C2553B8937DA0B37AE091EC0C72685780E63B9888CA672E6C4EB7E7F"
+    },
+    "proxy_script": {
+      "path": "lab/research/us500-close-location-pressure-response-environment-correction-v1/analysis/run_us500_clp_proxy.py",
+      "bytes": 33267,
+      "sha256": "C997C6C9F383A9134AEA0987CF6CBE4A522569FCD5B4B6B85E6611510957D9AF"
+    },
+    "structural_anchor": {
+      "path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/input/UNIT036_P1_SIGNAL_STRUCTURE.csv",
+      "bytes": 576304,
+      "sha256": "7C5C675408AB0D21D1436B8FC49AC9EB4302B8929CDEC0DC147E306B72C5D966"
+    },
+    "bar_surface": {
+      "path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/input/US500_M15_BARS_20241201_20260731.csv",
+      "bytes": 2810862,
+      "sha256": "E6C4C27436B92CE9503F4301168B27329CDF9DFA4EC994E7A71107168B3B940A"
+    },
+    "symbol_spec": {
+      "path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/input/US500_SYMBOL_SPEC_V1.json",
+      "bytes": 629,
+      "sha256": "CC026C3A0732AFAE704615C3841D8E35250C2C5F38A99FCC03DDFEF11DFD6D7E"
+    }
+  },
+  "parent_correction": {
+    "parent_unit": "us500-close-location-pressure-response-036",
+    "parent_valid_economic_verdicts": 0,
+    "parent_fault": "P1 opportunity rows were economically unread because the stable native HTML reported 99% rather than the predeclared 100% real-tick label.",
+    "correction_method": "Family-owned US500 M15 bar-open/spread proxy with exact P1 non-economic structural parity and unchanged signal, discovery/confirmation periods, sequential opening rule, costs and gates.",
+    "signal_or_economic_contract_changed": false,
+    "parent_economic_columns_selected_aggregated_or_printed": false,
+    "correction_complete": true
+  },
+  "acquisition": {
+    "bars": 39201,
+    "first_time": "2024.12.02 01:00:00",
+    "last_time": "2026.07.31 23:45:00",
+    "strictly_increasing": true,
+    "finite_positive_ohlc": true,
+    "nonnegative_spread": true,
+    "symbol_spec_equal_parent_visible_contract": true,
+    "successful_batches": 1,
+    "account_position_order_deal_or_trade_calls": 0
+  },
+  "p1_structural_integrity": {
+    "parent_rows": 3088,
+    "proxy_rows": 3088,
+    "m15_coordinate_matches": 3088,
+    "exact_ohlc_direction_horizon_matches": 3088,
+    "exact_first_tick_entry_exit_timestamp_matches_descriptive": 2922,
+    "maximum_close_location_abs_difference": 4.985974966231765e-10,
+    "maximum_body_fraction_abs_difference": 4.990429181006562e-10,
+    "eligible_days": 257,
+    "eligible_evaluations": 13755,
+    "triggers": 3088,
+    "resolved": 3088,
+    "unresolved": 0,
+    "rate_faults": 0,
+    "passed": true
+  },
+  "p1_frequency_gate": {
+    "resolved_opportunities": 3088,
+    "eligible_days": 257,
+    "opportunities_per_eligible_day": 12.01556420233463,
+    "at_least_3_per_day": true,
+    "at_least_500": true,
+    "passed": true
+  },
+  "p1_economics": {
+    "CONTINUATION": {
+      "observed": {
+        "net_usd": -14.7883,
+        "profit_factor": 0.8897861202490323,
+        "maximum_closed_drawdown_usd": 15.2011,
+        "net_over_maximum_closed_drawdown": -0.9728440704949005,
+        "wins_losses_zeros": [1427, 1648, 13]
+      },
+      "double_spread": {
+        "net_usd": -44.2306,
+        "profit_factor": 0.7072810130335083,
+        "maximum_closed_drawdown_usd": 44.5562,
+        "net_over_maximum_closed_drawdown": -0.9926923750230066,
+        "gross_profit_usd": 106.872,
+        "gross_loss_usd": 151.1026,
+        "wins_losses_zeros": [1233, 1843, 12]
+      },
+      "gates": {
+        "double_spread_net_positive": false,
+        "profit_factor_at_least_1_10": false,
+        "net_to_drawdown_at_least_1_50": false,
+        "passed": false
+      }
+    },
+    "REVERSION": {
+      "observed": {
+        "net_usd": -14.654,
+        "profit_factor": 0.8906377103623174,
+        "maximum_closed_drawdown_usd": 25.1907,
+        "net_over_maximum_closed_drawdown": -0.5817226198557718,
+        "wins_losses_zeros": [1442, 1634, 12]
+      },
+      "double_spread": {
+        "net_usd": -44.0963,
+        "profit_factor": 0.7072219337721399,
+        "maximum_closed_drawdown_usd": 47.4299,
+        "net_over_maximum_closed_drawdown": -0.9297152218326498,
+        "gross_profit_usd": 106.5171,
+        "gross_loss_usd": 150.6134,
+        "wins_losses_zeros": [1259, 1819, 10]
+      },
+      "gates": {
+        "double_spread_net_positive": false,
+        "profit_factor_at_least_1_10": false,
+        "net_to_drawdown_at_least_1_50": false,
+        "passed": false
+      }
+    }
+  },
+  "sequential_opening": {
+    "opened_periods": [
+      "P1_DISCOVERY_2025"
+    ],
+    "unopened_periods": [
+      "P2_CONFIRM_2026_JAN_MAY",
+      "P3_LATEST_2026_JUN_JUL"
+    ],
+    "P1_selected_direction": null,
+    "P2_or_P3_outcomes_consumed": false,
+    "rule_followed": true
+  },
+  "decision": {
+    "verdict": "FAIL_US500_CLOSE_LOCATION_PRESSURE_P1_NO_DIRECTION_NO_SEED",
+    "economic_classification": "VALID_P1_ECONOMIC_NONCONFIRMATION",
+    "interpretation": "The fixed state is abundant, but both symmetric books lose even at observed bar-open/spread cost. Doubled spread drives both profit factors to approximately 0.707 and net-to-drawdown remains negative. Neither direction passes any P1 economic gate, so the original sequential contract stops before P2 and P3.",
+    "retained_seed": null,
+    "mt5_clue": null,
+    "mt5_shortlist": null,
+    "optimization_candidate": null,
+    "fixed_development_candidate_changed_or_rejected": false,
+    "live_authority": false
+  },
+  "execution": {
+    "dedicated_runtime_copies": 1,
+    "successful_acquisition_batches": 1,
+    "successful_fixed_economic_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "protected_premetric_invocations": 0,
+    "environment_or_engineering_corrections": 0,
+    "grid_or_retune_points": 0,
+    "mql_copies_or_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "orders": 0,
+    "positions": 0,
+    "broker_or_account_queries": 0,
+    "elapsed_seconds": 0.5028639000083786,
+    "benign_runtime_warning": "Python emitted one deprecation warning for utcfromtimestamp after the valid result; it did not alter inputs, timestamps, structure, economics, gates or output and the frozen executed script was not changed post-result."
+  },
+  "raw_artifacts": {
+    "raw_result": {
+      "path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/output/US500_CLP_ENVIRONMENT_CORRECTION_RAW_RESULT_V1.json",
+      "bytes": 6449,
+      "sha256": "18F3193A9C3E4A09115E14646C8E63856B4C6AB72F36C57960AB2344584EC773"
+    },
+    "opportunities": {
+      "path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/output/US500_CLP_ENVIRONMENT_CORRECTION_OPPORTUNITIES_V1.csv",
+      "rows": 3088,
+      "bytes": 840111,
+      "sha256": "B30CC4A7B9901AAEA7758F02088C6752A2AE1A6539EA2BC5557BA6117684E365"
+    },
+    "bundle_files": 5,
+    "bundle_bytes": 4234355,
+    "ordered_manifest_sha256": "FB2C2F374B4F99FD73E10513A2C5AE0E2F75D2B7DB494FBFA1EF8CE35164F639",
+    "ordered_manifest_rule": "UTF-8 lines sorted by full path relative to repository: path|bytes|SHA256 followed by LF"
+  },
+  "program_6_opened": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_121",
+  "live_surface": "UNTOUCHED",
+  "marker": "FRONTIER_UNIT_121_VALID_P1_US500_CLP_NO_DIRECTION_NO_SEED"
+}

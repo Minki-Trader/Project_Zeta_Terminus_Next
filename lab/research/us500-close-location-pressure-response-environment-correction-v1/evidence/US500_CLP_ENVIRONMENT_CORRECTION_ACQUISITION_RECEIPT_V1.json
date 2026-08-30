@@ -1,0 +1,153 @@
+{
+  "schema": "zeta-next-us500-close-location-pressure-response-environment-correction-acquisition-receipt-v1",
+  "created_at_local": "2026-08-30",
+  "status": "ONE_DEDICATED_RUNTIME_AND_ONE_US500_M15_ACQUISITION_COMPLETE_BEFORE_ECONOMIC_METRICS",
+  "unit": "us500-close-location-pressure-response-environment-correction-121",
+  "family": "us500-close-location-pressure-response-environment-correction-v1",
+  "declaration": {
+    "path": "lab/research/us500-close-location-pressure-response-environment-correction-v1/evidence/US500_CLP_ENVIRONMENT_CORRECTION_DECLARATION_V1.json",
+    "bytes": 15797,
+    "sha256": "D94FD344B1EF3B6DFDA60D79541A84BDA109574D1533C0B3787F3965FB62D2BA",
+    "frozen_before_runtime_or_acquisition": true,
+    "market_data_or_target_economics_opened_before_freeze": false,
+    "single_unit_commit_policy": "Declaration, acquisition, any premetric corrections, the one valid sequential aggregation and closure receive one commit/push only after Unit 121 closes."
+  },
+  "frozen_inputs": {
+    "declaration_sha256": "D94FD344B1EF3B6DFDA60D79541A84BDA109574D1533C0B3787F3965FB62D2BA",
+    "acquisition_script_sha256": "9A6894B3C2553B8937DA0B37AE091EC0C72685780E63B9888CA672E6C4EB7E7F",
+    "proxy_script_sha256": "C997C6C9F383A9134AEA0987CF6CBE4A522569FCD5B4B6B85E6611510957D9AF",
+    "parent_opportunities_sha256": "0224131DF33A2B549E5DB9E91C4DE378F4BB1458E82BB046ED711D6A178AB238",
+    "structural_anchor_sha256": "7C5C675408AB0D21D1436B8FC49AC9EB4302B8929CDEC0DC147E306B72C5D966",
+    "bar_sha256": "E6C4C27436B92CE9503F4301168B27329CDF9DFA4EC994E7A71107168B3B940A",
+    "spec_sha256": "CC026C3A0732AFAE704615C3841D8E35250C2C5F38A99FCC03DDFEF11DFD6D7E"
+  },
+  "implementation": {
+    "acquisition_script": {
+      "path": "lab/research/us500-close-location-pressure-response-environment-correction-v1/analysis/acquire_us500_m15_surface.py",
+      "bytes": 9428,
+      "sha256": "9A6894B3C2553B8937DA0B37AE091EC0C72685780E63B9888CA672E6C4EB7E7F"
+    },
+    "proxy_script": {
+      "path": "lab/research/us500-close-location-pressure-response-environment-correction-v1/analysis/run_us500_clp_proxy.py",
+      "bytes": 33267,
+      "sha256": "C997C6C9F383A9134AEA0987CF6CBE4A522569FCD5B4B6B85E6611510957D9AF"
+    }
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/clpec121-portable/",
+    "origin": "lab/runtime/tester-portable/",
+    "physical_copy": true,
+    "pre_acquisition_files": 14,
+    "pre_acquisition_bytes": 261334975,
+    "post_closeout_files": 557,
+    "post_closeout_bytes": 350030061,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "filesystem_links": 0,
+    "onedrive_reparse_markers": 2,
+    "source_or_executable_from_another_lab_family": false,
+    "live_or_optimization_dependency": false,
+    "ignored_local_runtime": true
+  },
+  "acquisition": {
+    "python": "3.13.9",
+    "metatrader5_package": "5.0.5640",
+    "symbol": "US500",
+    "timeframe": "M15",
+    "from_inclusive": "2024-12-01 00:00:00 UTC request",
+    "to_inclusive": "2026-07-31 23:59:59 UTC request",
+    "successful_acquisition_batches": 1,
+    "acquisition_or_serialization_corrections": 0,
+    "copy_rates_range_calls": 1,
+    "symbol_info_calls": 1,
+    "api_calls_executed": [
+      "initialize",
+      "symbol_select",
+      "symbol_info",
+      "copy_rates_range",
+      "shutdown"
+    ],
+    "forbidden_account_position_order_deal_history_margin_check_send_or_trade_calls_executed": false,
+    "terminal_process_closeout": {
+      "shutdown_called": true,
+      "exact_dedicated_terminal_processes_stopped_after_shutdown": 1,
+      "exact_dedicated_metaeditor_processes_stopped_after_shutdown": 1,
+      "exact_dedicated_terminal_or_metaeditor_processes_remaining": 0,
+      "other_processes_touched": false
+    }
+  },
+  "bar_export": {
+    "path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/input/US500_M15_BARS_20241201_20260731.csv",
+    "bytes": 2810862,
+    "sha256": "E6C4C27436B92CE9503F4301168B27329CDF9DFA4EC994E7A71107168B3B940A",
+    "rows": 39201,
+    "columns": 9,
+    "column_names": [
+      "time_epoch",
+      "time_server",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "first_time": "2024.12.02 01:00:00",
+    "last_time": "2026.07.31 23:45:00",
+    "unique_strictly_increasing_epoch": true,
+    "finite_positive_ohlc": true,
+    "nonnegative_volume_and_spread": true,
+    "positive_tick_volume_rows": 39201,
+    "row_after_fixed_end": false
+  },
+  "symbol_spec": {
+    "path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/input/US500_SYMBOL_SPEC_V1.json",
+    "bytes": 629,
+    "sha256": "CC026C3A0732AFAE704615C3841D8E35250C2C5F38A99FCC03DDFEF11DFD6D7E",
+    "symbol": "US500",
+    "description": "US 500 Index Cash",
+    "digits": 2,
+    "point": 0.01,
+    "trade_tick_size": 0.01,
+    "trade_tick_value": 0.01,
+    "trade_tick_value_profit": 0.01,
+    "trade_tick_value_loss": 0.01,
+    "trade_contract_size": 1.0,
+    "volume_min": 0.01,
+    "volume_step": 0.01,
+    "trade_stops_level": 0,
+    "trade_freeze_level": 0,
+    "currency_profit": "USD"
+  },
+  "structural_anchor": {
+    "source_path": "lab/runtime/clp36-portable/Tester/Agent-127.0.0.1-3000/MQL5/Files/US500CLP36V1/run-1/opportunities.csv",
+    "source_bytes": 852096,
+    "source_sha256": "0224131DF33A2B549E5DB9E91C4DE378F4BB1458E82BB046ED711D6A178AB238",
+    "output_path": "lab/artifacts/raw/us500-close-location-pressure-response-environment-correction-v1/input/UNIT036_P1_SIGNAL_STRUCTURE.csv",
+    "output_bytes": 576304,
+    "output_sha256": "7C5C675408AB0D21D1436B8FC49AC9EB4302B8929CDEC0DC147E306B72C5D966",
+    "rows": 3088,
+    "columns": 15,
+    "economic_columns_selected_or_emitted": false,
+    "operator_row_preview_count": 0
+  },
+  "storage": {
+    "system_drive_free_gib_after_acquisition_and_exact_process_stop": 143.319,
+    "mandatory_sweep_threshold_gib": 30,
+    "storage_sweep_required": false,
+    "raw_surface_preserved": true,
+    "runtime_is_reproducible_and_may_be_dehydrated_after_use": true
+  },
+  "formal_parent_economic_columns_aggregated_or_printed": false,
+  "structural_signal_or_new_economic_metrics_consumed": false,
+  "premetric_proxy_corrections": {
+    "protected_invocations": 0,
+    "economic_outputs_created": 0,
+    "research_failure": false
+  },
+  "program_6_opened": false,
+  "broker_or_account_state_queried": false,
+  "optimization_surface": "UNTOUCHED_BY_UNIT_121",
+  "live_surface": "UNTOUCHED",
+  "next": "Run one structural-integrity-first fixed sequential proxy aggregation, correcting engineering without verdict until one valid result exists."
+}
