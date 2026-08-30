@@ -1,0 +1,257 @@
+{
+  "schema": "zeta-next-us30-house-recess-cash-long-result-v1",
+  "date": "2026-08-30",
+  "status": "COMPLETE_VALID_ECONOMIC_AMBIGUOUS_NO_SEED",
+  "unit": "us30-house-recess-cash-long-115",
+  "family": "us30-house-recess-cash-long-v1",
+  "declaration": {
+    "commit": "547710e09b417287c8753d41ebef1e75beef1dab",
+    "path": "lab/research/us30-house-recess-cash-long-v1/evidence/US30_HOUSE_RECESS_CASH_LONG_DECLARATION_V1.json",
+    "bytes": 10954,
+    "sha256": "951CBC531DEAE0A03DEEE0B5873884359A9E270AE8BE1B116CE973C79CE7DC12",
+    "reached_origin_main_before_target_prices_opened": true
+  },
+  "formal_run": {
+    "complete_aggregations": 1,
+    "formal_invocations": 1,
+    "economic_metric_reruns": 0,
+    "post_declaration_engineering_corrections": 0,
+    "elapsed_seconds": 1.2324384999956237,
+    "input_manifest_sha256": "086995133B4C02D6912BE3661D1B5F7C2F253BB9420D68DAB75C3C447A5CE7D0",
+    "semantic_contract_sha256": "22DA6C8760066AB1D900B147304A370A301245CE693D33DCEEDFEBA457DD0B3C",
+    "geometry_drift": false,
+    "official_sessions": 1024,
+    "eligible_sessions": 1017,
+    "recess_sessions": 337,
+    "open_sessions": 680,
+    "notice_lead_calendar_days": [1, 5]
+  },
+  "economic_identity": {
+    "symbol": "US30",
+    "volume": 0.01,
+    "starting_balance_usd": 100.0,
+    "entry": "exact 09:30 America/New_York M1 open",
+    "exit": "exact 15:59 M1 close representing 16:00",
+    "primary": "LONG only on causally known HOUSE_RECESS dates; cash on HOUSE_OPEN",
+    "binding_measure": "stressed_usd",
+    "stress": "midpoint gross less the full entry-plus-exit spread burden",
+    "commission_swap_financing_usd": 0.0
+  },
+  "primary_full": {
+    "active_days": 337,
+    "gross": {
+      "net_usd": 41.565,
+      "profit_factor": 1.1384380959,
+      "closed_drawdown_percent": 28.251,
+      "net_to_drawdown": 1.4712753531
+    },
+    "observed": {
+      "net_usd": 36.799,
+      "profit_factor": 1.1216218449,
+      "closed_drawdown_percent": 29.2385,
+      "net_to_drawdown": 1.2585802965
+    },
+    "stressed": {
+      "net_usd": 32.033,
+      "profit_factor": 1.1050558518,
+      "closed_drawdown_percent": 30.226,
+      "net_to_drawdown": 1.0597829683,
+      "win_rate": 0.5074183976,
+      "mean_usd_per_exposed_day": 0.0950534125,
+      "positive_months": 26,
+      "active_months": 49,
+      "positive_month_fraction": 0.5306122449,
+      "positive_weekdays": 2,
+      "top_five_positive_day_share": 0.1273108234
+    },
+    "cost_attribution_usd": {
+      "gross_to_observed_burden": 4.766,
+      "gross_to_stressed_burden": 9.532,
+      "stress_burden_fraction_of_gross_net": 0.2293275592,
+      "sign_flipped_by_cost": false
+    }
+  },
+  "primary_periods": {
+    "P1_2022H2_2023": {
+      "days": 122,
+      "gross_observed_stressed_net_usd": [4.163, 1.96, -0.243],
+      "stressed_profit_factor": 0.9975237435,
+      "stressed_closed_drawdown_percent": 21.774,
+      "stressed_net_to_drawdown": -0.0111600992,
+      "positive_month_fraction": 0.4444444444,
+      "positive_weekdays": 2,
+      "matched_recess_minus_open_mean_usd": -0.2740261299
+    },
+    "P2_2024": {
+      "days": 87,
+      "gross_observed_stressed_net_usd": [16.2215, 15.2315, 14.2415],
+      "stressed_profit_factor": 1.225137139,
+      "stressed_closed_drawdown_percent": 14.9045,
+      "stressed_net_to_drawdown": 0.9555167902,
+      "positive_month_fraction": 0.6666666667,
+      "positive_weekdays": 4,
+      "matched_recess_minus_open_mean_usd": 0.2812199074,
+      "both_control_superiority": true
+    },
+    "P3_2025": {
+      "days": 86,
+      "gross_observed_stressed_net_usd": [-7.758, -8.752, -9.746],
+      "stressed_profit_factor": 0.9019176676,
+      "stressed_closed_drawdown_percent": 27.855,
+      "stressed_net_to_drawdown": -0.3498833244,
+      "positive_month_fraction": 0.3333333333,
+      "positive_weekdays": 3,
+      "matched_recess_minus_open_mean_usd": -0.096696875,
+      "both_control_superiority": false
+    },
+    "P4_2026_JAN_MAY": {
+      "days": 27,
+      "gross_observed_stressed_net_usd": [28.505, 28.1135, 27.722],
+      "stressed_profit_factor": 2.102682922,
+      "stressed_closed_drawdown_percent": 11.259,
+      "stressed_net_to_drawdown": 2.4622080114,
+      "positive_month_fraction": 1.0,
+      "positive_weekdays": 3,
+      "top_five_positive_day_share": 0.7692693308,
+      "matched_recess_minus_open_mean_usd": 0.5781568627,
+      "both_control_superiority": true,
+      "share_of_full_stressed_net": 0.8654200356
+    },
+    "P5_LATEST_2026_JUN_JUL": {
+      "days": 15,
+      "gross_observed_stressed_net_usd": [0.4335, 0.246, 0.0585],
+      "stressed_profit_factor": 1.0030758715,
+      "stressed_closed_drawdown_percent": 8.262,
+      "stressed_net_to_drawdown": 0.00708061,
+      "positive_month_fraction": 0.5,
+      "positive_weekdays": 1,
+      "monthly_stressed_net_usd": {"2026-06": 0.216, "2026-07": -0.1575},
+      "matched_recess_minus_open_mean_usd": -0.1801,
+      "nominal_and_practical_latest_gate": true
+    }
+  },
+  "p1_splits_stressed_net_usd": {
+    "2022H2": -2.033,
+    "2023H1": 5.3185,
+    "2023H2": -3.5285
+  },
+  "weekday_stressed_net_usd": {
+    "Monday": 63.497,
+    "Tuesday": 19.926,
+    "Wednesday": -5.866,
+    "Thursday": -21.671,
+    "Friday": -23.853
+  },
+  "prelatest": {
+    "stressed_net_usd": 31.9745,
+    "profit_factor": 1.1118400112,
+    "closed_drawdown_percent": 30.226,
+    "net_to_drawdown": 1.0578475485,
+    "positive_months": 25,
+    "active_months": 47,
+    "positive_month_fraction": 0.5319148936,
+    "positive_weekdays": 2,
+    "top_five_positive_day_share": 0.1349516075,
+    "matched_recess_minus_open_mean_usd": -0.0005449561,
+    "primary_mean_usd": 0.0992996894,
+    "house_open_mean_usd": 0.1096890337,
+    "primary_net_to_drawdown": 1.0578475485,
+    "unconditional_net_to_drawdown": 1.8234182568
+  },
+  "full_controls": {
+    "HOUSE_OPEN_LONG": {
+      "active_days": 680,
+      "stressed_net_usd": 84.24125,
+      "stressed_mean_usd_per_day": 0.1238841912,
+      "stressed_profit_factor": 1.1359504976,
+      "stressed_closed_drawdown_percent": 38.359,
+      "stressed_net_to_drawdown": 2.1961273756,
+      "promotable": false
+    },
+    "UNCONDITIONAL_LONG": {
+      "active_days": 1017,
+      "stressed_net_usd": 116.27425,
+      "stressed_mean_usd_per_day": 0.1143306293,
+      "stressed_profit_factor": 1.1257616457,
+      "stressed_closed_drawdown_percent": 56.757,
+      "stressed_net_to_drawdown": 2.0486327678,
+      "identity": "primary recess net plus disjoint House-open control net",
+      "promotable": false
+    },
+    "primary_minus_house_open_mean_usd": -0.0288307787,
+    "primary_minus_unconditional_net_to_drawdown": -0.9888497995
+  },
+  "matched_control": {
+    "cell": "calendar_month x weekday with both House states",
+    "full_dual_state_cells": 157,
+    "full_positive_cells": 75,
+    "full_positive_cell_fraction": 0.4777070064,
+    "full_equal_weight_recess_minus_open_mean_usd": -0.0062632696,
+    "period_equal_weight_mean_usd": {
+      "P1": -0.2740261299,
+      "P2": 0.2812199074,
+      "P3": -0.096696875,
+      "P4": 0.5781568627,
+      "latest": -0.1801
+    },
+    "prelatest_equal_weight_mean_usd": -0.0005449561,
+    "interpretation": "After equalizing calendar month and weekday composition, House recess has no positive full or prelatest incremental cash-session return over House-open days."
+  },
+  "gate_outcome": {
+    "density": true,
+    "p1": {
+      "passed": false,
+      "failed": ["net", "profit_factor", "net_to_drawdown", "all_three_splits", "positive_month_fraction", "weekday_breadth", "matched_difference", "control_superiority"]
+    },
+    "confirmation": {
+      "passed": false,
+      "positive_periods": 2,
+      "required_positive_periods": 3,
+      "pooled_profit_factor_passed": true,
+      "pooled_net_to_drawdown_passed": false,
+      "matched_control_and_month_breadth_counts_passed": true
+    },
+    "prelatest": {
+      "passed": false,
+      "passed_checks": ["net", "profit_factor", "top_five_positive_day_share", "matched_cell_density"],
+      "failed_checks": ["net_to_drawdown", "positive_month_fraction", "weekday_breadth", "matched_difference", "control_superiority", "nominal_drawdown", "practical_drawdown"]
+    },
+    "latest": {"nominal": true, "practical": true},
+    "full": {
+      "passed": false,
+      "passed_checks": ["net", "profit_factor", "matched_cell_density"],
+      "failed_checks": ["net_to_drawdown", "weekday_breadth", "matched_difference", "control_superiority", "nominal_drawdown", "practical_drawdown"]
+    }
+  },
+  "economic_interpretation": {
+    "positive_fact": "The fixed recess-only cash sleeve earns positive gross, observed and stressed full net, with strong P2 and P4 islands and a marginally positive latest pair.",
+    "non_edge_fact": "The recess sample has lower stressed mean and lower net/DD than both frozen controls; month-by-weekday matched full and prelatest effects are negative.",
+    "temporal_fact": "P1, two of three P1 splits and P3 fail; P4 supplies 86.54% of full stressed net and its five largest positive days supply 76.93% of its positive-day gross, so the complete path is regime-dependent rather than chronologically transferable.",
+    "risk_fact": "Full and prelatest stressed closed DD are 30.226%, above both the frozen 20.0% nominal and 21.2% practical lines; only two weekdays are positive.",
+    "cost_fact": "Costs reduce but do not create the full rejection. They flip only the already-weak P1 from +4.163 gross to -0.243 stressed; P3 is negative before cost.",
+    "paper_scope": "The result addresses only the post-paper FPMarkets US30 09:30-to-16:00 transfer and does not refute historical close-to-close DJIA evidence."
+  },
+  "verdict": "AMBIGUOUS_HOUSE_RECESS_US30_CASH_LONG_NO_SEED",
+  "strong_null": false,
+  "nominal_pass": false,
+  "practical_pass": false,
+  "retained_seed": null,
+  "optimization_candidate": null,
+  "mt5_shortlist": null,
+  "fixed_development_candidate": "unchanged",
+  "raw_artifacts": [
+    {"path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/output/analysis-result.json", "bytes": 350184, "sha256": "29C8A4ECDCB04803B24BF87A94ED7E5EE9821F69C716376BB7FF7C6EF546A523"},
+    {"path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/output/trades.csv", "bytes": 174387, "sha256": "7D59E2BE49C353BA24D04659BA44A8B458021003094EA67248D44B0EBD59B0B4"},
+    {"path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/output/calendar.csv", "bytes": 119308, "sha256": "BD0D36ED672348F4807B6064B1FFF95F9DA898047094E2E3371B4A76D59819F5"}
+  ],
+  "boundary_integrity": {
+    "grid_or_retune_points": 0,
+    "mql_changes": 0,
+    "mt5_calls": 0,
+    "strategy_tester_calls": 0,
+    "master_terminal_touched": false,
+    "broker_account_position_order_deal_calls": 0,
+    "live_surface": "untouched"
+  },
+  "next": "Freeze the complete family without a House-state, calendar, weekday, clock, carrier, cost, size or integration rescue; push once and return immediately to serial Optimization whole-map discovery."
+}

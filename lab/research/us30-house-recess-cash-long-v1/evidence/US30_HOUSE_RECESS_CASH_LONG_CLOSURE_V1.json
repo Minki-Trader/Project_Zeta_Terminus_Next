@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-us30-house-recess-cash-long-closure-v1",
+  "date": "2026-08-30",
+  "status": "CLOSED_VALID_AMBIGUOUS_HOUSE_RECESS_US30_CASH_LONG_NO_SEED_MAP_RECOMPARED",
+  "unit": "us30-house-recess-cash-long-115",
+  "family": "us30-house-recess-cash-long-v1",
+  "result": {
+    "path": "lab/research/us30-house-recess-cash-long-v1/evidence/US30_HOUSE_RECESS_CASH_LONG_RESULT_V1.json",
+    "bytes": 10990,
+    "sha256": "5110E75CB9B8F21656DEE5BAD5DBDA27C138EB7F2C1732FE11B651FC9981DADE"
+  },
+  "closed_readme": {
+    "path": "lab/research/us30-house-recess-cash-long-v1/README.md",
+    "bytes": 3524,
+    "sha256": "82F0FBF1DA8704E4F5C9886F00B5880D968941A4FA7C264DFE9DE20229342B1C"
+  },
+  "formal_evidence": {
+    "declaration_commit": "547710e09b417287c8753d41ebef1e75beef1dab",
+    "declaration_was_on_origin_before_outcome": true,
+    "complete_economic_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "engineering_corrections_after_declaration": 0,
+    "elapsed_seconds": 1.2324384999956237,
+    "input_manifest_sha256": "086995133B4C02D6912BE3661D1B5F7C2F253BB9420D68DAB75C3C447A5CE7D0",
+    "geometry_reproduced": true,
+    "terminal64_count_after_run": 0
+  },
+  "economic_closure": {
+    "verdict": "AMBIGUOUS_HOUSE_RECESS_US30_CASH_LONG_NO_SEED",
+    "strong_null": false,
+    "nominal_pass": false,
+    "practical_pass": false,
+    "full_gross_observed_stressed_net_usd": [41.565, 36.799, 32.033],
+    "full_stressed_profit_factor": 1.1050558518,
+    "full_stressed_closed_drawdown_percent": 30.226,
+    "full_stressed_net_to_drawdown": 1.0597829683,
+    "period_stressed_net_usd": {
+      "P1": -0.243,
+      "P2": 14.2415,
+      "P3": -9.746,
+      "P4": 27.722,
+      "latest": 0.0585
+    },
+    "p1_split_stressed_net_usd": {
+      "2022H2": -2.033,
+      "2023H1": 5.3185,
+      "2023H2": -3.5285
+    },
+    "prelatest_stressed_net_usd": 31.9745,
+    "prelatest_profit_factor": 1.1118400112,
+    "prelatest_closed_drawdown_percent": 30.226,
+    "prelatest_net_to_drawdown": 1.0578475485,
+    "latest_month_stressed_net_usd": {"2026-06": 0.216, "2026-07": -0.1575},
+    "positive_months_full": [26, 49],
+    "positive_weekdays_full": 2,
+    "p4_share_of_full_stressed_net": 0.8654200356,
+    "p4_top_five_positive_day_share": 0.7692693308
+  },
+  "control_closure": {
+    "primary_stressed_mean_usd_per_day": 0.0950534125,
+    "house_open_stressed_mean_usd_per_day": 0.1238841912,
+    "primary_stressed_net_to_drawdown": 1.0597829683,
+    "unconditional_stressed_net_to_drawdown": 2.0486327678,
+    "house_open_stressed_net_usd": 84.24125,
+    "unconditional_stressed_net_usd": 116.27425,
+    "matched_full_cells": 157,
+    "matched_full_positive_cells": 75,
+    "matched_full_recess_minus_open_mean_usd": -0.0062632696,
+    "matched_prelatest_recess_minus_open_mean_usd": -0.0005449561,
+    "conclusion": "The profitable raw sleeve does not isolate a recess effect: recess days have lower mean and lower efficiency than open days, and matched full/prelatest incremental effects are negative."
+  },
+  "why_ambiguous_not_strong_null": {
+    "positive_evidence": [
+      "gross, observed and stressed full net are all positive",
+      "P2 and P4 are positive with positive matched differences and both control-superiority checks",
+      "latest stressed net is marginally positive"
+    ],
+    "binding_rejections": [
+      "P1 is stressed-negative and only one of three P1 splits is positive",
+      "P3 is gross-negative and stressed-negative",
+      "P4 contributes 86.54% of full stressed net and is highly concentrated",
+      "full and prelatest drawdown exceed both 20.0% nominal and 21.2% practical lines",
+      "only two weekdays and 26 of 49 months are positive",
+      "full and prelatest matched differences and both frozen full control-superiority tests fail"
+    ]
+  },
+  "literature_scope": {
+    "paper": "Lamb, Ma, Pace, and Kennedy (1997), DOI 10.1016/S1057-0810(97)90029-9",
+    "paper_carrier_and_horizon": "historical DJIA daily returns",
+    "tested_transfer": "post-paper FPMarkets US30 regular cash session only",
+    "nonclaim": "This closure does not refute the paper's historical close-to-close result or establish the value of any excluded overnight or alternate carrier."
+  },
+  "closed_neighborhood": [
+    "Senate, joint-Congress, committee, presidential, state-legislature or another political calendar",
+    "alternate House open/recess definition, duration, lead, transition, weekday, month or subgroup",
+    "direction inversion, House-open short or promotion of HOUSE_OPEN_LONG or UNCONDITIONAL_LONG",
+    "close-to-close, overnight, premarket, after-hours, alternate entry/exit, futures, ETF, US100, US500 or another carrier",
+    "spread substitution, stop, trailing, exit, sizing, leverage, capital, allocation or fixed-candidate integration rescue"
+  ],
+  "seed_and_authority": {
+    "retained_information_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "implementation_candidate": null,
+    "live_authority": null,
+    "fixed_development_candidate": "dd20-paired-month-stability-mt5-v1 unchanged"
+  },
+  "boundary_integrity": {
+    "mql_changes": 0,
+    "set_changes": 0,
+    "compiles": 0,
+    "mt5_calls": 0,
+    "strategy_tester_calls": 0,
+    "master_terminal_touched": false,
+    "broker_account_position_order_deal_calls": 0,
+    "live_source_state_log_touched": false,
+    "optimization_source_runtime_output_touched": false
+  },
+  "raw_artifacts_preserved": [
+    {"path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/output/analysis-result.json", "bytes": 350184, "sha256": "29C8A4ECDCB04803B24BF87A94ED7E5EE9821F69C716376BB7FF7C6EF546A523"},
+    {"path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/output/trades.csv", "bytes": 174387, "sha256": "7D59E2BE49C353BA24D04659BA44A8B458021003094EA67248D44B0EBD59B0B4"},
+    {"path": "lab/artifacts/raw/us30-house-recess-cash-long-v1/output/calendar.csv", "bytes": 119308, "sha256": "BD0D36ED672348F4807B6064B1FFF95F9DA898047094E2E3371B4A76D59819F5"}
+  ],
+  "whole_map_recomparison": {
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "research_heights_compared": ["micro", "meso", "macro"],
+    "Program_1": "No entry-signal seed survives; price-pattern and native-signal neighbors remain closed.",
+    "Program_2": "The House-calendar source and all political-calendar/state/horizon/carrier neighbors close without a seed; Units 113-115 do not authorize another entertainment, weather or political-event rescue.",
+    "Program_3": "The cash-session transfer failure does not authorize an adjacent clock or overnight test; those terms close with the source bundle.",
+    "Program_4": "Stops, trailing, alternate exits and held-path rescue are excluded because source-edge controls fail before management.",
+    "Program_5": "Sizing, leverage, allocation and fixed-candidate integration cannot rescue inferior mean/control efficiency and remain closed.",
+    "Program_7": "The matched composition analysis is diagnostic and negative; it creates no promotable meta-filter or subgroup.",
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true
+  },
+  "goal_status": "ACTIVE_NOT_COMPLETE_NOT_PAUSED",
+  "next": "Commit and push the complete Unit 115 closure once, then continue serial Optimization whole-map discovery for a genuinely independent mechanism without a House/calendar/weekday/clock/carrier rescue.",
+  "marker": "FRONTIER_UNIT_115_CLOSED_VALID_AMBIGUOUS_HOUSE_RECESS_US30_CASH_LONG_NO_SEED_MAP_RECOMPARED"
+}
