@@ -4,12 +4,12 @@ This root owns continuous economic optimization of the exact active Live-Dev beh
 
 ## Fixed parent
 
-- Source release: `NEXT-E01-V7-RLO1-b32e7e176f2e`
+- Source release: `NEXT-E02-V8-PMLR1-b1c77d3b6356`
 - Source root at derivation: `live-dev/package/active/`
-- Local frozen copy: `baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/`
-- Source commit at derivation: `f4e1effb647d5ef81921eddc64fcd6bef2289f57`
-- Frozen manifest: `7A968666241AD90629F14ADF48E983AB04A4DD88053F1413EBB209FB51976698`
-- Status: exact 20-file baseline frozen; the first 15-point risk-cap campaign's original files remain preserved, but its same-interval economic authority is quarantined by `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`
+- Local frozen copy: `baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/`
+- Source commit at derivation: `9e0e2d4fe5c8b553216dd801d51ba2e130a5c6e0`
+- Frozen manifest: `7BCB5B9A5182E3ADE2AEA3954025BEFB9897FB685201200CAB04C5FCBB78ACDF`
+- Status: exact 20-file V8 baseline frozen at `660,794` bytes with zero mismatch and zero filesystem link; the prior V7 baseline remains immutable historical derivation material
 
 The local baseline is never compiled or executed with Live identity. It is copied once so later campaign work no longer depends on a Live or Lab path.
 
@@ -33,7 +33,7 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
-No Optimization campaign is currently open. The immediate next serial campaign must restore clean binding authority for the fixed paired-month control/candidate before V8 can leave entries-disabled state. It must be newly declared, self-contained, immediately adjacent, fingerprint-identical and detailed-log clean; the fixed candidate's prior outcome-aware selection must be disclosed and cannot be called pristine or untouched out-of-sample.
+`campaigns/dd20-paired-clean-requal-mt5-v1/` is open declaration-only. It freezes exactly two 2024-01 through 2026-07 paths in one dedicated future Portable: uniform `0.04 / 0.18` CONTROL followed immediately by the exact V8 paired-month CANDIDATE. Both must be detailed-log clean under exact environment fingerprints; the candidate must clear the predeclared profit, chronology, component breadth and `21.2%` DD gates. Source, configuration, runtime, compile and outcomes remain unopened until the declaration reaches `origin/main`.
 
 Current authority notice: historical campaign summaries below preserve their original closed wording and numbers. For every 2022-08 through 2026-06 Selection named by `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`, that correction supersedes the historical validity label; the economics are descriptive only and cannot select, rank or promote a candidate.
 

@@ -1,0 +1,207 @@
+{
+  "schema": "zeta-dd20-paired-clean-requal-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_NEW_V8_BASELINE_PINNED_CAMPAIGN_SOURCE_RUNTIME_AND_OUTCOMES_UNOPENED",
+  "campaign": {
+    "id": "dd20-paired-clean-requal-mt5-v1",
+    "release_id": "OPT-LIVE-V8-DD20PCR1-20260831",
+    "portfolio_id": "ZT-OPT-LIVE-V8-DD20PCR1-20260831",
+    "economic_schema": "opt-dd20-pcr-mt5-1",
+    "magic_range": "260831931..260831936",
+    "program": 5,
+    "height": "meso-to-macro",
+    "tester_only": true,
+    "dedicated_runtime": "optimization/runtime/dd20-pcr1-portable/",
+    "raw_artifact_root": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v1/"
+  },
+  "authority_repair": {
+    "source_correction": "lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json",
+    "source_correction_bytes": 20296,
+    "source_correction_sha256": "3B22958A5E0E1FFB8A00781035737870A14012EF28F59887E662A8CDE58FFEEC",
+    "reason": "The fixed paired-month candidate's 2022-08 through 2026-06 Selection and Lab reproduction are non-authoritative because their detailed required-symbol logs explicitly report real-tick generation fallback.",
+    "goal": "Obtain one clean immediately adjacent control/fixed-candidate economic comparison without changing the candidate, then either open a separate Lab economic-handoff correction or close valid nonconfirmation with V8 still entries disabled.",
+    "not_a_new_search": true,
+    "not_pristine_out_of_sample": true,
+    "outcome_aware_candidate_disclosed": true,
+    "automatic_live_promotion": false
+  },
+  "optimization_baseline": {
+    "path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/",
+    "copied_once_from": "live-dev/package/active/",
+    "live_release_id": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "live_portfolio_id": "ZT-PORT-NEXT-V8-PMLR1-20260831",
+    "live_magic_range": "260831901..260831906",
+    "file_count": 20,
+    "total_bytes": 660794,
+    "ordered_manifest_sha256": "7BCB5B9A5182E3ADE2AEA3954025BEFB9897FB685201200CAB04C5FCBB78ACDF",
+    "byte_mismatches_against_live_package_at_copy": 0,
+    "filesystem_reparse_points": 0,
+    "release_manifest_bytes": 3902,
+    "release_manifest_sha256": "5A7538A1843B57FCC089521C6F8D8C35278AE5609A5572B7244C7AAAD024CC7C",
+    "source_manifest_bytes": 6401,
+    "source_manifest_sha256": "F160FD5824D5AE6CB179848DCCCABC873FB9D97819CBEDDBD4FC030C6D29AEA9",
+    "canonical_source_and_settings_sha256": "B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95",
+    "base_set_bytes": 1212,
+    "base_set_sha256": "7F53FAD0E2E748BD51EFFC40EE1CE14221940FDA183FAD3B04D7894CD3E552EA",
+    "assembly_source_bytes": 24675,
+    "assembly_source_sha256": "3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E",
+    "ex5_bytes": 229654,
+    "ex5_sha256": "E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274",
+    "immutable_after_declaration": true
+  },
+  "baseline_materialization_receipt": {
+    "successful_copy_invocations": 1,
+    "invocation_corrections": [
+      "The first destination construction contained a backspace escape and failed before directory creation or file copy.",
+      "The successful exact copy completed, then its first verification expression failed while normalizing path separators. The existing copy was retained without deletion or recopy and passed the corrected read-only verification."
+    ],
+    "source_or_live_file_modified": false,
+    "campaign_source_created": false,
+    "runtime_created": false
+  },
+  "planned_self_contained_derivation": {
+    "copy_from_baseline_once_after_declaration_push": true,
+    "campaign_source_root": "optimization/campaigns/dd20-paired-clean-requal-mt5-v1/mt5/",
+    "assembly_name": "ZetaDD20PairedCleanRequalMT5V1",
+    "include_namespace": "ZetaOptimizationDD20PairedCleanRequalMT5V1",
+    "state_namespace": "ZetaTerminusNext\\optimization\\dd20-pcr1\\state",
+    "research_namespace": "ZetaTerminusNext\\optimization\\dd20-pcr1\\research",
+    "required_source_changes": [
+      "change release, portfolio, execution, economic schema, Magic and all mutable state/research paths to campaign-owned identity",
+      "change assembly and Include namespace mechanically within the self-contained root",
+      "replace the V8 candidate-only startup assertion with an assertion that accepts exactly the frozen CONTROL tuple or exactly the frozen CANDIDATE tuple",
+      "retain all signal, hold, exit, stop, protection, sizing, rounding, capital-ladder, margin, admission and aggregate-risk algorithms"
+    ],
+    "cross_campaign_or_live_include_link": false,
+    "copied_live_ex5_executed": false,
+    "expected_compile_count": 1,
+    "compile_gate": "MetaEditor build 6140 at 0 errors and 0 warnings"
+  },
+  "fixed_comparison": {
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "common": {
+      "reference_capital_usd": 100.0,
+      "prior_project_realized_net_usd": 0.0,
+      "base_volume": 0.01,
+      "addition_step_usd": 150.0,
+      "maximum_margin_fraction": 0.45,
+      "maximum_position_risk_fraction": 0.04,
+      "maximum_aggregate_risk_fraction": 0.18,
+      "unmodelled_risk_reserve_fraction": 0.25,
+      "stop_placement_headroom_fraction": 0.25,
+      "maximum_entry_delay_minutes": 2,
+      "deviation_points": 100
+    },
+    "control": {
+      "role": "UNIFORM_004_018_CONTROL",
+      "component_multipliers": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+      "passive_enabled": true
+    },
+    "candidate": {
+      "role": "EXACT_V8_PAIRED_MONTH_CANDIDATE",
+      "component_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+      "passive_enabled": false,
+      "weights_risk_cap_or_economic_logic_changed_from_v8": false
+    },
+    "allowed_parameter_tuples": 2,
+    "parameter_grid": false,
+    "retune": false
+  },
+  "economic_execution_contract": {
+    "interval": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "interval_reason": "Continuous completed-month history after the affected 2022H2-2023 payload. Existing split-path precedent and the exact June-July suffix show no detailed generation fallback, but both new paths must independently prove the full interval clean.",
+    "primary_symbol": "US30",
+    "primary_period": "M30",
+    "required_symbols": ["US30", "US100", "US500"],
+    "tester_model": "MT5 Every tick based on real ticks",
+    "model_value": 4,
+    "deposit_usd": 100.0,
+    "currency": "USD",
+    "leverage": "1:100",
+    "optimization": false,
+    "path_order": [
+      "CONTROL",
+      "CANDIDATE"
+    ],
+    "declared_complete_valid_paths": 2,
+    "adjacency": "The complete valid CONTROL is immediately followed by the complete valid CANDIDATE in the same dedicated Portable under exact pre/mid/post fingerprints.",
+    "chronological_epochs": [
+      "2024-01-01T00:00:00/2025-01-01T00:00:00",
+      "2025-01-01T00:00:00/2026-01-01T00:00:00",
+      "2026-01-01T00:00:00/2026-08-01T00:00:00"
+    ]
+  },
+  "binding_integrity_gate": [
+    "both paths stop normally and create complete HTML and native Tester cache output",
+    "both HTML reports state 100 percent real ticks under Model 4",
+    "each path's own detailed agent segment has zero required-symbol real-tick absent, discarded, generated fallback, price mismatch or volume mismatch line",
+    "required-symbol tick counts are complete and nonzero",
+    "source, configuration, EX5, required TKC/HCS, symbols.dat, symbols.raw, contract and swap fingerprints are exact before CONTROL, between paths and after CANDIDATE",
+    "any fingerprint change invalidates the entire pair and requires an unchanged clean correction rerun",
+    "all result, lifecycle, trade and deal totals reconcile",
+    "zero safety, persistence, broker, foreign, protection, research-drop, data-unavailable, pending-reconciliation or nonfinite fault"
+  ],
+  "economic_requalification_gate": {
+    "candidate_actual_net_positive": true,
+    "candidate_doubled_cost_stressed_net_positive": true,
+    "candidate_actual_delta_vs_control_at_least_usd": 100.0,
+    "candidate_stressed_delta_vs_control_at_least_usd": 100.0,
+    "candidate_actual_multiple_of_positive_control_at_least": 2.0,
+    "candidate_stressed_multiple_of_positive_control_at_least": 2.0,
+    "candidate_stressed_net_to_native_equity_drawdown_exceeds_control": true,
+    "candidate_native_maximum_relative_equity_drawdown_at_most_pct": 21.2,
+    "nominal_drawdown_line_reported_separately_pct": 20.0,
+    "candidate_each_chronological_epoch_actual_and_stressed_positive": true,
+    "candidate_all_five_active_components_pooled_actual_and_stressed_positive": true,
+    "candidate_passive_closed_lifecycles": 0,
+    "all_binding_integrity_gates_pass": true
+  },
+  "fixed_verdicts": {
+    "pass": "VALID_CLEAN_HISTORY_FIXED_PAIRED_CANDIDATE_REQUALIFIED_FOR_LAB_HANDOFF_CORRECTION",
+    "valid_nonconfirmation": "VALID_CLEAN_HISTORY_FIXED_PAIRED_CANDIDATE_NOT_REQUALIFIED_NO_LIVE_AUTHORITY",
+    "invalid": "INVALID_CLEAN_HISTORY_REQUALIFICATION_ENVIRONMENT_OR_ENGINEERING_NO_ECONOMIC_VERDICT"
+  },
+  "prior_clean_support": {
+    "paired_june_july_cumulative_agent_log_path": "optimization/artifacts/raw/dd20-paired-month-stability-mt5-v1/forward/agent-logs/20260828.log",
+    "selection_prefix_bytes": 13771188,
+    "forward_cumulative_bytes": 13938780,
+    "selection_is_exact_prefix": true,
+    "forward_suffix_bytes": 167592,
+    "forward_suffix_sha256": "60DB106902C833B5D47593F9BA19D4EB7E0D2E04D6769BE9CB09B1DB963510AF",
+    "forward_suffix_generation_fallback_lines": 0,
+    "forward_suffix_absent_lines": 0,
+    "forward_suffix_discarded_lines": 0,
+    "august_result_path": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/evidence/DD20_PAIRED_ANCHOR_AUGUST_2026_MT5_RESULT_V1.json",
+    "august_result_sha256": "AEB86F104206005788D724BC5C6BDFA227DB47BAA3B31A80C6F30F2D7D9B0799",
+    "august_candidate_actual_and_stressed_usd": [29.62, 28.586],
+    "august_native_equity_drawdown_pct": 13.44,
+    "authority": "SUPPORTS_INTERVAL_CHOICE_ONLY_AND_CANNOT_PREJUDGE_OR_RESCUE_THE_NEW_PAIR"
+  },
+  "readme": {
+    "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v1/README.md",
+    "bytes": 2778,
+    "sha256": "5C3D3654B76656A3617F9F6BF1335F33E0339CBD0555799728C0B52D18A52912"
+  },
+  "boundary": {
+    "baseline_materialized": true,
+    "campaign_source_created": false,
+    "configuration_created": false,
+    "runtime_created": false,
+    "compiled": false,
+    "tester_started": false,
+    "economic_output_opened": false,
+    "live_source_set_ex5_state_or_runtime_modified": false,
+    "lab_source_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "v8_required_entries_state": "0/0",
+    "rlo1_status": "RETIRED_READ_ONLY",
+    "automatic_live_promotion": false
+  }
+}
