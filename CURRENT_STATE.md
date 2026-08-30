@@ -5,7 +5,7 @@ Last updated: 2026-08-30
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0405`
+- Latest state ID: `STATE-0406`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -27,8 +27,8 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 - Repository integrity correction: `CLOSED_NON_ECONOMIC_MATERIALIZATION_AND_EVIDENCE_ERRATA`; the user-authorized patch stores the exact active Live package and the fixed candidate SET as raw Git bytes, supersedes the fixed candidate's misleading untouched/OOS June-July terminology without rewriting closed evidence, and maps two malformed long commit transcriptions to their real commits. Active Live source, EX5, SET, release identity, candidate, economics and every runtime remain unchanged. Clean-checkout and existing operator integrity pass; no compile, Tester, MT5 launch or broker/account query occurred. Durable record: `lineage/REPOSITORY_INTEGRITY_ERRATA_V1.json`.
 - Active engineering boundary: none; `lab/engineering/paired-month-live-replacement-handoff-v1/` is closed verified. The fixed paired-month implementation compiled at build 6140 with `0 errors / 0 warnings`, reproduced selection `+$5,786.64 / +$5,477.564` across `1,428` closes and forward `+$32.75 / +$30.628` across `54` closes, then passed bounded connected entries-disabled create/recovery at sequences `2 / 4` with entries `0/0`, flat zero-risk state and zero fault before normal stops. The candidate is ready only for a later separately authorized Live translation; current RLO1 package/runtime/state/logs remain unchanged.
-- Active research boundary: Program 2 / micro→meso Unit 114 `us500-preopen-laguardia-sunshine-cash-direction-v1` is declared with target economics unopened. The exact paper rule averages actual-local 05/06/07/08 LaGuardia sky cover, goes LONG at mean `<=4` and SHORT otherwise for the same US500 cash session. Frozen outcome-free geometry has `985` eligible days, every period and both directions dense, and a `36..40` minute pre-open lead. The direct GHCNh 2026 tail gap was corrected by replacing the whole weather surface with uniform NOAA LCDv2 before any price or spread opened.
-- Active optimization boundary: the continuous Goal is active and unpaused through the bounded Unit 114 Lab detour. No Optimization campaign, runtime, MT5 or Tester path is open. Unit 114 may retain at most one independent weather information seed after one complete valid aggregation; fixed candidate `dd20-paired-month-stability-mt5-v1` and useful artifacts remain unchanged.
+- Active research boundary: none. Program 2 / micro→meso Unit 114 `us500-preopen-laguardia-sunshine-cash-direction-v1` closed valid ambiguous `AMBIGUOUS_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_NO_SEED`. Full gross / observed / doubled-spread stressed net was `+$1.42925 / -$2.86960 / -$7.16845`; P2/P3 were positive but P1/P4/latest lost, prelatest was `-$6.03955`, and the exact weather primary ended `$8.59330` below unconditional LONG. No seed, candidate, MT5 or Live authority survived.
+- Active optimization boundary: the continuous Goal is active and unpaused in serial whole-map discovery after Unit 114. No Optimization campaign, runtime, MT5 or Tester path is open. The full weather station/hour/cutoff/transform/field/side/horizon/carrier/cost/sizing/integration neighborhood is closed; fixed candidate `dd20-paired-month-stability-mt5-v1` and useful artifacts remain unchanged.
 - Active research scheduler: each future unit names one primary Program 1-5 or 7 and one research height, freezes one connected bounded bundle, then returns to a whole-map comparison; Program 6 is excluded from this Goal and retained seeds never open automatically
 - Frozen parent: B70 V6R6
 - V7 release ID: `NEXT-E01-V7-RLO1-b32e7e176f2e`

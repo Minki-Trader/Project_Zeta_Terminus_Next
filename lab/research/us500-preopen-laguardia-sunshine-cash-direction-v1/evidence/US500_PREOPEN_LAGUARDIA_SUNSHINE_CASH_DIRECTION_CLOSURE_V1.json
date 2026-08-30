@@ -1,0 +1,170 @@
+{
+  "schema": "zeta-next-us500-preopen-laguardia-sunshine-cash-direction-closure-v1",
+  "date": "2026-08-30",
+  "status": "CLOSED_VALID_AMBIGUOUS_NO_SEED_MAP_RECOMPARED",
+  "unit": "us500-preopen-laguardia-sunshine-cash-direction-114",
+  "family": "us500-preopen-laguardia-sunshine-cash-direction-v1",
+  "result": {
+    "path": "lab/research/us500-preopen-laguardia-sunshine-cash-direction-v1/evidence/US500_PREOPEN_LAGUARDIA_SUNSHINE_CASH_DIRECTION_RESULT_V1.json",
+    "bytes": 15299,
+    "sha256": "8AE434A0C4215D406526CE2D8D9DD921269C3F4B9ACB0D2FA20623CC0645AFF5"
+  },
+  "verdict": "AMBIGUOUS_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_NO_SEED",
+  "verdict_class": "complete valid economic ambiguous no-seed",
+  "why_not_pass": [
+    "P1 stressed net is -$8.26860, PF 0.82776 and net/DD -0.76542; only 2022H2 is positive and only 6/18 P1 months are positive.",
+    "Only P2 and P3 are positive confirmations; required P4 loses -$6.30840 and therefore 3/3 confirmation fails.",
+    "Prelatest loses -$6.03955 with PF 0.95250, net/DD -0.52552, 21/47 positive months and ends $9.11330 below unconditional LONG.",
+    "Latest loses -$1.12890 and fails both the nominal and practical zero floor because the prelatest mean is nonpositive.",
+    "Full stressed net is -$7.16845, PF 0.94700 and net/DD -0.62375; both-side and unconditional-control gates fail.",
+    "Nominal/practical DD pass, but 11.49245% DD is irrelevant when net and edge gates fail."
+  ],
+  "why_not_strong_null": [
+    "P2 2024 earns +$3.83925 stressed, PF 1.15401, with both weather sides positive and +$3.66380 over unconditional LONG.",
+    "P3 2025 earns +$4.69820 stressed, PF 1.13827, with both weather sides positive and +$7.20260 over unconditional LONG.",
+    "Two of three independent confirmation periods are positive, which violates the frozen strong-null condition even though the full path loses."
+  ],
+  "why_no_seed_despite_mid_sample_effect": [
+    "The chronology is +0.90155, -2.90460, -6.26555, +3.83925, +4.69820, -6.30840 and -1.12890 across the frozen splits/periods; it alternates rather than persists.",
+    "The full primary is $8.59330 below unconditional LONG under identical costs.",
+    "Sunny LONG is positive full but negative in P1 and latest; cloudy SHORT is the loss center full but positive in P2, P3 and latest. A side removal would be an outcome-driven unstable rescue.",
+    "Full positive gross is only $1.42925 with PF 1.01093 and net/DD 0.16206; costs expose rather than solely create the lack of usable margin.",
+    "No predeclared economic selection or practical tolerance path passes."
+  ],
+  "economic_summary": {
+    "full": {
+      "gross_usd": 1.42925,
+      "observed_usd": -2.8696,
+      "stressed_usd": -7.16845,
+      "stressed_profit_factor": 0.947001518952904,
+      "stressed_drawdown_percent": 11.49245,
+      "stressed_net_to_drawdown": -0.6237529856557684
+    },
+    "period_stressed_usd": {
+      "P1_2022H2_2023": -8.2686,
+      "P2_2024": 3.83925,
+      "P3_2025": 4.6982,
+      "P4_2026_JAN_MAY": -6.3084,
+      "P5_LATEST_2026_JUN_JUL": -1.1289
+    },
+    "p1_split_stressed_usd": {
+      "2022H2": 0.90155,
+      "2023H1": -2.9046,
+      "2023H2": -6.26555
+    },
+    "sides_and_control_stressed_usd": {
+      "SUNNY_LONG_ONLY": 2.9203,
+      "CLOUDY_SHORT_ONLY": -10.08875,
+      "UNCONDITIONAL_LONG": 1.42485,
+      "PRIMARY_MINUS_UNCONDITIONAL": -8.5933
+    },
+    "prelatest": {
+      "stressed_usd": -6.03955,
+      "profit_factor": 0.9524979186796606,
+      "net_to_drawdown": -0.5255232783261726,
+      "positive_months": 21,
+      "active_months": 47,
+      "top_five_positive_day_share": 0.06021966370858596
+    },
+    "cost": {
+      "observed_burden_usd": 4.29885,
+      "doubled_spread_burden_usd": 8.5977,
+      "full_sign_flipped_by_observed_cost": true,
+      "gross_negative_periods": [
+        "P1_2022H2_2023",
+        "P4_2026_JAN_MAY",
+        "P5_LATEST_2026_JUN_JUL"
+      ]
+    }
+  },
+  "mechanism_diagnosis": {
+    "dominant_full_loss": "CLOUDY_SHORT_ONLY",
+    "dominant_loss_usd": -10.08875,
+    "cloudy_day_fraction": 0.6771573604060914,
+    "largest_period_break": "P4_2026_JAN_MAY",
+    "largest_period_break_detail": "cloudy SHORT -$6.52060 versus unconditional LONG +$6.07280; primary relative deficit -$12.38120",
+    "latest_rotation": "cloudy SHORT +$0.12000 while sunny LONG -$1.24890",
+    "conclusion": "The side decomposition identifies where the full loss occurs but does not yield a stable causal side to retain."
+  },
+  "integrity": {
+    "declaration_commit": "6810f85bc94aa7b48030b11d06f944987134e24c",
+    "formal_aggregation_count": 1,
+    "economic_rerun_count": 0,
+    "post_declaration_correction_count": 0,
+    "input_manifest_faults": 0,
+    "formal_premetric_geometry_drifts": 0,
+    "official_sessions": 1024,
+    "eligible_sessions": 985,
+    "long_sessions": 318,
+    "short_sessions": 667,
+    "minimum_preopen_lead_minutes": 36.0,
+    "all_density_gates_passed": true,
+    "terminal64_count_after_formal": 0
+  },
+  "engineering_correction_close": {
+    "direct_ghcnh_tail_gap": "corrected before declaration by whole-surface replacement with uniform LCDv2",
+    "economic_consequence": "none; target outcomes were unopened",
+    "repeat_required": false,
+    "research_failure_count": 0
+  },
+  "artifact_retention": {
+    "preserved_useful": [
+      "five exact NOAA LCDv2 station/year files",
+      "LCDv2 documentation and author-hosted paper PDF",
+      "normalized hourly and daily weather ledgers",
+      "one-time copied US500 M15 and symbol specification",
+      "complete formal analysis result, trade ledger and calendar"
+    ],
+    "raw_analysis_result": {
+      "bytes": 101450,
+      "sha256": "BB73F9A95209E2ED5FA686F428DF7F800DA04D916BED4A773D2A992CFA42223A"
+    },
+    "raw_trades": {
+      "bytes": 306760,
+      "sha256": "E8D99F500A5A0F0DB8FF5B2DC6846118830F91A6C57C86B3BF1A38CD206B385B"
+    },
+    "raw_calendar": {
+      "bytes": 329210,
+      "sha256": "039792DE54468F63E3DFC1C3BC5D4FC4715101D2108E5EEDDC48590F043E513E"
+    },
+    "removed_reproducible_junk": [
+      "provisional incomplete direct-GHCNh family artifact",
+      "Python bytecode if any"
+    ]
+  },
+  "scope": {
+    "claim": "No stable executable post-paper LaGuardia morning-sunshine direction transfer survives for exact FPMarkets US500 09:30-to-16:00 cash economics.",
+    "nonclaim": "The verdict does not refute the paper's historical 26-exchange daily evidence, country pooling, other carriers or its original sample.",
+    "closed_neighbors": [
+      "station, city, region and multi-city source",
+      "hour and weather-window variation",
+      "cutoff, category weight, deseasonalization, forecast and rolling transform",
+      "other weather fields and composites",
+      "direction inversion and side/control promotion",
+      "horizon, carrier and symbol variation",
+      "cost, stop, exit, sizing, risk, allocation and fixed-candidate integration rescue"
+    ]
+  },
+  "authority": {
+    "retained_information_seed": null,
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "strategy_tester": false,
+    "implementation_candidate": null,
+    "live_promotion": false,
+    "fixed_candidate": "dd20-paired-month-stability-mt5-v1",
+    "fixed_candidate_changed": false
+  },
+  "whole_map_recomparison": {
+    "Program_1": "Recent aggregate-price, close-momentum, H1 pattern and shock-response transfers are closed; no weather-adjacent price rescue opens.",
+    "Program_2": "Unit 114 closes the local-weather mood source and all adjacent weather transforms; recent external macro, uncertainty, entertainment and survey axes remain closed.",
+    "Program_3": "No new synchronized causal execution or quote-recovery source was produced by this result.",
+    "Program_4": "No previsible management checkpoint follows from a daily exogenous direction failure.",
+    "Program_5": "DD is nonbinding while net is negative, so sizing, capital or allocation cannot convert this source into edge.",
+    "Program_7": "The result adds no meta rule that changes the fixed candidate or its evidence hierarchy.",
+    "immediate_successor": null,
+    "scheduler_state": "serial whole-map independent-source discovery"
+  },
+  "next": "Commit and push the complete Unit 114 closure once, then continue serial Optimization whole-map discovery for a genuinely independent causal mechanism without a weather threshold, side, clock, carrier, cost or integration rescue and without a reporting pause.",
+  "marker": "FRONTIER_UNIT_114_CLOSED_VALID_AMBIGUOUS_LAGUARDIA_MORNING_SUNSHINE_US500_CASH_DIRECTION_NO_SEED_MAP_RECOMPARED"
+}
