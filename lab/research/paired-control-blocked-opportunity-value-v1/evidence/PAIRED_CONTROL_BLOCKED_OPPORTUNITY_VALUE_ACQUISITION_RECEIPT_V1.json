@@ -1,0 +1,122 @@
+{
+  "schema": "zeta-next-paired-control-blocked-opportunity-value-acquisition-receipt-v1",
+  "created_at_local": "2026-08-31",
+  "status": "UNIT_124_INPUTS_PHYSICALLY_COPIED_HASH_PINNED_STRUCTURAL_SCREEN_COMPLETE_CLOSE_ECONOMICS_UNOPENED",
+  "unit": "paired-control-blocked-opportunity-value-124",
+  "family": "paired-control-blocked-opportunity-value-v1",
+  "acquisition": {
+    "mode": "one_time_physical_copy_into_independent_lab_raw_root",
+    "destination_root": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input/",
+    "regular_files": true,
+    "shared_include_or_runtime_path": false,
+    "source_or_destination_mutated_after_copy": false,
+    "files": 6,
+    "bytes": 41554282
+  },
+  "files": [
+    {
+      "role": "fixed_candidate_selection_candidate_ledger",
+      "source": "optimization/artifacts/raw/dd20-paired-month-stability-mt5-v1/selection/ea-files/research/research-candidates.csv",
+      "destination": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input/candidate-selection-candidates.csv",
+      "bytes": 8290085,
+      "sha256": "B3231924CD1357072C4198D6A530B5DA932C96EA6A050E35600E2279CAD1007A"
+    },
+    {
+      "role": "live_derived_control_selection_pass_4_lifecycle_ledger",
+      "source": "optimization/artifacts/raw/portfolio-risk-cap-envelope-v1/completed-search-20260828T054809Z/agent-output/3000/portfolio-risk-cap-envelope-v1/research/research-lifecycles.csv",
+      "destination": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input/control-selection-agent3000-lifecycles.csv",
+      "bytes": 16729999,
+      "sha256": "2E07D8A7A8F7B5F09A492D4776C31487C78899CBE9F358D176925D7F0236B25C"
+    },
+    {
+      "role": "fixed_candidate_june_july_candidate_ledger",
+      "source": "optimization/artifacts/raw/dd20-paired-month-stability-mt5-v1/forward/ea-files/research/research-candidates.csv",
+      "destination": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input/candidate-forward-candidates.csv",
+      "bytes": 312925,
+      "sha256": "6E9F54D6CB5B8EE08DAF09268FBEC219A86BF12CEBED68AC1C8930A6C30FD1BE"
+    },
+    {
+      "role": "live_derived_control_june_july_pass_4_lifecycle_ledger",
+      "source": "optimization/artifacts/raw/portfolio-risk-cap-envelope-v1/completed-search-20260828T054809Z/agent-output/3001/portfolio-risk-cap-envelope-v1/research/research-lifecycles.csv",
+      "destination": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input/control-forward-agent3001-lifecycles.csv",
+      "bytes": 15960546,
+      "sha256": "FCF67EA16E8DD798BBBC3418B6B9BC90AE15D207866E5FF34C2108D1282C1C63"
+    },
+    {
+      "role": "fixed_candidate_august_candidate_ledger",
+      "source": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-mt5-v1/valid/candidate/ea-files/dd20-fixed-pair-august-relative-mt5-v1/research/research-candidates.csv",
+      "destination": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input/candidate-august-candidates.csv",
+      "bytes": 173432,
+      "sha256": "7019555A3766AE1DC67A7C7DFDBA2F334BF2A3E09E7011E8E7A1DC39A3C5040F"
+    },
+    {
+      "role": "exact_live_derived_control_august_lifecycle_ledger",
+      "source": "optimization/artifacts/raw/dd20-fixed-pair-august-relative-mt5-v1/valid/control/ea-files/dd20-fixed-pair-august-relative-mt5-v1/research/research-lifecycles.csv",
+      "destination": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input/control-august-lifecycles.csv",
+      "bytes": 87295,
+      "sha256": "7D505CE4A250E50A9480A1A7F7775D63F4D5999DD8D1613CCC71D1EB1DAFE341"
+    }
+  ],
+  "source_destination_hashes_equal": true,
+  "outcome_free_structural_screen": {
+    "fields_used": [
+      "candidate stage/result/component_id/symbol/server_time/direction/feature/order_price/volume/attempted_planned_risk_usd",
+      "control event/component_id/symbol/position_identifier/entry_time_server/direction/entry_feature/entry_price/volume/planned_risk_usd",
+      "existence and uniqueness of one matching CLOSE for each matched BIRTH"
+    ],
+    "economic_close_fields_inspected_or_aggregated": false,
+    "candidate_blocks": {
+      "selection": 192,
+      "forward": 11,
+      "august": 8,
+      "total": 211
+    },
+    "control_extraction": {
+      "selection_births_closes": [2119, 2119],
+      "forward_births_closes": [84, 84],
+      "august_births_closes": [44, 44]
+    },
+    "complete_matches": {
+      "selection": 141,
+      "forward": 10,
+      "august": 7,
+      "total": 158,
+      "fraction_of_all_blocks": 0.7488151658767773
+    },
+    "unmatched": {
+      "selection": 51,
+      "forward": 1,
+      "august": 1,
+      "total": 53,
+      "reason": "no control birth at the frozen exact key; no outcome is imputed"
+    },
+    "matched_components": {
+      "ZT-H1-US100-CROSS-IN-14b72317b7": 121,
+      "ZT-H1-US30-RETURN-I-c870a788ec": 14,
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46": 23
+    },
+    "matched_symbols": {
+      "US100": 121,
+      "US30": 37
+    },
+    "matched_periods": {
+      "E1": 31,
+      "E2": 32,
+      "E3": 47,
+      "E4": 31,
+      "JUNE": 4,
+      "JULY": 6,
+      "AUGUST": 7
+    },
+    "candidate_block_keys_unique": 211,
+    "entry_price_exact_matches": 158,
+    "entry_feature_exact_matches": 158,
+    "volume_ratio_min_max": [2.0, 12.6]
+  },
+  "outcomes_consumed": false,
+  "optimization_surface": "SOURCE_FILES_READ_ONLY_THEN_INDEPENDENT_COPY",
+  "live_surface": "UNTOUCHED",
+  "master_terminal_touched": false,
+  "broker_or_account_state_queried": false,
+  "marker": "FRONTIER_UNIT_124_INPUTS_PINNED_STRUCTURAL_MATCH_READY_CLOSE_ECONOMICS_UNOPENED"
+}

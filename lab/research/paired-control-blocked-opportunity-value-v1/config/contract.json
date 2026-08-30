@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-paired-control-blocked-opportunity-value-contract-v1",
+  "unit": 124,
+  "family": "paired-control-blocked-opportunity-value-v1",
+  "primary_macro_program": 5,
+  "research_height": "meso",
+  "input_root": "lab/artifacts/raw/paired-control-blocked-opportunity-value-v1/input",
+  "inputs": [
+    {
+      "name": "candidate-selection-candidates.csv",
+      "bytes": 8290085,
+      "sha256": "B3231924CD1357072C4198D6A530B5DA932C96EA6A050E35600E2279CAD1007A"
+    },
+    {
+      "name": "control-selection-agent3000-lifecycles.csv",
+      "bytes": 16729999,
+      "sha256": "2E07D8A7A8F7B5F09A492D4776C31487C78899CBE9F358D176925D7F0236B25C"
+    },
+    {
+      "name": "candidate-forward-candidates.csv",
+      "bytes": 312925,
+      "sha256": "6E9F54D6CB5B8EE08DAF09268FBEC219A86BF12CEBED68AC1C8930A6C30FD1BE"
+    },
+    {
+      "name": "control-forward-agent3001-lifecycles.csv",
+      "bytes": 15960546,
+      "sha256": "FCF67EA16E8DD798BBBC3418B6B9BC90AE15D207866E5FF34C2108D1282C1C63"
+    },
+    {
+      "name": "candidate-august-candidates.csv",
+      "bytes": 173432,
+      "sha256": "7019555A3766AE1DC67A7C7DFDBA2F334BF2A3E09E7011E8E7A1DC39A3C5040F"
+    },
+    {
+      "name": "control-august-lifecycles.csv",
+      "bytes": 87295,
+      "sha256": "7D505CE4A250E50A9480A1A7F7775D63F4D5999DD8D1613CCC71D1EB1DAFE341"
+    }
+  ],
+  "fixed_candidate": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "selection_stressed_net_usd": 5477.524,
+    "changed": false
+  },
+  "paired_control": {
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "selection_pass": 4
+  },
+  "extraction": {
+    "selection_control_position_two_birth_row_starts_zero_based": [0, 5211, 10306, 14742],
+    "selection_control_segment_index_zero_based": 1,
+    "selection_expected_births": 2119,
+    "selection_expected_closes": 2119,
+    "forward_control_birth_time_decrease_run_index_zero_based": 3,
+    "forward_control_minimum_entry_time": "2026.06.01 00:00:00",
+    "forward_expected_births": 84,
+    "forward_expected_closes": 84,
+    "august_expected_births": 44,
+    "august_expected_closes": 44
+  },
+  "block_filter": {
+    "stage": "OUTCOME",
+    "result": "PROTECTION_OR_RISK_BLOCKED",
+    "expected_blocks": {
+      "selection": 192,
+      "forward": 11,
+      "august": 8
+    }
+  },
+  "match_contract": {
+    "key": ["component_id", "server_time_or_entry_time_server", "direction"],
+    "unique_candidate_block_key_required": true,
+    "unique_birth_required": true,
+    "matching_close_required": true,
+    "entry_price_abs_tolerance": 1e-9,
+    "entry_feature_abs_tolerance": 1e-12,
+    "positive_candidate_and_control_volume_required": true,
+    "positive_candidate_attempted_and_control_planned_risk_required": true,
+    "expected_complete_matches": {
+      "selection": 141,
+      "forward": 10,
+      "august": 7,
+      "total": 158
+    },
+    "minimum_total_match_fraction": 0.70,
+    "required_components": [
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46"
+    ],
+    "required_symbols": ["US30", "US100"],
+    "required_periods": ["E1", "E2", "E3", "E4", "JUNE", "JULY", "AUGUST"]
+  },
+  "periods": [
+    {"id": "E1", "start": "2022.08.01 00:00:00", "end_exclusive": "2023.06.01 00:00:00"},
+    {"id": "E2", "start": "2023.06.01 00:00:00", "end_exclusive": "2024.06.01 00:00:00"},
+    {"id": "E3", "start": "2024.06.01 00:00:00", "end_exclusive": "2025.06.01 00:00:00"},
+    {"id": "E4", "start": "2025.06.01 00:00:00", "end_exclusive": "2026.06.01 00:00:00"},
+    {"id": "JUNE", "start": "2026.06.01 00:00:00", "end_exclusive": "2026.07.01 00:00:00"},
+    {"id": "JULY", "start": "2026.07.01 00:00:00", "end_exclusive": "2026.08.01 00:00:00"},
+    {"id": "AUGUST", "start": "2026.08.01 00:00:00", "end_exclusive": "2026.08.29 00:00:00"}
+  ],
+  "economic_contract": {
+    "direct_shadow_actual_usd": "paired control actual_net_usd multiplied by candidate_volume divided by control_volume",
+    "direct_shadow_stressed_usd": "paired control stressed_net_usd multiplied by candidate_volume divided by control_volume",
+    "actual_r": "paired control actual_net_usd divided by paired control planned_risk_usd",
+    "stressed_r": "paired control stressed_net_usd divided by paired control planned_risk_usd",
+    "causal_limit": "Direct shadow value at the paired control lifecycle's realized exit geometry, linearly scaled to candidate volume. A blocked candidate has no realized stop or exit, so this does not identify its own protective-stop path and does not simulate shared-account displacement, subsequent admissions, margin, open-equity drawdown or a realizable cap change."
+  },
+  "selection_favorable_gates": {
+    "shadow_actual_net_strictly_positive": true,
+    "shadow_stressed_net_min_usd": 109.55048,
+    "shadow_stressed_profit_factor_min": 1.10,
+    "mean_stressed_r_min": 0.03,
+    "positive_periods_min_of_four": 3,
+    "positive_books_required": 2,
+    "positive_components_min_of_three": 2,
+    "maximum_absolute_component_net_share": 0.80,
+    "maximum_absolute_period_net_share": 0.70
+  },
+  "selection_strong_adverse_gates": {
+    "shadow_stressed_net_max_usd": -109.55048,
+    "shadow_stressed_profit_factor_max": 0.90,
+    "mean_stressed_r_max": -0.03,
+    "negative_periods_min_of_four": 3,
+    "negative_books_required": 2,
+    "negative_components_min_of_three": 2
+  },
+  "confirmation_open_rule": "Read forward and August close economics only if every selection favorable gate passes.",
+  "confirmation_favorable_gates": {
+    "shadow_actual_net_strictly_positive": true,
+    "shadow_stressed_net_min_usd": 2.0,
+    "shadow_stressed_profit_factor_min": 1.05,
+    "mean_stressed_r_min": 0.02,
+    "positive_periods_min_of_three": 2,
+    "positive_books_required": 2,
+    "positive_components_min_of_three": 2,
+    "maximum_absolute_component_net_share": 0.85,
+    "maximum_single_row_absolute_net_share": 0.50
+  },
+  "verdicts": {
+    "favorable_confirmed": "PASS_BLOCKED_OPPORTUNITY_DIRECT_SHADOW_VALUE_RETAIN_ONE_ADMISSION_DISPLACEMENT_RESEARCH_SEED",
+    "favorable_not_confirmed": "VALID_SELECTION_DIRECT_SHADOW_CLUE_NOT_CONFIRMED_NO_SEED",
+    "strong_adverse": "PASS_CAP_BLOCKING_DIRECT_SHADOW_PROTECTIVE_NO_RELAXATION_SEED",
+    "ambiguous": "AMBIGUOUS_PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_NO_SEED",
+    "invalid": "CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT"
+  },
+  "outputs": {
+    "result": "lab/research/paired-control-blocked-opportunity-value-v1/evidence/PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_RESULT_V1.json",
+    "matched_rows": "lab/research/paired-control-blocked-opportunity-value-v1/evidence/PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_MATCHED_ROWS_V1.csv"
+  }
+}

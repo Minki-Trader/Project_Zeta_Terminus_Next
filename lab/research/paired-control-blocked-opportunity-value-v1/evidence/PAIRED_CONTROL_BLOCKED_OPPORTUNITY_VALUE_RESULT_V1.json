@@ -1,0 +1,175 @@
+{
+  "schema": "zeta-next-paired-control-blocked-opportunity-value-result-v1",
+  "recorded_date_local": "2026-08-31",
+  "unit": 124,
+  "family": "paired-control-blocked-opportunity-value-v1",
+  "status": "COMPLETE_VALID_ECONOMIC_AGGREGATION",
+  "input_receipt": [
+    {
+      "name": "candidate-selection-candidates.csv",
+      "bytes": 8290085,
+      "sha256": "B3231924CD1357072C4198D6A530B5DA932C96EA6A050E35600E2279CAD1007A"
+    },
+    {
+      "name": "control-selection-agent3000-lifecycles.csv",
+      "bytes": 16729999,
+      "sha256": "2E07D8A7A8F7B5F09A492D4776C31487C78899CBE9F358D176925D7F0236B25C"
+    },
+    {
+      "name": "candidate-forward-candidates.csv",
+      "bytes": 312925,
+      "sha256": "6E9F54D6CB5B8EE08DAF09268FBEC219A86BF12CEBED68AC1C8930A6C30FD1BE"
+    },
+    {
+      "name": "control-forward-agent3001-lifecycles.csv",
+      "bytes": 15960546,
+      "sha256": "FCF67EA16E8DD798BBBC3418B6B9BC90AE15D207866E5FF34C2108D1282C1C63"
+    },
+    {
+      "name": "candidate-august-candidates.csv",
+      "bytes": 173432,
+      "sha256": "7019555A3766AE1DC67A7C7DFDBA2F334BF2A3E09E7011E8E7A1DC39A3C5040F"
+    },
+    {
+      "name": "control-august-lifecycles.csv",
+      "bytes": 87295,
+      "sha256": "7D505CE4A250E50A9480A1A7F7775D63F4D5999DD8D1613CCC71D1EB1DAFE341"
+    }
+  ],
+  "structural_integrity": {
+    "passed": true,
+    "selection_control_births": 2119,
+    "selection_control_closes": 2119,
+    "forward_control_births": 84,
+    "forward_control_closes": 84,
+    "august_control_births": 44,
+    "august_control_closes": 44,
+    "blocks": {
+      "selection": 192,
+      "forward": 11,
+      "august": 8
+    },
+    "complete_matches": {
+      "selection": 141,
+      "forward": 10,
+      "august": 7,
+      "total": 158
+    },
+    "unmatched": {
+      "selection": 51,
+      "forward": 1,
+      "august": 1
+    },
+    "total_match_fraction": 0.7488151658767772,
+    "entry_price_exact_matches": 158,
+    "entry_feature_exact_matches": 158,
+    "unique_candidate_block_keys": 211,
+    "components": [
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46"
+    ],
+    "symbols": [
+      "US100",
+      "US30"
+    ],
+    "periods": [
+      "AUGUST",
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "JULY",
+      "JUNE"
+    ]
+  },
+  "selection": {
+    "matched_rows": 141,
+    "paired_control_actual_net_usd": 33.32,
+    "paired_control_stressed_net_usd": 27.757000000000033,
+    "paired_control_actual_profit_factor": 1.2004210526315788,
+    "paired_control_stressed_profit_factor": 1.1638934813415212,
+    "shadow_actual_net_usd": -66.83766666666668,
+    "shadow_stressed_net_usd": -98.57666666666469,
+    "shadow_actual_profit_factor": 0.9404828442903594,
+    "shadow_stressed_profit_factor": 0.9136504573550421,
+    "mean_actual_r": 0.03298385829026846,
+    "mean_stressed_r": 0.030151742512527592,
+    "median_stressed_r": 0.010392412970639489,
+    "candidate_attempted_risk_usd": 7663.059866666659,
+    "shadow_actual_net_over_candidate_attempted_risk": -0.008722059833748927,
+    "shadow_stressed_net_over_candidate_attempted_risk": -0.012863877926291652,
+    "volume_ratio_min_median_max": [
+      2.0,
+      4.0,
+      12.6
+    ],
+    "candidate_attempted_to_control_risk_ratio_min_median_max": [
+      1.3272038373372066,
+      2.4809575825026697,
+      7.543216769857562
+    ],
+    "stop_rate": 0.0425531914893617,
+    "period_stressed_net_usd": {
+      "E1": 21.00600000000016,
+      "E2": 38.617999999999675,
+      "E3": 136.94433333333188,
+      "E4": -295.14499999999646
+    },
+    "book_stressed_net_usd": {
+      "US100": -165.66000000000227,
+      "US30": 67.08333333333755
+    },
+    "component_stressed_net_usd": {
+      "ZT-H1-US100-CROSS-IN-14b72317b7": -165.66000000000227,
+      "ZT-H1-US30-RETURN-I-c870a788ec": 72.77999999999993,
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46": -5.6966666666623595
+    },
+    "positive_periods": 3,
+    "negative_periods": 1,
+    "positive_books": 1,
+    "negative_books": 1,
+    "positive_components": 1,
+    "negative_components": 2,
+    "maximum_absolute_period_net_share": 0.6002379435172246,
+    "maximum_absolute_component_net_share": 0.678554361628065,
+    "maximum_single_row_absolute_net_share": 0.08967401255319046
+  },
+  "selection_favorable_gates": {
+    "shadow_actual_net_strictly_positive": false,
+    "shadow_stressed_net_min_usd": false,
+    "shadow_stressed_profit_factor_min": false,
+    "mean_stressed_r_min": true,
+    "positive_periods_min_of_four": true,
+    "positive_books_required": false,
+    "positive_components_min_of_three": false,
+    "maximum_absolute_component_net_share": true,
+    "maximum_absolute_period_net_share": true,
+    "passed": false
+  },
+  "selection_strong_adverse_gates": {
+    "shadow_stressed_net_max_usd": false,
+    "shadow_stressed_profit_factor_max": false,
+    "mean_stressed_r_max": false,
+    "negative_periods_min_of_four": false,
+    "negative_books_required": false,
+    "negative_components_min_of_three": true,
+    "passed": false
+  },
+  "confirmation_opened": false,
+  "confirmation": null,
+  "confirmation_favorable_gates": null,
+  "matched_rows_artifact": {
+    "path": "lab/research/paired-control-blocked-opportunity-value-v1/evidence/PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_MATCHED_ROWS_V1.csv",
+    "rows": 141
+  },
+  "causal_limit": "Direct shadow value at the paired control lifecycle's realized exit geometry, linearly scaled to candidate volume. A blocked candidate has no realized stop or exit, so this does not identify its own protective-stop path and does not simulate shared-account displacement, subsequent admissions, margin, open-equity drawdown or a realizable cap change.",
+  "verdict": "AMBIGUOUS_PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_NO_SEED",
+  "retained_seed": null,
+  "optimization_candidate": null,
+  "mt5_shortlist": null,
+  "live_authority": false,
+  "economic_aggregations": 1,
+  "economic_metric_reruns": 0,
+  "marker": "FRONTIER_UNIT_124_PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_AGGREGATED_PENDING_CLOSURE"
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "zeta-next-paired-control-blocked-opportunity-value-closure-v1",
+  "closed_at_local": "2026-08-31",
+  "status": "UNIT_124_CLOSED_COMPLETE_VALID_AMBIGUOUS_NO_SEED",
+  "unit": "paired-control-blocked-opportunity-value-124",
+  "family": "paired-control-blocked-opportunity-value-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk"
+  },
+  "research_height": {
+    "primary": "meso",
+    "supporting": ["macro"]
+  },
+  "frozen_boundary": {
+    "acquisition_receipt": {
+      "path": "lab/research/paired-control-blocked-opportunity-value-v1/evidence/PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_ACQUISITION_RECEIPT_V1.json",
+      "bytes": 5625,
+      "sha256": "98995260565CE1567804B53780A8A5DEA32DFD4A866B29DE1F4D2898507C8C84"
+    },
+    "declaration": {
+      "path": "lab/research/paired-control-blocked-opportunity-value-v1/evidence/PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_DECLARATION_V1.json",
+      "bytes": 10474,
+      "sha256": "982B3E15A43DEEAFD1D4E9358FA534263A2CFD01D348351D0258C19BB56487B3"
+    },
+    "contract": {
+      "path": "lab/research/paired-control-blocked-opportunity-value-v1/config/contract.json",
+      "bytes": 6796,
+      "sha256": "FD208916B399507A223CABD16D992567D829CA4F655E1287268980BC55ED2198"
+    },
+    "analysis": {
+      "path": "lab/research/paired-control-blocked-opportunity-value-v1/analysis/run_analysis.py",
+      "bytes": 26145,
+      "sha256": "BA86881F25A5603F93D52E28909C903F132601701EA5EE129DC23AC8D2CB97E5"
+    }
+  },
+  "result": {
+    "path": "lab/research/paired-control-blocked-opportunity-value-v1/evidence/PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_RESULT_V1.json",
+    "bytes": 6241,
+    "sha256": "65EA189443659239121C3F2656AFD3F3A81FCDF334D23A1C4FEA5DE907691A2B"
+  },
+  "matched_rows": {
+    "path": "lab/research/paired-control-blocked-opportunity-value-v1/evidence/PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_MATCHED_ROWS_V1.csv",
+    "rows": 141,
+    "bytes": 38290,
+    "sha256": "6C139E1E7B0827CE574134A48569AF6FEF3E985654FB7E5CAEC54B5289B9F208"
+  },
+  "structural_integrity": {
+    "candidate_blocks": 211,
+    "complete_matches": 158,
+    "match_fraction": 0.7488151658767772,
+    "selection_matches": 141,
+    "forward_matches": 10,
+    "august_matches": 7,
+    "entry_price_exact_matches": 158,
+    "entry_feature_exact_matches": 158,
+    "periods": ["E1", "E2", "E3", "E4", "JUNE", "JULY", "AUGUST"],
+    "books": ["US30", "US100"],
+    "components": ["Cross", "Return", "Pressure"],
+    "passed": true
+  },
+  "selection_economics": {
+    "paired_control_actual_stressed_net_usd": [33.32, 27.757000000000033],
+    "paired_control_actual_stressed_profit_factor": [1.2004210526315788, 1.1638934813415212],
+    "candidate_volume_shadow_actual_stressed_net_usd": [-66.83766666666668, -98.57666666666469],
+    "candidate_volume_shadow_actual_stressed_profit_factor": [0.9404828442903594, 0.9136504573550421],
+    "mean_median_paired_control_stressed_r": [0.030151742512527592, 0.010392412970639489],
+    "candidate_attempted_risk_usd": 7663.059866666659,
+    "shadow_stressed_net_over_candidate_attempted_risk": -0.012863877926291652,
+    "stop_rate": 0.0425531914893617,
+    "period_stressed_net_usd": {
+      "E1": 21.00600000000016,
+      "E2": 38.617999999999675,
+      "E3": 136.94433333333188,
+      "E4": -295.14499999999646
+    },
+    "book_stressed_net_usd": {
+      "US100": -165.66000000000227,
+      "US30": 67.08333333333755
+    },
+    "component_stressed_net_usd": {
+      "Cross": -165.66000000000227,
+      "Return": 72.77999999999993,
+      "Pressure": -5.6966666666623595
+    },
+    "positive_periods_books_components": [3, 1, 1],
+    "maximum_absolute_period_component_single_row_net_share": [
+      0.6002379435172246,
+      0.678554361628065,
+      0.08967401255319046
+    ]
+  },
+  "gate_outcome": {
+    "selection_favorable": false,
+    "selection_favorable_passed": [
+      "mean_stressed_r_min",
+      "positive_periods_min_of_four",
+      "maximum_absolute_component_net_share",
+      "maximum_absolute_period_net_share"
+    ],
+    "selection_favorable_failed": [
+      "shadow_actual_net_strictly_positive",
+      "shadow_stressed_net_min_usd",
+      "shadow_stressed_profit_factor_min",
+      "positive_books_required",
+      "positive_components_min_of_three"
+    ],
+    "selection_strong_adverse": false,
+    "confirmation_opened": false,
+    "confirmation_close_economics_aggregated": false
+  },
+  "economic_interpretation": [
+    "The exact paired controls are mildly positive when each realized control lifecycle keeps its native size, but the sign reverses when those same exits are scaled to candidate attempted volume. Therefore the candidate's blocked-opportunity population is not a favorable missed-alpha pool under its own exposure geometry.",
+    "Positive mean stressed R and three positive epochs show that cap blocking is not broadly protective either. The result is a temporal and cross-book conflict, not a clean adverse field.",
+    "E4 and US100/Cross overwhelm positive E1-E3 and US30/Return contributions. Because the fixed contract requires both books and at least two components, selecting only the favorable US30 or earlier epochs would be a forbidden post-outcome rescue.",
+    "Passing concentration caps means the ambiguous verdict is not caused by one isolated row. It is caused by economically material sign disagreement across frozen temporal and book/component boundaries.",
+    "The direct shadow uses the control lifecycle's stop and exit geometry. It cannot identify a blocked candidate's unobserved protective stop, sequence-dependent capital, shared-account displacement, open-equity drawdown or cap feasibility."
+  ],
+  "verdict": "AMBIGUOUS_PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_NO_SEED",
+  "retained_seed": null,
+  "optimization_candidate": null,
+  "mt5_shortlist": null,
+  "fixed_development_candidate": "unchanged",
+  "forbidden_successors": [
+    "E1-E3-only, US30-only, Return-only, positive-row, volume-ratio, risk-ratio or exit-class rescue",
+    "aggregate-cap, position-risk, weight, slot, priority, reservation, ladder, admission-order or component retune",
+    "manual opening of June-July or August confirmation close economics after selection failure",
+    "interpretation as shared-account profit, drawdown, candidate stop-path or automatic Live authority"
+  ],
+  "execution_accounting": {
+    "complete_valid_economic_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "post_declaration_engineering_corrections": 0,
+    "grid_or_retune_points": 0,
+    "mql_changes": 0,
+    "compile_paths": 0,
+    "tester_paths": 0,
+    "tests_or_validators": 0,
+    "broker_or_account_state_queried": false,
+    "master_terminal_touched": false,
+    "live_surface": "untouched",
+    "optimization_runtime_surface": "untouched"
+  },
+  "whole_map": {
+    "audit": "optimization/evidence/OPTIMIZATION_POST_PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_WHOLE_MAP_AUDIT_V1.json",
+    "programs_compared": [1, 2, 3, 4, 5, 7],
+    "heights_compared": ["micro", "meso", "macro"],
+    "immediate_successor_ready": false,
+    "successor_opened": false,
+    "optimization_resumed": true
+  },
+  "marker": "FRONTIER_UNIT_124_CLOSED_VALID_AMBIGUOUS_PAIRED_CONTROL_BLOCKED_OPPORTUNITY_VALUE_NO_SEED_MAP_RECOMPARED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "Commit and push Unit 124 once, then run the mandatory fresh GPT Pro economic checkpoint before opening another unit."
+}
