@@ -1,0 +1,100 @@
+{
+  "schema": "zeta-dd20-paired-anchor-august-2026-mt5-implementation-freeze-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "COMPILED_DEDICATED_LEAN_RUNTIME_READY_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-paired-anchor-august-2026-mt5-v1",
+    "declaration_bytes": 5904,
+    "declaration_sha256": "CF37F798A1A33E3772F9393C3AB4E70566306B6973D994FC2F3D8693A348B83E",
+    "release_id": "OPT-LIVE-V7-DD20PAAUG1-20260830",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20PAAUG1-20260830",
+    "magic_range": "260830831..260830836",
+    "tester_only": true
+  },
+  "frozen_policy": {
+    "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "zero_weight_component_disabled": true,
+    "retune_or_grid": false
+  },
+  "implementation": {
+    "source_file_count": 16,
+    "source_total_bytes": 417742,
+    "source_manifest_sha256": "B361AA8D0015250DE35A4278063032287E8A84B812A1DE5FBE9CF3D4025A3AD2",
+    "configuration_file_count": 2,
+    "configuration_total_bytes": 1799,
+    "configuration_manifest_sha256": "DFBB2BD2E32E790CD233550564C63F95B2712D015154DC4D4215EF09F71D83B7",
+    "runtime_source_configuration_and_ex5_parity_files": 19,
+    "runtime_source_configuration_and_ex5_mismatches": 0,
+    "cross_lane_or_cross_campaign_include_link_or_execution": false,
+    "other_campaign_ea_ex5_set_or_zeta_include_in_runtime": 0
+  },
+  "compile": {
+    "platform": "MetaEditor build 6140",
+    "result": "0 errors, 0 warnings",
+    "elapsed_ms": 2159,
+    "launcher_exit_code": 1,
+    "launcher_exit_note": "MetaEditor returned process code 1 while its authoritative compile log completed normally with 0 errors and 0 warnings and emitted the expected EX5.",
+    "single_compile_invocation": true,
+    "ex5_path": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20PairedAnchorAugust2026MT5V1.ex5",
+    "ex5_bytes": 229188,
+    "ex5_sha256": "02740CF00E02AA3416304BF8997D6CD41CA0EE7B342617AB264751390675C142",
+    "raw_log_path": "optimization/artifacts/raw/dd20-paired-anchor-august-2026-mt5-v1/compile/compile-final-20260830.log",
+    "raw_log_bytes": 21602,
+    "raw_log_sha256": "EC6AB3D89AC12C2D4DD53B2A181FD8DC752CB052C6C53BACE63CA89A9775EC15"
+  },
+  "dedicated_runtime": {
+    "path": "optimization/runtime/dd20-paired-anchor-august-2026-mt5-v1-portable/",
+    "physical_shell_and_history_source": "optimization/runtime/dd20-paired-month-stability-mt5-v1-portable/",
+    "terminal_build": 6140,
+    "terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "metaeditor_sha256": "05718F3FA55F3F59FD2F024D8C433B457FBD58FCF39E947A16CCDAD00A614EC7",
+    "file_count_after_overlay_and_compile": 366,
+    "logical_bytes_after_overlay_and_compile": 1356103698,
+    "filesystem_links": 0,
+    "terminal_file_identity_distinct_from_source_runtime": true,
+    "terminal_target_hardlink_count": 1,
+    "process_owners_at_freeze": 0,
+    "free_space_gib_at_freeze": 65.879,
+    "uses_local_agents_only": true,
+    "uses_remote_agents": false,
+    "uses_cloud_agents": false,
+    "is_master_live_or_lab_terminal": false
+  },
+  "required_history": {
+    "selected_base_and_tester_tick_files": 12,
+    "selected_base_and_tester_tick_bytes": 491332092,
+    "selected_base_and_tester_tick_manifest_sha256": "E017F94455BD83E301C3F7245D709FAB9BCD7CE0CC53515F3DBA6BFA57B17084",
+    "symbols": ["US30", "US100", "US500"],
+    "months": ["202607", "202608"],
+    "base_august_files_last_written_local": "2026-08-28T18:57:27+09:00",
+    "tester_august_cache_last_written_local": "2026-08-25T04:24:56..04:26:42+09:00",
+    "first_use_sync_rule": "The complete path is economically readable only if the terminal makes every required Tester series current through the declared last completed session and the resulting report is 100 percent real ticks. Any stale-cache or history-sync stop is a correction state and the complete path restarts."
+  },
+  "non_economic_corrections": [
+    {
+      "condition": "A full physical copy of 5.4 GiB closed history advanced only 0.784 GiB in about four minutes and was becoming an avoidable experiment bottleneck.",
+      "resolution": "The copy was interrupted before any old campaign MQL/config/Tester output entered the destination. The already copied build executables and Base shell were retained, and only standard Include plus exact July-August required-symbol Base/Tester history were overlaid. The resulting dedicated runtime is 1.263 GiB.",
+      "tester_started": false,
+      "economic_verdict": null
+    },
+    {
+      "condition": "Copied UTF-16 terminal.ini retained two inert last-chart pointers to the closed source EA.",
+      "resolution": "Both pointers were replaced in-place with the new EA name while preserving UTF-16LE. No old EA, EX5, SET or Zeta Include exists in the runtime.",
+      "tester_started": false,
+      "economic_verdict": null
+    }
+  ],
+  "boundary": {
+    "compiled": true,
+    "runtime_ready": true,
+    "tester_started": false,
+    "report_or_economic_output_opened": false,
+    "economic_verdict": null,
+    "live_or_lab_source_runtime_state_or_log_modified": false,
+    "master_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "schema": "zeta-dd20-paired-anchor-august-2026-mt5-result-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "VALID_FIXED_PAIRED_ANCHOR_AUGUST_THROUGH_28_SUPPORT",
+  "campaign": {
+    "id": "dd20-paired-anchor-august-2026-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20PAAUG1-20260830",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20PAAUG1-20260830",
+    "magic_range": "260830831..260830836",
+    "declaration_sha256": "CF37F798A1A33E3772F9393C3AB4E70566306B6973D994FC2F3D8693A348B83E",
+    "implementation_freeze_sha256": "498EC0DCEB16DD8121417C23AB63A2E33C8DC3AFDD3835E081F52D557A03DB76",
+    "tester_only": true
+  },
+  "frozen_candidate": {
+    "source_baseline": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "fixed_candidate_campaign": "dd20-paired-month-stability-mt5-v1",
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "zero_weight_component_disabled": true,
+    "signal_hold_exit_admission_margin_and_capital_ladder_changed": false,
+    "retune_grid_or_successor": false,
+    "source_file_count": 16,
+    "source_total_bytes": 417742,
+    "source_manifest_sha256": "B361AA8D0015250DE35A4278063032287E8A84B812A1DE5FBE9CF3D4025A3AD2",
+    "configuration_file_count": 2,
+    "configuration_total_bytes": 1799,
+    "configuration_manifest_sha256": "DFBB2BD2E32E790CD233550564C63F95B2712D015154DC4D4215EF09F71D83B7",
+    "ex5_bytes": 229188,
+    "ex5_sha256": "02740CF00E02AA3416304BF8997D6CD41CA0EE7B342617AB264751390675C142"
+  },
+  "execution_accounting": {
+    "configuration_interval": "2026-08-01T00:00:00/2026-08-29T00:00:00",
+    "completed_market_sessions": "2026-08-03 through 2026-08-28",
+    "completed_market_session_count": 20,
+    "august_31_excluded": true,
+    "declared_complete_valid_paths": 1,
+    "complete_valid_paths": 1,
+    "invalid_environment_preflights": 1,
+    "invalid_preflight": {
+      "condition": "The first invocation completed the local agent path but could not create the configured HTML report because its nested report directory did not exist; the terminal log also recorded one required-symbol file-open/read warning during first-use synchronization.",
+      "classification": "INVALID_ENVIRONMENT_PREFLIGHT_NO_ECONOMIC_VERDICT",
+      "preserved_artifact_path": "optimization/artifacts/raw/dd20-paired-anchor-august-2026-mt5-v1/preflight-invalid-missing-report/",
+      "preserved_files": 14,
+      "preserved_bytes": 581509,
+      "preserved_manifest_sha256": "29D4CB5C94B8EF53163001E8851514F730818397876EFA5DDC727985D59C609C",
+      "economic_fields_used_for_judgment": false,
+      "resolution": "The exact configured report directory was created, generated state/cache/log output was cleared, and the same frozen INI, SET, source and EX5 were invoked again without an economic-policy or date change."
+    },
+    "valid_path": {
+      "terminal_build": 6140,
+      "tester_model": "MT5 every tick based on real ticks",
+      "history_quality": "100% real ticks",
+      "normal_tester_stop": true,
+      "terminal_exit_code": 0,
+      "terminal_shutdown_code": 0,
+      "agent_test_seconds": 16.425,
+      "history_synchronization_seconds": 2.246,
+      "primary_symbol": "US30",
+      "primary_period": "M30",
+      "primary_bars": 920,
+      "primary_ticks": 2624216,
+      "all_symbol_ticks": 23743053,
+      "us30_passed_ticks": 2624216,
+      "us100_passed_ticks": 18511908,
+      "us500_passed_ticks": 2606930,
+      "final_server_time": "2026-08-28T23:59:58",
+      "traded_symbols": ["US30", "US100"],
+      "read_only_cross_data_symbol": "US500",
+      "required_symbol_history_complete": true,
+      "valid_result_rerun_or_replaced": false
+    },
+    "connection_boundary": {
+      "automatic_terminal_login_for_history_synchronization": true,
+      "automatic_terminal_account_sync_line_present": true,
+      "automatic_account_sync_value_used_for_context_or_judgment": false,
+      "explicit_broker_position_order_deal_or_account_query": false,
+      "master_live_or_lab_terminal_touched": false
+    }
+  },
+  "final_required_history": {
+    "selected_base_and_tester_tick_files": 12,
+    "selected_base_and_tester_tick_bytes": 498797663,
+    "selected_base_and_tester_tick_manifest_sha256": "65553F544DF8C749671A10F88F8D47673461852986C880C2E0DD8AD280A2ECDC",
+    "manifest_algorithm": "Sort slash-normalized runtime-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "files": [
+      {"path": "Bases/FPMarketsSC-Live/ticks/US100/202607.tkc", "bytes": 140883383, "sha256": "C10E80342DE8BA061C8E139998263F4B7257383B5690FD8587BFCF3D93355DFF"},
+      {"path": "Bases/FPMarketsSC-Live/ticks/US100/202608.tkc", "bytes": 54192890, "sha256": "89842EFD01090F29868D903C83185612E30E95994CEEE29F0CF312A39DCD4A09"},
+      {"path": "Bases/FPMarketsSC-Live/ticks/US30/202607.tkc", "bytes": 17934747, "sha256": "3EA58FDAE0F7645A78E50AFE93F20148F0377C47C47BB059881346ADC07D0BD3"},
+      {"path": "Bases/FPMarketsSC-Live/ticks/US30/202608.tkc", "bytes": 9010477, "sha256": "82AF282E6616EA1DF2F8AB520182848B08AAF3E26B6314D9330F5FEA80B92605"},
+      {"path": "Bases/FPMarketsSC-Live/ticks/US500/202607.tkc", "bytes": 21761630, "sha256": "965E4DE6219B302FCFC31CD40BA1A6DD521184C67F5D85F7E75B5BD27B3819E1"},
+      {"path": "Bases/FPMarketsSC-Live/ticks/US500/202608.tkc", "bytes": 9995149, "sha256": "CC12053C716CAFC303593E1DC0BC6118D6BA3C40851B90D0A756CA3974525EE7"},
+      {"path": "Tester/bases/FPMarketsSC-Live/ticks/US100/202607.tkc", "bytes": 140867283, "sha256": "0D0993697FC719E9D98303B0F9A556C1AB7F4CCCF27D683E2683570FE070255B"},
+      {"path": "Tester/bases/FPMarketsSC-Live/ticks/US100/202608.tkc", "bytes": 49445617, "sha256": "39682F67C84E3C2FC9DF2BDEB020F26D0AEAA048C6A4317AF4AF6C5D45E0AB3E"},
+      {"path": "Tester/bases/FPMarketsSC-Live/ticks/US30/202607.tkc", "bytes": 17918647, "sha256": "A6C06FEFC40BF30F4EEEBC5DB44BD13C52009C502DA99C000C6C65C0C619A46C"},
+      {"path": "Tester/bases/FPMarketsSC-Live/ticks/US30/202608.tkc", "bytes": 7724799, "sha256": "71E52225AB9FBA550CC59252101F48340F01DF5AF8BBFD31673C143F035459D7"},
+      {"path": "Tester/bases/FPMarketsSC-Live/ticks/US500/202607.tkc", "bytes": 21745530, "sha256": "9C03E945CE56E93FD5E1A351B1730ABC1A58B602CF7EDC58AC1AC53799907DAB"},
+      {"path": "Tester/bases/FPMarketsSC-Live/ticks/US500/202608.tkc", "bytes": 7317511, "sha256": "C0D542C868B362494816C19111EFEF57F67EEAA4F75CA944B255065EB25DB0E4"}
+    ]
+  },
+  "economics": {
+    "initial_deposit_usd": 100.0,
+    "final_balance_usd": 129.62,
+    "actual_net_usd": 29.62,
+    "stressed_2x_observed_cost_balance_usd": 128.586,
+    "stressed_2x_observed_cost_net_usd": 28.586,
+    "extra_stress_cost_usd": 1.034,
+    "stressed_net_retention_pct": 96.509115,
+    "closed_lifecycles": 29,
+    "winning_lifecycles": 18,
+    "losing_lifecycles": 11,
+    "report_trades": 29,
+    "report_deals": 58,
+    "actual_gross_profit_usd": 61.60,
+    "actual_gross_loss_usd": 31.98,
+    "actual_profit_factor_exact": 1.926203877,
+    "stressed_gross_profit_usd": 60.95,
+    "stressed_gross_loss_usd": 32.364,
+    "stressed_profit_factor": 1.883265357,
+    "actual_net_per_close_usd": 1.02137931,
+    "stressed_net_per_close_usd": 0.985724138,
+    "actual_net_per_completed_market_session_usd": 1.481,
+    "stressed_net_per_completed_market_session_usd": 1.4293
+  },
+  "native_report_metrics": {
+    "reported_profit_factor": 1.93,
+    "expected_payoff_usd": 1.02,
+    "recovery_factor": 1.65,
+    "sharpe_ratio": 9.32,
+    "minimum_margin_level_pct": 1057.92,
+    "balance_drawdown_absolute_usd": 4.00,
+    "balance_drawdown_maximal_usd": 11.48,
+    "balance_drawdown_relative_pct": 8.35,
+    "equity_drawdown_absolute_usd": 1.89,
+    "equity_drawdown_maximal_usd": 17.90,
+    "equity_drawdown_relative_pct": 13.44,
+    "nominal_equity_drawdown_line_pct": 20.0,
+    "pragmatic_equity_drawdown_envelope_pct": 21.2,
+    "margin_below_nominal_percentage_points": 6.56,
+    "margin_below_pragmatic_percentage_points": 7.76,
+    "nominal_drawdown_gate_passed": true,
+    "pragmatic_drawdown_gate_passed": true
+  },
+  "closed_lifecycle_drawdown": {
+    "actual_max_usd": 11.48,
+    "actual_max_pct_of_peak": 8.354559348,
+    "stressed_max_usd": 11.656,
+    "stressed_max_pct_of_peak": 8.533192773,
+    "peak_server_time": "2026-08-24T22:00:00",
+    "trough_server_time": "2026-08-27T21:00:00"
+  },
+  "component_economics": [
+    {"component": "ZT-M30-US30-RANGE-COMP-61f61deaba", "role": "US30 Range61", "closed": 6, "wins": 3, "losses": 3, "actual_net_usd": 5.73, "stressed_net_usd": 5.510, "stressed_profit_factor": 1.583686441, "stressed_net_share_pct": 19.275170},
+    {"component": "ZT-M30-US30-RANGE-COMP-64efb16616", "role": "US30 Range64", "closed": 4, "wins": 3, "losses": 1, "actual_net_usd": 3.99, "stressed_net_usd": 3.846, "stressed_profit_factor": 1.951038576, "stressed_net_share_pct": 13.454138},
+    {"component": "ZT-H1-US100-CROSS-IN-14b72317b7", "role": "US100 Cross", "closed": 11, "wins": 7, "losses": 4, "actual_net_usd": 6.53, "stressed_net_usd": 6.314, "stressed_profit_factor": 1.933747412, "stressed_net_share_pct": 22.087735},
+    {"component": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "role": "US30 Pressure", "closed": 4, "wins": 3, "losses": 1, "actual_net_usd": 9.59, "stressed_net_usd": 9.296, "stressed_profit_factor": 2.119190946, "stressed_net_share_pct": 32.519415},
+    {"component": "ZT-H1-US30-RETURN-I-c870a788ec", "role": "US30 Return", "closed": 4, "wins": 2, "losses": 2, "actual_net_usd": 3.78, "stressed_net_usd": 3.620, "stressed_profit_factor": 1.949632739, "stressed_net_share_pct": 12.663542},
+    {"component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8", "role": "Passive disabled", "closed": 0, "wins": 0, "losses": 0, "actual_net_usd": 0.0, "stressed_net_usd": 0.0, "stressed_profit_factor": null, "stressed_net_share_pct": 0.0}
+  ],
+  "breadth_and_concentration": {
+    "active_components_positive_actual_and_stressed": 5,
+    "active_components_total": 5,
+    "maximum_component_stressed_net_share_pct": 32.519415,
+    "active_exit_days": 19,
+    "positive_stressed_exit_days": 13,
+    "positive_stressed_exit_day_pct": 68.421053,
+    "top_five_positive_trade_share_of_stressed_gross_profit_pct": 51.524200164,
+    "largest_stressed_win_usd": 8.454,
+    "largest_stressed_loss_usd": -8.306
+  },
+  "symbol_direction_and_exit_economics": {
+    "symbols": [
+      {"symbol": "US30", "closed": 18, "wins": 11, "losses": 7, "actual_net_usd": 23.09, "stressed_net_usd": 22.272, "stressed_profit_factor": 1.869932037, "stressed_net_share_pct": 77.912265},
+      {"symbol": "US100", "closed": 11, "wins": 7, "losses": 4, "actual_net_usd": 6.53, "stressed_net_usd": 6.314, "stressed_profit_factor": 1.933747412, "stressed_net_share_pct": 22.087735}
+    ],
+    "directions": [
+      {"direction": "long", "closed": 20, "actual_net_usd": 24.36, "stressed_net_usd": 23.60, "stressed_profit_factor": 2.013310434},
+      {"direction": "short", "closed": 9, "actual_net_usd": 5.26, "stressed_net_usd": 4.986, "stressed_profit_factor": 1.549482037}
+    ],
+    "exits": [
+      {"exit_class": "NATIVE", "closed": 26, "actual_net_usd": 46.95, "stressed_net_usd": 46.054, "stressed_profit_factor": 4.091702470},
+      {"exit_class": "STOP", "closed": 3, "actual_net_usd": -17.33, "stressed_net_usd": -17.468, "stressed_profit_factor": 0.0}
+    ]
+  },
+  "chronology": {
+    "weeks": [
+      {"interval": "2026-08-03..2026-08-07", "closed": 9, "actual_net_usd": 20.87, "stressed_net_usd": 20.576, "stressed_profit_factor": 2.960739470},
+      {"interval": "2026-08-10..2026-08-14", "closed": 6, "actual_net_usd": 4.85, "stressed_net_usd": 4.716, "stressed_profit_factor": 6.496503497},
+      {"interval": "2026-08-17..2026-08-21", "closed": 6, "actual_net_usd": 4.71, "stressed_net_usd": 4.412, "stressed_profit_factor": 1.699873096},
+      {"interval": "2026-08-24..2026-08-28", "closed": 8, "actual_net_usd": -0.81, "stressed_net_usd": -1.118, "stressed_profit_factor": 0.923986946}
+    ],
+    "halves": [
+      {"interval": "2026-08-03..2026-08-14", "closed": 15, "wins": 11, "losses": 4, "actual_net_usd": 25.72, "stressed_net_usd": 25.292, "stressed_profit_factor": 3.227977449},
+      {"interval": "2026-08-17..2026-08-28", "closed": 14, "wins": 7, "losses": 7, "actual_net_usd": 3.90, "stressed_net_usd": 3.294, "stressed_profit_factor": 1.156767561}
+    ],
+    "first_half_share_of_total_stressed_net_pct": 88.476877,
+    "second_half_positive_components": 3,
+    "second_half_negative_components": 2,
+    "second_half_components_stressed_net_usd": {
+      "US100_Cross": -3.862,
+      "US30_Return": 3.620,
+      "US30_Pressure": 0.842,
+      "US30_Range61": -0.358,
+      "US30_Range64": 3.052
+    },
+    "best_exit_day": {"date": "2026-08-05", "stressed_net_usd": 12.318},
+    "worst_exit_day": {"date": "2026-08-25", "stressed_net_usd": -10.038},
+    "last_completed_session_had_no_close": true,
+    "interpretation": "The interval remained positive in both halves, but 88.48% of stressed net came from the first half and the final week was slightly negative. This late deceleration is material caution, not a failure of the declared full-interval support gate."
+  },
+  "risk_admission": {
+    "position_opens": 29,
+    "aggregate_risk_cap_blocks": 8,
+    "actionable_admission_attempts": 37,
+    "aggregate_risk_cap_block_rate_pct": 21.621622,
+    "existing_exposure_gates": 155,
+    "signal_not_met_gates": 63,
+    "blocks_by_component": {
+      "ZT-H1-US100-CROSS-IN-14b72317b7": 6,
+      "ZT-H1-US30-RETURN-I-c870a788ec": 1,
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46": 1
+    },
+    "maximum_aggregate_planned_risk_usd": 20.7526,
+    "interpretation": "The aggregate cap was economically active rather than decorative. Six of eight blocks were Cross opportunities, so the positive result includes meaningful capacity rationing and does not establish what the blocked Cross trades would have earned."
+  },
+  "faults": {
+    "safety_stopped": false,
+    "persistence_failed": false,
+    "broker_mismatch": false,
+    "foreign_exposure": false,
+    "protection_calculation_failures": 0,
+    "protection_mismatches": 0,
+    "research_dropped_records": 0,
+    "data_unavailable": 0,
+    "catchup_failures": 0
+  },
+  "fixed_candidate_comparison": {
+    "selection": {
+      "actual_net_usd": 5786.63,
+      "stressed_net_usd": 5477.524,
+      "native_equity_drawdown_relative_pct": 20.256887565,
+      "native_profit_factor": 1.49547,
+      "native_recovery_factor": 8.69634,
+      "native_sharpe_ratio": 5.35
+    },
+    "june_july": {
+      "actual_net_usd": 32.74,
+      "stressed_net_usd": 30.626,
+      "native_equity_drawdown_relative_pct": 18.675302130,
+      "native_profit_factor": 1.32038,
+      "native_recovery_factor": 1.17054,
+      "native_sharpe_ratio": 5.57
+    },
+    "august_through_28": {
+      "actual_net_usd": 29.62,
+      "stressed_net_usd": 28.586,
+      "native_equity_drawdown_relative_pct": 13.44,
+      "native_profit_factor": 1.93,
+      "native_recovery_factor": 1.65,
+      "native_sharpe_ratio": 9.32
+    },
+    "august_drawdown_below_selection_percentage_points": 6.816887565,
+    "august_drawdown_below_june_july_percentage_points": 5.235302130,
+    "sample_size_caution": "August contains only 29 closed lifecycles. Its PF, recovery and Sharpe improvements are supportive observations, not stable superiority claims."
+  },
+  "economic_verdict": {
+    "classification": "VALID_FIXED_PAIRED_ANCHOR_AUGUST_THROUGH_28_SUPPORT",
+    "actual_net_positive": true,
+    "stressed_net_positive": true,
+    "nominal_drawdown_gate_passed": true,
+    "pragmatic_drawdown_gate_passed": true,
+    "all_active_components_positive_over_full_interval": true,
+    "fixed_candidate_status": "STRENGTHENED_UNCHANGED",
+    "interpretation": "The unchanged fixed candidate earned +$29.62 actual and +$28.586 under doubled observed costs while native maximum relative equity drawdown stayed at 13.44%, inside both the nominal 20.0% line and the separately disclosed practical 21.2% envelope. All five active components, both traded symbols and both directions were positive over the full interval. Support is moderated by only 29 closes, a -$1.118 stressed final week, first-half concentration and eight aggregate-risk blocks, six in Cross. The evidence strengthens but does not retune or replace the already fixed candidate.",
+    "not_completed_august": true,
+    "not_pristine_project_wide_oos": true,
+    "reason_not_pristine_project_wide_oos": "The fixed candidate did not use August economics for selection, but broader project research had already observed portions of August.",
+    "automatic_retune_or_successor": false,
+    "live_promotion_authority": false
+  },
+  "artifacts": {
+    "raw_root": "optimization/artifacts/raw/dd20-paired-anchor-august-2026-mt5-v1/",
+    "all_preserved_files": 37,
+    "all_preserved_bytes": 1600219,
+    "all_preserved_manifest_sha256": "2947B827C686F8A1C8F0B000F4BB864EF942A9E07436D613DEC4125D09012F76",
+    "valid_bundle": {
+      "path": "optimization/artifacts/raw/dd20-paired-anchor-august-2026-mt5-v1/valid/",
+      "files": 22,
+      "bytes": 997108,
+      "manifest_sha256": "11DF9C11B57DF3382B366E0F3DE8A8BD3F38BCCE559D024CC90047708B8D5539",
+      "report_bundle_files": 5,
+      "report_bundle_bytes": 187066,
+      "report_bundle_manifest_sha256": "2353D963BE2AF7E6AF4E9750A94624867D8540D5022A96741895F68AD9D590CC",
+      "html_report_bytes": 83234,
+      "html_report_sha256": "0ECED3023B4FF59C8A184BD9696201F2ED37CE267D29469E900A17CC4836C969",
+      "tester_cache_bytes": 37028,
+      "tester_cache_sha256": "007662BEC89CBAC8D932C63849AE515B1D1F527CC49E1A9D5994AD8CF4CC956C",
+      "lifecycle_sha256": "AE0EE943D7A23A39D476656B16C9FBAE6BB467AC21520FB45B014BE1BAA7F4D0",
+      "candidate_sha256": "DFEC3457A3B211DC72A4533BFADE11D9B72A05240E60960FB81592D9AAA6ACB0",
+      "agent_log_sha256": "6124EB02F69E50B851E5C5C8D9D9A90159795CCB3567C36EFB800CED10B084EB"
+    },
+    "compile_log_bytes": 21602,
+    "compile_log_sha256": "EC6AB3D89AC12C2D4DD53B2A181FD8DC752CB052C6C53BACE63CA89A9775EC15"
+  },
+  "storage_closeout": {
+    "operation": "Marked the exact closed dedicated Portable root OneDrive online-only after preserving the valid and invalid raw evidence bundles.",
+    "runtime_directories_marked_online_only": 1,
+    "runtime_owner_processes": 0,
+    "free_space_gib_before": 87.439,
+    "free_space_gib_after_immediate_observation": 87.439,
+    "tracked_or_durable_artifacts_deleted": 0,
+    "runtime_directory_deleted": false
+  },
+  "boundary": {
+    "campaign_closed": true,
+    "one_valid_economic_path_consumed": true,
+    "valid_path_rerun": false,
+    "weight_risk_threshold_date_formula_or_portfolio_search": false,
+    "fixed_candidate_changed": false,
+    "live_or_lab_source_runtime_state_or_log_modified": false,
+    "master_terminal_touched": false,
+    "explicit_broker_positions_orders_deals_or_account_queried": false,
+    "automatic_live_promotion": false,
+    "continuous_optimization_goal_paused": false
+  }
+}

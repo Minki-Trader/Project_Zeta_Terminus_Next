@@ -1,0 +1,106 @@
+{
+  "schema": "zeta-dd20-paired-anchor-august-2026-mt5-declaration-v1",
+  "recorded_date_local": "2026-08-30",
+  "status": "DECLARED_FIXED_CANDIDATE_NEAR_MONTH_CONFIRMATION_ECONOMICS_UNOPENED",
+  "campaign": {
+    "id": "dd20-paired-anchor-august-2026-mt5-v1",
+    "release_id": "OPT-LIVE-V7-DD20PAAUG1-20260830",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20PAAUG1-20260830",
+    "magic_range": "260830831..260830836",
+    "tester_only": true
+  },
+  "question": "How did the unchanged fixed paired-month replacement-development candidate behave natively from the start of August through the last completed U.S. cash session available before declaration?",
+  "source_derivation": {
+    "one_time_copy_from_frozen_optimization_baseline": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/",
+    "baseline_release_id": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+    "baseline_canonical_identity_sha256": "B32E7E176F2EF1B4A7AA6E9FB91D59FAC685325CC83A79DAA1947F5A431CA178",
+    "baseline_source_manifest_file_sha256": "AEB9FDB813164331645EEB63B927F1670F513800D72221F44061883180A72568",
+    "economic_patch_reference": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "fixed_candidate_result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+    "fixed_candidate_implementation_freeze_sha256": "2257F18CDFE8F49B53270C07309DCF53E12B67EC8BAEBB8ABCC05C13D9D58E32",
+    "non_domain_headers_lf_normalized_equal_to_fixed_candidate": 14,
+    "identity_and_mutable_paths_changed_before_execution": true,
+    "cross_lane_or_cross_campaign_include_link_or_execution": false,
+    "compiled_binary_copied": false
+  },
+  "fixed_economic_policy": {
+    "component_order": [
+      "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "ZT-H1-US30-RETURN-I-c870a788ec",
+      "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8"
+    ],
+    "component_exposure_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "effective_position_risk_fractions_before_aggregate_cap": [0.08, 0.06, 0.08, 0.10, 0.06, 0.0],
+    "zero_weight_component_disabled": true,
+    "selection_actual_net_usd": 5786.63,
+    "selection_stressed_net_usd": 5477.524,
+    "selection_mt5_relative_equity_drawdown_pct": 20.2568875652,
+    "june_july_actual_net_usd": 32.74,
+    "june_july_stressed_net_usd": 30.626,
+    "june_july_mt5_relative_equity_drawdown_pct": 18.6753021299,
+    "retune_or_grid": false
+  },
+  "implementation": {
+    "readme_bytes": 3126,
+    "readme_sha256": "9B1A42192904589D93ACD54BE13A6502228C17B676A65A53A2BB6D1C81F6FE33",
+    "source_file_count": 16,
+    "source_total_bytes": 417742,
+    "source_manifest_sha256": "B361AA8D0015250DE35A4278063032287E8A84B812A1DE5FBE9CF3D4025A3AD2",
+    "configuration_file_count": 2,
+    "configuration_total_bytes": 1799,
+    "configuration_manifest_sha256": "DFBB2BD2E32E790CD233550564C63F95B2712D015154DC4D4215EF09F71D83B7",
+    "manifest_algorithm": "Sort slash-normalized campaign-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "expected_compiled_binary": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/mt5/MQL5/Experts/ZetaOptimization/ZetaDD20PairedAnchorAugust2026MT5V1.ex5",
+    "dedicated_runtime": "optimization/runtime/dd20-paired-anchor-august-2026-mt5-v1-portable/",
+    "raw_artifact_root": "optimization/artifacts/raw/dd20-paired-anchor-august-2026-mt5-v1/"
+  },
+  "economic_contract": {
+    "tester_model": "MT5 every tick based on real ticks",
+    "configuration_interval": "2026-08-01T00:00:00/2026-08-29T00:00:00",
+    "intended_completed_market_sessions": "2026-08-03 through 2026-08-28",
+    "expected_complete_valid_economic_paths": 1,
+    "invalid_environment_or_engineering_attempts": "correction states with no arbitrary count cap and no economic verdict",
+    "nominal_mt5_relative_equity_drawdown_pct": 20.0,
+    "pragmatic_mt5_relative_equity_drawdown_pct": 21.2,
+    "support_gate": [
+      "complete valid 100 percent real-tick report and required-symbol evidence",
+      "normal Tester stop and zero safety, persistence, broker, foreign-exposure, protection or research-drop fault",
+      "positive actual net",
+      "positive doubled-observed-cost-stressed net",
+      "native maximum relative equity drawdown at or below the separately disclosed pragmatic 21.2 percent envelope"
+    ],
+    "required_disclosures": [
+      "nominal 20 percent and pragmatic 21.2 percent drawdown judgments",
+      "actual and stressed net, native balance/equity drawdown, lifecycle count, risk skips and stop exits",
+      "component contribution, breadth and concentration",
+      "August 31 is excluded, so this is not a completed-August result",
+      "the fixed candidate did not use August economics for selection, while broader project work did observe portions of August"
+    ],
+    "support_classification": "VALID_FIXED_PAIRED_ANCHOR_AUGUST_THROUGH_28_SUPPORT",
+    "nonconfirmation_classification": "VALID_FIXED_PAIRED_ANCHOR_AUGUST_THROUGH_28_NONCONFIRMATION",
+    "automatic_retune_or_successor": false,
+    "live_promotion_authority": false
+  },
+  "storage_correction": {
+    "operation": "OneDrive online-only conversion of exact already-closed Portable roots; no deletion",
+    "target_directories": 27,
+    "free_gib_before": 33.97,
+    "free_gib_after_observed": 42.96,
+    "tracked_or_durable_artifacts_deleted": 0
+  },
+  "boundary": {
+    "declaration_frozen": true,
+    "compiled": false,
+    "runtime_created": false,
+    "tester_started": false,
+    "report_or_economic_output_opened": false,
+    "live_or_lab_source_runtime_state_or_log_modified": false,
+    "master_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false
+  }
+}
