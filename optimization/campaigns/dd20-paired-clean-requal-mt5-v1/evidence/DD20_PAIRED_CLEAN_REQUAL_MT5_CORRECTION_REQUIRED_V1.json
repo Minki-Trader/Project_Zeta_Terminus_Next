@@ -1,0 +1,192 @@
+{
+  "schema": "zeta-dd20-paired-clean-requal-mt5-correction-required-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "CORRECTION_REQUIRED_CONTROL_INVALID_DATA_UNAVAILABLE_NO_ECONOMIC_VERDICT_CANDIDATE_NOT_STARTED",
+  "campaign": {
+    "id": "dd20-paired-clean-requal-mt5-v1",
+    "program": 5,
+    "height": "meso-to-macro",
+    "declaration": "optimization/campaigns/dd20-paired-clean-requal-mt5-v1/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_DECLARATION_V1.json",
+    "declaration_sha256": "117A1B1A908871DDE816C351511EB9DCD3EC46FEDA018BB4EFB98803C5877F77",
+    "implementation_freeze": "optimization/campaigns/dd20-paired-clean-requal-mt5-v1/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_IMPLEMENTATION_FREEZE_V1.json",
+    "implementation_freeze_sha256": "410BB3E410E9E8399A0659C400B8EBCAFE7EE0F0CA3162B7B291C85E72C67F9A",
+    "runtime": "optimization/runtime/dd20-pcr1-portable/",
+    "path_order": ["CONTROL", "CANDIDATE"]
+  },
+  "prestart_account_configuration_correction": {
+    "classification": "INVALID_PRESTART_ACCOUNT_CONFIGURATION_TESTER_NOT_STARTED_NO_ECONOMIC_OUTPUT",
+    "terminal_pid": 28288,
+    "tester_started": false,
+    "report_files": 0,
+    "tst_files": 0,
+    "economic_output_files": 0,
+    "cause": "The first dedicated-runtime launch had no saved account configuration because Config was intentionally excluded from the donor copy; /login alone did not establish the account and the Tester did not start.",
+    "correction": "Copied exactly ten non-output Config support files from the process-free donor and verified byte/hash parity without querying account, position, order or deal state.",
+    "support_files": [
+      "accounts.dat",
+      "agents.dat",
+      "assistant.ini",
+      "common.ini",
+      "dnsperf.dat",
+      "hotkeys.ini",
+      "servers.dat",
+      "settings.ini",
+      "terminal.ini",
+      "terminal.lic"
+    ],
+    "raw_archive": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v1/control-invalid-prestart-account-missing-v1/",
+    "raw_file_count": 14,
+    "raw_total_bytes": 525840,
+    "raw_ordered_manifest_sha256": "91BBD7E2D80D93B63EEEFB5F495CB5515D6F2FADF7E929D058DB48390DB35EE3"
+  },
+  "control_attempt": {
+    "classification": "INVALID_COMPLETE_CONTROL_PATH_DATA_UNAVAILABLE_GATE_VIOLATION_NO_ECONOMIC_VERDICT",
+    "terminal_pid": 41184,
+    "started_local": "2026-08-31T06:14:38.9418466+09:00",
+    "tester_started_local": "2026-08-31T06:14:48+09:00",
+    "tester_completed_local": "2026-08-31T06:29:50+09:00",
+    "terminal_stopped_local_observed": "2026-08-31T06:30:17+09:00",
+    "terminal_exit": "shutdown with 0",
+    "tester_completion": "successfully finished",
+    "test_elapsed": "0:15:00.521",
+    "model_value": 4,
+    "interval": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "primary_symbol": "US30",
+    "primary_period": "M30",
+    "primary_ticks": 114350355,
+    "primary_bars": 30487,
+    "html_history_quality": "100% actual ticks",
+    "html_complete_closing_tag": true,
+    "native_tester_cache_complete_nonzero": true,
+    "candidate_started": false
+  },
+  "pre_and_post_control_binding_fingerprints": {
+    "implementation_file_count": 21,
+    "implementation_total_bytes": 656996,
+    "implementation_ordered_manifest_sha256": "76FE5688926BE774B1C3CF474344D1F6E47CBBECDC5A5D897444F05309F655B8",
+    "runtime_implementation_parity_mismatches": 0,
+    "hcs_and_tkc_file_count": 198,
+    "hcs_and_tkc_total_bytes": 3810379615,
+    "hcs_and_tkc_ordered_manifest_sha256": "995AC8A37F6D91B2E9D97DEE1C31D0DB78ABE31D96E5B1EF1C707BDE171CA5E6",
+    "full_symbols_database_bytes": 413696,
+    "full_symbols_database_sha256": "6521CE8BEE66935AD03EA1B6D1B67EEA4837EF4201D18E5DFE081F6D4C417BC1",
+    "all_exact_before_and_after_control": true,
+    "runtime_process_owners_after_stop": 0
+  },
+  "detailed_history_integrity": {
+    "required_symbols": ["US30", "US100", "US500"],
+    "real_ticks_absent_lines": 0,
+    "real_ticks_discarded_lines": 0,
+    "tick_prices_mismatch_lines": 0,
+    "tick_volumes_not_matched_lines": 0,
+    "every_tick_generation_used_lines": 0,
+    "result": "PASS"
+  },
+  "contract_and_swap_integrity": {
+    "agent_log_start_rows": 3,
+    "agent_log_end_rows": 3,
+    "tester_log_start_rows": 3,
+    "tester_log_end_rows": 3,
+    "start_end_normalized_mismatches_per_log": 0,
+    "cross_log_normalized_mismatches": 0,
+    "result": "PASS"
+  },
+  "fault_integrity": {
+    "safety_stopped": false,
+    "persistence_failed": false,
+    "broker_mismatch": false,
+    "foreign_exposure": false,
+    "protection_calculation_failures": 0,
+    "protection_mismatches": 0,
+    "research_dropped_records": 0,
+    "catchup_failures": 0,
+    "nonfinite_log_lines": 0,
+    "modify_pending": false,
+    "retry_pending": false,
+    "catchup_required": false,
+    "cursor_checkpoint_pending": false,
+    "activation_seal_pending": 0,
+    "data_unavailable": 12,
+    "declared_required_data_unavailable": 0,
+    "result": "FAIL_DATA_UNAVAILABLE_ONLY"
+  },
+  "invalidity_diagnosis": {
+    "rc4_component": "ZT-M30-US30-RANGE-COMP-64efb16616",
+    "rc4_closed_lifecycles": 150,
+    "rc4_successful_checkpoints": 138,
+    "rc4_unavailable_attempts": 12,
+    "successful_checkpoints_plus_unavailable_attempts": 150,
+    "v8_rc4_source_path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Strategies/ZetaRC4.mqh",
+    "campaign_rc4_source_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v1/mt5/MQL5/Include/ZetaOptimizationDD20PairedCleanRequalMT5V1/Strategies/ZetaRC4.mqh",
+    "both_rc4_source_bytes": 71067,
+    "both_rc4_source_sha256": "D558138066154754D0AB25783EA148FEE52868C51449F801121086D6CA333FE2",
+    "byte_equal": true,
+    "current_observability_limit": "The inherited V8 counter combines every ArcCalculateRC4Heads false return into one data_unavailable total and emits no per-attempt reason. The complete clean history therefore proves the gate violation but cannot distinguish an incomplete copy/tick fault from a deterministic policy no-action caused by a complete zero-range or session-boundary state.",
+    "design_defect": "The v1 declaration required zero data-unavailable without requiring reason telemetry even though the exact V8 source can emit the aggregate counter. This is a validity-contract and observability defect, not an economic result."
+  },
+  "quarantined_non_authoritative_output": {
+    "opened_during_postrun_integrity_parsing": true,
+    "economic_verdict_authority": false,
+    "may_select_reject_retune_or_promote": false,
+    "actual_net_usd": 373.30,
+    "doubled_cost_stressed_net_usd": 342.6655,
+    "actual_closed_drawdown_usd": 53.69,
+    "stressed_closed_drawdown_usd": 54.1895,
+    "closed_lifecycles": 1477,
+    "reason": "The frozen binding integrity gate failed. These values are retained only so the invalid raw path remains forensically complete and cannot be silently rediscovered or misrepresented."
+  },
+  "raw_artifacts": {
+    "path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v1/control-invalid-data-unavailable-v1/",
+    "file_count": 17,
+    "total_bytes": 30229899,
+    "ordered_manifest_sha256": "384EB8044FFAF43A7808B6EA5C6E28C6336ECCFF06E489D59F72FCFD6EC1DE09",
+    "report": {
+      "bytes": 2909936,
+      "sha256": "7C4EDED0E29612D5DF5A474E79C925A781CCBC9B324D2C1DAF7A302302AAF312"
+    },
+    "tester_cache": {
+      "bytes": 1663396,
+      "sha256": "26B9F94961F0F545FF1DE0C3448FE9EF30411BD20047FBAC3F4EBB34A1A00036"
+    },
+    "agent_log": {
+      "bytes": 4331620,
+      "sha256": "B95EDFBF95784FA16810DCD5937AD63FEB58EDAE9D6349053ECEBFEDB2A08D89"
+    },
+    "tester_log": {
+      "bytes": 4085984,
+      "sha256": "E1DFB75B5118018B17DECDD4D5B836CD1281DA460CF5B13C7846641CECBBD0AC"
+    },
+    "candidate_ledger": {
+      "bytes": 11619643,
+      "sha256": "F581C963D46D4BABE429F58234D056610BCF96A9AEABCB6D37403EB784C355C8"
+    },
+    "lifecycle_ledger": {
+      "bytes": 2942297,
+      "sha256": "03E05C52FB8F4BA3B9A5D03EE3ACCE00955ADEEB20AACCB98A102D2C0144829D"
+    },
+    "active_runtime_after_archive": {
+      "reports": 0,
+      "tester_cache_files": 0,
+      "logs": 0,
+      "campaign_state_or_research_outputs": 0
+    },
+    "recoverable": true
+  },
+  "fixed_judgment": {
+    "economic_success": false,
+    "economic_failure": false,
+    "valid_nonconfirmation": false,
+    "correction_required": true,
+    "candidate_not_started": true,
+    "v1_closed_to_further_execution": true,
+    "required_next_action": "Version the campaign before any further economic path. Keep the same control, exact V8 candidate, interval and economic gates; add read-only per-attempt RC4 unavailability reason telemetry and predeclare which complete-history structural no-action classes, if any, are valid. Any short-copy, invalid-price/tick, nonfinite or unclassified reason remains invalid."
+  },
+  "boundaries": {
+    "live_pid_30592_touched": false,
+    "live_entries_state": "0/0",
+    "live_lab_source_set_ex5_state_or_runtime_modified": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "external_data_used": false,
+    "automatic_live_promotion": false
+  }
+}
