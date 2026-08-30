@@ -33,6 +33,8 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
+`campaigns/dd20-frequency-lane-core-growth-quarantine-mt5-v1/` is open declaration-only under the user's serial closed-family rehabilitation authority. It owns the one Unit 125 seed `EXACT_H4_CORE_GROWTH_QUARANTINED_RECOMBINATION`: retain the exact paired-month core and fixed US500 H4 lane, but keep H4 actual/stressed closes outside the core realized/stressed growth ledgers used by core sizing while real account equity, margin and safety remain shared. No source, runtime, compile or Tester path is open until the declaration reaches `origin/main`.
+
 `campaigns/portfolio-risk-cap-envelope-v1/` is closed `NO_REPLACEMENT_RETAIN_PARENT_0.04_0.12`. Its 15 selection and 15 isolated-forward passes are preserved without rerun. The same result retained `0.04 / 0.18` as a non-dominated maximum-profit frontier point: selection actual/stressed net `$1,166.89 / $1,085.408`, MT5 equity drawdown `11.3757%`.
 
 `campaigns/dd20-profit-frontier-proxy-v1/` is closed `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST`. Near-uniform gross leverage almost doubled selection profit, but every frozen role amplified the isolated later loss and exceeded the proxy DD cap; none reached MT5.
