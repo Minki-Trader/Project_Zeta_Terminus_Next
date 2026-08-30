@@ -1,0 +1,188 @@
+{
+  "schema": "zeta-next-frequency-lane-core-growth-quarantine-result-v1",
+  "status": "UNIT_125_ONE_FIXED_AGGREGATION_COMPLETE",
+  "unit": "frequency-lane-core-growth-quarantine-125",
+  "family": "frequency-lane-core-growth-quarantine-v1",
+  "integrity": {
+    "passed": true,
+    "inputs": [
+      {
+        "path": "authority/combined-result.json",
+        "bytes": 13144,
+        "sha256": "ECD977098A4B06E4C8252EF63DD0C169DB98C95CF538C8D3EA5E283499597D63"
+      },
+      {
+        "path": "authority/paired-control-result.json",
+        "bytes": 9880,
+        "sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2"
+      },
+      {
+        "path": "authority/standalone-h4-result.json",
+        "bytes": 19589,
+        "sha256": "EE34D231896BA7CD3F1041FEA03A54CDD9C69E9CDE12095946930B113A479BB1"
+      },
+      {
+        "path": "combined/agent.log",
+        "bytes": 4237718,
+        "sha256": "A06577903D4D11EB8E7B4E5237881A927AEC5B807FBC4BA141AF90DA4DF5DB52"
+      },
+      {
+        "path": "combined/events-a.csv",
+        "bytes": 1051949,
+        "sha256": "44D8B321E205B6F93BCB6224CE746A10831DD5A7C02DBDDDB31C0683EA32EC33"
+      },
+      {
+        "path": "combined/events-b.csv",
+        "bytes": 1674789,
+        "sha256": "13B37B2E649A9B25AD9BF78B3E6287C1517272DA5A5043DF61865F963250578D"
+      },
+      {
+        "path": "combined/research-candidates.csv",
+        "bytes": 8591083,
+        "sha256": "A4AE3AA85674899D216BEBCA28DA7E3B1628E9676FAC9E51C2AAE6155DA3602D"
+      },
+      {
+        "path": "combined/research-lifecycles.csv",
+        "bytes": 2770449,
+        "sha256": "164202E9629EC1380560CD2DDC41B394ADA8564827A3F68F02F8491B14BF3A33"
+      },
+      {
+        "path": "control/events-a.csv",
+        "bytes": 956741,
+        "sha256": "0C4325BDD94A33031EF61EE62A40E9D284F34F8FA11B9D758AF4BEE025EC98EB"
+      },
+      {
+        "path": "control/events-b.csv",
+        "bytes": 1620721,
+        "sha256": "079A47AA12742054E225510C5506CD65DA9443E7A8797D858546DE730624EEFC"
+      },
+      {
+        "path": "control/research-candidates.csv",
+        "bytes": 8290085,
+        "sha256": "B3231924CD1357072C4198D6A530B5DA932C96EA6A050E35600E2279CAD1007A"
+      },
+      {
+        "path": "control/research-lifecycles.csv",
+        "bytes": 2685969,
+        "sha256": "7C187B8CE5068A67355FB9FE1F0D7E41E1E65BD88FBCEBBD3B63360E163B0F8B"
+      }
+    ],
+    "control_candidate_rows": 12265,
+    "combined_candidate_rows": 12275,
+    "common_record_ids": 12257,
+    "control_only_record_ids": 8,
+    "combined_only_record_ids": 18,
+    "immutable_field_mismatches": 0,
+    "common_result_mismatches": 0
+  },
+  "fixed_mechanism": {
+    "reference_capital_usd": 100.0,
+    "core_addition_step_usd": 150.0,
+    "h4_parameters_changed": false,
+    "core_parameters_changed": false,
+    "counterfactual": "Track H4 actual/stressed closes in a low-frequency lane ledger; exclude them from core project_realized_net and stressed_balance used by core stage capital and daily lot multiplier; keep real account equity, margin and safety shared."
+  },
+  "matched_path": {
+    "common_volume_differences": 64,
+    "volume_differences_before_first_h4_close": 0,
+    "first_h4_close_time": "2024.02.02 01:00:02",
+    "first_common_volume_divergence": {
+      "record_id": "ZT-H1-US100-CROSS-IN-14b72317b7-1773334800-OUTCOME-POSITION_OPEN",
+      "server_time": "2026.03.12 17:00:00",
+      "component_id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "stage": "OUTCOME",
+      "result": "POSITION_OPEN",
+      "control_volume": 0.52,
+      "combined_volume": 0.54,
+      "control_balance": 4217.19,
+      "combined_balance": 4223.89,
+      "control_risk_capital": 3995.8190000000945,
+      "combined_risk_capital": 4001.562700000095
+    }
+  },
+  "first_quantum_boundary": {
+    "date": "2026.03.12",
+    "h4_closes_before_boundary": 69,
+    "cumulative_h4_actual_net_usd": 8.55,
+    "cumulative_h4_stressed_net_usd": 7.2967,
+    "control_stressed_balance": 3995.8190000000945,
+    "shared_combined_stressed_balance": 4001.562700000095,
+    "quarantined_core_stressed_balance": 3994.266000000095,
+    "control_multiplier": 26,
+    "shared_combined_multiplier": 27,
+    "quarantined_multiplier": 26
+  },
+  "h4_direct_value": {
+    "closes": 79,
+    "actual_net_usd": 10.14,
+    "stressed_net_usd": 8.8217,
+    "positive_active_epochs": 2,
+    "epochs": [
+      {
+        "epoch": "E1",
+        "closes": 0,
+        "actual_net_usd": 0.0,
+        "stressed_net_usd": 0.0,
+        "positive_stressed_closes": 0,
+        "negative_stressed_closes": 0
+      },
+      {
+        "epoch": "E2",
+        "closes": 9,
+        "actual_net_usd": 1.29,
+        "stressed_net_usd": 1.2081,
+        "positive_stressed_closes": 6,
+        "negative_stressed_closes": 3
+      },
+      {
+        "epoch": "E3",
+        "closes": 34,
+        "actual_net_usd": -0.3199999999999997,
+        "stressed_net_usd": -1.0328,
+        "positive_stressed_closes": 17,
+        "negative_stressed_closes": 17
+      },
+      {
+        "epoch": "E4",
+        "closes": 36,
+        "actual_net_usd": 9.17,
+        "stressed_net_usd": 8.6464,
+        "positive_stressed_closes": 27,
+        "negative_stressed_closes": 9
+      }
+    ],
+    "margin_skips": 0,
+    "faults": 0
+  },
+  "prior_native_transmission": {
+    "core_actual_delta_vs_control_usd": -250.16,
+    "core_stressed_delta_vs_control_usd": -249.055,
+    "h4_direct_actual_net_usd": 10.14,
+    "h4_direct_stressed_net_usd": 8.8217,
+    "total_actual_delta_vs_control_usd": -240.02,
+    "total_stressed_delta_vs_control_usd": -240.2333
+  },
+  "gates": {
+    "immutable_inputs_passed": true,
+    "candidate_identity_passed": true,
+    "common_result_identity_passed": true,
+    "no_volume_divergence_before_first_h4_close": true,
+    "shared_growth_first_divergence_crosses_quantum": true,
+    "quarantine_recovers_control_multiplier_at_first_divergence": true,
+    "h4_closes_at_least_40": true,
+    "h4_actual_and_stressed_positive": true,
+    "h4_positive_in_at_least_two_active_epochs": true,
+    "h4_margin_and_fault_path_clean": true,
+    "core_dilution_material_and_opposite_h4_sign": true,
+    "all_passed": true
+  },
+  "verdict": "PASS_CORE_GROWTH_QUANTUM_CONTAMINATION_RETAIN_ONE_QUARANTINED_RECOMBINATION_MT5_SEED",
+  "decision_translation": {
+    "retained_seed": "EXACT_H4_CORE_GROWTH_QUARANTINED_RECOMBINATION",
+    "optimization_candidate": null,
+    "mt5_shortlist": null,
+    "live_candidate": null,
+    "automatic_promotion": false,
+    "next_if_passed": "Freeze one isolated Optimization campaign implementing only the declared lane-accounting separation, then require complete native selection and conditional forward against the paired control."
+  }
+}

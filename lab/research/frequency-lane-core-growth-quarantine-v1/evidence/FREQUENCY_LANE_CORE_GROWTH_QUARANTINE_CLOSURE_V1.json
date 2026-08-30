@@ -1,0 +1,111 @@
+{
+  "schema": "zeta-next-frequency-lane-core-growth-quarantine-closure-v1",
+  "created_at_local": "2026-08-31",
+  "status": "CLOSED_VALID_RETROSPECTIVE_MECHANISM_CONFIRMED_RETAIN_ONE_NATIVE_VALIDATION_SEED",
+  "unit": "frequency-lane-core-growth-quarantine-125",
+  "family": "frequency-lane-core-growth-quarantine-v1",
+  "macro_program": {
+    "id": 5,
+    "name": "portfolio_capital_risk"
+  },
+  "research_height": "meso_to_macro",
+  "verdict": "PASS_CORE_GROWTH_QUANTUM_CONTAMINATION_RETAIN_ONE_QUARANTINED_RECOMBINATION_MT5_SEED",
+  "integrity": {
+    "immutable_input_pins": 12,
+    "control_candidate_rows": 12265,
+    "combined_candidate_rows": 12275,
+    "common_record_ids": 12257,
+    "control_only_record_ids": 8,
+    "combined_only_record_ids": 18,
+    "immutable_field_mismatches": 0,
+    "common_result_mismatches": 0,
+    "common_volume_differences": 64,
+    "volume_differences_before_first_h4_close": 0
+  },
+  "first_quantum_boundary": {
+    "server_time": "2026.03.12 17:00:00",
+    "component_id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+    "control_volume": 0.52,
+    "shared_volume": 0.54,
+    "prior_h4_closes": 69,
+    "prior_h4_actual_net_usd": 8.55,
+    "prior_h4_stressed_net_usd": 7.2967,
+    "control_stressed_balance_usd": 3995.8190000000945,
+    "shared_stressed_balance_usd": 4001.562700000095,
+    "quarantined_core_stressed_balance_usd": 3994.266000000095,
+    "control_shared_quarantined_multiplier": [26, 27, 26]
+  },
+  "h4_direct_value": {
+    "closes": 79,
+    "actual_net_usd": 10.14,
+    "stressed_net_usd": 8.8217,
+    "positive_active_epochs": 2,
+    "margin_skips": 0,
+    "faults": 0,
+    "epochs": [
+      {"epoch":"E1","closes":0,"actual_net_usd":0.0,"stressed_net_usd":0.0},
+      {"epoch":"E2","closes":9,"actual_net_usd":1.29,"stressed_net_usd":1.2081},
+      {"epoch":"E3","closes":34,"actual_net_usd":-0.3199999999999997,"stressed_net_usd":-1.0328},
+      {"epoch":"E4","closes":36,"actual_net_usd":9.17,"stressed_net_usd":8.6464}
+    ]
+  },
+  "prior_native_transmission": {
+    "core_actual_delta_vs_control_usd": -250.16,
+    "core_stressed_delta_vs_control_usd": -249.055,
+    "total_actual_delta_vs_control_usd": -240.02,
+    "total_stressed_delta_vs_control_usd": -240.2333
+  },
+  "interpretation": {
+    "classification": "RETROSPECTIVE_CAUSAL_MECHANISM_REPRODUCTION_NOT_BLINDED_VALIDATION",
+    "supported": "H4 stressed profit crossed the core daily $150 executable-volume quantum at the first common divergence; quarantining only that profit recovers the exact control multiplier at that boundary.",
+    "not_supported": "The source-free reconstruction does not prove the full recombined MT5 path, equity drawdown, margin interaction, forward robustness, Lab engineering suitability or Live suitability."
+  },
+  "retained_seed": {
+    "id": "EXACT_H4_CORE_GROWTH_QUARANTINED_RECOMBINATION",
+    "count": 1,
+    "next_stage": "one separately named self-contained Optimization MT5 campaign",
+    "treatment": "H4 actual and stressed closes remain in a separate low-frequency ledger and do not update core project_realized_net or core stressed_balance used by core sizing; real account equity, margin and safety remain shared.",
+    "parameter_changes": 0,
+    "automatic_candidate_or_promotion": false
+  },
+  "closed_together": [
+    "all H4 threshold, lookback, exit, hold, volume, direction, stop and take-profit variants",
+    "$500 H4 stage-gate variants",
+    "$150 core addition-step, weights, risks, cap, component, admission and order variants",
+    "period, month, component, side, favorable-row and E4-only rescues"
+  ],
+  "execution_audit": {
+    "failed_prevalid_invocations": 1,
+    "prevalid_implementation_corrections": 1,
+    "successful_complete_aggregations": 1,
+    "economic_metric_reruns": 0,
+    "result_rejudgments": 0,
+    "mql_or_settings_changes": 0,
+    "compile_or_tester_paths": 0
+  },
+  "evidence": {
+    "declaration": {
+      "bytes": 10409,
+      "sha256": "01ADAB594CEEA19135D2636BF3EF6A0C4303D8EED541CF592AFBD25D0C46FFCF"
+    },
+    "prevalid_correction": {
+      "bytes": 2331,
+      "sha256": "9A82AA031F7E494F051C7FAF88AA91506E7A5C219ED5FD0C321237C43065B861"
+    },
+    "analysis": {
+      "bytes": 17909,
+      "sha256": "EF313D95D1ECFCC3BC94949B5EA8A86B78C1CA6337899161829EA547B5F3A51D"
+    },
+    "result": {
+      "bytes": 6720,
+      "sha256": "386E50F998A12C4E69BE2616169747DD5C4BCD458D12FDDDC363401B8D03A4FF"
+    }
+  },
+  "optimization_candidate": null,
+  "lab_engineering_handoff": null,
+  "live_authority": false,
+  "broker_or_account_state_queried": false,
+  "live_surface": "UNTOUCHED",
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "next": "commit_and_push_this_closure_then_open_exactly_one_isolated_Optimization_MT5_validation_campaign_for_the_retained_seed"
+}
