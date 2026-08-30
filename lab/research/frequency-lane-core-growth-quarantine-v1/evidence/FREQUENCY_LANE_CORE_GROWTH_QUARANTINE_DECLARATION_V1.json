@@ -1,7 +1,7 @@
 {
   "schema": "zeta-next-frequency-lane-core-growth-quarantine-declaration-v1",
   "created_at_local": "2026-08-31",
-  "status": "UNIT_125_DECLARATION_FROZEN_FIXED_AGGREGATION_NOT_EXECUTED",
+  "status": "UNIT_125_REFROZEN_AFTER_PREVALID_EVENT_SEQUENCE_SEMANTIC_CORRECTION",
   "unit": "frequency-lane-core-growth-quarantine-125",
   "family": "frequency-lane-core-growth-quarantine-v1",
   "title": "Low-Frequency Lane Profit Quarantine from Core Growth Quantization",
@@ -97,12 +97,16 @@
   },
   "frozen_analysis": {
     "path": "lab/research/frequency-lane-core-growth-quarantine-v1/analysis/run_frequency_lane_core_growth_quarantine.py",
-    "bytes": 17739,
-    "sha256": "2FD68C2BF90D016538D3439FA4C593748CEEF21AD0CF56E3BDF351DDB8AD7595",
+    "bytes": 17909,
+    "sha256": "EF313D95D1ECFCC3BC94949B5EA8A86B78C1CA6337899161829EA547B5F3A51D",
     "maximum_successful_aggregations": 1,
     "successful_aggregations_at_declaration": 0,
     "economic_metric_reruns": 0,
-    "implementation_or_input_corrections": "unbounded only until one complete valid aggregation, with no change to roles, formulas, gates or verdicts"
+    "implementation_or_input_corrections": "unbounded only until one complete valid aggregation, with no change to roles, formulas, gates or verdicts",
+    "prevalid_correction": {
+      "path": "lab/research/frequency-lane-core-growth-quarantine-v1/evidence/FREQUENCY_LANE_CORE_GROWTH_QUARANTINE_PREVALID_CORRECTION_V1.json",
+      "classification": "EVENT_STATE_SEQUENCE_IS_A_SNAPSHOT_SEQUENCE_NOT_A_UNIQUE_EVENT_ROW_KEY"
+    }
   },
   "fixed_gates": {
     "integrity": [
@@ -144,6 +148,8 @@
   "boundary": {
     "pre_declaration_exploratory_mechanism_metrics_opened_and_disclosed": true,
     "fixed_aggregation_executed": false,
+    "failed_prevalid_invocations": 1,
+    "failed_prevalid_result_or_verdict_written": false,
     "result_written": false,
     "optimization_campaign_opened": false,
     "mql_or_settings_changes": 0,
@@ -151,5 +157,5 @@
     "broker_or_account_state_queried": false,
     "live_surface": "UNTOUCHED"
   },
-  "next": "commit_and_push_authority_declaration_and_frozen_analysis_then_run_exactly_one_fixed_source_free_aggregation"
+  "next": "commit_and_push_the_prevalid_semantic_correction_then_retry_the_same_fixed_source_free_aggregation"
 }

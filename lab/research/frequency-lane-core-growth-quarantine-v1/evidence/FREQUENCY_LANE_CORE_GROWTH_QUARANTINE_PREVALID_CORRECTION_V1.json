@@ -1,0 +1,56 @@
+{
+  "schema": "zeta-next-frequency-lane-core-growth-quarantine-prevalid-correction-v1",
+  "created_at_local": "2026-08-31",
+  "status": "PREVALID_EVENT_SEQUENCE_SEMANTIC_CORRECTION_FROZEN_BEFORE_RETRY",
+  "unit": "frequency-lane-core-growth-quarantine-125",
+  "parent_declaration_commit": "8be4211bfb6e16e6f42f3bb2faf347c1cccc965a",
+  "failed_invocation": {
+    "exit_code": 1,
+    "failure": "RuntimeError: duplicate state_sequence: 20240",
+    "stage": "control A/B event-ledger ingestion before daily quantum-boundary extraction, gate application, verdict or output write",
+    "result_file_written": false,
+    "successful_aggregation": false,
+    "economic_metric_rerun": false,
+    "tester_path": false
+  },
+  "diagnosis": {
+    "incorrect_assumption": "state_sequence uniquely identifies an event row",
+    "actual_semantics": "state_sequence identifies a persisted state snapshot; multiple distinct events may share one sequence",
+    "control": {
+      "event_rows": 6499,
+      "unique_state_sequences": 6444,
+      "additional_rows_sharing_a_sequence": 55,
+      "exact_duplicate_full_rows": 0,
+      "target_2026_03_12_size_day_rows": 1
+    },
+    "combined": {
+      "event_rows": 6663,
+      "unique_state_sequences": 6608,
+      "additional_rows_sharing_a_sequence": 55,
+      "exact_duplicate_full_rows": 0,
+      "target_2026_03_12_size_day_rows": 1
+    }
+  },
+  "correction": {
+    "before_script_bytes": 17739,
+    "before_script_sha256": "2FD68C2BF90D016538D3439FA4C593748CEEF21AD0CF56E3BDF351DDB8AD7595",
+    "after_script_bytes": 17909,
+    "after_script_sha256": "EF313D95D1ECFCC3BC94949B5EA8A86B78C1CA6337899161829EA547B5F3A51D",
+    "reader_rule": "Allow repeated state_sequence values, reject only an exact duplicate full event row, and sort deterministically by sequence/time/event/component/detail.",
+    "immutable_input_changes": 0,
+    "role_changes": 0,
+    "formula_changes": 0,
+    "gate_changes": 0,
+    "verdict_changes": 0
+  },
+  "boundary": {
+    "successful_aggregations": 0,
+    "result_files": 0,
+    "mql_or_settings_changes": 0,
+    "compile_or_tester_paths": 0,
+    "optimization_campaign_opened": false,
+    "broker_or_account_state_queried": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "next": "commit_and_push_this_implementation_correction_then_retry_the_same_fixed_aggregation"
+}

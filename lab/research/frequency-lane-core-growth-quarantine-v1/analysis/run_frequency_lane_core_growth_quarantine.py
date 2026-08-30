@@ -124,16 +124,24 @@ def read_csv_map(path: Path) -> dict[str, dict[str, str]]:
 
 def read_event_rows(paths: list[Path]) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
-    seen_sequences: set[str] = set()
+    seen_rows: set[tuple[tuple[str, str], ...]] = set()
     for path in paths:
         with path.open("r", encoding="utf-8-sig", newline="") as handle:
             for row in csv.DictReader(handle):
-                sequence = row["state_sequence"]
-                if sequence in seen_sequences:
-                    raise RuntimeError(f"duplicate state_sequence: {sequence}")
-                seen_sequences.add(sequence)
+                identity = tuple(sorted(row.items()))
+                if identity in seen_rows:
+                    raise RuntimeError(f"exact duplicate event row in {path}")
+                seen_rows.add(identity)
                 rows.append(row)
-    rows.sort(key=lambda row: int(row["state_sequence"]))
+    rows.sort(
+        key=lambda row: (
+            int(row["state_sequence"]),
+            row["server_time"],
+            row["event"],
+            row["component_id"],
+            row["detail"],
+        )
+    )
     return rows
 
 
