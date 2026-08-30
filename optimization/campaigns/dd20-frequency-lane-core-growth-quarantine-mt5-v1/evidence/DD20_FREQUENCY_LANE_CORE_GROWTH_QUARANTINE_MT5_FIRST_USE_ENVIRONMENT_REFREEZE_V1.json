@@ -1,0 +1,158 @@
+{
+  "schema": "zeta-dd20-frequency-lane-core-growth-quarantine-mt5-first-use-environment-refreeze-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "INVALID_FIRST_USE_ENVIRONMENT_SYNCHRONIZATION_NO_ECONOMIC_VERDICT_REFROZEN",
+  "campaign": {
+    "id": "dd20-frequency-lane-core-growth-quarantine-mt5-v1",
+    "implementation_commit": "0601bf47d509fbedd0e549f8f6e2e5757d4a50e2",
+    "release_id": "OPT-LIVE-V7-DD20FLCGQ1-20260831",
+    "portfolio_id": "ZT-OPT-LIVE-V7-DD20FLCGQ1-20260831",
+    "magic_range": "260831921..260831927",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "tester_only": true
+  },
+  "first_selection_attempt": {
+    "terminal_exit_code": 0,
+    "elapsed_seconds": 767.682,
+    "tester_stop": "NORMAL",
+    "report_model": "100% every tick based on real ticks",
+    "us30_ticks": 132257500,
+    "all_symbol_ticks": 520082264,
+    "environment_comparison_completed_after_economic_output_was_opened": true,
+    "valid_economic_path": false,
+    "economic_verdict": null,
+    "reason": "The dedicated Portable synchronized first-use history metadata during the attempt. All 18 Tester HCS files for US30, US100 and US500 across 2021 through 2026 changed between the pre-start and post-stop snapshots, so the attempt did not run wholly inside one pre-frozen governing environment.",
+    "classification": "ENVIRONMENT_CORRECTION_WITH_NO_ARBITRARY_RETRY_CAP",
+    "recent_confirmation_opened": false,
+    "source_configuration_or_contract_changed_after_observation": false
+  },
+  "broad_environment_snapshots": {
+    "scope": "Dedicated Optimization Portable history, tick and broker-symbol metadata selected for first-use drift diagnosis.",
+    "manifest_algorithm": "Sort slash-normalized runtime-relative paths; append path|bytes|SHA256 per file; join UTF-8 lines with LF; SHA-256 the joined payload.",
+    "pre_selection": {
+      "captured_utc": "2026-08-30T19:18:18.8737546Z",
+      "file_count": 349,
+      "total_bytes": 5467418386,
+      "manifest_sha256": "41465F3D130980A803F8C787E25EACE70A003485BA909B1CC547A412D75121A8"
+    },
+    "post_selection": {
+      "captured_utc": "2026-08-30T19:37:51.7160409Z",
+      "file_count": 349,
+      "total_bytes": 5468258829,
+      "manifest_sha256": "F0635E65BF57D289657A682D909BF48DC8904D05FFD4643DB14EEBE8A7852890"
+    },
+    "changed_file_count": 29,
+    "changed_groups": [
+      {
+        "group": "Tester/bases/FPMarketsSC-Live/history/{US30,US100,US500}/{2021..2026}.hcs",
+        "file_count": 18,
+        "bytes_changed": false,
+        "sha256_changed": true,
+        "governing": true
+      },
+      {
+        "group": "Bases/FPMarketsSC-Live/history/{US30,US100,US500}/2026.hcc",
+        "file_count": 3,
+        "bytes_changed": true,
+        "sha256_changed": true,
+        "governing": false
+      },
+      {
+        "group": "Bases/FPMarketsSC-Live/ticks/{US30,US100,US500}/202608.tkc",
+        "file_count": 3,
+        "bytes_changed": true,
+        "sha256_changed": true,
+        "governing": false
+      },
+      {
+        "group": "Bases/FPMarketsSC-Live/ticks/{US30,US100,US500}/ticks.dat",
+        "file_count": 3,
+        "bytes_changed": false,
+        "sha256_changed": true,
+        "governing": false
+      },
+      {
+        "group": "Bases/FPMarketsSC-Live/symbols/{selected-81957644.dat,symbols-81957644.dat}",
+        "file_count": 2,
+        "bytes_changed": false,
+        "sha256_changed": true,
+        "governing": false
+      }
+    ],
+    "selection_interval_tester_tkc_file_count": 138,
+    "selection_interval_tester_tkc_changed_file_count": 0,
+    "diagnostic_conclusion": "The causal tick bytes for every selection month remained exact, but the Tester HCS layer did not remain exact. The first attempt is therefore preserved as first-use synchronization evidence and cannot establish an economic result."
+  },
+  "refrozen_governing_environment": {
+    "captured_utc": "2026-08-30T19:39:27.1651750Z",
+    "scope": "Only the Tester data that governs the declared selection: US30, US100 and US500 HCS for 2021 through 2026 plus every Tester TKC month 202208 through 202605.",
+    "file_count": 156,
+    "total_bytes": 2041490188,
+    "manifest_sha256": "22847BD12290C8107EC468EBC761F09EF1D3178E8099CDC579E9D1F3AA3B2650",
+    "hcs": {
+      "file_count": 18,
+      "total_bytes": 48427993,
+      "manifest_sha256": "0C02B32C05127F11BBAA98E7D23D2C85A1CF944EB08D7BA0457E4DE627E575D6"
+    },
+    "tkc": {
+      "file_count": 138,
+      "total_bytes": 1993062195,
+      "manifest_sha256": "EA5C91423998B0BA69E45BE3C9CE49DD3FAB5D7BFD9831B307051B4A45CC3EAB"
+    },
+    "restart_acceptance_rule": "After the unchanged selection stops, recompute all 156 governing files with the same manifest algorithm. Any byte or hash mismatch invalidates that attempt before economic judgment and requires another environment refreeze."
+  },
+  "quarantined_non_authoritative_diagnostics": {
+    "purpose": "Complete disclosure of output seen before the environment mismatch was discovered. None of these values is a campaign result, a pass, a failure, a tuning input or authority to open recent confirmation.",
+    "core_close_count": 1428,
+    "candidate_and_paired_control_record_count": 12265,
+    "record_id_signal_result_direction_order_price_executable_volume_and_admission_mismatches": 0,
+    "h4_closes": 79,
+    "h4_actual_usd": 10.14,
+    "h4_stressed_usd": 8.8217,
+    "h4_faults": 0,
+    "observed_core_actual_usd": 5786.64,
+    "observed_core_stressed_usd": 5477.564,
+    "declared_control_core_actual_usd": 5786.63,
+    "declared_control_core_stressed_usd": 5477.524,
+    "observed_total_actual_usd": 5796.78,
+    "observed_total_stressed_usd": 5486.3857,
+    "observed_native_mt5_equity_drawdown_pct": 20.256887565152653,
+    "all_four_epoch_totals_positive": true,
+    "fault_count": 0,
+    "exact_core_economic_gate_judged": false,
+    "economic_verdict": null
+  },
+  "preserved_invalid_attempt": {
+    "path": "optimization/artifacts/raw/dd20-frequency-lane-core-growth-quarantine-mt5-v1/selection-invalid-first-use-environment-v1/",
+    "file_count": 20,
+    "total_bytes": 27489821,
+    "manifest_sha256": "A71205342820B2FF8E203B815D37CDA5E42CDE102BFC3956698089BEDF42A031",
+    "contents": "HTML report and images, TST cache, complete EA state/research output, terminal log, tester log and local-agent log.",
+    "moved_recoverably": true,
+    "deleted": false,
+    "active_report_output_cache_and_same_day_logs_cleared_for_restart": true
+  },
+  "unchanged_restart_contract": {
+    "source_file_count": 17,
+    "source_manifest_sha256": "AB5CB33E47A2D0D725481E09D41BDA483C455914EAEA116F196794B3E580651D",
+    "configuration_file_count": 3,
+    "configuration_manifest_sha256": "5CBADFE1AEC7D46BCAA696DE0EC04E7944D9A4CC0F19A009A573CE5ED36D8239",
+    "ex5_bytes": 242846,
+    "ex5_sha256": "DBE588A46A2034E2C85D0E8DB860D96556909B837B45A617B7144C42DA975815",
+    "selection_configuration": "optimization/runtime/dd20-frequency-lane-core-growth-quarantine-mt5-v1-portable/Config/dd20-flcgq-selection.ini",
+    "selection_path_count": 1,
+    "source_or_parameter_retune": false,
+    "recent_confirmation_remains_closed": true,
+    "next_action": "Commit and push this refreeze boundary, then run the exact unchanged selection once inside the refrozen governing environment."
+  },
+  "isolation": {
+    "v8_live_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v8_entries_disabled_pid": 30592,
+    "v8_modified": false,
+    "live_lab_or_other_optimization_source_runtime_state_or_log_modified": false,
+    "master_terminal_touched": false,
+    "broker_positions_orders_deals_or_account_queried": false,
+    "direct_live_authority": false,
+    "automatic_lab_handoff_or_live_promotion": false
+  }
+}
