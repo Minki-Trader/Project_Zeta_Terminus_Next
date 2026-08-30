@@ -9,7 +9,7 @@ This root owns continuous economic optimization of the exact active Live-Dev beh
 - Local frozen copy: `baseline/NEXT-E01-V7-RLO1-b32e7e176f2e/`
 - Source commit at derivation: `f4e1effb647d5ef81921eddc64fcd6bef2289f57`
 - Frozen manifest: `7A968666241AD90629F14ADF48E983AB04A4DD88053F1413EBB209FB51976698`
-- Status: exact 20-file baseline frozen; first 15-point risk-cap campaign completed with valid economics
+- Status: exact 20-file baseline frozen; the first 15-point risk-cap campaign's original files remain preserved, but its same-interval economic authority is quarantined by `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`
 
 The local baseline is never compiled or executed with Live identity. It is copied once so later campaign work no longer depends on a Live or Lab path.
 
@@ -23,7 +23,7 @@ The local baseline is never compiled or executed with Live identity. It is copie
 
 ## Operating rules
 
-Only one optimization judgment stream is active. A complete valid economic comparison may judge improvement; missing history, runtime/configuration failure, design defect or engineering defect is corrected and rerun without an arbitrary retry cap and without an economic verdict. The latest two completed months remain isolated from search by default.
+Only one optimization judgment stream is active. A complete valid economic comparison may judge improvement; missing history, runtime/configuration failure, design defect or engineering defect is corrected and rerun without an arbitrary retry cap and without an economic verdict. An HTML 100-percent-real-ticks label is insufficient when the detailed agent segment reports required-symbol absent/discarded ticks or generation fallback. The latest two completed months remain isolated from search by default.
 
 Optimization candidates are not Live EA edits and may be economically radical: a campaign may remove or replace strategies, reconstruct portfolio membership or coordination, and run destructive variants. Every such comparison retains an exact Live-derived control, owns separate source/identity/runtime/output, remains distinct from Lab research, and has no Live authority.
 
@@ -33,9 +33,13 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
-`campaigns/dd20-frequency-lane-core-growth-quarantine-mt5-v1/` is open declaration-only under the user's serial closed-family rehabilitation authority. It owns the one Unit 125 seed `EXACT_H4_CORE_GROWTH_QUARANTINED_RECOMBINATION`: retain the exact paired-month core and fixed US500 H4 lane, but keep H4 actual/stressed closes outside the core realized/stressed growth ledgers used by core sizing while real account equity, margin and safety remain shared. No source, runtime, compile or Tester path is open until the declaration reaches `origin/main`.
+No Optimization campaign is currently open. The immediate next serial campaign must restore clean binding authority for the fixed paired-month control/candidate before V8 can leave entries-disabled state. It must be newly declared, self-contained, immediately adjacent, fingerprint-identical and detailed-log clean; the fixed candidate's prior outcome-aware selection must be disclosed and cannot be called pristine or untouched out-of-sample.
 
-`campaigns/portfolio-risk-cap-envelope-v1/` is closed `NO_REPLACEMENT_RETAIN_PARENT_0.04_0.12`. Its 15 selection and 15 isolated-forward passes are preserved without rerun. The same result retained `0.04 / 0.18` as a non-dominated maximum-profit frontier point: selection actual/stressed net `$1,166.89 / $1,085.408`, MT5 equity drawdown `11.3757%`.
+Current authority notice: historical campaign summaries below preserve their original closed wording and numbers. For every 2022-08 through 2026-06 Selection named by `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`, that correction supersedes the historical validity label; the economics are descriptive only and cannot select, rank or promote a candidate.
+
+`campaigns/dd20-frequency-lane-core-growth-quarantine-mt5-v1/` remains closed, but its final authority is now the declaration-fixed `INVALID_QUARANTINED_RECOMBINATION_ENVIRONMENT_OR_ENGINEERING_NO_ECONOMIC_VERDICT`. Its signed result and all economics remain descriptive audit material; no recent path, candidate, Lab handoff or Live authority survives.
+
+`campaigns/portfolio-risk-cap-envelope-v1/` preserves all 15 selection and 15 isolated-forward passes without rewriting or rerun, but the result is now `QUARANTINED_SHARED_SELECTION_CORPUS_WITHOUT_COMPLETE_DETAILED_HISTORY_PROOF_NO_ECONOMIC_AUTHORITY`. Its prior parent/frontier numbers are descriptive only until independently requalified.
 
 `campaigns/dd20-profit-frontier-proxy-v1/` is closed `VALID_PROXY_COMPLETE_NO_MT5_SHORTLIST`. Near-uniform gross leverage almost doubled selection profit, but every frozen role amplified the isolated later loss and exceeded the proxy DD cap; none reached MT5.
 

@@ -4,11 +4,11 @@
 
 ## 거시 연구 배분
 
-Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 한 선언은 한 거시 질문에 필요한 관련 변형 2–3개를 한 번만 묶을 수 있고, 종료 뒤에는 전 프로그램을 다시 비교한다. 같은 주제의 인접 임계값·창·하위집단·심볼·이벤트·청산·사이징이나 보존 seed를 자동으로 이어서 열지 않는다.
+Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
 현재 active research family는 없다. Program 2 / meso Unit 123 `research/standard-options-expiration-week-state-engineering-correction-v1/`은 결과를 한 번도 열지 못했던 Unit 090의 영수증 직렬화 오류만 교정하고 공개 표준 옵션 만기 주간 계약을 그대로 경제적으로 완결했다. `1,051`일·`2,429` signals·`2,233` lifecycles의 무결성이 모두 통과했다. period-weekday centered 공급 차이는 일당 signal `+0.09756`, birth `+0.04607`, sub-three-signal day `-2.0369pp`; component-period centered 경제 차이는 `+0.01649R / -3.1719pp stops`였다. 그러나 US30 `+0.06216R/-7.5768pp`와 US100 `-0.01149R/-0.4733pp`가 합의하지 않고 RC4 절대 기여 `51.368%`가 `45%` cap을 넘었다. `AMBIGUOUS_STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_NO_CANDIDATE`로 닫았으며 expiration day·weekday·book·component·gamma·volume/OI 구제, seed·MT5·Optimization·Live 권한은 없다. 최신 marker는 `OPTIMIZATION_POST_STANDARD_EXPIRATION_WEEK_CORRECTION_NO_ACTIONABLE_FIELD_FIXED_CANDIDATE_RETAINED_GOAL_ACTIVE`다.
 
-현재 active engineering family는 없다. `engineering/paired-month-live-replacement-handoff-v1/`은 고정 `dd20-paired-month-stability-mt5-v1` 교체 후보를 별도 Lab identity·Magic·상태·이벤트·research 원장과 전용 비-Master Portable로 번역해 build 6140 `0 errors / 0 warnings`, selection `+$5,786.64 / +$5,477.564`, forward `+$32.75 / +$30.628`, entries-disabled create/recovery `0/0`·flat·zero-risk·zero-fault를 통과하고 닫혔다. 현재 Live RLO1 package·runtime·상태·로그는 변경하지 않았고, 별도 최종 사용자 승인 전에는 Live 승격이나 실진입 권한이 없다.
+현재 active engineering family는 없다. `engineering/paired-month-live-replacement-handoff-v1/`의 별도 Lab identity·Magic·상태·이벤트·research 원장, build 6140 `0 errors / 0 warnings`, source 번역과 entries-disabled create/recovery `0/0`·flat·zero-risk·zero-fault는 유효한 공학 증거로 동결돼 있다. 그러나 반복 Selection 상세 로그가 US100/US30/US500의 absent/discarded 실틱과 `every tick generation used`를 기록하므로 Selection 경제 재현과 Live 승격 준비 권한은 무효다. 원본 서명 결과는 감사 이력으로 보존하며, `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`이 최종 권한을 가진다.
 
 ## 앞으로의 단 하나의 기준
 

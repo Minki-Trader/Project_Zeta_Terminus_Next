@@ -1,0 +1,303 @@
+{
+  "schema": "zeta-optimization-real-tick-continuity-authority-correction-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "ACTIVE_FINAL_AUTHORITY_CORRECTION",
+  "classification": "REQUIRED_SYMBOL_DETAILED_TICK_GENERATION_FALLBACK_SUPERSEDES_SELECTION_ECONOMIC_AUTHORITY",
+  "purpose": "Preserve every original signed artifact unchanged while correcting the authority of selection results whose detailed MT5 agent logs contradict their HTML 100-percent-real-ticks label and complete-history claim.",
+  "policy_basis": {
+    "path": "docs/OPERATING_DIRECTION.md",
+    "binding_rule": "Binding evidence is continuous all-required-symbol FPMarkets Every tick based on real ticks at 100 percent real ticks; lower-quality or discontinuous history cannot pass or rescue a candidate.",
+    "precedent": "state/CURRENT_STATE-0001.md#STATE-0076",
+    "precedent_rule": "Detailed required-symbol generation-fallback telemetry supersedes an HTML 100-percent-real-ticks label. Original signed evidence remains immutable, prior economics become descriptive only, and no candidate authority survives from that path."
+  },
+  "discovery": {
+    "trigger_campaign": "dd20-frequency-lane-core-growth-quarantine-mt5-v1",
+    "trigger_result_path": "optimization/campaigns/dd20-frequency-lane-core-growth-quarantine-mt5-v1/evidence/DD20_FREQUENCY_LANE_CORE_GROWTH_QUARANTINE_MT5_RESULT_V1.json",
+    "trigger_result_bytes": 15195,
+    "trigger_result_sha256": "0FA028153BDC8F7033366048581963E6745515720B803A00A6F5A6F290D8101B",
+    "trigger_agent_log_path": "optimization/artifacts/raw/dd20-frequency-lane-core-growth-quarantine-mt5-v1/selection/logs/agent.log",
+    "trigger_agent_log_bytes": 4276340,
+    "trigger_agent_log_sha256": "E5A2C4E93007943B3BEF9416550E11C181C03DBCE7CCCD3CCDA4C947B5E39C2F",
+    "contradiction": "The report displayed 100 percent real ticks, but the preserved detailed agent log explicitly recorded absent and discarded real-tick minutes and every-tick generation fallback for every required symbol."
+  },
+  "shared_selection_fallback_profile": {
+    "interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "required_symbols": [
+      "US100",
+      "US30",
+      "US500"
+    ],
+    "per_symbol": {
+      "US100": {
+        "total_minute_bars": 1353027,
+        "real_ticks_absent_minutes": 1920,
+        "real_ticks_discarded_minutes": 484,
+        "fallback_text": "every tick generation used"
+      },
+      "US30": {
+        "total_minute_bars": 1352546,
+        "real_ticks_absent_minutes": 878,
+        "real_ticks_discarded_minutes": 462,
+        "fallback_text": "every tick generation used"
+      },
+      "US500": {
+        "total_minute_bars": 1352862,
+        "real_ticks_absent_minutes": 155,
+        "real_ticks_discarded_minutes": 441,
+        "fallback_text": "every tick generation used"
+      }
+    },
+    "interpretation": "These are required-symbol discontinuities, not an economic win or loss. They invalidate the binding economic verdict while leaving the preserved numbers available only as non-authoritative diagnostics."
+  },
+  "directly_affected_optimization_selection_results": [
+    {
+      "campaign": "dd20-capital-composition-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-capital-composition-mt5-v1/evidence/DD20_CAPITAL_COMPOSITION_MT5_RESULT_V1.json",
+      "result_bytes": 9247,
+      "result_sha256": "152817D52C2E84A422711CA94451D3E2C948626CC11B655D1FFEEAC70398269E",
+      "original_status": "VALID_MT5_COMPLETE_SELECTION_DD_EXCEEDS_20_PERCENT",
+      "agent_log_path": "optimization/artifacts/raw/dd20-capital-composition-mt5-v1/selection-valid-20260828T170848/logs/agent-3000-20260828.log",
+      "agent_log_bytes": 7219056,
+      "agent_log_sha256": "03F9506231726DCBCC433DF64B5B7A55735CB47D12EE9379487E085BEC495EB0",
+      "fallback_line_count_in_cumulative_log": 18,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-component-equity-state-native-margin-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-component-equity-state-native-margin-mt5-v1/evidence/DD20_COMPONENT_EQUITY_STATE_NATIVE_MARGIN_MT5_RESULT_V1.json",
+      "result_bytes": 19700,
+      "result_sha256": "4F10917D556372134CD467C2E4CA7319B88626816B98E42CBD892982220A43AF",
+      "original_status": "VALID_MT5_COMPLETE_ALL_ECONOMIC_GATES_PASS_COMPONENT_STATE_NARROW_PROFIT_UPLIFT",
+      "agent_log_path": "optimization/artifacts/raw/dd20-component-equity-state-native-margin-mt5-v1/selection/logs/agent-20260829.log",
+      "agent_log_bytes": 6820072,
+      "agent_log_sha256": "85DB2FD2925E7F14BCAA860079A7D427330EFFA3368628D58038C2CFB7DD3FA3",
+      "fallback_line_count_in_cumulative_log": 12,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-deferred-profit-accelerator-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-deferred-profit-accelerator-mt5-v1/evidence/DD20_DEFERRED_PROFIT_ACCELERATOR_MT5_RESULT_V1.json",
+      "result_bytes": 16597,
+      "result_sha256": "23A5F81310D1133C335479FD3A3B03111A0ABEFAE6F0AE156E5BD0DEC90A9873",
+      "original_status": "VALID_MT5_COMPLETE_SELECTION_DD20_FAIL_FORWARD_ALL_GATES_PASS",
+      "agent_log_path": "optimization/artifacts/raw/dd20-deferred-profit-accelerator-mt5-v1/selection/agent-logs/20260828.log",
+      "agent_log_bytes": 17749294,
+      "agent_log_sha256": "29F9BCC546A0B0A7522349DC83A5EB5A01814C9F51F4F21EADE4592983FF9105",
+      "fallback_line_count_in_cumulative_log": 36,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-exposure-margin-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-exposure-margin-mt5-v1/evidence/DD20_EXPOSURE_MARGIN_MT5_RESULT_V1.json",
+      "result_bytes": 12811,
+      "result_sha256": "E2548BE54646EC469705BB189B0B0F1C26763E3620E6B230BF3360731B46A4AB",
+      "original_status": "VALID_MT5_COMPLETE_SELECTION_DD_MISSES_CAP_AND_CONTINUOUS_JULY_NEGATIVE",
+      "agent_log_path": "optimization/artifacts/raw/dd20-exposure-margin-mt5-v1/selection/agent-logs/20260828.log",
+      "agent_log_bytes": 14412530,
+      "agent_log_sha256": "28768645140B04770693EC14FEE4811ECC16994239692D523CD3771AFFE6944C",
+      "fallback_line_count_in_cumulative_log": 30,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-frequency-lane-combined-portfolio-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-frequency-lane-combined-portfolio-mt5-v1/evidence/DD20_FREQUENCY_LANE_COMBINED_PORTFOLIO_MT5_RESULT_V1.json",
+      "result_bytes": 13144,
+      "result_sha256": "ECD977098A4B06E4C8252EF63DD0C169DB98C95CF538C8D3EA5E283499597D63",
+      "original_status": "VALID_MT5_COMPLETE_SELECTION_NONCONFIRMS_COMBINED_REPLACEMENT_FORWARD_NOT_OPENED",
+      "agent_log_path": "optimization/artifacts/raw/dd20-frequency-lane-combined-portfolio-mt5-v1/selection/final/agent-logs/20260829.log",
+      "agent_log_bytes": 4237718,
+      "agent_log_sha256": "A06577903D4D11EB8E7B4E5237881A927AEC5B807FBC4BA141AF90DA4DF5DB52",
+      "fallback_line_count_in_cumulative_log": 6,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-frequency-lane-core-growth-quarantine-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-frequency-lane-core-growth-quarantine-mt5-v1/evidence/DD20_FREQUENCY_LANE_CORE_GROWTH_QUARANTINE_MT5_RESULT_V1.json",
+      "result_bytes": 15195,
+      "result_sha256": "0FA028153BDC8F7033366048581963E6745515720B803A00A6F5A6F290D8101B",
+      "original_status": "VALID_QUARANTINE_SELECTION_NONCONFIRMATION_CLOSE_WITHOUT_RECENT_PATH",
+      "agent_log_path": "optimization/artifacts/raw/dd20-frequency-lane-core-growth-quarantine-mt5-v1/selection/logs/agent.log",
+      "agent_log_bytes": 4276340,
+      "agent_log_sha256": "E5A2C4E93007943B3BEF9416550E11C181C03DBCE7CCCD3CCDA4C947B5E39C2F",
+      "fallback_line_count_in_cumulative_log": 6,
+      "final_selection_segment_matches_shared_profile": true,
+      "declaration_fixed_invalid_verdict": "INVALID_QUARANTINED_RECOMBINATION_ENVIRONMENT_OR_ENGINEERING_NO_ECONOMIC_VERDICT"
+    },
+    {
+      "campaign": "dd20-gain-overlay-base-quantum-reservation-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-gain-overlay-base-quantum-reservation-mt5-v1/evidence/DD20_GAIN_OVERLAY_BASE_QUANTUM_RESERVATION_MT5_RESULT_V1.json",
+      "result_bytes": 12727,
+      "result_sha256": "BFD4D953A47FB85B3B22C12AD105116A68FB43A26921BA2D3B9CC8C600DFC785",
+      "original_status": "VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_NO_FORWARD_RETAIN_CURRENT_ANCHOR",
+      "agent_log_path": "optimization/artifacts/raw/dd20-gain-overlay-base-quantum-reservation-mt5-v1/selection/logs/agent-20260829.log",
+      "agent_log_bytes": 3609862,
+      "agent_log_sha256": "DF00364AB3454E9F77172551DA5FD8B34F5BBCD2EB008F71AB35657F7AD80818",
+      "fallback_line_count_in_cumulative_log": 6,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-legacy-us500-h4-staged-overlay-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-legacy-us500-h4-staged-overlay-mt5-v1/evidence/DD20_LEGACY_US500_H4_STAGED_OVERLAY_MT5_RESULT_V1.json",
+      "result_bytes": 19589,
+      "result_sha256": "EE34D231896BA7CD3F1041FEA03A54CDD9C69E9CDE12095946930B113A479BB1",
+      "original_status": "VALID_MT5_COMPLETE_USER_TOLERANCE_ACCEPTED_SELECTION_AND_FORWARD_PASS_PROFIT_UPLIFT",
+      "agent_log_path": "optimization/artifacts/raw/dd20-legacy-us500-h4-staged-overlay-mt5-v1/selection/logs/agent-3000-20260829.log",
+      "agent_log_bytes": 3721932,
+      "agent_log_sha256": "EED1DC67AAA4473B72B1FACD4374EB87F398F1783A1549A774C49FC2A880E9F0",
+      "fallback_line_count_in_cumulative_log": 6,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-market-state-router-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-market-state-router-mt5-v1/evidence/DD20_MARKET_STATE_ROUTER_MT5_RESULT_V1.json",
+      "result_bytes": 11451,
+      "result_sha256": "CE7D23E4973B901D5A497906096D7CCB0038FD5E1500BC67B374DB005C9CBB4C",
+      "original_status": "VALID_MT5_COMPLETE_SELECTION_PROFIT_GATES_FAIL_FORWARD_NOT_OPENED",
+      "agent_log_path": "optimization/artifacts/raw/dd20-market-state-router-mt5-v1/selection/agent-logs/20260829.log",
+      "agent_log_bytes": 3431428,
+      "agent_log_sha256": "E37AFDFA4B2C15AD41A8A0BE97368419CD4A32C720EFF2C014A797A40A291D20",
+      "fallback_line_count_in_cumulative_log": 6,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-native-gap-july-robustness-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-native-gap-july-robustness-mt5-v1/evidence/DD20_NATIVE_GAP_JULY_ROBUSTNESS_MT5_RESULT_V1.json",
+      "result_bytes": 16235,
+      "result_sha256": "80775495EBF3E0C6C3770322135ED410B91985CB6592B32875292AF7FECC51EA",
+      "original_status": "VALID_MT5_COMPLETE_ALL_ECONOMIC_GATES_PASS",
+      "agent_log_path": "optimization/artifacts/raw/dd20-native-gap-july-robustness-mt5-v1/selection/agent-logs/20260828.log",
+      "agent_log_bytes": 13905652,
+      "agent_log_sha256": "15F191E97E4BDEAE3700FEC2AD9C53309F15524961BDF477E357587409B58671",
+      "fallback_line_count_in_cumulative_log": 30,
+      "final_selection_segment_matches_shared_profile": true
+    },
+    {
+      "campaign": "dd20-paired-month-stability-mt5-v1",
+      "result_path": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/evidence/DD20_PAIRED_MONTH_STABILITY_MT5_RESULT_V1.json",
+      "result_bytes": 9880,
+      "result_sha256": "AD35D41CD6010AEA8901B34BFAEBCAA08DB67A883886E73E8DE14D9D62EF66C2",
+      "original_status": "VALID_MT5_COMPLETE_SELECTION_DD_MISSES_CAP_BY_0_2569_PERCENTAGE_POINTS",
+      "agent_log_path": "optimization/artifacts/raw/dd20-paired-month-stability-mt5-v1/selection/agent-logs/20260828.log",
+      "agent_log_bytes": 13771188,
+      "agent_log_sha256": "7ECBB943F24FA54D067DE661CD8A4318355A674D7D76A19482A9CFEC75A3BB7F",
+      "fallback_line_count_in_cumulative_log": 30,
+      "final_selection_segment_matches_shared_profile": true
+    }
+  ],
+  "direct_optimization_final_authority": {
+    "classification": "INVALID_REQUIRED_SYMBOL_REAL_TICK_CONTINUITY_NO_ECONOMIC_VERDICT",
+    "applies_to": "The 2022-08-01 through 2026-06-01 binding selection stage of every directly affected campaign.",
+    "economic_numbers": "PRESERVED_DESCRIPTIVE_ONLY",
+    "selection_gate_authority": false,
+    "candidate_authority": false,
+    "promotion_authority": false,
+    "rerun_implication": "This is an environment-data correction state with no arbitrary retry cap, not an economic failure of any strategy or mechanism."
+  },
+  "shared_corpus_quarantine": {
+    "campaign": "portfolio-risk-cap-envelope-v1",
+    "result_path": "optimization/campaigns/portfolio-risk-cap-envelope-v1/evidence/PORTFOLIO_RISK_CAP_ENVELOPE_RESULT_V1.json",
+    "result_bytes": 14873,
+    "result_sha256": "09220EBDFE1D6A71615DFC1F401DD071F881AD2F98E5218A43BD4B3724102314",
+    "completion_boundary_path": "optimization/campaigns/portfolio-risk-cap-envelope-v1/evidence/PORTFOLIO_RISK_CAP_ENVELOPE_COMPLETION_BOUNDARY_V1.json",
+    "completion_boundary_bytes": 5973,
+    "completion_boundary_sha256": "4FE5DBEEE19B2FE556DDC79F4A5376CC5C8EC175AA672D9C052B8E8EA6CD35EB",
+    "selection_interval": "2022-08-01T00:00:00/2026-06-01T00:00:00",
+    "preserved_base_tick_manifest_sha256": "F1754A94464B0BB96759B587724CABE66D100F2E3AA8399361788F3D76AFE86F",
+    "preserved_tester_tick_manifest_sha256": "34DE3740F205A205FF528067D5BD505CE47ACB1C62DD3EFE0AA56B84DF575822",
+    "direct_detailed_fallback_line_preserved": false,
+    "reason": "This original root matrix used the same affected interval and local required-symbol corpus but its cached optimization-agent evidence does not independently prove a zero-fallback detailed path. File presence, stable hashes and an optimization report are not proof of continuous real ticks.",
+    "final_authority": "QUARANTINED_SHARED_SELECTION_CORPUS_WITHOUT_COMPLETE_DETAILED_HISTORY_PROOF_NO_ECONOMIC_AUTHORITY",
+    "economic_numbers": "PRESERVED_DESCRIPTIVE_ONLY",
+    "parent_or_frontier_authority": false
+  },
+  "local_data_availability_audit": {
+    "scope": "All locally discoverable required-symbol TKC files covering the affected 2022H2-2023 months in this workspace.",
+    "tester_layer_finding": "For each affected symbol-month, every local Tester-layer copy had one identical whole-file hash.",
+    "base_layer_finding": "Whole-file variants of equal length differed only in the 16100-byte container/header prefix; after that prefix, every local Base-layer variant for each affected symbol-month had the same payload hash.",
+    "conclusion": "No independent complete alternative tick payload was found locally. Do not swap headers, fabricate ticks or silently change the declared period.",
+    "limit": "This is a workspace-local availability finding, not a claim that no complete history exists at the broker or elsewhere."
+  },
+  "lab_handoff_correction": {
+    "result_path": "lab/engineering/paired-month-live-replacement-handoff-v1/evidence/PAIRED_MONTH_LIVE_REPLACEMENT_RESULT_V1.json",
+    "result_bytes": 16222,
+    "result_sha256": "454EEF79F58ABB5660FF489122CF66A3454EF1A017FA9304D0E37D36DCB6F190",
+    "selection_agent_log_path": "lab/artifacts/raw/paired-month-live-replacement-handoff-v1/selection/agent-logs/20260829.log",
+    "selection_agent_log_bytes": 8475588,
+    "selection_agent_log_sha256": "FB6A0453D6082E072C1E5E9A8ABC3E6A4262310F07BDBB31E6CCDA82C6621D63",
+    "fallback_line_count_in_cumulative_log": 12,
+    "final_selection_segment_matches_shared_profile": true,
+    "preserved_authority": [
+      "self-contained source translation",
+      "frozen execution identity and namespaces",
+      "build 6140 compile at zero errors and zero warnings",
+      "entries-disabled create and recovery mechanics",
+      "flat zero-risk and zero-fault operating evidence"
+    ],
+    "withdrawn_authority": [
+      "binding selection economic reproduction",
+      "candidate economic requalification",
+      "Lab-to-Live promotion readiness"
+    ],
+    "final_classification": "ENGINEERING_TRANSLATION_VALID_SELECTION_ECONOMIC_AUTHORITY_INVALID_REQUIRED_SYMBOL_REAL_TICK_CONTINUITY"
+  },
+  "live_v8_correction": {
+    "translation_evidence_path": "live-dev/evidence/PAIRED_MONTH_LIVE_TRANSLATION_V1.json",
+    "translation_evidence_bytes": 8449,
+    "translation_evidence_sha256": "F5C802BEA5AA814DE5B61B17CE783DFA61D8F3F882F776433EAA02344117D7D9",
+    "release_id": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "portfolio_id": "ZT-PORT-NEXT-V8-PMLR1-20260831",
+    "magic": "260831901..260831906",
+    "preserved_authority": "Exact identity translation, frozen package bytes, compile, entries-disabled create/recovery and safe 0/0 ownership remain valid.",
+    "withdrawn_authority": "The prior conditional final 0/0-to-1/1 entry activation authority is suspended because the economic parent and Lab reproduction lack valid binding selection history.",
+    "required_operating_state": "ENTRIES_DISABLED_0_OF_0",
+    "rlo1_status": "RETIRED_READ_ONLY_DO_NOT_RESTART",
+    "mandatory_replacement_intent": "PRESERVED_BUT_NOT_EXECUTABLE_UNTIL_VALID_ECONOMIC_REQUALIFICATION",
+    "new_entry_authority": false
+  },
+  "surviving_recent_support": {
+    "campaign": "dd20-paired-anchor-august-2026-mt5-v1",
+    "result_path": "optimization/campaigns/dd20-paired-anchor-august-2026-mt5-v1/evidence/DD20_PAIRED_ANCHOR_AUGUST_2026_MT5_RESULT_V1.json",
+    "result_bytes": 19334,
+    "result_sha256": "AEB86F104206005788D724BC5C6BDFA227DB47BAA3B31A80C6F30F2D7D9B0799",
+    "valid_agent_log_path": "optimization/artifacts/raw/dd20-paired-anchor-august-2026-mt5-v1/valid/logs/agent.log",
+    "valid_agent_log_bytes": 105846,
+    "valid_agent_log_sha256": "6124EB02F69E50B851E5C5C8D9D9A90159795CCB3567C36EFB800CED10B084EB",
+    "detailed_generation_fallback_lines": 0,
+    "actual_net_usd": 29.62,
+    "doubled_cost_stressed_net_usd": 28.586,
+    "maximum_relative_equity_drawdown_percent": 13.44,
+    "closed_lifecycles": 29,
+    "authority": "BOUNDED_RECENT_DESCRIPTIVE_SUPPORT_ONLY",
+    "candidate_or_live_promotion_authority": false
+  },
+  "transitive_authority_rule": {
+    "selection_derived_downstream_records": "Any proxy, audit, seed, candidate ranking or promotion statement that depends on an affected 2022-08 through 2026-06 selection result inherits no binding economic or promotion authority unless it has independent valid economic evidence.",
+    "independent_engineering_or_structural_facts": "Remain valid within their own proven scope.",
+    "independent_clean_recent_paths": "Remain valid only within their declared intervals and cannot rescue the invalid long binding selection."
+  },
+  "requalification_gate": {
+    "required_before_v8_entry_activation": [
+      "a newly declared self-contained non-Master campaign",
+      "an immediately adjacent exact control and fixed candidate under the same source, SET, build, history and symbol-spec fingerprints",
+      "a complete continuous required-symbol interval",
+      "100 percent Every tick based on real ticks in the report",
+      "zero required-symbol absent, discarded, price-mismatch, volume-mismatch or every-tick-generation-fallback telemetry in the detailed path segment",
+      "complete valid economic numbers and the declared profit/drawdown/fault gates",
+      "a separate Lab economic handoff correction before any final Live entry activation"
+    ],
+    "outcome_selection_disclosure": "The fixed V8 candidate was selected before this correction. Any replacement validation must disclose that fact and cannot be called pristine or untouched out-of-sample.",
+    "automatic_promotion": false
+  },
+  "immutability_and_actions": {
+    "original_signed_results_rewritten": false,
+    "source_changed": false,
+    "set_changed": false,
+    "ex5_changed": false,
+    "runtime_history_changed": false,
+    "tester_run_started": false,
+    "live_entry_setting_changed": false,
+    "broker_positions_orders_deals_queried": false,
+    "external_data_used": false
+  },
+  "final_verdict": "SELECTION_ECONOMIC_AUTHORITY_WITHDRAWN_V8_ENTRIES_DISABLED_CLEAN_REQUALIFICATION_REQUIRED"
+}
