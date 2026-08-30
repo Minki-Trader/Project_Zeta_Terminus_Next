@@ -1,0 +1,177 @@
+{
+  "schema": "zeta-next-optimization-roro-source-causality-readiness-audit-v1",
+  "created_at_local": "2026-08-30",
+  "status": "RORO_HISTORICAL_CAUSALITY_NOT_RECONSTRUCTIBLE_NO_UNIT_FIXED_CANDIDATE_RETAINED",
+  "boundary_type": "outcome_free_source_readiness_audit_not_an_optimization_campaign_or_research_unit",
+  "parent_main_commit": "8d980e5b6b2f969ae6c60777a9d13d980acf9b9f",
+  "fixed_development_candidate": {
+    "campaign": "optimization/campaigns/dd20-paired-month-stability-mt5-v1/",
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "selection_actual_stressed_net_usd": [5786.63, 5477.524],
+    "selection_native_relative_equity_dd_pct": 20.256887565,
+    "june_july_actual_stressed_net_usd": [32.74, 30.626],
+    "june_july_native_relative_equity_dd_pct": 18.67530213,
+    "august_candidate_control_actual_stressed_usd": [29.62, 28.586, 13.05, 12.455],
+    "designation": "sole_fixed_replacement_development_candidate",
+    "changed_by_this_audit": false,
+    "live_authority": false
+  },
+  "hypothesis_screened": {
+    "name": "Kansas City Fed Risk-On Risk-Off headline index as a prior global-risk state",
+    "primary_program_if_ready": 2,
+    "proposed_natural_contrast": "latest causally published headline z_roro above zero versus at or below zero",
+    "intended_role": "separate fixed-candidate lifecycle value under global risk-off versus risk-on conditions without changing weights, risk, exits or admission",
+    "target_outcome_or_portfolio_economics_opened": false,
+    "research_unit_opened": false,
+    "optimization_campaign_opened": false
+  },
+  "primary_sources": {
+    "product_page": "https://www.kansascityfed.org/data-and-trends/risk-on-risk-off-index/",
+    "official_daily_file": "https://kcresearch-share.kansascityfed.org/kc-roro/roro_daily.csv",
+    "official_readme": "https://www.kansascityfed.org/documents/10930/RORO_Index_README.pdf",
+    "official_working_paper": "https://www.kansascityfed.org/documents/10594/rwp24-12charistedmanlundblad.pdf",
+    "doi": "https://doi.org/10.18651/RWP2024-12",
+    "author_retired_daily_carrier": "https://www.dropbox.com/scl/fi/5815ngqk28eafklfgp9ol/roro_daily.xlsx?rlkey=x791ljg9fo7cxqh2yivmrum8o&dl=1",
+    "documented_construction": "z-score of the first principal component of daily changes in standardized US and euro-area credit, equity/volatility, funding-liquidity and currency/gold variables; positive changes are normalized as risk-off",
+    "documented_application_scope": "international portfolio reallocation and emerging-market aggregate equity returns",
+    "same_day_endogeneity": "The headline input set includes the additive inverse of the same-day S&P 500 total return. Same-day use for US equity-index trading would therefore be endogenous; a strictly prior publication would be mandatory even if vintages were complete."
+  },
+  "preserved_raw_snapshots": [
+    {
+      "path": "optimization/artifacts/raw/roro-source-causality-audit-v1/roro_daily_author_snapshot_2025-04-08.xlsx",
+      "bytes": 490974,
+      "sha256": "7984C211D95F308B033D2ABA4522E731757EAA6EBDBA9D96F781E4E226A5D7D9",
+      "rows": 5668,
+      "first_last_observation": ["2003-05-09", "2025-03-12"],
+      "http_etag": "1744150441701422d",
+      "etag_time_inference_utc": "2025-04-08T22:14:02Z",
+      "time_inference_authority": "diagnostic_only"
+    },
+    {
+      "path": "optimization/artifacts/raw/roro-source-causality-audit-v1/roro_daily_official_wayback_2026-02-04.csv",
+      "bytes": 372349,
+      "sha256": "0070B6D470CEA7F09983663B6266AEA2DD1B19AB905BA4C2B4574A426642C7BA",
+      "rows": 5899,
+      "first_last_observation": ["2003-05-09", "2026-02-02"],
+      "capture_utc": "2026-02-04T01:47:43Z",
+      "source_role": "immutable replay of the official first-party URL used only to diagnose historical revision, never as a trading input"
+    },
+    {
+      "path": "optimization/artifacts/raw/roro-source-causality-audit-v1/roro_daily_official_current_2026-08-28.csv",
+      "bytes": 381616,
+      "sha256": "D8CCB12D9B4678A7EA1FFF5BAF44990753E90D619BB22B2FF97AA10817A63920",
+      "rows": 6047,
+      "first_last_observation": ["2003-05-09", "2026-08-27"],
+      "http_last_modified_utc": "2026-08-28T13:07:23Z",
+      "http_etag": "0febc908a666b81d050020d73f26ee19"
+    }
+  ],
+  "revision_diagnosis": {
+    "author_snapshot_vs_2026_02_official_snapshot": {
+      "overlap": 5668,
+      "first_last": ["2003-05-09", "2025-03-12"],
+      "headline": {
+        "changed_gt_1e_12": 5668,
+        "sign_flips": 39,
+        "mean_abs_diff_sigma": 0.010192106262483614,
+        "max_abs_diff_sigma": 1.18526186091156
+      }
+    },
+    "official_2026_02_snapshot_vs_official_current": {
+      "overlap": 5899,
+      "first_last": ["2003-05-09", "2026-02-02"],
+      "headline": {
+        "changed_gt_1e_12": 5899,
+        "sign_flips": 5,
+        "mean_abs_diff_sigma": 0.0053971813560677985,
+        "max_abs_diff_sigma": 1.01572871
+      },
+      "component_sign_flips": {
+        "z_spreads": 6,
+        "z_equities": 3,
+        "z_liquidity": 16,
+        "z_goldcurrency": 17
+      }
+    },
+    "author_snapshot_vs_official_current": {
+      "overlap": 5668,
+      "first_last": ["2003-05-09", "2025-03-12"],
+      "headline": {
+        "changed_gt_1e_12": 5668,
+        "sign_flips": 42,
+        "mean_abs_diff_sigma": 0.012477616279424735,
+        "max_abs_diff_sigma": 1.1964243609115601
+      },
+      "component_sign_flips": {
+        "z_spreads": 7,
+        "z_equities": 14,
+        "z_liquidity": 234,
+        "z_goldcurrency": 30
+      }
+    },
+    "interpretation": "Historical headline and component values are rewritten materially across public files. The current full-history file cannot be mapped backward to historical lifecycle dates without hindsight. This is not rounding noise because every overlap changes, headline signs flip and revisions exceed one standard deviation on some days."
+  },
+  "causal_vintage_coverage": {
+    "official_product_supplies_all_vintages": false,
+    "official_product_supplies_one_current_full_history_file": true,
+    "distinct_official_url_wayback_digest_captures_found": 1,
+    "additional_retired_author_snapshot_found": 1,
+    "enough_to_reconstruct_every_historical_publication": false,
+    "fresh_post_capture_days_with_unambiguous_public_state": "too few for the four-period, two-book and component breadth contract",
+    "strict_prior_day_rule_solves_full_history_revision": false,
+    "why": "A lag prevents same-day endogeneity but cannot recover which revised headline value was actually public on each earlier date."
+  },
+  "readiness_verdict": {
+    "classification": "PRE_UNIT_SOURCE_CAUSALITY_NOT_READY",
+    "optimization_failure": false,
+    "research_hypothesis_failure": false,
+    "engineering_or_environment_failure": false,
+    "target_economics_opened": false,
+    "candidate_changed": false,
+    "candidate_rejected": false,
+    "retained_trading_seed": false,
+    "mt5_shortlist_or_tester": false,
+    "meaning": "RORO remains economically interesting, but the available public files cannot reproduce the state known at each historical decision and the paper does not fix a US30/US100/US500 action. Opening outcomes would confound revision hindsight with economic value."
+  },
+  "program_recomparison": {
+    "program_1_entry_signal_market_structure": "The source does not define a new US-index entry signal, and the headline embeds same-day S&P 500 return.",
+    "program_2_external_market_event": "The global-risk role is distinct in concept but fails historical causal-state reconstruction before outcomes. No RORO threshold, component, lag or current-history backfill opens.",
+    "program_3_order_time_session": "No executable publication clock or order/session contrast survives the missing vintage history.",
+    "program_4_position_management_exit": "No active-position checkpoint or exit action is defined by a source that is not yet causally reconstructible.",
+    "program_5_portfolio_capital_risk": "No weight, cap, risk, ladder, allocation or symbol-lane action can be inferred without a valid state treatment.",
+    "program_7_diagnostic_causal_meta": "The multi-vintage comparison is sufficient to reject hindsight backfilling but does not warrant a research unit or another estimator."
+  },
+  "future_reconsideration_only_if": [
+    "the Kansas City Fed or authors publish an exact all-vintages archive with dated release states",
+    "a prospectively archived publication stream accumulates enough complete post-publication lifecycle support without polling or synthesizing Live evidence",
+    "an independent primary source fixes a US-equity action and horizon rather than only emerging-market applications"
+  ],
+  "forbidden_automatic_successors": [
+    "current-history RORO backfill, revised sign, magnitude, tail, change, persistence, transition, rolling PCA, subindex or alternate lag",
+    "VIX, financial-stress, credit-spread, gold, currency, liquidity or options substitution as a RORO rescue",
+    "weight, risk, ladder, cap, occupancy, admission, stop, exit, cooldown or symbol-partition reinterpretation",
+    "Live restart, Live ledger polling, synthetic natural rows, broker/account query or Master terminal use"
+  ],
+  "environment": {
+    "system_drive_free_gib_before_raw_preservation": 143.819,
+    "preserved_raw_bytes": 1244939,
+    "mandatory_storage_sweep_threshold_gib": 30,
+    "storage_sweep_required": false,
+    "reproducible_temporary_artifacts_remaining": false,
+    "terminal64_or_metaeditor64_processes": 0,
+    "mql_set_compile_tester_or_mt5": false,
+    "broker_account_position_order_or_deal_query": false,
+    "master_live_lab_or_optimization_runtime_touched": false,
+    "live_surface": "UNTOUCHED"
+  },
+  "next_readiness_conditions": [
+    "materially new naturally written complete RLO1 lifecycle evidence beyond the consumed snapshot",
+    "naturally denser pending-reservation or ladder-crossing observations sufficient for their already-frozen identification problem",
+    "one unconsumed continuity- or lineage-pinned economic mechanism with a distinct causal role and complete terminal decisions",
+    "one independent source with exact causal timing, fixed actionable contrast, sufficient sample support and project-ready economic inputs"
+  ],
+  "goal_status": "ACTIVE_NOT_COMPLETE",
+  "marker": "OPTIMIZATION_RORO_SOURCE_CAUSALITY_NOT_READY_NO_UNIT_FIXED_CANDIDATE_RETAINED_GOAL_ACTIVE"
+}
