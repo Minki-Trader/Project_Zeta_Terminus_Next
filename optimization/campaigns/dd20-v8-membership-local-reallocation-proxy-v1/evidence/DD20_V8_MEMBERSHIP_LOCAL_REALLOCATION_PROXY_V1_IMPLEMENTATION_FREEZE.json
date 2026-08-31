@@ -1,0 +1,79 @@
+{
+  "schema": "zeta-next-dd20-v8-membership-local-reallocation-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PREOUTCOME",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "B_WITHIN_MEMBERSHIP_EXECUTABLE_REALLOCATION",
+  "authority": {
+    "declaration_commit_on_origin_main": "404f7d2b06a341b832cbdc9354e34a295b720449",
+    "declaration_bytes": 6129,
+    "declaration_sha256": "02CFBB74695156152FBA30283592AEB630E5C7964F92FBD3196C86549092734E"
+  },
+  "frozen_inputs": [
+    {"role": "lifecycle", "bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"},
+    {"role": "candidate", "bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"},
+    {"role": "stage_a_raw", "bytes": 28410, "sha256": "09FADF11AB51BF46EED82342DE1D57BBFD6CEFD1CD691E40C9C8AEECA4120DB8"},
+    {"role": "stage_a_durable", "bytes": 8476, "sha256": "1AD8E9F96DDC11BD5D6A6349E19D37705EA02BA8A0C586A8928D084C80038C7C"}
+  ],
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-membership-local-reallocation-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 5206,
+    "config_sha256": "58E774B603636DD23DF34F7B132EA7AF1D7443F355E78E602A6DDC6FCE696DAC",
+    "script_path": "optimization/campaigns/dd20-v8-membership-local-reallocation-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 48766,
+    "script_lines": 1109,
+    "script_sha256": "5BA9EEDF6CE7F191608B28CAA9787396504EEA05374FE93FB9B4984D03FB31EE",
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "syntax_compile": "PASS"
+  },
+  "abort_before_write_gates": [
+    "Stage-B declaration byte count/hash and commit authority match.",
+    "All four inputs match their frozen byte counts and hashes.",
+    "Stage-A raw/durable schemas, statuses, ranks, masks, weights and cap 0.12 agree with the three config centers.",
+    "Lifecycle/candidate join remains exact at 965 births and POSITION_OPEN contexts with frozen component counts.",
+    "Center-local grids reproduce exactly 18 / 18 / 162 unique vectors and union 198 with zero duplicates.",
+    "Inactive weights remain zero and every active weight stays within 0.50 through its exact-V8 ceiling.",
+    "The three frozen center vectors are present at exact lattice indices 10 / 31 / 130.",
+    "Exact V8 and all three Stage-A center development controls reproduce before any candidate output."
+  ],
+  "structural_and_frozen_control_precheck": {
+    "status": "PASS",
+    "matched_lifecycles": 965,
+    "center_local_unique_counts": [18, 18, 162],
+    "union_parameterizations": 198,
+    "duplicates_removed": 0,
+    "fine_neighbor_edges": 579,
+    "frozen_center_lattice_indices": [10, 31, 130],
+    "exact_v8_whole_actual_net_usd": 409.81,
+    "exact_v8_whole_stressed_net_usd": 367.818,
+    "exact_v8_whole_actual_closed_balance_drawdown_pct": 35.46,
+    "center_development_actual_net_usd": [174.08, 143.13, 150.105],
+    "center_development_stressed_net_usd": [159.232, 129.229, 133.103],
+    "center_development_actual_closed_balance_drawdown_pct": [17.644678268, 18.816875023, 24.099813585],
+    "candidate_reallocation_map_economics_executed": false
+  },
+  "selection_implementation": {
+    "development_only": true,
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "primary_and_fallback_gates_match_stage_a": true,
+    "fine_step": 0.25,
+    "minimum_eligible_neighbors": 4,
+    "minimum_active_axes": 3,
+    "maximum_stage_c_seeds": 3,
+    "membership_hamming_separation_then_rank_fill": 2,
+    "declared_near_miss_fallback": true,
+    "freed_capacity_profit_credit_usd": 0.0
+  },
+  "execution_boundary": {
+    "raw_result_exists": false,
+    "candidate_reallocation_map_executed": false,
+    "mt5_runs": 0,
+    "lab_opened": false,
+    "new_entry_strategy": false,
+    "live_changed": false,
+    "required_next_action": "Commit and push this freeze, verify origin/main parity, then execute Stage B once."
+  },
+  "marker": "V8_OPT_U002_STAGE_B_IMPLEMENTATION_FROZEN_198_REALLOCATIONS_PREOUTCOME_NO_VALIDATION_NO_MT5"
+}

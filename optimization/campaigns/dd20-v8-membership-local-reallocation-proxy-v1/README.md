@@ -17,3 +17,9 @@ The accepted-source proxy gives zero profit credit to the `143` source-blocked e
 ## Current boundary
 
 The declaration is pre-input, pre-implementation and pre-outcome. Staging begins only after the declaration reaches `origin/main`.
+
+## Frozen implementation
+
+Declaration commit `404f7d2` reached `origin/main` before staging and implementation. All four inputs are byte-equal. The self-contained lattice reproduces center-local counts `18 / 18 / 162`, union `198`, zero duplicates and `579` fine-neighbor edges. Frozen centers occur at indices `10 / 31 / 130` and exactly reproduce Stage-A development actual/stressed/DD.
+
+Config is `5,206` bytes / `58E774B6...696DAC`; source is `48,766` bytes, `1,109` lines / `5BA9EEDF...B31EE` and passes Python `3.13.9` syntax with NumPy `2.3.4`. Candidate reallocation economics were not executed and no output exists. The map may run once only after the implementation freeze reaches `origin/main`.
