@@ -1,0 +1,147 @@
+{
+  "schema": "zeta-next-independent-cross-index-m15-online-expert-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-08-31T12:02:14.8816518Z",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/",
+  "declaration_boundary": {
+    "commit": "d24fa59d18ba453edbf8a72884f446051b3d6fdb",
+    "commit_equal_origin_main_before_input_copy_and_implementation": true
+  },
+  "frozen_files": {
+    "readme": {
+      "path": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/README.md",
+      "bytes": 1177,
+      "sha256": "24863A8B713014B58DB463A3C6314C2DD7D651C6FF3D83509B03D6CE56EA163E",
+      "lines": 11
+    },
+    "contract": {
+      "path": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 11776,
+      "sha256": "3132FF3FCD57C6859AA33F9A9F49296D71B559D4494B6D235F98AF2E09F19989",
+      "lines": 250
+    },
+    "declaration": {
+      "path": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_M15_ONLINE_EXPERT_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 6281,
+      "sha256": "CC3FEFB41C24BEFE7C348F4DAB511B161EAE1FADFE7353F99283A9FC8E820F25",
+      "lines": 143
+    },
+    "adapter": {
+      "path": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 56681,
+      "sha256": "E38E188BDCBA13F7CDCA8B02B25F5D79A68A96525EDEFE4CDA9C3172C281E632",
+      "lines": 1401
+    },
+    "input_copies": {
+      "US30_M1": {
+        "path": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/data/input/US30_M1.parquet",
+        "bytes": 19018323,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+      },
+      "US100_M1": {
+        "path": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/data/input/US100_M1.parquet",
+        "bytes": 21213599,
+        "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+      },
+      "US500_M15": {
+        "path": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/data/input/US500_M15_BARS_20220701_20260821.csv",
+        "bytes": 7007401,
+        "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A",
+        "lines": 97708
+      }
+    }
+  },
+  "implementation": {
+    "modes": [
+      "precheck",
+      "development",
+      "confirmation"
+    ],
+    "development_destination": "lab/artifacts/independent-cross-index-m15-online-expert-adapter-challenge-v1/development/",
+    "confirmation_destination": "lab/artifacts/independent-cross-index-m15-online-expert-adapter-challenge-v1/confirmation/",
+    "destinations_are_atomic_and_refuse_existing_paths": true,
+    "strict_json_allow_nan_false": true,
+    "cross_family_import_include_or_execution": false,
+    "live_optimization_or_lab_mt5_read_or_write": false
+  },
+  "frozen_interpretations": {
+    "initial_deposit_usd": {
+      "value": 100.0,
+      "authority": "the exact V8 challenge authority's initial_deposit_usd"
+    },
+    "materiality": "abs(log(close[t-1]/close[t-1-h])) >= 0.10 * prior_ATR64/close[t-1]",
+    "prior_atr": "simple true-range mean through only the immediately prior completed common M15 bar",
+    "m1_aggregation": "exact fifteen distinct sixty-second rows from aligned opening epoch through opening plus 840 seconds",
+    "native_us500_spread": "the one recorded M15 spread is both the entry and exit spread",
+    "short_intrabar_quote": "Bid high/low plus that M15 bar's recorded entry spread approximates Ask high/low",
+    "same_bar_barrier_order": "stop is tested before take and executes at the exact threshold",
+    "virtual_maturity": "a launch at common bar i can update state only at decision i+4, after all four potential bars complete",
+    "virtual_state": "normalized causal decayed first and second moments; effective sample size is capped by matured count",
+    "candidate_balance_settlement": "closed PnL enters current actual and stressed balance at the first common decision bar after the exit bar",
+    "risk": "two-percent one-ATR target, volume floored to 0.01, minimum 0.01 allowed only at or below four-percent planned loss",
+    "stress": "subtract the same observed direction-specific single round-trip spread burden once more"
+  },
+  "structural_precheck": {
+    "status": "STRUCTURAL_PRECHECK_PASS_NO_VIRTUAL_OR_CANDIDATE_OUTCOME",
+    "common_rows_through_2025": 81720,
+    "first_common_time": "2022-07-01T01:00:00",
+    "last_common_time": "2025-12-31T23:45:00",
+    "source_complete_m15_rows": {
+      "US100": 93889,
+      "US30": 93428,
+      "US500": 82546
+    },
+    "development_decision_rows_with_complete_four_bar_path": 46574,
+    "development_calendar_dates": 517,
+    "normal_trading_days_at_least_sixty_common_bars": 516,
+    "dates_at_least_eighty_common_bars": 493,
+    "median_common_bars_per_date": 92,
+    "development_valid_directions_per_expert_min_max": [
+      37486,
+      44761
+    ],
+    "matured_observations_available_per_expert_min_max": [
+      65744,
+      78414
+    ],
+    "development_rows_after_256_maturity_per_expert_min_max": [
+      46574,
+      46574
+    ],
+    "fixed_100_usd_risk_feasible_rows_per_symbol": {
+      "US100": 46574,
+      "US30": 46574,
+      "US500": 46574
+    },
+    "minimum_lot_hard_cap_rows_per_symbol": {
+      "US100": 0,
+      "US30": 0,
+      "US500": 0
+    }
+  },
+  "environment": {
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1"
+  },
+  "predevelopment_attestation": {
+    "source_copy_count": 3,
+    "adapter_source_files": 1,
+    "constructed_m15_rows_in_precheck": 81720,
+    "expert_directions_in_precheck": true,
+    "virtual_outcomes": 0,
+    "online_scores": 0,
+    "expert_rankings": 0,
+    "candidate_decisions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_rows_used": 0,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this implementation freeze reaches origin/main, run exactly one complete 2024-2025 three-role development process"
+}
