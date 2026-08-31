@@ -23,3 +23,11 @@ The declaration is pre-input, pre-implementation and pre-outcome. Staging begins
 Declaration commit `404f7d2` reached `origin/main` before staging and implementation. All four inputs are byte-equal. The self-contained lattice reproduces center-local counts `18 / 18 / 162`, union `198`, zero duplicates and `579` fine-neighbor edges. Frozen centers occur at indices `10 / 31 / 130` and exactly reproduce Stage-A development actual/stressed/DD.
 
 Config is `5,206` bytes / `58E774B6...696DAC`; source is `48,766` bytes, `1,109` lines / `5BA9EEDF...B31EE` and passes Python `3.13.9` syntax with NumPy `2.3.4`. Candidate reallocation economics were not executed and no output exists. The map may run once only after the implementation freeze reaches `origin/main`.
+
+## Final Stage-B result
+
+Implementation-freeze commit `19e9b90` reached `origin/main` before the clean `0.5072949s` replay. The `198`-role map contains `82` primary, `118` fallback and `70` robust-primary points. Three immutable Stage-C seeds advance.
+
+Rank 1 is a true nonseed move inside RC61/RC64/Cross: `1.5 / 1.25 / 1.75`, development actual/stressed `+$167.63 / +$153.542`, DD `18.1367%`, with 2024/2025 stressed `+$45.399 / +$106.864`. Rank 2 preserves all five at `1.5 / 1.25 / 1.5 / 1.75 / 1`, earning `+$142.86 / +$126.707`, DD `25.0782%`. Rank 3 is a lower-DD RC61/RC64/Cross allocation `1 / 1.25 / 1.75`, earning `+$134.65 / +$120.916`, DD `15.8658%`. Each has four eligible fine neighbors across at least three axes.
+
+The Stage-A mask-22 contrast does not enter the frozen top three under the declared robustness/separation/rank-fill order. This is not Unit closure: mandatory Stage C compares each selected static allocation with its neutral role and nine component-local causal suspension variants before validation. MT5, validation, locked holdout, Lab/new-entry and Live remain unopened.
