@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0524`
+- Latest state ID: `STATE-0525`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 006 implementation-freeze commit `aac724f6e1a3c1f7bd80081a0944644382472815`, equal to `origin/main` before the one development process.
+- Current process parent: Family 006 closure commit `a41f5712d4bded7ca187e59d57300107327bb237`, equal to `origin/main` before the post-closure whole-map recompare.
 
 ## Authorization and ownership
 
@@ -24,8 +24,8 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_CLOSED_VALID_ADVERSE_RECOMPARE_PENDING`.
-- Sole active Challenge family: none. Family 006 is closed; Programs 1-5 and 7 must be re-compared after its closure reaches `origin/main`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_RECOMPARE_PROGRAM_2_AUDCHF_PULSE_READY_SUCCESSOR_NOT_OPENED`.
+- Sole active Challenge family: none. Family 006 is closed and the whole map selects one provisional Program 2 Family 007, but its root may not open until the selection audit reaches `origin/main`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
@@ -68,6 +68,7 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Family 003 residual-basket `Python adapter + EA` proxy: `488 / 466 / 426` starts, actual `-$88.5048 / -$88.1250 / -$87.2249`, stressed `-$103.8357 / -$103.2920 / -$101.3396`; closed adverse.
 - Family 004 M15 online-expert `Python adapter + EA` proxy: `2,063 / 2,234 / 1,625` starts but actual `-$99.3989 / -$99.1503 / -$97.1707`, stressed `-$163.4354 / -$157.2507 / -$156.1929`, DD `97.84..99.43%`; closed adverse.
 - Family 005 M1 utility-GRU `ONNX + EA` proxy: valid models but only one threshold-clearing action and no complete role; closed utility collapse.
+- Family 006 two-session opening-auction `Python adapter + EA` proxy: `1,008 / 1,277` starts, actual `-$98.86265 / -$98.90470`, stressed `-$227.84505 / -$207.75920`, DD about `99.1%`; closed adverse.
 
 ## Post-Family-005 whole-map selection
 
@@ -76,7 +77,7 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - A timestamp-only scan opened no price, spread, volume, return, label or outcome. Exact common M1 geometry from anchor minus 30 through plus 74 minutes supplies development `965` complete session events, `1,930` two-symbol opportunities over `515` active dates, or `3.7475728` opportunities per active date. Locked 2026 price rows remain unopened.
 - Tokyo `09:00` is structurally unavailable in the source and Hong Kong `09:30` has incomplete late-2025/early-2026 coverage, so both were rejected using timestamps only. One epoch-seconds versus nanoseconds parse error produced an impossible 1970 surface and was corrected before selection or any outcome access.
 - Audit `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_WHOLE_MAP_RECOMPARE_V1.json` is `9,867` bytes / `9D98DE4B5AC34EF96B0178458E6C8D54C38E9320D1F3E801A1882716F1163553`.
-- Provisional Family 006 is `lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, Program 3 / micro-to-meso, mandatory `Python adapter + EA`. The root, input copies, opening bodies/ranges, decisions, lifecycles, economics, EA and MT5 remain zero.
+- At that selection boundary, provisional Family 006 was `lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, Program 3 / micro-to-meso, mandatory `Python adapter + EA`; its later declaration, implementation and closed result are recorded below.
 
 ## Family 006 frozen declaration
 
@@ -97,12 +98,23 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Durable result/closure/closed README are `8,959 / 3,863 / 1,654` bytes at `0EAEA67F74683C9AD83C64BC05F0B166879243487028843078ACBA3570816B65 / BEBB7A7ED6140E166E640159249AB813DB2C26B4A0BC27C19F6BEC53B640684E / 4E96F656CEE212F725A4F4036796F1D3BA6154C0BF4D4CEDC8AF9D78245FBE12`.
 - Locked 2026, EA, compile and MT5 remained unopened. The complete response/session/timezone/window/filter/symbol/risk/exit bundle is frozen against rescue inside Family 006.
 
+## Post-Family-006 whole-map selection
+
+- Family 006 closure commit `a41f5712d4bded7ca187e59d57300107327bb237` reached local `main` and `origin/main` before Programs 1-5/7 and micro/meso/macro were re-compared. No successor root, runtime, input, price value, signal, lifecycle, economics, EA or MT5 path opened.
+- Programs 1, 3, 4, 5 and 7 are not ready: target-price/model concentration and closed neighborhoods remain frozen, Family 006 closes adjacent clock/opening rescues, and no positive entry population exists for exit, capital or causal-meta work.
+- Program 2 alone has a materially new carrier: broker-native `AUDCHF`. A repository-wide non-runtime scan found zero prior AUDCHF reference, while path/length/timestamp/hash metadata found the symbol in `13` historical runtime caches. Those caches prove availability only and may not be copied, read for prices or executed by Family 007.
+- The selected question is an intraday external-event transfer, not a VIX, rates, gold-yen, broad-dollar, macro-release or pre-existing lifecycle-context rescue. Every New York-local half hour ending `10:00..15:30`, the completed AUDCHF return is compared with the same slot across the prior `60` complete sessions. A nonzero top-quartile absolute pulse freezes `AUDCHF_PULSE_FOLLOW / AUDCHF_PULSE_FADE` together and can address US100 and US30 at the next M1 open.
+- The design supplies `12 × about 25% × 2 = about 6` starts per complete session after warmup before economic/risk attrition; exact timestamp coverage, causal capacity and minimum-lot feasibility must be established outcome-free after declaration. Selection opened no AUDCHF bar/tick value and no target OHLC, spread, return, label, lifecycle or economic value.
+- Audit `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_WHOLE_MAP_RECOMPARE_V1.json` is `11,838` bytes / `1AFE04FEA5D4DA5C16A85215AD409CFC252A8B0F09214203063229CCAA299E32`, status `READY_PROGRAM_2_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_SUCCESSOR_NOT_OPENED`.
+- Provisional Family 007 is `lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/`, Program 2 / micro-to-meso, mandatory `Python adapter + EA`. Its root, dedicated Portable, fresh AUDCHF acquisition/specification, target copies, ranks, signals, outcomes, EA and MT5 all remain zero.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 006 raw evidence, durable result and closure to `origin/main`.
-2. Only after origin equality, recompare Programs 1-5 and 7 across all heights without using closed-family outcomes as successor inputs.
-3. Declare at most one materially distinct self-contained successor before its inputs, implementation or outcomes.
-4. Continue serially until an unchanged complete native candidate passes every V8 gate.
+1. Commit and push the post-Family-006 whole-map selection audit and state record to `origin/main`.
+2. Only after origin equality, declare the single self-contained Family 007 contract before its runtime, fresh AUDCHF acquisition, target copies, ranks, implementation or outcomes.
+3. After the declaration boundary, acquire and pin AUDCHF in a dedicated Family 007 Portable, prove causal geometry/capacity outcome-free, implement the Python adapter, and freeze the complete role/risk/exit contract.
+4. Run one complete development process; open locked 2026, EA, compile and native MT5 only for at most one unchanged full development passer.
+5. Continue serially through whole-map-recompared materially distinct families until an unchanged complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
 
@@ -122,8 +134,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; post-Family-006 whole-map recompare pending.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_CLOSED_VALID_ADVERSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
+- Active research unit: none; provisional Family 007 awaits its selection-audit commit before declaration.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_RECOMPARE_PROGRAM_2_AUDCHF_PULSE_READY_SUCCESSOR_NOT_OPENED`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
