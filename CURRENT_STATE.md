@@ -5,7 +5,7 @@ Last updated: 2026-08-31
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0483`
+- Latest state ID: `STATE-0484`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 
 ## Authorization
@@ -27,7 +27,7 @@ Legacy B70 V6R6, parent V7, CXR1 and CXR2 remain stopped and disabled. Detached 
 
 ## Active work
 
-- Active primary Goal phase: `V8_OPT_U003_STAGE_C_DECLARED_PREINPUT_PREIMPLEMENTATION_PREVALIDATION`; exact Live PID `33388` remains the independent healthy `1/1` owner. Stage-B result commit `b7684e9` reached `origin/main`; Stage C freezes three immutable centers plus five one-component native-gate ablations each, `18` roles total. It will open fresh January-May only after its implementation freeze; locked holdout and MT5 remain closed.
+- Active primary Goal phase: `V8_OPT_U003_STAGE_C_IMPLEMENTATION_FROZEN_PREVALIDATION`; exact Live PID `33388` remains the independent healthy `1/1` owner. Stage-C declaration commit `906f7b0` reached `origin/main`; exact inputs are staged and the self-contained implementation reproduces `18` unique roles, exact V8 whole economics and all three Stage-B centers. Fresh January-May may execute only after this implementation freeze reaches `origin/main`; locked holdout and MT5 remain closed.
 - Market-wait work allocation: the user's 2026-08-31 clarification requires the main work to return to single-stream research and development rather than spending the entire closed-market interval on the V8 handoff. A healthy entries-disabled V8 wait is passive operating state, not a second development judgment stream; only bounded market readiness checks interrupt the serial research stream.
 - Repository integrity correction: `CLOSED_NON_ECONOMIC_MATERIALIZATION_AND_EVIDENCE_ERRATA`; the user-authorized patch stores the exact active Live package and the fixed candidate SET as raw Git bytes, supersedes the fixed candidate's misleading untouched/OOS June-July terminology without rewriting closed evidence, and maps two malformed long commit transcriptions to their real commits. Active Live source, EX5, SET, release identity, candidate, economics and every runtime remain unchanged. Clean-checkout and existing operator integrity pass; no compile, Tester, MT5 launch or broker/account query occurred. Durable record: `lineage/REPOSITORY_INTEGRITY_ERRATA_V1.json`.
 - Real-tick continuity authority correction: `ACTIVE_FINAL_AUTHORITY_CORRECTION`; `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`, `20,296` bytes / `3B22958A5E0E1FFB8A00781035737870A14012EF28F59887E662A8CDE58FFEEC`, pins eleven Optimization Selection agent logs whose final 2022-08 through 2026-06 segments all report the same required-symbol absent/discarded real-tick minutes and explicit `every tick generation used`. Their original signed results remain immutable but their Selection economics are now `INVALID_REQUIRED_SYMBOL_REAL_TICK_CONTINUITY_NO_ECONOMIC_VERDICT`; the root risk-cap matrix is separately quarantined because its same-interval cached evidence does not independently prove a zero-fallback detailed path.

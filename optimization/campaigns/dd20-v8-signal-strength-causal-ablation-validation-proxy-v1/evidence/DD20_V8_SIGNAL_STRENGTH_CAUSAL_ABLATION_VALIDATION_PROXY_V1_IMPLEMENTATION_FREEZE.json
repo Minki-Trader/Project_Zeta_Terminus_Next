@@ -1,0 +1,123 @@
+{
+  "schema": "zeta-next-dd20-v8-signal-strength-causal-ablation-validation-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "FROZEN_PREVALIDATION_STAGE_C_EXECUTION_NOT_STARTED",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "unit_stage": "C_ONE_COMPONENT_CAUSAL_ABLATION_AND_FRESH_VALIDATION",
+  "authority": {
+    "declaration_commit_on_origin_main": "906f7b089a624915c2f9ab39095684a979950e89",
+    "declaration_path": "optimization/campaigns/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/evidence/DD20_V8_SIGNAL_STRENGTH_CAUSAL_ABLATION_VALIDATION_PROXY_V1_DECLARATION.json",
+    "declaration_bytes": 7853,
+    "declaration_sha256": "BF6092575D36F7B404745303BFDD2AD15DD10112333E432A47DC17104957B481"
+  },
+  "staged_inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/input/",
+    "lifecycle": {
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "source_copy_byte_equal": true
+    },
+    "candidate": {
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "source_copy_byte_equal": true
+    },
+    "stage_b_raw": {
+      "bytes": 59794,
+      "sha256": "B0A8EBA93E22D1072CDA6CAC1339A8DDC5C53BBD9FF62B75E19F6F283C3B1E62",
+      "schema": "zeta-next-dd20-v8-signal-strength-fine-adjacency-proxy-result-v1",
+      "status": "VALID_PROXY_COMPLETE_STAGE_B_ROBUST_FINE_STRENGTH_CENTERS_STAGE_C_REQUIRED_NO_MT5",
+      "source_copy_byte_equal": true
+    },
+    "stage_b_durable": {
+      "bytes": 6179,
+      "sha256": "5B3C5E849C7A7B29A390EE64656E7BB1299B73CF1AF784FCA60A3855A5CE3218",
+      "schema": "zeta-next-dd20-v8-signal-strength-fine-adjacency-proxy-v1-result",
+      "status": "VALID_PROXY_COMPLETE_STAGE_B_ROBUST_FINE_STRENGTH_CENTERS_STAGE_C_REQUIRED_NO_MT5",
+      "source_copy_byte_equal": true
+    },
+    "source_semantic_copies": {
+      "files": 5,
+      "all_stage_b_input_byte_equal": true
+    }
+  },
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 7059,
+    "config_lines": 124,
+    "config_sha256": "D25714948F04B7E424FF76636475D11AE362882099FE70061054805D82A03E45",
+    "script_path": "optimization/campaigns/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 50978,
+    "script_lines": 1064,
+    "script_sha256": "F06816FAF163824E49C7AF734473F080FC7F7DC5258BA50016B5D01B61C1C7BC",
+    "python_version": "3.13.9",
+    "numpy_version": "2.3.4",
+    "syntax_check_passed": true
+  },
+  "structural_precheck": {
+    "matched_lifecycles": 965,
+    "candidate_rows": 8176,
+    "signal_passed_rows": 1108,
+    "development_component_populations": [151, 121, 420, 55, 109],
+    "stage_b_raw_and_durable_center_agreement": true,
+    "center_count": 3,
+    "center_role_indices": [0, 6, 12],
+    "ablation_role_indices": [[1, 2, 3, 4, 5], [7, 8, 9, 10, 11], [13, 14, 15, 16, 17]],
+    "total_roles": 18,
+    "unique_threshold_roles": 18,
+    "all_thresholds_at_or_above_exact_v8_native": true,
+    "validation_outcomes_used_to_construct_or_retune_roles": false
+  },
+  "stage_b_development_reproduction": [
+    {
+      "rank": 1,
+      "actual_net_usd": 128.55,
+      "stressed_net_usd": 113.306,
+      "actual_closed_balance_drawdown_pct": 20.31275189424472,
+      "minimum_balance_usd": 79.527
+    },
+    {
+      "rank": 2,
+      "actual_net_usd": 126.76,
+      "stressed_net_usd": 113.871,
+      "actual_closed_balance_drawdown_pct": 21.615148566724052,
+      "minimum_balance_usd": 78.875
+    },
+    {
+      "rank": 3,
+      "actual_net_usd": 118.95,
+      "stressed_net_usd": 108.527,
+      "actual_closed_balance_drawdown_pct": 21.948845030533693,
+      "minimum_balance_usd": 77.86
+    }
+  ],
+  "exact_v8_neutral_precheck": {
+    "accepted_source_lifecycles": 965,
+    "suppressed_by_strength": 0,
+    "aggregate_skips_within_source_path": 0,
+    "source_volume_matches": 965,
+    "source_risk_capital_matches": 965,
+    "source_position_cap_matches": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "minimum_balance_usd": 59.11
+  },
+  "execution_boundary": {
+    "rule": "One complete Stage-C process may execute only after this exact implementation freeze reaches origin/main.",
+    "fresh_january_may_validation_opened": false,
+    "locked_june_july_holdout_opened": false,
+    "raw_output_exists": false,
+    "mt5_runs": 0
+  },
+  "scope": {
+    "all_five_existing_v8_strategies_active": true,
+    "existing_opportunity_suppression_or_native_restoration_only": true,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U003_STAGE_C_IMPLEMENTATION_FROZEN_THREE_IMMUTABLE_CENTERS_FIFTEEN_CAUSAL_ABLATIONS_PREVALIDATION_NO_HOLDOUT_NO_MT5"
+}

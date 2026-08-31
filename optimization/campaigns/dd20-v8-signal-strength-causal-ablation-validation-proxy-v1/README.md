@@ -16,4 +16,6 @@ Only unchanged centers that pass both economic and causal nondominance gates may
 
 ## Current boundary
 
-The campaign is declared pre-input, pre-implementation and pre-validation-outcome. No input copy, role table, config, source or January-May center/ablation result exists before the declaration reaches `origin/main`.
+Declaration commit `906f7b0` reached `origin/main` before inputs and implementation. Exact V8 ledgers, complete Stage-B raw/durable results and five source semantics are staged byte-equal. Both Stage-B statuses and all three immutable center q/threshold vectors agree.
+
+Structural precheck constructs exactly `18` unique roles at or above the native gates and reproduces exact V8 whole actual/stressed `+$409.81 / +$367.818`, DD `35.46%`, plus all three Stage-B development center records. Config/source are `7,059 / 50,978` bytes at `D2571494...A03E45 / F06816FA...C1C7BC`; freeze is `5,113` bytes / `B096D3AE...CE49BA`. The raw output is absent. One complete Stage-C process may run only after the implementation freeze reaches `origin/main`. January-May, locked June-July and MT5 remain unopened.
