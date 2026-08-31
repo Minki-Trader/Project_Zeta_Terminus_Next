@@ -21,4 +21,8 @@ Development, fresh validation, locked holdout, primary/fallback gates, ranking a
 
 This stage may only suppress, reorder or resize exact-V8 opportunities through the frozen portfolio axes. It does not add a symbol, timeframe, signal, direction or opportunity timestamp. Later isolated Optimization stages may change code/mechanisms, remove existing components or reconstruct the V8 portfolio, but a new entry strategy remains Lab and is not opened under this Goal.
 
-No input staging, implementation or outcome begins until the declaration boundary reaches `origin/main`.
+## Frozen implementation boundary
+
+Declaration commit `7f36ba276a2575fb8246760705692c79e77b7f46` reached `origin/main` before staging. The three inputs are byte-equal, the Stage-A schema/status and all three center vectors match, and the local counts reproduce `144 / 216 / 144` with an exact `504 / 504` value/coordinate union. The inherited Stage-A executable model is unchanged.
+
+Config is `5,146` bytes / `AF5211E7...F84DE`; the Python source is `43,915` bytes / `51DB529A...739CD` and passes Python `3.13.9` syntax compilation with NumPy `2.3.4`. No Stage-B output exists. Execution waits until the implementation-freeze boundary reaches `origin/main`.
