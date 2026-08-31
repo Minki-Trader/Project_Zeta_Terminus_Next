@@ -1,0 +1,304 @@
+{
+  "schema": "zeta-next-independent-two-index-m1-utility-gru-onnx-challenge-v1-contract",
+  "family": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/",
+  "program": {
+    "primary_macro_program": 1,
+    "name": "entry_signal_market_structure",
+    "height": "micro_to_meso",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "candidate_architecture_required": "ONNX_plus_EA",
+    "single_ea_novel_signal_forbidden": true,
+    "python_or_onnx_only_proxy_victory_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "independence": {
+    "excluded_inputs": [
+      "Family 001 features, models, predictions, decisions and outcomes",
+      "Family 002 tensors, labels, models, ONNX files, predictions, decisions and outcomes",
+      "Family 003 pair fits, residuals, decisions, baskets and outcomes",
+      "Family 004 M15 features, virtual outcomes, online state, scores, decisions, trades and outcomes",
+      "V1-V8 signals, opportunity timestamps, component labels, state and economics"
+    ],
+    "material_distinctions": [
+      "completed M1 within-bar body, wick, true-range, volume and spread sequence rather than H1 or M15 return state",
+      "joint regression of four directly executable actual-cost utilities rather than direction class, barrier probability or adaptive expert score",
+      "quarterly expanding-window recurrent fits rather than one full-window model or online outcome memory",
+      "one selected single-symbol action rather than residual or cross-sectional paired execution",
+      "no clock, weekday or session feature"
+    ]
+  },
+  "source_inputs": {
+    "acquisition_receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    },
+    "series": {
+      "US30_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+        "bytes": 19018323,
+        "rows": 1617902,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+      },
+      "US100_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+        "bytes": 21213599,
+        "rows": 1618383,
+        "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+      }
+    },
+    "required_columns": [
+      "time",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "maximum_timestamp_exclusive": "2026-08-01T00:00:00",
+    "post_cutoff_rows_excluded": true
+  },
+  "decision_geometry": {
+    "decision_epoch": "every exact quarter-hour common M1 opening epoch",
+    "required_input_epochs": "t-61 through t-1 inclusive for both symbols",
+    "model_sequence_epochs": "t-60 through t-1 inclusive",
+    "required_label_epochs": "t through t+14 inclusive for both symbols",
+    "complete_window_only": true,
+    "uses_current_or_future_bar_in_input": false,
+    "maximum_concurrent_positions": 1,
+    "capacity_after_exit": "next complete common quarter-hour decision",
+    "normal_trading_day": "server date with at least sixty complete decision windows",
+    "lifecycle_start_count": "one accepted single-symbol action counts once"
+  },
+  "periods": {
+    "initial_training": "2022-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "development_test_blocks": [
+      "2024-01-01T00:00:00/2024-04-01T00:00:00",
+      "2024-04-01T00:00:00/2024-07-01T00:00:00",
+      "2024-07-01T00:00:00/2024-10-01T00:00:00",
+      "2024-10-01T00:00:00/2025-01-01T00:00:00",
+      "2025-01-01T00:00:00/2025-04-01T00:00:00",
+      "2025-04-01T00:00:00/2025-07-01T00:00:00",
+      "2025-07-01T00:00:00/2025-10-01T00:00:00",
+      "2025-10-01T00:00:00/2026-01-01T00:00:00"
+    ],
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_role_max": 1,
+    "locked_confirmation_previously_opened_by_families_001_002_003_004": false
+  },
+  "feature_tensor": {
+    "symbol_order": [
+      "US100",
+      "US30"
+    ],
+    "sequence_rows": 60,
+    "features_per_row": 15,
+    "feature_order": [
+      "US100_log_close_over_open",
+      "US100_log_high_over_open",
+      "US100_log_low_over_open",
+      "US100_log_high_over_low",
+      "US100_true_range_over_previous_close",
+      "US100_log1p_tick_volume",
+      "US100_spread_price_over_open",
+      "US30_log_close_over_open",
+      "US30_log_high_over_open",
+      "US30_log_low_over_open",
+      "US30_log_high_over_low",
+      "US30_true_range_over_previous_close",
+      "US30_log1p_tick_volume",
+      "US30_spread_price_over_open",
+      "US100_minus_US30_log_close_over_open"
+    ],
+    "spread_price": "recorded spread times 0.01",
+    "true_range": "maximum high-low, abs(high-previous-close), abs(low-previous-close)",
+    "per_fit_standardization": "training rows only mean and population standard deviation per feature; standard deviation floor 1e-8",
+    "standardization_embedded_in_onnx": true,
+    "standardized_clip": [
+      -8.0,
+      8.0
+    ],
+    "time_weekday_session_or_calendar_features": 0
+  },
+  "action_utility_labels": {
+    "action_order": [
+      "US100_LONG",
+      "US100_SHORT",
+      "US30_LONG",
+      "US30_SHORT"
+    ],
+    "label_unit": "actual-cost realized planned-risk R",
+    "entry": "Bid open at M1 t; long pays recorded t Ask spread and short enters Bid",
+    "prior_atr": "simple mean true range over completed M1 t-60 through t-1",
+    "stop": "one prior ATR adverse from direction-specific entry price",
+    "take": "1.5 prior ATR favorable from direction-specific entry price",
+    "maximum_hold": "fifteen M1 bars t through t+14, then direction-specific close",
+    "same_bar_stop_and_take": "adverse stop wins and exact threshold execution is used",
+    "short_intrabar_ask": "Bid high/low plus that M1 row's recorded spread",
+    "maturity": "a label may enter a training fit only after all fifteen potential future M1 bars complete",
+    "target_clip": null,
+    "current_test_or_future_label_in_fit": false
+  },
+  "model": {
+    "framework": "PyTorch",
+    "architecture": "single-layer GRU, last hidden state, Linear32, GELU, Linear4",
+    "input_shape": [
+      "batch",
+      60,
+      15
+    ],
+    "gru_hidden_size": 32,
+    "gru_layers": 1,
+    "head_hidden_size": 32,
+    "output_shape": [
+      "batch",
+      4
+    ],
+    "loss": "Huber over all four action utilities",
+    "huber_delta": 0.25,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 512,
+    "epochs_per_fit": 8,
+    "shuffle": true,
+    "seed": 260831005,
+    "cpu_deterministic_algorithms": true,
+    "early_stopping_or_validation_selection": false,
+    "development_fit_count": 8,
+    "fit_rule": "one expanding fit per quarterly test block using every eligible initial/development label matured strictly before the block start",
+    "locked_fit_rule": "only after one development role passes, one final unchanged-procedure fit uses labels matured before 2026-01-01 and is frozen before locked inference"
+  },
+  "onnx": {
+    "opset": 17,
+    "input_name": "micro_sequence",
+    "output_name": "action_utility_R",
+    "dynamic_batch_only": true,
+    "single_ea_input_shape": [
+      1,
+      60,
+      15
+    ],
+    "single_ea_output_shape": [
+      1,
+      4
+    ],
+    "parity_max_absolute_difference": 0.00001,
+    "action_argmax_mismatch_count": 0,
+    "every_test_prediction_must_have_pytorch_onnx_parity": true
+  },
+  "candidate_bundle": {
+    "roles": [
+      {
+        "role": "UTILITY_EDGE_R010",
+        "minimum_predicted_actual_utility_R_exclusive": 0.1
+      },
+      {
+        "role": "UTILITY_EDGE_R020",
+        "minimum_predicted_actual_utility_R_exclusive": 0.2
+      },
+      {
+        "role": "UTILITY_EDGE_R030",
+        "minimum_predicted_actual_utility_R_exclusive": 0.3
+      }
+    ],
+    "ranking": "highest finite predicted action utility above role threshold, then frozen action order",
+    "no_adjacent_feature_model_seed_epoch_threshold_action_risk_or_exit_rescue_inside_v1": true
+  },
+  "risk_volume_and_execution": {
+    "initial_deposit_usd": 100.0,
+    "target_planned_risk_fraction": 0.02,
+    "hard_planned_risk_cap_fraction_after_minimum_lot": 0.04,
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_rounding": "floor two-percent one-ATR risk volume to 0.01; use 0.01 below minimum only when planned loss is at most four percent of current actual balance",
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "balance_compounding": true,
+    "volume_uses_current_actual_balance": true,
+    "one_global_position": true,
+    "actual_execution": "the same direction-specific path as the corresponding action-utility label",
+    "stressed_cost": "subtract the same observed direction-specific round-trip spread burden once again",
+    "capacity_after_early_exit": "wait until the next complete quarter-hour decision"
+  },
+  "adapter_ea_boundary": {
+    "python_training_owns": [
+      "causal window and action-label construction",
+      "per-fit training-only feature normalization",
+      "eight deterministic expanding development fits and conditional final locked fit",
+      "ONNX export and PyTorch/ONNX parity",
+      "offline prediction tape and fixed action ranking"
+    ],
+    "ea_must_own": [
+      "exact M1 completeness, tensor order and ONNX schedule validation",
+      "ONNX inference, sequence and freshness",
+      "symbol contract, tick size, tick value, lot and market-state validation",
+      "current-balance risk sizing and fail-closed order submission",
+      "protective stop, take and fifteen-M1 close",
+      "restart recovery, ownership, persistence and bounded evidence"
+    ],
+    "ea_may_not_replace_or_adjust_onnx_action": true,
+    "python_runtime_required_by_ea": false
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "symbol_breadth_min": 2,
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net",
+    "locked_confirmation_role_max": 1
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "complete_onnx_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_victory": true
+  },
+  "ordered_stages": [
+    "declaration before source copies, tensors, labels, fits, ONNX or candidate economics",
+    "byte-equal source materialization and complete trainer implementation freeze with timestamp/tensor/fit geometry and dummy ONNX parity only",
+    "one complete eight-fit 2024-2025 three-role development process",
+    "locked 2026 final fit and confirmation for at most one unchanged complete passer",
+    "self-contained EA compile and one native candidate path only for a complete whole-proxy survivor"
+  ],
+  "stop_rules": {
+    "no_development_passer": "close before locked 2026, EA and MT5 without an adjacent feature, model, seed, epoch, threshold, action, risk or exit rescue",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires a separate user-authorized engineering and handoff decision"
+  },
+  "preoutcome_state": {
+    "family_source_copies": 0,
+    "feature_tensors": 0,
+    "labels": 0,
+    "fits": 0,
+    "onnx_files": 0,
+    "predictions": 0,
+    "candidate_decisions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false
+  }
+}

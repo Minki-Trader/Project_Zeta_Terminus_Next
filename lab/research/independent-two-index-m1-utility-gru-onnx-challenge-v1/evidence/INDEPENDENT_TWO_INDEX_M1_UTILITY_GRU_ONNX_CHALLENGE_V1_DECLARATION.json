@@ -1,0 +1,148 @@
+{
+  "schema": "zeta-next-independent-two-index-m1-utility-gru-onnx-challenge-v1-declaration",
+  "recorded_at_utc": "2026-08-31T12:28:43.1778221Z",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/",
+  "status": "DECLARED_PREINPUT_PRETENSOR_PRELABEL_PREFIT_PREONNX_PREOUTCOME",
+  "selection_authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_004_WHOLE_MAP_RECOMPARE_V1.json",
+    "bytes": 7335,
+    "sha256": "FA66B823948546BC95D0E2C022DF999632EC53D395FBDDFE02CB3798805AC5F0",
+    "commit": "340f29ea28fa15f1eee2bea284e04df951fb7c90",
+    "commit_equal_origin_main_before_family_open": true
+  },
+  "allocation": {
+    "family_number": 5,
+    "primary_macro_program": 1,
+    "name": "entry_signal_market_structure",
+    "height": "micro_to_meso",
+    "active_family_count": 1,
+    "parallel_candidate_streams": 0
+  },
+  "architecture": {
+    "type": "ONNX_plus_EA",
+    "python_training_owns": [
+      "causal M1 tensor and action-utility label construction",
+      "quarterly expanding recurrent fits",
+      "training-only normalization and ONNX export",
+      "PyTorch/ONNX parity and offline predictions"
+    ],
+    "onnx_owns": "four-action utility inference",
+    "ea_must_own": [
+      "exact tensor, model schedule and freshness validation",
+      "ONNX inference and frozen action ranking",
+      "symbol contract and market-state validation",
+      "risk sizing, order submission, protection and timed close",
+      "ownership, persistence, restart recovery and bounded evidence"
+    ],
+    "single_ea_novel_signal_allowed": false,
+    "python_or_onnx_only_can_claim_victory": false
+  },
+  "independence": {
+    "family_001_002_003_004_features_models_states_decisions_or_outcomes_used": false,
+    "v1_v8_signal_or_component_economics_used": false,
+    "clock_weekday_session_or_calendar_features": 0,
+    "known_prior_exposure": "Families 001-004 closures are known only as exclusion boundaries and do not calibrate features, model, seed, training schedule, action thresholds, risk or exits.",
+    "materially_distinct_carrier_target_and_runtime": true
+  },
+  "frozen_files": {
+    "readme": {
+      "path": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/README.md",
+      "bytes": 1172,
+      "sha256": "BBA39C7C7B08248CD5B65F337A78DDA23A73455232D1BCD6A46000F041DEDD22"
+    },
+    "contract": {
+      "path": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/config/challenge-contract.json",
+      "bytes": 12987,
+      "sha256": "FB8C714356577AF21CF27313F4AC329A743E8A409814A4D6CF873BC07F0CA07C"
+    }
+  },
+  "source_authorities": {
+    "US30_M1": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+      "bytes": 19018323,
+      "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+    },
+    "US100_M1": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+      "bytes": 21213599,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+    }
+  },
+  "frozen_question": {
+    "input": "sixty completed common M1 rows by fifteen frozen path/volume/spread features",
+    "model": "deterministic single-layer GRU32 plus Linear32/GELU/Linear4 utility head",
+    "training": "eight quarterly expanding development fits, eight epochs each, with labels matured strictly before every test block",
+    "actions": [
+      "US100_LONG",
+      "US100_SHORT",
+      "US30_LONG",
+      "US30_SHORT"
+    ],
+    "roles": [
+      "UTILITY_EDGE_R010",
+      "UTILITY_EDGE_R020",
+      "UTILITY_EDGE_R030"
+    ],
+    "execution": "one global position, two-percent one-ATR target risk, four-percent hard minimum-lot cap, -1R stop, +1.5R take or fifteen-M1 close",
+    "cost": "direction-specific observed Bid/Ask actual book plus the same observed burden again in stress"
+  },
+  "development_and_confirmation": {
+    "initial_training": "2022-07-01T00:00:00/2024-01-01T00:00:00",
+    "development": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_previously_opened": false,
+    "maximum_roles_to_confirmation": 1,
+    "minimum_average_lifecycle_starts_per_normal_trading_day": 3.0
+  },
+  "ordered_stages": [
+    {
+      "stage": "A",
+      "name": "materialize_sources_implement_complete_trainer_dummy_onnx_and_freeze",
+      "candidate_outcome_open": false
+    },
+    {
+      "stage": "B",
+      "name": "one_complete_eight_fit_2024_2025_three_role_development_process",
+      "maximum_roles_to_confirmation": 1
+    },
+    {
+      "stage": "C",
+      "name": "one_final_fit_and_locked_2026_january_july_confirmation",
+      "condition": "exactly one unchanged Stage-B role passes every gate"
+    },
+    {
+      "stage": "D",
+      "name": "self_contained_onnx_and_ea_native_challenge",
+      "condition": "the unchanged role passes development, locked confirmation and whole proxy Challenge gates",
+      "candidate_mt5_paths_max": 1
+    }
+  ],
+  "v8_challenge_authority": {
+    "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "bytes": 8423,
+    "sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "relative_equity_drawdown_pct": 37.39,
+    "robust_recovery": 3.295860215,
+    "benchmark_only_not_signal_or_score_input": true
+  },
+  "preoutcome_attestation": {
+    "family_source_copies": 0,
+    "feature_tensors": 0,
+    "labels": 0,
+    "fits": 0,
+    "onnx_files": 0,
+    "predictions": 0,
+    "candidate_decisions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this declaration reaches origin/main, copy the two byte-pinned M1 sources once, implement the complete trainer/exporter, and freeze only timestamp, tensor, fit geometry and dummy ONNX parity without constructing action labels or candidate economics"
+}

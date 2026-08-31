@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
-현재 active research family는 없다. Family 004 폐쇄 commit `8911bcd`가 origin에 도달한 뒤 Programs 1-5/7을 재비교했다. Program 1의 provisional successor `independent-two-index-m1-utility-gru-onnx-challenge-v1`만 ready이며 아직 root·input·tensor·label·fit·ONNX·outcome을 열지 않았다. US30/US100 M1 timestamp-only scan은 공통 `1,617,636`행과 exact 61-prior/15-future geometry의 development `43,072`, locked `13,021` windows를 확인했다. Audit은 `7,335` bytes / `FA66B823...AC5F0`; origin 경계 뒤 하나의 self-contained `ONNX + EA` family만 선언할 수 있다.
+현재 sole active research family는 Program 1 / micro-to-meso `research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`이다. 필수 구조는 self-contained `ONNX + EA`이며, Python은 causal quarterly training/export만, ONNX는 네 action utility inference를, EA는 exact tensor·model schedule·freshness·contract·risk·order·protection·recovery·evidence를 소유한다. README/contract/declaration은 `1,172 / 12,987 / 6,344` bytes at `BBA39C7C...EDD22 / FB8C7143...CA07C / 7F7931B1...5B6A8`; 상태는 pre-input/pre-tensor/pre-label/pre-fit/pre-ONNX/pre-outcome이다. 선언이 origin에 도달한 뒤에만 두 M1 source를 한 번 복제할 수 있다.
 
 직전 Family 001 `research/independent-cross-index-hourly-adapter-challenge-v1/`은 세 역할 모두 turnover를 통과했지만 actual/stressed와 DD가 전부 실패해 잠긴 2026, EA와 MT5 전에 유효 adverse로 닫혔다. Durable result/closure는 `6,031 / 2,117` bytes at `09F30EDB...1A3D49 / 9E09B960...0FCCCA`다.
 
