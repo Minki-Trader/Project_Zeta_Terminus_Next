@@ -1,15 +1,15 @@
 # Project Zeta Terminus Next Current State
 
-Last updated: 2026-08-31
+Last updated: 2026-09-01
 
 This is the concise current re-entry snapshot and the sole Next Live authority. Detailed immutable transitions remain in the active numbered state chunk.
 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0526`
+- Latest state ID: `STATE-0527`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: post-Family-006 selection commit `b4625069ff0c29e5708687f1c264839a572990ba`, equal to `origin/main` before Family 007 declaration.
+- Current process parent: Family 007 declaration commit `e568f2510150b1e2537aeda033a42b187171f86a`, equal to `origin/main` before its dedicated runtime, acquisition engineering and adapter implementation.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_AUDCHF_PULSE_ADAPTER_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ACQUISITION_ENGINEERING_READY_AWAITING_EXPLICIT_DEMO_ACCOUNT_AUTHORIZATION_PREINPUT_PRECHECK_PREOUTCOME`.
 - Sole active Challenge family: `lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/`, Program 2 / micro-to-meso, mandatory `Python adapter + EA`.
-- Parallel Lab family / Optimization campaign count: `1 / 0`; Challenge MT5 runtime count remains `0` until the declaration reaches `origin/main`.
+- Parallel Lab family / Optimization campaign count: `1 / 0`; one Family 007 dedicated Portable exists and is stopped, while its successful source acquisition, account creation and trading counts remain zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -116,14 +116,18 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Entry is the exact decision-time target M1 open. Per-target risk distance is the median corresponding half-hour Bid range from the prior `20` complete same-slot sessions, floored at `0.01`. Stop/take/hold are `-1R / +1.5R / 30 M1`; actual uses direction-specific Bid/Ask and stress charges the observed burden again.
 - Each symbol targets `2%` of common slot-start actual balance with `4%` minimum-lot hard cap and `8%` aggregate hard cap. Development 2024-2025 requires both-year actual/stressed positivity, `>+$149.97 / +$127.786`, DD `<=37.39%`, at least `3` starts/day, both symbols, at least `8` slots and both AUDCHF signs.
 - Locked 2026 January-July can open for at most one unchanged complete development passer. Whole/native gates remain `>+$409.81 / >+$367.818 / <=37.39% / >3.295860215`, every epoch positive and complete adapter/EA integrity.
-- Family runtime, existing-runtime price reads, fresh AUDCHF acquisition/specification, target copies, rank values, directions, lifecycles/economics, adapter source, EA, compile, Tester and locked 2026 are zero at declaration. After this declaration reaches `origin/main`, only a neutral-installation-derived dedicated Portable, fresh AUDCHF acquisition and exact target copies may open before the outcome-free implementation freeze.
+- Declaration commit `e568f2510150b1e2537aeda033a42b187171f86a` reached `origin/main` before engineering. A neutral-installation-derived dedicated Portable was created and updated from terminal build `6090` to `6140`; its terminal is `121,846,032` bytes / `90AA7696...400`. A family-local Python environment pins MetaTrader5 `5.0.6147` without changing the global package.
+- The fresh clean Portable has no last trading account, so `initialize` waits at the MetaQuotes account-opening wizard. The form was inspected but its terms were not accepted, final creation was not submitted, and no account was created. Successful acquisition batches, AUDCHF rows/specification/receipts, account/position/order/deal queries, orders and trades all remain zero. The exact Family 007 terminal process was stopped; Live PID `33388` was not touched.
+- Development-only and later locked acquisition are separated by authority. Acquisition script `acquisition/acquire_audchf.py` is `21,504` bytes / `516` lines / `21C90C1C...A1BA9`; requirements are `176` bytes / `0021A45F...0566`. The two family-local target copies remain byte-equal to authority at `21,213,599 / 19,018,323` bytes and `634A8545...C6BB2 / 8CD68BC5...B063` for US100/US30.
+- Complete adapter `adapter/run_adapter.py` is `51,456` bytes / `1,268` lines / `9E16D532...ED04D`. Its authority-gated `precheck / development / confirmation` modes implement causal same-slot ranks/risk, frozen FOLLOW/FADE mapping, Bid/Ask execution, doubled spread burden, compounding, hard caps, deterministic passer ranking and locked-boundary integrity. Both Python files pass syntax compilation and help invocation.
+- Acquisition correction/target receipt are `5,057 / 1,510` bytes at `70EB0501...DEF2 / 079326EC...C5D`. No outcome-free precheck, implementation freeze, development process, rank threshold, direction, lifecycle/economic metric, locked value, EA, compile or Tester path has run. Fresh development acquisition now requires explicit user authorization to create the clean MetaQuotes demo account or an independently supplied existing non-Live demo login.
 
 ## Next authorized sequence
 
-1. Commit and push the Family 007 README, frozen contract, declaration and state record to `origin/main`.
-2. Only after origin equality, create the dedicated Portable from a neutral installation, acquire and pin fresh AUDCHF M1 plus symbol specification, and copy the two exact target authorities once.
-3. Implement the Python adapter, prove causal geometry/rank capacity/risk feasibility without opening development future paths, and freeze the complete implementation.
-4. Run one complete development process; open locked 2026, EA, compile and native MT5 only for at most one unchanged full development passer.
+1. Commit and push the Family 007 acquisition-engineering, target receipt, complete adapter and `STATE-0527` boundary to `origin/main`.
+2. Only with explicit user authorization, create one clean MetaQuotes demo account in the dedicated Portable—or use an independently supplied existing non-Live demo login—and acquire only the 2023-07 through 2025 development AUDCHF authority.
+3. Run the outcome-free precheck, record causal geometry/rank capacity/risk feasibility, freeze the complete implementation and push that boundary before economics.
+4. Run one complete development process; open locked 2026, EA, compile and native MT5 only for at most one unchanged ranked full development passer.
 5. Continue serially through whole-map-recompared materially distinct families until an unchanged complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -137,15 +141,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Storage and repository discipline
 
-- System-drive free space after Family 005 was `101.315 GiB`, above the mandatory `30 GiB` sweep threshold; its `15.22 MB` raw evidence remains preserved.
+- System-drive free space is `100.845 GiB`, above the mandatory `30 GiB` sweep threshold; no evidence-bearing artifact needs removal at this boundary.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 007 declared; declaration commit and fresh source materialization are next.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_AUDCHF_PULSE_ADAPTER_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 007 acquisition/adapter engineering complete; fresh development source acquisition awaits explicit demo-account authorization.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ACQUISITION_ENGINEERING_READY_AWAITING_EXPLICIT_DEMO_ACCOUNT_AUTHORIZATION_PREINPUT_PRECHECK_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

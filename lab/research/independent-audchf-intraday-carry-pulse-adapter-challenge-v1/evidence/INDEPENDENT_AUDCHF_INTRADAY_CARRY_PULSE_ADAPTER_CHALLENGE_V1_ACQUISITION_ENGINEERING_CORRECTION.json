@@ -1,0 +1,92 @@
+{
+  "schema": "zeta-next-independent-audchf-intraday-carry-pulse-adapter-challenge-v1-acquisition-engineering-correction",
+  "recorded_at_utc": "2026-08-31T15:10:06.2231631Z",
+  "status": "ENGINEERING_CORRECTION_ACTIVE_NO_ECONOMIC_PROCESS_NO_SOURCE_ROWS",
+  "family": "independent-audchf-intraday-carry-pulse-adapter-challenge-v1",
+  "declaration": {
+    "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/evidence/INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+    "bytes": 10449,
+    "sha256": "0CEBC92B0F7BE5469FF6CBEE20E8AF3BBC36907EA95FF784E03AE8A411E7799C",
+    "commit": "e568f2510150b1e2537aeda033a42b187171f86a"
+  },
+  "observed_environment": {
+    "neutral_installation": "C:/Program Files/MetaTrader 5/",
+    "dedicated_portable": "lab/runtime/independent-audchf-intraday-carry-pulse-adapter-challenge-v1-portable/",
+    "neutral_copy_bytes": 406830640,
+    "initial_terminal_build": 6090,
+    "initial_terminal_sha256": "EA58630BED990110DA60E28494D9ED5DF10B025C693F34CCC1D203740C606F9A",
+    "updated_terminal_build": 6140,
+    "updated_terminal_bytes": 121846032,
+    "updated_terminal_sha256": "90AA76963946FEC40B79990EDCB0E74E8B015EF801703DCCE40D12CA29B75400",
+    "global_python": "3.13.9",
+    "global_metatrader5_package": "5.0.5640",
+    "dedicated_python_environment": "lab/runtime/independent-audchf-intraday-carry-pulse-adapter-challenge-v1-portable/python-venv/",
+    "dedicated_metatrader5_package": "5.0.6147",
+    "dedicated_metatrader5_cp313_wheel_sha256": "FD8CB7023FFA7F6D405546647B38E5BB2561C0C00D6D7A4E88B6DCE00D3A20F5",
+    "dedicated_pandas": "2.3.3",
+    "dedicated_numpy": "2.3.4"
+  },
+  "fault_sequence": [
+    {
+      "stage": "first_clean_portable_start",
+      "fault": "terminal performed a first-run MQL5 refresh and downloaded build 6140 while the Python 120-second IPC initialization window elapsed",
+      "economic_or_price_rows": 0
+    },
+    {
+      "stage": "post_update_clean_portable",
+      "fault": "the terminal waited in the MetaQuotes account-opening wizard because the clean Portable had no last account; Python initialize again timed out",
+      "economic_or_price_rows": 0
+    },
+    {
+      "stage": "staging_cleanup",
+      "fault": "OneDrive marked one empty staging directory read-only, masking the original timeout during cleanup; staging was moved to the system temporary root and the exact empty directory was verified and removed",
+      "economic_or_price_rows": 0
+    },
+    {
+      "stage": "package_compatibility",
+      "fault": "the global MetaTrader5 package lagged the updated terminal; a family-local venv now pins official package 5.0.6147 without changing global Python",
+      "economic_or_price_rows": 0
+    }
+  ],
+  "ui_boundary": {
+    "account_wizard_observed": true,
+    "demo_account_creation_form_reached": true,
+    "sensitive_prefilled_values_recorded_copied_or_transmitted": false,
+    "terms_checkbox_selected": false,
+    "final_account_creation_submitted": false,
+    "account_created": false,
+    "wizard_cancelled": true,
+    "reason_stopped": "creating a new external account is not an implicit engineering permission and requires explicit action-time user confirmation"
+  },
+  "acquisition_integrity": {
+    "successful_audchf_batches": 0,
+    "audchf_rows_received": 0,
+    "audchf_price_values_persisted": 0,
+    "audchf_symbol_specifications_persisted": 0,
+    "acquisition_receipts_persisted": 0,
+    "candidate_target_future_paths_opened": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "locked_external_or_target_values_opened_by_analysis": false,
+    "broker_account_position_order_or_deal_api_queries": 0,
+    "orders_or_trades": 0
+  },
+  "locked_data_engineering_correction": {
+    "reason": "the original one-file request spans development and locked dates, while the frozen period rule forbids opening locked external values before one complete development passer",
+    "economic_contract_changed": false,
+    "signal_pair_window_reference_percentile_direction_risk_or_exit_changed": false,
+    "corrected_staging": [
+      "development acquisition: 2023-07-01 inclusive through 2026-01-01 exclusive",
+      "locked acquisition: 2026-01-01 inclusive through 2026-08-01 exclusive only after one unchanged complete development passer",
+      "the full declared AUDCHF_M1.csv authority may be assembled mechanically only at confirmation"
+    ]
+  },
+  "blocking_condition": "fresh AUDCHF acquisition needs either explicit user authorization to create one clean MetaQuotes demo account or an independently supplied existing non-Live demo login; no account action will be inferred",
+  "work_that_may_continue_without_account_action": [
+    "byte-equal target materialization",
+    "two-stage acquisition implementation",
+    "complete Python adapter implementation and syntax/static authority checks",
+    "no implementation freeze or development process until fresh development AUDCHF authority exists"
+  ],
+  "economic_process_count": 0,
+  "goal_status": "ACTIVE_NOT_COMPLETE"
+}
