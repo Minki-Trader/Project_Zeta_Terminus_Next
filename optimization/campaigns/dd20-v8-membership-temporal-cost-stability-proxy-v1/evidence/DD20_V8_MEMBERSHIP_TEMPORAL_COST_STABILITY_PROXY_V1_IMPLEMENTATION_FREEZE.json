@@ -1,0 +1,84 @@
+{
+  "schema": "zeta-next-dd20-v8-membership-temporal-cost-stability-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PREOUTCOME",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "D_TEMPORAL_AND_COST_STABILITY",
+  "authority": {
+    "declaration_commit_on_origin_main": "ba744a41ff596ae534fdbf5f39eb7e39da5f4e4c",
+    "declaration_bytes": 6672,
+    "declaration_sha256": "6BDCE06BA8EAB670C089190905D93424CAA0035D31571852E2F3EEE01D442B90"
+  },
+  "frozen_inputs": [
+    {"role": "lifecycle", "bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"},
+    {"role": "candidate", "bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"},
+    {"role": "stage_c_raw", "bytes": 56364, "sha256": "9B879B572F63BA24BCF6BD95CF51B40C4A2A2FD603323CFF209D092EABFD7875"},
+    {"role": "stage_c_durable", "bytes": 6109, "sha256": "FFF22C8D29A12266AA3C2EDE6CAD734B3A63C5D85591BB01A922C178DF80533F"}
+  ],
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-membership-temporal-cost-stability-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 5256,
+    "config_sha256": "D003CCF015393744D780559A322138F8BADD603DA877C857DB281682B902D15E",
+    "script_path": "optimization/campaigns/dd20-v8-membership-temporal-cost-stability-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 44708,
+    "script_lines": 1031,
+    "script_sha256": "9E2F885EE2681538CA5A373792713943ADC8D3EFC43CEBCFA5DC47E45E01B4DE",
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "syntax_compile": "PASS"
+  },
+  "abort_before_write_gates": [
+    "Stage-D declaration byte count/hash and commit authority match.",
+    "All four staged inputs match their frozen byte counts and hashes.",
+    "Stage-C raw/durable schemas, statuses and exactly one successor role agree with the immutable config role.",
+    "The immutable role is all-five weights 1.5 / 1.25 / 1.5 / 1.75 / 1, risk/cap 0.04 / 0.12 and has zero causal state.",
+    "Lifecycle/candidate join remains exact at 965 births and POSITION_OPEN contexts with frozen component counts.",
+    "The six blocks are ordered, gapless and nonoverlapping from 2024-01-01 through 2026-08-01; only June-July is marked locked-before-Stage-D.",
+    "The separate continuous whole period exactly spans the union of the six blocks.",
+    "Exact source V8 and the already opened Stage-C January-May role reproduce before any other Stage-D block or whole outcome is opened."
+  ],
+  "structural_and_frozen_control_precheck": {
+    "status": "PASS",
+    "matched_lifecycles": 965,
+    "immutable_input_roles": 1,
+    "candidate_state_enabled": false,
+    "fresh_block_count": 6,
+    "block_period_start": "2024-01-01T00:00:00",
+    "block_period_end_exclusive": "2026-08-01T00:00:00",
+    "locked_block": "2026-06-through-07",
+    "exact_v8_source_actual_net_usd": 409.81,
+    "exact_v8_source_stressed_net_usd": 367.818,
+    "exact_v8_source_actual_closed_balance_drawdown_pct": 35.46,
+    "known_stage_c_validation_actual_net_usd": 113.995,
+    "known_stage_c_validation_stressed_net_usd": 109.449333333,
+    "known_stage_c_validation_actual_closed_balance_drawdown_pct": 13.437604799,
+    "known_stage_c_validation_stressed_retention": 0.84305391,
+    "other_stage_d_blocks_executed": false,
+    "locked_block_executed": false,
+    "stage_d_whole_executed": false
+  },
+  "economic_implementation": {
+    "fresh_block_rule": "Each candidate and exact-V8 block independently starts at $100 with clean state.",
+    "whole_rule": "Candidate and exact V8 each receive one separate continuous 2024-01 through 2026-07 replay without block resets.",
+    "block_gate": "Actual/stressed/minimum balance positive and actual closed-balance DD no more than 30% in all six blocks.",
+    "whole_gate": "Candidate stressed net retains at least 75% of exact V8 and actual DD improves by at least five points.",
+    "stage_c_parity_abort": "The January-May candidate actual, stressed, DD and exact-V8 retention must reproduce Stage C before write.",
+    "locked_block_can_select_alternate": false,
+    "freed_capacity_profit_credit_usd": 0.0,
+    "finalist_limit": 1
+  },
+  "execution_boundary": {
+    "raw_result_exists": false,
+    "other_stage_d_blocks_executed": false,
+    "locked_block_opened": false,
+    "whole_economics_executed": false,
+    "mt5_runs": 0,
+    "lab_opened": false,
+    "new_entry_strategy": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false,
+    "required_next_action": "Commit and push this freeze, verify origin/main parity, then execute Stage D exactly once."
+  },
+  "marker": "V8_OPT_U002_STAGE_D_IMPLEMENTATION_FROZEN_ONE_ROLE_SIX_BLOCKS_PREOUTCOME_NO_MT5"
+}
