@@ -1,0 +1,222 @@
+{
+  "schema": "zeta-next-independent-cross-index-residual-basket-adapter-challenge-v1-contract",
+  "family": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/",
+  "program": {
+    "primary_macro_program": 5,
+    "name": "portfolio_capital_risk",
+    "height": "meso_to_macro",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "candidate_architecture_required": "python_adapter_plus_ea",
+    "single_ea_novel_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "independence": {
+    "excluded_inputs": [
+      "Family 001 features, target, predictions, decisions and outcomes",
+      "Family 002 tensors, labels, models, probabilities, decisions and outcomes",
+      "V1-V8 signals, opportunities and component economics"
+    ],
+    "material_distinctions": [
+      "paired market-relative convergence rather than an outright single-symbol direction",
+      "causal closed-form hedge relation and residual displacement rather than supervised return or barrier labels",
+      "two-leg spread, minimum-lot and aggregate basket risk economics",
+      "convergence, basket-PnL and time exits rather than a fixed single-leg target"
+    ]
+  },
+  "source_inputs": {
+    "symbols": {
+      "US100": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US100_H1_BARS_20220701_20260821.csv",
+        "bytes": 2508477,
+        "lines_including_header": 24446,
+        "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812"
+      },
+      "US30": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US30_H1_BARS_20220701_20260821.csv",
+        "bytes": 2763746,
+        "lines_including_header": 24444,
+        "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92"
+      },
+      "US500": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US500_H1_BARS_20220701_20260821.csv",
+        "bytes": 2727471,
+        "lines_including_header": 24445,
+        "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85"
+      }
+    },
+    "required_columns": [
+      "time_epoch",
+      "time_server",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "inner_join_key": "time_epoch",
+    "maximum_timestamp_exclusive": "2026-08-01T00:00:00",
+    "post_cutoff_rows_excluded": true
+  },
+  "periods": {
+    "initial_relationship_history": "2022-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_role_max": 1,
+    "locked_confirmation_previously_opened_by_family_001_or_002": false
+  },
+  "decision": {
+    "when": "first executable tick of a common new server H1 bar while no basket is open",
+    "uses": "only common H1 bars completed strictly before the decision",
+    "maximum_concurrent_baskets": 1,
+    "legs_per_basket": 2,
+    "basket_lifecycle_start_count": 1,
+    "capacity_after_exit": "next common H1 open after the exit bar"
+  },
+  "pair_universe": {
+    "ordered_pairs": [
+      [
+        "US100",
+        "US30"
+      ],
+      [
+        "US100",
+        "US500"
+      ],
+      [
+        "US30",
+        "US500"
+      ]
+    ],
+    "first_symbol_is_regression_dependent_variable": true,
+    "ranking": "largest absolute residual z-score, then declared pair order",
+    "same_pair_cannot_supply_two_simultaneous_baskets": true
+  },
+  "causal_relationship": {
+    "price_transform": "natural log completed H1 close",
+    "hedge_fit_bars": 960,
+    "fit": "closed-form ordinary least squares of log(first) on intercept plus log(second)",
+    "fit_window": "the 960 common completed H1 bars ending at the immediately prior bar",
+    "beta_min_inclusive": 0.5,
+    "beta_max_inclusive": 1.5,
+    "r_squared_min_inclusive": 0.7,
+    "residual_standardization_bars": 96,
+    "residual_mean_and_std": "population statistics of the last 96 fitted residuals under the current causal alpha and beta",
+    "residual_std_min_exclusive": 0.000001,
+    "current_residual": "residual of the immediately prior completed H1 close under the same alpha and beta",
+    "no_future_or_current_open_in_fit": true
+  },
+  "candidate_bundle": {
+    "common_rule": "while flat, trade the declared pair with largest absolute valid residual z when it meets the role threshold; positive z shorts the first and longs the second, negative z longs the first and shorts the second",
+    "roles": [
+      {
+        "role": "RESIDUAL_Z075",
+        "minimum_absolute_residual_z": 0.75
+      },
+      {
+        "role": "RESIDUAL_Z100",
+        "minimum_absolute_residual_z": 1.0
+      },
+      {
+        "role": "RESIDUAL_Z125",
+        "minimum_absolute_residual_z": 1.25
+      }
+    ],
+    "no_adjacent_z_pair_window_fit_quality_or_direction_rescue_inside_v1": true
+  },
+  "atr_and_volume": {
+    "atr_bars": 24,
+    "atr": "simple mean true range through the immediately prior completed H1 bar",
+    "target_planned_risk_fraction_per_leg": 0.01,
+    "target_planned_risk_fraction_per_basket": 0.02,
+    "hard_planned_risk_cap_fraction_after_minimum_lots": 0.04,
+    "planned_leg_loss": "one prior ATR times dollars per price point times volume",
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_rounding": "floor each leg's one-percent risk volume to 0.01; use 0.01 when below minimum only if the final two-leg planned loss remains within the four-percent basket cap",
+    "maximum_planned_leg_risk_ratio": 2.5,
+    "skip": "skip the basket if either ATR is invalid, either volume is invalid, combined planned loss exceeds four percent, or larger-to-smaller planned leg risk exceeds 2.5",
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "balance_compounding": true,
+    "volumes_use_current_actual_balance": true
+  },
+  "quote_and_cost": {
+    "csv_ohlc_side": "Bid",
+    "ask": "Bid plus recorded spread times 0.01",
+    "long_entry_and_close": "enter Ask and close Bid",
+    "short_entry_and_close": "enter Bid and close Ask",
+    "actual_cost": "one recorded spread per leg through direction-specific Bid/Ask entry and exit",
+    "stressed_cost": "actual paired path minus one additional decision spread per leg",
+    "same_bar_stop_and_take_rule": "adverse basket stop wins",
+    "same_bar_joint_extremes": "long leg low plus short leg high is adverse; long leg high plus short leg low is favorable"
+  },
+  "basket_exit": {
+    "planned_risk_R": "sum of both one-ATR planned leg losses at entry",
+    "basket_stop_R": -1.0,
+    "basket_take_R": 1.5,
+    "stop_take_observation": "conservative joint H1 extremes with adverse same-bar ordering; threshold execution is used absent tick ordering",
+    "convergence_exit": "at a completed H1 close, the frozen entry alpha/beta residual crosses its entry residual mean",
+    "maximum_hold_common_h1_bars": 3,
+    "time_exit": "close both legs at the third bar close if no earlier stop, take or convergence",
+    "stress_extra_cost_charged_once_per_leg": true
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "normal_trading_day_average_basket_starts_min": 3.0,
+    "pair_breadth_min": 2,
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net",
+    "locked_confirmation_role_max": 1
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "normal_trading_day_average_basket_starts_min": 3.0,
+    "complete_python_adapter_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_victory": true
+  },
+  "ordered_stages": [
+    "declaration pre-input pre-residual pre-outcome",
+    "byte-equal input materialization and complete adapter implementation freeze with structural pair-density only",
+    "one complete 2024-2025 three-role paired economic process",
+    "locked 2026 confirmation for at most one unchanged survivor",
+    "self-contained EA compile and one native candidate path only for a complete whole-proxy survivor"
+  ],
+  "stop_rules": {
+    "no_development_passer": "close before locked 2026, EA and MT5; do not rescue an adjacent z threshold, pair, hedge window, fit gate, stop, take, convergence or hold",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires a separate user-authorized engineering and handoff decision"
+  },
+  "preoutcome_state": {
+    "input_copies_created": false,
+    "adapter_source_created": false,
+    "pair_fit_rows": 0,
+    "residual_rows": 0,
+    "candidate_decisions": 0,
+    "candidate_trades": 0,
+    "candidate_outcomes": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_created": false,
+    "mt5_paths": 0,
+    "live_changed": false
+  }
+}
