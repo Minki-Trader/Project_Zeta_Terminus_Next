@@ -71,8 +71,20 @@ def verify_authority_and_inputs(config: dict[str, Any]) -> dict[str, Path]:
     if sha256(declaration) != str(authority["sha256"]):
         raise RuntimeError("declaration authority hash mismatch")
 
+    correction_authority = config["correction_authority"]
+    correction_declaration = REPOSITORY_ROOT / str(correction_authority["path"])
+    if len(str(correction_declaration)) >= 248:
+        correction_declaration = Path("\\\\?\\" + str(correction_declaration))
+    if correction_declaration.stat().st_size != int(correction_authority["bytes"]):
+        raise RuntimeError("correction authority byte count mismatch")
+    if sha256(correction_declaration) != str(correction_authority["sha256"]):
+        raise RuntimeError("correction authority hash mismatch")
+
     input_root = REPOSITORY_ROOT / str(config["inputs"]["root"])
-    paths: dict[str, Path] = {"declaration": declaration}
+    paths: dict[str, Path] = {
+        "declaration": declaration,
+        "correction_declaration": correction_declaration,
+    }
     for role in ("lifecycle", "candidate", "stage_b_raw", "stage_b_durable"):
         declared = config["inputs"][role]
         path = input_root / str(declared["name"])
@@ -1403,6 +1415,12 @@ def main() -> None:
         "authority": {
             "declaration_commit_on_origin_main": str(
                 config["declaration_authority"]["commit_on_origin_main"]
+            ),
+            "validation_anchor_correction_commit_on_origin_main": str(
+                config["correction_authority"]["commit_on_origin_main"]
+            ),
+            "validation_anchor_correction_sha256": str(
+                config["correction_authority"]["sha256"]
             ),
             "exact_v8_is_sole_economic_parent": True,
             "all_five_existing_entry_strategies_active": True,

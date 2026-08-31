@@ -1,0 +1,128 @@
+{
+  "schema": "zeta-next-dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1-corrected-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "CORRECTED_IMPLEMENTATION_FROZEN_PRE_REPLAY_NO_ECONOMIC_VERDICT",
+  "optimization_unit_id": "V8-OPT-U004-ATTAINED-PROFIT-FLOOR-PROTECTION",
+  "unit_stage": "C_ONE_COMPONENT_NATIVE_EXIT_ABLATION_AND_FRESH_VALIDATION",
+  "original_authority": {
+    "declaration_commit_on_origin_main": "e46ae103a7fa8c6d16601d8fb86a62f8131e47b5",
+    "declaration_path": "optimization/campaigns/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/evidence/DD20_V8_ATTAINED_PROFIT_FLOOR_CAUSAL_ABLATION_VALIDATION_PROXY_V1_DECLARATION.json",
+    "declaration_bytes": 9382,
+    "declaration_sha256": "68E0304B823CB5D7EF49740443231B6A4CD14861D0AA7DA316377FF80145A165"
+  },
+  "correction_authority": {
+    "declaration_commit_on_origin_main": "d0db47706f60a886f0afbf91186705c017e56ab5",
+    "declaration_path": "optimization/campaigns/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/evidence/DD20_V8_ATTAINED_PROFIT_FLOOR_CAUSAL_ABLATION_VALIDATION_PROXY_V1_VALIDATION_ANCHOR_CORRECTION_DECLARATION.json",
+    "declaration_bytes": 6015,
+    "declaration_sha256": "8D90C27C428E73782429C96D208A42EFD9A8A95231768207A06AAB5F61CF14CC",
+    "original_declaration_rewritten": false
+  },
+  "failed_execution": {
+    "original_implementation_freeze_commit_on_origin_main": "d06961d12cf06112f866a777eb794b93e2ce3172",
+    "exit_code": 1,
+    "stopped_at": "January-May exact-neutral anchor verification before center evaluation and result construction",
+    "raw_output_exists": false,
+    "candidate_metrics_or_ranks_observed": false,
+    "economic_verdict": "WITHHELD_INVALID_INCOMPLETE_EXECUTION"
+  },
+  "unchanged_staged_inputs": {
+    "lifecycle": {"bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"},
+    "candidate": {"bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"},
+    "stage_b_raw": {"bytes": 353619, "sha256": "49964699D0DA7DB9F9953772438D2E5058CD649A21EB339264D31FE62022C365"},
+    "stage_b_durable": {"bytes": 7613, "sha256": "F372ED0AA1D26397A5B4B1049E861CFB66B1445B6A6B9EB517164B75C6D1B35C"},
+    "source_semantic_sha256": [
+      "44F5FE9AE5A951D59F7A1870B027D405F97AE8793FBA995FBB2203070EDACEDE",
+      "B9960E8B43BA84DA412ED0C2BF5D65BD9C495ED2DF2AC53C50853CD2A2CCC1D7",
+      "A9637DF39A43EDED6C1FBC66F23CA762D41C8311CBF1D582972E22FFBC7D8E23",
+      "3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E"
+    ]
+  },
+  "corrected_config": {
+    "path": "optimization/campaigns/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/config/proxy-contract.json",
+    "original_bytes": 7874,
+    "original_lines": 105,
+    "original_sha256": "CE1DE618E98E64F3480A2A052C4C09D2C4B1F6A990A7454E12EE5AD67351CDD2",
+    "corrected_bytes": 8289,
+    "corrected_lines": 111,
+    "corrected_sha256": "821C6E90EF40CBC43C19F0A2456D988E2E20F96A823EE19A364B966F43C820FF",
+    "git_numstat_added_lines": 8,
+    "git_numstat_removed_lines": 2,
+    "changes": [
+      "Pin the correction declaration as a second authority.",
+      "Replace validation actual/stressed/DD with 204.67 / 192.006 / 32.582140561026 while retaining 168 lifecycles and minimum balance 90.838.",
+      "Replace the derived 65% minimum stressed amount 84.38614166645 with 124.8039."
+    ],
+    "minimum_stressed_retention_unchanged": 0.65,
+    "maximum_actual_drawdown_pct_unchanged": 30.0
+  },
+  "corrected_source": {
+    "path": "optimization/campaigns/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/proxy/run_proxy.py",
+    "original_bytes": 68706,
+    "original_lines": 1570,
+    "original_sha256": "BD41D250ADCC5A28B10D23773C1F74F0A71C50FC1FF5633DB61C13319337C8C5",
+    "corrected_bytes": 69630,
+    "corrected_lines": 1588,
+    "corrected_sha256": "05860141D5AC69C7C7BDB5D87E3821C64A514B4BEB81546B8709A0AA261F6D68",
+    "git_numstat_added_lines": 19,
+    "git_numstat_removed_lines": 1,
+    "economic_arithmetic_changed": false,
+    "changes": [
+      "Verify correction authority bytes and SHA-256 before input or economic work.",
+      "Use the Windows extended-path prefix only when the pinned correction authority path exceeds the conservative local path limit.",
+      "Record correction commit and SHA-256 in result authority provenance."
+    ],
+    "python_3_13_9_syntax_parse": "PASS"
+  },
+  "corrected_precheck": {
+    "authority_and_all_eight_input_hashes": "PASS",
+    "windows_extended_path_correction_authority_verification": "PASS",
+    "matched_lifecycles": 965,
+    "internal_roles_with_neutral_control": 19,
+    "nonneutral_causal_roles": 18,
+    "unique_semantic_roles": 18,
+    "causal_center_role_indices": [1, 7, 13],
+    "ablation_role_indices": [[2, 3, 4, 5, 6], [8, 9, 10, 11, 12], [14, 15, 16, 17, 18]],
+    "native_exit_disabled_lifecycle_counts_per_center": [190, 150, 446, 60, 119],
+    "stage_b_center_economics_reproduced": true,
+    "frozen_identification_reproduced": [
+      {"center_rank": 1, "certain_triggers": 91, "components": 5, "blocks": 5, "passed": true},
+      {"center_rank": 2, "certain_triggers": 7, "components": 4, "blocks": 4, "passed": false},
+      {"center_rank": 3, "certain_triggers": 15, "components": 5, "blocks": 5, "passed": false}
+    ],
+    "candidate_economics_executed": false,
+    "fresh_validation_center_or_ablation_economics_executed": false,
+    "locked_holdout_economics_opened": false
+  },
+  "corrected_exact_v8_neutral_anchor": {
+    "diagnostic_roles": 1,
+    "candidate_or_ablation_roles": 0,
+    "lifecycles": 168,
+    "actual_net_usd": 204.67,
+    "stressed_net_usd": 192.006,
+    "actual_closed_balance_drawdown_pct": 32.582140561026,
+    "minimum_balance_usd": 90.838,
+    "anchor_verification": "PASS"
+  },
+  "replay_boundary": {
+    "rule": "Exactly one clean complete Stage-C replay may run only after this corrected implementation freeze reaches origin/main.",
+    "raw_output_exists": false,
+    "failed_execution_economic_verdict": "WITHHELD_INVALID_INCOMPLETE_EXECUTION",
+    "fresh_validation_center_or_ablation_result_exists": false,
+    "locked_june_july_holdout_opened": false,
+    "code_candidate_created": false,
+    "mt5_runs": 0
+  },
+  "scope": {
+    "all_five_existing_v8_entry_strategies_active": true,
+    "already_open_position_management_only": true,
+    "center_or_ablation_map_changed": false,
+    "partial_identification_changed": false,
+    "period_or_ranking_changed": false,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U004_STAGE_C_VALIDATION_ANCHOR_CORRECTED_IMPLEMENTATION_FROZEN_PRE_REPLAY_NO_VERDICT"
+}
