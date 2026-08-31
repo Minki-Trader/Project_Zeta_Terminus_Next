@@ -1,0 +1,106 @@
+{
+  "schema": "zeta-next-independent-cross-index-hourly-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-08-31T08:59:35.196Z",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "authority": {
+    "declaration_path": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_HOURLY_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+    "declaration_bytes": 6178,
+    "declaration_sha256": "BBB32A57E3678D5F4A8885C36E523884B44C8763BE824F661AB8FC20942F0772",
+    "declaration_commit": "529702cc407ffb6406d4f9d111408f5ef693436a",
+    "declaration_commit_equal_origin_main_before_materialization": true
+  },
+  "frozen_contract": {
+    "path": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/config/challenge-contract.json",
+    "bytes": 10265,
+    "lines": 230,
+    "sha256": "2FEDDB61CF2B2BF636617733A195F7B8410BF83EB2138ACB19D6118C71CFD871"
+  },
+  "materialized_inputs": {
+    "US100": {
+      "path": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/data/input/US100_H1_BARS_20220701_20260821.csv",
+      "bytes": 2508477,
+      "lines_including_header": 24446,
+      "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812",
+      "byte_equal_to_declared_source": true
+    },
+    "US30": {
+      "path": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/data/input/US30_H1_BARS_20220701_20260821.csv",
+      "bytes": 2763746,
+      "lines_including_header": 24444,
+      "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92",
+      "byte_equal_to_declared_source": true
+    },
+    "US500": {
+      "path": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/data/input/US500_H1_BARS_20220701_20260821.csv",
+      "bytes": 2727471,
+      "lines_including_header": 24445,
+      "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85",
+      "byte_equal_to_declared_source": true
+    }
+  },
+  "adapter": {
+    "path": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 45526,
+    "lines": 1120,
+    "sha256": "4ED1D997644717CBB99BF82D86869B6A938E8D2E618665AE2C0071243B87A34A",
+    "syntax_compile_passed": true,
+    "normal_modes": [
+      "precheck",
+      "development",
+      "confirmation"
+    ],
+    "confirmation_requires_pinned_development_authority": true,
+    "metatrader_or_broker_connection_calls": 0,
+    "live_or_other_family_paths": 0
+  },
+  "runtime_versions": {
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.8.0"
+  },
+  "structural_precheck": {
+    "status": "STRUCTURAL_PRECHECK_PASSED_NO_MODEL_FIT_NO_CANDIDATE_OUTCOME",
+    "joined_first_server_time": "2022-07-01T01:00:00",
+    "joined_last_server_time": "2025-12-31T23:00:00",
+    "joined_rows_before_2026": 20649,
+    "complete_feature_rows": 20624,
+    "development_complete_feature_rows": 11804,
+    "feature_count": 51,
+    "development_months": 24,
+    "minimum_monthly_training_feature_rows": 8776,
+    "minimum_monthly_decision_feature_rows": 444,
+    "source_data_rows_excluding_header": {
+      "US100": 24445,
+      "US30": 24443,
+      "US500": 24444
+    },
+    "model_fits": 0,
+    "candidate_metric_rows": 0,
+    "locked_confirmation_opened": false,
+    "mt5_paths": 0
+  },
+  "frozen_execution_order": [
+    "verify declaration, contract and materialized input hashes",
+    "build 51 causal features from bars completed strictly before each H1 decision",
+    "for each development month fit three provisional calibration models and three complete causal models",
+    "derive pooled q80, q85 and q90 monthly thresholds",
+    "simulate all three roles on 2024-2025 only",
+    "write one development result and decision tape",
+    "do not open 2026 unless one unchanged development role passes every frozen gate"
+  ],
+  "preoutcome_attestation": {
+    "models_fit": 0,
+    "candidate_predictions": 0,
+    "candidate_trades": 0,
+    "candidate_metric_rows": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this implementation freeze reaches origin/main, execute exactly one complete development process over 2024-2025"
+}
