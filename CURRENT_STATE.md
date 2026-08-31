@@ -7,7 +7,7 @@ This file is the concise current re-entry snapshot and the sole Next Live author
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0518`
+- Latest state ID: `STATE-0519`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Current successor-selection parent boundary: `8911bcdfc4738f4ce4a482bcda05ba1711b4a4e7`, equal to `origin/main` before the post-Family-004 recompare
 
@@ -24,7 +24,7 @@ This file is the concise current re-entry snapshot and the sole Next Live author
 
 - Goal: build an independent automated strategy that beats V8, continuing through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`; a single EA may not own the novel signal, and Python-only/ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_M1_UTILITY_GRU_ONNX_DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_M1_UTILITY_GRU_ONNX_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Sole active family: `lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`, Program 1 / micro-to-meso, mandatory `ONNX + EA`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Families 001-003 outputs and V1-V8 signals, opportunities, component economics and state are forbidden Family 004 inputs.
@@ -82,6 +82,12 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Eight quarterly expanding GRU32 fits use only labels fully matured before each test block. The four outputs are actual-cost utilities for US100 long/short and US30 long/short; roles require predicted utility strictly above `0.10 / 0.20 / 0.30R`.
 - Execution is one global action, two-percent one-ATR target risk, four-percent minimum-lot cap, `-1R / +1.5R / fifteen-M1` exit, observed direction-specific cost and the same burden again in stress.
 - Source copies, tensors, labels, fits, ONNX, predictions, candidate decisions/economics, locked 2026, EA and MT5 are zero at declaration.
+- Declaration commit `873186f1ffad3947603aeb7903a3837ab1c370ea` reached `origin/main` before two byte/hash-equal M1 copies and implementation.
+- Trainer/exporter: `63,741` bytes / `1,549` lines / `71A23CC440907AA9F88092CAAF0B67AA83E8D3F23D787D1BFF166B915EB8E2B0`.
+- Outcome-free precheck built the exact `76,008×60×15` initial/development tensor, confirmed `43,072` development windows and `511` normal days, and fixed all eight train/test row counts.
+- Temporary dummy GRU ONNX parity passed over 64 rows at maximum absolute difference `7.450580596923828e-8` with zero action-argmax mismatch; the dummy file was removed.
+- Implementation freeze is `7,017` bytes / `223292B601B21DA1E6FD01F658CEFFFC2C4D46365F9F5BDD6B9D3FE55511CDD4`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Action labels, model fits, persistent ONNX files, predictions, rankings, candidate lifecycles/economics, locked 2026, EA and MT5 remain zero predevelopment.
 
 ### Frozen mechanism
 
@@ -102,9 +108,9 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Next authorized sequence
 
-1. Commit and push the Family 005 declaration to `origin/main`.
-2. Only after origin equality, copy the two byte-pinned M1 inputs once and implement the complete trainer/exporter.
-3. Run only timestamp/tensor/fit geometry and dummy ONNX parity before freezing implementation; do not construct action labels or candidate economics pre-freeze.
+1. Commit and push the two source copies, trainer and implementation freeze to `origin/main`.
+2. Only after origin equality, run exactly one complete eight-fit 2024-2025 three-role development process.
+3. Open the final fit, locked 2026, EA and MT5 only if the frozen preceding gates explicitly authorize them.
 4. Preserve prior raw evidence; remove only exact disposable unreferenced caches or staging.
 
 ## Frozen lane boundaries
@@ -128,7 +134,7 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 ## Current markers
 
 - Active research unit: Family 005 `independent-two-index-m1-utility-gru-onnx-challenge-v1`.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_M1_UTILITY_GRU_ONNX_DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME`.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_M1_UTILITY_GRU_ONNX_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
