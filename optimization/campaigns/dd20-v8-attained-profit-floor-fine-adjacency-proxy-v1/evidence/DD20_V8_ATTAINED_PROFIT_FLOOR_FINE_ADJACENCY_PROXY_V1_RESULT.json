@@ -1,0 +1,146 @@
+{
+  "schema": "zeta-next-dd20-v8-attained-profit-floor-fine-adjacency-proxy-v1-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_B_NEAR_MISS_FINE_PROFIT_FLOOR_CENTERS_STAGE_C_REQUIRED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U004-ATTAINED-PROFIT-FLOOR-PROTECTION",
+  "unit_stage": "B_CENTER_LOCAL_FINE_ACTIVATION_FLOOR_ADJACENCY",
+  "unit_closed": false,
+  "authority": {
+    "declaration_commit_on_origin_main": "3b9805adc624b4b981d9217839ac1645f16f8977",
+    "implementation_freeze_commit_on_origin_main": "9bf16defc26843825a558ee2b8db3a13105d863b",
+    "implementation_freeze_bytes": 6003,
+    "implementation_freeze_sha256": "749B6AA19034A7902EFCD99890725FDE0D9343EDB6A7B70CD0FB6418697B0E6E"
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-attained-profit-floor-fine-adjacency-proxy-v1/output/proxy-result.json",
+    "bytes": 353619,
+    "sha256": "49964699D0DA7DB9F9953772438D2E5058CD649A21EB339264D31FE62022C365",
+    "schema": "zeta-next-dd20-v8-attained-profit-floor-fine-adjacency-proxy-result-v1",
+    "status": "VALID_PROXY_COMPLETE_STAGE_B_NEAR_MISS_FINE_PROFIT_FLOOR_CENTERS_STAGE_C_REQUIRED_NO_MT5",
+    "wall_time_seconds": 0.306871700013
+  },
+  "implementation": {
+    "config_bytes": 8717,
+    "config_sha256": "227114D7BA7E62E472B8E7987A043411AC93BDD9FB418AC3BD630DADB8E072EE",
+    "script_bytes": 65119,
+    "script_lines": 1488,
+    "script_sha256": "5C465862EE2DC94DC4A3CBB050B5475554FD48847E4C6E97EB992E1FF29D221C",
+    "successful_proxy_processes": 1,
+    "failed_or_rerun_processes": 0
+  },
+  "stage_a_center_reproduction": [
+    {"stage_a_rank": 1, "fine_role_index": 5, "activation_r": 0.75, "floor_r": 0.25, "lower_actual_net_usd": -81.59622, "lower_stressed_net_usd": -103.78022, "actual_drawdown_pct": 149.93052},
+    {"stage_a_rank": 2, "fine_role_index": 14, "activation_r": 0.75, "floor_r": 0.1, "lower_actual_net_usd": -153.454488, "lower_stressed_net_usd": -175.638488, "actual_drawdown_pct": 215.804208},
+    {"stage_a_rank": 3, "fine_role_index": 23, "activation_r": 0.5, "floor_r": 0.25, "lower_actual_net_usd": -194.4807, "lower_stressed_net_usd": -216.6647, "actual_drawdown_pct": 251.78158}
+  ],
+  "complete_fine_map": {
+    "internal_roles_with_neutral_control": 28,
+    "nonneutral_roles": 27,
+    "unique_activation_floor_roles": 27,
+    "center_role_counts": [9, 9, 9],
+    "center_local_adjacency_edges": [12, 12, 12],
+    "total_adjacency_edges": 36,
+    "common_positive_four_half_year_roles": 0,
+    "identification_passing_roles": 9,
+    "primary_eligible_roles": 0,
+    "fallback_eligible_roles": 0,
+    "active_tier": "FALLBACK_REHABILITATION",
+    "active_tier_eligible_roles": 0,
+    "robust_active_tier_roles": 0,
+    "selection_kind": "DECLARED_NEAR_MISS",
+    "reason": "All 27 fine roles fail the unchanged four-half-year common-positive adverse lower-book gate. Nine pass identification, but no role reaches primary or fallback economics; Stage B makes no economic confirmation."
+  },
+  "fine_surface_observations": {
+    "best_lower_stressed_role": {"role_index": 9, "activation_r": 0.85, "floor_r": 0.3, "lower_actual_net_usd": -35.78228, "lower_stressed_net_usd": -57.96628, "actual_drawdown_pct": 112.028272, "minimum_balance_usd": -30.684272},
+    "stage_a_best_lower_stressed_net_usd": -103.78022,
+    "fine_best_lower_stressed_net_usd": -57.96628,
+    "fine_minus_stage_a_best_usd": 45.81394,
+    "all_selected_centers_floor_r": 0.3,
+    "selected_center_first_three_half_years_positive": false,
+    "selected_center_2025_h2_positive": true,
+    "upper_books_used_for_selection": false,
+    "interpretation": "The fine map materially reduces the adverse-book deficit and points to the frozen 0.30R floor boundary, but every lower book still destroys capital. This gradient cannot authorize an adjacent 0.35R rescue or any retuning after Stage B."
+  },
+  "stage_c_near_miss_centers": [
+    {
+      "development_rank": 1,
+      "role_index": 21,
+      "activation_r": 0.4,
+      "floor_r": 0.3,
+      "source_center_rank": 3,
+      "normalized_gate_deficit": 13.547999155898,
+      "lower_actual_net_usd": -39.2641,
+      "lower_stressed_net_usd": -61.4481,
+      "upper_stressed_net_usd": 320.275076,
+      "actual_drawdown_pct": 108.043865039745,
+      "minimum_balance_usd": -26.78928,
+      "identification": {"certain_triggers_presholdout": 91, "components": 5, "blocks": 5, "passed": true},
+      "weakest_half_year_lower_stressed_net_usd": -61.179188,
+      "half_year_lower_stressed_net_usd": [-61.179188, -30.176736, -25.80508, 55.712904]
+    },
+    {
+      "development_rank": 2,
+      "role_index": 9,
+      "activation_r": 0.85,
+      "floor_r": 0.3,
+      "source_center_rank": 1,
+      "normalized_gate_deficit": 14.519154921971,
+      "lower_actual_net_usd": -35.78228,
+      "lower_stressed_net_usd": -57.96628,
+      "upper_stressed_net_usd": 135.015916,
+      "actual_drawdown_pct": 112.028272,
+      "minimum_balance_usd": -30.684272,
+      "identification": {"certain_triggers_presholdout": 7, "components": 4, "blocks": 4, "passed": false},
+      "weakest_half_year_lower_stressed_net_usd": -62.909604,
+      "half_year_lower_stressed_net_usd": [-62.909604, -23.107332, -35.952336, 64.002992]
+    },
+    {
+      "development_rank": 3,
+      "role_index": 6,
+      "activation_r": 0.75,
+      "floor_r": 0.3,
+      "source_center_rank": 1,
+      "normalized_gate_deficit": 15.936763919451,
+      "lower_actual_net_usd": -57.643464,
+      "lower_stressed_net_usd": -79.827464,
+      "upper_stressed_net_usd": 138.703148,
+      "actual_drawdown_pct": 127.972624,
+      "minimum_balance_usd": -46.628624,
+      "identification": {"certain_triggers_presholdout": 15, "components": 5, "blocks": 5, "passed": false},
+      "weakest_half_year_lower_stressed_net_usd": -67.57894,
+      "half_year_lower_stressed_net_usd": [-67.57894, -23.980412, -46.354272, 58.08616]
+    }
+  ],
+  "interpretation": {
+    "fine_profit_floor_economically_confirmed": false,
+    "fine_stable_basin_confirmed": false,
+    "near_miss_is_success_claim": false,
+    "reason_for_continuation": "The complete coarse and fine stages are both economically negative, but the frozen U004 contract requires immutable-center fresh validation and one-component native-exit ablations before causal closure. Stage C may reject a center; no ablation may replace, retune or rescue it."
+  },
+  "succession": {
+    "stage_c_required": true,
+    "stage_c_center_count": 3,
+    "stage_c_roles_per_center": 6,
+    "maximum_stage_c_roles": 18,
+    "stage_c_role_meaning": "One unchanged all-five center plus five diagnostics that return exactly one component to native exit behavior.",
+    "fresh_validation_economics_opened": false,
+    "locked_holdout_opened": false,
+    "code_candidate_created": false,
+    "mt5_runs": 0,
+    "unit_004_closed": false,
+    "required_next_action": "Commit and push this complete Stage-B result, then declare immutable-center Stage C before staging any validation input or implementing any ablation."
+  },
+  "scope": {
+    "exact_v8_is_sole_economic_parent": true,
+    "all_five_existing_entry_strategies_active": true,
+    "already_open_position_management_only": true,
+    "source_volume_and_native_occupancy_retained": true,
+    "freed_capacity_profit_credit_usd": 0.0,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U004_STAGE_B_VALID_27_FINE_PROFIT_FLOOR_ROLES_ZERO_COMMON_THREE_NEAR_MISS_STAGE_C_CENTERS_NO_VALIDATION_NO_MT5"
+}

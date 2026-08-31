@@ -22,4 +22,8 @@ Declaration commit `3b9805a` reached `origin/main` before all eight inputs were 
 
 Config/source are `8,717 / 65,119` bytes at `227114D7...072EE / 5C465862...D221C`. Freeze `DD20_V8_ATTAINED_PROFIT_FLOOR_FINE_ADJACENCY_PROXY_V1_IMPLEMENTATION_FREEZE.json` is `6,003` bytes / `749B6AA1...B0E6E`.
 
-The raw result is absent. One complete Stage-B process may run only after this implementation freeze reaches `origin/main`; validation economics, locked holdout, code candidate and MT5 remain closed.
+Freeze commit `9bf16de` reached `origin/main` before one `0.3068717s` process. Stage-A center economics reproduce exactly. All `27` fine roles still fail the common-positive lower-book gate; `9` pass identification and primary/fallback remain `0 / 0`.
+
+Declared Stage-C near misses are `A/F = 0.40/0.30`, `0.85/0.30`, `0.75/0.30R`, with development lower stressed `-$61.4481 / -$57.96628 / -$79.827464` and DD `108.0439% / 112.0283% / 127.9726%`. They are not economic survivors. Raw/durable results are `353,619 / 7,613` bytes at `49964699...22C365 / F372ED0A...D1B35C`.
+
+Mandatory Stage C must test the unchanged centers under fresh validation and five one-component native-exit ablations each. Validation economics, locked holdout, code candidate and MT5 remain closed until that stage is separately declared and frozen.
