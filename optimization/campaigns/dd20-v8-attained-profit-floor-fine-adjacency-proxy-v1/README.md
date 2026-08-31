@@ -18,4 +18,8 @@ Each center contributes a complete `3 × 3` map. The union is exactly `27` uniqu
 
 ## Current boundary
 
-Stage-A result commit `355702a` reached `origin/main`. Stage B is declared pre-input, pre-implementation and pre-outcome. Declaration `DD20_V8_ATTAINED_PROFIT_FLOOR_FINE_ADJACENCY_PROXY_V1_DECLARATION.json` is `10,371` bytes / `FD8D55FA...5F33D1`. No Stage-B copy, config, proxy source, fine result, validation economics, holdout, code candidate or MT5 path exists before the declaration reaches `origin/main`.
+Declaration commit `3b9805a` reached `origin/main` before all eight inputs were staged byte-equal. Stage-A raw/durable centers agree; the outcome-free precheck constructs `27` unique candidate roles, neutral control, center edges `12 / 12 / 12`, and exact-V8 whole/development anchors.
+
+Config/source are `8,717 / 65,119` bytes at `227114D7...072EE / 5C465862...D221C`. Freeze `DD20_V8_ATTAINED_PROFIT_FLOOR_FINE_ADJACENCY_PROXY_V1_IMPLEMENTATION_FREEZE.json` is `6,003` bytes / `749B6AA1...B0E6E`.
+
+The raw result is absent. One complete Stage-B process may run only after this implementation freeze reaches `origin/main`; validation economics, locked holdout, code candidate and MT5 remain closed.
