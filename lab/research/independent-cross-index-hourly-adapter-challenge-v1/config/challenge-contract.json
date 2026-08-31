@@ -1,0 +1,230 @@
+{
+  "schema": "zeta-next-independent-cross-index-hourly-adapter-challenge-v1-contract",
+  "family": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/",
+  "program": {
+    "primary_macro_program": 1,
+    "name": "entry_signal_market_structure",
+    "height": "meso_to_macro",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "claim": "develop a separately attributable automated strategy that beats exact V8",
+    "candidate_architecture_required": "python_adapter_plus_ea",
+    "single_ea_candidate_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "isolation": {
+    "candidate_root_is_self_contained": true,
+    "forbidden_runtime_or_include_roots": [
+      "live-dev/",
+      "optimization/",
+      "lab/mt5/",
+      "another lab family"
+    ],
+    "dedicated_runtime_if_native_stage_opens": "lab/runtime/independent-cross-index-hourly-adapter-challenge-v1-portable/",
+    "candidate_identity_must_be_distinct_from_v8": true
+  },
+  "source_inputs": {
+    "role": "raw price observations only; prior family hypotheses, labels, candidate ranks and economic results are excluded",
+    "symbols": {
+      "US100": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US100_H1_BARS_20220701_20260821.csv",
+        "bytes": 2508477,
+        "lines_including_header": 24446,
+        "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812"
+      },
+      "US30": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US30_H1_BARS_20220701_20260821.csv",
+        "bytes": 2763746,
+        "lines_including_header": 24444,
+        "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92"
+      },
+      "US500": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US500_H1_BARS_20220701_20260821.csv",
+        "bytes": 2727471,
+        "lines_including_header": 24445,
+        "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85"
+      }
+    },
+    "required_columns": [
+      "time_epoch",
+      "time_server",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "inner_join_key": "time_epoch",
+    "maximum_timestamp_for_this_family_exclusive": "2026-08-01T00:00:00",
+    "post_2026_08_01_rows": "excluded from every design, fit, calibration, selection and confirmation result"
+  },
+  "periods": {
+    "initial_model_history": "2022-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_may_open_for_roles": 1
+  },
+  "causal_decision_clock": {
+    "decision": "first executable tick of each newly opened common server H1 bar",
+    "available_features": "only bars completed strictly before the decision H1 open",
+    "entry_proxy": "common H1 open at the decision timestamp with direction-specific spread charged",
+    "maximum_concurrent_positions": 1,
+    "new_decision_after_prior_exit": true
+  },
+  "features": {
+    "per_symbol": [
+      "log close return over 1 completed bar",
+      "log close return over 2 completed bars",
+      "log close return over 4 completed bars",
+      "log close return over 8 completed bars",
+      "log close return over 24 completed bars",
+      "prior body divided by prior 24-bar ATR",
+      "prior high-low range divided by prior 24-bar ATR",
+      "prior close location in prior high-low range",
+      "6-bar realized volatility",
+      "24-bar realized volatility",
+      "24-bar ATR divided by prior close",
+      "log tick-volume z-score against the prior 24 bars",
+      "prior recorded spread price divided by prior 24-bar ATR"
+    ],
+    "cross_index": [
+      "cross-sectional dispersion of 1-bar returns",
+      "cross-sectional dispersion of 4-bar returns",
+      "each symbol 1-bar return minus the three-symbol mean",
+      "each symbol 4-bar return minus the three-symbol mean"
+    ],
+    "calendar": [
+      "server-hour sine",
+      "server-hour cosine",
+      "server-weekday sine",
+      "server-weekday cosine"
+    ],
+    "warmup_bars": 72,
+    "nonfinite_feature_policy": "drop the decision row before prediction"
+  },
+  "target": {
+    "per_symbol": "next common H1 open-to-open price movement divided by the 24-bar ATR available at the decision",
+    "training_label_available_only_after_next_open": true,
+    "direction": "sign of predicted normalized movement"
+  },
+  "model": {
+    "implementation": "sklearn.ensemble.HistGradientBoostingRegressor",
+    "one_model_per_symbol": true,
+    "monthly_refit": true,
+    "lookback_calendar_months": 18,
+    "minimum_training_calendar_months": 9,
+    "minimum_training_rows": 2500,
+    "calibration_tail_calendar_months": 3,
+    "calibration_process": "fit on the earlier part of the causal window, predict the final three months, pool absolute predictions across symbols, freeze density quantiles, then refit each symbol on the complete causal window",
+    "hyperparameters": {
+      "loss": "squared_error",
+      "learning_rate": 0.05,
+      "max_iter": 160,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 80,
+      "l2_regularization": 2.0,
+      "max_bins": 63,
+      "early_stopping": false,
+      "random_state": 260831
+    }
+  },
+  "candidate_bundle": {
+    "common_selection": "at each decision choose only the executable symbol with the largest absolute predicted normalized movement",
+    "roles": [
+      {
+        "role": "BREADTH_Q80",
+        "minimum_absolute_score": "monthly causal calibration q80"
+      },
+      {
+        "role": "BALANCED_Q85",
+        "minimum_absolute_score": "monthly causal calibration q85"
+      },
+      {
+        "role": "SELECTIVE_Q90",
+        "minimum_absolute_score": "monthly causal calibration q90"
+      }
+    ],
+    "cost_awareness": "predicted absolute normalized movement must be at least two times the current recorded spread price divided by the frozen ATR",
+    "no_adjacent_quantile_or_hyperparameter_rescue_inside_v1": true
+  },
+  "position_and_proxy_execution": {
+    "initial_deposit_usd": 100.0,
+    "leverage": "1:100",
+    "target_position_risk_fraction_of_current_balance": 0.02,
+    "hard_planned_risk_cap_fraction_after_minimum_lot_rounding": 0.04,
+    "stop_distance": "1.5 times the 24-bar ATR frozen at decision",
+    "take_profit": "none",
+    "maximum_hold": "first executable tick of the next common H1 bar",
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_rounding": "floor target-risk volume to the 0.01 step; use minimum 0.01 only when planned stop loss is at most 4% of current balance; otherwise skip",
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "actual_cost": "one recorded direction-specific round-trip spread",
+    "stressed_cost": "two times the recorded direction-specific round-trip spread",
+    "stop_detection": "adverse H1 high or low crossing of the exact spread-aware protective level; stop is always adverse so no same-bar take-profit ordering exists",
+    "balance_compounding": true
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_net_positive": true,
+    "both_2024_and_2025_stressed_net_positive": true,
+    "development_actual_net_above_v8": 149.97,
+    "development_stressed_net_above_v8": 127.786,
+    "development_closed_balance_drawdown_pct_max": 37.39,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "selection": "highest stressed net among complete gate passers, tie lower drawdown then higher minimum yearly stressed net",
+    "maximum_roles_to_locked_confirmation": 1
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "comparison_interval": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "complete_python_adapter_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_challenge_victory": true
+  },
+  "native_escalation": {
+    "condition": "exactly one unchanged proxy role passes development, locked confirmation and whole proxy challenge gates",
+    "required_architecture": [
+      "campaign-owned Python adapter",
+      "campaign-owned EA executor"
+    ],
+    "metaeditor_compile": "0 errors / 0 warnings",
+    "tester_model": "FPMarkets Every tick based on real ticks with 100% real ticks",
+    "required_symbols": [
+      "US100",
+      "US30",
+      "US500"
+    ],
+    "maximum_candidate_economic_paths": 1,
+    "environment_or_engineering_corrections_are_not_economic_paths": true,
+    "master_or_live_terminal_forbidden": true
+  },
+  "stop_rules": {
+    "no_development_passer": "close V1 without opening 2026 confirmation, EA implementation or MT5; recompare and design a materially distinct adapter architecture",
+    "confirmation_or_whole_proxy_failure": "close V1 without EA or MT5 and do not rescue an adjacent density quantile or model hyperparameter",
+    "native_failure": "close the complete V1 family; environment and engineering faults are corrected, but valid adverse economics are not retuned inside V1",
+    "success": "record a verified V8 challenge victory; Live remains unchanged and any deployment requires a separate user-authorized engineering and Live decision"
+  },
+  "preoutcome_state": {
+    "input_copies_created": false,
+    "adapter_implemented": false,
+    "candidate_outcomes_calculated": false,
+    "locked_confirmation_opened": false,
+    "ea_implemented": false,
+    "mt5_paths_run": 0,
+    "live_changed": false
+  }
+}
