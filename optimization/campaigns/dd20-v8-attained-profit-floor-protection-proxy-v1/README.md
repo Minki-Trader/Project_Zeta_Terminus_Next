@@ -20,4 +20,8 @@ Declaration commit `71b0bb6` reached `origin/main` before the exact lifecycle/ca
 
 The outcome-free structural precheck joins all `965` exact-V8 lifecycles one-to-one to their POSITION_OPEN contexts, constructs exact neutral plus eight nonneutral roles with `10` immediate coarse edges, and reproduces exact-V8 whole/development economics. It reads January-May only for identification density (`168` lifecycles), not candidate economics. Freeze `DD20_V8_ATTAINED_PROFIT_FLOOR_PROTECTION_PROXY_V1_IMPLEMENTATION_FREEZE.json` is `5,695` bytes / `41BA6A8F...155C7B`.
 
-The raw result is absent. One complete Stage-A process may run only after this implementation freeze reaches `origin/main`; validation economics, locked June-July, code candidate, MT5, Lab and Live remain unopened.
+Freeze commit `44bbdb5` reached `origin/main` before the sole `0.2293841s` Stage-A process. All eight nonneutral roles fail the four-half-year common-positive lower-book gate; `4` pass identification, but primary/fallback eligibility is `0 / 0`. This is no coarse economic confirmation.
+
+The three declared near-miss centers are activation/floor `0.75/0.25R`, `0.75/0.10R` and `0.50/0.25R`. Their development lower stressed nets are `-$103.78022 / -$175.638488 / -$216.6647`; they advance only because mandatory Stage B must exhaust the frozen local neighborhoods, not because they passed an economic gate. Raw result is `113,737` bytes / `940A50D7...AF5BF`; durable result is `8,814` bytes / `EFC49420...FB040`.
+
+Stage B remains required and U004 remains open. Validation economics, locked June-July, code candidate, MT5, Lab and Live remain unopened.
