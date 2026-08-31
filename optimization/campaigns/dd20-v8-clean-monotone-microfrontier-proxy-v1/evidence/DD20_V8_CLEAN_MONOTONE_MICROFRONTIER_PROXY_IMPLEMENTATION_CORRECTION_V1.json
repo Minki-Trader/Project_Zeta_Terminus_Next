@@ -1,0 +1,60 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-monotone-microfrontier-proxy-implementation-correction-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "CORRECTION_FROZEN_PRE_CANDIDATE_OUTCOME",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "A_STATIC_MONOTONE_MICROFRONTIER",
+  "trigger": {
+    "first_invocation_status": "STOPPED_AT_EXACT_ANCHOR_REPRODUCTION_GATE",
+    "raw_result_written": false,
+    "candidate_lattice_outcome_opened": false,
+    "mt5_executed": false,
+    "observed_anchor_actual_net_usd": 409.81,
+    "observed_anchor_stressed_net_usd": 367.818,
+    "observed_actual_closed_balance_drawdown_pct": 35.46,
+    "observed_stressed_counterfactual_closed_balance_drawdown_pct": 40.89
+  },
+  "cause": "The implementation returned the maximum of actual and doubled-cost-stressed closed-balance drawdown under the field used by the declaration's 35.46% native actual-balance anchor. Net, lifecycle and admission reproduction were exact; only the drawdown basis was mislabeled and therefore failed closed.",
+  "correction": {
+    "economic_lattice_changed": false,
+    "periods_changed": false,
+    "gates_changed": false,
+    "ranking_changed": false,
+    "input_changed": false,
+    "actual_closed_balance_drawdown": "Now supplies raw_closed_balance_drawdown_pct and every declared drawdown gate, matching the clean native balance anchor.",
+    "stressed_counterfactual_drawdown": "Retained and reported separately as stressed_counterfactual_closed_balance_drawdown_pct; it remains diagnostic and cannot replace the native anchor definition.",
+    "minimum_balance": "Remains the smaller actual/stressed balance and therefore keeps the conservative positivity check unchanged.",
+    "aggregate_admission": "Remains based on the smaller actual/stressed replay balance and is unchanged."
+  },
+  "corrected_freeze": {
+    "config": {
+      "path": "optimization/campaigns/dd20-v8-clean-monotone-microfrontier-proxy-v1/config/proxy-contract.json",
+      "bytes": 3554,
+      "sha256": "8B45E8CCD2C34F4B1308F067E08F8D83C0536714CB47C1DC7AE99A8CBE5F9249"
+    },
+    "script": {
+      "path": "optimization/campaigns/dd20-v8-clean-monotone-microfrontier-proxy-v1/proxy/run_proxy.py",
+      "bytes": 31438,
+      "lines": 759,
+      "sha256": "46C3F1738E5554031C54D69E133D3945741C52314A0690075B4684388FBE7E5C"
+    },
+    "syntax_compile": "PASSED",
+    "exact_anchor_recheck": {
+      "accepted_lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818,
+      "actual_closed_balance_drawdown_pct": 35.46,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 40.89,
+      "minimum_conservative_balance_usd": 59.11,
+      "passed": true
+    }
+  },
+  "authority": {
+    "implementation_or_design_correction_only": true,
+    "stage_a_may_execute_only_after_this_correction_reaches_origin_main": true,
+    "unit_closure_authority": false,
+    "lab_opened": false,
+    "live_changed": false
+  },
+  "marker": "STAGE_A_FIRST_INVOCATION_FAILED_CLOSED_ON_DRAWDOWN_BASIS_ACTUAL_NATIVE_ANCHOR_RESTORED_STRESSED_DD_SEPARATE_NO_CANDIDATE_OUTCOME"
+}

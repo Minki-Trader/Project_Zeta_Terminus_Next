@@ -309,7 +309,8 @@ def simulate(
     return {
         "actual_net": actual_balance - reference,
         "stressed_net": stressed_balance - reference,
-        "drawdown_pct": np.maximum(actual_dd, stressed_dd) * 100.0,
+        "drawdown_pct": actual_dd * 100.0,
+        "stressed_drawdown_pct": stressed_dd * 100.0,
         "minimum_balance": minimum_balance,
         "accepted": accepted,
         "aggregate_skips": aggregate_skips,
@@ -354,6 +355,9 @@ def record(
         "actual_net_usd": float(metrics["actual_net"][index]),
         "stressed_net_usd": float(metrics["stressed_net"][index]),
         "raw_closed_balance_drawdown_pct": float(metrics["drawdown_pct"][index]),
+        "stressed_counterfactual_closed_balance_drawdown_pct": float(
+            metrics["stressed_drawdown_pct"][index]
+        ),
         "minimum_balance_usd": float(metrics["minimum_balance"][index]),
         "accepted_source_lifecycles": int(metrics["accepted"][index]),
         "aggregate_skips_within_source_path": int(metrics["aggregate_skips"][index]),
