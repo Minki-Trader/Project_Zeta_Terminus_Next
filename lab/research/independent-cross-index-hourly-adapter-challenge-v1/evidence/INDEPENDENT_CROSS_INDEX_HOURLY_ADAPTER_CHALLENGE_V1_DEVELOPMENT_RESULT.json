@@ -1,0 +1,157 @@
+{
+  "schema": "zeta-next-independent-cross-index-hourly-adapter-challenge-v1-development-durable-result",
+  "recorded_at_utc": "2026-08-31T09:07:20.307Z",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/",
+  "status": "VALID_DEVELOPMENT_NO_ROLE_PASSED_LOCKED_CONFIRMATION_MUST_REMAIN_CLOSED",
+  "execution_authority": {
+    "implementation_freeze_path": "lab/research/independent-cross-index-hourly-adapter-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_HOURLY_ADAPTER_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+    "implementation_freeze_bytes": 4482,
+    "implementation_freeze_sha256": "125EE3FFEA0C53CFE5357EA3F51381F6A6FBFA90C0BB3A02D5C9312A623DD254",
+    "implementation_freeze_commit": "eafab635123ebcfc838fe69ccd447e2759065c4d",
+    "implementation_freeze_commit_equal_origin_main_before_process": true
+  },
+  "process": {
+    "complete_processes": 1,
+    "exit_code": 0,
+    "model_months": 24,
+    "model_fits": 144,
+    "feature_count": 51,
+    "candidate_roles": 3,
+    "development_interval": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "normal_trading_days": 517,
+    "locked_confirmation_opened": false
+  },
+  "raw_artifacts": {
+    "result": {
+      "path": "lab/artifacts/independent-cross-index-hourly-adapter-challenge-v1/development/development-result.json",
+      "bytes": 20963,
+      "sha256": "BD10AAF405A7A41163B88A75F80069795343F16F1A9F0167E2A2094CB58678DF"
+    },
+    "decision_tape": {
+      "path": "lab/artifacts/independent-cross-index-hourly-adapter-challenge-v1/development/development-decisions.csv",
+      "bytes": 2278027,
+      "lines_including_header": 8099,
+      "sha256": "7AF6925EB63FFC4DAB32291F40D771F64C4215258B05B702770B5E573A7A3C49"
+    }
+  },
+  "roles": [
+    {
+      "role": "BREADTH_Q80",
+      "lifecycle_starts": 3516,
+      "average_starts_per_normal_trading_day": 6.800773694390716,
+      "symbol_starts": {
+        "US100": 1123,
+        "US30": 1304,
+        "US500": 1089
+      },
+      "stop_exits": 462,
+      "actual_net_usd": -59.78429999998031,
+      "stressed_net_usd": -151.44509999998021,
+      "actual_closed_balance_drawdown_pct": 80.25070510341152,
+      "actual_minimum_balance_usd": 34.60477500001948,
+      "stressed_minimum_balance_usd": -54.99302499998036,
+      "extra_doubled_cost_usd": 91.66080000000083,
+      "years": {
+        "2024": {
+          "starts": 1727,
+          "actual_net_usd": 24.373318750020104,
+          "stressed_net_usd": -37.04278124997991
+        },
+        "2025": {
+          "starts": 1789,
+          "actual_net_usd": -84.15761875000045,
+          "stressed_net_usd": -114.40231875000032
+        }
+      },
+      "turnover_gate_passed": true,
+      "all_economic_and_drawdown_gates_passed": false
+    },
+    {
+      "role": "BALANCED_Q85",
+      "lifecycle_starts": 2769,
+      "average_starts_per_normal_trading_day": 5.355899419729207,
+      "symbol_starts": {
+        "US100": 881,
+        "US30": 1058,
+        "US500": 830
+      },
+      "stop_exits": 386,
+      "actual_net_usd": -51.58015624998541,
+      "stressed_net_usd": -122.61895624998576,
+      "actual_closed_balance_drawdown_pct": 72.63580443687005,
+      "actual_minimum_balance_usd": 41.77818125001455,
+      "stressed_minimum_balance_usd": -27.370118749985792,
+      "extra_doubled_cost_usd": 71.03880000000014,
+      "years": {
+        "2024": {
+          "starts": 1343,
+          "actual_net_usd": 23.00063125001376,
+          "stressed_net_usd": -20.733668749986123
+        },
+        "2025": {
+          "starts": 1426,
+          "actual_net_usd": -74.58078749999952,
+          "stressed_net_usd": -101.88528749999962
+        }
+      },
+      "turnover_gate_passed": true,
+      "all_economic_and_drawdown_gates_passed": false
+    },
+    {
+      "role": "SELECTIVE_Q90",
+      "lifecycle_starts": 1813,
+      "average_starts_per_normal_trading_day": 3.506769825918762,
+      "symbol_starts": {
+        "US100": 600,
+        "US30": 679,
+        "US500": 534
+      },
+      "stop_exits": 284,
+      "actual_net_usd": -49.52286874999002,
+      "stressed_net_usd": -93.04816874999035,
+      "actual_closed_balance_drawdown_pct": 70.88709330490128,
+      "actual_minimum_balance_usd": 45.04570000000976,
+      "stressed_minimum_balance_usd": 2.247900000009424,
+      "extra_doubled_cost_usd": 43.52530000000024,
+      "years": {
+        "2024": {
+          "starts": 877,
+          "actual_net_usd": 3.2901937500093843,
+          "stressed_net_usd": -23.7336062499905
+        },
+        "2025": {
+          "starts": 936,
+          "actual_net_usd": -52.81306249999971,
+          "stressed_net_usd": -69.31456249999971
+        }
+      },
+      "turnover_gate_passed": true,
+      "all_economic_and_drawdown_gates_passed": false
+    }
+  ],
+  "gate_summary": {
+    "turnover_pass_count": 3,
+    "both_year_actual_positive_pass_count": 0,
+    "both_year_stressed_positive_pass_count": 0,
+    "development_actual_v8_pass_count": 0,
+    "development_stressed_v8_pass_count": 0,
+    "drawdown_pass_count": 0,
+    "complete_development_pass_count": 0,
+    "selected_role": null
+  },
+  "interpretation": {
+    "density": "The architecture generated sufficient turnover at all three predeclared densities.",
+    "directional_generalization": "Every role was nominally positive in 2024 before stress but all reversed to material nominal and stressed losses in 2025.",
+    "cost_resilience": "All 2024 stressed books were already negative; reducing density monotonically reduced but did not remove the economic loss.",
+    "risk": "Actual closed-balance drawdown remained 70.89% to 80.25%, far above the 37.39% development ceiling.",
+    "family_judgment": "This is a valid adverse architecture result, not an environment or implementation correction state."
+  },
+  "downstream_authority": {
+    "locked_2026_confirmation_authorized": false,
+    "ea_implementation_authorized": false,
+    "mt5_authorized": false,
+    "v8_challenge_victory": false,
+    "live_change_authorized": false
+  }
+}
