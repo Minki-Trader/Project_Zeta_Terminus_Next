@@ -26,3 +26,11 @@ This stage may only suppress, reorder or resize exact-V8 opportunities through t
 Declaration commit `7f36ba276a2575fb8246760705692c79e77b7f46` reached `origin/main` before staging. The three inputs are byte-equal, the Stage-A schema/status and all three center vectors match, and the local counts reproduce `144 / 216 / 144` with an exact `504 / 504` value/coordinate union. The inherited Stage-A executable model is unchanged.
 
 Config is `5,146` bytes / `AF5211E7...F84DE`; the Python source is `43,915` bytes / `51DB529A...739CD` and passes Python `3.13.9` syntax compilation with NumPy `2.3.4`. No Stage-B output exists. Execution waits until the implementation-freeze boundary reaches `origin/main`.
+
+## Final Stage-B result
+
+The unchanged run completed `504` candidates in `0.5285798s`: `216` primary-eligible, `324` fallback-eligible and all `216` active-tier points on the fine-neighbor plateau. The three selected centers are the three exact Stage-A seeds, each with seven eligible neighbors across five axes and identical development/validation economics. No half-step nonseed displaced a seed.
+
+All three validation roles pass and advance as static Stage-C seeds. Frozen canonical order selected `1.25 / 1.5 / 1.5 / 2 / 1.25 / 0`, risk `0.04`, cap `0.12` for the sole holdout; it passed actual/stressed `+$23.3743 / +$21.5323` at `13.8019%` actual DD. Its continuous whole replay is `+$311.327 / +$281.3365` at `24.0998%` actual DD, retaining `76.4880%` of exact-V8 stressed net. Other seeds did not receive post-hoc holdout/whole treatment, so whole-path identity among the three is not claimed.
+
+Final status is `VALID_PROXY_COMPLETE_STAGE_B_SURVIVOR_STAGE_C_REQUIRED_NO_MT5`. Stage B confirms the local static basin without improving it; mandatory causal Stage C opens next with zero MT5, Lab, new-entry or Live authority.

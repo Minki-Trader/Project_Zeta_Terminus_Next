@@ -1,0 +1,156 @@
+{
+  "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-v1-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_OUTCOME_UNOPENED",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "primary_macro_program": 5,
+  "unit_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING",
+  "predecessor": {
+    "campaign": "optimization/campaigns/dd20-v8-clean-executable-basin-refinement-proxy-v1/",
+    "final_status": "VALID_PROXY_COMPLETE_STAGE_B_SURVIVOR_STAGE_C_REQUIRED_NO_MT5",
+    "raw_result_path": "optimization/artifacts/raw/dd20-v8-clean-executable-basin-refinement-proxy-v1/output/proxy-result.json",
+    "raw_result_bytes": 31666,
+    "raw_result_sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8",
+    "economic_rows": 504,
+    "mt5_runs": 0
+  },
+  "v8_only_scope": {
+    "economic_parent": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v7_economic_input": false,
+    "lab_economic_input": false,
+    "legacy_optimization_economic_input": false,
+    "external_input": false,
+    "code_or_mechanism_change": true,
+    "new_entry_strategy": false,
+    "new_symbol_timeframe_signal_direction_or_opportunity_timestamp_allowed": false
+  },
+  "inputs": [
+    {
+      "role": "matched exact-V8 accepted lifecycle outcomes",
+      "source_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/candidate-valid-nonconfirmation/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaTerminusNext/optimization/dd20-pcr2/research/research-lifecycles.csv",
+      "staged_name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "role": "exact-V8 volume, risk-capital and admission context",
+      "source_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/candidate-valid-nonconfirmation/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaTerminusNext/optimization/dd20-pcr2/research/research-candidates.csv",
+      "staged_name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    },
+    {
+      "role": "frozen Stage-B seed authority",
+      "source_path": "optimization/artifacts/raw/dd20-v8-clean-executable-basin-refinement-proxy-v1/output/proxy-result.json",
+      "staged_name": "stage-b-proxy-result.json",
+      "bytes": 31666,
+      "sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8"
+    }
+  ],
+  "static_seeds": [
+    {
+      "stage_b_rank": 1,
+      "weights": [1.25, 1.5, 1.5, 2.0, 1.25, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "stage_b_rank": 2,
+      "weights": [1.25, 1.5, 1.75, 2.25, 0.75, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "stage_b_rank": 3,
+      "weights": [1.25, 1.5, 2.0, 2.25, 1.25, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    }
+  ],
+  "causal_state_contract": {
+    "state_balance": "candidate actual realized closed balance",
+    "state_high_water_mark": "maximum candidate actual closed balance observed so far in the current fresh replay",
+    "current_drawdown": "max(0, (actual high-water balance - actual balance) / actual high-water balance)",
+    "activation_event": "After an admitted lifecycle close updates actual balance and current drawdown, inactive state activates when current drawdown is at least the trigger.",
+    "activation_effect_timing": "Only births strictly later in replay order observe the active multiplier.",
+    "active_target_volume": "round_to_0.01(0.01 * candidate daily stressed-balance multiplier * static component weight * state multiplier)",
+    "active_position_budget": "candidate conservative capital * fixed 0.04 * active executable component multiplier",
+    "aggregate_budget": "candidate conservative capital * static seed aggregate fraction 0.12",
+    "release_drawdown": "max(0, trigger drawdown - release hysteresis)",
+    "hold_count": "Accepted lifecycle closes strictly after the triggering close while state remains active.",
+    "release_event": "After an accepted close, release only when hold_count is at least the declared minimum and current drawdown is at or below release_drawdown.",
+    "retrigger_allowed": true,
+    "period_reset": "Each replay period begins at $100 with inactive state, zero hold count and its own actual/stressed balances and high-water marks.",
+    "force_close_or_resize_existing_position": false,
+    "new_opportunity_created": false,
+    "future_or_period_label_used": false,
+    "open_equity_used": false
+  },
+  "variant_lattice": {
+    "trigger_drawdown_fractions": [0.05, 0.075, 0.1, 0.125],
+    "future_birth_effective_risk_multipliers": [0.5, 0.65, 0.8],
+    "release_hysteresis_fractions": [0.025, 0.05],
+    "minimum_subsequent_accepted_closes": [5, 10, 20],
+    "variants_per_static_seed": 72,
+    "static_seed_count": 3,
+    "total_parameterizations": 216,
+    "base_position_risk_values": [0.04],
+    "passive_weight_values": [0.0]
+  },
+  "temporal_and_selection_contract": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_years_separately_positive": true,
+    "validation_fresh_100": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout_fresh_100": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"],
+    "state_must_activate_and_affect_at_least_one_development_birth": true,
+    "primary_stressed_retention_vs_exact_v8_development": 0.8,
+    "primary_max_actual_closed_balance_drawdown_pct": 21.2,
+    "primary_minimum_drawdown_improvement_vs_own_static_seed_points": 1.0,
+    "fallback_stressed_retention_vs_exact_v8_development": 0.75,
+    "fallback_minimum_drawdown_improvement_vs_own_static_seed_points": 2.0,
+    "minimum_eligible_immediate_neighbors_within_same_seed": 4,
+    "minimum_neighbor_state_axes": 3,
+    "maximum_development_centers_per_static_seed": 1,
+    "maximum_total_development_centers": 3,
+    "development_ranking": "active tier; weakest eligible-neighbor stressed-net/DD; candidate stressed-net/DD; stressed net; lower actual DD; lighter intervention; canonical state vector",
+    "validation_max_actual_closed_balance_drawdown_pct": 30.0,
+    "same_holdout_winner_only": true,
+    "holdout_max_actual_closed_balance_drawdown_pct": 30.0,
+    "whole_path_minimum_stressed_retention_vs_exact_v8": 0.75,
+    "whole_path_minimum_drawdown_improvement_vs_exact_v8_points": 5.0
+  },
+  "telemetry": [
+    "state_trigger_count",
+    "state_release_count",
+    "births_observed_while_active",
+    "births_whose_target_steps_changed_by_state",
+    "admitted_births_while_active",
+    "accepted_closes_counted_toward_hold",
+    "per-component actual/stressed net and closes"
+  ],
+  "stage_succession": {
+    "stage_c_can_close_unit": false,
+    "stage_d_required": true,
+    "stage_d_scope": "All unchanged surviving Stage-C roles are judged across 2024-H1, 2024-H2, 2025-H1, 2025-H2, 2026 January-May and the frozen June-July block under actual and doubled observed costs.",
+    "automatic_adjacent_successor_outside_declared_stage": false
+  },
+  "limitations": [
+    "Accepted-source replay cannot assign outcomes to opportunities newly admitted by state-reduced capacity.",
+    "It cannot reconstruct open-equity drawdown or candidate-specific native protective-stop quantization.",
+    "Actual closed-balance state is deployable and causal, but proxy economics remain selection information until the sole final native pair."
+  ],
+  "mt5_budget": {
+    "stage_c_runs": 0,
+    "stage_c_runs_authorized": 0,
+    "maximum_unit_valid_economic_paths_after_stage_d": 2
+  },
+  "pre_outcome_boundary": {
+    "input_staged": false,
+    "config_created": false,
+    "implementation_created": false,
+    "proxy_executed": false,
+    "mt5_executed": false,
+    "required_next_action": "Commit and push the Stage-B result and this Stage-C declaration before staging any Stage-C input."
+  },
+  "marker": "UNIT_001_STAGE_C_CAUSAL_ACTUAL_CLOSED_BALANCE_DRAWDOWN_FUTURE_BIRTH_RISK_SHAPING_216_VARIANTS_DECLARED_OUTCOME_UNOPENED_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}

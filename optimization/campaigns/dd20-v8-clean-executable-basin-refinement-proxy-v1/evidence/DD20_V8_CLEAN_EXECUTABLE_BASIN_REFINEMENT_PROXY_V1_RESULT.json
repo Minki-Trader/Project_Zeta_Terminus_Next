@@ -1,0 +1,152 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-executable-basin-refinement-proxy-v1-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_B_SURVIVOR_STAGE_C_REQUIRED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "B_HALF_STEP_ADJACENT_REFINEMENT",
+  "unit_closure_authority": false,
+  "authority": {
+    "implementation_freeze_commit_on_origin_main": "5bfd00d",
+    "economic_parent": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v7_or_lab_economic_input": false,
+    "external_input": false,
+    "lab_opened": false,
+    "new_entry_strategy": false,
+    "live_changed": false
+  },
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-clean-executable-basin-refinement-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 5146,
+    "config_sha256": "AF5211E7BCBCC7F921C2981E9F2F80F47AA3E2FFFB206531489E174AAE7F84DE",
+    "script_path": "optimization/campaigns/dd20-v8-clean-executable-basin-refinement-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 43915,
+    "script_sha256": "51DB529AD974AF41D035CEBE0BA916CEC2C728490D89155E9574B0C1BDB739CD",
+    "wall_time_seconds": 0.5285798,
+    "mt5_runs": 0
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-clean-executable-basin-refinement-proxy-v1/output/proxy-result.json",
+    "bytes": 31666,
+    "sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8"
+  },
+  "exact_anchor_reproduction": {
+    "birth_to_position_open_join": "965/965",
+    "source_component_volume_matches": "965/965",
+    "source_risk_capital_matches": "965/965",
+    "source_position_cap_matches": "965/965",
+    "accepted_lifecycles": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "passed": true
+  },
+  "stage_b_counts": {
+    "declared_parameterizations": 504,
+    "center_local_unique_counts": [144, 216, 144],
+    "primary_eligible": 216,
+    "fallback_eligible": 324,
+    "active_tier": "PRIMARY",
+    "development_plateau_population": 216,
+    "development_centers": 3,
+    "validation_passing_centers": 3,
+    "stage_c_seed_centers": 3
+  },
+  "development_centers": [
+    {
+      "rank": 1,
+      "weights": [1.25, 1.5, 1.5, 2.0, 1.25, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "actual_net_usd": 150.105,
+      "stressed_net_usd": 133.103,
+      "actual_closed_balance_drawdown_pct": 24.099813585,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 25.303249736,
+      "eligible_neighbor_count": 7,
+      "neighbor_axis_count": 5,
+      "distance_from_stage_a_centers": 0,
+      "development_2024_stressed_net_usd": 9.27,
+      "development_2025_stressed_net_usd": 123.833,
+      "validation_stressed_net_usd": 70.960666667,
+      "validation_actual_drawdown_pct": 16.951383347,
+      "validation_passed": true
+    },
+    {
+      "rank": 2,
+      "weights": [1.25, 1.5, 1.75, 2.25, 0.75, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "actual_net_usd": 150.105,
+      "stressed_net_usd": 133.103,
+      "actual_closed_balance_drawdown_pct": 24.099813585,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 25.303249736,
+      "eligible_neighbor_count": 7,
+      "neighbor_axis_count": 5,
+      "distance_from_stage_a_centers": 0,
+      "development_2024_stressed_net_usd": 9.27,
+      "development_2025_stressed_net_usd": 123.833,
+      "validation_stressed_net_usd": 70.960666667,
+      "validation_actual_drawdown_pct": 16.951383347,
+      "validation_passed": true
+    },
+    {
+      "rank": 3,
+      "weights": [1.25, 1.5, 2.0, 2.25, 1.25, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "actual_net_usd": 150.105,
+      "stressed_net_usd": 133.103,
+      "actual_closed_balance_drawdown_pct": 24.099813585,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 25.303249736,
+      "eligible_neighbor_count": 7,
+      "neighbor_axis_count": 5,
+      "distance_from_stage_a_centers": 0,
+      "development_2024_stressed_net_usd": 9.27,
+      "development_2025_stressed_net_usd": 123.833,
+      "validation_stressed_net_usd": 70.960666667,
+      "validation_actual_drawdown_pct": 16.951383347,
+      "validation_passed": true
+    }
+  ],
+  "locked_holdout_winner": {
+    "development_rank": 1,
+    "selection_reason": "All declared development and validation ranking fields tied; the frozen canonical parameter order selected the first center without opening an alternate holdout.",
+    "weights": [1.25, 1.5, 1.5, 2.0, 1.25, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "actual_net_usd": 23.374333333,
+    "stressed_net_usd": 21.532333333,
+    "actual_closed_balance_drawdown_pct": 13.801943672,
+    "accepted_source_lifecycles": 53,
+    "aggregate_skips_within_source_path": 3,
+    "passed": true
+  },
+  "winner_whole_path": {
+    "actual_net_usd": 311.327,
+    "stressed_net_usd": 281.3365,
+    "actual_closed_balance_drawdown_pct": 24.099813585,
+    "stressed_counterfactual_closed_balance_drawdown_pct": 25.303249736,
+    "accepted_source_lifecycles": 900,
+    "aggregate_skips_within_source_path": 65,
+    "stressed_net_retention_vs_exact_v8": 0.764879642,
+    "actual_drawdown_improvement_points_vs_exact_v8": 11.360186415,
+    "final_gate_passed": true
+  },
+  "judgment": {
+    "valid_stage_b_survivor": true,
+    "half_step_nonseed_displaced_a_frozen_stage_a_center": false,
+    "local_basin_confirmed": true,
+    "reason": "Every primary-eligible point met the fine-neighbor plateau rule, but the three selected robust centers remained the exact Stage-A centers at zero fine-coordinate distance. Half-step refinement confirmed local stability without identifying a superior nonseed center.",
+    "all_three_static_centers_advance_to_stage_c": true,
+    "other_centers_whole_path_or_holdout_opened_posthoc": false,
+    "whole_path_identity_across_three_seeds_claimed": false,
+    "mt5_shortlist_opened": false,
+    "required_next_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING"
+  },
+  "limitations": [
+    "The accepted-source proxy gives no credit to opportunities newly freed by lower volume or risk.",
+    "It cannot reconstruct candidate-specific open-equity paths or native stop quantization.",
+    "Development and validation equality does not prove the three static seeds share an identical continuous whole path; only the frozen rank-1 winner received Stage-B holdout and whole-path treatment.",
+    "Stage C is a new causal mechanism layer and must be declared before evaluating all three static seeds."
+  ],
+  "marker": "UNIT_001_STAGE_B_VALID_216_PRIMARY_PLATEAU_THREE_STATIC_SEEDS_ADVANCE_STAGE_C_NO_HALF_STEP_DISPLACEMENT_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}
