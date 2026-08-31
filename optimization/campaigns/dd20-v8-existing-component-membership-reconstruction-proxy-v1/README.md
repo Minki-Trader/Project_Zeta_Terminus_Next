@@ -37,3 +37,9 @@ Correction commit `7fac0b5` reached `origin/main` before implementation resumed.
 The structural precheck produced `93` raw roles, `79` unique roles, `14` duplicates, all `31` nonempty masks and `207` unique-role adjacency edges. Exact V8 reproduced `+$409.81 / +$367.818 / 35.46%`, and every static seed reproduced development `+$150.105 / +$133.103 / 24.099813585%`. Candidate membership economics were not executed. Config is `5,423` bytes / `39DB7375...BA155`; source is `46,688` bytes / `F22C7C7B...713D0` and passes Python `3.13.9` syntax with NumPy `2.3.4`.
 
 No raw result exists. The frozen candidate map may execute once only after the implementation-freeze boundary reaches `origin/main`; validation, locked holdout, MT5, Lab/new-entry and Live remain unopened.
+
+## Execution-key correction
+
+After freeze commit `88255fe` reached `origin/main`, the first process stopped before result serialization with `KeyError: maximum_valid_economic_paths`. The config correctly freezes `maximum_valid_economic_paths_after_all_proxy_stages`; only the result-metadata source reference retained the shorter old key. No output or economic summary exists. Although candidate arrays were calculated in memory before metadata construction failed, no metric or rank was exposed and no economic verdict is valid.
+
+`DD20_V8_EXISTING_COMPONENT_MEMBERSHIP_RECONSTRUCTION_PROXY_V1_EXECUTION_KEY_CORRECTION_DECLARATION.json` permits exactly one source-token replacement and no config, input, lattice, gate, period or selection change. The declaration must reach `origin/main`, followed by a corrected implementation freeze, before one clean replay.

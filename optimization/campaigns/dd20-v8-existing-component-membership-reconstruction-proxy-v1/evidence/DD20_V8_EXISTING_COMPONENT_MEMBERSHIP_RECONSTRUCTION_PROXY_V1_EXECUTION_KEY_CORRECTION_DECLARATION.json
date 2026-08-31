@@ -1,0 +1,63 @@
+{
+  "schema": "zeta-next-dd20-v8-existing-component-membership-reconstruction-proxy-v1-execution-key-correction-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "CORRECTION_DECLARED_NO_ECONOMIC_VERDICT_NO_RESULT",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "A_COMPLETE_EXISTING_COMPONENT_MEMBERSHIP_MAP",
+  "failed_frozen_implementation": {
+    "implementation_freeze_commit_on_origin_main": "88255fec5a1cbb22b85f5d423ee0ab7588c8787a",
+    "config_bytes": 5423,
+    "config_sha256": "39DB7375E01C564512D4C563D76009BB6E57F99308C9ACF5FC9149C4569BA155",
+    "script_bytes": 46688,
+    "script_sha256": "F22C7C7B44274403C5019AF524FA1892CB92B06620949596882047012A5713D0"
+  },
+  "execution_observation": {
+    "process_exit_code": 1,
+    "exception_type": "KeyError",
+    "exception_value": "maximum_valid_economic_paths",
+    "exception_location": "proxy/run_proxy.py result metadata construction at frozen line 968",
+    "raw_result_exists": false,
+    "stdout_economic_summary_emitted": false,
+    "serialized_candidate_rows": 0,
+    "candidate_map_calculation_reached_memory_before_exception": true,
+    "candidate_metrics_or_ranks_observed_by_decision_maker": false,
+    "economic_verdict": "WITHHELD_INVALID_INCOMPLETE_EXECUTION"
+  },
+  "root_cause": {
+    "classification": "RESULT_METADATA_CONFIG_KEY_REFERENCE_FAULT",
+    "script_reference": "config[mt5_budget][maximum_valid_economic_paths]",
+    "frozen_config_key": "config[mt5_budget][maximum_valid_economic_paths_after_all_proxy_stages]",
+    "candidate_economic_arithmetic_implicated": false,
+    "membership_enumeration_implicated": false,
+    "selection_gates_implicated": false,
+    "input_or_authority_implicated": false
+  },
+  "exact_correction": {
+    "allowed_source_change_count": 1,
+    "allowed_change": "Replace only the missing result-metadata key reference maximum_valid_economic_paths with the existing frozen key maximum_valid_economic_paths_after_all_proxy_stages.",
+    "config_change_allowed": false,
+    "input_change_allowed": false,
+    "lattice_or_gate_change_allowed": false,
+    "period_or_selection_change_allowed": false,
+    "economic_result_reuse_allowed": false,
+    "required_parity": "All frozen source bytes outside the one key token remain identical after replacement."
+  },
+  "succession": {
+    "correction_declaration_must_reach_origin_main_before_source_change": true,
+    "corrected_implementation_freeze_required_before_replay": true,
+    "corrected_replay_count": 1,
+    "failed_execution_counts_as_economic_trial": false,
+    "reason": "Environment/design/engineering faults are correction states and the failed process produced no authoritative output or verdict."
+  },
+  "unchanged_boundaries": {
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "mt5_runs": 0,
+    "lab_opened": false,
+    "new_entry_strategy": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_deal_query": false
+  },
+  "marker": "V8_OPT_U002_STAGE_A_RESULT_METADATA_KEY_FAULT_CORRECTION_DECLARED_NO_RESULT_NO_VERDICT"
+}
