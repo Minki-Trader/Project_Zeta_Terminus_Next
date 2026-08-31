@@ -1,0 +1,94 @@
+{
+  "schema": "zeta-next-dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "FROZEN_PREVALIDATION_STAGE_C_EXECUTION_NOT_STARTED",
+  "optimization_unit_id": "V8-OPT-U004-ATTAINED-PROFIT-FLOOR-PROTECTION",
+  "unit_stage": "C_ONE_COMPONENT_NATIVE_EXIT_ABLATION_AND_FRESH_VALIDATION",
+  "authority": {
+    "declaration_commit_on_origin_main": "e46ae103a7fa8c6d16601d8fb86a62f8131e47b5",
+    "declaration_path": "optimization/campaigns/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/evidence/DD20_V8_ATTAINED_PROFIT_FLOOR_CAUSAL_ABLATION_VALIDATION_PROXY_V1_DECLARATION.json",
+    "declaration_bytes": 9382,
+    "declaration_sha256": "68E0304B823CB5D7EF49740443231B6A4CD14861D0AA7DA316377FF80145A165"
+  },
+  "staged_inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/input/",
+    "lifecycle": {"bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791", "source_copy_byte_equal": true},
+    "candidate": {"bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678", "source_copy_byte_equal": true},
+    "stage_b_raw": {"bytes": 353619, "sha256": "49964699D0DA7DB9F9953772438D2E5058CD649A21EB339264D31FE62022C365", "schema": "zeta-next-dd20-v8-attained-profit-floor-fine-adjacency-proxy-result-v1", "status": "VALID_PROXY_COMPLETE_STAGE_B_NEAR_MISS_FINE_PROFIT_FLOOR_CENTERS_STAGE_C_REQUIRED_NO_MT5", "source_copy_byte_equal": true},
+    "stage_b_durable": {"bytes": 7613, "sha256": "F372ED0AA1D26397A5B4B1049E861CFB66B1445B6A6B9EB517164B75C6D1B35C", "schema": "zeta-next-dd20-v8-attained-profit-floor-fine-adjacency-proxy-v1-result", "status": "VALID_PROXY_COMPLETE_STAGE_B_NEAR_MISS_FINE_PROFIT_FLOOR_CENTERS_STAGE_C_REQUIRED_NO_MT5", "source_copy_byte_equal": true},
+    "source_semantic_copies": [
+      {"name": "ZetaDomain.mqh", "bytes": 19987, "sha256": "44F5FE9AE5A951D59F7A1870B027D405F97AE8793FBA995FBB2203070EDACEDE", "source_copy_byte_equal": true},
+      {"name": "ZetaResearchObservation.mqh", "bytes": 51782, "sha256": "B9960E8B43BA84DA412ED0C2BF5D65BD9C495ED2DF2AC53C50853CD2A2CCC1D7", "source_copy_byte_equal": true},
+      {"name": "ZetaProtectionAndReconciliation.mqh", "bytes": 32734, "sha256": "A9637DF39A43EDED6C1FBC66F23CA762D41C8311CBF1D582972E22FFBC7D8E23", "source_copy_byte_equal": true},
+      {"name": "ZetaNextPairedMonthLivePortfolioV8.mq5", "bytes": 24675, "sha256": "3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E", "source_copy_byte_equal": true}
+    ]
+  },
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 7874,
+    "config_lines": 105,
+    "config_sha256": "CE1DE618E98E64F3480A2A052C4C09D2C4B1F6A990A7454E12EE5AD67351CDD2",
+    "script_path": "optimization/campaigns/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 68706,
+    "script_lines": 1570,
+    "script_sha256": "BD41D250ADCC5A28B10D23773C1F74F0A71C50FC1FF5633DB61C13319337C8C5",
+    "python_version": "3.13.9",
+    "numpy_version": "2.3.4",
+    "syntax_check_passed": true
+  },
+  "stage_b_authority_precheck": {
+    "raw_and_durable_centers_agree": true,
+    "stage_b_center_role_indices": [21, 9, 6],
+    "causal_center_role_indices": [1, 7, 13],
+    "center_coordinates": [[0.4, 0.3], [0.85, 0.3], [0.75, 0.3]],
+    "development_center_economics_reproduced": true,
+    "frozen_identification_reproduced": [
+      {"center_rank": 1, "certain_triggers": 91, "components": 5, "blocks": 5, "passed": true},
+      {"center_rank": 2, "certain_triggers": 7, "components": 4, "blocks": 4, "passed": false},
+      {"center_rank": 3, "certain_triggers": 15, "components": 5, "blocks": 5, "passed": false}
+    ]
+  },
+  "structural_precheck": {
+    "matched_lifecycles": 965,
+    "candidate_rows": 8176,
+    "signal_passed_rows": 1108,
+    "position_open_rows": 965,
+    "component_birth_counts": [190, 150, 446, 60, 119],
+    "internal_roles_with_neutral_control": 19,
+    "nonneutral_causal_roles": 18,
+    "unique_semantic_roles": 18,
+    "center_count": 3,
+    "roles_per_center": 6,
+    "ablation_role_indices": [[2, 3, 4, 5, 6], [8, 9, 10, 11, 12], [14, 15, 16, 17, 18]],
+    "native_exit_disabled_lifecycle_counts_per_center": [190, 150, 446, 60, 119],
+    "all_three_centers_match_disabled_counts": true,
+    "fresh_validation_density_lifecycles": 168,
+    "candidate_economics_executed": false,
+    "fresh_validation_economics_opened": false,
+    "locked_holdout_economics_opened": false
+  },
+  "exact_v8_neutral_precheck": {
+    "whole": {"lifecycles": 965, "actual_net_usd": 409.81, "stressed_net_usd": 367.818, "actual_closed_balance_drawdown_pct": 35.46, "minimum_balance_usd": 59.11},
+    "development": {"lifecycles": 741, "actual_net_usd": 149.97, "stressed_net_usd": 127.786, "actual_closed_balance_drawdown_pct": 35.46, "minimum_balance_usd": 59.11}
+  },
+  "execution_boundary": {
+    "rule": "One complete Stage-C process may execute only after this exact implementation freeze reaches origin/main.",
+    "fresh_january_may_validation_opened": false,
+    "locked_june_july_holdout_opened": false,
+    "raw_output_exists": false,
+    "code_candidate_created": false,
+    "mt5_runs": 0
+  },
+  "scope": {
+    "all_five_existing_v8_entry_strategies_active": true,
+    "already_open_position_management_only": true,
+    "one_component_native_exit_ablation_only": true,
+    "ablation_can_replace_retune_rescue_or_advance": false,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U004_STAGE_C_IMPLEMENTATION_FROZEN_THREE_IMMUTABLE_CENTERS_FIFTEEN_NATIVE_EXIT_ABLATIONS_PREVALIDATION_NO_HOLDOUT_NO_MT5"
+}

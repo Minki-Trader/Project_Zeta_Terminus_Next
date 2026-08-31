@@ -12,4 +12,8 @@ An ablation can reject a center but cannot replace, retune, rescue or advance in
 
 ## Current boundary
 
-Stage-B result commit `20d403e` reached `origin/main`. Stage C is declared pre-input, pre-implementation and pre-validation-outcome. Declaration `DD20_V8_ATTAINED_PROFIT_FLOOR_CAUSAL_ABLATION_VALIDATION_PROXY_V1_DECLARATION.json` is `9,382` bytes / `68E0304B...5A165`. No Stage-C copy, role table, config, source, January-May economic result, locked holdout, code candidate or MT5 path exists before the declaration reaches `origin/main`.
+Declaration commit `e46ae10` reached `origin/main` before all eight inputs were staged byte-equal. Precheck reproduces Stage-B raw/durable center identity, all three development center records and frozen identification, then constructs `18` unique causal roles. Each of the fifteen ablations returns exactly its component's `190 / 150 / 446 / 60 / 119` source lifecycles to native exit.
+
+Config/source are `7,874 / 68,706` bytes at `CE1DE618...51CDD2 / BD41D250...37C8C5`. Freeze `DD20_V8_ATTAINED_PROFIT_FLOOR_CAUSAL_ABLATION_VALIDATION_PROXY_V1_IMPLEMENTATION_FREEZE.json` is `5,995` bytes / `A4CC9696...BCFB27`.
+
+The raw result is absent. One complete Stage-C process may run only after this implementation freeze reaches `origin/main`; fresh validation economics, locked holdout, code candidate and MT5 remain closed pre-origin.
