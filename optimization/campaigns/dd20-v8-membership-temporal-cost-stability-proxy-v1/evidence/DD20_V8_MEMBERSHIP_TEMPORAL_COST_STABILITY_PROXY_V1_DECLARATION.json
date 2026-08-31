@@ -1,0 +1,102 @@
+{
+  "schema": "zeta-next-dd20-v8-membership-temporal-cost-stability-proxy-v1-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "D_TEMPORAL_AND_COST_STABILITY",
+  "primary_macro_program": 5,
+  "authority": {
+    "unit_declaration_commit_on_origin_main": "7b3ff512018ca2aafc557b1e414874e2675ba29f",
+    "stage_c_result_commit_on_origin_main": "3cd1cd4544d6fb130d0dd0c7ccdc29610bcb95f6",
+    "stage_c_raw_result": {
+      "path": "optimization/artifacts/raw/dd20-v8-component-local-loss-suspension-proxy-v1/output/proxy-result.json",
+      "bytes": 56364,
+      "sha256": "9B879B572F63BA24BCF6BD95CF51B40C4A2A2FD603323CFF209D092EABFD7875",
+      "status": "VALID_PROXY_COMPLETE_STAGE_C_VALIDATION_ROLES_STAGE_D_REQUIRED_NO_MT5"
+    },
+    "stage_c_durable_result": {
+      "path": "optimization/campaigns/dd20-v8-component-local-loss-suspension-proxy-v1/evidence/DD20_V8_COMPONENT_LOCAL_LOSS_SUSPENSION_PROXY_V1_RESULT.json",
+      "bytes": 6109,
+      "sha256": "FFF22C8D29A12266AA3C2EDE6CAD734B3A63C5D85591BB01A922C178DF80533F",
+      "status": "VALID_PROXY_COMPLETE_STAGE_C_ONE_NEUTRAL_VALIDATION_ROLE_STAGE_D_REQUIRED_NO_MT5"
+    }
+  },
+  "frozen_future_inputs": [
+    {"role": "exact-V8 lifecycle", "bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"},
+    {"role": "exact-V8 candidate/admission", "bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"},
+    {"role": "complete Stage-C raw result", "bytes": 56364, "sha256": "9B879B572F63BA24BCF6BD95CF51B40C4A2A2FD603323CFF209D092EABFD7875"},
+    {"role": "durable Stage-C result", "bytes": 6109, "sha256": "FFF22C8D29A12266AA3C2EDE6CAD734B3A63C5D85591BB01A922C178DF80533F"}
+  ],
+  "immutable_input_roles": [
+    {
+      "stage_c_static_seed_rank": 2,
+      "development_selection_kind": "NEUTRAL_RETAINED",
+      "membership_mask_integer": 31,
+      "weights": [1.5, 1.25, 1.5, 1.75, 1.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "consecutive_loss_close_trigger": 0,
+      "future_source_birth_suppression_count": 0,
+      "stage_c_validation_actual_net_usd": 113.995,
+      "stage_c_validation_stressed_net_usd": 109.449333333,
+      "stage_c_validation_actual_closed_balance_drawdown_pct": 13.437604799,
+      "stage_c_validation_stressed_retention_vs_exact_v8": 0.84305391
+    }
+  ],
+  "input_role_count": 1,
+  "fresh_clean_state_blocks": [
+    {"name": "2024-H1", "start": "2024-01-01T00:00:00", "end_exclusive": "2024-07-01T00:00:00", "locked_before_stage_d": false},
+    {"name": "2024-H2", "start": "2024-07-01T00:00:00", "end_exclusive": "2025-01-01T00:00:00", "locked_before_stage_d": false},
+    {"name": "2025-H1", "start": "2025-01-01T00:00:00", "end_exclusive": "2025-07-01T00:00:00", "locked_before_stage_d": false},
+    {"name": "2025-H2", "start": "2025-07-01T00:00:00", "end_exclusive": "2026-01-01T00:00:00", "locked_before_stage_d": false},
+    {"name": "2026-01-through-05", "start": "2026-01-01T00:00:00", "end_exclusive": "2026-06-01T00:00:00", "locked_before_stage_d": false},
+    {"name": "2026-06-through-07", "start": "2026-06-01T00:00:00", "end_exclusive": "2026-08-01T00:00:00", "locked_before_stage_d": true}
+  ],
+  "whole_continuous_period": {
+    "name": "2024-01-through-2026-07",
+    "start": "2024-01-01T00:00:00",
+    "end_exclusive": "2026-08-01T00:00:00",
+    "initial_state": "$100 and clean component state"
+  },
+  "replay_contract": {
+    "model": "Inherit the byte-frozen Stage-C exact-V8 accepted-source replay, daily stressed-balance volume ladder, lot rounding, conservative capital and component accounting without modification.",
+    "candidate_position_risk_fraction": 0.04,
+    "candidate_aggregate_risk_fraction": 0.12,
+    "exact_v8_anchor_weights": [2.0, 1.5, 2.0, 2.5, 1.5],
+    "exact_v8_anchor_aggregate_risk_fraction": 0.18,
+    "actual_cost_book": "Use recorded actual lifecycle net only.",
+    "stressed_cost_book": "Use the already recorded doubled-observed-cost lifecycle net only; fit no new cost model.",
+    "fresh_block_rule": "Every block independently starts at $100 with clean causal state and no capital or state carried from another block.",
+    "whole_rule": "The whole period is one separate continuous replay from $100 and clean state; no block reset enters it.",
+    "accepted_source_path_only": true,
+    "freed_capacity_blocked_opportunity_profit_credit_usd": 0.0,
+    "unknown_capacity_blocked_existing_v8_opportunities": 143,
+    "open_equity_or_native_stop_claimed": false
+  },
+  "economic_gates": {
+    "block_gate": "Every one of the six candidate blocks must have actual net > 0, stressed net > 0, minimum balance > 0 and actual closed-balance DD <= 30%.",
+    "whole_stressed_retention_minimum": 0.75,
+    "whole_actual_closed_balance_drawdown_improvement_minimum_points": 5.0,
+    "whole_gate": "Candidate whole stressed net must retain at least 75% of the exact-V8 whole anchor and candidate actual closed-balance DD must be at least five percentage points lower than the exact-V8 whole anchor.",
+    "passing_role": "The immutable role passes only when every block gate and both whole gates pass. A locked-block failure cannot select an alternate or reopen Stage C.",
+    "ranking": "If more than one role were present, maximize weakest block stressed net, then whole stressed-net-to-DD efficiency, whole stressed net, lower whole DD and canonical role order. With one immutable role, ranking cannot substitute another role."
+  },
+  "succession": {
+    "stage_d_can_close_unit": true,
+    "pass": "Exactly one unchanged passing role opens conditional Stage E as the sole finalist.",
+    "nonconfirmation": "If the immutable role fails, close U002 validly exhausted with no Stage-E role and zero MT5; do not open an adjacent threshold, subgroup, component, state or retained-seed rescue.",
+    "stage_d_mt5_paths": 0,
+    "maximum_stage_e_valid_native_paths": 2
+  },
+  "scope": {
+    "exact_v8_is_sole_economic_parent": true,
+    "v7_or_historical_lab_economic_input": false,
+    "external_input": false,
+    "new_symbol_timeframe_signal_direction_or_opportunity": false,
+    "entry_condition_loosened": false,
+    "lab_opened": false,
+    "live_changed": false
+  },
+  "input_staging_boundary": "No Stage-D input, config, implementation, locked-block outcome or whole result may be created until this declaration commit is verified on origin/main.",
+  "marker": "V8_OPT_U002_STAGE_D_DECLARED_ONE_NEUTRAL_ROLE_SIX_FRESH_BLOCKS_PREINPUT_PREOUTCOME_NO_MT5"
+}
