@@ -6,6 +6,8 @@
 
 Clean V2 pair는 유효했지만 CANDIDATE가 actual/stressed `+$409.81 / +$367.818`, relative equity DD `37.39%`, control delta `+$36.51 / +$25.1525`, recovery `3.29586`로 재자격에 실패했다. 이 판정은 그대로 보존한다. 사용자는 이 수치를 확인한 뒤 exact V8의 완전 교체와 최상위 승인기준 변경을 명시했으므로, `docs/OPERATING_DIRECTION.md`의 2026-08-31 1회성 사용자 위험수용 예외만 경제 승인 근거가 된다. 이 예외는 아래 운영 안전 gate를 하나도 완화하지 않는다.
 
+이 1회 교체는 완료됐다. 첫 final starter는 market gate에서 `1/1` 전에 안전 종료했고, 두 번째는 US30 `11` updates, maximum gap `2.605s`, synchronized fresh timeframes `3/3`을 통과하여 PID `33388`, sequence `468`, exact `1/1` handshake를 완료했다. 현재 owner와 더 최신 상태는 오직 `CURRENT_STATE.md`와 V8 status reader가 결정한다.
+
 1. RLO1은 신규진입 금지로 한 번만 기동해 exact identity와 `0/0`, owned positions/pending orders/margin/planned risk `0/0/0/0`, fault `0`, 미완료 decision `0`을 확인하고 정상 정지한다. 이 경계는 sequence `6425`, balance/equity `$105.20/$105.20`, project realized net `+$4.55`, project stage balance `$104.55`로 완료됐다.
 2. RLO1 core/research state, current/event 파일, order/deal, Magic와 `runtime.lock`은 퇴역 historical read-only다. V8은 이를 복구·채택·merge·append·rotate·clean·rewrite하지 않는다. 기존 `Import-ZetaNextLegacyRuntimeHandoff.ps1`은 V8에 사용하지 않는다. 로컬 `live-release-transition-pmlr1.json`은 동일 계정과 최종 귀속 실현손익만 묶는다.
 3. `CURRENT_STATE.md`가 V8 entries-disabled preflight를 `ENABLED`로 기록하고 exact package commit이 `origin/main`에 도달한 뒤 `Start-ZetaNextV8EntriesDisabled.ps1 -ConfirmEntriesDisabled`를 실행한다. 터미널이 꺼져 있으면 실행기가 직접 정확한 Portable을 켠다. 신규 namespace가 처음 생성되고 exact release/Portfolio/Magic/account, entries `0/0`, zero exposure/risk/fault, 증가하는 snapshot을 통과해야 한다.
