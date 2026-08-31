@@ -1,0 +1,93 @@
+{
+  "schema": "zeta-next-dd20-v8-component-local-loss-suspension-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PREOUTCOME",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "C_COMPONENT_LOCAL_CAUSAL_LOSS_SUSPENSION",
+  "authority": {
+    "declaration_commit_on_origin_main": "18d7433be7d8d2cb7e4ee17f13661c452f13dacd",
+    "declaration_bytes": 7255,
+    "declaration_sha256": "06F0A653057D13CBF5727E07DE419332893E7031323C3E6E0F6512C6FE689B6C"
+  },
+  "frozen_inputs": [
+    {"role": "lifecycle", "bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"},
+    {"role": "candidate", "bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"},
+    {"role": "stage_b_raw", "bytes": 28115, "sha256": "D1114F975C98F1372D73F8CB89E48C438209CA091B4ECAEC35C7C70C0EBABE30"},
+    {"role": "stage_b_durable", "bytes": 7413, "sha256": "64BE90A70FA7C8905822416D8D3120D943D37AAB04F2C6E3516B5249C506630C"}
+  ],
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-component-local-loss-suspension-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 5405,
+    "config_sha256": "21367DE0E1B4284E7C5BB019A21E90DC9690859D46902E3907D5B571E6F2D1B7",
+    "script_path": "optimization/campaigns/dd20-v8-component-local-loss-suspension-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 54646,
+    "script_lines": 1201,
+    "script_sha256": "745879B71535677DF6874FEB320C7426971AACF1874CDE9552DE0425354C3BEB",
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "syntax_compile": "PASS"
+  },
+  "abort_before_write_gates": [
+    "Stage-C declaration byte count/hash and commit authority match.",
+    "All four staged inputs match their frozen byte counts and hashes.",
+    "Stage-B raw/durable schemas, statuses, ranks, masks, weights and cap 0.12 agree with the three config seeds.",
+    "Lifecycle/candidate join remains exact at 965 births and POSITION_OPEN contexts with frozen component counts.",
+    "The state lattice contains exactly three neutral and 27 nonneutral roles with 30 unique seed/N/K coordinates.",
+    "The three independent 3-by-3 nonneutral grids contain exactly 36 immediate one-axis edges; neutral roles are not causal-grid neighbors.",
+    "Inactive weights remain zero, all weights remain at or below exact V8 and no new entry opportunity can be created.",
+    "Exact V8 and all three frozen Stage-B neutral development controls reproduce before any nonneutral candidate or validation outcome is opened."
+  ],
+  "structural_and_frozen_control_precheck": {
+    "status": "PASS",
+    "matched_lifecycles": 965,
+    "parameterizations": 30,
+    "neutral_roles": 3,
+    "nonneutral_roles": 27,
+    "nonneutral_grid_edges": 36,
+    "neutral_lattice_indices": [0, 10, 20],
+    "exact_v8_whole_actual_net_usd": 409.81,
+    "exact_v8_whole_stressed_net_usd": 367.818,
+    "exact_v8_whole_actual_closed_balance_drawdown_pct": 35.46,
+    "neutral_development_actual_net_usd": [167.63, 142.86, 134.65],
+    "neutral_development_stressed_net_usd": [153.542, 126.707, 120.916],
+    "neutral_development_actual_closed_balance_drawdown_pct": [18.136677946, 25.07824662, 15.865803325],
+    "neutral_state_trigger_count": 0,
+    "neutral_suppressed_source_births": 0,
+    "nonneutral_candidate_economics_executed": false,
+    "validation_executed": false
+  },
+  "causal_implementation": {
+    "state_owner": "Independent per candidate and active component.",
+    "loss_close_update": "Only an admitted candidate-scaled actual loss increments the component streak; an admitted nonloss resets it.",
+    "trigger_update": "At N consecutive admitted losses, reset the streak and set K future same-component source births for suppression.",
+    "future_birth_update": "A pending slot forces candidate target volume to zero and decrements once even when the unsuppressed candidate would later fail aggregate admission.",
+    "suppressed_close_update": "Zero admitted volume yields zero money and no state update.",
+    "existing_position_rule": "Never force-close, resize or alter a previously admitted position.",
+    "inactive_member_rule": "A zero-weight component cannot trigger and never reactivates.",
+    "development_activity_gate": "A nonneutral role must trigger and suppress at least one otherwise executable source birth.",
+    "robustness_gate": "At least two eligible immediate nonneutral neighbors span both N and K axes.",
+    "neutral_precedence": "One role per seed; causal displacement requires better weakest annual stressed net, or an exact tie plus better development stressed-net/DD efficiency.",
+    "fresh_validation": "Only the three frozen per-seed selections may open January-May validation with clean state and $100.",
+    "freed_capacity_profit_credit_usd": 0.0
+  },
+  "optimization_scope": {
+    "isolated_code_or_mechanism_change": true,
+    "existing_strategy_removal_or_disablement_allowed": true,
+    "existing_v8_portfolio_reconstruction_allowed": true,
+    "new_symbol_timeframe_signal_direction_or_opportunity": false,
+    "entry_condition_loosened": false,
+    "lab_opened": false,
+    "live_changed": false
+  },
+  "execution_boundary": {
+    "raw_result_exists": false,
+    "nonneutral_candidate_economics_executed": false,
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "mt5_runs": 0,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false,
+    "required_next_action": "Commit and push this freeze, verify origin/main parity, then execute Stage C exactly once."
+  },
+  "marker": "V8_OPT_U002_STAGE_C_IMPLEMENTATION_FROZEN_NEUTRAL_PLUS_27_CAUSAL_ROLES_PREOUTCOME_NO_HOLDOUT_NO_MT5"
+}

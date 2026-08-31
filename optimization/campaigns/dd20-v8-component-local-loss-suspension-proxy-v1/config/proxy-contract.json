@@ -1,0 +1,112 @@
+{
+  "schema": "zeta-next-dd20-v8-component-local-loss-suspension-proxy-contract-v1",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "C_COMPONENT_LOCAL_CAUSAL_LOSS_SUSPENSION",
+  "declaration_authority": {
+    "path": "optimization/campaigns/dd20-v8-component-local-loss-suspension-proxy-v1/evidence/DD20_V8_COMPONENT_LOCAL_LOSS_SUSPENSION_PROXY_V1_DECLARATION.json",
+    "bytes": 7255,
+    "sha256": "06F0A653057D13CBF5727E07DE419332893E7031323C3E6E0F6512C6FE689B6C",
+    "commit_on_origin_main": "18d7433be7d8d2cb7e4ee17f13661c452f13dacd"
+  },
+  "inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-component-local-loss-suspension-proxy-v1/input",
+    "lifecycle": {
+      "name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "matched_lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818
+    },
+    "candidate": {
+      "name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "position_open_rows": 965,
+      "unique_component_time_open_keys": 965
+    },
+    "stage_b_raw": {
+      "name": "stage-b-proxy-result.json",
+      "bytes": 28115,
+      "sha256": "D1114F975C98F1372D73F8CB89E48C438209CA091B4ECAEC35C7C70C0EBABE30",
+      "schema": "zeta-next-dd20-v8-membership-local-reallocation-proxy-result-v1",
+      "status": "VALID_PROXY_COMPLETE_STAGE_B_ROBUST_REALLOCATION_SEEDS_STAGE_C_REQUIRED_NO_MT5"
+    },
+    "stage_b_durable": {
+      "name": "stage-b-durable-result.json",
+      "bytes": 7413,
+      "sha256": "64BE90A70FA7C8905822416D8D3120D943D37AAB04F2C6E3516B5249C506630C",
+      "schema": "zeta-next-dd20-v8-membership-local-reallocation-proxy-v1-result",
+      "status": "VALID_PROXY_COMPLETE_STAGE_B_ROBUST_REALLOCATION_SEEDS_STAGE_C_REQUIRED_NO_MT5"
+    }
+  },
+  "output": "optimization/artifacts/raw/dd20-v8-component-local-loss-suspension-proxy-v1/output/proxy-result.json",
+  "reference_capital_usd": 100.0,
+  "base_volume_lots": 0.01,
+  "volume_step_lots": 0.01,
+  "addition_step_usd": 150.0,
+  "base_position_risk_fraction": 0.04,
+  "aggregate_risk_fraction": 0.12,
+  "aggregate_tolerance_usd": 0.01,
+  "components": [
+    {"bit": 0, "short": "RC61", "id": "ZT-M30-US30-RANGE-COMP-61f61deaba", "source_weight": 2.0, "source_births": 190},
+    {"bit": 1, "short": "RC64", "id": "ZT-M30-US30-RANGE-COMP-64efb16616", "source_weight": 1.5, "source_births": 150},
+    {"bit": 2, "short": "Cross", "id": "ZT-H1-US100-CROSS-IN-14b72317b7", "source_weight": 2.0, "source_births": 446},
+    {"bit": 3, "short": "Intraday", "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "source_weight": 2.5, "source_births": 60},
+    {"bit": 4, "short": "Return", "id": "ZT-H1-US30-RETURN-I-c870a788ec", "source_weight": 1.5, "source_births": 119}
+  ],
+  "static_seeds": [
+    {"stage_b_rank": 1, "membership_mask_integer": 7, "weights": [1.5, 1.25, 1.75, 0.0, 0.0], "aggregate_risk_fraction": 0.12, "expected_development_actual_net_usd": 167.63, "expected_development_stressed_net_usd": 153.542, "expected_development_dd_pct": 18.136677946},
+    {"stage_b_rank": 2, "membership_mask_integer": 31, "weights": [1.5, 1.25, 1.5, 1.75, 1.0], "aggregate_risk_fraction": 0.12, "expected_development_actual_net_usd": 142.86, "expected_development_stressed_net_usd": 126.707, "expected_development_dd_pct": 25.07824662},
+    {"stage_b_rank": 3, "membership_mask_integer": 7, "weights": [1.0, 1.25, 1.75, 0.0, 0.0], "aggregate_risk_fraction": 0.12, "expected_development_actual_net_usd": 134.65, "expected_development_stressed_net_usd": 120.916, "expected_development_dd_pct": 15.865803325}
+  ],
+  "state_lattice": {
+    "neutral_role_per_seed": 1,
+    "loss_close_triggers": [2, 3, 4],
+    "suppressed_future_source_birth_counts": [2, 4, 8],
+    "nonneutral_variants_per_seed": 9,
+    "roles_per_seed": 10,
+    "expected_parameterizations": 30
+  },
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_2024": ["2024-01-01T00:00:00", "2025-01-01T00:00:00"],
+    "development_2025": ["2025-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "validation": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"]
+  },
+  "anchor_reproduction": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5],
+    "aggregate_risk_fraction": 0.18,
+    "joined_birth_open_rows": 965,
+    "source_volume_matches": 965,
+    "accepted_lifecycles": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "closed_balance_drawdown_pct": 35.46,
+    "net_tolerance_usd": 1e-7,
+    "drawdown_tolerance_points": 0.01,
+    "volume_tolerance_lots": 1e-9
+  },
+  "gates": {
+    "primary_stressed_retention": 0.75,
+    "primary_max_drawdown_pct": 27.0,
+    "fallback_stressed_retention": 0.65,
+    "fallback_min_drawdown_improvement_points": 5.0,
+    "minimum_nonneutral_neighbors": 2,
+    "minimum_nonneutral_axes": 2,
+    "neutral_comparison_tolerance": 1e-9,
+    "validation_max_drawdown_pct": 30.0,
+    "validation_minimum_stressed_retention": 0.65,
+    "maximum_stage_d_roles": 3
+  },
+  "stage_succession": {
+    "stage_c_can_close_unit": false,
+    "stage_d_required": true,
+    "locked_holdout_opened": false
+  },
+  "mt5_budget": {
+    "stage_c_authorized_paths": 0,
+    "maximum_valid_economic_paths_after_stage_d": 2
+  }
+}
