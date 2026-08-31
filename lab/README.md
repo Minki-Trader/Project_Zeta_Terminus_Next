@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
-현재 sole active research family는 Program 3 / micro-to-meso `research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, 필수 `Python adapter + EA`이다. Declaration commit `f28dbeb`가 origin에 도달한 뒤 두 M1 입력을 byte-equal 복제했다. Adapter는 `44,897` bytes / `1,133` lines / `607C667D...42AB`; outcome-free precheck는 development `965` session events / `1,930` state rows / `515` days, nonzero-body `1,892` starts 또는 `3.6738/day`, min-lot risk feasible `965/965` 양 심볼을 확인했다. Freeze는 `7,799` bytes / `735CC5EA...ECD3`; 미래 경로·경제·locked 2026·EA·MT5는 0이며 freeze가 origin에 도달한 뒤 정확히 한 development process만 실행한다.
+현재 active research family는 없다. Program 3 Family 006 `research/independent-two-session-opening-auction-response-adapter-challenge-v1/`은 정확히 한 development process 뒤 유효 adverse로 닫혔다. DRIVE/FADE는 `1,008 / 1,277` starts, actual `-$98.8627 / -$98.9047`, stressed `-$227.8451 / -$207.7592`, DD 약 `99.1%`; 자본 소진 뒤 risk blocks `884 / 615`로 turnover도 실패했다. Durable result/closure는 `8,959 / 3,863` bytes at `0EAEA67F...6B65 / BEBB7A7E...684E`. Locked 2026·EA·MT5는 미개봉이며 closure가 origin에 도달한 뒤 Programs 1-5/7 전체 재비교가 다음 판단이다.
 
 직전 Family 001 `research/independent-cross-index-hourly-adapter-challenge-v1/`은 세 역할 모두 turnover를 통과했지만 actual/stressed와 DD가 전부 실패해 잠긴 2026, EA와 MT5 전에 유효 adverse로 닫혔다. Durable result/closure는 `6,031 / 2,117` bytes at `09F30EDB...1A3D49 / 9E09B960...0FCCCA`다.
 

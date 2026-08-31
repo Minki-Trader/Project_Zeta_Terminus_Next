@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0523`
+- Latest state ID: `STATE-0524`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current implementation parent: Family 006 declaration commit `f28dbeb16632ea403b4081aca94985cf85d679ed`, equal to `origin/main` before input copies or implementation.
+- Current process parent: Family 006 implementation-freeze commit `aac724f6e1a3c1f7bd80081a0944644382472815`, equal to `origin/main` before the one development process.
 
 ## Authorization and ownership
 
@@ -24,8 +24,8 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- Sole active Challenge family: `lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, Program 3 / micro-to-meso, mandatory `Python adapter + EA`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_CLOSED_VALID_ADVERSE_RECOMPARE_PENDING`.
+- Sole active Challenge family: none. Family 006 is closed; Programs 1-5 and 7 must be re-compared after its closure reaches `origin/main`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
@@ -91,12 +91,17 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Complete adapter `adapter/run_adapter.py` is `44,897` bytes / `1,133` lines / `607C667D940F6C86B91C4DAC50F49CB58274CBB1616E83958020C227DDBF42AB`. It owns authority-gated `precheck / development / confirmation` modes, IANA DST, exact geometry, Bid/Ask barriers, two-symbol risk, atomic no-overwrite evidence and locked-period filtering.
 - Outcome-free precheck reproduced structural/development `760 / 965` session events and development `1,930` state opportunities over `515` dates. Nonzero-body capacity is `1,892` starts per role or `3.6737864/day`; minimum-lot risk is feasible at `$100` for both symbols on all `965` events.
 - The precheck evaluated zero future trade path, lifecycle or economic metric, loaded zero locked-2026 price row and wrote zero persistent file. Implementation freeze is `7,799` bytes / `735CC5EAF183FEEE7AB06C8EDEF60D4E0CBB6ED9491407D4C0E0929CA1EAECD3`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Exactly one development process ran after freeze commit `aac724f6e1a3c1f7bd80081a0944644382472815` reached `origin/main`. It wrote `1,930` state and `2,285` trade rows with all authority, direction, sequence, risk, Bid/Ask, stress, balance and manifest invariants passing.
+- DRIVE/FADE started `1,008 / 1,277` lifecycles (`1.9573 / 2.4796` per normal day), actual `-$98.86265 / -$98.90470`, stressed `-$227.84505 / -$207.75920`, and actual DD `99.1087% / 99.1267%`. Both lost actual/stressed in 2024 and 2025; capital depletion caused `884 / 615` risk blocks.
+- Complete passer count is zero. Both roles passed symbol/session breadth but failed turnover, both-year positivity, both profits and DD. This is valid adverse economics, not a fault. Raw result/state/trade are `8,711 / 322,818 / 842,855` bytes at `46A7C66A...A71F / 46D14B17...66BC / E34EB298...D7C6`; ordered tape manifest is `4B7CDF88...91CE`.
+- Durable result/closure/closed README are `8,959 / 3,863 / 1,654` bytes at `0EAEA67F74683C9AD83C64BC05F0B166879243487028843078ACBA3570816B65 / BEBB7A7ED6140E166E640159249AB813DB2C26B4A0BC27C19F6BEC53B640684E / 4E96F656CEE212F725A4F4036796F1D3BA6154C0BF4D4CEDC8AF9D78245FBE12`.
+- Locked 2026, EA, compile and MT5 remained unopened. The complete response/session/timezone/window/filter/symbol/risk/exit bundle is frozen against rescue inside Family 006.
 
 ## Next authorized sequence
 
-1. Commit and push the two source copies, adapter and Family 006 implementation freeze to `origin/main`.
-2. Only after origin equality, run exactly one complete two-role 2024-2025 development process.
-3. Open locked 2026 for at most one unchanged role only if every development gate passes; open the EA and MT5 only after the whole proxy also passes.
+1. Commit and push the Family 006 raw evidence, durable result and closure to `origin/main`.
+2. Only after origin equality, recompare Programs 1-5 and 7 across all heights without using closed-family outcomes as successor inputs.
+3. Declare at most one materially distinct self-contained successor before its inputs, implementation or outcomes.
 4. Continue serially until an unchanged complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -117,8 +122,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 006 `independent-two-session-opening-auction-response-adapter-challenge-v1`.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Active research unit: none; post-Family-006 whole-map recompare pending.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_CLOSED_VALID_ADVERSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
