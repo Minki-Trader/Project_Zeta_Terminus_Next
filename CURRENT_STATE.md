@@ -7,9 +7,9 @@ This file is the concise current re-entry snapshot and the sole Next Live author
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0516`
+- Latest state ID: `STATE-0517`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current declaration parent boundary: `32ffcd90a0f984962cb1199209b2a1fe5fba485c`, equal to `origin/main` before Family 004 opened
+- Current successor-selection parent boundary: `8911bcdfc4738f4ce4a482bcda05ba1711b4a4e7`, equal to `origin/main` before the post-Family-004 recompare
 
 ## Authorization and ownership
 
@@ -24,8 +24,8 @@ This file is the concise current re-entry snapshot and the sole Next Live author
 
 - Goal: build an independent automated strategy that beats V8, continuing through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`; a single EA may not own the novel signal, and Python-only/ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_004_CLOSED_VALID_ADVERSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
-- Sole active family: none. Family 004 is immutable closed; Programs 1-5/7 must be re-compared after its closure reaches `origin/main`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_004_RECOMPARE_PROGRAM_1_M1_UTILITY_GRU_ONNX_READY_SUCCESSOR_NOT_OPENED`.
+- Sole active family: none. Family 004 is immutable closed; one provisional Program-1 `ONNX + EA` successor may be declared only after the whole-map audit reaches `origin/main`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Families 001-003 outputs and V1-V8 signals, opportunities, component economics and state are forbidden Family 004 inputs.
 
@@ -65,6 +65,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Durable result/closure are `9,408 / 4,098` bytes at `8D58AA2991A5CCE8C69CCB90A0F370C9D15A6605A9CA82929F78E2DC0039D167 / 567D44095C370718049946F659C1C1ADDAE0D5B701ECF307F392AB2B984AF511`. Closed README is `2,165` bytes / `8D0595111DF2999DD5E28FF0509FCE1B0BB6C9DF2445D90F8D96346D04EF4EEC`.
 - Locked 2026, EA source, compile and MT5 paths remain unopened. The declared expert/mode/horizon/half-life/score/materiality/risk/capacity/exit bundle and adjacent subgroups are frozen against rescue inside Family 004.
 
+## Post-Family-004 whole-map selection
+
+- Programs 1-5/7 and micro/meso/macro were re-compared without candidate outcomes. Programs 2, 3, 4, 5 and 7 have no perspective-distant ready carrier; Program 1 alone is ready.
+- Audit: `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_004_WHOLE_MAP_RECOMPARE_V1.json`, `7,335` bytes / `FA66B823948546BC95D0E2C022DF999632EC53D395FBDDFE02CB3798805AC5F0`.
+- The scan opened only US30/US100 M1 timestamps. Their `1,617,636` common rows support exact `t-61..t-1` causal input plus `t..t+14` future geometry at `43,072` development decisions and `13,021` locked decisions; no OHLC, spread, volume, return, label or outcome was used for selection.
+- Provisional Family 005 is `lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`, Program 1 / micro-to-meso, mandatory `ONNX + EA`.
+- It is materially distinct: a `1×60×15` M1 microstructure tensor, quarterly causal expanding-window recurrent fits and four actual-cost action-utility outputs for US100/US30 long/short. It excludes clock features, prior-family outputs and paired execution.
+- Successor root, input copies, tensors, labels, fits, ONNX, predictions, economics, locked confirmation, EA and MT5 remain zero.
+
 ### Frozen mechanism
 
 - Construct synchronized M15 bars by exact 15-consecutive-M1 aggregation for US30/US100 and native M15 for US500, then inner-join common timestamps.
@@ -84,10 +93,9 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Next authorized sequence
 
-1. Commit and push the complete Family 004 result and closure to `origin/main`.
-2. Recompare every active Program 1-5/7 and all heights without opening inputs or outcomes.
-3. Open at most one materially distinct self-contained `Python adapter + EA` or `ONNX + EA` successor only after its selection audit reaches `origin/main`.
-4. Preserve the Family 004 raw evidence; remove only exact disposable unreferenced caches or staging.
+1. Commit and push the post-Family-004 whole-map audit to `origin/main`.
+2. Only after origin equality, declare the self-contained Family 005 contract before source copies, tensors, labels, fits, ONNX or economics.
+3. Preserve the Family 004 raw evidence; remove only exact disposable unreferenced caches or staging.
 
 ## Frozen lane boundaries
 
@@ -109,8 +117,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; Family 004 closure awaits the durable origin boundary before whole-map comparison.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_004_CLOSED_VALID_ADVERSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
+- Active research unit: none; one provisional Program-1 M1 utility-GRU ONNX successor is selected but not opened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_004_RECOMPARE_PROGRAM_1_M1_UTILITY_GRU_ONNX_READY_SUCCESSOR_NOT_OPENED`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
