@@ -1,0 +1,86 @@
+{
+  "schema": "zeta-next-v8-user-accepted-live-research-override-v1",
+  "recorded_at_utc": "2026-08-31T01:30:00Z",
+  "project_id": "project-zeta-terminus-next",
+  "verdict": "USER_ACCEPTED_ONE_TIME_EXACT_RELEASE_LIVE_RESEARCH_OVERRIDE_AUTHORIZED",
+  "authorization_source": {
+    "date_kst": "2026-08-31",
+    "user_directed_complete_replacement_after_disclosure": true,
+    "user_explicitly_authorized_the_top_level_policy_and_economic_approval_change": true,
+    "interpretation": "The user knowingly chooses real-account research validation of the exact frozen V8 release despite its valid clean-history economic nonconfirmation."
+  },
+  "exact_release_scope": {
+    "release_id": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "execution_version": "zt-next-paired-month-live-portfolio-v8",
+    "economic_version": "zt-next-paired-month-live-replacement-economic-v1",
+    "portfolio_id": "ZT-PORT-NEXT-V8-PMLR1-20260831",
+    "magic_numbers": [260831901, 260831902, 260831903, 260831904, 260831905, 260831906],
+    "canonical_source_settings_sha256": "B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95",
+    "compiled_ex5_sha256": "E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274",
+    "component_risk_multipliers": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "passive_disabled": true
+  },
+  "accepted_adverse_evidence": {
+    "source": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "campaign_verdict_remains": "VALID_CLEAN_HISTORY_FIXED_PAIRED_CANDIDATE_NOT_REQUALIFIED_NO_LIVE_AUTHORITY",
+    "candidate_actual_net_usd": 409.81,
+    "candidate_doubled_cost_stressed_net_usd": 367.818,
+    "native_equity_drawdown_relative_percent": 37.39,
+    "native_balance_drawdown_relative_percent": 35.46,
+    "actual_delta_over_control_usd": 36.51,
+    "stressed_delta_over_control_usd": 25.1525,
+    "actual_multiple_of_control": 1.0978033753,
+    "stressed_multiple_of_control": 1.0734054737,
+    "candidate_robust_recovery": 3.295860215,
+    "control_robust_recovery": 6.323466723,
+    "cross_component_stressed_net_usd": -2.56,
+    "failed_declared_gates_are_not_waived_or_relabelled": true
+  },
+  "exception": {
+    "kind": "one-time exact-release user risk-acceptance for real-account research validation",
+    "overrides_only": [
+      "the normal requirement that the clean fixed pair pass its economic requalification gate before this exact V8 may enter live research",
+      "the normal requirement for a separate corrected Lab economic-handoff result for this exact already-translated V8 package"
+    ],
+    "does_not_override": [
+      "exact release, source, settings and EX5 hash checks",
+      "exact account and broker binding",
+      "sole terminal ownership",
+      "flat owned exposure and zero pending orders before activation",
+      "zero margin and planned risk before activation",
+      "entries-disabled 0/0 preflight",
+      "continuous actual ticks and current synchronized US30/US100/US500 bars",
+      "the 3.0-second executable market-freshness boundary",
+      "evaluation-time guard windows",
+      "zero safety, persistence, broker, foreign-exposure and protection faults",
+      "clean main equal to origin/main before activation",
+      "the frozen 0.04 position-risk and 0.18 aggregate-risk contract"
+    ]
+  },
+  "pre_authorization_runtime_boundary": {
+    "observed_at_utc": "2026-08-31T01:24:59Z",
+    "process_id": 30592,
+    "state_sequence": 458,
+    "mode": "entries-disabled",
+    "entries": "0/0",
+    "owned_positions": 0,
+    "pending_orders": 0,
+    "account_margin_usd": 0.0,
+    "aggregate_planned_risk_usd": 0.0,
+    "account_balance_usd": 105.2,
+    "account_equity_usd": 105.2,
+    "alerts": 0,
+    "warnings": 0,
+    "healthy": true
+  },
+  "authority_and_non_precedent": {
+    "current_state_must_name_the_exact_release_and_mark_live_and_new_entries_enabled": true,
+    "activation_must_use_live_dev_tools_start_zeta_next_v8_live_ps1": true,
+    "market_gate_failure_keeps_new_entries_closed_and_requires_a_later_safe_retry": true,
+    "no_other_candidate_release_or_risk_contract_inherits_this_exception": true,
+    "future_research_and_optimization_gates_remain_unchanged": true,
+    "this_record_does_not_claim_expected_profit_or_acceptable_drawdown": true
+  }
+}
