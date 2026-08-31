@@ -33,7 +33,7 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
-No Optimization Unit is open at this boundary. `V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION` is closed exhausted under Program 5 after all declared stages. The post-U002 whole-map audit selects provisional Program-1 `V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION`, but U003 remains unopened until that audit reaches `origin/main`. It must keep all five exact-V8 strategies active and map one complete component-relative monotone-strength bundle; every nonneutral role can only suppress weaker already signal-passed V8 opportunities.
+`V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION` is the sole active Optimization Unit under Program 1. It opened only after post-U002 recompare commit `9eafe6f` reached `origin/main`. Its pre-input declaration freezes `243` complete all-five coarse roles, up to `729` center-local fine roles, immutable one-component causal ablation/validation, six-block temporal/cost stability and at most one native control/finalist pair. Declaration `DD20_V8_COMPONENT_RELATIVE_SIGNAL_STRENGTH_SUPPRESSION_UNIT_003_DECLARATION_V1.json` is `17,130` bytes / `615BCB7A...97E4CB`. No inputs, thresholds, config, source, result or MT5 path open until this declaration reaches `origin/main`.
 
 U002 may autonomously change isolated Optimization code and mechanisms, remove existing strategies and reconstruct the portfolio, but it may only suppress or resize exact-V8 opportunities. New symbols, timeframes, signal families, directions, opportunity timestamps or entry loosening are new-entry Lab research and remain prohibited. The `143` observed aggregate-blocked existing opportunities have no outcomes and receive zero proxy profit credit.
 

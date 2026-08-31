@@ -1,0 +1,253 @@
+{
+  "schema": "zeta-next-v8-optimization-unit-003-component-relative-signal-strength-suppression-declaration-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME",
+  "optimization_unit": {
+    "id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+    "name": "Exact-V8 component-relative existing-signal strength suppression",
+    "primary_macro_program": 1,
+    "primary_macro_program_name": "entry_signal_market_structure",
+    "question": "Can a complete, non-cherry-picked map of component-relative monotone signal-strength gates suppress weaker exact-V8 entries enough to repair early temporal loss and reduce whole drawdown while preserving whole and recent stressed value?",
+    "mechanism_boundary": "Every exact-V8 strategy, signal formula, direction and evaluation timestamp remains active. A candidate may only raise the acceptance floor on the component's already logged native feature and thereby refuse a subset of exact-V8 signal-passed births.",
+    "independence_from_unit_002": "Unit 002 changed component membership, executable weights and component-local post-loss state. Unit 003 fixes all five exact-V8 members, exact weights, position risk and aggregate cap, and changes only within-component strength admission before the unchanged portfolio admission path.",
+    "single_active_judgment_stream": true
+  },
+  "selection_authority": {
+    "post_unit_002_recompare_commit_on_origin_main": "9eafe6f399f90d568f1011ad8555e5124cad8078",
+    "post_unit_002_recompare_path": "optimization/evidence/V8_OPT_U002_POST_CLOSE_WHOLE_MAP_RECOMPARE_V1.json",
+    "post_unit_002_recompare_bytes": 13963,
+    "post_unit_002_recompare_sha256": "D90898B34D814FA8F54B0F5E75F5C65CC420B39D27FBF53AC71145F1E1F822D1",
+    "programs_recompared": [1, 2, 3, 4, 5, 7],
+    "selected_program": 1,
+    "successor_was_not_opened_before_recompare_reached_origin_main": true
+  },
+  "economic_parent": {
+    "release_id": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "portfolio_id": "ZT-PORT-NEXT-V8-PMLR1-20260831",
+    "baseline_root": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/",
+    "baseline_files": 20,
+    "baseline_bytes": 660794,
+    "baseline_ordered_manifest_sha256": "7BCB5B9A5182E3ADE2AEA3954025BEFB9897FB685201200CAB04C5FCBB78ACDF",
+    "v8_is_sole_economic_parent": true,
+    "v7_historical_lab_and_prior_optimization_winners_select_or_tune": false
+  },
+  "frozen_future_inputs": [
+    {
+      "role": "exact-V8 accepted lifecycle outcomes",
+      "source_path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "role": "exact-V8 signal feature and admission context",
+      "source_path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    }
+  ],
+  "source_semantic_authority": [
+    {
+      "short": "RC61",
+      "id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "source_path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Strategies/ZetaRC16.mqh",
+      "bytes": 1403,
+      "sha256": "9A11EC49AC8F9146B8CF16B779B66162D4FAFDB31B31B138D773EE8943E48897",
+      "native_gate": "feature >= 1.5",
+      "normalized_strength": "feature / 1.5",
+      "exact_v8_weight": 2.0
+    },
+    {
+      "short": "RC64",
+      "id": "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "source_path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Strategies/ZetaRC4.mqh",
+      "bytes": 71067,
+      "sha256": "D558138066154754D0AB25783EA148FEE52868C51449F801121086D6CA333FE2",
+      "native_gate": "abs(feature) >= 1.5",
+      "normalized_strength": "abs(feature) / 1.5",
+      "exact_v8_weight": 1.5
+    },
+    {
+      "short": "Cross",
+      "id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "source_path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Strategies/ZetaCross.mqh",
+      "bytes": 3555,
+      "sha256": "A65F5B4B4281F3FFEE6C5ABB56E849BFDD238A670E8647B8C93C697EB9E57EBF",
+      "native_gate": "abs(feature) >= 0.5",
+      "normalized_strength": "abs(feature) / 0.5",
+      "exact_v8_weight": 2.0
+    },
+    {
+      "short": "Intraday",
+      "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "source_path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Strategies/ZetaPressure.mqh",
+      "bytes": 3882,
+      "sha256": "121EE317FF1B91FB335670DD51A51F93DFE9406BC3CA6B7E2264A632A1698D8A",
+      "native_gate": "abs(feature) >= 0.5",
+      "normalized_strength": "abs(feature) / 0.5",
+      "exact_v8_weight": 2.5
+    },
+    {
+      "short": "Return",
+      "id": "ZT-H1-US30-RETURN-I-c870a788ec",
+      "source_path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Strategies/ZetaReturn.mqh",
+      "bytes": 3264,
+      "sha256": "A58AE0B33CF0B23B1575EA2B73FAEF26B87CBA06DA95EECA37E02A0833FE5F64",
+      "native_gate": "feature <= -0.5",
+      "normalized_strength": "(-feature) / 0.5",
+      "exact_v8_weight": 1.5
+    }
+  ],
+  "input_staging_boundary": {
+    "inputs_staged_at_declaration": false,
+    "implementation_created_at_declaration": false,
+    "outcomes_opened_at_declaration": false,
+    "rule": "No input copy, config, executable proxy implementation, derived threshold table or result may be created until this declaration commit is verified on origin/main."
+  },
+  "optimization_scope": {
+    "parameter_only": false,
+    "agent_selects_and_executes_in_scope_axes_autonomously": true,
+    "isolated_code_and_admission_mechanism_change_allowed": true,
+    "all_five_existing_strategies_remain_active": true,
+    "this_unit_is_limited_to": [
+      "Outcome-free component-relative feature-strength threshold construction",
+      "Hard monotone suppression of weaker exact-V8 signal-passed births",
+      "Coarse complete map, fine adjacency, one-component causal ablations, fresh validation and temporal/cost stability"
+    ],
+    "new_entry_strategy_definition": "Any new symbol, timeframe, signal family, direction or opportunity timestamp not emitted by exact V8, including a threshold below the exact-V8 native gate or another entry loosening that manufactures an opportunity.",
+    "new_entry_strategy_classification": "LAB_RESEARCH",
+    "new_entry_strategy_action": "PROHIBITED_NOT_OPENED_NOT_IMPLEMENTED",
+    "separate_lab_research_or_engineering": "NOT_OPENED"
+  },
+  "outcome_free_threshold_construction": {
+    "population_period": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "population_rows": "research-candidates rows for the named component with signal_known=1 and signal_passed=1 inside the population period, including both POSITION_OPEN and aggregate-risk-blocked paths",
+    "outcome_columns_read_during_construction": false,
+    "strength_floor": 1.0,
+    "neutral_quantile_coordinate": 0.0,
+    "neutral_meaning": "Use the exact native gate; do not replace it with the empirical minimum.",
+    "positive_quantile_rule": "Sort finite normalized strengths ascending. For q > 0, select the nearest-rank value at one-based rank ceil(q * N), clipped to 1..N. Candidate passes when normalized_strength is greater than or equal to that frozen value.",
+    "ties": "Keep all equal-to-threshold rows. Deduplicate roles by exact five-value threshold vector while preserving all quantile/seed provenance.",
+    "nonfinite_or_native_gate_violation": "Abort before candidate output.",
+    "thresholds_can_only_equal_or_exceed_native_gate": true
+  },
+  "shared_executable_proxy_contract": {
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "exact_v8_component_weights": [2.0, 1.5, 2.0, 2.5, 1.5],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "daily_volume_multiplier": "1 + floor(max(0, stressed_closed_balance - 100) / 150)",
+    "component_volume": "round_to_0.01(0.01 * daily_volume_multiplier * exact_v8_component_weight)",
+    "risk_capital": "minimum of actual balance, stressed balance and source pre-order risk-capital haircut applied to actual balance",
+    "signal_strength_gate_precedes_unchanged_aggregate_admission": true,
+    "accepted_source_path_only": true,
+    "freed_capacity_blocked_opportunity_profit_credit_usd": 0.0,
+    "freed_capacity_blocked_existing_v8_opportunities_observed": 143,
+    "drawdown_basis": "actual_closed_balance_relative_drawdown",
+    "native_open_equity_freed_capacity_and_stop_quantization_claimed": false
+  },
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_blocks": ["2024-H1", "2024-H2", "2025-H1", "2025-H2"],
+    "validation": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"]
+  },
+  "ordered_deep_stages": [
+    {
+      "stage": "A_COMPLETE_ALL_FIVE_COARSE_STRENGTH_MAP",
+      "campaign": "optimization/campaigns/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/",
+      "quantile_coordinates_per_component": [0.0, 0.25, 0.5],
+      "raw_role_count": 243,
+      "enumeration": "Cartesian product of three frozen quantile coordinates over RC61, RC64, Cross, Intraday and Return. The all-zero vector is the exact-V8 neutral. Every role retains all five components, exact weights, formulas, directions, timestamps, risk and cap.",
+      "deduplication": "Deduplicate exact five-threshold vectors caused by empirical ties while preserving all quantile provenance. Canonical order is lexicographic quantile vector, then exact threshold vector.",
+      "development_only": true,
+      "eligibility": {
+        "common": "Each of the four development half-years must have positive actual net, positive stressed net and positive minimum balance.",
+        "primary": "Continuous development stressed net retains at least 75% of exact-V8 development stressed net and actual closed-balance DD is no more than 27%.",
+        "fallback": "Continuous development stressed net retains at least 65% of exact-V8 development stressed net and actual DD improves by at least five percentage points versus exact V8.",
+        "robustness": "An eligible unique role needs at least four eligible immediate one-coordinate neighbors spanning at least three component axes. Immediate means one 0.25 lattice step while the other four coordinates are equal."
+      },
+      "center_selection": "Use primary if nonempty, otherwise fallback. Rank robust roles by highest weakest development-half stressed net, whole stressed-net-to-DD efficiency, whole stressed net, lower DD, then canonical order. Select at most three with differences on at least two component coordinates; fill by rank only if separation prevents three.",
+      "no_eligible_fallback": "If no robust eligible role exists, advance up to three separated valid near misses by normalized sum of four half-year sign deficits, stressed-retention deficit and DD deficit, then efficiency and canonical order. Near-miss advancement preserves mandatory depth but is not economic confirmation.",
+      "validation_or_holdout_opened": false,
+      "unit_may_close_here": false,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "B_CENTER_LOCAL_FINE_QUANTILE_ADJACENCY",
+      "campaign_future_name": "dd20-v8-signal-strength-fine-adjacency-proxy-v1",
+      "required": true,
+      "coarse_center_limit": 3,
+      "local_quantile_rule": "For each center component q, use unique coordinates max(0,q-0.10), q and min(0.60,q+0.10). Recompute thresholds by the same frozen outcome-free nearest-rank rule.",
+      "maximum_raw_roles_per_center": 243,
+      "maximum_raw_roles": 729,
+      "deduplication": "Deduplicate exact threshold vectors across all centers while retaining center/quantile provenance.",
+      "development_only": true,
+      "eligibility": "Use Stage-A common, primary and fallback gates unchanged. Eligible fine-neighbor robustness requires at least four eligible one-local-step neighbors spanning at least three component axes in at least one shared center provenance.",
+      "center_selection": "Use Stage-A tier, ranking, separation and at-most-three rules. If there is no robust eligible point, advance declared near misses by the same normalized-deficit rule.",
+      "validation_or_holdout_opened": false,
+      "unit_may_close_here": false,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "C_ONE_COMPONENT_CAUSAL_ABLATION_AND_FRESH_VALIDATION",
+      "campaign_future_name": "dd20-v8-signal-strength-causal-ablation-validation-proxy-v1",
+      "required": true,
+      "immutable_center_limit": 3,
+      "roles_per_center": "One immutable Stage-B center plus one diagnostic ablation for each component whose center quantile is above zero; the ablation returns only that component to exact-V8 native gate q=0.",
+      "maximum_roles": 18,
+      "ablation_is_not_successor": true,
+      "ablation_selection_rule": "No ablation may replace, retune or rescue its immutable center. It tests whether one suppressed component is unnecessary on fresh data.",
+      "fresh_validation_gate": "The immutable center begins from fresh $100 and must have positive actual net, positive stressed net, positive minimum balance, DD no greater than 30% and stressed-net retention at least 65% of exact V8 for January-May.",
+      "causal_nondominance_gate": "The center fails if any one-component native-gate ablation has stressed net at least as high and DD no higher, with at least one strict difference. Equal arithmetic is not domination.",
+      "center_advances_unchanged": true,
+      "locked_holdout_opened": false,
+      "unit_may_close_here": false,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "D_TEMPORAL_AND_COST_STABILITY",
+      "campaign_future_name": "dd20-v8-signal-strength-temporal-cost-stability-proxy-v1",
+      "required": true,
+      "input_role_limit": 3,
+      "fresh_clean_state_blocks": ["2024-H1", "2024-H2", "2025-H1", "2025-H2", "2026-01-through-05", "2026-06-through-07 locked holdout"],
+      "cost_book": "Judge actual net and the already recorded doubled-observed-cost stressed net; fit no new cost model.",
+      "block_gate": "Every block begins independently at $100 with the immutable thresholds and must have positive actual net, positive stressed net, positive minimum balance and actual closed-balance DD no greater than 30%.",
+      "whole_gate": "Continuous 2024-01 through 2026-07 replay must retain at least 75% of exact-V8 whole stressed net and improve actual closed-balance DD by at least five percentage points.",
+      "ranking": "Among roles passing every gate, maximize weakest block stressed net, then whole stressed-net-to-DD efficiency, whole stressed net, lower whole DD and canonical order. Locked holdout never selects an alternate.",
+      "empty_input_rule": "If Stage C has zero validation-passing immutable centers, record all declared blocks as zero-input/zero-run and close U003 validly empty; do not reopen an ablation, neighbor or near miss.",
+      "unit_may_close_here": true,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "E_SCARCE_NATIVE_MT5_PAIR",
+      "conditional": "Exactly one unchanged Stage-D winner may enter.",
+      "maximum_valid_economic_paths": 2,
+      "paths": ["exact contemporaneous V8 control", "one unchanged U003 finalist"],
+      "proxy_nonconfirmation_mt5_paths": 0,
+      "purpose": "Establish native freed-capacity admissions, open-equity DD, stop quantization and full Tester economics that the accepted-source proxy cannot claim.",
+      "authority": "A native result can close or support U003 but cannot modify or promote Live directly."
+    }
+  ],
+  "closure_and_correction_rules": {
+    "single_grid_or_candidate_can_close_unit": false,
+    "environment_design_or_engineering_fault": "CORRECTION_STATE_NOT_ECONOMIC_FAILURE_NO_ARBITRARY_RETRY_CAP",
+    "economic_closure": "Only after Stages A through D are completed as declared and no immutable Stage-D survivor exists, or after the sole valid Stage-E finalist nonconfirms with no declared layer remaining.",
+    "automatic_adjacent_threshold_window_subgroup_component_direction_or_seed_followup_after_closure": false,
+    "required_after_closure": "Freeze the whole Unit bundle, then recompare Programs 1-5 and 7 before opening any successor."
+  },
+  "live_and_lab_boundary": {
+    "live_package_changed": false,
+    "live_runtime_changed": false,
+    "live_order_authority_changed": false,
+    "direct_promotion_authority": false,
+    "lab_opened": false,
+    "new_entry_work_opened": false,
+    "mt5_executed": false,
+    "external_data_used": false,
+    "broker_account_position_order_deal_query": false
+  },
+  "marker": "V8_OPT_U003_DECLARED_COMPLETE_ALL_FIVE_COARSE_FINE_CAUSAL_ABLATION_TEMPORAL_COST_STABILITY_SCARCE_MT5_EXISTING_OPPORTUNITY_SUPPRESSION_ONLY_NO_NEW_ENTRY_NO_LAB_PREINPUT_PREOUTCOME"
+}
