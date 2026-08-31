@@ -1,0 +1,108 @@
+{
+  "schema": "zeta-next-dd20-v8-component-relative-signal-strength-suppression-proxy-contract-v1",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "unit_stage": "A_COMPLETE_ALL_FIVE_COARSE_STRENGTH_MAP",
+  "declaration_authority": {
+    "path": "optimization/campaigns/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/evidence/DD20_V8_COMPONENT_RELATIVE_SIGNAL_STRENGTH_SUPPRESSION_UNIT_003_DECLARATION_V1.json",
+    "bytes": 17130,
+    "sha256": "615BCB7A71C9FC06060CB12E69069189BF4A44D8C27E7767BCABCAB6E597E4CB",
+    "commit_on_origin_main": "164061c20534db8da8bfb1f262aab5fdff31b20c"
+  },
+  "inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/input",
+    "lifecycle": {
+      "name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "matched_lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818
+    },
+    "candidate": {
+      "name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "rows": 8176,
+      "position_open_rows": 965,
+      "unique_component_time_open_keys": 965,
+      "signal_passed_rows": 1108
+    },
+    "source_files": [
+      {"name": "source/ZetaRC16.mqh", "bytes": 1403, "sha256": "9A11EC49AC8F9146B8CF16B779B66162D4FAFDB31B31B138D773EE8943E48897"},
+      {"name": "source/ZetaRC4.mqh", "bytes": 71067, "sha256": "D558138066154754D0AB25783EA148FEE52868C51449F801121086D6CA333FE2"},
+      {"name": "source/ZetaCross.mqh", "bytes": 3555, "sha256": "A65F5B4B4281F3FFEE6C5ABB56E849BFDD238A670E8647B8C93C697EB9E57EBF"},
+      {"name": "source/ZetaPressure.mqh", "bytes": 3882, "sha256": "121EE317FF1B91FB335670DD51A51F93DFE9406BC3CA6B7E2264A632A1698D8A"},
+      {"name": "source/ZetaReturn.mqh", "bytes": 3264, "sha256": "A58AE0B33CF0B23B1575EA2B73FAEF26B87CBA06DA95EECA37E02A0833FE5F64"}
+    ]
+  },
+  "output": "optimization/artifacts/raw/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/output/proxy-result.json",
+  "reference_capital_usd": 100.0,
+  "base_volume_lots": 0.01,
+  "volume_step_lots": 0.01,
+  "addition_step_usd": 150.0,
+  "base_position_risk_fraction": 0.04,
+  "aggregate_risk_fraction": 0.18,
+  "aggregate_tolerance_usd": 0.01,
+  "drawdown_basis": "actual_closed_balance_relative_drawdown",
+  "components": [
+    {"short": "RC61", "id": "ZT-M30-US30-RANGE-COMP-61f61deaba", "source_weight": 2.0, "source_births": 190, "signal_passed_all": 190, "signal_passed_development": 151, "strength_mode": "positive", "native_feature_gate": 1.5},
+    {"short": "RC64", "id": "ZT-M30-US30-RANGE-COMP-64efb16616", "source_weight": 1.5, "source_births": 150, "signal_passed_all": 150, "signal_passed_development": 121, "strength_mode": "absolute", "native_feature_gate": 1.5},
+    {"short": "Cross", "id": "ZT-H1-US100-CROSS-IN-14b72317b7", "source_weight": 2.0, "source_births": 446, "signal_passed_all": 546, "signal_passed_development": 420, "strength_mode": "absolute", "native_feature_gate": 0.5},
+    {"short": "Intraday", "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "source_weight": 2.5, "source_births": 60, "signal_passed_all": 81, "signal_passed_development": 55, "strength_mode": "absolute", "native_feature_gate": 0.5},
+    {"short": "Return", "id": "ZT-H1-US30-RETURN-I-c870a788ec", "source_weight": 1.5, "source_births": 119, "signal_passed_all": 141, "signal_passed_development": 109, "strength_mode": "negative", "native_feature_gate": 0.5}
+  ],
+  "strength_lattice": {
+    "development_population": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "coarse_quantile_coordinates": [0.0, 0.25, 0.5],
+    "raw_roles": 243,
+    "expected_unique_threshold_roles": 243,
+    "nearest_rank": "one_based_ceil_q_times_n",
+    "gate_inclusive": true,
+    "native_normalized_floor": 1.0,
+    "minimum_eligible_neighbors": 4,
+    "minimum_neighbor_axes": 3,
+    "maximum_stage_b_centers": 3,
+    "minimum_center_component_separation": 2,
+    "strength_tolerance": 1e-12
+  },
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_2024_h1": ["2024-01-01T00:00:00", "2024-07-01T00:00:00"],
+    "development_2024_h2": ["2024-07-01T00:00:00", "2025-01-01T00:00:00"],
+    "development_2025_h1": ["2025-01-01T00:00:00", "2025-07-01T00:00:00"],
+    "development_2025_h2": ["2025-07-01T00:00:00", "2026-01-01T00:00:00"]
+  },
+  "anchor_reproduction": {
+    "normalized_thresholds": [1.0, 1.0, 1.0, 1.0, 1.0],
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5],
+    "aggregate_risk_fraction": 0.18,
+    "joined_birth_open_rows": 965,
+    "source_volume_matches": 965,
+    "accepted_lifecycles": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "closed_balance_drawdown_pct": 35.46,
+    "net_tolerance_usd": 1e-7,
+    "drawdown_tolerance_points": 0.01,
+    "volume_tolerance_lots": 1e-9
+  },
+  "gates": {
+    "primary_stressed_retention": 0.75,
+    "primary_max_drawdown_pct": 27.0,
+    "fallback_stressed_retention": 0.65,
+    "fallback_min_drawdown_improvement_points": 5.0,
+    "near_miss_normalization_floor": 1e-9
+  },
+  "stage_succession": {
+    "maximum_stage_b_strength_seeds": 3,
+    "stage_a_can_close_unit": false,
+    "stage_b_required": true,
+    "validation_opened": false,
+    "locked_holdout_opened": false
+  },
+  "mt5_budget": {
+    "stage_a_authorized_paths": 0,
+    "maximum_valid_economic_paths_after_all_proxy_stages": 2
+  }
+}

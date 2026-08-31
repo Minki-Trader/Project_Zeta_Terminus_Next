@@ -1,0 +1,108 @@
+{
+  "schema": "zeta-next-dd20-v8-component-relative-signal-strength-suppression-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "FROZEN_PREOUTCOME_STAGE_A_EXECUTION_NOT_STARTED",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "unit_stage": "A_COMPLETE_ALL_FIVE_COARSE_STRENGTH_MAP",
+  "authority": {
+    "declaration_commit_on_origin_main": "164061c20534db8da8bfb1f262aab5fdff31b20c",
+    "declaration_path": "optimization/campaigns/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/evidence/DD20_V8_COMPONENT_RELATIVE_SIGNAL_STRENGTH_SUPPRESSION_UNIT_003_DECLARATION_V1.json",
+    "declaration_bytes": 17130,
+    "declaration_sha256": "615BCB7A71C9FC06060CB12E69069189BF4A44D8C27E7767BCABCAB6E597E4CB"
+  },
+  "staged_inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/input/",
+    "lifecycle": {
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "source_copy_byte_equal": true
+    },
+    "candidate": {
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "source_copy_byte_equal": true
+    },
+    "source_semantic_copies": [
+      {"name": "ZetaRC16.mqh", "bytes": 1403, "sha256": "9A11EC49AC8F9146B8CF16B779B66162D4FAFDB31B31B138D773EE8943E48897", "baseline_byte_equal": true},
+      {"name": "ZetaRC4.mqh", "bytes": 71067, "sha256": "D558138066154754D0AB25783EA148FEE52868C51449F801121086D6CA333FE2", "baseline_byte_equal": true},
+      {"name": "ZetaCross.mqh", "bytes": 3555, "sha256": "A65F5B4B4281F3FFEE6C5ABB56E849BFDD238A670E8647B8C93C697EB9E57EBF", "baseline_byte_equal": true},
+      {"name": "ZetaPressure.mqh", "bytes": 3882, "sha256": "121EE317FF1B91FB335670DD51A51F93DFE9406BC3CA6B7E2264A632A1698D8A", "baseline_byte_equal": true},
+      {"name": "ZetaReturn.mqh", "bytes": 3264, "sha256": "A58AE0B33CF0B23B1575EA2B73FAEF26B87CBA06DA95EECA37E02A0833FE5F64", "baseline_byte_equal": true}
+    ]
+  },
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 5583,
+    "config_lines": 108,
+    "config_sha256": "83837272C372CD95657A2CD913A7CDF58ABAB481D62EEB192D5CF50AD16014AF",
+    "script_path": "optimization/campaigns/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 52110,
+    "script_lines": 1178,
+    "script_sha256": "CCA820B7E2D21D3F344CA55E381EDDAA1DFCA7B5A5AF007D54CF75E1F59BB855",
+    "python_version": "3.13.9",
+    "numpy_version": "2.3.4",
+    "syntax_check_passed": true
+  },
+  "outcome_free_input_precheck": {
+    "lifecycle_rows": 2170,
+    "matched_complete_lifecycles": 965,
+    "candidate_rows": 8176,
+    "signal_passed_rows": 1108,
+    "position_open_rows": 965,
+    "signal_passed_all_by_component": [190, 150, 546, 81, 141],
+    "signal_passed_development_by_component": [151, 121, 420, 55, 109],
+    "accepted_births_by_component": [190, 150, 446, 60, 119],
+    "lifecycle_position_open_feature_join_passed": true,
+    "all_signal_passed_strengths_at_or_above_native": true
+  },
+  "outcome_free_threshold_precheck": {
+    "raw_roles": 243,
+    "unique_threshold_roles": 243,
+    "duplicates_removed": 0,
+    "adjacency_edges": 810,
+    "all_thresholds_at_or_above_native": true,
+    "component_normalized_thresholds": [
+      {"short": "RC61", "population": 151, "q0": 1.0, "q25": 1.1637994039831865, "q50": 1.3943355125908952},
+      {"short": "RC64", "population": 121, "q0": 1.0, "q25": 1.0671043219654395, "q50": 1.1822816374611111},
+      {"short": "Cross", "population": 420, "q0": 1.0, "q25": 2.5418658327420287, "q50": 4.265116019474376},
+      {"short": "Intraday", "population": 55, "q0": 1.0, "q25": 1.1289324611150944, "q50": 1.3701074354465217},
+      {"short": "Return", "population": 109, "q0": 1.0, "q25": 1.3413356178514364, "q50": 1.9854908603658319}
+    ],
+    "outcome_columns_used_to_construct_thresholds": false
+  },
+  "exact_v8_neutral_precheck": {
+    "normalized_thresholds": [1.0, 1.0, 1.0, 1.0, 1.0],
+    "accepted_source_lifecycles": 965,
+    "suppressed_by_strength": 0,
+    "aggregate_skips_within_source_path": 0,
+    "source_volume_matches": 965,
+    "source_risk_capital_matches": 965,
+    "source_position_cap_matches": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "stressed_counterfactual_closed_balance_drawdown_pct": 40.89,
+    "minimum_balance_usd": 59.11
+  },
+  "execution_boundary": {
+    "first_import_loader_attempt": "Stopped before module execution because the transient import command did not register the module in sys.modules for dataclass resolution. No precheck, metric or output occurred.",
+    "correction": "The invocation only was corrected by registering the module; source, config, input, threshold construction and gates did not change.",
+    "successful_structural_prechecks": 1,
+    "candidate_map_executed": false,
+    "raw_output_exists": false,
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "mt5_runs": 0,
+    "rule": "One complete Stage-A process may execute only after this exact implementation freeze reaches origin/main."
+  },
+  "scope": {
+    "all_five_existing_v8_strategies_active": true,
+    "existing_opportunity_suppression_only": true,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U003_STAGE_A_IMPLEMENTATION_FROZEN_243_ALL_FIVE_STRENGTH_ROLES_PREOUTCOME_NO_VALIDATION_NO_MT5"
+}

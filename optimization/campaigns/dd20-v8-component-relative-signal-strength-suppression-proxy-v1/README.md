@@ -26,4 +26,6 @@ Unknown capacity-freed blocked opportunities always receive zero proxy profit cr
 
 ## Current boundary
 
-The Unit is declared pre-input, pre-implementation and pre-outcome. No input copy, threshold table, config, proxy source, result, MT5 path, Lab work, Live change, external data or broker/account query exists until the declaration reaches `origin/main`.
+Declaration commit `164061c` reached `origin/main` before input staging and implementation. The two exact V8 ledgers and five feature-source semantics are byte-equal in the isolated raw input root. Outcome-free precheck joins all `965` lifecycles, observes `1,108` signal-passed rows, builds exactly `243` unique threshold roles with `810` adjacency edges and proves every threshold is at or above native.
+
+The exact-neutral precheck reproduces accepted `965`, actual/stressed `+$409.81 / +$367.818`, DD `35.46%` and zero strength suppression or aggregate skip. Config is `5,583` bytes / `83837272...014AF`; source is `52,110` bytes, `1,178` lines / `CCA820B7...BB855`; implementation freeze is `5,790` bytes / `4370C71A...4AAC4`. Raw candidate output is absent. One complete Stage-A process may run only after the freeze reaches `origin/main`; validation, locked holdout, MT5, Lab, Live and external data remain unopened.
