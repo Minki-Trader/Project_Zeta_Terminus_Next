@@ -7,7 +7,7 @@ This file is the concise current re-entry snapshot and the sole Next Live author
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0515`
+- Latest state ID: `STATE-0516`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Current declaration parent boundary: `32ffcd90a0f984962cb1199209b2a1fe5fba485c`, equal to `origin/main` before Family 004 opened
 
@@ -24,8 +24,8 @@ This file is the concise current re-entry snapshot and the sole Next Live author
 
 - Goal: build an independent automated strategy that beats V8, continuing through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`; a single EA may not own the novel signal, and Python-only/ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_004_M15_ONLINE_EXPERT_ADAPTER_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- Sole active family: `lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/`, Program 1 (`entry_signal_market_structure`), meso-to-macro.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_004_CLOSED_VALID_ADVERSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
+- Sole active family: none. Family 004 is immutable closed; Programs 1-5/7 must be re-compared after its closure reaches `origin/main`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Families 001-003 outputs and V1-V8 signals, opportunities, component economics and state are forbidden Family 004 inputs.
 
@@ -60,7 +60,10 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Adapter: `56,681` bytes / `1,401` lines / `E38E188BDCBA13F7CDCA8B02B25F5D79A68A96525EDEFE4CDA9C3172C281E632`.
 - Outcome-free precheck: `81,720` common M15 rows through 2025, `46,574` complete development decision rows, `516` normal days, all 30 experts structurally past 256 matured observations across every development row, and all three symbols risk-feasible at `$100` across all `46,574` rows.
 - Implementation freeze: `6,433` bytes / `D00F4CE3B36735569E0641C282B1B4218D8BE8BD4D55A9005005F572EF6F0D9D`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- Virtual outcomes, online scores, expert rankings, candidate decisions/lifecycles/economics, locked 2026, EA source, compile and MT5 paths remain `0` before development.
+- The one complete development process produced `5,922` nonoverlapping lifecycles and `139,722` state rows. `ONLINE_HL32 / HL96 / HL256` started `2,063 / 2,234 / 1,625` trades (`3.9981 / 4.3295 / 3.1492` per normal day), so all passed turnover and three-symbol breadth.
+- Actual/stressed net was `-$99.3989 / -$163.4354`, `-$99.1503 / -$157.2507`, and `-$97.1707 / -$156.1929`; actual closed-balance DD was `99.4286% / 99.2593% / 97.8415%`. All roles lost in both 2024 and 2025, and complete passer count is zero.
+- Durable result/closure are `9,408 / 4,098` bytes at `8D58AA2991A5CCE8C69CCB90A0F370C9D15A6605A9CA82929F78E2DC0039D167 / 567D44095C370718049946F659C1C1ADDAE0D5B701ECF307F392AB2B984AF511`. Closed README is `2,165` bytes / `8D0595111DF2999DD5E28FF0509FCE1B0BB6C9DF2445D90F8D96346D04EF4EEC`.
+- Locked 2026, EA source, compile and MT5 paths remain unopened. The declared expert/mode/horizon/half-life/score/materiality/risk/capacity/exit bundle and adjacent subgroups are frozen against rescue inside Family 004.
 
 ### Frozen mechanism
 
@@ -81,12 +84,10 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Next authorized sequence
 
-1. Commit and push the source copies, adapter and implementation freeze to `origin/main`.
-2. Only after origin equality, run exactly one complete 2024-2025 three-role development process.
-3. If no role passes every frozen development gate, close the family before locked 2026, EA or MT5 and recompare Programs 1-5/7.
-4. If a role passes, write and push one durable unchanged-role authority before opening locked 2026 January-July.
-5. Implement/compile the EA and run one native candidate path only if that unchanged role passes locked confirmation and every whole-proxy gate.
-6. After each completed experiment, preserve durable evidence and remove only exact disposable unreferenced artifacts.
+1. Commit and push the complete Family 004 result and closure to `origin/main`.
+2. Recompare every active Program 1-5/7 and all heights without opening inputs or outcomes.
+3. Open at most one materially distinct self-contained `Python adapter + EA` or `ONNX + EA` successor only after its selection audit reaches `origin/main`.
+4. Preserve the Family 004 raw evidence; remove only exact disposable unreferenced caches or staging.
 
 ## Frozen lane boundaries
 
@@ -108,8 +109,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 004 `independent-cross-index-m15-online-expert-adapter-challenge-v1`.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_004_M15_ONLINE_EXPERT_ADAPTER_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Active research unit: none; Family 004 closure awaits the durable origin boundary before whole-map comparison.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_004_CLOSED_VALID_ADVERSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
