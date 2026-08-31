@@ -45,3 +45,11 @@ After freeze commit `88255fe` reached `origin/main`, the first process stopped b
 `DD20_V8_EXISTING_COMPONENT_MEMBERSHIP_RECONSTRUCTION_PROXY_V1_EXECUTION_KEY_CORRECTION_DECLARATION.json` permits exactly one source-token replacement and no config, input, lattice, gate, period or selection change. The declaration must reach `origin/main`, followed by a corrected implementation freeze, before one clean replay.
 
 Correction declaration commit `b578f13` reached `origin/main` before the source changed. Git records exactly one removed and one added line: only `maximum_valid_economic_paths` became `maximum_valid_economic_paths_after_all_proxy_stages`. Config remains `39DB7375...BA155`; corrected source is `46,711` bytes / `86FD7AFE...FF46E` and passes the unchanged structural/control precheck. No candidate map was re-executed and no result exists. One clean replay waits for the corrected implementation freeze to reach `origin/main`.
+
+## Final Stage-A result
+
+Corrected freeze commit `6ef3001` reached `origin/main` before the clean `0.4447591s` replay. The complete map contains `24` primary-eligible and robust roles and `28` fallback-eligible roles among all `79` unique vectors. No near-miss fallback was needed.
+
+Three Hamming-diverse robust centers advance unchanged to Stage B. Rank 1 keeps RC61/RC64/Cross at `1.25 / 1.5 / 1.75`, earning development actual/stressed `+$174.08 / +$159.232` at `17.6447%` DD with both years positive. Rank 2 keeps RC64/Cross/Return at `1.5 / 1.5 / 1.25`, earning `+$143.13 / +$129.229` at `18.8169%`. Rank 3 is the all-five static seed `1.25 / 1.5 / 1.5 / 2 / 1.25`, earning `+$150.105 / +$133.103` at `24.0998%`. Each has three eligible one-bit neighbors.
+
+This does not authorize a one-shot deletion or claim a final winner. It preserves a removal-heavy leader, a different three-member contrast and the all-five control as one Stage-B bundle. January-May validation, locked June-July, MT5, Lab/new-entry and Live remain unopened. Mandatory Stage B now performs the frozen `±0.25` executable reallocation inside each membership.
