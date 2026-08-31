@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
-현재 sole active research family는 Program 1 / micro-to-meso `research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`이다. 필수 구조는 self-contained `ONNX + EA`이다. 선언 commit `873186f`가 origin에 도달한 뒤 두 M1 입력을 byte-equal로 복제했다. Trainer는 `63,741` bytes / `1,549` lines / `71A23CC4...E2B0`; outcome-free precheck는 `76,008×60×15` tensor, development `43,072` windows, 정상일 `511`, 8개 fit geometry와 dummy ONNX `7.45e-8 / 0 argmax mismatch`를 통과했다. Freeze는 `7,017` bytes / `223292B6...1CDD4`; label·fit·persistent ONNX·prediction·candidate economics·locked 2026·EA·MT5는 아직 0이며 freeze가 origin에 도달한 뒤 정확히 한 development process만 실행한다.
+현재 active research family는 없다. Program 1 / micro-to-meso Family 005 `research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`은 정확히 한 8-fit development process 뒤 닫혔다. 모든 ONNX parity는 통과했지만 `43,072`개 window 중 가장 느슨한 `0.10R`를 넘은 것은 1개뿐이고 actual/stressed `-$1.4400 / -$1.5520`; `0.20R / 0.30R` 역할은 0회였다. turnover·breadth·양년도 양수·V8 profit을 통과한 역할이 없어 final fit·locked 2026·EA·MT5는 미개봉이다. Closure가 origin에 도달한 뒤 Programs 1-5/7 전체 재비교가 다음 단일 판단이다.
 
 직전 Family 001 `research/independent-cross-index-hourly-adapter-challenge-v1/`은 세 역할 모두 turnover를 통과했지만 actual/stressed와 DD가 전부 실패해 잠긴 2026, EA와 MT5 전에 유효 adverse로 닫혔다. Durable result/closure는 `6,031 / 2,117` bytes at `09F30EDB...1A3D49 / 9E09B960...0FCCCA`다.
 

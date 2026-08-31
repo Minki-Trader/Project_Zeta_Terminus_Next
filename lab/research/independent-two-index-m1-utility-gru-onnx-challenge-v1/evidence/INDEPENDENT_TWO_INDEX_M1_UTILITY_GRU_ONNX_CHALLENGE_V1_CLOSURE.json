@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-independent-two-index-m1-utility-gru-onnx-challenge-v1-closure",
+  "recorded_at_utc": "2026-08-31T13:10:23.2769412Z",
+  "status": "VALID_DEVELOPMENT_NO_COMPLETE_ROLE_UTILITY_COLLAPSE_NO_CONFIRMATION_NO_EA_NO_MT5_FAMILY_CLOSED",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/",
+  "primary_macro_program": 1,
+  "height": "micro_to_meso",
+  "mandatory_architecture": "ONNX_plus_EA",
+  "durable_result": {
+    "path": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/evidence/INDEPENDENT_TWO_INDEX_M1_UTILITY_GRU_ONNX_CHALLENGE_V1_DEVELOPMENT_RESULT.json",
+    "bytes": 10108,
+    "sha256": "E78482738FB1B4738524DD8847E7B625021D9C7CBB4CEB7734876E90CA65EDE8"
+  },
+  "process": {
+    "implementation_freeze_commit": "a5f95b338896a011a26653208355a0b4926edd7f",
+    "complete_development_processes": 1,
+    "economic_reruns": 0,
+    "common_m1_rows_through_2025": 1411033,
+    "initial_rows": 32936,
+    "development_rows": 43072,
+    "normal_trading_days": 511,
+    "fit_count": 8,
+    "persistent_onnx_count": 8,
+    "prediction_rows": 43072,
+    "action_utility_rows": 43072,
+    "trade_rows": 1
+  },
+  "model_integrity": {
+    "all_fit_pytorch_onnx_parity_pass": true,
+    "maximum_absolute_difference": 6.854534149169922e-7,
+    "argmax_mismatch_count": 0,
+    "raw_reference_byte_hash_mismatch_count": 0,
+    "nonfinite_literal_count": 0
+  },
+  "roles": {
+    "UTILITY_EDGE_R010": {
+      "threshold_R_exclusive": 0.1,
+      "starts": 1,
+      "starts_per_normal_day": 0.0019569471624266144,
+      "actual_net_usd": -1.44000002009075,
+      "stressed_net_usd": -1.5520000179529205,
+      "actual_closed_balance_drawdown_pct": 1.44000002009075,
+      "2024_actual_stressed_usd": [
+        0.0,
+        0.0
+      ],
+      "2025_actual_stressed_usd": [
+        -1.4400000200907448,
+        -1.5520000179529254
+      ],
+      "symbol_starts": {
+        "US100": 0,
+        "US30": 1
+      },
+      "complete_pass": false
+    },
+    "UTILITY_EDGE_R020": {
+      "threshold_R_exclusive": 0.2,
+      "starts": 0,
+      "starts_per_normal_day": 0.0,
+      "actual_net_usd": 0.0,
+      "stressed_net_usd": 0.0,
+      "actual_closed_balance_drawdown_pct": 0.0,
+      "2024_actual_stressed_usd": [
+        0.0,
+        0.0
+      ],
+      "2025_actual_stressed_usd": [
+        0.0,
+        0.0
+      ],
+      "symbol_starts": {
+        "US100": 0,
+        "US30": 0
+      },
+      "complete_pass": false
+    },
+    "UTILITY_EDGE_R030": {
+      "threshold_R_exclusive": 0.3,
+      "starts": 0,
+      "starts_per_normal_day": 0.0,
+      "actual_net_usd": 0.0,
+      "stressed_net_usd": 0.0,
+      "actual_closed_balance_drawdown_pct": 0.0,
+      "2024_actual_stressed_usd": [
+        0.0,
+        0.0
+      ],
+      "2025_actual_stressed_usd": [
+        0.0,
+        0.0
+      ],
+      "symbol_starts": {
+        "US100": 0,
+        "US30": 0
+      },
+      "complete_pass": false
+    }
+  },
+  "judgment": {
+    "complete_passer_count": 0,
+    "selected_role": null,
+    "turnover_failure": true,
+    "symbol_breadth_failure": true,
+    "economic_failure": true,
+    "drawdown_failure": false,
+    "both_year_positive_failure": true,
+    "fault_or_correction_state": false,
+    "conclusion": "all eight causal fits and ONNX exports are valid, but only one of 43072 windows cleared the loosest frozen edge threshold and that trade lost; the model family has no executable breadth, turnover or V8-scale utility rather than an implementation defect"
+  },
+  "frozen_no_rescue_bundle": [
+    "sixty-row completed-M1 window",
+    "fifteen frozen price-range-volume-spread features",
+    "GRU32 topology and four-action utility target",
+    "quarterly expanding fit schedule",
+    "Huber objective, optimizer, epoch count and seed",
+    "0.10R, 0.20R and 0.30R edge thresholds",
+    "US100 versus US30 action set",
+    "feature normalization or clock, weekday, session and subgroup additions",
+    "risk, minimum lot, stop, take or hold"
+  ],
+  "unopened": {
+    "final_fit": true,
+    "locked_2026_january_july": true,
+    "confirmation_roles": 0,
+    "ea_source_files": 0,
+    "compile_paths": 0,
+    "mt5_paths": 0,
+    "live_change": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "storage": {
+    "raw_evidence_preserved": true,
+    "raw_all_artifact_bytes": 15222481,
+    "free_system_drive_gib_after_process": 101.315,
+    "mandatory_under_30_gib_sweep_triggered": false
+  },
+  "next_authorized_action": "after this closure reaches origin/main, recompare Programs 1-5 and 7 before declaring at most one materially distinct Python adapter plus EA or ONNX plus EA successor"
+}

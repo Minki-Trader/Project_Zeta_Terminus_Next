@@ -1,0 +1,313 @@
+{
+  "schema": "zeta-next-independent-two-index-m1-utility-gru-onnx-challenge-v1-development-result",
+  "recorded_at_utc": "2026-08-31T13:01:32.630459+00:00",
+  "status": "VALID_DEVELOPMENT_NO_COMPLETE_ROLE_FAMILY_CLOSE_BEFORE_CONFIRMATION_EA_MT5",
+  "authorities": {
+    "contract": {
+      "path": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/config/challenge-contract.json",
+      "bytes": 12987,
+      "sha256": "FB8C714356577AF21CF27313F4AC329A743E8A409814A4D6CF873BC07F0CA07C",
+      "lines": 304
+    },
+    "declaration": {
+      "path": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/evidence/INDEPENDENT_TWO_INDEX_M1_UTILITY_GRU_ONNX_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 6344,
+      "sha256": "7F7931B11A63402C93B4545DC458A4203CA0987D9991CE390B6D530ACE25B6A8",
+      "lines": 148
+    },
+    "implementation_freeze": {
+      "path": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/evidence/INDEPENDENT_TWO_INDEX_M1_UTILITY_GRU_ONNX_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+      "bytes": 7017,
+      "sha256": "223292B601B21DA1E6FD01F658CEFFFC2C4D46365F9F5BDD6B9D3FE55511CDD4",
+      "lines": 183
+    },
+    "trainer": {
+      "path": "lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/model/run_onnx_adapter.py",
+      "bytes": 63741,
+      "sha256": "71A23CC440907AA9F88092CAAF0B67AA83E8D3F23D787D1BFF166B915EB8E2B0",
+      "lines": 1549
+    }
+  },
+  "process": {
+    "initial_rows": 32936,
+    "development_rows": 43072,
+    "normal_trading_days": 511,
+    "day_distribution": {
+      "calendar_dates": 517,
+      "dates_at_least_60_complete_windows": 511,
+      "dates_at_least_80_complete_windows": 423,
+      "median_complete_windows": 87
+    },
+    "fit_count": 8,
+    "all_fit_parity_pass": true,
+    "maximum_parity_difference": 6.854534149169922e-07,
+    "total_argmax_mismatch_count": 0
+  },
+  "development": {
+    "period": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "initial_deposit_usd": 100.0,
+    "roles": {
+      "UTILITY_EDGE_R010": {
+        "minimum_predicted_actual_utility_R_exclusive": 0.1,
+        "metrics": {
+          "starts": 1,
+          "normal_trading_days": 511,
+          "average_starts_per_normal_trading_day": 0.0019569471624266144,
+          "actual_net_usd": -1.44000002009075,
+          "stressed_net_usd": -1.5520000179529205,
+          "actual_ending_balance_usd": 98.55999997990925,
+          "stressed_ending_balance_usd": 98.44799998204708,
+          "actual_closed_balance_drawdown_usd": 1.44000002009075,
+          "actual_closed_balance_drawdown_pct": 1.44000002009075,
+          "stressed_closed_balance_drawdown_usd": 1.5520000179529205,
+          "stressed_closed_balance_drawdown_pct": 1.5520000179529205,
+          "minimum_actual_balance_usd": 98.55999997990925,
+          "minimum_stressed_balance_usd": 98.44799998204708,
+          "robust_recovery_proxy": -1.0777777752080255,
+          "symbol_breadth": 1,
+          "years": {
+            "2024": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            },
+            "2025": {
+              "starts": 1,
+              "actual_net_usd": -1.4400000200907448,
+              "stressed_net_usd": -1.5520000179529254
+            }
+          },
+          "symbols": {
+            "US100": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            },
+            "US30": {
+              "starts": 1,
+              "actual_net_usd": -1.4400000200907448,
+              "stressed_net_usd": -1.5520000179529254
+            }
+          },
+          "exit_reasons": {
+            "TIME_15_M1": 1
+          }
+        },
+        "gates": {
+          "both_2024_and_2025_actual_positive": false,
+          "both_2024_and_2025_stressed_positive": false,
+          "development_actual_net_strictly_above_v8": false,
+          "development_stressed_net_strictly_above_v8": false,
+          "actual_closed_balance_drawdown_pct_max": true,
+          "normal_trading_day_average_lifecycle_starts_min": false,
+          "symbol_breadth_min": false
+        },
+        "complete_pass": false,
+        "threshold_blocks": 43071,
+        "risk_blocks": 0,
+        "final_actual_balance_crosscheck": 98.55999997990925,
+        "final_stressed_balance_crosscheck": 98.44799998204708
+      },
+      "UTILITY_EDGE_R020": {
+        "minimum_predicted_actual_utility_R_exclusive": 0.2,
+        "metrics": {
+          "starts": 0,
+          "normal_trading_days": 511,
+          "average_starts_per_normal_trading_day": 0.0,
+          "actual_net_usd": 0.0,
+          "stressed_net_usd": 0.0,
+          "actual_ending_balance_usd": 100.0,
+          "stressed_ending_balance_usd": 100.0,
+          "actual_closed_balance_drawdown_usd": 0.0,
+          "actual_closed_balance_drawdown_pct": 0.0,
+          "stressed_closed_balance_drawdown_usd": 0.0,
+          "stressed_closed_balance_drawdown_pct": 0.0,
+          "minimum_actual_balance_usd": 100.0,
+          "minimum_stressed_balance_usd": 100.0,
+          "robust_recovery_proxy": null,
+          "symbol_breadth": 0,
+          "years": {
+            "2024": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            },
+            "2025": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            }
+          },
+          "symbols": {
+            "US100": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            },
+            "US30": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            }
+          },
+          "exit_reasons": {}
+        },
+        "gates": {
+          "both_2024_and_2025_actual_positive": false,
+          "both_2024_and_2025_stressed_positive": false,
+          "development_actual_net_strictly_above_v8": false,
+          "development_stressed_net_strictly_above_v8": false,
+          "actual_closed_balance_drawdown_pct_max": true,
+          "normal_trading_day_average_lifecycle_starts_min": false,
+          "symbol_breadth_min": false
+        },
+        "complete_pass": false,
+        "threshold_blocks": 43072,
+        "risk_blocks": 0,
+        "final_actual_balance_crosscheck": 100.0,
+        "final_stressed_balance_crosscheck": 100.0
+      },
+      "UTILITY_EDGE_R030": {
+        "minimum_predicted_actual_utility_R_exclusive": 0.3,
+        "metrics": {
+          "starts": 0,
+          "normal_trading_days": 511,
+          "average_starts_per_normal_trading_day": 0.0,
+          "actual_net_usd": 0.0,
+          "stressed_net_usd": 0.0,
+          "actual_ending_balance_usd": 100.0,
+          "stressed_ending_balance_usd": 100.0,
+          "actual_closed_balance_drawdown_usd": 0.0,
+          "actual_closed_balance_drawdown_pct": 0.0,
+          "stressed_closed_balance_drawdown_usd": 0.0,
+          "stressed_closed_balance_drawdown_pct": 0.0,
+          "minimum_actual_balance_usd": 100.0,
+          "minimum_stressed_balance_usd": 100.0,
+          "robust_recovery_proxy": null,
+          "symbol_breadth": 0,
+          "years": {
+            "2024": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            },
+            "2025": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            }
+          },
+          "symbols": {
+            "US100": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            },
+            "US30": {
+              "starts": 0,
+              "actual_net_usd": 0.0,
+              "stressed_net_usd": 0.0
+            }
+          },
+          "exit_reasons": {}
+        },
+        "gates": {
+          "both_2024_and_2025_actual_positive": false,
+          "both_2024_and_2025_stressed_positive": false,
+          "development_actual_net_strictly_above_v8": false,
+          "development_stressed_net_strictly_above_v8": false,
+          "actual_closed_balance_drawdown_pct_max": true,
+          "normal_trading_day_average_lifecycle_starts_min": false,
+          "symbol_breadth_min": false
+        },
+        "complete_pass": false,
+        "threshold_blocks": 43072,
+        "risk_blocks": 0,
+        "final_actual_balance_crosscheck": 100.0,
+        "final_stressed_balance_crosscheck": 100.0
+      }
+    },
+    "complete_passer_count": 0,
+    "complete_passers_ranked": [],
+    "selected_role": null
+  },
+  "raw_evidence": {
+    "models": [
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-01-2024Q1.onnx",
+        "bytes": 26722,
+        "sha256": "DF668493201597FD9ECBA89DE626D117BC51ACE513D7C37CA68FEA79484AE339"
+      },
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-02-2024Q2.onnx",
+        "bytes": 26722,
+        "sha256": "312556494AFAEE2E3870942AE1A2C1AAAC6D2BB135EF4BCA47B7A67BC8E9AB41"
+      },
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-03-2024Q3.onnx",
+        "bytes": 26722,
+        "sha256": "3E074C22F740282383245C04AD24F66AF0FA5A2E06E14A381590506A81914167"
+      },
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-04-2024Q4.onnx",
+        "bytes": 26722,
+        "sha256": "9ED7464CF6EDBDADB8D9B3760E346617DFBC433CB9A1606BE3BCA73A126EECDF"
+      },
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-05-2025Q1.onnx",
+        "bytes": 26722,
+        "sha256": "617E4421366FDAB10E55AE47B981637E7AD1869CCF55E651CB31DE2480D17D31"
+      },
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-06-2025Q2.onnx",
+        "bytes": 26722,
+        "sha256": "90FB4DA1B1F1DF6BFCA9DFFF36FEDB45CE23549F646CAA8B85813A548082371A"
+      },
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-07-2025Q3.onnx",
+        "bytes": 26722,
+        "sha256": "0DD9A42E7FB68194F68ACF46E1B6B36335E875B2DA6978E02AA6F3CB4AF51A44"
+      },
+      {
+        "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/utility-gru-08-2025Q4.onnx",
+        "bytes": 26722,
+        "sha256": "24ED2CBB254372CE5A572F8CE38A6ACDC780F7BE9DAFBFF8C429DC1636C53C23"
+      }
+    ],
+    "model_manifest": {
+      "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/model-manifest.json",
+      "bytes": 16704,
+      "sha256": "C4D06760F34F124E9C2966F6FBCA750B0BB52478A257B31682D29D6B81F5183B",
+      "lines": 551
+    },
+    "prediction_tape": {
+      "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/prediction-tape.csv",
+      "bytes": 5061742,
+      "sha256": "70C85CEE3F8C3451DE0642CC4690BD8B5480CD2B33AA78A8C1F199C366CA5C08",
+      "lines": 43073
+    },
+    "action_utility_tape": {
+      "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/action-utility-tape.csv",
+      "bytes": 9929574,
+      "sha256": "F5826C2042FB18D1BB52F4C2196781CA56A32A16B3FCF7E78334F157189CC628",
+      "lines": 43073
+    },
+    "trade_tape": {
+      "path": "lab/artifacts/independent-two-index-m1-utility-gru-onnx-challenge-v1/development/trade-tape.csv",
+      "bytes": 685,
+      "sha256": "76A955417C98C8881925A8EB033B3FDE9CBC3499F2E9B6352C6373FA7B455D8A",
+      "lines": 2
+    },
+    "ordered_all_artifact_manifest_sha256": "191400E2059E6DD693A4C022869D51C93F647E5C11983E211D52245BF19D1183",
+    "all_artifact_bytes": 15222481
+  },
+  "attestation": {
+    "one_complete_development_process": true,
+    "locked_confirmation_rows_used": 0,
+    "candidate_ea_source_files": 0,
+    "candidate_mt5_paths": 0,
+    "native_v8_victory_claimed": false,
+    "live_changed": false
+  },
+  "next_authorized_action": "write the durable adverse result and family closure; do not open final fit, locked confirmation, EA, or MT5"
+}

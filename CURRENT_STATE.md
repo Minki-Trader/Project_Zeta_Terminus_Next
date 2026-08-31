@@ -2,32 +2,32 @@
 
 Last updated: 2026-08-31
 
-This file is the concise current re-entry snapshot and the sole Next Live authority. Detailed immutable transitions are stored in the active numbered state chunk.
+This is the concise current re-entry snapshot and the sole Next Live authority. Detailed immutable transitions remain in the active numbered state chunk.
 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0519`
+- Latest state ID: `STATE-0520`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current successor-selection parent boundary: `8911bcdfc4738f4ce4a482bcda05ba1711b4a4e7`, equal to `origin/main` before the post-Family-004 recompare
+- Current Challenge process parent: Family 005 implementation-freeze commit `a5f95b338896a011a26653208355a0b4926edd7f`, equal to `origin/main` before the one development process.
 
 ## Authorization and ownership
 
 - Development: `ENABLED`, exactly one serial judgment stream.
-- Next Live-Dev authorization: `ENABLED` only through the 2026-08-31 one-time user-accepted economic exception for exact release `NEXT-E02-V8-PMLR1-b1c77d3b6356`. The exception does not relabel V2 as a pass and grants no other release, package byte, identity or risk contract authority.
-- Next V8 new-entry authorization: `ENABLED` only for exact Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`, canonical source/settings SHA-256 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`, weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, position risk `0.04`, aggregate cap `0.18` and Passive disabled.
-- Existing real-account owner: exact V8 Live sole PID `33388`; V7 RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 are retired/stopped and must not restart.
-- Last verified real-account boundary: V8 sequence `492` at `2026-08-31T01:57:18Z`, entries `1/1`, connected exact account, balance/equity `$105.20/$105.20`, carried project realized net `+$4.55`, zero position/order/margin/planned risk and zero alert/warning/safety/persistence/broker/foreign fault. The activation window passed actual-tick and synchronized US30/US100/US500 M15/M30/H1 guards. Korean dashboard PID `28008` was responsive.
-- The current Challenge work has no Live authority and may not query broker positions, orders, deals or account state merely to establish context.
+- Next Live-Dev authorization: `ENABLED` only through the 2026-08-31 one-time user-accepted economic exception for exact release `NEXT-E02-V8-PMLR1-b1c77d3b6356`. It does not relabel V2 as a pass or authorize any other release, byte, identity or risk contract.
+- Next V8 new-entry authorization: exact Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`, canonical source/settings SHA-256 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`, weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, position risk `0.04`, aggregate cap `0.18`, Passive disabled.
+- Existing real-account owner: exact V8 Live sole PID `33388`; V7 RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 remain retired/stopped.
+- Last verified real-account boundary remains V8 sequence `492` at `2026-08-31T01:57:18Z`, entries `1/1`, balance/equity `$105.20/$105.20`, carried project realized net `+$4.55`, flat and zero planned risk/fault. Korean dashboard PID `28008` was responsive at that boundary.
+- Challenge work has no Live authority and may not query broker positions, orders, deals or account state merely for context.
 
 ## Active primary Goal
 
-- Goal: build an independent automated strategy that beats V8, continuing through materially distinct families until a complete valid native winner exists.
-- Mandatory architecture: `Python adapter + EA` or `ONNX + EA`; a single EA may not own the novel signal, and Python-only/ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_M1_UTILITY_GRU_ONNX_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- Sole active family: `lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`, Program 1 / micro-to-meso, mandatory `ONNX + EA`.
+- Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
+- Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_CLOSED_VALID_UTILITY_COLLAPSE_RECOMPARE_PENDING`.
+- Sole active Challenge family: none. Family 005 is closed; Programs 1-5 and 7 must be re-compared after its closure reaches `origin/main`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
-- The exact Live V8 package is benchmark-only, not a candidate parent. Families 001-003 outputs and V1-V8 signals, opportunities, component economics and state are forbidden Family 004 inputs.
+- The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
 
@@ -45,96 +45,57 @@ A winner must provide complete unchanged native `Python adapter + EA` or `ONNX +
 
 No proxy result, partial gate pass or user-visible score alone completes the Goal.
 
-## Family 004 frozen declaration
+## Family 005 closed result
 
-- README: `1,177` bytes / `24863A8B713014B58DB463A3C6314C2DD7D651C6FF3D83509B03D6CE56EA163E`.
-- Contract: `11,776` bytes / `3132FF3FCD57C6859AA33F9A9F49296D71B559D4494B6D235F98AF2E09F19989`.
-- Declaration: `6,281` bytes / `CC3FEFB41C24BEFE7C348F4DAB511B161EAE1FADFE7353F99283A9FC8E820F25`, status `DECLARED_PREINPUT_PREM15_PREEXPERT_PREIMPLEMENTATION_PREOUTCOME`.
-- Selection authority: `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_003_WHOLE_MAP_RECOMPARE_V1.json`, `6,041` bytes / `E06E035A9B65D3635DE74A53DA813B0A09C1A00F37C6F9CF40895541C0A58F28`.
-- Input authorities remain only at their original locations:
-  - US30 M1: `19,018,323` bytes / `8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063`.
-  - US100 M1: `21,213,599` bytes / `634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2`.
-  - US500 M15: `7,007,401` bytes / `A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A`.
-- Source readiness used timestamps only: `96,135` common quarter-hour rows through 2026-07-31; development 2024-2025 has `47,116` rows across `517` dates. No OHLC, spread, return or candidate outcome participated in family selection.
-- Declaration commit `d24fa59d18ba453edbf8a72884f446051b3d6fdb` reached `origin/main` before three family-local source copies were made. All copies remain byte/hash-equal to their authorities.
-- Adapter: `56,681` bytes / `1,401` lines / `E38E188BDCBA13F7CDCA8B02B25F5D79A68A96525EDEFE4CDA9C3172C281E632`.
-- Outcome-free precheck: `81,720` common M15 rows through 2025, `46,574` complete development decision rows, `516` normal days, all 30 experts structurally past 256 matured observations across every development row, and all three symbols risk-feasible at `$100` across all `46,574` rows.
-- Implementation freeze: `6,433` bytes / `D00F4CE3B36735569E0641C282B1B4218D8BE8BD4D55A9005005F572EF6F0D9D`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- The one complete development process produced `5,922` nonoverlapping lifecycles and `139,722` state rows. `ONLINE_HL32 / HL96 / HL256` started `2,063 / 2,234 / 1,625` trades (`3.9981 / 4.3295 / 3.1492` per normal day), so all passed turnover and three-symbol breadth.
-- Actual/stressed net was `-$99.3989 / -$163.4354`, `-$99.1503 / -$157.2507`, and `-$97.1707 / -$156.1929`; actual closed-balance DD was `99.4286% / 99.2593% / 97.8415%`. All roles lost in both 2024 and 2025, and complete passer count is zero.
-- Durable result/closure are `9,408 / 4,098` bytes at `8D58AA2991A5CCE8C69CCB90A0F370C9D15A6605A9CA82929F78E2DC0039D167 / 567D44095C370718049946F659C1C1ADDAE0D5B701ECF307F392AB2B984AF511`. Closed README is `2,165` bytes / `8D0595111DF2999DD5E28FF0509FCE1B0BB6C9DF2445D90F8D96346D04EF4EEC`.
-- Locked 2026, EA source, compile and MT5 paths remain unopened. The declared expert/mode/horizon/half-life/score/materiality/risk/capacity/exit bundle and adjacent subgroups are frozen against rescue inside Family 004.
+- Family: `lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`, Program 1 / micro-to-meso, mandatory `ONNX + EA`.
+- Selection audit: `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_004_WHOLE_MAP_RECOMPARE_V1.json`, `7,335` bytes / `FA66B823948546BC95D0E2C022DF999632EC53D395FBDDFE02CB3798805AC5F0`.
+- README/contract/declaration are `1,172 / 12,987 / 6,344` declaration-boundary bytes at `BBA39C7C...EDD22 / FB8C7143...CA07C / 7F7931B1...5B6A8`. Declaration commit `873186f1ffad3947603aeb7903a3837ab1c370ea` reached `origin/main` before input copies or implementation.
+- Frozen inputs are byte-equal US30/US100 M1 copies: `19,018,323 / 21,213,599` bytes at `8CD68BC5...B063 / 634A8545...C6BB2`.
+- Trainer/exporter is `63,741` bytes / `1,549` lines / `71A23CC440907AA9F88092CAAF0B67AA83E8D3F23D787D1BFF166B915EB8E2B0`; implementation freeze is `7,017` bytes / `223292B601B21DA1E6FD01F658CEFFFC2C4D46365F9F5BDD6B9D3FE55511CDD4`.
+- The frozen carrier is a causal `60×15` completed-M1 tensor, eight quarterly expanding GRU32 fits, four actual-cost utilities for US100/US30 long/short and exclusive edge roles `0.10 / 0.20 / 0.30R`.
+- Exactly one development process ran after implementation commit `a5f95b338896a011a26653208355a0b4926edd7f` reached `origin/main`. It used `32,936` initial and `43,072` 2024-2025 development windows across `511` normal days and wrote eight persistent ONNX models.
+- All eight PyTorch/ONNX parity checks passed; maximum absolute difference was `6.854534149169922e-7`, action argmax mismatch `0`. All 16 referenced authorities/artifacts matched bytes and SHA-256; prediction/utility timestamp mismatches and nonfinite values were `0`.
+- Across `43,072` windows, predictions above `0.10 / 0.20 / 0.30R` numbered `1 / 0 / 0`. The sole `UTILITY_EDGE_R010` US30 long lost actual/stressed `-$1.44000002 / -$1.55200002`; starts/day was `0.00195695`, symbol breadth `1`, and 2024 had zero start. Stricter roles never started.
+- Complete passer count is `0`. Turnover, breadth, both-year positivity and both V8 profit gates failed; the mechanically small drawdown is not advancement authority. This is valid economic/utility nonconfirmation, not an environment, design or engineering fault.
+- Raw result is `12,346` bytes / `AC1BF2F2199B1F54065339FE18E2AE6352B53684976214D2D6F812250BF31B8C`; all raw artifacts total `15,222,481` bytes / ordered manifest `191400E2059E6DD693A4C022869D51C93F647E5C11983E211D52245BF19D1183`.
+- Durable result/closure are `10,108 / 4,707` bytes at `E78482738FB1B4738524DD8847E7B625021D9C7CBB4CEB7734876E90CA65EDE8 / CC169073B5E9B8A9B675C12D39CECE564937AE86CDA8203F24C6F0812320CFD5`.
+- Final fit, locked 2026 January-July, EA source, compile and MT5 remained unopened. The complete feature/model/training/threshold/symbol/risk/exit bundle and adjacent subgroup rescues are frozen inside Family 005.
 
-## Post-Family-004 whole-map selection
+## Closed Challenge progression
 
-- Programs 1-5/7 and micro/meso/macro were re-compared without candidate outcomes. Programs 2, 3, 4, 5 and 7 have no perspective-distant ready carrier; Program 1 alone is ready.
-- Audit: `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_004_WHOLE_MAP_RECOMPARE_V1.json`, `7,335` bytes / `FA66B823948546BC95D0E2C022DF999632EC53D395FBDDFE02CB3798805AC5F0`.
-- The scan opened only US30/US100 M1 timestamps. Their `1,617,636` common rows support exact `t-61..t-1` causal input plus `t..t+14` future geometry at `43,072` development decisions and `13,021` locked decisions; no OHLC, spread, volume, return, label or outcome was used for selection.
-- Provisional Family 005 is `lab/research/independent-two-index-m1-utility-gru-onnx-challenge-v1/`, Program 1 / micro-to-meso, mandatory `ONNX + EA`.
-- It is materially distinct: a `1×60×15` M1 microstructure tensor, quarterly causal expanding-window recurrent fits and four actual-cost action-utility outputs for US100/US30 long/short. It excludes clock features, prior-family outputs and paired execution.
-- Successor root, input copies, tensors, labels, fits, ONNX, predictions, economics, locked confirmation, EA and MT5 remain zero.
-
-## Family 005 frozen declaration
-
-- README/contract are `1,172 / 12,987` bytes at `BBA39C7C7B08248CD5B65F337A78DDA23A73455232D1BCD6A46000F041DEDD22 / FB8C714356577AF21CF27313F4AC329A743E8A409814A4D6CF873BC07F0CA07C`.
-- Declaration is `6,344` bytes / `7F7931B11A63402C93B4545DC458A4203CA0987D9991CE390B6D530ACE25B6A8`, status `DECLARED_PREINPUT_PRETENSOR_PRELABEL_PREFIT_PREONNX_PREOUTCOME`.
-- Frozen input is `60×15`: seven path/true-range/volume/spread features per symbol plus the US100-minus-US30 minute body. No clock, weekday, session or prior-family field exists.
-- Eight quarterly expanding GRU32 fits use only labels fully matured before each test block. The four outputs are actual-cost utilities for US100 long/short and US30 long/short; roles require predicted utility strictly above `0.10 / 0.20 / 0.30R`.
-- Execution is one global action, two-percent one-ATR target risk, four-percent minimum-lot cap, `-1R / +1.5R / fifteen-M1` exit, observed direction-specific cost and the same burden again in stress.
-- Source copies, tensors, labels, fits, ONNX, predictions, candidate decisions/economics, locked 2026, EA and MT5 are zero at declaration.
-- Declaration commit `873186f1ffad3947603aeb7903a3837ab1c370ea` reached `origin/main` before two byte/hash-equal M1 copies and implementation.
-- Trainer/exporter: `63,741` bytes / `1,549` lines / `71A23CC440907AA9F88092CAAF0B67AA83E8D3F23D787D1BFF166B915EB8E2B0`.
-- Outcome-free precheck built the exact `76,008×60×15` initial/development tensor, confirmed `43,072` development windows and `511` normal days, and fixed all eight train/test row counts.
-- Temporary dummy GRU ONNX parity passed over 64 rows at maximum absolute difference `7.450580596923828e-8` with zero action-argmax mismatch; the dummy file was removed.
-- Implementation freeze is `7,017` bytes / `223292B601B21DA1E6FD01F658CEFFFC2C4D46365F9F5BDD6B9D3FE55511CDD4`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- Action labels, model fits, persistent ONNX files, predictions, rankings, candidate lifecycles/economics, locked 2026, EA and MT5 remain zero predevelopment.
-
-### Frozen mechanism
-
-- Construct synchronized M15 bars by exact 15-consecutive-M1 aggregation for US30/US100 and native M15 for US500, then inner-join common timestamps.
-- Use exactly `30` experts: three symbols × return horizons `1 / 2 / 4 / 8 / 16` × `MOMENTUM / REVERSION`.
-- Require absolute source return `>=0.10` of prior 64-bar ATR. Mature every virtual outcome only after all four future M15 bars are complete.
-- Virtual outcome uses one-ATR stop, `+1.5R` take, four-M15 maximum hold and actual R clipped to `[-3, 3]` for online state.
-- Online roles use EWMA half-lives `32 / 96 / 256`, at least `256` matured observations and score `mean - 0.25 × sqrt(variance / effective_n)`. Select only the highest positive score, then fixed expert order.
-- Candidate execution owns one global position, targets two-percent one-ATR risk, rejects minimum-lot risk above four percent, and exits at `-1R / +1.5R / four M15 bars`.
-- Actual economics use direction-specific observed Bid/Ask; stress subtracts the same observed execution burden once more.
-- Development is 2024-2025. Locked 2026 January-July may open for at most one unchanged role only after every development gate passes.
-
-### Architecture boundary
-
-- Python owns synchronized M15 construction, expert directions, strictly matured virtual outcomes, online state, ranking and the sole symbol/direction decision.
-- The EA must own schema/sequence/freshness, symbol contract and market validation, volume/risk, order submission, protection, timed close, ownership, persistence, restart recovery and bounded evidence.
-- No source is included, linked or executed across Family, Live, Optimization or frozen `lab/mt5/` roots.
+- Family 001 hourly `Python adapter + EA` proxy: all roles sufficiently active but economically adverse; closed before confirmation/EA/MT5.
+- Family 002 four-hour barrier `ONNX + EA` proxy: no role met turnover; closed before confirmation/EA/MT5.
+- Family 003 residual-basket `Python adapter + EA` proxy: `488 / 466 / 426` starts, actual `-$88.5048 / -$88.1250 / -$87.2249`, stressed `-$103.8357 / -$103.2920 / -$101.3396`; closed adverse.
+- Family 004 M15 online-expert `Python adapter + EA` proxy: `2,063 / 2,234 / 1,625` starts but actual `-$99.3989 / -$99.1503 / -$97.1707`, stressed `-$163.4354 / -$157.2507 / -$156.1929`, DD `97.84..99.43%`; closed adverse.
+- Family 005 M1 utility-GRU `ONNX + EA` proxy: valid models but only one threshold-clearing action and no complete role; closed utility collapse.
 
 ## Next authorized sequence
 
-1. Commit and push the two source copies, trainer and implementation freeze to `origin/main`.
-2. Only after origin equality, run exactly one complete eight-fit 2024-2025 three-role development process.
-3. Open the final fit, locked 2026, EA and MT5 only if the frozen preceding gates explicitly authorize them.
-4. Preserve prior raw evidence; remove only exact disposable unreferenced caches or staging.
+1. Commit and push the Family 005 raw evidence, durable result, closure and compressed state to `origin/main`.
+2. Only after origin equality, recompare Programs 1-5 and 7 across micro/meso/macro without using closed-family outcomes to choose a successor.
+3. If exactly one perspective-distant carrier is ready, declare one self-contained `Python adapter + EA` or `ONNX + EA` family before input materialization, implementation or outcome access.
+4. Continue serially until an unchanged proxy passes every gate, then and only then open its conditional confirmation, self-contained EA and native MT5 proof.
 
 ## Frozen lane boundaries
 
-- Sole forward Lab baseline: `lab/engineering/protective-exit-order-reconciliation-v1/mt5/` at commit `0d4032786cecb7d7e8a4c3074609db5b105fa107`. It remains frozen and is not modified for Challenge families.
+- Sole forward Lab baseline: `lab/engineering/protective-exit-order-reconciliation-v1/mt5/` at commit `0d4032786cecb7d7e8a4c3074609db5b105fa107`; it remains frozen and is not a Challenge source.
 - `lab/mt5/` is frozen historical material; no MQL source may be added or changed there.
-- Family 001 closed complete adverse hourly adapter evidence before locked 2026/EA/MT5.
-- Family 002 closed complete zero-role/turnover four-hour barrier ONNX evidence before locked 2026/EA/MT5.
-- Family 003 closed complete adverse residual-basket evidence: roles started `488 / 466 / 426`, actual `-$88.5048 / -$88.1250 / -$87.2249`, stressed `-$103.8357 / -$103.2920 / -$101.3396`, and all failed turnover and both-year positivity. Adjacent residual-family rescues are frozen.
+- Challenge families own self-contained roots and may not include or execute another family, Live or Optimization path.
 - Exact-V8 Optimization Units U001-U004 are closed immutable ancestry with zero survivor. No Optimization runtime or campaign is active.
 - Optimization baseline `optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/` remains `20` files / `660,794` bytes / ordered manifest `7BCB5B9A5182E3ADE2AEA3954025BEFB9897FB685201200CAB04C5FCBB78ACDF` and never executes with Live identity.
 - Program 6 execution/recovery/broker-safety research is outside the current Goal.
 
 ## Storage and repository discipline
 
-- System drive free space at the last declaration boundary was approximately `101.5 GiB`, above the mandatory `30 GiB` sweep threshold.
-- Preserve tracked source/configuration, declarations/results/closures, manifests, durable-evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
-- After each experiment, only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports may be removed after confirming no owning process and exact target paths.
+- System-drive free space after Family 005 was `101.315 GiB`, above the mandatory `30 GiB` sweep threshold; its `15.22 MB` raw evidence remains preserved.
+- Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
+- Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 005 `independent-two-index-m1-utility-gru-onnx-challenge-v1`.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_M1_UTILITY_GRU_ONNX_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Active research unit: none; post-Family-005 whole-map recompare pending.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_CLOSED_VALID_UTILITY_COLLAPSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
