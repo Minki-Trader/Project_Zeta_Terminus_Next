@@ -33,7 +33,7 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
-No Optimization campaign is open while the closed `V8-OPT-U001-PORTFOLIO-DD` boundary awaits its mandatory whole-map recompare on `origin/main`. Unit 001 completed its executable static map, half-step adjacent refinement, causal global drawdown state and empty temporal/cost stability boundary. It produced no final role and no MT5 path. A successor may open only after Programs 1-5 and 7 are compared from exact V8 and completed Unit evidence.
+No Optimization campaign is open while the completed post-Unit-001 whole-map recompare awaits `origin/main`. Programs 1-5 and 7 were compared from exact V8 and completed Unit outputs only. Program 5 has the sole ready successor question: complete membership reconstruction of the existing five V8 components, provisionally `V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION`. Its three static seeds × 31 nonempty masks yield `93` raw and `79` deduplicated exact membership roles. No successor is declared or staged before the audit boundary is pushed.
 
 `campaigns/dd20-v8-temporal-cost-stability-empty-closure-v1/` is closed `VALID_EMPTY_STAGE_D_NO_SURVIVING_ROLE_UNIT_001_CLOSED_EXHAUSTED_NO_MT5`. Corrected Stage C emitted zero authorized roles, so all six declared Stage-D blocks have zero input and zero economic rows; conditional Stage E remained closed.
 
