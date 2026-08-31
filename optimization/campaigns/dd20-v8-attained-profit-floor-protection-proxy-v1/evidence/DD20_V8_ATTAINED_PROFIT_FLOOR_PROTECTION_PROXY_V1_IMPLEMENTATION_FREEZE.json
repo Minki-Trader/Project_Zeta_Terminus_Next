@@ -1,0 +1,149 @@
+{
+  "schema": "zeta-next-dd20-v8-attained-profit-floor-protection-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "FROZEN_PREOUTCOME_STAGE_A_EXECUTION_NOT_STARTED",
+  "optimization_unit_id": "V8-OPT-U004-ATTAINED-PROFIT-FLOOR-PROTECTION",
+  "unit_stage": "A_COMPLETE_ALL_FIVE_COARSE_PROFIT_FLOOR_MAP",
+  "authority": {
+    "declaration_commit_on_origin_main": "71b0bb6f8636a8dcf9d824d3b3ca82804a08fb16",
+    "declaration_path": "optimization/campaigns/dd20-v8-attained-profit-floor-protection-proxy-v1/evidence/DD20_V8_ATTAINED_PROFIT_FLOOR_PROTECTION_UNIT_004_DECLARATION_V1.json",
+    "declaration_bytes": 18389,
+    "declaration_sha256": "8585D28E60771B974CA26F45561DB3575196BBF999D64D5597A4EA85EB38FF05"
+  },
+  "staged_inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-attained-profit-floor-protection-proxy-v1/input/",
+    "lifecycle": {
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "matched_lifecycles": 965,
+      "source_copy_byte_equal": true
+    },
+    "candidate": {
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "rows": 8176,
+      "position_open_rows": 965,
+      "source_copy_byte_equal": true
+    },
+    "source_semantic_copies": [
+      {
+        "name": "ZetaDomain.mqh",
+        "bytes": 19987,
+        "sha256": "44F5FE9AE5A951D59F7A1870B027D405F97AE8793FBA995FBB2203070EDACEDE",
+        "source_copy_byte_equal": true
+      },
+      {
+        "name": "ZetaResearchObservation.mqh",
+        "bytes": 51782,
+        "sha256": "B9960E8B43BA84DA412ED0C2BF5D65BD9C495ED2DF2AC53C50853CD2A2CCC1D7",
+        "source_copy_byte_equal": true
+      },
+      {
+        "name": "ZetaProtectionAndReconciliation.mqh",
+        "bytes": 32734,
+        "sha256": "A9637DF39A43EDED6C1FBC66F23CA762D41C8311CBF1D582972E22FFBC7D8E23",
+        "source_copy_byte_equal": true
+      },
+      {
+        "name": "ZetaNextPairedMonthLivePortfolioV8.mq5",
+        "bytes": 24675,
+        "sha256": "3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E",
+        "source_copy_byte_equal": true
+      }
+    ]
+  },
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-attained-profit-floor-protection-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 7009,
+    "config_lines": 130,
+    "config_sha256": "B8AA2B542D0AEEAA35F5DD544BC50F43EBD734D0432F8F701517AE2731D2A527",
+    "script_path": "optimization/campaigns/dd20-v8-attained-profit-floor-protection-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 55499,
+    "script_lines": 1299,
+    "script_sha256": "B252173188F2C8FAD3B5AECDF96547C7044CD085537D05DADB958A50EE83D0E6",
+    "python_version": "3.13.9",
+    "numpy_version": "2.3.4",
+    "syntax_check_passed": true
+  },
+  "structural_precheck": {
+    "matched_lifecycles": 965,
+    "candidate_rows": 8176,
+    "signal_passed_rows": 1108,
+    "position_open_rows": 965,
+    "component_birth_counts": [190, 150, 446, 60, 119],
+    "exit_classes": {"NATIVE": 783, "STOP": 182},
+    "mark_samples_total": 55819332,
+    "minimum_mark_samples": 1285,
+    "median_mark_samples": 50304,
+    "total_roles": 9,
+    "nonneutral_roles": 8,
+    "adjacency_edges": 10,
+    "role_coordinates": [
+      [null, null],
+      [0.25, 0.0],
+      [0.25, 0.1],
+      [0.5, 0.0],
+      [0.5, 0.1],
+      [0.5, 0.25],
+      [0.75, 0.0],
+      [0.75, 0.1],
+      [0.75, 0.25]
+    ],
+    "certain_trigger_density_by_role": {
+      "development_2024_h1": [0, 23, 27, 5, 5, 11, 0, 0, 2],
+      "development_2024_h2": [0, 28, 32, 3, 6, 11, 2, 2, 3],
+      "development_2025_h1": [0, 33, 36, 5, 6, 12, 2, 2, 4],
+      "development_2025_h2": [0, 7, 9, 2, 2, 3, 0, 0, 0],
+      "validation_density_only": [0, 12, 18, 2, 3, 4, 1, 1, 1]
+    },
+    "validation_density_only_lifecycles": 168,
+    "candidate_economics_executed": false,
+    "validation_economics_opened": false,
+    "locked_holdout_economics_opened": false
+  },
+  "exact_v8_neutral_precheck": {
+    "whole": {
+      "lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818,
+      "actual_closed_balance_drawdown_pct": 35.46,
+      "minimum_balance_usd": 59.11
+    },
+    "development": {
+      "lifecycles": 741,
+      "actual_net_usd": 149.97,
+      "stressed_net_usd": 127.786,
+      "actual_closed_balance_drawdown_pct": 35.46,
+      "minimum_balance_usd": 59.11
+    }
+  },
+  "partial_identification_controls": {
+    "certain_trigger_never_and_ambiguous_partition_passed": true,
+    "ambiguous_lower_is_adverse_per_book": true,
+    "upper_book_has_selection_authority": false,
+    "negative_replacement_charged_at_source_birth": true,
+    "nonnegative_replacement_charged_at_native_close": true,
+    "native_close_time_risk_occupancy_retained": true,
+    "source_volume_and_accepted_path_fixed": true,
+    "freed_capacity_profit_credit_usd": 0.0
+  },
+  "execution_boundary": {
+    "rule": "One complete Stage-A process may execute only after this exact implementation freeze reaches origin/main.",
+    "raw_output_exists": false,
+    "validation_economics_opened": false,
+    "locked_june_july_holdout_opened": false,
+    "code_candidate_created": false,
+    "mt5_runs": 0
+  },
+  "scope": {
+    "all_five_existing_v8_entry_strategies_active": true,
+    "already_open_position_management_only": true,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U004_STAGE_A_IMPLEMENTATION_FROZEN_NINE_ALL_FIVE_PROFIT_FLOOR_ROLES_PREOUTCOME_NO_VALIDATION_NO_MT5"
+}

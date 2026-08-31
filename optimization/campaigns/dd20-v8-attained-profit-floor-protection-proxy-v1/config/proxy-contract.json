@@ -1,0 +1,130 @@
+{
+  "schema": "zeta-next-dd20-v8-attained-profit-floor-protection-proxy-contract-v1",
+  "optimization_unit_id": "V8-OPT-U004-ATTAINED-PROFIT-FLOOR-PROTECTION",
+  "unit_stage": "A_COMPLETE_ALL_FIVE_COARSE_PROFIT_FLOOR_MAP",
+  "declaration_authority": {
+    "path": "optimization/campaigns/dd20-v8-attained-profit-floor-protection-proxy-v1/evidence/DD20_V8_ATTAINED_PROFIT_FLOOR_PROTECTION_UNIT_004_DECLARATION_V1.json",
+    "bytes": 18389,
+    "sha256": "8585D28E60771B974CA26F45561DB3575196BBF999D64D5597A4EA85EB38FF05",
+    "commit_on_origin_main": "71b0bb6"
+  },
+  "inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-attained-profit-floor-protection-proxy-v1/input",
+    "lifecycle": {
+      "name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "matched_lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818,
+      "mark_samples": 55819332
+    },
+    "candidate": {
+      "name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "rows": 8176,
+      "position_open_rows": 965,
+      "unique_component_time_open_keys": 965,
+      "signal_passed_rows": 1108
+    },
+    "source_files": [
+      {"name": "source/ZetaDomain.mqh", "bytes": 19987, "sha256": "44F5FE9AE5A951D59F7A1870B027D405F97AE8793FBA995FBB2203070EDACEDE"},
+      {"name": "source/ZetaResearchObservation.mqh", "bytes": 51782, "sha256": "B9960E8B43BA84DA412ED0C2BF5D65BD9C495ED2DF2AC53C50853CD2A2CCC1D7"},
+      {"name": "source/ZetaProtectionAndReconciliation.mqh", "bytes": 32734, "sha256": "A9637DF39A43EDED6C1FBC66F23CA762D41C8311CBF1D582972E22FFBC7D8E23"},
+      {"name": "source/ZetaNextPairedMonthLivePortfolioV8.mq5", "bytes": 24675, "sha256": "3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E"}
+    ]
+  },
+  "output": "optimization/artifacts/raw/dd20-v8-attained-profit-floor-protection-proxy-v1/output/proxy-result.json",
+  "reference_capital_usd": 100.0,
+  "time_tolerance_seconds": 0,
+  "numeric_tolerance": 1e-12,
+  "components": [
+    {"short": "RC61", "id": "ZT-M30-US30-RANGE-COMP-61f61deaba", "source_births": 190, "native_hold_bars": 8, "source_weight": 2.0},
+    {"short": "RC64", "id": "ZT-M30-US30-RANGE-COMP-64efb16616", "source_births": 150, "native_hold_bars": 12, "source_weight": 1.5},
+    {"short": "Cross", "id": "ZT-H1-US100-CROSS-IN-14b72317b7", "source_births": 446, "native_hold_bars": 4, "source_weight": 2.0},
+    {"short": "Intraday", "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46", "source_births": 60, "native_hold_bars": 8, "source_weight": 2.5},
+    {"short": "Return", "id": "ZT-H1-US30-RETURN-I-c870a788ec", "source_births": 119, "native_hold_bars": 6, "source_weight": 1.5}
+  ],
+  "fixed_contract": {
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "base_volume_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "entry_initial_stop_native_hold_weight_risk_cap_unchanged": true,
+    "source_volume_and_accepted_path_fixed": true,
+    "native_close_time_risk_occupancy_fixed": true,
+    "freed_capacity_profit_credit_usd": 0.0
+  },
+  "coarse_map": {
+    "activation_r_coordinates": [0.25, 0.5, 0.75],
+    "floor_r_coordinates": [0.0, 0.1, 0.25],
+    "minimum_activation_floor_separation_r": 0.1,
+    "neutral_role_included": true,
+    "expected_nonneutral_roles": 8,
+    "expected_total_roles": 9,
+    "neighbor_axes": ["activation_r", "floor_r"],
+    "minimum_eligible_neighbors": 2,
+    "minimum_neighbor_axes": 2,
+    "maximum_stage_b_centers": 3,
+    "minimum_center_axis_separation": 1,
+    "near_miss_targets_follow_active_tier": true
+  },
+  "partial_identification": {
+    "activation_reached": "peak_mark_r>=activation_r_with_inclusive_tolerance",
+    "certain_trigger": "activation_reached_and_post_peak_close_or_global_trough_at_or_below_floor",
+    "certain_never": "activation_not_reached_or_global_lifecycle_trough_strictly_above_floor",
+    "actual_friction": "max(0,last_mark_profit_usd-actual_net_usd)",
+    "stressed_friction": "max(0,last_mark_profit_usd-stressed_net_usd)",
+    "floor_book": "floor_r*planned_risk_usd-friction",
+    "ambiguous_lower": "min(native,floor)",
+    "ambiguous_upper": "max(native,floor)",
+    "negative_replacement_timing": "source_birth",
+    "nonnegative_replacement_timing": "native_close",
+    "unchanged_native_timing": "native_close",
+    "upper_book_can_select": false
+  },
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_2024_h1": ["2024-01-01T00:00:00", "2024-07-01T00:00:00"],
+    "development_2024_h2": ["2024-07-01T00:00:00", "2025-01-01T00:00:00"],
+    "development_2025_h1": ["2025-01-01T00:00:00", "2025-07-01T00:00:00"],
+    "development_2025_h2": ["2025-07-01T00:00:00", "2026-01-01T00:00:00"],
+    "validation_density_only": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"]
+  },
+  "anchors": {
+    "whole": {"lifecycles": 965, "actual_net_usd": 409.81, "stressed_net_usd": 367.818, "actual_closed_balance_drawdown_pct": 35.46, "minimum_balance_usd": 59.11},
+    "development": {"lifecycles": 741, "actual_net_usd": 149.97, "stressed_net_usd": 127.786, "actual_closed_balance_drawdown_pct": 35.46, "minimum_balance_usd": 59.11},
+    "development_2024_h1": {"lifecycles": 187, "actual_net_usd": -14.4, "stressed_net_usd": -20.681, "actual_closed_balance_drawdown_pct": 35.46, "minimum_balance_usd": 59.11},
+    "development_2024_h2": {"lifecycles": 178, "actual_net_usd": 34.48, "stressed_net_usd": 29.942, "actual_closed_balance_drawdown_pct": 24.602504572956, "minimum_balance_usd": 97.675},
+    "development_2025_h1": {"lifecycles": 198, "actual_net_usd": 45.05, "stressed_net_usd": 38.618, "actual_closed_balance_drawdown_pct": 23.291670468023, "minimum_balance_usd": 83.474},
+    "development_2025_h2": {"lifecycles": 178, "actual_net_usd": 84.84, "stressed_net_usd": 79.907, "actual_closed_balance_drawdown_pct": 24.173756544503, "minimum_balance_usd": 91.285},
+    "validation_density_only_lifecycles": 168,
+    "net_tolerance_usd": 1e-7,
+    "drawdown_tolerance_points": 1e-7,
+    "minimum_balance_tolerance_usd": 1e-7
+  },
+  "gates": {
+    "primary_stressed_retention": 0.75,
+    "primary_max_drawdown_pct": 27.0,
+    "fallback_stressed_retention": 0.65,
+    "fallback_min_drawdown_improvement_points": 5.0,
+    "minimum_certain_triggers": 20,
+    "minimum_certain_trigger_components": 4,
+    "minimum_certain_trigger_presholdout_blocks": 4,
+    "dominance_tolerance": 1e-9,
+    "near_miss_normalization_floor": 1e-9
+  },
+  "stage_succession": {
+    "stage_a_can_close_unit": false,
+    "stage_b_required": true,
+    "validation_economics_opened": false,
+    "locked_holdout_economics_opened": false
+  },
+  "mt5_budget": {
+    "stage_a_authorized_paths": 0,
+    "maximum_valid_economic_paths_after_all_proxy_stages": 2
+  }
+}

@@ -16,4 +16,8 @@ No single grid can close the Unit. An ablation may reject but never replace a ce
 
 ## Current boundary
 
-The Unit is declared pre-input, pre-implementation and pre-candidate-outcome. Declaration `DD20_V8_ATTAINED_PROFIT_FLOOR_PROTECTION_UNIT_004_DECLARATION_V1.json` is `18,389` bytes / `8585D28E...38FF05`. No lifecycle copy, config, proxy source, candidate economic row, validation, holdout, code candidate or MT5 path exists before the declaration reaches `origin/main`.
+Declaration commit `71b0bb6` reached `origin/main` before the exact lifecycle/candidate ledgers and four source semantics were staged byte-equal. The self-contained Stage-A config/source are frozen at `7,009 / 55,499` bytes and `B8AA2B54...D2A527 / B2521731...3D0E6`.
+
+The outcome-free structural precheck joins all `965` exact-V8 lifecycles one-to-one to their POSITION_OPEN contexts, constructs exact neutral plus eight nonneutral roles with `10` immediate coarse edges, and reproduces exact-V8 whole/development economics. It reads January-May only for identification density (`168` lifecycles), not candidate economics. Freeze `DD20_V8_ATTAINED_PROFIT_FLOOR_PROTECTION_PROXY_V1_IMPLEMENTATION_FREEZE.json` is `5,695` bytes / `41BA6A8F...155C7B`.
+
+The raw result is absent. One complete Stage-A process may run only after this implementation freeze reaches `origin/main`; validation economics, locked June-July, code candidate, MT5, Lab and Live remain unopened.
