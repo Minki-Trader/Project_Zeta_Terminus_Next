@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
-현재 active research family는 없다. 독립 V8 Challenge Family 003 Program 5 / meso→macro `research/independent-cross-index-residual-basket-adapter-challenge-v1/`은 세 쌍 모두 유효한 causal state를 만들었지만 `Z075 / Z100 / Z125`가 `488 / 466 / 426` baskets, normal-day turnover `0.961 / 0.917 / 0.839`, actual/stressed `-$88.505/-$103.836`, `-$88.125/-$103.292`, `-$87.225/-$101.340`, actual DD `87.54%..88.50%`로 모두 실패해 닫혔다. Durable result/closure는 `7,414 / 2,961` bytes at `DB012416...6A53D7 / CFF0D524...AE6DEF`; locked 2026, EA와 MT5는 열지 않았다. 다음 family는 전 프로그램 재비교 뒤 하나만 연다.
+현재 active research family는 없다. Family 003 폐쇄 뒤 Programs 1-5/7을 재비교했고, timestamp-only source scan으로 2022-07부터 2026-07까지 세 지수 공통 M15 `96,135`행과 2024-2025 `47,116`행을 확인했다. Program 1의 provisional successor `independent-cross-index-m15-online-expert-adapter-challenge-v1`만 ready이며 아직 root·input·decision·outcome은 열지 않았다. Audit은 `6,041` bytes / `E06E035A...A58F28`; origin 경계 뒤 하나의 self-contained `Python adapter + EA` family만 선언할 수 있다.
 
 직전 Family 001 `research/independent-cross-index-hourly-adapter-challenge-v1/`은 세 역할 모두 turnover를 통과했지만 actual/stressed와 DD가 전부 실패해 잠긴 2026, EA와 MT5 전에 유효 adverse로 닫혔다. Durable result/closure는 `6,031 / 2,117` bytes at `09F30EDB...1A3D49 / 9E09B960...0FCCCA`다.
 
