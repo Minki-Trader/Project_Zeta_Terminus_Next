@@ -1,0 +1,280 @@
+{
+  "schema": "zeta-next-v8-optimization-unit-004-attained-profit-floor-protection-declaration-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME",
+  "optimization_unit": {
+    "id": "V8-OPT-U004-ATTAINED-PROFIT-FLOOR-PROTECTION",
+    "name": "Exact-V8 all-five attained-profit floor protection",
+    "primary_macro_program": 4,
+    "primary_macro_program_name": "position_management_exit",
+    "question": "Can one complete all-five map of causal attained-profit floors reduce peak-to-close giveback and drawdown while retaining temporal and whole stressed value, without changing any exact-V8 entry opportunity?",
+    "mechanism_boundary": "Only an already accepted and open exact-V8 position may be affected. Once its mark profit first reaches a frozen activation multiple of its admitted planned risk, the mechanism may tighten that position's broker stop to a fixed nonnegative retained-profit multiple of the same admitted risk.",
+    "single_active_judgment_stream": true
+  },
+  "selection_authority": {
+    "post_unit_003_recompare_commit_on_origin_main": "fbac26c0a8638d3204fee391fb5801757d55eeb3",
+    "post_unit_003_recompare_path": "optimization/evidence/V8_OPT_U003_POST_CLOSE_WHOLE_MAP_RECOMPARE_V1.json",
+    "post_unit_003_recompare_bytes": 13312,
+    "post_unit_003_recompare_sha256": "02CE13840D4D673BB4D3AB31EB46B26007057932382C3166045243DC2659D167",
+    "programs_recompared": [1, 2, 3, 4, 5, 7],
+    "selected_program": 4,
+    "successor_was_not_opened_before_recompare_reached_origin_main": true
+  },
+  "economic_parent": {
+    "release_id": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "portfolio_id": "ZT-PORT-NEXT-V8-PMLR1-20260831",
+    "baseline_root": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/",
+    "baseline_files": 20,
+    "baseline_bytes": 660794,
+    "baseline_ordered_manifest_sha256": "7BCB5B9A5182E3ADE2AEA3954025BEFB9897FB685201200CAB04C5FCBB78ACDF",
+    "v8_is_sole_economic_parent": true,
+    "v7_historical_lab_and_prior_optimization_winners_select_or_tune": false
+  },
+  "frozen_future_inputs": [
+    {
+      "role": "exact-V8 accepted lifecycle outcomes and trajectory aggregates",
+      "source_path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "complete_lifecycles": 965
+    },
+    {
+      "role": "exact-V8 signal and admission context",
+      "source_path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "rows": 8176,
+      "signal_passed_rows": 1108
+    }
+  ],
+  "source_semantic_authority": [
+    {
+      "role": "component timeframes, native maximum holds, exact identity and risk settings",
+      "path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "bytes": 19987,
+      "sha256": "44F5FE9AE5A951D59F7A1870B027D405F97AE8793FBA995FBB2203070EDACEDE"
+    },
+    {
+      "role": "per-tick read-only lifecycle mark aggregation",
+      "path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Observation/ZetaResearchObservation.mqh",
+      "bytes": 51782,
+      "sha256": "B9960E8B43BA84DA412ED0C2BF5D65BD9C495ED2DF2AC53C50853CD2A2CCC1D7"
+    },
+    {
+      "role": "native broker protection and exit reconciliation",
+      "path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh",
+      "bytes": 32734,
+      "sha256": "A9637DF39A43EDED6C1FBC66F23CA762D41C8311CBF1D582972E22FFBC7D8E23"
+    },
+    {
+      "role": "assembly ordering samples open positions before closure processing",
+      "path": "optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/MQL5/Experts/ZetaTerminusNext/ZetaNextPairedMonthLivePortfolioV8.mq5",
+      "bytes": 24675,
+      "sha256": "3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E"
+    }
+  ],
+  "input_staging_boundary": {
+    "inputs_staged_at_declaration": false,
+    "implementation_created_at_declaration": false,
+    "candidate_outcomes_opened_at_declaration": false,
+    "rule": "No input copy, config, proxy implementation, candidate economic row or code candidate may be created until this declaration commit is verified on origin/main."
+  },
+  "optimization_scope": {
+    "parameter_only": false,
+    "agent_selects_and_executes_in_scope_axes_autonomously": true,
+    "isolated_code_and_position_management_change_allowed": true,
+    "all_five_existing_entry_strategies_remain_active": true,
+    "native_entries_initial_stops_and_maximum_holds_remain_fixed": true,
+    "this_unit_is_limited_to": [
+      "A shared all-five planned-risk-R activation threshold",
+      "A shared all-five nonnegative fixed retained-profit floor below activation",
+      "Monotone broker-stop tightening after activation",
+      "Coarse map, fine adjacency, one-component causal ablations, fresh validation, temporal/cost stability and a conditional scarce native pair"
+    ],
+    "new_entry_strategy_definition": "Any new symbol, timeframe, signal family, direction or opportunity timestamp not emitted by exact V8, or any entry loosening that manufactures an opportunity.",
+    "new_entry_strategy_classification": "LAB_RESEARCH",
+    "new_entry_strategy_action": "PROHIBITED_NOT_OPENED_NOT_IMPLEMENTED",
+    "separate_lab_research_or_engineering": "NOT_OPENED"
+  },
+  "exact_v8_fixed_contract": {
+    "active_components": ["RC61", "RC64", "Cross", "Intraday", "Return"],
+    "component_timeframes": ["M30", "M30", "H1", "M30", "H1"],
+    "native_hold_bars": [8, 12, 4, 8, 6],
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.18,
+    "base_volume_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "initial_stops_unchanged": true,
+    "entry_formulas_directions_timestamps_unchanged": true,
+    "passive_remains_weight_zero": true,
+    "rc64_native_adverse_loss_compression_remains_active": true,
+    "stop_merge_rule_for_later_native_candidate": "Never loosen the broker/native/pending stop. If both RC64 adverse compression and profit-floor protection are valid, request only the directionally more protective executable stop."
+  },
+  "trajectory_authority": {
+    "complete_lifecycles": 965,
+    "native_expert_hold_exits": 783,
+    "broker_stop_exits": 182,
+    "mark_samples_total": 55819332,
+    "mark_samples_minimum_per_lifecycle": 1285,
+    "mark_samples_median_per_lifecycle": 50304,
+    "fields": [
+      "entry_time_server",
+      "server_time close",
+      "entry_planned_risk_usd",
+      "last_mark_profit_usd and R",
+      "peak_mark_profit_usd and R with time",
+      "trough_mark_profit_usd and R with time",
+      "maximum_giveback_usd and R",
+      "mark_samples",
+      "actual_net_usd",
+      "stressed_net_usd",
+      "exit_reason and class"
+    ],
+    "tick_path_or_first_crossing_ledger_available": false,
+    "first_crossing_must_not_be_invented": true
+  },
+  "partial_identification_contract": {
+    "activation_reached": "peak_mark_r >= activation_r with inclusive tolerance",
+    "certain_trigger": "Activation is reached and either peak_time is before close with last_mark_r <= floor_r, or peak_time is before a globally timestamped trough at or before close with trough_mark_r <= floor_r.",
+    "certain_never": "Activation is never reached, or the global lifecycle trough remains strictly above the floor.",
+    "ambiguous": "Every other lifecycle; neither a first crossing nor a noncrossing may be asserted.",
+    "observed_actual_friction_usd": "max(0, last_mark_profit_usd - actual_net_usd)",
+    "observed_stressed_friction_usd": "max(0, last_mark_profit_usd - stressed_net_usd)",
+    "floor_actual_usd": "floor_r * admitted_planned_risk_usd - observed_actual_friction_usd",
+    "floor_stressed_usd": "floor_r * admitted_planned_risk_usd - observed_stressed_friction_usd",
+    "certain_trigger_book": "Use the floor actual/stressed amount.",
+    "certain_never_book": "Use the exact native actual/stressed amount.",
+    "ambiguous_lower_book": "Per economic book use min(native amount, floor amount), denying beneficial unidentified triggers while charging harmful unidentified triggers.",
+    "ambiguous_upper_book": "Per economic book use max(native amount, floor amount) for diagnostic width only; upper books never select, rank, rescue or advance a role.",
+    "closed_balance_dd_upper_bound_timing": "For the lower book, any negative replacement is charged at source birth and any nonnegative replacement remains at the native close. Native/unchanged outcomes stay at native close. This adverse ordering alone supplies selection DD and minimum balance.",
+    "risk_occupancy": "Retain the exact native open interval and planned-risk occupancy through native close for every role.",
+    "freed_capacity_profit_credit_usd": 0.0,
+    "source_volume_and_ladder_feedback": "Retain exact source volumes and source accepted lifecycle set. Do not synthesize balance-driven future lot changes.",
+    "native_claims_withheld": [
+      "Exact first-crossing order and execution time",
+      "Broker stop quantization, gaps and slippage at the candidate floor",
+      "Early capacity release and newly admitted existing-V8 opportunities",
+      "Balance-driven future lot changes",
+      "Open-equity drawdown and final Tester economics"
+    ]
+  },
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_blocks": ["2024-H1", "2024-H2", "2025-H1", "2025-H2"],
+    "validation": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"]
+  },
+  "ordered_deep_stages": [
+    {
+      "stage": "A_COMPLETE_ALL_FIVE_COARSE_PROFIT_FLOOR_MAP",
+      "campaign": "optimization/campaigns/dd20-v8-attained-profit-floor-protection-proxy-v1/",
+      "neutral_role": {"activation_r": null, "floor_r": null, "meaning": "Exact V8 with no new profit floor"},
+      "activation_r_coordinates": [0.25, 0.5, 0.75],
+      "floor_r_coordinates": [0.0, 0.1, 0.25],
+      "coordinate_rule": "Include every activation/floor pair with floor_r < activation_r and activation_r - floor_r >= 0.10R.",
+      "nonneutral_role_count": 8,
+      "total_role_count": 9,
+      "development_only": true,
+      "eligibility": {
+        "common": "Every development half-year lower-bound book has positive actual net, positive stressed net and positive minimum balance.",
+        "primary": "Continuous development lower-bound stressed net retains at least 75% of exact-V8 development stressed net and adverse-timing actual closed-balance DD is no more than 27%.",
+        "fallback": "Continuous development lower-bound stressed net retains at least 65% of exact-V8 development stressed net and adverse-timing actual DD improves by at least five percentage points versus exact V8.",
+        "identification": "At least 20 certain triggers total, at least four active components and at least four development/validation-era blocks before holdout economics. Ambiguous events never satisfy density.",
+        "robustness": "An eligible nonneutral role needs at least two eligible immediate coarse neighbors collectively spanning both activation and floor axes."
+      },
+      "center_selection": "Use primary if nonempty, otherwise fallback. Rank robust roles by highest weakest development-half lower-bound stressed net, lower-bound stressed-net-to-DD efficiency, lower-bound stressed net, lower DD, narrower upper-lower identification width and canonical coordinates. Select at most three separated coordinate pairs.",
+      "no_robust_fallback": "Advance up to three separated declared near misses by normalized common/retention/DD/identification deficits, then lower-bound efficiency and canonical coordinates. This preserves mandatory depth but is not economic confirmation.",
+      "unit_may_close_here": false,
+      "validation_or_holdout_economics_opened": false,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "B_CENTER_LOCAL_FINE_ACTIVATION_FLOOR_ADJACENCY",
+      "campaign_future_name": "dd20-v8-attained-profit-floor-fine-adjacency-proxy-v1",
+      "required": true,
+      "coarse_center_limit": 3,
+      "local_activation_rule": "For each center A use unique max(0.15,A-0.10), A and min(0.85,A+0.10).",
+      "local_floor_rule": "For each center F use unique max(0,F-0.05), F and min(0.35,F+0.05), then retain only F < A with at least 0.10R separation.",
+      "maximum_raw_roles_per_center": 9,
+      "maximum_raw_roles": 27,
+      "deduplication": "Deduplicate exact A/F pairs across centers while retaining provenance.",
+      "eligibility_and_ranking": "Stage-A lower-bound common, primary, fallback, identification, robustness, ranking and near-miss rules remain unchanged; immediate fine neighbors differ by one local coordinate step.",
+      "unit_may_close_here": false,
+      "validation_or_holdout_economics_opened": false,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "C_ONE_COMPONENT_NATIVE_EXIT_ABLATION_AND_FRESH_VALIDATION",
+      "campaign_future_name": "dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1",
+      "required": true,
+      "immutable_center_limit": 3,
+      "roles_per_center": "One unchanged all-five center plus five diagnostics that disable only RC61, RC64, Cross, Intraday or Return profit-floor protection while leaving native exits and the other four protections unchanged.",
+      "maximum_roles": 18,
+      "ablation_is_not_successor": true,
+      "ablation_selection_rule": "No ablation may replace, retune or rescue its immutable center.",
+      "fresh_validation_gate": "The immutable center lower-bound book begins from fresh $100 and must have positive actual net, positive stressed net, positive minimum balance, adverse-timing DD no greater than 30%, stressed retention at least 65% of exact V8, and the frozen identification density.",
+      "causal_nondominance_gate": "The center fails if any one-component native-exit ablation has lower-bound stressed net at least as high and DD no higher, with at least one strict difference beyond 1e-9.",
+      "center_advances_unchanged": true,
+      "locked_holdout_economics_opened": false,
+      "unit_may_close_here": false,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "D_TEMPORAL_IDENTIFICATION_AND_COST_STABILITY",
+      "campaign_future_name": "dd20-v8-attained-profit-floor-temporal-cost-stability-proxy-v1",
+      "required": true,
+      "input_role_limit": 3,
+      "fresh_clean_state_blocks": [
+        "2024-H1",
+        "2024-H2",
+        "2025-H1",
+        "2025-H2",
+        "2026-01-through-05",
+        "2026-06-through-07 locked holdout"
+      ],
+      "block_gate": "Every block begins independently at $100. Its lower-bound actual/stressed net and minimum balance must be positive and adverse-timing actual DD no greater than 30%.",
+      "identification_gate": "Across the continuous path, certain triggers must cover at least five of six blocks and at least four of five active components; ambiguous events receive no density credit.",
+      "whole_gate": "Continuous 2024-01 through 2026-07 lower-bound replay must retain at least 75% of exact-V8 stressed net and improve adverse-timing actual closed-balance DD by at least five percentage points.",
+      "ranking": "Maximize weakest block lower-bound stressed net, then whole lower-bound stressed-net-to-DD efficiency, whole lower-bound stressed net, lower DD, narrower identification width and canonical coordinates. Locked holdout never selects an alternate.",
+      "empty_input_rule": "If Stage C has zero authorized immutable centers, record all blocks as zero-input/zero-run and close U004 validly empty without an ablation, neighbor or near miss.",
+      "unit_may_close_here": true,
+      "mt5_paths": 0
+    },
+    {
+      "stage": "E_SCARCE_NATIVE_MT5_CONTROL_FINALIST_PAIR",
+      "conditional": "Exactly one unchanged Stage-D winner may enter.",
+      "maximum_valid_economic_paths": 2,
+      "paths": ["exact contemporaneous V8 control", "one unchanged U004 code finalist"],
+      "candidate_code_boundary": [
+        "One self-contained copy from the frozen Optimization baseline into the U004 native campaign root",
+        "New optimization-only execution identity, Magic, state, observation and report paths",
+        "Persisted activation/protected-stop lifecycle state with restart reconciliation",
+        "Monotone directionally more-protective stop merge with native stop and RC64 ARC",
+        "No entry formula, direction, timestamp, initial stop, native hold, weight, risk or cap change"
+      ],
+      "purpose": "Establish exact first crossings, broker stop execution and quantization, early capacity admissions, balance/lot feedback, native open-equity DD and complete economic numbers.",
+      "authority": "A native result can support or close U004 but cannot modify or promote Live directly."
+    }
+  ],
+  "closure_and_correction_rules": {
+    "single_grid_or_candidate_can_close_unit": false,
+    "environment_design_or_engineering_fault": "CORRECTION_STATE_NOT_ECONOMIC_FAILURE_NO_ARBITRARY_RETRY_CAP",
+    "economic_closure": "Only after Stages A through D are completed as declared and no unchanged Stage-D survivor exists, or after the sole valid Stage-E finalist nonconfirms with no declared layer remaining.",
+    "automatic_adjacent_activation_floor_trail_hold_stop_component_or_seed_followup_after_closure": false,
+    "required_after_closure": "Freeze the whole Unit bundle, then recompare Programs 1-5 and 7 before opening any successor."
+  },
+  "live_and_lab_boundary": {
+    "live_package_changed": false,
+    "live_runtime_changed": false,
+    "live_order_authority_changed": false,
+    "direct_promotion_authority": false,
+    "lab_opened": false,
+    "new_entry_work_opened": false,
+    "mt5_executed": false,
+    "external_data_used": false,
+    "broker_account_position_order_deal_query": false
+  },
+  "marker": "V8_OPT_U004_DECLARED_COMPLETE_ALL_FIVE_ATTAINED_PROFIT_FLOOR_PARTIAL_IDENTIFICATION_COARSE_FINE_CAUSAL_STABILITY_SCARCE_MT5_NO_NEW_ENTRY_NO_LAB_PREINPUT_PREOUTCOME"
+}
