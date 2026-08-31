@@ -1,0 +1,149 @@
+{
+  "schema": "zeta-next-dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_C_ZERO_ECONOMIC_ZERO_CAUSAL_ZERO_STAGE_D_ROLES_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U004-ATTAINED-PROFIT-FLOOR-PROTECTION",
+  "unit_stage": "C_ONE_COMPONENT_NATIVE_EXIT_ABLATION_AND_FRESH_VALIDATION",
+  "authority": {
+    "original_declaration_commit_on_origin_main": "e46ae103a7fa8c6d16601d8fb86a62f8131e47b5",
+    "validation_anchor_correction_commit_on_origin_main": "d0db47706f60a886f0afbf91186705c017e56ab5",
+    "corrected_implementation_freeze_commit_on_origin_main": "d16889a07c0d70a1ff1c0e11204012dce26204f4",
+    "corrected_implementation_freeze_bytes": 6847,
+    "corrected_implementation_freeze_sha256": "7F6E92A8859EC45C9989AC9F458CF09B0A49FBA26C5441839071C148EA301591"
+  },
+  "execution_history": {
+    "pre_correction_processes": 1,
+    "pre_correction_process_verdict": "WITHHELD_INVALID_INCOMPLETE_EXECUTION",
+    "pre_correction_raw_output_exists": false,
+    "corrected_successful_processes": 1,
+    "corrected_reruns": 0,
+    "corrected_wall_time_seconds": 0.21530500002,
+    "mt5_runs": 0
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-v1/output/proxy-result.json",
+    "bytes": 63721,
+    "sha256": "505EB38751E7D34DFE77C1EAD258296E0ACDF861432F8DD96E95EB24F46E0CE0",
+    "schema": "zeta-next-dd20-v8-attained-profit-floor-causal-ablation-validation-proxy-result-v1",
+    "status": "VALID_PROXY_COMPLETE_STAGE_C_NO_VALIDATION_CENTER_STAGE_D_EMPTY_REQUIRED_NO_MT5"
+  },
+  "implementation": {
+    "config_bytes": 8289,
+    "config_lines": 111,
+    "config_sha256": "821C6E90EF40CBC43C19F0A2456D988E2E20F96A823EE19A364B966F43C820FF",
+    "script_bytes": 69630,
+    "script_lines": 1588,
+    "script_sha256": "05860141D5AC69C7C7BDB5D87E3821C64A514B4BEB81546B8709A0AA261F6D68",
+    "correction_authority_verified": true,
+    "economic_arithmetic_changed_by_correction": false
+  },
+  "exact_v8_anchors": {
+    "whole_lifecycles": 965,
+    "whole_actual_net_usd": 409.81,
+    "whole_stressed_net_usd": 367.818,
+    "whole_actual_closed_balance_drawdown_pct": 35.46,
+    "development_lifecycles": 741,
+    "development_actual_net_usd": 149.97,
+    "development_stressed_net_usd": 127.786,
+    "development_actual_closed_balance_drawdown_pct": 35.46,
+    "validation_lifecycles": 168,
+    "validation_actual_net_usd": 204.67,
+    "validation_stressed_net_usd": 192.006,
+    "validation_actual_closed_balance_drawdown_pct": 32.582140561026,
+    "validation_minimum_balance_usd": 90.838
+  },
+  "fixed_role_map": {
+    "immutable_centers": 3,
+    "native_exit_ablations_per_center": 5,
+    "declared_nonneutral_roles": 18,
+    "unique_nonneutral_roles": 18,
+    "center_role_indices": [1, 7, 13],
+    "ablation_role_indices": [[2, 3, 4, 5, 6], [8, 9, 10, 11, 12], [14, 15, 16, 17, 18]],
+    "validation_retuning": false,
+    "ablation_can_replace_rescue_or_advance": false
+  },
+  "validation_gates": {
+    "minimum_stressed_retention": 0.65,
+    "minimum_stressed_net_usd": 124.8039,
+    "maximum_actual_drawdown_pct": 30.0,
+    "minimum_actual_stressed_and_balance_positive": true,
+    "frozen_identification_required": true,
+    "causal_nondominance_required": true
+  },
+  "fresh_january_may_centers": [
+    {
+      "stage_b_rank": 1,
+      "activation_r": 0.4,
+      "floor_r": 0.3,
+      "lower_actual_net_usd": 61.075718000005,
+      "lower_stressed_net_usd": 48.411718000017,
+      "actual_closed_balance_drawdown_pct": 50.386858390318,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention": 0.252136485318,
+      "frozen_identification_passed": true,
+      "economic_gate_passed": false,
+      "dominating_native_exit_ablations": ["RC61", "RC64", "Cross", "Intraday", "Return"],
+      "causal_nondominance_passed": false,
+      "stage_c_passed": false
+    },
+    {
+      "stage_b_rank": 2,
+      "activation_r": 0.85,
+      "floor_r": 0.3,
+      "lower_actual_net_usd": 57.248976000001,
+      "lower_stressed_net_usd": 44.584976000013,
+      "actual_closed_balance_drawdown_pct": 54.511565268774,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention": 0.232206160224,
+      "frozen_identification_passed": false,
+      "economic_gate_passed": false,
+      "dominating_native_exit_ablations": ["RC61", "RC64", "Intraday", "Return"],
+      "causal_nondominance_passed": false,
+      "stage_c_passed": false
+    },
+    {
+      "stage_b_rank": 3,
+      "activation_r": 0.75,
+      "floor_r": 0.3,
+      "lower_actual_net_usd": 50.031962000001,
+      "lower_stressed_net_usd": 37.367962000014,
+      "actual_closed_balance_drawdown_pct": 53.548943781404,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention": 0.194618720248,
+      "frozen_identification_passed": false,
+      "economic_gate_passed": false,
+      "dominating_native_exit_ablations": ["RC61", "RC64", "Intraday", "Return"],
+      "causal_nondominance_passed": false,
+      "stage_c_passed": false
+    }
+  ],
+  "stage_c_verdict": {
+    "positive_actual_stressed_minimum_center_count": 3,
+    "economic_gate_pass_count": 0,
+    "frozen_identification_pass_count": 1,
+    "causal_nondominance_pass_count": 0,
+    "final_pass_count": 0,
+    "stage_d_role_count": 0,
+    "interpretation": "All centers remained nominally profitable in January-May, but every adverse lower book exceeded 50% closed-balance DD and retained less than 26% of exact-V8 stressed net. Every center also had at least four native-exit ablations that improved stressed net and DD together; rank 1 was dominated by all five. The complete all-five attained-profit-floor mechanism is therefore economically and causally nonconfirmed under its frozen conservative semantics.",
+    "adjacent_floor_activation_component_specific_or_ablation_rescue_authorized": false
+  },
+  "succession": {
+    "stage_c_can_close_unit": false,
+    "stage_d_required": true,
+    "stage_d_input_roles": 0,
+    "required_next_action": "After this result reaches origin/main, record all six Stage-D blocks as zero-input/zero-run and close U004 validly empty without opening the locked holdout, an ablation, a neighbor or a near miss.",
+    "locked_june_july_opened": false,
+    "stage_e_opened": false,
+    "mt5_runs": 0
+  },
+  "scope": {
+    "all_five_existing_v8_entry_strategies_active": true,
+    "already_open_position_management_only": true,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U004_STAGE_C_VALID_ZERO_ECONOMIC_ZERO_CAUSAL_ZERO_STAGE_D_ROLES_NO_HOLDOUT_NO_MT5"
+}
