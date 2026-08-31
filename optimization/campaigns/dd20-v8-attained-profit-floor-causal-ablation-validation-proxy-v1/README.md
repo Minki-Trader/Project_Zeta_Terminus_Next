@@ -16,4 +16,6 @@ Declaration commit `e46ae10` reached `origin/main` before all eight inputs were 
 
 Config/source are `7,874 / 68,706` bytes at `CE1DE618...51CDD2 / BD41D250...37C8C5`. Freeze `DD20_V8_ATTAINED_PROFIT_FLOOR_CAUSAL_ABLATION_VALIDATION_PROXY_V1_IMPLEMENTATION_FREEZE.json` is `5,995` bytes / `A4CC9696...BCFB27`.
 
-The raw result is absent. One complete Stage-C process may run only after this implementation freeze reaches `origin/main`; fresh validation economics, locked holdout, code candidate and MT5 remain closed pre-origin.
+Freeze commit `d06961d` reached `origin/main`, but the first process stopped at the exact-neutral anchor check before center evaluation or result serialization: U004 observed `+$204.67`, while the config incorrectly expected U003's `+$136.273166667` reconstructed-volume control. The raw result remains absent and the process has no economic verdict.
+
+Neutral-only diagnosis under U004's frozen source-volume/accepted-lifecycle contract gives January-May actual/stressed/DD/minimum `+$204.67 / +$192.006 / 32.582140561% / $90.838`; the unchanged `65%` stressed requirement is therefore `$124.8039`. Correction declaration `DD20_V8_ATTAINED_PROFIT_FLOOR_CAUSAL_ABLATION_VALIDATION_PROXY_V1_VALIDATION_ANCHOR_CORRECTION_DECLARATION.json` is `6,015` bytes / `8D90C27C...CF14CC`. Config/source cannot change until that declaration reaches `origin/main`; locked holdout, code candidate and MT5 remain closed.
