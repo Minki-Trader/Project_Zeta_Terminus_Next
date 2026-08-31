@@ -1,0 +1,96 @@
+{
+  "schema": "zeta-next-dd20-v8-component-local-loss-suspension-proxy-v1-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "C_COMPONENT_LOCAL_CAUSAL_LOSS_SUSPENSION",
+  "primary_macro_program": 5,
+  "authority": {
+    "unit_declaration_commit_on_origin_main": "7b3ff512018ca2aafc557b1e414874e2675ba29f",
+    "stage_b_result_commit_on_origin_main": "da95b52534899fc654a62b7198edc6f1e06ba095",
+    "stage_b_raw_result": {
+      "path": "optimization/artifacts/raw/dd20-v8-membership-local-reallocation-proxy-v1/output/proxy-result.json",
+      "bytes": 28115,
+      "sha256": "D1114F975C98F1372D73F8CB89E48C438209CA091B4ECAEC35C7C70C0EBABE30",
+      "status": "VALID_PROXY_COMPLETE_STAGE_B_ROBUST_REALLOCATION_SEEDS_STAGE_C_REQUIRED_NO_MT5"
+    },
+    "stage_b_durable_result": {
+      "path": "optimization/campaigns/dd20-v8-membership-local-reallocation-proxy-v1/evidence/DD20_V8_MEMBERSHIP_LOCAL_REALLOCATION_PROXY_V1_RESULT.json",
+      "bytes": 7413,
+      "sha256": "64BE90A70FA7C8905822416D8D3120D943D37AAB04F2C6E3516B5249C506630C"
+    }
+  },
+  "frozen_future_inputs": [
+    {"role": "exact-V8 lifecycle", "bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"},
+    {"role": "exact-V8 candidate/admission", "bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"},
+    {"role": "complete Stage-B raw result", "bytes": 28115, "sha256": "D1114F975C98F1372D73F8CB89E48C438209CA091B4ECAEC35C7C70C0EBABE30"},
+    {"role": "durable Stage-B result", "bytes": 7413, "sha256": "64BE90A70FA7C8905822416D8D3120D943D37AAB04F2C6E3516B5249C506630C"}
+  ],
+  "immutable_static_seeds": [
+    {"stage_b_rank": 1, "membership_mask_integer": 7, "weights": [1.5, 1.25, 1.75, 0.0, 0.0], "aggregate_risk_fraction": 0.12},
+    {"stage_b_rank": 2, "membership_mask_integer": 31, "weights": [1.5, 1.25, 1.5, 1.75, 1.0], "aggregate_risk_fraction": 0.12},
+    {"stage_b_rank": 3, "membership_mask_integer": 7, "weights": [1.0, 1.25, 1.75, 0.0, 0.0], "aggregate_risk_fraction": 0.12}
+  ],
+  "causal_state_grid": {
+    "neutral_static_role_per_seed": 1,
+    "consecutive_accepted_loss_close_triggers": [2, 3, 4],
+    "future_same_component_source_births_suppressed": [2, 4, 8],
+    "nonneutral_variants_per_seed": 9,
+    "roles_per_seed_including_neutral": 10,
+    "seed_count": 3,
+    "total_roles": 30
+  },
+  "causal_transition_contract": {
+    "state_owner": "Each active component independently owns a consecutive admitted-loss counter and remaining-suppressed-source-birth counter for each candidate role.",
+    "loss_close": "An admitted lifecycle close whose candidate-scaled actual net is below zero increments only that component's consecutive-loss count.",
+    "nonloss_close": "An admitted lifecycle close whose candidate-scaled actual net is at or above zero resets only that component's consecutive-loss count to zero.",
+    "trigger": "When the loss count reaches N, reset that component's loss count to zero and set its remaining suppression count to K.",
+    "future_birth": "At each later accepted-source BIRTH of the same component, if remaining suppression is positive, candidate target volume is forced to zero and the counter decrements once. The source birth consumes one suspension slot even if the unsuspended candidate would have failed aggregate admission.",
+    "close_of_suppressed_birth": "A suppressed birth has zero admitted volume; its later close contributes zero money and does not update the consecutive-loss state.",
+    "existing_position_rule": "Never force-close, resize or alter an already admitted position.",
+    "inactive_member_rule": "A statically inactive component remains inactive and owns no operative state.",
+    "period_initialization": "Every development year, validation and later stability block starts with clean component state and $100 as separately declared; continuous development uses one clean start at 2024-01-01."
+  },
+  "executable_proxy": {
+    "model": "Inherit Stage B's exact V8 daily stressed-balance volume ladder, lot rounding, conservative capital, 0.04 position risk and 0.12 aggregate cap.",
+    "accepted_source_path_only": true,
+    "freed_capacity_blocked_opportunity_profit_credit_usd": 0.0,
+    "unknown_capacity_blocked_existing_v8_opportunities": 143,
+    "open_equity_or_native_stop_claimed": false
+  },
+  "development_selection": {
+    "periods": ["2024-2025 continuous", "2024 fresh", "2025 fresh"],
+    "common_gate": "Actual net, stressed net and minimum balance are positive in continuous development and both fresh years.",
+    "primary_gate": "Development stressed net retains at least 75% of exact-V8 development and actual DD is no more than 27%.",
+    "fallback_gate": "Development stressed net retains at least 65% and actual DD improves at least five percentage points versus exact-V8 development.",
+    "nonneutral_activity_gate": "At least one component trigger and at least one future otherwise executable source birth must be suppressed.",
+    "nonneutral_grid_neighbor": "Immediate neighbors change trigger N or suspension K by one declared grid step while retaining the same static seed.",
+    "nonneutral_robustness": "At least two eligible immediate nonneutral neighbors spanning both trigger and suppression axes.",
+    "per_seed_neutral_precedence": "Within each seed, rank robust nonneutral roles by highest weakest annual stressed net, development stressed-net-to-DD efficiency, stressed net, lower DD and canonical N/K. A nonneutral role displaces the neutral seed only when its weakest annual stressed net is strictly higher; if tied within 1e-9, its efficiency must be strictly higher. Otherwise neutral advances.",
+    "development_roles_selected": "Exactly one immutable role per static seed, maximum three total. No cross-seed replacement or holdout substitution."
+  },
+  "validation": {
+    "period": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "initial_state": "$100 and clean component state for every immutable role",
+    "role_limit": 3,
+    "gate": "Actual net, stressed net and minimum balance positive; actual closed-balance DD no more than 30%; stressed net at least 65% of the exact-V8 validation anchor.",
+    "stage_d_roles": "Every immutable development role passing validation, maximum three, advances unchanged. If none pass, Stage D records the declared empty closure.",
+    "locked_holdout_opened": false
+  },
+  "succession": {
+    "stage_c_can_close_unit": false,
+    "stage_d_required": true,
+    "stage_c_mt5_paths": 0,
+    "maximum_native_paths_after_stage_d": 2
+  },
+  "scope": {
+    "isolated_optimization_code_mechanism_change": true,
+    "new_symbol_timeframe_signal_direction_or_opportunity": false,
+    "entry_condition_loosened": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false
+  },
+  "input_staging_boundary": "No input, config, implementation or result may be created until this declaration commit is verified on origin/main.",
+  "marker": "V8_OPT_U002_STAGE_C_DECLARED_NEUTRAL_PLUS_27_COMPONENT_LOCAL_CAUSAL_SUSPENSIONS_PREINPUT_PREOUTCOME_NO_HOLDOUT_NO_MT5"
+}
