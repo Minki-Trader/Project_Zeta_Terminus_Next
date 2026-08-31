@@ -1,0 +1,267 @@
+{
+  "schema": "zeta-next-independent-cross-index-four-hour-barrier-onnx-challenge-v1-contract",
+  "family": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/",
+  "program": {
+    "primary_macro_program": 1,
+    "name": "entry_signal_market_structure",
+    "height": "meso_to_macro",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "candidate_architecture_required": "python_trained_onnx_plus_ea",
+    "single_ea_novel_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "independence_from_family_001": {
+    "excluded_inputs": [
+      "Family 001 features",
+      "Family 001 predictions",
+      "Family 001 decisions",
+      "Family 001 role outcomes",
+      "Family 001 direction inversion",
+      "Family 001 next-H1 regression target"
+    ],
+    "material_distinctions": [
+      "48-bar temporal tensor rather than scalar engineered row",
+      "ordered four-hour barrier class rather than next-hour return regression",
+      "quarterly PyTorch temporal convolution exported to ONNX rather than monthly sklearn regression",
+      "explicit take-profit and four-hour maximum hold rather than one-hour close"
+    ]
+  },
+  "source_inputs": {
+    "symbols": {
+      "US100": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US100_H1_BARS_20220701_20260821.csv",
+        "bytes": 2508477,
+        "lines_including_header": 24446,
+        "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812"
+      },
+      "US30": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US30_H1_BARS_20220701_20260821.csv",
+        "bytes": 2763746,
+        "lines_including_header": 24444,
+        "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92"
+      },
+      "US500": {
+        "source_path": "lab/research/predecision-market-participation-state-v1/evidence/US500_H1_BARS_20220701_20260821.csv",
+        "bytes": 2727471,
+        "lines_including_header": 24445,
+        "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85"
+      }
+    },
+    "required_columns": [
+      "time_epoch",
+      "time_server",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "inner_join_key": "time_epoch",
+    "maximum_timestamp_exclusive": "2026-08-01T00:00:00",
+    "post_cutoff_rows_excluded": true
+  },
+  "periods": {
+    "initial_model_history": "2022-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_role_max": 1
+  },
+  "decision_and_sequence": {
+    "decision": "first executable tick of a common new server H1 bar while the portfolio is flat",
+    "sequence_bars": 48,
+    "sequence_uses": "only the 48 common H1 bars completed strictly before the decision",
+    "input_shape": [
+      1,
+      19,
+      48
+    ],
+    "maximum_concurrent_portfolio_positions": 1,
+    "capacity_after_intrabar_exit": "becomes available at the next common H1 open",
+    "warmup_bars": 96
+  },
+  "sequence_channels": {
+    "per_symbol_order": [
+      "one-bar log close return",
+      "true range divided by 24-bar ATR",
+      "body divided by 24-bar ATR",
+      "log tick-volume z-score against prior 24 bars",
+      "recorded spread price divided by 24-bar ATR"
+    ],
+    "symbol_order": [
+      "US100",
+      "US30",
+      "US500"
+    ],
+    "calendar_channels_repeated_across_48_steps": [
+      "decision server-hour sine",
+      "decision server-hour cosine",
+      "decision server-weekday sine",
+      "decision server-weekday cosine"
+    ],
+    "total_channels": 19,
+    "standardization": "training-window channel mean and population standard deviation embedded as ONNX model buffers; standard deviation below 1e-8 becomes 1"
+  },
+  "first_barrier_label": {
+    "classes": {
+      "0": "FLAT",
+      "1": "LONG",
+      "2": "SHORT"
+    },
+    "entry": "direction-specific spread-aware price at decision H1 open",
+    "available_atr": "24-bar ATR from bars completed before decision",
+    "adverse_stop_distance_atr": 1.0,
+    "favorable_take_distance_atr": 1.5,
+    "ordered_future_bars": 4,
+    "same_bar_stop_and_take_rule": "adverse stop wins",
+    "direction_outcome": "TAKE only when its favorable barrier is reached before its adverse barrier; otherwise not positive",
+    "class_rule": "LONG when only LONG is positive, SHORT when only SHORT is positive, otherwise FLAT",
+    "label_available": "only after the fourth future H1 bar or earlier terminal barrier information is complete"
+  },
+  "model": {
+    "framework": "PyTorch",
+    "refit_schedule": "calendar quarter start",
+    "lookback_calendar_months": 18,
+    "validation_tail_calendar_months": 3,
+    "minimum_training_sequences": 2500,
+    "architecture": [
+      "Conv1d 19 to 32 kernel 5 padding 2",
+      "GELU",
+      "Conv1d 32 to 32 kernel 3 padding 1",
+      "GELU",
+      "AdaptiveAvgPool1d 1",
+      "Linear 32 to 32",
+      "GELU",
+      "Linear 32 to 9 reshaped as three symbols by three classes"
+    ],
+    "training": {
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "batch_size": 256,
+      "maximum_validation_epochs": 40,
+      "early_stop_patience": 6,
+      "early_stop_min_delta": 0.00001,
+      "final_refit_epochs": "best validation epoch on the full causal window",
+      "loss": "mean of three class-weighted cross entropies",
+      "class_weights": "per-symbol inverse square-root training frequency normalized to mean 1 and clipped to 0.5 through 3.0",
+      "seed": 260831,
+      "deterministic_cpu": true
+    }
+  },
+  "onnx": {
+    "opset": 17,
+    "input_name": "sequence",
+    "output_name": "probabilities",
+    "output_shape": [
+      1,
+      3,
+      3
+    ],
+    "dynamic_batch_axis": true,
+    "runtime": "onnxruntime CPUExecutionProvider",
+    "maximum_absolute_probability_difference": 0.00001,
+    "argmax_mismatch_allowed": 0,
+    "parity_scope": "every development decision sequence for each quarterly model",
+    "candidate_model_files_before_implementation_freeze": 0
+  },
+  "candidate_bundle": {
+    "common_rule": "while flat, select the symbol-direction with the largest non-FLAT probability that passes its fixed probability and both probability-margin requirements",
+    "roles": [
+      {
+        "role": "PROB55_MARGIN10",
+        "minimum_direction_probability": 0.55,
+        "minimum_margin_over_flat": 0.1,
+        "minimum_margin_over_opposite_direction": 0.1
+      },
+      {
+        "role": "PROB60_MARGIN10",
+        "minimum_direction_probability": 0.6,
+        "minimum_margin_over_flat": 0.1,
+        "minimum_margin_over_opposite_direction": 0.1
+      },
+      {
+        "role": "PROB65_MARGIN10",
+        "minimum_direction_probability": 0.65,
+        "minimum_margin_over_flat": 0.1,
+        "minimum_margin_over_opposite_direction": 0.1
+      }
+    ],
+    "no_adjacent_probability_margin_architecture_or_label_rescue_inside_v1": true
+  },
+  "position_and_proxy_execution": {
+    "initial_deposit_usd": 100.0,
+    "leverage": "1:100",
+    "target_position_risk_fraction_of_current_actual_balance": 0.02,
+    "hard_planned_risk_cap_fraction_after_minimum_lot_rounding": 0.04,
+    "stop_distance_atr": 1.0,
+    "take_distance_atr": 1.5,
+    "maximum_hold_common_h1_bars": 4,
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_rounding": "floor target-risk volume to 0.01; use 0.01 only when planned stop loss is at most 4 percent of current actual balance; otherwise skip",
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "actual_cost": "one direction-specific recorded round-trip spread",
+    "stressed_cost": "two direction-specific recorded round-trip spreads",
+    "same_bar_stop_and_take_rule": "adverse stop wins",
+    "balance_compounding": true
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "onnx_parity_required": true,
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net",
+    "locked_confirmation_role_max": 1
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "complete_onnx_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_victory": true
+  },
+  "ordered_stages": [
+    "declaration pre-input pre-label pre-outcome",
+    "byte-equal input materialization and temporal/label/model implementation freeze without labels or model fit",
+    "one complete 2024-2025 development training, ONNX parity and three-role economic process",
+    "locked 2026 confirmation for at most one unchanged survivor",
+    "self-contained EA compile and one native candidate path only for a complete proxy survivor"
+  ],
+  "stop_rules": {
+    "no_development_passer": "close before locked 2026, EA and MT5; do not rescue an adjacent probability, margin, label, horizon, network or training parameter",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires a separate user-authorized engineering and handoff decision"
+  },
+  "preoutcome_state": {
+    "input_copies_created": false,
+    "labels_constructed": false,
+    "model_source_created": false,
+    "models_fit": 0,
+    "onnx_files": 0,
+    "candidate_outcomes": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_created": false,
+    "mt5_paths": 0,
+    "live_changed": false
+  }
+}
