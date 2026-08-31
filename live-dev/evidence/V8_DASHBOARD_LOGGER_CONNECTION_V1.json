@@ -1,0 +1,90 @@
+{
+  "schema": "zeta-next-v8-dashboard-logger-connection-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "CONNECTED_AND_ADVANCING",
+  "dashboard": {
+    "pid": 28008,
+    "started_at_local": "2026-08-31T10:49:55.022121+09:00",
+    "responsive": true,
+    "window_title": "Project Zeta Terminus Next V8 Live-Dev 대시보드",
+    "main_window_handle_nonzero": true,
+    "refresh_seconds": 5,
+    "expected_mode": "Live",
+    "launcher": "live-dev/tools/Open-ZetaNextMasterTerminalAndDashboard.ps1",
+    "reader": "live-dev/tools/Show-ZetaNextV8Dashboard.ps1",
+    "order_authority": "NONE_DISPLAY_ONLY"
+  },
+  "live_runtime": {
+    "pid": 33388,
+    "started_at_local": "2026-08-31T10:32:45.3004743+09:00",
+    "responsive": true,
+    "release_id": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "portfolio_id": "ZT-PORT-NEXT-V8-PMLR1-20260831",
+    "observed_at_utc": "2026-08-31T01:57:18Z",
+    "state_sequence": 492,
+    "entries_input_effective": "1/1",
+    "terminal_live_trading": 1,
+    "project_terminal_process_count": 1,
+    "position_order_margin_planned_risk": "0/0/0/0",
+    "warnings": 0,
+    "alerts": 0,
+    "healthy": true,
+    "restart_or_package_change": false
+  },
+  "logger": {
+    "alternating_state_snapshot": [
+      {
+        "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/v8-pmlr1/state/current-a.csv",
+        "bytes": 3922,
+        "last_write_utc": "2026-08-31T01:58:49.8382191Z"
+      },
+      {
+        "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/v8-pmlr1/state/current-b.csv",
+        "bytes": 3922,
+        "last_write_utc": "2026-08-31T01:57:49.8446336Z"
+      }
+    ],
+    "alternating_core_state": [
+      {
+        "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/v8-pmlr1/state/state-a.csv",
+        "bytes": 1282,
+        "last_write_utc": "2026-08-31T01:58:49.8140188Z"
+      },
+      {
+        "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/v8-pmlr1/state/state-b.csv",
+        "bytes": 1282,
+        "last_write_utc": "2026-08-31T01:57:49.8165191Z"
+      }
+    ],
+    "alternating_research_state": [
+      {
+        "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/v8-pmlr1/research/research-state-a.csv",
+        "bytes": 1184,
+        "last_write_utc": "2026-08-31T01:58:49.8382191Z"
+      },
+      {
+        "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/v8-pmlr1/research/research-state-b.csv",
+        "bytes": 1184,
+        "last_write_utc": "2026-08-31T01:57:49.8456228Z"
+      }
+    ],
+    "event_ledger": {
+      "path": "live-dev/runtime/portable/MQL5/Files/ZetaTerminusNext/live/v8-pmlr1/state/events-a.csv",
+      "bytes": 3281,
+      "last_write_utc": "2026-08-31T01:32:49.8058215Z",
+      "interpretation": "Event ledgers append on events rather than every snapshot cycle; no missing heartbeat is inferred."
+    },
+    "research_candidate_and_lifecycle_ledgers": {
+      "present": false,
+      "interpretation": "No post-activation candidate/order path or lifecycle has occurred yet. The EA creates/appends these ledgers when corresponding research events occur; their current absence is not a logger failure."
+    },
+    "advancement_proof": "Core and research alternating files wrote a newer generation after the bounded status read, while state sequence had already advanced from the activation handoff through 492."
+  },
+  "boundary": {
+    "broker_position_order_deal_history_query": false,
+    "external_data": false,
+    "live_order_sent_by_check": false,
+    "live_source_set_ex5_changed": false
+  },
+  "marker": "V8_DASHBOARD_CONNECTED_FIVE_SECOND_REFRESH_LIVE_AND_RESEARCH_LOGGERS_ADVANCING_NO_RUNTIME_CHANGE"
+}

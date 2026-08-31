@@ -22,6 +22,15 @@ The active user Goal is continuous economic optimization of the existing frozen 
 - A new clue may temporarily open one serial Lab Unit, allocated under the normal Program rules. The optimization campaign pauses while that Unit is active, resumes after the Unit closes, and remains the Goal. A Lab detour is optional and never becomes the continuing primary lane.
 - Commit and push `main` at comparatively large phase boundaries such as lane/baseline freeze, a complete economic search stage, or a frozen successor campaign—not for every parser, environment or invocation correction.
 
+### Exact-V8 long-horizon rehabilitation program
+
+The user's 2026-08-31 direction opens a scoped long-horizon rehabilitation program for exact V8 and makes adjacent follow-up plus fine adjustment mandatory inside that program. This scope supersedes the general no-adjacent-successor rule only for the serial Optimization rehabilitation families named under it; it does not reopen a closed Frontier Lab unit, authorize parallel work, rewrite a historical verdict or create Live authority.
+
+- Recompare all completed Lab and Optimization mechanisms as internal clues, then open exactly one newly named Optimization successor family at a time. A family freezes its causal question, bounded lattice, development/validation/locked-holdout split, gates and stop conditions before outcomes. Within that frozen family, required adjacent and micro-adjustment stages continue serially until no robust actionable region remains; only then close it and re-rank the remaining whole map.
+- Use exact clean V8-derived local evidence first. Broad screening, adjacency checks and fine grids are proxy work; they must preserve source hashes, disclose accepted-path and selection limitations, prefer stable plateaus over isolated maxima and may not claim native MT5 equity drawdown or newly admitted opportunities that the source path did not observe.
+- Expensive MT5 work is scarce by default. One family may consume at most two valid economic paths: one exact contemporaneous V8-derived control and one unchanged proxy finalist. Necessary environment, invocation or engineering corrections are not economic paths and have no arbitrary retry cap, but they must be genuinely required and may not be used to expand or retune the economic lattice after outcomes.
+- A proxy nonconfirmation does not trigger MT5. A proxy survivor authorizes at most the frozen control/finalist pair; it does not promote, mutate or restart Live. Any later release change still requires a separately named user-authorized Lab engineering handoff and a fresh `CURRENT_STATE.md` Live decision.
+
 ## Evidence and economic boundaries
 
 - Hold out the latest two completed months from proxy selection by default. If they influence selection or tuning, they are current broker/cost/execution evidence only.

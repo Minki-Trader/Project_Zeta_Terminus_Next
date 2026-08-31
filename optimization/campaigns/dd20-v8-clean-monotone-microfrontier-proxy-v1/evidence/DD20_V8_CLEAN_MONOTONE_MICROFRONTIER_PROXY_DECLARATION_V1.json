@@ -1,0 +1,165 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-monotone-microfrontier-proxy-declaration-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_OUTCOME_UNOPENED",
+  "program": {
+    "name": "exact-v8-long-horizon-rehabilitation",
+    "primary_macro_program": 5,
+    "primary_macro_program_name": "portfolio_capital_risk",
+    "serial_family_rank": 1,
+    "adjacent_and_micro_adjustment_required": true,
+    "parallel_judgment_streams": 0
+  },
+  "question": "Can a monotone local risk/composition plateau on the valid clean exact-V8 accepted path materially reduce drawdown while retaining most stressed profit across development, validation and locked holdout?",
+  "source": {
+    "path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/candidate-valid-nonconfirmation/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaTerminusNext/optimization/dd20-pcr2/research/research-lifecycles.csv",
+    "bytes": 1753587,
+    "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+    "rows": 2170,
+    "matched_birth_close_lifecycles": 965,
+    "first_server_time": "2024.01.02 15:00:00",
+    "last_server_time": "2026.07.31 19:00:00",
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "native_relative_balance_drawdown_pct": 35.46,
+    "native_relative_equity_drawdown_pct": 37.39,
+    "staging_rule": "After this declaration reaches origin/main, create one byte-equal campaign-owned ignored raw input copy and reject any size or hash mismatch.",
+    "limitation": "Only exact-V8 accepted lifecycles have realized outcomes. Freed-capacity opportunities are not credited, so the proxy cannot prove complete turnover, newly admitted opportunity economics, native equity drawdown or MT5 economics."
+  },
+  "components": [
+    {
+      "short": "RC61",
+      "id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "source_births": 190,
+      "source_weight": 2.0,
+      "grid": [1.25, 1.5, 1.75, 2.0]
+    },
+    {
+      "short": "RC64",
+      "id": "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "source_births": 150,
+      "source_weight": 1.5,
+      "grid": [0.75, 1.0, 1.25, 1.5]
+    },
+    {
+      "short": "Cross",
+      "id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "source_births": 446,
+      "source_weight": 2.0,
+      "grid": [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+    },
+    {
+      "short": "Intraday",
+      "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "source_births": 60,
+      "source_weight": 2.5,
+      "grid": [1.5, 1.75, 2.0, 2.25, 2.5]
+    },
+    {
+      "short": "Return",
+      "id": "ZT-H1-US30-RETURN-I-c870a788ec",
+      "source_births": 119,
+      "source_weight": 1.5,
+      "grid": [0.75, 1.0, 1.25, 1.5]
+    },
+    {
+      "short": "Passive",
+      "source_weight": 0.0,
+      "grid": [0.0]
+    }
+  ],
+  "risk_grid": {
+    "base_position_risk_fraction": [0.025, 0.03, 0.035, 0.04],
+    "aggregate_risk_fraction": [0.12, 0.15, 0.18],
+    "declared_parameterizations": 34560,
+    "monotone_effective_risk_rule": "For every active component, candidate base-position-risk times weight is no greater than exact V8 0.04 times source weight.",
+    "volume_rule": "Scale each observed source volume by the candidate/source effective-risk ratio, normalize on 0.01 lots, cap at source volume, and never synthesize a lifecycle.",
+    "aggregate_rule": "Scale observed planned risk with executable volume and admit only when open planned risk stays within candidate aggregate fraction of the smaller replay actual/stressed balance."
+  },
+  "temporal_contract": {
+    "attribution": "A matched lifecycle belongs to the period containing its CLOSE server time; its BIRTH remains paired even when it precedes the boundary.",
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_subperiods": [
+      ["2024-01-01T00:00:00", "2025-01-01T00:00:00"],
+      ["2025-01-01T00:00:00", "2026-01-01T00:00:00"]
+    ],
+    "validation_fresh_100": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout_fresh_100": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"]
+  },
+  "gates": {
+    "anchor_reproduction": {
+      "matched_lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818,
+      "net_tolerance_usd": 1e-07,
+      "closed_balance_drawdown_tolerance_points_from_35_46": 0.01
+    },
+    "primary_development": {
+      "minimum_stressed_retention_of_anchor": 0.8,
+      "maximum_raw_closed_balance_drawdown_pct": 27.0,
+      "positive_actual_and_stressed": true,
+      "positive_2024_and_2025_actual_and_stressed": true,
+      "positive_minimum_balance": true
+    },
+    "fallback_rehabilitation_if_primary_population_zero": {
+      "minimum_stressed_retention_of_anchor": 0.75,
+      "minimum_drawdown_improvement_points": 5.0,
+      "same_positivity_rules": true
+    },
+    "plateau": {
+      "minimum_eligible_immediate_neighbors": 4,
+      "minimum_distinct_neighbor_axes": 3,
+      "selection_order": [
+        "higher worst-local stressed-net-to-drawdown efficiency",
+        "higher own stressed net",
+        "lower drawdown",
+        "smaller lattice distance from exact V8"
+      ],
+      "maximum_separated_centers_to_validation": 3
+    },
+    "validation": {
+      "fresh_reference_capital_usd": 100.0,
+      "positive_actual_and_stressed": true,
+      "positive_minimum_balance": true,
+      "maximum_raw_closed_balance_drawdown_pct": 30.0,
+      "winner_order": ["higher stressed-net-to-drawdown efficiency", "higher stressed net", "lower drawdown", "development rank"]
+    },
+    "locked_holdout": {
+      "same_winner_only": true,
+      "fresh_reference_capital_usd": 100.0,
+      "positive_actual_and_stressed": true,
+      "positive_minimum_balance": true,
+      "maximum_raw_closed_balance_drawdown_pct": 30.0,
+      "no_alternate_substitution": true
+    },
+    "mt5_shortlist": {
+      "requires_validation_and_holdout_pass": true,
+      "minimum_whole_path_stressed_retention_of_anchor": 0.75,
+      "minimum_whole_path_drawdown_improvement_points": 5.0,
+      "maximum_finalists": 1
+    }
+  },
+  "mt5_budget": {
+    "maximum_valid_economic_paths_per_family": 2,
+    "path_1": "exact contemporaneous V8-derived control",
+    "path_2": "one unchanged proxy finalist",
+    "proxy_nonconfirmation_paths": 0,
+    "correction_rule": "Necessary environment, invocation and engineering corrections are correction states, not extra economic variants, and do not authorize outcome-aware lattice expansion."
+  },
+  "stop_and_successor_rule": "A nonrobust or locked-holdout-failed family closes without MT5, then the whole remaining internal map is re-ranked and one newly named adjacent successor opens serially. A survivor freezes one control/finalist MT5 pair. Neither case changes Live.",
+  "authority": {
+    "optimization_only": true,
+    "live_package_or_runtime_change": false,
+    "direct_live_promotion": false,
+    "lab_change": false
+  },
+  "pre_outcome_boundary": {
+    "source_copied": false,
+    "configuration_created": false,
+    "implementation_created": false,
+    "proxy_executed": false,
+    "mt5_executed": false,
+    "required_next_action": "Commit and push this declaration boundary before staging input or implementing the proxy."
+  },
+  "marker": "EXACT_V8_LONG_HORIZON_FAMILY_1_CLEAN_MONOTONE_MICROFRONTIER_DECLARED_ADJACENCY_FINE_TUNING_REQUIRED_MAX_TWO_MT5_PATHS_OUTCOME_UNOPENED"
+}
