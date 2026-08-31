@@ -1,0 +1,250 @@
+{
+  "schema": "zeta-next-independent-cross-index-m15-online-expert-adapter-challenge-v1-contract",
+  "family": "lab/research/independent-cross-index-m15-online-expert-adapter-challenge-v1/",
+  "program": {
+    "primary_macro_program": 1,
+    "name": "entry_signal_market_structure",
+    "height": "meso_to_macro",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "candidate_architecture_required": "python_adapter_plus_ea",
+    "single_ea_novel_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "independence": {
+    "excluded_inputs": [
+      "Family 001 features, fitted models, calibration, predictions, decisions and outcomes",
+      "Family 002 tensors, labels, fitted models, ONNX files, predictions, decisions and outcomes",
+      "Family 003 pair fits, residuals, z scores, decisions, baskets and outcomes",
+      "V1-V8 signals, opportunity timestamps, component labels and economics"
+    ],
+    "material_distinctions": [
+      "M15 causal online expert performance rather than an H1 full-window supervised fit",
+      "single-symbol selection rather than a two-leg residual convergence basket",
+      "expert outcomes enter state only after the complete virtual path matures",
+      "one global M15 execution slot with dense intraday opportunities"
+    ]
+  },
+  "source_inputs": {
+    "acquisition_receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    },
+    "series": {
+      "US30_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+        "bytes": 19018323,
+        "rows": 1617902,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+      },
+      "US100_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+        "bytes": 21213599,
+        "rows": 1618383,
+        "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+      },
+      "US500_M15": {
+        "source_path": "lab/artifacts/raw/us500-turn-of-month-cash-session-rebalancing-v1/input/US500_M15_BARS_20220701_20260821.csv",
+        "bytes": 7007401,
+        "rows": 97707,
+        "sha256": "A3A5BDEBCE22327B37A38B3D443898356856FCA5F1B4BBED7CA63C148189073A"
+      }
+    },
+    "required_columns": [
+      "time or time_epoch",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "maximum_timestamp_exclusive": "2026-08-01T00:00:00",
+    "post_cutoff_rows_excluded": true
+  },
+  "m15_construction": {
+    "US30_and_US100": "aggregate exact UTC-aligned groups of fifteen consecutive M1 rows",
+    "complete_group_requirement": "timestamps t through t+14 minutes are all present at exact sixty-second spacing",
+    "ohlc": "first open, maximum high, minimum low, final close on Bid",
+    "volume": "sum tick_volume and real_volume",
+    "entry_spread": "spread on the first M1 row",
+    "exit_spread": "spread on the final M1 row",
+    "US500": "use the native M15 row with its recorded Bid OHLC and spread",
+    "common_join": "inner join exact M15 opening epoch across US30, US100 and US500",
+    "features_never_use_current_open_or_future_bar": true
+  },
+  "periods": {
+    "initial_online_history": "2022-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_role_max": 1,
+    "locked_confirmation_previously_opened_by_families_001_002_003": false
+  },
+  "decision": {
+    "when": "first executable tick of every common new M15 bar while the global slot is flat",
+    "uses": "completed common M15 bars and expert outcomes fully matured before the current bar",
+    "maximum_concurrent_positions": 1,
+    "capacity_after_exit": "next common M15 open after the exit bar",
+    "normal_trading_day": "server date with at least sixty common M15 bars",
+    "lifecycle_start_count": "one accepted single-symbol position counts once"
+  },
+  "expert_population": {
+    "symbols": [
+      "US100",
+      "US30",
+      "US500"
+    ],
+    "return_horizons_completed_m15_bars": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "modes": [
+      "MOMENTUM",
+      "REVERSION"
+    ],
+    "expert_count": 30,
+    "direction": "MOMENTUM follows and REVERSION opposes the sign of log(close[t-1]/close[t-1-h])",
+    "zero_return": "expert emits no direction",
+    "signal_materiality": "absolute source return must be at least 0.10 of the prior 64-bar simple ATR",
+    "declared_order": "US100 then US30 then US500; horizon 1,2,4,8,16; MOMENTUM then REVERSION"
+  },
+  "virtual_outcome_and_online_state": {
+    "virtual_decision_frequency": "every common M15 bar for every valid expert regardless of candidate slot occupancy",
+    "virtual_execution": "same direction-specific Bid/Ask, one-ATR stop, 1.5R take and four-M15 maximum hold as the candidate",
+    "virtual_outcome_unit": "actual-cost realized planned-risk R clipped to [-3,+3]",
+    "maturity": "the update becomes usable only at the first decision after all four potential holding bars are complete, even if stop or take occurred earlier",
+    "ewma_initialization": "zero weight until at least 256 matured observations exist for that expert",
+    "ewma_mean_and_variance": "causal exponentially weighted first and second moments",
+    "effective_sample_size": "(1+lambda)/(1-lambda) capped by matured observation count",
+    "selection_score": "EWMA mean minus 0.25 times sqrt(EWMA variance/effective sample size)",
+    "ranking": "highest finite positive selection score, then declared expert order",
+    "no_current_or_unmatured_outcome_in_score": true
+  },
+  "candidate_bundle": {
+    "roles": [
+      {
+        "role": "ONLINE_HL32",
+        "ewma_half_life_matured_observations": 32,
+        "minimum_selection_score_R_exclusive": 0.0
+      },
+      {
+        "role": "ONLINE_HL96",
+        "ewma_half_life_matured_observations": 96,
+        "minimum_selection_score_R_exclusive": 0.0
+      },
+      {
+        "role": "ONLINE_HL256",
+        "ewma_half_life_matured_observations": 256,
+        "minimum_selection_score_R_exclusive": 0.0
+      }
+    ],
+    "no_adjacent_expert_horizon_mode_half_life_score_or_materiality_rescue_inside_v1": true
+  },
+  "atr_volume_and_execution": {
+    "atr_bars": 64,
+    "atr": "simple mean true range through the immediately prior completed common M15 bar",
+    "target_planned_risk_fraction": 0.02,
+    "hard_planned_risk_cap_fraction_after_minimum_lot": 0.04,
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_rounding": "floor two-percent one-ATR risk volume to 0.01; use 0.01 below minimum only when planned loss is at most four percent of current actual balance",
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "balance_compounding": true,
+    "volume_uses_current_actual_balance": true,
+    "basket_stop_R": -1.0,
+    "basket_take_R": 1.5,
+    "maximum_hold_common_m15_bars": 4,
+    "same_bar_stop_and_take_rule": "adverse stop wins and threshold execution is used",
+    "time_exit": "direction-specific close at the fourth common M15 bar close"
+  },
+  "quote_and_cost": {
+    "ohlc_side": "Bid",
+    "ask": "Bid plus recorded spread times 0.01",
+    "long_entry_and_close": "enter Ask and close Bid",
+    "short_entry_and_close": "enter Bid and close Ask",
+    "actual_cost": "direction-specific observed Bid/Ask burden",
+    "stressed_cost": "subtract the same direction-specific observed spread burden once again",
+    "virtual_score_uses_actual_cost_not_stressed_cost": true
+  },
+  "adapter_ea_boundary": {
+    "python_owns": [
+      "M1-to-M15 construction and three-symbol common-bar state",
+      "all thirty expert directions and matured virtual outcomes",
+      "role-specific online mean, variance and score",
+      "deterministic expert ranking and selected symbol/direction",
+      "decision bar, prior ATR and frozen execution metadata"
+    ],
+    "ea_must_own": [
+      "atomic decision-file schema, sequence and freshness validation",
+      "symbol contract, tick size, tick value, lot and market-state validation",
+      "current-balance risk sizing and fail-closed order submission",
+      "protective stop, take and four-M15 close",
+      "restart recovery, ownership, persistence and bounded evidence"
+    ],
+    "ea_may_not_reconstruct_or_replace_expert_signal": true,
+    "decision_transport": "atomic strict JSON adapter output with monotonically increasing sequence and exact common-M15 epoch"
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "symbol_breadth_min": 3,
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net",
+    "locked_confirmation_role_max": 1
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "complete_python_adapter_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_victory": true
+  },
+  "ordered_stages": [
+    "declaration before source copies, M15 OHLC construction, expert outcomes or candidate economics",
+    "byte-equal source materialization and complete adapter implementation freeze with timestamp and expert-state density only",
+    "one complete 2024-2025 three-role online development process",
+    "locked 2026 confirmation for at most one unchanged complete passer",
+    "self-contained EA compile and one native candidate path only for a complete whole-proxy survivor"
+  ],
+  "stop_rules": {
+    "no_development_passer": "close before locked 2026, EA and MT5 without an adjacent expert, horizon, mode, half-life, threshold, risk or exit rescue",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires a separate user-authorized engineering and handoff decision"
+  },
+  "preoutcome_state": {
+    "family_source_copies": 0,
+    "constructed_m15_price_rows": 0,
+    "adapter_source_files": 0,
+    "expert_directions": 0,
+    "matured_virtual_outcomes": 0,
+    "candidate_decisions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false
+  }
+}
