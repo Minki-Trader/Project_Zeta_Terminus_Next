@@ -1,0 +1,171 @@
+{
+  "schema": "zeta-next-independent-cross-index-four-hour-barrier-onnx-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-08-31T09:49:10.474Z",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "declaration_boundary": {
+    "commit": "ddfbc7ef092e2f51713dc9375656dccc9d39a4b4",
+    "commit_equal_origin_main_before_input_copy_or_implementation": true,
+    "declaration_status": "DECLARED_PREINPUT_PRELABEL_PREIMPLEMENTATION_PREOUTCOME"
+  },
+  "frozen_files": {
+    "readme": {
+      "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/README.md",
+      "bytes": 1347,
+      "lines": 13,
+      "sha256": "82F571C6C7648698043873C712BB42720C3EAF55E4961159716DBCD9608C3A53"
+    },
+    "contract": {
+      "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/config/challenge-contract.json",
+      "bytes": 10836,
+      "lines": 267,
+      "sha256": "3B895B9DACE0C12FAB5611FC6DAEE76598A2632CED1D43F9DE59968E89D6F15A"
+    },
+    "declaration": {
+      "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_FOUR_HOUR_BARRIER_ONNX_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 5849,
+      "lines": 149,
+      "sha256": "CE4C17A226BA7CF0155B6DB99945B3683F7C25FC3516135B45CB5D53DA5E6722"
+    },
+    "adapter": {
+      "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/model/run_onnx_adapter.py",
+      "bytes": 55390,
+      "lines": 1402,
+      "sha256": "C876F540987C4A090F8BE16DE9A15C7D4FF2FEFCD9C45B55C38772D5F35780D8"
+    },
+    "input_copies": {
+      "US100": {
+        "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/data/input/US100_H1_BARS_20220701_20260821.csv",
+        "bytes": 2508477,
+        "lines": 24446,
+        "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812"
+      },
+      "US30": {
+        "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/data/input/US30_H1_BARS_20220701_20260821.csv",
+        "bytes": 2763746,
+        "lines": 24444,
+        "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92"
+      },
+      "US500": {
+        "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/data/input/US500_H1_BARS_20220701_20260821.csv",
+        "bytes": 2727471,
+        "lines": 24445,
+        "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85"
+      }
+    }
+  },
+  "implementation_semantics": {
+    "feature_tensor": "the prior 48 completed common H1 bars; five channels per symbol in US100, US30, US500 order plus four decision-calendar channels",
+    "atr": "24 completed-bar simple mean true range; the decision uses the ATR at the immediately preceding completed common H1 bar",
+    "volume_zscore": "current log1p tick volume against the population mean and standard deviation of the prior 24 completed bars",
+    "quote_book": "CSV OHLC is treated as Bid; recorded spread times 0.01 constructs Ask at the decision and throughout its four-bar proxy path",
+    "label_order": "each direction checks its adverse stop before favorable take inside every ordered future bar; FLAT is assigned unless exactly one direction wins",
+    "stress": "the spread-aware actual path includes one recorded round-trip spread and the stressed book subtracts one additional decision spread",
+    "selection_tie_break": "higher direction probability, then US100/US30/US500 order, then LONG before SHORT",
+    "normal_trading_day": "a server date containing at least 20 common H1 bars; every such zero-signal day remains in the denominator",
+    "portfolio_capacity": "one position; capacity returns only at the common H1 open after the exit bar",
+    "output_atomicity": "development and confirmation artifacts stage under their family artifact root and become authoritative only after complete directory replacement"
+  },
+  "structural_precheck": {
+    "status": "STRUCTURAL_PRECHECK_PASS_NO_LABEL_NO_FIT_NO_OUTCOME_NO_ONNX",
+    "common_rows": 20649,
+    "first_common_time": "2022-07-01T01:00:00",
+    "last_common_time": "2025-12-31T23:00:00",
+    "complete_feature_rows": 20625,
+    "structural_sequences_through_development": 20550,
+    "development_decision_sequences": 11801,
+    "development_normal_trading_days": 508,
+    "quarterly_partitions": [
+      {
+        "quarter": "2024Q1",
+        "training_sequences_full": 8746,
+        "training_sequences_pre_validation": 7307,
+        "validation_sequences": 1439,
+        "prediction_sequences": 1441
+      },
+      {
+        "quarter": "2024Q2",
+        "training_sequences_full": 8773,
+        "training_sequences_pre_validation": 7335,
+        "validation_sequences": 1438,
+        "prediction_sequences": 1488
+      },
+      {
+        "quarter": "2024Q3",
+        "training_sequences_full": 8796,
+        "training_sequences_pre_validation": 7311,
+        "validation_sequences": 1485,
+        "prediction_sequences": 1509
+      },
+      {
+        "quarter": "2024Q4",
+        "training_sequences_full": 8841,
+        "training_sequences_pre_validation": 7335,
+        "validation_sequences": 1506,
+        "prediction_sequences": 1486
+      },
+      {
+        "quarter": "2025Q1",
+        "training_sequences_full": 8847,
+        "training_sequences_pre_validation": 7364,
+        "validation_sequences": 1483,
+        "prediction_sequences": 1435
+      },
+      {
+        "quarter": "2025Q2",
+        "training_sequences_full": 8798,
+        "training_sequences_pre_validation": 7366,
+        "validation_sequences": 1432,
+        "prediction_sequences": 1464
+      },
+      {
+        "quarter": "2025Q3",
+        "training_sequences_full": 8820,
+        "training_sequences_pre_validation": 7359,
+        "validation_sequences": 1461,
+        "prediction_sequences": 1506
+      },
+      {
+        "quarter": "2025Q4",
+        "training_sequences_full": 8885,
+        "training_sequences_pre_validation": 7382,
+        "validation_sequences": 1503,
+        "prediction_sequences": 1472
+      }
+    ],
+    "dummy_input_shape": [
+      1,
+      19,
+      48
+    ],
+    "dummy_output_shape": [
+      1,
+      3,
+      3
+    ]
+  },
+  "runtime": {
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "torch": "2.11.0+cpu",
+    "onnx": "1.20.1",
+    "onnxruntime": "1.24.3",
+    "deterministic_cpu": true
+  },
+  "predevelopment_attestation": {
+    "labels_constructed": 0,
+    "model_fits": 0,
+    "onnx_files": 0,
+    "candidate_predictions": 0,
+    "candidate_trades": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this implementation freeze reaches origin/main, run exactly one complete 2024-2025 development process; if no role passes every frozen gate, close before locked confirmation, EA and MT5"
+}
