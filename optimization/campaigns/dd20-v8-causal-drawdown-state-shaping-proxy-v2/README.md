@@ -15,3 +15,9 @@ The sole code-authority correction is:
 The complete V1 raw result is pinned as correction parity input. V2 must reproduce all frozen key economic values and counts while correcting only the final status/Stage-D role authority and implementation metadata.
 
 No input staging, implementation or replay begins until the V1 correction closure and this V2 declaration reach `origin/main`. MT5, Lab, new-entry and Live authority remain zero.
+
+## Frozen implementation boundary
+
+Declaration commit `13789c386990c93304d974f6d7003a966e34f948` reached `origin/main` before four byte-equal inputs were staged. Structural/static precheck remains exact at `965` lifecycles, three seeds, `72 / 72 / 72` variants, `216` unique coordinates, exact V8 `+$409.81 / +$367.818 / 35.46%` and seed development `+$150.105 / +$133.103 / 24.099813585%` each.
+
+Config is `5,987` bytes / `EE605A5E...2D421`; source is `56,381` bytes / `336641A2...1DC9D` and passes Python `3.13.9` syntax with NumPy `2.3.4`. Stage-D role append now exists only inside `final_pass`. V1 count/index and development/validation/holdout/whole numeric parity, corrected status and zero-role count are all abort-before-write gates. No V2 result exists; replay waits for this freeze to reach `origin/main`.

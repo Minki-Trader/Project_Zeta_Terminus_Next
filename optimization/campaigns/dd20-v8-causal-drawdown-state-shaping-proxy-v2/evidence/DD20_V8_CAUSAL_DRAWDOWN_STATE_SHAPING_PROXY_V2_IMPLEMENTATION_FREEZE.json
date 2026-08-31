@@ -1,0 +1,99 @@
+{
+  "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-v2-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PRE_CORRECTION_REPLAY",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING_RESULT_AUTHORITY_CORRECTION",
+  "authority": {
+    "declaration_commit_on_origin_main": "13789c386990c93304d974f6d7003a966e34f948",
+    "declaration_path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/evidence/DD20_V8_CAUSAL_DRAWDOWN_STATE_SHAPING_PROXY_V2_DECLARATION.json",
+    "declaration_bytes": 4988,
+    "declaration_sha256": "D4855006920970747DE90B2C88F77E20CDDA39BD381B6F44797D564951FA26A9",
+    "unit_closure_authority": false,
+    "stage_c_mt5_authority": 0,
+    "lab_opened": false,
+    "new_entry_strategy": false
+  },
+  "staged_inputs": [
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v2/input/research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v2/input/research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v2/input/stage-b-proxy-result.json",
+      "bytes": 31666,
+      "sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v2/input/v1-proxy-result.json",
+      "bytes": 29314,
+      "sha256": "0F047069911EC505AA2B3FF0B8B7637F7539ACC68BE44C9A577511920ED3370A",
+      "role": "numeric correction parity only; no reselection or tuning"
+    }
+  ],
+  "implementation": {
+    "config": {
+      "path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/config/proxy-contract.json",
+      "bytes": 5987,
+      "lines": 168,
+      "sha256": "EE605A5E46ED15427027241AAB5F6228C76BF066FE7B30E6D8D363468A02D421"
+    },
+    "script": {
+      "path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/proxy/run_proxy.py",
+      "bytes": 56381,
+      "lines": 1294,
+      "sha256": "336641A25913AC5C474C9416AFB5B2056DE1937D1BA554953EFE3F0CAAE1DC9D"
+    },
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "syntax_compile": "PASSED"
+  },
+  "unchanged_model_precheck": {
+    "lifecycles": 965,
+    "stage_b_seed_count": 3,
+    "state_parameterizations": 216,
+    "coordinate_unique_count": 216,
+    "per_seed_parameterizations": [72, 72, 72],
+    "exact_v8_actual_stressed_dd": [409.81, 367.818, 35.46],
+    "static_seed_development_actual_each": [150.105, 150.105, 150.105],
+    "static_seed_development_stressed_each": [133.103, 133.103, 133.103],
+    "static_seed_development_dd_each": [24.099813585, 24.099813585, 24.099813585],
+    "raw_v2_output_exists": false
+  },
+  "authority_correction": {
+    "v1_raw_stage_d_role_count": 1,
+    "v1_raw_status": "VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_STAGE_D_REQUIRED_NO_MT5",
+    "v2_stage_d_append_location": "Inside final_pass beginning at source line 1161; append begins at line 1162.",
+    "validation_pass_alone_can_append_role": false,
+    "whole_path_nonconfirmation_expected_role_count": 0,
+    "whole_path_nonconfirmation_expected_status": "VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_NO_STAGE_D_ROLE_STAGE_D_EMPTY_CLOSURE_REQUIRED_NO_MT5"
+  },
+  "frozen_numeric_parity_abort_gate": {
+    "counts": ["primary eligible", "fallback eligible", "plateau population"],
+    "selection": ["selected lattice index"],
+    "metrics": [
+      "development actual/stressed/DD",
+      "validation actual/stressed/DD",
+      "holdout actual/stressed/DD",
+      "whole actual/stressed/DD"
+    ],
+    "tolerance": 1e-08,
+    "status_and_role_count_checked_before_output_write": true,
+    "mismatch_action": "Raise a correction-parity error and write no V2 result."
+  },
+  "pre_replay": {
+    "candidate_replay_executed": false,
+    "mt5_executed": false,
+    "external_data": false,
+    "live_changed": false,
+    "lab_changed": false
+  },
+  "next_action": "Commit and push this implementation freeze, then run the exact V2 216-variant correction replay once.",
+  "marker": "UNIT_001_STAGE_C_V2_EXACT_PARITY_SUCCESSION_AUTHORITY_IMPLEMENTATION_FROZEN_PRE_REPLAY_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}

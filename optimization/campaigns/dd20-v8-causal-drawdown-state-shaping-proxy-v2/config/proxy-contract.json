@@ -1,0 +1,168 @@
+{
+  "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-contract-v2",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING_RESULT_AUTHORITY_CORRECTION",
+  "inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v2/input",
+    "lifecycle": {
+      "name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "matched_lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818
+    },
+    "candidate": {
+      "name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "position_open_rows": 965,
+      "unique_component_time_open_keys": 965
+    },
+    "stage_b": {
+      "name": "stage-b-proxy-result.json",
+      "bytes": 31666,
+      "sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8",
+      "schema": "zeta-next-dd20-v8-clean-executable-basin-refinement-proxy-result-v1",
+      "status": "VALID_PROXY_COMPLETE_STAGE_B_SURVIVOR_STAGE_C_REQUIRED_NO_MT5",
+      "stage_c_seed_count": 3
+    },
+    "v1": {
+      "name": "v1-proxy-result.json",
+      "bytes": 29314,
+      "sha256": "0F047069911EC505AA2B3FF0B8B7637F7539ACC68BE44C9A577511920ED3370A",
+      "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-result-v1",
+      "status": "VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_STAGE_D_REQUIRED_NO_MT5"
+    }
+  },
+  "output": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v2/output/proxy-result.json",
+  "reference_capital_usd": 100.0,
+  "base_volume_lots": 0.01,
+  "volume_step_lots": 0.01,
+  "addition_step_usd": 150.0,
+  "base_position_risk_fraction": 0.04,
+  "aggregate_tolerance_usd": 0.01,
+  "drawdown_basis": "actual_closed_balance_relative_drawdown",
+  "components": [
+    {
+      "short": "RC61",
+      "id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "source_weight": 2.0,
+      "source_births": 190
+    },
+    {
+      "short": "RC64",
+      "id": "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "source_weight": 1.5,
+      "source_births": 150
+    },
+    {
+      "short": "Cross",
+      "id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "source_weight": 2.0,
+      "source_births": 446
+    },
+    {
+      "short": "Intraday",
+      "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "source_weight": 2.5,
+      "source_births": 60
+    },
+    {
+      "short": "Return",
+      "id": "ZT-H1-US30-RETURN-I-c870a788ec",
+      "source_weight": 1.5,
+      "source_births": 119
+    }
+  ],
+  "static_seeds": [
+    {
+      "stage_b_rank": 1,
+      "weights": [1.25, 1.5, 1.5, 2.0, 1.25],
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "stage_b_rank": 2,
+      "weights": [1.25, 1.5, 1.75, 2.25, 0.75],
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "stage_b_rank": 3,
+      "weights": [1.25, 1.5, 2.0, 2.25, 1.25],
+      "aggregate_risk_fraction": 0.12
+    }
+  ],
+  "state_lattice": {
+    "trigger_drawdown_fractions": [0.05, 0.075, 0.1, 0.125],
+    "future_birth_multipliers": [0.5, 0.65, 0.8],
+    "release_hysteresis_fractions": [0.025, 0.05],
+    "minimum_subsequent_accepted_closes": [5, 10, 20],
+    "variants_per_static_seed": 72,
+    "expected_parameterizations": 216
+  },
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_2024": ["2024-01-01T00:00:00", "2025-01-01T00:00:00"],
+    "development_2025": ["2025-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "validation": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"]
+  },
+  "anchor_reproduction": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5],
+    "aggregate_risk_fraction": 0.18,
+    "joined_birth_open_rows": 965,
+    "source_volume_matches": 965,
+    "accepted_lifecycles": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "closed_balance_drawdown_pct": 35.46,
+    "net_tolerance_usd": 1e-07,
+    "drawdown_tolerance_points": 0.01,
+    "volume_tolerance_lots": 1e-09
+  },
+  "static_seed_development_reproduction": {
+    "actual_net_usd": 150.105,
+    "stressed_net_usd": 133.103,
+    "closed_balance_drawdown_pct": 24.099813585,
+    "net_tolerance_usd": 1e-07,
+    "drawdown_tolerance_points": 1e-07
+  },
+  "gates": {
+    "primary_stressed_retention_vs_exact_v8_development": 0.8,
+    "primary_max_drawdown_pct": 21.2,
+    "primary_minimum_seed_drawdown_improvement_points": 1.0,
+    "fallback_stressed_retention_vs_exact_v8_development": 0.75,
+    "fallback_minimum_seed_drawdown_improvement_points": 2.0,
+    "minimum_eligible_neighbors": 4,
+    "minimum_neighbor_axes": 3,
+    "maximum_centers_per_static_seed": 1,
+    "maximum_total_centers": 3,
+    "validation_max_drawdown_pct": 30.0,
+    "holdout_max_drawdown_pct": 30.0,
+    "final_minimum_stressed_retention_vs_exact_v8": 0.75,
+    "final_minimum_drawdown_improvement_vs_exact_v8_points": 5.0
+  },
+  "stage_succession": {
+    "maximum_stage_d_roles": 3,
+    "stage_c_can_close_unit": false,
+    "stage_d_required": true
+  },
+  "mt5_budget": {
+    "stage_c_authorized_paths": 0,
+    "maximum_valid_economic_paths_after_stage_d": 2
+  },
+  "correction_parity": {
+    "primary_eligible": 10,
+    "fallback_eligible": 21,
+    "development_plateau_population": 2,
+    "selected_lattice_index": 160,
+    "development_actual_stressed_dd": [135.82, 119.647, 20.339971669],
+    "validation_actual_stressed_dd": [59.907666667, 55.115, 16.268081899],
+    "holdout_actual_stressed_dd": [15.125166667, 13.213166667, 14.030277151],
+    "whole_actual_stressed_dd": [231.006833333, 204.774666667, 20.339971669],
+    "numeric_tolerance": 1e-08,
+    "expected_status": "VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_NO_STAGE_D_ROLE_STAGE_D_EMPTY_CLOSURE_REQUIRED_NO_MT5",
+    "expected_stage_d_role_count": 0
+  }
+}
