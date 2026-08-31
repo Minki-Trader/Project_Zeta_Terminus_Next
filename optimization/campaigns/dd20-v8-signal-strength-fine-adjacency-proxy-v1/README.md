@@ -19,3 +19,9 @@ Stage B opens neither January-May validation nor locked June-July and cannot clo
 Declaration commit `bc77471` reached `origin/main` before inputs and implementation. Exact V8 ledgers, complete Stage-A raw/durable results and five source semantics are staged byte-equal. Stage-A statuses and all three center q/threshold vectors agree.
 
 Outcome-free precheck reproduces exact center counts `243 / 162 / 243`, total `648` raw/unique roles, zero duplicates and edges `810 / 513 / 810 = 2,133`; every fine gate remains at or above native. Exact V8 neutral again reproduces accepted `965`, actual/stressed `+$409.81 / +$367.818` and DD `35.46%`. Config/source are `7,074 / 58,409` bytes at `549F5321...AEED59 / 427D0B8E...F458F8`; freeze is `5,020` bytes / `7DCE2EB8...A7D86`. Raw output is absent. One fine-map process may run only after this freeze reaches `origin/main`; validation, holdout and MT5 remain unopened.
+
+## Final Stage-B result
+
+Freeze commit `e03ca81` reached `origin/main` before one complete `0.5116846s` process. The fine map contains `212` four-half-positive, `77` primary, `134` fallback and `39` robust-primary points. Rank 1 q-vector `0.40 / 0.50 / 0.25 / 0.10 / 0.15` earns development actual/stressed `+$128.55 / +$113.306`, DD `20.3128%`, weakest-half `+$18.032` and has six eligible neighbors across all five axes. Ranks 2/3 earn stressed `+$113.871 / +$108.527` with five/four eligible neighbors.
+
+Raw result is `59,794` bytes / `B0A8EBA9...3B1E62`; durable result is `6,179` bytes / `5B3C5E84...CE3218`. Fine adjacency confirms a stable development basin but does not open or read January-May. All three centers advance unchanged to mandatory Stage C; validation, locked holdout and MT5 remain unopened.

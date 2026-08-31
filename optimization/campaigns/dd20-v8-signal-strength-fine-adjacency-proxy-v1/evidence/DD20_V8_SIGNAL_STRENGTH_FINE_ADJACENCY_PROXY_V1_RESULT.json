@@ -1,0 +1,135 @@
+{
+  "schema": "zeta-next-dd20-v8-signal-strength-fine-adjacency-proxy-v1-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_B_ROBUST_FINE_STRENGTH_CENTERS_STAGE_C_REQUIRED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "unit_stage": "B_CENTER_LOCAL_FINE_QUANTILE_ADJACENCY",
+  "unit_closed": false,
+  "authority": {
+    "declaration_commit_on_origin_main": "bc77471a160c3483f8b61ab14fe30b12f8ec5363",
+    "implementation_freeze_commit_on_origin_main": "e03ca8142ad1aff426e02ff3c8c2efff7dcd0a99",
+    "implementation_freeze_bytes": 5020,
+    "implementation_freeze_sha256": "7DCE2EB8C8BEDAD6D7F8625C68D381C948B30ED545AC25C2FEAF33CD146A7D86"
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-signal-strength-fine-adjacency-proxy-v1/output/proxy-result.json",
+    "bytes": 59794,
+    "sha256": "B0A8EBA93E22D1072CDA6CAC1339A8DDC5C53BBD9FF62B75E19F6F283C3B1E62",
+    "schema": "zeta-next-dd20-v8-signal-strength-fine-adjacency-proxy-result-v1",
+    "status": "VALID_PROXY_COMPLETE_STAGE_B_ROBUST_FINE_STRENGTH_CENTERS_STAGE_C_REQUIRED_NO_MT5",
+    "wall_time_seconds": 0.511684600002
+  },
+  "implementation": {
+    "config_bytes": 7074,
+    "config_sha256": "549F5321C079D8B865ADB2F6E791A69A2BA2A4B326DEC5A25790D22D86AEED59",
+    "script_bytes": 58409,
+    "script_lines": 1303,
+    "script_sha256": "427D0B8E6DF48DD2CE3E4981CB13AB1F2BFE1D666F45BA83070CB0519DF458F8",
+    "successful_proxy_processes": 1,
+    "failed_or_rerun_processes": 0
+  },
+  "complete_fine_map": {
+    "center_role_counts": [243, 162, 243],
+    "raw_roles": 648,
+    "unique_threshold_roles": 648,
+    "duplicates_removed": 0,
+    "center_adjacency_edges": [810, 513, 810],
+    "total_adjacency_edges": 2133,
+    "common_positive_four_half_year_roles": 212,
+    "primary_eligible_roles": 77,
+    "fallback_eligible_roles": 134,
+    "active_tier": "PRIMARY",
+    "robust_primary_roles": 39,
+    "selection_kind": "ROBUST_ELIGIBLE"
+  },
+  "stage_c_strength_centers": [
+    {
+      "development_rank": 1,
+      "lattice_index": 270,
+      "quantile_coordinates": [0.4, 0.5, 0.25, 0.1, 0.15],
+      "normalized_thresholds": [1.30356718315, 1.182281637461, 2.541865832742, 1.048694496976, 1.216026589434],
+      "actual_net_usd": 128.55,
+      "stressed_net_usd": 113.306,
+      "actual_closed_balance_drawdown_pct": 20.312751894,
+      "minimum_balance_usd": 79.527,
+      "accepted_source_lifecycles": 513,
+      "suppressed_by_strength": 228,
+      "eligible_neighbor_count": 6,
+      "eligible_neighbor_axes": ["RC61", "RC64", "Cross", "Intraday", "Return"],
+      "weakest_half_year_stressed_net_usd": 18.032,
+      "half_year_actual_stressed_dd": [
+        {"block": "2024-H1", "actual": 25.27, "stressed": 20.919, "dd_pct": 19.39},
+        {"block": "2024-H2", "actual": 31.88, "stressed": 28.474, "dd_pct": 23.662745098},
+        {"block": "2025-H1", "actual": 21.98, "stressed": 18.032, "dd_pct": 29.315960912},
+        {"block": "2025-H2", "actual": 49.42, "stressed": 45.881, "dd_pct": 25.923883067}
+      ]
+    },
+    {
+      "development_rank": 2,
+      "lattice_index": 122,
+      "quantile_coordinates": [0.5, 0.5, 0.25, 0.5, 0.6],
+      "normalized_thresholds": [1.394335512591, 1.182281637461, 2.541865832742, 1.370107435447, 2.16029209642],
+      "actual_net_usd": 126.76,
+      "stressed_net_usd": 113.871,
+      "actual_closed_balance_drawdown_pct": 21.615148567,
+      "minimum_balance_usd": 78.875,
+      "accepted_source_lifecycles": 441,
+      "suppressed_by_strength": 300,
+      "eligible_neighbor_count": 5,
+      "eligible_neighbor_axes": ["RC61", "Intraday", "Return"],
+      "weakest_half_year_stressed_net_usd": 6.13,
+      "half_year_stressed_net_usd": [6.13, 39.787, 25.732, 42.222]
+    },
+    {
+      "development_rank": 3,
+      "lattice_index": 532,
+      "quantile_coordinates": [0.5, 0.5, 0.6, 0.15, 0.5],
+      "normalized_thresholds": [1.394335512591, 1.182281637461, 5.077763508565, 1.069088757182, 1.985490860366],
+      "actual_net_usd": 118.95,
+      "stressed_net_usd": 108.527,
+      "actual_closed_balance_drawdown_pct": 21.948845031,
+      "minimum_balance_usd": 77.86,
+      "accepted_source_lifecycles": 344,
+      "suppressed_by_strength": 397,
+      "eligible_neighbor_count": 4,
+      "eligible_neighbor_axes": ["RC61", "Cross", "Return"],
+      "weakest_half_year_stressed_net_usd": 5.568,
+      "half_year_stressed_net_usd": [5.568, 9.895, 26.985, 66.079]
+    }
+  ],
+  "interpretation": {
+    "fine_stable_basin_confirmed": true,
+    "primary_robust_roles": 39,
+    "rank_1_improves_coarse_rank_1_stressed_net_usd": 11.199,
+    "rank_1_improves_coarse_rank_1_drawdown_points": 1.212179163,
+    "all_three_centers_keep_each_development_half_positive": true,
+    "reason_for_continuation": "Fine adjacency converts the coarse isolated surface into a 39-role robust primary basin. The three immutable centers now require fresh January-May validation and one-component native-gate ablations before any temporal/holdout stability claim."
+  },
+  "succession": {
+    "stage_c_required": true,
+    "stage_c_center_count": 3,
+    "stage_c_roles_per_center": 6,
+    "stage_c_total_roles": 18,
+    "center_roles_immutable": true,
+    "one_component_native_gate_ablations_per_center": 5,
+    "ablation_may_replace_or_retune_center": false,
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "mt5_runs": 0,
+    "unit_003_closed": false,
+    "required_next_action": "Commit and push this complete Stage-B result, then declare mandatory Stage C before staging inputs or opening January-May outcomes."
+  },
+  "scope": {
+    "exact_v8_only": true,
+    "all_five_existing_strategies_active": true,
+    "existing_opportunity_suppression_only": true,
+    "freed_capacity_unknown_profit_credit_usd": 0.0,
+    "v7_or_historical_lab_selection_input": false,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U003_STAGE_B_VALID_648_FINE_STRENGTH_ROLES_77_PRIMARY_39_ROBUST_THREE_STAGE_C_CENTERS_NO_VALIDATION_NO_MT5"
+}
