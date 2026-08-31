@@ -1,6 +1,12 @@
 # DD20 V8 Clean Monotone Microfrontier Proxy V1
 
-This is the first serial family in the exact-V8 long-horizon rehabilitation program. It asks whether the clean V8 accepted lifecycle path contains a broad, locally stable risk/composition region that materially reduces closed-balance drawdown while retaining most of V8's stressed profit.
+This campaign is Stage A of `V8-OPT-U001-PORTFOLIO-DD`, the first serial Unit in the exact-V8 long-horizon deep-optimization program. It asks whether the clean V8 accepted lifecycle path contains a broad, locally stable risk/composition region that materially reduces closed-balance drawdown while retaining most of V8's stressed profit. V8 is the economic parent; V7 and historical Lab results do not select or tune this Unit.
+
+## Pre-outcome direction amendment
+
+Before any proxy outcome was opened, the user narrowed the program to V8-only deep optimization and suspended separate Lab work. This Stage A grid is therefore not a disposable one-shot family. Its result seeds the mandatory half-step adjacent refinement in the same Unit, followed by a bounded V8-only causal drawdown-state layer and temporal/cost stability layer. Only the complete Unit can close. The authoritative ordered contract is `evidence/V8_OPTIMIZATION_UNIT_001_DEEP_PROGRAM_AMENDMENT_V1.json`.
+
+The same pre-outcome direction also confirms that later Unit stages may require isolated code and mechanism changes rather than parameter-only tuning. Unit 001 may remove or resize existing V8 components and may implement causal admission/risk/drawdown logic, but it never creates an entry opportunity that exact V8 did not emit. Novel entry generation is Lab work and remains unopened.
 
 ## Why this family opens first
 
@@ -40,6 +46,6 @@ The Cartesian lattice has exactly `34,560` declared parameterizations. Each comp
 
 ## MT5 budget and authority
 
-This family may consume at most two valid MT5 economic paths: one exact contemporaneous V8-derived control and one unchanged proxy finalist. Proxy nonconfirmation consumes none. Environment or engineering correction does not expand the economic lattice. No output changes or restarts Live, and Optimization has no direct Live promotion authority.
+This Unit may consume at most two valid MT5 economic paths: one exact contemporaneous V8-derived control and one unchanged proxy finalist. Stage A proxy nonconfirmation consumes none and cannot close the Unit. Environment or engineering correction does not expand an already opened stage. No output changes or restarts Live, and Optimization has no direct Live promotion authority.
 
-At this declaration boundary source, configuration, staged input, proxy implementation and outcomes remain unopened. They may begin only after the declaration commit reaches `origin/main`.
+The declaration commit `b086e4dbd1e3d45c1f14dce9c4fd96c61c26f9ff` reached `origin/main` before the byte-equal input was staged and Stage A was implemented. The later V8-only deep-Unit amendment was also made before any proxy outcome; Stage A executes only after that amendment and implementation freeze reach `origin/main`.
