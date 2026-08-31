@@ -1,0 +1,106 @@
+{
+  "schema": "zeta-next-independent-cross-index-residual-basket-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-08-31T10:38:03.815Z",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "declaration_boundary": {
+    "commit": "025d586a23ca3d3c44eae13d4533580dfae1fed7",
+    "commit_equal_origin_main_before_input_copy_or_implementation": true,
+    "declaration_status": "DECLARED_PREINPUT_PRERESIDUAL_PREIMPLEMENTATION_PREOUTCOME"
+  },
+  "frozen_files": {
+    "readme": {
+      "path": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/README.md",
+      "bytes": 1463,
+      "lines": 13,
+      "sha256": "4C2D17B21F6ABBF44B10EE0EB743D18A48AFE0EEFF790936ED778622B44B4751"
+    },
+    "contract": {
+      "path": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 10043,
+      "lines": 222,
+      "sha256": "4829E9AE86BE680D156CF05D053F301F61D964C7F43DDFECE9B2016B0EF4DC70"
+    },
+    "declaration": {
+      "path": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_RESIDUAL_BASKET_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 6617,
+      "lines": 152,
+      "sha256": "F2A0EA555B0D87DA2E2EA685C9A2544DD1E9F62D81EAF71AF3EEF6272E3F1DD9"
+    },
+    "adapter": {
+      "path": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 39664,
+      "lines": 1020,
+      "sha256": "F19618B9EB7C661DAD58E7B205F5B0B7ADB02B25E8C5B94157DB5890E05FE6A2"
+    },
+    "input_copies": {
+      "US100": {
+        "path": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/data/input/US100_H1_BARS_20220701_20260821.csv",
+        "bytes": 2508477,
+        "lines": 24446,
+        "sha256": "5C368BDFD5DDC41BAA54394EAF8CA751D27D8F3ED3643628394FD31061EBB812"
+      },
+      "US30": {
+        "path": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/data/input/US30_H1_BARS_20220701_20260821.csv",
+        "bytes": 2763746,
+        "lines": 24444,
+        "sha256": "CDB4968E32A0B9CF22FDC801589E264681C3A0EB3BB145A152771F9D11AF2F92"
+      },
+      "US500": {
+        "path": "lab/research/independent-cross-index-residual-basket-adapter-challenge-v1/data/input/US500_H1_BARS_20220701_20260821.csv",
+        "bytes": 2727471,
+        "lines": 24445,
+        "sha256": "9DBF532E9FE2ABA874EF80BF2EF6A34D7752C287FD19969C7CF7548CF76FCC85"
+      }
+    }
+  },
+  "implementation_semantics": {
+    "decision_fit": "for every structural decision, independently fit all three declared pairs on exactly the prior 960 completed common H1 log closes",
+    "residual": "under each current alpha and beta, use the final 96 fitted residuals for population mean/std and standardize the final prior-bar residual",
+    "valid_pair": "beta 0.5 through 1.5, R-squared at least 0.70, residual std above 1e-6 and finite residual z",
+    "pair_ranking": "largest absolute residual z among valid pairs, then declared pair order; an infeasible selected pair is skipped without falling back to the second pair",
+    "direction": "positive z shorts first and longs second; negative z longs first and shorts second",
+    "volume": "floor one-percent one-ATR target volume independently per leg; raise subminimum legs to 0.01 only when the final two-leg loss is at most four percent and leg-risk ratio at most 2.5",
+    "quote_book": "CSV OHLC is Bid and Ask is Bid plus recorded spread times 0.01",
+    "intrabar": "joint long-low/short-high is adverse, long-high/short-low favorable, -1R stop is checked before +1.5R take and threshold execution is used",
+    "close": "if no PnL threshold fires, close on frozen-entry residual-mean crossing or at the third common H1 close",
+    "stress": "subtract one additional decision spread cost for each leg from the spread-aware actual basket PnL",
+    "capacity": "one basket at a time; capacity returns at the common H1 open after its exit bar",
+    "normal_trading_day": "server date with at least 20 common H1 bars; a pair counts as one start",
+    "output_atomicity": "stage development or confirmation under the family artifact root and replace the final directory only after complete strict-JSON output"
+  },
+  "structural_precheck": {
+    "status": "STRUCTURAL_PRECHECK_PASS_NO_PAIR_FIT_NO_RESIDUAL_NO_DECISION_NO_OUTCOME",
+    "common_rows": 20649,
+    "first_common_time": "2022-07-01T01:00:00",
+    "last_common_time": "2025-12-31T23:00:00",
+    "development_structural_decision_rows": 11802,
+    "development_normal_trading_days": 508,
+    "fixed_100_usd_pair_volume_feasible_rows": {
+      "US100_US30": 11635,
+      "US100_US500": 11670,
+      "US30_US500": 11589
+    },
+    "fixed_100_usd_any_pair_volume_feasible_rows": 11674,
+    "structurally_feasible_pair_breadth": 3
+  },
+  "runtime": {
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3"
+  },
+  "predevelopment_attestation": {
+    "pair_fit_rows": 0,
+    "residual_rows": 0,
+    "candidate_decisions": 0,
+    "candidate_baskets": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this implementation freeze reaches origin/main, run exactly one complete 2024-2025 three-role residual-basket development process; if no role passes every frozen gate, close before locked confirmation, EA and MT5"
+}
