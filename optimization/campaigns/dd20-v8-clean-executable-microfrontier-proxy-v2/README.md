@@ -31,6 +31,10 @@ This accepted-path proxy cannot prove newly freed-capacity economics, altered op
 
 Exactly `8,640` parameterizations are declared. Component weights never exceed exact V8. Development remains 2024-2025, validation remains fresh `$100` 2026 January-May, and locked holdout remains fresh `$100` June-July. The primary/fallback profit-retention, DD-improvement, positivity, multi-axis-neighbor and no-holdout-substitution gates remain the same as V1.
 
-V2 is still only Stage A. Its valid outcome cannot close the Unit. Mandatory Stage B refines weight by `0.125` and aggregate cap by `0.015` around up to three V2 basins; base-position-risk is no longer a lifecycle-proxy axis. Stage C changes future volume/effective risk causally at fixed `0.04` rather than pretending base-position-risk is a volume multiplier.
+## Final Stage-A result
 
-No V2 input staging, configuration, implementation or outcome begins until the declaration boundary reaches `origin/main`.
+The exact anchor reproduced all `965` births, volumes, pre-order risk-capital contexts and position caps, actual/stressed `+$409.81 / +$367.818`, actual closed-balance DD `35.46%`, and zero source-path aggregate skips. The frozen `8,640`-point map produced `1,344` primary-eligible points and a `1,340`-point development plateau.
+
+The selected center is `1.25 / 1.5 / 2 / 2.25 / 1.25 / 0`, position risk `0.04`, aggregate cap `0.12`. Its whole accepted-source replay is actual/stressed `+$351.7647 / +$322.3487`, actual/stressed-counterfactual closed-balance DD `24.0998% / 25.3032%`, with fresh validation `+$76.214 / +$70.9607` and locked holdout `+$23.3743 / +$21.5323`. Two other ranked centers are economically identical because the V8 lot step quantizes their declared parameter differences.
+
+Final status is `VALID_PROXY_COMPLETE_STAGE_A_SURVIVOR_STAGE_B_REQUIRED_NO_MT5`. This is a broad executable basin, not a unique optimum or native MT5 shortlist. Mandatory Stage B refines weights by `0.125` and aggregate cap by `0.015` around all three frozen centers; Stage C changes future volume/effective risk causally at fixed `0.04`. No MT5, Lab, new-entry or Live change occurred.

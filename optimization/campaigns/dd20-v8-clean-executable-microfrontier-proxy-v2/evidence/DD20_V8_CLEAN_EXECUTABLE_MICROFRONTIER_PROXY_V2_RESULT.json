@@ -1,0 +1,143 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-executable-microfrontier-proxy-v2-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_A_SURVIVOR_STAGE_B_REQUIRED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "A_EXECUTABLE_MODEL_CORRECTION_V2",
+  "unit_closure_authority": false,
+  "authority": {
+    "implementation_freeze_commit_on_origin_main": "4a7e759",
+    "economic_parent": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v7_or_lab_economic_input": false,
+    "external_input": false,
+    "lab_opened": false,
+    "new_entry_strategy": false,
+    "live_changed": false
+  },
+  "frozen_inputs": [
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    }
+  ],
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/config/proxy-contract.json",
+    "config_bytes": 3763,
+    "config_sha256": "C6F662701560812EE71FA5417663866B27012C2BC2A23DC1E7EA3DBE97BA7C08",
+    "script_path": "optimization/campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/proxy/run_proxy.py",
+    "script_bytes": 37747,
+    "script_sha256": "3B0AC3483478CCD982920595C897B50A4AF7F46C54D382ED6C87B69B9584E728",
+    "wall_time_seconds": 0.9260265,
+    "mt5_runs": 0
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/output/proxy-result.json",
+    "bytes": 30163,
+    "sha256": "B67E4DC8D32CA8042C6E5677C443C0055028B61948D13E05418060F239E40FBF",
+    "source_status": "VALID_PROXY_COMPLETE_ONE_MT5_SHORTLIST",
+    "unit_interpretation": "Stage-A survivor only. The mandatory adjacent Stage B, causal Stage C and stability Stage D precede any unchanged native finalist."
+  },
+  "exact_anchor_reproduction": {
+    "birth_to_position_open_join": "965/965",
+    "source_component_volume_matches": "965/965",
+    "source_risk_capital_matches": "965/965",
+    "source_position_cap_matches": "965/965",
+    "accepted_lifecycles": 965,
+    "aggregate_skips_within_accepted_source_path": 0,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "passed": true
+  },
+  "stage_a_counts": {
+    "declared_parameterizations": 8640,
+    "primary_eligible": 1344,
+    "fallback_eligible": 2073,
+    "active_tier": "PRIMARY",
+    "development_plateau_population": 1340,
+    "development_centers": 3
+  },
+  "selected_stage_a_center": {
+    "weights": [1.25, 1.5, 2.0, 2.25, 1.25, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "development": {
+      "actual_net_usd": 150.105,
+      "stressed_net_usd": 133.103,
+      "actual_closed_balance_drawdown_pct": 24.099813585,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 25.303249736,
+      "minimum_balance_usd": 75.99,
+      "accepted_source_lifecycles": 697,
+      "aggregate_skips_within_source_path": 44,
+      "years_separately_positive": true
+    },
+    "validation_fresh_100": {
+      "actual_net_usd": 76.214,
+      "stressed_net_usd": 70.960666667,
+      "actual_closed_balance_drawdown_pct": 16.951383347,
+      "accepted_source_lifecycles": 150,
+      "aggregate_skips_within_source_path": 18,
+      "passed": true
+    },
+    "locked_holdout_fresh_100": {
+      "actual_net_usd": 23.374333333,
+      "stressed_net_usd": 21.532333333,
+      "actual_closed_balance_drawdown_pct": 13.801943672,
+      "accepted_source_lifecycles": 53,
+      "aggregate_skips_within_source_path": 3,
+      "passed": true
+    },
+    "whole_path": {
+      "actual_net_usd": 351.764666667,
+      "stressed_net_usd": 322.348666667,
+      "actual_closed_balance_drawdown_pct": 24.099813585,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 25.303249736,
+      "accepted_source_lifecycles": 864,
+      "aggregate_skips_within_source_path": 101,
+      "stressed_net_retention_vs_exact_v8": 0.876381291,
+      "actual_drawdown_improvement_points_vs_exact_v8": 11.360186415
+    }
+  },
+  "other_frozen_stage_a_centers": [
+    {
+      "weights": [1.25, 1.5, 1.5, 2.0, 1.25, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "economically_identical_to_selected_center_in_all_opened_periods": true
+    },
+    {
+      "weights": [1.25, 1.5, 1.75, 2.25, 0.75, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "economically_identical_to_selected_center_in_all_opened_periods": true
+    }
+  ],
+  "whole_path_components_selected_center": [
+    {"short": "RC61", "actual_net_usd": 129.085, "stressed_net_usd": 124.899},
+    {"short": "RC64", "actual_net_usd": 68.480666667, "stressed_net_usd": 62.235666667},
+    {"short": "Cross", "actual_net_usd": 67.215, "stressed_net_usd": 54.203},
+    {"short": "Intraday", "actual_net_usd": 87.663, "stressed_net_usd": 84.346},
+    {"short": "Return", "actual_net_usd": -0.679, "stressed_net_usd": -3.335}
+  ],
+  "judgment": {
+    "valid_stage_a_survivor": true,
+    "stable_unique_parameter_optimum_claimed": false,
+    "reason": "The three ranked centers are economically identical under V8 lot quantization, so Stage A identifies a broad executable basin rather than a unique optimum.",
+    "mt5_shortlist_opened": false,
+    "unit_remains_open": true,
+    "required_next_stage": "B_HALF_STEP_ADJACENT_REFINEMENT"
+  },
+  "limitations": [
+    "The accepted-source proxy gives no credit to opportunities that candidate capacity might newly admit.",
+    "It cannot reconstruct candidate-specific open-equity paths.",
+    "Different capital ladders can alter native stop quantization; proxy DD is not native MT5 equity DD.",
+    "The negative whole-path Return contribution is diagnostic only and does not authorize an adjacent one-shot removal; mechanism/removal decisions require a predeclared Unit stage."
+  ],
+  "marker": "UNIT_001_STAGE_A_V2_VALID_EXECUTABLE_BASIN_SURVIVES_THREE_QUANTIZED_CENTERS_STAGE_B_REQUIRED_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-executable-basin-refinement-proxy-v1-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_OUTCOME_UNOPENED",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "primary_macro_program": 5,
+  "unit_stage": "B_HALF_STEP_ADJACENT_REFINEMENT",
+  "predecessor": {
+    "campaign": "optimization/campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/",
+    "final_status": "VALID_PROXY_COMPLETE_STAGE_A_SURVIVOR_STAGE_B_REQUIRED_NO_MT5",
+    "raw_result_path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/output/proxy-result.json",
+    "raw_result_bytes": 30163,
+    "raw_result_sha256": "B67E4DC8D32CA8042C6E5677C443C0055028B61948D13E05418060F239E40FBF",
+    "economic_rows": 8640,
+    "mt5_runs": 0
+  },
+  "v8_only_scope": {
+    "economic_parent": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v7_economic_input": false,
+    "lab_economic_input": false,
+    "legacy_optimization_economic_input": false,
+    "external_input": false,
+    "new_entry_strategy": false,
+    "code_or_mechanism_change_allowed_in_later_declared_stages": true,
+    "new_symbol_timeframe_signal_direction_or_opportunity_timestamp_allowed": false
+  },
+  "inputs": [
+    {
+      "role": "matched exact-V8 accepted lifecycle outcomes",
+      "source_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/candidate-valid-nonconfirmation/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaTerminusNext/optimization/dd20-pcr2/research/research-lifecycles.csv",
+      "staged_name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "role": "exact-V8 volume, risk-capital and admission context",
+      "source_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/candidate-valid-nonconfirmation/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaTerminusNext/optimization/dd20-pcr2/research/research-candidates.csv",
+      "staged_name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    },
+    {
+      "role": "frozen Stage-A center authority",
+      "source_path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/output/proxy-result.json",
+      "staged_name": "stage-a-proxy-result.json",
+      "bytes": 30163,
+      "sha256": "B67E4DC8D32CA8042C6E5677C443C0055028B61948D13E05418060F239E40FBF"
+    }
+  ],
+  "inherited_executable_model": {
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "base_position_risk_fraction": 0.04,
+    "daily_volume_multiplier": "1 + floor(max(0, candidate stressed balance - 100) / 150)",
+    "component_volume": "round(0.01 * daily volume multiplier * component weight / 0.01) * 0.01",
+    "position_budget": "candidate conservative capital * 0.04 * executable component multiplier",
+    "aggregate_budget": "candidate conservative capital * candidate aggregate fraction",
+    "source_capital_ceiling": "min(1, matched pre-order risk_capital / account_balance)",
+    "close_net": "source actual/stressed close net times candidate volume/source volume",
+    "opportunity_universe": "Only exact-V8 accepted lifecycles; no source-rejected or new opportunity receives a synthetic result."
+  },
+  "frozen_stage_a_centers": [
+    {
+      "development_rank": 1,
+      "weights": [1.25, 1.5, 2.0, 2.25, 1.25, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "development_rank": 2,
+      "weights": [1.25, 1.5, 1.5, 2.0, 1.25, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "development_rank": 3,
+      "weights": [1.25, 1.5, 1.75, 2.25, 0.75, 0.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12
+    }
+  ],
+  "refinement_contract": {
+    "component_order": ["RC61", "RC64", "Cross", "Intraday", "Return", "Passive"],
+    "component_weight_offsets": [-0.125, 0.0, 0.125],
+    "aggregate_risk_offsets": [-0.015, 0.0, 0.015],
+    "stage_a_lower_bounds": [1.25, 0.75, 0.0, 1.5, 0.75, 0.0],
+    "stage_a_upper_bounds": [2.0, 1.5, 2.0, 2.5, 1.5, 0.0],
+    "aggregate_risk_lower_bound": 0.12,
+    "aggregate_risk_upper_bound": 0.18,
+    "base_position_risk_values": [0.04],
+    "clip_to_bounds_before_deduplication": true,
+    "center_local_unique_counts": [144, 216, 144],
+    "union_unique_parameterizations": 504,
+    "parameterization_count_method": "Cartesian offsets around each frozen center, clip each axis to the frozen Stage-A bounds, normalize to six decimals, then deduplicate the exact six-axis vector.",
+    "fine_neighbor_definition": "An exact union member differing by one declared fine step on exactly one weight or aggregate-risk axis, with every other axis equal.",
+    "minimum_eligible_immediate_neighbors": 4,
+    "minimum_neighbor_axes": 3,
+    "maximum_stage_b_centers": 3
+  },
+  "temporal_and_selection_contract": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_years_separately_positive": true,
+    "validation_fresh_100": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout_fresh_100": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"],
+    "primary_stressed_retention_vs_exact_v8": 0.8,
+    "primary_max_actual_closed_balance_drawdown_pct": 27.0,
+    "fallback_stressed_retention_vs_exact_v8": 0.75,
+    "fallback_minimum_drawdown_improvement_points": 5.0,
+    "validation_and_holdout_max_drawdown_pct": 30.0,
+    "ranking": "active tier first; development stressed net descending; development actual DD ascending; worst eligible fine-neighbor stressed-net/DD descending; exact Stage-A center distance ascending; canonical parameter order",
+    "same_holdout_winner_only": true,
+    "holdout_cannot_substitute_an_alternate": true
+  },
+  "stage_succession": {
+    "stage_b_can_close_unit": false,
+    "stage_c_required_after_any_valid_stage_b_survivor": true,
+    "stage_c_scope": "Causal drawdown-state shaping of future existing-V8 volume/effective risk at fixed base position risk 0.04, with its own pre-outcome contract.",
+    "stage_d_required_before_mt5": true,
+    "automatic_adjacent_successor_outside_declared_stage": false
+  },
+  "mt5_budget": {
+    "stage_b_runs": 0,
+    "stage_b_runs_authorized": 0,
+    "maximum_unit_valid_economic_paths": 2,
+    "paths_after_all_proxy_stages_only": ["exact V8-derived control", "one unchanged final Unit survivor"]
+  },
+  "pre_outcome_boundary": {
+    "input_staged": false,
+    "config_created": false,
+    "implementation_created": false,
+    "proxy_executed": false,
+    "mt5_executed": false,
+    "required_next_action": "Commit and push the Stage-A result and this Stage-B declaration before staging any Stage-B input."
+  },
+  "marker": "UNIT_001_STAGE_B_HALF_STEP_EXECUTABLE_BASIN_REFINEMENT_504_PATHS_DECLARED_OUTCOME_UNOPENED_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}
