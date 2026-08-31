@@ -1,0 +1,106 @@
+{
+  "schema": "zeta-next-dd20-v8-signal-strength-fine-adjacency-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "FROZEN_PREOUTCOME_STAGE_B_EXECUTION_NOT_STARTED",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "unit_stage": "B_CENTER_LOCAL_FINE_QUANTILE_ADJACENCY",
+  "authority": {
+    "declaration_commit_on_origin_main": "bc77471a160c3483f8b61ab14fe30b12f8ec5363",
+    "declaration_path": "optimization/campaigns/dd20-v8-signal-strength-fine-adjacency-proxy-v1/evidence/DD20_V8_SIGNAL_STRENGTH_FINE_ADJACENCY_PROXY_V1_DECLARATION.json",
+    "declaration_bytes": 8200,
+    "declaration_sha256": "F55F5A7F7363E17477BF760EB3A7F7D79ADD1FDF03C41A929C234BF1797D3600"
+  },
+  "staged_inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-signal-strength-fine-adjacency-proxy-v1/input/",
+    "lifecycle": {"bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791", "source_copy_byte_equal": true},
+    "candidate": {"bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678", "source_copy_byte_equal": true},
+    "stage_a_raw": {
+      "bytes": 57187,
+      "sha256": "8A36AA2D81FA019FAE163FF171462A12FC84A987054EF87ABDF0E8462BDECD3E",
+      "schema": "zeta-next-dd20-v8-component-relative-signal-strength-suppression-proxy-result-v1",
+      "status": "VALID_PROXY_COMPLETE_STAGE_A_NEAR_MISS_STRENGTH_SEEDS_STAGE_B_REQUIRED_NO_MT5",
+      "source_copy_byte_equal": true
+    },
+    "stage_a_durable": {
+      "bytes": 6633,
+      "sha256": "E9ABF1D3E1EAFA9DD27709B124189A184677DE33FF3462B57A5F816958F0E496",
+      "schema": "zeta-next-dd20-v8-component-relative-signal-strength-suppression-proxy-v1-result",
+      "status": "VALID_PROXY_COMPLETE_STAGE_A_NEAR_MISS_STRENGTH_SEEDS_STAGE_B_REQUIRED_NO_MT5",
+      "source_copy_byte_equal": true
+    },
+    "source_semantic_copies": {
+      "files": 5,
+      "all_stage_a_input_byte_equal": true
+    }
+  },
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-signal-strength-fine-adjacency-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 7074,
+    "config_lines": 132,
+    "config_sha256": "549F5321C079D8B865ADB2F6E791A69A2BA2A4B326DEC5A25790D22D86AEED59",
+    "script_path": "optimization/campaigns/dd20-v8-signal-strength-fine-adjacency-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 58409,
+    "script_lines": 1303,
+    "script_sha256": "427D0B8E6DF48DD2CE3E4981CB13AB1F2BFE1D666F45BA83070CB0519DF458F8",
+    "python_version": "3.13.9",
+    "numpy_version": "2.3.4",
+    "syntax_check_passed": true
+  },
+  "outcome_free_precheck": {
+    "matched_lifecycles": 965,
+    "candidate_rows": 8176,
+    "signal_passed_rows": 1108,
+    "stage_a_raw_and_durable_center_agreement": true,
+    "center_role_counts": [243, 162, 243],
+    "raw_roles": 648,
+    "unique_quantile_roles": 648,
+    "unique_threshold_roles": 648,
+    "duplicates_removed": 0,
+    "center_adjacency_edges": [810, 513, 810],
+    "total_adjacency_edges": 2133,
+    "all_thresholds_at_or_above_native": true,
+    "all_three_stage_a_center_thresholds_reproduced": true,
+    "outcome_columns_used_to_construct_fine_thresholds": false
+  },
+  "fine_threshold_coordinates": {
+    "union": [0.0, 0.1, 0.15, 0.25, 0.35, 0.4, 0.5, 0.6],
+    "nearest_rank_inclusive": true,
+    "component_populations": [151, 121, 420, 55, 109],
+    "thresholds_are_derived_from_same_stage_a_population": true
+  },
+  "exact_v8_neutral_precheck": {
+    "accepted_source_lifecycles": 965,
+    "suppressed_by_strength": 0,
+    "aggregate_skips_within_source_path": 0,
+    "source_volume_matches": 965,
+    "source_risk_capital_matches": 965,
+    "source_position_cap_matches": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "minimum_balance_usd": 59.11
+  },
+  "implementation_events": {
+    "initial_source_copy_command": "The literal-path wildcard was rejected after the two ledgers and Stage-A results copied but before any source semantic file copied.",
+    "correction": "Copied the same five declared source files by explicit literal names. No input byte, config, source logic, threshold, gate or outcome changed.",
+    "successful_structural_prechecks": 1,
+    "candidate_map_executed": false,
+    "raw_output_exists": false
+  },
+  "execution_boundary": {
+    "rule": "One complete Stage-B process may execute only after this exact implementation freeze reaches origin/main.",
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "mt5_runs": 0
+  },
+  "scope": {
+    "all_five_existing_v8_strategies_active": true,
+    "existing_opportunity_suppression_only": true,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U003_STAGE_B_IMPLEMENTATION_FROZEN_648_FINE_STRENGTH_ROLES_2133_EDGES_PREOUTCOME_NO_VALIDATION_NO_MT5"
+}

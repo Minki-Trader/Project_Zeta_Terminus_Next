@@ -16,4 +16,6 @@ Stage B opens neither January-May validation nor locked June-July and cannot clo
 
 ## Current boundary
 
-The campaign is declared pre-input, pre-implementation and pre-outcome. No input copy, fine threshold table, config, source or result exists before the declaration reaches `origin/main`.
+Declaration commit `bc77471` reached `origin/main` before inputs and implementation. Exact V8 ledgers, complete Stage-A raw/durable results and five source semantics are staged byte-equal. Stage-A statuses and all three center q/threshold vectors agree.
+
+Outcome-free precheck reproduces exact center counts `243 / 162 / 243`, total `648` raw/unique roles, zero duplicates and edges `810 / 513 / 810 = 2,133`; every fine gate remains at or above native. Exact V8 neutral again reproduces accepted `965`, actual/stressed `+$409.81 / +$367.818` and DD `35.46%`. Config/source are `7,074 / 58,409` bytes at `549F5321...AEED59 / 427D0B8E...F458F8`; freeze is `5,020` bytes / `7DCE2EB8...A7D86`. Raw output is absent. One fine-map process may run only after this freeze reaches `origin/main`; validation, holdout and MT5 remain unopened.
