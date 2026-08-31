@@ -1,0 +1,83 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-executable-microfrontier-proxy-v2-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PRE_OUTCOME",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "A_EXECUTABLE_MODEL_CORRECTION_V2",
+  "authority": {
+    "declaration_commit_on_origin_main": "c64308cd4b9d80b18bd038b2c7226fe705d1bbfe",
+    "declaration_path": "optimization/campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/evidence/DD20_V8_CLEAN_EXECUTABLE_MICROFRONTIER_PROXY_V2_DECLARATION.json",
+    "declaration_bytes": 6287,
+    "declaration_sha256": "95360637B7B31E06BAFC3A2FF857EC7CBCB12ABA8B5A064AC2A1FCD8E77FE565",
+    "unit_closure_authority": false,
+    "lab_opened": false,
+    "new_entry_strategy": false
+  },
+  "staged_inputs": [
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input/research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    }
+  ],
+  "implementation": {
+    "config": {
+      "path": "optimization/campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/config/proxy-contract.json",
+      "bytes": 3763,
+      "lines": 110,
+      "sha256": "C6F662701560812EE71FA5417663866B27012C2BC2A23DC1E7EA3DBE97BA7C08"
+    },
+    "script": {
+      "path": "optimization/campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/proxy/run_proxy.py",
+      "bytes": 37747,
+      "lines": 881,
+      "sha256": "3B0AC3483478CCD982920595C897B50A4AF7F46C54D382ED6C87B69B9584E728"
+    },
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "syntax_compile": "PASSED"
+  },
+  "outcome_free_model_clarification": {
+    "declared_field": "The candidate ledger's account_equity is written on the POSITION_OPEN outcome row after the new trade exists and already contains its initial spread mark.",
+    "invalid_direct_use": "Using account_equity/account_balance as a pre-order capital haircut would double-charge the just-opened spread and misses five exact source risk-capital rows.",
+    "implemented_field": "Use min(1, logged pre-order risk_capital / account_balance) as a candidate capital ceiling. Existing replay actual/stressed balances are still independently minimized, so the source ratio can reduce but never increase capital.",
+    "selection_or_lattice_change": false,
+    "anchor_effect": "The exact source point reproduces 965/965 risk-capital and position-cap contexts instead of 960/965. No candidate outcome was opened before this choice."
+  },
+  "exact_anchor_precheck": {
+    "birth_position_open_join": "965/965",
+    "source_volume_matches": "965/965",
+    "source_risk_capital_matches": "965/965",
+    "source_position_cap_matches": "965/965",
+    "accepted_lifecycles": 965,
+    "aggregate_skips_within_accepted_source_path": 0,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "passed": true
+  },
+  "frozen_execution": {
+    "parameterizations": 8640,
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_values": [0.12, 0.15, 0.18],
+    "candidate_daily_sizing_from_own_stressed_balance": true,
+    "source_rejected_opportunity_outcome_synthesized": false,
+    "development_validation_holdout_and_gates_unchanged": true,
+    "stage_b_required_after_valid_stage_a": true,
+    "mt5_runs_authorized_or_executed_here": 0
+  },
+  "pre_outcome": {
+    "raw_output_exists": false,
+    "candidate_outcome_opened": false,
+    "mt5_executed": false,
+    "external_data": false,
+    "live_changed": false
+  },
+  "next_action": "Commit and push this implementation freeze, then execute V2 once without changing the model, lattice or gates.",
+  "marker": "UNIT_001_STAGE_A_V2_EXECUTABLE_MODEL_FROZEN_965_OF_965_SOURCE_CONTEXT_PRECHECK_NO_OUTCOME_NO_MT5_NO_LAB"
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-executable-microfrontier-proxy-contract-v2",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "A_EXECUTABLE_MODEL_CORRECTION_V2",
+  "inputs": {
+    "root": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/input",
+    "lifecycle": {
+      "name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "matched_lifecycles": 965,
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818
+    },
+    "candidate": {
+      "name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "position_open_rows": 965,
+      "unique_component_time_open_keys": 965
+    }
+  },
+  "output": "optimization/artifacts/raw/dd20-v8-clean-executable-microfrontier-proxy-v2/output/proxy-result.json",
+  "reference_capital_usd": 100.0,
+  "base_volume_lots": 0.01,
+  "volume_step_lots": 0.01,
+  "addition_step_usd": 150.0,
+  "base_position_risk_fraction": 0.04,
+  "aggregate_tolerance_usd": 0.01,
+  "drawdown_basis": "actual_closed_balance_relative_drawdown",
+  "stressed_closed_balance_drawdown_role": "reported_counterfactual_diagnostic_not_the_native_anchor_gate",
+  "components": [
+    {
+      "short": "RC61",
+      "id": "ZT-M30-US30-RANGE-COMP-61f61deaba",
+      "source_weight": 2.0,
+      "source_births": 190,
+      "grid": [1.25, 1.5, 1.75, 2.0]
+    },
+    {
+      "short": "RC64",
+      "id": "ZT-M30-US30-RANGE-COMP-64efb16616",
+      "source_weight": 1.5,
+      "source_births": 150,
+      "grid": [0.75, 1.0, 1.25, 1.5]
+    },
+    {
+      "short": "Cross",
+      "id": "ZT-H1-US100-CROSS-IN-14b72317b7",
+      "source_weight": 2.0,
+      "source_births": 446,
+      "grid": [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+    },
+    {
+      "short": "Intraday",
+      "id": "ZT-M30-US30-INTRADAY-R-2eb111fc46",
+      "source_weight": 2.5,
+      "source_births": 60,
+      "grid": [1.5, 1.75, 2.0, 2.25, 2.5]
+    },
+    {
+      "short": "Return",
+      "id": "ZT-H1-US30-RETURN-I-c870a788ec",
+      "source_weight": 1.5,
+      "source_births": 119,
+      "grid": [0.75, 1.0, 1.25, 1.5]
+    }
+  ],
+  "aggregate_risk_grid": [0.12, 0.15, 0.18],
+  "expected_parameterizations": 8640,
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_2024": ["2024-01-01T00:00:00", "2025-01-01T00:00:00"],
+    "development_2025": ["2025-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "validation": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"]
+  },
+  "anchor_reproduction": {
+    "weights": [2.0, 1.5, 2.0, 2.5, 1.5],
+    "aggregate_risk_fraction": 0.18,
+    "joined_birth_open_rows": 965,
+    "source_volume_matches": 965,
+    "accepted_lifecycles": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "closed_balance_drawdown_pct": 35.46,
+    "net_tolerance_usd": 1e-07,
+    "drawdown_tolerance_points": 0.01,
+    "volume_tolerance_lots": 1e-09
+  },
+  "gates": {
+    "primary_stressed_retention": 0.8,
+    "primary_max_drawdown_pct": 27.0,
+    "fallback_stressed_retention": 0.75,
+    "fallback_min_drawdown_improvement_points": 5.0,
+    "minimum_eligible_neighbors": 4,
+    "minimum_neighbor_axes": 3,
+    "maximum_validation_centers": 3,
+    "minimum_center_manhattan_separation": 3,
+    "validation_max_drawdown_pct": 30.0,
+    "holdout_max_drawdown_pct": 30.0,
+    "final_minimum_stressed_retention": 0.75,
+    "final_minimum_drawdown_improvement_points": 5.0
+  },
+  "mt5_budget": {
+    "maximum_valid_economic_paths": 2,
+    "maximum_proxy_finalists": 1
+  }
+}
