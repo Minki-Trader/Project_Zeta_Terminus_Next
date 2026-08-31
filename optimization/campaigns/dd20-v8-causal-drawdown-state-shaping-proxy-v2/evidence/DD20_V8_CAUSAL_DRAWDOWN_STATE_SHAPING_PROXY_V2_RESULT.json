@@ -1,0 +1,119 @@
+{
+  "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-v2-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_NO_STAGE_D_ROLE_STAGE_D_EMPTY_CLOSURE_REQUIRED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING_RESULT_AUTHORITY_CORRECTION",
+  "unit_closure_authority": false,
+  "authority": {
+    "implementation_freeze_commit_on_origin_main": "cb740d0",
+    "economic_parent": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v1_numeric_parity_passed": true,
+    "v1_successor_authority_reused": false,
+    "v7_or_lab_economic_input": false,
+    "external_input": false,
+    "live_changed": false,
+    "new_entry_strategy": false
+  },
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/config/proxy-contract.json",
+    "config_bytes": 5987,
+    "config_sha256": "EE605A5E46ED15427027241AAB5F6228C76BF066FE7B30E6D8D363468A02D421",
+    "script_path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/proxy/run_proxy.py",
+    "script_bytes": 56381,
+    "script_sha256": "336641A25913AC5C474C9416AFB5B2056DE1937D1BA554953EFE3F0CAAE1DC9D",
+    "wall_time_seconds": 0.6539013,
+    "mt5_runs": 0
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v2/output/proxy-result.json",
+    "bytes": 29215,
+    "sha256": "B4FD13FF81737E0E0D5CD2DA2163B5F8CDC16B2C440A3A184C309346EC523BBF"
+  },
+  "correction_parity": {
+    "primary_eligible": 10,
+    "fallback_eligible": 21,
+    "development_plateau_population": 2,
+    "selected_lattice_index": 160,
+    "development_actual_stressed_dd": [135.82, 119.647, 20.339971669],
+    "validation_actual_stressed_dd": [59.907666667, 55.115, 16.268081899],
+    "holdout_actual_stressed_dd": [15.125166667, 13.213166667, 14.030277151],
+    "whole_actual_stressed_dd": [231.006833333, 204.774666667, 20.339971669],
+    "all_required_fields_match_v1": true,
+    "corrected_stage_d_role_count": 0
+  },
+  "selected_state": {
+    "static_seed_index": 2,
+    "weights": [1.25, 1.5, 2.0, 2.25, 1.25, 0.0],
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "trigger_drawdown_fraction": 0.05,
+    "future_birth_multiplier": 0.8,
+    "release_hysteresis_fraction": 0.05,
+    "minimum_subsequent_accepted_closes": 10,
+    "development": {
+      "actual_net_usd": 135.82,
+      "stressed_net_usd": 119.647,
+      "actual_closed_balance_drawdown_pct": 20.339971669,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 24.187333333,
+      "seed_drawdown_improvement_points": 3.759841916,
+      "actual_2024_stressed_net_usd": 13.084,
+      "actual_2025_stressed_net_usd": 103.921,
+      "eligible_neighbor_count": 4,
+      "neighbor_axis_count": 3,
+      "trigger_count": 8,
+      "release_count": 8,
+      "births_observed_while_active": 640,
+      "births_whose_target_steps_changed": 104,
+      "admitted_births_while_active": 629
+    },
+    "validation": {
+      "actual_net_usd": 59.907666667,
+      "stressed_net_usd": 55.115,
+      "actual_closed_balance_drawdown_pct": 16.268081899,
+      "trigger_count": 5,
+      "release_count": 4,
+      "births_whose_target_steps_changed": 15,
+      "passed": true
+    },
+    "locked_holdout": {
+      "actual_net_usd": 15.125166667,
+      "stressed_net_usd": 13.213166667,
+      "actual_closed_balance_drawdown_pct": 14.030277151,
+      "trigger_count": 3,
+      "release_count": 2,
+      "births_whose_target_steps_changed": 6,
+      "passed": true
+    },
+    "whole_path": {
+      "actual_net_usd": 231.006833333,
+      "stressed_net_usd": 204.774666667,
+      "actual_closed_balance_drawdown_pct": 20.339971669,
+      "stressed_counterfactual_closed_balance_drawdown_pct": 24.187333333,
+      "trigger_count": 14,
+      "release_count": 13,
+      "births_whose_target_steps_changed": 210,
+      "stressed_retention_vs_exact_v8": 0.556728237,
+      "required_stressed_retention_vs_exact_v8": 0.75,
+      "actual_drawdown_improvement_points_vs_exact_v8": 15.120028331,
+      "profit_gate_passed": false,
+      "drawdown_gate_passed": true,
+      "final_passed": false
+    }
+  },
+  "judgment": {
+    "causal_state_materially_reduced_closed_balance_drawdown": true,
+    "causal_state_retained_required_whole_stressed_profit": false,
+    "interpretation": "The global state is economically too blunt: it reaches the nominal proxy DD neighborhood but suppresses too much whole-path stressed value. Development robustness and later-period positivity do not override the frozen whole-path retention gate.",
+    "stage_d_economic_roles": 0,
+    "stage_d_required_as_empty_closure": true,
+    "mt5_shortlist": false,
+    "adjacent_state_retune_authorized": false
+  },
+  "limitations": [
+    "Accepted-source replay gives no credit to newly freed-capacity opportunities.",
+    "Closed-balance proxy cannot prove open-equity DD or native stop quantization.",
+    "No component-local, trigger-adjacent or multiplier-adjacent rescue may open automatically after this frozen global-state bundle."
+  ],
+  "marker": "UNIT_001_STAGE_C_V2_VALID_CAUSAL_GLOBAL_STATE_DD_IMPROVEMENT_BUT_WHOLE_PROFIT_RETENTION_NONCONFIRMS_ZERO_STAGE_D_ROLE_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}

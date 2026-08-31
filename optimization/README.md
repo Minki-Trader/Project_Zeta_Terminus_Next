@@ -33,7 +33,11 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
-`campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/` is the sole open campaign at an implementation-frozen pre-replay Stage-C result-authority correction boundary for `V8-OPT-U001-PORTFOLIO-DD`. It repeats the exact V1 `216` paths with unchanged inputs, state model, parameters, periods, gates, neighbors and winner. Its sole change leaves `stage_d_roles` empty until the frozen winner passes locked holdout and whole-path final gates. Four byte-equal inputs, all controls and `216` coordinates pass; V1 key numeric parity plus corrected status/role count are abort-before-write gates. MT5, Lab, new-entry and Live authority remain zero.
+No Optimization campaign is open while the closed `V8-OPT-U001-PORTFOLIO-DD` boundary awaits its mandatory whole-map recompare on `origin/main`. Unit 001 completed its executable static map, half-step adjacent refinement, causal global drawdown state and empty temporal/cost stability boundary. It produced no final role and no MT5 path. A successor may open only after Programs 1-5 and 7 are compared from exact V8 and completed Unit evidence.
+
+`campaigns/dd20-v8-temporal-cost-stability-empty-closure-v1/` is closed `VALID_EMPTY_STAGE_D_NO_SURVIVING_ROLE_UNIT_001_CLOSED_EXHAUSTED_NO_MT5`. Corrected Stage C emitted zero authorized roles, so all six declared Stage-D blocks have zero input and zero economic rows; conditional Stage E remained closed.
+
+`campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/` is closed `VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_NO_STAGE_D_ROLE_STAGE_D_EMPTY_CLOSURE_REQUIRED_NO_MT5`. Exact V1 parity passed. Its robust global state reduced whole actual closed-balance DD to `20.3400%`, but whole stressed net `+$204.7747` retained only `55.6728%` of exact V8 versus the frozen `75%`, so corrected Stage-D role count is zero.
 
 `campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v1/` is closed `CORRECTION_REQUIRED_PRE_FINAL_STAGE_D_ROLE_SERIALIZATION_NO_ECONOMIC_VERDICT`. Its raw status reported whole-path nonconfirmation at only `55.6728%` stressed retention versus the required `75%`, but the script had already serialized one Stage-D role after validation and before `final_pass`. The state and economic arithmetic exposed no fault, yet the contradictory successor authority invalidates the final verdict until exact V2 replay.
 

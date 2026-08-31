@@ -21,3 +21,9 @@ No input staging, implementation or replay begins until the V1 correction closur
 Declaration commit `13789c386990c93304d974f6d7003a966e34f948` reached `origin/main` before four byte-equal inputs were staged. Structural/static precheck remains exact at `965` lifecycles, three seeds, `72 / 72 / 72` variants, `216` unique coordinates, exact V8 `+$409.81 / +$367.818 / 35.46%` and seed development `+$150.105 / +$133.103 / 24.099813585%` each.
 
 Config is `5,987` bytes / `EE605A5E...2D421`; source is `56,381` bytes / `336641A2...1DC9D` and passes Python `3.13.9` syntax with NumPy `2.3.4`. Stage-D role append now exists only inside `final_pass`. V1 count/index and development/validation/holdout/whole numeric parity, corrected status and zero-role count are all abort-before-write gates. No V2 result exists; replay waits for this freeze to reach `origin/main`.
+
+## Final corrected result
+
+The exact replay completed in `0.6539013s`; every frozen V1 count, selected index and development/validation/holdout/whole triplet matched. The selected global state reduced development actual DD from `24.0998%` to `20.3400%` and passed validation and holdout, but whole stressed net was only `+$204.7747`, `55.6728%` of exact V8 versus the required `75%`. Whole DD passed at `20.3400%`; profit retention did not.
+
+Final status is `VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_NO_STAGE_D_ROLE_STAGE_D_EMPTY_CLOSURE_REQUIRED_NO_MT5`. Corrected Stage-D role count is zero. No adjacent state retune or native MT5 path opens; mandatory Stage D records an empty closure and Unit-level recompare.
