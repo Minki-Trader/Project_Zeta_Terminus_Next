@@ -1,0 +1,138 @@
+{
+  "schema": "zeta-next-independent-cross-index-four-hour-barrier-onnx-challenge-v1-development-serialization-correction-declaration",
+  "recorded_at_utc": "2026-08-31T09:57:32.262Z",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/",
+  "status": "CORRECTION_DECLARED_FIRST_DEVELOPMENT_OUTPUT_NONFINITE_JSON_NO_ECONOMIC_VERDICT",
+  "implementation_boundary": {
+    "commit": "dd598da7da8a20b8a2ec0298fd4a9fda9b326de1",
+    "commit_equal_origin_main_before_first_process": true,
+    "freeze_path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_FOUR_HOUR_BARRIER_ONNX_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+    "freeze_bytes": 7175,
+    "freeze_sha256": "379DB2C2691DD6249BC217AD7DBA4B8EF5203330B9C723AB3770A686FFA3CC3A",
+    "adapter_sha256": "C876F540987C4A090F8BE16DE9A15C7D4FF2FEFCD9C45B55C38772D5F35780D8"
+  },
+  "first_process": {
+    "exit_code": 0,
+    "quarterly_models": 8,
+    "total_model_fits": 16,
+    "onnx_parity_maximum_absolute_probability_difference": 2.384185791015625e-07,
+    "onnx_argmax_mismatches": 0,
+    "output_status_written_but_not_authoritative": "VALID_DEVELOPMENT_NO_COMPLETE_ROLE_CLOSE_BEFORE_CONFIRMATION_EA_MT5",
+    "fault": "the zero-drawdown PROB60_MARGIN10 and PROB65_MARGIN10 roles serialized robust_recovery as bare Infinity",
+    "bare_infinity_tokens": 2,
+    "classification": "NON_ECONOMIC_JSON_SERIALIZATION_FAULT",
+    "economic_verdict": null,
+    "locked_confirmation_authority": false
+  },
+  "preserved_invalid_attempt": {
+    "root": "lab/artifacts/independent-cross-index-four-hour-barrier-onnx-challenge-v1/development-invalid-nonfinite-json-v1/",
+    "files": 12,
+    "bytes": 699618,
+    "ordered_manifest_sha256": "6E098CE5A09B43EB749D27E123ACC4AAF2167A3EC6F42774DDC28261849714DE",
+    "artifacts": [
+      {
+        "path": "decision-tape.csv",
+        "bytes": 1662,
+        "sha256": "0C00B91817DEF33FE8CDB00970009D2A9E376A2067C39156E9DBED586EACC38F"
+      },
+      {
+        "path": "development-probabilities.npz",
+        "bytes": 410942,
+        "sha256": "59CA8D81250498EACBB73F95ADE0D7F6DDB659F87FC808C2F32CA33112F5148D"
+      },
+      {
+        "path": "development-result.json",
+        "bytes": 5753,
+        "sha256": "AB5C2463B5B550A206B9360B68026607D461050620D29F0E14E7BADCC555E4EE"
+      },
+      {
+        "path": "model-manifest.json",
+        "bytes": 12581,
+        "sha256": "30053E23F3E758E991083A6BC3101B7F9CB82A7F090C5380B042FB34F3F321A3"
+      },
+      {
+        "path": "models/barrier-2024Q1.onnx",
+        "bytes": 33585,
+        "sha256": "87456F36B657B6814C036ED5541CBB3A2E9B07D363612D2149E16273685AF85F"
+      },
+      {
+        "path": "models/barrier-2024Q2.onnx",
+        "bytes": 33585,
+        "sha256": "3E13D4DD54D3FDA18D388403655ADA63B07D1B0BC793BB63572EAEEB656D1149"
+      },
+      {
+        "path": "models/barrier-2024Q3.onnx",
+        "bytes": 33585,
+        "sha256": "E06BC5C036BFF85B1867E8A671ED2857FA9C2B8E4F08245DFD772B5CC406E26F"
+      },
+      {
+        "path": "models/barrier-2024Q4.onnx",
+        "bytes": 33585,
+        "sha256": "4A2261556CA77E07BD2C5C531AF4DEF4345D77B824B65D29FCB2324BAED18905"
+      },
+      {
+        "path": "models/barrier-2025Q1.onnx",
+        "bytes": 33585,
+        "sha256": "FB05F12E8EE4F028E8E4920CBCC8083E92FA06314ADA5E539D46BD9B7A3444E8"
+      },
+      {
+        "path": "models/barrier-2025Q2.onnx",
+        "bytes": 33585,
+        "sha256": "DBF964047B00843263E023DA5F48139E9F9D194C20D646CD1ED8CF79850C2571"
+      },
+      {
+        "path": "models/barrier-2025Q3.onnx",
+        "bytes": 33585,
+        "sha256": "E6AC906E9C2047841E3C7C003BB00C2A9D0886474AA540BC46666DBEEC924D1C"
+      },
+      {
+        "path": "models/barrier-2025Q4.onnx",
+        "bytes": 33585,
+        "sha256": "44F564E0AE50E8FAD3EFF82AF41C9F2870BEFD9F2125F7F695F1A1B0A4BEBAAA"
+      }
+    ]
+  },
+  "permitted_correction": {
+    "json_writer": "set allow_nan false so a future non-finite value fails before authoritative output",
+    "zero_drawdown_recovery": "serialize JSON null when maximum actual drawdown dollars is zero; preserve the finite formula stressed net divided by maximum actual drawdown otherwise",
+    "authority": "add this correction declaration and a separately frozen corrected adapter to the development authority check",
+    "economic_arithmetic_changes": 0,
+    "tensor_label_training_model_role_threshold_risk_cost_or_execution_changes": 0,
+    "output_contract_changes_other_than_nonfinite_representation_and_correction_provenance": 0
+  },
+  "mandatory_reproduction": {
+    "model_manifest_sha256": "30053E23F3E758E991083A6BC3101B7F9CB82A7F090C5380B042FB34F3F321A3",
+    "development_probabilities_sha256": "59CA8D81250498EACBB73F95ADE0D7F6DDB659F87FC808C2F32CA33112F5148D",
+    "decision_tape_sha256": "0C00B91817DEF33FE8CDB00970009D2A9E376A2067C39156E9DBED586EACC38F",
+    "all_eight_onnx_sha256_must_match": true,
+    "finite_economic_fields_must_match_with_absolute_tolerance": 1e-09,
+    "PROB55_MARGIN10_starts_actual_stressed_dd": [
+      4,
+      -4.609504166666866,
+      -4.884504166666886,
+      4.609504166666866
+    ],
+    "PROB60_MARGIN10_starts_actual_stressed_dd": [
+      0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PROB65_MARGIN10_starts_actual_stressed_dd": [
+      0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "still_unopened": {
+    "valid_development_verdict": true,
+    "locked_2026_confirmation": true,
+    "ea_source": true,
+    "mt5": true,
+    "live_change": true,
+    "broker_account_position_order_or_deal_query": true
+  },
+  "next_authorized_action": "after this correction declaration reaches origin/main, apply only the permitted serialization and authority correction, freeze the corrected adapter, and then run one clean deterministic reproduction"
+}
