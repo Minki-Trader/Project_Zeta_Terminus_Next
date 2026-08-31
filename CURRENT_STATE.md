@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0522`
+- Latest state ID: `STATE-0523`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current family-declaration parent: post-Family-005 audit commit `5ca6783e78714470a0f358a821476765469d771a`, equal to `origin/main` before Family 006 declaration.
+- Current implementation parent: Family 006 declaration commit `f28dbeb16632ea403b4081aca94985cf85d679ed`, equal to `origin/main` before input copies or implementation.
 
 ## Authorization and ownership
 
@@ -24,7 +24,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Sole active Challenge family: `lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, Program 3 / micro-to-meso, mandatory `Python adapter + EA`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -87,13 +87,17 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Development is 2024-2025. It requires both years actual/stressed positive, actual/stressed above `+$149.97 / +$127.786`, DD `<=37.39%`, at least `3` starts per normal day and both-symbol/both-session breadth. Locked 2026 January-July may open for at most one unchanged passer.
 - Python owns local-session scheduling, exact M1 completeness, opening state, role direction and decision sequence/freshness. The EA must own schema/freshness, contracts, risk, orders, reconciliation, protection, timed close, persistence/recovery and evidence; it may not create, filter or invert a direction.
 - Source copies, opening bodies/ranges, decisions, lifecycles/economics, locked 2026, EA and MT5 are zero at declaration. The two original M1 inputs may be copied only after the declaration reaches `origin/main`.
+- Declaration commit `f28dbeb16632ea403b4081aca94985cf85d679ed` reached `origin/main` before two family-local copies were made. US30/US100 copies remain byte/hash-equal at `19,018,323 / 21,213,599` bytes and `8CD68BC5...B063 / 634A8545...C6BB2`.
+- Complete adapter `adapter/run_adapter.py` is `44,897` bytes / `1,133` lines / `607C667D940F6C86B91C4DAC50F49CB58274CBB1616E83958020C227DDBF42AB`. It owns authority-gated `precheck / development / confirmation` modes, IANA DST, exact geometry, Bid/Ask barriers, two-symbol risk, atomic no-overwrite evidence and locked-period filtering.
+- Outcome-free precheck reproduced structural/development `760 / 965` session events and development `1,930` state opportunities over `515` dates. Nonzero-body capacity is `1,892` starts per role or `3.6737864/day`; minimum-lot risk is feasible at `$100` for both symbols on all `965` events.
+- The precheck evaluated zero future trade path, lifecycle or economic metric, loaded zero locked-2026 price row and wrote zero persistent file. Implementation freeze is `7,799` bytes / `735CC5EAF183FEEE7AB06C8EDEF60D4E0CBB6ED9491407D4C0E0929CA1EAECD3`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 
 ## Next authorized sequence
 
-1. Commit and push the Family 006 declaration to `origin/main`.
-2. Only after origin equality, copy the two original M1 authorities once, implement the complete Python adapter, and freeze timestamp, direction-count and risk-feasibility structure without future outcomes.
-3. After that implementation freeze reaches origin, run exactly one two-role 2024-2025 development process; do not open locked 2026, EA or MT5 unless one unchanged role passes every preceding gate.
-4. Continue serially until an unchanged proxy passes every gate, then and only then open its conditional confirmation, self-contained EA and native MT5 proof.
+1. Commit and push the two source copies, adapter and Family 006 implementation freeze to `origin/main`.
+2. Only after origin equality, run exactly one complete two-role 2024-2025 development process.
+3. Open locked 2026 for at most one unchanged role only if every development gate passes; open the EA and MT5 only after the whole proxy also passes.
+4. Continue serially until an unchanged complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
 
@@ -114,7 +118,7 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 ## Current markers
 
 - Active research unit: Family 006 `independent-two-session-opening-auction-response-adapter-challenge-v1`.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME`.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

@@ -1,0 +1,187 @@
+{
+  "schema": "zeta-next-independent-two-session-opening-auction-response-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-08-31T13:57:04.4470200Z",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/",
+  "declaration_boundary": {
+    "commit": "f28dbeb16632ea403b4081aca94985cf85d679ed",
+    "commit_equal_origin_main_before_input_copy_or_implementation": true,
+    "input_copy_count_after_declaration": 2,
+    "input_copies_byte_equal_to_original_authorities": true
+  },
+  "authorities": {
+    "contract": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 14180,
+      "sha256": "FE988AA12CF91979AA5FEBBC7B1E8ADEA3F11CA54104C673F4250DF25551F5D5",
+      "lines": 287
+    },
+    "declaration": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/evidence/INDEPENDENT_TWO_SESSION_OPENING_AUCTION_RESPONSE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 8144,
+      "sha256": "540EE1A718B5281DF5D60838A98DEC6EFEF187448BFCA4DC7644465B448DE701",
+      "lines": 170
+    },
+    "adapter": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 44897,
+      "sha256": "607C667D940F6C86B91C4DAC50F49CB58274CBB1616E83958020C227DDBF42AB",
+      "lines": 1133
+    },
+    "US30_M1": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/data/input/US30_M1.parquet",
+      "bytes": 19018323,
+      "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+    },
+    "US100_M1": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/data/input/US100_M1.parquet",
+      "bytes": 21213599,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+    }
+  },
+  "environment": {
+    "python": "3.13.9",
+    "pandas": "2.3.3",
+    "numpy": "2.3.4",
+    "pyarrow": "23.0.1",
+    "tzdata": "2025.2",
+    "syntax_compile": true,
+    "bytecode_cache_created": false
+  },
+  "adapter_modes": {
+    "precheck": "verify pinned authorities; load only rows before 2026; construct exact complete session and opening-state structure; calculate no future path or economics; write nothing",
+    "development": "require this freeze; load only rows before 2026; run exactly one complete two-role 2024-2025 process; write state, trade and result atomically to a previously absent destination",
+    "confirmation": "require one durable selected-role authorization; load through 2026-07-31; run only that unchanged role over the continuous whole period; write atomically to a previously absent destination"
+  },
+  "frozen_semantics": {
+    "sessions": [
+      "LONDON_0800 Europe/London",
+      "NEW_YORK_0930 America/New_York"
+    ],
+    "complete_geometry": "both symbols contain every minute anchor-30 through anchor+74",
+    "opening_state": "body is fifth close minus first open; distance is five-bar maximum high minus minimum low",
+    "roles": {
+      "OPEN_DRIVE_5M": "follow nonzero body sign",
+      "OPEN_FADE_5M": "take opposite nonzero body sign"
+    },
+    "entry": "next M1 Bid open; long pays Ask spread and short enters Bid",
+    "barriers": "one opening range adverse and 1.5 opening ranges favorable",
+    "maximum_hold": "sixty M1 bars including entry bar",
+    "same_bar_order": "adverse stop first",
+    "short_path": "each Bid high/low/close is converted to Ask using that row's recorded spread",
+    "actual_execution": "direction-specific Bid/Ask",
+    "stress": "subtract the observed actual spread burden once more",
+    "risk": "two percent per symbol from one session-start actual-balance snapshot; four-percent minimum-lot hard cap per symbol and eight-percent aggregate hard cap",
+    "volume": "floor to 0.01 lots, minimum 0.01 only within cap, maximum 200 lots",
+    "balance": "shared compounded actual/stressed ledgers; chronological settlement and US100 before US30 on exact ties",
+    "normal_day": "date with at least one complete declared session; zero-signal and blocked dates remain in denominator"
+  },
+  "integrity_controls": {
+    "contract_declaration_input_hash_verification_before_data": true,
+    "freeze_contract_declaration_adapter_hash_verification_before_development_or_confirmation": true,
+    "parquet_pushdown_maximum_epoch_filter": true,
+    "minute_alignment_duplicate_ohlc_spread_validation": true,
+    "complete_both_symbol_geometry_required": true,
+    "nonfinite_values_rejected": true,
+    "role_sequences_contiguous": true,
+    "prior_session_overlap_blocks_fail_closed": true,
+    "per_symbol_and_aggregate_risk_blocks_fail_closed": true,
+    "atomic_output_and_no_overwrite": true,
+    "strict_json_allow_nan_false": true,
+    "raw_tape_hash_and_ordered_manifest": true
+  },
+  "outcome_free_precheck": {
+    "status": "STRUCTURAL_PRECHECK_PASS_PREDEVELOPMENT_OUTCOME",
+    "loaded_maximum_epoch_exclusive": 1767225600,
+    "locked_2026_price_rows_loaded": 0,
+    "structural_history": {
+      "session_events": 760,
+      "two_symbol_state_rows": 1520,
+      "active_dates": 387,
+      "average_opportunities_per_active_date": 3.9276485788113695,
+      "drive_direction_counts": {
+        "US100_LONG_NONE_SHORT": [
+          387,
+          20,
+          353
+        ],
+        "US30_LONG_NONE_SHORT": [
+          392,
+          30,
+          338
+        ]
+      }
+    },
+    "development": {
+      "session_events": 965,
+      "two_symbol_state_rows": 1930,
+      "active_dates": 515,
+      "events_by_session": {
+        "LONDON_0800": 451,
+        "NEW_YORK_0930": 514
+      },
+      "average_opportunities_per_active_date": 3.7475728155339807,
+      "drive_direction_counts": {
+        "US100_LONG_NONE_SHORT": [
+          507,
+          7,
+          451
+        ],
+        "US30_LONG_NONE_SHORT": [
+          503,
+          31,
+          431
+        ]
+      },
+      "opening_range_price_min_median_p90_max": {
+        "US100": [
+          1.25,
+          9.119999999998981,
+          22.0,
+          182.11999999999898
+        ],
+        "US30": [
+          1.5,
+          11.5,
+          30.30000000000001,
+          193.0
+        ]
+      },
+      "minimum_lot_risk_feasible_at_100_usd": {
+        "US100": "965/965",
+        "US30": "965/965"
+      },
+      "nonzero_body_structural_lifecycle_capacity_per_role": 1892,
+      "nonzero_body_structural_starts_per_active_date_per_role": 3.6737864077669904
+    },
+    "future_trade_paths_evaluated": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "persistent_output_files": 0
+  },
+  "predevelopment_attestation": {
+    "opening_states_constructed_only_for_structural_precheck": true,
+    "future_trade_paths": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "development_artifact_destination_exists": false,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "optimization_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "development_authority": {
+    "condition": "this freeze commit equals origin/main and the tracked worktree is clean",
+    "complete_processes_authorized": 1,
+    "roles": [
+      "OPEN_DRIVE_5M",
+      "OPEN_FADE_5M"
+    ],
+    "period": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "economic_reruns": 0
+  },
+  "next_authorized_action": "commit and push the two byte-equal inputs, adapter and this freeze; only after origin equality run exactly one complete two-role development process"
+}
