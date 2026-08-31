@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0527`
+- Latest state ID: `STATE-0529`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Current process parent: Family 007 declaration commit `e568f2510150b1e2537aeda033a42b187171f86a`, equal to `origin/main` before its dedicated runtime, acquisition engineering and adapter implementation.
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ACQUISITION_ENGINEERING_READY_AWAITING_EXPLICIT_DEMO_ACCOUNT_AUTHORIZATION_PREINPUT_PRECHECK_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_CANDIDATE_PORTABLE_OPEN_AWAITING_USER_CONFIGURED_NONLIVE_SERVER_SESSION_PREINPUT_PRECHECK_PREOUTCOME`.
 - Sole active Challenge family: `lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/`, Program 2 / micro-to-meso, mandatory `Python adapter + EA`.
-- Parallel Lab family / Optimization campaign count: `1 / 0`; one Family 007 dedicated Portable exists and is stopped, while its successful source acquisition, account creation and trading counts remain zero.
+- Parallel Lab family / Optimization campaign count: `1 / 0`; exact Family 007 Portable PID `26464` is open with `/portable` for user-supplied non-Live server login, while successful source acquisition, account creation and trading counts remain zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -117,15 +117,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Each symbol targets `2%` of common slot-start actual balance with `4%` minimum-lot hard cap and `8%` aggregate hard cap. Development 2024-2025 requires both-year actual/stressed positivity, `>+$149.97 / +$127.786`, DD `<=37.39%`, at least `3` starts/day, both symbols, at least `8` slots and both AUDCHF signs.
 - Locked 2026 January-July can open for at most one unchanged complete development passer. Whole/native gates remain `>+$409.81 / >+$367.818 / <=37.39% / >3.295860215`, every epoch positive and complete adapter/EA integrity.
 - Declaration commit `e568f2510150b1e2537aeda033a42b187171f86a` reached `origin/main` before engineering. A neutral-installation-derived dedicated Portable was created and updated from terminal build `6090` to `6140`; its terminal is `121,846,032` bytes / `90AA7696...400`. A family-local Python environment pins MetaTrader5 `5.0.6147` without changing the global package.
-- The fresh clean Portable has no last trading account, so `initialize` waits at the MetaQuotes account-opening wizard. The form was inspected but its terms were not accepted, final creation was not submitted, and no account was created. Successful acquisition batches, AUDCHF rows/specification/receipts, account/position/order/deal queries, orders and trades all remain zero. The exact Family 007 terminal process was stopped; Live PID `33388` was not touched.
+- The fresh clean Portable has no last trading account, so `initialize` waits at the MetaQuotes account-opening wizard. The form was inspected but its terms were not accepted, final creation was not submitted, and no account was created. A later exact direct launch of the family terminal with `/portable` reached Symbols -> AUDCHF -> M1 Bars and requested only `2023-07-01 00:00..2025-12-31 23:59`; the request completed with zero displayed rows because this clean Portable had no server session, not because the Portable acquisition route was invalid. Successful acquisition batches, AUDCHF rows/specification/receipts, account/position/order/deal queries, orders and trades all remain zero. The exact Family 007 terminal process was stopped; Live PID `33388` was not touched.
 - Development-only and later locked acquisition are separated by authority. Acquisition script `acquisition/acquire_audchf.py` is `21,504` bytes / `516` lines / `21C90C1C...A1BA9`; requirements are `176` bytes / `0021A45F...0566`. The two family-local target copies remain byte-equal to authority at `21,213,599 / 19,018,323` bytes and `634A8545...C6BB2 / 8CD68BC5...B063` for US100/US30.
 - Complete adapter `adapter/run_adapter.py` is `51,456` bytes / `1,268` lines / `9E16D532...ED04D`. Its authority-gated `precheck / development / confirmation` modes implement causal same-slot ranks/risk, frozen FOLLOW/FADE mapping, Bid/Ask execution, doubled spread burden, compounding, hard caps, deterministic passer ranking and locked-boundary integrity. Both Python files pass syntax compilation and help invocation.
-- Acquisition correction/target receipt are `5,057 / 1,510` bytes at `70EB0501...DEF2 / 079326EC...C5D`. No outcome-free precheck, implementation freeze, development process, rank threshold, direction, lifecycle/economic metric, locked value, EA, compile or Tester path has run. Fresh development acquisition now requires explicit user authorization to create the clean MetaQuotes demo account or an independently supplied existing non-Live demo login.
+- Acquisition correction/target receipt are `5,057 / 1,510` bytes at `70EB0501...DEF2 / 079326EC...C5D`. No outcome-free precheck, implementation freeze, development process, rank threshold, direction, lifecycle/economic metric, locked value, EA, compile or Tester path has run. A Family-007-specific MetaQuotes account is not a contract requirement. Fresh development acquisition requires one user-authorized non-Live server login configured only inside the candidate Portable; an existing compatible demo login is sufficient, while creating a new demo is only a fallback when no such login exists.
 
 ## Next authorized sequence
 
-1. Commit and push the Family 007 acquisition-engineering, target receipt, complete adapter and `STATE-0527` boundary to `origin/main`.
-2. Only with explicit user authorization, create one clean MetaQuotes demo account in the dedicated Portable—or use an independently supplied existing non-Live demo login—and acquire only the 2023-07 through 2025 development AUDCHF authority.
+1. In already-open exact candidate PID `26464`, configure one user-authorized non-Live server login only inside the dedicated Family 007 Portable. Reuse an existing compatible demo login when available; do not create a new account merely for family identity and do not copy Live settings.
+2. After the candidate session is connected, use that exact `/portable` terminal and acquire only the 2023-07 through 2025 development AUDCHF authority into candidate-local storage.
 3. Run the outcome-free precheck, record causal geometry/rank capacity/risk feasibility, freeze the complete implementation and push that boundary before economics.
 4. Run one complete development process; open locked 2026, EA, compile and native MT5 only for at most one unchanged ranked full development passer.
 5. Continue serially through whole-map-recompared materially distinct families until an unchanged complete native candidate passes every V8 gate.
@@ -148,8 +148,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 007 acquisition/adapter engineering complete; fresh development source acquisition awaits explicit demo-account authorization.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ACQUISITION_ENGINEERING_READY_AWAITING_EXPLICIT_DEMO_ACCOUNT_AUTHORIZATION_PREINPUT_PRECHECK_PREOUTCOME`.
+- Active research unit: Family 007 acquisition/adapter engineering complete; exact candidate Portable PID `26464` is open and fresh development source acquisition awaits one user-configured candidate-local non-Live server session.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_CANDIDATE_PORTABLE_OPEN_AWAITING_USER_CONFIGURED_NONLIVE_SERVER_SESSION_PREINPUT_PRECHECK_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
