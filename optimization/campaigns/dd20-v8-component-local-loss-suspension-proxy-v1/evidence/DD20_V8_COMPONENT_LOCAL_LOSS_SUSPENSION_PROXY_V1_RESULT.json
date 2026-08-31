@@ -1,0 +1,154 @@
+{
+  "schema": "zeta-next-dd20-v8-component-local-loss-suspension-proxy-v1-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_C_ONE_NEUTRAL_VALIDATION_ROLE_STAGE_D_REQUIRED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "C_COMPONENT_LOCAL_CAUSAL_LOSS_SUSPENSION",
+  "authority": {
+    "declaration_commit_on_origin_main": "18d7433be7d8d2cb7e4ee17f13661c452f13dacd",
+    "implementation_freeze_commit_on_origin_main": "73eba26384f46f4cd2950dc7ee6c0dd07510b24c",
+    "implementation_freeze_bytes": 5746,
+    "implementation_freeze_sha256": "E75A693F8AE26A644CDD5D40408C0A0F1074D7CCEF4284F374EB08AAD53FD2D4"
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-component-local-loss-suspension-proxy-v1/output/proxy-result.json",
+    "bytes": 56364,
+    "sha256": "9B879B572F63BA24BCF6BD95CF51B40C4A2A2FD603323CFF209D092EABFD7875",
+    "schema": "zeta-next-dd20-v8-component-local-loss-suspension-proxy-result-v1",
+    "status": "VALID_PROXY_COMPLETE_STAGE_C_VALIDATION_ROLES_STAGE_D_REQUIRED_NO_MT5",
+    "wall_time_seconds": 0.6437241
+  },
+  "implementation": {
+    "config_bytes": 5405,
+    "config_sha256": "21367DE0E1B4284E7C5BB019A21E90DC9690859D46902E3907D5B571E6F2D1B7",
+    "script_bytes": 54646,
+    "script_lines": 1201,
+    "script_sha256": "745879B71535677DF6874FEB320C7426971AACF1874CDE9552DE0425354C3BEB",
+    "successful_proxy_processes": 1,
+    "failed_or_rerun_processes": 0
+  },
+  "exact_v8_anchors": {
+    "whole_actual_net_usd": 409.81,
+    "whole_stressed_net_usd": 367.818,
+    "whole_actual_closed_balance_drawdown_pct": 35.46,
+    "whole_accepted_source_lifecycles": 965,
+    "validation_actual_net_usd": 136.273166667,
+    "validation_stressed_net_usd": 129.824833333,
+    "validation_actual_closed_balance_drawdown_pct": 20.949586252,
+    "validation_minimum_balance_usd": 90.838
+  },
+  "development_map": {
+    "declared_parameterizations": 30,
+    "neutral_roles": 3,
+    "nonneutral_roles": 27,
+    "primary_eligible_roles": 7,
+    "fallback_eligible_roles": 12,
+    "active_tier": "PRIMARY",
+    "active_tier_eligible_roles": 7,
+    "nonneutral_active_eligible_roles": 4,
+    "robust_nonneutral_active_tier_roles": 0,
+    "causal_roles_displacing_neutral": 0,
+    "interpretation": "The causal loss-suspension mechanism was economically active in eligible roles, but no active nonneutral role retained two eligible immediate neighbors spanning both N and K axes. The frozen neutral precedence therefore retained all three static seeds; this is a complete mechanism nonselection, not a one-shot discard."
+  },
+  "development_selected_roles": [
+    {
+      "static_seed_rank": 1,
+      "selection_kind": "NEUTRAL_RETAINED",
+      "membership_mask_integer": 7,
+      "weights": [1.5, 1.25, 1.75, 0.0, 0.0],
+      "aggregate_risk_fraction": 0.12,
+      "consecutive_loss_close_trigger": 0,
+      "future_source_birth_suppression_count": 0,
+      "actual_net_usd": 167.63,
+      "stressed_net_usd": 153.542,
+      "actual_closed_balance_drawdown_pct": 18.136677946,
+      "weakest_annual_stressed_net_usd": 45.399
+    },
+    {
+      "static_seed_rank": 2,
+      "selection_kind": "NEUTRAL_RETAINED",
+      "membership_mask_integer": 31,
+      "weights": [1.5, 1.25, 1.5, 1.75, 1.0],
+      "aggregate_risk_fraction": 0.12,
+      "consecutive_loss_close_trigger": 0,
+      "future_source_birth_suppression_count": 0,
+      "actual_net_usd": 142.86,
+      "stressed_net_usd": 126.707,
+      "actual_closed_balance_drawdown_pct": 25.07824662,
+      "weakest_annual_stressed_net_usd": 26.639
+    },
+    {
+      "static_seed_rank": 3,
+      "selection_kind": "NEUTRAL_RETAINED",
+      "membership_mask_integer": 7,
+      "weights": [1.0, 1.25, 1.75, 0.0, 0.0],
+      "aggregate_risk_fraction": 0.12,
+      "consecutive_loss_close_trigger": 0,
+      "future_source_birth_suppression_count": 0,
+      "actual_net_usd": 134.65,
+      "stressed_net_usd": 120.916,
+      "actual_closed_balance_drawdown_pct": 15.865803325,
+      "weakest_annual_stressed_net_usd": 28.984
+    }
+  ],
+  "fresh_january_may_validation": [
+    {
+      "static_seed_rank": 1,
+      "actual_net_usd": 57.082,
+      "stressed_net_usd": 53.224333333,
+      "actual_closed_balance_drawdown_pct": 16.08248038,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention_vs_exact_v8": 0.409970357,
+      "passed": false
+    },
+    {
+      "static_seed_rank": 2,
+      "actual_net_usd": 113.995,
+      "stressed_net_usd": 109.449333333,
+      "actual_closed_balance_drawdown_pct": 13.437604799,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention_vs_exact_v8": 0.84305391,
+      "passed": true
+    },
+    {
+      "static_seed_rank": 3,
+      "actual_net_usd": 22.315333333,
+      "stressed_net_usd": 18.334666667,
+      "actual_closed_balance_drawdown_pct": 20.327386029,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention_vs_exact_v8": 0.141226191,
+      "passed": false
+    }
+  ],
+  "stage_d_roles": [
+    {
+      "static_seed_rank": 2,
+      "development_selection_kind": "NEUTRAL_RETAINED",
+      "membership_mask_integer": 31,
+      "weights": [1.5, 1.25, 1.5, 1.75, 1.0],
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "consecutive_loss_close_trigger": 0,
+      "future_source_birth_suppression_count": 0
+    }
+  ],
+  "succession": {
+    "stage_c_can_close_unit": false,
+    "stage_d_required": true,
+    "stage_d_input_roles": 1,
+    "locked_june_july_opened": false,
+    "stage_e_opened": false,
+    "mt5_runs": 0,
+    "required_next_action": "Freeze this result on origin/main, then declare and execute the mandatory six-block Stage D for the sole unchanged role."
+  },
+  "scope": {
+    "exact_v8_only": true,
+    "v7_or_historical_lab_selection_input": false,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U002_STAGE_C_VALID_COMPLETE_NO_CAUSAL_DISPLACEMENT_ONE_NEUTRAL_STAGE_D_ROLE_NO_HOLDOUT_NO_MT5"
+}
