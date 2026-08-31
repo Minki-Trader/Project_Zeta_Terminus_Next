@@ -965,7 +965,7 @@ def main() -> None:
             "shortlist_count": 0,
             "valid_economic_paths_run": 0,
             "maximum_valid_economic_paths_authorized": int(
-                config["mt5_budget"]["maximum_valid_economic_paths"]
+                config["mt5_budget"]["maximum_valid_economic_paths_after_all_proxy_stages"]
             ),
         },
         "limitations": [
