@@ -29,3 +29,11 @@ Stages A and B cannot close the Unit. A correction to environment, design or imp
 The declaration reached `origin/main` at `7b3ff51`. During authorized input staging, the expanded full SHA for the durable Stage-B interpretation was found to contain a transcription error even though its path, byte size and abbreviated identity named the intended file. `DD20_V8_EXISTING_COMPONENT_MEMBERSHIP_RECONSTRUCTION_UNIT_002_DECLARATION_INPUT_HASH_CORRECTION_V1.json` replaces only that full hash with `D569A72E9647287D165C341FEDCA62D15FAFF89CF3FF0874F584285E591A74E4`.
 
 The correction is pre-implementation and pre-outcome. Four input copies exist byte-equal, and an unchanged Unit-001 proxy template was copied without a config, but no U002 logic, executable configuration, result or economic run exists. Implementation may resume only after the correction reaches `origin/main`. No MT5, Lab, new-entry, Live-package, Live-runtime or order-authority change occurred.
+
+## Frozen Stage-A implementation
+
+Correction commit `7fac0b5` reached `origin/main` before implementation resumed. The campaign now owns a corrected self-contained config and proxy. Execution aborts before output if either declaration authority, any of four staged inputs, the raw/durable Stage-B seed agreement, the `965`-birth join, the `93 → 79` enumeration or exact V8/static-seed controls drift.
+
+The structural precheck produced `93` raw roles, `79` unique roles, `14` duplicates, all `31` nonempty masks and `207` unique-role adjacency edges. Exact V8 reproduced `+$409.81 / +$367.818 / 35.46%`, and every static seed reproduced development `+$150.105 / +$133.103 / 24.099813585%`. Candidate membership economics were not executed. Config is `5,423` bytes / `39DB7375...BA155`; source is `46,688` bytes / `F22C7C7B...713D0` and passes Python `3.13.9` syntax with NumPy `2.3.4`.
+
+No raw result exists. The frozen candidate map may execute once only after the implementation-freeze boundary reaches `origin/main`; validation, locked holdout, MT5, Lab/new-entry and Live remain unopened.

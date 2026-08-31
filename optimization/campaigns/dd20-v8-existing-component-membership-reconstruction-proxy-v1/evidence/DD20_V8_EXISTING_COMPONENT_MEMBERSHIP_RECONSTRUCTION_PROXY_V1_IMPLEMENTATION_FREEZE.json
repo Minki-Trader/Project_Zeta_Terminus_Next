@@ -1,0 +1,95 @@
+{
+  "schema": "zeta-next-dd20-v8-existing-component-membership-reconstruction-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PREOUTCOME",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "A_COMPLETE_EXISTING_COMPONENT_MEMBERSHIP_MAP",
+  "authority": {
+    "declaration_commit_on_origin_main": "7b3ff512018ca2aafc557b1e414874e2675ba29f",
+    "declaration_sha256": "FEB87439F2B034C4EF004F8A53A4E5FA377FE860FC3FF852AA16757060D313F3",
+    "input_hash_correction_commit_on_origin_main": "7fac0b5dc4bf16cee7404ba14257e45e1572bd57",
+    "input_hash_correction_sha256": "9E3F1FAD0F202C4B138DAB861793D781C1CFFB5C31B34711AD64B3CE3053C165"
+  },
+  "frozen_inputs": [
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-existing-component-membership-reconstruction-proxy-v1/input/research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-existing-component-membership-reconstruction-proxy-v1/input/research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-existing-component-membership-reconstruction-proxy-v1/input/stage-b-proxy-result.json",
+      "bytes": 31666,
+      "sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-existing-component-membership-reconstruction-proxy-v1/input/stage-b-durable-result.json",
+      "bytes": 6804,
+      "sha256": "D569A72E9647287D165C341FEDCA62D15FAFF89CF3FF0874F584285E591A74E4"
+    }
+  ],
+  "implementation": {
+    "config_path": "optimization/campaigns/dd20-v8-existing-component-membership-reconstruction-proxy-v1/config/proxy-contract.json",
+    "config_bytes": 5423,
+    "config_sha256": "39DB7375E01C564512D4C563D76009BB6E57F99308C9ACF5FC9149C4569BA155",
+    "script_path": "optimization/campaigns/dd20-v8-existing-component-membership-reconstruction-proxy-v1/proxy/run_proxy.py",
+    "script_bytes": 46688,
+    "script_lines": 1072,
+    "script_sha256": "F22C7C7B44274403C5019AF524FA1892CB92B06620949596882047012A5713D0",
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "syntax_compile": "PASS"
+  },
+  "abort_before_write_gates": [
+    "Declaration and input-hash correction byte counts and SHA-256 values match.",
+    "All four staged inputs match their corrected frozen byte counts and SHA-256 values.",
+    "Raw and durable Stage-B schemas/statuses match and expose exactly the same three declared center vectors, ranks and aggregate cap 0.12 with Passive zero.",
+    "Lifecycle/candidate join remains one-to-one at 965 births and POSITION_OPEN contexts with exact component birth counts.",
+    "Membership enumeration produces exactly 93 seed-mask roles, 79 lexicographically ordered unique exact-weight roles, 14 duplicates and all 31 nonempty masks.",
+    "Every unique role has at least one active component and no active weight exceeds exact V8.",
+    "Exact V8 anchor reproduces accepted 965, actual +409.81, stressed +367.818 and actual closed-balance DD 35.46%.",
+    "All three frozen static seed development controls reproduce actual +150.105, stressed +133.103 and DD 24.099813585%."
+  ],
+  "structural_and_frozen_control_precheck": {
+    "status": "PASS",
+    "matched_lifecycles": 965,
+    "raw_seed_mask_roles": 93,
+    "deduplicated_exact_weight_roles": 79,
+    "duplicates_removed": 14,
+    "unique_nonempty_masks": 31,
+    "unique_role_adjacency_edges": 207,
+    "exact_anchor_actual_net_usd": 409.81,
+    "exact_anchor_stressed_net_usd": 367.818,
+    "exact_anchor_actual_closed_balance_drawdown_pct": 35.46,
+    "static_seed_development_actual_net_usd_each": 150.105,
+    "static_seed_development_stressed_net_usd_each": 133.103,
+    "static_seed_development_actual_closed_balance_drawdown_pct_each": 24.099813585,
+    "candidate_membership_map_economics_executed": false
+  },
+  "selection_implementation": {
+    "development_only": true,
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "primary_and_fallback_gates_match_declaration": true,
+    "one_bit_membership_adjacency_from_shared_seed_provenance": true,
+    "minimum_eligible_unique_neighbors": 2,
+    "maximum_stage_b_seeds": 3,
+    "minimum_membership_hamming_separation_then_rank_fill": 2,
+    "declared_near_miss_fallback_implemented": true,
+    "freed_capacity_profit_credit_usd": 0.0
+  },
+  "execution_boundary": {
+    "raw_result_exists": false,
+    "candidate_membership_map_executed": false,
+    "mt5_runs": 0,
+    "lab_opened": false,
+    "new_entry_strategy": false,
+    "live_changed": false,
+    "required_next_action": "Commit and push this implementation freeze, verify origin/main parity, then execute the frozen Stage-A proxy once."
+  },
+  "marker": "V8_OPT_U002_STAGE_A_IMPLEMENTATION_FROZEN_93_TO_79_MEMBERSHIP_ROLES_PREOUTCOME_NO_VALIDATION_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}
