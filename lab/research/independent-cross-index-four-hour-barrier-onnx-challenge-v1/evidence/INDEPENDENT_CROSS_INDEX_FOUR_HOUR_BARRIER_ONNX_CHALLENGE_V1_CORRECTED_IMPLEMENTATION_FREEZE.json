@@ -1,0 +1,96 @@
+{
+  "schema": "zeta-next-independent-cross-index-four-hour-barrier-onnx-challenge-v1-corrected-implementation-freeze",
+  "recorded_at_utc": "2026-08-31T10:03:06.425Z",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/",
+  "status": "CORRECTED_IMPLEMENTATION_FROZEN_PRE_REPRODUCTION",
+  "correction_boundary": {
+    "declaration_commit": "9eb089d01363ff9d262acedca668d6b419f7ddcc",
+    "declaration_commit_equal_origin_main_before_source_correction": true,
+    "fault": "two zero-drawdown roles emitted bare Infinity recovery values",
+    "classification": "NON_ECONOMIC_JSON_SERIALIZATION_FAULT",
+    "first_process_economic_verdict": null
+  },
+  "frozen_files": {
+    "original_implementation_freeze": {
+      "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_FOUR_HOUR_BARRIER_ONNX_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+      "bytes": 7175,
+      "lines": 171,
+      "sha256": "379DB2C2691DD6249BC217AD7DBA4B8EF5203330B9C723AB3770A686FFA3CC3A"
+    },
+    "correction_declaration": {
+      "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/evidence/INDEPENDENT_CROSS_INDEX_FOUR_HOUR_BARRIER_ONNX_CHALLENGE_V1_DEVELOPMENT_SERIALIZATION_CORRECTION_DECLARATION.json",
+      "bytes": 5882,
+      "lines": 138,
+      "sha256": "A806C04D74A4A565FEBAFA5E1F57F0735199D3FCCD8F121F1A546216397BCA9B"
+    },
+    "corrected_adapter": {
+      "path": "lab/research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/model/run_onnx_adapter.py",
+      "bytes": 56723,
+      "lines": 1430,
+      "sha256": "6419E74649F8A329AF603E871C7ED44249CF77686FFCE55402DDB3B6E9AEA5A1"
+    }
+  },
+  "exact_source_delta": {
+    "original_adapter_sha256": "C876F540987C4A090F8BE16DE9A15C7D4FF2FEFCD9C45B55C38772D5F35780D8",
+    "corrected_adapter_sha256": "6419E74649F8A329AF603E871C7ED44249CF77686FFCE55402DDB3B6E9AEA5A1",
+    "changes": [
+      "json.dump now uses allow_nan=false",
+      "zero maximum actual drawdown serializes robust_recovery as JSON null instead of bare Infinity",
+      "development verifies the correction declaration and corrected implementation freeze",
+      "development result records correction declaration and corrected freeze SHA-256 provenance"
+    ],
+    "feature_tensor_or_label_change": false,
+    "training_or_model_change": false,
+    "onnx_export_or_parity_change": false,
+    "role_threshold_or_selection_change": false,
+    "risk_cost_trade_or_economic_arithmetic_change": false
+  },
+  "structural_reproduction": {
+    "status": "STRUCTURAL_PRECHECK_PASS_NO_LABEL_NO_FIT_NO_OUTCOME_NO_ONNX",
+    "common_rows": 20649,
+    "complete_feature_rows": 20625,
+    "structural_sequences_through_development": 20550,
+    "development_decision_sequences": 11801,
+    "development_normal_trading_days": 508,
+    "minimum_quarterly_full_training_sequences": 8746,
+    "dummy_input_shape": [
+      1,
+      19,
+      48
+    ],
+    "dummy_output_shape": [
+      1,
+      3,
+      3
+    ],
+    "labels_constructed": 0,
+    "model_fits": 0,
+    "onnx_files": 0,
+    "candidate_predictions": 0,
+    "candidate_trades": 0
+  },
+  "mandatory_corrected_reproduction": {
+    "model_manifest_sha256": "30053E23F3E758E991083A6BC3101B7F9CB82A7F090C5380B042FB34F3F321A3",
+    "development_probabilities_sha256": "59CA8D81250498EACBB73F95ADE0D7F6DDB659F87FC808C2F32CA33112F5148D",
+    "decision_tape_sha256": "0C00B91817DEF33FE8CDB00970009D2A9E376A2067C39156E9DBED586EACC38F",
+    "all_eight_onnx_sha256_must_match_correction_declaration": true,
+    "all_finite_economic_fields_must_match_with_absolute_tolerance": 1e-09,
+    "bare_nonfinite_json_tokens_allowed": 0,
+    "corrected_zero_drawdown_recovery_value": null
+  },
+  "pre_reproduction_attestation": {
+    "new_labels_constructed": 0,
+    "new_model_fits": 0,
+    "new_onnx_files": 0,
+    "new_candidate_predictions": 0,
+    "new_candidate_trades": 0,
+    "valid_development_verdict": false,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this corrected implementation freeze reaches origin/main, run one clean deterministic development reproduction and require every frozen reproduction anchor before any economic verdict"
+}

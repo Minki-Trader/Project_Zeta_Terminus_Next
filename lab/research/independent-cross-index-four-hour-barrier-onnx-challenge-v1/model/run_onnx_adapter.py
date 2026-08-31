@@ -43,6 +43,16 @@ FREEZE_PATH = (
     / "evidence"
     / "INDEPENDENT_CROSS_INDEX_FOUR_HOUR_BARRIER_ONNX_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json"
 )
+CORRECTION_DECLARATION_PATH = (
+    FAMILY_ROOT
+    / "evidence"
+    / "INDEPENDENT_CROSS_INDEX_FOUR_HOUR_BARRIER_ONNX_CHALLENGE_V1_DEVELOPMENT_SERIALIZATION_CORRECTION_DECLARATION.json"
+)
+CORRECTED_FREEZE_PATH = (
+    FAMILY_ROOT
+    / "evidence"
+    / "INDEPENDENT_CROSS_INDEX_FOUR_HOUR_BARRIER_ONNX_CHALLENGE_V1_CORRECTED_IMPLEMENTATION_FREEZE.json"
+)
 ARTIFACT_ROOT = (
     PROJECT_ROOT
     / "lab"
@@ -115,6 +125,7 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
             indent=2,
             sort_keys=False,
             default=json_default,
+            allow_nan=False,
         )
         handle.write("\n")
 
@@ -163,12 +174,23 @@ def verify_authorities(mode: str) -> tuple[dict[str, Any], dict[str, Any]]:
         freeze = load_json(FREEZE_PATH)
         if freeze.get("status") != "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME":
             raise RuntimeError("implementation freeze status is not authoritative")
-        for record in freeze["frozen_files"].values():
+        for name, record in freeze["frozen_files"].items():
+            if name == "adapter":
+                continue
             if isinstance(record, dict) and "path" in record:
                 verify_file_record(record)
             elif isinstance(record, dict):
                 for nested in record.values():
                     verify_file_record(nested)
+        if not CORRECTION_DECLARATION_PATH.is_file():
+            raise RuntimeError("serialization correction declaration is absent")
+        if not CORRECTED_FREEZE_PATH.is_file():
+            raise RuntimeError("corrected implementation freeze is absent")
+        corrected_freeze = load_json(CORRECTED_FREEZE_PATH)
+        if corrected_freeze.get("status") != "CORRECTED_IMPLEMENTATION_FROZEN_PRE_REPRODUCTION":
+            raise RuntimeError("corrected implementation freeze status is not authoritative")
+        for record in corrected_freeze["frozen_files"].values():
+            verify_file_record(record)
     return contract, declaration
 
 
@@ -946,7 +968,7 @@ def simulate_role(
         "minimum_stressed_balance_usd": minimum_stressed_balance,
         "robust_recovery": stressed_net / max_actual_drawdown_dollars
         if max_actual_drawdown_dollars > 0
-        else math.inf,
+        else None,
         "yearly": {str(year): values for year, values in yearly.items()},
         "symbol_starts": {
             symbol: sum(1 for trade in trades if trade["symbol"] == symbol)
@@ -1150,6 +1172,12 @@ def development(contract: dict[str, Any]) -> dict[str, Any]:
                 "contract_sha256": sha256_file(CONTRACT_PATH),
                 "declaration_sha256": sha256_file(DECLARATION_PATH),
                 "implementation_freeze_sha256": sha256_file(FREEZE_PATH),
+                "serialization_correction_declaration_sha256": sha256_file(
+                    CORRECTION_DECLARATION_PATH
+                ),
+                "corrected_implementation_freeze_sha256": sha256_file(
+                    CORRECTED_FREEZE_PATH
+                ),
                 "adapter_sha256": sha256_file(Path(__file__)),
             },
             "process": {
