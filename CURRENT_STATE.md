@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0520`
+- Latest state ID: `STATE-0521`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current Challenge process parent: Family 005 implementation-freeze commit `a5f95b338896a011a26653208355a0b4926edd7f`, equal to `origin/main` before the one development process.
+- Current successor-selection parent: Family 005 closure commit `96753724f12a4b057b211662fae6baaee5260d52`, equal to `origin/main` before the whole-map recompare.
 
 ## Authorization and ownership
 
@@ -24,8 +24,8 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_CLOSED_VALID_UTILITY_COLLAPSE_RECOMPARE_PENDING`.
-- Sole active Challenge family: none. Family 005 is closed; Programs 1-5 and 7 must be re-compared after its closure reaches `origin/main`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_RECOMPARE_PROGRAM_3_OPENING_AUCTION_RESPONSE_READY_PREDECLARATION`.
+- Sole active Challenge family: none. Provisional Family 006 is selected but unopened until its whole-map audit reaches `origin/main`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
@@ -69,11 +69,20 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Family 004 M15 online-expert `Python adapter + EA` proxy: `2,063 / 2,234 / 1,625` starts but actual `-$99.3989 / -$99.1503 / -$97.1707`, stressed `-$163.4354 / -$157.2507 / -$156.1929`, DD `97.84..99.43%`; closed adverse.
 - Family 005 M1 utility-GRU `ONNX + EA` proxy: valid models but only one threshold-clearing action and no complete role; closed utility collapse.
 
+## Post-Family-005 whole-map selection
+
+- Programs 1-5/7 and micro/meso/macro were re-compared after closure commit `96753724f12a4b057b211662fae6baaee5260d52` reached `origin/main`. Programs 1, 2, 4, 5 and 7 have no independent ready carrier; Program 3 alone is ready.
+- Program 3 uses exchange-local London `08:00` and New York `09:30` opening anchors, but does not assign a historically chosen clock direction. It waits for the first five completed M1 bars and freezes the two polar price-discovery responses `OPEN_DRIVE_5M / OPEN_FADE_5M` together.
+- A timestamp-only scan opened no price, spread, volume, return, label or outcome. Exact common M1 geometry from anchor minus 30 through plus 74 minutes supplies development `965` complete session events, `1,930` two-symbol opportunities over `515` active dates, or `3.7475728` opportunities per active date. Locked 2026 price rows remain unopened.
+- Tokyo `09:00` is structurally unavailable in the source and Hong Kong `09:30` has incomplete late-2025/early-2026 coverage, so both were rejected using timestamps only. One epoch-seconds versus nanoseconds parse error produced an impossible 1970 surface and was corrected before selection or any outcome access.
+- Audit `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_WHOLE_MAP_RECOMPARE_V1.json` is `9,867` bytes / `9D98DE4B5AC34EF96B0178458E6C8D54C38E9320D1F3E801A1882716F1163553`.
+- Provisional Family 006 is `lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, Program 3 / micro-to-meso, mandatory `Python adapter + EA`. The root, input copies, opening bodies/ranges, decisions, lifecycles, economics, EA and MT5 remain zero.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 005 raw evidence, durable result, closure and compressed state to `origin/main`.
-2. Only after origin equality, recompare Programs 1-5 and 7 across micro/meso/macro without using closed-family outcomes to choose a successor.
-3. If exactly one perspective-distant carrier is ready, declare one self-contained `Python adapter + EA` or `ONNX + EA` family before input materialization, implementation or outcome access.
+1. Commit and push the post-Family-005 whole-map audit to `origin/main`.
+2. Only after origin equality, declare one self-contained Family 006 contract before input copies, OHLC/spread access, opening-body construction, decisions or economics.
+3. Implement and freeze the complete Python adapter proxy before exactly one development process; do not open locked 2026, EA or MT5 unless one unchanged role passes every preceding gate.
 4. Continue serially until an unchanged proxy passes every gate, then and only then open its conditional confirmation, self-contained EA and native MT5 proof.
 
 ## Frozen lane boundaries
@@ -94,8 +103,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; post-Family-005 whole-map recompare pending.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_005_CLOSED_VALID_UTILITY_COLLAPSE_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
+- Active research unit: none; provisional Family 006 opening-auction response adapter is selected but not declared.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_RECOMPARE_PROGRAM_3_OPENING_AUCTION_RESPONSE_READY_SUCCESSOR_NOT_OPENED`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
