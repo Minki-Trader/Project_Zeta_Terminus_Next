@@ -1,0 +1,131 @@
+{
+  "schema": "zeta-next-dd20-v8-signal-strength-temporal-cost-stability-empty-closure-and-unit-003-closure-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_EMPTY_STAGE_D_NO_CAUSALLY_AUTHORIZED_ROLE_UNIT_003_CLOSED_EXHAUSTED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "primary_macro_program": 1,
+  "unit_stage": "D_TEMPORAL_AND_COST_STABILITY_EMPTY_CLOSURE",
+  "unit_declaration_authority": {
+    "path": "optimization/campaigns/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/evidence/DD20_V8_COMPONENT_RELATIVE_SIGNAL_STRENGTH_SUPPRESSION_UNIT_003_DECLARATION_V1.json",
+    "bytes": 17130,
+    "sha256": "615BCB7A71C9FC06060CB12E69069189BF4A44D8C27E7767BCABCAB6E597E4CB",
+    "commit_on_origin_main": "164061c20534db8da8bfb1f262aab5fdff31b20c"
+  },
+  "stage_c_authority": {
+    "campaign": "optimization/campaigns/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/",
+    "raw_result_path": "optimization/artifacts/raw/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/output/proxy-result.json",
+    "raw_result_bytes": 73085,
+    "raw_result_sha256": "5147131574344430843582FEDD72BD7C91F4767B59B4D861913564E5200A7729",
+    "durable_result_path": "optimization/campaigns/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/evidence/DD20_V8_SIGNAL_STRENGTH_CAUSAL_ABLATION_VALIDATION_PROXY_V1_RESULT.json",
+    "durable_result_bytes": 7669,
+    "durable_result_sha256": "C51783B67CC877663E5F3DC3B9D3232D56DF1430A6324FA10F3AA66164100230",
+    "raw_status": "VALID_PROXY_COMPLETE_STAGE_C_NO_VALIDATION_CENTER_STAGE_D_EMPTY_REQUIRED_NO_MT5",
+    "durable_status": "VALID_PROXY_COMPLETE_STAGE_C_ALL_CENTERS_ECONOMIC_PASS_CAUSAL_NONCONFIRMATION_ZERO_STAGE_D_ROLES_NO_MT5",
+    "economic_gate_pass_count": 3,
+    "causal_nondominance_pass_count": 0,
+    "stage_d_role_count": 0,
+    "mt5_count": 0
+  },
+  "stage_d_contract_disposition": {
+    "declared_blocks": [
+      "2024-H1",
+      "2024-H2",
+      "2025-H1",
+      "2025-H2",
+      "2026-01-through-05 validation",
+      "2026-06-through-07 locked holdout"
+    ],
+    "input_roles": 0,
+    "economic_rows": 0,
+    "block_runs": 0,
+    "actual_and_doubled_observed_cost_books_opened": false,
+    "locked_holdout_opened": false,
+    "reason": "The frozen Stage-C causal-nondominance gate is upstream of Stage-D role authority. An economically passing center dominated by a one-component native-gate restoration cannot be reintroduced, and an ablation cannot replace it.",
+    "empty_closure_is_not_missing_data_or_engineering_failure": true,
+    "stage_d_status": "VALID_EMPTY_NO_CAUSALLY_AUTHORIZED_INPUT_ROLE"
+  },
+  "unit_stage_summary": [
+    {
+      "stage": "A_COMPLETE_ALL_FIVE_COARSE_STRENGTH_MAP",
+      "final_authority": "VALID_STAGE_A_NEAR_MISS_SEEDS_FINE_STAGE_REQUIRED",
+      "valid_parameterizations": 243,
+      "four_half_positive": 30,
+      "primary_eligible": 12,
+      "fallback_eligible": 21,
+      "robust_primary": 0,
+      "surviving_centers": 3,
+      "mt5_runs": 0
+    },
+    {
+      "stage": "B_CENTER_LOCAL_FINE_QUANTILE_ADJACENCY",
+      "final_authority": "VALID_STAGE_B_ROBUST_FINE_STRENGTH_BASIN",
+      "valid_parameterizations": 648,
+      "four_half_positive": 212,
+      "primary_eligible": 77,
+      "fallback_eligible": 134,
+      "robust_primary": 39,
+      "surviving_centers": 3,
+      "mt5_runs": 0
+    },
+    {
+      "stage": "C_ONE_COMPONENT_CAUSAL_ABLATION_AND_FRESH_VALIDATION",
+      "final_authority": "VALID_FRESH_ECONOMIC_PASS_CAUSAL_NONCONFIRMATION",
+      "immutable_centers": 3,
+      "native_gate_ablations": 15,
+      "total_roles": 18,
+      "economic_gate_pass_count": 3,
+      "causal_nondominance_pass_count": 0,
+      "dominating_ablation_by_center": ["Intraday", "RC64", "Intraday"],
+      "surviving_final_roles": 0,
+      "mt5_runs": 0
+    },
+    {
+      "stage": "D_TEMPORAL_AND_COST_STABILITY",
+      "final_authority": "VALID_EMPTY_NO_CAUSALLY_AUTHORIZED_INPUT_ROLE",
+      "economic_rows": 0,
+      "surviving_roles": 0,
+      "mt5_runs": 0
+    },
+    {
+      "stage": "E_SCARCE_NATIVE_MT5_PAIR",
+      "condition": "Exactly one unchanged Stage-D winner may enter.",
+      "condition_satisfied": false,
+      "valid_economic_paths": 0,
+      "maximum_authorized_if_condition_met": 2
+    }
+  ],
+  "unit_closure": {
+    "closed": true,
+    "closure_class": "EXHAUSTED_DECLARED_COARSE_FINE_CAUSAL_VALIDATION_AND_EMPTY_STABILITY_SEQUENCE_NO_FINAL_SURVIVOR",
+    "single_grid_discard": false,
+    "complete_all_five_coarse_map_completed": true,
+    "center_local_fine_adjacency_completed": true,
+    "causal_ablation_bundle_completed": true,
+    "fresh_validation_completed": true,
+    "temporal_cost_stage_completed_as_valid_empty_boundary": true,
+    "native_mt5_condition_not_met": true,
+    "exact_v8_or_live_changed": false,
+    "lab_opened": false,
+    "new_entry_strategy": false
+  },
+  "frozen_diagnostics_for_recomparison_only": [
+    "All three fine centers remained economically positive on fresh January-May, retained 75.27% to 89.16% of exact-V8 stressed net and reduced closed-balance DD to 9.15% to 15.39%; signal-strength suppression therefore contains information but the complete frozen all-five restrictions are not causally clean.",
+    "Restoring Intraday to its exact-V8 native gate dominated centers 1 and 3 by adding $8.041333 stressed net while lowering DD 1.669255 points or leaving it equal. Restoring RC64 dominated center 2 by adding $16.628 stressed net at equal DD.",
+    "RC61 native restoration increased stressed net for all centers but also raised DD, while Cross restoration generally reduced stressed net. These are recomparison diagnostics only and do not authorize a component-specific strength rescue, adjacent threshold or retained-seed follow-up."
+  ],
+  "successor_gate": {
+    "successor_opened": false,
+    "required_before_successor": "Recompare every active macro Program 1-5 and 7 using only exact V8 and completed Unit outputs, then open at most one newly named V8-native Unit after this closure reaches origin/main.",
+    "program_6_status": "OUTSIDE_CURRENT_GOAL",
+    "historical_lab_queue_may_select_successor": false,
+    "automatic_component_specific_or_adjacent_strength_followup": false
+  },
+  "scope": {
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false,
+    "live_changed": false,
+    "lab_opened": false,
+    "new_entry_strategy": false
+  },
+  "marker": "V8_OPT_U003_CLOSED_EXHAUSTED_COMPLETE_COARSE_FINE_CAUSAL_STRENGTH_NO_FINAL_ROLE_STAGE_D_EMPTY_STAGE_E_NOT_OPENED_NO_MT5_RECOMPARE_PENDING"
+}

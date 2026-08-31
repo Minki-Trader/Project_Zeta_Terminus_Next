@@ -1,0 +1,147 @@
+{
+  "schema": "zeta-next-dd20-v8-signal-strength-causal-ablation-validation-proxy-v1-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_C_ALL_CENTERS_ECONOMIC_PASS_CAUSAL_NONCONFIRMATION_ZERO_STAGE_D_ROLES_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "unit_stage": "C_ONE_COMPONENT_CAUSAL_ABLATION_AND_FRESH_VALIDATION",
+  "authority": {
+    "declaration_commit_on_origin_main": "906f7b089a624915c2f9ab39095684a979950e89",
+    "implementation_freeze_commit_on_origin_main": "fdc2d6e634f6e4c8d49b4500c515d82364afcf48",
+    "implementation_freeze_bytes": 5113,
+    "implementation_freeze_sha256": "B096D3AE2A129A31EC6AD73F318C7281B9086B2A4EB4ED7160A17C35E3CE49BA"
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-signal-strength-causal-ablation-validation-proxy-v1/output/proxy-result.json",
+    "bytes": 73085,
+    "sha256": "5147131574344430843582FEDD72BD7C91F4767B59B4D861913564E5200A7729",
+    "schema": "zeta-next-dd20-v8-signal-strength-causal-ablation-validation-proxy-result-v1",
+    "status": "VALID_PROXY_COMPLETE_STAGE_C_NO_VALIDATION_CENTER_STAGE_D_EMPTY_REQUIRED_NO_MT5",
+    "wall_time_seconds": 0.336988100025
+  },
+  "implementation": {
+    "config_bytes": 7059,
+    "config_sha256": "D25714948F04B7E424FF76636475D11AE362882099FE70061054805D82A03E45",
+    "script_bytes": 50978,
+    "script_lines": 1064,
+    "script_sha256": "F06816FAF163824E49C7AF734473F080FC7F7DC5258BA50016B5D01B61C1C7BC",
+    "successful_proxy_processes": 1,
+    "failed_or_rerun_processes": 0
+  },
+  "exact_v8_anchors": {
+    "whole_actual_net_usd": 409.81,
+    "whole_stressed_net_usd": 367.818,
+    "whole_actual_closed_balance_drawdown_pct": 35.46,
+    "whole_accepted_source_lifecycles": 965,
+    "validation_actual_net_usd": 136.273166666667,
+    "validation_stressed_net_usd": 129.824833333339,
+    "validation_actual_closed_balance_drawdown_pct": 20.949586252059,
+    "validation_minimum_balance_usd": 90.838
+  },
+  "fixed_role_map": {
+    "immutable_centers": 3,
+    "native_gate_ablations_per_center": 5,
+    "declared_roles": 18,
+    "unique_roles": 18,
+    "roles_below_exact_v8_native_gate": 0,
+    "validation_retuning": false
+  },
+  "fresh_january_may_validation": [
+    {
+      "stage_b_rank": 1,
+      "normalized_thresholds": [1.30356718315, 1.182281637461, 2.541865832742, 1.048694496976, 1.216026589434],
+      "actual_net_usd": 114.0365,
+      "stressed_net_usd": 109.064166666671,
+      "actual_closed_balance_drawdown_pct": 15.39202137385,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention_vs_exact_v8": 0.840087091709,
+      "economic_gate_passed": true,
+      "dominating_native_gate_ablations": ["Intraday"],
+      "causal_nondominance_passed": false,
+      "stage_c_passed": false
+    },
+    {
+      "stage_b_rank": 2,
+      "normalized_thresholds": [1.394335512591, 1.182281637461, 2.541865832742, 1.370107435447, 2.16029209642],
+      "actual_net_usd": 101.673666666667,
+      "stressed_net_usd": 97.719333333337,
+      "actual_closed_balance_drawdown_pct": 9.15,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention_vs_exact_v8": 0.752701396369,
+      "economic_gate_passed": true,
+      "dominating_native_gate_ablations": ["RC64"],
+      "causal_nondominance_passed": false,
+      "stage_c_passed": false
+    },
+    {
+      "stage_b_rank": 3,
+      "normalized_thresholds": [1.394335512591, 1.182281637461, 5.077763508565, 1.069088757182, 1.985490860366],
+      "actual_net_usd": 119.5505,
+      "stressed_net_usd": 115.74616666667,
+      "actual_closed_balance_drawdown_pct": 15.371483340797,
+      "minimum_balance_usd": 90.838,
+      "stressed_retention_vs_exact_v8": 0.891556443361,
+      "economic_gate_passed": true,
+      "dominating_native_gate_ablations": ["Intraday"],
+      "causal_nondominance_passed": false,
+      "stage_c_passed": false
+    }
+  ],
+  "one_component_native_gate_ablation_deltas": [
+    {
+      "stage_b_rank": 1,
+      "deltas": [
+        {"component": "RC61", "stressed_net_delta_usd": 37.729666666668, "drawdown_delta_points": 1.381826514011, "dominates_center": false},
+        {"component": "RC64", "stressed_net_delta_usd": -1.687, "drawdown_delta_points": 4.908688552239, "dominates_center": false},
+        {"component": "Cross", "stressed_net_delta_usd": -24.164333333333, "drawdown_delta_points": 2.210761521525, "dominates_center": false},
+        {"component": "Intraday", "stressed_net_delta_usd": 8.041333333333, "drawdown_delta_points": -1.66925548965, "dominates_center": true},
+        {"component": "Return", "stressed_net_delta_usd": -3.872, "drawdown_delta_points": 0.294560898682, "dominates_center": false}
+      ]
+    },
+    {
+      "stage_b_rank": 2,
+      "deltas": [
+        {"component": "RC61", "stressed_net_delta_usd": 36.054666666668, "drawdown_delta_points": 2.057862048974, "dominates_center": false},
+        {"component": "RC64", "stressed_net_delta_usd": 16.628, "drawdown_delta_points": 0.0, "dominates_center": true},
+        {"component": "Cross", "stressed_net_delta_usd": -31.501333333333, "drawdown_delta_points": 2.822473000805, "dominates_center": false},
+        {"component": "Intraday", "stressed_net_delta_usd": -0.677499999999, "drawdown_delta_points": 4.877124566369, "dominates_center": false},
+        {"component": "Return", "stressed_net_delta_usd": 23.147333333334, "drawdown_delta_points": 0.054932853594, "dominates_center": false}
+      ]
+    },
+    {
+      "stage_b_rank": 3,
+      "deltas": [
+        {"component": "RC61", "stressed_net_delta_usd": 32.262666666668, "drawdown_delta_points": 4.568045226956, "dominates_center": false},
+        {"component": "RC64", "stressed_net_delta_usd": -1.687, "drawdown_delta_points": 0.619137669905, "dominates_center": false},
+        {"component": "Cross", "stressed_net_delta_usd": -32.260666666666, "drawdown_delta_points": -0.206613817407, "dominates_center": false},
+        {"component": "Intraday", "stressed_net_delta_usd": 8.041333333333, "drawdown_delta_points": 0.0, "dominates_center": true},
+        {"component": "Return", "stressed_net_delta_usd": 4.895333333334, "drawdown_delta_points": 0.053713080405, "dominates_center": false}
+      ]
+    }
+  ],
+  "causal_verdict": {
+    "economic_gate_pass_count": 3,
+    "causal_nondominance_pass_count": 0,
+    "stage_d_role_count": 0,
+    "interpretation": "All three immutable centers retained positive January-May economics and materially reduced closed-balance drawdown, but each contained at least one component restriction whose restoration to the exact-V8 native gate weakly improved both stressed net and drawdown with one strict improvement. The complete all-five suppression bundle is therefore causally nonconfirmed without validation retuning.",
+    "adjacent_component_specific_rescue_authorized": false
+  },
+  "succession": {
+    "stage_c_can_close_unit": false,
+    "stage_d_required": true,
+    "stage_d_input_roles": 0,
+    "locked_june_july_opened": false,
+    "stage_e_opened": false,
+    "mt5_runs": 0,
+    "required_next_action": "Record mandatory Stage D as a valid empty boundary, close U003 exhausted, freeze all component-specific and adjacent strength rescue, then recompare every active macro Program 1-5 and 7."
+  },
+  "scope": {
+    "exact_v8_only": true,
+    "v7_or_historical_lab_selection_input": false,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U003_STAGE_C_VALID_ALL_THREE_ECONOMIC_PASS_ZERO_CAUSAL_NONDOMINANCE_ZERO_STAGE_D_ROLES_NO_HOLDOUT_NO_MT5"
+}
