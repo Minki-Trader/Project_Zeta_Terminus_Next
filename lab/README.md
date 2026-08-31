@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
-현재 active research family는 없다. 독립 V8 Challenge Family 002 Program 1 / meso→macro `research/independent-cross-index-four-hour-barrier-onnx-challenge-v1/`은 strict-JSON 교정 재현까지 유효하게 끝났다. 8개 ONNX는 최대 확률차 `2.3841858e-7`, argmax 불일치 0이었지만 PROB55는 `508` normal days에 `4` starts, actual/stressed `-$4.6095 / -$4.8845`; PROB60/65는 `0` starts였다. 세 역할 모두 turnover·profit·both-year-positive gate를 실패해 complete passer가 없다. Durable result/closure는 `6,292 / 3,021` bytes at `D48621B6...3D4E1 / C8CFFCE7...15E3E`. 잠긴 2026, EA, MT5, Live는 열지 않았으며 closure가 원격에 도달한 뒤 전체 프로그램을 다시 비교한다.
+현재 active research family는 없다. Family 002 폐쇄 뒤 전체 프로그램 재비교는 최근 두 Program-1 outright 방향 모델의 인접 구제를 배제하고 Program 5 / meso→macro `independent-cross-index-residual-basket-adapter-challenge-v1`을 다음 준비 family로 선택했다. 이 구조는 단일 종목 방향 대신 인과적 rolling hedge relation으로 가장 이탈한 두 지수를 long/short pair로 묶고, 잔차 수렴·paired spread·minimum-lot distortion·basket risk를 직접 다룬다. Python adapter가 관계·잔차·두 leg 결정을, 별도 EA가 freshness·두 종목 계약·paired execution·보호·청산·복구를 소유한다. Audit는 `7,443` bytes / `B5C5602B0C291C6AB3B349D6B406FD2D0C560A09F95848A90244CDF9107BBF7D`; successor root와 outcome은 아직 열지 않았다.
 
 직전 Family 001 `research/independent-cross-index-hourly-adapter-challenge-v1/`은 세 역할 모두 turnover를 통과했지만 actual/stressed와 DD가 전부 실패해 잠긴 2026, EA와 MT5 전에 유효 adverse로 닫혔다. Durable result/closure는 `6,031 / 2,117` bytes at `09F30EDB...1A3D49 / 9E09B960...0FCCCA`다.
 
