@@ -22,3 +22,9 @@ For each of three Stage-B seeds:
 That is `72` variants per seed and `216` total. Fine robustness uses immediate neighbors within the same static seed and requires four eligible neighbors across three state axes. At most one robust center per static seed and three total may advance to validation and mandatory Stage D.
 
 No input staging, implementation or outcome begins until the Stage-B result and this Stage-C declaration reach `origin/main`. Stage C has zero MT5 authority and cannot close the Unit.
+
+## Frozen implementation boundary
+
+Declaration commit `3c973ee77dc8cb3dd27a938ac87abc469719a8ac` reached `origin/main` before staging. All three inputs are byte-equal, the Stage-B schema/status and three seed vectors match, and the state lattice is exactly `72 / 72 / 72`, `216` unique coordinates.
+
+With state disabled, the implementation reproduces exact V8 whole actual/stressed `+$409.81 / +$367.818` at `35.46%` actual DD and all three static-seed development paths at `+$150.105 / +$133.103`, `24.099813585%` DD, with zero state triggers. Config is `4,935` bytes / `3EEB32DA...118AD`; source is `53,504` bytes / `E7777B1C...3D602` and passes Python `3.13.9` syntax with NumPy `2.3.4`. No raw Stage-C output exists. Execution waits for the implementation freeze to reach `origin/main`.

@@ -1,0 +1,104 @@
+{
+  "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-v1-implementation-freeze",
+  "recorded_date_local": "2026-08-31",
+  "status": "IMPLEMENTATION_FROZEN_PRE_OUTCOME",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING",
+  "authority": {
+    "declaration_commit_on_origin_main": "3c973ee77dc8cb3dd27a938ac87abc469719a8ac",
+    "declaration_path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v1/evidence/DD20_V8_CAUSAL_DRAWDOWN_STATE_SHAPING_PROXY_V1_DECLARATION.json",
+    "declaration_bytes": 8170,
+    "declaration_sha256": "A170555D95914E8FEF33EFD37DCCDA25ECD608DFE2ABE3A140154D391A8BA1D3",
+    "unit_closure_authority": false,
+    "stage_c_mt5_authority": 0,
+    "lab_opened": false,
+    "new_entry_strategy": false
+  },
+  "staged_inputs": [
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/input/research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/input/research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    },
+    {
+      "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/input/stage-b-proxy-result.json",
+      "bytes": 31666,
+      "sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8"
+    }
+  ],
+  "implementation": {
+    "config": {
+      "path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v1/config/proxy-contract.json",
+      "bytes": 4935,
+      "lines": 148,
+      "sha256": "3EEB32DA2D69FEA90C9C94F4C9F1DFB8A89604590CBA709DB3ECF66129D118AD"
+    },
+    "script": {
+      "path": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v1/proxy/run_proxy.py",
+      "bytes": 53504,
+      "lines": 1230,
+      "sha256": "E7777B1CCC15B1EC8A383B05E7FFB9A4255511A9A930EF4A9BD39C61C8E3D602"
+    },
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "syntax_compile": "PASSED"
+  },
+  "outcome_free_structural_precheck": {
+    "lifecycle_rows_loaded": 965,
+    "stage_b_static_seeds_loaded": 3,
+    "state_parameterizations": 216,
+    "coordinate_unique_count": 216,
+    "per_seed_parameterizations": [72, 72, 72],
+    "raw_output_exists": false,
+    "candidate_outcome_opened": false
+  },
+  "static_control_reproduction": {
+    "exact_v8_whole": {
+      "actual_net_usd": 409.81,
+      "stressed_net_usd": 367.818,
+      "actual_closed_balance_drawdown_pct": 35.46,
+      "passed": true
+    },
+    "three_seed_development": {
+      "actual_net_usd_each": [150.105, 150.105, 150.105],
+      "stressed_net_usd_each": [133.103, 133.103, 133.103],
+      "actual_closed_balance_drawdown_pct_each": [24.099813585, 24.099813585, 24.099813585],
+      "state_trigger_count_each": [0, 0, 0],
+      "passed": true
+    }
+  },
+  "causal_transition_implementation": {
+    "state_input": "candidate actual closed balance and its causal high-water mark only",
+    "activation_order": "An admitted close first updates balance and drawdown; only then may it activate state, so its own position and close are never rescaled.",
+    "triggering_close_excluded_from_hold": "Hold counting uses the state-active snapshot taken before transition; a newly triggering close therefore contributes zero.",
+    "future_birth_effect": "A later birth observes active state and multiplies 0.01 * day multiplier * static weight before 0.01-lot rounding.",
+    "changed_birth_telemetry": "A birth counts as changed only when its post-rounding target steps differ from the inactive static target.",
+    "release_order": "A close that began with active state increments hold; release requires both the declared count and current drawdown at or below trigger minus hysteresis.",
+    "retrigger": "After release, the same close cannot retrigger because the release threshold is strictly below the trigger; later accepted closes may retrigger.",
+    "existing_positions_resized_or_force_closed": false,
+    "source_rejected_or_new_opportunity_synthesized": false
+  },
+  "frozen_selection": {
+    "primary": "positive development and both years, at least one trigger and post-rounding changed development birth, at least 80% exact-V8 development stressed net, actual DD at most 21.2%, and at least one point better than its own static seed",
+    "fallback": "same positivity/state-materiality, at least 75% exact-V8 development stressed net, and at least two points better than its own static seed",
+    "robustness": "at least four eligible immediate neighbors across three state axes within the same static seed",
+    "maximum_centers_per_seed": 1,
+    "maximum_total_centers": 3,
+    "holdout_alternate_substitution": false,
+    "stage_d_required": true
+  },
+  "pre_outcome": {
+    "proxy_executed": false,
+    "mt5_executed": false,
+    "external_data": false,
+    "live_changed": false,
+    "lab_changed": false
+  },
+  "next_action": "Commit and push this implementation freeze, then execute the unchanged 216-variant Stage-C proxy exactly once.",
+  "marker": "UNIT_001_STAGE_C_216_VARIANT_CAUSAL_FUTURE_BIRTH_RISK_STATE_IMPLEMENTATION_FROZEN_PREOUTCOME_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}
