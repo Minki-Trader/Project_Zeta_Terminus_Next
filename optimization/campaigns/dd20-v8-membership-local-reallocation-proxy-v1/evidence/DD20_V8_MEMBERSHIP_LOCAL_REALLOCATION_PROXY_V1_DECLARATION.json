@@ -1,0 +1,111 @@
+{
+  "schema": "zeta-next-dd20-v8-membership-local-reallocation-proxy-v1-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME",
+  "optimization_unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+  "unit_stage": "B_WITHIN_MEMBERSHIP_EXECUTABLE_REALLOCATION",
+  "primary_macro_program": 5,
+  "authority": {
+    "unit_declaration_commit_on_origin_main": "7b3ff512018ca2aafc557b1e414874e2675ba29f",
+    "unit_declaration_sha256": "FEB87439F2B034C4EF004F8A53A4E5FA377FE860FC3FF852AA16757060D313F3",
+    "stage_a_result_commit_on_origin_main": "1ba952f16e81e1c0dab7fccbadd60e390cde3406",
+    "stage_a_raw_result": {
+      "path": "optimization/artifacts/raw/dd20-v8-existing-component-membership-reconstruction-proxy-v1/output/proxy-result.json",
+      "bytes": 28410,
+      "sha256": "09FADF11AB51BF46EED82342DE1D57BBFD6CEFD1CD691E40C9C8AEECA4120DB8",
+      "status": "VALID_PROXY_COMPLETE_STAGE_A_ROBUST_MEMBERSHIP_SEEDS_STAGE_B_REQUIRED_NO_MT5"
+    },
+    "stage_a_durable_result": {
+      "path": "optimization/campaigns/dd20-v8-existing-component-membership-reconstruction-proxy-v1/evidence/DD20_V8_EXISTING_COMPONENT_MEMBERSHIP_RECONSTRUCTION_PROXY_V1_RESULT.json",
+      "bytes": 8476,
+      "sha256": "1AD8E9F96DDC11BD5D6A6349E19D37705EA02BA8A0C586A8928D084C80038C7C"
+    }
+  },
+  "frozen_future_inputs": [
+    {"role": "exact-V8 lifecycle", "bytes": 1753587, "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"},
+    {"role": "exact-V8 candidate/admission", "bytes": 5469352, "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"},
+    {"role": "complete Stage-A raw result", "bytes": 28410, "sha256": "09FADF11AB51BF46EED82342DE1D57BBFD6CEFD1CD691E40C9C8AEECA4120DB8"},
+    {"role": "durable Stage-A result", "bytes": 8476, "sha256": "1AD8E9F96DDC11BD5D6A6349E19D37705EA02BA8A0C586A8928D084C80038C7C"}
+  ],
+  "immutable_membership_centers": [
+    {
+      "stage_a_rank": 1,
+      "membership_mask_integer": 7,
+      "active_components": ["RC61", "RC64", "Cross"],
+      "weights": [1.25, 1.5, 1.75, 0.0, 0.0],
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "stage_a_rank": 2,
+      "membership_mask_integer": 22,
+      "active_components": ["RC64", "Cross", "Return"],
+      "weights": [0.0, 1.5, 1.5, 0.0, 1.25],
+      "aggregate_risk_fraction": 0.12
+    },
+    {
+      "stage_a_rank": 3,
+      "membership_mask_integer": 31,
+      "active_components": ["RC61", "RC64", "Cross", "Intraday", "Return"],
+      "weights": [1.25, 1.5, 1.5, 2.0, 1.25],
+      "aggregate_risk_fraction": 0.12
+    }
+  ],
+  "reallocation_lattice": {
+    "active_component_offsets": [-0.25, 0.0, 0.25],
+    "active_component_lower_bound": 0.5,
+    "active_component_upper_bound": "that component's exact-V8 weight",
+    "inactive_components_remain_zero": true,
+    "passive_remains_zero": true,
+    "base_position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "center_local_unique_counts": [18, 18, 162],
+    "raw_parameterizations": 198,
+    "deduplicated_exact_weight_parameterizations": 198,
+    "duplicates_removed": 0,
+    "reason_no_cross_center_duplicates": "The three frozen nonzero membership masks differ, so no exact weight vector can cross membership roots."
+  },
+  "executable_proxy": {
+    "model": "Inherit Stage A's exact V8 daily stressed-balance volume ladder, 0.01 lot rounding, conservative capital, fixed 0.04 position risk and fixed 0.12 aggregate admission.",
+    "accepted_source_path_only": true,
+    "freed_capacity_blocked_opportunity_profit_credit_usd": 0.0,
+    "observed_unknown_capacity_blocked_existing_v8_opportunities": 143,
+    "open_equity_or_native_stop_claimed": false
+  },
+  "periods": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_2024": ["2024-01-01T00:00:00", "2025-01-01T00:00:00"],
+    "development_2025": ["2025-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "validation_opened": false,
+    "locked_holdout_opened": false
+  },
+  "eligibility_and_robustness": {
+    "common": "Development, 2024 and 2025 actual net, stressed net and minimum balance must each be positive.",
+    "primary": "Development stressed net retains at least 75% of exact-V8 development stressed net and actual closed-balance DD is no more than 27%.",
+    "fallback": "Development stressed net retains at least 65% of exact-V8 development stressed net and actual DD improves by at least five percentage points versus exact-V8 development.",
+    "fine_neighbor": "Within the same immutable membership root, two vectors are adjacent only when one active weight differs by exactly one 0.25 grid step and every other weight is equal.",
+    "minimum_eligible_fine_neighbors": 4,
+    "minimum_active_weight_axes_spanned": 3,
+    "center_ranking": "Highest weakest annual stressed net, stressed-net-to-DD efficiency, stressed net, lower DD, then canonical center/weight order.",
+    "maximum_stage_c_static_seeds": 3,
+    "membership_hamming_separation_then_rank_fill": 2,
+    "no_robust_eligible_rule": "Advance up to three declared near misses by the same normalized annual-positivity, retention and DD deficit used in Stage A. No Stage-B nonconfirmation can close U002."
+  },
+  "succession": {
+    "stage_b_can_close_unit": false,
+    "stage_c_required": true,
+    "stage_c_name": "C_COMPONENT_LOCAL_CAUSAL_LOSS_SUSPENSION",
+    "stage_b_mt5_paths": 0,
+    "maximum_native_paths_after_all_proxy_stages": 2
+  },
+  "scope": {
+    "parameter_only_program": false,
+    "this_stage_changes_code_mechanism": false,
+    "this_stage_purpose": "Exhaust executable local allocation inside all three frozen memberships before the declared component-local code mechanism.",
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false
+  },
+  "input_staging_boundary": "No input, config, proxy implementation or result may be created until this declaration commit is verified on origin/main.",
+  "marker": "V8_OPT_U002_STAGE_B_DECLARED_198_WITHIN_MEMBERSHIP_EXECUTABLE_REALLOCATIONS_PREINPUT_PREOUTCOME_NO_VALIDATION_NO_MT5"
+}

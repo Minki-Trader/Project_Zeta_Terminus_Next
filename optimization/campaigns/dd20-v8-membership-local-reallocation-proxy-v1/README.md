@@ -1,0 +1,19 @@
+# DD20 V8 Membership Local Reallocation Proxy V1
+
+This is mandatory Stage B of `V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION`. Stage A completed all `79` unique existing-component memberships and froze three Hamming-diverse robust centers. Stage B keeps each center's membership immutable and exhausts executable local allocation before any component-local causal code mechanism.
+
+## Frozen lattice
+
+Each active component receives offsets `-0.25 / 0 / +0.25`, clipped to `0.50` through its exact-V8 weight. Inactive components remain exactly zero. Passive is zero, base position risk is `0.04`, and aggregate risk is `0.12`.
+
+The RC61/RC64/Cross and RC64/Cross/Return centers each produce `18` unique vectors. The all-five center produces `162`. Different nonzero membership masks make the complete `198`-vector union duplicate-free.
+
+## Judgment
+
+Stage B uses only 2024-2025 development and the same primary/fallback economic gates as Stage A. A robust role needs at least four eligible one-step neighbors spanning at least three active weight axes within its membership root. At most three robust or declared near-miss centers advance to Stage C. Stage B cannot close the Unit, open validation/holdout or authorize MT5.
+
+The accepted-source proxy gives zero profit credit to the `143` source-blocked existing-V8 opportunities. It creates no entry opportunity and changes no Live or Lab artifact.
+
+## Current boundary
+
+The declaration is pre-input, pre-implementation and pre-outcome. Staging begins only after the declaration reaches `origin/main`.
