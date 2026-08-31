@@ -1,0 +1,61 @@
+{
+  "schema": "zeta-next-v8-optimization-unit-002-declaration-input-hash-correction-v1",
+  "recorded_date_local": "2026-08-31",
+  "status": "CORRECTED_PREIMPLEMENTATION_INPUT_HASH_TRANSCRIPTION_NO_ECONOMIC_OUTCOME",
+  "original_declaration": {
+    "path": "optimization/campaigns/dd20-v8-existing-component-membership-reconstruction-proxy-v1/evidence/DD20_V8_EXISTING_COMPONENT_MEMBERSHIP_RECONSTRUCTION_UNIT_002_DECLARATION_V1.json",
+    "bytes": 15778,
+    "sha256": "FEB87439F2B034C4EF004F8A53A4E5FA377FE860FC3FF852AA16757060D313F3",
+    "commit_on_origin_main": "7b3ff512018ca2aafc557b1e414874e2675ba29f"
+  },
+  "fault": {
+    "field": "frozen_future_inputs[3].sha256",
+    "role": "durable Unit-001 Stage-B interpretation",
+    "declared_incorrect_sha256": "D569A72E3DE317874B49568815D3158789242787DDA8CF38AE01FD296C0A74E4",
+    "correct_sha256": "D569A72E9647287D165C341FEDCA62D15FAFF89CF3FF0874F584285E591A74E4",
+    "classification": "FULL_HASH_TRANSCRIPTION_FAULT",
+    "economic_fault": false,
+    "reason": "The declared path, 6,804-byte size and abbreviated D569A72E...A74E4 identity referred to the intended durable Stage-B result, but the expanded middle hash digits were transcribed incorrectly."
+  },
+  "corrected_input_authority": {
+    "role": "durable Unit-001 Stage-B interpretation",
+    "source_path": "optimization/campaigns/dd20-v8-clean-executable-basin-refinement-proxy-v1/evidence/DD20_V8_CLEAN_EXECUTABLE_BASIN_REFINEMENT_PROXY_V1_RESULT.json",
+    "staged_path": "optimization/artifacts/raw/dd20-v8-existing-component-membership-reconstruction-proxy-v1/input/stage-b-durable-result.json",
+    "bytes": 6804,
+    "sha256": "D569A72E9647287D165C341FEDCA62D15FAFF89CF3FF0874F584285E591A74E4",
+    "source_and_staged_byte_equal": true,
+    "schema": "zeta-next-dd20-v8-clean-executable-basin-refinement-proxy-v1-result",
+    "status": "VALID_PROXY_COMPLETE_STAGE_B_SURVIVOR_STAGE_C_REQUIRED_NO_MT5",
+    "development_center_count": 3,
+    "development_center_weights": [
+      [1.25, 1.5, 1.5, 2.0, 1.25, 0.0],
+      [1.25, 1.5, 1.75, 2.25, 0.75, 0.0],
+      [1.25, 1.5, 2.0, 2.25, 1.25, 0.0]
+    ],
+    "aggregate_risk_fraction_each": 0.12
+  },
+  "unchanged_declaration_authority": {
+    "all_other_fields_unchanged": true,
+    "unit_id": "V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION",
+    "primary_macro_program": 5,
+    "ordered_stage_count": 5,
+    "stage_a_raw_roles": 93,
+    "stage_a_deduplicated_roles": 79,
+    "new_entry_strategy_action": "PROHIBITED_NOT_OPENED_NOT_IMPLEMENTED"
+  },
+  "timing_and_containment": {
+    "four_inputs_copied_after_declaration_reached_origin_main": true,
+    "staged_input_was_not_used_for_economic_execution": true,
+    "u002_config_exists": false,
+    "u002_logic_implementation_exists": false,
+    "copied_unmodified_unit_001_proxy_template_exists_without_config": true,
+    "u002_output_exists": false,
+    "mt5_executed": false,
+    "live_changed": false,
+    "lab_or_new_entry_work_opened": false,
+    "external_data_used": false,
+    "broker_account_position_order_deal_query": false
+  },
+  "succession_rule": "This correction must reach origin/main before a U002 config is created, the copied template is changed into U002 logic, an implementation freeze is recorded or any proxy outcome is opened.",
+  "marker": "V8_OPT_U002_DECLARATION_DURABLE_STAGE_B_FULL_HASH_TRANSCRIPTION_CORRECTED_PREIMPLEMENTATION_NO_OUTCOME"
+}

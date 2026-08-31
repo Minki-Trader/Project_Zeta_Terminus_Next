@@ -26,4 +26,6 @@ Stages A and B cannot close the Unit. A correction to environment, design or imp
 
 ## Current boundary
 
-The declaration is pre-input, pre-implementation and pre-outcome. Inputs, proxy code and results remain absent until the declaration commit is verified on `origin/main`. No MT5, Lab, new-entry, Live-package, Live-runtime or order-authority change occurred.
+The declaration reached `origin/main` at `7b3ff51`. During authorized input staging, the expanded full SHA for the durable Stage-B interpretation was found to contain a transcription error even though its path, byte size and abbreviated identity named the intended file. `DD20_V8_EXISTING_COMPONENT_MEMBERSHIP_RECONSTRUCTION_UNIT_002_DECLARATION_INPUT_HASH_CORRECTION_V1.json` replaces only that full hash with `D569A72E9647287D165C341FEDCA62D15FAFF89CF3FF0874F584285E591A74E4`.
+
+The correction is pre-implementation and pre-outcome. Four input copies exist byte-equal, and an unchanged Unit-001 proxy template was copied without a config, but no U002 logic, executable configuration, result or economic run exists. Implementation may resume only after the correction reaches `origin/main`. No MT5, Lab, new-entry, Live-package, Live-runtime or order-authority change occurred.
