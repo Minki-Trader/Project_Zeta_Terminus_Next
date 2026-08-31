@@ -33,7 +33,9 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
-No Optimization campaign is open while the completed post-Unit-001 whole-map recompare awaits `origin/main`. Programs 1-5 and 7 were compared from exact V8 and completed Unit outputs only. Program 5 has the sole ready successor question: complete membership reconstruction of the existing five V8 components, provisionally `V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION`. Its three static seeds × 31 nonempty masks yield `93` raw and `79` deduplicated exact membership roles. No successor is declared or staged before the audit boundary is pushed.
+`V8-OPT-U002-MEMBERSHIP-RECONSTRUCTION` is the sole active Optimization Unit under Program 5. The post-Unit-001 whole-map audit reached `origin/main` at `8318030` before U002 opened. Its pre-outcome declaration freezes a complete `79`-role existing-component membership map, active-member executable reallocation, component-local causal loss suspension, six-block temporal/cost stability and at most one native control/finalist pair. The declaration is `campaigns/dd20-v8-existing-component-membership-reconstruction-proxy-v1/evidence/DD20_V8_EXISTING_COMPONENT_MEMBERSHIP_RECONSTRUCTION_UNIT_002_DECLARATION_V1.json`, `15,778` bytes / `FEB87439...313F3`. No input, config, proxy source, result or MT5 path is staged until this declaration reaches `origin/main`.
+
+U002 may autonomously change isolated Optimization code and mechanisms, remove existing strategies and reconstruct the portfolio, but it may only suppress or resize exact-V8 opportunities. New symbols, timeframes, signal families, directions, opportunity timestamps or entry loosening are new-entry Lab research and remain prohibited. The `143` observed aggregate-blocked existing opportunities have no outcomes and receive zero proxy profit credit.
 
 `campaigns/dd20-v8-temporal-cost-stability-empty-closure-v1/` is closed `VALID_EMPTY_STAGE_D_NO_SURVIVING_ROLE_UNIT_001_CLOSED_EXHAUSTED_NO_MT5`. Corrected Stage C emitted zero authorized roles, so all six declared Stage-D blocks have zero input and zero economic rows; conditional Stage E remained closed.
 
