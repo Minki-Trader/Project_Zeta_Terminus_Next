@@ -1,0 +1,46 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-monotone-microfrontier-proxy-v1-invalid-model-closure",
+  "recorded_date_local": "2026-08-31",
+  "status": "CORRECTION_REQUIRED_INVALID_FRESH_CAPITAL_AND_POSITION_RISK_MODEL_NO_ECONOMIC_VERDICT",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "A_STATIC_MONOTONE_MICROFRONTIER_INVALID_PREDECESSOR",
+  "execution": {
+    "raw_output": "optimization/artifacts/raw/dd20-v8-clean-monotone-microfrontier-proxy-v1/output/proxy-result.json",
+    "bytes": 27575,
+    "sha256": "9403EDE23082D1B6B57E6988D15C5154D2A9CACECB9323DF81C630922C400367",
+    "script_reported_status_superseded": "VALID_PROXY_COMPLETE_LOCKED_HOLDOUT_NONCONFIRMATION_NO_MT5",
+    "wall_time_seconds": 1.8295852,
+    "mt5_runs": 0,
+    "raw_candidate_rows": 34560,
+    "economic_rows": 0
+  },
+  "invalidity": {
+    "source_code_truth": [
+      "UpdateSizingDay sets day_volume_multiplier to 1 + floor(max(0, stressed_balance - 100) / 150) at each server day.",
+      "NormalizedComponentVolume sets requested volume to 0.01 * day_volume_multiplier * component multiplier and rounds on the broker volume step.",
+      "InpMaximumPositionRiskFraction enters position_budget and protective-stop construction; it does not multiply component volume.",
+      "Aggregate admission uses tracked position budgets against conservative risk capital times aggregate-risk fraction."
+    ],
+    "v1_behavior": "V1 reset a period balance to $100 but rescaled each already accumulated source volume by candidate effective risk, including base-position-risk. It did not rebuild the candidate's own daily volume multiplier.",
+    "decisive_symptom": "The locked holdout emitted 0 accepted and 56 aggregate-skipped source births even though the V8 executable would rematerialize base volumes from the fresh $100 day multiplier.",
+    "scope": "All V1 candidate, plateau, validation, winner, whole-path and holdout numbers are invalid for economic judgment. Exact-source hash/net/DD diagnostics remain input-integrity facts only."
+  },
+  "corrective_design": {
+    "successor": "optimization/campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/",
+    "base_position_risk_fraction": 0.04,
+    "candidate_volume": "Recomputed causally from candidate stressed balance, the fixed $150 daily ladder, 0.01 base volume and component weight.",
+    "position_budget": "Candidate conservative capital * 0.04 * executable component volume multiplier.",
+    "aggregate_budget": "Candidate conservative capital * candidate aggregate-risk fraction.",
+    "additional_exact_v8_input": "The clean candidate ledger is joined one-to-one to all 965 lifecycle births to prove source volume, risk-capital and admission context before opening outcomes.",
+    "newly_blocked_or_freed_opportunities": "Still receive no invented outcome; the accepted-source-path limitation remains explicit."
+  },
+  "unit_and_authority": {
+    "unit_closed": false,
+    "stage_b_opened": false,
+    "reason": "Engineering/design correction must complete corrected Stage A before mandatory adjacent refinement.",
+    "lab_opened": false,
+    "live_changed": false,
+    "mt5_authority_consumed": 0
+  },
+  "marker": "V1_PROXY_OUTPUT_INVALID_SOURCE_VOLUME_AND_POSITION_RISK_MODEL_NO_ECONOMIC_VERDICT_UNIT_001_CONTINUES_TO_EXECUTABLE_V2"
+}

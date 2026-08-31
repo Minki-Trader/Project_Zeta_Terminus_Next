@@ -33,7 +33,9 @@ No optimization result changes Live automatically. Any later promotion requires 
 
 ## Active campaign
 
-`campaigns/dd20-v8-clean-monotone-microfrontier-proxy-v1/` is the sole open campaign and Stage A of `V8-OPT-U001-PORTFOLIO-DD`. It uses only the clean exact-V8 accepted lifecycle path and maps `34,560` monotone risk/composition points. Stage A cannot close the Unit. Regardless of its result, the predeclared half-step basin refinement follows; the Unit then consumes its causal drawdown-state layer and temporal/cost stress before either freezing one MT5 finalist or closing as exhausted. MT5 remains capped at one exact V8 control plus one unchanged finalist.
+`campaigns/dd20-v8-clean-executable-microfrontier-proxy-v2/` is the sole open campaign at a declaration-only corrected Stage-A boundary for `V8-OPT-U001-PORTFOLIO-DD`. It uses only the two clean exact-V8 ledgers, fixes base-position-risk at `0.04`, and maps `8,640` component-weight/aggregate-cap paths through V8's own daily stressed-balance sizing sequence. The exact source point must reproduce all `965` birth/open joins, volume, net and actual balance DD before outcomes. No input staging or implementation begins before its declaration reaches `origin/main`.
+
+`campaigns/dd20-v8-clean-monotone-microfrontier-proxy-v1/` is closed `CORRECTION_REQUIRED_INVALID_FRESH_CAPITAL_AND_POSITION_RISK_MODEL_NO_ECONOMIC_VERDICT`. It improperly treated base-position-risk as a volume multiplier and carried accumulated source volume into fresh `$100` periods; all `34,560` candidate rows and the 0-trade holdout are invalid for economics. MT5 count is zero and Unit 001 remains open.
 
 `campaigns/dd20-paired-clean-requal-mt5-v2/` is closed `VALID_CLEAN_HISTORY_FIXED_PAIRED_CANDIDATE_NOT_REQUALIFIED_NO_LIVE_AUTHORITY`. Its complete clean exact-V8 candidate lifecycle ledger is the source of Stage A; its failed requalification gates remain unchanged.
 

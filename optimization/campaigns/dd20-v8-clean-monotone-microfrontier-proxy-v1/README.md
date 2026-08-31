@@ -1,5 +1,11 @@
 # DD20 V8 Clean Monotone Microfrontier Proxy V1
 
+## Final authority
+
+V1 is closed `CORRECTION_REQUIRED_INVALID_FRESH_CAPITAL_AND_POSITION_RISK_MODEL_NO_ECONOMIC_VERDICT`. Its single completed raw output is preserved at `27,575` bytes / SHA-256 `9403EDE23082D1B6B57E6988D15C5154D2A9CACECB9323DF81C630922C400367`, but no candidate number, plateau, validation result or locked-holdout result is economic evidence.
+
+The implementation incorrectly scaled observed source volume by `candidate weight × candidate base-position-risk`. Exact V8 instead derives component volume from base volume, the candidate's own daily stressed-balance multiplier and component weight; base-position-risk controls protective-stop budget rather than component volume. Resetting balance to `$100` while retaining late source volumes consequently made all `56` locked-holdout births fail aggregate admission. This is a validity-design defect, not candidate failure. It changes no Live state, runs no MT5 and cannot close `V8-OPT-U001-PORTFOLIO-DD`. Corrected Stage A is versioned at `../dd20-v8-clean-executable-microfrontier-proxy-v2/`.
+
 This campaign is Stage A of `V8-OPT-U001-PORTFOLIO-DD`, the first serial Unit in the exact-V8 long-horizon deep-optimization program. It asks whether the clean V8 accepted lifecycle path contains a broad, locally stable risk/composition region that materially reduces closed-balance drawdown while retaining most of V8's stressed profit. V8 is the economic parent; V7 and historical Lab results do not select or tune this Unit.
 
 ## Pre-outcome direction amendment

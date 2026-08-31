@@ -1,0 +1,128 @@
+{
+  "schema": "zeta-next-dd20-v8-clean-executable-microfrontier-proxy-v2-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_OUTCOME_UNOPENED",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "A_EXECUTABLE_MODEL_CORRECTION_V2",
+  "predecessor": {
+    "campaign": "optimization/campaigns/dd20-v8-clean-monotone-microfrontier-proxy-v1/",
+    "final_status": "CORRECTION_REQUIRED_INVALID_FRESH_CAPITAL_AND_POSITION_RISK_MODEL_NO_ECONOMIC_VERDICT",
+    "economic_rows": 0,
+    "mt5_runs": 0
+  },
+  "v8_only_scope": {
+    "economic_parent": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v7_economic_input": false,
+    "lab_economic_input": false,
+    "legacy_optimization_economic_input": false,
+    "external_input": false,
+    "new_entry_strategy": false,
+    "code_or_mechanism_change_allowed_in_later_unit_stages": true
+  },
+  "inputs": [
+    {
+      "role": "matched accepted lifecycle outcomes",
+      "source_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/candidate-valid-nonconfirmation/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaTerminusNext/optimization/dd20-pcr2/research/research-lifecycles.csv",
+      "staged_name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791",
+      "rows": 2170,
+      "births": 965,
+      "closes": 965
+    },
+    {
+      "role": "exact V8 signal, volume, risk-capital and admission context",
+      "source_path": "optimization/artifacts/raw/dd20-paired-clean-requal-mt5-v2/candidate-valid-nonconfirmation/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaTerminusNext/optimization/dd20-pcr2/research/research-candidates.csv",
+      "staged_name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678",
+      "position_open_rows": 965,
+      "unique_component_time_open_keys": 965
+    }
+  ],
+  "required_anchor_reproduction": {
+    "birth_to_position_open_join": "965/965 one-to-one",
+    "source_component_volume_matches": 965,
+    "accepted_lifecycles": 965,
+    "actual_net_usd": 409.81,
+    "stressed_net_usd": 367.818,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "net_tolerance_usd": 1e-07,
+    "drawdown_tolerance_points": 0.01,
+    "failure_class": "CORRECTION_REQUIRED_NO_CANDIDATE_OUTCOME"
+  },
+  "executable_model": {
+    "reference_capital_usd": 100.0,
+    "base_volume_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "addition_step_usd": 150.0,
+    "base_position_risk_fraction": 0.04,
+    "daily_volume_multiplier": "1 + floor(max(0, candidate stressed balance - 100) / 150)",
+    "component_volume": "round(0.01 * daily volume multiplier * component weight / 0.01) * 0.01",
+    "executable_component_multiplier": "component volume / (0.01 * daily volume multiplier)",
+    "position_budget": "candidate conservative capital * 0.04 * executable component multiplier",
+    "aggregate_budget": "candidate conservative capital * candidate aggregate fraction",
+    "source_equity_haircut": "min(1, source account equity / source account balance) from the matched clean V8 POSITION_OPEN row; it may reduce but never increase replay capital",
+    "close_net": "source actual/stressed close net times candidate volume/source volume",
+    "opportunity_universe": "Only the 965 exact-V8 accepted lifecycles; no rejected or new opportunity receives a synthetic result."
+  },
+  "lattice": {
+    "component_order": ["RC61", "RC64", "Cross", "Intraday", "Return", "Passive"],
+    "weight_grids": [
+      [1.25, 1.5, 1.75, 2.0],
+      [0.75, 1.0, 1.25, 1.5],
+      [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0],
+      [1.5, 1.75, 2.0, 2.25, 2.5],
+      [0.75, 1.0, 1.25, 1.5],
+      [0.0]
+    ],
+    "base_position_risk_grid": [0.04],
+    "aggregate_risk_grid": [0.12, 0.15, 0.18],
+    "parameterizations": 8640,
+    "exact_v8_effective_risk_nonexpansion": true
+  },
+  "temporal_and_selection_contract": {
+    "development": ["2024-01-01T00:00:00", "2026-01-01T00:00:00"],
+    "development_years_separately_positive": true,
+    "validation_fresh_100": ["2026-01-01T00:00:00", "2026-06-01T00:00:00"],
+    "locked_holdout_fresh_100": ["2026-06-01T00:00:00", "2026-08-01T00:00:00"],
+    "primary_stressed_retention": 0.8,
+    "primary_max_actual_closed_balance_drawdown_pct": 27.0,
+    "fallback_stressed_retention": 0.75,
+    "fallback_minimum_drawdown_improvement_points": 5.0,
+    "minimum_eligible_immediate_neighbors": 4,
+    "minimum_neighbor_axes": 3,
+    "maximum_validation_centers": 3,
+    "validation_and_holdout_max_drawdown_pct": 30.0,
+    "same_holdout_winner_only": true,
+    "maximum_proxy_finalists": 1
+  },
+  "unit_contract_correction": {
+    "stage_a_v2_can_close_unit": false,
+    "stage_b_required": true,
+    "stage_b_component_weight_offset": [-0.125, 0.0, 0.125],
+    "stage_b_aggregate_risk_offset": [-0.015, 0.0, 0.015],
+    "stage_b_base_position_risk_axis_removed": true,
+    "stage_c_rule": "Causal drawdown state scales future component volume/effective risk at fixed base position risk 0.04; it does not model base-position-risk as volume.",
+    "reason": "Changing base position risk changes protective-stop construction and cannot be identified by close-only accepted lifecycle scaling."
+  },
+  "limitations": [
+    "No newly freed-capacity opportunity outcome exists in the accepted lifecycle source.",
+    "Source equity context can hair-cut admission but cannot reconstruct candidate-specific open-equity paths.",
+    "Different capital ladders may alter native stop quantization; proxy output remains selection information and native MT5 is required for the sole finalist."
+  ],
+  "mt5_budget": {
+    "stage_a_runs": 0,
+    "maximum_unit_valid_economic_paths": 2,
+    "paths": ["exact V8-derived control", "one unchanged final Unit survivor"]
+  },
+  "pre_outcome_boundary": {
+    "input_staged": false,
+    "config_created": false,
+    "implementation_created": false,
+    "proxy_executed": false,
+    "mt5_executed": false,
+    "required_next_action": "Commit and push V1 invalid closure and this V2 declaration before staging either input."
+  },
+  "marker": "UNIT_001_STAGE_A_V1_INVALID_EXECUTABLE_MODEL_V2_DECLARED_V8_DAILY_SIZING_FIXED_POSITION_RISK_NO_LAB_NO_NEW_ENTRY_OUTCOME_UNOPENED"
+}
