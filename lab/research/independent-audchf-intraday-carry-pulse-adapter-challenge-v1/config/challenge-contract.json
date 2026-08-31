@@ -1,0 +1,350 @@
+{
+  "schema": "zeta-next-independent-audchf-intraday-carry-pulse-adapter-challenge-v1-contract",
+  "family": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/",
+  "program": {
+    "primary_macro_program": 2,
+    "name": "external_market_event",
+    "height": "micro_to_meso",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "claim": "develop a separately attributable automated strategy that beats exact V8",
+    "candidate_architecture_required": "Python_adapter_plus_EA",
+    "single_ea_novel_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "isolation": {
+    "candidate_root_is_self_contained": true,
+    "forbidden_runtime_or_include_roots": [
+      "live-dev/",
+      "optimization/",
+      "lab/mt5/",
+      "another lab family"
+    ],
+    "dedicated_runtime_after_declaration": "lab/runtime/independent-audchf-intraday-carry-pulse-adapter-challenge-v1-portable/",
+    "candidate_portfolio_if_native_stage_opens": "ZT-CHAL-F007-ACP1",
+    "candidate_magic_if_native_stage_opens": {
+      "US100": 260831971,
+      "US30": 260831972
+    },
+    "candidate_identity_distinct_from_v8": true,
+    "existing_runtime_cache_use": "selection-only path metadata; no existing runtime may be copied, read for prices or executed by this family"
+  },
+  "independence": {
+    "excluded_inputs": [
+      "Family 001 features, models, predictions, decisions, trades and outcomes",
+      "Family 002 tensors, labels, models, ONNX files, predictions, trades and outcomes",
+      "Family 003 pair fits, residuals, decisions, baskets and outcomes",
+      "Family 004 M15 features, virtual outcomes, online state, scores, decisions, trades and outcomes",
+      "Family 005 tensors, labels, GRU models, ONNX files, predictions, utilities, trades and outcomes",
+      "Family 006 opening states, response decisions, trades and outcomes",
+      "V1-V8 signals, opportunity timestamps, component labels, state and economics"
+    ],
+    "closed_external_contexts_not_reopened": [
+      "VIX level, percentile, trend, rate of change, window or alternate volatility index",
+      "Treasury rate magnitude, slope, inversion, maturity, timing or source substitution",
+      "XAUUSD, USDJPY or gold-yen joint state",
+      "broad-dollar level, magnitude, subindex, weekly state or another currency-index substitute",
+      "scheduled macro release, surprise, revision, policy, positioning, credit, balance sheet or text state"
+    ],
+    "material_distinctions": [
+      "one unconsumed broker-native AUDCHF external instrument rather than a US-index-only feature, target, opening body or residual basket",
+      "a completed intraday external event transfer rather than a daily or weekly context attached to existing V7/V8 lifecycles",
+      "same-local-slot causal ranks rather than an outcome-trained feature threshold or model",
+      "two frozen polar transfer responses rather than a post-outcome direction inversion",
+      "two simultaneous independent target lifecycles rather than one globally ranked target action"
+    ]
+  },
+  "selection_authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_WHOLE_MAP_RECOMPARE_V1.json",
+    "bytes": 11838,
+    "sha256": "1AFE04FEA5D4DA5C16A85215AD409CFC252A8B0F09214203063229CCAA299E32",
+    "commit": "b4625069ff0c29e5708687f1c264839a572990ba",
+    "selection_opened_price_or_candidate_outcomes": false
+  },
+  "source_inputs": {
+    "target_acquisition_receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    },
+    "target_series": {
+      "US30_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+        "bytes": 19018323,
+        "rows": 1617902,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+      },
+      "US100_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+        "bytes": 21213599,
+        "rows": 1618383,
+        "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+      }
+    },
+    "target_required_columns": [
+      "time",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "target_price_basis": "MT5 rate OHLC are Bid; recorded spread times point reconstructs Ask",
+    "target_point": 0.01,
+    "target_maximum_timestamp_exclusive": "2026-08-01T00:00:00",
+    "external_series_not_yet_acquired": {
+      "symbol": "AUDCHF",
+      "timeframe": "M1",
+      "requested_start_inclusive": "2023-07-01T00:00:00Z",
+      "requested_end_exclusive": "2026-08-01T00:00:00Z",
+      "required_columns": [
+        "time",
+        "open",
+        "high",
+        "low",
+        "close",
+        "tick_volume",
+        "spread",
+        "real_volume"
+      ],
+      "price_basis": "broker-native MT5 Bid OHLC; spread is retained for integrity but does not enter the signal",
+      "acquisition_path": "fresh copy_rates_range through the family-owned dedicated Portable after this declaration reaches origin/main",
+      "receipt_requirements": "pin executable, server, symbol specification, requested and returned boundaries, row count, exact columns, file bytes and SHA-256 without querying account, position, order or deal state",
+      "existing_cache_or_other_family_source_forbidden": true
+    },
+    "post_cutoff_rows_excluded": true
+  },
+  "periods": {
+    "structural_and_rank_warmup": "2023-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_role_max": 1,
+    "locked_external_and_target_price_values_may_open_only_for_one_complete_development_passer": true
+  },
+  "session_clock": {
+    "iana_zone": "America/New_York",
+    "decision_local_times": [
+      "10:00:00",
+      "10:30:00",
+      "11:00:00",
+      "11:30:00",
+      "12:00:00",
+      "12:30:00",
+      "13:00:00",
+      "13:30:00",
+      "14:00:00",
+      "14:30:00",
+      "15:00:00",
+      "15:30:00"
+    ],
+    "dst_rule": "the IANA timezone database in the Python adapter owns each local-date conversion",
+    "new_york_hours_are_control_not_signal": "the external AUDCHF pulse, not the clock, decides whether and which direction to act",
+    "no_time_slot_timezone_or_session_rescue_inside_v1": true
+  },
+  "external_event": {
+    "completed_interval": "the thirty exact AUDCHF M1 rows from decision time minus 30 minutes through decision time minus 1 minute inclusive",
+    "return": "Bid close of the final interval row divided by Bid open of the first interval row minus one",
+    "positive_return_semantics": "positive carry-risk impulse because AUD strengthens against CHF",
+    "negative_return_semantics": "negative carry-risk impulse because AUD weakens against CHF",
+    "zero_or_nonfinite_return": "no action",
+    "reference_population": "the same New York local decision slot on the previous 60 chronologically complete AUDCHF sessions, excluding current date and any incomplete interval",
+    "reference_length": 60,
+    "magnitude_statistic": "absolute completed-interval return",
+    "fixed_percentile": 0.75,
+    "nearest_rank": "sort the 60 prior absolute returns ascending and use one-indexed position ceil(0.75*60)=45",
+    "gate": "current absolute return must be nonzero and greater than or equal to the causal nearest-rank threshold",
+    "ties": "all exact equality cases pass; no epsilon or randomized tie break",
+    "no_alternate_pair_return_window_reference_length_percentile_rank_or_magnitude_rescue_inside_v1": true
+  },
+  "decision_geometry": {
+    "decision_time": "immediately after the external decision-minus-1 M1 bar completes",
+    "target_entry_time": "the exact US100 and US30 M1 row at decision time",
+    "target_future_path": "thirty exact target M1 rows from decision time through decision time plus 29 minutes inclusive",
+    "complete_current_slot": "external interval, both target entry/future timestamp paths, both causal target risk-distance histories and every required timestamp are complete",
+    "normal_trading_day": "New York local date with at least one structurally complete declared decision slot; zero-pulse and risk-blocked days remain in the denominator",
+    "lifecycle_start_count": "each accepted target symbol first fill counts once",
+    "maximum_positions_per_role": 2,
+    "maximum_positions_per_symbol": 1,
+    "prior_batch_must_settle_before_same-role_next-slot_entries": true,
+    "cross_target_ranking_or_filter": false
+  },
+  "target_risk_distance": {
+    "holding_interval_range": "target Bid high minus Bid low across the corresponding decision through decision-plus-29 half hour",
+    "causal_reference": "the same New York local decision slot on the previous 20 chronologically complete target sessions, excluding current date",
+    "reference_length": 20,
+    "statistic": "arithmetic median: mean of one-indexed sorted positions 10 and 11",
+    "risk_distance": "maximum of target point 0.01 and the causal median holding-interval range",
+    "current_or_future_target_range_used_for_entry_risk": false,
+    "role_or_direction_specific_distance": false,
+    "no_range_window_statistic_multiplier_or_volatility_rescue_inside_v1": true
+  },
+  "candidate_bundle": {
+    "roles": [
+      {
+        "role": "AUDCHF_PULSE_FOLLOW",
+        "positive_external_direction": "LONG both US100 and US30",
+        "negative_external_direction": "SHORT both US100 and US30"
+      },
+      {
+        "role": "AUDCHF_PULSE_FADE",
+        "positive_external_direction": "SHORT both US100 and US30",
+        "negative_external_direction": "LONG both US100 and US30"
+      }
+    ],
+    "both_roles_use_every_gated_structurally_complete_slot": true,
+    "both_targets_receive_the_same_role_direction": true,
+    "no_external_magnitude_beyond_gate_target_feature_spread_volume_clock_symbol_or_subgroup_filter": true,
+    "no_adjacent_direction_pair_window_rank_risk_or_exit_rescue_inside_v1": true
+  },
+  "position_and_proxy_execution": {
+    "initial_deposit_usd": 100.0,
+    "leverage": "1:100",
+    "long_entry": "entry-row Ask reconstructed as Bid open plus entry spread times point",
+    "short_entry": "entry-row Bid open",
+    "long_stop": "entry Ask minus one frozen risk distance, evaluated on Bid",
+    "long_take": "entry Ask plus 1.5 frozen risk distances, evaluated on Bid",
+    "short_stop": "entry Bid plus one frozen risk distance, evaluated on Ask",
+    "short_take": "entry Bid minus 1.5 frozen risk distances, evaluated on Ask",
+    "same_bar_stop_and_take": "adverse stop wins and exact threshold execution is used",
+    "maximum_hold": "thirty target M1 bars including the entry bar, then direction-specific close on decision plus 29",
+    "long_time_exit": "Bid close",
+    "short_time_exit": "Ask close reconstructed from Bid close plus that row's recorded spread",
+    "target_position_risk_fraction_of_slot_start_actual_balance": 0.02,
+    "hard_position_risk_cap_fraction_after_minimum_lot": 0.04,
+    "target_aggregate_risk_fraction_for_two_symbols": 0.04,
+    "hard_aggregate_risk_cap_fraction_after_minimum_lot": 0.08,
+    "slot_start_balance_snapshot_shared_by_both_target_sizings": true,
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_max_lots": 200.0,
+    "volume_rounding": "floor two-percent risk-distance volume to 0.01; use minimum 0.01 only when planned loss is at most four percent of slot-start actual balance",
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "actual_execution": "direction-specific Bid/Ask entry, barrier and time-exit prices",
+    "extra_stress": "subtract the same observed direction-specific actual spread burden once more",
+    "balance_compounding": true,
+    "exit_settlement_order": "chronological exit time, then frozen symbol order US100 before US30 on an exact tie",
+    "same_timestamp_batch_order": "settle the prior batch before snapshotting balance and sizing the new batch; within a new batch size US100 then US30 from the common snapshot",
+    "insolvency_or_nonfinite_balance": "block later entries without rewriting already open paths"
+  },
+  "adapter_ea_boundary": {
+    "python_adapter_owns": [
+      "fresh AUDCHF source and symbol-specification integrity",
+      "IANA New York local-date and decision-time conversion",
+      "exact external and target timestamp completeness",
+      "completed AUDCHF half-hour return and sixty-session same-slot nearest rank",
+      "FOLLOW or FADE direction for both targets",
+      "twenty-session same-slot target risk distance",
+      "decision schema, sequence, freshness and bounded decision evidence"
+    ],
+    "ea_must_own": [
+      "adapter schema, role, sequence and freshness validation",
+      "target symbol contract, tick size, tick value, lot and market-state validation",
+      "slot-start balance risk sizing and aggregate cap",
+      "fail-closed order submission and two-target reconciliation",
+      "protective stop, take and thirty-M1 timed close",
+      "ownership, persistence, restart recovery and bounded execution evidence"
+    ],
+    "ea_may_not_create_replace_filter_or_invert_adapter_direction": true,
+    "python_decision_tape_required_by_native_ea": true,
+    "native_tape_must_be_byte_pinned_and_reproduced_from_the_frozen_adapter": true
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "symbol_breadth_min": 2,
+    "decision_slot_breadth_min": 8,
+    "external_sign_breadth_required": [
+      "positive",
+      "negative"
+    ],
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net, then frozen role order",
+    "locked_confirmation_role_max": 1
+  },
+  "confirmation_and_whole_gates": {
+    "locked_2026_actual_and_stressed_positive": true,
+    "each_epoch_2024_2025_and_locked_2026_actual_and_stressed_positive": true,
+    "whole_actual_net_strictly_above_v8": 409.81,
+    "whole_stressed_net_strictly_above_v8": 367.818,
+    "whole_closed_balance_drawdown_pct_max": 37.39,
+    "whole_robust_recovery_strictly_above": 3.295860215,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "symbol_breadth_min": 2,
+    "decision_slot_breadth_min": 8,
+    "external_sign_breadth_required": [
+      "positive",
+      "negative"
+    ]
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "complete_python_adapter_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_victory": true
+  },
+  "native_escalation": {
+    "condition": "exactly one unchanged role passes development, locked confirmation and whole proxy challenge gates",
+    "required_architecture": [
+      "family-owned Python adapter and byte-pinned decision tape",
+      "family-owned EA executor"
+    ],
+    "metaeditor_compile": "0 errors / 0 warnings",
+    "tester_model": "FPMarkets Every tick based on real ticks with 100% real ticks",
+    "required_symbols": [
+      "AUDCHF signal source",
+      "US100 target",
+      "US30 target"
+    ],
+    "maximum_candidate_economic_paths": 1,
+    "environment_or_engineering_corrections_are_not_economic_paths": true,
+    "master_or_live_terminal_forbidden": true
+  },
+  "ordered_stages": [
+    "declaration before dedicated runtime, external acquisition, target copies, ranks, implementation or economics",
+    "fresh AUDCHF acquisition and receipt plus byte-equal target materialization",
+    "complete adapter implementation freeze with timestamp, causal-rank, direction-count and risk-feasibility structure only",
+    "one complete 2024-2025 two-role development process",
+    "locked 2026 confirmation for at most one unchanged complete passer",
+    "self-contained Python adapter plus EA compile and one native candidate path only for a complete whole-proxy survivor"
+  ],
+  "stop_rules": {
+    "no_development_passer": "close before locked 2026, EA and MT5 without an adjacent pair, return window, reference, percentile, rank, direction, time, symbol, subgroup, risk or exit rescue",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires a separate user-authorized engineering and handoff decision"
+  },
+  "preoutcome_state": {
+    "family_runtime_created": false,
+    "audchf_values_acquired_or_opened": 0,
+    "audchf_symbol_specification_files": 0,
+    "target_source_copies": 0,
+    "external_returns_or_rank_thresholds": 0,
+    "candidate_directions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "adapter_source_files": 0,
+    "ea_source_files": 0,
+    "mt5_compile_or_tester_paths": 0,
+    "live_changed": false
+  }
+}

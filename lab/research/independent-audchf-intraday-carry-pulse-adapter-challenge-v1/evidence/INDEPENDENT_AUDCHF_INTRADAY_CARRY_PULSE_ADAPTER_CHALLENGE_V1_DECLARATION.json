@@ -1,0 +1,194 @@
+{
+  "schema": "zeta-next-independent-audchf-intraday-carry-pulse-adapter-challenge-v1-declaration",
+  "recorded_at_utc": "2026-08-31T14:28:42.5989985Z",
+  "status": "DECLARED_PRERUNTIME_PREACQUISITION_PREINPUT_PRERANK_PREIMPLEMENTATION_PREOUTCOME",
+  "project_id": "project-zeta-terminus-next",
+  "family_number": 7,
+  "family": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/",
+  "primary_macro_program": 2,
+  "height": "micro_to_meso",
+  "mandatory_architecture": "Python_adapter_plus_EA",
+  "selection_boundary": {
+    "audit": {
+      "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_WHOLE_MAP_RECOMPARE_V1.json",
+      "bytes": 11838,
+      "sha256": "1AFE04FEA5D4DA5C16A85215AD409CFC252A8B0F09214203063229CCAA299E32"
+    },
+    "audit_commit": "b4625069ff0c29e5708687f1c264839a572990ba",
+    "audit_commit_equal_origin_main_before_declaration": true,
+    "candidate_price_or_outcome_used_for_selection": false
+  },
+  "authorities": {
+    "README": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/README.md",
+      "bytes": 1413,
+      "sha256": "E5E25B69BF92459F0EF34B3731EAEF4BD609FC499A0DF01D1D1C8E0BE5126BA1",
+      "lines": 13
+    },
+    "contract": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 18259,
+      "sha256": "272141C22835818F9875451A81DDE98EF22D3F8E0CC705416ED06FF7365F7B82",
+      "lines": 350
+    },
+    "v8_challenge": {
+      "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+      "bytes": 8423,
+      "sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46"
+    },
+    "target_acquisition_receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9",
+      "broker_account_position_order_or_deal_queries": 0
+    }
+  },
+  "source_authorities_not_yet_materialized": {
+    "AUDCHF_M1": {
+      "state": "NOT_ACQUIRED",
+      "requested_range": "2023-07-01T00:00:00Z/2026-08-01T00:00:00Z",
+      "required_path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/external/AUDCHF_M1.csv",
+      "required_source": "fresh broker-native copy_rates_range through the family-owned dedicated Portable",
+      "required_receipt": "terminal executable/server/symbol specification/request/return bounds/rows/columns/bytes/SHA-256 with zero account-position-order-deal queries",
+      "existing_runtime_cache_use": "FORBIDDEN"
+    },
+    "US30_M1": {
+      "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+      "destination_path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/target/US30_M1.parquet",
+      "bytes": 19018323,
+      "rows": 1617902,
+      "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063",
+      "state": "NOT_COPIED"
+    },
+    "US100_M1": {
+      "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+      "destination_path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/target/US100_M1.parquet",
+      "bytes": 21213599,
+      "rows": 1618383,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2",
+      "state": "NOT_COPIED"
+    }
+  },
+  "known_prior_exposure": {
+    "family_001": "closed adverse H1 scalar Python adapter",
+    "family_002": "closed zero-turnover H1 temporal barrier ONNX",
+    "family_003": "closed adverse H1 residual basket Python adapter",
+    "family_004": "closed adverse M15 online expert Python adapter",
+    "family_005": "closed M1 GRU ONNX utility collapse",
+    "family_006": "closed adverse London/New York opening-auction response Python adapter",
+    "closed_program_2_axes": "VIX, Treasury, gold-yen, broad-dollar, scheduled macro, policy, positioning, credit and balance-sheet contexts supply no input, threshold or outcome",
+    "audchf_prior_research_refs": 0,
+    "mitigation": "this family freezes an AUDCHF intraday event transfer and both polar responses before any AUDCHF price is acquired or any target price value is opened"
+  },
+  "frozen_question": {
+    "question": "does a top-quartile completed AUDCHF half-hour carry-risk impulse transfer into or mean-revert against the next US100 and US30 half hour strongly and frequently enough to beat V8",
+    "timezone": "America/New_York",
+    "decision_times": "10:00 through 15:30 local every 30 minutes inclusive",
+    "external_interval": "the exact 30 AUDCHF M1 rows ending one minute before each decision",
+    "external_return": "final Bid close / first Bid open - 1",
+    "causal_reference": "same local slot across the prior 60 complete sessions",
+    "rank_gate": "nonzero absolute return at or above nearest-rank position 45 of 60 prior absolute returns",
+    "roles": [
+      "AUDCHF_PULSE_FOLLOW",
+      "AUDCHF_PULSE_FADE"
+    ],
+    "role_directions": "FOLLOW maps AUDCHF sign to both US-index directions; FADE takes the exact opposite",
+    "entry": "exact target M1 open at decision time with direction-specific Bid/Ask",
+    "filters_beyond_frozen_rank_gate": 0,
+    "cross_target_ranking": false
+  },
+  "frozen_execution": {
+    "positions": "up to one US100 and one US30 lifecycle per gated complete decision slot",
+    "risk_distance": "per-target median of the corresponding holding-interval Bid range on the prior 20 complete same-slot sessions, floored at point 0.01",
+    "risk": "two percent of common slot-start actual balance per symbol",
+    "minimum_lot_hard_cap": "four percent per symbol and eight percent aggregate",
+    "stop": "one frozen target risk distance adverse",
+    "take": "1.5 frozen target risk distances favorable",
+    "hold": "thirty target M1 bars including entry",
+    "same_bar_order": "adverse stop first",
+    "actual_cost": "direction-specific recorded Bid/Ask path",
+    "stress": "subtract the same observed actual spread burden once more",
+    "balance": "compounded shared $100 account with prior-batch settlement before the next batch and US100-before-US30 exact-tie ordering"
+  },
+  "frozen_periods_and_gates": {
+    "warmup": "2023-07-01T00:00:00/2024-01-01T00:00:00",
+    "development": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "development_actual_net_strictly_above_usd": 149.97,
+    "development_stressed_net_strictly_above_usd": 127.786,
+    "whole_actual_net_strictly_above_usd": 409.81,
+    "whole_stressed_net_strictly_above_usd": 367.818,
+    "actual_or_native_drawdown_pct_max": 37.39,
+    "whole_robust_recovery_strictly_above": 3.295860215,
+    "every_2024_2025_locked_2026_epoch_actual_and_stressed_positive": true,
+    "starts_per_normal_day_min": 3.0,
+    "symbol_breadth_min": 2,
+    "decision_slot_breadth_min": 8,
+    "external_positive_and_negative_breadth_required": true,
+    "locked_role_max": 1
+  },
+  "selection_only_feasibility": {
+    "price_spread_volume_return_label_or_outcome_values_opened": false,
+    "audchf_nonruntime_prior_references": 0,
+    "audchf_runtime_cache_paths_seen_by_metadata_only": 13,
+    "declared_slots_per_complete_session": 12,
+    "fixed_rank_incidence_expectation": 0.25,
+    "target_symbols_per_signal": 2,
+    "expected_starts_per_complete_session_not_outcome_evidence": 6.0,
+    "exact_timestamp_capacity_and_minimum_lot_feasibility": "must pass an outcome-free precheck after fresh acquisition and implementation"
+  },
+  "architecture_boundary": {
+    "python_adapter_owns": [
+      "fresh AUDCHF source and symbol-specification integrity",
+      "IANA New York scheduling and exact timestamp completeness",
+      "completed external return and sixty-session same-slot rank",
+      "FOLLOW or FADE direction for both targets",
+      "twenty-session same-slot target risk distance",
+      "decision sequence, freshness and bounded decision evidence"
+    ],
+    "ea_must_own": [
+      "adapter schema, role, sequence and freshness validation",
+      "target symbol contract and market validation",
+      "volume, per-position and aggregate risk",
+      "order submission and two-target reconciliation",
+      "stop, take and timed close",
+      "ownership, persistence, restart recovery and bounded execution evidence"
+    ],
+    "single_ea_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true,
+    "native_decision_tape_must_be_adapter_generated_and_byte_pinned": true
+  },
+  "frozen_no_rescue_bundle": [
+    "AUDCHF instrument and positive/negative semantics",
+    "New York timezone and twelve decision slots",
+    "thirty-minute external interval",
+    "sixty-session same-slot reference",
+    "absolute return, 75th percentile, nearest-rank position and equality rule",
+    "FOLLOW versus FADE response",
+    "US100 and US30 simultaneous target set",
+    "twenty-session target range reference and median statistic",
+    "risk, minimum lot and aggregate cap",
+    "stop, take, same-bar order and hold",
+    "year, slot, direction or symbol subgroup"
+  ],
+  "preoutcome_attestation": {
+    "family_runtime_created": false,
+    "existing_runtime_price_reads_or_execution": 0,
+    "audchf_values_acquired_or_opened": 0,
+    "audchf_symbol_specification_files": 0,
+    "target_source_copies": 0,
+    "target_price_spread_volume_or_return_values_opened": 0,
+    "external_returns_or_rank_thresholds": 0,
+    "candidate_directions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "adapter_source_files": 0,
+    "ea_source_files": 0,
+    "mt5_compile_or_tester_paths": 0,
+    "live_changed": false,
+    "optimization_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this declaration reaches origin/main, create the dedicated family Portable from a neutral installation, acquire and pin fresh AUDCHF M1 plus symbol specification, copy the two target authorities once, implement the complete Python adapter, and freeze only causal timestamp/rank/direction-count/risk-feasibility structure before one development process"
+}

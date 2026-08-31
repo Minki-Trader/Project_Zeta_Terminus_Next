@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0525`
+- Latest state ID: `STATE-0526`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 006 closure commit `a41f5712d4bded7ca187e59d57300107327bb237`, equal to `origin/main` before the post-closure whole-map recompare.
+- Current process parent: post-Family-006 selection commit `b4625069ff0c29e5708687f1c264839a572990ba`, equal to `origin/main` before Family 007 declaration.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_RECOMPARE_PROGRAM_2_AUDCHF_PULSE_READY_SUCCESSOR_NOT_OPENED`.
-- Sole active Challenge family: none. Family 006 is closed and the whole map selects one provisional Program 2 Family 007, but its root may not open until the selection audit reaches `origin/main`.
-- Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_AUDCHF_PULSE_ADAPTER_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Sole active Challenge family: `lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/`, Program 2 / micro-to-meso, mandatory `Python adapter + EA`.
+- Parallel Lab family / Optimization campaign count: `1 / 0`; Challenge MT5 runtime count remains `0` until the declaration reaches `origin/main`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -106,13 +106,23 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - The selected question is an intraday external-event transfer, not a VIX, rates, gold-yen, broad-dollar, macro-release or pre-existing lifecycle-context rescue. Every New York-local half hour ending `10:00..15:30`, the completed AUDCHF return is compared with the same slot across the prior `60` complete sessions. A nonzero top-quartile absolute pulse freezes `AUDCHF_PULSE_FOLLOW / AUDCHF_PULSE_FADE` together and can address US100 and US30 at the next M1 open.
 - The design supplies `12 × about 25% × 2 = about 6` starts per complete session after warmup before economic/risk attrition; exact timestamp coverage, causal capacity and minimum-lot feasibility must be established outcome-free after declaration. Selection opened no AUDCHF bar/tick value and no target OHLC, spread, return, label, lifecycle or economic value.
 - Audit `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_WHOLE_MAP_RECOMPARE_V1.json` is `11,838` bytes / `1AFE04FEA5D4DA5C16A85215AD409CFC252A8B0F09214203063229CCAA299E32`, status `READY_PROGRAM_2_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_SUCCESSOR_NOT_OPENED`.
-- Provisional Family 007 is `lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/`, Program 2 / micro-to-meso, mandatory `Python adapter + EA`. Its root, dedicated Portable, fresh AUDCHF acquisition/specification, target copies, ranks, signals, outcomes, EA and MT5 all remain zero.
+- At that selection boundary, provisional Family 007 was `lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/`, Program 2 / micro-to-meso, mandatory `Python adapter + EA`; it is now declared below while its dedicated Portable, data, ranks, implementation and outcomes remain unopened.
+
+## Family 007 frozen declaration
+
+- README/contract are `1,413 / 18,259` bytes at `E5E25B69BF92459F0EF34B3731EAEF4BD609FC499A0DF01D1D1C8E0BE5126BA1 / 272141C22835818F9875451A81DDE98EF22D3F8E0CC705416ED06FF7365F7B82`.
+- Declaration `INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_DECLARATION.json` is `10,449` bytes / `0CEBC92B0F7BE5469FF6CBEE20E8AF3BBC36907EA95FF784E03AE8A411E7799C`, status `DECLARED_PRERUNTIME_PREACQUISITION_PREINPUT_PRERANK_PREIMPLEMENTATION_PREOUTCOME`.
+- Every New York-local half hour ending `10:00..15:30` uses exactly 30 completed AUDCHF M1 Bid rows. The nonzero absolute return must be at or above nearest-rank position `45` among the same slot's prior `60` complete absolute returns. FOLLOW maps the AUDCHF sign to both targets and FADE takes the exact opposite.
+- Entry is the exact decision-time target M1 open. Per-target risk distance is the median corresponding half-hour Bid range from the prior `20` complete same-slot sessions, floored at `0.01`. Stop/take/hold are `-1R / +1.5R / 30 M1`; actual uses direction-specific Bid/Ask and stress charges the observed burden again.
+- Each symbol targets `2%` of common slot-start actual balance with `4%` minimum-lot hard cap and `8%` aggregate hard cap. Development 2024-2025 requires both-year actual/stressed positivity, `>+$149.97 / +$127.786`, DD `<=37.39%`, at least `3` starts/day, both symbols, at least `8` slots and both AUDCHF signs.
+- Locked 2026 January-July can open for at most one unchanged complete development passer. Whole/native gates remain `>+$409.81 / >+$367.818 / <=37.39% / >3.295860215`, every epoch positive and complete adapter/EA integrity.
+- Family runtime, existing-runtime price reads, fresh AUDCHF acquisition/specification, target copies, rank values, directions, lifecycles/economics, adapter source, EA, compile, Tester and locked 2026 are zero at declaration. After this declaration reaches `origin/main`, only a neutral-installation-derived dedicated Portable, fresh AUDCHF acquisition and exact target copies may open before the outcome-free implementation freeze.
 
 ## Next authorized sequence
 
-1. Commit and push the post-Family-006 whole-map selection audit and state record to `origin/main`.
-2. Only after origin equality, declare the single self-contained Family 007 contract before its runtime, fresh AUDCHF acquisition, target copies, ranks, implementation or outcomes.
-3. After the declaration boundary, acquire and pin AUDCHF in a dedicated Family 007 Portable, prove causal geometry/capacity outcome-free, implement the Python adapter, and freeze the complete role/risk/exit contract.
+1. Commit and push the Family 007 README, frozen contract, declaration and state record to `origin/main`.
+2. Only after origin equality, create the dedicated Portable from a neutral installation, acquire and pin fresh AUDCHF M1 plus symbol specification, and copy the two exact target authorities once.
+3. Implement the Python adapter, prove causal geometry/rank capacity/risk feasibility without opening development future paths, and freeze the complete implementation.
 4. Run one complete development process; open locked 2026, EA, compile and native MT5 only for at most one unchanged full development passer.
 5. Continue serially through whole-map-recompared materially distinct families until an unchanged complete native candidate passes every V8 gate.
 
@@ -134,8 +144,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; provisional Family 007 awaits its selection-audit commit before declaration.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_006_RECOMPARE_PROGRAM_2_AUDCHF_PULSE_READY_SUCCESSOR_NOT_OPENED`.
+- Active research unit: Family 007 declared; declaration commit and fresh source materialization are next.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_AUDCHF_PULSE_ADAPTER_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
