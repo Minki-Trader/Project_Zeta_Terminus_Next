@@ -1,0 +1,108 @@
+{
+  "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-v2-declaration",
+  "recorded_date_local": "2026-08-31",
+  "status": "DECLARED_CORRECTION_REPLAY_OUTCOME_KNOWN_BUT_UNAUTHORIZED",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING_RESULT_AUTHORITY_CORRECTION",
+  "predecessor": {
+    "campaign": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v1/",
+    "final_status": "CORRECTION_REQUIRED_PRE_FINAL_STAGE_D_ROLE_SERIALIZATION_NO_ECONOMIC_VERDICT",
+    "raw_result_path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/output/proxy-result.json",
+    "raw_result_bytes": 29314,
+    "raw_result_sha256": "0F047069911EC505AA2B3FF0B8B7637F7539ACC68BE44C9A577511920ED3370A",
+    "economic_rows": 216,
+    "mt5_runs": 0
+  },
+  "v8_only_scope": {
+    "economic_parent": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "v7_economic_input": false,
+    "lab_economic_input": false,
+    "external_input": false,
+    "new_entry_strategy": false,
+    "live_change": false
+  },
+  "inputs": [
+    {
+      "role": "matched exact-V8 accepted lifecycle outcomes",
+      "source_path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/input/research-lifecycles.csv",
+      "staged_name": "research-lifecycles.csv",
+      "bytes": 1753587,
+      "sha256": "7C8405F487A0DE96737A22587D0EB2471029CFA337FD4C47C3E1B5E6D62C1791"
+    },
+    {
+      "role": "exact-V8 volume, risk-capital and admission context",
+      "source_path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/input/research-candidates.csv",
+      "staged_name": "research-candidates.csv",
+      "bytes": 5469352,
+      "sha256": "D428D881F667F24531CB41ED85FF20575A6A771596F7091AFD62D96F57601678"
+    },
+    {
+      "role": "frozen Stage-B seed authority",
+      "source_path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/input/stage-b-proxy-result.json",
+      "staged_name": "stage-b-proxy-result.json",
+      "bytes": 31666,
+      "sha256": "C9A402050F1AF94A5CFBAAA392E9BF2BF151A1B1C7E0BEBEACDF6588DEDE1DA8"
+    },
+    {
+      "role": "V1 correction parity authority only",
+      "source_path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/output/proxy-result.json",
+      "staged_name": "v1-proxy-result.json",
+      "bytes": 29314,
+      "sha256": "0F047069911EC505AA2B3FF0B8B7637F7539ACC68BE44C9A577511920ED3370A"
+    }
+  ],
+  "unchanged_contract": {
+    "static_seed_count": 3,
+    "variants_per_static_seed": 72,
+    "total_parameterizations": 216,
+    "state_transition_and_volume_model_changed": false,
+    "periods_or_gates_changed": false,
+    "ranking_or_neighbor_rules_changed": false,
+    "locked_holdout_role_changed": false,
+    "economic_outcome_reselected": false
+  },
+  "correction_contract": {
+    "v1_fault": "stage_d_roles populated from validation pass before final_pass",
+    "v2_rule": "stage_d_roles remains empty until the sole frozen winner passes locked holdout and whole-path final_pass; append exactly that unchanged winner only inside final_pass.",
+    "whole_path_nonconfirmation_role_count": 0,
+    "whole_path_nonconfirmation_next_boundary": "MANDATORY_STAGE_D_EMPTY_CLOSURE_AND_UNIT_RECOMPARISON",
+    "economic_replay_required": true,
+    "candidate_or_threshold_change_allowed": false
+  },
+  "required_v1_numeric_parity": {
+    "primary_eligible": 10,
+    "fallback_eligible": 21,
+    "development_plateau_population": 2,
+    "selected_lattice_index": 160,
+    "selected_parameters": {
+      "static_seed_index": 2,
+      "weights": [1.25, 1.5, 2.0, 2.25, 1.25, 0.0],
+      "aggregate_risk_fraction": 0.12,
+      "trigger_drawdown_fraction": 0.05,
+      "future_birth_multiplier": 0.8,
+      "release_hysteresis_fraction": 0.05,
+      "minimum_subsequent_accepted_closes": 10
+    },
+    "development_actual_stressed_dd": [135.82, 119.647, 20.339971669],
+    "validation_actual_stressed_dd": [59.907666667, 55.115, 16.268081899],
+    "holdout_actual_stressed_dd": [15.125166667, 13.213166667, 14.030277151],
+    "whole_actual_stressed_dd": [231.006833333, 204.774666667, 20.339971669],
+    "whole_stressed_retention_vs_exact_v8": 0.556728237,
+    "numeric_tolerance": 1e-08
+  },
+  "expected_authority_if_parity_passes": {
+    "status": "VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_NO_STAGE_D_ROLE_STAGE_D_EMPTY_CLOSURE_REQUIRED_NO_MT5",
+    "stage_d_role_count": 0,
+    "mt5_runs": 0,
+    "unit_closed": false,
+    "stage_d_required": true
+  },
+  "pre_outcome_boundary": {
+    "input_staged": false,
+    "implementation_created": false,
+    "replay_executed": false,
+    "mt5_executed": false,
+    "required_next_action": "Commit and push the V1 correction closure and this V2 declaration before staging V2 inputs."
+  },
+  "marker": "UNIT_001_STAGE_C_V1_SUCCESSION_SERIALIZATION_INVALID_V2_EXACT_216_REPLAY_DECLARED_NO_PARAMETER_CHANGE_NO_MT5_NO_LAB_NO_NEW_ENTRY"
+}

@@ -28,3 +28,9 @@ No input staging, implementation or outcome begins until the Stage-B result and 
 Declaration commit `3c973ee77dc8cb3dd27a938ac87abc469719a8ac` reached `origin/main` before staging. All three inputs are byte-equal, the Stage-B schema/status and three seed vectors match, and the state lattice is exactly `72 / 72 / 72`, `216` unique coordinates.
 
 With state disabled, the implementation reproduces exact V8 whole actual/stressed `+$409.81 / +$367.818` at `35.46%` actual DD and all three static-seed development paths at `+$150.105 / +$133.103`, `24.099813585%` DD, with zero state triggers. Config is `4,935` bytes / `3EEB32DA...118AD`; source is `53,504` bytes / `E7777B1C...3D602` and passes Python `3.13.9` syntax with NumPy `2.3.4`. No raw Stage-C output exists. Execution waits for the implementation freeze to reach `origin/main`.
+
+## Final correction-required boundary
+
+V1 ran all `216` variants and its raw status correctly identified a whole-path-gate nonconfirmation, but it had already written one validation-passing role into `stage_d_roles` before evaluating that final gate. The role's whole stressed retention is only `55.6728%` against the frozen `75%`; therefore it cannot own Stage-D authority.
+
+Final V1 status is `CORRECTION_REQUIRED_PRE_FINAL_STAGE_D_ROLE_SERIALIZATION_NO_ECONOMIC_VERDICT`. The state/economic numbers remain diagnostic only. V2 repeats the exact same `216` paths and changes only successor-list timing: a role is appended after and only after `final_pass`.

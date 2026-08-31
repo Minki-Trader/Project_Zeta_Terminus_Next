@@ -1,0 +1,76 @@
+{
+  "schema": "zeta-next-dd20-v8-causal-drawdown-state-shaping-proxy-v1-premature-succession-closure",
+  "recorded_date_local": "2026-08-31",
+  "status": "CORRECTION_REQUIRED_PRE_FINAL_STAGE_D_ROLE_SERIALIZATION_NO_ECONOMIC_VERDICT",
+  "optimization_unit_id": "V8-OPT-U001-PORTFOLIO-DD",
+  "unit_stage": "C_CAUSAL_DRAWDOWN_STATE_SHAPING",
+  "implementation_freeze_commit_on_origin_main": "a13a45d",
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-causal-drawdown-state-shaping-proxy-v1/output/proxy-result.json",
+    "bytes": 29314,
+    "sha256": "0F047069911EC505AA2B3FF0B8B7637F7539ACC68BE44C9A577511920ED3370A",
+    "source_status": "VALID_PROXY_COMPLETE_STAGE_C_WHOLE_PATH_GATE_NONCONFIRMATION_STAGE_D_REQUIRED_NO_MT5",
+    "candidate_rows": 216,
+    "mt5_runs": 0
+  },
+  "fault": {
+    "class": "SUCCESSION_AUTHORITY_SERIALIZATION_ORDER",
+    "description": "The script appended every validation-passing development center to stage_d_roles before evaluating the frozen holdout and whole-path final gate.",
+    "source_order": {
+      "stage_d_roles_append_begins_at_line": 1089,
+      "final_pass_begins_at_line": 1168,
+      "final_status_branch_begins_at_line": 1186
+    },
+    "observed_conflict": {
+      "raw_stage_d_role_count": 1,
+      "locked_holdout_passed": true,
+      "whole_actual_net_usd": 231.006833333,
+      "whole_stressed_net_usd": 204.774666667,
+      "whole_actual_closed_balance_drawdown_pct": 20.339971669,
+      "whole_stressed_retention_vs_exact_v8": 0.556728237,
+      "required_whole_stressed_retention_vs_exact_v8": 0.75,
+      "whole_gate_passed": false
+    },
+    "why_authority_is_invalid": "A role failing the predeclared whole-path gate cannot acquire Stage-D economic authority merely because it passed validation. The raw status says whole-path nonconfirmation while the raw successor list says one role, so final succession is internally contradictory."
+  },
+  "scope_of_invalidity": {
+    "state_transition_or_volume_model_fault_found": false,
+    "candidate_economic_arithmetic_fault_found": false,
+    "input_or_lattice_fault_found": false,
+    "final_economic_verdict_authorized": false,
+    "stage_d_role_authorized": false,
+    "diagnostic_numbers_may_select_or_close_unit": false
+  },
+  "diagnostic_only_observation": {
+    "primary_eligible": 10,
+    "fallback_eligible": 21,
+    "plateau_population": 2,
+    "selected_state": {
+      "static_seed_index": 2,
+      "weights": [1.25, 1.5, 2.0, 2.25, 1.25, 0.0],
+      "aggregate_risk_fraction": 0.12,
+      "trigger_drawdown_fraction": 0.05,
+      "future_birth_multiplier": 0.8,
+      "release_hysteresis_fraction": 0.05,
+      "minimum_subsequent_accepted_closes": 10
+    },
+    "development_actual_stressed_dd": [135.82, 119.647, 20.339971669],
+    "validation_actual_stressed_dd": [59.907666667, 55.115, 16.268081899],
+    "holdout_actual_stressed_dd": [15.125166667, 13.213166667, 14.030277151]
+  },
+  "correction": {
+    "successor_campaign": "optimization/campaigns/dd20-v8-causal-drawdown-state-shaping-proxy-v2/",
+    "parameters_or_gates_changed": false,
+    "economic_model_changed": false,
+    "required_code_change": "Build a pre-final validation list for diagnostics, but populate stage_d_roles only inside the final_pass branch. A whole-path nonconfirmation must emit zero Stage-D roles and route to the mandatory empty Stage-D closure boundary.",
+    "full_216_variant_replay_required": true,
+    "reason_for_replay": "The authoritative result must be internally coherent and produced by frozen code whose serialized successor list obeys the final gate."
+  },
+  "live_or_lab_effect": {
+    "live_changed": false,
+    "lab_opened": false,
+    "new_entry_strategy": false,
+    "mt5_runs": 0
+  },
+  "marker": "UNIT_001_STAGE_C_V1_PREMATURE_STAGE_D_ROLE_SERIALIZATION_CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT_V2_REQUIRED_NO_MT5"
+}
