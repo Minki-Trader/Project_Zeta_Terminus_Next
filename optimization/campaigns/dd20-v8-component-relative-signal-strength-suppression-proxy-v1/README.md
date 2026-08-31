@@ -29,3 +29,9 @@ Unknown capacity-freed blocked opportunities always receive zero proxy profit cr
 Declaration commit `164061c` reached `origin/main` before input staging and implementation. The two exact V8 ledgers and five feature-source semantics are byte-equal in the isolated raw input root. Outcome-free precheck joins all `965` lifecycles, observes `1,108` signal-passed rows, builds exactly `243` unique threshold roles with `810` adjacency edges and proves every threshold is at or above native.
 
 The exact-neutral precheck reproduces accepted `965`, actual/stressed `+$409.81 / +$367.818`, DD `35.46%` and zero strength suppression or aggregate skip. Config is `5,583` bytes / `83837272...014AF`; source is `52,110` bytes, `1,178` lines / `CCA820B7...BB855`; implementation freeze is `5,790` bytes / `4370C71A...4AAC4`. Raw candidate output is absent. One complete Stage-A process may run only after the freeze reaches `origin/main`; validation, locked holdout, MT5, Lab, Live and external data remain unopened.
+
+## Final Stage-A result
+
+Freeze commit `1d4c4f2` reached `origin/main` before one complete `0.4707022s` process. The `243` roles contain `30` with all four half-years positive, `12` primary and `21` fallback eligible points. No primary point has the required four eligible immediate neighbors over three axes, so the predeclared near-miss path is active and Stage A claims no stable basin.
+
+Three separated centers advance unchanged. Rank 1 q-vector `0.50 / 0.50 / 0.25 / 0.50 / 0.50` earns development actual/stressed `+$115.27 / +$102.107`, DD `21.5249%` and four half-year stressed values `+$6.616 / +$38.011 / +$19.588 / +$37.892`. Ranks 2 and 3 earn stressed `+$83.396 / +$106.811` at DD `24.76%`; all three repair exact V8's negative 2024-H1 sign. Raw is `57,187` bytes / `8A36AA2D...ECD3E`; durable result is `6,633` bytes / `E9ABF1D3...F0E496`. This is mandatory Stage-B input, not a winner. Validation, locked holdout and MT5 remain unopened.

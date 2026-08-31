@@ -1,0 +1,140 @@
+{
+  "schema": "zeta-next-dd20-v8-component-relative-signal-strength-suppression-proxy-v1-result",
+  "recorded_date_local": "2026-08-31",
+  "status": "VALID_PROXY_COMPLETE_STAGE_A_NEAR_MISS_STRENGTH_SEEDS_STAGE_B_REQUIRED_NO_MT5",
+  "optimization_unit_id": "V8-OPT-U003-EXISTING-SIGNAL-STRENGTH-SUPPRESSION",
+  "unit_stage": "A_COMPLETE_ALL_FIVE_COARSE_STRENGTH_MAP",
+  "unit_closed": false,
+  "authority": {
+    "declaration_commit_on_origin_main": "164061c20534db8da8bfb1f262aab5fdff31b20c",
+    "implementation_freeze_commit_on_origin_main": "1d4c4f2e0a0e7a3db4af9d4c99c7d4d5c5698e61",
+    "implementation_freeze_bytes": 5790,
+    "implementation_freeze_sha256": "4370C71A92E66507527A4367830059452AA687869A659C419F17A653D464AAC4"
+  },
+  "raw_result": {
+    "path": "optimization/artifacts/raw/dd20-v8-component-relative-signal-strength-suppression-proxy-v1/output/proxy-result.json",
+    "bytes": 57187,
+    "sha256": "8A36AA2D81FA019FAE163FF171462A12FC84A987054EF87ABDF0E8462BDECD3E",
+    "schema": "zeta-next-dd20-v8-component-relative-signal-strength-suppression-proxy-result-v1",
+    "status": "VALID_PROXY_COMPLETE_STAGE_A_NEAR_MISS_STRENGTH_SEEDS_STAGE_B_REQUIRED_NO_MT5",
+    "wall_time_seconds": 0.470702200022
+  },
+  "implementation": {
+    "config_bytes": 5583,
+    "config_sha256": "83837272C372CD95657A2CD913A7CDF58ABAB481D62EEB192D5CF50AD16014AF",
+    "script_bytes": 52110,
+    "script_lines": 1178,
+    "script_sha256": "CCA820B7E2D21D3F344CA55E381EDDAA1DFCA7B5A5AF007D54CF75E1F59BB855",
+    "successful_proxy_processes": 1,
+    "failed_or_rerun_processes": 0
+  },
+  "exact_v8_development_anchor": {
+    "period": "2024-01-01 through 2026-01-01 exclusive",
+    "accepted_source_lifecycles": 741,
+    "actual_net_usd": 149.97,
+    "stressed_net_usd": 127.786,
+    "actual_closed_balance_drawdown_pct": 35.46,
+    "minimum_balance_usd": 59.11,
+    "half_year_actual_stressed": [
+      {"block": "2024-H1", "actual_net_usd": -14.4, "stressed_net_usd": -20.681, "drawdown_pct": 35.46},
+      {"block": "2024-H2", "actual_net_usd": 34.48, "stressed_net_usd": 29.942, "drawdown_pct": 24.602504573},
+      {"block": "2025-H1", "actual_net_usd": 45.05, "stressed_net_usd": 38.618, "drawdown_pct": 23.291670468},
+      {"block": "2025-H2", "actual_net_usd": 84.84, "stressed_net_usd": 79.907, "drawdown_pct": 24.173756545}
+    ]
+  },
+  "complete_coarse_map": {
+    "raw_roles": 243,
+    "unique_threshold_roles": 243,
+    "duplicates_removed": 0,
+    "adjacency_edges": 810,
+    "common_positive_four_half_year_roles": 30,
+    "primary_eligible_roles": 12,
+    "fallback_eligible_roles": 21,
+    "active_tier": "PRIMARY",
+    "active_tier_eligible_roles": 12,
+    "robust_active_tier_roles": 0,
+    "selection_kind": "DECLARED_NEAR_MISS",
+    "reason": "Some roles pass the economic gates, but none has four eligible immediate neighbors spanning three component axes. Stage A therefore cannot claim a stable basin and advances the predeclared separated near-miss bundle to mandatory fine adjacency."
+  },
+  "stage_b_strength_seeds": [
+    {
+      "development_rank": 1,
+      "lattice_index": 233,
+      "quantile_coordinates": [0.5, 0.5, 0.25, 0.5, 0.5],
+      "normalized_thresholds": [1.394335512591, 1.182281637461, 2.541865832742, 1.370107435447, 1.985490860366],
+      "actual_net_usd": 115.27,
+      "stressed_net_usd": 102.107,
+      "actual_closed_balance_drawdown_pct": 21.524931058,
+      "minimum_balance_usd": 78.875,
+      "accepted_source_lifecycles": 450,
+      "suppressed_by_strength": 291,
+      "primary_gate_passed": true,
+      "fallback_gate_passed": true,
+      "weakest_half_year_stressed_net_usd": 6.616,
+      "half_year_stressed_net_usd": [6.616, 38.011, 19.588, 37.892]
+    },
+    {
+      "development_rank": 2,
+      "lattice_index": 226,
+      "quantile_coordinates": [0.5, 0.5, 0.25, 0.0, 0.25],
+      "normalized_thresholds": [1.394335512591, 1.182281637461, 2.541865832742, 1.0, 1.341335617851],
+      "actual_net_usd": 97.91,
+      "stressed_net_usd": 83.396,
+      "actual_closed_balance_drawdown_pct": 24.76,
+      "minimum_balance_usd": 74.118,
+      "accepted_source_lifecycles": 490,
+      "suppressed_by_strength": 251,
+      "primary_gate_passed": false,
+      "fallback_gate_passed": true,
+      "weakest_half_year_stressed_net_usd": 5.895,
+      "half_year_stressed_net_usd": [5.895, 23.92, 11.076, 42.505]
+    },
+    {
+      "development_rank": 3,
+      "lattice_index": 239,
+      "quantile_coordinates": [0.5, 0.5, 0.5, 0.25, 0.5],
+      "normalized_thresholds": [1.394335512591, 1.182281637461, 4.265116019474, 1.128932461115, 1.985490860366],
+      "actual_net_usd": 118.04,
+      "stressed_net_usd": 106.811,
+      "actual_closed_balance_drawdown_pct": 24.76,
+      "minimum_balance_usd": 74.401,
+      "accepted_source_lifecycles": 376,
+      "suppressed_by_strength": 365,
+      "primary_gate_passed": true,
+      "fallback_gate_passed": true,
+      "weakest_half_year_stressed_net_usd": 3.943,
+      "half_year_stressed_net_usd": [3.943, 35.778, 5.307, 61.783]
+    }
+  ],
+  "interpretation": {
+    "existing_signal_strength_information_value_confirmed": true,
+    "coarse_stable_basin_confirmed": false,
+    "early_2024_h1_sign_repaired_by_all_three_seeds": true,
+    "single_component_cherry_pick_used": false,
+    "reason_for_continuation": "The complete map contains economically eligible roles and all three separated seeds make every development half-year positive, but the coarse lattice has zero robust primary point. The declared fine-adjacency stage is necessary to determine whether this is a narrow quantile coincidence or a durable local surface."
+  },
+  "succession": {
+    "stage_b_required": true,
+    "stage_b_seed_count": 3,
+    "stage_b_local_quantile_offset": 0.1,
+    "maximum_stage_b_raw_roles": 729,
+    "validation_opened": false,
+    "locked_holdout_opened": false,
+    "mt5_runs": 0,
+    "unit_003_closed": false,
+    "required_next_action": "Commit and push this complete Stage-A result, then declare the mandatory center-local fine-adjacency campaign before staging its inputs."
+  },
+  "scope": {
+    "exact_v8_only": true,
+    "all_five_existing_strategies_active": true,
+    "existing_opportunity_suppression_only": true,
+    "freed_capacity_unknown_profit_credit_usd": 0.0,
+    "v7_or_historical_lab_selection_input": false,
+    "new_entry_strategy": false,
+    "lab_opened": false,
+    "live_changed": false,
+    "external_data": false,
+    "broker_account_position_order_or_deal_query": false
+  },
+  "marker": "V8_OPT_U003_STAGE_A_VALID_243_COARSE_STRENGTH_ROLES_12_PRIMARY_ZERO_ROBUST_THREE_NEAR_MISS_STAGE_B_SEEDS_NO_VALIDATION_NO_MT5"
+}
