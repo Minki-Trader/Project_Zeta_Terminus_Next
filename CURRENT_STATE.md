@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0521`
+- Latest state ID: `STATE-0522`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current successor-selection parent: Family 005 closure commit `96753724f12a4b057b211662fae6baaee5260d52`, equal to `origin/main` before the whole-map recompare.
+- Current family-declaration parent: post-Family-005 audit commit `5ca6783e78714470a0f358a821476765469d771a`, equal to `origin/main` before Family 006 declaration.
 
 ## Authorization and ownership
 
@@ -24,8 +24,8 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_RECOMPARE_PROGRAM_3_OPENING_AUCTION_RESPONSE_READY_PREDECLARATION`.
-- Sole active Challenge family: none. Provisional Family 006 is selected but unopened until its whole-map audit reaches `origin/main`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME`.
+- Sole active Challenge family: `lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, Program 3 / micro-to-meso, mandatory `Python adapter + EA`.
 - Parallel Lab family, Optimization campaign and Challenge MT5 runtime count: `0`.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
@@ -78,11 +78,21 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Audit `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_WHOLE_MAP_RECOMPARE_V1.json` is `9,867` bytes / `9D98DE4B5AC34EF96B0178458E6C8D54C38E9320D1F3E801A1882716F1163553`.
 - Provisional Family 006 is `lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/`, Program 3 / micro-to-meso, mandatory `Python adapter + EA`. The root, input copies, opening bodies/ranges, decisions, lifecycles, economics, EA and MT5 remain zero.
 
+## Family 006 frozen declaration
+
+- README/contract are `1,133 / 14,180` bytes at `C43E36E9887EDB9CF25794EA6F60960B311AB20AD45365C18DD4507B978D7A0F / FE988AA12CF91979AA5FEBBC7B1E8ADEA3F11CA54104C673F4250DF25551F5D5`.
+- Declaration `INDEPENDENT_TWO_SESSION_OPENING_AUCTION_RESPONSE_ADAPTER_CHALLENGE_V1_DECLARATION.json` is `8,144` bytes / `540EE1A718B5281DF5D60838A98DEC6EFEF187448BFCA4DC7644465B448DE701`, status `DECLARED_PREINPUT_PREOPENING_STATE_PREDECISION_PREIMPLEMENTATION_PREOUTCOME`.
+- London `08:00 Europe/London` and New York `09:30 America/New_York` are frozen. Each complete event waits for five completed M1 bars; `OPEN_DRIVE_5M` follows the nonzero opening body and `OPEN_FADE_5M` takes its opposite. No magnitude, range, volume, spread, clock, symbol or cross-symbol filter exists.
+- Each role can start one US100 and one US30 lifecycle at the next M1 open. Stop/take/hold are exactly `-1 / +1.5` opening ranges and `60` M1 bars; same-bar order is adverse first. Each symbol targets `2%` session-start balance risk with `4%` minimum-lot hard cap and `8%` aggregate hard cap. Actual uses direction-specific Bid/Ask and stress charges the observed burden again.
+- Development is 2024-2025. It requires both years actual/stressed positive, actual/stressed above `+$149.97 / +$127.786`, DD `<=37.39%`, at least `3` starts per normal day and both-symbol/both-session breadth. Locked 2026 January-July may open for at most one unchanged passer.
+- Python owns local-session scheduling, exact M1 completeness, opening state, role direction and decision sequence/freshness. The EA must own schema/freshness, contracts, risk, orders, reconciliation, protection, timed close, persistence/recovery and evidence; it may not create, filter or invert a direction.
+- Source copies, opening bodies/ranges, decisions, lifecycles/economics, locked 2026, EA and MT5 are zero at declaration. The two original M1 inputs may be copied only after the declaration reaches `origin/main`.
+
 ## Next authorized sequence
 
-1. Commit and push the post-Family-005 whole-map audit to `origin/main`.
-2. Only after origin equality, declare one self-contained Family 006 contract before input copies, OHLC/spread access, opening-body construction, decisions or economics.
-3. Implement and freeze the complete Python adapter proxy before exactly one development process; do not open locked 2026, EA or MT5 unless one unchanged role passes every preceding gate.
+1. Commit and push the Family 006 declaration to `origin/main`.
+2. Only after origin equality, copy the two original M1 authorities once, implement the complete Python adapter, and freeze timestamp, direction-count and risk-feasibility structure without future outcomes.
+3. After that implementation freeze reaches origin, run exactly one two-role 2024-2025 development process; do not open locked 2026, EA or MT5 unless one unchanged role passes every preceding gate.
 4. Continue serially until an unchanged proxy passes every gate, then and only then open its conditional confirmation, self-contained EA and native MT5 proof.
 
 ## Frozen lane boundaries
@@ -103,8 +113,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; provisional Family 006 opening-auction response adapter is selected but not declared.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_RECOMPARE_PROGRAM_3_OPENING_AUCTION_RESPONSE_READY_SUCCESSOR_NOT_OPENED`.
+- Active research unit: Family 006 `independent-two-session-opening-auction-response-adapter-challenge-v1`.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_006_OPENING_AUCTION_RESPONSE_ADAPTER_DECLARED_PREINPUT_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

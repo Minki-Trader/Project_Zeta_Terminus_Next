@@ -1,0 +1,170 @@
+{
+  "schema": "zeta-next-independent-two-session-opening-auction-response-adapter-challenge-v1-declaration",
+  "recorded_at_utc": "2026-08-31T13:38:50.1406497Z",
+  "status": "DECLARED_PREINPUT_PREOPENING_STATE_PREDECISION_PREIMPLEMENTATION_PREOUTCOME",
+  "project_id": "project-zeta-terminus-next",
+  "family_number": 6,
+  "family": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/",
+  "primary_macro_program": 3,
+  "height": "micro_to_meso",
+  "mandatory_architecture": "Python_adapter_plus_EA",
+  "selection_boundary": {
+    "audit": {
+      "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_WHOLE_MAP_RECOMPARE_V1.json",
+      "bytes": 9867,
+      "sha256": "9D98DE4B5AC34EF96B0178458E6C8D54C38E9320D1F3E801A1882716F1163553"
+    },
+    "audit_commit": "5ca6783e78714470a0f358a821476765469d771a",
+    "audit_commit_equal_origin_main_before_declaration": true,
+    "candidate_price_or_outcome_used_for_selection": false
+  },
+  "authorities": {
+    "README": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/README.md",
+      "bytes": 1133,
+      "sha256": "C43E36E9887EDB9CF25794EA6F60960B311AB20AD45365C18DD4507B978D7A0F",
+      "lines": 11
+    },
+    "contract": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 14180,
+      "sha256": "FE988AA12CF91979AA5FEBBC7B1E8ADEA3F11CA54104C673F4250DF25551F5D5",
+      "lines": 287
+    },
+    "v8_challenge": {
+      "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+      "bytes": 8423,
+      "sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46"
+    },
+    "acquisition_receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9",
+      "broker_account_position_order_or_deal_queries": 0
+    }
+  },
+  "source_authorities_not_yet_copied": {
+    "US30_M1": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+      "bytes": 19018323,
+      "rows": 1617902,
+      "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+    },
+    "US100_M1": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+      "bytes": 21213599,
+      "rows": 1618383,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+    }
+  },
+  "known_prior_exposure": {
+    "family_001": "closed adverse H1 scalar Python adapter",
+    "family_002": "closed zero-turnover H1 temporal barrier ONNX",
+    "family_003": "closed adverse H1 residual basket Python adapter",
+    "family_004": "closed adverse M15 online expert Python adapter",
+    "family_005": "closed M1 GRU ONNX utility collapse",
+    "prior_frontier_session_axes": "server DST mismatch, entry handoff, all-slot clock shape, Europe-open inventory, session reopen, cash-close and event-session studies are known and supply no input, label, decision or outcome",
+    "mitigation": "this family freezes exchange-local anchors and two polar current-opening responses before copying price inputs; it does not select a prior profitable clock direction or reuse any prior opportunity"
+  },
+  "frozen_question": {
+    "question": "does the first five-minute price discovery after the London and New York local opens persist or mean-revert across both US100 and US30 strongly and frequently enough to beat V8",
+    "sessions": [
+      "LONDON_0800 Europe/London",
+      "NEW_YORK_0930 America/New_York"
+    ],
+    "roles": [
+      "OPEN_DRIVE_5M",
+      "OPEN_FADE_5M"
+    ],
+    "opening_body": "close of the fifth opening M1 bar minus open of the first",
+    "opening_range": "maximum high minus minimum low across the five opening bars",
+    "entry": "next M1 open with direction-specific Bid/Ask",
+    "role_directions": "DRIVE follows the nonzero body sign; FADE takes its opposite",
+    "zero_body_or_nonpositive_range": "no action",
+    "filters": 0,
+    "cross_symbol_ranking": false
+  },
+  "frozen_execution": {
+    "positions": "up to one US100 and one US30 lifecycle per complete session event",
+    "risk": "two percent of the common session-start actual balance per symbol",
+    "minimum_lot_hard_cap": "four percent per symbol and eight percent aggregate",
+    "stop": "one five-bar opening range adverse",
+    "take": "1.5 five-bar opening ranges favorable",
+    "hold": "sixty M1 bars including the entry bar",
+    "same_bar_order": "adverse stop first",
+    "actual_cost": "direction-specific recorded Bid/Ask path",
+    "stress": "subtract the same observed actual spread burden once more",
+    "balance": "compounded shared $100 account with chronological exits and US100-before-US30 exact-tie settlement"
+  },
+  "frozen_periods_and_gates": {
+    "development": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "development_actual_net_strictly_above_usd": 149.97,
+    "development_stressed_net_strictly_above_usd": 127.786,
+    "whole_actual_net_strictly_above_usd": 409.81,
+    "whole_stressed_net_strictly_above_usd": 367.818,
+    "actual_or_native_drawdown_pct_max": 37.39,
+    "whole_robust_recovery_strictly_above": 3.295860215,
+    "every_2024_2025_locked_2026_epoch_actual_and_stressed_positive": true,
+    "starts_per_normal_day_min": 3.0,
+    "symbol_breadth_min": 2,
+    "session_breadth_min": 2,
+    "locked_role_max": 1
+  },
+  "timestamp_only_feasibility": {
+    "price_spread_volume_return_or_outcome_columns_opened": false,
+    "common_m1_rows": 1617636,
+    "required_geometry": "anchor minus 30 through anchor plus 74 exact minutes for both symbols",
+    "development_session_events": 965,
+    "development_two_symbol_opportunities": 1930,
+    "development_active_dates": 515,
+    "development_opportunities_per_active_date": 3.7475728155339807,
+    "locked_session_events": 301,
+    "locked_two_symbol_opportunities": 602,
+    "locked_price_rows_opened": false
+  },
+  "architecture_boundary": {
+    "python_adapter_owns": [
+      "IANA local-session scheduling",
+      "exact M1 completeness",
+      "five-bar opening body and range",
+      "DRIVE or FADE direction per symbol",
+      "decision sequence, freshness fields and bounded decision evidence"
+    ],
+    "ea_must_own": [
+      "adapter schema, sequence and freshness validation",
+      "symbol contract and market validation",
+      "volume, per-position and aggregate risk",
+      "order submission and two-symbol reconciliation",
+      "stop, take and timed close",
+      "ownership, persistence, restart recovery and bounded execution evidence"
+    ],
+    "single_ea_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true
+  },
+  "frozen_no_rescue_bundle": [
+    "DRIVE versus FADE response",
+    "London or New York session",
+    "IANA anchor or timezone rule",
+    "five-bar body or range window",
+    "body magnitude, range, volume, spread or clock threshold",
+    "US100 or US30 subgroup",
+    "cross-symbol ranking or disagreement filter",
+    "risk, minimum lot or aggregate cap",
+    "stop, take, same-bar order or hold"
+  ],
+  "preoutcome_attestation": {
+    "family_source_copies": 0,
+    "opening_bodies_or_ranges": 0,
+    "candidate_directions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false,
+    "optimization_changed": false,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "next_authorized_action": "after this declaration reaches origin/main, copy the two original M1 authorities once into the self-contained family, implement the complete Python adapter, and freeze only structural session, direction-count and risk-feasibility evidence before one development process"
+}

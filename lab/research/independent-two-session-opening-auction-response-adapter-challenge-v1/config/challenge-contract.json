@@ -1,0 +1,287 @@
+{
+  "schema": "zeta-next-independent-two-session-opening-auction-response-adapter-challenge-v1-contract",
+  "family": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/",
+  "program": {
+    "primary_macro_program": 3,
+    "name": "order_time_session",
+    "height": "micro_to_meso",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "claim": "develop a separately attributable automated strategy that beats exact V8",
+    "candidate_architecture_required": "Python_adapter_plus_EA",
+    "single_ea_novel_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "isolation": {
+    "candidate_root_is_self_contained": true,
+    "forbidden_runtime_or_include_roots": [
+      "live-dev/",
+      "optimization/",
+      "lab/mt5/",
+      "another lab family"
+    ],
+    "dedicated_runtime_if_native_stage_opens": "lab/runtime/independent-two-session-opening-auction-response-adapter-challenge-v1-portable/",
+    "candidate_portfolio_if_native_stage_opens": "ZT-CHAL-F006-OAR1",
+    "candidate_magic_if_native_stage_opens": {
+      "US100": 260831961,
+      "US30": 260831962
+    },
+    "candidate_identity_distinct_from_v8": true
+  },
+  "independence": {
+    "excluded_inputs": [
+      "Family 001 features, models, predictions, decisions, trades and outcomes",
+      "Family 002 tensors, labels, models, ONNX files, predictions, trades and outcomes",
+      "Family 003 pair fits, residuals, decisions, baskets and outcomes",
+      "Family 004 M15 features, virtual outcomes, online state, scores, decisions, trades and outcomes",
+      "Family 005 tensors, labels, GRU models, ONNX files, predictions, utilities, trades and outcomes",
+      "V1-V8 signals, opportunity timestamps, component labels, state and economics"
+    ],
+    "material_distinctions": [
+      "exchange-local London and New York opening anchors rather than all-day or rolling model decisions",
+      "direction determined by the current first five completed opening bars rather than a historically chosen fixed session direction",
+      "two frozen polar opening-auction responses rather than an outcome-driven direction inversion",
+      "deterministic Python adapter instead of regression, classifier, residual estimator, online expert or recurrent neural model",
+      "two independent simultaneous symbol lifecycles per complete session rather than one globally ranked action"
+    ]
+  },
+  "selection_authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_005_WHOLE_MAP_RECOMPARE_V1.json",
+    "bytes": 9867,
+    "sha256": "9D98DE4B5AC34EF96B0178458E6C8D54C38E9320D1F3E801A1882716F1163553",
+    "selection_opened_price_or_candidate_outcomes": false
+  },
+  "source_inputs": {
+    "acquisition_receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    },
+    "series": {
+      "US30_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+        "bytes": 19018323,
+        "rows": 1617902,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+      },
+      "US100_M1": {
+        "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+        "bytes": 21213599,
+        "rows": 1618383,
+        "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+      }
+    },
+    "required_columns": [
+      "time",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "price_basis": "MT5 rate OHLC are Bid; recorded spread times point reconstructs Ask",
+    "point": 0.01,
+    "maximum_timestamp_exclusive": "2026-08-01T00:00:00",
+    "post_cutoff_rows_excluded": true
+  },
+  "periods": {
+    "structural_history": "2022-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_role_max": 1,
+    "locked_confirmation_price_rows_previously_opened_by_challenge_families": false
+  },
+  "session_clock": {
+    "sessions": [
+      {
+        "session": "LONDON_0800",
+        "iana_zone": "Europe/London",
+        "local_anchor": "08:00:00",
+        "dst_rule": "the IANA timezone database in the Python adapter owns the UTC conversion"
+      },
+      {
+        "session": "NEW_YORK_0930",
+        "iana_zone": "America/New_York",
+        "local_anchor": "09:30:00",
+        "dst_rule": "the IANA timezone database in the Python adapter owns the UTC conversion"
+      }
+    ],
+    "discarded_sessions": {
+      "TOKYO_0900": "timestamp-only source geometry unavailable at the local anchor",
+      "HONG_KONG_0930": "timestamp-only source coverage incomplete in late 2025 and early 2026"
+    },
+    "no_session_anchor_threshold_or_timezone_rescue_inside_v1": true
+  },
+  "decision_geometry": {
+    "required_complete_rows": "for both symbols every exact UTC minute from anchor minus 30 through anchor plus 74 inclusive",
+    "preopening_context": "anchor minus 30 through anchor minus 1; retained for completeness evidence but not used to choose direction or distance",
+    "opening_bars": "five completed M1 bars at anchor through anchor plus 4",
+    "decision_time": "immediately after the anchor-plus-4 bar completes",
+    "entry_time": "Bid open of anchor plus 5; long pays that row's Ask spread and short enters Bid",
+    "future_path": "sixty M1 bars anchor plus 5 through anchor plus 64 inclusive",
+    "audit_overcoverage": "anchor plus 65 through anchor plus 74 is required structurally but unused economically",
+    "complete_session_event": "both symbols satisfy the complete-row geometry",
+    "normal_trading_day": "UTC date with at least one complete declared session event; zero-signal and risk-blocked dates remain in the denominator",
+    "lifecycle_start_count": "each accepted symbol first fill counts once",
+    "maximum_positions_per_role": 2,
+    "maximum_positions_per_symbol": 1,
+    "new_session_batch_after_prior_batch_closed": true
+  },
+  "opening_state": {
+    "opening_body": "Bid close at anchor plus 4 minus Bid open at anchor",
+    "opening_range_price": "maximum Bid high minus minimum Bid low across anchor through anchor plus 4",
+    "positive_body_direction": "LONG",
+    "negative_body_direction": "SHORT",
+    "zero_body": "no action for either role on that symbol-session",
+    "nonpositive_or_nonfinite_range": "no action for either role on that symbol-session",
+    "preopening_context_used_as_feature": false,
+    "cross_symbol_ranking_or_filter": false
+  },
+  "candidate_bundle": {
+    "roles": [
+      {
+        "role": "OPEN_DRIVE_5M",
+        "direction": "same as opening_body sign"
+      },
+      {
+        "role": "OPEN_FADE_5M",
+        "direction": "opposite opening_body sign"
+      }
+    ],
+    "both_roles_use_every_structurally_valid_symbol_session": true,
+    "no_body_magnitude_range_volume_spread_clock_symbol_or_subgroup_filter": true,
+    "no_adjacent_response_direction_anchor_window_distance_risk_or_exit_rescue_inside_v1": true
+  },
+  "position_and_proxy_execution": {
+    "initial_deposit_usd": 100.0,
+    "leverage": "1:100",
+    "risk_distance": "the frozen five-bar opening_range_price",
+    "long_stop": "entry Ask minus one opening range, evaluated on Bid",
+    "long_take": "entry Ask plus 1.5 opening ranges, evaluated on Bid",
+    "short_stop": "entry Bid plus one opening range, evaluated on Ask",
+    "short_take": "entry Bid minus 1.5 opening ranges, evaluated on Ask",
+    "same_bar_stop_and_take": "adverse stop wins and exact threshold execution is used",
+    "maximum_hold": "sixty M1 bars including the entry bar, then direction-specific close at anchor plus 64",
+    "long_time_exit": "Bid close",
+    "short_time_exit": "Ask close reconstructed from Bid close plus that row's recorded spread",
+    "target_position_risk_fraction_of_session_start_actual_balance": 0.02,
+    "hard_position_risk_cap_fraction_after_minimum_lot": 0.04,
+    "target_aggregate_risk_fraction_for_two_symbols": 0.04,
+    "hard_aggregate_risk_cap_fraction_after_minimum_lot": 0.08,
+    "session_start_balance_snapshot_shared_by_both_symbol_sizings": true,
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_max_lots": 200.0,
+    "volume_rounding": "floor two-percent range-risk volume to 0.01; use minimum 0.01 only when planned loss is at most four percent of session-start actual balance",
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "actual_execution": "direction-specific Bid/Ask entry, barrier and time-exit prices",
+    "extra_stress": "subtract the same observed direction-specific actual spread burden once more",
+    "balance_compounding": true,
+    "exit_settlement_order": "chronological exit time, then frozen symbol order US100 before US30 on an exact tie",
+    "insolvency_or_nonfinite_balance": "block later entries without rewriting already open paths"
+  },
+  "adapter_ea_boundary": {
+    "python_adapter_owns": [
+      "IANA local-session to UTC conversion",
+      "exact M1 completeness and session sequencing",
+      "five-bar opening body and range",
+      "the frozen DRIVE or FADE direction per symbol",
+      "decision schema, sequence and bounded decision evidence"
+    ],
+    "ea_must_own": [
+      "adapter schema, sequence and freshness validation",
+      "symbol contract, tick size, tick value, lot and market-state validation",
+      "session-start balance risk sizing and aggregate cap",
+      "fail-closed order submission and two-symbol reconciliation",
+      "protective stop, take and sixty-M1 timed close",
+      "ownership, persistence, restart recovery and bounded execution evidence"
+    ],
+    "ea_may_not_create_replace_filter_or_invert_adapter_direction": true,
+    "python_runtime_required_by_ea": true
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "symbol_breadth_min": 2,
+    "session_breadth_min": 2,
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net, then frozen role order",
+    "locked_confirmation_role_max": 1
+  },
+  "confirmation_and_whole_gates": {
+    "locked_2026_actual_and_stressed_positive": true,
+    "each_epoch_2024_2025_and_locked_2026_actual_and_stressed_positive": true,
+    "whole_actual_net_strictly_above_v8": 409.81,
+    "whole_stressed_net_strictly_above_v8": 367.818,
+    "whole_closed_balance_drawdown_pct_max": 37.39,
+    "whole_robust_recovery_strictly_above": 3.295860215,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "symbol_breadth_min": 2,
+    "session_breadth_min": 2
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "normal_trading_day_average_lifecycle_starts_min": 3.0,
+    "complete_python_adapter_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_victory": true
+  },
+  "native_escalation": {
+    "condition": "exactly one unchanged role passes development, locked confirmation and whole proxy challenge gates",
+    "required_architecture": [
+      "family-owned Python adapter",
+      "family-owned EA executor"
+    ],
+    "metaeditor_compile": "0 errors / 0 warnings",
+    "tester_model": "FPMarkets Every tick based on real ticks with 100% real ticks",
+    "required_symbols": [
+      "US100",
+      "US30"
+    ],
+    "maximum_candidate_economic_paths": 1,
+    "environment_or_engineering_corrections_are_not_economic_paths": true,
+    "master_or_live_terminal_forbidden": true
+  },
+  "ordered_stages": [
+    "declaration before source copies, opening state, decisions or candidate economics",
+    "byte-equal source materialization and complete adapter implementation freeze with timestamp, direction-count and risk-feasibility structure only",
+    "one complete 2024-2025 two-role development process",
+    "locked 2026 confirmation for at most one unchanged complete passer",
+    "self-contained Python adapter plus EA compile and one native candidate path only for a complete whole-proxy survivor"
+  ],
+  "stop_rules": {
+    "no_development_passer": "close before locked 2026, EA and MT5 without an adjacent response, direction, session, body, range, threshold, symbol, subgroup, risk or exit rescue",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires a separate user-authorized engineering and handoff decision"
+  },
+  "preoutcome_state": {
+    "family_source_copies": 0,
+    "opening_bodies_or_ranges": 0,
+    "candidate_directions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "ea_source_files": 0,
+    "mt5_paths": 0,
+    "live_changed": false
+  }
+}
