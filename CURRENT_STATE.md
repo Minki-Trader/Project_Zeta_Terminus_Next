@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0534`
+- Latest state ID: `STATE-0535`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: post-Family 007 whole-map recompare commit `e79e4eefb4d0dbd6238c762da1a965158a7c8c9d`, equal to `origin/main` before the Family 008 declaration.
+- Current process parent: Family 008 declaration commit `3492b5a6f7721978982868aee5ea85418218d42d`, equal to `origin/main` before source/runtime engineering.
 
 ## Authorization and ownership
 
@@ -140,10 +140,18 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Before closure, the same frozen process must audit raw signal-direction edge, MFE/MAE, time-close versus take truncation, observed/doubled cost share, risk blocks, year stability and external-sign descriptive stability. It may retain a bounded later seed but cannot execute any undeclared threshold, time, subgroup, symbol, direction, risk, sizing or exit rescue.
 - Development-only QQQ.xnms/TQQQ.xnms source, the dedicated Portable, target copy, adapter, ranks, decisions, economics, locked 2026, EA and Tester remain unopened at declaration. The external development request is fixed to `2023-07-01..2026-01-01`; locked 2026 external data may be freshly acquired only for one unchanged complete passer.
 
+## Family 008 preprice source correction
+
+- A neutral-installation physical copy created the ignored Family 008 Portable with `585` files / `406,898,293` bytes and zero reparse points. Only `accounts.dat` and `servers.dat` were copied with hash parity from stopped non-Master Lab donor `pmlrh1-portable`; candidate and donor had zero process owner. No password was read or written.
+- First start refreshed the neutral MQL tree and downloaded the single-entry build-6140 update archive. The archive had zero traversal entry; the extracted terminal had a valid MetaQuotes signature and was installed only into the stopped candidate. Candidate terminal is build `6140`, `121,845,920` bytes / `7B3AAEDF...5B05`; Live PID `33388` remained unchanged.
+- A candidate-local Python environment now pins Python `3.13.9`, MetaTrader5 `5.0.6147`, pandas `2.3.3`, NumPy `2.3.4` and tzdata `2026.3`. The first long-path environment failed before package import and its `3,028` files / `53,990,693` bytes plus the byte-duplicate `121,845,920`-byte update staging were sent to the Windows Recycle Bin after exact-path/zero-owner checks.
+- Original-broker IPC then passed `initialized/connected/path = true/true/true` on build 6140. The live symbol database exposed canonical names `QQQ / TQQQ`; selection aliases `QQQ.xnms / TQQQ.xnms` were not selectable. With zero rate/tick calls, history files, price rows or outcomes, the same-instrument names were canonicalized in README, contract and acquisition source. No mechanism, period, clock, coherence, rank, direction, target, risk, sizing or exit changed.
+- Corrected README/contract/acquisition are `1,870 / 19,836 / 26,578` bytes at `CB78AD27...A8BD / 923E6770...4E9F / 52D40E91...EC6A`; acquisition requirements are `124` bytes / `C891D325...E404`. Correction evidence is `7,840` bytes / `24A875B43D5CB58FF34A9B3F03DA720D4C65AE2D85BD67324FA262AB29AC9024`, status `SOURCE_SYMBOL_CANONICALIZED_PREPRICE_PREOUTCOME_ACQUISITION_READY`.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 008 declaration; verify clean `main == origin/main`.
-2. Build its dedicated neutral-derived Portable, copy only stopped non-Master Lab account/server support, freshly acquire QQQ.xnms/TQQQ.xnms development authority and materialize US100 once.
+1. Commit and push the Family 008 source canonicalization and acquisition engineering boundary; verify clean `main == origin/main`.
+2. Launch only the dedicated build-6140 Portable and atomically acquire canonical QQQ/TQQQ development M1 plus both specifications; materialize US100 byte-equal once.
 3. Implement the complete Python adapter, run outcome-free structural/risk feasibility and freeze the exact implementation before economics.
 4. Run one complete two-variant development bundle and its mandatory improvement audit; open locked/native only for one unchanged complete passer.
 5. Continue serially, auditing defensible improvement headroom before each closure, until a complete native candidate passes every V8 gate.
@@ -159,15 +167,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Storage and repository discipline
 
-- System-drive free space is `99.869 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder and failed partial original-broker cache were removed, while complete referenced acquisition and result evidence is preserved.
+- System-drive free space is `98.783 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder, failed partial original-broker cache, failed Family 008 long-path environment and duplicate update staging were removed or sent recoverably to Recycle Bin, while complete referenced authorities remain preserved.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 008 leveraged-ETF close-rebalance-pressure adapter bundle is declared; runtime, source, implementation and outcomes remain unopened.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 008 preprice symbol canonicalization and acquisition engineering are ready; development QQQ/TQQQ bars and all outcomes remain unopened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_SOURCE_CANONICALIZED_PREPRICE_ACQUISITION_READY`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

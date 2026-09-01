@@ -1,0 +1,165 @@
+{
+  "schema": "zeta-next-independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-source-canonicalization-correction",
+  "recorded_at_utc": "2026-09-01T02:25:16.9653984Z",
+  "status": "SOURCE_SYMBOL_CANONICALIZED_PREPRICE_PREOUTCOME_ACQUISITION_READY",
+  "family": "independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1",
+  "declaration_authority": {
+    "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+    "bytes": 11947,
+    "sha256": "A8D22D6737CEBE4F5C188AE05E769183CB63A58B1B10707E60BF68CC81C91798",
+    "commit": "3492b5a6f7721978982868aee5ea85418218d42d"
+  },
+  "original_frozen_files": {
+    "README_sha256": "883E6BF2BA8F056746C1B4DC08C72AC59951BB18412B2DE4D5EE8DFFB3D9F787",
+    "contract_sha256": "7C303BAF9F91C985862EE2A8242714C289D7EA443D413A20BC46AA6E25F84CAA",
+    "declared_symbol_aliases": [
+      "QQQ.xnms",
+      "TQQQ.xnms"
+    ]
+  },
+  "dedicated_environment": {
+    "neutral_installation": "C:/Program Files/MetaTrader 5/",
+    "dedicated_portable": "lab/runtime/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-portable/",
+    "neutral_copy_files": 585,
+    "neutral_copy_bytes": 406898293,
+    "filesystem_reparse_points": 0,
+    "initial_terminal_build": 6090,
+    "initial_terminal_bytes": 131749704,
+    "initial_terminal_sha256": "EA58630BED990110DA60E28494D9ED5DF10B025C693F34CCC1D203740C606F9A",
+    "downloaded_update_archive_bytes": 61047396,
+    "downloaded_update_archive_sha256": "ED032D0D6AE715DDCD7C95B434529447C2E473474224F31DB772D36C3EC8708C",
+    "update_archive_entries": 1,
+    "update_archive_path_traversal_entries": 0,
+    "updated_terminal_build": 6140,
+    "updated_terminal_bytes": 121845920,
+    "updated_terminal_sha256": "7B3AAEDFD3A3998F2138D399F601F46ED49DDBC9762697CE1170F8B325055B05",
+    "updated_terminal_authenticode": "Valid MetaQuotes Ltd.",
+    "account_support": {
+      "source": "stopped non-Master Lab donor pmlrh1-portable",
+      "copied_files": 2,
+      "accounts_dat_bytes": 8453,
+      "accounts_dat_sha256": "85C3C6D57DFF54F5F658329CB829A075C52E561F1978B9363CA3FE9DA5E37873",
+      "servers_dat_bytes": 59200,
+      "servers_dat_sha256": "F82C2363F4C8739C19DD8596928065D586EDC6408700216CDDF485D3E2AA9C0B",
+      "copy_time_and_post_config_hash_parity": true,
+      "password_values_read_or_written": 0
+    },
+    "candidate_common_ini": {
+      "bytes": 670,
+      "sha256": "77C2A7081CAC6DAB4C5AB5183B7059A9DCB7256B3894A3742702DF18C2CB0D85",
+      "donor_login_and_server_metadata_present_without_persisting_values_in_evidence": true,
+      "MaxBars": 5000000,
+      "password_fields": 0
+    },
+    "python_environment": {
+      "physical_root": "lab/runtime/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-portable/py/",
+      "files": 6514,
+      "bytes": 134325348,
+      "python": "3.13.9",
+      "MetaTrader5": "5.0.6147",
+      "pandas": "2.3.3",
+      "numpy": "2.3.4",
+      "tzdata": "2026.3",
+      "requirements_path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/acquisition/requirements-acquisition.txt",
+      "requirements_bytes": 124,
+      "requirements_sha256": "C891D325BBCCC8D4CB81D6B82464A82C4CF7AD1491EBA5A5013526F28CF9E404"
+    }
+  },
+  "environment_corrections_without_economic_or_price_verdict": [
+    {
+      "fault": "the neutral build 6090 first start performed the normal complete MQL5 refresh and waited on its downloaded build-6140 restart dialog, causing one 120-second Python IPC timeout",
+      "correction": "the single-entry path-safe update archive was extracted to staging, its build and valid MetaQuotes signature were verified, and only the stopped candidate terminal64.exe was replaced"
+    },
+    {
+      "fault": "the first long-path virtual environment package install failed at Windows path length before MetaTrader5 became importable",
+      "correction": "the same candidate physical runtime was temporarily mapped to a short drive letter for installation; the mapping was removed and the resulting physical py environment imports every pinned package"
+    },
+    {
+      "fault": "the stopped donor common login did not equal an Expert Account setting in an older tracked handoff SET",
+      "correction": "the Expert Account field was rejected as login authority; only the exact donor combination that successfully supplied Family 007 original-broker acquisition was used"
+    }
+  ],
+  "connected_original_broker_metadata_probe": {
+    "terminal_initialized": true,
+    "terminal_connected": true,
+    "terminal_version": [
+      500,
+      6140,
+      "21 Aug 2026"
+    ],
+    "terminal_path_matched_candidate_portable": true,
+    "symbol_database_total": 828,
+    "selection_metadata_aliases_selectable": {
+      "QQQ.xnms": false,
+      "TQQQ.xnms": false
+    },
+    "exact_name_only_group_matches": [
+      "QQQ",
+      "TQQQ"
+    ],
+    "canonical_symbols": [
+      "QQQ",
+      "TQQQ"
+    ],
+    "symbol_info_price_tick_or_bar_values_persisted": 0,
+    "copy_rates_or_copy_ticks_calls": 0,
+    "broker_account_position_order_or_deal_queries": 0
+  },
+  "classification": {
+    "type": "PREPRICE_SOURCE_NAME_CANONICALIZATION_FOR_THE_SAME_TWO_ETF_INSTRUMENTS",
+    "economic_contract_changed": false,
+    "instrument_pair_changed": false,
+    "causal_mechanism_changed": false,
+    "period_clock_return_coherence_reference_rank_direction_target_risk_sizing_or_exit_changed": false,
+    "selection_aliases_preserved_as_historical_provenance": true,
+    "connected_original_broker_names_are_execution_authority": true
+  },
+  "corrected_files": {
+    "README": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/README.md",
+      "bytes": 1870,
+      "lines": 15,
+      "sha256": "CB78AD273812D5D33332D343A217D9A7C5832FF866EF864233F40417015FA8BD"
+    },
+    "contract": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 19836,
+      "lines": 365,
+      "sha256": "923E67705D21077EBAD6E54917B1EDF36C9EEF93F50D4893B5D6F2246C704E9F"
+    },
+    "acquisition": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/acquisition/acquire_external.py",
+      "bytes": 26578,
+      "lines": 661,
+      "sha256": "52D40E910DCBF7C6A4549CABF5D0D77877EF4BC64ED42EE933F30072E755EC6A",
+      "syntax_compile_passed": true
+    }
+  },
+  "preacquisition_attestation": {
+    "candidate_process_owner": false,
+    "candidate_QQQ_or_TQQQ_history_files": 0,
+    "external_artifact_root_created": false,
+    "external_price_spread_volume_return_rows_acquired_or_persisted": 0,
+    "target_values_opened": 0,
+    "candidate_decisions_lifecycles_economics_or_improvement_values": 0,
+    "locked_values_opened": false,
+    "EA_or_Tester_paths": 0,
+    "orders_or_trades": 0,
+    "live_PID_33388_unchanged": true
+  },
+  "storage_cleanup": {
+    "failed_long_path_environment": {
+      "files": 3028,
+      "bytes": 53990693,
+      "action": "sent to Windows Recycle Bin after exact-path, candidate-containment and zero-owner verification",
+      "recoverable": true
+    },
+    "duplicate_update_staging": {
+      "files": 1,
+      "bytes": 121845920,
+      "action": "sent to Windows Recycle Bin after byte parity with the installed candidate terminal and zero-owner verification",
+      "recoverable": true
+    }
+  },
+  "next_authorized_action": "after this correction reaches origin/main, launch only the dedicated build-6140 Portable, run the frozen development acquisition for canonical QQQ and TQQQ, and persist outputs atomically only if both complete and pass integrity"
+}

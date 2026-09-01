@@ -23,6 +23,19 @@
     "selection_opened_external_or_target_price_values": false,
     "selection_opened_candidate_outcomes": false
   },
+  "source_symbol_canonicalization": {
+    "selection_metadata_aliases": [
+      "QQQ.xnms",
+      "TQQQ.xnms"
+    ],
+    "connected_original_broker_canonical_symbols": [
+      "QQQ",
+      "TQQQ"
+    ],
+    "classification": "preprice source-name correction for the same two ETF instruments",
+    "canonicalization_observed_price_spread_volume_return_or_outcome_values": 0,
+    "no_instrument_mechanism_period_threshold_direction_risk_or_exit_change": true
+  },
   "isolation": {
     "candidate_root_is_self_contained": true,
     "forbidden_runtime_or_include_roots": [
@@ -63,8 +76,8 @@
   "source_inputs": {
     "external_series_not_yet_acquired": {
       "symbols": [
-        "QQQ.xnms",
-        "TQQQ.xnms"
+        "QQQ",
+        "TQQQ"
       ],
       "timeframe": "M1",
       "development_request_start_inclusive": "2023-07-01T00:00:00Z",
@@ -127,23 +140,23 @@
     "no_alternate_clock_timezone_session_or_holiday_rescue_inside_v1": true
   },
   "common_normal_day": {
-    "external_completeness": "exactly one QQQ.xnms and one TQQQ.xnms M1 row at every local minute 09:30 through 15:29 inclusive",
+    "external_completeness": "exactly one QQQ and one TQQQ M1 row at every local minute 09:30 through 15:29 inclusive",
     "target_completeness": "exactly one US100 M1 row at every local minute 15:30 through 15:59 inclusive",
     "duplicate_or_missing_timestamp": "exclude the local date structurally",
     "zero_signal_days_remain_in_turnover_denominator": true
   },
   "external_event": {
-    "qqq_return": "QQQ.xnms Bid close at 15:29 divided by Bid open at 09:30 minus one",
-    "tqqq_return": "TQQQ.xnms Bid close at 15:29 divided by Bid open at 09:30 minus one",
-    "direction": "sign of the nonzero QQQ.xnms return",
-    "coherence": "TQQQ.xnms return must have the same sign and absolute magnitude at least twice the absolute QQQ.xnms return",
+    "qqq_return": "QQQ Bid close at 15:29 divided by Bid open at 09:30 minus one",
+    "tqqq_return": "TQQQ Bid close at 15:29 divided by Bid open at 09:30 minus one",
+    "direction": "sign of the nonzero QQQ return",
+    "coherence": "TQQQ return must have the same sign and absolute magnitude at least twice the absolute QQQ return",
     "zero_or_nonfinite_return": "no action",
     "reference_population": "the previous 60 chronologically complete common normal days, excluding the current local date",
     "reference_length": 60,
-    "magnitude_statistic": "absolute completed QQQ.xnms regular-session return",
+    "magnitude_statistic": "absolute completed QQQ regular-session return",
     "fixed_percentile": 0.75,
-    "nearest_rank": "sort the 60 prior absolute QQQ.xnms returns ascending and use one-indexed position 45",
-    "gate": "current absolute QQQ.xnms return must be nonzero and greater than or equal to the causal nearest-rank threshold, and coherence must pass",
+    "nearest_rank": "sort the 60 prior absolute QQQ returns ascending and use one-indexed position 45",
+    "gate": "current absolute QQQ return must be nonzero and greater than or equal to the causal nearest-rank threshold, and coherence must pass",
     "ties": "all exact equality cases pass; no epsilon or randomized tie break",
     "no_alternate_symbol_return_window_reference_length_percentile_rank_leverage_ratio_or_direction_rescue_inside_v1": true
   },
@@ -235,7 +248,7 @@
   },
   "adapter_ea_boundary": {
     "python_adapter_owns": [
-      "fresh QQQ.xnms and TQQQ.xnms source and symbol-specification integrity",
+      "fresh QQQ and TQQQ source and symbol-specification integrity",
       "IANA New York local-date conversion and exact common-day completeness",
       "completed paired returns, sixty-day QQQ rank, coherence and continuation direction",
       "twenty-day US100 risk distance",
@@ -308,8 +321,8 @@
     "metaeditor_compile": "0 errors / 0 warnings",
     "tester_model": "FPMarkets Every tick based on real ticks with 100% real ticks",
     "required_symbols": [
-      "QQQ.xnms signal source",
-      "TQQQ.xnms coherence source",
+      "QQQ signal source",
+      "TQQQ coherence source",
       "US100 target"
     ],
     "maximum_candidate_economic_paths": 1,
@@ -318,7 +331,7 @@
   },
   "ordered_stages": [
     "declaration before dedicated runtime, external acquisition, target copy, rank, implementation or economics",
-    "fresh development-only QQQ.xnms and TQQQ.xnms acquisition plus specifications and byte-equal US100 materialization",
+    "fresh development-only QQQ and TQQQ acquisition plus specifications and byte-equal US100 materialization",
     "complete adapter implementation freeze with timestamp, rank, coherence, sign-count and risk-feasibility structure only",
     "one complete 2024-2025 two-variant development bundle plus mandatory improvement-potential audit",
     "locked 2026 external acquisition and confirmation for at most one unchanged complete passer",
