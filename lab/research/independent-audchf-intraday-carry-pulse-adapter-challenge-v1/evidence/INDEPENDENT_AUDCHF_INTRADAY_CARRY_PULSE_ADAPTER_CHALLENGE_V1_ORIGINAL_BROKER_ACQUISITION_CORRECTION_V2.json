@@ -1,0 +1,112 @@
+{
+  "schema": "zeta-next-independent-audchf-intraday-carry-pulse-adapter-challenge-v1-original-broker-acquisition-correction-v2",
+  "recorded_at_utc": "2026-09-01T01:31:23.2152704Z",
+  "status": "COMPLETE_ORIGINAL_BROKER_DEVELOPMENT_ACQUISITION_PREOUTCOME",
+  "family": "independent-audchf-intraday-carry-pulse-adapter-challenge-v1",
+  "user_direction": "use the original broker account, reacquire the source, and delete the demo-acquired artifact",
+  "scope_correction": {
+    "prior_error": "Master-terminal isolation was incorrectly expanded into a requirement for a new or independently supplied demo account.",
+    "correct_boundary": "The Master executable, process and settings path remain untouched. A one-time copy of non-price account/server support from a stopped project-local non-Master Lab Portable is allowed; no donor runtime is executed and no donor price/history cache is read or copied.",
+    "economic_contract_changed": false,
+    "signal_rank_direction_risk_exit_or_period_changed": false
+  },
+  "corrected_authorities": {
+    "contract": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 18400,
+      "sha256": "BCFF0204EDFB65D34298A54F1E69859BD7C924566C36526999A391D1E6D197F5"
+    },
+    "acquisition_script": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/acquisition/acquire_audchf.py",
+      "bytes": 23195,
+      "lines": 551,
+      "sha256": "9A723B0ED4225F1C0A0CCBBD699296BE1A18ABAA911CDD00E5699AB91D776737"
+    }
+  },
+  "session_support_copy": {
+    "donor": "lab/runtime/pmlrh1-portable/",
+    "donor_process_owner": false,
+    "target": "lab/runtime/independent-audchf-intraday-carry-pulse-adapter-challenge-v1-portable/",
+    "copied_files": [
+      {
+        "name": "accounts.dat",
+        "bytes": 8453,
+        "copy_time_sha256": "85C3C6D57DFF54F5F658329CB829A075C52E561F1978B9363CA3FE9DA5E37873"
+      },
+      {
+        "name": "servers.dat",
+        "bytes": 59200,
+        "copy_time_sha256": "F82C2363F4C8739C19DD8596928065D586EDC6408700216CDDF485D3E2AA9C0B"
+      }
+    ],
+    "copy_time_hash_mismatches": 0,
+    "account_identifier_persisted_in_evidence": false,
+    "donor_price_or_history_files_copied": 0,
+    "donor_runtime_executed": false
+  },
+  "deleted_demo_artifact": {
+    "path": "lab/runtime/independent-audchf-intraday-carry-pulse-adapter-challenge-v1-portable/Bases/Default/History/AUDCHF/2026.hcc",
+    "bytes": 15144,
+    "classification": "clean-terminal Default-server placeholder created by the prior demo/default acquisition attempt",
+    "final_state": "ABSENT",
+    "demo_acquisition_csv_receipt_or_symbol_spec_files_remaining": 0
+  },
+  "history_capacity_correction": {
+    "first_original_broker_attempt": "Every monthly request returned the same single out-of-range earliest available row because terminal MaxBars was 100000; range filtering correctly produced zero rows and no final acquisition artifact.",
+    "maxbars_before": 100000,
+    "maxbars_after": 5000000,
+    "partial_original_broker_cache_deleted_before_retry": [
+      {
+        "name": "2026.hcc",
+        "bytes": 7749168,
+        "sha256": "98DA8FCEB6A37AB15BE02D903DC15E68D0D1B5470345FCB5720CD4DB2BDEDDE8"
+      },
+      {
+        "name": "M1.hc",
+        "bytes": 6001850,
+        "sha256": "D124B77D5AF0F73AC2FD4911B4201B8ACC74BF810F3AF086A7A490213233AEC9"
+      }
+    ],
+    "acquisition_retry_guard": "Each monthly batch now waits for at least 1000 in-range rows with four-day boundary coverage and rejects the out-of-range one-row fallback before persistence.",
+    "first_attempt_final_artifacts": 0
+  },
+  "complete_development_acquisition": {
+    "status": "COMPLETE_FRESH_DEDICATED_PORTABLE_DEVELOPMENT_ACQUISITION",
+    "requested_start_inclusive": "2023-07-01T00:00:00Z",
+    "requested_end_exclusive": "2026-01-01T00:00:00Z",
+    "monthly_batches": 30,
+    "rows": 930039,
+    "first_utc": "2023-07-03T00:00:00Z",
+    "last_utc": "2025-12-31T23:59:00Z",
+    "csv": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/external/AUDCHF_M1_DEVELOPMENT.csv",
+      "bytes": 85593295,
+      "sha256": "4BDADB7E94BCE224DA6A0B92A981651E1B472AD5A695EF451F4617036DF96C8E"
+    },
+    "receipt": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/external/AUDCHF_DEVELOPMENT_ACQUISITION_RECEIPT.json",
+      "bytes": 8681,
+      "sha256": "D98DB0723FCA6BA4F4AD83318843A525E6F8A07E931B6FAA156DDFC1B0E84FEB"
+    },
+    "symbol_spec": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/external/AUDCHF_SYMBOL_SPEC.json",
+      "bytes": 549,
+      "sha256": "5137BA460E346466D20433AFD4A9DD4890CE2FCFCA2DA1809B8A9FB98764BDB9"
+    },
+    "batch_row_sum_matches_output": true,
+    "csv_and_symbol_spec_hashes_match_receipt": true,
+    "locked_rows_acquired": 0
+  },
+  "process_and_safety_boundary": {
+    "successful_candidate_pid": 39348,
+    "successful_candidate_stopped_after_acquisition": true,
+    "protected_live_pid_before": 33388,
+    "protected_live_pid_after": 33388,
+    "live_executable_config_settings_or_files_copied": 0,
+    "broker_account_position_order_or_deal_api_queries": 0,
+    "orders_or_trades": 0
+  },
+  "candidate_lifecycles_or_economic_metrics": 0,
+  "locked_external_or_target_values_opened": false,
+  "goal_status": "ACTIVE_NOT_COMPLETE"
+}

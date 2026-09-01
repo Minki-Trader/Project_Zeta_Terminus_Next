@@ -8,6 +8,7 @@ import os
 import shutil
 import sys
 import tempfile
+import time
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -32,6 +33,7 @@ COLUMNS = [
     "spread",
     "real_volume",
 ]
+HISTORY_SYNC_TIMEOUT_SECONDS = 300
 
 
 def sha256(path: Path) -> str:
@@ -111,26 +113,59 @@ def acquire_batches(
     cursor = start
     while cursor < end_exclusive:
         batch_end = min(next_month(cursor), end_exclusive)
-        rates = mt5.copy_rates_range(
-            SYMBOL,
-            mt5.TIMEFRAME_M1,
-            cursor,
-            datetime.fromtimestamp(batch_end.timestamp() - 1, tz=UTC),
-        )
-        if rates is None:
-            raise RuntimeError(
-                f"copy_rates_range failed for {cursor.isoformat()} / "
-                f"{batch_end.isoformat()}: {mt5.last_error()}"
+        batch_start_epoch = int(cursor.timestamp())
+        batch_end_epoch = int(batch_end.timestamp())
+        deadline = time.monotonic() + HISTORY_SYNC_TIMEOUT_SECONDS
+        last_observation = "no response"
+        next_progress = time.monotonic() + 15
+        while True:
+            rates = mt5.copy_rates_range(
+                SYMBOL,
+                mt5.TIMEFRAME_M1,
+                cursor,
+                datetime.fromtimestamp(batch_end.timestamp() - 1, tz=UTC),
             )
-        frame = pd.DataFrame(rates)
-        if frame.empty:
-            raise RuntimeError(
-                f"empty monthly batch: {cursor.isoformat()} / {batch_end.isoformat()}"
-            )
-        missing = [name for name in COLUMNS if name not in frame.columns]
-        if missing:
-            raise RuntimeError(f"missing MT5 rate columns: {missing}")
-        frame = frame[COLUMNS].copy()
+            if rates is None:
+                last_observation = f"last_error={mt5.last_error()}"
+                frame = pd.DataFrame()
+            else:
+                frame = pd.DataFrame(rates)
+                missing = [name for name in COLUMNS if name not in frame.columns]
+                if missing:
+                    raise RuntimeError(f"missing MT5 rate columns: {missing}")
+                frame = frame[
+                    (frame["time"] >= batch_start_epoch)
+                    & (frame["time"] < batch_end_epoch)
+                ].copy()
+                if frame.empty:
+                    last_observation = "zero in-range rows"
+                else:
+                    first_epoch = int(frame["time"].iloc[0])
+                    last_epoch = int(frame["time"].iloc[-1])
+                    last_observation = (
+                        f"rows={len(frame)} first={first_epoch} last={last_epoch}"
+                    )
+                    boundary_slack = 4 * 24 * 60 * 60
+                    if (
+                        len(frame) >= 1_000
+                        and first_epoch - batch_start_epoch <= boundary_slack
+                        and batch_end_epoch - last_epoch <= boundary_slack
+                    ):
+                        frame = frame[COLUMNS].copy()
+                        break
+            now = time.monotonic()
+            if now >= deadline:
+                raise RuntimeError(
+                    f"history synchronization timed out for {cursor.isoformat()} / "
+                    f"{batch_end.isoformat()}: {last_observation}"
+                )
+            if now >= next_progress:
+                print(
+                    f"waiting for history sync {cursor:%Y-%m}: {last_observation}",
+                    flush=True,
+                )
+                next_progress = now + 15
+            time.sleep(1)
         batches.append(frame)
         receipts.append(
             {
@@ -197,9 +232,9 @@ def common_source_receipt(
         "terminal_path": str(terminal_fields.get("path")),
         "terminal_data_path": str(terminal_fields.get("data_path")),
         "connected": bool(terminal_fields.get("connected")),
-        "server_authority": "clean MetaQuotes-distribution Portable demo connection; account identifier and account state intentionally not queried or persisted",
+        "server_authority": "project-local original broker session copied once as non-price account/server support from a stopped non-Master Lab Portable; account identifier and account state intentionally not queried or persisted",
         "broker_account_position_order_or_deal_queries": 0,
-        "existing_runtime_cache_reads": 0,
+        "existing_runtime_price_or_history_cache_reads": 0,
         "other_family_runtime_execution": False,
     }
 

@@ -10,4 +10,4 @@ The mandatory architecture is `Python adapter + EA`:
 
 Family 001-006 outputs and V1-V8 signals, opportunities, states and economics are excluded. Development is 2024-2025; locked 2026 January-July can open for at most one unchanged complete role. The authoritative frozen contract is `config/challenge-contract.json`.
 
-Status: declared before the dedicated Portable, fresh AUDCHF acquisition, target copies, rank construction, adapter implementation or any candidate outcome.
+Status: the dedicated Portable now uses a one-time project-local original-broker account/server support copy from a stopped non-Master Lab donor. The prior 15,144-byte Default/demo AUDCHF placeholder was deleted. Fresh development authority contains 930,039 AUDCHF M1 rows through 2025-12-31, and the complete adapter passed its outcome-free structural/risk precheck and is frozen before development economics. Locked 2026, candidate lifecycles/economics, EA and native MT5 remain unopened.

@@ -1,0 +1,183 @@
+{
+  "schema": "zeta-next-independent-audchf-intraday-carry-pulse-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-09-01T01:35:17.1701451Z",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/",
+  "architecture": "Python adapter + EA",
+  "authorities": {
+    "contract": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 18400,
+      "lines": 350,
+      "sha256": "BCFF0204EDFB65D34298A54F1E69859BD7C924566C36526999A391D1E6D197F5"
+    },
+    "acquisition_script": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/acquisition/acquire_audchf.py",
+      "bytes": 23195,
+      "lines": 551,
+      "sha256": "9A723B0ED4225F1C0A0CCBBD699296BE1A18ABAA911CDD00E5699AB91D776737"
+    },
+    "adapter": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 52045,
+      "lines": 1277,
+      "sha256": "63E957C7F52CD53FAB84918E4564BF056EFA15660D619602529550BA2E4B4FE5"
+    },
+    "original_broker_acquisition_correction": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/evidence/INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_ORIGINAL_BROKER_ACQUISITION_CORRECTION_V2.json",
+      "bytes": 5488,
+      "sha256": "0BC953B96A0A205E4A71FBAD6BFD15CAA4861C838388F87DE8461003232EA88E"
+    },
+    "external_development": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/external/AUDCHF_M1_DEVELOPMENT.csv",
+      "bytes": 85593295,
+      "rows": 930039,
+      "sha256": "4BDADB7E94BCE224DA6A0B92A981651E1B472AD5A695EF451F4617036DF96C8E"
+    },
+    "external_development_receipt": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/external/AUDCHF_DEVELOPMENT_ACQUISITION_RECEIPT.json",
+      "bytes": 8681,
+      "sha256": "D98DB0723FCA6BA4F4AD83318843A525E6F8A07E931B6FAA156DDFC1B0E84FEB"
+    },
+    "external_symbol_spec": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/input/external/AUDCHF_SYMBOL_SPEC.json",
+      "bytes": 549,
+      "sha256": "5137BA460E346466D20433AFD4A9DD4890CE2FCFCA2DA1809B8A9FB98764BDB9"
+    },
+    "US100_M1": {
+      "bytes": 21213599,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+    },
+    "US30_M1": {
+      "bytes": 19018323,
+      "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+    }
+  },
+  "environment": {
+    "python": "3.13.9",
+    "MetaTrader5": "5.0.6147",
+    "pandas": "2.3.3",
+    "numpy": "2.3.4",
+    "pyarrow": "23.0.1",
+    "syntax_compile": true
+  },
+  "frozen_semantics": {
+    "decision_times": [
+      "10:00",
+      "10:30",
+      "11:00",
+      "11:30",
+      "12:00",
+      "12:30",
+      "13:00",
+      "13:30",
+      "14:00",
+      "14:30",
+      "15:00",
+      "15:30"
+    ],
+    "clock": "America/New_York",
+    "external_interval": "exact prior completed thirty AUDCHF M1 Bid bars",
+    "trigger": "nonzero absolute interval return at or above nearest-rank position 45 among the same slot's prior 60 complete absolute returns",
+    "roles": {
+      "AUDCHF_PULSE_FOLLOW": "map the AUDCHF interval sign to both target directions",
+      "AUDCHF_PULSE_FADE": "take the exact opposite direction on both targets"
+    },
+    "entry": "exact decision-time target M1 Bid open; long enters Ask and short enters Bid",
+    "risk_distance": "median corresponding target half-hour Bid range from the prior 20 complete same-slot sessions, floored at 0.01",
+    "barriers_and_hold": "adverse-first -1R, +1.5R, maximum thirty M1 bars including entry",
+    "actual_execution": "direction-specific recorded Bid/Ask",
+    "stress": "subtract the same observed spread burden once more",
+    "risk": "two percent per target from common slot-start actual balance; four-percent minimum-lot hard cap per target and eight-percent aggregate hard cap",
+    "balance": "shared compounded actual and stressed ledgers with ordered settlement and US100 before US30 on exact ties"
+  },
+  "outcome_free_precheck": {
+    "status": "VALID_OUTCOME_FREE_PRECHECK",
+    "normal_trading_days": 517,
+    "structural_complete_slots": 6143,
+    "structural_slot_counts": {
+      "10:00": 514,
+      "10:30": 515,
+      "11:00": 517,
+      "11:30": 516,
+      "12:00": 516,
+      "12:30": 514,
+      "13:00": 512,
+      "13:30": 510,
+      "14:00": 512,
+      "14:30": 512,
+      "15:00": 502,
+      "15:30": 503
+    },
+    "gated_events": 1582,
+    "gated_slot_counts": {
+      "10:00": 135,
+      "10:30": 128,
+      "11:00": 131,
+      "11:30": 128,
+      "12:00": 131,
+      "12:30": 137,
+      "13:00": 133,
+      "13:30": 132,
+      "14:00": 127,
+      "14:30": 138,
+      "15:00": 134,
+      "15:30": 128
+    },
+    "external_sign_counts": {
+      "negative": 807,
+      "positive": 775
+    },
+    "two_symbol_structural_starts_per_role": 3164,
+    "structural_starts_per_normal_day_per_role": 6.119922630560929,
+    "minimum_lot_feasibility_at_initial_100_usd": {
+      "US100": "1582/1582",
+      "US30": "1582/1582",
+      "both_symbols_feasible_on_every_state": true,
+      "maximum_minimum_lot_planned_loss_usd": {
+        "US100": 1.9425999999999841,
+        "US30": 2.78375
+      }
+    },
+    "future_trade_path_simulations": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "locked_external_or_target_values_loaded": false,
+    "persistent_files_written": 0
+  },
+  "integrity_controls": {
+    "all_static_authorities_hash_checked_before_data": true,
+    "original_broker_acquisition_correction_hash_checked": true,
+    "external_receipt_csv_and_symbol_spec_hash_checked": true,
+    "development_maximum_epoch_exclusive": "2026-01-01T00:00:00Z",
+    "minute_alignment_duplicate_ohlc_spread_validation": true,
+    "causal_prior_only_rank_and_risk_windows": true,
+    "minimum_lot_and_aggregate_risk_fail_closed": true,
+    "adverse_first_execution": true,
+    "atomic_output_and_no_overwrite": true,
+    "strict_json_allow_nan_false": true
+  },
+  "predevelopment_attestation": {
+    "demo_default_AUDCHF_cache_remaining": 0,
+    "candidate_terminal_process_owner": 0,
+    "protected_live_pid": 33388,
+    "broker_account_position_order_or_deal_api_queries": 0,
+    "orders_or_trades": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "locked_confirmation_opened": false,
+    "EA_source_files": 0,
+    "MT5_tester_paths": 0
+  },
+  "development_authority": {
+    "condition": "this freeze commit equals origin/main and the tracked worktree is clean",
+    "complete_processes_authorized": 1,
+    "roles": [
+      "AUDCHF_PULSE_FOLLOW",
+      "AUDCHF_PULSE_FADE"
+    ],
+    "period": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+    "economic_reruns": 0
+  },
+  "next_authorized_action": "commit and push the acquisition correction, complete original-broker development authority, adapter and this freeze; only after origin equality run exactly one complete two-role development process"
+}

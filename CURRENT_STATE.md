@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0529`
+- Latest state ID: `STATE-0530`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Current process parent: Family 007 declaration commit `e568f2510150b1e2537aeda033a42b187171f86a`, equal to `origin/main` before its dedicated runtime, acquisition engineering and adapter implementation.
 
@@ -110,25 +110,25 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Family 007 frozen declaration
 
-- README/contract are `1,413 / 18,259` bytes at `E5E25B69BF92459F0EF34B3731EAEF4BD609FC499A0DF01D1D1C8E0BE5126BA1 / 272141C22835818F9875451A81DDE98EF22D3F8E0CC705416ED06FF7365F7B82`.
+- README/contract are `1,747 / 18,400` bytes at `3CB17CB8FB02D0430EDE5D3695D5D4A4DC6B326D18DB6BD6155AE3D94CBC0743 / BCFF0204EDFB65D34298A54F1E69859BD7C924566C36526999A391D1E6D197F5`.
 - Declaration `INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_DECLARATION.json` is `10,449` bytes / `0CEBC92B0F7BE5469FF6CBEE20E8AF3BBC36907EA95FF784E03AE8A411E7799C`, status `DECLARED_PRERUNTIME_PREACQUISITION_PREINPUT_PRERANK_PREIMPLEMENTATION_PREOUTCOME`.
 - Every New York-local half hour ending `10:00..15:30` uses exactly 30 completed AUDCHF M1 Bid rows. The nonzero absolute return must be at or above nearest-rank position `45` among the same slot's prior `60` complete absolute returns. FOLLOW maps the AUDCHF sign to both targets and FADE takes the exact opposite.
 - Entry is the exact decision-time target M1 open. Per-target risk distance is the median corresponding half-hour Bid range from the prior `20` complete same-slot sessions, floored at `0.01`. Stop/take/hold are `-1R / +1.5R / 30 M1`; actual uses direction-specific Bid/Ask and stress charges the observed burden again.
 - Each symbol targets `2%` of common slot-start actual balance with `4%` minimum-lot hard cap and `8%` aggregate hard cap. Development 2024-2025 requires both-year actual/stressed positivity, `>+$149.97 / +$127.786`, DD `<=37.39%`, at least `3` starts/day, both symbols, at least `8` slots and both AUDCHF signs.
 - Locked 2026 January-July can open for at most one unchanged complete development passer. Whole/native gates remain `>+$409.81 / >+$367.818 / <=37.39% / >3.295860215`, every epoch positive and complete adapter/EA integrity.
 - Declaration commit `e568f2510150b1e2537aeda033a42b187171f86a` reached `origin/main` before engineering. A neutral-installation-derived dedicated Portable was created and updated from terminal build `6090` to `6140`; its terminal is `121,846,032` bytes / `90AA7696...400`. A family-local Python environment pins MetaTrader5 `5.0.6147` without changing the global package.
-- The fresh clean Portable has no last trading account, so `initialize` waits at the MetaQuotes account-opening wizard. The form was inspected but its terms were not accepted, final creation was not submitted, and no account was created. A later exact direct launch of the family terminal with `/portable` reached Symbols -> AUDCHF -> M1 Bars and requested only `2023-07-01 00:00..2025-12-31 23:59`; the request completed with zero displayed rows because this clean Portable had no server session, not because the Portable acquisition route was invalid. Successful acquisition batches, AUDCHF rows/specification/receipts, account/position/order/deal queries, orders and trades all remain zero. The exact Family 007 terminal process was stopped; Live PID `33388` was not touched.
-- Development-only and later locked acquisition are separated by authority. Acquisition script `acquisition/acquire_audchf.py` is `21,504` bytes / `516` lines / `21C90C1C...A1BA9`; requirements are `176` bytes / `0021A45F...0566`. The two family-local target copies remain byte-equal to authority at `21,213,599 / 19,018,323` bytes and `634A8545...C6BB2 / 8CD68BC5...B063` for US100/US30.
-- Complete adapter `adapter/run_adapter.py` is `51,456` bytes / `1,268` lines / `9E16D532...ED04D`. Its authority-gated `precheck / development / confirmation` modes implement causal same-slot ranks/risk, frozen FOLLOW/FADE mapping, Bid/Ask execution, doubled spread burden, compounding, hard caps, deterministic passer ranking and locked-boundary integrity. Both Python files pass syntax compilation and help invocation.
-- Acquisition correction/target receipt are `5,057 / 1,510` bytes at `70EB0501...DEF2 / 079326EC...C5D`. No outcome-free precheck, implementation freeze, development process, rank threshold, direction, lifecycle/economic metric, locked value, EA, compile or Tester path has run. A Family-007-specific MetaQuotes account is not a contract requirement. Fresh development acquisition requires one user-authorized non-Live server login configured only inside the candidate Portable; an existing compatible demo login is sufficient, while creating a new demo is only a fallback when no such login exists.
+- The user corrected the account boundary: Master-terminal isolation does not require a new demo identity. With the candidate stopped, only `accounts.dat` and `servers.dat` were copied with hash parity from stopped non-Master Lab donor `pmlrh1-portable`; no donor runtime, price/history cache, EA or Live file/settings path was copied or executed. The prior `15,144`-byte Default/demo AUDCHF placeholder was deleted and is absent.
+- The first original-broker request correctly persisted no final output because terminal `MaxBars=100000` returned one out-of-range fallback row per monthly request. Its two partial original-broker cache files were deleted, `MaxBars` was raised to `5,000,000`, and the acquisition script gained bounded in-range history synchronization. The final development acquisition completed `30` monthly batches / `930,039` rows from `2023-07-03T00:00:00Z` through `2025-12-31T23:59:00Z`; CSV/receipt/spec are `85,593,295 / 8,681 / 549` bytes at `4BDADB7E...6C8E / D98DB072...4FEB / 5137BA46...BDB9`. Locked 2026 remains unopened.
+- Acquisition script `acquisition/acquire_audchf.py` is `23,195` bytes / `551` lines / `9A723B0E...6737`; complete adapter `adapter/run_adapter.py` is `52,045` bytes / `1,277` lines / `63E957C7...4FE5`. The original-broker correction is `5,488` bytes / `0BC953B9...A88E`; the earlier correction and target receipt remain `5,057 / 1,510` bytes at `70EB0501...DEF2 / 079326EC...C5D`.
+- Outcome-free precheck passed over `517` normal days, `6,143` complete slots and `1,582` gated events (`807/775` negative/positive), with `3,164` two-symbol structural starts per role or `6.11992` per normal day. Both symbols are minimum-lot feasible on all `1,582` states. Future trade simulations, lifecycles/economics, locked rows and persistent precheck output remain zero. Implementation freeze is `7,282` bytes / `4087BDD2...98B7`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`. Candidate PID `39348` was stopped after acquisition; Live PID `33388` remained unchanged.
 
 ## Next authorized sequence
 
-1. In already-open exact candidate PID `26464`, configure one user-authorized non-Live server login only inside the dedicated Family 007 Portable. Reuse an existing compatible demo login when available; do not create a new account merely for family identity and do not copy Live settings.
-2. After the candidate session is connected, use that exact `/portable` terminal and acquire only the 2023-07 through 2025 development AUDCHF authority into candidate-local storage.
-3. Run the outcome-free precheck, record causal geometry/rank capacity/risk feasibility, freeze the complete implementation and push that boundary before economics.
-4. Run one complete development process; open locked 2026, EA, compile and native MT5 only for at most one unchanged ranked full development passer.
-5. Continue serially through whole-map-recompared materially distinct families until an unchanged complete native candidate passes every V8 gate.
+1. Commit and push the original-broker acquisition correction, complete development authority, corrected adapter and implementation freeze; verify clean `main == origin/main`.
+2. Run exactly one complete two-role 2024-2025 development process.
+3. Open locked 2026, EA, compile and native MT5 only for at most one unchanged ranked full development passer.
+4. If no complete passer exists, close Family 007 without nearby rescue, recompare Programs 1-5 and 7, and open only one materially distinct successor.
+5. Continue serially until an unchanged complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
 
@@ -141,15 +141,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Storage and repository discipline
 
-- System-drive free space is `100.845 GiB`, above the mandatory `30 GiB` sweep threshold; no evidence-bearing artifact needs removal at this boundary.
+- System-drive free space is `99.886 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder and failed partial original-broker cache were removed, while the complete referenced development authority is preserved.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 007 acquisition/adapter engineering complete; exact candidate Portable PID `26464` is open and fresh development source acquisition awaits one user-configured candidate-local non-Live server session.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_CANDIDATE_PORTABLE_OPEN_AWAITING_USER_CONFIGURED_NONLIVE_SERVER_SESSION_PREINPUT_PRECHECK_PREOUTCOME`.
+- Active research unit: Family 007 complete original-broker development authority and implementation freeze are ready pre-economics; no candidate Portable process is open.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ORIGINAL_BROKER_ACQUISITION_COMPLETE_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

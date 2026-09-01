@@ -59,9 +59,10 @@ POSITION_HARD_CAP = 0.04
 AGGREGATE_HARD_CAP = 0.08
 EXPECTED = {
     "selection_audit": "1AFE04FEA5D4DA5C16A85215AD409CFC252A8B0F09214203063229CCAA299E32",
-    "contract": "272141C22835818F9875451A81DDE98EF22D3F8E0CC705416ED06FF7365F7B82",
+    "contract": "BCFF0204EDFB65D34298A54F1E69859BD7C924566C36526999A391D1E6D197F5",
     "declaration": "0CEBC92B0F7BE5469FF6CBEE20E8AF3BBC36907EA95FF784E03AE8A411E7799C",
     "engineering_correction": "70EB0501B2458D40D35F87AA27DADAB1F90EE75F6410615E2CFC204B54DFDEF2",
+    "original_broker_acquisition_correction": "0BC953B96A0A205E4A71FBAD6BFD15CAA4861C838388F87DE8461003232EA88E",
     "target_receipt": "079326EC53FE72995515516318760E0DEC4089496B156192C527A36737B46C5D",
     "US100": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2",
     "US30": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063",
@@ -78,6 +79,7 @@ class Paths:
     contract: Path
     declaration: Path
     engineering_correction: Path
+    original_broker_acquisition_correction: Path
     target_receipt: Path
     implementation_freeze: Path
     external_development: Path
@@ -165,6 +167,8 @@ def make_paths() -> Paths:
         / "INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
         engineering_correction=evidence
         / "INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_ACQUISITION_ENGINEERING_CORRECTION.json",
+        original_broker_acquisition_correction=evidence
+        / "INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_ORIGINAL_BROKER_ACQUISITION_CORRECTION_V2.json",
         target_receipt=evidence
         / "INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_TARGET_MATERIALIZATION_RECEIPT.json",
         implementation_freeze=evidence
@@ -212,6 +216,11 @@ def validate_static_authorities(paths: Paths) -> dict[str, Any]:
             paths.engineering_correction,
             EXPECTED["engineering_correction"],
             "engineering correction",
+        ),
+        "original_broker_acquisition_correction": check_hash(
+            paths.original_broker_acquisition_correction,
+            EXPECTED["original_broker_acquisition_correction"],
+            "original broker acquisition correction",
         ),
         "target_receipt": check_hash(
             paths.target_receipt, EXPECTED["target_receipt"], "target receipt"
