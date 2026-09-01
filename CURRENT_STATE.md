@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0537`
+- Latest state ID: `STATE-0538`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 008 development-source receipt commit `010a6a927f3c69c7c6091c5129a30b319f7ea4ac`, equal to `origin/main` before the preimplementation raw-time semantic correction.
+- Current process parent: Family 008 raw-time semantic correction commit `7d88e12e9e47812aee2d64518cf71fdd2ccb78c2`, equal to `origin/main` before adapter implementation.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_RAW_TIME_SEMANTICS_CORRECTED_PREIMPLEMENTATION_PREPRICE_DERIVATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Sole active Challenge family: `lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/`, Program 2 / meso, mandatory `Python adapter + EA`.
-- Parallel Lab family / Optimization campaign count: `1 / 0`; Family 008 development sources are pinned, its dedicated candidate Portable is stopped, and adapter implementation, price-derived state, lifecycles and economics remain unopened.
+- Parallel Lab family / Optimization campaign count: `1 / 0`; Family 008 development sources, raw-time semantics and complete adapter are pinned, its dedicated candidate Portable is stopped, and future exit paths, lifecycles, economics and improvement values remain unopened.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -163,12 +163,21 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Time-only geometry confirmed exact normal-day rows on 2023-07-05 and 2025-12-31 (`360 / 360 / 30` QQQ/TQQQ signal and US100 path rows). The 2023-07-03 half day, 2024-03-11 US/Europe DST mismatch and 2024-11-04 missing-minute date are excluded by the unchanged exact-completeness rule.
 - Corrected README/contract are `2,397 / 21,048` bytes at `9D1F9FF1...3914 / 801764B6...6460`. Correction evidence is `6,614` bytes / `EDD382D7319E7A19BB5E2A5047650BFFD9D0ACA6E57B38F2EEC9D5DC9894A7A7`, status `RAW_TIME_SEMANTICS_CORRECTED_PREIMPLEMENTATION_PREPRICE_DERIVATION_PREOUTCOME`. No clock, window, instrument, mechanism, return, coherence, rank, direction, risk, sizing, variant or exit changed.
 
+## Family 008 implementation frozen
+
+- Raw-time correction commit `7d88e12e9e47812aee2d64518cf71fdd2ccb78c2` reached local `main`, `origin/main` and remote `main` before implementation. Complete `precheck / development / confirmation` adapter is `73,643` bytes / `1,742` lines / `101C515B...DAC5`; pinned requirements are `58` bytes / `A8312E14...3F33`.
+- Candidate-local Python now contains Python `3.13.9`, NumPy `2.3.4`, pandas `2.3.3`, PyArrow `23.0.1` and tzdata `2026.3`. The local environment is `7,376` files / `222,563,802` bytes. The global Python was not changed and temporary install/invocation drive mappings were removed.
+- Outcome-free precheck reproduced twice: `555` complete common days including warmup, `442` development normal days (`222 / 220` in 2024/2025), `117` gated events (`57 / 60` negative/positive) and `0.264705882` starts per normal day per variant. Initial `$100` minimum lot is feasible for `117/117`; maximum minimum-lot planned loss is `$1.6062`.
+- Precheck simulated zero future exit path, variant lifecycle, PnL, MFE/MAE or improvement value, loaded zero locked row and wrote zero persistent file. The first full-long-path call stopped at static authority lookup before data; short drive mappings plus non-resolving absolute roots corrected only the Windows path boundary.
+- Both variants, Bid/Ask/stress economics, causal risk, atomic output, confirmation and native decision-tape gates are complete. The improvement audit freezes raw actual/stressed full-hold edge, MFE/MAE, one-lot normalized exit deltas, stop overlap, cost share, capital blocks and four broad slices with minimum `10` events; it cannot execute a follow-up.
+- Implementation freeze is `7,170` bytes / `546E3A858B31E08C57AFB7764171752BDE511AEEBDE06514AA6749667E9AC74C`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`. After this boundary reaches `origin/main`, exactly one complete two-variant development plus mandatory improvement audit process is authorized.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 008 raw-time semantic correction; verify clean `main == origin/main`.
-2. Implement the complete Python adapter against only the pinned QQQ/TQQQ and byte-equal US100 inputs with the frozen server-wall-clock normalization.
-3. Run abort-before-write outcome-free common-day/rank/coherence/sign/risk feasibility and freeze the exact implementation before economics.
-4. Run one complete two-variant development bundle and its mandatory improvement audit; open locked/native only for one unchanged complete passer.
+1. Commit and push the Family 008 adapter implementation freeze; verify clean `main == origin/main`.
+2. Run exactly one complete two-variant 2024-2025 development bundle and its mandatory improvement audit atomically.
+3. If one unchanged complete passer exists, acquire locked external data and run confirmation; otherwise use the frozen audit to close or retain only a bounded successor seed.
+4. Open EA/native only for one unchanged complete whole-proxy passer.
 5. Continue serially, auditing defensible improvement headroom before each closure, until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -182,15 +191,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Storage and repository discipline
 
-- System-drive free space is `98.167 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder, failed partial original-broker cache, failed Family 008 long-path environment and duplicate update staging were removed or sent recoverably to Recycle Bin, while complete referenced authorities remain preserved.
+- System-drive free space is `97.493 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder, failed partial original-broker cache, failed Family 008 long-path environment and duplicate update staging were removed or sent recoverably to Recycle Bin, while complete referenced authorities remain preserved.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 008 development QQQ/TQQQ and US100 authorities plus raw-time semantics are pinned; adapter implementation and all outcomes remain unopened.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_RAW_TIME_SEMANTICS_CORRECTED_PREIMPLEMENTATION_PREPRICE_DERIVATION_PREOUTCOME`.
+- Active research unit: Family 008 development authorities, time semantics and adapter implementation are pinned; its one complete two-variant development plus improvement audit is next.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

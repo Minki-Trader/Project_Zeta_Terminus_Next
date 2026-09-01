@@ -1,0 +1,136 @@
+{
+  "schema": "zeta-next-independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-09-01T02:58:43.2454785Z",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "family": "independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1",
+  "parent_boundary": {
+    "commit": "7d88e12e9e47812aee2d64518cf71fdd2ccb78c2",
+    "commit_equal_origin_main_before_implementation": true,
+    "raw_time_correction": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_RAW_TIME_SEMANTICS_CORRECTION.json",
+      "bytes": 6614,
+      "sha256": "EDD382D7319E7A19BB5E2A5047650BFFD9D0ACA6E57B38F2EEC9D5DC9894A7A7"
+    }
+  },
+  "adapter": {
+    "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 73643,
+    "lines": 1742,
+    "sha256": "101C515B13E66BE84B8D08E3023A85FAB2A2A491CD14E446E9FDBB94CEA5DAC5",
+    "syntax_compile_passed": true,
+    "modes": [
+      "precheck",
+      "development",
+      "confirmation"
+    ]
+  },
+  "requirements": {
+    "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/adapter/requirements-adapter.txt",
+    "bytes": 58,
+    "lines": 4,
+    "sha256": "A8312E14ACD23C9B07977AE03A4A6CC747A6B6CC07B2C6D5ABCD3B824C4F3F33",
+    "pins": {
+      "numpy": "2.3.4",
+      "pandas": "2.3.3",
+      "pyarrow": "23.0.1",
+      "tzdata": "2026.3"
+    }
+  },
+  "candidate_python_environment": {
+    "path": "lab/runtime/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-portable/py/",
+    "python": "3.13.9",
+    "files_after_pyarrow_install": 7376,
+    "bytes_after_pyarrow_install": 222563802,
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1",
+    "tzdata": "2026.3",
+    "global_python_modified": false,
+    "temporary_install_drive_mapping_removed": true
+  },
+  "implementation_contract": {
+    "architecture": "Python adapter plus a later family-owned EA only for an unchanged complete proxy passer",
+    "server_time_normalization": "raw Unix-like seconds to naive broker wall-clock, attach Europe/Helsinki using IANA rules, then convert to true UTC and America/New_York",
+    "ambiguous_or_nonexistent_server_wall_clock": "fail closed",
+    "common_day": "exact QQQ and TQQQ 09:30..15:29 plus exact US100 15:30..15:59 America/New_York",
+    "rank": "QQQ nonzero absolute return at or above one-indexed sorted position 45 of the prior 60 complete common days",
+    "coherence": "TQQQ has the same sign and absolute return at least twice QQQ",
+    "risk_distance": "maximum of 1.0 index point and the arithmetic median of prior-20 complete common-day US100 15:30..15:59 ranges",
+    "variants": [
+      "LEVERAGED_ETF_CLOSE_PRESSURE_TIME_CLOSE",
+      "LEVERAGED_ETF_CLOSE_PRESSURE_TAKE_1P5R"
+    ],
+    "shared_stop_and_hold": "minus 1R or the end of the thirtieth M1 row",
+    "favorable_barrier": "none for TIME_CLOSE and plus 1.5R for TAKE_1P5R",
+    "same_bar_order": "adverse stop first",
+    "risk": "4% of entry actual balance with 6% minimum-lot position and aggregate hard caps",
+    "actual_and_stress": "direction-specific Bid/Ask execution; stress subtracts the observed spread burden once more",
+    "locked_filter": "development target projection ends before the raw server-wall-clock representation of true 2026-01-01T00:00:00Z"
+  },
+  "improvement_audit_freeze": {
+    "same_development_process_required": true,
+    "path_tape_rows": "one normalized one-lot audit row for every gated event",
+    "raw_full_hold": "directional 15:30 Bid open to 15:59 Bid close before the shared stop or favorable barrier",
+    "actual_and_stressed_full_hold": "subtract observed direction-specific spread once and twice",
+    "MFE_MAE": "nonnegative execution-price excursion in price units and frozen-risk R",
+    "exit_delta": "normalized TAKE_1P5R minus TIME_CLOSE actual and stressed R under identical state, entry, stop and distance",
+    "minimum_events_per_broad_slice": 10,
+    "broad_raw_edge": "mean stressed full-hold R positive in 2024, 2025, positive-event and negative-event slices",
+    "broad_exit_improvement": "mean stressed take-minus-time R positive in the same four slices and positive actual deltas outnumber negative deltas overall",
+    "audit_can_execute_or_authorize_undeclared_variant": false
+  },
+  "outcome_free_precheck": {
+    "status": "VALID_OUTCOME_FREE_PRECHECK",
+    "successful_reproductions": 2,
+    "common_complete_days_including_warmup": 555,
+    "structurally_ready_days_including_predevelopment": 495,
+    "normal_trading_days": 442,
+    "normal_trading_dates_first": "2024-01-02",
+    "normal_trading_dates_last": "2025-12-31",
+    "normal_trading_dates_sha256": "F8102808888215E393524277F6A4787748532B1F8DE8B1DA7EAABF0A02AA279C",
+    "epoch_normal_days": {
+      "2024": 222,
+      "2025": 220
+    },
+    "nonzero_QQQ_days": 442,
+    "coherence_pass_days": 434,
+    "rank_pass_days": 117,
+    "gated_events": 117,
+    "external_sign_counts": {
+      "negative": 57,
+      "positive": 60
+    },
+    "structural_starts_per_normal_day_per_variant": 0.2647058823529412,
+    "minimum_lot_feasible_states_at_initial_100_usd": 117,
+    "maximum_minimum_lot_planned_loss_usd": 1.606200000000008,
+    "future_trade_path_simulations": 0,
+    "variant_exit_outcomes": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_external_or_target_rows_loaded": false,
+    "persistent_files_written": 0
+  },
+  "precheck_invocation_correction": {
+    "first_full_physical_path_invocation": "stopped at static source-correction is_file before any data load because the evidence path exceeded the legacy Windows path boundary",
+    "first_invocation_price_or_outcome_rows_loaded": 0,
+    "first_invocation_persistent_outputs": 0,
+    "correction": "during invocation only, map the workspace and candidate runtime to unused short drive letters; preserve those roots with Path.absolute rather than resolving back to the physical long path; remove both mappings in finally",
+    "source_geometry_or_economic_behavior_changed": false,
+    "temporary_mappings_remaining": 0
+  },
+  "authority_and_output_attestation": {
+    "selection_contract_declaration_source_correction_source_receipt_time_correction_external_receipt_external_files_specs_and_target_hashes_passed": true,
+    "development_output_files": 0,
+    "future_US100_exit_paths_simulated": 0,
+    "variant_lifecycles_or_economics": 0,
+    "improvement_values": 0,
+    "locked_2026_rows": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "candidate_terminal_process_owner": false,
+    "live_PID_33388_unchanged": true
+  },
+  "next_authorized_action": "after this exact implementation freeze reaches origin/main, invoke exactly one complete development process that writes both frozen variants and the mandatory improvement-potential audit atomically"
+}

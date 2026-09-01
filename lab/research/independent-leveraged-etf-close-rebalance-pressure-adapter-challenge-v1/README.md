@@ -14,4 +14,8 @@ Development is 2024-2025. QQQ/TQQQ 2026 January-July remains unacquired and lock
 
 The acquisition files preserve MT5's raw Unix-like epoch rendering, but the connected broker encoded its server wall-clock rather than semantic UTC. A time-column-only preimplementation diagnostic therefore froze `Europe/Helsinki` attachment followed by true-UTC/New-York conversion. Exact completeness still excludes half days, missing minutes and US/Europe DST-mismatch weeks; no clock, window or economic rule changed.
 
-Status: original-broker development sources are pinned and the raw-time semantic correction is frozen before adapter implementation, price-derived state or outcomes.
+The complete adapter is `adapter/run_adapter.py` with modes `precheck`, `development` and `confirmation`. Because the longest evidence paths exceed the default Windows legacy path boundary, invocations temporarily map this workspace and the candidate runtime to short drive letters and remove both mappings afterward; the adapter deliberately preserves those short roots rather than resolving them back to the long physical path.
+
+The outcome-free precheck found 442 exact development common days and 117 gated events (57 negative, 60 positive), or 0.264705882 starts per normal day per variant. All 117 initial minimum-lot risks are feasible at $100. It simulated zero future exit path, lifecycle, PnL or improvement value and wrote zero persistent output.
+
+Status: original-broker development sources, raw-time semantics and the complete adapter implementation are frozen before the single two-variant development economic process.

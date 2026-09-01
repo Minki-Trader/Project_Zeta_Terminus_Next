@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
-현재 active research family는 없다. Program 3 Family 006 `research/independent-two-session-opening-auction-response-adapter-challenge-v1/`은 정확히 한 development process 뒤 유효 adverse로 닫혔다. DRIVE/FADE는 `1,008 / 1,277` starts, actual `-$98.8627 / -$98.9047`, stressed `-$227.8451 / -$207.7592`, DD 약 `99.1%`; 자본 소진 뒤 risk blocks `884 / 615`로 turnover도 실패했다. Durable result/closure는 `8,959 / 3,863` bytes at `0EAEA67F...6B65 / BEBB7A7E...684E`. Locked 2026·EA·MT5는 미개봉이며 closure가 origin에 도달한 뒤 Programs 1-5/7 전체 재비교가 다음 판단이다.
+현재 active research family는 Program 2 / meso Family 008 `research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/` 하나다. 필수 구조는 `Python adapter + EA`이며, 원 브로커 QQQ/TQQQ와 byte-equal US100 개발 입력, `Europe/Helsinki` 서버 벽시계→true UTC→`America/New_York` 시간축, 두 청산 변형 및 개선여지 감사가 사전동결됐다. Outcome-free precheck는 정확 공통일 `442`, gated event `117`(음 `57`/양 `60`), 변형당 `0.264705882/day`, 초기 `$100` 최소 lot 가능 `117/117`을 확인했고 미래 청산경로·경제·persistent output은 `0`이다. 구현 경계가 origin에 도달한 뒤 두 변형과 감사의 단일 development process만 허용된다.
 
 직전 Family 001 `research/independent-cross-index-hourly-adapter-challenge-v1/`은 세 역할 모두 turnover를 통과했지만 actual/stressed와 DD가 전부 실패해 잠긴 2026, EA와 MT5 전에 유효 adverse로 닫혔다. Durable result/closure는 `6,031 / 2,117` bytes at `09F30EDB...1A3D49 / 9E09B960...0FCCCA`다.
 
