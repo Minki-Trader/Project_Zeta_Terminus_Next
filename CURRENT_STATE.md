@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0551`
+- Latest state ID: `STATE-0552`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 010 M1 history synchronization correction commit `e126c01249f694ecea31e2b9d1e90cdd8d469954`, equal to `origin/main` before successful development source acquisition.
+- Current process parent: Family 010 exact implementation-freeze commit `47b3862860be2cbc51d1fd1dc79c6f050ba53201`, equal to `origin/main` before development economics.
 
 ## Authorization and ownership
 
@@ -24,7 +24,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_COMPLETE_FRESH_DEVELOPMENT_SOURCE_TIME_GEOMETRY_VALID_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Sole active Challenge family: `lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
 - Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection and Program tags remain administrative only.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -299,12 +299,21 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Candidate PID stopped after acquisition. Automatic caches `53` files / `957,891,037` bytes in seven candidate target directories were moved to the Windows Recycle Bin without reading values; final cache targets are zero and Live PID `33388` remained present.
 - Durable source receipt is `8,422` bytes / `72B8FDD1EEF16D2400FDE226A394CBEB98FE029D2E1D0DEF327DBF0F1BF5FD8E`, status `COMPLETE_FRESH_ORIGINAL_BROKER_DEVELOPMENT_SOURCE_TIME_GEOMETRY_VALID_PREIMPLEMENTATION_PREOUTCOME`. Locked CSV/combined output, ATR, directions, lifecycles, economics, improvement values, adapter, EA and Tester remain zero.
 
+## Family 010 implementation frozen
+
+- Development-source commit `2a926b9ae3b0f1c4afbbde7947ab39731cea673d` reached local `main`, `origin/main` and remote `main` before implementation. Complete family-owned `precheck / development / confirmation` adapter is `89,442` bytes / `2,114` lines / `3A63BF2ACA10F20940D8087619875FA7B5C451147A5D7F5F939BA67E84521058`.
+- It freezes exact source/hash/schema integrity, chunked broker-wall normalization, all-four-pair event geometry, causal ATR20 and directions, same-date actual-balance snapshot, `1.5% / 3% / 8%` sizing/reservation, fixed adverse-first stops, direction-specific Bid/Ask, one-extra-spread stress, closed-balance drawdown and no-overwrite atomic evidence.
+- Mandatory same-process audit covers every nonzero signal at `1/5/10/20/25/30` M1 with one-lot raw/actual/stressed close R, Bid MFE/MAE, pair/year/direction/ordinary/month-/quarter-end relationships, costs, risk blocks, hard-stop attribution and declared-lifecycle truncation. One broad seed may be retained but not executed inside V1.
+- Candidate-local precheck verified all `4,463,734` source rows and reproduced `514` active dates. PRE/POST have `2,033 / 2,034` nonzero signals, `23 / 22` equality states, both years/four pairs/both directions, and initial-$100 minimum-lot feasibility `2,023 / 2,011`; maximum minimum-lot planned loss is `$5.0175`.
+- Precheck evaluated zero future exit path, lifecycle, economy or improvement value, loaded zero locked row and wrote zero persistent output. Freeze is `10,133` bytes / `98F3A74855F9FED7914FDFE2BEB245401922FB0F034E9F9B6910C53D973726EF`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Exact freeze commit `47b3862860be2cbc51d1fd1dc79c6f050ba53201` reached local `main`, `origin/main` and remote `main`; candidate processes are stopped and Live PID `33388` remained present. Development result, locked 2026, EA, compile and Tester remain zero.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 010 complete fresh development source receipt; verify clean `main == origin/main`.
-2. Implement the complete family-owned adapter and run only an outcome-free authority/time/event/ATR/direction/minimum-lot/lifecycle-geometry precheck before freezing it.
-3. After the exact implementation freeze reaches `origin/main`, judge both variants plus improvement audit once; escalate locked/native only for an unchanged complete passer.
-4. Continue serially until a complete native candidate passes every V8 gate.
+1. Commit and push this exact Family 010 implementation-freeze state; verify clean `main == origin/main`.
+2. Run exactly one complete two-variant development bundle plus mandatory improvement audit.
+3. Escalate locked/native only for an unchanged complete passer; otherwise close Family 010 without adjacent repair.
+4. Per the user's pause direction, finish and close Family 010, clean eligible transient artifacts, and open no successor family.
 
 ## Frozen lane boundaries
 
@@ -324,8 +333,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 010 London FX fix-pressure `Python adapter + EA`, complete fresh development M1/spec source and time geometry valid before implementation.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_COMPLETE_FRESH_DEVELOPMENT_SOURCE_TIME_GEOMETRY_VALID_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 010 London FX fix-pressure `Python adapter + EA`, exact implementation frozen before development economics.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
