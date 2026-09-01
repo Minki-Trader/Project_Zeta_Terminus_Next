@@ -1,0 +1,235 @@
+{
+  "schema": "zeta-next-independent-london-fx-fix-pressure-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-09-01T06:02:48.8156676Z",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "family": "independent-london-fx-fix-pressure-adapter-challenge-v1",
+  "boundary": {
+    "parent_commit": "2a926b9ae3b0f1c4afbbde7947ab39731cea673d",
+    "parent_commit_equal_origin_main_before_implementation": true,
+    "development_economic_processes_before_freeze": 0,
+    "future_exit_paths_before_freeze": 0,
+    "improvement_values_before_freeze": 0,
+    "locked_2026_rows_opened": 0,
+    "persistent_precheck_outputs": 0
+  },
+  "adapter": {
+    "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 89442,
+    "lines": 2114,
+    "sha256": "3A63BF2ACA10F20940D8087619875FA7B5C451147A5D7F5F939BA67E84521058"
+  },
+  "authorities": {
+    "selection": {
+      "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_METHOD_SELECTION_V1.json",
+      "bytes": 8784,
+      "sha256": "5830CBF6257C656BBF235622FD91E50F8725D9C046E21E5049380F070ECAD2E6"
+    },
+    "contract": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 18309,
+      "sha256": "F1F2CBCCEA4FE5E870FF0863BF58BEAE98F685AFAE3B8646FEB336C0EF297708"
+    },
+    "declaration": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 11207,
+      "sha256": "8FDB21D7855B0C98D15A3B6979A3ECF63CF84A1BA876B33BF425455871633401"
+    },
+    "runtime_source": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_RUNTIME_SOURCE_ENGINEERING_RECEIPT.json",
+      "bytes": 9539,
+      "sha256": "8C0E2F2E5FB46A9CBAB692841CFAEC21734C79888C7AEE2AEBD742C38D6F0EA2"
+    },
+    "history_correction": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_M1_HISTORY_SYNCHRONIZATION_CORRECTION.json",
+      "bytes": 5570,
+      "sha256": "EC13141EE2821BBEAF4501A5693E9785492C34BD88286128F03A2022C2296CE6"
+    },
+    "development_source": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_SOURCE_RECEIPT.json",
+      "bytes": 8422,
+      "sha256": "72B8FDD1EEF16D2400FDE226A394CBEB98FE029D2E1D0DEF327DBF0F1BF5FD8E"
+    },
+    "requirements": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/adapter/requirements-adapter.txt",
+      "bytes": 58,
+      "sha256": "A8312E14ACD23C9B07977AE03A4A6CC747A6B6CC07B2C6D5ABCD3B824C4F3F33"
+    },
+    "v8": {
+      "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+      "bytes": 8423,
+      "sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46"
+    }
+  },
+  "runtime": {
+    "scope": "family-owned candidate-local Python under the ignored dedicated Portable",
+    "python": "3.13.9",
+    "MetaTrader5": "5.0.6147",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1",
+    "tzdata": "2026.3",
+    "global_python_changed": false
+  },
+  "implemented_modes": [
+    "precheck",
+    "development",
+    "confirmation"
+  ],
+  "frozen_implementation_semantics": {
+    "source_and_time": {
+      "read_policy": "verify exact bytes, SHA-256, row count, schema, raw monotonicity, OHLC/spread/volume integrity and normalize every row while retaining only exact event-window rows in memory",
+      "normalization": "raw epoch-like integer rendered as timezone-naive broker wall clock, localized Europe/Helsinki with ambiguous/nonexistent failure, converted to true UTC and Europe/London",
+      "complete_event": "all four frozen symbols have every exact London minute 15:34 through 16:35 inclusive; no fill or later-row completion",
+      "development_complete_dates": 514
+    },
+    "features_and_signal": {
+      "ATR20": "twenty causal completed M1 true ranges ending on each frozen decision bar, including the immediately prior observed close",
+      "risk_distance": "max(5 ATR20, 4 entry-row observed spreads)",
+      "pre": "15:54 Bid close minus 15:45 Bid open; follow strict sign; enter 15:55",
+      "post": "16:04 Bid close minus 15:55 Bid open; fade strict sign; enter 16:05",
+      "equality": "no direction and no trade",
+      "same_timestamp_order": [
+        "AUDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "NZDUSD"
+      ]
+    },
+    "portfolio_risk": {
+      "same_timestamp_snapshot": "one actual closed-balance snapshot after all prior-date settlement",
+      "position_target_fraction": 0.015,
+      "minimum_lot_hard_cap_fraction": 0.03,
+      "aggregate_original_stop_risk_cap_fraction": 0.08,
+      "volume": "floor target-risk lots to step and maximum; use minimum only inside the hard cap",
+      "stressed_balance_controls_admission_or_size": false
+    },
+    "execution_and_economics": {
+      "long": "entry Ask; fixed stop evaluated on Bid low; time exit Bid open",
+      "short": "entry Bid; fixed stop evaluated on Ask high; time exit Ask open",
+      "same_bar": "adverse hard stop first",
+      "pre_lifecycle": "ten held M1 bars 15:55..16:04 then 16:05 open",
+      "post_lifecycle": "twenty-five held M1 bars 16:05..16:29 then 16:30 open",
+      "actual": "direction-specific price PnL plus signed swap; declared geometry aborts on any rollover boundary",
+      "stress": "actual minus the lifecycle's observed direction-specific spread burden once more",
+      "closed_balance_drawdown": "update after each same-exit-time trade in frozen symbol order"
+    },
+    "improvement_audit": {
+      "population": "every complete nonzero signal in both variants whether accepted or blocked",
+      "horizons_m1": [
+        1,
+        5,
+        10,
+        20,
+        25,
+        30
+      ],
+      "values": "one-lot raw/actual/stressed close R, raw Bid MFE/MAE R, sibling-direction relationship, year/pair/direction/ordinary/month-end/quarter-end, costs, blocks, hard-stop and declared-lifecycle truncation",
+      "broad_headroom": "one 5/10/20/25/30 horizon positive raw and stressed in both years, at least three pairs, both directions and ordinary/month-end slices, at least eight each",
+      "successor_authority": "retain at most one bounded seed; never execute it inside V1"
+    },
+    "confirmation": {
+      "condition": "byte-equal durable/raw one-selected-passer result and fresh combined source",
+      "development_replay": "the selected development metrics and gates must reproduce exactly from the combined source before locked economics",
+      "native_tape": "written only after every locked and whole proxy gate passes",
+      "proxy_victory_or_live_authority": false
+    },
+    "outputs": {
+      "precheck": "stdout only; persistent file count zero",
+      "development": [
+        "development-result.json",
+        "development-audit.json",
+        "signal-states.csv",
+        "trades.csv",
+        "improvement-paths.csv"
+      ],
+      "write_policy": "stage one complete no-overwrite bundle and move result last"
+    }
+  },
+  "outcome_free_precheck": {
+    "status": "VALID_OUTCOME_FREE_PRECHECK",
+    "portfolio_active_dates": 514,
+    "source_rows": {
+      "AUDUSD": 1116527,
+      "EURUSD": 1117273,
+      "GBPUSD": 1116607,
+      "NZDUSD": 1113327
+    },
+    "event_window_rows": {
+      "AUDUSD": 48153,
+      "EURUSD": 48153,
+      "GBPUSD": 48152,
+      "NZDUSD": 48153
+    },
+    "common_complete_dates_by_year": {
+      "2023": 258,
+      "2024": 256,
+      "2025": 258
+    },
+    "development_month_end_dates": 24,
+    "development_quarter_end_dates": 8,
+    "variants": {
+      "LONDON_FIX_PRE_FLOW_CONTINUATION": {
+        "complete_opportunity_states": 2056,
+        "nonzero_signals": 2033,
+        "equality_no_direction": 23,
+        "signals_by_london_year": {
+          "2024": 1014,
+          "2025": 1019
+        },
+        "signals_by_direction": {
+          "LONG": 976,
+          "SHORT": 1057
+        },
+        "signals_by_symbol": {
+          "AUDUSD": 505,
+          "EURUSD": 512,
+          "GBPUSD": 509,
+          "NZDUSD": 507
+        },
+        "minimum_lot_feasible_at_initial_100_usd": 2023,
+        "minimum_lot_infeasible_at_initial_100_usd": 10
+      },
+      "LONDON_FIX_POST_PRESSURE_REVERSAL": {
+        "complete_opportunity_states": 2056,
+        "nonzero_signals": 2034,
+        "equality_no_direction": 22,
+        "signals_by_london_year": {
+          "2024": 1014,
+          "2025": 1020
+        },
+        "signals_by_direction": {
+          "LONG": 1006,
+          "SHORT": 1028
+        },
+        "signals_by_symbol": {
+          "AUDUSD": 508,
+          "EURUSD": 509,
+          "GBPUSD": 513,
+          "NZDUSD": 504
+        },
+        "minimum_lot_feasible_at_initial_100_usd": 2011,
+        "minimum_lot_infeasible_at_initial_100_usd": 23
+      }
+    },
+    "maximum_minimum_lot_planned_loss_usd": 5.0175,
+    "future_exit_path_rows_evaluated": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_2026_rows_loaded": 0,
+    "persistent_outputs_written": 0
+  },
+  "attestation": {
+    "adapter_syntax_compilation_passed": true,
+    "candidate_local_help_passed": true,
+    "all_static_and_source_authorities_matched": true,
+    "candidate_process_owners": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "live_master_pid_33388_remained_present": true,
+    "live_changed": false,
+    "optimization_changed": false
+  },
+  "next_authorized_action": "after this exact implementation freeze reaches origin/main, run exactly one complete two-variant development bundle and mandatory improvement-potential audit"
+}
