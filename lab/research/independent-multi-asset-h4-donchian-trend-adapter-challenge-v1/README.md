@@ -14,4 +14,6 @@ The build-6140 platform may populate currently selected default-symbol cache whi
 
 Every judged entry must have its entry bar plus 479 later observed same-symbol H4 bars inside that same judged period. This timestamp-only maturation rule prevents an undeclared period-end liquidation and prevents 2026 rows from resolving a 2025 entry; it is applied before signals or outcomes and also defines the active-date denominator.
 
-Status: complete fresh 2022-2025 original-broker H4/specification source is frozen with the CURRENCY_SYMBOL swap correction; channel/ATR construction, adapter implementation, lifecycle simulation, improvement values and outcomes remain zero.
+The complete family-owned adapter now freezes authority-gated `precheck / development / confirmation`, causal channels and ATR, the exact cross-symbol event sequence, balance-compounded risk reservations, Bid/Ask and signed-swap economics, complete-period maturation, the same-process path audit, no-overwrite output and conditional locked/native escalation. Its candidate-local outcome-free precheck found `920 / 684` medium/slow signals over `530` active dates and evaluated zero future exit path, lifecycle, economic metric or improvement value.
+
+Status: implementation is frozen predevelopment-outcome. Development economics, audit paths, locked 2026, EA source, compile and MT5 Tester remain zero until the implementation-freeze boundary reaches `origin/main`.

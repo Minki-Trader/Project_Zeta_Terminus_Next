@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0544`
+- Latest state ID: `STATE-0545`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 009 development source commit `1d0128015e8fe818699b3bf7a3f71f5da102cfbc`, equal to `origin/main` before maturation-geometry correction.
+- Current process parent: Family 009 maturation-geometry commit `0530d9fb4f8b5f15401aec85d1fad3dd11a3c9d7`, equal to `origin/main` before implementation.
 
 ## Authorization and ownership
 
@@ -24,7 +24,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_MATURATION_GEOMETRY_CORRECTED_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Sole active Challenge family: Family 009 `lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
 - Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection, while Program 1 / macro is only the policy-required administrative tag for the selected multi-asset trend mechanism.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -227,11 +227,20 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Timestamp-only capacity is `2,636` mature development entry bars for each FX and `2,615 / 2,614 / 2,615` for US100/US30/US500. The final eligible entry timestamps are 2025-09-09 `21:00Z` for FX, `17:00Z` for US100/US500 and `13:00Z` for US30; each possible 480th bar remains by `2025-12-31T18:00:00Z`.
 - No price, spread, volume, return, channel, ATR, signal, path, lifecycle, economy, improvement or locked value was opened. Corrected README/contract are `3,180 / 23,734` bytes at `E68E62DD...4AD0 / B2B481A4...73A1`; correction is `5,467` bytes / `F4326D228F52205E427A8C15CB9C8179DC0EEC381A5D2AB5DBCD977027078ECD`, status `COMPLETE_MATURATION_GEOMETRY_CORRECTED_PREIMPLEMENTATION_PREOUTCOME`.
 
+## Family 009 implementation frozen
+
+- Maturation-correction commit `0530d9fb4f8b5f15401aec85d1fad3dd11a3c9d7` reached local `main`, `origin/main` and remote `main` before adapter implementation or channel/ATR construction.
+- Complete family-owned `precheck / development / confirmation` adapter is `88,279` bytes / `2,191` lines / `92BB3E360B3F26C25A7AC24DA6722B8E7A62839D79DEA01A56FF738A8B6B0557`. It freezes source hashes, broker-wall-clock normalization, both channels, ATR20, complete-period maturation, exact portfolio event ordering, balance/risk reservation, Bid/Ask/signed-swap economics, closed-balance DD, mandatory path audit, atomic no-overwrite outputs and conditional locked/native escalation.
+- Candidate-local Python `3.13.9` with NumPy `2.3.4`, pandas `2.3.3`, PyArrow `23.0.1` and tzdata `2026.3` reproduced the outcome-free precheck. Medium/slow variants have `920 / 684` signals over `530` active dates, or `1.735849057 / 1.290566038` signals per active date; year splits are `587/333` and `428/256`, and both directions are present.
+- At initial `$100`, minimum-lot risk is feasible for `765/920` medium and `554/684` slow signals; the largest minimum-lot planned loss is `$17.922`. This is structural capacity only, not an outcome or gate pass.
+- Precheck evaluated zero future exit path, lifecycle, PnL, MFE/MAE or improvement value, loaded zero locked row and wrote zero persistent output. Implementation freeze is `10,955` bytes / `7B5E1981632E77170E49CA73732054F47FAAD890C4F4E1A30E3B8F6F8EBBA35D`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Development process, economic outputs, locked 2026, EA, compile and Tester remain zero. Candidate process owners, account/position/order/deal queries, orders, trades, Live and Optimization changes remain zero.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 009 maturation-geometry correction; verify clean `main == origin/main`.
-2. Implement the complete family-owned Python adapter and run only the outcome-free source/channel/turnover/minimum-lot precheck before freezing implementation.
-3. Run one complete two-horizon development bundle plus improvement audit; open locked/native only for one unchanged complete passer.
+1. Commit and push the exact Family 009 implementation freeze; verify clean `main == origin/main`.
+2. Run one complete two-horizon development bundle plus improvement audit.
+3. Open locked/native only for one unchanged complete passer; otherwise close or retain only the bounded audit seed allowed by the frozen rule.
 4. Continue serially until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -252,8 +261,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, complete source/swap and maturation geometry corrected preimplementation/preoutcome.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_MATURATION_GEOMETRY_CORRECTED_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, implementation frozen predevelopment-outcome.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

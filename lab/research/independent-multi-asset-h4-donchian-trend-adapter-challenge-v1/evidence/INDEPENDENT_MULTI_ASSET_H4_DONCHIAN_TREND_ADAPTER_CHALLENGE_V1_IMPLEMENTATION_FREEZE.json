@@ -1,0 +1,216 @@
+{
+  "schema": "zeta-next-independent-multi-asset-h4-donchian-trend-adapter-challenge-v1-implementation-freeze",
+  "recorded_at_utc": "2026-09-01T04:31:17.2010180Z",
+  "status": "IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME",
+  "family": "independent-multi-asset-h4-donchian-trend-adapter-challenge-v1",
+  "boundary": {
+    "parent_commit": "0530d9fb4f8b5f15401aec85d1fad3dd11a3c9d7",
+    "parent_commit_equal_origin_main_before_implementation": true,
+    "development_economic_processes_before_freeze": 0,
+    "future_exit_paths_before_freeze": 0,
+    "improvement_values_before_freeze": 0,
+    "locked_2026_rows_opened": 0
+  },
+  "adapter": {
+    "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 88279,
+    "lines": 2191,
+    "sha256": "92BB3E360B3F26C25A7AC24DA6722B8E7A62839D79DEA01A56FF738A8B6B0557"
+  },
+  "authorities": {
+    "contract": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 23734,
+      "sha256": "B2B481A47D82476C2096F45E8FB48D24EE73C864037862327E2B8F223BB673A1"
+    },
+    "declaration": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/evidence/INDEPENDENT_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 11870,
+      "sha256": "0D307B8DF16070474490287E27A3F7BFA380FE752A78C3C4905D33768B70C2DB"
+    },
+    "runtime_source_correction": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/evidence/INDEPENDENT_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_CHALLENGE_V1_RUNTIME_SOURCE_ENGINEERING_CORRECTION.json",
+      "bytes": 8969,
+      "sha256": "8DFD07F8DDBBE31133FEC4602ED56ED52840B2DACFF53AE70307F0A7A471EEA4"
+    },
+    "development_source": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/evidence/INDEPENDENT_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_CHALLENGE_V1_DEVELOPMENT_SOURCE_RECEIPT.json",
+      "bytes": 11292,
+      "sha256": "001EB67EF1E15651A32F47446D7AA88BA7AB969984E2D95071EF9467E57BD815"
+    },
+    "maturation_geometry": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/evidence/INDEPENDENT_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_CHALLENGE_V1_MATURATION_GEOMETRY_CORRECTION.json",
+      "bytes": 5467,
+      "sha256": "F4326D228F52205E427A8C15CB9C8179DC0EEC381A5D2AB5DBCD977027078ECD"
+    },
+    "requirements": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/adapter/requirements-adapter.txt",
+      "bytes": 58,
+      "sha256": "A8312E14ACD23C9B07977AE03A4A6CC747A6B6CC07B2C6D5ABCD3B824C4F3F33"
+    },
+    "v8": {
+      "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+      "bytes": 8423,
+      "sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46"
+    }
+  },
+  "runtime": {
+    "scope": "family-owned candidate-local Python under the ignored dedicated Portable",
+    "python": "3.13.9",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1",
+    "tzdata": "2026.3",
+    "global_python_changed": false
+  },
+  "implemented_modes": [
+    "precheck",
+    "development",
+    "confirmation"
+  ],
+  "frozen_implementation_semantics": {
+    "time": {
+      "normalization": "render each raw integer as a timezone-naive broker wall clock, localize to Europe/Helsinki with ambiguous/nonexistent failure, then convert to true UTC",
+      "bar_progression": "only the next chronologically observed same-symbol H4 bar is used; no weekend, holiday or gap row is synthesized",
+      "maturation": "entry bar plus 479 following observed same-symbol H4 bars must all remain before the current judged-period end"
+    },
+    "signal": {
+      "features": "ATR20 and prior Donchian entry/exit channels are computed from completed Bid OHLC only",
+      "variants": [
+        "MULTI_ASSET_DONCHIAN_120_60",
+        "MULTI_ASSET_DONCHIAN_240_120"
+      ],
+      "entry": "strict decision-close breakout, execution at next observed H4 open",
+      "same_timestamp_rank": "descending normalized breakout excess, then AUDUSD/EURUSD/GBPUSD/NZDUSD/US100/US30/US500"
+    },
+    "portfolio_event_order": [
+      "settle all previously scheduled current-open exits in frozen symbol order",
+      "snapshot actual closed balance and existing original-stop reservations once",
+      "rank and reserve eligible entries sequentially",
+      "evaluate intrabar hard stops in frozen symbol order",
+      "evaluate 480th-held-bar close",
+      "schedule a newly completed opposite-channel condition for the next observed same-symbol open"
+    ],
+    "risk": {
+      "sizing_balance": "the actual-balance timestamp snapshot; stressed balance never controls admission or size",
+      "position_target": 0.04,
+      "minimum_lot_hard_cap": 0.06,
+      "aggregate_original_stop_reservation_cap": 0.18,
+      "reservation_persists_at_original_planned_stop_loss_until_close": true,
+      "passive_cap_breach_forces_liquidation": false
+    },
+    "execution": {
+      "quotes": "Bid OHLC plus row spread times point for Ask",
+      "long": "entry Ask; stop and market exit on Bid",
+      "short": "entry Bid; stop and market exit on Ask",
+      "hard_stop": "exact threshold and adverse-first within each held bar",
+      "maximum_hold": "close of held H4 bar 480; entry bar is held bar one",
+      "closed_balance_drawdown": "updated after each settled close in frozen cross-symbol order"
+    },
+    "economics": {
+      "price_money": "directional price distance divided by tick size, multiplied by profit tick value for a gain or loss tick value for a loss, then volume",
+      "actual": "direction-specific observed Bid/Ask price PnL plus signed swap",
+      "stress": "actual minus the same lifecycle's observed direction-specific spread burden once more",
+      "commission_or_unrecorded_fee": 0.0,
+      "epoch_starts": "entry true-UTC calendar year",
+      "epoch_profit": "settled exit true-UTC calendar year"
+    },
+    "swap": {
+      "eligible_boundaries": "broker-server Monday-through-Friday midnight satisfying entry < boundary <= exit; weekend financing is represented by the frozen triple-rollover multiplier and is not charged again as synthetic Saturday/Sunday boundaries",
+      "triple_day_code": "MQL weekday numbering Sunday=0 through Saturday=6",
+      "hard_stop_exit_time": "current H4 bar-open timestamp, the deterministic intrabar lower-bound available from H4 OHLC",
+      "channel_exit_time": "current observed H4 bar open",
+      "maximum_hold_and_audit_close_time": "current H4 bar open plus four hours",
+      "POINTS": "signed rate times point divided by tick size times trade_tick_value times volume times multiplier",
+      "CURRENCY_SYMBOL": "signed rate times volume times multiplier because frozen base and deposit currency are USD",
+      "CURRENCY_DEPOSIT": "signed rate times volume times multiplier",
+      "INTEREST_CURRENT": "signed percent divided by 100 times contract size times latest observed boundary reference price times volume divided by 360 times multiplier",
+      "INTEREST_OPEN": "signed percent divided by 100 times contract size times entry price times volume divided by 360 times multiplier"
+    },
+    "improvement_audit": {
+      "population": "every mature signal in both variants, whether admitted or blocked",
+      "horizons_h4": [
+        1,
+        3,
+        6,
+        12
+      ],
+      "horizon_counting": "entry bar is horizon bar one; exit is the selected held bar close",
+      "values": "one-lot raw gross, actual and stressed close R plus raw Bid MFE/MAE R",
+      "broad_headroom": "at 12 H4 bars both mean raw-gross R and mean stressed R must be positive with at least 10 signals in each of 2024 and 2025, both asset classes, both directions and at least four individual symbols",
+      "successor_authority": "audit may retain one bounded seed only and cannot execute a rescue inside V1"
+    },
+    "confirmation": {
+      "condition": "one unchanged highest-ranked complete development passer and byte-equal raw/durable development authority",
+      "period_isolation": "locked entries mature entirely inside 2026-01-01/2026-08-01; no 2025 entry is restored with locked rows",
+      "capital_continuity": "carry selected development actual/stressed ending balances, actual peak and maximum closed-balance drawdown into locked simulation",
+      "native_tape": "write only after locked and whole proxy gates pass"
+    },
+    "outputs": {
+      "precheck": "stdout only, persistent file count zero",
+      "development": [
+        "development-result.json",
+        "development-audit.json",
+        "development-states.csv",
+        "development-trades.csv",
+        "development-audit-paths.csv"
+      ],
+      "write_policy": "stage a complete no-overwrite bundle and move result last"
+    }
+  },
+  "outcome_free_precheck": {
+    "status": "VALID_OUTCOME_FREE_PRECHECK",
+    "candidate_local_runtime_reproduced": true,
+    "portfolio_active_dates_each_variant": 530,
+    "variants": {
+      "MULTI_ASSET_DONCHIAN_120_60": {
+        "mature_opportunities_total": 18388,
+        "signals": 920,
+        "signals_per_active_date": 1.735849056604,
+        "signals_by_entry_year": {
+          "2024": 587,
+          "2025": 333
+        },
+        "signals_by_direction": {
+          "LONG": 600,
+          "SHORT": 320
+        },
+        "minimum_lot_feasible_at_initial_100_usd": 765,
+        "minimum_lot_infeasible_at_initial_100_usd": 155
+      },
+      "MULTI_ASSET_DONCHIAN_240_120": {
+        "mature_opportunities_total": 18388,
+        "signals": 684,
+        "signals_per_active_date": 1.290566037736,
+        "signals_by_entry_year": {
+          "2024": 428,
+          "2025": 256
+        },
+        "signals_by_direction": {
+          "LONG": 468,
+          "SHORT": 216
+        },
+        "minimum_lot_feasible_at_initial_100_usd": 554,
+        "minimum_lot_infeasible_at_initial_100_usd": 130
+      }
+    },
+    "maximum_minimum_lot_planned_loss_usd": 17.922,
+    "future_exit_path_rows_evaluated": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_2026_rows_loaded": 0,
+    "persistent_outputs_written": 0
+  },
+  "attestation": {
+    "adapter_syntax_compilation_passed": true,
+    "all_static_and_source_authorities_matched": true,
+    "candidate_process_owners": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "live_changed": false,
+    "optimization_changed": false
+  },
+  "next_authorized_action": "after this exact implementation freeze reaches origin/main, run exactly one complete two-variant development bundle and mandatory improvement-potential audit"
+}
