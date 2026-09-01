@@ -1,0 +1,138 @@
+{
+  "schema": "zeta-next-independent-audchf-intraday-carry-pulse-adapter-challenge-v1-closure",
+  "recorded_at_utc": "2026-09-01T01:43:00Z",
+  "status": "CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_CONFIRMATION_NO_EA_NO_MT5",
+  "project_id": "project-zeta-terminus-next",
+  "family": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/",
+  "architecture": "Python adapter + EA",
+  "predevelopment_authority": {
+    "commit": "5487f775e40ebe890c51edb9d63b350ccde1b5b5",
+    "commit_equal_origin_main_before_economic_process": true,
+    "tracked_worktree_clean_before_economic_process": true,
+    "implementation_freeze": {
+      "bytes": 7986,
+      "sha256": "697D99C783D5A7F56A96E6BCA2EDD4BE31462636BF3D2D7ED138529056DFC68A"
+    },
+    "complete_development_processes": 1,
+    "economic_reruns": 0
+  },
+  "development_result": {
+    "status": "VALID_DEVELOPMENT_COMPLETE_NO_PASSER",
+    "period": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+    "normal_trading_days": 517,
+    "complete_passer_count": 0,
+    "selected_role": null,
+    "roles": [
+      {
+        "role": "AUDCHF_PULSE_FOLLOW",
+        "starts": 3130,
+        "starts_per_normal_day": 6.054158607350097,
+        "actual_net_usd": -53.70842500000157,
+        "stressed_net_usd": -135.68802500000203,
+        "ending_actual_balance": 46.29157499999843,
+        "ending_stressed_balance": -35.688025000002014,
+        "actual_closed_balance_drawdown_pct": 82.47567807716548,
+        "robust_recovery": -0.9461705561927207,
+        "risk_blocks": 34,
+        "epoch_metrics": {
+          "2024": {
+            "actual_net_usd": -26.253574999992015,
+            "stressed_net_usd": -84.21267499999186
+          },
+          "2025": {
+            "actual_net_usd": -27.454850000010058,
+            "stressed_net_usd": -51.475350000010124
+          }
+        },
+        "exit_counts": {
+          "STOP": 679,
+          "TAKE": 275,
+          "TIME": 2176
+        },
+        "passed_turnover_and_breadth": true,
+        "passed_profit_epoch_and_drawdown_gates": false
+      },
+      {
+        "role": "AUDCHF_PULSE_FADE",
+        "starts": 2813,
+        "starts_per_normal_day": 5.44100580270793,
+        "actual_net_usd": -74.11817500000467,
+        "stressed_net_usd": -129.55917500000464,
+        "ending_actual_balance": 25.881824999995338,
+        "ending_stressed_balance": -29.559175000004643,
+        "actual_closed_balance_drawdown_pct": 81.64637706760574,
+        "robust_recovery": -1.5572530943029588,
+        "risk_blocks": 351,
+        "epoch_metrics": {
+          "2024": {
+            "actual_net_usd": -72.15204999999861,
+            "stressed_net_usd": -111.67454999999862
+          },
+          "2025": {
+            "actual_net_usd": -1.9661250000059871,
+            "stressed_net_usd": -17.884625000005997
+          }
+        },
+        "exit_counts": {
+          "STOP": 659,
+          "TAKE": 260,
+          "TIME": 1894
+        },
+        "passed_turnover_and_breadth": true,
+        "passed_profit_epoch_and_drawdown_gates": false
+      }
+    ]
+  },
+  "output_integrity": {
+    "raw_result": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/output/development-result.json",
+      "bytes": 21016,
+      "sha256": "739647310C2B988E40A6375D222E8B442AB9002ADF9D49795441B4F97D753ACB"
+    },
+    "durable_result": {
+      "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/evidence/INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_RESULT.json",
+      "bytes": 21016,
+      "sha256": "739647310C2B988E40A6375D222E8B442AB9002ADF9D49795441B4F97D753ACB",
+      "byte_equal_to_raw": true
+    },
+    "states": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/output/development-states.csv",
+      "rows": 1582,
+      "bytes": 256910,
+      "sha256": "041B7288F3DA188DEB460CC992878AAF30B6426D5CB3863A93BDC039C14EDBB8"
+    },
+    "trades": {
+      "path": "lab/artifacts/raw/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/output/development-trades.csv",
+      "rows": 5943,
+      "bytes": 2154699,
+      "sha256": "AFF2DA81D1B9ABF40211E5E71A3732927A0D12E7EB705FF3E559E1135FD348F2"
+    },
+    "three_file_ordered_manifest_sha256": "ACF3213EEBF9655A5A52C0239350585DA2EE22CB1B03B4C6A228B426B3A0D7F3"
+  },
+  "fixed_judgment": {
+    "classification": "VALID_COMPLETE_DEVELOPMENT_NONCONFIRMATION",
+    "reason": "Both frozen polar roles lose actual and stressed money in both development years and exceed the V8 drawdown gate despite adequate turnover, slot breadth, symbol breadth and external-sign breadth.",
+    "nearby_repairs_closed": [
+      "rank threshold",
+      "same-slot reference window",
+      "decision-time or session subgroup",
+      "AUDCHF sign subgroup",
+      "FOLLOW or FADE remapping",
+      "target symbol subset",
+      "risk or capacity",
+      "barrier or holding horizon"
+    ],
+    "locked_2026_authorized": false,
+    "EA_or_native_MT5_authorized": false
+  },
+  "safety_and_scope": {
+    "demo_default_AUDCHF_cache_remaining": 0,
+    "candidate_terminal_process_owner": 0,
+    "protected_live_pid": 33388,
+    "broker_account_position_order_or_deal_api_queries": 0,
+    "orders_or_trades": 0,
+    "live_or_optimization_changed": false
+  },
+  "next_authorized_action": "commit and push this closure, recompare Programs 1-5 and 7 plus all heights, then open at most one materially distinct successor before any successor input or outcome",
+  "goal_status": "ACTIVE_NOT_COMPLETE"
+}

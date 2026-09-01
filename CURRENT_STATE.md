@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0531`
+- Latest state ID: `STATE-0532`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 007 original-broker acquisition/freeze commit `69d53d036c74b4a8caf778e6d7138f0de59978af`, equal to `origin/main` before the prestart freeze-schema correction.
+- Current process parent: Family 007 corrected-freeze commit `5487f775e40ebe890c51edb9d63b350ccde1b5b5`, equal to `origin/main` before its sole complete development process.
 
 ## Authorization and ownership
 
@@ -110,7 +110,7 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Family 007 frozen declaration
 
-- README/contract are `1,747 / 18,400` bytes at `3CB17CB8FB02D0430EDE5D3695D5D4A4DC6B326D18DB6BD6155AE3D94CBC0743 / BCFF0204EDFB65D34298A54F1E69859BD7C924566C36526999A391D1E6D197F5`.
+- README/contract are `1,681 / 18,400` bytes at `734EEBFBFF387B4EFC0D4CCB77FB5464FE4364B1181EEE28DBBC7ED4F2FD7CB9 / BCFF0204EDFB65D34298A54F1E69859BD7C924566C36526999A391D1E6D197F5`.
 - Declaration `INDEPENDENT_AUDCHF_INTRADAY_CARRY_PULSE_ADAPTER_CHALLENGE_V1_DECLARATION.json` is `10,449` bytes / `0CEBC92B0F7BE5469FF6CBEE20E8AF3BBC36907EA95FF784E03AE8A411E7799C`, status `DECLARED_PRERUNTIME_PREACQUISITION_PREINPUT_PRERANK_PREIMPLEMENTATION_PREOUTCOME`.
 - Every New York-local half hour ending `10:00..15:30` uses exactly 30 completed AUDCHF M1 Bid rows. The nonzero absolute return must be at or above nearest-rank position `45` among the same slot's prior `60` complete absolute returns. FOLLOW maps the AUDCHF sign to both targets and FADE takes the exact opposite.
 - Entry is the exact decision-time target M1 open. Per-target risk distance is the median corresponding half-hour Bid range from the prior `20` complete same-slot sessions, floored at `0.01`. Stop/take/hold are `-1R / +1.5R / 30 M1`; actual uses direction-specific Bid/Ask and stress charges the observed burden again.
@@ -121,13 +121,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - The first original-broker request correctly persisted no final output because terminal `MaxBars=100000` returned one out-of-range fallback row per monthly request. Its two partial original-broker cache files were deleted, `MaxBars` was raised to `5,000,000`, and the acquisition script gained bounded in-range history synchronization. The final development acquisition completed `30` monthly batches / `930,039` rows from `2023-07-03T00:00:00Z` through `2025-12-31T23:59:00Z`; CSV/receipt/spec are `85,593,295 / 8,681 / 549` bytes at `4BDADB7E...6C8E / D98DB072...4FEB / 5137BA46...BDB9`. Locked 2026 remains unopened.
 - Acquisition script `acquisition/acquire_audchf.py` is `23,195` bytes / `551` lines / `9A723B0E...6737`; complete adapter `adapter/run_adapter.py` is `52,045` bytes / `1,277` lines / `63E957C7...4FE5`. The original-broker correction is `5,488` bytes / `0BC953B9...A88E`; the earlier correction and target receipt remain `5,057 / 1,510` bytes at `70EB0501...DEF2 / 079326EC...C5D`.
 - Outcome-free precheck passed over `517` normal days, `6,143` complete slots and `1,582` gated events (`807/775` negative/positive), with `3,164` two-symbol structural starts per role or `6.11992` per normal day. Both symbols are minimum-lot feasible on all `1,582` states. Future trade simulations, lifecycles/economics, locked rows and persistent precheck output remain zero. The first development invocation stopped before data because the freeze lacked the validator-required top-level adapter field; no output was written and no economic process occurred. Corrected implementation freeze is `7,986` bytes / `697D99C7...C68A`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`. Candidate PID `39348` was stopped after acquisition; Live PID `33388` remained unchanged.
+- The sole complete development process returned `VALID_DEVELOPMENT_COMPLETE_NO_PASSER`. FOLLOW ran `3,130` starts and lost actual/stressed `-$53.708425 / -$135.688025` with `82.475678%` DD; FADE ran `2,813` starts and lost `-$74.118175 / -$129.559175` with `81.646377%` DD. Both roles lost actual and stressed in both 2024 and 2025. Turnover and breadth passed, but profit, epoch and DD gates failed. Complete passer count is zero.
+- Raw result/state/trade are `21,016 / 256,910 / 2,154,699` bytes at `73964731...3ACB / 041B7288...DBB8 / AFF2DA81...48F2`; state/trade rows are `1,582 / 5,943` and three-file ordered manifest is `ACF3213E...D7F3`. Durable result is byte-equal to raw. Closure is `5,565` bytes / `04D37BA4...97F1`, status `CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_CONFIRMATION_NO_EA_NO_MT5`. Locked 2026, EA, compile and Tester remain unopened; adjacent rank/window/subgroup/symbol/risk/exit rescues are closed together.
 
 ## Next authorized sequence
 
-1. Commit and push the original-broker acquisition correction, complete development authority, corrected adapter and implementation freeze; verify clean `main == origin/main`.
-2. Run exactly one complete two-role 2024-2025 development process.
-3. Open locked 2026, EA, compile and native MT5 only for at most one unchanged ranked full development passer.
-4. If no complete passer exists, close Family 007 without nearby rescue, recompare Programs 1-5 and 7, and open only one materially distinct successor.
+1. Commit and push the Family 007 result and closure; verify clean `main == origin/main`.
+2. Recompare Programs 1-5 and 7 plus all heights without opening successor inputs or outcomes.
+3. Declare at most one materially distinct Family 008 architecture before any source copy, feature, model, prediction or economics.
+4. Run its frozen proxy path and allow locked/native work only for an unchanged complete passer.
 5. Continue serially until an unchanged complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -141,15 +143,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Storage and repository discipline
 
-- System-drive free space is `99.886 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder and failed partial original-broker cache were removed, while the complete referenced development authority is preserved.
+- System-drive free space is `99.869 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder and failed partial original-broker cache were removed, while complete referenced acquisition and result evidence is preserved.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 007 complete original-broker development authority and implementation freeze are ready pre-economics; no candidate Portable process is open.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ORIGINAL_BROKER_ACQUISITION_COMPLETE_FREEZE_SCHEMA_CORRECTED_PREDEVELOPMENT_OUTCOME`.
+- Active research unit: Family 007 is closed valid adverse with zero passer; whole-map recompare is pending before any Family 008 declaration.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_CLOSED_VALID_ADVERSE_NO_PASSER_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
