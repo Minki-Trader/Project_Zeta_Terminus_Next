@@ -88,7 +88,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Storage and repository discipline
 
-- System-drive free space is `93.023 GiB`, above the mandatory `30 GiB` sweep threshold. Family 010's closed ignored runtime left the workspace via the Recycle Bin; complete referenced authorities, canonical input and result tapes remain preserved.
+- System-drive free space remained above `90 GiB` at the final boundary, safely above the mandatory `30 GiB` sweep threshold. Family 010's closed ignored runtime left the workspace via the Recycle Bin; complete referenced authorities, canonical input and result tapes remain preserved.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
