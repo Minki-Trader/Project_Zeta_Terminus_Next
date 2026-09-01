@@ -132,6 +132,15 @@
   },
   "session_clock": {
     "iana_zone": "America/New_York",
+    "raw_time_semantics": {
+      "source_encoding": "the integer MT5 time field stores the connected broker server wall-clock as Unix-like epoch seconds; it is not semantic UTC",
+      "broker_server_iana_zone": "Europe/Helsinki",
+      "normalization": "interpret the raw epoch as a timezone-naive wall-clock, attach Europe/Helsinki with the IANA database, then convert to true UTC and America/New_York before any date, session, return, rank, risk or path operation",
+      "non_authoritative_display_fields": "acquisition receipt fields or CSV columns named first_utc, last_utc or time_utc preserve the raw epoch rendering only and must never drive scheduling",
+      "dst_and_short_session_rule": "exact local-minute completeness remains binding; US/Europe DST-mismatch weeks, half days, missing minutes and duplicates are excluded structurally rather than shifted, filled or rescued",
+      "correction_classification": "preimplementation source-time semantic correction after a time-column-only diagnostic; no price, spread, volume, return, rank, target path or outcome value was opened",
+      "no_economic_geometry_change": true
+    },
     "regular_session_signal_interval": "09:30:00 through 15:29:59 local",
     "decision_local_time": "15:30:00",
     "target_path_interval": "15:30:00 through 15:59:59 local",
@@ -249,7 +258,7 @@
   "adapter_ea_boundary": {
     "python_adapter_owns": [
       "fresh QQQ and TQQQ source and symbol-specification integrity",
-      "IANA New York local-date conversion and exact common-day completeness",
+      "broker-server Europe/Helsinki wall-clock normalization to true UTC, IANA New York local-date conversion and exact common-day completeness",
       "completed paired returns, sixty-day QQQ rank, coherence and continuation direction",
       "twenty-day US100 risk distance",
       "decision schema, sequence, freshness and bounded decision evidence",

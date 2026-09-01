@@ -1,0 +1,132 @@
+{
+  "schema": "zeta-next-independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-raw-time-semantics-correction",
+  "recorded_at_utc": "2026-09-01T02:41:11.9388693Z",
+  "status": "RAW_TIME_SEMANTICS_CORRECTED_PREIMPLEMENTATION_PREPRICE_DERIVATION_PREOUTCOME",
+  "family": "independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1",
+  "source_boundary": {
+    "development_source_receipt": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_SOURCE_RECEIPT.json",
+      "bytes": 5377,
+      "sha256": "0DF4B566B320B97391CCFAA8CC7675B32A014C404D01A41B3D8CCDC93F871362",
+      "commit": "010a6a927f3c69c7c6091c5129a30b319f7ea4ac",
+      "commit_equal_origin_main_before_diagnostic": true
+    },
+    "QQQ": {
+      "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/QQQ_M1_DEVELOPMENT.csv",
+      "bytes": 24195200,
+      "rows": 242538,
+      "sha256": "1E02B68F542A89FF94DE3B5C0B91C728D2F6A6562920D8C2DFD02AD88F8B6EF4"
+    },
+    "TQQQ": {
+      "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/TQQQ_M1_DEVELOPMENT.csv",
+      "bytes": 23124238,
+      "rows": 242516,
+      "sha256": "8CE67D515A94546F403995C50227B1B13FFD925B35C7968FF464989E37638F4C"
+    },
+    "US100": {
+      "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/target/US100_M1.parquet",
+      "bytes": 21213599,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+    }
+  },
+  "diagnostic_scope": {
+    "columns_opened": [
+      "time"
+    ],
+    "external_price_spread_volume_return_rank_or_signal_columns_opened": 0,
+    "target_price_spread_volume_range_future_path_or_outcome_columns_opened": 0,
+    "candidate_directions_lifecycles_economics_or_improvement_values": 0,
+    "locked_2026_external_rows_present_or_opened": 0,
+    "locked_2026_target_rows_opened": 0,
+    "target_projection_filter": "raw time < 2026-01-01 02:00:00 encoded epoch, the Europe/Helsinki wall-clock representation of true 2026-01-01T00:00:00Z",
+    "target_time_only_rows_before_true_2026_cutoff": 1411778,
+    "maximum_normalized_target_utc_opened": "2025-12-31T21:59:00Z",
+    "persistent_diagnostic_output_files": 0
+  },
+  "finding": {
+    "raw_encoding": "the integer MT5 time field is a Unix-like encoding of the connected broker server wall-clock, not semantic UTC",
+    "broker_server_iana_zone": "Europe/Helsinki",
+    "wrong_interpretation": "convert the integer directly from UTC to America/New_York",
+    "correct_interpretation": "render the integer as a timezone-naive wall-clock, attach Europe/Helsinki with IANA rules, then convert to true UTC and America/New_York",
+    "first_external_row_example": {
+      "direct_epoch_as_UTC_then_New_York": "2023-07-03T12:30:00-04:00",
+      "server_wall_clock_then_New_York": "2023-07-03T09:30:00-04:00"
+    },
+    "receipt_and_csv_utc_labels": "fields named first_utc, last_utc or time_utc preserve the acquisition-time raw epoch rendering and are non-authoritative for scheduling"
+  },
+  "time_only_geometry_examples": [
+    {
+      "local_date": "2023-07-03",
+      "QQQ_signal_rows_09_30_through_15_29": 260,
+      "QQQ_observed_bounds": "09:30..13:57",
+      "TQQQ_signal_rows_09_30_through_15_29": 250,
+      "TQQQ_observed_bounds": "09:30..13:59",
+      "US100_path_rows_15_30_through_15_59": 0,
+      "classification": "half-day structurally excluded by exact completeness"
+    },
+    {
+      "local_date": "2023-07-05",
+      "QQQ_signal_rows_09_30_through_15_29": 360,
+      "TQQQ_signal_rows_09_30_through_15_29": 360,
+      "US100_path_rows_15_30_through_15_59": 30,
+      "bounds": "QQQ/TQQQ 09:30..15:29 and US100 15:30..15:59",
+      "classification": "exact complete normal-day geometry"
+    },
+    {
+      "local_date": "2024-03-11",
+      "QQQ_signal_rows_09_30_through_15_29": 299,
+      "TQQQ_signal_rows_09_30_through_15_29": 299,
+      "external_observed_bounds": "10:30..15:29",
+      "US100_path_rows_15_30_through_15_59": 30,
+      "classification": "US/Europe DST-mismatch date structurally excluded by external exact completeness"
+    },
+    {
+      "local_date": "2024-11-04",
+      "QQQ_signal_rows_09_30_through_15_29": 359,
+      "TQQQ_signal_rows_09_30_through_15_29": 359,
+      "external_observed_bounds": "09:30..15:29",
+      "US100_path_rows_15_30_through_15_59": 30,
+      "classification": "one missing external minute structurally excluded despite aligned bounds"
+    },
+    {
+      "local_date": "2025-12-31",
+      "QQQ_signal_rows_09_30_through_15_29": 360,
+      "TQQQ_signal_rows_09_30_through_15_29": 360,
+      "US100_path_rows_15_30_through_15_59": 30,
+      "bounds": "QQQ/TQQQ 09:30..15:29 and US100 15:30..15:59",
+      "classification": "exact complete normal-day geometry"
+    }
+  ],
+  "classification": {
+    "type": "PREIMPLEMENTATION_SOURCE_TIME_SEMANTIC_CORRECTION",
+    "economic_contract_changed": false,
+    "signal_or_target_interval_changed": false,
+    "instrument_mechanism_return_coherence_rank_direction_risk_sizing_variant_or_exit_changed": false,
+    "calendar_or_missing_row_rescue_added": false,
+    "exact_completeness_remains_binding": true,
+    "adapter_must_fail_closed_on_ambiguous_or_nonexistent_server_wall_clock": true
+  },
+  "corrected_files": {
+    "README": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/README.md",
+      "bytes": 2397,
+      "lines": 17,
+      "sha256": "9D1F9FF19EE41AFD21C3A58A8D808785D9DD2F1BF4FE39500066B7DA9F0A3914"
+    },
+    "contract": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 21048,
+      "lines": 374,
+      "sha256": "801764B6E7F89E7909DE6C2D87354CF93A5EFCB6D3B9FFBD03AF3420A9906460"
+    }
+  },
+  "isolation_attestation": {
+    "candidate_process_owner": false,
+    "master_terminal_or_files_used": false,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "EA_or_Tester_paths": 0,
+    "live_PID_33388_unchanged": true
+  },
+  "next_authorized_action": "after this correction reaches origin/main, implement the complete family-owned adapter with this fail-closed time normalization, then run the outcome-free structural/risk-feasibility precheck and freeze the exact implementation before any economic path opens"
+}

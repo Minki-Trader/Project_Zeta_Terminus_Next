@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0536`
+- Latest state ID: `STATE-0537`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 008 source-canonicalization/acquisition-engineering commit `5b3cd1648d0f7cd535931572adb7de820c559f88`, equal to `origin/main` before development source acquisition.
+- Current process parent: Family 008 development-source receipt commit `010a6a927f3c69c7c6091c5129a30b319f7ea4ac`, equal to `origin/main` before the preimplementation raw-time semantic correction.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_CANDIDATE_PORTABLE_OPEN_AWAITING_USER_CONFIGURED_NONLIVE_SERVER_SESSION_PREINPUT_PRECHECK_PREOUTCOME`.
-- Sole active Challenge family: `lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/`, Program 2 / micro-to-meso, mandatory `Python adapter + EA`.
-- Parallel Lab family / Optimization campaign count: `1 / 0`; exact Family 007 Portable PID `26464` is open with `/portable` for user-supplied non-Live server login, while successful source acquisition, account creation and trading counts remain zero.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_RAW_TIME_SEMANTICS_CORRECTED_PREIMPLEMENTATION_PREPRICE_DERIVATION_PREOUTCOME`.
+- Sole active Challenge family: `lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/`, Program 2 / meso, mandatory `Python adapter + EA`.
+- Parallel Lab family / Optimization campaign count: `1 / 0`; Family 008 development sources are pinned, its dedicated candidate Portable is stopped, and adapter implementation, price-derived state, lifecycles and economics remain unopened.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -155,10 +155,18 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - US100 authority was copied exactly once to the family raw target path and is byte-equal at `21,213,599` bytes / `634A8545...6BB2`. Mechanical copy opened no price, return, label or outcome value. Combined durable source receipt is `5,377` bytes / `0DF4B566B320B97391CCFAA8CC7675B32A014C404D01A41B3D8CCDC93F871362`, status `COMPLETE_FRESH_ORIGINAL_BROKER_DEVELOPMENT_SOURCE_AND_BYTE_EQUAL_TARGET`.
 - Candidate PID `36752` was stopped after acquisition and no candidate process owns the runtime. Existing price-cache reads, account/position/order/deal queries, orders, trades, target future paths, candidate decisions/lifecycles/economics and improvement values remain zero. Locked 2026 was not requested, acquired or opened; Live PID `33388` remained unchanged.
 
+## Family 008 raw-time semantic correction
+
+- Development-source receipt commit `010a6a927f3c69c7c6091c5129a30b319f7ea4ac` reached local `main`, `origin/main` and remote `main` before a timestamp-only diagnostic. The diagnostic projected only `time`; it opened zero external/target price, spread, volume, return, range, rank, future-path or outcome column and zero locked-2026 row.
+- The connected broker's MT5 integer `time` is a Unix-like encoding of its server wall-clock, not semantic UTC. Treating the first QQQ/TQQQ row directly as UTC produced `12:30 America/New_York`; interpreting the raw wall-clock in `Europe/Helsinki` and then converting produced the correct `09:30`.
+- The exact normalization is now frozen: raw epoch to timezone-naive wall-clock, attach `Europe/Helsinki` using IANA rules, then convert to true UTC and `America/New_York` before any schedule, return, rank, risk or path operation. Acquisition fields named `first_utc`, `last_utc` or `time_utc` remain provenance-only raw renderings.
+- Time-only geometry confirmed exact normal-day rows on 2023-07-05 and 2025-12-31 (`360 / 360 / 30` QQQ/TQQQ signal and US100 path rows). The 2023-07-03 half day, 2024-03-11 US/Europe DST mismatch and 2024-11-04 missing-minute date are excluded by the unchanged exact-completeness rule.
+- Corrected README/contract are `2,397 / 21,048` bytes at `9D1F9FF1...3914 / 801764B6...6460`. Correction evidence is `6,614` bytes / `EDD382D7319E7A19BB5E2A5047650BFFD9D0ACA6E57B38F2EEC9D5DC9894A7A7`, status `RAW_TIME_SEMANTICS_CORRECTED_PREIMPLEMENTATION_PREPRICE_DERIVATION_PREOUTCOME`. No clock, window, instrument, mechanism, return, coherence, rank, direction, risk, sizing, variant or exit changed.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 008 development source receipt; verify clean `main == origin/main`.
-2. Implement the complete Python adapter against only the pinned QQQ/TQQQ and byte-equal US100 inputs.
+1. Commit and push the Family 008 raw-time semantic correction; verify clean `main == origin/main`.
+2. Implement the complete Python adapter against only the pinned QQQ/TQQQ and byte-equal US100 inputs with the frozen server-wall-clock normalization.
 3. Run abort-before-write outcome-free common-day/rank/coherence/sign/risk feasibility and freeze the exact implementation before economics.
 4. Run one complete two-variant development bundle and its mandatory improvement audit; open locked/native only for one unchanged complete passer.
 5. Continue serially, auditing defensible improvement headroom before each closure, until a complete native candidate passes every V8 gate.
@@ -174,15 +182,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Storage and repository discipline
 
-- System-drive free space is `98.640 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder, failed partial original-broker cache, failed Family 008 long-path environment and duplicate update staging were removed or sent recoverably to Recycle Bin, while complete referenced authorities remain preserved.
+- System-drive free space is `98.167 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder, failed partial original-broker cache, failed Family 008 long-path environment and duplicate update staging were removed or sent recoverably to Recycle Bin, while complete referenced authorities remain preserved.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 008 development QQQ/TQQQ and US100 authorities are pinned; adapter implementation and all outcomes remain unopened.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_DEVELOPMENT_SOURCE_COMPLETE_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 008 development QQQ/TQQQ and US100 authorities plus raw-time semantics are pinned; adapter implementation and all outcomes remain unopened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_RAW_TIME_SEMANTICS_CORRECTED_PREIMPLEMENTATION_PREPRICE_DERIVATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
