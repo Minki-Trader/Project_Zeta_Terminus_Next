@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0546`
+- Latest state ID: `STATE-0547`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 009 implementation-freeze commit `013f8c581263c1171a99d70dbf90c619281aaac6`, equal to `origin/main` before development.
+- Current process parent: Family 009 closure commit `4bd36ab70fead08306ac5cc30ed11237be7c7027`, equal to `origin/main` before autonomous successor selection.
 
 ## Authorization and ownership
 
@@ -24,8 +24,8 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_CLOSED_VALID_ADVERSE_NO_BROAD_HEADROOM_RECOMPARE_PENDING`.
-- Sole active Challenge family: none; Family 009 is closed and immutable pending a whole-map recompare.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_LONDON_FX_FIX_SUCCESSOR_READY_NOT_OPENED`.
+- Sole active Challenge family: none; provisional Family 010 is selected but cannot open until the selection boundary reaches `origin/main`.
 - Active Lab family / Optimization campaign count: `0 / 0`; the user authorized autonomous method selection and Program tags remain administrative only.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
@@ -246,11 +246,20 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Gross movement itself was adverse `-$65.65069 / -$46.35123`; spread and signed swap do not explain the failure. Broad headroom is false and bounded seed is null. Durable result/audit are `10,391 / 47,801` bytes at `FFCB0B04...0DA6 / 6B73F696...A8FB`; raw tape manifest is `5559B2A3...C4A3`.
 - Closure is `10,063` bytes / `02FE2CE2310D4E87B3AB044135ABBE53D76B055A2BE27B20B77D3F6C1A422984`, status `CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5`. Locked 2026, confirmation, EA, compile and Tester remained unopened; the complete Family 009 bundle is immutable.
 
+## Post-Family 009 autonomous method selection
+
+- Family 009 closure commit `4bd36ab70fead08306ac5cc30ed11237be7c7027` reached local `main`, `origin/main` and remote `main` before selection. Method ranking was autonomous and used independence, causal clarity, source constructibility, `$100` minimum-lot plausibility, repeated opportunity supply and cost-survival plausibility; Program did not constrain it.
+- Multi-asset momentum was rejected as adjacent to Family 009; broker carry lacks historical time-varying financing authority; tick triangular arbitrage has disproportionate synchronization/native-representativeness cost; a new opaque return model lacks a newly independent feature carrier; management/capital/meta work has no positive independent entry population.
+- The selected provisional Family 010 is `independent-london-fx-fix-pressure-adapter-challenge-v1`, mandatory `Python adapter + EA`, trading `AUDUSD / EURUSD / GBPUSD / NZDUSD` directly. Program 3 / micro-to-meso is attached only afterward as an administrative tag.
+- The frozen conceptual bundle will compare completed pre-fix-flow continuation through the London 16:00 fix with completed fix-window pressure reversal after it. This is benchmark-linked FX execution/hedging microstructure, distinct from prior index opening/close, external-transfer, model, residual and multi-week trend families.
+- NBER/JIMF evidence documents persistent post-reform price-dynamic anomalies and execution predictability around the fix; Journal of Financial Markets evidence identifies concentrated benchmark-linked hedging pressure; Bank of England March 2025 minutes report continuing widespread Fix use and notably increased flow, especially at month/quarter-end. These sources motivate only the mechanism and do not validate FPMarkets rules or outcomes.
+- Selection audit is `8,784` bytes / `5830CBF6257C656BBF235622FD91E50F8725D9C046E21E5049380F070ECAD2E6`, status `READY_AUTONOMOUS_LONDON_FX_FIX_PRESSURE_ADAPTER_BUNDLE_SUCCESSOR_NOT_OPENED`. No root, runtime, source/spec, market value, signal, path, economy, adapter, EA or Tester opened during selection.
+
 ## Next authorized sequence
 
-1. Commit and push the complete Family 009 result/audit/closure; verify clean `main == origin/main`.
-2. Recompare Programs 1-5/7 and all heights under autonomous method selection without opening successor values.
-3. Declare at most one materially distinct successor and continue its complete adapter/EA or ONNX/EA path.
+1. Commit and push the autonomous post-Family-009 selection; verify clean `main == origin/main`.
+2. Open exactly one Family 010 root and freeze its complete declaration before runtime, M1/spec acquisition or feature work.
+3. Build and judge the complete related bundle plus improvement audit; escalate locked/native only for an unchanged complete passer.
 4. Continue serially until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -271,8 +280,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; Family 009 is closed valid adverse and whole-map recompare is pending.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_CLOSED_VALID_ADVERSE_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
+- Active research unit: none; provisional Family 010 London FX fix-pressure bundle is selected but not opened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_LONDON_FX_FIX_SUCCESSOR_READY_NOT_OPENED`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
