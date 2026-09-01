@@ -1,0 +1,251 @@
+{
+  "schema": "zeta-next-independent-london-fx-fix-pressure-adapter-challenge-v1-declaration",
+  "recorded_at_utc": "2026-09-01T04:52:17.1944058Z",
+  "status": "DECLARED_PRERUNTIME_PREACQUISITION_PREFEATURE_PREDECISION_PREIMPLEMENTATION_PREOUTCOME",
+  "family": "independent-london-fx-fix-pressure-adapter-challenge-v1",
+  "family_number": 10,
+  "architecture": "Python adapter + EA",
+  "selection_boundary": {
+    "selection_commit": "2e942a858034b5a5b15fec879503a20ef17ca108",
+    "selection_commit_equal_origin_main_before_family_open": true,
+    "selection_audit": {
+      "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_METHOD_SELECTION_V1.json",
+      "bytes": 8784,
+      "sha256": "5830CBF6257C656BBF235622FD91E50F8725D9C046E21E5049380F070ECAD2E6",
+      "status": "READY_AUTONOMOUS_LONDON_FX_FIX_PRESSURE_ADAPTER_BUNDLE_SUCCESSOR_NOT_OPENED"
+    },
+    "program_constrained_method": false,
+    "administrative_program_after_selection": {
+      "program": 3,
+      "height": "micro-to-meso"
+    }
+  },
+  "authorities": {
+    "README": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/README.md",
+      "bytes": 2887,
+      "lines": 15,
+      "sha256": "8C64CC38612660C23EC51B5A6777F21C594C776A0FB1AF8027FE2CB7339A7319"
+    },
+    "contract": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 18309,
+      "lines": 369,
+      "sha256": "F1F2CBCCEA4FE5E870FF0863BF58BEAE98F685AFAE3B8646FEB336C0EF297708"
+    },
+    "v8": {
+      "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+      "bytes": 8423,
+      "sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46"
+    }
+  },
+  "frozen_question": "can observable institutional FX benchmark pressure produce a broad, cost-surviving direct four-pair pre-fix continuation or post-fix reversal system that compounds USD 100 strongly enough to beat exact V8",
+  "primary_evidence": [
+    {
+      "title": "Did the Reform Fix the London Fix Problem?",
+      "doi": "10.3386/w23327",
+      "url": "https://www.nber.org/papers/w23327",
+      "claim_limit": "supports persistent post-reform price-dynamic anomalies and execution predictability, not this rule"
+    },
+    {
+      "title": "Equity hedging and exchange rates at the London 4 p.m. fix",
+      "doi": "10.1016/j.finmar.2014.11.001",
+      "url": "https://doi.org/10.1016/j.finmar.2014.11.001",
+      "claim_limit": "supports concentrated benchmark-linked hedge pressure, not the declared all-day direction or broker transfer"
+    },
+    {
+      "title": "Minutes of the London FXJSC Main Committee Meeting - 13 March 2025",
+      "publisher": "Bank of England",
+      "url": "https://www.bankofengland.co.uk/minutes/2025/march/fxjsc-main-committee-meeting-13-march-2025",
+      "claim_limit": "supports continuing Fix use and increased flow, not profitability"
+    }
+  ],
+  "universe": {
+    "symbols_in_frozen_order": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "NZDUSD"
+    ],
+    "direct_trading": true,
+    "timeframe": "M1",
+    "availability_metadata_bytes": 18210,
+    "availability_metadata_sha256": "24BF16C90C0DD30841C01B574BF1E0A43AC5D464CECF3CEEB76C6D9BDDAAC109",
+    "availability_only_no_numeric_or_quote_value": true
+  },
+  "time_and_geometry": {
+    "raw_source": "broker server wall-clock encoded as Unix-like seconds",
+    "normalization": "raw naive wall clock -> Europe/Helsinki -> true UTC -> Europe/London",
+    "ambiguous_nonexistent_duplicate_or_nonincreasing": "fail closed",
+    "candidate_dates": "Europe/London Monday-Friday",
+    "complete_event": "all four symbols contain every exact M1 timestamp from 15:34 through 16:35 inclusive",
+    "rows_per_symbol": 62,
+    "incomplete_event": "excluded before direction or outcome",
+    "active_date_denominator": "every complete event date including equality/no-trade cases",
+    "synthetic_gap_fill": false
+  },
+  "variants": [
+    {
+      "variant": "LONDON_FIX_PRE_FLOW_CONTINUATION",
+      "decision_input": "completed Bid move from 15:45 open through 15:54 close London",
+      "direction": "follow strict sign; equality means no trade",
+      "entry": "15:55 London M1 open",
+      "held_bars": 10,
+      "time_exit": "16:05 London M1 open"
+    },
+    {
+      "variant": "LONDON_FIX_POST_PRESSURE_REVERSAL",
+      "decision_input": "completed Bid move from 15:55 open through 16:04 close London",
+      "direction": "fade strict sign; equality means no trade",
+      "entry": "16:05 London M1 open",
+      "held_bars": 25,
+      "time_exit": "16:30 London M1 open"
+    }
+  ],
+  "features_and_lifecycle": {
+    "ATR": "ATR20 from completed M1 true ranges ending on the decision bar",
+    "risk_distance": "maximum of 5 ATR20 and 4 entry-row observed spreads",
+    "hard_stop": "fixed from direction-specific execution price, adverse-first in every held bar, exact threshold",
+    "take_profit": false,
+    "trailing_or_breakeven": false,
+    "time_exit_after_stop_check": true,
+    "one_position_per_symbol_per_variant": true,
+    "same_timestamp_symbol_order": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "NZDUSD"
+    ]
+  },
+  "risk": {
+    "initial_deposit_usd": 100.0,
+    "position_target_fraction": 0.015,
+    "minimum_lot_hard_cap_fraction": 0.03,
+    "aggregate_original_stop_risk_cap_fraction": 0.08,
+    "same_timestamp_actual_balance_snapshot": true,
+    "sequential_original_stop_reservation": true,
+    "volume": "floor target lots to broker step and maximum; minimum lot only within hard cap",
+    "balance_compounding": true,
+    "stressed_balance_controls_size_or_admission": false
+  },
+  "economics": {
+    "Bid_OHLC": true,
+    "Ask": "Bid plus row spread times point",
+    "long": "entry Ask, stop/exit Bid",
+    "short": "entry Bid, stop/exit Ask",
+    "actual": "directional price PnL plus any signed crossed-boundary broker swap",
+    "stress": "actual minus the observed direction-specific lifecycle spread burden once more",
+    "commission_or_unrecorded_fee_usd": 0.0,
+    "expected_rollover_boundaries": 0,
+    "unexpected_rollover": "geometry fault"
+  },
+  "periods": {
+    "fresh_source_and_warmup": "2023-01-01T00:00:00Z/2024-01-01T00:00:00Z",
+    "development": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+    "locked": "2026-01-01T00:00:00Z/2026-08-01T00:00:00Z",
+    "whole": "2024-01-01T00:00:00Z/2026-08-01T00:00:00Z",
+    "locked_values_unavailable_until_one_development_passer": true
+  },
+  "development_gates": {
+    "both_years_actual_positive": true,
+    "both_years_stressed_positive": true,
+    "actual_net_usd_strictly_above": 149.97,
+    "stressed_net_usd_strictly_above": 127.786,
+    "actual_closed_balance_drawdown_pct_at_most": 37.39,
+    "accepted_starts_per_active_date_at_least": 3.0,
+    "accepted_starts_in_each_year_at_least": 150,
+    "symbol_breadth_at_least": 3,
+    "both_directions": true,
+    "selection": "highest stressed net, lower drawdown, higher minimum yearly stressed net, frozen variant order"
+  },
+  "whole_gates": {
+    "locked_actual_and_stressed_positive": true,
+    "every_2024_2025_locked_2026_epoch_actual_and_stressed_positive": true,
+    "actual_net_usd_strictly_above": 409.81,
+    "stressed_net_usd_strictly_above": 367.818,
+    "relative_equity_drawdown_pct_at_most": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "starts_per_active_date_at_least": 3.0,
+    "locked_starts_at_least": 75,
+    "same_breadth_contract": true,
+    "complete_native_adapter_plus_EA": true
+  },
+  "improvement_audit": {
+    "same_frozen_development_process": true,
+    "population": "every complete nonzero signal in both variants, admitted or blocked",
+    "held_M1_horizons": [
+      1,
+      5,
+      10,
+      20,
+      25,
+      30
+    ],
+    "measures": [
+      "one-lot raw gross, actual and stressed close R",
+      "raw Bid MFE and MAE R",
+      "variant direction relationship by common date/pair",
+      "year, pair and direction stability",
+      "ordinary, last-complete-month-end and quarter-end descriptive slices",
+      "spread, swap, minimum-lot, aggregate-risk and capital-depletion attribution",
+      "hard-stop and time-exit truncation"
+    ],
+    "broad_headroom": "at one predeclared 5/10/20/25/30 horizon, raw and stressed mean R both positive in each year, at least three pairs, both directions, ordinary dates and month-end dates, with at least eight signals in every required slice",
+    "may_retain_one_bounded_seed": true,
+    "may_execute_or_authorize_rescue": false
+  },
+  "architecture_boundary": {
+    "python": [
+      "fresh source/spec integrity",
+      "time normalization and complete event schedule",
+      "ATR/risk-distance and strict directions",
+      "proxy reservation, development, confirmation and audit",
+      "byte-pinned native decision tape"
+    ],
+    "EA": [
+      "schema/sequence/freshness and four-symbol market validation",
+      "broker-native balance sizing and risk caps",
+      "orders, reconciliation, fixed stop and timed exit",
+      "ownership, persistence, recovery and native evidence"
+    ],
+    "EA_may_create_filter_replace_or_invert_direction": false
+  },
+  "ordered_execution": [
+    "this declaration reaches origin/main",
+    "create isolated neutral-derived Portable and fresh development acquisition",
+    "implement complete adapter and run outcome-free precheck",
+    "freeze exact implementation before future paths",
+    "run both development variants and mandatory audit once",
+    "open locked source for at most one unchanged development passer",
+    "build EA and run one native path only for a complete whole-proxy passer"
+  ],
+  "stop_rules": {
+    "single_variant_failure_does_not_close_family": true,
+    "no_passer_no_broad_headroom": "close before locked, EA and MT5",
+    "no_passer_broad_headroom": "retain one seed only and recompare autonomous methods before any new declaration",
+    "valid_native_adverse": "close without tuning",
+    "environment_source_design_or_engineering_fault": "correct without arbitrary retry cap or economic verdict",
+    "success": "only complete native evidence beating every exact V8 gate"
+  },
+  "isolation_attestation": {
+    "family_root_created_files": [
+      "README.md",
+      "config/challenge-contract.json",
+      "evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DECLARATION.json"
+    ],
+    "runtime_created": false,
+    "source_or_specification_files": 0,
+    "market_price_spread_volume_return_feature_or_direction_values_opened": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "improvement_values": 0,
+    "locked_2026_rows": 0,
+    "adapter_source_files": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "live_changed": false,
+    "optimization_changed": false
+  },
+  "next_authorized_action": "after this declaration reaches origin/main, create the dedicated Portable, acquire fresh development-only M1/specification source atomically, then implement the complete outcome-free adapter path"
+}

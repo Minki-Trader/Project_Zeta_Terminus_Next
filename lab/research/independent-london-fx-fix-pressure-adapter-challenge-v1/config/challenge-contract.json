@@ -1,0 +1,369 @@
+{
+  "schema": "zeta-next-independent-london-fx-fix-pressure-adapter-challenge-v1-contract",
+  "family": "independent-london-fx-fix-pressure-adapter-challenge-v1",
+  "family_number": 10,
+  "architecture": "Python adapter + EA",
+  "administrative_allocation": {
+    "program": 3,
+    "name": "order_time_session",
+    "height": "micro-to-meso",
+    "program_constrained_selection": false,
+    "user_authorized_autonomous_method_selection": true,
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "claim": "develop a separately attributable London-fix FX pressure system that beats exact V8",
+    "proxy_cannot_prove_victory": true,
+    "complete_native_python_adapter_plus_EA_required": true
+  },
+  "selection_authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_METHOD_SELECTION_V1.json",
+    "bytes": 8784,
+    "sha256": "5830CBF6257C656BBF235622FD91E50F8725D9C046E21E5049380F070ECAD2E6",
+    "status": "READY_AUTONOMOUS_LONDON_FX_FIX_PRESSURE_ADAPTER_BUNDLE_SUCCESSOR_NOT_OPENED"
+  },
+  "primary_evidence": [
+    {
+      "title": "Did the Reform Fix the London Fix Problem?",
+      "authors": [
+        "Takatoshi Ito",
+        "Masahiro Yamada"
+      ],
+      "doi": "10.3386/w23327",
+      "url": "https://www.nber.org/papers/w23327"
+    },
+    {
+      "title": "Equity hedging and exchange rates at the London 4 p.m. fix",
+      "authors": [
+        "Michael Melvin",
+        "John Prins"
+      ],
+      "doi": "10.1016/j.finmar.2014.11.001",
+      "url": "https://doi.org/10.1016/j.finmar.2014.11.001"
+    },
+    {
+      "title": "Minutes of the London FXJSC Main Committee Meeting - 13 March 2025",
+      "publisher": "Bank of England",
+      "url": "https://www.bankofengland.co.uk/minutes/2025/march/fxjsc-main-committee-meeting-13-march-2025"
+    }
+  ],
+  "evidence_transfer_limit": "the literature motivates only benchmark-linked pressure and possible pre/post-fix predictability; it does not validate FPMarkets M1 bars, exact direction, clocks, stops, costs, USD 100 capacity or any V8 gate",
+  "isolation": {
+    "self_contained_family_root": true,
+    "forbidden_include_execute_or_write_roots": [
+      "live-dev",
+      "optimization",
+      "lab/mt5",
+      "another lab/research family"
+    ],
+    "dedicated_portable_required_before_broker_source": true,
+    "dedicated_runtime_git_ignored": true,
+    "candidate_specific_state_port_log_magic_required_before_native": true,
+    "Master_terminal_config_files_history_tester_or_logs_forbidden": true,
+    "candidate_PID_only_may_be_stopped": true,
+    "broker_positions_orders_deals_or_account_state_not_required_for_context": true
+  },
+  "known_prior_exposure_and_independence": {
+    "known_prior_families": [
+      "two-session index opening-auction response",
+      "leveraged-ETF US100 close-rebalance pressure",
+      "multi-asset H4 Donchian trend",
+      "FX-cross-to-index intraday pulse transfer",
+      "target-index barriers, residual baskets and learned target-return models"
+    ],
+    "material_distinctions": [
+      "direct positions in four FX pairs rather than an index target or external-to-target transfer",
+      "institutional 16:00 London benchmark execution pressure rather than exchange opening or US equity close",
+      "two fixed pre/post-fix phases rather than an outcome-selected clock or hold",
+      "short complete M1 event lifecycles rather than multi-week channels or learned generic return labels"
+    ],
+    "closed_neighborhoods_excluded": [
+      "Family 009 channel, ATR, stop, hold, symbol, direction, priority, risk or sizing rescue",
+      "Family 008 QQQ/TQQQ coherence, magnitude, rank, close clock or exit rescue",
+      "Family 006 London or New York opening-anchor response rescue",
+      "Family 007 AUDCHF rank/window/pulse transfer rescue",
+      "V1-V8 signal, opportunity, state, trade or component economics"
+    ]
+  },
+  "availability": {
+    "symbols": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "NZDUSD"
+    ],
+    "frozen_symbol_order": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "NZDUSD"
+    ],
+    "string_only_metadata_bytes": 18210,
+    "string_only_metadata_sha256": "24BF16C90C0DD30841C01B574BF1E0A43AC5D464CECF3CEEB76C6D9BDDAAC109",
+    "numeric_or_price_value_used_for_selection": false
+  },
+  "source": {
+    "timeframe": "M1",
+    "development_request": "2023-01-01T00:00:00Z/2026-01-01T00:00:00Z in broker raw wall-clock encoding, with adapter true-UTC filtering",
+    "required_market_fields": [
+      "time",
+      "open",
+      "high",
+      "low",
+      "close",
+      "tick_volume",
+      "spread",
+      "real_volume"
+    ],
+    "required_specification_fields": [
+      "symbol",
+      "currency_base",
+      "currency_profit",
+      "currency_margin",
+      "point",
+      "digits",
+      "trade_tick_size",
+      "trade_tick_value",
+      "trade_tick_value_profit",
+      "trade_tick_value_loss",
+      "trade_contract_size",
+      "volume_min",
+      "volume_step",
+      "volume_max",
+      "trade_mode",
+      "trade_calc_mode",
+      "swap_mode",
+      "swap_long",
+      "swap_short",
+      "swap_rollover3days"
+    ],
+    "profit_currency_required": "USD",
+    "price_basis": "broker-native Bid OHLC; row spread times point reconstructs Ask",
+    "acquisition": "fresh copy_rates_range through the family-owned dedicated Portable only after declaration reaches origin/main",
+    "atomicity": "persist no final family source unless all four M1 files and specifications complete and pass integrity",
+    "existing_runtime_history_cache_as_source": false,
+    "locked_2026": "not requested, acquired or opened until one unchanged complete development passer exists"
+  },
+  "raw_time_semantics": {
+    "source_encoding": "connected-broker server wall-clock encoded as Unix-like epoch seconds, not semantic UTC",
+    "broker_server_iana_zone": "Europe/Helsinki",
+    "normalization": "render raw integer as timezone-naive wall clock, attach Europe/Helsinki with IANA rules, convert to true UTC, then convert to Europe/London",
+    "ambiguous_or_nonexistent_server_wall_clock": "fail closed",
+    "duplicate_or_nonincreasing_normalized_timestamp": "abort before output",
+    "bar_cadence": "require exact consecutive local M1 timestamps for every frozen event interval; do not synthesize gaps"
+  },
+  "periods": {
+    "source_and_warmup": "2023-01-01T00:00:00Z/2024-01-01T00:00:00Z",
+    "development_selection": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+    "locked_confirmation": "2026-01-01T00:00:00Z/2026-08-01T00:00:00Z",
+    "whole_v8_comparison": "2024-01-01T00:00:00Z/2026-08-01T00:00:00Z",
+    "locked_confirmation_variant_max": 1,
+    "later_period_rows_may_complete_prior_period_event": false
+  },
+  "complete_event_geometry": {
+    "timezone": "Europe/London",
+    "candidate_weekdays": "Monday through Friday",
+    "all_four_symbols_required": true,
+    "exact_common_rows_inclusive": "15:34 through 16:35 local M1",
+    "exact_common_row_count_per_symbol": 62,
+    "reason": "one prior close for continuation ATR, both signal/lifecycle intervals and all audit horizons through the 30th reversal held bar close",
+    "portfolio_active_date": "a true judged-period date with exact common geometry in all four symbols; an equality/no-direction date remains in the turnover denominator",
+    "incomplete_date": "exclude before any signal value or outcome",
+    "month_end_audit_slice": "retrospectively label the last complete active date in each London calendar month; audit-only and never an admission rule",
+    "quarter_end_audit_slice": "month-end audit date in March, June, September or December; audit-only"
+  },
+  "features": {
+    "true_range": "maximum of Bid high-low, absolute Bid high-prior observed close and absolute Bid low-prior observed close",
+    "ATR20": "arithmetic mean of twenty completed M1 true ranges ending on the variant decision bar",
+    "risk_distance": "maximum of five times frozen ATR20 and four times entry-row observed spread times point",
+    "nonpositive_or_nonfinite_ATR_or_risk": "abort before output"
+  },
+  "candidate_bundle": {
+    "variants": [
+      {
+        "variant": "LONDON_FIX_PRE_FLOW_CONTINUATION",
+        "signal_window_local": "15:45 inclusive through 15:55 exclusive",
+        "signal_move": "15:54 Bid close minus 15:45 Bid open",
+        "direction": "LONG when strictly positive, SHORT when strictly negative, no trade on equality",
+        "entry_local": "15:55 M1 open",
+        "held_M1_bars": 10,
+        "time_exit_local": "16:05 M1 open"
+      },
+      {
+        "variant": "LONDON_FIX_POST_PRESSURE_REVERSAL",
+        "signal_window_local": "15:55 inclusive through 16:05 exclusive",
+        "signal_move": "16:04 Bid close minus 15:55 Bid open",
+        "direction": "SHORT when strictly positive, LONG when strictly negative, no trade on equality",
+        "entry_local": "16:05 M1 open",
+        "held_M1_bars": 25,
+        "time_exit_local": "16:30 M1 open"
+      }
+    ],
+    "same_timestamp_priority": "AUDUSD, EURUSD, GBPUSD, NZDUSD",
+    "one_position_per_symbol_per_variant": true,
+    "both_variants_and_improvement_audit_close_together": true,
+    "no_adjacent_clock_window_magnitude_threshold_pair_direction_ATR_stop_hold_risk_or_sizing_rescue_inside_v1": true
+  },
+  "lifecycle": {
+    "entry": "direction-specific market entry at the exact frozen local M1 open",
+    "hard_stop": "fixed at entry execution price plus or minus one risk distance; never widened or trailed",
+    "long_stop": "entry Ask minus risk distance, evaluated on Bid low",
+    "short_stop": "entry Bid plus risk distance, evaluated on Ask high",
+    "same_bar_entry_and_stop": "entry occurs at bar open and adverse hard stop wins",
+    "time_exit": "after hard-stop evaluation in every held bar, close direction-specifically at the frozen next-open timestamp",
+    "no_take_profit": true,
+    "no_overnight_position_expected": true,
+    "same_exit_timestamp_cross_symbol_settlement": "frozen symbol order"
+  },
+  "position_and_portfolio_risk": {
+    "initial_deposit_usd": 100.0,
+    "leverage": "1:100",
+    "target_position_risk_fraction_of_current_actual_balance": 0.015,
+    "minimum_lot_hard_position_risk_cap_fraction": 0.03,
+    "aggregate_initial_stop_risk_cap_fraction": 0.08,
+    "risk_per_lot": "risk distance divided by trade tick size times trade_tick_value_loss",
+    "volume_rounding": "floor target-risk lots to volume step and maximum; use minimum lot only when planned stop loss is at most three percent of actual balance snapshot",
+    "same_timestamp_snapshot": "one post-prior-exit actual-balance snapshot for all four ranked entries",
+    "aggregate_reservation": "sum sequentially accepted original planned stop losses and reject a new entry above eight percent of the snapshot",
+    "balance_compounding": true,
+    "stressed_balance_controls_admission_or_size": false,
+    "insolvency_or_nonfinite_actual_balance": "block later entries without rewriting completed lifecycles"
+  },
+  "quote_cost_and_swap": {
+    "Bid_OHLC": true,
+    "Ask": "Bid plus row spread times point",
+    "long_entry_and_exit": "enter Ask and exit Bid",
+    "short_entry_and_exit": "enter Bid and exit Ask",
+    "threshold_execution": "exact hard-stop threshold",
+    "money_conversion": "directional price distance divided by tick size times profit tick value for a gain or loss tick value for a loss times volume",
+    "actual_spread": "one direction-specific observed spread through Bid/Ask execution",
+    "extra_stress": "subtract that lifecycle's observed direction-specific spread burden once more",
+    "swap": "apply signed freshly acquired broker swap only for an actually crossed eligible broker rollover boundary; any expected intraday lifecycle crossing one aborts as geometry fault",
+    "supported_swap_modes": [
+      "DISABLED",
+      "POINTS",
+      "CURRENCY_SYMBOL when exact USD conversion exists",
+      "CURRENCY_DEPOSIT",
+      "INTEREST_CURRENT",
+      "INTEREST_OPEN"
+    ],
+    "commission_or_unrecorded_fee_assumed": 0.0
+  },
+  "improvement_potential_audit": {
+    "required_before_family_closure": true,
+    "generated_from_same_frozen_development_process": true,
+    "population": "every complete nonzero signal in both variants whether admitted or blocked",
+    "held_M1_horizons": [
+      1,
+      5,
+      10,
+      20,
+      25,
+      30
+    ],
+    "values": [
+      "one-lot raw gross, actual and stressed close R",
+      "raw Bid MFE and MAE R",
+      "variant event/pair direction relationship",
+      "2024 versus 2025, pair and direction stability",
+      "ordinary versus last-complete-month-end and quarter-end descriptive slices",
+      "observed and doubled spread burden plus any swap",
+      "minimum-lot, aggregate-risk and capital-depletion blocks",
+      "hard-stop versus time-exit attribution and truncation"
+    ],
+    "broad_headroom_definition": "at one frozen horizon from 5/10/20/25/30 M1, mean raw-gross and stressed R are both positive in each development year, at least three symbols, both directions, ordinary dates and last-complete-month-end dates, with at least eight signals per required slice",
+    "decision_rule": "complete both variants and the audit before closure; a broad result may retain one bounded seed but cannot execute it inside V1",
+    "audit_authority_limit": "cannot authorize a clock, window, threshold, month-end filter, pair, direction, ATR, stop, hold, risk or sizing variant"
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "accepted_starts_per_portfolio_active_date_min": 3.0,
+    "starts_in_each_development_calendar_year_min": 150,
+    "symbol_breadth_min": 3,
+    "both_directions_required": true,
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net, then frozen variant order",
+    "locked_confirmation_variant_max": 1
+  },
+  "confirmation_and_whole_gates": {
+    "locked_2026_actual_and_stressed_positive": true,
+    "each_epoch_2024_2025_and_locked_2026_actual_and_stressed_positive": true,
+    "whole_actual_net_strictly_above_v8": 409.81,
+    "whole_stressed_net_strictly_above_v8": 367.818,
+    "whole_closed_balance_drawdown_pct_max": 37.39,
+    "whole_robust_recovery_strictly_above": 3.295860215,
+    "accepted_starts_per_active_date_min": 3.0,
+    "locked_2026_starts_min": 75,
+    "same_symbol_and_direction_breadth_contract": true
+  },
+  "adapter_ea_boundary": {
+    "python_adapter_owns": [
+      "fresh four-symbol M1/specification integrity",
+      "broker-wall-clock and Europe/London normalization",
+      "complete event geometry, ATR20, risk distance and directions",
+      "same-timestamp sequence and proxy portfolio reservation",
+      "development, locked and audit computation",
+      "byte-pinned native decision tape"
+    ],
+    "ea_must_own": [
+      "schema, variant, sequence and freshness validation",
+      "all four symbol contract, tick, lot, swap and market-state validation",
+      "balance-based volume, minimum-lot and aggregate risk caps",
+      "fail-closed order submission and reconciliation",
+      "hard stop, timed exit and bounded execution evidence",
+      "ownership, persistence and restart recovery"
+    ],
+    "ea_may_not_create_replace_filter_or_invert_adapter_direction": true,
+    "native_tape_must_be_reproduced_from_frozen_adapter": true
+  },
+  "native_escalation": {
+    "condition": "exactly one unchanged variant is selected from complete development passers and then passes locked and whole proxy gates",
+    "candidate_paths_max": 1,
+    "required": [
+      "family-owned Python adapter and byte-pinned four-symbol decision tape",
+      "family-owned multi-symbol EA executor",
+      "MetaEditor compile",
+      "one dedicated-Portable MT5 Every tick based on real ticks path",
+      "complete actual/stressed/relative-equity-DD/recovery/epoch/turnover/breadth integrity"
+    ],
+    "proxy_has_promotion_or_victory_authority": false
+  },
+  "ordered_stages": [
+    "declaration before runtime, M1/specification acquisition, features, directions, implementation or economics",
+    "fresh development-only four-symbol M1 acquisition and complete specifications",
+    "complete adapter implementation and outcome-free source/event/turnover/minimum-lot precheck",
+    "freeze exact implementation before any future path or lifecycle",
+    "one complete two-variant development bundle plus mandatory improvement audit",
+    "locked 2026 acquisition and confirmation for at most one unchanged complete passer",
+    "self-contained Python adapter plus EA compile and one native candidate path only for a complete whole-proxy survivor"
+  ],
+  "stop_rules": {
+    "one_variant_failure": "continue the frozen sibling and improvement audit",
+    "no_development_passer_and_no_broad_headroom": "close before locked 2026, EA and MT5",
+    "no_development_passer_but_broad_headroom": "record one bounded successor seed only; do not execute it inside V1 and recompare the whole autonomous method map",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5 after recording the audit",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_source_design_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires separate user-authorized engineering and handoff"
+  },
+  "declaration_attestation": {
+    "runtime_created": false,
+    "source_or_specification_files": 0,
+    "market_price_spread_volume_or_return_values_opened": 0,
+    "persistent_feature_or_signal_rows": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_confirmation_opened": false,
+    "adapter_source_files": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "live_changed": false,
+    "optimization_changed": false
+  }
+}

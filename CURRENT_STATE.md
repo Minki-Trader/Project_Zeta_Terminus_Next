@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0547`
+- Latest state ID: `STATE-0548`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 009 closure commit `4bd36ab70fead08306ac5cc30ed11237be7c7027`, equal to `origin/main` before autonomous successor selection.
+- Current process parent: autonomous Family 010 selection commit `2e942a858034b5a5b15fec879503a20ef17ca108`, equal to `origin/main` before the Family 010 declaration opened.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_LONDON_FX_FIX_SUCCESSOR_READY_NOT_OPENED`.
-- Sole active Challenge family: none; provisional Family 010 is selected but cannot open until the selection boundary reaches `origin/main`.
-- Active Lab family / Optimization campaign count: `0 / 0`; the user authorized autonomous method selection and Program tags remain administrative only.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_LONDON_FX_FIX_PRESSURE_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Sole active Challenge family: `lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
+- Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection and Program tags remain administrative only.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -255,11 +255,22 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - NBER/JIMF evidence documents persistent post-reform price-dynamic anomalies and execution predictability around the fix; Journal of Financial Markets evidence identifies concentrated benchmark-linked hedging pressure; Bank of England March 2025 minutes report continuing widespread Fix use and notably increased flow, especially at month/quarter-end. These sources motivate only the mechanism and do not validate FPMarkets rules or outcomes.
 - Selection audit is `8,784` bytes / `5830CBF6257C656BBF235622FD91E50F8725D9C046E21E5049380F070ECAD2E6`, status `READY_AUTONOMOUS_LONDON_FX_FIX_PRESSURE_ADAPTER_BUNDLE_SUCCESSOR_NOT_OPENED`. No root, runtime, source/spec, market value, signal, path, economy, adapter, EA or Tester opened during selection.
 
+## Family 010 frozen declaration
+
+- Autonomous selection commit `2e942a858034b5a5b15fec879503a20ef17ca108` reached local `main`, `origin/main` and remote `main` before the sole active Family 010 root opened. README/contract/declaration are `2,887 / 18,309 / 11,207` bytes at `8C64CC38612660C23EC51B5A6777F21C594C776A0FB1AF8027FE2CB7339A7319 / F1F2CBCCEA4FE5E870FF0863BF58BEAE98F685AFAE3B8646FEB336C0EF297708 / 8FDB21D7855B0C98D15A3B6979A3ECF63CF84A1BA876B33BF425455871633401`.
+- The direct universe is frozen to `AUDUSD / EURUSD / GBPUSD / NZDUSD` M1. Raw broker-wall timestamps must normalize `naive -> Europe/Helsinki -> UTC -> Europe/London`; a complete event requires all four pairs at every minute `15:34..16:35` London, with no synthetic fill.
+- `LONDON_FIX_PRE_FLOW_CONTINUATION` follows the strict completed `15:45 open -> 15:54 close` sign, enters `15:55`, holds ten bars and exits at `16:05` open. `LONDON_FIX_POST_PRESSURE_REVERSAL` fades the strict completed `15:55 open -> 16:04 close` sign, enters `16:05`, holds 25 bars and exits at `16:30` open. Equality creates no trade.
+- ATR20 ends on the completed decision bar; stop distance is `max(5 ATR20, 4 entry spreads)`. Each entry targets `1.5%` current-balance risk, permits minimum lot only within `3%`, caps aggregate original-stop risk at `8%`, uses direction-specific Bid/Ask, fixed adverse-first stop, signed swap if crossed, no TP/trailing and actual-balance compounding.
+- Development is 2024-2025 after 2023 source/warmup. Both variants and the mandatory every-signal `1/5/10/20/25/30`-M1 path/MFE/MAE audit must complete before closure. Broad headroom requires one frozen horizon to retain positive raw and stressed mean R across both years, at least three pairs, both directions and ordinary/month-end slices with the declared minimum counts; no adjacent rescue executes inside V1.
+- Development gates are both-year actual/stressed positivity, actual/stressed net `>+$149.97 / >+$127.786`, DD `<=37.39%`, at least `3` starts per complete active date and `150` per year, at least three pairs and both directions. Locked January-July 2026 may open only for one unchanged complete passer; whole/native gates remain exact V8.
+- Runtime, source/specification, market values, features, decisions, lifecycles, economics, improvement values, locked rows, adapter, EA, compile and Tester are zero. No demo account or demo session is required or created; after this declaration reaches `origin/main`, a neutral-derived dedicated Portable may receive only original-broker session support from a stopped non-Master donor and must freshly acquire its own development source. Live Master remains untouched.
+- Declaration status is `DECLARED_PRERUNTIME_PREACQUISITION_PREFEATURE_PREDECISION_PREIMPLEMENTATION_PREOUTCOME`.
+
 ## Next authorized sequence
 
-1. Commit and push the autonomous post-Family-009 selection; verify clean `main == origin/main`.
-2. Open exactly one Family 010 root and freeze its complete declaration before runtime, M1/spec acquisition or feature work.
-3. Build and judge the complete related bundle plus improvement audit; escalate locked/native only for an unchanged complete passer.
+1. Commit and push the Family 010 declaration; verify clean `main == origin/main`.
+2. Create the isolated neutral-derived Family 010 Portable with original-broker session support only, then acquire fresh development M1/specification source without opening locked 2026.
+3. Implement and freeze the complete adapter, then judge both variants plus improvement audit; escalate locked/native only for an unchanged complete passer.
 4. Continue serially until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -280,8 +291,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; provisional Family 010 London FX fix-pressure bundle is selected but not opened.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_LONDON_FX_FIX_SUCCESSOR_READY_NOT_OPENED`.
+- Active research unit: Family 010 London FX fix-pressure `Python adapter + EA`, declared before runtime/source.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_LONDON_FX_FIX_PRESSURE_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
