@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0538`
+- Latest state ID: `STATE-0539`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 008 raw-time semantic correction commit `7d88e12e9e47812aee2d64518cf71fdd2ccb78c2`, equal to `origin/main` before adapter implementation.
+- Current process parent: Family 008 implementation-freeze commit `795b1e819cb23d06ac321e8c26657107a08d6b47`, equal to `origin/main` before the sole development process.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- Sole active Challenge family: `lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/`, Program 2 / meso, mandatory `Python adapter + EA`.
-- Parallel Lab family / Optimization campaign count: `1 / 0`; Family 008 development sources, raw-time semantics and complete adapter are pinned, its dedicated candidate Portable is stopped, and future exit paths, lifecycles, economics and improvement values remain unopened.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_CLOSED_VALID_ADVERSE_NO_BROAD_HEADROOM_RECOMPARE_PENDING`.
+- Sole active Challenge family: none; latest closed family is `lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/`, Program 2 / meso, mandatory `Python adapter + EA` if a complete passer had survived.
+- Parallel Lab family / Optimization campaign count: `0 / 0`; Family 008 is immutable after its complete two-variant result and improvement audit, while locked 2026, EA and MT5 remain unopened.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -172,13 +172,24 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Both variants, Bid/Ask/stress economics, causal risk, atomic output, confirmation and native decision-tape gates are complete. The improvement audit freezes raw actual/stressed full-hold edge, MFE/MAE, one-lot normalized exit deltas, stop overlap, cost share, capital blocks and four broad slices with minimum `10` events; it cannot execute a follow-up.
 - Implementation freeze is `7,170` bytes / `546E3A858B31E08C57AFB7764171752BDE511AEEBDE06514AA6749667E9AC74C`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`. After this boundary reaches `origin/main`, exactly one complete two-variant development plus mandatory improvement audit process is authorized.
 
+## Family 008 closed result
+
+- Implementation-freeze commit `795b1e819cb23d06ac321e8c26657107a08d6b47` reached local `main`, `origin/main` and remote `main` before exactly one development process. It completed `117` states, `234` trades (`117` per variant) and `117` improvement-path rows with unique contiguous sequences and all source/freeze hashes passing.
+- `LEVERAGED_ETF_CLOSE_PRESSURE_TIME_CLOSE` returned actual/stressed `-$57.71415 / -$62.84485`, ending `$42.28585 / $37.15515` with `61.35935%` DD. Its 2024/2025 actual/stressed were `-$47.12470 / -$50.59140` and `-$10.58945 / -$12.25345`; exits were `40 STOP / 77 TIME`.
+- `LEVERAGED_ETF_CLOSE_PRESSURE_TAKE_1P5R` returned `-$54.91960 / -$60.18480`, ending `$45.08040 / $39.81520` with `58.098775%` DD. Its 2024/2025 actual/stressed were `-$45.659825 / -$49.079025` and `-$9.259775 / -$11.105775`; exits were `40 STOP / 10 TAKE / 67 TIME`.
+- Both variants passed `0.2/day`, at least `40` starts in each year and both-sign breadth, but failed both-year actual/stressed positivity, both development profit gates and DD. Complete passer count is zero; risk blocks are zero, so the loss is not minimum-lot or capital-depletion attrition.
+- Mandatory audit found overall raw gross/actual/stressed full-hold expectancy `-0.22021R / -0.24002R / -0.25983R`; stressed expectation is negative in 2024, 2025, negative events and positive events. Mean MFE/MAE is `0.61238R / 0.93558R`; costs are only `2.1386% / 4.2771%` of absolute raw gross, so costs do not explain the adverse signal.
+- Take-minus-time mean actual/stressed delta is only `+0.01555R / +0.01564R`; `107/117` paths are unchanged, improvements and degradations are `5/5`, all `40` stops overlap and the take avoids zero later stop. There is no broad raw or exit headroom and no bounded successor seed.
+- Durable result/audit are byte-equal raw at `11,465 / 14,754` bytes and `C1626825...94B7 / C51C29F4...BBE7`; raw states/trades/audit-path tapes are `22,650 / 94,282 / 46,004` bytes at `2706AB03...BA2 / 59FB8766...B2A / 4249C528...C6B`. Closure is `8,127` bytes / `DF1DF6577B5E54E4696BA5779D379D8878A1D6761ED88D672FF0C59162C1CC53`.
+- Locked external and target rows, confirmation, EA, compile and MT5 Tester remained unopened. The full continuation/rank/coherence/clock/window/risk/sizing/stop/take/hold bundle is closed against in-family rescue.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 008 adapter implementation freeze; verify clean `main == origin/main`.
-2. Run exactly one complete two-variant 2024-2025 development bundle and its mandatory improvement audit atomically.
-3. If one unchanged complete passer exists, acquire locked external data and run confirmation; otherwise use the frozen audit to close or retain only a bounded successor seed.
-4. Open EA/native only for one unchanged complete whole-proxy passer.
-5. Continue serially, auditing defensible improvement headroom before each closure, until a complete native candidate passes every V8 gate.
+1. Commit and push the Family 008 durable result, audit and closure; verify clean `main == origin/main`.
+2. Recompare Programs 1-5 and 7 across micro/meso/macro with Family 008 and its adjacent rescue bundle frozen.
+3. Open at most one materially distinct successor only after a durable preinput selection boundary.
+4. For the successor, freeze related variants and its improvement-potential audit before outcomes; open EA/native only for one unchanged complete whole-proxy passer.
+5. Continue serially until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
 
@@ -191,15 +202,15 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Storage and repository discipline
 
-- System-drive free space is `97.493 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder, failed partial original-broker cache, failed Family 008 long-path environment and duplicate update staging were removed or sent recoverably to Recycle Bin, while complete referenced authorities remain preserved.
+- System-drive free space is `97.426 GiB`, above the mandatory `30 GiB` sweep threshold; the exact demo placeholder, failed partial original-broker cache, failed Family 008 long-path environment and duplicate update staging were removed or sent recoverably to Recycle Bin, while complete referenced authorities and result tapes remain preserved.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.
 
 ## Current markers
 
-- Active research unit: Family 008 development authorities, time semantics and adapter implementation are pinned; its one complete two-variant development plus improvement audit is next.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Active research unit: none; Family 008 is closed adverse with no broad improvement headroom, and whole-map recomparison is next.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_CLOSED_VALID_ADVERSE_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

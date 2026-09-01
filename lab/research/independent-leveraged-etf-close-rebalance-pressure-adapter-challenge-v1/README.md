@@ -18,4 +18,6 @@ The complete adapter is `adapter/run_adapter.py` with modes `precheck`, `develop
 
 The outcome-free precheck found 442 exact development common days and 117 gated events (57 negative, 60 positive), or 0.264705882 starts per normal day per variant. All 117 initial minimum-lot risks are feasible at $100. It simulated zero future exit path, lifecycle, PnL or improvement value and wrote zero persistent output.
 
-Status: original-broker development sources, raw-time semantics and the complete adapter implementation are frozen before the single two-variant development economic process.
+The sole development process completed all 117 signals for both variants. TIME_CLOSE returned actual/stressed `-$57.71415 / -$62.84485` with `61.35935%` drawdown; TAKE_1P5R returned `-$54.91960 / -$60.18480` with `58.098775%` drawdown. Both lost in 2024 and 2025. The mandatory audit found raw stressed full-hold expectancy below zero in both years and both external signs; the take exit changed only ten paths, improved five and worsened five, avoided no later stop and supplied no broad improvement headroom.
+
+Status: closed valid adverse development with no passer, no bounded successor seed, no locked-2026 acquisition, no EA and no MT5 Tester run. This source/configuration/economic bundle is immutable.

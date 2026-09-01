@@ -1,0 +1,323 @@
+{
+  "schema": "zeta-next-independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-improvement-audit",
+  "status": "COMPLETE_FROZEN_IMPROVEMENT_POTENTIAL_AUDIT",
+  "family": "independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1",
+  "definitions": {
+    "raw_full_hold": "directional 15:30 Bid open to 15:59 Bid close before the shared stop or favorable barrier",
+    "actual_full_hold": "raw full-hold direction less the observed direction-specific entry or exit spread",
+    "stressed_full_hold": "raw full-hold direction less twice the observed direction-specific spread",
+    "MFE_MAE": "nonnegative execution-price excursions over the exact fixed thirty-row path, divided by the frozen risk distance for R",
+    "exit_delta": "one-lot normalized TAKE_1P5R outcome minus TIME_CLOSE outcome under identical state, entry, stop and risk distance",
+    "broad_slice_minimum_events": 10,
+    "broad_raw_edge_rule": "mean stressed full-hold R must be positive in both calendar years and both external-sign slices, each with the minimum event count",
+    "broad_exit_rule": "mean stressed take-minus-time R must be positive in both years and both signs, each with the minimum event count, and positive actual deltas must outnumber negative deltas overall"
+  },
+  "raw_signal_direction": {
+    "overall": {
+      "events": 117,
+      "mean_raw_gross_full_hold_R": -0.22020984589557802,
+      "mean_raw_actual_full_hold_R": -0.24002141494042745,
+      "mean_raw_stressed_full_hold_R": -0.25983298398527677,
+      "raw_gross_positive_rate": 0.4017094017094017,
+      "raw_actual_positive_rate": 0.4017094017094017,
+      "raw_stressed_positive_rate": 0.39316239316239315,
+      "mean_MFE_R": 0.6123782927742529,
+      "median_MFE_R": 0.3399558498896623,
+      "p90_MFE_R": 1.4142141964714223,
+      "mean_MAE_R": 0.9355813533369025,
+      "median_MAE_R": 0.639755618590463,
+      "p90_MAE_R": 1.972459226833106,
+      "sum_absolute_raw_gross_price": 6199.970000000008,
+      "sum_observed_cost_price": 132.59,
+      "observed_cost_share_of_absolute_raw_gross": 0.02138558734961618,
+      "doubled_cost_share_of_absolute_raw_gross": 0.04277117469923236
+    },
+    "by_year": {
+      "2024": {
+        "events": 57,
+        "mean_raw_gross_full_hold_R": -0.33072526681869346,
+        "mean_raw_actual_full_hold_R": -0.3517218227784026,
+        "mean_raw_stressed_full_hold_R": -0.3727183787381119,
+        "raw_gross_positive_rate": 0.38596491228070173,
+        "raw_actual_positive_rate": 0.38596491228070173,
+        "raw_stressed_positive_rate": 0.38596491228070173,
+        "mean_MFE_R": 0.5453788961431462,
+        "median_MFE_R": 0.28163265306120966,
+        "p90_MFE_R": 1.1819009505460352,
+        "mean_MAE_R": 1.0166039379917984,
+        "median_MAE_R": 0.7502824858757227,
+        "p90_MAE_R": 2.2931498877571532,
+        "sum_absolute_raw_gross_price": 2715.170000000009,
+        "sum_observed_cost_price": 62.99,
+        "observed_cost_share_of_absolute_raw_gross": 0.023199284022731463,
+        "doubled_cost_share_of_absolute_raw_gross": 0.046398568045462926
+      },
+      "2025": {
+        "events": 60,
+        "mean_raw_gross_full_hold_R": -0.11522019601861842,
+        "mean_raw_actual_full_hold_R": -0.1339060274943509,
+        "mean_raw_stressed_full_hold_R": -0.1525918589700834,
+        "raw_gross_positive_rate": 0.4166666666666667,
+        "raw_actual_positive_rate": 0.4166666666666667,
+        "raw_stressed_positive_rate": 0.4,
+        "mean_MFE_R": 0.6760277195738043,
+        "median_MFE_R": 0.516846200609629,
+        "p90_MFE_R": 1.8817820496965731,
+        "mean_MAE_R": 0.8586098979147516,
+        "median_MAE_R": 0.6146353019685415,
+        "p90_MAE_R": 1.6446334706457255,
+        "sum_absolute_raw_gross_price": 3484.7999999999993,
+        "sum_observed_cost_price": 69.6,
+        "observed_cost_share_of_absolute_raw_gross": 0.019972451790633613,
+        "doubled_cost_share_of_absolute_raw_gross": 0.039944903581267226
+      }
+    },
+    "by_external_sign": {
+      "negative": {
+        "events": 57,
+        "mean_raw_gross_full_hold_R": -0.11162318787737313,
+        "mean_raw_actual_full_hold_R": -0.1303710947888677,
+        "mean_raw_stressed_full_hold_R": -0.14911900170036224,
+        "raw_gross_positive_rate": 0.40350877192982454,
+        "raw_actual_positive_rate": 0.40350877192982454,
+        "raw_stressed_positive_rate": 0.40350877192982454,
+        "mean_MFE_R": 0.8507513147757357,
+        "median_MFE_R": 0.6112994350282321,
+        "p90_MFE_R": 1.9383005106793356,
+        "mean_MAE_R": 1.0138762597643245,
+        "median_MAE_R": 0.8816326530612394,
+        "p90_MAE_R": 1.9067942096715633,
+        "sum_absolute_raw_gross_price": 3420.639999999996,
+        "sum_observed_cost_price": 61.9,
+        "observed_cost_share_of_absolute_raw_gross": 0.018096028813321504,
+        "doubled_cost_share_of_absolute_raw_gross": 0.03619205762664301
+      },
+      "positive": {
+        "events": 60,
+        "mean_raw_gross_full_hold_R": -0.3233671710128726,
+        "mean_raw_actual_full_hold_R": -0.34418921908440914,
+        "mean_raw_stressed_full_hold_R": -0.36501126715594556,
+        "raw_gross_positive_rate": 0.4,
+        "raw_actual_positive_rate": 0.4,
+        "raw_stressed_positive_rate": 0.38333333333333336,
+        "mean_MFE_R": 0.38592392187284424,
+        "median_MFE_R": 0.18850218623254839,
+        "p90_MFE_R": 0.9470675784723945,
+        "mean_MAE_R": 0.8612011922308516,
+        "median_MAE_R": 0.509854353219325,
+        "p90_MAE_R": 1.8506327794814301,
+        "sum_absolute_raw_gross_price": 2779.3300000000127,
+        "sum_observed_cost_price": 70.69,
+        "observed_cost_share_of_absolute_raw_gross": 0.02543418737609412,
+        "doubled_cost_share_of_absolute_raw_gross": 0.05086837475218824
+      }
+    }
+  },
+  "exit_truncation_and_stop_overlap": {
+    "overall": {
+      "events": 117,
+      "mean_TAKE_minus_TIME_actual_R": 0.015548454264735561,
+      "mean_TAKE_minus_TIME_stressed_R": 0.015644874989681676,
+      "positive_delta_events": 5,
+      "negative_delta_events": 5,
+      "zero_delta_events": 107,
+      "shared_stop_events": 40,
+      "TAKE_exit_events": 10,
+      "TAKE_avoided_later_TIME_stop_events": 0,
+      "TAKE_truncated_greater_TIME_profit_events": 5
+    },
+    "by_year": {
+      "2024": {
+        "events": 57,
+        "mean_TAKE_minus_TIME_actual_R": 0.011543245248319761,
+        "mean_TAKE_minus_TIME_stressed_R": 0.01174116147320914,
+        "positive_delta_events": 1,
+        "negative_delta_events": 1,
+        "zero_delta_events": 55,
+        "shared_stop_events": 21,
+        "TAKE_exit_events": 2,
+        "TAKE_avoided_later_TIME_stop_events": 0,
+        "TAKE_truncated_greater_TIME_profit_events": 1
+      },
+      "2025": {
+        "events": 60,
+        "mean_TAKE_minus_TIME_actual_R": 0.019353402830330567,
+        "mean_TAKE_minus_TIME_stressed_R": 0.019353402830330588,
+        "positive_delta_events": 4,
+        "negative_delta_events": 4,
+        "zero_delta_events": 52,
+        "shared_stop_events": 19,
+        "TAKE_exit_events": 8,
+        "TAKE_avoided_later_TIME_stop_events": 0,
+        "TAKE_truncated_greater_TIME_profit_events": 4
+      }
+    },
+    "by_external_sign": {
+      "negative": {
+        "events": 57,
+        "mean_TAKE_minus_TIME_actual_R": 0.011764861028261048,
+        "mean_TAKE_minus_TIME_stressed_R": 0.011962777253150435,
+        "positive_delta_events": 3,
+        "negative_delta_events": 5,
+        "zero_delta_events": 49,
+        "shared_stop_events": 26,
+        "TAKE_exit_events": 8,
+        "TAKE_avoided_later_TIME_stop_events": 0,
+        "TAKE_truncated_greater_TIME_profit_events": 5
+      },
+      "positive": {
+        "events": 60,
+        "mean_TAKE_minus_TIME_actual_R": 0.01914286783938635,
+        "mean_TAKE_minus_TIME_stressed_R": 0.019142867839386356,
+        "positive_delta_events": 2,
+        "negative_delta_events": 0,
+        "zero_delta_events": 58,
+        "shared_stop_events": 14,
+        "TAKE_exit_events": 2,
+        "TAKE_avoided_later_TIME_stop_events": 0,
+        "TAKE_truncated_greater_TIME_profit_events": 0
+      }
+    }
+  },
+  "risk_blocks_and_capital_depletion": {
+    "LEVERAGED_ETF_CLOSE_PRESSURE_TIME_CLOSE": {
+      "starts": 117,
+      "risk_blocks": 0,
+      "risk_block_counts": {},
+      "first_risk_block": null,
+      "ending_actual_balance": 42.28584999999842,
+      "ending_stressed_balance": 37.15514999999838,
+      "epoch_metrics": {
+        "2024": {
+          "starts": 57,
+          "actual_net_usd": -47.124700000001376,
+          "stressed_net_usd": -50.59140000000139
+        },
+        "2025": {
+          "starts": 60,
+          "actual_net_usd": -10.589450000000179,
+          "stressed_net_usd": -12.25345000000018
+        }
+      }
+    },
+    "LEVERAGED_ETF_CLOSE_PRESSURE_TAKE_1P5R": {
+      "starts": 117,
+      "risk_blocks": 0,
+      "risk_block_counts": {},
+      "first_risk_block": null,
+      "ending_actual_balance": 45.080399999998335,
+      "ending_stressed_balance": 39.81519999999831,
+      "epoch_metrics": {
+        "2024": {
+          "starts": 57,
+          "actual_net_usd": -45.65982500000147,
+          "stressed_net_usd": -49.07902500000147
+        },
+        "2025": {
+          "starts": 60,
+          "actual_net_usd": -9.25977500000019,
+          "stressed_net_usd": -11.105775000000195
+        }
+      }
+    }
+  },
+  "broad_cost_surviving_raw_edge": false,
+  "broad_exit_truncation_improvement": false,
+  "broad_causal_improvement_headroom": false,
+  "bounded_successor_seed": null,
+  "closure_recommendation": "CLOSE_FAMILY_NO_BROAD_CAUSAL_IMPROVEMENT_HEADROOM",
+  "undeclared_variant_executions": 0,
+  "audit_authorizes_automatic_followup": false,
+  "recorded_at_utc": "2026-09-01T03:01:55.751081Z",
+  "authorities": {
+    "selection_audit": {
+      "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_007_WHOLE_MAP_RECOMPARE_V1.json",
+      "bytes": 11410,
+      "sha256": "F76BE1617FE412BFE1C4997DA1B4CAEAE5E6DD5C66E3C04D553872D1392256FF"
+    },
+    "contract": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 21048,
+      "sha256": "801764B6E7F89E7909DE6C2D87354CF93A5EFCB6D3B9FFBD03AF3420A9906460"
+    },
+    "declaration": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 11947,
+      "sha256": "A8D22D6737CEBE4F5C188AE05E769183CB63A58B1B10707E60BF68CC81C91798"
+    },
+    "source_correction": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_SOURCE_CANONICALIZATION_CORRECTION.json",
+      "bytes": 7840,
+      "sha256": "24A875B43D5CB58FF34A9B3F03DA720D4C65AE2D85BD67324FA262AB29AC9024"
+    },
+    "source_receipt": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_SOURCE_RECEIPT.json",
+      "bytes": 5377,
+      "sha256": "0DF4B566B320B97391CCFAA8CC7675B32A014C404D01A41B3D8CCDC93F871362"
+    },
+    "time_correction": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_RAW_TIME_SEMANTICS_CORRECTION.json",
+      "bytes": 6614,
+      "sha256": "EDD382D7319E7A19BB5E2A5047650BFFD9D0ACA6E57B38F2EEC9D5DC9894A7A7"
+    },
+    "US100": {
+      "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/target/US100_M1.parquet",
+      "bytes": 21213599,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+    },
+    "development_inputs": {
+      "receipt": {
+        "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/EXTERNAL_DEVELOPMENT_ACQUISITION_RECEIPT.json",
+        "bytes": 16510,
+        "sha256": "BE5B134375B849D600698183BAC83964BD4FAFBA4EE898479E97D32BE65A0692"
+      },
+      "symbols": {
+        "QQQ": {
+          "csv": {
+            "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/QQQ_M1_DEVELOPMENT.csv",
+            "bytes": 24195200,
+            "sha256": "1E02B68F542A89FF94DE3B5C0B91C728D2F6A6562920D8C2DFD02AD88F8B6EF4"
+          },
+          "specification": {
+            "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/QQQ_SYMBOL_SPEC.json",
+            "bytes": 535,
+            "sha256": "8EE242F4460D9D743D94D38A273299FA67D9E827709882F677DB905D8D374FDB"
+          }
+        },
+        "TQQQ": {
+          "csv": {
+            "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/TQQQ_M1_DEVELOPMENT.csv",
+            "bytes": 23124238,
+            "sha256": "8CE67D515A94546F403995C50227B1B13FFD925B35C7968FF464989E37638F4C"
+          },
+          "specification": {
+            "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/TQQQ_SYMBOL_SPEC.json",
+            "bytes": 535,
+            "sha256": "3EF090872A9EBD98D1578C4AC3E03C40EC99C114204D0B22498B8111F95ECC1C"
+          }
+        }
+      }
+    },
+    "implementation_freeze": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+      "bytes": 7170,
+      "sha256": "546E3A858B31E08C57AFB7764171752BDE511AEEBDE06514AA6749667E9AC74C"
+    }
+  },
+  "adapter": {
+    "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 73643,
+    "sha256": "101C515B13E66BE84B8D08E3023A85FAB2A2A491CD14E446E9FDBB94CEA5DAC5"
+  },
+  "requirements": {
+    "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/adapter/requirements-adapter.txt",
+    "bytes": 58,
+    "sha256": "A8312E14ACD23C9B07977AE03A4A6CC747A6B6CC07B2C6D5ABCD3B824C4F3F33"
+  },
+  "path_tape": {
+    "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/output/development-improvement-paths.csv",
+    "rows": 117,
+    "bytes": 46004,
+    "sha256": "4249C528E73FFF7B7CC77238CD3A55A831FDED3B61AB19DEBFD8ACF1BFFCFC6B"
+  }
+}

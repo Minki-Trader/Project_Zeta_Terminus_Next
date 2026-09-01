@@ -1,0 +1,198 @@
+{
+  "schema": "zeta-next-independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-closure",
+  "recorded_at_utc": "2026-09-01T03:04:39.8376675Z",
+  "status": "CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5",
+  "family": "independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1",
+  "implementation_boundary": {
+    "commit": "795b1e819cb23d06ac321e8c26657107a08d6b47",
+    "commit_equal_origin_main_before_development": true,
+    "implementation_freeze": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+      "bytes": 7170,
+      "sha256": "546E3A858B31E08C57AFB7764171752BDE511AEEBDE06514AA6749667E9AC74C"
+    },
+    "adapter": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 73643,
+      "sha256": "101C515B13E66BE84B8D08E3023A85FAB2A2A491CD14E446E9FDBB94CEA5DAC5"
+    }
+  },
+  "complete_process": {
+    "economic_processes": 1,
+    "status": "VALID_DEVELOPMENT_COMPLETE_NO_PASSER",
+    "period": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+    "normal_trading_days": 442,
+    "gated_states": 117,
+    "state_rows": 117,
+    "trade_rows": 234,
+    "improvement_path_rows": 117,
+    "external_sign_counts": {
+      "negative": 57,
+      "positive": 60
+    },
+    "starts_per_normal_day_per_variant": 0.2647058823529412,
+    "state_sequences_unique": 117,
+    "decision_epochs_unique": 117,
+    "trade_tape_sequences_unique": 234,
+    "each_variant_complete_starts": 117
+  },
+  "variants": [
+    {
+      "variant": "LEVERAGED_ETF_CLOSE_PRESSURE_TIME_CLOSE",
+      "starts": 117,
+      "actual_net_usd": -57.71415000000158,
+      "stressed_net_usd": -62.84485000000162,
+      "ending_actual_balance": 42.28584999999842,
+      "ending_stressed_balance": 37.15514999999838,
+      "actual_closed_balance_drawdown_pct": 61.35935000000159,
+      "risk_blocks": 0,
+      "exit_counts": {
+        "STOP": 40,
+        "TIME": 77
+      },
+      "epoch_metrics": {
+        "2024": {
+          "starts": 57,
+          "actual_net_usd": -47.124700000001376,
+          "stressed_net_usd": -50.59140000000139
+        },
+        "2025": {
+          "starts": 60,
+          "actual_net_usd": -10.589450000000179,
+          "stressed_net_usd": -12.25345000000018
+        }
+      },
+      "passed_turnover_year_count_and_sign_breadth": true,
+      "failed_both_year_profit_total_profit_and_drawdown": true,
+      "complete_gate_pass": false
+    },
+    {
+      "variant": "LEVERAGED_ETF_CLOSE_PRESSURE_TAKE_1P5R",
+      "starts": 117,
+      "actual_net_usd": -54.919600000001665,
+      "stressed_net_usd": -60.18480000000169,
+      "ending_actual_balance": 45.080399999998335,
+      "ending_stressed_balance": 39.81519999999831,
+      "actual_closed_balance_drawdown_pct": 58.09877500000174,
+      "risk_blocks": 0,
+      "exit_counts": {
+        "STOP": 40,
+        "TAKE": 10,
+        "TIME": 67
+      },
+      "epoch_metrics": {
+        "2024": {
+          "starts": 57,
+          "actual_net_usd": -45.65982500000147,
+          "stressed_net_usd": -49.07902500000147
+        },
+        "2025": {
+          "starts": 60,
+          "actual_net_usd": -9.25977500000019,
+          "stressed_net_usd": -11.105775000000195
+        }
+      },
+      "passed_turnover_year_count_and_sign_breadth": true,
+      "failed_both_year_profit_total_profit_and_drawdown": true,
+      "complete_gate_pass": false
+    }
+  ],
+  "improvement_potential_audit": {
+    "status": "COMPLETE_FROZEN_IMPROVEMENT_POTENTIAL_AUDIT",
+    "raw_signal_direction": {
+      "overall_mean_gross_full_hold_R": -0.22020984589557802,
+      "overall_mean_actual_full_hold_R": -0.24002141494042745,
+      "overall_mean_stressed_full_hold_R": -0.25983298398527677,
+      "2024_mean_stressed_full_hold_R": -0.3727183787381119,
+      "2025_mean_stressed_full_hold_R": -0.1525918589700834,
+      "negative_event_mean_stressed_full_hold_R": -0.14911900170036224,
+      "positive_event_mean_stressed_full_hold_R": -0.36501126715594556,
+      "overall_stressed_positive_rate": 0.39316239316239315
+    },
+    "excursions": {
+      "mean_MFE_R": 0.6123782927742529,
+      "median_MFE_R": 0.3399558498896623,
+      "p90_MFE_R": 1.4142141964714223,
+      "mean_MAE_R": 0.9355813533369025,
+      "median_MAE_R": 0.639755618590463,
+      "p90_MAE_R": 1.972459226833106
+    },
+    "cost": {
+      "observed_cost_share_of_absolute_raw_gross": 0.02138558734961618,
+      "doubled_cost_share_of_absolute_raw_gross": 0.04277117469923236,
+      "raw_edge_adverse_before_cost": true
+    },
+    "exit_comparison": {
+      "mean_TAKE_minus_TIME_actual_R": 0.015548454264735561,
+      "mean_TAKE_minus_TIME_stressed_R": 0.015644874989681676,
+      "positive_delta_events": 5,
+      "negative_delta_events": 5,
+      "zero_delta_events": 107,
+      "shared_stop_events": 40,
+      "TAKE_exit_events": 10,
+      "TAKE_avoided_later_TIME_stop_events": 0,
+      "TAKE_truncated_greater_TIME_profit_events": 5
+    },
+    "risk_and_capital": {
+      "minimum_lot_feasible_at_initial_100_usd": 117,
+      "TIME_CLOSE_risk_blocks": 0,
+      "TAKE_1P5R_risk_blocks": 0,
+      "loss_not_explained_by_risk_block_or_minimum_lot_attrition": true
+    },
+    "broad_cost_surviving_raw_edge": false,
+    "broad_exit_truncation_improvement": false,
+    "broad_causal_improvement_headroom": false,
+    "bounded_successor_seed": null,
+    "audit_authorizes_automatic_followup": false
+  },
+  "durable_evidence": {
+    "development_result": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_RESULT.json",
+      "bytes": 11465,
+      "sha256": "C16268254526F61D2405B8629CB954B5ECB415A6E110E4CFCF296506508694B7",
+      "byte_equal_raw": true
+    },
+    "development_improvement_audit": {
+      "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_IMPROVEMENT_AUDIT.json",
+      "bytes": 14754,
+      "sha256": "C51C29F42AE2F3955B9E07D3F82E5C8F7DC61A4277023FCC67D2C8F2F162BBE7",
+      "byte_equal_raw": true
+    },
+    "raw_state_tape": {
+      "rows": 117,
+      "bytes": 22650,
+      "sha256": "2706AB03B512C41933770E39C210DEE5E247B982B2758F4D7C43516807387BA2"
+    },
+    "raw_trade_tape": {
+      "rows": 234,
+      "bytes": 94282,
+      "sha256": "59FB87668BCD0CF58D9FD70259A2633856A794A9D3079F1FF21AB5BEAB13FB2A"
+    },
+    "raw_improvement_path_tape": {
+      "rows": 117,
+      "bytes": 46004,
+      "sha256": "4249C528E73FFF7B7CC77238CD3A55A831FDED3B61AB19DEBFD8ACF1BFFCFC6B"
+    },
+    "ordered_four_artifact_manifest_sha256": "9FA77B8CF24838C9F169A88FD487074468C9989792929C2A9DA73BC7F5395543"
+  },
+  "closure_scope": {
+    "complete_signal_population_and_both_predeclared_exits_closed_together": true,
+    "adjacent_external_magnitude_rank_leverage_ratio_clock_window_subgroup_symbol_direction_risk_sizing_stop_take_or_hold_rescue_inside_v1": false,
+    "locked_2026_external_acquired_or_opened": false,
+    "locked_target_rows_opened": false,
+    "confirmation_paths": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "live_PID_33388_unchanged": true
+  },
+  "storage": {
+    "system_drive_free_GiB": 97.426,
+    "mandatory_sweep_threshold_GiB": 30,
+    "referenced_authorities_and_complete_raw_tapes_preserved": true,
+    "candidate_runtime_is_git_ignored_and_eligible_for_a_later_exact_path_sweep": true
+  },
+  "verdict": "VALID_ADVERSE_CONTINUATION_SIGNAL_IN_BOTH_YEARS_AND_BOTH_SIGNS_WITH_NO_BROAD_EXIT_OR_COST_RESCUE",
+  "next_authorized_action": "after this closure reaches origin/main, recompare Programs 1-5 and 7 across all heights before opening at most one materially distinct successor family"
+}
