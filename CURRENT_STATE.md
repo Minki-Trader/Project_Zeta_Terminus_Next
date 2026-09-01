@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0533`
+- Latest state ID: `STATE-0534`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 007 closure commit `20466d1ae2f77b6d91db86ff57bc27d56bd4d022`, equal to `origin/main` before the post-closure whole-map recompare.
+- Current process parent: post-Family 007 whole-map recompare commit `e79e4eefb4d0dbd6238c762da1a965158a7c8c9d`, equal to `origin/main` before the Family 008 declaration.
 
 ## Authorization and ownership
 
@@ -132,11 +132,19 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Provisional Family 008 is Program 2 / meso `independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1`, mandatory `Python adapter + EA`. At `15:30 America/New_York`, a large coherent completed `09:30..15:29` QQQ/TQQQ move supplies one theoretically signed US100 continuation direction. The family must freeze both `TIME_CLOSE` and `TAKE_1P5R` exit realizations plus a mandatory MFE/MAE, cost, risk-block, truncation and year-stability improvement-potential audit before any outcome.
 - The candidate may not close merely because the first economic view fails. Both related variants and the frozen improvement audit must complete before closure; the audit cannot silently authorize an outcome-driven threshold, clock, window, subgroup, symbol, direction, risk or exit run. Recompare audit is `11,410` bytes / `F76BE1617FE412BFE1C4997DA1B4CAEAE5E6DD5C66E3C04D553872D1392256FF`, status `READY_PROGRAM_2_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_BUNDLE_SUCCESSOR_NOT_OPENED`.
 
+## Family 008 declared boundary
+
+- Family 008 is now declared at `lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/`, Program 2 / meso, mandatory `Python adapter + EA`. README and contract are `1,724 / 19,464` bytes at `883E6BF2...F787 / 7C303BAF...4CAA`; declaration is `11,947` bytes / `A8D22D67...1798`.
+- The completed `09:30..15:29 America/New_York` QQQ.xnms return supplies continuation sign only when TQQQ.xnms has the same sign and at least twice the absolute return, and QQQ magnitude reaches nearest-rank position `45` among the prior `60` complete common days. Entry is one US100 lifecycle at 15:30; risk distance is the prior-20 median 15:30..15:59 range floored at `1.0` index point.
+- The bundle freezes identical signals, entries, sizing and risk for `LEVERAGED_ETF_CLOSE_PRESSURE_TIME_CLOSE` and `LEVERAGED_ETF_CLOSE_PRESSURE_TAKE_1P5R`. Both use `-1R / 30 M1`; only the second has `+1.5R`. Position risk is `4%`, with `6%` minimum-lot and aggregate hard caps.
+- Before closure, the same frozen process must audit raw signal-direction edge, MFE/MAE, time-close versus take truncation, observed/doubled cost share, risk blocks, year stability and external-sign descriptive stability. It may retain a bounded later seed but cannot execute any undeclared threshold, time, subgroup, symbol, direction, risk, sizing or exit rescue.
+- Development-only QQQ.xnms/TQQQ.xnms source, the dedicated Portable, target copy, adapter, ranks, decisions, economics, locked 2026, EA and Tester remain unopened at declaration. The external development request is fixed to `2023-07-01..2026-01-01`; locked 2026 external data may be freshly acquired only for one unchanged complete passer.
+
 ## Next authorized sequence
 
-1. Commit and push the post-Family 007 whole-map recompare; verify clean `main == origin/main`.
-2. Declare exactly one self-contained Family 008 contract freezing the two related exit variants and improvement-potential audit before any source or outcome.
-3. Build its dedicated Portable, freshly acquire QQQ/TQQQ development authority with original-broker session support, copy US100 once, implement and freeze structure.
+1. Commit and push the Family 008 declaration; verify clean `main == origin/main`.
+2. Build its dedicated neutral-derived Portable, copy only stopped non-Master Lab account/server support, freshly acquire QQQ.xnms/TQQQ.xnms development authority and materialize US100 once.
+3. Implement the complete Python adapter, run outcome-free structural/risk feasibility and freeze the exact implementation before economics.
 4. Run one complete two-variant development bundle and its mandatory improvement audit; open locked/native only for one unchanged complete passer.
 5. Continue serially, auditing defensible improvement headroom before each closure, until a complete native candidate passes every V8 gate.
 
@@ -158,8 +166,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: post-Family 007 recompare selects provisional Family 008 leveraged-ETF close-pressure bundle; successor root and inputs remain unopened.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_007_RECOMPARE_PROGRAM_2_LEVERAGED_ETF_CLOSE_PRESSURE_BUNDLE_READY_SUCCESSOR_NOT_OPENED`.
+- Active research unit: Family 008 leveraged-ETF close-rebalance-pressure adapter bundle is declared; runtime, source, implementation and outcomes remain unopened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_008_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

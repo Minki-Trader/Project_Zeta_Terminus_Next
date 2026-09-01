@@ -1,0 +1,352 @@
+{
+  "schema": "zeta-next-independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-contract",
+  "family": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/",
+  "program": {
+    "primary_macro_program": 2,
+    "name": "external_market_event",
+    "height": "meso",
+    "single_active_judgment_stream": true
+  },
+  "objective": {
+    "challenge_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+    "claim": "develop a separately attributable automated strategy that beats exact V8",
+    "candidate_architecture_required": "Python_adapter_plus_EA",
+    "single_ea_novel_signal_forbidden": true,
+    "python_only_proxy_victory_forbidden": true,
+    "live_mutation_or_promotion_authority": false
+  },
+  "selection_authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_007_WHOLE_MAP_RECOMPARE_V1.json",
+    "bytes": 11410,
+    "sha256": "F76BE1617FE412BFE1C4997DA1B4CAEAE5E6DD5C66E3C04D553872D1392256FF",
+    "commit": "e79e4eefb4d0dbd6238c762da1a965158a7c8c9d",
+    "selection_opened_external_or_target_price_values": false,
+    "selection_opened_candidate_outcomes": false
+  },
+  "isolation": {
+    "candidate_root_is_self_contained": true,
+    "forbidden_runtime_or_include_roots": [
+      "live-dev/",
+      "optimization/",
+      "lab/mt5/",
+      "another lab family"
+    ],
+    "dedicated_runtime_after_declaration": "lab/runtime/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-portable/",
+    "candidate_portfolio_if_native_stage_opens": "ZT-CHAL-F008-LER1",
+    "candidate_magic_if_native_stage_opens": {
+      "US100": 260901981
+    },
+    "candidate_identity_distinct_from_v8": true,
+    "existing_runtime_cache_use": "one-time copy of non-price account/server session support from a stopped project-local non-Master Lab Portable is allowed; no existing runtime price/history cache may be copied or read for prices, and no other runtime may be executed by this family"
+  },
+  "independence": {
+    "excluded_inputs": [
+      "Family 001 through Family 007 features, models, predictions, decisions, trades and outcomes",
+      "V1-V8 signals, opportunity timestamps, component labels, state and economics",
+      "Optimization candidate signals, states, ledgers and outcomes"
+    ],
+    "prior_qqq_question_excluded": [
+      "sponsor shares outstanding",
+      "creation or redemption flow",
+      "NAV or premium/discount",
+      "ETF order imbalance",
+      "DIA or SPY",
+      "cross-sectional ETF selection"
+    ],
+    "material_distinctions": [
+      "paired cash and three-times leveraged ETFs rather than a single currency cross or target-only feature",
+      "structural close-rebalance pressure rather than generic session continuation, opening response or external context tagging",
+      "one theoretically signed continuation population with two predeclared exit realizations rather than post-outcome polarity inversion",
+      "one US100 close-pressure action rather than a cross-index basket or multi-symbol allocation"
+    ]
+  },
+  "source_inputs": {
+    "external_series_not_yet_acquired": {
+      "symbols": [
+        "QQQ.xnms",
+        "TQQQ.xnms"
+      ],
+      "timeframe": "M1",
+      "development_request_start_inclusive": "2023-07-01T00:00:00Z",
+      "development_request_end_exclusive": "2026-01-01T00:00:00Z",
+      "required_columns": [
+        "time",
+        "open",
+        "high",
+        "low",
+        "close",
+        "tick_volume",
+        "spread",
+        "real_volume"
+      ],
+      "price_basis": "broker-native MT5 Bid OHLC; spread is retained for integrity but does not enter the external signal",
+      "acquisition_path": "fresh copy_rates_range through the family-owned dedicated Portable after this declaration reaches origin/main",
+      "receipt_requirements": "pin executable, server, both symbol specifications, requested and returned boundaries, row counts, exact columns, file bytes and SHA-256 without querying account, position, order or deal state",
+      "existing_price_history_cache_or_other_family_source_forbidden": true,
+      "locked_2026_external_values": "not requested, acquired or opened until one unchanged complete development passer exists"
+    },
+    "target_series": {
+      "symbol": "US100",
+      "source_path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+      "destination_path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/target/US100_M1.parquet",
+      "bytes": 21213599,
+      "rows": 1618383,
+      "first_utc": "2022-01-03T01:00:00Z",
+      "last_utc": "2026-07-31T23:59:00Z",
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2",
+      "required_columns": [
+        "time",
+        "open",
+        "high",
+        "low",
+        "close",
+        "tick_volume",
+        "spread",
+        "real_volume"
+      ],
+      "price_basis": "MT5 rate OHLC are Bid; recorded spread times point reconstructs Ask",
+      "copy_rule": "materialize byte-equal once after declaration; development adapter may read only rows before 2026-01-01 and locked rows remain unopened"
+    },
+    "post_cutoff_rows_excluded": true
+  },
+  "periods": {
+    "structural_and_rank_warmup": "2023-07-01T00:00:00/2024-01-01T00:00:00",
+    "development_selection": "2024-01-01T00:00:00/2026-01-01T00:00:00",
+    "locked_confirmation": "2026-01-01T00:00:00/2026-08-01T00:00:00",
+    "whole_v8_comparison": "2024-01-01T00:00:00/2026-08-01T00:00:00",
+    "locked_confirmation_variant_max": 1,
+    "locked_external_and_target_price_values_may_open_only_for_one_complete_development_passer": true
+  },
+  "session_clock": {
+    "iana_zone": "America/New_York",
+    "regular_session_signal_interval": "09:30:00 through 15:29:59 local",
+    "decision_local_time": "15:30:00",
+    "target_path_interval": "15:30:00 through 15:59:59 local",
+    "dst_rule": "the IANA timezone database in the Python adapter owns each local-date conversion",
+    "clock_is_control_not_signal": "the completed paired leveraged-ETF state, not the clock alone, decides whether and which direction to act",
+    "no_alternate_clock_timezone_session_or_holiday_rescue_inside_v1": true
+  },
+  "common_normal_day": {
+    "external_completeness": "exactly one QQQ.xnms and one TQQQ.xnms M1 row at every local minute 09:30 through 15:29 inclusive",
+    "target_completeness": "exactly one US100 M1 row at every local minute 15:30 through 15:59 inclusive",
+    "duplicate_or_missing_timestamp": "exclude the local date structurally",
+    "zero_signal_days_remain_in_turnover_denominator": true
+  },
+  "external_event": {
+    "qqq_return": "QQQ.xnms Bid close at 15:29 divided by Bid open at 09:30 minus one",
+    "tqqq_return": "TQQQ.xnms Bid close at 15:29 divided by Bid open at 09:30 minus one",
+    "direction": "sign of the nonzero QQQ.xnms return",
+    "coherence": "TQQQ.xnms return must have the same sign and absolute magnitude at least twice the absolute QQQ.xnms return",
+    "zero_or_nonfinite_return": "no action",
+    "reference_population": "the previous 60 chronologically complete common normal days, excluding the current local date",
+    "reference_length": 60,
+    "magnitude_statistic": "absolute completed QQQ.xnms regular-session return",
+    "fixed_percentile": 0.75,
+    "nearest_rank": "sort the 60 prior absolute QQQ.xnms returns ascending and use one-indexed position 45",
+    "gate": "current absolute QQQ.xnms return must be nonzero and greater than or equal to the causal nearest-rank threshold, and coherence must pass",
+    "ties": "all exact equality cases pass; no epsilon or randomized tie break",
+    "no_alternate_symbol_return_window_reference_length_percentile_rank_leverage_ratio_or_direction_rescue_inside_v1": true
+  },
+  "decision_geometry": {
+    "decision_time": "immediately after both external 15:29 M1 bars complete",
+    "target_entry_time": "the exact US100 M1 row at 15:30 local",
+    "target_future_path": "thirty exact US100 M1 rows from 15:30 through 15:59 inclusive",
+    "accepted_direction": "LONG US100 for a positive coherent event and SHORT US100 for a negative coherent event",
+    "lifecycle_start_count": "the accepted US100 first fill counts once",
+    "maximum_positions": 1,
+    "prior_lifecycle_must_settle_before_next_day_entry": true,
+    "no_reversal_role_or_target_filter": true
+  },
+  "target_risk_distance": {
+    "holding_interval_range": "US100 Bid high minus Bid low across 15:30 through 15:59 local",
+    "causal_reference": "the previous 20 chronologically complete common normal days, excluding the current date",
+    "reference_length": 20,
+    "statistic": "arithmetic median: mean of one-indexed sorted positions 10 and 11",
+    "floor": "one US100 index price unit, 1.0; this is not one broker point",
+    "risk_distance": "maximum of 1.0 and the causal median holding-interval range",
+    "current_or_future_target_range_used_for_entry_risk": false,
+    "direction_specific_distance": false,
+    "no_range_window_statistic_multiplier_or_volatility_rescue_inside_v1": true
+  },
+  "candidate_bundle": {
+    "shared_signal_population": "every gated structurally complete coherent event",
+    "variants": [
+      {
+        "variant": "LEVERAGED_ETF_CLOSE_PRESSURE_TIME_CLOSE",
+        "stop": "one frozen risk distance adverse",
+        "favorable_barrier": "none",
+        "exit": "adverse stop or mandatory direction-specific close at the end of the thirtieth M1 bar"
+      },
+      {
+        "variant": "LEVERAGED_ETF_CLOSE_PRESSURE_TAKE_1P5R",
+        "stop": "one frozen risk distance adverse",
+        "favorable_barrier": "1.5 frozen risk distances favorable",
+        "exit": "adverse stop, favorable take, or mandatory direction-specific close at the end of the thirtieth M1 bar",
+        "same_bar_stop_and_take": "adverse stop wins and exact threshold execution is used"
+      }
+    ],
+    "both_variants_use_identical_events_directions_entries_risk_distances_and_sizing": true,
+    "both_variants_and_improvement_audit_close_together": true,
+    "no_external_magnitude_beyond_gate_spread_volume_target_feature_clock_or_subgroup_filter": true,
+    "no_adjacent_threshold_window_symbol_direction_risk_or_exit_rescue_inside_v1": true
+  },
+  "position_and_proxy_execution": {
+    "initial_deposit_usd": 100.0,
+    "leverage": "1:100",
+    "target_point": 0.01,
+    "tick_size": 0.01,
+    "tick_value_per_lot": 0.01,
+    "contract_size": 1.0,
+    "volume_min_lots": 0.01,
+    "volume_step_lots": 0.01,
+    "volume_max_lots": 200.0,
+    "long_entry": "entry-row Ask reconstructed as Bid open plus entry spread times point",
+    "short_entry": "entry-row Bid open",
+    "long_stop": "entry Ask minus one frozen risk distance, evaluated on Bid",
+    "long_take": "entry Ask plus 1.5 frozen risk distances, evaluated on Bid",
+    "short_stop": "entry Bid plus one frozen risk distance, evaluated on Ask",
+    "short_take": "entry Bid minus 1.5 frozen risk distances, evaluated on Ask",
+    "long_time_exit": "Bid close on the 15:59 row",
+    "short_time_exit": "Ask close reconstructed from Bid close plus the 15:59 row recorded spread",
+    "target_position_risk_fraction_of_entry_actual_balance": 0.04,
+    "hard_position_risk_cap_fraction_after_minimum_lot": 0.06,
+    "hard_aggregate_risk_cap_fraction_after_minimum_lot": 0.06,
+    "volume_rounding": "floor four-percent risk-distance volume to 0.01; use minimum 0.01 only when planned loss is at most six percent of entry actual balance",
+    "actual_execution": "direction-specific Bid/Ask entry, barrier and time-exit prices",
+    "extra_stress": "subtract the same observed direction-specific actual spread burden once more",
+    "balance_compounding": true,
+    "insolvency_or_nonfinite_balance": "block later entries without rewriting already completed paths"
+  },
+  "improvement_potential_audit": {
+    "required_before_family_closure": true,
+    "generated_from_same_frozen_development_process": true,
+    "dimensions": [
+      "raw signal-direction gross and net before favorable-barrier differences",
+      "MFE and MAE in price units and R over the fixed thirty-minute US100 path",
+      "time-close versus 1.5R take-profit truncation and stop overlap",
+      "observed and doubled-spread cost share relative to gross movement",
+      "minimum-lot and aggregate-risk blocks plus capital-depletion sequencing",
+      "2024 versus 2025 sign, hit-rate and expectancy stability",
+      "positive-event versus negative-event descriptive stability without subgroup execution"
+    ],
+    "broad_headroom_definition": "a sign-stable, cross-year, cost-surviving signal-direction edge or a broad exit truncation visible across the common population rather than an isolated threshold, date, sign, tail or subgroup",
+    "decision_rule": "do not close merely because the first or either exit variant fails; complete both variants and this audit, then close only when no broad causal improvement headroom remains",
+    "audit_authority_limit": "the audit cannot execute or authorize a new threshold, clock, window, subgroup, symbol, direction, risk, sizing or exit; any genuinely new economic variant requires a later whole-map comparison and a separately named durable declaration before execution"
+  },
+  "adapter_ea_boundary": {
+    "python_adapter_owns": [
+      "fresh QQQ.xnms and TQQQ.xnms source and symbol-specification integrity",
+      "IANA New York local-date conversion and exact common-day completeness",
+      "completed paired returns, sixty-day QQQ rank, coherence and continuation direction",
+      "twenty-day US100 risk distance",
+      "decision schema, sequence, freshness and bounded decision evidence",
+      "byte-pinned native decision tape"
+    ],
+    "ea_must_own": [
+      "adapter schema, variant, sequence and freshness validation",
+      "US100 contract, tick size, tick value, lot and market-state validation",
+      "balance-based volume and six-percent hard risk cap",
+      "fail-closed order submission and reconciliation",
+      "protective stop, optional variant take and 15:59 timed close",
+      "ownership, persistence, restart recovery and bounded execution evidence"
+    ],
+    "ea_may_not_create_replace_filter_or_invert_adapter_direction": true,
+    "python_decision_tape_required_by_native_ea": true,
+    "native_tape_must_be_byte_pinned_and_reproduced_from_the_frozen_adapter": true
+  },
+  "development_gates": {
+    "both_2024_and_2025_actual_positive": true,
+    "both_2024_and_2025_stressed_positive": true,
+    "development_actual_net_strictly_above_v8": 149.97,
+    "development_stressed_net_strictly_above_v8": 127.786,
+    "actual_closed_balance_drawdown_pct_max": 37.39,
+    "turnover_contract": {
+      "family_is_low_frequency_daily_external_event_not_high_turnover_claim": true,
+      "starts_per_common_normal_day_min": 0.2,
+      "starts_in_each_development_calendar_year_min": 40,
+      "zero_signal_common_days_in_denominator": true
+    },
+    "external_sign_breadth_required": [
+      "positive",
+      "negative"
+    ],
+    "selection": "highest stressed net among complete passers, then lower drawdown, then higher minimum yearly stressed net, then frozen variant order",
+    "locked_confirmation_variant_max": 1
+  },
+  "confirmation_and_whole_gates": {
+    "locked_2026_actual_and_stressed_positive": true,
+    "each_epoch_2024_2025_and_locked_2026_actual_and_stressed_positive": true,
+    "whole_actual_net_strictly_above_v8": 409.81,
+    "whole_stressed_net_strictly_above_v8": 367.818,
+    "whole_closed_balance_drawdown_pct_max": 37.39,
+    "whole_robust_recovery_strictly_above": 3.295860215,
+    "same_turnover_contract_must_pass_in_binding_long_and_locked_period": true,
+    "external_sign_breadth_required": [
+      "positive",
+      "negative"
+    ]
+  },
+  "exact_v8_challenge": {
+    "authority_path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+    "authority_bytes": 8423,
+    "authority_sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46",
+    "actual_net_usd_strictly_above": 409.81,
+    "doubled_cost_stressed_net_usd_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_or_below": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "each_calendar_epoch_actual_and_stressed_positive": true,
+    "declared_turnover_contract_required": true,
+    "complete_python_adapter_plus_ea_native_evidence_required": true,
+    "proxy_cannot_prove_victory": true
+  },
+  "native_escalation": {
+    "condition": "exactly one unchanged variant passes development, locked confirmation and whole proxy challenge gates",
+    "required_architecture": [
+      "family-owned Python adapter and byte-pinned decision tape",
+      "family-owned EA executor"
+    ],
+    "metaeditor_compile": "0 errors / 0 warnings",
+    "tester_model": "FPMarkets Every tick based on real ticks with 100% real ticks",
+    "required_symbols": [
+      "QQQ.xnms signal source",
+      "TQQQ.xnms coherence source",
+      "US100 target"
+    ],
+    "maximum_candidate_economic_paths": 1,
+    "environment_or_engineering_corrections_are_not_economic_paths": true,
+    "master_or_live_terminal_forbidden": true
+  },
+  "ordered_stages": [
+    "declaration before dedicated runtime, external acquisition, target copy, rank, implementation or economics",
+    "fresh development-only QQQ.xnms and TQQQ.xnms acquisition plus specifications and byte-equal US100 materialization",
+    "complete adapter implementation freeze with timestamp, rank, coherence, sign-count and risk-feasibility structure only",
+    "one complete 2024-2025 two-variant development bundle plus mandatory improvement-potential audit",
+    "locked 2026 external acquisition and confirmation for at most one unchanged complete passer",
+    "self-contained Python adapter plus EA compile and one native candidate path only for a complete whole-proxy survivor"
+  ],
+  "stop_rules": {
+    "one_variant_failure": "continue the already frozen sibling variant and improvement-potential audit; do not close from the first economic view",
+    "no_development_passer_and_no_broad_headroom": "close before locked 2026, EA and MT5 after both variants and the frozen audit complete",
+    "no_development_passer_but_broad_headroom": "record one bounded successor seed only; do not execute it inside V1, and recompare all active macro programs before any separately named declaration",
+    "confirmation_or_whole_proxy_failure": "close before EA and MT5 after recording the same frozen audit dimensions",
+    "native_valid_adverse_result": "close without retuning V1",
+    "environment_or_engineering_fault": "correct and rerun without economic verdict or arbitrary retry cap",
+    "success": "record verified native V8 Challenge victory; Live still requires a separate user-authorized engineering and handoff decision"
+  },
+  "preoutcome_state": {
+    "family_runtime_created": false,
+    "qqq_or_tqqq_values_acquired_or_opened": 0,
+    "external_symbol_specification_files": 0,
+    "target_source_copies": 0,
+    "external_returns_or_rank_thresholds": 0,
+    "candidate_directions": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_confirmation_opened": false,
+    "adapter_source_files": 0,
+    "ea_source_files": 0,
+    "mt5_compile_or_tester_paths": 0,
+    "live_changed": false
+  }
+}
