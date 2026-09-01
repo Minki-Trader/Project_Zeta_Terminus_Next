@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0532`
+- Latest state ID: `STATE-0533`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 007 corrected-freeze commit `5487f775e40ebe890c51edb9d63b350ccde1b5b5`, equal to `origin/main` before its sole complete development process.
+- Current process parent: Family 007 closure commit `20466d1ae2f77b6d91db86ff57bc27d56bd4d022`, equal to `origin/main` before the post-closure whole-map recompare.
 
 ## Authorization and ownership
 
@@ -124,13 +124,21 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - The sole complete development process returned `VALID_DEVELOPMENT_COMPLETE_NO_PASSER`. FOLLOW ran `3,130` starts and lost actual/stressed `-$53.708425 / -$135.688025` with `82.475678%` DD; FADE ran `2,813` starts and lost `-$74.118175 / -$129.559175` with `81.646377%` DD. Both roles lost actual and stressed in both 2024 and 2025. Turnover and breadth passed, but profit, epoch and DD gates failed. Complete passer count is zero.
 - Raw result/state/trade are `21,016 / 256,910 / 2,154,699` bytes at `73964731...3ACB / 041B7288...DBB8 / AFF2DA81...48F2`; state/trade rows are `1,582 / 5,943` and three-file ordered manifest is `ACF3213E...D7F3`. Durable result is byte-equal to raw. Closure is `5,565` bytes / `04D37BA4...97F1`, status `CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_CONFIRMATION_NO_EA_NO_MT5`. Locked 2026, EA, compile and Tester remain unopened; adjacent rank/window/subgroup/symbol/risk/exit rescues are closed together.
 
+## Post-Family 007 whole-map recompare
+
+- Programs 1-5 and 7 plus micro/meso/macro were re-compared after closure commit `20466d1ae2f77b6d91db86ff57bc27d56bd4d022` reached `origin/main`. Programs 4, 5 and 7 still lack a positive independent entry population; Program 3 remains adjacent to closed opening/clock work; Program 1 remains concentrated across closed H1/H4/M15/M1 target-price carriers.
+- Program 2 alone has a materially new ready mechanism: broker symbol-selection metadata from a stopped non-Master Lab Portable contains exact `QQQ.xnms` and `TQQQ.xnms` tokens at `18,210` bytes / `24BF16C9...C109`, while zero price, spread, volume, return or outcome value was opened. The pair supplies a cash-ETF/three-times-leveraged-ETF close-rebalance question, distinct from Family 007's single AUDCHF transfer.
+- Known prior QQQ exposure is limited to a `PRE_UNIT_SOURCE_CAUSALITY_NOT_READY` sponsor primary-market-flow audit; Family 008 excludes shares outstanding, creations/redemptions, NAV/premium, order imbalance, DIA/SPY and all Optimization/V8 lifecycles. TQQQ has zero tracked non-runtime research reference.
+- Provisional Family 008 is Program 2 / meso `independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1`, mandatory `Python adapter + EA`. At `15:30 America/New_York`, a large coherent completed `09:30..15:29` QQQ/TQQQ move supplies one theoretically signed US100 continuation direction. The family must freeze both `TIME_CLOSE` and `TAKE_1P5R` exit realizations plus a mandatory MFE/MAE, cost, risk-block, truncation and year-stability improvement-potential audit before any outcome.
+- The candidate may not close merely because the first economic view fails. Both related variants and the frozen improvement audit must complete before closure; the audit cannot silently authorize an outcome-driven threshold, clock, window, subgroup, symbol, direction, risk or exit run. Recompare audit is `11,410` bytes / `F76BE1617FE412BFE1C4997DA1B4CAEAE5E6DD5C66E3C04D553872D1392256FF`, status `READY_PROGRAM_2_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_BUNDLE_SUCCESSOR_NOT_OPENED`.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 007 result and closure; verify clean `main == origin/main`.
-2. Recompare Programs 1-5 and 7 plus all heights without opening successor inputs or outcomes.
-3. Declare at most one materially distinct Family 008 architecture before any source copy, feature, model, prediction or economics.
-4. Run its frozen proxy path and allow locked/native work only for an unchanged complete passer.
-5. Continue serially until an unchanged complete native candidate passes every V8 gate.
+1. Commit and push the post-Family 007 whole-map recompare; verify clean `main == origin/main`.
+2. Declare exactly one self-contained Family 008 contract freezing the two related exit variants and improvement-potential audit before any source or outcome.
+3. Build its dedicated Portable, freshly acquire QQQ/TQQQ development authority with original-broker session support, copy US100 once, implement and freeze structure.
+4. Run one complete two-variant development bundle and its mandatory improvement audit; open locked/native only for one unchanged complete passer.
+5. Continue serially, auditing defensible improvement headroom before each closure, until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
 
@@ -150,8 +158,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 007 is closed valid adverse with zero passer; whole-map recompare is pending before any Family 008 declaration.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_CLOSED_VALID_ADVERSE_NO_PASSER_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
+- Active research unit: post-Family 007 recompare selects provisional Family 008 leveraged-ETF close-pressure bundle; successor root and inputs remain unopened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_007_RECOMPARE_PROGRAM_2_LEVERAGED_ETF_CLOSE_PRESSURE_BUNDLE_READY_SUCCESSOR_NOT_OPENED`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
