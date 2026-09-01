@@ -10,4 +10,6 @@ Both horizons and a same-process improvement audit must complete before closure.
 
 Development is 2024-2025 after source warmup from 2022. Locked 2026 January-July remains unacquired and unopened for at most one unchanged complete development passer. The authoritative contract is `config/challenge-contract.json`.
 
-Status: declared before runtime creation, fresh H4/specification acquisition, channel/ATR construction, adapter implementation, lifecycle simulation, improvement values or outcomes.
+The build-6140 platform may populate currently selected default-symbol cache while establishing an original-broker session even when no rates API is called. Such bootstrap files are not candidate sources: they are purged before acquisition, every persisted CSV is bounded from raw timestamps by the declared development request, and any transient `2026.hcc` is purged again after the stopped acquisition before evidence. The adapter never reads a runtime history cache.
+
+Status: dedicated original-broker runtime and acquisition implementation ready; fresh H4/specification acquisition, channel/ATR construction, adapter implementation, lifecycle simulation, improvement values and outcomes remain zero.

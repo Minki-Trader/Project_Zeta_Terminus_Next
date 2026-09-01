@@ -1,0 +1,199 @@
+{
+  "schema": "zeta-next-independent-multi-asset-h4-donchian-trend-adapter-challenge-v1-runtime-source-engineering-correction",
+  "recorded_at_utc": "2026-09-01T03:51:52.8922870Z",
+  "status": "DEDICATED_ORIGINAL_BROKER_RUNTIME_AND_ACQUISITION_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME",
+  "family": "independent-multi-asset-h4-donchian-trend-adapter-challenge-v1",
+  "declaration_boundary": {
+    "commit": "e711d21ec99bfcbbdd3bc9c9c290c9076c7e69ce",
+    "commit_reached_origin_main_before_runtime_creation": true,
+    "declaration": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/evidence/INDEPENDENT_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 11870,
+      "sha256": "0D307B8DF16070474490287E27A3F7BFA380FE752A78C3C4905D33768B70C2DB"
+    }
+  },
+  "corrected_authorities": {
+    "README": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/README.md",
+      "bytes": 2562,
+      "lines": 15,
+      "sha256": "E34FC67A6DD0AAA9AA950545617DB08684A3C5F904D8155B6E0C297340ED8B46"
+    },
+    "contract": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 22668,
+      "lines": 409,
+      "sha256": "971A408F77332F813570C599FF7BC1138D5299A9ADBBA0B3A33B763370C3B811"
+    },
+    "acquisition": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/acquisition/acquire_h4.py",
+      "bytes": 26254,
+      "lines": 635,
+      "sha256": "E8BFD8F1AEEFC00B0CEA1FF2A5AEDD99F95D8CCE442A780CDB4D3675E61C0983"
+    },
+    "acquisition_requirements": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/acquisition/requirements-acquisition.txt",
+      "bytes": 64,
+      "sha256": "646E639743BB1EF1A74566D81FCC9CF47C14B796A979D53342CCA55E19E08BE2"
+    },
+    "adapter_requirements": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/adapter/requirements-adapter.txt",
+      "bytes": 58,
+      "sha256": "A8312E14ACD23C9B07977AE03A4A6CC747A6B6CC07B2C6D5ABCD3B824C4F3F33"
+    }
+  },
+  "dedicated_runtime": {
+    "path": "lab/runtime/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1-portable/",
+    "git_ignored": true,
+    "neutral_installation": "C:/Program Files/MetaTrader 5/",
+    "neutral_copy_files": 585,
+    "neutral_copy_bytes": 406898293,
+    "neutral_reparse_points": 0,
+    "neutral_terminal": {
+      "build": 6090,
+      "bytes": 131749704,
+      "sha256": "EA58630BED990110DA60E28494D9ED5DF10B025C693F34CCC1D203740C606F9A",
+      "authenticode": "VALID_METAQUOTES"
+    },
+    "current_runtime_files": 8641,
+    "current_runtime_bytes": 550648354,
+    "current_runtime_history_cache_files": 0,
+    "candidate_process_owners_at_boundary": 0
+  },
+  "session_support": {
+    "donor": "lab/runtime/pmlrh1-portable/",
+    "donor_was_stopped": true,
+    "copied_files": [
+      {
+        "name": "accounts.dat",
+        "bytes": 8453,
+        "sha256": "85C3C6D57DFF54F5F658329CB829A075C52E561F1978B9363CA3FE9DA5E37873"
+      },
+      {
+        "name": "servers.dat",
+        "bytes": 59200,
+        "sha256": "F82C2363F4C8739C19DD8596928065D586EDC6408700216CDDF485D3E2AA9C0B"
+      }
+    ],
+    "copy_hash_mismatches": 0,
+    "candidate_common_ini_selection": "only the donor Login and Server keys were mechanically inserted after the candidate generated its own Environment; the values are intentionally omitted",
+    "password_read_or_written_by_codex": false,
+    "account_identifier_persisted_in_evidence": false,
+    "donor_history_or_price_files_copied": 0,
+    "donor_runtime_executed": false
+  },
+  "terminal_update": {
+    "first_start": "the neutral build 6090 refreshed its candidate-local MQL5 tree and downloaded a one-entry build-6140 terminal archive before the Python IPC timeout",
+    "archive": {
+      "path_omitted_as_replaceable_platform_cache": true,
+      "bytes": 61047396,
+      "sha256": "ED032D0D6AE715DDCD7C95B434529447C2E473474224F31DB772D36C3EC8708C",
+      "entries": 1,
+      "traversal_entries": 0,
+      "only_entry": "terminal64.exe"
+    },
+    "candidate_terminal": {
+      "build": 6140,
+      "version_date": "21 Aug 2026",
+      "bytes": 121845920,
+      "sha256": "7B3AAEDFD3A3998F2138D399F601F46ED49DDBC9762697CE1170F8B325055B05",
+      "authenticode": "VALID_METAQUOTES"
+    },
+    "duplicate_extraction_staging_deleted": {
+      "files": 1,
+      "bytes": 121845920,
+      "recoverability": "not retained; byte-identical signed terminal remains in the candidate and archive remains platform-managed"
+    }
+  },
+  "environment_corrections": [
+    {
+      "fault": "the initial PowerShell neutral-copy command used -LiteralPath with a wildcard, so only the already-created account and server files existed in the target",
+      "effect": "no terminal, history, price, symbol or outcome value was opened",
+      "correction": "the same exact candidate target received every neutral installation child through one native PowerShell copy and reached 585 files / 406898293 bytes with zero reparse point"
+    },
+    {
+      "fault": "build 6090 and the first two build-6140 launches timed out in Python IPC while the candidate lacked Login and Server selection keys",
+      "effect": "no rates, ticks, symbol specification, account state or outcome API was called",
+      "correction": "the candidate retained its own Environment, received only the stopped donor's Login and Server selection keys and then passed initialized, connected, build, executable-path and data-path binding"
+    },
+    {
+      "fault": "the neutral Default profile and then the connected default Market Watch caused platform bootstrap HCC files without a copy_rates or tick call",
+      "effect": "these files were never read as a candidate source and no persisted Family 009 source row existed",
+      "correction": "all 12 neutral Default files, all migrated original-broker copies and every later transient current HCC were deleted with candidate ownership zero; PreloadCharts is disabled and the acquisition contract now requires post-run transient 2026 HCC purge"
+    }
+  ],
+  "deleted_bootstrap_cache": {
+    "neutral_default_history_files": 12,
+    "neutral_default_history_bytes": 101874084,
+    "migrated_original_broker_history_files": 12,
+    "migrated_original_broker_history_bytes": 130283085,
+    "later_transient_current_history_purges": [
+      {
+        "files": 4,
+        "bytes": 31917255
+      },
+      {
+        "files": 4,
+        "bytes": 35001015
+      },
+      {
+        "files": 4,
+        "bytes": 34031067
+      }
+    ],
+    "default_profile_files_deleted": 5,
+    "final_runtime_history_cache_files": 0,
+    "candidate_price_values_interpreted": 0
+  },
+  "candidate_python": {
+    "python": "3.13.9",
+    "MetaTrader5": "5.0.6147",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1",
+    "tzdata": "2026.3",
+    "files": 7379,
+    "bytes": 222601585,
+    "global_python_packages_changed": false
+  },
+  "acquisition_contract": {
+    "symbols": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "NZDUSD",
+      "US100",
+      "US30",
+      "US500"
+    ],
+    "timeframe": "H4",
+    "development_request": "2022-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+    "quarterly_batched": true,
+    "all_seven_rate_and_spec_outputs_are_atomic": true,
+    "raw_server_wall_clock_is_not_labelled_semantic_utc": true,
+    "required_integrity": "request bounds, unique increasing raw timestamp, OHLC, nonnegative spread and volume, positive contract/tick/lot fields, USD profit currency and complete signed swap specification",
+    "unsupported_swap_mode": "persist source classification but require a preoutcome contract/engineering correction before implementation or any economics",
+    "no_overwrite": true,
+    "locked_stage_authority_gated": true,
+    "syntax": "PASS"
+  },
+  "preacquisition_attestation": {
+    "raw_family_artifact_root_exists": false,
+    "persisted_H4_rows": 0,
+    "persisted_symbol_specifications": 0,
+    "copy_rates_or_copy_ticks_calls": 0,
+    "symbol_price_or_tick_values_opened": 0,
+    "channels_ATR_signals_decisions_lifecycles_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_2026_persisted_or_opened_rows": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "adapter_source_files": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "live_changed": false,
+    "optimization_changed": false,
+    "protected_live_pid_before_and_after": 33388
+  },
+  "next_authorized_action": "after this correction reaches origin/main, run exactly one fresh atomic development H4/specification acquisition in the candidate Portable, stop only its PID, purge transient 2026 HCC files without opening them, and create a durable source receipt before adapter implementation"
+}

@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0541`
+- Latest state ID: `STATE-0542`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: autonomous post-Family-008 selection commit `93c71bdbb08a7b8174504fcdd3273356c228d01e`, equal to `origin/main` before Family 009 declaration.
+- Current process parent: Family 009 declaration commit `e711d21`, equal to `origin/main` before runtime/source engineering.
 
 ## Authorization and ownership
 
@@ -24,7 +24,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_MULTI_ASSET_H4_DONCHIAN_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_DEDICATED_ORIGINAL_BROKER_RUNTIME_SOURCE_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
 - Sole active Challenge family: Family 009 `lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
 - Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection, while Program 1 / macro is only the policy-required administrative tag for the selected multi-asset trend mechanism.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -201,10 +201,19 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Before closure the same process must complete both variants and audit 1/3/6/12-H4 raw paths, MFE/MAE, overlap/uniques, year/symbol/asset-class/direction stability, spread/swap burden, risk blocks and exit attribution. Broad headroom requires both years, both asset classes, both directions and at least four symbols; no adjacent rescue may execute inside V1.
 - Dedicated runtime, fresh H4/specification source, channel/ATR/signal rows, candidate decisions/lifecycles/economics, locked 2026, adapter source, EA, compile and Tester remain zero. After this declaration reaches `origin/main`, only isolated runtime/source engineering and an outcome-free complete adapter/precheck may begin.
 
+## Family 009 runtime/source engineering ready
+
+- Declaration commit `e711d21` reached local `main`, `origin/main` and remote `main` before the ignored dedicated Portable was created. A neutral build-6090 installation was copied as `585` files / `406,898,293` bytes with zero reparse point; only stopped non-Master `pmlrh1-portable` `accounts.dat / servers.dat` plus its Login/Server selection keys supplied original-broker session support. No password or account state was read.
+- The first start refreshed only the candidate MQL tree and downloaded a one-entry, zero-traversal build-6140 terminal archive. The installed candidate terminal is valid MetaQuotes build `6140`, `121,845,920` bytes / `7B3AAEDF...5B05`. Original-broker connectivity and executable/data-path binding passed; candidate PIDs were stopped and Live PID `33388` remained unchanged.
+- Neutral/default and platform-bootstrap history caches were never read as source and were deleted with candidate ownership zero: `12` Default files `101,874,084` bytes, `12` migrated original-broker files `130,283,085` bytes, three later current-cache sets of `4` files and `31,917,255 / 35,001,015 / 34,031,067` bytes, plus five Default chart files. Final candidate history-cache count is zero and `PreloadCharts=0`.
+- Candidate Python pins Python `3.13.9`, MetaTrader5 `5.0.6147`, NumPy `2.3.4`, pandas `2.3.3`, PyArrow `23.0.1` and tzdata `2026.3` in `7,379` files / `222,601,585` bytes without changing global packages.
+- Complete atomic development/locked acquisition source is `26,254` bytes / `635` lines / `E8BFD8F1AEEFC00B0CEA1FF2A5AEDD99F95D8CCE442A780CDB4D3675E61C0983`; requirements are `64 / 58` bytes at `646E6397...8BE2 / A8312E14...3F33`. Current README/contract are `2,562 / 22,668` bytes at `E34FC67A...8B46 / 971A408F...B811`.
+- Runtime/source correction is `8,969` bytes / `8DFD07F8DDBBE31133FEC4602ED56ED52840B2DACFF53AE70307F0A7A471EEA4`, status `DEDICATED_ORIGINAL_BROKER_RUNTIME_AND_ACQUISITION_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`. No persistent H4/spec, rate/tick API call, price value, channel, ATR, signal, lifecycle, economy, improvement value, locked row, adapter source, EA or Tester path exists.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 009 pre-runtime declaration; verify clean `main == origin/main`.
-2. Create one dedicated neutral-derived Portable, copy only stopped non-Master original-broker account/server support and freshly acquire all seven development H4 series/specifications atomically.
+1. Commit and push the Family 009 runtime/source engineering correction; verify clean `main == origin/main`.
+2. Freshly acquire all seven development H4 series/specifications atomically, stop only the candidate PID and purge transient 2026 cache before a durable source receipt.
 3. Implement the complete family-owned Python adapter and run only the outcome-free source/channel/turnover/minimum-lot precheck before freezing implementation.
 4. Run one complete two-horizon development bundle plus improvement audit; open locked/native only for one unchanged complete passer.
 5. Continue serially until a complete native candidate passes every V8 gate.
@@ -227,8 +236,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, declared pre-runtime/pre-acquisition/preimplementation/preoutcome.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_MULTI_ASSET_H4_DONCHIAN_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, dedicated original-broker runtime/acquisition ready preacquisition/preimplementation/preoutcome.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_DEDICATED_ORIGINAL_BROKER_RUNTIME_SOURCE_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
