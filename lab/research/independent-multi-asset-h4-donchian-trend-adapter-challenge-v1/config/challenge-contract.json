@@ -272,11 +272,13 @@
     "supported_swap_modes": {
       "DISABLED": "zero",
       "POINTS": "swap rate times point divided by tick size times tick value times volume and rollover multiplier",
+      "CURRENCY_SYMBOL": "signed swap rate is money in the symbol base currency per lot and rollover multiplier; allowed here only when currency_base is USD so the USD deposit conversion is exactly one, giving swap rate times volume times rollover multiplier",
       "CURRENCY_DEPOSIT": "swap rate in USD times volume and rollover multiplier",
       "INTEREST_CURRENT": "signed annual swap percent divided by 100, times contract size, rollover reference price and volume, divided by 360 and multiplied by rollover multiplier",
       "INTEREST_OPEN": "signed annual swap percent divided by 100, times contract size, entry price and volume, divided by 360 and multiplied by rollover multiplier"
     },
     "swap_rate_sign": "apply the broker specification's signed long or short rate without absolute-value conversion; negative rates debit and positive rates credit",
+    "rollover_boundary_count": "count a broker-server midnight boundary when entry server time is strictly before the boundary and exit server time is at or after it; entry at the boundary occurs after that rollover, while a position exiting at the boundary was carried into it",
     "unsupported_or_nonconvertible_swap_mode": "preoutcome source/engineering correction required; no economic process may start",
     "swap_in_actual_and_stress": true,
     "commission_or_unrecorded_fee_assumed": 0.0

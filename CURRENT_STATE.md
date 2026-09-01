@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0542`
+- Latest state ID: `STATE-0543`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 009 declaration commit `e711d21`, equal to `origin/main` before runtime/source engineering.
+- Current process parent: Family 009 runtime/source engineering commit `95c0a50173595ae83324a41b28642bbc48d74999`, equal to `origin/main` before development acquisition.
 
 ## Authorization and ownership
 
@@ -24,7 +24,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_DEDICATED_ORIGINAL_BROKER_RUNTIME_SOURCE_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_COMPLETE_FRESH_DEVELOPMENT_SOURCE_SWAP_CORRECTED_PREIMPLEMENTATION_PREOUTCOME`.
 - Sole active Challenge family: Family 009 `lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
 - Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection, while Program 1 / macro is only the policy-required administrative tag for the selected multi-asset trend mechanism.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -210,13 +210,22 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Complete atomic development/locked acquisition source is `26,254` bytes / `635` lines / `E8BFD8F1AEEFC00B0CEA1FF2A5AEDD99F95D8CCE442A780CDB4D3675E61C0983`; requirements are `64 / 58` bytes at `646E6397...8BE2 / A8312E14...3F33`. Current README/contract are `2,562 / 22,668` bytes at `E34FC67A...8B46 / 971A408F...B811`.
 - Runtime/source correction is `8,969` bytes / `8DFD07F8DDBBE31133FEC4602ED56ED52840B2DACFF53AE70307F0A7A471EEA4`, status `DEDICATED_ORIGINAL_BROKER_RUNTIME_AND_ACQUISITION_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`. No persistent H4/spec, rate/tick API call, price value, channel, ATR, signal, lifecycle, economy, improvement value, locked row, adapter source, EA or Tester path exists.
 
+## Family 009 development source complete
+
+- Runtime/source commit `95c0a50173595ae83324a41b28642bbc48d74999` reached local `main`, `origin/main` and remote `main` before one atomic original-broker development acquisition. Seven H4 CSVs contain `43,383` rows in `3,465,916` bytes; seven complete specifications plus the raw receipt bring the `15`-file source bundle to `3,505,398` bytes / ordered manifest `C8854B3BE63BFC027C7FD3ECAC36AF1EB10FB8387A5DF6BAAA68BC53CF9CF267`.
+- AUDUSD/EURUSD/GBPUSD/NZDUSD each contain `6,217` rows; US100/US30/US500 contain `6,174 / 6,170 / 6,171`. All requested quarterly batches, file hashes, unique increasing raw timestamps, OHLC, nonnegative spread/volume and USD profit-currency contract fields passed. Raw receipt is `34,369` bytes / `79BD94A4...85F4`.
+- Time-only normalization through `Europe/Helsinki` produced zero ambiguous/nonexistent/duplicate/nonincreasing timestamp. True-UTC bounds are `2022-01-02T22:00:00Z..2025-12-31T18:00:00Z`; normalized locked-2026 rows are zero. Development rows are `3,115` for each FX and `3,094 / 3,093 / 3,094` for US100/US30/US500.
+- Fresh specs exposed `POINTS` swap for FX and previously undeclared `CURRENCY_SYMBOL` for all three indices. Official MQL5 semantics define that mode as money in symbol base currency; each index freezes base/profit/margin and deposit currency USD, so the corrected signed formula is rate × volume × rollover multiplier. Raw specs/hashes remain unchanged; only the prior derived support flag is superseded.
+- Acquisition PID `14648` was stopped. Nine transient 2026 HCC files totaling `105,073,053` bytes at the predelete snapshot were removed without opening them; no locked or combined CSV exists. Live PID `33388` stayed unchanged.
+- Current README/contract/acquisition are `2,839 / 23,209 / 26,539` bytes at `245D8CBA...4B37 / 1CB5C699...E40D / 2E867D82...7C81`. Durable source receipt is `11,292` bytes / `001EB67EF1E15651A32F47446D7AA88BA7AB969984E2D95071EF9467E57BD815`, status `COMPLETE_FRESH_ORIGINAL_BROKER_DEVELOPMENT_SOURCE_SWAP_MODE_CORRECTED_PREIMPLEMENTATION_PREOUTCOME`.
+- Channel/ATR/signal rows, candidate decisions/lifecycles/economics, improvement values, locked 2026, adapter source, EA, compile and Tester remain zero. After this receipt reaches `origin/main`, complete adapter implementation and outcome-free precheck may begin.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 009 runtime/source engineering correction; verify clean `main == origin/main`.
-2. Freshly acquire all seven development H4 series/specifications atomically, stop only the candidate PID and purge transient 2026 cache before a durable source receipt.
-3. Implement the complete family-owned Python adapter and run only the outcome-free source/channel/turnover/minimum-lot precheck before freezing implementation.
-4. Run one complete two-horizon development bundle plus improvement audit; open locked/native only for one unchanged complete passer.
-5. Continue serially until a complete native candidate passes every V8 gate.
+1. Commit and push the Family 009 development source receipt and swap-mode correction; verify clean `main == origin/main`.
+2. Implement the complete family-owned Python adapter and run only the outcome-free source/channel/turnover/minimum-lot precheck before freezing implementation.
+3. Run one complete two-horizon development bundle plus improvement audit; open locked/native only for one unchanged complete passer.
+4. Continue serially until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
 
@@ -236,8 +245,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, dedicated original-broker runtime/acquisition ready preacquisition/preimplementation/preoutcome.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_DEDICATED_ORIGINAL_BROKER_RUNTIME_SOURCE_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, complete fresh development source and swap-mode correction preimplementation/preoutcome.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_COMPLETE_FRESH_DEVELOPMENT_SOURCE_SWAP_CORRECTED_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

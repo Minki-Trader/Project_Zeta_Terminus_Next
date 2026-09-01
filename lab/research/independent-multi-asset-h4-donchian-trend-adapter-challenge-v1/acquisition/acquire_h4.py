@@ -37,6 +37,7 @@ HISTORY_SYNC_TIMEOUT_SECONDS = 300
 SUPPORTED_SWAP_MODES = {
     0: "DISABLED",
     1: "POINTS",
+    2: "CURRENCY_SYMBOL",
     4: "CURRENCY_DEPOSIT",
     5: "INTEREST_CURRENT",
     6: "INTEREST_OPEN",
@@ -531,7 +532,11 @@ def main() -> int:
             ]
         else:
             for symbol in SYMBOLS:
-                if specs[symbol] != read_json(spec_paths[symbol]):
+                frozen_spec = read_json(spec_paths[symbol])
+                frozen_spec.pop("swap_mode_supported_by_declared_economics", None)
+                current_spec = dict(specs[symbol])
+                current_spec.pop("swap_mode_supported_by_declared_economics", None)
+                if current_spec != frozen_spec:
                     raise RuntimeError(f"{symbol} specification changed before locked stage")
             receipt = {
                 "schema": "zeta-next-multi-asset-h4-locked-acquisition-receipt-v1",
