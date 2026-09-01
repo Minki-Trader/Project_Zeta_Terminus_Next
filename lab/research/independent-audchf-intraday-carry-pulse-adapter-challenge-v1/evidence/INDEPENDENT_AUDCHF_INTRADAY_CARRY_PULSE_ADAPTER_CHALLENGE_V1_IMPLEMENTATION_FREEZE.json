@@ -5,6 +5,18 @@
   "project_id": "project-zeta-terminus-next",
   "family": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/",
   "architecture": "Python adapter + EA",
+  "adapter": {
+    "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 52045,
+    "sha256": "63E957C7F52CD53FAB84918E4564BF056EFA15660D619602529550BA2E4B4FE5"
+  },
+  "prestart_schema_correction": {
+    "classification": "CORRECTION_REQUIRED_PRESTART_FREEZE_ADAPTER_FIELD_ABSENT_NO_ECONOMIC_PROCESS",
+    "cause": "The first freeze recorded the adapter only under authorities.adapter while the frozen development validator requires the same bytes and SHA-256 at top-level adapter.",
+    "economic_or_future_trade_path_simulations": 0,
+    "persistent_development_output_files": 0,
+    "adapter_contract_or_behavior_changed": false
+  },
   "authorities": {
     "contract": {
       "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/config/challenge-contract.json",

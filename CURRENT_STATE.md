@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0530`
+- Latest state ID: `STATE-0531`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 007 declaration commit `e568f2510150b1e2537aeda033a42b187171f86a`, equal to `origin/main` before its dedicated runtime, acquisition engineering and adapter implementation.
+- Current process parent: Family 007 original-broker acquisition/freeze commit `69d53d036c74b4a8caf778e6d7138f0de59978af`, equal to `origin/main` before the prestart freeze-schema correction.
 
 ## Authorization and ownership
 
@@ -120,7 +120,7 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - The user corrected the account boundary: Master-terminal isolation does not require a new demo identity. With the candidate stopped, only `accounts.dat` and `servers.dat` were copied with hash parity from stopped non-Master Lab donor `pmlrh1-portable`; no donor runtime, price/history cache, EA or Live file/settings path was copied or executed. The prior `15,144`-byte Default/demo AUDCHF placeholder was deleted and is absent.
 - The first original-broker request correctly persisted no final output because terminal `MaxBars=100000` returned one out-of-range fallback row per monthly request. Its two partial original-broker cache files were deleted, `MaxBars` was raised to `5,000,000`, and the acquisition script gained bounded in-range history synchronization. The final development acquisition completed `30` monthly batches / `930,039` rows from `2023-07-03T00:00:00Z` through `2025-12-31T23:59:00Z`; CSV/receipt/spec are `85,593,295 / 8,681 / 549` bytes at `4BDADB7E...6C8E / D98DB072...4FEB / 5137BA46...BDB9`. Locked 2026 remains unopened.
 - Acquisition script `acquisition/acquire_audchf.py` is `23,195` bytes / `551` lines / `9A723B0E...6737`; complete adapter `adapter/run_adapter.py` is `52,045` bytes / `1,277` lines / `63E957C7...4FE5`. The original-broker correction is `5,488` bytes / `0BC953B9...A88E`; the earlier correction and target receipt remain `5,057 / 1,510` bytes at `70EB0501...DEF2 / 079326EC...C5D`.
-- Outcome-free precheck passed over `517` normal days, `6,143` complete slots and `1,582` gated events (`807/775` negative/positive), with `3,164` two-symbol structural starts per role or `6.11992` per normal day. Both symbols are minimum-lot feasible on all `1,582` states. Future trade simulations, lifecycles/economics, locked rows and persistent precheck output remain zero. Implementation freeze is `7,282` bytes / `4087BDD2...98B7`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`. Candidate PID `39348` was stopped after acquisition; Live PID `33388` remained unchanged.
+- Outcome-free precheck passed over `517` normal days, `6,143` complete slots and `1,582` gated events (`807/775` negative/positive), with `3,164` two-symbol structural starts per role or `6.11992` per normal day. Both symbols are minimum-lot feasible on all `1,582` states. Future trade simulations, lifecycles/economics, locked rows and persistent precheck output remain zero. The first development invocation stopped before data because the freeze lacked the validator-required top-level adapter field; no output was written and no economic process occurred. Corrected implementation freeze is `7,986` bytes / `697D99C7...C68A`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`. Candidate PID `39348` was stopped after acquisition; Live PID `33388` remained unchanged.
 
 ## Next authorized sequence
 
@@ -149,7 +149,7 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 ## Current markers
 
 - Active research unit: Family 007 complete original-broker development authority and implementation freeze are ready pre-economics; no candidate Portable process is open.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ORIGINAL_BROKER_ACQUISITION_COMPLETE_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_007_ORIGINAL_BROKER_ACQUISITION_COMPLETE_FREEZE_SCHEMA_CORRECTED_PREDEVELOPMENT_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
