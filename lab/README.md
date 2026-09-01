@@ -6,7 +6,7 @@
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
 
-현재 active research family는 없다. Program 2 / meso Family 008 `research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/`은 한 번의 완전한 두-변형 development와 개선여지 감사 뒤 유효 adverse로 닫혔다. TIME_CLOSE / TAKE_1P5R actual은 `-$57.71415 / -$54.91960`, stressed는 `-$62.84485 / -$60.18480`, DD는 `61.35935% / 58.098775%`; 두 해·두 부호 raw stressed edge가 모두 음수이고 take 개선/악화 `5/5`, stop 회피 `0`이라 broad headroom과 seed가 없다. Locked 2026·EA·MT5는 미개봉이며 closure가 origin에 도달한 뒤 Programs 1-5/7 전체 재비교가 다음 판단이다.
+현재 active research family는 없다. Program 2 / meso Family 008 `research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/`은 한 번의 완전한 두-변형 development와 개선여지 감사 뒤 유효 adverse로 닫혔다. 그 closure가 origin에 도달한 뒤 사용자의 자율설계 지시에 따라 Program을 방법 제약으로 쓰지 않고 전체 지도를 다시 비교했으며, 4개 USD-quote FX와 3개 미국 지수의 H4 Donchian trend `research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/`을 provisional Family 009로 선택했다. Program 1 / macro는 사후 행정 태그일 뿐이다. Selection audit는 `13,030` bytes / `374ECCCD...CDF1`; successor root·runtime·가격·channel·ATR·경제는 아직 `0`이다.
 
 직전 Family 001 `research/independent-cross-index-hourly-adapter-challenge-v1/`은 세 역할 모두 turnover를 통과했지만 actual/stressed와 DD가 전부 실패해 잠긴 2026, EA와 MT5 전에 유효 adverse로 닫혔다. Durable result/closure는 `6,031 / 2,117` bytes at `09F30EDB...1A3D49 / 9E09B960...0FCCCA`다.
 
