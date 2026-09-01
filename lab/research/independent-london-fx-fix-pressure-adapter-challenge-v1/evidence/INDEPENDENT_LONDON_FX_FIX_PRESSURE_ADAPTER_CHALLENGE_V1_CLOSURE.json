@@ -1,0 +1,270 @@
+{
+  "schema": "zeta-next-independent-london-fx-fix-pressure-adapter-challenge-v1-closure",
+  "recorded_at_utc": "2026-09-01T06:09:24.6030751Z",
+  "status": "CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5",
+  "family": "independent-london-fx-fix-pressure-adapter-challenge-v1",
+  "architecture": "Python adapter + EA",
+  "administrative_program": 3,
+  "method_selection_was_program_constrained": false,
+  "boundary": {
+    "implementation_freeze_commit": "47b3862860be2cbc51d1fd1dc79c6f050ba53201",
+    "implementation_state_commit_before_development": "c16112d4ed9e84664a7a3500188117e275162297",
+    "both_equal_to_origin_main_before_development": true,
+    "development_processes": 1,
+    "candidate_process_owners_after_development": 0,
+    "locked_2026_rows_loaded": 0,
+    "confirmation_processes": 0,
+    "EA_source_files": 0,
+    "MetaEditor_compiles": 0,
+    "MT5_Tester_paths": 0
+  },
+  "frozen_authorities": {
+    "contract": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 18309,
+      "sha256": "F1F2CBCCEA4FE5E870FF0863BF58BEAE98F685AFAE3B8646FEB336C0EF297708"
+    },
+    "adapter": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 89442,
+      "lines": 2114,
+      "sha256": "3A63BF2ACA10F20940D8087619875FA7B5C451147A5D7F5F939BA67E84521058"
+    },
+    "implementation_freeze": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+      "bytes": 10133,
+      "sha256": "98F3A74855F9FED7914FDFE2BEB245401922FB0F034E9F9B6910C53D973726EF"
+    },
+    "development_source": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_SOURCE_RECEIPT.json",
+      "bytes": 8422,
+      "sha256": "72B8FDD1EEF16D2400FDE226A394CBEB98FE029D2E1D0DEF327DBF0F1BF5FD8E"
+    },
+    "development_result": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_RESULT.json",
+      "bytes": 11018,
+      "sha256": "9B62D2EDBDE653D40C310A1CFE1FF9950EB103972791D73DF7D757C69EF8690D",
+      "byte_equal_raw": true
+    },
+    "development_audit": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_AUDIT.json",
+      "bytes": 103065,
+      "sha256": "2B7E9F2F41020DE86BDB8290FD467A08BD78DBCB23043B6911C777576B46287B",
+      "byte_equal_raw": true
+    }
+  },
+  "development_integrity": {
+    "status": "VALID_DEVELOPMENT_COMPLETE_NO_PASSER_NO_BROAD_HEADROOM",
+    "complete_event_dates": 514,
+    "complete_state_rows": 4112,
+    "nonzero_signal_population": 4067,
+    "accepted_trade_rows": 1365,
+    "improvement_path_rows": 24402,
+    "horizons_per_nonzero_signal": 6,
+    "horizons_m1": [
+      1,
+      5,
+      10,
+      20,
+      25,
+      30
+    ],
+    "all_numeric_values_finite": true,
+    "actual_price_plus_swap_identity_max_abs_error": 0.0,
+    "stress_actual_minus_extra_spread_identity_max_abs_error": 2.1337098754514727e-16,
+    "actual_balance_and_recorded_net_identities_passed": true,
+    "rollover_boundaries": 0,
+    "both_frozen_variants_complete": true,
+    "mandatory_improvement_audit_complete": true
+  },
+  "variant_results": {
+    "LONDON_FIX_PRE_FLOW_CONTINUATION": {
+      "signals": 2033,
+      "accepted_starts": 575,
+      "accepted_starts_per_active_date": 1.118677042802,
+      "actual_net_usd": -81.74,
+      "stressed_net_usd": -140.01,
+      "ending_actual_balance_usd": 18.26,
+      "ending_stressed_balance_usd": -40.01,
+      "actual_closed_balance_drawdown_pct": 82.152074647608,
+      "epoch_2024_actual_stressed_usd": [
+        -78.5325,
+        -131.9725
+      ],
+      "epoch_2025_actual_stressed_usd": [
+        -3.2075,
+        -8.0375
+      ],
+      "minimum_lot_blocks": 1439,
+      "aggregate_risk_blocks": 19,
+      "hard_stop_exits": 26,
+      "time_exits": 549,
+      "gross_movement_usd": -23.47,
+      "observed_spread_burden_usd": 58.27,
+      "symbol_breadth": 4,
+      "both_directions": true,
+      "development_gates_passed": false
+    },
+    "LONDON_FIX_POST_PRESSURE_REVERSAL": {
+      "signals": 2034,
+      "accepted_starts": 790,
+      "accepted_starts_per_active_date": 1.536964980545,
+      "actual_net_usd": -82.88,
+      "stressed_net_usd": -170.39,
+      "ending_actual_balance_usd": 17.12,
+      "ending_stressed_balance_usd": -70.39,
+      "actual_closed_balance_drawdown_pct": 83.788262588479,
+      "epoch_2024_actual_stressed_usd": [
+        -73.8775,
+        -155.7875
+      ],
+      "epoch_2025_actual_stressed_usd": [
+        -9.0025,
+        -14.6025
+      ],
+      "minimum_lot_blocks": 1238,
+      "aggregate_risk_blocks": 6,
+      "hard_stop_exits": 104,
+      "time_exits": 686,
+      "gross_movement_usd": 4.63,
+      "observed_spread_burden_usd": 87.51,
+      "symbol_breadth": 4,
+      "both_directions": true,
+      "development_gates_passed": false
+    }
+  },
+  "failed_gate_interpretation": {
+    "complete_passer_count": 0,
+    "both_variants_failed_both_year_actual_and_stressed_positivity": true,
+    "both_variants_failed_actual_and_stressed_profit_gates": true,
+    "both_variants_failed_drawdown_gate": true,
+    "both_variants_failed_three_starts_per_active_date": true,
+    "both_variants_failed_150_starts_in_each_year": true,
+    "both_variants_passed_four_pair_and_both_direction_breadth_only": true,
+    "capital_depletion_increased_later_minimum_lot_blocks": true,
+    "capital_depletion_does_not_rescue_the_mechanism": "PRE raw gross movement was already negative; POST raw gross was only +4.63 USD and was overwhelmed by the exact observed spread burden before stress"
+  },
+  "improvement_potential_audit": {
+    "status": "VALID_MANDATORY_IMPROVEMENT_POTENTIAL_AUDIT_COMPLETE",
+    "pre_mean_raw_and_stressed_r_by_horizon": {
+      "1": [
+        -0.006538827397,
+        -0.235396960303
+      ],
+      "5": [
+        -0.013393086897,
+        -0.242097216826
+      ],
+      "10": [
+        -0.010400003333,
+        -0.239774069229
+      ],
+      "20": [
+        -0.006280399498,
+        -0.235675472356
+      ],
+      "25": [
+        -0.011568564172,
+        -0.240935395548
+      ],
+      "30": [
+        -0.012254776706,
+        -0.242191211198
+      ]
+    },
+    "post_mean_raw_and_stressed_r_by_horizon": {
+      "1": [
+        0.002204416061,
+        -0.228235811322
+      ],
+      "5": [
+        0.003703043576,
+        -0.227132074474
+      ],
+      "10": [
+        0.002358131405,
+        -0.228616400554
+      ],
+      "20": [
+        -0.01642363402,
+        -0.247619417093
+      ],
+      "25": [
+        -0.035859131068,
+        -0.267361198617
+      ],
+      "30": [
+        -0.020172858407,
+        -0.251806899833
+      ]
+    },
+    "broad_horizon_evaluations": 10,
+    "qualifying_symbols_at_any_broad_horizon": 0,
+    "both_year_gate_passes": 0,
+    "three_pair_gate_passes": 0,
+    "both_direction_gate_passes": 0,
+    "ordinary_and_month_end_gate_passes": 0,
+    "broad_headroom": false,
+    "bounded_successor_seed": null,
+    "interpretation": "PRE is raw-negative at every horizon. POST has only +0.0022R to +0.0037R raw mean at 1/5/10 M1, while actual and doubled-spread means are about -0.11R and -0.23R; it turns raw-negative by 20/25/30 M1. No year, three-pair, both-direction or ordinary/month-end broad gate passes. Neither nearby timing nor cost/capacity repair is authorized inside V1."
+  },
+  "raw_output_bundle": {
+    "files": 5,
+    "bytes": 13403417,
+    "ordered_manifest_sha256": "74E909478E9B9F6477068167DFCA6AAC1590BCE3646E1AE69BA9A98A738C20B5",
+    "result": {
+      "bytes": 11018,
+      "sha256": "9B62D2EDBDE653D40C310A1CFE1FF9950EB103972791D73DF7D757C69EF8690D"
+    },
+    "audit": {
+      "bytes": 103065,
+      "sha256": "2B7E9F2F41020DE86BDB8290FD467A08BD78DBCB23043B6911C777576B46287B"
+    },
+    "states": {
+      "bytes": 1589791,
+      "sha256": "2842970C7C7F91177839D18484237939631FAF3046C2078451236FD9B966E517"
+    },
+    "trades": {
+      "bytes": 635199,
+      "sha256": "E1781221E9EE469451B448DE1A2E4E3F79CD3D7CBA9A4A5B5E2A25FC5F093461"
+    },
+    "improvement_paths": {
+      "bytes": 11064344,
+      "sha256": "B638029172B7C9C60AF292C3B9E8B58A7E35CC17346D3C36370F716F1BDDA949"
+    }
+  },
+  "closure_decision": {
+    "locked_2026_authorized": false,
+    "EA_or_native_authorized": false,
+    "reason": "zero complete development passer and zero broad headroom",
+    "family_bundle_immutable": true,
+    "forbidden_inside_v1": "clock, window, threshold, pair, direction, ATR, stop, hold, risk, sizing, month-end or subgroup rescue",
+    "successor_opened": false,
+    "user_pause_direction": "finish and close the currently open family, then stop temporarily",
+    "next_family_may_open_only_after_new_user_continuation": true
+  },
+  "isolation_and_safety": {
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "candidate_process_owners": 0,
+    "live_master_pid_33388_remained_present": true,
+    "live_changed": false,
+    "optimization_changed": false,
+    "V8_benchmark_or_live_authority_changed": false
+  },
+  "post_closure_storage_cleanup": {
+    "target": "lab/runtime/independent-london-fx-fix-pressure-adapter-challenge-v1-portable/",
+    "target_resolved_exactly_inside_workspace_runtime_root": true,
+    "process_owners_before_cleanup": 0,
+    "files": 8237,
+    "directories_including_root": 913,
+    "bytes": 547324203,
+    "action": "moved exact closed ignored runtime to Windows Recycle Bin",
+    "recoverable": true,
+    "whole_recycle_bin_not_emptied": true,
+    "canonical_development_input_preserved": true,
+    "raw_result_tapes_preserved": true,
+    "tracked_source_and_durable_evidence_preserved": true,
+    "live_master_untouched": true
+  }
+}

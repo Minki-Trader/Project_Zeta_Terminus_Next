@@ -1,0 +1,293 @@
+{
+  "schema": "zeta-next-independent-london-fx-fix-pressure-adapter-challenge-v1-development-result",
+  "status": "VALID_DEVELOPMENT_COMPLETE_NO_PASSER_NO_BROAD_HEADROOM",
+  "family": "independent-london-fx-fix-pressure-adapter-challenge-v1",
+  "architecture": "Python adapter + EA",
+  "period": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+  "authorities": {
+    "selection": {
+      "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_009_AUTONOMOUS_METHOD_SELECTION_V1.json",
+      "bytes": 8784,
+      "sha256": "5830CBF6257C656BBF235622FD91E50F8725D9C046E21E5049380F070ECAD2E6"
+    },
+    "contract": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 18309,
+      "sha256": "F1F2CBCCEA4FE5E870FF0863BF58BEAE98F685AFAE3B8646FEB336C0EF297708"
+    },
+    "declaration": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 11207,
+      "sha256": "8FDB21D7855B0C98D15A3B6979A3ECF63CF84A1BA876B33BF425455871633401"
+    },
+    "runtime_source": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_RUNTIME_SOURCE_ENGINEERING_RECEIPT.json",
+      "bytes": 9539,
+      "sha256": "8C0E2F2E5FB46A9CBAB692841CFAEC21734C79888C7AEE2AEBD742C38D6F0EA2"
+    },
+    "history_correction": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_M1_HISTORY_SYNCHRONIZATION_CORRECTION.json",
+      "bytes": 5570,
+      "sha256": "EC13141EE2821BBEAF4501A5693E9785492C34BD88286128F03A2022C2296CE6"
+    },
+    "development_source": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_DEVELOPMENT_SOURCE_RECEIPT.json",
+      "bytes": 8422,
+      "sha256": "72B8FDD1EEF16D2400FDE226A394CBEB98FE029D2E1D0DEF327DBF0F1BF5FD8E"
+    },
+    "requirements": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/adapter/requirements-adapter.txt",
+      "bytes": 58,
+      "sha256": "A8312E14ACD23C9B07977AE03A4A6CC747A6B6CC07B2C6D5ABCD3B824C4F3F33"
+    },
+    "v8": {
+      "path": "optimization/campaigns/dd20-paired-clean-requal-mt5-v2/evidence/DD20_PAIRED_CLEAN_REQUAL_MT5_V2_VALID_NONCONFIRMATION_V1.json",
+      "bytes": 8423,
+      "sha256": "693969C5C7988B5C504DD5A29D533770DBB15F7D80C430484C1861DB2CC5EA46"
+    }
+  },
+  "implementation_freeze": {
+    "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+    "bytes": 10133,
+    "sha256": "98F3A74855F9FED7914FDFE2BEB245401922FB0F034E9F9B6910C53D973726EF"
+  },
+  "source_loading": {
+    "AUDUSD": {
+      "source_rows": 1116527,
+      "event_window_rows": 48153,
+      "locked_rows": 0,
+      "first_event_time_utc": "2023-01-02T15:34:00Z",
+      "last_event_time_utc": "2025-12-31T16:35:00Z"
+    },
+    "EURUSD": {
+      "source_rows": 1117273,
+      "event_window_rows": 48153,
+      "locked_rows": 0,
+      "first_event_time_utc": "2023-01-02T15:34:00Z",
+      "last_event_time_utc": "2025-12-31T16:35:00Z"
+    },
+    "GBPUSD": {
+      "source_rows": 1116607,
+      "event_window_rows": 48152,
+      "locked_rows": 0,
+      "first_event_time_utc": "2023-01-02T15:34:00Z",
+      "last_event_time_utc": "2025-12-31T16:35:00Z"
+    },
+    "NZDUSD": {
+      "source_rows": 1113327,
+      "event_window_rows": 48153,
+      "locked_rows": 0,
+      "first_event_time_utc": "2023-01-02T15:34:00Z",
+      "last_event_time_utc": "2025-12-31T16:35:00Z"
+    }
+  },
+  "event_geometry": {
+    "timezone": "Europe/London",
+    "exact_minute_interval": "15:34..16:35",
+    "rows_per_symbol_per_event": 62,
+    "complete_dates_by_london_year": {
+      "2023": 258,
+      "2024": 256,
+      "2025": 258
+    },
+    "common_complete_dates_total": 772,
+    "development_complete_dates": 514,
+    "development_month_end_dates": 24,
+    "development_quarter_end_dates": 8,
+    "symbol_local_window_incomplete_date_counts": {
+      "AUDUSD": 4,
+      "EURUSD": 4,
+      "GBPUSD": 5,
+      "NZDUSD": 4
+    }
+  },
+  "variant_results": [
+    {
+      "variant": "LONDON_FIX_PRE_FLOW_CONTINUATION",
+      "opportunity_states": 2056,
+      "signal_count": 2033,
+      "equality_no_direction": 23,
+      "accepted_starts": 575,
+      "blocked_signals": 1458,
+      "block_counts": {
+        "AGGREGATE_INITIAL_STOP_RISK": 19,
+        "MINIMUM_LOT_POSITION_RISK": 1439
+      },
+      "exit_counts": {
+        "HARD_STOP": 26,
+        "TIME_EXIT": 549
+      },
+      "portfolio_active_dates": 514,
+      "accepted_starts_per_portfolio_active_date": 1.118677042802,
+      "initial_actual_balance_usd": 100.0,
+      "initial_stressed_balance_usd": 100.0,
+      "actual_net_usd": -81.74,
+      "stressed_net_usd": -140.01,
+      "ending_actual_balance_usd": 18.26,
+      "ending_stressed_balance_usd": -40.01,
+      "actual_closed_balance_peak_usd": 100.74,
+      "actual_closed_balance_drawdown_usd": 82.76,
+      "actual_closed_balance_drawdown_pct": 82.152074647608,
+      "robust_recovery": -1.691759304012,
+      "robust_recovery_unbounded_positive": false,
+      "epoch_metrics": {
+        "2024": {
+          "starts": 536,
+          "closed_trades": 536,
+          "actual_net_usd": -78.5325,
+          "stressed_net_usd": -131.9725
+        },
+        "2025": {
+          "starts": 39,
+          "closed_trades": 39,
+          "actual_net_usd": -3.2075,
+          "stressed_net_usd": -8.0375
+        }
+      },
+      "symbol_breadth": 4,
+      "accepted_symbols": [
+        "AUDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "NZDUSD"
+      ],
+      "direction_breadth": [
+        "LONG",
+        "SHORT"
+      ],
+      "gross_movement_usd": -23.47,
+      "observed_spread_burden_usd": 58.27,
+      "swap_usd": 0.0,
+      "actual_price_pnl_usd": -81.74,
+      "total_rollover_boundaries": 0,
+      "median_held_m1_bars": 10.0,
+      "gates": {
+        "both_2024_2025_actual_positive": false,
+        "both_2024_2025_stressed_positive": false,
+        "development_actual_strictly_above_149_97": false,
+        "development_stressed_strictly_above_127_786": false,
+        "actual_closed_balance_drawdown_at_most_37_39_pct": false,
+        "accepted_starts_per_active_date_at_least_3": false,
+        "at_least_150_starts_in_each_development_year": false,
+        "symbol_breadth_at_least_3": true,
+        "both_directions": true,
+        "passed": false
+      }
+    },
+    {
+      "variant": "LONDON_FIX_POST_PRESSURE_REVERSAL",
+      "opportunity_states": 2056,
+      "signal_count": 2034,
+      "equality_no_direction": 22,
+      "accepted_starts": 790,
+      "blocked_signals": 1244,
+      "block_counts": {
+        "AGGREGATE_INITIAL_STOP_RISK": 6,
+        "MINIMUM_LOT_POSITION_RISK": 1238
+      },
+      "exit_counts": {
+        "HARD_STOP": 104,
+        "TIME_EXIT": 686
+      },
+      "portfolio_active_dates": 514,
+      "accepted_starts_per_portfolio_active_date": 1.536964980545,
+      "initial_actual_balance_usd": 100.0,
+      "initial_stressed_balance_usd": 100.0,
+      "actual_net_usd": -82.879999999999,
+      "stressed_net_usd": -170.389999999999,
+      "ending_actual_balance_usd": 17.120000000001,
+      "ending_stressed_balance_usd": -70.389999999999,
+      "actual_closed_balance_peak_usd": 105.6025,
+      "actual_closed_balance_drawdown_usd": 88.482499999999,
+      "actual_closed_balance_drawdown_pct": 83.788262588479,
+      "robust_recovery": -1.925691520922,
+      "robust_recovery_unbounded_positive": false,
+      "epoch_metrics": {
+        "2024": {
+          "starts": 744,
+          "closed_trades": 744,
+          "actual_net_usd": -73.877499999999,
+          "stressed_net_usd": -155.787499999999
+        },
+        "2025": {
+          "starts": 46,
+          "closed_trades": 46,
+          "actual_net_usd": -9.0025,
+          "stressed_net_usd": -14.6025
+        }
+      },
+      "symbol_breadth": 4,
+      "accepted_symbols": [
+        "AUDUSD",
+        "EURUSD",
+        "GBPUSD",
+        "NZDUSD"
+      ],
+      "direction_breadth": [
+        "LONG",
+        "SHORT"
+      ],
+      "gross_movement_usd": 4.63,
+      "observed_spread_burden_usd": 87.51,
+      "swap_usd": 0.0,
+      "actual_price_pnl_usd": -82.879999999999,
+      "total_rollover_boundaries": 0,
+      "median_held_m1_bars": 25.0,
+      "gates": {
+        "both_2024_2025_actual_positive": false,
+        "both_2024_2025_stressed_positive": false,
+        "development_actual_strictly_above_149_97": false,
+        "development_stressed_strictly_above_127_786": false,
+        "actual_closed_balance_drawdown_at_most_37_39_pct": false,
+        "accepted_starts_per_active_date_at_least_3": false,
+        "at_least_150_starts_in_each_development_year": false,
+        "symbol_breadth_at_least_3": true,
+        "both_directions": true,
+        "passed": false
+      }
+    }
+  ],
+  "complete_passer_count": 0,
+  "complete_passers_ranked": [],
+  "selected_variant": null,
+  "mandatory_improvement_audit_status": "VALID_MANDATORY_IMPROVEMENT_POTENTIAL_AUDIT_COMPLETE",
+  "broad_headroom": false,
+  "bounded_successor_seed": null,
+  "raw_outputs": {
+    "audit": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/output/development-audit.json",
+      "bytes": 103065,
+      "sha256": "2B7E9F2F41020DE86BDB8290FD467A08BD78DBCB23043B6911C777576B46287B"
+    },
+    "states": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/output/signal-states.csv",
+      "bytes": 1589791,
+      "sha256": "2842970C7C7F91177839D18484237939631FAF3046C2078451236FD9B966E517"
+    },
+    "trades": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/output/trades.csv",
+      "bytes": 635199,
+      "sha256": "E1781221E9EE469451B448DE1A2E4E3F79CD3D7CBA9A4A5B5E2A25FC5F093461"
+    },
+    "improvement_paths": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/output/improvement-paths.csv",
+      "bytes": 11064344,
+      "sha256": "B638029172B7C9C60AF292C3B9E8B58A7E35CC17346D3C36370F716F1BDDA949"
+    }
+  },
+  "integrity": {
+    "both_frozen_variants_complete": true,
+    "state_rows": 4112,
+    "trade_rows": 1365,
+    "improvement_path_rows": 24402,
+    "expected_improvement_path_rows": 24402,
+    "actual_balance_pnl_stress_and_spread_identities_passed": true,
+    "rollover_boundaries": 0,
+    "locked_2026_rows_loaded": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "live_changed": false,
+    "optimization_changed": false
+  },
+  "next_authorized_action": "close V1 before locked 2026, EA and MT5, then recompare the complete autonomous method map"
+}
