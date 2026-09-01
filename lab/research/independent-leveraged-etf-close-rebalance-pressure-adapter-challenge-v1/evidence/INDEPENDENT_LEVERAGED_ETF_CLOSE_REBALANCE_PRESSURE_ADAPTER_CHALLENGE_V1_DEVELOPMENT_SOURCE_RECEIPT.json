@@ -1,0 +1,111 @@
+{
+  "schema": "zeta-next-independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1-development-source-receipt",
+  "recorded_at_utc": "2026-09-01T02:30:46.8551623Z",
+  "status": "COMPLETE_FRESH_ORIGINAL_BROKER_DEVELOPMENT_SOURCE_AND_BYTE_EQUAL_TARGET",
+  "family": "independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1",
+  "source_correction_authority": {
+    "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LEVERAGED_ETF_CLOSE_REBALANCE_PRESSURE_ADAPTER_CHALLENGE_V1_SOURCE_CANONICALIZATION_CORRECTION.json",
+    "bytes": 7840,
+    "sha256": "24A875B43D5CB58FF34A9B3F03DA720D4C65AE2D85BD67324FA262AB29AC9024",
+    "commit": "5b3cd1648d0f7cd535931572adb7de820c559f88",
+    "commit_equal_origin_main_before_acquisition": true
+  },
+  "external_acquisition": {
+    "raw_receipt": {
+      "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/EXTERNAL_DEVELOPMENT_ACQUISITION_RECEIPT.json",
+      "bytes": 16510,
+      "sha256": "BE5B134375B849D600698183BAC83964BD4FAFBA4EE898479E97D32BE65A0692",
+      "status": "COMPLETE_FRESH_DEDICATED_PORTABLE_DEVELOPMENT_ACQUISITION"
+    },
+    "terminal": {
+      "build": 6140,
+      "version_date": "21 Aug 2026",
+      "bytes": 121845920,
+      "sha256": "7B3AAEDFD3A3998F2138D399F601F46ED49DDBC9762697CE1170F8B325055B05",
+      "connected_original_broker": true,
+      "candidate_portable_path_matched": true
+    },
+    "request": {
+      "timeframe": "M1",
+      "start_inclusive": "2023-07-01T00:00:00Z",
+      "end_exclusive": "2026-01-01T00:00:00Z",
+      "monthly_batches_per_symbol": 30,
+      "symbols": [
+        "QQQ",
+        "TQQQ"
+      ]
+    },
+    "outputs": {
+      "QQQ": {
+        "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/QQQ_M1_DEVELOPMENT.csv",
+        "bytes": 24195200,
+        "rows": 242538,
+        "first_utc": "2023-07-03T16:30:00Z",
+        "last_utc": "2025-12-31T22:59:00Z",
+        "sha256": "1E02B68F542A89FF94DE3B5C0B91C728D2F6A6562920D8C2DFD02AD88F8B6EF4",
+        "strictly_increasing_unique_timestamps": true,
+        "ohlc_and_spread_integrity": true
+      },
+      "TQQQ": {
+        "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/TQQQ_M1_DEVELOPMENT.csv",
+        "bytes": 23124238,
+        "rows": 242516,
+        "first_utc": "2023-07-03T16:30:00Z",
+        "last_utc": "2025-12-31T22:59:00Z",
+        "sha256": "8CE67D515A94546F403995C50227B1B13FFD925B35C7968FF464989E37638F4C",
+        "strictly_increasing_unique_timestamps": true,
+        "ohlc_and_spread_integrity": true
+      }
+    },
+    "symbol_specifications": {
+      "QQQ": {
+        "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/QQQ_SYMBOL_SPEC.json",
+        "bytes": 535,
+        "sha256": "8EE242F4460D9D743D94D38A273299FA67D9E827709882F677DB905D8D374FDB"
+      },
+      "TQQQ": {
+        "path": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/external/TQQQ_SYMBOL_SPEC.json",
+        "bytes": 535,
+        "sha256": "3EF090872A9EBD98D1578C4AC3E03C40EC99C114204D0B22498B8111F95ECC1C"
+      }
+    },
+    "locked_2026_external_values_requested_acquired_or_opened": false,
+    "existing_runtime_price_or_history_cache_reads": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0
+  },
+  "target_materialization": {
+    "symbol": "US100",
+    "source": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+    "destination": "lab/artifacts/raw/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/input/target/US100_M1.parquet",
+    "bytes": 21213599,
+    "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2",
+    "byte_equal": true,
+    "copy_processes": 1,
+    "price_spread_volume_return_label_or_candidate_outcome_values_opened_by_copy": false,
+    "locked_target_values_opened_by_copy": false
+  },
+  "atomicity_and_isolation": {
+    "both_external_outputs_committed_only_after_both_symbols_completed": true,
+    "staging_outputs_remaining": 0,
+    "candidate_terminal_PID_36752_stopped_after_acquisition": true,
+    "candidate_process_owner_after_acquisition": false,
+    "master_terminal_or_files_used": false,
+    "other_family_price_history_or_runtime_executed": false,
+    "live_PID_33388_unchanged": true
+  },
+  "preimplementation_attestation": {
+    "external_returns_or_rank_thresholds": 0,
+    "common_normal_days": 0,
+    "candidate_directions": 0,
+    "target_future_paths_opened": 0,
+    "candidate_lifecycles": 0,
+    "candidate_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_values_opened": false,
+    "adapter_source_files": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0
+  },
+  "next_authorized_action": "implement the complete family-owned Python adapter against only these byte-pinned development external files and byte-equal target copy, run an abort-before-write outcome-free structural/risk-feasibility precheck, and freeze implementation before any future US100 path, lifecycle, economic metric or improvement-audit value opens"
+}
