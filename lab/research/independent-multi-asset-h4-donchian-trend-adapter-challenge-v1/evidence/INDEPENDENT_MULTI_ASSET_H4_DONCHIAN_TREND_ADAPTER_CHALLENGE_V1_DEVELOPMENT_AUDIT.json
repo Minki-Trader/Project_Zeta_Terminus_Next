@@ -1,0 +1,1226 @@
+{
+  "schema": "zeta-next-independent-multi-asset-h4-donchian-trend-adapter-challenge-v1-development-improvement-audit",
+  "family": "independent-multi-asset-h4-donchian-trend-adapter-challenge-v1",
+  "status": "COMPLETE_SAME_PROCESS_IMPROVEMENT_POTENTIAL_AUDIT",
+  "path_horizons_h4": [
+    1,
+    3,
+    6,
+    12
+  ],
+  "path_rows": 6416,
+  "variant_signal_overlap": {
+    "shared": 684,
+    "unique_MULTI_ASSET_DONCHIAN_120_60": 236,
+    "unique_MULTI_ASSET_DONCHIAN_240_120": 0
+  },
+  "variants": {
+    "MULTI_ASSET_DONCHIAN_120_60": {
+      "signals": 920,
+      "admission_counts": {
+        "ACCEPTED": 67,
+        "BLOCKED": 853
+      },
+      "block_counts": {
+        "AGGREGATE_INITIAL_STOP_RISK": 47,
+        "ALREADY_OPEN": 320,
+        "MINIMUM_LOT_RISK": 486
+      },
+      "exit_counts": {
+        "CHANNEL_EXIT": 19,
+        "HARD_STOP": 48
+      },
+      "realized_actual_r_mean": -0.412402433215,
+      "realized_stressed_r_mean": -0.422465677856,
+      "gross_movement_usd": -65.65069,
+      "observed_spread_burden_usd": 1.8118,
+      "swap_usd": -6.967,
+      "horizon_paths": {
+        "1": {
+          "overall": {
+            "count": 920,
+            "mean_raw_gross_close_r": 0.036456071672,
+            "mean_actual_close_r": 0.026685878542,
+            "mean_stressed_close_r": 0.013243692914,
+            "mean_mfe_r": 0.292662574306,
+            "mean_mae_r": 0.252658473313,
+            "stressed_positive_fraction": 0.5
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 587,
+              "mean_raw_gross_close_r": 0.046466011374,
+              "mean_actual_close_r": 0.036723123763,
+              "mean_stressed_close_r": 0.022584245106,
+              "mean_mfe_r": 0.302293131386,
+              "mean_mae_r": 0.251597361205,
+              "stressed_positive_fraction": 0.529812606474
+            },
+            "2025": {
+              "count": 333,
+              "mean_raw_gross_close_r": 0.018810922708,
+              "mean_actual_close_r": 0.008992596426,
+              "mean_stressed_close_r": -0.003221484673,
+              "mean_mfe_r": 0.275686186899,
+              "mean_mae_r": 0.254528962225,
+              "stressed_positive_fraction": 0.447447447447
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 103,
+              "mean_raw_gross_close_r": 0.042969089336,
+              "mean_actual_close_r": 0.019710671636,
+              "mean_stressed_close_r": -0.002300763731,
+              "mean_mfe_r": 0.300335995126,
+              "mean_mae_r": 0.272961686706,
+              "stressed_positive_fraction": 0.47572815534
+            },
+            "EURUSD": {
+              "count": 110,
+              "mean_raw_gross_close_r": 0.036070055159,
+              "mean_actual_close_r": 0.019522228975,
+              "mean_stressed_close_r": 0.004097655628,
+              "mean_mfe_r": 0.32781526293,
+              "mean_mae_r": 0.254295684208,
+              "stressed_positive_fraction": 0.427272727273
+            },
+            "GBPUSD": {
+              "count": 121,
+              "mean_raw_gross_close_r": 0.049689800256,
+              "mean_actual_close_r": 0.034622778971,
+              "mean_stressed_close_r": 0.020424065521,
+              "mean_mfe_r": 0.307633974309,
+              "mean_mae_r": 0.248524885115,
+              "stressed_positive_fraction": 0.479338842975
+            },
+            "NZDUSD": {
+              "count": 141,
+              "mean_raw_gross_close_r": 0.026021846649,
+              "mean_actual_close_r": -0.000865386134,
+              "mean_stressed_close_r": -0.027026685972,
+              "mean_mfe_r": 0.286298577991,
+              "mean_mae_r": 0.257942584141,
+              "stressed_positive_fraction": 0.468085106383
+            },
+            "US100": {
+              "count": 150,
+              "mean_raw_gross_close_r": 0.04624422813,
+              "mean_actual_close_r": 0.036253535853,
+              "mean_stressed_close_r": 0.031398383955,
+              "mean_mfe_r": 0.287536171416,
+              "mean_mae_r": 0.23700731284,
+              "stressed_positive_fraction": 0.566666666667
+            },
+            "US30": {
+              "count": 118,
+              "mean_raw_gross_close_r": 0.03433468608,
+              "mean_actual_close_r": 0.075594301768,
+              "mean_stressed_close_r": 0.07283555589,
+              "mean_mfe_r": 0.275439076682,
+              "mean_mae_r": 0.244095911077,
+              "stressed_positive_fraction": 0.576271186441
+            },
+            "US500": {
+              "count": 177,
+              "mean_raw_gross_close_r": 0.025290340588,
+              "mean_actual_close_r": 0.011004910146,
+              "mean_stressed_close_r": 3.1252157e-05,
+              "mean_mfe_r": 0.277012625943,
+              "mean_mae_r": 0.257414613326,
+              "stressed_positive_fraction": 0.491525423729
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 475,
+              "mean_raw_gross_close_r": 0.038052775742,
+              "mean_actual_close_r": 0.017357855108,
+              "mean_stressed_close_r": -0.002369868083,
+              "mean_mfe_r": 0.304391782754,
+              "mean_mae_r": 0.257955777803,
+              "stressed_positive_fraction": 0.463157894737
+            },
+            "equity_index": {
+              "count": 445,
+              "mean_raw_gross_close_r": 0.034751724632,
+              "mean_actual_close_r": 0.036642757488,
+              "mean_stressed_close_r": 0.029909853528,
+              "mean_mfe_r": 0.280142632703,
+              "mean_mae_r": 0.247004047172,
+              "stressed_positive_fraction": 0.539325842697
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 600,
+              "mean_raw_gross_close_r": 0.031791599104,
+              "mean_actual_close_r": 0.026011497104,
+              "mean_stressed_close_r": 0.014108757579,
+              "mean_mfe_r": 0.271657894617,
+              "mean_mae_r": 0.246564605365,
+              "stressed_positive_fraction": 0.518333333333
+            },
+            "SHORT": {
+              "count": 320,
+              "mean_raw_gross_close_r": 0.045201957739,
+              "mean_actual_close_r": 0.027950343738,
+              "mean_stressed_close_r": 0.011621696666,
+              "mean_mfe_r": 0.332046348721,
+              "mean_mae_r": 0.264084475715,
+              "stressed_positive_fraction": 0.465625
+            }
+          }
+        },
+        "3": {
+          "overall": {
+            "count": 920,
+            "mean_raw_gross_close_r": 0.031118095428,
+            "mean_actual_close_r": 0.02109569406,
+            "mean_stressed_close_r": 0.007492314463,
+            "mean_mfe_r": 0.490013491461,
+            "mean_mae_r": 0.43713049343,
+            "stressed_positive_fraction": 0.477173913043
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 587,
+              "mean_raw_gross_close_r": 0.033874147662,
+              "mean_actual_close_r": 0.024480753131,
+              "mean_stressed_close_r": 0.010115933094,
+              "mean_mfe_r": 0.484244220479,
+              "mean_mae_r": 0.426025380589,
+              "stressed_positive_fraction": 0.504258943782
+            },
+            "2025": {
+              "count": 333,
+              "mean_raw_gross_close_r": 0.026259829178,
+              "mean_actual_close_r": 0.01512863798,
+              "mean_stressed_close_r": 0.002867497237,
+              "mean_mfe_r": 0.500183347517,
+              "mean_mae_r": 0.456706172822,
+              "stressed_positive_fraction": 0.429429429429
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 103,
+              "mean_raw_gross_close_r": 0.01841857507,
+              "mean_actual_close_r": -0.007022250652,
+              "mean_stressed_close_r": -0.029410087615,
+              "mean_mfe_r": 0.509023783584,
+              "mean_mae_r": 0.459534754821,
+              "stressed_positive_fraction": 0.407766990291
+            },
+            "EURUSD": {
+              "count": 110,
+              "mean_raw_gross_close_r": 0.037163879656,
+              "mean_actual_close_r": 0.018372321407,
+              "mean_stressed_close_r": 0.002707629745,
+              "mean_mfe_r": 0.49934021506,
+              "mean_mae_r": 0.405544225407,
+              "stressed_positive_fraction": 0.463636363636
+            },
+            "GBPUSD": {
+              "count": 121,
+              "mean_raw_gross_close_r": 0.051238291727,
+              "mean_actual_close_r": 0.034088253864,
+              "mean_stressed_close_r": 0.019637884175,
+              "mean_mfe_r": 0.501205176754,
+              "mean_mae_r": 0.392286928807,
+              "stressed_positive_fraction": 0.438016528926
+            },
+            "NZDUSD": {
+              "count": 141,
+              "mean_raw_gross_close_r": -0.018747269009,
+              "mean_actual_close_r": -0.047636968788,
+              "mean_stressed_close_r": -0.073993505478,
+              "mean_mfe_r": 0.481098426204,
+              "mean_mae_r": 0.490124420364,
+              "stressed_positive_fraction": 0.439716312057
+            },
+            "US100": {
+              "count": 150,
+              "mean_raw_gross_close_r": 0.07746538871,
+              "mean_actual_close_r": 0.060715965545,
+              "mean_stressed_close_r": 0.055796947363,
+              "mean_mfe_r": 0.522010012448,
+              "mean_mae_r": 0.427381657231,
+              "stressed_positive_fraction": 0.546666666667
+            },
+            "US30": {
+              "count": 118,
+              "mean_raw_gross_close_r": 0.056988312643,
+              "mean_actual_close_r": 0.121713090428,
+              "mean_stressed_close_r": 0.118886486168,
+              "mean_mfe_r": 0.44902497109,
+              "mean_mae_r": 0.390901205111,
+              "stressed_positive_fraction": 0.550847457627
+            },
+            "US500": {
+              "count": 177,
+              "mean_raw_gross_close_r": 0.004195538035,
+              "mean_actual_close_r": -0.015632941375,
+              "mean_stressed_close_r": -0.026649254952,
+              "mean_mfe_r": 0.472815739213,
+              "mean_mae_r": 0.471244389659,
+              "stressed_positive_fraction": 0.474576271186
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 475,
+              "mean_raw_gross_close_r": 0.020087596554,
+              "mean_actual_close_r": -0.002725200724,
+              "mean_stressed_close_r": -0.02271221061,
+              "mean_mfe_r": 0.49650016389,
+              "mean_mae_r": 0.438981486733,
+              "stressed_positive_fraction": 0.437894736842
+            },
+            "equity_index": {
+              "count": 445,
+              "mean_raw_gross_close_r": 0.04289222344,
+              "mean_actual_close_r": 0.046522491863,
+              "mean_stressed_close_r": 0.039733099654,
+              "mean_mfe_r": 0.483089515273,
+              "mean_mae_r": 0.435154714061,
+              "stressed_positive_fraction": 0.519101123596
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 600,
+              "mean_raw_gross_close_r": 0.025660597584,
+              "mean_actual_close_r": 0.021127425097,
+              "mean_stressed_close_r": 0.009224685572,
+              "mean_mfe_r": 0.442060491976,
+              "mean_mae_r": 0.427245363084,
+              "stressed_positive_fraction": 0.491666666667
+            },
+            "SHORT": {
+              "count": 320,
+              "mean_raw_gross_close_r": 0.041350903886,
+              "mean_actual_close_r": 0.021036198365,
+              "mean_stressed_close_r": 0.004244118634,
+              "mean_mfe_r": 0.579925365495,
+              "mean_mae_r": 0.455665112829,
+              "stressed_positive_fraction": 0.45
+            }
+          }
+        },
+        "6": {
+          "overall": {
+            "count": 920,
+            "mean_raw_gross_close_r": -0.010799275298,
+            "mean_actual_close_r": -0.018299044773,
+            "mean_stressed_close_r": -0.031732622532,
+            "mean_mfe_r": 0.701746458916,
+            "mean_mae_r": 0.684194029292,
+            "stressed_positive_fraction": 0.482608695652
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 587,
+              "mean_raw_gross_close_r": 0.003713460169,
+              "mean_actual_close_r": -0.000510226278,
+              "mean_stressed_close_r": -0.014677012815,
+              "mean_mfe_r": 0.714970070544,
+              "mean_mae_r": 0.674772372781,
+              "stressed_positive_fraction": 0.49063032368
+            },
+            "2025": {
+              "count": 333,
+              "mean_raw_gross_close_r": -0.036381784965,
+              "mean_actual_close_r": -0.04965651161,
+              "mean_stressed_close_r": -0.061797616237,
+              "mean_mfe_r": 0.678436368748,
+              "mean_mae_r": 0.700802174553,
+              "stressed_positive_fraction": 0.468468468468
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 103,
+              "mean_raw_gross_close_r": 0.016550645369,
+              "mean_actual_close_r": -0.011398830742,
+              "mean_stressed_close_r": -0.033547223022,
+              "mean_mfe_r": 0.717768151419,
+              "mean_mae_r": 0.664085364457,
+              "stressed_positive_fraction": 0.485436893204
+            },
+            "EURUSD": {
+              "count": 110,
+              "mean_raw_gross_close_r": -0.022363016557,
+              "mean_actual_close_r": -0.044011449169,
+              "mean_stressed_close_r": -0.05940066257,
+              "mean_mfe_r": 0.705262414114,
+              "mean_mae_r": 0.612685070738,
+              "stressed_positive_fraction": 0.472727272727
+            },
+            "GBPUSD": {
+              "count": 121,
+              "mean_raw_gross_close_r": -0.026032113381,
+              "mean_actual_close_r": -0.044455971946,
+              "mean_stressed_close_r": -0.058534811542,
+              "mean_mfe_r": 0.651389533621,
+              "mean_mae_r": 0.590400911574,
+              "stressed_positive_fraction": 0.487603305785
+            },
+            "NZDUSD": {
+              "count": 141,
+              "mean_raw_gross_close_r": 0.008331974171,
+              "mean_actual_close_r": -0.022718735148,
+              "mean_stressed_close_r": -0.048869958023,
+              "mean_mfe_r": 0.65934607714,
+              "mean_mae_r": 0.669052801842,
+              "stressed_positive_fraction": 0.439716312057
+            },
+            "US100": {
+              "count": 150,
+              "mean_raw_gross_close_r": -0.005037506388,
+              "mean_actual_close_r": -0.034261281284,
+              "mean_stressed_close_r": -0.039127953146,
+              "mean_mfe_r": 0.772193762027,
+              "mean_mae_r": 0.769718056846,
+              "stressed_positive_fraction": 0.493333333333
+            },
+            "US30": {
+              "count": 118,
+              "mean_raw_gross_close_r": -0.001149758165,
+              "mean_actual_close_r": 0.119689631636,
+              "mean_stressed_close_r": 0.117038052116,
+              "mean_mfe_r": 0.712280562858,
+              "mean_mae_r": 0.704454686177,
+              "stressed_positive_fraction": 0.542372881356
+            },
+            "US500": {
+              "count": 177,
+              "mean_raw_gross_close_r": -0.035670865215,
+              "mean_actual_close_r": -0.063398035566,
+              "mean_stressed_close_r": -0.074420885737,
+              "mean_mfe_r": 0.691715569986,
+              "mean_mae_r": 0.73053129815,
+              "stressed_positive_fraction": 0.468926553672
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 475,
+              "mean_raw_gross_close_r": -0.005747984651,
+              "mean_actual_close_r": -0.030732322603,
+              "mean_stressed_close_r": -0.050448027646,
+              "mean_mfe_r": 0.680620874934,
+              "mean_mae_r": 0.634886538274,
+              "stressed_positive_fraction": 0.469473684211
+            },
+            "equity_index": {
+              "count": 445,
+              "mean_raw_gross_close_r": -0.016191102392,
+              "mean_actual_close_r": -0.005027568438,
+              "mean_stressed_close_r": -0.011755504714,
+              "mean_mfe_r": 0.72429623957,
+              "mean_mae_r": 0.736825620828,
+              "stressed_positive_fraction": 0.496629213483
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 600,
+              "mean_raw_gross_close_r": -0.059977743543,
+              "mean_actual_close_r": -0.058913730042,
+              "mean_stressed_close_r": -0.070816469567,
+              "mean_mfe_r": 0.624109249962,
+              "mean_mae_r": 0.676536661436,
+              "stressed_positive_fraction": 0.483333333333
+            },
+            "SHORT": {
+              "count": 320,
+              "mean_raw_gross_close_r": 0.081410352663,
+              "mean_actual_close_r": 0.057853490106,
+              "mean_stressed_close_r": 0.041549590658,
+              "mean_mfe_r": 0.847316225703,
+              "mean_mae_r": 0.698551594023,
+              "stressed_positive_fraction": 0.48125
+            }
+          }
+        },
+        "12": {
+          "overall": {
+            "count": 920,
+            "mean_raw_gross_close_r": -0.050048536621,
+            "mean_actual_close_r": -0.054379138428,
+            "mean_stressed_close_r": -0.067672420566,
+            "mean_mfe_r": 0.93353541642,
+            "mean_mae_r": 0.985958595559,
+            "stressed_positive_fraction": 0.486956521739
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 587,
+              "mean_raw_gross_close_r": -0.042532340753,
+              "mean_actual_close_r": -0.041508639487,
+              "mean_stressed_close_r": -0.055450070607,
+              "mean_mfe_r": 0.936061203533,
+              "mean_mae_r": 0.946562627149,
+              "stressed_positive_fraction": 0.485519591141
+            },
+            "2025": {
+              "count": 333,
+              "mean_raw_gross_close_r": -0.063297806813,
+              "mean_actual_close_r": -0.077066774699,
+              "mean_stressed_close_r": -0.089217523947,
+              "mean_mfe_r": 0.92908305295,
+              "mean_mae_r": 1.055404341676,
+              "stressed_positive_fraction": 0.489489489489
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 103,
+              "mean_raw_gross_close_r": -0.014081543973,
+              "mean_actual_close_r": -0.04643971178,
+              "mean_stressed_close_r": -0.068261637446,
+              "mean_mfe_r": 0.888296168149,
+              "mean_mae_r": 0.86356319571,
+              "stressed_positive_fraction": 0.417475728155
+            },
+            "EURUSD": {
+              "count": 110,
+              "mean_raw_gross_close_r": -0.227914876808,
+              "mean_actual_close_r": -0.254150199173,
+              "mean_stressed_close_r": -0.269835186679,
+              "mean_mfe_r": 0.870780356337,
+              "mean_mae_r": 1.012280390551,
+              "stressed_positive_fraction": 0.381818181818
+            },
+            "GBPUSD": {
+              "count": 121,
+              "mean_raw_gross_close_r": -0.05252512194,
+              "mean_actual_close_r": -0.075485096347,
+              "mean_stressed_close_r": -0.089511095776,
+              "mean_mfe_r": 0.927775313376,
+              "mean_mae_r": 0.961358980204,
+              "stressed_positive_fraction": 0.471074380165
+            },
+            "NZDUSD": {
+              "count": 141,
+              "mean_raw_gross_close_r": 0.034550557654,
+              "mean_actual_close_r": 0.000210730018,
+              "mean_stressed_close_r": -0.025152115345,
+              "mean_mfe_r": 0.864177314243,
+              "mean_mae_r": 0.899686560168,
+              "stressed_positive_fraction": 0.468085106383
+            },
+            "US100": {
+              "count": 150,
+              "mean_raw_gross_close_r": -0.132479175305,
+              "mean_actual_close_r": -0.185829296679,
+              "mean_stressed_close_r": -0.190686254424,
+              "mean_mfe_r": 1.017271668059,
+              "mean_mae_r": 1.128727080477,
+              "stressed_positive_fraction": 0.5
+            },
+            "US30": {
+              "count": 118,
+              "mean_raw_gross_close_r": 0.017038254183,
+              "mean_actual_close_r": 0.233911435692,
+              "mean_stressed_close_r": 0.231247449326,
+              "mean_mfe_r": 0.99856464123,
+              "mean_mae_r": 1.014077724322,
+              "stressed_positive_fraction": 0.584745762712
+            },
+            "US500": {
+              "count": 177,
+              "mean_raw_gross_close_r": -0.001007597656,
+              "mean_actual_close_r": -0.04470150461,
+              "mean_stressed_close_r": -0.055665410922,
+              "mean_mfe_r": 0.943734725928,
+              "mean_mae_r": 0.986630399241,
+              "stressed_positive_fraction": 0.542372881356
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 475,
+              "mean_raw_gross_close_r": -0.058957782323,
+              "mean_actual_close_r": -0.088092201995,
+              "mean_stressed_close_r": -0.107558126409,
+              "mean_mfe_r": 0.887137176301,
+              "mean_mae_r": 0.933638092015,
+              "stressed_positive_fraction": 0.437894736842
+            },
+            "equity_index": {
+              "count": 445,
+              "mean_raw_gross_close_r": -0.040538667612,
+              "mean_actual_close_r": -0.018393284058,
+              "mean_stressed_close_r": -0.025097790733,
+              "mean_mfe_r": 0.983061627783,
+              "mean_mae_r": 1.041806324061,
+              "stressed_positive_fraction": 0.539325842697
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 600,
+              "mean_raw_gross_close_r": -0.06941435285,
+              "mean_actual_close_r": -0.059725482182,
+              "mean_stressed_close_r": -0.071628221707,
+              "mean_mfe_r": 0.851942959456,
+              "mean_mae_r": 1.003945253781,
+              "stressed_positive_fraction": 0.505
+            },
+            "SHORT": {
+              "count": 320,
+              "mean_raw_gross_close_r": -0.01373763119,
+              "mean_actual_close_r": -0.044354743889,
+              "mean_stressed_close_r": -0.060255293426,
+              "mean_mfe_r": 1.086521273228,
+              "mean_mae_r": 0.952233611393,
+              "stressed_positive_fraction": 0.453125
+            }
+          }
+        }
+      },
+      "broad_headroom_12h": {
+        "rule": "12-H4 raw-gross and stressed mean R must both be positive with at least 10 signals in both years, both asset classes, both directions and at least four individual symbols",
+        "year": {
+          "2024": false,
+          "2025": false
+        },
+        "asset_class": {
+          "currency": false,
+          "equity_index": false
+        },
+        "direction": {
+          "LONG": false,
+          "SHORT": false
+        },
+        "symbol": {
+          "AUDUSD": false,
+          "EURUSD": false,
+          "GBPUSD": false,
+          "NZDUSD": false,
+          "US100": false,
+          "US30": true,
+          "US500": false
+        },
+        "qualifying_symbols": [
+          "US30"
+        ],
+        "passed": false
+      }
+    },
+    "MULTI_ASSET_DONCHIAN_240_120": {
+      "signals": 684,
+      "admission_counts": {
+        "ACCEPTED": 50,
+        "BLOCKED": 634
+      },
+      "block_counts": {
+        "AGGREGATE_INITIAL_STOP_RISK": 31,
+        "ALREADY_OPEN": 290,
+        "MINIMUM_LOT_RISK": 313
+      },
+      "exit_counts": {
+        "CHANNEL_EXIT": 9,
+        "HARD_STOP": 40,
+        "MAX_HOLD": 1
+      },
+      "realized_actual_r_mean": 0.004554681615,
+      "realized_stressed_r_mean": -0.00520355382,
+      "gross_movement_usd": -46.35123,
+      "observed_spread_burden_usd": 1.5397,
+      "swap_usd": 3.4641,
+      "horizon_paths": {
+        "1": {
+          "overall": {
+            "count": 684,
+            "mean_raw_gross_close_r": 0.040186651302,
+            "mean_actual_close_r": 0.028216534744,
+            "mean_stressed_close_r": 0.014386410005,
+            "mean_mfe_r": 0.296645888084,
+            "mean_mae_r": 0.250004125988,
+            "stressed_positive_fraction": 0.513157894737
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 428,
+              "mean_raw_gross_close_r": 0.046578854972,
+              "mean_actual_close_r": 0.034941804757,
+              "mean_stressed_close_r": 0.020371172613,
+              "mean_mfe_r": 0.305375840088,
+              "mean_mae_r": 0.249879495991,
+              "stressed_positive_fraction": 0.553738317757
+            },
+            "2025": {
+              "count": 256,
+              "mean_raw_gross_close_r": 0.029499685791,
+              "mean_actual_close_r": 0.016972723942,
+              "mean_stressed_close_r": 0.00438063502,
+              "mean_mfe_r": 0.282050499577,
+              "mean_mae_r": 0.250212491765,
+              "stressed_positive_fraction": 0.4453125
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 66,
+              "mean_raw_gross_close_r": 0.018983769761,
+              "mean_actual_close_r": -0.004331797459,
+              "mean_stressed_close_r": -0.02648757251,
+              "mean_mfe_r": 0.285880566025,
+              "mean_mae_r": 0.289667882124,
+              "stressed_positive_fraction": 0.439393939394
+            },
+            "EURUSD": {
+              "count": 69,
+              "mean_raw_gross_close_r": 0.052999776317,
+              "mean_actual_close_r": 0.034535772864,
+              "mean_stressed_close_r": 0.017010806069,
+              "mean_mfe_r": 0.345334858021,
+              "mean_mae_r": 0.243474972503,
+              "stressed_positive_fraction": 0.478260869565
+            },
+            "GBPUSD": {
+              "count": 93,
+              "mean_raw_gross_close_r": 0.058590360021,
+              "mean_actual_close_r": 0.04326213229,
+              "mean_stressed_close_r": 0.028704433037,
+              "mean_mfe_r": 0.331255477205,
+              "mean_mae_r": 0.251435347154,
+              "stressed_positive_fraction": 0.462365591398
+            },
+            "NZDUSD": {
+              "count": 105,
+              "mean_raw_gross_close_r": 0.015845491274,
+              "mean_actual_close_r": -0.012350800588,
+              "mean_stressed_close_r": -0.039883659977,
+              "mean_mfe_r": 0.275587850486,
+              "mean_mae_r": 0.26308749047,
+              "stressed_positive_fraction": 0.466666666667
+            },
+            "US100": {
+              "count": 130,
+              "mean_raw_gross_close_r": 0.054230003619,
+              "mean_actual_close_r": 0.043363788997,
+              "mean_stressed_close_r": 0.038255270801,
+              "mean_mfe_r": 0.291290664851,
+              "mean_mae_r": 0.225584297044,
+              "stressed_positive_fraction": 0.592307692308
+            },
+            "US30": {
+              "count": 73,
+              "mean_raw_gross_close_r": 0.061250073704,
+              "mean_actual_close_r": 0.097512570902,
+              "mean_stressed_close_r": 0.094749938871,
+              "mean_mfe_r": 0.286805344958,
+              "mean_mae_r": 0.227691432047,
+              "stressed_positive_fraction": 0.643835616438
+            },
+            "US500": {
+              "count": 148,
+              "mean_raw_gross_close_r": 0.026648109487,
+              "mean_actual_close_r": 0.011626929614,
+              "mean_stressed_close_r": 0.000291080365,
+              "mean_mfe_r": 0.281496652665,
+              "mean_mae_r": 0.257634202115,
+              "stressed_positive_fraction": 0.493243243243
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 333,
+              "mean_raw_gross_close_r": 0.036103884192,
+              "mean_actual_close_r": 0.014485327137,
+              "mean_stressed_close_r": -0.006284402979,
+              "mean_mfe_r": 0.307626745472,
+              "mean_mae_r": 0.261037618942,
+              "stressed_positive_fraction": 0.462462462462
+            },
+            "equity_index": {
+              "count": 351,
+              "mean_raw_gross_close_r": 0.04406004574,
+              "mean_actual_close_r": 0.041243577858,
+              "mean_stressed_close_r": 0.033997181298,
+              "mean_mfe_r": 0.286228151587,
+              "mean_mae_r": 0.239536453186,
+              "stressed_positive_fraction": 0.561253561254
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 468,
+              "mean_raw_gross_close_r": 0.030231752746,
+              "mean_actual_close_r": 0.02155255642,
+              "mean_stressed_close_r": 0.009624207958,
+              "mean_mfe_r": 0.270627288506,
+              "mean_mae_r": 0.245387806698,
+              "stressed_positive_fraction": 0.519230769231
+            },
+            "SHORT": {
+              "count": 216,
+              "mean_raw_gross_close_r": 0.061755598174,
+              "mean_actual_close_r": 0.042655154446,
+              "mean_stressed_close_r": 0.024704514442,
+              "mean_mfe_r": 0.353019520502,
+              "mean_mae_r": 0.260006151116,
+              "stressed_positive_fraction": 0.5
+            }
+          }
+        },
+        "3": {
+          "overall": {
+            "count": 684,
+            "mean_raw_gross_close_r": 0.040680900675,
+            "mean_actual_close_r": 0.028014712722,
+            "mean_stressed_close_r": 0.014046509976,
+            "mean_mfe_r": 0.497845847031,
+            "mean_mae_r": 0.435403121146,
+            "stressed_positive_fraction": 0.485380116959
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 428,
+              "mean_raw_gross_close_r": 0.026303288231,
+              "mean_actual_close_r": 0.015581542654,
+              "mean_stressed_close_r": 0.000811068555,
+              "mean_mfe_r": 0.47846023381,
+              "mean_mae_r": 0.425497093155,
+              "stressed_positive_fraction": 0.502336448598
+            },
+            "2025": {
+              "count": 256,
+              "mean_raw_gross_close_r": 0.06471847148,
+              "mean_actual_close_r": 0.048801418929,
+              "mean_stressed_close_r": 0.0361745136,
+              "mean_mfe_r": 0.530256169134,
+              "mean_mae_r": 0.451964761692,
+              "stressed_positive_fraction": 0.45703125
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 66,
+              "mean_raw_gross_close_r": -0.001729272004,
+              "mean_actual_close_r": -0.027366234775,
+              "mean_stressed_close_r": -0.049978537108,
+              "mean_mfe_r": 0.495884222843,
+              "mean_mae_r": 0.487235836022,
+              "stressed_positive_fraction": 0.393939393939
+            },
+            "EURUSD": {
+              "count": 69,
+              "mean_raw_gross_close_r": 0.053426939022,
+              "mean_actual_close_r": 0.032313315124,
+              "mean_stressed_close_r": 0.014760309371,
+              "mean_mfe_r": 0.520295311579,
+              "mean_mae_r": 0.387437290616,
+              "stressed_positive_fraction": 0.492753623188
+            },
+            "GBPUSD": {
+              "count": 93,
+              "mean_raw_gross_close_r": 0.047771303495,
+              "mean_actual_close_r": 0.030333880852,
+              "mean_stressed_close_r": 0.015514127171,
+              "mean_mfe_r": 0.519116784758,
+              "mean_mae_r": 0.394522447711,
+              "stressed_positive_fraction": 0.430107526882
+            },
+            "NZDUSD": {
+              "count": 105,
+              "mean_raw_gross_close_r": -0.048141377979,
+              "mean_actual_close_r": -0.077915449932,
+              "mean_stressed_close_r": -0.105700240421,
+              "mean_mfe_r": 0.458214168607,
+              "mean_mae_r": 0.488667168827,
+              "stressed_positive_fraction": 0.419047619048
+            },
+            "US100": {
+              "count": 130,
+              "mean_raw_gross_close_r": 0.100550098432,
+              "mean_actual_close_r": 0.082809510106,
+              "mean_stressed_close_r": 0.077650437648,
+              "mean_mfe_r": 0.523416488768,
+              "mean_mae_r": 0.418727854761,
+              "stressed_positive_fraction": 0.561538461538
+            },
+            "US30": {
+              "count": 73,
+              "mean_raw_gross_close_r": 0.151354070365,
+              "mean_actual_close_r": 0.214869784275,
+              "mean_stressed_close_r": 0.21203881168,
+              "mean_mfe_r": 0.512425570434,
+              "mean_mae_r": 0.361681355831,
+              "stressed_positive_fraction": 0.602739726027
+            },
+            "US500": {
+              "count": 148,
+              "mean_raw_gross_close_r": 0.005034883457,
+              "mean_actual_close_r": -0.015892182358,
+              "mean_stressed_close_r": -0.027227998674,
+              "mean_mfe_r": 0.473353143883,
+              "mean_mae_r": 0.473560784967,
+              "stressed_positive_fraction": 0.47972972973
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 333,
+              "mean_raw_gross_close_r": 0.008889529662,
+              "mean_actual_close_r": -0.014824696923,
+              "mean_stressed_close_r": -0.035843343903,
+              "mean_mfe_r": 0.495552804483,
+              "mean_mae_r": 0.441115251033,
+              "stressed_positive_fraction": 0.432432432432
+            },
+            "equity_index": {
+              "count": 351,
+              "mean_raw_gross_close_r": 0.07084194497,
+              "mean_actual_close_r": 0.068657229564,
+              "mean_stressed_close_r": 0.06137790981,
+              "mean_mfe_r": 0.500021297653,
+              "mean_mae_r": 0.429983920996,
+              "stressed_positive_fraction": 0.535612535613
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 468,
+              "mean_raw_gross_close_r": 0.008401187096,
+              "mean_actual_close_r": -0.000165203016,
+              "mean_stressed_close_r": -0.012093551478,
+              "mean_mfe_r": 0.432178460235,
+              "mean_mae_r": 0.435747940739,
+              "stressed_positive_fraction": 0.489316239316
+            },
+            "SHORT": {
+              "count": 216,
+              "mean_raw_gross_close_r": 0.110620280096,
+              "mean_actual_close_r": 0.089071196819,
+              "mean_stressed_close_r": 0.070683309791,
+              "mean_mfe_r": 0.640125185088,
+              "mean_mae_r": 0.434656012027,
+              "stressed_positive_fraction": 0.476851851852
+            }
+          }
+        },
+        "6": {
+          "overall": {
+            "count": 684,
+            "mean_raw_gross_close_r": -0.021165994104,
+            "mean_actual_close_r": -0.033463822613,
+            "mean_stressed_close_r": -0.0472793926,
+            "mean_mfe_r": 0.716170589598,
+            "mean_mae_r": 0.699518054112,
+            "stressed_positive_fraction": 0.478070175439
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 428,
+              "mean_raw_gross_close_r": -0.041237434141,
+              "mean_actual_close_r": -0.04991404507,
+              "mean_stressed_close_r": -0.064493529062,
+              "mean_mfe_r": 0.706020376456,
+              "mean_mae_r": 0.698260088261,
+              "stressed_positive_fraction": 0.476635514019
+            },
+            "2025": {
+              "count": 256,
+              "mean_raw_gross_close_r": 0.012390944709,
+              "mean_actual_close_r": -0.005961106941,
+              "mean_stressed_close_r": -0.018499508204,
+              "mean_mfe_r": 0.733140477194,
+              "mean_mae_r": 0.701621215769,
+              "stressed_positive_fraction": 0.48046875
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 66,
+              "mean_raw_gross_close_r": -0.098625180234,
+              "mean_actual_close_r": -0.126687582635,
+              "mean_stressed_close_r": -0.148857997664,
+              "mean_mfe_r": 0.661632012731,
+              "mean_mae_r": 0.727413554003,
+              "stressed_positive_fraction": 0.454545454545
+            },
+            "EURUSD": {
+              "count": 69,
+              "mean_raw_gross_close_r": 0.036631348598,
+              "mean_actual_close_r": 0.012316587234,
+              "mean_stressed_close_r": -0.005483513231,
+              "mean_mfe_r": 0.757406503552,
+              "mean_mae_r": 0.559142297989,
+              "stressed_positive_fraction": 0.492753623188
+            },
+            "GBPUSD": {
+              "count": 93,
+              "mean_raw_gross_close_r": -0.052011719168,
+              "mean_actual_close_r": -0.070779014084,
+              "mean_stressed_close_r": -0.085223268285,
+              "mean_mfe_r": 0.669656014188,
+              "mean_mae_r": 0.604934683282,
+              "stressed_positive_fraction": 0.483870967742
+            },
+            "NZDUSD": {
+              "count": 105,
+              "mean_raw_gross_close_r": 0.005816583623,
+              "mean_actual_close_r": -0.025968416845,
+              "mean_stressed_close_r": -0.053214156441,
+              "mean_mfe_r": 0.650823988917,
+              "mean_mae_r": 0.669701516856,
+              "stressed_positive_fraction": 0.428571428571
+            },
+            "US100": {
+              "count": 130,
+              "mean_raw_gross_close_r": -0.022673064946,
+              "mean_actual_close_r": -0.054673478742,
+              "mean_stressed_close_r": -0.059807458692,
+              "mean_mfe_r": 0.769652941442,
+              "mean_mae_r": 0.784572734179,
+              "stressed_positive_fraction": 0.5
+            },
+            "US30": {
+              "count": 73,
+              "mean_raw_gross_close_r": 0.079881444092,
+              "mean_actual_close_r": 0.199555565767,
+              "mean_stressed_close_r": 0.196807669762,
+              "mean_mfe_r": 0.836664679106,
+              "mean_mae_r": 0.726832025008,
+              "stressed_positive_fraction": 0.547945205479
+            },
+            "US500": {
+              "count": 148,
+              "mean_raw_gross_close_r": -0.061846888501,
+              "mean_actual_close_r": -0.091409396746,
+              "mean_stressed_close_r": -0.102803068687,
+              "mean_mfe_r": 0.690445875551,
+              "mean_mae_r": 0.744928768939,
+              "stressed_positive_fraction": 0.459459459459
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 333,
+              "mean_raw_gross_close_r": -0.024648791124,
+              "mean_actual_close_r": -0.050512516556,
+              "mean_stressed_close_r": -0.071219941848,
+              "mean_mfe_r": 0.680310179403,
+              "mean_mae_r": 0.640143237059,
+              "stressed_positive_fraction": 0.462462462462
+            },
+            "equity_index": {
+              "count": 351,
+              "mean_raw_gross_close_r": -0.017861802058,
+              "mean_actual_close_r": -0.017289420666,
+              "mean_stressed_close_r": -0.024566563826,
+              "mean_mfe_r": 0.750192004398,
+              "mean_mae_r": 0.755848008752,
+              "stressed_positive_fraction": 0.492877492877
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 468,
+              "mean_raw_gross_close_r": -0.112996822186,
+              "mean_actual_close_r": -0.120115114026,
+              "mean_stressed_close_r": -0.132043462488,
+              "mean_mfe_r": 0.605421144531,
+              "mean_mae_r": 0.714029891623,
+              "stressed_positive_fraction": 0.459401709402
+            },
+            "SHORT": {
+              "count": 216,
+              "mean_raw_gross_close_r": 0.177800800075,
+              "mean_actual_close_r": 0.154280642117,
+              "mean_stressed_close_r": 0.136376092158,
+              "mean_mfe_r": 0.956127720577,
+              "mean_mae_r": 0.668075739504,
+              "stressed_positive_fraction": 0.518518518519
+            }
+          }
+        },
+        "12": {
+          "overall": {
+            "count": 684,
+            "mean_raw_gross_close_r": -0.085454107304,
+            "mean_actual_close_r": -0.098100374326,
+            "mean_stressed_close_r": -0.11182680099,
+            "mean_mfe_r": 0.932856738143,
+            "mean_mae_r": 1.027846514421,
+            "stressed_positive_fraction": 0.470760233918
+          },
+          "by_entry_year": {
+            "2024": {
+              "count": 428,
+              "mean_raw_gross_close_r": -0.094084841381,
+              "mean_actual_close_r": -0.099701733997,
+              "mean_stressed_close_r": -0.114125558419,
+              "mean_mfe_r": 0.908971064767,
+              "mean_mae_r": 0.992177538212,
+              "stressed_positive_fraction": 0.464953271028
+            },
+            "2025": {
+              "count": 256,
+              "mean_raw_gross_close_r": -0.07102459877,
+              "mean_actual_close_r": -0.095423101127,
+              "mean_stressed_close_r": -0.107983565913,
+              "mean_mfe_r": 0.97279059832,
+              "mean_mae_r": 1.08748058402,
+              "stressed_positive_fraction": 0.48046875
+            }
+          },
+          "by_symbol": {
+            "AUDUSD": {
+              "count": 66,
+              "mean_raw_gross_close_r": -0.094493241499,
+              "mean_actual_close_r": -0.127109846482,
+              "mean_stressed_close_r": -0.148926642227,
+              "mean_mfe_r": 0.765874215304,
+              "mean_mae_r": 0.962073744656,
+              "stressed_positive_fraction": 0.348484848485
+            },
+            "EURUSD": {
+              "count": 69,
+              "mean_raw_gross_close_r": -0.120244740061,
+              "mean_actual_close_r": -0.149168093524,
+              "mean_stressed_close_r": -0.166975800937,
+              "mean_mfe_r": 0.951377460162,
+              "mean_mae_r": 0.927339094856,
+              "stressed_positive_fraction": 0.420289855072
+            },
+            "GBPUSD": {
+              "count": 93,
+              "mean_raw_gross_close_r": -0.160795641862,
+              "mean_actual_close_r": -0.18391355617,
+              "mean_stressed_close_r": -0.198388921392,
+              "mean_mfe_r": 0.913017112603,
+              "mean_mae_r": 1.033513135926,
+              "stressed_positive_fraction": 0.430107526882
+            },
+            "NZDUSD": {
+              "count": 105,
+              "mean_raw_gross_close_r": 0.112386298845,
+              "mean_actual_close_r": 0.076766371328,
+              "mean_stressed_close_r": 0.049895670604,
+              "mean_mfe_r": 0.864140348935,
+              "mean_mae_r": 0.900450331003,
+              "stressed_positive_fraction": 0.495238095238
+            },
+            "US100": {
+              "count": 130,
+              "mean_raw_gross_close_r": -0.210014738893,
+              "mean_actual_close_r": -0.268149404492,
+              "mean_stressed_close_r": -0.273314647448,
+              "mean_mfe_r": 0.999169930343,
+              "mean_mae_r": 1.183114379506,
+              "stressed_positive_fraction": 0.469230769231
+            },
+            "US30": {
+              "count": 73,
+              "mean_raw_gross_close_r": -0.059186443354,
+              "mean_actual_close_r": 0.15627429691,
+              "mean_stressed_close_r": 0.153518832645,
+              "mean_mfe_r": 1.095270008209,
+              "mean_mae_r": 1.083302463478,
+              "stressed_positive_fraction": 0.561643835616
+            },
+            "US500": {
+              "count": 148,
+              "mean_raw_gross_close_r": -0.061764923363,
+              "mean_actual_close_r": -0.107594034284,
+              "mean_stressed_close_r": -0.11894519976,
+              "mean_mfe_r": 0.921548218073,
+              "mean_mae_r": 1.027120240577,
+              "stressed_positive_fraction": 0.513513513514
+            }
+          },
+          "by_asset_class": {
+            "currency": {
+              "count": 333,
+              "mean_raw_gross_close_r": -0.053113736689,
+              "mean_actual_close_r": -0.083259279446,
+              "mean_stressed_close_r": -0.10378862741,
+              "mean_mfe_r": 0.876390603818,
+              "mean_mae_r": 0.955397210477,
+              "stressed_positive_fraction": 0.432432432432
+            },
+            "equity_index": {
+              "count": 351,
+              "mean_raw_gross_close_r": -0.116135997375,
+              "mean_actual_close_r": -0.112180387418,
+              "mean_stressed_close_r": -0.11945276054,
+              "mean_mfe_r": 0.986427173273,
+              "mean_mae_r": 1.096580469444,
+              "stressed_positive_fraction": 0.507122507123
+            }
+          },
+          "by_direction": {
+            "LONG": {
+              "count": 468,
+              "mean_raw_gross_close_r": -0.181766703079,
+              "mean_actual_close_r": -0.186821524716,
+              "mean_stressed_close_r": -0.198749873178,
+              "mean_mfe_r": 0.805902696828,
+              "mean_mae_r": 1.092581331359,
+              "stressed_positive_fraction": 0.461538461538
+            },
+            "SHORT": {
+              "count": 216,
+              "mean_raw_gross_close_r": 0.123223183539,
+              "mean_actual_close_r": 0.094128784853,
+              "mean_stressed_close_r": 0.076506522084,
+              "mean_mfe_r": 1.207923827661,
+              "mean_mae_r": 0.887587744388,
+              "stressed_positive_fraction": 0.490740740741
+            }
+          }
+        }
+      },
+      "broad_headroom_12h": {
+        "rule": "12-H4 raw-gross and stressed mean R must both be positive with at least 10 signals in both years, both asset classes, both directions and at least four individual symbols",
+        "year": {
+          "2024": false,
+          "2025": false
+        },
+        "asset_class": {
+          "currency": false,
+          "equity_index": false
+        },
+        "direction": {
+          "LONG": false,
+          "SHORT": true
+        },
+        "symbol": {
+          "AUDUSD": false,
+          "EURUSD": false,
+          "GBPUSD": false,
+          "NZDUSD": true,
+          "US100": false,
+          "US30": false,
+          "US500": false
+        },
+        "qualifying_symbols": [
+          "NZDUSD"
+        ],
+        "passed": false
+      }
+    }
+  },
+  "family_broad_causal_improvement_headroom": false,
+  "bounded_successor_seed": null,
+  "adjacent_rescue_executed": false,
+  "recorded_at_utc": "2026-09-01T04:34:57.865492Z",
+  "adapter": {
+    "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 88279,
+    "sha256": "92BB3E360B3F26C25A7AC24DA6722B8E7A62839D79DEA01A56FF738A8B6B0557"
+  },
+  "implementation_freeze": {
+    "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/evidence/INDEPENDENT_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_CHALLENGE_V1_IMPLEMENTATION_FREEZE.json",
+    "bytes": 10955,
+    "sha256": "7B5E1981632E77170E49CA73732054F47FAAD890C4F4E1A30E3B8F6F8EBBA35D"
+  },
+  "broker_account_position_order_or_deal_queries": 0,
+  "locked_2026_rows_loaded": 0
+}

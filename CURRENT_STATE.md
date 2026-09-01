@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0545`
+- Latest state ID: `STATE-0546`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 009 maturation-geometry commit `0530d9fb4f8b5f15401aec85d1fad3dd11a3c9d7`, equal to `origin/main` before implementation.
+- Current process parent: Family 009 implementation-freeze commit `013f8c581263c1171a99d70dbf90c619281aaac6`, equal to `origin/main` before development.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
-- Sole active Challenge family: Family 009 `lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
-- Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection, while Program 1 / macro is only the policy-required administrative tag for the selected multi-asset trend mechanism.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_CLOSED_VALID_ADVERSE_NO_BROAD_HEADROOM_RECOMPARE_PENDING`.
+- Sole active Challenge family: none; Family 009 is closed and immutable pending a whole-map recompare.
+- Active Lab family / Optimization campaign count: `0 / 0`; the user authorized autonomous method selection and Program tags remain administrative only.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -236,11 +236,21 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Precheck evaluated zero future exit path, lifecycle, PnL, MFE/MAE or improvement value, loaded zero locked row and wrote zero persistent output. Implementation freeze is `10,955` bytes / `7B5E1981632E77170E49CA73732054F47FAAD890C4F4E1A30E3B8F6F8EBBA35D`, status `IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
 - Development process, economic outputs, locked 2026, EA, compile and Tester remain zero. Candidate process owners, account/position/order/deal queries, orders, trades, Live and Optimization changes remain zero.
 
+## Family 009 closed result
+
+- Implementation-freeze commit `013f8c581263c1171a99d70dbf90c619281aaac6` reached local `main`, `origin/main` and remote `main` before exactly one complete development process. It wrote `1,604` signal states, `117` accepted trades and `6,416` mandatory improvement-path rows; every authority, cardinality, balance, PnL, stress and R invariant passed.
+- Medium `120/60` accepted `67` starts (`0.126415/date`) and returned actual/stressed `-$74.42949 / -$76.24129`, ending `$25.57051 / $23.75871` with `76.35493%` closed-balance DD. Its 2024/2025 actual/stressed results were `-$70.77147 / -$72.49007` and `-$3.65802 / -$3.75122`; exits were `48` hard stop and `19` channel.
+- Slow `240/120` accepted `50` starts (`0.094340/date`) and returned `-$44.42683 / -$45.96653`, ending `$55.57317 / $54.03347` with `77.18248%` DD. Its 2024/2025 actual/stressed results were `-$61.31140 / -$62.77330` and `+$16.88457 / +$16.80677`; exits were `40` hard stop, `9` channel and `1` maximum hold.
+- Both variants passed all-seven-symbol, both-asset-class and both-direction breadth but failed both-year positivity, both development profit gates, DD and yearly start floor; slow also missed turnover. Complete passer count is zero.
+- Audit raw/stressed mean R at `1/3/6/12` H4 was medium `+0.03646/+0.01324`, `+0.03112/+0.00749`, `-0.01080/-0.03173`, `-0.05005/-0.06767`; slow `+0.04019/+0.01439`, `+0.04068/+0.01405`, `-0.02117/-0.04728`, `-0.08545/-0.11183`. The small 1-3-bar transient reverses by 6-12 bars; neither year, asset class nor both directions retains broad edge and only one isolated symbol qualifies per variant.
+- Gross movement itself was adverse `-$65.65069 / -$46.35123`; spread and signed swap do not explain the failure. Broad headroom is false and bounded seed is null. Durable result/audit are `10,391 / 47,801` bytes at `FFCB0B04...0DA6 / 6B73F696...A8FB`; raw tape manifest is `5559B2A3...C4A3`.
+- Closure is `10,063` bytes / `02FE2CE2310D4E87B3AB044135ABBE53D76B055A2BE27B20B77D3F6C1A422984`, status `CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5`. Locked 2026, confirmation, EA, compile and Tester remained unopened; the complete Family 009 bundle is immutable.
+
 ## Next authorized sequence
 
-1. Commit and push the exact Family 009 implementation freeze; verify clean `main == origin/main`.
-2. Run one complete two-horizon development bundle plus improvement audit.
-3. Open locked/native only for one unchanged complete passer; otherwise close or retain only the bounded audit seed allowed by the frozen rule.
+1. Commit and push the complete Family 009 result/audit/closure; verify clean `main == origin/main`.
+2. Recompare Programs 1-5/7 and all heights under autonomous method selection without opening successor values.
+3. Declare at most one materially distinct successor and continue its complete adapter/EA or ONNX/EA path.
 4. Continue serially until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -261,8 +271,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, implementation frozen predevelopment-outcome.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_IMPLEMENTATION_FROZEN_PREDEVELOPMENT_OUTCOME`.
+- Active research unit: none; Family 009 is closed valid adverse and whole-map recompare is pending.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_CLOSED_VALID_ADVERSE_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5_RECOMPARE_PENDING`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
