@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0549`
+- Latest state ID: `STATE-0550`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 010 declaration commit `4902f6653c553a18fada65b5a89bccfdd15e7453`, equal to `origin/main` before runtime/source engineering.
+- Current process parent: Family 010 runtime/source engineering commit `fd35af9da6d1020f5716c5637cb464041c6283a9`, equal to `origin/main` before the first source invocation and synchronization correction.
 
 ## Authorization and ownership
 
@@ -24,7 +24,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_DEDICATED_ORIGINAL_BROKER_RUNTIME_M1_SOURCE_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_M1_HISTORY_MAXBARS_SECTION_CORRECTED_NO_PERSISTENT_SOURCE_PREIMPLEMENTATION_PREOUTCOME`.
 - Sole active Challenge family: `lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
 - Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection and Program tags remain administrative only.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -278,10 +278,20 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Acquisition/adapter requirements are `64 / 58` bytes at `646E639743BB1EF1A74566D81FCC9CF47C14B796A979D53342CCA55E19E08BE2 / A8312E14ACD23C9B07977AE03A4A6CC747A6B6CC07B2C6D5ABCD3B824C4F3F33`. Runtime/source engineering receipt is `9,539` bytes / `8C0E2F2E5FB46A9CBAB692841CFAEC21734C79888C7AEE2AEBD742C38D6F0EA2`, status `DEDICATED_ORIGINAL_BROKER_RUNTIME_AND_M1_ACQUISITION_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
 - Persistent M1/spec source, normalized event rows, ATR, directions, decisions, lifecycles, economics, improvement values, locked rows, adapter source, EA and Tester remain zero. After this boundary reaches `origin/main`, exactly one fresh development-only acquisition is authorized.
 
+## Family 010 M1 history synchronization corrected
+
+- Runtime/source commit `fd35af9da6d1020f5716c5637cb464041c6283a9` reached local `main`, `origin/main` and remote `main` before the first development acquisition invocation. Preexisting price/tick/account-state cache target count and output root were zero.
+- The unchanged acquisition correctly wrote no final file when AUDUSD January 2023 remained at zero in-range rows for its full `300`-second synchronization bound. Five automatic `2026.hcc` files / `45,017,679` bytes appeared, but no 2023 HCC, CSV, specification, receipt or staging directory remained. This is an environment/configuration engineering fault, not an economic failure.
+- Timestamp/count-only diagnosis found ten current AUDUSD M1 rows, while January 2024 and July 2023 requests each returned the same single out-of-range fallback epoch. No OHLC, spread or volume field was rendered, persisted or interpreted; account/position/order/deal calls remained zero.
+- Root cause was exact: the pre-start file placed `MaxBars=5000000 / PreloadCharts=0` under ignored `[Common]`, while build 6140 created effective `[Charts] MaxBars=100000 / PreloadCharts=1`; `terminal_info.maxbars` proved `100000`. The prior runtime receipt's text-presence observation did not verify the effective section and is superseded only on that point.
+- With the candidate stopped, stale Common rows were removed and the sole effective `[Charts]` rows set to `5000000 / 0`. Corrected `common.ini` is `820` bytes / `BA3FA5F40F80C00B4ACFC7E906C0C4C06B50A01B8093DA21BDE8DC3019B3EA9`; restart proved connected `terminal_info.maxbars=5000000` with zero symbol/rate/account-state calls.
+- Post-fault automatic caches `29` files / `52,090,009` bytes in seven target directories were moved to the Windows Recycle Bin without value reads. Persistent acquisition files and final cache targets remain zero; candidate processes are stopped and Live PID `33388` remained present.
+- Correction evidence is `5,570` bytes / `EC13141EE2821BBEAF4501A5693E9785492C34BD88286128F03A2022C2296CE6`, status `SOURCE_SYNCHRONIZATION_SECTION_CORRECTED_PREACQUISITION_NO_PERSISTENT_SOURCE_PREIMPLEMENTATION_PREOUTCOME`. After it reaches `origin/main`, the unchanged development acquisition may rerun.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 010 runtime/source engineering boundary; verify clean `main == origin/main`.
-2. Run exactly one fresh development-only four-symbol M1/specification acquisition, stop candidate-only processes, purge automatic current caches without reading them and record the durable source receipt.
+1. Commit and push the Family 010 M1 history synchronization correction; verify clean `main == origin/main`.
+2. Rerun the unchanged fresh development-only four-symbol M1/specification acquisition with verified runtime `MaxBars=5000000`, stop candidate-only processes, purge automatic current caches without reading them and record the durable source receipt.
 3. Implement and freeze the complete adapter, then judge both variants plus improvement audit; escalate locked/native only for an unchanged complete passer.
 4. Continue serially until a complete native candidate passes every V8 gate.
 
@@ -303,8 +313,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 010 London FX fix-pressure `Python adapter + EA`, dedicated original-broker runtime and fresh M1 acquisition path ready before source values.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_DEDICATED_ORIGINAL_BROKER_RUNTIME_M1_SOURCE_READY_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 010 London FX fix-pressure `Python adapter + EA`, effective `[Charts] MaxBars` corrected and verified before persistent source.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_M1_HISTORY_MAXBARS_SECTION_CORRECTED_NO_PERSISTENT_SOURCE_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.

@@ -1,0 +1,137 @@
+{
+  "schema": "zeta-next-independent-london-fx-fix-pressure-adapter-challenge-v1-m1-history-synchronization-correction",
+  "recorded_at_utc": "2026-09-01T05:29:51.6408163Z",
+  "status": "SOURCE_SYNCHRONIZATION_SECTION_CORRECTED_PREACQUISITION_NO_PERSISTENT_SOURCE_PREIMPLEMENTATION_PREOUTCOME",
+  "family": "independent-london-fx-fix-pressure-adapter-challenge-v1",
+  "runtime_source_boundary": {
+    "commit": "fd35af9da6d1020f5716c5637cb464041c6283a9",
+    "equal_to_origin_main_before_failed_invocation": true,
+    "receipt": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_RUNTIME_SOURCE_ENGINEERING_RECEIPT.json",
+      "bytes": 9539,
+      "sha256": "8C0E2F2E5FB46A9CBAB692841CFAEC21734C79888C7AEE2AEBD742C38D6F0EA2"
+    },
+    "acquisition_script": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/acquisition/acquire_m1.py",
+      "bytes": 26562,
+      "lines": 640,
+      "sha256": "F39E24D56AFC4264BF026639B8B5D4AB7EA32C6C9515ABCDFA791D80591E5D6B",
+      "unchanged_by_correction": true
+    }
+  },
+  "failed_source_invocation": {
+    "stage": "development",
+    "preexisting_price_tick_or_account_state_cache_target_directories": 0,
+    "preexisting_output_root": false,
+    "first_symbol": "AUDUSD",
+    "first_batch_start_inclusive": "2023-01-01T00:00:00Z",
+    "first_batch_end_exclusive": "2023-02-01T00:00:00Z",
+    "synchronization_timeout_seconds": 300,
+    "in_range_rows_at_timeout": 0,
+    "error": "history synchronization timed out after repeated zero in-range rows",
+    "environment_design_or_engineering_fault": true,
+    "economic_or_optimization_failure": false,
+    "persistent_CSV_spec_or_receipt_files": 0,
+    "staging_directories_after_failure": 0,
+    "locked_2026_values_opened": 0
+  },
+  "metadata_only_fault_surface": {
+    "automatic_HCC_files_after_failure": 5,
+    "automatic_HCC_bytes": 45017679,
+    "automatic_HCC_year_filenames": [
+      "2026.hcc"
+    ],
+    "2023_HCC_files": 0,
+    "HCC_values_opened": 0,
+    "diagnostic": {
+      "current_AUDUSD_M1_rows_available": 10,
+      "requested_windows": [
+        "2024-01",
+        "2023-07"
+      ],
+      "each_historical_request_returned_rows_before_in_range_filter": 1,
+      "each_returned_the_same_out_of_range_fallback_epoch": true,
+      "fallback_epoch": 1779813420,
+      "OHLC_spread_or_volume_fields_rendered_persisted_or_interpreted": 0,
+      "account_info_position_order_or_deal_calls": 0
+    }
+  },
+  "root_cause": {
+    "candidate_common_ini_before_correction": {
+      "MaxBars_rows": [
+        {
+          "section": "Common",
+          "value": 5000000,
+          "effective": false
+        },
+        {
+          "section": "Charts",
+          "value": 100000,
+          "effective": true
+        }
+      ],
+      "PreloadCharts_rows": [
+        {
+          "section": "Common",
+          "value": 0,
+          "effective": false
+        },
+        {
+          "section": "Charts",
+          "value": 1,
+          "effective": true
+        }
+      ],
+      "terminal_info_runtime_maxbars": 100000
+    },
+    "classification": "the pre-start selection file placed MaxBars and PreloadCharts under Common, while build 6140 created and used Charts defaults; the prior receipt observed text presence but did not verify terminal_info.maxbars",
+    "server_history_absence_not_established": true,
+    "acquisition_filter_or_economic_logic_not_at_fault": true
+  },
+  "correction": {
+    "candidate_process_owners_during_file_change": 0,
+    "common_section_stale_MaxBars_and_PreloadCharts_rows_removed": true,
+    "Charts_section": {
+      "MaxBars": 5000000,
+      "PreloadCharts": 0
+    },
+    "total_MaxBars_rows_after_correction": 1,
+    "total_PreloadCharts_rows_after_correction": 1,
+    "common_ini_bytes": 820,
+    "common_ini_sha256": "BA3FA5F40F80C00B4ACFC7E906C0C4C06B50A01B8093DA21BDE8DC3019B3EA9B",
+    "post_restart_initialize": true,
+    "post_restart_connected": true,
+    "post_restart_terminal_info_runtime_maxbars": 5000000,
+    "post_restart_account_info_position_order_deal_symbol_or_rate_calls": 0,
+    "candidate_process_owners_after_shutdown": 0
+  },
+  "post_fault_cleanup": {
+    "target_directories": 7,
+    "files": 29,
+    "bytes": 52090009,
+    "included": [
+      "history",
+      "ticks",
+      "trades",
+      "subscriptions",
+      "mail"
+    ],
+    "values_opened": 0,
+    "recovery": "Windows Recycle Bin",
+    "remaining_cache_target_directories": 0,
+    "persistent_acquisition_files": 0
+  },
+  "isolation_attestation": {
+    "candidate_process_owners": 0,
+    "live_master_pid_33388_remained_present": true,
+    "live_files_settings_state_logs_or_process_changed": false,
+    "donor_runtime_or_files_changed": false,
+    "optimization_changed": false,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "features_directions_lifecycles_economics_or_improvement_values": 0,
+    "EA_compile_or_tester_paths": 0
+  },
+  "supersession": "the runtime/source engineering receipt remains provenance for physical runtime, original-broker session support, official update, Python and acquisition source; only its unverified common.ini MaxBars placement is superseded by this terminal_info-verified correction",
+  "next_authorized_action": "after this correction reaches origin/main, rerun the unchanged development acquisition once with terminal_info.maxbars 5000000, then stop candidate-only processes and purge automatic current caches without opening them"
+}
