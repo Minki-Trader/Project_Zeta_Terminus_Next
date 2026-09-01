@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0540`
+- Latest state ID: `STATE-0541`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 008 closure commit `214b668a622cfec6fec1c505315e0f6089926c55`, equal to `origin/main` before autonomous whole-map recomparison.
+- Current process parent: autonomous post-Family-008 selection commit `93c71bdbb08a7b8174504fcdd3273356c228d01e`, equal to `origin/main` before Family 009 declaration.
 
 ## Authorization and ownership
 
@@ -24,9 +24,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_008_AUTONOMOUS_MULTI_ASSET_H4_TREND_SUCCESSOR_READY_NOT_OPENED`.
-- Sole active Challenge family: none; provisional Family 009 is `lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/`, mandatory `Python adapter + EA`, but its root is not yet opened.
-- Parallel Lab family / Optimization campaign count: `0 / 0`; the user authorized autonomous method selection, while Program 1 / macro is only the policy-required administrative tag for the selected multi-asset trend mechanism.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_MULTI_ASSET_H4_DONCHIAN_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
+- Sole active Challenge family: Family 009 `lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
+- Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection, while Program 1 / macro is only the policy-required administrative tag for the selected multi-asset trend mechanism.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -193,11 +193,19 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Improvement audit must cover 1/3/6/12-H4 raw paths, horizon overlap/uniques, year/symbol/asset-class/direction stability, costs, blocks and stop/channel/time exits. Broad headroom requires both years, both asset classes and at least four symbols; it cannot execute a follow-up.
 - Audit `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_008_AUTONOMOUS_WHOLE_MAP_RECOMPARE_V1.json` is `13,030` bytes / `374ECCCD250AAD6AACACBEB33B299BE79DC248A635DFD2FB2C6BBBAC9460CDF1`, status `READY_AUTONOMOUS_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_BUNDLE_SUCCESSOR_NOT_OPENED`.
 
+## Family 009 frozen declaration
+
+- Selection commit `93c71bdbb08a7b8174504fcdd3273356c228d01e` reached local `main`, `origin/main` and remote `main` before the sole active Family 009 root opened. README/contract/declaration are `2,040 / 22,262 / 11,870` bytes at `50B1399730E5E71C678D68CEC95A6A78524716E5DE9BDA3620E3A5F757795011 / 3B655B60506A5B3F4F9DD80345029A59286F68144163EF13ADEB51DF7BA5543A / 0D307B8DF16070474490287E27A3F7BFA380FE752A78C3C4905D33768B70C2DB`.
+- The autonomous bundle freezes direct H4 trading of `AUDUSD / EURUSD / GBPUSD / NZDUSD / US100 / US30 / US500`; strict prior-channel breakouts `120/60` and `240/120`; ATR20; a fixed two-ATR hard stop; opposite-channel next-open exit; maximum 480 held H4 bars; normalized-breakout simultaneous priority; and one position per symbol without reversal in place.
+- Each independent variant compounds `$100`, targets `4%` current-balance position risk, allows minimum lot only through a `6%` hard cap and holds aggregate original-stop risk at `18%`. Actual economics use direction-specific Bid/Ask and signed broker swap; stress subtracts one additional observed lifecycle spread burden. Swap percent modes explicitly divide by `100` and preserve the broker rate sign.
+- Before closure the same process must complete both variants and audit 1/3/6/12-H4 raw paths, MFE/MAE, overlap/uniques, year/symbol/asset-class/direction stability, spread/swap burden, risk blocks and exit attribution. Broad headroom requires both years, both asset classes, both directions and at least four symbols; no adjacent rescue may execute inside V1.
+- Dedicated runtime, fresh H4/specification source, channel/ATR/signal rows, candidate decisions/lifecycles/economics, locked 2026, adapter source, EA, compile and Tester remain zero. After this declaration reaches `origin/main`, only isolated runtime/source engineering and an outcome-free complete adapter/precheck may begin.
+
 ## Next authorized sequence
 
-1. Commit and push the post-Family 008 autonomous selection audit; verify clean `main == origin/main`.
-2. Declare exactly one self-contained Family 009 contract before runtime, source acquisition, channel/ATR construction or implementation.
-3. Freshly acquire seven original-broker H4 development series/specifications in a dedicated Portable, then implement and outcome-free precheck both frozen horizons.
+1. Commit and push the Family 009 pre-runtime declaration; verify clean `main == origin/main`.
+2. Create one dedicated neutral-derived Portable, copy only stopped non-Master original-broker account/server support and freshly acquire all seven development H4 series/specifications atomically.
+3. Implement the complete family-owned Python adapter and run only the outcome-free source/channel/turnover/minimum-lot precheck before freezing implementation.
 4. Run one complete two-horizon development bundle plus improvement audit; open locked/native only for one unchanged complete passer.
 5. Continue serially until a complete native candidate passes every V8 gate.
 
@@ -219,8 +227,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: none; autonomous Family 009 multi-asset H4 trend bundle is selected but not opened.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_POST_FAMILY_008_AUTONOMOUS_MULTI_ASSET_H4_TREND_SUCCESSOR_READY_NOT_OPENED`.
+- Active research unit: Family 009 multi-asset H4 Donchian trend adapter bundle, declared pre-runtime/pre-acquisition/preimplementation/preoutcome.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_009_MULTI_ASSET_H4_DONCHIAN_DECLARED_PRERUNTIME_PREACQUISITION_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
