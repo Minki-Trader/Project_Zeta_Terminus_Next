@@ -1,0 +1,117 @@
+{
+  "schema": "zeta-next-independent-multi-asset-h4-donchian-trend-adapter-challenge-v1-maturation-geometry-correction",
+  "recorded_at_utc": "2026-09-01T04:07:19.9833707Z",
+  "status": "COMPLETE_MATURATION_GEOMETRY_CORRECTED_PREIMPLEMENTATION_PREOUTCOME",
+  "family": "independent-multi-asset-h4-donchian-trend-adapter-challenge-v1",
+  "source_boundary": {
+    "commit": "1d0128015e8fe818699b3bf7a3f71f5da102cfbc",
+    "commit_equal_origin_main_before_geometry_check": true,
+    "development_source_receipt": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/evidence/INDEPENDENT_MULTI_ASSET_H4_DONCHIAN_TREND_ADAPTER_CHALLENGE_V1_DEVELOPMENT_SOURCE_RECEIPT.json",
+      "bytes": 11292,
+      "sha256": "001EB67EF1E15651A32F47446D7AA88BA7AB969984E2D95071EF9467E57BD815"
+    }
+  },
+  "fault_classification": {
+    "type": "PREIMPLEMENTATION_COMPLETE_LIFECYCLE_GEOMETRY_OMISSION",
+    "problem": "a development entry near 2025 year-end may require up to 480 held H4 bars, while the development source ends before 2026; forcing a last-source close is undeclared and opening 2026 to resolve it violates the locked boundary",
+    "economic_result_existed": false,
+    "signal_channel_ATR_or_price_value_used_to_discover_or_correct": false,
+    "method_variant_risk_stop_exit_or_horizon_changed": false
+  },
+  "corrected_rule": {
+    "eligibility": "the entry bar and its following 479 observed same-symbol H4 bars must all be inside the same judged period",
+    "entry_bar_counts_as_held_bar_one": true,
+    "maturation_uses_timestamps_only": true,
+    "early_actual_exit_does_not_restore_an_ineligible_entry": true,
+    "period_end_forced_close": false,
+    "later_period_rows_may_mature_prior_period_entry": false,
+    "active_date_denominator": "a true-UTC date with at least one fully formed next-bar decision opportunity that also has complete 480-bar maturation geometry; zero-signal mature dates remain"
+  },
+  "timestamp_only_geometry": {
+    "projection": "time column only",
+    "period": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
+    "symbols": {
+      "AUDUSD": {
+        "development_bars": 3115,
+        "mature_entry_bars": 2636,
+        "first_mature_entry_utc": "2024-01-01T22:00:00Z",
+        "last_mature_entry_utc": "2025-09-09T21:00:00Z",
+        "last_possible_480th_bar_utc": "2025-12-31T18:00:00Z"
+      },
+      "EURUSD": {
+        "development_bars": 3115,
+        "mature_entry_bars": 2636,
+        "first_mature_entry_utc": "2024-01-01T22:00:00Z",
+        "last_mature_entry_utc": "2025-09-09T21:00:00Z",
+        "last_possible_480th_bar_utc": "2025-12-31T18:00:00Z"
+      },
+      "GBPUSD": {
+        "development_bars": 3115,
+        "mature_entry_bars": 2636,
+        "first_mature_entry_utc": "2024-01-01T22:00:00Z",
+        "last_mature_entry_utc": "2025-09-09T21:00:00Z",
+        "last_possible_480th_bar_utc": "2025-12-31T18:00:00Z"
+      },
+      "NZDUSD": {
+        "development_bars": 3115,
+        "mature_entry_bars": 2636,
+        "first_mature_entry_utc": "2024-01-01T22:00:00Z",
+        "last_mature_entry_utc": "2025-09-09T21:00:00Z",
+        "last_possible_480th_bar_utc": "2025-12-31T18:00:00Z"
+      },
+      "US100": {
+        "development_bars": 3094,
+        "mature_entry_bars": 2615,
+        "first_mature_entry_utc": "2024-01-01T22:00:00Z",
+        "last_mature_entry_utc": "2025-09-09T17:00:00Z",
+        "last_possible_480th_bar_utc": "2025-12-31T18:00:00Z"
+      },
+      "US30": {
+        "development_bars": 3093,
+        "mature_entry_bars": 2614,
+        "first_mature_entry_utc": "2024-01-01T22:00:00Z",
+        "last_mature_entry_utc": "2025-09-09T13:00:00Z",
+        "last_possible_480th_bar_utc": "2025-12-31T18:00:00Z"
+      },
+      "US500": {
+        "development_bars": 3094,
+        "mature_entry_bars": 2615,
+        "first_mature_entry_utc": "2024-01-01T22:00:00Z",
+        "last_mature_entry_utc": "2025-09-09T17:00:00Z",
+        "last_possible_480th_bar_utc": "2025-12-31T18:00:00Z"
+      }
+    },
+    "locked_2026_rows_opened": 0,
+    "price_spread_volume_return_channel_ATR_signal_path_lifecycle_economic_or_improvement_values_opened": 0
+  },
+  "corrected_authorities": {
+    "README": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/README.md",
+      "bytes": 3180,
+      "lines": 17,
+      "sha256": "E68E62DD9237DBE0FA649B8698E566D286BBD0C27A31D8B997AAAA4285434AD0"
+    },
+    "contract": {
+      "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 23734,
+      "lines": 413,
+      "sha256": "B2B481A47D82476C2096F45E8FB48D24EE73C864037862327E2B8F223BB673A1"
+    }
+  },
+  "preimplementation_attestation": {
+    "adapter_source_files": 0,
+    "persistent_channel_ATR_or_signal_rows": 0,
+    "candidate_decisions_lifecycles_or_economic_metrics": 0,
+    "improvement_audit_values": 0,
+    "locked_2026_rows_persisted_or_opened": 0,
+    "EA_source_files": 0,
+    "MT5_compile_or_tester_paths": 0,
+    "candidate_process_owners": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "live_changed": false,
+    "optimization_changed": false
+  },
+  "next_authorized_action": "after this correction reaches origin/main, implement both declared variants and the audit with the same timestamp-only maturation eligibility, then run only the outcome-free precheck before implementation freeze"
+}

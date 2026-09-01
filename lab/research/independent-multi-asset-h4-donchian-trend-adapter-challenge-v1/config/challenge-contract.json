@@ -185,6 +185,7 @@
     "source_and_warmup": "2022-01-01T00:00:00Z/2024-01-01T00:00:00Z",
     "development_selection": "2024-01-01T00:00:00Z/2026-01-01T00:00:00Z",
     "locked_confirmation": "2026-01-01T00:00:00Z/2026-08-01T00:00:00Z",
+    "complete_lifecycle_maturation": "an eligible entry must have all 480 possible held same-symbol H4 bars, including its entry bar, inside the judged period; no period-end forced close and no later-period row may mature an earlier-period entry",
     "whole_v8_comparison": "2024-01-01T00:00:00Z/2026-08-01T00:00:00Z",
     "locked_confirmation_variant_max": 1,
     "locked_values_may_open_only_for_one_complete_development_passer": true
@@ -197,7 +198,8 @@
     "atr_inputs": "twenty completed true ranges ending with decision bar t; every true range uses the prior observed same-symbol close",
     "true_range": "maximum of high-low, absolute high-prior-close and absolute low-prior-close",
     "missing_history": "no decision until the variant channel, exit channel and ATR histories are all complete",
-    "portfolio_active_date": "a true-UTC date containing at least one fully formed next-bar decision opportunity in the seven-symbol universe; zero-signal active dates remain in turnover denominator"
+    "mature_entry_geometry": "the entry bar and its following 479 observed same-symbol H4 bars must all remain before the current judged period end; this uses timestamps only and does not inspect whether a lifecycle would exit early",
+    "portfolio_active_date": "a true-UTC date containing at least one fully formed next-bar decision opportunity with complete 480-bar maturation geometry in the seven-symbol universe; zero-signal active dates remain in turnover denominator"
   },
   "candidate_bundle": {
     "variants": [
