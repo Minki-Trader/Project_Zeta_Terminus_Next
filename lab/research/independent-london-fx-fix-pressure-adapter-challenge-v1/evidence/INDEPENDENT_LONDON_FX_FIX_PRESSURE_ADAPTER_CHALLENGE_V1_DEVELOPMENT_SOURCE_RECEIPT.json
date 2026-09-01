@@ -1,0 +1,209 @@
+{
+  "schema": "zeta-next-independent-london-fx-fix-pressure-adapter-challenge-v1-development-source-receipt",
+  "recorded_at_utc": "2026-09-01T05:37:39.6247134Z",
+  "status": "COMPLETE_FRESH_ORIGINAL_BROKER_DEVELOPMENT_SOURCE_TIME_GEOMETRY_VALID_PREIMPLEMENTATION_PREOUTCOME",
+  "family": "independent-london-fx-fix-pressure-adapter-challenge-v1",
+  "source_open_boundary": {
+    "history_synchronization_correction_commit": "e126c01249f694ecea31e2b9d1e90cdd8d469954",
+    "equal_to_origin_main_before_successful_acquisition": true,
+    "correction": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/evidence/INDEPENDENT_LONDON_FX_FIX_PRESSURE_ADAPTER_CHALLENGE_V1_M1_HISTORY_SYNCHRONIZATION_CORRECTION.json",
+      "bytes": 5570,
+      "sha256": "EC13141EE2821BBEAF4501A5693E9785492C34BD88286128F03A2022C2296CE6",
+      "runtime_MaxBars": 5000000,
+      "PreloadCharts": 0
+    },
+    "acquisition_script": {
+      "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/acquisition/acquire_m1.py",
+      "bytes": 26562,
+      "lines": 640,
+      "sha256": "F39E24D56AFC4264BF026639B8B5D4AB7EA32C6C9515ABCDFA791D80591E5D6B",
+      "unchanged_after_correction": true
+    }
+  },
+  "raw_acquisition": {
+    "receipt": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/DEVELOPMENT_ACQUISITION_RECEIPT.json",
+      "bytes": 37799,
+      "sha256": "B4E2CA0C737DF28F5782B3D88854C5A37DE73F0A359AF4D05AB3270130FEB88E",
+      "status": "COMPLETE_FRESH_DEDICATED_PORTABLE_DEVELOPMENT_ACQUISITION"
+    },
+    "requested_start_inclusive": "2023-01-01T00:00:00Z",
+    "requested_end_exclusive": "2026-01-01T00:00:00Z",
+    "timeframe": "M1",
+    "symbols_in_frozen_order": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "NZDUSD"
+    ],
+    "monthly_batches_per_symbol": 36,
+    "total_monthly_batches": 144,
+    "input_files": 9,
+    "input_bytes": 316312939,
+    "total_M1_rows": 4463734,
+    "ordered_manifest_definition": "SHA256 of UTF-8 relative-path TAB bytes TAB uppercase-SHA256 LF rows sorted by relative path",
+    "ordered_manifest_sha256": "128DC9BB2AE7180C3732866671410DFB60542FC0B7A01959C831094C480F4913",
+    "connected_original_broker_dedicated_portable": true,
+    "broker_account_position_order_or_deal_queries": 0,
+    "locked_values_acquired": false
+  },
+  "market_outputs": {
+    "AUDUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/market/AUDUSD_M1_DEVELOPMENT.csv",
+      "rows": 1116527,
+      "bytes": 79116563,
+      "sha256": "BE13C7CA3436B207EA75EBBCD03903285159E5EBE4A461A20AA8AAE688F14FA1"
+    },
+    "EURUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/market/EURUSD_M1_DEVELOPMENT.csv",
+      "rows": 1117273,
+      "bytes": 78950793,
+      "sha256": "4B3A412B1C2FC09E964C2EDBCAB940E342EB5EA5B7DF4F77768B4F37AF9AF728"
+    },
+    "GBPUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/market/GBPUSD_M1_DEVELOPMENT.csv",
+      "rows": 1116607,
+      "bytes": 79218140,
+      "sha256": "0648282169A01CC857B0F3A7F2FEAD6ACB8323F067C2FD1617C23E1D17841039"
+    },
+    "NZDUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/market/NZDUSD_M1_DEVELOPMENT.csv",
+      "rows": 1113327,
+      "bytes": 78986662,
+      "sha256": "67F23662A7F6700D7017C298BAF86A545E3A4F9D54C2F987881BF36C3E528117"
+    }
+  },
+  "symbol_specifications": {
+    "common_contract": {
+      "digits": 5,
+      "point": 0.00001,
+      "trade_tick_size": 0.00001,
+      "trade_tick_value": 1.0,
+      "trade_tick_value_profit": 1.0,
+      "trade_tick_value_loss": 1.0,
+      "trade_contract_size": 100000.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "volume_max": 50.0,
+      "trade_calc_mode": 0,
+      "currency_profit": "USD",
+      "swap_mode": 1,
+      "swap_mode_name": "POINTS",
+      "swap_rollover3days": 3,
+      "declared_economics_support": true
+    },
+    "AUDUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/spec/AUDUSD_SYMBOL_SPEC.json",
+      "bytes": 750,
+      "sha256": "AED8A8A42B5A6317EB7BDD2287000A876063EB284A27D0684953744C24CEB002",
+      "currency_base_and_margin": "AUD",
+      "swap_long": -0.69,
+      "swap_short": -2.39
+    },
+    "EURUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/spec/EURUSD_SYMBOL_SPEC.json",
+      "bytes": 736,
+      "sha256": "811EEDAAD47902E92DA9433CFA0BE011D8EC60AFF88375BF7ED7DAFDAA12C78A",
+      "currency_base_and_margin": "EUR",
+      "swap_long": -6.47,
+      "swap_short": 2.83
+    },
+    "GBPUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/spec/GBPUSD_SYMBOL_SPEC.json",
+      "bytes": 746,
+      "sha256": "9D80B1C082F7BFE79554A8CA73C66B02FBCE0ECA81B3B21C7A295605A8F59C62",
+      "currency_base_and_margin": "GBP",
+      "swap_long": -2.22,
+      "swap_short": -2.02
+    },
+    "NZDUSD": {
+      "path": "lab/artifacts/raw/independent-london-fx-fix-pressure-adapter-challenge-v1/input/spec/NZDUSD_SYMBOL_SPEC.json",
+      "bytes": 750,
+      "sha256": "2D2843D71A428D1CD785697C21185C28FB26B7F8D2EF40CE01DF52C503A856F2",
+      "currency_base_and_margin": "NZD",
+      "swap_long": -3.97,
+      "swap_short": 0.43
+    }
+  },
+  "time_only_normalization_and_event_geometry": {
+    "columns_loaded": [
+      "time"
+    ],
+    "normalization": "raw epoch-like value rendered as naive broker wall clock -> Europe/Helsinki -> true UTC -> Europe/London",
+    "ambiguous_nonexistent_duplicate_or_nonincreasing_timestamps": 0,
+    "first_raw_epoch_all_symbols": 1672617840,
+    "last_raw_epoch_all_symbols": 1767225540,
+    "first_true_utc_all_symbols": "2023-01-01T22:04:00+00:00",
+    "last_true_utc_all_symbols": "2025-12-31T21:59:00+00:00",
+    "normalized_rows_by_london_year": {
+      "AUDUSD": {
+        "2023": 370756,
+        "2024": 373744,
+        "2025": 372027
+      },
+      "EURUSD": {
+        "2023": 371127,
+        "2024": 373903,
+        "2025": 372243
+      },
+      "GBPUSD": {
+        "2023": 370618,
+        "2024": 373678,
+        "2025": 372311
+      },
+      "NZDUSD": {
+        "2023": 369257,
+        "2024": 372486,
+        "2025": 371584
+      }
+    },
+    "complete_event_requirement": "all four symbols contain every exact London M1 timestamp 15:34 through 16:35 inclusive",
+    "rows_per_symbol_per_complete_event": 62,
+    "common_complete_event_dates": {
+      "2023": 258,
+      "2024": 256,
+      "2025": 258,
+      "total": 772,
+      "development_2024_2025": 514
+    },
+    "pair_date_set_disagreement": {
+      "count": 1,
+      "date": "2025-02-03",
+      "incomplete_symbol": "GBPUSD",
+      "missing_london_minute": "16:23",
+      "other_three_symbols_complete": true,
+      "date_excluded_from_common_complete_events": true
+    },
+    "development_last_complete_month_dates": 24,
+    "development_last_complete_quarter_dates": 8,
+    "locked_2026_normalized_rows": 0,
+    "price_spread_volume_return_fields_loaded": 0,
+    "features_directions_paths_lifecycles_economics_or_improvement_values": 0
+  },
+  "post_acquisition_runtime_cleanup": {
+    "candidate_process_stopped": true,
+    "automatic_cache_target_directories": 7,
+    "automatic_cache_files": 53,
+    "automatic_cache_bytes": 957891037,
+    "values_opened": 0,
+    "recovery": "Windows Recycle Bin",
+    "remaining_cache_target_directories": 0,
+    "live_master_pid_33388_remained_present": true
+  },
+  "isolation_and_zero_outcome_attestation": {
+    "candidate_process_owners": 0,
+    "broker_account_position_order_or_deal_queries": 0,
+    "orders_or_trades": 0,
+    "locked_CSV_or_combined_outputs": 0,
+    "ATR_signal_direction_or_decision_rows": 0,
+    "candidate_lifecycles_or_economic_metrics": 0,
+    "improvement_values": 0,
+    "adapter_source_files": 0,
+    "EA_source_files": 0,
+    "compile_or_tester_paths": 0,
+    "live_changed": false,
+    "optimization_changed": false
+  },
+  "next_authorized_action": "after this exact source receipt reaches origin/main, implement the complete family-owned adapter and perform only an outcome-free authority, time, complete-event, ATR, direction, minimum-lot and lifecycle-geometry precheck before freezing implementation"
+}

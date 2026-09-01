@@ -7,9 +7,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0550`
+- Latest state ID: `STATE-0551`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 010 runtime/source engineering commit `fd35af9da6d1020f5716c5637cb464041c6283a9`, equal to `origin/main` before the first source invocation and synchronization correction.
+- Current process parent: Family 010 M1 history synchronization correction commit `e126c01249f694ecea31e2b9d1e90cdd8d469954`, equal to `origin/main` before successful development source acquisition.
 
 ## Authorization and ownership
 
@@ -24,7 +24,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_M1_HISTORY_MAXBARS_SECTION_CORRECTED_NO_PERSISTENT_SOURCE_PREIMPLEMENTATION_PREOUTCOME`.
+- Active phase: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_COMPLETE_FRESH_DEVELOPMENT_SOURCE_TIME_GEOMETRY_VALID_PREIMPLEMENTATION_PREOUTCOME`.
 - Sole active Challenge family: `lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/`, mandatory `Python adapter + EA`.
 - Active Lab family / Optimization campaign count: `1 / 0`; the user authorized autonomous method selection and Program tags remain administrative only.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -288,11 +288,22 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 - Post-fault automatic caches `29` files / `52,090,009` bytes in seven target directories were moved to the Windows Recycle Bin without value reads. Persistent acquisition files and final cache targets remain zero; candidate processes are stopped and Live PID `33388` remained present.
 - Correction evidence is `5,570` bytes / `EC13141EE2821BBEAF4501A5693E9785492C34BD88286128F03A2022C2296CE6`, status `SOURCE_SYNCHRONIZATION_SECTION_CORRECTED_PREACQUISITION_NO_PERSISTENT_SOURCE_PREIMPLEMENTATION_PREOUTCOME`. After it reaches `origin/main`, the unchanged development acquisition may rerun.
 
+## Family 010 development source complete
+
+- History-synchronization correction commit `e126c01249f694ecea31e2b9d1e90cdd8d469954` reached local `main`, `origin/main` and remote `main` before the unchanged acquisition reran with verified `terminal_info.maxbars=5000000`. All `36 × 4` monthly original-broker M1 batches completed.
+- AUDUSD/EURUSD/GBPUSD/NZDUSD contain `1,116,527 / 1,117,273 / 1,116,607 / 1,113,327` rows and `79,116,563 / 78,950,793 / 79,218,140 / 78,986,662` bytes at `BE13C7CA...4FA1 / 4B3A412B...F728 / 06482821...1039 / 67F23662...8117`. All raw timestamps are unique/increasing and OHLC, nonnegative spread/volume and monthly-boundary integrity passed.
+- Four USD-profit specifications are `750 / 736 / 746 / 750` bytes, all five-digit `POINTS` swap with `0.00001` point/tick size, `$1` tick value, `100,000` contract, `0.01` minimum/step and Wednesday triple rollover. Current signed swap values are preserved only as source specification; the declared intraday geometry expects zero rollover boundary.
+- Raw input has `9` files / `316,312,939` bytes / ordered manifest `128DC9BB2AE7180C3732866671410DFB60542FC0B7A01959C831094C480F4913`. Raw receipt is `37,799` bytes / `B4E2CA0C737DF28F5782B3D88854C5A37DE73F0A359AF4D05AB3270130FEB88E`, status `COMPLETE_FRESH_DEDICATED_PORTABLE_DEVELOPMENT_ACQUISITION`.
+- A time-column-only normalization loaded no price, spread, volume or return. Broker-wall `Europe/Helsinki -> UTC -> Europe/London` produced zero ambiguous/nonexistent/duplicate/nonincreasing timestamp and true bounds `2023-01-01T22:04:00Z..2025-12-31T21:59:00Z`; normalized locked-2026 rows are zero.
+- All-four-pair exact `15:34..16:35 London` completeness supplies `258 / 256 / 258` dates in 2023/2024/2025, or `514` development dates. One disagreement, `2025-02-03 GBPUSD 16:23`, is absent while the other three pairs are complete, so the entire date is excluded exactly by declaration. Development has `24` last-complete-month and `8` last-complete-quarter dates.
+- Candidate PID stopped after acquisition. Automatic caches `53` files / `957,891,037` bytes in seven candidate target directories were moved to the Windows Recycle Bin without reading values; final cache targets are zero and Live PID `33388` remained present.
+- Durable source receipt is `8,422` bytes / `72B8FDD1EEF16D2400FDE226A394CBEB98FE029D2E1D0DEF327DBF0F1BF5FD8E`, status `COMPLETE_FRESH_ORIGINAL_BROKER_DEVELOPMENT_SOURCE_TIME_GEOMETRY_VALID_PREIMPLEMENTATION_PREOUTCOME`. Locked CSV/combined output, ATR, directions, lifecycles, economics, improvement values, adapter, EA and Tester remain zero.
+
 ## Next authorized sequence
 
-1. Commit and push the Family 010 M1 history synchronization correction; verify clean `main == origin/main`.
-2. Rerun the unchanged fresh development-only four-symbol M1/specification acquisition with verified runtime `MaxBars=5000000`, stop candidate-only processes, purge automatic current caches without reading them and record the durable source receipt.
-3. Implement and freeze the complete adapter, then judge both variants plus improvement audit; escalate locked/native only for an unchanged complete passer.
+1. Commit and push the Family 010 complete fresh development source receipt; verify clean `main == origin/main`.
+2. Implement the complete family-owned adapter and run only an outcome-free authority/time/event/ATR/direction/minimum-lot/lifecycle-geometry precheck before freezing it.
+3. After the exact implementation freeze reaches `origin/main`, judge both variants plus improvement audit once; escalate locked/native only for an unchanged complete passer.
 4. Continue serially until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -313,8 +324,8 @@ No proxy result, partial gate pass or user-visible score alone completes the Goa
 
 ## Current markers
 
-- Active research unit: Family 010 London FX fix-pressure `Python adapter + EA`, effective `[Charts] MaxBars` corrected and verified before persistent source.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_M1_HISTORY_MAXBARS_SECTION_CORRECTED_NO_PERSISTENT_SOURCE_PREIMPLEMENTATION_PREOUTCOME`.
+- Active research unit: Family 010 London FX fix-pressure `Python adapter + EA`, complete fresh development M1/spec source and time geometry valid before implementation.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_010_COMPLETE_FRESH_DEVELOPMENT_SOURCE_TIME_GEOMETRY_VALID_PREIMPLEMENTATION_PREOUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE`; no V8 winner exists yet.
