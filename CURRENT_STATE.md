@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0569`
+- Latest state ID: `STATE-0570`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; one Program 2 Family 012 delayed repo-conditioned M30 shock bundle is declared with its causal Python source frozen. It uses its own physical original observations only. Structural supply passes at 2,595 shared impulses / 517 dates (5.0193/date); forward returns and monetary outcomes remain unopened before the economic-source freeze. Family 011, clock audit and NY Fed source study remain closed; V7 return engineering and Optimization remain closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; Program 2 Family 012 has closed both roles with a complete valid adverse M1 proxy result and no passer. No active candidate, EA or native runtime remains. Recompare all active macro Programs before one successor; prior families/source studies, V7 return engineering and Optimization remain closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_012_STRUCTURAL_PASS_ECONOMIC_SOURCE_FROZEN_RUN_PENDING`.
-- Sole active Challenge family: Program 2 Family 012 `lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/`, one propagation/reversal bundle. Its complete contract and causal source preceded all features; the unchanged ordinary M1 economic stage is now frozen after the structural pass. All predecessor families and source studies remain closed.
-- Active Challenge family / Optimization campaign count: `1 / 0`; Family 012 has passed its causal impulse stage and awaits one complete two-role economic run. Native EA/runtime count is zero.
+- Active phase: `FAMILY_012_CLOSED_ADVERSE_WHOLE_MACRO_RECOMPARE_PENDING`.
+- Sole active Challenge family: none. Family 012, all earlier families and source studies are closed and immutable. No proxy result has beaten V8.
+- Active Challenge family / Optimization campaign count: `0 / 0`; Family 012 propagation/reversal closed together with no passer. Native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -76,6 +76,8 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 - Family 011 exogenous-flow H4 exits, Program 4: HOLD8 / TRAIL / NO_PROGRESS actual `-$56.9853 / -$40.7125 / -$43.9478`, stressed `-$65.0694 / -$84.0872 / -$69.1946`, proxy marked DD `70.4570% / 73.6866% / 69.6786%`, first fills/date `1.3904 / 2.6231 / 2.4615`. Every role fails profit, positive-year, DD and turnover gates; complete ordinary run reconciles 723/1,364/1,280 closed trades and ends flat. No seed or 2026/native work opens. Historical margin/commission/swap and intrabar-DD limitations remain explicit proxy limits.
 
+- Family 012 delayed repo M30 shock, Program 2: propagation/reversal actual `-$89.9660 / -$66.8499`, stressed `-$137.3452 / -$121.6774`, marked M1 DD `91.8472% / 76.7499%`, first fills `1,498 / 1,890`, density `2.8975 / 3.6557` over all 517 source dates. Both 2024 and 2025 lose in actual and both stressed series. No economic passer or seed; complete 31,583,174-byte result bundle and every input/source hash remain preserved. No 2026, EA or native work opened.
+
 ## Pause and cleanup boundary
 
 - Subsequent clock authority: `lineage/CHALLENGE_BROKER_CLOCK_AUTHORITY_CORRECTION_V1.json` supersedes intended-session adverse authority for Families 006/007 and suspends complete intended-session authority for 008/010. Original files/results remain immutable and descriptive for their implemented time samples. Family 009 keeps its adverse H4 development conclusion for this specific issue. Audit found 965 shifted Family 006 events and 38 nominally misaligned dates among Family 010's 514. The 2025-03-10..14 ETF source-session exception remains unresolved for future exact external-session use; no old family reopens automatically.
@@ -86,7 +88,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Run the frozen ordinary Family 012 `adapter/run_economics.py` once for both unchanged roles after its clean origin/main freeze. Read `evidence/ECONOMIC_IMPLEMENTATION_FREEZE_V1.json` and the complete contract. All structural gates passed, but 5.0193 optimistic impulses/date are not actual fills. Judge complete price/cost/financing ledgers, actual M1-marked DD and genuine first fills; no partial result or nearby rescue. A full failure closes both roles and triggers a whole-macro comparison. Keep at least 30 GiB free.
+1. Family 012 is closed. Recompare Programs 1-5 and 7 using its complete closure and the existing source-clock authority before choosing a materially justified successor. Do not select a nearby repo/median/lag/shock/ATR/hold/symbol/direction/risk rescue or use a favorable failure fragment. A closed session implementation with a documented clock fault is not silently treated as a valid intended-session rejection; any prospective correction needs explicit source authority and its own declaration. Keep at least 30 GiB free.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -111,9 +113,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: Family 012, Program 2, propagation/reversal of a new >=1 prior-ATR M30 body shock conditioned on eight-calendar-day delayed SOFR-TGCR. Fixed 2 ATR stop, 4 ATR take, four M30 intervals, 2%/3%/8% risk. Source-only physical copies total 190,516,821 bytes, 3,174,628 M1 rows over 2023 warmup and 2024-2025 development; no 2026 price record copied or decoded. Structural supply passes with 2,595 impulses, 517 normal dates, 250 zero-impulse dates and five impulses lacking an exact opening M1; no forward-return/economic result or EA/native work has opened.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_012_STRUCTURAL_PASS_ECONOMIC_FREEZE_PRE_FORWARD_OUTCOME`.
+- Active research unit: none after complete Family 012 closure. Propagation/reversal actual -$89.9660 / -$66.8499, stressed -$137.3452 / -$121.6774, marked DD 91.8472% / 76.7499%, first fills/date 2.8975 / 3.6557. Both fail profit, year stability and DD. All 2,595 intents/role and 1,498/1,890 closed trades reconcile. No seed or 2026/native work opened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_012_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
-- Latest storage observation: C: free `77.786 GiB` after the bounded Family 012 input copy on `2026-09-07`; minimum 30 GiB retained, no deletion needed.
+- Latest storage observation: C: free `77.543 GiB` after Family 012 complete outputs on `2026-09-07`; minimum 30 GiB retained, no deletion needed.
