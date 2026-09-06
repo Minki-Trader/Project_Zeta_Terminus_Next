@@ -1,0 +1,330 @@
+{
+  "schema": "zeta-ch013-complete-development-result-v1",
+  "recorded_utc": "2026-09-06T19:23:48.525001+00:00",
+  "status": "COMPLETE_VALID_ADVERSE_NO_PASSER",
+  "contract": {
+    "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/config/contract.json",
+    "bytes": 11142,
+    "sha256": "8FD63195AA751C7E9B649752CFA1AA354943AD2A7416142462859B7B699050F7"
+  },
+  "adapter": {
+    "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/adapter/run_economics.py",
+    "bytes": 22818,
+    "sha256": "5E31A3C0BA9665A46ED748D982465BE52A5C1479CC82FE04386F2F8B44C30474"
+  },
+  "structural_result": {
+    "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/evidence/STRUCTURAL_RESULT_V1.json",
+    "bytes": 3493,
+    "sha256": "56872B245F51510F946B578A0075D115B1FE7FC67EBC47033B4CBECD0010013B"
+  },
+  "normal_dates": 517,
+  "roles": [
+    {
+      "role": "DC_FOLLOW",
+      "actual_net": -90.79219999997146,
+      "direction_stressed_net": -251.16849999996185,
+      "midpoint_stressed_net": -250.9656999999729,
+      "no_positive_credit_stressed_net": -265.53129999996185,
+      "proxy_marked_equity_drawdown_pct": 94.84177939767369,
+      "first_fills": 6091,
+      "first_fills_per_normal_date": 11.781431334622823,
+      "normal_dates": 517,
+      "epochs": {
+        "2024": {
+          "actual_marked_net": -88.33839999997056,
+          "direction_stressed_marked_net": -240.766199999969,
+          "midpoint_stressed_marked_net": -240.55884999997016,
+          "no_positive_credit_stressed_marked_net": -255.128999999969,
+          "realized_cash_net": -88.3383999999708
+        },
+        "2025": {
+          "actual_marked_net": -2.453800000000884,
+          "direction_stressed_marked_net": -10.402299999992835,
+          "midpoint_stressed_marked_net": -10.40685000000272,
+          "no_positive_credit_stressed_marked_net": -10.402299999992835,
+          "realized_cash_net": -2.453800000000864
+        }
+      },
+      "starts_each_year": {
+        "2024": 4807,
+        "2025": 1284
+      },
+      "starts_by_symbol": {
+        "US100": 1494,
+        "US30": 1341,
+        "US500": 3256
+      },
+      "starts_by_direction": {
+        "1": 3091,
+        "-1": 3000
+      },
+      "admissions": {
+        "ACCEPTED": 6091,
+        "MINIMUM_LOT_RISK_CAP": 5381,
+        "MISSING_EXACT_ENTRY_QUOTE": 6
+      },
+      "exit_reasons": {
+        "NEXT_INTRINSIC_EVENT": 4709,
+        "INTRABAR_STOP": 260,
+        "TIMEOUT_FIRST_AVAILABLE": 1120,
+        "GAP_STOP": 2
+      },
+      "swap_net": -2.9821,
+      "positive_swap_credits": 14.362800000000009,
+      "direction_extra_spread": 160.37629999999038,
+      "midpoint_extra_spread": 160.17350000000144,
+      "accounting_residuals": {
+        "cash_minus_trade_net": 1.1368683772161603e-13,
+        "swap_tape_minus_trade_swap": 0.0,
+        "direction_stress_minus_tape": -9.634959496906959e-12,
+        "midpoint_stress_minus_tape": 1.4210854715202004e-12,
+        "positive_credit_minus_tape": 7.105427357601002e-15,
+        "cash_minus_realized_epochs": 2.1316282072803006e-13
+      },
+      "final_position_count": 0,
+      "gates": {
+        "actual_profit": false,
+        "all_stressed_profit": false,
+        "all_marked_epochs_positive": false,
+        "proxy_marked_drawdown": false,
+        "first_fill_density": true,
+        "each_year_fill_count": true,
+        "three_traded_symbols": true,
+        "both_directions": true
+      },
+      "complete_passer": false,
+      "artifacts": [
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FOLLOW/admissions.csv",
+          "bytes": 975459,
+          "sha256": "1ABF06D21F140FB708A7B40563F08E185DFD17A3AA73EE142F50F63866EBE508"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FOLLOW/equity.csv",
+          "bytes": 89597393,
+          "sha256": "34C278EAE3DC9C37A22CA9944343B1E1B97A056D27A618A0E128D00D5AE167A3"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FOLLOW/trades.csv",
+          "bytes": 1433125,
+          "sha256": "56A6E1969AA2737354D935FFC94BAA6E88F20419E691A274AC2FB991B23DB03F"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FOLLOW/financing.csv",
+          "bytes": 16465,
+          "sha256": "E7D01E786384544551AB5C12B9E54C5E6991B7D0170B5CA02B5EDD00441A0DC9"
+        }
+      ]
+    },
+    {
+      "role": "DC_FADE",
+      "actual_net": -97.4053999999999,
+      "direction_stressed_net": -169.13430000000074,
+      "midpoint_stressed_net": -169.08649999999665,
+      "no_positive_credit_stressed_net": -173.55710000000073,
+      "proxy_marked_equity_drawdown_pct": 97.78256437871408,
+      "first_fills": 3287,
+      "first_fills_per_normal_date": 6.3578336557059965,
+      "normal_dates": 517,
+      "epochs": {
+        "2024": {
+          "actual_marked_net": -94.25129999999949,
+          "direction_stressed_marked_net": -164.369200000001,
+          "midpoint_stressed_marked_net": -164.32029999999855,
+          "no_positive_credit_stressed_marked_net": -168.792000000001,
+          "realized_cash_net": -94.2512999999997
+        },
+        "2025": {
+          "actual_marked_net": -3.154100000000409,
+          "direction_stressed_marked_net": -4.765099999999748,
+          "midpoint_stressed_marked_net": -4.766199999998065,
+          "no_positive_credit_stressed_marked_net": -4.765099999999748,
+          "realized_cash_net": -3.154100000000409
+        }
+      },
+      "starts_each_year": {
+        "2024": 2976,
+        "2025": 311
+      },
+      "starts_by_symbol": {
+        "US100": 760,
+        "US30": 606,
+        "US500": 1921
+      },
+      "starts_by_direction": {
+        "-1": 1690,
+        "1": 1597
+      },
+      "admissions": {
+        "ACCEPTED": 3287,
+        "MINIMUM_LOT_RISK_CAP": 8185,
+        "MISSING_EXACT_ENTRY_QUOTE": 6
+      },
+      "exit_reasons": {
+        "NEXT_INTRINSIC_EVENT": 2094,
+        "INTRABAR_STOP": 829,
+        "TIMEOUT_FIRST_AVAILABLE": 353,
+        "GAP_STOP": 11
+      },
+      "swap_net": -4.6445,
+      "positive_swap_credits": 4.422800000000003,
+      "direction_extra_spread": 71.72890000000085,
+      "midpoint_extra_spread": 71.68109999999673,
+      "accounting_residuals": {
+        "cash_minus_trade_net": 2.2737367544323206e-13,
+        "swap_tape_minus_trade_swap": 0.0,
+        "direction_stress_minus_tape": 8.384404281969182e-13,
+        "midpoint_stress_minus_tape": -3.268496584496461e-12,
+        "positive_credit_minus_tape": 2.6645352591003757e-15,
+        "cash_minus_realized_epochs": 2.1316282072803006e-13
+      },
+      "final_position_count": 0,
+      "gates": {
+        "actual_profit": false,
+        "all_stressed_profit": false,
+        "all_marked_epochs_positive": false,
+        "proxy_marked_drawdown": false,
+        "first_fill_density": true,
+        "each_year_fill_count": true,
+        "three_traded_symbols": true,
+        "both_directions": true
+      },
+      "complete_passer": false,
+      "artifacts": [
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FADE/admissions.csv",
+          "bytes": 1003501,
+          "sha256": "B9EFC327B7C420EAE5B4333EA1F4B45260DEB11985509EB03A3A8B20A60C853B"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FADE/equity.csv",
+          "bytes": 88828266,
+          "sha256": "AAD622E9D13C8FD320E92A500FEBCD59AE0210190FF6CEC4B8B6F93A0D5A49BD"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FADE/trades.csv",
+          "bytes": 773337,
+          "sha256": "B1900AC4946635A2CF227E41A9BA8055D630AA974E95A534D1C2268E5197BFF6"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_FADE/financing.csv",
+          "bytes": 6400,
+          "sha256": "2553DC679F4C60837AF7F02BD6F146D47CA96BF50FD69EF0964BCEB193EE1C2E"
+        }
+      ]
+    },
+    {
+      "role": "DC_OVERSHOOT_CONTEXT",
+      "actual_net": -94.39129999999999,
+      "direction_stressed_net": -184.24280000000266,
+      "midpoint_stressed_net": -184.36309999999045,
+      "no_positive_credit_stressed_net": -189.06430000000267,
+      "proxy_marked_equity_drawdown_pct": 95.1973003645713,
+      "first_fills": 5124,
+      "first_fills_per_normal_date": 9.911025145067699,
+      "normal_dates": 517,
+      "epochs": {
+        "2024": {
+          "actual_marked_net": -82.9561999999985,
+          "direction_stressed_marked_net": -162.0779000000004,
+          "midpoint_stressed_marked_net": -162.20829999999708,
+          "no_positive_credit_stressed_marked_net": -166.8994000000004,
+          "realized_cash_net": -82.95619999999842
+        },
+        "2025": {
+          "actual_marked_net": -11.43510000000148,
+          "direction_stressed_marked_net": -22.164900000002234,
+          "midpoint_stressed_marked_net": -22.154799999993372,
+          "no_positive_credit_stressed_marked_net": -22.164900000002234,
+          "realized_cash_net": -11.435100000001473
+        }
+      },
+      "starts_each_year": {
+        "2024": 3700,
+        "2025": 1424
+      },
+      "starts_by_symbol": {
+        "US100": 1008,
+        "US30": 812,
+        "US500": 3304
+      },
+      "starts_by_direction": {
+        "1": 2590,
+        "-1": 2534
+      },
+      "admissions": {
+        "ACCEPTED": 5124,
+        "MINIMUM_LOT_RISK_CAP": 6348,
+        "MISSING_EXACT_ENTRY_QUOTE": 6
+      },
+      "exit_reasons": {
+        "NEXT_INTRINSIC_EVENT": 3730,
+        "INTRABAR_STOP": 635,
+        "TIMEOUT_FIRST_AVAILABLE": 754,
+        "GAP_STOP": 5
+      },
+      "swap_net": -0.8300999999999998,
+      "positive_swap_credits": 4.8215,
+      "direction_extra_spread": 89.85150000000266,
+      "midpoint_extra_spread": 89.97179999999047,
+      "accounting_residuals": {
+        "cash_minus_trade_net": -1.4210854715202004e-14,
+        "swap_tape_minus_trade_swap": 0.0,
+        "direction_stress_minus_tape": 2.6574298317427747e-12,
+        "midpoint_stress_minus_tape": -9.535483513900544e-12,
+        "positive_credit_minus_tape": 0.0,
+        "cash_minus_realized_epochs": -9.947598300641403e-14
+      },
+      "final_position_count": 0,
+      "gates": {
+        "actual_profit": false,
+        "all_stressed_profit": false,
+        "all_marked_epochs_positive": false,
+        "proxy_marked_drawdown": false,
+        "first_fill_density": true,
+        "each_year_fill_count": true,
+        "three_traded_symbols": true,
+        "both_directions": true
+      },
+      "complete_passer": false,
+      "artifacts": [
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_OVERSHOOT_CONTEXT/admissions.csv",
+          "bytes": 988528,
+          "sha256": "9D8DFE427693AE15E5ADC4A8B1444AA17A0BE689DB7D8B79656BD41EFA9FD068"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_OVERSHOOT_CONTEXT/equity.csv",
+          "bytes": 89111470,
+          "sha256": "3106A9C8E642DD74BA42896CD996E991CD8CE2A200B2C31117CE716C1B79BF5F"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_OVERSHOOT_CONTEXT/trades.csv",
+          "bytes": 1206478,
+          "sha256": "475CCBAEF2F9E90953921972EAF1E54AD96E8901A3CA7E88536843D7BF6D5A17"
+        },
+        {
+          "path": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/development-v1/DC_OVERSHOOT_CONTEXT/financing.csv",
+          "bytes": 12818,
+          "sha256": "26FEAD16117C9420811014792CD9132A7920B670B9D40A3133014FE0FF09A80B"
+        }
+      ]
+    }
+  ],
+  "selected_unchanged_survivor": null,
+  "candidate_2026_price_opened": false,
+  "EA_or_native_opened": false,
+  "limits": {
+    "bid_ask": "Bid OHLC plus row spread times point. Long entry Ask/exit Bid, short entry Bid/exit Ask. USD directional difference times contract size and lots. Row spread is representative, not a certified first-tick or intrabar Ask series.",
+    "within_bar": "Opening gap through stop fills at adverse liquidation-side open before scheduled/event exits. Intrabar stop uses low Bid for long, high Bid plus row spread for short; fill fixed stop. A same-bar stop cannot create another entry without a fresh event.",
+    "spread_stress": "Subtract one further observed direction-specific burden on actual-sized trades: long entry spread or short exit spread. Separately subtract half-entry plus half-exit spread. Both stresses must pass.",
+    "commission_usd_per_lot_per_side": 0,
+    "commission_limit": "Zero is optimistic snapshot-limited screening, not historical/native certification.",
+    "swap": "Use numeric snapshot mode 2 as USD per lot, charged at each crossed broker-date midnight after a held weekday, triple on the declared weekday ending there; no extra weekend charge. Charge before opening exits, never for a position first opened at that boundary. Historical rates/raw-clock certainty remain proxy limits.",
+    "financing_robustness": "A third stress subtracts all positive swap credits from the directionally stressed same-trade result; negative charges remain. It must also pass profit and each-year gates. No alternative sizing path.",
+    "drawdown": "Global liquidation-side M1 opening and closing marked equity. Native intrabar DD can be higher; call this proxy marked DD.",
+    "integrity": "Preserve events, admissions, full closes, financing and marked equity. Normal result production reconciles all accepted starts to one full close, final flat state, cash/P&L/epochs and each spread/financing stress. Incomplete data/accounting is correction, not adverse. No checker CLI, tests or CI."
+  },
+  "historical_margin_limit": "No exact historical margin rates in snapshots; optimistic risk-limited screen with no invented CFD margin formula. Native margin admission is mandatory for a survivor.",
+  "free_bytes_after": 82536775680
+}
