@@ -2,6 +2,8 @@
 
 Program 1, Family 015, one `Python adapter + EA` bundle. The active contract is `lab/research/independent-symbolic-path-context-adapter-challenge-v1/config/contract-v1.json`; its full prospective evidence boundary is `lab/research/independent-symbolic-path-context-adapter-challenge-v1/evidence/DECLARATION_V1.json`.
 
+Closed: the complete causal structural run emitted only three CTW optimistic intentions over all 517 source dates, with none from the IID reference. Every necessary supply/year/breadth gate failed. All source, config, model checkpoints, forecasts and evidence are immutable; there is no economic result, seed, 2026 confirmation, EA or native path. The declaration and stage sequence below describe the frozen historical contract. The complete account is `lab/research/independent-symbolic-path-context-adapter-challenge-v1/REPORT.md`.
+
 The model learns the order of five categories of completed M15 price innovation. `KT_IID_REFERENCE` uses the same observations without order; `CTW_ORDERED` averages context depths up to five. Only CTW may become a candidate, and it must earn both absolute economic results and added value over its reference. Neither information-theory guarantees nor a forecast score is profit proof.
 
 All input copies, causal features and result ledgers belong to `lab/artifacts/raw/independent-symbolic-path-context-adapter-challenge-v1/`. Only original 2023-2025 M1 observations and dated static contracts are eligible. No old strategy source or outputs are inputs. The own normal Python producer must be compiled and frozen before its first run. No EA or native Portable is open.
