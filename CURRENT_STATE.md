@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0560`
+- Latest state ID: `STATE-0561`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `V7_RETURN_VERIFIED_LIVE_HANDOFF_ACTIVE`; the Lab family is closed and frozen. Challenge and Optimization remain paused/closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Sole research unit is `lab/research/broker-clock-authority-audit-v1/` (Program 7). V7 return engineering is closed; Optimization remains closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `INDEPENDENT_V8_CHALLENGE_PAUSED_AFTER_FAMILY_010_CLOSED_VALID_ADVERSE_NO_PASSER_NO_BROAD_HEADROOM`.
+- Active phase: `POST_PAUSE_BROKER_CLOCK_AUTHORITY_AUDIT_BEFORE_SUCCESSOR_SELECTION`.
 - Sole active Challenge family: none. Family 010 `lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/` is closed and immutable.
-- Active Challenge family / Optimization campaign count: `0 / 0`; the separate user-authorized V7 return engineering family is active. No Challenge successor may open until the user resumes the Challenge.
+- Active Challenge candidate / Optimization campaign count: `0 / 0`; one bounded Program 7 clock-authority audit is active. The latest Goal resumes research; close the audit and recompare all macro programs before a successor.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -76,17 +76,18 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Pause and cleanup boundary
 
-- The user directed completion and closure of the currently open Family 010 followed by a temporary stop. No whole-map successor selection, declaration, runtime or market source has opened.
+- The former Family 010 pause remains historical. The user explicitly resumed autonomous research on 2026-09-07 with a minimum 30 GB storage reserve; the current implementation preserves the stricter 30 GiB floor. Family 010 itself remains closed.
 - The exact closed ignored Family 010 Portable, `8,237` files / `547,324,203` bytes, was moved to the Windows Recycle Bin with zero process owner. It is recoverable; the whole Recycle Bin was not emptied because it may contain unrelated user material.
 - Canonical Family 010 input, all five raw result tapes, tracked adapter/config/declaration/result/audit/closure and every hashed authority remain preserved. Live PID `33388`, Live package/state and Optimization were untouched.
 - The user's 2026-09-06 storage request removed only `2,983` identical ignored cache copies from `20` closed runtimes, reclaiming `44.156753 GiB`. The exact recovery map and retention receipt are `lineage/STORAGE_DUPLICATE_CACHE_MAP_20260906_V1.tsv` and `lineage/RESEARCH_STORAGE_RETENTION_20260906_V1.json`; all `591` retained source files passed post-removal SHA-256 comparison.
 
 ## Next authorized sequence
 
-1. Complete the authorized V7R entries-disabled create/recovery and actual-tick conditional Live handoff under the 2026-09-06 policy and family declaration. The separate Challenge pause continues; no Challenge successor opens.
-2. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
-3. On explicit user continuation, recompare the autonomous method map from the closed Family 001–010 ledger before declaring exactly one materially distinct successor; do not reopen Family 010 or automatically execute an audit-adjacent rescue.
-4. The persistent Goal remains incomplete until a complete native candidate passes every V8 gate.
+1. Complete the bounded broker-clock authority audit under the resumed Goal and preserve at least 30 GiB free. No price/outcome rerun or new Challenge candidate opens until the audit closes and the macro map is re-compared.
+2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
+3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
+4. After audit closure, recompare the autonomous method map from the closed Family 001–010 ledger before declaring exactly one materially distinct successor; do not reopen Family 010 or automatically execute an audit-adjacent rescue.
+5. The persistent Goal remains incomplete until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
 
@@ -107,8 +108,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none; Challenge development is paused after complete Family 010 closure.
+- Active research unit: `lab/research/broker-clock-authority-audit-v1/`, Program 7; one stream, timestamp/source-only, no economic candidate yet.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_PAUSED_AFTER_FAMILY_010_CLOSED_VALID_ADVERSE_NO_PASSER_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
-- Goal status: `ACTIVE_INCOMPLETE_USER_PAUSED`; no V8 winner exists yet and no successor is open.
+- Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
+- Latest storage observation: C: free `78.455 GiB / 84.240 GB` at `2026-09-07 01:41 Asia/Seoul`; no deletion needed.
