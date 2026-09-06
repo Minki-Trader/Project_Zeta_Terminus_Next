@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0587`
+- Latest state ID: `STATE-0588`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014 is closed with all three policies adverse after one unchanged full path and report-only serialization recovery. The Program 2 Treasury-note source-readiness unit is closed after exact native identity and 36 monthly 2023-2025 timestamp observations. Historical roll/adjustment, material coverage gaps and external-clock authority remain unresolved, so no candidate is opened. The own no-EA reader is normally stopped; all research units/candidates/economic paths are closed. Whole Programs 1-5/7 comparison now selects prospective Program 1 ordered symbolic-path context prediction; no successor root, numeric declaration, features or outcomes are open. Every predecessor and Optimization stays closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Sole Program 1 Family 015 `lab/research/independent-symbolic-path-context-adapter-challenge-v1/` is fully declared with fresh compiled structural source before own copying/features/fit scores/economics. One KT IID reference and one ordered CTW candidate share the five-class completed-M15 observations and full frozen economic contract. Every predecessor/source study and Optimization remains closed. No candidate EA/native path is open.
 - Next Live-Dev authorization: `ENABLED` for the installed user-authorized exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed. The assistant may check readiness but does not execute investment/trading activation; the user must directly perform final activation after unchanged operational gates.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,10 +34,10 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `TREASURY_SOURCE_CLOSED_WHOLE_MAP_RECOMPARED_PROGRAM_1_SYMBOLIC_PATH_CONTEXT_DECLARATION_PENDING`.
-- Sole active source-only unit: none. `lab/research/treasury-note-futures-source-readiness-v1/` is closed partial/unready, with 512,522 original time observations in all 36 months but unresolved continuity/clock authority. Closure 36DD29B0F195699F54773903585913DA97DC12DFEC1CB50907EAC5933659289E. Every Challenge predecessor remains closed; no native V8 winner exists.
-- Prospective successor: `lab/research/independent-symbolic-path-context-adapter-challenge-v1/`, Program 1, Python adapter + EA. Root is not created. Whole-map authority 8898503515C7DA4035B802A2FD105FBA2A56F0B479F855B020F5CAE7FCBA3F5A selects causal bounded-memory context-tree prediction of ordered completed-price symbols; complete independent numeric/data/cost/lifecycle declaration is required before any candidate output.
-- Active Challenge family / Optimization campaign count: `0 / 0`; native candidate EA/economic runtime count is zero. All three no-EA source readers are normally stopped with zero exact-path process owners. Active source-only unit count is zero. The Treasury reader used 265,083,144 bytes under its 2 GiB cap; C: remains above 56 GiB free.
+- Active phase: `FAMILY_015_SYMBOLIC_PATH_CONTEXT_DECLARED_INPUT_COPY_AND_CAUSAL_STRUCTURAL_RUN_PENDING`.
+- Sole active source-only unit: none. Treasury-note source readiness is closed partial/unready with historical roll/coverage/clock limits; its no-EA reader is normally stopped. All predecessor evidence remains immutable.
+- Sole active Challenge family: `lab/research/independent-symbolic-path-context-adapter-challenge-v1/`, Program 1, Python adapter + EA. Complete `evidence/DECLARATION_V1.json`, `config/contract-v1.json` and `evidence/STRUCTURAL_IMPLEMENTATION_FREEZE_V1.json` precede every own input copy and feature/fit output. CTW uses five ordered completed-price classes, depth 5, fixed Dirichlet/stop priors and causal magnitude estimates; KT IID is a non-promotable reference. Both share declared costs, risk and one-M15 exit. No source/model/feature/label/outcome from a closed strategy is imported.
+- Active Challenge family / Optimization campaign count: `1 / 0`; native candidate EA/economic runtime count is zero. All three old no-EA readers stay normally stopped. Own raw M1 input is about 190.5 MB; all new proxy input/output is capped at 3 GiB against the mandatory 30 GiB reserve. No candidate 2026 values are open.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -95,7 +95,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Prepare one complete prospective Program 1 `independent-symbolic-path-context-adapter-challenge-v1` declaration under the completed whole-map authority. Read the primary context-tree method; fix the finite price alphabet, flat observations, posterior/label timing, model mixture, source provenance, all periods, costs, execution, protection, sizing and bundle stops before candidate features or economics. Ordered contexts must not collapse into a retuned closed tick-count imbalance, old expert/GRU action head, price-turn or fair-reference signal. Preserve every source date, own physical inputs, mandatory Python adapter + EA architecture and all V8 gates. No numeric contract, root, candidate output or native path is open yet; retain at least 30 GiB free.
+1. After the complete Family 015 declaration/source phase reaches origin/main, make the declared one-time physical raw-M1/static-contract copies and run the full 2023-2025 causal model/structural producer. Preserve all source dates. Only CTW supply >=3 optimistic intents/date with the fixed yearly/breadth gates permits the unchanged declared economic stage; sparse supply closes the whole two-role bundle. Freeze the economic implementation before any money path. Only a complete CTW economic/information survivor can enter the already specified exposed-calendar confirmation and mandatory native stages; no nearby rescue or old-family parent.
 2. The V7R market follow-up is complete and its heartbeat PAUSED. Preserve entries-disabled operation; the assistant must not activate trading. Source, settings and risk contract remain frozen. Any further operational read follows a new concrete need, not repetitive broker polling.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -120,9 +120,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none. Closed Family 014 phase `94bac0b` preserves result `42F5F9720C282D6C9EF64031B28F8DF56B004553FD5E9C7F458DE413C6528D9A`, closure `5A31E9ED569F6E28EA53B2565AEBFDF88BBAD3573ADE3F7E6A9A079D8796AF56` and 97 original outputs/error receipt. Whole-macro comparison `8714F402582618E3F9CDA4C47C1DC1D38DDC68CD8F9AFE7AB4687246BA25CE6F` selects only an undeclared Program 2 US10YR source question. No successor root, new source prices, 2026/native candidate or broker context query exists.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_014_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
+- Active research unit: Program 1 Family 015 symbolic-path context, fully prospectively declared. Whole-map authority `8898503515C7DA4035B802A2FD105FBA2A56F0B479F855B020F5CAE7FCBA3F5A` and the own declaration/freeze authorize only one causal fit/structural bundle before conditional economics. No own data copy, fitted result, 2026 price or native candidate is open at STATE-0588.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_015_DECLARED_BEFORE_CAUSAL_FEATURE_FIT_AND_ECONOMIC_OUTPUT`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
-- Latest storage observation: C: free `57.421 GiB` at the post-Family-014 macro comparison on `2026-09-07`; all canonical data and stopped readers are preserved above the 30 GiB reserve. Local-only V7R status at 06:17 KST is healthy 0/0, snapshot age 10 seconds, no alerts/warnings. Read-only readiness heartbeat scope was verified after its update.
+- Latest storage observation: C: free approximately `57.3 GiB` at Family 015 declaration on `2026-09-07`; own maximum 3 GiB proxy growth preserves the 30 GiB reserve. Local process-only observation confirms responsive visible V7R EA/dashboard PIDs 14492/29492. Read-only market readiness completed at 07:02 KST, heartbeat PAUSED, actual trading activation remains a direct user step. No broker account/position/order/deal context query occurred.

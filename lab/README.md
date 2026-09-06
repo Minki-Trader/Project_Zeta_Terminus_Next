@@ -2,6 +2,8 @@
 
 이 디렉터리는 Live와 분리된 연구·공학 작업만 소유한다. 어떤 파일도 `live-dev/`를 include하거나 Live 상태·로그를 읽어서는 안 된다.
 
+현재 단일 활성 연구는 Program 1 Family 015 `research/independent-symbolic-path-context-adapter-challenge-v1/`이다. 다섯 범주의 완료 M15 가격 변화를 순서 없이 추정하는 KT 대조군과 최대 5개 과거 범주의 순서를 쓰는 CTW를 한 번에 비교한다. 전체 학습·자료·비용·위험·청산·개발/확인/native 관문을 결과 전에 고정했다. 최초 단계는 자기 원본 M1 복사와 전체 인과적 학습/공급 확인이며, 후보는 CTW 하나만 가능하다. 확정 수익이나 EA/native 실행은 아직 없다. 아래 이전 단계 설명은 해당 시점의 이력이다.
+
 ## 거시 연구 배분
 
 Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 / 3 주문·시각·세션 / 4 포지션 관리·청산 / 5 포트폴리오·자본·위험 / 7 진단·인과·메타` 중 주 프로그램 하나만 가진다. Program 6 `실행·복구·브로커 안전`은 현재 Goal 밖이다. 사용자의 2026-08-31 명시 권한에 따라 하나의 사전동결 family bundle 안에서는 인접 후속을 한 단위씩 연속 탐색할 수 있다. 더 견고한 경로가 없으면 그 family를 닫고 전 프로그램을 다시 비교한 뒤 다음 family 하나만 연다. 여러 family를 보되 동시에 열거나 자동 승격하지 않는다.
@@ -12,7 +14,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 
 직전 Program 2 / meso Unit 123 `research/standard-options-expiration-week-state-engineering-correction-v1/`은 결과를 한 번도 열지 못했던 Unit 090의 영수증 직렬화 오류만 교정하고 공개 표준 옵션 만기 주간 계약을 그대로 경제적으로 완결했다. `1,051`일·`2,429` signals·`2,233` lifecycles의 무결성이 모두 통과했다. period-weekday centered 공급 차이는 일당 signal `+0.09756`, birth `+0.04607`, sub-three-signal day `-2.0369pp`; component-period centered 경제 차이는 `+0.01649R / -3.1719pp stops`였다. 그러나 US30 `+0.06216R/-7.5768pp`와 US100 `-0.01149R/-0.4733pp`가 합의하지 않고 RC4 절대 기여 `51.368%`가 `45%` cap을 넘었다. `AMBIGUOUS_STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_NO_CANDIDATE`로 닫았으며 expiration day·weekday·book·component·gamma·volume/OI 구제, seed·MT5·Optimization·Live 권한은 없다.
 
-현재 active engineering family는 없다. `engineering/v7-rlo1-return-requalification-v1/`은 원래 V7 4%/12%와 정확한 V8 4%/18%의 두 연속 실틱 비교를 완결하고 통과했다. 검증한 새 `NEXT-E03-V7R-RLO1-0bba2ca045fe`를 사용자가 승인한 Live 인계용으로 동결했다. Live 최초 기동·복구는 완료했고 실제 틱 확인은 Live-Dev에서 이어간다. 새 연구는 이 배포 family를 다시 열지 않는다.
+현재 active engineering family는 없다. `engineering/v7-rlo1-return-requalification-v1/`은 원래 V7 4%/12%와 정확한 V8 4%/18%의 두 연속 실틱 비교를 완결하고 통과했다. 검증한 새 `NEXT-E03-V7R-RLO1-0bba2ca045fe`를 사용자가 승인한 Live 인계용으로 동결했다. Live 최초 기동·복구와 07:02 KST 읽기 전용 실제 틱 준비 확인은 완료했고 heartbeat는 일시중지했다. 최종 거래 활성화는 사용자 직접 조작이며 EA는 0/0을 유지한다. 새 연구는 이 배포 family를 다시 열지 않는다.
 
 닫힌 `engineering/paired-month-live-replacement-handoff-v1/`의 identity 번역, 컴파일과 entries-disabled 복구는 공학 증거로 보존한다. Selection 경제 재현 및 승격 준비 권위는 실틱 대체 문제로 철회되었고 `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`이 그 정정을 소유한다.
 

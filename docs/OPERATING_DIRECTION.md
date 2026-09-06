@@ -68,7 +68,7 @@ First close the bounded Program 7 `lab/research/broker-clock-authority-audit-v1/
 
 Keep the stricter existing 30 GiB reserve as the operational implementation of the user's minimum 30 GB. Before acquisitions, runtime copies and result-producing runs, account for their bounded output/log growth; check again during long runs. If capacity threatens the reserve, close or defer only the storage-growing research step and use the existing safe retention policy. No Live files, canonical evidence or unique inputs may be removed to meet it. This session starts with approximately 78.45 GiB free and needs no deletion.
 
-The separately authorized V7R final market-gated activation remains pending in the same task. Keep its EA/dashboard healthy and frozen in 0/0 until actual gates pass; when the market follow-up is actionable, reach a safe research boundary and complete the existing Live handoff serially. Research resumption does not weaken Live gates or authorize a concurrent candidate stream.
+The V7R read-only market/operating follow-up completed at 07:02 KST on 2026-09-07 and its same-task heartbeat is paused. Keep the verified EA/dashboard frozen in 0/0; final trading activation is a direct user step under the implementation boundary above. No repeated broker watcher or assistant trading activation follows from research resumption, and Live gates remain unchanged.
 
 ## Evidence and economic boundaries
 

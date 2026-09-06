@@ -1,0 +1,88 @@
+{
+  "schema": "zeta-independent-v8-challenge-family-015-declaration-v1",
+  "declared_date_kst": "2026-09-07",
+  "status": "PROSPECTIVELY_DECLARED_BEFORE_OWN_INPUT_COPY_FEATURES_FIT_SCORES_AND_ECONOMICS",
+  "family_root": "lab/research/independent-symbolic-path-context-adapter-challenge-v1/",
+  "artifact_root": "lab/artifacts/raw/independent-symbolic-path-context-adapter-challenge-v1/",
+  "primary_macro_program": "1 entry_signal_market_structure",
+  "macro_authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_TREASURY_SOURCE_MACRO_RECOMPARE_V1.json",
+    "bytes": 8637,
+    "sha256": "8898503515C7DA4035B802A2FD105FBA2A56F0B479F855B020F5CAE7FCBA3F5A"
+  },
+  "contract": "lab/research/independent-symbolic-path-context-adapter-challenge-v1/config/contract-v1.json",
+  "question": "Does the ordering of a finite sequence of completed price innovations add causal predictive and complete net-economic value beyond the same price alphabet with independent identical distribution counts?",
+  "architecture_and_ownership": {
+    "mandatory": "Python adapter + EA",
+    "python": "Own completed observations, finite-symbol materialization, posterior updates, probability forecasts and new-entry intentions. A forecast never routes a real order in the proxy.",
+    "ea": "Only after one unchanged proxy/confirmation survivor, the EA owns native account/contract validation, quote freshness, sizing and shared risk, orders, protection, close, persistence and bounded evidence. A one-time frozen CXR2 execution/safety-shell copy may then enter this root, with new identity and no cross-root include or execution.",
+    "roles": {
+      "KT_IID_REFERENCE": {"portfolio": "LAB-ZT-CH015-KTIID-20260907", "magic": [261015101, 261015102, 261015103], "native_candidate_eligible": false},
+      "CTW_ORDERED": {"portfolio": "LAB-ZT-CH015-CTW-20260907", "magic": [261015201, 261015202, 261015203], "native_candidate_eligible": true}
+    },
+    "stream": "One indivisible reference/candidate bundle and one serial judgment stream. No Optimization, parallel family or delegated candidate work. No current EA, native Portable or broker query."
+  },
+  "method_authority": [
+    {
+      "url": "https://research.tue.nl/en/publications/the-context-tree-weighting-method-basic-properties/",
+      "title": "Willems, Shtarkov and Tjalkens (1995), The context-tree weighting method: basic properties",
+      "doi": "10.1109/18.382012",
+      "scope": "Original binary CTW motivation. Relevant original PDF definitions and KT discussion were available, but subsequent equation retrieval failed; the directly read general-alphabet primary method below binds the estimator instead of assuming an unread equation."
+    },
+    {
+      "url": "https://academic.oup.com/jrsssb/article/84/4/1287/7073257",
+      "alternate_primary": "https://arxiv.org/abs/2007.14900",
+      "title": "Kontoyiannis et al. (2022), Bayesian Context Trees: Modelling and Exact Inference for Discrete Time Series",
+      "doi": "10.1111/rssb.12511",
+      "read_scope": "Finite-alphabet definitions, Dirichlet integrated likelihood equation (8), CTW recursion in section 3.1, sequential update and posterior-predictive likelihood ratio in section 3.6/equations (17)-(18). Search and extraction also exposed general abstracts/application discussion; no application dataset or optimized trading parameter is imported."
+    }
+  ],
+  "estimator": {
+    "observation": "Build a raw-epoch-grid M15 bar only from its exact 15 consecutive native M1 records. OHLC is Bid; spread is the arithmetic mean of those recorded M1 spread points times point. Every bar is available only at its ending boundary. Never require any later bar, entry quote or holding path for its existence.",
+    "price_scale": "z_t=(close_t-close_(t-1))/A_t, where A_t is arithmetic true range of the 20 consecutive completed M15 bars strictly before t. TR uses the immediately preceding completed close. Missing/incomplete intervals reset price/ATR/context continuity; no gap is converted into a normal symbol. Learned sufficient statistics persist through gaps.",
+    "alphabet_and_flats": "Exactly the five disjoint categories in contract-v1.json. Flat is exact equality of legal tick-integer closes and receives its own category; flat bars/dates are not dropped. The tail class uses unbounded observed z for classification, but only its magnitude accumulator is clipped to [-4,4]. Raw prices and economics are never clipped.",
+    "context": "Most recent symbol first; all ordered suffix depths 0..5 are represented by a complete 5-ary tree with 3,906 nodes per symbol. The initial five symbols after a reset are conditioning context only, with no transition-count update. Only outcomes with a full five-symbol prior context update either role, giving the IID and CTW identical training observations.",
+    "tree_prior_and_likelihood": "Each internal node stops with prior 1/2 and otherwise branches to all five children with prior 1/2. At maximum depth it must stop. Each leaf's five-class probabilities have independent Dirichlet(1/2,...,1/2) prior. Its estimated sequence probability E begins at 1 and multiplies by (n_class+1/2)/(N+5/2) before incrementing a count. W=E at depth 5; otherwise W=(E+product(child W))/2. Store logs and use log-add-exp.",
+    "prediction": "The conditional vector is the ratio of root sequence likelihood after each hypothetical next class to its current likelihood. Implement equivalently by recursively mixing the local KT predictive vector and the current-context child's vector with posterior stop weight E/(E+product(child W)). This does not mutate any count or insert a hypothetical label. The IID role uses the root KT vector alone.",
+    "magnitude": "For each market and class, keep the clipped z sum plus one fixed pseudo-observation with the declared prior mean, and the same actual outcome count as root training. Both roles use the identical per-class mean mu_j. Expected next normalized move is sum(p_j*mu_j). This fixed point-estimate magnitude mapping is not an additional exact Bayesian return model.",
+    "causal_order": "At completed bar t, label t matures using strictly prior A_t and the previous complete close. Score any previously issued next-label forecast before updating. Update both models and magnitude statistics using the old full context, then append class t, incorporate TR_t/spread_t into the next-scale windows, and issue the next forecast from the now-observed history. Never train a prediction on its own not-yet-observed target.",
+    "gaps_and_scores": "On discovering a missing/incomplete bar, invalidate the prior next-label score and reset the context/ATR chain without changing recorded earlier forecasts. Every original M1 source date remains in calendar denominators. Prequential log loss uses every matched ready forecast/next valid mature label, including no-action observations, before the update. Report full-period and yearly scores; never select classes, depth or slices from those scores.",
+    "learning": "Warmup 2023; process 2024-2025 once in order with fixed online sufficient-statistic updates. Minimum 500 matched full-context training outcomes before a forecast. No optimization, alternative alphabet/depth, rolling window, decay, refit, calibration fit, seed search or learned action head.",
+    "uncertainty_limit": "Model averaging accounts for uncertainty inside the declared finite-context likelihood. It is not an empirical confidence guarantee for these market observations. The fixed 0.05 ATR economic cushion is not called a confidence interval. Coding/prediction results do not establish trading edge."
+  },
+  "source_provenance": {
+    "price_observations_only_parent_receipt": {"path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/evidence/INPUT_COPY_V1.json", "bytes": 4365, "sha256": "9D03935A801A82214678AF8782FC0F34C63779289CFDA93369FB9B345560EF0F"},
+    "original_acquisition": "Unmodified original before-control native M1 payloads from lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/, already period-sliced by timestamps alone to 2023-2025 in the source receipt. The market observations are not a V7, V8 or closed-family strategy parent.",
+    "physical_copies": [
+      {"symbol": "US100", "source": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/input/market/US100-M1.npy", "bytes": 63506476, "sha256": "CCEB4D5E76C9FDFFD9AC090B1198790E2ADD85506663696666535B38C1CE38A3", "rows": 1058437},
+      {"symbol": "US30", "source": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/input/market/US30-M1.npy", "bytes": 63477676, "sha256": "322A5036EFDF5EA2EBDC8ABCF8EFF94B052F2C750598F22031CB4D247309CF15", "rows": 1057957},
+      {"symbol": "US500", "source": "lab/artifacts/raw/independent-directional-change-intrinsic-event-adapter-challenge-v1/input/market/US500-M1.npy", "bytes": 63494296, "sha256": "B1798A65803B61EF002214F45F9EF7C79DBD28D0B12207432564DCAA780F5FDB", "rows": 1058234}
+    ],
+    "static_contract": {"path": "lab/research/resting-order-contract-readiness-v1/evidence/CURRENT_CONTRACT_CAPTURE_V1.json", "bytes": 3594, "sha256": "ED477F68E867FCA41E21FF8E4A9D1651B8A65B2AD8AC0F9D29C155A595B59A4E"},
+    "copy_semantics": "One-time ordinary file copies into the own artifact input/market directory, plus the exact static contract record and source receipt in input/provenance. Verify bytes/hashes before and after; no links, old source/import/execution, derived bar/event/label/model/return/ledger input or locked 2026 price field.",
+    "time_authority": "Preserve native returned integers, raw bar order and date/year labels. No external-local session conversion or claim that the raw field has an independently certified physical UTC bridge. Native-relative gaps and completed boundaries are sufficient for this declared own-market model.",
+    "storage_choice": "M15 completion/model and initial M1 economic proxy need only the 190,478,448 bytes of these raw M1 files. No 16 GB tick copy or old reader restart is necessary. Actual native ticks remain mandatory only for a survivor."
+  },
+  "entry_lifecycle_and_risk": {
+    "intent": "At each ready completed M15 boundary, direction is the sign of expected_z. Structural intentions use only abs(expected_z)>0.05 and the fixed entry cutoff; record both roles on the same chronology. At actual exact opening M1, the declared two-spread plus absolute-gap and 0.05 ATR cushion must be strictly exceeded. No favorable gap can create an intention omitted from the upper bound.",
+    "quote_and_admission": "Long pays Ask and exits Bid; short sells Bid and exits Ask. M1 Ask is recorded Bid plus that M1's nonnegative representative spread. No exact entry M1 means an attributable rejection, not removal from intent/calendar. Existing gap-stop/time exits and due financing occur before a simultaneous new-entry batch. Freeze one actual-equity/cash sizing reference for that batch; deterministic US100/US30/US500 priority and updated reserved risk apply within it. A fresh forecast may enter after an expired previous lifecycle closes, once per role/symbol/boundary.",
+    "stop_and_exit": "Stop 2 next-ATR from actual entry quote, rounded outward to the legal tick; reject a stop that is not strictly beyond the current closing quote. No take, trailing, partial, reversal exit or scale-in. Exit at the first available opening quote at or after entry+900 seconds. In each M1, existing opening-gap stop precedes timeout; then normal opening actions precede current high/low protective-stop handling. Gap stops receive the adverse opening quote, intraminute stops the stop price. Missing future minutes never remove an admitted lifecycle. All books must be closed before final judgment; a genuinely missing terminal close is a correction state.",
+    "sizing": "2% of positive actual marked batch equity divided by original outward-rounded stop loss per lot; round down to volume step and cap at max volume. If below minimum, admit the minimum only within the fixed 3% hard cap. Aggregate original-stop risk <=8% of the same batch equity, at most one position/market and three total. Preserve original reserved risk until full close. No loss-driven recapitalization, hedge, risk expansion or favorable rounding.",
+    "margin_proxy": "Use the disclosed conservative notional/100 shared margin approximation with current available quote marks and reject if total exceeds positive actual marked equity. This is not a historical native contract/margin/stop-out certificate; no minimum-volume or margin exception rescues a failed path."
+  },
+  "costs_and_accounting": {
+    "actual": "Exact own M1 Bid OHLC with recorded representative spreads and USD contract_size=1. Commission is absent from this source and set to zero in this explicitly optimistic proxy, never certified historically. One-way source financing snapshot is US100 -4.34/+1.82, US30 -7.87/+3.34, US500 -1.14/+0.48 USD per lot; preserve exact record and its date.",
+    "financing_proxy": "Book at each crossed raw-date midnight while held: charge the day that just ended, Monday-Thursday once, Friday three times, Saturday/Sunday zero. This explicit raw-server closing-day convention and fixed dated rates are approximations, not past rollover/holiday/financing certificates. Long gaps still accrue every declared boundary before a later quote exit.",
+    "stress": "Keep actual accepted paths/volume unchanged. Primary stress doubles the directional Ask-side round-trip spread burden (extra entry spread for long, extra exit spread for short) and doubles negative financing debits, without amplifying credits. Secondary midpoint stress deducts extra half of entry+exit spreads and doubles negative financing debits. Additional no-positive-credit stress removes every positive financing credit from primary stress. Require every stressed series to pass.",
+    "marks": "Record actual and all stressed portfolio equity at chronological common M1 openings/closes using only observed available quotes, plus transaction boundaries. Mark all held exposures and accrued costs. Keep cash realization, calendar marked changes, costs and final reconciliation separately attributable. M1 marks cannot establish native intraminute maximum equity DD.",
+    "integrity": "One complete pair of ledgers, unique starts=complete closes, cash/marked-epoch and spread/financing reconciliation within 1e-7, final flat and source/config hashes unchanged. Normal production checks and recording are integrated in the adapter, not separate tests or checker infrastructure. Invalid source/invocation/engineering/serialization remains correction required with no arbitrary retry cap."
+  },
+  "stages_and_stops": [
+    "Freeze declaration, numeric contract and fresh structural producer before own copying or any feature/fit score. Produce the whole 2023-2025 causal sequence and both role forecasts once, retaining every source day. Necessary optimistic CTW supply gate fails -> close the entire fixed bundle without economic simulation or an IID seed.",
+    "If structural supply passes, implement and freeze the already declared normal economic behavior before first monetary output. Complete both roles over all 2024-2025. Only CTW may survive, after every absolute gate plus pooled stressed improvement over IID and pooled lower prequential log loss. No partial year, role, score or favorable slice can close the bundle early.",
+    "A valid adverse result closes all roles with no retained seed or adjacent alphabet/depth/cushion/scale/window/symbol/direction/hold/risk/cost/model rescue. Recompare every Program 1-5/7 before opening any materially distinct successor.",
+    "A survivor may open the prospectively specified exposed-calendar confirmation procedure and then conditional native paired evidence, with unchanged model/decision/risk contract. Source readiness must precede outcomes. Prior 2026 exposure is not erased, the latest period is isolated from selection, and pure proxy output never completes the V8 Challenge."
+  ],
+  "independence_and_known_exposure": "Known historical closures and V7/V8 aggregate development/2026 figures are prior exposure, not candidate inputs. Ordered contexts and five-class next-response likelihoods differ from closed M15 tick-count imbalance, fixed trading experts, GRU utility actions, intrinsic-turn events and fair-reference excursions. No closed feature, label, model, signal, strategy parameter, trade output or seed is copied. Standard account/risk/evidence gates are prospective common constraints, not inherited entry economics. The chosen numeric design was written before any own feature, fitted score, density or return observation.",
+  "live_boundary": "V7R package, 0/0 EA/dashboard and paused read-only readiness heartbeat stay frozen. Actual trading activation remains a direct user step. This research does not query broker account, positions, orders or deals, does not activate Algo Trading and has no Live promotion authority."
+}
