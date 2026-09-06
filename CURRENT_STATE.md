@@ -1,22 +1,23 @@
 # Project Zeta Terminus Next Current State
 
-Last updated: 2026-09-01
+Last updated: 2026-09-06
 
 This is the concise current re-entry snapshot and the sole Next Live authority. Detailed immutable transitions remain in the active numbered state chunk.
 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0553`
+- Latest state ID: `STATE-0554`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
-- Current process parent: Family 010 implementation-state commit `c16112d4ed9e84664a7a3500188117e275162297`, equal to `origin/main` before the sole development process.
+- Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
 - Development: `PAUSED_BY_USER_AFTER_CURRENT_FAMILY_CLOSURE`; active Lab family and Optimization campaign counts are both zero.
 - Next Live-Dev authorization: `ENABLED` only through the 2026-08-31 one-time user-accepted economic exception for exact release `NEXT-E02-V8-PMLR1-b1c77d3b6356`. It does not relabel V2 as a pass or authorize any other release, byte, identity or risk contract.
 - Next V8 new-entry authorization: exact Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`, canonical source/settings SHA-256 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`, weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, position risk `0.04`, aggregate cap `0.18`, Passive disabled.
-- Existing real-account owner: exact V8 Live sole PID `33388`; V7 RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 remain retired/stopped.
+- Last recorded real-account owner: exact V8 Live sole PID `33388`; V7 RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 remain retired/stopped.
+- Local storage-only observation on 2026-09-06 found no MT5, Tester, MetaEditor or dashboard process. Broker state was not queried, no runtime restarted, and Live authorization is unchanged.
 - Last verified real-account boundary remains V8 sequence `492` at `2026-08-31T01:57:18Z`, entries `1/1`, balance/equity `$105.20/$105.20`, carried project realized net `+$4.55`, flat and zero planned risk/fault. Korean dashboard PID `28008` was responsive at that boundary.
 - Challenge work has no Live authority and may not query broker positions, orders, deals or account state merely for context.
 
@@ -69,11 +70,12 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 - The user directed completion and closure of the currently open Family 010 followed by a temporary stop. No whole-map successor selection, declaration, runtime or market source has opened.
 - The exact closed ignored Family 010 Portable, `8,237` files / `547,324,203` bytes, was moved to the Windows Recycle Bin with zero process owner. It is recoverable; the whole Recycle Bin was not emptied because it may contain unrelated user material.
 - Canonical Family 010 input, all five raw result tapes, tracked adapter/config/declaration/result/audit/closure and every hashed authority remain preserved. Live PID `33388`, Live package/state and Optimization were untouched.
+- The user's 2026-09-06 storage request removed only `2,983` identical ignored cache copies from `20` closed runtimes, reclaiming `44.156753 GiB`. The exact recovery map and retention receipt are `lineage/STORAGE_DUPLICATE_CACHE_MAP_20260906_V1.tsv` and `lineage/RESEARCH_STORAGE_RETENTION_20260906_V1.json`; all `591` retained source files passed post-removal SHA-256 comparison.
 
 ## Next authorized sequence
 
-1. Commit and push the complete Family 010 result, audit, closure, compressed state and cleanup record; verify clean `main == origin/main`.
-2. While the user pause remains, run no Challenge selection, declaration, acquisition, adapter, EA, compile or Tester path.
+1. While the user pause remains, run no Challenge selection, declaration, acquisition, adapter, EA, compile or Tester path.
+2. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 3. On explicit user continuation, recompare the autonomous method map from the closed Family 001–010 ledger before declaring exactly one materially distinct successor; do not reopen Family 010 or automatically execute an audit-adjacent rescue.
 4. The persistent Goal remains incomplete until a complete native candidate passes every V8 gate.
 
@@ -88,7 +90,8 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Storage and repository discipline
 
-- System-drive free space remained above `90 GiB` at the final boundary, safely above the mandatory `30 GiB` sweep threshold. Family 010's closed ignored runtime left the workspace via the Recycle Bin; complete referenced authorities, canonical input and result tapes remain preserved.
+- The 2026-09-06 sweep reduced the project from `94.002159` to `49.846443 GiB` (`46.973087%`), including the recovery map and preliminary receipt. C: free space was `91.139030 GiB`; final documentation and the phase commit add only small metadata.
+- Entire `live-dev/`, all Lab/Optimization artifacts, canonical `lab/runtime/tester-portable/`, clean-history `optimization/runtime/dd20-pcr2-portable/`, every unique cache content and all recognized evidence-referenced cache names/hashes remain preserved. The affected closed runtimes retain their sources, binaries, settings, logs and state; some duplicated history/cache files are deliberately evicted.
 - Preserve tracked source/configuration, declarations/results/closures, manifests, evidence-referenced artifacts, canonical market history, active baselines, Live package/state/events and canonical ledgers.
 - Remove only exact Git-ignored closed runtime copies, caches, temporary staging and unreferenced duplicate logs/reports after confirming no owning process and exact target paths.
 - Keep this file concise; append full transitions to the numbered chunk. Commit only current-repository changes to `main` and push `origin/main` at durable phase boundaries.

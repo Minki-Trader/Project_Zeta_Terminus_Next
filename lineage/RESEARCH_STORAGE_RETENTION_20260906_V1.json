@@ -1,0 +1,265 @@
+{
+  "schema": "zeta-next-research-artifact-retention-sweep-v1",
+  "receipt_id": "RESEARCH_STORAGE_RETENTION_20260906_V1",
+  "date_local": "2026-09-06",
+  "status": "COMPLETED_EXACT_CLOSED_RUNTIME_DUPLICATE_CACHE_REMOVAL",
+  "trigger": "Explicit user request to reduce the project itself; first weekend of September retention sweep.",
+  "policy": "docs/OPERATING_DIRECTION.md#research-artifact-retention-and-storage-hygiene",
+  "scope": "Only byte-identical Git-ignored history/tick/cache copies in 20 closed Lab and Optimization Portable roots. No whole runtime, source, configuration, binary, log, report, state, artifact or unique market-data file is selected.",
+  "preconditions": {
+    "resolved_workspace_root": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next",
+    "resolved_target_files": 2983,
+    "resolved_target_roots": [
+      "lab/runtime/actual-live-position-economics-v1-portable",
+      "lab/runtime/asec63-portable",
+      "lab/runtime/cbd64-portable",
+      "lab/runtime/clp36-portable",
+      "lab/runtime/live-research-observation-ledger-v1-portable",
+      "lab/runtime/mrb53-portable",
+      "lab/runtime/msrl62ic1-portable",
+      "lab/runtime/oa38-portable",
+      "lab/runtime/oaem40-portable",
+      "lab/runtime/passive-refusal-depth-observation-v1-portable",
+      "lab/runtime/pmlrh1-portable",
+      "lab/runtime/protective-exit-order-reconciliation-v1-portable",
+      "lab/runtime/rva96-portable",
+      "lab/runtime/us30-compression-break-response-v1-portable",
+      "optimization/runtime/dd20-fixed-pair-august-relative-mt5-v1-portable",
+      "optimization/runtime/dd20-fixed-pair-august-relative-proxy-v1-portable",
+      "optimization/runtime/dd20-frequency-lane-core-growth-quarantine-mt5-v1-portable",
+      "optimization/runtime/dd20-paired-anchor-august-2026-mt5-v1-portable",
+      "optimization/runtime/dd20-paired-month-stability-mt5-v1-portable",
+      "optimization/runtime/dd20-pcr1-portable"
+    ],
+    "ancestor_directories_checked": 317,
+    "symbolic_links_or_junctions": 0,
+    "target_process_owners": 0,
+    "observed_mt5_tester_editor_dashboard_process_count": 0,
+    "git_head": "61b205681a9ae955199ec97f54b477a1621cb686",
+    "git_origin_main": "61b205681a9ae955199ec97f54b477a1621cb686",
+    "c_free_bytes_before": 50709909504,
+    "checked_at_local": "2026-09-06T11:19:48.4834664+09:00",
+    "git_worktree_clean_before": true
+  },
+  "measurement_before": {
+    "project_logical_bytes": 100934049212,
+    "file_allocation_bytes_before": 100919394964,
+    "file_allocation_measurement_failures": [],
+    "note": "Sum of GetCompressedFileSizeW per inventoried path; filesystem metadata and directory allocation are excluded."
+  },
+  "reference_review": {
+    "tracked_text_files_read": 1737,
+    "artifact_metadata_files_read": 211,
+    "artifact_metadata_bytes_read": 14886344,
+    "referenced_cache_basenames_retained": [
+      "2022.hcc",
+      "2022.hcs",
+      "202208.tkc",
+      "2023.hcc",
+      "2023.hcs",
+      "202304.tkc",
+      "2024.hcc",
+      "2024.hcs",
+      "2025.hcc",
+      "2025.hcs",
+      "2026.hcc",
+      "2026.hcs",
+      "202607.tkc",
+      "202608.tkc",
+      "daily.hc",
+      "m1.hc",
+      "us100-2024.hcs"
+    ],
+    "referenced_sha256_values_retained": 3560,
+    "all_target_files_git_ignored": true,
+    "tracked_target_files": 0,
+    "target_and_retained_metadata_unchanged_after_hashing": true
+  },
+  "duplicate_comparison": {
+    "method": "Same lane, same file extension, same logical byte length and independently computed full-file SHA-256. Unique files and every recognized referenced basename/hash are retained at their existing paths.",
+    "hashes_computed_files": 3693,
+    "hashes_computed_bytes": 57718931441,
+    "retained_distinct_source_paths": 591,
+    "retained_source_is_also_a_target": false,
+    "cross_lane_retained_sources": 0,
+    "filesystem_links_created": 0
+  },
+  "exact_target_map": {
+    "path": "lineage/STORAGE_DUPLICATE_CACHE_MAP_20260906_V1.tsv",
+    "bytes": 1104965,
+    "sha256": "B072D8A45A0FDB3A78B7A3E2C728FB95E6B3CCC49031B43FFE87EA5D7CA6AB6C",
+    "rows": 2983,
+    "columns": [
+      "removed_absolute_path",
+      "bytes",
+      "sha256",
+      "retained_absolute_path"
+    ]
+  },
+  "preserved": [
+    "all tracked source, configuration, declarations, results, closures and manifests",
+    "all lab/artifacts/ and optimization/artifacts/ files",
+    "entire live-dev/ tree including frozen package, states, events and research ledgers",
+    "entire canonical lab/runtime/tester-portable/",
+    "entire optimization/runtime/dd20-pcr2-portable/ clean-history reference",
+    "every unique cache content and every recognized evidence-referenced basename or SHA-256",
+    "all runtime logs, reports, MQL source, EX5, settings, account/session support and research ledgers",
+    "all active baseline roots and closed family source/configuration",
+    "all existing Git history and branches"
+  ],
+  "execution": {
+    "method": "Serial PowerShell Remove-Item -LiteralPath with explicit absolute file arguments, first one file, then five, then batches of at most twenty. No recursive directory removal, dynamic deletion target expansion, archive/recycle move, OneDrive dehydration or filesystem link.",
+    "broker_or_account_state_queried": false,
+    "live_authority_changed": false,
+    "challenge_pause_unchanged": true,
+    "completed": true,
+    "automatic_approval_review": {
+      "initial_dynamic_batch_command": "REJECTED_BEFORE_EXECUTION_BLOCKED_BY_POLICY",
+      "initial_rejection_deleted_files": 0,
+      "safer_completed_form": "Explicit literal paths in bounded batches; all calls completed successfully.",
+      "scope_expanded": false
+    },
+    "mt5_tester_editor_or_dashboard_started_stopped_or_restarted": false,
+    "completed_target_files": 2983,
+    "owner_checks_during_removal": "Zero terminal64, metatester64, metaeditor64, python or pythonw owner candidate before bounded deletion batches; no runtime was started."
+  },
+  "recovery": "The map retains the exact SHA-256 and an existing same-lane byte-identical source for each evicted cache file. If a closed runtime is deliberately reconstructed, physically copy the retained bytes back to the listed original path while both paths are unowned; never link or execute another runtime. Cache reconstruction does not reopen a closed research family or grant Live authority.",
+  "removed": {
+    "files": 2983,
+    "logical_bytes": 47412952403,
+    "logical_gib": 44.156753,
+    "by_runtime_root": {
+      "lab/runtime/actual-live-position-economics-v1-portable": {
+        "files": 98,
+        "bytes": 1146145396
+      },
+      "lab/runtime/asec63-portable": {
+        "files": 7,
+        "bytes": 103703934
+      },
+      "lab/runtime/cbd64-portable": {
+        "files": 25,
+        "bytes": 327511314
+      },
+      "lab/runtime/clp36-portable": {
+        "files": 47,
+        "bytes": 484252369
+      },
+      "lab/runtime/live-research-observation-ledger-v1-portable": {
+        "files": 296,
+        "bytes": 4556017428
+      },
+      "lab/runtime/mrb53-portable": {
+        "files": 47,
+        "bytes": 484252369
+      },
+      "lab/runtime/msrl62ic1-portable": {
+        "files": 42,
+        "bytes": 1164509658
+      },
+      "lab/runtime/oa38-portable": {
+        "files": 298,
+        "bytes": 4561238271
+      },
+      "lab/runtime/oaem40-portable": {
+        "files": 210,
+        "bytes": 3873706631
+      },
+      "lab/runtime/passive-refusal-depth-observation-v1-portable": {
+        "files": 298,
+        "bytes": 4561238271
+      },
+      "lab/runtime/pmlrh1-portable": {
+        "files": 294,
+        "bytes": 4552829044
+      },
+      "lab/runtime/protective-exit-order-reconciliation-v1-portable": {
+        "files": 299,
+        "bytes": 4611326877
+      },
+      "lab/runtime/rva96-portable": {
+        "files": 60,
+        "bytes": 2095734802
+      },
+      "lab/runtime/us30-compression-break-response-v1-portable": {
+        "files": 98,
+        "bytes": 1146145396
+      },
+      "optimization/runtime/dd20-fixed-pair-august-relative-mt5-v1-portable": {
+        "files": 16,
+        "bytes": 243823458
+      },
+      "optimization/runtime/dd20-fixed-pair-august-relative-proxy-v1-portable": {
+        "files": 16,
+        "bytes": 243823458
+      },
+      "optimization/runtime/dd20-frequency-lane-core-growth-quarantine-mt5-v1-portable": {
+        "files": 241,
+        "bytes": 4065966774
+      },
+      "optimization/runtime/dd20-paired-anchor-august-2026-mt5-v1-portable": {
+        "files": 16,
+        "bytes": 243823458
+      },
+      "optimization/runtime/dd20-paired-month-stability-mt5-v1-portable": {
+        "files": 286,
+        "bytes": 4469353080
+      },
+      "optimization/runtime/dd20-pcr1-portable": {
+        "files": 289,
+        "bytes": 4477550415
+      }
+    }
+  },
+  "postconditions": {
+    "measured_at_local": "2026-09-06T11:31:14.694109+09:00",
+    "project_files_after_cache_removal": 38832,
+    "project_logical_bytes_after_cache_removal": 53522210166,
+    "project_logical_gib_before": 94.002159,
+    "project_logical_gib_after_cache_removal": 49.846443,
+    "project_reduction_pct": 46.973087,
+    "file_allocation_bytes_after_cache_removal": 53507555918,
+    "c_free_bytes_after": 97859788800,
+    "unexpected_missing_nonselected_files": [],
+    "unexpected_changed_nonselected_files": [],
+    "protected_tree_metadata": {
+      "live-dev/": {
+        "files": 1686,
+        "bytes": 6905615789,
+        "path_size_and_last_write_unchanged": true
+      },
+      "lab/artifacts/": {
+        "files": 2191,
+        "bytes": 4136433955,
+        "path_size_and_last_write_unchanged": true
+      },
+      "optimization/artifacts/": {
+        "files": 1272,
+        "bytes": 2109813224,
+        "path_size_and_last_write_unchanged": true
+      },
+      "lab/runtime/tester-portable/": {
+        "files": 762,
+        "bytes": 6472948717,
+        "path_size_and_last_write_unchanged": true
+      },
+      "optimization/runtime/dd20-pcr2-portable/": {
+        "files": 644,
+        "bytes": 5212787672,
+        "path_size_and_last_write_unchanged": true
+      }
+    },
+    "removed_targets_remaining": [],
+    "retained_sources_sha256_verified": 591,
+    "retained_source_failures": 0,
+    "all_removed_contents_recoverable_from_map": true,
+    "elapsed_seconds": 7.81,
+    "target_files_remaining": 0,
+    "historical_economic_verdicts_or_live_authority_changed": false,
+    "measurement_note": "Post-removal inventory includes the recovery map and preliminary receipt. Final documentation and the phase-boundary Git commit add only small metadata; no economic artifact is relocated.",
+    "observed_c_free_byte_increase": 47149879296,
+    "c_free_gib_after": 91.13903,
+    "drive_delta_note": "Observed drive-wide free-space change includes concurrent filesystem activity and is not attributed byte-for-byte to the deletion.",
+    "strategy_source_settings_binary_or_economic_artifact_changes": 0
+  }
+}
