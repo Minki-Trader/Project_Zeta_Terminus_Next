@@ -1,0 +1,73 @@
+{
+  "schema": "zeta-opening-source-time-only-copy-v1",
+  "recorded_utc": "2026-09-06T18:40:53.754967+00:00",
+  "declaration": {
+    "path": "lab/research/opening-session-source-and-admission-feasibility-v1/evidence/DECLARATION_V1.json",
+    "bytes": 11040,
+    "sha256": "C345B4FF2D88A907CCC2496E1C26CF53E16E86A46AEEC8CC0DC5E9D794E31D51"
+  },
+  "sources": [
+    {
+      "symbol": "US100",
+      "original": {
+        "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+        "bytes": 21213599,
+        "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+      },
+      "time_only_copy": {
+        "path": "lab/artifacts/raw/opening-session-source-and-admission-feasibility-v1/input/US100_M1_time_2024_2025.npy",
+        "bytes": 5654208,
+        "sha256": "A2DF2CB6D3DF6D036208E69767D774F614E226625B9CF461FBB30A44062E0725"
+      },
+      "rows": 706760,
+      "first_raw_label": "2024-01-02T01:00:00",
+      "last_raw_label": "2025-12-31T23:59:00",
+      "integrity": {
+        "strictly_increasing": true,
+        "minute_grid": true,
+        "duplicates": 0
+      },
+      "only_decoded_column": "time",
+      "source_date_count": 517
+    },
+    {
+      "symbol": "US30",
+      "original": {
+        "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+        "bytes": 19018323,
+        "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+      },
+      "time_only_copy": {
+        "path": "lab/artifacts/raw/opening-session-source-and-admission-feasibility-v1/input/US30_M1_time_2024_2025.npy",
+        "bytes": 5651424,
+        "sha256": "BB5B8C231063167B83D198BE73E36CA026C8F6DFD7EDF1BB3338E2759ABFA42E"
+      },
+      "rows": 706412,
+      "first_raw_label": "2024-01-02T01:00:00",
+      "last_raw_label": "2025-12-31T23:59:00",
+      "integrity": {
+        "strictly_increasing": true,
+        "minute_grid": true,
+        "duplicates": 0
+      },
+      "only_decoded_column": "time",
+      "source_date_count": 517
+    }
+  ],
+  "versions": {
+    "numpy": "2.3.4",
+    "pyarrow": "23.0.1",
+    "tzdata": "2025.2",
+    "iana": "2025b"
+  },
+  "decoded_columns": [
+    "time"
+  ],
+  "materialized_half_open": [
+    1704067200,
+    1767225600
+  ],
+  "new_price_or_spread_or_volume_or_return_values_decoded": false,
+  "original_adapter_imported_or_executed": false,
+  "broker_api_queried": false
+}

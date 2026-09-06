@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0572`
+- Latest state ID: `STATE-0573`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; Program 2 Family 012 has closed both roles with a complete valid adverse M1 proxy result and no passer. No active candidate, EA or native runtime remains. One bounded Program 7 `lab/research/opening-session-source-and-admission-feasibility-v1/` is now declared and active; no economic candidate is open. All candidate/source predecessors, V7 return engineering and Optimization remain closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; Program 2 Family 012 has closed both roles with a complete valid adverse M1 proxy result and no passer. No active candidate, EA or native runtime remains. The bounded Program 7 opening-source/admission study is closed: original 006 future-admission and denominator defects are confirmed, while exact external-session raw-time authority remains unresolved. No study or economic candidate is active; whole-macro comparison is next. All candidate/source predecessors, V7 return engineering and Optimization remain closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,7 +34,7 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `PROGRAM_7_OPENING_SOURCE_ADMISSION_STUDY_DECLARED_ACTIVE`.
+- Active phase: `PROGRAM_7_OPENING_ADMISSION_STUDY_CLOSED_SOURCE_NOT_READY_MACRO_RECOMPARE_PENDING`.
 - Sole active Challenge family: none. Family 012, all earlier families and source studies are closed and immutable. No proxy result has beaten V8.
 - Active Challenge family / Optimization campaign count: `0 / 0`; Family 012 propagation/reversal closed together with no passer. Native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -64,7 +64,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 - Family 003 residual-basket `Python adapter + EA`: `488 / 466 / 426` starts and actual `-$88.5048 / -$88.1250 / -$87.2249`; closed adverse.
 - Family 004 M15 online-expert `Python adapter + EA`: `2,063 / 2,234 / 1,625` starts, actual about `-$97..-$99`, DD `97.84..99.43%`; closed adverse.
 - Family 005 two-index M1 utility GRU `ONNX + EA`: eight ONNX parity checks passed, but only one `0.10R` action appeared and lost; closed utility collapse.
-- Family 006 London/New York opening-auction `Python adapter + EA`: DRIVE/FADE actual `-$98.86265 / -$98.90470`, stress `-$227.84505 / -$207.75920`, DD about `99.1%`; closed adverse.
+- Family 006 London/New York opening-auction `Python adapter + EA`: original DRIVE/FADE actual `-$98.86265 / -$98.90470`, stress `-$227.84505 / -$207.75920`, DD about `99.1%` are preserved descriptive outputs. Additional source review proves future-completeness admission and a 515-versus-517-day denominator; exact intended-session raw-clock authority is unresolved. No old family reopens.
 - Family 007 AUDCHF pulse transfer `Python adapter + EA`: FOLLOW/FADE actual `-$53.708425 / -$74.118175`, stress `-$135.688025 / -$129.559175`, DD above `81%`; closed with zero passer before locked/native.
 - Family 008 leveraged-ETF close pressure `Python adapter + EA`: TIME/TAKE actual `-$57.71415 / -$54.91960`, stress `-$62.84485 / -$60.18480`, DD `61.36% / 58.10%`; complete audit found negative raw edge and no exit headroom.
 - Family 009 seven-market H4 Donchian `Python adapter + EA`: medium/slow actual `-$74.42949 / -$44.42683`, stress `-$76.24129 / -$45.96653`, DD above `76%`; 1–3 H4 transient reversed by 6–12 H4 and broad headroom was false.
@@ -78,6 +78,8 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 - Family 012 delayed repo M30 shock, Program 2: propagation/reversal actual `-$89.9660 / -$66.8499`, stressed `-$137.3452 / -$121.6774`, marked M1 DD `91.8472% / 76.7499%`, first fills `1,498 / 1,890`, density `2.8975 / 3.6557` over all 517 source dates. Both 2024 and 2025 lose in actual and both stressed series. No economic passer or seed; complete 31,583,174-byte result bundle and every input/source hash remain preserved. No 2026, EA or native work opened.
 
+- Additional original-006 authority: `lineage/CHALLENGE_OPENING_ADMISSION_AUTHORITY_CORRECTION_V1.json` confirms future-availability selection and omission of two source dates from turnover. API UTC documentation and broker server convention remain distinct; US100/US30 show the same March 10-14 2025 source-exception concern. This closes source/design readiness without opening an economic correction.
+
 ## Pause and cleanup boundary
 
 - Subsequent clock authority: `lineage/CHALLENGE_BROKER_CLOCK_AUTHORITY_CORRECTION_V1.json` supersedes intended-session adverse authority for Families 006/007 and suspends complete intended-session authority for 008/010. Original files/results remain immutable and descriptive for their implemented time samples. Family 009 keeps its adverse H4 development conclusion for this specific issue. Audit found 965 shifted Family 006 events and 38 nominally misaligned dates among Family 010's 514. The 2025-03-10..14 ETF source-session exception remains unresolved for future exact external-session use; no old family reopens automatically.
@@ -88,7 +90,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Complete the declared Program 7 `lab/research/opening-session-source-and-admission-feasibility-v1/` source/calendar study. Its declaration freezes exact source sections, original 2024-2025 timestamp-only inputs, the original-direct-UTC and documented nominal New-York-close representations, causal-prefix/entry/future partitions and all-source date denominator. Resolve or disclose original time-field authority separately from causal admission design. No price, old adapter execution, economic candidate, checker infrastructure or automatic reopening. Keep at least 30 GiB free; close and recompare all active macro programs afterward.
+1. The source/admission study is closed with a narrow authority addendum. Recompare Programs 1-5 and 7 before a materially justified successor. Original 006 cannot reopen on a simple clock shift: causal admission/all-source denominator need correction and raw-time authority, including the March 2025 cash-index exception, remains unresolved. Do not prolong another source audit automatically or revive a closed economic fragment. Keep at least 30 GiB free.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -113,9 +115,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: `lab/research/opening-session-source-and-admission-feasibility-v1/`, Program 7, source-only declaration frozen before new timestamps. Candidate/EA/native counts remain zero. Family 012 remains closed. Propagation/reversal actual -$89.9660 / -$66.8499, stressed -$137.3452 / -$121.6774, marked DD 91.8472% / 76.7499%, first fills/date 2.8975 / 3.6557. Both fail profit, year stability and DD. All 2,595 intents/role and 1,498/1,890 closed trades reconcile. No seed or 2026/native work opened.
+- Active research unit: none after the closed Program 7 opening-source/admission study. Direct-UTC prefix-plus-entry sessions 999, future-complete 965, future-only exclusions 34; original normal-day count 515 versus 517 source dates. Exact-session raw-time authority remains unresolved. No candidate, 2026 economic work, EA, Portable or reusable checker opens.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_012_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
-- Latest storage observation: C: free `77.253 GiB` at the post-Family 012 comparison on `2026-09-07`; minimum 30 GiB retained, no deletion needed.
+- Latest storage observation: C: free `77.579 GiB` at opening-source/admission closure on `2026-09-07`; minimum 30 GiB retained, no deletion needed.

@@ -1,0 +1,79 @@
+{
+  "schema": "zeta-opening-primary-source-time-authority-v1",
+  "recorded_utc": "2026-09-06T18:51:22.834987+00:00",
+  "status": "SUPPORTED_BROKER_CONVENTION_BUT_ORIGINAL_RAW_FIELD_AND_EXCEPTIONAL_HISTORY_UNRESOLVED",
+  "primary_sources": [
+    {
+      "url": "https://www.mql5.com/en/docs/python_metatrader5/mt5copyratesrange_py",
+      "title": "MetaQuotes copy_rates_range Python reference",
+      "support": "The API reference describes returned tick/bar timestamps as UTC and requires UTC query datetimes. This is direct API documentation, not an observation proving that this stored historical file follows it."
+    },
+    {
+      "url": "https://www.fpmarkets.com/en-au/education/faq/",
+      "resolved_url": "https://www.fpmarkets.com/ko-kr/education/faq/",
+      "title": "FP Markets server-time FAQ",
+      "support": "The current platform server uses GMT+2/GMT+3 to align daily candles with New York close. Platform display convention alone does not identify API field encoding."
+    },
+    {
+      "url": "https://www.fpmarkets.com/wp-content/uploads/2021/03/FP-Markets-Product-Disclosure-Statement-Metatrader-4-29.03.2021.pdf",
+      "title": "FP Markets MetaTrader PDS, 29 March 2021, section 5.4, printed page 47",
+      "support": "The margin-FX/metals financing section equates New York local 17:00 with server 00:00. This historical statement supports the server convention, not an individual cash-index historical API timestamp."
+    },
+    {
+      "url": "https://www.fpmarkets.com/trading-hours/",
+      "title": "FP Markets trading hours",
+      "support": "The current table places US30/US500/US100 at 01:00-24:00 in its displayed GMT+2/GMT+3 convention. This resembles most observed raw daily boundaries but is not a dated 2024/2025 field certificate."
+    }
+  ],
+  "bounded_dated_search": {
+    "scope": "Six primary-domain search queries across 2024/March and 2025/March/November server-DST terms plus the index-hours table. Promotion pages and locale mirrors are not historical trading-clock authority.",
+    "finding": "No source-specific dated 2024/2025 transition notice or original field-serialization certificate was located in this bounded search. This does not assert that none exists elsewhere."
+  },
+  "original_provenance": {
+    "receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    },
+    "api_calls": [
+      "initialize",
+      "symbol_select",
+      "symbol_info",
+      "copy_rates_range",
+      "shutdown"
+    ],
+    "metatrader5_package": "5.0.5640",
+    "request_from_utc": "2022-01-01T00:00:00+00:00",
+    "request_through_utc": "2026-07-31T23:59:59+00:00",
+    "account_position_order_deal_queries": 0,
+    "direct_producer_script_path_in_receipt": null,
+    "scope_limit": "Receipt names an old contract and runtime but no producer script or raw-field offset witness; no old runtime or broker API was executed."
+  },
+  "source_shape": {
+    "source_dates": 517,
+    "us100_modal_first_last": "01:00..23:59 on 389 dates",
+    "us30_modal_first_last": "01:00..23:59 on 403 dates",
+    "unresolved_both_symbols": [
+      "2025-03-10 first raw quote 02:00; 1320 observed minutes",
+      "2025-03-11..13 start 00:00 and have an internal missing 01:00..01:59 hour",
+      "2025-03-14 starts 00:00, has the same missing hour, and ends 23:34"
+    ],
+    "exact_evidence": {
+      "path": "lab/research/opening-session-source-and-admission-feasibility-v1/evidence/FIXED_DST_SOURCE_SHAPES_V1.json",
+      "bytes": 49785,
+      "sha256": "24FE2BC2B109E390E3E9A066C20158119C4AC6AC011382856B0CCD6FE8A5E23B"
+    }
+  },
+  "classification": {
+    "broker_server_convention": "SUPPORTED_NOMINAL_CONVENTION_WITH_EXPLICIT_FIELD_LIMIT",
+    "stored_original_raw_time_field_and_exceptional_week": "CONTRADICTED_OR_UNRESOLVED_SOURCE_SEMANTICS",
+    "exact_external_session_candidate_ready": false
+  },
+  "inference_limits": [
+    "The majority daily pattern is circumstantial support for server-style labels, not proof of absolute UTC. API UTC documentation and the platform convention cannot be collapsed into one assumption.",
+    "The March 2025 exceptions are shared by both studied cash-index series; they cannot be dismissed as the already known ETF-only issue. Their cause is unresolved without independent source evidence.",
+    "Neither greater event coverage under the nominal bridge nor a hypothetical market reaction can choose an offset. No timestamps or dates were shifted/deleted.",
+    "Public documentation may contain unrelated illustrative historical prices; none is a candidate input or price/return calculation. No 2026 candidate price/outcome opens."
+  ],
+  "next_source_requirement": "Before any exact external-session correction, obtain an independently attributable mapping from the original time field to the relevant historical instants, including the exceptional week; document any legitimate source replacement prospectively. Causal admission and all-source date accounting must be corrected separately."
+}

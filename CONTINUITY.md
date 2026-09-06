@@ -117,6 +117,12 @@ The former optimization frontier, including exact-V8 Units U001-U004, closed at 
 
 QQQ/TQQQ 2025-03-10..14 raw session labels also require independent source authority before any exact external-session successor. No formula replacement is a universal history certificate, no favorable outcome is inferred, and no closed candidate automatically reopens. The audit does not affect exact V7R broker-native verification.
 
+## Opening-admission authority addendum
+
+`lineage/CHALLENGE_OPENING_ADMISSION_AUTHORITY_CORRECTION_V1.json` records a further source-confirmed defect confined to original Family 006. Its declared entry is anchor+5, but it constructs events only when both symbols have every timestamp through +74. The implemented mapping retains 965 of 999 prefix-plus-entry-complete events by using future availability; 34 exclusions include one unused-tail case. Its 515-date denominator omits 2025-02-04 and 2025-11-28 from 517 original observation dates. Original source, numbers and closure remain immutable descriptions of the implemented population, not a complete causal-policy economic judgment.
+
+Exact external-session raw-time authority remains unresolved. MetaQuotes API documentation describes UTC output while the broker documents a server New-York-close convention; the original receipt lacks a field-specific bridge. US100 and US30 also show 2025-03-10..14 raw-session exceptions, extending the source concern beyond the previously observed ETF example. Earlier nominal offset statements remain conditional, not physical-time certificates. No favorable clock, deleted date, rerun or corrected candidate is authorized by this addendum. A new whole-map selection and complete prospective declaration would be required after independently defensible source authority.
+
 ## Authority boundary
 
 - Legacy B70 V6R6, original V7, CXR1, CXR2, original RLO1 and V8 are retired/stopped. No old identity may restart or adopt another identity's state.

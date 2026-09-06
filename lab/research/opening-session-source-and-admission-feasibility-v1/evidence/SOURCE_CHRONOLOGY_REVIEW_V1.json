@@ -1,0 +1,90 @@
+{
+  "schema": "zeta-opening-original-source-chronology-review-v1",
+  "recorded_utc": "2026-09-06T18:51:22.834092+00:00",
+  "source": {
+    "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 44897,
+    "sha256": "607C667D940F6C86B91C4DAC50F49CB58274CBB1616E83958020C227DDBF42AB"
+  },
+  "source_ranges_read": [
+    [
+      1,
+      170
+    ],
+    [
+      336,
+      419
+    ],
+    [
+      623,
+      650
+    ],
+    [
+      812,
+      865
+    ],
+    [
+      944,
+      977
+    ]
+  ],
+  "facts": [
+    {
+      "lines": [
+        340,
+        355,
+        386
+      ],
+      "finding": "The loader reads original integer time, casts it to int64 and indexes the frame by that value. It supplies no field-specific server-wall/physical-UTC bridge."
+    },
+    {
+      "lines": [
+        391,
+        406
+      ],
+      "finding": "The session schedule converts the exchange-local anchor to a UTC epoch, then requires both symbols at every raw integer minute from anchor-30 through anchor+74 before constructing an event. API documentation claiming UTC cannot by itself certify this particular stored field; the broker server convention is a separate authority."
+    },
+    {
+      "lines": [
+        636,
+        645
+      ],
+      "finding": "Only those prefiltered events enter the simulation loop. Intended entry is anchor+5, so +6 through +74 are future availability, not then-known admission information."
+    },
+    {
+      "lines": [
+        623,
+        624,
+        949,
+        951
+      ],
+      "finding": "The turnover denominator counts dates with at least one prefiltered complete event. It is not every original-source trading date."
+    },
+    {
+      "lines": [
+        815,
+        853
+      ],
+      "finding": "The structural summary also derives its active dates and nominal slot density from prefiltered complete events. Those counts do not repair a causal admission population."
+    }
+  ],
+  "independently_confirmed_defects": [
+    "FUTURE_TIMESTAMP_COVERAGE_CONDITIONS_EVENT_ADMISSION",
+    "TURNOVER_DENOMINATOR_CONDITIONAL_ON_FULL_SESSION_COMPLETENESS"
+  ],
+  "original_direct_utc_coverage": {
+    "causal_prefix_plus_entry": 999,
+    "full_future_events": 965,
+    "future_only_exclusions": 34,
+    "unused_future_only_exclusions": 1,
+    "all_source_dates": 517,
+    "old_conditioned_dates": 515,
+    "omitted_dates": [
+      "2025-02-04",
+      "2025-11-28"
+    ]
+  },
+  "economic_implication_limit": "No missing event opening body/direction/return is opened. The counts do not establish a favorable or adverse profit effect. Existing numbers remain descriptive for the implemented retrospective population, not a complete prospective policy or a valid unchanged native-turnover result.",
+  "no_old_adapter_import_or_execution": true,
+  "no_prices_or_risk_or_outcome_tape": true
+}
