@@ -1,0 +1,104 @@
+{
+  "family": "independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1",
+  "family_number": 12,
+  "primary_macro_program": 2,
+  "architecture": "Python adapter + conditional EA",
+  "symbols": ["US100", "US30", "US500"],
+  "role_order": ["SHOCK_PROPAGATION", "SHOCK_REVERSAL"],
+  "identity": {
+    "execution": "zt-next-ch012-delayed-repo-m30-v1",
+    "portfolio": "ZT-PORT-NEXT-CH012-REPO-M30-20260907",
+    "reserved_magic_by_role": {"SHOCK_PROPAGATION": [2609071211, 2609071212, 2609071213], "SHOCK_REVERSAL": [2609071221, 2609071222, 2609071223]},
+    "native_state": "ZetaTerminusNext/lab/ch012-repo-m30/state",
+    "native_runtime_if_survivor": "lab/runtime/ch012-repo-m30-portable/"
+  },
+  "periods": {
+    "warmup": ["2023-01-01", "2024-01-01"],
+    "development": ["2024-01-01", "2026-01-01"],
+    "candidate_specific_locked": ["2026-01-01", "2026-08-01"],
+    "whole_native": ["2024-01-01", "2026-08-01"],
+    "new_entry_cutoff_calendar_days_before_end": 7,
+    "semantics": "Half-open broker-labelled periods; no localization or claim that raw broker epoch labels are true UTC. The fixed terminal entry cutoff is calendar-known and never a future-row-count admission rule."
+  },
+  "repo": {
+    "source": "Ordinary NY Fed SOFR and TGCR headline rates, as published under the contemporaneous method. No quarterly revised statistics, unofficial indicative backcast, percentiles, volumes or substitute source.",
+    "basis": "SOFR minus TGCR in integer basis points; comparison with strict prior-20-effective-date median, excluding the current source row. Twice-median integer arithmetic resolves half-basis-point medians exactly.",
+    "prior_source_dates": 20,
+    "availability_delay_calendar_days": 8,
+    "maximum_effective_date_age_calendar_days": 30,
+    "availability": "At each decision use the latest effective date whose effective date plus eight calendar days is no later than the broker date. Ties, unavailable median and stale source emit no impulse. Any specifically known exceptional late release requires correction before use. Do not shorten the lag.",
+    "revision_limit": "Eight-day eligibility is a disclosed schedule-based final-headline inference, not a certificate of archived intraday vintages. Preserve the actual November 2024 method break without unofficial reconstruction."
+  },
+  "signal": {
+    "bar_seconds": 1800,
+    "atr_bars": 14,
+    "minimum_body_prior_atr": 1.0,
+    "bars": "Aggregate original Bid M1 observations on the unshifted broker 1800-second grid. A signal/ATR bar requires exactly thirty unique consecutive M1 openings, from offset zero through 1740 seconds, with positive tick counts. Do not fill or interpolate absent minutes. Invalid OHLC, duplicate/nonmonotone time or non-M1 grid is correction, not an economic exclusion.",
+    "atr": "Simple mean of the fourteen preceding complete M30 true ranges, strictly excluding the shock bar. True range uses the previous observed complete M30 close, including intervening price gaps; no external session mapping and no requirement to foresee the next bar. The first warmup true range is high minus low.",
+    "trigger": "At a newly completed complete M30 bar, absolute close-minus-open must be at least one strictly prior ATR14. Above-median repo basis requires a negative body; below-median basis requires a positive body. Zero body or tied basis emits nothing. Each completed bar can produce at most one impulse per symbol.",
+    "SHOCK_PROPAGATION": "Trade in the sign of the newly completed qualifying price shock.",
+    "SHOCK_REVERSAL": "Trade against the sign of the same newly completed qualifying price shock.",
+    "execution": "An impulse is consumed once at its next M30 opening. Proxy fills require an M1 opening exactly at that decision timestamp; do not seek forward for a later favorable entry. The EA additionally enforces fresh real ticks and all normal broker/safety gates. An occupied symbol blocks an impulse. A stable daily rate alone never emits a new lifecycle or causes flatten/reopen churn.",
+    "priority": "Ascending SHA256 of ASCII ZT-CH012-PRIORITY-V1|RAW_EPOCH|SYMBOL for simultaneous impulses; fixed independently of prices and outcomes."
+  },
+  "geometry": {
+    "initial_stop_prior_atr": 2.0,
+    "initial_take_prior_atr": 4.0,
+    "maximum_completed_m30_intervals": 4,
+    "holding": "Stop/take distances are fixed from the executed entry, using the impulse's prior ATR. No trail, break-even, partial close or extension. After four nominal completed M30 intervals, close on the first available quote; an intervening market closure cannot supply an earlier executable close."
+  },
+  "risk": {
+    "initial_deposit_usd": 100.0,
+    "reference_leverage": "1:100",
+    "target_position_fraction": 0.02,
+    "minimum_lot_hard_cap_fraction": 0.03,
+    "aggregate_original_stop_risk_fraction": 0.08,
+    "one_position_per_symbol": true,
+    "lot_rounding": "Floor target volume to broker step; minimum volume only within the 3% original-stop hard cap. Maximum broker volume remains binding. Reserve full original stop risk until complete close.",
+    "batch": "All same-time admissions use the same actual cash snapshot, after opening gap/scheduled exits and before any current M1 high/low. Stressed cash does not select a different fill path.",
+    "margin_limit": "Existing snapshots omit exact historical margin rates. The proxy is an optimistic risk-limited admission screen, with no invented CFD-leverage margin formula. A survivor must resolve attributable full contracts and pass native margin admission."
+  },
+  "costs_and_proxy": {
+    "bid_ask": "Native M1 Bid OHLC and observed spread times symbol point. Long enters Ask and exits Bid; short enters Bid and exits Ask. USD profit equals directional price change times contract size times lots for these USD instruments.",
+    "within_bar": "Opening gap through a stop fills at adverse liquidation-side open. A favorable gap through take is credited only at take. If both levels occur in one M1 bar without order evidence, use stop first. Process the global opening batch before current-bar high/low; no cross-symbol future profit sizing.",
+    "spread_stress": "Subtract one further observed direction-specific spread burden on the same actual-sized path: long entry spread or short exit spread. Also report additional half-entry-plus-half-exit spread burden about midquotes; both stressed series must pass development profit and positive-epoch gates.",
+    "commission_usd_per_lot_per_side": 0.0,
+    "commission_limit": "No historical commission evidence in these snapshots. Zero is an optimistic screening assumption, never a native cost certification.",
+    "swap": "Use original snapshot numeric swap mode 2 as money in symbol base, which is USD for all three. Charge quoted long/short amount times lots at a broker-midnight boundary after a held broker weekday; triple according to the weekday ending there, and no additional weekend charge. Snapshot financing is a proxy approximation. Historic native financing remains mandatory.",
+    "drawdown": "Liquidation-side M1 opening/closing marked equity, with cash plus open P/L. Native intrabar relative equity DD may be higher. Proxy DD is never presented as MT5 DD.",
+    "integrity": "Every accepted fill must reconcile to exactly one full close, cash to trade P/L/fees, and doubled-cost subtraction to its spread tape. All positions must be flat at declared end. Incomplete coverage/closure is correction, not an adverse candidate. No test-only validator or infrastructure is created."
+  },
+  "structural_stage": {
+    "meaning": "Generate causal impulses only, without measuring any forward return, stop/take path, profit, sizing or accepted-fill path. Both roles share exactly the same impulse count. Treat every impulse as an optimistic possible first fill, ignoring overlap, unavailable entry quote, margin, volume and aggregate-risk blocks.",
+    "normal_date_denominator": "Every distinct broker-labelled source M1 date in development with any observation in the three-symbol union, including zero-impulse, incomplete-M30 and terminal cutoff dates. No source-state/performance/completeness thinning. Potential boundary impulses on a date without observations remain in the optimistic numerator and are separately disclosed.",
+    "minimum_optimistic_impulses_per_normal_date": 3.0,
+    "minimum_optimistic_impulses_each_year": 150,
+    "minimum_symbols_with_impulses": 3,
+    "both_shock_signs_required": true,
+    "stop": "If any necessary structural gate fails, close both roles together as structurally infeasible for the fixed turnover/breadth contract, without economic estimation, alternative thresholds, lag, median, window, symbols, subgroup, direction, exit or risk rescue. A structural rejection makes no claim about raw alpha or monetary profitability. If all pass, implement and freeze the already-declared unchanged ordinary economic stage before economic outputs."
+  },
+  "development_gates": {
+    "actual_profit_strictly_above": 149.97,
+    "both_stressed_profit_series_strictly_above": 127.786,
+    "each_2024_2025_actual_and_both_stressed_positive": true,
+    "proxy_marked_equity_drawdown_pct_at_most": 37.39,
+    "genuine_first_fills_per_normal_date_at_least": 3.0,
+    "genuine_first_fills_each_year_at_least": 150,
+    "traded_symbols_at_least": 3,
+    "both_directions_required": true,
+    "selection": "At most one unchanged passer: highest directional doubled-cost profit, lower proxy equity DD, higher minimum yearly stressed profit, then frozen role order. V8 numbers are benchmark-only. No favorable failure fragment is a retained seed."
+  },
+  "native_gates": {
+    "actual_profit_strictly_above": 409.81,
+    "stressed_profit_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_most": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "all_declared_epochs_actual_and_stressed_positive": true,
+    "genuine_first_fills_per_normal_date_in_binding_long_and_isolated_latest_at_least": 3.0,
+    "complete_unchanged_python_adapter_plus_EA_required": true
+  },
+  "confirmation": "A candidate-specific procedural lock covers 2026 until one unchanged development passer and a recorded independently defensible confirmation authority. Known V7/V8 aggregate 2026 economics, prior project price exposure and the incidental CME 2026-02-27 SOFR worked example are disclosed. No globally unseen calendar claim, copied candidate outcome, parameter use of latest two completed months or relabelled opened holdout is allowed.",
+  "closure": "Close the complete two-role bundle together. No valid adverse nearby repair. Recompare all active macro Programs 1-5 and 7 before naming a successor; Program 6 remains outside the Goal. Python-only screening cannot beat V8 or authorize Live.",
+  "storage_reserve_bytes": 32212254720,
+  "initial_artifact_allowance_bytes": 536870912
+}
