@@ -1,0 +1,38 @@
+{
+  "schema": "zeta-exogenous-flow-h4-exit-implementation-freeze-v1",
+  "frozen_utc": "2026-09-06T17:21:03.343680+00:00",
+  "status": "FROZEN_PREOUTCOME_PYTHON_COMPILE_PASSED",
+  "adapter": {
+    "path": "lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/adapter/run_adapter.py",
+    "bytes": 24579,
+    "sha256": "B382F0744A647A73427467BC27D5BFA7D536F54B5E65F54983F4194035EE6405"
+  },
+  "declaration": {
+    "path": "lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/evidence/DECLARATION_V2_BINDING.json",
+    "bytes": 8486,
+    "sha256": "4E996250D4F1BF95BD3003E224CB04380BBF6BE30CF7DF8B27F77F9E45C6573A"
+  },
+  "contract": {
+    "path": "lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/config/contract.json",
+    "bytes": 7546,
+    "sha256": "641B4C0AB446588E7A000FAF77135CF8EA84415D99BE275E6D5DD60FA7A8A87E"
+  },
+  "python": "3.13.9",
+  "normal_compile": "python -m py_compile adapter/run_adapter.py, exit 0",
+  "source_review": [
+    "No imports/links/execution of other family, Live or Optimization source; own data copies only.",
+    "Direction and collision order depend only on frozen ASCII hash inputs. ATR uses completed prior bars.",
+    "A common raw H4 grid is mandatory. All opening closes/admission precede current-bar high/low and trail updates.",
+    "New-entry cutoff is a known calendar boundary; no future bar count or value gates an entry.",
+    "Initial risk is reserved until final close, even after trailing improvements. Both stress definitions and all three roles close together.",
+    "Snapshot financing and absent historical margin/commission authority remain explicit proxy limits. No candidate can reach a native victory from this run alone."
+  ],
+  "storage": {
+    "free_bytes": 84017922048,
+    "reserved_min_bytes": 32212254720,
+    "bounded_new_output_max_bytes": 134217728
+  },
+  "candidate_economics_opened_before_freeze": false,
+  "tests_or_validator_created": false,
+  "next": "Commit/push this coherent preoutcome phase, then run the normal adapter once for all three frozen development roles."
+}

@@ -1,0 +1,90 @@
+{
+  "family": "independent-exogenous-flow-h4-exit-adapter-challenge-v1",
+  "family_number": 11,
+  "architecture": "Python adapter + conditional EA",
+  "primary_macro_program": 4,
+  "symbols": [
+    "US100",
+    "US30",
+    "US500",
+    "AUDUSD",
+    "EURUSD",
+    "GBPUSD",
+    "NZDUSD"
+  ],
+  "clock": "Use unmodified broker H4 time integers and observed bar indices. No UTC localization, external market session, hourly wall-time threshold or source-session repair. Periods and calendar accounting use broker labels matching native date boundaries.",
+  "warmup": "2023-01-01 through 2024-01-01 exclusive, input only",
+  "development": [
+    "2024-01-01",
+    "2026-01-01"
+  ],
+  "locked": [
+    "2026-01-01",
+    "2026-08-01"
+  ],
+  "whole": [
+    "2024-01-01",
+    "2026-08-01"
+  ],
+  "atr_bars": 14,
+  "atr": "Arithmetic mean of 14 completed-bar true ranges, ending at index entry-1; never include entry-bar values. Risk only, no direction feature.",
+  "initial_stop_atr": 2.0,
+  "max_held_bars": 8,
+  "entry_intent": "Every observed H4 opening after warmup with a complete 8-bar holding horizon and a following exit bar before period end. If flat, long iff the low bit of first SHA256 byte of ASCII ZT-CH011-FLOW-V1|SYMBOL|RAW_EPOCH is 1, otherwise short. No fitted coefficient or selectable seed. Already-open intents are logged as blocked.",
+  "priority": "SHA256 of ASCII ZT-CH011-PRIORITY-V1|RAW_EPOCH|SYMBOL, ascending; price-independent and common across roles",
+  "role_order": [
+    "HOLD8_CONTROL",
+    "CLOSE_TRAIL_2ATR",
+    "NO_PROGRESS_3B"
+  ],
+  "roles": {
+    "HOLD8_CONTROL": "Original 2 ATR stop; exit at next observed open after 8 held H4 bars.",
+    "CLOSE_TRAIL_2ATR": "Same initial stop and 8-bar maximum. After each completed bar, monotonically tighten to best completed liquidation-side high/low since entry minus/plus 2 entry ATR; effective only on next observed bar. No intrabar favorable lookahead.",
+    "NO_PROGRESS_3B": "Same initial stop and maximum. After the third held bar, if liquidation-side close has not moved strictly favorably from entry, schedule exit for next observed open; otherwise retain original hold/stop."
+  },
+  "risk": {
+    "initial_deposit_usd": 100.0,
+    "target_position_fraction": 0.02,
+    "minimum_lot_hard_cap_fraction": 0.03,
+    "aggregate_original_stop_risk_fraction": 0.08,
+    "one_position_per_symbol": true,
+    "same_open_actual_balance_snapshot_for_batch": true,
+    "stressed_balance_controls_admission": false,
+    "lot_rounding": "floor to broker step, minimum only within hard cap; no original-risk release after trailing improvement",
+    "margin": "Source snapshots lack exact historical margin rates. Proxy is a risk-limited gross-admission screen; it does not invent a CFD leverage margin formula or certify native fills. Any survivor must acquire attributable full margin contracts and use native broker admission before victory."
+  },
+  "economics": {
+    "price": "Bid OHLC; Ask = Bid + row spread * point. Long enters Ask/exits Bid; short enters Bid/exits Ask.",
+    "gap_stop": "Stop already crossed at opening fills at adverse liquidation-side open; otherwise a within-bar hit fills at stop. Scheduled exits occur at opening after gap stops.",
+    "marking": "Proxy equity marked at each global observed bar open/close with liquidation-side marks; disclose that native intrabar DD can be higher.",
+    "spread_stress": "Subtract one additional direction-specific entry-plus-exit half-spread burden, equivalent to doubling the observed bid/ask friction about midprices. Same actual-balance-sized fills; native historical-cost authority remains mandatory.",
+    "commission_usd_per_lot_per_side": 0.0,
+    "commission_limit": "No historical commission field in supplied snapshots; proxy is optimistic for omitted commissions. Native complete costs are required for a survivor.",
+    "swap": "Use immutable numeric MT5 modes and quoted swap rates; mode 1 points -> USD via point/tick_size*tick_value, mode 2 money in symbol base -> direct USD only when base USD. Charge server-midnight boundaries after broker weekdays held, triple according to the day ending at that boundary; no extra weekend charges. Snapshot swaps are descriptive proxy approximations, not historical rates.",
+    "swap_stress": "Same snapshot swap as actual; doubled-cost stress refers to doubled spread. Report spread and swap separately."
+  },
+  "development_gates": {
+    "actual_profit_strictly_above": 149.97,
+    "stressed_profit_strictly_above": 127.786,
+    "each_2024_2025_actual_and_stressed_positive": true,
+    "proxy_marked_equity_drawdown_pct_at_most": 37.39,
+    "first_fills_per_normal_broker_date_at_least": 3.0,
+    "first_fills_each_year_at_least": 150,
+    "traded_symbols_at_least": 3,
+    "both_directions": true,
+    "selection": "Highest stressed profit, lower marked equity drawdown, highest minimum yearly stressed profit, frozen role order. No failure subset tuning."
+  },
+  "whole_native_gates": {
+    "actual_profit_strictly_above": 409.81,
+    "stressed_profit_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_most": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "all_declared_epochs_actual_and_stressed_positive": true,
+    "first_fills_per_normal_date_at_least": 3.0,
+    "complete_unchanged_python_adapter_plus_EA_required": true
+  },
+  "confirmation_authority": "2026 candidate-specific values remain unopened until one unchanged development passer. Known aggregate V7/V8 native 2026 results and prior project market exposure are disclosed; this is a prospective candidate-specific procedural lock, not a claim of globally unseen calendar data. No opened candidate confirmation may be relabeled or reused. If authority is no longer independently defensible at that boundary, resolve before opening, not after outcomes.",
+  "stop": "Judge all three related roles together. If none passes, close with complete economics and no seed/window/ATR/hold/risk/symbol/direction rescue. A source/implementation/serialization fault is correction, never a candidate economic failure. Recompare all macro programs before any successor.",
+  "outputs": "Bounded normal adapter candidate-intent tape, trade tape, open/close marked equity tape and complete economic summary. No test-only CLI, validator or CI.",
+  "storage_reserve_bytes": 32212254720
+}
