@@ -1,0 +1,187 @@
+{
+  "schema": "zeta-opening-session-source-and-admission-feasibility-declaration-v1",
+  "declared_utc": "2026-09-06T18:36:27.679473+00:00",
+  "parent_commit": "30b7d5f6b4bbb8c06c12f94e053ec740fdf73b20",
+  "status": "DECLARED_SOURCE_ONLY_PRE_NEW_TIMESTAMP_OBSERVATION",
+  "primary_macro_program": 7,
+  "unit_root": "lab/research/opening-session-source-and-admission-feasibility-v1",
+  "selection_authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_012_MACRO_RECOMPARE_V1.json",
+    "bytes": 6964,
+    "sha256": "F330AF27AB816329632C1BD58BF580BE159A1F817090794ADBF786EAC54AAA39"
+  },
+  "known_exposure": [
+    "Closed clock addendum reports original Family 006 UTC schedule versus raw broker labels and all 965 nominally shifted events. It does not certify every historical raw timestamp.",
+    "The frozen original contract already states entry at anchor +5, complete observations through +74 and a normal-day denominator conditional on complete sessions. This observation motivated the unit and is not a blinded new finding.",
+    "Original and later family aggregate results and V7/V8 2026 aggregates are known. No old economic tape or new candidate price/outcome is an input.",
+    "Only original-source function-name/line inventory, file hash and Parquet schema/row-count metadata were read before this declaration. No new timestamp array or relevant implementation body has been inspected for this unit."
+  ],
+  "questions": [
+    "What code actually determines original event admission and normal-day coverage, and which required observations occur after the intended entry?",
+    "What is directly established about the original raw time field, what follows only from the broker New-York-close convention, and what source-specific historical clock evidence is missing or contradictory?",
+    "Under each of the two fixed documented time interpretations, how do causal predecision availability, an exact opening-minute observation, future hold-path coverage and unused overcoverage differ on all source dates?",
+    "Which source and causal-design corrections would be necessary before a separately declared original-hypothesis economic correction could be considered?"
+  ],
+  "source_scope": {
+    "original_adapter": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 44897,
+      "sha256": "607C667D940F6C86B91C4DAC50F49CB58274CBB1616E83958020C227DDBF42AB"
+    },
+    "permitted_lines": [
+      [
+        1,
+        170
+      ],
+      [
+        336,
+        419
+      ],
+      [
+        623,
+        650
+      ],
+      [
+        812,
+        865
+      ],
+      [
+        944,
+        977
+      ]
+    ],
+    "sections": "Only imports/constants/input-time handling, load_market/session_anchor/complete_session_events, normal_day_count and event scheduling/structural/run call sites. Read source, never import or execute the old adapter. Price/risk/trade functions and economic output tapes are excluded.",
+    "original_contract": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/config/challenge-contract.json",
+      "bytes": 14180,
+      "sha256": "FE988AA12CF91979AA5FEBBC7B1E8ADEA3F11CA54104C673F4250DF25551F5D5"
+    },
+    "original_declaration": {
+      "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/evidence/INDEPENDENT_TWO_SESSION_OPENING_AUCTION_RESPONSE_ADAPTER_CHALLENGE_V1_DECLARATION.json",
+      "bytes": 8144,
+      "sha256": "540EE1A718B5281DF5D60838A98DEC6EFEF187448BFCA4DC7644465B448DE701"
+    },
+    "original_acquisition_receipt": {
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/spec/acquisition-receipt.json",
+      "bytes": 7552,
+      "sha256": "FBD672D7B6FF11320AC31AD56E021823D22405953738ABE3D55A413DA9BB1AC9"
+    },
+    "producer_trace_limit": "Read time/provider/provenance metadata only from the named acquisition receipt. If it directly identifies an in-repository producer, source-only reading may follow that exact path solely to determine time serialization. Do not inspect unrelated projects or execute an acquisition/broker API.",
+    "prior_clock_addendum": {
+      "path": "lineage/CHALLENGE_BROKER_CLOCK_AUTHORITY_CORRECTION_V1.json",
+      "bytes": 9175,
+      "sha256": "3C0CC7E00070A67C97CFB078F42539143840E643D79E8BA9CDDF1317F283DC51"
+    }
+  },
+  "timestamp_inputs": [
+    {
+      "symbol": "US100",
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US100_M1.parquet",
+      "bytes": 21213599,
+      "sha256": "634A8545D83C7A520E81A07E273255BD3FA771AA0EC29381D04E6D25A64C6BB2"
+    },
+    {
+      "symbol": "US30",
+      "path": "lab/artifacts/raw/us-equity-index-cash-close-intraday-momentum-v1/input/market/US30_M1.parquet",
+      "bytes": 19018323,
+      "sha256": "8CD68BC54A736BF49CC020ED7CF41C62BBA5305FA7C1453603EF65173F83B063"
+    }
+  ],
+  "input_read_contract": {
+    "only_decoded_column": "time, native int64",
+    "development_half_open": [
+      "2024-01-01",
+      "2026-01-01"
+    ],
+    "raw_epoch_half_open": [
+      1704067200,
+      1767225600
+    ],
+    "copy": "Materialize only filtered 2024-2025 timestamp values into this unit own raw input. No OHLC, spread, tick_volume, real_volume, opening-state, return or risk column is decoded. Opaque full-file hashing is permitted for identity.",
+    "private_output_root": "lab/artifacts/raw/opening-session-source-and-admission-feasibility-v1/",
+    "sorted_unique_grid": "Report monotonicity, duplicates and minute-grid defects. Source defects are explicit correction states, not event/date exclusions."
+  },
+  "fixed_calendar_comparison": {
+    "civil_dates": "2024-01-01 through 2025-12-31; keep every distinct original-source raw date in the union as the observation denominator, even if no session satisfies any window.",
+    "sessions": [
+      {
+        "name": "LONDON_0800",
+        "zone": "Europe/London",
+        "time": "08:00"
+      },
+      {
+        "name": "NEW_YORK_0930",
+        "zone": "America/New_York",
+        "time": "09:30"
+      }
+    ],
+    "representations": [
+      "ORIGINAL_DIRECT_UTC: reproduce the declared local-to-UTC schedule, then compare those integer labels directly with original raw time values as the old implementation claims. Descriptive only.",
+      "NY_CLOSE_BROKER_CONVENTION: convert each exchange-local instant to New York wall time, add seven wall hours, then encode that naive broker label. This is the already documented nominal convention, not a chosen favorable offset or an automatic physical-UTC certificate."
+    ],
+    "clock_choice_forbidden": "Do not rank the two mappings by greater data supply or economic reaction. No third ad-hoc offset, favorable date exclusion or session/window adjustment.",
+    "fixed_partitions_minutes_relative_to_anchor": {
+      "pre_context": [
+        -30,
+        -1
+      ],
+      "completed_signal_bars": [
+        0,
+        4
+      ],
+      "entry_minute": [
+        5,
+        5
+      ],
+      "future_hold_path": [
+        6,
+        64
+      ],
+      "unused_future_overcoverage": [
+        65,
+        74
+      ]
+    },
+    "availability": "Pre-context and five completed signal bars are known at anchor+5. Exact entry-minute presence is only a historical proxy for a then-current quote, not a certified first-tick freshness gate. Later minute presence cannot be known then and cannot retroactively select admission or the normal-day denominator.",
+    "table": "For each source date/session/representation/symbol record missing timestamps in each fixed partition and paired-event completeness. Derive causal-prefix-plus-entry versus full-future completeness counts and excluded normal dates. These are observation slots, never trade signals or profitable opportunities.",
+    "daily_source_shape": "Describe each symbol/date first and last observed raw label, minute count, and gaps. Separately summarize already-fixed US/EU DST mismatch windows (March and October/November in 2024/2025); no price/volume-based clock inference."
+  },
+  "primary_document_scope": {
+    "domains": [
+      "fpmarkets.com",
+      "mql5.com"
+    ],
+    "known_anchors": [
+      "https://www.fpmarkets.com/en-au/education/faq/",
+      "https://www.fpmarkets.com/wp-content/uploads/2021/03/FP-Markets-Product-Disclosure-Statement-Metatrader-4-29.03.2021.pdf",
+      "https://www.mql5.com/en/docs/python_metatrader5/mt5copyratesrange_py"
+    ],
+    "dated_lookup": "Bounded search for FP Markets 2024/2025 server DST/trading-schedule notices may add direct primary historical support. Distinguish API UTC documentation from broker server-wall convention; one cannot silently prove the other.",
+    "no_data_acquisition": "No new market-price API, broker/account query, paid dataset, external AI request or trading candidate is opened."
+  },
+  "judgment_contract": {
+    "implementation_chronology": "Record supported, contradicted or unresolved for actual future-admission/denominator dependency using exact source lines, not just labels.",
+    "source_clock_classes": [
+      "DIRECTLY_SUPPORTED_FIELD_AND_DATED_CLOCK",
+      "SUPPORTED_NOMINAL_CONVENTION_WITH_EXPLICIT_FIELD_LIMIT",
+      "CONTRADICTED_OR_UNRESOLVED_SOURCE_SEMANTICS"
+    ],
+    "readiness": "A structurally implementable causal design does not by itself certify raw-clock semantics. Report source readiness and required causal contract changes separately. A corrected economic candidate needs independently defensible raw time authority and its own unchanged economic declaration after a whole-map comparison.",
+    "stop": "Close this exact bounded question after complete source/calendar evidence. Inadequate clock evidence remains inadequate; do not change sessions, delete dates, examine prices or extend into a diagnostic framework. No arbitrary numeric retry cap for a necessary parser/serialization/source-reading correction.",
+    "authority_correction": "If source confirms a concrete additional original-006 defect, append a narrowly attributable lineage authority note. Preserve old sources, numbers and closures; do not infer profit impact or extend findings to other families without evidence.",
+    "next": "Recompare Programs 1-5 and 7 at closure. No automatic candidate reopening or successor."
+  },
+  "forbidden": [
+    "new candidate adapter/model/EA/Portable",
+    "old adapter execution",
+    "2026 candidate values",
+    "forward prices, economics or risk feasibility",
+    "nearby signal/source/lag/threshold/window/symbol/direction/hold/risk rescue",
+    "validator, checker, helper CLI, CI, tests or project Skill",
+    "Live package/settings/state/authority mutation"
+  ],
+  "artifact_budget_bytes": 41943040,
+  "minimum_free_bytes": 32212254720,
+  "free_bytes_at_declaration": 83455979520,
+  "previous_goal_turn_classification": "PROGRESS: Family 012 complete two-role economic run and valid adverse closure plus source-backed next-action selection."
+}
