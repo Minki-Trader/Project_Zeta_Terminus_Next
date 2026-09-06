@@ -1,0 +1,186 @@
+{
+  "schema": "zeta-ch014-fair-reference-resting-entry-contract-v1",
+  "family": "independent-fair-reference-resting-entry-timing-adapter-challenge-v1",
+  "family_number": 14,
+  "primary_macro_program": 3,
+  "architecture": "Python adapter + conditional EA",
+  "symbols": [
+    "US100",
+    "US30",
+    "US500"
+  ],
+  "role_order": [
+    "IMMEDIATE_REFERENCE_RESPONSE",
+    "RESTING_REFERENCE_RESPONSE",
+    "RESTING_WITH_CAUSAL_CANCELLATION"
+  ],
+  "identity": {
+    "execution": "zt-next-ch014-fair-reference-timing-v1",
+    "portfolio": "ZT-PORT-NEXT-CH014-FAIR-REFERENCE-20260907",
+    "reserved_magic_by_role": {
+      "IMMEDIATE_REFERENCE_RESPONSE": [
+        2609071411,
+        2609071412,
+        2609071413
+      ],
+      "RESTING_REFERENCE_RESPONSE": [
+        2609071421,
+        2609071422,
+        2609071423
+      ],
+      "RESTING_WITH_CAUSAL_CANCELLATION": [
+        2609071431,
+        2609071432,
+        2609071433
+      ]
+    },
+    "source_runtime": "lab/runtime/ch014-fair-reference-source-portable/",
+    "native_runtime_after_survivor": "lab/runtime/ch014-fair-reference-native-portable/",
+    "native_state": "ZetaTerminusNext/lab/ch014-fair-reference/state"
+  },
+  "periods": {
+    "warmup": [
+      "2023-12-01",
+      "2024-01-01"
+    ],
+    "development": [
+      "2024-01-01",
+      "2026-01-01"
+    ],
+    "locked_confirmation": [
+      "2026-01-01",
+      "2026-08-01"
+    ],
+    "whole_native": [
+      "2024-01-01",
+      "2026-08-01"
+    ],
+    "isolated_latest": [
+      "2026-07-01",
+      "2026-09-01"
+    ],
+    "new_entry_cutoff_calendar_days_before_end": 7,
+    "semantics": "Half-open native raw quote coordinates. No London/New York/UTC offset is selected. M1 signal bars derive exclusively from the same owned Bid/Ask tick stream used for execution. API query datetimes are UTC per documentation; retain returned raw time/time_msc without transformation. No independent M1 clock is merged into signals."
+  },
+  "hypothesis": "An independently defined fresh departure from a recent price reference may be temporary. Compare acting immediately with accepting a further price concession, and one predeclared cancellation rule for continuing displacement. Waiting may improve entry price but also select adverse arrivals or lose fills; no superiority is assumed.",
+  "signal": {
+    "reference_completed_M1_bars": 60,
+    "reference": "Arithmetic mean and population standard deviation of the 60 completed M1 midpoint closes strictly before the current completed bar. Midpoint = (last valid Bid+Ask)/2 at that bar's last source tick. No time/external/volume/old signal feature.",
+    "minimum_sigma_tick_sizes": 1,
+    "fresh_dislocation_standard_deviations": 1,
+    "arming": "After a gap reset, initially unarmed. Once 60 strictly prior consecutive M1 bars exist, a completed close with abs(close-reference)<=sigma arms the process. An armed completed close strictly above reference+sigma or below reference-sigma emits one new excursion and disarms. An outside-to-opposite-outside jump without an inside completed close does not rearm. Each emitted event is independent of account/pending/position state.",
+    "direction": "Below the lower band emits LONG; above the upper band emits SHORT, both toward the frozen reference.",
+    "bar_completion": "Finalize the previous observed M1 bar only when a later source tick arrives. Use only the prior-bar prefix to construct its event and save nominal bar-end time plus actual discovery tick ordinal/time. If missing minute bars are then detected, reset the feature window/arming before the next bar. Future absence cannot retrospectively remove the last valid-prefix event.",
+    "freshness_ms": 5000,
+    "freshness": "An intent discovered later than 5,000 ms after its nominal completed-bar end is expired for new submission but stays in the event/denominator evidence. Any already-owned stop/order remains governed by ordinary quote arrivals and server expiry.",
+    "gap": "Do not synthesize or forward-fill missing M1 bars. A gap larger than one minute clears reference and arming for subsequent decisions; existing liability keeps protection/timeout. Sigma smaller than one broker tick emits no event and cannot be enlarged or tuned after supply is seen.",
+    "independence": "Fresh implementation only. No V1-V8 or closed-family signal, opportunity, model, feature/economic tape, directional-change event, hash-flow, external state or strategy source is an input. All numeric choices below are prospective engineering hypotheses, not calibrated to candidate prices or supply."
+  },
+  "order_policies": {
+    "IMMEDIATE_REFERENCE_RESPONSE": "At the discovery quote after server-side existing-order/protection processing, admit one market entry using current Ask for LONG or Bid for SHORT, subject to common freshness/reference/risk rules.",
+    "RESTING_REFERENCE_RESPONSE": "Place one nonmarketable Buy Limit or Sell Limit at signal midpoint close minus direction times 0.5 frozen sigma, outward rounded to tick size. Do not credit a fill at the submission quote. A strictly later source quote must activate it on Ask<=BuyLimit or Bid>=SellLimit. Fixed 15-minute specified expiry; no repricing.",
+    "RESTING_WITH_CAUSAL_CANCELLATION": "Same quote and expiry. While still pending, a later completed M1 midpoint close extending at least 0.25 frozen sigma beyond the signal midpoint in the original displacement direction requests cancellation. Execute cancellation only after any existing pending activation/protection caused by that arriving quote. Never erase an already-filled trade.",
+    "limit_additional_sigma": 0.5,
+    "cancel_additional_sigma": 0.25,
+    "expiry_minutes": 15,
+    "common_admission": "One pending entry or position per symbol, no simultaneous opposite quotes or atomic OCO assumption. Record and skip new events while liability is owned. Reject stale intents, a current midpoint that has already reached/crossed the frozen fair reference, a marketable/passed resting limit, invalid protective geometry or unavailable risk capacity. Rejected/expired intent stays recorded; the signal state is never rewound to manufacture another event.",
+    "pending_volume": "Fix volume and full original-stop risk reservation when the instruction is placed. A resting activation does not rerun a favorable equity/risk admission after the price arrives: the pending instruction already owned that liability. Rejection/expiry/cancellation releases reservation. Later genuine broker partial fills/rejections require native evidence and cannot be assumed from displayed quotes.",
+    "request_semantics": "Current snapshot order_mode 127 and expiration_mode 15 support limits, SL/TP and specified expiry. Pending requests use ORDER_FILLING_RETURN as documented; immediate requests use a supported policy. BOC/queue participation is not assumed. No real order is sent by proxy or source acquisition."
+  },
+  "geometry": {
+    "stop_sigma_from_entry": 2,
+    "take": "Frozen signal reference, rounded toward a conservative executable tick (LONG take rounded down, SHORT take up). It never follows later reference updates.",
+    "maximum_hold_minutes": 60,
+    "stop": "IMMEDIATE stop is two frozen sigma beyond actual displayed entry; resting stop is two sigma beyond its planned limit entry. Round protection outward. Retain stop/target until complete exit. No trail, partial close, pyramiding, recentering or continuation after timeout.",
+    "timeout": "At the first symbol quote at/after 60 raw minutes from actual first fill, after server-side stop/take processing, close full remaining volume at its liquidation side. No final-row liquidation shortcut."
+  },
+  "risk": {
+    "initial_deposit_usd": 100,
+    "reference_leverage": "1:100",
+    "target_position_fraction": 0.02,
+    "minimum_lot_hard_cap_fraction": 0.03,
+    "aggregate_original_stop_risk_fraction": 0.08,
+    "volume": "Floor target to broker step, min only within 3% hard cap, respect max. Risk basis is positive min(actual cash, latest observed liquidation equity), using only quotes already consumed. Reserve all original stop risk for pending plus open liabilities.",
+    "same_millisecond": "Source order within each symbol is retained. Cross-symbol equal-millisecond arrivals use fixed US100, US30, US500 rank as an explicit proxy convention; no later unseen symbol mark or within-bar result sizes an earlier admission. Native evidence must disclose execution-order limitations.",
+    "margin": "Historical margin rates/commission and displayed depth are unavailable. Proxy is an optimistic risk-reserved admission screen, not a zero-margin claim; initial-margin field 0 does not remove native margin requirements."
+  },
+  "execution_and_costs": {
+    "ordered_input": "Lossless native MqlTick fields, read in month/time_msc/source-ordinal order. Do not interpolate M1 high/low paths, infer an exchange queue, or reorder tied ticks within a symbol.",
+    "event_order": "Before EA/adapter actions on a quote, expire instructions whose server time is due, apply existing protection and pending activation at the correct side, and immediately apply any stop/take crossed by a new gap activation. Then close timed-out positions, finalize prior M1 state, handle causal cancellation and submit new intent. A newly submitted pending instruction cannot fill on the same source ordinal.",
+    "market_entry_exit": "Displayed Ask/Bid for LONG/SHORT entry and Bid/Ask for liquidation. No independent bid-high/ask-low price selection.",
+    "limit_fill": "When the appropriate later quote reaches a resting price, credit exactly the limit (discard favorable gap price improvement). If the same quote is through its protective stop, liquidate at the adverse actual side, including gap loss beyond initial risk. Profit targets receive no favorable gap improvement.",
+    "spread_stress": "On the actual-sized accepted path accrue one additional observed direction-specific spread (LONG entry, SHORT exit). Also accrue half-entry plus half-exit spread as a midpoint stress. All actual quote spreads come from ordered input, not M1 representative spreads.",
+    "commission_usd_per_lot_per_side": 0,
+    "commission_limit": "Zero is an optimistic historical-evidence limitation; complete native economics remains mandatory.",
+    "financing": "Physically copy the dated 2026-09-07 contract snapshot from the closed source unit. Use numeric swap mode 2 as USD/lot, charge held weekday at crossed raw-day midnight with Friday triple as captured, no additional weekend charge. Quote discovery after closure cannot invent an earlier executable exit. Dated current rates are only a proxy approximation of 2024-2025 financing.",
+    "no_credit_stress": "A third same-trade stress additionally removes every positive financing credit from directional doubled-spread profit. Negative charges stay. Stress never selects new sizes or changes fills.",
+    "drawdown": "Mark liquidation-side equity on every consumed quote and after actions; compute exact peak-to-trough over this ordered proxy path, preserving worst extrema and minute summaries. This remains proxy equity DD, not native MT5 equity DD. Cross-symbol timing, latency, fills, native margin and historical costs remain limitations.",
+    "epochs": "Calendar-period changes in marked equity after accrued spread/financing, plus separate realized cash attribution. Do not shift a cross-year trade's unrealized risk out of the year gate.",
+    "integrity": "Normal production reconciles pending state transitions, accepted first fills, exactly one full close per lifecycle, cash/fees/epochs and final zero pending/positions. Record quote file and ordinal for every fill/exit. Incomplete input/state/accounting is correction, not an adverse verdict. No test-only CLI, validator, parity checker or CI."
+  },
+  "source_acquisition": {
+    "scope": "One isolated no-EA native source reader only; no EA/tester economic path. Fresh generic platform plus private canonical Lab connection material copied physically; no closed reader restart, strategy/profile/Include copy, Live/Optimization execution or source linkage.",
+    "platform_source": "lab/runtime/v7rr1-portable/terminal64.exe",
+    "platform_sha256": "D2285613044952C1D62AFEA982B61C3635525C9DA6F8E89B9A2C8AFA7BC69C3A",
+    "private_connection_source": "lab/runtime/tester-portable/config/{accounts.dat,common.ini,servers.dat,terminal.lic}; copies remain strictly Git-ignored and unprinted.",
+    "tick_cache_source": "lab/runtime/v7rr1-portable/bases/FPMarketsSC-Live/ticks/{US100,US30,US500}/{202312,202401..202512}.tkc",
+    "cache_use": "Market observations only, never V7/V8 strategy ancestry. Hash/copy the 75 declared monthly cache files once into own reader; preserve original canonical files. Existence/size is not a completeness claim.",
+    "api_allowlist": [
+      "initialize explicit own path portable=True",
+      "terminal_info path/build/connectivity/trade_allowed/maxbars",
+      "symbol_select and static symbol_info",
+      "copy_ticks_range only fixed warmup/development monthly intervals",
+      "copy_rates_range in the same fixed interval only to retain source normal-day calendar",
+      "version/last_error/shutdown"
+    ],
+    "forbidden": "No account, positions, orders, deals, margin/profit calculation, order check/send, market book, tester launch, live tick polling or 2026 candidate feature work.",
+    "boundary": "Use bounded monthly UTC range requests. A next-boundary tick may be returned by the inclusive API; inspect time_msc only to select exact half-open declared records before accessing/copying price fields. Outside-period records remain opaque and are never printed, saved or analyzed. No candidate 2026 price column is opened.",
+    "output": "Own monthly packed eight-field MqlTick NPY; complete native values preserved. Own M1 date calendar is source coverage only, never a separate signal clock. Save request bounds, row counts, first/last raw times, schema, API errors, file hashes and before/after source cache fingerprints. No alpha, fill, risk or economics in acquisition.",
+    "source_correction": "Do not judge missing/corrupt, nonchronological or invalid-quote input economically. Correct source/invocation defects without a numeric retry cap. Retain attributable changed/partial acquisitions; never hide a refreshed source. Full input must be sealed before features.",
+    "operating_boundary": "Checkpoint each completed symbol/month. Honor a source stop-after-chunk request, disconnect API and normally close only the own reader. Market handoff remains serial at a safe boundary."
+  },
+  "structural_stage": {
+    "meaning": "Generate only causal fresh-excursion intents from owned quotes; no forward returns, fill/stop/target path, sizing or economics. Common optimistic supply ignores rejection, expiry, ownership, volume and margin.",
+    "normal_day_denominator": "Union of all development source M1 dates and source tick dates, including zero-signal, missing-quote and entry-cutoff dates. No conditional denominator on future coverage, live orders or accepted trades. Record the two source date sets and their union separately.",
+    "minimum_optimistic_events_per_normal_date": 3,
+    "minimum_events_each_year": 150,
+    "minimum_symbols": 3,
+    "both_directions": true,
+    "stop": "A necessary supply/breadth failure closes the full timing bundle without economic scoring or adjacent reference/band/TTL/cancellation/symbol/direction/exit/risk repair. Invalid source is correction."
+  },
+  "development_gates": {
+    "actual_profit_strictly_above": 149.97,
+    "all_stressed_profit_series_strictly_above": 127.786,
+    "each_2024_2025_actual_and_all_stressed_positive": true,
+    "proxy_equity_drawdown_pct_at_most": 37.39,
+    "genuine_first_fills_per_normal_date_at_least": 3,
+    "genuine_first_fills_each_year_at_least": 150,
+    "traded_symbols_at_least": 3,
+    "both_directions_required": true,
+    "selection": "At most one complete passer: highest no-positive-credit stressed net, then lower proxy DD, then higher worst-year same stress, then frozen role order. A passing subset of a failure is not a seed."
+  },
+  "confirmation": {
+    "authority": "Candidate-specific procedural lock, not a claim the market calendar is globally unseen. Disclose prior project price work, V7/V8 2026 aggregates and incidental primary-document examples. Record independently defensible exposure before first 2026 input without changing this contract.",
+    "epochs": [
+      "2026-01-01..2026-06-01",
+      "2026-06-01..2026-08-01"
+    ],
+    "requirements": "One unchanged development passer only. Each epoch and pooled actual/all stress positive, DD <=37.39% and >=3 genuine first fills per all-source date. July-August latest excluded from selection; July overlap with benchmark confirmation is disclosed, never relabelled independent holdout. Latest unchanged actual/all stress positive and >=3 starts/day. Failure closes before native; no refit/tuning/extra survivor."
+  },
+  "native_gates": {
+    "actual_profit_strictly_above": 409.81,
+    "stressed_profit_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_most": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "all_declared_epochs_actual_and_stressed_positive": true,
+    "genuine_first_fills_per_normal_date_long_and_latest_at_least": 3,
+    "complete_unchanged_python_adapter_plus_EA": true,
+    "evidence": "Only the sole unchanged proxy/confirmation survivor receives the one-time CXR2 safety shell and isolated native EA/tester path. Complete 100% real ticks, adjacent exact benchmark/control and identical exercised history/contracts; engineering faults corrected, no native parameter search. Native risk, pending order ownership, partial fills, expiry, recovery and source freshness must be attributable."
+  },
+  "closure": "Close the once-declared three-role bundle together. No nearby reference/lookback/band/direction/symbol/TTL/cancellation/exit/risk rescue or retained losing fragment. Whole Programs 1-5 and 7 comparison before any successor; Program 6 outside Goal. Source errors are not economic failures. No proxy victory or Live promotion authority.",
+  "storage": {
+    "minimum_free_bytes": 32212254720,
+    "initial_acquisition_and_results_allowance_bytes": 38654705664,
+    "check": "At least 36 GiB growth allowance plus 30 GiB reserve before source staging. Stream bounded monthly chunks; retain canonical inputs/results. Stop storage growth before reserve threat and reach a normal source-process boundary."
+  }
+}
