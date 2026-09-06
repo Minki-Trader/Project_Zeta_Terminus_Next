@@ -1,0 +1,56 @@
+{
+  "schema": "zeta-nyfed-repo-headline-source-feasibility-v1",
+  "declared_utc": "2026-09-06T17:34:52.437641+00:00",
+  "status": "DECLARED_BEFORE_SOURCE_SERIES_ACQUISITION_NO_TRADING_CANDIDATE",
+  "primary_macro_program": 2,
+  "selection": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_011_MACRO_RECOMPARE_V1.json",
+    "sha256": "E4CA5986E7C6D4E4932FB31890B131941FA71DF3CEDDA75383E6334E861D7D21"
+  },
+  "question": "Can ordinary published SOFR/TGCR headline history, excluding later revised statistical series, form an attributable delayed funding-basis input with adequate nonconstant development supply? No asset-price or candidate-profit inference is allowed.",
+  "known_prior_exposure": "Official current reference-rate definitions and revision/publication policy have been read; ordinary headline revisions are same-day while later statistical updates are separate. All closed Challenge aggregate results are known. No 2023-2025 SOFR/TGCR array has yet been acquired for this proposal; no 2026 candidate values open.",
+  "source_scope": {
+    "provider": "Federal Reserve Bank of New York Markets Data API",
+    "series": [
+      "SOFR",
+      "TGCR"
+    ],
+    "start_date": "2023-01-01",
+    "end_date": "2025-12-31",
+    "used_fields": [
+      "type",
+      "effectiveDate",
+      "percentRate",
+      "revision marker when present"
+    ],
+    "unused_fields": "Volumes, percentile rates, indicative or quarterly updated statistics and 2026 values are not research inputs. Preserve original API response bytes for attribution, but do not use extra fields.",
+    "raw_requests_max": 4,
+    "expected_raw_bytes_max": 1048576
+  },
+  "frozen_measurements": [
+    "original API schema and ordinary headline provenance",
+    "historical publication/revision policy and method-change scope",
+    "same-date paired series coverage and missing dates",
+    "basis = 100*(SOFR-TGCR), in basis points, with nonconstant-source counts only",
+    "strictly prior 20-source-date median; above/below/tie counts for source dates in 2024-2025; no parameter search"
+  ],
+  "feasibility_rules": {
+    "history_authority": "Ordinary headline endpoint must be distinguished from retrospective updated statistics; unresolved provenance rejects source for binding work.",
+    "matched_headlines": "Every acquired development rate date must have both series or an attributable missing-source record. No manual fill.",
+    "variation": "Require both above and below prior-20 median on at least 30 development source dates each, and at least 180 development dates in total off that median. This is a source-supply screen, not proof of achievable fills.",
+    "prospective_lag": "Any later proposal can use a rate no earlier than broker calendar midnight eight calendar days after effectiveDate, with at most 30 calendar days age. Establish that the normal published/revised headline was available before this delayed bound; do not infer intraday broker-to-UTC accuracy from this rule. The lag is fixed before rate values and may not shorten after the count.",
+    "no_economic_judgment": "No prices, source-to-asset returns, hypothetical PnL, trading direction, risk or exit optimization. This unit cannot claim a V8 challenger."
+  },
+  "primary_authority_urls": [
+    "https://www.newyorkfed.org/markets/reference-rates/additional-information-about-reference-rates",
+    "https://www.newyorkfed.org/markets/reference-rates",
+    "https://markets.newyorkfed.org/static/docs/markets-api.html"
+  ],
+  "stop": "Close this unit after one complete source adjudication, including infeasible/ambiguous. No alternate rate, median, lag, revision variant or adjacent source rescue follows automatically. Recompare Programs 1-5 and 7 before any successor.",
+  "storage": {
+    "free_bytes": 84065529856,
+    "minimum_reserve_bytes": 32212254720,
+    "new_runtime_bytes": 0
+  },
+  "live": "No Live or Optimization file/process/account action. Existing V7R 0/0 and same-task market-gated handoff remain unchanged."
+}

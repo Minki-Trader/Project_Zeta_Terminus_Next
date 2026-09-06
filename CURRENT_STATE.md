@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0564`
+- Latest state ID: `STATE-0565`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Program 7 clock audit and full macro comparison are closed; Family 011 `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, Program 4, is now closed adverse with no passer. No research family is active at the next macro-comparison boundary. V7 return engineering is closed; Optimization remains closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Program 7 clock audit and full macro comparison are closed; Family 011 `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, Program 4, is now closed adverse with no passer. The whole map selected one bounded Program 2 source study `lab/research/nyfed-repo-headline-source-feasibility-v1/`; no trading candidate is open. V7 return engineering is closed; Optimization remains closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,7 +34,7 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_011_CLOSED_PROXY_ADVERSE_BEFORE_NEXT_MACRO_COMPARISON`.
+- Active phase: `POST_FAMILY_011_NYFED_REPO_HEADLINE_SOURCE_FEASIBILITY`.
 - Sole active Challenge family: none. Family 011, Family 010 and the clock audit are closed and immutable.
 - Active Challenge family / Optimization campaign count: `0 / 0`; all three Family 011 roles closed together with no passer. Native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -86,7 +86,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Family 011 is closed. Recompare Programs 1-5 and 7 before declaring one materially distinct or independently justified successor; retain the 30 GiB reserve. No Family 011 2026 confirmation or EA opens.
+1. Complete the single Program 2 NY Fed SOFR/TGCR headline source feasibility unit under its frozen declaration. Only 2023-2025 source-rate fields may be acquired; no asset prices, trade outcomes or candidate yet. Retain at least 30 GiB free; close the fixed source question and recompare all programs before a successor.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -111,7 +111,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none at the closed Family 011 boundary; full macro comparison is required before a successor.
+- Active research unit: `lab/research/nyfed-repo-headline-source-feasibility-v1/`, sole bounded Program 2 source study, no economic candidate.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_011_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
