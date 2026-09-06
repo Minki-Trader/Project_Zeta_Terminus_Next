@@ -1,0 +1,81 @@
+{
+  "decision_utc": "2026-09-06T16:22:50.973284+00:00",
+  "verdict": "PASS_EXACT_V7_RETURN_ECONOMICS_CONDITIONAL_LIVE_HANDOFF_AUTHORIZED",
+  "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "gates": {
+    "long_actual_positive": true,
+    "long_stressed_positive": true,
+    "actual_profit_retention_at_least_75pct": true,
+    "stressed_profit_retention_at_least_75pct": true,
+    "native_equity_dd_at_most_nominal_20pct": true,
+    "native_equity_dd_improves_at_least_10pp": true,
+    "long_robust_recovery_improves": true,
+    "each_calendar_year_actual_and_stressed_positive": true,
+    "recent_pooled_actual_and_stressed_positive": true,
+    "recent_native_equity_dd_not_deteriorated": true,
+    "all_runs_complete_actual_ticks_and_no_fallback": true,
+    "all_runs_no_execution_or_evidence_fault": true
+  },
+  "long_actual_retention": 0.7646470315512067,
+  "long_stressed_retention": 0.7724961801760654,
+  "long_dd_improvement_pp": 17.889509510000003,
+  "recent_months": {
+    "V8": {
+      "2026.07": {
+        "closes": 24,
+        "actual_net": 3.14,
+        "stressed_net": 2.14
+      },
+      "2026.08": {
+        "closes": 31,
+        "actual_net": 26.49,
+        "stressed_net": 25.4
+      }
+    },
+    "V7": {
+      "2026.07": {
+        "closes": 42,
+        "actual_net": -8.0,
+        "stressed_net": -8.832
+      },
+      "2026.08": {
+        "closes": 47,
+        "actual_net": 12.66,
+        "stressed_net": 12.041
+      }
+    }
+  },
+  "recent_risk_and_activity_judgment": {
+    "native_dd_v8_v7": [
+      17.403734477,
+      16.20179708
+    ],
+    "max_planned_risk_v8_v7": [
+      21.0662,
+      12.6394
+    ],
+    "lifecycle_count_v8_v7": [
+      55,
+      89
+    ],
+    "stressed_closed_dd_v8_v7": [
+      14.927,
+      15.045
+    ],
+    "assessment": "No material risk or execution deterioration: native equity DD and maximum planned risk decline; stressed closed DD rises only $0.118 (0.79%); all six V7 components, both traded symbols and both directions are active; faults zero. Recent profitability and recovery are substantially weaker than V8 and are explicitly disclosed, with July loss. This satisfies the frozen pooled-positive return standard, not a claim of V8 superiority."
+  },
+  "recent_confirmation_limit": "July already observed; no pristine-holdout claim. US500 is an input symbol rather than a traded symbol. Both directions positive; US100 subtotal negative. No tuning or subset selection followed outcomes.",
+  "dd_discretion_used": false,
+  "fingerprint_evidence": [
+    "LONG_M1_ADJACENT_BOUNDARY_V1.json",
+    "LONG_M1_END_BOUNDARY_V1.json",
+    "LONG_CONTROL_INPUT_END_V1.json",
+    "LONG_CANDIDATE_INPUT_END_V1.json",
+    "RECENT_M1_ADJACENT_BOUNDARY_V1.json",
+    "RECENT_M1_END_BOUNDARY_V1.json",
+    "RECENT_CONTROL_INPUT_END_V1.json",
+    "RECENT_CANDIDATE_INPUT_END_V1.json"
+  ],
+  "native_results_sha256": "7407C0631C504E8E11F0158D0550E0DB4190CAF6610C54B89B986C8AA498CF06",
+  "live_state": "PENDING_FRESH_V8_STOPPED_FLAT_AND_NEW_IDENTITY_CREATE_RECOVERY_TICKS_HANDSHAKE"
+}

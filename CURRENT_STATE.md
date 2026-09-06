@@ -1,13 +1,13 @@
 # Project Zeta Terminus Next Current State
 
-Last updated: 2026-09-06
+Last updated: 2026-09-07
 
 This is the concise current re-entry snapshot and the sole Next Live authority. Detailed immutable transitions remain in the active numbered state chunk.
 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0556`
+- Latest state ID: `STATE-0558`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -15,7 +15,12 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 - Development: `V7_RLO1_RETURN_VERIFICATION_AUTHORIZED`; one serial Lab engineering family is active. Independent Challenge development remains paused.
 - Next Live-Dev authorization: `ENABLED` only through the 2026-08-31 one-time user-accepted economic exception for exact release `NEXT-E02-V8-PMLR1-b1c77d3b6356`. It does not relabel V2 as a pass or authorize any other release, byte, identity or risk contract.
-- Next V8 new-entry authorization: exact Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`, canonical source/settings SHA-256 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`, weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, position risk `0.04`, aggregate cap `0.18`, Passive disabled.
+- Next V8 new-entry authorization: `DISABLED` for the authorized handoff; the old contract was exact Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`, canonical source/settings SHA-256 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`, weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, position risk `0.04`, aggregate cap `0.18`, Passive disabled.
+- Existing real-account owner: exact V8 pending fresh entries-disabled stopped-flat proof. The current task authorizes bounded V8 ownership/recovery observation with new entries disabled.
+- Next V8 paired-month entries-disabled preflight: `ENABLED`
+- Next V8 paired-month new-entry authorization: `DISABLED`
+- Next V7R return entries-disabled preflight: `DISABLED` pending V8 stopped-flat handoff.
+- Next V7R return new-entry authorization: `DISABLED`
 - Last recorded real-account owner: exact V8 Live sole PID `33388`; V7 RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 remain retired/stopped.
 - Local storage-only observation on 2026-09-06 found no MT5, Tester, MetaEditor or dashboard process. Broker state was not queried, no runtime restarted, and Live authorization is unchanged.
 - Last verified real-account boundary remains V8 sequence `492` at `2026-08-31T01:57:18Z`, entries `1/1`, balance/equity `$105.20/$105.20`, carried project realized net `+$4.55`, flat and zero planned risk/fault. Korean dashboard PID `28008` was responsive at that boundary.
@@ -23,7 +28,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: verify exact V7-RLO1 and, after satisfactory complete economics and engineering, replace V8 with a new V7-economics release and start its EA/dashboard. Sole active engineering root is `lab/engineering/v7-rlo1-return-requalification-v1/`; dedicated Lab runtime is `lab/runtime/v7rr1-portable/`. Candidate is original V7 `0.04/0.12`, control is exact V8 `0.04/0.18` with its frozen multipliers. The top-level 2026-09-06 scoped handoff direction governs. New release Live authorization is `DISABLED` pending a passing handoff and fresh exact CURRENT_STATE decision. No trading package or process changed at declaration.
+Current user task: verify exact V7-RLO1 and, after satisfactory complete economics and engineering, replace V8 with a new V7-economics release and start its EA/dashboard. Sole active engineering root is `lab/engineering/v7-rlo1-return-requalification-v1/`; dedicated Lab runtime is `lab/runtime/v7rr1-portable/`. Candidate is original V7 `0.04/0.12`, control is exact V8 `0.04/0.18` with its frozen multipliers. The top-level 2026-09-06 scoped handoff direction governs. Economics passed in `RETURN_ECONOMIC_DECISION_V1.json`: long actual/stressed +$313.36/+$284.138, DD 19.5024%, recent actual/stressed +$4.66/+$3.209 with a disclosed July loss. New release Live authorization is `DISABLED` pending the fresh V8 stopped-flat handoff and exact new CURRENT_STATE decision. No trading package or process changed at declaration.
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.

@@ -9,3 +9,5 @@ Long comparison: 2024-01-01 to 2026-08-01 exclusive, FPMarkets US30/US100/US500 
 Candidate and control receive new execution/Portfolio/Magic/state identity before execution. The candidate retains every final V7 safety/recovery and research-ledger feature. Read-only reason/contract/economic telemetry may be added before freeze; it cannot change signals, fills, risk, orders or exits.
 
 Conditional approval does not waive stopped-flat ownership, new release manifests, entries-disabled create/recovery, current ticks, symbol/timeframe freshness, or final 0/0 -> 1/1 handshake. Old V7 state and executables remain retired.
+
+The native environment correction record supersedes the initial platform/cache boundary: the unchanged build-6140 compiled EAs are evaluated together on the captured build-6182 native engine after automatic update. Complete native M1 field payloads plus whole exercised real-tick TKC files and full symbol contracts provide the market input identity; mutable HCC storage bookkeeping is retained separately. The first two matching V8 references and one pre-initialization history-access failure are engineering history, not the binding pair.
