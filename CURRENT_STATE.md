@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0583`
+- Latest state ID: `STATE-0584`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014 is closed with all three policies adverse after one unchanged full path and report-only serialization recovery. Whole Programs 1-5/7 comparison now selects a prospective Program 2 Treasury-note futures source-readiness question. Public US10YR metadata is only a lead; native identity/history and historical roll provenance remain unverified. No new unit root, broker query, candidate or economic process is open. Every predecessor and Optimization stays closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014 is closed with all three policies adverse after one unchanged full path and report-only serialization recovery. The sole Program 2 Treasury-note source-readiness unit is now fully declared and source implementation frozen before native acquisition. Exact US10YR static fields and 36 monthly 2023-2025 M1 timestamp-only requests are fixed; historical roll/clock authority remains unverified. The own no-EA reader is not yet prepared/launched; no candidate or economic process is open. Every predecessor and Optimization stays closed.
 - Next Live-Dev authorization: `ENABLED` for the installed user-authorized exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed. The assistant may check readiness but does not execute investment/trading activation; the user must directly perform final activation after unchanged operational gates.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -24,8 +24,8 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 - Fresh V8 handoff: final state `5340`, entries `0/0`, connected exact account, total positions/orders `0/0`, margin/planned risk `0/0`, healthy and no incomplete decision. Normal STOP and terminal shutdown 0 are preserved privately. Balance/equity `$100.25/$100.25`; attributable cumulative project realized net `-$0.40` is the sole carryover. New project stage balance `$99.60`, fresh component stressed balance `$100.00`.
 - V8, original V7-RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 are retired/stopped. Their identities, state, research and execution history remain preserved; no old state is adopted.
 - Installation and recovery evidence: `live-dev/evidence/V7R_RETURN_INSTALLATION_V1.json` and `V7R_RETURN_ENTRIES_DISABLED_RECOVERY_V1.json`. New identity START/normal STOP/RESUME and fresh sequence `2 -> 4 -> 7` are healthy, exact account-bound, six components, entries `0/0`, zero position/order/margin/risk/fault. Retired V7/V8 files are unchanged.
-- Actual-tick gate is waiting: last server quote `2026.09.04 23:59:59`, only one observed US30 quote and roughly 12-second gap; M15/M30 current synchronization is not ready. No final `1/1` was opened. Keep the EA/dashboard running entries-disabled.
-- Current-task heartbeat `v7r`, now named `V7R 실제 틱·실행 준비 확인`, resumes at `2026-09-07 06:55 Asia/Seoul`, then uses 5-minute checks if needed. Its updated scope is read-only market/operating readiness and notification of the user's remaining direct activation step. It cannot run Start-ZetaNextV7RLive, enable new entries/Algo Trading, change new-entry authority or execute orders. It stays quiet while unchanged and pauses after readiness notification (or confirmation of a user-performed activation). Computer/Codex must remain running; no separate development stream or watcher.
+- Actual-tick gate is waiting: 06:55 KST read-only follow-up has one observed US30 quote and roughly 12-second gap, with last quote still `2026.09.04 23:59:59`. M15/M30/H1 bars align only relative to that stale last quote; advancing server wall time and relative freshness do not prove a current market. No final `1/1` was opened. Keep the EA/dashboard running entries-disabled.
+- Current-task heartbeat `v7r`, now named `V7R 실제 틱·실행 준비 확인`, completed the first read-only check at `2026-09-07 06:55 Asia/Seoul` and is now updated in place to 5-minute checks. Its updated scope is read-only market/operating readiness and notification of the user's remaining direct activation step. It cannot run Start-ZetaNextV7RLive, enable new entries/Algo Trading, change new-entry authority or execute orders. It stays quiet while unchanged and pauses after readiness notification (or confirmation of a user-performed activation). Computer/Codex must remain running; no separate development stream or watcher.
 - Challenge work grants no Live authority and cannot query broker state merely for context.
 
 ## Active primary Goal
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_014_CLOSED_WHOLE_MAP_RECOMPARED_PROGRAM_2_TREASURY_SOURCE_DECLARATION_PENDING`.
-- Sole active Challenge family: none. Family 014 and every predecessor are closed and immutable; no proxy result has beaten V8.
-- Active Challenge family / Optimization campaign count: `0 / 0`; native candidate EA/economic runtime count is zero. Both no-EA historical source readers are normally stopped with zero exact-path process owners.
+- Active phase: `PROGRAM_2_TREASURY_SOURCE_DECLARED_IMPLEMENTATION_FROZEN_BEFORE_NATIVE_ACQUISITION`.
+- Sole active source-only unit: `lab/research/treasury-note-futures-source-readiness-v1/`, Program 2; declaration E4D017F42D6929FE714E1256EA4247B510EB621D9BA7B1E5EBFEC5341B3A06C4 and implementation freeze 3BB24CA5F90FA4732D3EAA919ED54CE6CCB9653C6286EE75FA76E699553122ED. It is not Family 015 or an economic candidate. Family 014 and every predecessor stay closed and immutable; no proxy result has beaten V8.
+- Active Challenge family / Optimization campaign count: `0 / 0`; native candidate EA/economic runtime count is zero. Both previous no-EA historical source readers are normally stopped with zero exact-path process owners. The new Treasury reader has not been created/launched; active source-only unit count is one.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -94,7 +94,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Declare one bounded Program 2 `treasury-note-futures-source-readiness-v1` question before any new broker/history access. Determine exact US10YR instrument identity, original warmup/development coverage and historical contract-roll/clock provenance from attributable primary/native sources. Public current tables and a regionally redirected product page cannot certify historical continuity or a Treasury yield/curve. Freeze allowed source fields, periods, provenance, exclusions and storage first; no alpha/fill/risk scoring, 2026 candidate price, old-reader restart, old-model substitution or adjacent GILT/FX/ETF rescue. Close and recompare the whole map before a separately complete independent candidate.
+1. Execute the fully declared Program 2 `treasury-note-futures-source-readiness-v1` source-only scope: prepare its own ignored no-EA generic Portable, read exact US10YR static metadata and fixed 2023-2025 M1 timestamps, inspect attributable primary roll/clock documents, then normally stop the reader. Preserve every requested month and raw timestamp without price/volume/spread analysis. Public current tables cannot certify historical continuity or a Treasury yield/curve. Cap total new source/runtime growth at 2 GiB and retain at least 30 GiB free. No alpha/fill/risk scoring, 2026 history request, old-reader restart, old-model substitution or adjacent GILT/FX/ETF rescue. Close and recompare the whole map before a separately complete independent candidate.
 2. At the actual market follow-up, reach a safe research boundary and check V7R readiness serially. Notify the user when ready for their direct activation; the assistant/heartbeat must not activate trading. Source, settings and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.

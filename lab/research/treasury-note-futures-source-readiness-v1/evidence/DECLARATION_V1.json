@@ -1,0 +1,170 @@
+{
+  "schema": "zeta-treasury-note-futures-source-readiness-declaration-v1",
+  "declared_utc": "2026-09-06T21:59:41.352512+00:00",
+  "authority": {
+    "path": "lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_014_MACRO_RECOMPARE_V1.json",
+    "bytes": 6243,
+    "sha256": "8714F402582618E3F9CDA4C47C1DC1D38DDC68CD8F9AFE7AB4687246BA25CE6F"
+  },
+  "authority_commit": "f3c2cdf",
+  "primary_macro_program": 2,
+  "question": "Does exact FPMarketsSC-Live US10YR have attributable Treasury-note futures CFD identity, original 2023 warmup and 2024-2025 history, historical roll/adjustment and raw-clock authority sufficient for a separately declared independent rate-duration candidate?",
+  "status": "SOURCE_ONLY_PROSPECTIVE_NO_CANDIDATE_NO_ECONOMIC_VERDICT",
+  "prior_exposure": [
+    "All previous Challenge closures and broad 2026 benchmark data are already known; no epistemic blindness is claimed.",
+    "A current broker product listing and search-indexed US10YR description are an unverified source lead.",
+    "Current English and localized rollover tables differ in displayed maturities; neither certifies 2023-2025 history.",
+    "No US10YR broker-native contract, historical price, timestamp, signal or economic response has been inspected before this declaration."
+  ],
+  "ownership": {
+    "root": "lab/research/treasury-note-futures-source-readiness-v1",
+    "runtime": "lab/runtime/treasury-note-source-portable",
+    "raw": "lab/artifacts/raw/treasury-note-futures-source-readiness-v1",
+    "active_source_units": 1,
+    "active_candidates": 0,
+    "optimization_campaigns": 0,
+    "native_candidate_economic_paths": 0,
+    "one_serial_judgment_stream": true
+  },
+  "generic_platform": {
+    "path": "lab/runtime/v7rr1-portable/terminal64.exe",
+    "bytes": 121728696,
+    "sha256": "D2285613044952C1D62AFEA982B61C3635525C9DA6F8E89B9A2C8AFA7BC69C3A"
+  },
+  "preparation": {
+    "platform_version": "5.0.0.6182",
+    "private_connection_origin": "lab/runtime/tester-portable/config",
+    "private_files": [
+      "accounts.dat",
+      "common.ini",
+      "servers.dat",
+      "terminal.lic"
+    ],
+    "private_contents": "Physical own copies only; ignored before copying; never print, publish or stage contents. Copy receipts remain private.",
+    "history_EA_profile_Include_strategy_copies": 0,
+    "reader": "One new hidden own Portable, Experts enabled=0, AllowLiveTrading=0, AllowDllImport=0, blank Expert/Script, maxbars=2000000. Explicit own terminal path and FPMarketsSC-Live initialization.",
+    "lifecycle": "Host records exact own PID/path, starts hidden and normally closes that exact process after capture, pause or fault; API shutdown alone is insufficient. No forced kill and no closed-reader restart."
+  },
+  "native_scope": {
+    "symbol": "US10YR",
+    "static_fields": [
+      "name",
+      "description",
+      "path",
+      "custom",
+      "exchange",
+      "isin",
+      "category",
+      "digits",
+      "point",
+      "trade_tick_size",
+      "trade_contract_size",
+      "trade_calc_mode",
+      "currency_base",
+      "currency_profit",
+      "currency_margin",
+      "volume_min",
+      "volume_step",
+      "volume_max",
+      "trade_mode",
+      "trade_exemode",
+      "order_mode",
+      "filling_mode",
+      "expiration_mode",
+      "order_gtc_mode",
+      "trade_stops_level",
+      "trade_freeze_level",
+      "start_time",
+      "expiration_time",
+      "swap_mode",
+      "swap_long",
+      "swap_short",
+      "swap_rollover3days",
+      "margin_initial",
+      "margin_maintenance",
+      "margin_hedged"
+    ],
+    "matching_inventory": "symbols_get(group=*US10YR*) is static identity metadata only; maximum 25 returned contracts. No matching alternative receives history.",
+    "period_start_inclusive": "2023-01-01T00:00:00+00:00",
+    "period_end_exclusive": "2026-01-01T00:00:00+00:00",
+    "partition": "Exactly 36 chronological calendar-month M1 requests, all symbols fixed to US10YR. Endpoints use timezone-aware UTC API arguments; retain only original raw integer timestamps in the half-open interval.",
+    "allowed_history_field": [
+      "time"
+    ],
+    "retained_outputs": [
+      "raw int64 minute timestamps",
+      "counts, raw first/last timestamp, every observed raw date, gaps and API status per month",
+      "static instrument fields and exact acquisition provenance"
+    ],
+    "delivery_limit": "The native API necessarily returns a structured OHLC/volume/spread payload and the platform may maintain private current/history caches. Only time is accessed by this producer; other fields are discarded without analysis or export. No 2026 historical request is made.",
+    "clock": "Preserve raw epochs and source-date integers without treating API UTC documentation as broker-wall/absolute-session proof. Do not shift, select, interpolate or forward-fill a favorable clock.",
+    "coverage": "Retain every requested month, including empty/partial coverage. Record monotonicity, minute grid and gaps without a hindsight date-admission filter. Monthly timestamp existence is not proof of continuous contracts or real-tick execution.",
+    "api_allowlist": [
+      "initialize",
+      "terminal_info",
+      "last_error",
+      "symbol_info",
+      "symbols_get",
+      "symbol_select",
+      "copy_rates_range",
+      "shutdown"
+    ],
+    "forbidden_calls": [
+      "account_info",
+      "positions_get",
+      "positions_total",
+      "orders_get",
+      "orders_total",
+      "history_orders_get",
+      "history_deals_get",
+      "order_send",
+      "order_check",
+      "order_calc_profit",
+      "order_calc_margin",
+      "symbol_info_tick",
+      "copy_ticks_range"
+    ],
+    "stopping": "Pause at a completed month for same-task V7R read-only readiness. Preserve completed hashes and resume own unit only. API, connection, capacity, serialization or chronology faults are attributable correction states without arbitrary retry caps, never strategy failures. RES_E_NOT_FOUND is only no history returned for that request, not universal broker absence."
+  },
+  "primary_document_scope": {
+    "sources": [
+      "https://www.fpmarkets.com/what-you-can-trade-with-fp-markets/",
+      "https://www.fpmarkets.com/bonds/",
+      "https://www.fpmarkets.com/holiday-trading-hours/",
+      "https://www.fpmarkets.com/es-mx/holiday-trading-hours/",
+      "https://www.mql5.com/en/docs/python_metatrader5/mt5initialize_py",
+      "https://www.mql5.com/en/docs/python_metatrader5/mt5symbolinfo_py",
+      "https://www.mql5.com/en/docs/python_metatrader5/mt5symbolsget_py",
+      "https://www.mql5.com/en/docs/python_metatrader5/mt5copyratesrange_py",
+      "https://www.mql5.com/en/docs/python_metatrader5/mt5lasterror_py"
+    ],
+    "search_scope": "Inspect exact US10YR instrument, historical 2023-2025 rollover/adjustment, and clock statements on primary FP Markets pages. CME official Treasury-note contract specifications may establish underlying mechanics only, never the broker CFD lineage. Search-indexed text and regional redirects remain explicitly lower provenance than a native identity response.",
+    "bounded_questions": [
+      "Does the exact native name exist and what is its own contract?",
+      "Which declared original months/dates are actually returned?",
+      "Is each historical old/new contract, effective switch time and price adjustment attributable without using future price responses?",
+      "Can the raw timestamp and intended external clock relation be established independently?"
+    ],
+    "no_expansion": "No paid data, broker message/contact, third-party numerical history, alternate instrument history, broad exchange data download or candidate price-response study. Follow primary references needed to resolve these four questions, then close the bounded source unit with explicit unresolved dimensions."
+  },
+  "readiness_rule": {
+    "ready_requires": [
+      "Exact native Treasury-note futures CFD identity established, not cash yield or maturity curve.",
+      "Declared warmup/development observations and all material coverage gaps attributable.",
+      "Historical contract switch and any adjustment semantics supported for the intended historical source.",
+      "Raw-clock authority sufficient for any intended external-time joining; API documentation and a current server convention are not silently equated."
+    ],
+    "partial_or_unready": "If the source record is operationally complete but a required dimension remains unresolved, report precisely what was observed and missing, close without a candidate or an economic failure verdict, and compare all Programs 1-5/7. A public-search failure is not proof that no such historical authority exists.",
+    "no_automatic_successor": "No GILT/FX/ETF substitution, yield conversion, AUDCHF pulse/repo-response model reuse, follow/fade variant, feature/return/fill/risk score, 2026 candidate data, EA/native, seed or Live action. Any future candidate needs a separate complete independent declaration after whole-map comparison."
+  },
+  "storage": {
+    "minimum_free_bytes": 32212254720,
+    "maximum_source_growth_bytes": 2147483648,
+    "scope": "Total new owned runtime and raw source output, conservatively checked against all remaining allowed growth before preparation and each month. Source evidence/code is small and also consumes free space.",
+    "free_bytes_before": 61495091200,
+    "deletion_authorized": false,
+    "retention": "Preserve all existing unique inputs, raw results, closed evidence, source and Live state; no cleanup is required."
+  },
+  "goal": "ACTIVE_INCOMPLETE; previous Goal turn made concrete progress through complete Family 014 closure and whole-map selection. This source question is a bounded next step within the full independent V8 Challenge, not a replacement Goal.",
+  "live": "V7R read-only market check is a separate serial operating duty. The assistant never activates trading or changes new-entry authority; only the user directly performs any eventual trading activation."
+}

@@ -126,8 +126,8 @@ Exact external-session raw-time authority remains unresolved. MetaQuotes API doc
 ## Authority boundary
 
 - Legacy B70 V6R6, original V7, CXR1, CXR2, original RLO1 and V8 are retired/stopped. No old identity may restart or adopt another identity's state.
-- Exact V7R is installed and running with new entries disabled. Its current-market-gated `0/0 → 1/1` transition is already conditionally authorized by the user but governed only by CURRENT_STATE. A historical PID or earlier permission cannot override it.
-- The one-shot detached Master leaves no resident launcher or OS trading monitor. The temporary same-task Codex follow-up completes only the pending V7R handoff and then pauses; research reaches a safe boundary before that serial transition.
+- Exact V7R is installed and running with new entries disabled. Its current-market-gated `0/0 → 1/1` transition is conditionally authorized by the user and governed only by CURRENT_STATE; the final trading activation must be performed directly by the user, not by the assistant. A historical PID or earlier permission cannot override it.
+- The one-shot detached Master leaves no resident launcher or OS trading monitor. The temporary same-task Codex follow-up checks read-only market/operating readiness, notifies the remaining direct user activation step and then pauses; research reaches a safe boundary before that serial check. It cannot enable new entries or Algo Trading, execute Start-ZetaNextV7RLive, or change trading authority.
 - All other development remains physically isolated. No research or optimization result grants Live promotion.
 
 ## Completed legacy closure

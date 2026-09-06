@@ -1,0 +1,170 @@
+{
+  "market": {
+    "observed_at_utc": "2026-09-06T21:55:48Z",
+    "terminal_pid": 14492,
+    "same_sole_process": true,
+    "pre_observation_state_sequence": 327,
+    "post_observation_state_sequence": 328,
+    "local_runtime_healthy": true,
+    "server_time": "2026.09.07 00:55:45",
+    "safe_handoff_window": true,
+    "terminal_connected": true,
+    "observation_seconds": 12,
+    "us30_tick_updates": 1,
+    "us30_max_update_gap_seconds": 11.999989100004314,
+    "us30_continuous_ticks": false,
+    "all_symbol_ticks_fresh": true,
+    "symbol_tick_reference_msc": 1788566399935,
+    "symbol_ticks": [
+      {
+        "symbol": "US30",
+        "time_msc": 1788566397803,
+        "age_seconds": 2.132,
+        "fresh": true
+      },
+      {
+        "symbol": "US100",
+        "time_msc": 1788566399935,
+        "age_seconds": 0,
+        "fresh": true
+      },
+      {
+        "symbol": "US500",
+        "time_msc": 1788566398005,
+        "age_seconds": 1.93,
+        "fresh": true
+      }
+    ],
+    "timeframes": [
+      {
+        "timeframe": "M15",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788565500,
+            "tick_volume": 392,
+            "age_seconds": 899,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788565500,
+            "tick_volume": 1003,
+            "age_seconds": 899,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788565500,
+            "tick_volume": 136,
+            "age_seconds": 899,
+            "fresh": true
+          }
+        ]
+      },
+      {
+        "timeframe": "M30",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788564600,
+            "tick_volume": 1241,
+            "age_seconds": 1799,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788564600,
+            "tick_volume": 2298,
+            "age_seconds": 1799,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788564600,
+            "tick_volume": 369,
+            "age_seconds": 1799,
+            "fresh": true
+          }
+        ]
+      },
+      {
+        "timeframe": "H1",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788562800,
+            "tick_volume": 1976,
+            "age_seconds": 3599,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788562800,
+            "tick_volume": 5761,
+            "age_seconds": 3599,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788562800,
+            "tick_volume": 843,
+            "age_seconds": 3599,
+            "fresh": true
+          }
+        ]
+      }
+    ],
+    "market_data_ready": false,
+    "ready_for_handoff": false,
+    "account_or_trade_state_queried": false,
+    "reasons": [
+      "US30 did not produce at least three updates with every observed gap <= 3 seconds"
+    ]
+  },
+  "local": {
+    "healthy": true,
+    "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe",
+    "project_terminal_pid": 14492,
+    "snapshot_age_seconds": 2,
+    "state_sequence": 328,
+    "new_entries_input": 0,
+    "new_entries_effective": 0,
+    "terminal_allow_live_trading": 0,
+    "accepted_ex5_hash": "30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657",
+    "alerts": [],
+    "warnings": []
+  },
+  "windows": [
+    {
+      "Id": 29492,
+      "Responding": true,
+      "MainWindowHandle": {
+        "value": 2625838
+      }
+    },
+    {
+      "Id": 14492,
+      "Responding": true,
+      "MainWindowHandle": {
+        "value": 2428728
+      }
+    }
+  ],
+  "free_bytes": 61502595072,
+  "schema": "zeta-v7r-read-only-market-followup-20260907-v1",
+  "decision": "KEEP_RUNNING_ENTRIES_DISABLED_MARKET_NOT_READY",
+  "interpretation": "All-symbol freshness and bar freshness are relative to the latest retained quote, not to current wall time. Quote epochs remain on 2026-09-04; continuous US30 ticks failed. Advancing server_time alone does not establish a fresh market.",
+  "actions": {
+    "broker_account_position_order_deal_calls": 0,
+    "trading_activation": 0,
+    "live_code_settings_risk_changes": 0,
+    "heartbeat": "Existing v7r updated in place to read-only checks every 5 minutes; unchanged waiting stays quiet, direct user activation remains required."
+  }
+}
