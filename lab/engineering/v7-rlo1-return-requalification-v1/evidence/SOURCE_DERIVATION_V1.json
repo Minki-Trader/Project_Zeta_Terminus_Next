@@ -1,0 +1,45 @@
+{
+  "declared_utc": "2026-09-06",
+  "created_utc": "2026-09-06",
+  "roles": [
+    {
+      "role": "control",
+      "parent": "live-dev/package/active",
+      "main": "ZetaNextPairedMonthLivePortfolioV8.mq5",
+      "new_main": "ZetaV8ReturnControl.mq5",
+      "preset": "next-v8-paired-month.set",
+      "new_preset": "next-v8-return-control.set",
+      "old_execution": "zt-next-paired-month-live-portfolio-v8",
+      "execution": "zt-lab-v8-return-control-v1",
+      "portfolio": "ZT-PORT-LAB-V8RR1-20260907",
+      "schema": "8RC1",
+      "old_magic": 260831900,
+      "magic": 260907800,
+      "state": "v8-return-control",
+      "release_prefix": "LAB-V8RR1-",
+      "parent_release": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+      "canonical_source_settings_sha256": "465F2FA6C95192BA18133842524CFA5368A007DC6AABFBA780AAED4DBD23005E",
+      "release_id": "LAB-V8RR1-465f2fa6c951"
+    },
+    {
+      "role": "candidate",
+      "parent": "optimization/baseline/NEXT-E01-V7-RLO1-b32e7e176f2e",
+      "main": "ZetaNextPre500FiniteRiskPortfolioV7.mq5",
+      "new_main": "ZetaNextV7ReturnPortfolio.mq5",
+      "preset": "next-v7-modular.set",
+      "new_preset": "next-v7-return.set",
+      "old_execution": "zt-next-pre500-finite-risk-portfolio-v7-modular-2db5ef5ead1c",
+      "execution": "zt-next-v7-rlo1-return-portfolio-v1",
+      "portfolio": "ZT-PORT-NEXT-V7R-RLO1-20260907",
+      "schema": "7R1",
+      "old_magic": 260824700,
+      "magic": 260907700,
+      "state": "v7r-rlo1",
+      "release_prefix": "NEXT-E03-V7R-RLO1-",
+      "parent_release": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+      "canonical_source_settings_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+      "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe"
+    }
+  ],
+  "observation": "Original signal, sizing and execution functions preserved. New observer only re-evaluates failed RC4 feature data for diagnostic classification in tester mode; its result never reaches trading logic. Native OnTester output does not alter execution."
+}

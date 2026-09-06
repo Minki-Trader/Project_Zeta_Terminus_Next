@@ -6,14 +6,14 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## State record
 
-- Active chunk: [`state/CURRENT_STATE-0001.md`](state/CURRENT_STATE-0001.md)
-- Latest state ID: `STATE-0554`
+- Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
+- Latest state ID: `STATE-0556`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `PAUSED_BY_USER_AFTER_CURRENT_FAMILY_CLOSURE`; active Lab family and Optimization campaign counts are both zero.
+- Development: `V7_RLO1_RETURN_VERIFICATION_AUTHORIZED`; one serial Lab engineering family is active. Independent Challenge development remains paused.
 - Next Live-Dev authorization: `ENABLED` only through the 2026-08-31 one-time user-accepted economic exception for exact release `NEXT-E02-V8-PMLR1-b1c77d3b6356`. It does not relabel V2 as a pass or authorize any other release, byte, identity or risk contract.
 - Next V8 new-entry authorization: exact Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`, canonical source/settings SHA-256 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`, weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, position risk `0.04`, aggregate cap `0.18`, Passive disabled.
 - Last recorded real-account owner: exact V8 Live sole PID `33388`; V7 RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 remain retired/stopped.
@@ -23,11 +23,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
+Current user task: verify exact V7-RLO1 and, after satisfactory complete economics and engineering, replace V8 with a new V7-economics release and start its EA/dashboard. Sole active engineering root is `lab/engineering/v7-rlo1-return-requalification-v1/`; dedicated Lab runtime is `lab/runtime/v7rr1-portable/`. Candidate is original V7 `0.04/0.12`, control is exact V8 `0.04/0.18` with its frozen multipliers. The top-level 2026-09-06 scoped handoff direction governs. New release Live authorization is `DISABLED` pending a passing handoff and fresh exact CURRENT_STATE decision. No trading package or process changed at declaration.
+
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
 - Active phase: `INDEPENDENT_V8_CHALLENGE_PAUSED_AFTER_FAMILY_010_CLOSED_VALID_ADVERSE_NO_PASSER_NO_BROAD_HEADROOM`.
 - Sole active Challenge family: none. Family 010 `lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/` is closed and immutable.
-- Active Lab family / Optimization campaign count: `0 / 0`; no successor may open until the user resumes the Challenge.
+- Active Challenge family / Optimization campaign count: `0 / 0`; the separate user-authorized V7 return engineering family is active. No Challenge successor may open until the user resumes the Challenge.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -74,7 +76,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. While the user pause remains, run no Challenge selection, declaration, acquisition, adapter, EA, compile or Tester path.
+1. Complete the newly authorized serial V7 return engineering comparison and conditional handoff under the 2026-09-06 policy and family declaration. The separate Challenge pause continues; no Challenge successor opens.
 2. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 3. On explicit user continuation, recompare the autonomous method map from the closed Family 001–010 ledger before declaring exactly one materially distinct successor; do not reopen Family 010 or automatically execute an audit-adjacent rescue.
 4. The persistent Goal remains incomplete until a complete native candidate passes every V8 gate.
