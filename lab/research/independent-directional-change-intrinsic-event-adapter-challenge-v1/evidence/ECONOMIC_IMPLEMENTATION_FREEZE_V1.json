@@ -1,0 +1,62 @@
+{
+  "schema": "zeta-ch013-economic-implementation-freeze-v1",
+  "recorded_utc": "2026-09-06T19:22:46.569404+00:00",
+  "parent_commit": "a6e8e9107d500d4785c8a3a26d4ced6bacc3e6c2",
+  "status": "FROZEN_AFTER_NECESSARY_SUPPLY_PASS_BEFORE_ECONOMIC_OUTCOMES",
+  "files": [
+    {
+      "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/config/contract.json",
+      "bytes": 11142,
+      "sha256": "8FD63195AA751C7E9B649752CFA1AA354943AD2A7416142462859B7B699050F7"
+    },
+    {
+      "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 10317,
+      "sha256": "0D1B17B26A06E45EEDC197ADAF014AB3BD0BB499DA9F70EA6EB098549664416F"
+    },
+    {
+      "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/adapter/run_economics.py",
+      "bytes": 22818,
+      "sha256": "5E31A3C0BA9665A46ED748D982465BE52A5C1479CC82FE04386F2F8B44C30474"
+    },
+    {
+      "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/evidence/DECLARATION_V1.json",
+      "bytes": 3824,
+      "sha256": "57CE22774E3BC51AB5DB38E5D1B4D6E5F5BD50B7FF6AE05332CF8384F2546E1A"
+    },
+    {
+      "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/evidence/INPUT_COPY_V1.json",
+      "bytes": 4365,
+      "sha256": "9D03935A801A82214678AF8782FC0F34C63779289CFDA93369FB9B345560EF0F"
+    },
+    {
+      "path": "lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/evidence/STRUCTURAL_RESULT_V1.json",
+      "bytes": 3493,
+      "sha256": "56872B245F51510F946B578A0075D115B1FE7FC67EBC47033B4CBECD0010013B"
+    }
+  ],
+  "unchanged_contract": true,
+  "structural": {
+    "normal_dates": 517,
+    "optimistic_entry_events": 11478,
+    "density": 22.201160541586074,
+    "necessary_gates": {
+      "optimistic_turnover": true,
+      "each_year_count": true,
+      "three_symbols": true,
+      "both_directions": true
+    }
+  },
+  "ordinary_execution_semantics": [
+    "All present-symbol opening marks and gap/event/timeout exits precede one shared min(cash,equity) risk snapshot; all admissions precede every current-bar high/low.",
+    "A missing exact quote expires entry; an owned event-exit remains pending until first available quote, with adverse gap-stop priority. This never changes the event population.",
+    "Actual account uses snapshot financing. Additional long spread accrues at entry, short spread at exit; half-entry/half-exit midpoint fees accrue on their respective sides. No-positive-credit stress deducts positive financing at its recorded boundary. Stress never changes actual sizes.",
+    "Calendar gates use changes in marked end-of-year account equity, including accrued stress and financing; realized cash attribution is separately reported. This accounts for any cross-year owned exposure.",
+    "Price-to-stop risk uses outward tick rounding and basic liquidation-side stop validity; unavailable exact historical margin/stops/freeze/commission remain optimistic proxy limits until native.",
+    "No old strategy source is imported or executed; only fresh ordinary production source and normal integrated ledger reconciliation. Python compilation passed; no tests/checker infrastructure."
+  ],
+  "candidate_economic_outputs_seen": false,
+  "candidate_2026_price_opened": false,
+  "native_runtime_count": 0,
+  "free_bytes": 82812903424
+}

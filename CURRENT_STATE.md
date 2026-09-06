@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0574`
+- Latest state ID: `STATE-0575`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Opening-source/admission review is closed with confirmed future selection and unresolved exact external-clock authority. Whole-macro comparison selected Program 1 Family 013 intrinsic directional-change events. Full three-role contract and fresh Python signal adapter are frozen before features; own input copy and structural production are next. All predecessors and Optimization remain closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Opening-source/admission review is closed with confirmed future selection and unresolved exact external-clock authority. Whole-macro comparison selected Program 1 Family 013 intrinsic directional-change events. Own physical inputs and necessary structural production have passed: 11,478 optimistic events over all 517 source dates (22.2012/day). Unchanged three-role ordinary economic source is frozen before its first economic run. All predecessors and Optimization remain closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,7 +34,7 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `PROGRAM_1_INTRINSIC_DIRECTIONAL_CHANGE_PREFEATURE_FROZEN`.
+- Active phase: `PROGRAM_1_INTRINSIC_DIRECTIONAL_CHANGE_STRUCTURAL_PASS_ECONOMICS_FROZEN`.
 - Sole active Challenge family: `lab/research/independent-directional-change-intrinsic-event-adapter-challenge-v1/` (Family 013, Program 1). FOLLOW/FADE/OVERSHOOT_CONTEXT form one serial bundle. No proxy result has beaten V8.
 - Active Challenge family / Optimization campaign count: `1 / 0`; native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -90,7 +90,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Family 013 full contract and fresh causal Python adapter are frozen before features. Copy only declared 2023-2025 observations into its own physical input, then run fixed necessary supply gates. Only a structural pass opens unchanged three-role economics. Exact-session raw-time authority remains unresolved; no old family or source audit reopens. Keep at least 30 GiB free.
+1. Family 013 necessary structural gates have passed. Run its frozen unchanged ordinary three-role economic bundle once, preserve complete events/admissions/closes/financing/equity, and judge all frozen gates together. Exact-session raw-time authority remains unresolved; no old family or source audit reopens. Keep at least 30 GiB free.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -115,7 +115,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: Family 013, Program 1. Three direction roles share 8x strictly-prior 60-M1 range scale, 2-delta protection and next-event/240-minute exit. No candidate features/outcomes opened; 2026, EA and Portable stay closed. Declaration and complete macro comparison are recorded.
+- Active research unit: Family 013, Program 1. Three direction roles share 8x strictly-prior 60-M1 range scale, 2-delta protection and next-event/240-minute exit. Causal events have passed necessary supply gates; economic outcomes remain unopened. 2026, EA and Portable stay closed. Declaration and complete macro comparison are recorded.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_012_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
