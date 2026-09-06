@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0566`
+- Latest state ID: `STATE-0567`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Program 7 clock audit and full macro comparison are closed; Family 011 `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, Program 4, is now closed adverse with no passer. The selected Program 2 `lab/research/nyfed-repo-headline-source-feasibility-v1/` is closed with feasible delayed original headlines; no trading candidate is open pending the next whole-map comparison. V7 return engineering is closed; Optimization remains closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Program 7 clock audit and full macro comparison are closed; Family 011 `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, Program 4, is now closed adverse with no passer. The selected Program 2 `lab/research/nyfed-repo-headline-source-feasibility-v1/` is closed with feasible delayed original headlines; the whole map now selects one prospective Program 2 repo-conditioned M30 shock bundle, but its declaration and candidate source do not yet exist. V7 return engineering is closed; Optimization remains closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,7 +34,7 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `NYFED_REPO_SOURCE_FEASIBLE_CLOSED_BEFORE_ECONOMIC_CANDIDATE_SELECTION`.
+- Active phase: `PROGRAM_2_REPO_CONDITIONED_SHOCK_PROPOSAL_SELECTED_DECLARATION_PENDING`.
 - Sole active Challenge family: none. Family 011, Family 010 and the clock audit are closed and immutable.
 - Active Challenge family / Optimization campaign count: `0 / 0`; all three Family 011 roles closed together with no passer. Native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -86,7 +86,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Recompare Programs 1-5 and 7 after the closed feasible NY Fed source screen before one economic candidate. The retained source is ordinary SOFR-TGCR, strict prior-20-source median and no use before effective date +8 calendar days. Preserve as-published 2024 method changes and explicit confirmation-exposure limits; do not substitute revised statistics or shorten the lag. Keep at least 30 GiB free.
+1. The post-source whole-map comparison selected one prospective Program 2 delayed repo-conditioned M30 shock bundle. Read `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_REPO_SOURCE_MACRO_RECOMPARE_V1.json` and freeze its complete declaration before candidate data/outputs. Each entry must require a newly completed price shock; a repeated daily rate cannot manufacture turnover. First judge fixed structural supply, then only a feasible unchanged bundle may open economics. Keep at least 30 GiB free.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -111,7 +111,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none at the closed NY Fed source-feasibility boundary. Source screen passes with 748 paired rows and 136/126/237 above/below/tie development dates; no economic candidate or price-return analysis exists.
+- Active research unit: none at the closed source boundary. The whole map selected a prospective Program 2 repo-conditioned M30 shock bundle; its binding declaration must precede data/feature/outcome work. Source screen passes with 748 paired rows and 136/126/237 above/below/tie development dates. No economic candidate is open yet.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_011_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
