@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0576`
+- Latest state ID: `STATE-0577`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 013 intrinsic-directional-change three-role bundle is closed complete adverse, with no passer or seed. Whole-macro comparison selected prospective Program 3 resting-order timing conception. No new candidate is declared; establish quote-side/source readiness and freeze a fully independent contract before any new features. All predecessors and Optimization remain closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 013 intrinsic-directional-change three-role bundle is closed complete adverse, with no passer or seed. Whole-macro comparison selected prospective Program 3 resting-order timing conception. No new candidate is declared. One bounded Program 3 native-platform source unit is declared to acquire only missing static order/expiration/filling contract fields in an isolated no-EA reader. No economic or price/feature work opens. All predecessors and Optimization remain closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_013_CLOSED_MACRO_RECOMPARED_PROGRAM_3_RESTING_ORDER_CONCEPTION_PENDING`.
+- Active phase: `PROGRAM_3_RESTING_ORDER_CONTRACT_SOURCE_ACQUISITION_DECLARED`.
 - Sole active Challenge family: none. Family 013 and all predecessors are closed and immutable; no proxy result has beaten V8.
-- Active Challenge family / Optimization campaign count: `0 / 0`; native EA/runtime count is zero.
+- Active Challenge family / Optimization campaign count: `0 / 0`; candidate EA/economic runtime count is zero. One separately named native source reader is declared, no strategy or order authority, and must stop after contract capture.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -92,7 +92,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Whole Programs 1-5 and 7 comparison selected prospective Program 3 resting-entry timing. Establish attributable order-mode/quote-side/source readiness and one independent causal reference/placement/expiry process before a complete new family declaration. No exchange queue/spread-capture assumption, favorable M1 intrabar path selection, closed-event reuse or manufactured turnover. No new candidate root exists yet. Keep at least 30 GiB free.
+1. Complete the declared Program 3 static contract capture with only the explicit native-reader path/API whitelist, then normal shutdown and whole-map comparison. No price/history, candidate features, exchange queue assumption or favorable intrabar selection is permitted in this source step. A later independent resting-entry candidate still needs its complete causal and economic declaration. Keep at least 30 GiB free.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -117,7 +117,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none after Family 013 closure. The next selected conception is Program 3 resting-entry timing, subject to source/causal readiness and a complete pre-outcome declaration. No new features, fills, 2026 work, EA or Portable are open.
+- Active research unit: `lab/research/resting-order-contract-readiness-v1/`, Program 3, bounded static contract acquisition through one isolated no-EA native reader. Source declaration precedes launch. No candidate, price features/fills, 2026 history or native economic path is open.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_013_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
