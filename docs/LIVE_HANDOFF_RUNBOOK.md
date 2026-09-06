@@ -1,6 +1,19 @@
 # Live 인계 절차
 
-## 현재 절차: RLO1에서 paired-month V8으로 한 번만 교체
+## 현재 절차: V8에서 검증한 새 V7R로 교체
+
+현재 target은 `NEXT-E03-V7R-RLO1-0bba2ca045fe`, Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`이다. 원래 V7의 4%/12% 위험과 여섯 전략을 유지한다. `v7-rlo1-return-requalification-v1`의 장기·최근 실틱 비교가 사전 기준을 통과했으며 사용자 조건부 교체 승인은 계속 유효하다. 새 소스/EX5는 active manifest와 일치해야 한다.
+
+1. V8 신규진입을 금지한 복구와 신선한 flat 확인은 완료됐다. 최종 state 5340, total positions/orders 0/0, margin/risk 0/0, fault 0에서 정상 STOP했다. 최신 누적 프로젝트 실현손익 -$0.40만 이월한다. 모든 퇴역 V7/V8 상태와 ledger는 보존한다.
+2. 새 namespace가 비어 있음을 확인한 뒤 검증한 소스/EX5/SET/manifest와 운영 도구를 Live에 한 번 복사한다. CURRENT_STATE의 V7R entries-disabled preflight ENABLED, new-entry DISABLED, owner none 및 정확한 commit이 origin/main에 도달해야 한다.
+3. `Start-ZetaNextV7REntriesDisabled.ps1 -ConfirmEntriesDisabled`로 최초 0/0 기동을 확인한다. `Stop-ZetaNextV7RFlatRuntime.ps1 -ConfirmFlatStop`으로 정상 정지한 뒤 같은 starter로 복구하여 sequence 증가, 동일 계정·identity·6개 component·flatness·fault 0·로그 append를 확인한다. 퇴역 파일 해시는 불변이어야 한다.
+4. Master는 허용된 0/0 모드로 EA와 한국어 대시보드를 띄운다. `Get-ZetaNextV7RMarketStatus.ps1`은 계정이나 거래를 조회하지 않고 US30 실제 연속 틱과 US30/US100/US500 M15/M30/H1 최신 동기화를 관찰한다. 폐장이나 tick 부재는 중단/승인 재요청 사유가 아니다. entries-disabled로 유지하고 실제 틱이 돌아오는 가장 이른 안전한 window를 기다린다. 복원된 Passive 평가시각 보호도 적용한다.
+5. 실제 시세 gate가 통과하면 신선한 0/0 flat owner를 정상 정지하고 CURRENT_STATE의 preflight PASSED, new-entry ENABLED, owner none을 커밋·푸시한다. 추가 사용자 승인은 필요하지 않다. `Start-ZetaNextV7RLive.ps1 -EnableNewEntries -ConfirmLiveDev`는 다시 새 0/0 snapshot, 계정·소유권·flatness·fault 0, 12초 연속 tick/3초 최대 gap 및 모든 타임프레임·보호시각 gate를 통과한 뒤 1/1을 연다.
+6. 최종 exact 1/1, 계속 증가하는 신선한 healthy sequence, sole owner, 대시보드, 퇴역 파일 불변성과 Git 상태를 기록한다. 무노출이 입증되지 않는 실패에서는 소유 위험을 관리할 터미널을 유지하며 과거 EA를 절대 재기동하지 않는다.
+
+아래 절차는 완료된 역사다. 현재 V7R에 과거 실행 identity, 경제 승인 예외나 state를 재사용하지 않는다.
+
+## 역사 절차: RLO1에서 paired-month V8으로 한 번만 교체
 
 현재 target은 `NEXT-E02-V8-PMLR1-b1c77d3b6356`, Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`이다. Canonical source/settings SHA-256은 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256은 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`다. 고정 경제 계약은 component multiplier `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, base position risk `0.04`, aggregate cap `0.18`, Passive disabled다.
 

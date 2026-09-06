@@ -14,25 +14,25 @@ function Get-ZetaNextOperatorContract {
         PackageRoot = $packageRoot
         TerminalPath = Join-Path $runtimeRoot 'terminal64.exe'
         StatePath = Join-Path $projectRoot 'CURRENT_STATE.md'
-        StatusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV8Status.ps1'
-        MarketStatusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV8MarketStatus.ps1'
+        StatusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV7RStatus.ps1'
+        MarketStatusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV7RMarketStatus.ps1'
         HandoffReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\legacy-final-handoff.json'
-        ReleaseTransitionReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\live-release-transition-pmlr1.json'
+        ReleaseTransitionReceiptPath = Join-Path $liveDevRoot 'runtime\handoff\live-release-transition-v7rr1.json'
         LegacyRoot = 'C:\Users\awdse\OneDrive\Desktop\Project_Zeta_Terminus'
         ProjectId = 'project-zeta-terminus-next'
-        ReleaseId = 'NEXT-E02-V8-PMLR1-b1c77d3b6356'
+        ReleaseId = 'NEXT-E03-V7R-RLO1-0bba2ca045fe'
         RootHandoffReleaseId = 'NEXT-E01-V7-2db5ef5ead1c'
-        TransitionParentReleaseId = 'NEXT-E01-V7-RLO1-b32e7e176f2e'
-        PortfolioId = 'ZT-PORT-NEXT-V8-PMLR1-20260831'
-        ExecutionVersion = 'zt-next-paired-month-live-portfolio-v8'
-        EconomicVersion = 'zt-next-paired-month-live-replacement-economic-v1'
-        FilePrefix = 'v8-pmlr1'
-        SourceHash = '3D89719BA633D1FAB4BCE07284FD676205592CEFE164D06A7162190037440E5E'
-        ExpertHash = 'E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274'
-        SetHash = 'DD8603BAE52F4FD604AB6ADED7E8055DE53296D7EBA5F9DF23B94143349679F2'
-        SourceManifestHash = 'F160FD5824D5AE6CB179848DCCCABC873FB9D97819CBEDDBD4FC030C6D29AEA9'
-        MagicNumbers = @(260831901L, 260831902L, 260831903L, 260831904L, 260831905L, 260831906L)
-        ComponentRiskMultipliers = @(2.0, 1.5, 2.0, 2.5, 1.5, 0.0)
+        TransitionParentReleaseId = 'NEXT-E02-V8-PMLR1-b1c77d3b6356'
+        PortfolioId = 'ZT-PORT-NEXT-V7R-RLO1-20260907'
+        ExecutionVersion = 'zt-next-v7-rlo1-return-portfolio-v1'
+        EconomicVersion = 'zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6'
+        FilePrefix = 'v7r-rlo1'
+        SourceHash = '953BF5F1365D1181382CAF939261BCF0D50D74589696C2C11D55C68EB784C298'
+        ExpertHash = '30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657'
+        SetHash = 'BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8'
+        SourceManifestHash = '2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9'
+        MagicNumbers = @(260907701L, 260907702L, 260907703L, 260907704L, 260907705L, 260907706L)
+        ComponentRiskMultipliers = @(1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
         ComponentIds = @(
             'ZT-M30-US30-RANGE-COMP-61f61deaba',
             'ZT-M30-US30-RANGE-COMP-64efb16616',
@@ -122,14 +122,14 @@ function Assert-ZetaNextExclusiveTerminalBoundary {
 function Assert-ZetaNextReleaseIntegrity {
     param([Parameter(Mandatory)]$Contract)
 
-    $sourcePath = Join-Path $Contract.PackageRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextPairedMonthLivePortfolioV8.mq5'
-    $expertPath = Join-Path $Contract.PackageRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextPairedMonthLivePortfolioV8.ex5'
-    $setPath = Join-Path $Contract.PackageRoot 'MQL5\Presets\ZetaTerminusNext\next-v8-paired-month.set'
+    $sourcePath = Join-Path $Contract.PackageRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextV7ReturnPortfolio.mq5'
+    $expertPath = Join-Path $Contract.PackageRoot 'MQL5\Experts\ZetaTerminusNext\ZetaNextV7ReturnPortfolio.ex5'
+    $setPath = Join-Path $Contract.PackageRoot 'MQL5\Presets\ZetaTerminusNext\next-v7-return.set'
     $sourceManifestPath = Join-Path $Contract.PackageRoot 'SOURCE_MANIFEST.json'
     $releaseManifestPath = Join-Path $Contract.PackageRoot 'RELEASE_MANIFEST.json'
     foreach ($path in @($sourcePath, $expertPath, $setPath, $sourceManifestPath, $releaseManifestPath, $Contract.TerminalPath, $Contract.StatusScript, $Contract.StatePath)) {
         if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
-            throw "Required Next V8 operator file is missing: $path"
+            throw "Required Next V7R operator file is missing: $path"
         }
     }
 
@@ -137,7 +137,7 @@ function Assert-ZetaNextReleaseIntegrity {
         (Get-FileHash -Algorithm SHA256 -LiteralPath $expertPath).Hash -ne $Contract.ExpertHash -or
         (Get-NormalizedTextSha256 -Path $setPath) -ne $Contract.SetHash -or
         (Get-FileHash -Algorithm SHA256 -LiteralPath $sourceManifestPath).Hash -ne $Contract.SourceManifestHash) {
-        throw 'The frozen active V8 source, EX5, SET, or source manifest hash does not match the operator contract.'
+        throw 'The frozen active V7R source, EX5, SET, or source manifest hash does not match the operator contract.'
     }
 
     $releaseManifest = Get-Content -LiteralPath $releaseManifestPath -Raw | ConvertFrom-Json
@@ -146,10 +146,10 @@ function Assert-ZetaNextReleaseIntegrity {
         [string]$releaseManifest.parent_release_id -ne $Contract.TransitionParentReleaseId -or
         [string]$releaseManifest.portfolio_id -ne $Contract.PortfolioId -or
         [string]$releaseManifest.execution_version -ne $Contract.ExecutionVersion -or
-        [string]$releaseManifest.real_tick_equivalence -ne 'passed' -or
+        [string]$releaseManifest.native_economic_requalification -ne 'passed' -or
         [string]$releaseManifest.compiled_ex5_sha256 -ne $Contract.ExpertHash -or
         [string]$releaseManifest.source_manifest_sha256 -ne $Contract.SourceManifestHash) {
-        throw 'The active release manifest does not identify the verified V8 paired-month package.'
+        throw 'The active release manifest does not identify the verified V7 return package.'
     }
 
     $sourceManifest = Get-Content -LiteralPath $sourceManifestPath -Raw | ConvertFrom-Json
@@ -246,7 +246,7 @@ function Get-ZetaNextHandoffReceipt {
         -not ([string]$transition.parent_final_event_sha256 -match '^[0-9A-Fa-f]{64}$') -or
         -not [double]::IsFinite([double]$transition.continuity.expected_project_realized_net_usd) -or
         -not [double]::IsFinite([double]$transition.continuity.expected_project_stage_balance_usd)) {
-        throw 'The local release-transition receipt is incomplete or does not target the active V8 package.'
+        throw 'The local release-transition receipt is incomplete or does not target the active V7R package.'
     }
 
     $tradesRoot = Join-Path $Contract.RuntimeRoot 'Bases\FPMarketsSC-Live\trades'
@@ -277,12 +277,12 @@ function Write-ZetaNextRuntimeMode {
     )
 
     $modeData = switch ($Mode) {
-        'EntriesDisabled' { [pscustomobject]@{ Entries = $false; AllowLiveTrading = 0; SetName = 'next-v8-entries-disabled.set'; ConfigName = 'terminal-next-v8-entries-disabled.ini' } }
-        'LivePreflight' { [pscustomobject]@{ Entries = $false; AllowLiveTrading = 1; SetName = 'next-v8-live-preflight.set'; ConfigName = 'terminal-next-v8-live-preflight.ini' } }
-        'Live' { [pscustomobject]@{ Entries = $true; AllowLiveTrading = 1; SetName = 'next-v8-live.set'; ConfigName = 'terminal-next-v8-live.ini' } }
+        'EntriesDisabled' { [pscustomobject]@{ Entries = $false; AllowLiveTrading = 0; SetName = 'next-v7r-entries-disabled.set'; ConfigName = 'terminal-next-v7r-entries-disabled.ini' } }
+        'LivePreflight' { [pscustomobject]@{ Entries = $false; AllowLiveTrading = 1; SetName = 'next-v7r-live-preflight.set'; ConfigName = 'terminal-next-v7r-live-preflight.ini' } }
+        'Live' { [pscustomobject]@{ Entries = $true; AllowLiveTrading = 1; SetName = 'next-v7r-live.set'; ConfigName = 'terminal-next-v7r-live.ini' } }
     }
-    $baseSetPath = Join-Path $Contract.PackageRoot 'MQL5\Presets\ZetaTerminusNext\next-v8-paired-month.set'
-    $runtimePresetDirectory = Join-Path $Contract.RuntimeRoot 'MQL5\Presets\ZetaTerminusNextV8Runtime'
+    $baseSetPath = Join-Path $Contract.PackageRoot 'MQL5\Presets\ZetaTerminusNext\next-v7-return.set'
+    $runtimePresetDirectory = Join-Path $Contract.RuntimeRoot 'MQL5\Presets\ZetaTerminusNextV7RRuntime'
     $runtimeConfigDirectory = Join-Path $Contract.RuntimeRoot 'Config'
     $setPath = Join-Path $runtimePresetDirectory $modeData.SetName
     $configPath = Join-Path $runtimeConfigDirectory $modeData.ConfigName
@@ -312,7 +312,7 @@ function Write-ZetaNextRuntimeMode {
     if ($setText -notmatch "(?m)^InpPriorProjectRealizedNetUSD=$([regex]::Escape($priorText))\|\|" -or
         $setText -notmatch "(?m)^InpAllowNewEntries=$entriesText\|\|" -or
         $setText -notmatch "(?m)^InpExpectedLiveAccountLogin=$accountText\|\|") {
-        throw "Could not construct the exact account-bound V8 SET for $Mode."
+        throw "Could not construct the exact account-bound V7R SET for $Mode."
     }
 
     $configText = @"
@@ -332,8 +332,8 @@ Profile=1
 MaxBars=500000
 
 [StartUp]
-Expert=ZetaTerminusNext\ZetaNextPairedMonthLivePortfolioV8.ex5
-ExpertParameters=ZetaTerminusNextV8Runtime\$($modeData.SetName)
+Expert=ZetaTerminusNext\ZetaNextV7ReturnPortfolio.ex5
+ExpertParameters=ZetaTerminusNextV7RRuntime\$($modeData.SetName)
 Symbol=US30
 Period=M30
 ShutdownTerminal=0
@@ -374,11 +374,7 @@ function Stop-ZetaNextRuntime {
         try { Wait-Process -Id $ProcessId -Timeout 15 -ErrorAction Stop } catch { }
     }
     if ($null -ne (Get-Process -Id $ProcessId -ErrorAction SilentlyContinue)) {
-        Stop-Process -Id $ProcessId -ErrorAction Stop
-        try { Wait-Process -Id $ProcessId -Timeout 15 -ErrorAction Stop } catch { }
-    }
-    if ($null -ne (Get-Process -Id $ProcessId -ErrorAction SilentlyContinue)) {
-        throw "Next Live-Dev PID $ProcessId did not stop."
+        throw "Next Live-Dev PID $ProcessId did not stop normally; it was left running. A forced exit cannot establish a normal stopped handoff."
     }
 }
 
@@ -475,14 +471,14 @@ function Test-ZetaNextLiveStatus {
         [double]$Status.account_balance,
         [double]$Status.account_equity
     ) | Measure-Object -Minimum | Select-Object -ExpandProperty Minimum
-    if ([double]$Status.aggregate_planned_risk -gt 0.18 * $riskCapital + 0.02) { return $false }
+    if ([double]$Status.aggregate_planned_risk -gt 0.12 * $riskCapital + 0.02) { return $false }
     $riskMultipliers = @{
-        'ZT-M30-US30-RANGE-COMP-61f61deaba' = 2.0
-        'ZT-M30-US30-RANGE-COMP-64efb16616' = 1.5
-        'ZT-H1-US100-CROSS-IN-14b72317b7' = 2.0
-        'ZT-M30-US30-INTRADAY-R-2eb111fc46' = 2.5
-        'ZT-H1-US30-RETURN-I-c870a788ec' = 1.5
-        'ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8' = 0.0
+        'ZT-M30-US30-RANGE-COMP-61f61deaba' = 1.0
+        'ZT-M30-US30-RANGE-COMP-64efb16616' = 1.0
+        'ZT-H1-US100-CROSS-IN-14b72317b7' = 1.0
+        'ZT-M30-US30-INTRADAY-R-2eb111fc46' = 1.0
+        'ZT-H1-US30-RETURN-I-c870a788ec' = 1.0
+        'ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8' = 1.0
     }
     foreach ($component in @($Status.components | Where-Object { [long]$_.position_identifier -ne 0 })) {
         $componentId = [string]$component.component_id

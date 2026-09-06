@@ -7,28 +7,28 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0558`
+- Latest state ID: `STATE-0559`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `V7_RLO1_RETURN_VERIFICATION_AUTHORIZED`; one serial Lab engineering family is active. Independent Challenge development remains paused.
-- Next Live-Dev authorization: `ENABLED` only through the 2026-08-31 one-time user-accepted economic exception for exact release `NEXT-E02-V8-PMLR1-b1c77d3b6356`. It does not relabel V2 as a pass or authorize any other release, byte, identity or risk contract.
-- Next V8 new-entry authorization: `DISABLED` for the authorized handoff; the old contract was exact Portfolio `ZT-PORT-NEXT-V8-PMLR1-20260831`, Magic `260831901..260831906`, canonical source/settings SHA-256 `B1C77D3B635626EAA000F3A605F2CB1BC5A4D0C43709E8C3B3F693469F126B95`, EX5 SHA-256 `E61CA9D50F8C6BF4849A9C2E857B08A6E9C4FD390B1B8DC0493EB741689D9274`, weights `2 / 1.5 / 2 / 2.5 / 1.5 / 0`, position risk `0.04`, aggregate cap `0.18`, Passive disabled.
-- Existing real-account owner: exact V8 pending fresh entries-disabled stopped-flat proof. The current task authorizes bounded V8 ownership/recovery observation with new entries disabled.
-- Next V8 paired-month entries-disabled preflight: `ENABLED`
-- Next V8 paired-month new-entry authorization: `DISABLED`
-- Next V7R return entries-disabled preflight: `DISABLED` pending V8 stopped-flat handoff.
+- Development: `V7_RETURN_VERIFIED_LIVE_HANDOFF_ACTIVE`; the Lab family is closed and frozen. Challenge and Optimization remain paused/closed.
+- Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; only entries-disabled creation/recovery is currently enabled. Actual new entries remain closed until the unchanged operational gates pass.
+- Next V7R return entries-disabled preflight: `ENABLED`
 - Next V7R return new-entry authorization: `DISABLED`
-- Last recorded real-account owner: exact V8 Live sole PID `33388`; V7 RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 remain retired/stopped.
-- Local storage-only observation on 2026-09-06 found no MT5, Tester, MetaEditor or dashboard process. Broker state was not queried, no runtime restarted, and Live authorization is unchanged.
-- Last verified real-account boundary remains V8 sequence `492` at `2026-08-31T01:57:18Z`, entries `1/1`, balance/equity `$105.20/$105.20`, carried project realized net `+$4.55`, flat and zero planned risk/fault. Korean dashboard PID `28008` was responsive at that boundary.
-- Challenge work has no Live authority and may not query broker positions, orders, deals or account state merely for context.
+- Existing real-account owner: none; V8 PID `26524` completed fresh entries-disabled recovery and normal stopped-flat handoff. The next authorized owner is exact V7R in entries-disabled mode.
+- Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
+- Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
+- Economic contract: original V7 position risk `0.04`, aggregate cap `0.12`, six multipliers `1/1/1/1/1/1`, Passive enabled at original fixed `0.01` volume. Native compile 6140, verified execution and installed neutral platform 6182.
+- Fresh V8 handoff: final state `5340`, entries `0/0`, connected exact account, total positions/orders `0/0`, margin/planned risk `0/0`, healthy and no incomplete decision. Normal STOP and terminal shutdown 0 are preserved privately. Balance/equity `$100.25/$100.25`; attributable cumulative project realized net `-$0.40` is the sole carryover. New project stage balance `$99.60`, fresh component stressed balance `$100.00`.
+- V8, original V7-RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 are retired/stopped. Their identities, state, research and execution history remain preserved; no old state is adopted.
+- Current installation evidence: `live-dev/evidence/V7R_RETURN_INSTALLATION_V1.json`. New V7R namespace was absent before installation. EA create/recovery, dashboard and actual continuous ticks remain to be completed.
+- Challenge work grants no Live authority and cannot query broker state merely for context.
 
 ## Active primary Goal
 
-Current user task: verify exact V7-RLO1 and, after satisfactory complete economics and engineering, replace V8 with a new V7-economics release and start its EA/dashboard. Sole active engineering root is `lab/engineering/v7-rlo1-return-requalification-v1/`; dedicated Lab runtime is `lab/runtime/v7rr1-portable/`. Candidate is original V7 `0.04/0.12`, control is exact V8 `0.04/0.18` with its frozen multipliers. The top-level 2026-09-06 scoped handoff direction governs. Economics passed in `RETURN_ECONOMIC_DECISION_V1.json`: long actual/stressed +$313.36/+$284.138, DD 19.5024%, recent actual/stressed +$4.66/+$3.209 with a disclosed July loss. New release Live authorization is `DISABLED` pending the fresh V8 stopped-flat handoff and exact new CURRENT_STATE decision. No trading package or process changed at declaration.
+Current user task: exact V7 verification passed and its frozen new V7R release has been installed after the fresh V8 stopped-flat handoff. Lab family `lab/engineering/v7-rlo1-return-requalification-v1/` is closed; dedicated Lab runtime is stopped. Remaining work is serial Live entries-disabled create/recovery, EA/dashboard opening, current market gates and final `0/0 -> 1/1` activation. Long V7 actual/stressed is `+$313.36/+$284.138`, DD `19.5024%`; recent is `+$4.66/+$3.209` with a disclosed July loss. Closed markets leave EA running entries-disabled until genuine continuous ticks return; the user's conditional authorization remains valid without another approval question.
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
@@ -81,7 +81,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Complete the newly authorized serial V7 return engineering comparison and conditional handoff under the 2026-09-06 policy and family declaration. The separate Challenge pause continues; no Challenge successor opens.
+1. Complete the authorized V7R entries-disabled create/recovery and actual-tick conditional Live handoff under the 2026-09-06 policy and family declaration. The separate Challenge pause continues; no Challenge successor opens.
 2. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 3. On explicit user continuation, recompare the autonomous method map from the closed Family 001–010 ledger before declaring exactly one materially distinct successor; do not reopen Family 010 or automatically execute an audit-adjacent rescue.
 4. The persistent Goal remains incomplete until a complete native candidate passes every V8 gate.

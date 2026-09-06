@@ -2,7 +2,7 @@
 
 Project Zeta Terminus Next is the continuity successor to Project Zeta Terminus. It does not restart the research program: it inherits the frozen economic contracts, evidence boundaries, and executable lineage from legacy commit `4c0899255c701e2c6b53e7f44457c431aef2ad76` while replacing the oversized working surface with a concise lineage index and physically isolated Live-Dev, optimization and Lab lanes.
 
-`NEXT-E01/V7-RLO1` completed its Live service and is now stopped-flat, retired and immutable. The fixed paired-month candidate has been translated once through the verified Lab handoff into `NEXT-E02/V8-PMLR1`; its new identity, isolated namespaces, SET, manifests, operators and build-6140 EX5 are frozen. Connected entries-disabled create/recovery and the actual-tick guarded final `0/0 → 1/1` handoff are controlled only by `CURRENT_STATE.md`.
+Exact original V7-RLO1 economics have passed a fresh adjacent comparison with V8 and are installed as new release `NEXT-E03-V7R-RLO1-0bba2ca045fe`. V8 completed a fresh stopped-flat boundary; all older identities remain retired. The new V7R keeps original 4% position / 12% aggregate risk and all six components. Its isolated state, operators, manifests and EX5 are frozen. Current entries-disabled recovery and final actual-tick activation are controlled only by `CURRENT_STATE.md`.
 
 ## Start here
 
@@ -25,4 +25,4 @@ The exact filesystem and Portable-terminal boundary is documented in [`docs/RUNT
 
 The equivalence verdict is in [`docs/V7_EQUIVALENCE.md`](docs/V7_EQUIVALENCE.md). The only permitted Live transition sequence is in [`docs/LIVE_HANDOFF_RUNBOOK.md`](docs/LIVE_HANDOFF_RUNBOOK.md).
 
-The exact Live-Dev authorization, owner and entries-disabled/Live transition state are recorded only in `CURRENT_STATE.md`. The root Master launcher starts only the exact authorized V8 owner and Korean dashboard without duplicating them. It uses Windows' one-shot process broker only to break the Codex parent-lifetime link; no scheduled task, resident launcher or health monitor remains after startup. Running or compiling Lab or optimization material never changes Live.
+The exact Live-Dev authorization, owner and entries-disabled/Live transition state are recorded only in `CURRENT_STATE.md`. The root Master launcher starts only the exact authorized V7R owner in its authorized entries-disabled or Live mode and Korean dashboard without duplicating them. It uses Windows' one-shot process broker only to break the Codex parent-lifetime link; no scheduled task, resident launcher or health monitor remains after startup. Running or compiling Lab or optimization material never changes Live.

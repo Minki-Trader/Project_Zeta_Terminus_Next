@@ -1,8 +1,7 @@
 #ifndef ZETA_NEXT_DOMAIN_MQH
 #define ZETA_NEXT_DOMAIN_MQH
 
-// Frozen Live translation of the fixed paired-month candidate.
-// Economic terms are unchanged; only Live identity and mutable paths differ.
+// Frozen B70 declarations and runtime state. Economic constants remain unchanged except Next identity and Magic.
 
 input double InpReferenceCapitalUSD  = 100.0;
 input double InpPriorProjectRealizedNetUSD = 0.0;
@@ -10,13 +9,7 @@ input double InpBaseVolume           = 0.01;
 input double InpAdditionStepUSD      = 150.0;
 input double InpMaximumMarginFraction = 0.45;
 input double InpMaximumPositionRiskFraction = 0.04;
-input double InpMaximumAggregateRiskFraction = 0.18;
-input double InpRC16RiskMultiplier = 2.0;
-input double InpRC4RiskMultiplier = 1.5;
-input double InpUS100CrossRiskMultiplier = 2.0;
-input double InpUS30PressureRiskMultiplier = 2.5;
-input double InpUS30ReturnRiskMultiplier = 1.5;
-input double InpUS100PassiveRiskMultiplier = 0.0;
+input double InpMaximumAggregateRiskFraction = 0.12;
 input double InpUnmodelledRiskReserveFraction = 0.25;
 input double InpStopPlacementHeadroomFraction = 0.25;
 input int    InpMaxEntryDelayMinutes = 2;
@@ -27,47 +20,47 @@ input int    InpEventCapacity         = 4096;
 input int    InpSnapshotSeconds       = 60;
 
 const string EXECUTION_VERSION =
-   "zt-next-paired-month-live-portfolio-v8";
+   "zt-next-v7-rlo1-return-portfolio-v1";
 const string ECONOMIC_VERSION =
-   "zt-next-paired-month-live-replacement-economic-v1";
+   "zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6";
 const string PROJECT_ID = "project-zeta-terminus-next";
-const string SCHEMA_VERSION = "8";
-const string RELEASE_ID = "NEXT-E02-V8-PMLR1-b1c77d3b6356";
-const string PORTFOLIO_ID = "ZT-PORT-NEXT-V8-PMLR1-20260831";
+const string SCHEMA_VERSION = "7R1";
+const string RELEASE_ID = "NEXT-E03-V7R-RLO1-0bba2ca045fe";
+const string PORTFOLIO_ID = "ZT-PORT-NEXT-V7R-RLO1-20260907";
 const string ECONOMIC_FINGERPRINT =
-   "parent-rlo1-b32e7e176f2e-ref100-base0.01-posrisk0.04-aggrisk0.18-component-exposure-multipliers-2-1.5-2-2.5-1.5-0";
+   "ref100-base0.01-step150-margin0.45-delay2-deviation100-inert-market-execution-quote-age3s-pre500-components6-passive-fixed0.01-always-m15-lb12-en1-ex0.25-offset0.25-activation4-hold16-posrisk0.04-aggrisk0.12-reserve0.25-headroom0.25-admission-reserved-broker-sl-session-clock-eet-v1-calendar2022-2028-rc4-check8-three-frozen-ordinal-heads-votesum-le-minus2-retain-original-loss0.25-one-shot-shadow-accepted-occupancy";
 const string EXECUTION_FINGERPRINT =
-   "paired-month-live-portfolio-v8-account-bound-entries-disabled-default-separated-state-logs-research-ownership-v1";
+   "next-v7-modular-parent-b70-v6r6-account-bound-runtime-fresh3s-market-protection-recovery-multideal-lifecycle-at-most-once-decision-journal-required-market-execution-session-clock-contract-global-foreign-exposure-block-common-cross-terminal-lock-authoritative-position-reconciliation5000ms-operational-entry-gate-connection-deferred-passive-cancel-recovery-shadow-accepted-rc4-occupancy-prejournalled-stop-modify-recovery-persisted-shadow-millisecond-ordinal-cursor-complete-causal-copyticksrange-fail-closed-native-m30-boundary-synchronous-state-readback-every-notification-exact-deal-ms-activation-seal-same-ms-tail-outcome-excluded-single-transient-modify-retry-first-strictly-later-fresh-tick";
 const string STATE_MARKER =
-   "ZT_NEXT_LIVE_V8_PMLR1_STATE_V1";
+   "ZT_NEXT_7R1_STATE_V1";
 const string STATE_PATH_A =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\state\\state-a.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\state\\state-a.csv";
 const string STATE_PATH_B =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\state\\state-b.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\state\\state-b.csv";
 const string EVENT_PATH_A =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\state\\events-a.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\state\\events-a.csv";
 const string EVENT_PATH_B =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\state\\events-b.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\state\\events-b.csv";
 const string CURRENT_SNAPSHOT_PATH_A =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\state\\current-a.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\state\\current-a.csv";
 const string CURRENT_SNAPSHOT_PATH_B =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\state\\current-b.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\state\\current-b.csv";
 const string OWNERSHIP_PATH =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\state\\runtime.lock";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\state\\runtime.lock";
 const string RESEARCH_OBSERVATION_DIRECTORY =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\research";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\research";
 const string RESEARCH_OBSERVATION_SCHEMA =
-   "zeta-next-live-v8-paired-month-observation-v1";
+   "zeta-next-v7r-rlo1-observation-v1";
 const string RESEARCH_OBSERVATION_MARKER =
-   "ZT_NEXT_LIVE_V8_PMLR1_OBSERVATION_STATE_V1";
+   "ZT_NEXT_7R1_OBSERVATION_STATE_V1";
 const string RESEARCH_OBSERVATION_STATE_PATH_A =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\research\\research-state-a.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\research\\research-state-a.csv";
 const string RESEARCH_OBSERVATION_STATE_PATH_B =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\research\\research-state-b.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\research\\research-state-b.csv";
 const string RESEARCH_CANDIDATE_LEDGER_PATH =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\research\\research-candidates.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\research\\research-candidates.csv";
 const string RESEARCH_LIFECYCLE_LEDGER_PATH =
-   "ZetaTerminusNext\\live\\v8-pmlr1\\research\\research-lifecycles.csv";
+   "ZetaTerminusNext\\live\\v7r-rlo1\\research\\research-lifecycles.csv";
 const int FILE_OPEN_ATTEMPTS = 5;
 const int FILE_RETRY_DELAY_MS = 100;
 const ulong COMPLETED_DEAL_RECONCILIATION_TIMEOUT_MS = 5000;
@@ -98,12 +91,12 @@ const int JOURNAL_NONE = 0;
 const int JOURNAL_SIGNAL_DECIDED = 1;
 const int JOURNAL_ORDER_ATTEMPTED = 2;
 const int JOURNAL_BROKER_STATE_ADOPTED = 3;
-const ulong MAGIC_RC16_LONG = 260831901;
-const ulong MAGIC_RC4_BOTH = 260831902;
-const ulong MAGIC_US100_CROSS = 260831903;
-const ulong MAGIC_US30_PRESSURE = 260831904;
-const ulong MAGIC_US30_RETURN = 260831905;
-const ulong MAGIC_US100_PASSIVE_LIMIT = 260831906;
+const ulong MAGIC_RC16_LONG = 260907701;
+const ulong MAGIC_RC4_BOTH = 260907702;
+const ulong MAGIC_US100_CROSS = 260907703;
+const ulong MAGIC_US30_PRESSURE = 260907704;
+const ulong MAGIC_US30_RETURN = 260907705;
+const ulong MAGIC_US100_PASSIVE_LIMIT = 260907706;
 
 struct ComponentDefinition
   {
@@ -367,6 +360,26 @@ long arc_adverse_triggers = 0;
 long arc_compressions_placed = 0;
 long arc_compression_refusals = 0;
 long arc_data_unavailable = 0;
+long arc_unavailability_rows = 0;
+long arc_unavailability_complete_zero_range = 0;
+long arc_unavailability_complete_zero_variance = 0;
+long arc_unavailability_session_boundary = 0;
+long arc_unavailability_invalid_direction = 0;
+long arc_unavailability_short_copy = 0;
+long arc_unavailability_invalid_price = 0;
+long arc_unavailability_invalid_tick = 0;
+long arc_unavailability_nonfinite = 0;
+long arc_unavailability_unclassified = 0;
+string arc_unavailability_reason_class = "UNCLASSIFIED";
+string arc_unavailability_reason_detail = "not-classified";
+int arc_unavailability_requested_count = 0;
+int arc_unavailability_copied_count = 0;
+int arc_unavailability_first_invalid_index = -1;
+double arc_unavailability_observed_value = 0.0;
+bool arc_unavailability_value_finite = true;
+bool arc_unavailability_history_complete = false;
+
+void ObserveArcUnavailability(const datetime current_bar);
 ulong rc4_shadow_source_identifier = 0;
 datetime rc4_shadow_entry_time = 0;
 int rc4_shadow_direction = 0;

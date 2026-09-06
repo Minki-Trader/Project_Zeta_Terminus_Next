@@ -16,12 +16,12 @@ $ErrorActionPreference = 'Stop'
 $liveDevRoot = [System.IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $runtimeRoot = Join-Path $liveDevRoot 'runtime\portable'
 $terminalPath = Join-Path $runtimeRoot 'terminal64.exe'
-$statusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV8Status.ps1'
+$statusScript = Join-Path $PSScriptRoot 'Get-ZetaNextV7RStatus.ps1'
 $pythonCommand = Get-Command python -ErrorAction Stop | Select-Object -First 1
 
 foreach ($path in @($terminalPath, $statusScript)) {
     if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
-        throw "Required Next V8 market-status file is missing: $path"
+        throw "Required Next V7R market-status file is missing: $path"
     }
 }
 
@@ -32,13 +32,13 @@ $exactProcesses = @(Get-Process -Name terminal64 -ErrorAction SilentlyContinue |
     } catch { $false }
 })
 if ($exactProcesses.Count -ne 1 -or [int]$exactProcesses[0].Id -ne $ExpectedProcessId) {
-    throw "Expected exact Next V8 terminal PID $ExpectedProcessId; found $(@($exactProcesses.Id) -join ',')."
+    throw "Expected exact Next V7R terminal PID $ExpectedProcessId; found $(@($exactProcesses.Id) -join ',')."
 }
 
 $preStatus = ((& $statusScript -AsJson -ExpectedMode Auto | Out-String) | ConvertFrom-Json)
 
-$env:ZETA_NEXT_V8_TERMINAL_PATH = $terminalPath
-$env:ZETA_NEXT_V8_OBSERVATION_SECONDS = [string]$ObservationSeconds
+$env:ZETA_NEXT_V7R_TERMINAL_PATH = $terminalPath
+$env:ZETA_NEXT_V7R_OBSERVATION_SECONDS = [string]$ObservationSeconds
 $python = @'
 import json
 import os
@@ -46,8 +46,8 @@ import time
 
 import MetaTrader5 as mt5
 
-terminal_path = os.environ["ZETA_NEXT_V8_TERMINAL_PATH"]
-duration = int(os.environ["ZETA_NEXT_V8_OBSERVATION_SECONDS"])
+terminal_path = os.environ["ZETA_NEXT_V7R_TERMINAL_PATH"]
+duration = int(os.environ["ZETA_NEXT_V7R_OBSERVATION_SECONDS"])
 symbols = ("US30", "US100", "US500")
 timeframes = (
     ("M15", mt5.TIMEFRAME_M15, 15 * 60),
@@ -187,8 +187,8 @@ try {
     }
     $market = (($pythonOutput -join [Environment]::NewLine) | ConvertFrom-Json)
 } finally {
-    Remove-Item Env:ZETA_NEXT_V8_TERMINAL_PATH -ErrorAction SilentlyContinue
-    Remove-Item Env:ZETA_NEXT_V8_OBSERVATION_SECONDS -ErrorAction SilentlyContinue
+    Remove-Item Env:ZETA_NEXT_V7R_TERMINAL_PATH -ErrorAction SilentlyContinue
+    Remove-Item Env:ZETA_NEXT_V7R_OBSERVATION_SECONDS -ErrorAction SilentlyContinue
 }
 
 $postProcesses = @(Get-Process -Name terminal64 -ErrorAction SilentlyContinue | Where-Object {
@@ -223,13 +223,22 @@ if (-not [string]::IsNullOrWhiteSpace([string]$status.server_time)) {
             break
         }
     }
+    # V7 restores Passive. Completed decision bars are 12:00..15:45,
+    # so new-order checks occur at 12:15..16:00 plus the two-minute delay.
+    # Apply the same two-minute-before/three-minute-after handoff margin.
+    for ($slot = (12 * 60 + 15); $slot -le (16 * 60); $slot += 15) {
+        if ($serverMinute -ge ($slot - 2) -and $serverMinute -le ($slot + 3)) {
+            $insideProtectedRange = $true
+            break
+        }
+    }
     $safeHandoffWindow = -not $insideProtectedRange
 }
 $reasons = [System.Collections.Generic.List[string]]::new()
 foreach ($reason in @($market.reasons)) { $reasons.Add([string]$reason) }
 if (-not $sameSoleProcess) { $reasons.Add('exact terminal process changed during market observation') }
 if (-not $safeHandoffWindow) { $reasons.Add('server time is inside or too close to a protected evaluation window') }
-if (-not [bool]$status.healthy) { $reasons.Add('local Next V8 runtime status is not healthy') }
+if (-not [bool]$status.healthy) { $reasons.Add('local Next V7R runtime status is not healthy') }
 
 $result = [ordered]@{
     observed_at_utc = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')

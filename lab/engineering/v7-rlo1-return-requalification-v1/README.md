@@ -11,3 +11,5 @@ Candidate and control receive new execution/Portfolio/Magic/state identity befor
 Conditional approval does not waive stopped-flat ownership, new release manifests, entries-disabled create/recovery, current ticks, symbol/timeframe freshness, or final 0/0 -> 1/1 handshake. Old V7 state and executables remain retired.
 
 The native environment correction record supersedes the initial platform/cache boundary: the unchanged build-6140 compiled EAs are evaluated together on the captured build-6182 native engine after automatic update. Complete native M1 field payloads plus whole exercised real-tick TKC files and full symbol contracts provide the market input identity; mutable HCC storage bookkeeping is retained separately. The first two matching V8 references and one pre-initialization history-access failure are engineering history, not the binding pair.
+
+Closed and frozen for the user-authorized one-way Live handoff after passing all declared economics. See `evidence/ENGINEERING_CLOSURE_V1.json`. Remaining create/recovery and actual-tick activation evidence belongs to Live-Dev; no successor or tuning is opened.

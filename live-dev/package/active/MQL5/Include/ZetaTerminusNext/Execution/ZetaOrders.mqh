@@ -555,12 +555,8 @@ bool ReconstructEntryTracking(const int component, const ulong ticket)
          1.0 - InpUnmodelledRiskReserveFraction -
          InpStopPlacementHeadroomFraction;
       const double current_position_budget =
-         ConservativeRiskCapital() * InpMaximumPositionRiskFraction *
-         ExecutableComponentVolumeMultiplier(component,
-                                             component_definitions[component].symbol,
-                                             aggregate.volume);
-      if(broker_stop_loss <= 0.0 || current_position_budget <= 0.0 ||
-         modeled_target_fraction <= 0.0 ||
+         ConservativeRiskCapital() * InpMaximumPositionRiskFraction;
+      if(broker_stop_loss <= 0.0 || modeled_target_fraction <= 0.0 ||
          !GrossStopRisk(component_definitions[component].symbol,
                         direction,
                         aggregate.volume,
@@ -793,7 +789,7 @@ bool BuildMarketEntryPlan(const int component,
       return(false);
      }
    const string symbol = component_definitions[component].symbol;
-   const double volume = NormalizedComponentVolume(component, symbol);
+   const double volume = NormalizedVolume(symbol);
    if(volume <= 0.0)
      {
       component_states[component].entry_check_result = "VOLUME_INVALID";
@@ -866,7 +862,7 @@ bool BuildMarketEntryPlan(const int component,
    plan.aggregate_before = aggregate_before;
    plan.decision_bar = decision_intent.decision_bar;
    plan.deadline = decision_intent.deadline;
-   plan.comment = "ZN " + IntegerToString(component + 1) + " V8";
+   plan.comment = "ZN " + IntegerToString(component + 1) + " V7R";
    return(true);
   }
 
@@ -1142,7 +1138,9 @@ bool ValidateMarketEntry(const MarketEntryPlan &plan,
                           actual_planned_risk);
    const bool position_risk_within_cap =
       risk_known &&
-      actual_planned_risk <= plan.admitted_planned_risk + protection_tolerance;
+      actual_planned_risk <=
+      plan.admitted_capital * InpMaximumPositionRiskFraction +
+      protection_tolerance;
    const bool aggregate_risk_within_cap =
       risk_known &&
       plan.aggregate_before + actual_planned_risk <=

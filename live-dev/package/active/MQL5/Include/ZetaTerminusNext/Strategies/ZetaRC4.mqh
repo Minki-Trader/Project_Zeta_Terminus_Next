@@ -1656,6 +1656,7 @@ void ProcessRC4AdverseRiskCompression()
                             confirmation))
      {
       ++arc_data_unavailable;
+      ObserveArcUnavailability(current_bar);
       if(!SaveState())
          EngageSafetyStop("RC4 unavailable-checkpoint state could not be persisted");
       return;

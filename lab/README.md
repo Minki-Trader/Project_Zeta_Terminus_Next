@@ -12,7 +12,7 @@ Frontier 단위는 `1 진입 신호·시장 구조 / 2 외부시장·이벤트 /
 
 직전 Program 2 / meso Unit 123 `research/standard-options-expiration-week-state-engineering-correction-v1/`은 결과를 한 번도 열지 못했던 Unit 090의 영수증 직렬화 오류만 교정하고 공개 표준 옵션 만기 주간 계약을 그대로 경제적으로 완결했다. `1,051`일·`2,429` signals·`2,233` lifecycles의 무결성이 모두 통과했다. period-weekday centered 공급 차이는 일당 signal `+0.09756`, birth `+0.04607`, sub-three-signal day `-2.0369pp`; component-period centered 경제 차이는 `+0.01649R / -3.1719pp stops`였다. 그러나 US30 `+0.06216R/-7.5768pp`와 US100 `-0.01149R/-0.4733pp`가 합의하지 않고 RC4 절대 기여 `51.368%`가 `45%` cap을 넘었다. `AMBIGUOUS_STANDARD_OPTIONS_EXPIRATION_WEEK_STATE_NO_CANDIDATE`로 닫았으며 expiration day·weekday·book·component·gamma·volume/OI 구제, seed·MT5·Optimization·Live 권한은 없다.
 
-현재 active engineering family는 `engineering/v7-rlo1-return-requalification-v1/` 하나다. 사용자가 2026-09-06 정확한 최종 V7 검증과 통과 시 V8 교체·EA/대시보드 기동을 승인했다. V7 원래 위험 한도 4%/12%와 정확한 V8 4%/18%를 새 격리 identity로 연속 비교하며 Challenge는 계속 일시중지다.
+현재 active engineering family는 없다. `engineering/v7-rlo1-return-requalification-v1/`은 원래 V7 4%/12%와 정확한 V8 4%/18%의 두 연속 실틱 비교를 완결하고 통과했다. 검증한 새 `NEXT-E03-V7R-RLO1-0bba2ca045fe`를 사용자가 승인한 Live 인계용으로 동결했다. Live 최초 기동·복구·실제 틱 확인은 Live-Dev에서 이어가며 Challenge는 계속 일시중지다.
 
 닫힌 `engineering/paired-month-live-replacement-handoff-v1/`의 identity 번역, 컴파일과 entries-disabled 복구는 공학 증거로 보존한다. Selection 경제 재현 및 승격 준비 권위는 실틱 대체 문제로 철회되었고 `lineage/OPTIMIZATION_REAL_TICK_CONTINUITY_AUTHORITY_CORRECTION_V1.json`이 그 정정을 소유한다.
 

@@ -156,6 +156,25 @@ void ResetRuntimeState()
    arc_compressions_placed = 0;
    arc_compression_refusals = 0;
    arc_data_unavailable = 0;
+   arc_unavailability_rows = 0;
+   arc_unavailability_complete_zero_range = 0;
+   arc_unavailability_complete_zero_variance = 0;
+   arc_unavailability_session_boundary = 0;
+   arc_unavailability_invalid_direction = 0;
+   arc_unavailability_short_copy = 0;
+   arc_unavailability_invalid_price = 0;
+   arc_unavailability_invalid_tick = 0;
+   arc_unavailability_nonfinite = 0;
+   arc_unavailability_unclassified = 0;
+   arc_unavailability_reason_class = "UNCLASSIFIED";
+   arc_unavailability_reason_detail = "not-classified";
+   arc_unavailability_requested_count = 0;
+   arc_unavailability_copied_count = 0;
+   arc_unavailability_first_invalid_index = -1;
+   arc_unavailability_observed_value = 0.0;
+   arc_unavailability_value_finite = true;
+   arc_unavailability_history_complete = false;
+
    arc_modify_retry_intents = 0;
    arc_modify_retry_attempts = 0;
    arc_modify_retry_successes = 0;
