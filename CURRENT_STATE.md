@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0582`
+- Latest state ID: `STATE-0583`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014 is closed with all three policies adverse after one complete unchanged development path. Actual net is -$99.8526/-$99.8703/-$99.8587 and every core economic/turnover gate fails. Complete accounting and original output-only report recovery passed; no economic rerun or survivor. No active candidate or economic process. Recompare all Programs before a successor; every predecessor and Optimization stays closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014 is closed with all three policies adverse after one unchanged full path and report-only serialization recovery. Whole Programs 1-5/7 comparison now selects a prospective Program 2 Treasury-note futures source-readiness question. Public US10YR metadata is only a lead; native identity/history and historical roll provenance remain unverified. No new unit root, broker query, candidate or economic process is open. Every predecessor and Optimization stays closed.
 - Next Live-Dev authorization: `ENABLED` for the installed user-authorized exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed. The assistant may check readiness but does not execute investment/trading activation; the user must directly perform final activation after unchanged operational gates.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,7 +34,7 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_014_CLOSED_VALID_ADVERSE_WHOLE_MACRO_RECOMPARISON_PENDING`.
+- Active phase: `FAMILY_014_CLOSED_WHOLE_MAP_RECOMPARED_PROGRAM_2_TREASURY_SOURCE_DECLARATION_PENDING`.
 - Sole active Challenge family: none. Family 014 and every predecessor are closed and immutable; no proxy result has beaten V8.
 - Active Challenge family / Optimization campaign count: `0 / 0`; native candidate EA/economic runtime count is zero. Both no-EA historical source readers are normally stopped with zero exact-path process owners.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -94,7 +94,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Recompare all Programs 1-5 and 7 after complete Family 014 closure. Preserve its full inputs/features, 97 original economic/error files, unchanged executed source, reporting recovery and all authority. No reference/lookback/threshold/quote/TTL/cancellation/symbol/direction/exit/risk rescue or seed; no 2026 or native path. Select only a materially independent successor or bounded source-readiness question before a fresh declaration, retaining at least 30 GiB free.
+1. Declare one bounded Program 2 `treasury-note-futures-source-readiness-v1` question before any new broker/history access. Determine exact US10YR instrument identity, original warmup/development coverage and historical contract-roll/clock provenance from attributable primary/native sources. Public current tables and a regionally redirected product page cannot certify historical continuity or a Treasury yield/curve. Freeze allowed source fields, periods, provenance, exclusions and storage first; no alpha/fill/risk scoring, 2026 candidate price, old-reader restart, old-model substitution or adjacent GILT/FX/ETF rescue. Close and recompare the whole map before a separately complete independent candidate.
 2. At the actual market follow-up, reach a safe research boundary and check V7R readiness serially. Notify the user when ready for their direct activation; the assistant/heartbeat must not activate trading. Source, settings and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -119,9 +119,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none. Closed Family 014 result is 47,115 bytes / `42F5F9720C282D6C9EF64031B28F8DF56B004553FD5E9C7F458DE413C6528D9A`; closure 12,091 bytes / `5A31E9ED569F6E28EA53B2565AEBFDF88BBAD3573ADE3F7E6A9A079D8796AF56`. Original 97 outputs/error receipt total 265,522,305 bytes and remain unchanged. One quote traversal completed, report serialization alone was recovered from existing tapes; no strategy rerun. No 2026/native candidate opened.
+- Active research unit: none. Closed Family 014 phase `94bac0b` preserves result `42F5F9720C282D6C9EF64031B28F8DF56B004553FD5E9C7F458DE413C6528D9A`, closure `5A31E9ED569F6E28EA53B2565AEBFDF88BBAD3573ADE3F7E6A9A079D8796AF56` and 97 original outputs/error receipt. Whole-macro comparison `8714F402582618E3F9CDA4C47C1DC1D38DDC68CD8F9AFE7AB4687246BA25CE6F` selects only an undeclared Program 2 US10YR source question. No successor root, new source prices, 2026/native candidate or broker context query exists.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_014_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
-- Latest storage observation: C: free `57.434 GiB` at Family 014 closure on `2026-09-07`; all canonical data and stopped readers are preserved within the declared storage envelope and 30 GiB reserve. Local-only V7R status at 06:17 KST is healthy 0/0, snapshot age 10 seconds, no alerts/warnings. Read-only readiness heartbeat scope was verified after its update.
+- Latest storage observation: C: free `57.421 GiB` at the post-Family-014 macro comparison on `2026-09-07`; all canonical data and stopped readers are preserved above the 30 GiB reserve. Local-only V7R status at 06:17 KST is healthy 0/0, snapshot age 10 seconds, no alerts/warnings. Read-only readiness heartbeat scope was verified after its update.
