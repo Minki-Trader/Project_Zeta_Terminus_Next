@@ -1,0 +1,154 @@
+{
+  "schema": "zeta-challenge-broker-clock-authority-correction-v1",
+  "recorded_utc": "2026-09-06T17:00:17.295644+00:00",
+  "status": "ACTIVE_AUTHORITY_ADDENDUM_CLOSED_AUDIT_NO_CANDIDATE",
+  "audit_family": "lab/research/broker-clock-authority-audit-v1",
+  "primary_macro_program": 7,
+  "declaration": {
+    "path": "lab/research/broker-clock-authority-audit-v1/evidence/DECLARATION_V1.json",
+    "bytes": 4662,
+    "sha256": "F1AD3743894F2306617C33F7922B2DDDD2FCF361CF04E7DD7626B0D1BCC3F00F"
+  },
+  "timestamp_observations": {
+    "path": "lab/research/broker-clock-authority-audit-v1/evidence/TIMESTAMP_OBSERVATIONS_V1.json",
+    "bytes": 140433,
+    "sha256": "8426B8B0C2F1F55079BB23F1C2D8C12563D129093014FFA94882860009BDA7F8"
+  },
+  "raw_session_exception_note": {
+    "path": "lab/research/broker-clock-authority-audit-v1/evidence/RAW_SESSION_ANOMALY_NOTE_V1.json",
+    "bytes": 3463,
+    "sha256": "C42A27655E05B7B9C89F076EEE434CC8F79372DE0767D70B7A891764A8F9D477"
+  },
+  "primary_sources": [
+    {
+      "title": "FP Markets FAQ, server time",
+      "url": "https://www.fpmarkets.com/en-au/education/faq/",
+      "accessed_utc": "2026-09-06T17:00:17.295622+00:00",
+      "support": "Broker uses GMT+2/GMT+3 so daily candles follow the New York close. Current webpage alone is not a date-by-date historical source certificate."
+    },
+    {
+      "title": "FP Markets Metatrader Product Disclosure Statement, 29 March 2021, section 5.4, printed page 47",
+      "url": "https://www.fpmarkets.com/wp-content/uploads/2021/03/FP-Markets-Product-Disclosure-Statement-Metatrader-4-29.03.2021.pdf",
+      "accessed_utc": "2026-09-06T17:00:17.295634+00:00",
+      "support": "Defines New York-local 17:00 as server 00:00 for financing. This historical primary source supports the nominal New-York-close server convention."
+    },
+    {
+      "title": "Nasdaq Systems hours of operation",
+      "url": "https://www.nasdaq.com/nasdaq-system-hours-of-operation",
+      "accessed_utc": "2026-09-06T17:00:17.295636+00:00",
+      "support": "Primary exchange source lists the regular session as 09:30 through 16:00 Eastern. Used only to flag unusual raw ETF session labels, not to certify broker CFD quotes."
+    }
+  ],
+  "nominal_clock_inference": {
+    "formula": "Interpret broker wall datetime minus seven hours in America/New_York, then convert to UTC. The seven hours are a wall-clock difference, not a fixed UTC offset.",
+    "basis": "Broker 00:00 equals New York-local 17:00 in both historical PDS and current FAQ.",
+    "calendar_2024_2025": "40 weekdays, 20 each year, differ from Europe/Helsinki by one hour.",
+    "not_a_universal_raw_history_certificate": true,
+    "source_exception_handling": "No favorable clock selection, arbitrary timestamp shift, data deletion or correction rerun occurred. Resolve anomalous sources independently before any exact external-session binding economics."
+  },
+  "family_findings": [
+    {
+      "family": 6,
+      "classification": "DECLARED_EXTERNAL_SESSION_NOT_TESTED_DIRECT_UTC_LOOKUP",
+      "source_lines": [
+        "336-386 raw integer time index",
+        "391-406 external-local schedule converted to UTC and directly matched to raw index"
+      ],
+      "timestamp_complete_events": 965,
+      "nominal_error_minutes_counts": {
+        "-120": 334,
+        "-180": 631
+      },
+      "meaning": "All 965 original complete events are reproducible from timestamps. Under the broker nominal convention they sample 2 or 3 hours before the declared open. The known adverse numbers describe that shifted implementation, not a valid falsification of London 08:00 / New York 09:30. Raw-history exceptions mean the nominal offsets are not individually certified physical instants."
+    },
+    {
+      "family": 7,
+      "classification": "DECLARED_EXTERNAL_SESSION_NOT_TESTED_DIRECT_UTC_LOOKUP",
+      "source_lines": [
+        "359-405 external and target raw time indexes",
+        "437-446 New York schedule to UTC epoch",
+        "486-491 direct external/target lookup"
+      ],
+      "meaning": "AUDCHF and target series share raw broker encoding, so their relative ordering may remain causal, but the declared New York 10:00..15:30 slots map nominally to 08:00..13:30 in winter and 07:00..12:30 in summer. The original adverse result does not falsify the correctly aligned declared slot hypothesis."
+    },
+    {
+      "family": 8,
+      "classification": "PARTIAL_EXTERNAL_SESSION_CLOCK_FAULT_WITH_SOURCE_SESSION_EXCEPTION",
+      "source_lines": [
+        "31-33 Helsinki server zone and New York 15:30",
+        "420-444 raw boundary/normalization",
+        "529-536 New York schedule"
+      ],
+      "meaning": "Helsinki matches nominal broker winter/summer offsets except US/EU transition gaps. On 40 development weekdays the nominal lookup samples New York 14:30 instead of 15:30. Rolling historical signal/risk references can propagate this beyond those dates; economic impact is not bounded to 40 rows. Additionally QQQ/TQQQ raw 2025-03-10..14 sessions are 17:30..23:59 rather than predominant 16:30..22:59, so a formula replacement alone is not certified source repair. Original output is descriptive for the implemented mixed-time sample; exact intended-session adverse authority is suspended."
+    },
+    {
+      "family": 9,
+      "classification": "UTC_LABEL_CORRECTION_NO_DEVELOPMENT_ECONOMIC_MECHANISM_CHANGE_FOUND",
+      "source_lines": [
+        "186-195 Helsinki labels",
+        "385-460 decisions and common ordering",
+        "580-639 raw-server rollover",
+        "943-954 common bar mapping",
+        "1094-1110 bar-count hold and next-row exit"
+      ],
+      "changed_utc_labels": 1666,
+      "meaning": "The strategy uses observed H4 bar indices for features, holds and exits, a common monotone map for cross-symbol ordering, and raw server time for swaps. Across all seven 2024-2025 source series the corrected nominal map changes no UTC date/year or declared year-boundary membership; raw index order is unchanged. This specific clock defect corrects event UTC labels but does not invalidate its existing adverse development economic conclusion. No economic rerun or broader source-quality certification was performed."
+    },
+    {
+      "family": 10,
+      "classification": "PARTIAL_EXTERNAL_SESSION_CLOCK_FAULT",
+      "source_lines": [
+        "269-277 Helsinki raw normalization",
+        "484-516 London event-minute selection",
+        "528-545 geometry/date classification"
+      ],
+      "timestamp_complete_dates": 514,
+      "nominal_one_hour_early_dates": 38,
+      "meaning": "The original 514 complete development event dates reproduce from raw timestamps. Of those, 38 fall in US/EU DST mismatch windows and the nominal London event shifts an hour early. Rolling references can affect later dates; no profit effect is inferred. The complete intended-fix hypothesis was not validly adjudicated, though original mixed-time outputs and its closure remain immutable."
+    }
+  ],
+  "preservation": {
+    "closed_family_source_and_artifacts_modified": false,
+    "source_sha256_unchanged": [
+      {
+        "path": "lab/research/independent-two-session-opening-auction-response-adapter-challenge-v1/adapter/run_adapter.py",
+        "bytes": 44897,
+        "sha256": "607C667D940F6C86B91C4DAC50F49CB58274CBB1616E83958020C227DDBF42AB"
+      },
+      {
+        "path": "lab/research/independent-audchf-intraday-carry-pulse-adapter-challenge-v1/adapter/run_adapter.py",
+        "bytes": 52045,
+        "sha256": "63E957C7F52CD53FAB84918E4564BF056EFA15660D619602529550BA2E4B4FE5"
+      },
+      {
+        "path": "lab/research/independent-leveraged-etf-close-rebalance-pressure-adapter-challenge-v1/adapter/run_adapter.py",
+        "bytes": 73643,
+        "sha256": "101C515B13E66BE84B8D08E3023A85FAB2A2A491CD14E446E9FDBB94CEA5DAC5"
+      },
+      {
+        "path": "lab/research/independent-multi-asset-h4-donchian-trend-adapter-challenge-v1/adapter/run_adapter.py",
+        "bytes": 88279,
+        "sha256": "92BB3E360B3F26C25A7AC24DA6722B8E7A62839D79DEA01A56FF738A8B6B0557"
+      },
+      {
+        "path": "lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/adapter/run_adapter.py",
+        "bytes": 89442,
+        "sha256": "3A63BF2ACA10F20940D8087619875FA7B5C451147A5D7F5F939BA67E84521058"
+      }
+    ],
+    "prices_or_trade_outcomes_materialized": false,
+    "locked_2026_opened": false,
+    "economic_runs": 0,
+    "new_model_or_signal": false,
+    "new_runtime_or_EA": false,
+    "live_changes": false,
+    "old_negative_results_do_not_imply_corrected_results_would_pass": true,
+    "no_automatic_rescue_or_successor_authorized_by_addendum": true
+  },
+  "next_boundary": "Recompare Programs 1-5 and 7. Any independent candidate or justified engineering correction needs its own frozen declaration, isolated source and complete evidence. Program 6 remains excluded.",
+  "storage": {
+    "minimum_reserve_bytes": 32212254720,
+    "free_bytes": 84067250176,
+    "audit_output_bytes_before_result": 149448
+  }
+}

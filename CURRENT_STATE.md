@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0561`
+- Latest state ID: `STATE-0562`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Sole research unit is `lab/research/broker-clock-authority-audit-v1/` (Program 7). V7 return engineering is closed; Optimization remains closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Program 7 `lab/research/broker-clock-authority-audit-v1/` is closed; the next macro comparison is pending. V7 return engineering is closed; Optimization remains closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `POST_PAUSE_BROKER_CLOCK_AUTHORITY_AUDIT_BEFORE_SUCCESSOR_SELECTION`.
+- Active phase: `CLOCK_AUTHORITY_AUDIT_CLOSED_BEFORE_MACRO_RECOMPARISON`.
 - Sole active Challenge family: none. Family 010 `lab/research/independent-london-fx-fix-pressure-adapter-challenge-v1/` is closed and immutable.
-- Active Challenge candidate / Optimization campaign count: `0 / 0`; one bounded Program 7 clock-authority audit is active. The latest Goal resumes research; close the audit and recompare all macro programs before a successor.
+- Active Challenge candidate / Optimization campaign count: `0 / 0`; the bounded Program 7 clock-authority audit is closed. The latest Goal resumes research; recompare all macro programs before a successor.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -76,6 +76,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Pause and cleanup boundary
 
+- Subsequent clock authority: `lineage/CHALLENGE_BROKER_CLOCK_AUTHORITY_CORRECTION_V1.json` supersedes intended-session adverse authority for Families 006/007 and suspends complete intended-session authority for 008/010. Original files/results remain immutable and descriptive for their implemented time samples. Family 009 keeps its adverse H4 development conclusion for this specific issue. Audit found 965 shifted Family 006 events and 38 nominally misaligned dates among Family 010's 514. The 2025-03-10..14 ETF source-session exception remains unresolved for future exact external-session use; no old family reopens automatically.
 - The former Family 010 pause remains historical. The user explicitly resumed autonomous research on 2026-09-07 with a minimum 30 GB storage reserve; the current implementation preserves the stricter 30 GiB floor. Family 010 itself remains closed.
 - The exact closed ignored Family 010 Portable, `8,237` files / `547,324,203` bytes, was moved to the Windows Recycle Bin with zero process owner. It is recoverable; the whole Recycle Bin was not emptied because it may contain unrelated user material.
 - Canonical Family 010 input, all five raw result tapes, tracked adapter/config/declaration/result/audit/closure and every hashed authority remain preserved. Live PID `33388`, Live package/state and Optimization were untouched.
@@ -83,7 +84,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Complete the bounded broker-clock authority audit under the resumed Goal and preserve at least 30 GiB free. No price/outcome rerun or new Challenge candidate opens until the audit closes and the macro map is re-compared.
+1. The bounded broker-clock authority audit is closed. Apply its authority addendum while comparing all macro programs under the resumed Goal; preserve at least 30 GiB free before new output-producing work.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. After audit closure, recompare the autonomous method map from the closed Family 001–010 ledger before declaring exactly one materially distinct successor; do not reopen Family 010 or automatically execute an audit-adjacent rescue.
@@ -108,7 +109,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: `lab/research/broker-clock-authority-audit-v1/`, Program 7; one stream, timestamp/source-only, no economic candidate yet.
+- Active research unit: none at the closed Program 7 audit boundary; one stream, macro comparison required before a successor.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_PAUSED_AFTER_FAMILY_010_CLOSED_VALID_ADVERSE_NO_PASSER_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.

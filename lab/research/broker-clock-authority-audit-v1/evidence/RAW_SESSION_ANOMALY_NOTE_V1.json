@@ -1,0 +1,96 @@
+{
+  "schema": "zeta-broker-clock-raw-session-anomaly-note-v1",
+  "scope": "time column only, 2024-2025; no new acquisitions or economic data opened",
+  "observations": {
+    "QQQ": [
+      {
+        "date": "2024-06-03",
+        "first_server_wall": "2024-06-03 17:35:00",
+        "last_server_wall": "2024-06-03 22:59:00",
+        "rows": 325
+      },
+      {
+        "date": "2025-03-10",
+        "first_server_wall": "2025-03-10 17:30:00",
+        "last_server_wall": "2025-03-10 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-11",
+        "first_server_wall": "2025-03-11 17:30:00",
+        "last_server_wall": "2025-03-11 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-12",
+        "first_server_wall": "2025-03-12 17:30:00",
+        "last_server_wall": "2025-03-12 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-13",
+        "first_server_wall": "2025-03-13 17:30:00",
+        "last_server_wall": "2025-03-13 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-14",
+        "first_server_wall": "2025-03-14 17:30:00",
+        "last_server_wall": "2025-03-14 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-11-04",
+        "first_server_wall": "2025-11-04 16:55:00",
+        "last_server_wall": "2025-11-04 22:59:00",
+        "rows": 365
+      }
+    ],
+    "TQQQ": [
+      {
+        "date": "2024-06-03",
+        "first_server_wall": "2024-06-03 17:35:00",
+        "last_server_wall": "2024-06-03 22:59:00",
+        "rows": 325
+      },
+      {
+        "date": "2025-03-10",
+        "first_server_wall": "2025-03-10 17:30:00",
+        "last_server_wall": "2025-03-10 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-11",
+        "first_server_wall": "2025-03-11 17:30:00",
+        "last_server_wall": "2025-03-11 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-12",
+        "first_server_wall": "2025-03-12 17:30:00",
+        "last_server_wall": "2025-03-12 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-13",
+        "first_server_wall": "2025-03-13 17:30:00",
+        "last_server_wall": "2025-03-13 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-03-14",
+        "first_server_wall": "2025-03-14 17:30:00",
+        "last_server_wall": "2025-03-14 23:59:00",
+        "rows": 390
+      },
+      {
+        "date": "2025-11-04",
+        "first_server_wall": "2025-11-04 16:55:00",
+        "last_server_wall": "2025-11-04 22:59:00",
+        "rows": 365
+      }
+    ]
+  },
+  "inference_limit": "The 2025-03-10..14 complete-length ETF sessions appear one hour later in raw server labels than the predominant 16:30..22:59 session. Timestamp-only evidence cannot establish whether this is historical labeling, a broker quote-session exception, or another source issue. Do not claim that a nominal New-York-close formula independently certifies every raw bar. No data shift, deletion, reinterpretation by economic fit, or candidate rescue is authorized by this note.",
+  "future_requirement": "Any source needing exact external-market alignment must resolve such source-session anomalies with independent time authority before binding economics. This does not alter server-bar-index-only strategies or the separately verified exact V7R native run."
+}
