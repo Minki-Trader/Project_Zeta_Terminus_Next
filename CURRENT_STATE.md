@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0586`
+- Latest state ID: `STATE-0587`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014 is closed with all three policies adverse after one unchanged full path and report-only serialization recovery. The Program 2 Treasury-note source-readiness unit is closed after exact native identity and 36 monthly 2023-2025 timestamp observations. Historical roll/adjustment, material coverage gaps and external-clock authority remain unresolved, so no candidate is opened. The own no-EA reader is normally stopped; all research units/candidates/economic paths are closed pending whole-map comparison. Every predecessor and Optimization stays closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014 is closed with all three policies adverse after one unchanged full path and report-only serialization recovery. The Program 2 Treasury-note source-readiness unit is closed after exact native identity and 36 monthly 2023-2025 timestamp observations. Historical roll/adjustment, material coverage gaps and external-clock authority remain unresolved, so no candidate is opened. The own no-EA reader is normally stopped; all research units/candidates/economic paths are closed. Whole Programs 1-5/7 comparison now selects prospective Program 1 ordered symbolic-path context prediction; no successor root, numeric declaration, features or outcomes are open. Every predecessor and Optimization stays closed.
 - Next Live-Dev authorization: `ENABLED` for the installed user-authorized exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed. The assistant may check readiness but does not execute investment/trading activation; the user must directly perform final activation after unchanged operational gates.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,8 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `TREASURY_SOURCE_CLOSED_PARTIAL_HISTORY_ROLL_CLOCK_UNRESOLVED_WHOLE_MAP_RECOMPARE_PENDING`.
+- Active phase: `TREASURY_SOURCE_CLOSED_WHOLE_MAP_RECOMPARED_PROGRAM_1_SYMBOLIC_PATH_CONTEXT_DECLARATION_PENDING`.
 - Sole active source-only unit: none. `lab/research/treasury-note-futures-source-readiness-v1/` is closed partial/unready, with 512,522 original time observations in all 36 months but unresolved continuity/clock authority. Closure 36DD29B0F195699F54773903585913DA97DC12DFEC1CB50907EAC5933659289E. Every Challenge predecessor remains closed; no native V8 winner exists.
+- Prospective successor: `lab/research/independent-symbolic-path-context-adapter-challenge-v1/`, Program 1, Python adapter + EA. Root is not created. Whole-map authority 8898503515C7DA4035B802A2FD105FBA2A56F0B479F855B020F5CAE7FCBA3F5A selects causal bounded-memory context-tree prediction of ordered completed-price symbols; complete independent numeric/data/cost/lifecycle declaration is required before any candidate output.
 - Active Challenge family / Optimization campaign count: `0 / 0`; native candidate EA/economic runtime count is zero. All three no-EA source readers are normally stopped with zero exact-path process owners. Active source-only unit count is zero. The Treasury reader used 265,083,144 bytes under its 2 GiB cap; C: remains above 56 GiB free.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
@@ -94,7 +95,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Recompare every macro Program 1-5/7 after the complete Treasury source closure. Exact native US10YR identity and returned timestamps are established, but no historical continuity/roll/clock authority or candidate exists. Preserve its immutable source/evidence/runtime and all absent dates; no adjacent GILT/FX/ETF substitution or old-model rescue. Open at most one independently complete successor after the whole comparison, within the full V8 Challenge and 30 GiB reserve.
+1. Prepare one complete prospective Program 1 `independent-symbolic-path-context-adapter-challenge-v1` declaration under the completed whole-map authority. Read the primary context-tree method; fix the finite price alphabet, flat observations, posterior/label timing, model mixture, source provenance, all periods, costs, execution, protection, sizing and bundle stops before candidate features or economics. Ordered contexts must not collapse into a retuned closed tick-count imbalance, old expert/GRU action head, price-turn or fair-reference signal. Preserve every source date, own physical inputs, mandatory Python adapter + EA architecture and all V8 gates. No numeric contract, root, candidate output or native path is open yet; retain at least 30 GiB free.
 2. The V7R market follow-up is complete and its heartbeat PAUSED. Preserve entries-disabled operation; the assistant must not activate trading. Source, settings and risk contract remain frozen. Any further operational read follows a new concrete need, not repetitive broker polling.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
