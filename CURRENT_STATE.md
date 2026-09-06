@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0568`
+- Latest state ID: `STATE-0569`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; one Program 2 Family 012 delayed repo-conditioned M30 shock bundle is declared with its causal Python source frozen. It uses its own physical original observations only. First judge structural supply; no candidate outcomes have opened. Family 011, clock audit and NY Fed source study remain closed; V7 return engineering and Optimization remain closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; one Program 2 Family 012 delayed repo-conditioned M30 shock bundle is declared with its causal Python source frozen. It uses its own physical original observations only. Structural supply passes at 2,595 shared impulses / 517 dates (5.0193/date); forward returns and monetary outcomes remain unopened before the economic-source freeze. Family 011, clock audit and NY Fed source study remain closed; V7 return engineering and Optimization remain closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_012_DECLARED_SOURCE_FROZEN_STRUCTURAL_SUPPLY_PENDING`.
-- Sole active Challenge family: Program 2 Family 012 `lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/`, one propagation/reversal bundle. Its complete contract and causal Python adapter are frozen before candidate features. All predecessor families and source studies remain closed.
-- Active Challenge family / Optimization campaign count: `1 / 0`; Family 012 starts with one normal causal impulse stage. Native EA/runtime count is zero.
+- Active phase: `FAMILY_012_STRUCTURAL_PASS_ECONOMIC_SOURCE_FROZEN_RUN_PENDING`.
+- Sole active Challenge family: Program 2 Family 012 `lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/`, one propagation/reversal bundle. Its complete contract and causal source preceded all features; the unchanged ordinary M1 economic stage is now frozen after the structural pass. All predecessor families and source studies remain closed.
+- Active Challenge family / Optimization campaign count: `1 / 0`; Family 012 has passed its causal impulse stage and awaits one complete two-role economic run. Native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -86,7 +86,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Run the frozen ordinary Family 012 causal adapter once and judge its optimistic supply against three impulses per normal source date, yearly count, symbol breadth and both signs. Read its complete contract and `evidence/STRUCTURAL_IMPLEMENTATION_FREEZE_V1.json` first. Zero-impulse dates remain in the denominator. A necessary structural failure closes both roles without forward-return/profit work or any adjacent rescue; only a pass permits the unchanged predeclared economic stage. Keep at least 30 GiB free.
+1. Run the frozen ordinary Family 012 `adapter/run_economics.py` once for both unchanged roles after its clean origin/main freeze. Read `evidence/ECONOMIC_IMPLEMENTATION_FREEZE_V1.json` and the complete contract. All structural gates passed, but 5.0193 optimistic impulses/date are not actual fills. Judge complete price/cost/financing ledgers, actual M1-marked DD and genuine first fills; no partial result or nearby rescue. A full failure closes both roles and triggers a whole-macro comparison. Keep at least 30 GiB free.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -111,8 +111,8 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: Family 012, Program 2, propagation/reversal of a new >=1 prior-ATR M30 body shock conditioned on eight-calendar-day delayed SOFR-TGCR. Fixed 2 ATR stop, 4 ATR take, four M30 intervals, 2%/3%/8% risk. Source-only physical copies total 190,516,821 bytes, 3,174,628 M1 rows over 2023 warmup and 2024-2025 development; no 2026 price record copied or decoded. Structural supply is pending, with no EA/native work.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_012_DECLARED_CAUSAL_SOURCE_FROZEN_PRE_FEATURE_PRE_OUTCOME`.
+- Active research unit: Family 012, Program 2, propagation/reversal of a new >=1 prior-ATR M30 body shock conditioned on eight-calendar-day delayed SOFR-TGCR. Fixed 2 ATR stop, 4 ATR take, four M30 intervals, 2%/3%/8% risk. Source-only physical copies total 190,516,821 bytes, 3,174,628 M1 rows over 2023 warmup and 2024-2025 development; no 2026 price record copied or decoded. Structural supply passes with 2,595 impulses, 517 normal dates, 250 zero-impulse dates and five impulses lacking an exact opening M1; no forward-return/economic result or EA/native work has opened.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_012_STRUCTURAL_PASS_ECONOMIC_FREEZE_PRE_FORWARD_OUTCOME`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.

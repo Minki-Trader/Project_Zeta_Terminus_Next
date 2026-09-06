@@ -1,0 +1,93 @@
+{
+  "schema": "zeta-ch012-fixed-bundle-economic-implementation-freeze-v1",
+  "recorded_utc": "2026-09-06T18:17:41.324241+00:00",
+  "pre_structural_source_commit": "5e2dc8d",
+  "status": "STRUCTURAL_PASS_ECONOMIC_SOURCE_FROZEN_BEFORE_FORWARD_OUTCOMES",
+  "bound_files": [
+    {
+      "path": "lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/config/contract.json",
+      "bytes": 10884,
+      "sha256": "AF11DE416316A7F6E65F678E05F5BADFE2FCD964DC4033B9086E06EFE841C351"
+    },
+    {
+      "path": "lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/evidence/DECLARATION_V1.json",
+      "bytes": 4911,
+      "sha256": "952E518F3912245B843A22498B661B28381485B04F001217C27E0E9898ADF05E"
+    },
+    {
+      "path": "lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/evidence/INPUT_COPY_V1.json",
+      "bytes": 6482,
+      "sha256": "EFDA37A38210D83BAB4C1E9458F806BD883EB61702C705031322C468E38A107A"
+    },
+    {
+      "path": "lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/evidence/STRUCTURAL_IMPLEMENTATION_FREEZE_V1.json",
+      "bytes": 1944,
+      "sha256": "64BF88C102845F04E91E920700A3C532F10C4E4D965CA5F44133995EB45461A3"
+    },
+    {
+      "path": "lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/evidence/STRUCTURAL_RESULT_V1.json",
+      "bytes": 3207,
+      "sha256": "5FC132B576E7C3F427BA62508175ED1CF2DDA428012BB36A3D0CB6B89751C88F"
+    },
+    {
+      "path": "lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/adapter/run_adapter.py",
+      "bytes": 14740,
+      "sha256": "EA1ECC8C414882CE336FEECBE582FEA7AC30B1E91C191D825A331FA8731A8828"
+    },
+    {
+      "path": "lab/research/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/adapter/run_economics.py",
+      "bytes": 21749,
+      "sha256": "504DE5918DE7AF0A757783518BE89425BC1AC3D0D6D4ABB5ADA8F40CE5DA353E"
+    },
+    {
+      "path": "lab/artifacts/raw/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/structural-final/summary.json",
+      "bytes": 3207,
+      "sha256": "5FC132B576E7C3F427BA62508175ED1CF2DDA428012BB36A3D0CB6B89751C88F"
+    },
+    {
+      "path": "lab/artifacts/raw/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/structural-final/impulses.csv",
+      "bytes": 580166,
+      "sha256": "6279A64FB9996478641B00590478B0E624B04D66EAA07CF5D8D122775D5CD41C"
+    },
+    {
+      "path": "lab/artifacts/raw/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/structural-final/normal-days.csv",
+      "bytes": 8450,
+      "sha256": "206C82E2A267DB89E7E6B1EB192CBB17662FFE15BF67CD508F666EF7B91C3F05"
+    },
+    {
+      "path": "lab/artifacts/raw/independent-delayed-repo-pressure-m30-shock-adapter-challenge-v1/structural-final/market-source-summary.json",
+      "bytes": 1832,
+      "sha256": "175E2AA27413D3126102553752871ED3E824A759C740FF71C23CC51991C3C8F6"
+    }
+  ],
+  "structural_observation": {
+    "normal_dates": 517,
+    "shared_optimistic_impulses": 2595,
+    "impulses_per_normal_date": 5.019342359767892,
+    "zero_impulse_dates": 250,
+    "impulses_without_exact_entry_minute": 5,
+    "all_necessary_gates_pass": true
+  },
+  "economic_contract_changes": "None. Both original response directions, source/ATR/geometry, risks, periods, costs and gates remain unchanged. Only ordinary execution/accounting mechanics are made explicit below before forward returns.",
+  "implementation_details": {
+    "protective_prices": "Round stop and take outward to the broker tick, never inward; size from the executed quote to that rounded original stop. Entry is at tick-precision M1 representative Bid/Ask; the original 2/4 ATR geometry is not tuned.",
+    "portfolio_time_order": "Book due midnight snapshot financing; refresh all available opening quotes; close all opening gap/expired positions; mark; take one actual-cash snapshot; admit all frozen-priority impulses; then process all current M1 high/low and the aggregate closing mark. No post-intrabar admission or same-minute favorable sizing.",
+    "intrabar_ambiguity": "Stop first if both stop/take reached; gap stop at adverse opening, favorable gap take capped at take. Intrabar proxy fills are labelled minute start +59 seconds, not claimed exact tick timestamps.",
+    "calendar_cash_accounting": "Realized price P/L/commission at fill time; swap at effective broker midnight (record delayed observation across gaps). Yearly profits use these booking dates, not retrospective assignment of every fee to the trade exit year. Long extra directional spread at entry, short at exit, and midquote halves at their respective dates.",
+    "money_arithmetic": "Unrounded floating USD proxy P/L with broker volume/tick rounding. Native cent-booking and historical contract precision remain outside this proxy; cash and fees must reconcile to complete trade/cost tapes.",
+    "marking": "M1 opening after known exits, after any admission, and M1 close while positions or impulses exist, plus initial/final flat. Flat idle intervals cannot change equity and are omitted from the tape, never the 517-date denominator.",
+    "stage_bundle": "One complete process runs propagation then reversal unchanged before the aggregate verdict. No intermediate economic winner or retained fragment. Fixed end-of-period no-entry interval remains seven calendar days; natural complete closure is mandatory."
+  },
+  "proxy_execution_limits": [
+    "M1 observed spread is a representative bar field, not an archived first-tick Ask. Entry/exit friction and intra-minute order are approximations; causal signal production does not certify tick-level execution causality.",
+    "Historical margin rates and historical commissions are unavailable in these input snapshots. Gross risk-limited admission and zero commission are optimistic screens; no CFD leverage margin formula is invented.",
+    "Swap mode 2 quoted snapshot USD amounts, including Friday triple, approximate historical financing. They cannot prove native costs.",
+    "M1 open/close liquidation marks omit within-minute equity extremes. This is proxy marked DD, never native MT5 relative equity DD.",
+    "The unchanged latest-candidate procedural lock and known aggregate/documentation exposures require independent confirmation authority before any 2026 outcomes. No EA/Portable/native or Live right follows from this screen."
+  ],
+  "normal_compilation": "PASSED python -m py_compile on run_economics.py; ordinary source review performed, no tests or validator infrastructure",
+  "forward_return_or_profit_outcomes_opened": false,
+  "native_candidate_count": 0,
+  "free_bytes": 83294322688,
+  "minimum_free_bytes": 32212254720
+}

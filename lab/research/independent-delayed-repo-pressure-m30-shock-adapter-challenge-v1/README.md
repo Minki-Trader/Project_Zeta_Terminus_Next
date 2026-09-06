@@ -6,4 +6,4 @@ The complete binding contract is `lab/research/independent-delayed-repo-pressure
 
 The first ordinary adapter stage emits both roles' shared causal impulse tape and measures an optimistic first-fill supply bound. It does not calculate forward returns or pretend that impulses are actual fills. Sparse supply closes both roles without an adjacent rescue. Only a structurally feasible bundle can open its predeclared economics. Only an unchanged economic survivor can receive a one-time CXR2 execution-shell copy, candidate-specific confirmation and native EA work.
 
-Status: declared, no candidate price features or outcomes opened. No EA, Portable or Live authority. Maintain at least 30 GiB free. Exact V7R and its pending current-market handoff remain separate.
+Status: structural pass: 2,595 shared impulses / 517 normal dates = 5.0193 per date. Both signs and all three symbols pass. No forward return or monetary outcome is opened yet; the unchanged ordinary economic source is frozen for one full two-role run. No EA, Portable or Live authority. Maintain at least 30 GiB free. Exact V7R and its pending current-market handoff remain separate.
