@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0563`
+- Latest state ID: `STATE-0564`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Program 7 clock audit and full macro comparison are closed; sole Family 011 is `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, Program 4. V7 return engineering is closed; Optimization remains closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; the user explicitly updated the Goal on 2026-09-07. Program 7 clock audit and full macro comparison are closed; Family 011 `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, Program 4, is now closed adverse with no passer. No research family is active at the next macro-comparison boundary. V7 return engineering is closed; Optimization remains closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_011_EXOGENOUS_FLOW_EXIT_FROZEN_BEFORE_DEVELOPMENT`.
-- Sole active Challenge family: 011 `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, Program 4, one three-role Python-adapter bundle. Family 010 and the clock audit are closed and immutable.
-- Active Challenge family / Optimization campaign count: `1 / 0`; the single Family 011 bundle is frozen before development outcomes. Native EA/runtime count is zero.
+- Active phase: `FAMILY_011_CLOSED_PROXY_ADVERSE_BEFORE_NEXT_MACRO_COMPARISON`.
+- Sole active Challenge family: none. Family 011, Family 010 and the clock audit are closed and immutable.
+- Active Challenge family / Optimization campaign count: `0 / 0`; all three Family 011 roles closed together with no passer. Native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -74,6 +74,8 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 - Family 010 durable result/audit are `11,018 / 103,065` bytes at `9B62D2ED...690D / 2B7E9F2F...287B`; raw five-file bundle is `13,403,417` bytes / manifest `74E90947...20B5`. Closure is `10,107` bytes / `EED328B969A743F954AE39BE4401BB0154BC0B78AA3C9EFF05086080CF4A37B0`, status `CLOSED_VALID_ADVERSE_DEVELOPMENT_NO_PASSER_NO_BROAD_HEADROOM_NO_CONFIRMATION_NO_EA_NO_MT5`.
 - Locked 2026, confirmation, EA, compile and MT5 stayed unopened for Families 001–010 unless explicitly recorded otherwise; no proxy result beat V8 and no family has Live authority. Closed families and their adjacent threshold/window/subgroup/symbol/direction/exit/risk rescues are immutable.
 
+- Family 011 exogenous-flow H4 exits, Program 4: HOLD8 / TRAIL / NO_PROGRESS actual `-$56.9853 / -$40.7125 / -$43.9478`, stressed `-$65.0694 / -$84.0872 / -$69.1946`, proxy marked DD `70.4570% / 73.6866% / 69.6786%`, first fills/date `1.3904 / 2.6231 / 2.4615`. Every role fails profit, positive-year, DD and turnover gates; complete ordinary run reconciles 723/1,364/1,280 closed trades and ends flat. No seed or 2026/native work opens. Historical margin/commission/swap and intrabar-DD limitations remain explicit proxy limits.
+
 ## Pause and cleanup boundary
 
 - Subsequent clock authority: `lineage/CHALLENGE_BROKER_CLOCK_AUTHORITY_CORRECTION_V1.json` supersedes intended-session adverse authority for Families 006/007 and suspends complete intended-session authority for 008/010. Original files/results remain immutable and descriptive for their implemented time samples. Family 009 keeps its adverse H4 development conclusion for this specific issue. Audit found 965 shifted Family 006 events and 38 nominally misaligned dates among Family 010's 514. The 2025-03-10..14 ETF source-session exception remains unresolved for future exact external-session use; no old family reopens automatically.
@@ -84,10 +86,10 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Run the frozen Family 011 adapter once through HOLD8_CONTROL, CLOSE_TRAIL_2ATR and NO_PROGRESS_3B development under `DECLARATION_V2_BINDING.json` / `IMPLEMENTATION_FREEZE_V1.json`. Preserve at least 30 GiB free plus its 128 MiB output allowance. No 2026 value or native EA opens unless one unchanged role passes all development gates and confirmation authority is resolved.
+1. Family 011 is closed. Recompare Programs 1-5 and 7 before declaring one materially distinct or independently justified successor; retain the 30 GiB reserve. No Family 011 2026 confirmation or EA opens.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
-4. Close all three Family 011 roles together. On no passer, freeze complete proxy economics and recompare Programs 1-5 and 7; no hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
+4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
 5. The persistent Goal remains incomplete until a complete native candidate passes every V8 gate.
 
 ## Frozen lane boundaries
@@ -109,8 +111,8 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: Family 011 `lab/research/independent-exogenous-flow-h4-exit-adapter-challenge-v1/`, sole Program 4 stream, frozen before its development run.
-- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_011_FROZEN_PREOUTCOME_EXOGENOUS_FLOW_EXIT_BUNDLE`.
+- Active research unit: none at the closed Family 011 boundary; full macro comparison is required before a successor.
+- Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_011_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
