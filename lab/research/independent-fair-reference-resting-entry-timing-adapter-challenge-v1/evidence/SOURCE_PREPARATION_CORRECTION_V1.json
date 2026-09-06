@@ -1,0 +1,24 @@
+{
+  "schema": "zeta-ch014-source-preparation-correction-v1",
+  "recorded_utc": "2026-09-06T20:39:23.831364+00:00",
+  "failed_stage": "First prepare copied generic platform then rejected first historical TKC before copying or decoding it.",
+  "cause": "Windows Path.resolve canonicalizes bases to Bases; dictionary equality treated lexical capitalization as byte drift although size and SHA-256 were identical.",
+  "all_76_declared_source_bytes_and_hashes_unchanged": true,
+  "first_declared_path": "lab/runtime/v7rr1-portable/bases/FPMarketsSC-Live/ticks/US100/202312.tkc",
+  "resolved_relative_path": "lab/runtime/v7rr1-portable/Bases/FPMarketsSC-Live/ticks/US100/202312.tkc",
+  "retained_partial_copy": {
+    "path": "lab/runtime/ch014-fair-reference-source-portable/terminal64.exe",
+    "bytes": 121728696,
+    "sha256": "D2285613044952C1D62AFEA982B61C3635525C9DA6F8E89B9A2C8AFA7BC69C3A"
+  },
+  "own_reader_processes_at_failure": 0,
+  "price_features_fills_economics_computed": false,
+  "correction": "Compare byte size and cryptographic content against the exact declared path, permit preparation to resume an unlaunched incomplete directory, preserve and verify existing copied files instead of overwriting. Do not change observation content or economic contract.",
+  "source_compilation": "Passed after correction",
+  "previous_commit": "c9d0acd",
+  "previous_source_freeze": {
+    "path": "lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/evidence/SOURCE_IMPLEMENTATION_FREEZE_V1.json",
+    "bytes": 1288,
+    "sha256": "F7AC74AA50A509B2FF9DB83CDC5EE17F30D65180FEEF57759A8EE1603124FF41"
+  }
+}

@@ -65,23 +65,27 @@ def reserve(contract, artifact, runtime):
 def prepare():
     contract, artifact, runtime = settings()
     reserve(contract, artifact, runtime)
-    if runtime.exists():
-        raise RuntimeError("Reader already staged; inspect/resume it instead of replacing it")
+    if ((FAMILY_ROOT / "evidence/SOURCE_STAGING_V1.json").exists() or
+            (runtime / "config/source-readonly.ini").exists()):
+        raise RuntimeError("Reader already staged; inspect/resume capture instead of replacing it")
     ignored = subprocess.run(
         ["git", "check-ignore", "--quiet", str(runtime / "config/accounts.dat")], cwd=REPO)
     if ignored.returncode != 0:
         raise RuntimeError("Private native reader must be Git-ignored before staging")
-    runtime.mkdir(parents=True)
-    (runtime / "config").mkdir()
+    runtime.mkdir(parents=True, exist_ok=True)
+    (runtime / "config").mkdir(exist_ok=True)
     declaration = json.loads((FAMILY_ROOT / "evidence/DECLARATION_V1.json").read_text(encoding="utf-8-sig"))
     copied = []
     for source_record in declaration["physical_native_cache_and_platform_sources"]:
         source = REPO / source_record["source"]["path"]
         target = runtime / source_record["relative_target"]
-        if fingerprint(source) != source_record["source"]:
+        observed_source = fingerprint(source)
+        if (observed_source["bytes"] != source_record["source"]["bytes"] or
+                observed_source["sha256"] != source_record["source"]["sha256"]):
             raise RuntimeError("Declared native observation/platform source drift")
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(source, target)
+        if not target.exists():
+            shutil.copyfile(source, target)
         observed = fingerprint(target)
         if observed["bytes"] != source_record["source"]["bytes"] or observed["sha256"] != source_record["source"]["sha256"]:
             raise RuntimeError("Owned physical source copy failed")
@@ -121,7 +125,10 @@ def capture():
     import MetaTrader5 as mt5
     contract, artifact, runtime = settings()
     reserve(contract, artifact, runtime)
-    freeze = json.loads((FAMILY_ROOT / "evidence/SOURCE_IMPLEMENTATION_FREEZE_V1.json").read_text(encoding="utf-8-sig"))
+    freeze_path = FAMILY_ROOT / "evidence/SOURCE_IMPLEMENTATION_FREEZE_V2.json"
+    if not freeze_path.exists():
+        freeze_path = FAMILY_ROOT / "evidence/SOURCE_IMPLEMENTATION_FREEZE_V1.json"
+    freeze = json.loads(freeze_path.read_text(encoding="utf-8-sig"))
     for item in freeze["files"]:
         if fingerprint(REPO / item["path"]) != item:
             raise RuntimeError("Pre-acquisition source/declaration drift")

@@ -1,0 +1,47 @@
+{
+  "schema": "zeta-ch014-prefeature-implementation-freeze-v1",
+  "recorded_utc": "2026-09-06T20:48:52.901431+00:00",
+  "stage": "AFTER_OWN_INPUT_SEAL_AND_NORMAL_READER_STOP_BEFORE_FIRST_CANDIDATE_FEATURES",
+  "files": [
+    {
+      "path": "lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/config/contract.json",
+      "bytes": 18563,
+      "sha256": "A81FB972202E9F04FC63BD6A8573FDDFD436B047631A19FB83DB89024833A60F"
+    },
+    {
+      "path": "lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/evidence/DECLARATION_V1.json",
+      "bytes": 28779,
+      "sha256": "10469518273816A3A6338C36F658DED405A1C60BE1F7434459A39FF779D1E246"
+    },
+    {
+      "path": "lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/adapter/derive_features.py",
+      "bytes": 15584,
+      "sha256": "B2152083C4EB7127F23867FDA072F3781F7E5982710D26515D3F50ABE01C14B7"
+    },
+    {
+      "path": "lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/evidence/INPUT_ACQUISITION_V1.json",
+      "bytes": 173804,
+      "sha256": "3F8F59EB293E36A1E79A3C3EADD0CB51E0686B9F3900750636572C80A44656CF"
+    },
+    {
+      "path": "lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/evidence/SOURCE_READER_SHUTDOWN_V1.json",
+      "bytes": 584,
+      "sha256": "C71B3687088B7D1D68EE00695CE6D01CC6A458932BF6B190873809D601FD14B5"
+    },
+    {
+      "path": "lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/evidence/INPUT_SEAL_V1.json",
+      "bytes": 4790,
+      "sha256": "060032AC255AE6169DE266515A591942A1D30732C8E3C0FF6DDA16A45A9AA878"
+    },
+    {
+      "path": "lab/artifacts/raw/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/input/spec/current-contract-source.json",
+      "bytes": 3594,
+      "sha256": "ED477F68E867FCA41E21FF8E4A9D1651B8A65B2AD8AC0F9D29C155A595B59A4E"
+    }
+  ],
+  "correct_python_compilation": "Passed; Numba compiles the ordinary causal loop during first normal production. No synthetic trials, unit tests, checker or test-only CLI.",
+  "source_consumption": "Each own monthly NPY is hashed against its sealed acquisition record before price decoding. Generate completed M1 bars only on later ticks and retain exact closing/discovery source ordinals.",
+  "feature_semantics": "A gap clears the next window and arming after the preceding valid-prefix event has been retained. A below-minimum sigma emits no event; an inside close may arm. Rolling mean/population variance use a direct two-pass calculation over 60 strictly prior closes.",
+  "supply_semantics": "The frozen structural screen is an optimistic upper bound ignoring expiry and monetary rejections. Its pre-cutoff events must have nominal and discovery times in the declared entry period; all delayed emissions remain in the event tape and the fresh subset is reported separately. Dates/years attach to actual discovery, never an invented earlier executable timestamp.",
+  "no_outcome_work": "No forward return, fill, target/stop path, risk amount, accepted trade or profit exists at freeze. All three policies retain their unchanged monetary contract and genuine fill turnover gates."
+}

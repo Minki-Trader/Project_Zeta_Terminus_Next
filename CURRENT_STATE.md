@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0579`
+- Latest state ID: `STATE-0580`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014, Program 3, is the sole declared candidate: independent fair-reference immediate/resting/causal-cancellation timing. Its complete contract and source acquisition implementation are frozen before own price features or fills. Own no-EA historical source preparation is next; no candidate economic/native runtime is open. Family 013, the separate static contract source unit, all predecessors and Optimization remain closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 014, Program 3, is the sole declared candidate: independent fair-reference immediate/resting/causal-cancellation timing. Complete own 269,321,351-tick input and the fresh feature implementation are sealed before first features or fills. Source reader PID 25492 normally stopped; necessary structural supply is next. No candidate economic/native runtime is open. Every predecessor and Optimization remains closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,9 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_014_DECLARED_PRE_FEATURE_OWN_ORDERED_SOURCE_ACQUISITION_PENDING`.
+- Active phase: `FAMILY_014_OWN_INPUT_SEALED_READER_STOPPED_PREFEATURE_IMPLEMENTATION_FROZEN`.
 - Sole active Challenge family: `lab/research/independent-fair-reference-resting-entry-timing-adapter-challenge-v1/`, Program 3. Family 013 and all predecessors are closed and immutable; no proxy result has beaten V8.
-- Active Challenge family / Optimization campaign count: `1 / 0`; native candidate EA/economic runtime count is zero. Family 014 may prepare its own no-EA historical reader; the separate closed static contract reader remains stopped.
+- Active Challenge family / Optimization campaign count: `1 / 0`; native candidate EA/economic runtime count is zero. Family 014's own source reader and the earlier closed static reader are normally stopped, with zero exact-path process owners.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -92,7 +92,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Acquire and seal Family 014 own ordered Bid/Ask source, then normally stop its no-EA reader and freeze the fresh feature implementation before necessary structural supply. The complete 60-M1 fresh-excursion reference, immediate/resting/cancel bundle, quote/expiry/geometry/risk/costs and later gates are already fixed. Own source M1/tick date union keeps every zero-event day. Current contract readiness certifies neither queue priority nor historical costs/margin. No closed family/source reader restarts; keep at least 30 GiB free and within the 36 GiB declared growth allowance.
+1. Run the frozen Family 014 feature producer once on the sealed own input and judge necessary optimistic supply over all 517 source dates. It records actual discovery and nominal age without forward returns, fills or risk. Only a supply pass opens a separately frozen ordinary three-role economic implementation; the numeric contract stays unchanged. Preserve every input and source correction record, keep both source readers stopped, at least 30 GiB free and within the 36 GiB declared growth allowance.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -117,9 +117,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: Family 014, declared before own acquisition/features/fills. Declaration SHA-256 `10469518273816A3A6338C36F658DED405A1C60BE1F7434459A39FF779D1E246` pins 75 monthly observation caches plus generic platform, totaling 1,292,592,818 bytes. No own reader, candidate feature/fill output, 2026 price or native candidate path exists at this declaration boundary. Closed static reader PID 33328 remains stopped.
+- Active research unit: Family 014. Declaration `10469518273816A3A6338C36F658DED405A1C60BE1F7434459A39FF779D1E246` and source phase `c9d0acd` precede own acquisition. Input seal `060032AC255AE6169DE266515A591942A1D30732C8E3C0FF6DDA16A45A9AA878` owns 75 monthly NPY files / 16,159,300,260 bytes, 269,321,351 ticks and all 517 development dates. Prefeature freeze `D4C5B32B0763F5E54CE370838EB4B85D886D1255FE4B30F41A9495D9877FACA7` precedes first features. No 2026 candidate price, economic output or native candidate exists; both no-EA source readers remain stopped.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_013_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
-- Latest storage observation: C: free `75.822 GiB` at Family 014 declaration on `2026-09-07`; minimum 30 GiB retained. Private stopped static reader is preserved, and no deletion is needed. Latest local-only V7R snapshot is healthy 0/0 with responsive EA/dashboard and no alerts/warnings.
+- Latest storage observation: C: free `58.023 GiB` at Family 014 input seal on `2026-09-07`; own input/runtime occupy `17.684 GiB` within the 36 GiB allowance. All canonical data and stopped readers are preserved. Latest local-only V7R snapshot is healthy 0/0 with responsive EA/dashboard and no alerts/warnings.
