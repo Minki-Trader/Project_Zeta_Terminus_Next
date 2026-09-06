@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0589`
+- Latest state ID: `STATE-0590`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 015 symbolic-path context is closed after one complete causal fit/structural run. CTW supplied only three optimistic intentions over all 517 development source dates; its IID reference supplied none. All four necessary frequency/year/breadth gates fail, so no monetary path, seed, 2026 or native work opens. Every predecessor/source study and Optimization remains closed. Recompare all Programs 1-5/7 before selecting a successor.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`. Family 015 symbolic-path context is closed after one complete causal fit/structural run. CTW supplied only three optimistic intentions over all 517 development source dates; its IID reference supplied none. All four necessary frequency/year/breadth gates fail, so no monetary path, seed, 2026 or native work opens. Every predecessor/source study and Optimization remains closed. Whole Programs 1-5/7 comparison selects prospective Program 2 FRBSF news-sentiment publication readiness only; no new source root, declaration, values or economic candidate is open.
 - Next Live-Dev authorization: `ENABLED` for the installed user-authorized exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed. The assistant may check readiness but does not execute investment/trading activation; the user must directly perform final activation after unchanged operational gates.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,9 +34,10 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_015_CLOSED_COMPLETE_CAUSAL_STRUCTURAL_SUPPLY_FAILURE_WHOLE_MACRO_RECOMPARE_PENDING`.
+- Active phase: `FAMILY_015_CLOSED_WHOLE_MAP_RECOMPARED_PROGRAM_2_NEWS_SENTIMENT_PUBLICATION_DECLARATION_PENDING`.
 - Sole active source-only unit: none. Treasury-note source readiness is closed partial/unready with historical roll/coverage/clock limits; its no-EA reader is normally stopped. All predecessor evidence remains immutable.
 - Latest closed Challenge family: `lab/research/independent-symbolic-path-context-adapter-challenge-v1/`, Program 1, Python adapter + EA. Full 96,542 forecasts and 94,970 matched mature-label scores per role are complete. CTW mean log loss 1.42431372 improves IID 1.43051886, but only three cost-free optimistic intentions exist (all US100 short in 2024), versus >=3/date over all 517 dates. Close the entire fixed bundle without a seed or monetary verdict. Complete result `BE3D025C912713FB2B6F260FA54789F5AAB69A270CEACC81B6F9330186DCEE87` and own closure preserve the unchanged source/input/model/forecast evidence.
+- Prospective source-only unit: `lab/research/frbsf-news-sentiment-publication-readiness-v1/`, Program 2, not Family 016. Root is not created. Whole-map authority `E6362A2F73DF041D712371A03613220C07F147517CE333677E7A81E83CDCF993` selects the exact published-news-tone source availability/revision question. This grants no EPU/realized-volatility or alternate-index economic substitution; the closed Unit 110 boundary remains. Full source declaration must precede value acquisition.
 - Active Challenge family / Optimization campaign count: `0 / 0`; native candidate EA/economic runtime count is zero. All three old no-EA readers stay normally stopped. Own Family 015 raw input 190,486,407 bytes and 15 structural files/29,925,196 bytes are preserved, below its 3 GiB total allowance and above the 30 GiB free reserve. No candidate 2026 values are open.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
@@ -97,7 +98,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Recompare Programs 1-5 and 7 as a whole after the complete Family 015 sparse-supply closure. No cost, cushion, alphabet, context depth, magnitude estimator, calibration, timeframe, label, direction, symbol or risk rescue follows. Preserve both models, every forecast and all source dates. Only one materially distinct prospective unit may be selected; a full new declaration must precede its outputs. Keep the full independent V8 Challenge architecture and gates, without a native winner claim.
+1. Prepare one complete Program 2 `frbsf-news-sentiment-publication-readiness-v1` source-only declaration before any source values. Establish original release/vintage availability, weekly-publication versus daily-observation distinction, composition adjustment, trailing smoothing and revision behavior for exact declared 2023-2025 history. A current CSV/XLSX or assumed fixed delay is insufficient. No asset prices, economic response, old EPU/volatility substitution, 2026 source values, native runtime or broker query. Close the exact source question and recompare all Programs before any genuinely independent candidate. Keep all Family 015 source, model, forecasts and closure immutable and retain at least 30 GiB free.
 2. The V7R market follow-up is complete and its heartbeat PAUSED. Preserve entries-disabled operation; the assistant must not activate trading. Source, settings and risk contract remain frozen. Any further operational read follows a new concrete need, not repetitive broker polling.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -122,9 +123,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none. Family 015 has a complete valid sparse-supply closure; no monetary result or candidate/native path exists. Whole Programs 1-5/7 comparison is next; no successor is yet selected.
+- Active research unit: none. Family 015 has a complete valid sparse-supply closure; no monetary result or candidate/native path exists. Whole Programs 1-5/7 comparison is complete and selects only the undeclared FRBSF news-sentiment publication source question. No successor root, numeric data or economic candidate exists.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_015_CLOSED_COMPLETE_STRUCTURAL_SUPPLY_FAILURE_NO_SEED_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
-- Latest storage observation: C: free approximately `57.0 GiB` after Family 015 complete production on `2026-09-07`. All own inputs/model/forecast outputs are preserved above the 30 GiB floor. Local process-only observation confirmed responsive visible V7R EA/dashboard PIDs 14492/29492. Read-only market readiness completed at 07:02 KST, heartbeat PAUSED, actual trading activation remains a direct user step. No broker account/position/order/deal context query occurred.
+- Latest storage observation: C: free approximately `56.86 GiB` at the post-Family-015 whole-map comparison on `2026-09-07`. All own inputs/model/forecast outputs are preserved above the 30 GiB floor. Local process-only observation confirmed responsive visible V7R EA/dashboard PIDs 14492/29492. Read-only market readiness completed at 07:02 KST, heartbeat PAUSED, actual trading activation remains a direct user step. No broker account/position/order/deal context query occurred.
