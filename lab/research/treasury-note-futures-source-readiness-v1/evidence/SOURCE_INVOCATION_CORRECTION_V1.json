@@ -1,0 +1,36 @@
+{
+  "schema": "zeta-treasury-source-invocation-correction-v1",
+  "recorded_utc": "2026-09-06T22:08:33.531212+00:00",
+  "status": "PRE_QUERY_INVALID_PARAMETER_CORRECTION_NOT_SOURCE_ABSENCE",
+  "original_commit": "f8b3eb7",
+  "original_freeze": {
+    "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/SOURCE_IMPLEMENTATION_FREEZE_V1.json",
+    "bytes": 758,
+    "sha256": "3BB24CA5F90FA4732D3EAA919ED54CE6CCB9653C6286EE75FA76E699553122ED"
+  },
+  "original_source_preserved": {
+    "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/original/capture_source_initial_v1.py",
+    "bytes": 14250,
+    "sha256": "EEAF94E2237029486A50AC7CEE3A8BE82FCADD71F9D06B361C037B000A006930"
+  },
+  "failure": {
+    "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/NATIVE_INITIALIZATION_FAILURE_V1.json",
+    "bytes": 406,
+    "sha256": "FC731CBFEAA1CE1E7CA8E0F4A51442627FF8BF351AF35356C6C954BFADC4980E"
+  },
+  "initial_lifecycle": [
+    {
+      "path": "lab/artifacts/raw/treasury-note-futures-source-readiness-v1/reader-lifecycle-20260906T220616Z.json",
+      "bytes": 578,
+      "sha256": "F872C876117AFAF2F66B2E06AF0EF34DA81595A87C0DDAA439B38EEAD58211BC"
+    }
+  ],
+  "observed": "Own terminal PID 29376 was authorized on the exact expected server per local log, but Python initialize(path,server=...,portable=True,timeout=15000) returned -2 invalid params before terminal metadata, symbol or history calls. Normal CloseMainWindow and exit passed; exact-path owner count zero.",
+  "correction": "Use documented explicit-path initialization with the own saved connection and unchanged portable/timeout. The declared startup INI fixes FPMarketsSC-Live; inspect only the last locally logged authorization server token and require it to match before any symbol/history query. Do not obtain account identifiers or call account_info.",
+  "declaration_amendment": "Only the invocation wording explicit own path and server initialization is replaced by explicit own path, fixed startup server and local server-token confirmation. All original instrument, periods, fields, exclusions, storage, provenance, closure and no-economic limits remain unchanged.",
+  "documentation": "https://www.mql5.com/en/docs/python_metatrader5/mt5initialize_py",
+  "history_or_static_US10YR_observations_before_correction": 0,
+  "account_position_order_deal_or_execution_calls": 0,
+  "test_only_infrastructure": false,
+  "original_source_and_failure_retained": true
+}

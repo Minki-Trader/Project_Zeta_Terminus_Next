@@ -5,7 +5,6 @@ import calendar
 import datetime as dt
 import hashlib
 import json
-import re
 import shutil
 import subprocess
 
@@ -121,7 +120,7 @@ def capture():
     import MetaTrader5 as mt5
     declaration, runtime, raw = context()
     reserve(declaration, runtime, raw)
-    freeze = json.loads((ROOT/"evidence/SOURCE_IMPLEMENTATION_FREEZE_V2.json").read_text(encoding="utf-8-sig"))
+    freeze = json.loads((ROOT/"evidence/SOURCE_IMPLEMENTATION_FREEZE_V1.json").read_text(encoding="utf-8-sig"))
     for item in freeze["files"]:
         if fingerprint(REPO/item["path"]) != item:
             raise RuntimeError("Frozen source scope or implementation drift")
@@ -132,7 +131,8 @@ def capture():
         "strategy_economic_queries": 0, "account_positions_orders_deals_or_execution_calls": 0}
     completed = {item["month"]: item for item in progress["completed"]}
     try:
-        if not mt5.initialize(str(runtime/"terminal64.exe"), portable=True, timeout=15000):
+        if not mt5.initialize(str(runtime/"terminal64.exe"), server="FPMarketsSC-Live",
+                              portable=True, timeout=15000):
             raise RuntimeError("Own reader initialization: "+str(mt5.last_error()))
         terminal = mt5.terminal_info()
         if (terminal is None or Path(terminal.data_path).resolve() != runtime.resolve() or
@@ -140,16 +140,6 @@ def capture():
             raise RuntimeError("Own connected no-EA path or history-capacity guard failed")
         progress["terminal"] = {key: getattr(terminal, key) for key in
                                ("path", "data_path", "build", "connected", "trade_allowed", "maxbars")}
-        servers = []
-        for log in sorted((runtime/"logs").glob("*.log")):
-            payload = log.read_bytes()
-            encoding = "utf-16" if payload.startswith((b"\xff\xfe", b"\xfe\xff")) else "utf-8-sig"
-            # Only the locally logged server token is inspected, never an account identifier.
-            servers.extend(re.findall(r"authorized on ([^\s]+)", payload.decode(encoding, errors="replace")))
-        if not servers or servers[-1] != "FPMarketsSC-Live":
-            raise RuntimeError("Own source reader has no matching local server-authorization record")
-        progress["server_authority"] = {"last_locally_logged_server": servers[-1],
-            "initialization": "Explicit own path and cached connection; exact server is fixed by startup INI and local authorization log."}
         # The exact symbol is the sole history target. Matching names are identity metadata only.
         exact = mt5.symbol_info(SYMBOL)
         progress["exact_symbol_lookup_error"] = list(mt5.last_error())

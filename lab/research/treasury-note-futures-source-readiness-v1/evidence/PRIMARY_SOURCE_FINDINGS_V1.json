@@ -1,0 +1,84 @@
+{
+  "schema": "zeta-treasury-primary-source-findings-v1",
+  "recorded_utc": "2026-09-06 22:21:16 UTC",
+  "scope": "Only the declared exact Treasury-note CFD identity, historical roll/adjustment and raw-clock questions; no external numerical history or candidate outcome.",
+  "native_authority": {
+    "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/SOURCE_COVERAGE_AND_RETENTION_V1.json",
+    "bytes": 14741,
+    "sha256": "14CF4EC0035E077B9491EA2624EDAE625F966B8346C2BBFD348507C360DAABCC"
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.fpmarkets.com/bonds/",
+      "retrieval": "Search-indexed broker product page; direct earlier fetch redirected regionally to fpmarkets.eu.",
+      "finding": "The public instrument label is a US Treasury-note futures CFD, consistent with native Bonds/US10YR. Its examples and indicative prices/spreads are excluded from candidate inputs.",
+      "establishes_historical_rolls": false
+    },
+    {
+      "url": "https://www.fpmarkets.com/holiday-trading-hours/?trp-edit-translation=preview",
+      "related_url": "https://www.fpmarkets.com/holiday-trading-hours/",
+      "retrieval": "Primary broker search-indexed current table. The plain direct page redirected to fpmarkets.eu.",
+      "finding": "The table currently names December 2026 to March 2027 with a November 24 rollover, referring to November 23 end of day. It supplies no 2023-2025 switch ledger.",
+      "establishes_historical_rolls": false
+    },
+    {
+      "url": "https://www.fpmarkets.com/en-bh/holiday-trading-hours/",
+      "related_urls": [
+        "https://www.fpmarkets.com/es-pe/holiday-trading-hours/",
+        "https://www.fpmarkets.com/en-ng/holiday-trading-hours/"
+      ],
+      "retrieval": "Primary broker localized indexed tables.",
+      "finding": "Localized pages display different 2026 maturity/date combinations, including April-to-May and May-to-August descriptions. These are neither a consistent historical chain nor a basis for reconstructing omitted 2023-2025 transitions.",
+      "establishes_historical_rolls": false
+    },
+    {
+      "url": "https://www.fpmarkets.com/en-in/education/faq/",
+      "requested_url": "https://www.fpmarkets.com/education/faq/",
+      "retrieval": "Direct primary FAQ after regional redirect; inspected server-time and rollover sections.",
+      "finding": "The FAQ describes GMT+2/+3 New-York-close server convention. Expiring futures can produce a cash adjustment shown through swap fields; exact amounts are available shortly before expiry. It provides generic mechanics, without a historical US10YR switch/adjustment ledger or Python time-field bridge.",
+      "establishes_historical_rolls": false,
+      "establishes_exact_API_clock": false
+    },
+    {
+      "url": "https://www.fpmarkets.com/blog/cfd-dividend-and-rollover-adjustments-whats-really-happening-to-your-trade/",
+      "publication_date": "2026-04-28",
+      "retrieval": "Direct primary broker article.",
+      "finding": "Its oil illustration explains how switching futures contracts can create a chart gap offset by a cash adjustment. This supports distinguishing contract changes from market price moves; it does not certify US10YR historical chart adjustment or exact past rolls.",
+      "establishes_historical_rolls": false
+    },
+    {
+      "url": "https://www.cmegroup.com/trading/interest-rates/basics-of-us-treasury-futures.html",
+      "retrieval": "Direct exchange educational source; static contract table only.",
+      "finding": "Treasury futures use quarterly March/June/September/December maturities and deliverable baskets. The table distinguishes standard ten-year and Ultra ten-year instruments. These exchange mechanics do not establish the broker CFD contract chain, rounding or historical quote adjustment.",
+      "establishes_broker_history": false
+    },
+    {
+      "url": "https://www.mql5.com/en/docs/python_metatrader5/mt5copyratesrange_py",
+      "retrieval": "Official API reference, also identified in the prospective declaration.",
+      "finding": "The API describes UTC date arguments/time data and a terminal history limit. That contract alone does not certify the physical interpretation or historical continuity of this broker-specific field.",
+      "establishes_broker_history": false
+    }
+  ],
+  "searches": [
+    "site:fpmarkets.com \"US10YR\" \"2024\" rollover",
+    "site:fpmarkets.com \"US10YR\" \"2025\" rollover",
+    "site:fpmarkets.com \"US10YR\" \"adjustment\"",
+    "US10YR rollover FP Markets 2024; domain fpmarkets.com",
+    "US10YR rollover FP Markets 2025; domain fpmarkets.com",
+    "site:fpmarkets.com futures rollover cash adjustment history charts",
+    "site:fpmarkets.com \"server time\" \"GMT+3\"",
+    "site:fpmarkets.com \"US10YR\" \"2023\"",
+    "site:fpmarkets.com futures \"rollover\" \"adjustment\"",
+    "site:cmegroup.com 10-Year Treasury Note futures contract specifications March June September December"
+  ],
+  "search_result_limit": "These bounded searches found current/2026 product, rollover and generic mechanics pages, not a qualified 2023-2025 US10YR roll ledger. Failure to locate an indexed historical record is not evidence that no such record exists anywhere.",
+  "material_unresolved_dimensions": [
+    "Each original underlying contract and effective historical switch time throughout 2023-2025.",
+    "Whether the historical CFD chart is unadjusted, back-adjusted or otherwise transformed, plus attributable historical cash/price adjustments.",
+    "Why exact source weekdays 2025-05-22 and 2025-05-23 have no observations; the report also retains every other absent weekday and gap without calling it a market holiday.",
+    "The broker-specific raw M1 time field relation to physical UTC and intended external-market session times."
+  ],
+  "candidate_price_return_feature_or_economic_scoring": 0,
+  "contact_purchase_or_broker_account_queries": 0,
+  "conclusion": "Source identity and returned timestamp observations are established. Historical continuity/coverage and exact external-clock readiness remain unresolved. Close this bounded source unit as partial/unready; do not start a rate-duration candidate from it."
+}

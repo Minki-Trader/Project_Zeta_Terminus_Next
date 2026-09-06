@@ -1,0 +1,197 @@
+{
+  "schema": "zeta-v7r-read-only-market-ready-20260907-v1",
+  "market": {
+    "observed_at_utc": "2026-09-06T22:02:23Z",
+    "terminal_pid": 14492,
+    "same_sole_process": true,
+    "pre_observation_state_sequence": 335,
+    "post_observation_state_sequence": 335,
+    "local_runtime_healthy": true,
+    "server_time": "2026.09.07 01:02:02",
+    "safe_handoff_window": true,
+    "terminal_connected": true,
+    "observation_seconds": 12,
+    "us30_tick_updates": 15,
+    "us30_max_update_gap_seconds": 2.6066368000028888,
+    "us30_continuous_ticks": true,
+    "all_symbol_ticks_fresh": true,
+    "symbol_tick_reference_msc": 1788742942433,
+    "symbol_ticks": [
+      {
+        "symbol": "US30",
+        "time_msc": 1788742941928,
+        "age_seconds": 0.505,
+        "fresh": true
+      },
+      {
+        "symbol": "US100",
+        "time_msc": 1788742942433,
+        "age_seconds": 0,
+        "fresh": true
+      },
+      {
+        "symbol": "US500",
+        "time_msc": 1788742941928,
+        "age_seconds": 0.505,
+        "fresh": true
+      }
+    ],
+    "timeframes": [
+      {
+        "timeframe": "M15",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788742800,
+            "tick_volume": 78,
+            "age_seconds": 142,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788742800,
+            "tick_volume": 406,
+            "age_seconds": 142,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788742800,
+            "tick_volume": 176,
+            "age_seconds": 142,
+            "fresh": true
+          }
+        ]
+      },
+      {
+        "timeframe": "M30",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788742800,
+            "tick_volume": 78,
+            "age_seconds": 142,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788742800,
+            "tick_volume": 406,
+            "age_seconds": 142,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788742800,
+            "tick_volume": 176,
+            "age_seconds": 142,
+            "fresh": true
+          }
+        ]
+      },
+      {
+        "timeframe": "H1",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788742800,
+            "tick_volume": 78,
+            "age_seconds": 142,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788742800,
+            "tick_volume": 406,
+            "age_seconds": 142,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788742800,
+            "tick_volume": 176,
+            "age_seconds": 142,
+            "fresh": true
+          }
+        ]
+      }
+    ],
+    "market_data_ready": true,
+    "ready_for_handoff": true,
+    "account_or_trade_state_queried": false,
+    "reasons": []
+  },
+  "local": {
+    "observed_at_utc": "2026-09-06T22:03:07Z",
+    "healthy": true,
+    "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe",
+    "project_terminal_pid": 14492,
+    "snapshot_age_seconds": 6,
+    "state_sequence": 336,
+    "new_entries_input": 0,
+    "new_entries_effective": 0,
+    "terminal_allow_live_trading": 0,
+    "accepted_ex5_hash": "30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657",
+    "risk_contract": {
+      "base_position_risk_fraction": 0.04,
+      "aggregate_risk_fraction": 0.12,
+      "component_risk_multipliers": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "effective_position_risk_fractions_before_aggregate_cap": [
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ],
+      "passive_disabled": false
+    },
+    "alerts": [],
+    "warnings": []
+  },
+  "windows": [
+    {
+      "Id": 29492,
+      "Responding": true,
+      "MainWindowHandle": {
+        "value": 2625838
+      }
+    },
+    {
+      "Id": 14492,
+      "Responding": true,
+      "MainWindowHandle": {
+        "value": 2428728
+      }
+    }
+  ],
+  "free_bytes": 61487394816,
+  "decision": "OBSERVED_MARKET_READY_NOT_TRADING_ACTIVATED",
+  "limits": "This is bounded read-only market and local-runtime evidence. It does not replace the fresh user-operated activation gates or authorize the assistant to enable trading.",
+  "heartbeat": {
+    "id": "v7r",
+    "status": "PAUSED",
+    "user_notified": true,
+    "encoding_correction": "The interval-update relay decoded Python CP949 output as UTF-8 and damaged Korean text. Restored the exact original name/prompt via structured Unicode tool arguments, then verified the saved prompt equals the original with zero replacement characters. No trading action occurred."
+  },
+  "actions": {
+    "trading_activation": 0,
+    "live_source_settings_risk_changes": 0,
+    "broker_account_position_order_deal_calls": 0,
+    "new_entries_authority": "DISABLED",
+    "remaining_step": "User directly performs any final trading activation."
+  }
+}

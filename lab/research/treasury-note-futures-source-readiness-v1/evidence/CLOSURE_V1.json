@@ -1,0 +1,165 @@
+{
+  "schema": "zeta-treasury-note-futures-source-readiness-closure-v1",
+  "recorded_utc": "2026-09-06T22:21:56.162006+00:00",
+  "status": "CLOSED_PARTIAL_SOURCE_IDENTITY_AND_TIMESTAMPS_ESTABLISHED_HISTORY_ROLL_CLOCK_UNRESOLVED_NO_CANDIDATE",
+  "primary_macro_program": 2,
+  "source_unit": "treasury-note-futures-source-readiness-v1",
+  "opening_phase_commit": "f8b3eb7",
+  "evidence": [
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/DECLARATION_V1.json",
+      "bytes": 9991,
+      "sha256": "E4D017F42D6929FE714E1256EA4247B510EB621D9BA7B1E5EBFEC5341B3A06C4"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/NATIVE_INITIALIZATION_FAILURE_V1.json",
+      "bytes": 406,
+      "sha256": "FC731CBFEAA1CE1E7CA8E0F4A51442627FF8BF351AF35356C6C954BFADC4980E"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/NATIVE_SOURCE_OBSERVATION_V1.json",
+      "bytes": 45627,
+      "sha256": "F5B4BE03CE02E1E32AE1736C2630AE6654F6EAD0D8C62AE3FA745054C04912FC"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/PRIMARY_SOURCE_FINDINGS_V1.json",
+      "bytes": 6184,
+      "sha256": "2282DE4A29FCF8A6D3CAD790328E53C206DE3C99597D5B2814DB656DEF88091F"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/SOURCE_COVERAGE_AND_RETENTION_V1.json",
+      "bytes": 14741,
+      "sha256": "14CF4EC0035E077B9491EA2624EDAE625F966B8346C2BBFD348507C360DAABCC"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/SOURCE_IMPLEMENTATION_FREEZE_V1.json",
+      "bytes": 758,
+      "sha256": "3BB24CA5F90FA4732D3EAA919ED54CE6CCB9653C6286EE75FA76E699553122ED"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/SOURCE_IMPLEMENTATION_FREEZE_V2.json",
+      "bytes": 1139,
+      "sha256": "A2189A3331E4B93D52F9D6D232DFD643CB9B5D3A53B02620F82BCEC126C035F2"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/SOURCE_INVOCATION_CORRECTION_V1.json",
+      "bytes": 2492,
+      "sha256": "57CB211E2091748750CA77B02034B45EC71437AEF68277E565F55C848321AE65"
+    },
+    {
+      "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/SOURCE_PREPARATION_V1.json",
+      "bytes": 748,
+      "sha256": "33EFCD2E1075895AAD1ED77D89E1107480894A5681C57EA2870FB11972246BFB"
+    }
+  ],
+  "report": {
+    "path": "lab/research/treasury-note-futures-source-readiness-v1/REPORT.md",
+    "bytes": 3666,
+    "sha256": "8708D91672A37E761AC76F424A612948DF238825F0205C1DE6E2E66BCFF7C709"
+  },
+  "original_source_retained": {
+    "path": "lab/research/treasury-note-futures-source-readiness-v1/evidence/original/capture_source_initial_v1.py",
+    "bytes": 14250,
+    "sha256": "EEAF94E2237029486A50AC7CEE3A8BE82FCADD71F9D06B361C037B000A006930"
+  },
+  "judgment": [
+    {
+      "dimension": "Exact native instrument",
+      "result": "ESTABLISHED_CURRENT_IDENTITY",
+      "basis": "Only matching name US10YR, native Bonds path, Treasury-note futures TYZ6 2026 description. Numeric start/expiration fields are zero; current identity is not a historical chain."
+    },
+    {
+      "dimension": "Original warmup/development availability",
+      "result": "OBSERVED_WITH_MATERIAL_COVERAGE_LIMITS",
+      "basis": "All 36 requests succeed, 512522 timestamps across 773 raw dates; 2024/2025 total 515 observed dates. Preserve all gaps and absent weekdays, including unexplained 2025-05-22/23. No completeness or holiday inference."
+    },
+    {
+      "dimension": "Historical roll and price adjustment",
+      "result": "UNRESOLVED",
+      "basis": "Current native metadata and generic broker/exchange mechanics do not supply the 2023-2025 old/new contract map, switch times or historical adjustment records. Bounded primary search did not locate a qualified ledger; no universal absence claim."
+    },
+    {
+      "dimension": "Raw time and external-session relationship",
+      "result": "UNRESOLVED",
+      "basis": "Original integers are retained. API UTC documentation and broker server convention do not establish the required field-specific physical-time bridge."
+    }
+  ],
+  "completed_source": {
+    "months": 36,
+    "empty_months": 0,
+    "timestamp_rows": 512522,
+    "timestamp_files": 36,
+    "timestamp_bytes": 4104784,
+    "years": [
+      {
+        "year": 2023,
+        "rows": 190512,
+        "raw_dates": 258
+      },
+      {
+        "year": 2024,
+        "rows": 164588,
+        "raw_dates": 259
+      },
+      {
+        "year": 2025,
+        "rows": 157422,
+        "raw_dates": 256
+      }
+    ],
+    "chronology_and_minute_grid": true,
+    "nonconsecutive_minute_gaps": 175002,
+    "largest_gap_seconds": 411840
+  },
+  "correction": "Initial Python invalid-parameter error occurred before any US10YR observation. Original code/failure retained; documented saved-connection invocation plus local exact-server confirmation was frozen as V2 before all source observations. No strategy, data-window or selection change. Final observation's inherited error field records the earlier failure; final COMPLETE status and all 36 success codes are authoritative for completed source acquisition.",
+  "normal_lifecycles": [
+    {
+      "receipt": {
+        "path": "lab/artifacts/raw/treasury-note-futures-source-readiness-v1/reader-lifecycle-20260906T220616Z.json",
+        "bytes": 578,
+        "sha256": "F872C876117AFAF2F66B2E06AF0EF34DA81595A87C0DDAA439B38EEAD58211BC"
+      },
+      "process_id": 29376,
+      "capture_exit_code": 1,
+      "started_utc": "2026-09-06T22:06:16.1355836Z",
+      "completed_utc": "2026-09-06T22:06:23.3579491Z",
+      "close_main_window": true,
+      "normal_exit": true,
+      "exact_path_owners_after": 0
+    },
+    {
+      "receipt": {
+        "path": "lab/artifacts/raw/treasury-note-futures-source-readiness-v1/reader-lifecycle-20260906T220911Z.json",
+        "bytes": 515,
+        "sha256": "C5B555D887A2C53B9CFB8E9F677D904048D95590D85ABDD74C880A9EE3813BA9"
+      },
+      "process_id": 27888,
+      "capture_exit_code": 0,
+      "started_utc": "2026-09-06T22:09:11.7448241Z",
+      "completed_utc": "2026-09-06T22:09:27.0335436Z",
+      "close_main_window": true,
+      "normal_exit": true,
+      "exact_path_owners_after": 0
+    }
+  ],
+  "retention": {
+    "implementation_and_declaration_unchanged_after_query": true,
+    "all_36_timestamp_files_unchanged": true,
+    "owned_runtime_and_raw_bytes": 265083144,
+    "maximum_source_growth_bytes": 2147483648,
+    "free_bytes": 60984659968,
+    "minimum_free_bytes": 32212254720,
+    "deleted_files": 0
+  },
+  "economic_verdict": null,
+  "positive_seed": null,
+  "prohibited_followup": "Do not reopen this source unit, infer a rate-duration signal, substitute GILT/FX/ETF or a closed AUDCHF/repo model, select a favorable roll/time mapping, or create an adjacent date/feature/threshold/exit/risk rescue. Close-and-compare all Programs 1-5/7 before any separately complete independent candidate.",
+  "candidate_signal_return_fill_risk_or_price_analysis": 0,
+  "history_2026_requests": 0,
+  "broker_account_position_order_deal_or_execution_calls": 0,
+  "active_source_units_after": 0,
+  "active_candidates_after": 0,
+  "optimization_campaigns": 0,
+  "native_candidate_paths": 0,
+  "goal": "ACTIVE_INCOMPLETE; this completed source answer advances the full independent Python/ONNX-plus-EA V8 Challenge but produces no winner or candidate."
+}

@@ -2,7 +2,9 @@
 
 Primary macro Program 2, source-only research unit. This is not Challenge Family 015, a trading candidate or an economic experiment.
 
-The complete prospective scope is `evidence/DECLARATION_V1.json`. Before acquisition, `evidence/SOURCE_IMPLEMENTATION_FREEZE_V1.json` pins the declaration and ordinary source producer. The sole question is whether exact FPMarketsSC-Live `US10YR` can supply attributable Treasury-note futures CFD identity, original 2023 warmup / 2024-2025 development availability, and historical roll/clock provenance for a separately declared future rate-duration hypothesis.
+Closed on 2026-09-07 as `CLOSED_PARTIAL_SOURCE_IDENTITY_AND_TIMESTAMPS_ESTABLISHED_HISTORY_ROLL_CLOCK_UNRESOLVED_NO_CANDIDATE`. Read `REPORT.md` and `evidence/CLOSURE_V1.json`. Preserve this root and its stopped reader; do not execute acquisition commands again.
+
+The complete prospective scope is `evidence/DECLARATION_V1.json`. The initial V1 implementation/failure is preserved. Before any US10YR observation, `evidence/SOURCE_INVOCATION_CORRECTION_V1.json` and `evidence/SOURCE_IMPLEMENTATION_FREEZE_V2.json` froze a saved-connection invocation correction with local exact-server confirmation. All original data and selection bounds remained unchanged. The sole question was whether exact FPMarketsSC-Live `US10YR` could supply attributable Treasury-note futures CFD identity, original 2023 warmup / 2024-2025 development availability, and historical roll/clock provenance for a separately declared future rate-duration hypothesis.
 
 `adapter/capture_source.py prepare` creates one physically independent ignored no-EA Portable from a generic platform and the canonical Lab's private connection files. `capture` reads a fixed static-field allowlist and only the time column of 36 monthly M1 responses. Native responses and the platform's private caches may contain other fields; this unit never accesses or exports their OHLC, spread or volume. It makes no 2026 historical-price, account, position, order, deal, profit, margin, strategy or execution call. Matching names around US10YR are metadata only and never alternative history targets.
 
