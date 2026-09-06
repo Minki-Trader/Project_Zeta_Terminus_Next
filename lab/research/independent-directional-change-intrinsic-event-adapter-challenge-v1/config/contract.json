@@ -1,0 +1,149 @@
+{
+  "family": "independent-directional-change-intrinsic-event-adapter-challenge-v1",
+  "family_number": 13,
+  "primary_macro_program": 1,
+  "architecture": "Python adapter + conditional EA",
+  "symbols": [
+    "US100",
+    "US30",
+    "US500"
+  ],
+  "role_order": [
+    "DC_FOLLOW",
+    "DC_FADE",
+    "DC_OVERSHOOT_CONTEXT"
+  ],
+  "identity": {
+    "execution": "zt-next-ch013-intrinsic-dc-v1",
+    "portfolio": "ZT-PORT-NEXT-CH013-INTRINSIC-20260907",
+    "reserved_magic_by_role": {
+      "DC_FOLLOW": [
+        2609071311,
+        2609071312,
+        2609071313
+      ],
+      "DC_FADE": [
+        2609071321,
+        2609071322,
+        2609071323
+      ],
+      "DC_OVERSHOOT_CONTEXT": [
+        2609071331,
+        2609071332,
+        2609071333
+      ]
+    },
+    "native_state": "ZetaTerminusNext/lab/ch013-intrinsic-dc/state",
+    "native_runtime_if_survivor": "lab/runtime/ch013-intrinsic-dc-portable/"
+  },
+  "periods": {
+    "warmup": [
+      "2023-01-01",
+      "2024-01-01"
+    ],
+    "development": [
+      "2024-01-01",
+      "2026-01-01"
+    ],
+    "candidate_specific_locked": [
+      "2026-01-01",
+      "2026-08-01"
+    ],
+    "whole_native": [
+      "2024-01-01",
+      "2026-08-01"
+    ],
+    "isolated_latest": [
+      "2026-07-01",
+      "2026-09-01"
+    ],
+    "new_entry_cutoff_calendar_days_before_end": 7,
+    "semantics": "Half-open raw broker-labelled intervals, no UTC/external-session transform. Raw labels define ordering/date/timeout coordinates, not a solved external clock. Calendar-known entry cutoff never uses future row counts."
+  },
+  "signal": {
+    "observations": "Completed M1 Bid closes update state; high/low/previous close enter prior true range only. No spread, volume, hour, weekday, cross-symbol return, external source, or old signal determines direction.",
+    "prior_true_range_bars": 60,
+    "scale_multiple": 8,
+    "scale": "At initialization and each confirmation, freeze delta = 8 times arithmetic mean true range of the 60 completed M1 bars strictly before the confirming bar. Current-bar range is excluded. Delta stays constant throughout the new leg.",
+    "scale_rationale": "A prospective excursion scale several times a one-minute range aims to represent cumulative movement rather than single-bar flicker. Eight and sixty are not empirically optimized. An informal unexecuted 3x sketch preceded this binding 8x choice; no feature, supply or return was calculated for either.",
+    "gap_rule": "When current timestamp differs from previous+60, clear signal state and true-range window before consuming that bar; its first range is high-low. Require 60 strictly prior consecutive bars before initialization. Owned positions retain stop/timeout protection. Reset never retroactively deletes an emitted event.",
+    "initialization": "At the first ready completed bar, store close as neutral anchor and freeze delta. Wait for close to reach anchor plus/minus delta. That initial direction starts a leg at its confirmation close and new prior-range delta but emits no tradable event because no completed overshoot exists.",
+    "active_leg": "Track most favorable completed close since direction confirmation. Up leg confirms down when close <= running_high - frozen_delta; down leg confirms up when close >= running_low + frozen_delta. At most one change per bar. Completed overshoot = max(0, old_direction*(old_extreme-old_confirmation_close)); record its ratio to old delta. Emit new direction and old trigger delta, then start new leg at current close with current strictly-prior scale.",
+    "decision_and_freshness": "Bar labelled t closes at t+60; its entry intent is usable only at exact t+60. Missing entry quote expires admission but preserves the event. No future path/completeness enters event creation. Native EA must additionally reject stale/duplicate packets.",
+    "variants": {
+      "DC_FOLLOW": "Trade new confirmed direction.",
+      "DC_FADE": "Trade opposite new confirmed direction.",
+      "DC_OVERSHOOT_CONTEXT": "When completed overshoot >= old trigger delta, trade opposite new direction; otherwise follow new direction. Equality is in the long-overshoot branch. No threshold search."
+    }
+  },
+  "geometry": {
+    "initial_stop_event_delta": 2,
+    "take_profit": null,
+    "maximum_nominal_m1_minutes": 240,
+    "exit": "On the next confirmed event for its symbol, fully close any owned position; after complete close the new event may start a lifecycle at the same opening batch. Otherwise exit at first available quote at/after 240 raw minutes. Protective stop stays active. No take, trail, partial close, stop refill or entry without a fresh event. Stop distance uses twice old trigger delta, rounded outward to broker tick size."
+  },
+  "risk": {
+    "initial_deposit_usd": 100,
+    "reference_leverage": "1:100",
+    "target_position_fraction": 0.02,
+    "minimum_lot_hard_cap_fraction": 0.03,
+    "aggregate_original_stop_risk_fraction": 0.08,
+    "one_position_per_symbol": true,
+    "lot_rounding": "Floor target volume to step; minimum volume only within 3% hard stop-risk cap; respect max volume. Reserve full original stop risk until complete close. Stop risk is measured from actual execution price to liquidation-side stop.",
+    "batch": "After all same-time opening gap/scheduled/event exits, freeze one reference min(actual cash, opening liquidation equity). Same-time admissions all use that positive reference in US100, US30, US500 order. Process every current M1 high/low only after the whole opening batch. Stress does not select another size/path.",
+    "margin_limit": "No exact historical margin rates in snapshots; optimistic risk-limited screen with no invented CFD margin formula. Native margin admission is mandatory for a survivor."
+  },
+  "costs_and_proxy": {
+    "bid_ask": "Bid OHLC plus row spread times point. Long entry Ask/exit Bid, short entry Bid/exit Ask. USD directional difference times contract size and lots. Row spread is representative, not a certified first-tick or intrabar Ask series.",
+    "within_bar": "Opening gap through stop fills at adverse liquidation-side open before scheduled/event exits. Intrabar stop uses low Bid for long, high Bid plus row spread for short; fill fixed stop. A same-bar stop cannot create another entry without a fresh event.",
+    "spread_stress": "Subtract one further observed direction-specific burden on actual-sized trades: long entry spread or short exit spread. Separately subtract half-entry plus half-exit spread. Both stresses must pass.",
+    "commission_usd_per_lot_per_side": 0,
+    "commission_limit": "Zero is optimistic snapshot-limited screening, not historical/native certification.",
+    "swap": "Use numeric snapshot mode 2 as USD per lot, charged at each crossed broker-date midnight after a held weekday, triple on the declared weekday ending there; no extra weekend charge. Charge before opening exits, never for a position first opened at that boundary. Historical rates/raw-clock certainty remain proxy limits.",
+    "financing_robustness": "A third stress subtracts all positive swap credits from the directionally stressed same-trade result; negative charges remain. It must also pass profit and each-year gates. No alternative sizing path.",
+    "drawdown": "Global liquidation-side M1 opening and closing marked equity. Native intrabar DD can be higher; call this proxy marked DD.",
+    "integrity": "Preserve events, admissions, full closes, financing and marked equity. Normal result production reconciles all accepted starts to one full close, final flat state, cash/P&L/epochs and each spread/financing stress. Incomplete data/accounting is correction, not adverse. No checker CLI, tests or CI."
+  },
+  "structural_stage": {
+    "meaning": "Generate causal events only. No forward returns, stop path, profit, sizing or accepted-fill calculations. All roles share the same optimistic supply.",
+    "normal_dates": "Every distinct development date in three-source union, including zero-event, gap and cutoff dates. No future-completeness thinning.",
+    "minimum_optimistic_events_per_normal_date": 3,
+    "minimum_optimistic_events_each_year": 150,
+    "minimum_symbols_with_events": 3,
+    "both_event_directions_required": true,
+    "stop": "Any necessary gate failure closes all three roles without economics or adjacent scale/window/state/symbol/direction/exit/risk rescue. Source or engineering faults require correction."
+  },
+  "development_gates": {
+    "actual_profit_strictly_above": 149.97,
+    "each_stressed_profit_series_strictly_above": 127.786,
+    "each_2024_2025_actual_and_all_stressed_positive": true,
+    "proxy_marked_equity_drawdown_pct_at_most": 37.39,
+    "genuine_first_fills_per_normal_date_at_least": 3,
+    "genuine_first_fills_each_year_at_least": 150,
+    "traded_symbols_at_least": 3,
+    "both_trade_directions_required": true,
+    "selection": "Complete passers only; highest no-positive-financing-credit stressed net, then lower DD, then higher minimum yearly same stress, then role order. At most one unchanged survivor. No favorable fragment from a failure is retained."
+  },
+  "confirmation": {
+    "authority": "Candidate-specific prospective procedural lock, not an epistemically unseen market claim. Known old project/V7/V8 aggregates and historical price exposure are disclosed; old Challenge candidate confirmation values are not inputs. Record independently defensible exposure authority before any 2026 price without changing this contract. No extra survivor, refit or tuning.",
+    "fixed_epochs": [
+      "2026-01-01..2026-06-01",
+      "2026-06-01..2026-08-01"
+    ],
+    "requirements": "Each epoch and pooled locked actual/all stress positive, DD <=37.39%, and >=3 first fills per all-source date. July-August latest excluded from selection; July overlaps benchmark confirmation and is disclosed, never another independent holdout. Latest unchanged actual/all stress positive and >=3 starts/date. Failure closes before native."
+  },
+  "native_gates": {
+    "actual_profit_strictly_above": 409.81,
+    "stressed_profit_strictly_above": 367.818,
+    "native_relative_equity_drawdown_pct_at_most": 37.39,
+    "robust_recovery_strictly_above": 3.295860215,
+    "all_declared_epochs_actual_and_stressed_positive": true,
+    "genuine_first_fills_per_normal_date_in_binding_long_and_isolated_latest_at_least": 3,
+    "complete_unchanged_python_adapter_plus_EA_required": true,
+    "evidence": "Only the sole unchanged full proxy passer receives a one-time CXR2 safety/execution shell, isolated Lab runtime and required adjacent exact-benchmark comparisons on 100% real ticks with identical exercised source/spec fingerprints. No native parameter search; engineering faults corrected."
+  },
+  "closure": "Close the three-role bundle together. Preserve valid adverse results without adjacent threshold/lookback/state/symbol/direction/exit/risk or retained-fragment repair. Recompare Programs 1-5 and 7 before any successor. Program 6 outside Goal. Proxy evidence never grants victory or Live authority.",
+  "storage_reserve_bytes": 32212254720,
+  "initial_artifact_allowance_bytes": 2147483648
+}
+
