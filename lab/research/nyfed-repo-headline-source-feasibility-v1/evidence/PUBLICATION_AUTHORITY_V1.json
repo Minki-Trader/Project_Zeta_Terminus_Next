@@ -1,0 +1,44 @@
+{
+  "schema": "zeta-nyfed-repo-headline-publication-authority-v1",
+  "recorded_utc": "2026-09-06T17:41:55.885278+00:00",
+  "status": "ORDINARY_HEADLINE_PROVENANCE_AND_DELAY_DEFENSIBLE_FOR_SOURCE_FEASIBILITY",
+  "sources": [
+    {
+      "url": "https://www.newyorkfed.org/markets/reference-rates/additional-information-about-reference-rates",
+      "support": "Treasury-repo headline revisions occur only on the original publication day, around 14:30 Eastern and above a one-basis-point threshold. Later updated statistics are a separate lagged release. The publication calendar follows SIFMA government-securities full closures, not simply federal bank holidays. Ordinary API headline percentRate is the permitted field; percentile/volume and updated-statistics products were not used."
+    },
+    {
+      "url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_241023",
+      "support": "Announced on 2024-10-23: SOFR method changes begin with 2024-11-25 publication for 2024-11-22 transactions. Earlier ordinary SOFR values will not be retroactively adjusted. TGCR/BGCR are unaffected. Preserve this real-time method boundary; do not backfill a homogeneous series."
+    },
+    {
+      "url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_241126",
+      "support": "The reconstructed indicative series is explicitly unofficial and is separate from the published headline. It was not acquired."
+    },
+    {
+      "url": "https://www.newyorkfed.org/markets/opolicy/operating_policy_250102",
+      "support": "The 2025-01-09 mourning date was an early close, with no planned repo-rate publication change. A generic federal-holiday assumption is therefore insufficient."
+    },
+    {
+      "url": "https://www.cmegroup.com/education/articles-and-reports/understanding-sofr-futures",
+      "support": "The exchange describes SOFR publication for a government-securities business day on the following business day, around 08:00 Eastern, and confirms the same-day revision boundary."
+    }
+  ],
+  "delay_inference": {
+    "frozen_rule": "No earlier than broker calendar midnight effectiveDate + 8 calendar days; maximum age 30 calendar days.",
+    "support": "All paired source-date gaps inside the acquired window are at most four calendar days. Combined with the next-government-securities-business-day publication policy and same-day finalization, the eight-day floor supplies a multi-day cushion for this source screen. It does not depend on sub-hour broker session matching.",
+    "limitation": "Effective-date arrays do not contain per-release timestamps. This is a transparent schedule-based inference, not a reconstructed intraday vintage feed. Any documented exceptional late publication must be honored; no time lag may be shortened after results. The final 2025-12-31 rate is not eligible inside development."
+  },
+  "method_boundary": {
+    "last_old_method_effective_date": "2024-11-21",
+    "first_new_method_effective_date": "2024-11-22",
+    "first_new_method_publication_date": "2024-11-25",
+    "retroactive_indicative_series_used": false
+  },
+  "exposure_correction": {
+    "no_2026_API_array_acquired_or_used": true,
+    "incidental_documentation_exposure": "The CME explanatory page returned a 2026-02-27 worked SOFR example (3.68%) and a quarterly compounding example while documenting publication. Those out-of-window examples entered conversation context but were not extracted into source tables, models or calculations. The earlier no-2026 wording must be understood as no source acquisition/calculation, not a claim that no public example was seen.",
+    "future_confirmation": "Record this alongside known V7/V8 aggregate exposure before declaring any candidate-specific 2026 confirmation; never label the calendar globally unseen."
+  },
+  "binding_economic_authority": false
+}

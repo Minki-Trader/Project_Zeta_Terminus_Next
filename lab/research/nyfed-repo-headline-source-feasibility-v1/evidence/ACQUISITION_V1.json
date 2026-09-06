@@ -1,0 +1,45 @@
+{
+  "schema": "zeta-nyfed-repo-headline-acquisition-v1",
+  "sources": [
+    {
+      "series": "SOFR",
+      "url": "https://markets.newyorkfed.org/api/rates/secured/sofr/search.json?startDate=2023-01-01&endDate=2025-12-31",
+      "retrieved_utc": "2026-09-06T17:35:34.655178+00:00",
+      "path": "lab/artifacts/raw/nyfed-repo-headline-source-feasibility-v1/input/SOFR_2023_2025_original_api.json",
+      "bytes": 178042,
+      "sha256": "FFF359A40BCDAE1FA92DE7EB684E012AF91114D52B7704A32BC0D3D787266557",
+      "http": {
+        "status": 200,
+        "content_type": "application/json;charset=utf-8",
+        "last_modified": null,
+        "etag": null
+      },
+      "top_level_fields": [
+        "refRates"
+      ],
+      "rows": 748
+    },
+    {
+      "series": "TGCR",
+      "url": "https://markets.newyorkfed.org/api/rates/secured/tgcr/search.json?startDate=2023-01-01&endDate=2025-12-31",
+      "retrieved_utc": "2026-09-06T17:35:34.975892+00:00",
+      "path": "lab/artifacts/raw/nyfed-repo-headline-source-feasibility-v1/input/TGCR_2023_2025_original_api.json",
+      "bytes": 177473,
+      "sha256": "CB75F3F02AA5B98D121348DA776E3A10375D7D79B72808C51B7D17D9E6FDBA72",
+      "http": {
+        "status": 200,
+        "content_type": "application/json;charset=utf-8",
+        "last_modified": null,
+        "etag": null
+      },
+      "top_level_fields": [
+        "refRates"
+      ],
+      "rows": 748
+    }
+  ],
+  "total_raw_bytes": 355515,
+  "request_count": 2,
+  "private_or_broker_data_transmitted": false,
+  "free_bytes_after": 84062265344
+}
