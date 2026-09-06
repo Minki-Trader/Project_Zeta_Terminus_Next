@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0570`
+- Latest state ID: `STATE-0571`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; Program 2 Family 012 has closed both roles with a complete valid adverse M1 proxy result and no passer. No active candidate, EA or native runtime remains. Recompare all active macro Programs before one successor; prior families/source studies, V7 return engineering and Optimization remain closed.
+- Development: `AUTONOMOUS_RESEARCH_RESUMED_WITH_30_GIB_RESERVE`; Program 2 Family 012 has closed both roles with a complete valid adverse M1 proxy result and no passer. No active candidate, EA or native runtime remains. The whole map selected one prospective Program 7 opening-session source/admission readiness study, whose declaration does not yet exist. All candidate/source predecessors, V7 return engineering and Optimization remain closed.
 - Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
@@ -34,7 +34,7 @@ Current user task: exact V7 verification passed and its frozen new V7R release h
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `FAMILY_012_CLOSED_ADVERSE_WHOLE_MACRO_RECOMPARE_PENDING`.
+- Active phase: `PROGRAM_7_OPENING_SOURCE_ADMISSION_READINESS_SELECTED_DECLARATION_PENDING`.
 - Sole active Challenge family: none. Family 012, all earlier families and source studies are closed and immutable. No proxy result has beaten V8.
 - Active Challenge family / Optimization campaign count: `0 / 0`; Family 012 propagation/reversal closed together with no passer. Native EA/runtime count is zero.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
@@ -88,7 +88,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Family 012 is closed. Recompare Programs 1-5 and 7 using its complete closure and the existing source-clock authority before choosing a materially justified successor. Do not select a nearby repo/median/lag/shock/ATR/hold/symbol/direction/risk rescue or use a favorable failure fragment. A closed session implementation with a documented clock fault is not silently treated as a valid intended-session rejection; any prospective correction needs explicit source authority and its own declaration. Keep at least 30 GiB free.
+1. Read `lab/evidence/INDEPENDENT_V8_CHALLENGE_POST_FAMILY_012_MACRO_RECOMPARE_V1.json`. Declare the selected Program 7 opening-session source/admission readiness study before its bounded original-source/timestamp work. The known clock fault and original future-completeness/conditional-denominator contract require source authority and causal design resolution before any candidate correction. No old family automatically reopens, no price/outcome work is selected, and no nearby Family 012 rescue is allowed. Keep at least 30 GiB free.
 2. At the actual market follow-up, reach a safe research boundary and complete the already-authorized V7R final handoff serially; its source and risk contract remain frozen.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -113,9 +113,9 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Active research unit: none after complete Family 012 closure. Propagation/reversal actual -$89.9660 / -$66.8499, stressed -$137.3452 / -$121.6774, marked DD 91.8472% / 76.7499%, first fills/date 2.8975 / 3.6557. Both fail profit, year stability and DD. All 2,595 intents/role and 1,498/1,890 closed trades reconcile. No seed or 2026/native work opened.
+- Active research unit: none at the selection boundary; the next Program 7 source/admission study is reserved but not declared. Family 012 remains closed. Propagation/reversal actual -$89.9660 / -$66.8499, stressed -$137.3452 / -$121.6774, marked DD 91.8472% / 76.7499%, first fills/date 2.8975 / 3.6557. Both fail profit, year stability and DD. All 2,595 intents/role and 1,498/1,890 closed trades reconcile. No seed or 2026/native work opened.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_012_CLOSED_COMPLETE_PROXY_ADVERSE_NO_PASSER_NO_SEED_NO_CONFIRMATION_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `ACTIVE_INCOMPLETE_AUTONOMOUS_RESEARCH_RESUMED`; no V8 winner exists yet. Preserve at least 30 GiB free throughout research.
-- Latest storage observation: C: free `77.543 GiB` after Family 012 complete outputs on `2026-09-07`; minimum 30 GiB retained, no deletion needed.
+- Latest storage observation: C: free `77.253 GiB` at the post-Family 012 comparison on `2026-09-07`; minimum 30 GiB retained, no deletion needed.
