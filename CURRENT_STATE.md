@@ -7,28 +7,30 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0559`
+- Latest state ID: `STATE-0560`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
 - Development: `V7_RETURN_VERIFIED_LIVE_HANDOFF_ACTIVE`; the Lab family is closed and frozen. Challenge and Optimization remain paused/closed.
-- Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; only entries-disabled creation/recovery is currently enabled. Actual new entries remain closed until the unchanged operational gates pass.
-- Next V7R return entries-disabled preflight: `ENABLED`
+- Next Live-Dev authorization: `ENABLED` for the user-authorized conditional handoff of exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed until the unchanged operational gates pass.
+- Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
-- Existing real-account owner: none; V8 PID `26524` completed fresh entries-disabled recovery and normal stopped-flat handoff. The next authorized owner is exact V7R in entries-disabled mode.
+- Existing real-account owner: none with permission for new orders; exact V7R entries-disabled terminal PID `14492` is the sole connected runtime. Korean V7R dashboard PID `29492` is visible and responsive. V8 PID `26524` is normally stopped and retired.
 - Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
 - Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
 - Economic contract: original V7 position risk `0.04`, aggregate cap `0.12`, six multipliers `1/1/1/1/1/1`, Passive enabled at original fixed `0.01` volume. Native compile 6140, verified execution and installed neutral platform 6182.
 - Fresh V8 handoff: final state `5340`, entries `0/0`, connected exact account, total positions/orders `0/0`, margin/planned risk `0/0`, healthy and no incomplete decision. Normal STOP and terminal shutdown 0 are preserved privately. Balance/equity `$100.25/$100.25`; attributable cumulative project realized net `-$0.40` is the sole carryover. New project stage balance `$99.60`, fresh component stressed balance `$100.00`.
 - V8, original V7-RLO1, parent V7, CXR1, CXR2 and legacy B70 V6R6 are retired/stopped. Their identities, state, research and execution history remain preserved; no old state is adopted.
-- Current installation evidence: `live-dev/evidence/V7R_RETURN_INSTALLATION_V1.json`. New V7R namespace was absent before installation. EA create/recovery, dashboard and actual continuous ticks remain to be completed.
+- Installation and recovery evidence: `live-dev/evidence/V7R_RETURN_INSTALLATION_V1.json` and `V7R_RETURN_ENTRIES_DISABLED_RECOVERY_V1.json`. New identity START/normal STOP/RESUME and fresh sequence `2 -> 4 -> 7` are healthy, exact account-bound, six components, entries `0/0`, zero position/order/margin/risk/fault. Retired V7/V8 files are unchanged.
+- Actual-tick gate is waiting: last server quote `2026.09.04 23:59:59`, only one observed US30 quote and roughly 12-second gap; M15/M30 current synchronization is not ready. No final `1/1` was opened. Keep the EA/dashboard running entries-disabled.
+- Current-task heartbeat `v7r` resumes at `2026-09-07 06:55 Asia/Seoul`, then uses 5-minute checks if needed. It completes only the already-authorized current-market handoff, stays quiet during unchanged waiting and pauses itself after verified activation. It requires the computer and Codex app running; it creates no additional development stream or OS trading watcher.
 - Challenge work grants no Live authority and cannot query broker state merely for context.
 
 ## Active primary Goal
 
-Current user task: exact V7 verification passed and its frozen new V7R release has been installed after the fresh V8 stopped-flat handoff. Lab family `lab/engineering/v7-rlo1-return-requalification-v1/` is closed; dedicated Lab runtime is stopped. Remaining work is serial Live entries-disabled create/recovery, EA/dashboard opening, current market gates and final `0/0 -> 1/1` activation. Long V7 actual/stressed is `+$313.36/+$284.138`, DD `19.5024%`; recent is `+$4.66/+$3.209` with a disclosed July loss. Closed markets leave EA running entries-disabled until genuine continuous ticks return; the user's conditional authorization remains valid without another approval question.
+Current user task: exact V7 verification passed and its frozen new V7R release has been installed after the fresh V8 stopped-flat handoff. Lab family `lab/engineering/v7-rlo1-return-requalification-v1/` is closed; dedicated Lab runtime is stopped. Entries-disabled create/recovery and visible EA/dashboard are complete. Remaining work is actual current market gates and final `0/0 -> 1/1` activation, continued by the current-task heartbeat. Long V7 actual/stressed is `+$313.36/+$284.138`, DD `19.5024%`; recent is `+$4.66/+$3.209` with a disclosed July loss. Closed markets leave EA running entries-disabled until genuine continuous ticks return; the user's conditional authorization remains valid without another approval question.
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
