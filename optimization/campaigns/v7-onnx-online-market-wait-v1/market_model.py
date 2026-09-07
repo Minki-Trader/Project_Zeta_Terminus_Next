@@ -20,6 +20,8 @@ import onnxruntime as ort
 FAMILY = Path(__file__).resolve().parent
 ROOT = FAMILY.parents[2]
 RAW = ROOT / "optimization/artifacts/raw/v7-onnx-online-market-wait-v1"
+OUTPUT = RAW / "selection-v2"
+MODELS = FAMILY / "models/v2"
 
 
 def digest(path):
@@ -133,12 +135,12 @@ def observation(window, birth):
 
 
 def main():
-    result_path = FAMILY / "evidence/MODEL_SELECTION_V1.json"
+    result_path = FAMILY / "evidence/MODEL_SELECTION_V2.json"
     if result_path.exists():
         raise RuntimeError("Completed bundle is immutable")
     if shutil.disk_usage(ROOT).free < 30 * 2**30 + 64 * 2**20:
         raise RuntimeError("Storage reserve")
-    input_manifest = json.loads((FAMILY / "evidence/TICK_INPUT_V1.json").read_text(encoding="utf-8"))
+    input_manifest = json.loads((FAMILY / "evidence/TICK_INPUT_V2.json").read_text(encoding="utf-8"))
     if input_manifest["status"] != "COMPLETE_INPUT_EXPORT" or input_manifest["binding_changed"]:
         raise RuntimeError("Input binding needs correction before modeling")
     ledger = RAW / "input/original-market-births-2024-2025.csv"
@@ -146,10 +148,11 @@ def main():
         raise RuntimeError("Own source population changed")
     with ledger.open(encoding="utf-8", newline="") as handle:
         births = {r["position_identifier"]: r for r in csv.DictReader(handle)}
+    OUTPUT.mkdir(exist_ok=False)
     records = [observation(w, births[w["position_id"]]) for w in input_manifest["windows"]]
     population = [{**r, "x": json.dumps(r["x"].tolist(), separators=(",", ":")) if r["x"] is not None else None}
                   for r in records]
-    tape(RAW / "quote-population.csv", population)
+    tape(OUTPUT / "quote-population.csv", population)
     boundary = int(np.datetime64("2025-01-01", "ms").astype(np.int64))
     train = [r for r in records if r["year"] == 2024 and r["status"] == "COMPLETE" and r["label_available_ms"] < boundary]
     fit_x = np.array([r["x"] for r in train])
@@ -168,11 +171,11 @@ def main():
                               [helper.make_tensor_value_info("prediction", TensorProto.FLOAT, [1, 1])])
     model = helper.make_model(graph, producer_name="v7-market-wait", opset_imports=[helper.make_opsetid("", 17)])
     model.ir_version = 8
-    model_path = FAMILY / "models/market-wait.onnx"
+    model_path = MODELS / "market-wait.onnx"
     model_path.parent.mkdir(parents=True, exist_ok=True)
     onnx.save(model, model_path)
     session = ort.InferenceSession(str(model_path), providers=["CPUExecutionProvider"])
-    save(FAMILY / "models/initial-state.json", {"mean": mean.tolist(), "scale": scale.tolist(),
+    save(MODELS / "initial-state.json", {"mean": mean.tolist(), "scale": scale.tolist(),
          "weights": w_fit.tolist(), "fit_rows": len(train), "fit_clipped_labels": int(np.sum(np.abs(raw_y) > 10))})
     selection = sorted([r for r in records if r["year"] == 2025], key=lambda r: (r["forecast_ms"] or r["source_second"] * 1000, r["index"]))
     weights, pending, forecasts, updates = w_fit.copy(), deque(), [], []
@@ -212,9 +215,9 @@ def main():
                               "updates_known": len(updates) if role == "online" else 0})
         if r["status"] == "COMPLETE":
             pending.append((r, features(r["x"]), predictions["online"]))
-    tape(RAW / "forecasts.csv", forecasts)
-    tape(RAW / "online-updates.csv", updates)
-    save(FAMILY / "models/final-online-state.json", {"weights": weights.tolist(), "updates": len(updates),
+    tape(OUTPUT / "forecasts.csv", forecasts)
+    tape(OUTPUT / "online-updates.csv", updates)
+    save(MODELS / "final-online-state.json", {"weights": weights.tolist(), "updates": len(updates),
          "pending_at_last_forecast": len(pending), "last_forecast_ms": max(r["forecast_ms"] or 0 for r in selection)})
     calendar_rows = []
     for day in range(365):
@@ -223,7 +226,7 @@ def main():
         calendar_rows.append({"date": date, "original_market_births": len(group),
                               "eligible": sum(r["eligible"] for r in group),
                               "complete": sum(r["status"] == "COMPLETE" for r in group)})
-    tape(RAW / "calendar-2025.csv", calendar_rows)
+    tape(OUTPUT / "calendar-2025.csv", calendar_rows)
     results = {}
     for role in ("static", "online"):
         rows = [r for r in forecasts if r["role"] == role]
@@ -249,7 +252,7 @@ def main():
                          "halves": halves, "gates": gates, "qualifies": all(gates.values())}
     qualifying = [role for role in ("static", "online") if results[role]["qualifies"]]
     survivor = max(qualifying, key=lambda role: results[role]["quote_stressed_saving"]) if qualifying else None
-    files = [Path(__file__), model_path, *sorted((FAMILY / "models").glob("*.json")), *sorted(RAW.glob("*.csv"))]
+    files = [Path(__file__), model_path, *sorted(MODELS.glob("*.json")), *sorted(OUTPUT.glob("*.csv"))]
     result = {"status": "COMPLETE_FROZEN_MARKET_WAIT_SELECTION", "fit_rows": len(train),
               "source_status_counts": {str(y): dict(Counter(r["status"] for r in records if r["year"] == y)) for y in (2024, 2025)},
               "roles": results, "online_updates": len(updates), "pending_at_last_forecast": len(pending),

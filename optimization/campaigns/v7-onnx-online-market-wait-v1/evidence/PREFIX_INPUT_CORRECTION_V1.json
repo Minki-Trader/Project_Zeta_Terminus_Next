@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-07",
+  "status": "ACTIVE_INPUT_CORRECTION_NO_VALID_ECONOMIC_VERDICT",
+  "source_outcome_status": "MODEL_SELECTION_V1.json is an excluded preliminary calculation, not a valid final selection or campaign closure. Its source,model,initial/finalstate and tapes remain preserved. No survivor,2026value or native candidate opens from it.",
+  "observed_input_defect": "The declared60second feature needs the last quote at or before decision_ms-60000. An acquisition buffer starting at the original birth second minus61seconds can truncate that quote when US30 tick intervals exceed roughly1second. Every prior-feature failure in V1 lacks that anchor:96in2024and97in2025, allUS30. The acquisition window, not a missing market outcome, causes most of these failures.",
+  "bounded_examples": [{"source_index":5,"oldest_available_age_ms":49193},{"source_index":8,"oldest_available_age_ms":56628},{"source_index":9,"oldest_available_age_ms":59238}],
+  "correction": "Re-export all823unchanged birth windows over[T-120,T+34]seconds into own ticks-v2. Only the extra acquisition prefix changes. The exact60second model lookback,61..55second quote-coverage condition,10second reference,feature formulas,decision quote,30second wait,3second fallback bound,120second deadline,label/update rules,fit periods,ridge,threshold and selection gates remain fixed.",
+  "remaining_unavailability": "V1also has14/6cases failing the unchanged61..55second coverage condition and9/7future-quote failures. They are retained; widening acquisition does not authorize deleting a source row, weakening freshness, extending the wait or changing a gate. Reclassify from the complete corrected source only.",
+  "fit": "Regenerate both roles once from the same predeclared2024fit recipe using corrected complete input, then rerun the full2025population. This is the policy-required correction of invalid input, not an outcome-selected model/horizon/threshold retry. Preserve V1 artifacts and publish V2 separately.",
+  "storage": "Reuse only the owning physical Portable; new tick export remains within384MiB and30GiBfree reserve. No original/canonical/Live files removed.",
+  "live_changes": false
+}

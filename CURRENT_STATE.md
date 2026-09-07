@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0615`
+- Latest state ID: `STATE-0617`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Seven preceding bundles remain closed. Sole active Program3 campaign: `optimization/campaigns/v7-onnx-online-market-wait-v1/`, immediate market versus maximum30second quote wait within the original120second deadline. Complete input acquisition exported all823original-entry windows/430341ticks/26.03MB with unchanged binding hashes. Own data reader is normally stopped; first-launch generic Expert files were caught before any quote request and preserved outside its Experts tree. Fixed model production is compiled/frozen before features/fit/selection. An explicit pre-outcome cost correction uses the original max(entry,exit) extra-spread contract to derive a conservative incremental-saving bound; no model/threshold/period changed. No model outcome,candidate2026value,EA/native candidate or survivor exists yet. About49GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Eight bundles are now closed without an economic survivor; the native learning engine operated successfully with exact original V7 economics. Latest Program3 market-wait input correction is complete: all823windows re-exported with only the prefix widened,681050ticks. Corrected2025selection retains428births,408complete and20explicitlyunscored under frozen quote conditions. Static/online descriptive stressed quote savings are-$0.6775/-$0.1923; neither qualifies. This is selection/readiness nonconfirmation, not a complete full-population/native economic verdict. All V1preliminary/V2corrected evidence is preserved. Recompare all macro programs before one materially distinct successor. All own data/native processes are stopped; no candidate2026value or survivorEA opened. About49GiB remains free. Exact baseline and every Live authority/file/process remain unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

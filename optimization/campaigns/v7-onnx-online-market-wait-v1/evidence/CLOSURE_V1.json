@@ -1,0 +1,113 @@
+{
+  "utc": "2026-09-07T04:41:24.852498+00:00",
+  "status": "CLOSED_CORRECTED_SELECTION_READINESS_NONCONFIRMATION_NO_SURVIVOR",
+  "campaign": "optimization/campaigns/v7-onnx-online-market-wait-v1",
+  "result_sha256": "938655279526DAE05E7D11F2010C53AAD3DFCF53E6F87E6751C4A6E25E9EC5DC",
+  "fit_rows": 358,
+  "source_status_counts": {
+    "2024": {
+      "COMPLETE": 358,
+      "PRIOR_TICK_FEATURE_UNAVAILABLE": 14,
+      "FUTURE_QUOTE_UNAVAILABLE": 23
+    },
+    "2025": {
+      "COMPLETE": 408,
+      "FUTURE_QUOTE_UNAVAILABLE": 14,
+      "PRIOR_TICK_FEATURE_UNAVAILABLE": 6
+    }
+  },
+  "roles": {
+    "static": {
+      "source_births": 428,
+      "eligible": 428,
+      "complete": 408,
+      "unscored_eligible": 20,
+      "status_counts": {
+        "COMPLETE": 408,
+        "FUTURE_QUOTE_UNAVAILABLE": 14,
+        "PRIOR_TICK_FEATURE_UNAVAILABLE": 6
+      },
+      "waits": 168,
+      "wait_kinds": {
+        "IMPROVING_QUOTE": 114,
+        "MARKET_FALLBACK": 54
+      },
+      "quote_actual_saving": -0.6545000000000437,
+      "quote_stressed_saving": -0.6775000000001455,
+      "raw_prediction_mse": 57.44194257127881,
+      "halves": {
+        "H1": {
+          "complete": 221,
+          "waits": 98,
+          "quote_actual_saving": 0.40799999999995634,
+          "quote_stressed_saving": 0.4009999999999127
+        },
+        "H2": {
+          "complete": 187,
+          "waits": 70,
+          "quote_actual_saving": -1.0625,
+          "quote_stressed_saving": -1.0785000000000582
+        }
+      },
+      "gates": {
+        "all_eligible_quotes_complete": false,
+        "at_least25waits": true,
+        "stressed_saving_at_least2USD": false,
+        "positive_both_halves": false
+      },
+      "qualifies": false
+    },
+    "online": {
+      "source_births": 428,
+      "eligible": 428,
+      "complete": 408,
+      "unscored_eligible": 20,
+      "status_counts": {
+        "COMPLETE": 408,
+        "FUTURE_QUOTE_UNAVAILABLE": 14,
+        "PRIOR_TICK_FEATURE_UNAVAILABLE": 6
+      },
+      "waits": 157,
+      "wait_kinds": {
+        "IMPROVING_QUOTE": 113,
+        "MARKET_FALLBACK": 44
+      },
+      "quote_actual_saving": -0.1672999999999593,
+      "quote_stressed_saving": -0.19230000000003203,
+      "raw_prediction_mse": 56.504564835733575,
+      "halves": {
+        "H1": {
+          "complete": 221,
+          "waits": 98,
+          "quote_actual_saving": -0.003299999999981064,
+          "quote_stressed_saving": -0.004299999999966508
+        },
+        "H2": {
+          "complete": 187,
+          "waits": 59,
+          "quote_actual_saving": -0.16399999999997822,
+          "quote_stressed_saving": -0.18800000000006553
+        }
+      },
+      "gates": {
+        "all_eligible_quotes_complete": false,
+        "at_least25waits": true,
+        "stressed_saving_at_least2USD": false,
+        "positive_both_halves": false
+      },
+      "qualifies": false
+    }
+  },
+  "online_updates": 407,
+  "pending_at_last_forecast": 1,
+  "selected_survivor": null,
+  "candidate_2026_values_opened": false,
+  "native_economic_verdict": null,
+  "reason": "Corrected input covers every frozen query and retains every original birth. Neither role qualifies:20of428eligible2025observations remain unscored under the unchanged quote/route conditions, and the408complete quote observations have negative pooled incremental stressed savings with nonpositiveH2. The complete-subset numbers are descriptive selection observations, not a valid full-population economic failure or nativeDD judgment. No input-buffer defect remains as a reason for these unavailability classifications.",
+  "preliminary_v1": "Excluded from final selection because acquisition truncated the60second reference; all files retained with exact mapping. V2uses only the documented prefix correction and unchanged policy/model/fit/gates.",
+  "freeze": "Close both roles together without neighboring horizon,target,threshold,feature,model,step,component,subgroup,coverage,fallback or execution-kind rescue. Preserve all823raw input windows in both revisions, source,ONNX,states and selection tapes.",
+  "own_reader": "PID33684normally closed; no current campaign process remains.",
+  "continuation": "The broader V7 development task remains active. Compare all active macro programs before one materially distinct successor.",
+  "free_bytes": 52583026688,
+  "live_changes": false
+}

@@ -41,17 +41,17 @@ def binding():
 
 
 def main():
-    evidence = FAMILY / "evidence/TICK_INPUT_V1.json"
+    evidence = FAMILY / "evidence/TICK_INPUT_V2.json"
     if evidence.exists():
         raise RuntimeError("Completed input export is immutable")
     derivation = json.loads((FAMILY / "evidence/RUNTIME_AND_LEDGER_DERIVATION_V1.json").read_text(encoding="utf-8"))
     ledger = ROOT / derivation["ledger"]["path"]
     if sha(ledger) != derivation["ledger"]["sha256"]:
         raise RuntimeError("Own original ledger binding changed")
-    out = RAW / "ticks"
+    out = RAW / "ticks-v2"
     out.mkdir(exist_ok=False)
     before = binding()
-    save(FAMILY / "evidence/TICK_INPUT_BEFORE_V1.json", {"utc": dt.datetime.now(dt.timezone.utc).isoformat(), "binding": before})
+    save(FAMILY / "evidence/TICK_INPUT_BEFORE_V2.json", {"utc": dt.datetime.now(dt.timezone.utc).isoformat(), "binding": before})
     windows = []
     total_bytes = 0
     if not mt5.initialize(str(RUNTIME / "terminal64.exe"), portable=True, timeout=30000):
@@ -70,7 +70,9 @@ def main():
             if row["symbol"] not in ("US30", "US100") or not "2024.01.01" <= row["entry_time_server"] < "2026.01.01":
                 raise RuntimeError("Declared input population mismatch")
             t = int(dt.datetime.strptime(row["entry_time_server"], "%Y.%m.%d %H:%M:%S").replace(tzinfo=dt.timezone.utc).timestamp())
-            lower, upper = t - 61, t + 34
+            # Extra acquisition buffer supplies the last quote at/before the
+            # unchanged60second feature boundary in sparse US30 ticks.
+            lower, upper = t - 120, t + 34
             if shutil.disk_usage(ROOT).free < 30 * 2**30 + 64 * 2**20:
                 raise RuntimeError("Storage reserve requires correction")
             ticks = mt5.copy_ticks_range(row["symbol"], lower, upper, mt5.COPY_TICKS_ALL)

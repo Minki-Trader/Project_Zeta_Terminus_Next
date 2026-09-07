@@ -1,0 +1,146 @@
+{
+  "status": "COMPLETE_FROZEN_MARKET_WAIT_SELECTION",
+  "fit_rows": 358,
+  "source_status_counts": {
+    "2024": {
+      "COMPLETE": 358,
+      "PRIOR_TICK_FEATURE_UNAVAILABLE": 14,
+      "FUTURE_QUOTE_UNAVAILABLE": 23
+    },
+    "2025": {
+      "COMPLETE": 408,
+      "FUTURE_QUOTE_UNAVAILABLE": 14,
+      "PRIOR_TICK_FEATURE_UNAVAILABLE": 6
+    }
+  },
+  "roles": {
+    "static": {
+      "source_births": 428,
+      "eligible": 428,
+      "complete": 408,
+      "unscored_eligible": 20,
+      "status_counts": {
+        "COMPLETE": 408,
+        "FUTURE_QUOTE_UNAVAILABLE": 14,
+        "PRIOR_TICK_FEATURE_UNAVAILABLE": 6
+      },
+      "waits": 168,
+      "wait_kinds": {
+        "IMPROVING_QUOTE": 114,
+        "MARKET_FALLBACK": 54
+      },
+      "quote_actual_saving": -0.6545000000000437,
+      "quote_stressed_saving": -0.6775000000001455,
+      "raw_prediction_mse": 57.44194257127881,
+      "halves": {
+        "H1": {
+          "complete": 221,
+          "waits": 98,
+          "quote_actual_saving": 0.40799999999995634,
+          "quote_stressed_saving": 0.4009999999999127
+        },
+        "H2": {
+          "complete": 187,
+          "waits": 70,
+          "quote_actual_saving": -1.0625,
+          "quote_stressed_saving": -1.0785000000000582
+        }
+      },
+      "gates": {
+        "all_eligible_quotes_complete": false,
+        "at_least25waits": true,
+        "stressed_saving_at_least2USD": false,
+        "positive_both_halves": false
+      },
+      "qualifies": false
+    },
+    "online": {
+      "source_births": 428,
+      "eligible": 428,
+      "complete": 408,
+      "unscored_eligible": 20,
+      "status_counts": {
+        "COMPLETE": 408,
+        "FUTURE_QUOTE_UNAVAILABLE": 14,
+        "PRIOR_TICK_FEATURE_UNAVAILABLE": 6
+      },
+      "waits": 157,
+      "wait_kinds": {
+        "IMPROVING_QUOTE": 113,
+        "MARKET_FALLBACK": 44
+      },
+      "quote_actual_saving": -0.1672999999999593,
+      "quote_stressed_saving": -0.19230000000003203,
+      "raw_prediction_mse": 56.504564835733575,
+      "halves": {
+        "H1": {
+          "complete": 221,
+          "waits": 98,
+          "quote_actual_saving": -0.003299999999981064,
+          "quote_stressed_saving": -0.004299999999966508
+        },
+        "H2": {
+          "complete": 187,
+          "waits": 59,
+          "quote_actual_saving": -0.16399999999997822,
+          "quote_stressed_saving": -0.18800000000006553
+        }
+      },
+      "gates": {
+        "all_eligible_quotes_complete": false,
+        "at_least25waits": true,
+        "stressed_saving_at_least2USD": false,
+        "positive_both_halves": false
+      },
+      "qualifies": false
+    }
+  },
+  "online_updates": 407,
+  "pending_at_last_forecast": 1,
+  "selected_survivor": null,
+  "candidate_2026_values_opened": false,
+  "native_economic_verdict": null,
+  "artifacts": [
+    {
+      "path": "optimization/campaigns/v7-onnx-online-market-wait-v1/market_model.py",
+      "bytes": 16151,
+      "sha256": "07C1865F61037492B0CDABAF29DDE82C69D6DE6C07A4F2E883FCA8D5D4381AA4"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-market-wait-v1/models/v2/market-wait.onnx",
+      "bytes": 172,
+      "sha256": "F185799A5E8D1B99AA6170C17E815C86A15B893972F1AE2DB7FFB065570FA44B"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-market-wait-v1/models/v2/final-online-state.json",
+      "bytes": 356,
+      "sha256": "F0BE5160266310F429A495A16A620E471AB159D89BEE1F263B246FF11C255F1B"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-market-wait-v1/models/v2/initial-state.json",
+      "bytes": 750,
+      "sha256": "E5E0DBB0D3F7C2E16AF7D41E6AB6A09954F7FB991F8042A3BB27BB77ABD2DD7A"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-market-wait-v1/selection-v2/calendar-2025.csv",
+      "bytes": 6617,
+      "sha256": "A7BF89FF416240004E001AC83C0BC8620EE2AB83D1D775968F81BFCEF0A32721"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-market-wait-v1/selection-v2/forecasts.csv",
+      "bytes": 117357,
+      "sha256": "2CB4E8D569B0C404F061FD04B2EF5EBB17A34A619B1F8E5D29BBD54D99723BE2"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-market-wait-v1/selection-v2/online-updates.csv",
+      "bytes": 119408,
+      "sha256": "B8D288A163F4DD847771E77A704D2B4F0B95012A4B9345E21D120EA1E21BEC69"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-market-wait-v1/selection-v2/quote-population.csv",
+      "bytes": 299843,
+      "sha256": "0C55CF1D226590443C7AA6FD483B8BC357D260B4CEDE81DC9CEC773010D2146C"
+    }
+  ],
+  "free_bytes": 52590919680
+}
