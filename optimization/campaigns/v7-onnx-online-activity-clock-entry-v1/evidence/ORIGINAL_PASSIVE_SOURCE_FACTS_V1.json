@@ -1,0 +1,35 @@
+{
+  "source_root": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5",
+  "passive_component": "ZT-M15-US100-IMPULSE-EXTENSION--311868f4e8",
+  "original_fixed_volume": 0.01,
+  "original_hold_m15_bars": 16,
+  "original_entry_hour": "12<=completed decision bar hour<16",
+  "original_hurdle_abs_normalized_move": 1.0,
+  "original_pending_activation_bars": 4,
+  "original_risk": "Conservative capital*.04; gross half of budget, full budget reserved. Aggregate12%,margin45%.",
+  "original_2025": {
+    "closes": 129,
+    "actual": 9.66,
+    "stress": 7.681,
+    "H1": [
+      60,
+      -0.52,
+      -1.4735
+    ],
+    "H2": [
+      69,
+      10.18,
+      9.1545
+    ]
+  },
+  "integration_facts": "Original ProcessClosures explicitly skips Passive. Its own ProcessPassiveLimit performs entry and state/time closes. Original fixed-volume fill reconstruction, pending reconciliation, journal and ownership branches must be adapted only in an eventual own candidate. A new market engine cannot inherit old limit-order state.",
+  "source_refs": [
+    "Include/ZetaTerminusNext/Domain/ZetaDomain.mqh:258",
+    "Include/ZetaTerminusNext/Strategies/ZetaPassive.mqh:379",
+    "Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh:760",
+    "Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh:235",
+    "Include/ZetaTerminusNext/Execution/ZetaOrders.mqh:477"
+  ],
+  "factual_only": true,
+  "live_changes": false
+}

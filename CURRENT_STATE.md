@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0624`
+- Latest state ID: `STATE-0625`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue serial V7 ONNX/online development until user pause; seek compound growth with comparable DD and preserve Live and 30 GiB free. Program 4 volatility-ratchet bundle is CLOSED_VALID_NATIVE_NO_PASSER_NO_RETAINED_SEED. Complete valid control/candidate actual net is 259.17/192.65, doubled-cost stressed net 239.7141/174.449, native relative equity DD 16.073213874%/14.897119342%, conservative recovery 4.65464/4.47535. Candidate has all four positive epochs and healthy ONNX/SL execution but fails growth and recovery gates. All 153 strict input/execution bindings and complete fixed-window M1 snapshots match before/between/after; full contracts and 100% real ticks agree. Early two excluded controls remain separately preserved. Full valid pair, capital/lot graph and closure are retained; own runtime and readers are normally stopped. No adjacent rescue or unselected online substitution. Next authorized work is a whole-program recompare before a materially distinct serial successor. About 43.3 GiB free; all Live authority, files and processes remain unchanged.
+Current user task: continue serial V7 ONNX/online development until user pause; seek compound growth with comparable DD and preserve Live and 30 GiB free. Volatility-ratchet closure f522d90 reached origin/main and remains immutable. Whole-program comparison selects one new Program 1 campaign, optimization/campaigns/v7-onnx-online-activity-clock-entry-v1. It replaces only Passive with a daily tick-activity clock and three-state Gaussian HMM price-impact persistence engine, comparing one STATIC/ONLINE filtering-EM bundle. The five other V7 engines and whole-account risk/capital rules remain original. Source, exact original inputs, HMM/clock/update/signal/hold/selection/native gates are frozen before features/fit/outcomes. Own input has 762828 US100 M1 rows through 2025 only and 258 original Passive lifecycle rows. No model run, candidate2026 or own runtime yet. At most one selection passer may open native; no adjacent rescue after closure. About 43 GiB free. All Live authority/files/processes and the frozen baseline remain unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

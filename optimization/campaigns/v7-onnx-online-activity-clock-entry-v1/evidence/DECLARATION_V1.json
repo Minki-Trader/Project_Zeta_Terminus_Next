@@ -1,0 +1,87 @@
+{
+  "utc": "2026-09-07T06:28:54.581378+00:00",
+  "status": "PROSPECTIVE_BEFORE_FEATURES_FIT_OR_OUTCOMES",
+  "campaign": "optimization\\campaigns\\v7-onnx-online-activity-clock-entry-v1",
+  "primary_program": 1,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "roles": [
+    "STATIC_HMM",
+    "ONLINE_FILTERING_EM_HMM"
+  ],
+  "preserved": "The five other original V7 engines, original daily150USD market-lot staircase, position4%/aggregate12%/margin45% caps and all native operating/identity/protection/recovery gates. New Passive-slot engine uses original fixed0.01 base volume; no original pending-order code executes for it.",
+  "source": {
+    "market": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US100-M1.npy",
+    "market_sha256": "EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B",
+    "lifecycle": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+    "lifecycle_sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+    "own_input": "Physical timestamp-only slice 2023-11-01 through 2026-01-01 exclusive, original eight M1 fields. Copy only original 2025 Passive BIRTH/CLOSE rows for descriptive benchmark. Do not read candidate2026 price fields or any closed model."
+  },
+  "clock": {
+    "daily_target": "At each source server date, median total native tick_volume of the previous20 observed trading dates divided by48, rounded up to integer at least1. No current-day total enters that day target. All observed dates remain in denominators.",
+    "bucket": "Accumulate complete observed M1 rows from the first row of that date; close a bucket when cumulative tick_volume reaches the fixed daily target. Never split a minute. Reset accumulation after each completed bucket. Retain incomplete day-end remainder counts as unused clock material. No overnight bucket or transition.",
+    "availability": "Bucket observation available at final included M1 time+60. Exact source calendar epochs retained with no timezone conversion or intended external session.",
+    "scale": "Median high-low range of previous20 completed activity buckets, excluding current, floor0.01. Prefix may span prior days; missing prefix is explicit.",
+    "features": [
+      "log1p(elapsed bucket minutes)",
+      "(bucket bid close - bucket bid open)/previous20bucket median range",
+      "sum(sign(M1 close - previous within-bucket M1 close)*tick_volume)/total tick_volume; first M1 uses its own open as reference"
+    ],
+    "measurement": "Tick_volume is quote activity, not traded volume or observed order flow. Signed activity is an internal price/tick proxy."
+  },
+  "fit": {
+    "period": "All valid2024 completed buckets;2023 is clock/scale warmup only. Whole observed source dates and unavailable prefixes retained.",
+    "standardization": "2024-only feature mean/populationSD, floor1e-6; standardized inputs clipped[-6,6].",
+    "model": "Three-state diagonal Gaussian HMM, exactly20 Baum-Welch passes, daily independent sequences and fixed uniform start prior. Deterministic initial state memberships from feature1 signed-impact terciles; ties use stable chronological rank. Initial means/group means; initial variances pooled feature variances floored0.05. Initial transition diagonal0.8/off-diagonal0.1.",
+    "regularization": "Each M-step adds1 to every transition count before row normalization, state occupancy floor1e-12, means bounded[-6,6], diagonal variances floored0.05. No state-count, initialization, pass-count, feature or model search.",
+    "onnx": "Fresh float32 graph computes Gaussian log emissions and posterior Softmax from dynamic normalized observation[1,3],means[3,3],variances[3,3],prior[1,3]. Uses Sub/Mul/Div/Log/Add/ReduceSum/Softmax. Host owns transition state and deterministic preprocessing; all posterior inferences use ONNX. IR8/opset17."
+  },
+  "online": {
+    "initial": "Both roles begin2025 from the same2024 HMM/normalization, uniform daily filter, empty pending update. Online effective sufficient-statistic masses initialize state occupancy1/3, sums=mass*mean, second moments=mass*(variance+mean^2), transition masses=A/3.",
+    "update": "Before each new observed bucket D, consume the previous pending observation only if availability<D. Online filtering-EM step alpha0.005: state occupancy/sums/second moments blend with stored posterior gamma and normalized observation; transitions blend with stored xi when within-day predecessor exists. Recompute means, diagonal variance floor0.05 and row-normalized transition masses with1e-6 pseudocount. No smoothing from future observations, reset/tuning or trade-outcome labels.",
+    "filter": "Daily start prior uniform; otherwise prior=previous filtered posterior times current A. ONNX returns current posterior. Within-day xi(i,j)=previous posterior(i)*A(i,j)*posterior(j)/prior(j), normalized to sum1. Store the current observation/gamma/xi for a strictly later parameter update.",
+    "forecast": "After filtering current completed bucket with current parameters, next-state probabilities=posterior*A. Predicted next-bucket signed impact is their weighted emission mean for feature1, transformed back through frozen training mean/std, times current causal range scale. Online updates are from already observed market data, not future trade labels."
+  },
+  "strategy": {
+    "population": "Forecast every valid completed bucket regardless of occupancy/session. New entry opportunities are only server-clock08:00<=D<21:00, one position in the replacement Passive slot. All365selection calendar dates and all original observed trading dates are reported, including zero entries.",
+    "signal": "Market buy/sell in the sign of predicted points only when absolute prediction>2*max(0.01,last completed M1 spread*0.01). At native execution require the same hurdle against max(last completed spread,fresh executable spread). No direction or time subgroup selection.",
+    "execution": "Own candidate requests original legal market execution at first eligible fresh quote in[D,D+60), never later. Original original-component entry/pending engine is disabled only in this replaced slot. Existing five strategies and ordinary aggregate-risk priority remain; the new engine has its own durable pending decision and cannot share old state.",
+    "hold": "Close at the next completed activity-bucket observation, or at floor(D/900)*900+4*900, whichever comes first; this is45..60minutes maximum from opportunity. Original catastrophic initialSL remains. No reversion-threshold exit, stop trailing, hold extension or calendar-conditioned rescue. Process old close before any new opportunity at the same bucket.",
+    "risk": "Native fresh original CalculateProtectiveStop uses conservative capital*.04, gross half of that budget, full original reserved position risk, .01 volume and original aggregate/margin gates. No risk credit from model confidence. All required broker contract/rounding/freshness/session rules still apply."
+  },
+  "selection": {
+    "period": "2025 only; both halves. STATIC and ONLINE one indivisible bundle. No candidate2026 numeric data before sole-survivor freeze.",
+    "scope": "Normal preliminary quote-path selection at fixed0.01 volume and fixed100USD risk budget, not whole V7 account economics or compound-growth proof. Shared five-engine occupancy, evolving native capital and actual tick sequencing are absent and must be decided only in full native pair.",
+    "execution_approximation": "Sequential original M1 bid OHLC/spread proxy. Forecast uses only completed rows; next observed M1 open in[D,D+60) represents possible first quote. Long entry=open+that M1 spread, short entry=open. Future spread is execution cost only and never a feature or selection hurdle. At entry risk gross2USD implies200point loss-side initialSL, tick0.01. After entry, open-gap stop precedes timed/clock exit; then adverse minute extreme can hit SL. Long stop fill=min(open,SL), short=max(open+spread,SL). Time/bucket close uses first observed M1 open at/after deadline. Exact native tick/fee/financing/admission evidence remains conditional.",
+    "cost": "Quote actual uses executable-side bid/ask approximation. Stress additionally deducts max(entry,exit spread)*.01 and any adverse stop gap*.01. No positive financing credit or invented commission. Fees/financing not represented in this M1 approximation remain explicit; actual native ledgers are mandatory.",
+    "gates": [
+      "Complete sequential source population, no model/arithmetic/causality or input fault; every forecast and source date retained",
+      "Stressed quote net strictly greater than max(0, original2025Passive actual net9.66USD)",
+      "Both half-year stressed quote totals strictly positive",
+      "Actual lifecycle starts per original US100 observed2025trading date>=3; zero-signal days stay in denominator"
+    ],
+    "report": "All raw forecasts/posteriors/pending updates, model likelihoods, occupancy/skip/exit/stop/cost tapes, daily/half-year PNL and fixed-dollar DD. Readiness/selection only, never true compounding or nativeDD.",
+    "ranking": "Highest full stressed quote profit among qualifiers; STATIC on exact tie. Exactly one finalist or zero. Close both roles together with no adjacent clock target/state count/feature/EMstep/emission/hurdle/session/symbol/hold/risk rescue."
+  },
+  "conditional_native": {
+    "interval": "2025-01-01 through2026-09-01exclusive; Jan-Jun2026confirmation, Jul-Aug2026latest. One unchanged exact-control/one-survivor pair after selection.",
+    "ownership": "Fresh self-contained physical copies from the exact frozen V7R Optimization parent only, own new tester-only identities/Magic/state/Include/model/settings and dedicated physical OptimizationPortable. No source/EX5/state/model from Lab/Live/closed campaigns executes. Neutral platform/history physical copies may be attributed.",
+    "inputs": "100USD,1:100,US30M30assembly,Model4,all3symbols100%real ticks,localonly,normalshutdown. Full actual2024warmup-through-exclusive2026-09-01M1 inputs plus exercised monthly ticks/platform/symbolDB/contracts/swaps/source/EX5/model/SET hashes bound before/between/after. Current annual containers are diagnostic only if exact full exercised data remains bound.",
+    "gates": "Higher actual wealth/geometric growth, stressedprofitgain>=5%, nominal nativeequityDD<=control; tolerance min(control+1.5pp,control*1.10) only with improved growth/recovery/temporal evidence. All2025halves/2026H1/2026JulAug actual&stresspositive; replacement high-turnover engine >=3 actual firstfills per normal source trading day in both binding-long and isolated latest. Complete nativecapital/lot/cost/stop/learning paths. No Live promotion.",
+    "faults": "Environment/input/design/implementation faults require correction and a new complete valid pair with no arbitrary retry cap; they are not economic failure or tuning authority."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "initial_cap_mib": 384,
+    "conditional_runtime_growth_gib": 6,
+    "native_output_growth_gib": 2
+  },
+  "prohibitions": [
+    "Live file/process actions or broker context queries",
+    "External economic sources",
+    "Closed source/model/state import",
+    "Parallel candidate judgments",
+    "Tests, validators, parity/promotion checkers, test CLIs, CI"
+  ],
+  "live_changes": false
+}
