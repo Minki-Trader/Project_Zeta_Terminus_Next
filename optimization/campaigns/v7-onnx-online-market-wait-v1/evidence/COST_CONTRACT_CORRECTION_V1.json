@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-07",
+  "status": "PROSPECTIVE_ACCOUNTING_CORRECTION_BEFORE_FEATURES_FIT_OR_SELECTION",
+  "supersedes": "Only the quote_policy.cost half-entry-spread incremental accounting statement in DECLARATION_V1.json; all input windows,features,labels,learning,actions,thresholds,periods and gates remain frozen.",
+  "source": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh:396-405",
+  "original_v7": "ExtraSpread=max(entry_spread,exit_spread)*contract*executed_volume. ExtraNonSpread=entry_adverse_alloc+exit_adverse+max(0,-entry_transaction_cost_alloc)+max(0,-exit_transaction_cost). Transaction cost is the signed sum of commission,swap,fee, not a clamp of each fee independently. Original actual net already contains the signed costs once; stressed subtracts ExtraSpread+ExtraNonSpread.",
+  "corrected_selection": "Keep raw model label direction*(immediate_price-wait_price)/initial_spread. Standalone conservative stressed incremental saving=actual_quote_saving+min(0,initial_spread-wait_spread)*source_volume*unit_contract.",
+  "bound": "For a common nonnegative but unknown future exit spread e, max(s_initial,e)-max(s_wait,e)>=min(0,s_initial-s_wait). Thus the selection charges the full possible extra penalty for a wider entry spread and gives no extra-cost credit for a narrower entry spread. Actual executable buy/ask or sell/bid price saving remains counted. This is a conservative quote-selection bound, not complete candidate economics.",
+  "native": "The unchanged original max-spread/adverse/transaction accounting must determine full candidate results. Stop,exit,commission,financing and shared-capital feedback are not reconstructed by this price-selection bound.",
+  "closed_hedge_context": "The prior frozen hedge campaign explicitly used an approximate average-spread standalone charge, not native economics. Replacing that charge with max(entry,exit) could only reduce its already-negative standalone stressed hedge result. Do not rerun or reopen it; its source/results stay immutable and no native verdict existed.",
+  "causal_prefix_detail": "Model history features use only ticks with time_msc strictly less than the actual decision tick's time_msc, and the actual current executable quote is a separate input. Same-millisecond historical tails never enter a feature; future same-ms ticks may appear only in the completed quote label, with exact original ordinal retained.",
+  "model_or_candidate_outcomes_observed": false,
+  "live_changes": false
+}

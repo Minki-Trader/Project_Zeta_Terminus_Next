@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0614`
+- Latest state ID: `STATE-0615`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Seven preceding bundles remain closed. The sole new Program3 campaign is `optimization/campaigns/v7-onnx-online-market-wait-v1/`: learn immediate market versus a fixed maximum30second quote wait within the unchanged120second order-attempt deadline. Full static/online model,features,labels,selection,native integration and storage are frozen prospectively. A fresh own Portable contains only2.408GBof neutral platform/required2025-or-earliercache/private connection support, with no Expert or old source/state/profile. An own823row original-market-BIRTH ledger and normally compiled historical tick exporter are frozen before acquisition. Next acquire bounded2024/2025entry quote windows, normally stop the own reader, then implement the predeclared model and complete selection. No model outcome,candidate2026value,EA or native candidate is open. About49.7GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Seven preceding bundles remain closed. Sole active Program3 campaign: `optimization/campaigns/v7-onnx-online-market-wait-v1/`, immediate market versus maximum30second quote wait within the original120second deadline. Complete input acquisition exported all823original-entry windows/430341ticks/26.03MB with unchanged binding hashes. Own data reader is normally stopped; first-launch generic Expert files were caught before any quote request and preserved outside its Experts tree. Fixed model production is compiled/frozen before features/fit/selection. An explicit pre-outcome cost correction uses the original max(entry,exit) extra-spread contract to derive a conservative incremental-saving bound; no model/threshold/period changed. No model outcome,candidate2026value,EA/native candidate or survivor exists yet. About49GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
