@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0613`
+- Latest state ID: `STATE-0614`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. All seven preceding bundles are closed; native ONNX/own learning operates with exact V7 economics but no predictive/economic improvement. Latest `optimization/campaigns/v7-onnx-online-cross-hedge-v1/` retains196original2025Crossparents and103completehedges per role; static/online standalone stressed quote increments are-$11.7888/-$10.7596 and both halves lose. No survivor,2026candidate numeric values,seventh-component EA/runtime or native verdict opened. No new family is open at this boundary. Broader V7 work remains active through a fresh whole-mechanism comparison; market-entry execution cost is a prospective source question only. About51.9GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Seven preceding bundles remain closed. The sole new Program3 campaign is `optimization/campaigns/v7-onnx-online-market-wait-v1/`: learn immediate market versus a fixed maximum30second quote wait within the unchanged120second order-attempt deadline. Full static/online model,features,labels,selection,native integration and storage are frozen prospectively. A fresh own Portable contains only2.408GBof neutral platform/required2025-or-earliercache/private connection support, with no Expert or old source/state/profile. An own823row original-market-BIRTH ledger and normally compiled historical tick exporter are frozen before acquisition. Next acquire bounded2024/2025entry quote windows, normally stop the own reader, then implement the predeclared model and complete selection. No model outcome,candidate2026value,EA or native candidate is open. About49.7GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
@@ -116,7 +116,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 - Sole forward Lab baseline: `lab/engineering/protective-exit-order-reconciliation-v1/mt5/` at commit `0d4032786cecb7d7e8a4c3074609db5b105fa107`; it remains frozen and is not a Challenge source.
 - `lab/mt5/` is frozen historical material; no MQL source may be added or changed there.
 - Challenge families own self-contained roots and may not include or execute another family, Live or Optimization path.
-- Exact-V8 Optimization Units U001-U004 are closed immutable ancestry with zero survivor. No Optimization runtime or campaign is active.
+- Exact-V8 Optimization Units U001-U004 are closed immutable ancestry with zero survivor. Their runtimes/campaigns remain stopped; the current V7 Optimization owner is named in the active primary Goal above.
 - Active Optimization baseline: `optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/`, a new one-time byte-pinned static package copy. Old V7 and V8 baselines remain frozen ancestry. No baseline executes with Live identity.
 - Program 6 execution/recovery/broker-safety research is outside the current Goal.
 
