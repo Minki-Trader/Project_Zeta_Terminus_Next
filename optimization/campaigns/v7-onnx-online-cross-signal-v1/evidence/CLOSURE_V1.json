@@ -1,0 +1,112 @@
+{
+  "utc": "2026-09-07T03:49:32.864371+00:00",
+  "status": "CLOSED_COMPLETE_SELECTION_NONCONFIRMATION_NO_SURVIVOR",
+  "campaign": "optimization/campaigns/v7-onnx-online-cross-signal-v1",
+  "fit_rows": 4643,
+  "roles": {
+    "static": {
+      "forecasts": 5494,
+      "complete_labels": 4656,
+      "incomplete_labels": 838,
+      "raw_mse": 1.1672063531948131,
+      "reference_raw_mse": 1.1581767108703869,
+      "daily_opportunities": 242,
+      "daily_complete_labels": 240,
+      "intentions": 190,
+      "reference_intentions": 206,
+      "changed_opportunities": 102,
+      "quote_score_bp": 835.8310457678463,
+      "reference_quote_score_bp": 1412.0927582387583,
+      "halves": {
+        "H1": {
+          "opportunities": 120,
+          "intentions": 93,
+          "quote_score_bp": 1090.2089760558968,
+          "reference_quote_score_bp": 1493.3304087355125
+        },
+        "H2": {
+          "opportunities": 120,
+          "intentions": 97,
+          "quote_score_bp": -254.37793028805058,
+          "reference_quote_score_bp": -81.23765049675416
+        }
+      },
+      "gates": {
+        "mse_within_2pct": true,
+        "positive_and_beats_reference": false,
+        "positive_both_halves": false,
+        "intentions_half_reference_and25": true,
+        "changes5pct": true,
+        "daily_labels_complete": false
+      },
+      "qualifies": false
+    },
+    "online": {
+      "forecasts": 5494,
+      "complete_labels": 4656,
+      "incomplete_labels": 838,
+      "raw_mse": 1.1663027252677096,
+      "reference_raw_mse": 1.1581767108703869,
+      "daily_opportunities": 242,
+      "daily_complete_labels": 240,
+      "intentions": 171,
+      "reference_intentions": 206,
+      "changed_opportunities": 111,
+      "quote_score_bp": -175.9440464917118,
+      "reference_quote_score_bp": 1412.0927582387583,
+      "halves": {
+        "H1": {
+          "opportunities": 120,
+          "intentions": 89,
+          "quote_score_bp": 810.0810384499403,
+          "reference_quote_score_bp": 1493.3304087355125
+        },
+        "H2": {
+          "opportunities": 120,
+          "intentions": 82,
+          "quote_score_bp": -986.025084941652,
+          "reference_quote_score_bp": -81.23765049675416
+        }
+      },
+      "gates": {
+        "mse_within_2pct": true,
+        "positive_and_beats_reference": false,
+        "positive_both_halves": false,
+        "intentions_half_reference_and25": true,
+        "changes5pct": true,
+        "daily_labels_complete": false
+      },
+      "qualifies": false
+    }
+  },
+  "online_updates": 4654,
+  "pending_at_last_forecast": 2,
+  "strict_label_end_violations": 0,
+  "missing_daily_label_windows": [
+    {
+      "date": "2025-02-04",
+      "forecast": 1738688400,
+      "label_end": 1738702800
+    },
+    {
+      "date": "2025-06-16",
+      "forecast": 1750093200,
+      "label_end": 1750107600
+    }
+  ],
+  "model": {
+    "path": "optimization/campaigns/v7-onnx-online-cross-signal-v1/models/cross-direct.onnx",
+    "bytes": 169,
+    "sha256": "C5E86C63F6E59F31AC5A7F4C376F0D50D4AEBC068520738636124AC92A2DC032"
+  },
+  "result_sha256": "9709FD05FCE0AE0A1C2C41EE13A542F88E18950508203D49F006AA6C6D050B23",
+  "source_input_unchanged": true,
+  "selected_survivor": null,
+  "native_economic_verdict": null,
+  "candidate_2026_values_opened": false,
+  "reason": "Both roles fail original-reference and half-year quote-score criteria on the complete240opportunity subset. All242forecasts are retained; two incomplete future windows also prevent complete daily price-response coverage. These are selection/readiness observations, not a full economic failure or native-DD result. No profitable assumption about missing windows is made.",
+  "freeze": "Preserve entire static/online bundle and all inputs,model,normalization,initial/finalstate,forecast/update/population/calendar tapes. No adjacent feature,model,ridge,forgetting,hour,hurdle,symbol,horizon or subgroup rescue.",
+  "free_bytes": 55913967616,
+  "live_changes": false,
+  "continuation": "Broader V7 development remains active; whole-mechanism comparison precedes another materially distinct campaign."
+}
