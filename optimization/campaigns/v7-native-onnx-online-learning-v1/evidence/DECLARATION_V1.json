@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-07",
+  "status": "PROSPECTIVE_BEFORE_NATIVE_SOURCE_MODEL_OR_ECONOMIC_EXECUTION",
+  "campaign": "optimization/campaigns/v7-native-onnx-online-learning-v1",
+  "authority": "Latest V7 ONNX/online implementation direction in docs/OPERATING_DIRECTION.md",
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "one_stream": true,
+  "purpose": "Implement actual ONNX inference and own matured-label online learning inside isolated native V7 while preserving original trading behavior; collect normal bounded learning and economic evidence",
+  "roles": ["EXACT_V7_CONTROL", "V7_NATIVE_OBSERVATIONAL_ONLINE_LEARNER"],
+  "derive_once": "Two independent physical source copies from exact baseline, no shared Include tree or cross-root import. Separate release/execution/Portfolio/Magic/core/research/learning paths; both refuse non-Tester execution before startup.",
+  "economics": "Exact V7 original entries, order timing, direction, lot staircase, Passive0.01, 4%/12% risk, margin45%, all protection/RC4 management/exits and transaction ordering. Predictions and updates are observation only and have no path into trading return values or parameters.",
+  "learning": {
+    "features": "At an actual BIRTH,14 bounded causal columns: six component one-hot, six component-gated feature/(1+abs(feature)), direction, direction*prior_signal_direction. This forecasts a realized lifecycle after acceptance; it is not an entry authorization or retrospective gate.",
+    "onnx": "Fresh standard float32 graph MatMul(features[1,14], online_weights[14,1])->score[1,1]. Weights are dynamic model inputs owned by the EA, not a claim that ONNX Runtime performs training. No closed candidate model/parameters are reused.",
+    "initial_weights": "14 zeros at fresh Tester initialization; no historical or Live learning state adoption",
+    "prediction": "ONNX inference at BIRTH from current model weights; capture features, prediction and unique own position identifier. Nonfinite or failed inference records a model fault and never changes original trading.",
+    "label": "Own complete CLOSE accumulated stressed_net divided by original reserved planned risk; clip[-2,2] for update, retain raw outcome in evidence. Never train on rejected or unknown counterfactual opportunities.",
+    "update_time": "Queue completed label and consume only when close server_time is strictly earlier than current event time. Same-second predictions never see same-second closes. Forecast loss is scored before the weight update.",
+    "update": "Normalized online squared-error step: w_i=clip(w_i+0.05*(clipped_label-stored_entry_prediction)*stored_entry_feature_i/(1+sum(stored_features^2)),-2,2). No learning-rate or clipping search.",
+    "checkpoint": "Bounded own CSV checkpoints record graph/model identity, source-role identity, weights, counters, active entry features and pending labels. Tester runs always start fresh. This phase makes no live restart/recovery claim.",
+    "observability": "Forecast count, complete label count, update count, same-second delay, errors, raw/clipped loss and beginning/final weights. Inference/update/checkpoint errors invalidate engineering completion but do not alter V7 trading decisions."
+  },
+  "native_pair": {
+    "interval": "2024-01-01 through2026-01-01 exclusive; no candidate2026 values",
+    "configuration": "FPMarkets US30 M30 assembly, required US30/US100/US500, $100, USD, leverage1:100, Model4 Every tick based on real ticks, optimization/remote/cloud/visual off, shutdown after run",
+    "order": "Exact control then observational learner immediately adjacent under same terminal, source/SET identities, required contracts/swaps and complete M1/TKC input fingerprints",
+    "physical_runtime": "optimization/runtime/v7-native-onnx-online-learning-v1-portable",
+    "platform_source": "Physical generic binary/standard-library/private connection support only from preserved optimization/runtime/dd20-pcr2-portable; never execute the source Portable and never copy its strategy/state/profile/trade-history payload",
+    "history_source": "Physical required-symbol cache copies from preserved same-lane PCR2; preserve canonical original caches. Static symbol DB and whole required TKC hashes bound before/after pair; payload drift invalidates full pair and requires a clean replacement after correction.",
+    "checks": "Normal MetaEditor compilation, full native Tester results and bounded native logs/ledgers. Require100% all-required-symbol real ticks with no generated fallback, matching complete economic counts/profits/DD/epochs and zero trading/evidence faults. Learning activity must be complete and attributable, not dummy inference.",
+    "platform_updates": "Record automatic native build/spec/history changes as engineering corrections, never optimization failure or permission to compare unlike paths. Re-freeze and rerun full pair if necessary."
+  },
+  "verdict_scope": "Only NATIVE_ONNX_ONLINE_IMPLEMENTATION_OBSERVED_EXACT_V7_ECONOMICS_RETAINED or CORRECTION_REQUIRED. This campaign cannot declare economic ML improvement or promote Live. A later economic decision use requires a new prospective contract, not automatic activation of these predictions.",
+  "storage": {"minimum_free_gib": 30, "maximum_incremental_gib": 10, "model_telemetry_max_mib_per_run": 16, "all_run_log_output_reserve_gib": 2},
+  "prohibitions": ["Live writes or process action", "Broker context polling", "External economic datasets", "Closed candidate model/source imports", "Parallel candidate streams", "Test-only infrastructure, validators, parity/promotion checkers or CI"],
+  "software_sources": ["https://www.mql5.com/en/docs/onnx/onnxcreatefrombuffer", "https://www.mql5.com/en/docs/onnx/onnxrun"]
+}

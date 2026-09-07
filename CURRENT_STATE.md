@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0605`
+- Latest state ID: `STATE-0606`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least 30 GiB free, and continue until the user pauses. All three initial bundles (entry-risk, continuation-exit, joint log-growth allocation) are closed without an offline survivor. The third improves fixed-basket profits but raises closed DD from 15.52% to 19.39%/19.21%, above its tolerance. All declarations, models and complete outputs stay frozen; no 2026 candidate values or native path opened. Next is a fresh serial boundary for implementing and observing ONNX/online learning inside an isolated native V7 EA, without installing a failed economic rule. This prospective engineering input step has no root or native runtime yet. Exact 21-file V7R baseline and Live authority remain unchanged.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least 30 GiB free, and continue until the user pauses. Three initial economic bundles are frozen without an offline survivor. Sole active campaign is `optimization/campaigns/v7-native-onnx-online-learning-v1/`: two physical tester-only V7 control/learner sources, actual 14-input ONNX inference with own causal matured-trade SGD, observation-only hooks preserving original V7 economics. Both compile on MetaEditor 6140 with zero errors/warnings. A dedicated Optimization Portable owns its neutral platform, standard Includes, required-symbol cache and private connection support; no Lab/Live runtime or old strategy is executed. Implementation and pre-launch input fingerprints are frozen before the adjacent 2024-2025 control/learner real-tick pair. This is operational ML evidence, not a profit-improvement claim or Live promotion. Roughly 53.5 GiB remains free; no files were deleted. Exact 21-file V7R baseline and Live authority remain unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
