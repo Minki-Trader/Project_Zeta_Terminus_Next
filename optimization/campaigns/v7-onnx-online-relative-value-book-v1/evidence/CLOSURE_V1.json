@@ -1,0 +1,170 @@
+{
+  "utc": "2026-09-07T07:17:29.996487+00:00",
+  "status": "CLOSED_COMPLETE_SELECTION_NO_SURVIVOR_NO_NATIVE_ECONOMIC_VERDICT",
+  "parent_phase": "3d9df30",
+  "campaign": "optimization/campaigns/v7-onnx-online-relative-value-book-v1",
+  "primary_program": 5,
+  "source_input_unchanged": true,
+  "result": {
+    "path": "optimization/campaigns/v7-onnx-online-relative-value-book-v1/evidence/MODEL_SELECTION_V1.json",
+    "bytes": 88653,
+    "sha256": "B9F2B7C54E2FDA1E32F83F205BFF7B543C4ED6DE8C31C410B5741B03E0765A5D"
+  },
+  "roles": {
+    "static": {
+      "starts": 208,
+      "actual": -3.225699999999269,
+      "stress": -7.793699999999269,
+      "halves": {
+        "2025-H1": {
+          "starts": 0,
+          "actual": 0,
+          "stress": 0
+        },
+        "2025-H2": {
+          "starts": 208,
+          "actual": -3.225699999999269,
+          "stress": -7.793699999999269
+        }
+      },
+      "complete_legs": 416,
+      "intent_status": {
+        "FILLED": 208,
+        "OCCUPIED_AT_DECISION": 1373
+      },
+      "stop_legs": 16,
+      "fixed_quote_stress_cash_dd": 8.626799999998823,
+      "fixed_quote_min_stress_cash": 92.20630000000084,
+      "observed_source_days": 258,
+      "gates": {
+        "stressed_quote_exceeds_original_two_engines_actual": false,
+        "both_halves_stress_positive": false,
+        "at_least50_pairs": true,
+        "at_least10_pairs_each_half": false,
+        "both_legs_complete": true
+      },
+      "forecasts": 35040,
+      "forecast_status": {
+        "MEAN_REVERTING": 23405,
+        "MISSING_PREFIX": 11635
+      }
+    },
+    "online": {
+      "starts": 0,
+      "actual": 0,
+      "stress": 0,
+      "halves": {
+        "2025-H1": {
+          "starts": 0,
+          "actual": 0,
+          "stress": 0
+        },
+        "2025-H2": {
+          "starts": 0,
+          "actual": 0,
+          "stress": 0
+        }
+      },
+      "complete_legs": 0,
+      "intent_status": {},
+      "stop_legs": 0,
+      "fixed_quote_stress_cash_dd": 0.0,
+      "fixed_quote_min_stress_cash": 100.0,
+      "observed_source_days": 258,
+      "gates": {
+        "stressed_quote_exceeds_original_two_engines_actual": false,
+        "both_halves_stress_positive": false,
+        "at_least50_pairs": false,
+        "at_least10_pairs_each_half": false,
+        "both_legs_complete": true
+      },
+      "forecasts": 35040,
+      "forecast_status": {
+        "MEAN_REVERTING": 22904,
+        "MISSING_PREFIX": 11635,
+        "NON_REVERTING": 501
+      }
+    }
+  },
+  "selected_survivor": null,
+  "native_economic_verdict": null,
+  "candidate_2026_values_opened": false,
+  "own_runtime_created": false,
+  "reasoning": "Both complete roles fail the original two-engine contribution and positive-half selection gates. Static opens only in H2 and loses; online has no cost-clearing entry. Both one-step scores fail to improve random walk. No parameter, hurdle or book reconstruction rescue is selected.",
+  "freeze": "Close entire static/online bundle; preserve initial/final states, pending/mature/missing labels, all 35040 forecasts per role, two-leg execution, blocked/filled intents and all 365 calendar days. No adjacent pair/ratio/clock/ARprior/forgetting/hurdle/session/hold/target/risk/volume/component rescue and no retained seed.",
+  "files": [
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/online-books.csv",
+      "bytes": 7,
+      "sha256": "24526432F951EA86E61DB71A2C7DF058D690643D1792C6525C784823544D3C03"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/online-forecasts.csv",
+      "bytes": 5795022,
+      "sha256": "997486168913D6313C8C890BEF621965D0E3685778A5FD4C1DFA7613C896800A"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/online-intents.csv",
+      "bytes": 7,
+      "sha256": "24526432F951EA86E61DB71A2C7DF058D690643D1792C6525C784823544D3C03"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/online-labels.csv",
+      "bytes": 2410084,
+      "sha256": "2918B483CD4BD32ED823647B2094679A9A263A53F5094FF34CDAD9D1F3E1D42C"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/online-legs.csv",
+      "bytes": 7,
+      "sha256": "24526432F951EA86E61DB71A2C7DF058D690643D1792C6525C784823544D3C03"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/static-books.csv",
+      "bytes": 24791,
+      "sha256": "26797AD8E2AC6EEA673E650E7FADF7E1B016B44588839F75E904370C8823EF1C"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/static-forecasts.csv",
+      "bytes": 5438309,
+      "sha256": "36B6586E4A2D5AC22F89C9E8D366F740F42D47EEE335D4A76C751A23E1857DA9"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/static-intents.csv",
+      "bytes": 54024,
+      "sha256": "AD1B0B6CA7823375232916E9C75BC09FA9BC1A2F5628680047376A9E201BAEEE"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/static-labels.csv",
+      "bytes": 2327792,
+      "sha256": "BB1D661AEBE481B7F6CB990D161B5B9C7F29F02D03699BE3F211592A26BDB107"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-relative-value-book-v1/selection-v1/static-legs.csv",
+      "bytes": 53268,
+      "sha256": "0759DBB8B78B94ECE611E9E599C40A2F20B6217E2EE10DE8EEAD04D4AE2F3CC1"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-relative-value-book-v1/models/final-online-state.json",
+      "bytes": 737,
+      "sha256": "2C5420AD1C4DE4153336CF929031B2F3366AA065C9D839BE0FC712C4DE357950"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-relative-value-book-v1/models/final-static-state.json",
+      "bytes": 739,
+      "sha256": "D8B51045FD6F9A5C7249A6A169E6598A5280EFF110EE2C9501C3A580C3232472"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-relative-value-book-v1/models/initial-state.json",
+      "bytes": 386,
+      "sha256": "6D4CD3EAA6233B7B0CD06042A1AD539B2922A749F069D027141D5145B0654DE4"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-relative-value-book-v1/models/relative-value-eight-step.onnx",
+      "bytes": 725,
+      "sha256": "88CC3B0B9D17D4AD4BDDFC2A6EF2321B021B016A218B4B3C46785E72A4297220"
+    }
+  ],
+  "free_bytes": 45542121472,
+  "live_changes": false,
+  "continuation": "User-authorized serial V7 development remains active; compare every macro program before another materially distinct unit."
+}
