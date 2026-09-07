@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0659`
+- Latest state ID: `STATE-0660`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,11 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Existing-V7 improvement remains active until user pause; all17V7families are nowclosed. LatestProgram5 v7-unit-reinvestment-v1 closes as valid native economic nonconfirmation afterfullcorrected2025control/unit100%real-tickpair,all1084frozeninputs/fullM1/contractsunchanged,zero-fault/flatnative. Control554closes:+121.39actual/+112.988stress/DD16.073213874%/recovery3.9825875469. Unit569closes:+83.04/+74.378/DD17.458866545%/recovery3.0345981232. Bothcandidatehalvespositivebutweaker,andallactualquantitiesremain0.01;noactualreinvestmentorimprovedgrowth. Theinitial99%control,full2024tickwarmupcorrectionandprospectiveinternalstorage-capcorrectionremainpreserved. No finalist,2026candidateinput,retainedseedoradjacentunit/stop/quantity/Passive-onlyrescue. RootwillrecomparewholePrograms1-5,7fornextmaterialexisting-V7improvementusingonlynativeEA/MQH/price/MLinformation. EarlieractualONNXandonlineoperationisprovenbutnoprofitableMLcandidate. PreserveLivePID28324/authority/files and30GiBfree;about32.2GiBavailable,latestownruntime3.60GiB/raw0.254GiB. Separateoldpyramidexceptionstillunapproved. No independentV8/FRBSF orLivepromotion.
+Existing V7 improvement continues until user pause. Seventeen V7 families remain closed. The latest whole-map comparison rejected a pending-maintenance source proposal before a campaign: 30 demonstrated later-M15 orders in 2024 missed the prospective 32-order minimum; no shorter checkpoint or substituted source follows.
+
+The sole active family is Program 1 `optimization/campaigns/v7-onnx-online-variance-standardization-v1/`. Its prospective declaration freezes exact V7 control plus static/online conditional RMS entry standardization for the existing Cross, Return and Passive signal laws. Original directions, clocks, thresholds, sizing, risk, execution and all position management remain, except the three declared entry denominators. The other range-based engines are outside this algebraic interface. It is not an independent strategy or a closed causal-admission model rescue.
+
+One fresh 2024 fit completes with 5,801 Cross, 5,920 Return and 23,656 Passive labels. Own ONNX and all three models/input/source hashes are frozen before full 2025 predictive/signal-supply selection. No 2026 candidate values, native candidate, finalist or profitable ML claim exists. All closed-family evidence and the separate unapproved old pyramid exception remain unchanged. Own initial raw input is 133,174,418 bytes; about 32.26 GiB is free. Budget every next stage above 30 GiB. Large referenced duplicate ticks are preserved; a read-only storage review is assessing lossless compression of closed evidence, with no deletion or Live action.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
