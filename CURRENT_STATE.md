@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0640`
+- Latest state ID: `STATE-0641`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue serial V7 ONNX/online until user pause; actual compounding/comparable DD, Live untouched, 30 GiB free. Sole active Program 1 family is optimization/campaigns/v7-onnx-online-volume-profile-return-v1. Its prior-session 32-bin spatial quote-activity profile, first busy-to-thin crossing, 16-cell STATIC/ONLINE posterior and fresh Gather ONNX are fixed. Ordinary producer compiles and own original timestamp-only input is copied: 762379 US30 M1 rows, 576 Passive lifecycle records. Full source/input hashes are frozen before first features, fit or outcomes. Whole 2025 production is next; candidate 2026 and new EA/Portable remain unopened. All 14 predecessors stay closed. About 41.9 GiB free; Live and frozen baseline unchanged.
+Current user task remains active: continue serial V7 ONNX/online development until user pause, with actual compounding/comparable DD, Live untouched and 30 GiB free. Volume-profile whole STATIC/ONLINE bundle is CLOSED: 197 fit labels and all 189 complete 2025 first events. STATIC 25 trades actual +.014 / stress -.317; ONLINE 48 trades -1.998 / -2.629. Both fail contribution and positive-half gates; no survivor or seed. All 15 predecessors remain closed. Recompare Programs 1–5 and 7 before exactly one materially distinct successor. No candidate 2026, new EA/Portable or native economic verdict for this family. About 41.9 GiB free; Live and frozen baseline unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
