@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0632`
+- Latest state ID: `STATE-0634`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue serial V7 ONNX/online development until user pause, with actual compounded growth/comparable DD, Live untouched and30GiBfree. Reopening-jump nonlinear bundle is CLOSED without survivor. Complete2025static134trades actual/stress-.9518/-3.4918;online123,-1.0187/-3.4417. Both fail originalPassive9.66 and positive stressed halves. All251events/502actionpaths/365dates, model states/forecasts/250matured pairs plus1pending are preserved; source/input unchanged. No2026candidate, newEA/runtime or nativeeconomic verdict. TwelveV7bundles are closed; operational ONNX/online exists, but improvednativecompounding is not established. Whole-map comparison is required before another distinct family. About42GiBfree; baseline and Live unchanged.
+Current user task: continue serial V7ONNX/online development until userpause; actualcompounding/comparableDD,Liveuntouched,30GiBfree. Reopening-jump closure477426a is atorigin/main. Whole-map comparison selects one Program5family optimization/campaigns/v7-onnx-online-winner-pyramid-v1. At first completed-minute favorableone-original-gross-R, optionalone same-direction child uses parentvolume andfixedmidpointSL, separatelyfull4%reservedwithin12%/45%; no parentinitial/stop/exit change, profit riskcredit orchild-of-child. FreshGaussian-kernelONNX/strictmature-labelRLScompareSTATIC/ONLINEwithunfilteredchildreference. Allthree roles and teacherbasket/nativegates arefrozen. Own input732501US30/732946US100M1rows plus2222lifecycle rows copied; normal compilation and complete source/input SHA freeze precede firstfeatures/fit/outcomes. No2026candidate,newEA/runtimeorretainedseed. Originalparent/close metadata facts are saved; conservative minute observation rules avoid invented dealmilliseconds. Twelvepredecessorsclosed;about42GiBfree andLiveunchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

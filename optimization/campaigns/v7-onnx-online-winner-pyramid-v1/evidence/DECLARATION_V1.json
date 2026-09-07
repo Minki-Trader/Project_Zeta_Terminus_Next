@@ -1,0 +1,99 @@
+{
+  "utc": "2026-09-07T07:39:26.210908+00:00",
+  "status": "PROSPECTIVE_BEFORE_OWN_INPUT_FEATURES_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-winner-pyramid-v1",
+  "primary_program": 5,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": [
+    "UNFILTERED_CHILD_REFERENCE",
+    "STATIC_KERNEL_CHILD",
+    "ONLINE_RLS_KERNEL_CHILD"
+  ],
+  "preserved": "All six original strategies, initial entries, quantities, planned risk, original SL/RC4ARC and original exits remain unchanged. Only the five original market components can parent one child; Passive stays original with no child. No child-of-child, child replacement after stop, repeated scaling or parent-stop change.",
+  "source": {
+    "prices": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control",
+    "symbols": {
+      "US30": "B56FAF1B495504A48DF982B91EB2EBF390A8B258E1F2864C6F0A3444A9446586",
+      "US100": "EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B"
+    },
+    "lifecycle": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+    "lifecycle_sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+    "copy": "Own physical timestamp-only M1slice2023-12-01..2026-01-01exclusive plus all original2024/2025BIRTH/CLOSE rows. No2026candidateprice or closedcandidate source/model/state. Original whole-control outcomes are known descriptive benchmarks, not a pristine holdout.",
+    "clock_precision": "Original lifecycle CLOSE.server_time is observation TimeCurrent() to seconds after core reconcile/save, not exact DEAL_TIME_MSC. Entry_time_server also has seconds only. Native core has real deal millisecond cursors, but CSV cannot reconstruct them. Selection is an explicitly coarse teacher-basket occupancy/close approximation, never proof of exact execution sequence."
+  },
+  "trigger": {
+    "parent": "Only complete original market-parent lifecycles, not Passive. Native new own actual parent lifecycles replace teacher population; unknown missed/new parent outcomes receive no source-proxy credit.",
+    "clock": "Inspect completed M1 exit-side closes after recorded parent entry. Rpoints=direction*(parent entry execution price-parent original SL), strictly positive. Consume exactly the first D=minute_end strictly before the opening of the parent observed-completion minute where direction*(completed executable close-parent entry price)>=Rpoints. The entire observed closing minute is excluded, with no claim that observer time is exact broker-deal time. No trigger is retained after missing feature, refusal or decline; every parent retains status.",
+    "prefix": "Require31 consecutive completed M1 timestamps throughD-60 for the 30minute return, and observed past parent-path bars from entry throughD-60. Use only actual observed bars, never fill missing prices. The first qualifying trigger with missing fixed prefix is retained as MISSING_PREFIX, not shifted later.",
+    "features": [
+      "current favorable exit-side close displacement/Rpoints",
+      "elapsed seconds since parent entry/original nominal hold seconds",
+      "direction*(last exit-side close minus close5minutes earlier)/Rpoints",
+      "direction*(last exit-side close minus close30minutes earlier)/Rpoints",
+      "high-low range of last30completedM1/Rpoints",
+      "maximum adverse exit-side extremum since parent entry/Rpoints",
+      "maximum favorable exit-side extremum since parent entry/Rpoints",
+      "last completed representative spread/Rpoints"
+    ],
+    "path_extrema": "Always exclude the parent entry minute high/low because its deal milliseconds are absent. Past path extrema use only M1 opens at/after the next minute boundary. The current completed exit-side close remains an observed point; include it in favorable excursion. An empty post-entry-extrema path gives adverse0. Long exits bid; short ask=bid+representative spread.",
+    "nominal_hold_seconds": {
+      "RC16": 14400,
+      "RC4": 21600,
+      "Cross": 14400,
+      "Pressure": 14400,
+      "Return": 21600
+    }
+  },
+  "child": {
+    "entry": "First observed M1 open at/afterD strictly beforeD+120 and strictly before the opening of the parent observed-completion minute. Native entry uses first legal protected fresh quote after original processing in the same window, with actual parent existence confirmed.",
+    "direction_quantity": "Same parent direction and exactly parent original entry volume. No additional daily multiplier applied to child and no extra quantity search.",
+    "stop": "Initial SL is midpoint of child executable entry price and original parent entry execution price, rounded toward childentry to0.01tick: longceil,shortfloor. No later child trailing, breakeven, target or parent-stop modification. If distance<=0 or source gross stop risk exceeds half original parent planned-riskUSD, retain explicit RISK_REFUSED/nochild; no geometry relaxation.",
+    "risk": "Native child independently reserves original4%of current ConservativeRiskCapital, within unchanged aggregate12%/margin45%. Parent remains fully reserved; unrealized profits, profit stops and offsetting positions grant no risk release. Desired midpoint must satisfy native grosshalf-budget/protection/freshness/min-stop legality at proposed quantity; otherwise refuse. Existing six entry process order remains unchanged, and child admissions follow them.",
+    "exit": "Child closes at own fixedSL or when parent completes. Source proxy parent-close duty fills only from the next minute boundary after the entire recorded observed-completion minute, even when the recorded second is00. No missing milliseconds are invented or reconstructed. Opening-gap childSL precedes parent-close duty; otherwise adverse minute extreme. Longstop=min(bidopen,SL);short=max(askopen,SL). Parent remains unchanged after an earlier childstop. Native closure uses actual core reconciled parent completion and first legal quote, with full tick economics required.",
+    "accounting": "Child actual quotePNL uses source parent volume. Child stress subtracts max(entry,exit representative spread)*volume and extra adverse-stop gap*volume. No positive financing credit or invented fees. Own child shadow uses reference original parent risk/quantity and same price law, regardless learned decline/native admission; actual native child uses actual native risk and fees.",
+    "label": "Child stressed quotePNL divided by its initial gross stop riskUSD, unclipped. Full label available at childexitminute+60. All eligible complete hypothetical child outcomes are retained, including declined ML actions; source risk-refused/unfilled/missing-prefix/no-trigger parents remain explicit. Incomplete source-end child is correction, not economic failure."
+  },
+  "fit": {
+    "period": "All complete2024eligible child labels with availability strictly before2025-01-01; minimum64fitlabels, otherwise readiness nonconfirmation and no wider trigger.",
+    "normalization": "Eight feature train-only mean/populationSD with1e-6floor, no clipping. Fit/covariance computations float64; operational ONNX feature/weights castfloat32.",
+    "centers": "Exactly16 deterministic farthest-point centers from normalized fitfeatures, first chronologically earliest row, then maximum squared distance to nearest priorcenter; earliest-row tie. Distinct row indices only. No outcome-dependent center search.",
+    "kernel": "squared width=max(1e-6,median positive squared pairwise distances among16centers); allzero uses1e-6. phi=[1,exp(-squared_distance_to_center/(2*width_squared)) for16centers]. Fresh own centers/width, no old model/state.",
+    "ridge": "A=Phi.T@Phi+I17; rhs=Phi.T@unclippedchildR; weights=solve(A,rhs),P=inverse(A). One fit, no regularization search.",
+    "onnx": "Fresh float32 eight-feature Gaussian kernel graph with frozen16centers/width, dynamic weights[17,1], output[1,1] plus recorded phi[1,17]. Sub/Mul/ReduceSum/Reshape/Div/Neg/Exp/Concat/MatMul, IR8/opset17. Graph materializes the same17basis functions. No bypass inference path."
+  },
+  "online": {
+    "initial": "STATIC/ONLINEsame fit,normalization,centers,width,P. Empty2025pending; no unavailablelate2024label adoption.",
+    "update": "At each new triggerD consume every pending complete label with available<D, sorted by availability and then original forecastD and parent id. RLSlambda.995,k=Pphi/(lambda+phi.TPphi),weights+=k*(label-phi.Tweights),P=(P-k*phi.TP)/lambda,symmetrize. Finite positive denominator/diagonal required. No resets, clipping, changed forgetting, normalization or center updates.",
+    "choice": "STATIC/ONLINEopen only when ONNX expectedchildR>0. UNFILTEREDreference opens every otherwise eligible source child. Once declined/refused/filled, no later secondtrigger. Every original parent stays in combined basket.",
+    "evidence": "Store all parent/firsttrigger statuses, forecasts/basis and float32inferenceweights, shadowchild opens/closes, updates/availability/order, finalpending and modelMSEversuszero, all365calendar dates. Pending atfinalforecastevent is retained normally. Every feature-ready first trigger is inferred even if its later source quote is unfilled or risk-refused; model_intent and actual eligible choice are separate. Only complete legal shadow labels train/score; these missing/unfilled parents are never silently omitted."
+  },
+  "selection": {
+    "period": "Complete2025original sourcebasket including Passive; compare unfiltered and bothlearned roles as one fixedbundle. Original parent actual/stress never replaced, and no freed/blocked/new parent credit.",
+    "metrics": "Combine originalparentactual/stressed close events with optionalchildquote close events atsourcevolume. Report actual/stressed childincrements, combinedbalance/closedrelativeDD, everyhalf/date and counts. This is an additive teacherbasket; it cannot prove feasible sharedmargin/risk, synchronizednativeexecution, childfinancing, alteredparentpopulation, compounding or equityDD. Aggregate all same-second stressed close events before measuring teacher closed-balance DD, since observation timestamps cannot prove ordering within that second. Child half activity/increments group by triggerD; combined equity accounting groups by close time.",
+    "gates": "Learned childstressedincrement>=5%of completeoriginal2025stressedprofit; childactual/stressedincrements positive eachhalf; combinedactual/stresseachimprovecontrol and positiveeachhalf; >=20children and>=5eachhalf. CombinedclosedstressrelativeDD<=min(controlDD+1.5pp,controlDD*1.10). Learned childstressedincrement>=unfilteredreference increment and abstains on at least5%of otherwiseeligible complete childtriggers, so a no-op learner cannot qualify. All source/input/label/inference evidence complete.",
+    "ranking": "At most one learned survivor, highestchildstressedincrement,STATICexacttie. Unfiltered reference cannot be a finalist or retained seed. No alternate after2026confirmation.",
+    "closure": "Freeze/close wholethree-rolebundle; no adjacent triggerR,fraction,stop,childcount,feature,model,centers,width,ridge,forgetting,hurdle,component,parent subgroup,quantity,risk,exit or retainedseed rescue."
+  },
+  "conditional_native": {
+    "period": "One unchanged selected candidate and adjacent exactfrozenV7control2025-01-01..2026-09-01exclusive. CandidateJanJun2026confirmation/JulAuglatest unopened until solefinalistfreeze.",
+    "isolation": "Fresh own tester-only parentandchildidentities/Magics/schema/journal/Include/source/EX5/model/SET/state, one selfcontained physicalOptimizationPortable. CopyfrozenOptimizationbaselineonce, onlyattributedneutralplatform/historycopies; noLive/Lab/closedEAorstateexecution.",
+    "parent_integrity": "All originalentries,volumes,stop/ARC/exits unchanged; alteredactualadmissions due fullreservedchildren are nativeeconomic effects, never approximated away. Durablechild association andparent completion duties survive restart; noorphan child orwrongparent adoption.",
+    "environment": "100USD,1:100,US30M30assembly,Model4allthree100%realticks/localonly/normalshutdown. Fullactual2024warmup..2026AugM1 andexercisedmonthlyticks/platform/symbolDB/contracts/swaps/source/model/EX5/SET bindbefore/between/after; currentcontainersdiagnostic onlywith fulluseddata proof.",
+    "gates": "Actualwealth/loggrowth androbustrecovery improve; stressedprofitgain>=5%; nativeequityDDnominal<=control,effective min(controlDD+1.5pp,controlDD*1.10) onlywithbettergrowth/recovery/temporalevidence; each2025half/2026H1/2026JulAugactualandstresspositive; >=20nativechildren/fullperiod and>=3JulAug. Completeallparent/childlifecycles,risk/margin/lotpaths,shadowlabels/inference/pending/update/economic evidence; no unresolvedfault. NoLivepromotion.",
+    "correction": "Environment/input/design/engineering faults require correction withoutarbitraryretrycap andafreshcompletevalidpair; nevereconomicfailure oroutcometuningauthority."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "initial_cap_mib": 384,
+    "conditional_runtime_gib": 6,
+    "conditional_output_gib": 2
+  },
+  "constraints": [
+    "One root design/economic judgment stream",
+    "No external economic source",
+    "No tests/checkers/CI/testCLI",
+    "No Live change or broker context query",
+    "No closedmodel/source/state reuse"
+  ]
+}

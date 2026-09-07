@@ -1,0 +1,59 @@
+{
+  "scope": "Read-only original frozenV7 and originalresearch lifecycle; no delegated candidate/economic judgment.",
+  "lifecycle_source": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+  "sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+  "fields": {
+    "join": [
+      "component_id",
+      "position_identifier"
+    ],
+    "entry_execution_price": "BIRTH.entry_price",
+    "direction": "BIRTH.direction",
+    "original_SL": "BIRTH.stop_loss",
+    "planned_risk": "BIRTH.planned_risk_usd",
+    "original_volume": "BIRTH.volume",
+    "entry_seconds": "BIRTH.entry_time_server",
+    "observed_close_seconds": "CLOSE.server_time",
+    "exit_price": "CLOSE.exit_price",
+    "actual_net": "CLOSE.actual_net_usd",
+    "stressed_net": "CLOSE.stressed_net_usd",
+    "partial": "partial_observation"
+  },
+  "clock_limit": "No exitmillisecond column. CLOSE.server_time is TimeCurrent observer timestamp after core saving; actualDEAL_TIME_MSC exists in core snapshot/cursor but is not emitted here. CLOSEvolume0 is not entry quantity.",
+  "market_parent_counts": {
+    "2024": {
+      "Cross": 197,
+      "Return": 50,
+      "Pressure": 23,
+      "RC16": 72,
+      "RC4": 53
+    },
+    "2025": {
+      "Cross": 196,
+      "Return": 53,
+      "Pressure": 32,
+      "RC16": 79,
+      "RC4": 68
+    }
+  },
+  "all_market_parents": 823,
+  "births_equal_closes": true,
+  "partial_duplicate_unmatched_yearboundary_counts": 0,
+  "nominal_holds": {
+    "RC16": "M30x8",
+    "RC4": "M30x12",
+    "Cross": "H1x4",
+    "Pressure": "M30x8",
+    "Return": "H1x6"
+  },
+  "actual_close_schedule": "ProcessClosures uses iBarShift(symbol,timeframe,POSITION_TIME,false)>=holdbars, not a stored absolute deadline. Entry journalbar+2min is unrelated to holding exit.",
+  "close_flow": "Internal sync PositionClose then OUTdealsequence (DEAL_TIME_MSC,ticket order) and broker/local fullcompletion; OnTradeTransaction only sets pending_reconcile outside internaltrade. External/SL close reconciles on next tick. Exactcomponent+magic+symbol+positionid fullremainingzero identifiescompletion. Core cursor/stateclear/event/SaveState precede researchCLOSEflush and lifecycleclear/save.",
+  "original_parent_child_fields": false,
+  "source_locations": [
+    "MQL5/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh:760",
+    "MQL5/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh:1287",
+    "MQL5/Include/ZetaTerminusNext/Observation/ZetaResearchObservation.mqh:576",
+    "MQL5/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh:454"
+  ],
+  "live_changes": false
+}
