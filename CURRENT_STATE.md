@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0625`
+- Latest state ID: `STATE-0626`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue serial V7 ONNX/online development until user pause; seek compound growth with comparable DD and preserve Live and 30 GiB free. Volatility-ratchet closure f522d90 reached origin/main and remains immutable. Whole-program comparison selects one new Program 1 campaign, optimization/campaigns/v7-onnx-online-activity-clock-entry-v1. It replaces only Passive with a daily tick-activity clock and three-state Gaussian HMM price-impact persistence engine, comparing one STATIC/ONLINE filtering-EM bundle. The five other V7 engines and whole-account risk/capital rules remain original. Source, exact original inputs, HMM/clock/update/signal/hold/selection/native gates are frozen before features/fit/outcomes. Own input has 762828 US100 M1 rows through 2025 only and 258 original Passive lifecycle rows. No model run, candidate2026 or own runtime yet. At most one selection passer may open native; no adjacent rescue after closure. About 43 GiB free. All Live authority/files/processes and the frozen baseline remain unchanged.
+Current user task: continue serial V7 ONNX/online development until user pause; seek compound growth with comparable DD and preserve Live and 30 GiB free. Activity-clock Program 1 bundle is CLOSED_COMPLETE_SELECTION_READINESS_NO_SURVIVOR_NO_NATIVE_ECONOMIC_VERDICT. Both roles completed11905forecasts over258source trading dates/all365calendar dates. Static161starts, quote actual/stress -0.551/-1.965; online2939starts,-74.4936/-109.6356 with11904strictlyprior observation updates and1pending. Online observation fit improves but both payoff halves lose. Fixed-volume quote continuation below zero is not a feasible100USDaccount claim. Full source/input/model/state/forecasts/trade/day/clock evidence is preserved; no candidate2026/nativeEA/runtime was opened. Earlier volatility-ratchet valid native closure remains immutable. Next is whole-program recompare before a materially distinct successor; no adjacent rescue. About43GiBfree; all Live authority/files/processes and baseline unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

@@ -1,0 +1,98 @@
+{
+  "utc": "2026-09-07T06:46:32.918929+00:00",
+  "status": "CLOSED_COMPLETE_SELECTION_READINESS_NO_SURVIVOR_NO_NATIVE_ECONOMIC_VERDICT",
+  "primary_program": 1,
+  "bundle": [
+    "STATIC_HMM",
+    "ONLINE_FILTERING_EM_HMM"
+  ],
+  "result_sha256": "968D86C0BDC767BB1560014517A9E4D6B8C55D853123ACBAAF7155A841A0CDF7",
+  "source_inputs_unchanged": true,
+  "model_sha256": "821E660D731C5CE9F1EFF78D131361E70A9D06ACF2ABB8FFE2D5147C6598E9D4",
+  "fit_rows": 12683,
+  "fit_days": 259,
+  "selection_forecasts_per_role": 11905,
+  "roles": {
+    "static": {
+      "starts": 161,
+      "actual": -0.5509999999997849,
+      "stress": -1.9649999999997856,
+      "halves": {
+        "2025-H1": {
+          "starts": 66,
+          "actual": -4.10200000000068,
+          "stress": -4.97000000000068
+        },
+        "2025-H2": {
+          "starts": 95,
+          "actual": 3.551000000000895,
+          "stress": 3.0050000000008947
+        }
+      },
+      "observed_source_days": 258,
+      "starts_per_source_day": 0.624031007751938,
+      "misses": {
+        "ineligible_or_hurdle": 11744
+      },
+      "stop_exits": 4,
+      "fixed_quote_stressed_max_cash_dd": 8.132200000000395,
+      "fixed_quote_stressed_relative_cash_dd": 0.0794749233074164,
+      "fixed_quote_min_actual_cash": 94.88589999999944,
+      "fixed_quote_min_stressed_cash": 94.19189999999946,
+      "gates": {
+        "stress_exceeds_original_passive_actual": false,
+        "both_halves_stress_positive": false,
+        "at_least3_starts_per_original_trading_date": false,
+        "source_population_complete": true
+      },
+      "forecasts": 11905,
+      "updates": 0,
+      "pending_observations": 0,
+      "mean_observation_log_likelihood": -3.3734064815538645
+    },
+    "online": {
+      "starts": 2939,
+      "actual": -74.49360000002316,
+      "stress": -109.63560000002319,
+      "halves": {
+        "2025-H1": {
+          "starts": 1716,
+          "actual": -47.68480000001624,
+          "stress": -69.37080000001625
+        },
+        "2025-H2": {
+          "starts": 1223,
+          "actual": -26.808800000006922,
+          "stress": -40.26480000000693
+        }
+      },
+      "observed_source_days": 258,
+      "starts_per_source_day": 11.391472868217054,
+      "misses": {
+        "ineligible_or_hurdle": 8966
+      },
+      "stop_exits": 23,
+      "fixed_quote_stressed_max_cash_dd": 113.4770000000248,
+      "fixed_quote_stressed_relative_cash_dd": 1.1109468556281585,
+      "fixed_quote_min_actual_cash": 22.987399999975164,
+      "fixed_quote_min_stressed_cash": -11.332600000024865,
+      "gates": {
+        "stress_exceeds_original_passive_actual": false,
+        "both_halves_stress_positive": false,
+        "at_least3_starts_per_original_trading_date": true,
+        "source_population_complete": true
+      },
+      "forecasts": 11905,
+      "updates": 11904,
+      "pending_observations": 1,
+      "mean_observation_log_likelihood": -3.204534376937978
+    }
+  },
+  "verdict": "The static model has negative full/first-half stressed quote payoff and insufficient supply. Online has enough supply and improved observed-data likelihood but both stressed payoff halves are negative. Close both roles without a survivor,2026candidate data,nativeEA or newruntime.",
+  "scope": "These are complete fixed-volume M1 quote-path selection outputs. They do not model shared V7 account occupancy, exact real-tick execution, native financing/fees, account ruin/compounding or native equityDD. Online stressed quote cash crosses zero; its continuation is a fixed-volume quote ledger, not a feasible live account or a monetary-loss claim beyond a100USD account.",
+  "closed_neighborhood": "No activity target, state count, initialization, feature, emission model, EM step, hurdle, session, symbol, hold, risk or direction subgroup rescue. No old model/state seed retained.",
+  "retention": "All declaration/source/input hashes, model/initial/final online sufficient statistics and pending observation, every forecast/posterior/update-bound row, full trades/daily/half-year/clock-calendar outputs remain preserved.",
+  "next": "Recompare every active macro program before naming a materially distinct serial successor; user development direction remains active until pause.",
+  "free_bytes": 46874963968,
+  "live_changes": false
+}
