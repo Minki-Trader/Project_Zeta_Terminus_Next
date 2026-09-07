@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0604`
+- Latest state ID: `STATE-0605`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least 30 GiB free, and continue until the user pauses. First entry-risk and second continuation-exit bundles remain closed without a survivor. The sole active campaign is `optimization/campaigns/v7-onnx-online-log-growth-allocation-v1/`, fully declared with ordinary producer and own input frozen before joint-return fit/outcomes. It learns constrained five-component allocation from 2024 joint daily log-growth utility, Passive weight 1; static and prior-day-only online roles are compared together on 2025. Native market position risk may vary from 1% to 8% while aggregate stays 12%; this is isolated candidate risk allocation, not a Live change. Only one unchanged survivor may open 2026 confirmation and native work. No new EA or native path is open; the exact 21-file V7R baseline remains frozen.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least 30 GiB free, and continue until the user pauses. All three initial bundles (entry-risk, continuation-exit, joint log-growth allocation) are closed without an offline survivor. The third improves fixed-basket profits but raises closed DD from 15.52% to 19.39%/19.21%, above its tolerance. All declarations, models and complete outputs stay frozen; no 2026 candidate values or native path opened. Next is a fresh serial boundary for implementing and observing ONNX/online learning inside an isolated native V7 EA, without installing a failed economic rule. This prospective engineering input step has no root or native runtime yet. Exact 21-file V7R baseline and Live authority remain unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

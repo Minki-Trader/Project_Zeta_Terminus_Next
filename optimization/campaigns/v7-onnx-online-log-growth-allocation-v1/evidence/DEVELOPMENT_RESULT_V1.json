@@ -1,0 +1,134 @@
+{
+  "time_utc": "2026-09-07T02:04:05.291057+00:00",
+  "control": {
+    "count": 557,
+    "actual": 127.89,
+    "stress": 118.6090000000017,
+    "closed_balance_dd_pct": 15.519999999999982,
+    "halves": {
+      "first": {
+        "count": 290,
+        "actual": 61.76,
+        "stress": 56.77149999999951
+      },
+      "second": {
+        "count": 267,
+        "actual": 66.13000000000001,
+        "stress": 61.83750000000219
+      }
+    },
+    "component_counts": {
+      "0": 79,
+      "3": 32,
+      "1": 68,
+      "2": 196,
+      "5": 129,
+      "4": 53
+    }
+  },
+  "roles": {
+    "ONNX_FROZEN_LOG_ALLOCATION": {
+      "metrics": {
+        "count": 557,
+        "actual": 138.03812228679658,
+        "stress": 126.42732483148613,
+        "closed_balance_dd_pct": 19.39305464126171,
+        "halves": {
+          "first": {
+            "count": 290,
+            "actual": 68.44588771820068,
+            "stress": 62.63264115667268
+          },
+          "second": {
+            "count": 267,
+            "actual": 69.59223456859588,
+            "stress": 63.79468367481345
+          }
+        },
+        "component_counts": {
+          "0": 79,
+          "3": 32,
+          "1": 68,
+          "2": 196,
+          "5": 129,
+          "4": 53
+        }
+      },
+      "gates": {
+        "actual_improves": true,
+        "stress_improves_at_least_5pct": true,
+        "halves_positive": true,
+        "closed_dd_tolerance": false,
+        "all_source_trades_represented": true
+      },
+      "eligible": false
+    },
+    "ONNX_ONLINE_LOG_ALLOCATION": {
+      "metrics": {
+        "count": 557,
+        "actual": 134.58732386470945,
+        "stress": 123.00535953282191,
+        "closed_balance_dd_pct": 19.207181352324245,
+        "halves": {
+          "first": {
+            "count": 290,
+            "actual": 69.06801886494983,
+            "stress": 63.266180314686885
+          },
+          "second": {
+            "count": 267,
+            "actual": 65.51930499975961,
+            "stress": 59.73917921813503
+          }
+        },
+        "component_counts": {
+          "0": 79,
+          "3": 32,
+          "1": 68,
+          "2": 196,
+          "5": 129,
+          "4": 53
+        }
+      },
+      "gates": {
+        "actual_improves": true,
+        "stress_improves_at_least_5pct": false,
+        "halves_positive": true,
+        "closed_dd_tolerance": false,
+        "all_source_trades_represented": true
+      },
+      "eligible": false
+    }
+  },
+  "selected_role": null,
+  "daily_allocations": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-log-growth-allocation-v1/development/daily_allocations.json",
+    "bytes": 291729,
+    "sha256": "F03C8042BA1A1B513528DD8C5A11197444E308592B0366F0EB299916BE121DC0"
+  },
+  "role_tapes": [
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-log-growth-allocation-v1/development/ONNX_FROZEN_LOG_ALLOCATION.json",
+      "bytes": 116362,
+      "sha256": "5DD905A13C04427839935FFDCECE2E850EC88456D4625BFC8E4522E0735FFCA3"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-log-growth-allocation-v1/development/ONNX_ONLINE_LOG_ALLOCATION.json",
+      "bytes": 119429,
+      "sha256": "55DD74E9D5E2EC3E8E295E9B69D3F5C7A7569EC1546911BAD3929C184D338CD3"
+    }
+  ],
+  "source": {
+    "path": "optimization/campaigns/v7-onnx-online-log-growth-allocation-v1/allocation_pipeline.py",
+    "bytes": 14190,
+    "sha256": "D3C2CCB9515EA4EE97E9D79CF5CECB6FBFA3DCBD86EAC510ED7E7DFB1DF609B5"
+  },
+  "model": {
+    "path": "optimization/campaigns/v7-onnx-online-log-growth-allocation-v1/models/allocation.onnx",
+    "bytes": 336,
+    "sha256": "634E583C7FA271EDA8E48401F8C5C546AB6B0CE1A05E119BA0A2B77D82B1FA88"
+  },
+  "limitation": "Fixed-source basket selection only; scaled historical dollars cannot prove new rounding, geometry, admission, own-label path, compound profits or native equity DD.",
+  "candidate_2026_values_opened": false,
+  "free_gib": 56.619712829589844
+}
