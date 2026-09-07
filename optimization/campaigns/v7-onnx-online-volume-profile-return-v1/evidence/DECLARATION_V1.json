@@ -1,0 +1,76 @@
+{
+  "utc": "2026-09-07T08:42:34.223988+00:00",
+  "status": "PROSPECTIVE_BEFORE_OWN_INPUT_FEATURES_FIT_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-volume-profile-return-v1",
+  "primary_program": 1,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": [
+    "STATIC_SHRUNK_PROFILE_RETURN",
+    "ONLINE_DISCOUNTED_PROFILE_RETURN"
+  ],
+  "reconstruction": "Replace only originalUS100Passive with oneUS30prior-session activity-profile return strategy. Fiveoriginalmarketengines andtheiroriginalschedules,quantities,management,risk andprocessingorder remainunchanged; newbookisassessedafterthem. NooldPassivependingentry oroldlearnedmodel isretainedinsidecandidate.",
+  "source": {
+    "price": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US30-M1.npy",
+    "sha256": "B56FAF1B495504A48DF982B91EB2EBF390A8B258E1F2864C6F0A3444A9446586",
+    "copy": "Ownphysicaltimestamp-onlyslice2023-11-01through2026-01-01exclusive. OwnoriginalPassive2024/2025BIRTH/CLOSEcopyfromanchoredoriginal-longcandidate-finalresearchlifecycle,fullSHA6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B. No2026candidateprices orclosedfamilyinput/model/state import.",
+    "semantic": "M1tick_volume is nativequote/tickactivity count, not actualexchange tradedvolume ororderflow. It supplies a spatialactivityweight only; noexternalvolumeindex ordatafeed."
+  },
+  "profile": {
+    "window": "For eachobservedserverdate, use exactlythe immediatelyprevious observedsource date. Never mergea longerprofilerange aftermissing/sparseevidence. Allprevious-dateM1rows mustbecompleted; no current-datevolume isused.",
+    "bins": "Previous-date low=minM1low,high=maxM1high; requirehigh>low andsumtick_volume>0. Divide[low,high]into32equalwidthpricebins. Assign eachpreviousM1close tofloor(32*(close-low)/(high-low)), clamp endpointindex32to31. Weightbytheactualtick_volume, includingzero ifpresent. AddfixedDirichlet1toeachbin onlyafterpositiveobservedtotal. This is a fixed spatial regularizer, not inventedtradingactivity.",
+    "mode": "POC=thecenter ofthegreatest-weightbin, lowestindexexacttie. Freezeprofilebounds,weights,modeprice andsource date forthewholecurrentdate. A priceoutsidepriorbounds hasno bin/opportunity. No same-dayadaptiveprofile orfuture-pricecentering."
+  },
+  "event": {
+    "clock": "ConsiderallM30grids08:00through19:30servereachcalendar date. Requiretwoimmediatelyprevious nonemptyM30buckets exactlyD-3600andD-1800, builtfromobservedM1. Use eachcompletedbucketlastclose and currentcompletedbucketopen. No minuteinterpolation and no externalclockconversion.",
+    "crossing": "Atfirstgrid whereboth prior andcurrent completedcloses arewithinprofilebounds, priorbinweight>0.25*peakweight andcurrentbinweight<=0.25*peakweight, consume exactlyoneevent forthatdate. No laterreplacement ifcost,quote,risk,modelchoiceorpositionoccupancyrefusesit.",
+    "direction": "Towardentry-frozenPOCprice: longifPOC>currentcompletedclose,shortiflower. Requireabs(POC-currentcompletedclose)>2*max(.01,lastcompletedM1spread). Cost-hurdlefailure isexplicit andconsumesfirstcrossing; noothergridisrescued.",
+    "calendar": "All365dates/8760potentialgrids andallfirstcrossings/statuses retained. No-source-date/no-profile/outsideprice/no-crossing are explicitzerotradingstates."
+  },
+  "cell": {
+    "size": 16,
+    "index": "directionbucket(0short,1long)*8 + responseflag*4 + distancebucket. responseflag=1 ifdirection*(currentcompletedM30close-currentcompletedM30open)>0else0. distance=abs(POC-currentclose)/(profilehigh-profilelow); buckets0for<.125,1for<.25,2for<.5,3otherwise. Exactlythese16geometriccells, not learnedfeaturethresholds orcurrentfutureresponse.",
+    "fit": "Everycomplete2024first-eventcounterfactualmarketpathwhose labelavailability isstrictlybefore2025Jan1;minimum64labels orreadinessnonconfirmationwithoutwidening. RewardR isstressedquotepnl/2USD;unclipped. Frozen globalprior=allfitlabelsmean; percell sum/count. score_i=(sum_i+8*globalprior)/(count_i+8). No priorstrength/cell/labelsearch.",
+    "onnx": "Freshfloat32Gather graph: inputcell INT64[1],means FLOAT[16],outputexpected_R FLOAT[1],axis0; IR8/opset17. Meansfromownfit/posteriorstatecastfloat32. Actualdecision usesONNXoutput>0; no bypassoroutcomeclipping."
+  },
+  "book": {
+    "quantity_risk": "Selectionfixed0.01US30unitcontract,100USDreference4%plannedbudget/halfgross2USD, initialgrossSLdistance200points. Nativeusesoriginalmarketdaily150USDlotstaircase*0.01, exactCalculateProtectiveStop4%/12%/45% andfreshquote/session/minstoprules. Nativeactualrisk/geometry/admissionmustbejudgedinfullpair; counterfactuallearninglabels retainfixedreference200point stop/0.01 independentlyofactualaccount/choice.",
+    "entry": "FirstobservedM1openat/afterDstrictlybeforeD+120. Executeonsidequote usingrepresentativeM1spread asaccounting only; neverfuturefeature. Targetmuststillbein directionfromexecutableentry anddistance>2*max(completedspread,currentrepresentativespread,.01), elseexplicitTARGET_OR_COST_REFUSED. No repeatedentryforthatdate. Atmostoneownbook; anypreviousopenbookconsumesnewfirsteventasoccupied. Reference protection refuses when200pointSLdistance isless thancurrentrepresentativespread plusone .01tick. A selectedbook occupiesits slot throughits entire sourceexitminute, so nextgrid mustbeatleast exitminute+60; no intraminute freed-slot assumption.",
+    "exit": "FixedinitialSLorentry-frozenprofilemodeprice orD+14400(4h),whicheverfirst. Targetprice roundedtowardentry on0.01tick; sourceentryprice onoriginaltick. ProcessallobservedM1: openinggapSL first, thentarget thenmandatorytime atopen; insidebar adverseSLbeforetarget ifbothtouched. Longexitbid,shortask=bid+representativespread. SLgapsfillworseopening; favorabletargetgap creditedonlyfrozentriggerprice. Timecloseatfirstobservedopen>=deadline, no favorableexitselection orpostentrytargetadaptation.",
+    "cost": "ActualquotePNLfromsideprices*0.01. Stresssubtractmax(entry,exitrepresentativespread)*volume andextraadverseSLgap*volume. No positivefinancingcredit orinventedcommission. Recordforcedovernightcarry ifmissingquotesdelaydeadline; actualnativefees/financing aremandatorylater.",
+    "labels": "All otherwiseeligible first-eventshadowpaths complete andbecomeavailableat their exitminute+60, regardlessSTATIC/ONLINEdecline. Missingentry/costrefused/sourceend paths remainexplicit; sourceendunfinishedposition isinputcorrection. No unknownfuturelabel usedtochoosea decision. Nativecollects thesamefixedreference shadowcounterfactual fromownobservedmarketdata; actualtradesareseparate."
+  },
+  "online": {
+    "initial": "Same2024sums/counts/frozenglobalprior asSTATIC,empty2025pending. No excludedlate2024label adoption.",
+    "update": "At eachnewfeature-readyfirsteventD consumecompletependinglabels withavailability<D, ascendingavailability thenforecastD. For eachmaturelabel, multiplyevery16cell sum andcountby.99, thenaddthatlabel and1toits originalcell. Globalpriorandpseudocount8stayfixed. No model/normalizationreset,adaptiveforgetting orpriortuning.",
+    "choice": "ONNXexpectedR>0activateseligiblebook, elseabstain. Eachroleupdates fromallshadoweventlabels irrespectiveactualselection. FrozenSTATICdoesnotupdate. Everyforecastcell,fullmeanvector,label/cost/updatebound andfinalpending/sums/counts retained.",
+    "fault": "Nonfiniteinput/state/score orinvalidsource/price/protectionaccounting iscorrection, not aneconomicfailorflatfallback. Genuinecalendar/profile/opportunityabsence remains explicitnormalreadiness."
+  },
+  "selection": {
+    "period": "Whole2025bothroles, allcalendar/firstevent/completecounterfactualoutcomes. No2026candidatevalues beforeonefinalistfreeze.",
+    "gates": "Selectedstressedquoteprofitstrictlyexceeds originalPassiveactual9.66USD;actualandstresspositiveeachhalf;atleast20selectedcompleteentriesand5eachhalf;completeallcalendar/event/model/input/labelrecords andnoopenposition/sourcefault. Nominalreferencefixed100quoteclosedcashDD reportedbutisnotnativeequityDD/compounding.",
+    "ranking": "Atmostoneeligiblelearnedrole,higheststressednet,STATICexacttie. No alternateafter2026confirmation. OriginalPassive2025actual9.66/stress7.681,129trades,H1-.52/-1.4735,H2+10.18/+9.1545 isdescriptiveonly.",
+    "closure": "FreezeandclosewholeSTATIC/ONLINEbundle withnoseed/noadjacentprofilerange,bin,mode,crossingratio,clock,cell,bucket,prior,forgetting,entrycost,target,horizon,symbol,volume,risk,activitygate,component or modelrescue."
+  },
+  "conditional_native": {
+    "period": "Oneunchangedselectedcandidate/adjacentexactV7control2025Jan1through2026Sep1exclusive; candidateJanJun2026confirmation/JulAuglatestunopenedbeforeselection.",
+    "isolation": "Ownnewtester-onlysource/Magic/schema/state/journal/ONNX/EX5/SET/Include andphysicalPortable copiedoncefromfrozenOptimizationV7R. Onlyattributedneutralplatform/historycopies; noLive/Lab/closedEA/model/stateexecution.",
+    "integrity": "OnlyPassiveopportunitylawreplacedbytheUS30profilebook;fiveoriginalengines andwholeaccountcaps remain. Newbook target/stop/deadline/firstevent/shadowpending andposteriorstate persistwithownidentity. Coreactualpositionreconciliation,protectedmarketrequests andclosingduties remaincomplete; no oldPassiveUS100limit ownership assumption for newbook.",
+    "data": "100USD,1:100,US30M30assembly,Model4/all3originals100%realticks/localonly/normalshutdown. Fullactual2024warmupthrough2026AugM1, exercisedmonthlyticks/platform/symbolDB/contracts/swaps/source/EX5/model/SET boundbefore/between/after; currentcontainersdiagnostic onlywithfulluseddata proof.",
+    "gates": "Actualwealth/loggrowth/recovery improve; stressedprofitgain>=5%; nativeequityDDnominal<=control,effective min(controlDD+1.5pp,controlDD*1.10) onlywithbettergrowth/recovery/temporalevidence. All2025halves/2026H1/2026JulAugactualandstresspositive. Atleast20newbookcompleteentries/fullperiod and3JulAug; noopen/unresolvedposition/model/state/inputfault. Completeactualcapital/lot/risk/cost/learningevidence. NoLivepromotion.",
+    "correction": "Environment/input/design/engineering faults requirecorrectionwithoutarbitraryretrycap andfreshcompletevalidpair; not aneconomiclossoroutcometuningauthority."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "initial_cap_mib": 256,
+    "conditional_runtime_gib": 6,
+    "conditional_output_gib": 2
+  },
+  "constraints": [
+    "One rootdesign/economicstream",
+    "Noexternaleconomicdata",
+    "No tests/checkers/CI/testCLI",
+    "NoLivechange/brokercontextquery",
+    "No closedsource/model/state/seedreuse"
+  ]
+}

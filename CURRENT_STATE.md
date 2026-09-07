@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0638`
+- Latest state ID: `STATE-0640`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Currentuser task: continue serial V7ONNX/online development until userpause; actualcompounding/comparableDD,Liveuntouched,30GiBfree. Inventory-Qthree-rolebundle CLOSED withoutsurvivor/seed. Exactly20fitpasses/124260forecasts/123600updatescomplete. Whole2025STATIC1811trades,actual25.7752/stress2.5602,M1actualDDbound33.7209%;ONLINE32trades,-10.7705/-11.1385,DDbound13.3694%,H2zero. Both failoriginalcontribution/half andothergates. Each6166forecasts/transitions/6164mature plus2pending; all8760grids retained. Input/source unchanged, numericallearningnormal; trainingprofitnotselection. Delayed20:00quote dates andactualcarriedpositions are separatelydocumented. No2026candidate,newEA/runtime/nativeverdict orLiveaction. FourteenV7bundlesclosed; improvednativecompoundingstillunestablished. Whole-programcomparison precedes anotherdistinctunit. About42GiBfree.
+Current user task: continue serial V7 ONNX/online until user pause; actual compounding/comparable DD, Live untouched, 30 GiB free. Sole active Program 1 family is optimization/campaigns/v7-onnx-online-volume-profile-return-v1. Its prior-session 32-bin spatial quote-activity profile, first busy-to-thin crossing, 16-cell STATIC/ONLINE posterior and fresh Gather ONNX are fixed. Ordinary producer compiles and own original timestamp-only input is copied: 762379 US30 M1 rows, 576 Passive lifecycle records. Full source/input hashes are frozen before first features, fit or outcomes. Whole 2025 production is next; candidate 2026 and new EA/Portable remain unopened. All 14 predecessors stay closed. About 41.9 GiB free; Live and frozen baseline unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
