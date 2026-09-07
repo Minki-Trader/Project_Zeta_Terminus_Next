@@ -53,22 +53,12 @@ try {
         [double]$preflightStatus.account_margin,
         [double]$preflightStatus.account_balance,
         [double]$preflightStatus.account_equity)
-    $marketStatus = ((& $contract.MarketStatusScript `
-        -AsJson `
-        -ObservationSeconds 12 `
-        -ExpectedProcessId $preflightProcess.Id | Out-String) | ConvertFrom-Json)
-    if (-not [bool]$marketStatus.ready_for_handoff) {
-        throw ("Next V7R market gate is not ready: {0}. Observed US30 updates={1}, max-gap={2:N3}s over {3}s; required updates>=3 and max-gap<=3.000s. Live entries were not started." -f
-            (@($marketStatus.reasons) -join '; '),
-            [long]$marketStatus.us30_tick_updates,
-            [double]$marketStatus.us30_max_update_gap_seconds,
-            [int]$marketStatus.observation_seconds)
-    }
-    Write-Output ("Next V7R market gate passed: US30 ticks={0}, max-gap={1:N3}s, synchronized timeframes={2}, server={3}." -f
-        [long]$marketStatus.us30_tick_updates,
-        [double]$marketStatus.us30_max_update_gap_seconds,
-        (@($marketStatus.timeframes | Where-Object { [bool]$_.synchronized_and_fresh }).Count),
-        [string]$marketStatus.server_time)
+    # User-authorized arm-and-wait startup: market activity is diagnostic only.
+    # The frozen EA evaluates entries on ticks and retains its own decision
+    # windows, data checks, executable quote age, session and risk guards.
+    # Do not require a continuous tick stream or a deployment handoff window
+    # before allowing this already-installed, recovered identity to be armed.
+    Write-Output 'Next V7R recovery passed. After the 1/1 handshake, the EA will wait for its normal trading conditions; quiet ticks do not block startup.'
     Stop-ZetaNextRuntime -Contract $contract -ProcessId $preflightProcess.Id
     $preflightProcess = $null
 } catch {
@@ -92,7 +82,7 @@ try {
     $livePriorSequence = [long](Get-ZetaNextRuntimeStatus -Contract $contract -Mode Live).state_sequence
 } catch { }
 $liveProcess = Start-ZetaNextRuntime -Contract $contract -RuntimeMode $liveMode
-Write-Output "Next V7R 1/1 Live runtime started (PID $($liveProcess.Id)); waiting for an exact handshake after sequence $livePriorSequence."
+Write-Output "Next V7R Live runtime started (PID $($liveProcess.Id)); waiting for an exact 1/1 permission handshake after sequence $livePriorSequence."
 
 $liveStatus = Wait-ZetaNextRuntimeStatus `
     -Contract $contract `

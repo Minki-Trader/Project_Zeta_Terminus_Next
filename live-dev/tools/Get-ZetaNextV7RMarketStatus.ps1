@@ -1,3 +1,5 @@
+# Bounded market diagnostic only. The historical ready_for_handoff field does
+# not gate user-authorized V7R arm-and-wait startup; metrics retain their meaning.
 [CmdletBinding()]
 param(
     [Parameter(Mandatory)]

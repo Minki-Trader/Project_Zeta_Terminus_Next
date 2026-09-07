@@ -67,7 +67,7 @@ function Save-ZetaUserActivationRecord {
     $date = (Get-Date).ToString('yyyy-MM-dd')
     $block = @(
         '<!-- V7R_USER_ACTIVATION_BEGIN -->',
-        '- Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Trading activation is a direct user action through the unchanged operating gates.',
+        '- Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Direct user activation arms the recovered EA to wait for its existing trading conditions; current market activity is not a startup gate.',
         '- Next V7R return entries-disabled preflight: `PASSED`',
         ('- Next V7R return new-entry authorization: `' + $Authority + '`'),
         "- Existing real-account owner: $OwnerText",
@@ -111,7 +111,7 @@ try {
     $form.Font = [Drawing.Font]::new('맑은 고딕', 10)
     $label = [Windows.Forms.Label]::new()
     $label.SetBounds(24, 20, 512, 126)
-    $label.Text = "버튼을 누르면 실제 계좌의 V7R 자동매매를 시작합니다.`r`n`r`n기존 설정: 포지션 위험 4%, 합산 한도 12%, Passive 0.01 lot.`r`n정상 종료 · 운영 기록 저장 · 현재 시세와 복구 검사를 거칩니다.`r`n검사 중에는 진행 창이 유지되며, 완료 후 대시보드가 열립니다."
+    $label.Text = "버튼을 누르면 실제 계좌의 V7R 자동매매를 켭니다.`r`n`r`n켜진 뒤 거래 시간·신호를 기다리고, 조건 충족 시 주문합니다.`r`n기존 설정: 포지션 위험 4%, 합산 한도 12%, Passive 0.01 lot.`r`n계정·복구 확인 후 EA와 대시보드가 열립니다."
     $start = [Windows.Forms.Button]::new()
     $start.Text = '실제 자동매매 켜기'
     $start.SetBounds(24, 164, 326, 42)
@@ -158,14 +158,8 @@ try {
         throw '원격 main이 현재 기록과 다릅니다. 자동 병합이나 강제 푸시를 하지 않습니다.'
     }
     $inventory = Assert-ZetaNextExclusiveTerminalBoundary -Contract $zetaContract -AllowExactLive
-    if (@($inventory.ExactLive).Count -eq 1) {
-        Write-Host '현재 OFF 실행본에서 시세 준비를 먼저 확인합니다. 시세가 부족하면 EA를 그대로 유지합니다.'
-        $market = (& $zetaContract.MarketStatusScript -AsJson -ObservationSeconds 12 -ExpectedProcessId $inventory.ExactLive[0].Id | Out-String) | ConvertFrom-Json
-        if (-not [bool]$market.ready_for_handoff) {
-            throw ("아직 시세 준비가 안 됐습니다. US30 {0}회 갱신, 최대 간격 {1:N3}초 / 기준 최소 3회·최대 3초. 운영 권한은 OFF이며 EA는 유지했습니다. {2}" -f
-                [long]$market.us30_tick_updates, [double]$market.us30_max_update_gap_seconds, (@($market.reasons) -join '; '))
-        }
-    }
+    # Arming does not require an active market. The existing flat stopper and
+    # fresh recovery/1/1 handshakes still validate the user-operated transition.
     Write-Host '2/4  기존 OFF 실행본의 무노출 상태를 확인하고 정상 종료합니다.'
     if (@($inventory.ExactLive).Count -eq 1) {
         & (Join-Path $PSScriptRoot 'Stop-ZetaNextV7RFlatRuntime.ps1') -ConfirmFlatStop
@@ -173,9 +167,9 @@ try {
     $null = Assert-ZetaNextExclusiveTerminalBoundary -Contract $zetaContract
     Save-ZetaUserActivationRecord -Authority ENABLED -Phase USER_REQUESTED_PENDING_FRESH_HANDOFF `
         -OwnerText 'none; the entries-disabled V7R runtime has stopped normally or no exact runtime was present. No retired identity may start.' `
-        -Observation 'The user requested activation. Final fresh preflight and 1/1 handshake are not yet complete.' `
-        -HistoryText 'Direct user activation button accepted. Existing 0/0 runtime stopped through the unchanged verified-flat operator when present; exact terminal boundary is empty. Commit/push this separate new-entry authorization before dispatching the unchanged Master. No 1/1 success is claimed.'
-    Write-Host '3/4  새 0/0 복구와 실제 틱을 검사한 뒤 기존 실행기로 기동합니다.'
+        -Observation 'The user requested arm-and-wait activation. Final fresh preflight and 1/1 handshake are not yet complete; current market activity is not a startup requirement.' `
+        -HistoryText 'Direct user activation button accepted under the arm-and-wait policy. Existing 0/0 runtime stopped through the unchanged verified-flat operator when present; exact terminal boundary is empty. Commit/push this separate new-entry authorization before dispatching the Master. No 1/1 success is claimed.'
+    Write-Host '3/4  새 0/0 계정·복구 확인 후 1/1로 켭니다. EA가 거래 조건을 기다립니다.'
     $zetaResultPath = Join-Path $zetaContract.LiveDevRoot ('logs\user-activation-' + [Guid]::NewGuid().ToString('N') + '.json')
     $zetaDispatchUtc = [DateTime]::UtcNow
     $zetaDispatched = $true
@@ -190,12 +184,12 @@ try {
         throw '마지막 1/1 상태 확인이 완료되지 않았습니다. 실행 중인 EA는 유지합니다.'
     }
     $zetaLiveVerified = $true
-    Write-Host '4/4  실제 주문 ON(1/1)을 확인했습니다. 완료 기록을 저장합니다.'
+    Write-Host '4/4  자동매매 ON(1/1)을 확인했습니다. 거래 조건 충족 시 주문하며, 완료 기록을 저장합니다.'
     Save-ZetaUserActivationRecord -Authority ENABLED -Phase USER_ACTIVATED_HEALTHY_1_1 `
         -OwnerText "exact V7R PID $($status.project_terminal_pid), the sole authorized order owner; all retired identities remain stopped." `
-        -Observation "Healthy exact 1/1 at $($status.observed_at_utc), sequence $($status.state_sequence); the unchanged detached Master confirmed EA and dashboard startup." `
-        -HistoryText "Unchanged Master returned success. Final local status confirms sole exact V7R PID $($status.project_terminal_pid), healthy 1/1 and sequence $($status.state_sequence). No gates, package, risk settings or retired state changed."
-    $null = [Windows.Forms.MessageBox]::Show('V7R 실제 자동매매가 ON(1/1)입니다. EA와 대시보드가 실행 중입니다.', 'V7R 시작 완료', 'OK', 'Information')
+        -Observation "Healthy exact 1/1 at $($status.observed_at_utc), sequence $($status.state_sequence); the detached Master confirmed EA and dashboard startup under the arm-and-wait policy. This confirms entry permission, not an order or a signal." `
+        -HistoryText "Master returned success. Final local status confirms sole exact V7R PID $($status.project_terminal_pid), healthy 1/1 and sequence $($status.state_sequence). Current market activity was not a startup gate; frozen EA decision/quote/session/risk checks, package and retired state are unchanged."
+    $null = [Windows.Forms.MessageBox]::Show('V7R 실제 자동매매가 ON(1/1)입니다. EA와 대시보드를 켜두면 거래 조건을 기다렸다가 조건 충족 시 주문합니다.', 'V7R 시작 완료', 'OK', 'Information')
 } catch {
     Write-Host $_.Exception.Message -ForegroundColor Red
     if ($zetaLiveVerified) {
@@ -247,7 +241,7 @@ try {
                     -OwnerText "none with permission for new orders; exact V7R entries-disabled PID $($disabled.project_terminal_pid) is running with its dashboard." `
                     -Observation "Recovered healthy 0/0 at $($disabled.observed_at_utc), sequence $($disabled.state_sequence). A new user button action is required for another activation attempt." `
                     -HistoryText "Failed handoff recovery completed as exact healthy 0/0 PID $($disabled.project_terminal_pid), sequence $($disabled.state_sequence), with EA/dashboard restored. No live retry or gate relaxation occurred."
-                Write-Host '실거래는 OFF입니다. EA와 대시보드를 주문 차단 상태로 복구했습니다. 시세 준비 후 같은 버튼으로 다시 시도할 수 있습니다.' -ForegroundColor Yellow
+                Write-Host '실거래는 OFF입니다. EA와 대시보드를 주문 차단 상태로 복구했습니다. 표시된 기동 오류를 해결한 뒤 같은 버튼으로 다시 시도할 수 있습니다.' -ForegroundColor Yellow
             }
         } catch { Write-Host "실패 후 복구 확인: $($_.Exception.Message)" -ForegroundColor Yellow }
         if (-not $recoveredDisabled) {

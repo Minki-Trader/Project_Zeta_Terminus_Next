@@ -1,0 +1,156 @@
+{
+  "schema": "zeta-v7r-arm-and-wait-startup-v1",
+  "recorded_at_utc": "2026-09-07T00:59:49.0308692Z",
+  "status": "IMPLEMENTED_STATIC_VERIFICATION_PASSED_LIVE_ACTIVATION_NOT_EXECUTED",
+  "parent_git": "18da91e47e7ccf2711189758753c932704e66741",
+  "user_direction": "The user explicitly requested the existing leave-it-on 1/1 workflow and then instructed implementation.",
+  "scope": "Ordinary startup of already-installed exact NEXT-E03-V7R-RLO1-0bba2ca045fe; not a new release or research family.",
+  "changes": [
+    "Remove the pre-stop market diagnostic from the direct-user activation button.",
+    "Remove the market diagnostic after the fresh 0/0 preflight in the Live starter.",
+    "Current tick frequency, global current-bar synchronization and diagnostic deployment windows are not startup prerequisites.",
+    "Keep original market diagnostic computations and thresholds, labelled observational only.",
+    "Update the user dialog, progress/success text and current operating policy to describe enabled permission and waiting for trading conditions."
+  ],
+  "preserved_startup_checks": [
+    "Exact committed release, source/binary/settings/manifest and origin/main identity",
+    "Account binding, sole owner and flat normal stop",
+    "Fresh healthy 0/0 recovery and exact healthy 1/1 permission handshake",
+    "Required-mode propagation, per-launch completion and proved stopped-flat failure recovery",
+    "Unknown outcomes preserve the owner; no automatic Live retry"
+  ],
+  "frozen_ea_review": {
+    "assembly": "live-dev/package/active/MQL5/Experts/ZetaTerminusNext/ZetaNextV7ReturnPortfolio.mq5",
+    "guards": [
+      {
+        "path": "live-dev/package/active/MQL5/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh",
+        "functions": [
+          "NewEntriesAuthorized",
+          "NewEntriesOperationallyAllowed",
+          "ExecutableTick"
+        ]
+      },
+      {
+        "path": "live-dev/package/active/MQL5/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh",
+        "functions": [
+          "IsEntryWindow",
+          "EvaluateEntryGate",
+          "CopySynchronizedCloses"
+        ]
+      },
+      {
+        "path": "live-dev/package/active/MQL5/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh",
+        "functions": [
+          "BuildMarketEntryPlan"
+        ]
+      },
+      {
+        "path": "live-dev/package/active/MQL5/Include/ZetaTerminusNext/Strategies/ZetaPassive.mqh",
+        "functions": [
+          "ProcessPassiveLimit",
+          "PlacePassiveLimit"
+        ]
+      },
+      {
+        "path": "live-dev/package/active/MQL5/Include/ZetaTerminusNext/Time/ZetaSessionClock.mqh",
+        "functions": [
+          "FPMarketsServerClockCompatible"
+        ]
+      }
+    ],
+    "executable_quote_age_seconds": 3,
+    "unchanged_behavior": "OnTick strategy decision windows, signals/data, maximum entry delay, consumed opportunity state, broker sessions, persistence/protection and original 4%/12% risk admission.",
+    "limitation": "Arming confirms permission, not an order or guaranteed fill. Missed or consumed decisions are not replayed."
+  },
+  "source_files": [
+    {
+      "path": "live-dev/tools/Open-ZetaNextV7RTradingOn.ps1",
+      "normalized_lf_utf8_sha256": "A80A6127437E4E38083075D06B02DCDDD2DC0A34253995E2FA1C7BC752E9396E"
+    },
+    {
+      "path": "live-dev/tools/Start-ZetaNextV7RLive.ps1",
+      "normalized_lf_utf8_sha256": "C4028C7EBC646DDC2B9A71149A63F50AC2E7649E876933A013962EA1D2145DCF"
+    },
+    {
+      "path": "live-dev/tools/Get-ZetaNextV7RMarketStatus.ps1",
+      "normalized_lf_utf8_sha256": "D8310F46284F42F4C67EDE395E6740A46F6F3EC3CC002AB0EAAA4A4B4CB880C3"
+    }
+  ],
+  "verification": {
+    "powershell_version": "7.6.5",
+    "native_parser_files": [
+      {
+        "path": "live-dev/tools/Open-ZetaNextV7RTradingOn.ps1",
+        "errors": 0
+      },
+      {
+        "path": "live-dev/tools/Start-ZetaNextV7RLive.ps1",
+        "errors": 0
+      },
+      {
+        "path": "live-dev/tools/Get-ZetaNextV7RMarketStatus.ps1",
+        "errors": 0
+      }
+    ],
+    "source_control_flow_review": "complete",
+    "git_diff_check": "passed",
+    "package_lab_optimization_diff": "none",
+    "actual_runtime_ex5_sha256": "30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657",
+    "runtime_matches_frozen_ex5": true,
+    "activation_entrypoint_executed": false,
+    "live_starter_executed": false,
+    "live_or_quiet_market_start_end_to_end_verified": false,
+    "limit": "Native parsing, source review and unchanged OFF observation only; actual 1/1 activation remains a direct user action.",
+    "synthetic_or_test_infrastructure_created": false
+  },
+  "local_read_only_status": {
+    "observed_at_utc": "2026-09-07T00:57:31Z",
+    "healthy": true,
+    "project_terminal_process_count": 1,
+    "project_terminal_pid": 28292,
+    "detected_runtime_mode": "EntriesDisabled",
+    "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe",
+    "accepted_ex5_hash": "30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657",
+    "state_sequence": 495,
+    "snapshot_age_seconds": 12,
+    "new_entries_input": 0,
+    "new_entries_effective": 0,
+    "terminal_allow_live_trading": 0,
+    "terminal_connected": 1,
+    "account_binding_configured": 1,
+    "account_identity_match": 1,
+    "alerts": [],
+    "warnings": []
+  },
+  "local_process_observation": {
+    "observed_at_utc": "2026-09-07T00:59:49.0308692Z",
+    "processes": [
+      {
+        "pid": 28292,
+        "path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\live-dev\\runtime\\portable\\terminal64.exe",
+        "responsive": true,
+        "has_window": true
+      },
+      {
+        "pid": 29492,
+        "path": "C:\\Users\\awdse\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "responsive": true,
+        "has_window": true
+      }
+    ]
+  },
+  "assistant_actions": {
+    "broker_api_calls": 0,
+    "market_api_calls": 0,
+    "process_stop_start": 0,
+    "new_entry_authority_enabled": false,
+    "trading_activated": false
+  },
+  "activation_entrypoint": "ZETA_NEXT_V7R_TRADING_ON.cmd",
+  "existing_desktop_shortcut_verified": true,
+  "free_space_gib": 56.813599,
+  "minimum_reserve_gib": 30,
+  "research_goal": "PAUSED_INCOMPLETE",
+  "frbsf_study": "CANCELLED_BY_USER_DO_NOT_RESUME_OR_REOPEN",
+  "heartbeat": "PAUSED"
+}
