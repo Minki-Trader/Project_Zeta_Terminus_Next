@@ -1,0 +1,91 @@
+{
+  "status": "PROSPECTIVE_BEFORE_FIT_FEATURES_OR_CANDIDATE_OUTCOMES",
+  "date": "2026-09-07",
+  "campaign": "optimization/campaigns/v7-onnx-online-compounding-v1",
+  "authority": "docs/OPERATING_DIRECTION.md#2026-09-07-v7-onnx-and-online-learning-development",
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "primary_mechanism": "Existing V7 entry-conditioned learned risk allocation combined with capital-proportional lot sizing",
+  "one_judgment_stream": true,
+  "roles": ["EXACT_V7_CONTROL", "ONNX_COMPOUND", "ONNX_ONLINE_COMPOUND"],
+  "sources": [{
+    "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+    "bytes": 2692892,
+    "sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+    "authority": "lab/engineering/v7-rlo1-return-requalification-v1/evidence/NATIVE_ECONOMIC_RESULTS_V1.json",
+    "copy_to": "optimization/artifacts/raw/v7-onnx-online-compounding-v1/input/original-v7-lifecycles.csv"
+  }],
+  "source_rules": {
+    "read_and_copy_only_attributable_completed_v7_evidence": true,
+    "external_economic_datasets": false,
+    "closed_family_code_execution": false,
+    "source_label_join": "Unique position_identifier within the exact candidate ledger; BIRTH supplies decision features and CLOSE supplies label/time. Reject missing, duplicate, partial or dropped evidence before fitting.",
+    "same_second": "A close label becomes eligible only when close server_time is strictly earlier than the next decision server_time. All same-second decisions use pre-update state."
+  },
+  "periods": {
+    "fit": "entry >=2024-01-01, close <2025-01-01; never use a later-maturing label",
+    "offline_development": "2025-01-01 <= entry, close <2026-01-01",
+    "confirmation": "2026-01-01 <= entry, close <2026-07-01, opened only for one unchanged offline survivor",
+    "binding_native": "2025-01-01 through 2026-07-01 exclusive at $100, 1:100, US30/US100/US500 complete real ticks",
+    "conditional_recent_native": "2026-07-01 through 2026-09-01 exclusive, only after the long pair supports improvement",
+    "known_exposure": "Original V7/V8 whole and recent aggregate economics have already been seen. 2025 is selection, 2026 candidate-specific confirmation is locked. July/August is not globally pristine. No candidate fit-year performance is counted as out-of-sample."
+  },
+  "model": {
+    "kind": "Ridge expected stressed risk-normalized return, exported as float32 standard ONNX tensor graph",
+    "components_in_order": ["RC16_LONG", "RC4_BOTH", "US100_CROSS", "US30_PRESSURE", "US30_RETURN_REV_LONG", "US100_PASSIVE_LIMIT"],
+    "raw_features": "14 columns: six component one-hot; six component-gated sign(feature)*log1p(abs(feature)); direction; direction*prior_signal_direction. All come from pre-entry V7 signal context. No realized outcome, entry fill slippage, future extrema or future availability enters features.",
+    "normalization": "Fit-only column mean and population standard deviation; constant columns use scale 1; standardized inputs clipped to [-5,5]. Frozen in ONNX.",
+    "target": "CLOSE stressed_net_usd / BIRTH planned_risk_usd, clipped [-2,2] for fitting/online labels only. Economic reports preserve unclipped outcomes.",
+    "ridge_alpha": 20.0,
+    "intercept_penalty": 0.0,
+    "minimum_fit_lifecycles": 120,
+    "minimum_fit_per_component": 10,
+    "refit_or_hyperparameter_search": false
+  },
+  "online": {
+    "kind": "Per-component exponentially weighted residual correction around frozen ONNX output",
+    "initial_bias": 0.0,
+    "learning_rate": 0.03,
+    "bias_limit_r": 0.5,
+    "update": "bias=clip(0.97*bias+0.03*(clipped_mature_label-frozen_entry_prediction),-0.5,0.5)",
+    "native_labels": "Only own complete realized trades; entry prediction stored with position identifier. No rejected-opportunity or counterfactual labels.",
+    "offline_limit": "Original control completed labels are an observed teacher population, not the changed native candidate's own outcome path. This distribution/selection limitation cannot prove economic growth.",
+    "checkpoint": "Own tester namespace checkpoint includes model identity, completed-label count, per-component biases and pending own entries/labels. No Live or retired state adoption.",
+    "inference_or_state_fault": "Block new candidate entries and record engineering fault; never silently fall back to a profitable comparator. Existing owned protection/close remains active."
+  },
+  "sizing": {
+    "control": "Exact original V7 +$150 daily stressed-balance lot staircase and 4%/12% risk, Passive 0.01",
+    "candidate_market_volume": "floor_to_legal_step(0.01 * ConservativeRiskCapital()/100); minimum legal volume may be used only if original buffered position and aggregate risk and margin gates still pass",
+    "candidate_market_risk_fraction": "0.04 * clamp(0.75+0.5*tanh(score/0.25),0.25,1.0); score is ONNX prediction plus online bias only in online role",
+    "aggregate_cap": 0.12,
+    "margin_cap": 0.45,
+    "passive": "Keep original 0.01 limit volume, geometry, risk and execution unchanged in this bundle; its complete labels may update its own residual but cannot influence other components.",
+    "stop": "Original buffered protective-stop calculation with declared reduced position budget and declared new market volume. Changed stop distance is intentional; exact native evaluation is mandatory.",
+    "signals_exits": "Keep original V7 opportunity generation, directions, management and exits. No novel entry or external input."
+  },
+  "offline_selection": {
+    "metrics": "Both 2025 halves and whole: unclipped mean/sum risk-normalized return, predicted-score squared loss, weighted stressed R, weighted downside squared R and information ratio relative to unconditional control; complete sample counts and six-component breadth. No dollar profits or native DD claims.",
+    "eligibility": "Both halves have positive weighted stressed R; pooled weighted stressed-R retention >=0.90; weighted stressed-R divided by sqrt(sum negative weighted R squared) exceeds unweighted control. At least 90% of each component's original count remains observed (no row filtering).",
+    "select": "Choose highest eligible whole risk-efficiency; exact tie prefers online then static. Select at most one unchanged role. All roles close together if no survivor; no threshold/feature/model/hyperparameter rescue within this family."
+  },
+  "confirmation_selection": "One unchanged survivor only; same positive-half/stressed-retention/risk-efficiency evidence required on January-June, with online state carried causally from 2025 teacher observations. No retuning or alternate finalist after results.",
+  "native_decision": {
+    "require": "Immediately adjacent exact control and unchanged survivor with identical terminal, inputs, contracts/swaps and 100% required-symbol real ticks; complete reconciled actual/stressed ledgers, final state, equity DD and geometric growth.",
+    "profit": "Both actual and doubled-cost-stressed net exceed adjacent V7; every declared calendar epoch is positive in both valuations.",
+    "dd_nominal": "candidate native relative equity DD <= control",
+    "dd_effective": "min(control+1.5 percentage points, control*1.10), with exact miss disclosed and better robust recovery/temporal evidence required",
+    "compounding": "Compare $100 terminal wealth and annualized log growth on identical complete intervals; disclose drawdown duration, monthly returns and lot progression. Do not infer or guarantee a hockey-stick curve.",
+    "recent": "After supportive long result only, an unchanged adjacent July-August pair must retain positive actual/stressed pooled growth without material DD or execution deterioration; disclose both months."
+  },
+  "engineering": {
+    "tester_only": true,
+    "runtime": "optimization/runtime/v7-onnx-online-compounding-v1-portable",
+    "output": "optimization/artifacts/raw/v7-onnx-online-compounding-v1",
+    "max_incremental_storage_gib": 10,
+    "free_reserve_gib": 30,
+    "normal_compile_and_native_runs_only": true,
+    "arbitrary_correction_retry_cap": null,
+    "live_writes_or_activation_or_promotion": false,
+    "software_references": ["https://www.mql5.com/en/docs/onnx/onnxcreatefrombuffer", "https://www.mql5.com/en/docs/onnx/onnxrun"]
+  }
+}

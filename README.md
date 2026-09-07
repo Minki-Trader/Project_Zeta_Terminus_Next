@@ -17,6 +17,8 @@ Read, in order:
 
 ## Working surfaces
 
+Current development is the isolated V7 ONNX/online-learning compounding campaign under `optimization/campaigns/v7-onnx-online-compounding-v1/`. It uses existing V7 information, preserves Live-Dev, retains at least 30 GiB free and continues serially until a user pause. The independent V8 Challenge stays paused; current trading authority remains only in CURRENT_STATE.
+
 - `live-dev/`: frozen release packages and Next-only operator tooling. It never imports Lab code.
 - `optimization/`: independent Live-derived parameter/economic optimization campaigns with their own source identity, Portable and evidence. It never uses the Master terminal.
 - `lab/`: modular source, the frozen V6R6 control, tester configuration, research, and economic evidence.

@@ -4,6 +4,10 @@ This root owns continuous economic optimization of the exact active Live-Dev beh
 
 ## Fixed parent
 
+Current 2026-09-07 direction: existing V7 ONNX/online-learning compound-growth development, one campaign `optimization/campaigns/v7-onnx-online-compounding-v1/`, with exact frozen parent `optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/`. No Live-Dev mutation or external economic datasets. The latest scoped Operating Direction supersedes the historical V8-only restrictions below. DD is compared to adjacent exact V7; preserve the 30 GiB floor and continue until user pause.
+
+The following parent and completed units are frozen historical V8 ancestry:
+
 - Source release: `NEXT-E02-V8-PMLR1-b1c77d3b6356`
 - Source root at derivation: `live-dev/package/active/`
 - Local frozen copy: `baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/`

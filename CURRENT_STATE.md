@@ -7,13 +7,13 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0598`
+- Latest state ID: `STATE-0600`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `PAUSED_BY_USER`. The user has permanently cancelled Program 2 `frbsf-news-sentiment-publication-readiness-v1`: do not resume, reopen, complete its source judgment or develop a successor from it, including after an ordinary Goal resumption. Declaration and 12 existing metadata receipts are preserved as cancelled history; no source-readiness or economic verdict is claimed. All research units and candidates are inactive. The current task implements the user's V7R arm-and-wait startup request within Live operator tooling.
+- Development: `ACTIVE_V7_ONNX_ONLINE_COMPOUNDING`. The latest user direction resumes serial V7 development in Optimization until a user pause. The independent V8 Challenge remains paused. FRBSF is permanently cancelled and no external economic-source research is authorized. All of Live-Dev, including the user-activated authority block below, remains unchanged.
 
 <!-- V7R_USER_ACTIVATION_BEGIN -->
 - Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Direct user activation arms the recovered EA to wait for its existing trading conditions; current market activity is not a startup gate.
@@ -35,7 +35,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: implement the explicitly requested leave-it-on `1/1` workflow. The initial failure and proved OFF recovery are closed history in STATE-0593..0595. Remove the market diagnostic call from both the direct-user button before OFF shutdown and the fresh-preflight Live starter. Tick frequency, global current-bar synchronization and deployment-handoff time windows no longer block ordinary activation of this installed V7R identity. Preserve exact source/account/sole ownership, normal flat stop, fresh healthy 0/0 recovery, 1/1 permission verification and per-launch completed-failure recovery. The frozen EA continues to enforce its own decision windows, signals/data, maximum entry delay, 3-second executable quote age, session, persistence, protection and risk checks; no expired/consumed opportunity is replayed. No EA/package/risk change, automatic activation/retry or research opens. The assistant prepares and verifies the tools without executing the user activation entrypoint or changing new-entry authority to ENABLED. Current outcome is the authority block above.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least 30 GiB free, and continue until the user pauses. The sole campaign is `optimization/campaigns/v7-onnx-online-compounding-v1/`. Its 21-file exact V7R parent, physical original-lifecycle input, complete three-role declaration and normal model pipeline are frozen before fit/features/outcomes in `evidence/MODEL_IMPLEMENTATION_FREEZE_V1.json`. Fit only 2024; select on 2025; at most one unchanged survivor may open January-June 2026 confirmation and conditional native comparison. July-August remains excluded from selection. No new native path or candidate result has opened.
+
+The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
@@ -103,11 +105,11 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Keep research paused and the FRBSF news-sentiment source task permanently cancelled. An ordinary Goal resumption must not restart that question, complete its judgment, acquire its values or open a successor from it. No macro comparison or replacement research opens during this operator change. Preserve cancelled history and at least 30 GiB free.
-2. The V7R market follow-up is complete and its heartbeat PAUSED. Only the user may operate the prepared trading-activation button. It now arms the recovered EA to wait for its normal trading conditions without a startup market diagnostic. The assistant must not invoke it, enable trading or change the frozen EA's execution guards. Until the user acts, preserve entries-disabled operation. After a user-operated transition, consult the authority block above for outcome and owner. Any further read requires a concrete operating need.
+1. Complete the single V7 ONNX/online-learning campaign under the latest scoped operating direction. Freeze the exact parent, causal input/model/update/sizing contract and indivisible role bundle before outcomes; perform fast selection then conditional adjacent native control/candidate comparison. Continue serial development until user pause. FRBSF remains permanently cancelled and external economic datasets remain excluded. Preserve at least 30 GiB free.
+2. Preserve the existing direct-user V7R 1/1 authority block, Live files and runtime processes unchanged. The market follow-up and heartbeat remain completed/PAUSED. No assistant trading activation, broker context query, restart or operator change belongs to this development campaign.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
-5. The persistent Goal remains incomplete until a complete native candidate passes every V8 gate.
+5. The active objective is V7 compound-growth improvement with comparable DD. The old V8 Challenge gates remain historical and do not complete or restrict this V7 development direction.
 
 ## Frozen lane boundaries
 
@@ -115,7 +117,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 - `lab/mt5/` is frozen historical material; no MQL source may be added or changed there.
 - Challenge families own self-contained roots and may not include or execute another family, Live or Optimization path.
 - Exact-V8 Optimization Units U001-U004 are closed immutable ancestry with zero survivor. No Optimization runtime or campaign is active.
-- Optimization baseline `optimization/baseline/NEXT-E02-V8-PMLR1-b1c77d3b6356/` remains `20` files / `660,794` bytes / ordered manifest `7BCB5B9A5182E3ADE2AEA3954025BEFB9897FB685201200CAB04C5FCBB78ACDF` and never executes with Live identity.
+- Active Optimization baseline: `optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/`, a new one-time byte-pinned static package copy. Old V7 and V8 baselines remain frozen ancestry. No baseline executes with Live identity.
 - Program 6 execution/recovery/broker-safety research is outside the current Goal.
 
 ## Storage and repository discipline
@@ -132,5 +134,5 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_015_CLOSED_COMPLETE_STRUCTURAL_SUPPLY_FAILURE_NO_SEED_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
-- Goal status: `PAUSED_INCOMPLETE`; no V8 winner exists yet. Preserve at least 30 GiB free and await explicit resumption before more research.
+- Goal status: `ACTIVE_V7_DEVELOPMENT_INCOMPLETE`. Continue the sole V7 ML campaign until user pause; no improvement or native winner is claimed. Preserve at least 30 GiB free.
 - Latest operator preparation evidence: `live-dev/evidence/V7R_ARM_AND_WAIT_STARTUP_V1.json` records the scoped startup change, three zero-error native PowerShell parses, unchanged EA execution guards/package and bounded 09:57 KST healthy 0/0 status. Actual 1/1 activation was not executed or end-to-end verified. The original failure and OFF-recovery evidence remain immutable. EA/dashboard are 28292/29492; no process stop/start, broker API or trading activation occurred. Free space exceeds 56 GiB and the 30 GiB floor. FRBSF remains cancelled, and the research Goal/heartbeat stay PAUSED.

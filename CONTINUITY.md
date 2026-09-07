@@ -125,6 +125,8 @@ Exact external-session raw-time authority remains unresolved. MetaQuotes API doc
 
 ## Authority boundary
 
+Latest 2026-09-07 user direction resumes development specifically from existing V7, using ONNX/online learning and internal EA/MQH information for compound growth with comparable DD. The isolated Optimization campaign and new exact-V7R baseline named in CURRENT_STATE own this work; V8 Challenge stays paused and FRBSF remains permanently cancelled. All of Live-Dev and its direct-user 1/1 activation are preserved. Older pause/benchmark paragraphs below remain historical context; the latest scoped Operating Direction governs.
+
 On 2026-09-07 the user permanently cancelled `lab/research/frbsf-news-sentiment-publication-readiness-v1/`, including future resumption. Its declaration and documentary metadata remain cancelled history; source-readiness and economic judgments are null. The broader Goal remains paused. A separate user-operated V7R activation reached fresh 0/0 but stopped at the unchanged market gate before Live; exact outcome, correction and entries-disabled recovery belong to CURRENT_STATE and Live evidence.
 
 - Legacy B70 V6R6, original V7, CXR1, CXR2, original RLO1 and V8 are retired/stopped. No old identity may restart or adopt another identity's state.
