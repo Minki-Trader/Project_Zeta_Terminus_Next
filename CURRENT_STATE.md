@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0643`
+- Latest state ID: `STATE-0644`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-User-authorized serial V7 ONNX/online development remains active until pause. Sole active family is Program7 optimization/campaigns/v7-native-onnx-causal-admission-v1: native randomized original-market admission trajectories will supply whole-account causal-effect labels; fresh ONNX STATIC and exploratory ONLINE policies will be judged by complete native economics. Prospective declaration fixes eight2024 training seeds, p=.5,24h whole-account stressed-equity reward,16 contexts,17-column ridge/ONNX and strict mature-label RLS, then complete2025selection and conditional2025-Aug2026confirmation. Own exact-parent source/identities and separate200-byte ONNX graph are implemented; both roles compile0errors0warnings. Physical native6182 runtime contains only neutral2023/2024 training history and own source. Complete three-symbol2023/2024M1 input plus36 exercised2024 symbol-months/source/settings are frozen before the control and all eight native training runs. No training outcome, learned fit or2026 candidate values yet. All15 predecessor bundles remain closed. Original paired-close idea rejected before declaration (20 fit-year events); all1935/2285 old exposure gates occur outside legal entry clocks. A user question about a narrowly scoped exception for the closed16-child pyramid role is pending; no approval or reopening is inferred. About40GiB free, Live unchanged.
+User's V7 ONNX/online task remains active, with no user pause. Sole family: Program7 optimization/campaigns/v7-native-onnx-causal-admission-v1. Source/input phase9fa661f is frozen, both EAs compile0errors0warnings, own native6182 runtime/200-byte ONNX/2023-2024M1/all36used2024tickmonths are ready. The first control PID15388 failed at initialization because Tester SET files were placed in Presets rather than Profiles/Tester; no trading tick or economic result. Exact frozen SETs are now installed correctly and all74 source/model/settings plus46 runtime/history hashes remain unchanged. A command containing native restart was rejected by automatic approval review as blocked by policy without detail. Artifact-only correction and the ordinary economic collector are complete; dedicated tester restart awaits the explicit user response, and no Optimization process is running. Zero training episodes/learned fit/2026 candidate outcomes. All15 predecessors remain closed; separate16-child pyramid exception question is also unapproved. About39.8GiB free, Live unchanged. Resume only after resolving the pending restart authorization; do not invent approval or claim background progress.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
