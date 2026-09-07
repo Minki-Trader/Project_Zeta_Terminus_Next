@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0611`
+- Latest state ID: `STATE-0612`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. All six preceding bundles are closed. Native ONNX/own learning operates with exact V7 economics but has no predictive/economic improvement. Latest `optimization/campaigns/v7-onnx-online-cross-signal-v1/` retained all5494hourly forecasts and242daily opportunities: both roles fail original-reference and positive-half selection; two incomplete daily windows remain explicit, with no native economic verdict. No candidate2026 values, new EA/runtime or survivor opened. No new family is open at this boundary. Broader V7 development remains active through a fresh whole-mechanism comparison. About52GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. All six prior bundles remain closed. The sole new Program5 campaign is `optimization/campaigns/v7-onnx-online-cross-hedge-v1/`: preserve all original signals/management and evaluate an optional separately protected oppositeUS500hedge for accepted original Cross parents with spare gross-risk capacity. A fresh2024price-beta fit and causal2025online moment updates size a fixed half-beta hedge; no old directional forecast or six-component allocation seed is used. Full declaration/input/source/normal compilation are frozen before outcomes. Native seventh-component implementation is conditional on one complete quote-selection survivor; no EA/runtime or2026candidate value is open. About51.9GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

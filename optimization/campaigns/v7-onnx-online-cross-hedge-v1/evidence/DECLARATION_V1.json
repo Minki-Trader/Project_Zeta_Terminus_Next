@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-07",
+  "status": "PROSPECTIVE_BEFORE_MODEL_OR_HEDGE_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-cross-hedge-v1",
+  "primary_program": 5,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": ["EXACT_V7_CONTROL", "ONNX_STATIC_CROSS_HEDGE", "ONNX_ONLINE_CROSS_HEDGE"],
+  "preserved": "All original six signal schedules/directions/thresholds, sizing, stop/exit rules, RC4 shadow and Passive pending logic. Daily150USD lot staircase,4%position cap,12%aggregate cap,45%margin and Passive0.01 stay original. Actual shared capital, risk and margin must include the additional hedge. An original signal is not retrospectively deleted to create room.",
+  "mechanism": "One optional separately protected opposite US500 hedge following each newly accepted original US100_CROSS parent. Original parent direction and volume are unchanged. This is a new traded exposure, not a scalar weight on historic trades or a rescued Cross direction model.",
+  "inputs": {
+    "prices_root": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control",
+    "symbols": ["US100", "US500"],
+    "source_sha256": {"US100":"EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B","US500":"E4E104309434EA8D4965E4AEB737E93806F596173D95D4C606602C28EB5B46D3"},
+    "ledger": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+    "ledger_sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+    "copy": "Own physical M1 rows2023-12-01 through2026-01-01 exclusive, slicing timestamps before numeric copy. Own original BIRTH/CLOSE rows with entry and event timestamps before2026; timestamp fields selected before numeric parsing. Preserve source hashes before/after. No closed candidate model/state/executable/output seeds learning.",
+    "clock": "Unshifted native server epoch. H1 bars from observed M1. Return labels require consecutive H1 bars and equal timestamps across US100/US500; no synthetic weekend return. Both realized returns are known after their hour ends, never used to predict that same hour.",
+    "contract_anchor": "Original preserved native contract observations: US100/US500 USD unit contract,0.01tick/minimum volume/volume step. Binding native candidate must recapture all required contracts/swaps. Prototype contract arithmetic has no broker execution authority."
+  },
+  "model": {
+    "target": "Estimate the zero-intercept contemporaneous US100 log-return relationship to US500 log-return. It estimates common-market exposure, not a forward return signal.",
+    "fit": "All complete synchronized consecutive H1 return observations in2024 whose availability end is strictly before2025-01-01. Fixed prior beta1 with moment penalty1e-6: Sxy=1e-6+sum(r500*r100); Sxx=1e-6+sum(r500*r500). No fit search or outcome-selected hedge fraction.",
+    "inference": "Fresh float32 ONNX Div/Clip/Mul graph. beta=clip(Sxy/Sxx,0.25,3.0); target hedge lots=0.5*beta*(parent US100 volume*US100 entry price*US100 contract)/(current US500 reference price*US500 contract). Round down to US500 volume step, never round up through minimum. The fixed0.5 hedge fraction is indivisible across both roles.",
+    "static": "Freeze2024moments.",
+    "online": "Initialize same2024moments. For each newly complete2025+H1 pair, only when label_end<new H1 forecast bar, update Sxy=0.995*Sxy+r500*r100; Sxx=0.995*Sxx+r500*r500. Process chronologically once, no resets. No label from a2024bar excluded by fit is adopted into online initialization. Log prediction/state/update timing and retain raw moments.",
+    "failure": "Nonfinite or nonpositive variance/model inference is an engineering fault; skip the optional hedge and retain original protection. Never enlarge hedge volume to force availability."
+  },
+  "hedge_policy": {
+    "opportunity": "After durable accepted original Cross BIRTH, at most one hedge attempt for that parent position id. Require fresh executable US500 quote/session, no own hedge, source-protected parent still present and at least one full parent planned-risk budget of unused original aggregate capacity. If admission fails, leave original parent unchanged and record skipped hedge; no retry after economic admission rejection.",
+    "volume_direction": "Opposite the parent direction, graph-sized floor-rounded lots, original symbol min/max. Static/online differ only by moment updates.",
+    "risk": "Own identity and seventh component slot; native planned-risk budget no larger than both the parent's original planned risk and current original4%conservative-capital budget. Apply original modeled-risk fraction, tick-aligned protective stop,12%aggregate and45%margin limits with all seven exposures counted. No synthetic hedge netting credit reduces gross planned risk. Model hedge volume can be overridden downward only by rejection, not fitted rescaling.",
+    "exit": "Close on parent completion or original four-H1-bar deadline, whichever occurs first, using original durable close/reconciliation. Own SL can close earlier; no re-entry for the same parent and no change to parent management. Persistent parent association prevents orphan reopening; owning EA must close any surviving hedge after parent's reconciled completion before admitting subsequent new hedges. No direct Live use.",
+    "native_integrity": "Physical self-contained derived source; all hardcoded six-component risk/state/identity/observation boundaries must cover the seventh slot. Independent hedge Magic/schema/events/parent id and original recovery protections; normal compilation and complete native runs, no test/checker infrastructure."
+  },
+  "selection": {
+    "period": "2025 only; original Cross BIRTH/CLOSE population. All original parent trades retained, including missing quote windows, no-headroom and sub-minimum hedge quantities. Both halves and complete date populations retained.",
+    "proxy_entry": "First US500 M1 open at or after parent entry second rounded up to the next minute, maximum120seconds. Beta must use only hourly labels available strictly before floor(actual proxy entry hour); use parent actual US100 entry notional and this US500 bid open for ratio. Source aggregate headroom must be>=source parent planned risk. A long proxy uses bid open+that M1 representative spread, short bid open. Representative spread is an execution approximation, not a forecast feature.",
+    "proxy_exit_stop": "First US500 M1 open at or after parent CLOSE second rounded up, maximum120seconds; follow every intervening observed M1. Standalone protective gross budget=0.5*parent planned risk, stop tick-aligned toward entry with tick0.01, opposite to entry; normal original buffered/clearance concepts retained. Long stop uses M1 bid low; short uses bid high+representative spread. If stop and parent close share a minute, stop takes precedence; gap stop fills at worse of stop and executable open. No favorable intrabar sequencing. Missing expected M1 inside the open window marks the hedge unscored, not a fictitious fill or zero cost.",
+    "accounting": "Record standalone approximate hedge quote PNL with unit contract and actual rounded proxy volume. Actual proxy spread is paid once; stress deducts one additional roundtrip spread charge (mean entry/exit spread*volume). No positive financing credit. It does not reconstruct a candidate account, permit old-dollar scaling or claim compound/native-DD improvement; actual hedge SL, concurrent admission, fills and equity feedback require native execution.",
+    "gates": ["Every proposed admitted proxy hedge has a complete quote path or the bundle cannot pass", "At least25complete hedge starts and at least40%of original Cross parent starts", "Total standalone stressed hedge quote PNL strictly positive", "Each half-year standalone stressed hedge quote PNL nonnegative"],
+    "ranking": "Highest complete stressed incremental hedge quote PNL among qualifying roles, static on tie. At most one survivor before candidate2026values/native execution. No passing role means freeze the entire bundle; no adjacent hedge fraction,beta clamp,forgetting,risk cap,headroom,hedge symbol,parent subgroup or exit rescue.",
+    "limitation": "Native shared-account feedback may reduce existing trade profit and overturn positive standalone hedge selection. Only full adjacent native portfolio economics can confirm the user objective."
+  },
+  "conditional_native": {
+    "interval": "2025-01-01 through2026-09-01 exclusive; Jan-Jun2026confirmation and Jul-Aug2026latest values unopened until one survivor is frozen.",
+    "pair": "Own fresh physical tester-only exact control then frozen survivor,100USD,1:100,US30M30assembly,Model4,US30/US100/US500100%real ticks,local only,normal shutdown. Same platform,source/model/EX5/SET,all exercised warmup/history/full symbolDB/contracts/swaps before/between/after. Any engineering/input fault requires correction and a fresh complete pair, no arbitrary retry cap.",
+    "economics": "Higher full-portfolio actual and doubled-cost-stressed growth, nominal stressed gain>=5%,nativeDD<=adjacent control nominal. Effective ceiling=min(controlDD+1.5pp,controlDD*1.10) requires stronger recovery/growth/temporal evidence. Both2025halves,Jan-Jun2026,Jul-Aug2026actual/stressed profits stay positive. Include hedge trade count,coverage,stop exits,misses,orphan handling,all seven components and full equity/wealth/capital paths. No direct promotion."
+  },
+  "storage": {"minimum_free_gib":30,"initial_cap_mib":256,"conditional_native_cap_gib":8,"learning_log_mib":16},
+  "live_changes": false,
+  "prohibitions": ["External economic source acquisition","Live writes/process action/broker context query","Closed candidate seed/import","Parallel development judgment","Tests,validators,parity/promotion checkers,test CLIs,CI"]
+}

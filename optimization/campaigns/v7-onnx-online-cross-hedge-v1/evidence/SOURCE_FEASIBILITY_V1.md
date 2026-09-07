@@ -1,0 +1,11 @@
+# Original source and contract feasibility
+
+Read-only source facts from the exact frozen Optimization V7R baseline. No candidate outcome, source change, runtime, broker query or Live operation establishes these facts.
+
+- `MQL5/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh` fixes `COMPONENT_COUNT=6`, ordinal0..5, six Magic numbers, manual definitions and a `components6` fingerprint. A native hedge requires a new own identity and seventh definition; no old state may be adopted.
+- `Persistence/ZetaStateAndEvents.mqh` serializes exactly COMPONENT_COUNT ordered rows and validates each exact ID. Ownership, aggregate planned risk, ordinary reconciliation and lifecycle arrays iterate that count. The decision journal is one durable ordinal-bearing object, so a hedge must complete the parent transaction before starting its own.
+- `Observation/ZetaResearchObservation.mqh` sizes arrays/masks by count, but book/prior/risk context is hardcoded to US30/US100. A native successor must include the third traded symbol in complete risk/evidence context; simply raising component count is insufficient.
+- The EA dispatcher and retry schedule explicitly name strategies. RC4/shadow and Passive/pending singleton branches remain unchanged. Generic market plan uses definition symbol for quote, stop, risk, session, margin and filling; existing six definitions never submit a US500 trade.
+- The direct original contract anchor is `lab/engineering/v7-rlo1-return-requalification-v1/evidence/NATIVE_ECONOMIC_RESULTS_V1.json`, original long candidate START/END. US500 has contract1, tick/tickvalue0.01, volume minimum/step0.01, stops/freeze0. Volume maximum, filling/trade/execution modes are outside that historical log schema and are not asserted from it. A conditional native candidate must recapture and satisfy actual startup/entry contracts.
+
+The prototype uses the declared unit contract/minimum/step arithmetic and is not an order execution proof. A cross-midnight hedge without complete financing evidence remains unscored; no zero-financing assumption can make it pass. Protection rejection is an explicit non-entry, while an admitted proposal with missing quote history blocks complete selection. No native implementation is opened unless the frozen quote bundle first has a survivor.
