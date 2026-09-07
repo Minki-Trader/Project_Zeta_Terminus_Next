@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0656`
+- Latest state ID: `STATE-0659`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-The existing-V7 improvement task remains active until user pause. All16previous V7 families are closed; latest causal-admission native closure b009442 is on main/origin with no finalist. WholePrograms1-5,7 comparison now selects soleProgram5 family optimization/campaigns/v7-unit-reinvestment-v1. Prospective DECLARATION_V1 freezes EXACT_V7_CONTROL and one WHOLE_V7_UNIT_REINVESTMENT role before ownsource/runtime/outcomes. Original sixsignals/exits remain; daily funded100USDunits determine quantities for allsix includingPassive, with original initialrisk geometry capped per fundedunit and unchanged4%/12%/45% maximumcaps. Passive pendingvolume is persisted rather than recalculated atfill. This is mechanical compounding architecture, no newMLfit orclaim of profitableONNX/onlinelearning. Both self-containedroles are nowderived from the exact21-fileparent andcompile0errors0warnings. Ownneutralruntime andnormalwholeM1reader12232closednormally. SELECTION_INPUT_FREEZE_V1 pins604source/44installed/351native records,build6182andfullthree2024warmup+2025M1snapshots beforefull2025native100%pair; only qualifyingfixedcandidate opens2026continuousconfirmation. No closedsource/model/state seed, no Livechanges,promotion,brokercontextquery or externaldata. Parentcanonical0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E. Preserve LivePID28324/authority/files,30GiBfree; ownruntime1.78GiB/raw0.12GiB,freeabout34.17GiB against4GiB/1GiBcaps. Separateoldpyramidexceptionstillunapproved.
+Existing-V7 improvement remains active until user pause; all17V7families are nowclosed. LatestProgram5 v7-unit-reinvestment-v1 closes as valid native economic nonconfirmation afterfullcorrected2025control/unit100%real-tickpair,all1084frozeninputs/fullM1/contractsunchanged,zero-fault/flatnative. Control554closes:+121.39actual/+112.988stress/DD16.073213874%/recovery3.9825875469. Unit569closes:+83.04/+74.378/DD17.458866545%/recovery3.0345981232. Bothcandidatehalvespositivebutweaker,andallactualquantitiesremain0.01;noactualreinvestmentorimprovedgrowth. Theinitial99%control,full2024tickwarmupcorrectionandprospectiveinternalstorage-capcorrectionremainpreserved. No finalist,2026candidateinput,retainedseedoradjacentunit/stop/quantity/Passive-onlyrescue. RootwillrecomparewholePrograms1-5,7fornextmaterialexisting-V7improvementusingonlynativeEA/MQH/price/MLinformation. EarlieractualONNXandonlineoperationisprovenbutnoprofitableMLcandidate. PreserveLivePID28324/authority/files and30GiBfree;about32.2GiBavailable,latestownruntime3.60GiB/raw0.254GiB. Separateoldpyramidexceptionstillunapproved. No independentV8/FRBSF orLivepromotion.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
