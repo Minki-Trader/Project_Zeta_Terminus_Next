@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-07T15:46:37.051450+00:00",
+  "status": "STORAGE_CONVERSION_CORRECTION_PRESERVE_ALL_ORIGINAL_RESULTS",
+  "parent_plan_sha256": "5E35D52DD4ACB8E548715ECB5CF60AF9828C11ACEB43F4FA09B3D75ECFFB7BE9",
+  "observed_failure": "The26th compact /EXE:LZX returned1 after removing its prior NTFS compression. File bytes/hash/path remained exact but storage grew from17674240 to43977016, causing the capacityguard. The summary0storedbytes means0successfullyconvertedfiles, notzeroactualstorage. It must never be interpreted as a spacegain.",
+  "failed_file_restored": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-continuation-exit-v1/input/US100-M1.npy",
+    "sha256": "1E5A6BBFAF7848775AE803007E64B71CE84F449EC78DA7391360D43B7D803BF4",
+    "current_ntfs_storage": 17674240,
+    "method": [
+      "compact.exe",
+      "/C",
+      "/A",
+      "exact bound original file"
+    ],
+    "hash_size_path_unchanged": true
+  },
+  "remaining_scope": "Only original frozen plan files after index25; do not redo25successfulfiles or infer a candidateapproval.",
+  "corrected_conversion": "On nonzero LZX exit, immediately restore original NTFS compression of that same exactfile and verifyhash/size/allocatedstorage. Preserve fullnonquietcommanderror. An unsuccessful restore stops. Capacity check runs after rollback and stillhalts on>8MiBdecline perfile. Never report0compressedbytes for failedconversion. No directory/CompactOs/Live/Lab/OneDrive/pagefile/shadowstorage change.",
+  "free_before": 30102999040,
+  "minimum_free_goal_bytes": 32212254720
+}

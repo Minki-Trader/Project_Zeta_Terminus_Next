@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-07T15:06:42.266870+00:00",
+  "status": "SOURCE_SCHEMA_CORRECTION_BEFORE_TIMESTAMP_MISMATCH_COUNTS",
+  "original": {
+    "path": "optimization/evidence/V7_ML_POST_VARIANCE_ALIGNMENT_COMPARE_V1.json",
+    "bytes": 5361,
+    "sha256": "FE31BDB4182DA103C4A85DD3E3F13514A9EDC163D75A703B52F34B591BF47D0C"
+  },
+  "observed": "Original PersistDecisionJournal writes SIGNAL only when signal_passed!=1 and signal_known==1 (lines1444-1451); passed evaluations are written as OUTCOME at FinalizeDecisionJournal(lines1598-1603). Treating literal SIGNAL as every evaluated signal would omit the intended source population. Only stage/component metadata and schema have been counted; no H1 timestamp mismatch, price or PNL observed.",
+  "corrected_population": "Unique original Cross decision_bar at17:00 with signal_known==1, stage in SIGNAL/OUTCOME, server_time in original0..2minute window. Every evaluated original signal, independent of pass/direction/admission/trade outcome. All original32fit/eightperhalf thresholds, time windows and rejection rules remain unchanged. Preserve literalSIGNAL counts separately.",
+  "source": {
+    "path": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Persistence/ZetaStateAndEvents.mqh",
+    "bytes": 74148,
+    "sha256": "40037A364AB008A98DB948220D1589710AB06193C6FF23D6BB2A24279CD352ED"
+  },
+  "no_numeric_candidate_or_price_values": true
+}

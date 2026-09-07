@@ -1,13 +1,13 @@
 # Project Zeta Terminus Next Current State
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 This is the concise current re-entry snapshot and the sole Next Live authority. Detailed immutable transitions remain in the active numbered state chunk.
 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0666`
+- Latest state ID: `STATE-0671`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,13 +35,19 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Existing V7 improvement continues until user pause. All eighteen V7 families are closed; no successor is yet declared. Recompare Programs 1-5 and 7 as a whole before opening one materially distinct improvement of the original V7. Pending-maintenance remains unready (30 demonstrated later-M15 orders versus the prospective 32). Closed neighborhoods and the separate unapproved old pyramid exception stay closed.
+Existing V7 improvement continues until user pause. All eighteen V7 families are closed and phase 8a3ad67 is on origin/main; no successor is declared. Pending-maintenance remains unready (30 later-M15 orders versus32). Whole-map comparison then examined original Cross timestamp identity without price/profit parsing: 2024 has4/248 mismatched historical windows (halves4/0), 2025 has5/247 (0/5), versus prospective32/eight-per-half; latest-return interval mismatches are0. The source-schema correction preserves literal SIGNAL rows while correctly including passed OUTCOME evaluations, before mismatch counts. Close this source proposal without a campaign or density/window/series rescue. Closed neighborhoods and the separate unapproved old pyramid exception remain closed.
+
+A concrete exception proposal, optimization/evidence/V7_LOG_ALLOCATION_NATIVE_COMPLETION_PROPOSAL_V1.json, requests complete native testing of both unchanged previously closed log-allocation roles. Ordinary Tester use is already authorized; reuse of this closed bundle is the specifically pending user exception. The exact question has been asked, no answer/approval has arrived, and no source/model/runtime has been created. Original proxy failures and all final100%/growth/DD/recovery/epoch gates remain. Reviewable proposal: docs/lineage/V7_NATIVE_LOG_ALLOCATION_COMPLETION_PROPOSAL_20260908.md.
+
+The entire four-role2025 selection is now funded under prospective storage-only amendment optimization/evidence/V7_LOG_ALLOCATION_SELECTION_STORAGE_AMENDMENT_V1.json. Its own runtime preloads all72 required2025 tick-cache files, retaining full required past bar warmup, and omits only99 unexecuted2024/2026 tick-cache preloads. Existing closed originals remain at their paths. Measured preceding runtime3,965,125,370bytes minus unneeded preloads1,919,873,833 leaves2,045,251,537bytes; the conservative3.5GiB runtime cap adds1,712,844,847bytes growth reserve. Full four-role raw1GiB and source64MiB give4,898,947,072bytes total, requiring37,111,201,792bytes free to retain30GiB. Declaration actualfree37,521,756,160 funds it. No economic/model/period/history-quality change or hypothetical compression/hardlink saving funds this bound. A fully eligible unchanged finalist alone may open continuous2026 confirmation, after its complete remaining paired growth is separately funded; that future envelope is not yet certified.
 
 Program 1 `optimization/campaigns/v7-onnx-online-variance-standardization-v1/` is closed as valid native nonconfirmation. The unchanged full-2025 control/static/control/online matrix is 100% real ticks with all 1,297 exercised files, full required-symbol M1 histories and contracts/swaps unchanged. Both adjacent controls reproduce 554 closes, actual +121.39, conservative stress +112.988, native relative equity DD 16.073213874% and recovery 3.9825875469. Static yields 577 closes, +117.67/+109.091, DD 18.212100085%, recovery 4.1020135742; online yields 621 closes, +94.11/+84.9425, DD 21.179428942%, recovery 2.9540593646. Both candidates have lower actual/stressed wealth and DD beyond the effective 17.573213874% ceiling. Positive half-years and static recovery alone cannot rescue the failures.
 
 Actual ONNX completes 35,124 forecasts per role and 35,103 strictly mature online updates. All four complete 352,189-row account paths are flat, known and zero-fault; every actual BIRTH quantity is 0.01 and no realized reinvestment occurs. Improved predictive loss and working online updates are not economic or hockey-stick growth proof. NATIVE_SELECTION_RESULT_V1 and CLOSURE_V1 preserve the whole-family verdict; actual equity, conservative mark and executed quantity plots are archived. No finalist, confirmation or candidate 2026 values open. Original predictive supply failures and the explicit native-selection amendment remain; all reader, peer-rollover and report corrections preserve original sources, outputs and hashes.
 
-All own native processes are stopped; metadata shows only untouched Live V7R PID 28324. Lossless compression preserves every planned path, logical size and SHA256: earlier closed-text work observed about 3.07 GiB volume recovery, and 15 additional closed neutral platform executables reduced allocated bytes by 402,294,840. No deletion or Live action. Runtime is 3,965,125,370 bytes and raw output about 764.2 MB; free space is about 31.4 GiB. Fund complete future growth above the 30 GiB floor before producing. Bounded storage metadata assistance is not a second development judgment stream.
+All own native processes are stopped; untouched Live V7R PID28324 is the sole observed terminal owner. Lossless storage preserves every completed path/logical size/SHA. Ordinary compression initially breached30GiB, with lowest recorded29,459,525,632bytes (27.44GiB); its unexplained volume discrepancy and all errors remain preserved. Full2580-file LZX recovery has2465 conversions and115 failed conversions restored to original NTFS allocation. The subsequent HC50 bundle has29 LZX successes/21 unchanged Windows tag errors. Additional160 HCC/HCS files first fail LZX unchanged, then ordinary NTFS succeeds160/160 and gains1,107,415,040 actual bytes. Later stages all retain30GiB. Root never deleted/moved/linked a file or changed OS/OneDrive/pagefile, Live or Lab. Latest measured free is about34.95GiB; the complete2025 selection reserve is funded as above.
+
+Storage plans/progress/corrections/results remain bound by lineage/STORAGE_LOSSLESS_RECOVERY_CLOSURE_20260908_V2.json and lineage/STORAGE_CLOSED_HISTORY_RECOVERY_CLOSE_20260908_V1.json. LZX may lack the ordinary compressed attribute, so future classification must query actual compact state. Conservative cache retention has0 provable deletion targets; other directly closed raw roots have0 ordinary additional compression targets. Source-only timestamp feasibility and the concrete pending proposal are ready for this phase boundary. Existing V7 improvement is not economically achieved; candidate implementation waits only on the specifically requested closed-bundle exception, with conditional confirmation capacity checked before that future step.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
