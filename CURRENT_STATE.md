@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0652`
+- Latest state ID: `STATE-0654`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-The user-authorized task improves existing V7 through ONNX and online learning; physical Optimization isolation protects Live and is not an independent-strategy objective. Sole Program7 family: optimization/campaigns/v7-native-onnx-causal-admission-v1. All eight fixed full2024 native trajectories completed under the explicit training-only99%history exception, yielding3288intentions/3280mature24haccount labels/8preservedpending, with complete zero-fault/flat native and identical input/contract evidence. One fixed ridge baseline/effect fit is complete; all five engines exceed32observations in each treatment. Fitted learner compiles0errors0warnings; control remains exact originalV7. POLICY_SELECTION_NATIVE_FREEZE_V1 now pins source/model/SET/build/160native files and full2024warmup+2025M1data before full2025control/static/online selection. All native processes are stopped; selection starts after this substantial training/implementation phase reaches main/origin. Final quality remains100% and all original growth/stress/DD/recovery/epoch gates remain. No candidate2026input, finalist or economic improvement yet. Preserve LivePID28324/authority/files and30GiB reserve; free about36.5GiB. All15predecessors remain closed and separate pyramid exception is unapproved.
+The user-authorized task continues existing V7 improvement with ONNX and online learning until pause; physical Optimization isolation protects Live. Program7 family v7-native-onnx-causal-admission-v1 is now CLOSED_VALID_NATIVE_ECONOMIC_NONCONFIRMATION. All eight fixed2024training trajectories and one3280-label fit completed under the explicit99%-training-only exception; all three full2025 native selection runs then completed at100%real ticks with identical310source/native/installed records,fullM1/contracts andzero-fault/flat evidence. Exactcontrol actual/stress121.39/112.988 withDD16.073213874%; STATIC67.49/63.569 withDD9.688964636%; ONLINE38.75/32.383 withDD17.084102294%. ActualONNX and442strictly mature online updates operated, but neither learned role improved growth; ONLINE2025H1stress was negative. Entirebundle closes withno finalist,2026candidateinput,retained seed oradjacent rescue. All16V7families now closed; the root will recompare Programs1-5,7 for the next existing-V7 improvement. All three daily lot multipliers stayed1,so no improved compounding is established. Keep LivePID28324/authority/files untouched and30GiB reserve; freeabout36GiB. Separate old pyramid exception remains unapproved.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
