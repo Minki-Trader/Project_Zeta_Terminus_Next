@@ -1,0 +1,95 @@
+{
+  "utc": "2026-09-07T04:51:13.653458+00:00",
+  "status": "PROSPECTIVE_BEFORE_NEW_INPUT_FEATURE_FIT_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-volatility-ratchet-v1",
+  "primary_program": 4,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "roles": [
+    "EXACT_V7_CONTROL",
+    "ONNX_VOLATILITY_RATCHET",
+    "ONNX_ONLINE_VOLATILITY_RATCHET"
+  ],
+  "preserved": "All six original entry signals,directions,schedules,execution,quantities,initialSL,Passivepending,original hold/mandatory exits,4%position/12%aggregate/45%margin and daily150USDstaircase. Ratchet never loosens any original or previously installed protectiveSL. Native admission,protection,RC4shadow,reconciliation and ownership remain mandatory.",
+  "sources": [
+    {
+      "name": "US30",
+      "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US30-M1.npy",
+      "sha256": "B56FAF1B495504A48DF982B91EB2EBF390A8B258E1F2864C6F0A3444A9446586"
+    },
+    {
+      "name": "US100",
+      "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US100-M1.npy",
+      "sha256": "EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B"
+    },
+    {
+      "name": "lifecycles",
+      "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+      "sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B"
+    }
+  ],
+  "input_contract": {
+    "copy": "Own physical M1copy of2023-12-01<=timestamp<2026-01-01, slice time before copying numeric fields. Own BIRTH/CLOSE2024/2025ledger rows filtered by timestamp before numeric parsing. No2026candidate value, external economic data or old candidate source/model. Source/own hashes before/after.",
+    "clock": "Unshifted original native server-epoch labels; no external-session interpretation.",
+    "bars": "Aggregate each nonempty native M1bucket into completed M30bidOHLC,tickvolume and last representative spread. A no-tick minute does not invent a price or invalidate a closed nonempty bar. Every target with no next nonempty exact M30bucket remains missing, without deleting forecasts. Features require48previous nonempty M30bars within7calendar days and the latest bar exactlyD-1800.",
+    "quote": "US30/US100 original contract1 and tick/point0.01. Historical M1spread is a representative ask approximation, not native execution proof."
+  },
+  "forecast": {
+    "population": "Every eligible closed M30market timestamp D in2024/2025 for each symbol and both directions, independent of positions or action. Retain all expected calendar grid rows with unavailable reasons.",
+    "scale": "Median high-low range of the latest48completed nonempty M30bars, floor one0.01price tick.",
+    "features": [
+      "US100flag",
+      "direction",
+      "log(mean range6 / median range48),numerator floor0.01",
+      "latest range / scale",
+      "direction*latest close change / scale",
+      "direction*6bar close change / scale",
+      "log((1+mean tickvolume6)/(1+mean tickvolume48))",
+      "latest representative spread / scale",
+      "sin(2pi serverhour/24)",
+      "cos(2pi serverhour/24)"
+    ],
+    "label": "For long:max(0,lastcompletedbidclose-min nextM30bidlow)/scale. For short:max(0,max nextM30M1(high+spread)-lastcompletedaskclose)/scale. Preserve raw nonnegative excursion. Log target=log(max(0.05,raw excursion)). Label availableD+1800; updates only availability<new forecastD. Both-direction same-time forecasts share the same pre-update state.",
+    "fit": "All complete2024labels with availability<2025-01-01. Train-only10feature mean/std floor1e-6; standardizedclip[-6,6],prependintercept. Ridge penalties1intercept/50features on log target clipped[-3,3]. One fit,no search. Quantile calibration is empirical q0.90 of raw loglabel minus fitted logprediction on same2024fitrows (not a claim of held-out calibration).",
+    "onnx": "Fresh float32 dynamic-weight MatMul11coords plus scalar quantile offset,Exp,Clip[0.25,8] gives normalized q90adverse distance.",
+    "static": "Frozen2024weights and calibration.",
+    "online": "Same train-onlynormalization/initialweights/calibration, empty pending2025. At each laterD apply mature labels in source-time,symbol,directionorder: w=clip(w+0.01*(clip(loglabel,-3,3)-w.dot(x))*x/(1+x.dot(x)),-5,5). Calibration shift=clip(shift+0.01*(0.90-I[rawloglabel<=stored_unclipped_logquantile]),-1,1). Keep original2024calibration plus shift. Stored prediction is from before the label became known. No same-D or future-completeness updates."
+  },
+  "ratchet": {
+    "schedule": "For every original accepted position, from the first M30close after entry, at each normal newM30bar with a ready current forecast. Only completed-bar quote marks after actualentry update favorable peak; initialize peak at original entry price. Missing forecast leaves current/originalSL unchanged, with full trade retained.",
+    "rule": "directional_peak=max(previouspeak,direction*latestcompletedexitquote). proposed directionalSL=peak-predicted_q90*scale. It may install only strictly beyond entry executable price plus original entry spread in the profit direction, and strictly tighter than original/currentSL by at least one tick. No fixed Rcheckpoint, age threshold or altered hold. Round longSLdown/shortSLup to tick. Current executable quote must leave original legal broker stop/freeze distance; otherwise keep originalSL until a later normal decision.",
+    "native": "Use fresh executable quotes and original broker constraints, stable ticket-bound durable peak/SL/lastbar, ordinary SL modification/reconciliation/RC4shadow handling. Never lower original protective authority, misattribute an intentional ratchetSL to an old ARCstop transition, or block original management. Model/runtime faults are correction states without retry cap.",
+    "proxy": "Within each full original lifecycle keep original volume and occupancy. Advance all recorded M1quotes until originalnativeclose. Previously installedSL is evaluated before a new bar decision. At a new M30bar choose the first recorded M1opening no later thanD+120 for executable placement. NewSL must be outside the opening quote by at least0.01; native legal stops/freeze are later binding. Then check M1high/low with pessimistic gap fill min(open,SL)long/max(openAsk,SL)short. Original close within the same minute wins conservatively. No use of that minute high/low to choose its newSL.",
+    "cash": "Unchanged trades retain exact original actual/stressednet. Synthetic earlier exits use directionalpricePNL*sourcevolume plus min(0,originalactual-originalpricePNL), retaining originalnegativefinancing/transaction costs and no positive credit. Stress deducts full originalextra debit plus max(0,newrepresentativespread-entryspread)*volume plus newadversegap*volume. Original historical exit slippage is retained; changed actual native costs remain unknown. No freed-capacity/re-entry credit or historicPNLscaling proves compounding."
+  },
+  "selection": {
+    "period": "Every original2025BIRTH/lifecycle acrossall6components, all365dates and bothhalves. Any entry without a completeoriginalclose fails whole selection; missing marketprefix/forecast keeps original position, never deletes it.",
+    "gates": [
+      "Complete all-original-lifecycle result with explicit unchanged/unavailable paths",
+      "At least20ratchet earlier exits and at least5in eachhalf",
+      "Both actual and stressed totals exceed exact sourcecontrol",
+      "Bothhalves actual/stressedpositive",
+      "Closed-cash DDpercent<=1.10times same sourcecontrol, disclosed selection-only"
+    ],
+    "rank": "Highest stressed gain among qualifying roles, static on exacttie. Freeze one survivor before2026candidatevalues or native implementation. Neitherqualifies closes wholebundle without neighboring quantile,scale,lookback,feature,model,step,calibration,activation,component,stop-distance or hold rescue.",
+    "scope": "Fixed-source-volume full-trade selection can justify one native run, not native equityDD, genuinecompounding or a full candidate account result."
+  },
+  "conditional_native": {
+    "period": "2025-01-01 through2026-09-01exclusive, one unchanged control/survivor pair. Jan-Jun2026confirmation andJul-Aug2026latestcandidatevalues stay unopened beforeselection.",
+    "contract": "Own fresh physical OptimizationPortable and separate self-contained tester-only exactcontrol/survivor baselinecopies with newidentities/state/model.100USD,1:100,US30M30,all3requiredsymbols,Model4/100%realticks,same fullhistory/symbolcontracts/platform/source/settings hashes before/between/after. Correction needs a new complete valid pair, not candidate failure.",
+    "gates": "Higher completeactual/stressedwealth andgeometricgrowth, stressedprofitgain>=5%, nativeDDnominal<=control; tolerance<=min(control+1.5pp,control*1.10)onlywithimprovedrecovery/growth/temporal evidence. Every2025half/Jan-Jun2026/Jul-Aug2026actualandstresspositive. Reportcompleteequity,lot/capital/stop/exit/admission/cost/learningpaths. No Livepromotion."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "first_stage_max_mib": 512,
+    "conditional_runtime_growth_gib": 6,
+    "native_output_growth_gib": 2
+  },
+  "constraints": [
+    "One root design/economicstream; bounded factual sourcehelp only",
+    "No tests,validators,parity/promotioncheckers,testCLIs,CI",
+    "No Livefiles/processchanges or brokercontextquery",
+    "All closedbundlesimmutable"
+  ],
+  "live_changes": false
+}

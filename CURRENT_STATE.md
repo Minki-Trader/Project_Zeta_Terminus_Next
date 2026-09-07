@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0617`
+- Latest state ID: `STATE-0618`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Eight bundles are now closed without an economic survivor; the native learning engine operated successfully with exact original V7 economics. Latest Program3 market-wait input correction is complete: all823windows re-exported with only the prefix widened,681050ticks. Corrected2025selection retains428births,408complete and20explicitlyunscored under frozen quote conditions. Static/online descriptive stressed quote savings are-$0.6775/-$0.1923; neither qualifies. This is selection/readiness nonconfirmation, not a complete full-population/native economic verdict. All V1preliminary/V2corrected evidence is preserved. Recompare all macro programs before one materially distinct successor. All own data/native processes are stopped; no candidate2026value or survivorEA opened. About49GiB remains free. Exact baseline and every Live authority/file/process remain unchanged.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Eight bundles are closed without an economic survivor; native learning operation retained exact V7 economics. Sole active campaign is optimization/campaigns/v7-onnx-online-volatility-ratchet-v1, Program4: a fresh q0.90nextM30adverse-excursion model drives monotone profit-protecting SLratchets across all original positions, preserving entries/initialrisk/quantity/mandatorymanagement. It is distinct from the closed one-time expected-continuation early-close rule. Static/online bundle,complete2025fixed-volume selection and conditional2025-August2026nativeauthority are frozen before outcomes. OriginalM1/2024-25lifecycle inputs were timestamp-cut into own physical copies; source/normalPythoncompilation hashes are frozen. No candidateoutcome/2026value/EA/runtime/native yet. Source facts require a ticket-bound durable profitSL branch and retained originaladmissionrisk/RC4shadowsemantics if implementation qualifies. All own data/native processes remain stopped. About48.7GiBfree; exact baseline and every Live authority/file/process unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-07T04:56:29.009664+00:00",
+  "status": "FACTUAL_BASELINE_PROTECTION_CONTRACT_BEFORE_CANDIDATE_OUTCOMES",
+  "source_root": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5",
+  "facts": {
+    "market_initial_stop": "ZetaOrders.mqh:900-917 submits price0 with requested_stop_loss andTP0. Initial SLis already present on entry request.",
+    "monotone_modification": "Baseline only PositionModify calls are RC4ARC:ZetaRC4.mqh:1574/1754. Target retains0.25of original loss distance, floorlong/ceilshort and>=1ticktightening; journal is saved before broker request and broker confirms saved or pending target before adoption.",
+    "profit_side_contract": "SelectedPositionProtectionMatches in Execution/ZetaProtectionAndReconciliation.mqh:6-70 requires brokerSL match savedentry_stop_loss (orRC4pendingtarget) and stay loss-side. A research profit ratchet therefore needs an explicit authorized ticket-bound protective state branch, not an arbitrary broker mismatch bypass.",
+    "risk": "Component entry_planned_risk_usd remains original reserved admission budget after RC4tightening and shrinks only with partial volume exit. A ratchet will retain the same risk budget and does not grant freed-risk capacity.",
+    "call_order": "OnTick ownership/protection audit,reconcile,ProcessClosures,ProcessPassiveLimit,RC4shadow,entries,ARC. Timer reconciles but does not manage optional protection. Original mandatory closes take precedence.",
+    "rc4_shadow": "Compressed/pending RC4fullSLclose activates original-stop/time shadow. Ratchet implementation must identify its own modification state and preserve any already earned originalARCshadow reservation; a tighter ratchet cannot be loosened by later originalARCtarget.",
+    "quote_legality": "MinimumProtectionDistance=max(tick_size,max(stops_level,freeze_level)*point). Fresh executablequote<=3seconds. Modifyrequires current session and trade mode not disabled.",
+    "source_fields": "Coreentry_stop_loss is expected CURRENTbrokerSL, notimmutableoriginal; ARCkeepsoriginal in arc_original_stop_loss. ObserverBIRTHinitialstop/plannedrisk remain factual selection anchors only."
+  },
+  "prospective_integration": "If a survivor qualifies, the own candidate must preserve original expectedSL and immutableinitialSL separately from durable ratchet peak/current/pending target. Only its exact saved or pending ratchetSL may enter the profit-side protection branch. Originaladmissionrisk stays reserved. OriginalARCmust never loosen a tighter ratchet or treat a ratchet-only intent as ARCcompression; existing ARCcompressed/shadow state keeps originalmeaning. Normal compilation and fullnative accounting only. Live source/state remain untouched.",
+  "proxy_timing": "The earned peak excludes sourceM1lastquote minutes that begin before actualentry. This conservative ordinal ambiguity handling cannot use an earlier price as post-entry profit; features and labels remain market-wide and independent.",
+  "live_changes": false
+}
