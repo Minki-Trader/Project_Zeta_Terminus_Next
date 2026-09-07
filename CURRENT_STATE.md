@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0641`
+- Latest state ID: `STATE-0643`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task remains active: continue serial V7 ONNX/online development until user pause, with actual compounding/comparable DD, Live untouched and 30 GiB free. Volume-profile whole STATIC/ONLINE bundle is CLOSED: 197 fit labels and all 189 complete 2025 first events. STATIC 25 trades actual +.014 / stress -.317; ONLINE 48 trades -1.998 / -2.629. Both fail contribution and positive-half gates; no survivor or seed. All 15 predecessors remain closed. Recompare Programs 1–5 and 7 before exactly one materially distinct successor. No candidate 2026, new EA/Portable or native economic verdict for this family. About 41.9 GiB free; Live and frozen baseline unchanged.
+User-authorized serial V7 ONNX/online development remains active until pause. Sole active family is Program7 optimization/campaigns/v7-native-onnx-causal-admission-v1: native randomized original-market admission trajectories will supply whole-account causal-effect labels; fresh ONNX STATIC and exploratory ONLINE policies will be judged by complete native economics. Prospective declaration fixes eight2024 training seeds, p=.5,24h whole-account stressed-equity reward,16 contexts,17-column ridge/ONNX and strict mature-label RLS, then complete2025selection and conditional2025-Aug2026confirmation. Own exact-parent source/identities and separate200-byte ONNX graph are implemented; both roles compile0errors0warnings. Physical native6182 runtime contains only neutral2023/2024 training history and own source. Complete three-symbol2023/2024M1 input plus36 exercised2024 symbol-months/source/settings are frozen before the control and all eight native training runs. No training outcome, learned fit or2026 candidate values yet. All15 predecessor bundles remain closed. Original paired-close idea rejected before declaration (20 fit-year events); all1935/2285 old exposure gates occur outside legal entry clocks. A user question about a narrowly scoped exception for the closed16-child pyramid role is pending; no approval or reopening is inferred. About40GiB free, Live unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

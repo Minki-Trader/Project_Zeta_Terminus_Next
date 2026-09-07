@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-07T09:36:05.066179+00:00",
+  "status": "ORIGINAL_ARITHMETIC_AND_NATIVE_INTEGRATION_FACTS_BEFORE_ECONOMICS",
+  "baseline": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "realized": "PortfolioState.stressed_balance is only updated by completed exit deals; no stressed account MTM existed in the frozen baseline.",
+  "references": {
+    "portfolio_fields": "Domain/ZetaDomain.mqh:142-155",
+    "conservative_capital": "Portfolio/ZetaPortfolioRisk.mqh:77-88",
+    "daily_lot_staircase": "Portfolio/ZetaPortfolioRisk.mqh:38-73",
+    "reserved_risk": "Portfolio/ZetaPortfolioRisk.mqh:92-97",
+    "exit_costs_and_ledgers": "Execution/ZetaProtectionAndReconciliation.mqh:376-405,454-461",
+    "original_native_dispatch": "Experts/ZetaTerminusNext/ZetaNextV7ReturnPortfolio.mq5:190-280",
+    "actual_account_drawdown": "Portfolio/ZetaPortfolioRisk.mqh:602-612"
+  },
+  "new_mark": "Separate own marked equity adds actual owned position marks and original recorded entry costs to original stressed closed capital, doubles observed negative transaction/financing costs and extra liquidation spread, subtracts positive closed swap credits. Records maximum last-observed owned quote age. No future quote, fabricated fill or fee.",
+  "integration": "Causal observation hooks do not change original tester dispatch or original trade-processing order. Only five market OpenComponent entry paths have a treatment gate. Core exit accounting callback observes positive financing after original stressed accumulation. Original Passive is unchanged. Terminal TesterStatistics supplies true native equity DD; M1 path is descriptive.",
+  "persistence": "Unique episode tag, refusal of existing core/learner outputs, alternating complete posterior/pending snapshots and full decision/label/update tapes. Full interrupted runs are preserved; no automatic isolated learner-state adoption into reset core state.",
+  "official_software_sources": [
+    "https://www.mql5.com/en/docs/onnx/onnxrun",
+    "https://www.mql5.com/en/docs/onnx/onnxcreatefrombuffer"
+  ],
+  "onnx": "Fresh200-byte MatMul graph, IR8/opset17, float32 context1x17 and coefficient17x2 inputs. Runtime uses explicit shape settings and ONNX_NO_CONVERSION; no external model or economic dataset.",
+  "helpers": "Read-only original metadata/source locations only. Root owns all design, source and economic judgments.",
+  "live_changes": false
+}

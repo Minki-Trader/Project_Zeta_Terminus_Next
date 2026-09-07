@@ -1,0 +1,67 @@
+{
+  "schema_version": 4,
+  "project_id": "project-zeta-terminus-next",
+  "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_release_id": "NEXT-E02-V8-PMLR1-b1c77d3b6356",
+  "economic_parent_release_id": "NEXT-E01-V7-RLO1-b32e7e176f2e",
+  "portfolio_id": "ZT-PORT-NEXT-V7R-RLO1-20260907",
+  "execution_version": "zt-next-v7-rlo1-return-portfolio-v1",
+  "economic_version": "zt-next-pre500-finite-risk-portfolio-v7-modular-parent-b70-v6r6",
+  "status": "verified_frozen_v7_return_conditionally_authorized",
+  "source_lane": "lab/engineering/v7-rlo1-return-requalification-v1/candidate",
+  "copy_direction": "verified_lab_candidate_to_live_dev_once",
+  "canonical_source_settings_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "main_source_sha256": "953BF5F1365D1181382CAF939261BCF0D50D74589696C2C11D55C68EB784C298",
+  "compiled_ex5_sha256": "30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657",
+  "economic_set_sha256_normalized_lf": "BEBA34FE89B01EC4F1582C2C1EA4BC02E8FB73E0D78B78BAB833EEC63F8065E8",
+  "source_manifest_sha256": "2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9",
+  "compiler_result": "0 errors, 0 warnings",
+  "compiler_build": 6140,
+  "compile_invocations": 1,
+  "compile_log_sha256": "9EBC5019FA57DE81446C845878018843EC70A610D132C273B361C714333E0DD1",
+  "native_economic_requalification": "passed",
+  "native_execution_build": 6182,
+  "native_terminal_sha256": "D2285613044952C1D62AFEA982B61C3635525C9DA6F8E89B9A2C8AFA7BC69C3A",
+  "evidence_records": [
+    "lab/engineering/v7-rlo1-return-requalification-v1/evidence/IMPLEMENTATION_FREEZE_V1.json",
+    "lab/engineering/v7-rlo1-return-requalification-v1/evidence/NATIVE_ECONOMIC_RESULTS_V1.json",
+    "lab/engineering/v7-rlo1-return-requalification-v1/evidence/RETURN_ECONOMIC_DECISION_V1.json"
+  ],
+  "engineering_verdict": "PASS_FROZEN_EXACT_V7_ECONOMICS_AND_NEW_IDENTITY_TRANSLATION",
+  "economic_contract": {
+    "position_risk_fraction": 0.04,
+    "aggregate_risk_fraction": 0.12,
+    "component_risk_multipliers": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "passive_disabled": false,
+    "passive_fixed_volume": 0.01,
+    "retuned_during_handoff": false
+  },
+  "magic_numbers": [
+    260907701,
+    260907702,
+    260907703,
+    260907704,
+    260907705,
+    260907706
+  ],
+  "mutable_namespaces": {
+    "core": "ZetaTerminusNext\\live\\v7r-rlo1\\state",
+    "research": "ZetaTerminusNext\\live\\v7r-rlo1\\research",
+    "ownership": "ZetaTerminusNext\\live\\v7r-rlo1\\state\\runtime.lock"
+  },
+  "state_schema": "7R1",
+  "retired_state_adoption": false,
+  "permitted_continuity": "final_project_attributable_realized_pl_only",
+  "live_authorized": "conditional_current_state_only",
+  "authorization_basis": "User 2026-09-06 explicitly requested verification and conditional V7 replacement plus EA/dashboard start. Economics pass; fresh V8 stopped-flat boundary recorded. Actual new entries still require new-identity create/recovery and existing tick/synchronization/0-to-1 gates.",
+  "final_handshake_status": "pending_entries_disabled_create_recovery_and_actual_market_ticks",
+  "account_cache_in_git": false,
+  "runtime_state_in_git": false
+}

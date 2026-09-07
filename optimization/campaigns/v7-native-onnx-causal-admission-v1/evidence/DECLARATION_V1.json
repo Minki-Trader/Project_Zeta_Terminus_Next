@@ -1,0 +1,105 @@
+{
+  "utc": "2026-09-07T09:17:24.112067+00:00",
+  "status": "PROSPECTIVE_BEFORE_OWN_SOURCE_RUNTIME_DATA_OR_MODEL",
+  "campaign": "optimization/campaigns/v7-native-onnx-causal-admission-v1",
+  "primary_program": 7,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": [
+    "EXACT_CONTROL",
+    "STATIC_CAUSAL_ADMISSION",
+    "ONLINE_EXPLORATORY_CAUSAL_ADMISSION"
+  ],
+  "question": "Does allowing an original market-entry intention causally improve whole-account future stressed equity, after native risk, existing holdings, fees, price paths and future strategy interactions? This is native interventional learning, not accepted-trade outcome prediction.",
+  "source_topology": {
+    "physical_copy": "Copy the21-file frozen Optimization V7R parent once into own campaign. Separate own exact-control and learner identities/paths; both compile only within own Include root. No Live/Lab/closed campaign EA, model, state or output execution/import.",
+    "runtime": "Own physical optimization/runtime/v7-native-onnx-causal-admission-v1-portable. Attributed neutral terminal/editor/tester/platform/history files may be copied from a stopped isolated prior Portable, excluding all old project sources/binaries/state/Files/logs/output. No shared Include, DLL/model/state/Portable links.",
+    "live": "No Live source/settings/process/state/log/account/order action. Existing authorized PID28324 remains untouched; no broker context queries."
+  },
+  "intervention": {
+    "scope": "Five original market engines only, at their original passed-signal OpenComponent call before risk/order construction. All original feature definitions, dates, directions, market order price, initial risk/stop, planned reservation, position ownership, closures, RC4 ARC and daily sizing stay unchanged. Original Passive always follows its exact law.",
+    "allow": "A=1 invokes the unchanged original market entry path, which may still be refused by ordinary native risk/price/protection checks. A=0 consumes that original signal as an explicit model abstention; no retry, later timing, size change or alternative symbol. This estimates intention-to-treat including ordinary admission refusal.",
+    "sequence": "One original scheduled signal produces one treatment record. Preserve original engine processing order. Capture pre-treatment context/stressed equity after ordinary account/reconciliation/closure work and before this intervention. Finish decision journal normally on abstention. No duplicate opportunity, delayed trade or synthetic fill.",
+    "research_identity": "Tester-only new Portfolio/Magic/schema/state/learning namespace. Every episode/run has an explicit own output/state namespace. Treatment/forecast/pending/RNG/posterior persistence is required before treatment can be applied."
+  },
+  "training": {
+    "period": "Eight fixed full2024 native economic trajectories, each100USD1:100 and continuous capital for the whole year. Only episode boundaries reset capital and own state; these are training trajectories, not eight investment claims.",
+    "seeds": [
+      2026090701,
+      2026090702,
+      2026090703,
+      2026090704,
+      2026090705,
+      2026090706,
+      2026090707,
+      2026090708
+    ],
+    "propensity": 0.5,
+    "rng": "Own unsigned32 xorshift32 stream. For each original passed market intention draw once; A=1 iff uniform uint32/4294967296 < .5. Each seed is fixed before outcomes; no seed/pass/path ranking, censoring of losses or replacement of a low-profit trajectory.",
+    "coverage": "Retain every treatment/admission/refusal/full trade/equity outcome and all pending labels. Fit only complete labels available strictly before2025Jan1. Late2024 pending labels are explicitly excluded, not filled using2025 prices. Require at least512 complete intervention labels and at least32 observations of each treatment in every one of the five engines; otherwise readiness nonconfirmation without widening.",
+    "control": "One adjacent unchanged exact2024 control anchors the common native contract before the eight training trajectories. Randomized training economics are input evidence only; no campaign success can be claimed from a favorable seed or average."
+  },
+  "reward": {
+    "horizon_seconds": 86400,
+    "definition": "Y=(stressed marked whole-account equity at first eligible native observation at/afterD+86400 minus pre-treatment stressed equity)/pre-treatment ConservativeRiskCapital. Actual fills/costs and other strategies affect the account normally. No trade-PNL scaling, reward clipping, invented cash injection or optimistic intrabar ordering.",
+    "stress": "Model reward mark = original stressed realized balance minus positive exit-deal swap credits already realized, plus sum over currently owned positions of native POSITION_PROFIT + min(0,POSITION_SWAP) + remaining recorded entry transaction cost, minus extra max(entry,current spread)*contract*remaining volume, remaining entry adverse slippage, max(0,-remaining entry transaction cost), and max(0,-current POSITION_SWAP). Pending unfilled orders contribute reserved risk but no invented equity/fee. Thus current observed negative financing and entry nonspread costs are doubled, positive swap credit is excluded, and unknown future exit fees are not invented. Original actual/stressed trading ledgers remain unchanged; the new mark is a separately attributable learning and conservative outcome series. Read current quote only for actually owned symbols. Missing valid current native price delays observation; an unavailable pre-treatment context is a correction, never an abstention policy. Valuation uses the latest actually observed valid symbol quote, without future interpolation or treating it as an executable new order. Preserve maximum owned-symbol quote age per path observation; ordinary new-order freshness rules remain exactly original. Stale-but-observed valuation is not silently replaced by zero.",
+    "availability": "A completed reward record is available only after its terminal observation time. It may update a new decision only if available_time is strictly earlier than that decision time. All due labels with the same observed time precede later labels; deterministic order by original decision time and recordID. Same-tick completion cannot train that tick.",
+    "censoring": "At an economic run end, every remaining future-horizon label is retained pending. It cannot train retrospectively. An unresolved actual owned position, model/persistence/accounting fault or missing required quote is correction, not an economic loss or a silent zero reward."
+  },
+  "context": {
+    "raw_features": [
+      "five original market-component one-hot values",
+      "original direction",
+      "original signal feature",
+      "log(ConservativeRiskCapital/100)",
+      "(actual realized balance-original stressed realized balance)/ConservativeRiskCapital",
+      "current actual floating PNL/ConservativeRiskCapital",
+      "aggregate reserved planned risk/ConservativeRiskCapital",
+      "native free margin/native equity",
+      "number of owned active components/3",
+      "same-symbol same-direction reserved planned risk/ConservativeRiskCapital",
+      "same-symbol opposite-direction reserved planned risk/ConservativeRiskCapital",
+      "server hour/24"
+    ],
+    "width": 16,
+    "causality": "Only existing causal EA state/native current account and original signal values available before treatment. No rejected-row zero sentinel as a real signal, eventual fill result, future label or future account state.",
+    "normalization": "After all eight fixed training trajectories are complete, compute each raw feature mean/std over their complete fit-label contexts only. Standard deviation below1e-12 becomes1; no clipping. Freeze for all2025/2026 roles. Add one intercept for17 columns."
+  },
+  "model": {
+    "baseline": "Fit b(X)=X beta to all complete2024 Y by one ridge solve, penalty10*I17 including intercept. No cross-validation, search or favorable episode selection.",
+    "causal_target": "For every training context use Z=(A-p)*(Y-b(X))/(p*(1-p)), p=.5. Fit tau(X)=X theta by ridge100*I17. Preserve all rows and both full matrices/sums. Because treatment was randomized with recorded propensity, this targets a whole-account intention-to-treat effect under the training behavior policy; it does not assume deterministic policy outcomes are identical.",
+    "onnx": "Fresh float32 MatMul: normalized context FLOAT[1,17], own coefficient matrix FLOAT[17,2], output [baseline_Y,causal_effect] FLOAT[1,2]; IR8/opset17. Every economic policy decision consumes actual ONNX output. Raw numerical state remains float64 for fitting/updating, exported through float32 ONNX coefficients.",
+    "static": "Freeze beta/theta from the complete2024 fit. Allow iff ONNX causal_effect>0, otherwise abstain. No online fit updates, exploration, fallback or score threshold search.",
+    "online": "Start from the same fit, tau covariance inverse(XtX+100I), frozen beta/normalization, empty2025 pending labels and own xorshift seed2026090709. Choose p=.9 if ONNX effect>0 else .1; draw once and apply A with that recorded propensity. Deliberate exploration costs remain part of full native results; never present this role as greedy.",
+    "online_update": "For every strictly mature complete intervention label use its saved pre-treatment context, p, A and frozen-baseline ONNX prediction. Z=(A-p)*(Y-b_saved)/(p*(1-p)). Recursive least squares with forgetting1: k=P x/(1+xT P x), theta+=k*(Z-xT theta), P-=k*xT*P. Fixed beta and normalization never reset or update. No adaptive exploration, clipping, dropped adverse rewards or switch to observational accepted-trade labels.",
+    "fault": "Nonfinite inputs/output/state, ONNX errors, negative/invalid causal covariance, missing/duplicate persisted records, or incomplete economic accounting require correction without an arbitrary retry cap. No abstain-on-error fallback that could appear profitable.",
+    "persistence": "A unique episode tag owns all core/research/learner files. A preexisting learner checkpoint or output rejects a fresh tester startup instead of deleting or adopting a foreign/incomplete episode. Record treatment, pending context, RNG and posterior before action; ordinary interrupted runs are preserved and require a fresh complete run with a new correction tag. No test-only restart harness."
+  },
+  "selection": {
+    "period": "Full2025 exact-control then STATIC then ONLINE native matrix, same frozen source/fit/models/settings and exercised inputs. No2026 candidate values before complete selection and one finalist freeze.",
+    "gates": "Each learned role must improve actual terminal wealth/log growth and recovery; stressed profit>=1.05*adjacent control; native equity DD nominal<=control, effective min(controlDD+1.5pp,controlDD*1.10) only with better growth/recovery/temporal evidence; positive actual/stressed2025 halves; at least100 closed total lifecycles and25 each half; at least20 actual model abstentions/5 each half; complete zero-fault/flat operating and label records. No propensity/model accuracy gate can waive economic gates.",
+    "ranking": "Select at most one eligible role by highest stressed terminal wealth, then lower native equity DD, then STATIC exact tie. No second role after confirmation.",
+    "confirmation": "One fresh adjacent exact-control/selected candidate full2025Jan1..2026Sep1 exclusive, unchanged selected policy and original2024 fit. ONLINE restarts its same initial fit/RNG and repeats chronological learning from2025; no final2025 state warm start. Require actual/stressed wealth/log growth/recovery improvement, stressed profit>=5%, same DD rules, positive actual/stress in2025H1/H2/2026H1/JulAug, full closed lifecycles>=100 and latest>=10; all input/platform/contracts/model/source binding and zero-fault evidence complete.",
+    "closure": "Close the entire control/static/online causal-admission bundle without adjacent treatment fraction, propensity, exploration, seed, episode count, reward horizon, feature, label, baseline/causal penalty, model, online update, engine subgroup, size, clock or activity/DD gate rescue. Training data and coefficients never become an automatically retained seed.",
+    "conservative_profit": "All stressed monetary improvement gates also require terminal original stressed wealth minus realized positive swap credits to satisfy the same threshold against its own control counterpart. Report both series and their actual native costs; no positive-financing windfall can create a pass."
+  },
+  "native_contract": {
+    "settings": "100USD,1:100,US30M30assembly,Model4/allthreeoriginal symbols100%real ticks/localonly/normal shutdown, own physical Portable.",
+    "binding": "Freeze source/EX5/SET/ONNX/platform/build/symbolDB/contracts and swaps. Bind full actually used M1 warmup and period snapshots plus exercised monthly ticks before, between and after each complete native matrix. Current unused containers diagnostic only with full used-data proof. Any exercised input/contract drift invalidates the complete matrix; preserve exclusions and correct/repeat prospectively.",
+    "economic_evidence": "Complete terminal reports, actual/stressed wealth and path, native equity DD, geometric growth, recovery, half/year/latest ledgers, actual lot/risk transitions, treatment/admission propensity, own model/RNG/posterior/pending states. Raw observational logs and training account values cannot claim compounding improvement."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "initial_source_model_mib": 128,
+    "runtime_gib": 6,
+    "total_training_selection_confirmation_output_gib": 2,
+    "detail": "Bound ordinary decision/label/state logs at source; retain every economic and learning record, avoid tick-by-tick duplicate telemetry. At current~42GiB, worst planned8GiB remains above30GiB. Stop starting producing steps if future capacity becomes uncertain; preserve all canonical evidence."
+  },
+  "constraints": [
+    "One root judgment stream; helpers factual only",
+    "No tests/checkers/test-only CLI or infrastructure",
+    "No external economic input",
+    "No Live changes/promotion",
+    "No closed-family source/model/state reuse or unauthorized reopening"
+  ]
+}

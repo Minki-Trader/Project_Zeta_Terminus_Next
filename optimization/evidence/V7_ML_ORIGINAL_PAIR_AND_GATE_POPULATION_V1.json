@@ -1,0 +1,129 @@
+{
+  "utc": "2026-09-07T09:09:44.915432+00:00",
+  "status": "BOUNDED_ORIGINAL_SOURCE_POPULATION_FACTS_NO_CANDIDATE_OUTCOMES",
+  "source": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-candidates.csv",
+  "sha256": "E48CF89502D259E94F9245572852315BAE3AB68F70CB87FA71CE9D23462B02BD",
+  "exposure_counts": {
+    "2024": {
+      "all_presignal_exposure_rows": 1935,
+      "inside_clock_and_two_minute_delay": 0,
+      "outside_clock": 1935,
+      "all_signal_unknown": true,
+      "by_component": {
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": {
+          "all": 141,
+          "inside_clock": 0
+        },
+        "ZT-H1-US100-CROSS-IN-14b72317b7": {
+          "all": 578,
+          "inside_clock": 0
+        },
+        "ZT-H1-US30-RETURN-I-c870a788ec": {
+          "all": 191,
+          "inside_clock": 0
+        },
+        "ZT-M30-US30-RANGE-COMP-64efb16616": {
+          "all": 538,
+          "inside_clock": 0
+        },
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": {
+          "all": 487,
+          "inside_clock": 0
+        }
+      }
+    },
+    "2025": {
+      "all_presignal_exposure_rows": 2285,
+      "inside_clock_and_two_minute_delay": 0,
+      "outside_clock": 2285,
+      "all_signal_unknown": true,
+      "by_component": {
+        "ZT-M30-US30-RANGE-COMP-64efb16616": {
+          "all": 705,
+          "inside_clock": 0
+        },
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": {
+          "all": 552,
+          "inside_clock": 0
+        },
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": {
+          "all": 208,
+          "inside_clock": 0
+        },
+        "ZT-H1-US100-CROSS-IN-14b72317b7": {
+          "all": 585,
+          "inside_clock": 0
+        },
+        "ZT-H1-US30-RETURN-I-c870a788ec": {
+          "all": 235,
+          "inside_clock": 0
+        }
+      }
+    },
+    "2026": {
+      "all_presignal_exposure_rows": 1175,
+      "inside_clock_and_two_minute_delay": 0,
+      "outside_clock": 1175,
+      "all_signal_unknown": true,
+      "by_component": {
+        "ZT-M30-US30-RANGE-COMP-61f61deaba": {
+          "all": 272,
+          "inside_clock": 0
+        },
+        "ZT-H1-US100-CROSS-IN-14b72317b7": {
+          "all": 326,
+          "inside_clock": 0
+        },
+        "ZT-M30-US30-RANGE-COMP-64efb16616": {
+          "all": 283,
+          "inside_clock": 0
+        },
+        "ZT-H1-US30-RETURN-I-c870a788ec": {
+          "all": 130,
+          "inside_clock": 0
+        },
+        "ZT-M30-US30-INTRADAY-R-2eb111fc46": {
+          "all": 164,
+          "inside_clock": 0
+        }
+      }
+    }
+  },
+  "clock_intersection_rows": [],
+  "meaning": "Existing-position observation precedes legal entry clock and feature calculation. Raw exposure rows are not signal-positive missed entries. No cash headroom or counterfactual PNL is inferred.",
+  "opposite_us30_metadata": {
+    "definition": "Older peer entry strictly earlier than new original BIRTH and peer CLOSE observer timestamp strictly later; opposite direction, same symbol.",
+    "year2024": {
+      "distinct_new_entries": 20,
+      "pair_incidences": 20,
+      "equal_volume_pairs": 20
+    },
+    "year2025": {
+      "distinct_new_entries": 41,
+      "pair_incidences": 42,
+      "equal_volume_pairs": 42
+    }
+  },
+  "root_feasibility": "Prospective paired-close idea rejected before declaration: only 20 fit-year events cannot support the intended minimum64 learned labels. No window/symbol/period widening or candidate/model/economic run.",
+  "input_metadata": {
+    "us30_rows": 762379,
+    "tick_volume_dtype": "uint64",
+    "spread_zero_rows": 1922,
+    "spread_negative_rows": 0,
+    "OHLC_inconsistency_rows": 0,
+    "contract": 1,
+    "tick_size": 0.01,
+    "volume_min": 0.01,
+    "volume_step": 0.01
+  },
+  "baseline_source_facts": {
+    "common_gate": "Strategies/ZetaStrategyShared.mqh:134-189,228-281",
+    "signal_reset": "Persistence/ZetaStateAndEvents.mqh:56-88",
+    "sentinel": "Observation/ZetaResearchObservation.mqh:483-509",
+    "market_gate_order": "All five market engines return on existing exposure before calculating signal feature or direction."
+  },
+  "helper_scope": "Read-only metadata and baseline source only; no delegated design/economics, all redundant descendants stopped.",
+  "free_bytes": 45011230720,
+  "live_changes": false,
+  "scope_note": "Original2026 gate clock metadata was also counted, as printed and preserved; no candidate2026 prices, signals, trades or economics were opened."
+}
