@@ -2,6 +2,8 @@
 
 이 디렉터리는 동결된 Next 배포 스냅숏과 Next 전용 운영 도구만 소유한다. Live 권한은 오직 `CURRENT_STATE.md`가 결정한다.
 
+직접 사용자 ON 진입점은 루트의 `ZETA_NEXT_V7R_TRADING_ON.cmd`와 `tools/Open-ZetaNextV7RTradingOn.ps1`이다. 명시적인 **실제 자동매매 켜기** 버튼 뒤에만 기존 flat 종료, CURRENT_STATE/번호 상태 기록 커밋·푸시, 변경 없는 detached Master를 호출한다. 취소·창 닫기는 아무 운영 변경도 하지 않는다. 소스·EX5·SET·위험 계약과 기존 검사 구현은 그대로다. Git 충돌이나 기록 변경을 자동 병합하지 않으며, 기동 후 확인 실패는 OFF로 표시하거나 위험을 관리하는 EA를 강제 종료하지 않는다. 이 진입점은 assistant·heartbeat·스케줄러용이 아니다.
+
 현재 `package/active/`는 닫힌 Lab `v7-rlo1-return-requalification-v1/candidate/`에서 한 번 복사한 `NEXT-E03-V7R-RLO1-0bba2ca045fe`다. 원래 V7의 position risk 4%, aggregate cap 12%, 여섯 전략과 Passive 고정 0.01 lot을 유지한다. V8과의 새 장기 비교에서 actual/stressed +$313.36/+$284.138, native relative equity DD 19.5024%로 사전 기준을 통과했다. 최근 7~8월은 +$4.66/+$3.209이며 7월 손실과 V8 대비 약한 최근 수익은 그대로 공개한다.
 
 V8은 신규진입을 막은 상태로 복구해 total positions/orders 0/0, margin/risk 0/0, fault 0을 확인하고 최종 sequence 5340에서 정상 종료했다. 최신 잔액/평가금액은 $100.25/$100.25이며 최종 누적 프로젝트 실현손익 -$0.40만 새 실행본에 이월한다. 원래 V7과 V8의 state, 연구 ledger, 주문 identity는 채택하지 않는다.

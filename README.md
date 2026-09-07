@@ -6,6 +6,8 @@ Exact original V7-RLO1 economics have passed a fresh adjacent comparison with V8
 
 ## Start here
 
+실제 자동매매를 켜려면 [`ZETA_NEXT_V7R_TRADING_ON.cmd`](ZETA_NEXT_V7R_TRADING_ON.cmd)를 직접 실행하고 **실제 자동매매 켜기** 버튼을 누른다. 사용자가 설정 파일이나 Git 명령을 따로 다루지 않도록 기존 정상 종료·기록 저장·새 기동 검사를 연결한다. 버튼을 누르기 전이나 취소하면 운영 상태는 바뀌지 않는다. 현재 ON/OFF와 소유자는 `CURRENT_STATE.md`의 운영 권한 블록을 따른다. 이 실행기는 사용자 직접 조작용이며 assistant나 자동화가 실행하지 않는다.
+
 Read, in order:
 
 1. [`docs/OPERATING_DIRECTION.md`](docs/OPERATING_DIRECTION.md)

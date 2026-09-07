@@ -1,0 +1,53 @@
+{
+  "schema": "zeta-v7r-user-activation-preparation-v1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "prepared_at_utc": "2026-09-07T00:11:17.4394478Z",
+  "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_git": "ddce914dbb9a872d9ced15fe54e225b731a1f55f",
+  "scope": "Direct-user operator front end only; no Lab family, EA/package/settings/risk change",
+  "entrypoints": [
+    {
+      "path": "ZETA_NEXT_V7R_TRADING_ON.cmd",
+      "normalized_lf_utf8_sha256": "A42EEE38306EEB629176CEB77B3B2197F92BA140F36DC94E9A79E6B6411EF00F"
+    },
+    {
+      "path": "live-dev/tools/Open-ZetaNextV7RTradingOn.ps1",
+      "normalized_lf_utf8_sha256": "D75C86B65A8BF179062BE05348114B9B2360F380DEBF774704DDEF45D8DB10D3"
+    }
+  ],
+  "verification": {
+    "method": "PowerShell 7.6.5 native Parser.ParseFile and direct source review; no script execution",
+    "syntax_errors": 0,
+    "git_diff_check": "passed",
+    "user_button_or_live_activation_executed": false,
+    "end_to_end_live_transition_verified": false,
+    "existing_live_package_and_operator_files_modified": false,
+    "broker_api_calls": 0,
+    "new_test_or_checker_infrastructure": false
+  },
+  "local_operating_observation": {
+    "observed_at_utc": "2026-09-07T00:09:32Z",
+    "healthy": true,
+    "terminal_pid": 14492,
+    "dashboard_pid": 29492,
+    "project_terminal_count": 1,
+    "state_sequence": 462,
+    "snapshot_age_seconds": 30,
+    "entries_input": 0,
+    "entries_effective": 0,
+    "terminal_allow_live_trading": 0,
+    "both_windows_responsive": true,
+    "warnings": [],
+    "alerts": [],
+    "free_space_gib": 56.975822
+  },
+  "user_flow": [
+    "User opens root CMD or its desktop shortcut and clicks the explicit real-trading button; cancel/close before that is inert",
+    "Exact committed main/origin, frozen release, private receipt and no concurrent state changes",
+    "Existing unchanged verified-flat stop and empty exclusive terminal boundary",
+    "Only operating state and numbered chunk commit/push after direct user action",
+    "Existing unchanged detached Master performs fresh 0/0, market/ownership/recovery gates and 1/1 handoff",
+    "Fresh healthy 1/1 is required for success; uncertain dispatch is never labelled OFF or forcibly stopped"
+  ],
+  "preserved_work": "App Goal paused; twelve unfinished FRBSF documentary metadata receipts remain local and are neither deleted nor relabelled as closure"
+}
