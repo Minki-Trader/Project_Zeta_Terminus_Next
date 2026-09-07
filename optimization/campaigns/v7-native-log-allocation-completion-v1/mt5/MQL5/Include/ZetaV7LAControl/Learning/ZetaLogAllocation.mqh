@@ -14,6 +14,9 @@ long lac_births = 0, lac_minute_rows = 0, lac_unknown_marks = 0;
 long lac_checkpoint_sequence = 0;
 datetime lac_day = 0;
 long lac_last_minute = -1;
+long lac_deferred_minute = -1, lac_deferred_samples = 0;
+long lac_deferred_minutes = 0, lac_resolved_deferrals = 0;
+int lac_deferral_file = INVALID_HANDLE;
 double lac_shift[5], lac_weights[5];
 datetime lac_bucket_days[];
 double lac_bucket_r[][6];
@@ -163,6 +166,8 @@ void LACCheckpoint()
    string body=StringFormat("LAC_STATE_V1,%s,%d,%I64d,%I64d,%I64d,%I64d,%.17g\n",
                            LAC_MODEL_SHA,LAC_MODE,lac_checkpoint_sequence,
                            (long)lac_day,lac_labels,lac_deals,lac_positive_realized_swap);
+   body+=StringFormat("DEFERRAL,%I64d,%I64d,%I64d,%I64d\n",lac_deferred_minute,
+                      lac_deferred_samples,lac_deferred_minutes,lac_resolved_deferrals);
    for(int i=0;i<5;++i)
       body+=StringFormat("WEIGHT,%d,%.17g,%.17g\n",i,lac_shift[i],lac_weights[i]);
    for(int i=0;i<6;++i)
@@ -224,9 +229,12 @@ bool LACInitialize()
    lac_day_file=FileOpen(lac_root+"\\learning\\days.csv",FILE_WRITE|FILE_CSV|FILE_ANSI,',',CP_UTF8);
    lac_entry_file=FileOpen(lac_root+"\\learning\\entries.csv",FILE_WRITE|FILE_CSV|FILE_ANSI,',',CP_UTF8);
    lac_close_file=FileOpen(lac_root+"\\learning\\closes.csv",FILE_WRITE|FILE_CSV|FILE_ANSI,',',CP_UTF8);
-   if(lac_equity_file==INVALID_HANDLE || lac_day_file==INVALID_HANDLE ||
+   lac_deferral_file=FileOpen(lac_root+"\\learning\\mark-deferrals.csv",FILE_WRITE|FILE_CSV|FILE_ANSI,',',CP_UTF8);
+   if(lac_deferral_file==INVALID_HANDLE || lac_equity_file==INVALID_HANDLE || lac_day_file==INVALID_HANDLE ||
       lac_entry_file==INVALID_HANDLE || lac_close_file==INVALID_HANDLE)
      { LACFault("evidence stream open failed"); return(false); }
+   FileWrite(lac_deferral_file,"event","observed_server","minute","tracked","owned","positions",
+             "pending_reconcile","balance","equity","core_stressed_closed");
    FileWrite(lac_equity_file,"server_time","known","balance","equity","margin","positions",
              "original_stressed_closed","positive_realized_swap","conservative_closed",
              "conservative_mark","capital","day_multiplier","aggregate_reserved",
@@ -358,12 +366,21 @@ void LACSampleEquity(const bool force=false)
    const datetime now=TimeCurrent();
    const long minute=(long)now/60;
    if(!force && minute==lac_last_minute) return;
+   if(lac_deferred_minute>=0 && minute>lac_deferred_minute)
+     {
+      ++lac_unknown_marks;
+      FileWrite(lac_deferral_file,"UNRESOLVED",(long)now,lac_deferred_minute);
+      FileFlush(lac_deferral_file);
+      lac_deferred_minute=-1;
+      LACFault("native mark could not resolve within its original server minute");
+     }
    const double closed=portfolio_state.stressed_balance-lac_positive_realized_swap;
    double mark=closed;
-   bool known=true; int owned=0;
+   bool known=true; int owned=0,tracked=0;
    for(int c=0;c<6;++c)
      {
       if(component_states[c].position_identifier==0) continue;
+      ++tracked;
       ulong ticket=0; datetime opened=0;
       if(CountOwnedPositions(c,ticket,opened)!=1 || !PositionSelectByTicket(ticket) ||
          (ulong)PositionGetInteger(POSITION_IDENTIFIER)!=component_states[c].position_identifier ||
@@ -385,7 +402,33 @@ void LACSampleEquity(const bool force=false)
      }
    if(owned!=PositionsTotal()) known=false;
    if(!MathIsValidNumber(mark)) known=false;
+   if(!known && !force)
+     {
+      ++lac_deferred_samples;
+      if(lac_deferred_minute!=minute)
+        {
+         lac_deferred_minute=minute; ++lac_deferred_minutes;
+         if(FileWrite(lac_deferral_file,"DEFERRED",(long)now,minute,tracked,owned,PositionsTotal(),
+                      (int)execution_state.pending_reconcile,AccountInfoDouble(ACCOUNT_BALANCE),
+                      AccountInfoDouble(ACCOUNT_EQUITY),portfolio_state.stressed_balance)==0)
+            LACFault("deferred mark evidence write failed");
+         FileFlush(lac_deferral_file);
+        }
+      // A broker fill/exit may arrive before its transaction callback. Do not
+      // dispatch trading or invent a mark. Retry the ordinary observer on the
+      // next native tick; an entire missing minute remains correction-required.
+      return;
+     }
    if(!known) ++lac_unknown_marks;
+   else if(lac_deferred_minute==minute)
+     {
+      ++lac_resolved_deferrals;
+      if(FileWrite(lac_deferral_file,"RESOLVED",(long)now,minute,tracked,owned,PositionsTotal(),
+                   (int)execution_state.pending_reconcile,AccountInfoDouble(ACCOUNT_BALANCE),
+                   AccountInfoDouble(ACCOUNT_EQUITY),portfolio_state.stressed_balance)==0)
+         LACFault("resolved mark evidence write failed");
+      FileFlush(lac_deferral_file); lac_deferred_minute=-1;
+     }
    if(FileWrite(lac_equity_file,(long)now,(int)known,AccountInfoDouble(ACCOUNT_BALANCE),
                 AccountInfoDouble(ACCOUNT_EQUITY),AccountInfoDouble(ACCOUNT_MARGIN),PositionsTotal(),
                 portfolio_state.stressed_balance,lac_positive_realized_swap,closed,
@@ -401,14 +444,16 @@ void LACFinish()
   {
    if(!lac_initialized) return;
    LACSampleEquity(true); LACCheckpoint();
-   PrintFormat("V7LAC_RESULT mode=%d faults=%I64d inferences=%I64d day_steps=%I64d label_days=%I64d births=%I64d labels=%I64d deals=%I64d equity_rows=%I64d unknown_marks=%I64d positive_swap=%.12f conservative_closed=%.12f positions=%d",
+   PrintFormat("V7LAC_RESULT mode=%d faults=%I64d inferences=%I64d day_steps=%I64d label_days=%I64d births=%I64d labels=%I64d deals=%I64d equity_rows=%I64d unknown_marks=%I64d positive_swap=%.12f conservative_closed=%.12f positions=%d deferred_samples=%I64d deferred_minutes=%I64d resolved_deferrals=%I64d pending_deferral=%I64d",
                LAC_MODE,lac_faults,lac_inferences,lac_day_steps,lac_label_days,lac_births,lac_labels,
                lac_deals,lac_minute_rows,lac_unknown_marks,lac_positive_realized_swap,
-               portfolio_state.stressed_balance-lac_positive_realized_swap,PositionsTotal());
+               portfolio_state.stressed_balance-lac_positive_realized_swap,PositionsTotal(),
+               lac_deferred_samples,lac_deferred_minutes,lac_resolved_deferrals,lac_deferred_minute);
   }
 
 void LACShutdown()
   {
+   if(lac_deferral_file!=INVALID_HANDLE) { FileFlush(lac_deferral_file); FileClose(lac_deferral_file); lac_deferral_file=INVALID_HANDLE; }
    if(lac_equity_file!=INVALID_HANDLE) { FileFlush(lac_equity_file); FileClose(lac_equity_file); lac_equity_file=INVALID_HANDLE; }
    if(lac_day_file!=INVALID_HANDLE) { FileFlush(lac_day_file); FileClose(lac_day_file); lac_day_file=INVALID_HANDLE; }
    if(lac_entry_file!=INVALID_HANDLE) { FileFlush(lac_entry_file); FileClose(lac_entry_file); lac_entry_file=INVALID_HANDLE; }

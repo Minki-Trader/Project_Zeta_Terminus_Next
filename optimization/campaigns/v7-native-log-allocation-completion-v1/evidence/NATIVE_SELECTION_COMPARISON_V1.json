@@ -1,0 +1,102 @@
+{
+  "utc": "2026-09-07T19:51:25.941514+00:00",
+  "status": "COMPLETE_FIXED_NATIVE_BUNDLE_AWAITING_ROOT_JUDGMENT",
+  "sources": [
+    {
+      "path": "optimization/campaigns/v7-native-log-allocation-completion-v1/evidence/selection-control-static-v4-economics.json",
+      "bytes": 46444,
+      "sha256": "BE323E981F653BCB5083DAEF09FE3A74E79391CB7949B3B8254E715651D31B29"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-log-allocation-completion-v1/evidence/selection-static-v4-economics.json",
+      "bytes": 46320,
+      "sha256": "14C65E4F66883D9F68DDDD8F6C4751D20FED860B4408A5F2AA503F6A3C4C410E"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-log-allocation-completion-v1/evidence/selection-control-online-v4-economics.json",
+      "bytes": 46444,
+      "sha256": "4A1F6DCAB2A8EE728C5C9CECE79ECB49F15332E23725539490D7E099921ECD34"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-log-allocation-completion-v1/evidence/selection-online-v4-economics.json",
+      "bytes": 45983,
+      "sha256": "03FDFD33522798651DDAD14B986AC6A4ED1BEA98BE798F233EA8D55A0399E997"
+    }
+  ],
+  "producer": {
+    "path": "optimization/campaigns/v7-native-log-allocation-completion-v1/python/bundle_report.py",
+    "bytes": 5383,
+    "sha256": "245A598830373C910A489A5CFD3D0A7F977760B9B3228C7139E4912D7CA04B7D"
+  },
+  "order": [
+    "selection-control-static-v4",
+    "selection-static-v4",
+    "selection-control-online-v4",
+    "selection-online-v4"
+  ],
+  "all_four_real_tick_paths_complete": true,
+  "all_contracts_swaps_and_native_tick_coverage_equal": true,
+  "comparisons": [
+    {
+      "control": "selection-control-static-v4",
+      "candidate": "selection-static-v4",
+      "growth_and_temporal_gates": {
+        "actual_terminal_wealth_strictly_higher": false,
+        "actual_log_growth_strictly_higher": false,
+        "conservative_net_at_least_five_percent_higher": false,
+        "conservative_terminal_wealth_strictly_higher": false,
+        "robust_recovery_strictly_higher": false,
+        "each_actual_and_conservative_closed_and_marked_half_positive": true
+      },
+      "native_dd_nominal_pass": false,
+      "native_dd_effective_ceiling_pct": 17.573213874,
+      "native_dd_within_effective_ceiling": false,
+      "all_other_gates_pass": false,
+      "eligible_without_dd_tolerance": false,
+      "requires_explicit_root_dd_judgment": false,
+      "rejected_by_fixed_mathematical_gates": true,
+      "actual_net_improvement_pct": -18.2222588351594,
+      "actual_wealth_improvement_pct": -9.991417859885265,
+      "conservative_net_improvement_pct": -18.798456473254298,
+      "conservative_wealth_improvement_pct": -9.972392810862896,
+      "native_dd_change_percentage_points": 5.792703583999998,
+      "robust_recovery_improvement_pct": -0.914907930084341,
+      "actual_reinvestment_births": 0,
+      "root_dd_tolerance_judgment": null
+    },
+    {
+      "control": "selection-control-online-v4",
+      "candidate": "selection-online-v4",
+      "growth_and_temporal_gates": {
+        "actual_terminal_wealth_strictly_higher": false,
+        "actual_log_growth_strictly_higher": false,
+        "conservative_net_at_least_five_percent_higher": false,
+        "conservative_terminal_wealth_strictly_higher": false,
+        "robust_recovery_strictly_higher": true,
+        "each_actual_and_conservative_closed_and_marked_half_positive": true
+      },
+      "native_dd_nominal_pass": false,
+      "native_dd_effective_ceiling_pct": 17.573213874,
+      "native_dd_within_effective_ceiling": false,
+      "all_other_gates_pass": false,
+      "eligible_without_dd_tolerance": false,
+      "requires_explicit_root_dd_judgment": false,
+      "rejected_by_fixed_mathematical_gates": true,
+      "actual_net_improvement_pct": -14.333964906499707,
+      "actual_wealth_improvement_pct": -7.859433578752418,
+      "conservative_net_improvement_pct": -14.599780507664995,
+      "conservative_wealth_improvement_pct": -7.745037279095824,
+      "native_dd_change_percentage_points": 5.201732841999998,
+      "robust_recovery_improvement_pct": 6.5924736958772545,
+      "actual_reinvestment_births": 0,
+      "root_dd_tolerance_judgment": null
+    }
+  ],
+  "finalist_rule": "At most one fully eligible unchanged role, highest conservative stressed net; exact tie online. Any DD tolerance requires explicit root judgment and every stronger gate. Complete remaining continuous confirmation storage must be funded before an eligible finalist opens that fresh paired path.",
+  "no_mathematical_passers": true,
+  "whole_bundle_closed": false,
+  "selected_finalist": null,
+  "candidate_2026_values_opened": false,
+  "known_selection_limitation": "Prior V7 research has already consumed 2025; it is not a pristine holdout.",
+  "actual_compounding_limit": "Allocation weights can increase lots while the original staircase remains1. Full native quantity/staircase evidence determines reinvestment, never curve shape alone."
+}

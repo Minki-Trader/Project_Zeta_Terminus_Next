@@ -20,10 +20,10 @@ RUNTIME = ROOT / "optimization/runtime/v7-native-log-allocation-completion-v1-po
 RAW = ROOT / "optimization/artifacts/raw/v7-native-log-allocation-completion-v1"
 EVIDENCE = FAMILY / "evidence"
 ROLES = {
-    "selection-control-static-v3": "Control",
-    "selection-static-v3": "Static",
-    "selection-control-online-v3": "Control",
-    "selection-online-v3": "Online",
+    "selection-control-static-v4": "Control",
+    "selection-static-v4": "Static",
+    "selection-control-online-v4": "Control",
+    "selection-online-v4": "Online",
 }
 FLOOR = 30 * 1024**3
 CAPS = {RUNTIME: int(3.5 * 1024**3), RAW: 1024**3, FAMILY: 64 * 1024**2}
@@ -151,7 +151,7 @@ def observe_history(tag):
 
 
 def freeze_selection():
-    target = EVIDENCE / "SELECTION_INPUT_FREEZE_V3.json"
+    target = EVIDENCE / "SELECTION_INPUT_FREEZE_V4.json"
     if target.exists():
         raise RuntimeError("Initial freeze already exists")
     if own_owners():
@@ -236,7 +236,7 @@ def run(tag):
     for previous in order[:order.index(tag)]:
         if not (EVIDENCE / (previous + "-archive.json")).is_file():
             raise RuntimeError("The prospectively fixed serial order must be completed")
-    freeze_file = EVIDENCE / "SELECTION_INPUT_FREEZE_V3.json"
+    freeze_file = EVIDENCE / "SELECTION_INPUT_FREEZE_V4.json"
     freeze = json.loads(freeze_file.read_text())
     changed = frozen_changes(freeze)
     if changed:
