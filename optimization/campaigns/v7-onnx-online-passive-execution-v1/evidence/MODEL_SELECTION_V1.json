@@ -1,0 +1,160 @@
+{
+  "utc": "2026-09-07T03:24:04.742146+00:00",
+  "population": {
+    "2024_session_slots": 4144,
+    "2024_ORIGINAL_NO_SIGNAL": 3443,
+    "2024_AVAILABLE": 589,
+    "2024_COMPLETE_LABEL": 587,
+    "2024_ORIGINAL_LOOKBACK_UNAVAILABLE": 112,
+    "2024_INCOMPLETE_LABEL": 2,
+    "2025_session_slots": 4114,
+    "2025_ORIGINAL_NO_SIGNAL": 3573,
+    "2025_AVAILABLE": 523,
+    "2025_COMPLETE_LABEL": 523,
+    "2025_ORIGINAL_LOOKBACK_UNAVAILABLE": 18
+  },
+  "fit": {
+    "fit_records": 587,
+    "features": [
+      "abs_state",
+      "direction",
+      "range_bps",
+      "bar_range_ratio",
+      "aligned_body",
+      "aligned_four_bar_move",
+      "aligned_location12",
+      "slot"
+    ],
+    "first_forecast_bar": 1704200400,
+    "last_label_end": 1735657200,
+    "raw_target_min": -0.12587412587398591,
+    "raw_target_max": 14.86345381526229,
+    "clipped_fit_targets": 46,
+    "constant_reference": 0.6870011337868573,
+    "steps": 1200,
+    "seed": 20260907,
+    "normalization_mean": [
+      1.4533055188717523,
+      0.07325383304940375,
+      10.262321079429912,
+      1.7415135595667297,
+      -0.702839914100156,
+      -2.066746224985495,
+      -0.7423806125370994,
+      0.5001064735945485
+    ],
+    "normalization_std": [
+      0.48177435264185375,
+      0.9973133288709103,
+      5.341051019333796,
+      2.0063787544041634,
+      1.7611433551743383,
+      2.457123689507789,
+      0.21582065010749565,
+      0.3118391468120997
+    ]
+  },
+  "selection": {
+    "roles": {
+      "static": {
+        "forecasts": 523,
+        "complete_labels": 523,
+        "incomplete_labels": 0,
+        "raw_pinball": 0.5323358052992292,
+        "constant_raw_pinball": 0.47631970367771187,
+        "loss_improvement": -0.11760189886962769,
+        "original_potential_touches": 456,
+        "candidate_potential_touches": 364,
+        "changed_one_tick": 523,
+        "halves": {
+          "H1": {
+            "scored": 254,
+            "loss": 0.5789456423948629,
+            "reference": 0.5189184888157693,
+            "loss_ratio": 1.1156774230883204
+          },
+          "H2": {
+            "scored": 269,
+            "loss": 0.4883250297516791,
+            "reference": 0.4360963154804382,
+            "loss_ratio": 1.1197641723106548
+          }
+        },
+        "gates": {
+          "pinball_improves_2pct": false,
+          "both_halves_within_5pct": false,
+          "potential_touch_supply_75pct": true,
+          "changed_at_least_5pct": true
+        },
+        "qualifies": false
+      },
+      "online": {
+        "forecasts": 523,
+        "complete_labels": 523,
+        "incomplete_labels": 0,
+        "raw_pinball": 0.5311150552756227,
+        "constant_raw_pinball": 0.47631970367771187,
+        "loss_improvement": -0.11503901932846894,
+        "original_potential_touches": 456,
+        "candidate_potential_touches": 373,
+        "changed_one_tick": 523,
+        "halves": {
+          "H1": {
+            "scored": 254,
+            "loss": 0.5693277763803202,
+            "reference": 0.5189184888157693,
+            "loss_ratio": 1.0971429784272875
+          },
+          "H2": {
+            "scored": 269,
+            "loss": 0.4950331550503692,
+            "reference": 0.4360963154804382,
+            "loss_ratio": 1.135146382754923
+          }
+        },
+        "gates": {
+          "pinball_improves_2pct": false,
+          "both_halves_within_5pct": false,
+          "potential_touch_supply_75pct": true,
+          "changed_at_least_5pct": true
+        },
+        "qualifies": false
+      }
+    },
+    "survivor": null,
+    "online_updates": 518,
+    "online_pending_at_last_forecast": 5,
+    "online_final_bias": {
+      "-1": 0.061999999999999986,
+      "1": -0.07599999999999979
+    },
+    "calendar_days_2025": 365,
+    "observed_opportunity_dates": 134,
+    "last_forecast_bar": 1767196800,
+    "scope": "distribution selection and approximate quote touch only; no cash or native DD verdict"
+  },
+  "model": {
+    "path": "optimization/campaigns/v7-onnx-online-passive-execution-v1/models/passive-quantile.onnx",
+    "bytes": 1067,
+    "sha256": "8CE51A3F3C41C82C6D8002252408397DA8FE433A1A973D92544BDFAEEBB77407"
+  },
+  "files": [
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-passive-execution-v1/forecasts.csv",
+      "bytes": 309516,
+      "sha256": "0B05B231CC79F4F51EA2F1416991C10D28EA73B61062E914D783B85F1E0E2AAC"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-passive-execution-v1/online-updates.csv",
+      "bytes": 59205,
+      "sha256": "E6922B276EACFCAE33F6A1DD5C359144577852E72799D26C4E83677EE930E823"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-passive-execution-v1/population.csv",
+      "bytes": 540237,
+      "sha256": "DE88046345963AA7B22898283E898EAFC1A9C459D766152060224B4661CD50C6"
+    }
+  ],
+  "candidate_2026_values_opened": false,
+  "free_bytes": 55436947456
+}

@@ -1,0 +1,93 @@
+{
+  "utc": "2026-09-07T03:28:40.498320+00:00",
+  "status": "CLOSED_DISTRIBUTIONAL_SELECTION_NONCONFIRMATION_NO_SURVIVOR",
+  "campaign": "optimization/campaigns/v7-onnx-online-passive-execution-v1",
+  "fit_records": 587,
+  "selection_forecasts_per_role": 523,
+  "complete_labels_per_role": 523,
+  "roles": {
+    "static": {
+      "forecasts": 523,
+      "complete_labels": 523,
+      "incomplete_labels": 0,
+      "raw_pinball": 0.5323358052992292,
+      "constant_raw_pinball": 0.47631970367771187,
+      "loss_improvement": -0.11760189886962769,
+      "original_potential_touches": 456,
+      "candidate_potential_touches": 364,
+      "changed_one_tick": 523,
+      "halves": {
+        "H1": {
+          "scored": 254,
+          "loss": 0.5789456423948629,
+          "reference": 0.5189184888157693,
+          "loss_ratio": 1.1156774230883204
+        },
+        "H2": {
+          "scored": 269,
+          "loss": 0.4883250297516791,
+          "reference": 0.4360963154804382,
+          "loss_ratio": 1.1197641723106548
+        }
+      },
+      "gates": {
+        "pinball_improves_2pct": false,
+        "both_halves_within_5pct": false,
+        "potential_touch_supply_75pct": true,
+        "changed_at_least_5pct": true
+      },
+      "qualifies": false
+    },
+    "online": {
+      "forecasts": 523,
+      "complete_labels": 523,
+      "incomplete_labels": 0,
+      "raw_pinball": 0.5311150552756227,
+      "constant_raw_pinball": 0.47631970367771187,
+      "loss_improvement": -0.11503901932846894,
+      "original_potential_touches": 456,
+      "candidate_potential_touches": 373,
+      "changed_one_tick": 523,
+      "halves": {
+        "H1": {
+          "scored": 254,
+          "loss": 0.5693277763803202,
+          "reference": 0.5189184888157693,
+          "loss_ratio": 1.0971429784272875
+        },
+        "H2": {
+          "scored": 269,
+          "loss": 0.4950331550503692,
+          "reference": 0.4360963154804382,
+          "loss_ratio": 1.135146382754923
+        }
+      },
+      "gates": {
+        "pinball_improves_2pct": false,
+        "both_halves_within_5pct": false,
+        "potential_touch_supply_75pct": true,
+        "changed_at_least_5pct": true
+      },
+      "qualifies": false
+    }
+  },
+  "online_updates_before_last_forecast": 518,
+  "labels_pending_at_last_forecast": 5,
+  "pending_scope": "Five final-window labels are scored in complete selection but mature after the last eligible forecast; no later forecast can benefit from them. No native or2026 continuation state is adopted.",
+  "model": {
+    "path": "optimization/campaigns/v7-onnx-online-passive-execution-v1/models/passive-quantile.onnx",
+    "bytes": 1067,
+    "sha256": "8CE51A3F3C41C82C6D8002252408397DA8FE433A1A973D92544BDFAEEBB77407"
+  },
+  "source_and_parameters_unchanged": true,
+  "selected_survivor": null,
+  "candidate_2026_values_opened": false,
+  "candidate_ea_or_native_execution": false,
+  "economic_verdict": null,
+  "reason": "Both role raw pinball losses worsen by about11.5-11.8% versus the train-only constant and both halves fail the5% deterioration limit. Potential touch supply alone cannot rescue predictive selection.",
+  "freeze": "Preserve every declared role, source,input,model,forecast,update,population and result. No adjacent quantile,window,model,clamp,bias or threshold rescue.",
+  "result_sha256": "C19412872A65D493A0D8CFEA9278E25DC7BADFD53E0C9FF1908E6F91CDE1A68B",
+  "free_bytes": 55404605440,
+  "live_changes": false,
+  "continuation": "Broader V7 development remains active; whole-mechanism comparison precedes one next campaign."
+}
