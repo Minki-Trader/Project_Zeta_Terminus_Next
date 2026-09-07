@@ -1,0 +1,199 @@
+{
+  "status": "COMPLETE_FROZEN_VOLATILITY_RATCHET_SELECTION",
+  "model": {
+    "fit_rows": 46320,
+    "forecasts_per_role": 70080,
+    "updates": 45968,
+    "pending": 8,
+    "calibration": {
+      "static": {
+        "complete": 45976,
+        "coverage": 0.8950756916652166,
+        "pinball": 0.1487965638932769
+      },
+      "online": {
+        "complete": 45976,
+        "coverage": 0.8999912998085958,
+        "pinball": 0.1509603874644708
+      }
+    },
+    "model": {
+      "path": "optimization/campaigns/v7-onnx-online-volatility-ratchet-v1/models/volatility-ratchet.onnx",
+      "bytes": 353,
+      "sha256": "84E8EB68B81059286DC5F3C3328693CFD52C9F4BA6DE178D01C0C0519AB624C8"
+    }
+  },
+  "control": {
+    "trades": 557,
+    "actual": 127.89,
+    "stress": 118.6090000000017,
+    "closed_stressed_cash_dd_pct": 15.92400000000005,
+    "halves": {
+      "H1": {
+        "trades": 290,
+        "actual": 61.76,
+        "stress": 56.77149999999951,
+        "earlier_exits": 0
+      },
+      "H2": {
+        "trades": 267,
+        "actual": 66.13000000000001,
+        "stress": 61.83750000000219,
+        "earlier_exits": 0
+      }
+    },
+    "earlier_exits": 0
+  },
+  "roles": {
+    "static": {
+      "trades": 557,
+      "actual": 132.60070000000036,
+      "stress": 123.31870000000163,
+      "closed_stressed_cash_dd_pct": 13.216105224066174,
+      "halves": {
+        "H1": {
+          "trades": 290,
+          "actual": 81.3681000000003,
+          "stress": 76.37859999999955,
+          "earlier_exits": 65
+        },
+        "H2": {
+          "trades": 267,
+          "actual": 51.23260000000006,
+          "stress": 46.94010000000207,
+          "earlier_exits": 49
+        }
+      },
+      "earlier_exits": 114,
+      "decisions": {
+        "NOT_PROFIT_PROTECTING": 2880,
+        "INSTALLED": 602,
+        "NOT_TIGHTER": 83,
+        "MISSING_FORECAST": 1,
+        "NO_QUOTE_CLEARANCE": 10
+      },
+      "gates": {
+        "all_original_lifecycles": true,
+        "minimum_activity": true,
+        "both_profits_improve": true,
+        "both_halves_positive": true,
+        "closed_cash_dd": true
+      },
+      "qualifies": true
+    },
+    "online": {
+      "trades": 557,
+      "actual": 130.0105000000002,
+      "stress": 120.72850000000142,
+      "closed_stressed_cash_dd_pct": 12.552866081796541,
+      "halves": {
+        "H1": {
+          "trades": 290,
+          "actual": 81.88029999999992,
+          "stress": 76.8907999999991,
+          "earlier_exits": 67
+        },
+        "H2": {
+          "trades": 267,
+          "actual": 48.1302000000003,
+          "stress": 43.83770000000231,
+          "earlier_exits": 55
+        }
+      },
+      "earlier_exits": 122,
+      "decisions": {
+        "NOT_PROFIT_PROTECTING": 2856,
+        "INSTALLED": 604,
+        "NOT_TIGHTER": 73,
+        "MISSING_FORECAST": 1,
+        "NO_QUOTE_CLEARANCE": 20
+      },
+      "gates": {
+        "all_original_lifecycles": true,
+        "minimum_activity": true,
+        "both_profits_improve": true,
+        "both_halves_positive": true,
+        "closed_cash_dd": true
+      },
+      "qualifies": true
+    }
+  },
+  "market_status_counts": {
+    "2024": {
+      "MISSING_COMPLETED_PREFIX": 22914,
+      "COMPLETE": 46324,
+      "MISSING_LABEL": 1034
+    },
+    "2025": {
+      "MISSING_LABEL": 1038,
+      "MISSING_COMPLETED_PREFIX": 23066,
+      "COMPLETE": 45976
+    }
+  },
+  "selected_survivor": "static",
+  "native_economic_verdict": null,
+  "candidate_2026_values_opened": false,
+  "artifacts": [
+    {
+      "path": "optimization/campaigns/v7-onnx-online-volatility-ratchet-v1/ratchet_model.py",
+      "bytes": 21757,
+      "sha256": "BBBBBE136ECB163EB94AA4B87494CCF15BA558AC2BEE79FFD8D04AA0D2FC7CC3"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-volatility-ratchet-v1/models/final-online-state.json",
+      "bytes": 403,
+      "sha256": "B3299FDB384DAFB4C39281F25EEDAFFFAEF20853E87211CBF7390DFE8597B019"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-volatility-ratchet-v1/models/initial-state.json",
+      "bytes": 867,
+      "sha256": "F3B9954FC10789FC5977414E5CAF83EAA186BBCCEFC880638C0120DD6D76B25A"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-volatility-ratchet-v1/models/volatility-ratchet.onnx",
+      "bytes": 353,
+      "sha256": "84E8EB68B81059286DC5F3C3328693CFD52C9F4BA6DE178D01C0C0519AB624C8"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/calendar-2025.csv",
+      "bytes": 5132,
+      "sha256": "7D2ADE59E95B849C7B21883BCFD6FE5EABDBC123EC732B44D49D58EAF1A9E834"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/forecasts.csv",
+      "bytes": 14636358,
+      "sha256": "F14DE3EE03E1A560CAD24F6B7620B39747E955A739E20940ADD84B3271DC30E5"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/market-population.csv",
+      "bytes": 29086620,
+      "sha256": "F5FF7BDC3BBF10F0522E98171F7B790A1CF9EE72901CDF4522E72D93BDC43CF1"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/online-lifecycles.csv",
+      "bytes": 137901,
+      "sha256": "8F29D97326D18CC3895BCD87B961F70F272B38555F7C3D9303B7D138C77563C3"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/online-ratchets.csv",
+      "bytes": 275880,
+      "sha256": "06FF430EC450936C14E1A5D639CC9BA07E69CD78AFCF5EB8DB6F9D8F8D0968ED"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/online-updates.csv",
+      "bytes": 15274138,
+      "sha256": "5F99DE06FC57469D5BC74A4DB7E154BF57DE5BBB05F32719A23605F3D2B00C93"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/static-lifecycles.csv",
+      "bytes": 137690,
+      "sha256": "8EBF6836A7FF06B3F512A39D306DA63CB482C07B130F138712816D84C85870DF"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/selection/static-ratchets.csv",
+      "bytes": 277321,
+      "sha256": "E363ED869E87BF43415ED86436818B619FC5630E64AF5D5E638FD27F1098A437"
+    }
+  ],
+  "free_bytes": 52378505216
+}

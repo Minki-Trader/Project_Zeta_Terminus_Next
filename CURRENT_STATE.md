@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0618`
+- Latest state ID: `STATE-0620`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Eight bundles are closed without an economic survivor; native learning operation retained exact V7 economics. Sole active campaign is optimization/campaigns/v7-onnx-online-volatility-ratchet-v1, Program4: a fresh q0.90nextM30adverse-excursion model drives monotone profit-protecting SLratchets across all original positions, preserving entries/initialrisk/quantity/mandatorymanagement. It is distinct from the closed one-time expected-continuation early-close rule. Static/online bundle,complete2025fixed-volume selection and conditional2025-August2026nativeauthority are frozen before outcomes. OriginalM1/2024-25lifecycle inputs were timestamp-cut into own physical copies; source/normalPythoncompilation hashes are frozen. No candidateoutcome/2026value/EA/runtime/native yet. Source facts require a ticket-bound durable profitSL branch and retained originaladmissionrisk/RC4shadowsemantics if implementation qualifies. All own data/native processes remain stopped. About48.7GiBfree; exact baseline and every Live authority/file/process unchanged.
+Current user task: continue V7 ONNX/online development until user pause, seek compound growth with comparable DD, preserve allLiveand30GiBfree. Sole Program4volatility-ratchet campaign has oneSTATICsurvivor, selected from the complete557trade fixed-volume2025bundle; no native economics yet. Own tester-onlycontrol/candidateEA now implement independentidentities and compile0errors/0warnings on6182. Candidate installs only a durably journalled monotone profitSLwithoriginaladmissionriskreserved and originalARCshadowpreserved; originalARCcannotloosen the currentstop. OwnneutralphysicalPortablecontainsrequiredhistoricalcachesincluding2026onlyafterSURVIVOR_FREEZE. Source/model/EX5/settings/compile/inputruntimebindingfreeze is complete before one adjacent2025-01-01..2026-09-01nativepair. Independentminuteequityextrema/wealth/lot traces observebothroles; fullnativeDDremainsTesterStatisticsauthority. No ownterminalrunning; next runexactcontrolthenunchangedsurvivor underidenticalfingerprints. About46.4GiBfree. Liveauthority/files/processes and exactbaseline remain unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
