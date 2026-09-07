@@ -1,0 +1,150 @@
+{
+  "time_utc": "2026-09-07T01:53:45.756423+00:00",
+  "control": {
+    "count": 557,
+    "actual": 127.89,
+    "stress": 118.6090000000017,
+    "early": 0,
+    "closed_balance_dd_pct": 15.519999999999982,
+    "halves": {
+      "first": {
+        "count": 290,
+        "actual": 61.76,
+        "stress": 56.77149999999951,
+        "early": 0
+      },
+      "second": {
+        "count": 267,
+        "actual": 66.13000000000001,
+        "stress": 61.83750000000219,
+        "early": 0
+      }
+    },
+    "component_counts": {
+      "0": 79,
+      "3": 32,
+      "1": 68,
+      "2": 196,
+      "5": 129,
+      "4": 53
+    }
+  },
+  "roles": {
+    "ONNX_CONTINUATION_EXIT": {
+      "metrics": {
+        "count": 557,
+        "actual": 127.89,
+        "stress": 118.6090000000017,
+        "early": 0,
+        "closed_balance_dd_pct": 15.519999999999982,
+        "halves": {
+          "first": {
+            "count": 290,
+            "actual": 61.76,
+            "stress": 56.77149999999951,
+            "early": 0
+          },
+          "second": {
+            "count": 267,
+            "actual": 66.13000000000001,
+            "stress": 61.83750000000219,
+            "early": 0
+          }
+        },
+        "component_counts": {
+          "0": 79,
+          "3": 32,
+          "1": 68,
+          "2": 196,
+          "5": 129,
+          "4": 53
+        }
+      },
+      "gates": {
+        "actual_improves": false,
+        "stress_improves": false,
+        "both_halves_positive": true,
+        "early_close_supply": false,
+        "closed_dd_tolerance": true,
+        "all_source_trades_preserved": true
+      },
+      "eligible": false
+    },
+    "ONNX_ONLINE_CONTINUATION_EXIT": {
+      "metrics": {
+        "count": 557,
+        "actual": 124.91879999999998,
+        "stress": 115.62940000000164,
+        "early": 2,
+        "closed_balance_dd_pct": 15.519999999999982,
+        "halves": {
+          "first": {
+            "count": 290,
+            "actual": 58.78879999999997,
+            "stress": 53.79189999999946,
+            "early": 2
+          },
+          "second": {
+            "count": 267,
+            "actual": 66.13000000000001,
+            "stress": 61.83750000000219,
+            "early": 0
+          }
+        },
+        "component_counts": {
+          "0": 79,
+          "3": 32,
+          "1": 68,
+          "2": 196,
+          "5": 129,
+          "4": 53
+        }
+      },
+      "gates": {
+        "actual_improves": false,
+        "stress_improves": false,
+        "both_halves_positive": true,
+        "early_close_supply": false,
+        "closed_dd_tolerance": true,
+        "all_source_trades_preserved": true
+      },
+      "eligible": false
+    }
+  },
+  "selected_role": null,
+  "state_counts": {
+    "READY": 479,
+    "ORIGINAL_ALREADY_CLOSED": 76,
+    "MISSING_COMPLETED_PREFIX": 2
+  },
+  "forecasts": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-continuation-exit-v1/development/forecasts.csv",
+    "bytes": 43528,
+    "sha256": "8EB196D52930A58E26EAA2AFBA0C7452FF62B56F5B737D4A39E874EB908F176F"
+  },
+  "role_tapes": [
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-continuation-exit-v1/development/ONNX_CONTINUATION_EXIT.json",
+      "bytes": 100192,
+      "sha256": "8FD0B16A8970B692537F905B4D4F5BE1BEFD1BB45CF19584D9CEEF4EB87251BA"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-continuation-exit-v1/development/ONNX_ONLINE_CONTINUATION_EXIT.json",
+      "bytes": 100210,
+      "sha256": "83ADB228F7AD4F575D38873DC086FD84D7BBE1B033A3F9330079C3240CE5734E"
+    }
+  ],
+  "source": {
+    "path": "optimization/campaigns/v7-onnx-online-continuation-exit-v1/continuation_pipeline.py",
+    "bytes": 20343,
+    "sha256": "BC0386A7BBA1F86F272D6319786C0A3BF14C152448F3186AB687C28822212904"
+  },
+  "model": {
+    "path": "optimization/campaigns/v7-onnx-online-continuation-exit-v1/models/continuation.onnx",
+    "bytes": 1591,
+    "sha256": "347710BEE6F2D6DD85B4223C8BE814D6CEBD2810462E87150ED414EE4CC5A769"
+  },
+  "limits": "Fixed original volume/occupancy. Representative M1 opening spread, conservative retained costs; no freed-capacity credit, altered native trajectory, compound-growth or native equity-DD claim.",
+  "candidate_2026_values_opened": false,
+  "free_gib": 56.67299270629883
+}

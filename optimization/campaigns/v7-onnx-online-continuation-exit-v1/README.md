@@ -1,5 +1,7 @@
 # V7 learned continuation exit
 
+Closed without an offline survivor. `REPORT.md` and `evidence/CLOSURE_V1.json` own the complete result; no 2026 or native path opened. The source and numeric contract are now frozen.
+
 One serial Optimization question: at half of an original V7 component's maximum holding time, can completed internal price observations identify when an early close is preferable? Keep V7 entries, sizing, risk, original protection and other exits unchanged. First freeze and evaluate a static ONNX continuation model and the same model with causal online correction as one bundle.
 
 Online labels are fixed future price observations available even after an early close. They are not invented HOLD profits or an early-close cash outcome relabelled as counterfactual continuation. The preceding entry-risk bundle remains closed and supplies no model, source, tuning seed or parameters selected from its outcomes.
