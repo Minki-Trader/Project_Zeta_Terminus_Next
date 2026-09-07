@@ -17,7 +17,7 @@ Read, in order:
 
 ## Working surfaces
 
-Current development improves existing V7 with ONNX and online learning. The user approved the exact pending native log-allocation completion: a fresh original V7 copy, the unchanged authorized ONNX graph, and full 2025 control/static/control/online real-tick economics. Online updates use only own completed earlier-day labels. All selection and conditional confirmation require 100% real ticks, stronger compound growth and recovery, and the original DD limits. CURRENT_STATE names the sole active serial step. Preserve all Live-Dev files, retain at least 30 GiB free and continue until user pause. The independent V8 Challenge remains paused; trading authority remains solely in CURRENT_STATE.
+Current development improves existing V7 with ONNX and online learning. The user approved the concrete winner-child native completion: fresh original V7 source, the exact authorized ONNX graph and 2024 initial state, and full 2025 control/unfiltered/control/static/control/online real-tick economics. Online updates use only strictly mature own native shadow-child labels. All selection and conditional confirmation require 100% real ticks, stronger compound growth and recovery, and the original DD limits. CURRENT_STATE names the sole active serial step. Preserve all Live-Dev files, retain at least 30 GiB free and continue until user pause. The independent V8 Challenge remains paused; trading authority remains solely in CURRENT_STATE.
 
 - `live-dev/`: frozen release packages and Next-only operator tooling. It never imports Lab code.
 - `optimization/`: independent Live-derived parameter/economic optimization campaigns with their own source identity, Portable and evidence. It never uses the Master terminal.

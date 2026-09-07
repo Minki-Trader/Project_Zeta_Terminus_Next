@@ -147,3 +147,5 @@ B75 `RC16 Explicit Frozen-Life HOLD Confirmation` resumed after migration and is
 
 
 2026-09-08 STATE-0675: Family19 corrected native v3 control is valid100% real ticks,554 closes and exact original V7 economics121.39/112.988/DD16.073213874%. All source/history/contracts remain bound. The sole static ONNX candidate is running; complete the four-role fixed v3 bundle before judgment. Original array/history corrections are preserved, with no99%waiver or Live authority change.
+
+2026-09-08 STATE-0681: The latest `ㄱ` explicitly approves the concrete separately scoped winner-child native completion proposal, superseding earlier pending/unapproved status only for Family20. Exact authority is `optimization/evidence/V7_WINNER_CHILD_NATIVE_USER_AUTHORIZATION_V1.json`. Four fresh roles derive from originalV7; only the two approved frozen graph/2024initialstate files may be copied. Root runs all six full2025 native paths with unchanged economic/count/100%-history gates, then conditional one-finalist confirmation if eligible and fully funded. Keep all old failures and all Live-Dev untouched; no repeat permission request.
