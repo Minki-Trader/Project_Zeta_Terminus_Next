@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0626`
+- Latest state ID: `STATE-0628`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue serial V7 ONNX/online development until user pause; seek compound growth with comparable DD and preserve Live and 30 GiB free. Activity-clock Program 1 bundle is CLOSED_COMPLETE_SELECTION_READINESS_NO_SURVIVOR_NO_NATIVE_ECONOMIC_VERDICT. Both roles completed11905forecasts over258source trading dates/all365calendar dates. Static161starts, quote actual/stress -0.551/-1.965; online2939starts,-74.4936/-109.6356 with11904strictlyprior observation updates and1pending. Online observation fit improves but both payoff halves lose. Fixed-volume quote continuation below zero is not a feasible100USDaccount claim. Full source/input/model/state/forecasts/trade/day/clock evidence is preserved; no candidate2026/nativeEA/runtime was opened. Earlier volatility-ratchet valid native closure remains immutable. Next is whole-program recompare before a materially distinct successor; no adjacent rescue. About43GiBfree; all Live authority/files/processes and baseline unchanged.
+Current user task: continue serial V7 ONNX/online development until user pause; seek compound growth with comparable DD and preserve Live and 30 GiB free. The sole active family is optimization/campaigns/v7-onnx-online-relative-value-book-v1, Program 5: replace Cross+Passive with a joint US100/US500 spread book, preserve four original US30 engines and whole-account caps. STATIC/ONLINE error-correction, causal RLS, eight-step ONNX, equal-notional legs and paired stop/target/deadline are frozen. Own original input contains 732946/732651 M1 rows through 2025 and 1362 original lifecycle rows, about 89 MB. Normal compilation and complete source/declaration/input hash freeze precede the first fit and 2025 selection. No candidate outcome, 2026 input or own runtime yet. Complete stressed quote selection must exceed original two-engine actual 35.38 with positive halves and minimum activity before one native finalist. All older bundles stay closed. About 43 GiB free; Live authority/files/processes and baseline unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

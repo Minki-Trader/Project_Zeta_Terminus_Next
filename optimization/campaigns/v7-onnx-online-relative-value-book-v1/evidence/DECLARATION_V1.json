@@ -1,0 +1,88 @@
+{
+  "utc": "2026-09-07T06:56:44.713846+00:00",
+  "status": "PROSPECTIVE_BEFORE_FEATURES_FIT_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-relative-value-book-v1",
+  "primary_program": 5,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": [
+    "STATIC_ERROR_CORRECTION_BOOK",
+    "ONLINE_RLS_ERROR_CORRECTION_BOOK"
+  ],
+  "reconstruction": "Replace original Cross and Passive with a single two-leg US100/US500 relative-value book. Four original US30 engines remain unchanged. No original Cross parent or Passive pending opportunity survives inside these two candidate slots. Both legs have a new joint identity, admission, entry-frozen target and paired exit.",
+  "sources": {
+    "root": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control",
+    "symbols": [
+      "US100",
+      "US500"
+    ],
+    "sha256": {
+      "US100": "EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B",
+      "US500": "E4E104309434EA8D4965E4AEB737E93806F596173D95D4C606602C28EB5B46D3"
+    },
+    "lifecycle": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+    "lifecycle_sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+    "native_contract": "lab/engineering/v7-rlo1-return-requalification-v1/evidence/NATIVE_ECONOMIC_RESULTS_V1.json",
+    "copy": "Physical own timestamp-only M1 slice2023-12-01 through2026-01-01exclusive and original2024/2025 Cross+Passive BIRTH/CLOSE rows. No candidate2026price fields,closedcandidate source/model/state/parameter or Live/Lab execution."
+  },
+  "clock": {
+    "observation": "At M15 grid D, require all15 M1 timestamps in[D-900,D) for each symbol, finite positive prices and nonnegative spread. S_D=log(last US100 bid close/last US500 bid close). Last completed M1 spread for each leg is known atD. Missing prefix remains an explicit zero-opportunity calendar row, not synthetic fill.",
+    "training_label": "A complete consecutive next M15 observation S_(D+900) is available only atD+900. Model parameter updates consume it only when D+900<new forecast grid. Missing future observation does not erase the earlier forecast.",
+    "calendar": "Every M15 slot in2025 and every365calendar date remain visible. Native source/server numeric epochs stay unshifted; no intended external session or new external economic data.",
+    "benchmark": "Original Cross+Passive2025 actual35.38/stress30.319,325 lifecycles; H1 27.52/25.1275,149;H2 7.86/5.1915,176. These are descriptive source hurdles, not a fixed-quantity counterfactual."
+  },
+  "fit": {
+    "period": "All complete2024 current/next M15 pairs whose next-label availability is strictly before2025-01-01.",
+    "normalization": "Train-only mean and populationSD of current S_D, floor1e-6. z=(S-mean)/SD; no clipping or future normalization.",
+    "error_correction": "Fit z_next=c+phi*z_current using X=[1,z], one ridge solution A=X.TX+diag(1,10); right-hand side=X.Ty+[0,10] (prior c0,phi1). Initial P=inverse(A). No feature, horizon, model, regularization or seed search.",
+    "stationarity": "Model is tradable only for0<phi<1. An estimated non-mean-reverting law is an economic abstention state, not silently clipped or re-fitted. Nonfinite arithmetic is an engineering correction.",
+    "onnx": "Fresh float32 graph with inputs z[1,1],drift[1,1],persistence[1,1]; exactly8 repeated Mul/Add recurrences computes future_z[1,1]. Learned parameters and online state are own files, no old beta/model imported. IR8/opset17.",
+    "forecast": "Model input z and c/phi are float32 casts; prediction=(ONNX eight-step future_z - float32current_z)*frozen SD. Entry equilibrium is frozen_mean+frozenSD*c_float32/(1-phi_float32). Model estimates joint relative-price error correction, not the old common-market return beta."
+  },
+  "online": {
+    "initial": "Same2024 c/phi/P/normalization as STATIC. Empty pending2025queue; no excluded2024late label is adopted.",
+    "update": "At every new M15 grid consume complete pending labels with label_end<grid, oldest first. lambda=.999; k=P*x/(lambda+x.T*P*x); theta=theta+k*(y-x.Ttheta); P=(P-k*(x.TP))/lambda, then symmetrize. No reset, clipping, adaptive forgetting or outcome tuning. Finite positive denominator/diagonal covariance are required normal numerical preconditions.",
+    "market_data_only": "Every market observation drives learning irrespective of book occupancy or trade outcomes. Store original x and one-step prediction; only future observed z becomes the later label. Record next-step error versus random-walk z reference and exact update bounds.",
+    "open_book": "Subsequent parameter changes never alter a live book target, direction, quantity, original stop or deadline."
+  },
+  "book": {
+    "entry": "Evaluate each M15 D with server08:00<=D<20:00 and no existing/closing own book. Require0<phi_float32<1 and abs(eight-step forecast)>2*(max(.01,completed US100 spread)/US100reference close+max(.01,completed US500 spread)/US500reference close). Long US100/short US500 for positive forecast, reverse for negative. At native entry repeat hurdle with max(completed,fresh executable spread) per leg.",
+    "quantity": "US100 anchor uses original market daily-lot staircase times base0.01. US500 volume is nearest legal0.01 step to US100volume*US100entryquote/US500entryquote, with minimum0.01; no return-beta estimate or adjustable hedge fraction. Both contract sizes must equal the anchored unit USD contract. Nearest rounding is floor(units+0.5), with no outcome-dependent rounding choice.",
+    "admission": "Four preserved original US30 engine schedules/directions/quantities/order remain unchanged. Assess the new book after their ordinary entry processing. Reserve two full original4%conservative-capital planned-risk budgets before sending either leg, within original12%aggregate/45%margin caps. No offsetting/net risk credit and no old signal deleted to create room beyond the declared two-engine replacement.",
+    "execution": "Normal synchronous protected market requests within[D,D+120), with separate new leg Magic and one joint book id. Both legs need original fresh quote/session/protection eligibility. Durable paired intent and reserved risk precede leg1. Leg2failure requires completion/closing of partial book before any new action; unresolved implementation faults are correction states, not a trade result or new hedge policy.",
+    "stops": "Each native leg uses original CalculateProtectiveStop: budget4%conservative capital, gross half-budget, original tick/min-stop buffers and full risk reservation. Never net the two risks. On any leg stop/completion, close surviving leg at first legal fresh opportunity before admitting another book. No orphan re-entry.",
+    "normal_exit": "At each M15 observation, close both if spread crosses the entry-frozen equilibrium in the entry direction, or at D_entry+8*900, whichever first. Deadline is two hours, sessionentry before20:00; no hold extension, target adaptation, trailing or profitSL. Paired closing duties also run after broker transactions.",
+    "scope": "This is a low-turnover relative-value portfolio book, not a claim of high-turnover entry supply. Minimum paired activity is fixed in selection/native gates; no later density-driven window/hurdle broadening."
+  },
+  "selection": {
+    "period": "2025only, both halves, all calendar/observed dates. Both roles share original M1 source and ordinary fixed-volume quote path.",
+    "benchmark_gate": "Stressed paired quote net strictly greater than original Cross+Passive actual35.38USD; each half stressed positive; at least50 complete paired starts and at least10 in each half. Both complete legs and all opportunity/learning rows must be retained; no model/input fault.",
+    "quantity_risk": "Fixed US1000.01,US500 nearest notional quantity at entry, unit contracts. Each leg has fixed100USD*4%budget and half-budget gross SL2USD, tick-aligned toward entry so gross risk does not exceed2. No account compounding/admission/margin/financing authority is inferred.",
+    "entry_approximation": "First minute at/afterD with both original M1 opens, within[D,D+120); otherwise explicit unfilled intent. Quote sides use M1 representative spread only as execution cost, never a future feature/hurdle. Genuine missing ticks/minutes remain absent, no interpolation or favorable selection.",
+    "path": "Process the union of both symbols observed M1 rows chronologically. For each leg, opening-gap SL precedes requested/time close, then adverse minute extreme can trigger SL. Long stop=min(bidopen,SL),short=max(askopen,SL). If a leg stops within a minute, surviving leg is requested closed strictly after that minute and fills at its first subsequent observed M1 open; never retroactively at the stopped minute open. Time/mean-cross request at gridD closes each leg at its first observed open at/afterD; completed-bar spread alone can trigger the target. New book requires both prior legs closed. For every stop detected in minute t, including an opening-gap stop, newly requested survivor closure is no earlier than t+60. An independently existing earlier time/target close request remains eligible. Both legs may pessimistically hit their stops inside the same M1 bar. An occupied book at grid D records OCCUPIED_AT_DECISION and does not retain that signal for admission after the old book closes.",
+    "accounting": "Pair actual proxy is sum of executable-side leg quote PNL. Stress subtracts per-leg max(entry,exit representative spread)*actuallegvolume plus adverse stop gap*volume. No positive financing credit or invented commission. Both futures/opportunities remain retained even when a book cannot fill; exact native tick synchronization, fees/financing, shared risk/capital, partial execution and full equity remain conditional.",
+    "report": "Every forecast with stationarity/missing-prefix/hurdle state, every mature/pending label and one-step forecast score, complete two-leg trade/close/cost tapes, all daily/half-year quotePNL and fixed-cashDD. A negative cash series is fixed-volume quote evidence, not a feasible account beyond ruin.",
+    "ranking": "Highest stressed quote net among qualifiers,STATICon exact tie. At most one survivor. No alternate after confirmation and no adjacent pair,ratio,clock,ARprior,forgetting,threshold,session,hold,target,risk,volume or component rescue."
+  },
+  "conditional_native": {
+    "interval": "One unchanged exact V7 control/one selected book candidate over2025-01-01 through2026-09-01exclusive. Jan-Jun2026confirmation andJul-Aug2026latest candidate values unopened before selection freeze.",
+    "isolation": "Own new tester-only source/Magic/schema/state/Include/EX5/ONNX/SET, one physical dedicated Optimization Portable, derived once from exact frozen OptimizationV7R only. No Live/Lab/closedsource/model/state executes; only attributed neutral platform/history copies permitted.",
+    "environment": "100USD,1:100,US30M30assembly,Model4,allthree originalsymbols100%real ticks,localonly,normalshutdown. Full actual2024warmup-through2026AugustM1 snapshots plus exercised monthly tick/platform/symbolDB/contracts/swaps and all source/model/EX5/SET hashes bound before/between/after. Current-year/current-month containers remain recorded diagnostics only with exact exercised data proof.",
+    "gates": "Actual wealth/geometric growth and recovery improve; stressedprofitgain>=5%; nativeequityDDnominal<=adjacent control, effective min(controlDD+1.5pp,controlDD*1.10) only with improved growth/recovery/temporal evidence. Every2025half/2026H1/2026JulAugactualandstresspositive. At least50 complete paired books in full native period and at least5 inJul-Aug2026. No open/unpaired/unresolved legs or evidence faults at completion. Full capital/lot/paired turnover/cost/stop/learning evidence required. No direct Live promotion.",
+    "correction": "Any environment/input/design/engineering fault requires correction and a new complete valid native pair with no arbitrary retry cap; never relabel it economic failure or model tuning authority."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "initial_cap_mib": 384,
+    "conditional_runtime_growth_gib": 6,
+    "native_output_growth_gib": 2
+  },
+  "constraints": [
+    "One root candidate/economic judgment stream",
+    "No external economic input",
+    "No Live changes or broker-context query",
+    "No tests/validators/parity/promotion checkers/testCLIs/CI",
+    "No closed-family model/source/state seed"
+  ],
+  "live_changes": false
+}
