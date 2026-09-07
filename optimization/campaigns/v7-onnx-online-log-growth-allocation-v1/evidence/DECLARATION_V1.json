@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-07",
+  "status": "PROSPECTIVE_BEFORE_JOINT_RETURN_FIT_OR_ALLOCATION_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-log-growth-allocation-v1",
+  "comparison": "optimization/evidence/V7_ML_POST_CONTINUATION_MECHANISM_COMPARE_V1.json",
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "mechanism": "Joint calendar-day expected log growth with bounded component capital weights and optional online exponentiated-gradient learning",
+  "roles": ["EXACT_V7_EQUAL_CONTROL", "ONNX_FROZEN_LOG_ALLOCATION", "ONNX_ONLINE_LOG_ALLOCATION"],
+  "source": {"path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv", "sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B", "authority": "lab/engineering/v7-rlo1-return-requalification-v1/evidence/NATIVE_ECONOMIC_RESULTS_V1.json"},
+  "source_scope": "Physically copied original V7 BIRTH/CLOSE only, native server-day labels. No prior candidate code/model/selected weights or external economic data. Every accepted source trade remains observable; rejected opportunities have no counterfactual label.",
+  "periods": {
+    "fit": "2024 completed labels, close strictly before2025-01-01",
+    "development": "2025 complete original lifecycles, jointly compare both fixed roles",
+    "confirmation": "At most one unchanged development survivor; January-June2026, no alternate or retuning",
+    "native_long": "2025-01-01 through2026-07-01 exclusive, adjacent same-contract exact V7 and finalist, $100,1:100,US30/US100/US500 complete real ticks",
+    "recent": "Only after supportive long, fixed July-August2026 unchanged adjacent pair; exclude from parameter selection",
+    "known_exposure": "Original aggregate V7/V8 results and different2025 entry/exit selection outcomes are known. This is adaptive development with an unopened candidate-specific2026 confirmation, not a globally pristine holdout."
+  },
+  "fit": {
+    "components": ["RC16_LONG", "RC4_BOTH", "US100_CROSS", "US30_PRESSURE", "US30_RETURN_REV_LONG"],
+    "passive_weight": 1.0,
+    "daily_vector": "For each native calendar day, sum unclipped realized stressed_net/planned_entry_risk per component at completed CLOSE. Include every calendar day, including zero-close days. Day vector is joint, preserving simultaneous losses. Each label belongs to the close day and is unavailable beforehand.",
+    "objective": "Maximize mean(log(1 +0.04*(dot(five_weights,five_day_R)+passive_day_R))) -0.0001*sum((weights-1)^2). This standardized daily return utility is selection, not a replay of actual equity or native compounding.",
+    "sum_five_weights": 5.0,
+    "minimum_weight": 0.25,
+    "maximum_weight": 2.0,
+    "solver": "One deterministic scipy SLSQP from uniform, analytic objective gradient, ftol1e-12,maxiter1000. No grids, restarts or outcome-based regularization change. Reject nonpositive log arguments rather than clip losses.",
+    "minimum_complete_fit_trades": 120
+  },
+  "onnx": {
+    "graph": "Float32 input5 online log displacements; Add learned frozen log weights, Clip[-4,4], Exp to positive allocation scores. Model initializer is learned solely from2024 joint log utility.",
+    "normalization": "Deterministic capped proportional projection: find common positive scale with sum(clip(scale*scores,0.25,2.0))=5. Passive weight1. This same bounded normalization is used by Python and EA.",
+    "no_inference_fault_fallback": "Invalid graph/state/normalization blocks new candidate entries and records an engineering fault; original protective close duties remain active."
+  },
+  "online": {
+    "initial_log_displacements": [0,0,0,0,0],
+    "update_frequency": "At each new server day, apply only complete previous-day realized labels. A close at00:00 belongs to the new day and cannot update that day's opening allocation. Allocation is frozen throughout the day.",
+    "learning_rate": 1.0,
+    "gradient": "0.04*previous_day_component_R/(1+0.04*(dot(previous_day_weights,previous_day_five_R)+previous_day_passive_R))",
+    "update": "log_displacement_i=clip(log_displacement_i+gradient_i,-2,2); then next day's weights come from frozen ONNX and capped normalization",
+    "native_observation": "Own completed actual native trades only, with realized stressed return normalized by their own reserved planned risk. No unknown blocked-trade outcomes. Preserve day accumulator, previous allocation, displacements, model ID and entry attribution in own durable state.",
+    "offline_limit": "Teacher-population source labels drive the offline update. Different native selection/rounding/admission/own outcomes require new native evidence."
+  },
+  "candidate_native_sizing": {
+    "market_volume": "Original day-volume staircase times the selected component weight, rounded to legal step. Never silently round an inadmissible minimum volume into excess risk.",
+    "market_position_cap": "Original4% of ConservativeRiskCapital times component weight, explicitly0.01..0.08 at declared bounds; all original stop buffers/headroom stay unchanged. This deliberate candidate risk reallocation is isolated and does not change Live.",
+    "aggregate_cap": 0.12,
+    "margin_cap": 0.45,
+    "passive": "Original fixed0.01 volume, risk, limit geometry and exits; weight1",
+    "signals_management": "All original opportunity times/directions, safety, protection, RC4 management and exits retained. No new entry. Lot and risk scaling approximately preserve per-unit stop geometry before rounding, but only native paths can establish it."
+  },
+  "proxy": {
+    "method": "Freeze allocation at each original entry's server day. Scale that original lifecycle's actual/stressed net by its entry weight, preserve original population and occupancy, and give zero credit for unknown rejected/new opportunities. This is a fixed-source basket selection, not actual candidate profit or equity proof.",
+    "eligibility": "Both actual and stressed source-basket sums strictly improve; both calendar halves actual/stressed positive; stressed improvement>=5%; closed-balance DD<=1.10*control; every original trade represented. No alternative weight/learning-rate/period tuning.",
+    "select": "At most one eligible role, highest stressed net, exact tie prefers online. If neither passes, freeze and close all roles without an adjacent cap, gradient, penalty, subgroup or retained-seed rescue.",
+    "confirmation": "One unchanged survivor only, same positive-half/profit/5%-stress/closed-DD standards on January-June2026 with causal online state carried from2025. No alternate finalist if it fails."
+  },
+  "native_decision": "Complete immediately adjacent control/finalist on identical platform, inputs and contract/swaps; actual/stressed terminal wealth and annualized log growth improve, every declared epoch positive, robust recovery improves, native equity DD nominal<=control with only explicitly justified effective min(control+1.5pp,control*1.10). Disclose monthly/lot/turnover/breadth and exact tolerance. Hockey-stick shape is not guaranteed.",
+  "isolation": {"tester_only": true, "source_root": "optimization/campaigns/v7-onnx-online-log-growth-allocation-v1", "runtime": "optimization/runtime/v7-onnx-online-log-growth-allocation-v1-portable", "outputs": "optimization/artifacts/raw/v7-onnx-online-log-growth-allocation-v1", "live_writes_or_activation": false, "shared_mutable_trees": false},
+  "storage": {"minimum_free_gib": 30, "maximum_incremental_gib": 10, "first_stage_max_mib": 64},
+  "engineering": "Normal compilation and ordinary economic production/native runs only. No test-only CLI, validators, parity/promotion checkers, tests or CI. Engineering failures remain corrections without arbitrary retry cap."
+}
