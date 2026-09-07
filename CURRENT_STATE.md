@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0631`
+- Latest state ID: `STATE-0632`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue serial V7 ONNX/online development until user pause, with compounded growth/comparable DD, Live untouched and30GiBfree. Relative-value closure4a731a0 is at origin/main. Whole-map comparison selects one Program1family optimization/campaigns/v7-onnx-online-reopening-jump-v1. A new US30 cross-date reopening-jump event replaces only Passive; five original engines and account caps remain. Fresh nonlinear6->8->2ONNX predicts paired FADE/FOLLOW first-passage stressed returns; STATIC/strict-label SGD-ONLINE roles share frozen2024fit. The event, first completed minute, previous20date scale, symmetric frozen barrier/4hdeadline, both observed counterfactual labels and2025/native gates are prospectively declared. Own original US30 input762379M1rows and576Passive lifecycle rows copied, about46MB; normal compilation and fullsource/inputhashfreeze complete before the firstfeatures/fit/outcomes. No2026candidate/runtime yet. Original reservation study already closed, so no queue/capital-slot rescue opens. All eleven predecessor bundles stay closed. About42GiBfree; baseline and Live unchanged.
+Current user task: continue serial V7 ONNX/online development until user pause, with actual compounded growth/comparable DD, Live untouched and30GiBfree. Reopening-jump nonlinear bundle is CLOSED without survivor. Complete2025static134trades actual/stress-.9518/-3.4918;online123,-1.0187/-3.4417. Both fail originalPassive9.66 and positive stressed halves. All251events/502actionpaths/365dates, model states/forecasts/250matured pairs plus1pending are preserved; source/input unchanged. No2026candidate, newEA/runtime or nativeeconomic verdict. TwelveV7bundles are closed; operational ONNX/online exists, but improvednativecompounding is not established. Whole-map comparison is required before another distinct family. About42GiBfree; baseline and Live unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

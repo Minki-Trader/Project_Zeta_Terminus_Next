@@ -1,0 +1,222 @@
+{
+  "utc": "2026-09-07T07:33:28.997465+00:00",
+  "status": "CLOSED_COMPLETE_SELECTION_NO_SURVIVOR_NO_NATIVE_ECONOMIC_VERDICT",
+  "parent_phase": "fbecbbb",
+  "campaign": "optimization/campaigns/v7-onnx-online-reopening-jump-v1",
+  "primary_program": 1,
+  "source_input_unchanged": true,
+  "result_sha256": "7F97A8AB8FF3108856CC395B2D575CE9ACB3EEFA1A7E89E6C085C1693F354B0C",
+  "roles": {
+    "static": {
+      "starts": 134,
+      "actual": -0.9517999999996389,
+      "stress": -3.4917999999996825,
+      "halves": {
+        "2025-H1": {
+          "starts": 69,
+          "actual": 1.5656000000001953,
+          "stress": 0.3816000000001519
+        },
+        "2025-H2": {
+          "starts": 65,
+          "actual": -2.517399999999834,
+          "stress": -3.8733999999998345
+        }
+      },
+      "choices": {
+        "FOLLOW": 55,
+        "FADE": 79,
+        "ABSTAIN": 117
+      },
+      "forecasts": 251,
+      "fixed_closed_quote_cashDD": 9.791999999999632,
+      "minimum_fixed_quote_cash": 96.50820000000037,
+      "gates": {
+        "stress_exceeds_original_passive_actual": false,
+        "both_halves_actual_stress_positive": false,
+        "at_least30_starts": true,
+        "at_least10_each_half": true
+      }
+    },
+    "online": {
+      "starts": 123,
+      "actual": -1.0186999999995168,
+      "stress": -3.4416999999995603,
+      "halves": {
+        "2025-H1": {
+          "starts": 68,
+          "actual": -1.5453999999997177,
+          "stress": -2.7083999999997608
+        },
+        "2025-H2": {
+          "starts": 55,
+          "actual": 0.5267000000002008,
+          "stress": -0.7332999999997994
+        }
+      },
+      "choices": {
+        "FOLLOW": 52,
+        "FADE": 71,
+        "ABSTAIN": 128
+      },
+      "forecasts": 251,
+      "fixed_closed_quote_cashDD": 12.03639999999966,
+      "minimum_fixed_quote_cash": 95.54700000000045,
+      "gates": {
+        "stress_exceeds_original_passive_actual": false,
+        "both_halves_actual_stress_positive": false,
+        "at_least30_starts": true,
+        "at_least10_each_half": true
+      }
+    }
+  },
+  "fit_events": 259,
+  "complete_2025_paired_events": 251,
+  "calendar2025": {
+    "NO_SOURCE_DATE": 107,
+    "EVENT": 251,
+    "NO_CLOSURE": 4,
+    "ZERO_JUMP": 3
+  },
+  "learning": {
+    "static": {
+      "matured_pairs": 250,
+      "parameter_updates": 0,
+      "pending": [
+        {
+          "D": 1767142920,
+          "label_available": 1767143580,
+          "X": [
+            [
+              0.05573623082154447,
+              -0.33349499542257616,
+              -0.616973872172567,
+              -0.20102095703778305,
+              -1.4439068299792701,
+              -0.533760739007894
+            ]
+          ],
+          "prediction": [
+            [
+              -0.5639697313308716,
+              0.03177356719970703
+            ]
+          ]
+        }
+      ],
+      "scored_action_labels": 500,
+      "model_MSE": 1.3412786167445097,
+      "zero_MSE": 1.1353836606868062
+    },
+    "online": {
+      "matured_pairs": 250,
+      "parameter_updates": 250,
+      "pending": [
+        {
+          "D": 1767142920,
+          "label_available": 1767143580,
+          "X": [
+            [
+              0.05573623082154447,
+              -0.33349499542257616,
+              -0.616973872172567,
+              -0.20102095703778305,
+              -1.4439068299792701,
+              -0.533760739007894
+            ]
+          ],
+          "prediction": [
+            [
+              -0.7695107460021973,
+              -0.02345678210258484
+            ]
+          ]
+        }
+      ],
+      "scored_action_labels": 500,
+      "model_MSE": 1.2470477353227087,
+      "zero_MSE": 1.1353836606868062
+    }
+  },
+  "selected_survivor": null,
+  "native_economic_verdict": null,
+  "candidate_2026_values_opened": false,
+  "own_runtime_created": false,
+  "reason": "Both full fixed roles fail original Passive actual9.66 contribution and positive-half stress gates. Online reduces paired prediction MSE versus static, but neither improves zero prediction MSE and neither earns positive stressed quote net. No fit/input/inference fault occurred.",
+  "freeze": "Close entire static/online bundle; preserve all paired action labels,251forecasts per role, all365calendar dates, learned parameters,250mature updates and1pendingpair. No adjacent closure interval,event,feature,scale,model,width,epoch,seed,optimizer,update,action,horizon,barrier,costthreshold,symbol,component,quantity or retained-seed rescue.",
+  "files": [
+    {
+      "path": "optimization/campaigns/v7-onnx-online-reopening-jump-v1/models/final-online-state.json",
+      "bytes": 3216,
+      "sha256": "23265132A0E57D80818A37FFA5A4987310B858D9ECEBF2D9C82ACF25D5AC0242"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-reopening-jump-v1/models/final-static-state.json",
+      "bytes": 3208,
+      "sha256": "758AAB2BFA2530768AC9A92C0B8C04B6BABD5D4F37B2BC06068B78EFF4ED26CE"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-reopening-jump-v1/models/initial-state.json",
+      "bytes": 4007,
+      "sha256": "DC7889997D1D1558DCFD9FABA46F6F17A7CB989FBCB2CC17CEB964C97D03C10A"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-reopening-jump-v1/models/reopening-jump-actions.onnx",
+      "bytes": 378,
+      "sha256": "F75DEB4A66EB9B828AD08500EE30D1569DA0A399A7DC313037BFE8FE6D7FCEE7"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/calendar-and-events.csv",
+      "bytes": 113276,
+      "sha256": "66B39ABE1BFB417993ADD4C5928FF65CF561AC0C15C9927BB564D4F4C2D0FBC7"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/online-forecasts.csv",
+      "bytes": 29815,
+      "sha256": "4FB5F08CA8BEC8AD5CE5B5F20692CC705DD4BA8075A1BBB2E5C804189850395F"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/online-inference-parameters.json",
+      "bytes": 774641,
+      "sha256": "E2D50CA7412EE2BA2AB6726B269846A147407DDAAE973252CEEF9B04FC210C66"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/online-trades.csv",
+      "bytes": 24363,
+      "sha256": "EA04FF1A022450E0B308BED5AFE8BECF1DB1F7AEB37357CDC2C074330537A7C0"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/online-updates.csv",
+      "bytes": 27569,
+      "sha256": "C6090FFA343BD440DBA4A2F02F03AB25B3ADBE8114349CCEF15CD2314EA988D6"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/paired-action-labels.csv",
+      "bytes": 203874,
+      "sha256": "C9872669C493E7777339F9C047F5F8773BFA405401CDA509A7F66906274A2DEC"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/static-forecasts.csv",
+      "bytes": 27474,
+      "sha256": "C33FB4935E53B0C44A894139F85343CD7F1F777835161F7FF24DF38BD0BE8890"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/static-inference-parameters.json",
+      "bytes": 773404,
+      "sha256": "9C6B0287EDFEC10C4BC0B60650BAEB93C894D348E298A3107F4C74D2DCDE2640"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/static-trades.csv",
+      "bytes": 26181,
+      "sha256": "7C8079401F0B0335D0DA7CFD74F891A1DEA51B87B76F3CBF2993A99D9F2ED121"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-reopening-jump-v1/selection-v1/static-updates.csv",
+      "bytes": 27506,
+      "sha256": "5499A4A82A0731B64D548FBE017B9A4B93A1324C0F395E9231D6A09C420FF984"
+    }
+  ],
+  "live_changes": false,
+  "free_bytes": 45518082048,
+  "continuation": "Broader user-authorized serial V7 development continues after a fresh whole-macro comparison."
+}
