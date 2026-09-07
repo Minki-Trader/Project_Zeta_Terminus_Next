@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0620`
+- Latest state ID: `STATE-0622`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue V7 ONNX/online development until user pause, seek compound growth with comparable DD, preserve allLiveand30GiBfree. Sole Program4volatility-ratchet campaign has oneSTATICsurvivor, selected from the complete557trade fixed-volume2025bundle; no native economics yet. Own tester-onlycontrol/candidateEA now implement independentidentities and compile0errors/0warnings on6182. Candidate installs only a durably journalled monotone profitSLwithoriginaladmissionriskreserved and originalARCshadowpreserved; originalARCcannotloosen the currentstop. OwnneutralphysicalPortablecontainsrequiredhistoricalcachesincluding2026onlyafterSURVIVOR_FREEZE. Source/model/EX5/settings/compile/inputruntimebindingfreeze is complete before one adjacent2025-01-01..2026-09-01nativepair. Independentminuteequityextrema/wealth/lot traces observebothroles; fullnativeDDremainsTesterStatisticsauthority. No ownterminalrunning; next runexactcontrolthenunchangedsurvivor underidenticalfingerprints. About46.4GiBfree. Liveauthority/files/processes and exactbaseline remain unchanged.
+Current user task: continue serial V7 ONNX/online development until user pause; seek compound growth with comparable DD and preserve Live and 30 GiB free. The sole Program 4 volatility-ratchet campaign retains one STATIC survivor and unchanged frozen native EA/model/SET. Both initial full controls are excluded because current-year HCC and current-month TKC containers changed; all outputs remain preserved under correction-01/02. Prospective NATIVE_HISTORY_CORRECTION_V2 now binds actual complete M1 inputs over 2024-01-01..2026-09-01 exclusive before/between/after the pair, plus strict exercised 202401-202608 tick files, platform, symbol DB, sources and settings. Whole current-period containers remain diagnostic fingerprints. The own no-EA historical reader acquired all three symbols and closed normally. PRECONTROL_V3 is frozen for a fresh full unchanged control. Candidate has never run; no economic verdict, model tuning or arbitrary retry cap. About 44 GiB free; all Live authority, files and processes remain unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

@@ -1,0 +1,33 @@
+{
+  "utc": "2026-09-07T05:50:58.259230+00:00",
+  "status": "PROSPECTIVE_EXERCISED_HISTORY_BINDING_CORRECTION_BOTH_PRIOR_CONTROLS_EXCLUDED",
+  "facts": "Second unchanged full control completed with identical economic outputs, but each 2026 HCC grew 780 bytes and current 202609 TKC fingerprints changed. This is consistent with ongoing current-period container refresh, but does not by itself establish fixed-window data identity.",
+  "retention": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/correction-02-native-history/control-attempt02",
+  "mapping": "All CONTROL_NATIVE_V2 retained_files paths formerly under control-final resolve with the same suffix under this retention prefix; bytes preserved.",
+  "fixed_history_acquisition": {
+    "symbols": [
+      "US30",
+      "US100",
+      "US500"
+    ],
+    "timeframe": "M1",
+    "start": 1704067200,
+    "end_exclusive": 1788220800,
+    "schema": "All eight official copy_rates_range fields, packed little endian 60 bytes per row, unchanged numeric source timestamp",
+    "stages": [
+      "market-before-control-v3",
+      "market-between-v3",
+      "market-after-candidate-v3"
+    ],
+    "purpose": "Actual normal historical input snapshots including all 2024 warmup and the entire unchanged 2025-August2026 native interval; no model refit or economic selection."
+  },
+  "strict_file_binding": "Whole original platform, symbol DB, all own source/EX5/ONNX/SET and all exercised 202401-202608 monthly TKC; stable 2023-2025 annual HCC retained. Actual fixed-window M1 values must match across all three complete snapshots. Any exercised monthly tick or fixed-window price drift requires correction and a fresh unchanged complete pair.",
+  "diagnostic_container_binding": "Whole 2026 annual HCC and 202609 TKC hashes are still recorded. 202609 is outside the exclusive test end; annual-container drift alone is not a substitute for actual bounded history comparison.",
+  "economic_verdict": null,
+  "candidate_outcome_opened": false,
+  "source_model_settings_policy_changed": false,
+  "acquisition_producer_sha256": "4ECDB3749A8A949E6766801F8106D94D65EE0053DF368F290F288E014E28BD45",
+  "official_api": "https://www.mql5.com/en/docs/python_metatrader5/mt5copyratesrange_py",
+  "live_changes": false,
+  "free_bytes": 47777075200
+}
