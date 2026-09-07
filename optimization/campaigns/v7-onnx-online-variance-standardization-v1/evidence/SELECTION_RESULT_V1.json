@@ -1,0 +1,277 @@
+{
+  "utc": "2026-09-07T13:17:41.174916+00:00",
+  "status": "COMPLETE_FIXED_2025_PREDICTIVE_SELECTION",
+  "survivor": null,
+  "source_counts": {
+    "cross": {
+      "forecasts": 5746,
+      "scored_labels": 5744,
+      "labels_due": 5745,
+      "terminal_immature": 1,
+      "causally_unavailable_origins": 135,
+      "scheduled_original_evaluations": 258,
+      "scheduled_after_initial_warmup": 258,
+      "scheduled_forecast_coverage": 0.9767441860465116,
+      "due_label_coverage": 0.9998259355961706,
+      "online_updates": 5743,
+      "pending_mature_by_end_not_consumed_without_later_origin": 1
+    },
+    "return": {
+      "forecasts": 5881,
+      "scored_labels": 5877,
+      "labels_due": 5877,
+      "terminal_immature": 4,
+      "causally_unavailable_origins": 0,
+      "scheduled_original_evaluations": 258,
+      "scheduled_after_initial_warmup": 258,
+      "scheduled_forecast_coverage": 1.0,
+      "due_label_coverage": 1.0,
+      "online_updates": 5876,
+      "pending_mature_by_end_not_consumed_without_later_origin": 1
+    },
+    "passive": {
+      "forecasts": 23497,
+      "scored_labels": 23485,
+      "labels_due": 23485,
+      "terminal_immature": 12,
+      "causally_unavailable_origins": 0,
+      "scheduled_original_evaluations": 4114,
+      "scheduled_after_initial_warmup": 4114,
+      "scheduled_forecast_coverage": 1.0,
+      "due_label_coverage": 1.0,
+      "online_updates": 23484,
+      "pending_mature_by_end_not_consumed_without_later_origin": 1
+    }
+  },
+  "roles": {
+    "static": {
+      "series": {
+        "cross": {
+          "qlike": 1.8722381887985395,
+          "constant_qlike": 2.295342764285579,
+          "ratio_one_qlike": 2.3031469490046916,
+          "raw_qlike": 0.7023207334960495,
+          "scheduled_count": 258,
+          "original_pass_count": 218,
+          "candidate_pass_count": 191,
+          "changed_pass_flags": 27,
+          "signal_supply_ratio": 0.8761467889908257,
+          "scheduled_forecast_coverage": 0.9767441860465116,
+          "due_label_coverage": 0.9998259355961706,
+          "halves": {
+            "H1": {
+              "rows": 2899,
+              "qlike": 1.9004942328037906,
+              "constant_qlike": 2.179857666943184
+            },
+            "H2": {
+              "rows": 2845,
+              "qlike": 1.8434458262076008,
+              "constant_qlike": 2.4130198459009047
+            }
+          }
+        },
+        "return": {
+          "qlike": 1.745000823385402,
+          "constant_qlike": 2.095720428598145,
+          "ratio_one_qlike": 2.102782269532133,
+          "raw_qlike": 0.7863495151984595,
+          "scheduled_count": 258,
+          "original_pass_count": 56,
+          "candidate_pass_count": 56,
+          "changed_pass_flags": 0,
+          "signal_supply_ratio": 1.0,
+          "scheduled_forecast_coverage": 1.0,
+          "due_label_coverage": 1.0,
+          "halves": {
+            "H1": {
+              "rows": 2899,
+              "qlike": 1.790859385315699,
+              "constant_qlike": 2.0738069497204523
+            },
+            "H2": {
+              "rows": 2978,
+              "qlike": 1.700358791472732,
+              "constant_qlike": 2.117052589533817
+            }
+          }
+        },
+        "passive": {
+          "qlike": 1.7042442682447794,
+          "constant_qlike": 1.960514877483352,
+          "ratio_one_qlike": 1.9628744299951264,
+          "raw_qlike": 0.9291404255374444,
+          "scheduled_count": 4114,
+          "original_pass_count": 525,
+          "candidate_pass_count": 794,
+          "changed_pass_flags": 311,
+          "signal_supply_ratio": 1.5123809523809524,
+          "scheduled_forecast_coverage": 1.0,
+          "due_label_coverage": 1.0,
+          "halves": {
+            "H1": {
+              "rows": 11588,
+              "qlike": 1.792348079972605,
+              "constant_qlike": 1.9847207068433366
+            },
+            "H2": {
+              "rows": 11897,
+              "qlike": 1.6184287710352272,
+              "constant_qlike": 1.9369377445402998
+            }
+          }
+        }
+      },
+      "pooled_qlike": 1.7738277601429069,
+      "pooled_constant_qlike": 2.1171926901223586,
+      "relative_pooled_improvement": 0.16217934795514888,
+      "pooled_halves": {
+        "H1": {
+          "qlike": 1.8279005660306982,
+          "constant_qlike": 2.0794617745023243
+        },
+        "H2": {
+          "qlike": 1.7207444629051867,
+          "constant_qlike": 2.155670059991674
+        }
+      },
+      "changed_flag_fraction": 0.07300215982721382,
+      "gates": {
+        "scheduled_coverage": true,
+        "mature_label_coverage": true,
+        "pooled_prediction_gain_2pct": true,
+        "both_halves_not_worse": true,
+        "each_series_not_worse_5pct": true,
+        "changed_flags_5pct": true,
+        "each_series_supply_75_to_150pct": false
+      },
+      "qualifies": false
+    },
+    "online": {
+      "series": {
+        "cross": {
+          "qlike": 1.9160823430651917,
+          "constant_qlike": 2.295342764285579,
+          "ratio_one_qlike": 2.3031469490046916,
+          "raw_qlike": 0.7461648877627012,
+          "scheduled_count": 258,
+          "original_pass_count": 218,
+          "candidate_pass_count": 199,
+          "changed_pass_flags": 19,
+          "signal_supply_ratio": 0.9128440366972477,
+          "scheduled_forecast_coverage": 0.9767441860465116,
+          "due_label_coverage": 0.9998259355961706,
+          "halves": {
+            "H1": {
+              "rows": 2899,
+              "qlike": 1.923333965969244,
+              "constant_qlike": 2.179857666943184
+            },
+            "H2": {
+              "rows": 2845,
+              "qlike": 1.9086930795155086,
+              "constant_qlike": 2.4130198459009047
+            }
+          }
+        },
+        "return": {
+          "qlike": 1.7531168755766111,
+          "constant_qlike": 2.095720428598145,
+          "ratio_one_qlike": 2.102782269532133,
+          "raw_qlike": 0.7944655673896803,
+          "scheduled_count": 258,
+          "original_pass_count": 56,
+          "candidate_pass_count": 58,
+          "changed_pass_flags": 2,
+          "signal_supply_ratio": 1.0357142857142858,
+          "scheduled_forecast_coverage": 1.0,
+          "due_label_coverage": 1.0,
+          "halves": {
+            "H1": {
+              "rows": 2899,
+              "qlike": 1.8134136722219205,
+              "constant_qlike": 2.0738069497204523
+            },
+            "H2": {
+              "rows": 2978,
+              "qlike": 1.6944196245777023,
+              "constant_qlike": 2.117052589533817
+            }
+          }
+        },
+        "passive": {
+          "qlike": 1.7716309679140911,
+          "constant_qlike": 1.960514877483352,
+          "ratio_one_qlike": 1.9628744299951264,
+          "raw_qlike": 0.9965271252067137,
+          "scheduled_count": 4114,
+          "original_pass_count": 525,
+          "candidate_pass_count": 1050,
+          "changed_pass_flags": 539,
+          "signal_supply_ratio": 2.0,
+          "scheduled_forecast_coverage": 1.0,
+          "due_label_coverage": 1.0,
+          "halves": {
+            "H1": {
+              "rows": 11588,
+              "qlike": 1.8697987500821744,
+              "constant_qlike": 1.9847207068433366
+            },
+            "H2": {
+              "rows": 11897,
+              "qlike": 1.6760128911078591,
+              "constant_qlike": 1.9369377445402998
+            }
+          }
+        }
+      },
+      "pooled_qlike": 1.8136100621852982,
+      "pooled_constant_qlike": 2.1171926901223586,
+      "relative_pooled_improvement": 0.1433892292153699,
+      "pooled_halves": {
+        "H1": {
+          "qlike": 1.8688487960911129,
+          "constant_qlike": 2.0794617745023243
+        },
+        "H2": {
+          "qlike": 1.7597085317336898,
+          "constant_qlike": 2.155670059991674
+        }
+      },
+      "changed_flag_fraction": 0.12095032397408208,
+      "gates": {
+        "scheduled_coverage": true,
+        "mature_label_coverage": true,
+        "pooled_prediction_gain_2pct": true,
+        "both_halves_not_worse": true,
+        "each_series_not_worse_5pct": true,
+        "changed_flags_5pct": true,
+        "each_series_supply_75_to_150pct": false
+      },
+      "qualifies": false
+    }
+  },
+  "native_economics": null,
+  "candidate_2026_values_opened": false,
+  "all_frozen_inputs_unchanged": true,
+  "outputs": [
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-variance-standardization-v1/selection/forecasts.jsonl.gz",
+      "bytes": 3455903,
+      "sha256": "61DF4FCE4546F41B52C5406B8960597A8E42ECFB11CEAE47251184443BCCB723"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-variance-standardization-v1/selection/online-updates.jsonl.gz",
+      "bytes": 4912707,
+      "sha256": "AA748BE1C310FE24B3FED894E0B6FFD05465B79E3AED69B1AB56536BC32C9187"
+    }
+  ],
+  "model_freeze": {
+    "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/evidence/MODEL_FREEZE_V1.json",
+    "bytes": 4933,
+    "sha256": "4429546047F472342FD2780918D27C161C1514CC823204EDBC4CD681DF6219B7"
+  },
+  "raw_bytes": 141543028,
+  "free_bytes": 34630168576,
+  "live_changes": false
+}
