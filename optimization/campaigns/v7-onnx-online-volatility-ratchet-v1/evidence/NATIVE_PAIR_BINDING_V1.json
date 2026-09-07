@@ -1,9 +1,239 @@
 {
-  "utc": "2026-09-07T05:52:12.720401+00:00",
-  "role": "control",
-  "attempt": 3,
-  "status": "PRESTART_FIXED_EXERCISED_HISTORY_BINDING",
-  "runtime": "optimization\\runtime\\v7-onnx-online-volatility-ratchet-v1-portable",
+  "utc": "2026-09-07T06:12:33.141581+00:00",
+  "status": "COMPLETE_VALID_NATIVE_PAIR_EXERCISED_INPUT_AND_EXECUTION_BOUND",
+  "control_attempt": 3,
+  "candidate_attempt": 1,
+  "interval": "2025-01-01 through 2026-09-01 exclusive",
+  "historical_input_window": "2024-01-01 through 2026-09-01 exclusive",
+  "markets": [
+    {
+      "utc": "2026-09-07T05:51:13.813449+00:00",
+      "stage": "market-before-control-v3",
+      "runtime": "optimization\\runtime\\v7-onnx-online-volatility-ratchet-v1-portable",
+      "status": "COMPLETE_FIXED_WINDOW_HISTORICAL_INPUT",
+      "start": 1704067200,
+      "end_exclusive": 1788220800,
+      "timeframe": "M1",
+      "schema": [
+        [
+          "time",
+          "<i8"
+        ],
+        [
+          "open",
+          "<f8"
+        ],
+        [
+          "high",
+          "<f8"
+        ],
+        [
+          "low",
+          "<f8"
+        ],
+        [
+          "close",
+          "<f8"
+        ],
+        [
+          "tick_volume",
+          "<u8"
+        ],
+        [
+          "spread",
+          "<i4"
+        ],
+        [
+          "real_volume",
+          "<u8"
+        ]
+      ],
+      "files": [
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US30-M1.npy",
+          "rows": 941995,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56519956,
+          "sha256": "0925A98A59C1FD77CCD662E193C147E53691B40D658CBC3A2DB2F9E1BF97EEAA"
+        },
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US100-M1.npy",
+          "rows": 942345,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56540956,
+          "sha256": "BA274CF94A573D13CA89AEA3A44861F35FA79EEFB46F17229C04EE1293F4075D"
+        },
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US500-M1.npy",
+          "rows": 942151,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56529316,
+          "sha256": "2EF9E16EFD91AD85F35BBBDBEEB3DCAD25023BF6BAF4B67CFCEF5D17A8E20498"
+        }
+      ],
+      "source_clock": "Original numeric source timestamps; no timezone conversion",
+      "account_position_order_deal_current_quote_queries": false,
+      "live_changes": false,
+      "maxbars": 5000000,
+      "completed_utc": "2026-09-07T05:51:14.727554+00:00",
+      "free_bytes": 47546114048
+    },
+    {
+      "utc": "2026-09-07T06:00:18.482477+00:00",
+      "stage": "market-between-v3",
+      "runtime": "optimization\\runtime\\v7-onnx-online-volatility-ratchet-v1-portable",
+      "status": "COMPLETE_FIXED_WINDOW_HISTORICAL_INPUT",
+      "start": 1704067200,
+      "end_exclusive": 1788220800,
+      "timeframe": "M1",
+      "schema": [
+        [
+          "time",
+          "<i8"
+        ],
+        [
+          "open",
+          "<f8"
+        ],
+        [
+          "high",
+          "<f8"
+        ],
+        [
+          "low",
+          "<f8"
+        ],
+        [
+          "close",
+          "<f8"
+        ],
+        [
+          "tick_volume",
+          "<u8"
+        ],
+        [
+          "spread",
+          "<i4"
+        ],
+        [
+          "real_volume",
+          "<u8"
+        ]
+      ],
+      "files": [
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-between-v3\\US30-M1.npy",
+          "rows": 941995,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56519956,
+          "sha256": "0925A98A59C1FD77CCD662E193C147E53691B40D658CBC3A2DB2F9E1BF97EEAA"
+        },
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-between-v3\\US100-M1.npy",
+          "rows": 942345,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56540956,
+          "sha256": "BA274CF94A573D13CA89AEA3A44861F35FA79EEFB46F17229C04EE1293F4075D"
+        },
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-between-v3\\US500-M1.npy",
+          "rows": 942151,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56529316,
+          "sha256": "2EF9E16EFD91AD85F35BBBDBEEB3DCAD25023BF6BAF4B67CFCEF5D17A8E20498"
+        }
+      ],
+      "source_clock": "Original numeric source timestamps; no timezone conversion",
+      "account_position_order_deal_current_quote_queries": false,
+      "live_changes": false,
+      "maxbars": 5000000,
+      "completed_utc": "2026-09-07T06:00:19.129763+00:00",
+      "free_bytes": 47130836992
+    },
+    {
+      "utc": "2026-09-07T06:11:25.933112+00:00",
+      "stage": "market-after-candidate-v3",
+      "runtime": "optimization\\runtime\\v7-onnx-online-volatility-ratchet-v1-portable",
+      "status": "COMPLETE_FIXED_WINDOW_HISTORICAL_INPUT",
+      "start": 1704067200,
+      "end_exclusive": 1788220800,
+      "timeframe": "M1",
+      "schema": [
+        [
+          "time",
+          "<i8"
+        ],
+        [
+          "open",
+          "<f8"
+        ],
+        [
+          "high",
+          "<f8"
+        ],
+        [
+          "low",
+          "<f8"
+        ],
+        [
+          "close",
+          "<f8"
+        ],
+        [
+          "tick_volume",
+          "<u8"
+        ],
+        [
+          "spread",
+          "<i4"
+        ],
+        [
+          "real_volume",
+          "<u8"
+        ]
+      ],
+      "files": [
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-after-candidate-v3\\US30-M1.npy",
+          "rows": 941995,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56519956,
+          "sha256": "0925A98A59C1FD77CCD662E193C147E53691B40D658CBC3A2DB2F9E1BF97EEAA"
+        },
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-after-candidate-v3\\US100-M1.npy",
+          "rows": 942345,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56540956,
+          "sha256": "BA274CF94A573D13CA89AEA3A44861F35FA79EEFB46F17229C04EE1293F4075D"
+        },
+        {
+          "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-after-candidate-v3\\US500-M1.npy",
+          "rows": 942151,
+          "first": 1704157200,
+          "last": 1788220740,
+          "bytes": 56529316,
+          "sha256": "2EF9E16EFD91AD85F35BBBDBEEB3DCAD25023BF6BAF4B67CFCEF5D17A8E20498"
+        }
+      ],
+      "source_clock": "Original numeric source timestamps; no timezone conversion",
+      "account_position_order_deal_current_quote_queries": false,
+      "live_changes": false,
+      "maxbars": 5000000,
+      "completed_utc": "2026-09-07T06:11:26.599321+00:00",
+      "free_bytes": 46533361664
+    }
+  ],
+  "all_three_fixed_window_m1_inputs_identical": true,
+  "strict_files_identical_before_between_after": true,
   "files": [
     {
       "path": "Bases/FPMarketsSC-Live/history/US100/2023.hcc",
@@ -25,8 +255,8 @@
     },
     {
       "path": "Bases/FPMarketsSC-Live/history/US100/2026.hcc",
-      "bytes": 14598024,
-      "sha256": "EFB14B8E6EB5E389B2F00D2A3E0D716FEB720079AE2DF59A6FD09177454B3AF3",
+      "bytes": 14599224,
+      "sha256": "AF58D4F74A50AC404BD5315F41885B295B0694C2C241E59B143A731E978FE4FC",
       "binding": "diagnostic_current_container"
     },
     {
@@ -49,8 +279,8 @@
     },
     {
       "path": "Bases/FPMarketsSC-Live/history/US30/2026.hcc",
-      "bytes": 14597904,
-      "sha256": "E65C77C561093C77B826F45FE48AEA3FC8226B94B19559CF07E42D30F5FADA04",
+      "bytes": 14599104,
+      "sha256": "B5795357D2B719BD3FCF232918F22DA98D6EA16E4FB65351C2910735F09B407E",
       "binding": "diagnostic_current_container"
     },
     {
@@ -73,8 +303,8 @@
     },
     {
       "path": "Bases/FPMarketsSC-Live/history/US500/2026.hcc",
-      "bytes": 15035298,
-      "sha256": "A38E94E03F505E79F6363DEA5A65B0FB4B28B987C36D26F0F5A102ACFC17B52A",
+      "bytes": 15036498,
+      "sha256": "12D8894F4C7CA66C2A25CCF46A27199A8407F452176DF52AB7B9D6558E605003",
       "binding": "diagnostic_current_container"
     },
     {
@@ -278,7 +508,7 @@
     {
       "path": "Bases/FPMarketsSC-Live/ticks/US100/202609.tkc",
       "bytes": 3651190,
-      "sha256": "100671711C5FFD3B4E7B3763B144D3325BB6C44DD74CA9FAAAC6B22A18E7A33D",
+      "sha256": "AF05CE57113DB7AD265F0828C11D74F5BD65819F241DB7678E825CD202FA6A97",
       "binding": "diagnostic_current_container"
     },
     {
@@ -476,7 +706,7 @@
     {
       "path": "Bases/FPMarketsSC-Live/ticks/US30/202609.tkc",
       "bytes": 1307072,
-      "sha256": "DD4E77EC675E6D9BFDFD2178FD4B8713F43BB43C9987279776B98ECA7FB3AFA5",
+      "sha256": "061B08C16C8868C5EE3E059630ED2E86523196696D093CD6378866635A8CE140",
       "binding": "diagnostic_current_container"
     },
     {
@@ -674,7 +904,7 @@
     {
       "path": "Bases/FPMarketsSC-Live/ticks/US500/202609.tkc",
       "bytes": 971046,
-      "sha256": "73C0A36B04C79D592DC636F265448DD7B24315CEEA42339763B98E4126C7EAD2",
+      "sha256": "AC43CBEF0661F6860ADB393B1D7BC52819E623C5BFB5ABDB59C80B4B1A25C80D",
       "binding": "diagnostic_current_container"
     },
     {
@@ -960,94 +1190,63 @@
       "binding": "strict_exercised_input_or_execution"
     }
   ],
-  "log_offsets": {
-    "agent": 5244208,
-    "tester": 5108860
-  },
-  "log_prefix_sha256": {
-    "agent": "3A577611C23FE4D88F05A37EADE81B6629B501E13B0628BD431FBEF3980A5826",
-    "tester": "AB2EC11818E740949E46452213F9EF661896191BCE324E2AEDF580E7ECEEDF2B"
-  },
-  "market_input": {
-    "utc": "2026-09-07T05:51:13.813449+00:00",
-    "stage": "market-before-control-v3",
-    "runtime": "optimization\\runtime\\v7-onnx-online-volatility-ratchet-v1-portable",
-    "status": "COMPLETE_FIXED_WINDOW_HISTORICAL_INPUT",
-    "start": 1704067200,
-    "end_exclusive": 1788220800,
-    "timeframe": "M1",
-    "schema": [
-      [
-        "time",
-        "<i8"
-      ],
-      [
-        "open",
-        "<f8"
-      ],
-      [
-        "high",
-        "<f8"
-      ],
-      [
-        "low",
-        "<f8"
-      ],
-      [
-        "close",
-        "<f8"
-      ],
-      [
-        "tick_volume",
-        "<u8"
-      ],
-      [
-        "spread",
-        "<i4"
-      ],
-      [
-        "real_volume",
-        "<u8"
-      ]
-    ],
-    "files": [
-      {
-        "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US30-M1.npy",
-        "rows": 941995,
-        "first": 1704157200,
-        "last": 1788220740,
-        "bytes": 56519956,
-        "sha256": "0925A98A59C1FD77CCD662E193C147E53691B40D658CBC3A2DB2F9E1BF97EEAA"
-      },
-      {
-        "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US100-M1.npy",
-        "rows": 942345,
-        "first": 1704157200,
-        "last": 1788220740,
-        "bytes": 56540956,
-        "sha256": "BA274CF94A573D13CA89AEA3A44861F35FA79EEFB46F17229C04EE1293F4075D"
-      },
-      {
-        "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US500-M1.npy",
-        "rows": 942151,
-        "first": 1704157200,
-        "last": 1788220740,
-        "bytes": 56529316,
-        "sha256": "2EF9E16EFD91AD85F35BBBDBEEB3DCAD25023BF6BAF4B67CFCEF5D17A8E20498"
-      }
-    ],
-    "source_clock": "Original numeric source timestamps; no timezone conversion",
-    "account_position_order_deal_current_quote_queries": false,
-    "live_changes": false,
-    "maxbars": 5000000,
-    "completed_utc": "2026-09-07T05:51:14.727554+00:00",
-    "free_bytes": 47546114048
-  },
-  "reader_shutdown": {
-    "pid": 26952,
+  "diagnostic_container_changes": [
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US100/2026.hcc",
+      "bytes": 14599224,
+      "sha256": "AF58D4F74A50AC404BD5315F41885B295B0694C2C241E59B143A731E978FE4FC",
+      "binding": "diagnostic_current_container"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US30/2026.hcc",
+      "bytes": 14599104,
+      "sha256": "B5795357D2B719BD3FCF232918F22DA98D6EA16E4FB65351C2910735F09B407E",
+      "binding": "diagnostic_current_container"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/history/US500/2026.hcc",
+      "bytes": 15036498,
+      "sha256": "12D8894F4C7CA66C2A25CCF46A27199A8407F452176DF52AB7B9D6558E605003",
+      "binding": "diagnostic_current_container"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/ticks/US100/202609.tkc",
+      "bytes": 3651190,
+      "sha256": "AF05CE57113DB7AD265F0828C11D74F5BD65819F241DB7678E825CD202FA6A97",
+      "binding": "diagnostic_current_container"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/ticks/US30/202609.tkc",
+      "bytes": 1307072,
+      "sha256": "061B08C16C8868C5EE3E059630ED2E86523196696D093CD6378866635A8CE140",
+      "binding": "diagnostic_current_container"
+    },
+    {
+      "path": "Bases/FPMarketsSC-Live/ticks/US500/202609.tkc",
+      "bytes": 971046,
+      "sha256": "AC43CBEF0661F6860ADB393B1D7BC52819E623C5BFB5ABDB59C80B4B1A25C80D",
+      "binding": "diagnostic_current_container"
+    }
+  ],
+  "contracts_identical_both_roles": [
+    "stage=START symbol=US30 contract=1.00000000 tick_size=0.01000000 tick_value=0.01000000 tick_value_profit=0.01000000 tick_value_loss=0.01000000 volume_min=0.01000000 volume_step=0.01000000 stops=0 freeze=0 swap_mode=2 swap_long=-7.87000000 swap_short=3.34000000 rollover3=5 sun=0.00000000 mon=1.00000000 tue=1.00000000 wed=1.00000000 thu=1.00000000 fri=3.00000000 sat=0.00000000",
+    "stage=START symbol=US100 contract=1.00000000 tick_size=0.01000000 tick_value=0.01000000 tick_value_profit=0.01000000 tick_value_loss=0.01000000 volume_min=0.01000000 volume_step=0.01000000 stops=0 freeze=0 swap_mode=2 swap_long=-4.34000000 swap_short=1.82000000 rollover3=5 sun=0.00000000 mon=1.00000000 tue=1.00000000 wed=1.00000000 thu=1.00000000 fri=3.00000000 sat=0.00000000",
+    "stage=START symbol=US500 contract=1.00000000 tick_size=0.01000000 tick_value=0.01000000 tick_value_profit=0.01000000 tick_value_loss=0.01000000 volume_min=0.01000000 volume_step=0.01000000 stops=0 freeze=0 swap_mode=2 swap_long=-1.14000000 swap_short=0.48000000 rollover3=5 sun=0.00000000 mon=1.00000000 tue=1.00000000 wed=1.00000000 thu=1.00000000 fri=3.00000000 sat=0.00000000",
+    "stage=END symbol=US30 contract=1.00000000 tick_size=0.01000000 tick_value=0.01000000 tick_value_profit=0.01000000 tick_value_loss=0.01000000 volume_min=0.01000000 volume_step=0.01000000 stops=0 freeze=0 swap_mode=2 swap_long=-7.87000000 swap_short=3.34000000 rollover3=5 sun=0.00000000 mon=1.00000000 tue=1.00000000 wed=1.00000000 thu=1.00000000 fri=3.00000000 sat=0.00000000",
+    "stage=END symbol=US100 contract=1.00000000 tick_size=0.01000000 tick_value=0.01000000 tick_value_profit=0.01000000 tick_value_loss=0.01000000 volume_min=0.01000000 volume_step=0.01000000 stops=0 freeze=0 swap_mode=2 swap_long=-4.34000000 swap_short=1.82000000 rollover3=5 sun=0.00000000 mon=1.00000000 tue=1.00000000 wed=1.00000000 thu=1.00000000 fri=3.00000000 sat=0.00000000",
+    "stage=END symbol=US500 contract=1.00000000 tick_size=0.01000000 tick_value=0.01000000 tick_value_profit=0.01000000 tick_value_loss=0.01000000 volume_min=0.01000000 volume_step=0.01000000 stops=0 freeze=0 swap_mode=2 swap_long=-1.14000000 swap_short=0.48000000 rollover3=5 sun=0.00000000 mon=1.00000000 tue=1.00000000 wed=1.00000000 thu=1.00000000 fri=3.00000000 sat=0.00000000"
+  ],
+  "normal_process_completion": true,
+  "final_reader_shutdown": {
+    "pid": 29944,
     "normal_close_requested": true,
     "exited": true
   },
-  "free_bytes": 47421853696,
+  "raw_outputs_complete": true,
+  "model_summary": [
+    "CS\t0\t15:10:28.969\tZetaV7VRStatic (US30,M30)\t2026.08.31 23:59:58   V7VR_MODEL forecasts=76716 missing_prefixes=864 decisions=5791 intents=1021 adoptions=1021 refusals=0 errors=0 pending=0"
+  ],
+  "report_sha256": "89892A3ABA069139582E2FE5BE7EE02D81EC45E380AFD168C476A0694C6B1F21",
+  "free_bytes": 46522822656,
   "live_changes": false
 }

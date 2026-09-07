@@ -73,7 +73,7 @@ def role_report(role, namespace):
     faults = [line for line in lines if any(tag in line for tag in ("\tTicks\t", "\tHistory\t", "\tTester\t")) and re.search(r"real ticks (?:absent|discarded)|mismatch|not synchronized|no history|generat.*based on minute", line, re.I)]
     contracts = [line.split("V7RR1_CONTRACT ", 1)[1] for line in own if "V7RR1_CONTRACT " in line]
     quality_text = decoded(folder / "report.htm")
-    quality = bool(re.search(r"100\s*%\s*real ticks", re.sub(r"<[^>]+>", " ", quality_text), re.I))
+    quality = bool(re.search(r"100\s*%\s*(?:real ticks|실제\s*틱)", re.sub(r"<[^>]+>", " ", quality_text), re.I))
     daily, transitions, sampled_ticks = {}, [], 0
     last_multiplier = None
     path_file = research / "economic-path.csv"
@@ -108,6 +108,18 @@ def role_report(role, namespace):
               "model_lines": [line for line in own if "V7VR_MODEL " in line],
               "path_lines": [line for line in own if "V7VR_PATH " in line],
               "artifact_hashes": {p.relative_to(folder).as_posix(): sha(p) for p in (folder / "agent.log", folder / "report.htm", research / "research-lifecycles.csv", path_file)}}
+    trace = research / "volatility-ratchet.csv"
+    if trace.exists():
+        kinds, modification_components, retcodes = Counter(), Counter(), Counter()
+        with trace.open(encoding="utf-8-sig", newline="") as handle:
+            for row in csv.DictReader(handle):
+                kinds[row["kind"]] += 1
+                if row["kind"] == "MODIFY_ADOPTED":
+                    modification_components[row["component"]] += 1
+                if row["kind"] == "MODIFY_RESULT":
+                    retcodes[row["value_a"]] += 1
+        result["ratchet_trace"] = {"kinds": dict(kinds), "adoptions_by_component": dict(modification_components),
+                                   "modify_return_codes": dict(retcodes), "sha256": sha(trace)}
     return result
 
 

@@ -1,9 +1,10 @@
 {
-  "utc": "2026-09-07T05:52:12.720401+00:00",
+  "utc": "2026-09-07T06:00:02.695255+00:00",
   "role": "control",
   "attempt": 3,
-  "status": "PRESTART_FIXED_EXERCISED_HISTORY_BINDING",
-  "runtime": "optimization\\runtime\\v7-onnx-online-volatility-ratchet-v1-portable",
+  "status": "COMPLETE_NATIVE_CONTROL_STRICT_FILES_STABLE_PENDING_BETWEEN_M1_CAPTURE",
+  "normal_tester_shutdown": true,
+  "own_processes_absent": true,
   "files": [
     {
       "path": "Bases/FPMarketsSC-Live/history/US100/2023.hcc",
@@ -25,8 +26,8 @@
     },
     {
       "path": "Bases/FPMarketsSC-Live/history/US100/2026.hcc",
-      "bytes": 14598024,
-      "sha256": "EFB14B8E6EB5E389B2F00D2A3E0D716FEB720079AE2DF59A6FD09177454B3AF3",
+      "bytes": 14598504,
+      "sha256": "B0726F8CA6A29470674B6E2B41E901FD6C6F7A18C07D520A39FAE7BB88AF7A0C",
       "binding": "diagnostic_current_container"
     },
     {
@@ -49,8 +50,8 @@
     },
     {
       "path": "Bases/FPMarketsSC-Live/history/US30/2026.hcc",
-      "bytes": 14597904,
-      "sha256": "E65C77C561093C77B826F45FE48AEA3FC8226B94B19559CF07E42D30F5FADA04",
+      "bytes": 14598384,
+      "sha256": "F298239CBFED9B2F30BB46FD29777F6832AD8AFCF369BB8BD27E4242A2E529B0",
       "binding": "diagnostic_current_container"
     },
     {
@@ -73,8 +74,8 @@
     },
     {
       "path": "Bases/FPMarketsSC-Live/history/US500/2026.hcc",
-      "bytes": 15035298,
-      "sha256": "A38E94E03F505E79F6363DEA5A65B0FB4B28B987C36D26F0F5A102ACFC17B52A",
+      "bytes": 15035778,
+      "sha256": "1D86416C5FC5757F82D2970BCAC53A03878CD82FE3A56182893E2BB6DAB625C4",
       "binding": "diagnostic_current_container"
     },
     {
@@ -278,7 +279,7 @@
     {
       "path": "Bases/FPMarketsSC-Live/ticks/US100/202609.tkc",
       "bytes": 3651190,
-      "sha256": "100671711C5FFD3B4E7B3763B144D3325BB6C44DD74CA9FAAAC6B22A18E7A33D",
+      "sha256": "B56A7EBE1745C50FE4A38965DDD841EF7D90E02A4FF7AC08A8CCC3286493A24A",
       "binding": "diagnostic_current_container"
     },
     {
@@ -476,7 +477,7 @@
     {
       "path": "Bases/FPMarketsSC-Live/ticks/US30/202609.tkc",
       "bytes": 1307072,
-      "sha256": "DD4E77EC675E6D9BFDFD2178FD4B8713F43BB43C9987279776B98ECA7FB3AFA5",
+      "sha256": "70283A768F571D2344BE91F953FE17056CBF5780D81C63D6871A5C6EC22BD937",
       "binding": "diagnostic_current_container"
     },
     {
@@ -674,7 +675,7 @@
     {
       "path": "Bases/FPMarketsSC-Live/ticks/US500/202609.tkc",
       "bytes": 971046,
-      "sha256": "73C0A36B04C79D592DC636F265448DD7B24315CEEA42339763B98E4126C7EAD2",
+      "sha256": "12F54AFBB614540B62D86BB3AF0F79B096BACC9BA76AB88FAA7BF4DB43931812",
       "binding": "diagnostic_current_container"
     },
     {
@@ -960,94 +961,226 @@
       "binding": "strict_exercised_input_or_execution"
     }
   ],
-  "log_offsets": {
-    "agent": 5244208,
-    "tester": 5108860
-  },
-  "log_prefix_sha256": {
-    "agent": "3A577611C23FE4D88F05A37EADE81B6629B501E13B0628BD431FBEF3980A5826",
-    "tester": "AB2EC11818E740949E46452213F9EF661896191BCE324E2AEDF580E7ECEEDF2B"
-  },
-  "market_input": {
-    "utc": "2026-09-07T05:51:13.813449+00:00",
-    "stage": "market-before-control-v3",
-    "runtime": "optimization\\runtime\\v7-onnx-online-volatility-ratchet-v1-portable",
-    "status": "COMPLETE_FIXED_WINDOW_HISTORICAL_INPUT",
-    "start": 1704067200,
-    "end_exclusive": 1788220800,
-    "timeframe": "M1",
-    "schema": [
-      [
-        "time",
-        "<i8"
-      ],
-      [
-        "open",
-        "<f8"
-      ],
-      [
-        "high",
-        "<f8"
-      ],
-      [
-        "low",
-        "<f8"
-      ],
-      [
-        "close",
-        "<f8"
-      ],
-      [
-        "tick_volume",
-        "<u8"
-      ],
-      [
-        "spread",
-        "<i4"
-      ],
-      [
-        "real_volume",
-        "<u8"
-      ]
-    ],
-    "files": [
-      {
-        "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US30-M1.npy",
-        "rows": 941995,
-        "first": 1704157200,
-        "last": 1788220740,
-        "bytes": 56519956,
-        "sha256": "0925A98A59C1FD77CCD662E193C147E53691B40D658CBC3A2DB2F9E1BF97EEAA"
+  "strict_changed_binding_files": [],
+  "diagnostic_container_changes": [
+    {
+      "before": {
+        "path": "Bases/FPMarketsSC-Live/history/US100/2026.hcc",
+        "bytes": 14598024,
+        "sha256": "EFB14B8E6EB5E389B2F00D2A3E0D716FEB720079AE2DF59A6FD09177454B3AF3",
+        "binding": "diagnostic_current_container"
       },
-      {
-        "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US100-M1.npy",
-        "rows": 942345,
-        "first": 1704157200,
-        "last": 1788220740,
-        "bytes": 56540956,
-        "sha256": "BA274CF94A573D13CA89AEA3A44861F35FA79EEFB46F17229C04EE1293F4075D"
-      },
-      {
-        "path": "optimization\\artifacts\\raw\\v7-onnx-online-volatility-ratchet-v1\\market-before-control-v3\\US500-M1.npy",
-        "rows": 942151,
-        "first": 1704157200,
-        "last": 1788220740,
-        "bytes": 56529316,
-        "sha256": "2EF9E16EFD91AD85F35BBBDBEEB3DCAD25023BF6BAF4B67CFCEF5D17A8E20498"
+      "after": {
+        "path": "Bases/FPMarketsSC-Live/history/US100/2026.hcc",
+        "bytes": 14598504,
+        "sha256": "B0726F8CA6A29470674B6E2B41E901FD6C6F7A18C07D520A39FAE7BB88AF7A0C",
+        "binding": "diagnostic_current_container"
       }
-    ],
-    "source_clock": "Original numeric source timestamps; no timezone conversion",
-    "account_position_order_deal_current_quote_queries": false,
-    "live_changes": false,
-    "maxbars": 5000000,
-    "completed_utc": "2026-09-07T05:51:14.727554+00:00",
-    "free_bytes": 47546114048
+    },
+    {
+      "before": {
+        "path": "Bases/FPMarketsSC-Live/history/US30/2026.hcc",
+        "bytes": 14597904,
+        "sha256": "E65C77C561093C77B826F45FE48AEA3FC8226B94B19559CF07E42D30F5FADA04",
+        "binding": "diagnostic_current_container"
+      },
+      "after": {
+        "path": "Bases/FPMarketsSC-Live/history/US30/2026.hcc",
+        "bytes": 14598384,
+        "sha256": "F298239CBFED9B2F30BB46FD29777F6832AD8AFCF369BB8BD27E4242A2E529B0",
+        "binding": "diagnostic_current_container"
+      }
+    },
+    {
+      "before": {
+        "path": "Bases/FPMarketsSC-Live/history/US500/2026.hcc",
+        "bytes": 15035298,
+        "sha256": "A38E94E03F505E79F6363DEA5A65B0FB4B28B987C36D26F0F5A102ACFC17B52A",
+        "binding": "diagnostic_current_container"
+      },
+      "after": {
+        "path": "Bases/FPMarketsSC-Live/history/US500/2026.hcc",
+        "bytes": 15035778,
+        "sha256": "1D86416C5FC5757F82D2970BCAC53A03878CD82FE3A56182893E2BB6DAB625C4",
+        "binding": "diagnostic_current_container"
+      }
+    },
+    {
+      "before": {
+        "path": "Bases/FPMarketsSC-Live/ticks/US100/202609.tkc",
+        "bytes": 3651190,
+        "sha256": "100671711C5FFD3B4E7B3763B144D3325BB6C44DD74CA9FAAAC6B22A18E7A33D",
+        "binding": "diagnostic_current_container"
+      },
+      "after": {
+        "path": "Bases/FPMarketsSC-Live/ticks/US100/202609.tkc",
+        "bytes": 3651190,
+        "sha256": "B56A7EBE1745C50FE4A38965DDD841EF7D90E02A4FF7AC08A8CCC3286493A24A",
+        "binding": "diagnostic_current_container"
+      }
+    },
+    {
+      "before": {
+        "path": "Bases/FPMarketsSC-Live/ticks/US30/202609.tkc",
+        "bytes": 1307072,
+        "sha256": "DD4E77EC675E6D9BFDFD2178FD4B8713F43BB43C9987279776B98ECA7FB3AFA5",
+        "binding": "diagnostic_current_container"
+      },
+      "after": {
+        "path": "Bases/FPMarketsSC-Live/ticks/US30/202609.tkc",
+        "bytes": 1307072,
+        "sha256": "70283A768F571D2344BE91F953FE17056CBF5780D81C63D6871A5C6EC22BD937",
+        "binding": "diagnostic_current_container"
+      }
+    },
+    {
+      "before": {
+        "path": "Bases/FPMarketsSC-Live/ticks/US500/202609.tkc",
+        "bytes": 971046,
+        "sha256": "73C0A36B04C79D592DC636F265448DD7B24315CEEA42339763B98E4126C7EAD2",
+        "binding": "diagnostic_current_container"
+      },
+      "after": {
+        "path": "Bases/FPMarketsSC-Live/ticks/US500/202609.tkc",
+        "bytes": 971046,
+        "sha256": "12F54AFBB614540B62D86BB3AF0F79B096BACC9BA76AB88FAA7BF4DB43931812",
+        "binding": "diagnostic_current_container"
+      }
+    }
+  ],
+  "native_summary_lines": [
+    "CS\t0\t14:59:20.491\tZetaV7VRControl (US30,M30)\t2026.08.31 23:59:58   V7VR_PATH rows=587770 failed=0 scope=every-delivered-EA-tick-minute-extrema",
+    "CS\t0\t14:59:20.491\tZetaV7VRControl (US30,M30)\t2026.08.31 23:59:58   V7RR1_NATIVE profit=259.170000 equity_dd=51.500000 equity_dd_relative_pct=16.073213874 balance_dd_relative_pct=15.302731625 trades=926",
+    "CS\t0\t14:59:20.491\tZetaV7VRControl (US30,M30)\t2026.08.31 23:59:58   V7RR1_RESULT status=ECONOMIC position_risk=0.040000 aggregate_risk=0.120000 weights=1.0/1.0/1.0/1.0/1.0/1.0 actual_net=259.170000 stressed_net=239.714100 actual_dd=50.120000 stressed_dd=49.994400 robust_net=239.714100 robust_recovery=4.782803272 closed=926 risk_skips=36 stop_exits=118 final_server=2026.08.31 23:59"
+  ],
+  "log_segments": {
+    "agent": {
+      "source_offset": 5244208,
+      "source_full_sha256": "F670DE74C76B73DAAC1BA9B8D2C7B9A2FC68CBCFE4105B75CB76A3407306E27B",
+      "fragment_sha256": "8E00B0044CE54FC247A4C7F9359AAD0FC86785ABCC46AB723590980E1C1D056D",
+      "fragment_bytes": 2622348,
+      "encoding": "utf-16-le"
+    },
+    "tester": {
+      "source_offset": 5108860,
+      "source_full_sha256": "EE5BBD57BF702C802F421EFFC06280AEC8255D5883CC39ECF1E240C67913D203",
+      "fragment_sha256": "0250A06EF0AC21F6E93B7087217E95FF257D36AE4597FDC191C36F1D16F926A1",
+      "fragment_bytes": 2549786,
+      "encoding": "utf-16-le"
+    }
   },
-  "reader_shutdown": {
-    "pid": 26952,
-    "normal_close_requested": true,
-    "exited": true
-  },
-  "free_bytes": 47421853696,
+  "retained_files": [
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/agent-source.bin",
+      "bytes": 2622348,
+      "sha256": "8E00B0044CE54FC247A4C7F9359AAD0FC86785ABCC46AB723590980E1C1D056D"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/agent.log",
+      "bytes": 1321665,
+      "sha256": "88C23238FDF16CEF04AAFF60F267CD10D2CB3C3447381B9DC43AD0E77B0A9FA8"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/research/economic-path.csv",
+      "bytes": 89056459,
+      "sha256": "A6B5A92E138F47BDB0331590126539E5ACD8E4E528CEAF277986D939F4065F07"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/research/research-candidates.csv",
+      "bytes": 7292745,
+      "sha256": "02DDD10161A97EB58AA6E7CADCBE7546640E1D1BB0572AEB0FC586674493E345"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/research/research-lifecycles.csv",
+      "bytes": 1767278,
+      "sha256": "D8390B22B379E9D6C897642A1C0CD3B5EB2D9196CFB784643F247D1B9E4FC91A"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/research/research-state-a.csv",
+      "bytes": 1180,
+      "sha256": "AF32F246FACA90567CF80DAA8FC5733E9D821EE707DD2AA3577FA4A31AA52A5C"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/research/research-state-b.csv",
+      "bytes": 1180,
+      "sha256": "08B236C2501F1B526CA8CA9875A98A3F4DF42489442CC600151D8D0D892508B2"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/state/current-a.csv",
+      "bytes": 4375,
+      "sha256": "ADFF38B87CFEA0A81843C67F93A1A4613A532F42F86A2A5EE15F598F79097E41"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/state/current-b.csv",
+      "bytes": 4375,
+      "sha256": "0DFDAAD55E08887119EB6CC1AF11ECD62A9A4EFFF44B4E1FB1A35530F8C42688"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/state/events-a.csv",
+      "bytes": 1542020,
+      "sha256": "75B553E3B68DACF45419AD2E2372F7D0F7FADF745ED85F5031078DEC5E051189"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/state/events-b.csv",
+      "bytes": 1061361,
+      "sha256": "8A477548076DB98778F55FD2D78BC3A2A914EFD078166A864AF21B35C2686E3E"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/state/runtime.lock",
+      "bytes": 65,
+      "sha256": "252C7FD141E4F106C083948CF0D1FE9339F6270EE016D18816338D7932EA4558"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/state/state-a.csv",
+      "bytes": 2541,
+      "sha256": "4DEDF6329EA335448A398F2A3AAE9140834C9FCDD816E547ECF1F1E74644F851"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/Files/ZetaV7VRControl/optimization/volatility-ratchet/state/state-b.csv",
+      "bytes": 2541,
+      "sha256": "200BC19666667ABEDA8B90915090D5B49B35D8518A656A27F3828DFA61C33B1A"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/report.htm",
+      "bytes": 1835756,
+      "sha256": "DAC44F2D77F329BBC6F278126F4A430F2F1A2A732D2EE73C7EB796F3B99F3B7E"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/tester-source.bin",
+      "bytes": 2549786,
+      "sha256": "0250A06EF0AC21F6E93B7087217E95FF257D36AE4597FDC191C36F1D16F926A1"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/tester.log",
+      "bytes": 1285394,
+      "sha256": "E6871C21F16DD4F9FFCB52D8AC4BCFC263DB7A5322A62BC3F82D0826CF37DB58"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/v7-volatility-ratchet-holding.png",
+      "bytes": 24278,
+      "sha256": "D3C38E6B2C7425AEF99C5E7C269A0AD5452133A2C77E7191A124C6628485DFF6"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/v7-volatility-ratchet-hst.png",
+      "bytes": 49309,
+      "sha256": "9BA439E21D763F4802649DB14DFF518011E58F6654110887B386006EC9CD5A2E"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/v7-volatility-ratchet-mfemae.png",
+      "bytes": 57697,
+      "sha256": "D24E800FE8EDE6888BDB9532ACE80623F175B81560A953B9D46F59C5268E24C6"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/v7-volatility-ratchet.htm",
+      "bytes": 1835756,
+      "sha256": "DAC44F2D77F329BBC6F278126F4A430F2F1A2A732D2EE73C7EB796F3B99F3B7E"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-volatility-ratchet-v1/control-final/v7-volatility-ratchet.png",
+      "bytes": 14857,
+      "sha256": "592B0057969743A4880C4935B6C8997189857ECB52D41116DE00DC2FDE1BE8DB"
+    }
+  ],
+  "free_bytes": 47301275648,
   "live_changes": false
 }

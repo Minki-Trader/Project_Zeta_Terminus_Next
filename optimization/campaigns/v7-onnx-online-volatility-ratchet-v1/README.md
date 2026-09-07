@@ -1,4 +1,4 @@
-# V7 learned volatility ratchet
+# V7 learned volatility ratchet — closed
 
 This isolated Program 4 campaign retains the original V7 entries, initial risk,
 quantity staircase and mandatory exits. A fresh ONNX model estimates the 90th
@@ -52,7 +52,11 @@ remain diagnostic records. No fixed history drift is excused by a calendar
 argument, and neither excluded control is retroactively admitted.
 
 This correction changes no selected model, trading behavior, trial interval,
-capital, native gate or finalist. Candidate results have not been opened.
+capital, native gate or finalist. The complete unchanged pair is now closed: candidate actual/stressed net
+$192.65/$174.449 versus $259.17/$239.7141, with equity DD 14.8971% versus
+16.0732%. Lower DD and positive epochs do not compensate for reduced wealth and
+recovery. See `RESULTS.md`, `NATIVE_PAIR_BINDING_V1.json` and `CLOSURE_V1.json`.
+The whole static/online bundle has no passer or retained seed.
 
 The campaign has no Live authority. All Live files, processes and user-operated
 permissions remain outside this work. The 30 GiB storage reserve still applies.
