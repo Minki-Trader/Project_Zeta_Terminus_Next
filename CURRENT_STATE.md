@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0609`
+- Latest state ID: `STATE-0610`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. Native ONNX/online implementation is complete and frozen with1111forecasts/labels/updates, zero faults, original$190.64/$173.272actual/stressed profit and19.502399843%native equityDD retained; it establishes no predictive or economic improvement. The latest Passive execution bundle `optimization/campaigns/v7-onnx-online-passive-execution-v1/` is also closed without a survivor: all523complete2025forecasts per role have raw pinball losses about11.5-11.8% worse than the train-only constant. Model/source/input/all tapes are frozen, and no candidate2026 value, EA or native path opened. No new campaign is open at this boundary. Broader V7 development remains active through a fresh whole-mechanism comparison; a bounded helper inventories original RC4 source facts only. About51.6GiB remains free. Exact baseline and all Live authority/files/processes are unchanged.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least30GiB free, and continue until the user pauses. All five preceding bundles are closed; native ONNX/own learning operates but has no predictive or economic improvement. The sole new campaign is `optimization/campaigns/v7-onnx-online-cross-signal-v1/`, Program1. It replaces only the original Cross daily17:00 direction/abstention with a direct four-hour price-response forecast. The full static/online RLS bundle,2024fit,2025selection,causal labels,original risk/management,native conditions and storage bounds are prospectively frozen before outcomes. Three own timestamp-sliced2023-12..2025M1 inputs total about132MB; Python source compiled normally. No candidate2026 value, new EA or native runtime is open. About51.5GiB is free. Exact baseline and all Live authority/files/processes are unchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

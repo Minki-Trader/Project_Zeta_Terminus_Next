@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-07",
+  "status": "PROSPECTIVE_BEFORE_FEATURES_FIT_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-cross-signal-v1",
+  "primary_program": 1,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "roles": ["EXACT_V7_CONTROL", "ONNX_CROSS_DIRECT", "ONNX_ONLINE_CROSS_DIRECT"],
+  "changed_mechanism": "Only Cross entry direction/abstention at its existing 17:00 server-clock opportunity. Its old abs(relative_z)>=0.5 momentum rule is the reference. The new forecast may buy, sell or abstain regardless of that old threshold. It does not resize an accepted old trade or infer a counterfactual stop PNL.",
+  "preserved": "Five other components; Cross US100 symbol, H1 clock, original calendar exclusions, maximum entry delay, four-H1-bar hold, market execution, SL construction and reconciliation. All original daily150USD lot staircase, position4%, aggregate12%, margin45%, six multipliers1 and Passive fixed0.01 remain. New direction requires fresh actual native risk/stop/admission, never old-dollar rescaling.",
+  "input": {
+    "source_root": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control",
+    "symbols": ["US30", "US100", "US500"],
+    "sha256": {"US30": "B56FAF1B495504A48DF982B91EB2EBF390A8B258E1F2864C6F0A3444A9446586", "US100": "EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B", "US500": "E4E104309434EA8D4965E4AEB737E93806F596173D95D4C606602C28EB5B46D3"},
+    "own_copy": "Timestamp-only slice2023-12-01 through2026-01-01 exclusive, then physical copy selected M1 rows. Source full-byte hashes before/after; no candidate2026 numeric field is opened.",
+    "clocks": "Unshifted native server calendar epochs. H1 bars aggregate observed native M1 bars. At forecast barT the latest completed H1 must beT-3600 for all three symbols and all122lookback timestamps must match across symbols; missing older hours can reflect normal closed-market time and are not filled synthetically.",
+    "population": "All available US100 H1 bar starts during2024/2025, with rejection reasons. Forecast all hours with valid synchronized history regardless of portfolio occupancy or old signal; Cross economic-intention selection is only17:00 and the original V7 calendar. All365selection calendar dates, zero signals and incomplete future labels remain visible. This daily leg is not declared a high-turnover executable.",
+    "label": "log(US100 final M1 bid close in[T,T+14400)/latest completed H1 close)/(2*prior120return sampleSD). Require all240M1 bars with finite positive close and nonnegative spread. Window endT+14400 is the availability bound. Incomplete future windows remain unscored/untrained without deleting forecasts. The label is a fixed-window price response, independent of execution; actual four-bar exit can differ around gaps."
+  },
+  "features": {
+    "source_basis": "The original Cross122completed synchronized closes and prior120return sampleSD excluding the latest return. Relative returns are US100 minus0.5*(US30+US500). No external values or closed-family features/weights imported.",
+    "ordered_eight": ["latest US30 log return / its prior120return sampleSD", "latest US100 log return / its prior120return sampleSD", "latest US500 log return / its prior120return sampleSD", "latest relative return / prior120relative sampleSD (exact original Cross feature)", "sum latest4US100 returns / (2*prior120US100 sampleSD)", "sum latest4relative returns / (2*prior120relative sampleSD)", "sin(2*pi*forecast server hour/24)", "cos(2*pi*forecast server hour/24)"],
+    "transform": "Train-only mean/std of eight features, std floor1e-6, clip standardized[-6,6], prepend constant1. No future normalization or hour selection."
+  },
+  "fit": {
+    "period": "2024 all valid hourly forecasts whose label end is strictly before2025-01-01",
+    "method": "One regularized linear least-squares fit on labels clipped[-3,3], raw labels retained. A=X.T*X+diag(1,100,100,100,100,100,100,100,100); initial w=solve(A,X.T*y), P=inverse(A). No hyperparameter/model/feature search.",
+    "onnx": "Fresh float32 MatMul(features[1,9],dynamic weights[9,1])->prediction[1,1], IR8/opset17. Normalization and linear state are owned by producer/EA; graph inference used for both roles.",
+    "reference": "2024 raw-label mean constant, scored on identical raw2025labels. No closed model or native observational weight seed."
+  },
+  "online": {
+    "initial": "Same frozen2024 w/P/normalization. Begin2025with empty pending queue; no2024late label state adopted.",
+    "update": "At every valid new H1 forecast consume pending complete labels only if end<current forecast-barT, oldest first. k=P*x/(1+x.T*P*x); w=w+k*(clip(y,-3,3)-w.T*x); P=P-k*(x.T*P). Forgetting factor1.0, no resets or tuning. Record stored-entry prediction loss separately from update-time residual.",
+    "causality": "Store x/prediction/label-window bound at prediction. No same-hour-end label benefits that forecast, no candidate trade outcome needed. Online state does not modify other components or risk. Missing inference records a fault and abstains this new Cross decision; incomplete labels never erase forecasts."
+  },
+  "signal": {
+    "hurdle": "Forecast price move=last completed US100 H1 close*expm1(rawprediction*2*prior120US100SD). Trade sign only if absolute forecast move exceeds2*max(0.01,final completed M1 spread*0.01); otherwise abstain. This uses past information only. Original native quote/session/protection/admission still applies.",
+    "reference": "Same daily opportunities with exact original relative-z direction and abs(z)>=0.5 threshold.",
+    "quote_selection": "For each active intent score direction*(future final bid close-entry reference bid close)-2*max(0.01,past spread*0.01,future final spread*0.01), divided by the entry reference close. Report all results in quote basis points, never dollars, compounded wealth or native DD. This is an approximate spread charge; no margin, stop, tick-order fill, financing or portfolio admission is simulated."
+  },
+  "selection": {
+    "period": "2025 complete hourly forecasts; daily17:00 original-calendar intentions and both half-years",
+    "gates": ["All-hour raw MSE<=1.02 times train-mean constant MSE", "Complete daily quote-score sum strictly positive and strictly better than original Cross direction reference on identical available-label opportunities", "Both daily quote-score half-years strictly positive", "Daily intentions>=50%of original source intentions and at least25 complete intentions", "At least5%of all daily opportunities change direction/abstention"],
+    "ranking": "Highest complete daily quote-score among qualifying roles; static on exact tie. At most one survivor. Missing label populations and temporal coverage must remain explicit; apparent gains on selective availability cannot justify native opening.",
+    "close": "If neither qualifies, freeze both together without adjacent feature,model,ridge,forgetting,hour,hurdle,symbol,horizon or subgroup rescue. No native/candidate2026 output is opened."
+  },
+  "conditional_native": {
+    "interval": "2025-01-01 through2026-09-01 exclusive. Selection2025, untouched candidate January-June2026 confirmation and July-August2026 latest slices. Freeze one survivor before opening any candidate2026 numeric field.",
+    "method": "Fresh self-contained physical exact control and one survivor from frozen original V7R; own tester-only identities, Magic, state, Include and output. Dedicated physical Optimization Portable,100USD,1:100,US30M30assembly,Model4,all three symbols,100%real ticks,local only,normal shutdown. Preserve source/model/EX5/SET/platform/all exercised warmup and history/whole symbols DB and native contracts/swaps unchanged before/between/after an adjacent full pair. Environment/engineering faults are correction states without a retry cap.",
+    "gates": "Stronger whole-portfolio actual and stressed net (nominal stressed gain>=5%), nominal native equityDD<=adjacent exact control. Effective ceiling=min(controlDD+1.5pp,controlDD*1.10) needs better growth/recovery/temporal evidence. Every2025half,Jan-Jun2026,Jul-Aug2026 retains positive actual/stressed net. Full wealth/equity/lot/turnover/cost/learning evidence required, no proxy proof or Live promotion.",
+    "initialization": "Original V7 portfolio starts fresh as control. Learner initializes2024fit, processes every valid H1 from2025start causally; pending labels and covariances are owned and bounded, strict label-end<forecastbar rule retained."
+  },
+  "storage": {"minimum_free_gib": 30, "initial_cap_mib": 384, "conditional_native_cap_gib": 8, "per_run_learning_trace_mib": 16},
+  "prohibitions": ["Live writes/process actions or broker context queries", "External economic datasets", "Closed candidate executable or selected model import", "Parallel candidate judgment", "Tests,validators,parity or promotion checkers,test CLIs or CI"]
+}
