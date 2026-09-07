@@ -1,0 +1,231 @@
+{
+  "utc": "2026-09-07T08:24:45.921431+00:00",
+  "status": "COMPLETE_FIXED_CASH_STATIC_ONLINE_INVENTORY_SELECTION_ONLY",
+  "survivor": null,
+  "fit_passes": 20,
+  "fit_forecasts": 124260,
+  "fit_updates": 123600,
+  "cash_reference": {
+    "actual_wealth": 100,
+    "stress_wealth": 100,
+    "trades": 0
+  },
+  "roles": {
+    "static": {
+      "trades": 1811,
+      "actual": 25.77519999999735,
+      "stress": 2.56019999999736,
+      "actual_wealth": 125.77519999999701,
+      "stress_wealth": 102.5601999999972,
+      "halves": {
+        "2025-H1": {
+          "trades": 993,
+          "actual": 26.641199999991805,
+          "stress": 13.431199999991811
+        },
+        "2025-H2": {
+          "trades": 818,
+          "actual": -0.8659999999944532,
+          "stress": -10.870999999994451
+        }
+      },
+      "actual_equity_bound_relativeDD": 33.7209210592094,
+      "stress_equity_bound_relativeDD": 38.174955160756504,
+      "minimum_actual_bound": 75.612299999994,
+      "minimum_stress_bound": 68.90629999999413,
+      "ruined": false,
+      "refusals": {},
+      "forced_carry_dates": 6,
+      "forecasts": 6166,
+      "updates": 0,
+      "matured": 6164,
+      "transitions": 6166,
+      "pending": 2,
+      "replay_count": 4096,
+      "mean_learning_loss": 0.0,
+      "gates": {
+        "actual_exceeds_original127_89": false,
+        "stress_exceeds_1_05x118_609": false,
+        "both_halves_positive": false,
+        "atleast100_trades": true,
+        "atleast25_each_half": true,
+        "actual_equity_bound_DD20": false,
+        "no_ruin": true,
+        "complete_flat": true
+      }
+    },
+    "online": {
+      "trades": 32,
+      "actual": -10.770500000000538,
+      "stress": -11.138500000000539,
+      "actual_wealth": 89.22949999999945,
+      "stress_wealth": 88.86149999999947,
+      "halves": {
+        "2025-H1": {
+          "trades": 32,
+          "actual": -10.770500000000538,
+          "stress": -11.138500000000539
+        },
+        "2025-H2": {
+          "trades": 0,
+          "actual": 0,
+          "stress": 0
+        }
+      },
+      "actual_equity_bound_relativeDD": 13.369415187030821,
+      "stress_equity_bound_relativeDD": 13.685705941462015,
+      "minimum_actual_bound": 87.55449999999945,
+      "minimum_stress_bound": 87.18649999999947,
+      "ruined": false,
+      "refusals": {},
+      "forced_carry_dates": 6,
+      "forecasts": 6166,
+      "updates": 6133,
+      "matured": 6164,
+      "transitions": 6166,
+      "pending": 2,
+      "replay_count": 4096,
+      "mean_learning_loss": 0.0027748862329195884,
+      "gates": {
+        "actual_exceeds_original127_89": false,
+        "stress_exceeds_1_05x118_609": false,
+        "both_halves_positive": false,
+        "atleast100_trades": false,
+        "atleast25_each_half": false,
+        "actual_equity_bound_DD20": true,
+        "no_ruin": true,
+        "complete_flat": true
+      }
+    }
+  },
+  "calendar2025": {
+    "MISSING_PREFIX": 2590,
+    "READY": 6166,
+    "NO_CURRENT_QUOTE": 4
+  },
+  "files": [
+    {
+      "path": "optimization/campaigns/v7-onnx-online-inventory-q-policy-v1/models/final-online-state.json",
+      "bytes": 3680029,
+      "sha256": "FE5337A2DDB259EBB1F45E27514138D5C7B1D9735EB8D19C81ACD5A11E19DE95"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-inventory-q-policy-v1/models/final-static-state.json",
+      "bytes": 3852815,
+      "sha256": "5ED40A4CC8CD76BB818AB24A087FDAAFD8BC051A495B711C311613A50E253C8F"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-inventory-q-policy-v1/models/initial-trained-state.json",
+      "bytes": 3790826,
+      "sha256": "3E95DA045191A456E7CCAB765D94B7B00C490378A3A2E36A9B1C8C066459250D"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-inventory-q-policy-v1/models/inventory-action-values.onnx",
+      "bytes": 288,
+      "sha256": "01BB2D7D64A4BDC6FFB92BE14487FCC2B601B5033D4B568BA1FCFB10BD50CE5A"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-inventory-q-policy-v1/models/market-normalization.json",
+      "bytes": 473,
+      "sha256": "8BB43A40EFD73700C6E80A2F46056C166CA0666AD8A89CF784A17A58929F4F44"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-inventory-q-policy-v1/models/untrained-parameters.json",
+      "bytes": 16478,
+      "sha256": "3546D1E41E8C306D2E6E0C28999FB66E7E13CDEE0A17460BC44255EDAFD5AD30"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/calendar-grids.csv",
+      "bytes": 837990,
+      "sha256": "D3F9CC20A1C4C737F27A5343CB7CAAF4CA1711950CD547F17187BB57EE46B5A6"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/online-calendar-accounts.json",
+      "bytes": 90238,
+      "sha256": "6DB7E61E311D8CFCEAF652163D4095DD386707BC92761BBEA51F7623891316F5"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/online-decisions.csv.gz",
+      "bytes": 660157,
+      "sha256": "D603261502593CCF6201C9F7006C91B60E58289F0C670CB72ECE33BAB37306B1"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/online-equity-bounds.csv.gz",
+      "bytes": 1031196,
+      "sha256": "54733A94AAF815021A99FA0DB6D5DBDB5382274C61E3E1FB0563547403648507"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/online-inference-weights.npz",
+      "bytes": 4687708,
+      "sha256": "CE1A38CD291DEF1EB3F74BFFA54AC04C64723636EBE21ABC9CA0EDC094E9965D"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/online-learning.csv.gz",
+      "bytes": 521938,
+      "sha256": "B6FC2FD99E81156B367A530D31B4AC87F4D8A0F28EF6BE6DA78E40192A8366E1"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/online-trades.csv.gz",
+      "bytes": 1923,
+      "sha256": "26A1F81157DA241D82BCC995D5570EBDEC9B01C1A50EF07F87A51F702093BF62"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/online-transitions.csv.gz",
+      "bytes": 575935,
+      "sha256": "922BBB9EA42DBCAC44D10264ED4F0064D81F99F0C5D29188CC5A69AC0A96EEA9"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/static-calendar-accounts.json",
+      "bytes": 98330,
+      "sha256": "561969DEA837AB676A2E0E42838DD5FE7C727ED4E1BCF50E1BB48BFE80C97926"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/static-decisions.csv.gz",
+      "bytes": 765546,
+      "sha256": "1621C7A6D51EFA026E34B5FFAECD4FFD48E458F4B28386D91623ECF121CFFED1"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/static-equity-bounds.csv.gz",
+      "bytes": 2897299,
+      "sha256": "F0DA7C688C757A104F5CDE8F001B77F6642A9619696C98714C4CF0083BBD95E9"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/static-learning.csv.gz",
+      "bytes": 106,
+      "sha256": "A51E77499B01C08651F8F43A14C8419C4614F808086A052EB1E0BCD3FF915F29"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/static-trades.csv.gz",
+      "bytes": 89516,
+      "sha256": "DE9F9636360F14E4E91E8612DF8564FC1EB0662A19F84552F32D1137B181BF3A"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/static-transitions.csv.gz",
+      "bytes": 686044,
+      "sha256": "8E9D5994C7C9E1944962E7B1F80D8AECAFE7AAD22A70B37F2C9E6E72187D8FB1"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/training-decisions.csv.gz",
+      "bytes": 16327034,
+      "sha256": "873133A38815B3DD31DF327E1C3182675F0BE024CAE0D864C4AD2ABEC161D2CF"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/training-learning.csv.gz",
+      "bytes": 10928694,
+      "sha256": "2EE5C1492C6236C4D7E83DA6F87B19E0BD4942FE9E2CA34692C95852E46EC806"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/training-trades.csv.gz",
+      "bytes": 973048,
+      "sha256": "3F7A2B670480E15E0C1BAAC5F1CABB9335E958408C1FC479DCEB7DF7836C6B28"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-inventory-q-policy-v1/selection-v1/training-transitions.csv.gz",
+      "bytes": 14016834,
+      "sha256": "BB292B69BA9BF7383478C3469AC65D4911CCDBA348E84AC0BD752C0D95FEFF3F"
+    }
+  ],
+  "free_bytes": 45082128384,
+  "live_changes": false,
+  "scope": "Continuous100USDfixed0.01M1quote simulator with conservativeOHLCequitybounds; not actualbrokercommission/financing/margin/tickordering/lotcompounding/nativeequityDD authority."
+}

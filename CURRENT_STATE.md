@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0637`
+- Latest state ID: `STATE-0638`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Currentuser task: continue serial V7ONNX/online development until userpause, actualcompounding/comparableDD,Liveuntouched,30GiBfree. Winner-pyramid closurea54ee3e is atorigin/main; it has no seed despite positiveonlineproxy. Whole-map comparison selects one Program5family optimization/campaigns/v7-onnx-online-inventory-q-policy-v1: rebuild allsix candidate entrylaws as oneUS30long/flat/shortbook, with stateful action-value learning, originalfull4%/12%/45%caps andimmutableinitialSL. ProspectiveCASH/STATIC/ONLINEbundle freezes14->32->3ONNX, DoubleDQN20whole2024passes, strictmaturetransition replay/SGD,08..20session, full2025simulatorgates andmandatoryadjacentnative2025-Aug2026gates. Own US30input762379M1rows and2222originalcontrol lifecycle rows copied, about47.4MB; normal compilation and fullsource/input SHA freeze precede firstfeatures/fit/outcomes. No2026candidate/newruntime yet. This isnot a child,weight,subset or oldsignalrescue; all13predecessorsremainclosed. About42GiBfree; Liveandbaselineunchanged.
+Currentuser task: continue serial V7ONNX/online development until userpause; actualcompounding/comparableDD,Liveuntouched,30GiBfree. Inventory-Qthree-rolebundle CLOSED withoutsurvivor/seed. Exactly20fitpasses/124260forecasts/123600updatescomplete. Whole2025STATIC1811trades,actual25.7752/stress2.5602,M1actualDDbound33.7209%;ONLINE32trades,-10.7705/-11.1385,DDbound13.3694%,H2zero. Both failoriginalcontribution/half andothergates. Each6166forecasts/transitions/6164mature plus2pending; all8760grids retained. Input/source unchanged, numericallearningnormal; trainingprofitnotselection. Delayed20:00quote dates andactualcarriedpositions are separatelydocumented. No2026candidate,newEA/runtime/nativeverdict orLiveaction. FourteenV7bundlesclosed; improvednativecompoundingstillunestablished. Whole-programcomparison precedes anotherdistinctunit. About42GiBfree.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
