@@ -17,6 +17,13 @@ def digest(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest().upper()
 
 
+def native_time(value):
+    # MQL datetime-to-string preserves the native server-wall label. UTC here
+    # only encodes that unshifted calendar label as the same scalar clock used
+    # for period boundaries; it does not assert a physical UTC bridge.
+    return int(datetime.strptime(value, '%Y.%m.%d %H:%M:%S').replace(tzinfo=timezone.utc).timestamp())
+
+
 def fit():
     result_path = FAMILY / 'evidence/INITIAL_CAUSAL_FIT_V1.json'
     if result_path.exists():
@@ -42,7 +49,7 @@ def fit():
         with labels_path.open(encoding='utf-8-sig', newline='') as stream:
             labels = list(csv.DictReader(stream))
         for label in labels:
-            available = int(label['available'])
+            available = native_time(label['available'])
             if available >= limit:
                 continue
             row = decisions[int(label['id'])]
@@ -51,11 +58,12 @@ def fit():
                 raise RuntimeError('Native context schema')
             action = int(row['action'])
             propensity = float(row['propensity'])
-            if action not in (0, 1) or propensity != .5 or available <= int(row['decision']):
+            decision = native_time(row['decision'])
+            if action not in (0, 1) or propensity != .5 or available <= decision:
                 raise RuntimeError('Native treatment/availability contract')
             component = int(np.argmax(raw[:5]))
             counts[component, action] += 1
-            samples.append(dict(episode=episode, id=int(row['id']), decision=int(row['decision']),
+            samples.append(dict(episode=episode, id=int(row['id']), decision=decision,
                                 available=available, action=action, propensity=propensity,
                                 reward=float(label['reward']), raw=raw.tolist()))
     if len(samples) < 512 or np.min(counts) < 32:

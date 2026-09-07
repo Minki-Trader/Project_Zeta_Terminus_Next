@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-07T10:57:30.191649+00:00",
+  "status": "PRE_FIT_PRODUCER_FORMAT_CORRECTION_NO_NATIVE_ECONOMIC_CHANGE",
+  "observed": "The first own native training posterior stores MQL datetime as YYYY.MM.DD HH:MM:SS, including1970.01.01 00:00:00 for zero. The unexecuted fit producer had expected decimal int strings.",
+  "before": {
+    "path": "optimization/campaigns/v7-native-onnx-causal-admission-v1/fit_causal_model.py",
+    "bytes": 5988,
+    "sha256": "9C05964796A32855DCAC77E506C1B2EEBC5CB717291B74D22EC9550F4C8A18C9"
+  },
+  "before_git": "91a1bd2276947eedef0a217862336e921288c796",
+  "after": {
+    "path": "optimization/campaigns/v7-native-onnx-causal-admission-v1/fit_causal_model.py",
+    "bytes": 6381,
+    "sha256": "8CB22790B89CEEAD339028825811CF2A467EFDB6CC07C573F007B54F94E4CBD3"
+  },
+  "change": "Parse the exact native calendar format and encode the unshifted raw server-wall scalar. No timezone offset, time shift, period, availability rule, label, treatment, model or math changes.",
+  "phase": "Trajectory01 is running unchanged. This Python consumer has never fit data and is not executed by the EA. Native source/EX5/SET/history/decision production remains exactly frozen.",
+  "live_changes": false
+}

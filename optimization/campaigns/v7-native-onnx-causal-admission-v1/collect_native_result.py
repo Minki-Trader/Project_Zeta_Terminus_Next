@@ -128,8 +128,16 @@ def summarize(run_tag, report_name):
     reasons = []
     if len(native_lines) != 1 or len(core_lines) != 1 or len(causal_lines) != 1:
         reasons.append('Native/core/learning completion summaries are not unique and complete')
-    if not quality or not any('100%' in v and ('실제' in v or 'real' in v.lower()) for v in quality):
-        reasons.append('The native report does not establish 100% real ticks')
+    quality_100 = bool(quality) and all(re.search(r'^100%\s', v) and ('실제' in v or 'real' in v.lower()) for v in quality)
+    quality_99 = bool(quality) and all(re.search(r'^99%\s', v) and ('실제' in v or 'real' in v.lower()) for v in quality)
+    quality_authority = None
+    if not quality_100:
+        authority_path = FAMILY / 'evidence/TRAINING_HISTORY_USER_AUTHORIZATION_V1.json'
+        authority = json.loads(authority_path.read_text(encoding='utf-8')) if authority_path.is_file() else {}
+        if quality_99 and authority.get('status') == 'USER_AUTHORIZED_2024_TRAINING_ONLY_99_PERCENT' and authority.get('campaign') == FAMILY.relative_to(ROOT).as_posix():
+            quality_authority = record(authority_path)
+        else:
+            reasons.append('The native report does not establish the authorized training real-tick quality')
     contracts = defaultdict(dict)
     for line in episode_text.splitlines():
         if 'V7CA_CONTRACT stage=' not in line:
@@ -180,9 +188,10 @@ def summarize(run_tag, report_name):
             if abs(sum(float(v['actual_net_usd']) for v in closes) - actual) > 1e-5 or abs(sum(float(v['stressed_net_usd']) for v in closes) - stress) > 1e-5:
                 reasons.append('Full lifecycle economics do not match core totals')
     outcome = dict(utc=datetime.now(timezone.utc).isoformat(),
-                   status='COMPLETE_NATIVE_ECONOMIC_RUN_REQUIRES_MATRIX_INPUT_BINDING' if not reasons else 'CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT',
+                   status='COMPLETE_NATIVE_TRAINING_RUN_REQUIRES_MATRIX_INPUT_BINDING' if not reasons else 'CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT',
                    role=role, run_tag=run_tag, reasons=reasons, economics=economic,
                    native_learning=learning, epochs=epochs, contracts=dict(contracts),
+                   original_100_percent_quality_pass=bool(quality_100), training_quality_exception=quality_authority,
                    report_labels=dict(summary_labels), source_agent_log=origin_log,
                    archived_files=[record(p) for p in sorted(destination.rglob('*')) if p.is_file()],
                    scope='One whole native training run. No seed is selected and no improvement is claimed; all eight fixed episodes and the unchanged matrix input are required before fitting.',

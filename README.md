@@ -17,7 +17,7 @@ Read, in order:
 
 ## Working surfaces
 
-Current development is isolated V7 ONNX/online-learning compound-growth work in Optimization. Three economic bundles are closed without survivors; a native ONNX/online engine now operates with exact original V7 economics retained, without an ML profit-improvement claim. CURRENT_STATE names the current serial step. Work uses existing V7 information, preserves Live-Dev, retains at least 30 GiB free and continues until a user pause. The independent V8 Challenge stays paused; current trading authority remains only in CURRENT_STATE.
+Current development improves the existing V7 with ONNX and online learning, using its frozen original economics as the control. The current native causal-admission work trains on original V7 intentions and subsequent whole-account outcomes; it is not an independent-strategy objective. The separate Optimization runtime protects Live-Dev. The user permits disclosed 99% real-tick 2024 data only for the fixed training matrix; final selection and confirmation retain 100% real ticks and the original compound-growth, DD and recovery requirements. CURRENT_STATE names the current serial step. Use existing V7 information, preserve Live-Dev, retain at least 30 GiB free and continue until a user pause. The independent V8 Challenge stays paused; current trading authority remains only in CURRENT_STATE.
 
 - `live-dev/`: frozen release packages and Next-only operator tooling. It never imports Lab code.
 - `optimization/`: independent Live-derived parameter/economic optimization campaigns with their own source identity, Portable and evidence. It never uses the Master terminal.

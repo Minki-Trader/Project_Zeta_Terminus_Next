@@ -125,6 +125,8 @@ Exact external-session raw-time authority remains unresolved. MetaQuotes API doc
 
 ## Authority boundary
 
+The latest user clarification accepts the active causal-admission family's 2024 training-only99%real-tick proposal and requires carrying existing V7 improvement through completion. Final2025selection and2025-August2026confirmation retain100%real ticks and all original economic/causal/input gates. Physical separation protects Live; it does not create an independent-strategy objective. The exact decision is `optimization/campaigns/v7-native-onnx-causal-admission-v1/evidence/TRAINING_HISTORY_USER_AUTHORIZATION_V1.json`. Historical failures/closures remain attributable and the unrelated closed-pyramid exception is not approved.
+
 Latest 2026-09-07 user direction resumes development specifically from existing V7, using ONNX/online learning and internal EA/MQH information for compound growth with comparable DD. The isolated Optimization campaign and new exact-V7R baseline named in CURRENT_STATE own this work; V8 Challenge stays paused and FRBSF remains permanently cancelled. All of Live-Dev and its direct-user 1/1 activation are preserved. Older pause/benchmark paragraphs below remain historical context; the latest scoped Operating Direction governs.
 
 On 2026-09-07 the user permanently cancelled `lab/research/frbsf-news-sentiment-publication-readiness-v1/`, including future resumption. Its declaration and documentary metadata remain cancelled history; source-readiness and economic judgments are null. The broader Goal remains paused. A separate user-operated V7R activation reached fresh 0/0 but stopped at the unchanged market gate before Live; exact outcome, correction and entries-disabled recovery belong to CURRENT_STATE and Live evidence.

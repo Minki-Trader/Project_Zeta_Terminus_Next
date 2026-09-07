@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0648`
+- Latest state ID: `STATE-0652`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-The V7 task remains active without a user pause. The sole family is Program 7 optimization/campaigns/v7-native-onnx-causal-admission-v1. The user's follow-up resolved the Tester restart: ordinary launches succeeded. A path-only fix restored complete native research logging, and the latest full 2024 control finished with 554 matched closed lifecycles and zero missing or partial records and zero trading or learning faults. Its report still says 99% real ticks after attributable canonical cache reconstruction. All 167 source/native bindings and all three complete M1 snapshots matched through the completed run; subsequent README and continuity updates are documentation only and need fresh phase metadata before another trajectory. The original 100% criterion therefore remains unmet; the full result is preserved and no ML training or economic victory is claimed. A concrete proposal asks permission to use this 2024 input only for training while retaining 100% for final 2025 selection and 2025-August 2026 confirmation. No answer or exception is inferred. All own processes are normally stopped, all eight training episodes and learned fit remain unopened, and all 15 predecessors remain closed. The separate pyramid exception also stays unapproved. Preserve Live PID 28324 and its authority/files, about 38.1 GiB free. Evidence: NATIVE_CONTROL_COMPLETE_TRAINING_QUALITY_PENDING_V1.json and TRAINING_HISTORY_EXCEPTION_PROPOSAL_V1.json. Do not launch dependent training until the quality boundary is resolved.
+The user-authorized task improves existing V7 through ONNX and online learning; physical Optimization isolation protects Live and is not an independent-strategy objective. Sole Program7 family: optimization/campaigns/v7-native-onnx-causal-admission-v1. All eight fixed full2024 native trajectories completed under the explicit training-only99%history exception, yielding3288intentions/3280mature24haccount labels/8preservedpending, with complete zero-fault/flat native and identical input/contract evidence. One fixed ridge baseline/effect fit is complete; all five engines exceed32observations in each treatment. Fitted learner compiles0errors0warnings; control remains exact originalV7. POLICY_SELECTION_NATIVE_FREEZE_V1 now pins source/model/SET/build/160native files and full2024warmup+2025M1data before full2025control/static/online selection. All native processes are stopped; selection starts after this substantial training/implementation phase reaches main/origin. Final quality remains100% and all original growth/stress/DD/recovery/epoch gates remain. No candidate2026input, finalist or economic improvement yet. Preserve LivePID28324/authority/files and30GiB reserve; free about36.5GiB. All15predecessors remain closed and separate pyramid exception is unapproved.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
