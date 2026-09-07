@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-07",
+  "status": "PROSPECTIVE_BEFORE_NEW_PRICE_FEATURES_FIT_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-continuation-exit-v1",
+  "comparison_authority": "optimization/evidence/V7_ML_POST_ENTRY_RISK_MECHANISM_COMPARE_V1.json",
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "primary_mechanism": "One optional learned early close from in-position price continuation at half original maximum hold",
+  "roles": ["EXACT_V7_HOLD_CONTROL", "ONNX_CONTINUATION_EXIT", "ONNX_ONLINE_CONTINUATION_EXIT"],
+  "single_stream": true,
+  "sources": [
+    {"name": "lifecycles", "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv", "sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B"},
+    {"name": "US30", "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US30-M1.npy", "sha256": "B56FAF1B495504A48DF982B91EB2EBF390A8B258E1F2864C6F0A3444A9446586"},
+    {"name": "US100", "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US100-M1.npy", "sha256": "EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B"}
+  ],
+  "input_authority": [
+    "lab/engineering/v7-rlo1-return-requalification-v1/evidence/NATIVE_ECONOMIC_RESULTS_V1.json",
+    "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/M1_INPUT_MANIFEST.json",
+    "lab/engineering/v7-rlo1-return-requalification-v1/evidence/LONG_M1_ADJACENT_BOUNDARY_V1.json",
+    "lab/engineering/v7-rlo1-return-requalification-v1/evidence/LONG_M1_END_BOUNDARY_V1.json"
+  ],
+  "input_rules": {
+    "copy": "Physically copy own lifecycle tape. For M1, inspect raw time field only to slice 2023-12-01 <= time <2026-01-01 before copying any price rows. Full source hashes checked before/after. Confirmation slice only for one survivor.",
+    "clock": "Native unshifted broker-server epochs and calendar labels; never asserted physical UTC and never converted to external session time.",
+    "dtype": "Packed little-endian NPY records, 60 bytes: time i8; open/high/low/close f8; tick_volume u8; spread i4; real_volume u8",
+    "contract": "Existing verified US30/US100 USD unit contract and 0.01 price point. M1 spread is representative, not the actual first-tick spread certificate.",
+    "external_economic_data": false,
+    "old_candidate_code_or_models": false
+  },
+  "periods": {
+    "fit": "2024 decision and fixed label availability strictly before 2025-01-01",
+    "selection": "2025 entries and complete native control closes before 2026-01-01; retain and disclose any censored entry",
+    "confirmation": "One unchanged selected role, 2026-01-01 through 2026-07-01 exclusive; no retuning",
+    "native_long": "2025-01-01 through 2026-07-01 exclusive, adjacent exact V7 and unchanged survivor, $100, 1:100, complete all-symbol real ticks",
+    "native_recent": "Conditional supportive-long July-August 2026 adjacent unchanged pair",
+    "prior_exposure": "Original V7 aggregates and the earlier different 2025 entry-risk selection are known. No globally pristine period claim. New in-position features/labels and 2026 candidate results remain unopened at declaration."
+  },
+  "decision": {
+    "component_order": ["RC16_LONG", "RC4_BOTH", "US100_CROSS", "US30_PRESSURE", "US30_RETURN_REV_LONG", "US100_PASSIVE_LIMIT"],
+    "half_hold_seconds": [7200, 10800, 7200, 7200, 10800, 7200],
+    "checkpoint": "ceil((actual entry server second + declared half hold seconds)/60)*60; one decision only if own position is still open. Original protective/mandatory exits take precedence. A position already closed is not eligible.",
+    "prefix": "Require 121 consecutive completed M1 rows through checkpoint-60. Missing prefix preserves HOLD and the full original trade in economics; do not thin dates or lifecycles.",
+    "features": "14 columns: six component one-hot; direction; current directional mark/entry risk; directional 30-M1 and 120-M1 exit-side quote changes/entry risk; prior-30 high-low range/entry risk; sqrt(30)*population std of 30 close changes/entry risk; sign(entry_feature)*log1p(abs(entry_feature)); current representative spread/entry risk. Per-unit entry risk is original planned USD risk divided by entry volume and unit contract.",
+    "exit_rule": "Close only if predicted directional next-30-minute quote change in R is below -(current spread in R +0.02R). No threshold search.",
+    "native_freshness": "Only within unchanged two-minute decision delay and three-second executable quote freshness; unresolved protection/order/recovery always wins. Missing model/state blocks new optional exit decisions and invalidates engineering evidence, never disables original protective exits."
+  },
+  "model": {
+    "target": "Directional exit-side quote at checkpoint+29 minutes close minus exit-side quote at checkpoint-1 minute close, divided by original per-unit entry risk; label known at checkpoint+30 minutes. Clip [-1,1] only for fitting/online updates, not economic accounting.",
+    "architecture": "14 inputs, 16 tanh hidden units, one linear output, float32 standard tensor ONNX graph",
+    "fit": "Fit-only mean/population std, constant scale 1, standardized feature clip [-5,5]; sklearn MLPRegressor solver lbfgs, alpha10, max_iter1000, tol1e-8, random_state70907. No validation-driven fit or hyperparameter search.",
+    "minimum_fit_labels": 100,
+    "online": "Per-component EMA residual around frozen ONNX prediction, learning rate0.03, bias clip[-0.25,0.25]R. Only labels whose fixed availability time is strictly earlier than decision are applied. Labels are observed even after an optional close. Missing future quote prevents that label update but never retroactively deletes its decision or trade.",
+    "native_label_state": "Persist model identity, pending fixed-horizon quote labels, biases and updates in own tester namespace. Never use Live/retired state or future quote availability for decision admission."
+  },
+  "proxy_economics": {
+    "control": "All source native V7 lifecycles at source volume, actual/stressed net, original occupancy. No new trades or freed-capacity credit.",
+    "early_close": "Use checkpoint M1 opening bid for LONG, bid plus that M1 spread for SHORT only after the model decision. If opening quote absent, retain original HOLD. Apply negative original total non-price cost without giving credit for avoided financing; remove positive original non-price credits. Apply stress debit max(original extra debit, current representative full spread*volume plus twice retained negative non-price cost). Source slippage uncertainty is retained via original total debit.",
+    "same_minute": "The original native close at/before checkpoint takes precedence. M1 opening quotes and intraminute availability are proxy assumptions; only native execution can resolve them.",
+    "selection_metrics": "Complete actual/stressed fixed-volume sums, all calendar halves, all original lifecycle counts, early-close counts, closed-balance DD and mean per-lifecycle delta. No native equity DD or compounding claim.",
+    "eligibility": "Actual and stressed sum each exceed source control, each half positive actual/stressed, at least20 early closes pooled and5 per half, closed-balance DD <=1.10*source control, every original trade retained.",
+    "select": "At most one unchanged eligible role; highest stressed gain, exact tie prefers online. No alternate finalist after confirmation. Both fail closes the bundle without an adjacent horizon/checkpoint/feature/model/threshold/exit rescue."
+  },
+  "native": {
+    "source": "One-time own exact baseline copy after survivor; new tester-only identities and physical runtime. Keep original entries, sizing, protection, risk4%/12%, margin45%, all original exits, and Passive sizing. Add only declared optional early close and internal model/update state.",
+    "authority": "Only complete same-fingerprint adjacent native real ticks can establish higher actual/stressed wealth and geometric growth, positive epochs, robust recovery and native equity DD nominal<=control, effective<=min(control+1.5pp,control*1.10). Disclose tolerance and monthly/lot paths; no guaranteed hockey stick.",
+    "no_live_promotion_or_write": true
+  },
+  "storage": {"maximum_incremental_gib": 10, "minimum_free_gib": 30, "input_and_results_first_stage_max_mib": 512},
+  "verification": "Normal Python/MetaEditor compilation and ordinary complete production/native runs only; no tests, validators, parity checkers, promotion checks, CI or reusable test-only CLI"
+}
