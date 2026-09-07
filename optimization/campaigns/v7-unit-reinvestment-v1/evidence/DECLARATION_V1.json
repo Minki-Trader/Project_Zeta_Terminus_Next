@@ -1,0 +1,72 @@
+{
+  "utc": "2026-09-07T12:06:17.682716+00:00",
+  "status": "PROSPECTIVE_BEFORE_OWN_SOURCE_RUNTIME_OR_CANDIDATE_OUTCOME",
+  "campaign": "optimization/campaigns/v7-unit-reinvestment-v1",
+  "primary_program": 5,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "comparison": {
+    "path": "optimization/evidence/V7_ML_POST_CAUSAL_CAPITAL_MECHANISM_COMPARE_V1.json",
+    "bytes": 2707,
+    "sha256": "215F2C062CDF2E22EA0BA83032C23E9ED86B1AB663A14A375F05D13FE6EBA7DF"
+  },
+  "feasibility": {
+    "path": "optimization/evidence/V7_UNIT_REINVESTMENT_SOURCE_FEASIBILITY_V1.json",
+    "bytes": 2947,
+    "sha256": "6D12E97B50EB90625A65BD403AA7D9FFA7E9B4FAEBED4B01EAE133F758F0DD93"
+  },
+  "bundle": [
+    "EXACT_V7_CONTROL",
+    "WHOLE_V7_UNIT_REINVESTMENT"
+  ],
+  "objective": "Improve actual and conservative doubled-cost wealth through reinvestment of the existing six-engine V7, while keeping DD comparable. No independent signals/strategy.",
+  "mechanism": {
+    "clock": "Keep original UpdateSizingDay server-midnight dispatch. The candidate day multiplier q=max(1,floor(ConservativeRiskCapital()/100+1e-9)) is set once per native day and persisted. No deposits, equity resets or intraday favorable selection.",
+    "volume": "All five market engines and original Passive request0.01*q, rounded on the original legal broker volume lattice. No ceiling-to-illegal-quantity fallback; original min/max/risk/margin still govern. Passive pending volume is persisted at original order intention, carried through actual fills/reconciliation and is not recalculated when the day changes.",
+    "protective_geometry": "At an actual new order with volume V, define unit_notional=100*(V/0.01). Candidate position_budget=.04*min(currentConservativeRiskCapital,unit_notional). Original grossSLsearch uses budget*(1-.25-.25); exact legal ticks/minimumdistance/order-price constraints remain. Thus capital above funded whole units is held as cash instead of widening the unit initialSL, while capital below funded units tightens under the original cap. No existingSL is widened or reset.",
+    "risk": "Reserve the entire declared candidate position_budget before entry and throughout that lifecycle (including pendingPassive), not just calculated bufferedSLrisk. Original actual current4%perposition maximum,12%aggregate and45%margin ceilings remain; no portfolio leverage-cap expansion. Original close partial-risk proportional accounting stays.",
+    "preserved": "All six original features,signal thresholds,days,timestamps,directions,order kinds/prices,hold/mandatoryexits,Passiveoffset/expiry,state exits,RC4ARC/shadow,execution ordering,ownership/protection andaccounting. Only whole-V7quantity and initial budget/geometry denomination change.",
+    "reference_values": "100referencecapital,0.01basevolume,4%/12%/45% and25%reserve/25%headroom are inherited; no fitted/tuned numerical policy. No learned model oronlineparameter fit in this bounded mechanical family. Previous actualONNX/online implementation remains immutable evidence, not executable source here."
+  },
+  "identity": {
+    "source": "Copy frozen parent once to own parent; derive two separate own Include/Experts/Presets trees. No cross-family includes/links, no closedEA/model/state import.",
+    "control": "ZetaV7UIControl,Magic260901921..926,schema7UI1C",
+    "candidate": "ZetaV7UIReinvest,Magic260901931..936,schema7UI1R",
+    "runtime": "optimization/runtime/v7-unit-reinvestment-v1-portable",
+    "namespace": "Short own identity/run-tag state,research,path namespaces. Reject non-Tester before any initialization. Reject preexisting run state/output; preserve interrupted records and use an attributable fresh correction run."
+  },
+  "periods": {
+    "fit": "None. No new2024candidate economic trajectory or retrospective model.2024native bars are lookback warmup only.",
+    "selection": "Full2025Jan1..2026Jan1exclusive,100USD1:100,exactcontrol followed immediately by one fixedunit candidate. The complete two-role bundle is frozen now.",
+    "confirmation": "Only if fixedcandidate meets complete selection, freeze it once then run one fresh adjacent exactcontrol/candidate continuous2025Jan1..2026Sep1exclusive. Same original100start; no2025terminalstate warmstart. No alternate candidate after confirmation.",
+    "known_exposure": "2025 has been used extensively for adaptive development; do not claim pristine holdout. No candidate-specific2026price/value/outcome is opened before a fixed eligible finalist."
+  },
+  "native": {
+    "contract": "Own physical Portable,US30M30assembly,allUS30/US100/US500,Model4,100%real ticks,localonly,normalshutdown. Training99%exception does not apply.",
+    "bindings": "Full source/EX5/SET/platformbuild,standardInclude,symbolDBandSTART/ENDcontract/swaps; all actually exercised monthlyticks/yearbarcontainers plus full2024warmup/periodM1 before/between/after. Drift/partial records/native faults are correction states without arbitrary retry cap, not economic failures.",
+    "neutral_inputs": "Copy only attributed platform/standardInclude/connectionconfiguration and native price caches from stopped isolated Optimization Portable(s). No oldExperts/IncludesoutsideMT5standard,models,states,logs,outputs,charts/startupautomation orprojectsettings. Source/destination native paths/hashes and ownership are recorded before copy; private connectionfiles remain ignored and contents are never printed.",
+    "evidence": "Original full birth/close/candidate ledgers and complete actual/stressed accounting, plus minute native actualequity/conservative mark/capital/lot/risk path. NativeTesterStatistics isDDauthority; no minute sample claims exhaustiveintraminuteDD. Exclude realized positive swapcredit from an additional stresswealth series; every stressimprovement gate must also pass this counterpart. Report actualfilledquantity andfundedunit/stop/reservation transitions."
+  },
+  "gates": {
+    "selection": "Actualterminalwealth/loggrowth strictly improve; original andno-positive-swapstressedprofit>=1.05*adjacentcontrol; conservativerecovery strictly improves; nominalnativeDD<=control, effective min(controlDD+1.5pp,controlDD*1.10) only withbettergrowth,recoveryandtemporal evidence. Both2025halvesactual/stresspositive; at least100closedtotal and25eachhalf,at leastone fullyclosedactualpositionwithvolume>0.01 confirms nonzero reinvestment. Completeflat/zero-fault/1:1economicrecords. No rounded-profit orproxy rescue.",
+    "confirmation": "Samefullgrowth/stress5%/recovery/DD rules;2025H1,H2,2026H1,2026JulAug allactual/conservativestresspositive;at least100fullclosed,10latestclosed,and20fullclosedpositionswithactualvolume>0.01. Retain fullmonthlylot/equity/cost history; no reset or deposit-generated curve.",
+    "recovery": "Conservative stressed net divided by max(native equity dollarDD,original stressed closed dollarDD,.01); report both denominators.",
+    "closure": "One fixedcandidate closes with control on valid economic failure. No adjacent unitreference,lotthreshold,symbol/engine subset,Passive-onlyversion,cap,reserve,stopbudget,clock,deposit,ML gating orretainedseed rescue. Recompare all activePrograms before any material successor."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "own_runtime_cap_gib": 4,
+    "own_raw_output_cap_gib": 1,
+    "source_cap_mib": 32,
+    "current_free_gib": 35.96017837524414,
+    "headroom": "Check actual neutral preparation size plus remaining run growth before every producing step. Do not begin if bounded total would violate30GiB. Preserve all canonical/hashed evidence andLive; reclaim only proveneligible ignored unreferenced duplicates if required."
+  },
+  "constraints": [
+    "One root economic/designstream; bounded factual assistants only",
+    "No test-only CLIs/tests/checkers/CI orprojectSkill",
+    "No Livefiles/process/accountcontext actions orpromotion",
+    "No external economic data",
+    "All16closed families immutable"
+  ],
+  "live_changes": false
+}

@@ -1,0 +1,41 @@
+{
+  "utc": "2026-09-07T12:06:17.609410+00:00",
+  "status": "MATERIALLY_DISTINCT_WHOLE_V7_CAPITAL_DENOMINATION_READY",
+  "primary_program": 5,
+  "source_files": [
+    {
+      "path": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh",
+      "bytes": 21330,
+      "sha256": "699CBB47455E3FB6330DD3503AE4F37D1DAA5CDD3C78BE253DAF76A181E36329"
+    },
+    {
+      "path": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Strategies/ZetaPassive.mqh",
+      "bytes": 20394,
+      "sha256": "D14805CB1AEC84658142AA6F07D1248599CD4025BBEE0C483B36ECD62688554B"
+    },
+    {
+      "path": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Execution/ZetaOrders.mqh",
+      "bytes": 54196,
+      "sha256": "E0DAC0D25EA704203B2405476967F147860792FD371D9828141DB420B5C85D21"
+    },
+    {
+      "path": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Execution/ZetaProtectionAndReconciliation.mqh",
+      "bytes": 32700,
+      "sha256": "FA484CCF4BC2B4B99489BB3FB92A25CCC340D2BF21EDDC246AED71B4AA706999"
+    },
+    {
+      "path": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Domain/ZetaDomain.mqh",
+      "bytes": 20989,
+      "sha256": "1C1F12C370449323038C1AB8A71E07FCE013A36F422CAA46870A20530BA5776A"
+    }
+  ],
+  "facts": [
+    "Original market daily q=1+floor(max(0,stressed_balance-100)/150); original Passive always0.01.",
+    "Original initial grossSLtarget=0.04*C*(1-.25-.25)=.02*C. At constant0.01volume/unitcontract, unconstrained stop distance grows about2*Cprice units. Full4%C is reserved even though calculated buffered risk is smaller.",
+    "AtC100/200 with stressed balances100/200, both original quantities remain0.01 while grossSLtarget rises2/4USD. This is an algebraic source illustration, not a price replay or a predicted profit.",
+    "Original fixed-quantity protection widens with wealth between stairs and Passive never reinvests quantity. All six signal/exit laws can be retained while changing this monetary representation together."
+  ],
+  "distinctness": "Whole-portfolio integer economic-unit replication with reference-capped initial price-risk geometry. This is neither learned component risk ranking, a daily capital-weight optimizer, admission filtering, profit-only extra child nor a trailingSL change. No closed model/data/source is retained. Reference100/base0.01/risk4%/reserve25%/headroom25% are inherited constants, not newly selected stop/threshold numbers.",
+  "limits": "This adds a mechanical compounding architecture; it is not a new ML training result and cannot be presented as profitableONNX/online learning. Only full native outcomes can establish growth orDD. The overall existingV7 ONNX/online improvement task continues serially.",
+  "live_changes": false
+}
