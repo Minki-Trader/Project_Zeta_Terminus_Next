@@ -318,3 +318,8 @@ Historical transitions STATE-0001..0554 remain immutable in `state/CURRENT_STATE
 
 - 2026-09-07T01:02:58Z. Direct user activation button accepted under the arm-and-wait policy. Existing 0/0 runtime stopped through the unchanged verified-flat operator when present; exact terminal boundary is empty. Commit/push this separate new-entry authorization before dispatching the Master. No 1/1 success is claimed.
 - Exact release, EA, settings, risk contract and retired identities are unchanged. This transition was initiated by the user's direct interactive button; it does not resume research or its paused heartbeat.
+
+## STATE-0598 - 2026-09-07
+
+- 2026-09-07T01:03:21Z. Master returned success. Final local status confirms sole exact V7R PID 28324, healthy 1/1 and sequence 504. Current market activity was not a startup gate; frozen EA decision/quote/session/risk checks, package and retired state are unchanged.
+- Exact release, EA, settings, risk contract and retired identities are unchanged. This transition was initiated by the user's direct interactive button; it does not resume research or its paused heartbeat.

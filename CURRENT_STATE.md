@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0597`
+- Latest state ID: `STATE-0598`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -19,9 +19,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 - Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Direct user activation arms the recovered EA to wait for its existing trading conditions; current market activity is not a startup gate.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `ENABLED`
-- Existing real-account owner: none; the entries-disabled V7R runtime has stopped normally or no exact runtime was present. No retired identity may start.
-- Direct user activation phase: `USER_REQUESTED_PENDING_FRESH_HANDOFF`; recorded at 2026-09-07T01:02:58Z.
-- Latest activation observation: The user requested arm-and-wait activation. Final fresh preflight and 1/1 handshake are not yet complete; current market activity is not a startup requirement.
+- Existing real-account owner: exact V7R PID 28324, the sole authorized order owner; all retired identities remain stopped.
+- Direct user activation phase: `USER_ACTIVATED_HEALTHY_1_1`; recorded at 2026-09-07T01:03:21Z.
+- Latest activation observation: Healthy exact 1/1 at 09/07/2026 01:03:20, sequence 504; the detached Master confirmed EA and dashboard startup under the arm-and-wait policy. This confirms entry permission, not an order or a signal.
 <!-- V7R_USER_ACTIVATION_END -->
 - Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
 - Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
