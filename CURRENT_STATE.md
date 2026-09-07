@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0592`
+- Latest state ID: `STATE-0593`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -16,12 +16,12 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 - Development: `PAUSED_BY_USER`. The app Goal is paused. Sole unfinished Program 2 `frbsf-news-sentiment-publication-readiness-v1` retains its declaration and 12 local discovery/archive metadata receipts; final source judgment and closure are unfinished. No numeric news values or economic candidate opened. Do not continue research until the user resumes it. The current user request is a direct-user activation front end owned by `live-dev/tools/`, not a Lab family or EA/package change.
 
 <!-- V7R_USER_ACTIVATION_BEGIN -->
-- Next Live-Dev authorization: `ENABLED` for the installed user-authorized exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`; entries-disabled creation/recovery has passed and the EA/dashboard are running. Actual new entries remain closed. The assistant may check readiness but does not execute investment/trading activation; the user must directly perform final activation after unchanged operational gates.
+- Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Trading activation is a direct user action through the unchanged operating gates.
 - Next V7R return entries-disabled preflight: `PASSED`
-- Next V7R return new-entry authorization: `DISABLED`
-- Existing real-account owner: none with permission for new orders; exact V7R entries-disabled terminal PID `14492` is the sole connected runtime. Korean V7R dashboard PID `29492` is visible and responsive. V8 PID `26524` is normally stopped and retired.
-- Direct user activation phase: `PREPARED_NOT_EXECUTED`.
-- Latest activation observation: EA/dashboard were responsive in the preparation read; actual activation has not been invoked. `ZETA_NEXT_V7R_TRADING_ON.cmd` opens a user-only button. Only the user's direct button action may record authority and invoke the unchanged Master; cancel or close changes nothing. Final current runtime mode and owner are recorded in this block.
+- Next V7R return new-entry authorization: `ENABLED`
+- Existing real-account owner: none; the entries-disabled V7R runtime has stopped normally or no exact runtime was present. No retired identity may start.
+- Direct user activation phase: `USER_REQUESTED_PENDING_FRESH_HANDOFF`; recorded at 2026-09-07T00:14:45Z.
+- Latest activation observation: The user requested activation. Final fresh preflight and 1/1 handshake are not yet complete.
 <!-- V7R_USER_ACTIVATION_END -->
 - Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
 - Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
