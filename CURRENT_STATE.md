@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0600`
+- Latest state ID: `STATE-0601`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least 30 GiB free, and continue until the user pauses. The sole campaign is `optimization/campaigns/v7-onnx-online-compounding-v1/`. Its 21-file exact V7R parent, physical original-lifecycle input, complete three-role declaration and normal model pipeline are frozen before fit/features/outcomes in `evidence/MODEL_IMPLEMENTATION_FREEZE_V1.json`. Fit only 2024; select on 2025; at most one unchanged survivor may open January-June 2026 confirmation and conditional native comparison. July-August remains excluded from selection. No new native path or candidate result has opened.
+Current user task: develop existing V7 with ONNX and online learning, improve compound growth with comparable or only slightly weaker DD, leave Live-Dev untouched, retain at least 30 GiB free, and continue until the user pauses. First campaign `optimization/campaigns/v7-onnx-online-compounding-v1/` closed complete without a survivor. Fit 554 2024 trades, exported ONNX, and completed both roles on 557 2025 trades; outcome retention 74.33%/73.09% and risk efficiency 3.711734/3.615065 versus control 3.970942 fail the fixed gates. No 2026 candidate values, EA or native path opened. Preserve all source/model/input/forecasts. Next is a serial comparison of materially different V7 mechanisms; no successor is yet active. The exact 21-file V7R Optimization baseline remains frozen.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

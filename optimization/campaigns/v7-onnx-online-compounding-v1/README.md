@@ -1,6 +1,6 @@
 # V7 ONNX, online learning and compound growth
 
-This is the sole active Optimization campaign. Exact V7R is physically frozen at `optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/`; `evidence/BASELINE_DERIVATION_V1.json` pins all 21 package files. Live-Dev is untouched.
+This campaign is closed without an offline survivor. See `REPORT.md` and `evidence/CLOSURE_V1.json`. Exact V7R is physically frozen at `optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/`; `evidence/BASELINE_DERIVATION_V1.json` pins all 21 package files. Live-Dev is untouched.
 
 The first bundle compares the exact V7 control, a frozen ONNX risk score with equity-based lot sizing, and the same score with causal online residual updates. `evidence/DECLARATION_V1.json` owns the prospective numeric contract. Python fits a small regularized model from original V7 completed 2024 trades and exports the ONNX graph. The EA materializes the same existing entry features, runs ONNX inference, and updates online state only after its own completed trade label becomes available. Online learning is an explicit residual layer, not a claim that ONNX Runtime trains graph weights.
 
