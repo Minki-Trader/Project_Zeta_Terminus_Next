@@ -1,0 +1,75 @@
+{
+  "scope": "Read-only original frozen V7 and original lifecycle/candidate observations; no candidate design/economics delegated.",
+  "source": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-candidates.csv",
+  "source_sha256": "E48CF89502D259E94F9245572852315BAE3AB68F70CB87FA71CE9D23462B02BD",
+  "year": 2025,
+  "rows": 6822,
+  "columns": 48,
+  "duplicate_record_ids": 0,
+  "maximum_dropped": 0,
+  "server_schedules": {
+    "RC4": "13:00M30",
+    "RC16": "13:30M30",
+    "Pressure": "15:00M30",
+    "Return": "16:00H1",
+    "Cross": "17:00H1",
+    "Passive": "Completed12:00..15:45M15bar; evaluated12:15..16:00"
+  },
+  "ordinary_entry_processing": [
+    "Passive",
+    "RC4",
+    "RC16",
+    "Pressure",
+    "Return",
+    "Cross"
+  ],
+  "aggregate_risk_rejections": {
+    "Cross": 16,
+    "Return": 1
+  },
+  "margin_rejections": 0,
+  "price_distance_blocked": 1,
+  "existing_exposure_gate_rows": 2285,
+  "shadow_accepted_occupancy_rows": 17,
+  "admitted_rows": 585,
+  "lifecycle_begins": 557,
+  "lifecycle_closes": 557,
+  "holding_seconds": {
+    "0": 25912856,
+    "1": 3763052,
+    "2": 1573161,
+    "3plus": 286931
+  },
+  "maximum_positions": 3,
+  "native_entry_active_slots_including_new": {
+    "1": 301,
+    "2": 183,
+    "3": 73
+  },
+  "exact_simultaneous_fills": 0,
+  "passed_signal_rows": 603,
+  "distinct_decision_bars": 601,
+  "same_decision_groups": [
+    {
+      "date": "2025.07.21 16:00",
+      "components": [
+        "Return",
+        "Passive"
+      ]
+    },
+    {
+      "date": "2025.12.29 16:00",
+      "components": [
+        "Return",
+        "Passive"
+      ]
+    }
+  ],
+  "interpretation_limit": "Lifecycle observer timestamps differ from native entry fields; no hidden hypothetical blocked-trade profits inferred. Existing slot-reservation study is already closed in operating policy. These counts are source facts, not a successor admission candidate.",
+  "source_locations": [
+    "MQL5/Experts/ZetaTerminusNext/ZetaNextV7ReturnPortfolio.mq5:267",
+    "MQL5/Include/ZetaTerminusNext/Strategies/ZetaStrategyShared.mqh:92",
+    "MQL5/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh:410"
+  ],
+  "live_changes": false
+}

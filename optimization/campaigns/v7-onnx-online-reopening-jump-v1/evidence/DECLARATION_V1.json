@@ -1,0 +1,82 @@
+{
+  "utc": "2026-09-07T07:24:24.880577+00:00",
+  "status": "PROSPECTIVE_BEFORE_OWN_INPUT_FEATURES_FIT_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-reopening-jump-v1",
+  "primary_program": 1,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": [
+    "STATIC_NONLINEAR_JUMP_RESPONSE",
+    "ONLINE_NONLINEAR_JUMP_RESPONSE"
+  ],
+  "reconstruction": "Replace only original US100 Passive with one US30 daily reopening-jump strategy. Five original engines, opportunities, order processing, lots, management and full-account caps remain unchanged. No original Passive pending entry survives in that candidate slot.",
+  "source": {
+    "price": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US30-M1.npy",
+    "sha256": "B56FAF1B495504A48DF982B91EB2EBF390A8B258E1F2864C6F0A3444A9446586",
+    "lifecycle": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+    "lifecycle_sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+    "copy": "Own physical timestamp-only M1 slice2023-11-01 through2026-01-01exclusive; original Passive2024/2025 BIRTH/CLOSE only. No candidate2026 values or closed-source/model/state imports."
+  },
+  "event": {
+    "calendar": "All365calendar dates and every observed source date in2025 are retained. Server numeric timestamps stay unshifted; no external calendar.",
+    "clock": "On each server date, take only its first observed M1 bar t. Require a previous observed source date, and t-previous_last_bar_time>=1800 seconds. Use no later alternate event on that date. Decision D=t+60 requires a fully completed first bar and at least20 prior observed dates. If continuity/normalization readiness is absent, retain explicit no-opportunity state. Missing M1 bars are not filled.",
+    "jump": "gap=first_bar_open-previous_date_last_close; zero gap is no opportunity. gap_sign determines FOLLOW sign and opposite FADE sign. Evaluate once after completed first bar, no later re-entry that date.",
+    "scale": "Median high-minus-low across the 20 strictly previous observed source dates, floor0.01. Prior-day OHLC and last close are already known. No future or rolling outcome normalization.",
+    "features": [
+      "asinh(abs(gap)/scale)",
+      "asinh(gap_sign*(first_close-first_open)/scale)",
+      "asinh((first_high-first_low)/scale)",
+      "asinh(gap_sign*(previous_close-previous_open)/scale)",
+      "asinh((previous_high-previous_low)/scale)",
+      "log1p((first_time-previous_last_time)/3600)"
+    ]
+  },
+  "actions": {
+    "barrier": "b=min(200,max(abs(gap),4*max(0.01,completed_first_bar_spread))). Freeze b atD; this is a native-price barrier in points. Both FADE and FOLLOW use the same b and at most one real candidate trade per date. Round b down to the legal0.01price tick before both action paths; a tick-rounding choice never depends on outcomes.",
+    "entry": "First observed M1 open at/afterD strictly beforeD+120. No entry if unavailable; preserve both labels as unfilled. Representative M1 spread is execution cost only, never a future feature. Actual native entry uses first legal fresh quote in same window and cannot move a past quote into the feature.",
+    "exit": "Separate symmetric target+ b and initial SL- b from each action executable entry price; close at first barrier or D+14400 (4h), first observed quote at/after deadline. Fixed US30 0.01 selection. Whole M1 union chronological path: opening-gap SL before target before time, intraminute SL before target if both touched; no favorable inferred ordering. Long exits bid; short exits ask=bid+representative spread. A target gap receives its target price, never favorable overshoot; adverse SL gaps fill at worse opening quote.",
+    "labels": "Both shadow action outcomes are observed irrespective selected action or abstention. Label is stressed quote points divided by b. Stress subtracts max(entry,exit spread) plus adverse stop gap points from executable-side quote PNL. No clipping, future skipped labels, positive financing credit or invented fee. Each label becomes available only after the entire exit minute (exit_minute+60). Pair label availability is max(two action availability times). Incomplete end-of-source action is input correction, never a chosen survivor or economic failure."
+  },
+  "fit": {
+    "period": "Every complete2024 paired action label whose availability is strictly before2025-01-01. No accepted-trade labels; at least120 complete fit events required, otherwise readiness nonconfirmation without widening.",
+    "normalization": "Train-only feature mean/populationSD with1e-6floor. Input float32 standardized six features, no clipping.",
+    "model": "One fresh6->8 Tanh->2 linear feedforward network; column0FADE,column1FOLLOW. numpy default_rng(20260907), W1 normal0,1/sqrt(6), W2 normal0,1/sqrt(8), zero biases. No seed/model/width search.",
+    "training": "Exactly1000 full-batch Adam steps, learningrate0.01,beta1=.9,beta2=.999,epsilon1e-8. Objective mean over both-head squared errors plus0.001*(sum(W1^2)+sum(W2^2)); exact gradient. Training and SGD gradient calculations use float64; operational ONNX prediction inputs and parameters are cast float32. Finite arithmetic required. No early stopping, validation-driven epoch choice or restarts.",
+    "onnx": "New dynamic-parameter float32 MatMul/Add/Tanh/MatMul/Add graph, inputs features[1,6], W1[6,8],b1[1,8],W2[8,2],b2[1,2],output[1,2]; IR8/opset17. One source graph, fresh own parameter files."
+  },
+  "online": {
+    "initial": "Identical frozen fit/normalization in both roles; empty2025pending queue. Discard unavailable late2024labels rather than adopting into2025.",
+    "update": "At each new event decisionD, consume oldest stored two-action labels only when both availability<D. One plain SGD step with learningrate.005 on single paired observation and same mean-two-head squared error plus.001weight penalty. Fixed normalization. No adaptive step, reset, clipping or selected-trade-only feedback. Native shadow action labels use the same fixed200point cap and no account-capital inputs.",
+    "choice": "At decision, use ONNX predictions after strictly earlier updates. Choose largest predicted normalized stressed payoff if strictly positive; exact tieFADE. Otherwise abstain. Once chosen, direction, barrier, deadline and quantity do not change after online updates.",
+    "evidence": "Every calendar/event/forecast/action label, inference parameters and causal update bound are retained. Final pending pairs remain explicit. Report paired predictionMSE against zero payoff, all selected and unselected counterfactual outcomes without claiming executable simultaneous trades."
+  },
+  "selection": {
+    "period": "Complete2025, all dates, both halves, both fixed roles. No candidate-specific2026 values before sole survivor freeze.",
+    "gate": "Selected fixed0.01 stressed quote net strictly exceeds original Passive actual9.66USD; actual and stress each positive in both halves; >=30 complete selected starts and>=10eachhalf; every event/label retained and all source/model numerical operations complete.",
+    "ranking": "Highest stressed quote net among qualifiers; STATICon exact tie; at most one. Quote fixed-volume selection is not native shared-account risk/financing/fees/compounding or equityDD proof.",
+    "benchmark": "Original Passive2025actual9.66/stress7.681,129starts,H1-.52/-1.4735,H2+10.18/+9.1545, solely descriptive original contribution.",
+    "closure": "Freeze and close whole bundle with no adjacent closure interval, event, feature, scale, model, width, epoch, seed, optimizer, update, action, horizon, barrier, cost threshold, symbol, component, quantity or retained-seed rescue."
+  },
+  "conditional_native": {
+    "period": "One unchanged selected candidate/adjacent exact frozenV7 control2025-01-01 through2026-09-01exclusive. Jan-Jun2026confirmation andJulAuglatest candidate values unopened before selection.",
+    "source": "Own new tester-only source, Magic/schema/journal/state/model/settings/EX5/Include copied once only from frozen OptimizationV7R. Own physical Portable; only attributed neutral platform/history copy allowed, no Lab/Live/closedcampaignEA/model/state.",
+    "risk": "New gap strategy uses original market daily-lot staircase*0.01, original full4%conservative-capital reservation,12%aggregate and45%margin. Desired b is not enlarged or changed by capital: refuse if original protective gross-risk/minimum-distance/quote legality cannot support this exact b at proposed quantity. Native stop is entry-side aligned within desired b, ordinary protection buffers/risk accounted. Five existing engines keep original processing; new event assessed after them. No net risk credit or freed reservation assumption.",
+    "execution": "One durable new daily decision and lifecycle. Initial protected SL is installed at entry; target is a market-close trigger at first executable quote, with normal legal closure also after deadline. Pending/reconciliation/partial/recovery and final evidence must remain complete. Shadow action target labels retain the prospective price-bar approximation and are not claimed as actual simultaneous orders; actual trade prices/costs remain native.",
+    "environment": "100USD,1:100,US30M30assembly,Model4,allthree originals100%real ticks/localonly/normalshutdown. Before/between/after full actual2024warmup..2026AugM1 and exercisedmonthlyticks/platform/symbolDB/contracts/swaps/source/EX5/model/SET bindings; current-year/month containers diagnostic only with full exercised input proof.",
+    "gates": "Actual wealth/log growth and recovery improve; stressedprofitgain>=5%; nativeequityDDnominal<=control,effective min(controlDD+1.5pp,controlDD*1.10) only with improved growth/recovery/temporal evidence. Every2025half/2026H1/2026JulAugactualandstresspositive; >=30newstrategy complete native trades fullperiod and>=3JulAug; all closed,no unresolved input/model/execution/recovery faults. No directLivepromotion.",
+    "correction": "Environment/input/design/engineering defects require correction without an arbitrary retry cap and a fresh complete valid native pair; they cannot be judged as optimization failures or permit outcome tuning."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "initial_cap_mib": 256,
+    "conditional_runtime_cap_gib": 6,
+    "conditional_output_cap_gib": 2
+  },
+  "constraints": [
+    "One root economic/design stream",
+    "No external economic data",
+    "No tests/checkers/CI/testCLIs",
+    "No Live change or broker context queries",
+    "No closed source/model/state reuse"
+  ]
+}
