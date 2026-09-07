@@ -1,0 +1,176 @@
+{
+  "schema": "zeta-v7r-entries-disabled-recovery-after-market-block-v1",
+  "recorded_at_utc": "2026-09-07T00:34:43.3700752Z",
+  "recovery_git": "151049e",
+  "required_mode": "EntriesDisabled",
+  "detached_result": {
+    "launch_id": "8d2c482549de4daf80c85768448d1b8c",
+    "worker_pid": 18044,
+    "worker_finished": true,
+    "matched_completion_marker": true,
+    "outcome": "SUCCESS",
+    "required_mode": "EntriesDisabled",
+    "observed_at_utc": "2026-09-07T00:33:11.4459160Z"
+  },
+  "local_status": {
+    "observed_at_utc": "2026-09-07T00:34:43Z",
+    "healthy": true,
+    "project_terminal_pid": 28292,
+    "project_terminal_process_count": 1,
+    "release_id": "NEXT-E03-V7R-RLO1-0bba2ca045fe",
+    "state_sequence": 472,
+    "snapshot_age_seconds": 34,
+    "new_entries_input": 0,
+    "new_entries_effective": 0,
+    "terminal_allow_live_trading": 0,
+    "warnings": [],
+    "alerts": []
+  },
+  "windows": [
+    {
+      "pid": 29492,
+      "responding": true,
+      "visible_window": true
+    },
+    {
+      "pid": 28292,
+      "responding": true,
+      "visible_window": true
+    }
+  ],
+  "market_observation": {
+    "observed_at_utc": "2026-09-07T00:34:43Z",
+    "terminal_pid": 28292,
+    "same_sole_process": true,
+    "pre_observation_state_sequence": 472,
+    "post_observation_state_sequence": 472,
+    "local_runtime_healthy": true,
+    "server_time": "2026.09.07 03:34:09",
+    "safe_handoff_window": true,
+    "terminal_connected": true,
+    "observation_seconds": 12,
+    "us30_tick_updates": 7,
+    "us30_max_update_gap_seconds": 6.9887836999987485,
+    "us30_continuous_ticks": false,
+    "all_symbol_ticks_fresh": false,
+    "symbol_tick_reference_msc": 1788752082429,
+    "symbol_ticks": [
+      {
+        "symbol": "US30",
+        "time_msc": 1788752075541,
+        "age_seconds": 6.888,
+        "fresh": false
+      },
+      {
+        "symbol": "US100",
+        "time_msc": 1788752082429,
+        "age_seconds": 0.0,
+        "fresh": true
+      },
+      {
+        "symbol": "US500",
+        "time_msc": 1788752077770,
+        "age_seconds": 4.659,
+        "fresh": true
+      }
+    ],
+    "timeframes": [
+      {
+        "timeframe": "M15",
+        "synchronized": false,
+        "synchronized_and_fresh": false,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788751800,
+            "tick_volume": 106,
+            "age_seconds": 282,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788751800,
+            "tick_volume": 829,
+            "age_seconds": 282,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788750900,
+            "tick_volume": 15,
+            "age_seconds": 1182,
+            "fresh": false
+          }
+        ]
+      },
+      {
+        "timeframe": "M30",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788751800,
+            "tick_volume": 106,
+            "age_seconds": 282,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788751800,
+            "tick_volume": 829,
+            "age_seconds": 282,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788751800,
+            "tick_volume": 208,
+            "age_seconds": 282,
+            "fresh": true
+          }
+        ]
+      },
+      {
+        "timeframe": "H1",
+        "synchronized": true,
+        "synchronized_and_fresh": true,
+        "symbols": [
+          {
+            "symbol": "US30",
+            "bar_time": 1788750000,
+            "tick_volume": 989,
+            "age_seconds": 2082,
+            "fresh": true
+          },
+          {
+            "symbol": "US100",
+            "bar_time": 1788750000,
+            "tick_volume": 7553,
+            "age_seconds": 2082,
+            "fresh": true
+          },
+          {
+            "symbol": "US500",
+            "bar_time": 1788750000,
+            "tick_volume": 1816,
+            "age_seconds": 2082,
+            "fresh": true
+          }
+        ]
+      }
+    ],
+    "market_data_ready": false,
+    "ready_for_handoff": false,
+    "account_or_trade_state_queried": false,
+    "reasons": [
+      "US30 did not produce at least three updates with every observed gap <= 3 seconds",
+      "one or more US30/US100/US500 ticks are stale",
+      "M15 bars are not synchronized and fresh across US30/US100/US500"
+    ]
+  },
+  "actual_live_activation_performed": false,
+  "broker_account_position_order_deal_api_calls_by_assistant": 0,
+  "cancelled_frbsf_work_resumed": false,
+  "free_space_gib": 56.989555
+}

@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0594`
+- Latest state ID: `STATE-0595`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -19,9 +19,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 - Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Trading activation is a direct user action through the unchanged operating gates.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `DISABLED`
-- Existing real-account owner: none; user preflight PID 26068 stopped normally, no exact terminal or Master worker remains, and dashboard PID 29492 is the only project runtime. No retired identity may start.
-- Direct user activation phase: `FAILED_MARKET_GATE_PROVED_STOPPED_PENDING_0_0_RECOVERY`.
-- Latest activation observation: User launch 667507fc34314009915b6a8c90919bee passed 0/0 preflight, failed the unchanged US30 continuity gate before any Live start, and exited normally. Final snapshot 470 is 0/0 with zero margin/planned risk; normal STOP event 469 at 2026-09-07T00:15:11Z and terminal shutdown 0 at 09:15:13 KST. Local read at 00:21:10Z confirms zero terminal/worker owners. Restore only entries-disabled EA/dashboard after this phase reaches origin/main; actual trading remains a direct user action.
+- Existing real-account owner: none with permission for new orders; exact V7R entries-disabled terminal PID 28292 is the sole connected runtime, with Korean dashboard PID 29492. Both windows are responsive. No retired identity may start.
+- Direct user activation phase: `RECOVERED_HEALTHY_0_0_CURRENT_MARKET_NOT_READY`.
+- Latest activation observation: After committed/pushed correction 151049e, required EntriesDisabled Master launch 8d2c482549de4daf80c85768448d1b8c completed and its worker exited. At 2026-09-07T00:34:43Z, exact sole PID 28292 is healthy, sequence 472 after the failed run's 470, snapshot age 34 seconds, entries/terminal trading 0/0/0, no warnings/alerts, with responsive EA/dashboard. One 12-second market-only observation saw 7 US30 updates but maximum gap 6.9887837 seconds, some stale symbol ticks and M15 synchronization/freshness failure. Market gate remains closed; no assistant trading activation or automatic Live retry occurred. The corrected user button can be used again and checks readiness before stopping an existing OFF EA.
 <!-- V7R_USER_ACTIVATION_END -->
 - Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
 - Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
@@ -133,4 +133,4 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.
 - Goal status: `PAUSED_INCOMPLETE`; no V8 winner exists yet. Preserve at least 30 GiB free and await explicit resumption before more research.
-- Latest storage observation: C: free `56.807526 GiB` at source-declaration startup on `2026-09-07`. All own inputs/model/forecast outputs are preserved above the 30 GiB floor. Local process-only observation confirmed responsive visible V7R EA/dashboard PIDs 14492/29492 and no project research process. Read-only market readiness completed at 07:02 KST, heartbeat PAUSED, actual trading activation remains a direct user step. No broker account/position/order/deal context query occurred.
+- Latest operating evidence: `live-dev/evidence/V7R_ENTRIES_DISABLED_RECOVERY_AFTER_MARKET_BLOCK_V1.json` records the completed required-0/0 startup, fresh local status and one bounded current-market observation at 09:34 KST. Free space remains above 56 GiB and the 30 GiB floor; no records were deleted. EA/dashboard are 28292/29492. The cancelled FRBSF study stays cancelled, research Goal and heartbeat stay PAUSED, and actual trading remains OFF. No assistant broker account/position/order/deal API query or trading activation occurred.
