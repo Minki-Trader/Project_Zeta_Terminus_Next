@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-07",
+  "status": "PROSPECTIVE_BEFORE_MODEL_FEATURES_FIT_SELECTION_OR_NATIVE_EXECUTION",
+  "campaign": "optimization/campaigns/v7-onnx-online-passive-execution-v1",
+  "primary_program": 3,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": ["EXACT_V7_CONTROL", "ONNX_PASSIVE_QUANTILE", "ONNX_ONLINE_PASSIVE_QUANTILE"],
+  "preserved": "All original market components and Passive signal/direction/hours/expiry/volume/risk/protection/management/exits. Original daily150USD capital staircase, position risk4%, aggregate12%, margin45%. Passive stays fixed0.01. Its already-valid pending price offset alone changes, and original stop construction/admission are recomputed at that actual candidate limit price.",
+  "original_passive": "US100 M15, completed-bar state from12-bar log change divided by96-return sampleSD*sqrt12; the96returns use the first97of98completed closes, excluding the final decision-bar return exactly as original source. abs(state)>=1 gives opposite direction. Original offset0.25 times median96high-low ranges excluding the decision bar. Original pending expiry=current M15 bar+3600seconds; original max hold16bars and state/direction exits remain.",
+  "price_input": {
+    "source": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US100-M1.npy",
+    "source_sha256": "EF5DEA36AF11B67B6C34D79BADD713E1F9167A0009D10A5AFB01AACF46ED856B",
+    "own_interval": "2023-12-01 through2026-01-01 exclusive. Slice timestamp fields before numeric price decoding/copy; preserve source before/after hash.",
+    "clock": "Unshifted native server epochs. Assemble M15 from observed native M1 bars, never relabel physical UTC. Features use completed M15 bars only. Current M1/M15 high-low-close or spread values cannot enter a forecast.",
+    "population": "Every available M15 opportunity in original decision-bar hours12:00<=hour<16:00 with original abs(state)>=1 and complete original lookback, regardless of native occupancy. This forecasts an observable quote distribution, not a censored trade-profit population. Retain unavailable/rejected opportunity counts and all calendar dates.",
+    "label": "Maximum entry-improving quote excursion from the decision close over [current M15 bar,current M15 bar+3600) divided by original range scale. Sell uses maximum M1 bid high; buy uses minimum(M1 bid low+M1 spread*0.01). Require all60M1 bars for a fit/score label; keep every earlier forecast even if its later label is incomplete.",
+    "limitations": "M1 spread and extrema provide an approximate entry-side quote target, not tick-order fill, cash profit or native DD. Actual pending placement may arrive within the original2-minute allowance, after part of the target window; no pre-placement touch earns a fill or economic credit. Native execution resolves all timing, min-distance, expiry, occupancy, stop, cost and capital effects."
+  },
+  "features": [
+    "absolute original state",
+    "original contrarian direction",
+    "median range divided by decision close in basis points",
+    "decision-bar high-low divided by original median range",
+    "direction*(decision close-decision open)/original median range",
+    "direction*(decision close-close4completed bars earlier)/original median range",
+    "direction*(2*(decision close-lowest12bar low)/(highest12bar high-lowest12bar low)-1)",
+    "original decision-bar minute offset within12:00-16:00 divided by240"
+  ],
+  "fit": {
+    "period": "2024 only; target window must complete strictly before2025-01-01",
+    "model": "Fresh8-input,12-tanh-hidden-unit,1-linear-output float32-compatible network. Train-only mean/std normalization (std floor1e-6), standardized features clipped[-6,6]. Fit labels clipped[-4,4]; raw targets retained for scoring.",
+    "objective": "Quantile pinball loss atq0.35 plus0.0001L2 on weights. One deterministic full-batch Adam fit, seed20260907, learning rate0.005,1200steps,beta1=0.9,beta2=0.999,epsilon1e-8. No early-stopping, hidden-size, quantile, loss, seed or optimizer search.",
+    "onnx": "Standard MatMul/Add/Tanh graph with frozen train-only normalization/weights plus one dynamic online-bias input. Output is raw predicted normalized excursion. No closed model/weight/source import."
+  },
+  "decision": {
+    "static": "offset=clip(raw ONNX quantile,0.05,1.0)*original median range; use original directional limit-price rounding. All original quote-distance checks and original risk/protection construction then run on this actual price.",
+    "online": "Same graph and clamp, with separate buy/sell bias initially0. Each scored opportunity stores its original raw quantile prediction. Consume a completed60-minute quote label only when its window end is strictly before the current M15 forecast-bar epoch, in both offline and native paths; a delayed actual first tick cannot admit a same-bar-expiry label. bias_direction=clip(bias_direction+0.02*(0.35-indicator(raw_label<stored_raw_prediction)),-0.5,0.5). Online updates are from matured quote opportunities, independent of whether an order filled; they are not candidate trade-profit labels.",
+    "missing": "A missing/nonfinite inference keeps original0.25offset and records an engineering fault; original protection remains. Incomplete future labels remain visible and untrained rather than deleting an earlier forecast."
+  },
+  "selection": {
+    "period": "2025 only, all eligible opportunities and both half-years. One unchanged static/online bundle closes together.",
+    "reference": "Constantq0.35 empirical quantile fitted on complete2024 raw targets, evaluated on the identical2025 labels. Original0.25offset is an execution opportunity reference, not a learned-quantile loss baseline.",
+    "nominal": "Raw-target mean pinball loss improves by at least2% versus the train-only constant; neither half-year loss is more than5% worse. Approximate touch supply at the clamped candidate offset is at least75% of the original0.25offset supply. At least5%of opportunities differ from the original limit by oneUS100tick or more. Every forecast is retained; missing labels cannot selectively improve either role.",
+    "ranking": "Only qualifying roles may survive; choose lower raw pinball loss, static on an exact tie. Freeze exactly one before any candidate2026 numeric values or native outcome. If neither qualifies, close without adjacent quantile/window/model/clamp/bias/threshold rescue.",
+    "scope": "Distributional selection only; no proxy-dollar, compound-growth or native-DD verdict."
+  },
+  "conditional_native": {
+    "interval": "2025-01-01 through2026-09-01 exclusive, preserving January-June2026 confirmation and July-August2026 latest-period slices. No candidate2026 numeric input is opened before one survivor is frozen. Model fit stays2024; online updates advance causally from zero bias at2025 start.",
+    "configuration": "Self-contained tester-only physical exact control and survivor from exactV7R baseline; distinct identities/Magic/state/Include/output, dedicated physical Optimization Portable;100USD,1:100,US30M30assembly,Model4,US30/US100/US500,100%real ticks,local only,normal shutdown.",
+    "order": "One adjacent complete exact-control then frozen-survivor pair after required cache/platform preparation; own real prices/fills/SL/occupancy/cost/capital decide economics. All binding historical inputs, source/model/EX5/SET, platform and native contracts/swaps must match before/between/after; preparation/input/engineering faults are correction states without a retry cap.",
+    "economic_judgment": "Improve both actual and doubled-cost-stressed whole-portfolio net (nominal stressed gain>=5%) with nominal equityDD<=adjacent exact control. Effective ceiling=min(controlDD+1.5percentage points,controlDD*1.10), requiring stronger profit/recovery and temporal evidence for a marginal relaxation. Every2025half,January-June2026 andJuly-August2026 must retain positive actual/stressed net. Retain component/trade/turnover/lot/holding/cost/learning detail and judge complete economics proportionately. No holding-window cherry-pick or aggregate-only rescue.",
+    "post_outcome": "Freeze complete favorable or adverse evidence. No outcome-driven policy change or direct Live promotion."
+  },
+  "storage": {"minimum_free_gib":30,"initial_input_model_output_cap_mib":192,"conditional_native_incremental_cap_gib":8,"trace_limit_mib_per_run":16},
+  "prohibitions": ["Live changes or process action","Broker context polling","External economic datasets","Closed candidate source/models/weights as seeds","Parallel development judgments","Test-only CLIs,validators,parity/promotion checkers or CI"]
+}
