@@ -20,10 +20,10 @@ RUNTIME = ROOT / "optimization/runtime/v7-native-log-allocation-completion-v1-po
 RAW = ROOT / "optimization/artifacts/raw/v7-native-log-allocation-completion-v1"
 EVIDENCE = FAMILY / "evidence"
 ROLES = {
-    "selection-control-static-v1": "Control",
-    "selection-static-v1": "Static",
-    "selection-control-online-v1": "Control",
-    "selection-online-v1": "Online",
+    "selection-control-static-v3": "Control",
+    "selection-static-v3": "Static",
+    "selection-control-online-v3": "Control",
+    "selection-online-v3": "Online",
 }
 FLOOR = 30 * 1024**3
 CAPS = {RUNTIME: int(3.5 * 1024**3), RAW: 1024**3, FAMILY: 64 * 1024**2}
@@ -92,8 +92,66 @@ def frozen_changes(freeze):
     return changed
 
 
+def observe_history(tag):
+    """Native past-price and contract observation, with no account/trade queries."""
+    import MetaTrader5 as mt5
+    if own_owners():
+        raise RuntimeError("Own runtime must stop before history observation")
+    output = EVIDENCE / (tag + "-history.json")
+    if output.exists():
+        raise RuntimeError("History observation identity already exists")
+    process = hidden([str(RUNTIME / "terminal64.exe"), "/portable",
+                      "/config:" + str(FAMILY / "config/connection-history.ini")], cwd=RUNTIME,
+                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    time.sleep(2)  # Let the explicitly hidden terminal publish its SDK endpoint.
+    rows = []
+    try:
+        if not mt5.initialize(str(RUNTIME / "terminal64.exe"), portable=True, timeout=15000):
+            raise RuntimeError("Own history SDK connection failed: " + repr(mt5.last_error()))
+        info = mt5.terminal_info()
+        if not info or Path(info.path).resolve() != RUNTIME:
+            raise RuntimeError("SDK terminal path mismatch")
+        initial_contracts = json.loads((EVIDENCE / "SELECTION_PREPARATION_CONTRACTS_V1.json").read_text())
+        contracts = {}
+        for symbol in ["US30", "US100", "US500"]:
+            mt5.symbol_select(symbol, True)
+            current = mt5.symbol_info(symbol)._asdict()
+            contracts[symbol] = {key: current[key] for key in initial_contracts["symbols"][symbol]}
+            for name, timeframe in [("M1", mt5.TIMEFRAME_M1), ("M15", mt5.TIMEFRAME_M15),
+                                    ("M30", mt5.TIMEFRAME_M30), ("H1", mt5.TIMEFRAME_H1)]:
+                rates = mt5.copy_rates_range(symbol, timeframe, datetime(2024, 1, 1, tzinfo=timezone.utc),
+                                            datetime(2025, 12, 31, 23, 59, 59, tzinfo=timezone.utc))
+                if rates is None or not len(rates):
+                    raise RuntimeError("Native past bars unavailable for " + symbol + name)
+                rows.append({"symbol": symbol, "timeframe": name, "bars": len(rates),
+                             "first_time": int(rates[0]["time"]), "last_time": int(rates[-1]["time"]),
+                             "returned_bytes_sha256": hashlib.sha256(rates.tobytes()).hexdigest().upper()})
+        initial = json.loads((EVIDENCE / "SELECTION_BAR_WARMUP_V1.json").read_text())["bars"]
+        result = {"utc": utc(), "tag": tag, "status": "COMPLETE_NATIVE_PAST_BAR_AND_CONTRACT_OBSERVATION",
+                  "bars": rows, "all_twelve_streams_match_initial": rows == initial,
+                  "contracts": contracts, "contracts_match_initial": contracts == initial_contracts["symbols"],
+                  "build": info.build, "broker_account_position_order_deal_queries": False,
+                  "candidate_2026_values_requested": False, "producer": binding(Path(__file__).resolve())}
+        save(output, result)
+    finally:
+        mt5.shutdown()
+        # The SDK may create its own same-path owner during a startup race.
+        # Close only owners of this exact no-EA runtime; never the Live path/PID.
+        expected = str(RUNTIME / "terminal64.exe").replace("'", "''")
+        command = ("$owners=Get-CimInstance Win32_Process | Where-Object { "
+                   f"$_.Name -eq 'terminal64.exe' -and $_.ExecutablePath -ieq '{expected}' }}; "
+                   "foreach($owner in $owners) { $p=Get-Process -Id $owner.ProcessId; "
+                   "$p.CloseMainWindow() | Out-Null; $p.WaitForExit(15000) | Out-Null }")
+        closer = hidden(["powershell.exe", "-NoProfile", "-NonInteractive", "-Command", command],
+                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        closer.wait(timeout=15)
+        process.wait(timeout=30)
+    return {"tag": tag, "past_bars_equal": result["all_twelve_streams_match_initial"],
+            "contracts_equal": result["contracts_match_initial"], "storage": storage()}
+
+
 def freeze_selection():
-    target = EVIDENCE / "SELECTION_INPUT_FREEZE_V1.json"
+    target = EVIDENCE / "SELECTION_INPUT_FREEZE_V3.json"
     if target.exists():
         raise RuntimeError("Initial freeze already exists")
     if own_owners():
@@ -103,6 +161,8 @@ def freeze_selection():
         raise RuntimeError("Whole remaining selection storage is not funded")
     derivation = json.loads((EVIDENCE / "NATIVE_RUNTIME_DERIVATION_V1.json").read_text())
     paths = {ROOT / v["path"] for v in derivation["public_files"]}
+    warmup = json.loads((EVIDENCE / "NATIVE_PAST_TICK_WARMUP_RECEIPT_V1.json").read_text())
+    paths.update(ROOT / v["path"] for v in warmup["files"])
     for sub in [FAMILY / "mt5", FAMILY / "models", FAMILY / "config"]:
         paths.update(p for p in sub.rglob("*") if p.is_file())
     for sub in [RUNTIME / "MQL5/Experts", RUNTIME / "MQL5/Profiles/Tester"]:
@@ -176,7 +236,7 @@ def run(tag):
     for previous in order[:order.index(tag)]:
         if not (EVIDENCE / (previous + "-archive.json")).is_file():
             raise RuntimeError("The prospectively fixed serial order must be completed")
-    freeze_file = EVIDENCE / "SELECTION_INPUT_FREEZE_V1.json"
+    freeze_file = EVIDENCE / "SELECTION_INPUT_FREEZE_V3.json"
     freeze = json.loads(freeze_file.read_text())
     changed = frozen_changes(freeze)
     if changed:

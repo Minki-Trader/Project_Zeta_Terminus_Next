@@ -138,10 +138,16 @@ int LACBucket(const datetime day,const bool create)
    for(int i=0;i<count;++i)
       if(lac_bucket_days[i]==day) return(i);
    if(!create) return(-1);
-   if(ArrayResize(lac_bucket_days,count+1)!=count+1 ||
-      ArrayResize(lac_bucket_r,count+1)!=(count+1)*6 ||
-      ArrayResize(lac_bucket_counts,count+1)!=count+1 ||
-      ArrayResize(lac_bucket_max_close_msc,count+1)!=count+1)
+   // Resize every array before inspecting status; a prior short-circuit left
+   // later arrays unallocated when the 2D return count was misinterpreted.
+   const int day_status=ArrayResize(lac_bucket_days,count+1);
+   const int r_status=ArrayResize(lac_bucket_r,count+1);
+   const int count_status=ArrayResize(lac_bucket_counts,count+1);
+   const int time_status=ArrayResize(lac_bucket_max_close_msc,count+1);
+   if(day_status<0 || r_status<0 || count_status<0 || time_status<0 ||
+      ArrayRange(lac_bucket_days,0)!=count+1 || ArrayRange(lac_bucket_r,0)!=count+1 ||
+      ArrayRange(lac_bucket_r,1)!=6 || ArrayRange(lac_bucket_counts,0)!=count+1 ||
+      ArrayRange(lac_bucket_max_close_msc,0)!=count+1)
      { LACFault("day bucket allocation failed"); return(-1); }
    lac_bucket_days[count]=day;
    lac_bucket_counts[count]=0;
@@ -163,7 +169,9 @@ void LACCheckpoint()
       body+=StringFormat("ENTRY,%d,%I64u,%.17g,%.17g,%.17g,%I64u,%I64d\n",
                          i,lac_ids[i],lac_entry_risk[i],lac_entry_weight[i],
                          lac_life_stress[i],lac_last_deal[i],lac_last_deal_msc[i]);
-   for(int b=0;b<ArraySize(lac_bucket_days);++b)
+   const int durable_buckets=MathMin(MathMin(ArrayRange(lac_bucket_days,0),ArrayRange(lac_bucket_r,0)),
+      MathMin(ArrayRange(lac_bucket_counts,0),ArrayRange(lac_bucket_max_close_msc,0)));
+   for(int b=0;b<durable_buckets;++b)
       body+=StringFormat("DAY,%I64d,%I64d,%I64d,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g\n",
                          (long)lac_bucket_days[b],lac_bucket_counts[b],lac_bucket_max_close_msc[b],
                          lac_bucket_r[b][0],lac_bucket_r[b][1],lac_bucket_r[b][2],

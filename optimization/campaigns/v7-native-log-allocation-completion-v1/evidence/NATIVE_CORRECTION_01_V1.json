@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-07T18:49:25.526116+00:00",
+  "status": "ENGINEERING_CORRECTION_NO_ECONOMIC_VERDICT",
+  "prior_source_and_binaries_commit": "e8cadff",
+  "prior_attempt": "selection-control-static-v1",
+  "evidence": "First completed full2025 run has day bucket allocation fault on2025Jan2 and consequent OnTester out-of-range. All artifacts preserved. No candidate executed.",
+  "cause": "Incorrect assumption about 2D ArrayResize positive return count caused the OR expression to short-circuit later allocations.",
+  "correction": "Perform all four resizes; reject negative status or actual ArrayRange shape mismatch. Bound checkpoint iteration to fully allocated common rows even in an allocation failure.",
+  "unchanged": [
+    "exact model336B",
+    "weights and online rule",
+    "completed earlier-day labels",
+    "original V7 risk and trade logic",
+    "full2025 and100%ticks",
+    "all economic gates"
+  ],
+  "rerun": "Fresh complete v2 control/static/control/online matrix, zero learner state.",
+  "native_automatic_prefetch": "Terminal fetched out-of-period2026 tick cache metadata despite2025-only INI; no2026 candidate values or outcomes were requested/read. Exact execution remains2025. Current observed runtime2.9GB fits3.5GiB cap; preserve these bytes and fund remaining growth."
+}
