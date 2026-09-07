@@ -1,0 +1,131 @@
+{
+  "status": "COMPLETE_FROZEN_HEDGE_SELECTION",
+  "fit_rows": 5663,
+  "hourly_population": {
+    "MISSING_CONSECUTIVE_PAIRED_H1": 520,
+    "COMPLETE_PAIRED_RETURN": 11285
+  },
+  "hourly_forecasts_per_role": 5881,
+  "online_updates": 5619,
+  "pending_labels_at_last_forecast": 2,
+  "initial_beta": 1.3071444034576416,
+  "roles": {
+    "static": {
+      "parents": 196,
+      "status_counts": {
+        "NO_HEADROOM": 93,
+        "COMPLETE": 103
+      },
+      "complete_hedges": 103,
+      "unscored_proposals": 0,
+      "quote_actual": -10.927799999999262,
+      "quote_stressed": -11.788799999999261,
+      "stop_exits": 1,
+      "halves": {
+        "H1": {
+          "parents": 89,
+          "complete_hedges": 37,
+          "quote_actual": -8.721599999999725,
+          "quote_stressed": -9.018599999999726
+        },
+        "H2": {
+          "parents": 107,
+          "complete_hedges": 66,
+          "quote_actual": -2.206199999999536,
+          "quote_stressed": -2.7701999999995355
+        }
+      },
+      "gates": {
+        "all_proposed_paths_complete": true,
+        "minimum25_and40pct_parent_supply": true,
+        "positive_total_stressed_increment": false,
+        "nonnegative_both_halves": false
+      },
+      "qualifies": false
+    },
+    "online": {
+      "parents": 196,
+      "status_counts": {
+        "NO_HEADROOM": 93,
+        "COMPLETE": 103
+      },
+      "complete_hedges": 103,
+      "unscored_proposals": 0,
+      "quote_actual": -9.900099999999266,
+      "quote_stressed": -10.759599999999267,
+      "stop_exits": 1,
+      "halves": {
+        "H1": {
+          "parents": 89,
+          "complete_hedges": 37,
+          "quote_actual": -7.7425999999997295,
+          "quote_stressed": -8.03559999999973
+        },
+        "H2": {
+          "parents": 107,
+          "complete_hedges": 66,
+          "quote_actual": -2.1574999999995366,
+          "quote_stressed": -2.7239999999995366
+        }
+      },
+      "gates": {
+        "all_proposed_paths_complete": true,
+        "minimum25_and40pct_parent_supply": true,
+        "positive_total_stressed_increment": false,
+        "nonnegative_both_halves": false
+      },
+      "qualifies": false
+    }
+  },
+  "selected_survivor": null,
+  "candidate_2026_values_opened": false,
+  "native_economic_verdict": null,
+  "artifacts": [
+    {
+      "path": "optimization/campaigns/v7-onnx-online-cross-hedge-v1/hedge_model.py",
+      "bytes": 15965,
+      "sha256": "04BB6FC9B4E60BEE1B2E724F5A3B79174C4D45F6D6B2F4F866E6636A42459DCB"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-cross-hedge-v1/models/hedge-beta.onnx",
+      "bytes": 393,
+      "sha256": "DEF81734F078923CFF3CCBF4170051B744BB14D169451E17E93878616D6BFD60"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-cross-hedge-v1/models/final-online-moments.json",
+      "bytes": 149,
+      "sha256": "D7B44A8D2AC12F47D05BECC0F4B5B6D0688F7894AB5502AE99CB0A26884E7A81"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-cross-hedge-v1/models/initial-moments.json",
+      "bytes": 147,
+      "sha256": "5D84348D5D562C5867BAF3CF4D5F0F29340C53D4B2AF338E56F03890045C6643"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-cross-hedge-v1/calendar-2025.csv",
+      "bytes": 6625,
+      "sha256": "8CCB178E3C84AE69B5447491B6F63D674BCA7C1719A5405ED329C73A0AA18480"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-cross-hedge-v1/hedge-opportunities.csv",
+      "bytes": 71168,
+      "sha256": "0D7C3E9680F9B36BCDE65367CF95724F230574F838C2BD6CF70960C6553B6674"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-cross-hedge-v1/hourly-forecasts.csv",
+      "bytes": 1212325,
+      "sha256": "97C2107C61A5302F80B8151355C0589085D67DBB214098653B7A7010E042E8DB"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-cross-hedge-v1/hourly-population.csv",
+      "bytes": 605716,
+      "sha256": "0DBE890C1EEC207D7EC3FDA5AA08645E26000ECE49A7AA32183D98BE3EA1E976"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-onnx-online-cross-hedge-v1/online-updates.csv",
+      "bytes": 897641,
+      "sha256": "8BC3169E3CC668DC26E0CE395CF1AC103F9DF0CEE3FB38D91CBF0A47CCF1A594"
+    }
+  ],
+  "free_bytes": 55680163840
+}

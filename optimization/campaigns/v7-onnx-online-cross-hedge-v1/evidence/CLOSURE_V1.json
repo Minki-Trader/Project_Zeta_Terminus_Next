@@ -1,0 +1,94 @@
+{
+  "utc": "2026-09-07T04:04:27.374465+00:00",
+  "status": "CLOSED_COMPLETE_ADVERSE_HEDGE_QUOTE_SELECTION_NO_SURVIVOR",
+  "campaign": "optimization/campaigns/v7-onnx-online-cross-hedge-v1",
+  "fit_rows": 5663,
+  "hourly_forecasts_per_role": 5881,
+  "online_updates": 5619,
+  "pending_labels_at_last_forecast": 2,
+  "strict_time_violations": 0,
+  "roles": {
+    "static": {
+      "parents": 196,
+      "status_counts": {
+        "NO_HEADROOM": 93,
+        "COMPLETE": 103
+      },
+      "complete_hedges": 103,
+      "unscored_proposals": 0,
+      "quote_actual": -10.927799999999262,
+      "quote_stressed": -11.788799999999261,
+      "stop_exits": 1,
+      "halves": {
+        "H1": {
+          "parents": 89,
+          "complete_hedges": 37,
+          "quote_actual": -8.721599999999725,
+          "quote_stressed": -9.018599999999726
+        },
+        "H2": {
+          "parents": 107,
+          "complete_hedges": 66,
+          "quote_actual": -2.206199999999536,
+          "quote_stressed": -2.7701999999995355
+        }
+      },
+      "gates": {
+        "all_proposed_paths_complete": true,
+        "minimum25_and40pct_parent_supply": true,
+        "positive_total_stressed_increment": false,
+        "nonnegative_both_halves": false
+      },
+      "qualifies": false
+    },
+    "online": {
+      "parents": 196,
+      "status_counts": {
+        "NO_HEADROOM": 93,
+        "COMPLETE": 103
+      },
+      "complete_hedges": 103,
+      "unscored_proposals": 0,
+      "quote_actual": -9.900099999999266,
+      "quote_stressed": -10.759599999999267,
+      "stop_exits": 1,
+      "halves": {
+        "H1": {
+          "parents": 89,
+          "complete_hedges": 37,
+          "quote_actual": -7.7425999999997295,
+          "quote_stressed": -8.03559999999973
+        },
+        "H2": {
+          "parents": 107,
+          "complete_hedges": 66,
+          "quote_actual": -2.1574999999995366,
+          "quote_stressed": -2.7239999999995366
+        }
+      },
+      "gates": {
+        "all_proposed_paths_complete": true,
+        "minimum25_and40pct_parent_supply": true,
+        "positive_total_stressed_increment": false,
+        "nonnegative_both_halves": false
+      },
+      "qualifies": false
+    }
+  },
+  "model": {
+    "path": "optimization/campaigns/v7-onnx-online-cross-hedge-v1/models/hedge-beta.onnx",
+    "bytes": 393,
+    "sha256": "DEF81734F078923CFF3CCBF4170051B744BB14D169451E17E93878616D6BFD60"
+  },
+  "source_input_unchanged": true,
+  "result_sha256": "DAA38B49B0E50AB39727DECAB0D5D55B292CF89269E57BA56DE778E2F4195115",
+  "selected_survivor": null,
+  "candidate_2026_values_opened": false,
+  "candidate_ea_runtime_or_native": false,
+  "native_economic_verdict": null,
+  "reason": "Each role retains196originalparents:93lacksparebudgetand103havecompleteprotectedhedgequotepaths. Both whole-year and both-half standalone stressed hedge increments are negative. No missing path or dropped opportunity can rescue selection. These are standalone quote approximations, not full candidate account economics or nativeDD.",
+  "freeze": "Entire bundle closed without adjacent hedge-fraction,beta-clamp,forgetting,risk-cap,headroom,symbol,parent-subgroup or exit rescue. Preserve all causal source/input/model/moments/tapes.",
+  "free_bytes": 55668080640,
+  "live_changes": false,
+  "continuation": "Broader V7 task stays active; recompare macro mechanisms before opening a materially distinct candidate."
+}
