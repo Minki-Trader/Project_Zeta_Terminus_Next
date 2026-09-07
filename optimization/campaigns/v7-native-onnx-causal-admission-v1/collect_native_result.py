@@ -66,7 +66,7 @@ def summarize(run_tag, report_name):
     for value in (run_tag, report_name):
         if not re.fullmatch(r'[a-z0-9-]+', value):
             raise ValueError('A run identifier must stay in its own namespace')
-    if run_tag == 'training-control-v1':
+    if re.fullmatch(r'training-control-v[0-9]+', run_tag):
         role = 'control'
         name = 'ZetaV7CAControl'
         destination = RAW / 'training/control'
@@ -82,7 +82,8 @@ def summarize(run_tag, report_name):
     if shutil.disk_usage(ROOT).free < 30 * 1024**3 + 256 * 1024**2:
         raise RuntimeError('Economic artifact reserve')
     agents = [p for p in (RUNTIME / 'Tester').glob('Agent-*') if p.is_dir()]
-    paths = [(p, p / 'MQL5/Files' / name / 'optimization/causal-admission' / run_tag) for p in agents]
+    namespace = 'optimization/causal-admission' if run_tag == 'training-control-v1' else 'ca'
+    paths = [(p, p / 'MQL5/Files' / name / namespace / run_tag) for p in agents]
     paths = [(p, q) for p, q in paths if q.is_dir()]
     if len(paths) != 1:
         raise RuntimeError('Exactly one own episode output tree is required')
@@ -105,7 +106,8 @@ def summarize(run_tag, report_name):
     if ' thread finished' not in episode_text:
         raise RuntimeError('The native economic run is not complete')
     destination.mkdir(parents=True)
-    shutil.copytree(own_files, destination / 'Files' / name / 'optimization/causal-admission' / run_tag)
+    archived_own = destination / 'Files' / name / namespace / run_tag
+    shutil.copytree(own_files, archived_own)
     shutil.copytree(RUNTIME / 'reports' / report_name, destination / 'report')
     (destination / 'agent-episode.log').write_text(episode_text, encoding='utf-8')
     origin_log = record(agent_log)
@@ -145,37 +147,38 @@ def summarize(run_tag, report_name):
         native, core, learning = native_lines[0], core_lines[0], causal_lines[0]
         if core.get('status') != 'ECONOMIC' or int(learning['faults']) != 0 or int(learning['open']) != 0 or int(learning['mark_known']) != 1:
             reasons.append('The normal native run reports an operating/accounting fault or unfinished position')
-        lifecycle = destination / 'Files' / name / 'optimization/causal-admission' / run_tag / 'research/research-lifecycles.csv'
-        with lifecycle.open(encoding='utf-8-sig', newline='') as stream:
-            lives = list(csv.DictReader(stream))
-        births = [v for v in lives if v['event'] == 'BIRTH']
-        closes = [v for v in lives if v['event'] == 'CLOSE']
-        born = Counter((v['component_id'], v['position_identifier']) for v in births)
-        closed = Counter((v['component_id'], v['position_identifier']) for v in closes)
-        if born != closed or any(v != 1 for v in born.values()) or any(v['partial_observation'] != '0' for v in lives):
-            reasons.append('Native lifecycle population is not one-to-one fully closed')
-        if len(closes) != int(core['closed']):
-            reasons.append('Native closed lifecycle count does not match the core total')
-        for label, first in [('2024-H1', True), ('2024-H2', False)]:
-            subset = [v for v in closes if (v['server_time'] < '2024.07.01') == first]
-            epochs[label] = dict(closed=len(subset), actual=sum(float(v['actual_net_usd']) for v in subset),
-                                 stress=sum(float(v['stressed_net_usd']) for v in subset))
-        actual = float(core['actual_net'])
-        stress = float(core['stressed_net'])
-        conservative_stress = stress - float(learning['positive_closed_swap'])
-        dd_cash = float(native['equity_dd'])
-        dd_relative = float(native['equity_dd_relative_pct'])
-        economic = dict(actual_net=actual, original_stressed_net=stress,
-                        no_positive_swap_stressed_net=conservative_stress,
-                        actual_wealth=100 + actual, original_stressed_wealth=100 + stress,
-                        conservative_stressed_wealth=100 + conservative_stress,
-                        native_equity_DD_cash=dd_cash, native_equity_DD_percent=dd_relative,
-                        conservative_recovery=conservative_stress / max(.01, dd_cash, float(core['stressed_dd'])),
-                        actual_log_growth=math.log((100 + actual) / 100) if actual > -100 else None,
-                        closed_lifecycles=len(closes), native_trade_count=float(native['trades']),
-                        per_component=dict(Counter(v['component_id'] for v in closes)))
-        if abs(sum(float(v['actual_net_usd']) for v in closes) - actual) > 1e-5 or abs(sum(float(v['stressed_net_usd']) for v in closes) - stress) > 1e-5:
-            reasons.append('Full lifecycle economics do not match core totals')
+        if core.get('status') == 'ECONOMIC':
+            lifecycle = archived_own / 'research/research-lifecycles.csv'
+            with lifecycle.open(encoding='utf-8-sig', newline='') as stream:
+                lives = list(csv.DictReader(stream))
+            births = [v for v in lives if v['event'] == 'BIRTH']
+            closes = [v for v in lives if v['event'] == 'CLOSE']
+            born = Counter((v['component_id'], v['position_identifier']) for v in births)
+            closed = Counter((v['component_id'], v['position_identifier']) for v in closes)
+            if born != closed or any(v != 1 for v in born.values()) or any(v['partial_observation'] != '0' for v in lives):
+                reasons.append('Native lifecycle population is not one-to-one fully closed')
+            if len(closes) != int(core['closed']):
+                reasons.append('Native closed lifecycle count does not match the core total')
+            for label, first in [('2024-H1', True), ('2024-H2', False)]:
+                subset = [v for v in closes if (v['server_time'] < '2024.07.01') == first]
+                epochs[label] = dict(closed=len(subset), actual=sum(float(v['actual_net_usd']) for v in subset),
+                                     stress=sum(float(v['stressed_net_usd']) for v in subset))
+            actual = float(core['actual_net'])
+            stress = float(core['stressed_net'])
+            conservative_stress = stress - float(learning['positive_closed_swap'])
+            dd_cash = float(native['equity_dd'])
+            dd_relative = float(native['equity_dd_relative_pct'])
+            economic = dict(actual_net=actual, original_stressed_net=stress,
+                            no_positive_swap_stressed_net=conservative_stress,
+                            actual_wealth=100 + actual, original_stressed_wealth=100 + stress,
+                            conservative_stressed_wealth=100 + conservative_stress,
+                            native_equity_DD_cash=dd_cash, native_equity_DD_percent=dd_relative,
+                            conservative_recovery=conservative_stress / max(.01, dd_cash, float(core['stressed_dd'])),
+                            actual_log_growth=math.log((100 + actual) / 100) if actual > -100 else None,
+                            closed_lifecycles=len(closes), native_trade_count=float(native['trades']),
+                            per_component=dict(Counter(v['component_id'] for v in closes)))
+            if abs(sum(float(v['actual_net_usd']) for v in closes) - actual) > 1e-5 or abs(sum(float(v['stressed_net_usd']) for v in closes) - stress) > 1e-5:
+                reasons.append('Full lifecycle economics do not match core totals')
     outcome = dict(utc=datetime.now(timezone.utc).isoformat(),
                    status='COMPLETE_NATIVE_ECONOMIC_RUN_REQUIRES_MATRIX_INPUT_BINDING' if not reasons else 'CORRECTION_REQUIRED_NO_ECONOMIC_VERDICT',
                    role=role, run_tag=run_tag, reasons=reasons, economics=economic,

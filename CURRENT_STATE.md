@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0644`
+- Latest state ID: `STATE-0648`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-User's V7 ONNX/online task remains active, with no user pause. Sole family: Program7 optimization/campaigns/v7-native-onnx-causal-admission-v1. Source/input phase9fa661f is frozen, both EAs compile0errors0warnings, own native6182 runtime/200-byte ONNX/2023-2024M1/all36used2024tickmonths are ready. The first control PID15388 failed at initialization because Tester SET files were placed in Presets rather than Profiles/Tester; no trading tick or economic result. Exact frozen SETs are now installed correctly and all74 source/model/settings plus46 runtime/history hashes remain unchanged. A command containing native restart was rejected by automatic approval review as blocked by policy without detail. Artifact-only correction and the ordinary economic collector are complete; dedicated tester restart awaits the explicit user response, and no Optimization process is running. Zero training episodes/learned fit/2026 candidate outcomes. All15 predecessors remain closed; separate16-child pyramid exception question is also unapproved. About39.8GiB free, Live unchanged. Resume only after resolving the pending restart authorization; do not invent approval or claim background progress.
+The V7 task remains active without a user pause. The sole family is Program 7 optimization/campaigns/v7-native-onnx-causal-admission-v1. The user's follow-up resolved the Tester restart: ordinary launches succeeded. A path-only fix restored complete native research logging, and the latest full 2024 control finished with 554 matched closed lifecycles and zero missing or partial records and zero trading or learning faults. Its report still says 99% real ticks after attributable canonical cache reconstruction. All 167 source/native bindings and all three complete M1 snapshots matched through the completed run; subsequent README and continuity updates are documentation only and need fresh phase metadata before another trajectory. The original 100% criterion therefore remains unmet; the full result is preserved and no ML training or economic victory is claimed. A concrete proposal asks permission to use this 2024 input only for training while retaining 100% for final 2025 selection and 2025-August 2026 confirmation. No answer or exception is inferred. All own processes are normally stopped, all eight training episodes and learned fit remain unopened, and all 15 predecessors remain closed. The separate pyramid exception also stays unapproved. Preserve Live PID 28324 and its authority/files, about 38.1 GiB free. Evidence: NATIVE_CONTROL_COMPLETE_TRAINING_QUALITY_PENDING_V1.json and TRAINING_HISTORY_EXCEPTION_PROPOSAL_V1.json. Do not launch dependent training until the quality boundary is resolved.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 
