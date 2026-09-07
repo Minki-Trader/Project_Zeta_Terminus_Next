@@ -160,3 +160,11 @@
 /optimization/evidence/V7_LOG_ALLOCATION_SELECTION_STORAGE_AMENDMENT_V1.json -text
 
 /lineage/STORAGE_OTHER_CLOSED_RAW_FEASIBILITY_20260908_V1.json -text
+
+/optimization/evidence/V7_LOG_ALLOCATION_NATIVE_USER_AUTHORIZATION_V1.json -text
+/optimization/campaigns/v7-native-log-allocation-completion-v1/** -text whitespace=cr-at-eol,-blank-at-eof
+
+# Preserve the exact attributed public MetaTrader SDK bytes, including upstream whitespace.
+/optimization/campaigns/v7-native-log-allocation-completion-v1/mt5/MQL5/Include/** -whitespace
+/optimization/campaigns/v7-native-log-allocation-completion-v1/mt5/MQL5/Include/ZetaV7LA*/** whitespace=cr-at-eol,-blank-at-eof
+/optimization/evidence/V7_LOG_ALLOCATION_NATIVE_USER_AUTHORIZATION_V1.json -text whitespace=cr-at-eol,-blank-at-eof

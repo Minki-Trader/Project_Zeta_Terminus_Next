@@ -125,6 +125,8 @@ Exact external-session raw-time authority remains unresolved. MetaQuotes API doc
 
 ## Authority boundary
 
+The latest2026-09-08 user reply `ㄱㄱ` explicitly approves only the pending two-model native log-allocation completion exception. Exact scope and hashes are in `optimization/evidence/V7_LOG_ALLOCATION_NATIVE_USER_AUTHORIZATION_V1.json`; family19 derives fresh originalV7 source and may copy only the336Bgraph/411Binitialparameters. Prior proxy failures and all final100%/growth/DD/recovery/epoch gates remain. Existing V7 improvement continues serially with Live untouched; no other closed family or pyramid reopens.
+
 The latest user clarification accepts the active causal-admission family's 2024 training-only99%real-tick proposal and requires carrying existing V7 improvement through completion. Final2025selection and2025-August2026confirmation retain100%real ticks and all original economic/causal/input gates. Physical separation protects Live; it does not create an independent-strategy objective. The exact decision is `optimization/campaigns/v7-native-onnx-causal-admission-v1/evidence/TRAINING_HISTORY_USER_AUTHORIZATION_V1.json`. Historical failures/closures remain attributable and the unrelated closed-pyramid exception is not approved.
 
 Latest 2026-09-07 user direction resumes development specifically from existing V7, using ONNX/online learning and internal EA/MQH information for compound growth with comparable DD. The isolated Optimization campaign and new exact-V7R baseline named in CURRENT_STATE own this work; V8 Challenge stays paused and FRBSF remains permanently cancelled. All of Live-Dev and its direct-user 1/1 activation are preserved. Older pause/benchmark paragraphs below remain historical context; the latest scoped Operating Direction governs.
@@ -139,3 +141,6 @@ On 2026-09-07 the user permanently cancelled `lab/research/frbsf-news-sentiment-
 ## Completed legacy closure
 
 B75 `RC16 Explicit Frozen-Life HOLD Confirmation` resumed after migration and is complete as an evidence-only Next closure. The exact frozen B45/B55/B60/B65/B68/B74 records support keeping the full accepted RC16 volume to its original catastrophic stop or fixed eight-M30 exit. No new data, outcome, executable, identity, deployment, Live change, or successor research stream opened.
+
+
+2026-09-08 STATE-0673: The approved family19 native log-allocation completion has three cleanly compiled own EA roles and a dedicated physical Portable. Input freeze E304AB3DA611D40AA3EA15F80154508E624EB5DA273ADA017A32D5F84313C429 binds847 files. First full2025 control is running; no economic judgment yet. Continue all four declared roles and retain all prior failures,30GiB reserve and unchanged Live authority.
