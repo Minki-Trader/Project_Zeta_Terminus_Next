@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-07T14:19:57.753867+00:00",
+  "status": "NORMAL_REPORT_ATTRIBUTION_AND_LOG_CONTEXT_CORRECTION",
+  "prior_producer": {
+    "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/collect_native_result.py",
+    "bytes": 42713,
+    "sha256": "C1063E194A85ED231B4B13379E6AAB6A206E50CA9F4039490147488A9D7D84EF"
+  },
+  "corrected_producer": {
+    "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/collect_native_result.py",
+    "bytes": 43950,
+    "sha256": "CF2852A1B53069CE428932A5B9ABCD0F68AC064CE72191F1CA37E69E57B06F7F"
+  },
+  "preserved_first_report": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-variance-standardization-v1/native-results/selection-control-static-v1.json",
+    "bytes": 56786,
+    "sha256": "387A576101491663AB7BFF6750E49148EECB8FD57B81E4A4A4B3C51F8AB34CEF"
+  },
+  "changes": [
+    "Record exact report-producer source SHA inside every next result. The existing v1 report remains immutable and is explicitly attributed to prior_producer here.",
+    "The bare word fallback wrongly classified three VS_LEARNING fallback=0 summary rows as tick-history fallback. Require tick/history context and keep full raw logs; expand explicit absent/discarded real-tick terms.",
+    "Retain the original V7RR1_CONTRACT START/END records in ordinary parsed native summaries for root operating binding."
+  ],
+  "first_report_unknowns": [],
+  "first_report_quality_percent": 100,
+  "first_report_actual_tick_history_fallback_count": 0,
+  "native_source_model_settings_or_outcomes_changed": false,
+  "root_economic_judgment_only": true
+}

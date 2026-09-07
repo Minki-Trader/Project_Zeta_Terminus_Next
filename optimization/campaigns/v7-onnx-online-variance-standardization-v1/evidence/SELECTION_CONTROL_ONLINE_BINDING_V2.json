@@ -1,0 +1,148 @@
+{
+  "utc": "2026-09-07T14:36:49.446694+00:00",
+  "status": "COMPLETE_VALID_ADJACENT_CONTROL_FOR_UNCHANGED_ONLINE_V2",
+  "report": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-variance-standardization-v1/native-results/selection-control-online-v2.json",
+    "bytes": 65421,
+    "sha256": "4C0BB6C269A9127C827D8CE202696A6CB42F9B137252CF24BC79412A4CD6C444"
+  },
+  "report_producer": {
+    "bytes": 43950,
+    "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/collect_native_result.py",
+    "sha256": "CF2852A1B53069CE428932A5B9ABCD0F68AC064CE72191F1CA37E69E57B06F7F"
+  },
+  "history_after": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-variance-standardization-v1/history-observations/selection-after-control-online-v2.json",
+    "bytes": 4347,
+    "sha256": "EFCEE58D2B8D22BB481BB8EEFDE14738105A0853346A985306343F391149F57C"
+  },
+  "all_1297_frozen_files_and_full_M1_unchanged": true,
+  "contracts_start_end_equal": true,
+  "required_contracts": {
+    "US30": {
+      "contract": 1.0,
+      "freeze": 0,
+      "fri": 3.0,
+      "mon": 1.0,
+      "rollover3": 5,
+      "sat": 0.0,
+      "stops": 0,
+      "sun": 0.0,
+      "swap_long": -7.87,
+      "swap_mode": 2,
+      "swap_short": 3.34,
+      "thu": 1.0,
+      "tick_size": 0.01,
+      "tick_value": 0.01,
+      "tick_value_loss": 0.01,
+      "tick_value_profit": 0.01,
+      "tue": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "wed": 1.0
+    },
+    "US100": {
+      "contract": 1.0,
+      "freeze": 0,
+      "fri": 3.0,
+      "mon": 1.0,
+      "rollover3": 5,
+      "sat": 0.0,
+      "stops": 0,
+      "sun": 0.0,
+      "swap_long": -4.34,
+      "swap_mode": 2,
+      "swap_short": 1.82,
+      "thu": 1.0,
+      "tick_size": 0.01,
+      "tick_value": 0.01,
+      "tick_value_loss": 0.01,
+      "tick_value_profit": 0.01,
+      "tue": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "wed": 1.0
+    },
+    "US500": {
+      "contract": 1.0,
+      "freeze": 0,
+      "fri": 3.0,
+      "mon": 1.0,
+      "rollover3": 5,
+      "sat": 0.0,
+      "stops": 0,
+      "sun": 0.0,
+      "swap_long": -1.14,
+      "swap_mode": 2,
+      "swap_short": 0.48,
+      "thu": 1.0,
+      "tick_size": 0.01,
+      "tick_value": 0.01,
+      "tick_value_loss": 0.01,
+      "tick_value_profit": 0.01,
+      "tue": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "wed": 1.0
+    }
+  },
+  "real_tick_starts": [
+    [
+      "US100",
+      "2024.01.02 00:00:00"
+    ],
+    [
+      "US30",
+      "2024.01.02 00:00:00"
+    ],
+    [
+      "US500",
+      "2024.01.02 00:00:00"
+    ]
+  ],
+  "real_tick_quality_percent": 100,
+  "detailed_history_fallback_lines": [],
+  "forecast_operating_evidence": {
+    "0": {
+      "forecast_rows": 5746,
+      "observed_before_origin": 0,
+      "nonfinite_values": 0,
+      "update_rows": 5744,
+      "complete_labels": 5743,
+      "strict_maturity_violations": 0
+    },
+    "1": {
+      "forecast_rows": 5881,
+      "observed_before_origin": 0,
+      "nonfinite_values": 0,
+      "update_rows": 5876,
+      "complete_labels": 5876,
+      "strict_maturity_violations": 0
+    },
+    "2": {
+      "forecast_rows": 23497,
+      "observed_before_origin": 0,
+      "nonfinite_values": 0,
+      "update_rows": 23484,
+      "complete_labels": 23484,
+      "strict_maturity_violations": 0
+    }
+  },
+  "inherited_control_economics": {
+    "closed": 554,
+    "actual_net": 121.39,
+    "stressed_net": 112.988,
+    "native_relative_equity_dd_pct": 16.073213874
+  },
+  "conservative_recovery_definition": "Use min(actual net, original stressed net minus positive financing) / max(native cash equity DD, original stressed closed-balance DD, conservative stressed minute-mark DD, 0.01). Preserve both closed and marked cost paths; do not discard the larger original stressed closed DD.",
+  "complete_account_rows": 352189,
+  "flat_and_known": true,
+  "next": "selection-online-v2 with identical initial weights, empty 2025 queue and frozen strict mature-label updates",
+  "budget": {
+    "runtime_bytes": 3959194839,
+    "raw_bytes": 664293367,
+    "free_bytes": 34042224640,
+    "remaining_allowance_bytes": 1013656370
+  },
+  "repeat_control_full_economic_and_observation_summary_equal": true
+}

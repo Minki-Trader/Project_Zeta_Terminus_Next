@@ -7,7 +7,10 @@ import subprocess
 import sys
 import time
 from variance_signal import FAMILY, ROOT, RAW, record
-from prepare_selection import RUNTIME, RUNS, ROLES
+from prepare_selection import RUNTIME, ROLES
+
+RUNS = [("control", "selection-control-static-v2"), ("static", "selection-static-v2"),
+        ("control", "selection-control-online-v2"), ("online", "selection-online-v2")]
 
 
 def utc():
@@ -95,7 +98,7 @@ def main():
         raise RuntimeError("A native attempt already exists; preserve it before any explicit correction.")
     if runtime_owner_pids():
         raise RuntimeError("The own runtime already has a terminal owner.")
-    frozen_path = FAMILY / "evidence/SELECTION_INPUT_FREEZE_V1.json"
+    frozen_path = FAMILY / "evidence/SELECTION_INPUT_FREEZE_V2.json"
     frozen = json.loads(frozen_path.read_text())
     before = current_binding(frozen)
     if before["changed"]:

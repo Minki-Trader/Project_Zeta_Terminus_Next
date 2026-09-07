@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-07T14:50:12.772383+00:00",
+  "status": "NORMAL_REPORT_PATH_LABEL_CACHED_PER_FILE",
+  "previous_producer": {
+    "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/plot_native_selection.py",
+    "bytes": 21925,
+    "sha256": "D6E2816C09780916F5DFE350AAB5DEBFB7FB0315CBACD510F04540DA0FED1A44"
+  },
+  "corrected_producer": {
+    "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/plot_native_selection.py",
+    "bytes": 22558,
+    "sha256": "95CAEC84B58F4737611839F5B58A9750869653587DFBA6A6A533A6D70A40B8B2"
+  },
+  "previous_pid": 3432,
+  "previous_output_written": false,
+  "cause": "The same absolute path was resolved inside every row error-context string, causing millions of redundant Windows filesystem operations during ordinary CSV reporting.",
+  "correction": "Resolve each immutable input path once per file reader and reuse the label. Same rows, numeric fields, display sampling, dates, table and rendering. Stop only bound own plot producer before any output and retain prior source.",
+  "native_economics_or_model_changed": false
+}

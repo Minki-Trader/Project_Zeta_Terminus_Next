@@ -110,7 +110,11 @@ bool VSOriginData(const int kind,const datetime closed_bar,double &returns[],
       for(int p=0;p<2;++p)
         {
          const int peer_shift=iBarShift(peers[p],period,closed_bar,true);
-         if(peer_shift<1)
+         // A peer's just-ended bar remains shift 0 until its next tick.
+         // Wait for that rollover; it is not a permanent historical gap.
+         if(peer_shift<1 && iTime(peers[p],period,0)<=closed_bar)
+            return(false);
+         if(peer_shift<0)
            {
             ArrayResize(returns,count-1); ArrayInitialize(returns,0.0);
             return(true);

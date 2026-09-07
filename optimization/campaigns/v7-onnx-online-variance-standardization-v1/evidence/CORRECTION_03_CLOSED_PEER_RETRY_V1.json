@@ -1,0 +1,67 @@
+{
+  "utc": "2026-09-07T14:12:27.157186+00:00",
+  "status": "NATIVE_CLOSED_PEER_BAR_RETRY_CORRECTION_BEFORE_ANY_CANDIDATE_RUN",
+  "original_attempt": "selection-control-static-v1",
+  "retained_full_control": {
+    "quality_percent": 100,
+    "actual_net": 121.39,
+    "stressed_net": 112.988,
+    "native_equity_dd_relative_pct": 16.073213874,
+    "closed_lifecycles": 554,
+    "all_1297_frozen_files_unchanged": true,
+    "full_native_M1_before_after_equal": true
+  },
+  "fault": "VSOriginData used peer_shift<1 as permanent causal unavailability. At a new hour, another required symbol can still expose the just-ended bar as shift 0 until its first tick rolls its series forward. This is transient readiness, not a missing historical bar.",
+  "normal_input_diagnosis": {
+    "full_native_M1_past_121_bar_aligned_origins": 5746,
+    "structurally_unavailable_origins": 135,
+    "native_cross_forecasts": 4464,
+    "native_cross_unavailable": 1417,
+    "fully_past_aligned_origins_missed": 1282,
+    "unexpected_extra_forecasts": 0
+  },
+  "correction": "When a required peer is not yet on a bar strictly later than the origin closed bar, defer and retry before making a forecast or consuming its labels. Only an absent exact past bar after the peer has advanced may be marked causal unavailability. Existing within-slot synchronization retries and strict chronological label availability remain. No model, feature, target, coefficient, normalization, threshold, risk, quantity or economic gate changes.",
+  "next_bundle": [
+    "selection-control-static-v2",
+    "selection-static-v2",
+    "selection-control-online-v2",
+    "selection-online-v2"
+  ],
+  "preservation": "Complete v1 native/archive/history/evidence remain. Full v1 source and three EX5s are in immutable commit 346423e; additionally retain old changed forecast/launcher source and all three EX5s at evidence/native-implementation-v1. Never overwrite v1 SET/INI or raw state/output.",
+  "source_archive": [
+    {
+      "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/evidence/native-implementation-v1/control.ex5",
+      "bytes": 273176,
+      "sha256": "F5218BCB5167920159053CCB79DA1A94B0ADB0A357DFF750DF4B45DDF2B7D72B"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/evidence/native-implementation-v1/online.ex5",
+      "bytes": 276620,
+      "sha256": "4D32A2F2A19D73A2C3841E980BA4BCE4038BF5F829250C9DC75FD139234514FB"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/evidence/native-implementation-v1/run_native_selection.py",
+      "bytes": 8257,
+      "sha256": "AAA5AE78FD9B1B71D412653212F30F11D9E3E64E73E918C8EC60CA678988A834"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/evidence/native-implementation-v1/static.ex5",
+      "bytes": 275344,
+      "sha256": "85F6354BADD9789945483E268BB90AF5A0D72D7E8C53D2F131E8FF1F3D7AB16E"
+    },
+    {
+      "path": "optimization/campaigns/v7-onnx-online-variance-standardization-v1/evidence/native-implementation-v1/ZetaVSForecast.mqh",
+      "bytes": 14804,
+      "sha256": "A59CEAE2EDF713DED5E0A76FAFCD8C72097415F0CC81F1B4864414DA62EEED5B"
+    }
+  ],
+  "budget_before_correction": {
+    "runtime_bytes": 3943003690,
+    "raw_bytes": 367079606,
+    "free_bytes": 33931116544,
+    "remaining_allowance_bytes": 1327061280
+  },
+  "budget": "The extra full control fits existing 4.25 GiB runtime/1 GiB raw/52 MiB source allowances. No new storage ceiling or deletion is needed.",
+  "economic_candidate_count": 0,
+  "live_changes": false
+}

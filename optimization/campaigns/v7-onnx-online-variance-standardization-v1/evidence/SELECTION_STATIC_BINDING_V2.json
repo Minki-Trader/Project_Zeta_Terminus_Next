@@ -1,0 +1,162 @@
+{
+  "utc": "2026-09-07T14:30:03.085425+00:00",
+  "status": "COMPLETE_VALID_STATIC_ROLE_WHOLE_BUNDLE_STILL_PENDING",
+  "report": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-variance-standardization-v1/native-results/selection-static-v2.json",
+    "bytes": 65043,
+    "sha256": "6765DAA899518A63F01CD75098E711CA389DB195F56DBE61DC738EC0C9B47AF6"
+  },
+  "history_after": {
+    "path": "optimization/artifacts/raw/v7-onnx-online-variance-standardization-v1/history-observations/selection-after-static-v2.json",
+    "bytes": 4339,
+    "sha256": "4527614375A6790918D8D6A36733953BE4CBA18AEE34B8D08C1F2A8BD5BF3D8C"
+  },
+  "all_1297_frozen_files_full_M1_and_adjacent_contracts_unchanged": true,
+  "real_tick_quality_percent": 100,
+  "detailed_history_fallback_lines": [],
+  "required_contracts": {
+    "US30": {
+      "contract": 1.0,
+      "freeze": 0,
+      "fri": 3.0,
+      "mon": 1.0,
+      "rollover3": 5,
+      "sat": 0.0,
+      "stops": 0,
+      "sun": 0.0,
+      "swap_long": -7.87,
+      "swap_mode": 2,
+      "swap_short": 3.34,
+      "thu": 1.0,
+      "tick_size": 0.01,
+      "tick_value": 0.01,
+      "tick_value_loss": 0.01,
+      "tick_value_profit": 0.01,
+      "tue": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "wed": 1.0
+    },
+    "US100": {
+      "contract": 1.0,
+      "freeze": 0,
+      "fri": 3.0,
+      "mon": 1.0,
+      "rollover3": 5,
+      "sat": 0.0,
+      "stops": 0,
+      "sun": 0.0,
+      "swap_long": -4.34,
+      "swap_mode": 2,
+      "swap_short": 1.82,
+      "thu": 1.0,
+      "tick_size": 0.01,
+      "tick_value": 0.01,
+      "tick_value_loss": 0.01,
+      "tick_value_profit": 0.01,
+      "tue": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "wed": 1.0
+    },
+    "US500": {
+      "contract": 1.0,
+      "freeze": 0,
+      "fri": 3.0,
+      "mon": 1.0,
+      "rollover3": 5,
+      "sat": 0.0,
+      "stops": 0,
+      "sun": 0.0,
+      "swap_long": -1.14,
+      "swap_mode": 2,
+      "swap_short": 0.48,
+      "thu": 1.0,
+      "tick_size": 0.01,
+      "tick_value": 0.01,
+      "tick_value_loss": 0.01,
+      "tick_value_profit": 0.01,
+      "tue": 1.0,
+      "volume_min": 0.01,
+      "volume_step": 0.01,
+      "wed": 1.0
+    }
+  },
+  "learner_observations": {
+    "cross": {
+      "entry_applied_csv_rows": 242,
+      "entry_non_applied_csv_rows": 5,
+      "forecast_csv_rows": 5746,
+      "last_update_count_in_updates_csv": 0,
+      "reported": {
+        "applied": 242,
+        "fallback": 5,
+        "forecasts": 5746,
+        "kind": 0,
+        "unavailable": 135,
+        "updates": 0
+      }
+    },
+    "return": {
+      "entry_applied_csv_rows": 247,
+      "entry_non_applied_csv_rows": 0,
+      "forecast_csv_rows": 5881,
+      "last_update_count_in_updates_csv": 0,
+      "reported": {
+        "applied": 247,
+        "fallback": 0,
+        "forecasts": 5881,
+        "kind": 1,
+        "unavailable": 0,
+        "updates": 0
+      }
+    },
+    "passive": {
+      "entry_applied_csv_rows": 2814,
+      "entry_non_applied_csv_rows": 0,
+      "forecast_csv_rows": 23497,
+      "last_update_count_in_updates_csv": 0,
+      "reported": {
+        "applied": 2814,
+        "fallback": 0,
+        "forecasts": 23497,
+        "kind": 2,
+        "unavailable": 0,
+        "updates": 0
+      }
+    }
+  },
+  "strict_maturity_violations": 0,
+  "observed_before_origin": 0,
+  "actual_net": 117.67,
+  "conservative_stressed_net": 109.091,
+  "native_relative_equity_dd_pct": 18.212100085,
+  "conservative_recovery": 4.102013574235275,
+  "dd_denominator": 26.5945,
+  "halves": {
+    "2025-H1": {
+      "actual_net_usd": 52.15,
+      "birth_count": 300,
+      "close_count": 300,
+      "stressed_net_usd": 47.4955
+    },
+    "2025-H2": {
+      "actual_net_usd": 65.52,
+      "birth_count": 277,
+      "close_count": 277,
+      "stressed_net_usd": 61.5955
+    }
+  },
+  "birth_volume_histogram": {
+    "0.01": 577
+  },
+  "role_observation": "Static actual/stressed wealth is below its adjacent exact control and DD exceeds both nominal and effective ceiling. Preserve it; no threshold/model/series rescue. The complete fixed online half of this same bundle remains required before family closure.",
+  "next": "selection-control-online-v2, then unchanged selection-online-v2",
+  "whole_family_judgment": null,
+  "budget": {
+    "runtime_bytes": 3954138377,
+    "raw_bytes": 565294452,
+    "free_bytes": 33396572160,
+    "remaining_allowance_bytes": 1117711747
+  }
+}

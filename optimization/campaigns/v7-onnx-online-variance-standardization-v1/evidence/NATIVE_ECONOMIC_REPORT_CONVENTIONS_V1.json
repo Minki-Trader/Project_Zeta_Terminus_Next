@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-07T14:27:04.272718+00:00",
+  "status": "REPORT_CONVENTIONS_BEFORE_FIRST_CANDIDATE_RESULT_IS_OPENED",
+  "reference_capital": 100,
+  "wealth": "Actual terminal wealth = 100 + actual net. Original stressed terminal wealth = 100 + original stressed net. Conservative stressed wealth additionally removes cumulative positive realized swap. Final flat account marks and full lifecycle sums must reconcile.",
+  "growth": "Report both net-profit percentage improvement and terminal-wealth percentage improvement, plus log(terminal wealth / 100). The declared nominal 5% stressed gain is expressed as stressed net improvement; terminal wealth must also strictly improve. Report both denominators explicitly, so a 5% net gain is never presented as a 5% wealth gain.",
+  "recovery": "min(actual net, conservative stressed net) / max(native absolute cash equity DD, original stressed closed-balance DD, conservative stressed minute-mark DD, 0.01). Preserve all three DD inputs. Native relative equity DD is authoritative for the DD gate; do not confuse maximal cash-DD percentage with maximal relative equity DD.",
+  "calendar": "Attribute complete lifecycle PNL to its CLOSE server time. Also report account marked and balance changes at the half-year boundary, with positive realized swap removal by its own observed cumulative path. Unknown or unreconciled observations remain correction states, never optimistic zeros.",
+  "quantity": "Report actual BIRTH volume histogram and daily multiplier path. Only actual native quantity/capital growth demonstrates reinvestment; a visual accelerating curve or post-hoc scaled fixed-dollar ledger is insufficient.",
+  "decision": "Whole fixed static/online bundle closes only after all four ordered valid native runs. Effective DD tolerance still requires the prospectively stated stronger growth/recovery/temporal evidence and explicit root judgment; this report convention does not automatically grant it.",
+  "existing_declaration_and_correction_01_unchanged": true,
+  "candidate_result_numeric_values_opened": false
+}
