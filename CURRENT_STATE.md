@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0635`
+- Latest state ID: `STATE-0637`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: continue serial V7ONNX/online development until userpause; actualcompounding/comparableDD,Liveuntouched,30GiBfree. Winner-pyramid three-rolebundle is CLOSED withoutsurvivor/seed. Complete2024fit66/2025eligible43children. Static14children lose2.5335stress; online16add25.4164stress(halves20.4379/4.9785),combined153.4914actual/144.0254stress andsame15.924%teacherclosedDD. Online fails frozen20childminimum; no lowergate/adjacenttrigger/nativealternate/unfilteredseed. Source/controlquantities andcoarseM1observerbasket are notactualsharedcapital/nativeDD/compounding. Allsource/input/model/parent/child/forecast/update/pending/calendar evidencepreserved unchanged; no2026candidate,newEA/runtimeorLiveaction. ThirteenV7bundlesclosed; improvednativecompoundingstillunestablished. Whole-map comparison precedes anothermateriallydistinctunit. About42GiBfree.
+Currentuser task: continue serial V7ONNX/online development until userpause, actualcompounding/comparableDD,Liveuntouched,30GiBfree. Winner-pyramid closurea54ee3e is atorigin/main; it has no seed despite positiveonlineproxy. Whole-map comparison selects one Program5family optimization/campaigns/v7-onnx-online-inventory-q-policy-v1: rebuild allsix candidate entrylaws as oneUS30long/flat/shortbook, with stateful action-value learning, originalfull4%/12%/45%caps andimmutableinitialSL. ProspectiveCASH/STATIC/ONLINEbundle freezes14->32->3ONNX, DoubleDQN20whole2024passes, strictmaturetransition replay/SGD,08..20session, full2025simulatorgates andmandatoryadjacentnative2025-Aug2026gates. Own US30input762379M1rows and2222originalcontrol lifecycle rows copied, about47.4MB; normal compilation and fullsource/input SHA freeze precede firstfeatures/fit/outcomes. No2026candidate/newruntime yet. This isnot a child,weight,subset or oldsignalrescue; all13predecessorsremainclosed. About42GiBfree; Liveandbaselineunchanged.
 
 The following V8 Challenge details are paused historical re-entry information, not the active objective:
 

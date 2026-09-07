@@ -1,0 +1,19 @@
+{
+  "source": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/MQL5/Include/ZetaTerminusNext/Portfolio/ZetaPortfolioRisk.mqh",
+  "function": "CalculateProtectiveStop",
+  "source_line": 235,
+  "capital": "ConservativeRiskCapital()",
+  "position_budget": "capital*InpMaximumPositionRiskFraction",
+  "gross_budget": "position_budget*(1-InpUnmodelledRiskReserveFraction-InpStopPlacementHeadroomFraction)",
+  "frozen_values": {
+    "position_fraction": 0.04,
+    "reserve": 0.25,
+    "placement_headroom": 0.25,
+    "aggregate_fraction": 0.12,
+    "margin_fraction": 0.45
+  },
+  "algorithm": "Querynative ticksize/digits, minimumstopdistance, bracketthenintegerbinarysearchlargeststop whose OrderCalcProfit grossrisk is withinhalfpositionbudget; BufferedPlannedRisk andaggregate/margin checks follow. Protectedstopisnot arbitrarily reset during an original lifecycle.",
+  "selection_limit": "The newM1simulator uses unitcontract0.01tick fixed0.01lot and direct halfbudget distance. It doesnot claim exactnative OrderCalcProfit, margin, brokerstopbuffer, commission orfee identity; aconditionalnativecandidate mustuse the originalrisk functions.",
+  "original_identity_control": "The baseline exactsix-strategyEA remains control only. NewQcandidate hasone book and doesnot import any old learned model, teacheraction or closedchildseed.",
+  "live_changes": false
+}

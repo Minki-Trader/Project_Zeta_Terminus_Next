@@ -1,0 +1,98 @@
+{
+  "utc": "2026-09-07T08:01:41.556797+00:00",
+  "status": "PROSPECTIVE_BEFORE_OWN_INPUT_FEATURES_FIT_OR_OUTCOMES",
+  "campaign": "optimization/campaigns/v7-onnx-online-inventory-q-policy-v1",
+  "primary_program": 5,
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": [
+    "CASH_REFERENCE",
+    "STATIC_DOUBLE_DQN_INVENTORY",
+    "ONLINE_DOUBLE_DQN_INVENTORY"
+  ],
+  "reconstruction": "Only inside a new Optimization candidate, replace all six original entry laws with one US30target-inventory book. At most one position; target direction SHORT(-1),FLAT(0),LONG(+1). Existing Live and frozen exact V7 control are untouched. No original parent/signal/child/subset is used in model training.",
+  "source": {
+    "price": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/market-before-control/US30-M1.npy",
+    "sha256": "B56FAF1B495504A48DF982B91EB2EBF390A8B258E1F2864C6F0A3444A9446586",
+    "copy": "Own physical timestamp-only M1slice2023-11-01 through2026-01-01exclusive. No candidate2026 fields, closedcandidate source/model/state or external economic data.",
+    "control_lifecycle": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-lifecycles.csv",
+    "control_lifecycle_sha256": "6455361C78BF9227247860E85CB01C0A611CE725E636C28082ED8B505529B78B",
+    "control_use": "Own original2024/2025BIRTH/CLOSE copy for descriptive original contribution/clock only; never a Qtraining state, action, label, expert or replay seed."
+  },
+  "clock": {
+    "session": "Fixed server08:00..20:00, decisions everyM30at08:00 through19:30. At20:00 forceflat, first subsequent observed/legal quote if missing. No overnight continuation choice, session expansion or clock search. All365calendar dates and potential24decisiongrids/date remainvisible.",
+    "bars": "Aggregate original nonemptyM1 intoM30OHLC and last representative spread. State atD uses32previous nonemptyM30bars whose lastbar is exactlyD-1800 and whose span is<=7days. No-tick minutes are not filled. Missingprefix/grid quote records HOLD of any protected inventory, and ordinarystop/20:00completion continue.",
+    "execution_clock": "A valid optional decision needs first observedM1opening in[D,D+120). Its currentopen/spread is execution accounting only. Market andinventory-pricefeatures use the lastobservedM1close/spread inside the latestcompletedM30, timestamp<D; this never invents a D-60bar when no tick existed. Currentinventoryidentity, entry/SL andclosedbalances reflect alreadyprocessed opening-gapstop beforeoptionalaction. LaterafterDexecution retainsnominalDmarketcontext.",
+    "transition": "Oneaction holds untilnextvalidoptionaldecision orforcedend. Transitionreward uses stressedmarked equity at currentobserved openingquote beforeaction, through nextobserveddecision openingquote beforeitsaction (after anyopeninggapstop), or throughforcedclose. Nextstatefeatures remain completed-price information. Because representative M1spread belongs tothatminute, endpointlabelavailability is observedendpointminute+60, never nominalgridtime. Onlineconsumeonlyavailability<newnominaldecisionD. Missingdecision intervals remainincluded; discountpower is elapsednominalM30steps to nextdecision/end."
+  },
+  "features": {
+    "market": [
+      "directionless signed closechange over1M30 / mean last32M30ranges",
+      "signed closechange over4M30 / same range scale",
+      "signed closechange over16M30 / same range scale",
+      "populationSD of last31close differences / same range scale",
+      "high-low range overlast4M30 / same range scale",
+      "2*(lastclose-minlow32)/(maxhigh32-minlow32)-1 withrangefloor0.01",
+      "(D serverseconds-08:00)/12hours",
+      "lastcompleted representative spread / same range scale"
+    ],
+    "normalization": "Range scale=max(.01,mean32M30high-low ranges). Train-only mean/populationSD of the eight marketfeatures over all ready2024grids, sd floor1e-6, no clipping. Inventory features have fixed economic normalization, not outcome fit. M30featureclose uses lastobservedM1inside completedbar; no assumption that the finalminute exists.",
+    "inventory": [
+      "current direction -1/0/+1",
+      "current lastcompleted exit-side mark minus actualentry, signed / original entry gross stopdistance; flat0",
+      "current signed exit-side distance to fixedSL / original grossdistance; flat0",
+      "elapsedM30gridcount sinceentry /24; flat0",
+      "current conservativecapital /100",
+      "current initial gross stopdistance / current market range scale; flat0"
+    ],
+    "state_dimension": 14
+  },
+  "book": {
+    "target": "At a valid grid, argmaxQ overSHORT,FLAT,LONG, exact ties preferFLAT thenLONG thenSHORT. If target=currentdirection, keep sameposition andinitialstop. Otherwise close existing first, then optionalnewtarget with freshindependent protection; no overlapping hedgedpositions. Noentryafter20:00.",
+    "quantity": "Preliminary simulator fixed0.01 throughout; native uses original daily150USDstressed-balance lot staircase times0.01, not an independently optimized sizing rule. Native state/rewards record actualvolumes andcapital. Simulation is not a counterfactual native lot proof.",
+    "risk": "At every newentry, planned budget4% of min(actualbalance,actualmarked equity,closedstressedbalance), grossstop budgethalf. Sourceunitcontract1/tick0.01: initial grossdistance=floor(grossbudget/volume/0.01)*0.01; immutableuntilclose. Requiredistance>=max(0.01,entryrepresentative spread+0.01) and positivecapital. Native uses unchanged exact CalculateProtectiveStop, full4%reservation,12%aggregate and45%margin/ordinary quotelegality. Nostopreset/loosen/trailing or risk credit.",
+    "price_path": "Process observedM1chronologically. Before any scheduledtarget action, existing opening-gapSL takesprecedence. Longexitbid/shortexitask=bid+representative spread. Duringminute longSL iflow<=SL,shortSL ifhigh+spread>=SL; adverse gap fills worseopeningquote. A stoppedbook staysflat untilnextvaliddecision. No favorable inferred intraminute path. At20:00 forceclose withordinaryopeninggapSL precedence. No horizon/target/stop/grid rescue. For bounded preliminaryDD, mark the mostfavorableminuteequity before the adverse reachableequity (cappedatinitialSLwhen touched) thencloseSL; this is a pessimistic OHLCorderingbound, not observedtickchronology. OpeninggapSL alwayshappens beforeoptionalreversal/newentry. Whenforced20:00quote isabsent, thefirstlaterobservedquote maylie onnextsource date andisreported asforcedcarry; sourceendwithoutlegalquote iscorrection.",
+    "costs": "Maintain actualclosedbalance andstressedclosedbalance. Tradeactual usesentry/exitsides andfixedvolume. Stress subtracts max(entry,exit representative spread)*volume plus extra adverse-stopgap*volume. Whileopen, stressedmark is closedstressbalance+actualunrealized-sidePNL-max(entryspread,lastknownspread)*volume. No positivefinancingcredit or inventedfees. Sessionforcedflat avoids plannedcarry; any actualnative financing/fees remaincharged.",
+    "reward": "(nextstressedmarked equity minus priorstressedmarked equity)/2USD, unmodified. No rewardclipping, favorable stop assumption or sourceoutcome suppression. TraininglossHuber handleslargeTD errors, economicledgerremainsunclipped. Actualorstress nonpositivecapital causes absorbingno-newentrystate/normalremainingclose withalllaterdatesretained; no simulateddeposit/restart afterruin during2025selection.",
+    "training_episodes": "Each observed2024serverdate is a trainingepisode with freshreference100USD/flatbook/fixed0.01 andforceddailyclose; this is a trainingenvironment, not a multi-dayinvestmentresult. Repeatwhole2024 exactly20passes, chronologicaldateswithinpass, never reseednetworkbetweenpasses. Selection2025begins once at100USD andcontinuousactual/stressedcapital acrossall365dates, dailyflatinventory only. No capitalreset between2025days."
+  },
+  "model": {
+    "architecture": "Fresh14->32ReLU->3linearQnetwork, parameterfloat64fortraining, float32ONNXinference. default_rng(20260908); W1normal0,sqrt(2/14),W2normal0,1/sqrt(32), zero biases. FreshdynamicparameterMatMul/Add/Relu/MatMul/AddONNX, IR8/opset17. Own initial/final/target/optimizer/RNG/replaymetadata; nooldmodelimports. Networkinitialization andtrainingaction/replay sampling use separate reproducible RNGstreams, eachseed20260908. The traininglearner RNG is not resetbetweenpasses. Online uses its separatelydeclared20260909stream; static makesnogradient/sample/explorationcalls.",
+    "double_dqn": "For each maturetransition(s,a,r,snext,terminal,elapsedsteps), target=r ifterminal else r+0.95^elapsedsteps*Qtarget(snext,argmaxQonline(snext)). TiepreferenceFLAT/LONG/SHORT. Fit selectedactionHuberlossdelta1 averagedbatch plus0.001*(sumW1^2+sumW2^2); exactgradient, no target/rewardclipping.",
+    "training": "Exactly20whole2024passes. Trainingactionepsilon=.10 at eachvaliddecision withuniform3actionexploration, otherwisegreedy. OneAdamstep pervaliddecision whenatleast32maturetransitions, minibatch32 uniformlywithoutreplacement fromFIFOreplaylast4096. Adamlearningrate.001,beta1.9,beta2.999,epsilon1e-8. Targetnetworkhardcopyfromonlineevery256gradientupdates, startidentical. Nooptimizer/model/epoch/replay/epsilon/discount/seedsearch or earlystopping.",
+    "causal_storage": "Storetransitiononlywhencompletednextstate/rewardavailable; mature replay samples mustallhaveavailability<currentdecision. Across2024fitpasses allfitdata alreadybelongs totrainingperiod; resetepisodependingatdayend onlyafterlabelisretained, and wholefitcompletedlabels mustbe strictlybefore2025Jan1. Record everyfitpassloss/reward/tradecount andfinalcompletedtrainingstate. At eachnew2024pass, clearreplay/pending for a freshchronological traversal while retainingnetwork,target,Adam,RNG andglobalgradientcount. Everypass terminalpendinglabel remainsintrainingtape beforeclear; no later2024source timestamp can be sampled as mature at an earlier sourcegrid inthatpass. No2025transition is producedfortraining."
+  },
+  "online": {
+    "initial": "STATIC/ONLINEsamefinal2024network/marketnormalization. ONLINEtarget starts equaltofinalnetwork; empty2025replay/pending andzeroAdam moments/updatecount, ownrngdefault_rng(20260909). No2024replay or optimizer state adopted into2025.",
+    "update": "ONLINEoneAdamstep at eachvalidnewdecision onlyafter at least32strictlymature2025transitions, sameDDQN/Huber/L2/replay4096/batch32/discount/targetcopy256; learningrate.0001 fixed. Noepsilonexplorationin2025orconditionalnative; greedyactualdecisionsonly. STATICneverupdates. Entireownchosen-state transition stream includesabstentions,positionswitching,stops andforcedclose; noaccepted-trade-only labels.",
+    "pending": "Transitionforpreviousdecision becomesknownatnextdecision/end but cannotupdate thatsameboundary; retainit untilstrictlylaterdecision. Forcedendtransition isterminal. Pendingatfinalperiodboundaryretainednormally; do not invent anothertradingdecision toconsumeit.",
+    "fault": "Nonfiniteinference/loss/gradient/state, invalidpositionaccounting ormissingrequired sourcebinding iscorrection, not a cash fallback or optimizationloss. Missingknownmarketprefix remains explicitnormal HOLD; all protection/forcedclose dutiescontinue."
+  },
+  "selection": {
+    "period": "Complete2025all365dates/8760potentialdecisiongrids, STATICandONLINEonce; CASHreference100flat withzeroactual/stress. All sourcequote/state/decision/transition/update/trade/daily/accountrecords retained.",
+    "gates": "Simulatoractualprofit strictlyexceeds originalV7source2025actual127.89; simulatorstressedprofit>=1.05*originalsource2025stress118.609; actualandstresspositiveinbothhalves;>=100completeowntradesand>=25eachhalf; no openposition/ruin/evidencefault atcompletion. Complete conservativeM1actual-markedequitybound relativeDD<=20.0%, not claimed nativeequityDD. No latepositive-onlysubstring orperiodtuning.",
+    "ranking": "Higheststressedprofitamongqualifiers;STATICexacttie;atmostonelearnedfinalist. CASHcannotbefinalist/seed. ClosedsourceV7numbersare demandingdescriptivecontributionhurdles, not an adjacent same-inputcapitalcomparison. Nativeauthorityremainsrequired.",
+    "closure": "Freeze/closewholethree-rolebundle. Noadjacentmarket,statefeature,inventorymodel,hiddenwidth,optimizer,trainingpass,epsilon,replay,batch,discount,targetupdate,onlineLR,reward,session,grid,symbol,stop,quantity,risk,activity/DDgate orretainedseedrescue."
+  },
+  "conditional_native": {
+    "interval": "OneunchangedselectedcandidateandadjacentexactfrozenV7control2025Jan1through2026Sep1exclusive. CandidateJanJun2026confirmation/JulAuglatestunopenedbeforeselectionfreeze.",
+    "source": "Ownnewtester-onlysource,EA/Include/Magic/schema/state/journal/ONNX/EX5/SETandphysicalPortablefromfrozenOptimizationV7Ronce. Onlyattributedneutralplatform/historycopies; noLive/Lab/closedcampaignsource/model/stateexecution. CandidatehasoneUS30book; exactcontrolpreservessixoriginalstrategies.",
+    "account": "100USD,1:100,originaldaily150USDlotstaircase,original4%/12%/45%risk/margincapsandprotectedmarketexecution. Originalcandidate-specificstrategycalls are replaced byQtargetbookonly; controls unchanged. Fullposition/action/replay/optimizer/target/RNG/modelstatepersisted, actualfee/financingandcapital/lottraces retained.",
+    "data": "US30M30assembly,Model4/localonly/normalshutdown. Allcontrol3symbols andcandidateUS30mustuse100%realticks. Allthree full2024warmup..2026AugM1/exercisedmonthlyticks/platform/symbolDB/contracts/swaps/source/EX5/model/SET boundbefore/between/after; currentcontainersdiagnosticonlywithactualuseddata proof.",
+    "gates": "Actualwealth/loggrowth androbustrecovery improve; stressedprofitgain>=5%; nativeequityDDnominal<=adjacentcontrol,effective min(controlDD+1.5pp,controlDD*1.10) onlywithbettergrowth/recovery/temporalevidence. Every2025half/2026H1/2026JulAugactualandstresspositive;>=100nativecompletebooktrades/fullperiod and>=10JulAug. Allclosed,completelearnedaction/transition/risk/state evidence,no unresolvedfault. NoLivepromotion.",
+    "correction": "Anyenvironment/input/design/engineeringfault requirescorrectionwithoutarbitraryretrycap andfreshcompletevalidpair; nevereconomicfailure oroutcome-tuningauthority."
+  },
+  "storage": {
+    "minimum_free_gib": 30,
+    "initial_cap_mib": 512,
+    "conditional_runtime_gib": 6,
+    "conditional_output_gib": 2
+  },
+  "constraints": [
+    "One root design/economic judgment stream",
+    "No external economic source",
+    "No tests/checkers/CI/testCLI",
+    "No Live change or broker contextquery",
+    "No closedsource/model/state/positivechildseed reuse"
+  ]
+}
