@@ -7,21 +7,21 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0593`
+- Latest state ID: `STATE-0594`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `PAUSED_BY_USER`. The app Goal is paused. Sole unfinished Program 2 `frbsf-news-sentiment-publication-readiness-v1` retains its declaration and 12 local discovery/archive metadata receipts; final source judgment and closure are unfinished. No numeric news values or economic candidate opened. Do not continue research until the user resumes it. The current user request is a direct-user activation front end owned by `live-dev/tools/`, not a Lab family or EA/package change.
+- Development: `PAUSED_BY_USER`. The user has permanently cancelled Program 2 `frbsf-news-sentiment-publication-readiness-v1`: do not resume, reopen, complete its source judgment or develop a successor from it, including after an ordinary Goal resumption. Declaration and 12 existing metadata receipts are preserved as cancelled history; no source-readiness or economic verdict is claimed. All research units and candidates are inactive. The current task is correction/recovery of the user-operated V7R activation failure within Live operator tooling.
 
 <!-- V7R_USER_ACTIVATION_BEGIN -->
 - Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Trading activation is a direct user action through the unchanged operating gates.
 - Next V7R return entries-disabled preflight: `PASSED`
-- Next V7R return new-entry authorization: `ENABLED`
-- Existing real-account owner: none; the entries-disabled V7R runtime has stopped normally or no exact runtime was present. No retired identity may start.
-- Direct user activation phase: `USER_REQUESTED_PENDING_FRESH_HANDOFF`; recorded at 2026-09-07T00:14:45Z.
-- Latest activation observation: The user requested activation. Final fresh preflight and 1/1 handshake are not yet complete.
+- Next V7R return new-entry authorization: `DISABLED`
+- Existing real-account owner: none; user preflight PID 26068 stopped normally, no exact terminal or Master worker remains, and dashboard PID 29492 is the only project runtime. No retired identity may start.
+- Direct user activation phase: `FAILED_MARKET_GATE_PROVED_STOPPED_PENDING_0_0_RECOVERY`.
+- Latest activation observation: User launch 667507fc34314009915b6a8c90919bee passed 0/0 preflight, failed the unchanged US30 continuity gate before any Live start, and exited normally. Final snapshot 470 is 0/0 with zero margin/planned risk; normal STOP event 469 at 2026-09-07T00:15:11Z and terminal shutdown 0 at 09:15:13 KST. Local read at 00:21:10Z confirms zero terminal/worker owners. Restore only entries-disabled EA/dashboard after this phase reaches origin/main; actual trading remains a direct user action.
 <!-- V7R_USER_ACTIVATION_END -->
 - Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
 - Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
@@ -35,15 +35,15 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Current user task: simplify the remaining direct-user V7R activation after verified installation and entries-disabled recovery. `ZETA_NEXT_V7R_TRADING_ON.cmd` opens `live-dev/tools/Open-ZetaNextV7RTradingOn.ps1`; the user clicks the explicit real-trading button. It performs the existing stopped-flat boundary, narrow operating-record commit/push and unchanged detached Master handoff. No authority or runtime mutation happens before that button. The assistant must not execute this activation entrypoint. Current outcome is the authority block above. The closed Lab verification family, frozen release and paused read-only heartbeat are preserved. Long V7 actual/stressed remains `+$313.36/+$284.138`, DD `19.5024%`; recent is `+$4.66/+$3.209` with the disclosed July loss.
+Current user task: permanently cancel the FRBSF source study and correct the reported V7R user-activation failure. The user clicked the prepared button; the unchanged 12-second US30 gate blocked the fresh preflight. The prior front end left a pending ENABLED record and generic unknown-state message despite a completed normally stopped 0/0 failure. Correct that operator behavior: check market readiness before stopping an existing OFF runtime, retain a per-launch completion receipt, and recover only a proved stopped/flat failure to committed DISABLED authority and entries-disabled EA/dashboard. No market threshold, EA, source package, risk or order code changes. Unknown/in-progress failures still preserve owners and never trigger automatic Live retries. The assistant does not execute the user activation entrypoint. Current outcome is the authority block above.
 
 - Goal: develop an independent automated strategy that beats V8 and continue through materially distinct families until a complete valid native winner exists.
 - Mandatory architecture: `Python adapter + EA` or `ONNX + EA`. A single EA may not own the novel signal; Python-only or ONNX-only proxy evidence cannot claim victory.
-- Active phase: `PAUSED_AFTER_NEWS_SENTIMENT_DOCUMENTARY_ACQUISITION_BEFORE_FINAL_SOURCE_JUDGMENT`.
-- Sole unfinished source-only unit: `lab/research/frbsf-news-sentiment-publication-readiness-v1/`. Exact 2023-2025 observation calendar, original release/vintage distinction, method/revision questions, bounded primary discovery and conditional date-restricted numeric gate are frozen. Twelve local primary-discovery/archive metadata receipts are preserved; no index values have been acquired. Closure remains unfinished and research is paused. Treasury source and all predecessor evidence/readers remain closed/stopped.
+- Active phase: `RESEARCH_PAUSED_FRBSF_STUDY_CANCELLED_PERMANENTLY_BY_USER`.
+- No active or resumable source-only unit. `lab/research/frbsf-news-sentiment-publication-readiness-v1/evidence/CANCELLATION_V1.json` closes that task by explicit user cancellation, with source-readiness judgment and economics null. The existing declaration and 12 documentary records remain historical only. No numeric index acquisition, strategy experiment, source-study completion, substitute or successor from this work is authorized. Treasury and all predecessor evidence/readers remain closed/stopped.
 - Latest closed Challenge family: `lab/research/independent-symbolic-path-context-adapter-challenge-v1/`, Program 1, Python adapter + EA. Full 96,542 forecasts and 94,970 matched mature-label scores per role are complete. CTW mean log loss 1.42431372 improves IID 1.43051886, but only three cost-free optimistic intentions exist (all US100 short in 2024), versus >=3/date over all 517 dates. Close the entire fixed bundle without a seed or monetary verdict. Complete result `BE3D025C912713FB2B6F260FA54789F5AAB69A270CEACC81B6F9330186DCEE87` and own closure preserve the unchanged source/input/model/forecast evidence.
 - Source declaration: `lab/research/frbsf-news-sentiment-publication-readiness-v1/evidence/DECLARATION_V1.json`, 11,488 bytes / `D2BD332B9FA6ED8A6AEE84740288E4218BADD69D78AEBBB037CCF350AAA32FA0`, under whole-map authority `E6362A2F73DF041D712371A03613220C07F147517CE333677E7A81E83CDCF993`. Program 2, not Family 016. Earlier LexisNexis/16-paper versus current Factiva/24-paper descriptions are known method context; transition/revision authority is unresolved. No alternate-news substitution into closed Unit 110, invented lag, current mixed-history download or 2026 numeric observation is allowed.
-- Active source-only / Challenge family / Optimization / native candidate counts: `1 / 0 / 0 / 0`. All three old no-EA readers stay normally stopped. The new source unit has a 20 MiB combined growth cap and 30 GiB free reserve. Family 015 input/model/forecast evidence remains preserved. No candidate 2026 values are open.
+- Active source-only / Challenge family / Optimization / native candidate counts: `0 / 0 / 0 / 0`. All three old no-EA readers stay normally stopped. FRBSF is permanently cancelled. Family 015 input/model/forecast evidence remains preserved; retain the 30 GiB reserve. No candidate 2026 values are open.
 - The exact Live V8 package is benchmark-only, not a candidate parent. Closed-family outputs and V1-V8 signals, opportunities, states and economics may not leak into a successor.
 
 ## V8 Challenge gates
@@ -103,7 +103,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Next authorized sequence
 
-1. Keep research paused. On a later explicit resumption, continue the sole declared Program 2 FRBSF source question from its preserved discovery/archive metadata; do not redo acquisition or invent a finished source verdict. Numeric acquisition still requires an authentic date-restricted historical-vintage route. No assumed lag, current mixed-history CSV/XLSX, asset response, old EPU/volatility substitution, 2026 numeric source, native runtime or broker query. Close the exact question and recompare all Programs before any independent candidate; retain at least 30 GiB free.
+1. Keep research paused and the FRBSF news-sentiment source task permanently cancelled. An ordinary Goal resumption must not restart that question, complete its judgment, acquire its values or open a successor from it. No macro comparison or replacement research opens during this failure correction. Preserve cancelled history and at least 30 GiB free.
 2. The V7R market follow-up is complete and its heartbeat PAUSED. Only the user may operate the prepared trading-activation button. The assistant must not invoke it, enable trading or weaken existing gates. Until that action, preserve entries-disabled operation. After a user-operated transition, consult the authority block above for outcome and owner. Any further read requires a concrete operating need.
 3. Preserve the retention receipt and recovery map. Any separately authorized reconstruction of an affected closed runtime must first restore its cache by physical same-lane copies; reconstruction grants no family-reopening or Live authority.
 4. Preserve Family 011 sources, declarations and all hashed input/result tapes. No hash seed, ATR, hold, exit, symbol, direction, sizing or source-clock rescue follows automatically.
@@ -128,7 +128,7 @@ Complete immutable transitions and hashes remain in the active numbered state ch
 
 ## Current markers
 
-- Unfinished paused research unit: sole Program 2 FRBSF news-sentiment publication source study, declaration and documentary acquisition preserved before final source judgment. Family 015 remains closed at sparse supply; no economic candidate, numeric news data or native path exists.
+- Cancelled research unit: FRBSF news-sentiment publication study, `CANCELLED_BY_USER_DO_NOT_RESUME_OR_REOPEN`; no final source/economic judgment. All active unit/candidate counts are zero. Family 015 and its original evidence remain closed and preserved.
 - Latest Challenge marker: `INDEPENDENT_V8_CHALLENGE_FAMILY_015_CLOSED_COMPLETE_STRUCTURAL_SUPPLY_FAILURE_NO_SEED_NO_NATIVE`.
 - Latest Optimization marker: `V8_OPT_U004_POST_CLOSE_INTERNAL_FRONTIER_CLOSED_SUPERSEDED_BY_INDEPENDENT_V8_CHALLENGE`.
 - Latest Frontier marker: `FRONTIER_UNIT_123_CLOSED_VALID_STANDARD_EXPIRATION_WEEK_AMBIGUOUS_NO_CANDIDATE_MAP_RECOMPARED`.

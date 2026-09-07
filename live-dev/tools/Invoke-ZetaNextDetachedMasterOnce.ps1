@@ -10,7 +10,10 @@ param(
 
     [Parameter(Mandatory)]
     [ValidatePattern('^[0-9a-f]{32}$')]
-    [string]$LaunchId
+    [string]$LaunchId,
+
+    [ValidateSet('Auto', 'EntriesDisabled', 'Live')]
+    [string]$RequiredMode = 'Auto'
 )
 
 Set-StrictMode -Version Latest
@@ -43,7 +46,7 @@ try {
         $utf8
     )
 
-    & $openScript 2>&1 | ForEach-Object { Write-OnceLog ([string]$_) }
+    & $openScript -RequiredMode $RequiredMode 2>&1 | ForEach-Object { Write-OnceLog ([string]$_) }
     [System.IO.File]::AppendAllText(
         $logPath,
         ('LAUNCH={0} RESULT=OK{1}' -f $LaunchId, [Environment]::NewLine),

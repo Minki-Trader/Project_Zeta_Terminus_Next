@@ -58,7 +58,11 @@ try {
         -ObservationSeconds 12 `
         -ExpectedProcessId $preflightProcess.Id | Out-String) | ConvertFrom-Json)
     if (-not [bool]$marketStatus.ready_for_handoff) {
-        throw ("Next V7R market gate is not ready: {0}" -f (@($marketStatus.reasons) -join '; '))
+        throw ("Next V7R market gate is not ready: {0}. Observed US30 updates={1}, max-gap={2:N3}s over {3}s; required updates>=3 and max-gap<=3.000s. Live entries were not started." -f
+            (@($marketStatus.reasons) -join '; '),
+            [long]$marketStatus.us30_tick_updates,
+            [double]$marketStatus.us30_max_update_gap_seconds,
+            [int]$marketStatus.observation_seconds)
     }
     Write-Output ("Next V7R market gate passed: US30 ticks={0}, max-gap={1:N3}s, synchronized timeframes={2}, server={3}." -f
         [long]$marketStatus.us30_tick_updates,

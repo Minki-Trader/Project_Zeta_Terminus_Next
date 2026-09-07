@@ -2,7 +2,12 @@
 param(
     [Parameter(Mandatory)]
     [ValidateNotNullOrEmpty()]
-    [string]$WorkerPowerShellPath
+    [string]$WorkerPowerShellPath,
+
+    [string]$ResultPath,
+
+    [ValidateSet('Auto', 'EntriesDisabled', 'Live')]
+    [string]$RequiredMode = 'Auto'
 )
 
 Set-StrictMode -Version Latest
@@ -50,6 +55,34 @@ $dashboardPath = Join-Path $PSScriptRoot 'Show-ZetaNextV7RDashboard.ps1'
 $terminalPath = Join-Path $projectRoot 'live-dev\runtime\portable\terminal64.exe'
 $logPath = Join-Path $projectRoot 'live-dev\logs\master-detached-once.log'
 
+if (-not [string]::IsNullOrWhiteSpace($ResultPath)) {
+    $ResultPath = [System.IO.Path]::GetFullPath($ResultPath)
+    $allowedDirectory = [System.IO.Path]::GetFullPath((Split-Path -Parent $logPath))
+    if (-not (Split-Path -Parent $ResultPath).Equals($allowedDirectory, [StringComparison]::OrdinalIgnoreCase) -or
+        [IO.Path]::GetFileName($ResultPath) -notmatch '^user-activation-[0-9a-f]{32}\.json$' -or
+        (Test-Path -LiteralPath $ResultPath)) {
+        throw 'A detached result must use a new user-activation GUID file in the private Live logs directory.'
+    }
+}
+
+function Write-DetachedResult {
+    param([string]$Outcome, [bool]$WorkerFinished, [bool]$MatchedMarker)
+
+    if ([string]::IsNullOrWhiteSpace($ResultPath)) { return }
+    $record = [ordered]@{
+        schema = 'zeta-detached-master-result-v1'
+        launch_id = $launchId
+        worker_pid = $workerProcessId
+        worker_finished = $WorkerFinished
+        matched_completion_marker = $MatchedMarker
+        outcome = $Outcome
+        required_mode = $RequiredMode
+        observed_at_utc = (Get-Date).ToUniversalTime().ToString('o')
+    }
+    [void][IO.Directory]::CreateDirectory((Split-Path -Parent $ResultPath))
+    [IO.File]::WriteAllText($ResultPath, ($record | ConvertTo-Json -Compress), [Text.UTF8Encoding]::new($false))
+}
+
 foreach ($path in @($workerPowerShell, $oncePath, $openPath, $dashboardPath, $terminalPath)) {
     if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
         throw "Required detached-launch file is missing: $path"
@@ -72,7 +105,9 @@ $commandLine = @(
     '-ProjectRoot',
     (Quote-WindowsArgument $projectRoot),
     '-LaunchId',
-    $launchId
+    $launchId,
+    '-RequiredMode',
+    $RequiredMode
 ) -join ' '
 
 $created = Invoke-CimMethod `
@@ -97,12 +132,17 @@ do {
         $successMarker = "LAUNCH=$launchId RESULT=OK"
         if ($detail.IndexOf($successMarker, [System.StringComparison]::Ordinal) -ge 0 -and
             $terminalIds.Count -eq 1 -and $dashboardIds.Count -eq 1) {
+            Write-DetachedResult -Outcome SUCCESS -WorkerFinished $true -MatchedMarker $true
             Write-Output "Detached Master is active: terminal PID $($terminalIds[0]), dashboard PID $($dashboardIds[0])."
             exit 0
         }
+        $failedMarker = $detail.IndexOf("LAUNCH=$launchId RESULT=ERROR", [StringComparison]::Ordinal) -ge 0
+        $outcome = if ($failedMarker) { 'FAILED' } else { 'UNKNOWN' }
+        Write-DetachedResult -Outcome $outcome -WorkerFinished $true -MatchedMarker $failedMarker
         throw "Detached Master launch failed.`r`n$detail"
     }
     Start-Sleep -Milliseconds 500
 } while ((Get-Date) -lt $deadline)
 
+Write-DetachedResult -Outcome UNKNOWN -WorkerFinished $false -MatchedMarker $false
 throw "Detached Master one-shot worker PID $workerProcessId did not finish within 150 seconds; it was left untouched."

@@ -1,5 +1,7 @@
 # Live-Dev
 
+2026-09-07 사용자 ON 시도는 새 0/0 복구 뒤 US30 시세 연속성 검사에서 중단됐고, Live 기동 전에 정상 종료했다. 수정된 진입점은 기존 OFF EA를 끄기 전에 12초 시세 준비를 먼저 확인한다. 이후 기동 중 실패하면 이번 요청의 완료 영수증·다른 worker/terminal 부재·정상 STOP·마지막 0/0 무노출이 모두 입증될 때만 DISABLED 기록과 OFF EA/대시보드를 복구한다. 종료 여부가 불명확하면 기존 보수적 처리를 유지한다. 최소 3회 갱신·최대 3초 간격 기준은 변경하지 않았고 Live 자동 재시도도 없다.
+
 이 디렉터리는 동결된 Next 배포 스냅숏과 Next 전용 운영 도구만 소유한다. Live 권한은 오직 `CURRENT_STATE.md`가 결정한다.
 
 직접 사용자 ON 진입점은 루트의 `ZETA_NEXT_V7R_TRADING_ON.cmd`와 `tools/Open-ZetaNextV7RTradingOn.ps1`이다. 명시적인 **실제 자동매매 켜기** 버튼 뒤에만 기존 flat 종료, CURRENT_STATE/번호 상태 기록 커밋·푸시, 변경 없는 detached Master를 호출한다. 취소·창 닫기는 아무 운영 변경도 하지 않는다. 소스·EX5·SET·위험 계약과 기존 검사 구현은 그대로다. Git 충돌이나 기록 변경을 자동 병합하지 않으며, 기동 후 확인 실패는 OFF로 표시하거나 위험을 관리하는 EA를 강제 종료하지 않는다. 이 진입점은 assistant·heartbeat·스케줄러용이 아니다.

@@ -1,5 +1,8 @@
 [CmdletBinding()]
-param()
+param(
+    [ValidateSet('Auto', 'EntriesDisabled', 'Live')]
+    [string]$RequiredMode = 'Auto'
+)
 
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
@@ -29,6 +32,9 @@ if (-not $liveAuthorized -and -not $disabledAuthorized) {
     throw 'CURRENT_STATE.md does not authorize an exact V7 return runtime mode.'
 }
 $expectedMode = if ($liveAuthorized) { 'Live' } else { 'EntriesDisabled' }
+if ($RequiredMode -ne 'Auto' -and $RequiredMode -ne $expectedMode) {
+    throw "CURRENT_STATE authorizes $expectedMode, but this caller requires $RequiredMode. No runtime was started."
+}
 
 $null = Assert-ZetaNextReleaseIntegrity -Contract $contract
 $inventory = Assert-ZetaNextExclusiveTerminalBoundary -Contract $contract -AllowExactLive

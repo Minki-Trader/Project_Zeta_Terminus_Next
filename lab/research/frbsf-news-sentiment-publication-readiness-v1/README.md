@@ -1,11 +1,9 @@
 # FRBSF news-sentiment publication readiness
 
-Status: DECLARED_SOURCE_ONLY_BEFORE_VINTAGE_SEARCH_OR_VALUE_ACQUISITION.
+Status: CANCELLED_BY_USER_DO_NOT_RESUME_OR_REOPEN.
 
-This sole Program 2 study asks whether the exact FRBSF Daily News Sentiment Index can supply attributable information available during 2023-2025. It is not Challenge Family 016 or an economic candidate. Its complete prospective authority is `lab/research/frbsf-news-sentiment-publication-readiness-v1/evidence/DECLARATION_V1.json`.
+The user permanently cancelled this task on 2026-09-07 and explicitly said not to do it later. `lab/research/frbsf-news-sentiment-publication-readiness-v1/evidence/CANCELLATION_V1.json` records that decision. Do not complete the source judgment, acquire index values, reopen the study or derive successor work from it after an ordinary Goal resumption.
 
-Separate observation dates, weekly public releases, archived capture times and later historical revisions. The 2020 methodology and current provider description are already known to differ; their transition and historical release contents are still unresolved. A trailing average is not sufficient proof of point-in-time availability. No index values have been acquired.
+The historical Program 2 declaration asked whether the exact FRBSF Daily News Sentiment Index supplied attributable information during 2023-2025. It was not Challenge Family 016 or an economic candidate. Its original declaration and 12 existing documentary metadata records are retained without changing their contents. No numeric index values, market-response arrays, strategy experiment or native path was opened.
 
-First inspect exact primary method/release/archive metadata. Only a source-qualified, date-restricted original-vintage route may later supply numeric observations under this declaration. Current mixed-history CSV/XLSX and replication archives are not downloaded. Missing publication or revision authority closes this bounded question partial/unready without economic judgment. No fixed-lag invention, alternate-news/EPU substitution, asset response, strategy, old adapter, EA, native runtime or broker call is authorized.
-
-Own documentation, metadata and any qualified historical slice have a combined 20 MiB allowance while preserving at least 30 GiB free. Close this source study and compare all Programs 1-5/7 before any later independent candidate. The full Python-adapter/ONNX-plus-EA V8 Challenge remains the active Goal.
+Cancellation is the lifecycle outcome. Final source-readiness and economic judgments are null; neither success nor source inadequacy is inferred. No additional discovery, analysis, macro comparison or replacement study follows this cancellation. The overall research Goal remains paused and the minimum 30 GiB reserve remains in force.

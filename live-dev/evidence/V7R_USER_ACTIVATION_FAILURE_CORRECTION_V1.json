@@ -1,0 +1,85 @@
+{
+  "schema": "zeta-user-activation-market-failure-correction-v1",
+  "recorded_at_utc": "2026-09-07T00:31:34.8055362Z",
+  "status": "KNOWN_PRE_LIVE_MARKET_FAILURE_OFF_RECOVERY_PREPARED",
+  "parent_git": "f43d5106c82676289dff4bbd3f1fc05bd0f0f75f",
+  "failed_launch_id": "667507fc34314009915b6a8c90919bee",
+  "failed_worker_pid": 22864,
+  "preflight_pid": 26068,
+  "preflight_passed_at_kst": "2026-09-07T09:14:58",
+  "failed_gate": "US30 did not produce at least three updates with every observed gap <= 3 seconds",
+  "original_update_count": null,
+  "original_max_gap_seconds": null,
+  "original_metric_limit": "Original error did not retain the numeric observation; no value is reconstructed or inferred",
+  "worker_result": "ERROR and worker absent",
+  "final_snapshot_sequence": 470,
+  "final_entries": "0/0",
+  "flat_receipt_check": true,
+  "components": 6,
+  "margin": 0,
+  "aggregate_planned_risk": 0,
+  "passive_pending_order": 0,
+  "normal_stop": {
+    "event_sequence": 469,
+    "utc": "2026-09-07T00:15:11Z",
+    "detail": "normal",
+    "terminal_shutdown_code": 0,
+    "terminal_shutdown_at_kst": "2026-09-07T09:15:13.673"
+  },
+  "exact_terminal_count": 0,
+  "dashboard_pid": 29492,
+  "frozen_ex5_sha256": "30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657",
+  "private_failure_archive": {
+    "path": "live-dev/logs/failed-user-activation-667507fc34314009915b6a8c90919bee.log",
+    "sha256": "0BAE7CA24E41F555D23FF308178D354958C9A8DE64B54CFB4B3977B019B62C51",
+    "git_ignored": true
+  },
+  "correction": [
+    "Market-only readiness before stopping an existing OFF runtime",
+    "New per-launch completed/failed/unknown receipt and explicit required runtime mode",
+    "Only matching completed failure, no worker/terminal, exact flat 0/0 and current normal STOP permits closing authority and restoring OFF EA/dashboard",
+    "No unknown-state force-stop, live retry or stale success inference",
+    "Include actual update count and maximum gap in future market error text"
+  ],
+  "unchanged": [
+    "EA source and binary",
+    "base SET and risk parameters",
+    "12-second observation and at least three updates with maximum 3-second observed gap",
+    "all symbol/timeframe/ownership/recovery gates",
+    "retired identity/state",
+    "paused research Goal and heartbeat"
+  ],
+  "source_files": [
+    {
+      "path": "live-dev/tools/Open-ZetaNextV7RTradingOn.ps1",
+      "normalized_lf_utf8_sha256": "F5925CB84A0092C8FE1FE073185345FACD79D6C5571DAAF6B22BCDDD64C39338"
+    },
+    {
+      "path": "live-dev/tools/Start-ZetaNextDetachedMaster.ps1",
+      "normalized_lf_utf8_sha256": "43EB80EC4F506398F9F218B51CA745A581296B600713761F74294430F6B250AA"
+    },
+    {
+      "path": "live-dev/tools/Invoke-ZetaNextDetachedMasterOnce.ps1",
+      "normalized_lf_utf8_sha256": "679A9AA6A5EBAB4A1E0EC5CBC3F735DE04B6184C9EA85D37465EF18AA320B352"
+    },
+    {
+      "path": "live-dev/tools/Open-ZetaNextMasterTerminalAndDashboard.ps1",
+      "normalized_lf_utf8_sha256": "5D17B9B4198C4AE8B1427C61D7790E1889D203CD31D83FF9B5D45C2024DD3043"
+    },
+    {
+      "path": "live-dev/tools/Start-ZetaNextV7RLive.ps1",
+      "normalized_lf_utf8_sha256": "4A0ACEE6B9F99141272DF8F261F04568285B0A774CE72CC3D32EE3065C685A81"
+    }
+  ],
+  "verification": {
+    "powershell_7_6_5_parser_errors": 0,
+    "powershell_5_1_detached_parser_errors": 0,
+    "diff_check": "passed",
+    "activation_entrypoint_executed_by_assistant": false,
+    "live_start_or_order_executed_by_assistant": false,
+    "broker_api_calls_by_assistant": 0,
+    "new_test_infrastructure": false,
+    "operational_recovery": "Pending committed/pushed DISABLED authority, then normal required EntriesDisabled Master startup only"
+  },
+  "free_space_gib": 56.924946
+}

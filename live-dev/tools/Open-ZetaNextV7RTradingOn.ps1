@@ -16,6 +16,8 @@ $zetaOwnsMutex = $false
 $zetaDispatched = $false
 $zetaLiveVerified = $false
 $zetaRecorded = $false
+$zetaResultPath = $null
+$zetaDispatchUtc = [DateTime]::MinValue
 
 function Invoke-ZetaUserGit {
     param([Parameter(Mandatory)][string[]]$GitArguments)
@@ -156,6 +158,14 @@ try {
         throw '원격 main이 현재 기록과 다릅니다. 자동 병합이나 강제 푸시를 하지 않습니다.'
     }
     $inventory = Assert-ZetaNextExclusiveTerminalBoundary -Contract $zetaContract -AllowExactLive
+    if (@($inventory.ExactLive).Count -eq 1) {
+        Write-Host '현재 OFF 실행본에서 시세 준비를 먼저 확인합니다. 시세가 부족하면 EA를 그대로 유지합니다.'
+        $market = (& $zetaContract.MarketStatusScript -AsJson -ObservationSeconds 12 -ExpectedProcessId $inventory.ExactLive[0].Id | Out-String) | ConvertFrom-Json
+        if (-not [bool]$market.ready_for_handoff) {
+            throw ("아직 시세 준비가 안 됐습니다. US30 {0}회 갱신, 최대 간격 {1:N3}초 / 기준 최소 3회·최대 3초. 운영 권한은 OFF이며 EA는 유지했습니다. {2}" -f
+                [long]$market.us30_tick_updates, [double]$market.us30_max_update_gap_seconds, (@($market.reasons) -join '; '))
+        }
+    }
     Write-Host '2/4  기존 OFF 실행본의 무노출 상태를 확인하고 정상 종료합니다.'
     if (@($inventory.ExactLive).Count -eq 1) {
         & (Join-Path $PSScriptRoot 'Stop-ZetaNextV7RFlatRuntime.ps1') -ConfirmFlatStop
@@ -166,9 +176,11 @@ try {
         -Observation 'The user requested activation. Final fresh preflight and 1/1 handshake are not yet complete.' `
         -HistoryText 'Direct user activation button accepted. Existing 0/0 runtime stopped through the unchanged verified-flat operator when present; exact terminal boundary is empty. Commit/push this separate new-entry authorization before dispatching the unchanged Master. No 1/1 success is claimed.'
     Write-Host '3/4  새 0/0 복구와 실제 틱을 검사한 뒤 기존 실행기로 기동합니다.'
+    $zetaResultPath = Join-Path $zetaContract.LiveDevRoot ('logs\user-activation-' + [Guid]::NewGuid().ToString('N') + '.json')
+    $zetaDispatchUtc = [DateTime]::UtcNow
     $zetaDispatched = $true
     $powerShellPath = Join-Path $PSHOME 'pwsh.exe'
-    & $powerShellPath -NoLogo -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Start-ZetaNextDetachedMaster.ps1') -WorkerPowerShellPath $powerShellPath
+    & $powerShellPath -NoLogo -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Start-ZetaNextDetachedMaster.ps1') -WorkerPowerShellPath $powerShellPath -ResultPath $zetaResultPath -RequiredMode Live
     if ($LASTEXITCODE -ne 0) { throw '기존 Master가 완료를 보고하지 않았습니다. 실행 중인 프로세스는 유지합니다.' }
     $status = Get-ZetaNextRuntimeStatus -Contract $zetaContract -Mode Live
     $inventory = Assert-ZetaNextExclusiveTerminalBoundary -Contract $zetaContract -AllowExactLive
@@ -189,7 +201,58 @@ try {
     if ($zetaLiveVerified) {
         Write-Host '실거래 ON은 확인됐지만 마지막 기록 저장이 끝나지 않았습니다. EA를 강제 종료하지 마세요.' -ForegroundColor Yellow
     } elseif ($zetaDispatched) {
-        Write-Host '기동을 요청했지만 완료 확인이 안 됐습니다. OFF라고 단정할 수 없습니다. 재실행하거나 MT5를 강제 종료하지 말고 상태를 확인하세요.' -ForegroundColor Yellow
+        $recoveredDisabled = $false
+        try {
+            # A missing/timed-out worker result is never treated as a stopped handoff.
+            $result = if ($zetaResultPath -and (Test-Path -LiteralPath $zetaResultPath)) {
+                Get-Content -LiteralPath $zetaResultPath -Raw | ConvertFrom-Json
+            } else { $null }
+            if ($null -ne $result -and [string]$result.schema -eq 'zeta-detached-master-result-v1' -and
+                [string]$result.outcome -eq 'FAILED' -and [bool]$result.worker_finished -and
+                [bool]$result.matched_completion_marker -and [string]$result.required_mode -eq 'Live') {
+                $null = Assert-ZetaNextExclusiveTerminalBoundary -Contract $zetaContract
+                $otherWorkers = @(Get-CimInstance Win32_Process -Filter "Name='pwsh.exe' OR Name='powershell.exe'" -ErrorAction Stop | Where-Object {
+                    $_.ProcessId -ne $PID -and $_.CommandLine -and
+                    ($_.CommandLine.IndexOf((Join-Path $PSScriptRoot 'Invoke-ZetaNextDetachedMasterOnce.ps1'), [StringComparison]::OrdinalIgnoreCase) -ge 0 -or
+                     $_.CommandLine.IndexOf((Join-Path $PSScriptRoot 'Start-ZetaNextDetachedMaster.ps1'), [StringComparison]::OrdinalIgnoreCase) -ge 0)
+                })
+                if ($otherWorkers.Count -ne 0) { throw '아직 Master 작업이 실행 중입니다.' }
+                $stopped = Get-ZetaNextRuntimeStatus -Contract $zetaContract -Mode EntriesDisabled
+                $lastEvent = @($stopped.latest_events | Sort-Object { [long]$_.state_sequence } -Descending | Select-Object -First 1)
+                if ([string]$stopped.release_id -ne $zetaContract.ReleaseId -or
+                    @($stopped.components).Count -ne 6 -or
+                    -not (Test-ZetaNextFlatStatus -Status $stopped -Receipt (Get-ZetaNextHandoffReceipt -Contract $zetaContract)) -or
+                    $lastEvent.Count -ne 1 -or [string]$lastEvent[0].event -ne 'STOP' -or
+                    [string]$lastEvent[0].detail -ne 'normal' -or
+                    [long]$stopped.state_sequence -ne 1 + [long]$lastEvent[0].state_sequence) {
+                    throw '이번 실행의 정상 종료와 0/0 무노출을 입증하지 못했습니다.'
+                }
+                $stoppedUtc = [DateTime]::ParseExact([string]$lastEvent[0].utc, 'yyyy.MM.dd HH:mm:ss',
+                    [Globalization.CultureInfo]::InvariantCulture,
+                    ([Globalization.DateTimeStyles]::AssumeUniversal -bor [Globalization.DateTimeStyles]::AdjustToUniversal))
+                if ($stoppedUtc -lt $zetaDispatchUtc) { throw '종료 기록이 이번 기동 요청보다 오래됐습니다.' }
+                Save-ZetaUserActivationRecord -Authority DISABLED -Phase USER_HANDOFF_FAILED_PROVED_STOPPED_0_0 `
+                    -OwnerText 'none; the failed Master worker has completed and exact V7R stopped normally at 0/0 with zero exposure.' `
+                    -Observation "Failed launch $($result.launch_id) completed; normal STOP at $($lastEvent[0].utc), final sequence $($stopped.state_sequence). Restore entries-disabled operation only." `
+                    -HistoryText "User-operated handoff failed before a verified Live start. Matching completed worker receipt, no other worker/terminal, exact 0/0 flat snapshot and a normal STOP after dispatch prove a stopped boundary. New-entry authority is DISABLED; only entries-disabled recovery follows."
+                & $powerShellPath -NoLogo -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Start-ZetaNextDetachedMaster.ps1') -WorkerPowerShellPath $powerShellPath -RequiredMode EntriesDisabled
+                if ($LASTEXITCODE -ne 0) { throw 'OFF 권한은 복구했지만 EA 재기동 확인은 완료되지 않았습니다.' }
+                $disabled = Get-ZetaNextRuntimeStatus -Contract $zetaContract -Mode EntriesDisabled
+                if (-not [bool]$disabled.healthy -or
+                    -not (Test-ZetaNextFlatStatus -Status $disabled -Receipt (Get-ZetaNextHandoffReceipt -Contract $zetaContract))) {
+                    throw 'OFF 재기동 상태 확인이 완료되지 않았습니다.'
+                }
+                $recoveredDisabled = $true
+                Save-ZetaUserActivationRecord -Authority DISABLED -Phase USER_HANDOFF_FAILED_RECOVERED_0_0 `
+                    -OwnerText "none with permission for new orders; exact V7R entries-disabled PID $($disabled.project_terminal_pid) is running with its dashboard." `
+                    -Observation "Recovered healthy 0/0 at $($disabled.observed_at_utc), sequence $($disabled.state_sequence). A new user button action is required for another activation attempt." `
+                    -HistoryText "Failed handoff recovery completed as exact healthy 0/0 PID $($disabled.project_terminal_pid), sequence $($disabled.state_sequence), with EA/dashboard restored. No live retry or gate relaxation occurred."
+                Write-Host '실거래는 OFF입니다. EA와 대시보드를 주문 차단 상태로 복구했습니다. 시세 준비 후 같은 버튼으로 다시 시도할 수 있습니다.' -ForegroundColor Yellow
+            }
+        } catch { Write-Host "실패 후 복구 확인: $($_.Exception.Message)" -ForegroundColor Yellow }
+        if (-not $recoveredDisabled) {
+            Write-Host '기동 이후 상태를 완전히 확인하지 못했습니다. OFF라고 단정하지 않습니다. 재실행하거나 MT5를 강제 종료하지 말고 상태를 확인하세요.' -ForegroundColor Yellow
+        }
     } else {
         Write-Host '실거래 기동 요청은 보내지 않았습니다.' -ForegroundColor Yellow
         if ($zetaRecorded) {
