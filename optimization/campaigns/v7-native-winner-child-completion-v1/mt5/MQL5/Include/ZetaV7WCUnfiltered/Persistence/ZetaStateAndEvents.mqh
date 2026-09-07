@@ -1303,7 +1303,7 @@ bool SaveState()
       MarkPersistenceFailure("current snapshot failed");
       return(false);
      }
-   return(true);
+   return(WCCommitCore());
   }
 
 

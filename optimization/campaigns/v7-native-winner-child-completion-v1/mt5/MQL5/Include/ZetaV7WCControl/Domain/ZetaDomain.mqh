@@ -4,6 +4,7 @@
 // Frozen B70 declarations and runtime state. Economic constants remain unchanged except Next identity and Magic.
 
 input string InpRunTag = "unset";
+input bool InpResumeOwnedCheckpoint = false;
 input double InpReferenceCapitalUSD  = 100.0;
 input double InpPriorProjectRealizedNetUSD = 0.0;
 input double InpBaseVolume           = 0.01;
@@ -508,4 +509,7 @@ bool WCIsMagic(const ulong magic);
 bool WCAuditSelectedChild();
 bool WCAuditSelectedOrder();
 void WCParentExit(const ResearchExitSnapshot &snapshot);
+void WCProtectChildren();
+bool WCCommitCore();
+bool WCBindCore(const bool recovered);
 #endif

@@ -47,7 +47,7 @@ bool InitializeConnectedRuntime()
     const bool state_files_exist =
        (FileIsExist(STATE_PATH_A) || FileIsExist(STATE_PATH_B));
    ResetRuntimeState();
-   const bool recovered = (!tester_mode && LoadState());
+   const bool recovered = (InpResumeOwnedCheckpoint && LoadState());
    if(!recovered)
      {
       ResetRuntimeState();
@@ -75,6 +75,8 @@ bool InitializeConnectedRuntime()
       portfolio_state.bound_account_login =
          (long)AccountInfoInteger(ACCOUNT_LOGIN);
 
+   if(!WCBindCore(recovered)) return(false);
+   if(recovered) {WCResolveEntryIntents();WCReconcileChildren();if(wc_faults>0) return(false);}
    execution_state.runtime_ready = true;
    if(tester_mode)
       PrintV7RR1RequiredContracts("START");
@@ -607,7 +609,8 @@ void OnDeinit(const int reason)
 int OnInit()
   {
    if(!MQLInfoInteger(MQL_TESTER) || !WCInitialize()) return(INIT_FAILED);
-   return(V7CoreOnInit());
+   int result=V7CoreOnInit();
+   return(wc_faults>0?INIT_FAILED:result);
   }
 
 void OnTick()

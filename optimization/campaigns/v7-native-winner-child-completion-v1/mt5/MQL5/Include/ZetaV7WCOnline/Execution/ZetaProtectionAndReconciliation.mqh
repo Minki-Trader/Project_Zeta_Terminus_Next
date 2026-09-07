@@ -461,6 +461,7 @@ bool ApplyExitDeal(const int component,
       portfolio_state.stressed_maximum_closed_drawdown = stressed_drawdown;
    component_states[component].last_processed_exit_time_msc = deal_time_msc;
    component_states[component].last_processed_exit_deal = deal;
+   WCParentExit(research_exit);
    const bool complete_cost =
       (component_states[component].entry_cost_known && exit_quote_known);
    string applied_event = event_name;
@@ -530,7 +531,6 @@ bool ApplyExitDeal(const int component,
                             deal));
     SaveState();
     ResearchHandleExitDeal(research_exit);
-    WCParentExit(research_exit);
     return(true);
   }
 
@@ -754,6 +754,7 @@ void MakeExistingRiskSafe(const string reason)
       if(component >= 0)
          CloseComponent(component, position_ticket);
      }
+     WCProtectChildren();
   }
 
 

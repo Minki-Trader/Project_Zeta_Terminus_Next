@@ -31,7 +31,7 @@ def receipt(path, obj):
     path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
 
 
-def capacity():
+def capacity(enforce=True):
     used = [sum(p.stat().st_size for p in base.rglob('*') if p.is_file()) for base, _ in CAPS]
     free = shutil.disk_usage(ROOT).free
     remaining = sum(max(0, limit - size) for size, (_, limit) in zip(used, CAPS))
@@ -39,7 +39,7 @@ def capacity():
               'used': used, 'caps': [x[1] for x in CAPS], 'remaining': remaining,
               'funded': free >= FLOOR + remaining, 'floor_ok': free >= FLOOR,
               'caps_ok': all(size <= limit for size, (_, limit) in zip(used, CAPS))}
-    if not all(record[k] for k in ('funded', 'floor_ok', 'caps_ok')):
+    if enforce and not all(record[k] for k in ('funded', 'floor_ok', 'caps_ok')):
         raise RuntimeError('Complete remaining capacity unavailable: ' + json.dumps(record))
     return record
 
@@ -57,8 +57,11 @@ def owners():
 def start(config):
     if owners():
         raise RuntimeError('An owned runtime process already exists')
+    window = subprocess.STARTUPINFO()
+    window.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+    window.wShowWindow = 0
     return subprocess.Popen([str(RUNTIME / 'terminal64.exe'), '/portable', '/config:' + str(config)],
-                            cwd=RUNTIME, creationflags=subprocess.CREATE_NO_WINDOW)
+                            cwd=RUNTIME, startupinfo=window, creationflags=subprocess.CREATE_NO_WINDOW)
 
 
 def close_history_owner():
@@ -130,7 +133,7 @@ def history(tag):
             'streams': streams, 'capacity_before': before, 'capacity_after': capacity()})
     finally:
         mt5.shutdown()
-    close_history_owner()
+        close_history_owner()
     print('HISTORY_COMPLETE', tag, flush=True)
 
 
@@ -161,10 +164,21 @@ def run(tag, freeze_name):
     receipt(folder / 'start.json', {'utc': started, 'pid': proc.pid, 'freeze': freeze_name,
             'freeze_sha256': digest(freeze_path), 'binding': before_binding, 'capacity': before})
     print('NATIVE_STARTED', tag, proc.pid, flush=True)
+    capacity_events = []
     while proc.poll() is None:
-        record = capacity()
+        # A background-volume change must not orphan the running owned terminal.
+        # Record it, retain the attempt, and require funding again before any new path.
+        record = capacity(enforce=False)
         with (folder / 'storage.jsonl').open('a', encoding='utf-8') as stream:
             stream.write(json.dumps(record) + '\n')
+        if not all(record[k] for k in ('funded', 'floor_ok', 'caps_ok')):
+            capacity_events.append(record)
+            print('CAPACITY_CHANGE', tag, json.dumps(record), flush=True)
+        if not record['caps_ok'] or record['free'] < FLOOR + 128 * 2**20:
+            receipt(folder / 'capacity-stop.json', record)
+            close_history_owner()
+            proc.wait(timeout=45)
+            break
         time.sleep(30)
     time.sleep(2)
     if owners():
@@ -193,7 +207,7 @@ def run(tag, freeze_name):
               'sha256': digest(p)} for p in sorted(archive.rglob('*')) if p.is_file()]
     receipt(folder / 'complete.json', {'utc': datetime.now(timezone.utc).isoformat(),
             'returncode': proc.returncode, 'files': files, 'binding': binding(freeze),
-            'capacity': capacity()})
+            'capacity': capacity(enforce=False), 'capacity_events': capacity_events})
     print('NATIVE_COMPLETE', tag, len(files), flush=True)
 
 

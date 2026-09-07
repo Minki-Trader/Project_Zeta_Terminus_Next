@@ -39,12 +39,12 @@ def main():
             for j in range(6):
                 s = s.replace(str(260907701 + j), str(role['magic_first'] + j))
             if p.name == 'ZetaDomain.mqh':
-                s = s.replace('input double InpReferenceCapitalUSD', 'input string InpRunTag = "unset";\ninput double InpReferenceCapitalUSD')
+                s = s.replace('input double InpReferenceCapitalUSD', 'input string InpRunTag = "unset";\ninput bool InpResumeOwnedCheckpoint = false;\ninput double InpReferenceCapitalUSD')
                 # Paths are assigned before the inherited OnInit executes.
                 s = re.sub(r'const string ((?:STATE_PATH|EVENT_PATH|CURRENT_SNAPSHOT_PATH|RESEARCH_OBSERVATION_STATE_PATH)_[AB]|OWNERSHIP_PATH|RESEARCH_OBSERVATION_DIRECTORY|RESEARCH_CANDIDATE_LEDGER_PATH|RESEARCH_LIFECYCLE_LEDGER_PATH)\s*=\s*"[^"]*";', r'string \1 = "";', s)
                 s = s.replace('#endif', '\n#define WC_ROLE ' + str(role['role_number']) + '\nconst ulong WC_MAGIC_FIRST=' + str(role['child_magic_first']) + ';\n'
                     'double WCReservedRisk();\nbool WCIsMagic(const ulong magic);\nbool WCAuditSelectedChild();\nbool WCAuditSelectedOrder();\n'
-                    'void WCParentExit(const ResearchExitSnapshot &snapshot);\n#endif')
+                    'void WCParentExit(const ResearchExitSnapshot &snapshot);\nvoid WCProtectChildren();\nbool WCCommitCore();\nbool WCBindCore(const bool recovered);\n#endif')
             elif p.name == 'ZetaPortfolioRisk.mqh':
                 s = s.replace('double risk = MathMax(0.0, passive_pending_planned_risk_usd);', 'double risk = MathMax(0.0, passive_pending_planned_risk_usd) + WCReservedRisk();')
             elif p.name == 'ZetaOwnership.mqh':
@@ -53,9 +53,24 @@ def main():
                 needle = '      int stop_loss_component = -1;'
                 s = s.replace(needle, '      if(WCIsMagic(magic))\n        {\n         if(!WCAuditSelectedOrder()) return(false);\n         continue;\n        }\n' + needle, 1)
             elif p.name == 'ZetaProtectionAndReconciliation.mqh':
-                s = s.replace('    ResearchHandleExitDeal(research_exit);', '    ResearchHandleExitDeal(research_exit);\n    WCParentExit(research_exit);')
+                s = s.replace('   component_states[component].last_processed_exit_deal = deal;',
+                    '   component_states[component].last_processed_exit_deal = deal;\n   WCParentExit(research_exit);')
+                safety_start = s.index('void MakeExistingRiskSafe(')
+                safety_end = s.index('void ProcessClosures()', safety_start)
+                safety_text = s[safety_start:safety_end]
+                last_brace = safety_text.rfind('}')
+                safety_text = safety_text[:last_brace] + '   WCProtectChildren();\n  ' + safety_text[last_brace:]
+                s = s[:safety_start] + safety_text + s[safety_end:]
             elif p.name == 'ZetaStateAndEvents.mqh':
                 s = replace_function(s, 'ResetTesterArtifacts', '   // Fresh native tags are required; previous evidence is never deleted.')
+                core_start = s.index('bool SaveState()')
+                core_end = s.index('bool RecordEvent(', core_start)
+                core = s[core_start:core_end]
+                last_return = core.rfind('return(true);')
+                if last_return < 0:
+                    raise RuntimeError('Original core snapshot success boundary missing')
+                core = core[:last_return] + 'return(WCCommitCore());' + core[last_return + len('return(true);'):]
+                s = s[:core_start] + core + s[core_end:]
             out = target / p.relative_to(FAMILY / 'parent/MQL5/Include/ZetaTerminusNext')
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(s, encoding='utf-8', newline='\r\n')
@@ -67,6 +82,8 @@ def main():
         (target / 'WinnerChild/InitialFit.mqh').write_text('\n'.join(initial) + '\n', encoding='utf-8', newline='\r\n')
         template = (FAMILY / 'native/WinnerChild.mqh').read_text(encoding='utf-8')
         (target / 'WinnerChild/WinnerChild.mqh').write_text(template.replace('@INCLUDE@', inc), encoding='utf-8', newline='\r\n')
+        checkpoint = (FAMILY / 'native/Checkpoint.mqh').read_text(encoding='utf-8')
+        (target / 'WinnerChild/Checkpoint.mqh').write_text(checkpoint, encoding='utf-8', newline='\r\n')
         resource = MQL / 'Files' / inc / 'winner-child-kernel.onnx'
         resource.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(FAMILY / 'models/winner-child-kernel.onnx', resource)
@@ -74,17 +91,22 @@ def main():
         s = p.read_text(encoding='utf-8-sig').replace('ZetaTerminusNext\\', inc + '\\')
         s = s.replace('// The EA owns assembly', '#include <' + inc + '\\WinnerChild\\WinnerChild.mqh>\n\n// The EA owns assembly')
         s = s.replace('int OnInit()', 'int V7CoreOnInit()').replace('void OnTick()', 'void V7CoreOnTick()')
+        s = s.replace('const bool recovered = (!tester_mode && LoadState());', 'const bool recovered = (InpResumeOwnedCheckpoint && LoadState());')
+        s = s.replace('   execution_state.runtime_ready = true;',
+            '   if(!WCBindCore(recovered)) return(false);\n'
+            '   if(recovered) {WCResolveEntryIntents();WCReconcileChildren();if(wc_faults>0) return(false);}\n'
+            '   execution_state.runtime_ready = true;', 1)
         start = s.index('   FolderCreate("ZetaTerminusNext");')
         end = s.index('   if(tester_mode)\n      ResetTesterArtifacts();', start)
         s = s[:start] + s[end:]
         s = s.replace('   PrintFormat("V7RR1_NATIVE', '   WCFinish();\n   PrintFormat("V7RR1_NATIVE', 1)
         s = s.replace('   ReleaseRuntimeOwnership();\n  }', '   WCShutdown();\n   ReleaseRuntimeOwnership();\n  }')
-        s += '\nint OnInit()\n  {\n   if(!MQLInfoInteger(MQL_TESTER) || !WCInitialize()) return(INIT_FAILED);\n   return(V7CoreOnInit());\n  }\n\nvoid OnTick()\n  {\n   if(execution_state.runtime_ready) WCBeforeTick();\n   V7CoreOnTick();\n   if(execution_state.runtime_ready) WCAfterTick();\n  }\n'
+        s += '\nint OnInit()\n  {\n   if(!MQLInfoInteger(MQL_TESTER) || !WCInitialize()) return(INIT_FAILED);\n   int result=V7CoreOnInit();\n   return(wc_faults>0?INIT_FAILED:result);\n  }\n\nvoid OnTick()\n  {\n   if(execution_state.runtime_ready) WCBeforeTick();\n   V7CoreOnTick();\n   if(execution_state.runtime_ready) WCAfterTick();\n  }\n'
         out = MQL / 'Experts' / (name + '.mq5')
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(s, encoding='utf-8', newline='\r\n')
         preset = (FAMILY / 'parent/MQL5/Presets/ZetaTerminusNext/next-v7-return.set').read_text(encoding='utf-8-sig')
-        preset += '\nInpRunTag=unset\n'
+        preset += '\nInpRunTag=unset\nInpResumeOwnedCheckpoint=false\n'
         (MQL / 'Presets').mkdir(exist_ok=True)
         (MQL / 'Presets' / (name + '.set')).write_text(preset, encoding='utf-8', newline='\r\n')
     for p in sorted(MQL.rglob('*')):

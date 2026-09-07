@@ -38,6 +38,7 @@ struct WCParent
    ulong ticket;
    ulong last_deal;
    double child_entry;
+   double requested_child_entry;
    double child_stop;
    double child_risk;
    double remaining_volume;
@@ -45,6 +46,15 @@ struct WCParent
    double entry_cost;
    double entry_slip;
    int close_requested;
+   long close_request_msc;
+   uint close_retcode;
+   ulong last_exit_order;
+   ulong completed_child;
+   double last_exit_volume;
+   ulong entry_deal;
+   ulong entry_order;
+   ulong close_order;
+   double close_volume;
   };
 WCParent wc_parents[];
 int wc_active[];
@@ -57,6 +67,7 @@ long wc_labels=0,wc_sequence=0,wc_deferred=0;
 double wc_positive_swap=0,wc_child_actual=0,wc_child_stress=0;
 double wc_mse_sum=0,wc_zero_mse_sum=0;
 datetime wc_mark_minute=0,wc_deferred_minute=0;
+datetime wc_last_forecast_D=0;
 string wc_root="";
 bool wc_dirty=false,wc_finished=false;
 CTrade wc_trade;
@@ -110,6 +121,8 @@ bool WCAuditSelectedChild()
          MathAbs(PositionGetDouble(POSITION_SL)-p.child_stop)<tick*.25 &&
          PositionGetDouble(POSITION_TP)==0;
       if(!valid) WCFail("child protection/ownership mismatch");
+      else if(wc_parents[n].ticket!=(ulong)PositionGetInteger(POSITION_TICKET))
+        {wc_parents[n].ticket=(ulong)PositionGetInteger(POSITION_TICKET);wc_dirty=true;WCLog("CHILD_TICKET_REFRESH",n,wc_parents[n].ticket);}
       return(valid);
      }
    WCFail("unknown child identifier"); return(false);
@@ -119,63 +132,41 @@ bool WCAuditSelectedOrder()
   {
    ulong magic=(ulong)OrderGetInteger(ORDER_MAGIC);
    ulong id=(ulong)OrderGetInteger(ORDER_POSITION_ID);
-   for(int k=0;k<ArraySize(wc_active);++k)
+   ulong order=(ulong)OrderGetInteger(ORDER_TICKET);
+   for(int n=0;n<ArraySize(wc_parents);++n)
      {
-      WCParent p=wc_parents[wc_active[k]];
-      if(magic!=WC_MAGIC_FIRST+p.component || p.child==0) continue;
-      bool valid=OrderGetString(ORDER_SYMBOL)==component_definitions[p.component].symbol &&
-         OrderGetInteger(ORDER_REASON)==ORDER_REASON_SL && (id==0 || id==p.child) &&
+      WCParent p=wc_parents[n];
+      if(magic!=WC_MAGIC_FIRST+p.component) continue;
+      if(p.attempted==1 && p.entry_order==order && OrderGetString(ORDER_SYMBOL)==component_definitions[p.component].symbol &&
+         OrderGetInteger(ORDER_TYPE)==(p.direction>0?ORDER_TYPE_BUY:ORDER_TYPE_SELL) &&
+         MathAbs(OrderGetDouble(ORDER_VOLUME_INITIAL)-p.volume)<1e-9 && MathAbs(OrderGetDouble(ORDER_SL)-p.child_stop)<1e-9)
+         return(true);
+      if(p.close_requested && p.close_order==order && p.child>0 && (id==0 || id==p.child) &&
+         OrderGetString(ORDER_SYMBOL)==component_definitions[p.component].symbol &&
          OrderGetInteger(ORDER_TYPE)==(p.direction>0?ORDER_TYPE_SELL:ORDER_TYPE_BUY) &&
-         MathAbs(OrderGetDouble(ORDER_VOLUME_INITIAL)-p.remaining_volume)<1e-9;
+         MathAbs(OrderGetDouble(ORDER_VOLUME_INITIAL)-p.close_volume)<1e-9)
+         return(true);
+      const bool completed=(p.last_exit_order==order && p.completed_child>0);
+      ulong expected=(completed?p.completed_child:p.child);
+      double volume=(completed?p.last_exit_volume:p.remaining_volume);
+      if(expected==0) continue;
+      bool valid=OrderGetString(ORDER_SYMBOL)==component_definitions[p.component].symbol &&
+         OrderGetInteger(ORDER_REASON)==ORDER_REASON_SL && (id==0 || id==expected) &&
+         OrderGetInteger(ORDER_TYPE)==(p.direction>0?ORDER_TYPE_SELL:ORDER_TYPE_BUY) &&
+         MathAbs(OrderGetDouble(ORDER_VOLUME_INITIAL)-volume)<1e-9;
       if(valid) return(true);
      }
    WCFail("unknown child pending order"); return(false);
   }
 
-// Write and reread the complete binary checkpoint, including every causal label.
-// Struct bytes contain no strings, objects, pointers or dynamically sized arrays.
-bool WCSave()
-  {
-   if(!wc_dirty) return(true);
-   ++wc_sequence;
-   string path=wc_root+"\\state\\child-"+(wc_sequence%2==0?"a":"b")+".bin";
-   int h=FileOpen(path,FILE_WRITE|FILE_BIN);
-   if(h==INVALID_HANDLE) {WCFail("snapshot open failed");return(false);}
-   FileWriteLong(h,wc_sequence); FileWriteInteger(h,ArraySize(wc_parents));
-   FileWriteLong(h,wc_updates); FileWriteLong(h,wc_inferences); FileWriteLong(h,wc_children);
-   FileWriteLong(h,wc_closed_children);FileWriteDouble(h,wc_positive_swap);
-   FileWriteDouble(h,wc_child_actual);FileWriteDouble(h,wc_child_stress);
-   FileWriteArray(h,wc_weights);FileWriteArray(h,wc_P);
-   for(int n=0;n<ArraySize(wc_parents);++n) FileWriteStruct(h,wc_parents[n]);
-   FileFlush(h); ulong expected=FileTell(h);FileClose(h);
-   h=FileOpen(path,FILE_READ|FILE_BIN);
-   if(h==INVALID_HANDLE) {WCFail("snapshot readback open failed");return(false);}
-   bool valid=FileSize(h)==expected && FileReadLong(h)==wc_sequence && FileReadInteger(h)==ArraySize(wc_parents);
-   valid=(FileReadLong(h)==wc_updates && valid);valid=(FileReadLong(h)==wc_inferences && valid);
-   valid=(FileReadLong(h)==wc_children && valid);valid=(FileReadLong(h)==wc_closed_children && valid);
-   valid=(FileReadDouble(h)==wc_positive_swap && valid);valid=(FileReadDouble(h)==wc_child_actual && valid);
-   valid=(FileReadDouble(h)==wc_child_stress && valid);
-   double weights[17],P[289];FileReadArray(h,weights);FileReadArray(h,P);
-   for(int j=0;j<17;++j) if(weights[j]!=wc_weights[j]) valid=false;
-   for(int j=0;j<289;++j) if(P[j]!=wc_P[j]) valid=false;
-   for(int n=0;n<ArraySize(wc_parents);++n)
-     {
-      WCParent restored={};
-      if(FileReadStruct(h,restored)!=sizeof(WCParent)) valid=false;
-      uchar original_bytes[],restored_bytes[];
-      if(!StructToCharArray(wc_parents[n],original_bytes) || !StructToCharArray(restored,restored_bytes)) valid=false;
-      if(ArrayCompare(original_bytes,restored_bytes)!=0) valid=false;
-     }
-   if(FileTell(h)!=expected) valid=false;FileClose(h);
-   if(!valid) {WCFail("complete snapshot readback failed");return(false);}
-   wc_dirty=false;return(true);
-  }
+#include <ZetaV7WCControl\WinnerChild\Checkpoint.mqh>
 
 bool WCInitialize()
   {
    if(InpRunTag=="unset" || StringLen(InpRunTag)>80 || StringFind(InpRunTag,"..")>=0 ||
       StringFind(InpRunTag,"\\")>=0 || StringFind(InpRunTag,"/")>=0) return(false);
    wc_root="ZetaV7WCControl\\"+InpRunTag;
+   if(!WCIdentity()) return(false);
    FolderCreate("ZetaV7WCControl"); FolderCreate(wc_root);FolderCreate(wc_root+"\\state");FolderCreate(wc_root+"\\research");
    STATE_PATH_A=wc_root+"\\state\\state-a.csv";STATE_PATH_B=wc_root+"\\state\\state-b.csv";
    EVENT_PATH_A=wc_root+"\\state\\events-a.csv";EVENT_PATH_B=wc_root+"\\state\\events-b.csv";
@@ -186,13 +177,22 @@ bool WCInitialize()
    RESEARCH_OBSERVATION_STATE_PATH_B=wc_root+"\\research\\research-state-b.csv";
    RESEARCH_CANDIDATE_LEDGER_PATH=wc_root+"\\research\\research-candidates.csv";
    RESEARCH_LIFECYCLE_LEDGER_PATH=wc_root+"\\research\\research-lifecycles.csv";
-   if(FileIsExist(wc_root+"\\fresh.txt") || FileIsExist(STATE_PATH_A) || FileIsExist(STATE_PATH_B)) return(false);
-   int h=FileOpen(wc_root+"\\fresh.txt",FILE_WRITE|FILE_TXT|FILE_ANSI);
-   if(h==INVALID_HANDLE) return(false);FileWriteString(h,PORTFOLIO_ID+" "+InpRunTag);FileFlush(h);FileClose(h);
-   wc_events=FileOpen(wc_root+"\\child-events.csv",FILE_WRITE|FILE_CSV|FILE_ANSI,',');
-   wc_forecasts=FileOpen(wc_root+"\\forecasts.csv",FILE_WRITE|FILE_TXT|FILE_ANSI);
-   wc_equity=FileOpen(wc_root+"\\equity.csv",FILE_WRITE|FILE_CSV|FILE_ANSI,',');
+   bool exists=FileIsExist(wc_root+"\\fresh.txt") || FileIsExist(STATE_PATH_A) || FileIsExist(STATE_PATH_B);
+   if(!InpResumeOwnedCheckpoint && exists) return(false);
+   if(InpResumeOwnedCheckpoint && (!FileIsExist(wc_root+"\\fresh.txt") || !FileIsExist(wc_root+"\\child-events.csv") ||
+      !FileIsExist(wc_root+"\\forecasts.csv") || !FileIsExist(wc_root+"\\equity.csv"))) return(false);
+   if(!InpResumeOwnedCheckpoint)
+     {
+      int h=FileOpen(wc_root+"\\fresh.txt",FILE_WRITE|FILE_TXT|FILE_ANSI);
+      if(h==INVALID_HANDLE) return(false);FileWriteString(h,PORTFOLIO_ID+" "+InpRunTag);FileFlush(h);FileClose(h);
+     }
+   int access=(InpResumeOwnedCheckpoint?FILE_READ|FILE_WRITE:FILE_WRITE);
+   wc_events=FileOpen(wc_root+"\\child-events.csv",access|FILE_CSV|FILE_ANSI,',');
+   wc_forecasts=FileOpen(wc_root+"\\forecasts.csv",access|FILE_TXT|FILE_ANSI);
+   wc_equity=FileOpen(wc_root+"\\equity.csv",access|FILE_CSV|FILE_ANSI,',');
    if(wc_events==INVALID_HANDLE || wc_forecasts==INVALID_HANDLE || wc_equity==INVALID_HANDLE) return(false);
+   if(!InpResumeOwnedCheckpoint)
+     {
    FileWrite(wc_events,"server","event","index","parent","component","D","a","b","c","detail");
    string head="server,index,parent,D,prediction";
    for(int j=0;j<8;++j) head+=",f"+IntegerToString(j);
@@ -200,6 +200,9 @@ bool WCInitialize()
    for(int j=0;j<17;++j) head+=",w"+IntegerToString(j);
    FileWriteString(wc_forecasts,head+"\r\n");
    FileWrite(wc_equity,"server","balance","equity","project_realized","stress_balance","positive_swap","conservative_equity","capital","multiplier","planned_risk","margin","positions","children");
+     }
+   else
+     {FileSeek(wc_events,0,SEEK_END);FileSeek(wc_forecasts,0,SEEK_END);FileSeek(wc_equity,0,SEEK_END);}
    ArrayCopy(wc_weights,wc_initial_weights);ArrayCopy(wc_P,wc_initial_P);
    if(WC_ROLE>0)
      {
@@ -210,6 +213,8 @@ bool WCInitialize()
          !OnnxSetOutputShape(wc_handle,0,ys) || !OnnxSetOutputShape(wc_handle,1,ps)) return(false);
      }
    wc_trade.SetAsyncMode(false);wc_trade.SetDeviationInPoints(InpDeviationPoints);
+   if(InpResumeOwnedCheckpoint) {WCLog("RESUME_REQUEST",-1);return(true);}
+   wc_checkpoint_ready=true;
    wc_dirty=true;WCLog("INITIAL",-1,WC_ROLE,66,0,"fresh2024fit;empty2025pending");
    return(WCSave());
   }
@@ -226,9 +231,10 @@ void WCParentExit(const ResearchExitSnapshot &snapshot)
       int n=wc_active[k];
       if(wc_parents[n].parent!=snapshot.position_identifier) continue;
       wc_parents[n].alive=0;wc_parents[n].parent_exit_msc=snapshot.deal_time_msc;
-      WCLog(wc_parents[n].D==0?"PARENT_NO_TRIGGER":"PARENT_END",n,snapshot.deal_net,snapshot.stressed_net,
+      WCLog("PARENT_END",n,snapshot.deal_net,snapshot.stressed_net,
             snapshot.execution_price,IntegerToString(snapshot.deal_time_msc));return;
      }
+   if(WC_ROLE>0 && snapshot.component<5) WCFail("completed market parent lacks birth record");
   }
 
 void WCCaptureParents()
@@ -297,6 +303,7 @@ void WCUpdateBefore(const datetime D)
 
 bool WCForecast(const int n)
   {
+   if(wc_parents[n].D<wc_last_forecast_D) {WCFail("forecast origin regressed after native synchronization");return(false);}
    float features[8],weights[17],output[1],basis[17];
    for(int i=0;i<8;++i) features[i]=(float)((wc_parents[n].features[i]-wc_mean[i])/wc_sd[i]);
    for(int i=0;i<17;++i) weights[i]=(float)wc_weights[i];
@@ -309,7 +316,7 @@ bool WCForecast(const int n)
      {if(!MathIsValidNumber(basis[i])) {WCFail("nonfinite phi");return(false);}wc_parents[n].phi[i]=(double)basis[i];row+=StringFormat(",%.17g",(double)basis[i]);}
    for(int i=0;i<17;++i) row+=StringFormat(",%.17g",(double)weights[i]);
    if(FileWriteString(wc_forecasts,row+"\r\n")==0) {WCFail("forecast write");return(false);}FileFlush(wc_forecasts);
-   ++wc_inferences;wc_dirty=true;return(true);
+   wc_last_forecast_D=wc_parents[n].D;++wc_inferences;wc_dirty=true;return(true);
   }
 
 double WCBarExit(const MqlRates &bar,const int direction,const double point)
@@ -317,7 +324,8 @@ double WCBarExit(const MqlRates &bar,const int direction,const double point)
 
 void WCTrigger(const int n,const datetime D)
   {
-   if(wc_parents[n].D>0 || !wc_parents[n].alive || D<=wc_parents[n].checked_D) return;
+   if(wc_parents[n].D>0 || D<=wc_parents[n].checked_D) return;
+   if(!wc_parents[n].alive && (long)D*1000>=wc_parents[n].parent_exit_msc) return;
    WCParent p=wc_parents[n];string symbol=component_definitions[p.component].symbol;
    MqlRates current[];int got=CopyRates(symbol,PERIOD_M1,D-60,D-1,current);
    if(got!=1 || current[0].time!=D-60) return; // Retry the same completed minute after native synchronization.
@@ -339,10 +347,10 @@ void WCTrigger(const int n,const datetime D)
    if(path_start<D)
      {
       MqlRates path[];int count=CopyRates(symbol,PERIOD_M1,path_start,D-1,path);
-      if(count!=(int)((D-path_start)/60)) {wc_parents[n].shadow=3;wc_parents[n].attempted=2;WCLog("MISSING_PARENT_PATH",n,count);return;}
+      if(count<0) {wc_parents[n].shadow=3;wc_parents[n].attempted=2;WCLog("MISSING_PARENT_PATH",n,count);return;}
       for(int j=0;j<count;++j)
         {
-         if(path[j].time!=path_start+j*60) {WCFail("parent path chronology");return;}
+         if(path[j].time<path_start || path[j].time>=D || (j>0 && path[j].time<=path[j-1].time)) {WCFail("parent path chronology");return;}
          double shift=(p.direction<0?path[j].spread*point:0);
          double high=path[j].high+shift,low=path[j].low+shift;
          favorable=MathMax(favorable,p.direction>0?high-p.entry:p.entry-low);
@@ -356,6 +364,8 @@ void WCTrigger(const int n,const datetime D)
    wc_parents[n].features[3]=p.direction*(close-WCBarExit(bars[0],p.direction,point))/R;
    wc_parents[n].features[4]=(hi-lo)/R;wc_parents[n].features[5]=MathMax(0,adverse)/R;
    wc_parents[n].features[6]=MathMax(0,favorable)/R;wc_parents[n].features[7]=bars[30].spread*point/R;
+   if(!wc_parents[n].alive)
+     {wc_parents[n].shadow=3;wc_parents[n].attempted=2;WCLog("TRIGGER_PARENT_ALREADY_COMPLETED",n,0,0,0,"Completed origin discovered after core exit; no backdated inference, label, or order");return;}
    WCUpdateBefore(D);if(wc_faults>0 || !WCForecast(n)) return;
    wc_parents[n].choice=(WC_ROLE==1 || wc_parents[n].prediction>0?1:0);
    WCLog(wc_parents[n].choice?"MODEL_OPEN":"MODEL_DECLINE",n,wc_parents[n].prediction);
@@ -369,13 +379,19 @@ void WCCompletedMinutes(const datetime now_D)
       for(int k=0;k<ArraySize(wc_active);++k)
         {
          int n=wc_active[k];
-         if(!wc_parents[n].alive || wc_parents[n].D>0 || wc_parents[n].checked_D>=now_D) continue;
+         if(wc_parents[n].D>0 || wc_parents[n].checked_D>=now_D) continue;
+         datetime cutoff=now_D;
+         if(!wc_parents[n].alive)
+            cutoff=(datetime)MathMin((long)cutoff,(wc_parents[n].parent_exit_msc-1)/60000*60);
+         if(wc_parents[n].checked_D>=cutoff) continue;
          string symbol=component_definitions[wc_parents[n].component].symbol;
          MqlRates completed[];
-         int count=CopyRates(symbol,PERIOD_M1,wc_parents[n].checked_D,now_D-1,completed);
+         int count=CopyRates(symbol,PERIOD_M1,wc_parents[n].checked_D,cutoff-1,completed);
          if(count<1) continue;
          datetime origin=completed[0].time+60;
-         if(origin>now_D || origin<=wc_parents[n].checked_D) continue;
+         if(origin>cutoff || origin<=wc_parents[n].checked_D) continue;
+         if(completed[0].time>wc_parents[n].checked_D)
+            WCLog("OBSERVED_M1_GAP",n,(double)wc_parents[n].checked_D,(double)completed[0].time,0,"No synthetic bars; fixed31bar prefix still required at first trigger");
          if(best<0 || origin<first || (origin==first && wc_parents[n].parent<wc_parents[best].parent))
            {best=n;first=origin;}
         }
@@ -418,7 +434,8 @@ void WCShadowTicks(const int n)
    WCParent p=wc_parents[n];string symbol=component_definitions[p.component].symbol;MqlTick now={};
    if(!SymbolInfoTick(symbol,now) || now.time_msc<p.shadow_cursor_msc) return;
    long until=now.time_msc;
-   if(!p.alive && p.parent_exit_msc>0) until=MathMin(until,p.parent_exit_msc);
+   // The virtual child remains exposed until its parent-close duty is observable
+   // on this dispatcher. Intervening peer-symbol stop crossings still come first.
    if(until>=p.shadow_cursor_msc)
      {
       MqlTick ticks[];int count=CopyTicksRange(symbol,ticks,COPY_TICKS_ALL,(ulong)p.shadow_cursor_msc,(ulong)until);
@@ -438,6 +455,126 @@ void WCShadowTicks(const int n)
      }
    if(!p.alive && ExecutableTick(symbol,now) && now.time_msc>=p.parent_exit_msc && TradeSessionAllows(symbol,TimeCurrent(),false))
       WCShadowClose(n,p.direction>0?now.bid:now.ask,now.ask-now.bid,now.time_msc,false);
+  }
+
+bool WCAdoptEntry(const int n,const ulong receipt_deal)
+  {
+   WCParent p=wc_parents[n];string symbol=component_definitions[p.component].symbol;
+   ulong id=0;
+   if(receipt_deal>0 && HistoryDealSelect(receipt_deal))
+     {
+      if((ulong)HistoryDealGetInteger(receipt_deal,DEAL_MAGIC)!=WC_MAGIC_FIRST+p.component ||
+         HistoryDealGetString(receipt_deal,DEAL_SYMBOL)!=symbol || HistoryDealGetInteger(receipt_deal,DEAL_ENTRY)!=DEAL_ENTRY_IN)
+        {WCFail("entry receipt identity mismatch");return(false);}
+      id=(ulong)HistoryDealGetInteger(receipt_deal,DEAL_POSITION_ID);
+     }
+   if(id==0 && HistorySelect(p.D-1,TimeCurrent()))
+     {
+      int deals=HistoryDealsTotal();
+      for(int j=0;j<deals;++j)
+        {
+         ulong deal=HistoryDealGetTicket(j);
+         if((ulong)HistoryDealGetInteger(deal,DEAL_MAGIC)!=WC_MAGIC_FIRST+p.component ||
+            HistoryDealGetString(deal,DEAL_SYMBOL)!=symbol || HistoryDealGetInteger(deal,DEAL_ENTRY)!=DEAL_ENTRY_IN ||
+            HistoryDealGetString(deal,DEAL_COMMENT)!="WC:"+(string)p.parent) continue;
+         ulong candidate=(ulong)HistoryDealGetInteger(deal,DEAL_POSITION_ID);
+         if(id>0 && id!=candidate) {WCFail("more than one child identifier for one intent");return(false);}id=candidate;
+        }
+     }
+   ulong ticket=0;int count=0;
+   for(int j=PositionsTotal()-1;j>=0;--j)
+     {
+      ulong current=PositionGetTicket(j);
+      if((ulong)PositionGetInteger(POSITION_MAGIC)!=WC_MAGIC_FIRST+p.component || PositionGetString(POSITION_SYMBOL)!=symbol) continue;
+      bool linked=(id>0 && (ulong)PositionGetInteger(POSITION_IDENTIFIER)==id);
+      bool comment=PositionGetString(POSITION_COMMENT)=="WC:"+(string)p.parent;
+      if(!linked && !comment) continue;
+      ulong candidate=(ulong)PositionGetInteger(POSITION_IDENTIFIER);
+      if(id>0 && id!=candidate) {WCFail("duplicate child positions for original parent");return(false);}
+      ticket=current;id=candidate;++count;
+     }
+   if(count>1) {WCFail("duplicate child entry positions");return(false);}
+   if(id==0) return(false);
+   ulong wait_started=GetTickCount64();double aggregated=0;
+   do
+     {
+      aggregated=0;
+      if(HistorySelectByPosition(id))
+         for(int j=0;j<HistoryDealsTotal();++j)
+           {ulong d=HistoryDealGetTicket(j);if(HistoryDealGetInteger(d,DEAL_ENTRY)==DEAL_ENTRY_IN) aggregated+=HistoryDealGetDouble(d,DEAL_VOLUME);}
+      if(aggregated+1e-9>=p.volume) break;
+      if(GetTickCount64()-wait_started>=COMPLETED_DEAL_RECONCILIATION_TIMEOUT_MS) break;
+      Sleep(COMPLETED_DEAL_RECONCILIATION_POLL_MS);
+     }
+   while(true);
+   if(!HistorySelectByPosition(id)) return(false);
+   int total=HistoryDealsTotal();ulong deals[];ArrayResize(deals,total);
+   for(int j=0;j<total;++j) deals[j]=HistoryDealGetTicket(j);
+   double volume=0,weighted_price=0,cost=0,slip=0,positive_swap=0;int fills=0;
+   for(int j=0;j<total;++j)
+     {
+      ulong deal=deals[j];if(!HistoryDealSelect(deal) || HistoryDealGetInteger(deal,DEAL_ENTRY)!=DEAL_ENTRY_IN) continue;
+      if((ulong)HistoryDealGetInteger(deal,DEAL_MAGIC)!=WC_MAGIC_FIRST+p.component || HistoryDealGetString(deal,DEAL_SYMBOL)!=symbol ||
+         HistoryDealGetInteger(deal,DEAL_TYPE)!=(p.direction>0?DEAL_TYPE_BUY:DEAL_TYPE_SELL))
+        {WCFail("multi-fill entry identity");return(false);}
+      double v=HistoryDealGetDouble(deal,DEAL_VOLUME),price=HistoryDealGetDouble(deal,DEAL_PRICE);
+      if(v<=0 || price<=0) {WCFail("invalid entry fill");return(false);}
+      volume+=v;weighted_price+=v*price;cost+=HistoryDealGetDouble(deal,DEAL_COMMISSION)+HistoryDealGetDouble(deal,DEAL_SWAP)+HistoryDealGetDouble(deal,DEAL_FEE);
+      positive_swap+=MathMax(0,HistoryDealGetDouble(deal,DEAL_SWAP));
+      slip+=MathMax(0,p.direction*(price-p.requested_child_entry))*v*SymbolInfoDouble(symbol,SYMBOL_TRADE_CONTRACT_SIZE);++fills;
+      WCLog("CHILD_ENTRY_FILL",n,price,v,cost,StringFormat("deal=%I64u;child=%I64u;msc=%I64d",deal,id,HistoryDealGetInteger(deal,DEAL_TIME_MSC)));
+     }
+   if(volume<=0 || fills==0) return(false);
+   wc_parents[n].child=id;wc_parents[n].ticket=ticket;wc_parents[n].remaining_volume=volume;
+   wc_parents[n].child_entry=weighted_price/volume;wc_parents[n].entry_cost=cost;wc_parents[n].entry_slip=slip;
+   wc_parents[n].attempted=2;wc_positive_swap+=positive_swap;++wc_children;wc_dirty=true;
+   bool valid=MathAbs(volume-p.volume)<1e-9;double gross=0,buffered=0;
+   if(ticket>0)
+     {
+      if(!PositionSelectByTicket(ticket) || !WCAuditSelectedChild()) valid=false;
+     }
+   if(!GrossStopRisk(symbol,p.direction,volume,wc_parents[n].child_entry,p.child_stop,gross) || gross>p.parent_budget*.5+1e-9 ||
+      !BufferedPlannedRisk(symbol,p.direction,volume,wc_parents[n].child_entry,p.child_stop,buffered) || buffered>p.child_risk+.01) valid=false;
+   WCLog("CHILD_OPEN",n,wc_parents[n].child_entry,p.child_stop,p.child_risk,
+         StringFormat("child=%I64u;ticket=%I64u;volume=%.8f;requested=%.8f;fills=%d;entry_cost=%.12f;entry_slip=%.12f;positive_entry_swap=%.12f;complete_quantity=%d",id,ticket,volume,p.volume,fills,cost,slip,positive_swap,valid));
+   if(!valid) WCFail("partial quantity or filled protection exceeds unchanged child contract");
+   portfolio_state.maximum_aggregate_planned_risk_usd=MathMax(portfolio_state.maximum_aggregate_planned_risk_usd,TrackedAggregatePlannedRisk());
+   WCSave();SaveState();return(true);
+  }
+
+void WCResolveEntryIntents()
+  {
+   for(int k=0;k<ArraySize(wc_active);++k)
+     {
+      int n=wc_active[k];if(wc_parents[n].attempted!=1 || wc_parents[n].child>0) continue;
+      if(WCAdoptEntry(n,wc_parents[n].entry_deal)) continue;
+      WCParent p=wc_parents[n];int matching=0;ulong pending=0;
+      for(int j=OrdersTotal()-1;j>=0;--j)
+        {
+         ulong order=OrderGetTicket(j);
+         if((ulong)OrderGetInteger(ORDER_MAGIC)!=WC_MAGIC_FIRST+p.component ||
+            OrderGetString(ORDER_SYMBOL)!=component_definitions[p.component].symbol ||
+            OrderGetString(ORDER_COMMENT)!="WC:"+(string)p.parent) continue;
+         if(OrderGetInteger(ORDER_TYPE)!=(p.direction>0?ORDER_TYPE_BUY:ORDER_TYPE_SELL) ||
+            MathAbs(OrderGetDouble(ORDER_VOLUME_INITIAL)-p.volume)>1e-9 ||
+            MathAbs(OrderGetDouble(ORDER_SL)-p.child_stop)>1e-9 || OrderGetDouble(ORDER_TP)!=0)
+           {WCFail("pending child entry contract");continue;}
+         pending=order;++matching;
+        }
+      if(matching==1)
+        {
+         if(wc_parents[n].entry_order!=pending)
+           {wc_parents[n].entry_order=pending;wc_dirty=true;WCLog("CHILD_PENDING_ENTRY_ADOPTED",n,pending);WCSave();}
+         continue;
+        }
+      if(matching==0 && p.entry_order>0 && HistoryOrderSelect(p.entry_order))
+        {
+         long state=HistoryOrderGetInteger(p.entry_order,ORDER_STATE);
+         if(state==ORDER_STATE_CANCELED || state==ORDER_STATE_REJECTED || state==ORDER_STATE_EXPIRED)
+           {wc_parents[n].attempted=2;wc_parents[n].child_risk=0;wc_dirty=true;WCLog("CHILD_PENDING_ENTRY_UNFILLED",n,p.entry_order,state);WCSave();continue;}
+        }
+      WCFail("unresolved or duplicate child entry intent retained; no second submission");
+     }
   }
 
 void WCEntry(const int n)
@@ -461,15 +598,17 @@ void WCEntry(const int n)
    wc_parents[n].shadow_cursor_ordinal=same_count;
    WCLog("SHADOW_OPEN",n,entry,stop,risk,StringFormat("msc=%I64d;ordinal=%d;volume=%.8f",tick.time_msc,same_count,p.volume));
    wc_parents[n].attempted=2;wc_dirty=true;
-   if(!p.choice) {WCSave();return;}
    double capital=ConservativeRiskCapital(),budget=.04*capital,buffered=0;
    long steps=0;
    bool admission=NewEntriesOperationallyAllowed() && capital>0 && VolumeToSteps(symbol,p.volume,steps) &&
       p.volume>=SymbolInfoDouble(symbol,SYMBOL_VOLUME_MIN) && p.volume<=SymbolInfoDouble(symbol,SYMBOL_VOLUME_MAX) &&
       BufferedPlannedRisk(symbol,p.direction,p.volume,entry,stop,buffered) && buffered<=budget+.01 &&
       TrackedAggregatePlannedRisk()+budget<=.12*capital+.01 && MarginAllows(symbol,p.direction,p.volume);
+   WCLog("NATIVE_ELIGIBILITY",n,admission,p.choice,capital,
+         StringFormat("budget=%.12f;buffered=%.12f;aggregate=%.12f;volume=%.8f",budget,buffered,TrackedAggregatePlannedRisk(),p.volume));
+   if(!p.choice) {WCSave();return;}
    if(!admission) {WCLog("NATIVE_ADMISSION_REFUSED",n,capital,budget,TrackedAggregatePlannedRisk());WCSave();return;}
-   wc_parents[n].child_entry=entry;wc_parents[n].child_stop=stop;wc_parents[n].child_risk=budget;
+   wc_parents[n].child_entry=entry;wc_parents[n].requested_child_entry=entry;wc_parents[n].child_stop=stop;wc_parents[n].child_risk=budget;
    wc_parents[n].entry_spread=tick.ask-tick.bid;wc_parents[n].remaining_volume=p.volume;
    wc_parents[n].attempted=1;
    WCLog("CHILD_INTENT",n,entry,stop,budget,StringFormat("parent=%I64u;volume=%.8f;capital=%.12f;aggregate=%.12f;margin=%.12f",p.parent,p.volume,capital,TrackedAggregatePlannedRisk(),AccountInfoDouble(ACCOUNT_MARGIN)));
@@ -479,25 +618,39 @@ void WCEntry(const int n)
    bool sent=(p.direction>0?wc_trade.Buy(p.volume,symbol,0,stop,0,"WC:"+(string)p.parent):wc_trade.Sell(p.volume,symbol,0,stop,0,"WC:"+(string)p.parent));
    execution_state.trade_operation_active=false;
    uint ret=wc_trade.ResultRetcode();ulong deal=wc_trade.ResultDeal();
+   wc_parents[n].entry_deal=deal;wc_parents[n].entry_order=wc_trade.ResultOrder();wc_dirty=true;
+   WCLog("CHILD_ENTRY_RECEIPT",n,ret,deal,sent);
+   if(!WCSave()) return;
    if(!sent || !IsCompletedMarketTradeRetcode(ret))
-     {wc_parents[n].attempted=2;wc_parents[n].child_risk=0;WCLog("CHILD_REJECTED",n,ret);wc_dirty=true;WCSave();return;}
-   if(deal==0 || !HistoryDealSelect(deal)) {WCFail("child entry deal unavailable");return;}
-   ulong id=(ulong)HistoryDealGetInteger(deal,DEAL_POSITION_ID);ulong ticket=0;int count=0;
+     {
+      if(WCAdoptEntry(n,deal)) return;
+      bool definite=(ret==TRADE_RETCODE_REQUOTE || ret==TRADE_RETCODE_REJECT || ret==TRADE_RETCODE_CANCEL ||
+         ret==TRADE_RETCODE_INVALID || ret==TRADE_RETCODE_INVALID_VOLUME || ret==TRADE_RETCODE_INVALID_PRICE ||
+         ret==TRADE_RETCODE_INVALID_STOPS || ret==TRADE_RETCODE_TRADE_DISABLED || ret==TRADE_RETCODE_MARKET_CLOSED ||
+         ret==TRADE_RETCODE_NO_MONEY || ret==TRADE_RETCODE_PRICE_CHANGED || ret==TRADE_RETCODE_PRICE_OFF ||
+         ret==TRADE_RETCODE_TOO_MANY_REQUESTS || ret==TRADE_RETCODE_INVALID_FILL || ret==TRADE_RETCODE_LIMIT_VOLUME);
+      if(!definite) {WCFail("ambiguous entry receipt retains reservation and intent");WCSave();return;}
+      wc_parents[n].attempted=2;wc_parents[n].child_risk=0;WCLog("CHILD_REJECTED",n,ret);wc_dirty=true;WCSave();return;
+     }
+   if(!WCAdoptEntry(n,deal)) {WCFail("completed entry lacks complete own fill evidence");WCSave();}
+  }
+
+bool WCCurrentChildTicket(const int n,ulong &ticket)
+  {
+   ticket=0;WCParent p=wc_parents[n];if(p.child==0) return(false);
    for(int j=PositionsTotal()-1;j>=0;--j)
-     {ulong t=PositionGetTicket(j);if((ulong)PositionGetInteger(POSITION_IDENTIFIER)==id){ticket=t;++count;}}
-   if(count!=1 || !PositionSelectByTicket(ticket)) {WCFail("child fill association");return;}
-   wc_parents[n].child=id;wc_parents[n].ticket=ticket;wc_parents[n].child_entry=PositionGetDouble(POSITION_PRICE_OPEN);
-   wc_parents[n].entry_cost=HistoryDealGetDouble(deal,DEAL_COMMISSION)+HistoryDealGetDouble(deal,DEAL_SWAP)+HistoryDealGetDouble(deal,DEAL_FEE);
-   wc_positive_swap+=MathMax(0,HistoryDealGetDouble(deal,DEAL_SWAP));
-   wc_parents[n].entry_slip=MathMax(0,p.direction*(wc_parents[n].child_entry-entry))*p.volume*SymbolInfoDouble(symbol,SYMBOL_TRADE_CONTRACT_SIZE);
-   wc_parents[n].attempted=2;
-   double filled_risk=0;
-   if(!WCAuditSelectedChild() || !GrossStopRisk(symbol,p.direction,p.volume,wc_parents[n].child_entry,stop,filled_risk) || filled_risk>p.parent_budget*.5+1e-9)
-      WCFail("filled child risk/geometry mismatch");
-   ++wc_children;wc_dirty=true;
-   portfolio_state.maximum_aggregate_planned_risk_usd=MathMax(portfolio_state.maximum_aggregate_planned_risk_usd,TrackedAggregatePlannedRisk());
-   WCLog("CHILD_OPEN",n,wc_parents[n].child_entry,stop,budget,StringFormat("child=%I64u;ticket=%I64u;deal=%I64u;volume=%.8f;entry_cost=%.12f;entry_slip=%.12f",id,ticket,deal,p.volume,wc_parents[n].entry_cost,wc_parents[n].entry_slip));
-   WCSave();SaveState();
+     {
+      ulong current=PositionGetTicket(j);
+      if((ulong)PositionGetInteger(POSITION_IDENTIFIER)!=p.child) continue;
+      if((ulong)PositionGetInteger(POSITION_MAGIC)!=WC_MAGIC_FIRST+p.component ||
+         PositionGetString(POSITION_SYMBOL)!=component_definitions[p.component].symbol)
+        {WCFail("child identifier moved outside its identity");return(false);}
+      if(ticket!=0) {WCFail("duplicate durable child identifier");return(false);}
+      ticket=current;
+     }
+   if(ticket==0) return(false);
+   if(ticket!=p.ticket) {wc_parents[n].ticket=ticket;wc_dirty=true;WCLog("CHILD_TICKET_REFRESH",n,ticket);}
+   return(PositionSelectByTicket(ticket));
   }
 
 void WCReconcileChildren()
@@ -505,7 +658,8 @@ void WCReconcileChildren()
    for(int k=0;k<ArraySize(wc_active);++k)
      {
       int n=wc_active[k];WCParent p=wc_parents[n];if(p.child==0) continue;
-      if(PositionSelectByTicket(p.ticket) && MathAbs(PositionGetDouble(POSITION_VOLUME)-p.remaining_volume)<1e-9) continue;
+      ulong current_ticket=0;
+      if(WCCurrentChildTicket(n,current_ticket) && MathAbs(PositionGetDouble(POSITION_VOLUME)-p.remaining_volume)<1e-9) continue;
       if(!HistorySelectByPosition(p.child)) {WCFail("child history selection");continue;}
       ulong deals[];int total=HistoryDealsTotal();ArrayResize(deals,total);
       for(int j=0;j<total;++j) deals[j]=HistoryDealGetTicket(j);
@@ -527,6 +681,10 @@ void WCReconcileChildren()
          double slip=MathMax(0,p.direction*((p.direction>0?q.bid:q.ask)-price))*unit;
          double stress=actual-MathMax(p.entry_spread,q.ask-q.bid)*unit-entry_slip-slip-MathMax(0,-entry_cost)-MathMax(0,-costs);
          wc_parents[n].last_deal=deal;wc_parents[n].remaining_volume-=v;
+         ulong exit_order=(ulong)HistoryDealGetInteger(deal,DEAL_ORDER);
+         if(wc_parents[n].last_exit_order!=exit_order) wc_parents[n].last_exit_volume=remaining;
+         wc_parents[n].last_exit_order=exit_order;wc_parents[n].completed_child=p.child;
+         if(wc_parents[n].close_order==0 || !OrderSelect(wc_parents[n].close_order)) wc_parents[n].close_requested=0;
          wc_parents[n].entry_cost-=entry_cost;wc_parents[n].entry_slip-=entry_slip;
          wc_parents[n].child_risk*=MathMax(0,1-fraction);
          wc_positive_swap+=MathMax(0,swap);wc_child_actual+=actual;wc_child_stress+=stress;
@@ -540,16 +698,51 @@ void WCReconcileChildren()
      }
   }
 
-void WCParentCloseDuty(const int n)
+bool WCCloseRefused(const uint retcode)
   {
-   if(wc_parents[n].alive || wc_parents[n].child==0) return;
+   return(retcode==TRADE_RETCODE_REQUOTE || retcode==TRADE_RETCODE_REJECT ||
+          retcode==TRADE_RETCODE_PRICE_CHANGED || retcode==TRADE_RETCODE_PRICE_OFF ||
+          retcode==TRADE_RETCODE_MARKET_CLOSED || retcode==TRADE_RETCODE_TOO_MANY_REQUESTS ||
+          retcode==TRADE_RETCODE_LOCKED);
+  }
+
+void WCParentCloseDuty(const int n,const bool safety=false)
+  {
+   if((wc_parents[n].alive && !safety) || wc_parents[n].child==0) return;
    WCParent p=wc_parents[n];MqlTick tick={};string symbol=component_definitions[p.component].symbol;
-   if(!PositionSelectByTicket(p.ticket)) return;
+   ulong current_ticket=0;if(!WCCurrentChildTicket(n,current_ticket)) return;p.ticket=current_ticket;
    if(!ExecutableTick(symbol,tick) || !TradeSessionAllows(symbol,TimeCurrent(),false)) return;
-   wc_parents[n].close_requested=1;wc_dirty=true;WCLog("CHILD_PARENT_CLOSE_INTENT",n,p.ticket);if(!WCSave()) return;
+   if(tick.time_msc<=p.close_request_msc) return;
+   if(p.close_requested && !WCCloseRefused(p.close_retcode))
+     {
+      if(p.close_order>0 && OrderSelect(p.close_order)) return;
+      if(p.close_order>0 && HistoryOrderSelect(p.close_order))
+        {
+         long state=HistoryOrderGetInteger(p.close_order,ORDER_STATE);
+         if(state==ORDER_STATE_CANCELED || state==ORDER_STATE_REJECTED || state==ORDER_STATE_EXPIRED)
+           {wc_parents[n].close_requested=0;wc_dirty=true;WCLog("CHILD_CLOSE_DEFINITELY_UNFILLED",n,p.close_order,state);}
+         else {if(tick.time_msc-p.close_request_msc>5000) WCFail("accepted close lacks reconciled exit after bounded native interval");return;}
+        }
+      else {if(tick.time_msc-p.close_request_msc>5000) WCFail("unresolved child close order identity");return;}
+     }
+   wc_parents[n].close_requested=1;wc_parents[n].close_request_msc=tick.time_msc;wc_parents[n].close_volume=p.remaining_volume;wc_dirty=true;
+   WCLog("CHILD_PARENT_CLOSE_INTENT",n,p.ticket,0,0,"Strictly later native quote for any definitive-refusal retry");if(!WCSave()) return;
    wc_trade.SetExpertMagicNumber(WC_MAGIC_FIRST+p.component);wc_trade.SetTypeFillingBySymbol(symbol);
    execution_state.trade_operation_active=true;bool done=wc_trade.PositionClose(p.ticket);execution_state.trade_operation_active=false;
+   wc_parents[n].close_retcode=wc_trade.ResultRetcode();wc_parents[n].close_order=wc_trade.ResultOrder();wc_dirty=true;
    WCLog("CHILD_PARENT_CLOSE_RECEIPT",n,wc_trade.ResultRetcode(),done);
+   if(!IsCompletedMarketTradeRetcode(wc_parents[n].close_retcode) &&
+      wc_parents[n].close_retcode!=TRADE_RETCODE_PLACED && !WCCloseRefused(wc_parents[n].close_retcode))
+      WCFail("ambiguous child close receipt; no blind resubmission");
+  }
+
+void WCProtectChildren()
+  {
+   for(int k=0;k<ArraySize(wc_active);++k)
+     {
+      int n=wc_active[k];if(wc_parents[n].child==0) continue;
+      WCParentCloseDuty(n,true);
+     }
   }
 
 void WCObserve(const bool force=false)
@@ -574,7 +767,7 @@ void WCObserve(const bool force=false)
    for(int c=0;c<6;++c) if(component_states[c].position_identifier>0)
      {ulong ticket=0;datetime opened=0;if(CountOwnedPositions(c,ticket,opened)!=1) known=false;}
    for(int k=0;k<ArraySize(wc_active);++k)
-     {WCParent p=wc_parents[wc_active[k]];if(p.child>0 && !PositionSelectByTicket(p.ticket)) known=false;}
+     {int n=wc_active[k];ulong ticket=0;if(wc_parents[n].child>0 && !WCCurrentChildTicket(n,ticket)) known=false;}
    if(!known)
      {
       if(wc_deferred_minute==0) {wc_deferred_minute=minute;++wc_deferred;WCLog("MARK_DEFERRED",-1,(double)minute);}
@@ -592,7 +785,7 @@ void WCObserve(const bool force=false)
   }
 
 void WCBeforeTick()
-  {if(WC_ROLE>0) WCReconcileChildren();}
+  {if(WC_ROLE>0) {WCResolveEntryIntents();WCReconcileChildren();}}
 
 void WCAfterTick()
   {
@@ -607,19 +800,25 @@ void WCAfterTick()
       for(int k=0;k<ArraySize(wc_active);++k)
         {int n=wc_active[k];if(wc_faults==0) WCEntry(n);}
       for(int k=ArraySize(wc_active)-1;k>=0;--k)
-        {int n=wc_active[k];if(!wc_parents[n].alive && wc_parents[n].child==0 && wc_parents[n].shadow!=1)
-          {for(int j=k;j<ArraySize(wc_active)-1;++j) wc_active[j]=wc_active[j+1];ArrayResize(wc_active,ArraySize(wc_active)-1);}}
+        {int n=wc_active[k];if(!wc_parents[n].alive && wc_parents[n].child==0 && wc_parents[n].shadow!=1 && wc_parents[n].attempted!=1)
+          {if(wc_parents[n].D==0) WCLog("PARENT_NO_TRIGGER",n);for(int j=k;j<ArraySize(wc_active)-1;++j) wc_active[j]=wc_active[j+1];ArrayResize(wc_active,ArraySize(wc_active)-1);}}
+      if(wc_faults>0) WCProtectChildren();
      }
    WCObserve();if(wc_dirty) WCSave();
   }
 
 void WCFinish()
   {
-   if(wc_finished) return;wc_finished=true;WCReconcileChildren();WCObserve(true);
+   if(wc_finished) return;wc_finished=true;WCReconcileChildren();
+   for(int k=0;k<ArraySize(wc_active);++k) WCShadowTicks(wc_active[k]);
+   for(int k=0;k<ArraySize(wc_active);++k) WCParentCloseDuty(wc_active[k]);
+   WCReconcileChildren();WCCompletedMinutes((datetime)((long)TimeCurrent()/60*60));WCObserve(true);
    int pending=0,shadow_open=0;
    for(int n=0;n<ArraySize(wc_parents);++n)
      {if(wc_parents[n].shadow==2 && !wc_parents[n].updated) ++pending;if(wc_parents[n].shadow==1) ++shadow_open;}
    if(PositionsTotal()!=0 || OrdersTotal()!=0 || shadow_open!=0 || wc_children!=wc_closed_children) WCFail("nonflat or incomplete final child path");
+   long original_market_closes=0;for(int c=0;c<5;++c) original_market_closes+=component_states[c].closed_trades;
+   if(WC_ROLE>0 && original_market_closes!=ArraySize(wc_parents)) WCFail("parent birth/close population mismatch");
    wc_dirty=true;WCSave();
    PrintFormat("WC_RESULT role=%d faults=%I64d parents=%d inferences=%I64d updates=%I64d labels=%I64d children=%I64d closed_children=%I64d pending=%d shadow_open=%d child_actual=%.12f child_stress=%.12f positive_swap=%.12f mse_sum=%.12f zero_mse_sum=%.12f deferred=%I64d unresolved=%I64d sequence=%I64d",
       WC_ROLE,wc_faults,ArraySize(wc_parents),wc_inferences,wc_updates,wc_labels,wc_children,wc_closed_children,pending,shadow_open,wc_child_actual,wc_child_stress,wc_positive_swap,wc_mse_sum,wc_zero_mse_sum,wc_deferred,(long)wc_deferred_minute,wc_sequence);
