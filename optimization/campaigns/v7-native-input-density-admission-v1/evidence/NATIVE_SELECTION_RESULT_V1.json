@@ -1,0 +1,167 @@
+{
+  "utc": "2026-09-08T06:36:44.808807+00:00",
+  "status": "COMPLETE_FIXED_NATIVE_SELECTION",
+  "producer": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/results/economic_report.py",
+    "bytes": 26058,
+    "sha256": "09E3FC46384AF9C00B29A264A8D4E3D0BE7B60AA9348C7FEF9E6EF456065011B"
+  },
+  "reports": [
+    {
+      "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/CONTROL_STATIC_NATIVE_V6.json",
+      "bytes": 10269,
+      "sha256": "04A655CD409BB18DA7030529D912FD5F8435C8B15B5D9A411FA85F7BA79380AC"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/STATIC_NATIVE_V6.json",
+      "bytes": 10348,
+      "sha256": "36087A22E913CF09899BE35D50D493DEA76573013EB063BA53EC1C829B84217A"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/CONTROL_ONLINE_NATIVE_V6.json",
+      "bytes": 10268,
+      "sha256": "4B5C6870DB91FE0B53D3ACC8E5FEFF8BB4260BF635B9AA8545794950B4CE90D3"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/ONLINE_NATIVE_V6.json",
+      "bytes": 10409,
+      "sha256": "D436F8101FB1AB7AB250423F63CB494ACCACF1FF3D74CF2DE5EED6C63A4CE9C9"
+    }
+  ],
+  "candidates": [
+    {
+      "tag": "static-v6",
+      "control": "cs-v6",
+      "gates": {
+        "actual_wealth_and_log_growth": false,
+        "conservative_net_at_least_105_percent": false,
+        "robust_recovery_improves": true,
+        "effective_drawdown_limit": true,
+        "positive_both_halves_actual_and_conservative": true,
+        "closed_whole_at_least_100": true,
+        "closed_each_half_at_least_25": true,
+        "actual_abstentions_at_least_20": true,
+        "abstentions_each_half_at_least_5": true
+      },
+      "eligible": false,
+      "nominal_dd_pass": true,
+      "effective_dd_limit_percent": 17.573213873721,
+      "dd_exception_needed": false,
+      "dd_exception_used": false,
+      "economics": {
+        "actual_net": 110.21,
+        "original_stressed_net": 103.937,
+        "conservative_net": 103.937000000001,
+        "actual_wealth": 210.20999999999998,
+        "conservative_wealth": 203.937000000001,
+        "actual_log_growth": 0.7429368450624607,
+        "conservative_log_growth": 0.7126409366309121,
+        "native_equity_dd_percent": 11.054356941374,
+        "native_equity_dd_usd": 17.59,
+        "conservative_closed_dd_usd": 15.7485,
+        "robust_recovery": 5.908868675384,
+        "closed_lifecycles": 406
+      },
+      "periods": {
+        "2025H1": {
+          "actual_realized": 62.88999999999999,
+          "conservative_realized": 59.306,
+          "actual_marked_change": 62.889999999999986,
+          "conservative_marked_change": 59.30600000000001,
+          "closed_lifecycles": 212,
+          "abstentions": 268,
+          "last_mark_server": 1751327940
+        },
+        "2025H2": {
+          "actual_realized": 47.32,
+          "conservative_realized": 44.631,
+          "actual_marked_change": 47.32000000000002,
+          "conservative_marked_change": 44.631000000000995,
+          "closed_lifecycles": 194,
+          "abstentions": 260,
+          "last_mark_server": 1767225598
+        }
+      },
+      "quantity": {
+        "daily_multipliers": [
+          1
+        ],
+        "lifecycle_volumes": [
+          0.0,
+          0.01
+        ],
+        "lot_compounding_observed": false
+      }
+    },
+    {
+      "tag": "online-v6",
+      "control": "co-v6",
+      "gates": {
+        "actual_wealth_and_log_growth": false,
+        "conservative_net_at_least_105_percent": false,
+        "robust_recovery_improves": true,
+        "effective_drawdown_limit": true,
+        "positive_both_halves_actual_and_conservative": true,
+        "closed_whole_at_least_100": true,
+        "closed_each_half_at_least_25": true,
+        "actual_abstentions_at_least_20": true,
+        "abstentions_each_half_at_least_5": true
+      },
+      "eligible": false,
+      "nominal_dd_pass": true,
+      "effective_dd_limit_percent": 17.573213873721,
+      "dd_exception_needed": false,
+      "dd_exception_used": false,
+      "economics": {
+        "actual_net": 116.12,
+        "original_stressed_net": 109.0225,
+        "conservative_net": 109.022500000001,
+        "actual_wealth": 216.12,
+        "conservative_wealth": 209.022500000001,
+        "actual_log_growth": 0.7706636229877737,
+        "conservative_log_growth": 0.737271715684679,
+        "native_equity_dd_percent": 10.371173123815,
+        "native_equity_dd_usd": 19.14,
+        "conservative_closed_dd_usd": 20.504,
+        "robust_recovery": 5.317133242294,
+        "closed_lifecycles": 466
+      },
+      "periods": {
+        "2025H1": {
+          "actual_realized": 72.05,
+          "conservative_realized": 68.0475,
+          "actual_marked_change": 72.05000000000001,
+          "conservative_marked_change": 68.04750000000001,
+          "closed_lifecycles": 244,
+          "abstentions": 186,
+          "last_mark_server": 1751327940
+        },
+        "2025H2": {
+          "actual_realized": 44.07,
+          "conservative_realized": 40.975,
+          "actual_marked_change": 44.06999999999999,
+          "conservative_marked_change": 40.97500000000099,
+          "closed_lifecycles": 222,
+          "abstentions": 161,
+          "last_mark_server": 1767225598
+        }
+      },
+      "quantity": {
+        "daily_multipliers": [
+          1
+        ],
+        "lifecycle_volumes": [
+          0.0,
+          0.01
+        ],
+        "lot_compounding_observed": false
+      }
+    }
+  ],
+  "finalist": null,
+  "confirmation_opened": false,
+  "actual_restart_demonstrated": false,
+  "compounding_not_inferred_from_profit_alone": true,
+  "temporal_interpretation": "Report and require positive native marked changes and realized exit attribution in each predeclared half; no synthetic prices, boundary interpolation or saved-profit scaling.",
+  "closed_neighborhood_rescue_authorized": false
+}
