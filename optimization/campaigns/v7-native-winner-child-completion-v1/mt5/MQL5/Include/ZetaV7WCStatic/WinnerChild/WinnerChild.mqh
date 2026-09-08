@@ -430,7 +430,7 @@ void WCShadowClose(const int n,const double exit_price,const double exit_spread,
 
 void WCShadowTicks(const int n)
   {
-   if(wc_parents[n].shadow!=1) return;
+   if(wc_faults>0 || wc_parents[n].shadow!=1) return;
    WCParent p=wc_parents[n];string symbol=component_definitions[p.component].symbol;MqlTick now={};
    if(!SymbolInfoTick(symbol,now) || now.time_msc<p.shadow_cursor_msc) return;
    long until=now.time_msc;
@@ -446,7 +446,8 @@ void WCShadowTicks(const int n)
          if(j==0 || ticks[j].time_msc!=ticks[j-1].time_msc) ordinal=0;
          ++ordinal;
          if(ticks[j].time_msc==p.shadow_cursor_msc && ordinal<=p.shadow_cursor_ordinal) continue;
-         if(ticks[j].ask<=ticks[j].bid || ticks[j].bid<=0) {WCFail("invalid shadow tick");return;}
+         if(!MathIsValidNumber(ticks[j].bid) || !MathIsValidNumber(ticks[j].ask) ||
+            ticks[j].ask<ticks[j].bid || ticks[j].bid<=0) {WCFail("invalid shadow tick");return;}
          wc_parents[n].shadow_cursor_msc=ticks[j].time_msc;wc_parents[n].shadow_cursor_ordinal=ordinal;
          double exit_price=(p.direction>0?ticks[j].bid:ticks[j].ask);
          if(p.direction*(exit_price-p.shadow_stop)<=0)

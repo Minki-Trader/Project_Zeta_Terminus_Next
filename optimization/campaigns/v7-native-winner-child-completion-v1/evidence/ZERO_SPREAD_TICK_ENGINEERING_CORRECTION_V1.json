@@ -1,0 +1,72 @@
+{
+  "status": "EXACT_NATIVE_DATA_ENGINEERING_CORRECTION_BEFORE_COMPLETE_FRESH_MATRIX",
+  "invalid_attempt": "uf-v2 normally stopped after first knowninvalidexecution; all19archivedfiles retained",
+  "cause": "OwnUS30tick1738088541501 has bid44840.41 ask44840.41 flags134. Original V7 RC4 causal tick decoding permits finite positive equalbid/ask; new shadow mistakenly used ask<=bid instead of ask<bid.",
+  "fix": "Accept finite positive lockedquotes like original V7; keep crossed/nonfinite/nonpositive quotes invalid. Already-faulted shadow does not replay the same invalid cursor indefinitely. No price/label/threshold/sizing/entry/exit law changed.",
+  "diagnostic": {
+    "path": "optimization/artifacts/raw/v7-native-winner-child-completion-v1/history/shadow-tick-origin-v1/observation.json",
+    "sha256": "A081BCE022D112ED67C3E6D554B6A62CA277981208916118172314BFD999856C"
+  },
+  "source_before": "192b2a5",
+  "compile_version": 7,
+  "compile_results": [
+    {
+      "role": "Control",
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/compile-control-v7.log",
+      "sha256": "C434F08A5E62E4FF9FE11A860D075C30D3FE4840E521119C63CA4E22C7CA5D3B"
+    },
+    {
+      "role": "Unfiltered",
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/compile-unfiltered-v7.log",
+      "sha256": "DFB6A7124DDA4CBD882BA987A0979F55455EAD774B410205DF9D7E78002D0F13"
+    },
+    {
+      "role": "Static",
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/compile-static-v7.log",
+      "sha256": "9D75D7C8261EC60A7267C76DFDA5E26CC7EAD97AA510A27F1E10CC8FFB3C91D7"
+    },
+    {
+      "role": "Online",
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/compile-online-v7.log",
+      "sha256": "32E870319E3D61C82D419B5B73EE4CFBA6B33A7789D67EBF4D20C4E96963BDCF"
+    }
+  ],
+  "old_control_retained": "cuf-v2 valid100percent original control remains evidence; allsixcurrentselectiontags restart with identicalnewcompleteassemblies",
+  "capacity_before": {
+    "utc": "2026-09-08T00:18:43.098266+00:00",
+    "free": 71959441408,
+    "used": [
+      2882484420,
+      274671030,
+      21165368
+    ],
+    "caps": [
+      3758096384,
+      1073741824,
+      33554432
+    ],
+    "remaining": 1687071822,
+    "funded": true,
+    "floor_ok": true,
+    "caps_ok": true
+  },
+  "capacity_after": {
+    "utc": "2026-09-08T00:18:45.688967+00:00",
+    "free": 71958929408,
+    "used": [
+      2882491105,
+      274671030,
+      21173748
+    ],
+    "caps": [
+      3758096384,
+      1073741824,
+      33554432
+    ],
+    "remaining": 1687056757,
+    "funded": true,
+    "floor_ok": true,
+    "caps_ok": true
+  },
+  "economic_judgment": null
+}

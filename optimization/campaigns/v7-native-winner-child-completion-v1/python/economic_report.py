@@ -45,6 +45,46 @@ def drawdown(values):
     return largest
 
 
+def render_equity(rows, output_name):
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    import matplotlib.dates as dates
+    import pandas as pd
+
+    destination = FAMILY / 'results' / (Path(output_name).stem.lower() + '-equity.png')
+    if destination.exists():
+        raise RuntimeError('Previous native figure is retained')
+    destination.parent.mkdir(exist_ok=True)
+    fig, axes = plt.subplots(2, 3, figsize=(15, 8), sharex=True, constrained_layout=True)
+    for column, index in enumerate((1, 3, 5)):
+        control, candidate = rows[index-1], rows[index]
+        label = ('Unfiltered child', 'Static ONNX', 'Online ONNX + RLS')[column]
+        for result, color, name in ((control, '#6b7280', 'Original V7 control'), (candidate, '#146b97', label)):
+            path = list((RAW / 'native' / result['tag'] / 'files').rglob('equity.csv'))
+            if len(path) != 1:
+                raise RuntimeError('Figure lacks complete native minute evidence')
+            data = pd.read_csv(path[0], usecols=['server', 'equity', 'conservative_equity'])
+            times = pd.to_datetime(data['server'], unit='s')
+            axes[0, column].plot(times, data['equity'], color=color, linewidth=.8, label=name)
+            axes[1, column].plot(times, data['conservative_equity'], color=color, linewidth=.8, label=name)
+        axes[0, column].set_title(f"{label}\nNative maximum equity DD {candidate['native_dd_pct']:.2f}%")
+        axes[1, column].set_xlabel('Actual sizing multipliers: ' + ', '.join(f'{v:g}' for v in candidate['multipliers']))
+        for row in (0, 1):
+            ax = axes[row, column]
+            ax.grid(alpha=.2)
+            ax.xaxis.set_major_locator(dates.MonthLocator(interval=3))
+            ax.xaxis.set_major_formatter(dates.DateFormatter('%b'))
+            ax.axhline(100, color='#9ca3af', linestyle=':', linewidth=.7)
+        axes[0, column].legend(loc='upper left', fontsize=8)
+    axes[0, 0].set_ylabel('Native account equity (USD)')
+    axes[1, 0].set_ylabel('Conservative marked equity (USD)')
+    fig.suptitle('Complete 2025 native real-tick paths | Starting capital $100\nAdditional child exposure alone does not establish compounded quantity growth', fontsize=13)
+    fig.savefig(destination, dpi=160)
+    plt.close(fig)
+    return {'path': destination.relative_to(ROOT).as_posix(), 'bytes': destination.stat().st_size, 'sha256': digest(destination)}
+
+
 def publish_run(tag, output):
     folder = RAW / 'native' / tag
     completion = json.loads((folder / 'complete.json').read_bytes())
@@ -56,6 +96,16 @@ def publish_run(tag, output):
     history_unchanged = history is not None and all(history[k] == original_history[k] for k in ('build', 'contracts', 'streams'))
     archive = folder / 'files'
     log = '\n'.join(read_text(p) for p in sorted((archive / 'logs').rglob('*.log')))
+    missing = [name for name in ('V7RR1_NATIVE ', 'V7RR1_RESULT ', 'WC_RESULT ') if name not in log]
+    if missing:
+        faults = [line.split('WC_FAULT ', 1)[1] for line in log.splitlines() if 'WC_FAULT ' in line]
+        receipt(FAMILY / 'evidence' / output, {'tag': tag, 'status': 'OPERATING_INTERRUPTED_NO_ECONOMIC_RESULT',
+            'missing_final_markers': missing, 'economic_judgment': None, 'fault_count_in_archive': len(faults),
+            'first_fault': faults[0] if faults else None, 'last_fault': faults[-1] if faults else None,
+            'fault_reasons': sorted(set(x.split('reason=', 1)[-1] for x in faults)),
+            'source_completion_sha256': digest(folder / 'complete.json'), 'report_source_sha256': digest(Path(__file__))})
+        print('OPERATING_INTERRUPTED_NO_ECONOMIC_RESULT', tag, flush=True)
+        return
     native, core, child = [marker(log, name) for name in ('V7RR1_NATIVE ', 'V7RR1_RESULT ', 'WC_RESULT ')]
     if core['status'] != 'ECONOMIC' or int(child['faults']) != 0:
         receipt(FAMILY / 'evidence' / output, {'tag': tag, 'status': 'OPERATING_CORRECTION_REQUIRED',
@@ -183,8 +233,10 @@ def publish_bundle(names, output):
             'child_conservative': candidate['child_conservative'],
             'incremental_conservative': candidate['conservative_net'] - control['conservative_net']})
     eligible = sorted([x for x in comparisons if x['passes_numeric_gates']], key=lambda x: (-x['incremental_conservative'], x['tag'] != rows[3]['tag']))
+    figure = render_equity(rows, output)
     receipt(FAMILY / 'evidence' / output, {'utc': datetime.now(timezone.utc).isoformat(),
         'status': 'COMPLETE_SIX_PATH_NUMERIC_JUDGMENT', 'comparisons': comparisons,
+        'native_equity_figure': figure, 'report_source_sha256': digest(Path(__file__)),
         'numeric_finalist': eligible[0]['tag'] if eligible else None,
         'finalist_scope': 'Root must finish full causal/execution/input judgment and any DD exception; only then separately fund one unchanged confirmation pair.',
         'sources': [{'path': p.relative_to(ROOT).as_posix(), 'sha256': digest(p)} for p in paths]})

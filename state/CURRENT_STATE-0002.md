@@ -1013,3 +1013,22 @@ Historical transitions STATE-0001..0554 remain immutable in `state/CURRENT_STATE
 - cuf-v2 full2025 native control completes100%real ticks,836unchangedfrozeninputs, identical12paststreams/contracts/build6182,0faults/unknownmarks. Actual121.39/conservative112.988/nativeDD16.073213874%/robustrecovery3.9825875469;554closes and352188minute observations. H1actual57.01/conservative52.3955;H2actual64.38/conservative60.5925; closed and marked halves agree at flatboundaries. Alloriginalmultipliers1, no reinvestment claim. CONTROL_UNFILTERED_NATIVE_V2 binds full normal economic report.
 - PastDecember native SDK acquisition corrects99percent initial history without changing2025ticks/money, source/model/gates or ignoringanyTKCbyte. Entirefilebinding passes before/after V3control. Bothold99percentattempt and new100percentcontrol retained as51archived artifacts; INITIAL_TWO_ATTEMPT_RETENTION_V1 owns exact counts/bytes. No cache deletion succeeded and no importantartifact deleted.
 - Fixed secondpath unfiltereduf-v2 starts ownterminalPID6908 withsamefreezeV3 and originalchildlaw. Oneof6 validpaths complete; no partialcandidatejudgment and no2026candidatevalues. Runtime3.5GiB/raw1GiB/source32MiB complete remaining allowance remains funded above30GiB. Live/Lab remain untouched.
+
+
+## STATE-0687 - 2026-09-08
+
+- Phase192b2a5 is pushed to main. uf-v2 reaches first fault2025Jan28 18:22:21: new shadow rejects positive equalbid/ask nativequote. Root normally closes only own terminal; all19artifacts retained. UNFILTERED_TICK_CORRECTION_V1 records13677repeated messages, missingfinalmarkers and economicjudgmentnull. Interrupted runs do not acquire monetary verdicts.
+- Exact ownSDK faultwindow confirms US30tick1738088541501 bid44840.41 ask44840.41 flags134. BaselineRC4 decoder permits finite positive zero-spreadquotes. Correct newshadow ask<=bid to ask<bid plusfinitechecks; an alreadyfaultedshadow no longer rescans unchangedbadcursor. Original entry freshness, stops, quantities,model/labels/gatesunchanged. Four compile-v7 roles0errors0warnings.
+- All12pastbarstreams/contracts/build remain identical afteruf-v2. Wholecurrentmatrix starts fresh cuf-v3/uf-v3/cs-v3/s-v3/co-v3/o-v3 under854fileV4freeze SHAC4FBA56CD30DD919478F5C09553E41F98007FDA70542055FCB8B92FD428E057E. Controlcuf-v3 startsPID17604. Preserve old100percentcontrol as validprior evidence, but currentcompletepathcount0of6. Complete remainingstoragebudget remainsfunded. Live/Lab and exactLiveactivationblockunchanged.
+
+
+## STATE-0688 - 2026-09-08
+
+- Corrected compile-v7 controlcuf-v3 completes100%real ticks,854unchangedinputfiles, exactsame12paststreams/contracts/build. Actual121.39/conservative112.988/DD16.073213874%/recovery3.9825875469 and0faults/unknownmarks; originalparentbehavior unchanged. CONTROL_UNFILTERED_NATIVE_V3 preserves normalfull report.
+- Corrected unfiltereduf-v3 startsownterminalPID30016 withsameV4freeze andfreshstate. Currentselection1of6complete; no partialcandidateeconomicjudgment. Retain previous99percentcontrol, previous100percentcontrol and interruptedzero-spreadfaultattempt withallartifacts. Whole remainingruntime3.5GiB/raw1GiB/source32MiB remainsfundedabove30GiB. No2026candidatevalues orLive/Labaction.
+
+
+## STATE-0689 - 2026-09-08
+
+- Corrected unfiltereduf-v3 completes100%real ticks,854unchangedinputs, identical12paststreams/contracts/build andzeroEAfaults.50actualchildren complete. Actual120.95/conservative111.881/nativeDD20.860147544%/robustrecovery3.9650210866 versusadjacentoriginal121.39/112.988/16.073213874%/3.9825875469. Childconservative-4.178, H1-5.243 andH2+1.065; alloriginalmultipliers1. Referenceonly, no independentwinner orcompoundingclaim. UNFILTERED_NATIVE_V3 preserves completevalidnativeeconomics.
+- Twoof6currentselectionpaths complete. Static adjacentcontrolcs-v3 startsownterminalPID6636 underunchangedV4freeze; StaticthenOnlinepairedpathsremainfixed. No retune, earlyfamilyclosure orcandidate2026values. Alloldattempts retained.

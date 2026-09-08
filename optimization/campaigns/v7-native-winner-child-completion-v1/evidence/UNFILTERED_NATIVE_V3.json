@@ -1,0 +1,140 @@
+{
+  "tag": "uf-v3",
+  "status": "COMPLETE_NATIVE_ECONOMIC",
+  "native": {
+    "profit": "120.950000",
+    "equity_dd": "27.230000",
+    "equity_dd_relative_pct": "20.860147544",
+    "balance_dd_relative_pct": "19.412323776",
+    "trades": "596"
+  },
+  "core": {
+    "status": "ECONOMIC",
+    "position_risk": "0.040000",
+    "aggregate_risk": "0.120000",
+    "weights": "1.0/1.0/1.0/1.0/1.0/1.0",
+    "actual_net": "120.950000",
+    "stressed_net": "111.881000",
+    "actual_dd": "26.740000",
+    "stressed_dd": "27.762500",
+    "robust_net": "111.881000",
+    "robust_recovery": "4.029932463",
+    "closed": "546",
+    "risk_skips": "33",
+    "stop_exits": "73",
+    "final_server": "2025.12.31"
+  },
+  "child": {
+    "role": "1",
+    "faults": "0",
+    "parents": "417",
+    "inferences": "67",
+    "updates": "0",
+    "labels": "67",
+    "children": "50",
+    "closed_children": "50",
+    "pending": "67",
+    "shadow_open": "0",
+    "child_actual": "-3.390000000000",
+    "child_stress": "-4.178000000000",
+    "positive_swap": "0.000000000000",
+    "mse_sum": "119.373289322230",
+    "zero_mse_sum": "116.653215180934",
+    "deferred": "0",
+    "unresolved": "0",
+    "sequence": "9820"
+  },
+  "history_quality_percent": 100,
+  "quality_100_real_ticks": true,
+  "tick_evidence": {
+    "US30": [
+      43845913
+    ],
+    "US100": [
+      85515819
+    ],
+    "US500": [
+      21096613
+    ]
+  },
+  "money_matches": true,
+  "actual_net": 120.95,
+  "actual_wealth": 220.95,
+  "log_growth": 0.7927662455886575,
+  "conservative_net": 111.881,
+  "conservative_wealth": 211.881,
+  "native_cash_dd": 27.23,
+  "native_dd_pct": 20.860147544,
+  "closed_stress_dd": 27.7625,
+  "conservative_mark_dd": 28.216999999999985,
+  "robust_denominator": 28.216999999999985,
+  "robust_recovery": 3.9650210865790148,
+  "epochs": [
+    {
+      "start": 1735689600,
+      "end_exclusive": 1751328000,
+      "last_mark": 1751327940.0,
+      "actual_closed": 55.49,
+      "conservative_closed": 50.3545,
+      "actual_marked": 55.49000000000001,
+      "conservative_marked": 50.3545,
+      "children_opened": 36,
+      "child_actual": -4.62,
+      "child_conservative": -5.243
+    },
+    {
+      "start": 1751328000,
+      "end_exclusive": 1767225600,
+      "last_mark": 1767225598.0,
+      "actual_closed": 65.46000000000001,
+      "conservative_closed": 61.5265,
+      "actual_marked": 65.45999999999998,
+      "conservative_marked": 61.5265,
+      "children_opened": 14,
+      "child_actual": 1.2299999999999998,
+      "child_conservative": 1.0650000000000004
+    }
+  ],
+  "children": 50,
+  "child_conservative": -4.178,
+  "otherwise_eligible": 50,
+  "eligible_declines": 0,
+  "decline_fraction": 0.0,
+  "forecast_causal": true,
+  "update_causal": true,
+  "multipliers": [
+    1.0
+  ],
+  "child_volumes": [
+    0.01
+  ],
+  "equity_rows": 352188,
+  "event_counts": {
+    "CHILD_CLOSE": 50,
+    "CHILD_ENTRY_FILL": 50,
+    "CHILD_ENTRY_RECEIPT": 50,
+    "CHILD_INTENT": 50,
+    "CHILD_OPEN": 50,
+    "CHILD_PARENT_CLOSE_INTENT": 30,
+    "CHILD_PARENT_CLOSE_RECEIPT": 30,
+    "FIRST_TRIGGER": 67,
+    "INITIAL": 1,
+    "MODEL_OPEN": 67,
+    "NATIVE_ADMISSION_REFUSED": 17,
+    "NATIVE_ELIGIBILITY": 67,
+    "OBSERVED_M1_GAP": 3,
+    "PARENT_BIRTH": 417,
+    "PARENT_END": 417,
+    "PARENT_NO_TRIGGER": 350,
+    "SHADOW_CLOSE": 67,
+    "SHADOW_OPEN": 67
+  },
+  "source_completion": {
+    "path": "optimization/artifacts/raw/v7-native-winner-child-completion-v1/native/uf-v3/complete.json",
+    "sha256": "BDE1A27E8A41F02E5139030C6F67A3708F1929124967173AC0523DF2ED178DA2"
+  },
+  "report_source_sha256": "A16785D1EA55A163289EA2BB9CD58BF09F3560EA461036D9C453E85BD155829B",
+  "post_native_history_unchanged": true,
+  "post_native_history_sha256": "A001D32831515CFA1266B2AD54C39F323176C84BA23C5E470DD55E8995F0D750",
+  "limit": "Actual quantity reinvestment is judged separately from additional concurrent exposure; resume behavior is not established by a fresh path."
+}
