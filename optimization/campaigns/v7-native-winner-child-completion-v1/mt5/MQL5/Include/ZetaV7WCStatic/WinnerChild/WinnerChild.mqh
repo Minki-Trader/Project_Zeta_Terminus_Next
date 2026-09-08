@@ -213,7 +213,7 @@ bool WCInitialize()
          !OnnxSetOutputShape(wc_handle,0,ys) || !OnnxSetOutputShape(wc_handle,1,ps)) return(false);
      }
    wc_trade.SetAsyncMode(false);wc_trade.SetDeviationInPoints(InpDeviationPoints);
-   if(InpResumeOwnedCheckpoint) {WCLog("RESUME_REQUEST",-1);return(true);}
+   if(InpResumeOwnedCheckpoint) return(true); // Existing ledgers remain untouched until paired binding succeeds.
    wc_checkpoint_ready=true;
    wc_dirty=true;WCLog("INITIAL",-1,WC_ROLE,66,0,"fresh2024fit;empty2025pending");
    return(WCSave());
@@ -658,6 +658,23 @@ void WCReconcileChildren()
    for(int k=0;k<ArraySize(wc_active);++k)
      {
       int n=wc_active[k];WCParent p=wc_parents[n];if(p.child==0) continue;
+      if(p.close_requested && p.close_order==0)
+        {
+         int matching=0;ulong pending=0;
+         for(int j=OrdersTotal()-1;j>=0;--j)
+           {
+            ulong order=OrderGetTicket(j);
+            if((ulong)OrderGetInteger(ORDER_MAGIC)!=WC_MAGIC_FIRST+p.component ||
+               (ulong)OrderGetInteger(ORDER_POSITION_ID)!=p.child ||
+               OrderGetString(ORDER_SYMBOL)!=component_definitions[p.component].symbol ||
+               OrderGetInteger(ORDER_TYPE)!=(p.direction>0?ORDER_TYPE_SELL:ORDER_TYPE_BUY) ||
+               MathAbs(OrderGetDouble(ORDER_VOLUME_INITIAL)-p.close_volume)>1e-9) continue;
+            pending=order;++matching;
+           }
+         if(matching>1) {WCFail("duplicate pending child close orders");continue;}
+         if(matching==1)
+           {wc_parents[n].close_order=pending;wc_parents[n].close_retcode=TRADE_RETCODE_PLACED;wc_dirty=true;WCLog("CHILD_PENDING_CLOSE_ADOPTED",n,pending,p.child,p.close_volume);WCSave();}
+        }
       ulong current_ticket=0;
       if(WCCurrentChildTicket(n,current_ticket) && MathAbs(PositionGetDouble(POSITION_VOLUME)-p.remaining_volume)<1e-9) continue;
       if(!HistorySelectByPosition(p.child)) {WCFail("child history selection");continue;}

@@ -24,6 +24,9 @@ def replace_function(source, name, body):
 
 def main():
     records = []
+    binding_inputs = [p for name in ('parent', 'models', 'native') for p in (FAMILY / name).rglob('*') if p.is_file()]
+    binding_inputs.append(Path(__file__).resolve())
+    source_binding = hashlib.sha256(b''.join(p.relative_to(FAMILY).as_posix().encode() + b'\0' + hashlib.sha256(p.read_bytes()).digest() for p in sorted(binding_inputs))).hexdigest().upper()
     for role in DECL['roles']:
         inc = role['include']
         name = role['ea']
@@ -74,7 +77,7 @@ def main():
             out = target / p.relative_to(FAMILY / 'parent/MQL5/Include/ZetaTerminusNext')
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(s, encoding='utf-8', newline='\r\n')
-        initial = ['// Exact approved 2024 initial fit; no refit or outcome-derived state.', 'double wc_mean[8]={' + ','.join(format(x, '.17g') for x in STATE['mean']) + '};',
+        initial = ['// Exact approved 2024 initial fit; no refit or outcome-derived state.', 'const string WC_SOURCE_BINDING="' + source_binding + '";', 'double wc_mean[8]={' + ','.join(format(x, '.17g') for x in STATE['mean']) + '};',
                    'double wc_sd[8]={' + ','.join(format(x, '.17g') for x in STATE['sd']) + '};',
                    'double wc_initial_weights[17]={' + ','.join(format(x, '.17g') for x in STATE['weights']) + '};',
                    'double wc_initial_P[289]={' + ','.join(format(x, '.17g') for row in STATE['P'] for x in row) + '};']

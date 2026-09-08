@@ -48,16 +48,31 @@ def drawdown(values):
 def publish_run(tag, output):
     folder = RAW / 'native' / tag
     completion = json.loads((folder / 'complete.json').read_bytes())
+    start = json.loads((folder / 'start.json').read_bytes())
+    freeze = json.loads((FAMILY / 'evidence' / start['freeze']).read_bytes())
+    history_path = RAW / 'history' / ('after-' + tag) / 'observation.json'
+    history = json.loads(history_path.read_bytes()) if history_path.exists() else None
+    original_history = freeze['history_observation']
+    history_unchanged = history is not None and all(history[k] == original_history[k] for k in ('build', 'contracts', 'streams'))
     archive = folder / 'files'
     log = '\n'.join(read_text(p) for p in sorted((archive / 'logs').rglob('*.log')))
     native, core, child = [marker(log, name) for name in ('V7RR1_NATIVE ', 'V7RR1_RESULT ', 'WC_RESULT ')]
+    if core['status'] != 'ECONOMIC' or int(child['faults']) != 0:
+        receipt(FAMILY / 'evidence' / output, {'tag': tag, 'status': 'OPERATING_CORRECTION_REQUIRED',
+            'native_diagnostic': native, 'core': core, 'child': child, 'economic_judgment': None,
+            'fault_messages': sorted(set(line.split('WC_FAULT ', 1)[1] for line in log.splitlines() if 'WC_FAULT ' in line)),
+            'source_completion_sha256': digest(folder / 'complete.json'), 'report_source_sha256': digest(Path(__file__))})
+        print('OPERATING_CORRECTION_REQUIRED', tag, flush=True)
+        return
     html_paths = list(archive.glob('*.htm*'))
     if len(html_paths) != 1:
         raise RuntimeError('Complete unique native HTML unavailable')
     html = read_text(html_paths[0])
     clean_html = re.sub(r'<[^>]*>', ' ', html)
     clean_html = re.sub(r'\s+', ' ', clean_html)
-    quality = bool(re.search(r'(?:히스토리 품질|History Quality)\s*:\s*100%\s*(?:실제 틱|real ticks)', clean_html, re.I))
+    quality_cells = re.findall(r'<td\s+nowrap\s+colspan="3">[^<]*:</td>\s*<td\s+nowrap><b>(\d+)%\s+[^<]+</b></td>', html, re.I)
+    quality_percent = int(quality_cells[0]) if len(quality_cells) == 1 else None
+    quality = quality_percent == 100 and 'generating based on real ticks' in log
     equities = list(archive.rglob('equity.csv'))
     events_paths = list(archive.rglob('child-events.csv'))
     if len(equities) != 1 or len(events_paths) != 1:
@@ -108,17 +123,17 @@ def publish_run(tag, output):
     money_matches = abs(actual - float(core.get('actual_net', 'nan'))) < 1e-5 and abs(100 + actual - equity[-1]['balance']) < 1e-5
     tick_evidence = {}
     for symbol in ('US30', 'US100', 'US500'):
-        generated = re.findall(re.escape(symbol) + r'[^\r\n]*?([\d]+) ticks[^\r\n]*?generated', log)
+        generated = re.findall(re.escape(symbol) + r': generate (\d+) ticks in ', log)
         tick_evidence[symbol] = sorted(set(int(x) for x in generated))
     valid = (completion['returncode'] == 0 and core['status'] == 'ECONOMIC' and quality and money_matches
         and all(int(child[k]) == 0 for k in ('faults', 'shadow_open', 'unresolved'))
         and int(child['children']) == int(child['closed_children']) == len(opens)
         and int(child['inferences']) == len(forecasts_rows) and int(child['updates']) == len(updates)
         and update_causal and forecast_causal and all(tick_evidence.values())
-        and completion['binding']['unchanged'] and completion['capacity']['floor_ok'] and completion['capacity']['caps_ok']
+        and completion['binding']['unchanged'] and history_unchanged and completion['capacity']['floor_ok'] and completion['capacity']['caps_ok']
         and not any(not x['floor_ok'] or not x['caps_ok'] for x in completion.get('capacity_events', [])))
     result = {'tag': tag, 'status': 'COMPLETE_NATIVE_ECONOMIC' if valid else 'OPERATING_CORRECTION_REQUIRED',
-        'native': native, 'core': core, 'child': child, 'quality_100_real_ticks': quality,
+        'native': native, 'core': core, 'child': child, 'history_quality_percent': quality_percent, 'quality_100_real_ticks': quality,
         'tick_evidence': tick_evidence, 'money_matches': money_matches,
         'actual_net': actual, 'actual_wealth': 100 + actual,
         'log_growth': math.log((100 + actual) / 100) if actual > -100 else None,
@@ -134,6 +149,9 @@ def publish_run(tag, output):
         'child_volumes': sorted(set(float(fields(x['detail'])['volume']) for x in opens)),
         'equity_rows': len(equity), 'event_counts': {event: sum(x['event'] == event for x in events) for event in sorted(set(x['event'] for x in events))},
         'source_completion': {'path': (folder / 'complete.json').relative_to(ROOT).as_posix(), 'sha256': digest(folder / 'complete.json')},
+        'report_source_sha256': digest(Path(__file__)),
+        'post_native_history_unchanged': history_unchanged,
+        'post_native_history_sha256': digest(history_path) if history is not None else None,
         'limit': 'Actual quantity reinvestment is judged separately from additional concurrent exposure; resume behavior is not established by a fresh path.'}
     receipt(FAMILY / 'evidence' / output, result)
     print(json.dumps({k: result[k] for k in ('tag', 'status', 'actual_net', 'conservative_net', 'native_dd_pct', 'children')}), flush=True)

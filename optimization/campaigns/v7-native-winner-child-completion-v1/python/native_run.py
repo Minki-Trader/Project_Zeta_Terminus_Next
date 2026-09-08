@@ -15,7 +15,7 @@ ROOT = FAMILY.parents[2]
 RUNTIME = ROOT / 'optimization/runtime/v7-native-winner-child-completion-v1-portable'
 RAW = ROOT / 'optimization/artifacts/raw/v7-native-winner-child-completion-v1'
 FLOOR = 30 * 2**30
-CAPS = [(RUNTIME, 3 * 2**30), (RAW, 2**30), (FAMILY, 32 * 2**20)]
+CAPS = [(RUNTIME, 7 * 2**29), (RAW, 2**30), (FAMILY, 32 * 2**20)]
 
 
 def digest(path):
@@ -137,15 +137,15 @@ def history(tag):
     print('HISTORY_COMPLETE', tag, flush=True)
 
 
-def binding(freeze):
+def binding(freeze, enforce=True):
     changed = []
     for row in freeze['files']:
         p = ROOT / row['path']
         if not p.is_file() or p.stat().st_size != row['bytes'] or digest(p) != row['sha256']:
             changed.append(row['path'])
-    if changed:
+    if changed and enforce:
         raise RuntimeError('Frozen input changed: ' + json.dumps(changed))
-    return {'files': len(freeze['files']), 'unchanged': True}
+    return {'files': len(freeze['files']), 'unchanged': not changed, 'changed': changed}
 
 
 def run(tag, freeze_name):
@@ -206,7 +206,7 @@ def run(tag, freeze_name):
     files = [{'path': p.relative_to(ROOT).as_posix(), 'bytes': p.stat().st_size,
               'sha256': digest(p)} for p in sorted(archive.rglob('*')) if p.is_file()]
     receipt(folder / 'complete.json', {'utc': datetime.now(timezone.utc).isoformat(),
-            'returncode': proc.returncode, 'files': files, 'binding': binding(freeze),
+            'returncode': proc.returncode, 'files': files, 'binding': binding(freeze, enforce=False),
             'capacity': capacity(enforce=False), 'capacity_events': capacity_events})
     print('NATIVE_COMPLETE', tag, len(files), flush=True)
 

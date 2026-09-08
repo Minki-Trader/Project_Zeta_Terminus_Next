@@ -9,6 +9,9 @@ struct WCCheckpoint
    long sequence;
    long core_sequence;
    long server;
+   ulong event_bytes;
+   ulong forecast_bytes;
+   ulong equity_bytes;
    double core_actual;
    double core_stress;
    int parents;
@@ -37,7 +40,12 @@ bool wc_checkpoint_ready=false;
 bool WCIdentity()
   {
    uchar bytes[],key[],hashed[];
-   StringToCharArray(PORTFOLIO_ID+"|"+SCHEMA_VERSION+"|"+EXECUTION_VERSION+"|"+wc_root,bytes,0,WHOLE_ARRAY,CP_UTF8);
+   string identity=PORTFOLIO_ID+"|"+SCHEMA_VERSION+"|"+EXECUTION_VERSION+"|"+wc_root+"|"+WC_SOURCE_BINDING;
+   identity+=StringFormat("|%.17g|%.17g|%.17g|%.17g|%.17g|%.17g|%.17g|%.17g|%.17g|%d|%d|%d|%d",
+      InpReferenceCapitalUSD,InpPriorProjectRealizedNetUSD,InpBaseVolume,InpAdditionStepUSD,InpMaximumMarginFraction,
+      InpMaximumPositionRiskFraction,InpMaximumAggregateRiskFraction,InpUnmodelledRiskReserveFraction,
+      InpStopPlacementHeadroomFraction,InpMaxEntryDelayMinutes,InpDeviationPoints,InpEventCapacity,InpSnapshotSeconds);
+   StringToCharArray(identity,bytes,0,WHOLE_ARRAY,CP_UTF8);
    if(CryptEncode(CRYPT_HASH_SHA256,bytes,key,hashed)!=32) return(false);
    ArrayCopy(wc_identity,hashed);return(true);
   }
@@ -55,7 +63,7 @@ bool WCReadCheckpoint(const string path,WCCheckpoint &header,WCParent &parents[]
    uint hash_read=FileReadArray(handle,stored,0,32);FileClose(handle);
    if(read!=(uint)length || hash_read!=32 || CryptEncode(CRYPT_HASH_SHA256,payload,key,computed)!=32 ||
       ArrayCompare(stored,computed)!=0 || !CharArrayToStruct(header,payload)) return(false);
-   if(header.version!=2 || header.role!=WC_ROLE || header.magic!=WC_MAGIC_FIRST ||
+   if(header.version!=3 || header.role!=WC_ROLE || header.magic!=WC_MAGIC_FIRST ||
       ArrayCompare(header.identity,wc_identity)!=0 || header.sequence<=0 || header.parents<0 || header.parents>10000 ||
       length!=(int)sizeof(WCCheckpoint)+header.parents*(int)sizeof(WCParent)) return(false);
    if(ArrayResize(parents,header.parents)!=header.parents) return(false);
@@ -74,9 +82,11 @@ bool WCReadCheckpoint(const string path,WCCheckpoint &header,WCParent &parents[]
 bool WCSave()
   {
    if(!wc_checkpoint_ready || !wc_dirty) return(true);
-   WCCheckpoint header={};header.version=2;header.role=WC_ROLE;header.magic=WC_MAGIC_FIRST;
+   WCCheckpoint header={};header.version=3;header.role=WC_ROLE;header.magic=WC_MAGIC_FIRST;
    ArrayCopy(header.identity,wc_identity);header.sequence=wc_sequence+1;
    header.core_sequence=state_sequence;header.server=(long)TimeCurrent();
+   FileFlush(wc_events);FileFlush(wc_forecasts);FileFlush(wc_equity);
+   header.event_bytes=FileSize(wc_events);header.forecast_bytes=FileSize(wc_forecasts);header.equity_bytes=FileSize(wc_equity);
    header.core_actual=portfolio_state.project_realized_net;header.core_stress=portfolio_state.stressed_balance;
    header.parents=ArraySize(wc_parents);header.faults=wc_faults;header.inferences=wc_inferences;
    header.updates=wc_updates;header.children=wc_children;header.closed_children=wc_closed_children;
@@ -120,6 +130,8 @@ bool WCBindCore(const bool recovered)
       if(!WCReadCheckpoint(path,candidate,records,payload)) continue;
       if(candidate.core_sequence!=state_sequence || candidate.core_actual!=portfolio_state.project_realized_net ||
          candidate.core_stress!=portfolio_state.stressed_balance || candidate.server>(long)TimeCurrent() || candidate.finished!=0) continue;
+      if(candidate.event_bytes!=FileSize(wc_events) || candidate.forecast_bytes!=FileSize(wc_forecasts) ||
+         candidate.equity_bytes!=FileSize(wc_equity)) continue;
       bool compatible=true;
       for(int n=0;n<ArraySize(records);++n)
          if(records[n].alive && component_states[records[n].component].position_identifier!=records[n].parent) compatible=false;
