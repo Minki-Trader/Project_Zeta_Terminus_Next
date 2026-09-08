@@ -1,0 +1,30 @@
+{
+  "utc": "2026-09-08T05:24:08.864745+00:00",
+  "status": "BOUNDED_HOST_VENDOR_RESOURCE_WAIT_OBSERVATION",
+  "processes": [
+    {
+      "pid": 25104,
+      "opened": true,
+      "open_error": 0,
+      "image": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\metatester64.exe",
+      "created_filetime": 134333164350304901,
+      "exit_filetime": 0,
+      "exit_code_observed": 4294967295,
+      "wait0": 258
+    },
+    {
+      "pid": 32568,
+      "opened": true,
+      "open_error": 0,
+      "image": "C:\\Windows\\System32\\nvidia-smi.exe",
+      "created_filetime": 134333183943683290,
+      "exit_filetime": 0,
+      "exit_code_observed": 1,
+      "wait0": 258
+    }
+  ],
+  "device_query": "The exact spawned nvidia-smi command requested only aggregate name, driver version, memory total/used and utilization. No application inventory, GPU reset, driver/device/configuration mutation was requested. Python subprocess.run used timeout10seconds; the call has not returned because query-process termination/cleanup remains incomplete. No aggregate counter values are available.",
+  "interpretation": "Both original native ONNX session creation and a separate aggregate NVIDIA query failed to return promptly. Exact root cause remains unconfirmed; no GPU model execution or device reset is inferred.",
+  "pending_user_information": "Optional question asks whether another GPU workload is running; it is not approval for stopping or inspecting other projects.",
+  "next": "Continue to require actual old native owner exit before process-local CUDA visibility correction can run. Preserve all data and Live/Lab."
+}

@@ -1,0 +1,284 @@
+{
+  "schema": "OWN_CPU_ONNX_INITIALIZATION_PROCESS_FACTS_V1",
+  "captured_local": "2026-09-08T13:56:25.0445870+09:00",
+  "scope": {
+    "process_id": 25104,
+    "target_thread_ids": [
+      37532,
+      28872,
+      47076
+    ],
+    "query_only": true,
+    "cim_win32_thread_query_count": 1,
+    "wct_query_count": 3,
+    "external_wct_owner_followup_performed": false
+  },
+  "expected": {
+    "image_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\metatester64.exe",
+    "start_local": "2026-09-08T13:47:15.0304901+09:00",
+    "parent_process_id": 37264
+  },
+  "process": {
+    "found": true,
+    "image_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\metatester64.exe",
+    "creation_local": "2026-09-08T13:47:15.0304900+09:00",
+    "creation_filetime": 134333164350304901,
+    "parent_process_id": 37264,
+    "wait_for_single_object_zero": 258
+  },
+  "initial_managed_snapshot": {
+    "cpu_seconds": 0.484375,
+    "working_set_bytes": 66617344,
+    "thread_count": 11,
+    "threads": [
+      {
+        "thread_id": 46676,
+        "state": "Wait",
+        "wait_reason": "UserRequest"
+      },
+      {
+        "thread_id": 45880,
+        "state": "Wait",
+        "wait_reason": "EventPairLow"
+      },
+      {
+        "thread_id": 2028,
+        "state": "Wait",
+        "wait_reason": "UserRequest"
+      },
+      {
+        "thread_id": 2140,
+        "state": "Wait",
+        "wait_reason": "EventPairLow"
+      },
+      {
+        "thread_id": 28884,
+        "state": "Wait",
+        "wait_reason": "UserRequest"
+      },
+      {
+        "thread_id": 37532,
+        "state": "Wait",
+        "wait_reason": "Unknown"
+      },
+      {
+        "thread_id": 46976,
+        "state": "Wait",
+        "wait_reason": "UserRequest"
+      },
+      {
+        "thread_id": 29264,
+        "state": "Wait",
+        "wait_reason": "EventPairLow"
+      },
+      {
+        "thread_id": 31860,
+        "state": "Wait",
+        "wait_reason": "EventPairLow"
+      },
+      {
+        "thread_id": 28872,
+        "state": "Wait",
+        "wait_reason": "Unknown"
+      },
+      {
+        "thread_id": 47076,
+        "state": "Wait",
+        "wait_reason": "Unknown"
+      }
+    ]
+  },
+  "cim_win32_thread": {
+    "queried_once": true,
+    "row_count": 11,
+    "rows": [
+      {
+        "thread_id": 2028,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 6
+      },
+      {
+        "thread_id": 28872,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 37
+      },
+      {
+        "thread_id": 28884,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 6
+      },
+      {
+        "thread_id": 29264,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 15
+      },
+      {
+        "thread_id": 31860,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 15
+      },
+      {
+        "thread_id": 37532,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 27
+      },
+      {
+        "thread_id": 42976,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 15
+      },
+      {
+        "thread_id": 45880,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 15
+      },
+      {
+        "thread_id": 46676,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 6
+      },
+      {
+        "thread_id": 46976,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 6
+      },
+      {
+        "thread_id": 47076,
+        "process_id": 25104,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 37
+      }
+    ],
+    "target_membership": [
+      {
+        "thread_id": 37532,
+        "same_process_at_snapshot": true,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 27
+      },
+      {
+        "thread_id": 28872,
+        "same_process_at_snapshot": true,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 37
+      },
+      {
+        "thread_id": 47076,
+        "same_process_at_snapshot": true,
+        "thread_state_raw": 5,
+        "thread_wait_reason_raw": 37
+      }
+    ]
+  },
+  "wct": {
+    "node_struct_size": 280,
+    "external_owner_ids_are_unexpanded_metadata": true,
+    "queries": [
+      {
+        "requested_thread_id": 37532,
+        "session_opened": true,
+        "succeeded": true,
+        "error": 0,
+        "node_count": 1,
+        "is_cycle": false,
+        "nodes": [
+          {
+            "index": 0,
+            "object_type": 8,
+            "object_type_name": "Thread",
+            "object_status": 2,
+            "object_status_name": "Running",
+            "process_id": 25104,
+            "thread_id": 37532,
+            "wait_time_raw": 12084363,
+            "context_switches": 181
+          }
+        ]
+      },
+      {
+        "requested_thread_id": 28872,
+        "session_opened": true,
+        "succeeded": true,
+        "error": 0,
+        "node_count": 1,
+        "is_cycle": false,
+        "nodes": [
+          {
+            "index": 0,
+            "object_type": 8,
+            "object_type_name": "Thread",
+            "object_status": 3,
+            "object_status_name": "Blocked",
+            "process_id": 25104,
+            "thread_id": 28872,
+            "wait_time_raw": 12049130,
+            "context_switches": 4
+          }
+        ]
+      },
+      {
+        "requested_thread_id": 47076,
+        "session_opened": true,
+        "succeeded": true,
+        "error": 0,
+        "node_count": 1,
+        "is_cycle": false,
+        "nodes": [
+          {
+            "index": 0,
+            "object_type": 8,
+            "object_type_name": "Thread",
+            "object_status": 3,
+            "object_status_name": "Blocked",
+            "process_id": 25104,
+            "thread_id": 47076,
+            "wait_time_raw": 12049130,
+            "context_switches": 3
+          }
+        ]
+      }
+    ]
+  },
+  "loaded_modules": {
+    "enumeration_succeeded": true,
+    "dll_count": 70,
+    "interesting": [
+      {
+        "file_name": "nvcuda.dll",
+        "actual_path": "C:\\WINDOWS\\SYSTEM32\\nvcuda.dll"
+      },
+      {
+        "file_name": "nvcuda64.dll",
+        "actual_path": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\nvhmi.inf_amd64_feba0f789c2537f5\\nvcuda64.dll"
+      }
+    ],
+    "onnx_ort_openblas_directml_observed": false,
+    "cuda_observed": true,
+    "cuda_paths_are_system_or_driver_store": true,
+    "snapshot_limit": "Module absence is only a single-time observation; it does not exclude static or internal code, later delayed loading, or a module already unloaded."
+  },
+  "limitations": [
+    "CIM ThreadWaitReason is a raw provider value and does not identify a loader function or call stack.",
+    "WCT returned only the requested process threads and no wait object or external owner.",
+    "WCT thread status can differ from the earlier managed thread snapshot because the observations were not simultaneous.",
+    "No external owner process was queried.",
+    "No stack, dump, memory content, account state, driver state, or file content was inspected."
+  ],
+  "actions": {
+    "termination": false,
+    "cancellation": false,
+    "process_mutation": false,
+    "file_content_query": false,
+    "new_evidence_file_created": true
+  }
+}

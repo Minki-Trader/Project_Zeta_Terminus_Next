@@ -4,6 +4,7 @@ from datetime import datetime, timezone, timedelta
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import time
@@ -17,6 +18,7 @@ ROLES = {'cs': 'ZetaV7DensityControl', 'static': 'ZetaV7DensityStatic',
          'co': 'ZetaV7DensityControl', 'online': 'ZetaV7DensityOnline'}
 FLOOR = 30*2**30
 CAPS = (6*2**30, 2*2**30, 32*2**20)
+CHILD_ENVIRONMENT = {'CUDA_VISIBLE_DEVICES': ''}
 
 
 def sha(path):
@@ -63,7 +65,10 @@ def hidden_start(arguments):
     info = subprocess.STARTUPINFO()
     info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
     info.wShowWindow = subprocess.SW_HIDE
-    return subprocess.Popen(arguments, cwd=RUNTIME, startupinfo=info)
+    # Restrict only new owned child processes; parent/User/Machine settings stay intact.
+    environment = os.environ.copy()
+    environment.update(CHILD_ENVIRONMENT)
+    return subprocess.Popen(arguments, cwd=RUNTIME, startupinfo=info, env=environment)
 
 
 def compile_and_install(tag):
@@ -311,7 +316,8 @@ def run(tag,freeze_name):
     folder.mkdir(parents=True)
     proc=hidden_start([str(RUNTIME/'terminal64.exe'),'/portable','/config:'+str(ini)])
     save(folder/'start.json',{'utc':datetime.now(timezone.utc).isoformat(),'pid':proc.pid,
-         'freeze':ref(declaration),'binding':before,'capacity':budget})
+         'freeze':ref(declaration),'binding':before,'capacity':budget,
+         'child_environment_overrides':CHILD_ENVIRONMENT})
     print('NATIVE_STARTED',tag,proc.pid,flush=True)
     while proc.poll() is None:
         cap=capacity(enforce=False)

@@ -1,0 +1,58 @@
+{
+  "utc": "2026-09-08T04:58:55.749480+00:00",
+  "status": "PROSPECTIVE_OWN_PROCESS_CUDA_VISIBILITY_ENGINEERING_CORRECTION",
+  "attempt": "static-v4",
+  "current_frozen_binding": {
+    "files": 768,
+    "unchanged": true,
+    "changed": []
+  },
+  "freeze": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/SELECTION_INPUT_FREEZE_V4.json",
+    "bytes": 196030,
+    "sha256": "5559936B2821DAA6582575210F3874087B3D076AEEE2FE78BC0E58E535F11C34"
+  },
+  "engine_stage": {
+    "path": "optimization/runtime/v7-native-input-density-admission-v1-portable/Tester/Agent-127.0.0.1-3000/MQL5/Files/ZetaV7DensityStatic/static-v4/learning/engine.csv",
+    "bytes": 186,
+    "sha256": "A3146970D25761B18DC76A40E883FD3EFA6EBD07DF02452CCAD1ED14A4BD7703"
+  },
+  "engine_rows": [
+    {
+      "stage": "CREATE_BEGIN",
+      "host_uptime_ms": "188265390",
+      "server_time": "1735689600",
+      "role": "1",
+      "engine_error": "0",
+      "provider": "CPU_ONLY",
+      "run_binding": "B16CFE9D7DF94366CA5F109E2757630E42C85C4A150EDA58050779029EF9AAC4"
+    }
+  ],
+  "observation": "OnnxCreateFromBuffer has not returned after more than nine minutes. CPU-only flags are already present in clean compile-v5. No checkpoint, inference, observation, update or trade result exists. Exact own agentPID25104 parent37264 uses about0.515625CPU seconds. System nvcuda DLLs were observed loaded; ONNX/ORT modules were not observed in a bounded snapshot.",
+  "cause": "Unknown. CUDA visibility correction is a scoped environment hypothesis; loaded CUDA DLLs do not prove GPU model execution or fault causation.",
+  "planned_environment": {
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "environment_scope": "Only the environment mapping of freshly spawned own physical-runtime processes. Never change os.environ in parent, User/Machine environment, global terminal/GPU settings, drivers, devices, Live or Lab.",
+  "unchanged": "Keep compile-v5 MQL/EX5, graph, initialfit, cutoffs, eta and all original trading rules. No new model or economic variant.",
+  "sequence": "Normally close exact own parent, retain partial attempt and wait for all actual own owners to exit. Then update the ordinary own launch producer, create fresh fullv5matrix/history/inputfreeze, and repeat allfour full2025paths. No overlapping tester or mixed matrix verdict.",
+  "official_reference": "https://docs.nvidia.com/cuda/cuda-programming-guide/05-appendices/environment-variables.html",
+  "capacity": {
+    "utc": "2026-09-08T04:58:55.810352+00:00",
+    "used": [
+      2863959834,
+      327124322,
+      24415372
+    ],
+    "caps": [
+      6442450944,
+      2147483648,
+      33554432
+    ],
+    "free": 39926714368,
+    "remaining": 5407989496,
+    "floor_ok": true,
+    "caps_ok": true,
+    "funded": true
+  }
+}
