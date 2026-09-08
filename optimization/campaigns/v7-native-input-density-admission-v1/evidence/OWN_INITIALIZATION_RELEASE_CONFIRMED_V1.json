@@ -1,0 +1,69 @@
+{
+  "utc": "2026-09-08T04:31:20.753026+00:00",
+  "status": "DELAYED_OWN_AGENT_EXIT_AND_LOCK_RELEASE_CONFIRMED",
+  "owners": [],
+  "root_open_process": {
+    "pid": 17308,
+    "opened": false,
+    "error": 87
+  },
+  "root_exact_lock_exclusive_read": {
+    "succeeded": true,
+    "bytes": 59
+  },
+  "earlier_scoped_io_cancel": {
+    "result": false,
+    "error": 1168,
+    "wait_after": 258
+  },
+  "causation": "Delayed exit is now observed. The earlier unsuccessful I/O cancellation does not establish why the eventual exit occurred. GPU/provider causation is still unproven.",
+  "partial_artifacts": [
+    {
+      "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/online-v3/initialization-evidence/agent-20260908.log",
+      "bytes": 6058596,
+      "sha256": "DB02A6EC33BF99AFCCA9578C8FEF8FCF6DE42D9C07FEFF2B355449B992248CAA"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/online-v3/initialization-evidence/runtime.lock",
+      "bytes": 59,
+      "sha256": "459EE3F3FDEFD82F820A99C642E3C8767174C8238535EC239DBE5DD1794F93F7"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/online-v3/initialization-evidence/started.bin",
+      "bytes": 8,
+      "sha256": "D27A56C66285400F0CF925FF238634737A278D5962ADF5A3851A22F0F94EF026"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/online-v3/start.json",
+      "bytes": 738,
+      "sha256": "EEFF14E91270690C8FA3DAF55847AA322323C89FB15CE98C75CEE7AE8064DC2A"
+    },
+    {
+      "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/online-v3/storage.jsonl",
+      "bytes": 5038,
+      "sha256": "EDF819010F631929E7FCBD009CE19705944811A36F89D18BDB44A144535DE6AD"
+    }
+  ],
+  "economic_result": null,
+  "complete_json_exists": false,
+  "retention": "Only the previously sharing-locked own runtime.lock was now copied explicitly after release. The broader rejected archival command was not retried. All original runtime data remains in place.",
+  "next": "Compile CPU-only source as compile-v5, prepare fresh full v4 matrix/history/freeze, then cs-v4/static-v4/co-v4/online-v4. Original model, fit, parameters and trading rules unchanged.",
+  "capacity": {
+    "utc": "2026-09-08T04:31:20.842256+00:00",
+    "used": [
+      2858853058,
+      266754926,
+      22878791
+    ],
+    "caps": [
+      6442450944,
+      2147483648,
+      33554432
+    ],
+    "free": 39982202880,
+    "remaining": 5475002249,
+    "floor_ok": true,
+    "caps_ok": true,
+    "funded": true
+  }
+}

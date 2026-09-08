@@ -1,0 +1,60 @@
+{
+  "utc": "2026-09-08T04:21:06.806201+00:00",
+  "status": "ENGINEERING_CORRECTION_SOURCE_PREPARATION_OWN_AGENT_NOT_RELEASED",
+  "attempt": "online-v3",
+  "pre_edit_binding": {
+    "files": 750,
+    "unchanged": true,
+    "changed": []
+  },
+  "freeze": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/SELECTION_INPUT_FREEZE_V3.json",
+    "bytes": 191896,
+    "sha256": "AA52C1562B42C80B9BA3D19E61FABC61E577FBC36BDC03977EC7B40EFA91DE43"
+  },
+  "preserved_compile": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/compile-v4/compile.json",
+    "bytes": 10770,
+    "sha256": "75C2656F25132B8C504E92FEAAE9260828EEC986B4C0FF9A56703870FE89BA1E"
+  },
+  "source_before": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/mt5/MQL5/Include/ZetaV7Density/Learning/DensityLearning.mqh",
+    "bytes": 16179,
+    "sha256": "074C4E4358CAA97B21EC31A4C87093B3487383F0D0416D496A50E8E2B896039C"
+  },
+  "model": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/models/input_density_v1.onnx",
+    "bytes": 942,
+    "sha256": "CCE23C60E4D91DE1DC5195BF773598428172CF7092081A854AA0E60354BE4199"
+  },
+  "initial_fit": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/models/initial_fit_v1.json",
+    "bytes": 9640,
+    "sha256": "0188D6707AB47A8CB5659BF37F6BAB219882CCE7AEA03FF31FD6F461F9C310C9"
+  },
+  "observed": "No learner checkpoint, forecast, update or trade result was produced before own parent terminal exited. Exact own PID17308 remains actually alive, waiting on a resource and owning the tag lock despite scoped termination request. No complete economic result exists.",
+  "cause": "Unknown; GPU/provider initialization is a hypothesis, not a demonstrated cause. Exact initialization subcall was not instrumented.",
+  "correction": "Explicit ONNX_USE_CPU_ONLY execution and a tiny flushed engine lifecycle ledger. Preserve graph, initial fit, cutoff, online eta and original trading rules. Full fresh control/static/control/online matrix is required after clean compilation, new settings and complete new input freeze. Do not mix default-provider V3 results with CPU results.",
+  "runtime_action": "No compilation, installation, settings production or tester start while actual old runtime owner remains. No Live or Lab action.",
+  "retention": "Original runtime data stays in place. Exact started.bin and own agent log copied into online-v3/initialization-evidence. The agent log is a whole same-family log, not an exact run delta. runtime.lock copy failed with a sharing violation and remains in place.",
+  "tool_policy": "Earlier broad archive command was rejected before execution with blocked by policy. Only separate narrower explicit copies ran. No deletion or retry of the rejected broad command.",
+  "economic_status": "Three V3 paths are complete and valid; online is an engineering correction. Bundle remains open, no economic failure or winner claim.",
+  "capacity": {
+    "utc": "2026-09-08T04:21:06.917606+00:00",
+    "used": [
+      2858853058,
+      266754867,
+      22473642
+    ],
+    "caps": [
+      6442450944,
+      2147483648,
+      33554432
+    ],
+    "free": 40055484416,
+    "remaining": 5475407457,
+    "floor_ok": true,
+    "caps_ok": true,
+    "funded": true
+  }
+}

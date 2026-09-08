@@ -1,0 +1,128 @@
+{
+  "schema": "zeta-next-v7-input-density-own-onnx-initialization-process-facts-v1",
+  "created_at_utc": "2026-09-08T04:20:43.0833217Z",
+  "scope": {
+    "purpose": "Preserve read-only operating facts for the Family22 MetaTester process that remained visible and retained the exact online-v3 runtime lock after its parent terminal exited.",
+    "candidate_or_economic_judgment": false,
+    "process_action_performed": false,
+    "runtime_or_source_mutation_performed": false
+  },
+  "subject": {
+    "process_id": 17308,
+    "parent_process_id": 30848,
+    "image_name": "metatester64.exe",
+    "image_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\metatester64.exe",
+    "process_created_at_utc": "2026-09-08T03:53:33.7483755Z",
+    "parent_terminal_observed_exited_before_probe": true,
+    "wmi_termination_date": null,
+    "wmi_thread_count": 1,
+    "wmi_handle_count": 401,
+    "wmi_working_set_bytes": 59420672
+  },
+  "lock": {
+    "path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\Tester\\Agent-127.0.0.1-3000\\MQL5\\Files\\ZetaV7DensityOnline\\online-v3\\state\\runtime.lock",
+    "exists": true,
+    "logical_bytes": 59,
+    "restart_manager_probe": {
+      "probe_completed_at_utc": "2026-09-08T04:16:48.4492259Z",
+      "start_session_result": 0,
+      "register_resource_result": 0,
+      "get_list_result": 0,
+      "reboot_reasons": 0,
+      "owner_count": 1,
+      "owners": [
+        {
+          "process_id": 17308,
+          "image_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\metatester64.exe",
+          "process_started_at_utc": "2026-09-08T03:53:33.7483755Z",
+          "application_name": "MetaTrader 5 Strategy Tester Agent",
+          "application_type": "RmUnknownApp",
+          "application_status_numeric": 1,
+          "terminal_session_id": 1,
+          "restartable": false
+        }
+      ]
+    }
+  },
+  "native_process_handle_probe": {
+    "probe_completed_at_utc": "2026-09-08T04:16:48.4492259Z",
+    "access": [
+      "PROCESS_QUERY_LIMITED_INFORMATION",
+      "SYNCHRONIZE"
+    ],
+    "initial": {
+      "open_process_succeeded": true,
+      "image_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\metatester64.exe",
+      "get_exit_code_process_unsigned": 4294967295,
+      "get_exit_code_process_hex": "0xFFFFFFFF",
+      "wait_for_single_object_timeout_ms": 0,
+      "wait_result_numeric": 258,
+      "wait_result_hex": "0x00000102",
+      "wait_result_name": "WAIT_TIMEOUT",
+      "process_handle_signaled": false
+    },
+    "after_two_seconds": {
+      "open_process_succeeded": true,
+      "image_path": "C:\\Users\\awdse\\OneDrive\\Desktop\\Project_Zeta_Terminus_Next\\optimization\\runtime\\v7-native-input-density-admission-v1-portable\\metatester64.exe",
+      "get_exit_code_process_unsigned": 4294967295,
+      "get_exit_code_process_hex": "0xFFFFFFFF",
+      "wait_for_single_object_timeout_ms": 0,
+      "wait_result_numeric": 258,
+      "wait_result_hex": "0x00000102",
+      "wait_result_name": "WAIT_TIMEOUT",
+      "process_handle_signaled": false
+    },
+    "observed_exit_time_filetime_100ns": 0,
+    "factual_classification": "The process object was unsignaled in both zero-timeout waits and had a live thread and a Restart Manager file ownership record. At the sampled times it was an active, non-terminated process rather than a terminated-but-visible process object."
+  },
+  "cpu_and_thread_probe": {
+    "probe_completed_at_utc": "2026-09-08T04:18:47.7140644Z",
+    "sample_interval_seconds": 3,
+    "process": {
+      "wait_result_initial": 258,
+      "wait_result_after_interval": 258,
+      "created_filetime_100ns": 134333132137483755,
+      "exit_filetime_100ns": 0,
+      "kernel_time_initial_100ns": 2031250,
+      "kernel_time_after_interval_100ns": 2031250,
+      "kernel_time_delta_100ns": 0,
+      "user_time_initial_100ns": 3750000,
+      "user_time_after_interval_100ns": 3750000,
+      "user_time_delta_100ns": 0,
+      "cycle_count_initial": 1595774786,
+      "cycle_count_after_interval": 1595787150,
+      "cycle_count_delta": 12364
+    },
+    "thread": {
+      "thread_id": 39244,
+      "wait_result_initial": 258,
+      "wait_result_after_interval": 258,
+      "created_filetime_100ns": 134333132158551338,
+      "exit_filetime_100ns": 0,
+      "kernel_time_initial_100ns": 312500,
+      "kernel_time_after_interval_100ns": 312500,
+      "kernel_time_delta_100ns": 0,
+      "user_time_initial_100ns": 625000,
+      "user_time_after_interval_100ns": 625000,
+      "user_time_delta_100ns": 0,
+      "cycle_count_initial": 235621754,
+      "cycle_count_after_interval": 235634118,
+      "cycle_count_delta": 12364,
+      "wmi_thread_state_numeric_initial": 5,
+      "wmi_thread_state_numeric_after_interval": 5,
+      "wmi_thread_state_name": "Waiting",
+      "wmi_thread_wait_reason_numeric_initial": 27,
+      "wmi_thread_wait_reason_numeric_after_interval": 27,
+      "wmi_thread_wait_reason_name": "WrResource"
+    },
+    "factual_classification": "The sole observed thread remained in a resource-wait state. Kernel and user CPU times did not advance over three seconds, while the small cycle-count change records only very low activity during the sample."
+  },
+  "limitations": [
+    "GetExitCodeProcess returned 0xFFFFFFFF rather than the documented STILL_ACTIVE value. That value is preserved as an observation and is not used alone to classify process liveness.",
+    "WAIT_TIMEOUT on the process and thread handles proves they were not signaled as terminated at the sampled instants; it does not prove future progress or identify the awaited resource internally.",
+    "Restart Manager attributes the exact runtime.lock to PID 17308 but does not establish why the MetaTester retained the handle.",
+    "The three-second CPU sample describes only that bounded interval.",
+    "No GPU process, device, driver, execution-provider, stack, or event data was inspected. A GPU-related cause is unconfirmed.",
+    "No termination, window-close, reset, deletion, driver operation, candidate modification, or runtime-file modification was performed."
+  ]
+}

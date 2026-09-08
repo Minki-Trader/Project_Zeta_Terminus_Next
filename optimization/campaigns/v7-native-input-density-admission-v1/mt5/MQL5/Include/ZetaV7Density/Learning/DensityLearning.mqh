@@ -17,6 +17,27 @@ string DensityStateIdentity()
           DENSITY_FIT_SHA+"|"+DENSITY_GRAPH_SHA+"|"+InpNativeBinding);
   }
 
+bool DensityEngineStage(const string stage,const int engine_error=0)
+  {
+   ResetLastError();
+   int h=FileOpen(density_root+"\\learning\\engine.csv",
+                  FILE_READ|FILE_WRITE|FILE_CSV|FILE_ANSI|FILE_SHARE_READ,',');
+   if(h==INVALID_HANDLE)
+     { DensityFault("cannot open own engine lifecycle ledger"); return(false); }
+   bool ok=true;
+   if(FileSize(h)==0)
+      ok=(FileWrite(h,"stage","host_uptime_ms","server_time","role","engine_error",
+                      "provider","run_binding")>0);
+   if(!FileSeek(h,0,SEEK_END)) ok=false;
+   if(FileWrite(h,stage,GetTickCount64(),(long)TimeCurrent(),DENSITY_ROLE,engine_error,
+                  "CPU_ONLY",InpNativeBinding)==0) ok=false;
+   FileFlush(h);
+   if(GetLastError()!=0 || FileTell(h)!=FileSize(h)) ok=false;
+   FileClose(h);
+   if(!ok) DensityFault("own engine lifecycle ledger write incomplete");
+   return(ok);
+  }
+
 bool DensitySaveCheckpoint()
   {
    if(density_failed) return(false);
@@ -147,7 +168,8 @@ bool DensityRun(const int component,const double z,double &score,double &r0,doub
       parameters[0][2+k]=(float)m;
       parameters[0][4+k]=(float)v;
      }
-   if(!OnnxRun(density_onnx,ONNX_NO_CONVERSION,feature_input,parameters,output,responsibility))
+   if(!OnnxRun(density_onnx,ONNX_NO_CONVERSION|ONNX_USE_CPU_ONLY,
+               feature_input,parameters,output,responsibility))
      { DensityFault("ONNX inference failed "+IntegerToString(GetLastError())); return(false); }
    score=(double)output[0][0];
    r0=(double)responsibility[0][0];
@@ -337,15 +359,33 @@ bool DensityInitialize()
         }
    if(DENSITY_ROLE!=0)
      {
-      density_onnx=OnnxCreateFromBuffer(DensityOnnxBytes,ONNX_DEFAULT);
+      if(!DensityEngineStage("CREATE_BEGIN")) return(false);
+      ResetLastError();
+      density_onnx=OnnxCreateFromBuffer(DensityOnnxBytes,ONNX_USE_CPU_ONLY);
+      if(density_onnx==INVALID_HANDLE)
+        {
+         const int error=GetLastError();
+         DensityEngineStage("CREATE_FAILED",error);
+         DensityFault("ONNX CPU session creation failed "+IntegerToString(error));
+         return(false);
+        }
+      if(!DensityEngineStage("CREATE_READY")) return(false);
       const long z_shape[]={1,1},parameter_shape[]={1,6},score_shape[]={1,1},r_shape[]={1,2};
-      if(density_onnx==INVALID_HANDLE || !OnnxSetInputShape(density_onnx,0,z_shape) ||
-         !OnnxSetInputShape(density_onnx,1,parameter_shape) ||
-         !OnnxSetOutputShape(density_onnx,0,score_shape) || !OnnxSetOutputShape(density_onnx,1,r_shape))
-        { DensityFault("ONNX resource initialization failed"); return(false); }
+      if(!OnnxSetInputShape(density_onnx,0,z_shape))
+        { DensityEngineStage("INPUT_0_FAILED",GetLastError()); DensityFault("ONNX input 0 shape failed"); return(false); }
+      if(!DensityEngineStage("INPUT_0_READY")) return(false);
+      if(!OnnxSetInputShape(density_onnx,1,parameter_shape))
+        { DensityEngineStage("INPUT_1_FAILED",GetLastError()); DensityFault("ONNX input 1 shape failed"); return(false); }
+      if(!DensityEngineStage("INPUT_1_READY")) return(false);
+      if(!OnnxSetOutputShape(density_onnx,0,score_shape))
+        { DensityEngineStage("OUTPUT_0_FAILED",GetLastError()); DensityFault("ONNX output 0 shape failed"); return(false); }
+      if(!DensityEngineStage("OUTPUT_0_READY")) return(false);
+      if(!OnnxSetOutputShape(density_onnx,1,r_shape))
+        { DensityEngineStage("OUTPUT_1_FAILED",GetLastError()); DensityFault("ONNX output 1 shape failed"); return(false); }
+      if(!DensityEngineStage("OUTPUT_1_READY")) return(false);
      }
    density_initialized=true;
-   return(DensitySaveCheckpoint());
+   return(DensitySaveCheckpoint() && DensityEngineStage("INITIALIZED"));
   }
 
 void DensityShutdown()
@@ -353,7 +393,21 @@ void DensityShutdown()
    DensityFlushEquity(true);
    if(density_initialized && !density_failed) DensitySaveCheckpoint();
    if(density_onnx!=INVALID_HANDLE)
-     { OnnxRelease(density_onnx); density_onnx=INVALID_HANDLE; }
+     {
+      DensityEngineStage("RELEASE_BEGIN");
+      ResetLastError();
+      if(!OnnxRelease(density_onnx))
+        {
+         const int error=GetLastError();
+         DensityEngineStage("RELEASE_FAILED",error);
+         DensityFault("ONNX CPU session release failed "+IntegerToString(error));
+        }
+      else
+        {
+         density_onnx=INVALID_HANDLE;
+         DensityEngineStage("RELEASED");
+        }
+     }
   }
 
 #endif
