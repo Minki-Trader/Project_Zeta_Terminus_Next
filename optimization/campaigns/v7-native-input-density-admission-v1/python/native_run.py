@@ -17,7 +17,7 @@ RAW = ROOT/'optimization/artifacts/raw/v7-native-input-density-admission-v1'
 ROLES = {'cs': 'ZetaV7DensityControl', 'static': 'ZetaV7DensityStatic',
          'co': 'ZetaV7DensityControl', 'online': 'ZetaV7DensityOnline'}
 FLOOR = 30*2**30
-CAPS = (6*2**30, 2*2**30, 32*2**20)
+CAPS = (4*2**30, 1*2**30, 32*2**20)
 CHILD_ENVIRONMENT = {'CUDA_VISIBLE_DEVICES': ''}
 
 

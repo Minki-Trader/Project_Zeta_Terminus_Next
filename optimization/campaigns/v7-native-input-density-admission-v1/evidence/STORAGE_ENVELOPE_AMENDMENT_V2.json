@@ -1,0 +1,113 @@
+{
+  "utc": "2026-09-08T06:00:48.166029+00:00",
+  "status": "PROSPECTIVE_STORAGE_ENVELOPE_CORRECTION_BEFORE_NEW_MATRIX",
+  "prior_freeze": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/evidence/SELECTION_INPUT_FREEZE_V5.json",
+    "bytes": 199654,
+    "sha256": "0C6EC1C24517F97E930D7663D63446541880A96DF30A17361C7F951195C382B8"
+  },
+  "prior_all_inputs_before_edit": {
+    "files": 784,
+    "unchanged": true,
+    "changed": []
+  },
+  "prior_native_producer": {
+    "path": "optimization/campaigns/v7-native-input-density-admission-v1/python/native_run.py",
+    "bytes": 19139,
+    "sha256": "09D7EADCF500F9AE11B400D2DF45563B23F6325928E0E46E7037125CE43B07F5"
+  },
+  "completed_native_footprints": [
+    {
+      "tag": "cs-v3",
+      "complete": {
+        "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/cs-v3/complete.json",
+        "bytes": 6648,
+        "sha256": "65D172D62BA852647068431939E6E80D5D948B95658B9F310AEC82BAEC74363B"
+      },
+      "archive_bytes": 60339739,
+      "runtime_bytes": 2905616156
+    },
+    {
+      "tag": "static-v3",
+      "complete": {
+        "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/static-v3/complete.json",
+        "bytes": 7090,
+        "sha256": "B91609209119499BCD86AC6DFF890CFDC579193AC31A3530BEF7D305A064D359"
+      },
+      "archive_bytes": 64067367,
+      "runtime_bytes": 2914433943
+    },
+    {
+      "tag": "co-v3",
+      "complete": {
+        "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/co-v3/complete.json",
+        "bytes": 6648,
+        "sha256": "2D7D794D456EEA57A433EAB8CE22A96E561717E67938126952EDDB811AD22CF2"
+      },
+      "archive_bytes": 60339695,
+      "runtime_bytes": 2914621617
+    },
+    {
+      "tag": "cs-v4",
+      "complete": {
+        "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/cs-v4/complete.json",
+        "bytes": 6922,
+        "sha256": "15DB0127A2C30547E4E2C0517FA2820F3689C6C9AA5352FC0CB0CF3157A3D5EB"
+      },
+      "archive_bytes": 60340324,
+      "runtime_bytes": 2919882674
+    },
+    {
+      "tag": "cs-v5",
+      "complete": {
+        "path": "optimization/artifacts/raw/v7-native-input-density-admission-v1/native/cs-v5/complete.json",
+        "bytes": 6923,
+        "sha256": "6F6D7662A28A3A885EBD239420F05E6CD85EAF9C56C751E3EA243F1B333F3EE1"
+      },
+      "archive_bytes": 60339826,
+      "runtime_bytes": 2925392528
+    }
+  ],
+  "prior_cs_v5_capacity": {
+    "observations": 11,
+    "minimum_free_bytes": 37414416384,
+    "floor_and_caps_all_pass": true,
+    "unfunded_observations": 5
+  },
+  "prior_cs_v5_disposition": "Preserve complete native artifacts and unchanged784input receipt. Old full-funding contract failed during execution; this path is a capacity correction and is excluded from selection. Do not retroactively recompute old funding using new caps.",
+  "old_caps": [
+    6442450944,
+    2147483648,
+    33554432
+  ],
+  "new_caps": [
+    4294967296,
+    1073741824,
+    33554432
+  ],
+  "fixed_floor": 32212254720,
+  "basis": "Five full-year archived paths use60.34..64.07MB each. Existing runtime2.926GB and raw0.396GB include every prior attempt. The new4GiB runtime cap leaves over1.36GB, and1GiB raw cap leaves over0.67GB, each more than2x a complete four-role bundle at128MiB per role. Source32MiB stays fixed. No confirmation data is prefetched; any eligible longer confirmation needs separate prospective funding. Actual cap/floor/full-funding monitoring remains mandatory.",
+  "estimated_four_path_growth_allowance_each_runtime_and_raw": 536870912,
+  "prospective_remaining": 2056796997,
+  "prospective_funded": true,
+  "capacity_before": {
+    "utc": "2026-09-08T06:00:48.166006+00:00",
+    "used": [
+      2925392528,
+      395133876,
+      24940151
+    ],
+    "caps": [
+      6442450944,
+      2147483648,
+      33554432
+    ],
+    "free": 37064499200,
+    "remaining": 5278022469,
+    "floor_ok": true,
+    "caps_ok": true,
+    "funded": false
+  },
+  "change_scope": "Only producer CAPS and fresh whole v6 settings/binding/history. MQL/EX5/model/fit/cutoff/eta/trading rules and all old evidence remain unchanged. No deletion or economic gate waiver.",
+  "storage_note": "Lossless archival compression is being assessed separately; no unverified gain funds this amendment."
+}
