@@ -1,6 +1,22 @@
 #ifndef ZETA_DENSITY_EVIDENCE_MQH
 #define ZETA_DENSITY_EVIDENCE_MQH
 
+void DensityFlushEquity(const bool close)
+  {
+   if(density_equity_handle==INVALID_HANDLE) return;
+   ResetLastError();
+   FileFlush(density_equity_handle);
+   const int error=GetLastError();
+   const bool complete=(FileSize(density_equity_handle)==density_equity_bytes);
+   if(close)
+     {
+      FileClose(density_equity_handle);
+      density_equity_handle=INVALID_HANDLE;
+     }
+   if(error!=0 || !complete)
+      DensityFault("native equity batch flush incomplete");
+  }
+
 void DensityRecordExit(const int component,const ulong deal,const long deal_msc,
                        const double actual,const double stressed)
   {
@@ -31,6 +47,7 @@ void DensityRecordExit(const int component,const ulong deal,const long deal_msc,
    if(written==0)
      { DensityFault("native exit evidence write failed"); return; }
    ++density_exit_rows;
+   DensityFlushEquity(false);
    DensitySaveCheckpoint();
   }
 
@@ -82,8 +99,10 @@ void DensityRecordEquity(const bool force)
    const double actual=AccountInfoDouble(ACCOUNT_EQUITY);
    if(!MathIsValidNumber(actual) || !MathIsValidNumber(conservative))
      { DensityFault("nonfinite native account mark"); return; }
-   int h=FileOpen(density_root+"\\learning\\equity.csv",
-                  FILE_READ|FILE_WRITE|FILE_CSV|FILE_ANSI|FILE_SHARE_READ,',');
+   if(density_equity_handle==INVALID_HANDLE)
+      density_equity_handle=FileOpen(density_root+"\\learning\\equity.csv",
+                         FILE_READ|FILE_WRITE|FILE_CSV|FILE_ANSI|FILE_SHARE_READ,',');
+   const int h=density_equity_handle;
    if(h==INVALID_HANDLE)
      { DensityFault("cannot append native equity evidence"); return; }
    if(FileSize(h)==0)
@@ -100,18 +119,21 @@ void DensityRecordEquity(const bool force)
        positions,DoubleToString(lots,8),portfolio_state.day_volume_multiplier,
        maximum_quote_age_msc,density_forecasts,density_abstentions,density_observations,
        density_updates,ArraySize(density_pending));
-   FileFlush(h);
-   FileClose(h);
+   density_equity_bytes=FileTell(h);
    if(written==0)
      { DensityFault("native equity evidence write failed"); return; }
    density_last_minute=minute;
    ++density_mark_rows;
+   // Observation rows do not control trading or learning state. Keep every row;
+   // commit batches and all normal exits/finalization without per-minute fsync.
+   if(force || density_mark_rows%512==0) DensityFlushEquity(false);
   }
 
 void DensityFinishEvidence()
   {
    if(density_finished) return;
    DensityRecordEquity(true);
+   DensityFlushEquity(true);
    if(density_initialized && !density_failed) DensitySaveCheckpoint();
    const double conservative_net=portfolio_state.stressed_balance-density_positive_swap-InpReferenceCapitalUSD;
    const double actual_dd=TesterStatistics(STAT_EQUITY_DD);

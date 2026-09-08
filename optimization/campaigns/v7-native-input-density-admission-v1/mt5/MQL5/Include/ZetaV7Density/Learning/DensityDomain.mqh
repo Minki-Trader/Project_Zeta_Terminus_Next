@@ -21,6 +21,8 @@ long density_readbacks = 0;
 long density_last_minute = -1;
 long density_mark_rows = 0;
 long density_exit_rows = 0;
+int density_equity_handle = INVALID_HANDLE;
+ulong density_equity_bytes = 0;
 datetime density_last_applied_observation = 0;
 double density_positive_swap = 0.0;
 double density_conservative_peak = 100.0;
@@ -53,6 +55,7 @@ bool DensityAllow(const int component,const double feature);
 bool DensityCaptureObservation(const int component,const string stage);
 bool DensitySaveCheckpoint();
 void DensityRecordEquity(const bool force);
+void DensityFlushEquity(const bool close);
 void DensityRecordExit(const int component,const ulong deal,const long deal_msc,
                        const double actual,const double stressed);
 void DensityFinishEvidence();

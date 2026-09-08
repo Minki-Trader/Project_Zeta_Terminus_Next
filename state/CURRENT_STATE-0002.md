@@ -1098,3 +1098,29 @@ Historical transitions STATE-0001..0554 remain immutable in `state/CURRENT_STATE
 - Family22 one-time original parent and own public SDK/runtime are materialized. Three native roles compile-v3 at 0 errors/0 warnings; earlier compiler and durability/explicit-fault corrections are retained in own snapshots. No model, cutoff, original economics or role bundle changed. ROOT_NATIVE_PREPARATION_V1 documents native external binding and no actual-restart claim.
 - Whole SELECTION_INPUT_FREEZE_V1 pins 718 consumed files, including own source/EX5/model/settings/public SDK and full 2024/2025 consumed history/symbol database. Complete 12 past streams/contracts/build6182 are identical before-matrix-v1/v2; 39 past tick months warmed. Exact cs-v1/static-v1/co-v1/online-v1 full2025 matrix is prepared; no economic outcome yet.
 - At freeze all own owners stopped, full remaining 6GiB runtime/2GiB raw/32MiB source growth funded above 30GiB reserve. Preserve all artifacts and all attempted compile snapshots. Automatic duplicate-cache deletion remains zero; independent exact cold-cache lossless compression is storage-only. Root proceeds original control then fixed whole bundle. Live/Lab and exact Live activation block remain unchanged.
+
+
+## STATE-0700 - 2026-09-08
+
+- Native preparation commit8eae780 is pushed main. First original-control cs-v1 starts own terminal PID42536 at03:02UTC with all718 frozen inputs unchanged. FreezeSHA27684B579DA71AC9075D884A1BE17D81BE45F10184209357A38B9AD069660B07. At start free40929005568B and remaining5751352967B satisfy full remaining growth plus30GiB. Fixed whole four-path bundle continues; no complete native result or economic improvement yet.
+- Several shell-profile starts returned late; their already-issued commands completed without duplicate tester launch. Subsequent shell commands use normal no-profile invocation; no permission or operating scope changed. Live/Lab unchanged.
+
+
+## STATE-0701 - 2026-09-08
+
+- Original cs-v1 normally stopped after about seven wall-clock minutes with26765 preserved minute marks through January2025 and0densityfaults. Its eighteen partial native artifacts are retained; no economic verdict. Every-minute FileFlush/open/close caused avoidable evidence I/O overhead. Compile-v4 keeps every minute value/schema and uses one own observation handle, flush512rows/everyexit/finalization/deinit with byte/error completeness; learning/core durable state unchanged. All3rolescompile0errors0warnings.
+- First native also regenerated six consumed2024/2025HCS files; V1complete.json explicitly records this drift, neverwaived. Full after-cs-v1 history repeats12streams/contracts/build6182/symbolDB and exactownpaths. Fresh wholeV2freeze734files SHA8621D3A108CBB86272A7B96633742B525311A4D76341B485C2B4C838740D515E includes regenerated containers and newsource/EX5/settings; all734unchanged beforecs-v2startPID45892. Fixedcs/static/co/onlinev2full2025bundle restarts fromcontrol.
+- Additional exact8coldcache compression candidates865690048Bfail no-reparse ancestor guard. No compression/deletion command executed,actualsavings0; lineage/STORAGE_COLD_TKC_LOSSLESS_20260908_V1.json preserves metadata andbeforehashes. Allimportantartifacts/Live/Labremainunchanged;storagefullyfundedabove30GiB. Userhasnotpaused.
+
+
+## STATE-0702 - 2026-09-08
+
+- cs-v2 completes full2025 in about5minutes with352188minute marks/554exits,0densityfaults,flat and identical734inputs; after-history repeats12streams/contracts/build/symbolDB. Descriptive native original121.39/stress112.988/DD16.073213873721, but own reports parent directory was absent so nativeHTML was not generated. Completequality/economicjudgment remains correction; all18native artifacts preserved.
+- NATIVE_REPORT_DIRECTORY_CORRECTION_V1 records missing-output correction; normal settings producer now creates only own reports directory. Compile-v4 source/EX5/model unchanged. Archived appended UTF16LE fragments maylackBOM; downstream economic report handles their encoding without altering bytes. WholeV3freeze750files SHAAA52C1562B42C80B9BA3D19E61FABC61E577FBC36BDC03977EC7B40EFA91DE43 pins new producer andfresh cs/static/co/onlinev3 matrix. Originalcs-v3 startsPID26872 withall750inputsunchanged andfullstoragefundedabove30GiB. No candidate economics, modelretune orLive/Labaction.
+
+
+## STATE-0703 - 2026-09-08
+
+- cs-v3 finishes normal full2025 at100percent real ticks. All750consumedfiles unchanged before/after native and afterSDKhistory;12paststreams/contracts/build6182/symbolDB/exactownpaths identical. All3symbols actualgeneration complete. CONTROL_STATIC_NATIVE_V3 SHA595868C81E630C9557D82E03CC2B74F39D14C4B2502FC39E21BB4728FD9AD707 and ROOT_CONTROL_STATIC_NATIVE_V3 preserve complete root interpretation.
+- Actual121.39/conservative112.988/nativeDD16.073213873721/recovery3.982587546924,554closed and352188marks fully reconcile;bothhalvespositive,0faults/drops/invalidunavailability,flat. Original8complete-zero-range observations valid. All dailyunits1;noMLimprovement/compounding/restartclaim. Eleven capacity observations allfunded/floor/caps;minfree40284585984B. HTML and five chart/report files nowgeneratedandretained.
+- Fresh static-v3 actualONNX candidate startsPID46976 withunchanged750fileV3freeze. Oneof4validpathscomplete;wholebundlejudgment remainsopen. Preserveallpriorattempts,exactLiveblockandLive/Labunchanged. Userhasnotpaused.

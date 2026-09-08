@@ -350,6 +350,7 @@ bool DensityInitialize()
 
 void DensityShutdown()
   {
+   DensityFlushEquity(true);
    if(density_initialized && !density_failed) DensitySaveCheckpoint();
    if(density_onnx!=INVALID_HANDLE)
      { OnnxRelease(density_onnx); density_onnx=INVALID_HANDLE; }

@@ -1,0 +1,26 @@
+{
+  "utc": "2026-09-08T03:09:26.010349+00:00",
+  "status": "NATIVE_OBSERVATION_IO_CORRECTION_NO_ECONOMIC_VERDICT",
+  "attempt": "cs-v1",
+  "completion_receipt_sha256": "C940FD2AB7E5D56D8BB9301486196E65C79205F15D285EFA7FF4267B0F35821A",
+  "retained_native_files": 18,
+  "observed_rows": 26765,
+  "final_observed_server": "1738187520",
+  "reason": "Original minute observation writer opens, fsyncs and closes every row. After about seven wall-clock minutes only January2025 is reached, with zero density faults. This avoidable evidence I/O would multiply across all four complete paths. Root normally closes the sole original control and retains all partial artifacts; no candidate result or economic selection is inferred.",
+  "correction": "Same minute values/columns/timestamps are written through one owned handle. Flush every512 rows, every completed exit and normal finalization/deinitialization; require flush error/byte completeness. Trading/learning durable checkpoints and original core state remain unchanged. Buffer does not supply a signal or decision.",
+  "next": "Compile-v4, fresh whole v2 matrix and full input freeze. Start original control from beginning. No original fit/model/cutoff/strategy/risk/quantity/exit or period change.",
+  "no_automatic_retry_cap": true,
+  "input_correction": "Normal first tester initialization also regenerated six consumed 2024/2025 HCS containers. All changes are explicitly retained in complete.json; no byte exception is granted. Observe all twelve original past streams/contracts/build and bind the entire updated whole v2 matrix before restart.",
+  "input_binding_at_normal_close": {
+    "files": 718,
+    "unchanged": false,
+    "changed": [
+      "optimization/runtime/v7-native-input-density-admission-v1-portable/Tester/bases/FPMarketsSC-Live/history/US100/2024.hcs",
+      "optimization/runtime/v7-native-input-density-admission-v1-portable/Tester/bases/FPMarketsSC-Live/history/US100/2025.hcs",
+      "optimization/runtime/v7-native-input-density-admission-v1-portable/Tester/bases/FPMarketsSC-Live/history/US30/2024.hcs",
+      "optimization/runtime/v7-native-input-density-admission-v1-portable/Tester/bases/FPMarketsSC-Live/history/US30/2025.hcs",
+      "optimization/runtime/v7-native-input-density-admission-v1-portable/Tester/bases/FPMarketsSC-Live/history/US500/2024.hcs",
+      "optimization/runtime/v7-native-input-density-admission-v1-portable/Tester/bases/FPMarketsSC-Live/history/US500/2025.hcs"
+    ]
+  }
+}

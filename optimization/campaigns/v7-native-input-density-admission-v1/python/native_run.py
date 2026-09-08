@@ -212,6 +212,9 @@ def prepare_settings(version):
     if owners():
         raise RuntimeError('Preparing a complete matrix requires stopped owner')
     capacity()
+    # MT5 does not create a missing parent directory for the configured HTML report.
+    # This is an own output directory, with no shared reports or artifact removal.
+    (RUNTIME/'reports').mkdir(exist_ok=True)
     matrix_path=FAMILY/'evidence'/('MATRIX_'+version.upper()+'.json')
     if matrix_path.exists():
         raise RuntimeError('Preserve existing matrix settings')
