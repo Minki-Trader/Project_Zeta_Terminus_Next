@@ -1,0 +1,97 @@
+{
+  "utc": "2026-09-08T11:34:02.171572+00:00",
+  "status": "COMPLETE_PRESERVATION_WITH_EXACT_MEASURED_PER_OPERATION_GAINS",
+  "results": [
+    {
+      "path": "lineage\\STORAGE_V7_ARCHIVE_NTFS_FUNDING_20260908_RESULT_V1.json",
+      "bytes": 147098,
+      "sha256": "3C6FFC289E557A302BB1D86902D8B2671D959550B9083F1637B515597AEEBDDD",
+      "attempted": 80,
+      "gain": 3130769408,
+      "status": "FULL_FUNDING_PLUS_HEADROOM_REACHED",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_ARCHIVE_NTFS_FUNDING_CONTINUATION_20260908_RESULT_V1.json",
+      "bytes": 42898,
+      "sha256": "773748BB238C8EFCA03AB44ED673D107C12DE3D8B83FC59B957396C61CD84440",
+      "attempted": 22,
+      "gain": 526848000,
+      "status": "COMPLETE_ALL_PLANNED_FILES",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_CLOSED_HISTORY_CACHE_NTFS_20260908_RESULT_V1.json",
+      "bytes": 375048,
+      "sha256": "B40C2A1690D08280B218D016F1BBB3128FC58CD6D68D064F1EDD09E9BDF73206",
+      "attempted": 211,
+      "gain": 3021639680,
+      "status": "COMPLETE_ALL_PLANNED_FILES",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_CLOSED_RUNTIME_EQUITY_NTFS_20260908_RESULT_V1.json",
+      "bytes": 16730,
+      "sha256": "738EBAB1EB04D13A8E1CAC6B4B0AB0173422C7DC4EBE31CCCB9C05C3B7D6E640",
+      "attempted": 8,
+      "gain": 364441600,
+      "status": "COMPLETE_ALL_PLANNED_FILES",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_COLD_DUPLICATE_TKC_NTFS_FUNDING_20260908_RESULT_V1.json",
+      "bytes": 361644,
+      "sha256": "8B3BBD21DC15BBE7841D818D1ABFD08B3A89D2A71C22348CD8ECB9972202C9EC",
+      "attempted": 203,
+      "gain": 37314560,
+      "status": "STOPPED_NOOP_OR_PRESERVATION_FAULT",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_FAMILY23_COMPLETE_CS_V1_NTFS_20260908_RESULT_V1.json",
+      "bytes": 4278,
+      "sha256": "F4A00DD8723779987571C571A7B39004225F0951E3E7EB9734951480AA2080BD",
+      "attempted": 2,
+      "gain": 146333696,
+      "status": "COMPLETE_ALL_PLANNED_FILES",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_FAMILY23_FINAL_NTFS_20260908_RESULT_V1.json",
+      "bytes": 25789,
+      "sha256": "3DC48129932DBEEEDDA5C1135E2172B2DB85C8634FC2A9CA9269E8C5C3065321",
+      "attempted": 15,
+      "gain": 311029760,
+      "status": "COMPLETE_ALL_PLANNED_FILES",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_FAMILY23_INPUT_V2_NTFS_20260908_RESULT_V1.json",
+      "bytes": 20279,
+      "sha256": "002AED30578AEC8B829B90FEA0AD802462810CA76CA005DB7EB7CFCB5C471BFB",
+      "attempted": 12,
+      "gain": 89391104,
+      "status": "COMPLETE_ALL_PLANNED_FILES",
+      "reference_mismatches": []
+    },
+    {
+      "path": "lineage\\STORAGE_V7_FAMILY23_V3_FIRST_PAIR_NTFS_20260908_RESULT_V1.json",
+      "bytes": 4063,
+      "sha256": "C83B99AC793DF2ADD2FD558AC5E6CE3E84AB2DCCFAE6B25AD6D91F2C33CDD80C",
+      "attempted": 2,
+      "gain": 146845696,
+      "status": "COMPLETE_ALL_PLANNED_FILES",
+      "reference_mismatches": []
+    }
+  ],
+  "attempted": 555,
+  "measured_allocation_gain_bytes": 7774613504,
+  "measured_allocation_gain_gib": 7.240673065185547,
+  "content_path_length_failures": [],
+  "raw_command_output_digest_failures": [],
+  "deleted_by_cleanup_commands": 0,
+  "tool_rejection": "exec_command failed: CreateProcess Rejected: blocked by policy",
+  "limitation": "Gains are allocation reductions measured immediately at each distinct compression action, not cumulative current free-space change. Historical WOF gains are excluded. Native Tester subsequently cleared its previous cs-v1 runtime copy during ordinary agent startup; the canonical raw archive and its SHA remain retained. No compression action was repeated.",
+  "no_op": "One coldTKC command exited0 and preserved bytes but yielded0allocated-byte saving. The sweep stopped at that exact file without retry; its conservative preserved=false flag represents no saving, not a content loss.",
+  "free_at_summary": 36065910784
+}

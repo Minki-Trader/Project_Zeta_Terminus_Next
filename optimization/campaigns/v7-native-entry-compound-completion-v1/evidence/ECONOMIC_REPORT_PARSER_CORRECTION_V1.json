@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-08T11:25:45.878575+00:00",
+  "issue": "Archived appended agent log segments begin after their original UTF16 BOM. BOM-only decoder read embedded NULs as UTF8, so final native regex did not match.",
+  "outcome": "First analysis stopped before a result file or economic verdict; all four complete native runs unchanged.",
+  "source_path": "optimization\\artifacts\\raw\\v7-native-entry-compound-completion-v1\\economic-report-first-decode.py",
+  "source_sha256": "88914A35F3FA323C9D9F973381AFEE21FDE63BE43B84C587E49C8E2C0BBB87D8",
+  "correction": "Detect UTF16 little endian log segments from embedded NUL pattern in addition to original BOM; read the same original bytes. No EA/SET/source data or arithmetic changed."
+}
