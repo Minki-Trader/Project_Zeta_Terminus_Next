@@ -1,0 +1,99 @@
+{
+  "utc": "2026-09-08T02:09:26.634910+00:00",
+  "status": "PROSPECTIVE_BEFORE_FEATURE_COUNTS_SOURCE_COPY_FIT_ONNX_OR_NATIVE_CANDIDATE",
+  "family_number": 22,
+  "primary_program": 7,
+  "family": "optimization/campaigns/v7-native-input-density-admission-v1",
+  "comparison": {
+    "path": "optimization/evidence/V7_ML_POST_RC4_INPUT_DENSITY_COMPARE_V1.json",
+    "bytes": 4401,
+    "sha256": "26F8CFBF0E00E5A5108813E53AE29E107C1D3732AD14D6F70DA00D4280449851"
+  },
+  "parent": "optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe",
+  "parent_canonical_sha256": "0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E",
+  "bundle": [
+    "EXACT_V7_CONTROL",
+    "STATIC_INPUT_DENSITY",
+    "ONLINE_INPUT_DENSITY"
+  ],
+  "source": {
+    "path": "lab/artifacts/raw/v7-rlo1-return-requalification-v1/long/candidate-final/Files/research/research-candidates.csv",
+    "bytes": 10899834,
+    "sha256": "E48CF89502D259E94F9245572852315BAE3AB68F70CB87FA71CE9D23462B02BD"
+  },
+  "source_contract": {
+    "copy": "One physical copy into own raw/input/original-v7-candidates.csv. Freeze full bytes before/after reading. Read server_time first and only decode other selected fields for2024. Never use account/price/volume/stop/risk/return or2026values.",
+    "population": "One recorded computed original decision per(component_id,decision_bar), stageSIGNALorOUTCOME,signal_known1,research_dropped_records0, exact original schema/release/execution/portfolio identity. Both signalpass andsignalfail remain; GATE/unknown sentinels are excluded. Deduplicate only identicalfeature/pass/direction records with the same decision key, use earliest recorded timestamp as observation availability; any conflicting duplicate or nonfinite known feature is input correction, not an economic failure or silent row removal.",
+    "limits": "The original ledger omits some unconsumed/unrecorded decisions. Fit estimates the density of this recorded population, not all calendar bars or rejected counterfactual trades. Native online labels use only the same successfully committed SIGNAL/OUTCOME known-feature observation interface, including own model abstentions; future admission changes the encountered population naturally. No unknown row becomes zero.",
+    "fit": "2024Jan1..Jul1exclusive, per-component at least64unique recorded observations and16distinct raw features.",
+    "calibration": "2024Jul1..2025Jan1exclusive, per-component at least64unique observations. No fit update on these calibration observations.",
+    "readiness": "All six components must satisfy the fixed source counts. Actual insufficient supply closes the full bundle without feature/period/component/count rescue; archival/identity/parser faults remain correction until complete valid inputs exist.",
+    "data_target": "Only x=sign(feature)*log1p(abs(feature)), no future-label horizon or economic outcome target."
+  },
+  "model": {
+    "kind": "Separate univariate two-component Gaussian mixture for each original component, learned by deterministic batch EM from2024H1 only.",
+    "standardization": "Fit-only mean and population standard deviation of transformedx; scale<=1e-12 is source-unready constant feature, not synthetic scale. z=(x-mean)/scale. Frozen means/scales for all roles/years. No clipping originalfeature or changing any trading formula.",
+    "initialization": "Mixture means are deterministic25th/75th percentile(linear interpolation) of fitz; each variance1 and weight.5.",
+    "fit": "Exactly64EMiterations, float64 stable log-sum-exp responsibilities. Each M-step normalizedweights floor.05 thenrenormalize; means weightedz, variances max(.01,weighted squared residual). No randomizedseed, alternativecomponentcount, grid, early economics or refit. Preserve full initial/final fit and all sample counts.",
+    "onnx": "Fresh standard float32 ONNX IR8/opset17 graph: z[1,1], mixture parameters[1,6]=w0,w1,mu0,mu1,var0,var1; stable two-log-density logsumexp outputs negative log likelihood[1,1] and responsibilities[1,2]. Every native policy forecast consumes actual ONNX output, with own parameter input. Python uses this same graph for ordinary2024H2 calibration inference, not a separate parity/checker tool.",
+    "threshold": "Per-component nearest-rank95th percentile of all2024H2 fixed-model ONNX negative-log-density scores; rank=ceil(.95*n), ascending. Allow an original passed signal iff its pre-update score<=that fixed cutoff. Equality allows. No forecast of profit, alternate threshold, outcome-ranked source or later cutoff recalibration.",
+    "static": "Freeze2024H1mixture, transform/scale and2024H2cutoff permanently. No online updates.",
+    "online": "Same initial2024H1model/transform/cutoff, empty2025pendingstate. Own successfully committed known SIGNAL/OUTCOME feature records become unlabeled observations. Apply only records whose persisted server timestamp is strictly earlier than new forecast time; deterministic timestamp thencomponent/bar sequence, once perdecision. Same-second observations remain pending.",
+    "online_EM": "Fixed eta=1/64. For one maturez, compute responsibilities under the currently updated own mixture through ONNX; update N=(1-eta)N+eta*r,S=(1-eta)S+eta*r*z,Q=(1-eta)Q+eta*r*z*z. InitialN=w,S=w*mu,Q=w*(var+mu^2). Derivedmeans=S/N,variance=max(.01,Q/N-mu^2),weights=max(.05,N/sumN)thenrenormalize. Preserve every finite observed feature, including rare/abstained inputs; no profit label, robust exclusion, recency window search or posterior reset.",
+    "forecast_vs_update": "Inference for an original passed signal occurs before its OpenComponent/PlacePassiveLimit order construction. Online updates from strictly older committed observations precede this forecast. The current row is queued only after its ordinary decision ledger is successfully flushed; it cannot train its own gate.",
+    "fault": "Any invalid feature/parameter/score/responsibility/state, failed ONNX/persistence or duplicate-conflicting record blocks new learning-controlled entries as engineering correction, keeps existing original owned protection/exits alive and invalidates economics. No silent allow/abstain fallback on fault.",
+    "persistence": "Own run tag and tester-only Magic/Portfolio/schema. Fresh startup refuses preexisting core/learner artifacts; do not delete or adopt state. Persist own mixture N/S/Q, initialfit/ONNX/source/settings identity, pending observations and monotonically committed learning ledger boundaries. Record actual fresh/readback evidence; do not claim actual restart absent normal operating demonstration."
+  },
+  "trading": {
+    "scope": "All six original components at their original passed signal. No new direction/timestamp/symbol/opportunity. Original per-component quantity/stops/RC4management/hold/Passivegeometry/exits/risk4percent/aggregate12percent/margin45percent/daily150step stay unchanged.",
+    "abstain": "Consume the original decision with explicit DENSITY_ABSTAIN and normal final decision journal; no later retry, synthetic fill, abandoned pending order modification or forced existing-position close. Ordinary risk/quotes/protection may still refuse model-allowed orders.",
+    "no_signal": "Original no-signal calculation remains a nontrade. Its successfully committed known SIGNAL row may supply a later online observation; it never manufactures a trade.",
+    "economic_account": "Complete native account path naturally includes changed opportunity occupancy/admission. Do not replay original dollar profits or multiply saved outcomes to infer compounding."
+  },
+  "native": {
+    "derivation": "After source readiness, copy original21-file parent once into own family; fresh code only, own publicSDK/platform/history physical copies and own Portable. No Live/Lab/closed-familyEA/Include/Python/model/state/output executes.",
+    "runtime": "optimization/runtime/v7-native-input-density-admission-v1-portable",
+    "raw": "optimization/artifacts/raw/v7-native-input-density-admission-v1",
+    "identities": {
+      "CONTROL": {
+        "ea": "ZetaV7DensityControl",
+        "magic_first": 2609081201,
+        "schema": "DENS1CONTROL"
+      },
+      "STATIC": {
+        "ea": "ZetaV7DensityStatic",
+        "magic_first": 2609081301,
+        "schema": "DENS1STATIC"
+      },
+      "ONLINE": {
+        "ea": "ZetaV7DensityOnline",
+        "magic_first": 2609081401,
+        "schema": "DENS1ONLINE"
+      }
+    },
+    "periods": "Full2025Jan1..2026Jan1exclusive selection,100USD1:100,US30M30Model4/allthreeoriginalsymbols100%real ticks. Fixed order adjacentcontrol/static/adjacentcontrol/online. Complete allfour valid paths before closing related roles. No2026candidatevalues yet.",
+    "binding": "Exactsource/EX5/settings/ONNX/initialfit/publicplatform/build, before-between-after symbolDB plus requiredsymbolcontract/swaps, allconsumed historical bar/tickbytes. Wholematrixcorrected ifconsumedinputdrifts; no99percentwaiver or selectiveheaderexclusion. Necessary invocation/engineering/history fixes have no retrycap and retain every attempt.",
+    "selection": "Each learned role must improve actual wealth/loggrowth and robustrecovery; conservative doubledcoststressednet>=1.05adjacentcontrol; nativeequityDDnominal<=control, effectivemin(control+1.5pp,control*1.10) only with exactdisclosure and improvedgrowth/recovery/temporal evidence. Both2025halves actual/conservativepositive. Atleast100closedwhole/25eachhalf; atleast20modelabstentions/5eachhalf. Completeflat/noEAfault/no unresolvedeconomicmark andfull causality/input/ledger evidence. Count/modeldensity scores cannot waive economicgates.",
+    "conservative": "Report original stressed realized net and additional removal of realized positive swap credits. Every5percent/positive-epoch gate must hold in the conservative series; complete actualnative costs retained.",
+    "ranking": "Atmostoneeligible learned finalist, highestconservativewealth,thenlowerDD,thenSTATICexacttie. No replacingfailedconfirmationwithanotherrole.",
+    "confirmation": "Onlyeligibleunchangedfinalist receives separatelyfunded full2025Jan1..2026Sep1exclusive adjacentcontrol/candidate. Freshsame2024initialstate, chronologicallearningfrom2025. Positiveactual/conservative2025H1/H2/2026H1/JulAug, samewealth5percent/recovery/DDgates; >=100closedoverall and>=10latestJulAug. Originalaggregate/latestexposurealreadyknown; no pristineholdoutclaim.",
+    "evidence": "Full actual/conservative equitypaths, nativeDD, terminalwealth/loggrowth/recovery, monthly/epoch returns, lots/dailyunits, forecasts/cutoffs/abstentions/onlineupdates/pending states. Hockey-stick not guaranteed and no lotcompounding claim iflot progression absent."
+  },
+  "closure": "Close whole fixed density/static/online bundle. No sourcewindow, feature, transform, component/modelcount, EMiteration, variance/weightfloor, densitycutoff, step, labelpopulation, subgroup, sizing, entry/exit or retainedseed rescue after valid outcomes.",
+  "storage": {
+    "free": 67462688768,
+    "floor": 32212254720,
+    "runtime_cap": 6442450944,
+    "raw_cap": 2147483648,
+    "source_cap": 33554432,
+    "funded": true
+  },
+  "constraints": [
+    "One root design/economic judgment stream; factual helpers only",
+    "No tests/checkers/test-only infrastructure orCLI",
+    "No external economics",
+    "All Live-Dev andLab preserved; no brokercontextpolling/promotion",
+    "Every important artifact retained; regenerablecachedeletion remains policyblocked andnotbypassed"
+  ],
+  "user_pause_received": false
+}
