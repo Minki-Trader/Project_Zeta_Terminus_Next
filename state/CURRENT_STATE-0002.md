@@ -1032,3 +1032,29 @@ Historical transitions STATE-0001..0554 remain immutable in `state/CURRENT_STATE
 
 - Corrected unfiltereduf-v3 completes100%real ticks,854unchangedinputs, identical12paststreams/contracts/build andzeroEAfaults.50actualchildren complete. Actual120.95/conservative111.881/nativeDD20.860147544%/robustrecovery3.9650210866 versusadjacentoriginal121.39/112.988/16.073213874%/3.9825875469. Childconservative-4.178, H1-5.243 andH2+1.065; alloriginalmultipliers1. Referenceonly, no independentwinner orcompoundingclaim. UNFILTERED_NATIVE_V3 preserves completevalidnativeeconomics.
 - Twoof6currentselectionpaths complete. Static adjacentcontrolcs-v3 startsownterminalPID6636 underunchangedV4freeze; StaticthenOnlinepairedpathsremainfixed. No retune, earlyfamilyclosure orcandidate2026values. Alloldattempts retained.
+
+
+## STATE-0690 - 2026-09-08
+
+- Static adjacentcontrolcs-v3 completes full2025 at100%real ticks with854unchangedinputs andsame12paststreams/contracts/build. It repeats original121.39actual/112.988conservative/DD16.073213874%/recovery3.9825875469 with0faults/unknownmarks. CONTROL_STATIC_NATIVE_V3 owns complete report.
+- Static ONNXs-v3 startsownterminalPID18956, unchanged initial2024fit/graph andfreshpending/modelstate underV4freeze. Currentselection3of6complete. Static andOnline verdicts remain open; no economic retune, furtherfamily or2026candidatevalues. Allartifactretention andfundedstorageconditionscontinue.
+
+
+## STATE-0691 - 2026-09-08
+
+- Static s-v3 completes full2025 at100%real ticks,854unchangedinputs, identical12paststreams/contracts/build andzeroEAfaults. Actual126.62/conservative117.869/nativeDD16.065272351%/robustrecovery3.9223640206.19actualchildren,16H1/3H2; childconservative+4.342/-0.050. It improves actualwealth and nominalDD slightly but fails fixed5percentconservative/recovery/activity/positivechildhalves gates. No finalist or actualreinvestment claim; everymultiplier1. STATIC_NATIVE_V3 owns complete result.
+- Four of6 current-v3 selectionpaths complete. Online adjacentcontrolco-v3 startsownterminalPID7056 underunchangedV4freeze. Finish the remainingfixedpair before wholebundlejudgment; no tuning, earlyfamilyclosure orcandidate2026values. Allattemptartifacts preserved, no successfulcachedeletion, remainingstoragefullyfunded andLive/Lab unchanged.
+
+
+## STATE-0692 - 2026-09-08
+
+- Online adjacentcontrolco-v3 completes full2025 at100%real ticks,854unchangedinputs andidentical12paststreams/contracts/build. Third currentmatrixcontrol repeats121.39actual/112.988conservative/DD16.073213874%/recovery3.9825875469 with0faults/unknownmarks. CONTROL_ONLINE_NATIVE_V3 owns full normal result.
+- Final fixed onlineo-v3 startsownterminalPID30712 underunchangedV4freeze/fresh2024initialfit andempty2025pendingstate. Fiveof6complete; final online economic verdict remains open. No oldlabel/state consumption, tuning, candidate2026 orLive/Lab work. Storage remainsfunded andallartifacts retained.
+
+
+## STATE-0693 - 2026-09-08
+
+- Final Onlineo-v3 completes100%real ticks,854unchangedwholeinputs andidentical12paststreams/contracts/build. Actual117.56/conservative108.959/DD15.534829496%/robustrecovery3.9612811750;17children,12H1/5H2 andchildconservative-3.051/+0.027.76ownONNXforecasts/76completedlabels/75strictlymatureRLSupdates;noEAfault/unresolvedmark/openchild/shadow. Onecompletedlabelhasnolaterforecastandislegitimatelyunapplied.
+- Allsixfixedv3pathscomplete. Threecontrolsequity/candidate/lifecycle/coreeventledgers arebyteidentical. Static improves actual126.62 andnearlysameDD16.0653butfails5percentconservative/recovery/activity/positivechildhalves. OnlineDDimprovesbutactual/stress/recoveryfallandactivity/H1childgatesfail. Bothaccount-halvespositiveandnegative-reference-relativeimprovementdonotrescuefailure. NoDDexceptionneeded/used, nofinalist/confirmation/2026candidateorcompounding. Allmultipliers1/childvolumes0.01.
+- NATIVE_SELECTION_RESULT_V1 SHA71E1F0AAE4B75FFC93D4032D413B96FCA77EC40E2E7A7CA077344E6B8919C6D9; CLOSURE_V1 SHAEEAF82DB00296021C2AD8320A50DFA5DEF299477B270378EDD9EA62EEBBDCF58. Rootfullinput/causal/executionjudgmentandvisuallyinspectednativeequityfigurepreserved. OriginaleightRC4complete-zero-rangeobservationsarecorrectlyclassified,notmissinghistory;invalidreasoncounts0. No actualrestartclaim.
+- Allnineattempts218artifacts/508764257bytespreserved;114capacityobservationswithminimumfree70901678080, noreserve/funding/capviolation. Allownprocessesstopped. Actualcachedeletion0afterautomaticpolicyblock;allLive/Lab andexactLiveactivationblockunchanged. WholePrograms1-5/7comparisonmustprecedeoneprospectivelydeclaredmateriallydistinctexistingV7successor;userhasnotpaused.

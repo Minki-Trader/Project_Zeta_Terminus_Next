@@ -1,0 +1,142 @@
+{
+  "tag": "o-v3",
+  "status": "COMPLETE_NATIVE_ECONOMIC",
+  "native": {
+    "profit": "117.560000",
+    "equity_dd": "26.650000",
+    "equity_dd_relative_pct": "15.534829496",
+    "balance_dd_relative_pct": "15.027676363",
+    "trades": "568"
+  },
+  "core": {
+    "status": "ECONOMIC",
+    "position_risk": "0.040000",
+    "aggregate_risk": "0.120000",
+    "weights": "1.0/1.0/1.0/1.0/1.0/1.0",
+    "actual_net": "117.560000",
+    "stressed_net": "108.959000",
+    "actual_dd": "25.800000",
+    "stressed_dd": "26.640500",
+    "robust_net": "108.959000",
+    "robust_recovery": "4.089975789",
+    "closed": "551",
+    "risk_skips": "27",
+    "stop_exits": "78",
+    "final_server": "2025.12.31"
+  },
+  "child": {
+    "role": "3",
+    "faults": "0",
+    "parents": "421",
+    "inferences": "76",
+    "updates": "75",
+    "labels": "76",
+    "children": "17",
+    "closed_children": "17",
+    "pending": "1",
+    "shadow_open": "0",
+    "child_actual": "-2.860000000000",
+    "child_stress": "-3.024000000000",
+    "positive_swap": "0.000000000000",
+    "mse_sum": "132.728417156051",
+    "zero_mse_sum": "124.129409709207",
+    "deferred": "0",
+    "unresolved": "0",
+    "sequence": "9680"
+  },
+  "history_quality_percent": 100,
+  "quality_100_real_ticks": true,
+  "tick_evidence": {
+    "US30": [
+      43845913
+    ],
+    "US100": [
+      85515819
+    ],
+    "US500": [
+      21096613
+    ]
+  },
+  "money_matches": true,
+  "actual_net": 117.56,
+  "actual_wealth": 217.56,
+  "log_growth": 0.7773044885666687,
+  "conservative_net": 108.959,
+  "conservative_wealth": 208.959,
+  "native_cash_dd": 26.65,
+  "native_dd_pct": 15.534829496,
+  "closed_stress_dd": 26.6405,
+  "conservative_mark_dd": 27.506,
+  "robust_denominator": 27.506,
+  "robust_recovery": 3.96128117501636,
+  "epochs": [
+    {
+      "start": 1735689600,
+      "end_exclusive": 1751328000,
+      "last_mark": 1751327940.0,
+      "actual_closed": 51.01,
+      "conservative_closed": 46.150499999999994,
+      "actual_marked": 51.00999999999999,
+      "conservative_marked": 46.150499999999994,
+      "children_opened": 12,
+      "child_actual": -2.9400000000000004,
+      "child_conservative": -3.0509999999999997
+    },
+    {
+      "start": 1751328000,
+      "end_exclusive": 1767225600,
+      "last_mark": 1767225598.0,
+      "actual_closed": 66.55000000000001,
+      "conservative_closed": 62.80850000000001,
+      "actual_marked": 66.55000000000001,
+      "conservative_marked": 62.80850000000001,
+      "children_opened": 5,
+      "child_actual": 0.07999999999999974,
+      "child_conservative": 0.026999999999999913
+    }
+  ],
+  "children": 17,
+  "child_conservative": -3.0239999999999996,
+  "otherwise_eligible": 62,
+  "eligible_declines": 45,
+  "decline_fraction": 0.7258064516129032,
+  "forecast_causal": true,
+  "update_causal": true,
+  "multipliers": [
+    1.0
+  ],
+  "child_volumes": [
+    0.01
+  ],
+  "equity_rows": 352188,
+  "event_counts": {
+    "CHILD_CLOSE": 17,
+    "CHILD_ENTRY_FILL": 17,
+    "CHILD_ENTRY_RECEIPT": 17,
+    "CHILD_INTENT": 17,
+    "CHILD_OPEN": 17,
+    "CHILD_PARENT_CLOSE_INTENT": 9,
+    "CHILD_PARENT_CLOSE_RECEIPT": 9,
+    "FIRST_TRIGGER": 76,
+    "INITIAL": 1,
+    "MODEL_DECLINE": 57,
+    "MODEL_OPEN": 19,
+    "NATIVE_ADMISSION_REFUSED": 2,
+    "NATIVE_ELIGIBILITY": 76,
+    "OBSERVED_M1_GAP": 3,
+    "PARENT_BIRTH": 421,
+    "PARENT_END": 421,
+    "PARENT_NO_TRIGGER": 345,
+    "SHADOW_CLOSE": 76,
+    "SHADOW_OPEN": 76,
+    "UPDATE": 75
+  },
+  "source_completion": {
+    "path": "optimization/artifacts/raw/v7-native-winner-child-completion-v1/native/o-v3/complete.json",
+    "sha256": "A5A5BBC21A98E3D45BADE5583137FFEB3766266BD2F6D5ADEB6E6C7A9AE8A8DE"
+  },
+  "report_source_sha256": "A16785D1EA55A163289EA2BB9CD58BF09F3560EA461036D9C453E85BD155829B",
+  "post_native_history_unchanged": true,
+  "post_native_history_sha256": "56C16A9CD9E671410ABEE6FE24CF52E5003863040C0917E851E9C02604B20BCB",
+  "limit": "Actual quantity reinvestment is judged separately from additional concurrent exposure; resume behavior is not established by a fresh path."
+}

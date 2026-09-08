@@ -1,0 +1,141 @@
+{
+  "tag": "s-v3",
+  "status": "COMPLETE_NATIVE_ECONOMIC",
+  "native": {
+    "profit": "126.620000",
+    "equity_dd": "27.880000",
+    "equity_dd_relative_pct": "16.065272351",
+    "balance_dd_relative_pct": "15.508251357",
+    "trades": "569"
+  },
+  "core": {
+    "status": "ECONOMIC",
+    "position_risk": "0.040000",
+    "aggregate_risk": "0.120000",
+    "weights": "1.0/1.0/1.0/1.0/1.0/1.0",
+    "actual_net": "126.620000",
+    "stressed_net": "117.869000",
+    "actual_dd": "27.780000",
+    "stressed_dd": "30.050500",
+    "robust_net": "117.869000",
+    "robust_recovery": "3.922364021",
+    "closed": "550",
+    "risk_skips": "28",
+    "stop_exits": "71",
+    "final_server": "2025.12.31"
+  },
+  "child": {
+    "role": "2",
+    "faults": "0",
+    "parents": "420",
+    "inferences": "64",
+    "updates": "0",
+    "labels": "64",
+    "children": "19",
+    "closed_children": "19",
+    "pending": "64",
+    "shadow_open": "0",
+    "child_actual": "4.710000000000",
+    "child_stress": "4.292000000000",
+    "positive_swap": "0.000000000000",
+    "mse_sum": "105.200833498065",
+    "zero_mse_sum": "103.237901493838",
+    "deferred": "0",
+    "unresolved": "0",
+    "sequence": "9692"
+  },
+  "history_quality_percent": 100,
+  "quality_100_real_ticks": true,
+  "tick_evidence": {
+    "US30": [
+      43845913
+    ],
+    "US100": [
+      85515819
+    ],
+    "US500": [
+      21096613
+    ]
+  },
+  "money_matches": true,
+  "actual_net": 126.62,
+  "actual_wealth": 226.62,
+  "log_growth": 0.8181044199643291,
+  "conservative_net": 117.869,
+  "conservative_wealth": 217.869,
+  "native_cash_dd": 27.88,
+  "native_dd_pct": 16.065272351,
+  "closed_stress_dd": 30.0505,
+  "conservative_mark_dd": 29.193000000000012,
+  "robust_denominator": 30.0505,
+  "robust_recovery": 3.922364020565382,
+  "epochs": [
+    {
+      "start": 1735689600,
+      "end_exclusive": 1751328000,
+      "last_mark": 1751327940.0,
+      "actual_closed": 63.81,
+      "conservative_closed": 58.85749999999999,
+      "actual_marked": 63.81,
+      "conservative_marked": 58.85749999999999,
+      "children_opened": 16,
+      "child_actual": 4.73,
+      "child_conservative": 4.3420000000000005
+    },
+    {
+      "start": 1751328000,
+      "end_exclusive": 1767225600,
+      "last_mark": 1767225598.0,
+      "actual_closed": 62.81,
+      "conservative_closed": 59.01150000000001,
+      "actual_marked": 62.81,
+      "conservative_marked": 59.01150000000001,
+      "children_opened": 3,
+      "child_actual": -0.02000000000000013,
+      "child_conservative": -0.04999999999999982
+    }
+  ],
+  "children": 19,
+  "child_conservative": 4.292000000000001,
+  "otherwise_eligible": 50,
+  "eligible_declines": 31,
+  "decline_fraction": 0.62,
+  "forecast_causal": true,
+  "update_causal": true,
+  "multipliers": [
+    1.0
+  ],
+  "child_volumes": [
+    0.01
+  ],
+  "equity_rows": 352188,
+  "event_counts": {
+    "CHILD_CLOSE": 19,
+    "CHILD_ENTRY_FILL": 19,
+    "CHILD_ENTRY_RECEIPT": 19,
+    "CHILD_INTENT": 19,
+    "CHILD_OPEN": 19,
+    "CHILD_PARENT_CLOSE_INTENT": 12,
+    "CHILD_PARENT_CLOSE_RECEIPT": 12,
+    "FIRST_TRIGGER": 64,
+    "INITIAL": 1,
+    "MODEL_DECLINE": 40,
+    "MODEL_OPEN": 24,
+    "NATIVE_ADMISSION_REFUSED": 5,
+    "NATIVE_ELIGIBILITY": 64,
+    "OBSERVED_M1_GAP": 3,
+    "PARENT_BIRTH": 420,
+    "PARENT_END": 420,
+    "PARENT_NO_TRIGGER": 356,
+    "SHADOW_CLOSE": 64,
+    "SHADOW_OPEN": 64
+  },
+  "source_completion": {
+    "path": "optimization/artifacts/raw/v7-native-winner-child-completion-v1/native/s-v3/complete.json",
+    "sha256": "914E55D9CC405FC45FD0F5AFCF7823B4BA9B9A7E8759CE385A7849F3FAACDA1C"
+  },
+  "report_source_sha256": "A16785D1EA55A163289EA2BB9CD58BF09F3560EA461036D9C453E85BD155829B",
+  "post_native_history_unchanged": true,
+  "post_native_history_sha256": "15969BB6828DA7E47094C3D1F998BA68D370601E8C1A370ECAF0CD1878BA51C7",
+  "limit": "Actual quantity reinvestment is judged separately from additional concurrent exposure; resume behavior is not established by a fresh path."
+}

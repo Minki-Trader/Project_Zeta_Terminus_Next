@@ -1,0 +1,78 @@
+{
+  "utc": "2026-09-08T01:05:46.154703+00:00",
+  "status": "COMPLETE_SIX_PATH_NUMERIC_JUDGMENT",
+  "comparisons": [
+    {
+      "tag": "s-v3",
+      "control": "cs-v3",
+      "gates": {
+        "actual_and_log_growth": true,
+        "conservative_five_percent": false,
+        "robust_recovery": false,
+        "dd_ceiling": true,
+        "positive_halves": true,
+        "child_activity": false,
+        "child_halves": false,
+        "child_reference": true,
+        "eligible_decline": true
+      },
+      "passes_numeric_gates": false,
+      "requires_root_dd_exception": false,
+      "child_conservative": 4.292000000000001,
+      "incremental_conservative": 4.881
+    },
+    {
+      "tag": "o-v3",
+      "control": "co-v3",
+      "gates": {
+        "actual_and_log_growth": false,
+        "conservative_five_percent": false,
+        "robust_recovery": false,
+        "dd_ceiling": true,
+        "positive_halves": true,
+        "child_activity": false,
+        "child_halves": false,
+        "child_reference": true,
+        "eligible_decline": true
+      },
+      "passes_numeric_gates": false,
+      "requires_root_dd_exception": false,
+      "child_conservative": -3.0239999999999996,
+      "incremental_conservative": -4.028999999999996
+    }
+  ],
+  "native_equity_figure": {
+    "path": "optimization/campaigns/v7-native-winner-child-completion-v1/results/native_selection_result_v1-equity.png",
+    "bytes": 312520,
+    "sha256": "178BAFD1946C8F7F5E7CA38D5881DFA8866F5B6ECE88BE77C457DF84AD0B15AC"
+  },
+  "report_source_sha256": "A16785D1EA55A163289EA2BB9CD58BF09F3560EA461036D9C453E85BD155829B",
+  "numeric_finalist": null,
+  "finalist_scope": "Root must finish full causal/execution/input judgment and any DD exception; only then separately fund one unchanged confirmation pair.",
+  "sources": [
+    {
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/CONTROL_UNFILTERED_NATIVE_V3.json",
+      "sha256": "6FE7ACD4432C53BFBE2A89344CACFE746613FCAAB4C431DE29413B53441BFCDB"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/UNFILTERED_NATIVE_V3.json",
+      "sha256": "C55FCCB9101776085056FF279231AD4CAE6427441D6FAA23FDABB50EF974A01A"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/CONTROL_STATIC_NATIVE_V3.json",
+      "sha256": "4DD61F74ECECF1CD99D73E0A97BB7EE4C9626CE9F54F691A31DF4B19BCB33B6A"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/STATIC_NATIVE_V3.json",
+      "sha256": "6DDB4C1CAD46881F1A1DCFF470247532A39DE58DBCD816A0FACA649263386301"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/CONTROL_ONLINE_NATIVE_V3.json",
+      "sha256": "4D2582E9BAA94FA4E85717712F023E7CA92B35D3EAF09F27C9747E91E39A45DA"
+    },
+    {
+      "path": "optimization/campaigns/v7-native-winner-child-completion-v1/evidence/ONLINE_NATIVE_V3.json",
+      "sha256": "8F3B385A363863B0A194F218D7A720906650E285D2A12B2D2E40C362DCD00954"
+    }
+  ]
+}
