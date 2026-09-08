@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0693`
+- Latest state ID: `STATE-0695`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -35,7 +35,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 
 ## Active primary Goal
 
-Existing V7 improvement with ONNX/online learning continues until a user pause, inside Optimization only. No candidate is currently running. Family20 `optimization/campaigns/v7-native-winner-child-completion-v1/` has completed its exact user-authorized six-path native exception and is closed without an eligible finalist. Recompare Programs1-5 and7 as a whole before declaring one materially distinct existing-V7 successor. No independent strategy, external economics, Program6, closed-neighborhood rescue, Live/Lab change or promotion is authorized. Frozen original parent remains `optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/`.
+Existing V7 improvement with ONNX/online learning continues until a user pause, inside Optimization only. No candidate is currently running. Family21 `optimization/campaigns/v7-native-rc4-consensus-learning-v1/` is the sole active Program4 original-source engineering phase under its prospective declaration. The completed whole-map comparison selects the existing originalRC4three-head consensus interface; no model/target/candidate is open. Original retained A/B event segments begin2025Jan6 and have no2024records, so source-view V1eligible0 is incomplete archivalcoverage, not proven sparse2024decisions. ARCHIVE_CORRECTION_V1 requires a fresh original2024native control, unchanged48/16/12/6/24/8readinesscounts andalloriginaltradinglaws, before learningcanbedeclared. Ownruntime6GiB/raw2GiB/source32MiB with30GiBreserve is prospectivelyfunded. The originalparent21files are copiedonce; owncontrolcompile-v2 isclean andinstalled. All39requiredtickmonths/12barstreams areobserved inownSDK. SOURCE_INPUT_FREEZE_V1 binds681files SHA8151A0F446CA6DF5FB29303DE9D5094BC249532C7E22DDE27907124F2C3C0979. Firstsource2024nativepath isprepared andnotyetstarted. Family20 `optimization/campaigns/v7-native-winner-child-completion-v1/` has completed its exact user-authorized six-path native exception and is closed without an eligible finalist. The subsequent wholePrograms1-5/7comparison and source-archive correction now govern the sole Family21pre-modelsourcephase. No independent strategy, external economics, Program6, closed-neighborhood rescue, Live/Lab change or promotion is authorized. Frozen original parent remains `optimization/baseline/NEXT-E03-V7R-RLO1-0bba2ca045fe/`.
 
 All six compile-v7 full2025 selection paths finish at100% real ticks with identical854 frozen inputs,12past bar streams/contracts/build6182, zero EA faults and zero unresolved marks. The three controls have byte-identical equity, candidate/lifecycle and core event ledgers. All original quantities use daily multiplier1, and every child is0.01lots.
 
