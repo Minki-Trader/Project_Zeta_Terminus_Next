@@ -7,7 +7,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 ## State record
 
 - Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
-- Latest state ID: `STATE-0725`
+- Latest state ID: `STATE-0726`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
@@ -19,9 +19,9 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 - Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Direct user activation arms the recovered EA to wait for its existing trading conditions; current market activity is not a startup gate.
 - Next V7R return entries-disabled preflight: `PASSED`
 - Next V7R return new-entry authorization: `ENABLED`
-- Existing real-account owner: none; Windows reboot terminated the previously authorized V7R PID 28324. The user requested same-release Master/dashboard recovery; all retired identities remain stopped.
-- Direct user activation phase: `USER_REQUESTED_REBOOT_RECOVERY`; recorded at 2026-09-09T22:53:27Z.
-- Latest activation observation: Windows boot at 2026-09-09T18:36:51.5Z; exact Master process absent. Preserved local sequence 4522 has entries 1/1, zero owned exposure/margin/risk and zero safety/persistence/broker/foreign fault. These are pre-reboot local values, not a fresh connected handshake. Existing ENABLED authority is unchanged; fresh 0/0 recovery and 1/1 startup are pending.
+- Existing real-account owner: exact V7R PID 12532, the sole authorized order owner; all retired identities remain stopped.
+- Direct user activation phase: `USER_ACTIVATED_HEALTHY_1_1`; recorded at 2026-09-09T23:05:04Z.
+- Latest activation observation: User-requested reboot recovery passed fresh flat 0/0 with PID 3216 and normal preflight shutdown, then exact V7R PID 12532 passed healthy 1/1. Bounded local observation at 2026-09-09T23:03:45.0311935Z confirms sequence 4528, connected exact account and zero safety/persistence/broker/foreign faults. Dashboard PID 9740 and Master both have responsive windows. Existing entry permission is restored; no order or signal is implied.
 <!-- V7R_USER_ACTIVATION_END -->
 - Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
 - Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
