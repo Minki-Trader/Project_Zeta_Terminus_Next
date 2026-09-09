@@ -148,7 +148,7 @@ try {
         $stateText -notmatch 'Next V7R return entries-disabled preflight:\s+`PASSED`' -or
         $stateText -notmatch 'Next V7R return new-entry authorization:\s+`DISABLED`' -or
         [regex]::Matches($stateText, '(?s)<!-- V7R_USER_ACTIVATION_BEGIN -->.*?<!-- V7R_USER_ACTIVATION_END -->').Count -ne 1) {
-        throw '이미 활성화되었거나 다른 전환 기록이 있습니다. 현재 실행 상태를 먼저 확인해야 합니다.'
+        throw '이미 활성화되었거나 다른 전환 기록이 있습니다. 재부팅 후 재실행은 ZETA_NEXT_MASTER_TERMINAL_AND_DASHBOARD.cmd를 사용하세요. 전환 오류가 있다면 현재 실행 상태를 먼저 확인해야 합니다.'
     }
     Write-Host '1/4  배포본과 저장된 운영 기록을 확인합니다.'
     $null = Assert-ZetaNextReleaseIntegrity -Contract $zetaContract

@@ -20,11 +20,22 @@ if ($authorization -notmatch 'Next Live-Dev authorization:\s+`ENABLED`' -or
     $authorization -notmatch 'Next V7R return new-entry authorization:\s+`ENABLED`') {
     throw 'CURRENT_STATE.md does not contain the separate Next V7R Live authorization and passed entries-disabled preflight.'
 }
-if ($authorization -notmatch 'Existing real-account owner:\s+none') {
-    throw 'CURRENT_STATE.md must state that no legacy or Next real-account owner is running before the 0/0 preflight.'
+$recordedOwnerAbsent = $authorization -match '(?m)^- Existing real-account owner:\s+none\b'
+$recordedHealthyV7R = (
+    $authorization -match '(?m)^- Existing real-account owner: exact V7R PID [1-9][0-9]*, the sole authorized order owner; all retired identities remain stopped\.\r?$' -and
+    $authorization -match '(?m)^- Direct user activation phase:\s+`USER_ACTIVATED_HEALTHY_1_1`'
+)
+if (-not $recordedOwnerAbsent -and -not $recordedHealthyV7R) {
+    throw 'CURRENT_STATE.md must identify either no running owner or the previously healthy, already-authorized exact V7R owner. An incomplete transition cannot restart automatically.'
 }
 
+# A saved PID describes the previous run, and survives a Windows reboot.
+# Only the actual process inventory can prove that the terminal has stopped.
+# The same frozen release still passes the full fresh 0/0 -> 1/1 sequence below.
 $null = Assert-ZetaNextExclusiveTerminalBoundary -Contract $contract
+if ($recordedHealthyV7R) {
+    Write-Output 'The previously authorized V7R owner is no longer running. Restoring that same release through a fresh 0/0 preflight.'
+}
 $release = Assert-ZetaNextReleaseIntegrity -Contract $contract
 $receipt = Get-ZetaNextHandoffReceipt -Contract $contract
 
