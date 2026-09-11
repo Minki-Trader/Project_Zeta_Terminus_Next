@@ -1,3 +1,7 @@
+# Retired operating location
+
+The Master runtime, dashboard and original logs moved to the standalone desktop Zeta_Master_Terminal folder on 2026-09-11. This project is no longer an active terminal owner. Frozen release and operator source below are historical references; CURRENT_STATE.md records disabled authority. New launchers and reproducible sources are in Zeta_V7_Environment/live-dev/.
+
 # Live-Dev
 
 2026-09-07 후속 사용자 요청에 따라, ON은 계정·복구 확인 후 `1/1`로 켜두고 EA가 거래 조건을 기다리는 방식이다. 기존 OFF EA를 끄기 전과 새 0/0 복구 뒤의 시장 진단 호출을 제거했다. 틱 빈도·모든 현재 봉의 동기화·배포용 보호 시간대는 일반 기동 조건이 아니다. 시장 진단 도구와 수치는 관찰용으로 남아 있으며, 실제 주문에는 동결된 EA의 거래 시간·신호·데이터·3초 시세 유효성·세션·위험 검사가 그대로 적용된다.

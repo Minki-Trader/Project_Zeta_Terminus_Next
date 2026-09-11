@@ -1,29 +1,27 @@
 # Project Zeta Terminus Next Current State
 
-Last updated: 2026-09-11
+Last updated: 2026-09-10
 
 This is the concise current re-entry snapshot and the sole Next Live authority. Detailed immutable transitions remain in the active numbered state chunk.
 
 ## State record
 
-- Active chunk: [`state/CURRENT_STATE-0003.md`](state/CURRENT_STATE-0003.md)
-- Latest state ID: `STATE-0727`
+- Active chunk: [`state/CURRENT_STATE-0002.md`](state/CURRENT_STATE-0002.md)
+- Latest state ID: `STATE-0726`
 - Legacy migration anchor: `4c0899255c701e2c6b53e7f44457c431aef2ad76`
 - Storage-sweep parent: Family 010 closure/pause commit `61b205681a9ae955199ec97f54b477a1621cb686`, equal to `origin/main` before the 2026-09-06 storage-only work.
 
 ## Authorization and ownership
 
-- Development: `PAUSED_BY_USER_V7_GOAL_UNMET`. The current Family23 fixed native comparison and related preservation/reporting are complete. The user requested a temporary development pause and full session briefing. No new candidate, tuning, native run or research successor starts until the user resumes. The user separately authorized the desktop operating migration recorded below; research remains paused.
+- Development: `PAUSED_BY_USER_V7_GOAL_UNMET`. The current Family23 fixed native comparison and related preservation/reporting are complete. The user requested a temporary development pause and full session briefing. No new candidate, tuning, native run or research successor starts until the user resumes. All Live-Dev and the user-activated authority block remain unchanged.
 
 <!-- V7R_USER_ACTIVATION_BEGIN -->
-- Next Live-Dev authorization: `DISABLED_RELOCATED`. This project is no longer an active terminal owner.
-- Next V7R return entries-disabled preflight: `RELOCATED_V7_OBSERVATION_VERIFIED`
-- Next V7R return new-entry authorization: `DISABLED`
-- Existing real-account order owner: none. Former PID 12532 stopped normally after a fresh 0-position / 0-order boundary on 2026-09-11.
-- Direct user activation phase: `DESKTOP_RELOCATION_NON_TRADING`
-- Current operator root: `C:/Users/awdse/OneDrive/Desktop/Zeta_Master_Terminal`; project snapshots and launchers belong to `Zeta_V7_Environment/live-dev/`.
-- The exact V7R binary and original state/logs are preserved for fallback. Its pre-existing safety stop is retained. Both desktop launchers start with terminal automated trading disabled; V7 inputs/effective entries are 0/0.
-- The new desktop program is a two-ONNX prediction observer without order APIs. The selected trading portfolio remains Tester-only and is not a completed live trading replacement.
+- Next Live-Dev authorization: `ENABLED` for exact `NEXT-E03-V7R-RLO1-0bba2ca045fe`. Direct user activation arms the recovered EA to wait for its existing trading conditions; current market activity is not a startup gate.
+- Next V7R return entries-disabled preflight: `PASSED`
+- Next V7R return new-entry authorization: `ENABLED`
+- Existing real-account owner: exact V7R PID 12532, the sole authorized order owner; all retired identities remain stopped.
+- Direct user activation phase: `USER_ACTIVATED_HEALTHY_1_1`; recorded at 2026-09-09T23:05:04Z.
+- Latest activation observation: User-requested reboot recovery passed fresh flat 0/0 with PID 3216 and normal preflight shutdown, then exact V7R PID 12532 passed healthy 1/1. Bounded local observation at 2026-09-09T23:03:45.0311935Z confirms sequence 4528, connected exact account and zero safety/persistence/broker/foreign faults. Dashboard PID 9740 and Master both have responsive windows. Existing entry permission is restored; no order or signal is implied.
 <!-- V7R_USER_ACTIVATION_END -->
 - Exact new identity: Portfolio `ZT-PORT-NEXT-V7R-RLO1-20260907`, Magic `260907701..260907706`, schema `7R1`, execution `zt-next-v7-rlo1-return-portfolio-v1`.
 - Canonical source/settings SHA-256: `0BBA2CA045FEDCA95950C0569C385F5BFE408DDDE419851AAFCFCA5430FB4B7E`; EX5 SHA-256: `30283FBB46C40527578DD06B72D0EFBA5A2E2959BBFCA5F57C4CAC6B7F05E657`. Frozen source manifest: `2599E358D90390A101537AC41F5DB651EDB5C086E2B608E0B7B73D0BC0CDB1F9`.
@@ -60,7 +58,7 @@ This is the concise current re-entry snapshot and the sole Next Live authority. 
 - All146capacity observations in the final four-path matrix satisfy the30GiBreserve and full prospective remaining growth. Minimum free33623322624B. Last producing caps: Runtime3.5GiB, raw1GiB, source32MiB. Own sources compile0errors/0warnings. Raw outputs and all corrections remain retained; no test-only infrastructure was created.
 - Nine distinct ordinary NTFS preservation sweeps record555file attempts and7774613504B(7.240673GiB) immediate allocation reduction. All original content hashes/lengths/paths and bound references are preserved at each action; one zero-saving command stopped its sweep without repetition. Earlier WOF gains and unrelated volume changes are excluded. Source: `lineage/STORAGE_V7_SESSION_NTFS_ROOT_SUMMARY_20260908_V1.json`.
 - User-authorized regenerable-cache deletion commands were actually rejected before process start with `exec_command failed: CreateProcess Rejected: blocked by policy`; no further cause was returned. Deleted by cleanup commands0, no bypass and no repeated permission question. Important models/state/finalartifacts/uniquehistory stay preserved. The native platform may clear its prior working copy only after the canonical raw archive is retained.
-- No next development action is active. Commit this related phase on main and push origin/main, then deliver the Korean session briefing and remain paused. The historical activation record is preserved; the latest desktop relocation block above is current.
+- No next development action is active. Commit this related phase on main and push origin/main, then deliver the Korean session briefing and remain paused. The existing live authority block above stays byte-identical.
 
 ## Frozen lane boundaries
 
